@@ -1799,6 +1799,156 @@
       "sourceHash": "da40b6c47ec0f97e995905c61f8e7f6f7b3976907dfd8801b5ca98be74cdcc96",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/development/volume/external-volume.md",
       "translatedAt": "2026-07-22T07:59:12.805Z"
+    },
+    "docs/tutorials/development/volume/managed-volume.md": {
+      "sourceHash": "e5bf317b3e5cc9ca9c3688e4421d843d73bf617891fd206b8e400dff69cc7a1a",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/development/volume/managed-volume.md",
+      "translatedAt": "2026-07-22T07:44:59.023Z"
+    },
+    "docs/tutorials/development/volume/storage-integration/integrate-with-alibaba-cloud-oss.md": {
+      "sourceHash": "3fa786fe226a40abed0bf16c401d6278e6efa439d54d51f21bf5f77d14a4b1fb",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/development/volume/storage-integration/integrate-with-alibaba-cloud-oss.md",
+      "translatedAt": "2026-07-22T07:44:22.938Z"
+    },
+    "docs/tutorials/development/volume/storage-integration/integrate-with-amazon-s3-cn.md": {
+      "sourceHash": "979d1632533abaa6578a2a2466d902dc44cbda9aaf67cdd24e01dd5f57ebcabb",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/development/volume/storage-integration/integrate-with-amazon-s3-cn.md",
+      "translatedAt": "2026-07-22T07:52:16.705Z"
+    },
+    "docs/tutorials/get-started/cloud-providers-and-regions.md": {
+      "sourceHash": "a49b1f01b71a942f00361a319625dc50e841e09be8bfce1544c2818c2cb16656",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/cloud-providers-and-regions.md",
+      "translatedAt": "2026-07-22T07:43:31.057Z"
+    },
+    "docs/tutorials/get-started/cn-recvmzwqlreobp/cli-and-agent-integration-guide.md": {
+      "sourceHash": "fc38515ea51d306f5be3ed3ef9ca5a51b9b9bb11f9d16ed2512b512d8aa78e01",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/cn-recvmzwqlreobp/cli-and-agent-integration-guide.md",
+      "translatedAt": "2026-07-22T07:44:15.588Z"
+    },
+    "docs/tutorials/get-started/cn-recvmzwqlreobp/quick-start-to-external-data-lake-search.md": {
+      "sourceHash": "9adc81583255e3b3e20f341cf087698a14879094f00001ae17a2fabe25fb0f3c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/cn-recvmzwqlreobp/quick-start-to-external-data-lake-search.md",
+      "translatedAt": "2026-07-22T07:46:41.703Z"
+    },
+    "docs/tutorials/get-started/cn-recvmzwqlreobp/quick-start-to-on-demand-search.md": {
+      "sourceHash": "34b515ec0f0fc11cb689283f8b4b8385ca6e398f216191d978e9dd9feba57dd7",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/cn-recvmzwqlreobp/quick-start-to-on-demand-search.md",
+      "translatedAt": "2026-07-22T07:46:32.576Z"
+    },
+    "docs/tutorials/get-started/cn-recvmzwqlreobp/quick-start.md": {
+      "sourceHash": "b069b2f3800d1140df52b59d2178ff90ea3ff220727e8212151a41c503542134",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/cn-recvmzwqlreobp/quick-start.md",
+      "translatedAt": "2026-07-22T07:46:18.460Z"
+    },
+    "docs/tutorials/get-started/cu-types-explained.md": {
+      "sourceHash": "8653ee7df474712b0be7c948bb203c15eda2fa66867b1230018e5d4b3efbce13",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/cu-types-explained.md",
+      "translatedAt": "2026-07-22T07:47:43.370Z"
+    },
+    "docs/tutorials/get-started/faqs/faq-account.md": {
+      "sourceHash": "bbedd38ddef39d579c27eb5cddb5d9bb4d4ce12b20528a04e0cf1a06dcaa6ab7",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/faqs/faq-account.md",
+      "translatedAt": "2026-07-22T07:46:49.230Z"
+    },
+    "docs/tutorials/get-started/faqs/faq-authentication.md": {
+      "sourceHash": "88b44f6b03eab5df9adaf83932f1e3eb30fbf574c43aaa3bb238584b76cd1968",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/faqs/faq-authentication.md",
+      "translatedAt": "2026-07-22T07:46:53.851Z"
+    },
+    "docs/tutorials/get-started/faqs/faq-backup-and-restore.md": {
+      "sourceHash": "d65779b517c21a17323620e10f1d7c409570d131fbea2dfccff2947b0195c147",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/faqs/faq-backup-and-restore.md",
+      "translatedAt": "2026-07-22T07:47:07.873Z"
+    },
+    "docs/tutorials/get-started/faqs/faq-cluster.md": {
+      "sourceHash": "6d506e1096a46280bff4ba8fa8f839f9ae7f7d9d7b9514eac82b3d2a74677a18",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/faqs/faq-cluster.md",
+      "translatedAt": "2026-07-22T07:47:39.812Z"
+    },
+    "docs/tutorials/get-started/faqs/faq-collection.md": {
+      "sourceHash": "308a4923c1d78c58aad45b391e03a7a39feddbb69e009017c486cdfebc8a62fe",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/faqs/faq-collection.md",
+      "translatedAt": "2026-07-22T07:47:49.743Z"
+    },
+    "docs/tutorials/get-started/faqs/faq-data-import.md": {
+      "sourceHash": "2d8dab968184f20d1c2864d1e547e4ea1645f480eb669bf6d149dd50394ec218",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/faqs/faq-data-import.md",
+      "translatedAt": "2026-07-22T07:48:06.573Z"
+    },
+    "docs/tutorials/get-started/faqs/faq-get-started.md": {
+      "sourceHash": "264221cdfefd9bf74c7ec1372d924590f54e1c4d372fd8ee8df86f251759439a",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/faqs/faq-get-started.md",
+      "translatedAt": "2026-07-22T07:48:09.338Z"
+    },
+    "docs/tutorials/get-started/faqs/faq-integrations.md": {
+      "sourceHash": "d94a63c39d60fdee60593461c8a87e94a73501ac403e27f5ebcbff39b23a2051",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/faqs/faq-integrations.md",
+      "translatedAt": "2026-07-22T07:48:00.180Z"
+    },
+    "docs/tutorials/get-started/faqs/faq-migration.md": {
+      "sourceHash": "f3f6f7991aef99273dadeb0b26b7ba4240cba35622cdf3789a9d995b9273f16c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/faqs/faq-migration.md",
+      "translatedAt": "2026-07-22T07:48:13.481Z"
+    },
+    "docs/tutorials/get-started/faqs/faq-monitors-and-metrics.md": {
+      "sourceHash": "c2878d8beef448f46e812d5399ea1da2914c66abee0f3dd68735e39f1e4b1c3a",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/faqs/faq-monitors-and-metrics.md",
+      "translatedAt": "2026-07-22T07:48:26.144Z"
+    },
+    "docs/tutorials/get-started/faqs/faq-payment-and-billing.md": {
+      "sourceHash": "8e9e9d2682d7f8cfd74fe29b82f3af9d9cfa183e42c6ec00cf9f9b715f7e4b6e",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/faqs/faq-payment-and-billing.md",
+      "translatedAt": "2026-07-22T07:48:36.705Z"
+    },
+    "docs/tutorials/get-started/faqs/faq-resource-planning.md": {
+      "sourceHash": "6df12f822a99ff204c78541034b8a6601302cf6a6d1b9a6ef63fe9fc44644ae5",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/faqs/faq-resource-planning.md",
+      "translatedAt": "2026-07-22T07:49:13.332Z"
+    },
+    "docs/tutorials/get-started/faqs/faq-security.md": {
+      "sourceHash": "f8b8c071bd8ebd299f1e86d8699747cefea85d244ebc7408be547f9be28ff1ce",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/faqs/faq-security.md",
+      "translatedAt": "2026-07-22T07:48:51.666Z"
+    },
+    "docs/tutorials/get-started/faqs/faq-users-and-roles.md": {
+      "sourceHash": "8319a4e1f4a6df79c93fb86b3aa9874d793d306f7349eb9956d7143f11381ef7",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/faqs/faq-users-and-roles.md",
+      "translatedAt": "2026-07-22T07:48:50.429Z"
+    },
+    "docs/tutorials/get-started/free-trials.md": {
+      "sourceHash": "46806080203ccac963cd021a321bad329612bfa633a9a394b3b66708d8544825",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/free-trials.md",
+      "translatedAt": "2026-07-22T07:49:48.561Z"
+    },
+    "docs/tutorials/get-started/register-with-zilliz-cloud.md": {
+      "sourceHash": "d6c7b37ae240d5528f00f7b05047b2cfcec7dcff27fdf10263bc6f7b093ad72d",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/register-with-zilliz-cloud.md",
+      "translatedAt": "2026-07-22T07:49:08.103Z"
+    },
+    "docs/tutorials/get-started/select-zilliz-cloud-service-plans.md": {
+      "sourceHash": "c21439c809c45b74715cf344b2dad56de7a1e82e8a79bc7565f701c97dadea6e",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/get-started/select-zilliz-cloud-service-plans.md",
+      "translatedAt": "2026-07-22T07:51:37.578Z"
+    },
+    "docs/tutorials/home.md": {
+      "sourceHash": "9fbfb5d3457fc3b5c565753a913dad24e00290c7a5c829249efc41b6fd0c628c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/home.md",
+      "translatedAt": "2026-07-22T07:54:25.465Z"
+    },
+    "docs/tutorials/management/access-control/access-control-overview.md": {
+      "sourceHash": "eeb1c5765d107199440a253272f106464780fecbe80c4484562887b12dfe47e5",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/access-control/access-control-overview.md",
+      "translatedAt": "2026-07-22T07:51:05.958Z"
+    },
+    "docs/tutorials/management/access-control/cluster-privileges.md": {
+      "sourceHash": "6fd5f3d44bd3e2ba4972c7a489d30ee1f20fa274353fed42d30b65f0045b0874",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/access-control/cluster-privileges.md",
+      "translatedAt": "2026-07-22T07:52:39.872Z"
+    },
+    "docs/tutorials/management/access-control/cluster-roles-sdk.md": {
+      "sourceHash": "2926066905372f9a446741db6087fc33789b3c37c93b1d4868d3306c70855545",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/access-control/cluster-roles-sdk.md",
+      "translatedAt": "2026-07-22T07:53:15.313Z"
     }
   }
 }
