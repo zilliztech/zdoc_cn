@@ -890,6 +890,156 @@
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/cn-recvmseit6ebvl/migrate-between-clusters/migrate-between-clusters.md",
       "translatedAt": "2026-07-22T23:45:22.164Z"
     },
+    "docs-byoc/tutorials/management/cn-recvmseit6ebvl/migrate-between-clusters/offline-migration.md": {
+      "sourceHash": "4325b6c625f7e92722a07a0f2f3ce2f25df11c8ea20c1974d85691a80ff7874c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/cn-recvmseit6ebvl/migrate-between-clusters/offline-migration.md",
+      "translatedAt": "2026-07-22T23:41:05.479Z"
+    },
+    "docs-byoc/tutorials/management/cn-recvmseit6ebvl/migrate-from-milvus/migrate-from-milvus.md": {
+      "sourceHash": "b3043182b8e2ab2499af2acdf2792d189a9638e47a44f9a69ce20c8dda5e8433",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/cn-recvmseit6ebvl/migrate-from-milvus/migrate-from-milvus.md",
+      "translatedAt": "2026-07-22T23:40:20.343Z"
+    },
+    "docs-byoc/tutorials/management/cn-recvmseit6ebvl/migrate-from-milvus/via-backup-files.md": {
+      "sourceHash": "0c1f316f2b1f3a69018a327b176001b774daa1eb69f53456736c8d2c177048df",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/cn-recvmseit6ebvl/migrate-from-milvus/via-backup-files.md",
+      "translatedAt": "2026-07-22T23:41:02.860Z"
+    },
+    "docs-byoc/tutorials/management/cn-recvmsej5nnlco/manage-notification-channels.md": {
+      "sourceHash": "ff713d11519861f3fe07189c21bf676b72ad3a036ec38814686ef5a11e6e3310",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/cn-recvmsej5nnlco/manage-notification-channels.md",
+      "translatedAt": "2026-07-22T23:41:12.650Z"
+    },
+    "docs-byoc/tutorials/management/cn-recvmsej5nnlco/manage-organization-alerts.md": {
+      "sourceHash": "cd792d14d0a1ee35a1fe356f8417886807904e13ffdd3805354d2f04702266b3",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/cn-recvmsej5nnlco/manage-organization-alerts.md",
+      "translatedAt": "2026-07-22T23:40:53.952Z"
+    },
+    "docs-byoc/tutorials/management/cn-recvmsej5nnlco/manage-project-alerts.md": {
+      "sourceHash": "743a3928ba3c8b9928eee7189fab1f0c8d5d72ba4106bb6fdee39127f1b1b821",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/cn-recvmsej5nnlco/manage-project-alerts.md",
+      "translatedAt": "2026-07-22T23:41:52.671Z"
+    },
+    "docs-byoc/tutorials/management/cn-recvmsej5nnlco/metrics-alerts-reference.md": {
+      "sourceHash": "0654b8f84c3639a962eaedbd4a3dff79159770ad13ca63ac7cc82e683d6949d8",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/cn-recvmsej5nnlco/metrics-alerts-reference.md",
+      "translatedAt": "2026-07-22T23:42:12.387Z"
+    },
+    "docs-byoc/tutorials/management/cn-recvmsej5nnlco/observability-integrations/prometheus-monitoring.md": {
+      "sourceHash": "c5abef91fb33b5a21bae6bc76246fc9106ed9ba7d5b5e7b275952a513f15b698",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/cn-recvmsej5nnlco/observability-integrations/prometheus-monitoring.md",
+      "translatedAt": "2026-07-22T23:42:54.290Z"
+    },
+    "docs-byoc/tutorials/management/cn-recvmsej5nnlco/view-cluster-metric-charts.md": {
+      "sourceHash": "a3a873b71d2216f19daba963435dea73e5feac3a6c6506ebc2d9d39c0e3232a1",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/cn-recvmsej5nnlco/view-cluster-metric-charts.md",
+      "translatedAt": "2026-07-22T23:41:38.618Z"
+    },
+    "docs-byoc/tutorials/management/ip-allowlists/setup-console-ip-allowlist.md": {
+      "sourceHash": "923df7a799fb90027ead62c253812353838a4065068b6778bfc7f10e10ca2fb9",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/ip-allowlists/setup-console-ip-allowlist.md",
+      "translatedAt": "2026-07-22T23:42:33.761Z"
+    },
+    "docs-byoc/tutorials/management/limits/api-comparison.md": {
+      "sourceHash": "3eab12804caedc9b45ee664b4104ce07af41648f3864cf02e5182b9fb374846e",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/limits/api-comparison.md",
+      "translatedAt": "2026-07-22T23:44:23.823Z"
+    },
+    "docs-byoc/tutorials/management/limits/limits.md": {
+      "sourceHash": "c61f1179ec83f48578d86b68b3c70f416bab887c01af1dbd136a341bc7b4cd65",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/limits/limits.md",
+      "translatedAt": "2026-07-22T23:43:20.942Z"
+    },
+    "docs-byoc/tutorials/management/organizations/organization-settings.md": {
+      "sourceHash": "9c7b82bad6e4a13d7c3e8360397426ed138f15bff6df10edf3d52ead7d38f8d7",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/organizations/organization-settings.md",
+      "translatedAt": "2026-07-22T23:42:59.595Z"
+    },
+    "docs-byoc/tutorials/management/organizations/organization-users.md": {
+      "sourceHash": "5477171415715cb34079cf6c150402fea4ba36cfc713e3d005221026c2a03a59",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/organizations/organization-users.md",
+      "translatedAt": "2026-07-22T23:43:54.188Z"
+    },
+    "docs-byoc/tutorials/management/organizations/use-recycle-bin.md": {
+      "sourceHash": "752699a3e1eb85ba2af48e60aff2b4fc6bc7fce506ef81683d314b7c86f38927",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/organizations/use-recycle-bin.md",
+      "translatedAt": "2026-07-22T23:43:17.359Z"
+    },
+    "docs-byoc/tutorials/management/projects/job-center.md": {
+      "sourceHash": "cabede2282be3404891e740576113746fc77ceebdaa93cf86db253ae7abfb0de",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/projects/job-center.md",
+      "translatedAt": "2026-07-22T23:43:50.041Z"
+    },
+    "docs-byoc/tutorials/management/projects/manage-projects.md": {
+      "sourceHash": "afd6975537ab8460616a4aa95962659342ad75e634f0fc77d18ad6938ef60158",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/projects/manage-projects.md",
+      "translatedAt": "2026-07-22T23:43:56.497Z"
+    },
+    "docs-byoc/tutorials/management/projects/project-users.md": {
+      "sourceHash": "fe604c3d0567c6f00b3f9292166e350a44f945ef1234decb1bc2aa87c9804abe",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/projects/project-users.md",
+      "translatedAt": "2026-07-22T23:45:01.980Z"
+    },
+    "docs-byoc/tutorials/management/single-sign-on-with-okta.md": {
+      "sourceHash": "3936cb790add1ef563936d031f72d75e1ee335ae7da3c63bd67fdf818b976ad5",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/single-sign-on-with-okta.md",
+      "translatedAt": "2026-07-22T23:44:37.700Z"
+    },
+    "docs-byoc/tutorials/tools/agents-and-prompts/agents-and-prompts.md": {
+      "sourceHash": "1d5951374fbb93badbf8a6cf0d9938650605fb62d9eb14492aa5fb1af2b0c7b5",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/tools/agents-and-prompts/agents-and-prompts.md",
+      "translatedAt": "2026-07-22T23:44:23.447Z"
+    },
+    "docs-byoc/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/agent-plugins-and-extensions.md": {
+      "sourceHash": "a0b614556e8951eb4a1afc1996ddee42daa4fad875e5af334cb29bc49cc4d04d",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/agent-plugins-and-extensions.md",
+      "translatedAt": "2026-07-22T23:45:03.059Z"
+    },
+    "docs-byoc/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/indexes.md": {
+      "sourceHash": "355fa52529c01202859d1b5fa72c4eb0b416541552a8ecdcad012e3bacfd4192",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/indexes.md",
+      "translatedAt": "2026-07-22T23:45:09.582Z"
+    },
+    "docs-byoc/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-access-control-prompts.md": {
+      "sourceHash": "4ed5e5349f5605aeca37332588d6d6e6e2c78ffc0ea3923878722dc49d913f85",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-access-control-prompts.md",
+      "translatedAt": "2026-07-22T23:45:07.928Z"
+    },
+    "docs-byoc/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-ai-prompts.md": {
+      "sourceHash": "970f46a1daf89cf3b82e16f8bd15bf02a7d7db821645910499e41405fa80582c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-ai-prompts.md",
+      "translatedAt": "2026-07-22T23:45:28.840Z"
+    },
+    "docs-byoc/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-base-prompts.md": {
+      "sourceHash": "cffd619eca4d9a77eeb2995aa7e3723991c515a51a65bb66576cec764e9d70a9",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-base-prompts.md",
+      "translatedAt": "2026-07-22T23:45:14.992Z"
+    },
+    "docs-byoc/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-import-prompts.md": {
+      "sourceHash": "9a7af26d28d964d2c6515459e40d6d10f6a8af250b7480e986bafa50867a449e",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-import-prompts.md",
+      "translatedAt": "2026-07-22T23:45:51.580Z"
+    },
+    "docs-byoc/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-integrations-prompts.md": {
+      "sourceHash": "c74885fdf21d162ece085c12551e6e466cab8a4a23c5422f189f61dc3acb8fb0",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-integrations-prompts.md",
+      "translatedAt": "2026-07-22T23:46:00.447Z"
+    },
+    "docs-byoc/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-migration-prompts.md": {
+      "sourceHash": "490b62d74b6553794ad4baeef55902d101ec4bd2dc90fc8e07e7dbd50e8faa3b",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-migration-prompts.md",
+      "translatedAt": "2026-07-22T23:46:08.102Z"
+    },
+    "docs-byoc/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-schema-design-prompts.md": {
+      "sourceHash": "0bacbe91d0848390f2958b8f613fdfcfbbb7da35b2a46540fb97e5451640133a",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-schema-design-prompts.md",
+      "translatedAt": "2026-07-22T23:46:13.277Z"
+    },
+    "docs-byoc/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-search-prompts.md": {
+      "sourceHash": "dd6d9631da04934ec6dada9fc92af33b386795b4c81171e15a1e2ec386313bde",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-search-prompts.md",
+      "translatedAt": "2026-07-22T23:46:29.178Z"
+    },
     "docs/tutorials/development/analyzer/analyzer-overview.md": {
       "sourceHash": "c2061f8ac3a0208524e5a244d8be9cc1880ef4f678d37c10f55ec1b6b7238f56",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/development/analyzer/analyzer-overview.md",
