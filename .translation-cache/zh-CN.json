@@ -2249,6 +2249,156 @@
       "sourceHash": "2c467445a6efe84a71e2018bc1f41f56b6898662340e1b23e8bfcb0f516f2bb3",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmseit6ebvl/migrate-from-milvus/via-endpoint.md",
       "translatedAt": "2026-07-22T07:48:36.906Z"
+    },
+    "docs/tutorials/management/cn-recvmseit6ebvl/migrate-from-milvus/via-stage.md": {
+      "sourceHash": "b6e79f000b3dc85bdf584178471580c5ca491b6710aa6356c91088abb225f76f",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmseit6ebvl/migrate-from-milvus/via-stage.md",
+      "translatedAt": "2026-07-22T07:43:27.754Z"
+    },
+    "docs/tutorials/management/cn-recvmsej5nnlco/manage-notification-channels.md": {
+      "sourceHash": "3f066dfa45d2792aff54d5678b1f412a349219a69110b1ed399e6ab64d37c8a1",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmsej5nnlco/manage-notification-channels.md",
+      "translatedAt": "2026-07-22T07:43:51.430Z"
+    },
+    "docs/tutorials/management/cn-recvmsej5nnlco/manage-organization-alerts.md": {
+      "sourceHash": "2acc431627e36c2fccafcd850996416c06b6a50f2a07a31cc0a80f75f23633aa",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmsej5nnlco/manage-organization-alerts.md",
+      "translatedAt": "2026-07-22T07:43:20.278Z"
+    },
+    "docs/tutorials/management/cn-recvmsej5nnlco/manage-project-alerts.md": {
+      "sourceHash": "0da68c86d68c5a725b5b36091c20ff9138127535a6ef7a506343dde1102bcd3f",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmsej5nnlco/manage-project-alerts.md",
+      "translatedAt": "2026-07-22T07:43:47.227Z"
+    },
+    "docs/tutorials/management/cn-recvmsej5nnlco/metrics-alerts-reference.md": {
+      "sourceHash": "f556c003d8856044dae9f5dcf8094244a396dba79b802f9f24c5f1cb66dea551",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmsej5nnlco/metrics-alerts-reference.md",
+      "translatedAt": "2026-07-22T07:44:25.783Z"
+    },
+    "docs/tutorials/management/cn-recvmsej5nnlco/observability-integrations/prometheus-monitoring.md": {
+      "sourceHash": "b6889f74d4d2fc9231b8f4a09acf2ac0281160792b4e66dfb7f50630b4320836",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmsej5nnlco/observability-integrations/prometheus-monitoring.md",
+      "translatedAt": "2026-07-22T07:44:23.198Z"
+    },
+    "docs/tutorials/management/cn-recvmsej5nnlco/view-cluster-metric-charts.md": {
+      "sourceHash": "8b1ff6d47938fefc60cd60dee78d784e563f7be86ba5dec2f11e3ef9837ddba5",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmsej5nnlco/view-cluster-metric-charts.md",
+      "translatedAt": "2026-07-22T07:44:15.715Z"
+    },
+    "docs/tutorials/management/cost-management/analyze-cost.md": {
+      "sourceHash": "d84238630a8b6dc634fd35fd999e7f48000c2f37e232f3a9daae287e8baaaf13",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cost-management/analyze-cost.md",
+      "translatedAt": "2026-07-22T07:44:32.307Z"
+    },
+    "docs/tutorials/management/cost-management/cost-optimization.md": {
+      "sourceHash": "f8557c81cbeaea15120c64706fb784913979b2785caa3170be691095dcabe56c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cost-management/cost-optimization.md",
+      "translatedAt": "2026-07-22T07:46:13.102Z"
+    },
+    "docs/tutorials/management/cost-management/understand-cost/audit-log-cost.md": {
+      "sourceHash": "6bfeb7b35a80d59d71281e2985394300e361abbd3de56774553a6e7122f2e49b",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cost-management/understand-cost/audit-log-cost.md",
+      "translatedAt": "2026-07-22T07:44:52.482Z"
+    },
+    "docs/tutorials/management/cost-management/understand-cost/data-transfer-cost.md": {
+      "sourceHash": "8d0cb947a99770a8c54b74641aff7b7e0f74209c91ded7ec017a24cb4b22ccf5",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cost-management/understand-cost/data-transfer-cost.md",
+      "translatedAt": "2026-07-22T07:44:59.559Z"
+    },
+    "docs/tutorials/management/cost-management/understand-cost/dedicated-cluster-cost.md": {
+      "sourceHash": "10ea0575bfb430f4d6c04feedc068ce141a825315881e734c4475d13a3ae0d56",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cost-management/understand-cost/dedicated-cluster-cost.md",
+      "translatedAt": "2026-07-22T07:45:01.235Z"
+    },
+    "docs/tutorials/management/cost-management/understand-cost/on-demand-compute-cost.md": {
+      "sourceHash": "260f7d7d7abdf37a77196e486ff43236907546174ca22a183231495d80933206",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cost-management/understand-cost/on-demand-compute-cost.md",
+      "translatedAt": "2026-07-22T07:45:18.435Z"
+    },
+    "docs/tutorials/management/cost-management/understand-cost/serverless-cluster-cost.md": {
+      "sourceHash": "0e47c722154ac6b0ee5cdb6e13911617f65157085b7eacd65457f3b8a9c59400",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cost-management/understand-cost/serverless-cluster-cost.md",
+      "translatedAt": "2026-07-22T07:45:43.532Z"
+    },
+    "docs/tutorials/management/cost-management/understand-cost/storage-cost.md": {
+      "sourceHash": "3295e8d6958d43d44991630f311013457f27657e225a3398f6c8d97e04d3f7f0",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cost-management/understand-cost/storage-cost.md",
+      "translatedAt": "2026-07-22T07:46:06.121Z"
+    },
+    "docs/tutorials/management/cost-management/understand-cost/storage-request-cost.md": {
+      "sourceHash": "917387ee115fd48def559f187064683409b437fb7d33627d91be1b702200435b",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cost-management/understand-cost/storage-request-cost.md",
+      "translatedAt": "2026-07-22T07:45:40.465Z"
+    },
+    "docs/tutorials/management/ip-allowlists/setup-console-ip-allowlist.md": {
+      "sourceHash": "5d23b0ab60dd4e6aac0857dc2bf170b1b74689e286f472fccfc5ef184b5e5dcf",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/ip-allowlists/setup-console-ip-allowlist.md",
+      "translatedAt": "2026-07-22T07:46:07.234Z"
+    },
+    "docs/tutorials/management/ip-allowlists/setup-whitelist.md": {
+      "sourceHash": "13537815c7bae88087c703240351fe552607746ad190b01096f802b4e0d647b0",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/ip-allowlists/setup-whitelist.md",
+      "translatedAt": "2026-07-22T07:46:08.715Z"
+    },
+    "docs/tutorials/management/limits/api-comparison.md": {
+      "sourceHash": "4ed636d3bcc99f8de1a150c225c90541dd15a11554eb8390216ae94a7272d181",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/limits/api-comparison.md",
+      "translatedAt": "2026-07-22T07:48:41.211Z"
+    },
+    "docs/tutorials/management/limits/limits.md": {
+      "sourceHash": "273b2e27bbd569638e48783b30ad85aea4448451f2264f1c8e678a5c3dc68d80",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/limits/limits.md",
+      "translatedAt": "2026-07-22T07:47:41.623Z"
+    },
+    "docs/tutorials/management/organizations/organization-settings.md": {
+      "sourceHash": "6c1faed776fef364002dc216a0ddbae2e9ecb427a2f3a993a6b27e34f8a72b73",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/organizations/organization-settings.md",
+      "translatedAt": "2026-07-22T07:46:43.599Z"
+    },
+    "docs/tutorials/management/organizations/organization-users.md": {
+      "sourceHash": "d8a535f939080ca77b18530d5ce575a5a5af7a58dcc81a8f0c5b3396eb82b2c2",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/organizations/organization-users.md",
+      "translatedAt": "2026-07-22T07:48:31.857Z"
+    },
+    "docs/tutorials/management/organizations/use-recycle-bin.md": {
+      "sourceHash": "a3c11b7d3279a0c1ce2eac4e9be3f011f49f2e4ad59c90bd704225b89eb47559",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/organizations/use-recycle-bin.md",
+      "translatedAt": "2026-07-22T07:47:04.616Z"
+    },
+    "docs/tutorials/management/private-endpoint/aliyun-private-link.md": {
+      "sourceHash": "5f70ae1eceb613c65a85f4ed10b6a24a7a126d3c866da927affb55c44d0dabfe",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/private-endpoint/aliyun-private-link.md",
+      "translatedAt": "2026-07-22T07:48:32.676Z"
+    },
+    "docs/tutorials/management/private-endpoint/setup-a-private-link-aws.md": {
+      "sourceHash": "d24ef78a7f6861672e8a82d9f1e54caa343f47cfd73a245a6434126e4317b6b9",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/private-endpoint/setup-a-private-link-aws.md",
+      "translatedAt": "2026-07-22T07:48:38.634Z"
+    },
+    "docs/tutorials/management/private-endpoint/tencent-private-link.md": {
+      "sourceHash": "f44a10f54d415cd5435f010ab5a1c4490fdae4b6cedfe91cd2d200d875107831",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/private-endpoint/tencent-private-link.md",
+      "translatedAt": "2026-07-22T07:49:44.610Z"
+    },
+    "docs/tutorials/management/projects/job-center.md": {
+      "sourceHash": "2fcd9977a820c56ce913fb46b1019d46be047afe65545257f676c5e8376f65c4",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/projects/job-center.md",
+      "translatedAt": "2026-07-22T07:49:08.265Z"
+    },
+    "docs/tutorials/management/projects/manage-projects.md": {
+      "sourceHash": "cd29f6e1b957db7aadd52447803426531c461a30181fe9ebd06f9ee48002c90f",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/projects/manage-projects.md",
+      "translatedAt": "2026-07-22T07:49:28.785Z"
+    },
+    "docs/tutorials/management/projects/project-users.md": {
+      "sourceHash": "150499b4cf7334fdadf744de7534a82448f27f22b22320f93bef96d8174135e6",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/projects/project-users.md",
+      "translatedAt": "2026-07-22T07:50:00.419Z"
+    },
+    "docs/tutorials/management/single-sign-on-with-okta.md": {
+      "sourceHash": "08df0028214492ec5cd88f757f969a4dc2faea9d3e1ac8962359c8babf63aae3",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/single-sign-on-with-okta.md",
+      "translatedAt": "2026-07-22T07:49:58.328Z"
     }
   }
 }
