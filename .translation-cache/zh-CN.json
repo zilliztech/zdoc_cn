@@ -740,6 +740,156 @@
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/get-started/register-with-zilliz-cloud.md",
       "translatedAt": "2026-07-22T23:48:15.202Z"
     },
+    "docs-byoc/tutorials/management/access-control/access-control-overview.md": {
+      "sourceHash": "ad72881dc72a37af3d03042f4cf43a727f9318b02d53cf249d8be4b80ca77ffe",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/access-control/access-control-overview.md",
+      "translatedAt": "2026-07-22T23:40:24.842Z"
+    },
+    "docs-byoc/tutorials/management/access-control/cluster-privileges.md": {
+      "sourceHash": "88938ff0f4013738cbcaedf4197b2ae6b61956a8fb43f53083c20d72669d8f15",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/access-control/cluster-privileges.md",
+      "translatedAt": "2026-07-22T23:41:24.260Z"
+    },
+    "docs-byoc/tutorials/management/access-control/cluster-roles-sdk.md": {
+      "sourceHash": "94c8e85ae04b2a24649a388dc4ab82a5b0b1d97678eaa535bce6a947d5a173fe",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/access-control/cluster-roles-sdk.md",
+      "translatedAt": "2026-07-22T23:41:19.884Z"
+    },
+    "docs-byoc/tutorials/management/access-control/cluster-roles.md": {
+      "sourceHash": "9dc8620554e5ad17149a3469b7a76aeb9e51a0898b1d8af79b3843af174be0dc",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/access-control/cluster-roles.md",
+      "translatedAt": "2026-07-22T23:40:52.099Z"
+    },
+    "docs-byoc/tutorials/management/access-control/cluster-users-sdk.md": {
+      "sourceHash": "a13aa5423904c9d294938719f96231f59a92200ef7be7950ef9b07bdfe66530b",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/access-control/cluster-users-sdk.md",
+      "translatedAt": "2026-07-22T23:41:27.448Z"
+    },
+    "docs-byoc/tutorials/management/access-control/cluster-users.md": {
+      "sourceHash": "59a07c6796e2f43c592ef9931c5b20303e2b5db5079212b8720d6530b46b69a0",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/access-control/cluster-users.md",
+      "translatedAt": "2026-07-22T23:41:07.309Z"
+    },
+    "docs-byoc/tutorials/management/access-logs/access-log-overview.md": {
+      "sourceHash": "606cb9ddef902978c1db413ed088f7f33d6c071508b7e17ee71f5283542f4895",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/access-logs/access-log-overview.md",
+      "translatedAt": "2026-07-22T23:41:34.772Z"
+    },
+    "docs-byoc/tutorials/management/access-logs/access-log-reference.md": {
+      "sourceHash": "0be1d016e6e50640e9adf57b70fa7c8940c9aa1c87a13f34e3355e4bb4d3407b",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/access-logs/access-log-reference.md",
+      "translatedAt": "2026-07-22T23:42:48.682Z"
+    },
+    "docs-byoc/tutorials/management/access-logs/configure-access-logs.md": {
+      "sourceHash": "3dbf27d981b02b8a956852eae4e0de2c20eb76e325ee53bdb623190e4e88c317",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/access-logs/configure-access-logs.md",
+      "translatedAt": "2026-07-22T23:41:49.223Z"
+    },
+    "docs-byoc/tutorials/management/auditing/audit-logs-ref.md": {
+      "sourceHash": "3aa446cc1711f83dbc0ca78a3853e6ec7e09bd56ceae5674861ed5ff4a42629c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/auditing/audit-logs-ref.md",
+      "translatedAt": "2026-07-22T23:43:13.185Z"
+    },
+    "docs-byoc/tutorials/management/auditing/audit-logs.md": {
+      "sourceHash": "a21e6ed41f73914570f204c54e9715fe1d79474c66641d5730577ba5b55e516b",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/auditing/audit-logs.md",
+      "translatedAt": "2026-07-22T23:42:33.093Z"
+    },
+    "docs-byoc/tutorials/management/auditing/view-activities.md": {
+      "sourceHash": "cd06f3d2c6eb6a2e2a40e39bced3e693fe0f9a8f505d7ad808f7957fe94a2163",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/auditing/view-activities.md",
+      "translatedAt": "2026-07-22T23:42:05.703Z"
+    },
+    "docs-byoc/tutorials/management/authentication/cluster-credentials.md": {
+      "sourceHash": "6336ddcc3b370a2496508e4f4ddfb8c7eb5a75a4ad6adc87e04791997087760c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/authentication/cluster-credentials.md",
+      "translatedAt": "2026-07-22T23:42:32.089Z"
+    },
+    "docs-byoc/tutorials/management/authentication/email-accounts.md": {
+      "sourceHash": "e2b51d384b6a2768f85e5a3c7fa47635e9255ff197b83964acca6c24142f210d",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/authentication/email-accounts.md",
+      "translatedAt": "2026-07-22T23:42:53.945Z"
+    },
+    "docs-byoc/tutorials/management/authentication/manage-api-keys.md": {
+      "sourceHash": "239629ec7d753c2e1758085080dd0af41030eed5b8c5497bb0d1b9a57da5ed99",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/authentication/manage-api-keys.md",
+      "translatedAt": "2026-07-22T23:44:02.709Z"
+    },
+    "docs-byoc/tutorials/management/authentication/multi-factor-auth.md": {
+      "sourceHash": "44dfd4ce35ceee2c1409f2e246301ae985f0fa645e6fe93e95bace5a3a9f5421",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/authentication/multi-factor-auth.md",
+      "translatedAt": "2026-07-22T23:43:05.497Z"
+    },
+    "docs-byoc/tutorials/management/backup-and-restore/create-backup.md": {
+      "sourceHash": "39ba13172a80af391825a2116ac4b3af028c008d2ae805965ad88dac32ca1b86",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/backup-and-restore/create-backup.md",
+      "translatedAt": "2026-07-22T23:43:27.744Z"
+    },
+    "docs-byoc/tutorials/management/backup-and-restore/manage-backup-files.md": {
+      "sourceHash": "5a72e2708b821e737deda82dac6a51275fdaa09325c580b0968f581b05e1fb82",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/backup-and-restore/manage-backup-files.md",
+      "translatedAt": "2026-07-22T23:43:41.284Z"
+    },
+    "docs-byoc/tutorials/management/backup-and-restore/restore-from-backup-files.md": {
+      "sourceHash": "8f0f2d700a191f0bdb1f0a6b9f136d2cb80de86d20c9300eca849b170453e4cd",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/backup-and-restore/restore-from-backup-files.md",
+      "translatedAt": "2026-07-22T23:43:59.611Z"
+    },
+    "docs-byoc/tutorials/management/backup-and-restore/schedule-automatic-backups.md": {
+      "sourceHash": "5dbf2a964984d3ec635b3678e9dc0bcda32476d489d668d08407d0fabce8077d",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/backup-and-restore/schedule-automatic-backups.md",
+      "translatedAt": "2026-07-22T23:44:07.685Z"
+    },
+    "docs-byoc/tutorials/management/billing-management/payment-billing.md": {
+      "sourceHash": "66f81c4a524bda33c9f182d50cdc6fbb12bc12f22d15942c039553902a729d76",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/billing-management/payment-billing.md",
+      "translatedAt": "2026-07-22T23:44:20.608Z"
+    },
+    "docs-byoc/tutorials/management/clusters/dedicated-cluster/connect-to-clusters.md": {
+      "sourceHash": "69d74a2e06ace9ec8c8027b7da4f47fff53cab4a18950bd8865e37eba8d6329e",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/clusters/dedicated-cluster/connect-to-clusters.md",
+      "translatedAt": "2026-07-22T23:44:23.321Z"
+    },
+    "docs-byoc/tutorials/management/clusters/dedicated-cluster/create-cluster.md": {
+      "sourceHash": "2606ef5b8600dd6f584aaf99395478c21da575a430a6c334ac558d1ebc8d5f04",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/clusters/dedicated-cluster/create-cluster.md",
+      "translatedAt": "2026-07-22T23:44:37.582Z"
+    },
+    "docs-byoc/tutorials/management/clusters/dedicated-cluster/manage-cluster.md": {
+      "sourceHash": "df67eed2e2666f981b29a1c82491792e3091e130eb1b0438d96b539906a9a940",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/clusters/dedicated-cluster/manage-cluster.md",
+      "translatedAt": "2026-07-22T23:45:52.297Z"
+    },
+    "docs-byoc/tutorials/management/clusters/dedicated-cluster/scale-cluster/cron-expression.md": {
+      "sourceHash": "e744586b141f208116710887ec6ace903afd31f166304debb7954161559dd4d5",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/clusters/dedicated-cluster/scale-cluster/cron-expression.md",
+      "translatedAt": "2026-07-22T23:44:50.880Z"
+    },
+    "docs-byoc/tutorials/management/clusters/dedicated-cluster/scale-cluster/manage-replica.md": {
+      "sourceHash": "05c40e001fb5fa3a9bc5a6697e6e0892a18926ea7d656c25794e6588ace915ab",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/clusters/dedicated-cluster/scale-cluster/manage-replica.md",
+      "translatedAt": "2026-07-22T23:45:08.398Z"
+    },
+    "docs-byoc/tutorials/management/clusters/dedicated-cluster/scale-cluster/scale-cluster.md": {
+      "sourceHash": "49d69072ef065e5141cd3d4dfe589f3107fbab2430eb2f2eb56a53985b75da95",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/clusters/dedicated-cluster/scale-cluster/scale-cluster.md",
+      "translatedAt": "2026-07-22T23:45:12.248Z"
+    },
+    "docs-byoc/tutorials/management/clusters/dedicated-cluster/scale-cluster/scale-query-cu.md": {
+      "sourceHash": "90370aadbb725502efa0f7572b918056ed5fa2d179d82b581c4a143282941cf4",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/clusters/dedicated-cluster/scale-cluster/scale-query-cu.md",
+      "translatedAt": "2026-07-22T23:45:46.109Z"
+    },
+    "docs-byoc/tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/zilliz-cloud-ips.md": {
+      "sourceHash": "e29b092b21391b5c29e51fe783c7f7e83f5454385526791efeaaa96e617b750e",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/zilliz-cloud-ips.md",
+      "translatedAt": "2026-07-22T23:45:28.831Z"
+    },
+    "docs-byoc/tutorials/management/cn-recvmseit6ebvl/migrate-between-clusters/migrate-between-clusters.md": {
+      "sourceHash": "9c050290d5383f76a400726cd7eab57a7e0820ae918ea9c132d95ae40ff7277e",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/management/cn-recvmseit6ebvl/migrate-between-clusters/migrate-between-clusters.md",
+      "translatedAt": "2026-07-22T23:45:22.164Z"
+    },
     "docs/tutorials/development/analyzer/analyzer-overview.md": {
       "sourceHash": "c2061f8ac3a0208524e5a244d8be9cc1880ef4f678d37c10f55ec1b6b7238f56",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/development/analyzer/analyzer-overview.md",
