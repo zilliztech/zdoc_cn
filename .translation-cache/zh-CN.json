@@ -2399,6 +2399,121 @@
       "sourceHash": "08df0028214492ec5cd88f757f969a4dc2faea9d3e1ac8962359c8babf63aae3",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/single-sign-on-with-okta.md",
       "translatedAt": "2026-07-22T07:49:58.328Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/agents-and-prompts.md": {
+      "sourceHash": "3bc6172ab0e8ee522fbd79d441a929a305063f5572d0928014483745cce277f0",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/agents-and-prompts.md",
+      "translatedAt": "2026-07-22T07:43:53.300Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/agent-plugins-and-extensions.md": {
+      "sourceHash": "32f48321099528c9588d7ef6601a244177afc898dc348b75c111c5bf9524488d",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/agent-plugins-and-extensions.md",
+      "translatedAt": "2026-07-22T07:43:23.607Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/backfill-and-schema-iteration.md": {
+      "sourceHash": "20768d3ae4e9d907f87df797dd0a2c50b3f0ede17550ac198a5b24c9b7d7f9eb",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/backfill-and-schema-iteration.md",
+      "translatedAt": "2026-07-22T07:43:28.881Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/indexes.md": {
+      "sourceHash": "c83345220d690cd214cfd64095644afbe3d7ce4588c3e80c17389be417c58884",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/indexes.md",
+      "translatedAt": "2026-07-22T07:43:33.177Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/on-demand-search.md": {
+      "sourceHash": "72f0dd6aa26506a8d1fb0a75a8c16b1509ca9cb736aa9661140d5c0a937c3b0b",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/on-demand-search.md",
+      "translatedAt": "2026-07-22T07:44:39.758Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-access-control-prompts.md": {
+      "sourceHash": "ad5e676a8c2aa9c50ad069706c7f454bf1a1236f9283995dfc07aa4a420428f0",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-access-control-prompts.md",
+      "translatedAt": "2026-07-22T07:43:52.519Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-ai-prompts.md": {
+      "sourceHash": "1880724aaa353a070a1d741ee9d495b821727f363d2aa687cbf1b9227519bf38",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-ai-prompts.md",
+      "translatedAt": "2026-07-22T07:43:50.596Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-base-prompts.md": {
+      "sourceHash": "71d25a0c666ca1752044226e6312029115e2e1f27341fe3723dad16c1fb0c622",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-base-prompts.md",
+      "translatedAt": "2026-07-22T07:44:07.701Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-cluster-connection-prompts.md": {
+      "sourceHash": "c2d830493851d14acd90c2b50f5e194abb705d92083d595d7dc57c5f39b24a0e",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-cluster-connection-prompts.md",
+      "translatedAt": "2026-07-22T07:46:47.954Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-import-prompts.md": {
+      "sourceHash": "e4d3f902c5b32d0e263002714369604b7b2f50d9f6bfe66a027993964d1552a4",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-import-prompts.md",
+      "translatedAt": "2026-07-22T07:44:35.657Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-integrations-prompts.md": {
+      "sourceHash": "bbbf877481aad109acdac38de9cc063a8df49235efc0e66265219a26aea0a22c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-integrations-prompts.md",
+      "translatedAt": "2026-07-22T07:44:49.330Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-migration-prompts.md": {
+      "sourceHash": "813ce203088ce311d47571c641297b2714a3e2e5403342ff5d090fc15dfb6d43",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-migration-prompts.md",
+      "translatedAt": "2026-07-22T07:45:33.352Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-pricing-prompts.md": {
+      "sourceHash": "036c23c14a80cde6ed96a1d73e72068c133aa007592c34e62b5ac260f1f5ff5a",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-pricing-prompts.md",
+      "translatedAt": "2026-07-22T07:44:59.737Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-resource-planning-prompts.md": {
+      "sourceHash": "4e72f2e92aa969b16311f9f68c9cb7688e81b61fb1d04f599648aa853e82f97d",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-resource-planning-prompts.md",
+      "translatedAt": "2026-07-22T07:46:13.867Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-schema-design-prompts.md": {
+      "sourceHash": "11e1559d90824b6bfa3fae1cbf513d13e01c7fd0d92303897c9a6decd303e3f2",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-schema-design-prompts.md",
+      "translatedAt": "2026-07-22T07:45:42.799Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-search-prompts.md": {
+      "sourceHash": "ff75e74d0bd81f05a8d2d872e92a32481b7d0e2b43c0289fc2e2416bb61b5dc9",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-ai-prompts/zilliz-search-prompts.md",
+      "translatedAt": "2026-07-22T07:46:10.218Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-gemini-extension.md": {
+      "sourceHash": "81cd39de0b6a84cc1e07346e9e8bfba3ee59f765d9bae66c979f776a0b07af34",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-gemini-extension.md",
+      "translatedAt": "2026-07-22T07:46:02.138Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-plugin/zilliz-plugin-capabilities.md": {
+      "sourceHash": "6600450f5cb4c5b72d754f9230613aa93edd98c6402f8657b83a3040d580a03a",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-plugin/zilliz-plugin-capabilities.md",
+      "translatedAt": "2026-07-22T07:46:49.460Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-plugin/zilliz-plugin-examples.md": {
+      "sourceHash": "b7b2768fa5018475ae8b8c952cc9c371ba1318b47d88f718ede51714838f363a",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-plugin/zilliz-plugin-examples.md",
+      "translatedAt": "2026-07-22T07:46:31.583Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-plugin/zilliz-plugin-setup.md": {
+      "sourceHash": "c3be202ab49e709240574c6585597fb179951265fb93bc8acc5523bd51e025bf",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-plugin/zilliz-plugin-setup.md",
+      "translatedAt": "2026-07-22T07:46:23.180Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-plugin/zilliz-plugin.md": {
+      "sourceHash": "ce0c5c9a9c99092e85f328ca9628e739c3440acbc45ed5bee2992cc1e6062cd6",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-plugin/zilliz-plugin.md",
+      "translatedAt": "2026-07-22T07:46:44.647Z"
+    },
+    "docs/tutorials/tools/agents-and-prompts/zilliz-skill.md": {
+      "sourceHash": "2ee1baf468ccddcb0b6ad6556e9f2928e9e620a3313f89c6e80e0b36f6510ce5",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/agents-and-prompts/zilliz-skill.md",
+      "translatedAt": "2026-07-22T07:47:01.645Z"
+    },
+    "docs/tutorials/tools/terraform-provider.md": {
+      "sourceHash": "41913f4a5a63c7e186dc82c46466aac89b75c13092a4542a8874742788308c45",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/tools/terraform-provider.md",
+      "translatedAt": "2026-07-22T07:47:33.801Z"
     }
   }
 }
