@@ -2099,6 +2099,156 @@
       "sourceHash": "c04701fd58e1b4c87ea3b49c8ca99f4dc7f5463eb54d0d9fd85ca1cd5d575084",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/billing-management/update-billing-profile.md",
       "translatedAt": "2026-07-22T07:48:39.947Z"
+    },
+    "docs/tutorials/management/billing-management/view-invoice.md": {
+      "sourceHash": "9f802a9fceb8b1bfcf11b33bb5816789704e3aecb9afeff53d861cab1201eef8",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/billing-management/view-invoice.md",
+      "translatedAt": "2026-07-22T07:44:47.275Z"
+    },
+    "docs/tutorials/management/clusters/cn-recvmsesappzh6/manage-on-demand-clusters.md": {
+      "sourceHash": "76da58debf411a0686ffe982a8d7a06aba551e1597c759f88d9d8bc784ee067c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/clusters/cn-recvmsesappzh6/manage-on-demand-clusters.md",
+      "translatedAt": "2026-07-22T07:43:50.711Z"
+    },
+    "docs/tutorials/management/clusters/cn-recvmsesappzh6/on-demand-cluster.md": {
+      "sourceHash": "81327ea75aac459d1c9c26913a44aa1519f7c34639e86c2d99ce3e2cddc29fb3",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/clusters/cn-recvmsesappzh6/on-demand-cluster.md",
+      "translatedAt": "2026-07-22T07:42:55.500Z"
+    },
+    "docs/tutorials/management/clusters/dedicated-cluster/connect-to-clusters.md": {
+      "sourceHash": "96078404c2b5fbdae9b9a83b53c10055e68916d01e1ea2ab84202ae8ed8a3af3",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/clusters/dedicated-cluster/connect-to-clusters.md",
+      "translatedAt": "2026-07-22T07:43:13.536Z"
+    },
+    "docs/tutorials/management/clusters/dedicated-cluster/create-cluster.md": {
+      "sourceHash": "569c9fda6995911885a260517aee1baf859b78cd96978d7dec2cb9be826ac176",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/clusters/dedicated-cluster/create-cluster.md",
+      "translatedAt": "2026-07-22T07:43:36.477Z"
+    },
+    "docs/tutorials/management/clusters/dedicated-cluster/manage-cluster.md": {
+      "sourceHash": "d43c1c95988aa2aaaea4a39232f272c76eeca1ed5287cb6b8a550687bc79d937",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/clusters/dedicated-cluster/manage-cluster.md",
+      "translatedAt": "2026-07-22T07:45:15.043Z"
+    },
+    "docs/tutorials/management/clusters/dedicated-cluster/scale-cluster/cron-expression.md": {
+      "sourceHash": "4db77f0edba9c4ee65851e79cf0924248a1d06b2aed8826bb177985e834a7360",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/clusters/dedicated-cluster/scale-cluster/cron-expression.md",
+      "translatedAt": "2026-07-22T07:44:07.230Z"
+    },
+    "docs/tutorials/management/clusters/dedicated-cluster/scale-cluster/manage-replica.md": {
+      "sourceHash": "1c3eac461e7e99a284fab3001957cf340f95d58ba4218fac66b5cb18e8946e36",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/clusters/dedicated-cluster/scale-cluster/manage-replica.md",
+      "translatedAt": "2026-07-22T07:44:32.180Z"
+    },
+    "docs/tutorials/management/clusters/dedicated-cluster/scale-cluster/scale-cluster.md": {
+      "sourceHash": "7bd01f9948048db7244f2603b65424a9031bfd322a1008472a30416a0f87130a",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/clusters/dedicated-cluster/scale-cluster/scale-cluster.md",
+      "translatedAt": "2026-07-22T07:46:00.304Z"
+    },
+    "docs/tutorials/management/clusters/dedicated-cluster/scale-cluster/scale-query-cu.md": {
+      "sourceHash": "57e33d2d6d7c8ce36547127ef2b35838688d9138a51d5ca7f92eb35f5402aa3d",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/clusters/dedicated-cluster/scale-cluster/scale-query-cu.md",
+      "translatedAt": "2026-07-22T07:45:23.230Z"
+    },
+    "docs/tutorials/management/clusters/global-cluster/connect-to-global-cluster.md": {
+      "sourceHash": "00e13d5cacfe7ac0452159f43f765551ff46a0a58a25aaa4911a2ba4355e515b",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/clusters/global-cluster/connect-to-global-cluster.md",
+      "translatedAt": "2026-07-22T07:45:48.643Z"
+    },
+    "docs/tutorials/management/clusters/global-cluster/create-global-cluster.md": {
+      "sourceHash": "5c9e2854a237d50248a2d4a9a7bebb2fe52681bf2f110ad810ec1583be32b217",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/clusters/global-cluster/create-global-cluster.md",
+      "translatedAt": "2026-07-22T07:45:36.989Z"
+    },
+    "docs/tutorials/management/clusters/global-cluster/global-cluster-explained.md": {
+      "sourceHash": "5785136faf86e917c53086abbdf452afdd49f0142ad74fb3b1bfb533a3ba6afc",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/clusters/global-cluster/global-cluster-explained.md",
+      "translatedAt": "2026-07-22T07:46:47.399Z"
+    },
+    "docs/tutorials/management/clusters/global-cluster/manage-global-cluster.md": {
+      "sourceHash": "61d240256c8b14780c47ff2d9b206d996187c75e8ba12fdf81099f2737801146",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/clusters/global-cluster/manage-global-cluster.md",
+      "translatedAt": "2026-07-22T07:46:11.096Z"
+    },
+    "docs/tutorials/management/clusters/global-cluster/monitor-global-cluster.md": {
+      "sourceHash": "a46036743c912d75083cb80319cb47003c4d8c51302884ef609f80bc3197e83d",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/clusters/global-cluster/monitor-global-cluster.md",
+      "translatedAt": "2026-07-22T07:46:15.268Z"
+    },
+    "docs/tutorials/management/clusters/global-cluster/scale-global-cluster.md": {
+      "sourceHash": "98c9895ec032974ea46b5e7e210bb1c6538466c0e972162b515a145985d42a72",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/clusters/global-cluster/scale-global-cluster.md",
+      "translatedAt": "2026-07-22T07:46:30.521Z"
+    },
+    "docs/tutorials/management/clusters/global-cluster/switchover-and-failover.md": {
+      "sourceHash": "b23dc7db297955e4bef4ae7903b6f3a9edc0e1919d562c3d7cd9340d51646e6f",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/clusters/global-cluster/switchover-and-failover.md",
+      "translatedAt": "2026-07-22T07:47:10.896Z"
+    },
+    "docs/tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/external-migration-basics.md": {
+      "sourceHash": "e683c44d13c6c0486f2ac4c485f449d4bcbca55c5bd75bc7eb39263c240ccdcf",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/external-migration-basics.md",
+      "translatedAt": "2026-07-22T07:47:09.029Z"
+    },
+    "docs/tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/migrate-from-elasticsearch.md": {
+      "sourceHash": "ffb666a3369ae17d28676a8741a217d97f6e5609253c1f06b8e521f43caddbcf",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/migrate-from-elasticsearch.md",
+      "translatedAt": "2026-07-22T07:47:05.140Z"
+    },
+    "docs/tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/migrate-from-opensearch.md": {
+      "sourceHash": "501c73261aaddccfe7b2ce40497db21a906c2a6d0f96abaf1fa1063b7e3161cd",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/migrate-from-opensearch.md",
+      "translatedAt": "2026-07-22T07:47:31.121Z"
+    },
+    "docs/tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/migrate-from-pgvector.md": {
+      "sourceHash": "bfc23b83fc06834241990be0745ef8fcdb4100a3541a03c12bb5690759617926",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/migrate-from-pgvector.md",
+      "translatedAt": "2026-07-22T07:47:37.950Z"
+    },
+    "docs/tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/migrate-from-pinecone.md": {
+      "sourceHash": "a43ec55c95793c8b979036d153acbb54dfc146a8c64e8afec6e04710547ea8b9",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/migrate-from-pinecone.md",
+      "translatedAt": "2026-07-22T07:48:22.024Z"
+    },
+    "docs/tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/migrate-from-qdrant.md": {
+      "sourceHash": "8e745dd63719897cac28ab70f2fbd8ae81a7064438befaf45f75d03735a1fabe",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/migrate-from-qdrant.md",
+      "translatedAt": "2026-07-22T07:47:47.278Z"
+    },
+    "docs/tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/migrate-from-tencent-cloud.md": {
+      "sourceHash": "f616b7c91d82ce84f44137311c0dba4d85039c37d75995891ac5a67fa1b364a3",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/migrate-from-tencent-cloud.md",
+      "translatedAt": "2026-07-22T07:47:59.242Z"
+    },
+    "docs/tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/zilliz-cloud-ips.md": {
+      "sourceHash": "ae663e9ce1318e447dd4054d1c8dfb40d8f0786e3a82a828c2e0c47e55a58761",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/zilliz-cloud-ips.md",
+      "translatedAt": "2026-07-22T07:47:56.553Z"
+    },
+    "docs/tutorials/management/cn-recvmseit6ebvl/migrate-between-clusters/migrate-between-clusters.md": {
+      "sourceHash": "eb44d72575d241f93212da9244ff864b9604a37e476b575cf30decfe97805abf",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmseit6ebvl/migrate-between-clusters/migrate-between-clusters.md",
+      "translatedAt": "2026-07-22T07:48:05.761Z"
+    },
+    "docs/tutorials/management/cn-recvmseit6ebvl/migrate-between-clusters/offline-migration.md": {
+      "sourceHash": "43659b89e7ce37d05f6534c80e830f118f26ac71cc62bf1ad7e081149263ab53",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmseit6ebvl/migrate-between-clusters/offline-migration.md",
+      "translatedAt": "2026-07-22T07:49:11.636Z"
+    },
+    "docs/tutorials/management/cn-recvmseit6ebvl/migrate-from-milvus/migrate-from-milvus.md": {
+      "sourceHash": "945980b2507563171c92b3aa09976f7b873faa8037a131f75f0614c8b5353bbf",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmseit6ebvl/migrate-from-milvus/migrate-from-milvus.md",
+      "translatedAt": "2026-07-22T07:48:09.320Z"
+    },
+    "docs/tutorials/management/cn-recvmseit6ebvl/migrate-from-milvus/via-backup-files.md": {
+      "sourceHash": "8865f9908b69c043e4ad4b72c1c2d80ec834ace04533aea277f73c47cde5124f",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmseit6ebvl/migrate-from-milvus/via-backup-files.md",
+      "translatedAt": "2026-07-22T07:48:59.244Z"
+    },
+    "docs/tutorials/management/cn-recvmseit6ebvl/migrate-from-milvus/via-endpoint.md": {
+      "sourceHash": "2c467445a6efe84a71e2018bc1f41f56b6898662340e1b23e8bfcb0f516f2bb3",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/management/cn-recvmseit6ebvl/migrate-from-milvus/via-endpoint.md",
+      "translatedAt": "2026-07-22T07:48:36.906Z"
     }
   }
 }
