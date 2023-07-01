@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const Rows = [
     {
+        group: 0,
         title: "从这里开始",
         description: "在 5 分钟内掌握基础集群操作 API。",
         Svg: require('@site/static/img/quick-start.svg').default,
@@ -40,6 +41,7 @@ const Rows = [
         ]
     },
     {
+        group: 0,
         title: "快速入门",
         description: "详细了解 Zilliz Cloud 的基础集群操作 API。",
         Svg: require('@site/static/img/starter-user-guides.svg').default,
@@ -92,6 +94,7 @@ const Rows = [
         ]
     },
     {
+        group: 0,
         title: "了解向量数据库",
         description: "了解 Zilliz Vector Database 的基础概念。",
         Svg: require('@site/static/img/concepts.svg').default,
@@ -129,6 +132,7 @@ const Rows = [
         ]
     },
     {
+        group: 0,
         title: "资源规划指南",
         description: "了解 Zilliz Cloud 的资源规划原则及工具。",
         Svg: require('@site/static/img/resource-planning.svg').default,
@@ -146,6 +150,7 @@ const Rows = [
         ]
     },
     {
+        group: 0,
         title: "高级用户指南",
         description: "了解 Zilliz Cloud 的高级集群操作 API。",
         Svg: require('@site/static/img/advanced-user-guides.svg').default,
@@ -186,8 +191,18 @@ const Rows = [
                 width: "100%"
             },
             {
+                title: "管理身份凭证",
+                link: "./docs/manage-cluster-credentials",
+                width: "30%"
+            },
+            {
                 title: "设置白名单",
                 link: "./docs/set-up-whitelist",
+                width: "30%"
+            },
+            {
+                title: "",
+                link: "#",
                 width: "30%"
             },
             {
@@ -318,6 +333,7 @@ const Rows = [
         ]
     },
     {
+        group: 0,
         title: "深度阅读",
         description: "深入了解 Zilliz Cloud 的原理及实现。",
         Svg: require('@site/static/img/vector-database-101.svg').default,
@@ -355,6 +371,7 @@ const Rows = [
         ]
     },
     {
+        group: 1,
         title: "公开服务",
         description: "了解可以和 Zilliz Cloud 集成的公开服务。",
         Svg: require('@site/static/img/open-services.svg').default,
@@ -369,9 +386,15 @@ const Rows = [
                 link: "./docs/question-answering-using-zilliz-cloud-and-cohere",
                 width: "40%"
             },
+            {
+                title: "与 HuggingFace 集成搭建问答系统",
+                link: "./docs/question-answering-using-zilliz-cloud-and-hugging-face",
+                width: "40%"
+            }
         ],
     },
     {
+        group: 1,
         title: "开源项目",
         description: "了解可以和 Zilliz Cloud 集成的开源项目。",
         Svg: require('@site/static/img/open-source-projects.svg').default,
@@ -379,6 +402,11 @@ const Rows = [
             {
                 title: "与 LangChain 集成搭建智能文档问答系统",
                 link: "./docs/question-answering-over-documents-with-zilliz-cloud-and-langchain",
+                width: "40%"
+            },
+            {
+                title: "与 LlamaIndex 集成搭建文档问答系统",
+                link: "./docs/documentation-qa-using-zilliz-cloud-and-llamaindex",
                 width: "40%"
             },
             {
@@ -394,6 +422,7 @@ const Rows = [
         ]
     },
     {
+        group: 2,
         title: "云服务与社区版对比",
         description: "了解 Zilliz Cloud 与社区版的区别。",
         Svg: require('@site/static/img/zilliz-cloud-vs-milvus.svg').default,
@@ -468,27 +497,29 @@ function Column({title, link, width}) {
     );
 }
 
-function RowOfThreeColumns({Svg, title, description, members}) {
+function Row({Svg, group, title, description, members, activeGroup}) {
     return (
-        <div style={{display: "flex", flexDirection: "row", gap: "2%"}} >
-            <div style={{display: "block", flex: "18%"}}>
-                <div style={{display: "flex", flexDirection: "row", gap: "0.5em"}}>
-                    <div style={{alignSelf: "center"}}>
-                        <Svg style={{width: "30px", height: "30px"}} role="img" />
-                    </div>
-                    <div style={{display: "flex", flexDirection: "column"}}>
-                        <span style={{fontSize: "1.2em", fontWeight: "bold"}}>{title}</span>
-                        <span style={{fontSize: "0.8em"}}>{description}</span>
+        <div style={{display: activeGroup == group ? "" : "none" }}>
+            <div style={{display: "flex", flexDirection: "row", gap: "2%"}} >
+                <div style={{display: "block", flex: "18%"}}>
+                    <div style={{display: "flex", flexDirection: "row", gap: "0.5em"}}>
+                        <div style={{alignSelf: "center"}}>
+                            <Svg style={{width: "30px", height: "30px"}} role="img" />
+                        </div>
+                        <div style={{display: "flex", flexDirection: "column"}}>
+                            <span style={{fontSize: "1.2em", fontWeight: "bold"}}>{title}</span>
+                            <span style={{fontSize: "0.8em"}}>{description}</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div style={{display: "block", flex: "75%"}}>
-                <div
-                    style={{backgroundColor: "#F6F8FA", border: "1px solid #E0E3E7", borderRadius: "8px", padding: "1.5em 3em"}}>
-                    <div style={{display: "flex", flexFlow: "row wrap", gap: "2%"}}>
-                        {members.map((member) => (
-                            <Column {...member} />
-                        ))}
+                <div style={{display: "block", flex: "75%"}}>
+                    <div
+                        style={{backgroundColor: "#F6F8FA", border: "1px solid #E0E3E7", borderRadius: "8px", padding: "1.5em 3em"}}>
+                        <div style={{display: "flex", flexFlow: "row wrap", gap: "2%"}}>
+                            {members.map((member) => (
+                                <Column {...member} />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -496,13 +527,13 @@ function RowOfThreeColumns({Svg, title, description, members}) {
     );
 }
 
-export default function ArticlesList() {
+export default function ArticlesList({activeGroup}) {
     return (
         <section style={{display: "inline-grid", height: "50px", width: "100%", gridTemplateColumns: "15% auto 10%", paddingTop: "11px"}}>
             <div></div>
             <div style={{display: "flex", flexDirection: "column", rowGap: "3em", marginTop: "3em"}}>
                 {Rows.map((props, idx) => (
-                    <RowOfThreeColumns key={idx} {...props} />
+                    <Row key={idx} {...props} activeGroup={activeGroup} />
                 ))}
             </div>
             <div></div>

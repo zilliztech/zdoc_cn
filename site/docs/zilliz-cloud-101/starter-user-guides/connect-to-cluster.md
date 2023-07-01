@@ -15,7 +15,7 @@ sidebar_position: 1
 
 - 已创建集群。详情请参见[创建集群](./create-cluster)。
 
-- 已获取集群的用户名和密码。详情请参见[管理身份凭证](./管理身份凭证)。
+- 已获取集群的用户名和密码。详情请参见[管理身份凭证](./manage-cluster-credentials)。
 
 - 已安装合适版本的 Milvus SDK。详情请参见[安装 SDK](./install-sdks)。
 

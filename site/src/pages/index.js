@@ -5,18 +5,18 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import MidNav from '@site/src/components/MidNav';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import ArticlesList from '../components/ArticleLists';
 
 import styles from './index.module.css';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+
   return (
     <header className={clsx(styles.heroBanner)}>
       <div className={clsx(styles.heroBannerRow)}>
         <div className={clsx(styles.heroBannerColumn)}>
           <div></div>
-          <div style={{display: "flex", flexDirection: "column", color: "#FFFFFF", marginTop: "3.5em"}}>
+          <div style={{display: "flex", flexDirection: "column", color: "#FFFFFF", marginTop: "2em"}}>
             <div style={{fontSize: "2em", marginBottom: "0.5em"}}>{siteConfig.title}</div>
             <div style={{fontSize: "18px", marginBottom: "2em"}}>{siteConfig.tagline}</div>
             <div style={{display: "flex", flexDirection: "row", gap: "10px"}}>
@@ -48,7 +48,6 @@ export default function Home() {
       <main style={{marginBottom: "15px"}}>
         <MidNav />
         <HomepageFeatures />
-        <ArticlesList />
       </main>
     </Layout>
   );

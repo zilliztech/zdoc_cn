@@ -4,25 +4,29 @@ const Buttons = [
     {
         caption: "首页",
         Svg: require('@site/static/img/home.svg').default,
+        link: "/",
     },
     {
         caption: "开发文档",
         Svg: require('@site/static/img/guides.svg').default,
+        link: "/docs/zilliz-cloud-101",
     },
     {
         caption: "API 参考",
         Svg: require('@site/static/img/apiref.svg').default,
+        link: "/api",
     },
     {
         caption: "讨论",
         Svg: require('@site/static/img/discussion.svg').default,
+        link: "/discussion",
     }
 
 ]
 
 const SearchIcon = require('@site/static/img/search.svg').default
 
-function MidNavBtn({Svg, caption}) {
+function MidNavBtn({Svg, caption, link}) {
     const [hover, setHover] = useState(false)
 
     const handleMouseEnter = () => {
@@ -31,6 +35,11 @@ function MidNavBtn({Svg, caption}) {
 
     const handleMouseLeave = () => {
         setHover(false)
+    }
+
+    const handleClick = () => {
+        // redirect to link
+        window.location.href = link
     }
         
     const boxStyle = {
@@ -50,6 +59,7 @@ function MidNavBtn({Svg, caption}) {
             style={boxStyle}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onClick={handleClick}
         >
             <div style={{marginTop: "2px"}}>
                 <Svg style={{width: "14px", height: "14px"}} role="img" />

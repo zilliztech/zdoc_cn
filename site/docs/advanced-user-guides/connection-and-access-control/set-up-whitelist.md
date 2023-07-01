@@ -48,4 +48,4 @@ sidebar_position: 2
 
 - [管理 API 密钥](./manage-api-keys) 
 
-- [管理身份凭证](./管理身份凭证) 
+- [管理身份凭证](./manage-cluster-credentials) 
