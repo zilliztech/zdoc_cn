@@ -558,6 +558,10 @@ class biTableParser:
         record = [ x for x in self.records if '页面标题' in x['fields'] and x['fields']['页面标题'] == title ]
 
         if record:
+            if record[0]['fields']['进度'] == '无需中文版':
+                with open('logs.txt', 'a') as f:
+                    json.dump(record[0], f, indent=4, ensure_ascii=False)
+                    
             return record[0]['fields']['进度'] != '无需中文版'
 
 def category_meta(path, label, position):
@@ -635,6 +639,8 @@ if __name__ == '__main__':
     token = [ x for x in docs['blocks']['items'] if 'bitable' in x ][0]['bitable']['token']
 
     bi = biTableParser(token)
+
+    bi.publish_or_not('')
 
     writer = docWriter(pages=pages)
 

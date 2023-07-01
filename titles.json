@@ -11,7 +11,7 @@
     "向量索引概览与 IVF 索引": "vector-index-basics-and-the-inverted-file-index",
     "设置时区": "manage-timezone",
     "与 Cohere 集成搭建智能问答系统": "question-answering-using-zilliz-cloud-and-cohere",
-    "查询延时监控": "query-latency-monitor",
+    "查询时延监控": "query-latency-monitor",
     "已使用容量监控": "load-capacity-resource-monitor",
     "信用卡过期提醒": "credit-card-expiration-monitor",
     "快速开始": "quick-start-1",
@@ -85,11 +85,15 @@
     "监控与指标": "monitors-metrics",
     "了解向量数据库": "concepts",
     "公开服务": "open-services",
-    "AI 模型集成": "ai-models-integrtion",
+    "AI 模型集成": "ai-models-integration",
     "Zilliz Cloud 101": "zilliz-cloud-101",
     "迁移到 Zilliz Cloud": "migration-from-milvus",
     "高级用户指南": "advanced-user-guides",
     "定价": "pricing",
     "批量导入数据": "bulk-insert",
-    "账号": "accounts"
+    "账号": "accounts",
+    "与 HuggingFace 集成搭建问答系统": "question-answering-using-zilliz-cloud-and-hugging-face",
+    "与 LlamaIndex 集成搭建文档问答系统": "documentation-qa-using-zilliz-cloud-and-llamaindex",
+    "管理身份凭证": "manage-cluster-credentials",
+    "查看账单与支付方式": "view-invoice-and-payment-method"
 }

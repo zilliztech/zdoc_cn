@@ -1,1 +1,6 @@
 .env
+data.json
+pages.json
+bin
+include
+lib
