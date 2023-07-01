@@ -7,6 +7,7 @@ from tqdm import tqdm
 from urllib import parse
 from translate import Translator
 from slugify import slugify
+from urllib import parse
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -18,7 +19,7 @@ FEISHU_HOST = os.getenv("FEISHU_HOST")
 SPACE_ID = os.getenv("SPACE_ID")
 FIGMA_API_KEY = os.getenv("FIGMA_API_KEY")
 
-translator = Translator(provider="mymemory", to_lang="en", from_lang="zh-CN")
+translator = Translator(from_lang="zh", to_lang="en", provider="mymemory")
 
 class tokenFetcher:
 
@@ -47,6 +48,7 @@ class docScraper:
 
     def __init__(self, root_node_token):
         self.docs = None
+        self.pages = []
         self.root = root_node_token
         self.tokenFetcher = tokenFetcher()
         self.__fetch()
@@ -90,6 +92,7 @@ class docScraper:
                     self.__fetch_blocks(child)
 
     def __fetch_blocks(self, node):
+        self.pages.append(node)
         if node['obj_type'] == 'docx':
             URI = f"/open-apis/docx/v1/documents/{node['obj_token']}/blocks"
             res = requests.get(f"{FEISHU_HOST}{URI}", headers={
@@ -123,8 +126,10 @@ class docScraper:
 
 class docWriter:
     
-    def __init__(self, page_blocks=None):
+    def __init__(self, pages=None, page_blocks=None):
+        self.pages = pages
         self.page_blocks = page_blocks
+        self.titles = json.loads(open('titles.json', 'r').read())
         self.blocks = None
         self.block_types = [
             "page",
@@ -261,17 +266,40 @@ class docWriter:
             self.blocks = list(map(self.__retrieve_block_by_id, page['children']))
             self.__write_page(page, path=path, sidebar_position=sidebar_position)
 
+    def write_faqs(self, path, blocks):
+        self.page_blocks = blocks
+
+        page = [ x for x in blocks if x['block_type'] == 1 ][0] 
+
+        if page and 'children' in page:
+            self.blocks = list(map(self.__retrieve_block_by_id, page['children']))
+            a = self.__markdown().split('\n')
+            header_pos = [ i for i, x in enumerate(a) if x.startswith('##') ]
+            sub_pages = []
+            for i, x in enumerate(header_pos):
+                sub_pages.append(a[x:header_pos[i+1]] if i < len(header_pos)-1 else a[x:])
+
+            for idx, sub_page in enumerate(sub_pages):
+                title = sub_page[0].split(' ')[1]
+                titles = json.loads(open('titles.json', 'r').read())
+                slug = titles[title] if title in titles else title
+                with open(f"{path}/faq-{slug}.md", "w") as f:
+                    f.write(self.__front_matters(slug=f"faqs/{slug}", sidebar_position=idx))
+                    f.write('\n'.join(sub_page)[1:])
+
     def __write_page(self, block, path, sidebar_position=None):
         title = self.__text_elements(block['page']['elements'])
-        title = slugify(translator.translate(title))
+        titles = json.loads(open('titles.json', 'r').read())
+        title = titles[title] if title in titles else title
         with open(f"{path}/{title}.md", "w") as f:
-            f.write(self.__front_matters(sidebar_position=sidebar_position))
+            f.write(self.__front_matters(slug=title, sidebar_position=sidebar_position))
             f.write(self.__markdown())
 
-    def __front_matters(self, sidebar_position=None):
+    def __front_matters(self, slug, sidebar_position=None):
         template = "---\n{fms}\n---\n\n"
         front_matters = []
         if sidebar_position is not None:
+            front_matters.append(f"slug: /{slug}")
             front_matters.append(f"sidebar_position: {sidebar_position}")
         if front_matters:
             return template.format(fms='\n'.join(front_matters))
@@ -327,7 +355,8 @@ class docWriter:
         return self.__text_elements(text['elements'])
     
     def __heading(self, heading, level):
-        return '#' * level + ' ' + self.__text_elements(heading['elements'])
+        slug = slugify(translator.translate(self.__text_elements(heading['elements'])))
+        return '#' * level + ' ' + self.__text_elements(heading['elements']) + ' {#'+ slug + '}'
     
     def __bullet(self, block, indent):
         children = ''
@@ -354,9 +383,14 @@ class docWriter:
         res = []
         quotes = list(map(self.__retrieve_block_by_id, block['children']))
         for quote in quotes:
-            res.append(f"> {self.__text(quote['text'])}")
+            res.append(f"{self.__text(quote['text'])}")
 
-        res.insert(1, '>')
+        type = 'tip' if '说明' in res[0] else 'caution'
+
+        res[0] = f":::{type}"
+        res.insert(1, "")
+        res.append((""))
+        res.append(f":::")
 
         return ' ' * indent + '\n'.join(res).replace('\n', '\n' + ' ' * indent)
     
@@ -453,16 +487,42 @@ class docWriter:
                 content = f"__{content}__"
             
             if 'link' in style:
-                content = f"[{content}]({parse.unquote(style['link']['url'])})"
+                content = f"[{content}]({self.__convert_link(parse.unquote(style['link']['url']))})"
 
         return content
     
     def __mention_doc(self, element):
         title = element['mention_doc']['title']
-        token = element['mention_doc']['token'] ### TODO: Fetch doc
-        url = element['mention_doc']['url']
+        url = self.__convert_link(parse.unquote(element['mention_doc']['url']))
+        
 
         return f"[{title}]({url})"
+    
+    def __convert_link(self, url):
+        if 'zilliverse' in url:
+            token = parse.urlsplit(url).path.split('/')[-1]
+            header = parse.urlsplit(url).fragment
+
+            page = [ x for x in self.pages if x['origin_node_token'] == token ]
+
+            if page:
+                page = page[0]
+                title = page['title']
+                slug = self.titles[title] if title in self.titles else title
+                url = f"./{slug}"
+
+                if header:
+                    header = [ x for x in page['blocks']['items'] if x['block_id'] == header ]
+
+                    if header:
+                        header = header[0]
+                        block_type = self.block_types[header['block_type']-1]
+                        if int(block_type[-1]) in range(9):
+                            title = self.__text_elements(header[block_type]['elements'])
+                            slug = slugify(translator.translate(title))
+                            url += f"#{slug}"
+
+        return url
 
     def __text_elements(self, elements):
         paragraph = ""
@@ -501,12 +561,15 @@ class biTableParser:
             return record[0]['fields']['进度'] != '无需中文版'
 
 def category_meta(path, label, position):
+    titles = json.loads(open('titles.json', 'r').read())
     with open(f"{path}/_category_.json", 'w') as f:
         json.dump({
             "label": label,
             "position": position,
             "link": {
-                "type": "generated-index"
+                "type": "generated-index",
+                "title": label,
+                "slug": f"/{titles[label] if label in titles else label}"
             }
         }, f, indent=4, ensure_ascii=False)
 
@@ -529,39 +592,51 @@ def copy_icons(path="icons"):
 # Write docs
 def doc_structure(docs, path='docs'):
     current_path = path
+    titles = json.loads(open('titles.json', 'r').read())
     for idx, item in enumerate(docs['children']):
         if 'children' in item:
             title = item['title']
-            title = slugify(translator.translate(title))
+            title = titles[title] if title in titles else title
             os.mkdir(f"{path}/{title}")
             current_path = f"{path}/{title}"
-            category_meta(current_path, item["title"], idx)
+            category_meta(current_path, item['title'], idx)
             doc_structure(item, current_path)
         else:
             if bi.publish_or_not(item['title']):
                 if item['title'] == '常见问题':
-                    current_path = "site/docs"
+                    os.mkdir("site/docs/faqs")
+                    current_path = "site/docs/faqs"
                     idx = 99
-                    
-                writer.write_docs(current_path, item['blocks']['items'], sidebar_position=idx)
-                logging.info(f"Writing {item['title']}")
+                    category_meta(current_path, item['title'], idx)
+                    writer.write_faqs(current_path, item['blocks']['items'])
+                else:   
+                    writer.write_docs(current_path, item['blocks']['items'], sidebar_position=idx)
+                    logging.info(f"Writing {item['title']}")
 
 if __name__ == '__main__':
 
     scraper = docScraper("XyeFwdx6kiK9A6kq3yIcLNdEnDd")
 
+    pages = scraper.pages
+
     with open("data.json", "w") as f:
         json.dump(scraper.docs, f, indent=4, ensure_ascii=False)
 
+    with open("pages.json", "w") as f:
+        json.dump(pages, f, indent=4, ensure_ascii=False)
+
     with open("data.json", 'r') as f:
         docs = json.load(f)
+
+    with open("pages.json", 'r') as f:
+        pages = json.load(f)
 
     # root page
     token = [ x for x in docs['blocks']['items'] if 'bitable' in x ][0]['bitable']['token']
 
     bi = biTableParser(token)
 
-    writer = docWriter()
+    writer = docWriter(pages=pages)
 
     clean_up_docs(path='site/static/img')
     clean_up_docs(path='site/docs')

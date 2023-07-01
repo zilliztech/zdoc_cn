@@ -2,48 +2,71 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
-const FeatureList = [
+const CategoryList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/concepts.svg').default,
+    title: 'Zilliz Cloud 101',
+    Svg: require('@site/static/img/zilliz-cloud-101.svg').default,
+    groupStyle: styles.activeGroupBlue,
+    groupCaptionStyle: styles.activeGroupCaptionBlue,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        了解如何快速使用 Milvus SDK 搭建 Zilliz Cloud 集群。
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/dedicated-cluster-101.svg').default,
+    title: 'AI 模型集成',
+    Svg: require('@site/static/img/ai-model-integrations.svg').default,
+    groupStyle: styles.activeGroupOrange,
+    groupCaptionStyle: styles.activeGroupCaptionOrange,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        了解如何配合 AI 模型使用 Zilliz Cloud 向量数据库。
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/starter-user-guides.svg').default,
+    title: 'Zilliz Cloud v.s. Milvus',
+    Svg: require('@site/static/img/migration-from-milvus.svg').default,
+    groupStyle: styles.activeGroupLightBlue,
+    groupCaptionStyle: styles.activeGroupCaptionLightBlue,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        了解 Zilliz Cloud 和 Milvus 有哪些异同。
       </>
     ),
-  },
+  },  
 ];
 
-function Feature({Svg, title, description}) {
+function Category({Svg, title, description, groupStyle, groupCaptionStyle}) {
+  const [hover, setHover] = React.useState(false)
+
+  const handleMouseEnter = () => {
+    setHover(true)
+  }
+
+  const handleMouseLeave = () => {
+    setHover(false)
+  }
+
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
+    <div 
+      style={{display: "block", flex: "25%", cursor: "pointer"}}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className={clsx(hover ? groupStyle : styles.inactiveGroup)}>
+        <div style={{display: "flex", flexDirection: "column", rowGap: "0.4em", margin: "2em"}}>
+            <div style={{display: "block", width: "40px", height: "40px", margin: "auto"}}>
+              <Svg style={{width: "40px", height: "40px"}} role="img" />
+            </div>
+            <div style={{textAlign: "center"}}>
+                <span className={clsx(hover ? groupCaptionStyle : styles.inactiveGroupCaption)}>{title}</span>
+            </div>
+            <div style={{textAlign: "center"}}>
+                <span style={{fontSize: "0.8em", color: "#647489"}}>{description}</span>
+            </div>
+        </div>
       </div>
     </div>
   );
@@ -51,14 +74,14 @@ function Feature({Svg, title, description}) {
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
+    <section style={{display: "inline-grid", height: "50px", width: "100%", gridTemplateColumns: "15% auto 10%", paddingTop: "11px"}}>
+      <div></div>
+      <div style={{display: "flex", flexDirection: "row", gap: "10px"}}>
+        {CategoryList.map((props, idx) => (
+          <Category key={idx} {...props} />
+        ))}
       </div>
+      <div></div>
     </section>
   );
 }

@@ -1,0 +1,9 @@
+{
+    "label": "公开服务",
+    "position": 0,
+    "link": {
+        "type": "generated-index",
+        "title": "公开服务",
+        "slug": "/open-services"
+    }
+}

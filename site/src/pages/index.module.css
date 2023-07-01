@@ -4,10 +4,19 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+  display: grid;
+  min-height: 15vh;
+  background: linear-gradient(0deg, #171236, #171236), #FFFFFF;
+}
+
+.heroBanneRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.heroBannerColumn {
+  display: inline-grid;
+  grid-template-columns: 15% 45% 30% 10%;
 }
 
 @media screen and (max-width: 996px) {
