@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from '@docusaurus/Link';
 
 const Rows = [
     {
@@ -9,27 +10,27 @@ const Rows = [
         members: [
             {
                 title: "快速开始",
-                link: "./docs/quick-start-1",
+                link: "/docs/quick-start-1",
                 width: "30%"
             },
             {
                 title: "注册帐号",
-                link: "./docs/register-with-zilliz-cloud",
+                link: "/docs/register-with-zilliz-cloud",
                 width: "30%"
             },
             {
                 title: "免费试用",
-                link: "./docs/free-trials",
+                link: "/docs/free-trials",
                 width: "30%"
             },
             {
                 title: "安装 SDK",
-                link: "./docs/install-sdks",
+                link: "/docs/install-sdks",
                 width: "30%"
             },
             {
                 title: "示例数据集",
-                link: "./docs/example-dataset-1",
+                link: "/docs/example-dataset-1",
                 width: "30%"
             },
             {
@@ -53,22 +54,22 @@ const Rows = [
             },
             {
                 title: "创建集群",
-                link: "./docs/create-cluster",
+                link: "/docs/create-cluster",
                 width: "30%"
             },
             {
                 title: "连接集群",
-                link: "./docs/connect-to-cluster",
+                link: "/docs/connect-to-cluster",
                 width: "30%"
             },
             {
                 title: "创建 Collection",
-                link: "./docs/create-collection-2",
+                link: "/docs/create-collection-2",
                 width: "30%"
             },
             {
                 title: "删除 Collection",
-                link: "./docs/drop-collection",
+                link: "/docs/drop-collection",
                 width: "30%"
             },
             {
@@ -78,17 +79,17 @@ const Rows = [
             },
             {
                 title: "插入 Entity",
-                link: "./docs/insert-entities",
+                link: "/docs/insert-entities",
                 width: "30%"
             },
             {
                 title: "向量搜索与查询",
-                link: "./docs/search-and-query",
+                link: "/docs/search-and-query",
                 width: "30%"
             },
             {
                 title: "删除 Entity",
-                link: "./docs/delete-entities",
+                link: "/docs/delete-entities",
                 width: "30%"
             },
         ]
@@ -101,32 +102,32 @@ const Rows = [
         members: [
             {
                 title: "AUTOINDEX",
-                link: "./docs/autoindex-explained",
+                link: "/docs/autoindex-explained",
                 width: "30%"
             },
             {
                 title: "集群、Collection 及 Entity",
-                link: "./docs/cluster-collection-entities",
+                link: "/docs/cluster-collection-entities",
                 width: "30%"
             },
             {
                 title: "ANN 搜索",
-                link: "./docs/ann-search-explained",
+                link: "/docs/ann-search-explained",
                 width: "30%"
             },
             {
                 title: "CU 类型",
-                link: "./docs/cu-types",
+                link: "/docs/cu-types",
                 width: "30%"
             },
             {
                 title: "数据模型",
-                link: "./docs/data-models-explained",
+                link: "/docs/data-models-explained",
                 width: "30%"
             },
             {
                 title: "云服务提供商和地域",
-                link: "./docs/cloud-providers-and-regions",
+                link: "/docs/cloud-providers-and-regions",
                 width: "30%"
             },
         ]
@@ -139,12 +140,12 @@ const Rows = [
         members: [
             {
                 title: "Zilliz Cloud 版本类型",
-                link: "./docs/select-zilliz-cloud-service-plans",
+                link: "/docs/select-zilliz-cloud-service-plans",
                 width: "30%"
             },
             {
                 title: "价格计算器",
-                link: "./docs/pricing-calculator",
+                link: "/docs/pricing-calculator",
                 width: "30%"
             },
         ]
@@ -162,12 +163,12 @@ const Rows = [
             },
             {
                 title: "定制 Schema",
-                link: "./docs/use-customized-schema",
+                link: "/docs/use-customized-schema",
                 width: "30%"
             },
             {
                 title: "开启动态 Schema",
-                link: "./docs/enable-dynamic-schema",
+                link: "/docs/enable-dynamic-schema",
                 width: "30%"
             },
             {
@@ -182,7 +183,7 @@ const Rows = [
             },
             {
                 title: "JSON",
-                link: "./docs/vector-data-types",
+                link: "/docs/vector-data-types",
                 width: "30%"
             },
             {
@@ -192,12 +193,12 @@ const Rows = [
             },
             {
                 title: "管理身份凭证",
-                link: "./docs/manage-cluster-credentials",
+                link: "/docs/manage-cluster-credentials",
                 width: "30%"
             },
             {
                 title: "设置白名单",
-                link: "./docs/set-up-whitelist",
+                link: "/docs/set-up-whitelist",
                 width: "30%"
             },
             {
@@ -212,27 +213,27 @@ const Rows = [
             },
             {
                 title: "创建备份快照",
-                link: "./docs/create-snapshot",
+                link: "/docs/create-snapshot",
                 width: "30%"
             },
             {
                 title: "创建自动备份",
-                link: "./docs/create-automatic-backups",
+                link: "/docs/create-automatic-backups",
                 width: "30%"
             },
             {
                 title: "查看备份快照",
-                link: "./docs/view-snapshot-details",
+                link: "/docs/view-snapshot-details",
                 width: "30%"
             },
             {
                 title: "恢复备份",
-                link: "./docs/restore-from-snapshot",
+                link: "/docs/restore-from-snapshot",
                 width: "30%"
             },
             {
                 title: "删除备份快照",
-                link: "./docs/delete-snapshot",
+                link: "/docs/delete-snapshot",
                 width: "30%"
             },
             {
@@ -247,27 +248,27 @@ const Rows = [
             },
             {
                 title: "组织与项目",
-                link: "./docs/organizations-projects",
+                link: "/docs/organizations-projects",
                 width: "30%"
             },
             {
                 title: "角色与权限",
-                link: "./docs/roles-privileges",
+                link: "/docs/roles-privileges",
                 width: "30%"
             },
             {
                 title: "添加组织成员",
-                link: "./docs/add-organization-members",
+                link: "/docs/add-organization-members",
                 width: "30%"
             },
             {
                 title: "移除组织成员",
-                link: "./docs/remove-members",
+                link: "/docs/remove-members",
                 width: "30%"
             },
             {
                 title: "添加项目成员",
-                link: "./docs/add-project-collaborators-2",
+                link: "/docs/add-project-collaborators-2",
                 width: "30%"
             },
             {
@@ -282,27 +283,27 @@ const Rows = [
             },
             {
                 title: "CU 资源监控",
-                link: "./docs/cu-resource-monitor",
+                link: "/docs/cu-resource-monitor",
                 width: "30%"
             },
             {
                 title: "QPS 资源监控",
-                link: "./docs/qps-resource-monitor",
+                link: "/docs/qps-resource-monitor",
                 width: "30%"
             },
             {
                 title: "查询时延监控",
-                link: "./docs/query-latency-monitor",
+                link: "/docs/query-latency-monitor",
                 width: "30%"
             },
             {
                 title: "已使用容量监控",
-                link: "./docs/load-capacity-resource-monitor",
+                link: "/docs/load-capacity-resource-monitor",
                 width: "30%"    
             },
             {
                 title: "查看集群性能指标",
-                link: "./docs/view-cluster-metrics",
+                link: "/docs/view-cluster-metrics",
                 width: "30%"
             },
             {
@@ -317,12 +318,12 @@ const Rows = [
             },
             {
                 title: "设置时区",
-                link: "./docs/manage-timezone",
+                link: "/docs/manage-timezone",
                 width: "30%"
             },
             {
                 title: "设置运维窗口",
-                link: "./docs/set-up-maintenance-window",
+                link: "/docs/set-up-maintenance-window",
                 width: "30%"
             },
             {
@@ -340,32 +341,32 @@ const Rows = [
         members: [
             {
                 title: "什么是非结构化数据",
-                link: "./docs/introduction-to-unstructured-data",
+                link: "/docs/introduction-to-unstructured-data",
                 width: "30%"
             },
             {
                 title: "什么是向量数据库",
-                link: "./docs/what-is-a-vector-database",
+                link: "/docs/what-is-a-vector-database",
                 width: "30%"
             },
             {
                 title: "什么是向量相似性搜索",
-                link: "./docs/introduction-to-vector-similarity-search",
+                link: "/docs/introduction-to-vector-similarity-search",
                 width: "30%"
             },
             {
                 title: "向量索引概览与 IVF 索引",
-                link: "./docs/vector-index-basics-and-the-inverted-file-index",
+                link: "/docs/vector-index-basics-and-the-inverted-file-index",
                 width: "30%"
             },
             {
                 title: "标量量化与乘积量化",
-                link: "./docs/scalar-quantization-and-product-quantization",
+                link: "/docs/scalar-quantization-and-product-quantization",
                 width: "30%"
             },
             {
                 title: "HNSW",
-                link: "./docs/hierarchical-navigable-small-world-hnsw",
+                link: "/docs/hierarchical-navigable-small-world-hnsw",
                 width: "30%"
             }
         ]
@@ -378,17 +379,17 @@ const Rows = [
         members: [
             {
                 title: "与 OpenAI 集成搭建相似性搜索系统",
-                link: "./docs/similarity-search-with-zilliz-cloud-and-openai",
+                link: "/docs/similarity-search-with-zilliz-cloud-and-openai",
                 width: "40%"
             },
             {
                 title: "与 Cohere 集成搭建智能问答系统",
-                link: "./docs/question-answering-using-zilliz-cloud-and-cohere",
+                link: "/docs/question-answering-using-zilliz-cloud-and-cohere",
                 width: "40%"
             },
             {
                 title: "与 HuggingFace 集成搭建问答系统",
-                link: "./docs/question-answering-using-zilliz-cloud-and-hugging-face",
+                link: "/docs/question-answering-using-zilliz-cloud-and-hugging-face",
                 width: "40%"
             }
         ],
@@ -401,22 +402,22 @@ const Rows = [
         members: [
             {
                 title: "与 LangChain 集成搭建智能文档问答系统",
-                link: "./docs/question-answering-over-documents-with-zilliz-cloud-and-langchain",
+                link: "/docs/question-answering-over-documents-with-zilliz-cloud-and-langchain",
                 width: "40%"
             },
             {
                 title: "与 LlamaIndex 集成搭建文档问答系统",
-                link: "./docs/documentation-qa-using-zilliz-cloud-and-llamaindex",
+                link: "/docs/documentation-qa-using-zilliz-cloud-and-llamaindex",
                 width: "40%"
             },
             {
                 title: "与 PyTorch 集成搭建图片搜索系统",
-                link: "./docs/image-search-with-zilliz-cloud-and-pytorch",
+                link: "/docs/image-search-with-zilliz-cloud-and-pytorch",
                 width: "40%"
             },
             {
                 title: "与 SentenceTransformers 集成搭建电影搜索系统",
-                link: "./docs/movie-search-using-zilliz-cloud-and-sentencetransformers",
+                link: "/docs/movie-search-using-zilliz-cloud-and-sentencetransformers",
                 width: "40%"
             }
         ]
@@ -429,12 +430,12 @@ const Rows = [
         members: [
             {
                 title: "API异同",
-                link: "./docs/api-comparisons",
+                link: "/docs/api-comparisons",
                 width: "40%"
             },
             {
                 title: "其它异同",
-                link: "./docs/other-differences",
+                link: "/docs/other-differences",
                 width: "40%"
             },
         ],
@@ -491,7 +492,7 @@ function Column({title, link, width}) {
     return (
         <div style={boxContainer} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <span>
-                <a style={linkStyle} href={link} target="_blank">{title}</a>
+                <Link style={linkStyle} to={link}>{title}</Link>
             </span>
         </div>
     );
