@@ -50,5 +50,5 @@ spec:
     secret:
       secretName: ali-config
       items:
-      - key: ali-vdc-test-zdocs
+      - key: vdc-ali-global-zdocs
         path: config
