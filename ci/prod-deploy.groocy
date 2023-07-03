@@ -50,7 +50,7 @@ pipeline {
             steps{
                 container('deploy') {
                     script {
-                        sh "ls -la"
+                        sh "ls -la /root/.kube/"
                         // dir ("imageTag"){
                         //     unstash 'imageTag'
                         //     image_tag=sh(returnStdout: true, script: 'cat imageTag.txt | tr -d \'\n\r\'')
