@@ -1,5 +1,10 @@
 ## preset
 FROM python:3.11.4-slim-bullseye as preset
+ARG APP_ID
+ARG APP_SECRET
+ARG SPACE_ID
+ARG FIGMA_API_KEY
+ENV APP_ID=${APP_ID} APP_SECRET=${APP_SECRET} SPACE_ID=${SPACE_ID} FIGMA_API_KEY=${FIGMA_API_KEY} FEISHU_HOST="https://open.feishu.cn"
 WORKDIR /usr/src/app
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
@@ -29,7 +34,6 @@ COPY --from=development --chown=node:node /home/node/app/node_modules /home/node
 RUN npm run build
 
 ## deploy
-
 FROM nginx:stable-alpine as deploy
 WORKDIR /home/node/app
 COPY --from=production /home/node/app/build /usr/share/nginx/html
