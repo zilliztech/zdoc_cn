@@ -3,6 +3,9 @@ slug: /create-collection-2
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 创建 Collection
 
 本文介绍如何在 Zilliz Cloud 集群中创建 Collection。
@@ -19,7 +22,7 @@ sidebar_position: 2
 
 - 阅读本系列指南时，建议[下载代码示例](https://assets.zilliz.com/zdoc/zilliz_cloud_sdk_examples.zip)。
 
-:::tip
+:::info 说明
 
 本指南系列中创建的 Collection 包含 `id` 主键和 `vector` 向量字段。如果您希望完全自定义 Collection，请参见[定制 Schema](./use-customized-schema)、[开启动态 Schema](./enable-dynamic-schema) 和 [JSON](./javascript-object-notation-json-1)。
 
@@ -30,6 +33,9 @@ sidebar_position: 2
 Zilliz Cloud 的动态 Schema 功能可以实现在插入数据时基于新字段重构 Collection。要创建使用动态  Schema 的  Collection，您只需指定 Collection 名称和向量维度：
 
 示例代码：
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<TabItem value='python'>
 
 ```python
 res = client.create_collection(
@@ -43,6 +49,10 @@ print(res)
 # None
 ```
 
+</TabItem>
+
+<TabItem value='javascript'>
+
 ```javascript
 // 创建 Collection
 res = await client.createCollection({
@@ -55,6 +65,9 @@ console.log(res)
 // 输出：
 // { error_code: 'Success', reason: '' }
 ```
+
+</TabItem>
+</Tabs>
 
 以上代码将在后台创建包含 `id` 主键和 `vector` 向量字段的 Collection。
 

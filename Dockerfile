@@ -32,4 +32,4 @@ RUN npm run build
 
 FROM nginx:stable-alpine as deploy
 WORKDIR /home/node/app
-COPY --from=production --chown=node:node /home/node/app/build /usr/share/nginx/html
+COPY --from=production /home/node/app/build /usr/share/nginx/html

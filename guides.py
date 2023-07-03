@@ -293,6 +293,7 @@ class docWriter:
         title = titles[title] if title in titles else title
         with open(f"{path}/{title}.md", "w") as f:
             f.write(self.__front_matters(slug=title, sidebar_position=sidebar_position))
+            f.write(self.__imports())
             f.write(self.__markdown())
 
     def __front_matters(self, slug, sidebar_position=None):
@@ -305,6 +306,16 @@ class docWriter:
             return template.format(fms='\n'.join(front_matters))
         else:
             return ''
+        
+    def __imports(self):
+        block_types = ''.join([ self.block_types[x['block_type']-1] for x in self.blocks ])
+        if re.search(r'(code){2,}', block_types):
+            return "\n".join([
+                "import Tabs from '@theme/Tabs';",
+                "import TabItem from '@theme/TabItem';",
+            ]) + "\n\n"
+        else:
+            return ''
 
     def __markdown(self, blocks=None, indent=0):
         markdown = []
@@ -313,8 +324,11 @@ class docWriter:
             blocks = self.blocks
             markdown.append(self.__page(self.page_blocks[0]['page']))
 
-        for block in blocks:
+        for idx, block in enumerate(blocks):
             print(block['block_id'], self.block_types[block['block_type']-1], block['block_type'])
+            prev_block = blocks[idx-1] if idx > 0 else None
+            next_block = blocks[idx+1] if idx < len(blocks)-1 else None
+
             if self.block_types[block['block_type']-1] == 'text':
                 markdown.append(idt + self.__text(block['text']))
 
@@ -329,7 +343,7 @@ class docWriter:
                 markdown.append(self.__ordered(block, indent))
 
             elif self.block_types[block['block_type']-1] == 'code':
-                markdown.append(self.__code(block['code'], indent))
+                markdown.append(self.__code(block['code'], indent, prev_block, next_block, blocks))
 
             elif self.block_types[block['block_type']-1] == 'quote_container':
                 markdown.append(self.__quote(block, indent))
@@ -374,18 +388,69 @@ class docWriter:
 
         return ' ' * indent + '1. ' + self.__text_elements(block['ordered']['elements']) + '\n' + children
     
-    def __code(self, code, indent):
+    def __code(self, code, indent, prev, next, blocks):
         lang = self.code_langs[code['style']['language']] if 'language' in code['style'] else 'plaintext'
         elements = ''.join([ self.__text_run(x) for x in code['elements'] ])
-        return f"{' ' * indent}```{lang.lower()}\n{elements}\n```".replace('\n', '\n' + ' ' * indent)
-    
+
+        if lang in ['Python', 'JavaScript', 'Java', 'Go']:
+            # only block
+            if ((not prev) or (prev and self.block_types[prev['block_type']-1] != 'code')) and ((not next) or (next and self.block_types[next['block_type']-1] != 'code')):
+                return f"{' ' * indent}```{lang.lower()}\n{elements}\n```".replace('\n', '\n' + ' ' * indent)
+            
+            # first block
+            if ((not prev) or (prev and self.block_types[prev['block_type']-1] != 'code')) and next and self.block_types[next['block_type']-1] == 'code':
+                values = self.__code_tabs(code, prev, next, blocks)
+                tabs = f"{' ' * indent}<Tabs defaultValue='python' values={{{json.dumps(values)}}}>"
+                tab_item_start = f"{' ' * indent}<TabItem value='{lang.lower()}'>\n"
+                elements = f"{' ' * indent}```{lang.lower()}\n{elements}\n```\n".replace('\n', '\n' + ' ' * indent)
+                tab_item_end = f"{' ' * indent}</TabItem>"
+                return '\n'.join([tabs, tab_item_start, elements, tab_item_end])
+            
+            # last block
+            if prev and self.block_types[prev['block_type']-1] == 'code' and ((not next) or (next and self.block_types[next['block_type']-1] != 'code')):
+                tab_item_start = f"{' ' * indent}<TabItem value='{lang.lower()}'>\n"
+                elements = f"{' ' * indent}```{lang.lower()}\n{elements}\n```\n".replace('\n', '\n' + ' ' * indent)
+                tab_item_end = f"{' ' * indent}</TabItem>"
+                tabs_end = f"{' ' * indent}</Tabs>"
+                return '\n'.join([tab_item_start, elements, tab_item_end, tabs_end])
+
+            # middle block
+            if prev and self.block_types[prev['block_type']-1] == 'code' and next and self.block_types[next['block_type']-1] == 'code':
+                tab_item_start = f"{' ' * indent}<TabItem value='{lang.lower()}'>\n"
+                elements = f"{' ' * indent}```{lang.lower()}\n{elements}\n```\n".replace('\n', '\n' + ' ' * indent)
+                tab_item_end = f"{' ' * indent}</TabItem>"
+                return '\n'.join([tab_item_start, elements, tab_item_end])
+
+        else:
+            return f"{' ' * indent}```{lang.lower()}\n{elements}\n```".replace('\n', '\n' + ' ' * indent)   
+
+    def __code_tabs(self, code, prev, next, blocks):
+        values = []
+        lang = self.code_langs[code['style']['language']] if 'language' in code['style'] else 'plaintext'
+
+        if ((not prev) or (prev and self.block_types[prev['block_type']-1] != 'code')) and next and self.block_types[next['block_type']-1] == 'code':
+            values.append({ "label": lang, "value": lang.lower(), })
+
+            def __has_next_code(next):
+                values.append({ "label": self.code_langs[next['code']['style']['language']], "value": self.code_langs[next['code']['style']['language']].lower(), })
+                try:
+                    next = blocks[blocks.index(next) + 1]
+                    if next and self.block_types[next['block_type']-1] == 'code':
+                        __has_next_code(next)
+                except:
+                    pass
+
+            __has_next_code(next)
+
+        return values
+
     def __quote(self, block, indent):
         res = []
         quotes = list(map(self.__retrieve_block_by_id, block['children']))
         for quote in quotes:
             res.append(f"{self.__text(quote['text'])}")
 
-        type = 'tip' if '说明' in res[0] else 'caution'
+        type = 'info 说明' if '说明' in res[0] else 'caution'
 
         res[0] = f":::{type}"
         res.insert(1, "")

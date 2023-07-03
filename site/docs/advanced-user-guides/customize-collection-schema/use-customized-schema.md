@@ -3,6 +3,9 @@ slug: /use-customized-schema
 sidebar_position: 0
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 定制 Schema
 
 本文介绍如何为 Collection 定制 Schema。
@@ -17,7 +20,7 @@ sidebar_position: 0
 
 - 已下载示例数据集。详情请参见[示例数据集](./example-dataset-1)。
 
-:::tip
+:::info 说明
 
 您可以下载本指南中的源代码以供参考。
 
@@ -26,6 +29,9 @@ sidebar_position: 0
 ## 连接集群 {#connection-cluster}
 
 创建集群时，您需要配置一个由用户名和密码组成的集群凭证。请务必记下这些信息，因为您需要它们来连接集群。
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<TabItem value='python'>
 
 ```python
 import json
@@ -44,6 +50,10 @@ connections.connect(
 )
 ```
 
+</TabItem>
+
+<TabItem value='javascript'>
+
 ```javascript
 const address = "https://<CLUSTER-ID>.<CLOUD-REGION>.vectordb.zillizcloud.com:<ACCESS-PORT>"
 const token = "user:password"
@@ -54,6 +64,10 @@ const client = new MilvusClient({
     token
 }, true);
 ```
+
+</TabItem>
+
+<TabItem value='java'>
 
 ```java
 import io.milvus.client.*;
@@ -100,6 +114,10 @@ MilvusServiceClient client = new MilvusServiceClient(connectParam);
 System.out.println("Connected to Zilliz Cloud!");
 ```
 
+</TabItem>
+
+<TabItem value='go'>
+
 ```go
 import (
         "context"
@@ -131,11 +149,17 @@ if err != nil {
 }
 ```
 
+</TabItem>
+</Tabs>
+
 ## 创建 Collection {#create-collection}
 
 动态 Schema 使得用户可以更简单高效地插入数据，同时也降低了用户学习难度。如果是生产环境，推荐使用自定义 Schema 而非动态 Schema，以确保所有数据都能按预期存储。
 
 您可以在 Collection 中指定各字段的名称和数据类型来定制 Schema。
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<TabItem value='python'>
 
 ```python
 # 2. 定义字段
@@ -150,6 +174,10 @@ fields = [
     FieldSchema(name="responses", dtype=DataType.INT64)
 ]
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 // 2. 定义字段
@@ -196,6 +224,10 @@ const fields = [
     },
 ];
 ```
+
+</TabItem>
+
+<TabItem value='java'>
 
 ```java
 // 2. 定义字段
@@ -249,6 +281,10 @@ FieldType responses = FieldType.newBuilder()
     .build();
 ```
 
+</TabItem>
+
+<TabItem value='go'>
+
 ```go
 // 2. 定义字段
 
@@ -292,7 +328,13 @@ responses := entity.NewField().
         WithDataType(entity.FieldTypeInt64)
 ```
 
+</TabItem>
+</Tabs>
+
 定义字段后，为 Collection 创建 Schema：
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<TabItem value='python'>
 
 ```python
 # 3. 创建 Schema
@@ -302,6 +344,10 @@ schema = CollectionSchema(
                 enable_dynamic_field=False
 )
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 // 3. 构建 Collection 创建请求
@@ -315,6 +361,10 @@ const req = {
     fields
 }
 ```
+
+</TabItem>
+
+<TabItem value='java'>
 
 ```java
 // 3. 创建 Schema
@@ -335,6 +385,10 @@ CreateCollectionParam createCollectionParam = CreateCollectionParam.newBuilder()
     .withEnableDynamicField(true)
     .build();
 ```
+
+</TabItem>
+
+<TabItem value='go'>
 
 ```go
 // 3. 创建 Schema
@@ -358,7 +412,13 @@ schema := &entity.Schema{
 }
 ```
 
+</TabItem>
+</Tabs>
+
 使用前面定义的 Schema 创建 Collection：
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<TabItem value='python'>
 
 ```python
 # 4. 创建 Collection
@@ -368,6 +428,10 @@ collection = Collection(
     schema=schema
 )
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 // 4. 创建 Collection
@@ -381,6 +445,10 @@ console.log(res)
 // 输出：
 // { error_code: 'Success', reason: '' }
 ```
+
+</TabItem>
+
+<TabItem value='java'>
 
 ```java
 // 4. 创建 Collection
@@ -397,6 +465,10 @@ if (collection.getException() != null) {
 System.out.println("Collection created!");
 ```
 
+</TabItem>
+
+<TabItem value='go'>
+
 ```go
 // 4. 创建 Collection
 
@@ -409,11 +481,17 @@ if colerr != nil {
 }
 ```
 
+</TabItem>
+</Tabs>
+
 ## 为 Collection 创建索引 {#index-collection}
 
 实现极致性能的近似最近邻（Approximate Nearest Neighbor，ANN）搜索需要使用索引。Zilliz Cloud 集群支持对向量字段进行索引，为 Collection 创建索引实际是对 Collection 中的向量字段进行索引。
 
 Zilliz Cloud 目前仅支持 **AUTOINDEX** 索引类型。如果指定的索引类型不是 **AUTOINDEX**，**AUTOINDEX 也**会自动生效。详情请参见[AUTOINDEX](./autoindex-explained)。
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<TabItem value='python'>
 
 ```python
 # 5. 创建索引
@@ -431,6 +509,10 @@ collection.create_index(
   index_name='title_vector_index'
 )
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 // 5. 创建索引
@@ -455,6 +537,10 @@ console.log(res);
 // { error_code: 'Success', reason: '' }
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
 ```java
 // 5. 创建索引
 
@@ -478,6 +564,10 @@ if (res.getException() != null) {
 System.out.println("Index created!");
 ```
 
+</TabItem>
+
+<TabItem value='go'>
+
 ```go
 // 5. 创建索引
 
@@ -498,9 +588,15 @@ if err != nil {
 }
 ```
 
+</TabItem>
+</Tabs>
+
 ## 加载和释放 Collection {#load-and-release-collection}
 
 对于使用 SDK 创建的 Collection，应在执行搜索和查询之前手动加载。如果暂时不需要使用 Collection，也可以手动释放以节省开销。
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<TabItem value='python'>
 
 ```python
 # 6. 加载 Collection
@@ -514,6 +610,10 @@ print(f"Collection loaded successfully: {progress}")
 # 输出：
 # Collection loaded successfully: 100%
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 // 6. 加载 Collection
@@ -539,6 +639,10 @@ console.log(res);
 // { status: { error_code: 'Success', reason: '' }, progress: '0' }
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
 ```java
 // 6. 加载 Collection
 
@@ -563,6 +667,10 @@ System.out.println("Loading progress: " + getLoadingProgressRes.getData().getPro
 // Loading progress: 100
 ```
 
+</TabItem>
+
+<TabItem value='go'>
+
 ```go
 // 6. 加载 Collection
 
@@ -584,11 +692,21 @@ if err != nil {
 println("Loading progress:", progress)
 ```
 
+</TabItem>
+</Tabs>
+
 要释放 Collection，请执行以下操作：
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<TabItem value='python'>
 
 ```python
 collection.release()
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 // 在异步函数声明中包含以下内容：
@@ -603,6 +721,10 @@ console.log(res);
 // { error_code: 'Success', reason: '' }
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
 ```java
 ReleaseCollectionParam releaseCollectionParam = ReleaseCollectionParam.newBuilder()
     .withCollectionName("medium_articles")
@@ -611,6 +733,10 @@ ReleaseCollectionParam releaseCollectionParam = ReleaseCollectionParam.newBuilde
 R<RpcStatus> releaseCollectionRes = client.releaseCollection(releaseCollectionParam);
 ```
 
+</TabItem>
+
+<TabItem value='go'>
+
 ```go
 releaseCollErr := conn.ReleaseCollection(context.Background(), "medium_articles")
 
@@ -618,6 +744,9 @@ if releaseCollErr != nil {
         log.Fatal("Failed to release collection:", releaseCollErr.Error())
 }
 ```
+
+</TabItem>
+</Tabs>
 
 ## 插入 Entity {#insert-entity}
 
@@ -629,6 +758,9 @@ if releaseCollErr != nil {
 
 - 按行排列数据
   要将数据排列为行，需要将每行排列为一个字典，其中字段名称用作键，字段值为其对应的值。以下代码展示如何将[示例数据集](./example-dataset-1)的前 200 条数据记录排列为行。
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<TabItem value='python'>
 
 ```python
 # 不推荐实际执行以下代码
@@ -664,6 +796,10 @@ print(rows[:2])
 # ]
 ```
 
+</TabItem>
+
+<TabItem value='javascript'>
+
 ```javascript
 // 不推荐实际执行以下代码
 // 以下代码仅作演示使用
@@ -689,6 +825,10 @@ console.log(rows[0])
 //   responses: 18
 // }
 ```
+
+</TabItem>
+
+<TabItem value='java'>
 
 ```java
 // 不推荐实际执行以下代码
@@ -739,6 +879,10 @@ System.out.println(rows)
 // [{"reading_time":13,"publication":"The Startup","title_vector":[0.041732933,0.013779674,...,0.030096486],"link":"<https://medium.com/swlh/the-reported-mortality-rate-of-coronavirus-is-not-important-369989c8d912","responses":18,"title":"The> Reported Mortality Rate of Coronavirus Is Not Important","claps":1100}, 
 //  {"reading_time":14,"publication":"The Startup","title_vector":[0.0039737443,0.003020432,-6.188639E-4,...,0.021713957],"link":"<https://medium.com/swlh/dashboards-in-python-3-advanced-examples-for-dash-beginners-and-everyone-else-b1daf4e2ec0a","responses":3,"title":"Dashboards> in Python: 3 Advanced Examples for Dash Beginners and Everyone Else","claps":726}]
 ```
+
+</TabItem>
+
+<TabItem value='go'>
 
 ```go
 // 不推荐实际执行以下代码
@@ -799,10 +943,16 @@ func getRows(dataset Dataset, counts int64) ([]interface{}, error) {
 }
 ```
 
+</TabItem>
+</Tabs>
+
 - 按列排列数据
   要将数据排列为列，请使用包含该列中所有行的值的嵌套列表来表示每个列。以下代码片段将[示例数据集](./example-dataset-1)中的两个数据记录以列的方式排列。
 
   Node.js SDK 不支持将数据按列排列。
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<TabItem value='python'>
 
 ```python
 # 不推荐实际执行以下代码
@@ -837,6 +987,10 @@ with open('/path/to/downloaded/medium_articles_2020_dpr.json') as f:
         #            [3, 7]
   #   ]
 ```
+
+</TabItem>
+
+<TabItem value='java'>
 
 ```java
 // 不推荐实际执行以下代码
@@ -898,6 +1052,10 @@ System.out.println(field)
 // 输出：
 // [Field{fieldName='title', row_count=1}, Field{fieldName='title_vector', row_count=1}, Field{fieldName='link', row_count=1}, Field{fieldName='reading_time', row_count=1}, Field{fieldName='publication', row_count=1}, Field{fieldName='claps', row_count=1}, Field{fieldName='responses', row_count=1}]
 ```
+
+</TabItem>
+
+<TabItem value='go'>
 
 ```go
 // 不推荐实际执行以下代码
@@ -983,9 +1141,15 @@ func getColumns(dataset Dataset, counts int64) ([]entity.Column, error) {
 }
 ```
 
+</TabItem>
+</Tabs>
+
 ### 插入数据 {#insert-data}
 
 准备好数据后，可以按如下方式插入数据：
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<TabItem value='python'>
 
 ```python
 # 7. 插入数据
@@ -1019,6 +1183,10 @@ print(f"Data inserted successfully! Inserted rows: {results.insert_count}")
 # 输出：
 # Data inserted successfully! Inserted rows: 5979
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 // 7. 插入数据
@@ -1074,6 +1242,10 @@ console.log(res);
 //    db_name: 'default'
 // }
 ```
+
+</TabItem>
+
+<TabItem value='java'>
 
 ```java
 // 7. 插入数据
@@ -1147,6 +1319,10 @@ System.out.println("Flushed!");
 // Flushed!
 ```
 
+</TabItem>
+
+<TabItem value='go'>
+
 ```go
 // 7. 插入数据
 
@@ -1209,6 +1385,9 @@ log.Println("Collection flushed")
 // 2023/06/17 17:09:32 Collection flushed
 ```
 
+</TabItem>
+</Tabs>
+
 ## 搜索和查询 {#search-and-query}
 
 单向量搜索是指仅指定一个查询向量，搜索并返回与查询向量最相似的前 *K* 个 Entity。
@@ -1218,6 +1397,9 @@ Zilliz Cloud 也支持在单个请求中指定多个查询向量来进行批量�
 搜索前需定义搜索相关参数，并确保搜索参数中定义的相似度类型与索引参数中定义的一致。您可以在搜索请求中引用搜索参数，并指定查询向量、向量字段名称、返回结果限制以及其他相关参数。
 
 以下代码搜索与指定查询向量最相近的 5 条 Entity，并返回各 Entity 的主键、距离等信息。
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<TabItem value='python'>
 
 ```python
 # 8. 搜索数据
@@ -1268,6 +1450,10 @@ for hit in hits:
 # https://medium.com/swlh/coronavirus-shows-what-ethical-amazon-could-look-like-7c80baf2c663
 ```
 
+</TabItem>
+
+<TabItem value='javascript'>
+
 ```javascript
 // 8. 搜索数据
 
@@ -1308,6 +1494,10 @@ console.log(res);
 //   ]
 // }
 ```
+
+</TabItem>
+
+<TabItem value='java'>
 
 ```java
 // 8. 搜索数据
@@ -1360,6 +1550,10 @@ for (int i = 0; i < queryVectors.size(); ++i) {
 // Top 2 ID:442206870369024868 Distance:0.48886314
 // Title: How Can AI Help Fight Coronavirus?
 ```
+
+</TabItem>
+
+<TabItem value='go'>
 
 ```go
 // 8. 搜索数据
@@ -1430,6 +1624,9 @@ func (sp searchParams) Params() map[string]interface{} {
         }
 }
 ```
+
+</TabItem>
+</Tabs>
 
 ## 相关文档 {#related-doc}
 

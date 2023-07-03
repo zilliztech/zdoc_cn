@@ -3,6 +3,9 @@ slug: /drop-collection-1
 sidebar_position: 6
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 删除 Collection
 
 本文介绍如何从 Zilliz Cloud 集群中删除 Collection。
@@ -13,7 +16,7 @@ sidebar_position: 6
 
 阅读本指南系列时，建议[下载代码示例](https://assets.zilliz.com/zdoc/zilliz_cloud_sdk_examples.zip)。
 
-:::tip
+:::info 说明
 
 本指南系列中创建的 Collection 包含 `**id**` 主键和 `**vector**` 向量字段。如果您希望完全自定义 Collection，请参见[定制 Schema](./use-customized-schema)、[开启动态 Schema](./enable-dynamic-schema) 和 [JSON](./javascript-object-notation-json-1)。
 
@@ -23,6 +26,9 @@ sidebar_position: 6
 
 使用以下示例代码从集群中删除 Collection：
 
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<TabItem value='python'>
+
 ```python
 res = client.drop_collection(collection_name="medium_articles_2020")
 
@@ -31,6 +37,10 @@ print(res)
 # 输出：
 # None
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 res = await client.dropCollection({
@@ -42,6 +52,9 @@ console.log(res)
 // 输出：
 // { error_code: 'Success', reason: '' }
 ```
+
+</TabItem>
+</Tabs>
 
 ## 使用限制 {#limitations-on-use}
 

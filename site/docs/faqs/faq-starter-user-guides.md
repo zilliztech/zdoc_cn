@@ -5,6 +5,8 @@ sidebar_position: 0
 
 # 快速入门 {#quick-start}
 
+本文列举了快速上手 Zilliz Cloud 时可能遇到的常见问题及对应解决方法。
+
 **免费试用结束后，我的数据是否会被删除？**
 
 免费试用结束后，Zilliz Cloud 将自动备份您的数据并移至回收站，集群将被删除。回收站中的数据可免费保留30天。您可以通过 support@zilliz.com 联系我们以继续使用 Zilliz Cloud。

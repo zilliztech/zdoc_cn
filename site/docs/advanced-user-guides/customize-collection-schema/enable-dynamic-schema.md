@@ -3,6 +3,9 @@ slug: /enable-dynamic-schema
 sidebar_position: 1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 开启动态 Schema
 
 Schema 对于 Zilliz Cloud 集群的数据处理非常重要。在向 Collection 中插入 Entity 前，需要先了解 Schema 相关信息，并确保所有待插入的 Entity 的结构都与 Schema 相匹配。该应用场景会对 Collection 的使用产生限制，使其类似于关系数据库中的表。
@@ -11,7 +14,7 @@ Schema 对于 Zilliz Cloud 集群的数据处理非常重要。在向 Collection
 
 动态 Schema 使得数据处理更加灵活，用户能够在 Collection 中存储和检索复杂结构的数据，包括嵌套数据、数组以及其他复杂数据类型。
 
-:::tip
+:::info 说明
 
 您可以下载本指南中的源代码以供参考。
 
@@ -22,6 +25,9 @@ Schema 对于 Zilliz Cloud 集群的数据处理非常重要。在向 Collection
 要为 Collection 开启动态 Schema，需要在定义 Schema 时将 `**enable_dynamic_field**` 设置为 `**True**`。开启动态 Schema 后，之后插入的 Entity 中的所有未定义字段将以键值对的形式存储在特殊 JSON 字段  `**$meta**` 中。我们将用“动态字段”来指代这些键值对。
 
 `**$meta**` 字段不会影响您使用 Zilliz Cloud。您可以要求 Zilliz Cloud 在搜索或查询结果中输出动态字段，也可以在布尔表达式中引用动态字段。
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<TabItem value='python'>
 
 ```python
 from pymilvus import connections, Collection, FieldSchema, CollectionSchema, DataType, utility
@@ -62,6 +68,10 @@ progress = utility.loading_progress("medium_articles")
 
 print(f"Collection loaded successfully: {progress}")
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 async function main() {
@@ -128,6 +138,10 @@ async function main() {
     console.log(res);
 }
 ```
+
+</TabItem>
+
+<TabItem value='java'>
 
 ```java
 import io.milvus.client.*;
@@ -243,6 +257,10 @@ if (getLoadingProgressRes.getException() != null) {
 // INFO: CreateIndexParam(databaseName=null, collectionName=medium_articles_with_dynamic, fieldName=title_vector, indexName=title_vector_index, extraParam={metric_type=L2, index_type=AUTOINDEX}, syncMode=true, syncWaitingInterval=500, syncWaitingTimeout=600)
 ```
 
+</TabItem>
+
+<TabItem value='go'>
+
 ```go
 import "github.com/milvus-io/milvus-sdk-go/v2/entity"
 
@@ -330,6 +348,9 @@ println("Loading progress:", progress)
 // Loading progress: 100
 ```
 
+</TabItem>
+</Tabs>
+
 ## 动态插入数据 {#insert-data-dynamically}
 
 Collection 创建完成后，可以开始动态插入数据。
@@ -337,6 +358,9 @@ Collection 创建完成后，可以开始动态插入数据。
 ### 准备数据 {#preparing-data}
 
 现在，我们需要从[示例数据集](./example-dataset-1)中读取数据。
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<TabItem value='python'>
 
 ```python
 import json
@@ -366,6 +390,10 @@ with open("path/to/medium_articles_2020_dpr.json") as f:
 #           'responses': 18
 # }
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 // 在异步函数声明中包含以下内容：
@@ -416,6 +444,10 @@ console.log(rows[0])
 // }
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
 ```java
 // 在主函数中包含以下内容：
 
@@ -459,6 +491,10 @@ public static List<JSONObject> getRows(JSONArray dataset, int counts) {
 }
 ```
 
+</TabItem>
+
+<TabItem value='go'>
+
 ```go
 // 在主函数中包含以下内容：
 
@@ -496,9 +532,15 @@ type Row struct {
 }
 ```
 
+</TabItem>
+</Tabs>
+
 ### 插入数据 {#insert-data}
 
 数据准备完成后便可以开始插入数据：
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<TabItem value='python'>
 
 ```python
 # 6. 插入数据
@@ -510,6 +552,10 @@ print("Entity counts: ", collection.num_entities)
 # 输出：
 # Entity counts:  5979
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 // 在异步函数声明中包含以下内容：
@@ -562,6 +608,10 @@ console.log(res);
 // }
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
 ```java
 // 在主函数中包含以下内容：
 
@@ -608,6 +658,10 @@ System.out.println("Successfully flushed");
 // Successfully flushed
 ```
 
+</TabItem>
+
+<TabItem value='go'>
+
 ```go
 // 在主函数中包含以下内容：
 
@@ -640,9 +694,15 @@ log.Println("Collection flushed")
 // 2023/06/19 18:38:12 Collection flushed
 ```
 
+</TabItem>
+</Tabs>
+
 ## **使用动态字段搜索** {#search-with-dynamic-fields}
 
 假设前面的所有步骤都已完成，此时我们便可以在搜索或查询的表达式中使用动态字段：
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<TabItem value='python'>
 
 ```python
 # 7. 将数据集中的第一条 Entity 的向量字段作为查询向量
@@ -676,6 +736,10 @@ for hits in result:
 # Title:  Why The Coronavirus Mortality Rate is Misleading , Reading time:  9 , Claps 2900
 # Title:  Coronavirus shows what ethical Amazon could look like , Reading time:  4 , Claps 51
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 res = await client.search({
@@ -715,6 +779,10 @@ console.log(res);
 //   ]
 // }
 ```
+
+</TabItem>
+
+<TabItem value='java'>
 
 ```java
 // 设置查询向量
@@ -772,6 +840,10 @@ for (int i = 0; i < queryVectors.size(); ++i) {
 // Claps: 51
 // Reading time:4
 ```
+
+</TabItem>
+
+<TabItem value='go'>
 
 ```go
 vectors := []entity.Vector{}
@@ -847,6 +919,9 @@ func (sp searchParams) Params() map[string]interface{} {
         }
 }
 ```
+
+</TabItem>
+</Tabs>
 
 值得注意的是，`**claps**` 和 `**reading_time**` 没有预先定义在 Schema 中，但这也并不影响在表达式和输出字段中使用它们。
 

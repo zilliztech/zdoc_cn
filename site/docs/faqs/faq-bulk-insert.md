@@ -5,6 +5,8 @@ sidebar_position: 2
 
 # 批量导入数据 {#batch-import-data}
 
+本文列举了将数据批量导入 Zilliz Cloud 时可能遇到的常见问题及对应解决方法。
+
 **如何将数据批量从 Elasticsearch 导入 Zilliz Cloud？**
 
 请执行以下步骤将数据批量从 Elasticsearch 导入 Zilliz Cloud

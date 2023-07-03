@@ -19,13 +19,15 @@ sidebar_position: 2
 
 ### 准备工作 {#preparations}
 
-开始前，我们需要安装 `**gensim**` 库并加载 `**word2vec**` 模型。
+开始前，我们需要安装 `**gensim**` 库。
 
 ```bash
 pip install gensim --disable-pip-version-check
 wget <https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz>
 gunzip GoogleNews-vectors-negative300.bin
 ```
+
+然后，按如下方式加载 `**word2vec**` 模型。
 
 ```python
 from gensim.models import KeyedVectors
@@ -39,6 +41,8 @@ model = KeyedVectors.load_word2vec_format('GoogleNews-vectors-negative300.bin', 
 ```python
 print(model.most_similar(positive=['Marlon_Brando']))
 ```
+
+其对应的向量表示如下：
 
 ```python
 [('Brando', 0.757453978061676), ('Humphrey_Bogart', 0.6143958568572998), ('actor_Marlon_Brando', 0.6016287207603455), ('Al_Pacino', 0.5675410032272339), ('Elia_Kazan', 0.5594002604484558), ('Steve_McQueen', 0.5539456605911255), ('Marilyn_Monroe', 0.5512186884880066), ('Jack_Nicholson', 0.5440199375152588), ('Shelley_Winters', 0.5432392954826355), ('Apocalypse_Now', 0.5306933522224426)]
@@ -54,6 +58,8 @@ Marlon Brando 曾与 Al Pacino 一起出演《教父》，与 Elia Kazan 一起�
 print(model.most_similar(positive=['king', 'woman'], negative=['man'], topn=1))
 ```
 
+从下方输出可以看出，`queen`在语义上应该是`king`减去`men`的结果。
+
 ```python
 [('queen', 0.7118193507194519)]
 ```
@@ -62,12 +68,14 @@ print(model.most_similar(positive=['king', 'woman'], negative=['man'], topn=1))
 
 ### 示例 2：Apple，水果还是公司 {#example-2-apple-fruit-or-company}
 
-“Apple” 一词既可以指公司，也可以指美味的红色水果。在这个例子中，我们可以看到 Word2Vec 保留了两个含义。
+“Apple” 一词既可以指公司，也可以指美味的红色水果。
 
 ```python
 print(model.most_similar(positive=['samsung', 'iphone'], negative=['apple'], topn=1))
 print(model.most_similar(positive=['fruit'], topn=10)[9:])
 ```
+
+在上面这个例子中，我们可以看到 Word2Vec 保留了两个含义。
 
 ```python
 [('droid_x', 0.6324754953384399)]

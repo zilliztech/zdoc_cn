@@ -153,7 +153,7 @@ const Rows = [
         group: 0,
         title: "高级用户指南",
         description: "了解 Zilliz Cloud 的高级集群操作 API。",
-        Svg: require('@site/static/img/advanced-user-guides.svg').default,
+        Svg: require('@site/static/img/advanced-user-guides-dark.svg').default,
         members: [
             {
                 title: "使用 Schema",

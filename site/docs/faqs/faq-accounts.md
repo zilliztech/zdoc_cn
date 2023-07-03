@@ -5,6 +5,8 @@ sidebar_position: 7
 
 # 账号 {#g-id-bold-account-no-g}
 
+本文列举了 Zilliz Cloud 账号相关的常见问题及对应解决方法。
+
 **如何删除账号？**
 
 如需删除账号，请通过 [support@zilliz.com](mailto:support@zilliz.com) 联系我们。

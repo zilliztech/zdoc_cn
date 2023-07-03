@@ -3,6 +3,9 @@ slug: /what-is-a-vector-database
 sidebar_position: 1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 什么是向量数据库？
 
 在这个数据量与日俱增的时代，大部分数据都可以归为半结构化数据和非结构化数据。近似最近邻（Approximate Nearest Neighbor，ANN）搜索是处理这类数据的一种有效方式。向量数据库是一种数据库管理系统，有助于处理不断增加的非结构化数据。

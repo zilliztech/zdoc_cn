@@ -3,6 +3,9 @@ slug: /insert-entities
 sidebar_position: 3
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 插入 Entity
 
 本文介绍如何将 Entity 插入到 Zilliz Cloud 集群中的 Collection。
@@ -19,7 +22,7 @@ Entity 是 Collection 中的基本数据单元。同一个 Collection 中的 Ent
 
 - 阅读本指南系列时，建议[下载代码示例](https://assets.zilliz.com/zdoc/zilliz_cloud_sdk_examples.zip)。
 
-:::tip
+:::info 说明
 
 本指南系列中创建的 Collection 包含 `id` 主键和 `vector` 向量字段。如果您希望完全自定义 Collection，请参见[定制 Schema](./use-customized-schema)、[开启动态 Schema](./enable-dynamic-schema) 和 [JSON](./javascript-object-notation-json-1)。
 
@@ -28,6 +31,9 @@ Entity 是 Collection 中的基本数据单元。同一个 Collection 中的 Ent
 ## 插入单个 Entity {#insert-single-entity}
 
 以下代码将示例数据集中的第一条记录插入到 Collection：
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<TabItem value='python'>
 
 ```python
 res = client.insert(
@@ -49,6 +55,10 @@ print(res)
 # 输出：
 # [0]
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 res = await client.insert({
@@ -81,11 +91,17 @@ console.log(res)
 // }
 ```
 
+</TabItem>
+</Tabs>
+
 ## 批量插入 Entity {#bulk-insert-entity}
 
 ### 准备数据 {#preparing-data}
 
 要批量插入 Entity，可以按以下方式准备数据：
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<TabItem value='python'>
 
 ```python
 import json
@@ -125,6 +141,10 @@ with open("path/to/downloaded/medium_articles_2020_dpr.json") as f:
 #   ...
 # ]
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 const fs = require('fs');
@@ -173,9 +193,15 @@ const client_data = data.rows.slice(1, 200).map((row) => {
 // ]
 ```
 
+</TabItem>
+</Tabs>
+
 ### 插入数据 {#insert-data}
 
 数据准备完成后，通过以下代码插入数据：
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<TabItem value='python'>
 
 ```python
 # 'client' 是 MilvusClient 实例
@@ -190,6 +216,10 @@ print(res)
 # 输出：
 # [0, 1, 2, 3, ..., 199]
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 res = await client.insert({
@@ -223,6 +253,9 @@ console.log(res)
 //   timestamp: '442192286606688257'
 // }
 ```
+
+</TabItem>
+</Tabs>
 
 ## 相关文档 {#related-doc}
 

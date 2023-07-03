@@ -5,6 +5,8 @@ sidebar_position: 1
 
 # 连接与访问控制 {#connectivity-and-access-control}
 
+本文列举了连接 Zilliz Cloud 时可能遇到的常见问题及对应解决方法。
+
 **为什么会连接超时以及如何处理连接超时报错？**
 
 在以下情况下可能会发生连接超时错误：

@@ -3,6 +3,9 @@ slug: /quick-start-1
 sidebar_position: 0
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 快速开始
 
 本教程涵盖以下 Serverless 集群操作指南：
@@ -23,19 +26,22 @@ sidebar_position: 0
 
 在本文档中，我们将使用 Zilliz Cloud 的 PyMilvus（Milvus Python SDK）和 RESTful API。开始之前，请先确保：
 
-- 您已在 [https://cloud.zilliz.com/signup](https://cloud.zilliz.com/signup) 注册了 Zilliz Cloud 账号。更多详情，请参见[注册账号](./register-with-zilliz-cloud) 。
+- 您已在 [https://cloud.zilliz.com/signup](https://cloud.zilliz.com/signup) 注册了 Zilliz Cloud 账号。更多详情，请参见[注册账号](./register-with-zilliz-cloud)。
 
-- 您已订阅免费版 Zilliz Cloud 并在项目中创建了一个 Serverless 集群。更多详情，请参见[免费试用](./free-trials) 和[创建集群](./create-cluster) 。
+- 您已订阅免费版 Zilliz Cloud 并在项目中创建了一个 Serverless 集群。更多详情，请参见[免费试用](./free-trials) 和[创建集群](./create-cluster)。
 
 - 您已安装需要使用的 SDK。当前，有四种 SDK 可供选择，分别是 [Python](./install-sdks#install-pymilvus-python-sdk)，[Java](./install-sdks#install-the-java-sdk)，[Go](./install-sdks#install-go-sdk) 和 [Node.js](./install-sdks#install-the-node-js-sdk)。更多详情，请参见[安装 SDK](./install-sdks)。
 
 - 您已下载示例数据集。更多详情，请参见[示例数据集](./example-dataset-1)。
 
-- 为了更好地理解本指导，建议您下载[示例源代码](https://assets.zilliz.com/zdoc/zilliz_cloud_sdk_examples.zip)或直接拷贝下方各示例代码块中的内容到本地文件中查看演示效果
+- 为了更好地理解本指导，建议您下载[示例源代码](https://assets.zilliz.com/zdoc/zilliz_cloud_sdk_examples.zip)或直接拷贝下方各示例代码块中的内容到本地文件中查看演示效果。
 
 ## 创建 Collection {#create-collection}
 
 如通过 Zilliz Cloud 界面创建 Serverless Cluster，您需要在创建 Serverless 的同时创建 1 个 Collection。 以下代码展示如何通过调用 API 在您的 Serverless 集群下创建第 2 个 Collection。
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<TabItem value='python'>
 
 ```python
 from pymilvus import MilvusClient
@@ -53,6 +59,10 @@ client.create_collection(
     dimension=768
 )
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 const { MilvusClient } = require("@zilliz/milvus2-sdk-node")
@@ -82,11 +92,12 @@ main()
 // { error_code: 'Success', reason: '' }
 ```
 
-:::tip
+</TabItem>
+</Tabs>
 
-:::
+:::info 说明
 
-:::caution
+每个 Serverless 集群仅支持基础配置，最多可创建 2 个 Collection。如遇相关报错，请至 Zilliz Cloud 控制台查看已创建的 Collection 数量。
 
 :::
 
@@ -96,6 +107,9 @@ main()
 
 查看指定 Collection 详情：
 
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<TabItem value='python'>
+
 ```python
 res = client.describe_collection(
     collection_name='medium_articles_2020'
@@ -103,9 +117,31 @@ res = client.describe_collection(
 
 print(res)
 
-# 输出
-# {'auto_id': False, 'description': '', 'fields': [{'name': 'id', 'description': '', 'type': <DataType.INT64: 5>, 'is_primary': True, 'auto_id': False}, {'name': 'vector', 'description': '', 'type': <DataType.FLOAT_VECTOR: 101>, 'params': {'dim': 768}}], 'enable_dynamic_field': True}
+# Output
+# {
+#     'auto_id': False, 
+#     'description': '', 
+#     'fields': [
+#         {
+#             'name': 'id', 
+#             'description': '', 
+#             'type': <DataType.INT64: 5>, 
+#             'is_primary': True, 
+#             'auto_id': False
+#         }, {
+#             'name': 'vector', 
+#             'description': '', 
+#             'type': <DataType.FLOAT_VECTOR: 101>, 
+#             'params': {'dim': 768}
+#         }
+#     ], 
+#     'enable_dynamic_field': True
+# }
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 // 将以下内容添加到异步函数声明中
@@ -118,8 +154,8 @@ console.log(res);
 // 输出
 //
 // {
-//   virtual_channel_names: [ 'in01-***-rootcoord-dml_3_442169042773616536v0' ],
-******//   physical_channel_names: [ 'in01-***-rootcoord-dml_3' ],
+//   virtual_channel_names: [ 'in01-*-rootcoord-dml_3_442169042773616536v0' ],*
+*//   physical_channel_names: [ 'in01-*-rootcoord-dml_3' ],
 //   aliases: [],
 //   start_positions: [],
 //   properties: [],
@@ -142,6 +178,9 @@ console.log(res);
 // }
 ```
 
+</TabItem>
+</Tabs>
+
 ## 插入数据 {#insert-data}
 
 在 Serverless 集群中，Collection 包含 2 个必填字段，**id**（主键）和 **vector**（embedding 向量）。Zilliz Cloud 默认为所有 Collection 启用动态 Schema。 这意味着，无需修改现有 Schema，您便可将包含未预先定义的字段的 Entity 插入到 Collection 中。
@@ -151,6 +190,9 @@ console.log(res);
 以下示例展示如何将单个或多个 Entity 插入到 Collection 中。您可以在 Zilliz Cloud 界面上查看插入的 Entity。
 
 - 插入单个 Entity
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<TabItem value='python'>
 
 ```python
 import json
@@ -175,6 +217,10 @@ print(res)
 # 输出：
 # [0]
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 // 将以下内容添加到异步函数声明中
@@ -208,7 +254,13 @@ console.log(res)
 // }
 ```
 
+</TabItem>
+</Tabs>
+
 - 插入多个 Entity
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<TabItem value='python'>
 
 ```python
 import json
@@ -257,6 +309,10 @@ print(res)
 #       ...
 #      ]
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 const fs = require("fs")
@@ -310,6 +366,9 @@ console.log(res);
 // }
 ```
 
+</TabItem>
+</Tabs>
+
 ## 向量搜索、标量查询、获取 Entity {#vector-search-scalar-query-get-entity}
 
 向量搜索、标量查询及通过 ID 获取 Entity 是三种不同的操作。
@@ -323,6 +382,9 @@ console.log(res);
 ### 向量搜索（ANN 搜索） {#vector-search-ann-search}
 
 示例数据集中的 **vector** 字段包含了由每篇文章标题转化而来的向量。以下示例展示如何对向量数据进行 ANN 搜索，从而找到与查询标题含义最相似的文章标题。
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<TabItem value='python'>
 
 ```python
 with open("path/to/downloaded/medium_articles_2020_dpr.json") as f:
@@ -364,6 +426,10 @@ print(res)
 #   ]
 # ]
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 // 将以下内容添加到异步函数声明中
@@ -414,7 +480,13 @@ console.log(res)
 // }
 ```
 
+</TabItem>
+</Tabs>
+
 您还可以在 ANN 搜索过程中添加过滤条件以缩小搜索范围。
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<TabItem value='python'>
 
 ```python
 res = client.search(
@@ -442,6 +514,10 @@ print(res)
 #   ]
 # ]
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 // 将以下内容添加到异步函数声明中
@@ -498,9 +574,15 @@ console.log(res)
 // }
 ```
 
+</TabItem>
+</Tabs>
+
 ### 标量查询 {#scalar-query}
 
 除 **vector** 字段以外，数据集中的所有字段均为标量字段。您可以对标量字段设置过滤条件，从而筛选所需数据。以下示例展示如何进行向量查询。
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<TabItem value='python'>
 
 ```python
 res = client.query(
@@ -512,6 +594,10 @@ res = client.query(
 
 print(res)
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 // 将以下内容添加到异步函数声明中
@@ -550,11 +636,17 @@ console.log(res)
 // }
 ```
 
+</TabItem>
+</Tabs>
+
 ### 根据 ID 获取 Entity {#get-entity-by-id}
 
 您可以根据 Entity ID 获取特定 Entity。以下示例展示如何根据 ID 获取 Entity。
 
 - 根据 ID 获取单个 Entity
+  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+  <TabItem value='python'>
+
   ```python
   # 根据 ID 获取单个 Entity
   res = client.get(
@@ -572,6 +664,10 @@ console.log(res)
   #   'claps': 726,
   #   'responses': 3}]
   ```
+  
+  </TabItem>
+
+  <TabItem value='javascript'>
 
   ```javascript
   // 将以下内容添加到异步函数声明中
@@ -594,8 +690,14 @@ console.log(res)
   //     ]
   // }
   ```
+  
+  </TabItem>
+  </Tabs>
 
 - 根据 ID 批量获取多个 Entity。
+  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+  <TabItem value='python'>
+
   ```python
   # 根据 ID 批量获取多个 Entity
   res = client.get(
@@ -631,6 +733,10 @@ console.log(res)
   #  'responses': 1,
   #  'vector': [0.032572296,-0.011148319,-0.01688577,...,0.004943279]}]
   ```
+  
+  </TabItem>
+
+  <TabItem value='javascript'>
 
   ```javascript
   // 将以下内容添加到异步函数声明中
@@ -661,12 +767,18 @@ console.log(res)
   //     ]
   // }
   ```
+  
+  </TabItem>
+  </Tabs>
 
 ## 删除 Entity {#delete-entity}
 
 您可以根据 ID 从 Collection 中一次性删除单个或多个 Entity。 以下为示例。
 
 - 通过 ID 删除单个 Entity。
+  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+  <TabItem value='python'>
+
   ```python
   # 删除单个 Entity
   res = client.delete(
@@ -679,6 +791,10 @@ console.log(res)
   # 输出
   # [0]
   ```
+  
+  </TabItem>
+
+  <TabItem value='javascript'>
 
   ```javascript
   // 将以下内容添加到异步函数声明中
@@ -702,8 +818,14 @@ console.log(res)
   //   timestamp: '442193588309196801'
   // }
   ```
+  
+  </TabItem>
+  </Tabs>
 
 - 根据 Entity ID 批量删除 Entity。
+  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+  <TabItem value='python'>
+
   ```python
   # 批量删除 Entity
   res = client.delete(
@@ -716,6 +838,10 @@ console.log(res)
   # 输出
   # [1, 2, 3]
   ```
+  
+  </TabItem>
+
+  <TabItem value='javascript'>
 
   ```javascript
   // 将以下内容添加到异步函数声明中
@@ -739,10 +865,16 @@ console.log(res)
   //   timestamp: '442193588309196801'
   // }
   ```
+  
+  </TabItem>
+  </Tabs>
 
 ## 删除 Collection {#delete-collection}
 
 您可以用集群中删除不再使用的 Collection。
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<TabItem value='python'>
 
 ```python
 # 删除 Collection
@@ -756,6 +888,10 @@ print(res)
 # 无
 ```
 
+</TabItem>
+
+<TabItem value='javascript'>
+
 ```javascript
 // 将以下内容添加到异步函数声明中
 res = await client.dropCollection({
@@ -767,6 +903,9 @@ console.log(res);
 // 输出:
 // { error_code: 'Success', reason: '' }
 ```
+
+</TabItem>
+</Tabs>
 
 ## 文档推荐 {#recommended-documents}
 

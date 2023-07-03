@@ -3,6 +3,9 @@ slug: /connect-to-cluster
 sidebar_position: 1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 连接集群
 
 本文介绍如何连接到 Zilliz Cloud 集群。
@@ -25,6 +28,9 @@ sidebar_position: 1
 
 您可以通过公网地址和创建集群时指定的用户名和密码连接到集群。
 
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<TabItem value='python'>
+
 ```python
 # 初始化 MilvusClient 实例
 # 替换为实际的公网地址和用户名密码
@@ -39,6 +45,10 @@ client = MilvusClient(
 )
 ```
 
+</TabItem>
+
+<TabItem value='javascript'>
+
 ```javascript
 const { MilvusClient } = require("@zilliz/milvus2-sdk-node")
 
@@ -47,6 +57,9 @@ const token = "<USER:PASSWORD>";
 
 const client = new MilvusClient({ address, token });
 ```
+
+</TabItem>
+</Tabs>
 
 ## 相关文档 {#related-doc}
 

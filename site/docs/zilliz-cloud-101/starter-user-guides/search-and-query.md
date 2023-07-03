@@ -3,6 +3,9 @@ slug: /search-and-query
 sidebar_position: 4
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 向量搜索和查询
 
 本文介绍如何在 Zilliz Cloud 中执行近似最近邻（Approximate Nearest Neighbour，ANN）搜索和查询。搜索是指在 Collection 中查找与指定查询向量最接近的向量，查询是基于指定条件筛选出满足条件的数据。
@@ -21,7 +24,7 @@ Zilliz Cloud 采用 ANN 算法来处理向量搜索请求，支持搜索并返�
 
 - 阅读本指南系列时，建议[下载代码示例](https://assets.zilliz.com/zdoc/zilliz_cloud_sdk_examples.zip)。
 
-:::tip
+:::info 说明
 
 本指南系列中创建的 Collection 包含 `id` 主键和 `vector` 向量字段。如果您希望完全自定义 Collection，请参见[定制 Schema](./use-customized-schema)、[开启动态 Schema](./enable-dynamic-schema) 和 [JSON](./javascript-object-notation-json-1)。
 
@@ -32,6 +35,9 @@ Zilliz Cloud 采用 ANN 算法来处理向量搜索请求，支持搜索并返�
 单向量搜索是指搜索并返回与指定的某个查询向量最相似的前 *K* 个Entity。
 
 以下是单向量搜索的示例代码：
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<TabItem value='python'>
 
 ```python
 with open("medium_articles_2020_dpr.json") as f:
@@ -61,6 +67,10 @@ print(res)
 #    ]
 # ]
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 const fs = require("fs")
@@ -113,6 +123,9 @@ console.log(res)
 // }
 ```
 
+</TabItem>
+</Tabs>
+
 您可以在搜索请求中引用搜索参数，并指定查询向量、向量字段名称、返回结果限制以及其他相关参数。以上代码搜索与指定查询向量最相近的 5 条 Entity，并返回各 Entity 的主键、距离等信息。
 
 ## 批量搜索 {#batch-search}
@@ -120,6 +133,9 @@ console.log(res)
 Zilliz Cloud 支持在单个请求中同时指定多个查询向量来进行批量搜索。大多数情况下，批量搜索比单向量搜索效率更高，因为批量搜索的总延时会比逐一执行单向量搜索的累计延时要低。
 
 您可以迭代数据集中的行，并以行为单位发送搜索请求：
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<TabItem value='python'>
 
 ```python
 with open("medium_articles_2020_dpr.json") as f:
@@ -154,6 +170,10 @@ print(res)
 # ]
 ```
 
+</TabItem>
+
+<TabItem value='javascript'>
+
 ```javascript
 const fs = require("fs")
 
@@ -176,6 +196,9 @@ res = await client.search({
 // }
 ```
 
+</TabItem>
+</Tabs>
+
 ## 基于条件搜索 {#search-based-on-criteria}
 
 过滤条件是用于定义 ANN 搜索条件的布尔表达式。您可以使用算术、逻辑和比较运算符来定义过滤条件。
@@ -197,6 +220,9 @@ res = await client.search({
 以下是一些带有过滤条件的 ANN 搜索示例。
 
 - 搜索阅读时间（`reading_time`）在 10 到 15 分钟内的文章：
+  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+  <TabItem value='python'>
+
   ```python
   with open("path/to/medium_articles_2020_dpr.json") as f:
       data = json.load(f)
@@ -209,6 +235,10 @@ res = await client.search({
       filter="10 < reading_time < 15"
   )
   ```
+  
+  </TabItem>
+
+  <TabItem value='javascript'>
 
   ```javascript
   const fs = require("fs")
@@ -223,8 +253,14 @@ res = await client.search({
       filter: "10 < reading_time < 15"
   })
   ```
+  
+  </TabItem>
+  </Tabs>
 
 - 搜索点赞数（`claps`）超过 1500 且回应数（`responses`）超过 15 的文章：
+  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+  <TabItem value='python'>
+
   ```python
   with open("path/to/medium_articles_2020_dpr.json") as f:
       data = json.load(f)
@@ -237,6 +273,10 @@ res = await client.search({
       filter='claps > 1500 and responses > 15'
   )
   ```
+  
+  </TabItem>
+
+  <TabItem value='javascript'>
 
   ```javascript
   const fs = require("fs")
@@ -251,8 +291,14 @@ res = await client.search({
       filter: "claps > 1500 and responses > 15"
   })
   ```
+  
+  </TabItem>
+  </Tabs>
 
 - 搜索由 **Towards Data Science** 发布的文章：
+  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+  <TabItem value='python'>
+
   ```python
   with open("path/to/medium_articles_2020_dpr.json") as f:
       data = json.load(f)
@@ -265,6 +311,10 @@ res = await client.search({
       filter='publication == "Towards Data Science"'
   )
   ```
+  
+  </TabItem>
+
+  <TabItem value='javascript'>
 
   ```javascript
   const fs = require("fs")
@@ -279,8 +329,14 @@ res = await client.search({
       filter: 'publication == "Towards Data Science"'
   })
   ```
+  
+  </TabItem>
+  </Tabs>
 
 - 搜索不是由 **Towards Data Science** 和 **Personal Growth** 发布的文章：
+  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+  <TabItem value='python'>
+
   ```python
   with open("path/to/medium_articles_2020_dpr.json") as f:
       data = json.load(f)
@@ -293,6 +349,10 @@ res = await client.search({
       filter='publication not in ["Towards Data Science", "Personal Growth"]'
   )
   ```
+  
+  </TabItem>
+
+  <TabItem value='javascript'>
 
   ```javascript
   const fs = require("fs")
@@ -307,8 +367,14 @@ res = await client.search({
       filter: 'publication not in ["Towards Data Science", "Personal Growth"]'
   })
   ```
+  
+  </TabItem>
+  </Tabs>
 
 - 搜索标题以 **Top** 开头的文章：
+  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+  <TabItem value='python'>
+
   ```python
   with open("path/to/medium_articles_2020_dpr.json") as f:
       data = json.load(f)
@@ -321,6 +387,10 @@ res = await client.search({
       filter='title like "Top%"'
   )
   ```
+  
+  </TabItem>
+
+  <TabItem value='javascript'>
 
   ```javascript
   const fs = require("fs")
@@ -335,8 +405,14 @@ res = await client.search({
       filter: 'title like "Top%"'
   })
   ```
+  
+  </TabItem>
+  </Tabs>
 
 - 搜索由 **Towards Data Science** 发布的文章，且文章拥有超过 1500 个回应（`responses`）和 15 个点赞（`claps`）或阅读时间在 10 到 15 分钟内：
+  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+  <TabItem value='python'>
+
   ```python
   with open("path/to/medium_articles_2020_dpr.json") as f:
       data = json.load(f)
@@ -349,6 +425,10 @@ res = await client.search({
       filter='(publication == "Towards Data Science") and ((claps > 1500 and responses > 15) or (10 < reading_time < 15))'
   )
   ```
+  
+  </TabItem>
+
+  <TabItem value='javascript'>
 
   ```javascript
   const fs = require("fs")
@@ -363,10 +443,16 @@ res = await client.search({
       filter: '(publication == "Towards Data Science") and ((claps > 1500 and responses > 15) or (10 < reading_time < 15))'
   })
   ```
+  
+  </TabItem>
+  </Tabs>
 
 ## 查询 {#inquiries}
 
 查询是指使用布尔表达式筛选出满足条件的 Entity。查询时使用的布尔表达式仅支持标量字段。
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<TabItem value='python'>
 
 ```python
 res = client.query(
@@ -392,6 +478,10 @@ print(res)
 #    ...
 # ]
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 res = await client.query({
@@ -425,6 +515,9 @@ res = await client.query({
 //   ]
 // }
 ```
+
+</TabItem>
+</Tabs>
 
 以上示例代码的查询结果为字典列表。每个字典包含 `id` 键和其他指定输出字段。
 

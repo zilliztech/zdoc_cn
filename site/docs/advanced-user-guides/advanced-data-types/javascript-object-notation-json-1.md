@@ -3,6 +3,9 @@ slug: /javascript-object-notation-json-1
 sidebar_position: 0
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # JSON
 
 JSON 全称为 JavaScript Object Notation，是一种轻量级且易于使用的文本数据格式。JSON 字段由键值对组成，其中每个键是一个字符串，其相应的值可以是数字、字符串、布尔值、列表或数组。Zilliz Cloud 支持将字段以字典的形式插入到集群的 Collection 中。
@@ -25,7 +28,7 @@ JSON 全称为 JavaScript Object Notation，是一种轻量级且易于使用的
 
 创建列表或数组时，请确保所有字段的值都是相同类型。Zilliz Cloud 将所有嵌套字典视为字符串。在定义 JSON 键时，建议只使用字母、数字和下划线，其他字符类型可能会导致过滤或搜索时出错。
 
-:::tip
+:::info 说明
 
 您可以下载本指南中的源代码以供参考。
 
@@ -34,6 +37,9 @@ JSON 全称为 JavaScript Object Notation，是一种轻量级且易于使用的
 ## 定义 JSON 字段 {#define-json-fields}
 
 定义 JSON 字段的过程与定义其他类型字段的过程相同。
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<TabItem value='python'>
 
 ```python
 import json
@@ -68,6 +74,10 @@ collection.create_index(
 # 5. 加载 Collection
 collection.load()
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 const { MilvusClient, DataType } = require("@zilliz/milvus2-sdk-node");
@@ -151,6 +161,10 @@ async function main() {
 
 main();
 ```
+
+</TabItem>
+
+<TabItem value='java'>
 
 ```java
 import io.milvus.client.*;
@@ -275,6 +289,10 @@ if (getLoadingProgressRes.getException() != null) {
 // INFO: GetLoadingProgressParam{collectionName='medium_articles_with_json', partitionNames='[]'}
 ```
 
+</TabItem>
+
+<TabItem value='go'>
+
 ```go
 import (
         "context"
@@ -373,11 +391,17 @@ if err != nil {
 println("Loading progress:", progress)
 ```
 
+</TabItem>
+</Tabs>
+
 上述代码中，您需要创建一个与 JSON 字段对应的 `**FieldSchema**`  对象，并将 `**dtype**`  属性设置为 `**DataType.JSON**`。
 
 ## 插入字段值 {#insert-field-value}
 
 从 `**CollectionSchema**` 对象创建 Collection 之后，可以将字典数据插入到 Collection 中。
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<TabItem value='python'>
 
 ```python
 # 6. 准备数据
@@ -421,6 +445,10 @@ collection.flush()
 # 输出：
 # Number of entities in collection:  5979
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 // 6. 准备数据
@@ -507,6 +535,10 @@ console.log(res);
 // }
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
 ```java
 // 6. 读取本地文件
 
@@ -573,6 +605,10 @@ public static List<JSONObject> getRows(JSONArray dataset, int counts) {
     return rows;
 }
 ```
+
+</TabItem>
+
+<TabItem value='go'>
 
 ```go
 // 6. 读取本地文件
@@ -673,9 +709,15 @@ func (sp searchParams) Params() map[string]interface{} {
 }
 ```
 
+</TabItem>
+</Tabs>
+
 ## 搜索 JSON 字段 {#search-json-fields}
 
 所有数据插入完成后，您可以使用 JSON 字段中的键进行搜索，搜索方法与基于标量字段搜索相同。
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<TabItem value='python'>
 
 ```python
 # 8. 搜索数据
@@ -710,6 +752,10 @@ for hits in result:
 # Title:  Why The Coronavirus Mortality Rate is Misleading , Reading time:  9 , Claps 2900
 # Title:  Coronavirus shows what ethical Amazon could look like , Reading time:  4 , Claps 51
 ```
+
+</TabItem>
+
+<TabItem value='javascript'>
 
 ```javascript
 // 8. 搜索数据
@@ -749,6 +795,10 @@ console.log(res);
 //   ]
 // }
 ```
+
+</TabItem>
+
+<TabItem value='java'>
 
 ```java
 // 8.设置查询向量
@@ -807,6 +857,10 @@ for (int i = 0; i < queryVectors.size(); ++i) {
 // Claps: 255
 ```
 
+</TabItem>
+
+<TabItem value='go'>
+
 ```go
 vectors := []entity.Vector{}
 
@@ -859,6 +913,9 @@ for i, sr := range searchResults {
 // 2023/06/19 20:08:47 ID: 5641 Score: 0.37674016 Title: Why The Coronavirus Mortality Rate is Misleading Claps: <https://towardsdatascience.com/why-the-coronavirus-mortality-rate-is-misleading-cc63f571b6a6> Reading time: 9
 // 2023/06/19 20:08:47 ID: 3441 Score: 0.41629803 Title: Coronavirus shows what ethical Amazon could look like Claps: <https://medium.com/swlh/coronavirus-shows-what-ethical-amazon-could-look-like-7c80baf2c663> Reading time: 4
 ```
+
+</TabItem>
+</Tabs>
 
 要访问 JSON 字段中的键，您可以在表达式 `**expr**` 中指定 JSON 字段名称和键名称（例如，`**article_meta["claps"]**`），并在 `**output_fields**` 中指定要输出的 JSON 字段。之后您就可以像访问普通字典一样访问 JSON 字段中的键。
 
