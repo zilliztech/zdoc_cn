@@ -33,6 +33,9 @@ spec:
     volumeMounts:
       - name: kubeconfig
         mountPath: /root/.kube/
+    volumeMounts:
+      - name: kubeconfig-vdc-ali-global
+        mountPath: /root/.kube/
   volumes:
   - emptyDir: {}
     name: docker-graph
@@ -51,4 +54,10 @@ spec:
       secretName: ali-config
       items:
       - key: ali-vdc-test-zdocs
+        path: config
+  - name: kubeconfig-vdc-ali-global
+    secret:
+      secretName: ali-config
+      items:
+      - key: vdc-ali-global-zdocs
         path: config
