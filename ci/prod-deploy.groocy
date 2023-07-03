@@ -55,7 +55,7 @@ pipeline {
                         //     unstash 'imageTag'
                         //     image_tag=sh(returnStdout: true, script: 'cat imageTag.txt | tr -d \'\n\r\'')
                         // }
-                        sh "kubectl set image deployment/zdocs-cn zdocs-cn=registry-vpc.cn-hangzhou.aliyuncs.com/vdc-prod/zilliz-docs-cn:${image_tag} -n zdocs --kubeconfig kubeconfig-vdc-ali-global"
+                        sh "kubectl set image deployment/zdocs-cn zdocs-cn=registry-vpc.cn-hangzhou.aliyuncs.com/vdc-prod/zilliz-docs-cn:${image_tag} -n zdocs --kubeconfig /root/.kube/kubeconfig-vdc-ali-global"
                     }
                 }
             }
