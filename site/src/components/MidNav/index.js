@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from '@docusaurus/Link';
 
 const Buttons = [
     {
@@ -36,11 +37,6 @@ function MidNavBtn({Svg, caption, link}) {
     const handleMouseLeave = () => {
         setHover(false)
     }
-
-    const handleClick = () => {
-        // redirect to link
-        window.location.href = link
-    }
         
     const boxStyle = {
         width: "auto", 
@@ -54,18 +50,23 @@ function MidNavBtn({Svg, caption, link}) {
         backgroundColor: hover ? "#E0E3E7" : "transparent",
     }
 
+    const linkStyle = {
+        color: "#000000", 
+        textDecoration: "none", 
+        fontSize: "0.95em"
+    }
+
     return (
         <div 
             style={boxStyle}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            onClick={handleClick}
         >
             <div style={{marginTop: "2px"}}>
                 <Svg style={{width: "14px", height: "14px"}} role="img" />
             </div>
             <div style={{display: "inline-block", width: "auto", whiteSpace: "nowrap"}}>
-                <span style={{fontSize: "0.9em"}}>{caption}</span>
+                <span style={{fontSize: "0.9em"}}><Link style={linkStyle} to={link}>{caption}</Link></span>
             </div>
         </div>
     )
