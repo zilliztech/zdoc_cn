@@ -1,5 +1,5 @@
 ---
-slug: /版本说明书
+slug: /release-notes
 sidebar_position: 5
 ---
 

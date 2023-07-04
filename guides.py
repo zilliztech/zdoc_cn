@@ -706,6 +706,11 @@ def doc_structure(docs, path='docs'):
                     idx = 99
                     category_meta(current_path, item['title'], idx)
                     writer.write_faqs(current_path, item['blocks']['items'])
+                elif item['title'] == '版本说明书':
+                    current_path = "site/docs/tutorials"
+                    idx = 100
+                    category_meta(current_path, item['title'], idx)
+                    writer.write_docs(current_path, item['blocks']['items'], sidebar_position=idx)
                 else:   
                     writer.write_docs(current_path, item['blocks']['items'], sidebar_position=idx)
                     logging.info(f"Writing {item['title']}")
