@@ -11,34 +11,28 @@ const Rows = [
             {
                 title: "快速开始",
                 link: "/docs/quick-start-1",
-                width: "30%"
+                width: "15%"
             },
             {
                 title: "注册帐号",
                 link: "/docs/register-with-zilliz-cloud",
-                width: "30%"
+                width: "15%"
             },
             {
                 title: "免费试用",
                 link: "/docs/free-trials",
-                width: "30%"
+                width: "15%"
             },
             {
                 title: "安装 SDK",
                 link: "/docs/install-sdks",
-                width: "30%"
+                width: "15%"
             },
             {
                 title: "示例数据集",
                 link: "/docs/example-dataset-1",
-                width: "30%"
+                width: "15%"
             },
-            {
-                title: "",
-                link: "#",
-                width: "30%"
-            },
-
         ]
     },
     {
@@ -55,22 +49,27 @@ const Rows = [
             {
                 title: "创建集群",
                 link: "/docs/create-cluster",
-                width: "30%"
+                width: "15%"
             },
             {
                 title: "连接集群",
                 link: "/docs/connect-to-cluster",
-                width: "30%"
+                width: "15%"
             },
             {
                 title: "创建 Collection",
                 link: "/docs/create-collection-2",
-                width: "30%"
+                width: "15%"
             },
             {
                 title: "删除 Collection",
                 link: "/docs/drop-collection",
-                width: "30%"
+                width: "15%"
+            },
+            {
+                title: "",
+                link: "#",
+                width: "15%"
             },
             {
                 title: "操作数据",
@@ -80,17 +79,27 @@ const Rows = [
             {
                 title: "插入 Entity",
                 link: "/docs/insert-entities",
-                width: "30%"
+                width: "15%"
             },
             {
                 title: "向量搜索与查询",
                 link: "/docs/search-and-query",
-                width: "30%"
+                width: "15%"
             },
             {
                 title: "删除 Entity",
                 link: "/docs/delete-entities",
-                width: "30%"
+                width: "15%"
+            },
+            {
+                title: "",
+                link: "#",
+                width: "15%"
+            },
+            {
+                title: "",
+                link: "#",
+                width: "15%"
             },
         ]
     },
@@ -117,7 +126,7 @@ const Rows = [
             },
             {
                 title: "CU 类型",
-                link: "/docs/cu-types",
+                link: "/docs/cu-types-explained-1",
                 width: "30%"
             },
             {
@@ -146,6 +155,11 @@ const Rows = [
             {
                 title: "价格计算器",
                 link: "/docs/pricing-calculator",
+                width: "30%"
+            },
+            {
+                title: "",
+                link: "#",
                 width: "30%"
             },
         ]
@@ -183,7 +197,7 @@ const Rows = [
             },
             {
                 title: "JSON",
-                link: "/docs/vector-data-types",
+                link: "/docs/javascript-object-notation-json-1",
                 width: "30%"
             },
             {
@@ -443,7 +457,7 @@ const Rows = [
 
 ];
 
-function Column({title, link, width}) {
+function Column({title, link, width, idx}) {
 
     const [hover, setHover] = React.useState(false)
 
@@ -472,9 +486,9 @@ function Column({title, link, width}) {
         const BookMarkIcon = require('@site/static/img/1F4D1.svg').default;
         return (
             <div style={boxContainer}>
-                <div style={{display: "flex", alignItems: "center", gap: "0.5em", marginTop: "15px"}}>
+                <div style={{display: "flex", alignItems: "center", gap: "0.5em", marginTop: idx > 0 ? "40px" : "inherit" }}>
                     <BookMarkIcon style={{ width: "24px", height: "24px"}} />
-                    <span style={{fontSize: "1em", fontWeight: "bold"}}>{title}</span>
+                    <span style={{fontSize: "0.95em", fontWeight: "bold"}}>{title}</span>
                 </div>
                 <hr style={{border: "0.5px solid #E0E3E7", margin: "0.5em 0"}} />
             </div>
@@ -517,8 +531,8 @@ function Row({Svg, group, title, description, members, activeGroup}) {
                     <div
                         style={{backgroundColor: "#F6F8FA", border: "1px solid #E0E3E7", borderRadius: "8px", padding: "1.5em 3em"}}>
                         <div style={{display: "flex", flexFlow: "row wrap", gap: "2%"}}>
-                            {members.map((member) => (
-                                <Column {...member} />
+                            {members.map((member, idx) => (
+                                <Column {...member} idx={idx} />
                             ))}
                         </div>
                     </div>

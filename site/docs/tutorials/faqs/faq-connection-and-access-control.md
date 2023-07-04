@@ -3,7 +3,7 @@ slug: /faqs/connection-and-access-control
 sidebar_position: 1
 ---
 
-# 连接与访问控制 {#connectivity-and-access-control}
+# 连接与访问控制
 
 本文列举了连接 Zilliz Cloud 时可能遇到的常见问题及对应解决方法。
 
@@ -35,7 +35,7 @@ Zilliz Cloud 集群已启用 TLS。请确保在连接参数中加入 `secure`，
 
 如执行上述步骤后，仍无法连接集群，请通过 [support@zilliz.com](mailto:support@zilliz.com) 联系我们。
 
-**如何解决使用 Node.js ****SDK**** 无法连接 Zilliz Cloud 的问题?**
+**如何解决使用 Node.js SDK 无法连接 Zilliz Cloud 的问题?**
 
 如使用 Node.js SDK 无法连接 Zilliz Cloud，请执行以下步骤：
 

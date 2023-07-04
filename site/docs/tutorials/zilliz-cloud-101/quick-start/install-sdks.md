@@ -28,25 +28,22 @@ PyMilvus 是 Milvus 的 Python SDK。您可以在 [GitHub](https://github.com/mi
 执行以下命令，安装 PyMilvus：
 
 - 安装指定版本的 PyMilvus
-
-```bash
-python -m pip install pymilvus==2.2.13
-```
+  ```bash
+  python -m pip install pymilvus==2.2.13
+  ```
 
 - 升级 PyMilvus 到最新版本
-
-```bash
-python -m pip install --upgrade pymilvus
-```
+  ```bash
+  python -m pip install --upgrade pymilvus
+  ```
 
 - 检查安装是否成功
-
-```bash
-python -m pip list | grep pymilvus
-
-# 输出：
-# pymilvus        2.2.13
-```
+  ```bash
+  python -m pip list | grep pymilvus
+  
+  # 输出：
+  # pymilvus        2.2.13
+  ```
 
 ## 安装 Node.js SDK {#install-the-node-js-sdk}
 
@@ -61,33 +58,30 @@ python -m pip list | grep pymilvus
 执行以下命令，安装 Node.js SDK：
 
 - 安装指定版本的 Node.js SDK
-
-```bash
-npm install @zilliz/milvus2-sdk-node@2.2.18
-# 或
-yarn add @zilliz/milvus2-sdk-node@2.2.18
-```
+  ```bash
+  npm install @zilliz/milvus2-sdk-node@2.2.18
+  # 或
+  yarn add @zilliz/milvus2-sdk-node@2.2.18
+  ```
 
 - 升级 Node.js SDK 到最新版本
-
-```bash
-npm update @zilliz/milvus2-sdk-node
-# 或
-yarn upgrade @zilliz/milvus2-sdk-node
-```
+  ```bash
+  npm update @zilliz/milvus2-sdk-node
+  # 或
+  yarn upgrade @zilliz/milvus2-sdk-node
+  ```
 
 - 检查安装是否成功
+  ```bash
+  npm list | grep @zilliz/milvus2-sdk-node
+  # 或
+  yarn list | grep @zilliz/milvus2-sdk-node
+  
+  # 输出
+  # └── @zilliz/milvus2-sdk-node@2.2.18
+  ```
 
-```bash
-npm list | grep @zilliz/milvus2-sdk-node
-# 或
-yarn list | grep @zilliz/milvus2-sdk-node
-
-# 输出
-# └── @zilliz/milvus2-sdk-node@2.2.18
-```
-
-您可以将 SDK 以 CommonJS 模块或 ES6 模块导入到项目中。如果您使用 `npm init` 初始化项目，建议将 SDK 以 CommonJS 模块导入；如果您使用 `npm init es6` 初始化项目，建议将 SDK 以 ES6 模块导入。
+您可以将 SDK 以 CommonJS 模块或 ES6 模块导入到项目中。如果您使用 `npm init` 初始化项目或者`package.json`中没有`"type"="module"`，建议将 SDK 以 CommonJS 模块导入；如果您使用 `npm init es6` 初始化项目或者`package.json`中存在`"type"="module"`，建议将 SDK 以 ES6 模块导入。
 
 ```javascript
 // 将 SDK 以 CommonJS 模块导入
@@ -102,7 +96,7 @@ import { MilvusClient } from "@zilliz/milvus2-sdk-node"
 您可以使用 Apache Maven 或 Gradle / Grails 下载 Java SDK。您可以在 [GitHub](https://github.com/milvus-io/milvus-sdk-java) 找到相关源代码。
 
 - Apache Maven
-  只需将以下依赖项添加到 `**pom.xml**`：
+  只需将以下依赖项添加到 `pom.xml`：
 
   ```xml
   <dependency>
@@ -124,7 +118,7 @@ import { MilvusClient } from "@zilliz/milvus2-sdk-node"
 您可以通过 `go get` 安装 Go SDK。您可以在 [GitHub](https://github.com/milvus-io/milvus-sdk-go) 找到相关源代码。
 
 ```shell
-go get -u github.com/milvus-io/milvus-sdk-go/v2@v2.2.5
+go get -u github.com/milvus-io/milvus-sdk-go/v2@v2.2.6
 ```
 
 ## 相关文档 {#related-doc}

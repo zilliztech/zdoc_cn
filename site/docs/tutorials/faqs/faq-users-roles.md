@@ -3,7 +3,7 @@ slug: /faqs/users-roles
 sidebar_position: 5
 ---
 
-# 用户和角色 {#users-and-roles}
+# 用户和角色
 
 本文列举了 Zilliz Cloud 中用户和角色相关的常见问题及对应解决方法。
 

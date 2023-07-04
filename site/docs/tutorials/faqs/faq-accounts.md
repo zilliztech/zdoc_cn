@@ -3,7 +3,7 @@ slug: /faqs/accounts
 sidebar_position: 7
 ---
 
-# 账号 {#g-id-bold-account-no-g}
+# 账号
 
 本文列举了 Zilliz Cloud 账号相关的常见问题及对应解决方法。
 

@@ -21,11 +21,11 @@ sidebar_position: 2
 
 ## 操作步骤 {#procedure}
 
-1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com/login)。
+1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com.cn/login)。
 
 1. 点击进入需要设置白名单的组织和项目。
 
-1. 在左侧导航栏中，点击 **安全** > **+ ****添加IP地址**。
+1. 在左侧导航栏中，点击 **安全** > **+ 添加IP地址**。
 
 1. 在弹出的对话框中，输入 **IP地址（CIDR）和描述**。
 
@@ -39,6 +39,8 @@ sidebar_position: 2
 1. 点击 **添加** 完成操作。
 
 :::caution
+
+如果白名单中没有记录，Zilliz Cloud 将允许所有 IP 地址访问项目集群。一旦添加了 CIDR ，仅CIDR 中的 IP 地址可以访问该集群。添加 0.0.0.0/0 的效果等同于白名单中没有记录。
 
 :::
 

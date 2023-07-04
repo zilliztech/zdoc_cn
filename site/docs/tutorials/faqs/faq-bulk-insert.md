@@ -3,7 +3,7 @@ slug: /faqs/bulk-insert
 sidebar_position: 2
 ---
 
-# 批量导入数据 {#batch-import-data}
+# 批量导入数据
 
 本文列举了将数据批量导入 Zilliz Cloud 时可能遇到的常见问题及对应解决方法。
 
@@ -71,7 +71,7 @@ sidebar_position: 2
 
 目前，您只能使用 Zilliz Cloud 界面批量导入数据。Zilliz Cloud 暂不支持通过 SDK 批量导入数据。
 
-**在使用 Node.js ****SDK**** 导入数据或查询时，遇到 **`**ECONNRESET**`**错误该怎么办？**
+**在使用 Node.js SDK 导入数据或查询时，遇到 `ECONNRESET`错误该怎么办？**
 
 请执行以下步骤，解决`ECONNRESET`错误问题：
 

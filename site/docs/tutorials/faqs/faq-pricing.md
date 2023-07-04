@@ -3,7 +3,7 @@ slug: /faqs/pricing
 sidebar_position: 6
 ---
 
-# 定价 {#pricing}
+# 定价
 
 本文列举了 Zilliz Cloud 定价相关的常见问题及对应解答。
 
@@ -21,7 +21,7 @@ Zilliz Cloud 会自动挂起 7 天内不活跃集群，并发送邮件通知。�
 
 **如何估算使用 Zilliz Cloud 的成本？**
 
-请使用[价格计算器](https://zilliz.com/pricing)估算使用成本。
+请使用[价格计算器](https://zilliz.com.cn/pricing)估算使用成本。
 
 **数据被移至回收站后是否收费？**
 

@@ -19,9 +19,9 @@ sidebar_position: 0
 
 ## 专有部署 {#dedicated-deployment}
 
-专有部署包含所有企业版特性，支持在您自己的虚拟私有云（VPC）上部署全托管的向量数据库服务。适用于高度注重数据隐私和合规的场景。通常，我们推荐需要 128 CU 以上的用户选择专有部署。更多详情，请联系销售。
+专有部署包含所有企业版特性，支持在您自己的虚拟私有云（VPC）上部署全托管的向量数据库服务。适用于高度注重数据隐私和合规的场景。通常，我们推荐需要 128 CU 以上的用户选择专有部署。更多详情，请[联系销售](https://zilliz.com.cn/contact-sales)。
 
-更多 Zilliz Cloud 版本详情，请访问定价页面或联系销售。
+更多 Zilliz Cloud 版本详情，请访问[定价页面](https://zilliz.com.cn/pricing)或[联系销售](https://zilliz.com.cn/contact-sales)。
 
 ## 文档推荐 {#recommended-documents}
 

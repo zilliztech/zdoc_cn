@@ -257,6 +257,32 @@ console.log(res)
 </TabItem>
 </Tabs>
 
+## 写入操作 {#write-action}
+
+Zilliz Cloud 会在插入的数量到达一定规模时自动执行建立索引和写入操作。这就会导致部分新写入的数据因未完成索引而无法查询。
+
+如果需要立即查询新插入的数据，可以选择手动执行写入操作。
+
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<TabItem value='python'>
+
+```python
+client.flush("medium_articles_2020")
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+res = await client.flush({
+    collection_names: ["medium_articles_2020"]
+})
+```
+
+</TabItem>
+</Tabs>
+
 ## 相关文档 {#related-doc}
 
 - [向量搜索和查询](./search-and-query)

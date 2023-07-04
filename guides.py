@@ -280,6 +280,7 @@ class docWriter:
                 sub_pages.append(a[x:header_pos[i+1]] if i < len(header_pos)-1 else a[x:])
 
             for idx, sub_page in enumerate(sub_pages):
+                sub_page[0] = ' '.join(sub_page[0].split(' ')[:2])
                 title = sub_page[0].split(' ')[1]
                 titles = json.loads(open('titles.json', 'r').read())
                 slug = titles[title] if title in titles else title
@@ -390,7 +391,7 @@ class docWriter:
     
     def __code(self, code, indent, prev, next, blocks):
         lang = self.code_langs[code['style']['language']] if 'language' in code['style'] else 'plaintext'
-        elements = ''.join([ self.__text_run(x) for x in code['elements'] ])
+        elements = ''.join([ self.__text_run(x, code['elements']) for x in code['elements'] ])
 
         if lang in ['Python', 'JavaScript', 'Java', 'Go']:
             # only block
@@ -531,29 +532,56 @@ class docWriter:
     def __retrieve_block_by_id(self, block_id):
         return [ x for x in self.page_blocks if x['block_id'] == block_id ][0]
 
-    def __text_run(self, element):
+    def __text_run(self, element, elements):
         content = element['text_run']['content']
         style = element['text_run']['text_element_style']
 
         if not content.isspace():
-            if style['bold']:
-                content = f"**{content}**"
-
             if style['inline_code']:
-                content = f"`{content}`"
+                content = self.__style_markdown(element, elements, 'inline_code', '`')
+            else:
+                if style['bold']:
+                    content = self.__style_markdown(element, elements, 'bold', '**')
 
-            if style['italic']:
-                content = f"*{content}*"
+                if style['italic']:
+                    content = self.__style_markdown(element, elements, 'italic', '*')
 
-            if style['strikethrough']:
-                content = f"~~{content}~~"
+                if style['strikethrough']:
+                    content = self.__style_markdown(element, elements, 'strikethrough', '~~')
 
-            if style['underline']:
-                content = f"__{content}__"
+                if style['underline']:
+                    content = self.__style_markdown(element, elements, 'underline', '__')
+                
+                if 'link' in style:
+                    content = f"[{content}]({self.__convert_link(parse.unquote(style['link']['url']))})"
+
+        return content
+    
+    def __style_markdown(self, element, elements, style_name, decorator):
+        content = element['text_run']['content']
+        style = element['text_run']['text_element_style']
+
+        prev = elements[elements.index(element)-1] if elements.index(element) > 0 else None
+        next = elements[elements.index(element)+1] if elements.index(element) < len(elements)-1 else None
+
+        if not content.isspace():
+            # single element
+            if ((not prev) or (prev and not prev['text_run']['text_element_style'][style_name])) and style[style_name] and ((not next) or (next and not next['text_run']['text_element_style'][style_name])):
+                content = f"{decorator}{content}{decorator}"
+
+            # first element
+            if ((not prev) or (prev and not prev['text_run']['text_element_style'][style_name])) and style[style_name] and next and next['text_run']['text_element_style'][style_name]:
+                content = f"{decorator}{content}"
             
-            if 'link' in style:
-                content = f"[{content}]({self.__convert_link(parse.unquote(style['link']['url']))})"
+            # last element
+            if prev and prev['text_run']['text_element_style'][style_name] and style[style_name] and ((not next) or (next and not next['text_run']['text_element_style'][style_name])):
+                content = f"{content}{decorator}"
 
+            # middle element
+            if prev and prev['text_run']['text_element_style'][style_name] and style[style_name] and next and next['text_run']['text_element_style'][style_name]:
+                content = f"{content}"
+
+        
         return content
     
     def __mention_doc(self, element):
@@ -593,7 +621,7 @@ class docWriter:
         paragraph = ""
         for element in elements:
             if 'text_run' in element:
-                paragraph += self.__text_run(element)
+                paragraph += self.__text_run(element, elements)
             if 'mention_doc' in element:
                 paragraph += self.__mention_doc(element)
 
@@ -673,8 +701,8 @@ def doc_structure(docs, path='docs'):
         else:
             if bi.publish_or_not(item['title']):
                 if item['title'] == '常见问题':
-                    os.mkdir("site/docs/faqs")
-                    current_path = "site/docs/faqs"
+                    os.mkdir("site/docs/tutorials/faqs")
+                    current_path = "site/docs/tutorials/faqs"
                     idx = 99
                     category_meta(current_path, item['title'], idx)
                     writer.write_faqs(current_path, item['blocks']['items'])
@@ -710,7 +738,7 @@ if __name__ == '__main__':
     writer = docWriter(pages=pages)
 
     clean_up_docs(path='site/static/img')
-    clean_up_docs(path='site/docs')
+    clean_up_docs(path='site/docs/tutorials')
     copy_icons()
-    doc_structure(docs, path='site/docs')
+    doc_structure(docs, path='site/docs/tutorials')
     

@@ -14,15 +14,15 @@ JSON 全称为 JavaScript Object Notation，是一种轻量级且易于使用的
 
 ```json
 {
-          'title': 'The Reported Mortality Rate of Coronavirus Is Not Important',
-          'title_vector': [0.041732933, 0.013779674, -0.027564144, ..., 0.030096486],
-          'article_meta': {
+    'title': 'The Reported Mortality Rate of Coronavirus Is Not Important',
+    'title_vector': [0.041732933, 0.013779674, -0.027564144, ..., 0.030096486],
+    'article_meta': {
         'link': '<https://medium.com/swlh/the-reported-mortality-rate-of-coronavirus-is-not-important-369989c8d912>',
         'reading_time': 13,
         'publication': 'The Startup',
         'claps': 1100,
         'responses': 18
-          }
+    }
 }
 ```
 
@@ -394,11 +394,11 @@ println("Loading progress:", progress)
 </TabItem>
 </Tabs>
 
-上述代码中，您需要创建一个与 JSON 字段对应的 `**FieldSchema**`  对象，并将 `**dtype**`  属性设置为 `**DataType.JSON**`。
+上述代码中，您需要创建一个与 JSON 字段对应的 `FieldSchema`  对象，并将 `dtype`  属性设置为 `DataType.JSON`。
 
 ## 插入字段值 {#insert-field-value}
 
-从 `**CollectionSchema**` 对象创建 Collection 之后，可以将字典数据插入到 Collection 中。
+从 `CollectionSchema` 对象创建 Collection 之后，可以将字典数据插入到 Collection 中。
 
 <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
@@ -917,27 +917,27 @@ for i, sr := range searchResults {
 </TabItem>
 </Tabs>
 
-要访问 JSON 字段中的键，您可以在表达式 `**expr**` 中指定 JSON 字段名称和键名称（例如，`**article_meta["claps"]**`），并在 `**output_fields**` 中指定要输出的 JSON 字段。之后您就可以像访问普通字典一样访问 JSON 字段中的键。
+要访问 JSON 字段中的键，您可以在表达式 `expr` 中指定 JSON 字段名称和键名称（例如，`article_meta["claps"]`），并在 `output_fields` 中指定要输出的 JSON 字段。之后您就可以像访问普通字典一样访问 JSON 字段中的键。
 
 ## 使用限制 {#limitations-on-use}
 
-使用 JSON 字段时，您可以将字符串值用双引号（""）或单引号（''）括起来。需要注意的是，Zilliz Cloud 将 JSON 字段中的字符串值存储为原始字符串，不进行语义转换。例如，`**'a"b'**`、`**"a'b"**`、`**'a\\\\\\\\'b'**` 和 `**"a\\\\\\\\"b"**` 将按原样保存，而 `**'a'b'**` 和 `**"a"b"**` 将被视为无效值。
+使用 JSON 字段时，您可以将字符串值用双引号（""）或单引号（''）括起来。需要注意的是，Zilliz Cloud 将 JSON 字段中的字符串值存储为原始字符串，不进行语义转换。例如，`'a"b'`、`"a'b"`、`'a\\\\\\\\'b'` 和 `"a\\\\\\\\"b"` 将按原样保存，而 `'a'b'` 和 `"a"b"` 将被视为无效值。
 
 要使用 JSON 字段构建过滤表达式，可以引用 JSON 字段中的键。如果键值类型是整数或浮点数，则可以将其与另一个整数、浮点数、INT32/64 或 FLOAT32/64 字段进行比较。如果键值类型是字符串，则只能将其与另一个字符串键或 VARCHAR 字段进行比较。
 
 假设 JSON 字段具有 `A` 键。使用 JSON 字段构建布尔表达式时，请参考以下表格。
 
-| 操作符          | 示例                                             | 备注                        |
-| ------------ | ---------------------------------------------- | ------------------------- |
-| <            |  `"A < 3"`                                     | `A`  必须存在                 |
-| >            |  `"A > 1"`                                     | `A`  必须存在                 |
-| ==<br/><br/> |  `"A == 1"`  或 `"A == 'abc'"`                  | `A`  必须存在                 |
-| !=           |  `"A != 1"` 或 `"A != 'abc'"`                   | `A`  可以不存在                |
-| <=           |  `"A <= 5"`                                    | `A`  必须存在                 |
-| >=           |  `"A >= 1"`                                    | `A`  必须存在                 |
-| not          |  `"not A == 1"` 或 `"not A != 'abc'"`           | `A`  可以不存在                |
-| in           |  `"A in [1, 2, 3]"` 或 `"A in ['a', 'b', 'c']"` | `A`  必须存在                 |
-| add (&&)     | `"A > 1 && A < 3"`                             | `A`  是否必须存在取决于运算符两侧表达式的要求 |
-| or (\\|\\|)  | `"A > 1 \\|\\| A < 3"`                         | `A`  是否必须存在取决于运算符两侧表达式的要求 |
-| exist        | `"exist A"`                                    | `A`  必须存在                 |
+| 操作符            | 示例                                             | 备注                        |
+| -------------- | ---------------------------------------------- | ------------------------- |
+| `<`            |  `"A < 3"`                                     | `A`  必须存在                 |
+| `>`            |  `"A > 1"`                                     | `A`  必须存在                 |
+| `==`<br/><br/> |  `"A == 1"`  或 `"A == 'abc'"`                  | `A`  必须存在                 |
+| `!=`           |  `"A != 1"` 或 `"A != 'abc'"`                   | `A`  可以不存在                |
+| `<=`           |  `"A <= 5"`                                    | `A`  必须存在                 |
+| `>=`           |  `"A >= 1"`                                    | `A`  必须存在                 |
+| `not`          |  `"not A == 1"` 或 `"not A != 'abc'"`           | `A`  可以不存在                |
+| `in`           |  `"A in [1, 2, 3]"` 或 `"A in ['a', 'b', 'c']"` | `A`  必须存在                 |
+| `add` (`&&`)   | `"A > 1 && A < 3"`                             | `A`  是否必须存在取决于运算符两侧表达式的要求 |
+| `or` (`\|\|`)  | `"A > 1 \\|\\| A < 3"`                         | `A`  是否必须存在取决于运算符两侧表达式的要求 |
+| `exist`        | `"exist A"`                                    | `A`  必须存在                 |
 

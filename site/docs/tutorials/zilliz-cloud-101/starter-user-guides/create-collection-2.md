@@ -30,7 +30,7 @@ import TabItem from '@theme/TabItem';
 
 ## 操作步骤 {#procedure}
 
-Zilliz Cloud 的动态 Schema 功能可以实现在插入数据时基于新字段重构 Collection。要创建使用动态  Schema 的  Collection，您只需指定 Collection 名称和向量维度：
+Zilliz Cloud 的动态 Schema 功能可以在向 Collection 插入数据时允许插入未预先定义的字段。要创建自动启用动态  Schema 的  Collection，您只需指定 Collection 名称和向量维度：
 
 示例代码：
 
@@ -70,6 +70,8 @@ console.log(res)
 </Tabs>
 
 以上代码将在后台创建包含 `id` 主键和 `vector` 向量字段的 Collection。
+
+![collection_schema](/img/collection_schema.png)
 
 动态 Schema 模式下，您可以向 Collection 中插入 Schema 中未提前定义的新字段，Zilliz Cloud 会动态解析新插入的数据并推测其数据结构。
 

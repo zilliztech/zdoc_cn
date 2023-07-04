@@ -25,7 +25,7 @@ sidebar_position: 3
 
 在用户接受邀请前，您可以按照以下步骤撤销邀请：
 
-1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com/login)。
+1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com.cn/login)。
 
 1. 进入想要移除成员的组织。
 

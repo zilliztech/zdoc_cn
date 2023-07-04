@@ -185,7 +185,7 @@ for x in question_dataset:
         print(x)
 ```
 
-如果未设置 [`train_test_split()`](https://zilliz.com/doc/integrate_with_hugging-face#Insert-data) 方法的 `seed` 参数，输出的结果可能会因你下载的数据子集的不同而与示例存在差异。
+如果未设置 `train_test_split()` 方法的 `seed` 参数，输出的结果可能会因你下载的数据子集的不同而与示例存在差异。
 
 ```python
 Question:

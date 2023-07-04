@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # 价格计算器
 
-[Zilliz Cloud 价格计算器](https://zilliz.com/pricing#estimate_your_cost)可以帮助您了解 Zilliz Cloud 定价策略，自助估算价格，挑选最适合的解决方案。使用价格计算器时，您需要提供以下基本信息，包括：
+[Zilliz Cloud 价格计算器](https://zilliz.com.cn/pricing)可以帮助您了解 Zilliz Cloud 定价策略，自助估算价格，挑选最适合的解决方案。使用价格计算器时，您需要提供以下基本信息，包括：
 
 - 向量数量
   向量是指存储在 Zilliz Cloud 集群中的可处理的数据对象。价格计算器支持拖拽或手动输入向量数量，范围为 1,000,000 到 100,000,000。
@@ -28,5 +28,5 @@ sidebar_position: 1
 - Zilliz Cloud 版本
   - **企业版**：适合大型企业或组织，是构建向量数据平台首选方案，提供高可用、数据安全、专家技术支持。
 
-如需了解专有部署定价，请联系销售。
+如需了解专有部署定价，请[联系销售](https://zilliz.com.cn/contact-sales)。
 

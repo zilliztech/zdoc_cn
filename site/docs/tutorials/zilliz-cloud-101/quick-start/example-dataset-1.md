@@ -26,7 +26,7 @@ curl https://assets.zilliz.com/medium_articles_2020_dpr_a13e0377ae.json \
 
 ## 数据集 Schema {#dataset-schema}
 
-数据集中的记录中具有 8 个共同属性。创建 Collection 时，请以此表作为参考。
+数据集中的记录具有 8 个共同属性。创建 Collection 时，请以此表作为参考。
 
 | 字段名            | 类型           | 属性       |
 | -------------- | ------------ | -------- |

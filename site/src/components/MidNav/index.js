@@ -17,11 +17,11 @@ const Buttons = [
         Svg: require('@site/static/img/apiref.svg').default,
         link: "/docs/api",
     },
-    {
-        caption: "讨论",
-        Svg: require('@site/static/img/discussion.svg').default,
-        link: "/discussion",
-    }
+    // {
+    //     caption: "讨论",
+    //     Svg: require('@site/static/img/discussion.svg').default,
+    //     link: "/discussion",
+    // }
 
 ]
 
@@ -82,7 +82,7 @@ export default function MidNav() {
                     <MidNavBtn key={idx} {...props} />
                 ))}
             </div>
-            <div style={{position: "relative"}}>
+            {/* <div style={{position: "relative"}}>
                 <div style={{position: "absolute", right: "10px"}}>
                     <div style={{display: "inline-grid", gridTemplateColumns: "15px auto", cursor: "pointer", gridColumnGap: "5px", width: "156px", height: "28px", Top: "11px", border: "1px solid #D1D6DC", borderRadius: "5px", padding: "0 10px"}}>
                         <div style={{marginTop: "2px"}}>
@@ -93,7 +93,7 @@ export default function MidNav() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div></div>
         </section>
     )

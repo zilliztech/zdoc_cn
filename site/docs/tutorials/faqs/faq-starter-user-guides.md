@@ -3,7 +3,7 @@ slug: /faqs/starter-user-guides
 sidebar_position: 0
 ---
 
-# 快速入门 {#quick-start}
+# 快速入门
 
 本文列举了快速上手 Zilliz Cloud 时可能遇到的常见问题及对应解决方法。
 
@@ -45,7 +45,7 @@ Zilliz Cloud支持 2 种相似度类型。
 
 集合加载失败由集群内存不足引起。我们建议您扩展集群 CU 大小。
 
-**集合加载请求的****并发****是多少？如何增加并发请求的数量？**
+**集合加载请求的并发是多少？如何增加并发请求的数量？**
 
 当前，Zilliz Cloud 加载集合请求的速率限制为每秒 1 个。该建议数值仅针对 1 CU 的集群。如需增加并发请求的数量，请通过 [support@zilliz.com](mailto:support@zilliz.com) 联系我们。
 

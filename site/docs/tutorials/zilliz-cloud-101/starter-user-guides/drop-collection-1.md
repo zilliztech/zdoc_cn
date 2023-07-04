@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 
 :::info 说明
 
-本指南系列中创建的 Collection 包含 `**id**` 主键和 `**vector**` 向量字段。如果您希望完全自定义 Collection，请参见[定制 Schema](./use-customized-schema)、[开启动态 Schema](./enable-dynamic-schema) 和 [JSON](./javascript-object-notation-json-1)。
+本指南系列中创建的 Collection 包含 `id` 主键和 `vector` 向量字段。如果您希望完全自定义 Collection，请参见[定制 Schema](./use-customized-schema)、[开启动态 Schema](./enable-dynamic-schema) 和 [JSON](./javascript-object-notation-json-1)。
 
 :::
 

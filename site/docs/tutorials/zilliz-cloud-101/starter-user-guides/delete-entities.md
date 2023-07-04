@@ -29,8 +29,8 @@ Entity 是指存储在 Zilliz Cloud 集群中的数据实体，包含用于处�
 
 ```python
 res = client.delete(
-        collection_name="medium_articles_2020", # Collection 名称
-        pks=253 # Entity ID
+    collection_name="medium_articles_2020", # Collection 名称
+    pks=253 # Entity ID
 )
 
 print(res)
@@ -86,8 +86,8 @@ Zilliz Cloud 支持批量删除 Entity。可以参考以下示例代码批量删
 ```python
 
 res = client.delete(
-        collection_name="medium_articles_2020", # Collection 名称
-        pks=[252, 236] # Entity ID
+    collection_name="medium_articles_2020", # Collection 名称
+    pks=[252, 236] # Entity ID
 )
 
 print(res)

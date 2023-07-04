@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: apiSidebar
-sidebar_position: 3
+sidebar_position: 4
 slug: /api/java/drop_collection
 ---
 

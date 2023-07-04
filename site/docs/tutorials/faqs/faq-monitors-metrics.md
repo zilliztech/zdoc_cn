@@ -3,7 +3,7 @@ slug: /faqs/monitors-metrics
 sidebar_position: 4
 ---
 
-# 监控与指标 {#monitoring-and-indicators}
+# 监控与指标
 
 本文列举了 Zilliz Cloud 监控与指标相关的常见问题及对应解决方法。
 

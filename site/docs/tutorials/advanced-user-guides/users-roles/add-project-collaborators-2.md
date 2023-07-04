@@ -19,7 +19,7 @@ sidebar_position: 4
 
 ## 操作步骤 {#procedure}
 
-1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com/login)。
+1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com.cn/login)。
 
 1. 进入想要添加成员的组织和项目。
 

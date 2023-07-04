@@ -5,7 +5,7 @@ sidebar_position: 0
 
 # 查看账单与支付方式
 
-当前 Zilliz Cloud 处于邀请试用阶段，如有商业合作需求，请联系我们。
+当前 Zilliz Cloud 处于邀请试用阶段，如有商业合作需求，请[联系我们](https://zilliz.com.cn/contact-sales)。
 
 ## 查看账单 {#view-invoice}
 

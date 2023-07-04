@@ -3,7 +3,7 @@ slug: /faqs/AI
 sidebar_position: 3
 ---
 
-# AI 模型集成 {#ai-model-integration}
+# AI
 
 本文列举了在集成 Zilliz Cloud 与 AI 模型时可能遇到的常见问题及对应解决方法。
 

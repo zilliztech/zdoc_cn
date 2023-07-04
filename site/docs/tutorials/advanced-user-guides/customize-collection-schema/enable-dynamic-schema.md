@@ -8,9 +8,9 @@ import TabItem from '@theme/TabItem';
 
 # 开启动态 Schema
 
-Schema 对于 Zilliz Cloud 集群的数据处理非常重要。在向 Collection 中插入 Entity 前，需要先了解 Schema 相关信息，并确保所有待插入的 Entity 的结构都与 Schema 相匹配。该应用场景会对 Collection 的使用产生限制，使其类似于关系数据库中的表。
+Schema 对于 Zilliz Cloud 集群的数据处理非常重要。在向 Collection 中插入 Entity 前，需要先根据业务需求设计 Schema，并确保所有待插入的 Entity 的结构都与设计好的 Schema 相匹配。如果业务需求发生变化，可能会导致需要重新设计 Schema。
 
-动态 Schema 的引入使得用户能够在不修改现有 Schema 的前提下，将带有新字段的 Entity 插入到 Collection。也就是说，开启动态 Schema 后，您无需提前了解 Schema，直接向 Collection 插入未定义的字段即可。
+动态 Schema 的引入使得用户能够在不修改现有 Schema 的前提下，将带有新字段的 Entity 插入到 Collection。也就是说，开启动态 Schema 后，您可以在不修改 Schema 的情况下，直接向 Collection 插入未定义的字段即可。
 
 动态 Schema 使得数据处理更加灵活，用户能够在 Collection 中存储和检索复杂结构的数据，包括嵌套数据、数组以及其他复杂数据类型。
 
@@ -22,9 +22,9 @@ Schema 对于 Zilliz Cloud 集群的数据处理非常重要。在向 Collection
 
 ## 为 Collection 开启动态 Schema {#launch-schema-for-collection}
 
-要为 Collection 开启动态 Schema，需要在定义 Schema 时将 `**enable_dynamic_field**` 设置为 `**True**`。开启动态 Schema 后，之后插入的 Entity 中的所有未定义字段将以键值对的形式存储在特殊 JSON 字段  `**$meta**` 中。我们将用“动态字段”来指代这些键值对。
+要为 Collection 开启动态 Schema，需要在定义 Schema 时将 `enable_dynamic_field` 设置为 `True`。开启动态 Schema 后，之后插入的 Entity 中的所有未定义字段将以键值对的形式存入 Collection。我们将用“动态字段”来指代这些键值对。
 
-`**$meta**` 字段不会影响您使用 Zilliz Cloud。您可以要求 Zilliz Cloud 在搜索或查询结果中输出动态字段，也可以在布尔表达式中引用动态字段。
+和预先定义的字段一样，您可以要求 Zilliz Cloud 在搜索或查询结果中输出动态字段，也可以在布尔表达式中引用动态字段。
 
 <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
@@ -40,9 +40,9 @@ fields = [
 ]
 # 2. 启用动态 Schema
 schema = CollectionSchema(
-                fields, 
-                "The schema for a medium news collection", 
-                enable_dynamic_field=True
+    fields, 
+    "The schema for a medium news collection", 
+    enable_dynamic_field=True
 )
 
 # 3. 在 Collection 中引用 Schema
@@ -56,15 +56,15 @@ index_params = {
 }
 
 collection.create_index(
-  field_name="title_vector",
-  index_params=index_params
+    field_name="title_vector",
+    index_params=index_params
 )
 
 # 5. 加载 Collection
 collection.load()
 
 # 查看加载进度
-progress = utility.loading_progress("medium_articles")
+progress = utility.loading_progress("medium_articles_with_dynamic")
 
 print(f"Collection loaded successfully: {progress}")
 ```
@@ -366,17 +366,17 @@ Collection 创建完成后，可以开始动态插入数据。
 import json
 
 # 5. 准备数据
-with open("path/to/medium_articles_2020_dpr.json") as f:
+with open("medium_articles_2020_dpr.json") as f:
     data = json.load(f)
     list_of_rows = data['rows']
 
 # 读取 5 条 Entity
     data_rows = []
-    for row in list_of_rows[:5]:
+    for row in list_of_rows:
         del row['id']
         data_rows.append(row)
 
-  print(data_rows[0])
+print(data_rows[0])
 
 # 输出：
 #
@@ -387,7 +387,7 @@ with open("path/to/medium_articles_2020_dpr.json") as f:
 #    'reading_time': 13,
 #    'publication': 'The Startup',
 #    'claps': 1100,
-#           'responses': 18
+#    'responses': 18
 # }
 ```
 
@@ -697,7 +697,7 @@ log.Println("Collection flushed")
 </TabItem>
 </Tabs>
 
-## **使用动态字段搜索** {#search-with-dynamic-fields}
+## 使用动态字段搜索 {#search-using-dynamic-fields}
 
 假设前面的所有步骤都已完成，此时我们便可以在搜索或查询的表达式中使用动态字段：
 
@@ -711,7 +711,7 @@ result = collection.search(
     anns_field="title_vector",
     param={"metric_type": "L2", "params": {"nprobe": 10}},
     limit=3,
-    expr='$meta["claps"] > 30 and reading_time < 10',
+    expr='claps > 30 and reading_time < 10',
     output_fields=["title", "reading_time", "claps"],
 )
 
@@ -745,7 +745,7 @@ for hits in result:
 res = await client.search({
     collection_name,
     vector: rows[0]['title_vector'],
-    filter: '$meta["claps"] > 30 and reading_time < 10',
+    filter: 'claps > 30 and reading_time < 10',
     output_fields: ["id", "title", "reading_time", "claps"],
 });
 
@@ -804,7 +804,7 @@ SearchParam searchParam = SearchParam.newBuilder()
     .withVectors(queryVectors)
     .withTopK(3)   
     .withOutFields(outputFields)
-    .withExpr("$meta[\\"claps\\"] > 30 and reading_time < 10")
+    .withExpr("claps > 30 and reading_time < 10")
     .build();
 
 R<SearchResults> response = client.search(searchParam);
@@ -860,7 +860,7 @@ searchResults, err := conn.Search(
         context.Background(),
         "medium_articles_with_dynamic",
         []string{},
-        "$meta[\\"claps\\"] > 30 and reading_time < 10",
+        "claps > 30 and reading_time < 10",
         []string{"title", "claps", "reading_time"},
         vectors,
         "title_vector",
@@ -923,9 +923,13 @@ func (sp searchParams) Params() map[string]interface{} {
 </TabItem>
 </Tabs>
 
-值得注意的是，`**claps**` 和 `**reading_time**` 没有预先定义在 Schema 中，但这也并不影响在表达式和输出字段中使用它们。
+值得注意的是，`claps` 和 `reading_time` 没有预先定义在 Schema 中，但这也并不影响在表达式和输出字段中使用它们。
 
-以上代码中，`**$meta**` 包含了所有未在 Schema 中提前定义的字段，这些字段以 JSON 对象来存储。您可以通过 `**$meta**` 在布尔表达式和输出字段中引用动态字段。
+:::info 说明
+
+您可以下载本指南中的源代码以供参考。
+
+:::
 
 ## 相关文档 {#related-doc}
 
