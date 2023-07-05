@@ -21,7 +21,7 @@ function HomepageHeader() {
             <div style={{fontSize: "18px", marginBottom: "2em"}}>{siteConfig.tagline}</div>
             <div style={{display: "flex", flexDirection: "row", gap: "10px"}}>
               <button style={{backgroundColor: "#FFFFFF", border: "none", borderRadius: "2px", color: "#000000", padding: "5px 10px", textAlign: "center", textDecoration: "none", display: "inline-block", fontSize: "1em", cursor: "pointer"}}>
-                  <span style={{color: "#000000"}}><a style={{color: "#000000"}} href="https://docs.zilliz.com/docs/release-notes-200">版本说明书</a></span>
+                  <span style={{color: "#000000"}}><a style={{color: "#000000"}} href="/docs/release-notes">版本说明书</a></span>
               </button>
               <button style={{backgroundColor: "rgba(0,0,0,0)", border: "1px solid #FFFFFF", borderRadius: "2px", color: "#FFFFFF", padding: "5px 10px", textAlign: "center", textDecoration: "none", display: "inline-block", fontSize: "1em", cursor: "pointer"}}>
                   <span><a href="./docs/faqs" style={{color: "#FFFFFF"}}>常见问题</a></span>
