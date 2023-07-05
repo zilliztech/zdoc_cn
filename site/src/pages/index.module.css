@@ -16,7 +16,7 @@
 
 .heroBannerColumn {
   display: inline-grid;
-  grid-template-columns: 15% 45% 30% 10%;
+  grid-template-columns: 16% 45% 30% 10%;
 }
 
 @media screen and (max-width: 996px) {

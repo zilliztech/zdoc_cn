@@ -74,7 +74,7 @@ const config = {
           {
             type: "search",
             position: "right",
-          }
+          },
           // {
           //   type: 'docSidebar',
           //   sidebarId: 'tutorialSidebar',
@@ -82,48 +82,133 @@ const config = {
           //   label: '文档',
           // },
           // {to: '/api', label: 'API 参考', position: 'left'},
-          // {
-          //   href: 'https://github.com/facebook/docusaurus',
-          //   label: 'GitHub',
-          //   position: 'right',
-          // },
+          {
+            href: 'https://zilliz.com.cn',
+            label: "产品",
+            position: 'left',
+            className: 'header-link',
+          },
+          {
+            href: 'https://zilliz.com.cn/pricing',
+            label: '定价',
+            position: 'left',
+            className: 'header-link',
+          },
+          {
+            type: "dropdown",
+            label: "资源中心",
+            position: "left",
+            items: [
+              {
+                label: "文档",
+                to: "/docs/zilliz-cloud-101",
+              },
+              {
+                label: "博客",
+                href: "https://zilliz.com.cn/blog",
+              },
+              {
+                label: "GitHub",
+                href: "https://github.com/zilliztech/",
+              },
+              {
+                label: "白皮书和教程",
+                href: "https://zilliz.com.cn/resources",
+              },              
+            ]
+          },
+          {
+            href: 'https://zilliz.com.cn/product/open-source-vector-database',
+            label: '开源项目',
+            position: 'left',
+            className: 'header-link',
+          },
+          {
+            href: 'https://zilliz.com.cn/partners',
+            label: '合作伙伴',
+            position: 'left',
+            className: 'header-link',
+          },
+          {
+            type: "dropdown",
+            label: "公司",
+            position: "left",
+            items: [
+              {
+                label: "关于我们",
+                href: "https://zilliz.com.cn/about",
+              },
+              {
+                label: "招贤纳士",
+                href: "https://app.careerpuck.com/page/zilliz-rxles",
+              },
+              {
+                label: "新闻中心",
+                href: "https://zilliz.com.cn/news",
+              },
+              {
+                label: "活动",
+                href: "https://zilliz.com.cn/event",
+              },
+              {
+                label: "联系我们",
+                href: "https://zilliz.com.cn/contact",
+              },
+            ]
+          }
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
+        logo: {
+          alt: "Zilliz",
+          src: "/img/logo.svg",
+          href: "https://zilliz.com.cn",
+          width: 160,
+          height: 51,
+        },
         links: [
           {
-            title: 'Docs',
+            title: '文档',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: '开发指南',
+                to: '/docs/zilliz-cloud-101',
+              },
+              {
+                label: 'API 参考',
+                to: '/docs/api',
               },
             ],
           },
           {
-            title: 'Community',
+            title: '产品',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: "Zilliz Cloud",
+                href: "https://zilliz.com.cn/cloud"
+              }
+            ]
+          },
+          {
+            title: '关注我们',
+            items: [
+              {
+                label: 'Bilibili',
+                href: 'https://space.bilibili.com/1058892339/video',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'GitHub',
+                href: 'https://github.com/zilliztech',
               },
             ],
           },
           {
-            title: 'More',
+            title: '其它',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: '博客',
+                to: 'https://zilliz.com.cn/blog',
               },
               {
                 label: 'GitHub',
@@ -132,7 +217,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Zilliz, Inc. Built with Docusaurus.`,
+        copyright: `版权所有 © ${new Date().getFullYear()} 上海徐毓智能科技有限公司保留所有权利`,
       },
       prism: {
         theme: lightCodeTheme,

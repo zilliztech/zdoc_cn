@@ -96,5 +96,6 @@
     "与 LlamaIndex 集成搭建文档问答系统": "documentation-qa-using-zilliz-cloud-and-llamaindex",
     "管理身份凭证": "manage-cluster-credentials",
     "查看账单与支付方式": "view-invoice-and-payment-method",
-    "版本说明书": "release-notes"
+    "版本说明书": "release-notes",
+    "管理 MFA": "manage-mfa"
 }

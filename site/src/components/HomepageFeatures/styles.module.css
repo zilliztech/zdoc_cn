@@ -13,7 +13,7 @@
 .activeGroupBlue {
   border: 2px solid #3670F2; 
   border-radius: 8px; 
-  min-height: 12em;
+  min-height: 8.5em;
 }
 
 .activeGroupCaptionBlue {
@@ -24,7 +24,7 @@
 .activeGroupOrange {
   border: 2px solid #FF9330; 
   border-radius: 8px; 
-  min-height: 12em;
+  min-height: 8.5em;
 }
 
 .activeGroupCaptionOrange {
@@ -35,7 +35,7 @@
 .activeGroupLightBlue {
   border: 2px solid #00B3FF; 
   border-radius: 8px; 
-  min-height: 12em;
+  min-height: 8.5em;
 }
 
 .activeGroupCaptionLightBlue {
@@ -46,7 +46,7 @@
 .inactiveGroup {
   border: 2px solid #E0E3E7; 
   border-radius: 8px; 
-  min-height: 12em;
+  min-height: 8.5em;
 }
 
 .inactiveGroupCaption {

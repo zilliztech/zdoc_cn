@@ -63,7 +63,7 @@ function Category({Svg, id, title, description, groupStyle, groupCaptionStyle, a
       }}
     >
       <div className={clsx(hover || activeGroup == id ? groupStyle : styles.inactiveGroup)}>
-        <div style={{display: "flex", flexDirection: "column", rowGap: "0.4em", margin: "2em"}}>
+        <div style={{display: "flex", flexDirection: "column", rowGap: "0.4em", margin: "1em"}}>
             <div style={{display: "block", width: "40px", height: "40px", margin: "auto"}}>
               <Svg style={{width: "40px", height: "40px"}} role="img" />
             </div>
