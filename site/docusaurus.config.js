@@ -9,6 +9,7 @@ const config = {
   title: 'Zilliz Cloud 开发指南',
   tagline: '一次找全所有和 Zilliz Cloud 开发相关的文档',
   favicon: 'img/favicon.svg',
+  trailingSlash: false,
 
   // Set the production url of your site here
   url: 'https://docs.zilliz.com.cn',
@@ -18,8 +19,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Zilliz Inc.', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
+  // organizationName: 'zilliztech', // Usually your GitHub org/user name.
+  // projectName: 'zdoc_cn', // Usually your repo name.
 
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
@@ -41,16 +42,16 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl:
+        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
