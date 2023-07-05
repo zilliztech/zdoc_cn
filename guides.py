@@ -430,10 +430,10 @@ class docWriter:
         lang = self.code_langs[code['style']['language']] if 'language' in code['style'] else 'plaintext'
 
         if ((not prev) or (prev and self.block_types[prev['block_type']-1] != 'code')) and next and self.block_types[next['block_type']-1] == 'code':
-            values.append({ "label": lang if lang != "JavaScript" else "NodeJS", "value": lang.lower(), })
+            values.append({ "label": "NodeJS" if lang == "JavaScript" else lang, "value": lang.lower(), })
 
             def __has_next_code(next):
-                values.append({ "label": self.code_langs[next['code']['style']['language']], "value": self.code_langs[next['code']['style']['language']].lower(), })
+                values.append({ "label": "NodeJS" if self.code_langs[next['code']['style']['language']] == 'JavaScript' else self.code_langs[next['code']['style']['language']], "value": self.code_langs[next['code']['style']['language']].lower(), })
                 try:
                     next = blocks[blocks.index(next) + 1]
                     if next and self.block_types[next['block_type']-1] == 'code':
