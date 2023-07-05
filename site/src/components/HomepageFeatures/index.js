@@ -70,7 +70,7 @@ function Category({Svg, id, title, description, groupStyle, groupCaptionStyle, a
             <div style={{textAlign: "center"}}>
                 <span className={clsx(hover || activeGroup == id ? groupCaptionStyle : styles.inactiveGroupCaption)}>{title}</span>
             </div>
-            <div style={{textAlign: "center"}}>
+            <div style={{textAlign: "center", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap"}}>
                 <span style={{fontSize: "0.8em", color: "#647489"}}>{description}</span>
             </div>
         </div>
