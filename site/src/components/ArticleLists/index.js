@@ -112,7 +112,7 @@ const Rows = [
             {
                 title: "集群、Collection 及 Entity",
                 link: "/docs/cluster-collection-entities",
-                width: "10em"
+                width: "15em"
             },
             {
                 title: "ANN 搜索",
@@ -137,6 +137,11 @@ const Rows = [
             {
                 title: "云服务提供商和地域",
                 link: "/docs/cloud-providers-and-regions",
+                width: "15em"
+            },
+            {
+                title: "",
+                link: "#",
                 width: "10em"
             },
         ]
@@ -228,6 +233,11 @@ const Rows = [
             {
                 title: "管理身份凭证",
                 link: "/docs/manage-cluster-credentials",
+                width: "10em"
+            },
+            {
+                title: "管理 MFA",
+                link: "/docs/manage-mfa",
                 width: "10em"
             },
             {
@@ -386,37 +396,37 @@ const Rows = [
             {
                 title: "什么是非结构化数据",
                 link: "/docs/introduction-to-unstructured-data",
-                width: "20%"
+                width: "10em"
             },
             {
                 title: "什么是向量数据库",
                 link: "/docs/what-is-a-vector-database",
-                width: "20%"
+                width: "10em"
             },
             {
                 title: "什么是向量相似性搜索",
                 link: "/docs/introduction-to-vector-similarity-search",
-                width: "20%"
+                width: "10em"
             },
             {
                 title: "向量索引概览与 IVF 索引",
                 link: "/docs/vector-index-basics-and-the-inverted-file-index",
-                width: "20%"
+                width: "10em"
             },
             {
                 title: "标量量化与乘积量化",
                 link: "/docs/scalar-quantization-and-product-quantization",
-                width: "20%"
+                width: "10em"
             },
             {
                 title: "HNSW",
                 link: "/docs/hierarchical-navigable-small-world-hnsw",
-                width: "20%"
+                width: "10em"
             },
             {
                 title: "",
                 link: "#",
-                width: "20%"
+                width: "10em"
             },
             {
                 title: "",
@@ -434,17 +444,17 @@ const Rows = [
             {
                 title: "与 OpenAI 集成搭建相似性搜索系统",
                 link: "/docs/similarity-search-with-zilliz-cloud-and-openai",
-                width: "30%"
+                width: "16em"
             },
             {
                 title: "与 Cohere 集成搭建智能问答系统",
                 link: "/docs/question-answering-using-zilliz-cloud-and-cohere",
-                width: "30%"
+                width: "16em"
             },
             {
                 title: "与 HuggingFace 集成搭建问答系统",
                 link: "/docs/question-answering-using-zilliz-cloud-and-hugging-face",
-                width: "30%"
+                width: "16em"
             }
         ],
     },
@@ -457,22 +467,22 @@ const Rows = [
             {
                 title: "与 LangChain 集成搭建智能文档问答系统",
                 link: "/docs/question-answering-over-documents-with-zilliz-cloud-and-langchain",
-                width: "30%"
+                width: "16em"
             },
             {
                 title: "与 LlamaIndex 集成搭建文档问答系统",
                 link: "/docs/documentation-qa-using-zilliz-cloud-and-llamaindex",
-                width: "30%"
+                width: "16em"
             },
             {
                 title: "与 PyTorch 集成搭建图片搜索系统",
                 link: "/docs/image-search-with-zilliz-cloud-and-pytorch",
-                width: "30%"
+                width: "16em"
             },
             {
                 title: "与 SentenceTransformers 集成搭建电影搜索系统",
                 link: "/docs/movie-search-using-zilliz-cloud-and-sentencetransformers",
-                width: "30%"
+                width: "16em"
             }
         ]
     },
@@ -485,12 +495,12 @@ const Rows = [
             {
                 title: "API异同",
                 link: "/docs/api-comparisons",
-                width: "15%"
+                width: "10em"
             },
             {
                 title: "其它异同",
                 link: "/docs/other-differences",
-                width: "15%"
+                width: "10em"
             },
             {
                 title: "",
@@ -519,6 +529,9 @@ function Column({title, link, width, idx}) {
         linkHeight: "32px", 
         flex: width, 
         margin: "5px 0",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        whiteSpace: "nowrap"
     }
 
     const linkStyle = {
