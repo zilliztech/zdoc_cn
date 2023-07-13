@@ -487,6 +487,24 @@ const Rows = [
         ]
     },
     {
+        group:2,
+        title: "迁移操作指南",
+        description: "了解如何从社区版迁移到 Zilliz Cloud。",
+        Svg: require('@site/static/img/migration-guides.svg').default,
+        members: [
+            {
+                title: "从 Milvus 1.x 迁移至 Zilliz Cloud",
+                link: "/docs/migrate-from-milvus-1x",
+                width: "10em"
+            },
+            {
+                title: "从 Milvus 2.x 迁移至 Zilliz Cloud",
+                link: "/docs/migrate-from-milvus-2x",
+                width: "10em"
+            },
+        ],
+    },
+    {
         group: 2,
         title: "云服务与社区版对比",
         description: "了解 Zilliz Cloud 与社区版的区别。",
