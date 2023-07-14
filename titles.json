@@ -97,5 +97,6 @@
     "管理身份凭证": "manage-cluster-credentials",
     "查看账单与支付方式": "view-invoice-and-payment-method",
     "版本说明书": "release-notes",
-    "管理 MFA": "manage-mfa"
+    "管理 MFA": "manage-mfa",
+    "选择合适的 CU 类型": "Choose-the-right-CU-type"
 }

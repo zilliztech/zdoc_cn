@@ -34,7 +34,7 @@ Zilliz Cloud 的动态 Schema 功能可以在向 Collection 插入数据时允�
 
 示例代码：
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
 <TabItem value='python'>
 
 ```python

@@ -63,6 +63,10 @@ Zilliz Cloud支持 2 种相似度类型。
 
 以下示例将TTL设置为1800秒。
 
+```python
+collection.set_properties(properties={"collection.ttl.seconds": 1800})
+```
+
 **Zilliz Cloud支持哪种索引类型？**
 
 目前，Zilliz Cloud 仅支持 AUTOINDEX。AUTOINDEX 可以增强搜索性能。对于具有 100 万 768维向量的性能型集群，QPS 可达到几百，延迟低于 100 毫秒。对于相同数据量的容量型集群，QPS 可达到50，延迟超过 200 毫秒。有关更多详细信息，请参见[AUTOINDEX](./autoindex-explained) 。

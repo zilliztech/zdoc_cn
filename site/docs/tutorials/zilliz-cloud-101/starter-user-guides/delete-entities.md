@@ -24,7 +24,7 @@ Entity 是指存储在 Zilliz Cloud 集群中的数据实体，包含用于处�
 
 如果您不再需要某个 Entity，可以参考以下示例代码删除 Entity：
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
 <TabItem value='python'>
 
 ```python
@@ -80,7 +80,7 @@ console.log(res)
 
 Zilliz Cloud 支持批量删除 Entity。可以参考以下示例代码批量删除 Entity：
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
 <TabItem value='python'>
 
 ```python

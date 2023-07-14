@@ -32,7 +32,7 @@ Entity 是 Collection 中的基本数据单元。同一个 Collection 中的 Ent
 
 以下代码将示例数据集中的第一条记录插入到 Collection：
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
 <TabItem value='python'>
 
 ```python
@@ -100,7 +100,7 @@ console.log(res)
 
 要批量插入 Entity，可以按以下方式准备数据：
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
 <TabItem value='python'>
 
 ```python
@@ -200,7 +200,7 @@ const client_data = data.rows.slice(1, 200).map((row) => {
 
 数据准备完成后，通过以下代码插入数据：
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
 <TabItem value='python'>
 
 ```python
@@ -263,7 +263,7 @@ Zilliz Cloud 会在插入的数量到达一定规模时自动执行建立索引�
 
 如果需要立即查询新插入的数据，可以选择手动执行写入操作。
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
 <TabItem value='python'>
 
 ```python

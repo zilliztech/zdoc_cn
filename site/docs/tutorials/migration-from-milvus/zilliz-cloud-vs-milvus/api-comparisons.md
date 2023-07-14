@@ -67,5 +67,5 @@ sidebar_position: 0
 |            | selectGrantForRoleAndObject() | ✘      | ✘   | ✘         |
 |            | selectRole()                  | ✘      | ✘   | ✘         |
 |            | selectUser()                  | ✘      | ✘   | ✘         |
-| 系统         | getVersion()                  | ✘      | ✔︎  | ✔︎        |
+| 系统         | getVersion()                  | ✘      | ✘   | ✘         |
 |            | checkHealth()                 | ✘      | ✔︎  | ✔︎        |

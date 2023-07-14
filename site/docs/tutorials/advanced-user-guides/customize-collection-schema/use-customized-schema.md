@@ -30,7 +30,7 @@ import TabItem from '@theme/TabItem';
 
 创建集群时，您需要配置一个由用户名和密码组成的集群凭证。请务必记下这些信息，因为您需要它们来连接集群。
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
 
 ```python
@@ -158,7 +158,7 @@ if err != nil {
 
 您可以在 Collection 中指定各字段的名称和数据类型来定制 Schema。
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
 
 ```python
@@ -333,7 +333,7 @@ responses := entity.NewField().
 
 定义字段后，为 Collection 创建 Schema：
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
 
 ```python
@@ -417,7 +417,7 @@ schema := &entity.Schema{
 
 使用前面定义的 Schema 创建 Collection：
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
 
 ```python
@@ -490,7 +490,7 @@ if colerr != nil {
 
 Zilliz Cloud 目前仅支持 **AUTOINDEX** 索引类型。如果指定的索引类型不是 **AUTOINDEX**，**AUTOINDEX **也会自动生效。详情请参见 [AUTOINDEX](./autoindex-explained)。
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
 
 ```python
@@ -595,7 +595,7 @@ if err != nil {
 
 对于使用 SDK 创建的 Collection，应在执行搜索和查询之前手动加载。如果暂时不需要使用 Collection，也可以手动释放以节省开销。
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
 
 ```python
@@ -697,7 +697,7 @@ println("Loading progress:", progress)
 
 要释放 Collection，请执行以下操作：
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
 
 ```python
@@ -759,7 +759,7 @@ if releaseCollErr != nil {
 - 按行排列数据
   要将数据排列为行，需要将每行排列为一个字典，其中字段名称用作键，字段值为其对应的值。以下代码展示如何将[示例数据集](./example-dataset-1)的前 200 条数据记录排列为行。
 
-  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
   <TabItem value='python'>
 
   ```python
@@ -1147,7 +1147,7 @@ if releaseCollErr != nil {
 
 准备好数据后，可以按如下方式插入数据：
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
 
 ```python
@@ -1399,7 +1399,7 @@ Zilliz Cloud 也支持在单个请求中指定多个查询向量来进行批量�
 
 以下代码搜索与指定查询向量最相近的 5 条 Entity，并返回各 Entity 的主键、距离等信息。
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
 
 ```python

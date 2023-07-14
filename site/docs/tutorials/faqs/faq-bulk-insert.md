@@ -12,14 +12,14 @@ sidebar_position: 2
 请执行以下步骤将数据批量从 Elasticsearch 导入 Zilliz Cloud
 
 1. 连接至 Elasticsearch
-  ```javascript
+  ```python
   print(fmt.format("start connecting to ElasticSearch"))
   
   es = Elasticsearch(hosts=ELASTICSEARCH_HOST)`
   ```
 
 1. 使用 Elasticsearch [Scroll API](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/scroll-api.html) 获取数据并导入 Zilliz Cloud。以下示例代码展示如何将 Elasticsearch 数据导入 Zilliz Cloud 中的 `hello_milvus` Collection
-  ```javascript
+  ```python
   print(fmt.format("Start inserting entities"))
   
   rng = np.random.default_rng(seed=19530)
@@ -61,7 +61,7 @@ sidebar_position: 2
   ```
 
 1. 查看导入数据条数
-  ```javascript
+  ```python
   hello_milvus.flush()
   
   print(f"Number of entities in Milvus: {hello_milvus.num_entities}")

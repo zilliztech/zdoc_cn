@@ -36,7 +36,7 @@ Zilliz Cloud 采用 ANN 算法来处理向量搜索请求，支持搜索并返�
 
 以下是单向量搜索的示例代码：
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
 <TabItem value='python'>
 
 ```python
@@ -188,7 +188,7 @@ Zilliz Cloud 支持在单个请求中同时指定多个查询向量来进行批�
 
 您可以迭代数据集中的行，并以行为单位发送搜索请求：
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
 <TabItem value='python'>
 
 ```python
@@ -322,7 +322,7 @@ res = await client.search({
 | 操作符                | 描述                                                       |
 | ------------------ | -------------------------------------------------------- |
 | `and` (`&&`)       | 两个操作数同时为真才为真                                             |
-| `or` (`\\|\\|`)    | 一真则真，两个操作数同时为假才为假<br/><br/>                              |
+| `or` (`\|\|`)      | 一真则真，两个操作数同时为假才为假<br/><br/>                              |
 | `+`, `-`, `*`, `/` | 加法、减法、 乘法、除法                                             |
 | `**`               | 取幂                                                       |
 | `%`                | 取模                                                       |
@@ -336,7 +336,7 @@ res = await client.search({
 以下是一些带有过滤条件的 ANN 搜索示例。
 
 - 搜索阅读时间（`reading_time`）在 10 到 15 分钟内的文章：
-  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
   <TabItem value='python'>
 
   ```python
@@ -414,7 +414,7 @@ res = await client.search({
   </Tabs>
 
 - 搜索点赞数（`claps`）超过 1500 且回应数（`responses`）超过 15 的文章：
-  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
   <TabItem value='python'>
 
   ```python
@@ -485,7 +485,7 @@ res = await client.search({
   </Tabs>
 
 - 搜索由 **Towards Data Science** 发布的文章：
-  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
   <TabItem value='python'>
 
   ```python
@@ -569,7 +569,7 @@ res = await client.search({
   </Tabs>
 
 - 搜索不是由 **Towards Data Science** 和 **Personal Growth** 发布的文章：
-  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
   <TabItem value='python'>
 
   ```python
@@ -645,7 +645,7 @@ res = await client.search({
   </Tabs>
 
 - 搜索标题以 **Top** 开头的文章：
-  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
   <TabItem value='python'>
 
   ```python
@@ -729,7 +729,7 @@ res = await client.search({
   </Tabs>
 
 - 搜索由 **Towards Data Science** 发布的文章，且文章拥有超过 1500 个回应（`responses`）和 15 个点赞（`claps`）或阅读时间在 10 到 15 分钟内：
-  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
   <TabItem value='python'>
 
   ```python
@@ -826,7 +826,7 @@ res = await client.search({
 
 查询是指使用布尔表达式筛选出满足条件的 Entity。查询时使用的布尔表达式仅支持标量字段。
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
 <TabItem value='python'>
 
 ```python

@@ -11,7 +11,7 @@ sidebar_position: 1
 
 打开注册页面 https://cloud.zilliz.com.cn/signup。
 
-https://www.figma.com/file/Rb9z8tsmYYdqdultiKx7kT/Zilliz-Diagrams?type=design&node-id=6283-1685&mode=design&t=LDkM04ipuoHHIVOY-4
+![register_account](/img/register_account.png)
 
 ## 注册账号 {#sign-up}
 

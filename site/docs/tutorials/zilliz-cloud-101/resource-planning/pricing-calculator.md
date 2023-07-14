@@ -1,6 +1,6 @@
 ---
 slug: /pricing-calculator
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # 价格计算器

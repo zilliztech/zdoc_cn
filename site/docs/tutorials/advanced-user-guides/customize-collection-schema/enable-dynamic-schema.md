@@ -26,7 +26,7 @@ Schema 对于 Zilliz Cloud 集群的数据处理非常重要。在向 Collection
 
 和预先定义的字段一样，您可以要求 Zilliz Cloud 在搜索或查询结果中输出动态字段，也可以在布尔表达式中引用动态字段。
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
 
 ```python
@@ -359,7 +359,7 @@ Collection 创建完成后，可以开始动态插入数据。
 
 现在，我们需要从[示例数据集](./example-dataset-1)中读取数据。
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
 
 ```python
@@ -539,7 +539,7 @@ type Row struct {
 
 数据准备完成后便可以开始插入数据：
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
 
 ```python
@@ -701,7 +701,7 @@ log.Println("Collection flushed")
 
 假设前面的所有步骤都已完成，此时我们便可以在搜索或查询的表达式中使用动态字段：
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
 
 ```python

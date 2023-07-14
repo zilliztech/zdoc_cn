@@ -38,7 +38,7 @@ JSON 全称为 JavaScript Object Notation，是一种轻量级且易于使用的
 
 定义 JSON 字段的过程与定义其他类型字段的过程相同。
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
 
 ```python
@@ -400,7 +400,7 @@ println("Loading progress:", progress)
 
 从 `CollectionSchema` 对象创建 Collection 之后，可以将字典数据插入到 Collection 中。
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
 
 ```python
@@ -716,7 +716,7 @@ func (sp searchParams) Params() map[string]interface{} {
 
 所有数据插入完成后，您可以使用 JSON 字段中的键进行搜索，搜索方法与基于标量字段搜索相同。
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
 
 ```python

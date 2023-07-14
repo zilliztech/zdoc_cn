@@ -1,6 +1,6 @@
 ---
 slug: /set-up-whitelist
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # 设置白名单
@@ -25,7 +25,7 @@ sidebar_position: 2
 
 1. 点击进入需要设置白名单的组织和项目。
 
-1. 在左侧导航栏中，点击 **安全** > **+ 添加IP地址**。
+1. 在左侧导航栏中，点击 **安全** > **+ IP 地址**。
 
 1. 在弹出的对话框中，输入 **IP地址（CIDR）和描述**。
 
@@ -51,3 +51,5 @@ sidebar_position: 2
 - [管理 API 密钥](./manage-api-keys) 
 
 - [管理身份凭证](./manage-cluster-credentials) 
+
+- [管理 MFA](./manage-mfa) 

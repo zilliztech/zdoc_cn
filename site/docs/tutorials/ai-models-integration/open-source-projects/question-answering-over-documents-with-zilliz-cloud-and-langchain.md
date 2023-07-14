@@ -43,7 +43,7 @@ environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
 ```python
 from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.vectorstores import Zilliz Cloud
+from langchain.vectorstores import Milvus
 from langchain.document_loaders import WebBaseLoader
 from langchain.text_splitter import CharacterTextSplitter
 

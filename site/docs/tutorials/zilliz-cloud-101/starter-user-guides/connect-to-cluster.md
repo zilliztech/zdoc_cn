@@ -28,7 +28,7 @@ import TabItem from '@theme/TabItem';
 
 您可以通过公网地址和创建集群时指定的用户名和密码连接到集群。
 
-<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "JavaScript", "value": "javascript"}]}>
+<Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
 <TabItem value='python'>
 
 ```python
