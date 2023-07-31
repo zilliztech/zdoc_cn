@@ -153,6 +153,11 @@ const Rows = [
         Svg: require('@site/static/img/resource-planning.svg').default,
         members: [
             {
+                title: "选择合适的CU类型",
+                link: "/docs/choose-the-right-cu-type-and-size",
+                width: "10em"
+            },
+            {
                 title: "Zilliz Cloud 版本类型",
                 link: "/docs/select-zilliz-cloud-service-plans",
                 width: "10em"

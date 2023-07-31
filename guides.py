@@ -451,7 +451,7 @@ class docWriter:
         for quote in quotes:
             res.append(f"{self.__text(quote['text'])}")
 
-        type = 'info 说明' if '说明' in res[0] else 'caution'
+        type = 'info 说明' if '说明' in res[0] else 'caution 注意'
 
         res[0] = f":::{type}"
         res.insert(1, "")
