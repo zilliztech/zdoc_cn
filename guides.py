@@ -963,35 +963,35 @@ def restref_structure(specifications, parents):
 
 if __name__ == '__main__':
 
-    # scraper = docScraper("XyeFwdx6kiK9A6kq3yIcLNdEnDd")
+    scraper = docScraper("XyeFwdx6kiK9A6kq3yIcLNdEnDd")
 
-    # pages = scraper.pages
+    pages = scraper.pages
 
-    # with open("data.json", "w") as f:
-    #     json.dump(scraper.docs, f, indent=4, ensure_ascii=False)
+    with open("data.json", "w") as f:
+        json.dump(scraper.docs, f, indent=4, ensure_ascii=False)
 
-    # with open("pages.json", "w") as f:
-    #     json.dump(pages, f, indent=4, ensure_ascii=False)
+    with open("pages.json", "w") as f:
+        json.dump(pages, f, indent=4, ensure_ascii=False)
 
-    # with open("data.json", 'r') as f:
-    #     docs = json.load(f)
+    with open("data.json", 'r') as f:
+        docs = json.load(f)
 
-    # with open("pages.json", 'r') as f:
-    #     pages = json.load(f)
+    with open("pages.json", 'r') as f:
+        pages = json.load(f)
 
-    # # root page
-    # token = [ x for x in docs['blocks']['items'] if 'bitable' in x ][0]['bitable']['token']
+    # root page
+    token = [ x for x in docs['blocks']['items'] if 'bitable' in x ][0]['bitable']['token']
 
-    # bi = biTableParser(token)
+    bi = biTableParser(token)
 
-    # bi.publish_or_not('')
+    bi.publish_or_not('')
 
-    # writer = docWriter(pages=pages)
+    writer = docWriter(pages=pages)
 
-    # clean_up_docs(path='site/static/img')
-    # clean_up_docs(path='site/docs/tutorials')
-    # copy_icons()
-    # doc_structure(docs, path='site/docs/tutorials')
+    clean_up_docs(path='site/static/img')
+    clean_up_docs(path='site/docs/tutorials')
+    copy_icons()
+    doc_structure(docs, path='site/docs/tutorials')
 
     with open('apis/clean.json', 'r') as f:
         specifications = json.load(f)
