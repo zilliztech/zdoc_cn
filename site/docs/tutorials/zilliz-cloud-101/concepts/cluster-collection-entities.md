@@ -55,7 +55,7 @@ Zilliz Cloud 支持以下数据类型：
 
 Zilliz Cloud 提供 3 种 CU 类型。不同 CU 类型适用于不同的场景，搜索性能也有所不同。
 
-:::caution
+:::info 说明
 
 Zilliz Cloud 集群中仅 FLOAT_VECTOR 支持向量的数据类型。
 

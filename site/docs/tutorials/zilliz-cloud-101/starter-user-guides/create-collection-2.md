@@ -28,7 +28,7 @@ import TabItem from '@theme/TabItem';
 
 :::
 
-## 操作步骤 {#procedure}
+## 操作步骤 {#steps}
 
 Zilliz Cloud 的动态 Schema 功能可以在向 Collection 插入数据时允许插入未预先定义的字段。要创建自动启用动态  Schema 的  Collection，您只需指定 Collection 名称和向量维度：
 

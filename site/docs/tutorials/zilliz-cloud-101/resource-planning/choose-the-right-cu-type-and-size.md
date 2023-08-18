@@ -1,5 +1,5 @@
 ---
-slug: /choose-the-right-CU-type
+slug: /choose-the-right-cu-type-and-size
 sidebar_position: 1
 ---
 

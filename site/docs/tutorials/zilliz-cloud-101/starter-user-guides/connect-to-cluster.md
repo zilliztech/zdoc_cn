@@ -24,7 +24,7 @@ import TabItem from '@theme/TabItem';
 
 - 阅读本指南系列时，建议下载[代码示例](https://assets.zilliz.com/zdoc/zilliz_cloud_sdk_examples.zip)。
 
-## 操作步骤 {#procedure}
+## 操作步骤 {#steps}
 
 您可以通过公网地址和创建集群时指定的用户名和密码连接到集群。
 

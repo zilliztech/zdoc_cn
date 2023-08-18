@@ -17,7 +17,7 @@ sidebar_position: 4
 
 - 您是组织或项目管理员。更多用户角色和权限详情，请阅读[角色与权限](./roles-privileges)。
 
-## 操作步骤 {#procedure}
+## 操作步骤 {#steps}
 
 1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com.cn/login)。
 
@@ -29,7 +29,7 @@ sidebar_position: 4
 
 1. 在**添加项目成员**对话框中，指定**新用户**并点击**添加**。
 
-:::caution
+:::info 说明
 
 如需添加属于组织但没有项目权限的用户，请直接从下拉列表中选择用户名。如需添加不属于创建项目所在组织的用户，请输入其邮箱地址。每次输入邮箱地址后，请按回车键检查邮箱地址是否有效。
 

@@ -36,7 +36,7 @@ JSON 全称为 JavaScript Object Notation，是一种轻量级且易于使用的
 
 ## 定义 JSON 字段 {#define-json-fields}
 
-定义 JSON 字段的过程与定义其他类型字段的过程相同。
+定义 JSON 字段的过程与定义其他类型字段的过程相同。在执行如下代码之前，请确认已连接至您的集群。如需连接集群，可参考[连接集群](./use-customized-schema#connection-cluster)。
 
 <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>

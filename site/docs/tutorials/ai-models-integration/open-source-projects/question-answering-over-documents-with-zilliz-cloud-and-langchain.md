@@ -99,7 +99,7 @@ print(docs)
 
 在准备好文档后，我们可以创建一条 Stuff 链将文档包含在一个提示词中并将该提示词喂给大语言模型。这样大语言模型就可以在回答我们的提问时参考文档中的内容。
 
-:::caution
+:::caution 注意
 
 LangChain 提供了四种用于搭建指定源问答的链，它们分别是 Stuff 链，MapReduce 链，Refine 链 和 MapRerank 链。
 简单来说，Stuff 链会将整个文档包含在提示词中。因此，它只适用于文档规模较小的场景。大多数大语言模型对一条提示词可以包含的符号数量有数量限制，因此建议使用其它三种链。然后我们就可以使用创建好的链将文档分割成合适大小的块并通过不同的方式将它们喂给大语言模型。想了解更多，可以参考 LangChain 文档里关于[索引链](https://docs.langchain.com/docs/components/chains/index_related_chains)的相关描述。

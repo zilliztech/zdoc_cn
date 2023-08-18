@@ -70,7 +70,7 @@ console.log(res)
 
 以上代码从 Collection `medium_articles_2020`  中删除了 ID 为 `253`  的 Entity。
 
-:::caution
+:::caution 注意
 
 删除 Entity 是不可逆操作。在执行操作之前，请务必备份或确认数据不再需要。
 
@@ -127,7 +127,7 @@ console.log(res)
 
 以上代码从 Collection `medium_articles_2020` 中同时删除 ID 为 `252` 和 `236` 的 Entity。
 
-:::caution
+:::caution 注意
 
 删除 Entity 是不可逆操作。在执行操作之前，请务必备份或确认数据不再需要。
 

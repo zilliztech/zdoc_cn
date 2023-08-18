@@ -80,7 +80,7 @@ client.insert(
 | claps        | Int64            |
 | responses    | Int64            |
 
-:::caution
+:::info 说明
 
 插入的数据极为复杂且难以解析时，我们不推荐使用动态数据模型，请考虑改用静态数据模型。否则您可能无法获得预期结果。
 

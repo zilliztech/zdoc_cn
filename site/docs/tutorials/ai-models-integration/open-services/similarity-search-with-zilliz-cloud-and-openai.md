@@ -114,6 +114,7 @@ def search(text):
     for hit in results[0]:
         row=[]
         row.extend([hit.id, hit.score, hit.entity.get('title')])  # 获取匹配结果的 id，距离和 title 字段
+        ret.append(row)
     return ret
 
 search_terms=['self-improvement', 'landscape']

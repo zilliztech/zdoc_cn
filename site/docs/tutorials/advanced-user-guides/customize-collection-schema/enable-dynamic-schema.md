@@ -26,6 +26,8 @@ Schema 对于 Zilliz Cloud 集群的数据处理非常重要。在向 Collection
 
 和预先定义的字段一样，您可以要求 Zilliz Cloud 在搜索或查询结果中输出动态字段，也可以在布尔表达式中引用动态字段。
 
+在执行如下代码之前，请确认已连接至您的集群。如需连接集群，可参考[连接集群](./use-customized-schema#connection-cluster)。
+
 <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
 

@@ -59,7 +59,7 @@ Zilliz Cloud 具备高扩展性的特点。负载容量和 CU 数量之间呈线
 
 ![O2bybcAlcon4YbxJkchcFdxTnrc](/img/O2bybcAlcon4YbxJkchcFdxTnrc.png)
 
-:::caution
+:::info 说明
 
 上述测试结果仅供参考。不同用例之间可能存在显着的性能差异。延迟和QPS指标也与网络延迟、网络稳定性等因素密切相关。实际性能由实际使用到的数据决定。
 

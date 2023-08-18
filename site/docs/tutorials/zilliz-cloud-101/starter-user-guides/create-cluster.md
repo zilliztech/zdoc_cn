@@ -15,7 +15,7 @@ sidebar_position: 0
 
 - 在目标组织或项目中，您具有集群创建权限。有关角色和权限的信息，请参见[角色与权限](./roles-privileges)。
 
-## 操作步骤 {#procedure}
+## 操作步骤 {#steps}
 
 1. 登录 Zilliz Cloud 控制台。
 

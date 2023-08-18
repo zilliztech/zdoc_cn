@@ -69,7 +69,7 @@ sidebar_position: 2
 
 **能否向 Zilliz Cloud 集群批量导入数据？**
 
-目前，您只能使用 Zilliz Cloud 界面批量导入数据。Zilliz Cloud 暂不支持通过 SDK 批量导入数据。
+目前，您只能使用 Zilliz Cloud 界面批量导入数据。更多详情，请阅读批量插入数据。
 
 **在使用 Node.js SDK 导入数据或查询时，遇到 `ECONNRESET`错误该怎么办？**
 

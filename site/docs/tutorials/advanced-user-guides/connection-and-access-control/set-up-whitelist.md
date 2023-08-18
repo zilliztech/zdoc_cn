@@ -19,7 +19,7 @@ sidebar_position: 3
 
 - 您是组织或项目管理员。更多用户角色和权限详情，请阅读[角色与权限](./roles-privileges) 。
 
-## 操作步骤 {#procedure}
+## 操作步骤 {#steps}
 
 1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com.cn/login)。
 
@@ -38,7 +38,7 @@ sidebar_position: 3
 
 1. 点击 **添加** 完成操作。
 
-:::caution
+:::info 说明
 
 如果白名单中没有记录，Zilliz Cloud 将允许所有 IP 地址访问项目集群。一旦添加了 CIDR ，仅CIDR 中的 IP 地址可以访问该集群。添加 0.0.0.0/0 的效果等同于白名单中没有记录。
 

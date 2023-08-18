@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 :::
 
-## 操作步骤 {#procedure}
+## 操作步骤 {#steps}
 
 使用以下示例代码从集群中删除 Collection：
 
