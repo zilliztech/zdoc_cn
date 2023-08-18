@@ -377,12 +377,12 @@ const Rows = [
             },
             {
                 title: "查看帐单与支付方式",
-                link: "/docs/view-invoice-and-payment-methods",
+                link: "/docs/view-invoice-and-payment-method",
                 width: "10em"
             },
             {
                 title: "订阅阿里云市场",
-                link: "/docs/subscribe-to-aliyun-marketplace",
+                link: "/docs/subscribe-on-aliyun-marketplace",
                 width: "10em"
             },
             {
