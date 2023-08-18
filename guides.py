@@ -631,11 +631,23 @@ class docWriter:
 class biTableParser:
 
     def __init__(self, token):
-        self.app_token = token.split('_')[0]
-        self.table_id = token.split('_')[1]
+        self.app_token = token
         self.tokenFetcher = tokenFetcher()
+        self.table_id = self.__list_tables()
         self.records = None
         self.__list_records()
+
+    def __list_tables(self):
+        URI = f"/open-apis/bitable/v1/apps/{self.app_token}/tables"
+        res = requests.get(f"{FEISHU_HOST}{URI}", headers={
+            "Authorization": f"Bearer {self.tokenFetcher.token()}"
+        })
+
+        res = res.json()
+
+        if res['code'] == 0:
+            self.tables = res['data']['items']
+            return self.tables[0]['table_id']
 
     def __list_records(self):
         URI = f"/open-apis/bitable/v1/apps/{self.app_token}/tables/{self.table_id}/records?page_size=500"
@@ -980,7 +992,10 @@ if __name__ == '__main__':
         pages = json.load(f)
 
     # root page
-    token = [ x for x in docs['blocks']['items'] if 'bitable' in x ][0]['bitable']['token']
+    base = [ x for x in docs['children'] if x['obj_type'] == 'bitable' ]
+
+    if base:
+        token = base[0]['obj_token']
 
     bi = biTableParser(token)
 
