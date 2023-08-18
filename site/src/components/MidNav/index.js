@@ -15,7 +15,7 @@ const Buttons = [
     {
         caption: "API 参考",
         Svg: require('@site/static/img/apiref.svg').default,
-        link: "/docs/api",
+        link: "/reference",
     },
     // {
     //     caption: "讨论",

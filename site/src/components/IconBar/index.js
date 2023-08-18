@@ -7,28 +7,34 @@ export default function IconBar () {
     const GoIcon = require('@site/static/img/go-icon.svg').default
     const JavaIcon = require('@site/static/img/java-icon.svg').default
     const NodejsIcon = require('@site/static/img/nodejs-icon.svg').default
+    const RestIcon = require('@site/static/img/rest-icon.svg').default
 
     return (
         <div style={{ display: "block", width: "100%" }}>
             <div style={{ display: "flex", flexDirection: "row", gap: "2%"  }}>
                 <div style={{ display: "block", flex: "20%" }}>
-                    <Link to="/docs/api/python">
+                    <Link to="/reference/python">
                         <PythonIcon style={{ width: "100%" }} />
                     </Link>
                 </div>
                 <div style={{ display: "block", flex: "20%" }}>
-                    <Link to="/docs/api/java">
+                    <Link to="/reference/java">
                         <JavaIcon style={{ width: "100%" }} />
                     </Link>
                 </div>
                 <div style={{ display: "block", flex: "20%" }}>
-                    <Link to="/docs/api/go">
+                    <Link to="/reference/go">
                         <GoIcon style={{ width: "100%" }} />
                     </Link>
                 </div>
                 <div style={{ display: "block", flex: "20%" }}>
-                    <Link to="/docs/api/nodejs">
+                    <Link to="/reference/nodejs">
                         <NodejsIcon style={{ width: "100%" }} />
+                    </Link>
+                </div>
+                <div style={{ display: "block", flex: "20%" }}>
+                    <Link to="/reference/cloud-meta">
+                        <RestIcon style={{ width: "100%" }} />
                     </Link>
                 </div>
             </div>

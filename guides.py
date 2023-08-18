@@ -1,4 +1,4 @@
-import os, json, re, shutil
+import os, json, re, shutil, csv
 import logging
 import requests
 from dotenv import load_dotenv
@@ -8,6 +8,7 @@ from urllib import parse
 from translate import Translator
 from slugify import slugify
 from urllib import parse
+from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -657,6 +658,246 @@ class biTableParser:
                     
             return record[0]['fields']['进度'] != '无需中文版'
 
+class RefGen:
+
+    def __init__(self, specifications, parents):
+        self.specifications = specifications
+        self.parents = parents
+
+    def refgen(self):
+        env = Environment(
+            loader=FileSystemLoader('apis/templates'),
+            autoescape=select_autoescape(['html', 'xml'])
+        )
+
+        env.filters['res_format'] = self.res_format
+        env.filters['req_format'] = self.req_format
+        env.filters['list_error'] = self.list_error
+        env.filters['get_example'] = self.get_example
+        env.filters['get_slug'] = self.get_slug
+
+        template = env.get_template('reference.md')
+
+        for url in self.specifications['paths']:
+            for method in self.specifications['paths'][url]:
+                query_params = []
+                path_params = []
+                req_bodies = []
+                res_body = {}
+
+                page_title = self.specifications['paths'][url][method]['summary'] 
+                page_excerpt = self.specifications['paths'][url][method]['description']
+                page_parent = [ x for x in self.parents if x == self.specifications['paths'][url][method]['tags'][0] ][0].split(' ')[0]
+                page_slug = self.get_slug(page_title)
+                page_method = method.lower()
+                server = ''
+
+                if 'cloud' in page_slug or 'cluster' in page_slug or 'import' in page_slug:
+                    server = "https://controller.api.{cloud_region}.zillizcloud.com"
+                
+                elif 'collection' in page_slug or 'query' in page_slug or 'search' in page_slug or 'get' in page_slug or 'insert' in page_slug or 'delete' in page_slug:
+                    server = "https://{public_endpoint}"
+                
+                
+                if 'parameters' in self.specifications['paths'][url][method]:
+                    for param in self.specifications['paths'][url][method]['parameters']:
+                        if param['in'] == 'query':
+                            query_params.append(param)
+                        elif param['in'] == 'path':
+                            path_params.append(param)
+
+                if 'requestBody' in self.specifications['paths'][url][method]:
+                    schema = self.specifications['paths'][url][method]['requestBody']['content']['application/json']['schema']
+                    if 'oneOf' in schema:
+                        for req_body in schema['oneOf']:
+                            req_bodies.append(req_body)
+                    else:
+                        req_bodies.append(schema)
+                
+                if 'responses' in self.specifications['paths'][url][method]:
+                    print(page_title)
+                    res_des = self.specifications['paths'][url][method]['responses']['200']['description']
+                    if 'oneOf' in self.specifications['paths'][url][method]['responses']['200']['content']['application/json']['schema']:
+                        schemas = self.specifications['paths'][url][method]['responses']['200']['content']['application/json']['schema']['oneOf']
+                        res_body = [ x for x in schemas if 'data' in x['properties'] ][0]
+                    else:
+                        res_body = self.specifications['paths'][url][method]['responses']['200']['content']['application/json']['schema']
+
+                t = template.render({
+                    'page_title': page_title,
+                    'page_excerpt': page_excerpt,
+                    'page_slug': page_slug,
+                    'page_url': url,
+                    'server': server,
+                    'page_method': page_method,
+                    'query_params': query_params,
+                    'path_params': path_params,
+                    'req_bodies': req_bodies,
+                    'res_des': res_des,
+                    'res_body': res_body
+                })
+
+                with open('site/reference/api/restful/{}/{}.md'.format(page_parent, page_slug), 'w') as f:
+                    t = t.replace('<br>', '<br/>')
+                    f.write(t)
+
+    def groupgen(self):
+        env = Environment(
+            loader=FileSystemLoader('apis/templates'),
+            autoescape=select_autoescape(['html', 'xml'])
+        )
+
+        template = env.get_template('group.md')
+
+        for group in self.specifications['tags']:
+            slug = '-'.join(group['name'].lower().split(' '))
+            t = template.render({
+                'group_name': group['name'].split(' ')[0],
+                'slug': slug
+            })
+
+            folder_path = 'site/reference/api/restful/' + group['name'].split(' ')[0]
+
+            if not os.path.exists(folder_path):
+                os.makedirs(folder_path)
+
+            with open(f'{folder_path}/_category_.json', 'w') as f:
+                f.write(t)
+
+    def get_example(self, title):
+        with open('apis/examples.md', 'r') as f:
+            lines = f.readlines()
+            start_poses = [ i for i, x in enumerate(lines) if x.startswith('## ') ]
+            example_titles = [ x.strip()[3:] for x in lines if x.startswith('## ')]    
+
+            for i, example_title in enumerate(example_titles):
+                if example_title == title:
+                    end_pos = start_poses[i+1] if i+1 < len(start_poses) else len(lines)
+                    start_pos = start_poses[i] + 1
+                    return ''.join(lines[start_pos:end_pos])
+                
+    def get_slug(self, title):
+        with open('apis/titles.json', 'r') as f:
+            titles = json.load(f)
+
+        return titles[title]
+
+                    
+    def req_format(self, req_body):
+        b = None
+        if 'properties' in req_body:
+            properties = req_body['properties']
+
+            b = {}
+            for k,v in properties.items():
+                if v['type'] == 'object':
+                    b1 = {}
+                    for k1,v1 in v['properties'].items():
+                        b1[k1] = v1['type']
+                        b[k] = b1
+                elif v['type'] == 'array':
+                    b2 = [{}]
+                    if 'properties' in v['items']:
+                        for k2,v2 in v['items']['properties'].items():
+                            b2[0][k2] = v2['type']
+
+                    b[k] = b2 if b2[0] else []
+                else:
+                    b[k] = v['type']
+        elif 'items' in req_body:
+            items = req_body['items']
+            if 'properties' in items:
+                properties = items['properties']
+                b = [{}]
+                for k,v in properties.items():
+                    b[0][k] = v['type']
+                
+                b = b if b[0] else []
+
+        return json.dumps(b, indent=4, sort_keys=True)
+        
+    def res_format(self, res_body):
+        b = None
+        if 'properties' in res_body['properties']['data']:
+            properties = res_body['properties']['data']['properties']
+        
+            b = {}
+            for k,v in properties.items():
+                if v['type'] == 'object':
+                    b1 = {}
+                    for k1,v1 in v['properties'].items():
+                        b1[k1] = v1['type']
+                        b[k] = b1
+                elif v['type'] == 'array':
+                    b2 = [{}]
+                    if 'properties' in v['items']:
+                        for k2,v2 in v['items']['properties'].items():
+                            b2[0][k2] = v2['type']
+                        b[k] = b2 if b2[0] else []
+                else:
+                    b[k] = v['type']
+        elif 'items' in res_body['properties']['data']:
+            items = res_body['properties']['data']['items']
+            if 'properties' in items:
+                properties = items['properties']
+                b = [{}]
+                for k,v in properties.items():
+                    b[0][k] = v['type']
+
+                b = b if b[0] else []
+
+        if b:
+            return json.dumps({
+                    "code": 200,
+                    "data": b
+                }, indent=4, sort_keys=True)
+        else: 
+            return json.dumps({
+                    "code": 200,
+                    "data": {}
+                }, indent=4, sort_keys=True)
+        
+    def list_error(self, page_slug):
+        page_title = ''.join([x.capitalize() for x in page_slug.split('-')])
+        print(page_title)
+        errgen = ErrorGenerator()
+        if ''.join(page_title.split(' ')) in errgen.groups:
+            group = errgen.groups[''.join(page_title.split(' '))]
+            group.sort()
+            return ''.join([ f'| {x} | {errgen.get_errorcode_desc(x)} |\n' for x in group])
+        else:
+            return '|  | (to be added) |\n'
+
+class ErrorGenerator:
+    def __init__(self):
+        self.errcode = 'apis/errors/errcode.csv'
+        self.grouping = 'apis/errors/grouping.csv'
+        self.errors = self.__prepare_errorcode()
+        self.groups = self.__prepare_grouping()
+
+    def __prepare_errorcode(self):
+        errors = {}
+        with open(self.errcode, 'r') as f:
+            reader = csv.reader(f)
+            for row in reader:
+                errors[row[0]] = row[1]
+
+        return errors
+
+    def __prepare_grouping(self):
+        groups = {}
+        with open(self.grouping, 'r') as f:
+            reader = csv.reader(f)
+            for row in reader:
+                if row[0] not in groups:
+                    groups[row[0]] = []
+                groups[row[0]].append(row[1])
+
+        return groups
+    
+    def get_errorcode_desc(self, error_code):
+        return self.errors[error_code]
+
 def category_meta(path, label, position):
     titles = json.loads(open('titles.json', 'r').read())
     with open(f"{path}/_category_.json", 'w') as f:
@@ -715,35 +956,45 @@ def doc_structure(docs, path='docs'):
                     writer.write_docs(current_path, item['blocks']['items'], sidebar_position=idx)
                     logging.info(f"Writing {item['title']}")
 
+def restref_structure(specifications, parents):
+    refgen = RefGen(specifications, parents)
+    refgen.groupgen()
+    refgen.refgen()
+
 if __name__ == '__main__':
 
-    scraper = docScraper("XyeFwdx6kiK9A6kq3yIcLNdEnDd")
+    # scraper = docScraper("XyeFwdx6kiK9A6kq3yIcLNdEnDd")
 
-    pages = scraper.pages
+    # pages = scraper.pages
 
-    with open("data.json", "w") as f:
-        json.dump(scraper.docs, f, indent=4, ensure_ascii=False)
+    # with open("data.json", "w") as f:
+    #     json.dump(scraper.docs, f, indent=4, ensure_ascii=False)
 
-    with open("pages.json", "w") as f:
-        json.dump(pages, f, indent=4, ensure_ascii=False)
+    # with open("pages.json", "w") as f:
+    #     json.dump(pages, f, indent=4, ensure_ascii=False)
 
-    with open("data.json", 'r') as f:
-        docs = json.load(f)
+    # with open("data.json", 'r') as f:
+    #     docs = json.load(f)
 
-    with open("pages.json", 'r') as f:
-        pages = json.load(f)
+    # with open("pages.json", 'r') as f:
+    #     pages = json.load(f)
 
-    # root page
-    token = [ x for x in docs['blocks']['items'] if 'bitable' in x ][0]['bitable']['token']
+    # # root page
+    # token = [ x for x in docs['blocks']['items'] if 'bitable' in x ][0]['bitable']['token']
 
-    bi = biTableParser(token)
+    # bi = biTableParser(token)
 
-    bi.publish_or_not('')
+    # bi.publish_or_not('')
 
-    writer = docWriter(pages=pages)
+    # writer = docWriter(pages=pages)
 
-    clean_up_docs(path='site/static/img')
-    clean_up_docs(path='site/docs/tutorials')
-    copy_icons()
-    doc_structure(docs, path='site/docs/tutorials')
-    
+    # clean_up_docs(path='site/static/img')
+    # clean_up_docs(path='site/docs/tutorials')
+    # copy_icons()
+    # doc_structure(docs, path='site/docs/tutorials')
+
+    with open('apis/clean.json', 'r') as f:
+        specifications = json.load(f)
+        parents = [ x['name'] for x in specifications['tags'] ]
+
+    restref_structure(specifications, parents)
