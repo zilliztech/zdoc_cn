@@ -67,8 +67,8 @@ const Rows = [
                 width: "10em"
             },
             {
-                title: "",
-                link: "#",
+                title: "管理集群",
+                link: "/docs/manage-cluster",
                 width: "10em"
             },
             {
@@ -369,6 +369,26 @@ const Rows = [
                 title: "",
                 link: "#",
                 width: "10em"
+            },
+            {
+                title: "支付方式与帐单",
+                link: "",
+                width: "100%"
+            },
+            {
+                title: "查看帐单与支付方式",
+                link: "/docs/view-invoice-and-payment-methods",
+                width: "10em"
+            },
+            {
+                title: "订阅阿里云市场",
+                link: "/docs/subscribe-to-aliyun-marketplace",
+                width: "10em"
+            },
+            {
+                title: "",
+                link: "#",
+                width: "35em"
             },            
             {
                 title: "系统设置",
