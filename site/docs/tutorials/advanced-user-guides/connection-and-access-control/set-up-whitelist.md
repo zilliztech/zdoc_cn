@@ -9,7 +9,7 @@ sidebar_position: 3
 
 本教程将介绍如何设置白名单。
 
-## 前提条件 {#prerequisites}
+## 前提条件 {#preconditions}
 
 确保满足以下条件：
 
@@ -19,7 +19,7 @@ sidebar_position: 3
 
 - 您是组织或项目管理员。更多用户角色和权限详情，请阅读[角色与权限](./roles-privileges) 。
 
-## 操作步骤 {#steps}
+## 操作步骤 {#operating-steps}
 
 1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com.cn/login)。
 
@@ -31,10 +31,10 @@ sidebar_position: 3
 
 1. 字段描述如下表所示。
 
-  | **字段**     | **描述**                                                              |
-  | ---------- | ------------------------------------------------------------------- |
-  | IP地址（CIDR） | 您要添加到白名单中的 IP 地址或无类别域间路由（CIDR）。您可最多添加 20 个 CIDR。示例值：192.168.1.1/20。 |
-  | 描述         | 白名单 IP 地址或 CIDR 的描述。                                                |
+    | **字段**     | **描述**                                                              |
+    | ---------- | ------------------------------------------------------------------- |
+    | IP地址（CIDR） | 您要添加到白名单中的 IP 地址或无类别域间路由（CIDR）。您可最多添加 20 个 CIDR。示例值：192.168.1.1/20。 |
+    | 描述         | 白名单 IP 地址或 CIDR 的描述。                                                |
 
 1. 点击 **添加** 完成操作。
 
@@ -46,7 +46,7 @@ sidebar_position: 3
 
 ![whitelist-ip-access](/img/whitelist-ip-access.png)
 
-## 下一步 {#next}
+## 下一步 {#next-step}
 
 - [管理 API 密钥](./manage-api-keys) 
 

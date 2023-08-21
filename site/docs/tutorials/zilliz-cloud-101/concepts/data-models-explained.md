@@ -12,17 +12,17 @@ sidebar_position: 4
 在 Zilliz Cloud 集群中，不同 Collection 的 Schema 可能不同。正确定义数据模型以表示数据集的结构十分重要。定义数据模型时，您需要考虑以下几个方面：
 
 - **Entity**
-  Collection 中的 Entity 类似于传统数据库表格中的行。Entity 的每个属性对应传统数据库表格中的列。向 Collection 插入数据前，请先观察 Entity 之间共享的属性。
+    Collection 中的 Entity 类似于传统数据库表格中的行。Entity 的每个属性对应传统数据库表格中的列。向 Collection 插入数据前，请先观察 Entity 之间共享的属性。
 
-  例如， 您可以将书可以作为 Collection 中的 Entity，书的属性可以包括标题、作者、ISBN 和语言。
+    例如， 您可以将书可以作为 Collection 中的 Entity，书的属性可以包括标题、作者、ISBN 和语言。
 
 - **数据类型**
-  Entity 的每个属性都有自己的数据类型。设置合适的数据类型以定义属性。
+    Entity 的每个属性都有自己的数据类型。设置合适的数据类型以定义属性。
 
-  例如，标题的数据类型应为**可变长度字符串（VarChar）**。
+    例如，标题的数据类型应为**可变长度字符串（VarChar）**。
 
 - **Entity 属性值限制**
-  不同的数据类型可能带有不同的限制。例如，向量字段对向量维数有限制、VarChar字段对字符的最大长度有限制。
+    不同的数据类型可能带有不同的限制。例如，向量字段对向量维数有限制、VarChar字段对字符的最大长度有限制。
 
 您需要花费一些时间来定义 Collection 的数据模型。当需要定义的数据属性特别多时，你需要花费的时间可能更多。因此，Zilliz Cloud 集群提供了动态和静态数据模型以满足您的不同需求。
 
@@ -141,7 +141,7 @@ Zilliz Cloud 支持以下数据类型：
 
 - [JSON](./javascript-object-notation-json-1) 
 
-## 文档推荐 {#recommended-documents}
+## 文档推荐 {#document-recommendation}
 
 - [定制 Schema](./use-customized-schema) 
 

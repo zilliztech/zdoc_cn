@@ -7,28 +7,28 @@ sidebar_position: 1
 
 本教程将介绍如何创建 Zilliz Cloud 账号。
 
-## 前提条件 {#prerequisites}
+## 前提条件 {#preconditions}
 
 打开注册页面 https://cloud.zilliz.com.cn/signup。
 
 ![register_account](/img/register_account.png)
 
-## 注册账号 {#sign-up}
+## 注册账号 {#register-an-account}
 
 目前，您仅能够通过企业邮箱注册 Zilliz Cloud 账号。
 
 1. 在“企业邮箱”字段中输入您的企业邮箱地址。
 
 1. 在“密码”字段中输入密码。
-  您的密码应不超过 128 个字符，并且必须包含至少 1 个大写字母、1 个小写字母、1 个数字和 1 个特殊字符。
+    您的密码应不超过 128 个字符，并且必须包含至少 1 个大写字母、1 个小写字母、1 个数字和 1 个特殊字符。
 
 1. 阅读并勾选“同意[使用条款](https://zilliz.com.cn/cloud-service-terms)和[隐私政策](https://zilliz.com.cn/cloud-user-policy)”。
 
 1. 点击”注册“按钮。
-  验证码将发送到您填写的企业邮箱中。
+    验证码将发送到您填写的企业邮箱中。
 
 1. 在提示对话框中输入验证码，并点击“验证”。
-  如未收到验证码，请点击“重新发送验证码”。
+    如未收到验证码，请点击“重新发送验证码”。
 
 :::info 说明
 
@@ -36,6 +36,6 @@ sidebar_position: 1
 
 :::
 
-## 文档推荐 {#recommended-documents}
+## 文档推荐 {#document-recommendation}
 
 - [快速开始](./quick-start-1) 

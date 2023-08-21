@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 本文介绍如何为 Collection 定制 Schema。
 
-## 开始前 {#before-commencing}
+## 开始前 {#before-starting}
 
 请确保已完成以下步骤：
 
@@ -26,7 +26,7 @@ import TabItem from '@theme/TabItem';
 
 :::
 
-## 连接集群 {#connection-cluster}
+## 连接集群 {#connect-cluster}
 
 创建集群时，您需要配置一个由用户名和密码组成的集群凭证。请务必记下这些信息，因为您需要它们来连接集群。
 
@@ -152,7 +152,7 @@ if err != nil {
 </TabItem>
 </Tabs>
 
-## 创建 Collection {#create-collection}
+## 创建 Collection {#create-a-collection}
 
 动态 Schema 使得用户可以更简单高效地插入数据，同时也降低了用户学习难度。如果是生产环境，推荐使用自定义 Schema 而非动态 Schema，以确保所有数据都能按预期存储。
 
@@ -484,7 +484,7 @@ if colerr != nil {
 </TabItem>
 </Tabs>
 
-## 为 Collection 创建索引 {#index-collection}
+## 为 Collection 创建索引 {#create-an-index-for-the-collection}
 
 实现极致性能的近似最近邻（Approximate Nearest Neighbor，ANN）搜索需要使用索引。Zilliz Cloud 集群支持对向量字段进行索引，为 Collection 创建索引实际是对 Collection 中的向量字段进行索引。
 
@@ -752,396 +752,396 @@ if releaseCollErr != nil {
 
 向 Collection 中插入 Entity 前，请确保 Entity 的格式与 Collection 的 Schema 一致。
 
-### 准备数据 {#preparing-data}
+### 准备数据 {#prepare-data}
 
 您可以按行或列来准备数据。
 
 - 按行排列数据
-  要将数据排列为行，需要将每行排列为一个字典，其中字段名称用作键，字段值为其对应的值。以下代码展示如何将[示例数据集](./example-dataset-1)的前 200 条数据记录排列为行。
+    要将数据排列为行，需要将每行排列为一个字典，其中字段名称用作键，字段值为其对应的值。以下代码展示如何将[示例数据集](./example-dataset-1)的前 200 条数据记录排列为行。
 
-  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
-  <TabItem value='python'>
+    <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+    <TabItem value='python'>
 
-  ```python
-  # 不推荐实际执行以下代码
-  # 以下代码仅作演示使用
-  
-  with open('/path/to/downloaded/medium_articles_2020_dpr.json') as f:
-          data = json.load(f)
-          rows = data['rows'][0:200]
-  
-  print(rows[:2])
-  # 输出：
-  # [
-  #   {
-  #      'id': 0,
-  #      'title': 'The Reported Mortality Rate of Coronavirus Is Not Important',
-  #      'title_vector': [0.041732933, 0.013779674, -0.027564144, ..., 0.030096486],
-  #      'link': '<https://medium.com/swlh/the-reported-mortality-rate-of-coronavirus-is-not-important-369989c8d912>',
-  #      'reading_time': 13,
-  #      'publication': 'The Startup',
-  #      'claps': 1100,
-  #             'responses': 18
-  #   },
-  #   {
-  #      'id': 1, 
-  #      'title': 'Dashboards in Python: 3 Advanced Examples for Dash Beginners and Everyone Else', 
-  #      'title_vector': [0.0039737443, 0.003020432, -0.0006188639, 0.03913546, ..., 0.021713957], 
-  #      'link': '<https://medium.com/swlh/dashboards-in-python-3-advanced-examples-for-dash-beginners-and-everyone-else-b1daf4e2ec0a>', 
-  #      'reading_time': 14, 
-  #      'publication': 'The Startup', 
-  #      'claps': 726, 
-  #      'responses': 3
-  #   }
-  # ]
-  ```
-  
-  </TabItem>
+    ```python
+    # 不推荐实际执行以下代码
+    # 以下代码仅作演示使用
+    
+    with open('/path/to/downloaded/medium_articles_2020_dpr.json') as f:
+            data = json.load(f)
+            rows = data['rows'][0:200]
+    
+    print(rows[:2])
+    # 输出：
+    # [
+    #   {
+    #      'id': 0,
+    #      'title': 'The Reported Mortality Rate of Coronavirus Is Not Important',
+    #      'title_vector': [0.041732933, 0.013779674, -0.027564144, ..., 0.030096486],
+    #      'link': '<https://medium.com/swlh/the-reported-mortality-rate-of-coronavirus-is-not-important-369989c8d912>',
+    #      'reading_time': 13,
+    #      'publication': 'The Startup',
+    #      'claps': 1100,
+    #             'responses': 18
+    #   },
+    #   {
+    #      'id': 1, 
+    #      'title': 'Dashboards in Python: 3 Advanced Examples for Dash Beginners and Everyone Else', 
+    #      'title_vector': [0.0039737443, 0.003020432, -0.0006188639, 0.03913546, ..., 0.021713957], 
+    #      'link': '<https://medium.com/swlh/dashboards-in-python-3-advanced-examples-for-dash-beginners-and-everyone-else-b1daf4e2ec0a>', 
+    #      'reading_time': 14, 
+    #      'publication': 'The Startup', 
+    #      'claps': 726, 
+    #      'responses': 3
+    #   }
+    # ]
+    ```
+    
+    </TabItem>
 
-  <TabItem value='javascript'>
+    <TabItem value='javascript'>
 
-  ```javascript
-  // 不推荐实际执行以下代码
-  // 以下代码仅作演示使用
-  
-  const data = JSON.parse(fs.readFileSync("path/to/downloaded/medium_articles_2020_dpr.json", "utf-8"));
-  const rows = data.rows;
-  
-  console.log(rows[0])
-  
-  // 输出：
-  // {
-  //   id: 0,
-  //   title: 'The Reported Mortality Rate of Coronavirus Is Not Important',
-  //   title_vector: [
-  //       0.041732933,   0.013779674,   -0.027564144, -0.013061441,
-  //       0.009748648, 0.00082446384, -0.00071647146,  0.048612226,
-  //     ... 764 more items
-  //   ],
-  //   link: '<https://medium.com/swlh/the-reported-mortality-rate-of-coronavirus-is-not-important-369989c8d912>',
-  //   reading_time: 13,
-  //   publication: 'The Startup',
-  //   claps: 1100,
-  //   responses: 18
-  // }
-  ```
-  
-  </TabItem>
+    ```javascript
+    // 不推荐实际执行以下代码
+    // 以下代码仅作演示使用
+    
+    const data = JSON.parse(fs.readFileSync("path/to/downloaded/medium_articles_2020_dpr.json", "utf-8"));
+    const rows = data.rows;
+    
+    console.log(rows[0])
+    
+    // 输出：
+    // {
+    //   id: 0,
+    //   title: 'The Reported Mortality Rate of Coronavirus Is Not Important',
+    //   title_vector: [
+    //       0.041732933,   0.013779674,   -0.027564144, -0.013061441,
+    //       0.009748648, 0.00082446384, -0.00071647146,  0.048612226,
+    //     ... 764 more items
+    //   ],
+    //   link: '<https://medium.com/swlh/the-reported-mortality-rate-of-coronavirus-is-not-important-369989c8d912>',
+    //   reading_time: 13,
+    //   publication: 'The Startup',
+    //   claps: 1100,
+    //   responses: 18
+    // }
+    ```
+    
+    </TabItem>
 
-  <TabItem value='java'>
+    <TabItem value='java'>
 
-  ```java
-  // 不推荐实际执行以下代码
-  // 以下代码仅作演示使用
-  
-  // 读取数据集
-  String content;
-  
-  Path file = Path.of("/path/to/downloaded/medium_articles_2020_dpr.json");
-  try {
-      String content = Files.readString(file);
-  } catch (Exception e) {
-      System.out.println("Failed to read file: " + e.getMessage());
-      return;
-  }
-  
-  System.out.println("Successfully read file");
-  
-  // 加载数据集
-  JSONObject dataset = JSON.parseObject(content);
-  List<JSONObject> rows = getRows(dataset.getJSONArray("rows"), 200);
-  
-  // ===================================================================
-  // 请将以下函数作为主函数的同级函数包含到类中
-  // 该函数从示例数据集中检索指定数量的记录，并将它们添加到 JSON 对象列表中
-  public static List<JSONObject> getRows(JSONArray dataset, int counts) {
-      List<JSONObject> rows = new ArrayList<JSONObject>();
-      for (int i = 0; i < counts; i++) {
-          JSONObject row = dataset.getJSONObject(i);
-          List<Float> vectors = row.getJSONArray("title_vector").toJavaList(Float.class);
-          Long reading_time = row.getLong("reading_time");
-          Long claps = row.getLong("claps");
-          Long responses = row.getLong("responses");
-          row.put("title_vector", vectors);
-          row.put("reading_time", reading_time);
-          row.put("claps", claps);
-          row.put("responses", responses);
-          row.remove("id");
-          rows.add(row);
-      }
-      return rows;
-  }
-  
-  System.out.println(rows)
-  
-  // 输出：
-  // [{"reading_time":13,"publication":"The Startup","title_vector":[0.041732933,0.013779674,...,0.030096486],"link":"<https://medium.com/swlh/the-reported-mortality-rate-of-coronavirus-is-not-important-369989c8d912","responses":18,"title":"The> Reported Mortality Rate of Coronavirus Is Not Important","claps":1100}, 
-  //  {"reading_time":14,"publication":"The Startup","title_vector":[0.0039737443,0.003020432,-6.188639E-4,...,0.021713957],"link":"<https://medium.com/swlh/dashboards-in-python-3-advanced-examples-for-dash-beginners-and-everyone-else-b1daf4e2ec0a","responses":3,"title":"Dashboards> in Python: 3 Advanced Examples for Dash Beginners and Everyone Else","claps":726}]
-  ```
-  
-  </TabItem>
+    ```java
+    // 不推荐实际执行以下代码
+    // 以下代码仅作演示使用
+    
+    // 读取数据集
+    String content;
+    
+    Path file = Path.of("/path/to/downloaded/medium_articles_2020_dpr.json");
+    try {
+        String content = Files.readString(file);
+    } catch (Exception e) {
+        System.out.println("Failed to read file: " + e.getMessage());
+        return;
+    }
+    
+    System.out.println("Successfully read file");
+    
+    // 加载数据集
+    JSONObject dataset = JSON.parseObject(content);
+    List<JSONObject> rows = getRows(dataset.getJSONArray("rows"), 200);
+    
+    // ===================================================================
+    // 请将以下函数作为主函数的同级函数包含到类中
+    // 该函数从示例数据集中检索指定数量的记录，并将它们添加到 JSON 对象列表中
+    public static List<JSONObject> getRows(JSONArray dataset, int counts) {
+        List<JSONObject> rows = new ArrayList<JSONObject>();
+        for (int i = 0; i < counts; i++) {
+            JSONObject row = dataset.getJSONObject(i);
+            List<Float> vectors = row.getJSONArray("title_vector").toJavaList(Float.class);
+            Long reading_time = row.getLong("reading_time");
+            Long claps = row.getLong("claps");
+            Long responses = row.getLong("responses");
+            row.put("title_vector", vectors);
+            row.put("reading_time", reading_time);
+            row.put("claps", claps);
+            row.put("responses", responses);
+            row.remove("id");
+            rows.add(row);
+        }
+        return rows;
+    }
+    
+    System.out.println(rows)
+    
+    // 输出：
+    // [{"reading_time":13,"publication":"The Startup","title_vector":[0.041732933,0.013779674,...,0.030096486],"link":"<https://medium.com/swlh/the-reported-mortality-rate-of-coronavirus-is-not-important-369989c8d912","responses":18,"title":"The> Reported Mortality Rate of Coronavirus Is Not Important","claps":1100}, 
+    //  {"reading_time":14,"publication":"The Startup","title_vector":[0.0039737443,0.003020432,-6.188639E-4,...,0.021713957],"link":"<https://medium.com/swlh/dashboards-in-python-3-advanced-examples-for-dash-beginners-and-everyone-else-b1daf4e2ec0a","responses":3,"title":"Dashboards> in Python: 3 Advanced Examples for Dash Beginners and Everyone Else","claps":726}]
+    ```
+    
+    </TabItem>
 
-  <TabItem value='go'>
+    <TabItem value='go'>
 
-  ```go
-  // 不推荐实际执行以下代码
-  // 以下代码仅作演示使用
-  
-  // Read the downloaded dataset file
-  file, err := os.ReadFile("path/to/downloaded/medium_articles_2020_dpr.json")
-  if err != nil {
-          log.Fatal("Failed to read file:", err.Error())
-  }
-  
-  // Load the dataset
-  var data Dataset
-  
-  if err := json.Unmarshal(file, &data); err != nil {
-          log.Fatal(err.Error())
-  }
-  
-  log.Println("Dataset loaded, row number: ", len(data.Rows))
-  
-  rows, err := getRows(data, 5979)
-  
-  log.Println("Rows prepared: ", len(rows))
-  
-  // 输出：
-  // 2023/06/09 16:54:10 Dataset loaded, row number:  5979
-  // 2023/06/09 16:54:11 Rows prepared:  5979
-  
-  // =====================================================
-  // 在 type 定义中包含以下内容：
-  
-  // Structs 
-  // 根据数据集的结构定义 struct
-  type Dataset struct {
-          Rows []Row `json:"rows"`
-  }
-  
-  type Row struct {
-          ID          int64     `json:"id" milvus:"name:id"`
-          Title       string    `json:"title" milvus:"name:title"`
-          TitleVector []float32 `json:"title_vector" milvus:"name:title_vector"`
-          Link        string    `json:"link" milvus:"name:link"`
-          ReadingTime int64     `json:"reading_time" milvus:"name:reading_time"`
-          Publication string    `json:"publication" milvus:"name:publication"`
-          Claps       int64     `json:"claps" milvus:"name:claps"`
-          Response    int64     `json:"response" milvus:"name:responses"`
-  }
-  
-  func getRows(dataset Dataset, counts int64) ([]interface{}, error) {
-          // 将数据集转换为行
-          rows := make([]interface{}, 0, 2)
-  
-          for _, row := range dataset.Rows[:counts] {
-                  rows = append(rows, row)
-          }
-  
-          return rows, nil
-  }
-  ```
-  
-  </TabItem>
-  </Tabs>
+    ```go
+    // 不推荐实际执行以下代码
+    // 以下代码仅作演示使用
+    
+    // Read the downloaded dataset file
+    file, err := os.ReadFile("path/to/downloaded/medium_articles_2020_dpr.json")
+    if err != nil {
+            log.Fatal("Failed to read file:", err.Error())
+    }
+    
+    // Load the dataset
+    var data Dataset
+    
+    if err := json.Unmarshal(file, &data); err != nil {
+            log.Fatal(err.Error())
+    }
+    
+    log.Println("Dataset loaded, row number: ", len(data.Rows))
+    
+    rows, err := getRows(data, 5979)
+    
+    log.Println("Rows prepared: ", len(rows))
+    
+    // 输出：
+    // 2023/06/09 16:54:10 Dataset loaded, row number:  5979
+    // 2023/06/09 16:54:11 Rows prepared:  5979
+    
+    // =====================================================
+    // 在 type 定义中包含以下内容：
+    
+    // Structs 
+    // 根据数据集的结构定义 struct
+    type Dataset struct {
+            Rows []Row `json:"rows"`
+    }
+    
+    type Row struct {
+            ID          int64     `json:"id" milvus:"name:id"`
+            Title       string    `json:"title" milvus:"name:title"`
+            TitleVector []float32 `json:"title_vector" milvus:"name:title_vector"`
+            Link        string    `json:"link" milvus:"name:link"`
+            ReadingTime int64     `json:"reading_time" milvus:"name:reading_time"`
+            Publication string    `json:"publication" milvus:"name:publication"`
+            Claps       int64     `json:"claps" milvus:"name:claps"`
+            Response    int64     `json:"response" milvus:"name:responses"`
+    }
+    
+    func getRows(dataset Dataset, counts int64) ([]interface{}, error) {
+            // 将数据集转换为行
+            rows := make([]interface{}, 0, 2)
+    
+            for _, row := range dataset.Rows[:counts] {
+                    rows = append(rows, row)
+            }
+    
+            return rows, nil
+    }
+    ```
+    
+    </TabItem>
+    </Tabs>
 
 - 按列排列数据
-  要将数据排列为列，请使用包含该列中所有行的值的嵌套列表来表示每个列。以下代码片段将[示例数据集](./example-dataset-1)中的两个数据记录以列的方式排列。
+    要将数据排列为列，请使用包含该列中所有行的值的嵌套列表来表示每个列。以下代码片段将[示例数据集](./example-dataset-1)中的两个数据记录以列的方式排列。
 
-  Node.js SDK 不支持将数据按列排列。
+    Node.js SDK 不支持将数据按列排列。
 
-  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
-  <TabItem value='python'>
+    <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
+    <TabItem value='python'>
 
-  ```python
-  # 不推荐实际执行以下代码
-  # 以下代码仅作演示使用
-  
-  with open('/path/to/downloaded/medium_articles_2020_dpr.json') as f:
-      data = json.load(f)
-      rows = data['rows']
-      keys = list(rows[0].keys())
-      columns = [ [] for x in keys ]
-      for row in rows:
-          for x in keys:
-              columns[keys.index(x)].append(row[x])
-  
-      print("A list of columns is as follows")
-      columns_demo = [ [] for x in keys ]
-      for row in rows[:2]:
-          for x in keys:
-              columns_demo[keys.index(x)].append(row[x])
-  
-      print(json.dumps(columns_demo, indent=2))
-  
-          # 输出：
-    #   [
-          #     [1, 2],
-          #     ['Dashboards in Python: 3 Advanced Examples for Dash Beginners and Everyone Else', 'How Can We Best Switch in Python?'],
-          #     [[0.0039737443, 0.003020432, -0.0006188639, ..., 0.021713957], [0.031961977, 0.00047043373, -0.018263113, ..., 0.034458436]],
-          #     ['<https://medium.com/swlh/dashboards-in-python-3-advanced-examples-for-dash-beginners-and-everyone-else-b1daf4e2ec0a>', '<https://medium.com/swlh/how-can-we-best-switch-in-python-458fb33f7835>'],
-          #     [14, 6]
-          #     ['The Startup', 'The Startup'],
-          #     [726, 500], 
-          #     [3, 7]
-    #   ]
-  ```
-  
-  </TabItem>
+    ```python
+    # 不推荐实际执行以下代码
+    # 以下代码仅作演示使用
+    
+    with open('/path/to/downloaded/medium_articles_2020_dpr.json') as f:
+        data = json.load(f)
+        rows = data['rows']
+        keys = list(rows[0].keys())
+        columns = [ [] for x in keys ]
+        for row in rows:
+            for x in keys:
+                columns[keys.index(x)].append(row[x])
+    
+        print("A list of columns is as follows")
+        columns_demo = [ [] for x in keys ]
+        for row in rows[:2]:
+            for x in keys:
+                columns_demo[keys.index(x)].append(row[x])
+    
+        print(json.dumps(columns_demo, indent=2))
+    
+            # 输出：
+      #   [
+            #     [1, 2],
+            #     ['Dashboards in Python: 3 Advanced Examples for Dash Beginners and Everyone Else', 'How Can We Best Switch in Python?'],
+            #     [[0.0039737443, 0.003020432, -0.0006188639, ..., 0.021713957], [0.031961977, 0.00047043373, -0.018263113, ..., 0.034458436]],
+            #     ['<https://medium.com/swlh/dashboards-in-python-3-advanced-examples-for-dash-beginners-and-everyone-else-b1daf4e2ec0a>', '<https://medium.com/swlh/how-can-we-best-switch-in-python-458fb33f7835>'],
+            #     [14, 6]
+            #     ['The Startup', 'The Startup'],
+            #     [726, 500], 
+            #     [3, 7]
+      #   ]
+    ```
+    
+    </TabItem>
 
-  <TabItem value='java'>
+    <TabItem value='java'>
 
-  ```java
-  // 不推荐实际执行以下代码
-  // 以下代码仅作演示使用
-  
-  // 读取数据集
-  String content;
-  
-  Path file = Path.of("/path/to/downloaded/medium_articles_2020_dpr.json");
-  try {
-      String content = Files.readString(file);
-  } catch (Exception e) {
-      System.out.println("Failed to read file: " + e.getMessage());
-      return;
-  }
-  
-  // 加载数据集
-  JSONObject dataset = JSON.parseObject(content);
-  List<Field> fields = getFields(dataset.getJSONArray("rows"), 1);
-  
-  // ====================================================================
-  // 将以下内容与主函数并排包含进来
-  
-  // 从示例数据集中检索指定数量的记录，并将它们排列在字段数组中
-  public static List<Field> getFields(JSONArray dataset, int counts) {
-      List<Field> fields = new ArrayList<Field>();
-      List<String> titles = new ArrayList<String>();
-      List<List<Float>> title_vectors = new ArrayList<List<Float>>();
-      List<String> links = new ArrayList<String>();
-      List<Long> reading_times = new ArrayList<Long>();
-      List<String> publications = new ArrayList<String>();
-      List<Long> claps_list = new ArrayList<Long>();
-      List<Long> responses_list = new ArrayList<Long>();
-  
-      for (int i = 0; i < counts; i++) {
-          JSONObject row = dataset.getJSONObject(i);
-          titles.add(row.getString("title"));
-          title_vectors.add(row.getJSONArray("title_vector").toJavaList(Float.class));
-          links.add(row.getString("link"));
-          reading_times.add(row.getLong("reading_time"));
-          publications.add(row.getString("publication"));
-          claps_list.add(row.getLong("claps"));
-          responses_list.add(row.getLong("responses"));
-      }
-  
-      fields.add(new Field("title", titles));
-      fields.add(new Field("title_vector", title_vectors));
-      fields.add(new Field("link", links));
-      fields.add(new Field("reading_time", reading_times));
-      fields.add(new Field("publication", publications));
-      fields.add(new Field("claps", claps_list));
-      fields.add(new Field("responses", responses_list));
-  
-      return fields;
-  }
-  
-  System.out.println(field)
-  
-  // 输出：
-  // [Field{fieldName='title', row_count=1}, Field{fieldName='title_vector', row_count=1}, Field{fieldName='link', row_count=1}, Field{fieldName='reading_time', row_count=1}, Field{fieldName='publication', row_count=1}, Field{fieldName='claps', row_count=1}, Field{fieldName='responses', row_count=1}]
-  ```
-  
-  </TabItem>
+    ```java
+    // 不推荐实际执行以下代码
+    // 以下代码仅作演示使用
+    
+    // 读取数据集
+    String content;
+    
+    Path file = Path.of("/path/to/downloaded/medium_articles_2020_dpr.json");
+    try {
+        String content = Files.readString(file);
+    } catch (Exception e) {
+        System.out.println("Failed to read file: " + e.getMessage());
+        return;
+    }
+    
+    // 加载数据集
+    JSONObject dataset = JSON.parseObject(content);
+    List<Field> fields = getFields(dataset.getJSONArray("rows"), 1);
+    
+    // ====================================================================
+    // 将以下内容与主函数并排包含进来
+    
+    // 从示例数据集中检索指定数量的记录，并将它们排列在字段数组中
+    public static List<Field> getFields(JSONArray dataset, int counts) {
+        List<Field> fields = new ArrayList<Field>();
+        List<String> titles = new ArrayList<String>();
+        List<List<Float>> title_vectors = new ArrayList<List<Float>>();
+        List<String> links = new ArrayList<String>();
+        List<Long> reading_times = new ArrayList<Long>();
+        List<String> publications = new ArrayList<String>();
+        List<Long> claps_list = new ArrayList<Long>();
+        List<Long> responses_list = new ArrayList<Long>();
+    
+        for (int i = 0; i < counts; i++) {
+            JSONObject row = dataset.getJSONObject(i);
+            titles.add(row.getString("title"));
+            title_vectors.add(row.getJSONArray("title_vector").toJavaList(Float.class));
+            links.add(row.getString("link"));
+            reading_times.add(row.getLong("reading_time"));
+            publications.add(row.getString("publication"));
+            claps_list.add(row.getLong("claps"));
+            responses_list.add(row.getLong("responses"));
+        }
+    
+        fields.add(new Field("title", titles));
+        fields.add(new Field("title_vector", title_vectors));
+        fields.add(new Field("link", links));
+        fields.add(new Field("reading_time", reading_times));
+        fields.add(new Field("publication", publications));
+        fields.add(new Field("claps", claps_list));
+        fields.add(new Field("responses", responses_list));
+    
+        return fields;
+    }
+    
+    System.out.println(field)
+    
+    // 输出：
+    // [Field{fieldName='title', row_count=1}, Field{fieldName='title_vector', row_count=1}, Field{fieldName='link', row_count=1}, Field{fieldName='reading_time', row_count=1}, Field{fieldName='publication', row_count=1}, Field{fieldName='claps', row_count=1}, Field{fieldName='responses', row_count=1}]
+    ```
+    
+    </TabItem>
 
-  <TabItem value='go'>
+    <TabItem value='go'>
 
-  ```go
-  // 不推荐实际执行以下代码
-  // 以下代码仅作演示使用
-  
-  // 使用上文的 structs 定义
-  
-  // 在主函数中包含以下内容：
-  
-  // 读取数据集
-  file, err := os.ReadFile("path/to/downloaded/medium_articles_2020_dpr.json")
-  if err != nil {
-          log.Fatal("Failed to read file:", err.Error())
-  }
-  
-  var data Dataset
-  
-  if err := json.Unmarshal(file, &data); err != nil {
-          log.Fatal(err.Error())
-  }
-  
-  columns, err := getColumns(data, 1)
-  
-  for _, column := range columns {
-          log.Println(column.Name())
-  }
-  
-  // 输出：
-  // 2023/06/17 16:32:50 Dataset loaded, row number:  5979
-  // 2023/06/17 16:32:50 title
-  // 2023/06/17 16:32:50 title_vector
-  // 2023/06/17 16:32:50 link
-  // 2023/06/17 16:32:50 reading_time
-  // 2023/06/17 16:32:50 publication
-  // 2023/06/17 16:32:50 claps
-  // 2023/06/17 16:32:50 responses
-  
-  // ====================================================================
-  // 将以下内容与主函数并排包含进来
-  
-  func getColumns(dataset Dataset, counts int64) ([]entity.Column, error) {
-          // Make several arrays
-          ids := make([]int64, 0, 1)
-          titles := make([]string, 0, 1)
-          titleVectors := make([][]float32, 0, 1)
-          links := make([]string, 0, 1)
-          readingTimes := make([]int64, 0, 1)
-          publications := make([]string, 0, 1)
-          claps := make([]int64, 0, 1)
-          responses := make([]int64, 0, 1)
-  
-          for _, row := range dataset.Rows[:counts] {
-                  ids = append(ids, row.ID)
-                  titles = append(titles, row.Title)
-                  titleVectors = append(titleVectors, row.TitleVector)
-                  links = append(links, row.Link)
-                  readingTimes = append(readingTimes, row.ReadingTime)
-                  publications = append(publications, row.Publication)
-                  claps = append(claps, row.Claps)
-                  responses = append(responses, row.Response)
-          }
-  
-          // 按列排列
-          idColumn := entity.NewColumnInt64("id", ids)
-          titleColumn := entity.NewColumnVarChar("title", titles)
-          titleVectorColumn := entity.NewColumnFloatVector("title_vector", 768, titleVectors)
-          linkColumn := entity.NewColumnVarChar("link", links)
-          readingTimeColumn := entity.NewColumnInt64("reading_time", readingTimes)
-          publicationColumn := entity.NewColumnVarChar("publication", publications)
-          clapColumn := entity.NewColumnInt64("claps", claps)
-          responseColumn := entity.NewColumnInt64("responses", responses)
-  
-          return []entity.Column{
-                  idColumn,
-                  titleColumn,
-                  titleVectorColumn,
-                  linkColumn,
-                  readingTimeColumn,
-                  publicationColumn,
-                  clapColumn,
-                  responseColumn,
-          }, nil
-  }
-  ```
-  
-  </TabItem>
-  </Tabs>
+    ```go
+    // 不推荐实际执行以下代码
+    // 以下代码仅作演示使用
+    
+    // 使用上文的 structs 定义
+    
+    // 在主函数中包含以下内容：
+    
+    // 读取数据集
+    file, err := os.ReadFile("path/to/downloaded/medium_articles_2020_dpr.json")
+    if err != nil {
+            log.Fatal("Failed to read file:", err.Error())
+    }
+    
+    var data Dataset
+    
+    if err := json.Unmarshal(file, &data); err != nil {
+            log.Fatal(err.Error())
+    }
+    
+    columns, err := getColumns(data, 1)
+    
+    for _, column := range columns {
+            log.Println(column.Name())
+    }
+    
+    // 输出：
+    // 2023/06/17 16:32:50 Dataset loaded, row number:  5979
+    // 2023/06/17 16:32:50 title
+    // 2023/06/17 16:32:50 title_vector
+    // 2023/06/17 16:32:50 link
+    // 2023/06/17 16:32:50 reading_time
+    // 2023/06/17 16:32:50 publication
+    // 2023/06/17 16:32:50 claps
+    // 2023/06/17 16:32:50 responses
+    
+    // ====================================================================
+    // 将以下内容与主函数并排包含进来
+    
+    func getColumns(dataset Dataset, counts int64) ([]entity.Column, error) {
+            // Make several arrays
+            ids := make([]int64, 0, 1)
+            titles := make([]string, 0, 1)
+            titleVectors := make([][]float32, 0, 1)
+            links := make([]string, 0, 1)
+            readingTimes := make([]int64, 0, 1)
+            publications := make([]string, 0, 1)
+            claps := make([]int64, 0, 1)
+            responses := make([]int64, 0, 1)
+    
+            for _, row := range dataset.Rows[:counts] {
+                    ids = append(ids, row.ID)
+                    titles = append(titles, row.Title)
+                    titleVectors = append(titleVectors, row.TitleVector)
+                    links = append(links, row.Link)
+                    readingTimes = append(readingTimes, row.ReadingTime)
+                    publications = append(publications, row.Publication)
+                    claps = append(claps, row.Claps)
+                    responses = append(responses, row.Response)
+            }
+    
+            // 按列排列
+            idColumn := entity.NewColumnInt64("id", ids)
+            titleColumn := entity.NewColumnVarChar("title", titles)
+            titleVectorColumn := entity.NewColumnFloatVector("title_vector", 768, titleVectors)
+            linkColumn := entity.NewColumnVarChar("link", links)
+            readingTimeColumn := entity.NewColumnInt64("reading_time", readingTimes)
+            publicationColumn := entity.NewColumnVarChar("publication", publications)
+            clapColumn := entity.NewColumnInt64("claps", claps)
+            responseColumn := entity.NewColumnInt64("responses", responses)
+    
+            return []entity.Column{
+                    idColumn,
+                    titleColumn,
+                    titleVectorColumn,
+                    linkColumn,
+                    readingTimeColumn,
+                    publicationColumn,
+                    clapColumn,
+                    responseColumn,
+            }, nil
+    }
+    ```
+    
+    </TabItem>
+    </Tabs>
 
 ### 插入数据 {#insert-data}
 
@@ -1627,7 +1627,7 @@ func (sp searchParams) Params() map[string]interface{} {
 </TabItem>
 </Tabs>
 
-## 相关文档 {#related-doc}
+## 相关文档 {#related-documents}
 
 - [开启动态 Schema](./enable-dynamic-schema)
 

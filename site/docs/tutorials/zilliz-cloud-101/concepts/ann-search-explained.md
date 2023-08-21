@@ -26,7 +26,7 @@ Hierarchical Navigable Small World（HNSW）算法通过创建多层接近图（
 1. 一旦确定了顶层的最近向量，使用较低层的相同向量作为入口点，在该层中找到其最近邻。
 
 1. 重复上述步骤，直到找到底层的最近向量。
-  ![Dkj8bpJswoXHzPxBz3hcOHSDnRg](/img/Dkj8bpJswoXHzPxBz3hcOHSDnRg.png)
+    ![Dkj8bpJswoXHzPxBz3hcOHSDnRg](/img/Dkj8bpJswoXHzPxBz3hcOHSDnRg.png)
 
 ## ANNOY：树索引算法 {#annoy-tree-index-algorithm}
 
@@ -56,7 +56,7 @@ Approximate Nearest Neighbor Oh Yeah（ANNOY）通过构建二叉树森林来索
 
 ![RRMybZeKQoGgQRx6kSNcvwxsnre](/img/RRMybZeKQoGgQRx6kSNcvwxsnre.png)
 
-## DiskANN：基于 Vamana 图的磁盘索引算法 {#diskann-disk-indexing-algorithm-based-on-vamana-graph}
+## DiskANN：基于 Vamana 图的磁盘索引算法 {#diskann-a-disk-indexing-algorithm-based-on-vamana-graph}
 
 不同于 HNSW 算法构建分层图，Vamana 索引过程相对简单：
 

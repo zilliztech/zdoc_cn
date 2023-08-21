@@ -7,7 +7,7 @@ sidebar_position: 7
 
 本文介绍如何通过 Zilliz Cloud 控制台管理集群。
 
-## 连接集群 {#connection-cluster}
+## 连接集群 {#connect-cluster}
 
 集群创建完成后，您可以在控制台看到如下信息：
 
@@ -21,7 +21,7 @@ sidebar_position: 7
 
 在 **Collection** 页签下，您可以管理集群中的 Collection。您可以创建 Collection、将数据导入 Collection、加载或释放 Collection、重命名 Collection 和删除 Collection。
 
-有关数据导入的详细信息，请参阅[批量插入数据](./批量插入数据)。
+有关数据导入的详细信息，请参阅[批量导入数据](./bulk-insert-on-gui)。
 
 ![manage-collections](/img/manage-collections.png)
 
@@ -45,7 +45,7 @@ sidebar_position: 7
 
 在**操作**下拉列表中，您可以选择**迁移数据**来创建数据迁移任务，以从 Milvus 迁移数据到 Zilliz Cloud 集群。有关更多信息，请参阅[迁移到 Zilliz Cloud](./migration-from-milvus)。
 
-## 扩容集群 {#scale-cluster}
+## 扩容集群 {#expand-cluster}
 
 在**集群信息**区域，单击**大小**右侧的**扩容**，以打开**扩容集群**对话框。您可以为集群增加计算和存储资源。在对话框中，您最多可将集群资源扩展到 24 个 CU。如果您需要更大的 CU，请联系我们。
 
@@ -75,11 +75,13 @@ sidebar_position: 7
 
 要恢复挂起中的集群，请单击**操作**并从下拉列表中选择**恢复**。在**恢复集群**对话框中确认此操作后，集群的状态将从**挂起中**变为**恢复运行中**，然后再变为**运行中**。此时将根据集群 CU 大小和集群类型产生费用。
 
+此外，您还可以通过 RESTful API 挂起或恢复集群。有关更多接口信息，请参阅 [Suspend Cluster](https://docs.zilliz.com.cn/reference/suspend-cluster) 和 [Resume Cluster](https://docs.zilliz.com.cn/reference/resume-cluster)。
+
 ## 删除集群 {#delete-cluster}
 
 在**操作**下拉列表中，选择**删除**可删除集群及其相关数据。只有当您在**删除集群**对话框中确认删除操作后，Zilliz Cloud 才会该删除集群。
 
-## 相关文档 {#related-doc}
+## 相关文档 {#related-documents}
 
 - [连接集群](./connect-to-cluster)
 

@@ -39,7 +39,7 @@ curl https://assets.zilliz.com/medium_articles_2020_dpr_a13e0377ae.json \
 | `claps`        | INT64        | N/A      |
 | `responses`    | INT64        | N/A      |
 
-## 相关文档 {#related-doc}
+## 相关文档 {#related-documents}
 
 - [连接集群](./connect-to-cluster)
 

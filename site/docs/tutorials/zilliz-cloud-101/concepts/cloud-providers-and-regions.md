@@ -7,7 +7,7 @@ sidebar_position: 5
 
 使用 Zilliz Cloud 云服务，您可以轻松在公有云上创建和管理向量数据库集群。
 
-## 阿里云 {#aliyun}
+## 阿里云 {#alibaba-cloud}
 
 Zilliz Cloud 支持在阿里云上部署集群。
 

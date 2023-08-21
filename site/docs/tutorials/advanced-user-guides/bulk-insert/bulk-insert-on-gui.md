@@ -1,13 +1,13 @@
 ---
-slug: /批量插入数据
-sidebar_position: 2
+slug: /bulk-insert-on-gui
+sidebar_position: 0
 ---
 
-# 批量插入数据
+# 批量导入数据
 
-本文介绍如何将数据批量插入到 Collection。
+本文介绍如何将数据批量导入到 Collection。
 
-## 开始前 {#before-commencing}
+## 开始前 {#before-starting}
 
 请确保已完成以下步骤：
 
@@ -17,7 +17,7 @@ sidebar_position: 2
 
 - 已创建 Collection，且该 Collection 的 Schema 与示例数据集相匹配。已为该 Collection 创建索引，并已加载 Collection。详情请参见[定制 Schema](./use-customized-schema)。
 
-## 准备数据文件 {#preparing-data-files}
+## 准备数据文件 {#prepare-data-files}
 
 将数据导入 Collection 之前，应先将数据整理为基于行的 JSON 文件或多个 NumPy 文件。[示例数据集](./example-dataset-1)是基于行的 JSON 文件，可以直接用于完成接下来的步骤。
 
@@ -44,7 +44,7 @@ with open('path/to/medium_articles_2020_dpr.json') as f:
     # ]))
 ```
 
-## 通过控制台导入数据 {#import-data-through-the-console}
+## 通过控制台导入数据 {#importing-data-through-the-console}
 
 数据文件准备就绪后，可以直接从本地导入，也可以将文件上传到对象存储桶（如阿里云 OSS）进行导入。
 
@@ -55,20 +55,20 @@ with open('path/to/medium_articles_2020_dpr.json') as f:
 :::
 
 - 从本地文件导入
-  您只需将本地文件拖放到文件上传区域，或点击**点击上传**并选择目标文件即可开始导入。
+    您只需将本地文件拖放到文件上传区域，或点击**点击上传**并选择目标文件即可开始导入。
 
-  若要导入 NumPy 文件，需先将文件上传到对象存储桶。具体操作可参考[下文](https://zilliverse.feishu.cn/docx/WexbdEMOwodYYoxmu5nccUfHn7f#RtZQdKFu8o2tl0xOovOcyKMWnpc)。
+    若要导入 NumPy 文件，需先将文件上传到对象存储桶。具体操作可参考[下文](https://zilliverse.feishu.cn/docx/WexbdEMOwodYYoxmu5nccUfHn7f#RtZQdKFu8o2tl0xOovOcyKMWnpc)。
 
-  ![import_data_from_local_files](/img/import_data_from_local_files.png)
+    ![import_data_from_local_files](/img/import_data_from_local_files.png)
 
 - 从 OSS 对象存储导入
-  要从 OSS 对象存储导入数据，必须先将数据文件上传到存储桶。您可以将一个 JSON 文件或一组NumPy 文件上传到存储桶。上传完成后，请填写文件 URL 和访问密钥，以便 Zilliz Cloud 从存储桶中提取数据。
+    要从 OSS 对象存储导入数据，必须先将数据文件上传到存储桶。您可以将一个 JSON 文件或一组NumPy 文件上传到存储桶。上传完成后，请填写文件 URL 和访问密钥，以便 Zilliz Cloud 从存储桶中提取数据。
 
-  有关如何获取文件 URL 和访问密钥，请参见[获取单个或多个文件的 URL](https://help.aliyun.com/zh/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects?spm=a2c4g.11186623.0.i18) 和[创建 Access Key](https://help.aliyun.com/document_detail/53045.html?spm=a2c4g.53045.0.0.718a7f80sYRRJB)。 
+    有关如何获取文件 URL 和访问密钥，请参见[获取单个或多个文件的 URL](https://help.aliyun.com/zh/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects?spm=a2c4g.11186623.0.i18) 和[创建 Access Key](https://help.aliyun.com/document_detail/53045.html?spm=a2c4g.53045.0.0.718a7f80sYRRJB)。 
 
-  ![import_data_from_object_storage](/img/import_data_from_object_storage.png)
+    ![import_data_from_object_storage](/img/import_data_from_object_storage.png)
 
-## 通过 RESTful API 导入数据 {#import-data-via-restful-api}
+## 通过 RESTful API 导入数据 {#importing-data-through-restful-api}
 
 除了[通过控制台导入](https://zilliverse.feishu.cn/docx/WexbdEMOwodYYoxmu5nccUfHn7f#GGe2dK4Jsok5OWxCz8KcaBJKn5g)，Zilliz Cloud 也支持通过 RESTful API 导入数据。调用 RESTful API 之前，请确保已完成以下步骤：
 
@@ -107,7 +107,7 @@ curl --request GET \
      --header "content-type: application/json" \
 ```
 
-## 结果验证 {#result-verification}
+## 结果验证 {#result-validation}
 
 单击**导入**后，后台开始导入数据，您可以实时查看导入进度。
 

@@ -20,7 +20,7 @@ Entity 是指存储在 Zilliz Cloud 集群中的数据实体，包含用于处�
 
 :::
 
-## 删除单个 Entity {#delete-single-entity}
+## 删除单个 Entity {#delete-a-single-entity}
 
 如果您不再需要某个 Entity，可以参考以下示例代码删除 Entity：
 
@@ -76,7 +76,7 @@ console.log(res)
 
 :::
 
-## 批量删除 Entity {#bulk-delete-entity}
+## 批量删除 Entity {#batch-delete-entity}
 
 Zilliz Cloud 支持批量删除 Entity。可以参考以下示例代码批量删除 Entity：
 
@@ -133,7 +133,7 @@ console.log(res)
 
 :::
 
-## 相关文档 {#related-doc}
+## 相关文档 {#related-documents}
 
 - [插入 Entity](./insert-entities)
 

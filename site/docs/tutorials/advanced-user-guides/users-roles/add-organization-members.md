@@ -7,7 +7,7 @@ sidebar_position: 2
 
 本教程介绍如何添加组织成员。
 
-## 前提条件 {#prerequisites}
+## 前提条件 {#preconditions}
 
 开始前，请先确保：
 
@@ -15,7 +15,7 @@ sidebar_position: 2
 
 - 您是组织管理员。更多用户角色和权限详情，请阅读[角色与权限](./roles-privileges) 。
 
-## 操作步骤 {#steps}
+## 操作步骤 {#operating-steps}
 
 1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com.cn/login)。
 
@@ -43,11 +43,11 @@ sidebar_position: 2
 
 ![org_members](/img/org_members.png)
 
-## 结果 {#g-id-bold-result-g}
+## 结果 {#result}
 
 执行上述操作后，Zilliz Cloud 将向每个用户发送邀请电子邮件。在接受邀请之前，已被邀请的用户处于**待接受邀请**状态。一旦他们接受邀请，用户状态则会变为**已验证**表示用户已经加入了组织。您可以在组织用户列表页查看组织成员。
 
-## 相关主题 {#relative-topics}
+## 相关主题 {#related-topics}
 
 - [组织与项目](./organizations-projects) 
 

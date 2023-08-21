@@ -13,7 +13,7 @@ Zilliz Cloud 当前提供两种订阅版本：企业版和专有部署。
 
 首次注册 Zilliz Cloud 时，您将获赠 ¥300 免费额度，有效期为 30 天，可用于试用 Zilliz Cloud 企业版。
 
-## 文档推荐 {#recommended-documents}
+## 文档推荐 {#document-recommendation}
 
 - [连接集群](./connect-to-cluster) 
 

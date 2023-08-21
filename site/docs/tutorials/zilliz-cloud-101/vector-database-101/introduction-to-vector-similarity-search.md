@@ -13,11 +13,11 @@ sidebar_position: 2
 
 我们开始吧。
 
-## 比较 Embedding {#compare-embedding}
+## 比较 Embedding {#comparing-embedding}
 
 我们来看下几个词的 Embedding 向量的示例。下面例子中，我们将使用 `word2vec`，它这是一个古老的模型，使用了基于 **skipgrams** 的训练方法。虽然 BERT 和其他基于转换器的现代模型能够提供更多的语境化词汇 Embedding，但为了简单起见，我们还是使用 `word2vec`。如果您想了解更多信息，Jay Alammar 提供了一篇关于 `word2vec` 的[超棒的教程](https://jalammar.github.io/illustrated-word2vec/)。
 
-### 准备工作 {#preparations}
+### 准备工作 {#preparation-work}
 
 开始前，我们需要安装 `gensim` 库。
 
@@ -50,7 +50,7 @@ print(model.most_similar(positive=['Marlon_Brando']))
 
 Marlon Brando 曾与 Al Pacino 一起出演《教父》，与 Elia Kazan 一起出演《欲望号街车》。他还主演了《现代启示录》。
 
-### 示例 1：国王与**王后** {#example-1-the-king-and-the-queen}
+### 示例 1：国王与**王后** {#example-1-king-and-queen}
 
 向量可以相互加减，以演示潜在的语义变化。
 
@@ -84,7 +84,7 @@ print(model.most_similar(positive=['fruit'], topn=10)[9:])
 
 “Droid” 指的是三星首款 4G LTE 智能手机（“Samsung” + “iPhone” - “Apple” = “Droid”），而 “apple” 是与 “fruit” 相似度最高的第十个单词。
 
-## 向量搜索策略 {#vector-search-policy}
+## 向量搜索策略 {#vector-search-strategy}
 
 既然我们已经看到了 Embedding 的强大，下面我们简要地看一下实现最近邻搜索的方法。这不是全面的清单，我们只是介绍一些常见的方法，以说明如何大规模进行向量搜索。有的方法之间可能并不相互排斥，比如，可以将量化与空间划分结合起来使用。
 
@@ -98,7 +98,7 @@ print(model.most_similar(positive=['fruit'], topn=10)[9:])
 
 由于老式搜索缺乏空间复杂性以及与之相关的常数空间开销，即使进行适当数量的向量查询时，该方法的性能也好过分片。
 
-### 分片 {#shard}
+### 分片 {#sharding}
 
 分片不是单个算法，而是一组使用相同概念的算法。
 
@@ -106,7 +106,7 @@ K 维树（kd-trees）可能是这个系列中最有名的，它的工作原理�
 
 倒置文件索引（IVF）也是一种分片形式，它的工作原理是将每个向量分配给其最近的中心点，然后通过首先确定查询向量的最近中心点并围绕该中心点进行搜索，这样就大大减少了需要搜索的向量数。IVF 是一种相当流行的索引策略，通常与其他索引算法相结合以提高性能。
 
-### 量化 {#quantisation}
+### 量化 {#quantization}
 
 量化是一种通过减少向量的精度来减少数据总量的技术。
 
@@ -136,7 +136,7 @@ ANNOY 的工作方式是，首先在数据库中随机选择两个向量，然�
 
 （来源：https://github.com/spotify/annoy）
 
-## 常用的相似性度量 {#commonly-used-similarity-metrics}
+## 常用的相似性度量 {#commonly-used-similarity-measures}
 
 如果没有相似性度量——计算两个向量之间距离的方法，再好的向量数据库也没有用。因为存在许多度量，我们在这里只讨论最常用的子集。
 
@@ -176,7 +176,7 @@ L1 距离通常也被称为曼哈顿距离，因从曼哈顿的 A 点到 B 点�
 
 你可以忽略这些相似性度量，因为大多数应用都使用余弦相似度，而不是浮点 Embedding。
 
-## 总结 {#conclusion}
+## 总结 {#summary}
 
 本教程中，我们了解了向量相似性搜索，以及一些常见的向量搜索算法和距离度量。这里有一些主要的收获：
 
@@ -190,7 +190,7 @@ L1 距离通常也被称为曼哈顿距离，因从曼哈顿的 A 点到 B 点�
 
 希望你喜欢这篇文章 ，也欢迎在 [Twitter](https://twitter.com/zilliz_universe) 和 [LinkedIn](https://www.linkedin.com/company/zilliz/) 上关注我们，获取更多内容。
 
-## 相关文档 {#related-doc}
+## 相关文档 {#related-documents}
 
 - [什么是非结构化数据？](./introduction-to-unstructured-data)
 

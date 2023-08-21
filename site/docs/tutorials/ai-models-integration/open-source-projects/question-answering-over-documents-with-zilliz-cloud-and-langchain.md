@@ -7,7 +7,7 @@ sidebar_position: 0
 
 本文将演示如何使用 Zilliz Cloud 和 LangChain 搭建基于大语言模型（LLM）的问答系统。在本例中，我们将使用一个 1 CU 的 Cluster，还将使用 OpenAI 的 Embedding API 来获取指定文本的向量表示。现在就让我们开始吧。
 
-## 准备工作 {#preparations}
+## 准备工作 {#preparation-work}
 
 运行本页中的脚本需要 **pymilvus** 和 **langchain**。另外，我们还需要使用 OpenAI 的 Embedding API 来获取指定文本的向量表示并将其存入向量数据库中，所以还需要安装 openai 和 tiktoken。如果你的系统中还没有安装这些依赖，可以运行如下命令。
 
@@ -15,7 +15,7 @@ sidebar_position: 0
 python3 -m pip install --upgrade pymilvus langchain openai tiktoken
 ```
 
-## 主要参数 {#main-parameters}
+## 主要参数 {#main-parameter}
 
 在这一小节里，我们需要为本页中的脚本设置一些公共参数。请根据需要将它们的值修改成自己的。
 
@@ -31,7 +31,7 @@ OPENAI_API_KEY = "sk-******" # OpenAI API 密钥, 示例: "sk-xxxxxxxxxxxxxxxxxx
 environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 ```
 
-## 准备数据 {#preparing-data}
+## 准备数据 {#prepare-data}
 
 在开始前，需要完成如下步骤
 

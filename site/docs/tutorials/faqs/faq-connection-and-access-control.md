@@ -12,13 +12,13 @@ sidebar_position: 1
 在以下情况下可能会发生连接超时错误：
 
 - 网络条件不佳
-  如网络条件不佳，建议在连接时调节 `timeout` 参数值。`timeout` 参数值默认为30秒。这意味着如果在发送连接请求后 30 秒内未收到响应，连接操作将超时。
+    如网络条件不佳，建议在连接时调节 `timeout` 参数值。`timeout` 参数值默认为30秒。这意味着如果在发送连接请求后 30 秒内未收到响应，连接操作将超时。
 
 - 连接参数不正确
-  Zilliz Cloud 集群已启用 TLS。请确保在连接参数中加入 `secure`，并将其设置为 `true`。未正确设置改参数可能导致连接失败和超时。
+    Zilliz Cloud 集群已启用 TLS。请确保在连接参数中加入 `secure`，并将其设置为 `true`。未正确设置改参数可能导致连接失败和超时。
 
 - 未将本地 IP 地址加入白名单
-  连接集群时，请确保关闭 VPN /代理，并已将获取到的公共 IP 地址（不可使用私有 IP 地址）加入集群白名单中。
+    连接集群时，请确保关闭 VPN /代理，并已将获取到的公共 IP 地址（不可使用私有 IP 地址）加入集群白名单中。
 
 **为什么无法连接集群?**
 
@@ -39,9 +39,9 @@ sidebar_position: 1
 1. 确保您已安装最新版本的 [Node.js SDK](https://github.com/milvus-io/milvus-sdk-node)。
 
 1. 确保您已初始化客户端。
-  ```javascript
-  const client = new MilvusClient('<https://your-db-address-with-port>', true, 'your-db-user', 'your-db-pasword');
-  ```
+    ```javascript
+    const client = new MilvusClient('<https://your-db-address-with-port>', true, 'your-db-user', 'your-db-pasword');
+    ```
 
 **如何解决连接时身份验证失败？**
 
@@ -50,4 +50,4 @@ sidebar_position: 1
 1. 连接 Zilliz Cloud 集群时，请确保使用正确的用户名和密码。
 
 1. 如忘记密码，请点击想要连接的集群并切换至 **Users** 选项卡。点击 **+ User** 以创建新用户和密码。
-  ![create_user](/img/create_user.png)
+    ![create_user](/img/create_user.png)

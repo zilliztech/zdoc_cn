@@ -56,7 +56,7 @@ mr = collection.insert(data)
 
 其实，只需要 3 行代码就可以完成。对于像 FAISS 或 ScaNN 这样的库，如果不手动在某些检查点上重新创建索引，就没有简单的方法可以做到这一点。即便可以，向量搜索库仍然缺乏可扩展性和多租户的特性，而这两个都是向量数据库最重要的特性。
 
-## 传统数据库上的向量搜索插件 {#vector-search-plugin-on-traditional-database}
+## 传统数据库上的向量搜索插件 {#vector-search-plugin-on-traditional-databases}
 
 很好，现在我们已经知道了向量搜索库和向量数据库之间的区别，下面让我们来看看向量数据库与向量搜索插件有何不同。
 
@@ -131,7 +131,7 @@ results = collection.search(**search_param)
 
 我们刚刚介绍了相当多的内容，现在来快速总结一下。Milvus 比向量搜索插件更强大，因为 Milvus 本身定位是一个向量数据库，具有更丰富的功能和更适合非结构化数据的架构。
 
-## 技术挑战 {#the-technical-challenge}
+## 技术挑战 {#technical-challenges}
 
 在前面，我列出了向量数据库应该具有的理想功能，然后将向量数据库与向量搜索库和向量搜索插件进行比较。现在，让我们简单来了解一下向量数据库的技术挑战。未来的教程中，我们将介绍 Milvus 是如何解决这些问题的，以及这些技术是如何帮助 Milvus 在性能方面胜过其他开源向量数据库。
 
@@ -143,7 +143,7 @@ results = collection.search(**search_param)
 
 注意，这三个部分中的每一个都对应着一个主要的技术挑战。既然如此，就不存在一个放之四海而皆准的向量数据库架构。最好的向量数据库将通过专注于提供第一节中提到的功能来克服所有这些技术挑战。
 
-## 向量数据库的优势 {#advantages-of-vector-databases}
+## 向量数据库的优势 {#the-advantages-of-vector-databases}
 
 与传统数据库相比，向量数据库在涉及相似性搜索、机器学习和人工智能应用的用例中具有许多优势。以下是向量数据库的一些优势：
 
@@ -171,7 +171,7 @@ results = collection.search(**search_param)
 
 使用该基准，用户可以在一套标准化的条件下比较向量数据库和搜索算法的性能，从而选择最适合特定场景的解决方案。
 
-## 总结 {#conclusion}
+## 总结 {#summary}
 
 本教程中，我们对向量数据库进行了快速浏览。具体来说，我们了解了 1）成熟的向量数据库必备的功能，2）向量数据库与向量搜索库的区别，3）向量数据库与传统数据库或搜索系统中的向量搜索插件的区别，以及 4）建立向量数据库所面临的挑战。
 
@@ -187,7 +187,7 @@ results = collection.search(**search_param)
 
 - 其他常见的向量数据库应用
 
-## 相关文档 {#related-doc}
+## 相关文档 {#related-documents}
 
 - [什么是非结构化数据？](./introduction-to-unstructured-data)
 

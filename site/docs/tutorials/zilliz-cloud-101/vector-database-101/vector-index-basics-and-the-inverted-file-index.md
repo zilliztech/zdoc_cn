@@ -17,7 +17,7 @@ Milvus 使用 [Facebook AI Similarity Search（FAISS）](https://github.com/face
 
 如果你已经熟悉了 FAISS，那么你对接下来几个教程中要介绍的一些概念可能就不会太陌生。
 
-## 索引概览 {#index-overview}
+## 索引概览 {#reference-overview}
 
 广义上说，目前有四种不同类型的向量搜索算法：
 
@@ -130,7 +130,7 @@ True
 
 这就是关于 IVF 的全部介绍。
 
-## 总结 {#conclusion}
+## 总结 {#summary}
 
 在本教程中，我们看了向量索引的三个单独组成部分，以及两种最常用的方法——平面索引和倒置文件索引。这是两种最基本的策略，我们后面会以此为基础再进一步深入研究更复杂的索引类型。
 
@@ -138,7 +138,7 @@ True
 
 本教程的所有代码可在 GitHub 上免费获取：[https://github.com/fzliu/vector-search](https://github.com/fzliu/vector-search)。
 
-## 相关文档 {#related-doc}
+## 相关文档 {#related-documents}
 
 - [什么是非结构化数据？](./introduction-to-unstructured-data)
 

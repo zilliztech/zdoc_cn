@@ -257,7 +257,7 @@ class ProductQuantizer:
 
 这就是有关乘积量化的全部！为了在搜索过程中实现真正地加速，我们可以额外花费一点内存来计算子空间中所有中心点的距离表，就把这作为一个练习留给大家吧。
 
-## 总结 {#conclusion}
+## 总结 {#summary}
 
 本教程中，我们对标量量化和乘积量化进行了深入研究，并创建了我们自己的简单实现。标量量化是一个很好的工具，但是乘积量化要更加强大，而且无论我们的向量数据如何分布，都可以使用乘积量化。虽然乘积量化可以帮助大大加快查询时间，同时也可以减少内存占用，但它在检索方面的作用可能不是那么大。我们会在未来的教程中对乘积量化和其他几种索引策略进行基准测试。
 
@@ -265,7 +265,7 @@ class ProductQuantizer:
 
 本教程的所有代码都可以在 GitHub 上免费获取：[https://github.com/fzliu/vector-search](https://github.com/fzliu/vector-search%E3%80%82)。
 
-## 相关文档 {#related-doc}
+## 相关文档 {#related-documents}
 
 - [什么是非结构化数据？](./introduction-to-unstructured-data)
 

@@ -27,7 +27,7 @@ sidebar_position: 3
 
 ![view_restore_history](/img/view_restore_history.png)
 
-## 相关文档 {#related-doc}
+## 相关文档 {#related-documents}
 
 - [创建备份快照](./create-snapshot)
 

@@ -9,7 +9,7 @@ sidebar_position: 3
 
 您需要在 Zilliz Cloud 上创建一个大小为 1 CU 的 Cluster。
 
-## 准备工作 {#preparations}
+## 准备工作 {#preparation-work}
 
 在本示例中，我们将使用 **pymilvus** 连接 Zilliz Cloud，使用 **sentencetransformers** 来生成向量，并使用 **gdown** 来下载示例数据集。
 
@@ -17,7 +17,7 @@ sidebar_position: 3
 pip install pymilvus sentence-transformers gdown
 ```
 
-## 准备数据 {#preparing-data}
+## 准备数据 {#prepare-data}
 
 首先，我们要使用 **gdown** 从公共 Google Drive 中下载数据集压缩包，然后使用 Python 自带的 **zipfile** 对该压缩包进行解压缩。
 
@@ -33,7 +33,7 @@ with zipfile.ZipFile("./movies.zip","r") as zip_ref:
     zip_ref.extractall("./movies")
 ```
 
-## 主要参数 {#main-parameters}
+## 主要参数 {#main-parameter}
 
 本示例中使用的主要公共参数都在此处定义。请根据需求修改参数值。
 
@@ -57,47 +57,47 @@ TOP_K = 3
 在这一小节，我们将完成 Zilliz Cloud 的设置，涉及如下步骤：
 
 1. 使用提供的端点 URI 连接 Zilliz Cloud cluster。
-  ```python
-  from pymilvus import connections
-  
-  # 连接 Cluster
-  connections.connect(uri=URI, user=USER, password=PASSWORD, secure=True)
-  ```
+    ```python
+    from pymilvus import connections
+    
+    # 连接 Cluster
+    connections.connect(uri=URI, user=USER, password=PASSWORD, secure=True)
+    ```
 
 1. 如果需要创建的 Collection 已存在，删除该 Collection。
-  ```python
-  from pymilvus import utility
-  
-  # 删除已存在的同名 Collection
-  if utility.has_collection(COLLECTION_NAME):
-      utility.drop_collection(COLLECTION_NAME)
-  ```
+    ```python
+    from pymilvus import utility
+    
+    # 删除已存在的同名 Collection
+    if utility.has_collection(COLLECTION_NAME):
+        utility.drop_collection(COLLECTION_NAME)
+    ```
 
 1. 创建一个 Collection 用于存储电影 ID，电影名称以及该名称的向量表示。
-  ```python
-  from pymilvus import FieldSchema, CollectionSchema, DataType, Collection
-  
-  # 创建一个 Collection，包含 id，title 和 embedding 三个字段
-  fields = [
-      FieldSchema(name='id', dtype=DataType.INT64, is_primary=True, auto_id=True),
-      FieldSchema(name='title', dtype=DataType.VARCHAR, max_length=200),  # VARCHARS need a maximum length, so for this example they are set to 200 characters
-      FieldSchema(name='embedding', dtype=DataType.FLOAT_VECTOR, dim=DIMENSION)
-  ]
-  schema = CollectionSchema(fields=fields)
-  collection = Collection(name=COLLECTION_NAME, schema=schema)
-  ```
+    ```python
+    from pymilvus import FieldSchema, CollectionSchema, DataType, Collection
+    
+    # 创建一个 Collection，包含 id，title 和 embedding 三个字段
+    fields = [
+        FieldSchema(name='id', dtype=DataType.INT64, is_primary=True, auto_id=True),
+        FieldSchema(name='title', dtype=DataType.VARCHAR, max_length=200),  # VARCHARS need a maximum length, so for this example they are set to 200 characters
+        FieldSchema(name='embedding', dtype=DataType.FLOAT_VECTOR, dim=DIMENSION)
+    ]
+    schema = CollectionSchema(fields=fields)
+    collection = Collection(name=COLLECTION_NAME, schema=schema)
+    ```
 
 1. 为 Collection 创建索引文件，并将 Collection 加载到内存。
-  ```python
-  # 使用 AUTOINDEX 为 Collection 创建索引
-  index_params = {
-      'index_type': 'AUTOINDEX',
-      'metric_type': 'L2',
-      'params': {}
-  }
-  collection.create_index(field_name="image_embedding", index_params=index_params)
-  collection.load()
-  ```
+    ```python
+    # 使用 AUTOINDEX 为 Collection 创建索引
+    index_params = {
+        'index_type': 'AUTOINDEX',
+        'metric_type': 'L2',
+        'params': {}
+    }
+    collection.create_index(field_name="image_embedding", index_params=index_params)
+    collection.load()
+    ```
 
 在完成上述步骤后，我们就可以向 Collection 中插入数据了。在创建索引文件后插入的任何数据都会被自动索引并可被立即用于搜索。如果数据正在索引过程中，Zilliz Cloud 会使用暴力搜索模式，所以搜索过程可能会比较慢。
 
@@ -156,7 +156,7 @@ if len(data_batch[0]) != 0:
 collection.flush()
 ```
 
-## 执行搜索 {#perform-your-search}
+## 执行搜索 {#perform-search}
 
 在向 Zilliz Cloud 插入所有数据后，我们就可以开始执行搜索了。在本示例中，我们将根据电影情节进行电影检索。由于代码中执行的是批量搜索，因此搜索时间是指完成同一批次中所有电影情节的相似性搜索的时间。
 

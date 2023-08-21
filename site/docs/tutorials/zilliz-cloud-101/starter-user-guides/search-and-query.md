@@ -10,11 +10,11 @@ import TabItem from '@theme/TabItem';
 
 本文介绍如何在 Zilliz Cloud 中执行近似最近邻（Approximate Nearest Neighbour，ANN）搜索和查询。搜索是指在 Collection 中查找与指定查询向量最接近的向量，查询是基于指定条件筛选出满足条件的数据。
 
-## 概述 {#overview}
+## 概述 {#summary}
 
 Zilliz Cloud 采用 ANN 算法来处理向量搜索请求，支持搜索并返回与指定查询向量最相似的前 *K* 个 Entity。为优化性能和吞吐，Zilliz Cloud 支持批量搜索，即同时指定多个查询向量并行搜索。您可以定义布尔表达式来缩小 ANN 搜索的范围。
 
-## 开始前 {#before-commencing}
+## 开始前 {#before-starting}
 
 执行 ANN 搜索或查询前，请确保已完成以下步骤：
 
@@ -30,7 +30,7 @@ Zilliz Cloud 采用 ANN 算法来处理向量搜索请求，支持搜索并返�
 
 :::
 
-## 单向量搜索 {#one-vector-search}
+## 单向量搜索 {#one-way-search}
 
 单向量搜索是指搜索并返回与指定的某个查询向量最相似的前 *K* 个Entity。
 
@@ -336,493 +336,493 @@ res = await client.search({
 以下是一些带有过滤条件的 ANN 搜索示例。
 
 - 搜索阅读时间（`reading_time`）在 10 到 15 分钟内的文章：
-  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
-  <TabItem value='python'>
+    <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
+    <TabItem value='python'>
 
-  ```python
-  with open("path/to/medium_articles_2020_dpr.json") as f:
-      data = json.load(f)
-  
-  res = client.search(
-      collection_name="medium_articles_2020",
-      data = [data["rows"][0]["title_vector"]],
-      output_fields=["title", "reading_time"],
-      limit=5,
-      filter="10 < reading_time < 15"
-  )
-  
-  print(res)
-  
-  # 输出
-  # [
-  #     [
-  #         {
-  #             "id": 0,
-  #             "distance": -1.0,
-  #             "entity": {
-  #                 "title": "The Reported Mortality Rate of Coronavirus Is Not Important",
-  #                 "reading_time": 13
-  #             }
-  #         },
-  #         {
-  #             "id": 7,
-  #             "distance": -0.6361640095710754,
-  #             "entity": {
-  #                 "title": "Building Comprehensible Customer Churn Prediction Models",
-  #                 "reading_time": 13
-  #             }
-  #         },
-  #         {
-  #             "id": 103,
-  #             "distance": -0.6340133547782898,
-  #             "entity": {
-  #                 "title": "A Primer on Domain Adaptation",
-  #                 "reading_time": 12
-  #             }
-  #         },
-  #         {
-  #             "id": 90,
-  #             "distance": -0.6230067014694214,
-  #             "entity": {
-  #                 "title": "SVM: An optimization problem",
-  #                 "reading_time": 11
-  #             }
-  #         }
-  #     ]
-  # ]
-  ```
-  
-  </TabItem>
+    ```python
+    with open("path/to/medium_articles_2020_dpr.json") as f:
+        data = json.load(f)
+    
+    res = client.search(
+        collection_name="medium_articles_2020",
+        data = [data["rows"][0]["title_vector"]],
+        output_fields=["title", "reading_time"],
+        limit=5,
+        filter="10 < reading_time < 15"
+    )
+    
+    print(res)
+    
+    # 输出
+    # [
+    #     [
+    #         {
+    #             "id": 0,
+    #             "distance": -1.0,
+    #             "entity": {
+    #                 "title": "The Reported Mortality Rate of Coronavirus Is Not Important",
+    #                 "reading_time": 13
+    #             }
+    #         },
+    #         {
+    #             "id": 7,
+    #             "distance": -0.6361640095710754,
+    #             "entity": {
+    #                 "title": "Building Comprehensible Customer Churn Prediction Models",
+    #                 "reading_time": 13
+    #             }
+    #         },
+    #         {
+    #             "id": 103,
+    #             "distance": -0.6340133547782898,
+    #             "entity": {
+    #                 "title": "A Primer on Domain Adaptation",
+    #                 "reading_time": 12
+    #             }
+    #         },
+    #         {
+    #             "id": 90,
+    #             "distance": -0.6230067014694214,
+    #             "entity": {
+    #                 "title": "SVM: An optimization problem",
+    #                 "reading_time": 11
+    #             }
+    #         }
+    #     ]
+    # ]
+    ```
+    
+    </TabItem>
 
-  <TabItem value='javascript'>
+    <TabItem value='javascript'>
 
-  ```javascript
-  const fs = require("fs")
-  
-  const data = JSON.parse(fs.readFileSync('path/to/medium_articles_2020_dpr.json', 'utf8'));
-  
-  res = await client.search({
-      collection_name: "medium_articles_2020",
-      vector: data.rows[0].title_vector,
-      limit: 5,
-      output_fields: ['title', 'reading_time'],
-      filter: "10 < reading_time < 15"
-  })
-  ```
-  
-  </TabItem>
-  </Tabs>
+    ```javascript
+    const fs = require("fs")
+    
+    const data = JSON.parse(fs.readFileSync('path/to/medium_articles_2020_dpr.json', 'utf8'));
+    
+    res = await client.search({
+        collection_name: "medium_articles_2020",
+        vector: data.rows[0].title_vector,
+        limit: 5,
+        output_fields: ['title', 'reading_time'],
+        filter: "10 < reading_time < 15"
+    })
+    ```
+    
+    </TabItem>
+    </Tabs>
 
 - 搜索点赞数（`claps`）超过 1500 且回应数（`responses`）超过 15 的文章：
-  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
-  <TabItem value='python'>
+    <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
+    <TabItem value='python'>
 
-  ```python
-  with open("path/to/medium_articles_2020_dpr.json") as f:
-      data = json.load(f)
-  
-  res = client.search(
-      collection_name="medium_articles_2020",
-      data=[data["rows"][0]["title_vector"]],
-      output_fields=['title', 'claps', 'responses'],
-      limit=5,
-      filter='claps > 1500 and responses > 15'
-  )
-  
-  # 输出
-  # [
-  #     [
-  #         {
-  #             "id": 130,
-  #             "distance": -0.5737712383270264,
-  #             "entity": {
-  #                 "title": "The Only \u201cCompetition\u201d Slide You\u2019ll Ever Need in a Pitch Deck",
-  #                 "claps": 1940,
-  #                 "responses": 25
-  #             }
-  #         },
-  #         {
-  #             "id": 66,
-  #             "distance": -0.5508043766021729,
-  #             "entity": {
-  #                 "title": "How to Be Memorable in Social Settings",
-  #                 "claps": 8600,
-  #                 "responses": 34
-  #             }
-  #         },
-  #         {
-  #             "id": 69,
-  #             "distance": -0.4541875422000885,
-  #             "entity": {
-  #                 "title": "Top 10 In-Demand programming languages to learn in 2020",
-  #                 "claps": 3000,
-  #                 "responses": 18
-  #             }
-  #         }
-  #     ]
-  # ]
-  ```
-  
-  </TabItem>
+    ```python
+    with open("path/to/medium_articles_2020_dpr.json") as f:
+        data = json.load(f)
+    
+    res = client.search(
+        collection_name="medium_articles_2020",
+        data=[data["rows"][0]["title_vector"]],
+        output_fields=['title', 'claps', 'responses'],
+        limit=5,
+        filter='claps > 1500 and responses > 15'
+    )
+    
+    # 输出
+    # [
+    #     [
+    #         {
+    #             "id": 130,
+    #             "distance": -0.5737712383270264,
+    #             "entity": {
+    #                 "title": "The Only \u201cCompetition\u201d Slide You\u2019ll Ever Need in a Pitch Deck",
+    #                 "claps": 1940,
+    #                 "responses": 25
+    #             }
+    #         },
+    #         {
+    #             "id": 66,
+    #             "distance": -0.5508043766021729,
+    #             "entity": {
+    #                 "title": "How to Be Memorable in Social Settings",
+    #                 "claps": 8600,
+    #                 "responses": 34
+    #             }
+    #         },
+    #         {
+    #             "id": 69,
+    #             "distance": -0.4541875422000885,
+    #             "entity": {
+    #                 "title": "Top 10 In-Demand programming languages to learn in 2020",
+    #                 "claps": 3000,
+    #                 "responses": 18
+    #             }
+    #         }
+    #     ]
+    # ]
+    ```
+    
+    </TabItem>
 
-  <TabItem value='javascript'>
+    <TabItem value='javascript'>
 
-  ```javascript
-  const fs = require("fs")
-  
-  const data = JSON.parse(fs.readFileSync('path/to/medium_articles_2020_dpr.json', 'utf8'));
-  
-  res = await client.search({
-      collection_name: "medium_articles_2020",
-      vector: data.rows[0].title_vector,
-      limit: 5,
-      output_fields: ['title', 'claps', 'responses'],
-      filter: "claps > 1500 and responses > 15"
-  })
-  ```
-  
-  </TabItem>
-  </Tabs>
+    ```javascript
+    const fs = require("fs")
+    
+    const data = JSON.parse(fs.readFileSync('path/to/medium_articles_2020_dpr.json', 'utf8'));
+    
+    res = await client.search({
+        collection_name: "medium_articles_2020",
+        vector: data.rows[0].title_vector,
+        limit: 5,
+        output_fields: ['title', 'claps', 'responses'],
+        filter: "claps > 1500 and responses > 15"
+    })
+    ```
+    
+    </TabItem>
+    </Tabs>
 
 - 搜索由 **Towards Data Science** 发布的文章：
-  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
-  <TabItem value='python'>
+    <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
+    <TabItem value='python'>
 
-  ```python
-  with open("path/to/medium_articles_2020_dpr.json") as f:
-      data = json.load(f)
-  
-  res = client.search(
-      collection_name="medium_articles_2020",
-      data=[data["rows"][0]["title_vector"]],
-      limit=5,
-      output_fields=["title", "publication"],
-      filter='publication == "Towards Data Science"'
-  )
-  
-  # 输出
-  # [
-  #     [
-  #         {
-  #             "id": 70,
-  #             "distance": -0.7525784969329834,
-  #             "entity": {
-  #                 "title": "How bad will the Coronavirus Outbreak get? \u2014 Predicting the outbreak figures",
-  #                 "publication": "Towards Data Science"
-  #             }
-  #         },
-  #         {
-  #             "id": 111,
-  #             "distance": -0.6888885498046875,
-  #             "entity": {
-  #                 "title": "The role of AI in web-based ADA and WCAG compliance",
-  #                 "publication": "Towards Data Science"
-  #             }
-  #         },
-  #         {
-  #             "id": 103,
-  #             "distance": -0.6340133547782898,
-  #             "entity": {
-  #                 "title": "A Primer on Domain Adaptation",
-  #                 "publication": "Towards Data Science"
-  #             }
-  #         },
-  #         {
-  #             "id": 94,
-  #             "distance": -0.6249957084655762,
-  #             "entity": {
-  #                 "title": "Why Machine Learning Validation Sets Grow Stale",
-  #                 "publication": "Towards Data Science"
-  #             }
-  #         },
-  #         {
-  #             "id": 90,
-  #             "distance": -0.6230067014694214,
-  #             "entity": {
-  #                 "title": "SVM: An optimization problem",
-  #                 "publication": "Towards Data Science"
-  #             }
-  #         }
-  #     ]
-  # ]
-  ```
-  
-  </TabItem>
+    ```python
+    with open("path/to/medium_articles_2020_dpr.json") as f:
+        data = json.load(f)
+    
+    res = client.search(
+        collection_name="medium_articles_2020",
+        data=[data["rows"][0]["title_vector"]],
+        limit=5,
+        output_fields=["title", "publication"],
+        filter='publication == "Towards Data Science"'
+    )
+    
+    # 输出
+    # [
+    #     [
+    #         {
+    #             "id": 70,
+    #             "distance": -0.7525784969329834,
+    #             "entity": {
+    #                 "title": "How bad will the Coronavirus Outbreak get? \u2014 Predicting the outbreak figures",
+    #                 "publication": "Towards Data Science"
+    #             }
+    #         },
+    #         {
+    #             "id": 111,
+    #             "distance": -0.6888885498046875,
+    #             "entity": {
+    #                 "title": "The role of AI in web-based ADA and WCAG compliance",
+    #                 "publication": "Towards Data Science"
+    #             }
+    #         },
+    #         {
+    #             "id": 103,
+    #             "distance": -0.6340133547782898,
+    #             "entity": {
+    #                 "title": "A Primer on Domain Adaptation",
+    #                 "publication": "Towards Data Science"
+    #             }
+    #         },
+    #         {
+    #             "id": 94,
+    #             "distance": -0.6249957084655762,
+    #             "entity": {
+    #                 "title": "Why Machine Learning Validation Sets Grow Stale",
+    #                 "publication": "Towards Data Science"
+    #             }
+    #         },
+    #         {
+    #             "id": 90,
+    #             "distance": -0.6230067014694214,
+    #             "entity": {
+    #                 "title": "SVM: An optimization problem",
+    #                 "publication": "Towards Data Science"
+    #             }
+    #         }
+    #     ]
+    # ]
+    ```
+    
+    </TabItem>
 
-  <TabItem value='javascript'>
+    <TabItem value='javascript'>
 
-  ```javascript
-  const fs = require("fs")
-  
-  const data = JSON.parse(fs.readFileSync('path/to/medium_articles_2020_dpr.json', 'utf8'));
-  
-  res = await client.search({
-      collection_name: "medium_articles_2020",
-      vector: data.rows[0].title_vector,
-      limit: 5,
-      output_fields: ['title', 'publication'],
-      filter: 'publication == "Towards Data Science"'
-  })
-  ```
-  
-  </TabItem>
-  </Tabs>
+    ```javascript
+    const fs = require("fs")
+    
+    const data = JSON.parse(fs.readFileSync('path/to/medium_articles_2020_dpr.json', 'utf8'));
+    
+    res = await client.search({
+        collection_name: "medium_articles_2020",
+        vector: data.rows[0].title_vector,
+        limit: 5,
+        output_fields: ['title', 'publication'],
+        filter: 'publication == "Towards Data Science"'
+    })
+    ```
+    
+    </TabItem>
+    </Tabs>
 
 - 搜索不是由 **Towards Data Science** 和 **Personal Growth** 发布的文章：
-  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
-  <TabItem value='python'>
+    <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
+    <TabItem value='python'>
 
-  ```python
-  with open("path/to/medium_articles_2020_dpr.json") as f:
-      data = json.load(f)
-  
-  res = client.search(
-      collection_name="medium_articles_2020",
-      data=[data["rows"][0]["title_vector"]],
-      output_fields=["title", "publication"],
-      limit=5,
-      filter='publication not in ["Towards Data Science", "Personal Growth"]'
-  )
-  
-  # 输出
-  # [
-  #     [
-  #         {
-  #             "id": 0,
-  #             "distance": -1.0,
-  #             "entity": {
-  #                 "title": "The Reported Mortality Rate of Coronavirus Is Not Important",
-  #                 "publication": "The Startup"
-  #             }
-  #         },
-  #         {
-  #             "id": 160,
-  #             "distance": -0.7132074236869812,
-  #             "entity": {
-  #                 "title": "The Funeral Industry is a Killer",
-  #                 "publication": "The Startup"
-  #             }
-  #         },
-  #         {
-  #             "id": 196,
-  #             "distance": -0.6882869601249695,
-  #             "entity": {
-  #                 "title": "The Question We Should Be Asking About the Cost of Youth Sports",
-  #                 "publication": "The Startup"
-  #             }
-  #         },
-  #         {
-  #             "id": 51,
-  #             "distance": -0.6719912886619568,
-  #             "entity": {
-  #                 "title": "What if Facebook had to pay you for the profit they are making?",
-  #                 "publication": "The Startup"
-  #             }
-  #         }
-  #     ]
-  # ]
-  ```
-  
-  </TabItem>
+    ```python
+    with open("path/to/medium_articles_2020_dpr.json") as f:
+        data = json.load(f)
+    
+    res = client.search(
+        collection_name="medium_articles_2020",
+        data=[data["rows"][0]["title_vector"]],
+        output_fields=["title", "publication"],
+        limit=5,
+        filter='publication not in ["Towards Data Science", "Personal Growth"]'
+    )
+    
+    # 输出
+    # [
+    #     [
+    #         {
+    #             "id": 0,
+    #             "distance": -1.0,
+    #             "entity": {
+    #                 "title": "The Reported Mortality Rate of Coronavirus Is Not Important",
+    #                 "publication": "The Startup"
+    #             }
+    #         },
+    #         {
+    #             "id": 160,
+    #             "distance": -0.7132074236869812,
+    #             "entity": {
+    #                 "title": "The Funeral Industry is a Killer",
+    #                 "publication": "The Startup"
+    #             }
+    #         },
+    #         {
+    #             "id": 196,
+    #             "distance": -0.6882869601249695,
+    #             "entity": {
+    #                 "title": "The Question We Should Be Asking About the Cost of Youth Sports",
+    #                 "publication": "The Startup"
+    #             }
+    #         },
+    #         {
+    #             "id": 51,
+    #             "distance": -0.6719912886619568,
+    #             "entity": {
+    #                 "title": "What if Facebook had to pay you for the profit they are making?",
+    #                 "publication": "The Startup"
+    #             }
+    #         }
+    #     ]
+    # ]
+    ```
+    
+    </TabItem>
 
-  <TabItem value='javascript'>
+    <TabItem value='javascript'>
 
-  ```javascript
-  const fs = require("fs")
-  
-  const data = JSON.parse(fs.readFileSync('path/to/medium_articles_2020_dpr.json', 'utf8'));
-  
-  res = await client.search({
-      collection_name: "medium_articles_2020",
-      vector: data.rows[0].title_vector,
-      limit: 5,
-      output_fields: ['title', 'publication'],
-      filter: 'publication not in ["Towards Data Science", "Personal Growth"]'
-  })
-  ```
-  
-  </TabItem>
-  </Tabs>
+    ```javascript
+    const fs = require("fs")
+    
+    const data = JSON.parse(fs.readFileSync('path/to/medium_articles_2020_dpr.json', 'utf8'));
+    
+    res = await client.search({
+        collection_name: "medium_articles_2020",
+        vector: data.rows[0].title_vector,
+        limit: 5,
+        output_fields: ['title', 'publication'],
+        filter: 'publication not in ["Towards Data Science", "Personal Growth"]'
+    })
+    ```
+    
+    </TabItem>
+    </Tabs>
 
 - 搜索标题以 **Top** 开头的文章：
-  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
-  <TabItem value='python'>
+    <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
+    <TabItem value='python'>
 
-  ```python
-  with open("path/to/medium_articles_2020_dpr.json") as f:
-      data = json.load(f)
-  
-  res = client.search(
-      collection_name="medium_articles_2020",
-      data=[data["rows"][0]["title_vector"]],
-      output_fields=["title", "link"],
-      limit=5,
-      filter='title like "Top%"'
-  )
-  
-  # 输出
-  # [
-  #     [
-  #         {
-  #             "id": 75,
-  #             "distance": -0.5751268267631531,
-  #             "entity": {
-  #                 "title": "Top Trends of Graph Machine Learning in 2020",
-  #                 "link": "https://towardsdatascience.com/top-trends-of-graph-machine-learning-in-2020-1194175351a3"
-  #             }
-  #         },
-  #         {
-  #             "id": 76,
-  #             "distance": -0.5366824865341187,
-  #             "entity": {
-  #                 "title": "Top 20 Data Science Discord servers to join in 2020",
-  #                 "link": "https://towardsdatascience.com/top-20-data-science-discord-servers-to-join-in-2020-567b45738e9d"
-  #             }
-  #         },
-  #         {
-  #             "id": 74,
-  #             "distance": -0.5235060453414917,
-  #             "entity": {
-  #                 "title": "Top 10 Artificial Intelligence Trends for 2020",
-  #                 "link": "https://towardsdatascience.com/top-10-ai-trends-for-2020-d6294cfee2bd"
-  #             }
-  #         },
-  #         {
-  #             "id": 97,
-  #             "distance": -0.5228530764579773,
-  #             "entity": {
-  #                 "title": "Top 5 AI Conferences To Visit in Europe in 2020",
-  #                 "link": "https://towardsdatascience.com/top-5-ai-conferences-to-visit-in-europe-in-2020-7a6f068aff34"
-  #             }
-  #         },
-  #         {
-  #             "id": 69,
-  #             "distance": -0.4541875422000885,
-  #             "entity": {
-  #                 "title": "Top 10 In-Demand programming languages to learn in 2020",
-  #                 "link": "https://towardsdatascience.com/top-10-in-demand-programming-languages-to-learn-in-2020-4462eb7d8d3e"
-  #             }
-  #         }
-  #     ]
-  # ]
-  ```
-  
-  </TabItem>
+    ```python
+    with open("path/to/medium_articles_2020_dpr.json") as f:
+        data = json.load(f)
+    
+    res = client.search(
+        collection_name="medium_articles_2020",
+        data=[data["rows"][0]["title_vector"]],
+        output_fields=["title", "link"],
+        limit=5,
+        filter='title like "Top%"'
+    )
+    
+    # 输出
+    # [
+    #     [
+    #         {
+    #             "id": 75,
+    #             "distance": -0.5751268267631531,
+    #             "entity": {
+    #                 "title": "Top Trends of Graph Machine Learning in 2020",
+    #                 "link": "https://towardsdatascience.com/top-trends-of-graph-machine-learning-in-2020-1194175351a3"
+    #             }
+    #         },
+    #         {
+    #             "id": 76,
+    #             "distance": -0.5366824865341187,
+    #             "entity": {
+    #                 "title": "Top 20 Data Science Discord servers to join in 2020",
+    #                 "link": "https://towardsdatascience.com/top-20-data-science-discord-servers-to-join-in-2020-567b45738e9d"
+    #             }
+    #         },
+    #         {
+    #             "id": 74,
+    #             "distance": -0.5235060453414917,
+    #             "entity": {
+    #                 "title": "Top 10 Artificial Intelligence Trends for 2020",
+    #                 "link": "https://towardsdatascience.com/top-10-ai-trends-for-2020-d6294cfee2bd"
+    #             }
+    #         },
+    #         {
+    #             "id": 97,
+    #             "distance": -0.5228530764579773,
+    #             "entity": {
+    #                 "title": "Top 5 AI Conferences To Visit in Europe in 2020",
+    #                 "link": "https://towardsdatascience.com/top-5-ai-conferences-to-visit-in-europe-in-2020-7a6f068aff34"
+    #             }
+    #         },
+    #         {
+    #             "id": 69,
+    #             "distance": -0.4541875422000885,
+    #             "entity": {
+    #                 "title": "Top 10 In-Demand programming languages to learn in 2020",
+    #                 "link": "https://towardsdatascience.com/top-10-in-demand-programming-languages-to-learn-in-2020-4462eb7d8d3e"
+    #             }
+    #         }
+    #     ]
+    # ]
+    ```
+    
+    </TabItem>
 
-  <TabItem value='javascript'>
+    <TabItem value='javascript'>
 
-  ```javascript
-  const fs = require("fs")
-  
-  const data = JSON.parse(fs.readFileSync('path/to/medium_articles_2020_dpr.json', 'utf8'));
-  
-  res = await client.search({
-      collection_name: "medium_articles_2020",
-      vector: data.rows[0].title_vector,
-      limit: 5,
-      output_fields: ['title'],
-      filter: 'title like "Top%"'
-  })
-  ```
-  
-  </TabItem>
-  </Tabs>
+    ```javascript
+    const fs = require("fs")
+    
+    const data = JSON.parse(fs.readFileSync('path/to/medium_articles_2020_dpr.json', 'utf8'));
+    
+    res = await client.search({
+        collection_name: "medium_articles_2020",
+        vector: data.rows[0].title_vector,
+        limit: 5,
+        output_fields: ['title'],
+        filter: 'title like "Top%"'
+    })
+    ```
+    
+    </TabItem>
+    </Tabs>
 
 - 搜索由 **Towards Data Science** 发布的文章，且文章拥有超过 1500 个回应（`responses`）和 15 个点赞（`claps`）或阅读时间在 10 到 15 分钟内：
-  <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
-  <TabItem value='python'>
+    <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}]}>
+    <TabItem value='python'>
 
-  ```python
-  with open("path/to/medium_articles_2020_dpr.json") as f:
-      data = json.load(f)
-  
-  res = client.search(
-      collection_name="medium_articles_2020",
-      data=[data["rows"][0]["title_vector"]],
-      limit=5,
-      output_fields=["title", "publication", "claps", "response", "reading_time"],
-      filter='(publication == "Towards Data Science") and ((claps > 1500 and responses > 15) or (10 < reading_time < 15))'
-  )
-  
-  # 输出
-  # [
-  #     [
-  #         {
-  #             "id": 103,
-  #             "distance": -0.6340133547782898,
-  #             "entity": {
-  #                 "title": "A Primer on Domain Adaptation",
-  #                 "reading_time": 12,
-  #                 "publication": "Towards Data Science",
-  #                 "claps": 74
-  #             }
-  #         },
-  #         {
-  #             "id": 90,
-  #             "distance": -0.6230067014694214,
-  #             "entity": {
-  #                 "title": "SVM: An optimization problem",
-  #                 "reading_time": 11,
-  #                 "publication": "Towards Data Science",
-  #                 "claps": 44
-  #             }
-  #         },
-  #         {
-  #             "id": 75,
-  #             "distance": -0.5751268267631531,
-  #             "entity": {
-  #                 "title": "Top Trends of Graph Machine Learning in 2020",
-  #                 "reading_time": 11,
-  #                 "publication": "Towards Data Science",
-  #                 "claps": 1100
-  #             }
-  #         },
-  #         {
-  #             "id": 99,
-  #             "distance": -0.572611927986145,
-  #             "entity": {
-  #                 "title": "Finding optimal NBA physiques using data visualization with Python",
-  #                 "reading_time": 13,
-  #                 "publication": "Towards Data Science",
-  #                 "claps": 89
-  #             }
-  #         },
-  #         {
-  #             "id": 80,
-  #             "distance": -0.5648838877677917,
-  #             "entity": {
-  #                 "title": "Understanding Natural Language Processing: how AI understands our languages",
-  #                 "reading_time": 13,
-  #                 "publication": "Towards Data Science",
-  #                 "claps": 109
-  #             }
-  #         }
-  #     ]
-  # ]
-  ```
-  
-  </TabItem>
+    ```python
+    with open("path/to/medium_articles_2020_dpr.json") as f:
+        data = json.load(f)
+    
+    res = client.search(
+        collection_name="medium_articles_2020",
+        data=[data["rows"][0]["title_vector"]],
+        limit=5,
+        output_fields=["title", "publication", "claps", "response", "reading_time"],
+        filter='(publication == "Towards Data Science") and ((claps > 1500 and responses > 15) or (10 < reading_time < 15))'
+    )
+    
+    # 输出
+    # [
+    #     [
+    #         {
+    #             "id": 103,
+    #             "distance": -0.6340133547782898,
+    #             "entity": {
+    #                 "title": "A Primer on Domain Adaptation",
+    #                 "reading_time": 12,
+    #                 "publication": "Towards Data Science",
+    #                 "claps": 74
+    #             }
+    #         },
+    #         {
+    #             "id": 90,
+    #             "distance": -0.6230067014694214,
+    #             "entity": {
+    #                 "title": "SVM: An optimization problem",
+    #                 "reading_time": 11,
+    #                 "publication": "Towards Data Science",
+    #                 "claps": 44
+    #             }
+    #         },
+    #         {
+    #             "id": 75,
+    #             "distance": -0.5751268267631531,
+    #             "entity": {
+    #                 "title": "Top Trends of Graph Machine Learning in 2020",
+    #                 "reading_time": 11,
+    #                 "publication": "Towards Data Science",
+    #                 "claps": 1100
+    #             }
+    #         },
+    #         {
+    #             "id": 99,
+    #             "distance": -0.572611927986145,
+    #             "entity": {
+    #                 "title": "Finding optimal NBA physiques using data visualization with Python",
+    #                 "reading_time": 13,
+    #                 "publication": "Towards Data Science",
+    #                 "claps": 89
+    #             }
+    #         },
+    #         {
+    #             "id": 80,
+    #             "distance": -0.5648838877677917,
+    #             "entity": {
+    #                 "title": "Understanding Natural Language Processing: how AI understands our languages",
+    #                 "reading_time": 13,
+    #                 "publication": "Towards Data Science",
+    #                 "claps": 109
+    #             }
+    #         }
+    #     ]
+    # ]
+    ```
+    
+    </TabItem>
 
-  <TabItem value='javascript'>
+    <TabItem value='javascript'>
 
-  ```javascript
-  const fs = require("fs")
-  
-  const data = JSON.parse(fs.readFileSync('path/to/medium_articles_2020_dpr.json', 'utf8'));
-  
-  res = await client.search({
-      collection_name: "medium_articles_2020",
-      vector: data.rows[0].title_vector,
-      limit: 5,
-      output_fields: ["title", "publication", "claps", "responses", "reading_time"],
-      filter: '(publication == "Towards Data Science") and ((claps > 1500 and responses > 15) or (10 < reading_time < 15))'
-  })
-  ```
-  
-  </TabItem>
-  </Tabs>
+    ```javascript
+    const fs = require("fs")
+    
+    const data = JSON.parse(fs.readFileSync('path/to/medium_articles_2020_dpr.json', 'utf8'));
+    
+    res = await client.search({
+        collection_name: "medium_articles_2020",
+        vector: data.rows[0].title_vector,
+        limit: 5,
+        output_fields: ["title", "publication", "claps", "responses", "reading_time"],
+        filter: '(publication == "Towards Data Science") and ((claps > 1500 and responses > 15) or (10 < reading_time < 15))'
+    })
+    ```
+    
+    </TabItem>
+    </Tabs>
 
-## 查询 {#inquiries}
+## 查询 {#query}
 
 查询是指使用布尔表达式筛选出满足条件的 Entity。查询时使用的布尔表达式仅支持标量字段。
 
@@ -925,7 +925,7 @@ res = await client.query({
 
 以上示例代码的查询结果为字典列表。每个字典包含 `id` 键和其他指定输出字段。
 
-## 相关文档 {#related-doc}
+## 相关文档 {#related-documents}
 
 - [定制 Schema](./use-customized-schema)
 

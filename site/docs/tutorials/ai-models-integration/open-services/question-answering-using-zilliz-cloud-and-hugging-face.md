@@ -7,7 +7,7 @@ sidebar_position: 2
 
 本文将演示如何使用 Zilliz Cloud 和 HuggingFace 搭建问答系统。其中，Zilliz Cloud 负责提供向量数据库，HuggingFace 负责提供获取指定文字向量表示的接口。
 
-## 准备工作 {#preparations}
+## 准备工作 {#preparation-work}
 
 本示例中的脚本需要安装 **pymilvus**，**transformers** 和 **datasets**。其中，**transformers** 和 **datasets** 是 HuggingFace 提供的用于创建流水线的开发包，**pymilvus** 是 Zilliz Cloud的 Python 客户端，如果你的系统中没有安装这些依赖，可以使用如下命令完成安装。
 
@@ -24,7 +24,7 @@ from transformers import AutoTokenizer, AutoModel
 from torch import clamp, sum
 ```
 
-## 主要参数 {#main-parameters}
+## 主要参数 {#main-parameter}
 
 在这里，我们定义了一些示例中将要使用的主要参数。你需要根据实际情况和参数旁的注释填写或替换成相应的内容。
 
@@ -44,7 +44,7 @@ PASSWORD='replace-this-with-the-cluster-password'  # 上述用户名对应的密
 
 如需进一步了解上述 Transformer 模型及数据集，可参考 [bert-base-uncased](https://huggingface.co/bert-base-uncased) 及 [squad](https://huggingface.co/datasets/squad)。
 
-## 创建 Collection {#create-collection}
+## 创建 Collection {#create-a-collection}
 
 我们需要事先在 Zilliz Cloud 上准备好一个 Cluster。在这一小节里，我们将演示如何在这个 Cluster 里创建一个 Collection 并为其创建索引。
 

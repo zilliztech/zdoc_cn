@@ -20,13 +20,13 @@ Schema 对于 Zilliz Cloud 集群的数据处理非常重要。在向 Collection
 
 :::
 
-## 为 Collection 开启动态 Schema {#launch-schema-for-collection}
+## 为 Collection 开启动态 Schema {#enable-dynamic-schema-for-collection}
 
 要为 Collection 开启动态 Schema，需要在定义 Schema 时将 `enable_dynamic_field` 设置为 `True`。开启动态 Schema 后，之后插入的 Entity 中的所有未定义字段将以键值对的形式存入 Collection。我们将用“动态字段”来指代这些键值对。
 
 和预先定义的字段一样，您可以要求 Zilliz Cloud 在搜索或查询结果中输出动态字段，也可以在布尔表达式中引用动态字段。
 
-在执行如下代码之前，请确认已连接至您的集群。如需连接集群，可参考[连接集群](./use-customized-schema#connection-cluster)。
+在执行如下代码之前，请确认已连接至您的集群。如需连接集群，可参考[连接集群](./use-customized-schema#connect-cluster)。
 
 <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
@@ -353,11 +353,11 @@ println("Loading progress:", progress)
 </TabItem>
 </Tabs>
 
-## 动态插入数据 {#insert-data-dynamically}
+## 动态插入数据 {#dynamically-inserting-data}
 
 Collection 创建完成后，可以开始动态插入数据。
 
-### 准备数据 {#preparing-data}
+### 准备数据 {#prepare-data}
 
 现在，我们需要从[示例数据集](./example-dataset-1)中读取数据。
 
@@ -933,7 +933,7 @@ func (sp searchParams) Params() map[string]interface{} {
 
 :::
 
-## 相关文档 {#related-doc}
+## 相关文档 {#related-documents}
 
 [定制 Schema](./use-customized-schema)
 

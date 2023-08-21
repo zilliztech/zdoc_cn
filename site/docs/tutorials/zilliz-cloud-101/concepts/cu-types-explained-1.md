@@ -7,7 +7,7 @@ sidebar_position: 3
 
 创建 Zilliz Cloud 集群时，您需要选择 CU（计算单元）的类型和大小。CU 是用于并行处理数据的基本计算资源单位。
 
-## 可供选择的CU 类型 {#available-cu-types-to-select}
+## 可供选择的CU 类型 {#available-cu-types}
 
 为满足不同的业务场景，Zilliz Cloud 提供 3 种CU类型：性能型、容量型和经济型。
 
@@ -25,7 +25,7 @@ sidebar_position: 3
 | 容量型      | 中      | 中       | 高      | 中      |
 | 经济型      | 高      | 低       | 高      | 低      |
 
-## 选择最合适的 CU 类型 {#select-the-most-suitable-cu-type}
+## 选择最合适的 CU 类型 {#choose-the-most-suitable-cu-type}
 
 在选择 CU  类型和大小时，建议您考虑数据量、性能和成本等因素。
 
@@ -49,7 +49,7 @@ Zilliz Cloud 具备高扩展性的特点。负载容量和 CU 数量之间呈线
 
 需要注意，在某些情况下，标量数据量也可能很大。上表中的数据是基于向量数据的。大量标量数据也将占用存储空间，从而导致每个 CU 可加载的向量数量减少。我们建议您通过不同测试用例确定合适的 CU 类型和大小。
 
-### 性能 {#properties}
+### 性能 {#performance}
 
 延迟、每秒查询数（QPS）等指标都能用于衡量性能。影响性能的因素包括 CU 类型和大小、向量维度、向量数量和 `top_k` 值。
 

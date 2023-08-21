@@ -25,7 +25,7 @@ Zilliz Cloud 提供 **AUTOINDEX** 作为索引类型，免去在 Milvus 中进�
 
 有关 CU 的更多信息，请参见 [CU 类型](./cu-types-explained-1)。
 
-## 相关文档 {#related-doc}
+## 相关文档 {#related-documents}
 
 - [AUTOINDEX](./autoindex-explained)
 

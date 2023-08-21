@@ -9,7 +9,7 @@ sidebar_position: 0
 
 如果您计划从 Milvus 迁移到 Zilliz Cloud，可能需要对历史代码进行一些必要的修改。
 
-## 特定场景权限 {#scenario-specific-permissions}
+## 特定场景权限 {#specific-scenario-permissions}
 
 |            | API                           | GUI 操作 | 企业版 |
 | ---------- | ----------------------------- | ------ | --- |

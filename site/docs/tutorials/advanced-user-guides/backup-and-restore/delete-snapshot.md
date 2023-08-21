@@ -11,7 +11,7 @@ sidebar_position: 4
 
 在执行删除操作之前，系统会提示您确认是否删除快照。
 
-## 相关文档 {#related-doc}
+## 相关文档 {#related-documents}
 
 - [创建备份快照](./create-snapshot)
 

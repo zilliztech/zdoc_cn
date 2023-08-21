@@ -13,7 +13,7 @@ sidebar_position: 0
 
 :::
 
-## 创建快照 {#create-snapshots}
+## 创建快照 {#create-snapshot}
 
 快照创建是异步操作，创建所需时间取决于集群大小和集群使用的 CU 大小。例如，如果某集群包含 4 CU 和一个 Collection，Collection 中包含了超过 1.2 亿个 128 维向量记录，则为该 Collection 创建一个快照大约耗时 5 分钟。
 
@@ -21,7 +21,7 @@ sidebar_position: 0
 
 ![create_snapshot](/img/create_snapshot.png)
 
-## 调整快照保留天数 {#adjust-snapshot-retention-days}
+## 调整快照保留天数 {#adjusting-snapshot-retention-days}
 
 您可以通过设置保留天数（以天为单位）来调整 Zilliz Cloud 保留快照的时间。当前默认保留天数为 7 天，最长为 30 天。
 
@@ -31,7 +31,7 @@ sidebar_position: 0
 
 :::
 
-## 相关文档 {#related-doc}
+## 相关文档 {#related-documents}
 
 - [创建自动备份](./schedule-automatic-backups)
 

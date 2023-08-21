@@ -7,7 +7,7 @@ sidebar_position: 100
 
 Zilliz Cloud 2.0.0 的发布为矢量数据库管理设立了新的标准。它大大增强了初学者的用户体验，提供了更实惠和灵活的定价选项，实现了无缝的团队协作，并提供了灵活的模式管理。这次更新的主要特性包括多样化的订阅方案、全新的 CU 类型、组织和协作支持、RBAC 支持、动态 Schema 和 JSON 类型支持。今天就试试这个改变游戏规则的更新吧!
 
-## Zililz Cloud 订阅方案：企业版和专有部署 {#zililz-cloud-subscription-plan-enterprise-and-proprietary-deployment}
+## Zililz Cloud 订阅方案：企业版和专有部署 {#zililz-cloud-subscription-solution-enterprise-edition-and-proprietary-deployment}
 
 我们很高兴为中国用户提供企业版和专有部署两种订阅方案。每个方案都经过精心设计，以平衡成本、服务和安全方面的考虑，以确保满足每个用户的需求。通过Zilliz Cloud，您可以根据业务的发展需求灵活地管理您的向量数据库。
 
@@ -17,7 +17,7 @@ Zilliz Cloud 2.0.0 的发布为矢量数据库管理设立了新的标准。它�
 
 前往[定价](https://z2-cn-dev.zilliz.cc/pricing)页面了解更多。
 
-## 全新的 CU 类型 {#completely-new-cu-type}
+## 全新的 CU 类型 {#new-cu-type}
 
 CU 是用于数据并行处理的计算资源的基本计量单位。Zilliz Cloud 提供**性能型**、**容量型**和**经济型**三种 CU 供您选择。
 

@@ -20,24 +20,24 @@ Zilliz Cloud 支持从 Milvus 1.x（包括 0.9.x 及以上）和更高版本迁�
 1. 停止 Milvus 安装进程或至少停止在 Milvus 中执行的所有 DML 操作。
 
 1. 导出安装相关的元数据到 `meta.json`。
-  - 如果后端为 MySQL，执行以下命令：
-    ```bash
-    ./milvus-migration export -m "user:password@tcp(adderss)/milvus?charset=utf8mb4&parseTime=True&loc=Local" -o outputDir
-    ```
+    - 如果后端为 MySQL，执行以下命令：
+        ```bash
+        ./milvus-migration export -m "user:password@tcp(adderss)/milvus?charset=utf8mb4&parseTime=True&loc=Local" -o outputDir
+        ```
 
-  - 如果后端为 SQLite，执行以下命令：
-    ```bash
-    ./milvus-migration export -s /milvus/db/meta.sqlite -o outputDir
-    ```
+    - 如果后端为 SQLite，执行以下命令：
+        ```bash
+        ./milvus-migration export -s /milvus/db/meta.sqlite -o outputDir
+        ```
 
 1. 复制 Milvus 安装目录下的 `tables` 文件夹，将 `meta.json` 和 `tables` 文件夹移动到一个空文件夹。
-  此步骤完成后，空文件夹的结构应如下所示：
+    此步骤完成后，空文件夹的结构应如下所示：
 
-  ```plaintext
-  migration_data
-  ├── meta.json
-  └── tables
-  ```
+    ```plaintext
+    migration_data
+    ├── meta.json
+    └── tables
+    ```
 
 1. 将准备好的文件夹上传到 OSS 存储，或直接使用本地文件夹开始迁移。
 
@@ -51,7 +51,7 @@ Zilliz Cloud 支持从 Milvus 1.x（包括 0.9.x 及以上）和更高版本迁�
 
 ![migrate_from_milvus_1x](/img/migrate_from_milvus_1x.png)
 
-## 结果验证 {#result-verification}
+## 结果验证 {#result-validation}
 
 如果迁移任务的状态从 **迁移中** 变更为 **成功**，则代表迁移成功。
 
@@ -59,7 +59,7 @@ Zilliz Cloud 仅支持 [AUTOINDEX](./autoindex-explained)。**AUTOINDEX** 是一
 
 Collection 加载后，您可以自行连接和管理 Collection。
 
-## 相关文档 {#related-doc}
+## 相关文档 {#related-documents}
 
 - [从 Milvus 2.x 迁移至 Zilliz Cloud](./migrate-from-milvus-2x)
 

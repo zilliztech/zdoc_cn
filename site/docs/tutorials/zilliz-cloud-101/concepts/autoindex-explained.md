@@ -60,6 +60,6 @@ search_params = {
 }
 ```
 
-## 总结 {#conclusion}
+## 总结 {#summary}
 
 希望您能通过阅读本教程，了解什么是 **AUTOINDEX**，以及如何使用 **AUTOINDEX** 简化在 Zilliz Cloud 上创建索引和搜索向量的流程。选择 **AUTOINDEX** 后，您无需根据集群 CU 类型考虑选择何种索引类型。Zilliz Cloud 为自动为您选择最优的搜索和索引配置，帮助您节省时间和精力。如对 **AUTOINDEX** 有任何疑问，欢迎通过 [support@zilliz.com](mailto:support@zilliz.com) 联系我们。

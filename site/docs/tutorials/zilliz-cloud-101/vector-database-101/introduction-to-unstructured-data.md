@@ -21,7 +21,7 @@ sidebar_position: 0
 
 另一方面，结构化数据是指可以以表格格式来存储的数据，而半结构化数据是指可以存储在单层或多层数组或以键值存储的数据。如果你理解起来还是有些困难，没关系，我们会提供一些例子，帮助你了解结构化数据和非结构化数据之间的主要区别。
 
-## 结构化数据示例 {#examples-of-structured-data}
+## 结构化数据示例 {#structured-data-example}
 
 下面让我们先简单介绍一下结构化数据和半结构化数据。用最简单的话来说，传统的结构化数据可以通过关系模型来存储。以图书数据库为例：
 
@@ -73,7 +73,7 @@ sidebar_position: 0
 
 本质上，这是和所有行业、所有公司和所有个人都有关的问题，包括你！
 
-## 非结构化数据示例 {#unstructured-data-examples}
+## 非结构化数据示例 {#example-of-unstructured-data}
 
 非结构化数据可以由机器或人类生成。机器生成的非结构化数据包括：
 
@@ -107,7 +107,7 @@ sidebar_position: 0
 
 - 用户产生的内容：网站和论坛上的用户生成的内容，可能包括自由形式的文本、图像和视频文件。
 
-## 快速了解 Embedding {#get-to-know-embedding}
+## 快速了解 Embedding {#quick-understanding-of-embedding}
 
 让我们回到正题。绝大多数的神经网络模型都能够将单一的非结构化数据转化为浮点值，也就是通常所说的 Embedding 或 Embedding 向量。事实证明，一个经过训练的神经网络可以输出代表图像语义内容的 Embedding。之后的教程中（[什么是向量数据库？](./what-is-a-vector-database)），我们将介绍如何使用预先确定的算法来生成 Embedding。
 
@@ -123,7 +123,7 @@ sidebar_position: 0
 
 大多数教程都聚焦由神经网络生成的 Embedding 向量；然而，请注意，Embedding 向量也可以通过人工算法生成。
 
-## 处理非结构化数据 {#working-with-unstructured-data}
+## 处理非结构化数据 {#processing-unstructured-data}
 
 感兴趣了吗？很好。但在我们一头扎进向量数据库 Milvus 之前，让我们花点时间来谈谈如何处理和分析非结构化数据。在结构化数据和半结构化数据的应用场景下，搜索或过滤数据库中的数据是最直观的方式。一个简单的例子，查询 MongoDB 中某作者的第一本书可以通过以下代码完成（使用 **pymongo**）：
 
@@ -147,7 +147,7 @@ ANN 搜索是向量数据库的核心组成部分，这本身也是一个巨大�
 
 要知道，向量数据库是可以通过选择一个特定的索引类型而成为具有确定性的数据库系统。
 
-## 总结 {#conclusion}
+## 总结 {#summary}
 
 谢谢你能看到这里！以下是本教程的主要收获：
 
@@ -171,7 +171,7 @@ ANN 搜索是向量数据库的核心组成部分，这本身也是一个巨大�
 
 我们下节课见！[什么是向量数据库？](./what-is-a-vector-database)
 
-## 相关文档 {#related-doc}
+## 相关文档 {#related-documents}
 
 - [什么是向量数据库？](./what-is-a-vector-database)
 
