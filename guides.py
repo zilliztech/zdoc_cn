@@ -378,7 +378,7 @@ class docWriter:
         children = ''
         if 'children' in block:
             children = list(map(self.__retrieve_block_by_id, block['children']))
-            children = self.__markdown(children, indent=indent+2)
+            children = self.__markdown(children, indent=indent+4)
 
         return ' ' * indent + '- ' + self.__text_elements(block['bullet']['elements']) + '\n' + children
     
@@ -386,7 +386,7 @@ class docWriter:
         children = ''
         if 'children' in block:
             children = list(map(self.__retrieve_block_by_id, block['children']))
-            children = self.__markdown(children, indent=indent+2)
+            children = self.__markdown(children, indent=indent+4)
 
         return ' ' * indent + '1. ' + self.__text_elements(block['ordered']['elements']) + '\n' + children
     
