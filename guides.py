@@ -1,13 +1,14 @@
 import os, json, re, shutil, csv
 import logging
 import requests
+import crypt, hashlib
 from dotenv import load_dotenv
 from datetime import datetime
 from tqdm import tqdm
 from urllib import parse
-from translate import Translator
 from slugify import slugify
 from urllib import parse
+from time import sleep
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 logging.basicConfig(level=logging.DEBUG)
@@ -19,8 +20,76 @@ APP_SECRET = os.getenv("APP_SECRET")
 FEISHU_HOST = os.getenv("FEISHU_HOST")
 SPACE_ID = os.getenv("SPACE_ID")
 FIGMA_API_KEY = os.getenv("FIGMA_API_KEY")
+BAIDU_TRANS_APP_ID="20230821001788625"
+BAIDU_TRANS_SECRET="xlR4YwUQAVzhw3EJjdb3"
+BAIDU_APP_ID = os.getenv("BAIDU_TRANS_APP_ID")
+BAIDU_SECRET = os.getenv("BAIDU_TRANS_SECRET")
 
-translator = Translator(from_lang="zh", to_lang="en", provider="mymemory")
+class BaiduTranslator:
+
+    def __init__(self, app_id, source_lang, target_lang, secret_access_key, cache="."):
+        self.salt = crypt.mksalt(crypt.METHOD_SHA512)
+        self.app_id = app_id
+        self.secret_access_key = secret_access_key
+        self.source_lang = source_lang
+        self.target_lang = target_lang
+        self.cache = cache
+
+    def __signature(self):
+        raw = self.app_id + self.query + self.salt + self.secret_access_key
+        return hashlib.md5(raw.encode()).hexdigest()
+    
+    def __save_translated(self, src, dst):
+        if os.path.isfile(os.path.join(self.cache, 'translated.json')):
+            with open(os.path.join('.', 'translated.json'), 'r') as f:
+                self.translated = json.load(f)
+        else:
+            self.translated = {}
+
+        peek_res = self.__quick_peek(src)
+
+        if not peek_res:
+            self.translated[src] = dst
+
+        with open(os.path.join('.', 'translated.json'), 'w') as f:
+            json.dump(self.translated, f, indent=4, ensure_ascii=False)
+
+    def __quick_peek(self, src):
+        if os.path.isfile(os.path.join(self.cache, 'translated.json')):
+            with open(os.path.join('.', 'translated.json'), 'r') as f:
+                self.translated = json.load(f)
+
+            if src in self.translated:
+                return self.translated[src]
+
+    def translate(self, query):
+        res = self.__quick_peek(query)
+        if res:
+            return res 
+
+        self.query = query
+        self.sign = self.__signature()
+        qstr = parse.urlencode({
+            'q': self.query,
+            'from': self.source_lang,
+            'to': self.target_lang,
+            'appid': self.app_id,
+            'salt': self.salt,
+            'sign': self.sign
+        })
+
+        url = 'http://api.fanyi.baidu.com/api/trans/vip/translate?' + qstr
+
+        res = requests.get(url)
+
+        if 'error_code' in res.json():
+            print(res.json())
+        else:
+            sleep(1)
+            self.__save_translated(res.json()['trans_result'][0]['src'], res.json()['trans_result'][0]['dst'])
+            return res.json()['trans_result'][0]['dst']
+
+translator = BaiduTranslator(app_id=BAIDU_APP_ID, source_lang="zh", target_lang="en", secret_access_key=BAIDU_SECRET)
 
 class tokenFetcher:
 
