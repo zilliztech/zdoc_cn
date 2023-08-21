@@ -231,6 +231,16 @@ const Rows = [
                 width: "30%"
             },
             {
+                title: "批量插入数据",
+                link: "",
+                width: "100%"
+            },
+            {
+                title: "批量导入数据",
+                link: "/docs/bulk-insert-on-gui",
+                width: "10em"
+            },
+            {
                 title: "连接与访问控制",
                 link: "",
                 width: "100%"
