@@ -774,7 +774,7 @@ class RefGen:
                 server = ''
 
                 if 'cloud' in page_slug or 'cluster' in page_slug or 'import' in page_slug:
-                    server = "https://api.{cloud-region}.cloud.zilliz.com.cn"
+                    server = "https://controller.api.{cloud-region}.cloud.zilliz.com.cn"
                 
                 elif 'collection' in page_slug or 'query' in page_slug or 'search' in page_slug or 'get' in page_slug or 'insert' in page_slug or 'delete' in page_slug:
                     server = "https://{public_endpoint}"
