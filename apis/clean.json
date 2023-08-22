@@ -402,11 +402,11 @@
         },
         "/v1/clusters/{clusterId}": {
             "get": {
-                "summary": "Describe Cluster",
+                "summary": "查看集群详情",
                 "x-apifox-folder": "Cluster Operations",
                 "x-apifox-status": "released",
                 "deprecated": false,
-                "description": "Describe a cluster in detail.",
+                "description": "描述集群的详细信息。",
                 "tags": [
                     "Cluster Operations"
                 ],
@@ -414,7 +414,7 @@
                     {
                         "name": "CLOUD_PROVIDER",
                         "in": "path",
-                        "description": "An available cloud provider and region set.",
+                        "description": "一组可用的云服务提供商和云服务区域，如“ali-cn-hangzhou”。",
                         "required": true,
                         "schema": {
                             "type": "string"
@@ -423,7 +423,7 @@
                     {
                         "name": "clusterId",
                         "in": "path",
-                        "description": "The ID of a cluster to which this operation applies.",
+                        "description": "目标集群 ID。",
                         "required": true,
                         "schema": {
                             "type": "string"
@@ -432,7 +432,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Returns an array of clusters in detail.",
+                        "description": "集群信息，以数组形式返回。",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -512,56 +512,56 @@
                                             "properties": {
                                                 "clusterId": {
                                                     "type": "string",
-                                                    "description": "The ID of the cluster."
+                                                    "description": "集群 ID。"
                                                 },
                                                 "clusterName": {
                                                     "type": "string",
-                                                    "description": "The Name of the cluster."
+                                                    "description": "集群名称。"
                                                 },
                                                 "description": {
                                                     "type": "string",
-                                                    "description": "An optional description of the cluster."
+                                                    "description": "（可选）集群描述信息。"
                                                 },
                                                 "regionId": {
                                                     "type": "string",
-                                                    "description": "The ID of the cloud region where the cluster exists."
+                                                    "description": "集群所在的地域 ID。"
                                                 },
                                                 "clusterType": {
                                                     "type": "string",
-                                                    "description": "The type of the CU associated with the cluster."
+                                                    "description": "集群使用的 CU 类型。"
                                                 },
                                                 "cuSize": {
                                                     "type": "integer",
-                                                    "description": "The size of the CU used by the cluster."
+                                                    "description": "集群使用的 CU 大小。"
                                                 },
                                                 "status": {
                                                     "type": "string",
-                                                    "description": "The current status of the cluster. Possible values are **CREATING**, **RUNNING**, **SUSPENDING**, and **RESUMING**."
+                                                    "description": "集群当前状态。有效值：**创建中**、**运行中**、**挂起中**和**恢复中**。"
                                                 },
                                                 "connectAddress": {
                                                     "type": "string",
-                                                    "description": "The public endpoint of the cluster. You can use this to connect to your cluster from public networks."
+                                                    "description": "集群的公共 Endpoint。您可以通过此地址从公网连接到集群。"
                                                 },
                                                 "privateLinkAddress": {
                                                     "type": "string",
-                                                    "description": "The private endpoint of the cluster. You can use this to connect to your cluster from your VPSs in the same cloud region."
+                                                    "description": "集群的私有 Endpoint。您可以为集群设置私有链接，允许同一云区域中的 VPS 访问您的集群。"
                                                 },
                                                 "createTime": {
                                                     "type": "string",
-                                                    "description": "The time when this cluster has been creaated."
+                                                    "description": "集群创建时间。"
                                                 },
                                                 "storageSize": {
                                                     "type": "integer",
-                                                    "description": "The storage size of the cluster.",
+                                                    "description": "集群的存储容量。",
                                                     "format": "sint64"
                                                 },
                                                 "snapshotNumber": {
                                                     "type": "integer",
-                                                    "description": "The number of snapshofts created from the cluster."
+                                                    "description": "集群的快照数量。"
                                                 },
                                                 "createProgress": {
                                                     "type": "integer",
-                                                    "description": "The creation progress of the cluster."
+                                                    "description": "集群创建进程。"
                                                 }
                                             },
                                             "required": [
