@@ -1,23 +1,23 @@
 {
     "servers": [
         {
-          "url": "https://api.{cloud-region}.zillizcloud.com/v1",
+          "url": "https://api.{cloud-region}.cloud.zilliz.com.cn/v1",
           "variables": {
             "cloud-region": {
-              "default": "aws-us-west-2",
+              "default": "ali-cn-hangzhou",
               "description": "Indicates the cloud region that accommodates your vector databases."
             }
           }
         },
         {
-          "url": "https://{instance-id}.{cloud-region}.vectordb.zillizcloud.com/v1",
+          "url": "https://{instance-id}.{cloud-region}.vectordb.zilliz.com.cn/v1",
           "variables": {
             "instance-id": {
               "default": "vector-instance",
               "description": "Indicates the instance ID of your vector database."
             },
             "cloud-region": {
-              "default": "aws-us-west-2",
+              "default": "ali-cn-hangzhou",
               "description": "Indicates the cloud region that accommodates your vector databases."
             },
             "instance-port": {
