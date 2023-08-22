@@ -17,7 +17,7 @@ Milvus 使用 [Facebook AI Similarity Search（FAISS）](https://github.com/face
 
 如果你已经熟悉了 FAISS，那么你对接下来几个教程中要介绍的一些概念可能就不会太陌生。
 
-## 索引概览 {#reference-overview}
+## 索引概览 {#indexing-basics}
 
 广义上说，目前有四种不同类型的向量搜索算法：
 
@@ -47,7 +47,7 @@ Milvus 使用 [Facebook AI Similarity Search（FAISS）](https://github.com/face
 
 第二步是通过将数据集中的所有浮点值映射为较低精度的整数值，即 **float64** -> **int8** 或 **float32** -> **int8**，以减少索引的总大小。这种方式既可以减少索引的大小，也可以提高搜索速度，但通常会牺牲一些精度。有几种不同的方法可以做到这一点，我们会在未来的教程中进一步讨论量化和哈希问题。
 
-## 平面索引 {#flat-index}
+## 平面索引 {#flat-indexing}
 
 在深入研究更复杂的向量搜索算法之前，我们有必要简单了解一下线性搜索，也被称为平面索引。
 
@@ -69,7 +69,7 @@ Milvus 使用 [Facebook AI Similarity Search（FAISS）](https://github.com/face
 
 向量数量为 1 万时， QPS 会下降到 160 左右；为 10 万时，下降到 16。从 1000 个向量到 1 万个向量的大于 10 倍系数下降可能是由于 CPU 缓存大小的限制。不过这些结果还是很不错的。对于所有运行时的复杂性和横向扩展的问题，记住适用于小型应用和原型设计的 [KISS 原则](https://zh.wikipedia.org/wiki/KISS%E5%8E%9F%E5%88%99)，简约即真理。
 
-## IVF {#ivf}
+## IVF {#inverted-file-index}
 
 平面索引很不错，但它无法扩展。这就是向量搜索的数据结构发挥作用的地方。通过牺牲准确性来减少运行时间，以便显著提高查询速度和吞吐量。现在有很多索引策略，其中最常用的是倒置文件索引（IVF）。
 

@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 列出指定云服务提供商的所有可用云区域。
 
-<RestHeader method="get" endpoint="https://controller.api.{cloud_region}.zillizcloud.com/v1/regions" />
+<RestHeader method="get" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/regions" />
 
 ---
 
@@ -26,7 +26,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ```shell
 curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/regions?cloudId=gcp" \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/regions?cloudId=ali" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
@@ -41,9 +41,9 @@ curl --request GET \
     "code": 200,
     "data": [
         {
-            "apiBaseUrl": "https://api.gcp-us-west1.zillizcloud.com",
-            "cloudId": "gcp",
-            "regionId": "gcp-us-west1"
+            "apiBaseUrl": "https://api.ali-cn-hangzhou.cloud.zilliz.com.cn",
+            "cloudId": "ali",
+            "regionId": "ali-cn-hangzhou"
         }
     ]
 }

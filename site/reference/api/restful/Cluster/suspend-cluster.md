@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 挂起集群。本操作会中断集群运行，不会影响集群数据完整性。
 
-<RestHeader method="post" endpoint="https://controller.api.{cloud_region}.zillizcloud.com/v1/clusters/{clusterId}/suspend" />
+<RestHeader method="post" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/clusters/{clusterId}/suspend" />
 
 ---
 
@@ -26,7 +26,7 @@ import RestHeader from '@site/src/components/RestHeader';
 :::
 
 ```shell
-curl --request POST \ "https://controller.${CLOUD_REGION_ID}.zillizcloud.com/v1/clusters/<Cluster-ID>/suspend" \
+curl --request POST \ "https://controller.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/suspend" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"

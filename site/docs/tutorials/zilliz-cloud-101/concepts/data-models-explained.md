@@ -141,7 +141,7 @@ Zilliz Cloud 支持以下数据类型：
 
 - [JSON](./javascript-object-notation-json-1) 
 
-## 文档推荐 {#document-recommendation}
+## 文档推荐 {#related-documents}
 
 - [定制 Schema](./use-customized-schema) 
 

@@ -13,7 +13,7 @@ sidebar_position: 1
 
 本教程将介绍如何管理集群身份凭证。
 
-## 前提条件 {#preconditions}
+## 前提条件 {#before-you-start}
 
 开始前，请先确保：
 
@@ -79,7 +79,7 @@ connections.connect(
 )
 ```
 
-## 文档推荐 {#document-recommendation}
+## 文档推荐 {#related-documents}
 
 - [设置白名单](./set-up-whitelist) 
 

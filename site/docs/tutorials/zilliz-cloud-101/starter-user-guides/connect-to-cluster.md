@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 本文介绍如何连接到 Zilliz Cloud 集群。
 
-## 开始前 {#before-starting}
+## 开始前 {#before-you-start}
 
 请确保已完成以下步骤：
 
@@ -24,7 +24,7 @@ import TabItem from '@theme/TabItem';
 
 - 阅读本指南系列时，建议下载[代码示例](https://assets.zilliz.com/zdoc/zilliz_cloud_sdk_examples.zip)。
 
-## 操作步骤 {#operating-steps}
+## 操作步骤 {#procedure}
 
 您可以通过公网地址和创建集群时指定的用户名和密码连接到集群。
 

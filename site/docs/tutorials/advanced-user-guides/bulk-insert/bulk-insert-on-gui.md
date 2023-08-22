@@ -7,7 +7,7 @@ sidebar_position: 0
 
 本文介绍如何将数据批量导入到 Collection。
 
-## 开始前 {#before-starting}
+## 开始前 {#before-you-start}
 
 请确保已完成以下步骤：
 
@@ -107,7 +107,7 @@ curl --request GET \
      --header "content-type: application/json" \
 ```
 
-## 结果验证 {#result-validation}
+## 结果验证 {#verification}
 
 单击**导入**后，后台开始导入数据，您可以实时查看导入进度。
 

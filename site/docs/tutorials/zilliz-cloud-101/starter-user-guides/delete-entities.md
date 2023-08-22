@@ -76,7 +76,7 @@ console.log(res)
 
 :::
 
-## 批量删除 Entity {#batch-delete-entity}
+## 批量删除 Entity {#delete-multiple-entities-at-a-time}
 
 Zilliz Cloud 支持批量删除 Entity。可以参考以下示例代码批量删除 Entity：
 

@@ -9,7 +9,7 @@ sidebar_position: 3
 
 您需要在 Zilliz Cloud 上创建一个大小为 1 CU 的 Cluster。
 
-## 准备工作 {#preparation-work}
+## 准备工作 {#some-prep-work}
 
 在本示例中，我们将使用 **pymilvus** 连接 Zilliz Cloud，使用 **sentencetransformers** 来生成向量，并使用 **gdown** 来下载示例数据集。
 
@@ -33,7 +33,7 @@ with zipfile.ZipFile("./movies.zip","r") as zip_ref:
     zip_ref.extractall("./movies")
 ```
 
-## 主要参数 {#main-parameter}
+## 主要参数 {#parameters}
 
 本示例中使用的主要公共参数都在此处定义。请根据需求修改参数值。
 

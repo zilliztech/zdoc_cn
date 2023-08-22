@@ -7,7 +7,7 @@ sidebar_position: 4
 
 组织成员如被授予某一项目权限会自动成为项目成员，可以访问被授权项目。本教程介绍如何添加项目成员。
 
-## 前提条件 {#preconditions}
+## 前提条件 {#before-you-start}
 
 请确保满足以下条件：
 
@@ -17,7 +17,7 @@ sidebar_position: 4
 
 - 您是组织或项目管理员。更多用户角色和权限详情，请阅读[角色与权限](./roles-privileges)。
 
-## 操作步骤 {#operating-steps}
+## 操作步骤 {#procedure}
 
 1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com.cn/login)。
 

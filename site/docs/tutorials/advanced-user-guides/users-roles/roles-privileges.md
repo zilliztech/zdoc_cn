@@ -47,7 +47,7 @@ Zilliz Cloud 通过组织和项目实现访问控制和资源分离。
 | 集群监控和告警                 | 是                                           | 仅限已授权的项目 |
 | 项目设置                    | 是                                           | 仅限已授权的项目 |
 
-## 文档推荐 {#document-recommendation}
+## 文档推荐 {#related-documents}
 
 - [组织与项目](./organizations-projects) 
 

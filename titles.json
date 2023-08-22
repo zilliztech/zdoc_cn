@@ -101,5 +101,7 @@
     "管理 MFA": "manage-mfa",
     "选择合适的 CU 类型": "choose-the-right-cu-type-and-size",
     "管理集群": "manage-cluster",
-    "订阅阿里云市场": "subscribe-on-aliyun-marketplace"
+    "订阅阿里云市场": "subscribe-on-aliyun-marketplace",
+    "版本说明书 2.0.0": "release-notes-200",
+    "版本说明书 2.1.0": "release-notes-210"
 }

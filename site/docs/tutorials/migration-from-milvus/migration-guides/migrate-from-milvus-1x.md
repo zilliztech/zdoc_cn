@@ -51,7 +51,7 @@ Zilliz Cloud 支持从 Milvus 1.x（包括 0.9.x 及以上）和更高版本迁�
 
 ![migrate_from_milvus_1x](/img/migrate_from_milvus_1x.png)
 
-## 结果验证 {#result-validation}
+## 结果验证 {#verification}
 
 如果迁移任务的状态从 **迁移中** 变更为 **成功**，则代表迁移成功。
 

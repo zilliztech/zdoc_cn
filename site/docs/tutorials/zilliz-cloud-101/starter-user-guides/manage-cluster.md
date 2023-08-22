@@ -7,7 +7,7 @@ sidebar_position: 7
 
 本文介绍如何通过 Zilliz Cloud 控制台管理集群。
 
-## 连接集群 {#connect-cluster}
+## 连接集群 {#connect-to-cluster}
 
 集群创建完成后，您可以在控制台看到如下信息：
 
@@ -17,7 +17,7 @@ sidebar_position: 7
 
 要连接到集群，您需要使用由冒号（:）连接的集群用户名和密码作为身份验证标记，如 **user:password**。有关更多相关信息，请参阅[连接集群](./connect-to-cluster)。
 
-## 管理 Collection {#manage-collection}
+## 管理 Collection {#manage-collections}
 
 在 **Collection** 页签下，您可以管理集群中的 Collection。您可以创建 Collection、将数据导入 Collection、加载或释放 Collection、重命名 Collection 和删除 Collection。
 
@@ -25,7 +25,7 @@ sidebar_position: 7
 
 ![manage-collections](/img/manage-collections.png)
 
-## 管理集群用户 {#manage-cluster-users}
+## 管理集群用户 {#manage-users}
 
 在**用户**页签下，您可以添加用户、重置用户密码和删除用户。
 
@@ -41,11 +41,11 @@ sidebar_position: 7
 
 在**操作**下拉列表中，您可以选择**创建备份快照**来为集群创建备份。您可以在**备份**页签下找到已创建的所有快照。有关备份和恢复的详细信息，请参阅[备份与恢复](./backup-and-restore)。
 
-## 管理数据迁移 {#manage-data-migration}
+## 管理数据迁移 {#manage-data-migrations}
 
 在**操作**下拉列表中，您可以选择**迁移数据**来创建数据迁移任务，以从 Milvus 迁移数据到 Zilliz Cloud 集群。有关更多信息，请参阅[迁移到 Zilliz Cloud](./migration-from-milvus)。
 
-## 扩容集群 {#expand-cluster}
+## 扩容集群 {#scale-up-cluster}
 
 在**集群信息**区域，单击**大小**右侧的**扩容**，以打开**扩容集群**对话框。您可以为集群增加计算和存储资源。在对话框中，您最多可将集群资源扩展到 24 个 CU。如果您需要更大的 CU，请联系我们。
 
@@ -57,7 +57,7 @@ sidebar_position: 7
 
 :::
 
-## 设置 IP 白名单 {#set-ip-whitelist}
+## 设置 IP 白名单 {#set-up-whitelist}
 
 在**集群信息**区域，单击 **IP 白名单**右侧的**前往配置**，可将指定 IP 地址段添加到白名单。将 IP 地址段添加到白名单后，Zilliz Cloud 只允许白名单 IP 地址段内的 IP 地址访问集群。若添加 0.0.0.0/0，则表示允许所有 IP 地址访问集群。
 
@@ -77,7 +77,7 @@ sidebar_position: 7
 
 此外，您还可以通过 RESTful API 挂起或恢复集群。有关更多接口信息，请参阅 [Suspend Cluster](https://docs.zilliz.com.cn/reference/suspend-cluster) 和 [Resume Cluster](https://docs.zilliz.com.cn/reference/resume-cluster)。
 
-## 删除集群 {#delete-cluster}
+## 删除集群 {#drop-cluster}
 
 在**操作**下拉列表中，选择**删除**可删除集群及其相关数据。只有当您在**删除集群**对话框中确认删除操作后，Zilliz Cloud 才会该删除集群。
 

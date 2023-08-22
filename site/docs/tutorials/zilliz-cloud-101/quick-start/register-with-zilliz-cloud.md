@@ -7,13 +7,13 @@ sidebar_position: 1
 
 本教程将介绍如何创建 Zilliz Cloud 账号。
 
-## 前提条件 {#preconditions}
+## 前提条件 {#before-you-start}
 
 打开注册页面 https://cloud.zilliz.com.cn/signup。
 
 ![register_account](/img/register_account.png)
 
-## 注册账号 {#register-an-account}
+## 注册账号 {#register-with-zilliz-cloud}
 
 目前，您仅能够通过企业邮箱注册 Zilliz Cloud 账号。
 
@@ -36,6 +36,6 @@ sidebar_position: 1
 
 :::
 
-## 文档推荐 {#document-recommendation}
+## 文档推荐 {#related-documents}
 
 - [快速开始](./quick-start-1) 

@@ -7,7 +7,7 @@ sidebar_position: 2
 
 本教程介绍如何添加组织成员。
 
-## 前提条件 {#preconditions}
+## 前提条件 {#before-you-start}
 
 开始前，请先确保：
 
@@ -15,7 +15,7 @@ sidebar_position: 2
 
 - 您是组织管理员。更多用户角色和权限详情，请阅读[角色与权限](./roles-privileges) 。
 
-## 操作步骤 {#operating-steps}
+## 操作步骤 {#procedure}
 
 1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com.cn/login)。
 

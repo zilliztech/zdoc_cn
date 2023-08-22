@@ -15,7 +15,7 @@ sidebar_position: 2
 
 现在让我们开始吧。
 
-## 准备工作 {#preparation-work}
+## 准备工作 {#some-prep-work}
 
 在本例中，我们将使用 **pymilvus** 来连接 Zilliz Cloud，使用 **llama-index** 来处理数据及流水线相关的工作。同时，您还需要获取一个 OpenAI 的 API 密钥来生成向量。
 
@@ -31,7 +31,7 @@ pip install pymilvus llama-index
 git clone https://github.com/milvus-io/milvus-docs
 ```
 
-## 主要参数 {#main-parameter}
+## 主要参数 {#parameters}
 
 本示例中使用的主要公共参数都在此处定义。请根据需求修改参数值。
 
@@ -75,7 +75,7 @@ environ["OPENAI_API_KEY"] = "sk-******" # OpenAI API 密钥
     index = GPTMilvusIndex.from_documents(docs, host = HOST, port = PORT, user = USER, password = PASSWORD, use_secure = True, overwrite=True)
     ```
 
-## 开始提问 {#start-asking-questions}
+## 开始提问 {#ask-questions}
 
 在把所有文档都存入 Zilliz Cloud 后，我们就可以开始提问了。所有提问都会触发在知识库范围内的相似性搜索，所有相关结果都会被用来生成问题的答案。
 

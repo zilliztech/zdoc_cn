@@ -13,7 +13,7 @@ sidebar_position: 3
 
 - [移除已接受邀请的成员](./remove-members#delete-invited-members)
 
-## 前提条件 {#preconditions}
+## 前提条件 {#before-you-start}
 
 开始前，请先确保：
 
@@ -53,7 +53,7 @@ sidebar_position: 3
 
 在执行上述操作之后，Zilliz Cloud 会向已被删除的用户发送电子邮件通知。您可以在组织用户列表页验证结果。
 
-## 文档推荐 {#document-recommendation}
+## 文档推荐 {#related-documents}
 
 - [组织与项目](./organizations-projects) 
 

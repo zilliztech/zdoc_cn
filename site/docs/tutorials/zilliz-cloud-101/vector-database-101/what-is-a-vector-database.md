@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
 总结一下，向量数据库应该具备以下特性：1）可扩展性和可调节性；2）多租户和数据隔离；3）完整的 API 套件和 4）直观的用户界面 / 管理控制台。在接下来的内容中，我们将通过比较向量数据库与向量搜索库和向量搜索插件来进一步论证这几点。
 
-## 向量数据库与向量搜索库 {#vector-database-and-vector-search-library}
+## 向量数据库与向量搜索库 {#vector-databases-versus-vector-search-libraries}
 
 现在业界存在一个普遍的误解，即向量数据库只是 ANN 搜索算法的包装器。但实际上，它们有很大的区别！
 
@@ -56,7 +56,7 @@ mr = collection.insert(data)
 
 其实，只需要 3 行代码就可以完成。对于像 FAISS 或 ScaNN 这样的库，如果不手动在某些检查点上重新创建索引，就没有简单的方法可以做到这一点。即便可以，向量搜索库仍然缺乏可扩展性和多租户的特性，而这两个都是向量数据库最重要的特性。
 
-## 传统数据库上的向量搜索插件 {#vector-search-plugin-on-traditional-databases}
+## 传统数据库上的向量搜索插件 {#vector-search-plugins-for-traditional-databases}
 
 很好，现在我们已经知道了向量搜索库和向量数据库之间的区别，下面让我们来看看向量数据库与向量搜索插件有何不同。
 
@@ -143,7 +143,7 @@ results = collection.search(**search_param)
 
 注意，这三个部分中的每一个都对应着一个主要的技术挑战。既然如此，就不存在一个放之四海而皆准的向量数据库架构。最好的向量数据库将通过专注于提供第一节中提到的功能来克服所有这些技术挑战。
 
-## 向量数据库的优势 {#the-advantages-of-vector-databases}
+## 向量数据库的优势 {#what-are-the-advantages-of-vector-databases}
 
 与传统数据库相比，向量数据库在涉及相似性搜索、机器学习和人工智能应用的用例中具有许多优势。以下是向量数据库的一些优势：
 
@@ -159,7 +159,7 @@ results = collection.search(**search_param)
 
 总的来说，向量数据库为涉及相似性搜索和机器学习的应用提供了巨大的优势，为高维向量数据提供快速有效的搜索和检索。
 
-## 最快的向量数据库 {#fastest-vector-database}
+## 最快的向量数据库 {#what-is-the-fastest-vector-database}
 
 [ANN-Benchmarks](http://ann-benchmarks.com/) 提供了一个基准环境，用于评估各种向量数据库和近邻搜索算法的性能。它的主要功能如下：
 

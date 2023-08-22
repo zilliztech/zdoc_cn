@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 - 删除 Collection
 
-## 前提条件 {#preconditions}
+## 前提条件 {#before-you-start}
 
 在本文档中，我们将使用 Milvus 的 SDK。开始之前，请先确保：
 
@@ -30,13 +30,13 @@ import TabItem from '@theme/TabItem';
 
 - 您已订阅 Zilliz Cloud 并在项目中创建了一个集群。更多详情，请参见[免费试用](./free-trials) 和[创建集群](./create-cluster)。
 
-- 您已安装需要使用的 SDK。当前，有四种 SDK 可供选择，分别是 [Python](./install-sdks#install-pymilvus-python-sdk)，[Java](./install-sdks#installing-the-java-sdk)，[Go](./install-sdks#install-the-go-sdk) 和 [Node.js](./install-sdks#install-node-js-sdk)。更多详情，请参见[安装 SDK](./install-sdks)。
+- 您已安装需要使用的 SDK。当前，有四种 SDK 可供选择，分别是 [Python](./install-sdks#install-pymilvus-python-sdk)，[Java](./install-sdks#installing-java-sdk)，[Go](./install-sdks#install-go-sdk) 和 [Node.js](./install-sdks#install-node-js-sdk)。更多详情，请参见[安装 SDK](./install-sdks)。
 
 - 您已下载示例数据集。更多详情，请参见[示例数据集](./example-dataset-1)。
 
 - 为了更好地理解本指导，建议您下载[示例源代码](https://assets.zilliz.com/zdoc/zilliz_cloud_sdk_examples.zip)或直接拷贝下方各示例代码块中的内容到本地文件中查看演示效果。
 
-## 创建 Collection {#create-a-collection}
+## 创建 Collection {#create-collection}
 
 如通过 Zilliz Cloud 界面创建集群，您需要在创建集群的同时创建 1 个 Collection。 以下代码展示如何通过调用 API 在您的集群下创建 Collection。
 
@@ -382,7 +382,7 @@ console.log(res);
     </TabItem>
     </Tabs>
 
-## 向量搜索、标量查询、获取 Entity {#vector-search-scalar-query-obtaining-entity}
+## 向量搜索、标量查询、获取 Entity {#search-query-and-get-operations}
 
 向量搜索、标量查询及通过 ID 获取 Entity 是三种不同的操作。
 
@@ -392,7 +392,7 @@ console.log(res);
 
 - 获取 Entity 是指根据 ID 获取特定 Entity。
 
-### 向量搜索（ANN 搜索） {#vector-search-ann-search}
+### 向量搜索（ANN 搜索） {#perform-an-ann-search}
 
 示例数据集中的 **vector** 字段包含了由每篇文章标题转化而来的向量。以下示例展示如何对向量数据进行 ANN 搜索，从而找到与查询标题含义最相似的文章标题。
 
@@ -702,7 +702,7 @@ console.log(res)
 </TabItem>
 </Tabs>
 
-### 标量查询 {#scalar-queries}
+### 标量查询 {#perform-a-query}
 
 除 **vector** 字段以外，数据集中的所有字段均为标量字段。您可以对标量字段设置过滤条件，从而筛选所需数据。以下示例展示如何进行向量查询。
 
@@ -788,7 +788,7 @@ console.log(res)
 </TabItem>
 </Tabs>
 
-### 根据 ID 获取 Entity {#obtain-entity-based-on-id}
+### 根据 ID 获取 Entity {#get-entities-by-ids}
 
 您可以根据 Entity ID 获取特定 Entity。以下示例展示如何根据 ID 获取 Entity。
 
@@ -911,7 +911,7 @@ console.log(res)
     </TabItem>
     </Tabs>
 
-## 删除 Entity {#delete-entity}
+## 删除 Entity {#delete-entities}
 
 您可以根据 ID 从 Collection 中一次性删除单个或多个 Entity。 以下为示例。
 
@@ -1009,7 +1009,7 @@ console.log(res)
     </TabItem>
     </Tabs>
 
-## 删除 Collection {#delete-collection}
+## 删除 Collection {#drop-a-collection}
 
 您可以用集群中删除不再使用的 Collection。
 
@@ -1047,7 +1047,7 @@ console.log(res);
 </TabItem>
 </Tabs>
 
-## 文档推荐 {#document-recommendation}
+## 文档推荐 {#related-documents}
 
 - [注册账号](./register-with-zilliz-cloud) 
 

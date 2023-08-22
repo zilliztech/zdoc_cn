@@ -10,11 +10,11 @@ import TabItem from '@theme/TabItem';
 
 本文介绍如何在 Zilliz Cloud 中执行近似最近邻（Approximate Nearest Neighbour，ANN）搜索和查询。搜索是指在 Collection 中查找与指定查询向量最接近的向量，查询是基于指定条件筛选出满足条件的数据。
 
-## 概述 {#summary}
+## 概述 {#overview}
 
 Zilliz Cloud 采用 ANN 算法来处理向量搜索请求，支持搜索并返回与指定查询向量最相似的前 *K* 个 Entity。为优化性能和吞吐，Zilliz Cloud 支持批量搜索，即同时指定多个查询向量并行搜索。您可以定义布尔表达式来缩小 ANN 搜索的范围。
 
-## 开始前 {#before-starting}
+## 开始前 {#before-you-start}
 
 执行 ANN 搜索或查询前，请确保已完成以下步骤：
 
@@ -30,7 +30,7 @@ Zilliz Cloud 采用 ANN 算法来处理向量搜索请求，支持搜索并返�
 
 :::
 
-## 单向量搜索 {#one-way-search}
+## 单向量搜索 {#single-vector-search}
 
 单向量搜索是指搜索并返回与指定的某个查询向量最相似的前 *K* 个Entity。
 
@@ -182,7 +182,7 @@ console.log(res)
 
 您可以在搜索请求中引用搜索参数，并指定查询向量、向量字段名称、返回结果限制以及其他相关参数。以上代码搜索与指定查询向量最相近的 10 条 Entity，并返回各 Entity 的主键、距离等信息。
 
-## 批量搜索 {#batch-search}
+## 批量搜索 {#bulk-search}
 
 Zilliz Cloud 支持在单个请求中同时指定多个查询向量来进行批量搜索。大多数情况下，批量搜索比单向量搜索效率更高，因为批量搜索的总延时会比逐一执行单向量搜索的累计延时要低。
 
@@ -315,7 +315,7 @@ res = await client.search({
 </TabItem>
 </Tabs>
 
-## 基于条件搜索 {#search-based-on-criteria}
+## 基于条件搜索 {#search-with-filters}
 
 过滤条件是用于定义 ANN 搜索条件的布尔表达式。您可以使用算术、逻辑和比较运算符来定义过滤条件。
 

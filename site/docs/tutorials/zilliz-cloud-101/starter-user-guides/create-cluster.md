@@ -7,7 +7,7 @@ sidebar_position: 0
 
 本文介绍如何创建集群。
 
-## 开始前 {#before-starting}
+## 开始前 {#before-you-start}
 
 请确保已完成以下步骤：
 
@@ -15,7 +15,7 @@ sidebar_position: 0
 
 - 在目标组织或项目中，您具有集群创建权限。有关角色和权限的信息，请参见[角色与权限](./roles-privileges)。
 
-## 操作步骤 {#operating-steps}
+## 操作步骤 {#procedure}
 
 1. 登录 Zilliz Cloud 控制台。
 
@@ -38,7 +38,7 @@ sidebar_position: 0
 
 1. 点击**创建集群**。
 
-## 结果验证 {#result-validation}
+## 结果验证 {#verification}
 
 创建集群后，您可以在集群列表页面上检查集群状态。如果集群的状态为**运行中**，则表示集群创建成功。
 

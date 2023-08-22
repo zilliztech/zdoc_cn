@@ -11,7 +11,7 @@ sidebar_position: 1
 
 现在，让我们开始吧！
 
-## 准备工作 {#preparation-work}
+## 准备工作 {#some-prep-work}
 
 本页中的脚本需要使用 **pymilvus** 连接 Zilliz Cloud，使用 **torch** 运行 Embedding 模型，使用 **torchvision** 调用模型并对图片进行预处理，使用 **gdown** 下载示例数据集，使用 tqdm 在命令行中显示进度条。我们可以运行如下命令安装这些依赖。
 
@@ -41,7 +41,7 @@ with zipfile.ZipFile("./paintings.zip","r") as zip_ref:
 
 :::
 
-## 主要参数 {#main-parameter}
+## 主要参数 {#parameters}
 
 为了更好的管理脚本，我们将一些主要的公共参数提取出来列在下方。你可以根据需要修改这些参数。
 

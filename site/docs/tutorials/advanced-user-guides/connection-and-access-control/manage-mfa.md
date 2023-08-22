@@ -7,7 +7,7 @@ sidebar_position: 2
 
 本教程将介绍如何在 Zilliz Cloud 账号设置中管理多重身份认证（MFA）。目前，Zilliz Cloud 仅支持通过邮箱进行多重身份认证。
 
-## 前提条件 {#preconditions}
+## 前提条件 {#before-you-start}
 
 开始前，请先确保：
 
@@ -63,7 +63,7 @@ sidebar_position: 2
 1. MFA 关闭成功后，界面右上角弹出确认信息"关闭邮箱验证"。
     ![disable_mfa_success](/img/disable_mfa_success.png)
 
-## 文档推荐 {#document-recommendation}
+## 文档推荐 {#related-documents}
 
 - [管理 API 密钥](./manage-api-keys) 
 

@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 列出 Zilliz Cloud 上所有可用的云服务提供商。
 
-<RestHeader method="get" endpoint="https://controller.api.{cloud_region}.zillizcloud.com/v1/clouds" />
+<RestHeader method="get" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/clouds" />
 
 ---
 
@@ -26,7 +26,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ```shell
 curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/clouds" \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clouds" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
@@ -39,12 +39,8 @@ curl --request GET \
     code: 200,
     data: [
      {
-        "cloudId": "aws",
-        "description": "amazon cloud"
-     },
-     {
-        "cloudId": "gcp",
-        "description": "google cloud"
+        "cloudId": "ali",
+        "description": "alibaba cloud"
      }
     ]
 }

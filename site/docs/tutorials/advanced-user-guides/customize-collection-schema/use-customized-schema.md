@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 本文介绍如何为 Collection 定制 Schema。
 
-## 开始前 {#before-starting}
+## 开始前 {#before-you-start}
 
 请确保已完成以下步骤：
 
@@ -26,7 +26,7 @@ import TabItem from '@theme/TabItem';
 
 :::
 
-## 连接集群 {#connect-cluster}
+## 连接集群 {#connect-to-cluster}
 
 创建集群时，您需要配置一个由用户名和密码组成的集群凭证。请务必记下这些信息，因为您需要它们来连接集群。
 
@@ -152,7 +152,7 @@ if err != nil {
 </TabItem>
 </Tabs>
 
-## 创建 Collection {#create-a-collection}
+## 创建 Collection {#create-collection}
 
 动态 Schema 使得用户可以更简单高效地插入数据，同时也降低了用户学习难度。如果是生产环境，推荐使用自定义 Schema 而非动态 Schema，以确保所有数据都能按预期存储。
 

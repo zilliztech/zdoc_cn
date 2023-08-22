@@ -7,7 +7,7 @@ sidebar_position: 1
 
 本文将演示如何使用 Zilliz Cloud 和 Cohere 搭建基于 [SQuAD 数据集](https://rajpurkar.github.io/SQuAD-explorer/) 的问答系统。其中，Zilliz Cloud 负责提供向量数据库，Cohere 负责提供获取指定文字向量表示的接口。
 
-## 准备工作 {#preparation-work}
+## 准备工作 {#some-prep-work}
 
 本示例中的脚本需要安装 **pymilvus**，**cohere**，**pandas**，**numpy** 和 **tqdm**。其中，**pymilvus** 是 Zilliz Cloud的 Python 客户端，如果你的系统中没有安装它们，可以使用如下命令完成安装。
 
@@ -25,7 +25,7 @@ from tqdm import tqdm
 from pymilvus import connections, FieldSchema, CollectionSchema, DataType, Collection, utility
 ```
 
-## 主要参数 {#main-parameter}
+## 主要参数 {#parameters}
 
 在这里，我们定义了一些示例中将要使用的主要参数。你需要根据实际情况和参数旁的注释填写或替换成相应的内容。
 
@@ -73,7 +73,7 @@ print(len(simplified_records))
 5000
 ```
 
-## 创建 Collection {#create-a-collection}
+## 创建 Collection {#create-collection}
 
 我们需要事先在 Zilliz Cloud 上准备好一个 Cluster。在这一小节里，我们将演示如何在这个 Cluster 里创建一个 Collection 并为其创建索引。
 
@@ -143,7 +143,7 @@ for batch in tqdm(np.array_split(simplified_records, (COUNT/BATCH_SIZE) + 1)):
 collection.flush()
 ```
 
-## 测试问答 {#test-q-a}
+## 测试问答 {#ask-questions}
 
 在我们向 Collection 中插入所有的数据后，就可以开始向这个问答系统提问了。提问的过程也分为三步，分别是：
 

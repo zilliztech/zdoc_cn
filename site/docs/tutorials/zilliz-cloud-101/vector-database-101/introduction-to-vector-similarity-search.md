@@ -13,11 +13,11 @@ sidebar_position: 2
 
 我们开始吧。
 
-## 比较 Embedding {#comparing-embedding}
+## 比较 Embedding {#comparing-embeddings}
 
 我们来看下几个词的 Embedding 向量的示例。下面例子中，我们将使用 `word2vec`，它这是一个古老的模型，使用了基于 **skipgrams** 的训练方法。虽然 BERT 和其他基于转换器的现代模型能够提供更多的语境化词汇 Embedding，但为了简单起见，我们还是使用 `word2vec`。如果您想了解更多信息，Jay Alammar 提供了一篇关于 `word2vec` 的[超棒的教程](https://jalammar.github.io/illustrated-word2vec/)。
 
-### 准备工作 {#preparation-work}
+### 准备工作 {#some-prep-work}
 
 开始前，我们需要安装 `gensim` 库。
 
@@ -50,7 +50,7 @@ print(model.most_similar(positive=['Marlon_Brando']))
 
 Marlon Brando 曾与 Al Pacino 一起出演《教父》，与 Elia Kazan 一起出演《欲望号街车》。他还主演了《现代启示录》。
 
-### 示例 1：国王与**王后** {#example-1-king-and-queen}
+### 示例 1：国王与**王后** {#example-1-if-all-of-the-kings-had-their-queens-on-the-throne}
 
 向量可以相互加减，以演示潜在的语义变化。
 
@@ -66,7 +66,7 @@ print(model.most_similar(positive=['king', 'woman'], negative=['man'], topn=1))
 
 谁说工程师不能在闲暇时享受舞蹈和流行音乐呢？
 
-### 示例 2：Apple，水果还是公司 {#example-2-apple-fruit-or-company}
+### 示例 2：Apple，水果还是公司 {#example-2-apple-the-company-the-fruit-or-both}
 
 “Apple” 一词既可以指公司，也可以指美味的红色水果。
 
@@ -84,7 +84,7 @@ print(model.most_similar(positive=['fruit'], topn=10)[9:])
 
 “Droid” 指的是三星首款 4G LTE 智能手机（“Samsung” + “iPhone” - “Apple” = “Droid”），而 “apple” 是与 “fruit” 相似度最高的第十个单词。
 
-## 向量搜索策略 {#vector-search-strategy}
+## 向量搜索策略 {#vector-search-strategies}
 
 既然我们已经看到了 Embedding 的强大，下面我们简要地看一下实现最近邻搜索的方法。这不是全面的清单，我们只是介绍一些常见的方法，以说明如何大规模进行向量搜索。有的方法之间可能并不相互排斥，比如，可以将量化与空间划分结合起来使用。
 
@@ -98,7 +98,7 @@ print(model.most_similar(positive=['fruit'], topn=10)[9:])
 
 由于老式搜索缺乏空间复杂性以及与之相关的常数空间开销，即使进行适当数量的向量查询时，该方法的性能也好过分片。
 
-### 分片 {#sharding}
+### 分片 {#space-partitioning}
 
 分片不是单个算法，而是一组使用相同概念的算法。
 
@@ -114,7 +114,7 @@ K 维树（kd-trees）可能是这个系列中最有名的，它的工作原理�
 
 乘积量化是另一种量化技术，类似于字典压缩。在乘积量化中，所有向量都被分成等大小的子向量，然后每个子向量被一个中心点替换。
 
-### HNSW {#hnsw}
+### HNSW {#hierarchical-navigable-small-worlds-hnsw}
 
 Hierarchical Navigable Small Worlds（HNSW) 是一种基于图的索引和检索算法。
 
@@ -126,7 +126,7 @@ Hierarchical Navigable Small Worlds（HNSW) 是一种基于图的索引和检索
 
 （来源：https://github.com/spotify/annoy）
 
-### ANNOY {#annoy}
+### ANNOY {#approximate-nearest-neighbors-oh-yeah}
 
 这可能是我最喜欢的 ANN 算法，仅仅是因为它俏皮且不直观的名字。Approximate Nearest Neighbors Oh Yeah（ANNOY）是一种基于树的算法，由 Spotify 推广，用于他们的音乐推荐系统。尽管名字很怪，ANNOY 背后的基本概念实际上相当简单——二进制树。
 
@@ -136,11 +136,11 @@ ANNOY 的工作方式是，首先在数据库中随机选择两个向量，然�
 
 （来源：https://github.com/spotify/annoy）
 
-## 常用的相似性度量 {#commonly-used-similarity-measures}
+## 常用的相似性度量 {#commonly-used-similarity-metrics}
 
 如果没有相似性度量——计算两个向量之间距离的方法，再好的向量数据库也没有用。因为存在许多度量，我们在这里只讨论最常用的子集。
 
-### 浮点向量相似性度量 {#floating-point-vector-similarity-measure}
+### 浮点向量相似性度量 {#floating-point-vector-similarity-metrics}
 
 最常见的浮点向量相似性度量，不分先后，有 L1 距离、L2 距离和余弦相似度。前两个值是距离度量，较低的值意味着更多的相似性，而较高的值则意味着较低的相似性；余弦相似度是一种相似性度量，较高的值意味着更多的相似性。
 
@@ -166,7 +166,7 @@ L1 距离通常也被称为曼哈顿距离，因从曼哈顿的 A 点到 B 点�
 
 从本质上讲，对于单位规范向量来说，L2 距离和余弦相似性在功能上是等价的。一定要记住对 Embedding 进行标准化处理。
 
-### 二进制向量相似性度量 {#binary-vector-similarity-measure}
+### 二进制向量相似性度量 {#binary-vector-similarity-metrics}
 
 二进制向量，正如其名称所示，没有基于算术的度量，如浮点向量。二进制向量的相似性度量依赖于集合算术、位操作或两者的结合（没关系，我也讨厌离散数学）。下面是两个常用的二进制向量相似性度量的公式：
 

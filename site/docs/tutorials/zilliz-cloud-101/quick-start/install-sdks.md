@@ -7,7 +7,7 @@ sidebar_position: 3
 
 本文介绍如何安装 Milvus SDK，以连接到 Zilliz Cloud 集群。
 
-Zilliz Cloud 提供托管式 Milvus 向量数据库服务。您可以按需安装以下语言的 SDK 以连接到集群：[Python](./install-sdks#install-pymilvus-python-sdk)、[Java](./install-sdks#installing-the-java-sdk)、[Go](./install-sdks#install-the-go-sdk) 或 [Node.js](./install-sdks#install-node-js-sdk)。
+Zilliz Cloud 提供托管式 Milvus 向量数据库服务。您可以按需安装以下语言的 SDK 以连接到集群：[Python](./install-sdks#install-pymilvus-python-sdk)、[Java](./install-sdks#installing-java-sdk)、[Go](./install-sdks#install-go-sdk) 或 [Node.js](./install-sdks#install-node-js-sdk)。
 
 :::info 说明
 
@@ -91,7 +91,7 @@ const { MilvusClient } = require("@zilliz/milvus2-sdk-node")
 import { MilvusClient } from "@zilliz/milvus2-sdk-node"
 ```
 
-## 安装 Java SDK {#installing-the-java-sdk}
+## 安装 Java SDK {#installing-java-sdk}
 
 您可以使用 Apache Maven 或 Gradle / Grails 下载 Java SDK。您可以在 [GitHub](https://github.com/milvus-io/milvus-sdk-java) 找到相关源代码。
 
@@ -113,7 +113,7 @@ import { MilvusClient } from "@zilliz/milvus2-sdk-node"
     compile 'io.milvus:milvus-sdk-java:2.2.8'
     ```
 
-## 安装 Go SDK {#install-the-go-sdk}
+## 安装 Go SDK {#install-go-sdk}
 
 您可以通过 `go get` 安装 Go SDK。您可以在 [GitHub](https://github.com/milvus-io/milvus-sdk-go) 找到相关源代码。
 

@@ -9,7 +9,7 @@ Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云�
 
 ![alibabacloud_procedure](/img/alibabacloud_procedure.png)
 
-## 准备工作 {#preparation-work}
+## 准备工作 {#some-prep-work}
 
 1. 您已注册并登录您的阿里云帐号。
 
@@ -18,7 +18,7 @@ Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云�
 
     1. 如果您尚未注册 Zilliz Cloud，并计划通过阿里云云市场缴纳您名下组织产生的费用。您可以直接前往[阿里云云市场](https://market.aliyun.com/products/56024006/cmgj00063418.html)。
 
-## 操作步骤 {#operating-steps}
+## 操作步骤 {#procedure}
 
 1. 前往[阿里云云市场](https://market.aliyun.com/products/56024006/cmgj00063418.html)开通 Zilliz Cloud 服务。
     1. 在 Zilliz Cloud 服务主页中单击“立即开通”，并在弹出的“开通按量服务”窗口中勾选“同意商品在线协议及云市场平台服务协议”，然后单击“开通”。

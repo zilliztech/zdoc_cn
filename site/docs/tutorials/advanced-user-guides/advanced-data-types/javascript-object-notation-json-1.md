@@ -36,7 +36,7 @@ JSON 全称为 JavaScript Object Notation，是一种轻量级且易于使用的
 
 ## 定义 JSON 字段 {#define-json-fields}
 
-定义 JSON 字段的过程与定义其他类型字段的过程相同。在执行如下代码之前，请确认已连接至您的集群。如需连接集群，可参考[连接集群](./use-customized-schema#connect-cluster)。
+定义 JSON 字段的过程与定义其他类型字段的过程相同。在执行如下代码之前，请确认已连接至您的集群。如需连接集群，可参考[连接集群](./use-customized-schema#connect-to-cluster)。
 
 <Tabs defaultValue='python' values={[{"label": "Python", "value": "python"}, {"label": "NodeJS", "value": "javascript"}, {"label": "Java", "value": "java"}, {"label": "Go", "value": "go"}]}>
 <TabItem value='python'>
@@ -919,7 +919,7 @@ for i, sr := range searchResults {
 
 要访问 JSON 字段中的键，您可以在表达式 `expr` 中指定 JSON 字段名称和键名称（例如，`article_meta["claps"]`），并在 `output_fields` 中指定要输出的 JSON 字段。之后您就可以像访问普通字典一样访问 JSON 字段中的键。
 
-## 使用限制 {#usage-restrictions}
+## 使用限制 {#limits}
 
 使用 JSON 字段时，您可以将字符串值用双引号（""）或单引号（''）括起来。需要注意的是，Zilliz Cloud 将 JSON 字段中的字符串值存储为原始字符串，不进行语义转换。例如，`'a"b'`、`"a'b"`、`'a\\\\\\\\'b'` 和 `"a\\\\\\\\"b"` 将按原样保存，而 `'a'b'` 和 `"a"b"` 将被视为无效值。
 

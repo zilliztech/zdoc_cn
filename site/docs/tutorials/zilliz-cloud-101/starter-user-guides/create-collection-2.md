@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 本文介绍如何在 Zilliz Cloud 集群中创建 Collection。
 
-## 开始前 {#before-starting}
+## 开始前 {#before-you-start}
 
 请确保已完成以下步骤：
 
@@ -28,7 +28,7 @@ import TabItem from '@theme/TabItem';
 
 :::
 
-## 操作步骤 {#operating-steps}
+## 操作步骤 {#procedure}
 
 Zilliz Cloud 的动态 Schema 功能可以在向 Collection 插入数据时允许插入未预先定义的字段。要创建自动启用动态  Schema 的  Collection，您只需指定 Collection 名称和向量维度：
 

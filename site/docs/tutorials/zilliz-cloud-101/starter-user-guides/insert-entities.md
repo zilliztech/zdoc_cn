@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 Entity 是 Collection 中的基本数据单元。同一个 Collection 中的 Entity 具有相同的属性，这些属性共同定义在 Schema 中。
 
-## 开始前 {#before-starting}
+## 开始前 {#before-you-start}
 
 请确保已完成以下步骤：
 
@@ -28,7 +28,7 @@ Entity 是 Collection 中的基本数据单元。同一个 Collection 中的 Ent
 
 :::
 
-## 插入单个 Entity {#insert-single-entity}
+## 插入单个 Entity {#insert-a-single-entity}
 
 以下代码将示例数据集中的第一条记录插入到 Collection：
 
@@ -94,7 +94,7 @@ console.log(res)
 </TabItem>
 </Tabs>
 
-## 批量插入 Entity {#batch-insert-entity}
+## 批量插入 Entity {#insert-multile-entities}
 
 ### 准备数据 {#prepare-data}
 
@@ -257,7 +257,7 @@ console.log(res)
 </TabItem>
 </Tabs>
 
-## 写入操作 {#write-operation}
+## 写入操作 {#insert-data}
 
 Zilliz Cloud 会在插入的数量到达一定规模时自动执行建立索引和写入操作。这就会导致部分新写入的数据因未完成索引而无法查询。
 

@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 本文介绍如何从 Zilliz Cloud 集群中删除 Collection。
 
-## 开始前 {#before-starting}
+## 开始前 {#before-you-start}
 
 删除 Collection 会删除与其相关的所有信息，包括插入数据、元数据和索引。删除操作不可逆，请谨慎执行本操作。
 
@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 :::
 
-## 操作步骤 {#operating-steps}
+## 操作步骤 {#procedure}
 
 使用以下示例代码从集群中删除 Collection：
 
@@ -56,7 +56,7 @@ console.log(res)
 </TabItem>
 </Tabs>
 
-## 使用限制 {#usage-restrictions}
+## 使用限制 {#limits}
 
 每个 Collection 只能创建一个向量字段。
 

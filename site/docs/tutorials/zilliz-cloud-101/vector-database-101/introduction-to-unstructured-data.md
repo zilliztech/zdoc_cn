@@ -15,13 +15,13 @@ sidebar_position: 0
 
 还不相信吗？国际数据公司（International Data Corporation，IDC）预测，到 2028 年，全球数据，即在全球范围内创建和存储在持久存储器中的新数据总量，将增长到 400 泽字节（一个泽字节 = 10<sup>21</sup> 字节）。到那个时候，超过 30% 的数据都将是实时产生的，而所有产生的数据中 80% 将是非结构化数据。
 
-## 区分结构化、半结构化和非结构化数据 {#distinguish-between-structured-semi-structured-and-unstructured-data}
+## 区分结构化、半结构化和非结构化数据 {#structured-semi-structured-unstructured-data-definition}
 
 那什么是非结构化数据呢？顾名思义，非结构化数据是指无法存储在预定义格式中或适合现有数据模型的数据。人类生成的数据，如图像、视频、音频、文本文件等，都是非结构化数据的最佳示例。但同时也有许多不太常见的非结构化数据的例子，如蛋白质结构、可执行文件哈希值，或者是人类可读的代码等。
 
 另一方面，结构化数据是指可以以表格格式来存储的数据，而半结构化数据是指可以存储在单层或多层数组或以键值存储的数据。如果你理解起来还是有些困难，没关系，我们会提供一些例子，帮助你了解结构化数据和非结构化数据之间的主要区别。
 
-## 结构化数据示例 {#structured-data-example}
+## 结构化数据示例 {#some-concrete-examples-of-structured-data}
 
 下面让我们先简单介绍一下结构化数据和半结构化数据。用最简单的话来说，传统的结构化数据可以通过关系模型来存储。以图书数据库为例：
 
@@ -63,7 +63,7 @@ sidebar_position: 0
 
 半结构化数据通常存储在 NoSQL 数据库（宽列存储、对象/文档数据库、键值存储等）中，它们的非表格性质不适用于传统的关系型数据库。Cassandra（2008）、MongoDB（2009）和 Redis（2009）是当今最流行的针对半结构化数据的数据库。这些 NoSQL 数据库基本都是在结构化数据库之后的十年左右发布，请记住这一点，我们会在稍后继续介绍。
 
-## 范式转变——非结构化数据 {#paradigm-shift-unstructured-data}
+## 范式转变——非结构化数据 {#a-paradigm-shift-unstructured-data-definition}
 
 既然我们对结构化数据和半结构化数据有了清晰的理解，现在让我们开始谈谈非结构化数据。与结构化数据和半结构化数据不同，非结构化数据可以采取任何形式，可以有任意大小或尺寸，并需要大量的运行时间来转换和索引。我们以图像为例：同一只德国牧羊犬的连续三张正面图片从语义上来讲是相同的。
 
@@ -73,7 +73,7 @@ sidebar_position: 0
 
 本质上，这是和所有行业、所有公司和所有个人都有关的问题，包括你！
 
-## 非结构化数据示例 {#example-of-unstructured-data}
+## 非结构化数据示例 {#unstructured-data-examples}
 
 非结构化数据可以由机器或人类生成。机器生成的非结构化数据包括：
 
@@ -107,7 +107,7 @@ sidebar_position: 0
 
 - 用户产生的内容：网站和论坛上的用户生成的内容，可能包括自由形式的文本、图像和视频文件。
 
-## 快速了解 Embedding {#quick-understanding-of-embedding}
+## 快速了解 Embedding {#a-crash-course-on-embeddings}
 
 让我们回到正题。绝大多数的神经网络模型都能够将单一的非结构化数据转化为浮点值，也就是通常所说的 Embedding 或 Embedding 向量。事实证明，一个经过训练的神经网络可以输出代表图像语义内容的 Embedding。之后的教程中（[什么是向量数据库？](./what-is-a-vector-database)），我们将介绍如何使用预先确定的算法来生成 Embedding。
 
@@ -123,7 +123,7 @@ sidebar_position: 0
 
 大多数教程都聚焦由神经网络生成的 Embedding 向量；然而，请注意，Embedding 向量也可以通过人工算法生成。
 
-## 处理非结构化数据 {#processing-unstructured-data}
+## 处理非结构化数据 {#unstructured-data-processing}
 
 感兴趣了吗？很好。但在我们一头扎进向量数据库 Milvus 之前，让我们花点时间来谈谈如何处理和分析非结构化数据。在结构化数据和半结构化数据的应用场景下，搜索或过滤数据库中的数据是最直观的方式。一个简单的例子，查询 MongoDB 中某作者的第一本书可以通过以下代码完成（使用 **pymongo**）：
 

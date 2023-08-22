@@ -31,7 +31,7 @@ sidebar_position: 0
 
 1. 在页面右上角查看动态 Schema 是否已开启。
 
-更多详情，请阅读 [开启动态 Schema](./enable-dynamic-schema)
+更多详情，请阅读 [开启动态 Schema](./enable-dynamic-schema)。
 
 ![faq_dynamic_schema_enable](/img/faq_dynamic_schema_enable.png)
 
@@ -99,7 +99,7 @@ Zilliz Cloud支持 2 种相似度类型。
 collection.set_properties(properties={"collection.ttl.seconds": 1800})
 ```
 
-**Zilliz Cloud支持哪种索引类型？**
+**Zilliz Cloud 支持哪些索引类型？**
 
 目前，Zilliz Cloud 仅支持 AUTOINDEX。AUTOINDEX 可以增强搜索性能。对于具有 100 万 768维向量的性能型集群，QPS 可达到几百，延迟低于 100 毫秒。对于相同数据量的容量型集群，QPS 可达到50，延迟超过 200 毫秒。有关更多详细信息，请参见[AUTOINDEX](./autoindex-explained) 。
 
@@ -112,3 +112,7 @@ collection.set_properties(properties={"collection.ttl.seconds": 1800})
 **1 个 Collection 中最多可以添加多少个字段？**
 
 1 个 Collection 中最多可以添加 64 个字段。
+
+**Zilliz Cloud 如何处理不活跃集群？**
+
+Zilliz Cloud 会自动挂起 7 天内不活跃集群，并发送邮件通知。您可随时按需恢复集群。

@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 恢复当前已挂起的集群。
 
-<RestHeader method="post" endpoint="https://controller.api.{cloud_region}.zillizcloud.com/v1/clusters/{clusterId}/resume" />
+<RestHeader method="post" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/clusters/{clusterId}/resume" />
 
 ---
 
@@ -26,7 +26,7 @@ import RestHeader from '@site/src/components/RestHeader';
 :::
 
 ```shell
-curl --request POST \ "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/clusters/<Cluster-ID>/resume" \
+curl --request POST \ "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/resume" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"

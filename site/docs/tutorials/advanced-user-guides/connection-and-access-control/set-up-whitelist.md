@@ -9,7 +9,7 @@ sidebar_position: 3
 
 本教程将介绍如何设置白名单。
 
-## 前提条件 {#preconditions}
+## 前提条件 {#before-you-start}
 
 确保满足以下条件：
 
@@ -19,7 +19,7 @@ sidebar_position: 3
 
 - 您是组织或项目管理员。更多用户角色和权限详情，请阅读[角色与权限](./roles-privileges) 。
 
-## 操作步骤 {#operating-steps}
+## 操作步骤 {#procedure}
 
 1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com.cn/login)。
 

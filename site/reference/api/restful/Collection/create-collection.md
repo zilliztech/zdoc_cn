@@ -81,7 +81,7 @@ curl --request POST \
 |------------------|-------------------------------------------------------------------------------------------|
 | `dbName`  | **string**<br/>待创建的 Collection 所属数据库名称。|
 | `collectionName`  | **string**（必选）<br/>待创建的 Collection 名称。 <zilliz>此参数仅适用于 Dedicated 集群。</zilliz>|
-| `dimension`  | **integer**（必选）<br/>指定 Collection 的向量维度。<br/>参数取值在 **32** 和 **32768** 之间.|
+| `dimension`  | **integer**（必选）<br/>指定 Collection 的向量维度。<br/>参数取值在 **1** 和 **32768** 之间.|
 | `metricType`  | **string**<br/>指定 Collection 的距离度量类型。<br/>默认值为 **L2**.|
 | `primaryField`  | **string**<br/>主键字段。<br/>默认值为 **id**.|
 | `vectorField`  | **string**<br/>向量字段。<br/>默认值为 **vector**.|
