@@ -63,7 +63,7 @@ const Rows = [
             },
             {
                 title: "删除 Collection",
-                link: "/docs/drop-collection",
+                link: "/docs/drop-collection-1",
                 width: "10em"
             },
             {
