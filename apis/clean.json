@@ -400,13 +400,13 @@
                 "x-run-in-apifox": "https://www.apifox.cn/web/project/2645146/apis/api-77767163-run"
             }
         },
-        "/v1/clusters/clusters/{clusterId}": {
+        "/v1/clusters/{clusterId}": {
             "get": {
-                "summary": "查看集群详情",
+                "summary": "Describe Cluster",
                 "x-apifox-folder": "Cluster Operations",
                 "x-apifox-status": "released",
                 "deprecated": false,
-                "description": "描述集群的详细信息。",
+                "description": "Describe a cluster in detail.",
                 "tags": [
                     "Cluster Operations"
                 ],
@@ -414,7 +414,7 @@
                     {
                         "name": "CLOUD_PROVIDER",
                         "in": "path",
-                        "description": "一组可用的云服务提供商和云服务区域，如“ali-cn-hangzhou”。",
+                        "description": "An available cloud provider and region set.",
                         "required": true,
                         "schema": {
                             "type": "string"
@@ -423,7 +423,7 @@
                     {
                         "name": "clusterId",
                         "in": "path",
-                        "description": "目标集群 ID。",
+                        "description": "The ID of a cluster to which this operation applies.",
                         "required": true,
                         "schema": {
                             "type": "string"
@@ -432,7 +432,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "集群信息，以数组形式返回。",
+                        "description": "Returns an array of clusters in detail.",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -512,56 +512,56 @@
                                             "properties": {
                                                 "clusterId": {
                                                     "type": "string",
-                                                    "description": "集群 ID。"
+                                                    "description": "The ID of the cluster."
                                                 },
                                                 "clusterName": {
                                                     "type": "string",
-                                                    "description": "集群名称。"
+                                                    "description": "The Name of the cluster."
                                                 },
                                                 "description": {
                                                     "type": "string",
-                                                    "description": "（可选）集群描述信息。"
+                                                    "description": "An optional description of the cluster."
                                                 },
                                                 "regionId": {
                                                     "type": "string",
-                                                    "description": "集群所在的地域 ID。"
+                                                    "description": "The ID of the cloud region where the cluster exists."
                                                 },
                                                 "clusterType": {
                                                     "type": "string",
-                                                    "description": "集群使用的 CU 类型。"
+                                                    "description": "The type of the CU associated with the cluster."
                                                 },
                                                 "cuSize": {
                                                     "type": "integer",
-                                                    "description": "集群使用的 CU 大小。"
+                                                    "description": "The size of the CU used by the cluster."
                                                 },
                                                 "status": {
                                                     "type": "string",
-                                                    "description": "集群当前状态。有效值：**创建中**、**运行中**、**挂起中**和**恢复中**。"
+                                                    "description": "The current status of the cluster. Possible values are **CREATING**, **RUNNING**, **SUSPENDING**, and **RESUMING**."
                                                 },
                                                 "connectAddress": {
                                                     "type": "string",
-                                                    "description": "集群的公共 Endpoint。您可以通过此地址从公网连接到集群。"
+                                                    "description": "The public endpoint of the cluster. You can use this to connect to your cluster from public networks."
                                                 },
                                                 "privateLinkAddress": {
                                                     "type": "string",
-                                                    "description": "集群的私有 Endpoint。您可以为集群设置私有链接，允许同一云区域中的 VPS 访问您的集群。"
+                                                    "description": "The private endpoint of the cluster. You can use this to connect to your cluster from your VPSs in the same cloud region."
                                                 },
                                                 "createTime": {
                                                     "type": "string",
-                                                    "description": "集群创建时间。"
+                                                    "description": "The time when this cluster has been creaated."
                                                 },
                                                 "storageSize": {
                                                     "type": "integer",
-                                                    "description": "集群的存储容量。",
+                                                    "description": "The storage size of the cluster.",
                                                     "format": "sint64"
                                                 },
                                                 "snapshotNumber": {
                                                     "type": "integer",
-                                                    "description": "集群的快照数量。"
+                                                    "description": "The number of snapshofts created from the cluster."
                                                 },
                                                 "createProgress": {
                                                     "type": "integer",
-                                                    "description": "集群创建进程。"
+                                                    "description": "The creation progress of the cluster."
                                                 }
                                             },
                                             "required": [
@@ -846,7 +846,7 @@
                                     "dimension": {
                                         "type": "integer",
                                         "description": "指定 Collection 的向量维度。",
-                                        "minimum": 32,
+                                        "minimum": 1,
                                         "maximum": 32768
                                     },
                                     "metricType": {
@@ -1713,14 +1713,14 @@
                                             },
                                             "limit": {
                                                 "type": "integer",
-                                                "description": "The maximum number of entities to return.<br>The sum of this value and that of `offset` should be less than **16384**.",
+                                                "description": "The maximum number of entities to return.<br/>The sum of this value and that of `offset` should be less than **16384**.",
                                                 "default": 100,
                                                 "minimum": 1,
                                                 "maximum": 100
                                             },
                                             "offset": {
                                                 "type": "integer",
-                                                "description": "The number of entities to skip in the search results.<br>The sum of this value and that of `limit` should be less than **16384**.",
+                                                "description": "The number of entities to skip in the search results.<br/>The sum of this value and that of `limit` should be less than **16384**.",
                                                 "minimum": 0,
                                                 "exclusiveMinimum": true,
                                                 "maximum": 16384
@@ -2282,23 +2282,23 @@
     },
     "servers": [
         {
-            "url": "https://api.{cloud-region}.zillizcloud.com/v1",
+            "url": "https://api.{cloud-region}.cloud.zilliz.com.cn/v1",
             "variables": {
                 "cloud-region": {
-                    "default": "aws-us-west-2",
+                    "default": "ali-cn-hangzhou",
                     "description": "Indicates the cloud region that accommodates your vector databases."
                 }
             }
         },
         {
-            "url": "https://{instance-id}.{cloud-region}.vectordb.zillizcloud.com/v1",
+            "url": "https://{instance-id}.{cloud-region}.vectordb.zilliz.com.cn/v1",
             "variables": {
                 "instance-id": {
                     "default": "vector-instance",
                     "description": "Indicates the instance ID of your vector database."
                 },
                 "cloud-region": {
-                    "default": "aws-us-west-2",
+                    "default": "ali-cn-hangzhou",
                     "description": "Indicates the cloud region that accommodates your vector databases."
                 },
                 "instance-port": {

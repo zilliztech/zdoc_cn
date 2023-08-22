@@ -13,7 +13,7 @@
     "删除 Collection": "drop-collection",
     "按条件查询": "query",
     "搜索": "search",
-    "按 ID 查询": "Get",
+    "按 ID 查询": "get",
     "插入 Entity": "insert",
     "删除 Entity": "delete"
 }
