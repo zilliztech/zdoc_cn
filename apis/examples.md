@@ -12,7 +12,7 @@
 
 ```shell
 curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/clouds" \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clouds" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
@@ -25,12 +25,8 @@ curl --request GET \
     code: 200,
     data: [
      {
-        "cloudId": "aws",
-        "description": "amazon cloud"
-     },
-     {
-        "cloudId": "gcp",
-        "description": "google cloud"
+        "cloudId": "ali",
+        "description": "alibaba cloud"
      }
     ]
 }
@@ -48,7 +44,7 @@ curl --request GET \
 
 ```shell
 curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/regions?cloudId=gcp" \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/regions?cloudId=ali" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
@@ -63,9 +59,9 @@ curl --request GET \
     "code": 200,
     "data": [
         {
-            "apiBaseUrl": "https://api.gcp-us-west1.zillizcloud.com",
-            "cloudId": "gcp",
-            "regionId": "gcp-us-west1"
+            "apiBaseUrl": "https://api.ali-cn-hangzhou.cloud.zilliz.com.cn",
+            "cloudId": "ali",
+            "regionId": "ali-cn-hangzhou"
         }
     ]
 }
@@ -83,7 +79,7 @@ curl --request GET \
 
 ```shell
 curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/clusters/<Cluster-ID>" \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
@@ -124,7 +120,7 @@ curl --request GET \
 :::
 
 ```shell
-curl --request POST \ "https://controller.${CLOUD_REGION_ID}.zillizcloud.com/v1/clusters/<Cluster-ID>/suspend" \
+curl --request POST \ "https://controller.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/suspend" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
@@ -154,7 +150,7 @@ curl --request POST \ "https://controller.${CLOUD_REGION_ID}.zillizcloud.com/v1/
 :::
 
 ```shell
-curl --request POST \ "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/clusters/<Cluster-ID>/resume" \
+curl --request POST \ "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/resume" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
@@ -184,7 +180,7 @@ curl --request POST \ "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com
 
 ```shell
 curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/clusters?pageSize=&current=" \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters?pageSize=&current=" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
@@ -607,7 +603,7 @@ curl --request POST \
 
 ```shell
 curl --request POST \
-     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/vector/collections/import" \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
@@ -632,7 +628,7 @@ curl --request POST \
 
 ```shell
 curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/vector/collections/import/get?jobId=${JOBID}&clusterId=${CLUSTERID}" \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import/get?jobId=${JOBID}&clusterId=${CLUSTERID}" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \

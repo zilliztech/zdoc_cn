@@ -779,7 +779,6 @@ class RefGen:
                 elif 'collection' in page_slug or 'query' in page_slug or 'search' in page_slug or 'get' in page_slug or 'insert' in page_slug or 'delete' in page_slug:
                     server = "https://{public_endpoint}"
                 
-                
                 if 'parameters' in self.specifications['paths'][url][method]:
                     for param in self.specifications['paths'][url][method]['parameters']:
                         if param['in'] == 'query':
