@@ -246,6 +246,11 @@ const Rows = [
                 width: "100%"
             },
             {
+                title: "管理 API 密钥",
+                link: "/docs/manage-api-keys",
+                width: "10em"
+            },
+            {
                 title: "管理身份凭证",
                 link: "/docs/manage-cluster-credentials",
                 width: "10em"
