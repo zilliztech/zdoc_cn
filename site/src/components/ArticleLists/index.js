@@ -421,6 +421,11 @@ const Rows = [
                 width: "10em"
             },
             {
+                title: "设置组织信息",
+                link: "/docs/manage-organization-information",
+                width: "10em"
+            },
+            {
                 title: "",
                 link: "#",
                 width: "35em"
