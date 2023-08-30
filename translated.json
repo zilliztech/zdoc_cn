@@ -181,5 +181,8 @@
     "JSON 数据类型": "JSON data type",
     "RESTful API": "RESTful API",
     "阿里云云市场": "Alibaba Cloud Cloud Market",
-    "Zilliz Cloud 定价": "Zilliz Cloud Pricing"
+    "Zilliz Cloud 定价": "Zilliz Cloud Pricing",
+    "创建 API 密钥": "Create API Key",
+    "查看 API 密钥": "View API Key",
+    "删除 API 密钥": "Delete API Key"
 }
