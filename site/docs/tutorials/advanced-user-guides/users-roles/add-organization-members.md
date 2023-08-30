@@ -56,3 +56,5 @@ sidebar_position: 2
 - [移除组织成员](./remove-members) 
 
 - [添加项目成员](./add-project-collaborators-2) 
+
+- [设置组织信息](./设置组织信息) 

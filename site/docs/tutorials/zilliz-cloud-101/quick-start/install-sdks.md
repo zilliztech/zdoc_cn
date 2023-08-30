@@ -29,7 +29,7 @@ PyMilvus 是 Milvus 的 Python SDK。您可以在 [GitHub](https://github.com/mi
 
 - 安装指定版本的 PyMilvus
     ```bash
-    python -m pip install pymilvus==2.2.13
+    python -m pip install pymilvus==2.3.0
     ```
 
 - 升级 PyMilvus 到最新版本
@@ -42,7 +42,7 @@ PyMilvus 是 Milvus 的 Python SDK。您可以在 [GitHub](https://github.com/mi
     python -m pip list | grep pymilvus
     
     # 输出：
-    # pymilvus        2.2.13
+    # pymilvus        2.3.0
     ```
 
 ## 安装 Node.js SDK {#install-node-js-sdk}
@@ -59,9 +59,9 @@ PyMilvus 是 Milvus 的 Python SDK。您可以在 [GitHub](https://github.com/mi
 
 - 安装指定版本的 Node.js SDK
     ```bash
-    npm install @zilliz/milvus2-sdk-node@2.2.18
+    npm install @zilliz/milvus2-sdk-node@2.3.0
     # 或
-    yarn add @zilliz/milvus2-sdk-node@2.2.18
+    yarn add @zilliz/milvus2-sdk-node@2.3.0
     ```
 
 - 升级 Node.js SDK 到最新版本
@@ -78,7 +78,7 @@ PyMilvus 是 Milvus 的 Python SDK。您可以在 [GitHub](https://github.com/mi
     yarn list | grep @zilliz/milvus2-sdk-node
     
     # 输出
-    # └── @zilliz/milvus2-sdk-node@2.2.18
+    # └── @zilliz/milvus2-sdk-node@2.3.0
     ```
 
 您可以将 SDK 以 CommonJS 模块或 ES6 模块导入到项目中。如果您使用 `npm init` 初始化项目或者`package.json`中没有`"type"="module"`，建议将 SDK 以 CommonJS 模块导入；如果您使用 `npm init es6` 初始化项目或者`package.json`中存在`"type"="module"`，建议将 SDK 以 ES6 模块导入。
@@ -102,7 +102,7 @@ import { MilvusClient } from "@zilliz/milvus2-sdk-node"
     <dependency>
          <groupId>io.milvus</groupId>
          <artifactId>milvus-sdk-java</artifactId>
-         <version>2.2.8</version>
+         <version>2.3.0</version>
      </dependency>
     ```
 
@@ -110,7 +110,7 @@ import { MilvusClient } from "@zilliz/milvus2-sdk-node"
     在 Shell 中执行以下命令：
 
     ```bash
-    compile 'io.milvus:milvus-sdk-java:2.2.8'
+    implementation 'io.milvus:milvus-sdk-java:2.3.0'
     ```
 
 ## 安装 Go SDK {#install-go-sdk}
@@ -118,7 +118,7 @@ import { MilvusClient } from "@zilliz/milvus2-sdk-node"
 您可以通过 `go get` 安装 Go SDK。您可以在 [GitHub](https://github.com/milvus-io/milvus-sdk-go) 找到相关源代码。
 
 ```shell
-go get -u github.com/milvus-io/milvus-sdk-go/v2@v2.2.6
+go get -u github.com/milvus-io/milvus-sdk-go/v2@v2.3.0
 ```
 
 ## 相关文档 {#related-documents}

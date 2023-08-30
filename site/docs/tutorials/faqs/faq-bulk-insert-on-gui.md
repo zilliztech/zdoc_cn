@@ -1,5 +1,5 @@
 ---
-slug: /faqs/bulk-insert-on-gui
+slug: /faqs-bulk-insert-on-gui
 sidebar_position: 2
 ---
 

@@ -1,11 +1,15 @@
 ---
-slug: /faqs/starter-user-guides
+slug: /faqs-starter-user-guides
 sidebar_position: 0
 ---
 
 # 快速入门
 
 本文列举了快速上手 Zilliz Cloud 时可能遇到的常见问题及对应解决方法。
+
+**是否提供 Zilliz Cloud 与其他竞品间的性能对比？**
+
+您可以使用向量数据库性能对比工具 [VectorDBBench](https://zilliz.com/vector-database-benchmark-tool) 来衡量比较 Zilliz Cloud 与其他主流向量数据库和云服务间的性能差异。
 
 **1 个集群中最多可创建多少个 Collection？**
 

@@ -1,5 +1,5 @@
 ---
-slug: /faqs/pricing
+slug: /faqs-pricing
 sidebar_position: 6
 ---
 

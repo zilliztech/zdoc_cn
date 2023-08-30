@@ -1,5 +1,5 @@
 ---
-slug: /faqs/monitors-metrics
+slug: /faqs-monitors-metrics
 sidebar_position: 4
 ---
 

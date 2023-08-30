@@ -1,5 +1,5 @@
 ---
-slug: /faqs/connection-and-access-control
+slug: /faqs-connection-and-access-control
 sidebar_position: 1
 ---
 

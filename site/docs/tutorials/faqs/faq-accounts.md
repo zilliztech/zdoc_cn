@@ -1,11 +1,15 @@
 ---
-slug: /faqs/accounts
+slug: /faqs-accounts
 sidebar_position: 7
 ---
 
 # 账号
 
 本文列举了 Zilliz Cloud 账号相关的常见问题及对应解决方法。
+
+**如何修改账号电子邮箱？**
+
+当前，Zilliz Cloud 不支持修改账号电子邮箱。
 
 **如何删除账号？**
 

@@ -1,5 +1,5 @@
 ---
-slug: /faqs/AI
+slug: /faqs-AI
 sidebar_position: 3
 ---
 

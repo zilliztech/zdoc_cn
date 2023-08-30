@@ -55,6 +55,22 @@ Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云�
 
     ![HsZ9bVAnEo5dOpxVSaBcezaknjd](/img/HsZ9bVAnEo5dOpxVSaBcezaknjd.png)
 
+## Zilliz Cloud 定价 {#zilliz-cloud-pricing}
+
+### 企业版 {#enterprise-edition}
+
+| Zilliz Cloud 用量 | 价格            | 阿里云市场 Unit 数量 |
+| --------------- | ------------- | ------------- |
+| 1 CU 经济型每小时计算量  | ¥0.85 / Unit  | 850           |
+| 1 CU 容量型每小时计算量  | ¥1.25  / Unit | 1250          |
+| 1 CU 性能型每小时计算量  | ¥1.25  / Unit | 1250          |
+| 每月 1 GB 存储量     | ¥0.5 / Unit   | 500           |
+|  1 GB 备份量       | ¥0.5 / Unit   | 500           |
+
+例如，在 Zilliz Cloud 企业版中创建大小为 1 CU 的性能型 CU，你需要支付 850 个单位的价格，也就是 ¥0.85 每小时。 
+
+如需使用 Zilliz Cloud 专有部署版，请[联系销售](https://zilliz.com.cn/contact-sales)。
+
 ## 开具发票 {#invoicing}
 
 当前阿里云云市场发票系统正在升级，无法在线开具电子发票。在阿里云云市场发票系统升级完成前，如需开具电子发票，请[联系我们](mailto:support@zilliz.com)。

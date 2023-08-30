@@ -11,7 +11,7 @@ sidebar_position: 0
 
 ## 查看当前时区 {#view-the-current-time-zone}
 
-要查看当前时区，请从左侧导航栏中选择**设置**，并在**时区**区域的**系统时区**下找到当前应用的时区。
+要查看当前时区，请从左侧导航栏中选择**系统设置**，并在**时区**区域的**系统时区**下找到当前应用的时区。
 
 ## 编辑时区 {#edit-time-zone}
 
@@ -19,4 +19,6 @@ sidebar_position: 0
 
 ## 相关文档 {#related-documents}
 
-[设置运维窗口](./set-up-maintenance-window)
+- [设置运维窗口](./set-up-maintenance-window)
+
+- [设置组织信息](./设置组织信息) 
