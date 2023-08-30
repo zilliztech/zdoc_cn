@@ -355,7 +355,7 @@ class docWriter:
                 titles = json.loads(open('titles.json', 'r').read())
                 slug = titles[title] if title in titles else title
                 with open(f"{path}/faq-{slug}.md", "w") as f:
-                    f.write(self.__front_matters(slug=f"faqs/{slug}", sidebar_position=idx))
+                    f.write(self.__front_matters(slug=f"faqs-{slug}", sidebar_position=idx))
                     f.write('\n'.join(sub_page)[1:])
 
     def __write_page(self, block, path, sidebar_position=None):
@@ -737,7 +737,7 @@ class biTableParser:
                 with open('logs.txt', 'a') as f:
                     json.dump(record[0], f, indent=4, ensure_ascii=False)
                     
-            return record[0]['fields']['进度'] != '无需中文版'
+            return record[0]['fields']['进度'] != '无须中文版' and record[0]['fields']['进度'] != '暂未开始'
 
 class RefGen:
 
