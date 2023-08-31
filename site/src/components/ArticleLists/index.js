@@ -292,7 +292,7 @@ const Rows = [
             },
             {
                 title: "创建自动备份",
-                link: "/docs/create-automatic-backups",
+                link: "/docs/schedule-automatic-backups",
                 width: "10em"
             },
             {
