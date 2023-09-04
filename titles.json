@@ -90,7 +90,7 @@
     "迁移到 Zilliz Cloud": "migration-from-milvus",
     "高级用户指南": "advanced-user-guides",
     "定价": "pricing",
-    "批量导入数据": "bulk-insert-on-gui",
+    "批量导入数据": "bulk-insert-data",
     "批量插入数据": "bulk-insert",
     "账号": "accounts",
     "与 HuggingFace 集成搭建问答系统": "question-answering-using-zilliz-cloud-and-hugging-face",
