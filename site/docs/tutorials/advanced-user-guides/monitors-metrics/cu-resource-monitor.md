@@ -36,3 +36,5 @@ Zilliz Cloud 提供 CU 资源监控功能，以帮助您及时扩展集群。该
 - [已使用容量监控](./load-capacity-resource-monitor)
 
 - [查看集群性能指标](./view-cluster-metrics)
+
+- [现金余额监控](./advance-pay-balance-monitor) 

@@ -33,5 +33,5 @@ Zilliz Cloud 通过组织和项目实现访问控制和资源逻辑分离。使�
 
 - [添加项目成员](./add-project-collaborators-2) 
 
-- [设置组织信息](./设置组织信息) 
+- [设置组织信息](./manage-organization-information) 
 

@@ -17,7 +17,7 @@ sidebar_position: 0
 
 **免费试用结束后，我的数据是否会被删除？**
 
-免费试用结束后，Zilliz Cloud 将自动备份您的数据并移至回收站，集群将被删除。回收站中的数据可免费保留30天。您可以通过 support@zilliz.com 联系我们以继续使用 Zilliz Cloud。
+免费试用结束后，Zilliz Cloud 将自动备份您的数据并移至回收站，集群将被删除。回收站中的数据可免费保留30天。您可以开通阿里云市场扣费渠道或[联系我们](https://zilliz.com.cn/contact-sales)以继续使用 Zilliz Cloud。
 
 **如何查看订阅的 Zilliz Cloud 版本？**
 
@@ -45,7 +45,7 @@ sidebar_position: 0
 
 1. 创建 1 个新集群。创建时选择你所需的 CU 类型。
 
-1. 发送邮件至 [support@zilliz.com](mailto:support@zilliz.com) 联系我们将旧集群中的数据迁移至新集群中。请务必在邮件中注明源集群和目标集群的名称。
+1. [提交工单](https://support.zilliz.com.cn/hc/zh-cn)并请求将旧集群中的数据迁移至新集群中。请务必在邮件中注明源集群和目标集群的名称。
 
 **如果创建 Collection 时未开启动态 Schema，Collection 创建成功后是否还能开启动态 Schema？**
 
@@ -67,7 +67,7 @@ sidebar_position: 0
 
 **如何获取技术支持？**
 
-如需技术支持，请发送邮件至 [support@zilliz.com](mailto:support@zilliz.com)。您将在 24 小时内收到回复。
+如需技术支持，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。您将在 24 小时内收到回复。
 
 **什么是计算单元（Compute Unit, CU）?**
 
@@ -87,11 +87,11 @@ Zilliz Cloud支持 2 种相似度类型。
 
 **集合加载请求的并发是多少？如何增加并发请求的数量？**
 
-当前，Zilliz Cloud 加载集合请求的速率限制为每秒 1 个。该建议数值仅针对 1 CU 的集群。如需增加并发请求的数量，请通过 [support@zilliz.com](mailto:support@zilliz.com) 联系我们。
+当前，Zilliz Cloud 加载集合请求的速率限制为每秒 1 个。该建议数值仅针对 1 CU 的集群。如需增加并发请求的数量，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 
 **如何为集群缩容？**
 
-如果您需要缩小集群 CU 大小，请通过 [support@zilliz.com](mailto:support@zilliz.com) 联系我们。我们将在 8 小时以内为您的集群缩容。
+如果您需要缩小集群 CU 大小，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。我们将在 8 小时以内为您的集群缩容。
 
 **如何为创建的 Collection 设置存留时间（TTL）属性？**
 
@@ -107,7 +107,7 @@ collection.set_properties(properties={"collection.ttl.seconds": 1800})
 
 目前，Zilliz Cloud 仅支持 AUTOINDEX。AUTOINDEX 可以增强搜索性能。对于具有 100 万 768维向量的性能型集群，QPS 可达到几百，延迟低于 100 毫秒。对于相同数据量的容量型集群，QPS 可达到50，延迟超过 200 毫秒。有关更多详细信息，请参见[AUTOINDEX](./autoindex-explained) 。
 
-如果您十分熟悉[此处](https://milvus.io/docs/index.md)罗列的索引类型并想要使用这些索引类型，请通过 [support@zilliz.com](mailto:support@zilliz.com) 联系我们。
+如果您十分熟悉[此处](https://milvus.io/docs/index.md)罗列的索引类型并想要使用这些索引类型，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 
 **Zilliz Cloud 搜索延迟是多少？**
 

@@ -140,9 +140,9 @@ const Rows = [
                 width: "15em"
             },
             {
-                title: "",
-                link: "#",
-                width: "10em"
+                title: "数据安全",
+                link: "/docs/data-security",
+                width: "44em"
             },
         ]
     },
@@ -206,8 +206,8 @@ const Rows = [
                 width: "10em"
             },
             {
-                title: "",
-                link: "#",
+                title: "使用 Partition Key",
+                link: "/docs/use-partition-key",
                 width: "10em"
             },
             {
@@ -229,16 +229,6 @@ const Rows = [
                 title: "JSON",
                 link: "/docs/javascript-object-notation-json-1",
                 width: "30%"
-            },
-            {
-                title: "批量插入数据",
-                link: "",
-                width: "100%"
-            },
-            {
-                title: "批量导入数据",
-                link: "/docs/bulk-insert-on-gui",
-                width: "10em"
             },
             {
                 title: "连接与访问控制",
@@ -381,8 +371,8 @@ const Rows = [
                 width: "10em"
             },
             {
-                title: "",
-                link: "#",
+                title: "现金余额监控",
+                link: "/docs/advance-pay-balance-monitor",
                 width: "10em"
             },
             {
@@ -401,9 +391,14 @@ const Rows = [
                 width: "10em"
             },
             {
+                title: "现金充值",
+                link: "/docs/advance-pay",
+                width: "10em"
+            },
+            {
                 title: "",
                 link: "#",
-                width: "35em"
+                width: "25em"
             },            
             {
                 title: "系统设置",
@@ -426,9 +421,14 @@ const Rows = [
                 width: "10em"
             },
             {
+                title: "企业认证",
+                link: "/docs/enterprise-validation",
+                width: "15em"
+            },
+            {
                 title: "",
                 link: "#",
-                width: "35em"
+                width: "8em"
             },
         ]
     },
@@ -540,35 +540,68 @@ const Rows = [
             {
                 title: "从 Milvus 1.x 迁移至 Zilliz Cloud",
                 link: "/docs/migrate-from-milvus-1x",
-                width: "10em"
+                width: "15em"
             },
             {
                 title: "从 Milvus 2.x 迁移至 Zilliz Cloud",
                 link: "/docs/migrate-from-milvus-2x",
+                width: "15em"
+            },
+            {
+                title: "从 ElasticSearch 迁移至 Zilliz Cloud",
+                link: "/docs/migrate-from-elasticsearch",
+                width: "15em"
+            },
+            {
+                title: "Zilliz Cloud 集群间迁移",
+                link: "/docs/migrate-between-clusters",
+                width: "15em"
+            },
+        ],
+    },
+    {
+        group: 2,
+        title: "导入数据至现有 Collection",
+        description: "了解如何将数据导入至现有 Collection。",
+        Svg: require('@site/static/img/data-import-into-existing-collection.svg').default,
+        members: [
+            {
+                title: "通过 Web 控制台导入",
+                link: "/docs/import-data-on-web-ui",
+                width: "10em"
+            },
+            {
+                title: "通过 RESTful API 导入",
+                link: "/docs/import-data-via-restful-api",
+                width: "10em"
+            },
+            {
+                title: "通过 SDK 导入",
+                link: "/docs/import-data-via-sdks",
                 width: "10em"
             },
         ],
     },
     {
         group: 2,
-        title: "云服务与社区版对比",
-        description: "了解 Zilliz Cloud 与社区版的区别。",
+        title: "参考手册",
+        description: "了解更多关于迁移和数据导入的知识。",
         Svg: require('@site/static/img/zilliz-cloud-vs-milvus.svg').default,
         members: [
             {
+                title: "使用 BulkWriter 准备导入数据",
+                link: "/docs/use-bulkwriter-for-data-import",
+                width: "15em"
+            },
+            {
                 title: "API异同",
                 link: "/docs/api-comparisons",
-                width: "10em"
+                width: "15em"
             },
             {
                 title: "其它异同",
                 link: "/docs/other-differences",
-                width: "10em"
-            },
-            {
-                title: "",
-                link: "#",
-                width: "65%"
+                width: "15em"
             },
         ],
     }

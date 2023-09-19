@@ -36,3 +36,5 @@ sidebar_position: 3
 - [查询延时监控](./query-latency-monitor)
 
 - [查看集群性能指标](./view-cluster-metrics)
+
+- [现金余额监控](./advance-pay-balance-monitor) 

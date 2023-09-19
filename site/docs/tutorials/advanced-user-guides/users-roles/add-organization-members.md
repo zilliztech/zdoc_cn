@@ -57,4 +57,4 @@ sidebar_position: 2
 
 - [添加项目成员](./add-project-collaborators-2) 
 
-- [设置组织信息](./设置组织信息) 
+- [设置组织信息](./manage-organization-information) 

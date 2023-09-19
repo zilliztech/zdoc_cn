@@ -1,6 +1,6 @@
 ---
 slug: /view-cluster-metrics
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # 查看集群性能指标
@@ -38,3 +38,15 @@ sidebar_position: 4
 - 过去 1 周
 
 - 过去 1 月
+
+## 文档推荐 {#related-documents}
+
+- [CU 资源监控](./cu-resource-monitor) 
+
+- [QPS 资源监控](./qps-resource-monitor) 
+
+- [查询时延监控](./query-latency-monitor) 
+
+- [已使用容量监控](./load-capacity-resource-monitor) 
+
+- [现金余额监控](./advance-pay-balance-monitor) 

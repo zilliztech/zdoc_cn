@@ -34,8 +34,6 @@ import TabItem from '@theme/TabItem';
 
 - 您已下载示例数据集。更多详情，请参见[示例数据集](./example-dataset-1)。
 
-- 为了更好地理解本指导，建议您下载[示例源代码](https://assets.zilliz.com/zdoc/zilliz_cloud_sdk_examples.zip)或直接拷贝下方各示例代码块中的内容到本地文件中查看演示效果。
-
 ## 创建 Collection {#create-collection}
 
 如通过 Zilliz Cloud 界面创建集群，您需要在创建集群的同时创建 1 个 Collection。 以下代码展示如何通过调用 API 在您的集群下创建 Collection。

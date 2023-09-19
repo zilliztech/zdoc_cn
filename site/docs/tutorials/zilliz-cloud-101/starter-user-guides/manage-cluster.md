@@ -21,7 +21,7 @@ sidebar_position: 7
 
 在 **Collection** 页签下，您可以管理集群中的 Collection。您可以创建 Collection、将数据导入 Collection、加载或释放 Collection、重命名 Collection 和删除 Collection。
 
-有关数据导入的详细信息，请参阅[批量导入数据](./bulk-insert-on-gui)。
+有关数据导入的详细信息，请参阅[批量导入数据](https://zilliverse.feishu.cn/wiki/MU2mw5IKsiGva9k7Ti5cn9shnFf)。
 
 ![manage-collections](/img/manage-collections.png)
 
@@ -43,7 +43,7 @@ sidebar_position: 7
 
 ## 管理数据迁移 {#manage-data-migrations}
 
-在**操作**下拉列表中，您可以选择**迁移数据**来创建数据迁移任务，以从 Milvus 迁移数据到 Zilliz Cloud 集群。有关更多信息，请参阅[迁移到 Zilliz Cloud](./migration-from-milvus)。
+在**操作**下拉列表中，您可以选择**迁移数据**来创建数据迁移任务，以从 Milvus 迁移数据到 Zilliz Cloud 集群。有关更多信息，请参阅[迁移到 Zilliz Cloud](./migration-and-data-import)。
 
 ## 扩容集群 {#scale-up-cluster}
 
@@ -87,7 +87,7 @@ sidebar_position: 7
 
 - [备份与恢复](./backup-and-restore)
 
-- [迁移到 Zilliz Cloud](./migration-from-milvus)
+- [迁移到 Zilliz Cloud](./migration-and-data-import)
 
 - [CU 类型](./cu-types-explained-1)
 

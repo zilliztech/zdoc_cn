@@ -35,7 +35,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "CLOUD_PROVIDER",
+                        "name": "CLOUD_REGION_ID",
                         "in": "path",
                         "description": "一组可用的云服务提供商和云服务区域，如“ali-cn-hangzhou”。",
                         "required": true,
@@ -134,7 +134,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "CLOUD_PROVIDER",
+                        "name": "CLOUD_REGION_ID",
                         "in": "path",
                         "description": "一组可用的云服务提供商和云服务区域，如“ali-cn-hangzhou”。",
                         "required": true,
@@ -237,7 +237,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "CLOUD_PROVIDER",
+                        "name": "CLOUD_REGION_ID",
                         "in": "path",
                         "description": "一组可用的云服务提供商和云服务区域，如“ali-cn-hangzhou”。",
                         "required": true,
@@ -412,7 +412,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "CLOUD_PROVIDER",
+                        "name": "CLOUD_REGION_ID",
                         "in": "path",
                         "description": "一组可用的云服务提供商和云服务区域，如“ali-cn-hangzhou”。",
                         "required": true,
@@ -617,7 +617,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "CLOUD_PROVIDER",
+                        "name": "CLOUD_REGION_ID",
                         "in": "path",
                         "description": "一组可用的云服务提供商和云服务区域，如“ali-cn-hangzhou”。",
                         "required": true,
@@ -692,7 +692,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "CLOUD_PROVIDER",
+                        "name": "CLOUD_REGION_ID",
                         "in": "path",
                         "description": "一组可用的云服务提供商和云服务区域，如“ali-cn-hangzhou”。",
                         "required": true,
@@ -2048,7 +2048,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "CLOUD_PROVIDER",
+                        "name": "CLOUD_REGION_ID",
                         "in": "path",
                         "description": "一组可用的云服务提供商和云服务区域，如“ali-cn-hangzhou”。",
                         "required": true,
@@ -2178,7 +2178,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "CLOUD_PROVIDER",
+                        "name": "CLOUD_REGION_ID",
                         "in": "path",
                         "description": "一组可用的云服务提供商和云服务区域，如“ali-cn-hangzhou”。",
                         "required": true,
@@ -2235,13 +2235,69 @@
                                                 },
                                                 "completeTime": {
                                                     "type": "string",
-                                                    "description": "导入任务完成的预计持续时间（以毫秒为单位）。",
+                                                    "description": "导入任务完成的预计持续时间（以秒为单位）。",
                                                     "nullable": true
                                                 },
                                                 "errorMessage": {
                                                     "type": "string",
                                                     "description": "导入失败的原因说明。",
                                                     "nullable": true
+                                                },
+                                                "collectionName": {
+                                                    "type": "string",
+                                                    "description": "导入任务对应的目标 Collection 名称。"
+                                                },
+                                                "jobId": {
+                                                    "type": "string",
+                                                    "description": "导入任务的 ID。"
+                                                },
+                                                "details": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "fileName": {
+                                                                "type": "string",
+                                                                "description": "正在导入的文件路径。"
+                                                            },
+                                                            "fileSize": {
+                                                                "type": "integer",
+                                                                "description": "正在导入的文件大小。",
+                                                                "format": "int64"
+                                                            },
+                                                            "readyPercentage": {
+                                                                "type": "number",
+                                                                "description": "当前文件的导入进度。",
+                                                                "format": "float"
+                                                            },
+                                                            "completeTime": {
+                                                                "type": "string",
+                                                                "description": "当前文件完成导入的时间。值为 `null` 时表示文件正在导入。",
+                                                                "nullable": true
+                                                            },
+                                                            "errorMessage": {
+                                                                "type": "string",
+                                                                "description": "对于导入失败的提示信息。值为 `null` 时表示无错误发生。",
+                                                                "nullable": true
+                                                            }
+                                                        },
+                                                        "x-apifox-orders": [
+                                                            "fileName",
+                                                            "fileSize",
+                                                            "readyPercentage",
+                                                            "completeTime",
+                                                            "errorMessage"
+                                                        ],
+                                                        "required": [
+                                                            "fileName",
+                                                            "fileSize",
+                                                            "readyPercentage",
+                                                            "completeTime",
+                                                            "errorMessage"
+                                                        ],
+                                                        "x-apifox-ignore-properties": []
+                                                    },
+                                                    "description": "导入任务详情。"
                                                 }
                                             },
                                             "x-apifox-orders": [
@@ -2249,14 +2305,20 @@
                                                 "fileSize",
                                                 "readyPercentage",
                                                 "completeTime",
-                                                "errorMessage"
+                                                "errorMessage",
+                                                "collectionName",
+                                                "jobId",
+                                                "details"
                                             ],
                                             "required": [
                                                 "fileName",
                                                 "fileSize",
                                                 "readyPercentage",
                                                 "completeTime",
-                                                "errorMessage"
+                                                "errorMessage",
+                                                "collectionName",
+                                                "jobId",
+                                                "details"
                                             ],
                                             "x-apifox-ignore-properties": []
                                         }
@@ -2277,6 +2339,227 @@
                     }
                 },
                 "x-run-in-apifox": "https://www.apifox.cn/web/project/2645146/apis/api-96581883-run"
+            }
+        },
+        "/v1/vector/collections/import/list": {
+            "get": {
+                "summary": "查看数据导入任务",
+                "x-apifox-folder": "Import Operations",
+                "x-apifox-status": "developing",
+                "deprecated": false,
+                "description": "列出指定集群上的数据导入任务。",
+                "tags": [
+                    "Import Operations"
+                ],
+                "parameters": [
+                    {
+                        "name": "CLOUD_REGION_ID",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "clusterId",
+                        "in": "query",
+                        "description": "Zilliz Cloud 集群 ID。",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "description": "每次返回的导入任务数量。",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "currentPage",
+                        "in": "query",
+                        "description": "当前页码。",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "返回一个导入任务列表。",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "type": "object",
+                                            "properties": {
+                                                "count": {
+                                                    "type": "string",
+                                                    "description": "当前响应中包含的导入任务数量。"
+                                                },
+                                                "currentPage": {
+                                                    "type": "string",
+                                                    "description": "当前页码。"
+                                                },
+                                                "pageSize": {
+                                                    "type": "string",
+                                                    "description": "每次返回的最大记录数量。"
+                                                },
+                                                "records": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "collectionName": {
+                                                                "type": "string",
+                                                                "description": "当前导入任务对应的目标 Collection 名称。"
+                                                            },
+                                                            "jobId": {
+                                                                "type": "string",
+                                                                "description": "当前导入任务的 ID。"
+                                                            },
+                                                            "state": {
+                                                                "type": "string",
+                                                                "description": "当前导入任务的状态。可能的取值有： <b>ImportRunning</b>、<b>ImportCompleted</b> 和 <b>ImportFailed</b>."
+                                                            }
+                                                        },
+                                                        "x-apifox-orders": [
+                                                            "collectionName",
+                                                            "jobId",
+                                                            "state"
+                                                        ],
+                                                        "required": [
+                                                            "collectionName",
+                                                            "jobId",
+                                                            "state"
+                                                        ],
+                                                        "x-apifox-ignore-properties": []
+                                                    }
+                                                }
+                                            },
+                                            "x-apifox-orders": [
+                                                "count",
+                                                "currentPage",
+                                                "pageSize",
+                                                "records"
+                                            ],
+                                            "required": [
+                                                "count",
+                                                "currentPage",
+                                                "pageSize",
+                                                "records"
+                                            ],
+                                            "x-apifox-ignore-properties": []
+                                        }
+                                    },
+                                    "x-apifox-orders": [
+                                        "01H9HR3SJXBHH9WRXFQTXAHFZ9"
+                                    ],
+                                    "required": [
+                                        "code",
+                                        "data"
+                                    ],
+                                    "x-apifox-refs": {
+                                        "01H9HR3SJXBHH9WRXFQTXAHFZ9": {
+                                            "type": "object",
+                                            "properties": {
+                                                "code": {
+                                                    "type": "string"
+                                                },
+                                                "data": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "count": {
+                                                            "type": "string",
+                                                            "description": "Total number of records listed in this response."
+                                                        },
+                                                        "currentPage": {
+                                                            "type": "string",
+                                                            "description": "The current page number for your reference."
+                                                        },
+                                                        "pageSize": {
+                                                            "type": "string",
+                                                            "description": "The maximum number of records to be included in each return."
+                                                        },
+                                                        "records": {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "collectionName": {
+                                                                        "type": "string",
+                                                                        "description": "The target collection name of a import task."
+                                                                    },
+                                                                    "jobId": {
+                                                                        "type": "string",
+                                                                        "description": "The ID of an import task."
+                                                                    },
+                                                                    "state": {
+                                                                        "type": "string",
+                                                                        "description": "The corresponding status of the import task. Possible values are <b>ImportRunning</b>, <b>ImportCompleted</b> and <b>ImportFailed</b>."
+                                                                    }
+                                                                },
+                                                                "x-apifox-orders": [
+                                                                    "collectionName",
+                                                                    "jobId",
+                                                                    "state"
+                                                                ],
+                                                                "required": [
+                                                                    "collectionName",
+                                                                    "jobId",
+                                                                    "state"
+                                                                ],
+                                                                "x-apifox-ignore-properties": []
+                                                            }
+                                                        }
+                                                    },
+                                                    "x-apifox-orders": [
+                                                        "count",
+                                                        "currentPage",
+                                                        "pageSize",
+                                                        "records"
+                                                    ],
+                                                    "required": [
+                                                        "count",
+                                                        "currentPage",
+                                                        "pageSize",
+                                                        "records"
+                                                    ],
+                                                    "x-apifox-ignore-properties": []
+                                                }
+                                            },
+                                            "x-apifox-orders": [
+                                                "code",
+                                                "data"
+                                            ],
+                                            "required": [
+                                                "code",
+                                                "data"
+                                            ],
+                                            "x-apifox-ignore-properties": [],
+                                            "x-apifox-folder": "Schemas"
+                                        }
+                                    },
+                                    "x-apifox-ignore-properties": [
+                                        "code",
+                                        "data"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-run-in-apifox": "https://www.apifox.cn/web/project/2645146/apis/api-108178351-run"
             }
         }
     },

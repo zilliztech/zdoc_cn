@@ -28,12 +28,6 @@ JSON 全称为 JavaScript Object Notation，是一种轻量级且易于使用的
 
 创建列表或数组时，请确保所有字段的值都是相同类型。Zilliz Cloud 将所有嵌套字典视为字符串。在定义 JSON 键时，建议只使用字母、数字和下划线，其他字符类型可能会导致过滤或搜索时出错。
 
-:::info 说明
-
-您可以下载本指南中的源代码以供参考。
-
-:::
-
 ## 定义 JSON 字段 {#define-json-fields}
 
 定义 JSON 字段的过程与定义其他类型字段的过程相同。在执行如下代码之前，请确认已连接至您的集群。如需连接集群，可参考[连接集群](./use-customized-schema#connect-to-cluster)。
@@ -941,3 +935,10 @@ for i, sr := range searchResults {
 | `or` (`\|\|`)  | `"A > 1 \\|\\| A < 3"`                         | `A`  是否必须存在取决于运算符两侧表达式的要求 |
 | `exist`        | `"exist A"`                                    | `A`  必须存在                 |
 
+## 相关文档 {#related-documents}
+
+[定制 Schema](./use-customized-schema) 
+
+[开启动态 Schema](./enable-dynamic-schema) 
+
+[使用 Partition Key](./use-partition-key) 
