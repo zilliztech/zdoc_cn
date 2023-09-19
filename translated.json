@@ -214,5 +214,8 @@
     "数据导入能力增强": "Enhanced data import capability",
     "连接到 Elasticsearch 集群": "Connect to Elasticsearch cluster",
     "将数据从 Elasticsearch 索引迁移至 Zilliz Cloud Collection": "Migrate data from Elasticsearch index to Zilliz Cloud Collection",
-    "字段映射": "Field Mapping"
+    "字段映射": "Field Mapping",
+    "创建启用 Partition Key 的 Collection": "Create a Collection with Partition Key enabled",
+    "基于 Partition Key 的 ANN 搜索": "ANN Search Based on Partition Key",
+    "典型使用场景": "Typical usage scenarios"
 }
