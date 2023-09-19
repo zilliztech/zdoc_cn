@@ -1,6 +1,6 @@
 ---
 slug: /other-differences
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # 其他异同

@@ -633,3 +633,21 @@ curl --request GET \
      --header "accept: application/json" \
      --header "content-type: application/json" \
 ```
+
+## 查看数据导入任务
+
+列出指定集群上的数据导入任务。
+
+:::info 说明
+
+此处请使用您的 API Key 做为 Token。
+
+:::
+
+```shell
+curl --request GET \
+     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/vector/collections/import/list?clusterId=${CLUSTERID}" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json" \
+```

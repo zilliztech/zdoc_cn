@@ -30,7 +30,7 @@ sidebar_position: 1
 
 1. 运行 `telnet in01-(uuid).(region).vectordb.zillizcloud.com 19530` 测试端口是否可以连接。
 
-如执行上述步骤后，仍无法连接集群，请通过 [support@zilliz.com](mailto:support@zilliz.com) 联系我们。
+如执行上述步骤后，仍无法连接集群，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 
 **如何解决使用 Node.js SDK 无法连接 Zilliz Cloud 的问题?**
 

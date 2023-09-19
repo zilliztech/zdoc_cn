@@ -51,5 +51,5 @@ sidebar_position: 4
 
 - [移除组织成员](./remove-members) 
 
-- [设置组织信息](./设置组织信息) 
+- [设置组织信息](./manage-organization-information) 
 

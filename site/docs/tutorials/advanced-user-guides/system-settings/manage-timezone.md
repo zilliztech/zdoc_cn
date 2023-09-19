@@ -21,4 +21,4 @@ sidebar_position: 0
 
 - [设置运维窗口](./set-up-maintenance-window)
 
-- [设置组织信息](./设置组织信息) 
+- [设置组织信息](./manage-organization-information) 

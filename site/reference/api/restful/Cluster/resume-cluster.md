@@ -56,7 +56,7 @@ curl --request POST \ "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.co
 
     | 参数名称        | 参数说明                                                                             |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `CLOUD_PROVIDER`  | **string**（必选）<br/>一组可用的云服务提供商和云服务区域，如“ali-cn-hangzhou”。|
+    | `CLOUD_REGION_ID`  | **string**（必选）<br/>一组可用的云服务提供商和云服务区域，如“ali-cn-hangzhou”。|
     | `clusterId`  | **string**（必选）<br/>目标集群 ID。|
 
 ### 请求体

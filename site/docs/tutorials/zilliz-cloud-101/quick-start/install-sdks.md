@@ -29,7 +29,7 @@ PyMilvus 是 Milvus 的 Python SDK。您可以在 [GitHub](https://github.com/mi
 
 - 安装指定版本的 PyMilvus
     ```bash
-    python -m pip install pymilvus==2.3.0
+    python -m pip install pymilvus==2.2.16
     ```
 
 - 升级 PyMilvus 到最新版本
@@ -42,7 +42,7 @@ PyMilvus 是 Milvus 的 Python SDK。您可以在 [GitHub](https://github.com/mi
     python -m pip list | grep pymilvus
     
     # 输出：
-    # pymilvus        2.3.0
+    # pymilvus        2.2.16
     ```
 
 ## 安装 Node.js SDK {#install-node-js-sdk}

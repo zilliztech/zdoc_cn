@@ -30,13 +30,13 @@ const CategoryList = [
   },
   {
     id: 2,
-    title: 'Zilliz Cloud v.s. Milvus',
+    title: '数据迁移与导入',
     Svg: require('@site/static/img/migration-from-milvus.svg').default,
     groupStyle: styles.activeGroupLightBlue,
     groupCaptionStyle: styles.activeGroupCaptionLightBlue,
     description: (
       <>
-        了解 Zilliz Cloud 与开源的向量数据库 Milvus 有哪些异同。
+        了解数据迁移与导入的方方面面。
       </>
     ),
   },  

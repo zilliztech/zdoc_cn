@@ -20,12 +20,6 @@ import TabItem from '@theme/TabItem';
 
 - 已下载示例数据集。详情请参见[示例数据集](./example-dataset-1)。
 
-:::info 说明
-
-您可以下载本指南中的源代码以供参考。
-
-:::
-
 ## 连接集群 {#connect-to-cluster}
 
 创建集群时，您需要配置一个由用户名和密码组成的集群凭证。请务必记下这些信息，因为您需要它们来连接集群。
@@ -1630,5 +1624,7 @@ func (sp searchParams) Params() map[string]interface{} {
 ## 相关文档 {#related-documents}
 
 - [开启动态 Schema](./enable-dynamic-schema)
+
+- [使用 Partition Key](./use-partition-key) 
 
 - [JSON](./javascript-object-notation-json-1)

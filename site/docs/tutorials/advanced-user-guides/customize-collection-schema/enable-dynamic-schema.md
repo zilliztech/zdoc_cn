@@ -14,12 +14,6 @@ Schema 对于 Zilliz Cloud 集群的数据处理非常重要。在向 Collection
 
 动态 Schema 使得数据处理更加灵活，用户能够在 Collection 中存储和检索复杂结构的数据，包括嵌套数据、数组以及其他复杂数据类型。
 
-:::info 说明
-
-您可以下载本指南中的源代码以供参考。
-
-:::
-
 ## 为 Collection 开启动态 Schema {#enable-dynamic-schema}
 
 要为 Collection 开启动态 Schema，需要在定义 Schema 时将 `enable_dynamic_field` 设置为 `True`。开启动态 Schema 后，之后插入的 Entity 中的所有未定义字段将以键值对的形式存入 Collection。我们将用“动态字段”来指代这些键值对。
@@ -936,5 +930,7 @@ func (sp searchParams) Params() map[string]interface{} {
 ## 相关文档 {#related-documents}
 
 [定制 Schema](./use-customized-schema)
+
+[使用 Partition Key](./use-partition-key) 
 
 [JSON](./javascript-object-notation-json-1)

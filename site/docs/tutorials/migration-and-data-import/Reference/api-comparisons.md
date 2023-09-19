@@ -1,6 +1,6 @@
 ---
 slug: /api-comparisons
-sidebar_position: 0
+sidebar_position: 1
 ---
 
 # API 异同

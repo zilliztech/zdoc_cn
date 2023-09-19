@@ -13,7 +13,7 @@ sidebar_position: 7
 
 **如何删除账号？**
 
-如需删除账号，请通过 [support@zilliz.com](mailto:support@zilliz.com) 联系我们。
+如需删除账号，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 
 **我的帐号为什么被锁定了？如何解锁账号？**
 
@@ -25,7 +25,7 @@ sidebar_position: 7
 
 1. 如果忘记密码，请重置密码。
 
-1. 联系[support@zilliz.com](mailto:support@zilliz.com)以解锁您的帐户。
+1. [提交工单](https://support.zilliz.com.cn/hc/zh-cn)并请求解锁您的帐户。
 
 **为什么我的组织会被冻结？**
 
@@ -41,5 +41,5 @@ Zilliz Cloud 界面顶部将出现通知横幅，提醒您组织已被冻结。
 
 **如何解冻我的组织？**
 
-请联系我们解冻组织。
+如需解冻组织，您可以进行[现金充值](./advance-pay)或[开通阿里云云市场扣费渠道](./subscribe-on-aliyun-marketplace)。如需其他支付方式，请[联系我们](https://support.zilliz.com.cn/hc/zh-cn)。
 

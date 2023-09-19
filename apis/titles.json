@@ -7,6 +7,7 @@
     "恢复集群": "resume-cluster",
     "导入": "import",
     "查看导入进度": "get-import-progress",
+    "查看数据导入任务": "list-import-jobs",
     "查看 Collection": "list-collections",
     "创建 Collection": "create-collection",
     "查看 Collection 详情": "describe-collection",
