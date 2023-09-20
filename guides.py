@@ -665,8 +665,9 @@ class docWriter:
         if 'zilliverse' in url:
             token = parse.urlsplit(url).path.split('/')[-1]
             header = parse.urlsplit(url).fragment
+            key = 'origin_node_token' if 'wiki' in parse.urlsplit(url).path.split('/') else 'obj_token'
 
-            page = [ x for x in self.pages if x['origin_node_token'] == token ]
+            page = [ x for x in self.pages if x[key] == token ]
 
             if page:
                 page = page[0]
