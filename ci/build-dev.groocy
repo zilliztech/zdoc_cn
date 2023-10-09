@@ -1,5 +1,7 @@
 #!/usr/bin/env groovy
 
+def github="https://github.com/zilliztech/zdoc_cn.git"
+
 pipeline {
     agent {
         kubernetes {
@@ -12,36 +14,40 @@ pipeline {
     environment {
         CI_DOCKER_CREDENTIAL_ID = "ali-registry-hangzhou"
     }
+    parameters {
+        gitParameter branchFilter: 'origin/(.*)', defaultValue: 'main', name: 'BRANCH', type: 'PT_BRANCH'
+    }
 
     stages {
         stage('Build') {
             steps {
-                    script {
-                        sh 'pwd'
-                        sh 'ls -la'
-                        sh './ci/set_docker_mirror.sh'
-                        def date = sh(returnStdout: true, script: 'date +%Y%m%d').trim()
-                        def gitShortCommit = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
-                        def image_tag= "${date}-${gitShortCommit}"
-                        echo "${image_tag}"
-                        withCredentials([string(credentialsId: 'APP_SECRET_ZDOCS', variable: 'APP_SECRET'), string(credentialsId: 'SPACE_ID_ZDOCS', variable: 'SPACE_ID'), string(credentialsId: 'FIGMA_API_KEY_ZDOCS', variable: 'FIGMA_API_KEY')]) {
-                            sh """
-                            export IMAGE_TAG=${image_tag}
-                            docker build . -t registry.cn-hangzhou.aliyuncs.com/vdc-test/zilliz-docs-cn:\${IMAGE_TAG} --build-arg APP_ID=cli_a3eb7209253f5013 --build-arg APP_SECRET='${APP_SECRET}' --build-arg SPACE_ID=${SPACE_ID} --build-arg FIGMA_API_KEY=${FIGMA_API_KEY}
-                            """
-                        }
-
-                        withCredentials([usernamePassword(credentialsId: "${env.CI_DOCKER_CREDENTIAL_ID}", usernameVariable: 'CI_REGISTRY_USERNAME', passwordVariable: 'CI_REGISTRY_PASSWORD')]){
-                            sh "docker login registry.cn-hangzhou.aliyuncs.com -u '${CI_REGISTRY_USERNAME}' -p '${CI_REGISTRY_PASSWORD}'"
-                            sh """
-                            export IMAGE_TAG=${image_tag}
-                            docker push registry.cn-hangzhou.aliyuncs.com/vdc-test/zilliz-docs-cn:\${IMAGE_TAG}
-                            """
-                        }
-
-                        sh "echo ${image_tag} > imageTag.txt"
-                        stash includes: 'imageTag.txt', name: 'imageTag'
+                git credentialsId: 'zilliz-ci',  branch: "${params.BRANCH}", url: "${github}"
+                script {
+                    sh 'pwd'
+                    sh 'ls -la'
+                    sh './ci/set_docker_mirror.sh'
+                    def date = sh(returnStdout: true, script: 'date +%Y%m%d').trim()
+                    def gitShortCommit = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
+                    def image_tag= "${params.BRANCH}-${date}-${gitShortCommit}"
+                    echo "${image_tag}"
+                    withCredentials([string(credentialsId: 'APP_SECRET_ZDOCS', variable: 'APP_SECRET'), string(credentialsId: 'SPACE_ID_ZDOCS', variable: 'SPACE_ID'), string(credentialsId: 'FIGMA_API_KEY_ZDOCS', variable: 'FIGMA_API_KEY')]) {
+                        sh """
+                        export IMAGE_TAG=${image_tag}
+                        docker build . -t registry.cn-hangzhou.aliyuncs.com/vdc-test/zilliz-docs-cn:\${IMAGE_TAG} --build-arg APP_ID=cli_a3eb7209253f5013 --build-arg APP_SECRET='${APP_SECRET}' --build-arg SPACE_ID=${SPACE_ID} --build-arg FIGMA_API_KEY=${FIGMA_API_KEY}
+                        """
                     }
+
+                    withCredentials([usernamePassword(credentialsId: "${env.CI_DOCKER_CREDENTIAL_ID}", usernameVariable: 'CI_REGISTRY_USERNAME', passwordVariable: 'CI_REGISTRY_PASSWORD')]){
+                        sh "docker login registry.cn-hangzhou.aliyuncs.com -u '${CI_REGISTRY_USERNAME}' -p '${CI_REGISTRY_PASSWORD}'"
+                        sh """
+                        export IMAGE_TAG=${image_tag}
+                        docker push registry.cn-hangzhou.aliyuncs.com/vdc-test/zilliz-docs-cn:\${IMAGE_TAG}
+                        """
+                    }
+
+                    sh "echo ${image_tag} > imageTag.txt"
+                    stash includes: 'imageTag.txt', name: 'imageTag'
+                }
             }
         }
         stage('Deploy'){
@@ -53,7 +59,7 @@ pipeline {
                             unstash 'imageTag'
                             image_tag=sh(returnStdout: true, script: 'cat imageTag.txt | tr -d \'\n\r\'')
                         }
-                        sh "kubectl set image deployment/zdocs-cn zdocs-cn=registry-vpc.cn-hangzhou.aliyuncs.com/vdc-test/zilliz-docs-cn:${image_tag} -n zdocs"
+                        // sh "kubectl set image deployment/zdocs-cn zdocs-cn=registry-vpc.cn-hangzhou.aliyuncs.com/vdc-test/zilliz-docs-cn:${image_tag} -n zdocs"
                     }
                 }
             }
