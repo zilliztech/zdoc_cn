@@ -1,0 +1,74 @@
+#!/usr/bin/env groovy
+
+pipeline {
+    agent {
+        kubernetes {
+            defaultContainer 'main'
+            yamlFile "ci/pod/pod-prod.yaml"
+            customWorkspace '/home/jenkins/agent/workspace'
+        }
+    }
+
+    environment {
+        CI_DOCKER_CREDENTIAL_ID = "ali-registry-hangzhou"
+        TEST_ENVIRONMENT="vdc-ali-global"
+        GITHUB_TOKEN_ID="github-token"
+        ARGOCD_TOKEN_ID="argocd-prod-token"
+    }
+
+    stages {
+        stage('SynImage') {
+            steps {
+                    script {
+                        sh 'pwd'
+                        sh 'ls -la'
+                        sh './ci/set_docker_mirror.sh'
+                        echo "${image_tag}"
+
+                        withCredentials([usernamePassword(credentialsId: "${env.CI_DOCKER_CREDENTIAL_ID}", usernameVariable: 'CI_REGISTRY_USERNAME', passwordVariable: 'CI_REGISTRY_PASSWORD')]){
+                            sh "docker login registry.cn-hangzhou.aliyuncs.com -u '${CI_REGISTRY_USERNAME}' -p '${CI_REGISTRY_PASSWORD}'"
+                            sh """
+                            export IMAGE_TAG=${image_tag}
+                            docker pull registry.cn-hangzhou.aliyuncs.com/vdc-test/zilliz-docs-cn:\${IMAGE_TAG}
+                            docker tag registry.cn-hangzhou.aliyuncs.com/vdc-test/zilliz-docs-cn:\${IMAGE_TAG} registry.cn-hangzhou.aliyuncs.com/vdc-prod/zilliz-docs-cn:\${IMAGE_TAG}
+                            docker push registry.cn-hangzhou.aliyuncs.com/vdc-prod/zilliz-docs-cn:\${IMAGE_TAG}
+                            """
+                        }
+
+                    }
+            }
+        }
+        stage('Deploy'){
+            steps{
+                container('deploy') {
+                    script {
+                        withCredentials([usernamePassword(credentialsId: "${env.GITHUB_TOKEN_ID}", usernameVariable: 'GITHUB_USER', passwordVariable: 'GITHUB_TOKEN')]){
+                        sh """
+                            git remote set-url origin https://${GITHUB_USER}:${GITHUB_TOKEN}@${devops_cd_git}
+                            git config --global user.name "${GITHUB_USER}"
+                            git config --global user.email "test@zilliz.com"
+                            git clone https://${GITHUB_USER}:${GITHUB_TOKEN}@${devops_cd_git} /opt/devops-cd
+                            cd /opt/devops-cd
+                            git pull
+                            cd /opt/devops-cd/zdocs-cn/${env.TEST_ENVIRONMENT}
+                            kustomize edit set image zdocs-cn=registry-vpc.cn-hangzhou.aliyuncs.com/vdc-prod/zilliz-docs-cn:${image_tag}
+                            git commit -am "[automated]Update zdocs-cn Docker image for prod vdc-ali-global environment" --allow-empty
+                            git push origin master
+                        """
+
+                        }
+                        // withCredentials([usernamePassword(credentialsId: "${env.ARGOCD_TOKEN_ID}", usernameVariable: 'ARGOCD_SERVER', passwordVariable: 'ARGOCD_AUTH_TOKEN')]){
+                        //     sh """
+                        //      argocd app sync ${env.TEST_ENVIRONMENT}-zdocs-cn --retry-limit 3 --prune --grpc-web
+                        //      argocd app wait ${env.TEST_ENVIRONMENT}-zdocs-cn --grpc-web
+                        //     """
+                        // }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
