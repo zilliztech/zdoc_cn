@@ -1,4 +1,5 @@
 #!/usr/bin/env groovy
+def devops_cd_git="github.com/zilliztech/vdc-deploy-prod.git"
 
 pipeline {
     agent {
