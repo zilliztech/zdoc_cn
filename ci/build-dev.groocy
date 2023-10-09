@@ -59,7 +59,7 @@ pipeline {
                             unstash 'imageTag'
                             image_tag=sh(returnStdout: true, script: 'cat imageTag.txt | tr -d \'\n\r\'')
                         }
-                        // sh "kubectl set image deployment/zdocs-cn zdocs-cn=registry-vpc.cn-hangzhou.aliyuncs.com/vdc-test/zilliz-docs-cn:${image_tag} -n zdocs"
+                        sh "kubectl set image deployment/zdocs-cn zdocs-cn=registry-vpc.cn-hangzhou.aliyuncs.com/vdc-test/zilliz-docs-cn:${image_tag} -n zdocs"
                     }
                 }
             }
