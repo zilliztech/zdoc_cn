@@ -1,7 +1,14 @@
 #!/usr/bin/env groovy
+
+int total_timeout_minutes = 40
 def devops_cd_git="github.com/zilliztech/vdc-deploy-prod.git"
 
 pipeline {
+    options{
+        disableConcurrentBuilds(abortPrevious: true)
+        timeout(time: total_timeout_minutes, unit: 'MINUTES')
+    }
+    
     agent {
         kubernetes {
             defaultContainer 'main'
@@ -56,14 +63,14 @@ pipeline {
                             git commit -am "[automated]Update zdocs-cn Docker image for prod vdc-ali-global environment" --allow-empty
                             git push origin master
                         """
-
                         }
-                        // withCredentials([usernamePassword(credentialsId: "${env.ARGOCD_TOKEN_ID}", usernameVariable: 'ARGOCD_SERVER', passwordVariable: 'ARGOCD_AUTH_TOKEN')]){
-                        //     sh """
-                        //      argocd app sync ${env.TEST_ENVIRONMENT}-zdocs-cn --retry-limit 3 --prune --grpc-web
-                        //      argocd app wait ${env.TEST_ENVIRONMENT}-zdocs-cn --grpc-web
-                        //     """
-                        // }
+
+                        withCredentials([usernamePassword(credentialsId: "${env.ARGOCD_TOKEN_ID}", usernameVariable: 'ARGOCD_SERVER', passwordVariable: 'ARGOCD_AUTH_TOKEN')]){
+                            sh """
+                             argocd app sync ${env.TEST_ENVIRONMENT}-zdocs-cn --retry-limit 3 --prune --grpc-web
+                             argocd app wait ${env.TEST_ENVIRONMENT}-zdocs-cn --grpc-web
+                            """
+                        }
                     }
                 }
             }
