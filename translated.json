@@ -217,5 +217,7 @@
     "字段映射": "Field Mapping",
     "创建启用 Partition Key 的 Collection": "Create a Collection with Partition Key enabled",
     "基于 Partition Key 的 ANN 搜索": "ANN Search Based on Partition Key",
-    "典型使用场景": "Typical usage scenarios"
+    "典型使用场景": "Typical usage scenarios",
+    "集群增强：引入新 CU ，提升灵活性": "Cluster enhancement",
+    "现金充值": "Advance pay"
 }

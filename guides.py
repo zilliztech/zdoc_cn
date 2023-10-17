@@ -738,7 +738,7 @@ class biTableParser:
                 with open('logs.txt', 'a') as f:
                     json.dump(record[0], f, indent=4, ensure_ascii=False)
                     
-            return record[0]['fields']['进度'] != '无须中文版' and record[0]['fields']['进度'] != '暂未开始'
+            return record[0]['fields']['进度'] != '无需中文版' and record[0]['fields']['进度'] != '暂未开始'
 
 class RefGen:
 
@@ -1028,11 +1028,6 @@ def doc_structure(docs, path='docs'):
                     idx = 99
                     category_meta(current_path, item['title'], idx)
                     writer.write_faqs(current_path, item['blocks']['items'])
-                elif item['title'] == '版本说明书':
-                    current_path = "site/docs/tutorials"
-                    idx = 100
-                    category_meta(current_path, item['title'], idx)
-                    writer.write_docs(current_path, item['blocks']['items'], sidebar_position=idx)
                 else:   
                     writer.write_docs(current_path, item['blocks']['items'], sidebar_position=idx)
                     logging.info(f"Writing {item['title']}")
