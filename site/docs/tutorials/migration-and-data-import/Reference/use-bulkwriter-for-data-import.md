@@ -23,7 +23,7 @@ BulkWriter 提供了 LocalBulkWriter 和 RemoteBulkWriter 两个对象。LocalBu
 本节将使用示例数据集演示数据处理的基本流程。最终的目标是生成一个可供 BulkWriter 消费的字典列表。具体步骤如下：
 
 1. 安装最新的 PyMilvus 并获取示例数据集。
-    1. 安装最新版本的 PyMilvus 或将您的 PyMilvus 升级到最新版本，可参考 [安装 SDK](https://zilliverse.feishu.cn/docx/JmFnds3Sjokg5cxHSK1cbu4InSc#Q7sad4xmuokfjAxS3nOcpUXKnEc)。
+    1. 安装最新版本的 PyMilvus 或将您的 PyMilvus 升级到最新版本，可参考 [安装 SDK](./install-sdks#install-pymilvus-python-sdk)。
 
     1. 下载[示例数据集](https://drive.google.com/file/d/12RkoDPAlk-sclXdjeXT6DMFVsQr4612w/view?usp=sharing)。关于该数据集的更多信息，请[阅读简介](https://www.kaggle.com/datasets/shiyu22chen/cleaned-medium-articles-dataset)。
 

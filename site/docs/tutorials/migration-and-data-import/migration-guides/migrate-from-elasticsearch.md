@@ -43,7 +43,7 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
 
 :::info 说明
 
-有关更多字段映射信息，请参阅[字段映射](https://zilliverse.feishu.cn/docx/KmyydLAxsoYlKzxMYM8cSNMrnnd#N3oIdaf5qoom4jxeLnkcuUztnQf)。
+有关更多字段映射信息，请参阅[字段映射](./migrate-from-elasticsearch#field-mapping)。
 
 :::
 

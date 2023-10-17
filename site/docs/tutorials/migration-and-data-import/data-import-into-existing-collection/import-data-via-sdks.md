@@ -11,7 +11,7 @@ sidebar_position: 2
 
 在执行本节操作前，请确认如下工作已经完成。
 
-- 安装最新版本的 Python SDK。具体可参考 [安装 SDK](https://zilliverse.feishu.cn/docx/JmFnds3Sjokg5cxHSK1cbu4InSc#Q7sad4xmuokfjAxS3nOcpUXKnEc) 。
+- 安装最新版本的 Python SDK。具体可参考 [安装 SDK](./install-sdks#install-pymilvus-python-sdk) 。
     当前，仅 PyMilvus 提供了 BulkWriter 和 BulkImport API。本节将使用 PyMilvus 演示批量导入数据的过程。
 
 - 已在 Zilliz Cloud 上创建了一个 Cluster，并在该 Cluster 中创建了一个 Collection。具体可参考[创建集群](./create-cluster)和[创建 Collection](./create-collection-2)。

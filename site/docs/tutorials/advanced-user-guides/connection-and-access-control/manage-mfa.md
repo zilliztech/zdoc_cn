@@ -1,6 +1,6 @@
 ---
 slug: /manage-mfa
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 # 管理 MFA

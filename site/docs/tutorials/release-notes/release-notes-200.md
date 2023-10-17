@@ -1,6 +1,6 @@
 ---
 slug: /release-notes-200
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # 版本说明书 2.0.0

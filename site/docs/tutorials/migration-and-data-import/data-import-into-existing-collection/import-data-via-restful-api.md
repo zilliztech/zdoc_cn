@@ -81,9 +81,9 @@ curl --request POST \
      }'
 ```
 
-请将请求体中的 Token 替换为集群的 API 密钥，并将其他字段值替换为您的实际值。请求提交后，将返回一个任务 ID。
+在上述代码中，`${CLOUD_REGION_ID}` 代表您集群所在的云地域的 ID，`${TOKEN}` 是用于授权 API 请求的集群 API 密钥，`${CLUSTER_ID}` 是您的集群的 ID。在调用 API 时，请确保将这些占位符替换为您的实际值。您可以从集群的公共访问端点获取 `CLOUD_REGION_ID` 和 `CLUSTER_ID`。例如，在公共访问端点 [**https://in03-3bf3c31f4248e22.api.gcp-us-west1.zillizcloud.com**](https://in03-3bf3c31f4248e22.api.gcp-us-west1.zillizcloud.com) 中，`CLOUD_REGION_ID` 是 **gcp-us-west1**，`CLUSTER_ID` 是 **in03-3bf3c31f4248e22**。有关更多信息，请参见[管理集群](./manage-cluster)。
 
-要查询数据导入的进度，请按以下方式使用返回的任务 ID：
+提交请求后，将返回任务 ID。您可以通过任务 ID 查询数据导入进度。示例代码如下：
 
 ```bash
 curl --request GET \
