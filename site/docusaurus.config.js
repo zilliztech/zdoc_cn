@@ -246,7 +246,9 @@ const config = {
         hashed: true,
         // For Docs using Chinese, The `language` is recommended to set to:
         // ```
-        // language: ["en", "zh"],
+        language: ["en", "zh"],
+        docsDir: ["docs/tutorials", "reference/api"],
+
         // ```
       }),
     ],
