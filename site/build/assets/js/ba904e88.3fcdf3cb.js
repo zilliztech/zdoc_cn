@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[3729],{9168:e=>{e.exports=JSON.parse('{"title":"Client API","slug":"/java/client","permalink":"/reference/java/client","navigation":{"previous":{"title":"Java SDK \u53c2\u8003","permalink":"/reference/java"},"next":{"title":"MilvusServiceClient","permalink":"/reference/java/milvus_service_client"}}}')}}]);

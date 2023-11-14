@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[9493],{4921:e=>{e.exports=JSON.parse('{"title":"Node.js SDK \u53c2\u8003","slug":"/nodejs","permalink":"/reference/nodejs","navigation":{"previous":{"title":"DeleteByPks()","permalink":"/reference/go/delete_by_pks"},"next":{"title":"Client API","permalink":"/reference/nodejs/client"}}}')}}]);

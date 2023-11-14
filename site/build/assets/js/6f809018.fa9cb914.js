@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[4532],{3105:e=>{e.exports=JSON.parse('{"title":"Vector API","slug":"/go/vector","permalink":"/reference/go/vector","navigation":{"previous":{"title":"DropCollection()","permalink":"/reference/go/drop_collection"},"next":{"title":"Insert()","permalink":"/reference/go/insert"}}}')}}]);

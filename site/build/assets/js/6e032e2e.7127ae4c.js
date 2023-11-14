@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[3809],{1165:i=>{i.exports=JSON.parse('{"title":"Zilliz Cloud 101","slug":"/zilliz-cloud-101","permalink":"/docs/zilliz-cloud-101","navigation":{"next":{"title":"\u4ece\u8fd9\u91cc\u5f00\u59cb","permalink":"/docs/quick-start"}}}')}}]);
