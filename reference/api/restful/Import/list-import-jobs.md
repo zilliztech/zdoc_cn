@@ -15,8 +15,15 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-# RESTful API Examples
 
+列出指定集群上的数据导入任务。
+
+```shell
+curl --request GET \
+     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/vector/collections/import/list?clusterId=${CLUSTERID}" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json" \
 
 ## 请求
 

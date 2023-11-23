@@ -15,7 +15,33 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-# RESTful API Examples
+
+在集群中创建 Collection。本示例将创建一个名为 `medium_articles` 的 Collection。
+
+```shell
+curl --request POST \
+     --url "${CLUSTER_ENDPOINT}/v1/vector/collections/create" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json" \
+     -d '{
+       "dbName": "default",   
+       "collectionName": "medium_articles",
+       "dimension": 256,
+       "metricType": "L2",
+       "primaryField": "id",
+       "vectorField": "vector"
+      }'
+```
+
+成功响应示例：
+
+```shell
+{
+    "code": 200,
+    "data": {}
+}
+```
 
 
 ## 请求

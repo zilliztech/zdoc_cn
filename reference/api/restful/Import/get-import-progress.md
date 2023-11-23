@@ -15,7 +15,16 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-# RESTful API Examples
+
+获取指定导入任务的进度。
+
+```shell
+curl --request GET \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import/get?jobId=${JOBID}&clusterId=${CLUSTERID}" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json" \
+```
 
 
 ## 请求

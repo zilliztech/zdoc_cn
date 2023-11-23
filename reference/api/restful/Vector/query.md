@@ -15,7 +15,23 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-# RESTful API Examples
+
+在 Collection 按指定条件执行查询操作。
+
+```shell
+curl --request POST \
+     --url "${CLUSTER_ENDPOINT}/v1/vector/query" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json" \
+     -d '{
+       "collectionName": "medium_articles",
+       "outputFields": ["id", "title", "link"],
+       "filter": "id in [443300716234671427, 443300716234671426]",
+       "limit": 100,
+       "offset": 0
+     }'
+```
 
 
 ## 请求

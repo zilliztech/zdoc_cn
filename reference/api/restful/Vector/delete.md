@@ -15,7 +15,62 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-# RESTful API Examples
+
+- 删除一个 ID 为整数的 Entity.
+
+```shell
+curl --request POST \
+     --url "${CLUSTER_ENDPOINT}/v1/vector/delete" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json" \
+     -d '{
+       "collectionName": "medium_articles",
+       "id": 1
+     }'
+```
+
+- 删除一个 ID 为字符串的 Entity.
+
+```shell
+curl --request POST \
+     --url "${CLUSTER_ENDPOINT}/v1/vector/delete" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json" \
+     -d '{
+       "collectionName": "medium_articles",
+       "id": "id1"
+     }'
+```
+
+- 删除一组 ID 为整数的 Entity.
+
+```shell
+curl --request POST \
+     --url "${CLUSTER_ENDPOINT}/v1/vector/delete" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json" \
+     -d '{
+        "collectionName": "medium_articles",
+        "id": [1,2,3,4]
+      }'
+```
+
+- 删除一组 ID 为字符串的 Entity.
+
+```shell
+curl --request POST \
+     --url "${CLUSTER_ENDPOINT}/v1/vector/delete" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json" \
+     -d '{
+        "collectionName": "medium_articles",
+        "id": ["id1", "id2", "id3","id4"]
+      }'
+```
 
 
 ## 请求

@@ -15,7 +15,39 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-# RESTful API Examples
+
+描述集群的详细信息。
+
+```shell
+curl --request GET \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json"
+```
+
+成功响应示例：
+
+```shell
+{
+    "code": 200,
+    "data": {
+        "clusterId": "string",
+        "clusterName": "string",
+        "description": "string",
+        "regionId": "string",
+        "clusterType": "string",
+        "cuSize": "string",
+        "status": "string",
+        "connectAddress": "string",
+        "privateLinkAddress": "string",
+        "createTime": "string",
+        "storageSize": "string",
+        "snapshotNumber": "string",
+        "createProgress": "string"
+    }
+}
+```
 
 
 ## 请求

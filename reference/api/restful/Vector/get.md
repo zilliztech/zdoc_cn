@@ -15,7 +15,66 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-# RESTful API Examples
+
+- 获取一个 ID 为整数的 Entity.
+
+```shell
+curl --request POST \
+     --url "${CLUSTER_ENDPOINT}/v1/vector/get" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json" \
+     -d '{
+       "collectionName": "medium_articles",
+       "outputFields": ["id", "title", "link"],
+       "id": 1
+     }'
+```
+
+- 获取一个 ID 为字符串的 Entity.
+
+```shell
+curl --request POST \
+     --url "${CLUSTER_ENDPOINT}/v1/vector/get" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json" \
+     -d '{
+       "collectionName": "medium_articles",
+       "outputFields": ["id", "title", "link"],
+       "id": "id1"
+     }'
+```
+
+- 获取一组 ID 为整数的 Entity.
+
+```shell
+curl --request POST \
+     --url "${CLUSTER_ENDPOINT}/v1/vector/get" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json" \
+     -d '{
+       "collectionName": "medium_articles",
+       "outputFields": ["id", "title", "link"],
+       "id": [1, 2]
+     }'
+```
+
+- 获取一组 ID 为字符串的 Entity.
+
+```shell
+curl --request POST \
+     --url "${CLUSTER_ENDPOINT}/v1/vector/get" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json" \
+     -d "{
+       "collectionName": "medium_articles",
+       "outputFields": ["id", "title", "link"],
+       "id": ["id1", "id2"]
+     }"
+```
 
 
 ## 请求

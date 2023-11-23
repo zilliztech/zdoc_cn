@@ -15,7 +15,30 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-# RESTful API Examples
+
+列出集群中已创建的 Collection。
+
+```shell
+curl --request GET \
+     --url "${CLUSTER_ENDPOINT}/v1/vector/collections" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json"
+```
+
+成功响应示例：
+
+```shell
+{
+   code: 200,
+   data: [
+         "collection1",
+         "collection2",
+         ...
+         "collectionN",
+         ]
+}
+```
 
 
 ## 请求

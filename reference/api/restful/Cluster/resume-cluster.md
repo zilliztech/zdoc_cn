@@ -15,7 +15,34 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-# RESTful API Examples
+
+恢复当前已挂起的集群。
+
+:::info 说明
+
+请在添加支付方式后使用该功能。
+
+:::
+
+```shell
+curl --request POST \ 
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/resume" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json"
+```
+
+成功响应示例：
+
+```shell
+{
+  code: 200,
+  data: {
+     "clusterId": "cluster01",
+     "prompt": "Submission successful. Cluster is currently resuming, which typically takes several minutes. You can use the DescribeCluster interface to obtain the creation progress and the status of the Cluster. When the Cluster's status is RUNNING, you can access your vector database using the SDK."
+  }
+}
+```
 
 
 ## 请求

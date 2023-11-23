@@ -15,7 +15,30 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-# RESTful API Examples
+
+列出指定云服务提供商的所有可用云区域。
+
+```shell
+curl --request GET \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters?pageSize=&current=" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json"
+```
+
+成功响应示例：
+
+```shell
+{
+    "code": 200,
+    "data": {
+        "count": 0,
+        "currentPage": 1,
+        "pageSize": 10,
+        "clusters": []
+    }
+}
+```
 
 
 ## 请求

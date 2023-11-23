@@ -15,7 +15,30 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-# RESTful API Examples
+
+列出 Zilliz Cloud 上所有可用的云服务提供商。
+
+```shell
+curl --request GET \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clouds" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json"
+```
+
+成功响应示例：
+
+```shell
+{
+    code: 200,
+    data: [
+     {
+        "cloudId": "ali",
+        "description": "alibaba cloud"
+     }
+    ]
+}
+```
 
 
 ## 请求

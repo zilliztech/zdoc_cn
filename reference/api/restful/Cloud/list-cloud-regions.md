@@ -15,7 +15,33 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-# RESTful API Examples
+
+列出指定云服务提供商的所有可用云区域。
+
+```shell
+curl --request GET \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/regions?cloudId=ali" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json"
+```
+
+您可以使用 `ListClouds` 接口获取 `cloudId`。
+
+成功响应示例：
+
+```shell
+{
+    "code": 200,
+    "data": [
+        {
+            "apiBaseUrl": "https://api.ali-cn-hangzhou.cloud.zilliz.com.cn",
+            "cloudId": "ali",
+            "regionId": "ali-cn-hangzhou"
+        }
+    ]
+}
+```
 
 
 ## 请求

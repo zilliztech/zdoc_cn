@@ -15,7 +15,28 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-# RESTful API Examples
+
+挂起集群。本操作会中断集群运行，不会影响集群数据完整性。
+
+```shell
+curl --request POST \ 
+     --url "https://controller.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/suspend" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json"
+```
+
+成功响应示例：
+
+```shell
+{
+  code: 200,
+  data: {
+     "clusterId": "cluster01",
+     "prompt": "Submission successful. Your vector database computing cost is free until you Resume the Cluster, and only storage costs will be charged."
+  }
+}
+```
 
 
 ## 请求

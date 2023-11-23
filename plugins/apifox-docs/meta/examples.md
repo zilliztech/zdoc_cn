@@ -1,77 +1,73 @@
 # RESTful API Examples
 
-## List Cloud Providers
+## 查看云服务提供商
 
-Lists all cloud providers available on Zilliz Cloud.
+列出 Zilliz Cloud 上所有可用的云服务提供商。
 
 ```shell
 curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/clouds" \
-     --header "Authorization: Bearer ${API_KEY}" \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clouds" \
+     --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
 
-Success response:
+成功响应示例：
 
 ```shell
 {
     code: 200,
     data: [
      {
-        "cloudId": "aws",
-        "description": "amazon cloud"
-     },
-     {
-        "cloudId": "gcp",
-        "description": "google cloud"
+        "cloudId": "ali",
+        "description": "alibaba cloud"
      }
     ]
 }
 ```
 
-## List Cloud Regions
+## 查看云服务区域
 
-Lists all available cloud regions of a specific cloud provider.
+列出指定云服务提供商的所有可用云区域。
 
 ```shell
 curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/regions?cloudId=gcp" \
-     --header "Authorization: Bearer ${API_KEY}" \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/regions?cloudId=ali" \
+     --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
 
-You can obtain valid `cloudId` values by performing `ListClouds` operations.
+您可以使用 `ListClouds` 接口获取 `cloudId`。
 
-Success response:
+成功响应示例：
 
 ```shell
 {
     "code": 200,
     "data": [
         {
-            "apiBaseUrl": "https://api.gcp-us-west1.zillizcloud.com",
-            "cloudId": "gcp",
-            "regionId": "gcp-us-west1"
+            "apiBaseUrl": "https://api.ali-cn-hangzhou.cloud.zilliz.com.cn",
+            "cloudId": "ali",
+            "regionId": "ali-cn-hangzhou"
         }
     ]
 }
 ```
 
-## Describe Cluster
+## 查看集群详情
 
-Describes the details of a cluster.
+描述集群的详细信息。
 
 ```shell
 curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/clusters/<Cluster-ID>" \
-     --header "Authorization: Bearer ${API_KEY}" \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>" \
+     --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
 
-Success response:
+成功响应示例：
 
 ```shell
 {
@@ -94,19 +90,19 @@ Success response:
 }
 ```
 
-## Suspend Cluster
+## 挂起集群
 
-Suspends a cluster. This operation will stop the cluster and your data will remain intact.
+挂起集群。本操作会中断集群运行，不会影响集群数据完整性。
 
 ```shell
 curl --request POST \ 
-     --url "https://controller.${CLOUD_REGION_ID}.zillizcloud.com/v1/clusters/<Cluster-ID>/suspend" \
-     --header "Authorization: Bearer ${API_KEY}" \
+     --url "https://controller.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/suspend" \
+     --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
 
-Success response:
+成功响应示例：
 
 ```shell
 {
@@ -118,19 +114,25 @@ Success response:
 }
 ```
 
-## Resume Cluster
+## 恢复集群
 
-Resume a cluster that has been suspended.
+恢复当前已挂起的集群。
+
+:::info 说明
+
+请在添加支付方式后使用该功能。
+
+:::
 
 ```shell
 curl --request POST \ 
-     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/clusters/<Cluster-ID>/resume" \
-     --header "Authorization: Bearer ${API_KEY}" \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/resume" \
+     --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
 
-Success response:
+成功响应示例：
 
 ```shell
 {
@@ -142,19 +144,19 @@ Success response:
 }
 ```
 
-## List Clusters
+## 查看集群
 
-Lists all clusters in a cloud region.
+列出指定云服务提供商的所有可用云区域。
 
 ```shell
 curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/clusters?pageSize=&current=" \
-     --header "Authorization: Bearer ${API_KEY}" \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters?pageSize=&current=" \
+     --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
 
-Success response:
+成功响应示例：
 
 ```shell
 {
@@ -168,9 +170,9 @@ Success response:
 }
 ```
 
-## Create Collection
+## 创建 Collection
 
-Create a collection named `medium_articles`.
+在集群中创建 Collection。本示例将创建一个名为 `medium_articles` 的 Collection。
 
 ```shell
 curl --request POST \
@@ -188,7 +190,7 @@ curl --request POST \
       }'
 ```
 
-Success response:
+成功响应示例：
 
 ```shell
 {
@@ -197,9 +199,9 @@ Success response:
 }
 ```
 
-## Drop Collection
+## 删除 Collection
 
-Drop a collection named `medium_articles`.
+删除 Collection。本操作会清除 Collection 数据，请谨慎执行此操作。本示例将删除一个名为 `medium_articles` 的 Collection。
 
 ```shell
 curl --request POST \
@@ -212,7 +214,7 @@ curl --request POST \
       }'
 ```
 
-Success response:
+成功响应示例：
 
 ```shell
 {
@@ -221,9 +223,9 @@ Success response:
 }
 ```
 
-## Describe Collection
+## 查看 Collection 详情
 
-Describe the details of a collection named `medium_articles`.
+描述 Collection 的详细信息。本示例将查看一个名为 `medium_articles` 的 Collection。
 
 ```shell
 curl --request GET \
@@ -233,7 +235,7 @@ curl --request GET \
      --header "content-type: application/json"
 ```
 
-Success response:
+成功响应示例：
 
 ```shell
 {
@@ -264,9 +266,9 @@ Success response:
 }
 ```
 
-## List Collections
+## 查看 Collection
 
-List all collections in a cluster.
+列出集群中已创建的 Collection。
 
 ```shell
 curl --request GET \
@@ -276,7 +278,7 @@ curl --request GET \
      --header "content-type: application/json"
 ```
 
-Sample response:
+成功响应示例：
 
 ```shell
 {
@@ -290,9 +292,9 @@ Sample response:
 }
 ```
 
-## Insert
+## 插入 Entity
 
-- Insert an entity to a collection named `medium_articles`.
+- 向名为 `medium_articles` 的 Collection 中插入一个 Entity。
 
 ```shell
 curl --request POST \
@@ -310,7 +312,7 @@ curl --request POST \
      }'
 ```
 
-- Insert multiple entities.
+- 批量插入多个 Entity。
 
 ```shell
 curl --request POST \
@@ -332,9 +334,9 @@ curl --request POST \
      }'
 ```
 
-## Upsert
+## Upsert Entity
 
-- Upsert an entity to a collection named `medium_articles`.
+- 向名为 `medium_articles` 的 Collection 中 Upsert 一个 Entity。
 
 ```shell
 curl --request POST \
@@ -352,7 +354,7 @@ curl --request POST \
      }'
 ```
 
-- Upsert multiple entities.
+- 批量 Upsert 多个 Entity。
 
 ```shell
 curl --request POST \
@@ -374,9 +376,9 @@ curl --request POST \
      }'
 ```
 
-## Search
+## 搜索
 
-- Search entities based on a given vector.
+- 基于指定的向量进行相似性搜索。
 
 ```shell
 curl --request POST \
@@ -390,7 +392,7 @@ curl --request POST \
       }'
 ```
 
-- Search entities and return specific fields.
+- 进行相似性搜索并返回指定字段。
 
 ```shell
 curl --request POST \
@@ -408,9 +410,9 @@ curl --request POST \
      }'
 ```
 
-## Query
+## 按条件查询
 
-Query entities that meet specific conditions.
+在 Collection 按指定条件执行查询操作。
 
 ```shell
 curl --request POST \
@@ -427,9 +429,9 @@ curl --request POST \
      }'
 ```
 
-## Get
+## 按 ID 查询
 
-- Get a specified entity whose ID is an integer.
+- 获取一个 ID 为整数的 Entity.
 
 ```shell
 curl --request POST \
@@ -444,7 +446,7 @@ curl --request POST \
      }'
 ```
 
-- Get a specified entity whose ID is a string:
+- 获取一个 ID 为字符串的 Entity.
 
 ```shell
 curl --request POST \
@@ -459,7 +461,7 @@ curl --request POST \
      }'
 ```
 
-- Get a list of entities whose IDs are integers:
+- 获取一组 ID 为整数的 Entity.
 
 ```shell
 curl --request POST \
@@ -474,7 +476,7 @@ curl --request POST \
      }'
 ```
 
-- Get a list of entities whose IDs are strings:
+- 获取一组 ID 为字符串的 Entity.
 
 ```shell
 curl --request POST \
@@ -489,9 +491,9 @@ curl --request POST \
      }"
 ```
 
-## Delete
+## 删除 Entity
 
-- Delete a collection whose ID is an integer.
+- 删除一个 ID 为整数的 Entity.
 
 ```shell
 curl --request POST \
@@ -505,7 +507,7 @@ curl --request POST \
      }'
 ```
 
-- Delete a collection whose ID is a string.
+- 删除一个 ID 为字符串的 Entity.
 
 ```shell
 curl --request POST \
@@ -519,7 +521,7 @@ curl --request POST \
      }'
 ```
 
-- Delete a list of collections whose IDs are integers.
+- 删除一组 ID 为整数的 Entity.
 
 ```shell
 curl --request POST \
@@ -533,7 +535,7 @@ curl --request POST \
       }'
 ```
 
-- Delete a list of collections whose IDs are strings.
+- 删除一组 ID 为字符串的 Entity.
 
 ```shell
 curl --request POST \
@@ -547,45 +549,45 @@ curl --request POST \
       }'
 ```
 
-## Import
+## 导入
 
-Imports data from files stored in a specified object storage bucket. Note that the bucket should be in the same cloud as the target cluster of the import.
+从指定的对象存储桶中的文件导入数据。该对象存储桶须与目标集群处于同一公有云网络。
 
 ```shell
 curl --request POST \
-     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/vector/collections/import" \
-     --header "Authorization: Bearer ${API_KEY}" \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import" \
+     --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{
        "clusterId": "in03-181766e3f9556b7",
        "collectionName": "medium_articles",
-       "objectUrl": "gs://publicdataset-zillizcloud-com/medium_articles_2020.json"
-       "accessKey": "your-access-key"
+       "objectUrl": "gs://publicdataset-zillizcloud-com/medium_articles_2020.json",
+       "accessKey": "your-access-key",
        "secretKey": "your-secret-key"
      }'
 ```
 
-## Get Import Progress
+## 查看导入进度
 
-Retrieves the progress of a specified import task.
+获取指定导入任务的进度。
 
 ```shell
 curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/vector/collections/import/get?jobId=${JOBID}&clusterId=${CLUSTERID}" \
-     --header "Authorization: Bearer ${API_KEY}" \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import/get?jobId=${JOBID}&clusterId=${CLUSTERID}" \
+     --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
 ```
 
-## List Import Jobs
+## 查看数据导入任务
 
-List all import jobs specific to a cluster.
+列出指定集群上的数据导入任务。
 
 ```shell
 curl --request GET \
      --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/vector/collections/import/list?clusterId=${CLUSTERID}" \
-     --header "Authorization: Bearer ${API_KEY}" \
+     --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
 ```

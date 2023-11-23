@@ -15,7 +15,47 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-# RESTful API Examples
+
+描述 Collection 的详细信息。本示例将查看一个名为 `medium_articles` 的 Collection。
+
+```shell
+curl --request GET \
+     --url "${CLUSTER_ENDPOINT}/v1/vector/collections/describe?collectionName=medium_articles" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json"
+```
+
+成功响应示例：
+
+```shell
+{
+    "code": 200,
+    "data": {
+        "collectionName": "string",
+        "description": "string",
+        "fields": [
+            {
+                "autoId": true,
+                "description": "string",
+                "name": "string",
+                "primaryKey": true,
+                "type": "string"
+            }
+        ],
+        "indexes": [
+            {
+                "fieldName": "string",
+                "indexName": "string",
+                "metricType": "string"
+            }
+        ],
+        "load": "string",
+        "shardsNum": 0,
+        "enableDynamicField": true
+    }
+}
+```
 
 
 ## 请求

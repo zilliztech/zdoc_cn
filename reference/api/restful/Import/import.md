@@ -15,7 +15,23 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-# RESTful API Examples
+
+从指定的对象存储桶中的文件导入数据。该对象存储桶须与目标集群处于同一公有云网络。
+
+```shell
+curl --request POST \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "accept: application/json" \
+     --header "content-type: application/json" \
+     -d '{
+       "clusterId": "in03-181766e3f9556b7",
+       "collectionName": "medium_articles",
+       "objectUrl": "gs://publicdataset-zillizcloud-com/medium_articles_2020.json",
+       "accessKey": "your-access-key",
+       "secretKey": "your-secret-key"
+     }'
+```
 
 
 ## 请求
