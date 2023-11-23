@@ -15,37 +15,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-
-列出指定云服务提供商的所有可用云区域。
-
-:::info 说明
-
-此处请使用您的 API Key 做为 Token。
-
-:::
-
-```shell
-curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters?pageSize=&current=" \
-     --header "Authorization: Bearer ${TOKEN}" \
-     --header "accept: application/json" \
-     --header "content-type: application/json"
-```
-
-成功响应示例：
-
-```shell
-{
-    "code": 200,
-    "data": {
-        "count": 0,
-        "currentPage": 1,
-        "pageSize": 10,
-        "clusters": []
-    }
-}
-```
-
+# RESTful API Examples
 
 
 ## 请求
@@ -79,25 +49,25 @@ curl --request GET \
 
 ```json
 {
-    "code": 200,
+    "code": "integer",
     "data": {
+        "count": "integer",
+        "currentPage": "integer",
+        "pageSize": "integer",
         "clusters": [
             {
                 "clusterId": "string",
                 "clusterName": "string",
-                "clusterType": "string",
-                "connectAddress": "string",
-                "createTime": "string",
-                "cuSize": "integer",
                 "description": "string",
-                "privateLinkAddress": "string",
                 "regionId": "string",
-                "status": "string"
+                "clusterType": "string",
+                "cuSize": "integer",
+                "status": "string",
+                "connectAddress": "string",
+                "privateLinkAddress": "string",
+                "createTime": "string"
             }
-        ],
-        "count": "integer",
-        "currentPage": "integer",
-        "pageSize": "integer"
+        ]
     }
 }
 ```
@@ -133,7 +103,7 @@ curl --request GET \
 | `data.clusters[].connectAddress`   | **string**<br/>集群的公共 Endpoint。您可以通过此地址从公网连接到集群。 |
 | `data.clusters[].privateLinkAddress`   | **string**<br/>集群的私有 Endpoint。您可以为集群设置私有链接，允许同一云区域中的 VPS 访问集群。 |
 | `data.clusters[].createTime`   | **string**<br/>集群创建时间 |
-| `message`  | **string**<br/>具体描述请示错误的原因。 |
+| `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单
 
@@ -143,4 +113,5 @@ curl --request GET \
 | 80002 | The token is invalid |
 | 80003 | The parameter value for 'pageSize' should be between 5 and 100. |
 | 80004 | The parameter 'currentPage' should have a value between 1 and the maximum value of Int. |
-| 90117 | Invalid domain name used, please check the domain name you're using. |
+| 90117 | "Invalid domain name used |
+

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[6419],{606:e=>{e.exports=JSON.parse('{"title":"\u9274\u6743","slug":"authentication","permalink":"/authentication","navigation":{"previous":{"title":"\u7ba1\u7406\u8d26\u53f7","permalink":"/docs/delete-your-account"},"next":{"title":"\u7ba1\u7406 API \u5bc6\u94a5","permalink":"/docs/manage-api-keys"}}}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[798],{9384:e=>{e.exports=JSON.parse('{"title":"Go SDK \u53c2\u8003","slug":"/go","permalink":"/reference/go","navigation":{"previous":{"title":"delete()","permalink":"/reference/java/delete"},"next":{"title":"Client API","permalink":"/reference/go/client"}}}')}}]);

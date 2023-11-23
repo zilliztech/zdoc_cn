@@ -4,8 +4,8 @@
   "permalink": "/reference/python",
   "navigation": {
     "previous": {
-      "title": "搜索",
-      "permalink": "/reference/search"
+      "title": "Upsert",
+      "permalink": "/reference/upsert"
     },
     "next": {
       "title": "Client API",

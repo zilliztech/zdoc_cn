@@ -15,23 +15,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-
-获取指定导入任务的进度。
-
-:::info 说明
-
-此处请使用您的 API Key 做为 Token。
-
-:::
-
-```shell
-curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import/get?jobId=${JOBID}&clusterId=${CLUSTERID}" \
-     --header "Authorization: Bearer ${TOKEN}" \
-     --header "accept: application/json" \
-     --header "content-type: application/json" \
-```
-
+# RESTful API Examples
 
 
 ## 请求
@@ -65,24 +49,24 @@ curl --request GET \
 
 ```json
 {
-    "code": 200,
+    "code": "integer",
     "data": {
-        "collectionName": "string",
-        "completeTime": "string",
-        "details": [
-            {
-                "completeTime": "string",
-                "errorMessage": "string",
-                "fileName": "string",
-                "fileSize": "integer",
-                "readyPercentage": "number"
-            }
-        ],
-        "errorMessage": "string",
         "fileName": "string",
         "fileSize": "integer",
+        "readyPercentage": "number",
+        "completeTime": "string",
+        "errorMessage": "string",
+        "collectionName": "string",
         "jobId": "string",
-        "readyPercentage": "number"
+        "details": [
+            {
+                "fileName": "string",
+                "fileSize": "integer",
+                "readyPercentage": "number",
+                "completeTime": "string",
+                "errorMessage": "string"
+            }
+        ]
     }
 }
 ```
@@ -117,7 +101,7 @@ curl --request GET \
 | `data.details[].readyPercentage`   | **number(float)**<br/>当前文件的导入进度。 |
 | `data.details[].completeTime`   | **string**<br/>当前文件完成导入的时间。值为 `null` 时表示文件正在导入。 |
 | `data.details[].errorMessage`   | **string**<br/>对于导入失败的提示信息。值为 `null` 时表示无错误发生。 |
-| `message`  | **string**<br/>具体描述请示错误的原因。 |
+| `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单
 
@@ -131,5 +115,6 @@ curl --request GET \
 | 90102 | The cluster does not exist in current region. |
 | 90103 | The clusterId parameter is empty in the request path. |
 | 90104 | The clusterId parameter is empty in the request parameter. |
-| 90117 | Invalid domain name used, please check the domain name you're using. |
+| 90117 | "Invalid domain name used |
 | 90144 | No jobId record found under this cluster |
+

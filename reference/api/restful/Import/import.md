@@ -15,30 +15,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-
-从指定的对象存储桶中的文件导入数据。该对象存储桶须与目标集群处于同一公有云网络。
-
-:::info 说明
-
-此处请使用您的 API Key 做为 Token。
-
-:::
-
-```shell
-curl --request POST \
-     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import" \
-     --header "Authorization: Bearer ${TOKEN}" \
-     --header "accept: application/json" \
-     --header "content-type: application/json" \
-     -d '{
-       "clusterId": "in03-181766e3f9556b7",
-       "collectionName": "medium_articles",
-       "objectUrl": "gs://publicdataset-zillizcloud-com/medium_articles_2020.json"
-       "accessKey": "your-access-key"
-       "secretKey": "your-secret-key"
-     }'
-```
-
+# RESTful API Examples
 
 
 ## 请求
@@ -57,10 +34,10 @@ curl --request POST \
 
 ```json
 {
-    "accessKey": "string",
     "clusterId": "string",
     "collectionName": "string",
     "objectUrl": "string",
+    "accessKey": "string",
     "secretKey": "string"
 }
 ```
@@ -83,7 +60,7 @@ curl --request POST \
 
 ```json
 {
-    "code": 200,
+    "code": "integer",
     "data": {
         "jobId": "string"
     }
@@ -108,7 +85,7 @@ curl --request POST \
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
 | `data`    | **object**<br/>表示响应中携带的数据对象。 |
 | `data.jobId`   | **string**<br/>已提交的导入任务 ID。 |
-| `message`  | **string**<br/>具体描述请示错误的原因。 |
+| `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单
 
@@ -137,6 +114,7 @@ curl --request POST \
 | 90102 | The cluster does not exist in current region. |
 | 90103 | The clusterId parameter is empty in the request path. |
 | 90104 | The clusterId parameter is empty in the request parameter. |
-| 90117 | Invalid domain name used, please check the domain name you're using. |
+| 90117 | "Invalid domain name used |
 | 90142 | No import content provided. |
 | 90145 | No ObjectUrl key field. |
+

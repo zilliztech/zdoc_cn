@@ -1269,6 +1269,11 @@
               "sidebar": "referenceSidebar"
             },
             {
+              "id": "api/restful/Vector/upsert",
+              "path": "/reference/upsert",
+              "sidebar": "referenceSidebar"
+            },
+            {
               "id": "/restful",
               "path": "/reference/restful",
               "sidebar": "referenceSidebar"

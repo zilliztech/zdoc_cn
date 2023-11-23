@@ -2,7 +2,7 @@
   "unversionedId": "api/restful/Vector/search",
   "id": "api/restful/Vector/search",
   "title": "搜索",
-  "description": "在 Collection 中执行相似性搜索。",
+  "description": "在 Collection 的向量列上执行相似性搜索。",
   "source": "@site/reference/api/restful/Vector/search.md",
   "sourceDirName": "api/restful/Vector",
   "slug": "/search",
@@ -23,7 +23,7 @@
     "permalink": "/reference/query"
   },
   "next": {
-    "title": "Python SDK 参考",
-    "permalink": "/reference/python"
+    "title": "Upsert",
+    "permalink": "/reference/upsert"
   }
 }

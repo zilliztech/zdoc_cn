@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[9425],{6825:e=>{e.exports=JSON.parse('{"title":"\u96c6\u7fa4","slug":"cluster","permalink":"/cluster","navigation":{"previous":{"title":"\u6570\u636e\u5b89\u5168","permalink":"/docs/data-security"},"next":{"title":"\u521b\u5efa\u96c6\u7fa4","permalink":"/docs/create-cluster"}}}')}}]);

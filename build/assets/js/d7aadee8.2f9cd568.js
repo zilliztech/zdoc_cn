@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[1499],{8538:e=>{e.exports=JSON.parse('{"title":"Vector APIs","slug":"/java/vector","permalink":"/reference/java/vector","navigation":{"previous":{"title":"dropCollection()","permalink":"/reference/java/drop_collection"},"next":{"title":"insert()","permalink":"/reference/java/insert"}}}')}}]);

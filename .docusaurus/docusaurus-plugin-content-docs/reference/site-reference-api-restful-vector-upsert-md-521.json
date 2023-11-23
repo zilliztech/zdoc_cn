@@ -2,7 +2,7 @@
   "unversionedId": "api/restful/Vector/upsert",
   "id": "api/restful/Vector/upsert",
   "title": "Upsert",
-  "description": "Inserts one or more entities into a collection.",
+  "description": "插入和更新 Collection 中的记录。",
   "source": "@site/reference/api/restful/Vector/upsert.md",
   "sourceDirName": "api/restful/Vector",
   "slug": "/upsert",
@@ -19,11 +19,11 @@
   },
   "sidebar": "referenceSidebar",
   "previous": {
-    "title": "Search",
+    "title": "搜索",
     "permalink": "/reference/search"
   },
   "next": {
-    "title": "Python SDK Reference",
+    "title": "Python SDK 参考",
     "permalink": "/reference/python"
   }
 }

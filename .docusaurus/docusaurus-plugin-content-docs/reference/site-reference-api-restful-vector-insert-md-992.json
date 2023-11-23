@@ -2,7 +2,7 @@
   "unversionedId": "api/restful/Vector/insert",
   "id": "api/restful/Vector/insert",
   "title": "插入 Entity",
-  "description": "在 Collection 中插入一条或多条 Entity。",
+  "description": "在 Collection 中插入一条或多条 Entity。一次最多插入 100 条数据。如需插入大量数据，请使用 Bulk Insert API。",
   "source": "@site/reference/api/restful/Vector/insert.md",
   "sourceDirName": "api/restful/Vector",
   "slug": "/insert",

@@ -239,7 +239,13 @@ class refGen {
 
     if (lang == 'zh-CN') {
       const concatenated_strings = (await this.resti18n.localize(specifications, strings)).split('\n')
-      concatenated_strings.forEach(item => eval(`specifications${item}`))
+      concatenated_strings.forEach(item => {
+          try {
+            eval(`specifications${item}`)
+          } catch (error) {
+            console.log(`${item} not found!`)
+          }
+      })
     }    
 
     for (const url in specifications.paths) {

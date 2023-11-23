@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[5724],{2983:e=>{e.exports=JSON.parse('{"title":"Java SDK \u53c2\u8003","slug":"/java","permalink":"/reference/java","navigation":{"previous":{"title":"delete()","permalink":"/reference/python/delete"},"next":{"title":"Client API","permalink":"/reference/java/client"}}}')}}]);

@@ -15,22 +15,8 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
+# RESTful API Examples
 
-列出指定集群上的数据导入任务。
-
-:::info 说明
-
-此处请使用您的 API Key 做为 Token。
-
-:::
-
-```shell
-curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/vector/collections/import/list?clusterId=${CLUSTERID}" \
-     --header "Authorization: Bearer ${TOKEN}" \
-     --header "accept: application/json" \
-     --header "content-type: application/json" \
-```
 
 ## 请求
 
@@ -56,7 +42,7 @@ curl --request GET \
 
 ## 响应
 
-返回一个导入任务列表。
+返回导入作业的列表。
 
 ### 响应体
 
@@ -64,7 +50,7 @@ curl --request GET \
 
 ```json
 {
-    "code": 200,
+    "code": "string",
     "data": {
         "count": "string",
         "currentPage": "string",
@@ -104,7 +90,7 @@ curl --request GET \
 | `data.records[].collectionName`   | **string**<br/>当前导入任务对应的目标 Collection 名称。 |
 | `data.records[].jobId`   | **string**<br/>当前导入任务的 ID。 |
 | `data.records[].state`   | **string**<br/>当前导入任务的状态。可能的取值有： <b>ImportRunning</b>、<b>ImportCompleted</b> 和 <b>ImportFailed</b>. |
-| `message`  | **string**<br/>具体描述请示错误的原因。 |
+| `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单
 
@@ -118,4 +104,5 @@ curl --request GET \
 | 80020 | Invalid clusterId or you do not have permission to access that Cluster. |
 | 90102 | The cluster does not exist in current region. |
 | 90104 | The clusterId parameter is empty in the request parameter. |
-| 90117 | Invalid domain name used, please check the domain name you're using. |
+| 90117 | "Invalid domain name used |
+

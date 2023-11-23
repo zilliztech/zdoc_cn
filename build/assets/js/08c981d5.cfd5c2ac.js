@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[7647],{7675:e=>{e.exports=JSON.parse('{"title":"\u5e38\u89c1\u95ee\u9898","slug":"faqs","permalink":"/faqs","navigation":{"previous":{"title":"\u5176\u4ed6\u5f02\u540c","permalink":"/docs/other-differences"},"next":{"title":"FAQ\uff1a\u5feb\u901f\u5165\u95e8","permalink":"/docs/faq-get-started"}}}')}}]);

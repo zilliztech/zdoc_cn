@@ -13,10 +13,10 @@
       "name": "Cluster Operations"
     },
     {
-      "name": "Collection Operations"
+      "name": "Import Operations"
     },
     {
-      "name": "Import Operations"
+      "name": "Collection Operations"
     },
     {
       "name": "Vector Operations"
@@ -1458,7 +1458,7 @@
         "x-apifox-folder": "Vector Operations",
         "x-apifox-status": "released",
         "deprecated": false,
-        "description": "Inserts one or more entities into a collection.",
+        "description": "Inserts one or more entities into a collection. You can add a maximum of 100 entities at a time. To insert large volumn of data, you are advised to use [the bulk-insert API](https://docs.zilliz.com/docs/data-import).",
         "tags": [
           "Vector Operations"
         ],
@@ -1653,7 +1653,7 @@
         "x-apifox-folder": "Vector Operations",
         "x-apifox-status": "released",
         "deprecated": false,
-        "description": "Conducts a similarity search in a collection. ",
+        "description": "Conducts a similarity search on the vector field in a collection. ",
         "tags": [
           "Vector Operations"
         ],
@@ -1900,7 +1900,7 @@
         "x-apifox-folder": "Vector Operations",
         "x-apifox-status": "released",
         "deprecated": false,
-        "description": "Conducts a vector query in a collection.",
+        "description": "Conducts a query on scalar fields in a collection.",
         "tags": [
           "Vector Operations"
         ],
@@ -2070,7 +2070,7 @@
         "x-apifox-folder": "Vector Operations",
         "x-apifox-status": "released",
         "deprecated": false,
-        "description": "Gets entities by the specified IDs.",
+        "description": "Gets entities by the specified IDs. You can set an ID in string or integer or set a set of IDs in a list of strings or a list of integers as shown in the four types of request bodies below.",
         "tags": [
           "Vector Operations"
         ],
@@ -2182,7 +2182,8 @@
                           "id": {
                             "type": "array",
                             "items": {
-                              "type": "string"
+                              "type": "string",
+                              "description": "An ID represents an entity."
                             },
                             "description": "An array of IDs of the entities to be retrieved"
                           }
@@ -2219,7 +2220,8 @@
                       "id": {
                         "type": "array",
                         "items": {
-                          "type": "string"
+                          "type": "string",
+                          "description": "An ID represents an entity."
                         },
                         "description": "An array of IDs of the entities to be retrieved"
                       }
@@ -3591,7 +3593,8 @@
           "id": {
             "type": "array",
             "items": {
-              "type": "string"
+              "type": "string",
+              "description": "An ID represents an entity."
             },
             "description": "An array of IDs of the entities to be retrieved"
           }
@@ -3608,7 +3611,7 @@
         "x-apifox-ignore-properties": [],
         "x-apifox-folder": "Schemas"
       },
-      "customer.GetReq1": {
+      "customer.GetReq": {
         "type": "object",
         "properties": {
           "collectionName": {
@@ -3846,7 +3849,7 @@
         "x-apifox-ignore-properties": [],
         "x-apifox-folder": "Schemas"
       },
-      "customer.InsertReq": {
+      "customer.InsertOrUpsertReq": {
         "type": "object",
         "required": [
           "data",

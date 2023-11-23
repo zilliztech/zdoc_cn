@@ -15,35 +15,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-
-挂起集群。本操作会中断集群运行，不会影响集群数据完整性。
-
-:::info 说明
-
-此处请使用您的 API Key 做为 Token。
-请在添加支付方式后使用该功能。
-
-:::
-
-```shell
-curl --request POST \ "https://controller.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/suspend" \
-     --header "Authorization: Bearer ${TOKEN}" \
-     --header "accept: application/json" \
-     --header "content-type: application/json"
-```
-
-成功响应示例：
-
-```shell
-{
-  code: 200,
-  data: {
-     "clusterId": "cluster01",
-     "prompt": "Submission successful. Your vector database computing cost is free until you Resume the Cluster, and only storage costs will be charged."
-  }
-}
-```
-
+# RESTful API Examples
 
 
 ## 请求
@@ -73,7 +45,7 @@ curl --request POST \ "https://controller.${CLOUD_REGION_ID}.cloud.zilliz.com.cn
 
 ```json
 {
-    "code": 200,
+    "code": "integer",
     "data": {
         "clusterId": "string",
         "prompt": "string"
@@ -100,7 +72,7 @@ curl --request POST \ "https://controller.${CLOUD_REGION_ID}.cloud.zilliz.com.cn
 | `data`    | **object**<br/>表示响应中携带的数据对象。 |
 | `data.clusterId`   | **string**<br/>集群 ID。 |
 | `data.prompt`   | **string**<br/>操作成功的回显信息。 |
-| `message`  | **string**<br/>具体描述请示错误的原因。 |
+| `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单
 
@@ -112,4 +84,5 @@ curl --request POST \ "https://controller.${CLOUD_REGION_ID}.cloud.zilliz.com.cn
 | 80021 | Serverless cluster not support this operation. |
 | 90102 | The cluster does not exist in current region. |
 | 90103 | The clusterId parameter is empty in the request path. |
-| 90117 | Invalid domain name used, please check the domain name you're using. |
+| 90117 | "Invalid domain name used |
+

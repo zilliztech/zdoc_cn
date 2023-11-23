@@ -32,7 +32,7 @@ pip install pymilvus torch gdown torchvision tqdm
 import gdown
 import zipfile
 
-url = 'https://drive.google.com/uc?id=1OYDHLEy992qu5C4C8HV5uDIkOWRTAR1_'
+url = '<https://drive.google.com/uc?id=1OYDHLEy992qu5C4C8HV5uDIkOWRTAR1_>'
 output = './paintings.zip'
 gdown.download(url, output)
 
@@ -51,16 +51,19 @@ with zipfile.ZipFile("./paintings.zip","r") as zip_ref:
 为了更好的管理脚本，我们将一些主要的公共参数提取出来列在下方。你可以根据需要修改这些参数。
 
 ```python
-# Zilliz Cloud 相关参数
-COLLECTION_NAME = 'image_search'  # Collection 名称
-DIMENSION = 2048  # 向量维度
-URI = 'https://replace-this-with-your-zilliz-cloud-endpoint'  # Cluster 公共端点，从 Zilliz Cloud 上获取
-USER = 'replace-this-with-your-zilliz-cloud-database-user'  # 创建 Cluster 时指定的用户名
-PASSWORD = 'replace-this-with-your-zilliz-cloud-database-password'  # 上述用户名对应的密码
+# 1. Set up the name of the collection to be created.
+COLLECTION_NAME = 'image_search_db'
 
-# 推理参数
+# 2. Set up the dimension of the embeddings.
+DIMENSION = 2048
+
+# 3. Set the inference parameters
 BATCH_SIZE = 128
 TOP_K = 3
+
+# 4. Set up the connection parameters for your Zilliz Cloud cluster.
+URI = 'YOUR_CLUSTER_ENDPOINT'
+TOKEN = 'YOUR_CLUSTER_TOKEN'
 ```
 
 ## 设置 Zilliz Cloud{#setting-up-zilliz-cloud}
@@ -70,43 +73,56 @@ TOP_K = 3
 1. 使用提供的端点 URI 连接 Zilliz Cloud cluster。
     ```python
     from pymilvus import connections
-    
-    # 连接 Cluster
-    connections.connect(uri=URI, user=USER, password=PASSWORD, secure=True)
+
+    # Connect to Zilliz Cloud and create a collection
+    connections.connect(
+        alias='default',
+        # Public endpoint obtained from Zilliz Cloud
+        uri=URI,
+        token=TOKEN
+    )
     ```
 
 1. 如果需要创建的 Collection 已存在，删除该 Collection。
     ```python
     from pymilvus import utility
-    
-    # 删除已存在的同名 Collection
-    if utility.has_collection(COLLECTION_NAME):
+
+    # Remove any previous collections with the same name
+    if COLLECTION_NAME in utility.list_collections():
         utility.drop_collection(COLLECTION_NAME)
     ```
 
 1. 创建一个 Collection 用于存储图片 ID，图片路径以及该图片的向量表示。
     ```python
     from pymilvus import FieldSchema, CollectionSchema, DataType, Collection
-    
-    # 创建一个 Collection，包含 id，filepath 和 image_embedding 三个字段
+
     fields = [
         FieldSchema(name='id', dtype=DataType.INT64, is_primary=True, auto_id=True),
         FieldSchema(name='filepath', dtype=DataType.VARCHAR, max_length=200),  # VARCHARS need a maximum length, so for this example they are set to 200 characters
         FieldSchema(name='image_embedding', dtype=DataType.FLOAT_VECTOR, dim=DIMENSION)
     ]
+
     schema = CollectionSchema(fields=fields)
-    collection = Collection(name=COLLECTION_NAME, schema=schema)
+
+    collection = Collection(
+        name=COLLECTION_NAME,
+        schema=schema,
+    )
     ```
 
 1. 为 Collection 创建索引文件，并将 Collection 加载到内存。
     ```python
-    # 使用 AUTOINDEX 为 Collection 创建索引
     index_params = {
         'index_type': 'AUTOINDEX',
         'metric_type': 'L2',
         'params': {}
     }
-    collection.create_index(field_name="image_embedding", index_params=index_params)
+
+    collection.create_index(
+        field_name='image_embedding', 
+        index_params=index_params
+    )
+
     collection.load()
     ```
 
@@ -121,18 +137,22 @@ TOP_K = 3
 1. 加载数据。
     ```python
     import glob
-    
-    # 获取图片文件的路径。
+
+    # Get the filepaths of the images
     paths = glob.glob('./paintings/paintings/**/*.jpg', recursive=True)
     len(paths)
+
+    # Output
+    #
+    # 4978
     ```
 
 1. 预处理数据，将其分为不同的批次。
     ```python
     import torch
-    
-    # 加载 Embedding 模型，并移除模型的最后一层。
-    model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet50', pretrained=True)
+
+    # Load the embedding model with the last layer removed
+    model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet50', weights=ResNet50_Weights.DEFAULT)
     model = torch.nn.Sequential(*(list(model.children())[:-1]))
     model.eval()
     ```
@@ -140,8 +160,8 @@ TOP_K = 3
 1. 获取数据的向量表示。
     ```python
     from torchvision import transforms
-    
-    # 对图片进行预处理。
+
+    # Preprocessing for images
     preprocess = transforms.Compose([
         transforms.Resize(256),
         transforms.CenterCrop(224),
@@ -154,16 +174,16 @@ TOP_K = 3
     ```python
     from PIL import Image
     from tqdm import tqdm
-    
-    # 用于获取指定数据的向量表示并将其存入数据库的函数
+
+    # Embed function that embeds the batch and inserts it
     def embed(data):
         with torch.no_grad():
             output = model(torch.stack(data[0])).squeeze()
             collection.insert([data[1], output.tolist()])
-    
+
     data_batch = [[],[]]
-    
-    # 批量读取图片，获取其向量表示并将其存入数据库。
+
+    # Read the images into batches for embedding and insertion
     for path in tqdm(paths):
         im = Image.open(path).convert('RGB')
         data_batch[0].append(preprocess(im))
@@ -171,13 +191,13 @@ TOP_K = 3
         if len(data_batch[0]) % BATCH_SIZE == 0:
             embed(data_batch)
             data_batch = [[],[]]
-    
-    # 获取剩余图片的向量表示，并将其存入数据库。
+
+    # Embed and insert the remainder
     if len(data_batch[0]) != 0:
         embed(data_batch)
-    
-    # 调用写入方法，以便 Zilliz Cloud 自动为新增数据创建索引。
-    collection.flush()
+
+    # Call a flush to index any unsealed segments.
+    time.sleep(5)
     ```
 
 <Admonition type="info" icon="📘" title="说明">
@@ -195,21 +215,25 @@ PyTorch 可能与 Python 3.9 及之前版本存在不兼容的问题。建议使
 ```python
 import glob
 
-# 获取待搜图片的文件路径。
+# Get the filepaths of the search images
 search_paths = glob.glob('./paintings/test_paintings/**/*.jpg', recursive=True)
-len(search_paths)
+print(len(search_paths))
+
+# Output
+#
+# 2
 
 import time
 from matplotlib import pyplot as plt
 
-# 获取待搜图片的向量表示。
+# Embed the search images
 def embed(data):
     with torch.no_grad():
         ret = model(torch.stack(data))
-        # 如果存在多个结果，使用 squeeze 方法将其转换成数组
+        # If more than one image, use squeeze
         if len(ret) > 1:
             return ret.squeeze().tolist()
-        # 对于单个结果而言，squeeze 方法会移除其批次信息，所以需要使用 flatten 方法
+        # Squeeze would remove batch for single image, so using flatten
         else:
             return torch.flatten(ret, start_dim=1).tolist()
 
@@ -225,7 +249,7 @@ start = time.time()
 res = collection.search(embeds, anns_field='image_embedding', param={}, limit=TOP_K, output_fields=['filepath'])
 finish = time.time()
 
-# 展示搜索结果
+# Show the image results
 f, axarr = plt.subplots(len(data_batch[1]), TOP_K + 1, figsize=(20, 10), squeeze=False)
 
 for hits_i, hits in enumerate(res):

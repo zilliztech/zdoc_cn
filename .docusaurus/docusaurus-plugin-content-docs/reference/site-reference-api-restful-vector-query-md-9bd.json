@@ -2,7 +2,7 @@
   "unversionedId": "api/restful/Vector/query",
   "id": "api/restful/Vector/query",
   "title": "按条件查询",
-  "description": "在 Collection 按指定条件执行查询操作。",
+  "description": "在 Collection 的指定标题列上按指定条件执行查询操作。",
   "source": "@site/reference/api/restful/Vector/query.md",
   "sourceDirName": "api/restful/Vector",
   "slug": "/query",

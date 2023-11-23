@@ -15,40 +15,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-
-列出指定云服务提供商的所有可用云区域。
-
-:::info 说明
-
-此处请使用您的 API Key 做为 Token。
-
-:::
-
-```shell
-curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/regions?cloudId=ali" \
-     --header "Authorization: Bearer ${TOKEN}" \
-     --header "accept: application/json" \
-     --header "content-type: application/json"
-```
-
-您可以使用 `ListClouds` 接口获取 `cloudId`。
-
-成功响应示例：
-
-```shell
-{
-    "code": 200,
-    "data": [
-        {
-            "apiBaseUrl": "https://api.ali-cn-hangzhou.cloud.zilliz.com.cn",
-            "cloudId": "ali",
-            "regionId": "ali-cn-hangzhou"
-        }
-    ]
-}
-```
-
+# RESTful API Examples
 
 
 ## 请求
@@ -81,12 +48,12 @@ curl --request GET \
 
 ```json
 {
-    "code": 200,
+    "code": "integer",
     "data": [
         {
-            "apiBaseUrl": "string",
             "cloudId": "string",
-            "regionId": "string"
+            "regionId": "string",
+            "apiBaseUrl": "string"
         }
     ]
 }
@@ -112,7 +79,7 @@ curl --request GET \
 | `data.cloudId`   | **string**<br/>云服务提供商的 ID。 |
 | `data.regionId`   | **string**<br/>可用云区域的 ID。 |
 | `data.apiBaseUrl`   | **string**<br/>公共 API Endpoint 的 Base URL。 |
-| `message`  | **string**<br/>具体描述请示错误的原因。 |
+| `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单
 
@@ -120,4 +87,5 @@ curl --request GET \
 | ---- | ------------- |
 | 80001 | The token is illegal |
 | 80002 | The token is invalid |
-| 90117 | Invalid domain name used, please check the domain name you're using. |
+| 90117 | "Invalid domain name used |
+

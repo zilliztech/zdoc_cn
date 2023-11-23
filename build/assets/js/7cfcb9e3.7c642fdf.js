@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[9326],{7143:e=>{e.exports=JSON.parse('{"title":"Collection API","slug":"/go/collection","permalink":"/reference/go/collection","navigation":{"previous":{"title":"NewClient()","permalink":"/reference/go/new-client"},"next":{"title":"CreateCollection()","permalink":"/reference/go/create_collection"}}}')}}]);

@@ -13,10 +13,10 @@
       "name": "Cluster Operations"
     },
     {
-      "name": "Collection Operations"
+      "name": "Import Operations"
     },
     {
-      "name": "Import Operations"
+      "name": "Collection Operations"
     },
     {
       "name": "Vector Operations"
@@ -776,7 +776,7 @@
         "x-apifox-folder": "Vector Operations",
         "x-apifox-status": "released",
         "deprecated": false,
-        "description": "Inserts one or more entities into a collection.",
+        "description": "Inserts one or more entities into a collection. You can add a maximum of 100 entities at a time. To insert large volumn of data, you are advised to use [the bulk-insert API](https://docs.zilliz.com/docs/data-import).",
         "tags": [
           "Vector Operations"
         ],
@@ -831,7 +831,7 @@
                     "type": "object",
                     "x-apifox-refs": {
                       "01HD5ZD78VCVFQE5Y3NK4AJ57C": {
-                        "$ref": "#/components/schemas/customer.InsertReq",
+                        "$ref": "#/components/schemas/customer.InsertOrUpsertReq",
                         "x-apifox-overrides": {}
                       }
                     },
@@ -843,6 +843,10 @@
                       "collectionName": {
                         "type": "string",
                         "description": "The name of the collection to which entities will be inserted."
+                      },
+                      "partitionName": {
+                        "type": "string",
+                        "description": "The name of the partition to which this operation applies."
                       },
                       "data": {
                         "type": "array",
@@ -866,6 +870,7 @@
                     ],
                     "x-apifox-ignore-properties": [
                       "collectionName",
+                      "partitionName",
                       "data"
                     ]
                   }
@@ -901,7 +906,7 @@
         "x-apifox-folder": "Vector Operations",
         "x-apifox-status": "released",
         "deprecated": false,
-        "description": "Conducts a similarity search in a collection. ",
+        "description": "Conducts a similarity search on the vector field in a collection. ",
         "tags": [
           "Vector Operations"
         ],
@@ -945,6 +950,14 @@
                   "collectionName": {
                     "type": "string",
                     "description": "The name of the collection to which this operation applies."
+                  },
+                  "partitionNames": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "description": "partitionName"
+                    },
+                    "description": "The name of the partitions to which this operation applies."
                   },
                   "filter": {
                     "type": "string",
@@ -1011,6 +1024,7 @@
                 ],
                 "x-apifox-ignore-properties": [
                   "collectionName",
+                  "partitionNames",
                   "filter",
                   "limit",
                   "offset",
@@ -1069,7 +1083,7 @@
         "x-apifox-folder": "Vector Operations",
         "x-apifox-status": "released",
         "deprecated": false,
-        "description": "Conducts a vector query in a collection.",
+        "description": "Conducts a query on scalar fields in a collection.",
         "tags": [
           "Vector Operations"
         ],
@@ -1097,6 +1111,14 @@
                   "collectionName": {
                     "type": "string",
                     "description": "The name of the collection to which this operation applies."
+                  },
+                  "partitionNames": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "description": "PartitionName"
+                    },
+                    "description": "The name of the partitions to which this operation applies."
                   },
                   "filter": {
                     "type": "string",
@@ -1139,6 +1161,7 @@
                 ],
                 "x-apifox-ignore-properties": [
                   "collectionName",
+                  "partitionNames",
                   "filter",
                   "limit",
                   "offset",
@@ -1195,7 +1218,7 @@
         "x-apifox-folder": "Vector Operations",
         "x-apifox-status": "released",
         "deprecated": false,
-        "description": "Gets entities by the specified IDs.",
+        "description": "Gets entities by the specified IDs. You can set an ID in string or integer or set a set of IDs in a list of strings or a list of integers as shown in the four types of request bodies below.",
         "tags": [
           "Vector Operations"
         ],
@@ -1219,7 +1242,7 @@
                     "type": "object",
                     "x-apifox-refs": {
                       "01HD5Z9Z1Q1DHXF2DQF7E1XNGP": {
-                        "$ref": "#/components/schemas/customer.GetReq1",
+                        "$ref": "#/components/schemas/customer.GetReq",
                         "x-apifox-overrides": {}
                       }
                     },
@@ -1231,6 +1254,14 @@
                       "collectionName": {
                         "type": "string",
                         "description": "The name of the collection to which this operation applies."
+                      },
+                      "partitionNames": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "description": "partitionName"
+                        },
+                        "description": "The name of the partitions to which this operation applies."
                       },
                       "outputFields": {
                         "type": "array",
@@ -1254,6 +1285,7 @@
                     ],
                     "x-apifox-ignore-properties": [
                       "collectionName",
+                      "partitionNames",
                       "outputFields",
                       "id"
                     ]
@@ -1285,7 +1317,8 @@
                       "id": {
                         "type": "array",
                         "items": {
-                          "type": "string"
+                          "type": "string",
+                          "description": "An ID represents an entity."
                         },
                         "description": "An array of IDs of the entities to be retrieved"
                       }
@@ -1797,7 +1830,7 @@
                     "type": "object",
                     "x-apifox-refs": {
                       "01HD5ZEEX7KEAW58KXK0N7QHG0": {
-                        "$ref": "#/components/schemas/customer.InsertReq",
+                        "$ref": "#/components/schemas/customer.InsertOrUpsertReq",
                         "x-apifox-overrides": {}
                       }
                     },
@@ -1813,6 +1846,10 @@
                       "collectionName": {
                         "type": "string",
                         "description": "The name of the collection to which entities will be inserted."
+                      },
+                      "partitionName": {
+                        "type": "string",
+                        "description": "The name of the partition to which this operation applies."
                       },
                       "data": {
                         "type": "array",
@@ -1832,6 +1869,7 @@
                     ],
                     "x-apifox-ignore-properties": [
                       "collectionName",
+                      "partitionName",
                       "data"
                     ]
                   }
@@ -2268,7 +2306,8 @@
           "id": {
             "type": "array",
             "items": {
-              "type": "string"
+              "type": "string",
+              "description": "An ID represents an entity."
             },
             "description": "An array of IDs of the entities to be retrieved"
           }
@@ -2285,12 +2324,20 @@
         "x-apifox-ignore-properties": [],
         "x-apifox-folder": "Schemas"
       },
-      "customer.GetReq1": {
+      "customer.GetReq": {
         "type": "object",
         "properties": {
           "collectionName": {
             "type": "string",
             "description": "The name of the collection to which this operation applies."
+          },
+          "partitionNames": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "partitionName"
+            },
+            "description": "The name of the partitions to which this operation applies."
           },
           "outputFields": {
             "type": "array",
@@ -2306,6 +2353,7 @@
         },
         "x-apifox-orders": [
           "collectionName",
+          "partitionNames",
           "outputFields",
           "id"
         ],
@@ -2322,6 +2370,14 @@
           "collectionName": {
             "type": "string",
             "description": "The name of the collection to which this operation applies."
+          },
+          "partitionNames": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "PartitionName"
+            },
+            "description": "The name of the partitions to which this operation applies."
           },
           "filter": {
             "type": "string",
@@ -2351,6 +2407,7 @@
         },
         "x-apifox-orders": [
           "collectionName",
+          "partitionNames",
           "filter",
           "limit",
           "offset",
@@ -2369,6 +2426,14 @@
           "collectionName": {
             "type": "string",
             "description": "The name of the collection to which this operation applies."
+          },
+          "partitionNames": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "partitionName"
+            },
+            "description": "The name of the partitions to which this operation applies."
           },
           "filter": {
             "type": "string",
@@ -2431,6 +2496,7 @@
         },
         "x-apifox-orders": [
           "collectionName",
+          "partitionNames",
           "filter",
           "limit",
           "offset",
@@ -2494,7 +2560,7 @@
         "x-apifox-ignore-properties": [],
         "x-apifox-folder": "Schemas"
       },
-      "customer.InsertReq": {
+      "customer.InsertOrUpsertReq": {
         "type": "object",
         "required": [
           "data",
@@ -2504,6 +2570,10 @@
           "collectionName": {
             "type": "string",
             "description": "The name of the collection to which entities will be inserted."
+          },
+          "partitionName": {
+            "type": "string",
+            "description": "The name of the partition to which this operation applies."
           },
           "data": {
             "type": "array",
@@ -2519,6 +2589,7 @@
         },
         "x-apifox-orders": [
           "collectionName",
+          "partitionName",
           "data"
         ],
         "x-apifox-ignore-properties": [],

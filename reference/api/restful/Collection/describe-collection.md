@@ -9,60 +9,13 @@ import RestHeader from '@site/src/components/RestHeader';
 
 描述 Collection 的详细信息。
 
-<RestHeader method="get" endpoint="https://{public_endpoint}/v1/vector/collections/describe" />
+<RestHeader method="get" endpoint="https://{cluster_endpoint}/v1/vector/collections/describe" />
 
 ---
 
 ## 示例
 
-
-描述 Collection 的详细信息。本示例将查看一个名为 `medium_articles` 的 Collection。
-
-:::info 说明
-
-此处请使用由冒号（:）连接的集群用户名和密码做为 Token，如 `user:password`。
-
-:::
-
-```shell
-curl --request GET \
-     --url "${CLUSTER_ENDPOINT}/v1/vector/collections/describe?collectionName=medium_articles" \
-     --header "Authorization: Bearer ${TOKEN}" \
-     --header "accept: application/json" \
-     --header "content-type: application/json"
-```
-
-成功响应示例：
-
-```shell
-{
-    "code": 200,
-    "data": {
-        "collectionName": "string",
-        "description": "string",
-        "fields": [
-            {
-                "autoId": true,
-                "description": "string",
-                "name": "string",
-                "primaryKey": true,
-                "type": "string"
-            }
-        ],
-        "indexes": [
-            {
-                "fieldName": "string",
-                "indexName": "string",
-                "metricType": "string"
-            }
-        ],
-        "load": "string",
-        "shardsNum": 0,
-        "enableDynamicField": true
-    }
-}
-```
-
+# RESTful API Examples
 
 
 ## 请求
@@ -74,6 +27,7 @@ curl --request GET \
     | 参数名称          | 参数说明                                                                               |
     |------------------|-------------------------------------------------------------------------------------------|
     | `collectionName`  | **string**（必选）<br/>目标 Collection 名称。|
+    | `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
 
 - 路径参数
 
@@ -95,11 +49,10 @@ curl --request GET \
 
 ```json
 {
-    "code": 200,
+    "code": "integer",
     "data": {
         "collectionName": "string",
         "description": "string",
-        "enableDynamicField": "boolean",
         "fields": [
             {
                 "autoId": "boolean",
@@ -117,7 +70,8 @@ curl --request GET \
             }
         ],
         "load": "string",
-        "shardsNum": "integer"
+        "shardsNum": "integer",
+        "enableDynamicField": "boolean"
     }
 }
 ```
@@ -154,7 +108,7 @@ curl --request GET \
 | `data.load`   | **string**<br/>Collection 的加载状态。有效值：**未加载**、**加载中**和**已加载**。 |
 | `data.shardsNum`   | **integer**<br/>Collection 的分片数量。 |
 | `data.enableDynamicField`   | **boolean**<br/>Collection 是否启用了动态 Schema。 |
-| `message`  | **string**<br/>具体描述请示错误的原因。 |
+| `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单
 
@@ -169,3 +123,4 @@ curl --request GET \
 | 90011 | Invalid CollectionName. Reason: Name contains only alphanumeric letters and underscores |
 | 90102 | The cluster does not exist in current region. |
 | 90103 | The clusterId parameter is empty in the request path. |
+

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[9715],{2250:e=>{e.exports=JSON.parse('{"title":"RESTful API \u53c2\u8003","slug":"/restful","permalink":"/reference/restful","navigation":{"previous":{"title":"\u7531\u6b64\u51fa\u53d1","permalink":"/reference/"},"next":{"title":"Cloud","permalink":"/reference/cloud-meta"}}}')}}]);

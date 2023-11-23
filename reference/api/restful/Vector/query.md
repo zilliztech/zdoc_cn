@@ -7,38 +7,15 @@ title: 按条件查询
 
 import RestHeader from '@site/src/components/RestHeader';
 
-在 Collection 按指定条件执行查询操作。
+在 Collection 的指定标题列上按指定条件执行查询操作。
 
-<RestHeader method="post" endpoint="https://{public_endpoint}/v1/vector/query" />
+<RestHeader method="post" endpoint="https://{cluster_endpoint}/v1/vector/query" />
 
 ---
 
 ## 示例
 
-
-:::info 说明
-
-此处请使用由冒号（:）连接的集群用户名和密码做为 Token，如 `user:password`。
-
-:::
-
-在 Collection 按指定条件执行查询操作。
-
-```shell
-curl --request POST \
-     --url "${CLUSTER_ENDPOINT}/v1/vector/query" \
-     --header "Authorization: Bearer ${TOKEN}" \
-     --header "accept: application/json" \
-     --header "content-type: application/json" \
-     -d '{
-       "collectionName": "medium_articles",
-       "outputFields": ["id", "title", "link"],
-       "filter": "id in [443300716234671427, 443300716234671426]",
-       "limit": 100,
-       "offset": 0
-     }'
-```
-
+# RESTful API Examples
 
 
 ## 请求
@@ -57,16 +34,20 @@ curl --request POST \
 
 ```json
 {
+    "dbName": "string",
     "collectionName": "string",
     "filter": "string",
     "limit": "integer",
     "offset": "integer",
-    "outputFields": []
+    "outputFields": [
+        {}
+    ]
 }
 ```
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
+| `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
 | `collectionName`  | **string**（必选）<br/>目标 Collection 名称。|
 | `filter`  | **string**（必选）<br/>查询时使用的过滤条件。|
 | `limit`  | **integer**<br/>要返回的最大 Entity 数。<br/>本参数值和 `offset` 参数值的和不能大于 **16384**。<br/>默认值为 **100**.<br/>参数取值在 **1** 和 **100** 之间.|
@@ -83,8 +64,10 @@ curl --request POST \
 
 ```json
 {
-    "code": 200,
-    "data": {}
+    "code": "integer",
+    "data": [
+        {}
+    ]
 }
 ```
 
@@ -105,7 +88,7 @@ curl --request POST \
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
 | `data`  | **array**<br/>表示响应中携带的 object 数组. |
-| `message`  | **string**<br/>具体描述请示错误的原因。 |
+| `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单
 
@@ -124,4 +107,5 @@ curl --request POST \
 | 90103 | The clusterId parameter is empty in the request path. |
 | 90110 | No filter key field. |
 | 90134 | No query content provided. |
-| 90139 | Type mismatch for field 'xxx'. expected type:xxx, but received input:xxx. |
+| 90139 | "Type mismatch for field 'xxx'. expected type:xxx |
+

@@ -9,46 +9,13 @@ import RestHeader from '@site/src/components/RestHeader';
 
 在集群中创建 Collection。
 
-<RestHeader method="post" endpoint="https://{public_endpoint}/v1/vector/collections/create" />
+<RestHeader method="post" endpoint="https://{cluster_endpoint}/v1/vector/collections/create" />
 
 ---
 
 ## 示例
 
-
-在集群中创建 Collection。本示例将创建一个名为 `medium_articles` 的 Collection。
-
-:::info 说明
-
-此处请使用由冒号（:）连接的集群用户名和密码做为 Token，如 `user:password`。
-
-:::
-
-```shell
-curl --request POST \
-     --url "${CLUSTER_ENDPOINT}/v1/vector/collections/create" \
-     --header "Authorization: Bearer ${TOKEN}" \
-     --header "accept: application/json" \
-     --header "content-type: application/json" \
-     -d '{
-       "dbName": "default",   
-       "collectionName": "medium_articles",
-       "dimension": 256,
-       "metricType": "L2",
-       "primaryField": "id",
-       "vectorField": "vector"
-      }'
-```
-
-成功响应示例：
-
-```shell
-{
-    "code": 200,
-    "data": {}
-}
-```
-
+# RESTful API Examples
 
 
 ## 请求
@@ -67,13 +34,13 @@ curl --request POST \
 
 ```json
 {
-    "collectionName": "string",
     "dbName": "string",
-    "description": "string",
+    "collectionName": "string",
     "dimension": "integer",
     "metricType": "string",
     "primaryField": "string",
-    "vectorField": "string"
+    "vectorField": "string",
+    "description": "string"
 }
 ```
 
@@ -97,7 +64,7 @@ curl --request POST \
 
 ```json
 {
-    "code": 200,
+    "code": "integer",
     "data": {}
 }
 ```
@@ -119,7 +86,7 @@ curl --request POST \
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
 | `data`    | **object**<br/>表示响应中携带的数据对象。 |
-| `message`  | **string**<br/>具体描述请示错误的原因。 |
+| `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单
 
@@ -128,8 +95,8 @@ curl --request POST \
 | 80000 | Incorrect parameter: xxx |
 | 80001 | The token is illegal |
 | 80002 | The token is invalid |
-| 80007 |  This CU Size requires significant resource consumption. If you want to use it, please complete the card binding on the Billing page first. |
-| 80010 | Duplicated ClusterName. You have already created a running Cluster with the same name. To avoid complexity in management, please modify the name and create a new one. |
+| 80007 | " This CU Size requires significant resource consumption. If you want to use it |
+| 80010 | "Duplicated ClusterName. You have already created a running Cluster with the same name. To avoid complexity in management |
 | 80014 | Your input cuSize value is not supported yet. |
 | 80022 | Dedicated cluster not support this operation. |
 | 90013 | The parameter shardsNum should have a value range between 1 and 32. |
@@ -152,4 +119,5 @@ curl --request POST \
 | 90114 | The index field name can only be added to a vector field. |
 | 90122 | No dimension key field. |
 | 90136 | No create collection content provided. |
-| 90139 | Type mismatch for field 'xxx'. expected type:xxx, but received input:xxx. |
+| 90139 | "Type mismatch for field 'xxx'. expected type:xxx |
+

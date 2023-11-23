@@ -15,46 +15,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-
-描述集群的详细信息。
-
-:::info 说明
-
-此处请使用您的 API Key 做为 Token。
-
-:::
-
-```shell
-curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>" \
-     --header "Authorization: Bearer ${TOKEN}" \
-     --header "accept: application/json" \
-     --header "content-type: application/json"
-```
-
-成功响应示例：
-
-```shell
-{
-    "code": 200,
-    "data": {
-        "clusterId": "string",
-        "clusterName": "string",
-        "description": "string",
-        "regionId": "string",
-        "clusterType": "string",
-        "cuSize": "string",
-        "status": "string",
-        "connectAddress": "string",
-        "privateLinkAddress": "string",
-        "createTime": "string",
-        "storageSize": "string",
-        "snapshotNumber": "string",
-        "createProgress": "string"
-    }
-}
-```
-
+# RESTful API Examples
 
 
 ## 请求
@@ -84,21 +45,21 @@ curl --request GET \
 
 ```json
 {
-    "code": 200,
+    "code": "integer",
     "data": {
         "clusterId": "string",
         "clusterName": "string",
-        "clusterType": "string",
-        "connectAddress": "string",
-        "createProgress": "integer",
-        "createTime": "string",
-        "cuSize": "integer",
         "description": "string",
-        "privateLinkAddress": "string",
         "regionId": "string",
-        "snapshotNumber": "integer",
+        "clusterType": "string",
+        "cuSize": "integer",
         "status": "string",
-        "storageSize": "integer"
+        "connectAddress": "string",
+        "privateLinkAddress": "string",
+        "createTime": "string",
+        "storageSize": "integer",
+        "snapshotNumber": "integer",
+        "createProgress": "integer"
     }
 }
 ```
@@ -133,7 +94,7 @@ curl --request GET \
 | `data.storageSize`   | **integer(sint64)**<br/>集群的存储容量。 |
 | `data.snapshotNumber`   | **integer**<br/>集群的快照数量。 |
 | `data.createProgress`   | **integer**<br/>集群创建进程。 |
-| `message`  | **string**<br/>具体描述请示错误的原因。 |
+| `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单
 
@@ -143,4 +104,5 @@ curl --request GET \
 | 80002 | The token is invalid |
 | 80020 | Invalid clusterId or you do not have permission to access that Cluster. |
 | 90103 | The clusterId parameter is empty in the request path. |
-| 90117 | Invalid domain name used, please check the domain name you're using. |
+| 90117 | "Invalid domain name used |
+

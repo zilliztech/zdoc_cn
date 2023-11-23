@@ -28,14 +28,14 @@ pip install pymilvus sentence-transformers gdown
 
 ```python
 import gdown
+
 url = 'https://drive.google.com/uc?id=11ISS45aO2ubNCGaC3Lvd3D7NT8Y7MeO8'
-output = './movies.zip'
-gdown.download(url, output)
+zipball = '../movies.zip'
+output_folder = '../movies'
+gdown.download(url, zipball)
 
-import zipfile
-
-with zipfile.ZipFile("./movies.zip","r") as zip_ref:
-    zip_ref.extractall("./movies")
+with zipfile.ZipFile(zipball,"r") as zip_ref:
+    zip_ref.extractall(output_folder)
 ```
 
 ## 主要参数{#parameters}
@@ -43,17 +43,16 @@ with zipfile.ZipFile("./movies.zip","r") as zip_ref:
 本示例中使用的主要公共参数都在此处定义。请根据需求修改参数值。
 
 ```python
-# Zilliz Cloud 设置参数
-COLLECTION_NAME = 'movies_db'  # Collection 名称
-DIMENSION = 384  # 向量维度
-URI = 'https://replace-this-with-your-zilliz-cloud-endpoint'  # Cluster 公共端点 URI, 可从 Zilliz Cloud 获取 
-USER = 'replace-this-with-your-zilliz-cloud-database-user'  # 创建 Cluster 时指定的用户名
-PASSWORD = 'replace-this-with-your-zilliz-cloud-database-password'  # 上述用户名对应的密码
+# Parameters for set up Zilliz Cloud
+COLLECTION_NAME = 'movies_db'  # Collection name
+DIMENSION = 384  # Embeddings size
+URI = 'YOUR_CLUSTER_ENDPOINT'  # Endpoint URI obtained from Zilliz Cloud
+TOKEN = 'YOUR_CLUSTER_TOKEN'  # API key or a colon-separated cluster username and password
 
-# 推理参数
+# Inference Arguments
 BATCH_SIZE = 128
 
-# 搜索参数
+# Search Arguments
 TOP_K = 3
 ```
 
@@ -64,16 +63,19 @@ TOP_K = 3
 1. 使用提供的端点 URI 连接 Zilliz Cloud cluster。
     ```python
     from pymilvus import connections
-    
-    # 连接 Cluster
-    connections.connect(uri=URI, user=USER, password=PASSWORD, secure=True)
+
+    # Connect to Milvus Database
+    connections.connect(
+        uri=URI, 
+        token=TOKEN
+    )
     ```
 
 1. 如果需要创建的 Collection 已存在，删除该 Collection。
     ```python
     from pymilvus import utility
-    
-    # 删除已存在的同名 Collection
+
+    # Remove any previous collections with the same name
     if utility.has_collection(COLLECTION_NAME):
         utility.drop_collection(COLLECTION_NAME)
     ```
@@ -81,8 +83,8 @@ TOP_K = 3
 1. 创建一个 Collection 用于存储电影 ID，电影名称以及该名称的向量表示。
     ```python
     from pymilvus import FieldSchema, CollectionSchema, DataType, Collection
-    
-    # 创建一个 Collection，包含 id，title 和 embedding 三个字段
+
+    # Create collection which includes the id, title, and embedding.
     fields = [
         FieldSchema(name='id', dtype=DataType.INT64, is_primary=True, auto_id=True),
         FieldSchema(name='title', dtype=DataType.VARCHAR, max_length=200),  # VARCHARS need a maximum length, so for this example they are set to 200 characters
@@ -94,13 +96,13 @@ TOP_K = 3
 
 1. 为 Collection 创建索引文件，并将 Collection 加载到内存。
     ```python
-    # 使用 AUTOINDEX 为 Collection 创建索引
+    # Create an IVF_FLAT index for collection.
     index_params = {
         'index_type': 'AUTOINDEX',
         'metric_type': 'L2',
         'params': {}
     }
-    collection.create_index(field_name="image_embedding", index_params=index_params)
+    collection.create_index(field_name="embedding", index_params=index_params)
     collection.load()
     ```
 
@@ -124,7 +126,7 @@ from sentence_transformers import SentenceTransformer
 
 transformer = SentenceTransformer('all-MiniLM-L6-v2')
 
-# 抽取电影标题
+# Extract the book titles
 def csv_load(file):
     with open(file, newline='') as f:
         reader = csv.reader(f, delimiter=',')
@@ -133,7 +135,7 @@ def csv_load(file):
                 continue
             yield (row[1], row[7])
 
-# 使用 SentenceTransformer 生成对应的向量表示
+# Extract embedding from text using OpenAI
 def embed_insert(data):
     embeds = transformer.encode(data[1])
     ins = [
@@ -146,18 +148,21 @@ import time
 
 data_batch = [[],[]]
 
-for title, plot in csv_load('./movies/plots.csv'):
+with open('../movies/plots.csv') as f:
+    total = len(f.readlines()) / BATCH_SIZE
+
+for title, plot in tqdm(csv_load('{}/plots.csv'.format(output_folder)), total=total):
     data_batch[0].append(title)
     data_batch[1].append(plot)
     if len(data_batch[0]) % BATCH_SIZE == 0:
         embed_insert(data_batch)
         data_batch = [[],[]]
 
-# 为剩余数据生成对应的向量表示并存入数据库。
+# Embed and insert the remainder
 if len(data_batch[0]) != 0:
     embed_insert(data_batch)
 
-# 调用写入方法，让 Zilliz Cloud 自动索引数据。
+# Call a flush to index any unsealed segments.
 collection.flush()
 ```
 
@@ -166,10 +171,10 @@ collection.flush()
 在向 Zilliz Cloud 插入所有数据后，我们就可以开始执行搜索了。在本示例中，我们将根据电影情节进行电影检索。由于代码中执行的是批量搜索，因此搜索时间是指完成同一批次中所有电影情节的相似性搜索的时间。
 
 ```python
-# 搜索与关键词最相近的标题
+# Search for titles that closest match these phrases.
 search_terms = ['A movie about cars', 'A movie about monsters']
 
-# 在数据库中对输入文本进行相似性搜索的函数
+# Search the database based on input text
 def embed_search(data):
     embeds = transformer.encode(data)
     return [x for x in embeds]
@@ -178,11 +183,11 @@ search_data = embed_search(search_terms)
 
 start = time.time()
 res = collection.search(
-    data=search_data,  # 输入文本对应的向量表示
-    anns_field="embedding",  # 在 embedding 字段中进行相似性搜索
+    data=search_data,  # Embeded search value
+    anns_field="embedding",  # Search across embeddings
     param={},
-    limit = TOP_K,  # 每次搜索返回的结果数量
-    output_fields=['title']  # 在返回的结果中需要包含 title 字段
+    limit = TOP_K,  # Limit to top_k results per search
+    output_fields=['title']  # Include title field in result
 )
 end = time.time()
 

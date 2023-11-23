@@ -170,6 +170,12 @@
                 "label": "搜索",
                 "href": "/reference/search",
                 "docId": "api/restful/Vector/search"
+              },
+              {
+                "type": "link",
+                "label": "Upsert",
+                "href": "/reference/upsert",
+                "docId": "api/restful/Vector/upsert"
               }
             ],
             "href": "/reference/vector-operations"
@@ -945,25 +951,31 @@
     "api/restful/Vector/get": {
       "id": "api/restful/Vector/get",
       "title": "按 ID 查询",
-      "description": "在 Collection 按指定 ID 返回对应的 Entity。",
+      "description": "在 Collection 按指定 ID 返回对应的 Entity。根据实际情况不同，指定的 ID 可能为一个字符串、一个整数、一个字符串列表或一个整数列表等多种形式。具体可参见下方示例中罗列的四种情况。",
       "sidebar": "referenceSidebar"
     },
     "api/restful/Vector/insert": {
       "id": "api/restful/Vector/insert",
       "title": "插入 Entity",
-      "description": "在 Collection 中插入一条或多条 Entity。",
+      "description": "在 Collection 中插入一条或多条 Entity。一次最多插入 100 条数据。如需插入大量数据，请使用 Bulk Insert API。",
       "sidebar": "referenceSidebar"
     },
     "api/restful/Vector/query": {
       "id": "api/restful/Vector/query",
       "title": "按条件查询",
-      "description": "在 Collection 按指定条件执行查询操作。",
+      "description": "在 Collection 的指定标题列上按指定条件执行查询操作。",
       "sidebar": "referenceSidebar"
     },
     "api/restful/Vector/search": {
       "id": "api/restful/Vector/search",
       "title": "搜索",
-      "description": "在 Collection 中执行相似性搜索。",
+      "description": "在 Collection 的向量列上执行相似性搜索。",
+      "sidebar": "referenceSidebar"
+    },
+    "api/restful/Vector/upsert": {
+      "id": "api/restful/Vector/upsert",
+      "title": "Upsert",
+      "description": "插入和更新 Collection 中的记录。",
       "sidebar": "referenceSidebar"
     }
   }

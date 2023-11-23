@@ -64,7 +64,7 @@ export default [
   },
   {
     path: '/reference',
-    component: ComponentCreator('/reference', 'c52'),
+    component: ComponentCreator('/reference', '921'),
     routes: [
       {
         path: '/reference',
@@ -567,6 +567,12 @@ export default [
       {
         path: '/reference/suspend-cluster',
         component: ComponentCreator('/reference/suspend-cluster', 'a8f'),
+        exact: true,
+        sidebar: "referenceSidebar"
+      },
+      {
+        path: '/reference/upsert',
+        component: ComponentCreator('/reference/upsert', '7e6'),
         exact: true,
         sidebar: "referenceSidebar"
       },

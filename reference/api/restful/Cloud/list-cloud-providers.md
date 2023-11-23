@@ -15,37 +15,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
-
-列出 Zilliz Cloud 上所有可用的云服务提供商。
-
-:::info 说明
-
-此处请使用您的 API Key 做为 Token。
-
-:::
-
-```shell
-curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clouds" \
-     --header "Authorization: Bearer ${TOKEN}" \
-     --header "accept: application/json" \
-     --header "content-type: application/json"
-```
-
-成功响应示例：
-
-```shell
-{
-    code: 200,
-    data: [
-     {
-        "cloudId": "ali",
-        "description": "alibaba cloud"
-     }
-    ]
-}
-```
-
+# RESTful API Examples
 
 
 ## 请求
@@ -74,7 +44,7 @@ curl --request GET \
 
 ```json
 {
-    "code": 200,
+    "code": "integer",
     "data": [
         {
             "cloudId": "string",
@@ -103,7 +73,7 @@ curl --request GET \
 | `data`  | **array**<br/>表示响应中携带的 object 数组. |
 | `data.cloudId`   | **string**<br/>云服务提供商的 ID。 |
 | `data.description`   | **string**<br/>云服务提供商的描述信息。 |
-| `message`  | **string**<br/>具体描述请示错误的原因。 |
+| `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单
 
@@ -112,4 +82,5 @@ curl --request GET \
 | 63032 | CloudId not exists. |
 | 80001 | The token is illegal |
 | 80002 | The token is invalid |
-| 90117 | Invalid domain name used, please check the domain name you're using. |
+| 90117 | "Invalid domain name used |
+
