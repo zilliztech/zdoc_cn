@@ -25,9 +25,11 @@ import TabItem from '@theme/TabItem';
 
 在执行范围搜索前，请确保以下几点：
 
-[Unsupported block type]
+- 您的集群已升级至 Beta 版本。
 
-[Unsupported block type]
+- 您已下载了示例数据集，更多详情参见[示例数据集](./example-dataset)。
+
+- 您已根据示例数据集创建了相应 Schema 的 Collection，并且该 Collection 已完成索引构建及加载。详细信息请参见[开启动态 Schema](./enable-dynamic-schema)。
 
 ## 步骤简介{#quick-steps-for-a-range-search}
 

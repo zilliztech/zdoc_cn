@@ -57,7 +57,6 @@ class larkDocWriter {
             "add_ons",
             "jira_issue"
         ]
-        this.block_types[999] = "sync"
         this.code_langs = [
             null,
             "PlainText",
@@ -474,7 +473,11 @@ class larkDocWriter {
             const next_block = idx < blocks.length-1 ? blocks[idx+1] : null;
 
             if (this.block_types[block['block_type']-1] === undefined) {
-                markdown.push('[Unsupported block type]');
+                if (block['children']) {
+                    markdown.push(await this.__markdown(children, indent));
+                } else {
+                    markdown.push('[Unsupported block type]');
+                }
             } else if (this.block_types[block['block_type']-1] === 'text') {
                 markdown.push(idt + await this.__text(block['text']));
             } else if (this.block_types[block['block_type']-1].includes('heading')) {
@@ -496,11 +499,6 @@ class larkDocWriter {
                 markdown.push(await this.__table(block['table'], indent));
             } else if (this.block_types[block['block_type']-1] === 'callout') {
                 markdown.push(await this.__callout(block, indent));
-            } else if (block['block_type'] === 999 && block['children']) {
-                const children = block['children'].map(child => {
-                    return this.__retrieve_block_by_id(child)
-                })
-                markdown.push(await this.__markdown(children, indent));
             } else {
                 console.log(`Unprocessed: ${block['block_id']}`);
             }

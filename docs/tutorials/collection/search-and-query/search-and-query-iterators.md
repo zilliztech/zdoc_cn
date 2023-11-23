@@ -34,7 +34,9 @@ import Admonition from '@theme/Admonition';
 
 在开始使用迭代器进行搜索或查询前，请确保以下几点：
 
-[Unsupported block type]
+- 您的集群已升级至 Beta 版本。
+
+- 您已下载了示例数据集，更多详情参见[示例数据集](./example-dataset)。
 
 ## 准备数据集{#prepare-your-dataset}
 
