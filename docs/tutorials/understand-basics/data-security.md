@@ -56,7 +56,7 @@ Zilliz Cloud 使用 OAuth2 协议实现身份验证。当访问集群时，Zilli
 
 如果你不希望集群流量暴露在互联网上，Zilliz Cloud 支持您为您的集群添加私网连接。该功能为您 的集群提供了一层安全保障，保证只有您信任的虚拟私有网络（VPC）上的资源可以与您的集群通信。
 
-有关详细信息，请参见[创建私网连接](./set-up-a-private-link)。
+有关详细信息，请参见[创建私网连接](./setup-a-private-link)。
 
 ## 数据存储和传输{#storing-and-transmitting-data-with-encryption}
 
