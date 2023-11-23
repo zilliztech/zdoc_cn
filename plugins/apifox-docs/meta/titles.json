@@ -17,5 +17,5 @@
     "按 ID 查询": "get",
     "插入 Entity": "insert",
     "删除 Entity": "delete",
-    "Upsert": "upsert"
+    "Upsert Entity": "upsert"
 }
