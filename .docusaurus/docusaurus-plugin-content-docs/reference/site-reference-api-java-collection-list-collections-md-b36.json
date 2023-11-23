@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/java/Collection/listCollections()",
+  "id": "api/java/Collection/listCollections()",
+  "title": "listCollections()",
+  "description": "调用接口查询当前已创建的所有 Collection。",
+  "source": "@site/reference/api/java/Collection/listCollections().md",
+  "sourceDirName": "api/java/Collection",
+  "slug": "/java/list_collection",
+  "permalink": "/reference/java/list_collection",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 2,
+    "slug": "/java/list_collection"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "describeCollection()",
+    "permalink": "/reference/java/describe_collection"
+  },
+  "next": {
+    "title": "showCollections()",
+    "permalink": "/reference/java/show_collections"
+  }
+}

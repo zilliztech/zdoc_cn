@@ -1,53 +1,41 @@
-# How to Build the Doc Site
+# Website
 
-The Zilliz Cloud doc site is developed based on the open-source Docusauraus. All contents are hosted on Feishu docs and fetched on the fly to the final image. This doc page explains how to build the doc site step by step.
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-## About the `Dockerfile`
+### Installation
 
-The Dockerfile in the root folder includes five stages, namely **preset**, **base**, **development**, **production**, and **deploy**.
+```
+$ yarn
+```
 
-- **preset**
+### Local Development
 
-    In this step, run a script on a Python base image to fetch doc pages and related images from Feishu and Figma, respectively. This step is relatively time-consuming and it will last for over 10 minutes.
+```
+$ yarn start
+```
 
-- **base**
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-    This is a shared step for the **development** and **production** stages. In the step, the main action is to copy the doc pages and images generated in the **preset** stage.
+### Build
 
-- **development**
+```
+$ yarn build
+```
 
-    This produces an image for development purpose only. Do not use it in production. The built image exposes port 3000, you can map it to any local port when running this image.
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-    The command to build the image is as follows:
+### Deployment
 
-    ```shell
-    docker build --target development -t docs:dev .
-    ```
+Using SSH:
 
-    To run the built image
+```
+$ USE_SSH=true yarn deploy
+```
 
-    ```shell
-    docker run -p 3000:3000 docs:dev
-    ```
+Not using SSH:
 
-- **production**
+```
+$ GIT_USER=<Your GitHub username> yarn deploy
+```
 
-    This stage builds the doc site using Docusaurus' `build` command, and its output is the `build` directory, which is to be copied to the **deploy** stage.
-
-- **deploy**
-
-    This stage copies the `build` directory generated in the **production** stage and uses an Nginx image to serve this folder. Image built using the following command can be safely used in production.
-
-    ```shell
-    docker build -t zdoc:latest .
-    ```
-
-    To run the built image
-
-    ```shell
-    docker run --rm -p 3000:80 zdoc:latest
-    ```
-
-## Further steps
-
-(To be added)
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.

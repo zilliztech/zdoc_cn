@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/integrations/image-search-with-zilliz-cloud-and-pytorch",
+  "id": "byoc/integrations/image-search-with-zilliz-cloud-and-pytorch",
+  "title": "Image Search with Zilliz Cloud and PyTorch",
+  "description": "On this page, we are going to go over a simple image search example using Zilliz Cloud. The dataset we are searching through is the Impressionist-Classifier Dataset found on Kaggle. For this example, we have re-hosted the data in a public google drive.",
+  "source": "@site/docs/byoc/integrations/image-search-with-zilliz-cloud-and-pytorch.md",
+  "sourceDirName": "byoc/integrations",
+  "slug": "/docs/byoc/image-search-with-zilliz-cloud-and-pytorch",
+  "permalink": "/docs/byoc/image-search-with-zilliz-cloud-and-pytorch",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/image-search-with-zilliz-cloud-and-pytorch",
+    "beta": false,
+    "notebook": "84_integrations_pytorch.ipynb",
+    "sidebar_position": 5
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Question Answering over Documents with Zilliz Cloud and LangChain",
+    "permalink": "/docs/byoc/question-answering-over-documents-with-zilliz-cloud-and-langchain"
+  },
+  "next": {
+    "title": "Documentation QA using Zilliz Cloud and LlamaIndex",
+    "permalink": "/docs/byoc/documentation-qa-using-zilliz-cloud-and-llamaindex"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/python/Collection/num_entities()",
+  "id": "api/python/Collection/num_entities()",
+  "title": "num_entities()",
+  "description": "调用接口统计 Collection 中已插入的 Entity 数。",
+  "source": "@site/reference/api/python/Collection/num_entities().md",
+  "sourceDirName": "api/python/Collection",
+  "slug": "/python/num_entities",
+  "permalink": "/reference/python/num_entities",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 3,
+    "slug": "/python/num_entities"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "list_collections()",
+    "permalink": "/reference/python/list_collection"
+  },
+  "next": {
+    "title": "flush()",
+    "permalink": "/reference/python/flush"
+  }
+}

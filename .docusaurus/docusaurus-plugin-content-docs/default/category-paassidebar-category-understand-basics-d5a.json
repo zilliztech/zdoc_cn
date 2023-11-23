@@ -1,0 +1,15 @@
+{
+  "title": "Understand Basics",
+  "slug": "understand-basics",
+  "permalink": "/understand-basics",
+  "navigation": {
+    "previous": {
+      "title": "Example Dataset",
+      "permalink": "/docs/byoc/example-dataset"
+    },
+    "next": {
+      "title": "AUTOINDEX Explained",
+      "permalink": "/docs/byoc/autoindex-explained"
+    }
+  }
+}

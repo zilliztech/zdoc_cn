@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/nodejs/Collection/createCollection()",
+  "id": "api/nodejs/Collection/createCollection()",
+  "title": "createCollection()",
+  "description": "调用接口创建 Collection。",
+  "source": "@site/reference/api/nodejs/Collection/createCollection().md",
+  "sourceDirName": "api/nodejs/Collection",
+  "slug": "/nodejs/create_collection",
+  "permalink": "/reference/nodejs/create_collection",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 0,
+    "slug": "/nodejs/create_collection"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "Collection API",
+    "permalink": "/reference/nodejs/collection"
+  },
+  "next": {
+    "title": "describeCollection()",
+    "permalink": "/reference/nodejs/describe_collection"
+  }
+}

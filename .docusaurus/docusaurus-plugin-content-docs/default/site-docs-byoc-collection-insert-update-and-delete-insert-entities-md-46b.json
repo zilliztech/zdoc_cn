@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/collection/insert-update-and-delete/insert-entities",
+  "id": "byoc/collection/insert-update-and-delete/insert-entities",
+  "title": "Insert Entities",
+  "description": "An entity represents a basic data unit within a collection. It embodies a member of a specific class, such as a book in a library or a gene in a genome. Entities in a collection share the same set of attributes, which we refer to as the schema.",
+  "source": "@site/docs/byoc/collection/insert-update-and-delete/insert-entities.md",
+  "sourceDirName": "byoc/collection/insert-update-and-delete",
+  "slug": "/docs/byoc/insert-entities",
+  "permalink": "/docs/byoc/insert-entities",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/insert-entities",
+    "beta": false,
+    "notebook": "00_quick_start.ipynb,01_use_customized_schema.ipynb",
+    "sidebar_position": 1
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Insert, Update & Delete",
+    "permalink": "/insert-update-and-delete"
+  },
+  "next": {
+    "title": "Upsert Entities",
+    "permalink": "/docs/byoc/upsert-entities"
+  }
+}

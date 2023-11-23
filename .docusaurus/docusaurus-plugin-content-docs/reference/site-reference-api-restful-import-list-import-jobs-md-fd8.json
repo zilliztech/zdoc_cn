@@ -1,0 +1,29 @@
+{
+  "unversionedId": "api/restful/Import/list-import-jobs",
+  "id": "api/restful/Import/list-import-jobs",
+  "title": "查看数据导入任务",
+  "description": "列出指定集群上的数据导入任务。",
+  "source": "@site/reference/api/restful/Import/list-import-jobs.md",
+  "sourceDirName": "api/restful/Import",
+  "slug": "/list-import-jobs",
+  "permalink": "/reference/list-import-jobs",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 0,
+    "slug": "/list-import-jobs",
+    "title": "查看数据导入任务"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "导入",
+    "permalink": "/reference/import"
+  },
+  "next": {
+    "title": "Vector",
+    "permalink": "/reference/vector-operations"
+  }
+}

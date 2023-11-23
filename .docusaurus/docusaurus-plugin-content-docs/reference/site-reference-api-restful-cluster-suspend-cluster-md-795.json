@@ -1,0 +1,29 @@
+{
+  "unversionedId": "api/restful/Cluster/suspend-cluster",
+  "id": "api/restful/Cluster/suspend-cluster",
+  "title": "挂起集群",
+  "description": "挂起集群。本操作会中断集群运行，不会影响集群数据完整性。",
+  "source": "@site/reference/api/restful/Cluster/suspend-cluster.md",
+  "sourceDirName": "api/restful/Cluster",
+  "slug": "/suspend-cluster",
+  "permalink": "/reference/suspend-cluster",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 0,
+    "slug": "/suspend-cluster",
+    "title": "挂起集群"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "恢复集群",
+    "permalink": "/reference/resume-cluster"
+  },
+  "next": {
+    "title": "Collection",
+    "permalink": "/reference/collection-operations"
+  }
+}

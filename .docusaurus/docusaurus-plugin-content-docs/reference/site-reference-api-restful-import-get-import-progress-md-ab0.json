@@ -1,0 +1,29 @@
+{
+  "unversionedId": "api/restful/Import/get-import-progress",
+  "id": "api/restful/Import/get-import-progress",
+  "title": "查看导入进度",
+  "description": "获取指定导入任务的进度。",
+  "source": "@site/reference/api/restful/Import/get-import-progress.md",
+  "sourceDirName": "api/restful/Import",
+  "slug": "/get-import-progress",
+  "permalink": "/reference/get-import-progress",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 0,
+    "slug": "/get-import-progress",
+    "title": "查看导入进度"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "Import",
+    "permalink": "/reference/import-operations"
+  },
+  "next": {
+    "title": "导入",
+    "permalink": "/reference/import"
+  }
+}

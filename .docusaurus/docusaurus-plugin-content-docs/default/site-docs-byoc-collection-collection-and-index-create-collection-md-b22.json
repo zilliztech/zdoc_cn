@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/collection/collection-and-index/create-collection",
+  "id": "byoc/collection/collection-and-index/create-collection",
+  "title": "Create Collection",
+  "description": "This tutorial will guide you through the steps to set up a collection for your cluster.",
+  "source": "@site/docs/byoc/collection/collection-and-index/create-collection.md",
+  "sourceDirName": "byoc/collection/collection-and-index",
+  "slug": "/docs/byoc/create-collection",
+  "permalink": "/docs/byoc/create-collection",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/create-collection",
+    "beta": false,
+    "notebook": "00_quick_start.ipynb,01_use_customized_schema.ipynb",
+    "sidebar_position": 1
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Collection & Index",
+    "permalink": "/collection-and-index"
+  },
+  "next": {
+    "title": "Manage Index",
+    "permalink": "/docs/byoc/manage-index"
+  }
+}

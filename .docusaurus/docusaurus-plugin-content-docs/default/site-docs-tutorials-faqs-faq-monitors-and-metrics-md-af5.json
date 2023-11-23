@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/faqs/faq-monitors-and-metrics",
+  "id": "tutorials/faqs/faq-monitors-and-metrics",
+  "title": "FAQ：监控与指标",
+  "description": "本文列举了在 Zilliz Cloud 使用监控与指标时可能遇到的常见问题及对应解决方法。",
+  "source": "@site/docs/tutorials/faqs/faq-monitors-and-metrics.md",
+  "sourceDirName": "tutorials/faqs",
+  "slug": "/docs/faq-monitors-and-metrics",
+  "permalink": "/docs/faq-monitors-and-metrics",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "slug": "/docs/faq-monitors-and-metrics",
+    "beta": null,
+    "notebook": null,
+    "sidebar_position": 9
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "FAQ：用户和角色",
+    "permalink": "/docs/faq-users-and-roles"
+  },
+  "next": {
+    "title": "FAQ：账户",
+    "permalink": "/docs/faq-account"
+  }
+}

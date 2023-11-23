@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/java/Vector/insert()",
+  "id": "api/java/Vector/insert()",
+  "title": "insert()",
+  "description": "调用接口将 Entity 插入到 Collection。",
+  "source": "@site/reference/api/java/Vector/insert().md",
+  "sourceDirName": "api/java/Vector",
+  "slug": "/java/insert",
+  "permalink": "/reference/java/insert",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 0,
+    "slug": "/java/insert"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "Vector APIs",
+    "permalink": "/reference/java/vector"
+  },
+  "next": {
+    "title": "search()",
+    "permalink": "/reference/java/search"
+  }
+}

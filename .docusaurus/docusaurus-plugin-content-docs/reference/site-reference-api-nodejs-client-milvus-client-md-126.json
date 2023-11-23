@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/nodejs/Client/MilvusClient()",
+  "id": "api/nodejs/Client/MilvusClient()",
+  "title": "MilvusClient()",
+  "description": "调用接口创建 MilvusClient 实例。",
+  "source": "@site/reference/api/nodejs/Client/MilvusClient().md",
+  "sourceDirName": "api/nodejs/Client",
+  "slug": "/nodejs/milvus-client",
+  "permalink": "/reference/nodejs/milvus-client",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 0,
+    "slug": "/nodejs/milvus-client"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "Client API",
+    "permalink": "/reference/nodejs/client"
+  },
+  "next": {
+    "title": "Collection API",
+    "permalink": "/reference/nodejs/collection"
+  }
+}

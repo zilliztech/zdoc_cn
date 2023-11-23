@@ -1,0 +1,15 @@
+{
+  "title": "Organization Settings",
+  "slug": "/docs/organization-settings",
+  "permalink": "/docs/organization-settings",
+  "navigation": {
+    "previous": {
+      "title": "Manage Projects and Collaborators",
+      "permalink": "/docs/manage-projects-and-collaborator"
+    },
+    "next": {
+      "title": "Manage Timezone",
+      "permalink": "/docs/manage-timezone"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/go/Vector/QueryByPks()",
+  "id": "api/go/Vector/QueryByPks()",
+  "title": "QueryByPks()",
+  "description": "调用接口按主键查询 Collection 中的 Entity。",
+  "source": "@site/reference/api/go/Vector/QueryByPks().md",
+  "sourceDirName": "api/go/Vector",
+  "slug": "/go/query_by_pks",
+  "permalink": "/reference/go/query_by_pks",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 4,
+    "slug": "/go/query_by_pks"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "Query()",
+    "permalink": "/reference/go/query"
+  },
+  "next": {
+    "title": "DeleteByPks()",
+    "permalink": "/reference/go/delete_by_pks"
+  }
+}

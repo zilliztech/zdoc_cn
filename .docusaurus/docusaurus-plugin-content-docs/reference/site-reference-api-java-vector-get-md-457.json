@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/java/Vector/get()",
+  "id": "api/java/Vector/get()",
+  "title": "get()",
+  "description": "调用接口按主键获取 Entity。目前暂时无法保证 Entity 的返回顺序。",
+  "source": "@site/reference/api/java/Vector/get().md",
+  "sourceDirName": "api/java/Vector",
+  "slug": "/java/get",
+  "permalink": "/reference/java/get",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 3,
+    "slug": "/java/get"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "query()",
+    "permalink": "/reference/java/query"
+  },
+  "next": {
+    "title": "delete()",
+    "permalink": "/reference/java/delete"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/monitors-metrics/load-capacity-resource-monitor",
+  "id": "byoc/monitors-metrics/load-capacity-resource-monitor",
+  "title": "Monitor Load Capacity",
+  "description": "To effectively keep track of the load capacity of your collections, it is advisable to turn on the load capacity resource monitor. This monitor assesses the memory size occupied by the loaded data in percentage.",
+  "source": "@site/docs/byoc/monitors-metrics/load-capacity-resource-monitor.md",
+  "sourceDirName": "byoc/monitors-metrics",
+  "slug": "/docs/byoc/load-capacity-resource-monitor",
+  "permalink": "/docs/byoc/load-capacity-resource-monitor",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/load-capacity-resource-monitor",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 4
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Monitor Query Latency",
+    "permalink": "/docs/byoc/query-latency-monitor"
+  },
+  "next": {
+    "title": "View Cluster Metrics",
+    "permalink": "/docs/byoc/monitor-metrics"
+  }
+}

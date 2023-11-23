@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/python/Vector/get()",
+  "id": "api/python/Vector/get()",
+  "title": "get()",
+  "description": "调用接口按主键获取 Entity。如果请求中指定了 output_fields，则返回结果只包含指定字段相关信息。",
+  "source": "@site/reference/api/python/Vector/get().md",
+  "sourceDirName": "api/python/Vector",
+  "slug": "/python/get",
+  "permalink": "/reference/python/get",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 3,
+    "slug": "/python/get"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "query()",
+    "permalink": "/reference/python/query"
+  },
+  "next": {
+    "title": "delete()",
+    "permalink": "/reference/python/delete"
+  }
+}

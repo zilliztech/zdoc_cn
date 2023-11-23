@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/collection/search-and-query/search-and-query-advanced-expressions",
+  "id": "tutorials/collection/search-and-query/search-and-query-advanced-expressions",
+  "title": "使用高级表达式搜索和查询",
+  "description": "本指南将介绍如何在 Zilliz Cloud 中使用高级表达式 count() 和 json_contains() 来执行搜索或查询操作。",
+  "source": "@site/docs/tutorials/collection/search-and-query/search-and-query-advanced-expressions.md",
+  "sourceDirName": "tutorials/collection/search-and-query",
+  "slug": "/docs/search-and-query-advanced-expressions",
+  "permalink": "/docs/search-and-query-advanced-expressions",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/docs/search-and-query-advanced-expressions",
+    "beta": true,
+    "notebook": "10_search_query_advanced_ops.ipynb",
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "使用迭代器搜索和查询",
+    "permalink": "/docs/search-and-query-iterators"
+  },
+  "next": {
+    "title": "高级功能",
+    "permalink": "/advanced-features"
+  }
+}

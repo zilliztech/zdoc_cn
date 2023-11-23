@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/limits-and-restrictions/api-comparison",
+  "id": "byoc/limits-and-restrictions/api-comparison",
+  "title": "API Availability",
+  "description": "Zilliz Cloud operates slightly differently from Milvus in order to provide a better user experience. This article aims to clarify the differences between the two platforms in terms of APIs.",
+  "source": "@site/docs/byoc/limits-and-restrictions/api-comparison.md",
+  "sourceDirName": "byoc/limits-and-restrictions",
+  "slug": "/docs/byoc/api-comparison",
+  "permalink": "/docs/byoc/api-comparison",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/api-comparison",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 2
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Limits & Restrictions",
+    "permalink": "/limits-and-restrictions"
+  },
+  "next": {
+    "title": "FAQs",
+    "permalink": "/faqs"
+  }
+}

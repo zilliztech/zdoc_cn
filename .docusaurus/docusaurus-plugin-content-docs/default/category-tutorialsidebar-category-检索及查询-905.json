@@ -1,0 +1,15 @@
+{
+  "title": "检索及查询",
+  "slug": "search-and-query",
+  "permalink": "/search-and-query",
+  "navigation": {
+    "previous": {
+      "title": "删除 Entity",
+      "permalink": "/docs/delete-entities"
+    },
+    "next": {
+      "title": "向量搜索和查询",
+      "permalink": "/docs/search-query-and-get"
+    }
+  }
+}

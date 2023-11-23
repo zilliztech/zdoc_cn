@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/payment-billing/subscribe-on-aliyun-marketplace",
+  "id": "tutorials/payment-billing/subscribe-on-aliyun-marketplace",
+  "title": "订阅阿里云市场",
+  "description": "Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云市场上订阅 Zilliz Cloud。",
+  "source": "@site/docs/tutorials/payment-billing/subscribe-on-aliyun-marketplace.md",
+  "sourceDirName": "tutorials/payment-billing",
+  "slug": "/docs/subscribe-on-aliyun-marketplace",
+  "permalink": "/docs/subscribe-on-aliyun-marketplace",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "/docs/subscribe-on-aliyun-marketplace",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "支付方式与账单",
+    "permalink": "/payment-billing"
+  },
+  "next": {
+    "title": "现金充值",
+    "permalink": "/docs/advance-pay"
+  }
+}

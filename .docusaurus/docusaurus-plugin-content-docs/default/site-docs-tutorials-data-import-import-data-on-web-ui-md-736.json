@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/data-import/import-data-on-web-ui",
+  "id": "tutorials/data-import/import-data-on-web-ui",
+  "title": "通过 Web 控制台导入",
+  "description": "本文介绍如何通过 Zilliz Cloud Web 控制台将数据导入现有 Collection 中。",
+  "source": "@site/docs/tutorials/data-import/import-data-on-web-ui.md",
+  "sourceDirName": "tutorials/data-import",
+  "slug": "/docs/import-data-on-web-ui",
+  "permalink": "/docs/import-data-on-web-ui",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/docs/import-data-on-web-ui",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "准备导入数据",
+    "permalink": "/docs/use-bulkwriter-for-data-import"
+  },
+  "next": {
+    "title": "通过 RESTful API 导入",
+    "permalink": "/docs/import-data-via-restful-api"
+  }
+}

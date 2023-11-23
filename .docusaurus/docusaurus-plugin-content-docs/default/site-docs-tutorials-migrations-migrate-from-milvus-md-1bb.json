@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/migrations/migrate-from-milvus",
+  "id": "tutorials/migrations/migrate-from-milvus",
+  "title": "从 Milvus 迁移至 Zilliz Cloud",
+  "description": "Zilliz Cloud 提供了先进的数据基础架构，可帮助您优化向量搜索并轻松实现 AI 应用。如果您是 Milvus 用户，可以将数据迁移到 Zilliz Cloud。",
+  "source": "@site/docs/tutorials/migrations/migrate-from-milvus.md",
+  "sourceDirName": "tutorials/migrations",
+  "slug": "/docs/migrate-from-milvus",
+  "permalink": "/docs/migrate-from-milvus",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "/docs/migrate-from-milvus",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "数据迁移",
+    "permalink": "/migrations"
+  },
+  "next": {
+    "title": "从 Elasticsearch 迁移至 Zilliz Cloud",
+    "permalink": "/docs/migrate-from-elasticsearch"
+  }
+}

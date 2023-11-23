@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/faqs/faq-cluster",
+  "id": "tutorials/faqs/faq-cluster",
+  "title": "FAQ：集群",
+  "description": "本文列举了在使用 Zilliz Cloud 集群时可能遇到的常见问题及对应解决方法。",
+  "source": "@site/docs/tutorials/faqs/faq-cluster.md",
+  "sourceDirName": "tutorials/faqs",
+  "slug": "/docs/faq-cluster",
+  "permalink": "/docs/faq-cluster",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/docs/faq-cluster",
+    "beta": null,
+    "notebook": null,
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "FAQ：快速入门",
+    "permalink": "/docs/faq-get-started"
+  },
+  "next": {
+    "title": "FAQ：Collection",
+    "permalink": "/docs/faq-collection"
+  }
+}

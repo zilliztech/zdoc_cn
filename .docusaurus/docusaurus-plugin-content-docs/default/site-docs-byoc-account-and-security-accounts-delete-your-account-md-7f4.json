@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/account-and-security/accounts/delete-your-account",
+  "id": "byoc/account-and-security/accounts/delete-your-account",
+  "title": "Manage Your Account",
+  "description": "Once you have created an account on Zilliz Cloud, you can manage your account information, switch your login method, and unlink from your Google or GitHub account.",
+  "source": "@site/docs/byoc/account-and-security/accounts/delete-your-account.md",
+  "sourceDirName": "byoc/account-and-security/accounts",
+  "slug": "/docs/byoc/delete-your-account",
+  "permalink": "/docs/byoc/delete-your-account",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/delete-your-account",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 2
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Accounts",
+    "permalink": "/accounts"
+  },
+  "next": {
+    "title": "Authentication",
+    "permalink": "/authentication"
+  }
+}

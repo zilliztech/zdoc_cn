@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/account-and-security/authentication/multi-factor-authentication",
+  "id": "byoc/account-and-security/authentication/multi-factor-authentication",
+  "title": "Manage MFA",
+  "description": "Authentication serves as a gateway to verify one's identity during the login process. Zilliz Cloud enhances this security by offering Multi-factor Authentication (MFA), an advanced login method requiring additional verification beyond a password. MFA is an effective measure against unauthorized access and is recommended for all users. Currently, only users registered with a work email and password can manage MFA on the web console. With MFA enabled, you must enter both your password and the email verification code during each login attempt for added security.",
+  "source": "@site/docs/byoc/account-and-security/authentication/multi-factor-authentication.md",
+  "sourceDirName": "byoc/account-and-security/authentication",
+  "slug": "/docs/byoc/multi-factor-authentication",
+  "permalink": "/docs/byoc/multi-factor-authentication",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/multi-factor-authentication",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 3
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Manage Cluster Credentials",
+    "permalink": "/docs/byoc/manage-cluster-credentials"
+  },
+  "next": {
+    "title": "Security",
+    "permalink": "/security"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "title": "安全",
+  "slug": "security",
+  "permalink": "/security",
+  "navigation": {
+    "previous": {
+      "title": "管理 MFA",
+      "permalink": "/docs/multi-factor-authentication"
+    },
+    "next": {
+      "title": "设置白名单",
+      "permalink": "/docs/set-up-whitelist"
+    }
+  }
+}

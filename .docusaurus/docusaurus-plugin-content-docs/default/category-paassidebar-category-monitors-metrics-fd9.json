@@ -1,0 +1,15 @@
+{
+  "title": "Monitors & Metrics",
+  "slug": "monitors-metrics",
+  "permalink": "/monitors-metrics",
+  "navigation": {
+    "previous": {
+      "title": "Use Recycle Bin",
+      "permalink": "/docs/byoc/use-recycle-bin"
+    },
+    "next": {
+      "title": "Monitor CU Resources",
+      "permalink": "/docs/byoc/cu-resource-monitor"
+    }
+  }
+}

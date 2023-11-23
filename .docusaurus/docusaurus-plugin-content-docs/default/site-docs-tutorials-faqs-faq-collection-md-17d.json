@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/faqs/faq-collection",
+  "id": "tutorials/faqs/faq-collection",
+  "title": "FAQ：Collection",
+  "description": "1 个集群中最多可创建多少个 Collection？",
+  "source": "@site/docs/tutorials/faqs/faq-collection.md",
+  "sourceDirName": "tutorials/faqs",
+  "slug": "/docs/faq-collection",
+  "permalink": "/docs/faq-collection",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/docs/faq-collection",
+    "beta": null,
+    "notebook": null,
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "FAQ：集群",
+    "permalink": "/docs/faq-cluster"
+  },
+  "next": {
+    "title": "FAQ：数据导入",
+    "permalink": "/docs/faq-data-import"
+  }
+}

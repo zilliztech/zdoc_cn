@@ -1,0 +1,25 @@
+{
+  "unversionedId": "tutorials/release-notes/release-notes-200",
+  "id": "tutorials/release-notes/release-notes-200",
+  "title": "版本说明书 2.0.0",
+  "description": "发布日期：2023年6月14日",
+  "source": "@site/docs/tutorials/release-notes/release-notes-200.md",
+  "sourceDirName": "tutorials/release-notes",
+  "slug": "/docs/release-notes-200",
+  "permalink": "/docs/release-notes-200",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "slug": "/docs/release-notes-200",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "版本说明书 2.1.0",
+    "permalink": "/docs/release-notes-210"
+  }
+}

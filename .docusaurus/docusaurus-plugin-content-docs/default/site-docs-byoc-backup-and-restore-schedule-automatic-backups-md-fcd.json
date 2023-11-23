@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/backup-and-restore/schedule-automatic-backups",
+  "id": "byoc/backup-and-restore/schedule-automatic-backups",
+  "title": "Schedule Automatic Backups",
+  "description": "Zilliz Cloud allows you to enable automatic snapshots for your clusters, ensuring data recovery in case of unexpected mishaps. Regular snapshots prevent data loss and allow easy recovery to a specific point in time, giving you more control over data backups.",
+  "source": "@site/docs/byoc/backup-and-restore/schedule-automatic-backups.md",
+  "sourceDirName": "byoc/backup-and-restore",
+  "slug": "/docs/byoc/schedule-automatic-backups",
+  "permalink": "/docs/byoc/schedule-automatic-backups",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/schedule-automatic-backups",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 2
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Create Snapshot",
+    "permalink": "/docs/byoc/create-snapshot"
+  },
+  "next": {
+    "title": "View Snapshot Details",
+    "permalink": "/docs/byoc/view-snapshot-details"
+  }
+}

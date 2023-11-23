@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/nodejs/Vector/search()",
+  "id": "api/nodejs/Vector/search()",
+  "title": "search()",
+  "description": "调用接口基于一个或多个向量执行近似最近邻（Approximate Nearest Neighbor，ANN）检索。",
+  "source": "@site/reference/api/nodejs/Vector/search().md",
+  "sourceDirName": "api/nodejs/Vector",
+  "slug": "/nodejs/search",
+  "permalink": "/reference/nodejs/search",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 1,
+    "slug": "/nodejs/search"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "insert()",
+    "permalink": "/reference/nodejs/insert"
+  },
+  "next": {
+    "title": "query()",
+    "permalink": "/reference/nodejs/query"
+  }
+}

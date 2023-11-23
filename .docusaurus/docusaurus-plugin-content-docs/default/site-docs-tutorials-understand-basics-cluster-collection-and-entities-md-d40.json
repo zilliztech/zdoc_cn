@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/understand-basics/cluster-collection-and-entities",
+  "id": "tutorials/understand-basics/cluster-collection-and-entities",
+  "title": "集群、Collection 及 Entity",
+  "description": "Zilliz Cloud 集群由全托管 Milvus 实例及相关计算资源构成。您可以在 Zilliz Cloud 集群中创建 Collection，然后在 Collection 中插入 Entity。Zilliz Cloud 集群中的 Collection 类似于关系型数据库中的表。Collection 中的 Entity 类似于表中的记录。",
+  "source": "@site/docs/tutorials/understand-basics/cluster-collection-and-entities.md",
+  "sourceDirName": "tutorials/understand-basics",
+  "slug": "/docs/cluster-collection-and-entities",
+  "permalink": "/docs/cluster-collection-and-entities",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/docs/cluster-collection-and-entities",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "AUTOINDEX",
+    "permalink": "/docs/autoindex-explained"
+  },
+  "next": {
+    "title": "Schema",
+    "permalink": "/docs/data-models-explained"
+  }
+}

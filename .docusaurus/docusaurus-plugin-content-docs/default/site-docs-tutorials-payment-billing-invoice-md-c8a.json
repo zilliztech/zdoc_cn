@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/payment-billing/invoice",
+  "id": "tutorials/payment-billing/invoice",
+  "title": "开具发票",
+  "description": "在 Zilliz Cloud 进行现金充值或开通阿里云云市场扣费渠道后，您可以申请开具发票。具体开票方式根据您的支付方式有所不同。如果您的支付方式为现金充值，您可以直接通过 Zilliz Cloud 界面开具发票。如果您开通了阿里云云市场扣费渠道，请通过阿里云云市场申请开票。",
+  "source": "@site/docs/tutorials/payment-billing/invoice.md",
+  "sourceDirName": "tutorials/payment-billing",
+  "slug": "/docs/invoice",
+  "permalink": "/docs/invoice",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "slug": "/docs/invoice",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "企业认证",
+    "permalink": "/docs/enterprise-certification"
+  },
+  "next": {
+    "title": "AI 模型集成",
+    "permalink": "/integrations"
+  }
+}

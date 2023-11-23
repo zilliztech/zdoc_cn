@@ -1,0 +1,29 @@
+{
+  "unversionedId": "api/restful/Collection/list-collections",
+  "id": "api/restful/Collection/list-collections",
+  "title": "查看 Collection",
+  "description": "列出集群中已创建的 Collection。",
+  "source": "@site/reference/api/restful/Collection/list-collections.md",
+  "sourceDirName": "api/restful/Collection",
+  "slug": "/list-collections",
+  "permalink": "/reference/list-collections",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 0,
+    "slug": "/list-collections",
+    "title": "查看 Collection"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "删除 Collection",
+    "permalink": "/reference/drop-collection"
+  },
+  "next": {
+    "title": "Import",
+    "permalink": "/reference/import-operations"
+  }
+}

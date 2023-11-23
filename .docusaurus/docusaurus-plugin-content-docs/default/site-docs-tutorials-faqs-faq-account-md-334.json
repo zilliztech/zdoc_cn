@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/faqs/faq-account",
+  "id": "tutorials/faqs/faq-account",
+  "title": "FAQ：账户",
+  "description": "本文列举了 Zilliz Cloud 账户相关的常见问题及对应解决方法。",
+  "source": "@site/docs/tutorials/faqs/faq-account.md",
+  "sourceDirName": "tutorials/faqs",
+  "slug": "/docs/faq-account",
+  "permalink": "/docs/faq-account",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "slug": "/docs/faq-account",
+    "beta": null,
+    "notebook": null,
+    "sidebar_position": 10
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "FAQ：监控与指标",
+    "permalink": "/docs/faq-monitors-and-metrics"
+  },
+  "next": {
+    "title": "FAQ：鉴权",
+    "permalink": "/docs/faq-authentication"
+  }
+}

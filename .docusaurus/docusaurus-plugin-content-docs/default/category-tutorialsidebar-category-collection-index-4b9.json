@@ -1,0 +1,15 @@
+{
+  "title": "Collection & Index",
+  "slug": "/docs/collection-and-index",
+  "permalink": "/docs/collection-and-index",
+  "navigation": {
+    "previous": {
+      "title": "Collection",
+      "permalink": "/docs/collection"
+    },
+    "next": {
+      "title": "Create Collection",
+      "permalink": "/docs/create-collection"
+    }
+  }
+}

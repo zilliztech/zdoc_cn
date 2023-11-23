@@ -1,0 +1,15 @@
+{
+  "title": "Cluster",
+  "slug": "/docs/cluster",
+  "permalink": "/docs/cluster",
+  "navigation": {
+    "previous": {
+      "title": "Data Security",
+      "permalink": "/docs/data-security"
+    },
+    "next": {
+      "title": "Create Cluster",
+      "permalink": "/docs/create-cluster"
+    }
+  }
+}

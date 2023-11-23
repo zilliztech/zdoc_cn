@@ -1,0 +1,15 @@
+{
+  "title": "用户和角色",
+  "slug": "users-roles",
+  "permalink": "/users-roles",
+  "navigation": {
+    "previous": {
+      "title": "删除备份快照",
+      "permalink": "/docs/delete-snapshot"
+    },
+    "next": {
+      "title": "权限概览",
+      "permalink": "/docs/a-panorama-view"
+    }
+  }
+}

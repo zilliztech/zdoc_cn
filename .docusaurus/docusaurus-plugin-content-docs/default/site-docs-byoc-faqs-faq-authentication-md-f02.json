@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/faqs/faq-authentication",
+  "id": "byoc/faqs/faq-authentication",
+  "title": "FAQ: Authentication",
+  "description": "This topic lists the possible issues that you may encounter while authenticating your identity on Zilliz Cloud and the corresponding solution.",
+  "source": "@site/docs/byoc/faqs/faq-authentication.md",
+  "sourceDirName": "byoc/faqs",
+  "slug": "/docs/byoc/faq-authentication",
+  "permalink": "/docs/byoc/faq-authentication",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/faq-authentication",
+    "beta": null,
+    "notebook": null,
+    "sidebar_position": 10
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "FAQ: Monitors & Metrics",
+    "permalink": "/docs/byoc/faq-monitors-and-metrics"
+  },
+  "next": {
+    "title": "FAQ: Integrations",
+    "permalink": "/docs/byoc/faq-integrations"
+  }
+}

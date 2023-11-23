@@ -1,0 +1,15 @@
+{
+  "title": "备份与恢复",
+  "slug": "backup-and-restore",
+  "permalink": "/backup-and-restore",
+  "navigation": {
+    "previous": {
+      "title": "价格计算器",
+      "permalink": "/docs/pricing-calculator"
+    },
+    "next": {
+      "title": "创建备份快照",
+      "permalink": "/docs/create-snapshot"
+    }
+  }
+}

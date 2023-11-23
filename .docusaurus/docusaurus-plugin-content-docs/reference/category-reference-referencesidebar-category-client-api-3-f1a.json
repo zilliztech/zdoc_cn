@@ -1,0 +1,15 @@
+{
+  "title": "Client API",
+  "slug": "/nodejs/client",
+  "permalink": "/reference/nodejs/client",
+  "navigation": {
+    "previous": {
+      "title": "Node.js SDK 参考",
+      "permalink": "/reference/nodejs"
+    },
+    "next": {
+      "title": "MilvusClient()",
+      "permalink": "/reference/nodejs/milvus-client"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Get Started",
+  "slug": "quick-start",
+  "permalink": "/quick-start",
+  "navigation": {
+    "next": {
+      "title": "Quick Start",
+      "permalink": "/docs/byoc/"
+    }
+  }
+}

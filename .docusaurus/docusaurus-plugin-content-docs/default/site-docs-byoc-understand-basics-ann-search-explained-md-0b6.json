@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/understand-basics/ann-search-explained",
+  "id": "byoc/understand-basics/ann-search-explained",
+  "title": "ANN Search Explained",
+  "description": "A k-nearest neighbor (kNN) search finds the k-nearest vectors to a query vector. Specifically, it compares a query vector to every vector in a vector space until k exact matches appear. Although kNN searches guarantee perfect accuracy, they are time-consuming, especially for large datasets comprising high-dimensional vectors.",
+  "source": "@site/docs/byoc/understand-basics/ann-search-explained.md",
+  "sourceDirName": "byoc/understand-basics",
+  "slug": "/docs/byoc/ann-search-explained",
+  "permalink": "/docs/byoc/ann-search-explained",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/ann-search-explained",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 4
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Schema Explained",
+    "permalink": "/docs/byoc/data-models-explained"
+  },
+  "next": {
+    "title": "Similarity Metrics Explained",
+    "permalink": "/docs/byoc/search-metrics-explained"
+  }
+}

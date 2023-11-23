@@ -1,0 +1,15 @@
+{
+  "title": "Authentication",
+  "slug": "/docs/authentication",
+  "permalink": "/docs/authentication",
+  "navigation": {
+    "previous": {
+      "title": "Manage Your Account",
+      "permalink": "/docs/delete-your-account"
+    },
+    "next": {
+      "title": "Manage API Keys",
+      "permalink": "/docs/manage-api-keys"
+    }
+  }
+}

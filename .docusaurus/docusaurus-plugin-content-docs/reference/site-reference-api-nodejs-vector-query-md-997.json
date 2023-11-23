@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/nodejs/Vector/query()",
+  "id": "api/nodejs/Vector/query()",
+  "title": "query()",
+  "description": "调用接口查询 Collection 中满足指定条件的 Entity。",
+  "source": "@site/reference/api/nodejs/Vector/query().md",
+  "sourceDirName": "api/nodejs/Vector",
+  "slug": "/nodejs/query",
+  "permalink": "/reference/nodejs/query",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 2,
+    "slug": "/nodejs/query"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "search()",
+    "permalink": "/reference/nodejs/search"
+  },
+  "next": {
+    "title": "get()",
+    "permalink": "/reference/nodejs/get"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/nodejs/Vector/insert()",
+  "id": "api/nodejs/Vector/insert()",
+  "title": "insert()",
+  "description": "调用接口将 Entity 插入到 Collection。",
+  "source": "@site/reference/api/nodejs/Vector/insert().md",
+  "sourceDirName": "api/nodejs/Vector",
+  "slug": "/nodejs/insert",
+  "permalink": "/reference/nodejs/insert",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 0,
+    "slug": "/nodejs/insert"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "Vector API",
+    "permalink": "/reference/nodejs/vector"
+  },
+  "next": {
+    "title": "search()",
+    "permalink": "/reference/nodejs/search"
+  }
+}

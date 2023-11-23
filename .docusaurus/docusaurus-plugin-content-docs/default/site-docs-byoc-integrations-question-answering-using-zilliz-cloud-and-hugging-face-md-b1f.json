@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/integrations/question-answering-using-zilliz-cloud-and-hugging-face",
+  "id": "byoc/integrations/question-answering-using-zilliz-cloud-and-hugging-face",
+  "title": "Question Answering Using Zilliz Cloud and HuggingFace",
+  "description": "This page illustrates how to build a question-answering system using Zilliz Cloud as the vector database and Hugging Face as the embedding system.",
+  "source": "@site/docs/byoc/integrations/question-answering-using-zilliz-cloud-and-hugging-face.md",
+  "sourceDirName": "byoc/integrations",
+  "slug": "/docs/byoc/question-answering-using-zilliz-cloud-and-hugging-face",
+  "permalink": "/docs/byoc/question-answering-using-zilliz-cloud-and-hugging-face",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/question-answering-using-zilliz-cloud-and-hugging-face",
+    "beta": false,
+    "notebook": "81_integrations_huggingface.ipynb",
+    "sidebar_position": 2
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Similarity Search with Zilliz Cloud and OpenAI",
+    "permalink": "/docs/byoc/similarity-search-with-zilliz-cloud-and-openai"
+  },
+  "next": {
+    "title": "Question Answering Using Zilliz Cloud and Cohere",
+    "permalink": "/docs/byoc/question-answering-using-zilliz-cloud-and-cohere"
+  }
+}

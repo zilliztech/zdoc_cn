@@ -1,0 +1,15 @@
+{
+  "title": "Organization Settings",
+  "slug": "organization-settings",
+  "permalink": "/organization-settings",
+  "navigation": {
+    "previous": {
+      "title": "Manage Projects and Collaborators",
+      "permalink": "/docs/byoc/manage-projects-and-collaborator"
+    },
+    "next": {
+      "title": "Manage Timezone",
+      "permalink": "/docs/byoc/manage-timezone"
+    }
+  }
+}

@@ -1,0 +1,1384 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "tutorialSidebar": [
+      {
+        "type": "category",
+        "label": "从这里开始",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "快速开始",
+            "href": "/",
+            "docId": "tutorials/quick-start/quick-start"
+          },
+          {
+            "type": "link",
+            "label": "免费试用",
+            "href": "/docs/free-trials",
+            "docId": "tutorials/quick-start/free-trials"
+          },
+          {
+            "type": "link",
+            "label": "安装 SDK",
+            "href": "/docs/install-sdks",
+            "docId": "tutorials/quick-start/install-sdks"
+          },
+          {
+            "type": "link",
+            "label": "示例数据集",
+            "href": "/docs/example-dataset",
+            "docId": "tutorials/quick-start/example-dataset"
+          }
+        ],
+        "href": "/quick-start"
+      },
+      {
+        "type": "category",
+        "label": "了解 Zilliz Cloud",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "AUTOINDEX",
+            "href": "/docs/autoindex-explained",
+            "docId": "tutorials/understand-basics/autoindex-explained"
+          },
+          {
+            "type": "link",
+            "label": "集群、Collection 及 Entity",
+            "href": "/docs/cluster-collection-and-entities",
+            "docId": "tutorials/understand-basics/cluster-collection-and-entities"
+          },
+          {
+            "type": "link",
+            "label": "Schema",
+            "href": "/docs/data-models-explained",
+            "docId": "tutorials/understand-basics/data-models-explained"
+          },
+          {
+            "type": "link",
+            "label": "ANN 搜索",
+            "href": "/docs/ann-search-explained",
+            "docId": "tutorials/understand-basics/ann-search-explained"
+          },
+          {
+            "type": "link",
+            "label": "相似性度量",
+            "href": "/docs/search-metrics-explained",
+            "docId": "tutorials/understand-basics/search-metrics-explained"
+          },
+          {
+            "type": "link",
+            "label": "一致性等级",
+            "href": "/docs/consistency-level",
+            "docId": "tutorials/understand-basics/consistency-level"
+          },
+          {
+            "type": "link",
+            "label": "数据安全",
+            "href": "/docs/data-security",
+            "docId": "tutorials/understand-basics/data-security"
+          }
+        ],
+        "href": "/understand-basics"
+      },
+      {
+        "type": "category",
+        "label": "集群",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "创建集群",
+            "href": "/docs/create-cluster",
+            "docId": "tutorials/cluster/create-cluster"
+          },
+          {
+            "type": "link",
+            "label": "连接集群",
+            "href": "/docs/connect-to-cluster",
+            "docId": "tutorials/cluster/connect-to-cluster"
+          },
+          {
+            "type": "link",
+            "label": "管理集群",
+            "href": "/docs/manage-cluster",
+            "docId": "tutorials/cluster/manage-cluster"
+          }
+        ],
+        "href": "/cluster"
+      },
+      {
+        "type": "category",
+        "label": "Collection",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "category",
+            "label": "Collection 及索引",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "创建 Collection",
+                "href": "/docs/create-collection",
+                "docId": "tutorials/collection/collection-and-index/create-collection"
+              },
+              {
+                "type": "link",
+                "label": "管理索引",
+                "href": "/docs/manage-index",
+                "docId": "tutorials/collection/collection-and-index/manage-index"
+              },
+              {
+                "type": "link",
+                "label": "删除 Collection",
+                "href": "/docs/drop-collection",
+                "docId": "tutorials/collection/collection-and-index/drop-collection"
+              }
+            ],
+            "href": "/collection-and-index"
+          },
+          {
+            "type": "category",
+            "label": "插入、更新及删除",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "插入 Entity",
+                "href": "/docs/insert-entities",
+                "docId": "tutorials/collection/insert-update-and-delete/insert-entities"
+              },
+              {
+                "type": "link",
+                "label": "Upsert Entity",
+                "href": "/docs/upsert-entities",
+                "docId": "tutorials/collection/insert-update-and-delete/upsert-entities"
+              },
+              {
+                "type": "link",
+                "label": "删除 Entity",
+                "href": "/docs/delete-entities",
+                "docId": "tutorials/collection/insert-update-and-delete/delete-entities"
+              }
+            ],
+            "href": "/insert-update-and-delete"
+          },
+          {
+            "type": "category",
+            "label": "检索及查询",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "向量搜索和查询",
+                "href": "/docs/search-query-and-get",
+                "docId": "tutorials/collection/search-and-query/search-query-and-get"
+              },
+              {
+                "type": "link",
+                "label": "范围搜索",
+                "href": "/docs/conduct-a-range-search",
+                "docId": "tutorials/collection/search-and-query/conduct-a-range-search"
+              },
+              {
+                "type": "link",
+                "label": "使用迭代器搜索和查询",
+                "href": "/docs/search-and-query-iterators",
+                "docId": "tutorials/collection/search-and-query/search-and-query-iterators"
+              },
+              {
+                "type": "link",
+                "label": "使用高级表达式搜索和查询",
+                "href": "/docs/search-and-query-advanced-expressions",
+                "docId": "tutorials/collection/search-and-query/search-and-query-advanced-expressions"
+              }
+            ],
+            "href": "/search-and-query"
+          },
+          {
+            "type": "category",
+            "label": "高级功能",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "开启动态 Schema",
+                "href": "/docs/enable-dynamic-schema",
+                "docId": "tutorials/collection/advanced-features/enable-dynamic-schema"
+              },
+              {
+                "type": "link",
+                "label": "使用 Partition Key",
+                "href": "/docs/use-partition-key",
+                "docId": "tutorials/collection/advanced-features/use-partition-key"
+              },
+              {
+                "type": "link",
+                "label": "使用 JSON 类型字段",
+                "href": "/docs/javascript-object-notation-json",
+                "docId": "tutorials/collection/advanced-features/javascript-object-notation-json"
+              }
+            ],
+            "href": "/advanced-features"
+          }
+        ],
+        "href": "/collection"
+      },
+      {
+        "type": "category",
+        "label": "数据导入",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "准备导入数据",
+            "href": "/docs/use-bulkwriter-for-data-import",
+            "docId": "tutorials/data-import/use-bulkwriter-for-data-import"
+          },
+          {
+            "type": "link",
+            "label": "通过 Web 控制台导入",
+            "href": "/docs/import-data-on-web-ui",
+            "docId": "tutorials/data-import/import-data-on-web-ui"
+          },
+          {
+            "type": "link",
+            "label": "通过 RESTful API 导入",
+            "href": "/docs/import-data-via-restful-api",
+            "docId": "tutorials/data-import/import-data-via-restful-api"
+          },
+          {
+            "type": "link",
+            "label": "通过 SDK 导入",
+            "href": "/docs/import-data-via-sdks",
+            "docId": "tutorials/data-import/import-data-via-sdks"
+          }
+        ],
+        "href": "/data-import"
+      },
+      {
+        "type": "category",
+        "label": "数据迁移",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "从 Milvus 迁移至 Zilliz Cloud",
+            "href": "/docs/migrate-from-milvus",
+            "docId": "tutorials/migrations/migrate-from-milvus"
+          },
+          {
+            "type": "link",
+            "label": "从 Elasticsearch 迁移至 Zilliz Cloud",
+            "href": "/docs/migrate-from-elasticsearch",
+            "docId": "tutorials/migrations/migrate-from-elasticsearch"
+          },
+          {
+            "type": "link",
+            "label": "Zilliz Cloud 集群间迁移",
+            "href": "/docs/migrate-beween-clusters",
+            "docId": "tutorials/migrations/migrate-beween-clusters"
+          }
+        ],
+        "href": "/migrations"
+      },
+      {
+        "type": "category",
+        "label": "资源规划指南",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Zilliz Cloud 版本类型",
+            "href": "/docs/select-zilliz-cloud-service-plans",
+            "docId": "tutorials/resource-planning/select-zilliz-cloud-service-plans"
+          },
+          {
+            "type": "link",
+            "label": "选择合适的 CU 类型",
+            "href": "/docs/cu-types-explained",
+            "docId": "tutorials/resource-planning/cu-types-explained"
+          },
+          {
+            "type": "link",
+            "label": "云服务提供商和地域",
+            "href": "/docs/cloud-providers-and-regions",
+            "docId": "tutorials/resource-planning/cloud-providers-and-regions"
+          },
+          {
+            "type": "link",
+            "label": "价格计算器",
+            "href": "/docs/pricing-calculator",
+            "docId": "tutorials/resource-planning/pricing-calculator"
+          }
+        ],
+        "href": "/resource-planning"
+      },
+      {
+        "type": "category",
+        "label": "备份与恢复",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "创建备份快照",
+            "href": "/docs/create-snapshot",
+            "docId": "tutorials/backup-and-restore/create-snapshot"
+          },
+          {
+            "type": "link",
+            "label": "创建自动备份",
+            "href": "/docs/schedule-automatic-backups",
+            "docId": "tutorials/backup-and-restore/schedule-automatic-backups"
+          },
+          {
+            "type": "link",
+            "label": "查看备份快照",
+            "href": "/docs/view-snapshot-details",
+            "docId": "tutorials/backup-and-restore/view-snapshot-details"
+          },
+          {
+            "type": "link",
+            "label": "恢复备份",
+            "href": "/docs/restore-from-snapshot",
+            "docId": "tutorials/backup-and-restore/restore-from-snapshot"
+          },
+          {
+            "type": "link",
+            "label": "删除备份快照",
+            "href": "/docs/delete-snapshot",
+            "docId": "tutorials/backup-and-restore/delete-snapshot"
+          }
+        ],
+        "href": "/backup-and-restore"
+      },
+      {
+        "type": "category",
+        "label": "用户和角色",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "权限概览",
+            "href": "/docs/a-panorama-view",
+            "docId": "tutorials/users-roles/a-panorama-view"
+          },
+          {
+            "type": "link",
+            "label": "管理组织与成员",
+            "href": "/docs/manage-orgs-and-members",
+            "docId": "tutorials/users-roles/manage-orgs-and-members"
+          },
+          {
+            "type": "link",
+            "label": "管理项目与成员",
+            "href": "/docs/manage-projects-and-collaborator",
+            "docId": "tutorials/users-roles/manage-projects-and-collaborator"
+          }
+        ],
+        "href": "/users-roles"
+      },
+      {
+        "type": "category",
+        "label": "组织设置",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "设置时区",
+            "href": "/docs/manage-timezone",
+            "docId": "tutorials/organization-settings/manage-timezone"
+          },
+          {
+            "type": "link",
+            "label": "设置运维窗口",
+            "href": "/docs/set-up-maintenance-window",
+            "docId": "tutorials/organization-settings/set-up-maintenance-window"
+          },
+          {
+            "type": "link",
+            "label": "删除组织",
+            "href": "/docs/delete-your-org",
+            "docId": "tutorials/organization-settings/delete-your-org"
+          },
+          {
+            "type": "link",
+            "label": "使用回收站",
+            "href": "/docs/use-recycle-bin",
+            "docId": "tutorials/organization-settings/use-recycle-bin"
+          }
+        ],
+        "href": "/organization-settings"
+      },
+      {
+        "type": "category",
+        "label": "监控与指标",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "CU 资源监控",
+            "href": "/docs/cu-resource-monitor",
+            "docId": "tutorials/monitors-metrics/cu-resource-monitor"
+          },
+          {
+            "type": "link",
+            "label": "QPS 资源监控",
+            "href": "/docs/qps-resource-monitor",
+            "docId": "tutorials/monitors-metrics/qps-resource-monitor"
+          },
+          {
+            "type": "link",
+            "label": "查询时延监控",
+            "href": "/docs/query-latency-monitor",
+            "docId": "tutorials/monitors-metrics/query-latency-monitor"
+          },
+          {
+            "type": "link",
+            "label": "已使用容量监控",
+            "href": "/docs/load-capacity-resource-monitor",
+            "docId": "tutorials/monitors-metrics/load-capacity-resource-monitor"
+          },
+          {
+            "type": "link",
+            "label": "现金余额监控",
+            "href": "/docs/advance-pay-balance-monitor",
+            "docId": "tutorials/monitors-metrics/advance-pay-balance-monitor"
+          },
+          {
+            "type": "link",
+            "label": "查看集群性能指标",
+            "href": "/docs/monitor-metrics",
+            "docId": "tutorials/monitors-metrics/monitor-metrics"
+          },
+          {
+            "type": "link",
+            "label": "查看事件",
+            "href": "/docs/view-activities",
+            "docId": "tutorials/monitors-metrics/view-activities"
+          }
+        ],
+        "href": "/monitors-metrics"
+      },
+      {
+        "type": "category",
+        "label": "帐户与安全",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "category",
+            "label": "帐户",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "注册账号",
+                "href": "/docs/register-with-zilliz-cloud",
+                "docId": "tutorials/account-and-security/accounts/register-with-zilliz-cloud"
+              },
+              {
+                "type": "link",
+                "label": "管理账号",
+                "href": "/docs/delete-your-account",
+                "docId": "tutorials/account-and-security/accounts/delete-your-account"
+              }
+            ],
+            "href": "/accounts"
+          },
+          {
+            "type": "category",
+            "label": "鉴权",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "管理 API 密钥",
+                "href": "/docs/manage-api-keys",
+                "docId": "tutorials/account-and-security/authentication/manage-api-keys"
+              },
+              {
+                "type": "link",
+                "label": "管理身份凭证",
+                "href": "/docs/manage-cluster-credentials",
+                "docId": "tutorials/account-and-security/authentication/manage-cluster-credentials"
+              },
+              {
+                "type": "link",
+                "label": "管理 MFA",
+                "href": "/docs/multi-factor-authentication",
+                "docId": "tutorials/account-and-security/authentication/multi-factor-authentication"
+              }
+            ],
+            "href": "/authentication"
+          },
+          {
+            "type": "category",
+            "label": "安全",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "设置白名单",
+                "href": "/docs/set-up-whitelist",
+                "docId": "tutorials/account-and-security/security/set-up-whitelist"
+              },
+              {
+                "type": "link",
+                "label": "创建私网连接",
+                "href": "/docs/set-up-a-private-link",
+                "docId": "tutorials/account-and-security/security/set-up-a-private-link"
+              }
+            ],
+            "href": "/security"
+          }
+        ],
+        "href": "/account-and-security"
+      },
+      {
+        "type": "category",
+        "label": "支付方式与账单",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "订阅阿里云市场",
+            "href": "/docs/subscribe-on-aliyun-marketplace",
+            "docId": "tutorials/payment-billing/subscribe-on-aliyun-marketplace"
+          },
+          {
+            "type": "link",
+            "label": "现金充值",
+            "href": "/docs/advance-pay",
+            "docId": "tutorials/payment-billing/advance-pay"
+          },
+          {
+            "type": "link",
+            "label": "查看账单与支付方式",
+            "href": "/docs/view-invoice",
+            "docId": "tutorials/payment-billing/view-invoice"
+          },
+          {
+            "type": "link",
+            "label": "企业认证",
+            "href": "/docs/enterprise-certification",
+            "docId": "tutorials/payment-billing/enterprise-certification"
+          },
+          {
+            "type": "link",
+            "label": "开具发票",
+            "href": "/docs/invoice",
+            "docId": "tutorials/payment-billing/invoice"
+          }
+        ],
+        "href": "/payment-billing"
+      },
+      {
+        "type": "category",
+        "label": "AI 模型集成",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "与 OpenAI 集成搭建相似性搜索系统",
+            "href": "/docs/similarity-search-with-zilliz-cloud-and-openai",
+            "docId": "tutorials/integrations/similarity-search-with-zilliz-cloud-and-openai"
+          },
+          {
+            "type": "link",
+            "label": "与 HuggingFace 集成搭建问答系统",
+            "href": "/docs/question-answering-using-zilliz-cloud-and-hugging-face",
+            "docId": "tutorials/integrations/question-answering-using-zilliz-cloud-and-hugging-face"
+          },
+          {
+            "type": "link",
+            "label": "与 Cohere 集成搭建智能问答系统",
+            "href": "/docs/question-answering-using-zilliz-cloud-and-cohere",
+            "docId": "tutorials/integrations/question-answering-using-zilliz-cloud-and-cohere"
+          },
+          {
+            "type": "link",
+            "label": "与 LangChain 集成搭建智能文档问答系统",
+            "href": "/docs/question-answering-over-documents-with-zilliz-cloud-and-langchain",
+            "docId": "tutorials/integrations/question-answering-over-documents-with-zilliz-cloud-and-langchain"
+          },
+          {
+            "type": "link",
+            "label": "与 PyTorch 集成搭建图片搜索系统",
+            "href": "/docs/image-search-with-zilliz-cloud-and-pytorch",
+            "docId": "tutorials/integrations/image-search-with-zilliz-cloud-and-pytorch"
+          },
+          {
+            "type": "link",
+            "label": "与 LlamaIndex 集成搭建文档问答系统",
+            "href": "/docs/documentation-qa-using-zilliz-cloud-and-llamaindex",
+            "docId": "tutorials/integrations/documentation-qa-using-zilliz-cloud-and-llamaindex"
+          },
+          {
+            "type": "link",
+            "label": "与 SentenceTransformers 集成搭建电影搜索系统",
+            "href": "/docs/movie-search-using-zilliz-cloud-and-sentencetransformers",
+            "docId": "tutorials/integrations/movie-search-using-zilliz-cloud-and-sentencetransformers"
+          }
+        ],
+        "href": "/integrations"
+      },
+      {
+        "type": "category",
+        "label": "约束与限制",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "API 异同",
+            "href": "/docs/api-comparison",
+            "docId": "tutorials/limits-and-restrictions/api-comparison"
+          },
+          {
+            "type": "link",
+            "label": "其他异同",
+            "href": "/docs/other-differences",
+            "docId": "tutorials/limits-and-restrictions/other-differences"
+          }
+        ],
+        "href": "/limits-and-restrictions"
+      },
+      {
+        "type": "category",
+        "label": "常见问题",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "FAQ：快速入门",
+            "href": "/docs/faq-get-started",
+            "docId": "tutorials/faqs/faq-get-started"
+          },
+          {
+            "type": "link",
+            "label": "FAQ：集群",
+            "href": "/docs/faq-cluster",
+            "docId": "tutorials/faqs/faq-cluster"
+          },
+          {
+            "type": "link",
+            "label": "FAQ：Collection",
+            "href": "/docs/faq-collection",
+            "docId": "tutorials/faqs/faq-collection"
+          },
+          {
+            "type": "link",
+            "label": "FAQ：数据导入",
+            "href": "/docs/faq-data-import",
+            "docId": "tutorials/faqs/faq-data-import"
+          },
+          {
+            "type": "link",
+            "label": "FAQ：数据迁移",
+            "href": "/docs/faq-migration",
+            "docId": "tutorials/faqs/faq-migration"
+          },
+          {
+            "type": "link",
+            "label": "FAQ：资源规划",
+            "href": "/docs/faq-resource-planning",
+            "docId": "tutorials/faqs/faq-resource-planning"
+          },
+          {
+            "type": "link",
+            "label": "FAQ：备份与恢复",
+            "href": "/docs/faq-backup-and-restore",
+            "docId": "tutorials/faqs/faq-backup-and-restore"
+          },
+          {
+            "type": "link",
+            "label": "FAQ：用户和角色",
+            "href": "/docs/faq-users-and-roles",
+            "docId": "tutorials/faqs/faq-users-and-roles"
+          },
+          {
+            "type": "link",
+            "label": "FAQ：监控与指标",
+            "href": "/docs/faq-monitors-and-metrics",
+            "docId": "tutorials/faqs/faq-monitors-and-metrics"
+          },
+          {
+            "type": "link",
+            "label": "FAQ：账户",
+            "href": "/docs/faq-account",
+            "docId": "tutorials/faqs/faq-account"
+          },
+          {
+            "type": "link",
+            "label": "FAQ：鉴权",
+            "href": "/docs/faq-authentication",
+            "docId": "tutorials/faqs/faq-authentication"
+          },
+          {
+            "type": "link",
+            "label": "FAQ：支付方式与账单",
+            "href": "/docs/faq-payment-and-billing",
+            "docId": "tutorials/faqs/faq-payment-and-billing"
+          },
+          {
+            "type": "link",
+            "label": "FAQ：AI 模型集成",
+            "href": "/docs/faq-integrations",
+            "docId": "tutorials/faqs/faq-integrations"
+          }
+        ],
+        "href": "/faqs"
+      },
+      {
+        "type": "category",
+        "label": "版本说明书",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "版本说明书 2.3.0",
+            "href": "/docs/release-notes-230",
+            "docId": "tutorials/release-notes/release-notes-230"
+          },
+          {
+            "type": "link",
+            "label": "版本说明书 2.2.1",
+            "href": "/docs/release-notes-221",
+            "docId": "tutorials/release-notes/release-notes-221"
+          },
+          {
+            "type": "link",
+            "label": "版本说明书 2.2.0",
+            "href": "/docs/release-notes-220",
+            "docId": "tutorials/release-notes/release-notes-220"
+          },
+          {
+            "type": "link",
+            "label": "版本说明书 2.1.0",
+            "href": "/docs/release-notes-210",
+            "docId": "tutorials/release-notes/release-notes-210"
+          },
+          {
+            "type": "link",
+            "label": "版本说明书 2.0.0",
+            "href": "/docs/release-notes-200",
+            "docId": "tutorials/release-notes/release-notes-200"
+          }
+        ],
+        "href": "/release-notes"
+      }
+    ]
+  },
+  "docs": {
+    "tutorials/account-and-security/accounts/delete-your-account": {
+      "id": "tutorials/account-and-security/accounts/delete-your-account",
+      "title": "管理账号",
+      "description": "在 Zilliz Cloud 注册账户后，您可对账户信息进行管理。您可以编辑账号信息以及删除账号。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/account-and-security/accounts/register-with-zilliz-cloud": {
+      "id": "tutorials/account-and-security/accounts/register-with-zilliz-cloud",
+      "title": "注册账号",
+      "description": "本教程将介绍如何创建 Zilliz Cloud 账号。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/account-and-security/authentication/manage-api-keys": {
+      "id": "tutorials/account-and-security/authentication/manage-api-keys",
+      "title": "管理 API 密钥",
+      "description": "在 Zilliz Cloud 上，每个项目都有自己的 API 密钥集，这些密钥用作身份验证令牌，对于调用 RESTful API 或 SDK 至关重要。无论是为项目创建新的 API 密钥，还是使用 Zilliz Cloud 提供的默认密钥，您都能通过该密钥访问并管理项目内的所有集群及其关联资源。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/account-and-security/authentication/manage-cluster-credentials": {
+      "id": "tutorials/account-and-security/authentication/manage-cluster-credentials",
+      "title": "管理身份凭证",
+      "description": "在 Zilliz Cloud 中，身份凭证由一对用户名和密码组成，用于认证及授权您对集群的交互请求。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/account-and-security/authentication/multi-factor-authentication": {
+      "id": "tutorials/account-and-security/authentication/multi-factor-authentication",
+      "title": "管理 MFA",
+      "description": "本教程将介绍如何在 Zilliz Cloud 账号设置中管理多重身份认证（MFA）。目前，Zilliz Cloud 仅支持通过邮箱进行多重身份认证。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/account-and-security/security/set-up-a-private-link": {
+      "id": "tutorials/account-and-security/security/set-up-a-private-link",
+      "title": "创建私网连接",
+      "description": "Zilliz Cloud 允许您通过私网连接（PrivateLink）访问您的集群。如果您不希望通过公众互联网访问您位于 Zilliz Cloud 上的集群， 可以按照本章的步骤为您的集群创建私网连接。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/account-and-security/security/set-up-whitelist": {
+      "id": "tutorials/account-and-security/security/set-up-whitelist",
+      "title": "设置白名单",
+      "description": "在 Zilliz Cloud 中，白名单是针对项目的安全设置，适用于项目下的所有集群。设置白名单后，仅白名单中的 IP 地址可以访问您项目下的所有集群。白名单能够有效降低受到恶意攻击的风险",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/backup-and-restore/create-snapshot": {
+      "id": "tutorials/backup-and-restore/create-snapshot",
+      "title": "创建备份快照",
+      "description": "快照是为某个集群在指定时间点创建的备份。您可以基于快照创建新的集群或将快照用作集群数据备份。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/backup-and-restore/delete-snapshot": {
+      "id": "tutorials/backup-and-restore/delete-snapshot",
+      "title": "删除备份快照",
+      "description": "在快照达到指定保留天数后，Zilliz Cloud 将自动删除快照。您也可以在到达保留天数之前手动删除不需要的快照。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/backup-and-restore/restore-from-snapshot": {
+      "id": "tutorials/backup-and-restore/restore-from-snapshot",
+      "title": "恢复备份",
+      "description": "本文介绍如何从快照备份中恢复 Zilliz Cloud 集群。您只能使用创建成功的快照进行集群恢复。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/backup-and-restore/schedule-automatic-backups": {
+      "id": "tutorials/backup-and-restore/schedule-automatic-backups",
+      "title": "创建自动备份",
+      "description": "Zilliz Cloud 允许您为集群创建自动备份，确保意外发生时可以进行数据恢复。定期备份可以防止数据丢失，您也可以通过快照轻松将数据恢复到特定时间点。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/backup-and-restore/view-snapshot-details": {
+      "id": "tutorials/backup-and-restore/view-snapshot-details",
+      "title": "查看备份快照",
+      "description": "本文介绍如何查看已创建的快照信息。您可以手动或自动创建快照。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/cluster/connect-to-cluster": {
+      "id": "tutorials/cluster/connect-to-cluster",
+      "title": "连接集群",
+      "description": "本文介绍如何连接到 Zilliz Cloud 集群。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/cluster/create-cluster": {
+      "id": "tutorials/cluster/create-cluster",
+      "title": "创建集群",
+      "description": "本文介绍如何创建集群。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/cluster/manage-cluster": {
+      "id": "tutorials/cluster/manage-cluster",
+      "title": "管理集群",
+      "description": "本文介绍如何通过 Zilliz Cloud 控制台管理集群。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/collection/advanced-features/enable-dynamic-schema": {
+      "id": "tutorials/collection/advanced-features/enable-dynamic-schema",
+      "title": "开启动态 Schema",
+      "description": "Schema 对于 Zilliz Cloud 集群的数据处理非常重要。在向 Collection 中插入 Entity 前，需要先根据业务需求设计 Schema，并确保所有待插入的 Entity 的结构都与设计好的 Schema 相匹配。如果业务需求发生变化，可能会导致需要重新设计 Schema。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/collection/advanced-features/javascript-object-notation-json": {
+      "id": "tutorials/collection/advanced-features/javascript-object-notation-json",
+      "title": "使用 JSON 类型字段",
+      "description": "JSON 全称为 JavaScript Object Notation，是一种轻量级且易于使用的文本数据格式。JSON 字段由键值对组成，其中每个键是一个字符串，其相应的值可以是数字、字符串、布尔值、列表或数组。Zilliz Cloud 支持将字段以字典的形式插入到集群的 Collection 中。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/collection/advanced-features/use-partition-key": {
+      "id": "tutorials/collection/advanced-features/use-partition-key",
+      "title": "使用 Partition Key",
+      "description": "本节将帮助您了解如何使用 Partition Key 加速在 Collection 中的数据检索。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/collection/collection-and-index/create-collection": {
+      "id": "tutorials/collection/collection-and-index/create-collection",
+      "title": "创建 Collection",
+      "description": "本文介绍如何在 Zilliz Cloud 集群中创建 Collection。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/collection/collection-and-index/drop-collection": {
+      "id": "tutorials/collection/collection-and-index/drop-collection",
+      "title": "删除 Collection",
+      "description": "本文介绍如何从 Zilliz Cloud 集群中删除 Collection。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/collection/collection-and-index/manage-index": {
+      "id": "tutorials/collection/collection-and-index/manage-index",
+      "title": "管理索引",
+      "description": "在 Zilliz Cloud 集群中使用索引做为元数据结构，增强向量相似性检索性能。在 Zilliz Cloud 集群中进行检索的前提是您已经为其中的 Collection 创建了索引。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/collection/insert-update-and-delete/delete-entities": {
+      "id": "tutorials/collection/insert-update-and-delete/delete-entities",
+      "title": "删除 Entity",
+      "description": "Entity 是指存储在 Zilliz Cloud 集群中的数据实体，包含用于处理、搜索和查询的数据。如果您不再需要某个 Entity，可以执行相关操作将其删除。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/collection/insert-update-and-delete/insert-entities": {
+      "id": "tutorials/collection/insert-update-and-delete/insert-entities",
+      "title": "插入 Entity",
+      "description": "本文介绍如何将 Entity 插入到 Zilliz Cloud 集群中的 Collection。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/collection/insert-update-and-delete/upsert-entities": {
+      "id": "tutorials/collection/insert-update-and-delete/upsert-entities",
+      "title": "Upsert Entity",
+      "description": "本指南介绍如何在 Zilliz Cloud 中进行 Upsert 操作。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/collection/search-and-query/conduct-a-range-search": {
+      "id": "tutorials/collection/search-and-query/conduct-a-range-search",
+      "title": "范围搜索",
+      "description": "了解如何根据 Entity 的相似程度来筛选向量搜索结果至关重要。通过限制查询向量与其他向量之间的距离，范围搜索能够实现对搜索结果的有效细化。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/collection/search-and-query/search-and-query-advanced-expressions": {
+      "id": "tutorials/collection/search-and-query/search-and-query-advanced-expressions",
+      "title": "使用高级表达式搜索和查询",
+      "description": "本指南将介绍如何在 Zilliz Cloud 中使用高级表达式 count() 和 json_contains() 来执行搜索或查询操作。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/collection/search-and-query/search-and-query-iterators": {
+      "id": "tutorials/collection/search-and-query/search-and-query-iterators",
+      "title": "使用迭代器搜索和查询",
+      "description": "本指南介绍如何利用迭代器（Iterator）的强大功能，在大型数据集中进行高效的搜索与查询。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/collection/search-and-query/search-query-and-get": {
+      "id": "tutorials/collection/search-and-query/search-query-and-get",
+      "title": "向量搜索和查询",
+      "description": "本文介绍如何在 Zilliz Cloud 中执行近似最近邻（Approximate Nearest Neighbour，ANN）搜索和查询。搜索是指在 Collection 中查找与指定查询向量最接近的向量，查询是基于指定条件筛选出满足条件的数据。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/data-import/import-data-on-web-ui": {
+      "id": "tutorials/data-import/import-data-on-web-ui",
+      "title": "通过 Web 控制台导入",
+      "description": "本文介绍如何通过 Zilliz Cloud Web 控制台将数据导入现有 Collection 中。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/data-import/import-data-via-restful-api": {
+      "id": "tutorials/data-import/import-data-via-restful-api",
+      "title": "通过 RESTful API 导入",
+      "description": "本文介绍如何通过 RESTful API 将数据导入现有 Collection 中。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/data-import/import-data-via-sdks": {
+      "id": "tutorials/data-import/import-data-via-sdks",
+      "title": "通过 SDK 导入",
+      "description": "本节将帮助你了解如何使用 SDK 的 BulkWriter 和 BulkImport API 向 Collection 中导入数据。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/data-import/use-bulkwriter-for-data-import": {
+      "id": "tutorials/data-import/use-bulkwriter-for-data-import",
+      "title": "准备导入数据",
+      "description": "本节将介绍如何使用 PyMilvus 中的 BulkWriter 来准备须导入 Zilliz Cloud 的数据。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/faqs/faq-account": {
+      "id": "tutorials/faqs/faq-account",
+      "title": "FAQ：账户",
+      "description": "本文列举了 Zilliz Cloud 账户相关的常见问题及对应解决方法。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/faqs/faq-authentication": {
+      "id": "tutorials/faqs/faq-authentication",
+      "title": "FAQ：鉴权",
+      "description": "本文列举了在 Zilliz Cloud 鉴权时可能遇到的常见问题及对应解决方法。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/faqs/faq-backup-and-restore": {
+      "id": "tutorials/faqs/faq-backup-and-restore",
+      "title": "FAQ：备份与恢复",
+      "description": "本文列举了在 Zilliz Cloud 使用备份与恢复功能时可能遇到的常见问题及对应解决方法。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/faqs/faq-cluster": {
+      "id": "tutorials/faqs/faq-cluster",
+      "title": "FAQ：集群",
+      "description": "本文列举了在使用 Zilliz Cloud 集群时可能遇到的常见问题及对应解决方法。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/faqs/faq-collection": {
+      "id": "tutorials/faqs/faq-collection",
+      "title": "FAQ：Collection",
+      "description": "1 个集群中最多可创建多少个 Collection？",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/faqs/faq-data-import": {
+      "id": "tutorials/faqs/faq-data-import",
+      "title": "FAQ：数据导入",
+      "description": "本文列举了在 Zilliz Cloud 导入数据时可能遇到的常见问题及对应解决方法。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/faqs/faq-get-started": {
+      "id": "tutorials/faqs/faq-get-started",
+      "title": "FAQ：快速入门",
+      "description": "本文列举了快速上手 Zilliz Cloud 时可能遇到的常见问题及对应解决方法。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/faqs/faq-integrations": {
+      "id": "tutorials/faqs/faq-integrations",
+      "title": "FAQ：AI 模型集成",
+      "description": "本文列举了在集成 Zilliz Cloud 与 AI 模型时可能遇到的常见问题及对应解决方法。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/faqs/faq-migration": {
+      "id": "tutorials/faqs/faq-migration",
+      "title": "FAQ：数据迁移",
+      "description": "本文列举了在 Zilliz Cloud 进行数据迁移时可能遇到的常见问题及对应解决方法。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/faqs/faq-monitors-and-metrics": {
+      "id": "tutorials/faqs/faq-monitors-and-metrics",
+      "title": "FAQ：监控与指标",
+      "description": "本文列举了在 Zilliz Cloud 使用监控与指标时可能遇到的常见问题及对应解决方法。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/faqs/faq-payment-and-billing": {
+      "id": "tutorials/faqs/faq-payment-and-billing",
+      "title": "FAQ：支付方式与账单",
+      "description": "本文列举了 Zilliz Cloud 支付方式与账单相关的常见问题及对应解决方法。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/faqs/faq-resource-planning": {
+      "id": "tutorials/faqs/faq-resource-planning",
+      "title": "FAQ：资源规划",
+      "description": "本文列举了在 Zilliz Cloud 规划资源和使用成本时可能遇到的常见问题及对应解决方法。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/faqs/faq-users-and-roles": {
+      "id": "tutorials/faqs/faq-users-and-roles",
+      "title": "FAQ：用户和角色",
+      "description": "本文列举了 Zilliz Cloud 用户和角色相关的常见问题及对应解决方法。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/integrations/documentation-qa-using-zilliz-cloud-and-llamaindex": {
+      "id": "tutorials/integrations/documentation-qa-using-zilliz-cloud-and-llamaindex",
+      "title": "与 LlamaIndex 集成搭建文档问答系统",
+      "description": "本文将演示如何与集成 LlamaIndex 从指定源获取信息。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/integrations/image-search-with-zilliz-cloud-and-pytorch": {
+      "id": "tutorials/integrations/image-search-with-zilliz-cloud-and-pytorch",
+      "title": "与 PyTorch 集成搭建图片搜索系统",
+      "description": "在本文中，我们将演示如何使用 Zilliz Cloud 搭建一个简单的图片搜索系统。该系统使用的数据集是 Kaggle 上提供的印象派大师分类器数据集（ Impressionist-Classifier Dataset ）。在本示例中，我们将该数据库重新托管到了一个公共的 Google Drive 中。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/integrations/movie-search-using-zilliz-cloud-and-sentencetransformers": {
+      "id": "tutorials/integrations/movie-search-using-zilliz-cloud-and-sentencetransformers",
+      "title": "与 SentenceTransformers 集成搭建电影搜索系统",
+      "description": "本文将演示使用 Zilliz Cloud 和 SentenceTransformers 对一篇 Wikipedia 文章进行搜索。示例中用到的数据集为 Wikipedia-Movie-Plots Dataset，你可以在 Kaggle 上找到该数据集。我们将该数据集重新托管到了一个公共的 Google Drive。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/integrations/question-answering-over-documents-with-zilliz-cloud-and-langchain": {
+      "id": "tutorials/integrations/question-answering-over-documents-with-zilliz-cloud-and-langchain",
+      "title": "与 LangChain 集成搭建智能文档问答系统",
+      "description": "本文将演示如何使用 Zilliz Cloud 和 LangChain 搭建基于大语言模型（LLM）的问答系统。在本例中，我们将使用一个 1 CU 的 Cluster，还将使用 OpenAI 的 Embedding API 来获取指定文本的向量表示。现在就让我们开始吧。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/integrations/question-answering-using-zilliz-cloud-and-cohere": {
+      "id": "tutorials/integrations/question-answering-using-zilliz-cloud-and-cohere",
+      "title": "与 Cohere 集成搭建智能问答系统",
+      "description": "本文将演示如何使用 Zilliz Cloud 和 Cohere 搭建基于 SQuAD 数据集 的问答系统。其中，Zilliz Cloud 负责提供向量数据库，Cohere 负责提供获取指定文字向量表示的接口。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/integrations/question-answering-using-zilliz-cloud-and-hugging-face": {
+      "id": "tutorials/integrations/question-answering-using-zilliz-cloud-and-hugging-face",
+      "title": "与 HuggingFace 集成搭建问答系统",
+      "description": "本文将演示如何使用 Zilliz Cloud 和 HuggingFace 搭建问答系统。其中，Zilliz Cloud 负责提供向量数据库，HuggingFace 负责提供获取指定文字向量表示的接口。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/integrations/similarity-search-with-zilliz-cloud-and-openai": {
+      "id": "tutorials/integrations/similarity-search-with-zilliz-cloud-and-openai",
+      "title": "与 OpenAI 集成搭建相似性搜索系统",
+      "description": "本文将讨论如何使用 OpenAI 的 Embedding API 与 Zilliz Cloud 搭建相似性搜索系统。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/limits-and-restrictions/api-comparison": {
+      "id": "tutorials/limits-and-restrictions/api-comparison",
+      "title": "API 异同",
+      "description": "为了提供更好的用户体验，Zilliz Cloud 的运行方式与 Milvus 略有不同。本文将介绍 Zilliz Cloud 和 Milvus 在 API 操作方面的差异。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/limits-and-restrictions/other-differences": {
+      "id": "tutorials/limits-and-restrictions/other-differences",
+      "title": "其他异同",
+      "description": "本文将介绍 Zilliz Cloud 和 Milvus 在数据类型、索引类型等方面的差异。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/migrations/migrate-beween-clusters": {
+      "id": "tutorials/migrations/migrate-beween-clusters",
+      "title": "Zilliz Cloud 集群间迁移",
+      "description": "Zilliz Cloud 支持在同一个组织下，将一个集群中的数据迁移至另一个集群中。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/migrations/migrate-from-elasticsearch": {
+      "id": "tutorials/migrations/migrate-from-elasticsearch",
+      "title": "从 Elasticsearch 迁移至 Zilliz Cloud",
+      "description": "如今，大多数企业的基础环境都以数据为驱动。在这种背景下，如何高效、无缝地在不同平台之间迁移数据以利用先进的数据分析能力变得至关重要。本文介绍了如何将 Elasticsearch 中的数据迁移到 Zilliz Cloud，以帮助您充分释放数据的潜力，实现可扩展性、高性能和易用性。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/migrations/migrate-from-milvus": {
+      "id": "tutorials/migrations/migrate-from-milvus",
+      "title": "从 Milvus 迁移至 Zilliz Cloud",
+      "description": "Zilliz Cloud 提供了先进的数据基础架构，可帮助您优化向量搜索并轻松实现 AI 应用。如果您是 Milvus 用户，可以将数据迁移到 Zilliz Cloud。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/monitors-metrics/advance-pay-balance-monitor": {
+      "id": "tutorials/monitors-metrics/advance-pay-balance-monitor",
+      "title": "现金余额监控",
+      "description": "Zilliz Cloud 提供现金余额监控功能。该监控默认关闭。如果您进行过现金充值，您可以打开此监控，从而在现金余额即将不足时收到预警提醒。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/monitors-metrics/cu-resource-monitor": {
+      "id": "tutorials/monitors-metrics/cu-resource-monitor",
+      "title": "CU 资源监控",
+      "description": "Zilliz Cloud 提供 CU 资源监控功能，以帮助您及时扩展集群。该功能支持监控 CPU 和内存使用情况，并以百分比表示。当监控值超过任一指标阈值时，系统会发送告警通知。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/monitors-metrics/load-capacity-resource-monitor": {
+      "id": "tutorials/monitors-metrics/load-capacity-resource-monitor",
+      "title": "已使用容量监控",
+      "description": "要跟踪 Collection 的负载容量，建议启用容量监控功能。该功能按百分比统计已加载数据所占用的内存大小。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/monitors-metrics/monitor-metrics": {
+      "id": "tutorials/monitors-metrics/monitor-metrics",
+      "title": "查看集群性能指标",
+      "description": "为更好地了解集群性能，Zilliz Cloud 提供集群监控面板，您可以在其中查看特定集群的相关性能指标。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/monitors-metrics/qps-resource-monitor": {
+      "id": "tutorials/monitors-metrics/qps-resource-monitor",
+      "title": "QPS 资源监控",
+      "description": "为了及时调整 Zilliz Cloud 集群的 QPS，建议启用 QPS 资源监控。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/monitors-metrics/query-latency-monitor": {
+      "id": "tutorials/monitors-metrics/query-latency-monitor",
+      "title": "查询时延监控",
+      "description": "为了及时调优 Zilliz Cloud 集群性能，建议启用查询时延监控。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/monitors-metrics/view-activities": {
+      "id": "tutorials/monitors-metrics/view-activities",
+      "title": "查看事件",
+      "description": "Zilliz Cloud 事件页面记录了组织中发生的事件，包括免费额度增减、集群状态变更、授予或撤销组织和项目权限等。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/organization-settings/delete-your-org": {
+      "id": "tutorials/organization-settings/delete-your-org",
+      "title": "删除组织",
+      "description": "本教程介绍如何删除 Zilliz Cloud 组织。组织删除后，其数据将被清空且无法恢复。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/organization-settings/manage-timezone": {
+      "id": "tutorials/organization-settings/manage-timezone",
+      "title": "设置时区",
+      "description": "默认情况下，系统时区的设置会与首次登录地保持一致，并会应用 Zilliz Cloud 中显示的所有时间字符串。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/organization-settings/set-up-maintenance-window": {
+      "id": "tutorials/organization-settings/set-up-maintenance-window",
+      "title": "设置运维窗口",
+      "description": "Zilliz Cloud 允许用户为集群设置运维窗口，以减少运维对工作负载的影响，增加可预测性。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/organization-settings/use-recycle-bin": {
+      "id": "tutorials/organization-settings/use-recycle-bin",
+      "title": "使用回收站",
+      "description": "为进一步保护您的数据，任何删除的集群都会在回收站种保留 30 天。这样一来不论是因为操作失误还是试用到期或欠费导致集群删除，您都可以在 30 天内安全恢复集群数据。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/payment-billing/advance-pay": {
+      "id": "tutorials/payment-billing/advance-pay",
+      "title": "现金充值",
+      "description": "免费试用到期后，您需要添加支付方式方可继续使用 Zilliz Cloud。Zilliz Cloud 支持多种支付方式，包括现金充值和订阅阿里云市场。本章主要介绍如何通过线下转账的方式进行现金充值。如需开具发票，请参考开具发票 。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/payment-billing/enterprise-certification": {
+      "id": "tutorials/payment-billing/enterprise-certification",
+      "title": "企业认证",
+      "description": "Zilliz Cloud 现已开通企业认证渠道。如需进行现金充值，您需要先通过企业认证。本章主要介绍如何在 Zilliz Cloud 界面上申请企业认证。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/payment-billing/invoice": {
+      "id": "tutorials/payment-billing/invoice",
+      "title": "开具发票",
+      "description": "在 Zilliz Cloud 进行现金充值或开通阿里云云市场扣费渠道后，您可以申请开具发票。具体开票方式根据您的支付方式有所不同。如果您的支付方式为现金充值，您可以直接通过 Zilliz Cloud 界面开具发票。如果您开通了阿里云云市场扣费渠道，请通过阿里云云市场申请开票。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/payment-billing/subscribe-on-aliyun-marketplace": {
+      "id": "tutorials/payment-billing/subscribe-on-aliyun-marketplace",
+      "title": "订阅阿里云市场",
+      "description": "Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云市场上订阅 Zilliz Cloud。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/payment-billing/view-invoice": {
+      "id": "tutorials/payment-billing/view-invoice",
+      "title": "查看账单与支付方式",
+      "description": "首次注册 Zilliz Cloud 的用户即可获赠 ¥300 免费额度，享受 30 天免费试用。试用到期或免费额度使用完毕后，您需要添加支付方式并付清您的账单以继续使用 Zilliz Cloud 服务。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/quick-start/example-dataset": {
+      "id": "tutorials/quick-start/example-dataset",
+      "title": "示例数据集",
+      "description": "本指南系列中的操作示例都是基于同一个示例数据集。该数据集包含了从 2020 年 1 月至 2020 年 8 月期间在各知名出版物上发表的 5000 多篇 Medium 文章的详细信息。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/quick-start/free-trials": {
+      "id": "tutorials/quick-start/free-trials",
+      "title": "免费试用",
+      "description": "Zilliz Cloud 当前提供两种订阅版本：企业版和专有部署。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/quick-start/install-sdks": {
+      "id": "tutorials/quick-start/install-sdks",
+      "title": "安装 SDK",
+      "description": "本文介绍如何安装 Milvus SDK，以连接到 Zilliz Cloud 集群。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/quick-start/quick-start": {
+      "id": "tutorials/quick-start/quick-start",
+      "title": "快速开始",
+      "description": "在本文中，您将了解如何在 Zilliz Cloud 集群中进行“增、删、改、查”的操作。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/release-notes/release-notes-200": {
+      "id": "tutorials/release-notes/release-notes-200",
+      "title": "版本说明书 2.0.0",
+      "description": "发布日期：2023年6月14日",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/release-notes/release-notes-210": {
+      "id": "tutorials/release-notes/release-notes-210",
+      "title": "版本说明书 2.1.0",
+      "description": "发布日期：2023年8月21日",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/release-notes/release-notes-220": {
+      "id": "tutorials/release-notes/release-notes-220",
+      "title": "版本说明书 2.2.0",
+      "description": "发布日期：2023年9月19日",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/release-notes/release-notes-221": {
+      "id": "tutorials/release-notes/release-notes-221",
+      "title": "版本说明书 2.2.1",
+      "description": "发布日期：2023年10月17日",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/release-notes/release-notes-230": {
+      "id": "tutorials/release-notes/release-notes-230",
+      "title": "版本说明书 2.3.0",
+      "description": "发布日期：2023年11月23日",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/resource-planning/cloud-providers-and-regions": {
+      "id": "tutorials/resource-planning/cloud-providers-and-regions",
+      "title": "云服务提供商和地域",
+      "description": "使用 Zilliz Cloud 云服务，您可以轻松在公有云上创建和管理向量数据库集群。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/resource-planning/cu-types-explained": {
+      "id": "tutorials/resource-planning/cu-types-explained",
+      "title": "选择合适的 CU 类型",
+      "description": "在 Zilliz Cloud 中，为集群选择合适的计算单元（CU）是一个关键步骤。CU 提供了并行数据处理的基础计算资源，不同类型的 CU 结合了各异的 CPU、内存和存储配置。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/resource-planning/pricing-calculator": {
+      "id": "tutorials/resource-planning/pricing-calculator",
+      "title": "价格计算器",
+      "description": "Zilliz Cloud 价格计算器可以帮助您了解 Zilliz Cloud 定价策略，自助估算价格，挑选最适合的解决方案。本指南将介绍如何使用该计算器，以获得精准的成本估算。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/resource-planning/select-zilliz-cloud-service-plans": {
+      "id": "tutorials/resource-planning/select-zilliz-cloud-service-plans",
+      "title": "Zilliz Cloud 版本类型",
+      "description": "在配置集群前，您需要先选择版本。Zilliz Cloud 各版本提供不同的服务体验、计费模型，且性能及可扩展性也都有所不同 。目前， Zilliz Cloud 共有 2 个版本可供选择，以满足多样的用户需求。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/understand-basics/ann-search-explained": {
+      "id": "tutorials/understand-basics/ann-search-explained",
+      "title": "ANN 搜索",
+      "description": "通过 k-最近邻（kNN）搜索可以找到一个查询向量的 k 个最近向量。kNN 算法将查询向量与向量空间中的每个向量进行比较，直到出现 k 个完全匹配的结果。尽管 kNN 搜索可以确保准确性，但十分耗时。尤其是数据量大，向量维度高时，耗时更久。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/understand-basics/autoindex-explained": {
+      "id": "tutorials/understand-basics/autoindex-explained",
+      "title": "AUTOINDEX",
+      "description": "为满足用户不同需求，Zilliz Cloud 提供 3 种类型的集群 CU——性能型、容量型和经济型。但是，为不同类型 CU 集群中的 Collection 创建索引时，通常需要根据所选择的 CU 类型调整索引参数。为了方便您创建索引，免去调节参数的麻烦，Zilliz Cloud 使用 AUTOINDEX 的索引类型。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/understand-basics/cluster-collection-and-entities": {
+      "id": "tutorials/understand-basics/cluster-collection-and-entities",
+      "title": "集群、Collection 及 Entity",
+      "description": "Zilliz Cloud 集群由全托管 Milvus 实例及相关计算资源构成。您可以在 Zilliz Cloud 集群中创建 Collection，然后在 Collection 中插入 Entity。Zilliz Cloud 集群中的 Collection 类似于关系型数据库中的表。Collection 中的 Entity 类似于表中的记录。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/understand-basics/consistency-level": {
+      "id": "tutorials/understand-basics/consistency-level",
+      "title": "一致性等级",
+      "description": "在分布式数据库中，一致性等级确保在读写操作期间，每个节点或副本都能获取到相同的数据。Zilliz Cloud 提供 3 种一致性级别：Strong、Bounded 和 Eventually。Zilliz Cloud 默认采用的一致性水平为 Bounded。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/understand-basics/data-models-explained": {
+      "id": "tutorials/understand-basics/data-models-explained",
+      "title": "Schema",
+      "description": "定义数据模型是指为数据库中数据创建一个清晰有序的数据模型。数据模型可以揭示数据之间的关系。因此，定义数据模型是为了了解数据集中的所有数据，展示数据间联系，从而用最有效的方式表示数据关系。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/understand-basics/data-security": {
+      "id": "tutorials/understand-basics/data-security",
+      "title": "数据安全",
+      "description": "数据安全是所有云平台的重中之重，Zilliz Cloud 也不例外。为了保障数据安全，Zilliz Cloud 在各个方面都提供了强大的措施，包括认证、访问控制、网络隔离、数据加密以及备份和恢复等。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/understand-basics/search-metrics-explained": {
+      "id": "tutorials/understand-basics/search-metrics-explained",
+      "title": "相似性度量",
+      "description": "在度量向量相似性时，相似性指标发挥着关键作用。选择恰当的度量指标可以极大地提升分类与聚类的效果。",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/users-roles/a-panorama-view": {
+      "id": "tutorials/users-roles/a-panorama-view",
+      "title": "权限概览",
+      "description": "Zilliz Cloud 通过以下层面实现访问控制：",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/users-roles/manage-orgs-and-members": {
+      "id": "tutorials/users-roles/manage-orgs-and-members",
+      "title": "管理组织与成员",
+      "description": "在组织和项目的层次结构中，您可以通过以下操作来管理您的组织与成员：",
+      "sidebar": "tutorialSidebar"
+    },
+    "tutorials/users-roles/manage-projects-and-collaborator": {
+      "id": "tutorials/users-roles/manage-projects-and-collaborator",
+      "title": "管理项目与成员",
+      "description": "在组织和项目的层次结构中，您可以通过以下操作来管理您的项目与成员：",
+      "sidebar": "tutorialSidebar"
+    }
+  }
+}

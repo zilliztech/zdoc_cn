@@ -1,0 +1,15 @@
+{
+  "title": "Client API",
+  "slug": "/python/client",
+  "permalink": "/reference/python/client",
+  "navigation": {
+    "previous": {
+      "title": "Python SDK 参考",
+      "permalink": "/reference/python"
+    },
+    "next": {
+      "title": "MilvusClient()",
+      "permalink": "/reference/python/milvus-client"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/monitors-metrics/query-latency-monitor",
+  "id": "byoc/monitors-metrics/query-latency-monitor",
+  "title": "Monitor Query Latency",
+  "description": "To optimize your Zilliz Cloud cluster’s performance through timely adjustments of query latency, it is advisable to activate the query latency resource monitor.",
+  "source": "@site/docs/byoc/monitors-metrics/query-latency-monitor.md",
+  "sourceDirName": "byoc/monitors-metrics",
+  "slug": "/docs/byoc/query-latency-monitor",
+  "permalink": "/docs/byoc/query-latency-monitor",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/query-latency-monitor",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 3
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Monitor QPS",
+    "permalink": "/docs/byoc/qps-resource-monitor"
+  },
+  "next": {
+    "title": "Monitor Load Capacity",
+    "permalink": "/docs/byoc/load-capacity-resource-monitor"
+  }
+}

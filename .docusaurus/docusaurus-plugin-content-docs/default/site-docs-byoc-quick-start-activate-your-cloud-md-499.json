@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/quick-start/activate-your-cloud",
+  "id": "byoc/quick-start/activate-your-cloud",
+  "title": "Activate Your Cloud",
+  "description": "Activating your cloud in Zilliz Cloud is a straightforward process that enables you to leverage the power and flexibility of a Bring Your Own Cloud (BYOC) license. This guide provides you with the necessary steps to initiate your cloud services with Zilliz Cloud and ensure your subscription is up and running smoothly.",
+  "source": "@site/docs/byoc/quick-start/activate-your-cloud.md",
+  "sourceDirName": "byoc/quick-start",
+  "slug": "/docs/byoc/activate-your-cloud",
+  "permalink": "/docs/byoc/activate-your-cloud",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/activate-your-cloud",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 2
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Quick Start",
+    "permalink": "/docs/byoc/"
+  },
+  "next": {
+    "title": "Install SDKs",
+    "permalink": "/docs/byoc/install-sdks"
+  }
+}

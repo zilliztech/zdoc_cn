@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/account-and-security/accounts/delete-your-account",
+  "id": "tutorials/account-and-security/accounts/delete-your-account",
+  "title": "管理账号",
+  "description": "在 Zilliz Cloud 注册账户后，您可对账户信息进行管理。您可以编辑账号信息以及删除账号。",
+  "source": "@site/docs/tutorials/account-and-security/accounts/delete-your-account.md",
+  "sourceDirName": "tutorials/account-and-security/accounts",
+  "slug": "/docs/delete-your-account",
+  "permalink": "/docs/delete-your-account",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/docs/delete-your-account",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "注册账号",
+    "permalink": "/docs/register-with-zilliz-cloud"
+  },
+  "next": {
+    "title": "鉴权",
+    "permalink": "/authentication"
+  }
+}

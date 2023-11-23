@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/collection/advanced-features/use-partition-key",
+  "id": "tutorials/collection/advanced-features/use-partition-key",
+  "title": "使用 Partition Key",
+  "description": "本节将帮助您了解如何使用 Partition Key 加速在 Collection 中的数据检索。",
+  "source": "@site/docs/tutorials/collection/advanced-features/use-partition-key.md",
+  "sourceDirName": "tutorials/collection/advanced-features",
+  "slug": "/docs/use-partition-key",
+  "permalink": "/docs/use-partition-key",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/docs/use-partition-key",
+    "beta": false,
+    "notebook": "03_use_partition_key.ipynb",
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "开启动态 Schema",
+    "permalink": "/docs/enable-dynamic-schema"
+  },
+  "next": {
+    "title": "使用 JSON 类型字段",
+    "permalink": "/docs/javascript-object-notation-json"
+  }
+}

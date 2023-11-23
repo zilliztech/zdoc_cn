@@ -1,0 +1,15 @@
+{
+  "title": "Resource Planning",
+  "slug": "resource-planning",
+  "permalink": "/resource-planning",
+  "navigation": {
+    "previous": {
+      "title": "Migrate from Elasticsearch",
+      "permalink": "/docs/byoc/migrate-from-elasticsearch"
+    },
+    "next": {
+      "title": "License",
+      "permalink": "/docs/byoc/license"
+    }
+  }
+}

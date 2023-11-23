@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/python/Vector/insert()",
+  "id": "api/python/Vector/insert()",
+  "title": "insert()",
+  "description": "调用接口将 Entity 插入到 Collection。Zilliz Cloud 支持以行或列插入数据。",
+  "source": "@site/reference/api/python/Vector/insert().md",
+  "sourceDirName": "api/python/Vector",
+  "slug": "/python/insert",
+  "permalink": "/reference/python/insert",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 0,
+    "slug": "/python/insert"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "Vector API",
+    "permalink": "/reference/python/vector"
+  },
+  "next": {
+    "title": "search()",
+    "permalink": "/reference/python/search"
+  }
+}

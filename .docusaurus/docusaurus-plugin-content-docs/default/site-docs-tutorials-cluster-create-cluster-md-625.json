@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/cluster/create-cluster",
+  "id": "tutorials/cluster/create-cluster",
+  "title": "创建集群",
+  "description": "本文介绍如何创建集群。",
+  "source": "@site/docs/tutorials/cluster/create-cluster.md",
+  "sourceDirName": "tutorials/cluster",
+  "slug": "/docs/create-cluster",
+  "permalink": "/docs/create-cluster",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "/docs/create-cluster",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "集群",
+    "permalink": "/cluster"
+  },
+  "next": {
+    "title": "连接集群",
+    "permalink": "/docs/connect-to-cluster"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Limits & Restrictions",
+  "slug": "limits-and-restrictions",
+  "permalink": "/limits-and-restrictions",
+  "navigation": {
+    "previous": {
+      "title": "Movie Search Using Zilliz Cloud and SentenceTransformers",
+      "permalink": "/docs/byoc/movie-search-using-zilliz-cloud-and-sentencetransformers"
+    },
+    "next": {
+      "title": "API Availability",
+      "permalink": "/docs/byoc/api-comparison"
+    }
+  }
+}

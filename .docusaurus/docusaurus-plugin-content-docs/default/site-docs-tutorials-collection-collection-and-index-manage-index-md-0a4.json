@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/collection/collection-and-index/manage-index",
+  "id": "tutorials/collection/collection-and-index/manage-index",
+  "title": "管理索引",
+  "description": "在 Zilliz Cloud 集群中使用索引做为元数据结构，增强向量相似性检索性能。在 Zilliz Cloud 集群中进行检索的前提是您已经为其中的 Collection 创建了索引。",
+  "source": "@site/docs/tutorials/collection/collection-and-index/manage-index.md",
+  "sourceDirName": "tutorials/collection/collection-and-index",
+  "slug": "/docs/manage-index",
+  "permalink": "/docs/manage-index",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/docs/manage-index",
+    "beta": false,
+    "notebook": "01_use_customized_schema.ipynb",
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "创建 Collection",
+    "permalink": "/docs/create-collection"
+  },
+  "next": {
+    "title": "删除 Collection",
+    "permalink": "/docs/drop-collection"
+  }
+}

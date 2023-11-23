@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/limits-and-restrictions/api-comparison",
+  "id": "tutorials/limits-and-restrictions/api-comparison",
+  "title": "API 异同",
+  "description": "为了提供更好的用户体验，Zilliz Cloud 的运行方式与 Milvus 略有不同。本文将介绍 Zilliz Cloud 和 Milvus 在 API 操作方面的差异。",
+  "source": "@site/docs/tutorials/limits-and-restrictions/api-comparison.md",
+  "sourceDirName": "tutorials/limits-and-restrictions",
+  "slug": "/docs/api-comparison",
+  "permalink": "/docs/api-comparison",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "/docs/api-comparison",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "约束与限制",
+    "permalink": "/limits-and-restrictions"
+  },
+  "next": {
+    "title": "其他异同",
+    "permalink": "/docs/other-differences"
+  }
+}

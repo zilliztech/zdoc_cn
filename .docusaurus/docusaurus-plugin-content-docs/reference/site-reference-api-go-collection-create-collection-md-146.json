@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/go/Collection/CreateCollection()",
+  "id": "api/go/Collection/CreateCollection()",
+  "title": "CreateCollection()",
+  "description": "调用接口创建 Collection。",
+  "source": "@site/reference/api/go/Collection/CreateCollection().md",
+  "sourceDirName": "api/go/Collection",
+  "slug": "/go/create_collection",
+  "permalink": "/reference/go/create_collection",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 0,
+    "slug": "/go/create_collection"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "Collection API",
+    "permalink": "/reference/go/collection"
+  },
+  "next": {
+    "title": "DescribeCollection()",
+    "permalink": "/reference/go/describe_collection"
+  }
+}

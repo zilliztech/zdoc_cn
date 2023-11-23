@@ -1,0 +1,15 @@
+{
+  "title": "Payment & Billing",
+  "slug": "/docs/payment-billing",
+  "permalink": "/docs/payment-billing",
+  "navigation": {
+    "previous": {
+      "title": "Set up a Private Link",
+      "permalink": "/docs/set-up-a-private-link"
+    },
+    "next": {
+      "title": "Subscribe by Adding Credit Card",
+      "permalink": "/docs/subscribe-by-adding-credit-card"
+    }
+  }
+}

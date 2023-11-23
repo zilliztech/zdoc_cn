@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/quick-start/example-dataset",
+  "id": "tutorials/quick-start/example-dataset",
+  "title": "示例数据集",
+  "description": "本指南系列中的操作示例都是基于同一个示例数据集。该数据集包含了从 2020 年 1 月至 2020 年 8 月期间在各知名出版物上发表的 5000 多篇 Medium 文章的详细信息。",
+  "source": "@site/docs/tutorials/quick-start/example-dataset.md",
+  "sourceDirName": "tutorials/quick-start",
+  "slug": "/docs/example-dataset",
+  "permalink": "/docs/example-dataset",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/docs/example-dataset",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "安装 SDK",
+    "permalink": "/docs/install-sdks"
+  },
+  "next": {
+    "title": "了解 Zilliz Cloud",
+    "permalink": "/understand-basics"
+  }
+}

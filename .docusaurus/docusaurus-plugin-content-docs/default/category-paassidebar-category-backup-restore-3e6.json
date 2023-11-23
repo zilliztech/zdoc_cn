@@ -1,0 +1,15 @@
+{
+  "title": "Backup & Restore",
+  "slug": "backup-and-restore",
+  "permalink": "/backup-and-restore",
+  "navigation": {
+    "previous": {
+      "title": "Select the Right CU",
+      "permalink": "/docs/byoc/cu-types-explained"
+    },
+    "next": {
+      "title": "Create Snapshot",
+      "permalink": "/docs/byoc/create-snapshot"
+    }
+  }
+}

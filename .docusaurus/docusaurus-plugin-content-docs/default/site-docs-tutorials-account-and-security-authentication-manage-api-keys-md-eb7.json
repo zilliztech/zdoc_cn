@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/account-and-security/authentication/manage-api-keys",
+  "id": "tutorials/account-and-security/authentication/manage-api-keys",
+  "title": "管理 API 密钥",
+  "description": "在 Zilliz Cloud 上，每个项目都有自己的 API 密钥集，这些密钥用作身份验证令牌，对于调用 RESTful API 或 SDK 至关重要。无论是为项目创建新的 API 密钥，还是使用 Zilliz Cloud 提供的默认密钥，您都能通过该密钥访问并管理项目内的所有集群及其关联资源。",
+  "source": "@site/docs/tutorials/account-and-security/authentication/manage-api-keys.md",
+  "sourceDirName": "tutorials/account-and-security/authentication",
+  "slug": "/docs/manage-api-keys",
+  "permalink": "/docs/manage-api-keys",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "/docs/manage-api-keys",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "鉴权",
+    "permalink": "/authentication"
+  },
+  "next": {
+    "title": "管理身份凭证",
+    "permalink": "/docs/manage-cluster-credentials"
+  }
+}

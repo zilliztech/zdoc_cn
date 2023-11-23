@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/integrations/question-answering-over-documents-with-zilliz-cloud-and-langchain",
+  "id": "byoc/integrations/question-answering-over-documents-with-zilliz-cloud-and-langchain",
+  "title": "Question Answering over Documents with Zilliz Cloud and LangChain",
+  "description": "This guide demonstrates how to build an LLM-driven question-answering application using Zilliz Cloud and LangChain.",
+  "source": "@site/docs/byoc/integrations/question-answering-over-documents-with-zilliz-cloud-and-langchain.md",
+  "sourceDirName": "byoc/integrations",
+  "slug": "/docs/byoc/question-answering-over-documents-with-zilliz-cloud-and-langchain",
+  "permalink": "/docs/byoc/question-answering-over-documents-with-zilliz-cloud-and-langchain",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/question-answering-over-documents-with-zilliz-cloud-and-langchain",
+    "beta": false,
+    "notebook": "83_integrations_langchain.ipynb",
+    "sidebar_position": 4
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Question Answering Using Zilliz Cloud and Cohere",
+    "permalink": "/docs/byoc/question-answering-using-zilliz-cloud-and-cohere"
+  },
+  "next": {
+    "title": "Image Search with Zilliz Cloud and PyTorch",
+    "permalink": "/docs/byoc/image-search-with-zilliz-cloud-and-pytorch"
+  }
+}

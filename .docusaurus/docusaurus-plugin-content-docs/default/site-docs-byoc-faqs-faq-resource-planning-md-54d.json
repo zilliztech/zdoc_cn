@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/faqs/faq-resource-planning",
+  "id": "byoc/faqs/faq-resource-planning",
+  "title": "FAQ: Resource Planning",
+  "description": "This topic lists the possible issues that you may encounter while planning your resources on Zilliz Cloud and the corresponding solution.",
+  "source": "@site/docs/byoc/faqs/faq-resource-planning.md",
+  "sourceDirName": "byoc/faqs",
+  "slug": "/docs/byoc/faq-resource-planning",
+  "permalink": "/docs/byoc/faq-resource-planning",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/faq-resource-planning",
+    "beta": null,
+    "notebook": null,
+    "sidebar_position": 6
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "FAQ: Migration",
+    "permalink": "/docs/byoc/faq-migration"
+  },
+  "next": {
+    "title": "FAQ: Backup and Restore",
+    "permalink": "/docs/byoc/faq-backup-and-restore"
+  }
+}

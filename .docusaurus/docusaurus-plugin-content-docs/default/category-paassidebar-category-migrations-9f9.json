@@ -1,0 +1,15 @@
+{
+  "title": "Migrations",
+  "slug": "migrations",
+  "permalink": "/migrations",
+  "navigation": {
+    "previous": {
+      "title": "Import Data via SDKs",
+      "permalink": "/docs/byoc/import-data-via-sdks"
+    },
+    "next": {
+      "title": "Migrate from Milvus",
+      "permalink": "/docs/byoc/migrate-from-milvus"
+    }
+  }
+}

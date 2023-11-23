@@ -1,0 +1,15 @@
+{
+  "title": "Python SDK 参考",
+  "slug": "/python",
+  "permalink": "/reference/python",
+  "navigation": {
+    "previous": {
+      "title": "搜索",
+      "permalink": "/reference/search"
+    },
+    "next": {
+      "title": "Client API",
+      "permalink": "/reference/python/client"
+    }
+  }
+}

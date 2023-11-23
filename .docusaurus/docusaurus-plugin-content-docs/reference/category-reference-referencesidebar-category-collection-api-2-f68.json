@@ -1,0 +1,15 @@
+{
+  "title": "Collection API",
+  "slug": "/nodejs/collection",
+  "permalink": "/reference/nodejs/collection",
+  "navigation": {
+    "previous": {
+      "title": "MilvusClient()",
+      "permalink": "/reference/nodejs/milvus-client"
+    },
+    "next": {
+      "title": "createCollection()",
+      "permalink": "/reference/nodejs/create_collection"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[3914],{4060:t=>{t.exports=JSON.parse('{"title":"\u4ece\u8fd9\u91cc\u5f00\u59cb","slug":"quick-start","permalink":"/quick-start","navigation":{"next":{"title":"\u5feb\u901f\u5f00\u59cb","permalink":"/"}}}')}}]);

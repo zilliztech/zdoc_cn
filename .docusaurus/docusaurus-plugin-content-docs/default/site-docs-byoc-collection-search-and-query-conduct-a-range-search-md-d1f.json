@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/collection/search-and-query/conduct-a-range-search",
+  "id": "byoc/collection/search-and-query/conduct-a-range-search",
+  "title": "Conduct a Range Search",
+  "description": "Understanding how to filter your search results by the proximity of entities is crucial in vector operations. A range search serves this exact purpose by narrowing down results according to the distance between a query vector and vectors. This guide will walk you through the process of conducting a range search in Zilliz Cloud, which consists of a vector similarity search followed by distance-based filtering.",
+  "source": "@site/docs/byoc/collection/search-and-query/conduct-a-range-search.md",
+  "sourceDirName": "byoc/collection/search-and-query",
+  "slug": "/docs/byoc/conduct-a-range-search",
+  "permalink": "/docs/byoc/conduct-a-range-search",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/conduct-a-range-search",
+    "beta": true,
+    "notebook": "11_conduct_a_range_search.ipynb",
+    "sidebar_position": 2
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Search, Query, and Get",
+    "permalink": "/docs/byoc/search-query-and-get"
+  },
+  "next": {
+    "title": "Search and Query with Iterators",
+    "permalink": "/docs/byoc/search-and-query-iterators"
+  }
+}

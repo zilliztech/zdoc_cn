@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/collection/advanced-features/enable-dynamic-schema",
+  "id": "tutorials/collection/advanced-features/enable-dynamic-schema",
+  "title": "开启动态 Schema",
+  "description": "Schema 对于 Zilliz Cloud 集群的数据处理非常重要。在向 Collection 中插入 Entity 前，需要先根据业务需求设计 Schema，并确保所有待插入的 Entity 的结构都与设计好的 Schema 相匹配。如果业务需求发生变化，可能会导致需要重新设计 Schema。",
+  "source": "@site/docs/tutorials/collection/advanced-features/enable-dynamic-schema.md",
+  "sourceDirName": "tutorials/collection/advanced-features",
+  "slug": "/docs/enable-dynamic-schema",
+  "permalink": "/docs/enable-dynamic-schema",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "/docs/enable-dynamic-schema",
+    "beta": false,
+    "notebook": "02_enable_dynamic_schema.ipynb",
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "高级功能",
+    "permalink": "/advanced-features"
+  },
+  "next": {
+    "title": "使用 Partition Key",
+    "permalink": "/docs/use-partition-key"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "title": "约束与限制",
+  "slug": "limits-and-restrictions",
+  "permalink": "/limits-and-restrictions",
+  "navigation": {
+    "previous": {
+      "title": "与 SentenceTransformers 集成搭建电影搜索系统",
+      "permalink": "/docs/movie-search-using-zilliz-cloud-and-sentencetransformers"
+    },
+    "next": {
+      "title": "API 异同",
+      "permalink": "/docs/api-comparison"
+    }
+  }
+}

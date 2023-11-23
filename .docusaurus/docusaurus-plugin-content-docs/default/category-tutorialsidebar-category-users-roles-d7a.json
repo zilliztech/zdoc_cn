@@ -1,0 +1,15 @@
+{
+  "title": "Users & Roles",
+  "slug": "/docs/users-roles",
+  "permalink": "/docs/users-roles",
+  "navigation": {
+    "previous": {
+      "title": "Delete Snapshot",
+      "permalink": "/docs/delete-snapshot"
+    },
+    "next": {
+      "title": "A Panorama View",
+      "permalink": "/docs/a-panorama-view"
+    }
+  }
+}

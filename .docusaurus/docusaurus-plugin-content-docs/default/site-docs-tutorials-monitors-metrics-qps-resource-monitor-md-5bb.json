@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/monitors-metrics/qps-resource-monitor",
+  "id": "tutorials/monitors-metrics/qps-resource-monitor",
+  "title": "QPS 资源监控",
+  "description": "为了及时调整 Zilliz Cloud 集群的 QPS，建议启用 QPS 资源监控。",
+  "source": "@site/docs/tutorials/monitors-metrics/qps-resource-monitor.md",
+  "sourceDirName": "tutorials/monitors-metrics",
+  "slug": "/docs/qps-resource-monitor",
+  "permalink": "/docs/qps-resource-monitor",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/docs/qps-resource-monitor",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "CU 资源监控",
+    "permalink": "/docs/cu-resource-monitor"
+  },
+  "next": {
+    "title": "查询时延监控",
+    "permalink": "/docs/query-latency-monitor"
+  }
+}

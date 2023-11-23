@@ -1,0 +1,15 @@
+{
+  "title": "Accounts",
+  "slug": "accounts",
+  "permalink": "/accounts",
+  "navigation": {
+    "previous": {
+      "title": "Account & Security",
+      "permalink": "/account-and-security"
+    },
+    "next": {
+      "title": "Manage Your Account",
+      "permalink": "/docs/byoc/delete-your-account"
+    }
+  }
+}

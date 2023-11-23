@@ -1,0 +1,15 @@
+{
+  "title": "了解 Zilliz Cloud",
+  "slug": "understand-basics",
+  "permalink": "/understand-basics",
+  "navigation": {
+    "previous": {
+      "title": "示例数据集",
+      "permalink": "/docs/example-dataset"
+    },
+    "next": {
+      "title": "AUTOINDEX",
+      "permalink": "/docs/autoindex-explained"
+    }
+  }
+}

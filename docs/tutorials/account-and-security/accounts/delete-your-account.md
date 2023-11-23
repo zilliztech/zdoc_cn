@@ -1,0 +1,65 @@
+---
+slug: /docs/delete-your-account
+beta: FALSE
+notebook: FALSE
+sidebar_position: 2
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# 管理账号
+
+在 Zilliz Cloud 注册账户后，您可对账户信息进行管理。您可以编辑账号信息以及删除账号。
+
+## 编辑账号信息{#modify-your-account-information}
+
+1. 点击界面右上角人像图标，并选择**账号设置**。
+
+1. 在**账号管理**旁点击铅笔图标以编辑账号信息，包括：
+
+- 姓和名
+
+- 公司名称
+
+<Admonition type="info" icon="📘" title="说明">
+
+账户邮箱无法直接修改。若需更改邮箱，请参考我们在[常见问题](https://docs.zilliz.com.cn/docs/faq-account)中的相关指南。
+
+</Admonition>
+
+## 删除账号{#delete-your-account}
+
+### 前提条件{#before-you-start}
+
+- 如果您是项目唯一的项目管理员且项目含有集群，请先[删除项目集群](./manage-cluster#delete-cluster)。
+
+- 如果您是组织唯一的组织管理员，请先[删除组织](./delete-your-org)。
+
+### 操作步骤{#procedures}
+
+1. 点击界面右上角人像图标，并选择**账号设置**。
+
+1. 在账号设置弹窗中，点击底部**删除账号**按钮。
+
+1. 在**删除账号**弹窗中，再次输入您的账号。点击获取验证码，并输入发送至您邮箱中的验证码。阅读 3 条注意事项后并勾选。点击**下一步**。
+
+1. 填写反馈问卷，点击按钮提交反馈并删除账号。
+
+1. 账号成功删除后，您将收到邮件提醒。
+
+<Admonition type="caution" icon="🚧" title="警告">
+
+删除账号的操作不可逆，请谨慎操作！
+
+</Admonition>
+
+![delete-account-cn](/img/delete-account-cn.png)
+
+## 相关文档{#related-topics}
+
+- [管理组织与成员](./manage-orgs-and-members) 
+
+- [删除组织](./delete-your-org) 
+
+- [查看事件](./view-activities) 

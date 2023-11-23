@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/monitors-metrics/query-latency-monitor",
+  "id": "tutorials/monitors-metrics/query-latency-monitor",
+  "title": "查询时延监控",
+  "description": "为了及时调优 Zilliz Cloud 集群性能，建议启用查询时延监控。",
+  "source": "@site/docs/tutorials/monitors-metrics/query-latency-monitor.md",
+  "sourceDirName": "tutorials/monitors-metrics",
+  "slug": "/docs/query-latency-monitor",
+  "permalink": "/docs/query-latency-monitor",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/docs/query-latency-monitor",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "QPS 资源监控",
+    "permalink": "/docs/qps-resource-monitor"
+  },
+  "next": {
+    "title": "已使用容量监控",
+    "permalink": "/docs/load-capacity-resource-monitor"
+  }
+}

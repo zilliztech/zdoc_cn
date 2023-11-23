@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/go/Vector/InsertRows()",
+  "id": "api/go/Vector/InsertRows()",
+  "title": "InsertRows()",
+  "description": "调用接口将 Entity 以行的形式插入到 Collection。",
+  "source": "@site/reference/api/go/Vector/InsertRows().md",
+  "sourceDirName": "api/go/Vector",
+  "slug": "/go/insert_rows",
+  "permalink": "/reference/go/insert_rows",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 1,
+    "slug": "/go/insert_rows"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "Insert()",
+    "permalink": "/reference/go/insert"
+  },
+  "next": {
+    "title": "Search()",
+    "permalink": "/reference/go/search"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/collection/insert-update-and-delete/delete-entities",
+  "id": "tutorials/collection/insert-update-and-delete/delete-entities",
+  "title": "删除 Entity",
+  "description": "Entity 是指存储在 Zilliz Cloud 集群中的数据实体，包含用于处理、搜索和查询的数据。如果您不再需要某个 Entity，可以执行相关操作将其删除。",
+  "source": "@site/docs/tutorials/collection/insert-update-and-delete/delete-entities.md",
+  "sourceDirName": "tutorials/collection/insert-update-and-delete",
+  "slug": "/docs/delete-entities",
+  "permalink": "/docs/delete-entities",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/docs/delete-entities",
+    "beta": false,
+    "notebook": "00_quick_start.ipynb,01_use_customized_schema.ipynb",
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Upsert Entity",
+    "permalink": "/docs/upsert-entities"
+  },
+  "next": {
+    "title": "检索及查询",
+    "permalink": "/search-and-query"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/monitors-metrics/cu-resource-monitor",
+  "id": "byoc/monitors-metrics/cu-resource-monitor",
+  "title": "Monitor CU Resources",
+  "description": "To effectively scale your cluster, it is recommended to activate the CU resource monitor. This tool tracks both CPU and memory usage, expressed as a percentage, and responds based on the higher of the two values.",
+  "source": "@site/docs/byoc/monitors-metrics/cu-resource-monitor.md",
+  "sourceDirName": "byoc/monitors-metrics",
+  "slug": "/docs/byoc/cu-resource-monitor",
+  "permalink": "/docs/byoc/cu-resource-monitor",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/cu-resource-monitor",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 1
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Monitors & Metrics",
+    "permalink": "/monitors-metrics"
+  },
+  "next": {
+    "title": "Monitor QPS",
+    "permalink": "/docs/byoc/qps-resource-monitor"
+  }
+}

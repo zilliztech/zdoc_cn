@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/release-notes/release-notes-221",
+  "id": "tutorials/release-notes/release-notes-221",
+  "title": "版本说明书 2.2.1",
+  "description": "发布日期：2023年10月17日",
+  "source": "@site/docs/tutorials/release-notes/release-notes-221.md",
+  "sourceDirName": "tutorials/release-notes",
+  "slug": "/docs/release-notes-221",
+  "permalink": "/docs/release-notes-221",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/docs/release-notes-221",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "版本说明书 2.3.0",
+    "permalink": "/docs/release-notes-230"
+  },
+  "next": {
+    "title": "版本说明书 2.2.0",
+    "permalink": "/docs/release-notes-220"
+  }
+}

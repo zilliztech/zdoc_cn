@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/collection/collection-and-index/create-collection",
+  "id": "tutorials/collection/collection-and-index/create-collection",
+  "title": "创建 Collection",
+  "description": "本文介绍如何在 Zilliz Cloud 集群中创建 Collection。",
+  "source": "@site/docs/tutorials/collection/collection-and-index/create-collection.md",
+  "sourceDirName": "tutorials/collection/collection-and-index",
+  "slug": "/docs/create-collection",
+  "permalink": "/docs/create-collection",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "/docs/create-collection",
+    "beta": false,
+    "notebook": "00_quick_start.ipynb,01_use_customized_schema.ipynb",
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Collection 及索引",
+    "permalink": "/collection-and-index"
+  },
+  "next": {
+    "title": "管理索引",
+    "permalink": "/docs/manage-index"
+  }
+}

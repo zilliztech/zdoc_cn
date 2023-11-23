@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/integrations/question-answering-using-zilliz-cloud-and-hugging-face",
+  "id": "tutorials/integrations/question-answering-using-zilliz-cloud-and-hugging-face",
+  "title": "与 HuggingFace 集成搭建问答系统",
+  "description": "本文将演示如何使用 Zilliz Cloud 和 HuggingFace 搭建问答系统。其中，Zilliz Cloud 负责提供向量数据库，HuggingFace 负责提供获取指定文字向量表示的接口。",
+  "source": "@site/docs/tutorials/integrations/question-answering-using-zilliz-cloud-and-hugging-face.md",
+  "sourceDirName": "tutorials/integrations",
+  "slug": "/docs/question-answering-using-zilliz-cloud-and-hugging-face",
+  "permalink": "/docs/question-answering-using-zilliz-cloud-and-hugging-face",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/docs/question-answering-using-zilliz-cloud-and-hugging-face",
+    "beta": false,
+    "notebook": "81_integrations_huggingface.ipynb",
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "与 OpenAI 集成搭建相似性搜索系统",
+    "permalink": "/docs/similarity-search-with-zilliz-cloud-and-openai"
+  },
+  "next": {
+    "title": "与 Cohere 集成搭建智能问答系统",
+    "permalink": "/docs/question-answering-using-zilliz-cloud-and-cohere"
+  }
+}

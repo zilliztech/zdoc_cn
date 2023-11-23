@@ -1,0 +1,15 @@
+{
+  "title": "Account & Security",
+  "slug": "account-and-security",
+  "permalink": "/account-and-security",
+  "navigation": {
+    "previous": {
+      "title": "View Activities",
+      "permalink": "/docs/byoc/view-activities"
+    },
+    "next": {
+      "title": "Accounts",
+      "permalink": "/accounts"
+    }
+  }
+}

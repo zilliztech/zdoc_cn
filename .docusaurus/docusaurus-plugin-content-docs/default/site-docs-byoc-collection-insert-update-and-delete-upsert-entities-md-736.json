@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/collection/insert-update-and-delete/upsert-entities",
+  "id": "byoc/collection/insert-update-and-delete/upsert-entities",
+  "title": "Upsert Entities",
+  "description": "This topic describes how to upsert data into a collection in Zilliz Cloud.",
+  "source": "@site/docs/byoc/collection/insert-update-and-delete/upsert-entities.md",
+  "sourceDirName": "byoc/collection/insert-update-and-delete",
+  "slug": "/docs/byoc/upsert-entities",
+  "permalink": "/docs/byoc/upsert-entities",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/upsert-entities",
+    "beta": true,
+    "notebook": "08_upsert_entities.ipynb",
+    "sidebar_position": 2
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Insert Entities",
+    "permalink": "/docs/byoc/insert-entities"
+  },
+  "next": {
+    "title": "Delete Entities",
+    "permalink": "/docs/byoc/delete-entities"
+  }
+}

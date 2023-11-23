@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/data-import/use-bulkwriter-for-data-import",
+  "id": "tutorials/data-import/use-bulkwriter-for-data-import",
+  "title": "准备导入数据",
+  "description": "本节将介绍如何使用 PyMilvus 中的 BulkWriter 来准备须导入 Zilliz Cloud 的数据。",
+  "source": "@site/docs/tutorials/data-import/use-bulkwriter-for-data-import.md",
+  "sourceDirName": "tutorials/data-import",
+  "slug": "/docs/use-bulkwriter-for-data-import",
+  "permalink": "/docs/use-bulkwriter-for-data-import",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "/docs/use-bulkwriter-for-data-import",
+    "beta": false,
+    "notebook": "06_use_remote-bulk-writer.ipynb",
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "数据导入",
+    "permalink": "/data-import"
+  },
+  "next": {
+    "title": "通过 Web 控制台导入",
+    "permalink": "/docs/import-data-on-web-ui"
+  }
+}

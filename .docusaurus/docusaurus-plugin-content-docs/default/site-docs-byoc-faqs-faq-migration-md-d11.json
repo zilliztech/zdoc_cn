@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/faqs/faq-migration",
+  "id": "byoc/faqs/faq-migration",
+  "title": "FAQ: Migration",
+  "description": "This topic lists the possible issues that you may encounter while you migrate data on Zilliz Cloud and the corresponding solution.",
+  "source": "@site/docs/byoc/faqs/faq-migration.md",
+  "sourceDirName": "byoc/faqs",
+  "slug": "/docs/byoc/faq-migration",
+  "permalink": "/docs/byoc/faq-migration",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/faq-migration",
+    "beta": null,
+    "notebook": null,
+    "sidebar_position": 5
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "FAQ: Data Import",
+    "permalink": "/docs/byoc/faq-data-import"
+  },
+  "next": {
+    "title": "FAQ: Resource Planning",
+    "permalink": "/docs/byoc/faq-resource-planning"
+  }
+}

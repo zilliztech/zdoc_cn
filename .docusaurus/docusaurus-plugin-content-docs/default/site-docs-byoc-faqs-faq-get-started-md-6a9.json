@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/faqs/faq-get-started",
+  "id": "byoc/faqs/faq-get-started",
+  "title": "FAQ: Get Started",
+  "description": "This topic lists the possible issues that you may encounter while you get started with Zilliz Cloud and the corresponding solution.",
+  "source": "@site/docs/byoc/faqs/faq-get-started.md",
+  "sourceDirName": "byoc/faqs",
+  "slug": "/docs/byoc/faq-get-started",
+  "permalink": "/docs/byoc/faq-get-started",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/faq-get-started",
+    "beta": null,
+    "notebook": null,
+    "sidebar_position": 1
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "FAQs",
+    "permalink": "/faqs"
+  },
+  "next": {
+    "title": "FAQ: Cluster",
+    "permalink": "/docs/byoc/faq-cluster"
+  }
+}

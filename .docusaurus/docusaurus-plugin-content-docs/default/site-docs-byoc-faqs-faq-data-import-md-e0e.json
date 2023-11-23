@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/faqs/faq-data-import",
+  "id": "byoc/faqs/faq-data-import",
+  "title": "FAQ: Data Import",
+  "description": "This topic lists the possible issues that you may encounter while you import data on Zilliz Cloud and the corresponding solution.",
+  "source": "@site/docs/byoc/faqs/faq-data-import.md",
+  "sourceDirName": "byoc/faqs",
+  "slug": "/docs/byoc/faq-data-import",
+  "permalink": "/docs/byoc/faq-data-import",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/faq-data-import",
+    "beta": null,
+    "notebook": null,
+    "sidebar_position": 4
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "FAQ: Collection",
+    "permalink": "/docs/byoc/faq-collection"
+  },
+  "next": {
+    "title": "FAQ: Migration",
+    "permalink": "/docs/byoc/faq-migration"
+  }
+}

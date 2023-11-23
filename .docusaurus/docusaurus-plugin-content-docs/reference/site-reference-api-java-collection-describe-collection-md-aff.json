@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/java/Collection/describeCollection()",
+  "id": "api/java/Collection/describeCollection()",
+  "title": "describeCollection()",
+  "description": "调用接口获取指定 Collection 的详细信息，包括 Collection 名称和 Schema 等。",
+  "source": "@site/reference/api/java/Collection/describeCollection().md",
+  "sourceDirName": "api/java/Collection",
+  "slug": "/java/describe_collection",
+  "permalink": "/reference/java/describe_collection",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 1,
+    "slug": "/java/describe_collection"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "createCollection()",
+    "permalink": "/reference/java/create_collection"
+  },
+  "next": {
+    "title": "listCollections()",
+    "permalink": "/reference/java/list_collection"
+  }
+}

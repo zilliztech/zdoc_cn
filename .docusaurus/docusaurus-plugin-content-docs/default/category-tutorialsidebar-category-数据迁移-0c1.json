@@ -1,0 +1,15 @@
+{
+  "title": "数据迁移",
+  "slug": "migrations",
+  "permalink": "/migrations",
+  "navigation": {
+    "previous": {
+      "title": "通过 SDK 导入",
+      "permalink": "/docs/import-data-via-sdks"
+    },
+    "next": {
+      "title": "从 Milvus 迁移至 Zilliz Cloud",
+      "permalink": "/docs/migrate-from-milvus"
+    }
+  }
+}

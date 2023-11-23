@@ -1,0 +1,15 @@
+{
+  "title": "Collection",
+  "slug": "collection",
+  "permalink": "/collection",
+  "navigation": {
+    "previous": {
+      "title": "管理集群",
+      "permalink": "/docs/manage-cluster"
+    },
+    "next": {
+      "title": "Collection 及索引",
+      "permalink": "/collection-and-index"
+    }
+  }
+}

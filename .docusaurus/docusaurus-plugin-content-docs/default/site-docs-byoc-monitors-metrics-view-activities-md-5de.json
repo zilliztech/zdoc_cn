@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/monitors-metrics/view-activities",
+  "id": "byoc/monitors-metrics/view-activities",
+  "title": "View Activities",
+  "description": "The Zilliz Cloud Activities feature provides a comprehensive view of events associated with a specific Zilliz Cloud organization, encompassing both billing and access events, and delivering insightful details about the status of your clusters.",
+  "source": "@site/docs/byoc/monitors-metrics/view-activities.md",
+  "sourceDirName": "byoc/monitors-metrics",
+  "slug": "/docs/byoc/view-activities",
+  "permalink": "/docs/byoc/view-activities",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/view-activities",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 8
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "View Cluster Metrics",
+    "permalink": "/docs/byoc/monitor-metrics"
+  },
+  "next": {
+    "title": "Account & Security",
+    "permalink": "/account-and-security"
+  }
+}

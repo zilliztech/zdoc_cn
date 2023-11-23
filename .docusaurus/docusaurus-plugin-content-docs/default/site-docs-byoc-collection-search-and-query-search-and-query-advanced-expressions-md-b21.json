@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/collection/search-and-query/search-and-query-advanced-expressions",
+  "id": "byoc/collection/search-and-query/search-and-query-advanced-expressions",
+  "title": "Search and Query with Advanced Expressions",
+  "description": "This guide will walk you through the necessary steps and provide examples to help you use advanced expressions count() and json_contains() within Zilliz Cloud for search or query operations.",
+  "source": "@site/docs/byoc/collection/search-and-query/search-and-query-advanced-expressions.md",
+  "sourceDirName": "byoc/collection/search-and-query",
+  "slug": "/docs/byoc/search-and-query-advanced-expressions",
+  "permalink": "/docs/byoc/search-and-query-advanced-expressions",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/search-and-query-advanced-expressions",
+    "beta": true,
+    "notebook": "10_search_query_advanced_ops.ipynb",
+    "sidebar_position": 4
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Search and Query with Iterators",
+    "permalink": "/docs/byoc/search-and-query-iterators"
+  },
+  "next": {
+    "title": "Advanced Features",
+    "permalink": "/advanced-features"
+  }
+}

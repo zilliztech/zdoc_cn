@@ -1,0 +1,15 @@
+{
+  "title": "Vector",
+  "slug": "/vector-operations",
+  "permalink": "/reference/vector-operations",
+  "navigation": {
+    "previous": {
+      "title": "查看数据导入任务",
+      "permalink": "/reference/list-import-jobs"
+    },
+    "next": {
+      "title": "删除 Entity",
+      "permalink": "/reference/delete"
+    }
+  }
+}

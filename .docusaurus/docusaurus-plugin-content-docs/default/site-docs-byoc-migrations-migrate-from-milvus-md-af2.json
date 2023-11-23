@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/migrations/migrate-from-milvus",
+  "id": "byoc/migrations/migrate-from-milvus",
+  "title": "Migrate from Milvus",
+  "description": "Zilliz Cloud provides a cutting-edge data infrastructure for optimized search across vector embeddings, making it easy to bring your AI applications to life. If you are using Milvus and wish to leverage this advanced infrastructure, migrating your data to Zilliz Cloud is a recommended step.",
+  "source": "@site/docs/byoc/migrations/migrate-from-milvus.md",
+  "sourceDirName": "byoc/migrations",
+  "slug": "/docs/byoc/migrate-from-milvus",
+  "permalink": "/docs/byoc/migrate-from-milvus",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/migrate-from-milvus",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 1
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Migrations",
+    "permalink": "/migrations"
+  },
+  "next": {
+    "title": "Migrate from Elasticsearch",
+    "permalink": "/docs/byoc/migrate-from-elasticsearch"
+  }
+}

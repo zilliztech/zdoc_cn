@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/faqs/faq-authentication",
+  "id": "tutorials/faqs/faq-authentication",
+  "title": "FAQ：鉴权",
+  "description": "本文列举了在 Zilliz Cloud 鉴权时可能遇到的常见问题及对应解决方法。",
+  "source": "@site/docs/tutorials/faqs/faq-authentication.md",
+  "sourceDirName": "tutorials/faqs",
+  "slug": "/docs/faq-authentication",
+  "permalink": "/docs/faq-authentication",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "slug": "/docs/faq-authentication",
+    "beta": null,
+    "notebook": null,
+    "sidebar_position": 11
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "FAQ：账户",
+    "permalink": "/docs/faq-account"
+  },
+  "next": {
+    "title": "FAQ：支付方式与账单",
+    "permalink": "/docs/faq-payment-and-billing"
+  }
+}

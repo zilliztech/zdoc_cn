@@ -1,0 +1,29 @@
+{
+  "unversionedId": "api/restful/Cluster/describe-cluster",
+  "id": "api/restful/Cluster/describe-cluster",
+  "title": "查看集群详情",
+  "description": "描述集群的详细信息。",
+  "source": "@site/reference/api/restful/Cluster/describe-cluster.md",
+  "sourceDirName": "api/restful/Cluster",
+  "slug": "/describe-cluster",
+  "permalink": "/reference/describe-cluster",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 0,
+    "slug": "/describe-cluster",
+    "title": "查看集群详情"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "Cluster",
+    "permalink": "/reference/cluster-operations"
+  },
+  "next": {
+    "title": "查看集群",
+    "permalink": "/reference/list-clusters"
+  }
+}

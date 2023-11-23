@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/faqs/faq-resource-planning",
+  "id": "tutorials/faqs/faq-resource-planning",
+  "title": "FAQ：资源规划",
+  "description": "本文列举了在 Zilliz Cloud 规划资源和使用成本时可能遇到的常见问题及对应解决方法。",
+  "source": "@site/docs/tutorials/faqs/faq-resource-planning.md",
+  "sourceDirName": "tutorials/faqs",
+  "slug": "/docs/faq-resource-planning",
+  "permalink": "/docs/faq-resource-planning",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "slug": "/docs/faq-resource-planning",
+    "beta": null,
+    "notebook": null,
+    "sidebar_position": 6
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "FAQ：数据迁移",
+    "permalink": "/docs/faq-migration"
+  },
+  "next": {
+    "title": "FAQ：备份与恢复",
+    "permalink": "/docs/faq-backup-and-restore"
+  }
+}

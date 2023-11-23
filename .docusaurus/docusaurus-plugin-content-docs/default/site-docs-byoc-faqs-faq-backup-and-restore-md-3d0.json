@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/faqs/faq-backup-and-restore",
+  "id": "byoc/faqs/faq-backup-and-restore",
+  "title": "FAQ: Backup and Restore",
+  "description": "This topic lists the possible issues that you may encounter while backing up and restoring data on Zilliz Cloud and the corresponding solution.",
+  "source": "@site/docs/byoc/faqs/faq-backup-and-restore.md",
+  "sourceDirName": "byoc/faqs",
+  "slug": "/docs/byoc/faq-backup-and-restore",
+  "permalink": "/docs/byoc/faq-backup-and-restore",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/faq-backup-and-restore",
+    "beta": null,
+    "notebook": null,
+    "sidebar_position": 7
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "FAQ: Resource Planning",
+    "permalink": "/docs/byoc/faq-resource-planning"
+  },
+  "next": {
+    "title": "FAQ: Users & Roles",
+    "permalink": "/docs/byoc/faq-users-and-roles"
+  }
+}

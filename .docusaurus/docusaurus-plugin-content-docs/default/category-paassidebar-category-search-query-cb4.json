@@ -1,0 +1,15 @@
+{
+  "title": "Search & Query",
+  "slug": "search-and-query",
+  "permalink": "/search-and-query",
+  "navigation": {
+    "previous": {
+      "title": "Delete Entities",
+      "permalink": "/docs/byoc/delete-entities"
+    },
+    "next": {
+      "title": "Search, Query, and Get",
+      "permalink": "/docs/byoc/search-query-and-get"
+    }
+  }
+}

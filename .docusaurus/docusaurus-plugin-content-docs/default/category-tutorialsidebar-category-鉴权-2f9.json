@@ -1,0 +1,15 @@
+{
+  "title": "鉴权",
+  "slug": "authentication",
+  "permalink": "/authentication",
+  "navigation": {
+    "previous": {
+      "title": "管理账号",
+      "permalink": "/docs/delete-your-account"
+    },
+    "next": {
+      "title": "管理 API 密钥",
+      "permalink": "/docs/manage-api-keys"
+    }
+  }
+}

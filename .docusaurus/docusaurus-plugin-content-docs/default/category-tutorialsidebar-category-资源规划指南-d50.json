@@ -1,0 +1,15 @@
+{
+  "title": "资源规划指南",
+  "slug": "resource-planning",
+  "permalink": "/resource-planning",
+  "navigation": {
+    "previous": {
+      "title": "Zilliz Cloud 集群间迁移",
+      "permalink": "/docs/migrate-beween-clusters"
+    },
+    "next": {
+      "title": "Zilliz Cloud 版本类型",
+      "permalink": "/docs/select-zilliz-cloud-service-plans"
+    }
+  }
+}

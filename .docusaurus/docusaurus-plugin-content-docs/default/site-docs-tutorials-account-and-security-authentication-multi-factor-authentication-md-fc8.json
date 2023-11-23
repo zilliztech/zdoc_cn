@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/account-and-security/authentication/multi-factor-authentication",
+  "id": "tutorials/account-and-security/authentication/multi-factor-authentication",
+  "title": "管理 MFA",
+  "description": "本教程将介绍如何在 Zilliz Cloud 账号设置中管理多重身份认证（MFA）。目前，Zilliz Cloud 仅支持通过邮箱进行多重身份认证。",
+  "source": "@site/docs/tutorials/account-and-security/authentication/multi-factor-authentication.md",
+  "sourceDirName": "tutorials/account-and-security/authentication",
+  "slug": "/docs/multi-factor-authentication",
+  "permalink": "/docs/multi-factor-authentication",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/docs/multi-factor-authentication",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "管理身份凭证",
+    "permalink": "/docs/manage-cluster-credentials"
+  },
+  "next": {
+    "title": "安全",
+    "permalink": "/security"
+  }
+}

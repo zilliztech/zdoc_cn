@@ -1,0 +1,29 @@
+{
+  "unversionedId": "api/restful/Vector/insert",
+  "id": "api/restful/Vector/insert",
+  "title": "插入 Entity",
+  "description": "在 Collection 中插入一条或多条 Entity。",
+  "source": "@site/reference/api/restful/Vector/insert.md",
+  "sourceDirName": "api/restful/Vector",
+  "slug": "/insert",
+  "permalink": "/reference/insert",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 0,
+    "slug": "/insert",
+    "title": "插入 Entity"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "按 ID 查询",
+    "permalink": "/reference/get"
+  },
+  "next": {
+    "title": "按条件查询",
+    "permalink": "/reference/query"
+  }
+}

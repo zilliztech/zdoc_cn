@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/account-and-security/authentication/manage-api-keys",
+  "id": "byoc/account-and-security/authentication/manage-api-keys",
+  "title": "Manage API Keys",
+  "description": "On Zilliz Cloud, every project comes with its own set of API keys, serving as authentication tokens. These keys are pivotal for initiating RESTful API or SDK interactions. Whether you create a new API key for a project or use the default one provided by Zilliz Cloud, you gain access to manage all the clusters and associated resources within that project.",
+  "source": "@site/docs/byoc/account-and-security/authentication/manage-api-keys.md",
+  "sourceDirName": "byoc/account-and-security/authentication",
+  "slug": "/docs/byoc/manage-api-keys",
+  "permalink": "/docs/byoc/manage-api-keys",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/manage-api-keys",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 1
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Authentication",
+    "permalink": "/authentication"
+  },
+  "next": {
+    "title": "Manage Cluster Credentials",
+    "permalink": "/docs/byoc/manage-cluster-credentials"
+  }
+}

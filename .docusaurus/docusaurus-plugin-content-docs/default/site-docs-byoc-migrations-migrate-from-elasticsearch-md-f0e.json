@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/migrations/migrate-from-elasticsearch",
+  "id": "byoc/migrations/migrate-from-elasticsearch",
+  "title": "Migrate from Elasticsearch",
+  "description": "This topic offers a step-by-step guide on how to migrate data from Elasticsearch to Zilliz Cloud. By doing so, you can unlock the full potential of business data with enhanced scalability, performance, and ease of use.",
+  "source": "@site/docs/byoc/migrations/migrate-from-elasticsearch.md",
+  "sourceDirName": "byoc/migrations",
+  "slug": "/docs/byoc/migrate-from-elasticsearch",
+  "permalink": "/docs/byoc/migrate-from-elasticsearch",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/migrate-from-elasticsearch",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 2
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Migrate from Milvus",
+    "permalink": "/docs/byoc/migrate-from-milvus"
+  },
+  "next": {
+    "title": "Resource Planning",
+    "permalink": "/resource-planning"
+  }
+}

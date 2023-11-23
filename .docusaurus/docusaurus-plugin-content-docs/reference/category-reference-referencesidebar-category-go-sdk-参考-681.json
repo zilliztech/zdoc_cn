@@ -1,0 +1,15 @@
+{
+  "title": "Go SDK 参考",
+  "slug": "/go",
+  "permalink": "/reference/go",
+  "navigation": {
+    "previous": {
+      "title": "delete()",
+      "permalink": "/reference/java/delete"
+    },
+    "next": {
+      "title": "Client API",
+      "permalink": "/reference/go/client"
+    }
+  }
+}

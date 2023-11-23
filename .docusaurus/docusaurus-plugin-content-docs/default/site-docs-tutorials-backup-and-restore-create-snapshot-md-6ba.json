@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/backup-and-restore/create-snapshot",
+  "id": "tutorials/backup-and-restore/create-snapshot",
+  "title": "创建备份快照",
+  "description": "快照是为某个集群在指定时间点创建的备份。您可以基于快照创建新的集群或将快照用作集群数据备份。",
+  "source": "@site/docs/tutorials/backup-and-restore/create-snapshot.md",
+  "sourceDirName": "tutorials/backup-and-restore",
+  "slug": "/docs/create-snapshot",
+  "permalink": "/docs/create-snapshot",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "/docs/create-snapshot",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "备份与恢复",
+    "permalink": "/backup-and-restore"
+  },
+  "next": {
+    "title": "创建自动备份",
+    "permalink": "/docs/schedule-automatic-backups"
+  }
+}

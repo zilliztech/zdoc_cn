@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/data-import/import-data-via-sdks",
+  "id": "byoc/data-import/import-data-via-sdks",
+  "title": "Import Data via SDKs",
+  "description": "This guide helps you learn how to use our SDKs to import data into a collection with the bulk-writer and bulk-insert APIs.",
+  "source": "@site/docs/byoc/data-import/import-data-via-sdks.md",
+  "sourceDirName": "byoc/data-import",
+  "slug": "/docs/byoc/import-data-via-sdks",
+  "permalink": "/docs/byoc/import-data-via-sdks",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/import-data-via-sdks",
+    "beta": false,
+    "notebook": "05_use_local-bulk-writer.ipynb,06_use_remote-bulk-writer.ipynb,07_use_bulk_import.ipynb",
+    "sidebar_position": 4
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Import Data via RESTful API",
+    "permalink": "/docs/byoc/import-data-via-restful-api"
+  },
+  "next": {
+    "title": "Migrations",
+    "permalink": "/migrations"
+  }
+}

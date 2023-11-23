@@ -1,0 +1,15 @@
+{
+  "title": "Security",
+  "slug": "security",
+  "permalink": "/security",
+  "navigation": {
+    "previous": {
+      "title": "Manage MFA",
+      "permalink": "/docs/byoc/multi-factor-authentication"
+    },
+    "next": {
+      "title": "Set up Whitelist",
+      "permalink": "/docs/byoc/set-up-whitelist"
+    }
+  }
+}

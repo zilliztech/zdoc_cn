@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/account-and-security/security/set-up-whitelist",
+  "id": "tutorials/account-and-security/security/set-up-whitelist",
+  "title": "设置白名单",
+  "description": "在 Zilliz Cloud 中，白名单是针对项目的安全设置，适用于项目下的所有集群。设置白名单后，仅白名单中的 IP 地址可以访问您项目下的所有集群。白名单能够有效降低受到恶意攻击的风险",
+  "source": "@site/docs/tutorials/account-and-security/security/set-up-whitelist.md",
+  "sourceDirName": "tutorials/account-and-security/security",
+  "slug": "/docs/set-up-whitelist",
+  "permalink": "/docs/set-up-whitelist",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "/docs/set-up-whitelist",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "安全",
+    "permalink": "/security"
+  },
+  "next": {
+    "title": "创建私网连接",
+    "permalink": "/docs/set-up-a-private-link"
+  }
+}

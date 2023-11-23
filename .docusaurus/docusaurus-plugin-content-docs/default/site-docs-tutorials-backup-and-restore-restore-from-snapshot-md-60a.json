@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/backup-and-restore/restore-from-snapshot",
+  "id": "tutorials/backup-and-restore/restore-from-snapshot",
+  "title": "恢复备份",
+  "description": "本文介绍如何从快照备份中恢复 Zilliz Cloud 集群。您只能使用创建成功的快照进行集群恢复。",
+  "source": "@site/docs/tutorials/backup-and-restore/restore-from-snapshot.md",
+  "sourceDirName": "tutorials/backup-and-restore",
+  "slug": "/docs/restore-from-snapshot",
+  "permalink": "/docs/restore-from-snapshot",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/docs/restore-from-snapshot",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "查看备份快照",
+    "permalink": "/docs/view-snapshot-details"
+  },
+  "next": {
+    "title": "删除备份快照",
+    "permalink": "/docs/delete-snapshot"
+  }
+}

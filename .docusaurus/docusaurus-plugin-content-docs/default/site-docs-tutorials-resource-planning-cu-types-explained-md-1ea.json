@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/resource-planning/cu-types-explained",
+  "id": "tutorials/resource-planning/cu-types-explained",
+  "title": "选择合适的 CU 类型",
+  "description": "在 Zilliz Cloud 中，为集群选择合适的计算单元（CU）是一个关键步骤。CU 提供了并行数据处理的基础计算资源，不同类型的 CU 结合了各异的 CPU、内存和存储配置。",
+  "source": "@site/docs/tutorials/resource-planning/cu-types-explained.md",
+  "sourceDirName": "tutorials/resource-planning",
+  "slug": "/docs/cu-types-explained",
+  "permalink": "/docs/cu-types-explained",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/docs/cu-types-explained",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Zilliz Cloud 版本类型",
+    "permalink": "/docs/select-zilliz-cloud-service-plans"
+  },
+  "next": {
+    "title": "云服务提供商和地域",
+    "permalink": "/docs/cloud-providers-and-regions"
+  }
+}

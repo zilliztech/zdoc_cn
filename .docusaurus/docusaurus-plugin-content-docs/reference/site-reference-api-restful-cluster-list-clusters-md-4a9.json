@@ -1,0 +1,29 @@
+{
+  "unversionedId": "api/restful/Cluster/list-clusters",
+  "id": "api/restful/Cluster/list-clusters",
+  "title": "查看集群",
+  "description": "列出指定云区域中的所有集群。",
+  "source": "@site/reference/api/restful/Cluster/list-clusters.md",
+  "sourceDirName": "api/restful/Cluster",
+  "slug": "/list-clusters",
+  "permalink": "/reference/list-clusters",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 0,
+    "slug": "/list-clusters",
+    "title": "查看集群"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "查看集群详情",
+    "permalink": "/reference/describe-cluster"
+  },
+  "next": {
+    "title": "恢复集群",
+    "permalink": "/reference/resume-cluster"
+  }
+}

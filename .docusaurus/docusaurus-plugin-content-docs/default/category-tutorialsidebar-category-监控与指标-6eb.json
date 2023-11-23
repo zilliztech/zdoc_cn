@@ -1,0 +1,15 @@
+{
+  "title": "监控与指标",
+  "slug": "monitors-metrics",
+  "permalink": "/monitors-metrics",
+  "navigation": {
+    "previous": {
+      "title": "使用回收站",
+      "permalink": "/docs/use-recycle-bin"
+    },
+    "next": {
+      "title": "CU 资源监控",
+      "permalink": "/docs/cu-resource-monitor"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Cluster",
+  "slug": "/cluster-operations",
+  "permalink": "/reference/cluster-operations",
+  "navigation": {
+    "previous": {
+      "title": "查看云服务区域",
+      "permalink": "/reference/list-cloud-regions"
+    },
+    "next": {
+      "title": "查看集群详情",
+      "permalink": "/reference/describe-cluster"
+    }
+  }
+}

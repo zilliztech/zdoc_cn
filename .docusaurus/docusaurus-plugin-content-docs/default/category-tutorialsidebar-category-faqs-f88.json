@@ -1,0 +1,15 @@
+{
+  "title": "FAQs",
+  "slug": "faqs",
+  "permalink": "/faqs",
+  "navigation": {
+    "previous": {
+      "title": "其他异同",
+      "permalink": "/docs/other-differences"
+    },
+    "next": {
+      "title": "FAQ：快速入门",
+      "permalink": "/docs/faq-get-started"
+    }
+  }
+}

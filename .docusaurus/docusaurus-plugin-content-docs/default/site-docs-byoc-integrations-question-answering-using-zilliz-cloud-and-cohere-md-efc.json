@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/integrations/question-answering-using-zilliz-cloud-and-cohere",
+  "id": "byoc/integrations/question-answering-using-zilliz-cloud-and-cohere",
+  "title": "Question Answering Using Zilliz Cloud and Cohere",
+  "description": "This page illustrates how to create a question-answering system based on the SQuAD dataset using Zilliz Cloud as the vector database and Cohere as the embedding system.",
+  "source": "@site/docs/byoc/integrations/question-answering-using-zilliz-cloud-and-cohere.md",
+  "sourceDirName": "byoc/integrations",
+  "slug": "/docs/byoc/question-answering-using-zilliz-cloud-and-cohere",
+  "permalink": "/docs/byoc/question-answering-using-zilliz-cloud-and-cohere",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/question-answering-using-zilliz-cloud-and-cohere",
+    "beta": false,
+    "notebook": "82_integrations_cohere.ipynb",
+    "sidebar_position": 3
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Question Answering Using Zilliz Cloud and HuggingFace",
+    "permalink": "/docs/byoc/question-answering-using-zilliz-cloud-and-hugging-face"
+  },
+  "next": {
+    "title": "Question Answering over Documents with Zilliz Cloud and LangChain",
+    "permalink": "/docs/byoc/question-answering-over-documents-with-zilliz-cloud-and-langchain"
+  }
+}

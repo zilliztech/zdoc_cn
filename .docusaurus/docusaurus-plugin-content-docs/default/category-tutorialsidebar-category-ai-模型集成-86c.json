@@ -1,0 +1,15 @@
+{
+  "title": "AI 模型集成",
+  "slug": "integrations",
+  "permalink": "/integrations",
+  "navigation": {
+    "previous": {
+      "title": "开具发票",
+      "permalink": "/docs/invoice"
+    },
+    "next": {
+      "title": "与 OpenAI 集成搭建相似性搜索系统",
+      "permalink": "/docs/similarity-search-with-zilliz-cloud-and-openai"
+    }
+  }
+}

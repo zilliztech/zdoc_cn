@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/integrations/documentation-qa-using-zilliz-cloud-and-llamaindex",
+  "id": "tutorials/integrations/documentation-qa-using-zilliz-cloud-and-llamaindex",
+  "title": "与 LlamaIndex 集成搭建文档问答系统",
+  "description": "本文将演示如何与集成 LlamaIndex 从指定源获取信息。",
+  "source": "@site/docs/tutorials/integrations/documentation-qa-using-zilliz-cloud-and-llamaindex.md",
+  "sourceDirName": "tutorials/integrations",
+  "slug": "/docs/documentation-qa-using-zilliz-cloud-and-llamaindex",
+  "permalink": "/docs/documentation-qa-using-zilliz-cloud-and-llamaindex",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "slug": "/docs/documentation-qa-using-zilliz-cloud-and-llamaindex",
+    "beta": false,
+    "notebook": "85_integrations_llamaindex.ipynb",
+    "sidebar_position": 6
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "与 PyTorch 集成搭建图片搜索系统",
+    "permalink": "/docs/image-search-with-zilliz-cloud-and-pytorch"
+  },
+  "next": {
+    "title": "与 SentenceTransformers 集成搭建电影搜索系统",
+    "permalink": "/docs/movie-search-using-zilliz-cloud-and-sentencetransformers"
+  }
+}

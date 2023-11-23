@@ -1,0 +1,15 @@
+{
+  "title": "高级功能",
+  "slug": "advanced-features",
+  "permalink": "/advanced-features",
+  "navigation": {
+    "previous": {
+      "title": "使用高级表达式搜索和查询",
+      "permalink": "/docs/search-and-query-advanced-expressions"
+    },
+    "next": {
+      "title": "开启动态 Schema",
+      "permalink": "/docs/enable-dynamic-schema"
+    }
+  }
+}

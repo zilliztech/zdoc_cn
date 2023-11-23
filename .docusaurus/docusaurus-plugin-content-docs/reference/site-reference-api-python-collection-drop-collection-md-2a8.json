@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/python/Collection/drop_collection()",
+  "id": "api/python/Collection/drop_collection()",
+  "title": "drop_collection()",
+  "description": "调用接口删除 Collection。",
+  "source": "@site/reference/api/python/Collection/drop_collection().md",
+  "sourceDirName": "api/python/Collection",
+  "slug": "/python/drop_collection",
+  "permalink": "/reference/python/drop_collection",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 5,
+    "slug": "/python/drop_collection"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "flush()",
+    "permalink": "/reference/python/flush"
+  },
+  "next": {
+    "title": "Vector API",
+    "permalink": "/reference/python/vector"
+  }
+}

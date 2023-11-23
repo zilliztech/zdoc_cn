@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/users-roles/a-panorama-view",
+  "id": "byoc/users-roles/a-panorama-view",
+  "title": "A Panorama View",
+  "description": "Zilliz Cloud facilitates access control across three distinct scopes:",
+  "source": "@site/docs/byoc/users-roles/a-panorama-view.md",
+  "sourceDirName": "byoc/users-roles",
+  "slug": "/docs/byoc/a-panorama-view",
+  "permalink": "/docs/byoc/a-panorama-view",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/a-panorama-view",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 1
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Users & Roles",
+    "permalink": "/users-roles"
+  },
+  "next": {
+    "title": "Manage Organizations and Members",
+    "permalink": "/docs/byoc/manage-orgs-and-members"
+  }
+}

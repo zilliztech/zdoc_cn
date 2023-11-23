@@ -1,0 +1,15 @@
+{
+  "title": "Python SDK Reference",
+  "slug": "/python",
+  "permalink": "/reference/python",
+  "navigation": {
+    "previous": {
+      "title": "Upsert",
+      "permalink": "/reference/upsert"
+    },
+    "next": {
+      "title": "Client API",
+      "permalink": "/reference/python/client"
+    }
+  }
+}

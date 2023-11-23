@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/faqs/faq-users-and-roles",
+  "id": "tutorials/faqs/faq-users-and-roles",
+  "title": "FAQ：用户和角色",
+  "description": "本文列举了 Zilliz Cloud 用户和角色相关的常见问题及对应解决方法。",
+  "source": "@site/docs/tutorials/faqs/faq-users-and-roles.md",
+  "sourceDirName": "tutorials/faqs",
+  "slug": "/docs/faq-users-and-roles",
+  "permalink": "/docs/faq-users-and-roles",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "slug": "/docs/faq-users-and-roles",
+    "beta": null,
+    "notebook": null,
+    "sidebar_position": 8
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "FAQ：备份与恢复",
+    "permalink": "/docs/faq-backup-and-restore"
+  },
+  "next": {
+    "title": "FAQ：监控与指标",
+    "permalink": "/docs/faq-monitors-and-metrics"
+  }
+}

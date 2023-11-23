@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/cluster/create-cluster",
+  "id": "byoc/cluster/create-cluster",
+  "title": "Create Cluster",
+  "description": "This topic describes how to create a cluster.",
+  "source": "@site/docs/byoc/cluster/create-cluster.md",
+  "sourceDirName": "byoc/cluster",
+  "slug": "/docs/byoc/create-cluster",
+  "permalink": "/docs/byoc/create-cluster",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/create-cluster",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 1
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Cluster",
+    "permalink": "/cluster"
+  },
+  "next": {
+    "title": "Connect to Cluster",
+    "permalink": "/docs/byoc/connect-to-cluster"
+  }
+}

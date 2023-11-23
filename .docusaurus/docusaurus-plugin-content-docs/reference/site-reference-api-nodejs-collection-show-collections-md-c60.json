@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/nodejs/Collection/showCollections()",
+  "id": "api/nodejs/Collection/showCollections()",
+  "title": "showCollections()",
+  "description": "调用接口查询当前已创建的所有 Collection。",
+  "source": "@site/reference/api/nodejs/Collection/showCollections().md",
+  "sourceDirName": "api/nodejs/Collection",
+  "slug": "/nodejs/show_collection",
+  "permalink": "/reference/nodejs/show_collection",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 2,
+    "slug": "/nodejs/show_collection"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "describeCollection()",
+    "permalink": "/reference/nodejs/describe_collection"
+  },
+  "next": {
+    "title": "dropCollection()",
+    "permalink": "/reference/nodejs/drop_collection"
+  }
+}

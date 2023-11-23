@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[3273],{5244:e=>{e.exports=JSON.parse('{"title":"\u5e10\u6237","slug":"accounts","permalink":"/accounts","navigation":{"previous":{"title":"\u5e10\u6237\u4e0e\u5b89\u5168","permalink":"/account-and-security"},"next":{"title":"\u6ce8\u518c\u8d26\u53f7","permalink":"/docs/register-with-zilliz-cloud"}}}')}}]);

@@ -1,0 +1,15 @@
+{
+  "title": "Go SDK Reference",
+  "slug": "/go",
+  "permalink": "/reference/go",
+  "navigation": {
+    "previous": {
+      "title": "search()",
+      "permalink": "/reference/api/java/Vector/search()"
+    },
+    "next": {
+      "title": "Client API",
+      "permalink": "/reference/go/client"
+    }
+  }
+}

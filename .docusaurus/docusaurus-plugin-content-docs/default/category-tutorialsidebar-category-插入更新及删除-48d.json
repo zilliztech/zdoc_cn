@@ -1,0 +1,15 @@
+{
+  "title": "插入、更新及删除",
+  "slug": "insert-update-and-delete",
+  "permalink": "/insert-update-and-delete",
+  "navigation": {
+    "previous": {
+      "title": "删除 Collection",
+      "permalink": "/docs/drop-collection"
+    },
+    "next": {
+      "title": "插入 Entity",
+      "permalink": "/docs/insert-entities"
+    }
+  }
+}

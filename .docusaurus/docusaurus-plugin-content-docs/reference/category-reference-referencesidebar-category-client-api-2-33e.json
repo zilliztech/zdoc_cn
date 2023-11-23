@@ -1,0 +1,15 @@
+{
+  "title": "Client API",
+  "slug": "/go/client",
+  "permalink": "/reference/go/client",
+  "navigation": {
+    "previous": {
+      "title": "Go SDK 参考",
+      "permalink": "/reference/go"
+    },
+    "next": {
+      "title": "NewClient()",
+      "permalink": "/reference/go/new-client"
+    }
+  }
+}

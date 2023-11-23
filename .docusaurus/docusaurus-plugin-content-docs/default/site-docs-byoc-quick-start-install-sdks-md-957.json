@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/quick-start/install-sdks",
+  "id": "byoc/quick-start/install-sdks",
+  "title": "Install SDKs",
+  "description": "Discover how to seamlessly install Milvus SDKs, allowing efficient connections to Zilliz Cloud clusters.",
+  "source": "@site/docs/byoc/quick-start/install-sdks.md",
+  "sourceDirName": "byoc/quick-start",
+  "slug": "/docs/byoc/install-sdks",
+  "permalink": "/docs/byoc/install-sdks",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/install-sdks",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 4
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Activate Your Cloud",
+    "permalink": "/docs/byoc/activate-your-cloud"
+  },
+  "next": {
+    "title": "Example Dataset",
+    "permalink": "/docs/byoc/example-dataset"
+  }
+}

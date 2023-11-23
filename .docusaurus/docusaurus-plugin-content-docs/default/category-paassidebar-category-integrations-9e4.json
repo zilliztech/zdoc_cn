@@ -1,0 +1,15 @@
+{
+  "title": "Integrations",
+  "slug": "integrations",
+  "permalink": "/integrations",
+  "navigation": {
+    "previous": {
+      "title": "Set up Whitelist",
+      "permalink": "/docs/byoc/set-up-whitelist"
+    },
+    "next": {
+      "title": "Similarity Search with Zilliz Cloud and OpenAI",
+      "permalink": "/docs/byoc/similarity-search-with-zilliz-cloud-and-openai"
+    }
+  }
+}

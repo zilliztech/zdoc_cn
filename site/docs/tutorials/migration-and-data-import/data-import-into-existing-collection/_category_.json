@@ -1,9 +1,0 @@
-{
-    "label": "导入数据至现有 Collection",
-    "position": 1,
-    "link": {
-        "type": "generated-index",
-        "title": "导入数据至现有 Collection",
-        "slug": "/data-import-into-existing-collection"
-    }
-}

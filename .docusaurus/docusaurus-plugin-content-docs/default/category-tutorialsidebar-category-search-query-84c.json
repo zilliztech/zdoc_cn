@@ -1,0 +1,15 @@
+{
+  "title": "Search & Query",
+  "slug": "/docs/search-and-query",
+  "permalink": "/docs/search-and-query",
+  "navigation": {
+    "previous": {
+      "title": "Delete Entities",
+      "permalink": "/docs/delete-entities"
+    },
+    "next": {
+      "title": "Search, Query, and Get",
+      "permalink": "/docs/search-query-and-get"
+    }
+  }
+}

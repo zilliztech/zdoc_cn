@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/monitors-metrics/cu-resource-monitor",
+  "id": "tutorials/monitors-metrics/cu-resource-monitor",
+  "title": "CU 资源监控",
+  "description": "Zilliz Cloud 提供 CU 资源监控功能，以帮助您及时扩展集群。该功能支持监控 CPU 和内存使用情况，并以百分比表示。当监控值超过任一指标阈值时，系统会发送告警通知。",
+  "source": "@site/docs/tutorials/monitors-metrics/cu-resource-monitor.md",
+  "sourceDirName": "tutorials/monitors-metrics",
+  "slug": "/docs/cu-resource-monitor",
+  "permalink": "/docs/cu-resource-monitor",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "/docs/cu-resource-monitor",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "监控与指标",
+    "permalink": "/monitors-metrics"
+  },
+  "next": {
+    "title": "QPS 资源监控",
+    "permalink": "/docs/qps-resource-monitor"
+  }
+}

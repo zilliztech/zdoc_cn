@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/backup-and-restore/create-snapshot",
+  "id": "byoc/backup-and-restore/create-snapshot",
+  "title": "Create Snapshot",
+  "description": "Snapshots are point-of-time backup copies of a managed cluster on Zilliz Cloud. You can use it as a baseline for new clusters or just for data backup.",
+  "source": "@site/docs/byoc/backup-and-restore/create-snapshot.md",
+  "sourceDirName": "byoc/backup-and-restore",
+  "slug": "/docs/byoc/create-snapshot",
+  "permalink": "/docs/byoc/create-snapshot",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/create-snapshot",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 1
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Backup & Restore",
+    "permalink": "/backup-and-restore"
+  },
+  "next": {
+    "title": "Schedule Automatic Backups",
+    "permalink": "/docs/byoc/schedule-automatic-backups"
+  }
+}

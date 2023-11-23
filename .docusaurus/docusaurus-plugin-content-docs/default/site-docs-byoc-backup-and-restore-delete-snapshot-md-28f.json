@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/backup-and-restore/delete-snapshot",
+  "id": "byoc/backup-and-restore/delete-snapshot",
+  "title": "Delete Snapshot",
+  "description": "Zilliz Cloud automatically removes the snapshots when they reach the end of their retention period. You can manually delete any available snapshots before then.",
+  "source": "@site/docs/byoc/backup-and-restore/delete-snapshot.md",
+  "sourceDirName": "byoc/backup-and-restore",
+  "slug": "/docs/byoc/delete-snapshot",
+  "permalink": "/docs/byoc/delete-snapshot",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/delete-snapshot",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 5
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Restore from Snapshot",
+    "permalink": "/docs/byoc/restore-from-snapshot"
+  },
+  "next": {
+    "title": "Users & Roles",
+    "permalink": "/users-roles"
+  }
+}

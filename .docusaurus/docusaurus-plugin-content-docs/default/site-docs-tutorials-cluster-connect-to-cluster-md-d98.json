@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/cluster/connect-to-cluster",
+  "id": "tutorials/cluster/connect-to-cluster",
+  "title": "连接集群",
+  "description": "本文介绍如何连接到 Zilliz Cloud 集群。",
+  "source": "@site/docs/tutorials/cluster/connect-to-cluster.md",
+  "sourceDirName": "tutorials/cluster",
+  "slug": "/docs/connect-to-cluster",
+  "permalink": "/docs/connect-to-cluster",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/docs/connect-to-cluster",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "创建集群",
+    "permalink": "/docs/create-cluster"
+  },
+  "next": {
+    "title": "管理集群",
+    "permalink": "/docs/manage-cluster"
+  }
+}

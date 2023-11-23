@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/python/Vector/query()",
+  "id": "api/python/Vector/query()",
+  "title": "query()",
+  "description": "调用接口查询 Collection 中满足指定条件的 Entity。",
+  "source": "@site/reference/api/python/Vector/query().md",
+  "sourceDirName": "api/python/Vector",
+  "slug": "/python/query",
+  "permalink": "/reference/python/query",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 2,
+    "slug": "/python/query"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "search()",
+    "permalink": "/reference/python/search"
+  },
+  "next": {
+    "title": "get()",
+    "permalink": "/reference/python/get"
+  }
+}

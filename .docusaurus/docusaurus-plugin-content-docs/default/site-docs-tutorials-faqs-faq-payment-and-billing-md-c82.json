@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/faqs/faq-payment-and-billing",
+  "id": "tutorials/faqs/faq-payment-and-billing",
+  "title": "FAQ：支付方式与账单",
+  "description": "本文列举了 Zilliz Cloud 支付方式与账单相关的常见问题及对应解决方法。",
+  "source": "@site/docs/tutorials/faqs/faq-payment-and-billing.md",
+  "sourceDirName": "tutorials/faqs",
+  "slug": "/docs/faq-payment-and-billing",
+  "permalink": "/docs/faq-payment-and-billing",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "slug": "/docs/faq-payment-and-billing",
+    "beta": null,
+    "notebook": null,
+    "sidebar_position": 12
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "FAQ：鉴权",
+    "permalink": "/docs/faq-authentication"
+  },
+  "next": {
+    "title": "FAQ：AI 模型集成",
+    "permalink": "/docs/faq-integrations"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/payment-billing/view-invoice",
+  "id": "tutorials/payment-billing/view-invoice",
+  "title": "查看账单与支付方式",
+  "description": "首次注册 Zilliz Cloud 的用户即可获赠 ¥300 免费额度，享受 30 天免费试用。试用到期或免费额度使用完毕后，您需要添加支付方式并付清您的账单以继续使用 Zilliz Cloud 服务。",
+  "source": "@site/docs/tutorials/payment-billing/view-invoice.md",
+  "sourceDirName": "tutorials/payment-billing",
+  "slug": "/docs/view-invoice",
+  "permalink": "/docs/view-invoice",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/docs/view-invoice",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "现金充值",
+    "permalink": "/docs/advance-pay"
+  },
+  "next": {
+    "title": "企业认证",
+    "permalink": "/docs/enterprise-certification"
+  }
+}

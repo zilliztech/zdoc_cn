@@ -1,0 +1,29 @@
+{
+  "unversionedId": "api/restful/Vector/get",
+  "id": "api/restful/Vector/get",
+  "title": "按 ID 查询",
+  "description": "在 Collection 按指定 ID 返回对应的 Entity。",
+  "source": "@site/reference/api/restful/Vector/get.md",
+  "sourceDirName": "api/restful/Vector",
+  "slug": "/get",
+  "permalink": "/reference/get",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 0,
+    "slug": "/get",
+    "title": "按 ID 查询"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "删除 Entity",
+    "permalink": "/reference/delete"
+  },
+  "next": {
+    "title": "插入 Entity",
+    "permalink": "/reference/insert"
+  }
+}

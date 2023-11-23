@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/organization-settings/delete-your-org",
+  "id": "tutorials/organization-settings/delete-your-org",
+  "title": "删除组织",
+  "description": "本教程介绍如何删除 Zilliz Cloud 组织。组织删除后，其数据将被清空且无法恢复。",
+  "source": "@site/docs/tutorials/organization-settings/delete-your-org.md",
+  "sourceDirName": "tutorials/organization-settings",
+  "slug": "/docs/delete-your-org",
+  "permalink": "/docs/delete-your-org",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/docs/delete-your-org",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "设置运维窗口",
+    "permalink": "/docs/set-up-maintenance-window"
+  },
+  "next": {
+    "title": "使用回收站",
+    "permalink": "/docs/use-recycle-bin"
+  }
+}

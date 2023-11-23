@@ -1,0 +1,15 @@
+{
+  "title": "Advanced Features",
+  "slug": "/docs/advanced-features",
+  "permalink": "/docs/advanced-features",
+  "navigation": {
+    "previous": {
+      "title": "Search and Query with Advanced Expressions",
+      "permalink": "/docs/search-and-query-advanced-expressions"
+    },
+    "next": {
+      "title": "Enable Dynamic Schema",
+      "permalink": "/docs/enable-dynamic-schema"
+    }
+  }
+}

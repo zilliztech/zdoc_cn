@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/java/Collection/createCollection()",
+  "id": "api/java/Collection/createCollection()",
+  "title": "createCollection()",
+  "description": "调用接口创建 Collection。本方法将使用更少量的参数来创建 Collection。",
+  "source": "@site/reference/api/java/Collection/createCollection().md",
+  "sourceDirName": "api/java/Collection",
+  "slug": "/java/create_collection",
+  "permalink": "/reference/java/create_collection",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 0,
+    "slug": "/java/create_collection"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "Collection APIs",
+    "permalink": "/reference/java/collection"
+  },
+  "next": {
+    "title": "describeCollection()",
+    "permalink": "/reference/java/describe_collection"
+  }
+}

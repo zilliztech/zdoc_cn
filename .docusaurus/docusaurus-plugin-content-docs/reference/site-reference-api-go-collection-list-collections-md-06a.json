@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/go/Collection/ListCollections()",
+  "id": "api/go/Collection/ListCollections()",
+  "title": "ListCollections()",
+  "description": "调用接口查询当前已创建的所有 Collection。注意，Schema 信息不包含在返回结果中。",
+  "source": "@site/reference/api/go/Collection/ListCollections().md",
+  "sourceDirName": "api/go/Collection",
+  "slug": "/go/list_collection",
+  "permalink": "/reference/go/list_collection",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 2,
+    "slug": "/go/list_collection"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "DescribeCollection()",
+    "permalink": "/reference/go/describe_collection"
+  },
+  "next": {
+    "title": "DropCollection()",
+    "permalink": "/reference/go/drop_collection"
+  }
+}

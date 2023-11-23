@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[3334],{4338:e=>{e.exports=JSON.parse('{"title":"Collection \u53ca\u7d22\u5f15","slug":"collection-and-index","permalink":"/collection-and-index","navigation":{"previous":{"title":"Collection","permalink":"/collection"},"next":{"title":"\u521b\u5efa Collection","permalink":"/docs/create-collection"}}}')}}]);

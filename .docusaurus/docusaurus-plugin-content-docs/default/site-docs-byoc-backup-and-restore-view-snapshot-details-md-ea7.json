@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/backup-and-restore/view-snapshot-details",
+  "id": "byoc/backup-and-restore/view-snapshot-details",
+  "title": "View Snapshot Details",
+  "description": "This guide walks you through how to check the details of automatically or manually created snapshots.",
+  "source": "@site/docs/byoc/backup-and-restore/view-snapshot-details.md",
+  "sourceDirName": "byoc/backup-and-restore",
+  "slug": "/docs/byoc/view-snapshot-details",
+  "permalink": "/docs/byoc/view-snapshot-details",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/view-snapshot-details",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 3
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Schedule Automatic Backups",
+    "permalink": "/docs/byoc/schedule-automatic-backups"
+  },
+  "next": {
+    "title": "Restore from Snapshot",
+    "permalink": "/docs/byoc/restore-from-snapshot"
+  }
+}

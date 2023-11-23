@@ -1,0 +1,15 @@
+{
+  "title": "Cluster",
+  "slug": "cluster",
+  "permalink": "/cluster",
+  "navigation": {
+    "previous": {
+      "title": "Data Security",
+      "permalink": "/docs/byoc/data-security"
+    },
+    "next": {
+      "title": "Create Cluster",
+      "permalink": "/docs/byoc/create-cluster"
+    }
+  }
+}

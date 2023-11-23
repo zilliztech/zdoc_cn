@@ -1,0 +1,15 @@
+{
+  "title": "Data Import",
+  "slug": "/docs/data-import",
+  "permalink": "/docs/data-import",
+  "navigation": {
+    "previous": {
+      "title": "Use JSON Fields",
+      "permalink": "/docs/javascript-object-notation-json"
+    },
+    "next": {
+      "title": "Prepare Data Import",
+      "permalink": "/docs/use-bulkwriter-for-data-import"
+    }
+  }
+}

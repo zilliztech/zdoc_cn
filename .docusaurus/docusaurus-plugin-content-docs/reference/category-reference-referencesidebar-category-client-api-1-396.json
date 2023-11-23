@@ -1,0 +1,15 @@
+{
+  "title": "Client API",
+  "slug": "/java/client",
+  "permalink": "/reference/java/client",
+  "navigation": {
+    "previous": {
+      "title": "Java SDK 参考",
+      "permalink": "/reference/java"
+    },
+    "next": {
+      "title": "MilvusServiceClient",
+      "permalink": "/reference/java/milvus_service_client"
+    }
+  }
+}

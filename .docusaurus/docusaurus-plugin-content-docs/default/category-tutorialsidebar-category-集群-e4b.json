@@ -1,0 +1,15 @@
+{
+  "title": "集群",
+  "slug": "cluster",
+  "permalink": "/cluster",
+  "navigation": {
+    "previous": {
+      "title": "数据安全",
+      "permalink": "/docs/data-security"
+    },
+    "next": {
+      "title": "创建集群",
+      "permalink": "/docs/create-cluster"
+    }
+  }
+}

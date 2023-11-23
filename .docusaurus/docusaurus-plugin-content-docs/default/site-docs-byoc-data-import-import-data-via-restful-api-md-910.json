@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/data-import/import-data-via-restful-api",
+  "id": "byoc/data-import/import-data-via-restful-api",
+  "title": "Import Data via RESTful API",
+  "description": "This tutorial guides you through the process of importing data into an existing collection by calling the RESTful API.",
+  "source": "@site/docs/byoc/data-import/import-data-via-restful-api.md",
+  "sourceDirName": "byoc/data-import",
+  "slug": "/docs/byoc/import-data-via-restful-api",
+  "permalink": "/docs/byoc/import-data-via-restful-api",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/import-data-via-restful-api",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 3
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Import Data on Web UI",
+    "permalink": "/docs/byoc/import-data-on-web-ui"
+  },
+  "next": {
+    "title": "Import Data via SDKs",
+    "permalink": "/docs/byoc/import-data-via-sdks"
+  }
+}

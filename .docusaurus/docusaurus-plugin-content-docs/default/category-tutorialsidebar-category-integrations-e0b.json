@@ -1,0 +1,15 @@
+{
+  "title": "Integrations",
+  "slug": "/docs/integrations",
+  "permalink": "/docs/integrations",
+  "navigation": {
+    "previous": {
+      "title": "View Invoice",
+      "permalink": "/docs/view-invoice"
+    },
+    "next": {
+      "title": "Similarity Search with Zilliz Cloud and OpenAI",
+      "permalink": "/docs/similarity-search-with-zilliz-cloud-and-openai"
+    }
+  }
+}

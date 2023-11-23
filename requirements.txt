@@ -1,6 +1,0 @@
-tqdm
-requests
-translate
-python-dotenv
-python-slugify
-jinja2

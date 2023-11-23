@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/python/Client/MilvusClient()",
+  "id": "api/python/Client/MilvusClient()",
+  "title": "MilvusClient()",
+  "description": "调用接口创建 MilvusClient 实例。",
+  "source": "@site/reference/api/python/Client/MilvusClient().md",
+  "sourceDirName": "api/python/Client",
+  "slug": "/python/milvus-client",
+  "permalink": "/reference/python/milvus-client",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 0,
+    "slug": "/python/milvus-client"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "Client API",
+    "permalink": "/reference/python/client"
+  },
+  "next": {
+    "title": "Collection API",
+    "permalink": "/reference/python/collection"
+  }
+}

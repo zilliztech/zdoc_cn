@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/organization-settings/manage-timezone",
+  "id": "byoc/organization-settings/manage-timezone",
+  "title": "Manage Timezone",
+  "description": "The system time zone is set to where your first login occurs and applies to all time strings displayed on Zilliz Cloud.",
+  "source": "@site/docs/byoc/organization-settings/manage-timezone.md",
+  "sourceDirName": "byoc/organization-settings",
+  "slug": "/docs/byoc/manage-timezone",
+  "permalink": "/docs/byoc/manage-timezone",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/manage-timezone",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 1
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Organization Settings",
+    "permalink": "/organization-settings"
+  },
+  "next": {
+    "title": "Set up Maintenance Window",
+    "permalink": "/docs/byoc/set-up-maintenance-window"
+  }
+}

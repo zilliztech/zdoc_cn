@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/backup-and-restore/restore-from-snapshot",
+  "id": "byoc/backup-and-restore/restore-from-snapshot",
+  "title": "Restore from Snapshot",
+  "description": "This guide walks you through how to restore from a listed snapshot. You can only restore the snapshots in the AVAILABLE state.",
+  "source": "@site/docs/byoc/backup-and-restore/restore-from-snapshot.md",
+  "sourceDirName": "byoc/backup-and-restore",
+  "slug": "/docs/byoc/restore-from-snapshot",
+  "permalink": "/docs/byoc/restore-from-snapshot",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/restore-from-snapshot",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 4
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "View Snapshot Details",
+    "permalink": "/docs/byoc/view-snapshot-details"
+  },
+  "next": {
+    "title": "Delete Snapshot",
+    "permalink": "/docs/byoc/delete-snapshot"
+  }
+}

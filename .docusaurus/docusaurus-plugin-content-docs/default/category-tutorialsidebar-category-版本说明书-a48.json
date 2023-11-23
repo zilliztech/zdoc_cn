@@ -1,0 +1,15 @@
+{
+  "title": "版本说明书",
+  "slug": "release-notes",
+  "permalink": "/release-notes",
+  "navigation": {
+    "previous": {
+      "title": "FAQ：AI 模型集成",
+      "permalink": "/docs/faq-integrations"
+    },
+    "next": {
+      "title": "版本说明书 2.3.0",
+      "permalink": "/docs/release-notes-230"
+    }
+  }
+}

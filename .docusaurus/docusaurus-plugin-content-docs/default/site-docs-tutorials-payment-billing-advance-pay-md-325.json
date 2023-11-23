@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/payment-billing/advance-pay",
+  "id": "tutorials/payment-billing/advance-pay",
+  "title": "现金充值",
+  "description": "免费试用到期后，您需要添加支付方式方可继续使用 Zilliz Cloud。Zilliz Cloud 支持多种支付方式，包括现金充值和订阅阿里云市场。本章主要介绍如何通过线下转账的方式进行现金充值。如需开具发票，请参考开具发票 。",
+  "source": "@site/docs/tutorials/payment-billing/advance-pay.md",
+  "sourceDirName": "tutorials/payment-billing",
+  "slug": "/docs/advance-pay",
+  "permalink": "/docs/advance-pay",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/docs/advance-pay",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "订阅阿里云市场",
+    "permalink": "/docs/subscribe-on-aliyun-marketplace"
+  },
+  "next": {
+    "title": "查看账单与支付方式",
+    "permalink": "/docs/view-invoice"
+  }
+}

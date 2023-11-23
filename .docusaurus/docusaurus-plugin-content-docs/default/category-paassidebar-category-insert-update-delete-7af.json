@@ -1,0 +1,15 @@
+{
+  "title": "Insert, Update & Delete",
+  "slug": "insert-update-and-delete",
+  "permalink": "/insert-update-and-delete",
+  "navigation": {
+    "previous": {
+      "title": "Drop Collection",
+      "permalink": "/docs/byoc/drop-collection"
+    },
+    "next": {
+      "title": "Insert Entities",
+      "permalink": "/docs/byoc/insert-entities"
+    }
+  }
+}

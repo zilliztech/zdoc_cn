@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/users-roles/manage-projects-and-collaborator",
+  "id": "tutorials/users-roles/manage-projects-and-collaborator",
+  "title": "管理项目与成员",
+  "description": "在组织和项目的层次结构中，您可以通过以下操作来管理您的项目与成员：",
+  "source": "@site/docs/tutorials/users-roles/manage-projects-and-collaborator.md",
+  "sourceDirName": "tutorials/users-roles",
+  "slug": "/docs/manage-projects-and-collaborator",
+  "permalink": "/docs/manage-projects-and-collaborator",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/docs/manage-projects-and-collaborator",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "管理组织与成员",
+    "permalink": "/docs/manage-orgs-and-members"
+  },
+  "next": {
+    "title": "组织设置",
+    "permalink": "/organization-settings"
+  }
+}

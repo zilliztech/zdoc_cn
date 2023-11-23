@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/integrations/documentation-qa-using-zilliz-cloud-and-llamaindex",
+  "id": "byoc/integrations/documentation-qa-using-zilliz-cloud-and-llamaindex",
+  "title": "Documentation QA using Zilliz Cloud and LlamaIndex",
+  "description": "This guide demonstrates how to integrate LlamaIndex with Zilliz Cloud to retrieve information from designated sources.",
+  "source": "@site/docs/byoc/integrations/documentation-qa-using-zilliz-cloud-and-llamaindex.md",
+  "sourceDirName": "byoc/integrations",
+  "slug": "/docs/byoc/documentation-qa-using-zilliz-cloud-and-llamaindex",
+  "permalink": "/docs/byoc/documentation-qa-using-zilliz-cloud-and-llamaindex",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/documentation-qa-using-zilliz-cloud-and-llamaindex",
+    "beta": false,
+    "notebook": "85_integrations_llamaindex.ipynb",
+    "sidebar_position": 6
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Image Search with Zilliz Cloud and PyTorch",
+    "permalink": "/docs/byoc/image-search-with-zilliz-cloud-and-pytorch"
+  },
+  "next": {
+    "title": "Movie Search Using Zilliz Cloud and SentenceTransformers",
+    "permalink": "/docs/byoc/movie-search-using-zilliz-cloud-and-sentencetransformers"
+  }
+}

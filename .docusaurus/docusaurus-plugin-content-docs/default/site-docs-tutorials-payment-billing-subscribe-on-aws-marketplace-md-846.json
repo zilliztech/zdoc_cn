@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/payment-billing/subscribe-on-aws-marketplace",
+  "id": "tutorials/payment-billing/subscribe-on-aws-marketplace",
+  "title": "Subscribe on AWS Marketplace",
+  "description": "This guide provides a step-by-step walkthrough of the subscription process and outlines the pricing terms of Zilliz Cloud on AWS Marketplace.",
+  "source": "@site/docs/tutorials/payment-billing/subscribe-on-aws-marketplace.md",
+  "sourceDirName": "tutorials/payment-billing",
+  "slug": "/docs/subscribe-on-aws-marketplace",
+  "permalink": "/docs/subscribe-on-aws-marketplace",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/docs/subscribe-on-aws-marketplace",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Subscribe by Adding Credit Card",
+    "permalink": "/docs/subscribe-by-adding-credit-card"
+  },
+  "next": {
+    "title": "Use Advance Pay",
+    "permalink": "/docs/advance-pay"
+  }
+}

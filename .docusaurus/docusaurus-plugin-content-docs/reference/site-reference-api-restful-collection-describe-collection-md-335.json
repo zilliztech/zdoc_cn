@@ -1,0 +1,29 @@
+{
+  "unversionedId": "api/restful/Collection/describe-collection",
+  "id": "api/restful/Collection/describe-collection",
+  "title": "查看 Collection 详情",
+  "description": "描述 Collection 的详细信息。",
+  "source": "@site/reference/api/restful/Collection/describe-collection.md",
+  "sourceDirName": "api/restful/Collection",
+  "slug": "/describe-collection",
+  "permalink": "/reference/describe-collection",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 0,
+    "slug": "/describe-collection",
+    "title": "查看 Collection 详情"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "创建 Collection",
+    "permalink": "/reference/create-collection"
+  },
+  "next": {
+    "title": "删除 Collection",
+    "permalink": "/reference/drop-collection"
+  }
+}

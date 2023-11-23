@@ -1,0 +1,15 @@
+{
+  "title": "Authentication",
+  "slug": "authentication",
+  "permalink": "/authentication",
+  "navigation": {
+    "previous": {
+      "title": "Manage Your Account",
+      "permalink": "/docs/byoc/delete-your-account"
+    },
+    "next": {
+      "title": "Manage API Keys",
+      "permalink": "/docs/byoc/manage-api-keys"
+    }
+  }
+}

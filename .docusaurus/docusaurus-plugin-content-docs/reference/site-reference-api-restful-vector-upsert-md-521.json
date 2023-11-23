@@ -1,0 +1,29 @@
+{
+  "unversionedId": "api/restful/Vector/upsert",
+  "id": "api/restful/Vector/upsert",
+  "title": "Upsert",
+  "description": "Inserts one or more entities into a collection.",
+  "source": "@site/reference/api/restful/Vector/upsert.md",
+  "sourceDirName": "api/restful/Vector",
+  "slug": "/upsert",
+  "permalink": "/reference/upsert",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "displayed_sidebar": "referenceSidebar",
+    "sidebar_position": 0,
+    "slug": "/upsert",
+    "title": "Upsert"
+  },
+  "sidebar": "referenceSidebar",
+  "previous": {
+    "title": "Search",
+    "permalink": "/reference/search"
+  },
+  "next": {
+    "title": "Python SDK Reference",
+    "permalink": "/reference/python"
+  }
+}

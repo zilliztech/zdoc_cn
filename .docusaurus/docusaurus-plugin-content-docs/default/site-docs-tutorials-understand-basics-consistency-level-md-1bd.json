@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/understand-basics/consistency-level",
+  "id": "tutorials/understand-basics/consistency-level",
+  "title": "一致性等级",
+  "description": "在分布式数据库中，一致性等级确保在读写操作期间，每个节点或副本都能获取到相同的数据。Zilliz Cloud 提供 3 种一致性级别：Strong、Bounded 和 Eventually。Zilliz Cloud 默认采用的一致性水平为 Bounded。",
+  "source": "@site/docs/tutorials/understand-basics/consistency-level.md",
+  "sourceDirName": "tutorials/understand-basics",
+  "slug": "/docs/consistency-level",
+  "permalink": "/docs/consistency-level",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "slug": "/docs/consistency-level",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 6
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "相似性度量",
+    "permalink": "/docs/search-metrics-explained"
+  },
+  "next": {
+    "title": "数据安全",
+    "permalink": "/docs/data-security"
+  }
+}

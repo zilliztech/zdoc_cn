@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/users-roles/a-panorama-view",
+  "id": "tutorials/users-roles/a-panorama-view",
+  "title": "权限概览",
+  "description": "Zilliz Cloud 通过以下层面实现访问控制：",
+  "source": "@site/docs/tutorials/users-roles/a-panorama-view.md",
+  "sourceDirName": "tutorials/users-roles",
+  "slug": "/docs/a-panorama-view",
+  "permalink": "/docs/a-panorama-view",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "/docs/a-panorama-view",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "用户和角色",
+    "permalink": "/users-roles"
+  },
+  "next": {
+    "title": "管理组织与成员",
+    "permalink": "/docs/manage-orgs-and-members"
+  }
+}

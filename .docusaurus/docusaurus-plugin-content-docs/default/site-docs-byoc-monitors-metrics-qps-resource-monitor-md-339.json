@@ -1,0 +1,30 @@
+{
+  "unversionedId": "byoc/monitors-metrics/qps-resource-monitor",
+  "id": "byoc/monitors-metrics/qps-resource-monitor",
+  "title": "Monitor QPS",
+  "description": "To optimize your Zilliz Cloud cluster’s performance through timely adjustments of queries per second (QPS), it is advisable to activate the QPS resource monitor.",
+  "source": "@site/docs/byoc/monitors-metrics/qps-resource-monitor.md",
+  "sourceDirName": "byoc/monitors-metrics",
+  "slug": "/docs/byoc/qps-resource-monitor",
+  "permalink": "/docs/byoc/qps-resource-monitor",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "displayed_sidebar": "paasSidebar",
+    "slug": "/docs/byoc/qps-resource-monitor",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 2
+  },
+  "sidebar": "paasSidebar",
+  "previous": {
+    "title": "Monitor CU Resources",
+    "permalink": "/docs/byoc/cu-resource-monitor"
+  },
+  "next": {
+    "title": "Monitor Query Latency",
+    "permalink": "/docs/byoc/query-latency-monitor"
+  }
+}

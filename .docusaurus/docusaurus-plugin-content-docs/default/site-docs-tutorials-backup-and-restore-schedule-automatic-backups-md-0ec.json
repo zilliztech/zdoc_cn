@@ -1,0 +1,29 @@
+{
+  "unversionedId": "tutorials/backup-and-restore/schedule-automatic-backups",
+  "id": "tutorials/backup-and-restore/schedule-automatic-backups",
+  "title": "创建自动备份",
+  "description": "Zilliz Cloud 允许您为集群创建自动备份，确保意外发生时可以进行数据恢复。定期备份可以防止数据丢失，您也可以通过快照轻松将数据恢复到特定时间点。",
+  "source": "@site/docs/tutorials/backup-and-restore/schedule-automatic-backups.md",
+  "sourceDirName": "tutorials/backup-and-restore",
+  "slug": "/docs/schedule-automatic-backups",
+  "permalink": "/docs/schedule-automatic-backups",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/docs/schedule-automatic-backups",
+    "beta": false,
+    "notebook": false,
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "创建备份快照",
+    "permalink": "/docs/create-snapshot"
+  },
+  "next": {
+    "title": "查看备份快照",
+    "permalink": "/docs/view-snapshot-details"
+  }
+}

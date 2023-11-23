@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[5410],{3632:t=>{t.exports=JSON.parse('{"title":"\u5b89\u5168","slug":"security","permalink":"/security","navigation":{"previous":{"title":"\u7ba1\u7406 MFA","permalink":"/docs/multi-factor-authentication"},"next":{"title":"\u8bbe\u7f6e\u767d\u540d\u5355","permalink":"/docs/set-up-whitelist"}}}')}}]);
