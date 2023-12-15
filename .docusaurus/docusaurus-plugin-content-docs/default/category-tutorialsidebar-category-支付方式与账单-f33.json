@@ -1,11 +1,11 @@
 {
   "title": "支付方式与账单",
-  "slug": "payment-billing",
-  "permalink": "/payment-billing",
+  "slug": "/docs/payment-billing",
+  "permalink": "/docs/payment-billing",
   "navigation": {
     "previous": {
       "title": "创建私网连接",
-      "permalink": "/docs/set-up-a-private-link"
+      "permalink": "/docs/setup-a-private-link"
     },
     "next": {
       "title": "订阅阿里云市场",

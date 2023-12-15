@@ -43,7 +43,7 @@
               },
               "next": {
                 "title": "鉴权",
-                "permalink": "/authentication"
+                "permalink": "/docs/authentication"
               }
             },
             {
@@ -68,7 +68,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "帐户",
-                "permalink": "/accounts"
+                "permalink": "/docs/accounts"
               },
               "next": {
                 "title": "管理账号",
@@ -97,7 +97,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "鉴权",
-                "permalink": "/authentication"
+                "permalink": "/docs/authentication"
               },
               "next": {
                 "title": "管理身份凭证",
@@ -159,7 +159,7 @@
               },
               "next": {
                 "title": "安全",
-                "permalink": "/security"
+                "permalink": "/docs/security"
               }
             },
             {
@@ -169,14 +169,14 @@
               "description": "Zilliz Cloud 允许您通过私网连接（PrivateLink）访问您的集群。如果您不希望通过公众互联网访问您位于 Zilliz Cloud 上的集群， 可以按照本章的步骤为您的集群创建私网连接。",
               "source": "@site/docs/tutorials/account-and-security/security/set-up-a-private-link.md",
               "sourceDirName": "tutorials/account-and-security/security",
-              "slug": "/docs/set-up-a-private-link",
-              "permalink": "/docs/set-up-a-private-link",
+              "slug": "/docs/setup-a-private-link",
+              "permalink": "/docs/setup-a-private-link",
               "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 2,
               "frontMatter": {
-                "slug": "/docs/set-up-a-private-link",
+                "slug": "/docs/setup-a-private-link",
                 "beta": false,
                 "notebook": false,
                 "sidebar_position": 2
@@ -188,7 +188,7 @@
               },
               "next": {
                 "title": "支付方式与账单",
-                "permalink": "/payment-billing"
+                "permalink": "/docs/payment-billing"
               }
             },
             {
@@ -213,11 +213,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "安全",
-                "permalink": "/security"
+                "permalink": "/docs/security"
               },
               "next": {
                 "title": "创建私网连接",
-                "permalink": "/docs/set-up-a-private-link"
+                "permalink": "/docs/setup-a-private-link"
               }
             },
             {
@@ -242,7 +242,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "备份与恢复",
-                "permalink": "/backup-and-restore"
+                "permalink": "/docs/backup-and-restore"
               },
               "next": {
                 "title": "创建自动备份",
@@ -275,7 +275,7 @@
               },
               "next": {
                 "title": "用户和角色",
-                "permalink": "/users-roles"
+                "permalink": "/docs/users-roles"
               }
             },
             {
@@ -416,7 +416,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "集群",
-                "permalink": "/cluster"
+                "permalink": "/docs/cluster"
               },
               "next": {
                 "title": "连接集群",
@@ -449,7 +449,7 @@
               },
               "next": {
                 "title": "Collection",
-                "permalink": "/collection"
+                "permalink": "/docs/collection"
               }
             },
             {
@@ -474,7 +474,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "高级功能",
-                "permalink": "/advanced-features"
+                "permalink": "/docs/advanced-features"
               },
               "next": {
                 "title": "使用 Partition Key",
@@ -507,7 +507,7 @@
               },
               "next": {
                 "title": "数据导入",
-                "permalink": "/data-import"
+                "permalink": "/docs/data-import"
               }
             },
             {
@@ -561,7 +561,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Collection 及索引",
-                "permalink": "/collection-and-index"
+                "permalink": "/docs/collection-and-index"
               },
               "next": {
                 "title": "管理索引",
@@ -594,7 +594,7 @@
               },
               "next": {
                 "title": "插入、更新及删除",
-                "permalink": "/insert-update-and-delete"
+                "permalink": "/docs/insert-update-and-delete"
               }
             },
             {
@@ -652,7 +652,7 @@
               },
               "next": {
                 "title": "检索及查询",
-                "permalink": "/search-and-query"
+                "permalink": "/docs/search-and-query"
               }
             },
             {
@@ -677,7 +677,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "插入、更新及删除",
-                "permalink": "/insert-update-and-delete"
+                "permalink": "/docs/insert-update-and-delete"
               },
               "next": {
                 "title": "Upsert Entity",
@@ -768,7 +768,7 @@
               },
               "next": {
                 "title": "高级功能",
-                "permalink": "/advanced-features"
+                "permalink": "/docs/advanced-features"
               }
             },
             {
@@ -822,7 +822,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "检索及查询",
-                "permalink": "/search-and-query"
+                "permalink": "/docs/search-and-query"
               },
               "next": {
                 "title": "范围搜索",
@@ -913,7 +913,7 @@
               },
               "next": {
                 "title": "数据迁移",
-                "permalink": "/migrations"
+                "permalink": "/docs/migrations"
               }
             },
             {
@@ -938,7 +938,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "数据导入",
-                "permalink": "/data-import"
+                "permalink": "/docs/data-import"
               },
               "next": {
                 "title": "通过 Web 控制台导入",
@@ -1141,7 +1141,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "常见问题",
-                "permalink": "/faqs"
+                "permalink": "/docs/faqs"
               },
               "next": {
                 "title": "FAQ：集群",
@@ -1174,7 +1174,7 @@
               },
               "next": {
                 "title": "版本说明书",
-                "permalink": "/release-notes"
+                "permalink": "/docs/release-notes"
               }
             },
             {
@@ -1406,7 +1406,7 @@
               },
               "next": {
                 "title": "约束与限制",
-                "permalink": "/limits-and-restrictions"
+                "permalink": "/docs/limits-and-restrictions"
               }
             },
             {
@@ -1518,7 +1518,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "AI 模型集成",
-                "permalink": "/integrations"
+                "permalink": "/docs/integrations"
               },
               "next": {
                 "title": "与 HuggingFace 集成搭建问答系统",
@@ -1547,7 +1547,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "约束与限制",
-                "permalink": "/limits-and-restrictions"
+                "permalink": "/docs/limits-and-restrictions"
               },
               "next": {
                 "title": "其他异同",
@@ -1580,7 +1580,7 @@
               },
               "next": {
                 "title": "常见问题",
-                "permalink": "/faqs"
+                "permalink": "/docs/faqs"
               }
             },
             {
@@ -1609,7 +1609,7 @@
               },
               "next": {
                 "title": "资源规划指南",
-                "permalink": "/resource-planning"
+                "permalink": "/docs/resource-planning"
               }
             },
             {
@@ -1663,7 +1663,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "数据迁移",
-                "permalink": "/migrations"
+                "permalink": "/docs/migrations"
               },
               "next": {
                 "title": "从 Elasticsearch 迁移至 Zilliz Cloud",
@@ -1721,7 +1721,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "监控与指标",
-                "permalink": "/monitors-metrics"
+                "permalink": "/docs/monitors-metrics"
               },
               "next": {
                 "title": "QPS 资源监控",
@@ -1870,7 +1870,7 @@
               },
               "next": {
                 "title": "帐户与安全",
-                "permalink": "/account-and-security"
+                "permalink": "/docs/account-and-security"
               }
             },
             {
@@ -1924,7 +1924,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "组织设置",
-                "permalink": "/organization-settings"
+                "permalink": "/docs/organization-settings"
               },
               "next": {
                 "title": "设置运维窗口",
@@ -1986,7 +1986,7 @@
               },
               "next": {
                 "title": "监控与指标",
-                "permalink": "/monitors-metrics"
+                "permalink": "/docs/monitors-metrics"
               }
             },
             {
@@ -2073,7 +2073,7 @@
               },
               "next": {
                 "title": "AI 模型集成",
-                "permalink": "/integrations"
+                "permalink": "/docs/integrations"
               }
             },
             {
@@ -2098,7 +2098,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "支付方式与账单",
-                "permalink": "/payment-billing"
+                "permalink": "/docs/payment-billing"
               },
               "next": {
                 "title": "现金充值",
@@ -2160,7 +2160,7 @@
               },
               "next": {
                 "title": "了解 Zilliz Cloud",
-                "permalink": "/understand-basics"
+                "permalink": "/docs/understand-basics"
               }
             },
             {
@@ -2243,7 +2243,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "从这里开始",
-                "permalink": "/quick-start"
+                "permalink": "/docs/quick-start"
               },
               "next": {
                 "title": "免费试用",
@@ -2384,7 +2384,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "版本说明书",
-                "permalink": "/release-notes"
+                "permalink": "/docs/release-notes"
               },
               "next": {
                 "title": "版本说明书 2.2.1",
@@ -2475,7 +2475,7 @@
               },
               "next": {
                 "title": "备份与恢复",
-                "permalink": "/backup-and-restore"
+                "permalink": "/docs/backup-and-restore"
               }
             },
             {
@@ -2500,7 +2500,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "资源规划指南",
-                "permalink": "/resource-planning"
+                "permalink": "/docs/resource-planning"
               },
               "next": {
                 "title": "选择合适的 CU 类型",
@@ -2558,7 +2558,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "了解 Zilliz Cloud",
-                "permalink": "/understand-basics"
+                "permalink": "/docs/understand-basics"
               },
               "next": {
                 "title": "集群、Collection 及 Entity",
@@ -2678,7 +2678,7 @@
               },
               "next": {
                 "title": "集群",
-                "permalink": "/cluster"
+                "permalink": "/docs/cluster"
               }
             },
             {
@@ -2732,7 +2732,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "用户和角色",
-                "permalink": "/users-roles"
+                "permalink": "/docs/users-roles"
               },
               "next": {
                 "title": "管理组织与成员",
@@ -2794,7 +2794,7 @@
               },
               "next": {
                 "title": "组织设置",
-                "permalink": "/organization-settings"
+                "permalink": "/docs/organization-settings"
               }
             }
           ],
@@ -2827,8 +2827,8 @@
                 "link": {
                   "type": "generated-index",
                   "title": "从这里开始",
-                  "slug": "quick-start",
-                  "permalink": "/quick-start"
+                  "slug": "/docs/quick-start",
+                  "permalink": "/docs/quick-start"
                 }
               },
               {
@@ -2869,8 +2869,8 @@
                 "link": {
                   "type": "generated-index",
                   "title": "了解 Zilliz Cloud",
-                  "slug": "understand-basics",
-                  "permalink": "/understand-basics"
+                  "slug": "/docs/understand-basics",
+                  "permalink": "/docs/understand-basics"
                 }
               },
               {
@@ -2895,8 +2895,8 @@
                 "link": {
                   "type": "generated-index",
                   "title": "集群",
-                  "slug": "cluster",
-                  "permalink": "/cluster"
+                  "slug": "/docs/cluster",
+                  "permalink": "/docs/cluster"
                 }
               },
               {
@@ -2927,8 +2927,8 @@
                     "link": {
                       "type": "generated-index",
                       "title": "Collection 及索引",
-                      "slug": "collection-and-index",
-                      "permalink": "/collection-and-index"
+                      "slug": "/docs/collection-and-index",
+                      "permalink": "/docs/collection-and-index"
                     }
                   },
                   {
@@ -2953,8 +2953,8 @@
                     "link": {
                       "type": "generated-index",
                       "title": "插入、更新及删除",
-                      "slug": "insert-update-and-delete",
-                      "permalink": "/insert-update-and-delete"
+                      "slug": "/docs/insert-update-and-delete",
+                      "permalink": "/docs/insert-update-and-delete"
                     }
                   },
                   {
@@ -2983,8 +2983,8 @@
                     "link": {
                       "type": "generated-index",
                       "title": "检索及查询",
-                      "slug": "search-and-query",
-                      "permalink": "/search-and-query"
+                      "slug": "/docs/search-and-query",
+                      "permalink": "/docs/search-and-query"
                     }
                   },
                   {
@@ -3009,16 +3009,16 @@
                     "link": {
                       "type": "generated-index",
                       "title": "高级功能",
-                      "slug": "advanced-features",
-                      "permalink": "/advanced-features"
+                      "slug": "/docs/advanced-features",
+                      "permalink": "/docs/advanced-features"
                     }
                   }
                 ],
                 "link": {
                   "type": "generated-index",
                   "title": "Collection",
-                  "slug": "collection",
-                  "permalink": "/collection"
+                  "slug": "/docs/collection",
+                  "permalink": "/docs/collection"
                 }
               },
               {
@@ -3047,8 +3047,8 @@
                 "link": {
                   "type": "generated-index",
                   "title": "数据导入",
-                  "slug": "data-import",
-                  "permalink": "/data-import"
+                  "slug": "/docs/data-import",
+                  "permalink": "/docs/data-import"
                 }
               },
               {
@@ -3073,8 +3073,8 @@
                 "link": {
                   "type": "generated-index",
                   "title": "数据迁移",
-                  "slug": "migrations",
-                  "permalink": "/migrations"
+                  "slug": "/docs/migrations",
+                  "permalink": "/docs/migrations"
                 }
               },
               {
@@ -3103,8 +3103,8 @@
                 "link": {
                   "type": "generated-index",
                   "title": "资源规划指南",
-                  "slug": "resource-planning",
-                  "permalink": "/resource-planning"
+                  "slug": "/docs/resource-planning",
+                  "permalink": "/docs/resource-planning"
                 }
               },
               {
@@ -3137,8 +3137,8 @@
                 "link": {
                   "type": "generated-index",
                   "title": "备份与恢复",
-                  "slug": "backup-and-restore",
-                  "permalink": "/backup-and-restore"
+                  "slug": "/docs/backup-and-restore",
+                  "permalink": "/docs/backup-and-restore"
                 }
               },
               {
@@ -3163,8 +3163,8 @@
                 "link": {
                   "type": "generated-index",
                   "title": "用户和角色",
-                  "slug": "users-roles",
-                  "permalink": "/users-roles"
+                  "slug": "/docs/users-roles",
+                  "permalink": "/docs/users-roles"
                 }
               },
               {
@@ -3193,8 +3193,8 @@
                 "link": {
                   "type": "generated-index",
                   "title": "组织设置",
-                  "slug": "organization-settings",
-                  "permalink": "/organization-settings"
+                  "slug": "/docs/organization-settings",
+                  "permalink": "/docs/organization-settings"
                 }
               },
               {
@@ -3235,8 +3235,8 @@
                 "link": {
                   "type": "generated-index",
                   "title": "监控与指标",
-                  "slug": "monitors-metrics",
-                  "permalink": "/monitors-metrics"
+                  "slug": "/docs/monitors-metrics",
+                  "permalink": "/docs/monitors-metrics"
                 }
               },
               {
@@ -3263,8 +3263,8 @@
                     "link": {
                       "type": "generated-index",
                       "title": "帐户",
-                      "slug": "accounts",
-                      "permalink": "/accounts"
+                      "slug": "/docs/accounts",
+                      "permalink": "/docs/accounts"
                     }
                   },
                   {
@@ -3289,8 +3289,8 @@
                     "link": {
                       "type": "generated-index",
                       "title": "鉴权",
-                      "slug": "authentication",
-                      "permalink": "/authentication"
+                      "slug": "/docs/authentication",
+                      "permalink": "/docs/authentication"
                     }
                   },
                   {
@@ -3311,16 +3311,16 @@
                     "link": {
                       "type": "generated-index",
                       "title": "安全",
-                      "slug": "security",
-                      "permalink": "/security"
+                      "slug": "/docs/security",
+                      "permalink": "/docs/security"
                     }
                   }
                 ],
                 "link": {
                   "type": "generated-index",
                   "title": "帐户与安全",
-                  "slug": "account-and-security",
-                  "permalink": "/account-and-security"
+                  "slug": "/docs/account-and-security",
+                  "permalink": "/docs/account-and-security"
                 }
               },
               {
@@ -3353,8 +3353,8 @@
                 "link": {
                   "type": "generated-index",
                   "title": "支付方式与账单",
-                  "slug": "payment-billing",
-                  "permalink": "/payment-billing"
+                  "slug": "/docs/payment-billing",
+                  "permalink": "/docs/payment-billing"
                 }
               },
               {
@@ -3395,8 +3395,8 @@
                 "link": {
                   "type": "generated-index",
                   "title": "AI 模型集成",
-                  "slug": "integrations",
-                  "permalink": "/integrations"
+                  "slug": "/docs/integrations",
+                  "permalink": "/docs/integrations"
                 }
               },
               {
@@ -3417,8 +3417,8 @@
                 "link": {
                   "type": "generated-index",
                   "title": "约束与限制",
-                  "slug": "limits-and-restrictions",
-                  "permalink": "/limits-and-restrictions"
+                  "slug": "/docs/limits-and-restrictions",
+                  "permalink": "/docs/limits-and-restrictions"
                 }
               },
               {
@@ -3483,8 +3483,8 @@
                 "link": {
                   "type": "generated-index",
                   "title": "常见问题",
-                  "slug": "faqs",
-                  "permalink": "/faqs"
+                  "slug": "/docs/faqs",
+                  "permalink": "/docs/faqs"
                 }
               },
               {
@@ -3517,8 +3517,8 @@
                 "link": {
                   "type": "generated-index",
                   "title": "版本说明书",
-                  "slug": "release-notes",
-                  "permalink": "/release-notes"
+                  "slug": "/docs/release-notes",
+                  "permalink": "/docs/release-notes"
                 }
               }
             ]
@@ -5313,14 +5313,14 @@
                 "permalink": "/reference/query"
               },
               "next": {
-                "title": "Upsert",
+                "title": "Upsert Entity",
                 "permalink": "/reference/upsert"
               }
             },
             {
               "unversionedId": "api/restful/Vector/upsert",
               "id": "api/restful/Vector/upsert",
-              "title": "Upsert",
+              "title": "Upsert Entity",
               "description": "插入和更新 Collection 中的记录。",
               "source": "@site/reference/api/restful/Vector/upsert.md",
               "sourceDirName": "api/restful/Vector",
@@ -5334,7 +5334,7 @@
                 "displayed_sidebar": "referenceSidebar",
                 "sidebar_position": 0,
                 "slug": "/upsert",
-                "title": "Upsert"
+                "title": "Upsert Entity"
               },
               "sidebar": "referenceSidebar",
               "previous": {
@@ -6272,7 +6272,7 @@
       {
         "idx": 1,
         "title": "从这里开始",
-        "slug": "quick-start",
+        "slug": "/docs/quick-start",
         "groups": [
           {
             "spos": 1,
@@ -6311,7 +6311,7 @@
       {
         "idx": 2,
         "title": "了解 Zilliz Cloud",
-        "slug": "understand-basics",
+        "slug": "/docs/understand-basics",
         "groups": [
           {
             "spos": 1,
@@ -6374,7 +6374,7 @@
       {
         "idx": 3,
         "title": "集群",
-        "slug": "cluster",
+        "slug": "/docs/cluster",
         "groups": [
           {
             "spos": 1,
@@ -6405,13 +6405,13 @@
       {
         "idx": 4,
         "title": "Collection",
-        "slug": "collection",
+        "slug": "/docs/collection",
         "description": "CRUD Operations Explained",
         "groups": [
           {
             "idx": 1,
             "title": "Collection 及索引",
-            "slug": "collection-and-index",
+            "slug": "/docs/collection-and-index",
             "groups": [
               {
                 "spos": 1,
@@ -6442,7 +6442,7 @@
           {
             "idx": 2,
             "title": "插入、更新及删除",
-            "slug": "insert-update-and-delete",
+            "slug": "/docs/insert-update-and-delete",
             "groups": [
               {
                 "spos": 1,
@@ -6473,7 +6473,7 @@
           {
             "idx": 3,
             "title": "检索及查询",
-            "slug": "search-and-query",
+            "slug": "/docs/search-and-query",
             "groups": [
               {
                 "spos": 1,
@@ -6512,7 +6512,7 @@
           {
             "idx": 4,
             "title": "高级功能",
-            "slug": "advanced-features",
+            "slug": "/docs/advanced-features",
             "groups": [
               {
                 "spos": 1,
@@ -6545,7 +6545,7 @@
       {
         "idx": 5,
         "title": "数据导入",
-        "slug": "data-import",
+        "slug": "/docs/data-import",
         "groups": [
           {
             "spos": 1,
@@ -6584,7 +6584,7 @@
       {
         "idx": 6,
         "title": "数据迁移",
-        "slug": "migrations",
+        "slug": "/docs/migrations",
         "groups": [
           {
             "spos": 1,
@@ -6615,7 +6615,7 @@
       {
         "idx": 7,
         "title": "资源规划指南",
-        "slug": "resource-planning",
+        "slug": "/docs/resource-planning",
         "groups": [
           {
             "spos": 1,
@@ -6654,7 +6654,7 @@
       {
         "idx": 8,
         "title": "备份与恢复",
-        "slug": "backup-and-restore",
+        "slug": "/docs/backup-and-restore",
         "groups": [
           {
             "spos": 1,
@@ -6701,7 +6701,7 @@
       {
         "idx": 9,
         "title": "用户和角色",
-        "slug": "users-roles",
+        "slug": "/docs/users-roles",
         "groups": [
           {
             "spos": 1,
@@ -6732,7 +6732,7 @@
       {
         "idx": 10,
         "title": "组织设置",
-        "slug": "organization-settings",
+        "slug": "/docs/organization-settings",
         "groups": [
           {
             "spos": 1,
@@ -6771,7 +6771,7 @@
       {
         "idx": 11,
         "title": "监控与指标",
-        "slug": "monitors-metrics",
+        "slug": "/docs/monitors-metrics",
         "groups": [
           {
             "spos": 1,
@@ -6834,12 +6834,12 @@
       {
         "idx": 12,
         "title": "帐户与安全",
-        "slug": "account-and-security",
+        "slug": "/docs/account-and-security",
         "groups": [
           {
             "idx": 1,
             "title": "帐户",
-            "slug": "accounts",
+            "slug": "/docs/accounts",
             "groups": [
               {
                 "spos": 1,
@@ -6862,7 +6862,7 @@
           {
             "idx": 2,
             "title": "鉴权",
-            "slug": "authentication",
+            "slug": "/docs/authentication",
             "groups": [
               {
                 "spos": 1,
@@ -6893,7 +6893,7 @@
           {
             "idx": 3,
             "title": "安全",
-            "slug": "security",
+            "slug": "/docs/security",
             "groups": [
               {
                 "spos": 1,
@@ -6906,7 +6906,7 @@
               {
                 "spos": 2,
                 "title": "创建私网连接",
-                "slug": "docs/set-up-a-private-link",
+                "slug": "docs/setup-a-private-link",
                 "colab": false,
                 "github": false,
                 "tag": false
@@ -6918,7 +6918,7 @@
       {
         "idx": 13,
         "title": "支付方式与账单",
-        "slug": "payment-billing",
+        "slug": "/docs/payment-billing",
         "groups": [
           {
             "spos": 1,
@@ -6965,7 +6965,7 @@
       {
         "idx": 14,
         "title": "AI 模型集成",
-        "slug": "integrations",
+        "slug": "/docs/integrations",
         "groups": [
           {
             "spos": 1,
@@ -7028,7 +7028,7 @@
       {
         "idx": 15,
         "title": "约束与限制",
-        "slug": "limits-and-restrictions",
+        "slug": "/docs/limits-and-restrictions",
         "groups": [
           {
             "spos": 1,
@@ -7051,7 +7051,7 @@
       {
         "idx": 16,
         "title": "常见问题",
-        "slug": "faqs",
+        "slug": "/docs/faqs",
         "groups": [
           {
             "spos": 1,
@@ -7162,7 +7162,7 @@
       {
         "idx": 17,
         "title": "版本说明书",
-        "slug": "release-notes",
+        "slug": "/docs/release-notes",
         "groups": [
           {
             "spos": 1,

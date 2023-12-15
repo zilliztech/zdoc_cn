@@ -586,7 +586,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '475'),
+    component: ComponentCreator('/', '19a'),
     routes: [
       {
         path: '/',
@@ -595,62 +595,20 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/account-and-security',
-        component: ComponentCreator('/account-and-security', '9b0'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/accounts',
-        component: ComponentCreator('/accounts', '67e'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/advanced-features',
-        component: ComponentCreator('/advanced-features', '8ee'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/authentication',
-        component: ComponentCreator('/authentication', '050'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/backup-and-restore',
-        component: ComponentCreator('/backup-and-restore', '087'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/cluster',
-        component: ComponentCreator('/cluster', '938'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/collection',
-        component: ComponentCreator('/collection', 'e76'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/collection-and-index',
-        component: ComponentCreator('/collection-and-index', '8f8'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/data-import',
-        component: ComponentCreator('/data-import', '78f'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
         path: '/docs/a-panorama-view',
         component: ComponentCreator('/docs/a-panorama-view', '654'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/account-and-security',
+        component: ComponentCreator('/docs/account-and-security', 'd1b'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/accounts',
+        component: ComponentCreator('/docs/accounts', 'ec5'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -667,6 +625,12 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/docs/advanced-features',
+        component: ComponentCreator('/docs/advanced-features', '546'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/docs/ann-search-explained',
         component: ComponentCreator('/docs/ann-search-explained', '476'),
         exact: true,
@@ -679,8 +643,20 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/docs/authentication',
+        component: ComponentCreator('/docs/authentication', 'cf1'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/docs/autoindex-explained',
         component: ComponentCreator('/docs/autoindex-explained', '85b'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/backup-and-restore',
+        component: ComponentCreator('/docs/backup-and-restore', '6aa'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -691,8 +667,26 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/docs/cluster',
+        component: ComponentCreator('/docs/cluster', '8cf'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/docs/cluster-collection-and-entities',
         component: ComponentCreator('/docs/cluster-collection-and-entities', '1a2'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/collection',
+        component: ComponentCreator('/docs/collection', 'e78'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/collection-and-index',
+        component: ComponentCreator('/docs/collection-and-index', 'f0a'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -741,6 +735,12 @@ export default [
       {
         path: '/docs/cu-types-explained',
         component: ComponentCreator('/docs/cu-types-explained', 'b73'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/data-import',
+        component: ComponentCreator('/docs/data-import', '6d7'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -889,6 +889,12 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/docs/faqs',
+        component: ComponentCreator('/docs/faqs', '9f5'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/docs/free-trials',
         component: ComponentCreator('/docs/free-trials', 'afe'),
         exact: true,
@@ -925,8 +931,20 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/docs/insert-update-and-delete',
+        component: ComponentCreator('/docs/insert-update-and-delete', '857'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/docs/install-sdks',
         component: ComponentCreator('/docs/install-sdks', '272'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/integrations',
+        component: ComponentCreator('/docs/integrations', '898'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -939,6 +957,12 @@ export default [
       {
         path: '/docs/javascript-object-notation-json',
         component: ComponentCreator('/docs/javascript-object-notation-json', '422'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/limits-and-restrictions',
+        component: ComponentCreator('/docs/limits-and-restrictions', 'e66'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -1009,8 +1033,20 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/docs/migrations',
+        component: ComponentCreator('/docs/migrations', '59b'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/docs/monitor-metrics',
         component: ComponentCreator('/docs/monitor-metrics', '551'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/monitors-metrics',
+        component: ComponentCreator('/docs/monitors-metrics', 'b29'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -1027,8 +1063,20 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/docs/organization-settings',
+        component: ComponentCreator('/docs/organization-settings', '03b'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/docs/other-differences',
         component: ComponentCreator('/docs/other-differences', '49d'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/payment-billing',
+        component: ComponentCreator('/docs/payment-billing', 'ee8'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -1069,8 +1117,20 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/docs/quick-start',
+        component: ComponentCreator('/docs/quick-start', '41e'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/docs/register-with-zilliz-cloud',
         component: ComponentCreator('/docs/register-with-zilliz-cloud', '038'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/release-notes',
+        component: ComponentCreator('/docs/release-notes', 'e52'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -1105,6 +1165,12 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/docs/resource-planning',
+        component: ComponentCreator('/docs/resource-planning', '645'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/docs/restore-from-snapshot',
         component: ComponentCreator('/docs/restore-from-snapshot', 'aa3'),
         exact: true,
@@ -1113,6 +1179,12 @@ export default [
       {
         path: '/docs/schedule-automatic-backups',
         component: ComponentCreator('/docs/schedule-automatic-backups', '32a'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/search-and-query',
+        component: ComponentCreator('/docs/search-and-query', '2f5'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -1141,14 +1213,14 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/docs/select-zilliz-cloud-service-plans',
-        component: ComponentCreator('/docs/select-zilliz-cloud-service-plans', 'c7e'),
+        path: '/docs/security',
+        component: ComponentCreator('/docs/security', '990'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/docs/set-up-a-private-link',
-        component: ComponentCreator('/docs/set-up-a-private-link', 'a66'),
+        path: '/docs/select-zilliz-cloud-service-plans',
+        component: ComponentCreator('/docs/select-zilliz-cloud-service-plans', 'c7e'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -1165,6 +1237,12 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/docs/setup-a-private-link',
+        component: ComponentCreator('/docs/setup-a-private-link', 'a19'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/docs/similarity-search-with-zilliz-cloud-and-openai',
         component: ComponentCreator('/docs/similarity-search-with-zilliz-cloud-and-openai', '6a5'),
         exact: true,
@@ -1173,6 +1251,12 @@ export default [
       {
         path: '/docs/subscribe-on-aliyun-marketplace',
         component: ComponentCreator('/docs/subscribe-on-aliyun-marketplace', 'a80'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/understand-basics',
+        component: ComponentCreator('/docs/understand-basics', 'ade'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -1201,6 +1285,12 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/docs/users-roles',
+        component: ComponentCreator('/docs/users-roles', '1ca'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/docs/view-activities',
         component: ComponentCreator('/docs/view-activities', '49e'),
         exact: true,
@@ -1215,96 +1305,6 @@ export default [
       {
         path: '/docs/view-snapshot-details',
         component: ComponentCreator('/docs/view-snapshot-details', '083'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/faqs',
-        component: ComponentCreator('/faqs', 'ba9'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/insert-update-and-delete',
-        component: ComponentCreator('/insert-update-and-delete', 'f70'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/integrations',
-        component: ComponentCreator('/integrations', '3ad'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/limits-and-restrictions',
-        component: ComponentCreator('/limits-and-restrictions', '4b7'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/migrations',
-        component: ComponentCreator('/migrations', '646'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/monitors-metrics',
-        component: ComponentCreator('/monitors-metrics', '10f'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/organization-settings',
-        component: ComponentCreator('/organization-settings', '774'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/payment-billing',
-        component: ComponentCreator('/payment-billing', '5f1'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/quick-start',
-        component: ComponentCreator('/quick-start', 'db3'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/release-notes',
-        component: ComponentCreator('/release-notes', 'dfd'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/resource-planning',
-        component: ComponentCreator('/resource-planning', 'f6a'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/search-and-query',
-        component: ComponentCreator('/search-and-query', '864'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/security',
-        component: ComponentCreator('/security', 'b30'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/understand-basics',
-        component: ComponentCreator('/understand-basics', 'bb2'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/users-roles',
-        component: ComponentCreator('/users-roles', '593'),
         exact: true,
         sidebar: "tutorialSidebar"
       }

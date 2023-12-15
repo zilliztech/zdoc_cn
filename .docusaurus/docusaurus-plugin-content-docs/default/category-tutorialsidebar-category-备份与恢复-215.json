@@ -1,7 +1,7 @@
 {
   "title": "备份与恢复",
-  "slug": "backup-and-restore",
-  "permalink": "/backup-and-restore",
+  "slug": "/docs/backup-and-restore",
+  "permalink": "/docs/backup-and-restore",
   "navigation": {
     "previous": {
       "title": "价格计算器",

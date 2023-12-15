@@ -20,7 +20,7 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "了解 Zilliz Cloud",
-    "permalink": "/understand-basics"
+    "permalink": "/docs/understand-basics"
   },
   "next": {
     "title": "集群、Collection 及 Entity",

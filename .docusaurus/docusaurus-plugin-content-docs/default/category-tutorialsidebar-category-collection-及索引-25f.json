@@ -1,11 +1,11 @@
 {
   "title": "Collection 及索引",
-  "slug": "collection-and-index",
-  "permalink": "/collection-and-index",
+  "slug": "/docs/collection-and-index",
+  "permalink": "/docs/collection-and-index",
   "navigation": {
     "previous": {
       "title": "Collection",
-      "permalink": "/collection"
+      "permalink": "/docs/collection"
     },
     "next": {
       "title": "创建 Collection",

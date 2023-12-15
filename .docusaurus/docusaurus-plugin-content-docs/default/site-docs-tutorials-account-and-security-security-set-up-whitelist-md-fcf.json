@@ -20,10 +20,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "安全",
-    "permalink": "/security"
+    "permalink": "/docs/security"
   },
   "next": {
     "title": "创建私网连接",
-    "permalink": "/docs/set-up-a-private-link"
+    "permalink": "/docs/setup-a-private-link"
   }
 }

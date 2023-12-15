@@ -1,7 +1,7 @@
 {
   "title": "资源规划指南",
-  "slug": "resource-planning",
-  "permalink": "/resource-planning",
+  "slug": "/docs/resource-planning",
+  "permalink": "/docs/resource-planning",
   "navigation": {
     "previous": {
       "title": "Zilliz Cloud 集群间迁移",

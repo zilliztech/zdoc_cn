@@ -1,63 +1,69 @@
 import os
+import re
 import requests
-from bs4 import BeautifulSoup
 
-def list_files_recursively(directory):
+def list_files_recursively(directories):
     f = []
-    for root, dirs, files in os.walk(directory):
-        for file in files:
-            f.append(os.path.join(root, file))
+    for directory in directories:
+        for root, dirs, files in os.walk(directory):
+            for file in files:
+                f.append(os.path.join(root, file))
 
     return f
             
 def check_links(file):
-    with open(file, 'r') as f:
-        contents = f.read()
+    if file.endswith('.md'):
+        with open(file, 'r') as f:
+            content = f.read()
 
-    soup = BeautifulSoup(contents, 'html.parser')
+        markdown_link_partten = r'\[(.*?)\]\((.*?)\)'
+        matches = re.findall(markdown_link_partten, content)
+
+        for text, link in matches:
+            if link.startswith('http'):
+                found = [ x for x in checked_links if x[1] == link ]
+                if found:
+                    print(f'Duplicate link {link} on page {file} - {found[0][3]}')
+
+                try:
+                    r = requests.head(link)
+                    if r.status_code != 200:
+                        broken_links.append((text, link, file, r.status_code))
+                    checked_links.append((text, link, file, r.status_code))
+
+                    print (f'Checked {link} on page {file} - {r.status_code}')
+                except Exception as e:
+                    broken_links.append((text, link, file, e))
+                    checked_links.append((text, link, file, e))
+                    print (f'Checked {link} on page {file} - {e}')
+
+    return checked_links
+
+
+if __name__ == '__main__':
+    files = list_files_recursively(["docs", "reference"])
 
     checked_links = []
     broken_links = []
 
-    for link in soup.find_all('a'):
-        href = link.get('href')
-        if href and href.startswith('http'):
-            print(f'Checking link: {href} in file: {file}')
-            if href.endswith('.json') or "assets.zilliz.com" in href:
-                continue
-            
-            if len([ x for x in checked_links if x[0] == href and x[1] == 200 ]) > 0:
-                print('  Already checked! OK!')
-                continue
-
-            if len([ x for x in checked_links if x[0] == href and x[1] != 200 ]) > 0:
-                print('  Already checked! Broken link!')
-                continue
-
-            try:
-                response = requests.get(href)
-                if response.status_code != 200:
-                    checked_links.append((href, response.status_code))
-                    broken_links.append((href, file))
-                    print(f'Broken link: {href} in file: {file}')
-                else:
-                    checked_links.append((href, 200))
-                    print('  OK!')
-            except requests.exceptions.RequestException as e:
-                print(f'Error checking link: {href} in file: {file}. Error: {e}')
-
-    return broken_links
-
-if __name__ == '__main__':
-    files = list_files_recursively('build')
-
-    broken_links = []
-
     for file in files:
-        broken_links.append(check_links(file))
+        check_links(file)
 
-    print('Broken links:')
-    for link in broken_links:
-        print(link)
+    with open('broken_links.txt', 'w') as f:
+        l = {}
 
+        for text, link, file, status in broken_links:
+            if file not in l:
+                l[file] = []
+
+            l[file].append((text, link, status))
         
+        report = ''
+
+        for file, links in l.items():
+            report += f'File: {file}\n\n'
+            for text, link, status in links:
+                report += f'\t - [{text}]({link})\n'
+                report += '\t\t - Status: {}\n'.format(status)
+
+        f.write(report)

@@ -1,7 +1,7 @@
 {
   "title": "Collection",
-  "slug": "collection",
-  "permalink": "/collection",
+  "slug": "/docs/collection",
+  "permalink": "/docs/collection",
   "navigation": {
     "previous": {
       "title": "管理集群",
@@ -9,7 +9,7 @@
     },
     "next": {
       "title": "Collection 及索引",
-      "permalink": "/collection-and-index"
+      "permalink": "/docs/collection-and-index"
     }
   }
 }

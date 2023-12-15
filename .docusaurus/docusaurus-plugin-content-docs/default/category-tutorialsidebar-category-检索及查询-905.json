@@ -1,7 +1,7 @@
 {
   "title": "检索及查询",
-  "slug": "search-and-query",
-  "permalink": "/search-and-query",
+  "slug": "/docs/search-and-query",
+  "permalink": "/docs/search-and-query",
   "navigation": {
     "previous": {
       "title": "删除 Entity",

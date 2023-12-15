@@ -493,7 +493,7 @@
     "__comp": "14eb3368",
     "categoryGeneratedIndex": "46f71b02"
   },
-  "/-475": {
+  "/-19a": {
     "__comp": "1be78505",
     "__context": {
       "plugin": "0e5590ad"
@@ -504,45 +504,17 @@
     "__comp": "17896441",
     "content": "f7c91f9a"
   },
-  "/account-and-security-9b0": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "e989452a"
-  },
-  "/accounts-67e": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "059456a6"
-  },
-  "/advanced-features-8ee": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "8d905946"
-  },
-  "/authentication-050": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "e1b3a41d"
-  },
-  "/backup-and-restore-087": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "a367841d"
-  },
-  "/cluster-938": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "03855266"
-  },
-  "/collection-e76": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "c117f30e"
-  },
-  "/collection-and-index-8f8": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "9227ebdb"
-  },
-  "/data-import-78f": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "210be95e"
-  },
   "/docs/a-panorama-view-654": {
     "__comp": "17896441",
     "content": "3a6d9197"
+  },
+  "/docs/account-and-security-d1b": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "e989452a"
+  },
+  "/docs/accounts-ec5": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "059456a6"
   },
   "/docs/advance-pay-04c": {
     "__comp": "17896441",
@@ -552,6 +524,10 @@
     "__comp": "17896441",
     "content": "3f2eeef1"
   },
+  "/docs/advanced-features-546": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "8d905946"
+  },
   "/docs/ann-search-explained-476": {
     "__comp": "17896441",
     "content": "4c98597f"
@@ -560,17 +536,37 @@
     "__comp": "17896441",
     "content": "d7ee9743"
   },
+  "/docs/authentication-cf1": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "e1b3a41d"
+  },
   "/docs/autoindex-explained-85b": {
     "__comp": "17896441",
     "content": "5eba249a"
+  },
+  "/docs/backup-and-restore-6aa": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "a367841d"
   },
   "/docs/cloud-providers-and-regions-3fe": {
     "__comp": "17896441",
     "content": "2fab7289"
   },
+  "/docs/cluster-8cf": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "03855266"
+  },
   "/docs/cluster-collection-and-entities-1a2": {
     "__comp": "17896441",
     "content": "d400c905"
+  },
+  "/docs/collection-e78": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "c117f30e"
+  },
+  "/docs/collection-and-index-f0a": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "9227ebdb"
   },
   "/docs/conduct-a-range-search-290": {
     "__comp": "17896441",
@@ -603,6 +599,10 @@
   "/docs/cu-types-explained-b73": {
     "__comp": "17896441",
     "content": "1ea343a7"
+  },
+  "/docs/data-import-6d7": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "210be95e"
   },
   "/docs/data-models-explained-afb": {
     "__comp": "17896441",
@@ -700,6 +700,10 @@
     "__comp": "17896441",
     "content": "e447cb71"
   },
+  "/docs/faqs-9f5": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "08c981d5"
+  },
   "/docs/free-trials-afe": {
     "__comp": "17896441",
     "content": "dade1c9d"
@@ -724,9 +728,17 @@
     "__comp": "17896441",
     "content": "14de1f87"
   },
+  "/docs/insert-update-and-delete-857": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "a41577b0"
+  },
   "/docs/install-sdks-272": {
     "__comp": "17896441",
     "content": "fff33f64"
+  },
+  "/docs/integrations-898": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "bf0c9313"
   },
   "/docs/invoice-c4a": {
     "__comp": "17896441",
@@ -735,6 +747,10 @@
   "/docs/javascript-object-notation-json-422": {
     "__comp": "17896441",
     "content": "a070d50c"
+  },
+  "/docs/limits-and-restrictions-e66": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "692cd5c2"
   },
   "/docs/load-capacity-resource-monitor-add": {
     "__comp": "17896441",
@@ -780,9 +796,17 @@
     "__comp": "17896441",
     "content": "1bbb96b0"
   },
+  "/docs/migrations-59b": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "9beb93ff"
+  },
   "/docs/monitor-metrics-551": {
     "__comp": "17896441",
     "content": "8953f280"
+  },
+  "/docs/monitors-metrics-b29": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "9b3ccca3"
   },
   "/docs/movie-search-using-zilliz-cloud-and-sentencetransformers-8c8": {
     "__comp": "17896441",
@@ -792,9 +816,17 @@
     "__comp": "17896441",
     "content": "fc8c4f40"
   },
+  "/docs/organization-settings-03b": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "66a1e3a1"
+  },
   "/docs/other-differences-49d": {
     "__comp": "17896441",
     "content": "6e58f978"
+  },
+  "/docs/payment-billing-ee8": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "719b448c"
   },
   "/docs/pricing-calculator-c20": {
     "__comp": "17896441",
@@ -820,9 +852,17 @@
     "__comp": "17896441",
     "content": "3a5d85aa"
   },
+  "/docs/quick-start-41e": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "55bf9f84"
+  },
   "/docs/register-with-zilliz-cloud-038": {
     "__comp": "17896441",
     "content": "4f672e2e"
+  },
+  "/docs/release-notes-e52": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "a6591376"
   },
   "/docs/release-notes-200-9d4": {
     "__comp": "17896441",
@@ -844,6 +884,10 @@
     "__comp": "17896441",
     "content": "606358e2"
   },
+  "/docs/resource-planning-645": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "da4f4a17"
+  },
   "/docs/restore-from-snapshot-aa3": {
     "__comp": "17896441",
     "content": "60a8bbdc"
@@ -851,6 +895,10 @@
   "/docs/schedule-automatic-backups-32a": {
     "__comp": "17896441",
     "content": "0ec20ae6"
+  },
+  "/docs/search-and-query-2f5": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "f7276e7c"
   },
   "/docs/search-and-query-advanced-expressions-861": {
     "__comp": "17896441",
@@ -868,13 +916,13 @@
     "__comp": "17896441",
     "content": "2534e344"
   },
+  "/docs/security-990": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "68e16164"
+  },
   "/docs/select-zilliz-cloud-service-plans-c7e": {
     "__comp": "17896441",
     "content": "558e24a4"
-  },
-  "/docs/set-up-a-private-link-a66": {
-    "__comp": "17896441",
-    "content": "1c248206"
   },
   "/docs/set-up-maintenance-window-26d": {
     "__comp": "17896441",
@@ -884,6 +932,10 @@
     "__comp": "17896441",
     "content": "fcfd31da"
   },
+  "/docs/setup-a-private-link-a19": {
+    "__comp": "17896441",
+    "content": "1c248206"
+  },
   "/docs/similarity-search-with-zilliz-cloud-and-openai-6a5": {
     "__comp": "17896441",
     "content": "5d79fbc7"
@@ -891,6 +943,10 @@
   "/docs/subscribe-on-aliyun-marketplace-a80": {
     "__comp": "17896441",
     "content": "2ba3c9e7"
+  },
+  "/docs/understand-basics-ade": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "7eaf97a2"
   },
   "/docs/upsert-entities-4a9": {
     "__comp": "17896441",
@@ -908,6 +964,10 @@
     "__comp": "17896441",
     "content": "c0710718"
   },
+  "/docs/users-roles-1ca": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "e17d9a48"
+  },
   "/docs/view-activities-49e": {
     "__comp": "17896441",
     "content": "2e461bf3"
@@ -919,65 +979,5 @@
   "/docs/view-snapshot-details-083": {
     "__comp": "17896441",
     "content": "7f7a7712"
-  },
-  "/faqs-ba9": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "08c981d5"
-  },
-  "/insert-update-and-delete-f70": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "a41577b0"
-  },
-  "/integrations-3ad": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "bf0c9313"
-  },
-  "/limits-and-restrictions-4b7": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "692cd5c2"
-  },
-  "/migrations-646": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "9beb93ff"
-  },
-  "/monitors-metrics-10f": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "9b3ccca3"
-  },
-  "/organization-settings-774": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "66a1e3a1"
-  },
-  "/payment-billing-5f1": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "719b448c"
-  },
-  "/quick-start-db3": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "55bf9f84"
-  },
-  "/release-notes-dfd": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "a6591376"
-  },
-  "/resource-planning-f6a": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "da4f4a17"
-  },
-  "/search-and-query-864": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "f7276e7c"
-  },
-  "/security-b30": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "68e16164"
-  },
-  "/understand-basics-bb2": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "7eaf97a2"
-  },
-  "/users-roles-593": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "e17d9a48"
   }
 }

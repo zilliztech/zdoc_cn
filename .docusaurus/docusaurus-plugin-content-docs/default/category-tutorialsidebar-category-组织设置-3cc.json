@@ -1,7 +1,7 @@
 {
   "title": "组织设置",
-  "slug": "organization-settings",
-  "permalink": "/organization-settings",
+  "slug": "/docs/organization-settings",
+  "permalink": "/docs/organization-settings",
   "navigation": {
     "previous": {
       "title": "管理项目与成员",

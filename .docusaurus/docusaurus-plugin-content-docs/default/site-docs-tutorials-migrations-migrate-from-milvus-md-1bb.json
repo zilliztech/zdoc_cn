@@ -20,7 +20,7 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "数据迁移",
-    "permalink": "/migrations"
+    "permalink": "/docs/migrations"
   },
   "next": {
     "title": "从 Elasticsearch 迁移至 Zilliz Cloud",

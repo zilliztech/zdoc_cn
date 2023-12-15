@@ -20,7 +20,7 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "资源规划指南",
-    "permalink": "/resource-planning"
+    "permalink": "/docs/resource-planning"
   },
   "next": {
     "title": "选择合适的 CU 类型",

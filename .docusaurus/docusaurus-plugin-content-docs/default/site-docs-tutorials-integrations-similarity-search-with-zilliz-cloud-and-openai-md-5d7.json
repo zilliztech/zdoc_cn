@@ -20,7 +20,7 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "AI 模型集成",
-    "permalink": "/integrations"
+    "permalink": "/docs/integrations"
   },
   "next": {
     "title": "与 HuggingFace 集成搭建问答系统",

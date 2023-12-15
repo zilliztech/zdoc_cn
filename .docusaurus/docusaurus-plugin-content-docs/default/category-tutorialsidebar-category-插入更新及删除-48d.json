@@ -1,7 +1,7 @@
 {
   "title": "插入、更新及删除",
-  "slug": "insert-update-and-delete",
-  "permalink": "/insert-update-and-delete",
+  "slug": "/docs/insert-update-and-delete",
+  "permalink": "/docs/insert-update-and-delete",
   "navigation": {
     "previous": {
       "title": "删除 Collection",

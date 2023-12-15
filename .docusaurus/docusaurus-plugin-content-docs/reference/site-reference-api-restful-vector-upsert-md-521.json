@@ -1,7 +1,7 @@
 {
   "unversionedId": "api/restful/Vector/upsert",
   "id": "api/restful/Vector/upsert",
-  "title": "Upsert",
+  "title": "Upsert Entity",
   "description": "插入和更新 Collection 中的记录。",
   "source": "@site/reference/api/restful/Vector/upsert.md",
   "sourceDirName": "api/restful/Vector",
@@ -15,7 +15,7 @@
     "displayed_sidebar": "referenceSidebar",
     "sidebar_position": 0,
     "slug": "/upsert",
-    "title": "Upsert"
+    "title": "Upsert Entity"
   },
   "sidebar": "referenceSidebar",
   "previous": {

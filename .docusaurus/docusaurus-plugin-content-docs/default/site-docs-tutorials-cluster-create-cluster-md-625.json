@@ -20,7 +20,7 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "集群",
-    "permalink": "/cluster"
+    "permalink": "/docs/cluster"
   },
   "next": {
     "title": "连接集群",

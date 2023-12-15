@@ -20,7 +20,7 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "高级功能",
-    "permalink": "/advanced-features"
+    "permalink": "/docs/advanced-features"
   },
   "next": {
     "title": "使用 Partition Key",

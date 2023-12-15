@@ -12,6 +12,12 @@ import Admonition from '@theme/Admonition';
 
 在 Zilliz Cloud 进行现金充值或开通阿里云云市场扣费渠道后，您可以申请开具发票。具体开票方式根据您的支付方式有所不同。如果您的支付方式为现金充值，您可以直接通过 Zilliz Cloud 界面开具发票。如果您开通了阿里云云市场扣费渠道，请通过阿里云云市场申请开票。
 
+<Admonition type="info" icon="📘" title="说明">
+
+预充值不可申请开票。《中华人民共和国发票管理办法》、《中华人民共和国发票管理办法实施细则》规定了只能针对消费者已消费过的订单开具发票。预充值和预付款并未纳入商品消费记录，不具备开具发票的条件。因此，Zilliz Cloud 只能针对您已消费过的订单开具发票。您充值的预付款余额没有消费，也没有对应的 Zilliz Cloud 的产品/服务，因此无法申请开具发票。
+
+</Admonition>
+
 ## 通过 Zilliz Cloud 开票{#invoicing-on-zilliz-cloud}
 
 在进行现金充值后，您可以在 Zilliz Cloud 界面申请开票。当前 Zilliz Cloud 仅支持为已结清的账单开具发票，且不可重复开票。

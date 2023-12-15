@@ -20,7 +20,7 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "数据导入",
-    "permalink": "/data-import"
+    "permalink": "/docs/data-import"
   },
   "next": {
     "title": "通过 Web 控制台导入",

@@ -20,7 +20,7 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "常见问题",
-    "permalink": "/faqs"
+    "permalink": "/docs/faqs"
   },
   "next": {
     "title": "FAQ：集群",

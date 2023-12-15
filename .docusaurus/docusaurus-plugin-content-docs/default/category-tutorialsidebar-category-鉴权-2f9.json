@@ -1,7 +1,7 @@
 {
   "title": "鉴权",
-  "slug": "authentication",
-  "permalink": "/authentication",
+  "slug": "/docs/authentication",
+  "permalink": "/docs/authentication",
   "navigation": {
     "previous": {
       "title": "管理账号",

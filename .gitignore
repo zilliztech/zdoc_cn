@@ -10,3 +10,4 @@ pyvenv.cfg
 node_modules
 build
 .docusaurus
+broken_links.txt

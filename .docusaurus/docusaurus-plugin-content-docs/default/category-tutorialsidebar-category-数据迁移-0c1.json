@@ -1,7 +1,7 @@
 {
   "title": "数据迁移",
-  "slug": "migrations",
-  "permalink": "/migrations",
+  "slug": "/docs/migrations",
+  "permalink": "/docs/migrations",
   "navigation": {
     "previous": {
       "title": "通过 SDK 导入",

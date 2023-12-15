@@ -5,14 +5,14 @@
   "description": "Zilliz Cloud 允许您通过私网连接（PrivateLink）访问您的集群。如果您不希望通过公众互联网访问您位于 Zilliz Cloud 上的集群， 可以按照本章的步骤为您的集群创建私网连接。",
   "source": "@site/docs/tutorials/account-and-security/security/set-up-a-private-link.md",
   "sourceDirName": "tutorials/account-and-security/security",
-  "slug": "/docs/set-up-a-private-link",
-  "permalink": "/docs/set-up-a-private-link",
+  "slug": "/docs/setup-a-private-link",
+  "permalink": "/docs/setup-a-private-link",
   "draft": false,
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
   "frontMatter": {
-    "slug": "/docs/set-up-a-private-link",
+    "slug": "/docs/setup-a-private-link",
     "beta": false,
     "notebook": false,
     "sidebar_position": 2
@@ -24,6 +24,6 @@
   },
   "next": {
     "title": "支付方式与账单",
-    "permalink": "/payment-billing"
+    "permalink": "/docs/payment-billing"
   }
 }

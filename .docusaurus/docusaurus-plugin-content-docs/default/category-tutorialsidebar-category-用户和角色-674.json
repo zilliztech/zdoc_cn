@@ -1,7 +1,7 @@
 {
   "title": "用户和角色",
-  "slug": "users-roles",
-  "permalink": "/users-roles",
+  "slug": "/docs/users-roles",
+  "permalink": "/docs/users-roles",
   "navigation": {
     "previous": {
       "title": "删除备份快照",

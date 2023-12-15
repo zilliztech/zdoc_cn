@@ -40,7 +40,7 @@
             "docId": "tutorials/quick-start/example-dataset"
           }
         ],
-        "href": "/quick-start"
+        "href": "/docs/quick-start"
       },
       {
         "type": "category",
@@ -91,7 +91,7 @@
             "docId": "tutorials/understand-basics/data-security"
           }
         ],
-        "href": "/understand-basics"
+        "href": "/docs/understand-basics"
       },
       {
         "type": "category",
@@ -118,7 +118,7 @@
             "docId": "tutorials/cluster/manage-cluster"
           }
         ],
-        "href": "/cluster"
+        "href": "/docs/cluster"
       },
       {
         "type": "category",
@@ -151,7 +151,7 @@
                 "docId": "tutorials/collection/collection-and-index/drop-collection"
               }
             ],
-            "href": "/collection-and-index"
+            "href": "/docs/collection-and-index"
           },
           {
             "type": "category",
@@ -178,7 +178,7 @@
                 "docId": "tutorials/collection/insert-update-and-delete/delete-entities"
               }
             ],
-            "href": "/insert-update-and-delete"
+            "href": "/docs/insert-update-and-delete"
           },
           {
             "type": "category",
@@ -211,7 +211,7 @@
                 "docId": "tutorials/collection/search-and-query/search-and-query-advanced-expressions"
               }
             ],
-            "href": "/search-and-query"
+            "href": "/docs/search-and-query"
           },
           {
             "type": "category",
@@ -238,10 +238,10 @@
                 "docId": "tutorials/collection/advanced-features/javascript-object-notation-json"
               }
             ],
-            "href": "/advanced-features"
+            "href": "/docs/advanced-features"
           }
         ],
-        "href": "/collection"
+        "href": "/docs/collection"
       },
       {
         "type": "category",
@@ -274,7 +274,7 @@
             "docId": "tutorials/data-import/import-data-via-sdks"
           }
         ],
-        "href": "/data-import"
+        "href": "/docs/data-import"
       },
       {
         "type": "category",
@@ -301,7 +301,7 @@
             "docId": "tutorials/migrations/migrate-beween-clusters"
           }
         ],
-        "href": "/migrations"
+        "href": "/docs/migrations"
       },
       {
         "type": "category",
@@ -334,7 +334,7 @@
             "docId": "tutorials/resource-planning/pricing-calculator"
           }
         ],
-        "href": "/resource-planning"
+        "href": "/docs/resource-planning"
       },
       {
         "type": "category",
@@ -373,7 +373,7 @@
             "docId": "tutorials/backup-and-restore/delete-snapshot"
           }
         ],
-        "href": "/backup-and-restore"
+        "href": "/docs/backup-and-restore"
       },
       {
         "type": "category",
@@ -400,7 +400,7 @@
             "docId": "tutorials/users-roles/manage-projects-and-collaborator"
           }
         ],
-        "href": "/users-roles"
+        "href": "/docs/users-roles"
       },
       {
         "type": "category",
@@ -433,7 +433,7 @@
             "docId": "tutorials/organization-settings/use-recycle-bin"
           }
         ],
-        "href": "/organization-settings"
+        "href": "/docs/organization-settings"
       },
       {
         "type": "category",
@@ -484,7 +484,7 @@
             "docId": "tutorials/monitors-metrics/view-activities"
           }
         ],
-        "href": "/monitors-metrics"
+        "href": "/docs/monitors-metrics"
       },
       {
         "type": "category",
@@ -511,7 +511,7 @@
                 "docId": "tutorials/account-and-security/accounts/delete-your-account"
               }
             ],
-            "href": "/accounts"
+            "href": "/docs/accounts"
           },
           {
             "type": "category",
@@ -538,7 +538,7 @@
                 "docId": "tutorials/account-and-security/authentication/multi-factor-authentication"
               }
             ],
-            "href": "/authentication"
+            "href": "/docs/authentication"
           },
           {
             "type": "category",
@@ -555,14 +555,14 @@
               {
                 "type": "link",
                 "label": "创建私网连接",
-                "href": "/docs/set-up-a-private-link",
+                "href": "/docs/setup-a-private-link",
                 "docId": "tutorials/account-and-security/security/set-up-a-private-link"
               }
             ],
-            "href": "/security"
+            "href": "/docs/security"
           }
         ],
-        "href": "/account-and-security"
+        "href": "/docs/account-and-security"
       },
       {
         "type": "category",
@@ -601,7 +601,7 @@
             "docId": "tutorials/payment-billing/invoice"
           }
         ],
-        "href": "/payment-billing"
+        "href": "/docs/payment-billing"
       },
       {
         "type": "category",
@@ -652,7 +652,7 @@
             "docId": "tutorials/integrations/movie-search-using-zilliz-cloud-and-sentencetransformers"
           }
         ],
-        "href": "/integrations"
+        "href": "/docs/integrations"
       },
       {
         "type": "category",
@@ -673,7 +673,7 @@
             "docId": "tutorials/limits-and-restrictions/other-differences"
           }
         ],
-        "href": "/limits-and-restrictions"
+        "href": "/docs/limits-and-restrictions"
       },
       {
         "type": "category",
@@ -760,7 +760,7 @@
             "docId": "tutorials/faqs/faq-integrations"
           }
         ],
-        "href": "/faqs"
+        "href": "/docs/faqs"
       },
       {
         "type": "category",
@@ -799,7 +799,7 @@
             "docId": "tutorials/release-notes/release-notes-200"
           }
         ],
-        "href": "/release-notes"
+        "href": "/docs/release-notes"
       }
     ]
   },

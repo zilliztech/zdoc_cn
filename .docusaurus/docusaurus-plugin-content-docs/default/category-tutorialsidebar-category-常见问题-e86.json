@@ -1,7 +1,7 @@
 {
   "title": "常见问题",
-  "slug": "faqs",
-  "permalink": "/faqs",
+  "slug": "/docs/faqs",
+  "permalink": "/docs/faqs",
   "navigation": {
     "previous": {
       "title": "其他异同",

@@ -173,7 +173,7 @@
               },
               {
                 "type": "link",
-                "label": "Upsert",
+                "label": "Upsert Entity",
                 "href": "/reference/upsert",
                 "docId": "api/restful/Vector/upsert"
               }
@@ -974,7 +974,7 @@
     },
     "api/restful/Vector/upsert": {
       "id": "api/restful/Vector/upsert",
-      "title": "Upsert",
+      "title": "Upsert Entity",
       "description": "插入和更新 Collection 中的记录。",
       "sidebar": "referenceSidebar"
     }

@@ -5,7 +5,7 @@
         {
           "idx": 1,
           "title": "从这里开始",
-          "slug": "quick-start",
+          "slug": "/docs/quick-start",
           "groups": [
             {
               "spos": 1,
@@ -44,7 +44,7 @@
         {
           "idx": 2,
           "title": "了解 Zilliz Cloud",
-          "slug": "understand-basics",
+          "slug": "/docs/understand-basics",
           "groups": [
             {
               "spos": 1,
@@ -107,7 +107,7 @@
         {
           "idx": 3,
           "title": "集群",
-          "slug": "cluster",
+          "slug": "/docs/cluster",
           "groups": [
             {
               "spos": 1,
@@ -138,13 +138,13 @@
         {
           "idx": 4,
           "title": "Collection",
-          "slug": "collection",
+          "slug": "/docs/collection",
           "description": "CRUD Operations Explained",
           "groups": [
             {
               "idx": 1,
               "title": "Collection 及索引",
-              "slug": "collection-and-index",
+              "slug": "/docs/collection-and-index",
               "groups": [
                 {
                   "spos": 1,
@@ -175,7 +175,7 @@
             {
               "idx": 2,
               "title": "插入、更新及删除",
-              "slug": "insert-update-and-delete",
+              "slug": "/docs/insert-update-and-delete",
               "groups": [
                 {
                   "spos": 1,
@@ -206,7 +206,7 @@
             {
               "idx": 3,
               "title": "检索及查询",
-              "slug": "search-and-query",
+              "slug": "/docs/search-and-query",
               "groups": [
                 {
                   "spos": 1,
@@ -245,7 +245,7 @@
             {
               "idx": 4,
               "title": "高级功能",
-              "slug": "advanced-features",
+              "slug": "/docs/advanced-features",
               "groups": [
                 {
                   "spos": 1,
@@ -278,7 +278,7 @@
         {
           "idx": 5,
           "title": "数据导入",
-          "slug": "data-import",
+          "slug": "/docs/data-import",
           "groups": [
             {
               "spos": 1,
@@ -317,7 +317,7 @@
         {
           "idx": 6,
           "title": "数据迁移",
-          "slug": "migrations",
+          "slug": "/docs/migrations",
           "groups": [
             {
               "spos": 1,
@@ -348,7 +348,7 @@
         {
           "idx": 7,
           "title": "资源规划指南",
-          "slug": "resource-planning",
+          "slug": "/docs/resource-planning",
           "groups": [
             {
               "spos": 1,
@@ -387,7 +387,7 @@
         {
           "idx": 8,
           "title": "备份与恢复",
-          "slug": "backup-and-restore",
+          "slug": "/docs/backup-and-restore",
           "groups": [
             {
               "spos": 1,
@@ -434,7 +434,7 @@
         {
           "idx": 9,
           "title": "用户和角色",
-          "slug": "users-roles",
+          "slug": "/docs/users-roles",
           "groups": [
             {
               "spos": 1,
@@ -465,7 +465,7 @@
         {
           "idx": 10,
           "title": "组织设置",
-          "slug": "organization-settings",
+          "slug": "/docs/organization-settings",
           "groups": [
             {
               "spos": 1,
@@ -504,7 +504,7 @@
         {
           "idx": 11,
           "title": "监控与指标",
-          "slug": "monitors-metrics",
+          "slug": "/docs/monitors-metrics",
           "groups": [
             {
               "spos": 1,
@@ -567,12 +567,12 @@
         {
           "idx": 12,
           "title": "帐户与安全",
-          "slug": "account-and-security",
+          "slug": "/docs/account-and-security",
           "groups": [
             {
               "idx": 1,
               "title": "帐户",
-              "slug": "accounts",
+              "slug": "/docs/accounts",
               "groups": [
                 {
                   "spos": 1,
@@ -595,7 +595,7 @@
             {
               "idx": 2,
               "title": "鉴权",
-              "slug": "authentication",
+              "slug": "/docs/authentication",
               "groups": [
                 {
                   "spos": 1,
@@ -626,7 +626,7 @@
             {
               "idx": 3,
               "title": "安全",
-              "slug": "security",
+              "slug": "/docs/security",
               "groups": [
                 {
                   "spos": 1,
@@ -639,7 +639,7 @@
                 {
                   "spos": 2,
                   "title": "创建私网连接",
-                  "slug": "docs/set-up-a-private-link",
+                  "slug": "docs/setup-a-private-link",
                   "colab": false,
                   "github": false,
                   "tag": false
@@ -651,7 +651,7 @@
         {
           "idx": 13,
           "title": "支付方式与账单",
-          "slug": "payment-billing",
+          "slug": "/docs/payment-billing",
           "groups": [
             {
               "spos": 1,
@@ -698,7 +698,7 @@
         {
           "idx": 14,
           "title": "AI 模型集成",
-          "slug": "integrations",
+          "slug": "/docs/integrations",
           "groups": [
             {
               "spos": 1,
@@ -761,7 +761,7 @@
         {
           "idx": 15,
           "title": "约束与限制",
-          "slug": "limits-and-restrictions",
+          "slug": "/docs/limits-and-restrictions",
           "groups": [
             {
               "spos": 1,
@@ -784,7 +784,7 @@
         {
           "idx": 16,
           "title": "常见问题",
-          "slug": "faqs",
+          "slug": "/docs/faqs",
           "groups": [
             {
               "spos": 1,
@@ -895,7 +895,7 @@
         {
           "idx": 17,
           "title": "版本说明书",
-          "slug": "release-notes",
+          "slug": "/docs/release-notes",
           "groups": [
             {
               "spos": 1,
@@ -1434,7 +1434,7 @@
             },
             {
               "id": "tutorials/account-and-security/security/set-up-a-private-link",
-              "path": "/docs/set-up-a-private-link",
+              "path": "/docs/setup-a-private-link",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -1888,123 +1888,123 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "quick-start",
-              "path": "/quick-start",
+              "id": "/docs/quick-start",
+              "path": "/docs/quick-start",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "understand-basics",
-              "path": "/understand-basics",
+              "id": "/docs/understand-basics",
+              "path": "/docs/understand-basics",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "cluster",
-              "path": "/cluster",
+              "id": "/docs/cluster",
+              "path": "/docs/cluster",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "collection",
-              "path": "/collection",
+              "id": "/docs/collection",
+              "path": "/docs/collection",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "collection-and-index",
-              "path": "/collection-and-index",
+              "id": "/docs/collection-and-index",
+              "path": "/docs/collection-and-index",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "insert-update-and-delete",
-              "path": "/insert-update-and-delete",
+              "id": "/docs/insert-update-and-delete",
+              "path": "/docs/insert-update-and-delete",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "search-and-query",
-              "path": "/search-and-query",
+              "id": "/docs/search-and-query",
+              "path": "/docs/search-and-query",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "advanced-features",
-              "path": "/advanced-features",
+              "id": "/docs/advanced-features",
+              "path": "/docs/advanced-features",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "data-import",
-              "path": "/data-import",
+              "id": "/docs/data-import",
+              "path": "/docs/data-import",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "migrations",
-              "path": "/migrations",
+              "id": "/docs/migrations",
+              "path": "/docs/migrations",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "resource-planning",
-              "path": "/resource-planning",
+              "id": "/docs/resource-planning",
+              "path": "/docs/resource-planning",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "backup-and-restore",
-              "path": "/backup-and-restore",
+              "id": "/docs/backup-and-restore",
+              "path": "/docs/backup-and-restore",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "users-roles",
-              "path": "/users-roles",
+              "id": "/docs/users-roles",
+              "path": "/docs/users-roles",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "organization-settings",
-              "path": "/organization-settings",
+              "id": "/docs/organization-settings",
+              "path": "/docs/organization-settings",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "monitors-metrics",
-              "path": "/monitors-metrics",
+              "id": "/docs/monitors-metrics",
+              "path": "/docs/monitors-metrics",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "account-and-security",
-              "path": "/account-and-security",
+              "id": "/docs/account-and-security",
+              "path": "/docs/account-and-security",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "accounts",
-              "path": "/accounts",
+              "id": "/docs/accounts",
+              "path": "/docs/accounts",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "authentication",
-              "path": "/authentication",
+              "id": "/docs/authentication",
+              "path": "/docs/authentication",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "security",
-              "path": "/security",
+              "id": "/docs/security",
+              "path": "/docs/security",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "payment-billing",
-              "path": "/payment-billing",
+              "id": "/docs/payment-billing",
+              "path": "/docs/payment-billing",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "integrations",
-              "path": "/integrations",
+              "id": "/docs/integrations",
+              "path": "/docs/integrations",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "limits-and-restrictions",
-              "path": "/limits-and-restrictions",
+              "id": "/docs/limits-and-restrictions",
+              "path": "/docs/limits-and-restrictions",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "faqs",
-              "path": "/faqs",
+              "id": "/docs/faqs",
+              "path": "/docs/faqs",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "release-notes",
-              "path": "/release-notes",
+              "id": "/docs/release-notes",
+              "path": "/docs/release-notes",
               "sidebar": "tutorialSidebar"
             }
           ],
@@ -2012,7 +2012,7 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/quick-start",
+                "path": "/docs/quick-start",
                 "label": "从这里开始"
               }
             }

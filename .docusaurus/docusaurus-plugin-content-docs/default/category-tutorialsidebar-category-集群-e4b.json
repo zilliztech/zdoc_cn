@@ -1,7 +1,7 @@
 {
   "title": "集群",
-  "slug": "cluster",
-  "permalink": "/cluster",
+  "slug": "/docs/cluster",
+  "permalink": "/docs/cluster",
   "navigation": {
     "previous": {
       "title": "数据安全",

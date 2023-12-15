@@ -1,7 +1,7 @@
 {
   "title": "AI 模型集成",
-  "slug": "integrations",
-  "permalink": "/integrations",
+  "slug": "/docs/integrations",
+  "permalink": "/docs/integrations",
   "navigation": {
     "previous": {
       "title": "开具发票",

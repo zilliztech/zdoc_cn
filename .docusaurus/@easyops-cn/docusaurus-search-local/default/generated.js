@@ -6,7 +6,7 @@ export const language = ["en","zh"];
 export const removeDefaultStopWordFilter = false;
 export const removeDefaultStemmer = false;
 export { default as Mark } from "/Users/anthony/Documents/repos/zdoc_cn/node_modules/mark.js/dist/mark.js"
-export const searchIndexUrl = "search-index{dir}.json?_=902c0cd4";
+export const searchIndexUrl = "search-index{dir}.json?_=ad08ba27";
 export const searchResultLimits = 8;
 export const searchResultContextMaxLength = 50;
 export const explicitSearchResultPath = false;
