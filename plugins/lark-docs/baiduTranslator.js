@@ -21,7 +21,7 @@ class baiduTranslator {
         this.cache = cache
         this.limiter = new Bottleneck({
             maxConcurrent: 1,
-            minTime: 1000
+            minTime: 33
         })
     }
 
@@ -40,7 +40,7 @@ class baiduTranslator {
         try {
             cache = JSON.parse(fs.readFileSync(cacheFile))
         } catch (e) {
-            console.log(`BAIDU: ${e}`)
+            console.log(e)
         }
 
         if (cache[this.query]) {

@@ -15,8 +15,8 @@ class larkImageDownloader {
         this.target_path = target_path;   
         this.limiter = new Bottleneck({
             maxConcurrent: 1,
-            minTime: 300,
-        }); 
+            minTime: 52,
+        });
     }    
 
     async downloadImages() {
@@ -40,7 +40,7 @@ class larkImageDownloader {
             })
         } 
         catch (error) {
-            console.log(`[DownloadImages] ${error}`)
+            console.log(error)
         }
 
         return this.docs
@@ -81,7 +81,7 @@ class larkImageDownloader {
                 eval(`this.docs${iframe_keys[index]}.path = '${this.target_path}/${captions[index]}.png'`)
             })
         } catch (error) {
-            console.log(`[DownloadIframes] ${error}`)
+            console.log(error)
         }
 
         return this.docs

@@ -33,7 +33,7 @@ class larkSlugify {
                 const pattern = /[\p{Unified_Ideograph}\u3006\u3007][\ufe00-\ufe0f\u{e0100}-\u{e01ef}]?/gmu;
                 const content = this.__headingContent(heading)
                 if (content.match(pattern)) {
-                    const slug = content.split("{#")[1].split("#}")[0]
+                    const slug = await translator.translate(content)
                     eval(`this.docs${this[`heading${i}s`].instance_keys[index]}.slug = slug`)
                 } else {
                     eval(`this.docs${this[`heading${i}s`].instance_keys[index]}.slug = slugify(content, {lower: true, strict: true})`)
