@@ -183,7 +183,7 @@ const config = {
             items: [
               {
                 label: '开发指南',
-                to: '/',
+                to: '/docs/quick-start',
               },
               {
                 label: 'API 参考',

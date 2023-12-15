@@ -70,7 +70,7 @@ openai.api_key = 'YOUR_OPENAI_API_KEY'  # Use your own Open AI API Key here
 
 </Admonition>
 
-接下来，我们将连接在 Zilliz Cloud 上创建好的 Serverless Cluster，在其中创建一个 Collection ，并为其创建索引文件。关于如何设置和使用 Zilliz Cloud, 可以参考[此文](./)。
+接下来，我们将连接在 Zilliz Cloud 上创建好的 Serverless Cluster，在其中创建一个 Collection ，并为其创建索引文件。关于如何设置和使用 Zilliz Cloud, 可以参考[此文](./quick-start)。
 
 ```python
 # Connect to Zilliz Cloud and create a collection

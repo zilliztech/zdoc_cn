@@ -43,4 +43,4 @@ import Admonition from '@theme/Admonition';
 
 ## 文档推荐{#whats-next}
 
-- [快速开始](./) 
+- [快速开始](./quick-start) 
