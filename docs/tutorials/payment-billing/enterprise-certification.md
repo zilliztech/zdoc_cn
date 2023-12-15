@@ -1,5 +1,5 @@
 ---
-slug: /docs/enterprise-certification
+slug: /enterprise-certification
 beta: FALSE
 notebook: FALSE
 sidebar_position: 4

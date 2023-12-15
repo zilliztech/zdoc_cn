@@ -1,5 +1,5 @@
 ---
-slug: /docs/install-sdks
+slug: /install-sdks
 beta: FALSE
 notebook: FALSE
 sidebar_position: 3

@@ -1,5 +1,5 @@
 ---
-slug: /docs/cu-types-explained
+slug: /cu-types-explained
 beta: FALSE
 notebook: FALSE
 sidebar_position: 2

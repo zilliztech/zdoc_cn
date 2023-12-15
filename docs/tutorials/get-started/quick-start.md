@@ -1,5 +1,5 @@
 ---
-slug: /
+slug: /quick-start
 beta: FALSE
 notebook: 00_quick_start.ipynb
 sidebar_position: 1
@@ -17,13 +17,13 @@ import TabItem from '@theme/TabItem';
 
 在本文中，我们将使用 Milvus 的 SDK。开始之前，请先确保：
 
-- 您已在 https://cloud.zilliz.com.cn/signup 注册了 Zilliz Cloud 账号。更多详情，请参见[注册账号](./docs/register-with-zilliz-cloud)。
+- 您已在 https://cloud.zilliz.com.cn/signup 注册了 Zilliz Cloud 账号。更多详情，请参见[注册账号](./register-with-zilliz-cloud)。
 
-- 您已订阅 Zilliz Cloud 并在项目中创建了一个集群。更多详情，请参见[免费试用](./docs/free-trials) 和[创建集群](./docs/create-cluster)。
+- 您已订阅 Zilliz Cloud 并在项目中创建了一个集群。更多详情，请参见[免费试用](./free-trials) 和[创建集群](./create-cluster)。
 
-- 您已安装需要使用的 SDK。当前，有四种 SDK 可供选择，分别是 [Python](./docs/install-sdks#install-pymilvus-python-sdk)，[Java](./docs/install-sdks#install-java-sdk)，[Go](./docs/install-sdks#install-go-sdk) 和 [Node.js](./docs/install-sdks#install-nodejs-sdk)。更多详情，请参见[安装 SDK](./docs/install-sdks)。
+- 您已安装需要使用的 SDK。当前，有四种 SDK 可供选择，分别是 [Python](./install-sdks#install-pymilvus-python-sdk)，[Java](./install-sdks#install-java-sdk)，[Go](./install-sdks#install-go-sdk) 和 [Node.js](./install-sdks#install-nodejs-sdk)。更多详情，请参见[安装 SDK](./install-sdks)。
 
-- 您已下载示例数据集。更多详情，请参见[示例数据集](./docs/example-dataset)。
+- 您已下载示例数据集。更多详情，请参见[示例数据集](./example-dataset)。
 
 ## 创建 Collection**{#create-a-collection}**
 
@@ -173,7 +173,7 @@ curl --location --request POST "${PUBLIC_ENDPOINT}/v1/vector/collections/create"
 </TabItem>
 </Tabs>
 
-上述实例调用高阶接口创建了一个仅包含主键及向量列的 Collection。在该 Collection 中，启用了  autoID 及动态 Schema。如果您需要添加更多的字段或者关闭动态 Schema 功能，可参考[创建 Collection](./docs/create-collection) 中的步骤。
+上述实例调用高阶接口创建了一个仅包含主键及向量列的 Collection。在该 Collection 中，启用了  autoID 及动态 Schema。如果您需要添加更多的字段或者关闭动态 Schema 功能，可参考[创建 Collection](./create-collection) 中的步骤。
 
 ## 查看 Collection**{#view-collections}**
 
@@ -2266,14 +2266,14 @@ curl --request POST \
 
 ## 文档推荐**{#related-topics}**
 
-- [注册账号](./docs/register-with-zilliz-cloud) 
+- [注册账号](./register-with-zilliz-cloud) 
 
-- [示例数据集](./docs/example-dataset) 
+- [示例数据集](./example-dataset) 
 
-- [连接集群](./docs/connect-to-cluster) 
+- [连接集群](./connect-to-cluster) 
 
-- [删除 Collection](./docs/drop-collection) 
+- [删除 Collection](./drop-collection) 
 
-- [向量搜索和查询](./docs/search-query-and-get) 
+- [向量搜索和查询](./search-query-and-get) 
 
-- [ANN 搜索](./docs/ann-search-explained) 
+- [ANN 搜索](./ann-search-explained) 

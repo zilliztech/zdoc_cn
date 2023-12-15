@@ -1,5 +1,5 @@
 ---
-slug: /docs/delete-snapshot
+slug: /delete-snapshot
 beta: FALSE
 notebook: FALSE
 sidebar_position: 5

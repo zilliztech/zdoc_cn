@@ -1,5 +1,5 @@
 ---
-slug: /docs/faq-resource-planning
+slug: /faq-resource-planning
 beta: null
 notebook: null
 sidebar_position: 6

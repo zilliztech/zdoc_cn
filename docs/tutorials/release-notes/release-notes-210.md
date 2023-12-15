@@ -1,5 +1,5 @@
 ---
-slug: /docs/release-notes-210
+slug: /release-notes-210
 beta: FALSE
 notebook: FALSE
 sidebar_position: 4

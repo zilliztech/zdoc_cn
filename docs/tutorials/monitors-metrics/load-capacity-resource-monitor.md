@@ -1,5 +1,5 @@
 ---
-slug: /docs/load-capacity-resource-monitor
+slug: /load-capacity-resource-monitor
 beta: FALSE
 notebook: FALSE
 sidebar_position: 4

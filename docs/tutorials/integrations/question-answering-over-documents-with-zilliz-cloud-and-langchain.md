@@ -1,5 +1,5 @@
 ---
-slug: /docs/question-answering-over-documents-with-zilliz-cloud-and-langchain
+slug: /question-answering-over-documents-with-zilliz-cloud-and-langchain
 beta: FALSE
 notebook: 83_integrations_langchain.ipynb
 sidebar_position: 4

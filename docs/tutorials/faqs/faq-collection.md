@@ -1,5 +1,5 @@
 ---
-slug: /docs/faq-collection
+slug: /faq-collection
 beta: null
 notebook: null
 sidebar_position: 3

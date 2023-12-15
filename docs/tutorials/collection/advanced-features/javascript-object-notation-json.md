@@ -1,5 +1,5 @@
 ---
-slug: /docs/javascript-object-notation-json
+slug: /javascript-object-notation-json
 beta: FALSE
 notebook: 04_use_json_field.ipynb
 sidebar_position: 3

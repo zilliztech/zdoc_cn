@@ -1,5 +1,5 @@
 ---
-slug: /docs/other-differences
+slug: /other-differences
 beta: FALSE
 notebook: FALSE
 sidebar_position: 2

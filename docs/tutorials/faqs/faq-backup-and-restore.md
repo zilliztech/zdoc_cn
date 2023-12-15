@@ -1,5 +1,5 @@
 ---
-slug: /docs/faq-backup-and-restore
+slug: /faq-backup-and-restore
 beta: null
 notebook: null
 sidebar_position: 7

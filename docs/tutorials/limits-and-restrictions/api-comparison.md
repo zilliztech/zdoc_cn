@@ -1,5 +1,5 @@
 ---
-slug: /docs/api-comparison
+slug: /api-comparison
 beta: FALSE
 notebook: FALSE
 sidebar_position: 1

@@ -1,5 +1,5 @@
 ---
-slug: /docs/migrate-beween-clusters
+slug: /migrate-beween-clusters
 beta: FALSE
 notebook: FALSE
 sidebar_position: 3

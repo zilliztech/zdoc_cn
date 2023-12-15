@@ -1,5 +1,5 @@
 ---
-slug: /docs/data-security
+slug: /data-security
 beta: FALSE
 notebook: FALSE
 sidebar_position: 7

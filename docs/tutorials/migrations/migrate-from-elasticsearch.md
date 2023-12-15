@@ -1,5 +1,5 @@
 ---
-slug: /docs/migrate-from-elasticsearch
+slug: /migrate-from-elasticsearch
 beta: FALSE
 notebook: FALSE
 sidebar_position: 2

@@ -1,5 +1,5 @@
 ---
-slug: /docs/subscribe-on-aliyun-marketplace
+slug: /subscribe-on-aliyun-marketplace
 beta: FALSE
 notebook: FALSE
 sidebar_position: 1

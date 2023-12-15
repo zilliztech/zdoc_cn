@@ -1,5 +1,5 @@
 ---
-slug: /docs/faq-users-and-roles
+slug: /faq-users-and-roles
 beta: null
 notebook: null
 sidebar_position: 8

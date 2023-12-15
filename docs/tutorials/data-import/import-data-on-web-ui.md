@@ -1,5 +1,5 @@
 ---
-slug: /docs/import-data-on-web-ui
+slug: /import-data-on-web-ui
 beta: FALSE
 notebook: FALSE
 sidebar_position: 2

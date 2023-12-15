@@ -1,5 +1,5 @@
 ---
-slug: /docs/manage-cluster
+slug: /manage-cluster
 beta: FALSE
 notebook: FALSE
 sidebar_position: 3

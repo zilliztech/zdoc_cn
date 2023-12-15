@@ -1,5 +1,5 @@
 ---
-slug: /docs/faq-integrations
+slug: /faq-integrations
 beta: null
 notebook: null
 sidebar_position: 13

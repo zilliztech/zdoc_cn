@@ -1,5 +1,5 @@
 ---
-slug: /docs/set-up-whitelist
+slug: /set-up-whitelist
 beta: FALSE
 notebook: FALSE
 sidebar_position: 1

@@ -1,5 +1,5 @@
 ---
-slug: /docs/conduct-a-range-search
+slug: /conduct-a-range-search
 beta: TRUE
 notebook: 11_conduct_a_range_search.ipynb
 sidebar_position: 2

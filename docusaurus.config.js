@@ -39,20 +39,16 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: 'docs',
+          breadcrumbs: true,
           sidebarPath: require.resolve('./sidebarsTutorial.js'),
-          routeBasePath: '/',
+          routeBasePath: 'docs',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
           //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        // },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -75,10 +71,23 @@ const config = {
         id: 'GTM-MBBF2KR',
       },
     ],
-    './plugins/lark-docs',
+    ['./plugins/lark-docs',
+    {
+      root: 'XyeFwdx6kiK9A6kq3yIcLNdEnDd',
+      base: 'MQI8b662gabapmsTl7ZcnTExnSc',
+      docSourceDir: './plugins/lark-docs/meta/sources',
+      targets: [
+        ['saas', {
+          outputDir: 'docs/tutorials',
+          imageDir: 'static/img',
+        }],
+        ['paas', {
+          outputDir: 'versioned_docs/version-byoc/tutorials',
+          imageDir: 'static/byoc',
+        }]
+      ]
+    }],
     './plugins/apifox-docs',
-    './plugins/landing-page',
-    './plugins/github-code',
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -90,6 +99,7 @@ const config = {
         logo: {
           alt: 'Zilliz Logo',
           src: 'img/logo.svg',
+          href: '/docs/quick-start'
         },
         items: [
           {
@@ -104,7 +114,7 @@ const config = {
           // },
           // {to: '/api', label: 'API 参考', position: 'left'},
           {
-            href: '/',
+            href: '/docs/quick-start',
             label: "开发指南",
             position: 'left',
             className: 'header-link',
@@ -120,12 +130,6 @@ const config = {
             label: 'API 参考',
             position: 'left',
             className: 'header-link',
-          },
-          {
-            href: "https://zilliz.com.cn",
-            label: "产品",
-            position: "left",
-            className: "header-link",
           },
           {
             href: 'https://zilliz.com.cn/pricing',
@@ -238,25 +242,15 @@ const config = {
       },
     }),
   themes: [
-    // ... Your other themes.
-    [
-      require.resolve('@easyops-cn/docusaurus-search-local'),
-      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-      ({
-        // ... Your options.
-        // `hashed` is recommended as long-term-cache of index file is possible.
-        hashed: true,
-        // For Docs using Chinese, The `language` is recommended to set to:
-        // ```
-        indexBlog: false,
-        language: ['en', 'zh'],
-        docsDir: ['docs', 'reference'],
-        docsRouteBasePath: ['/', '/docs/tutorials', '/reference/api'],
-        highlightSearchTermsOnTargetPage: true,
-        searchContextByPaths: ['/', '/docs/tutorials', '/reference/api'],
-        // ```
-      }),
-    ],
+    [ '@easyops-cn/docusaurus-search-local', {
+      id: 'saas',
+      hashed: true,
+      indexBlog: false,
+      language: ['en', 'zh'],
+      docsDir: ['docs', 'reference'],
+      docsRouteBasePath: 'docs',
+      highlightSearchTermsOnTargetPage: true,
+    }],
     'docusaurus-theme-frontmatter',
   ],
   scripts: [

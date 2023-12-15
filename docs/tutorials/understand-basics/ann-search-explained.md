@@ -1,5 +1,5 @@
 ---
-slug: /docs/ann-search-explained
+slug: /ann-search-explained
 beta: FALSE
 notebook: FALSE
 sidebar_position: 4

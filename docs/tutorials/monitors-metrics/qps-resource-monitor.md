@@ -1,5 +1,5 @@
 ---
-slug: /docs/qps-resource-monitor
+slug: /qps-resource-monitor
 beta: FALSE
 notebook: FALSE
 sidebar_position: 2

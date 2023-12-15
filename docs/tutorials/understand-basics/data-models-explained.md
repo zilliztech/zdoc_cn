@@ -1,5 +1,5 @@
 ---
-slug: /docs/data-models-explained
+slug: /data-models-explained
 beta: FALSE
 notebook: FALSE
 sidebar_position: 3

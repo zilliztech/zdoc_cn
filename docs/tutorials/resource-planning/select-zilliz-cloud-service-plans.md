@@ -1,5 +1,5 @@
 ---
-slug: /docs/select-zilliz-cloud-service-plans
+slug: /select-zilliz-cloud-service-plans
 beta: FALSE
 notebook: FALSE
 sidebar_position: 1

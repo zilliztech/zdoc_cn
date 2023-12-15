@@ -1,5 +1,5 @@
 ---
-slug: /docs/search-metrics-explained
+slug: /search-metrics-explained
 beta: TRUE
 notebook: FALSE
 sidebar_position: 5

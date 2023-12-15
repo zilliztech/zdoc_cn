@@ -1,5 +1,5 @@
 ---
-slug: /docs/a-panorama-view
+slug: /a-panorama-view
 beta: FALSE
 notebook: FALSE
 sidebar_position: 1

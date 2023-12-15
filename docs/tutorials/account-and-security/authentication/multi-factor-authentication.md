@@ -1,5 +1,5 @@
 ---
-slug: /docs/multi-factor-authentication
+slug: /multi-factor-authentication
 beta: FALSE
 notebook: FALSE
 sidebar_position: 3

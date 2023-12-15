@@ -1,5 +1,5 @@
 ---
-slug: /docs/create-snapshot
+slug: /create-snapshot
 beta: FALSE
 notebook: FALSE
 sidebar_position: 1

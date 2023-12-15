@@ -1,5 +1,5 @@
 ---
-slug: /docs/faq-account
+slug: /faq-account
 beta: null
 notebook: null
 sidebar_position: 10

@@ -1,5 +1,5 @@
 ---
-slug: /docs/restore-from-snapshot
+slug: /restore-from-snapshot
 beta: FALSE
 notebook: FALSE
 sidebar_position: 4

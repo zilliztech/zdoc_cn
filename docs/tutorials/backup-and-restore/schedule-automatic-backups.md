@@ -1,5 +1,5 @@
 ---
-slug: /docs/schedule-automatic-backups
+slug: /schedule-automatic-backups
 beta: FALSE
 notebook: FALSE
 sidebar_position: 2

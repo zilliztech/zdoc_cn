@@ -1,5 +1,5 @@
 ---
-slug: /docs/connect-to-cluster
+slug: /connect-to-cluster
 beta: FALSE
 notebook: FALSE
 sidebar_position: 2

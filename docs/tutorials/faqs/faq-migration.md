@@ -1,5 +1,5 @@
 ---
-slug: /docs/faq-migration
+slug: /faq-migration
 beta: null
 notebook: null
 sidebar_position: 5

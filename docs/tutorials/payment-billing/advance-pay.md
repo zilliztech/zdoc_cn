@@ -1,5 +1,5 @@
 ---
-slug: /docs/advance-pay
+slug: /advance-pay
 beta: FALSE
 notebook: FALSE
 sidebar_position: 2

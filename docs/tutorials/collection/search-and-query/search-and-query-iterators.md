@@ -1,5 +1,5 @@
 ---
-slug: /docs/search-and-query-iterators
+slug: /search-and-query-iterators
 beta: TRUE
 notebook: 09_search_query_iterators.ipynb
 sidebar_position: 3

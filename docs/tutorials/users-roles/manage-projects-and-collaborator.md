@@ -1,5 +1,5 @@
 ---
-slug: /docs/manage-projects-and-collaborator
+slug: /manage-projects-and-collaborator
 beta: FALSE
 notebook: FALSE
 sidebar_position: 3

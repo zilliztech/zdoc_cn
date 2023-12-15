@@ -1,5 +1,5 @@
 ---
-slug: /docs/autoindex-explained
+slug: /autoindex-explained
 beta: FALSE
 notebook: FALSE
 sidebar_position: 1

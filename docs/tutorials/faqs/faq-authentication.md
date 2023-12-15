@@ -1,5 +1,5 @@
 ---
-slug: /docs/faq-authentication
+slug: /faq-authentication
 beta: null
 notebook: null
 sidebar_position: 11

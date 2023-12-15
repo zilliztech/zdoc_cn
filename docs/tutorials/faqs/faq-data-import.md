@@ -1,5 +1,5 @@
 ---
-slug: /docs/faq-data-import
+slug: /faq-data-import
 beta: null
 notebook: null
 sidebar_position: 4
