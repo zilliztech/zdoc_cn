@@ -2,6 +2,7 @@
 slug: /view-activities
 beta: FALSE
 notebook: FALSE
+token: WllVwhQakiUVLXkMm7ocRk5xnxh
 sidebar_position: 7
 ---
 
@@ -12,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud **事件**页面记录了[组织](./a-panorama-view#understand-organizations)中发生的事件，包括免费额度增减、集群状态变更、授予或撤销组织和项目权限等。
 
-## 查看事件{#view-activities}
+## 查看事件{#view-activities}{#view-activities}
 
 您可以在 Zilliz Cloud 界面查看组织级别的事件。
 
@@ -22,16 +23,16 @@ Zilliz Cloud **事件**页面记录了[组织](./a-panorama-view#understand-orga
 
 ![view-activities-cn](/img/view-activities-cn.png)
 
-## 筛选事件{#filter-activities}
+## 筛选事件{#filter-activities}{#filter-activities}
 
 您可以根据事件类型和事件发生的时段来筛选展示的事件记录。您可以组合这 2 个筛选条件。
 
 - **根据时间筛选事件**
+
     如需查看特定时间段内发生的事件，请点击时间组件，选择起始日期和终止日期，点击**确认**。 
 
-    <Admonition type="info" icon="📘" title="说明">    
-    
-    
+    <Admonition type="info" icon="📘" title="说明">
+
     起始日期和终止日期之间应小于 30 天。
 
     </Admonition>
@@ -41,6 +42,7 @@ Zilliz Cloud **事件**页面记录了[组织](./a-panorama-view#understand-orga
     
 
 - **根据事件类型筛选**
+
     如需根据事件类型筛选，请点击事件类型下拉框并选择您想要查看的事件类型。Zilliz Cloud 中有 3 种事件类型：**信息**、**警告**和**错误**。
 
     |  **事件类型** |  **描述**                                                                          |
@@ -51,10 +53,11 @@ Zilliz Cloud **事件**页面记录了[组织](./a-panorama-view#understand-orga
 
     ![filter-by-activity-type-cn](/img/filter-by-activity-type-cn.png)
 
-## 相关文档{#related-topics}
+## 相关文档{#related-topics}{#related-topics}
 
 - [权限概览](./a-panorama-view) 
 
 - [管理组织与成员](./manage-orgs-and-members) 
 
 - [管理项目与成员](./manage-projects-and-collaborator) 
+

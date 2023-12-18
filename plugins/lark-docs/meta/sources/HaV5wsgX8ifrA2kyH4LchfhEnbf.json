@@ -1,0 +1,120 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": true,
+  "node_create_time": "1687158719",
+  "node_token": "HaV5wsgX8ifrA2kyH4LchfhEnbf",
+  "node_type": "origin",
+  "obj_create_time": "1687158719",
+  "obj_edit_time": "1687158724",
+  "obj_token": "YM7GdxO0ToAbY1xdQQUcQQkdn0g",
+  "obj_type": "docx",
+  "origin_node_token": "HaV5wsgX8ifrA2kyH4LchfhEnbf",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "XyeFwdx6kiK9A6kq3yIcLNdEnDd",
+  "space_id": "7167193056431783939",
+  "title": "用户和角色",
+  "slug": "users-roles",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "YM7GdxO0ToAbY1xdQQUcQQkdn0g",
+        "block_type": 1,
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "用户和角色",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      }
+    ],
+    "counts": 1
+  },
+  "children": [
+    {
+      "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+      "has_child": false,
+      "node_create_time": "1687164427",
+      "node_token": "WYzywSL2ViDcZGk9vgqcq9XOned",
+      "node_type": "origin",
+      "obj_create_time": "1687164427",
+      "obj_edit_time": "1700707202",
+      "obj_token": "A2hxdw23IokIAXxadTHcBGxUned",
+      "obj_type": "docx",
+      "origin_node_token": "WYzywSL2ViDcZGk9vgqcq9XOned",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+      "parent_node_token": "HaV5wsgX8ifrA2kyH4LchfhEnbf",
+      "space_id": "7167193056431783939",
+      "title": "权限概览",
+      "slug": "a-panorama-view"
+    },
+    {
+      "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+      "has_child": false,
+      "node_create_time": "1701398087",
+      "node_token": "SXwewQ8p6i2qf8kd2YaccqKDnng",
+      "node_type": "origin",
+      "obj_create_time": "1701398087",
+      "obj_edit_time": "1701945237",
+      "obj_token": "TL1OdQAgtozxGwx1uwecRHUYnLb",
+      "obj_type": "docx",
+      "origin_node_token": "SXwewQ8p6i2qf8kd2YaccqKDnng",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+      "parent_node_token": "HaV5wsgX8ifrA2kyH4LchfhEnbf",
+      "space_id": "7167193056431783939",
+      "title": "集群内置角色"
+    },
+    {
+      "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+      "has_child": false,
+      "node_create_time": "1687166390",
+      "node_token": "I9ktwIylxiDTKik4ckUctIOvnjm",
+      "node_type": "origin",
+      "obj_create_time": "1687166390",
+      "obj_edit_time": "1700715878",
+      "obj_token": "LO95dfmh2oWoWgxLoiqcPz1dnCh",
+      "obj_type": "docx",
+      "origin_node_token": "I9ktwIylxiDTKik4ckUctIOvnjm",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+      "parent_node_token": "HaV5wsgX8ifrA2kyH4LchfhEnbf",
+      "space_id": "7167193056431783939",
+      "title": "管理组织与成员",
+      "slug": "manage-orgs-and-members"
+    },
+    {
+      "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+      "has_child": false,
+      "node_create_time": "1687745214",
+      "node_token": "Sw1Kwj0oViAYuAkoUIZcvhsJnBd",
+      "node_type": "origin",
+      "obj_create_time": "1687745214",
+      "obj_edit_time": "1700707390",
+      "obj_token": "JkGNdbHKmouGjExm2YucPIE1nSc",
+      "obj_type": "docx",
+      "origin_node_token": "Sw1Kwj0oViAYuAkoUIZcvhsJnBd",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+      "parent_node_token": "HaV5wsgX8ifrA2kyH4LchfhEnbf",
+      "space_id": "7167193056431783939",
+      "title": "管理项目与成员",
+      "slug": "manage-projects-and-collaborator"
+    }
+  ]
+}

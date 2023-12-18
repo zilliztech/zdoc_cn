@@ -2,6 +2,7 @@
 slug: /faq-data-import
 beta: null
 notebook: null
+token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 4
 ---
 
@@ -9,12 +10,12 @@ sidebar_position: 4
 
 本文列举了在 Zilliz Cloud 导入数据时可能遇到的常见问题及对应解决方法。
 
-## Contents
+## 目录
 
 - [能否向 Zilliz Cloud 集群批量导入数据？](#can-i-bulk-insert-data-into-the-zilliz-cloud-vector-databases)
 - [在使用 Node.js SDK 导入数据或查询时，遇到 `ECONNRESET`错误该怎么办？](#what-can-i-do-if-i-receive-econnreset-errors-when-importing-data-to-or-querying-zilliz-cloud-clusters-with-nodejs-sdk)
 
-## 常见问题
+## 问题
 
 
 
@@ -30,6 +31,7 @@ sidebar_position: 4
 1. 升级至支持 `channelOptions` 的最新版 Milvus NodeJS SDK。 
 
 1. 手动添加 `channelOptions`。
+
     ```plaintext
     const channelOptions: ChannelOptions = {
     
@@ -43,6 +45,7 @@ sidebar_position: 4
     ```
 
 1. 使用 `channelOptions` 初始化客户端。
+
     ```javascript
     import { MilvusClient, DataType } from '@zilliz/milvus2-sdk-node';
     

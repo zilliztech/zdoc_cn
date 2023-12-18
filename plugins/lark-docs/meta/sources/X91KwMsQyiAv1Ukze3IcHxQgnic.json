@@ -1,0 +1,1084 @@
+{
+  "creator": "ou_8554528ee6e965bad56710acde1c7847",
+  "has_child": false,
+  "node_create_time": "1692687102",
+  "node_token": "X91KwMsQyiAv1Ukze3IcHxQgnic",
+  "node_type": "origin",
+  "obj_create_time": "1692687102",
+  "obj_edit_time": "1702639107",
+  "obj_token": "K8sKd1VSxoNYcOxk37gcECzenZf",
+  "obj_type": "docx",
+  "origin_node_token": "X91KwMsQyiAv1Ukze3IcHxQgnic",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_8554528ee6e965bad56710acde1c7847",
+  "parent_node_token": "QxcnwBks8izBAQkjP8Ycl1cEnQh",
+  "space_id": "7167193056431783939",
+  "title": "版本说明书 2.0.0",
+  "slug": "release-notes-200",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "K8sKd1VSxoNYcOxk37gcECzenZf",
+        "block_type": 1,
+        "children": [
+          "TG9FdJ2CZoE25txOj4ycaL2Vn4e",
+          "CwMddVHcOo1wN1x2eyNcXuNfn6d",
+          "SCkwdQzUOo1rGSxEYQZcrOVcnMS",
+          "NTs4d9feRoAq6IxOO6bcikEpnd8",
+          "RHa8deR6IohrBExQHkicCxmrnvb",
+          "Pwd3dfg5AobXFgxsg4tcwoINnPv",
+          "TZytdd0gPo0pZWxYJn7ceXOVnMc",
+          "YVdKdygYLochgixGLftc2jbinAd",
+          "RNc9drsbsonBMJxWVkmcjhpKn7I",
+          "MTZhdX2yCoulBOxdfxkctwn3n1b",
+          "E13vdwfZho27raxK2X0cVe1qnkd",
+          "D05wd9ZtyoVbFexJvgycObzgn4d",
+          "JXDCdvR9loBVjcxTWlcclgdhnqF",
+          "QzfydcL6CoJRMax858zcxE8snog",
+          "Jy3Jdp35CoYDIMxIfnacDZEinub",
+          "DqCod7MpsoqdhWxrpcyc1TlpnDb",
+          "TOUDdbwrooF4pnx0AVxctJD3nPc",
+          "AJsxdQtKRoJtTMx4FSqcCsV5nve",
+          "XlE9djB01ohVC7xdjERcSM1WnQX",
+          "Q2DIdBvWToVOv7xfq5DcVGQ9nxc",
+          "UwoCdykAOo6p9Lx66VNcLRA4n5b",
+          "Iy3IdyaWpoMoopx8ZOcc71x2nhe",
+          "H3YBd5vOgovickxIJ5IcG6eEnab",
+          "DJzVdcgDloV8i8xxS2OcGCK4nyh"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "版本说明书 2.0.0",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "TG9FdJ2CZoE25txOj4ycaL2Vn4e",
+        "block_type": 2,
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "发布日期：2023年6月14日",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CwMddVHcOo1wN1x2eyNcXuNfn6d",
+        "block_type": 2,
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 2.0.0 的发布为向量数据库管理设立了新的标准。它大大增强了初学者的用户体验，提供了更实惠和灵活的定价选项，实现了无缝的团队协作，并提供了灵活的模式管理。这次更新的主要特性包括多样化的订阅方案、全新的 CU 类型、组织和协作支持、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "RBAC",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 支持、动态 Schema 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "JSON",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 类型支持。今天就试试这个改变游戏规则的更新吧!",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SCkwdQzUOo1rGSxEYQZcrOVcnMS",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zililz Cloud 订阅方案：企业版和专有部署{#zilliz-cloud-plan-tiers}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf"
+      },
+      {
+        "block_id": "NTs4d9feRoAq6IxOO6bcikEpnd8",
+        "block_type": 2,
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "我们很高兴为中国用户提供企业版和专有部署两种订阅方案。每个方案都经过精心设计，以平衡成本、服务和安全方面的考虑，以确保满足每个用户的需求。通过Zilliz Cloud，您可以根据业务的发展需求灵活地管理您的向量数据库。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RHa8deR6IohrBExQHkicCxmrnvb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "企业版",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "专为大型企业或组织提供高用可、数据安全和专家技术支持的订阅方案。通过阿里云提供的公有云服务向用户提供具有完整功能和高级配置的专用集群。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf"
+      },
+      {
+        "block_id": "Pwd3dfg5AobXFgxsg4tcwoINnPv",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "专有部署",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "是注重数据安全与合规管理的企业的理想选择。Zilliz Cloud 可在你的虚拟私有云（VPC）内提供完全由您管理的向量数据库服务。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf"
+      },
+      {
+        "block_id": "TZytdd0gPo0pZWxYJn7ceXOVnMc",
+        "block_type": 2,
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "前往",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "定价",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com%2Fpricing"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页面了解更多。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YVdKdygYLochgixGLftc2jbinAd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "全新的 CU 类型{#cost-optimized-compute-unit-cu}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf"
+      },
+      {
+        "block_id": "RNc9drsbsonBMJxWVkmcjhpKn7I",
+        "block_type": 2,
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "CU 是用于数据并行处理的计算资源的基本计量单位。Zilliz Cloud 提供",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "性能型",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "容量型",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "经济型",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "三种 CU 供您选择。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MTZhdX2yCoulBOxdfxkctwn3n1b",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "性能型：",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "适用于需要低延迟和高",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "吞吐量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "的向量相似性检索场景。您对延迟有较高要求，性能型 CU 是一个合适的选择。因为性能型 CU 不仅可以提供更快速的响应，而且可以同时处理更多的请求。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf"
+      },
+      {
+        "block_id": "E13vdwfZho27raxK2X0cVe1qnkd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "容量型：",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 专为在固态硬盘（SSD）上搜索海量数据设计，相比性能型 CU 能够存储多 5 倍的数据，但延迟可能会增加。如果您需要处理大量数据，可以考虑选择容量型 CU。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf"
+      },
+      {
+        "block_id": "D05wd9ZtyoVbFexJvgycObzgn4d",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "经济型",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：适用于需要节约成本的场景。经济型 CU 的存储容量与容量型相同，可存储约5 百万 768 维向量。但经济型 CU 的价格比容量型 CU 的价格低 30％。这意味着您可以以更低的价格使用向量数据库处理大型数据集。如果您预算有限且对延迟或查询",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "吞吐量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "的要求不高，可以考虑选择经济型 CU。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf"
+      },
+      {
+        "block_id": "JXDCdvR9loBVjcxTWlcclgdhnqF",
+        "block_type": 2,
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "想了解如何选择合适的计算单元，请前往",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "选择合适的 CU 类型",
+                "token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
+                "url": "https://zilliverse.feishu.cn/wiki/DP6Fw8vkzi7pD7kAMB3cjunYn6g"
+              }
+            },
+            {
+              "text_run": {
+                "content": "页面了解更多。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QzfydcL6CoJRMax858zcxE8snog",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "组织管理、项目协作和访问控制{#organization-collaboration-and-rbac}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf"
+      },
+      {
+        "block_id": "Jy3Jdp35CoYDIMxIfnacDZEinub",
+        "block_type": 2,
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud现在提供灵活的组织和成员管理功能，允许组织成员在不同层级（如集群、项目和组织）之间无缝协作。基于角色的访问控制使您能够精确控制用户对资源的访问权限，既保证了团队协作的灵活性，又确保了高级别的数据安全能力。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DqCod7MpsoqdhWxrpcyc1TlpnDb",
+        "block_type": 2,
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "想了解更多如何使用上述特性达成安全有序的管理目标，请前往",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "用户和角色",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fdocs.zilliz.com.cn%2Fdocs%2Fusers-roles"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页面了解更多。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TOUDdbwrooF4pnx0AVxctJD3nPc",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Partition Key{#partition-key}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf"
+      },
+      {
+        "block_id": "AJsxdQtKRoJtTMx4FSqcCsV5nve",
+        "block_type": 2,
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 的 Partition Key 特性允许您在创建 Collection 时指定一个字段作为 Partition Key，这样在插入数据时，Zilliz Cloud 会根据每条数据在该字段上的取值自动将数据存储在指定的 Partition 中。\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "这个特性特别适用于查询过滤场景。由于具有相同 Partition Key 的实体会被存储在相近的位置，这样在查询时就可以避免不必要的扫描。因此，基于 Partition Key 字段的条件查询执行起来比传统的基于扫描过滤的查询要快得多。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XlE9djB01ohVC7xdjERcSM1WnQX",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "动态 Schema{#dynamic-schema}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf"
+      },
+      {
+        "block_id": "Q2DIdBvWToVOv7xfq5DcVGQ9nxc",
+        "block_type": 2,
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 提供的动态 Schema 特性将极大地提升 Zilliz Cloud 集群在应对复杂业务场景时的灵活性。现在，用户可以在无需预先定义Schema的情况下，动态地向 Collection 中插入各种类型的字段。\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "对于高级用户而言，Zilliz Cloud 允许您在一个 Collection 中同时使用动态和静态字段。您可以在设计 Schema 时将静态字段作为必选字段，并通过动态 Schema 机制引入一些可选字段，从而优化索引、提升查询性能，并保持 Schema 的灵活性。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UwoCdykAOo6p9Lx66VNcLRA4n5b",
+        "block_type": 2,
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "想了解更多关于动态 Schema 的内容，请阅读",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "开启动态 Schema",
+                "token": "EpHowtn3miepTyk2pNlcLwDonyD",
+                "url": "https://zilliverse.feishu.cn/wiki/EpHowtn3miepTyk2pNlcLwDonyD"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Iy3IdyaWpoMoopx8ZOcc71x2nhe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "JSON",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 数据类型{#json-type-support}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf"
+      },
+      {
+        "block_id": "H3YBd5vOgovickxIJ5IcG6eEnab",
+        "block_type": 2,
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "JSON 是一种在数据管理中经常使用的重要的数据交换格式，因此，我们在 Zilliz Cloud 集群中引入了对 JSON 的支持。现在，您可以在您的 Zilliz Cloud 集群中轻松地存储和管理您的 JSON 数据。\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "相信 Zilliz Cloud 集群提供的相似近邻搜索功能结合灵活的JSON数据格式，将为您带来全新的搜索体验。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DJzVdcgDloV8i8xxS2OcGCK4nyh",
+        "block_type": 2,
+        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "想了解关于 JSON 数据类型的更多内容，请阅读",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "JSON",
+                "token": "UXBjwVpKmirzg9kgWgmcLixwnIe",
+                "url": "https://zilliverse.feishu.cn/wiki/UXBjwVpKmirzg9kgWgmcLixwnIe"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 25
+  }
+}

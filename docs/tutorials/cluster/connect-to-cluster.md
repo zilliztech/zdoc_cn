@@ -2,6 +2,7 @@
 slug: /connect-to-cluster
 beta: FALSE
 notebook: FALSE
+token: HU31wDHCCiN9qIknZ2fcLmconNh
 sidebar_position: 2
 ---
 
@@ -13,7 +14,7 @@ import TabItem from '@theme/TabItem';
 
 本文介绍如何连接到 Zilliz Cloud 集群。
 
-## 开始前{#before-you-start}
+## 开始前{#before-you-start}{#before-you-start}
 
 请确保已完成以下步骤：
 
@@ -21,13 +22,13 @@ import TabItem from '@theme/TabItem';
 
 - 已创建集群。详情请参见[创建集群](./create-cluster)。
 
-- 已获取集群的用户名和密码。详情请参见[管理身份凭证](./manage-cluster-credentials)。
+- 已获取集群的用户名和密码。详情请参见[管理身份凭证](./undefined)。
 
 - 已安装合适版本的 Milvus SDK。详情请参见[安装 SDK](./install-sdks)。
 
 - 阅读本指南系列时，建议下载[代码示例](https://assets.zilliz.com/zdoc/zilliz_cloud_sdk_examples.zip)。
 
-## 操作步骤{#connect-to-a-cluster}
+## 操作步骤{#connect-to-a-cluster}{#connect-to-a-cluster}
 
 您可以通过公网地址和创建集群时指定的用户名和密码连接到集群。
 
@@ -165,7 +166,7 @@ curl --request GET \\
 </TabItem>
 </Tabs>
 
-## 相关文档{#related-topics}
+## 相关文档{#related-topics}{#related-topics}
 
 - [创建 Collection](./create-collection) 
 

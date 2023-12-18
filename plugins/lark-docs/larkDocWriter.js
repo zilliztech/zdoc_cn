@@ -262,7 +262,7 @@ class larkDocWriter {
     }
 
     async write_faqs (path) {
-        const source = this.__fetch_doc_source('title', 'FAQs')
+        const source = this.__fetch_doc_source('title', '常见问题')
         const blocks = source.blocks.items
 
         if (blocks) {
@@ -294,23 +294,25 @@ class larkDocWriter {
             }
 
             // Write FAQs root page
-            let title = 'FAQs'
+            let title = '常见问题'
             let slug = 'faqs'
             let front_matter = this.__front_matters(slug, null, null, source.node_token, 999)
             const markdown = `${front_matter}\n\n# ${title}\n\n`
             fs.writeFileSync(`${path}/${slug}.md`, markdown)
 
             sub_pages.forEach((sub_page, index) => {
-                let title = sub_page[0].replace(/^## /g, '').replace(/{#[\w-]+}/g, '').trim()
+                let raw = sub_page[0].replace(/^## /g, '').replace(/{#[\w-]+}/g, '').trim()
+                let title = raw.split('{/')[0]
                 let short_description = sub_page.filter(line => line.length > 0)[1]
-                let slug = slugify(title, {lower: true, strict: true})
+                let slug = raw.split('{/')[1].replace('}', '')
                 let front_matter = this.__front_matters(slug, null, null, source.node_token, index+1)
                 let links = []
 
                 sub_page = sub_page.map(line => {
                     if (line.startsWith('**')) {
-                        let qtext = line.replace(/\*/g, '').trim()
-                        let qslug = slugify(qtext, {lower: true, strict: true})
+                        let raw = line.replace(/\*/g, '').trim()
+                        let qtext = raw.split('{#')[0]
+                        let qslug = raw.split('{#')[1].replace('}', '')
                         line = `### ${qtext}{#${qslug}}`
                         links.push(`- [${qtext}](#${qslug})`)
                     }
@@ -322,7 +324,7 @@ class larkDocWriter {
                     return line
                 })
 
-                const markdown = `${front_matter}\n\n# ${title}\n\n${short_description}\n\n## Contents\n\n${links.join('\n')}\n\n## FAQs\n\n${sub_page.slice(1).join('\n')}`    
+                const markdown = `${front_matter}\n\n# ${title}\n\n${short_description}\n\n## 目录\n\n${links.join('\n')}\n\n## 问题\n\n${sub_page.slice(1).join('\n')}`    
                 fs.writeFileSync(`${path}/${slug}.md`, markdown)
             })
         }
@@ -554,9 +556,10 @@ class larkDocWriter {
 
     async __heading(heading, level) {
         let content = await this.__text_elements(heading['elements'])
-        content = this.__filter_content(content, this.target)
-        let slug = slugify(content, {lower: true, strict: true})
-        return '#'.repeat(level) + ' ' + content + '{#'+slug+'}';
+        content = this.__filter_content(content, this.target).replace(/\*\*/g, '')
+        let title = content.split('{#')[0]
+        let slug = content.split('{#')[1].replace('}', '')
+        return '#'.repeat(level) + ' ' + title + '{#'+slug+'}';
     }
 
     async __bullet(block, indent) {

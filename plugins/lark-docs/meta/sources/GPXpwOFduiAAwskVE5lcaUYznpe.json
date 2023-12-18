@@ -1,0 +1,1341 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": false,
+  "node_create_time": "1700634066",
+  "node_token": "GPXpwOFduiAAwskVE5lcaUYznpe",
+  "node_type": "origin",
+  "obj_create_time": "1700634066",
+  "obj_edit_time": "1700736526",
+  "obj_token": "WC0bdUBHsoGJlhx2Ya2csxDCnee",
+  "obj_type": "docx",
+  "origin_node_token": "GPXpwOFduiAAwskVE5lcaUYznpe",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "MD8MwxyYHiavBMk6OekcoT8DnTe",
+  "space_id": "7167193056431783939",
+  "title": "使用迭代器搜索和查询",
+  "slug": "search-and-query-iterators",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee",
+        "block_type": 1,
+        "children": [
+          "VFeWdRzZ1o54GWxCI4hcLxLKnl2",
+          "FPFcdcecgohsnWxFi8Uchm2Hntg",
+          "JlaGdzhlfoiiXAxXPWucPvTbnbd",
+          "CHp0dwotxoYhUVx6q6ycdQDVnqd",
+          "LJf1d4egZoDbCyxsh6rcvtSRnwK",
+          "Z5lGdf168onvWfxtHffcGE7inZg",
+          "F04qdiFa4otdAixcvwCckl9Unbd",
+          "RjaAdBd0sotJuAxzoh2clJrOnCg",
+          "Q51Qdow3Eo5m0YxlcvJcmkrKnCe",
+          "Sdd8dYhRooWxyTxaGW4cm3DmnXd",
+          "JUpRd8zP9okaJkxwDUWcAP6KnBg",
+          "Z58XdthyCodf9ix106LciMTandb",
+          "BGlHdBVqoo31gBxvAIRcZGTbnNb",
+          "LFu5dGuLkoYpcBxQSKMcoKLJnRH",
+          "AQFldGcZDonb8vxFHt1cXsManLg",
+          "EVHud0G6IopkFVxXnBacKuMDnLf",
+          "CTBAdSvE2o4Mazx7Rydc2IsYnDh",
+          "WNC7dXY4tokypHx4QcKcpP96nPc",
+          "VqYbdLVwEo91OKxA4RAcqwa5nod",
+          "AsMUdS7uYoBydRxK1bDcNRVunVe",
+          "MRYDdjhazoihdyxsAQVcAbshnRg",
+          "PJxzdi4KxodPUCxhkwece6M8ntd",
+          "CtbNdqG45obGFfxSANSchSzrnQe",
+          "KSd1den51oPZtsxp66hcubTGnpd",
+          "QxxJdNfa4oxAbVxFVonc0pl1nuc",
+          "PFFhdxJpCo4zRBxpJDlc1S6Onef",
+          "F3qndvaEpo4OwWxW5yFcRmFpnHd",
+          "J8EqdYDQFoOyj0xtuzMc9HGFngb",
+          "KeX5dqhq5oFmjox0q5pcPMkznVe",
+          "IKEld6HAdoUdEAx1j8vco7GynKh",
+          "N3g5d1PBPo2grWxllULcHdRunKb",
+          "U2oOdNzXMoM89nxTIs4cn2FZntc"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "使用迭代器搜索和查询",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "VFeWdRzZ1o54GWxCI4hcLxLKnl2",
+        "block_type": 2,
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本指南介绍如何利用迭代器（Iterator）的强大功能，在大型数据集中进行高效的搜索与查询。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FPFcdcecgohsnWxFi8Uchm2Hntg",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "概述{#overview}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "JlaGdzhlfoiiXAxXPWucPvTbnbd",
+        "block_type": 2,
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "迭代器是一种先进的工具，它通过处理主键值和布尔表达式，使您能够轻松浏览和查询大型数据集。相较于传统的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "offset",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "limit",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 参数配置，迭代器能提供更高效、更具扩展性的搜索和查询解决方案。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CHp0dwotxoYhUVx6q6ycdQDVnqd",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "迭代器的优势{#benefits-of-using-iterators}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "LJf1d4egZoDbCyxsh6rcvtSRnwK",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "简化操作：免去复杂的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "offset",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "limit",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 参数设置。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "Z5lGdf168onvWfxtHffcGE7inZg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "提高效率：按需获取数据，享受更快速的数据检索体验。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "F04qdiFa4otdAixcvwCckl9Unbd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "一致性：通过布尔过滤确保每次迭代都能维持数据集的一致大小。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "RjaAdBd0sotJuAxzoh2clJrOnCg",
+        "block_type": 34,
+        "children": [
+          "Ix0zdCbT5oqcdYxNtSXcxMb7n4d",
+          "P6pvdTPHuorPr4xrIxwc2ZDWned"
+        ],
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee",
+        "quote_container": {}
+      },
+      {
+        "block_id": "Ix0zdCbT5oqcdYxNtSXcxMb7n4d",
+        "block_type": 2,
+        "parent_id": "RjaAdBd0sotJuAxzoh2clJrOnCg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "P6pvdTPHuorPr4xrIxwc2ZDWned",
+        "block_type": 2,
+        "parent_id": "RjaAdBd0sotJuAxzoh2clJrOnCg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "目前，迭代器功能处于 Beta 测试阶段。请注意，该功能及相关文档在 Beta 测试期间可能会有所更改。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Q51Qdow3Eo5m0YxlcvJcmkrKnCe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "开始前{#before-you-start}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "Sdd8dYhRooWxyTxaGW4cm3DmnXd",
+        "block_type": 2,
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在开始使用迭代器进行搜索或查询前，请确保以下几点：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JUpRd8zP9okaJkxwDUWcAP6KnBg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您的集群已升级至 Beta 版本。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "Z58XdthyCodf9ix106LciMTandb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您已下载了示例数据集，更多详情参见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "示例数据集",
+                "token": "ZoXbwP8hJivPw2ktsLrckw0Snif",
+                "url": "https://zilliverse.feishu.cn/wiki/ZoXbwP8hJivPw2ktsLrckw0Snif"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "BGlHdBVqoo31gBxvAIRcZGTbnNb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "准备数据集{#prepare-your-dataset}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "LFu5dGuLkoYpcBxQSKMcoKLJnRH",
+        "block_type": 2,
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "环境设置步骤如下：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AQFldGcZDonb8vxFHt1cXsManLg",
+        "block_type": 13,
+        "children": [
+          "RJQgdsEjEoFRbGxXT7GclDEdncc"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建一个与您数据集相匹配的 Collection：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "RJQgdsEjEoFRbGxXT7GclDEdncc",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# 0. Connect to cluster\nconnections.connect(\n    uri=CLUSTER_ENDPOINT, # Public endpoint obtained from Zilliz Cloud\n    token=TOKEN, # API key or a colon-separated cluster username and password\n)\n\n# 1. Define fields\nfields = [\n    FieldSchema(name=\"id\", dtype=DataType.INT64, is_primary=True),\n    FieldSchema(name=\"title\", dtype=DataType.VARCHAR, max_length=512),   \n    FieldSchema(name=\"title_vector\", dtype=DataType.FLOAT_VECTOR, dim=768),\n    FieldSchema(name=\"link\", dtype=DataType.VARCHAR, max_length=512),\n    FieldSchema(name=\"reading_time\", dtype=DataType.INT64),\n    FieldSchema(name=\"publication\", dtype=DataType.VARCHAR, max_length=512),\n    FieldSchema(name=\"claps\", dtype=DataType.INT64),\n    FieldSchema(name=\"responses\", dtype=DataType.INT64)\n]\n\n# 2. Build the schema\nschema = CollectionSchema(\n    fields,\n    description=\"Schema of Medium articles\",\n    enable_dynamic_field=False\n)\n\n# 3. Create collection\ncollection = Collection(\n    name='medium_articles', \n    description=\"Medium articles published between Jan and August in 2020 in prominent publications\",\n    schema=schema\n)\n\n# 4. Index collection\n# 'index_type' defines the index algorithm to be used.\n#    AUTOINDEX is the only option.\n#\n# 'metric_type' defines the way to measure the distance \n#    between vectors. Possible values are L2, IP, and Cosine,\n#    and defaults to Cosine.\nindex_params = {\n    \"index_type\": \"AUTOINDEX\",\n    \"metric_type\": \"L2\",\n    \"params\": {}\n}\n\n# To name the index, do as follows:\ncollection.create_index(\n    field_name=\"title_vector\", \n    index_params=index_params,\n)\n\n# 5. Load collection\ncollection.load()\n\n# Get loading progress\nprogress = utility.loading_progress(COLLECTION_NAME)\n\nprint(progress)\n\n# Output\n#\n# {\n#     \"loading_progress\": \"100%\"\n# }\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "AQFldGcZDonb8vxFHt1cXsManLg"
+      },
+      {
+        "block_id": "EVHud0G6IopkFVxXnBacKuMDnLf",
+        "block_type": 13,
+        "children": [
+          "U8exdbPV1oaDGaxzVJGcBOz7nGc"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "准备待插入的数据集：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "U8exdbPV1oaDGaxzVJGcBOz7nGc",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# Prepare a list of rows\nwith open('medium_articles_2020_dpr.json') as f:\n    data = json.load(f)\n    rows = data['rows']\n\nprint(rows[:3])\n\n# Output\n#\n# [\n#     {\n#         \"id\": 0,\n#         \"title\": \"The Reported Mortality Rate of Coronavirus Is Not Important\",\n#         \"title_vector\": [\n#             0.041732933,\n#             0.013779674,\n#             -0.027564144,\n#             -0.013061441,\n#             0.009748648,\n#             0.00082446384,\n#             -0.00071647146,\n#             0.048612226,\n#             -0.04836573,\n#             -0.04567751,\n#             \"(758 more items hidden)\"\n#         ],\n#         \"link\": \"https://medium.com/swlh/the-reported-mortality-rate-of-coronavirus-is-not-important-369989c8d912\",\n#         \"reading_time\": 13,\n#         \"publication\": \"The Startup\",\n#         \"claps\": 1100,\n#         \"responses\": 18\n#     },\n#     {\n#         \"id\": 1,\n#         \"title\": \"Dashboards in Python: 3 Advanced Examples for Dash Beginners and Everyone Else\",\n#         \"title_vector\": [\n#             0.0039737443,\n#             0.003020432,\n#             -0.0006188639,\n#             0.03913546,\n#             -0.00089768134,\n#             0.021238148,\n#             0.014454661,\n#             0.025742851,\n#             0.0022063442,\n#             -0.051130578,\n#             \"(758 more items hidden)\"\n#         ],\n#         \"link\": \"https://medium.com/swlh/dashboards-in-python-3-advanced-examples-for-dash-beginners-and-everyone-else-b1daf4e2ec0a\",\n#         \"reading_time\": 14,\n#         \"publication\": \"The Startup\",\n#         \"claps\": 726,\n#         \"responses\": 3\n#     },\n#     {\n#         \"id\": 2,\n#         \"title\": \"How Can We Best Switch in Python?\",\n#         \"title_vector\": [\n#             0.031961977,\n#             0.00047043373,\n#             -0.018263113,\n#             0.027324716,\n#             -0.0054595284,\n#             -0.014779159,\n#             0.017511465,\n#             0.030381083,\n#             -0.018930407,\n#             -0.03372473,\n#             \"(758 more items hidden)\"\n#         ],\n#         \"link\": \"https://medium.com/swlh/how-can-we-best-switch-in-python-458fb33f7835\",\n#         \"reading_time\": 6,\n#         \"publication\": \"The Startup\",\n#         \"claps\": 500,\n#         \"responses\": 7\n#     }\n# ]\n\n# Insert data\nresults = collection.insert(rows)\n\nprint(f\"Data inserted successfully! inserted rows: {results.insert_count}\")\n\n# Output\n#\n# Data inserted successfully! inserted rows: 5979\n\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "time.sleep(10)",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "EVHud0G6IopkFVxXnBacKuMDnLf"
+      },
+      {
+        "block_id": "CTBAdSvE2o4Mazx7Rydc2IsYnDh",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "使用迭代器搜索{#search-with-an-iterator}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "WNC7dXY4tokypHx4QcKcpP96nPc",
+        "block_type": 2,
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "迭代器能够简化搜索与查询向量相似的 Entity 的过程。具体请按照以下步骤进行：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VqYbdLVwEo91OKxA4RAcqwa5nod",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "初始化搜索迭代器，设定搜索参数和输出字段。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "AsMUdS7uYoBydRxK1bDcNRVunVe",
+        "block_type": 13,
+        "children": [
+          "JQ8YdbJnFoSTMNxtutecbgDYnUf",
+          "Ebffdrh2oo3J8jxwa7McjKKonoh"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在循环中使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "next()",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 方法分页检索搜索结果：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "JQ8YdbJnFoSTMNxtutecbgDYnUf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "若 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "next()",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 返回空数组，意味着没有更多页面，结束循环。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AsMUdS7uYoBydRxK1bDcNRVunVe"
+      },
+      {
+        "block_id": "Ebffdrh2oo3J8jxwa7McjKKonoh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如有搜索结果，将显示所设定的输出字段。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AsMUdS7uYoBydRxK1bDcNRVunVe"
+      },
+      {
+        "block_id": "MRYDdjhazoihdyxsAQVcAbshnRg",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "数据检索完毕后，使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "close()",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 关闭迭代器。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "PJxzdi4KxodPUCxhkwece6M8ntd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# 8. Search vectors\n\nquery_vector = rows[0]['title_vector']\n\n# Define search parameters\nsearch_params = {\n    \"metric_type\": \"L2\",\n    \"params\": {\"nprobe\": 10}\n}\n\n# Execute search\niterator = collection.search_iterator(\n    data=[query_vector], \n    anns_field=\"title_vector\",\n    batch_size=10,\n    limit=100, \n    param=search_params,\n    output_fields=[\"title\", \"link\", \"publication\"]\n)\n\nresults = []\n\nwhile True:\n    result = iterator.next()\n    if len(result) == 0:\n        iterator.close()\n        break;\n\n    for x in range(len(result)):\n        results.append(result[x])\n\nresults = [ { \n    \"id\": x.id,\n    \"distance\": x.distance,\n    \"entity\": {\n        \"title\": x.entity.get(\"title\"),\n        \"link\": x.entity.get(\"link\"),\n        \"publication\": x.entity.get(\"publication\")\n        },\n    } for x in results]\n\nprint(results[:3])\n\n# Output\n#\n# [\n#     {\n#         \"id\": 0,\n#         \"distance\": 0.0,\n#         \"entity\": {\n#             \"title\": \"The Reported Mortality Rate of Coronavirus Is Not Important\",\n#             \"link\": \"https://medium.com/swlh/the-reported-mortality-rate-of-coronavirus-is-not-important-369989c8d912\",\n#             \"publication\": \"The Startup\"\n#         }\n#     },\n#     {\n#         \"id\": 3177,\n#         \"distance\": 0.29999834299087524,\n#         \"entity\": {\n#             \"title\": \"Following the Spread of Coronavirus\",\n#             \"link\": \"https://towardsdatascience.com/following-the-spread-of-coronavirus-23626940c125\",\n#             \"publication\": \"Towards Data Science\"\n#         }\n#     },\n#     {\n#         \"id\": 5607,\n#         \"distance\": 0.36103832721710205,\n#         \"entity\": {\n#             \"title\": \"The Hidden Side Effect of the Coronavirus\",\n#             \"link\": \"https://medium.com/swlh/the-hidden-side-effect-of-the-coronavirus-b6a7a5ee9586\",\n#             \"publication\": \"The Startup\"\n#         }\n#     }\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# ]",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "CtbNdqG45obGFfxSANSchSzrnQe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "使用迭代器查询{#query-with-an-iterator}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "KSd1den51oPZtsxp66hcubTGnpd",
+        "block_type": 2,
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查询迭代器通过迭代主键表达式 (",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "expr",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ") 提供精确且可靠的分页方式。得益于查询的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "selectLowestPK",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 简化原则，确保了分页的准确性。执行带有迭代器的查询的步骤如下：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QxxJdNfa4oxAbVxFVonc0pl1nuc",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "启动查询迭代器。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "PFFhdxJpCo4zRBxpJDlc1S6Onef",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "expr",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 对结果进行一致性过滤和分页。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "F3qndvaEpo4OwWxW5yFcRmFpnHd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# 9. Query with iterators\n\niterator = collection.query_iterator(\n    batch_size=10,\n    limit=100,\n    expr=\"claps > 1000\",\n    output_fields=[\"title\", \"link\", \"claps\"]\n)\n\nresults = []\n\nwhile True:\n    result = iterator.next()\n    if len(result) == 0:\n        iterator.close()\n        break;\n\n    for x in range(len(result)):\n        results.append(result[x])\n\nprint(results[:3])\n\n# Output\n#\n# [\n#     {\n#         \"title\": \"The Reported Mortality Rate of Coronavirus Is Not Important\",\n#         \"link\": \"https://medium.com/swlh/the-reported-mortality-rate-of-coronavirus-is-not-important-369989c8d912\",\n#         \"claps\": 1100,\n#         \"id\": 0\n#     },\n#     {\n#         \"title\": \"What I Learned From Walking 3000 Miles to Work\",\n#         \"link\": \"https://medium.com/swlh/what-i-learned-from-walking-3000-miles-to-work-5bf210ab18b3\",\n#         \"claps\": 1600,\n#         \"id\": 34\n#     },\n#     {\n#         \"title\": \"How to Be Memorable in Social Settings\",\n#         \"link\": \"https://medium.com/personal-growth/how-to-be-memorable-in-social-settings-9fabcf80d20d\",\n#         \"claps\": 8600,\n#         \"id\": 66\n#     }\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# ]",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "J8EqdYDQFoOyj0xtuzMc9HGFngb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相关文档{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "KeX5dqhq5oFmjox0q5pcPMkznVe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建 Collection",
+                "token": "MNcZwAfV6iZxbckfKBlcmCzanti",
+                "url": "https://zilliverse.feishu.cn/wiki/MNcZwAfV6iZxbckfKBlcmCzanti"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "IKEld6HAdoUdEAx1j8vco7GynKh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "使用 Partition Key",
+                "token": "DrXpwhU8pixYi9kqzSBcs5TgnFd",
+                "url": "https://zilliverse.feishu.cn/wiki/DrXpwhU8pixYi9kqzSBcs5TgnFd"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "N3g5d1PBPo2grWxllULcHdRunKb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "插入并更新 Entity",
+                "token": "FdqOwWn9siVmS2kHLjpczaTlnlc",
+                "url": "https://zilliverse.feishu.cn/wiki/FdqOwWn9siVmS2kHLjpczaTlnlc"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      },
+      {
+        "block_id": "U2oOdNzXMoM89nxTIs4cn2FZntc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "使用高级表达式搜索和查询",
+                "token": "Ty6NwFqHAiXiXIkZl5RcFuK4nUh",
+                "url": "https://zilliverse.feishu.cn/wiki/Ty6NwFqHAiXiXIkZl5RcFuK4nUh"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WC0bdUBHsoGJlhx2Ya2csxDCnee"
+      }
+    ],
+    "counts": 39
+  }
+}

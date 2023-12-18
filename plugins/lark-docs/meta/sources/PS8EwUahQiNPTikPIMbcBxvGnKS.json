@@ -1,0 +1,596 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": false,
+  "node_create_time": "1687140705",
+  "node_token": "PS8EwUahQiNPTikPIMbcBxvGnKS",
+  "node_type": "origin",
+  "obj_create_time": "1687140705",
+  "obj_edit_time": "1700707056",
+  "obj_token": "IPQkdwZdUo3I72xP5etcDTSYnAd",
+  "obj_type": "docx",
+  "origin_node_token": "PS8EwUahQiNPTikPIMbcBxvGnKS",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "SbePwiLrZi2hZqk5NpRcmramnEN",
+  "space_id": "7167193056431783939",
+  "title": "查看备份快照",
+  "slug": "view-snapshot-details",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "IPQkdwZdUo3I72xP5etcDTSYnAd",
+        "block_type": 1,
+        "children": [
+          "OEvudH5pVo8908xM6TAcmA5inac",
+          "WXMOddELhomcs6xAfaOcpJORnke",
+          "DxQQd8WVZoOBxAxRw7wcbqZOnBG",
+          "FnChdhK8hoCIZIxvawqceVQwn3c",
+          "ZqIPdkkIvoXPObxmpvKcBGPCn8e",
+          "XEn3dN3vEopKCzx5zQ8cN7hHngM",
+          "QbQ9dqXsKo4ixux02PhciyganWd",
+          "RPSLdEz2roOsCyxy0m3cjMbinRd",
+          "AErRdizJ1o5OW1x3B04c70lInuM",
+          "ZUYldt8RloUsOTxlb9Kcsunjnxd",
+          "Vtl6dhX6KoBAKwxEszJch0SZnqg",
+          "VhMBdseJWojKENx86ojca1VynRc",
+          "CORGd4Ehyo9qm0x4pgmcj6T9nIe"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看备份快照",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "OEvudH5pVo8908xM6TAcmA5inac",
+        "block_type": 2,
+        "parent_id": "IPQkdwZdUo3I72xP5etcDTSYnAd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文介绍如何查看已创建的快照信息。您可以手动或自动创建快照。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WXMOddELhomcs6xAfaOcpJORnke",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "快照状态{#snapshot-status}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IPQkdwZdUo3I72xP5etcDTSYnAd"
+      },
+      {
+        "block_id": "DxQQd8WVZoOBxAxRw7wcbqZOnBG",
+        "block_type": 2,
+        "parent_id": "IPQkdwZdUo3I72xP5etcDTSYnAd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "根据不同场景，快照可能会处于如下状态：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FnChdhK8hoCIZIxvawqceVQwn3c",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建中",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "L4M8dYP7woIfnaxGLDycia37n5f"
+        ],
+        "parent_id": "IPQkdwZdUo3I72xP5etcDTSYnAd"
+      },
+      {
+        "block_id": "L4M8dYP7woIfnaxGLDycia37n5f",
+        "block_type": 2,
+        "parent_id": "FnChdhK8hoCIZIxvawqceVQwn3c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果快照处于此状态，则无法创建其他快照。但您可以单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "操作",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "列中的更多按钮，然后选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "取消",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "来终止创建过程。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZqIPdkkIvoXPObxmpvKcBGPCn8e",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "成功",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "KSjfdSIbIoDAnbxbjxSc2jUhn3f"
+        ],
+        "parent_id": "IPQkdwZdUo3I72xP5etcDTSYnAd"
+      },
+      {
+        "block_id": "KSjfdSIbIoDAnbxbjxSc2jUhn3f",
+        "block_type": 2,
+        "children": [
+          "SdsZdkCYjoxhE3xXBIzcXsSangc",
+          "TrRhdjS0Noi3iEx6OgNcNTlQnte",
+          "OjdqdYoTuorIVbxpcHEcvlvGncg"
+        ],
+        "parent_id": "ZqIPdkkIvoXPObxmpvKcBGPCn8e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果快照处于此状态，您可以单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "操作",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "列中的更多按钮来完成以下任意操作：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SdsZdkCYjoxhE3xXBIzcXsSangc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看备份集群中的 Collection",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KSjfdSIbIoDAnbxbjxSc2jUhn3f"
+      },
+      {
+        "block_id": "TrRhdjS0Noi3iEx6OgNcNTlQnte",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "从快照中恢复集群",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KSjfdSIbIoDAnbxbjxSc2jUhn3f"
+      },
+      {
+        "block_id": "OjdqdYoTuorIVbxpcHEcvlvGncg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "删除快照",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KSjfdSIbIoDAnbxbjxSc2jUhn3f"
+      },
+      {
+        "block_id": "XEn3dN3vEopKCzx5zQ8cN7hHngM",
+        "block_type": 2,
+        "parent_id": "IPQkdwZdUo3I72xP5etcDTSYnAd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您的快照状态处于其他状态，可能是出现了错误。如果该错误持续存在，请立即与我们联系。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QbQ9dqXsKo4ixux02PhciyganWd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看快照详情{#view-snapshot-details}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IPQkdwZdUo3I72xP5etcDTSYnAd"
+      },
+      {
+        "block_id": "RPSLdEz2roOsCyxy0m3cjMbinRd",
+        "block_type": 26,
+        "comment_ids": [
+          "7278894182021021699"
+        ],
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6335-1740%26mode%3Ddesign%26t%3Dkrs3Srz019NF5ejw-4"
+          }
+        },
+        "parent_id": "IPQkdwZdUo3I72xP5etcDTSYnAd"
+      },
+      {
+        "block_id": "AErRdizJ1o5OW1x3B04c70lInuM",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相关文档{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IPQkdwZdUo3I72xP5etcDTSYnAd"
+      },
+      {
+        "block_id": "ZUYldt8RloUsOTxlb9Kcsunjnxd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建备份快照",
+                "token": "GFFswc3z1iQtjQkpmyScL00dnSx",
+                "url": "https://zilliverse.feishu.cn/wiki/GFFswc3z1iQtjQkpmyScL00dnSx"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IPQkdwZdUo3I72xP5etcDTSYnAd"
+      },
+      {
+        "block_id": "Vtl6dhX6KoBAKwxEszJch0SZnqg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建自动备份",
+                "token": "TXyTwrfxCiStfek4hc7c2nKwnJc",
+                "url": "https://zilliverse.feishu.cn/wiki/TXyTwrfxCiStfek4hc7c2nKwnJc"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IPQkdwZdUo3I72xP5etcDTSYnAd"
+      },
+      {
+        "block_id": "VhMBdseJWojKENx86ojca1VynRc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "恢复备份",
+                "token": "NtkswF6UEi3kB0k8XSEcOKkhnld",
+                "url": "https://zilliverse.feishu.cn/wiki/NtkswF6UEi3kB0k8XSEcOKkhnld"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IPQkdwZdUo3I72xP5etcDTSYnAd"
+      },
+      {
+        "block_id": "CORGd4Ehyo9qm0x4pgmcj6T9nIe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "删除备份快照",
+                "token": "FW37wt3qEiKvZzkzBducXgHZnIe",
+                "url": "https://zilliverse.feishu.cn/wiki/FW37wt3qEiKvZzkzBducXgHZnIe"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IPQkdwZdUo3I72xP5etcDTSYnAd"
+      }
+    ],
+    "counts": 19
+  }
+}

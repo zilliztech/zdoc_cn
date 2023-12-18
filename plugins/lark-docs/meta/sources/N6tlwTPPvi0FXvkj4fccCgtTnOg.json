@@ -1,0 +1,1211 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1693559277",
+  "node_token": "N6tlwTPPvi0FXvkj4fccCgtTnOg",
+  "node_type": "origin",
+  "obj_create_time": "1693559277",
+  "obj_edit_time": "1701835424",
+  "obj_token": "VfhBdjfjyoXnS8xBunHchlVvnhd",
+  "obj_type": "docx",
+  "origin_node_token": "N6tlwTPPvi0FXvkj4fccCgtTnOg",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "PU8HwyM6Kiv0C4krF58cTNOVnSe",
+  "space_id": "7167193056431783939",
+  "title": "Zilliz Cloud 集群间迁移",
+  "slug": "migrate-between-clusters",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "VfhBdjfjyoXnS8xBunHchlVvnhd",
+        "block_type": 1,
+        "children": [
+          "DKBUdPl1dot7btxzeO7cnzYNnud",
+          "XOy5dQ6Z7oTs0PxYGV3cPSdRnxc",
+          "B0vFd3Ko5oYGLixpGp3cIicsntb",
+          "Fbeyd0SIDoWvroxTdyBcKuejnmh",
+          "KhKxdG7d0ou4GBxuHjQcqryan7e",
+          "WJDJdiGTeoJ3qyxxHpacf7FbnXh",
+          "K2YddRklNoc5JlxdyGbcYJTXnUb",
+          "Y2Xbd2DneofgXJx21P8cuboTnuf",
+          "W1K7dFxQCo6gxjxp6DpcpRcKn8b",
+          "K66ddDVMOoCou1xPRo7cwioWnXb",
+          "Rh4rdrHmeo71zRxr8xdcrszGneh",
+          "B08vdp9VcoJ6QjxPMOwco2pmnPg",
+          "WIDydMJMTog4P0x0S2RcAvOhn3c",
+          "Uk3FdfTAto6KFKxGVaEctBBFnVh",
+          "NkKJdwl9NoSimPxSDuwc8RjYnpd",
+          "KkkLdWndOoRjJDx761McTaMhnAb",
+          "AiTsdPThzozrMxxY9xGckka9nxd",
+          "IJlNdD5TpoHQdrxdf4ZcMTCQnDg"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 集群间迁移",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "DKBUdPl1dot7btxzeO7cnzYNnud",
+        "block_type": 2,
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 支持在同一个组织下，将一个集群中的数据迁移至另一个集群中。您可以将数据从一个 Serverless 集群迁移至一个 Dedicated 集群中，或者在两个 Dedicated 集群中迁移数据。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XOy5dQ6Z7oTs0PxYGV3cPSdRnxc",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "从 Serverless 集群迁移至 Dedicated 集群",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd"
+      },
+      {
+        "block_id": "B0vFd3Ko5oYGLixpGp3cIicsntb",
+        "block_type": 34,
+        "children": [
+          "QUoJdLDuLoE9vlxFKtscH9Y6nSf"
+        ],
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd",
+        "quote_container": {}
+      },
+      {
+        "block_id": "QUoJdLDuLoE9vlxFKtscH9Y6nSf",
+        "block_type": 2,
+        "parent_id": "B0vFd3Ko5oYGLixpGp3cIicsntb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Fbeyd0SIDoWvroxTdyBcKuejnmh",
+        "block_type": 34,
+        "children": [
+          "VSdrdNP9foSuPtxS5Oscs2hlngc"
+        ],
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd",
+        "quote_container": {}
+      },
+      {
+        "block_id": "VSdrdNP9foSuPtxS5Oscs2hlngc",
+        "block_type": 2,
+        "parent_id": "Fbeyd0SIDoWvroxTdyBcKuejnmh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需使用此功能，请先添加",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "支付方式",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FUj7IwJpneijPROkAZN7cJRLInrc"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KhKxdG7d0ou4GBxuHjQcqryan7e",
+        "block_type": 2,
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "进入需要迁移的 Serverless 集群，点击右上角",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "操作",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，并从下拉菜单中选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "迁移至 Dedicated 集群",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。在弹窗中设置迁移详情：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WJDJdiGTeoJ3qyxxHpacf7FbnXh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "确认订阅版本并选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "目标集群",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd"
+      },
+      {
+        "block_id": "K2YddRklNoc5JlxdyGbcYJTXnUb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "输入",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "集群名称",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和密码。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd"
+      },
+      {
+        "block_id": "Y2Xbd2DneofgXJx21P8cuboTnuf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "云服务提供商",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "地域",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd"
+      },
+      {
+        "block_id": "W1K7dFxQCo6gxjxp6DpcpRcKn8b",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "设置 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "CU 类型",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " CU 大小",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd"
+      },
+      {
+        "block_id": "K66ddDVMOoCou1xPRo7cwioWnXb",
+        "block_type": 2,
+        "comment_ids": [
+          "7309327234727149571"
+        ],
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "【Insert screenshot here】",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7309327234727149571"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Rh4rdrHmeo71zRxr8xdcrszGneh",
+        "block_type": 2,
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "设置完上述内容后，点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "迁移集群",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。Zilliz Cloud 会开始按照您的配置创建 1 个全新 Dedicated 集群并将原 Serverless 集群中数据迁移至此新创建的 Dedicated 集群中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "B08vdp9VcoJ6QjxPMOwco2pmnPg",
+        "block_type": 2,
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在迁移过程中，新创建的 Dedicated 集群状态会从",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建中",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "变为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "恢复中",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，直至最终变为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "运行中",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "（即代表迁移成功）。当 Dedicated 集群状态显示为运行中时，您可以",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "连接集群",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FHU31wDHCCiN9qIknZ2fcLmconNh"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WIDydMJMTog4P0x0S2RcAvOhn3c",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Dedicated 集群间迁移",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#procedure}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd"
+      },
+      {
+        "block_id": "Uk3FdfTAto6KFKxGVaEctBBFnVh",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击并进入您的目标集群。在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "集群详情",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页的右上角，点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "操作",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "下的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "迁移数据",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，并选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "从 Dedicated 集群",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd"
+      },
+      {
+        "block_id": "NkKJdwl9NoSimPxSDuwc8RjYnpd",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "选择数据迁移来源",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "弹窗中，选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "源项目",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "源集群",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "源 Collection",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。查看目标集群信息，确认无误后点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "确认",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "按钮。请注意，您只能选择状态为“运行中”的集群作为数据迁移来源。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd"
+      },
+      {
+        "block_id": "KkkLdWndOoRjJDx761McTaMhnAb",
+        "block_type": 13,
+        "children": [
+          "TgLCdxWmSoeKwExeeYvckjVMndg"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "迁移记录",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页中查看生成的迁移任务记录。待状态从",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "迁移中",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "变为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "成功",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "时，迁移完成。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd"
+      },
+      {
+        "block_id": "TgLCdxWmSoeKwExeeYvckjVMndg",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D9167-2151%26mode%3Ddesign%26t%3D8mObjTO11svW2v8a-4"
+          }
+        },
+        "parent_id": "KkkLdWndOoRjJDx761McTaMhnAb"
+      },
+      {
+        "block_id": "AiTsdPThzozrMxxY9xGckka9nxd",
+        "block_type": 13,
+        "children": [
+          "VfM1ddpQXoiDuSxHNTbcEvoanRd"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "迁移完成后，您可以查看某一条迁移任务中的已迁移 Collection 详情。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd"
+      },
+      {
+        "block_id": "VfM1ddpQXoiDuSxHNTbcEvoanRd",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D9174-3022%26mode%3Ddesign%26t%3D8mObjTO11svW2v8a-4"
+          }
+        },
+        "parent_id": "AiTsdPThzozrMxxY9xGckka9nxd"
+      },
+      {
+        "block_id": "IJlNdD5TpoHQdrxdf4ZcMTCQnDg",
+        "block_type": 2,
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 23
+  }
+}

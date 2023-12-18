@@ -2,6 +2,7 @@
 slug: /quick-start
 beta: FALSE
 notebook: 00_quick_start.ipynb
+token: M4cQwZQ0QiqBy6kzZftc0fQPn1f
 sidebar_position: 1
 ---
 
@@ -11,23 +12,25 @@ import TabItem from '@theme/TabItem';
 
 # 快速开始
 
-在本文中，您将了解如何在 Zilliz Cloud 集群中进行“增、删、改、查”的操作。
+在本文中，您将了解如何在 Zilliz Cloud 集群中进行“增、删、改、查”的操作。本文将以 Serverless 集群作为示例。
 
-## 前提条件**{#before-you-start}**
+## 前提条件{#before-you-start}
 
-在本文中，我们将使用 Milvus 的 SDK。开始之前，请先确保：
+在本文中，我们将使用 Zilliz Cloud 的 SDK 和 RESTful API。开始之前，请先确保：
 
 - 您已在 https://cloud.zilliz.com.cn/signup 注册了 Zilliz Cloud 账号。更多详情，请参见[注册账号](./register-with-zilliz-cloud)。
 
-- 您已订阅 Zilliz Cloud 并在项目中创建了一个集群。更多详情，请参见[免费试用](./free-trials) 和[创建集群](./create-cluster)。
+- 您已订阅 Zilliz Cloud 免费版并在项目中创建了一个 Serverless 集群。更多详情，请参见[免费试用](./free-trials) 和[创建集群](./create-cluster)。
 
-- 您已安装需要使用的 SDK。当前，有四种 SDK 可供选择，分别是 [Python](./install-sdks#install-pymilvus-python-sdk)，[Java](./install-sdks#install-java-sdk)，[Go](./install-sdks#install-go-sdk) 和 [Node.js](./install-sdks#install-nodejs-sdk)。更多详情，请参见[安装 SDK](./install-sdks)。
+- 您已安装需要使用的 SDK。当前，有四种 SDK 可供选择，分别是 [Python](./install-sdks#pymilvuspython-sdkinstall-pymilvus-python-sdk)，[Java](./install-sdks#java-sdkinstall-java-sdk)，[Go](./install-sdks#go-sdkinstall-go-sdk) 和 [Node.js](./install-sdks#nodejs-sdkinstall-nodejs-sdk)。更多详情，请参见[安装 SDK](./install-sdks)。
 
 - 您已下载示例数据集。更多详情，请参见[示例数据集](./example-dataset)。
 
-## 创建 Collection**{#create-a-collection}**
+## 创建 Collection{#create-a-collection}
 
-如通过 Zilliz Cloud 界面创建集群，您需要在创建集群的同时创建 1 个 Collection。 以下代码展示如何通过调用 API 在您的集群下创建 Collection。
+创建 Serverless 集群的同时，Zilliz Cloud 会自动为您在该集群下创建 1 个 Collection。该 Collection 自动开启动态 Schema，且包含 **id **和** vector** 字段作为 Collection 中的主键字段和向量字段。Collection 主键字段开启了 **autoId**。
+
+如需创建更多新 Collection，请遵循以下步骤
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Bash","value":"bash"}]}>
 <TabItem value='python'>
@@ -175,7 +178,13 @@ curl --location --request POST "${PUBLIC_ENDPOINT}/v1/vector/collections/create"
 
 上述实例调用高阶接口创建了一个仅包含主键及向量列的 Collection。在该 Collection 中，启用了  autoID 及动态 Schema。如果您需要添加更多的字段或者关闭动态 Schema 功能，可参考[创建 Collection](./create-collection) 中的步骤。
 
-## 查看 Collection**{#view-collections}**
+<Admonition type="info" icon="📘" title="说明">
+
+1 个 Serverless 集群中最多可创建 2 个基本配置的 Collection。如果在使用 API 或 SDK 创建 Collection 过程中遇到问题，请前往 Zilliz Cloud 界面查看集群下 Collection 数量。
+
+</Admonition>
+
+## 查看 Collection{#view-collections}
 
 您可以通过调用 **DescribeCollection** API 来查看 Collection 信息。**DescribeCollection** 返回指定 Collection 详情。
 
@@ -367,7 +376,7 @@ curl --request GET \
 </TabItem>
 </Tabs>
 
-## 插入数据**{#insert-data}**
+## 插入数据{#insert-data}
 
 在集群中，使用上述方式创建的 Collection 包含 2 个必填字段，**id**（主键）和 **vector**（embedding 向量）。Zilliz Cloud 默认为该 Collection 启用动态 Schema。 这意味着，无需修改现有 Schema，您便可将包含未预先定义的字段的 Entity 插入到 Collection 中。
 
@@ -376,6 +385,7 @@ curl --request GET \
 以下示例展示如何将单个或多个 Entity 插入到 Collection 中。您可以在 Zilliz Cloud 界面上查看插入的 Entity。
 
 - 插入单个 Entity
+
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Bash","value":"bash"}]}>
     <TabItem value='python'>
 
@@ -578,6 +588,7 @@ curl --request GET \
     </Tabs>
 
 - 插入多个 Entity
+
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Bash","value":"bash"}]}>
     <TabItem value='python'>
 
@@ -835,7 +846,7 @@ curl --request GET \
     </TabItem>
     </Tabs>
 
-## 向量搜索、标量查询、获取 Entity**{#search-query-and-get-operations}**
+## 向量搜索、标量查询、获取 Entity{#search-query-and-get-operations}
 
 向量搜索、标量查询及通过 ID 获取 Entity 是三种不同的操作。
 
@@ -845,7 +856,7 @@ curl --request GET \
 
 - 获取 Entity 是指根据 ID 获取特定 Entity。
 
-### 向量搜索（ANN 搜索）**{#perform-an-ann-search}**
+### 向量搜索（ANN 搜索）{#perform-an-ann-search}
 
 示例数据集中的 **vector** 字段包含了由每篇文章标题转化而来的向量。以下示例展示如何对向量数据进行 ANN 搜索，从而找到与查询标题含义最相似的文章标题。
 
@@ -1428,7 +1439,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 标量查询**{#perform-a-query}**
+### 标量查询**{#perform-a-query**}
 
 除 **vector** 字段以外，数据集中的所有字段均为标量字段。您可以对标量字段设置过滤条件，从而筛选所需数据。以下示例展示如何进行向量查询。
 
@@ -1607,11 +1618,12 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 根据 ID 获取 Entity**{#get-entities-by-ids}**
+### 根据 ID 获取 Entity**{#get-entities-by-ids**}
 
 您可以根据 Entity ID 获取特定 Entity。以下示例展示如何根据 ID 获取 Entity。
 
 - 根据 Entity ID 获取单个 Entity
+
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Bash","value":"bash"}]}>
     <TabItem value='python'>
 
@@ -1767,6 +1779,7 @@ curl --request POST \
     </Tabs>
 
 - 根据 Entity ID 获取多个 Entity
+
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Bash","value":"bash"}]}>
     <TabItem value='python'>
 
@@ -1933,11 +1946,12 @@ curl --request POST \
     </TabItem>
     </Tabs>
 
-## 删除 Entity**{#delete-entities}**
+## 删除 Entity{#delete-entities}
 
 您可以根据 ID 从 Collection 中一次性删除单个或多个 Entity。 以下为示例。
 
 - 根据 Entity ID 删除单个 Entity
+
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Bash","value":"bash"}]}>
     <TabItem value='python'>
 
@@ -2052,6 +2066,7 @@ curl --request POST \
     </Tabs>
 
 - 根据 Entity ID 删除多个 Entity
+
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Bash","value":"bash"}]}>
     <TabItem value='python'>
 
@@ -2165,7 +2180,7 @@ curl --request POST \
     </TabItem>
     </Tabs>
 
-## 删除 Collection**{#drop-a-collection}**
+## 删除 Collection{#drop-a-collection}
 
 您可以用集群中删除不再使用的 Collection。
 
@@ -2264,7 +2279,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 文档推荐**{#related-topics}**
+## 文档推荐{#related-topics}
 
 - [注册账号](./register-with-zilliz-cloud) 
 
@@ -2277,3 +2292,4 @@ curl --request POST \
 - [向量搜索和查询](./search-query-and-get) 
 
 - [ANN 搜索](./ann-search-explained) 
+

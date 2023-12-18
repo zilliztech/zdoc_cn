@@ -1,0 +1,1080 @@
+{
+  "creator": "ou_8554528ee6e965bad56710acde1c7847",
+  "has_child": false,
+  "node_create_time": "1687662960",
+  "node_token": "MVYEwIkZCiZd3CkRWFmc9EH2nSf",
+  "node_type": "origin",
+  "obj_create_time": "1687662960",
+  "obj_edit_time": "1700705375",
+  "obj_token": "Ye05dZbTloqq22xhgAQcynWQnJh",
+  "obj_type": "docx",
+  "origin_node_token": "MVYEwIkZCiZd3CkRWFmc9EH2nSf",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_8554528ee6e965bad56710acde1c7847",
+  "parent_node_token": "B11mwdhmYiGFsck0eCYcU5wnngX",
+  "space_id": "7167193056431783939",
+  "title": "与 HuggingFace 集成搭建问答系统",
+  "slug": "question-answering-using-zilliz-cloud-and-hugging-face",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "Ye05dZbTloqq22xhgAQcynWQnJh",
+        "block_type": 1,
+        "children": [
+          "Gp5AdgaUdoWfaNxF91ycA4LPnmf",
+          "HFd2dd9buoqAFxxwotgc1agdn0c",
+          "VYo7dwbtBowWaExadibcf3tknah",
+          "KZoKdMiT7osWlRxwYIPcyW1gnoY",
+          "ZEHOdyzegoYbVwxyxWlc9JExnWc",
+          "O6YCd2zyUod1dQx7UKucdG5qnxc",
+          "GCoMdRNlioIlgixEUadckkh1nje",
+          "HacCdPNa5oC6P9xSnkycAAvGnAc",
+          "VqhqdvKI8oYgUexeiLmca1hEnsb",
+          "BRmSd24dYoDEOdxNiYQcMDvOnuh",
+          "M2mkdYQt6osiJAxhhkfczi3Mngb",
+          "IMEmdEzsWoGQbDxEevJcJVIKnRh",
+          "SbZudfNDSoXzhBxOUBgc4B2bnUd",
+          "LvKZdcnGVoxq94xP2zacLY41nSb",
+          "TunmdpvXnoHJbdxLPg9cVKvJnYg",
+          "VtB3dx4lvo6FLZxKsN9cGO8LnRc",
+          "Pxcjd9IMsoPVuDxn82vc0gW1nnf",
+          "UDvBdqJ5poeYc1xfkoyciWdznUd",
+          "K9ZsduekYoWECrx7hYhcWAFznrg",
+          "P5M2dmihmoiMvvxY7RmcrSntnWq",
+          "BzaodwF7gorQzjxwllLc0k8Ynrd",
+          "VcgDdpxrOo2B46xxytRc6reVnTh",
+          "Kq4NdgUUXo3KraxrLM4cH6vCnAf",
+          "EevzdTaGooTCugxEPdGcHwPznqe",
+          "G5n4dOsKXotEsBxwNRAcCjvKnCc"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "与 HuggingFace 集成搭建问答系统",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "Gp5AdgaUdoWfaNxF91ycA4LPnmf",
+        "block_type": 2,
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文将演示如何使用 Zilliz Cloud 和 HuggingFace 搭建问答系统。其中，Zilliz Cloud 负责提供向量数据库，HuggingFace 负责提供获取指定文字向量表示的接口。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HFd2dd9buoqAFxxwotgc1agdn0c",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "准备工作",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#before-you-start}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh"
+      },
+      {
+        "block_id": "VYo7dwbtBowWaExadibcf3tknah",
+        "block_type": 2,
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本示例中的脚本需要安装 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "pymilvus",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "transformers",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "datasets",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。其中，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "transformers",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "datasets",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 是 HuggingFace 提供的用于创建流水线的开发包，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "pymilvus",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 是 Zilliz Cloud的 Python 客户端，如果你的系统中没有安装这些依赖，可以使用如下命令完成安装。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KZoKdMiT7osWlRxwYIPcyW1gnoY",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "pip install transformers datasets pymilvus torch",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 60,
+            "wrap": false
+          }
+        },
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh"
+      },
+      {
+        "block_id": "ZEHOdyzegoYbVwxyxWlc9JExnWc",
+        "block_type": 2,
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "然后，可以按如下方式加载这些依赖。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "O6YCd2zyUod1dQx7UKucdG5qnxc",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from pymilvus import connections, FieldSchema, CollectionSchema, DataType, Collection, utility\nfrom datasets import load_dataset_builder, load_dataset, Dataset\nfrom transformers import AutoTokenizer, AutoModel\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "from torch import clamp, sum",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh"
+      },
+      {
+        "block_id": "GCoMdRNlioIlgixEUadckkh1nje",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "主要参数",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#parameters}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh"
+      },
+      {
+        "block_id": "HacCdPNa5oC6P9xSnkycAAvGnAc",
+        "block_type": 2,
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在这里，我们定义了一些示例中将要使用的主要参数。你需要根据实际情况和参数旁的注释填写或替换成相应的内容。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VqhqdvKI8oYgUexeiLmca1hEnsb",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "DATASET = 'squad'  # 本示例使用的 HuggingFace 数据集\nMODEL = 'bert-base-uncased'  # 获取指定文本的向量表示时使用的 Transformer 模型\nTOKENIZATION_BATCH_SIZE = 1000  # 文本符号化操作的批次大小\nINFERENCE_BATCH_SIZE = 64  # 提交给 Transformer 模型的批次大小\nINSERT_RATIO = .001  # 指定需要插入的记录数量在数据集所有记录中的占比\nCOLLECTION_NAME = 'huggingface_db'  # 将要创建的 Colletion 名称\nDIMENSION = 768  # 向量维度\nLIMIT = 10  # 每次搜索返回的结果数量\nURI='https://replace-this-with-the-public-endpoint-of-your-cluster-on-zilliz-cloud'  # Cluster 的公共端点，从 Zilliz Cloud 获取\nUSER='replace-this-with-the-cluster-user-name'  # 在创建 Cluster 时指定的用户名\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "PASSWORD='replace-this-with-the-cluster-password'  # 上述用户名对应的密码",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh"
+      },
+      {
+        "block_id": "BRmSd24dYoDEOdxNiYQcMDvOnuh",
+        "block_type": 2,
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需进一步了解上述 Transformer 模型及数据集，可参考 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "bert-base-uncased",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fhuggingface.co%2Fbert-base-uncased"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 及 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "squad",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fhuggingface.co%2Fdatasets%2Fsquad"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "M2mkdYQt6osiJAxhhkfczi3Mngb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建 Collection",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#create-a-collection}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh"
+      },
+      {
+        "block_id": "IMEmdEzsWoGQbDxEevJcJVIKnRh",
+        "block_type": 2,
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "我们需要事先在 Zilliz Cloud 上准备好一个 Cluster。在这一小节里，我们将演示如何在这个 Cluster 里创建一个 Collection 并为其创建索引。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SbZudfNDSoXzhBxOUBgc4B2bnUd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# 连接到 Zilliz Cloud cluster\nconnections.connect(uri=URI, user=USER, password=PASSWORD, secure=True)\n\n# 如果要创建的 Collection 已存在，删除该 Collection\nif utility.has_collection(COLLECTION_NAME):\n    utility.drop_collection(COLLECTION_NAME)\n\n# 创建一个 Collection，有如下4个字段：ID，问题，问题的向量表示及对应的答案\nfields = [\n    FieldSchema(name='id', dtype=DataType.INT64, is_primary=True, auto_id=True),\n    FieldSchema(name='original_question', dtype=DataType.VARCHAR, max_length=1000),\n    FieldSchema(name='answer', dtype=DataType.VARCHAR, max_length=1000),\n    FieldSchema(name='original_question_embedding', dtype=DataType.FLOAT_VECTOR, dim=DIMENSION)\n]\nschema = CollectionSchema(fields=fields)\ncollection = Collection(name=COLLECTION_NAME, schema=schema)\n\n# 创建一个类型为 AUTOINDEX 的索引\nindex_params = {\n    'index_type': 'AUTOINDEX',\n    'metric_type': 'IP'\n    'params': {}\n}\ncollection.create_index(field_name=\"original_question_embedding\", index_params=index_params)\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "collection.load()",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh"
+      },
+      {
+        "block_id": "LvKZdcnGVoxq94xP2zacLY41nSb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "插入数据",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#insert-data}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh"
+      },
+      {
+        "block_id": "TunmdpvXnoHJbdxLPg9cVKvJnYg",
+        "block_type": 2,
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "向 Collection 中插入我们准备好的数据分为如下三步：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VtB3dx4lvo6FLZxKsN9cGO8LnRc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "对原始提问进行符号化处理。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh"
+      },
+      {
+        "block_id": "Pxcjd9IMsoPVuDxn82vc0gW1nnf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "获取完成符号化后的提问对应的向量表示。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh"
+      },
+      {
+        "block_id": "UDvBdqJ5poeYc1xfkoyciWdznUd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "将数据插入之前创建的 Collection 中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh"
+      },
+      {
+        "block_id": "K9ZsduekYoWECrx7hYhcWAFznrg",
+        "block_type": 2,
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在本示例中，一条数据包含一个原始提问、该提问的向量化表示及对应的答案。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "P5M2dmihmoiMvvxY7RmcrSntnWq",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "data_dataset = load_dataset(DATASET, split='all')\n# 生成一个固定的数据子集。如需生成一个随机的数据子集，须移除 seed 参数。如需了解更多，可参考 <https://huggingface.co/docs/datasets/v2.9.0/en/package_reference/main_classes#datasets.Dataset.train_test_split.seed>\ndata_dataset = data_dataset.train_test_split(test_size=INSERT_RATIO, seed = 42)['test']\n# 清理数据集的数据结构\ndata_dataset = data_dataset.map(lambda val: {'answer': val['answers']['text'][0]}, remove_columns=['answers'])\n\ntokenizer = AutoTokenizer.from_pretrained(MODEL)\n\n# 对提问进行符号化处理，以便满足 BERT 对数据的格式要求\ndef tokenize_question(batch):\n    results = tokenizer(batch['question'], add_special_tokens = True, truncation = True, padding = \"max_length\", return_attention_mask = True, return_tensors = \"pt\")\n    batch['input_ids'] = results['input_ids']\n    batch['token_type_ids'] = results['token_type_ids']\n    batch['attention_mask'] = results['attention_mask']\n    return batch\n\n# 为每个输入生成对应的符号\ndata_dataset = data_dataset.map(tokenize_question, batch_size=TOKENIZATION_BATCH_SIZE, batched=True)\n# 将输出格式设置为 torch 以便可以提交给 Embedding 模型\ndata_dataset.set_format('torch', columns=['input_ids', 'token_type_ids', 'attention_mask'], output_all_columns=True)\n\nmodel = AutoModel.from_pretrained(MODEL)\n# 在某个提问完成符号化处理后，获取其对应的向量化表示，然后提取与隐藏层注意力掩码有关的平均池\ndef embed(batch):\n    sentence_embs = model(\n                input_ids=batch['input_ids'],\n                token_type_ids=batch['token_type_ids'],\n                attention_mask=batch['attention_mask']\n                )[0]\n    input_mask_expanded = batch['attention_mask'].unsqueeze(-1).expand(sentence_embs.size()).float()\n    batch['question_embedding'] = sum(sentence_embs * input_mask_expanded, 1) / clamp(input_mask_expanded.sum(1), min=1e-9)\n    return batch\n\ndata_dataset = data_dataset.map(embed, remove_columns=['input_ids', 'token_type_ids', 'attention_mask'], batched = True, batch_size=INFERENCE_BATCH_SIZE)\n\n# 由于VARCHAR数据类型的约束，此处限制了问题的长度\ndef insert_function(batch):\n    insertable = [\n        batch['question'],\n        [x[:995] + '...' if len(x) > 999 else x for x in batch['answer']],\n        batch['question_embedding'].tolist()\n    ]    \n    collection.insert(insertable)\n\ndata_dataset.map(insert_function, batched=True, batch_size=64)\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "collection.flush()",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh"
+      },
+      {
+        "block_id": "BzaodwF7gorQzjxwllLc0k8Ynrd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "测试问答",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#ask-questions}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh"
+      },
+      {
+        "block_id": "VcgDdpxrOo2B46xxytRc6reVnTh",
+        "block_type": 2,
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在我们向 Collection 中插入所有的数据后，就可以开始向这个问答系统提问并获取与我们的提问最相近的提问对应的答案了。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Kq4NdgUUXo3KraxrLM4cH6vCnAf",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "questions = {'question':['When did the premier league start?', 'Where did people learn russian?']}\nquestion_dataset = Dataset.from_dict(questions)\n\nquestion_dataset = question_dataset.map(tokenize_question, batched = True, batch_size=TOKENIZATION_BATCH_SIZE)\nquestion_dataset.set_format('torch', columns=['input_ids', 'token_type_ids', 'attention_mask'], output_all_columns=True)\nquestion_dataset = question_dataset.map(embed, remove_columns=['input_ids', 'token_type_ids', 'attention_mask'], batched = True, batch_size=INFERENCE_BATCH_SIZE)\n\ndef search(batch):\n    res = collection.search(batch['question_embedding'].tolist(), anns_field='original_question_embedding', param = {}, output_fields=['answer', 'original_question'], limit = LIMIT)\n    overall_id = []\n    overall_distance = []\n    overall_answer = []\n    overall_original_question = []\n    for hits in res:\n        ids = []\n        distance = []\n        answer = []\n        original_question = []\n        for hit in hits:\n            ids.append(hit.id)\n            distance.append(hit.distance)\n            answer.append(hit.entity.get('answer'))\n            original_question.append(hit.entity.get('original_question'))\n        overall_id.append(ids)\n        overall_distance.append(distance)\n        overall_answer.append(answer)\n        overall_original_question.append(original_question)\n    return {\n        'id': overall_id,\n        'distance': overall_distance,\n        'answer': overall_answer,\n        'original_question': overall_original_question\n    }\nquestion_dataset = question_dataset.map(search, batched=True, batch_size = 1)\nfor x in question_dataset:\n    print()\n    print('Question:')\n    print(x['question'])\n    print('Answer, Distance, Original Question')\n    for x in zip(x['answer'], x['distance'], x['original_question']):\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "        print(x)",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh"
+      },
+      {
+        "block_id": "EevzdTaGooTCugxEPdGcHwPznqe",
+        "block_type": 2,
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果未设置 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "train_test_split()",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com%2Fdoc%2Fintegrate_with_hugging-face%23Insert-data"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 方法的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "seed",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 参数，输出的结果可能会因你下载的数据子集的不同而与示例存在差异。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "G5n4dOsKXotEsBxwNRAcCjvKnCc",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Question:\nWhen did the premier league start?\nAnswer, Distance, Original Question\n('1992', tensor(19.1790), 'In what year was the Premier League created?')\n('1787', tensor(35.1203), 'When was the Tower constructed?')\n('until 1870', tensor(36.0302), 'When did the Papal States exist?')\n('1981', tensor(36.0476), \"When was ZE's Mutant Disco released?\")\n('Sunday Times University of the Year award', tensor(39.2945), 'What did Newcastle University win in 2000?')\n('terrorism', tensor(39.7199), 'What issue did Spielberg address in his movie Munich?')\n('2019', tensor(40.9740), 'When will Argo be launched?')\n('October 1992', tensor(41.4449), 'When were free elections held?')\n('Misrata', tensor(41.7602), 'Where did an ambulance take Gaddafi after he was murdered?')\n('Poland, Bulgaria, the Czech Republic, Slovakia, Hungary, Albania, former East Germany and Cuba', tensor(42.0978), 'Where was Russian schooling mandatory in the 20th century?')\n\nQuestion:\nWhere did people learn russian?\nAnswer, Distance, Original Question\n('Poland, Bulgaria, the Czech Republic, Slovakia, Hungary, Albania, former East Germany and Cuba', tensor(31.6751), 'Where was Russian schooling mandatory in the 20th century?')\n('accomplishments', tensor(34.7001), 'What did Czech historians emphasize about their countrymen?')\n('until 1870', tensor(37.2057), 'When did the Papal States exist?')\n('1787', tensor(38.3059), 'When was the Tower constructed?')\n('October 1992', tensor(40.4033), 'When were free elections held?')\n('salt and iron', tensor(41.3883), 'What natural resources did the Chinese government have a monopoly on?')\n('1992', tensor(41.5846), 'In what year was the Premier League created?')\n('6,000 years', tensor(41.7438), 'How old did biblical scholars think the Earth was?')\n('traders', tensor(42.1737), 'Along with fishermen, what sort of Japanese people visited the Marshalls?')\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "('1981', tensor(44.3291), \"When was ZE's Mutant Disco released?\")",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "Ye05dZbTloqq22xhgAQcynWQnJh"
+      }
+    ],
+    "counts": 26
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": true,
+  "node_create_time": "1687139752",
+  "node_token": "EruqwJUYliwbOgkLjsAcqRwYn0b",
+  "node_type": "origin",
+  "obj_create_time": "1687139752",
+  "obj_edit_time": "1687139758",
+  "obj_token": "SsXkd9xx8oD78TxHqb2c7owTnyg",
+  "obj_type": "docx",
+  "origin_node_token": "EruqwJUYliwbOgkLjsAcqRwYn0b",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "XyeFwdx6kiK9A6kq3yIcLNdEnDd",
+  "space_id": "7167193056431783939",
+  "title": "资源规划指南",
+  "slug": "resource-planning",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "SsXkd9xx8oD78TxHqb2c7owTnyg",
+        "block_type": 1,
+        "children": [
+          "GFiMdtridos8PTxApyIcrsZOnDg"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "资源规划指南",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "GFiMdtridos8PTxApyIcrsZOnDg",
+        "block_type": 2,
+        "parent_id": "SsXkd9xx8oD78TxHqb2c7owTnyg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 2
+  },
+  "children": [
+    {
+      "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+      "has_child": false,
+      "node_create_time": "1687159091",
+      "node_token": "XNCIwt9i6iFgEDkEQE9cTMf8nSe",
+      "node_type": "origin",
+      "obj_create_time": "1687159091",
+      "obj_edit_time": "1701775126",
+      "obj_token": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+      "obj_type": "docx",
+      "origin_node_token": "XNCIwt9i6iFgEDkEQE9cTMf8nSe",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+      "parent_node_token": "EruqwJUYliwbOgkLjsAcqRwYn0b",
+      "space_id": "7167193056431783939",
+      "title": "Zilliz Cloud 版本类型",
+      "slug": "select-zilliz-cloud-service-plans"
+    },
+    {
+      "creator": "ou_8554528ee6e965bad56710acde1c7847",
+      "has_child": false,
+      "node_create_time": "1688959925",
+      "node_token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
+      "node_type": "origin",
+      "obj_create_time": "1688959925",
+      "obj_edit_time": "1702275628",
+      "obj_token": "Glc5dJHBLoiXyux5Rjdc8D06nUg",
+      "obj_type": "docx",
+      "origin_node_token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_8554528ee6e965bad56710acde1c7847",
+      "parent_node_token": "EruqwJUYliwbOgkLjsAcqRwYn0b",
+      "space_id": "7167193056431783939",
+      "title": "选择合适的 CU 类型",
+      "slug": "cu-types-explained"
+    },
+    {
+      "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+      "has_child": false,
+      "node_create_time": "1687248645",
+      "node_token": "BErdww1kOirndzkHrKoc2ibynlb",
+      "node_type": "origin",
+      "obj_create_time": "1687248645",
+      "obj_edit_time": "1701849418",
+      "obj_token": "CIs5dpC04o4KyExCxIacgMAknFf",
+      "obj_type": "docx",
+      "origin_node_token": "BErdww1kOirndzkHrKoc2ibynlb",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+      "parent_node_token": "EruqwJUYliwbOgkLjsAcqRwYn0b",
+      "space_id": "7167193056431783939",
+      "title": "云服务提供商和地域",
+      "slug": "cloud-providers-and-regions"
+    },
+    {
+      "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+      "has_child": false,
+      "node_create_time": "1687160535",
+      "node_token": "Jxqfwnd80i8ibIkRhEKcnkK6nzd",
+      "node_type": "origin",
+      "obj_create_time": "1687160535",
+      "obj_edit_time": "1700706934",
+      "obj_token": "Chted68OWoHPUAxKu0Jcy9QFnPh",
+      "obj_type": "docx",
+      "origin_node_token": "Jxqfwnd80i8ibIkRhEKcnkK6nzd",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+      "parent_node_token": "EruqwJUYliwbOgkLjsAcqRwYn0b",
+      "space_id": "7167193056431783939",
+      "title": "价格计算器",
+      "slug": "pricing-calculator"
+    }
+  ]
+}

@@ -2,6 +2,7 @@
 slug: /drop-collection
 beta: FALSE
 notebook: 00_quick_start.ipynb,01_use_customized_schema.ipynb
+token: FrMbwwoTwiqJO4kofPkcndsAnoh
 sidebar_position: 3
 ---
 
@@ -133,14 +134,15 @@ curl --location --request POST "${PUBLIC_ENDPOINT}/v1/vector/collections/drop" \
 </TabItem>
 </Tabs>
 
-## 使用限制{#limits}
+## 使用限制{#limits}{#limits}
 
 每个 Collection 只能创建一个向量字段。
 
-## 相关文档{#related-topics}
+## 相关文档{#related-topics}{#related-topics}
 
 - [插入 Entity](./insert-entities) 
 
 - [向量搜索和查询](./search-query-and-get) 
 
 - [删除 Entity](./delete-entities) 
+

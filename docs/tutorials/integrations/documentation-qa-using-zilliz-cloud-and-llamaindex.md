@@ -2,6 +2,7 @@
 slug: /documentation-qa-using-zilliz-cloud-and-llamaindex
 beta: FALSE
 notebook: 85_integrations_llamaindex.ipynb
+token: BSKawjPvqiNAcgkGGIbct8L6nOd
 sidebar_position: 6
 ---
 
@@ -20,7 +21,7 @@ import Admonition from '@theme/Admonition';
 
 现在让我们开始吧。
 
-## 准备工作{#before-you-start}
+## 准备工作{#before-you-start}{#before-you-start}
 
 在本例中，我们将使用 **pymilvus** 来连接 Zilliz Cloud，使用 **llama-index** 来处理数据及流水线相关的工作。同时，您还需要获取一个 OpenAI 的 API 密钥来生成向量。
 
@@ -28,7 +29,7 @@ import Admonition from '@theme/Admonition';
 pip install pymilvus llama-index
 ```
 
-## 准备数据{#prepare-data}
+## 准备数据{#prepare-data}{#prepare-data}
 
 我们将使用 **git **来拉取 Milvus 的官方文档站。文档站中大部分的文档都是 markdown 格式的。
 
@@ -36,46 +37,36 @@ pip install pymilvus llama-index
 git clone https://github.com/milvus-io/milvus-docs
 ```
 
-## 主要参数{#parameters}
+## 主要参数{#parameters}{#parameters}
 
 本示例中使用的主要公共参数都在此处定义。请根据需求修改参数值。
 
 ```python
 from os import environ
 
-# 1. Set up the name of the collection to be created.
-COLLECTION_NAME = 'document_qa_db'
+HOST = "<instance-id>.<cloud-region-id>.vectordb.zillizcloud.com" # Cluster 公共端点主机名，从 Zilliz Cloud 上获取
+PORT = 443  # Cluster 公共端点端口
 
-# 2. Set up the dimension of the embeddings.
-DIMENSION = 1536
+USER = "db_admin" # 访问 Cluster 的用户名
+PASSWORD = "***"  # 上述用户名对应的密码
 
-# 3. Set the inference parameters
-BATCH_SIZE = 128
-TOP_K = 3
-
-# 4. Set up the connection parameters for your Zilliz Cloud cluster.
-URI = 'YOUR_CLUSTER_ENDPOINT'
-
-TOKEN = 'YOUR_CLUSTER_TOKEN'
-
-# OpenAI API key
-environ["OPENAI_API_KEY"] = "YOUR_OPENAI_API_KEY"
-environ["TOKENIZERS_PARALLELISM"] = "false"
+environ["OPENAI_API_KEY"] = "sk-******" # OpenAI API 密钥
 ```
 
-## 处理数据{#consume-the-knowledge}
+## 处理数据{#consume-the-knowledge}{#consume-the-knowledge}
 
 当我们完成数据下载后，就可以使用 LlamaIndex 来处理它们，并将处理后的数据上传到 Zilliz Cloud。具体来说，需要完成如下两步：
 
 - 使用 Llama Hub 提供的 MarkdownReader 将所有 Markdown 页面转换成 LlamaIndex 文档对象。
+
     ```python
     from llama_index import download_loader
     from glob import glob
-
+    
     # Load the markdown reader from the hub
     MarkdownReader = download_loader("MarkdownReader")
     markdownreader = MarkdownReader()
-
+    
     # Grab all markdown files and convert them using the reader
     docs = []
     for file in glob("./milvus-docs/site/en/**/*.md", recursive=True):
@@ -84,30 +75,15 @@ environ["TOKENIZERS_PARALLELISM"] = "false"
     ```
 
 - 将这些文档对象存入 Zilliz Cloud。该步骤要求同时配置 Zilliz Cloud 和 OpenAI。
+
     ```python
-    from llama_index import download_loader, VectorStoreIndex, ServiceContext
-    from llama_index.vector_stores import MilvusVectorStore
-
+    from llama_index import GPTMilvusIndex
+    
     # Push all markdown files into Zilliz Cloud
-    vector_store = MilvusVectorStore(
-        uri=URI, 
-        token=TOKEN, 
-        collection_name=COLLECTION_NAME, 
-        similarity_metric="L2",
-        dim=DIMENSION,
-    )
-
-    embed_model = HuggingFaceEmbedding(model_name="sentence-transformers/all-MiniLM-L12-v2")
-    service_context = ServiceContext.from_defaults(embed_model=embed_model)
-
-    index = VectorStoreIndex.from_documents(
-        documents=docs, 
-        service_context=service_context,
-        show_progress=True
-    )
+    index = GPTMilvusIndex.from_documents(docs, host = HOST, port = PORT, user = USER, password = PASSWORD, use_secure = True, overwrite=True)
     ```
 
-## 开始提问{#ask-question}
+## 开始提问{#ask-question}{#ask-question}
 
 在把所有文档都存入 Zilliz Cloud 后，我们就可以开始提问了。所有提问都会触发在知识库范围内的相似性搜索，所有相关结果都会被用来生成问题的答案。
 
@@ -122,11 +98,13 @@ print(s)
 另外，我们还可以保存我们的连接信息，并使用 **save_to_dict()** 和 **load_from_dict()** 来加载这些信息。
 
 ```python
-query_engine = index.as_query_engine()
-response = query_engine.query("What is IVF_FLAT?")
-print(str(response))
+saved = index.save_to_dict()
+del index
+
+index = GPTMilvusIndex.load_from_dict(saved, overwrite = False)
+s = index.query("What communication protocol is used in Pymilvus for commicating with Milvus?")
+print(s)
 
 # Output
-#
-# IVF_FLAT is an index used in Milvus that divides vector space into list clusters. It compares the distances between the target vector and the centroids of all the clusters to return the nearest clusters. Then, it compares the distances between the target vector and the vectors in the selected clusters to find the nearest vectors. IVF_FLAT has performance advantages over FLAT when the number of vectors exceeds a certain threshold.
+# The communication protocol used in Pymilvus for communicating with Milvus is gRPC.
 ```

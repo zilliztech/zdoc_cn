@@ -1,0 +1,2355 @@
+{
+  "creator": "ou_8554528ee6e965bad56710acde1c7847",
+  "has_child": false,
+  "node_create_time": "1691137853",
+  "node_token": "UTRZwxLf3ikwvbkXrKjcWAwOnmg",
+  "node_type": "origin",
+  "obj_create_time": "1691137853",
+  "obj_edit_time": "1701833396",
+  "obj_token": "MUoedR3G4olCJqxg1OncPiKYnSh",
+  "obj_type": "docx",
+  "origin_node_token": "UTRZwxLf3ikwvbkXrKjcWAwOnmg",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_8554528ee6e965bad56710acde1c7847",
+  "parent_node_token": "Uj7IwJpneijPROkAZN7cJRLInrc",
+  "space_id": "7167193056431783939",
+  "title": "订阅阿里云市场",
+  "slug": "subscribe-on-aliyun-marketplace",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "MUoedR3G4olCJqxg1OncPiKYnSh",
+        "block_type": 1,
+        "children": [
+          "V0EqdqTE3ovEWDxUp0YcPhqlnTI",
+          "XrVydoMnlo5xMsx1J9RcYOuonEb",
+          "UKKDdqSxjostf7x01nBcmSZlnad",
+          "C7XsdkfoPo7Y9vxCjmxcete0nhc",
+          "K1RKddRaOobg08xFD6jcv6kpnRf",
+          "Rt2ddhA0po5XC8x9dD7c8cVMnpb",
+          "V0VfdtfONo6uCdxcPldc3ezvnFg",
+          "VCTldslHxowZSLxXWWPcIaYSn4e",
+          "UHEgdQ2QqoMjcUxTDUMc4Q5Pnj0",
+          "MrRxdcj9LoSvMNxM39ocTcTDnho",
+          "EeTwdkjXOofzrYxlVnjcQ3ctn3e",
+          "RzgudhC65ocWu1x47Qrc3xgdneh",
+          "PgWXdK6dSoqZdzxhpuzcp6XOnCc",
+          "ORSbdJP1xoReBfxNJZxcI5g4nFd",
+          "JKkudjSjFowMNPxT3BPci2ornvb",
+          "B0Y1d4eKIoBrlJxxnozcYJ0pnHN",
+          "RjAmd9O0TomcD9xFEDpcQyqZnQc",
+          "QlI9duM8yoiIm7xkPEtct5GXnze",
+          "LtZOdBX7foL8nuxztOicoPjbnyb",
+          "SoG3dqpWMoxe20xa7ercL1HMnFd",
+          "Ysa6dA7P6oBXixxVSQXcMyhnnPc",
+          "GcT9d6ovooRt5uxtvTTc4Yi3nTc",
+          "WILUdo46noy6hax9nDKcKtEvnAh",
+          "HWkZdn9ehoiIurxc418ceWCHn2e",
+          "EETMdjUDLojLMYx7TNucRAytnkf",
+          "PmqZd84dKoIqCtxanXpcxtlJnse",
+          "ADJvdQy2xo6qCTxaXcwcThmTn1c",
+          "IebKdbR1qoJ9D7xzyOmcB8jFnah",
+          "MJpHdzYnlo95e8x6tXHcvXhWnul"
+        ],
+        "comment_ids": [
+          "7264409163827707907"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "订阅阿里云市场",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7264409163827707907"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "V0EqdqTE3ovEWDxUp0YcPhqlnTI",
+        "block_type": 2,
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云市场上订阅 Zilliz Cloud。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XrVydoMnlo5xMsx1J9RcYOuonEb",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D7260-280%26mode%3Ddesign%26t%3D3x7lrC3LArmjbJG3-4"
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "UKKDdqSxjostf7x01nBcmSZlnad",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "准备工作",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#before-you-start}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "C7XsdkfoPo7Y9vxCjmxcete0nhc",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您已注册并登录您的阿里云帐号。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "K1RKddRaOobg08xFD6jcv6kpnRf",
+        "block_type": 13,
+        "children": [
+          "IZf3d2f8loefynxw7sicXJhAnCe",
+          "BpnFdTUZ5oairXxLQOicCprfnKr"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "关于 Zilliz Cloud 帐号：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "IZf3d2f8loefynxw7sicXJhAnCe",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您已注册 Zilliz Cloud，并计划通过阿里云云市场缴纳您名下组织产生的费用。您可以在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "“帐单概览”",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页面或",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "“创建集群”",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页面找到前往阿里云云市场的入口。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "K1RKddRaOobg08xFD6jcv6kpnRf"
+      },
+      {
+        "block_id": "BpnFdTUZ5oairXxLQOicCprfnKr",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您尚未注册 Zilliz Cloud，并计划通过阿里云云市场缴纳您名下组织产生的费用。您可以直接前往",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "阿里云云市场",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fmarket.aliyun.com%2Fproducts%2F56024006%2Fcmgj00063418.html"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "K1RKddRaOobg08xFD6jcv6kpnRf"
+      },
+      {
+        "block_id": "Rt2ddhA0po5XC8x9dD7c8cVMnpb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "操作步骤",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#procedures}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "V0VfdtfONo6uCdxcPldc3ezvnFg",
+        "block_type": 13,
+        "children": [
+          "UzB6dDJmCoSs6nx1aS4cCMtonGc",
+          "JTAldVfpAoEc10xyzJycB6EEnrf",
+          "QDv2dim9NoKMIQx80YqcTxxenpb"
+        ],
+        "comment_ids": [
+          "7264438864847110147"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "前往",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7264438864847110147"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "阿里云云市场",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7264438864847110147"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fmarket.aliyun.com%2Fproducts%2F56024006%2Fcmgj00063418.html"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "开通 Zilliz Cloud 服务",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7264438864847110147"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "UzB6dDJmCoSs6nx1aS4cCMtonGc",
+        "block_type": 13,
+        "children": [
+          "OlM8dSEbmonKB1xgtficwzbNnUh"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在 Zilliz Cloud 服务主页中单击“立即开通”，并在弹出的“开通按量服务”窗口中勾选“同意商品在线协议及云市场平台服务协议”，然后单击“开通”。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "V0VfdtfONo6uCdxcPldc3ezvnFg"
+      },
+      {
+        "block_id": "OlM8dSEbmonKB1xgtficwzbNnUh",
+        "block_type": 27,
+        "image": {
+          "align": 2,
+          "height": 936,
+          "token": "PDHObOMyKonL8MxClWmc9X9hnXb",
+          "width": 1794
+        },
+        "parent_id": "UzB6dDJmCoSs6nx1aS4cCMtonGc"
+      },
+      {
+        "block_id": "JTAldVfpAoEc10xyzJycB6EEnrf",
+        "block_type": 13,
+        "children": [
+          "KUazdYmwjooAixx86XDcVn6YnSh"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在弹出窗口中您将看到“开通申请已提交，约需要1 - 5分钟完成开通”的提示。此时，可以单击“确定”按钮跳转至云市场控制台查看“已购买服务列表”。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "V0VfdtfONo6uCdxcPldc3ezvnFg"
+      },
+      {
+        "block_id": "KUazdYmwjooAixx86XDcVn6YnSh",
+        "block_type": 27,
+        "image": {
+          "align": 2,
+          "height": 978,
+          "token": "Ebrobis5ToxNxExm4l2cc1UMnLh",
+          "width": 2764
+        },
+        "parent_id": "JTAldVfpAoEc10xyzJycB6EEnrf"
+      },
+      {
+        "block_id": "QDv2dim9NoKMIQx80YqcTxxenpb",
+        "block_type": 13,
+        "children": [
+          "BTVAdx02homk9kxRTP0cHwM6nWg"
+        ],
+        "comment_ids": [
+          "7264438254852685828"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在“已购买服务列表”中找到 Zilliz Cloud。单击“使用指南”可查看服务指南。单击“免登”并在弹出的“提示”对话框中单击“确定”",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "可前往Zilliz Cloud",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7264438254852685828"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "V0VfdtfONo6uCdxcPldc3ezvnFg"
+      },
+      {
+        "block_id": "BTVAdx02homk9kxRTP0cHwM6nWg",
+        "block_type": 27,
+        "image": {
+          "align": 2,
+          "height": 1022,
+          "token": "Tu3oblmHPomzGsx7H0scQQwRnah",
+          "width": 2764
+        },
+        "parent_id": "QDv2dim9NoKMIQx80YqcTxxenpb"
+      },
+      {
+        "block_id": "VCTldslHxowZSLxXWWPcIaYSn4e",
+        "block_type": 13,
+        "children": [
+          "AGcRdIS97omzMExMaRncxcBqnlc",
+          "Rd59d7Oo5olexcxH7YgcjeEsncb",
+          "HFPydjBz4o3ODdxWFLfcyWNgnIe",
+          "Y0XfdSEeroUdjuxVnpCcXdQSnCe"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为您的 Zilliz Cloud 组织绑定支付方式。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "AGcRdIS97omzMExMaRncxcBqnlc",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您已注册 Zilliz Cloud 但尚未授权使用阿里云云市场为您的 Zilliz Cloud 组织缴纳费用，将在您登录后直接进入绑定流程。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VCTldslHxowZSLxXWWPcIaYSn4e"
+      },
+      {
+        "block_id": "Rd59d7Oo5olexcxH7YgcjeEsncb",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您尚未注册 Zilliz Cloud。您可以单击“注册”。在完成注册流程后进入绑定流程。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VCTldslHxowZSLxXWWPcIaYSn4e"
+      },
+      {
+        "block_id": "HFPydjBz4o3ODdxWFLfcyWNgnIe",
+        "block_type": 27,
+        "image": {
+          "align": 2,
+          "height": 1080,
+          "token": "S31ZbM588oZmGWxlPo0cWgQ6nWf",
+          "width": 1622
+        },
+        "parent_id": "VCTldslHxowZSLxXWWPcIaYSn4e"
+      },
+      {
+        "block_id": "Y0XfdSEeroUdjuxVnpCcXdQSnCe",
+        "block_type": 34,
+        "children": [
+          "E78MdaS3uo3AG2x9ocycRXbbnob",
+          "CExPdOqC4osMK0xdktQc62gxnQc"
+        ],
+        "parent_id": "VCTldslHxowZSLxXWWPcIaYSn4e",
+        "quote_container": {}
+      },
+      {
+        "block_id": "E78MdaS3uo3AG2x9ocycRXbbnob",
+        "block_type": 2,
+        "parent_id": "Y0XfdSEeroUdjuxVnpCcXdQSnCe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CExPdOqC4osMK0xdktQc62gxnQc",
+        "block_type": 2,
+        "parent_id": "Y0XfdSEeroUdjuxVnpCcXdQSnCe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您已经上述“免登”链接为某个 Zilliz Cloud 组织绑定了支付方式，再次单击该“免登”链接可直接进入 Zilliz Cloud，无须再次登录。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UHEgdQ2QqoMjcUxTDUMc4Q5Pnj0",
+        "block_type": 13,
+        "children": [
+          "MtFPdM0epoQJI0xss2ScHvfAn2P",
+          "U28QdhCyJocT4Mxp8jFcJ72En0e"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在组织列表中选择需要绑定该支付方式的 Zilliz Cloud 组织，并单击“确认绑定”。列表中会罗列出所有您加入的组织。您仅能选择绑定您负责管理的一个组织。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "MtFPdM0epoQJI0xss2ScHvfAn2P",
+        "block_type": 2,
+        "parent_id": "UHEgdQ2QqoMjcUxTDUMc4Q5Pnj0",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "当列表中不存在可以绑定的组织时，“确认绑定”不可用。此时，您需要创建一个以您为管理员的组织后才能继续该操作。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "U28QdhCyJocT4Mxp8jFcJ72En0e",
+        "block_type": 27,
+        "image": {
+          "align": 2,
+          "height": 872,
+          "token": "DS2wb3KldoOZcHxX87ycG3HGnAe",
+          "width": 1544
+        },
+        "parent_id": "UHEgdQ2QqoMjcUxTDUMc4Q5Pnj0"
+      },
+      {
+        "block_id": "MrRxdcj9LoSvMNxM39ocTcTDnho",
+        "block_type": 13,
+        "children": [
+          "SYmLd40vXoVA8dxmKjOcJwr3nQe",
+          "O0tBdcoi7oTJqdxLgg6cKboDn0g",
+          "ION3dGgXXobP2axngcQcHYrCnHb"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 开始处理您的授权请求，并在处理完成后展示如下图所示内容。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "SYmLd40vXoVA8dxmKjOcJwr3nQe",
+        "block_type": 27,
+        "image": {
+          "align": 2,
+          "height": 946,
+          "token": "N4Lkbn8bgoKOVixW0x9c19lIn6e",
+          "width": 1524
+        },
+        "parent_id": "MrRxdcj9LoSvMNxM39ocTcTDnho"
+      },
+      {
+        "block_id": "O0tBdcoi7oTJqdxLgg6cKboDn0g",
+        "block_type": 2,
+        "comment_ids": [
+          "7264438752764493827"
+        ],
+        "parent_id": "MrRxdcj9LoSvMNxM39ocTcTDnho",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "此时，您可以前往",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7264438752764493827"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "“帐单概览”",
+                "text_element_style": {
+                  "bold": true,
+                  "comment_ids": [
+                    "7264438752764493827"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页面。如果“云市场扣费渠道”区域右下角出现“查看阿里云帐单”链接，恭喜您成功开通阿里云云市场扣费渠道。",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7264438752764493827"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ION3dGgXXobP2axngcQcHYrCnHb",
+        "block_type": 27,
+        "image": {
+          "align": 2,
+          "height": 680,
+          "token": "HsZ9bVAnEo5dOpxVSaBcezaknjd",
+          "width": 2758
+        },
+        "parent_id": "MrRxdcj9LoSvMNxM39ocTcTDnho"
+      },
+      {
+        "block_id": "EeTwdkjXOofzrYxlVnjcQ3ctn3e",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "取消订阅{#unsubscribe-alibaba-marketplace}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "RzgudhC65ocWu1x47Qrc3xgdneh",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "前往阿里云",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "云市场控制台",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fmarket.console.aliyun.com%2F"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "PgWXdK6dSoqZdzxhpuzcp6XOnCc",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击左侧导航栏中",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "已购买的服务",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "ORSbdJP1xoReBfxNJZxcI5g4nFd",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在商品中找到 Zilliz Cloud，并点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "关闭",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "JKkudjSjFowMNPxT3BPci2ornvb",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "阅读弹窗内容并点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "确认关闭",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "B0Y1d4eKIoBrlJxxnozcYJ0pnHN",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "关闭后，Zilliz Cloud 将从已购买服务列表中消失。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "RjAmd9O0TomcD9xFEDpcQyqZnQc",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D23075-1137%26mode%3Ddesign%26t%3DDrst5MNa4gtjo4Qk-4"
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "QlI9duM8yoiIm7xkPEtct5GXnze",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 定价{#zilliz-cloud-pricing}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "LtZOdBX7foL8nuxztOicoPjbnyb",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "企业版{#enterprise}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
+        "block_type": 31,
+        "children": [
+          "K8qGdwHffoUoMmxjTcnc0h5mnRF",
+          "Mr4CdPbwGoK9oBx6BRccOnlDnSc",
+          "ObsedsG9EofZ6VxqTDUcHzZ6nNf",
+          "LOhJdhvUZoZYEExkfdicoQjrn1e",
+          "NXVcdkDAVo9dqJxbZyic0iiCnyb",
+          "LXfHdeh8johTbpxOPUmc1GqMnOP",
+          "NKWcdMf1AoD6luxxE4xceF5Znih",
+          "JPHmdBkIYocm4RxPeXVcDPGjnAh",
+          "MY6ndZxMXor7pUxVXDTcbSMWnrc",
+          "AUnAdMYQlof213xD3VXc1zFInld",
+          "G9mNdxwAFo9iZmxWms1cB295nQd",
+          "TkUddRDmFoj7blx8JrucgYcDnEp",
+          "A8Atd9oeioIx1FxI1xYcqtbHnd3",
+          "ZHADdJJwWonYEFxKvpucdk5InBc",
+          "UaecdzgsDo9egaxM8c4cRX9Hnvh",
+          "OYjvdQAkpoYyIRxziOXcPCFAnpe",
+          "CxfadNLyHodnQexQmtkcyhT8ndf",
+          "IP92dZKDToX0gUxYaUjcwqGvnqi"
+        ],
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh",
+        "table": {
+          "cells": [
+            "K8qGdwHffoUoMmxjTcnc0h5mnRF",
+            "Mr4CdPbwGoK9oBx6BRccOnlDnSc",
+            "ObsedsG9EofZ6VxqTDUcHzZ6nNf",
+            "LOhJdhvUZoZYEExkfdicoQjrn1e",
+            "NXVcdkDAVo9dqJxbZyic0iiCnyb",
+            "LXfHdeh8johTbpxOPUmc1GqMnOP",
+            "NKWcdMf1AoD6luxxE4xceF5Znih",
+            "JPHmdBkIYocm4RxPeXVcDPGjnAh",
+            "MY6ndZxMXor7pUxVXDTcbSMWnrc",
+            "AUnAdMYQlof213xD3VXc1zFInld",
+            "G9mNdxwAFo9iZmxWms1cB295nQd",
+            "TkUddRDmFoj7blx8JrucgYcDnEp",
+            "A8Atd9oeioIx1FxI1xYcqtbHnd3",
+            "ZHADdJJwWonYEFxKvpucdk5InBc",
+            "UaecdzgsDo9egaxM8c4cRX9Hnvh",
+            "OYjvdQAkpoYyIRxziOXcPCFAnpe",
+            "CxfadNLyHodnQexQmtkcyhT8ndf",
+            "IP92dZKDToX0gUxYaUjcwqGvnqi"
+          ],
+          "property": {
+            "column_size": 3,
+            "column_width": [
+              211,
+              191,
+              220
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 6
+          }
+        }
+      },
+      {
+        "block_id": "K8qGdwHffoUoMmxjTcnc0h5mnRF",
+        "block_type": 32,
+        "children": [
+          "V1BUdPaqcoAyBzxSDErcfwuJnqg"
+        ],
+        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
+        "table_cell": {}
+      },
+      {
+        "block_id": "V1BUdPaqcoAyBzxSDErcfwuJnqg",
+        "block_type": 2,
+        "parent_id": "K8qGdwHffoUoMmxjTcnc0h5mnRF",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 用量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Mr4CdPbwGoK9oBx6BRccOnlDnSc",
+        "block_type": 32,
+        "children": [
+          "YoQddubcgo3mfJxH0UscCnoenAe"
+        ],
+        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
+        "table_cell": {}
+      },
+      {
+        "block_id": "YoQddubcgo3mfJxH0UscCnoenAe",
+        "block_type": 2,
+        "parent_id": "Mr4CdPbwGoK9oBx6BRccOnlDnSc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "价格",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ObsedsG9EofZ6VxqTDUcHzZ6nNf",
+        "block_type": 32,
+        "children": [
+          "LaF1dnPwjoMllcxO24gcV1rPnWf"
+        ],
+        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
+        "table_cell": {}
+      },
+      {
+        "block_id": "LaF1dnPwjoMllcxO24gcV1rPnWf",
+        "block_type": 2,
+        "parent_id": "ObsedsG9EofZ6VxqTDUcHzZ6nNf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "阿里云市场 Unit 数量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LOhJdhvUZoZYEExkfdicoQjrn1e",
+        "block_type": 32,
+        "children": [
+          "Uevzd6SO2oPz7RxtLTNclbcQnXd"
+        ],
+        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Uevzd6SO2oPz7RxtLTNclbcQnXd",
+        "block_type": 2,
+        "parent_id": "LOhJdhvUZoZYEExkfdicoQjrn1e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "1 CU 经济型每小时计算量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NXVcdkDAVo9dqJxbZyic0iiCnyb",
+        "block_type": 32,
+        "children": [
+          "UITddf7hSo7H71xRX6gcsqEDncg"
+        ],
+        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
+        "table_cell": {}
+      },
+      {
+        "block_id": "UITddf7hSo7H71xRX6gcsqEDncg",
+        "block_type": 2,
+        "parent_id": "NXVcdkDAVo9dqJxbZyic0iiCnyb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "¥0.85 / Unit",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LXfHdeh8johTbpxOPUmc1GqMnOP",
+        "block_type": 32,
+        "children": [
+          "BOsIdsOZaoi3XcxBvKLcB0Xcnoc"
+        ],
+        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
+        "table_cell": {}
+      },
+      {
+        "block_id": "BOsIdsOZaoi3XcxBvKLcB0Xcnoc",
+        "block_type": 2,
+        "parent_id": "LXfHdeh8johTbpxOPUmc1GqMnOP",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "850",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NKWcdMf1AoD6luxxE4xceF5Znih",
+        "block_type": 32,
+        "children": [
+          "XS4ddsqYnoKUCdxtL5ec7EC4n0g"
+        ],
+        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
+        "table_cell": {}
+      },
+      {
+        "block_id": "XS4ddsqYnoKUCdxtL5ec7EC4n0g",
+        "block_type": 2,
+        "parent_id": "NKWcdMf1AoD6luxxE4xceF5Znih",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "1 CU 容量型每小时计算量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JPHmdBkIYocm4RxPeXVcDPGjnAh",
+        "block_type": 32,
+        "children": [
+          "PGtqd4o9CoswW7xlDaochTQmnLd"
+        ],
+        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
+        "table_cell": {}
+      },
+      {
+        "block_id": "PGtqd4o9CoswW7xlDaochTQmnLd",
+        "block_type": 2,
+        "parent_id": "JPHmdBkIYocm4RxPeXVcDPGjnAh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "¥1.25  / Unit",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MY6ndZxMXor7pUxVXDTcbSMWnrc",
+        "block_type": 32,
+        "children": [
+          "ROy4dS4kKo4EV9xAvaRcgJ8hnrW"
+        ],
+        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ROy4dS4kKo4EV9xAvaRcgJ8hnrW",
+        "block_type": 2,
+        "parent_id": "MY6ndZxMXor7pUxVXDTcbSMWnrc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "1250",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AUnAdMYQlof213xD3VXc1zFInld",
+        "block_type": 32,
+        "children": [
+          "VJQjdwzz2oZ1eCxAVHYcBW3GnJc"
+        ],
+        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
+        "table_cell": {}
+      },
+      {
+        "block_id": "VJQjdwzz2oZ1eCxAVHYcBW3GnJc",
+        "block_type": 2,
+        "parent_id": "AUnAdMYQlof213xD3VXc1zFInld",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "1 CU 性能型每小时计算量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "G9mNdxwAFo9iZmxWms1cB295nQd",
+        "block_type": 32,
+        "children": [
+          "ClB6dR0qmoGNE2xZsQYc4Qg3nDb"
+        ],
+        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ClB6dR0qmoGNE2xZsQYc4Qg3nDb",
+        "block_type": 2,
+        "parent_id": "G9mNdxwAFo9iZmxWms1cB295nQd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "¥1.25  / Unit",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TkUddRDmFoj7blx8JrucgYcDnEp",
+        "block_type": 32,
+        "children": [
+          "YTZ6dQkt9oE3JrxVbe4cFWYKned"
+        ],
+        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
+        "table_cell": {}
+      },
+      {
+        "block_id": "YTZ6dQkt9oE3JrxVbe4cFWYKned",
+        "block_type": 2,
+        "parent_id": "TkUddRDmFoj7blx8JrucgYcDnEp",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "1250",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "A8Atd9oeioIx1FxI1xYcqtbHnd3",
+        "block_type": 32,
+        "children": [
+          "HcZndC3s0odSBLxQc80cAlCanAl"
+        ],
+        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
+        "table_cell": {}
+      },
+      {
+        "block_id": "HcZndC3s0odSBLxQc80cAlCanAl",
+        "block_type": 2,
+        "parent_id": "A8Atd9oeioIx1FxI1xYcqtbHnd3",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "每月 1 GB 存储量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZHADdJJwWonYEFxKvpucdk5InBc",
+        "block_type": 32,
+        "children": [
+          "I5dcdOW3goQNbFxiZMUcn67YnYw"
+        ],
+        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
+        "table_cell": {}
+      },
+      {
+        "block_id": "I5dcdOW3goQNbFxiZMUcn67YnYw",
+        "block_type": 2,
+        "parent_id": "ZHADdJJwWonYEFxKvpucdk5InBc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "¥0.5 / Unit",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UaecdzgsDo9egaxM8c4cRX9Hnvh",
+        "block_type": 32,
+        "children": [
+          "NkR4dxjqwonGHtxgzwhcV4mPnld"
+        ],
+        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
+        "table_cell": {}
+      },
+      {
+        "block_id": "NkR4dxjqwonGHtxgzwhcV4mPnld",
+        "block_type": 2,
+        "parent_id": "UaecdzgsDo9egaxM8c4cRX9Hnvh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "500",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OYjvdQAkpoYyIRxziOXcPCFAnpe",
+        "block_type": 32,
+        "children": [
+          "THX4d7wPAoN5tyxoidmcyfg2nCh"
+        ],
+        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
+        "table_cell": {}
+      },
+      {
+        "block_id": "THX4d7wPAoN5tyxoidmcyfg2nCh",
+        "block_type": 2,
+        "parent_id": "OYjvdQAkpoYyIRxziOXcPCFAnpe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": " 1 GB 备份量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CxfadNLyHodnQexQmtkcyhT8ndf",
+        "block_type": 32,
+        "children": [
+          "URp0d71CLoB5moxWkUhc0by8nDh"
+        ],
+        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
+        "table_cell": {}
+      },
+      {
+        "block_id": "URp0d71CLoB5moxWkUhc0by8nDh",
+        "block_type": 2,
+        "parent_id": "CxfadNLyHodnQexQmtkcyhT8ndf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "¥0.5 / Unit",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IP92dZKDToX0gUxYaUjcwqGvnqi",
+        "block_type": 32,
+        "children": [
+          "EgXtdLFbWowXgkxPcMtcn4Gsn7d"
+        ],
+        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
+        "table_cell": {}
+      },
+      {
+        "block_id": "EgXtdLFbWowXgkxPcMtcn4Gsn7d",
+        "block_type": 2,
+        "parent_id": "IP92dZKDToX0gUxYaUjcwqGvnqi",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "500",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ysa6dA7P6oBXixxVSQXcMyhnnPc",
+        "block_type": 2,
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "例如，在 Zilliz Cloud 企业版中创建大小为 1 CU 的性能型 CU，你需要支付 850 个单位的价格，也就是 ¥0.85 每小时。 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GcT9d6ovooRt5uxtvTTc4Yi3nTc",
+        "block_type": 2,
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需使用 Zilliz Cloud 专有部署版，请",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "联系销售",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com.cn%2Fcontact-sales"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WILUdo46noy6hax9nDKcKtEvnAh",
+        "block_type": 2,
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HWkZdn9ehoiIurxc418ceWCHn2e",
+        "block_type": 2,
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EETMdjUDLojLMYx7TNucRAytnkf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "后续操作",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#next-steps}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "PmqZd84dKoIqCtxanXpcxtlJnse",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以前往 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 文档站",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fdocs.zilliz.com.cn"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "查看产品使用指南。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "ADJvdQy2xo6qCTxaXcwcThmTn1c",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以前往",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "阿里云云市场控制台",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fmarket.console.aliyun.com%2F"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "的“已购买服务列表”页面，使用“免登”按钮免登录前往 Zilliz Cloud。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "IebKdbR1qoJ9D7xzyOmcB8jFnah",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以直接前往 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Zilliz Cloud",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fcloud.zilliz.com.cn%2Flogin"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 登录使用我们的服务。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      },
+      {
+        "block_id": "MJpHdzYnlo95e8x6tXHcvXhWnul",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以前往阿里云",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "申请开票",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fhelp.aliyun.com%2Fdocument_detail%2F150571.html"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
+      }
+    ],
+    "counts": 85
+  }
+}

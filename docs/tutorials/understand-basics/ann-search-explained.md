@@ -2,6 +2,7 @@
 slug: /ann-search-explained
 beta: FALSE
 notebook: FALSE
+token: E4Ggw2FU3iXekOklaytcDy47nRg
 sidebar_position: 4
 ---
 
@@ -18,7 +19,7 @@ import Admonition from '@theme/Admonition';
 
 通常，有 3 种索引结构：图索引、树索引、哈希索引。
 
-## HNSW：图索引算法{#hnsw-a-graph-based-indexing-algorithm}
+## HNSW：图索引算法{#hnsw-a-graph-based-indexing-algorithm}{#hnswhnsw-a-graph-based-indexing-algorithm}
 
 Hierarchical Navigable Small World（HNSW）算法通过创建多层接近图（Proximity graph）来索引向量空间。HNSW 算法在每 1 层中，都会在向量（或顶点）之间绘制连接相邻点的边，以形成单层Proximity graph，并最终形成多层图。底层包含所有向量及边。越上面的层，包含的向量和边越少。
 
@@ -31,9 +32,10 @@ Hierarchical Navigable Small World（HNSW）算法通过创建多层接近图（
 1. 一旦确定了顶层的最近向量，使用较低层的相同向量作为入口点，在该层中找到其最近邻。
 
 1. 重复上述步骤，直到找到底层的最近向量。
+
     ![Dkj8bpJswoXHzPxBz3hcOHSDnRg](/img/Dkj8bpJswoXHzPxBz3hcOHSDnRg.png)
 
-## ANNOY：树索引算法{#annoy-a-tree-based-indexing-algorithm}
+## ANNOY：树索引算法{#annoy-a-tree-based-indexing-algorithm}{#annoyannoy-a-tree-based-indexing-algorithm}
 
 Approximate Nearest Neighbor Oh Yeah（ANNOY）通过构建二叉树森林来索引向量空间。ANNOY 使用在向量空间中距离两个随机向量相等的超平面来将空间分成 2 个子空间。对每个子空间重复此过程，直到每个子空间中最多有 K 项。
 
@@ -55,13 +57,13 @@ Approximate Nearest Neighbor Oh Yeah（ANNOY）通过构建二叉树森林来索
 
 1. 按距离对候选项进行排序，并列出 top-K 个结果。
 
-## LSH：哈希索引算法{#lsh-a-hash-based-ann-indexing-algorithm}
+## LSH：哈希索引算法{#lsh-a-hash-based-ann-indexing-algorithm}{#lshlsh-a-hash-based-ann-indexing-algorithm}
 
 局部敏感哈希（LSH）算法的基本思想为空间域转换。LSH 算法通过使用各种哈希函数将任意长度的数据映射为固定长度的值作为哈希，将这些哈希收集到哈希桶中，并将已经哈希到相同值的向量标记为候选对。
 
 ![RRMybZeKQoGgQRx6kSNcvwxsnre](/img/RRMybZeKQoGgQRx6kSNcvwxsnre.png)
 
-## DiskANN：基于 Vamana 图的磁盘索引算法{#diskann-ann-search-on-disk-based-on-vamana-graphs}
+## DiskANN：基于 Vamana 图的磁盘索引算法{#diskann-ann-search-on-disk-based-on-vamana-graphs}{#diskann-vamana-diskann-ann-search-on-disk-based-on-vamana-graphs}
 
 不同于 HNSW 算法构建分层图，Vamana 索引过程相对简单：
 

@@ -2,6 +2,7 @@
 slug: /manage-index
 beta: FALSE
 notebook: 01_use_customized_schema.ipynb
+token: C3t5w4g0qiNJakk9eEKcIK1InJh
 sidebar_position: 2
 ---
 
@@ -13,11 +14,11 @@ import TabItem from '@theme/TabItem';
 
 在 Zilliz Cloud 集群中使用索引做为元数据结构，增强向量相似性检索性能。在 Zilliz Cloud 集群中进行检索的前提是您已经为其中的 Collection 创建了索引。
 
-## 准备工作{#before-you-start}
+## 准备工作{#before-you-start}{#before-you-start}
 
 确保您已经创建了一个 Collection。关于如何创建 Collection，可以参考 [创建 Collection](./create-collection)。
 
-## 为 Collection 创建索引{#index-collection}
+## 为 Collection 创建索引{#index-collection}{#collection-index-collection}
 
 为了在 Zilliz Cloud 上实现最佳的 ANN 检索性能，创建索引至关重要。目前，Zilliz Cloud 仅允许在  Collection 的向量列上创建索引。为 Collection 创建索引其实就意味着为其向量列创建索引并生成对应的索引文件。
 
@@ -142,7 +143,7 @@ func main() {
 </TabItem>
 </Tabs>
 
-## 加载索引{#load-index}
+## 加载索引{#load-index}{#load-index}
 
 在 Collection 中进行任何检索和查询之前，需要先将创建好的索引文件加载到内存中。
 
@@ -248,7 +249,7 @@ func main() {
 </TabItem>
 </Tabs>
 
-## 释放索引{#release-index}
+## 释放索引{#release-index}{#release-index}
 
 对于暂时无须进行查询操作的 Collection 来说，可以将加载到内存的索引文件从内存中释放出来。
 

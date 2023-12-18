@@ -1,0 +1,1231 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1687229691",
+  "node_token": "VNWiwtYwGi9m0Okhj3Zce8wAnte",
+  "node_type": "origin",
+  "obj_create_time": "1687229691",
+  "obj_edit_time": "1701418180",
+  "obj_token": "NnvudOgI0oZ1ukx7GCRcWhM5nUc",
+  "obj_type": "docx",
+  "origin_node_token": "VNWiwtYwGi9m0Okhj3Zce8wAnte",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "FGluwzZltiZo8LkJyWVcD8qdnxc",
+  "space_id": "7167193056431783939",
+  "title": "通过 Web UI 管理身份凭证",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc",
+        "block_type": 1,
+        "children": [
+          "RgLvdIFJuovrFexddOOcmRo2nLc",
+          "KmV6dI2sZol5BKxZRTncwnL5nLe",
+          "Q4TEd0nJDobF8NxcFr1cMS1gnJc",
+          "NGkxdjRE5oymbvxpUYLc3gMSnpe",
+          "QSLadmjFdoK0pwx9AwCcBTNjnhe",
+          "TtTjd9k9QozH3JxJPo3cs9kMnig",
+          "XeRjdJfL3ojzpVxaKPAcNqcInDg",
+          "S4VIdTUgso5upjxwLMvc5Pwgngh",
+          "AnlCdKBeGoyDQ9xinFGcbLsYnMf",
+          "Hf5EdkpaSouY0zxKMBOctJ4Lngb",
+          "U6yNdhjFJoKtFsxgqPRcL5YJnsb",
+          "J9hhdyfPWo8pGjxCboMcLFownme",
+          "GEEpd5SduolHNtxh5WIcisWinRh",
+          "ThOPdSyGEoaI1Fxr30pcs23cnkd",
+          "Ios6d9EclocZMcxiLhQcCUFGnsj",
+          "WkrBdphWwor4rKxvlPDc6FpTnnf",
+          "Qm5JdJ9PLoIIW5xIpRucJ7WYnRN",
+          "PuGqdP9wWo3HjrxNASTczRqcnVZ",
+          "RxCJdzsxEo9KwNxCz7ZcM97knBe",
+          "R3TPdcOx2oXLwQxs6oGcQEllnuh",
+          "WTcHdCRPzoMFFhxWp1McUk0ZnBb",
+          "Oz2KdtUy3onEylx6AjJc0riwn2g",
+          "O32QdeKRNoMJbQxdqdCcgkMvn8c",
+          "WwiMdYkswoV33wxYlZBcr5Konlf",
+          "UltvdCPM7ogzQuxBALGcLXtZniy",
+          "XzvRdfyGVoiE7pxpVmucPFwgnUc",
+          "UDJNdmbDLomOWFx2Wqqcp1LVnFf",
+          "P1ugdwN3QoKFuLxRqRLcBakenId"
+        ],
+        "comment_ids": [
+          "7308924492477104156",
+          "7249934599537819652"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过 Web ",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7249934599537819652",
+                    "7308924492477104156"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "UI",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7249934599537819652",
+                    "7308924492477104156"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7249934599537819652",
+                    "7308924492477104156"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "管理身份凭证",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7249934599537819652",
+                    "7308924492477104156"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "RgLvdIFJuovrFexddOOcmRo2nLc",
+        "block_type": 2,
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在 Zilliz Cloud 中，身份凭证由一对用户名和密码组成，用于认证及授权您对集群的交互请求。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KmV6dI2sZol5BKxZRTncwnL5nLe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "概述{#overview}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc"
+      },
+      {
+        "block_id": "Q4TEd0nJDobF8NxcFr1cMS1gnJc",
+        "block_type": 2,
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "当您设置集群时，Zilliz Cloud 会创建名为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "db_admin",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 的集群默认用户，并授予其管理员角色，使其具有完整的集群访问权限。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NGkxdjRE5oymbvxpUYLc3gMSnpe",
+        "block_type": 2,
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "除了默认的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "db_admin",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 用户外，您还可以添加和管理具有各种内置角色的其他集群用户，以实现访问控制：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QSLadmjFdoK0pwx9AwCcBTNjnhe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "管理员：拥有对整个集群及其关联资源的完全控制权限。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc"
+      },
+      {
+        "block_id": "TtTjd9k9QozH3JxJPo3cs9kMnig",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "读写权限：具有在集群内读取、写入及管理 Collection 和索引的权限。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc"
+      },
+      {
+        "block_id": "XeRjdJfL3ojzpVxaKPAcNqcInDg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "只读权限：拥有查看集群资源的权限，但无法进行创建、修改或删除等操作。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc"
+      },
+      {
+        "block_id": "S4VIdTUgso5upjxwLMvc5Pwgngh",
+        "block_type": 2,
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "有关更多集群内置角色信息，请参考",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "集群内置角色",
+                "token": "SXwewQ8p6i2qf8kd2YaccqKDnng",
+                "url": "https://zilliverse.feishu.cn/wiki/SXwewQ8p6i2qf8kd2YaccqKDnng"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AnlCdKBeGoyDQ9xinFGcbLsYnMf",
+        "block_type": 2,
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为方便您创建和管理身份凭证，Zilliz Cloud 提供了简洁直观的 Web 控制台。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Hf5EdkpaSouY0zxKMBOctJ4Lngb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "添加集群用户",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#add-a-cluster-user}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc"
+      },
+      {
+        "block_id": "U6yNdhjFJoKtFsxgqPRcL5YJnsb",
+        "block_type": 2,
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要添加集群用户，您必须是",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "组织管理员",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fdocx%2FA2hxdw23IokIAXxadTHcBGxUned%23V8NMdUxVboC71Zx0HHdcI957nbd"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "或",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "项目管理员",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fdocx%2FA2hxdw23IokIAXxadTHcBGxUned%23UGfcdRsiYonb1QxHvLqc1I3QnAe"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "J9hhdyfPWo8pGjxCboMcLFownme",
+        "block_type": 34,
+        "children": [
+          "McOkdd2aFozeYKxqRdIc8Y5hnJg",
+          "ZAK9diZn0osYS2xZNFvcOUGBnuh"
+        ],
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc",
+        "quote_container": {}
+      },
+      {
+        "block_id": "McOkdd2aFozeYKxqRdIc8Y5hnJg",
+        "block_type": 2,
+        "parent_id": "J9hhdyfPWo8pGjxCboMcLFownme",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZAK9diZn0osYS2xZNFvcOUGBnuh",
+        "block_type": 2,
+        "parent_id": "J9hhdyfPWo8pGjxCboMcLFownme",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "密码将不会再次显示，请务必记下并妥善保存在安全的地方。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GEEpd5SduolHNtxh5WIcisWinRh",
+        "block_type": 26,
+        "comment_ids": [
+          "7278893694743412740"
+        ],
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6395-1691%26mode%3Ddesign%26t%3DUoU3tbCAeNOk6FtR-4"
+          }
+        },
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc"
+      },
+      {
+        "block_id": "ThOPdSyGEoaI1Fxr30pcs23cnkd",
+        "block_type": 2,
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "添加集群用户后，您可以使用该用户的用户名和密码连接到集群。请查看",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "连接集群",
+                "token": "HU31wDHCCiN9qIknZ2fcLmconNh",
+                "url": "https://zilliverse.feishu.cn/wiki/HU31wDHCCiN9qIknZ2fcLmconNh"
+              }
+            },
+            {
+              "text_run": {
+                "content": "以了解更多详情。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ios6d9EclocZMcxiLhQcCUFGnsj",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "重置用户密码",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#reset-the-password-of-a-cluster-user}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc"
+      },
+      {
+        "block_id": "WkrBdphWwor4rKxvlPDc6FpTnnf",
+        "block_type": 2,
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要重置集群用户的密码，请前往集群详情页面，并点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "用户",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "选项卡。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Qm5JdJ9PLoIIW5xIpRucJ7WYnRN",
+        "block_type": 34,
+        "children": [
+          "FQm2dMGPqoggoGxgkSfc3tQtnEh",
+          "HoQRdS03aoJt2BxTZcTcjbfkn3e"
+        ],
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc",
+        "quote_container": {}
+      },
+      {
+        "block_id": "FQm2dMGPqoggoGxgkSfc3tQtnEh",
+        "block_type": 2,
+        "parent_id": "Qm5JdJ9PLoIIW5xIpRucJ7WYnRN",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HoQRdS03aoJt2BxTZcTcjbfkn3e",
+        "block_type": 2,
+        "parent_id": "Qm5JdJ9PLoIIW5xIpRucJ7WYnRN",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "密码将不会再次显示，请务必记下并妥善保存在安全的地方。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PuGqdP9wWo3HjrxNASTczRqcnVZ",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D16555-488%26mode%3Ddesign%26t%3DWikfanqFAiBjrqyt-4"
+          }
+        },
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc"
+      },
+      {
+        "block_id": "RxCJdzsxEo9KwNxCz7ZcM97knBe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "删除集群用户",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#drop-a-cluster-user}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc"
+      },
+      {
+        "block_id": "R3TPdcOx2oXLwQxs6oGcQEllnuh",
+        "block_type": 2,
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要删除集群用户，您必须是",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "组织管理员",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fdocx%2FA2hxdw23IokIAXxadTHcBGxUned%23V8NMdUxVboC71Zx0HHdcI957nbd"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "或",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "项目管理员",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fdocx%2FA2hxdw23IokIAXxadTHcBGxUned%23UGfcdRsiYonb1QxHvLqc1I3QnAe"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WTcHdCRPzoMFFhxWp1McUk0ZnBb",
+        "block_type": 34,
+        "children": [
+          "BPLjdXc5zoynUZxk2N3cNuV7nJe",
+          "MWbEd5k7vo2F57xxpFWcLkthnRc"
+        ],
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc",
+        "quote_container": {}
+      },
+      {
+        "block_id": "BPLjdXc5zoynUZxk2N3cNuV7nJe",
+        "block_type": 2,
+        "parent_id": "WTcHdCRPzoMFFhxWp1McUk0ZnBb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MWbEd5k7vo2F57xxpFWcLkthnRc",
+        "block_type": 2,
+        "parent_id": "WTcHdCRPzoMFFhxWp1McUk0ZnBb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群默认用户 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "db_admin",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 不支持删除。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Oz2KdtUy3onEylx6AjJc0riwn2g",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D16557-511%26mode%3Ddesign%26t%3DWikfanqFAiBjrqyt-4"
+          }
+        },
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc"
+      },
+      {
+        "block_id": "O32QdeKRNoMJbQxdqdCcgkMvn8c",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "文档推荐{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc"
+      },
+      {
+        "block_id": "WwiMdYkswoV33wxYlZBcr5Konlf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "连接集群",
+                "token": "HU31wDHCCiN9qIknZ2fcLmconNh",
+                "url": "https://zilliverse.feishu.cn/wiki/HU31wDHCCiN9qIknZ2fcLmconNh"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc"
+      },
+      {
+        "block_id": "UltvdCPM7ogzQuxBALGcLXtZniy",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "管理 API 密钥",
+                "token": "UGzNwB4TmiqTozkJvarceRdenif",
+                "url": "https://zilliverse.feishu.cn/wiki/UGzNwB4TmiqTozkJvarceRdenif"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc"
+      },
+      {
+        "block_id": "XzvRdfyGVoiE7pxpVmucPFwgnUc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "设置白名单",
+                "token": "RwEzw2l4siJB5Ake7FOcVU4knre",
+                "url": "https://zilliverse.feishu.cn/wiki/RwEzw2l4siJB5Ake7FOcVU4knre"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.notion.so%2Fcf88e3f8ced34279a2f4515e472d6e12%3Fpvs%3D21"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc"
+      },
+      {
+        "block_id": "UDJNdmbDLomOWFx2Wqqcp1LVnFf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "管理 MFA",
+                "token": "EWAWwESijisVHFkoAEbcfhvPnZb",
+                "url": "https://zilliverse.feishu.cn/wiki/EWAWwESijisVHFkoAEbcfhvPnZb"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc"
+      },
+      {
+        "block_id": "P1ugdwN3QoKFuLxRqRLcBakenId",
+        "block_type": 2,
+        "parent_id": "NnvudOgI0oZ1ukx7GCRcWhM5nUc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 35
+  }
+}

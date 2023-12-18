@@ -1,0 +1,681 @@
+{
+  "creator": "ou_8554528ee6e965bad56710acde1c7847",
+  "has_child": false,
+  "node_create_time": "1695087982",
+  "node_token": "P1JAwZEf4i1ALqkidS9cYfLZnef",
+  "node_type": "origin",
+  "obj_create_time": "1695087982",
+  "obj_edit_time": "1700705325",
+  "obj_token": "RBnpd3fY4o4EG8xKnuecEIewnLb",
+  "obj_type": "docx",
+  "origin_node_token": "P1JAwZEf4i1ALqkidS9cYfLZnef",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_8554528ee6e965bad56710acde1c7847",
+  "parent_node_token": "QxcnwBks8izBAQkjP8Ycl1cEnQh",
+  "space_id": "7167193056431783939",
+  "title": "版本说明书 2.2.0",
+  "slug": "release-notes-220",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "RBnpd3fY4o4EG8xKnuecEIewnLb",
+        "block_type": 1,
+        "children": [
+          "W5BQdeBrUoks0WxE8TRcpuy6nhh",
+          "QDrodm6broo20bxLNAfcNzwHn9d",
+          "TZrDdbBguo9FAexR0e7cDQXPnSd",
+          "Z4uad6fTooJ64mxokKEciyRgnkg",
+          "JnzSdSTn9occHyxrevgcsfhqnbg",
+          "GDMgdwSrHo7eEGxP96OcWl9vnff",
+          "QOdOdtQeao271ix26Z9c46CgnTc",
+          "VUnJdObppon7iuxaL5LczgN2nUd",
+          "GaXldiVDBoicLQxvGGHc78e2nQf",
+          "HtaQdR15Io5oYsxLwrlcVml0ntd",
+          "MM5vdgCLJoepn0x7roHc3aqOn4W",
+          "IygLdjufjoINdgxvBzEcj6eAnzd",
+          "OJPEdDksZoQyBzxN6hIcwafBnvh",
+          "T86QdoXMyoy3O2x8SbEc5wZFnHb",
+          "XzO3dS0RSolNiEx1sGPctxQ3n3c",
+          "CgjndkvypojXdrxDsS2cOTkhnkb",
+          "EEzadPo0loLonCxm2wmcOdN9nnh",
+          "P1EqdWXezopxkex0Ss9cAiUrnZf"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "版本说明书 2.2.0",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "W5BQdeBrUoks0WxE8TRcpuy6nhh",
+        "block_type": 2,
+        "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "发布日期：2023年9月19日",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QDrodm6broo20bxLNAfcNzwHn9d",
+        "block_type": 2,
+        "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "我们很高兴地宣布Zilliz Cloud 2.2.0的发布。此版本引入了一系列增强和功能：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TZrDdbBguo9FAexR0e7cDQXPnSd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "概述{#overview}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb"
+      },
+      {
+        "block_id": "Z4uad6fTooJ64mxokKEciyRgnkg",
+        "block_type": 2,
+        "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "此次发布引入了新的提单系统，您可以通过该系统方便地提交您的疑问和需要咨询的问题。另外，我们更新了数据导入和迁移工具，实现了 Zilliz Cloud 集群间的无缝转换，并改进了对一次性导入多个文件的支持。我们诚邀您探索这些工具和新特性，亲身体验它们的优势。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JnzSdSTn9occHyxrevgcsfhqnbg",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 集群间的数据迁移{#data-migration-across-zilliz-cloud-clusters}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb"
+      },
+      {
+        "block_id": "GDMgdwSrHo7eEGxP96OcWl9vnff",
+        "block_type": 2,
+        "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "此次发布，用户可以通过 Zilliz Cloud 的数据迁移能力，轻松完成集群间的数据整合与配置。具体内容，可",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "查阅此处",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FN6tlwTPPvi0FXvkj4fccCgtTnOg"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QOdOdtQeao271ix26Z9c46CgnTc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "轻松迁移：在多个 Zilliz Cloud 集群间实现数据的无缝迁移。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb"
+      },
+      {
+        "block_id": "VUnJdObppon7iuxaL5LczgN2nUd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "安全增强：迁移过程中的数据安全得到加强，保障数据的完整性与私密性。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb"
+      },
+      {
+        "block_id": "GaXldiVDBoicLQxvGGHc78e2nQf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "实时监控：直观的用户界面，方便您监控迁移进度并实时接收状态更新。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb"
+      },
+      {
+        "block_id": "HtaQdR15Io5oYsxLwrlcVml0ntd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "从 ElasticSearch 到 Zilliz Cloud 的数据迁移{#easy-migration-from-elasticsearch-to-zilliz-cloud}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb"
+      },
+      {
+        "block_id": "MM5vdgCLJoepn0x7roHc3aqOn4W",
+        "block_type": 2,
+        "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "从 ElasticSearch 迁移到 Zilliz Cloud 从未如此简单。我们精心设计了一条路径，并辅以全面的文档和内置工具，确保您能顺利切换，并在迁移后获得一致的数据。具体内容，可",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "查阅此处",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FCJN4wlKiGi1P8Zk4BHKcF04GnLb"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IygLdjufjoINdgxvBzEcj6eAnzd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "提单系统全新上线{#new-ticket-system-go-live}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb"
+      },
+      {
+        "block_id": "OJPEdDksZoQyBzxN6hIcwafBnvh",
+        "block_type": 2,
+        "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "全新的提单系统为您提供了直达 Zilliz Cloud 业务支撑团队的专线。无论您需要提交反馈，报告问题，寻求支持。我们的系统都设计得高效、清晰。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "点击此处，立即体验我们的提单系统",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fsupport.zilliz.com.cn%2Fhc%2Fzh-cn"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "T86QdoXMyoy3O2x8SbEc5wZFnHb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "数据导入能力增强{#enhanced-data-import-capabilities}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb"
+      },
+      {
+        "block_id": "XzO3dS0RSolNiEx1sGPctxQ3n3c",
+        "block_type": 2,
+        "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "我们重新设计了您向 Zilliz Cloud 导入数据的方式。具体内容，可",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "查阅此处",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FGLk6wr8jviPyzHk7DjRc56YsnNf"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CgjndkvypojXdrxDsS2cOTkhnkb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "导入目录",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "QWKJdDPd9oqfZOx2JNicMi05nkf"
+        ],
+        "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb"
+      },
+      {
+        "block_id": "QWKJdDPd9oqfZOx2JNicMi05nkf",
+        "block_type": 2,
+        "parent_id": "CgjndkvypojXdrxDsS2cOTkhnkb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "摆脱以往单一文件模式的束缚。您现在可以使用整个文件夹的文件导入数据，从而简化批量数据导入。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EEzadPo0loLonCxm2wmcOdN9nnh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "导入任务监控",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "Q308drE0joxZqqxlubQcWSKrnPg"
+        ],
+        "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb"
+      },
+      {
+        "block_id": "Q308drE0joxZqqxlubQcWSKrnPg",
+        "block_type": 2,
+        "parent_id": "EEzadPo0loLonCxm2wmcOdN9nnh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过 Zilliz Cloud 控制台实时查看您的数据导入任务，保障您对整个数据上传过程的掌控能力。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "P1EqdWXezopxkex0Ss9cAiUrnZf",
+        "block_type": 2,
+        "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 21
+  }
+}

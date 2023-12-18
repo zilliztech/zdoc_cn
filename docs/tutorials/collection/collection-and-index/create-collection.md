@@ -2,6 +2,7 @@
 slug: /create-collection
 beta: FALSE
 notebook: 00_quick_start.ipynb,01_use_customized_schema.ipynb
+token: MNcZwAfV6iZxbckfKBlcmCzanti
 sidebar_position: 1
 ---
 
@@ -13,7 +14,7 @@ import TabItem from '@theme/TabItem';
 
 本文介绍如何在 Zilliz Cloud 集群中创建 Collection。
 
-## 操作步骤{#procedure}
+## 操作步骤{#procedure}{#procedure}
 
 如果您倾向于在不事先定义每个字段的情况下直接着手创建，那么 Starter API 将非常适合您。它提供了一种更为直接和简化的设置方式，您只需指定集合的名称和向量字段的维度数量。
 
@@ -296,11 +297,12 @@ curl --location --request POST "${PUBLIC_ENDPOINT}/v1/vector/collections/create"
 Zilliz Cloud 将自动创建一个称为 `id` 的主键。
 
 - 向量字段
+
     Zilliz Cloud 将初始化一个名为 `vector` 的默认向量字段。
 
     此外，以这种方式建立的集合将自动启用动态 Schema 功能。当此功能启用时，Zilliz Cloud 能够在数据插入过程中，自动将所有未定义的字段作为动态字段保存。
 
-## 数据类型{#supported-data-types}
+## 数据类型{#supported-data-types}{#supported-data-types}
 
 Zilliz Cloud 目前支持以下类型的数据：
 
@@ -318,16 +320,16 @@ Zilliz Cloud 目前支持以下类型的数据：
 
 这些数据类型可作为 Collection 的 Schema 的基本元素。
 
-## 使用限制{#limits}
+## 使用限制{#limits}{#limits}
 
-集群可创建的 Collection 数量受集群的 CU 数量影响：
+1 个 Serverless 集群中最多可创建 2 个 Collection。1 个 Dedicated 集群中可创建的 Collection 数量上限取决于集群 CU 大小。
 
 |            |  最大 Collection 数 |
 | ---------- | ---------------- |
 |  小于等于 8 CU |  32              |
 |  大于 8 CU   |  256             |
 
-## 相关文档{#related-topics}
+## 相关文档{#related-topics}{#related-topics}
 
 - [删除 Collection](./drop-collection)
 
@@ -338,3 +340,4 @@ Zilliz Cloud 目前支持以下类型的数据：
 - [开启动态 Schema](./enable-dynamic-schema)
 
 - [JSON](./javascript-object-notation-json)
+

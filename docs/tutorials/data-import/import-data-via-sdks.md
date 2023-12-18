@@ -2,6 +2,7 @@
 slug: /import-data-via-sdks
 beta: FALSE
 notebook: 05_use_local-bulk-writer.ipynb,06_use_remote-bulk-writer.ipynb,07_use_bulk_import.ipynb
+token: Xv4awWJZpiKoJjkPTlic98Mindc
 sidebar_position: 4
 ---
 
@@ -12,24 +13,26 @@ import Admonition from '@theme/Admonition';
 
 本节将帮助你了解如何使用 SDK 的 BulkWriter 和 BulkImport API 向 Collection 中导入数据。
 
-## 准备工作{#before-you-start}
+## 准备工作{#before-you-start}{#before-you-start}
 
 在执行本节操作前，请确认如下工作已经完成。
 
-- 安装最新版本的 Python SDK。具体可参考 [安装 SDK](./install-sdks#install-pymilvus-python-sdk) 。
+- 安装最新版本的 Python SDK。具体可参考 [安装 SDK](./install-sdks#pymilvuspython-sdkinstall-pymilvus-python-sdk) 。
+
     当前，仅 PyMilvus 提供了 BulkWriter 和 BulkImport API。本节将使用 PyMilvus 演示批量导入数据的过程。
 
 - 已在 Zilliz Cloud 上创建了一个 Cluster，并在该 Cluster 中创建了一个 Collection。具体可参考[创建集群](./create-cluster)和[创建 Collection](./create-collection)。
 
 - 已下载格式为CSV的[示例数据集](https://drive.google.com/file/d/12RkoDPAlk-sclXdjeXT6DMFVsQr4612w/view?usp=sharing)。关于该数据集的更多信息，请[阅读简介](https://www.kaggle.com/datasets/shiyu22chen/cleaned-medium-articles-dataset)。
 
-## 具体步骤{#procedure}
+## 具体步骤{#procedure}{#procedure}
 
 向 Zilliz Cloud 批量导入您 的数据，需要先使用 BulkWriter API 将您的数据转换成一个合适的格式，然后再使用 BulkImport API 将转换后的数据文件中的数据批量存入指定的 Collection 中。
 
-### 转化数据{#converting-your-data}
+### 转化数据{#converting-your-data}{#converting-your-data}
 
 1. 获取已创建的 Collection 的 Schema。
+
     按照示例数据集，该 Collection 的 Schema 中应包含两个主要字段，分别为 `id` 和 `vector`。其中，`id` 字段为开启了auto-id的主键，`vector` 字段的维度为 768。数据集中的其它字段均为动态字段。
 
     ```python
@@ -61,6 +64,7 @@ import Admonition from '@theme/Admonition';
     ```
 
 1. 使用 BulkWriter API 将您的数据转换为 Zilliz Cloud 可以消费的格式。
+
     示例数据集的格式为CSV。可以使用 Pandas 库对其进行处理。最终目标是生成一个在下一步中供 BulkWriter 消费的字典列表。
 
     ```python
@@ -76,6 +80,7 @@ import Admonition from '@theme/Admonition';
     ```
 
 1. 创建一个 RemoteBulkWriter 对象。输入包括目标 Collection 的 Schema 及其它必要的参数。
+
     示例代码中指定了一个 AWS S3 桶。请使用与您的目标集群处于同一公有云的对象存储桶。
 
     ```python
@@ -121,6 +126,7 @@ import Admonition from '@theme/Admonition';
     ```
 
 1. 检查结果
+
     如下示例使用 MinIO 的 Python Client 检查指定存储桶中的文件。您可以使用其它您认为合适的方式对指定存储进行检查。
 
     ```python
@@ -148,11 +154,12 @@ import Admonition from '@theme/Admonition';
     # ]
     ```
 
-### 批量导入数据{#bulk-inserting-data}
+### 批量导入数据{#bulk-inserting-data}{#bulk-inserting-data}
 
 为了方便用户在 Python 代码中调用 Zilliz Cloud 的 Import RESTful APIs，PyMilvus 对相关的 RESTful 接口进行了包括，提供了 BulkImport 接口。
 
 1. 引入 PyMilvus 的 BulkImport 接口。
+
     ```python
     import time
     from pymilvus import (
@@ -163,6 +170,7 @@ import Admonition from '@theme/Admonition';
     ```
 
 1. 创建一个批量导入任务。
+
     该接口返回已创建的 BulkImport 任务ID。
 
     ```python
@@ -191,6 +199,7 @@ import Admonition from '@theme/Admonition';
     ```
 
 1. 获取 BulkImport 任务的进度信息。
+
     ```python
     job_id = resp.json()['data']['jobId']
     resp = get_import_progress(
@@ -238,10 +247,11 @@ import Admonition from '@theme/Admonition';
 
 您还可以调用 ListImportJobs API来了解其它批量导入任务的运行情况。
 
-## 推荐阅读{#related-topics}
+## 推荐阅读{#related-topics}{#related-topics}
 
 - [通过 Web 控制台导入](./import-data-on-web-ui) 
 
 - [通过 RESTful API 导入](./import-data-via-restful-api) 
 
 - [使用 BulkWriter 导入](./use-bulkwriter-for-data-import) 
+

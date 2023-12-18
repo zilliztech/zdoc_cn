@@ -1,0 +1,111 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": true,
+  "node_create_time": "1701417042",
+  "node_token": "FGluwzZltiZo8LkJyWVcD8qdnxc",
+  "node_type": "origin",
+  "obj_create_time": "1701417042",
+  "obj_edit_time": "1702735719",
+  "obj_token": "KDaDd79AyoWQZKxl9fsc7ADynYf",
+  "obj_type": "docx",
+  "origin_node_token": "FGluwzZltiZo8LkJyWVcD8qdnxc",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "LmbYwqEJQinfLMkkKr5cZxjZnFb",
+  "space_id": "7167193056431783939",
+  "title": "管理身份凭证",
+  "slug": "manage-cluster-credentials",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "KDaDd79AyoWQZKxl9fsc7ADynYf",
+        "block_type": 1,
+        "children": [
+          "QV9QdYzwpo0OZrxqoJfcTfBSnog"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "管理身份凭证",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "QV9QdYzwpo0OZrxqoJfcTfBSnog",
+        "block_type": 2,
+        "parent_id": "KDaDd79AyoWQZKxl9fsc7ADynYf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 2
+  },
+  "children": [
+    {
+      "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+      "has_child": false,
+      "node_create_time": "1687229691",
+      "node_token": "VNWiwtYwGi9m0Okhj3Zce8wAnte",
+      "node_type": "origin",
+      "obj_create_time": "1687229691",
+      "obj_edit_time": "1701418180",
+      "obj_token": "NnvudOgI0oZ1ukx7GCRcWhM5nUc",
+      "obj_type": "docx",
+      "origin_node_token": "VNWiwtYwGi9m0Okhj3Zce8wAnte",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+      "parent_node_token": "FGluwzZltiZo8LkJyWVcD8qdnxc",
+      "space_id": "7167193056431783939",
+      "title": "通过 Web UI 管理身份凭证"
+    },
+    {
+      "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+      "has_child": false,
+      "node_create_time": "1701417093",
+      "node_token": "UfjxwrE20iPn6okfStpcSDtpnxf",
+      "node_type": "origin",
+      "obj_create_time": "1701417093",
+      "obj_edit_time": "1701426386",
+      "obj_token": "SUrxdt0fqoRV5ux7LcjcnUj9nYg",
+      "obj_type": "docx",
+      "origin_node_token": "UfjxwrE20iPn6okfStpcSDtpnxf",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+      "parent_node_token": "FGluwzZltiZo8LkJyWVcD8qdnxc",
+      "space_id": "7167193056431783939",
+      "title": "通过 SDK 管理身份凭证"
+    }
+  ]
+}

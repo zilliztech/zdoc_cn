@@ -1,0 +1,613 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": false,
+  "node_create_time": "1687140393",
+  "node_token": "R8EPw5l7Ei1tEKkdH6qc54UNn1d",
+  "node_type": "origin",
+  "obj_create_time": "1687140393",
+  "obj_edit_time": "1700704736",
+  "obj_token": "PPJ1dcM5zocfewxlzgccPDy5nzd",
+  "obj_type": "docx",
+  "origin_node_token": "R8EPw5l7Ei1tEKkdH6qc54UNn1d",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "XgeZwPIUki3KbTkzTWHcFRvPnfg",
+  "space_id": "7167193056431783939",
+  "title": "删除 Entity",
+  "slug": "delete-entities",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "PPJ1dcM5zocfewxlzgccPDy5nzd",
+        "block_type": 1,
+        "children": [
+          "LspKdNoNwoMPq6x76Q0cfm1qnIe",
+          "IPTSdgx7LojaidxHmyYcIN8enzR",
+          "OIsTdIGV4oIGkYxUlp4cRcjzn8f",
+          "N7endQM1Do4graxBoeCcnLEWnch",
+          "UGusdBXU2oMRHSxI11OcLUbPnEf",
+          "PaOyd0IkHovpzvxMH9ncBY7AnSb",
+          "SIRGdPYyRoSCZmxGT6ecQ1rnnmd",
+          "OeBjdiUXVo4Fakx9zgwc8V5CnXd",
+          "Jj6MdqkmUo8tLWxiP2Eczw6hnXb",
+          "GAP0dt4w0oD2V7xJBlHcDKOinCg",
+          "APz6dL4RioVknlxzanvcaPFsn1f",
+          "Qansdtj6Wogdo9xpRgDcMZMTnvA",
+          "L0ecdPkF1o2Z0AxopFNcfWd4n1e",
+          "ADeTdaFWOo7RM2xh9OZcPQj7nOc"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "删除 Entity",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "LspKdNoNwoMPq6x76Q0cfm1qnIe",
+        "block_type": 2,
+        "parent_id": "PPJ1dcM5zocfewxlzgccPDy5nzd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Entity 是指存储在 Zilliz Cloud 集群中的数据实体，包含用于处理、搜索和查询的数据。如果您不再需要某个 Entity，可以执行相关操作将其删除。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IPTSdgx7LojaidxHmyYcIN8enzR",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "删除 Entity{#delete-entities}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PPJ1dcM5zocfewxlzgccPDy5nzd"
+      },
+      {
+        "block_id": "OIsTdIGV4oIGkYxUlp4cRcjzn8f",
+        "block_type": 2,
+        "parent_id": "PPJ1dcM5zocfewxlzgccPDy5nzd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果一条数据过时或不再需要时，可以使用如下步骤删除该 Entity。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "N7endQM1Do4graxBoeCcnLEWnch",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# Starter API\n# Delete a single entity using a MilvusClient object\nfrom pymilvus import MilvusClient\n\nres = client.delete(\n    collection_name=\"medium_articles_2020\", # Collection name\n    pks=253 # Entity ID, Use a list for multiple entities, such as [246, 253]\n)\n\nprint(res)\n\n# Output:\n# [253]\n\n# =============\n# Advanced API\n\n# Delete a single entity using a Collection object\nfrom pymilvus import Collection\n\ncollection.delete(expr=\"id in [253]\") \n\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# Include the IDs of all entities to delete in the expr, such as 'id in [246, 253]'",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "PPJ1dcM5zocfewxlzgccPDy5nzd"
+      },
+      {
+        "block_id": "UGusdBXU2oMRHSxI11OcLUbPnEf",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "async function main () {\n\n    // Continued\n\n    res = await client.delete({\n        collection_name: \"medium_articles_2020\",\n        ids: [253] // Include the IDs of all entities to delete, such as [246, 253]\n    });\n    \n    console.log(res)\n    \n    // Output\n    //  {\n    //   succ_index: [],\n    //   err_index: [],\n    //   status: { error_code: 'Success', reason: '' },\n    //   IDs: { int_id: { data: [Array] }, id_field: 'int_id' },\n    //   acknowledged: false,\n    //   insert_cnt: '0',\n    //   delete_cnt: '1',\n    //   upsert_cnt: '0',\n    //   timestamp: '442192913812684801'\n    // }\n    \n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 30,
+            "wrap": false
+          }
+        },
+        "parent_id": "PPJ1dcM5zocfewxlzgccPDy5nzd"
+      },
+      {
+        "block_id": "PaOyd0IkHovpzvxMH9ncBY7AnSb",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "import java.util.List;\n\nimport io.milvus.param.highlevel.dml.DeleteIdsParam;\nimport io.milvus.param.highlevel.dml.response.DeleteResponse;\n\npublic class UseCustomizedSchemaDemo \n{\n    public static void main( String[] args )\n    {\n        // (Continued)\n        String data_file = \"/medium_articles_2020_dpr.json\";\n        String content;\n\n        // read a local file\n        Path file = Path.of(data_file);\n        try {\n            content = Files.readString(file);\n        } catch (Exception e) {\n            System.err.println(\"Failed to read file: \" + e.getMessage());\n            return;\n        }\n\n        System.out.println(\"Successfully read file\");\n\n        // Output:\n        // Successfully read file\n\n        // Load dataset\n        JSONObject dataset = JSON.parseObject(content);\n\n        // Insert your data in rows, all the fields not pre-defined in the schema \n        // are recognized as pre-defined schema\n        List<JSONObject> rows = getRows(dataset.getJSONArray(\"rows\"), 1000);\n        \n        List<String> ids = Lists.newArrayList(\"1\");\n        // List<String> ids = Lists.newArrayList(\"1\", \"2\", \"3\");\n        \n        DeleteIdsParam deleteParam = DeleteIdsParam.newBuilder()\n                .withCollectionName(collectionName)\n                .withPrimaryIds(ids)\n                .build();\n\n        R<DeleteResponse> deleteRes = client.delete(deleteParam);\n\n        if (deleteRes.getException() != null) {\n            System.err.println(\"Failed to delete: \" + deleteRes.getException().getMessage());\n            return;\n        }\n\n        System.out.println(deleteRes.getData().toString());\n\n        // Output:\n        // deleteIds=[]\n    }\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 29,
+            "wrap": false
+          }
+        },
+        "parent_id": "PPJ1dcM5zocfewxlzgccPDy5nzd"
+      },
+      {
+        "block_id": "SIRGdPYyRoSCZmxGT6ecQ1rnnmd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "func main() {\n\n    // (Continued)\n    \n    err = conn.Delete(context.Background(), COLLNAME, \"\", \"id in [253]\")\n    // err = conn.Delete(context.Background(), COLLNAME, \"\", \"id in [253, 254]\")\n\n    if err != nil {\n        log.Fatal(\"Failed to delete rows:\", err.Error())\n    }\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 22,
+            "wrap": false
+          }
+        },
+        "parent_id": "PPJ1dcM5zocfewxlzgccPDy5nzd"
+      },
+      {
+        "block_id": "OeBjdiUXVo4Fakx9zgwc8V5CnXd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "curl --request POST \\\n     --url \"${PUBLIC_ENDPOINT}/v1/vector/delete\" \\\n     --header \"Authorization: Bearer ${API_KEY}\" \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --data \"{\n        \\\"collectionName\\\": \\\"medium_articles_2020\\\",\n        \\\"id\\\": 253\n      }\"\n\n# Output:\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# {\"code\":200,\"data\":{}}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 7,
+            "wrap": false
+          }
+        },
+        "parent_id": "PPJ1dcM5zocfewxlzgccPDy5nzd"
+      },
+      {
+        "block_id": "Jj6MdqkmUo8tLWxiP2Eczw6hnXb",
+        "block_type": 2,
+        "parent_id": "PPJ1dcM5zocfewxlzgccPDy5nzd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "以上代码从 Collection ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "medium_articles_2020",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 中同时删除 ID 为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "25",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "3",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 的 Entity。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GAP0dt4w0oD2V7xJBlHcDKOinCg",
+        "block_type": 34,
+        "children": [
+          "YCYKddEnGosQNWxCNUec7ioznnb",
+          "BE2pdgswyocPJ4xLgLzcr790n4P"
+        ],
+        "parent_id": "PPJ1dcM5zocfewxlzgccPDy5nzd",
+        "quote_container": {}
+      },
+      {
+        "block_id": "YCYKddEnGosQNWxCNUec7ioznnb",
+        "block_type": 2,
+        "parent_id": "GAP0dt4w0oD2V7xJBlHcDKOinCg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "🚧 警告",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BE2pdgswyocPJ4xLgLzcr790n4P",
+        "block_type": 2,
+        "parent_id": "GAP0dt4w0oD2V7xJBlHcDKOinCg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "删除 Entity 是不可逆操作。在执行操作之前，请务必备份或确认数据不再需要。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "APz6dL4RioVknlxzanvcaPFsn1f",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相关文档{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PPJ1dcM5zocfewxlzgccPDy5nzd"
+      },
+      {
+        "block_id": "Qansdtj6Wogdo9xpRgDcMZMTnvA",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建 Collection",
+                "token": "MNcZwAfV6iZxbckfKBlcmCzanti",
+                "url": "https://zilliverse.feishu.cn/wiki/MNcZwAfV6iZxbckfKBlcmCzanti"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PPJ1dcM5zocfewxlzgccPDy5nzd"
+      },
+      {
+        "block_id": "L0ecdPkF1o2Z0AxopFNcfWd4n1e",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "插入 Entity",
+                "token": "Am0bwdNmliIZ9OkUB2DcdkOBnAe",
+                "url": "https://zilliverse.feishu.cn/wiki/Am0bwdNmliIZ9OkUB2DcdkOBnAe"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PPJ1dcM5zocfewxlzgccPDy5nzd"
+      },
+      {
+        "block_id": "ADeTdaFWOo7RM2xh9OZcPQj7nOc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "向量搜索和查询",
+                "token": "SPaWwHEVuipu3bkeg17coFgnnUo",
+                "url": "https://zilliverse.feishu.cn/wiki/SPaWwHEVuipu3bkeg17coFgnnUo"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PPJ1dcM5zocfewxlzgccPDy5nzd"
+      }
+    ],
+    "counts": 17
+  }
+}

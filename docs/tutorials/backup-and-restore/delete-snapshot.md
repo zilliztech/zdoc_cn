@@ -2,6 +2,7 @@
 slug: /delete-snapshot
 beta: FALSE
 notebook: FALSE
+token: FW37wt3qEiKvZzkzBducXgHZnIe
 sidebar_position: 5
 ---
 
@@ -16,7 +17,7 @@ import Admonition from '@theme/Admonition';
 
 在执行删除操作之前，系统会提示您确认是否删除快照。
 
-## 相关文档{#related-topics}
+## 相关文档{#related-topics}{#related-topics}
 
 - [创建备份快照](./create-snapshot)
 
@@ -25,3 +26,4 @@ import Admonition from '@theme/Admonition';
 - [查看备份快照](./view-snapshot-details)
 
 - [恢复备份](./restore-from-snapshot)
+

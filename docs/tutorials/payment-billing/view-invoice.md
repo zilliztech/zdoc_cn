@@ -2,6 +2,7 @@
 slug: /view-invoice
 beta: FALSE
 notebook: FALSE
+token: NhbHwPiL2i4KWskrcO4cDrSNnzh
 sidebar_position: 3
 ---
 
@@ -14,7 +15,7 @@ import Admonition from '@theme/Admonition';
 
 如果您选择现金充值的支付方式，您可以在 Zilliz Cloud 界面查看账单。如果您选择开通阿里云云市场扣费渠道，请前往[阿里云云市场](https://market.aliyun.com/products/56024006/cmgj00063418.html?)查看您的所有账单。如果您同时选择了现金充值及开通阿里云云市场扣费渠道 2 种支付方式，Zilliz Cloud 界面仅展示免费额度扣费和现金余额扣费的账单，通过阿里云云市场扣费的部分账单，您仍需前往阿里云市场查看。
 
-## 查看 Zilliz Cloud 账单{#view-bills}
+## 查看 Zilliz Cloud 账单{#view-bills}{#zilliz-cloud-view-bills}
 
 如需查看所有历史账单，请点击账单页内的**历史账单**选项卡。账单状态分为**未出账**、**已结清**、**已逾期**、**免费** 4 种状态。各个账单状态的含义如下表所示：
 
@@ -33,13 +34,13 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 支持线上开票。具体操作步骤，请阅读[申请开票](./advance-pay#related-topics)。
 
-## 查看支付方式{#view-payment-method}
+## 查看支付方式{#view-payment-method}{#view-payment-method}
 
 如需查看支付方式，请点击账单页内的**账单概览**选项卡。您可查看当月账单、免费额度余额、现金余额及是否开通阿里云云市场扣费渠道。
 
 ![payment-method-cn](/img/payment-method-cn.png)
 
-## 相关文档{#related-topics}
+## 相关文档{#related-topics}{#related-topics}
 
 - [订阅阿里云市场](./subscribe-on-aliyun-marketplace) 
 
@@ -48,3 +49,4 @@ Zilliz Cloud 支持线上开票。具体操作步骤，请阅读[申请开票](.
 - [企业认证](./enterprise-certification) 
 
 - [开具发票](./invoice) 
+

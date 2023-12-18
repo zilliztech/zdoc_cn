@@ -1,0 +1,709 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1687157534",
+  "node_token": "CCVpw6BVti8P8LkfcdJcdRH1nHg",
+  "node_type": "origin",
+  "obj_create_time": "1687157534",
+  "obj_edit_time": "1700704374",
+  "obj_token": "D58cdXxK0oaP24xOIaZclOd3n8f",
+  "obj_type": "docx",
+  "origin_node_token": "CCVpw6BVti8P8LkfcdJcdRH1nHg",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "If7NwjuzkiLMtZkks3eczCBQnOe",
+  "space_id": "7167193056431783939",
+  "title": "注册账号",
+  "slug": "register-with-zilliz-cloud",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "D58cdXxK0oaP24xOIaZclOd3n8f",
+        "block_type": 1,
+        "children": [
+          "FOl8d9Z5RoPzRExqgFUcCIbYn6g",
+          "KhJ6dwLtRosd4DxfGHScrDPrnUO",
+          "JFbYdqWjboj4fZxYDMwcW4FynXe",
+          "GZgFdArGWoZxuSx73NzcVMhvnNc",
+          "AtK0dirnroCwGqxblVEcHzeKnXc",
+          "X41cdpjr4oxOqExR57tcnRqWnag",
+          "VB08dOTV3oMtOwx7j4Oc4T2xnke",
+          "Qp05dLsFDopT8pxkaQzcL82knnf",
+          "MmAWdF3RYoL4zAxry1mcvJfRnUh",
+          "Xb3Cdqg0soPrGdx6UKAcIHWFnnd",
+          "CWdId1jDHoVEpHxU5IRckp2dn0b",
+          "Dt1FdQZlioVQ8MxaHgdchuwDn0d",
+          "MKlddwJJbogYEaxeJKScA7gnnmc",
+          "Weoyd1oxTom38qxGlx1cI2a0n8f",
+          "SRb4d7wVjog9RSxvAM9cCxuanAf"
+        ],
+        "comment_ids": [
+          "7273686595789258755"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "注册账号",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7273686595789258755"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "FOl8d9Z5RoPzRExqgFUcCIbYn6g",
+        "block_type": 2,
+        "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本教程将介绍如何创建 Zilliz Cloud 账号。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KhJ6dwLtRosd4DxfGHScrDPrnUO",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "前提条件{#before-you-start}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f"
+      },
+      {
+        "block_id": "JFbYdqWjboj4fZxYDMwcW4FynXe",
+        "block_type": 2,
+        "comment_ids": [
+          "7249940398587166723"
+        ],
+        "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "打开注册页面",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "background_color": 3,
+                  "bold": false,
+                  "comment_ids": [
+                    "7249940398587166723"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "https://cloud.zilliz.com.cn/signup",
+                "text_element_style": {
+                  "background_color": 3,
+                  "bold": false,
+                  "comment_ids": [
+                    "7249940398587166723"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "background_color": 3,
+                  "bold": false,
+                  "comment_ids": [
+                    "7249940398587166723"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GZgFdArGWoZxuSx73NzcVMhvnNc",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6283-1685%26mode%3Ddesign%26t%3DLDkM04ipuoHHIVOY-4"
+          }
+        },
+        "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f"
+      },
+      {
+        "block_id": "AtK0dirnroCwGqxblVEcHzeKnXc",
+        "block_type": 2,
+        "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "X41cdpjr4oxOqExR57tcnRqWnag",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "注册账号{#registration-options}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f"
+      },
+      {
+        "block_id": "VB08dOTV3oMtOwx7j4Oc4T2xnke",
+        "block_type": 2,
+        "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "目前，您仅能够通过企业邮箱注册 Zilliz Cloud 账号。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Qp05dLsFDopT8pxkaQzcL82knnf",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在“企业邮箱”字段中输入您的企业邮箱地址。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f"
+      },
+      {
+        "block_id": "MmAWdF3RYoL4zAxry1mcvJfRnUh",
+        "block_type": 13,
+        "children": [
+          "F8MrdnAObozSLJxWEGcc8KkmnUG"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在“密码”字段中输入密码。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f"
+      },
+      {
+        "block_id": "F8MrdnAObozSLJxWEGcc8KkmnUG",
+        "block_type": 2,
+        "parent_id": "MmAWdF3RYoL4zAxry1mcvJfRnUh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您的密码应不超过 128 个字符，并且必须包含至少 1 个大写字母、1 个小写字母、1 个数字和 1 个特殊字符。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Xb3Cdqg0soPrGdx6UKAcIHWFnnd",
+        "block_type": 13,
+        "comment_ids": [
+          "7249940622295908355",
+          "7249940473108840451"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "阅读并勾选“同意",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "使用条款",
+                "text_element_style": {
+                  "background_color": 3,
+                  "bold": false,
+                  "comment_ids": [
+                    "7249940473108840451"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com.cn%2Fcloud-service-terms"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "隐私政策",
+                "text_element_style": {
+                  "background_color": 3,
+                  "bold": false,
+                  "comment_ids": [
+                    "7249940622295908355"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com.cn%2Fcloud-user-policy"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "”。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f"
+      },
+      {
+        "block_id": "CWdId1jDHoVEpHxU5IRckp2dn0b",
+        "block_type": 13,
+        "children": [
+          "SGSgde8rFo3Bm7x2pO2cJvVznDD"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击”注册“按钮。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f"
+      },
+      {
+        "block_id": "SGSgde8rFo3Bm7x2pO2cJvVznDD",
+        "block_type": 2,
+        "parent_id": "CWdId1jDHoVEpHxU5IRckp2dn0b",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "验证码将发送到您填写的企业邮箱中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Dt1FdQZlioVQ8MxaHgdchuwDn0d",
+        "block_type": 13,
+        "children": [
+          "G71jdcimsoGlmbxMWcLcChr8nEg"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在提示对话框中输入验证码，并点击“验证”。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f"
+      },
+      {
+        "block_id": "G71jdcimsoGlmbxMWcLcChr8nEg",
+        "block_type": 2,
+        "parent_id": "Dt1FdQZlioVQ8MxaHgdchuwDn0d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如未收到验证码，请点击“重新发送验证码”。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MKlddwJJbogYEaxeJKScA7gnnmc",
+        "block_type": 34,
+        "children": [
+          "MLexdUvd0o6qTMxYzDecji94nce",
+          "JZssdIf34oV1xUxCZTYc7y4Pn2C"
+        ],
+        "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f",
+        "quote_container": {}
+      },
+      {
+        "block_id": "MLexdUvd0o6qTMxYzDecji94nce",
+        "block_type": 2,
+        "parent_id": "MKlddwJJbogYEaxeJKScA7gnnmc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JZssdIf34oV1xUxCZTYc7y4Pn2C",
+        "block_type": 2,
+        "parent_id": "MKlddwJJbogYEaxeJKScA7gnnmc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在使用邮箱和密码首次登录后，请您完成问卷调查。我们希望了解您选择 Zilliz Cloud 的原因及数据规模，从而更有效地为您提供服务。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Weoyd1oxTom38qxGlx1cI2a0n8f",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "文档推荐{#whats-next}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f"
+      },
+      {
+        "block_id": "SRb4d7wVjog9RSxvAM9cCxuanAf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "快速开始",
+                "token": "M4cQwZQ0QiqBy6kzZftc0fQPn1f",
+                "url": "https://zilliverse.feishu.cn/wiki/M4cQwZQ0QiqBy6kzZftc0fQPn1f"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.notion.so%2Fb0941a3615e440a5996cd7da45b5bee1%3Fpvs%3D21"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f"
+      }
+    ],
+    "counts": 21
+  }
+}

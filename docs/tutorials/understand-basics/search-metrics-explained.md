@@ -2,6 +2,7 @@
 slug: /search-metrics-explained
 beta: TRUE
 notebook: FALSE
+token: Tpi2wvNHLiHaJmk4Y8BcwG84neh
 sidebar_position: 5
 ---
 
@@ -14,7 +15,7 @@ import Admonition from '@theme/Admonition';
 
 目前，Zilliz Cloud 提供三种主流的相似性指标：欧氏距离（L2）、内积（IP）和余弦相似度（COSINE）。
 
-## 欧氏距离（L2）{#euclidean-distance-l2}
+## 欧氏距离（L2）{#euclidean-distance-l2}{#l2euclidean-distance-l2}
 
 欧氏距离主要是用来计算连接两点的线段的实际长度。
 
@@ -32,7 +33,7 @@ L2 是最普遍的距离度量方法，在处理连续性数据时尤为有效�
 
 </Admonition>
 
-## 内积（IP）{#inner-product-ip}
+## 内积（IP）{#inner-product-ip}{#ipinner-product-ip}
 
 两个 Embedding 向量间的 IP 距离可按以下方式定义：
 
@@ -54,7 +55,7 @@ L2 是最普遍的距离度量方法，在处理连续性数据时尤为有效�
 
 ![Mf0dbFurloqyz7xUkhtcquMMnkc](/img/Mf0dbFurloqyz7xUkhtcquMMnkc.png)
 
-## 余弦相似度（COSINE）{#cosine-similarity}
+## 余弦相似度（COSINE）{#cosine-similarity}{#cosinecosine-similarity}
 
 余弦相似度是通过计算两组向量之间的夹角余弦来衡量它们的相似度。可以把这两组向量想象为从同一起点（如 [0,0,...]）出发，但朝向不同的线段。
 

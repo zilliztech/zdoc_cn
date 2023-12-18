@@ -2,6 +2,7 @@
 slug: /delete-your-account
 beta: FALSE
 notebook: FALSE
+token: SVnkw5IkNiOfALkijr1cw91vn3L
 sidebar_position: 2
 ---
 
@@ -12,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 在 Zilliz Cloud 注册账户后，您可对账户信息进行管理。您可以编辑账号信息以及删除账号。
 
-## 编辑账号信息{#modify-your-account-information}
+## 编辑账号信息{#modify-your-account-information}{#modify-your-account-information}
 
 1. 点击界面右上角人像图标，并选择**账号设置**。
 
@@ -28,15 +29,15 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 删除账号{#delete-your-account}
+## 删除账号{#delete-your-account}{#delete-your-account}
 
-### 前提条件{#before-you-start}
+### 前提条件{#before-you-start}{#before-you-start}
 
 - 如果您是项目唯一的项目管理员且项目含有集群，请先[删除项目集群](./manage-cluster#delete-cluster)。
 
 - 如果您是组织唯一的组织管理员，请先[删除组织](./delete-your-org)。
 
-### 操作步骤{#procedures}
+### 操作步骤{#procedures}{#procedures}
 
 1. 点击界面右上角人像图标，并选择**账号设置**。
 
@@ -56,10 +57,11 @@ import Admonition from '@theme/Admonition';
 
 ![delete-account-cn](/img/delete-account-cn.png)
 
-## 相关文档{#related-topics}
+## 相关文档{#related-topics}{#related-topics}
 
 - [管理组织与成员](./manage-orgs-and-members) 
 
 - [删除组织](./delete-your-org) 
 
 - [查看事件](./view-activities) 
+

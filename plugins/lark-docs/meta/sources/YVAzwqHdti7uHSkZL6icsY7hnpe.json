@@ -1,0 +1,6504 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1687158830",
+  "node_token": "YVAzwqHdti7uHSkZL6icsY7hnpe",
+  "node_type": "origin",
+  "obj_create_time": "1687158830",
+  "obj_edit_time": "1701399669",
+  "obj_token": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+  "obj_type": "docx",
+  "origin_node_token": "YVAzwqHdti7uHSkZL6icsY7hnpe",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "XyeFwdx6kiK9A6kq3yIcLNdEnDd",
+  "space_id": "7167193056431783939",
+  "title": "常见问题",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "block_type": 1,
+        "children": [
+          "EEeAdewytokB2MxHi5Ici7SWn1d",
+          "XPDIdTfKdoMXwLxnMgPcFpC1nod",
+          "CiYydtUZUodmwMxReh8cXZyAnxe",
+          "K9TCdvogUoIecyxBnA1c13xOndd",
+          "Tn6HdpOL7o3PmExfK3icyvdmnef",
+          "YEF7dHkiJouK7wx6LHkcxunOnBe",
+          "C1vtdGXU6ormtWxpBEHcwiZRnDb",
+          "QUxmdcXRro1ykUxp9aecCDg5nqd",
+          "L42QdoHWsoOcSgx1Fwjchcsenye",
+          "UBqLdwOIVoONHPxCMkMcGAGJn3g",
+          "FjYldcygfouNoJxJFnVcmkVMnog",
+          "M9JldlEWRogqURxI4Quc5XNmnWh",
+          "AK9pdA0qiozBLgxmzb6ctAATn2c",
+          "CHZXdN0wqoyk3JxE4ZBcIFDenRb",
+          "V5eFdmh6SoI8GNxKdN0crulRn7f",
+          "BaeBd1E2WoFp56xEZYhcVH4SnDf",
+          "PkPXdxTyPoedASxNdjPcQVMWnKd",
+          "X5p3dB8WIocs84xT6LzcugIJnJh",
+          "ZCepdqwanolxyQxFTTicwMgMnte",
+          "QRXrd3tabo3g3yxyM0HceU1Knae",
+          "T2KhdKWFGoPcy0xgHumcl4XwnVe",
+          "XIQZd4FspoIBfgx8uM8cQNxjnnc",
+          "I0NDdNJyjohVdUxMXAzc21xPn6g",
+          "UVDYdLsh5o44ecxj2lXca884nsg",
+          "PfAldBtnHoT9JHxsPNjcgtGan4e",
+          "WwHUdYDuaoDolmxhYY0cRs0SnAz",
+          "MuiNdl6Ufo0eTNx7e8icH2tcnFb",
+          "Ok17diSNEoDJ8Txmr8ZcH23znff",
+          "F9iRdquq0of5hWx5Kuoc9Yyin8f",
+          "NraRdUG5womVNdxGfSwcUS4snTc",
+          "NtwFdiZyCoDyk7x1cbdcwDAVn5c",
+          "Ww3JdWgNvoUM5yxEwepcBFDrn9d",
+          "TtcEdSzCSokVKzxDTm5cpdiDnve",
+          "VdnSdHAutonpqQx86WocdwLqnDb",
+          "X10AdEiEFoW5JBxCbSucMqTAnWg",
+          "FActdahU3oYesHxEiopcMyxmn1f",
+          "MbIbdrpCooOpVtxUAfzcpLVJnGg",
+          "UPZLda7T1oCLENx0n4EcHKsenGf",
+          "AcQqdHdQ1oJMGrxbE17cv4kcnJb",
+          "XT9YdnID6o844UxFqhRc0scInJK",
+          "LabzdA2CZolCp8xgjvhc0RiLneb",
+          "DOoCdHWLaozDKXxjHVNc62mmnDe",
+          "W2kIdEO22oI1wxx2ZZUcMWcMnnd",
+          "NFIwdM5Q2o38exxxrcKcpZzMnbq",
+          "VilYd76RCoDrFuxb5GQcwTs6nmh",
+          "Xh7qdKPp9oytYOxmUptcN92GnRb",
+          "UW9ndJa3Oo0CXjxDul2c7kz4nYb",
+          "Ocn5dqejNoHEddxX1CjcZtdcn5e",
+          "X9VndPBRLoRUNsxaMc7cDNRJnSg",
+          "EQ3gdtN7moTs2zxw6Sxc2MkjnUg",
+          "VYo4d053eoD3UxxTTCKcV2ccnoc",
+          "LFpUduX54oMuX7xASAnc93T9nRe",
+          "QpEKdHXsaoHiFUxNfX8cX8JNnoc",
+          "A23qdtRp8osSv1x5xgBcH1xknze",
+          "IWIhdoxYXoxVWxxA126c0FAonif",
+          "O5MVdtot1oFwVKxxubYcJenpnYT",
+          "PBXtdAI5novPnOxzUltcXUBXnEb",
+          "DvDCdNlwHoBQBNxP1SNcg1cxnJk",
+          "JRendtkgjo007qx5sJ5crUIcnRd",
+          "PDDhdYaenodAeqxtzLqcnr0RnMc",
+          "Z0iXdHQogolyLDxGj3jc5g0ontg",
+          "BeyHdoRMGo7v8Lx5PTXcGNnCnBh",
+          "MncMdpMYLonDhaxmSGqcsLIAnIe",
+          "ZRtrd4XNvoomc8xnZdPc5ADynuV",
+          "MhM2doqroodXIpxKvBbcmGdTnPb",
+          "ZLxmdl2EMoeoIKx7CT2cP2j3nLQ",
+          "PKhwd7lAyo35rRxIHkNcBLVHnDh",
+          "P8JsdtOBUo6ojcxplJfc8KcBntb",
+          "QkHWds2lfoNGUbx4uqicP5Vunph",
+          "RkNAd9VLdorCJBxexdfcxGW1nah",
+          "Qby2dYJo9oBLcYxqsEMc1bKinkh",
+          "VGtidN1QNoQBCHxNSgCcLuCpnNh",
+          "MOmRdTMLtok1i2xfQpOcmr44nQd",
+          "KDspdw4VFox3bDxyLpgcvM4gnqd",
+          "TFumderfwoFzdrxCsWNcQeKbnoD",
+          "HnUpdIK1sobBkAxMJlQcxg7Xnwc",
+          "ZpZgdvLCGo4FNwxbb7zcRoYWnIh",
+          "KwWTdA3gfobf3xxnPLCc76Kvnbg",
+          "VIACdMhqAohfAaxulqqcymFqn4c",
+          "SSvrdnJ7VoBHOrxHstmcWHbJnld",
+          "XOlSdifApoF4RyxiLEmcEzJansf",
+          "Xq1JdrYmxof3bqxy7QeceJ6EnUh",
+          "WgBddayz9oyNkix6TGFcDSV6nXc",
+          "ZKNFdhIx7ovssxxFSXJc0FBonzb",
+          "AYxWdvacfoLcQSx1nxgcs0HnnCe",
+          "Ko0cdJS0Uo8iP8xpW0zcGGdTn3c",
+          "DHBDd0LoPorJD7xf382c79tInad",
+          "JUGqd584Wo1hVpxkNfHc0Calnme",
+          "A0hUdATNOoBE4pxQliUcFrlknAc",
+          "OHZSdzG8sooT2DxMA3mc7IiFn8c",
+          "DOPIdOk3yojt17xlkWGcdDaknme",
+          "TJYmd0JTHoZqp3xKUk9cOWHbnwf",
+          "Tv6xdVYIAoSV2Dx54Q0c0nY6nAe",
+          "BTMFdahTqoD1cQxz7waczEBtn5b",
+          "GSrIdH9zSoiBarxxnNnc4poJncb",
+          "DtY5dVxbjoxNkjxu86Ic3UlanPc",
+          "LAFwdBkzcoSMyxxzZTkcjOI8n0e",
+          "NJOcdXfXuoq1jfx7wKCcyJQ3nyf",
+          "MAggdnNPWoxiTAxXP7FcTdjonhb",
+          "LKoidUNa9ojTr7xTgq0cqf1rnAg",
+          "Jy7Ud0I4Io81R6xaHohchHm4n0b",
+          "EbuNdgB7ToJY4sxuWhwcHyuonZg",
+          "YO5jd9R0Po7k2ox6MMGcWZNfn2d",
+          "QKuVdvcORoELMmx6GMWciuyCnge",
+          "W0tEdLKfkoHEoUxWuLTcuJxqnBh",
+          "Wpevd2G4ZonQjHx29DmcZ42In0b",
+          "I4QjdmTxZogvAExNNN2cC8PWnKb",
+          "GmAgdULaEoxGkqxVhujcQdsIn5b",
+          "QSKGdRcn7ormPaxBLwPcIq3cnkg",
+          "M5yMdrEcooXOa2xgKoeckL9lnmc",
+          "NzNgdCkqdopkknxVkQRc8Fttnlc",
+          "CmHidHaADo01tLxoTuMc9dBEnHf",
+          "PTbJdbyncoRyAIxINDRcn7sZnhc",
+          "S78tdRkdno8qkEx3Xj8caFeRnXf",
+          "LZFCdRXCSo4N9YxC98NcVWijn0l",
+          "FGwkd6DbWolm1ixT4lyctIEKntd",
+          "DPQodkf58oQhzhxqwitchFtjnnc",
+          "DuqCdG2K1ofMNjxBOZxczx5BnVd",
+          "S0Ctdbqv7oubfcxy42ucNTubnwe",
+          "DKdld3OCFoSpaIx4HJZcJPxonId",
+          "KWSqdu2veoPvsexIZtmcWqBon2b",
+          "GBVKdTaHEotUnbxhd9pcnRprnCb",
+          "LFWDd8xanoa162xUeUwcRIEBnxc",
+          "QTnddr80nohqtUxoCMec7NBvnZg",
+          "JruAdg5qvoQYmxxFioicLs1JnZd",
+          "T7mddFlcboR9rjxGIxScyAlNnmg",
+          "Uc9FdU6G6oYpWUxSuHyc8orLnmf",
+          "QqVxdELILoJF10xSxBJc1z7nnfg",
+          "RekMdsafooo6zBxXPhSczUsmnYe",
+          "Tr3edpnofoISXOxdSEgcRYLGnMc",
+          "Xk0UduouyoyjHaxA6tPcfxGVnVg",
+          "FpDDdCiFSo0ZB0xfIwGcQb4Znnh",
+          "E7aldnNb4omraZxB8LCcKURsnjd",
+          "K9ehd83qcoPdSkxtQ72clu0Unzs",
+          "YOIydoP3ZoWHuuxmCYOcsyREnib",
+          "Tpc9dHiAroma1OxQ9gXc1AWnnX5",
+          "KMFWdFc30oVnTKxfGOzcia5nnse",
+          "TcXpdWIamo7RwPx3NIocNTIbnxd",
+          "AhsGd9oYmopjuqxcCPJcO0FUnYe",
+          "MiLvd4tWgoLCClxHGSxctZ7ZnZf",
+          "SuOsdjGBioI33wxvtiucfFFNnvc",
+          "S9tId85Hoort0yxoyZBctiVenqb",
+          "HPXXdqjmqob2QQxWaE3cE8jIn1w",
+          "SjpcdwJFOoaKjCxeEZzcOLC7n7b",
+          "Pawfd56JpoQE5cx1krqcT0tonBf",
+          "J1CddwhvsoS9WPxcJuCcJFwhnMc",
+          "N4jedHdHXodEDWxEuVgcrPNqnie",
+          "KOXbdE4u5og39lxjEuJcoMqWnCf",
+          "Spbrdw8NZoS62Vx03u0cCNhqnfb",
+          "IVjQdOSVQoNeFyxxTnDclRGinJb",
+          "TBC5d4qEDo7XPnxepgackLfSn9J",
+          "Fuv2d7TSkoNIgpx5ND0ciMw2n4g",
+          "JKTndDIuDoGXsfxTXx5cXNvdnLg",
+          "Kbs6d3LmeoRW7txhAEMcGUwenrc",
+          "KKokdCLTLo2ijVxR1rHcMsGOnic",
+          "TIljdNUyyoOUM7x1QZPcRDbnnSz",
+          "JVmjdBR2AoX0MCx6oincESkhnUc",
+          "CgnWdUskPouvRHxzWU2cjxw0nDc",
+          "NLeFdqpd3oQuLGxdbANcy5NMnAb",
+          "KcUYdUokgowtFHxEGY0cKHN3nRg",
+          "Py2gd48gbo2J9oxl3jecOEVNnyg",
+          "KJsxdtpQQodc7hxtQAFcYuQRn3c",
+          "F9ZDdafDaopyd7xXNSKcB10NnBe",
+          "U5YtdCrJCocICVx5ysjcwCWTnoB",
+          "QQ4VdmPBfoy8n6x8Whjc6MVYnJf",
+          "UcxQdYk7PoIBOPxdiHdcUppynSc",
+          "Q89bdztT5oJ89kxQK6Bc28uAntf",
+          "XKjWd1cDvodj8dxvtS1cbaEgnSc",
+          "ZXrEdxVTvoYVjNxv2weci0kCn8d"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "常见问题",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "EEeAdewytokB2MxHi5Ici7SWn1d",
+        "block_type": 19,
+        "callout": {
+          "background_color": 2,
+          "border_color": 2,
+          "emoji_id": "pushpin"
+        },
+        "children": [
+          "R96vdgwZQo7LUkx4gk7cWwjnnne"
+        ],
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "R96vdgwZQo7LUkx4gk7cWwjnnne",
+        "block_type": 2,
+        "parent_id": "EEeAdewytokB2MxHi5Ici7SWn1d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "以下每个 H2 标题为一个单独的FAQ页面。这里为了方便审校都集中在一个文档中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XPDIdTfKdoMXwLxnMgPcFpC1nod",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "FAQ：快速入门{/faq-get-started}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "CiYydtUZUodmwMxReh8cXZyAnxe",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文列举了快速上手 Zilliz Cloud 时可能遇到的常见问题及对应解决方法。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "K9TCdvogUoIecyxBnA1c13xOndd",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "是否提供 Zilliz Cloud 与其他竞品间的性能对比？{#is-there-any-performance-comparison-between-zilliz-cloud-and-other-vector-search-solutions}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Tn6HdpOL7o3PmExfK3icyvdmnef",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以使用向量数据库性能对比工具 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "VectorDBBench",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com%2Fvector-database-benchmark-tool"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 来衡量比较 Zilliz Cloud 与其他主流向量数据库和云服务间的性能差异。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YEF7dHkiJouK7wx6LHkcxunOnBe",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "免费试用结束后，我的数据是否会被删除？{#what-happens-after-the-free-trial}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "C1vtdGXU6ormtWxpBEHcwiZRnDb",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "免费试用结束后，Zilliz Cloud 将自动备份您的数据并移至回收站，集群将被删除。回收站中的数据可免费保留30天。您可以开通阿里云市场扣费渠道或",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "联系我们",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com.cn%2Fcontact-sales"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "以继续使用 Zilliz Cloud。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QUxmdcXRro1ykUxp9aecCDg5nqd",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如何获取技术支持？{#how-can-i-get-further-technical-support}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "L42QdoHWsoOcSgx1Fwjchcsenye",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需技术支持，请",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "提交工单",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fsupport.zilliz.com.cn%2Fhc%2Fzh-cn"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。您将在 24 小时内收到回复。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UBqLdwOIVoONHPxCMkMcGAGJn3g",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 搜索延迟是多少？{#what-is-the-search-latency-of-zilliz-cloud}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FjYldcygfouNoJxJFnVcmkVMnog",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通常，具有 500 万 768 维向量的容量型集群，其搜索延迟约为 100 毫秒。相同数据量和维数的性能型集群，搜索延迟约为 20 毫秒。但请注意，实际搜索延迟可能因您的工作负载和部署环境而有所不同。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "M9JldlEWRogqURxI4Quc5XNmnWh",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 支持哪些索引类型？{#which-type-of-index-is-supported-by-zilliz-cloud}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AK9pdA0qiozBLgxmzb6ctAATn2c",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "目前，Zilliz Cloud 仅支持 AUTOINDEX。AUTOINDEX 可以增强搜索性能。对于具有 100 万 768维向量的性能型集群，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "QPS",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 可达到几百，延迟低于 100 毫秒。对于相同数据量的容量型集群，QPS 可达到50，延迟超过 200 毫秒。有关更多详细信息，请参见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "AUTOINDEX",
+                "token": "YUETwzDssiTUs9kCSn4cgUYLnrd",
+                "url": "https://zilliverse.feishu.cn/wiki/YUETwzDssiTUs9kCSn4cgUYLnrd"
+              }
+            },
+            {
+              "text_run": {
+                "content": " 。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CHZXdN0wqoyk3JxE4ZBcIFDenRb",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您十分熟悉",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "此处",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fmilvus.io%2Fdocs%2Findex.md"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "罗列的索引类型并想要使用这些索引类型，请",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "提交工单",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fsupport.zilliz.com.cn%2Fhc%2Fzh-cn"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "V5eFdmh6SoI8GNxKdN0crulRn7f",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "FAQ：集群{/faq-cluster}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "BaeBd1E2WoFp56xEZYhcVH4SnDf",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文列举了在使用 Zilliz Cloud 集群时可能遇到的常见问题及对应解决方法。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PkPXdxTyPoedASxNdjPcQVMWnKd",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群创建完成后，是否能够修改集群 CU 类型？{#can-i-change-the-cu-type-after-my-dedicated-cluster-is-created}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "X5p3dB8WIocs84xT6LzcugIJnJh",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "不能。集群一旦创建完成，不可以修改其 CU 类型。如需修改集群 CU 类型，请使用以下替代方案。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZCepdqwanolxyQxFTTicwMgMnte",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建 1 个新集群。创建时选择你所需的 CU 类型。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "QRXrd3tabo3g3yxyM0HceU1Knae",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "提交工单",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fsupport.zilliz.com.cn%2Fhc%2Fzh-cn"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "并请求将旧集群中的数据迁移至新集群中。请务必在邮件中注明源集群和目标集群的名称。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "T2KhdKWFGoPcy0xgHumcl4XwnVe",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如何为集群缩容？{#how-can-i-scale-down-my-cluster-cu-size}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XIQZd4FspoIBfgx8uM8cQNxjnnc",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您需要缩小集群 CU 大小，请",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "提交工单",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fsupport.zilliz.com.cn%2Fhc%2Fzh-cn"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。我们将在 8 小时以内为您的集群缩容。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "I0NDdNJyjohVdUxMXAzc21xPn6g",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 如何处理不活跃集群？{#what-happens-to-my-inactive-clusters}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UVDYdLsh5o44ecxj2lXca884nsg",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 会自动挂起 7 天内不活跃集群，并发送邮件通知。您可随时按需恢复集群。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PfAldBtnHoT9JHxsPNjcgtGan4e",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为什么会连接超时以及如何处理连接超时报错？{#how-can-i-deal-with-a-connection-timeout-error-when-i-attempt-to-connect-to-zilliz-cloud}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WwHUdYDuaoDolmxhYY0cRs0SnAz",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在以下情况下可能会发生连接超时错误：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MuiNdl6Ufo0eTNx7e8icH2tcnFb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "网络条件不佳",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "TLvXdFXZ5ordDTxRZHvcD0KCndh"
+        ],
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "TLvXdFXZ5ordDTxRZHvcD0KCndh",
+        "block_type": 2,
+        "parent_id": "MuiNdl6Ufo0eTNx7e8icH2tcnFb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如网络条件不佳，建议在连接时调节 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "timeout",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 参数值。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "timeout",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 参数值默认为30秒。这意味着如果在发送连接请求后 30 秒内未收到响应，连接操作将超时。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ok17diSNEoDJ8Txmr8ZcH23znff",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "连接参数不正确",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "Kg36dmuGQoGoOdxJR1vcAbVgnMc"
+        ],
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "Kg36dmuGQoGoOdxJR1vcAbVgnMc",
+        "block_type": 2,
+        "parent_id": "Ok17diSNEoDJ8Txmr8ZcH23znff",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 集群已启用 TLS。请确保在连接参数中加入 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "secure",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，并将其设置为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "true",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。未正确设置改参数可能导致连接失败和超时。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "F9iRdquq0of5hWx5Kuoc9Yyin8f",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "未将本地 IP 地址加入白名单",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "AFC8dp9vHo93a6xIYwjce5gsnHh"
+        ],
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "AFC8dp9vHo93a6xIYwjce5gsnHh",
+        "block_type": 2,
+        "parent_id": "F9iRdquq0of5hWx5Kuoc9Yyin8f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "连接集群时，请确保关闭 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "VPN",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " /代理，并已将获取到的公共 IP 地址（不可使用私有 IP 地址）加入集群白名单中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NraRdUG5womVNdxGfSwcUS4snTc",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为什么无法连接集群?{#why-cant-i-connect-to-the-cluster-after-the-cluster-is-created}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NtwFdiZyCoDyk7x1cbdcwDAVn5c",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "无法连接集群时，请执行以下步骤排查故障：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ww3JdWgNvoUM5yxEwepcBFDrn9d",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "检查集群状态是否为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "运行中",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。集群在创建、删除过程中，您无法连接集群。集群白名单更新过程中，您也无法连接集群。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "TtcEdSzCSokVKzxDTm5cpdiDnve",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "确认已在白名单中设置 IP 地址。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "VdnSdHAutonpqQx86WocdwLqnDb",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "运行 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "telnet in01-(uuid).(region).vectordb.zillizcloud.com 19530",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 测试端口是否可以连接。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "X10AdEiEFoW5JBxCbSucMqTAnWg",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如执行上述步骤后，仍无法连接集群，请",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "提交工单",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fsupport.zilliz.com.cn%2Fhc%2Fzh-cn"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FActdahU3oYesHxEiopcMyxmn1f",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如何解决使用 Node.js ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "SDK",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 无法连接 Zilliz Cloud 的问题?{#what-can-i-do-if-i-cannot-connect-to-zilliz-cloud-with-nodejs-sdk}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MbIbdrpCooOpVtxUAfzcpLVJnGg",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如使用 Node.js ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "SDK",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 无法连接 Zilliz Cloud，请执行以下步骤：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UPZLda7T1oCLENx0n4EcHKsenGf",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "确保您已安装最新版本的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Node.js SDK",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fgithub.com%2Fmilvus-io%2Fmilvus-sdk-node"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "AcQqdHdQ1oJMGrxbE17cv4kcnJb",
+        "block_type": 13,
+        "children": [
+          "HVLTd2qdjo9HvHxSWJAcRWXinMe"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "确保您已初始化客户端。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "HVLTd2qdjo9HvHxSWJAcRWXinMe",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "const client = new MilvusClient('<https://your-db-address-with-port>', true, 'your-db-user', 'your-db-pasword');",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 30,
+            "wrap": false
+          }
+        },
+        "parent_id": "AcQqdHdQ1oJMGrxbE17cv4kcnJb"
+      },
+      {
+        "block_id": "XT9YdnID6o844UxFqhRc0scInJK",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群挂起后，是否还会收取费用？{#will-i-be-charged-if-i-suspend-my-cluster}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LabzdA2CZolCp8xgjvhc0RiLneb",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群挂起后，我们仅收取存储费用，不会收取计算费用。更多详情，请阅读 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 定价",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com.cn%2Fpricing"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。FAQ：Collection",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DOoCdHWLaozDKXxjHVNc62mmnDe",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文列举了在使用 Zilliz Cloud Collection 时可能遇到的常见问题及对应解决方法。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "W2kIdEO22oI1wxx2ZZUcMWcMnnd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "FAQ：Collection{/faq-collection}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "NFIwdM5Q2o38exxxrcKcpZzMnbq",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "1 个集群中最多可创建多少个 Collection？{#how-many-collections-are-allowed-in-a-single-cluster}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VilYd76RCoDrFuxb5GQcwTs6nmh",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群可创建的 Collection 数量受集群的 CU 数量影响：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Xh7qdKPp9oytYOxmUptcN92GnRb",
+        "block_type": 31,
+        "children": [
+          "OldUdFn3Vom0eCxanSWcG24MnYc",
+          "Ha1BdVJenocalexIvpKcjTGdn4f",
+          "HqR5d13q8oLK71xF6Pycl7YcnGf",
+          "OGrJdFTyfoLjKtxDQyRcv2tunDh",
+          "A2bzd18l0oGf1CxD9VqcKhvjnUb",
+          "PK31doMwcoLrKJx7CDBc7QXOnVd"
+        ],
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "table": {
+          "cells": [
+            "OldUdFn3Vom0eCxanSWcG24MnYc",
+            "Ha1BdVJenocalexIvpKcjTGdn4f",
+            "HqR5d13q8oLK71xF6Pycl7YcnGf",
+            "OGrJdFTyfoLjKtxDQyRcv2tunDh",
+            "A2bzd18l0oGf1CxD9VqcKhvjnUb",
+            "PK31doMwcoLrKJx7CDBc7QXOnVd"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              142,
+              154
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 3
+          }
+        }
+      },
+      {
+        "block_id": "OldUdFn3Vom0eCxanSWcG24MnYc",
+        "block_type": 32,
+        "children": [
+          "HOirdy7diojWpTxEA0PcPFHZnqf"
+        ],
+        "parent_id": "Xh7qdKPp9oytYOxmUptcN92GnRb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "HOirdy7diojWpTxEA0PcPFHZnqf",
+        "block_type": 2,
+        "parent_id": "OldUdFn3Vom0eCxanSWcG24MnYc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ha1BdVJenocalexIvpKcjTGdn4f",
+        "block_type": 32,
+        "children": [
+          "ILHTdsdoWodYLWxTZdZcavjLnfb"
+        ],
+        "parent_id": "Xh7qdKPp9oytYOxmUptcN92GnRb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ILHTdsdoWodYLWxTZdZcavjLnfb",
+        "block_type": 2,
+        "parent_id": "Ha1BdVJenocalexIvpKcjTGdn4f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "最大 Collection 数",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HqR5d13q8oLK71xF6Pycl7YcnGf",
+        "block_type": 32,
+        "children": [
+          "Rr1pdAYejowE58xCfdIcPqJtntC"
+        ],
+        "parent_id": "Xh7qdKPp9oytYOxmUptcN92GnRb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Rr1pdAYejowE58xCfdIcPqJtntC",
+        "block_type": 2,
+        "parent_id": "HqR5d13q8oLK71xF6Pycl7YcnGf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "小于等于 8 CU",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OGrJdFTyfoLjKtxDQyRcv2tunDh",
+        "block_type": 32,
+        "children": [
+          "HBOtd4CLdokmJlxumgVcpg0bnGh"
+        ],
+        "parent_id": "Xh7qdKPp9oytYOxmUptcN92GnRb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "HBOtd4CLdokmJlxumgVcpg0bnGh",
+        "block_type": 2,
+        "parent_id": "OGrJdFTyfoLjKtxDQyRcv2tunDh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "32",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "A2bzd18l0oGf1CxD9VqcKhvjnUb",
+        "block_type": 32,
+        "children": [
+          "EQpPdKh0koCEY0xPBH5cqOnlnOh"
+        ],
+        "parent_id": "Xh7qdKPp9oytYOxmUptcN92GnRb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "EQpPdKh0koCEY0xPBH5cqOnlnOh",
+        "block_type": 2,
+        "parent_id": "A2bzd18l0oGf1CxD9VqcKhvjnUb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "大于 8 CU",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PK31doMwcoLrKJx7CDBc7QXOnVd",
+        "block_type": 32,
+        "children": [
+          "HCxxdxL7go6WtJxXbqBcnPoHnHe"
+        ],
+        "parent_id": "Xh7qdKPp9oytYOxmUptcN92GnRb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "HCxxdxL7go6WtJxXbqBcnPoHnHe",
+        "block_type": 2,
+        "parent_id": "PK31doMwcoLrKJx7CDBc7QXOnVd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "256",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UW9ndJa3Oo0CXjxDul2c7kz4nYb",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如达到集群可创建 Collection 数量上限，请尝试以下方法：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ocn5dqejNoHEddxX1CjcZtdcn5e",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为集群",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "扩容",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FIRirwe30tilo1qkJlR7ca2MUnvn%23PKJ0dETeHon8bIxgVg9cGHbanIg"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "X9VndPBRLoRUNsxaMc7cDNRJnSg",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "删除",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FFrMbwwoTwiqJO4kofPkcndsAnoh"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "未使用的 Collection。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "EQ3gdtN7moTs2zxw6Sxc2MkjnUg",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Partition Key",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FDrXpwhU8pixYi9kqzSBcs5TgnFd"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 创建 Partition。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "VYo4d053eoD3UxxTTCKcV2ccnoc",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如何确认我的 Collection 是否开启了动态 Schema？{#how-can-i-know-if-dynamic-schema-is-enabled-for-my-collection}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LFpUduX54oMuX7xASAnc93T9nRe",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以前往 Zilliz Cloud 界面查看 Collection 是否开启动态 Schema。操作步骤为：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QpEKdHXsaoHiFUxNfX8cX8JNnoc",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择你想查看的 Collection。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "A23qdtRp8osSv1x5xgBcH1xknze",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击 Schema 标签页。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "IWIhdoxYXoxVWxxA126c0FAonif",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在页面右上角查看动态 Schema 是否已开启。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "O5MVdtot1oFwVKxxubYcJenpnYT",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "更多详情，请阅读 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "开启动态 Schema",
+                "token": "EpHowtn3miepTyk2pNlcLwDonyD",
+                "url": "https://zilliverse.feishu.cn/wiki/EpHowtn3miepTyk2pNlcLwDonyD"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PBXtdAI5novPnOxzUltcXUBXnEb",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D7726-151%26mode%3Ddesign%26t%3DePyKIq8JrbTgakGk-4"
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "DvDCdNlwHoBQBNxP1SNcg1cxnJk",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果创建 Collection 时未开启动态 Schema，Collection 创建成功后是否还能开启动态 Schema？{#if-dynamic-schema-was-disabled-when-the-collection-was-created-can-i-enable-it-later}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JRendtkgjo007qx5sJ5crUIcnRd",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "不能。在创建 Collection 时一旦确认开启或者关闭动态 Schema，Collection 创建成功后不可以修改动态 Schema 状态。更多详情，请阅读 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "开启动态 Schema",
+                "token": "EpHowtn3miepTyk2pNlcLwDonyD",
+                "url": "https://zilliverse.feishu.cn/wiki/EpHowtn3miepTyk2pNlcLwDonyD"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PDDhdYaenodAeqxtzLqcnr0RnMc",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 支持哪些相似度类型？{#what-are-the-indexing-metric-types-supported-by-zilliz-cloud}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Z0iXdHQogolyLDxGj3jc5g0ontg",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud支持 2 种相似度类型。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BeyHdoRMGo7v8Lx5PTXcGNnCnBh",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "欧氏距离（Euclidean ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "/ ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "L2）计算两条向量间的欧式距离。计算结果越小，两个向量越相似。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "MncMdpMYLonDhaxmSGqcsLIAnIe",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "内积（Inner Product / IP）将两条向量相乘。计算结果为正数，两个向量越相似。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "ZRtrd4XNvoomc8xnZdPc5ADynuV",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Collection 加载为何失败，如何解决？{#why-do-i-fail-to-load-collections-what-can-i-do}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MhM2doqroodXIpxKvBbcmGdTnPb",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Collection 加载失败由集群内存不足引起。我们建议您扩展集群 CU 大小。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZLxmdl2EMoeoIKx7CT2cP2j3nLQ",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Collection 加载请求的",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "并发",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "是多少？如何增加并发请求的数量？{#what-is-the-concurrency-for-collection-loading-requests-how-can-i-increase-the-number-of-concurrent-requests}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PKhwd7lAyo35rRxIHkNcBLVHnDh",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "当前，Zilliz Cloud 加载 Collection 请求的速率限制为每秒 1 个。该建议数值仅针对 1 CU 的集群。如需增加",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "并发",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "请求的数量，请",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "提交工单",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fsupport.zilliz.com.cn%2Fhc%2Fzh-cn"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "P8JsdtOBUo6ojcxplJfc8KcBntb",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如何为创建的 Collection 设置存留时间（TTL）属性？{#how-to-set-the-ttl-time-to-live-property-of-a-created-collection}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QkHWds2lfoNGUbx4uqicP5Vunph",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以使用我们的PyMilvus ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "SDK",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "通过提供参数collection.ttl.seconds的值来设置集合的TTL。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RkNAd9VLdorCJBxexdfcxGW1nah",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "以下示例将TTL设置为1800秒。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Qby2dYJo9oBLcYxqsEMc1bKinkh",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "collection.set_properties(properties={\"collection.ttl.seconds\": 1800})",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "VGtidN1QNoQBCHxNSgCcLuCpnNh",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "1 个 Collection 中最多可以添加多少个字段？{#is-there-any-limit-to-the-number-of-fields-i-can-add-in-a-collection}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MOmRdTMLtok1i2xfQpOcmr44nQd",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "1 个 Collection 中最多可以添加 64 个字段。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KDspdw4VFox3bDxyLpgcvM4gnqd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "FAQ：数据导入{/faq-data-import}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "TFumderfwoFzdrxCsWNcQeKbnoD",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文列举了在 Zilliz Cloud 导入数据时可能遇到的常见问题及对应解决方法。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HnUpdIK1sobBkAxMJlQcxg7Xnwc",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "能否向 Zilliz Cloud 集群批量导入数据？{#can-i-bulk-insert-data-into-the-zilliz-cloud-vector-databases}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZpZgdvLCGo4FNwxbb7zcRoYWnIh",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "目前，您只能使用 Zilliz Cloud 界面批量导入数据。更多详情，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "请参阅",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "通过 Web 控制台导入",
+                "token": "BXBvwZh9Yiis0Vk8LcdcjZSPnQd",
+                "url": "https://zilliverse.feishu.cn/wiki/BXBvwZh9Yiis0Vk8LcdcjZSPnQd"
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "通过 RESTful API 导入",
+                "token": "FzANwnN8siARelkAp4vcJVJNnnf",
+                "url": "https://zilliverse.feishu.cn/wiki/FzANwnN8siARelkAp4vcJVJNnnf"
+              }
+            },
+            {
+              "text_run": {
+                "content": "和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "通过 SDK 导入",
+                "token": "Xv4awWJZpiKoJjkPTlic98Mindc",
+                "url": "https://zilliverse.feishu.cn/wiki/Xv4awWJZpiKoJjkPTlic98Mindc"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KwWTdA3gfobf3xxnPLCc76Kvnbg",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在使用 Node.js ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "SDK",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 导入数据或查询时，遇到 ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "ECONNRESET",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "错误该怎么办？{#what-can-i-do-if-i-receive-econnreset-errors-when-importing-data-to-or-querying-zilliz-cloud-clusters-with-nodejs-sdk}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VIACdMhqAohfAaxulqqcymFqn4c",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "请执行以下步骤，解决",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "ECONNRESET",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "错误问题：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SSvrdnJ7VoBHOrxHstmcWHbJnld",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "升级至支持 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "channelOptions",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 的最新版 Milvus NodeJS ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "SDK",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "XOlSdifApoF4RyxiLEmcEzJansf",
+        "block_type": 13,
+        "children": [
+          "Awt1dmfeKoJGh0xDJPqcoragnog"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "手动添加 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "channelOptions",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "Awt1dmfeKoJGh0xDJPqcoragnog",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "const channelOptions: ChannelOptions = {\n\n// Send keepalive pings every 10 seconds, default is 2 hours.'grpc.keepalive_time_ms': 10 * 1000,\n\n// Keepalive ping timeout after 5 seconds, default is 20 seconds.'grpc.keepalive_timeout_ms': 5 * 1000,\n\n// Allow keepalive pings when there are no gRPC calls.'grpc.keepalive_permit_without_calls': 1,\n\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "};",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "wrap": false
+          }
+        },
+        "parent_id": "XOlSdifApoF4RyxiLEmcEzJansf"
+      },
+      {
+        "block_id": "Xq1JdrYmxof3bqxy7QeceJ6EnUh",
+        "block_type": 13,
+        "children": [
+          "LAiJdezjuoiEuSxTNZucECvvnHf"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "channelOptions",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 初始化客户端。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "LAiJdezjuoiEuSxTNZucECvvnHf",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "import { MilvusClient, DataType } from '@zilliz/milvus2-sdk-node';\n\nnew MilvusClient({\n  address: 'your-zilliz-cloud-address',\n  ssl: true,\n  username: 'username',\n  password: 'your-pass',\n  channelOptions: channelOptions\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "})`",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 30,
+            "wrap": false
+          }
+        },
+        "parent_id": "Xq1JdrYmxof3bqxy7QeceJ6EnUh"
+      },
+      {
+        "block_id": "WgBddayz9oyNkix6TGFcDSV6nXc",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "FAQ：数据迁移{/faq-migration}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "ZKNFdhIx7ovssxxFSXJc0FBonzb",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文列举了在 Zilliz Cloud 进行数据迁移时可能遇到的常见问题及对应解决方法。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AYxWdvacfoLcQSx1nxgcs0HnnCe",
+        "block_type": 2,
+        "comment_ids": [
+          "7267833485895991300"
+        ],
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如何将数据批量从 Elasticsearch 导入 Zilliz Cloud？{#how-to-migrate-data-from-elasticsearch-to-zilliz-cloud}",
+                "text_element_style": {
+                  "bold": true,
+                  "comment_ids": [
+                    "7267833485895991300"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ko0cdJS0Uo8iP8xpW0zcGGdTn3c",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "请根据文档",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "从 Elasticsearch 迁移至 Zilliz Cloud",
+                "token": "CJN4wlKiGi1P8Zk4BHKcF04GnLb",
+                "url": "https://zilliverse.feishu.cn/wiki/CJN4wlKiGi1P8Zk4BHKcF04GnLb"
+              }
+            },
+            {
+              "text_run": {
+                "content": "中的详细指南将数据从 Elasticsearch 迁移至 Zilliz Cloud。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DHBDd0LoPorJD7xf382c79tInad",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "FAQ：资源规划{/faq-resource-planning}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "JUGqd584Wo1hVpxkNfHc0Calnme",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文列举了在 Zilliz Cloud 规划资源和使用成本时可能遇到的常见问题及对应解决方法。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "A0hUdATNOoBE4pxQliUcFrlknAc",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "什么是计算单元（Compute Unit, CU）?{#what-is-a-compute-unit-cu}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OHZSdzG8sooT2DxMA3mc7IiFn8c",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "计算单元（CU）是指用于提供向量检索、分析服务的一组硬件资源。可以将 CU 视为一个物理查询节点。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DOPIdOk3yojt17xlkWGcdDaknme",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如何查看订阅的 Zilliz Cloud 版本？{#how-can-i-know-which-plan-i-am-on}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TJYmd0JTHoZqp3xKUk9cOWHbnwf",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需查看版本，请先选择项目，再选择集群。在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "集群详情",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "下，您可以查看订阅的版本。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Tv6xdVYIAoSV2Dx54Q0c0nY6nAe",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D7700-147%26mode%3Ddesign%26t%3DePyKIq8JrbTgakGk-4"
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "BTMFdahTqoD1cQxz7waczEBtn5b",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "性能型 CU、容量型 CU 和经济型 CU 之间有什么区别？{#whats-the-difference-between-performance-optimized-cu-capacity-optimized-cu-and-cost-optimized-cu}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GSrIdH9zSoiBarxxnNnc4poJncb",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "性能型 CU 适用于需要低延迟和高",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "吞吐量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "的向量相似性检索场景。 容量型 CU 相比性能型 CU 能够存储多 5 倍的数据，但延迟可能会增加，因此适用于需要大量存储空间的场景。 经济型 CU 可支持的数据规模与容量型 CU 一致，但价格更低，性能略有下降，适用于追求高性价比或预算敏感的场景。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DtY5dVxbjoxNkjxu86Ic3UlanPc",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "我的数据需要使用多少 CU？{#how-many-cus-do-i-need-for-a-given-collection}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LAFwdBkzcoSMyxxzZTkcjOI8n0e",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "单个性能型 CU 可容纳约 500 万个 128 维向量或 100 万个 768 维向量。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NJOcdXfXuoq1jfx7wKCcyJQ3nyf",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "单个容量型 CU 可容纳约 2500 万个 128 维向量或 500 万个 768 维向量。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MAggdnNPWoxiTAxXP7FcTdjonhb",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "单个经济型 CU 可容纳约 2500 万个 128 维向量或 500 万个768 维向量。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LKoidUNa9ojTr7xTgq0cqf1rnAg",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "由于您的 Collection Schema 可能与上述指南中的不同，我们建议您根据实际数据测试不同的 CU 类型。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Jy7Ud0I4Io81R6xaHohchHm4n0b",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如何避免未使用的集群产生费用？{#how-can-i-avoid-expenses-on-unused-clusters}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EbuNdgB7ToJY4sxuWhwcHyuonZg",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "建议您挂起未使用的集群以节省成本。您可随时按需恢复集群。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YO5jd9R0Po7k2ox6MMGcWZNfn2d",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如何估算使用 Zilliz Cloud 的成本？{#how-can-i-estimate-the-cost-of-using-zilliz-cloud}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QKuVdvcORoELMmx6GMWciuyCnge",
+        "block_type": 2,
+        "comment_ids": [
+          "7249940058901463044"
+        ],
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "请使用",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "价格计算器",
+                "text_element_style": {
+                  "background_color": 3,
+                  "bold": false,
+                  "comment_ids": [
+                    "7249940058901463044"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com.cn%2Fpricing%23calculator"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "估算使用成本。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "W0tEdLKfkoHEoUxWuLTcuJxqnBh",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "预算有限的情况下，如何在使用 Zilliz Cloud 服务时节省成本？{#how-can-i-save-costs-on-using-zilliz-cloud-if-i-have-a-limited-budget}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Wpevd2G4ZonQjHx29DmcZ42In0b",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您的预算有限，我们推荐使用经济型 CU。该类型的 CU 容量与容量型 CU 相同，但价格更低。更多详情，请阅读",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "选择合适的 CU 类型",
+                "token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
+                "url": "https://zilliverse.feishu.cn/wiki/DP6Fw8vkzi7pD7kAMB3cjunYn6g"
+              }
+            },
+            {
+              "text_run": {
+                "content": " 。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "I4QjdmTxZogvAExNNN2cC8PWnKb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "FAQ：备份与恢复{/faq-backup-and-restore}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "GmAgdULaEoxGkqxVhujcQdsIn5b",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文列举了在 Zilliz Cloud 使用备份与恢复功能时可能遇到的常见问题及对应解决方法。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QSKGdRcn7ormPaxBLwPcIq3cnkg",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "我是否可以免费试用备份和恢复功能？{#is-the-backup-and-restore-feature-available-in-the-free-trial}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "M5yMdrEcooXOa2xgKoeckL9lnmc",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "备份和恢复功能不可免费试用。如需使用，请先添加",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "支付方式",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fdocs.zilliz.com.cn%2Fdocs%2Fpayment-billing"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NzNgdCkqdopkknxVkQRc8Fttnlc",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "FAQ：用户和角色{/faq-users-and-roles}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "CmHidHaADo01tLxoTuMc9dBEnHf",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文列举了 Zilliz Cloud 用户和角色相关的常见问题及对应解决方法。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PTbJdbyncoRyAIxINDRcn7sZnhc",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "是否可以离开组织？{#can-i-leave-my-organization}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "S78tdRkdno8qkEx3Xj8caFeRnXf",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您是组织成员，您可以随意离开组织。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LZFCdRXCSo4N9YxC98NcVWijn0l",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您是组织管理员，您只有在组织还有其他管理员的情况下离开组织。1 个组织必须拥有 1 名组织管理员。因此，如果您是组织中唯一一名管理员时，您不可离开组织。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FGwkd6DbWolm1ixT4lyctIEKntd",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如何修改组织名称？{#how-can-i-edit-my-organization-name}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DPQodkf58oQhzhxqwitchFtjnnc",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择需要修改名称的组织。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "DuqCdG2K1ofMNjxBOZxczx5BnVd",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击左侧导航栏中的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "系统设置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "S0Ctdbqv7oubfcxy42ucNTubnwe",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在系统设置页面下的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "组织信息",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "板块中，点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "编辑",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "按钮。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "DKdld3OCFoSpaIx4HJZcJPxonId",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "输入新的组织名称并点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "确认",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "按钮。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "KWSqdu2veoPvsexIZtmcWqBon2b",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "界面右上角出现提示，您已成功修改组织名称。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "GBVKdTaHEotUnbxhd9pcnRprnCb",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如何邀请同事或团队成员进行协作？{#how-can-i-invite-a-colleague-or-teammate-to-collaborate}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LFWDd8xanoa162xUeUwcRIEBnxc",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您是组织管理员，请在左侧导航栏点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "成员",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "并邀请用户加入组织。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QTnddr80nohqtUxoCMec7NBvnZg",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您是组织成员，请联系您所在组织的管理员邀请用户加入组织。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JruAdg5qvoQYmxxFioicLs1JnZd",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "此外，Zilliz Cloud 还支持邀请用户加入项目。如果您是项目管理员，请点击左侧导航栏",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "项目成员",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "邀请用户加入项目。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "T7mddFlcboR9rjxGIxScyAlNnmg",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "FAQ：监控与指标{/faq-monitors-and-metrics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "Uc9FdU6G6oYpWUxSuHyc8orLnmf",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文列举了在 Zilliz Cloud 使用监控与指标时可能遇到的常见问题及对应解决方法。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QqVxdELILoJF10xSxBJc1z7nnfg",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群内容达到上限后，无法插入数据。如何解决这个问题？{#what-can-i-do-if-my-cluster-memory-quota-has-been-exhausted-and-i-cannot-insert-data-as-a-result}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RekMdsafooo6zBxXPhSczUsmnYe",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "请尝试以下 2 种方法：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Tr3edpnofoISXOxdSEgcRYLGnMc",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为您的集群扩容，选择更大的 CU 大小。集群 CU 大小越大，集群可以处理的数据越多。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "Xk0UduouyoyjHaxA6tPcfxGVnVg",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "释放一些已加载但不常用的 Collection。这能够帮助您节省内存用量。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "FpDDdCiFSo0ZB0xfIwGcQb4Znnh",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为什么删除 Collection 后，内存用量依旧保持不变？{#why-doesnt-the-memory-consumption-decrease-even-if-i-dropped-a-collection}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "E7aldnNb4omraZxB8LCcKURsnjd",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "删除的 Collection 数据将于 24 小时后被彻底清理。如果内存用量在 24 小时后仍未下降，请",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "提交工单",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fsupport.zilliz.com.cn%2Fhc%2Fzh-cn"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "K9ehd83qcoPdSkxtQ72clu0Unzs",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "FAQ：账户{/faq-account}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "YOIydoP3ZoWHuuxmCYOcsyREnib",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文列举了 Zilliz Cloud 账户相关的常见问题及对应解决方法。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Tpc9dHiAroma1OxQ9gXc1AWnnX5",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如何修改账号电子邮箱？{#how-can-i-change-my-account-email-address}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KMFWdFc30oVnTKxfGOzcia5nnse",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "当前，Zilliz Cloud 不支持修改账号电子邮箱。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TcXpdWIamo7RwPx3NIocNTIbnxd",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如何删除账号？{#how-to-delete-my-account}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AhsGd9oYmopjuqxcCPJcO0FUnYe",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需删除账号，请参见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 22,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "管理账号",
+                "token": "ArBTdYKdIobUhGxY885cGQmHnbh",
+                "url": "https://zilliverse.feishu.cn/docx/ArBTdYKdIobUhGxY885cGQmHnbh#Nskxd9zARoATTwxC5mhcbmBNnJe"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MiLvd4tWgoLCClxHGSxctZ7ZnZf",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "我的帐号为什么被锁定了？如何解锁账号？{#why-is-my-account-locked-and-how-to-unlock-it}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SuOsdjGBioI33wxvtiucfFFNnvc",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "登录时，密码输入错误 3 次，您的账号会被锁定。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "S9tId85Hoort0yxoyZBctiVenqb",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需解锁账号，请选择以下 1 种方法：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HPXXdqjmqob2QQxWaE3cE8jIn1w",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "等待 1 小时后您的账号将自动解锁。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "SjpcdwJFOoaKjCxeEZzcOLC7n7b",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果忘记密码，请重置密码。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "Pawfd56JpoQE5cx1krqcT0tonBf",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "提交工单",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fsupport.zilliz.com.cn%2Fhc%2Fzh-cn"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "并请求解锁您的帐户。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "J1CddwhvsoS9WPxcJuCcJFwhnMc",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为什么我的组织会被冻结？{#why-is-my-organization-frozen}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "N4jedHdHXodEDWxEuVgcrPNqnie",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您是试用用户，在免费额度使用完毕后，您的组织将被冻结。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KOXbdE4u5og39lxjEuJcoMqWnCf",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您是企业用户，在账单欠费后，您的组织将被冻结。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Spbrdw8NZoS62Vx03u0cCNhqnfb",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "组织冻结后会发生什么？{#what-happens-if-my-organization-is-frozen}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IVjQdOSVQoNeFyxxTnDclRGinJb",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 界面顶部将出现通知横幅，提醒您组织已被冻结。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TBC5d4qEDo7XPnxepgackLfSn9J",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "组织冻结后，您将无法正常使用 Zilliz Cloud 提供的功能。你无法在界面上或者通过 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "SDK",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 在集群或者 Collection 层面进行任何操作。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Fuv2d7TSkoNIgpx5ND0ciMw2n4g",
+        "block_type": 2,
+        "comment_ids": [
+          "7267840811914493955"
+        ],
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如何解冻我的组织？{#how-to-unfreeze-my-organization}",
+                "text_element_style": {
+                  "bold": true,
+                  "comment_ids": [
+                    "7267840811914493955"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JKTndDIuDoGXsfxTXx5cXNvdnLg",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需解冻组织，您可以进行",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "现金充值",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FJZqrwH8V8i6a3jktSQgcyXAEnAg"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "或",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "开通阿里云云市场扣费渠道",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FUTRZwxLf3ikwvbkXrKjcWAwOnmg"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。如需其他支付方式，请",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "联系我们",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fsupport.zilliz.com.cn%2Fhc%2Fzh-cn"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Kbs6d3LmeoRW7txhAEMcGUwenrc",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "FAQ：鉴权{/faq-authentication}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "KKokdCLTLo2ijVxR1rHcMsGOnic",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文列举了在 Zilliz Cloud 鉴权时可能遇到的常见问题及对应解决方法。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TIljdNUyyoOUM7x1QZPcRDbnnSz",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如何解决连接时身份验证失败？{#what-can-i-do-if-i-forget-the-password-used-to-connect-to-my-zilliz-cloud-cluster}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JVmjdBR2AoX0MCx6oincESkhnUc",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "请执行以下步骤解决连接时身份验证失败的问题：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CgnWdUskPouvRHxzWU2cjxw0nDc",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "连接 Zilliz Cloud 集群时，请确保使用正确的用户名和密码。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "NLeFdqpd3oQuLGxdbANcy5NMnAb",
+        "block_type": 13,
+        "children": [
+          "BMvnd9jdjoADezx29nxcLsujnyg"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如忘记密码，请点击想要连接的集群并切换至 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Users",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 选项卡。点击 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "+ User",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 以创建新用户和密码。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "BMvnd9jdjoADezx29nxcLsujnyg",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6395-1691%26mode%3Ddesign%26t%3DYi6V7vM4Kknqyh33-4"
+          }
+        },
+        "parent_id": "NLeFdqpd3oQuLGxdbANcy5NMnAb"
+      },
+      {
+        "block_id": "KcUYdUokgowtFHxEGY0cKHN3nRg",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "FAQ：支付方式与账单{/faq-payment-and-billing}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "Py2gd48gbo2J9oxl3jecOEVNnyg",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文列举了 Zilliz Cloud 支付方式与账单相关的常见问题及对应解决方法。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KJsxdtpQQodc7hxtQAFcYuQRn3c",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "赠送的 ¥ 300 免费额度是否会过期？{#will-my-300-yuan-credits-expire-how-can-i-extend-the-expiration-of-the-free-credits}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "F9ZDdafDaopyd7xXNSKcB10NnBe",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在首次注册后，您可获赠¥ 300 免费额度，有效期 30 天。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "U5YtdCrJCocICVx5ysjcwCWTnoB",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "数据被移至回收站后是否收费？{#is-data-in-the-recycle-bin-charged}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QQ4VdmPBfoy8n6x8Whjc6MVYnJf",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "回收站中删除的数据不收取费用。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UcxQdYk7PoIBOPxdiHdcUppynSc",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "FAQ：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "AI",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 模型集成{/faq-integrations}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "Q89bdztT5oJ89kxQK6Bc28uAntf",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文列举了在集成 Zilliz Cloud 与 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "AI",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 模型时可能遇到的常见问题及对应解决方法。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XKjWd1cDvodj8dxvtS1cbaEgnSc",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 是否支持集成 LangChain？{#does-zilliz-cloud-support-langchain}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZXrEdxVTvoYVjNxv2weci0kCn8d",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 支持集成 LangChain。更多详情，请阅读",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "与 LangChain 集成搭建智能文档问答系统",
+                "token": "Msbqwd1izicbFlkT56scmGlWnbb",
+                "url": "https://zilliverse.feishu.cn/wiki/Msbqwd1izicbFlkT56scmGlWnbb"
+              }
+            },
+            {
+              "text_run": {
+                "content": " 。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 190
+  }
+}

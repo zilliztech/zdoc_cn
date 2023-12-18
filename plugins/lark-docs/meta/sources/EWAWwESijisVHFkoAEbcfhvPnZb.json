@@ -1,0 +1,1118 @@
+{
+  "creator": "ou_8554528ee6e965bad56710acde1c7847",
+  "has_child": false,
+  "node_create_time": "1688529429",
+  "node_token": "EWAWwESijisVHFkoAEbcfhvPnZb",
+  "node_type": "origin",
+  "obj_create_time": "1688529429",
+  "obj_edit_time": "1700704691",
+  "obj_token": "XAQzdD6AJoYgURxnPgNcr7pmnMg",
+  "obj_type": "docx",
+  "origin_node_token": "EWAWwESijisVHFkoAEbcfhvPnZb",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_8554528ee6e965bad56710acde1c7847",
+  "parent_node_token": "LmbYwqEJQinfLMkkKr5cZxjZnFb",
+  "space_id": "7167193056431783939",
+  "title": "管理 MFA",
+  "slug": "multi-factor-authentication",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg",
+        "block_type": 1,
+        "children": [
+          "GZZNdmLIuoyu8AxgrXBc45Hsn1f",
+          "NEYmdf5WCoIyo8xx9hhcZun5nXe",
+          "GCpYdAR4OoLOcpxfzRNcr7FfnQb",
+          "JrwudlPqooOBtCx5666cX55YnTc",
+          "TOd1d5PolofeO7xK3jqcWZzintc",
+          "XD6LdkegVo9xaoxVCRNcvnbOnZg",
+          "EFm1dZsepo3zSjxFZ9zc05Wrnad",
+          "SAfpdSrGooTLpfxAUd1cu1Ovncc",
+          "PkPzd4u1jov3OmxXFbXcznFPnve",
+          "FpLydCGGPouSSpx4fLKcwjyYnv6",
+          "IFf1dUWfwo52U8xYEc7cCNj2n9d",
+          "RKoRd5cyWoGQpFx3tXXcehpFnZg",
+          "FKsOdxvUXoIACIxeC9pcRnkOnvd",
+          "QIjOdKldsopdOWxSAmXcx9PDndf",
+          "TGjndFIrnoB2MLxa0FLcZFeln5c",
+          "OyN8dfoALorASfxqq6pcR4bPnKh",
+          "BqOpdQWdgok9bCxYLHWcyJPgn5f",
+          "YdGGdw4M4ohuZWxIfxochSe4n3c",
+          "Y0jsdN79so7Wxbx3xgXchOB2nhg",
+          "JbVmdhbAFoS1HsxCRjAcoPAUnWb",
+          "SCfrdqeADo3DzjxAzQtcaofGnJb",
+          "WDNgdBKeWoEwlFx6xBXc6EgFnbd",
+          "JNGgd4gZpoiftBxJltWcFJjRnsc",
+          "EGyEd02MCoKEJ2x2K8LcCgqIn5c",
+          "IhNGd3UmBo7oaUxPb8kciXaenoq"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "管理 MFA",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "GZZNdmLIuoyu8AxgrXBc45Hsn1f",
+        "block_type": 2,
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本教程将介绍如何在 Zilliz Cloud 账号设置中管理多重身份认证（MFA）。目前，Zilliz Cloud 仅支持通过邮箱进行多重身份认证。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NEYmdf5WCoIyo8xx9hhcZun5nXe",
+        "block_type": 2,
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GCpYdAR4OoLOcpxfzRNcr7FfnQb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "开启 MFA{#enable-mfa}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      },
+      {
+        "block_id": "JrwudlPqooOBtCx5666cX55YnTc",
+        "block_type": 2,
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "执行以下步骤以开启 MFA：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TOd1d5PolofeO7xK3jqcWZzintc",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "登录 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 界面",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fcloud.zilliz.com.cn%2Flogin"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      },
+      {
+        "block_id": "XD6LdkegVo9xaoxVCRNcvnbOnZg",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击界面右上角的人像符号。点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "账号设置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      },
+      {
+        "block_id": "EFm1dZsepo3zSjxFZ9zc05Wrnad",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "打开多重身份验证旁的开关，出现弹窗“开启 MFA”。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      },
+      {
+        "block_id": "SAfpdSrGooTLpfxAUd1cu1Ovncc",
+        "block_type": 13,
+        "children": [
+          "YKShdWW4FoAg6qxInSAcL4NKnTg"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "输入您的账号密码，并点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "开启。",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      },
+      {
+        "block_id": "YKShdWW4FoAg6qxInSAcL4NKnTg",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6550-1691%26mode%3Ddesign%26t%3D5Wy3zJAmhonFpB92-4"
+          }
+        },
+        "parent_id": "SAfpdSrGooTLpfxAUd1cu1Ovncc"
+      },
+      {
+        "block_id": "PkPzd4u1jov3OmxXFbXcznFPnve",
+        "block_type": 13,
+        "children": [
+          "ZZwfdKCKFo2jv1xmY95c5Ck8nNe"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "请前往您的账号邮箱接收验证码，在“验证身份”弹窗的输入框中输入验证码并点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "确认",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      },
+      {
+        "block_id": "ZZwfdKCKFo2jv1xmY95c5Ck8nNe",
+        "block_type": 34,
+        "children": [
+          "NVqEdKIWJotpuSxavJ8cKzNjnFb",
+          "IQwGdSrQroE2ecxqzB1c7Trqnlh"
+        ],
+        "parent_id": "PkPzd4u1jov3OmxXFbXcznFPnve",
+        "quote_container": {}
+      },
+      {
+        "block_id": "NVqEdKIWJotpuSxavJ8cKzNjnFb",
+        "block_type": 2,
+        "parent_id": "ZZwfdKCKFo2jv1xmY95c5Ck8nNe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IQwGdSrQroE2ecxqzB1c7Trqnlh",
+        "block_type": 2,
+        "parent_id": "ZZwfdKCKFo2jv1xmY95c5Ck8nNe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如未收到验证码或验证码过期，请点击重新发送验证码。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FpLydCGGPouSSpx4fLKcwjyYnv6",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "MFA 开启成功后，页面将自动跳转至登录页。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      },
+      {
+        "block_id": "IFf1dUWfwo52U8xYEc7cCNj2n9d",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "请在登录页输入您的账号邮箱和密码，并点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "登录",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "按钮。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      },
+      {
+        "block_id": "RKoRd5cyWoGQpFx3tXXcehpFnZg",
+        "block_type": 13,
+        "children": [
+          "DBQFdgRiXoMrGcxmiGJc1PKrnjd"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "请前往您的账号邮箱接收验证码，并在多重身份验证窗口的输入框中输入验证码。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      },
+      {
+        "block_id": "DBQFdgRiXoMrGcxmiGJc1PKrnjd",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6550-1768%26mode%3Ddesign%26t%3D5Wy3zJAmhonFpB92-4"
+          }
+        },
+        "parent_id": "RKoRd5cyWoGQpFx3tXXcehpFnZg"
+      },
+      {
+        "block_id": "FKsOdxvUXoIACIxeC9pcRnkOnvd",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过验证后，您将自动登录并进入 Zilliz Cloud 操作界面。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      },
+      {
+        "block_id": "QIjOdKldsopdOWxSAmXcx9PDndf",
+        "block_type": 2,
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TGjndFIrnoB2MLxa0FLcZFeln5c",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "关闭 MFA{#disable-mfa}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      },
+      {
+        "block_id": "OyN8dfoALorASfxqq6pcR4bPnKh",
+        "block_type": 2,
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如过您已开启 MFA，请执行以下步骤以关闭 MFA：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BqOpdQWdgok9bCxYLHWcyJPgn5f",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "登录 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 界面",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fcloud.zilliz.com.cn%2Flogin"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      },
+      {
+        "block_id": "YdGGdw4M4ohuZWxIfxochSe4n3c",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击界面右上角的人像符号。点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "账号设置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      },
+      {
+        "block_id": "Y0jsdN79so7Wxbx3xgXchOB2nhg",
+        "block_type": 13,
+        "children": [
+          "ERhldqOm0o87WXxNxRRcQiwInxo"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "关闭多重身份验证旁的开关，出现弹窗“关闭 MFA”。点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "关闭",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "按钮以确认关闭 MFA。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      },
+      {
+        "block_id": "ERhldqOm0o87WXxNxRRcQiwInxo",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6550-1733%26mode%3Ddesign%26t%3D5Wy3zJAmhonFpB92-4"
+          }
+        },
+        "parent_id": "Y0jsdN79so7Wxbx3xgXchOB2nhg"
+      },
+      {
+        "block_id": "JbVmdhbAFoS1HsxCRjAcoPAUnWb",
+        "block_type": 13,
+        "children": [
+          "KmTbdPDYforSz0xd2FGcia4dn3g"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "请前往您的账号邮箱接收验证码，在“关闭 MFA”弹窗的输入框中输入验证码并点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "关闭",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      },
+      {
+        "block_id": "KmTbdPDYforSz0xd2FGcia4dn3g",
+        "block_type": 34,
+        "children": [
+          "MuY0d2mByoGY5cxh7VZcNVvynOc",
+          "UgS0duYdAoyYV2xUAKRcd4xZnSg"
+        ],
+        "parent_id": "JbVmdhbAFoS1HsxCRjAcoPAUnWb",
+        "quote_container": {}
+      },
+      {
+        "block_id": "MuY0d2mByoGY5cxh7VZcNVvynOc",
+        "block_type": 2,
+        "parent_id": "KmTbdPDYforSz0xd2FGcia4dn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UgS0duYdAoyYV2xUAKRcd4xZnSg",
+        "block_type": 2,
+        "parent_id": "KmTbdPDYforSz0xd2FGcia4dn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如未收到验证码或验证码过期，请点击重新发送验证码。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SCfrdqeADo3DzjxAzQtcaofGnJb",
+        "block_type": 13,
+        "children": [
+          "M7oXdjaX6oCuySx7IXtcFlZQnMy"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "MFA 关闭成功后，界面右上角弹出确认信息\"关闭邮箱验证\"。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      },
+      {
+        "block_id": "M7oXdjaX6oCuySx7IXtcFlZQnMy",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6550-1797%26mode%3Ddesign%26t%3D5Wy3zJAmhonFpB92-4"
+          }
+        },
+        "parent_id": "SCfrdqeADo3DzjxAzQtcaofGnJb"
+      },
+      {
+        "block_id": "WDNgdBKeWoEwlFx6xBXc6EgFnbd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "文档推荐",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      },
+      {
+        "block_id": "JNGgd4gZpoiftBxJltWcFJjRnsc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "管理 API 密钥",
+                "token": "UGzNwB4TmiqTozkJvarceRdenif",
+                "url": "https://zilliverse.feishu.cn/wiki/UGzNwB4TmiqTozkJvarceRdenif"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      },
+      {
+        "block_id": "EGyEd02MCoKEJ2x2K8LcCgqIn5c",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "管理身份凭证",
+                "token": "VNWiwtYwGi9m0Okhj3Zce8wAnte",
+                "url": "https://zilliverse.feishu.cn/wiki/VNWiwtYwGi9m0Okhj3Zce8wAnte"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.notion.so%2FManage-Cluster-Credentials-562e60b054a64026b6f3e45ff6fe4338%3Fpvs%3D21"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      },
+      {
+        "block_id": "IhNGd3UmBo7oaUxPb8kciXaenoq",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "设置白名单",
+                "token": "RwEzw2l4siJB5Ake7FOcVU4knre",
+                "url": "https://zilliverse.feishu.cn/wiki/RwEzw2l4siJB5Ake7FOcVU4knre"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.notion.so%2Fcf88e3f8ced34279a2f4515e472d6e12%3Fpvs%3D21"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XAQzdD6AJoYgURxnPgNcr7pmnMg"
+      }
+    ],
+    "counts": 36
+  }
+}

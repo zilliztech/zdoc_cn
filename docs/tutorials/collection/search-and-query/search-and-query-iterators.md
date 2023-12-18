@@ -2,6 +2,7 @@
 slug: /search-and-query-iterators
 beta: TRUE
 notebook: 09_search_query_iterators.ipynb
+token: GPXpwOFduiAAwskVE5lcaUYznpe
 sidebar_position: 3
 ---
 
@@ -12,11 +13,11 @@ import Admonition from '@theme/Admonition';
 
 本指南介绍如何利用迭代器（Iterator）的强大功能，在大型数据集中进行高效的搜索与查询。
 
-## 概述{#overview}
+## 概述{#overview}{#overview}
 
 迭代器是一种先进的工具，它通过处理主键值和布尔表达式，使您能够轻松浏览和查询大型数据集。相较于传统的 `offset` 和 `limit` 参数配置，迭代器能提供更高效、更具扩展性的搜索和查询解决方案。
 
-### 迭代器的优势{#benefits-of-using-iterators}
+### 迭代器的优势{#benefits-of-using-iterators}{#benefits-of-using-iterators}
 
 - 简化操作：免去复杂的 `offset` 和 `limit` 参数设置。
 
@@ -30,7 +31,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 开始前{#before-you-start}
+## 开始前{#before-you-start}{#before-you-start}
 
 在开始使用迭代器进行搜索或查询前，请确保以下几点：
 
@@ -38,11 +39,12 @@ import Admonition from '@theme/Admonition';
 
 - 您已下载了示例数据集，更多详情参见[示例数据集](./example-dataset)。
 
-## 准备数据集{#prepare-your-dataset}
+## 准备数据集{#prepare-your-dataset}{#prepare-your-dataset}
 
 环境设置步骤如下：
 
 1. 创建一个与您数据集相匹配的 Collection：
+
     ```python
     # 0. Connect to cluster
     connections.connect(
@@ -112,6 +114,7 @@ import Admonition from '@theme/Admonition';
     ```
 
 1. 准备待插入的数据集：
+
     ```python
     # Prepare a list of rows
     with open('medium_articles_2020_dpr.json') as f:
@@ -203,13 +206,14 @@ import Admonition from '@theme/Admonition';
     time.sleep(10)
     ```
 
-## 使用迭代器搜索{#search-with-an-iterator}
+## 使用迭代器搜索{#search-with-an-iterator}{#search-with-an-iterator}
 
 迭代器能够简化搜索与查询向量相似的 Entity 的过程。具体请按照以下步骤进行：
 
 1. 初始化搜索迭代器，设定搜索参数和输出字段。
 
 1. 在循环中使用 `next()` 方法分页检索搜索结果：
+
     - 若 `next()` 返回空数组，意味着没有更多页面，结束循环。
 
     - 如有搜索结果，将显示所设定的输出字段。
@@ -293,7 +297,7 @@ print(results[:3])
 # ]
 ```
 
-## 使用迭代器查询{#query-with-an-iterator}
+## 使用迭代器查询{#query-with-an-iterator}{#query-with-an-iterator}
 
 查询迭代器通过迭代主键表达式 (`expr`) 提供精确且可靠的分页方式。得益于查询的 `selectLowestPK` 简化原则，确保了分页的准确性。执行带有迭代器的查询的步骤如下：
 
@@ -348,7 +352,7 @@ print(results[:3])
 # ]
 ```
 
-## 相关文档{#related-topics}
+## 相关文档{#related-topics}{#related-topics}
 
 - [创建 Collection](./create-collection)
 
@@ -357,3 +361,4 @@ print(results[:3])
 - [插入并更新 Entity](./upsert-entities)
 
 - [使用高级表达式搜索和查询](./search-and-query-advanced-expressions)
+

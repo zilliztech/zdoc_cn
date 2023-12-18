@@ -2,6 +2,7 @@
 slug: /import-data-via-restful-api
 beta: FALSE
 notebook: FALSE
+token: FzANwnN8siARelkAp4vcJVJNnnf
 sidebar_position: 3
 ---
 
@@ -12,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 本文介绍如何通过 RESTful API 将数据导入现有 Collection 中。
 
-## 开始前{#before-you-start}
+## 开始前{#before-you-start}{#before-you-start}
 
 请确保已完成以下步骤：
 
@@ -22,7 +23,7 @@ import Admonition from '@theme/Admonition';
 
 - 已创建 Collection，且该 Collection 的 Schema 与示例数据集相匹配。已为该 Collection 创建索引，并已加载 Collection。详情请参见[创建 Collection](./create-collection)。
 
-## 准备数据文件{#prepare-data-files}
+## 准备数据文件{#prepare-data-files}{#prepare-data-files}
 
 通过 RESTful API，您可以从单个 JSON 文件或多个 NumPy 文件导入数据。如果您的数据不是这两种格式，您可以使用 BulkWriter 转换数据格式。详情请参阅[使用 BulkWriter 导入](./use-bulkwriter-for-data-import)。
 
@@ -57,7 +58,7 @@ with open('path/to/medium_articles_2020_dpr.json') as f:
     # ]))
 ```
 
-## 通过 RESTful API 导入数据{#import-data-using-the-restful-api}
+## 通过 RESTful API 导入数据{#import-data-using-the-restful-api}{#restful-api-import-data-using-the-restful-api}
 
 要导入数据，需要先将数据上传到对象存储桶（如阿里云 OSS）。上传完成后，需获取文件路径和桶凭据，以便 Zilliz Cloud 从您的桶中提取数据。
 
@@ -86,7 +87,7 @@ curl --request POST \
      }'
 ```
 
-在上述代码中，`${CLOUD_REGION_ID}` 代表您集群所在的云地域的 ID，`${TOKEN}` 是用于授权 API 请求的集群 API 密钥，`${CLUSTER_ID}` 是您的集群的 ID。在调用 API 时，请确保将这些占位符替换为您的实际值。您可以从集群的公共访问端点获取 `CLOUD_REGION_ID` 和 `CLUSTER_ID`。例如，在公共访问端点 **in03-3bf3c31f4248e22.api.gcp-us-west1.zillizcloud.com** 中，`CLOUD_REGION_ID` 是 **gcp-us-west1**，`CLUSTER_ID` 是 **in03-3bf3c31f4248e22**。有关更多信息，请参见[管理集群](./manage-cluster)。
+在上述代码中，`${CLOUD_REGION_ID}` 代表您集群所在的云地域的 ID，`${TOKEN}` 是用于授权 API 请求的集群 API 密钥，`${CLUSTER_ID}` 是您的集群的 ID。在调用 API 时，请确保将这些占位符替换为您的实际值。您可以从集群的公共访问端点获取 `CLOUD_REGION_ID` 和 `CLUSTER_ID`。例如，在公共访问端点 **https://in03-3bf3c31f4248e22.api.gcp-us-west1.zillizcloud.com** 中，`CLOUD_REGION_ID` 是 **gcp-us-west1**，`CLUSTER_ID` 是 **in03-3bf3c31f4248e22**。有关更多信息，请参见[管理集群](./manage-cluster)。
 
 提交请求后，将返回任务 ID。您可以通过任务 ID 查询数据导入进度。示例代码如下：
 
@@ -100,7 +101,7 @@ curl --request GET \
 
 有关更多信息，请参见[导入](https://docs.zilliz.com.cn/reference/import)和[查看导入进度](https://docs.zilliz.com.cn/reference/get-import-progress)。
 
-## 结果验证{#verify-the-result}
+## 结果验证{#verify-the-result}{#verify-the-result}
 
 如果请求返回以下类似内容，则表示数据导入成功：
 

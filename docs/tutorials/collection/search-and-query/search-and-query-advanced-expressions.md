@@ -2,6 +2,7 @@
 slug: /search-and-query-advanced-expressions
 beta: TRUE
 notebook: 10_search_query_advanced_ops.ipynb
+token: Ty6NwFqHAiXiXIkZl5RcFuK4nUh
 sidebar_position: 4
 ---
 
@@ -13,7 +14,7 @@ import TabItem from '@theme/TabItem';
 
 本指南将介绍如何在 Zilliz Cloud 中使用高级表达式 `count()` 和 `json_contains()` 来执行搜索或查询操作。
 
-## 概述{#overview}
+## 概述{#overview}{#overview}
 
 Zilliz Cloud 现已支持在搜索或查询时使用高级表达式 `count()` 和 `json_contains()`。
 
@@ -27,7 +28,7 @@ Zilliz Cloud 现已支持在搜索或查询时使用高级表达式 `count()` �
 
 </Admonition>
 
-## 开始前{#before-you-start}
+## 开始前{#before-you-start}{#before-you-start}
 
 在使用这些高级表达式之前，请确保以下几点：
 
@@ -35,7 +36,7 @@ Zilliz Cloud 现已支持在搜索或查询时使用高级表达式 `count()` �
 
 - 您已下载了示例数据集，更多详情参见[示例数据集](./example-dataset)。
 
-## 准备数据{#prepare-your-dataset}
+## 准备数据{#prepare-your-dataset}{#prepare-your-dataset}
 
 使用 `json_contains()` 之前，需要定义一个名为 `article_meta` 的 JSON 字段，并创建与数据集 Schema 相匹配的 Collection。
 
@@ -497,7 +498,7 @@ List<JSONObject> rows = getRows(dataset.getJSONArray("rows"), 5979);
 </TabItem>
 </Tabs>
 
-## 向 Collection 插入数据{#insert-data-into-the-collection}
+## 向 Collection 插入数据{#insert-data-into-the-collection}{#collection-insert-data-into-the-collection}
 
 使用以下代码将准备好的数据插入到 Collection 中：
 
@@ -592,11 +593,11 @@ try {
 </TabItem>
 </Tabs>
 
-## 使用 `count()`{#use-count}
+## 使用 `count()`{#use-count}{#countuse-count}
 
 在搜索或查询时，将 `count()` 包含在 `output_fields` 中可以检索 Collection 内的 Entity 数量。若需查询满足特定条件的 Entity 数量，可使用 `expr` 参数进行数据过滤。
 
-### 查询所有 Entity 的数量{#count-all-entities}
+### 查询所有 Entity 的数量{#count-all-entities}{#entity-count-all-entities}
 
 使用以下代码查询 Collection 中的总 Entity 数量：
 
@@ -675,7 +676,7 @@ System.out.println("The collection contains exactly " + count1 + " entities!");
 
 以上代码将返回 Collection 中的 Entity 总数，因为没有在 `expr` 参数中设置任何过滤条件。
 
-### 查询满足特定条件的 Entity 的数量{#count-entities-based-on-conditions}
+### 查询满足特定条件的 Entity 的数量{#count-entities-based-on-conditions}{#entity-count-entities-based-on-conditions}
 
 查询满足特定条件的 entities 数量：
 
@@ -773,11 +774,11 @@ System.out.println("The collection contains exactly " + count2 + " entities!");
 
 - `article_meta` 中 `reading_time` 少于 10。
 
-## 使用 `json_contains()` 进行搜索和查询{#search-and-query-with-jsoncontains}
+## 使用 `json_contains()` 进行搜索和查询{#search-and-query-with-jsoncontains}{#jsoncontains-search-and-query-with-jsoncontains}
 
 在搜索或查询操作中，使用 `json_contains()` 来检查 JSON 键内是否存在特定值。
 
-### 在向量搜索中使用 `json_contains()`{#use-jsoncontains-in-a-vector-search}
+### 在向量搜索中使用 `json_contains()`{#use-jsoncontains-in-a-vector-search}{#jsoncontainsuse-jsoncontains-in-a-vector-search}
 
 使用 `JSON_CONTAINS()` 过滤结果，以查找 `article_meta["tags_1"]` 中包含元素 `16` 的数据：
 
@@ -1075,7 +1076,7 @@ System.out.println(results);
 </TabItem>
 </Tabs>
 
-### 在查询中使用 `json_contains()`{#use-jsoncontains-in-a-query}
+### 在查询中使用 `json_contains()`{#use-jsoncontains-in-a-query}{#jsoncontainsuse-jsoncontains-in-a-query}
 
 使用 `JSON_CONTAINS_ALL()` 过滤结果，以查找 `article_meta["tags_1"]` 中包含 `[2, 4, 6]` 所有元素的数据：
 
@@ -1372,7 +1373,7 @@ System.out.println(queryResults);
 </TabItem>
 </Tabs>
 
-## 表达式参考{#expression-reference}
+## 表达式参考{#expression-reference}{#expression-reference}
 
 以下表格详细描述了利用 `json_contains()` 进行搜索或查询时，可以在 `expr` 中使用的布尔表达式。
 
@@ -1382,10 +1383,11 @@ System.out.println(queryResults);
 |  `json_contains_any` (`JSON_CONTAINS_ANY`) |  `expr_3 = 'JSON_CONTAINS_ANY(article_meta["tags_1"], [5, 3, 39, 8])'`                                                              |  `expr_3` 在 `article_meta["tags_1"]` 包含 `[5, 3, 39, 8]` 中任一元素时返回 True。                                                                         |
 |  `json_contains_all` (`JSON_CONTAINS_ALL`) |  `expr_4 = 'JSON_CONTAINS_ALL(article_meta["tags_1"], [2, 4, 6])'`<br/> <br/>                                                         |  `expr_4` 在 `article_meta["tags_1"]` 包含 `[2, 4, 6]` 的所有元素时返回 True。<br/> <br/>                                                                    |
 
-## 相关文档{#related-topics}
+## 相关文档{#related-topics}{#related-topics}
 
 - [创建 Collection](./create-collection)
 
 - [使用 JSON 类型字段](./javascript-object-notation-json)
 
 - [使用迭代器搜索和查询](./search-and-query-iterators)
+

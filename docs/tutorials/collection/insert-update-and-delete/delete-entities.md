@@ -2,6 +2,7 @@
 slug: /delete-entities
 beta: FALSE
 notebook: 00_quick_start.ipynb,01_use_customized_schema.ipynb
+token: R8EPw5l7Ei1tEKkdH6qc54UNn1d
 sidebar_position: 3
 ---
 
@@ -13,7 +14,7 @@ import TabItem from '@theme/TabItem';
 
 Entity 是指存储在 Zilliz Cloud 集群中的数据实体，包含用于处理、搜索和查询的数据。如果您不再需要某个 Entity，可以执行相关操作将其删除。
 
-## 删除 Entity{#delete-entities}
+## 删除 Entity{#delete-entities}{#entitydelete-entities}
 
 如果一条数据过时或不再需要时，可以使用如下步骤删除该 Entity。
 
@@ -195,10 +196,11 @@ curl --request POST \
 
 </Admonition>
 
-## 相关文档{#related-topics}
+## 相关文档{#related-topics}{#related-topics}
 
 - [创建 Collection](./create-collection) 
 
 - [插入 Entity](./insert-entities) 
 
 - [向量搜索和查询](./search-query-and-get) 
+

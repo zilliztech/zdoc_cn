@@ -2,6 +2,7 @@
 slug: /migrate-from-elasticsearch
 beta: FALSE
 notebook: FALSE
+token: CJN4wlKiGi1P8Zk4BHKcF04GnLb
 sidebar_position: 2
 ---
 
@@ -12,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 如今，大多数企业的基础环境都以数据为驱动。在这种背景下，如何高效、无缝地在不同平台之间迁移数据以利用先进的数据分析能力变得至关重要。本文介绍了如何将 Elasticsearch 中的数据迁移到 Zilliz Cloud，以帮助您充分释放数据的潜力，实现可扩展性、高性能和易用性。
 
-## 开始前{#before-you-start}
+## 开始前{#before-you-start}{#before-you-start}
 
 请确保已完成以下步骤：
 
@@ -20,7 +21,7 @@ import Admonition from '@theme/Admonition';
 
 - 您已创建 Zilliz Cloud 集群。详情请参阅[创建集群](./create-cluster)。
 
-## 连接到 Elasticsearch 集群{#connect-to-your-elasticsearch-cluster}
+## 连接到 Elasticsearch 集群{#connect-to-your-elasticsearch-cluster}{#elasticsearch-connect-to-your-elasticsearch-cluster}
 
 在与 Elasticsearch 集群交互之前，首先需要连接到集群。根据 Elasticsearch 集群的部署模式，Zilliz Cloud 提供以下连接方法：
 
@@ -32,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 ![zh_connect_to_es](/img/zh_connect_to_es.png)
 
-## 将数据从 Elasticsearch 索引迁移至 Zilliz Cloud Collection{#transition-from-elasticsearch-index-to-zilliz-cloud-collection}
+## 将数据从 Elasticsearch 索引迁移至 Zilliz Cloud Collection{#transition-from-elasticsearch-index-to-zilliz-cloud-collection}{#elasticsearch-zilliz-cloud-collectiontransition-from-elasticsearch-index-to-zilliz-cloud-collection}
 
 Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Elasticsearch 中的索引数据迁移到 Zilliz Cloud 的 Collection，首先需要连接到 Elasticsearch 集群，然后从页面左侧选择源索引和待迁移字段。选择完成后，待迁移字段将显示在页面右侧的目标 Collection 中。具体请参见下图。
 
@@ -56,7 +57,7 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
 
 在**动态 Schema **字段，选择是否为 Collection 启用动态 Schema。有关更多信息，请参见[开启动态 Schema](./enable-dynamic-schema)。
 
-## 结果验证{#verify-the-migration-results}
+## 结果验证{#verify-the-migration-results}{#verify-the-migration-results}
 
 如果迁移任务的状态从**迁移中**变更为**成功**，则代表迁移成功。
 
@@ -68,7 +69,7 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
 
 ![zh_verify_collection_es](/img/zh_verify_collection_es.png)
 
-## 字段映射{#field-mapping-reference}
+## 字段映射{#field-mapping-reference}{#field-mapping-reference}
 
 下表详细说明了 Elasticsearch 索引中的字段如何映射到 Zilliz Cloud 的 Collection 中。
 
@@ -83,7 +84,7 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
 |  float            |  Float           |  -                                                                       |
 |  boolean          |  Bool            |  -                                                                       |
 
-## 相关文档{#related-topics}
+## 相关文档{#related-topics}{#related-topics}
 
 - [向量搜索和查询](./search-query-and-get)
 
@@ -92,3 +93,4 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
 - [AUTOINDEX](./autoindex-explained)
 
 - [选择合适的 CU 类型](./cu-types-explained) 
+

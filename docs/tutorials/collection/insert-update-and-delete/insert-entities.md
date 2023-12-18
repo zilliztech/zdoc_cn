@@ -2,6 +2,7 @@
 slug: /insert-entities
 beta: FALSE
 notebook: 00_quick_start.ipynb,01_use_customized_schema.ipynb
+token: Am0bwdNmliIZ9OkUB2DcdkOBnAe
 sidebar_position: 1
 ---
 
@@ -15,7 +16,7 @@ import TabItem from '@theme/TabItem';
 
 Entity 是 Collection 中的基本数据单元。同一个 Collection 中的 Entity 具有相同的属性，这些属性共同定义在 Schema 中。
 
-## 开始前{#before-you-start}
+## 开始前{#before-you-start}{#before-you-start}
 
 请确保已完成以下步骤：
 
@@ -23,9 +24,9 @@ Entity 是 Collection 中的基本数据单元。同一个 Collection 中的 Ent
 
 - 您已经下载了示例数据。详情请参见[示例数据集](./example-dataset)。
 
-## 插入 Entity{#insert-entities}
+## 插入 Entity{#insert-entities}{#entityinsert-entities}
 
-### 准备数据{#prepare-data}
+### 准备数据{#prepare-data}{#prepare-data}
 
 在向 Collection 插入多条数据前，可按如下步骤准备数据。
 
@@ -303,7 +304,7 @@ data="$(cat path/to/medium_articles_2020_dpr.json \
 </TabItem>
 </Tabs>
 
-### 插入数据{#insert-data}
+### 插入数据{#insert-data}{#insert-data}
 
 在数据准备完毕后，即可按如下步骤插入数据。
 
@@ -486,7 +487,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 写入操作{#understanding-flushing-data}
+## 写入操作{#understanding-flushing-data}{#understanding-flushing-data}
 
 Zilliz Cloud 会在插入的数量到达一定规模时自动执行建立索引和写入操作。
 
@@ -498,7 +499,7 @@ Zilliz Cloud 会在插入的数量到达一定规模时自动执行建立索引�
 
 如果需要立即查询新插入的数据，可以选择手动执行写入操作。
 
-## 相关文档{#related-topics}
+## 相关文档{#related-topics}{#related-topics}
 
 - [向量搜索和查询](./search-query-and-get) 
 
@@ -507,3 +508,4 @@ Zilliz Cloud 会在插入的数量到达一定规模时自动执行建立索引�
 - [开启动态 Schema](./enable-dynamic-schema) 
 
 - [使用 JSON 类型字段](./javascript-object-notation-json) 
+

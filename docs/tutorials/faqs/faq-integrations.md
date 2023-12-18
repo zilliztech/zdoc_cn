@@ -2,6 +2,7 @@
 slug: /faq-integrations
 beta: null
 notebook: null
+token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 13
 ---
 
@@ -9,11 +10,11 @@ sidebar_position: 13
 
 本文列举了在集成 Zilliz Cloud 与 AI 模型时可能遇到的常见问题及对应解决方法。
 
-## Contents
+## 目录
 
 - [Zilliz Cloud 是否支持集成 LangChain？](#does-zilliz-cloud-support-langchain)
 
-## 常见问题
+## 问题
 
 
 

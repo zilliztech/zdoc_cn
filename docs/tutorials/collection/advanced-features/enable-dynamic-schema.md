@@ -2,7 +2,8 @@
 slug: /enable-dynamic-schema
 beta: FALSE
 notebook: 02_enable_dynamic_schema.ipynb
-sidebar_position: 1
+token: EpHowtn3miepTyk2pNlcLwDonyD
+sidebar_position: 2
 ---
 
 import Admonition from '@theme/Admonition';
@@ -17,7 +18,7 @@ Schema 对于 Zilliz Cloud 集群的数据处理非常重要。在向 Collection
 
 动态 Schema 使得数据处理更加灵活，用户能够在 Collection 中存储和检索复杂结构的数据，包括嵌套数据、数组以及其他复杂数据类型。
 
-## 为 Collection 开启动态 Schema{#create-collection-with-dynamic-schema-enabled}
+## 为 Collection 开启动态 Schema{#create-collection-with-dynamic-schema-enabled}{#collection-schemacreate-collection-with-dynamic-schema-enabled}
 
 要为 Collection 开启动态 Schema，需要在定义 Schema 时将 `enable_dynamic_field` 设置为 `True`。开启动态 Schema 后，之后插入的 Entity 中的所有未定义字段将以键值对的形式存入 Collection。我们将用“动态字段”来指代这些键值对。
 
@@ -417,11 +418,11 @@ fmt.Println("Loading progress:", progress)
 </TabItem>
 </Tabs>
 
-## 动态插入数据{#insert-dynamic-data}
+## 动态插入数据{#insert-dynamic-data}{#insert-dynamic-data}
 
 Collection 创建完成后，可以开始动态插入数据。
 
-### 准备数据{#prepare-data}
+### 准备数据{#prepare-data}{#prepare-data}
 
 现在，我们需要从[示例数据集](./example-dataset)中读取数据。
 
@@ -528,7 +529,7 @@ fmt.Println("Dataset loaded, row number: ", len(data.Rows))
 </TabItem>
 </Tabs>
 
-### 插入数据{#insert-data}
+### 插入数据{#insert-data}{#insert-data}
 
 数据准备完成后便可以开始插入数据：
 
@@ -671,7 +672,7 @@ time.Sleep(5 * time.Second)
 </TabItem>
 </Tabs>
 
-## 使用动态字段搜索{#search-with-dynamic-fields}
+## 使用动态字段搜索{#search-with-dynamic-fields}{#search-with-dynamic-fields}
 
 假设前面的所有步骤都已完成，此时我们便可以在搜索或查询的表达式中使用动态字段：
 
@@ -1021,10 +1022,11 @@ output_fields='$meta["#key"]'
 ...
 ```
 
-## 相关文档{#related-topics}
+## 相关文档{#related-topics}{#related-topics}
 
 - [创建 Collection](./create-collection) 
 
 - [使用 Partition Key](./use-partition-key) 
 
 - [使用 JSON 类型字段](./javascript-object-notation-json) 
+

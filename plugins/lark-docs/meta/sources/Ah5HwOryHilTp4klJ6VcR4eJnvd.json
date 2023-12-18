@@ -1,0 +1,689 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": false,
+  "node_create_time": "1687140873",
+  "node_token": "Ah5HwOryHilTp4klJ6VcR4eJnvd",
+  "node_type": "origin",
+  "obj_create_time": "1687140873",
+  "obj_edit_time": "1700714862",
+  "obj_token": "JGdHd84CyonxIBxpGHMcNrtPnUb",
+  "obj_type": "docx",
+  "origin_node_token": "Ah5HwOryHilTp4klJ6VcR4eJnvd",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "DaoawdnS1iEOT8kFGW0cAc8qntc",
+  "space_id": "7167193056431783939",
+  "title": "设置运维窗口",
+  "slug": "set-up-maintenance-window",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "JGdHd84CyonxIBxpGHMcNrtPnUb",
+        "block_type": 1,
+        "children": [
+          "Pqrnd44QqoJ3nJxE9CjcAmnsn3z",
+          "IpDSdsQ05oONo3xPh4pcysOjnzh",
+          "ViPUdWderofoGnx4Je5chRyUnSh",
+          "EPwZdPFI5oiouNxUMG5cA6ZFndc",
+          "TM82dOzFQoHQ4bxLbIgcQUfyn8d",
+          "ICH7drg4Aoh1JNxIsy1czr9Dn8b",
+          "PnYrdHWkpoH9OCx9LLycOyuznEq",
+          "Mvjidfg0Vouh7uxYBwmcIEKhnwf",
+          "QO8Cda8AVo9dPJxaAMuciakqnAp",
+          "LWSFdXDQgoNL3dxvXmzccaMvnWg",
+          "B9P5dokA6ohfuCxwsxpcSc5ynzb",
+          "QIWsd23qCoAtFbxJPqGcJHbrn6g",
+          "MEiddR4l4oEynLxfX7vcxCNonLe",
+          "PSdBdUjs4og4pTxWSyLcbWSCn1b",
+          "FJfCdlCjTofSO4xP3kzcrvhsnBd"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "设置运维窗口",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "Pqrnd44QqoJ3nJxE9CjcAmnsn3z",
+        "block_type": 2,
+        "parent_id": "JGdHd84CyonxIBxpGHMcNrtPnUb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 允许用户为集群设置运维窗口，以减少运维对工作负载的影响，增加可预测性。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IpDSdsQ05oONo3xPh4pcysOjnzh",
+        "block_type": 26,
+        "comment_ids": [
+          "7278895454148902916"
+        ],
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6163-1714%26t%3DnwCpDmwxsvCUk85L-4"
+          }
+        },
+        "parent_id": "JGdHd84CyonxIBxpGHMcNrtPnUb"
+      },
+      {
+        "block_id": "ViPUdWderofoGnx4Je5chRyUnSh",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "概述{#overview}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "JGdHd84CyonxIBxpGHMcNrtPnUb"
+      },
+      {
+        "block_id": "EPwZdPFI5oiouNxUMG5cA6ZFndc",
+        "block_type": 2,
+        "parent_id": "JGdHd84CyonxIBxpGHMcNrtPnUb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "目前，运维窗口设置为全局设置，应用于 Zilliz Cloud 上的所有集群。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TM82dOzFQoHQ4bxLbIgcQUfyn8d",
+        "block_type": 2,
+        "parent_id": "JGdHd84CyonxIBxpGHMcNrtPnUb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为避免在业务高峰期进行运维导致业务中断，Zilliz Cloud 默认不会在当地时间每日凌晨 0 点到下午 2 点期间进行大规模更新。运维前，您会提前收到运维事件通知。运维日当天，Zilliz Cloud 会优先在您设置的运维窗口进行相关操作。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ICH7drg4Aoh1JNxIsy1czr9Dn8b",
+        "block_type": 2,
+        "parent_id": "JGdHd84CyonxIBxpGHMcNrtPnUb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "运维事件通常持续两个小时，期间可能会发生服务中断。默认的运维窗口为当地时间凌晨 2 点到凌晨 4 点之间。您可以在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "维护时间设置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "中选择合适的运维窗口。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PnYrdHWkpoH9OCx9LLycOyuznEq",
+        "block_type": 2,
+        "parent_id": "JGdHd84CyonxIBxpGHMcNrtPnUb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "运维事件完成后，您会收到完成通知。Zilliz Cloud 还会在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "事件",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "中记录每次运维事件的开始和结束时间，以防您错过通知。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Mvjidfg0Vouh7uxYBwmcIEKhnwf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看运维窗口{#view-current-window-hours}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "JGdHd84CyonxIBxpGHMcNrtPnUb"
+      },
+      {
+        "block_id": "QO8Cda8AVo9dPJxaAMuciakqnAp",
+        "block_type": 2,
+        "parent_id": "JGdHd84CyonxIBxpGHMcNrtPnUb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要查看当前运维窗口，请从左侧导航栏中选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "系统",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "设置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，并在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "系统维护时间",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "区域的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "偏好时间 (UTC) ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "下找到当前应用的运维窗口。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LWSFdXDQgoNL3dxvXmzccaMvnWg",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "编辑运维窗口{#edit-current-window-hours}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "JGdHd84CyonxIBxpGHMcNrtPnUb"
+      },
+      {
+        "block_id": "B9P5dokA6ohfuCxwsxpcSc5ynzb",
+        "block_type": 2,
+        "parent_id": "JGdHd84CyonxIBxpGHMcNrtPnUb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要更改系统运维窗口，请单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "编辑",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "以打开",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "维护时间设置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "对话框，并从",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "时间段 (",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "UTC",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ") ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "下拉列表中选择合适的运维窗口。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QIWsd23qCoAtFbxJPqGcJHbrn6g",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相关文档{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "JGdHd84CyonxIBxpGHMcNrtPnUb"
+      },
+      {
+        "block_id": "MEiddR4l4oEynLxfX7vcxCNonLe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "设置时区",
+                "token": "AAAmwoQdJid8FOkN3Z8cu8jAnNg",
+                "url": "https://zilliverse.feishu.cn/wiki/AAAmwoQdJid8FOkN3Z8cu8jAnNg"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "JGdHd84CyonxIBxpGHMcNrtPnUb"
+      },
+      {
+        "block_id": "PSdBdUjs4og4pTxWSyLcbWSCn1b",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "删除组织",
+                "token": "MkZjwrXIpicJ5xkYwu6cMK8inVb",
+                "url": "https://zilliverse.feishu.cn/wiki/MkZjwrXIpicJ5xkYwu6cMK8inVb"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "JGdHd84CyonxIBxpGHMcNrtPnUb"
+      },
+      {
+        "block_id": "FJfCdlCjTofSO4xP3kzcrvhsnBd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "使用回收站",
+                "token": "XVQcw6qgxiC31ikfk06cOo1jnch",
+                "url": "https://zilliverse.feishu.cn/wiki/XVQcw6qgxiC31ikfk06cOo1jnch"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "JGdHd84CyonxIBxpGHMcNrtPnUb"
+      }
+    ],
+    "counts": 16
+  }
+}

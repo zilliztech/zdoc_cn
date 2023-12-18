@@ -2,6 +2,7 @@
 slug: /conduct-a-range-search
 beta: TRUE
 notebook: 11_conduct_a_range_search.ipynb
+token: VdpLwTKnPinYj6kBGOBckmpfnud
 sidebar_position: 2
 ---
 
@@ -21,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 </Admonition>
 
-## 开始前{#before-you-start}
+## 开始前{#before-you-start}{#before-you-start}
 
 在执行范围搜索前，请确保以下几点：
 
@@ -31,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
 - 您已根据示例数据集创建了相应 Schema 的 Collection，并且该 Collection 已完成索引构建及加载。详细信息请参见[开启动态 Schema](./enable-dynamic-schema)。
 
-## 步骤简介{#quick-steps-for-a-range-search}
+## 步骤简介{#quick-steps-for-a-range-search}{#quick-steps-for-a-range-search}
 
 1. 加载 Collection 与插入数据：首先确保您的 Collection 已加载，并且数据已插入至 Collection。
 
@@ -45,7 +46,7 @@ import TabItem from '@theme/TabItem';
 
 </Admonition>
 
-## 步骤 1：加载 Collection 与插入数据{#step-1-load-collection-and-insert-data}
+## 步骤 1：加载 Collection 与插入数据{#step-1-load-collection-and-insert-data}{#1-collection-step-1-load-collection-and-insert-data}
 
 开始前，请确保 Collection 已被加载至内存，因 Zilliz Cloud 的搜索和查询功能在内存中执行。
 
@@ -337,7 +338,7 @@ try {
 </TabItem>
 </Tabs>
 
-## 步骤 2：设置范围过滤{#step-2-configure-range-filtering}
+## 步骤 2：设置范围过滤{#step-2-configure-range-filtering}{#2step-2-configure-range-filtering}
 
 使用 Zilliz Cloud 进行范围搜索时，有两个关键参数与标准向量搜索不同：
 
@@ -347,9 +348,10 @@ try {
 
 `radius` 和 `range_filter` 参数均为 **FLOAT** 类型，它们在保证搜索准确性与效率之间起着平衡作用。
 
-### 距离度量的影响{#distance-metrics-influence}
+### 距离度量的影响{#distance-metrics-influence}{#distance-metrics-influence}
 
 - **L2** 距离：筛选出距离小于 `radius` 的向量，因为较短的 **L2** 距离代表更高的相似性。若想排除结果中最接近的向量，可将 `range_filter` 设定为低于 `radius` 的值。
+
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"}]}>
     <TabItem value='python'>
 
@@ -389,6 +391,7 @@ try {
     </Tabs>
 
 - **IP** 距离：筛选出距离大于 `radius` 的向量，因为更大的 **IP** 距离意味着更高的相似性。在此情况下，应将 `range_filter` 设定为高于 `radius` 的值，以排除最相似的向量。
+
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"}]}>
     <TabItem value='python'>
 
@@ -434,7 +437,7 @@ try {
     </TabItem>
     </Tabs>
 
-## 步骤 3：执行范围搜索{#step-3-execute-the-range-search}
+## 步骤 3：执行范围搜索{#step-3-execute-the-range-search}{#3step-3-execute-the-range-search}
 
 参数设置完毕后，开始检索落在特定范围内的向量：
 
@@ -757,7 +760,7 @@ System.out.println(results);
 </TabItem>
 </Tabs>
 
-## 要点总结{#takeaways}
+## 要点总结{#takeaways}{#takeaways}
 
 根据您设定的 `radius` 和 `range_filter`，Zilliz Cloud 会返回符合指定范围的向量。以下是一个快速参考表，概括了不同距离度量如何影响这些设置。
 
@@ -766,7 +769,7 @@ System.out.println(results);
 |  **L2** |  `range_filter` <= distance < `radius` |
 |  **IP** |  `radius` < distance <= `range_filter` |
 
-## 相关文档{#related-topics}
+## 相关文档{#related-topics}{#related-topics}
 
 - [向量搜索和查询](./search-query-and-get)
 

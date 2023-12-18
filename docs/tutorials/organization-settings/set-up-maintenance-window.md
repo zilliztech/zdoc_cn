@@ -2,6 +2,7 @@
 slug: /set-up-maintenance-window
 beta: FALSE
 notebook: FALSE
+token: Ah5HwOryHilTp4klJ6VcR4eJnvd
 sidebar_position: 2
 ---
 
@@ -14,7 +15,7 @@ Zilliz Cloud 允许用户为集群设置运维窗口，以减少运维对工作�
 
 ![maintenance-window](/img/maintenance-window.png)
 
-## 概述{#overview}
+## 概述{#overview}{#overview}
 
 目前，运维窗口设置为全局设置，应用于 Zilliz Cloud 上的所有集群。
 
@@ -24,18 +25,19 @@ Zilliz Cloud 允许用户为集群设置运维窗口，以减少运维对工作�
 
 运维事件完成后，您会收到完成通知。Zilliz Cloud 还会在**事件**中记录每次运维事件的开始和结束时间，以防您错过通知。
 
-## 查看运维窗口{#view-current-window-hours}
+## 查看运维窗口{#view-current-window-hours}{#view-current-window-hours}
 
 要查看当前运维窗口，请从左侧导航栏中选择**系统设置**，并在**系统维护时间**区域的**偏好时间 (UTC) **下找到当前应用的运维窗口。
 
-## 编辑运维窗口{#edit-current-window-hours}
+## 编辑运维窗口{#edit-current-window-hours}{#edit-current-window-hours}
 
 要更改系统运维窗口，请单击**编辑**以打开**维护时间设置**对话框，并从**时间段 (UTC) **下拉列表中选择合适的运维窗口。
 
-## 相关文档{#related-topics}
+## 相关文档{#related-topics}{#related-topics}
 
 - [设置时区](./manage-timezone)
 
 - [删除组织](./delete-your-org) 
 
 - [使用回收站](./use-recycle-bin) 
+

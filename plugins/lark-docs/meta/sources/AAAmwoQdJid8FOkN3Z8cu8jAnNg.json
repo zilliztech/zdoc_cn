@@ -1,0 +1,463 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": false,
+  "node_create_time": "1687140859",
+  "node_token": "AAAmwoQdJid8FOkN3Z8cu8jAnNg",
+  "node_type": "origin",
+  "obj_create_time": "1687140859",
+  "obj_edit_time": "1700714842",
+  "obj_token": "F5fUdWRdBo5VVPxiqNdcWoWtnKe",
+  "obj_type": "docx",
+  "origin_node_token": "AAAmwoQdJid8FOkN3Z8cu8jAnNg",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "DaoawdnS1iEOT8kFGW0cAc8qntc",
+  "space_id": "7167193056431783939",
+  "title": "设置时区",
+  "slug": "manage-timezone",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "F5fUdWRdBo5VVPxiqNdcWoWtnKe",
+        "block_type": 1,
+        "children": [
+          "N9aCdoVESo9cMVxIDpycYLwQnRc",
+          "S4FpdnAf5onorsxXiONcJ6cYnXT",
+          "Yultd9wvso6iO8xUYupcT2d8ngh",
+          "JqghdUyaPo5D7Jxu8SrcOvhSnLd",
+          "I94XdFd29oExcGxsRwZcZhctnfh",
+          "Tn0sd5SRro5LxdxjX1mcFoJHnDb",
+          "R7JUdOihNo705qx00WIcLU15nYd",
+          "G2vFdH67QormZAxqOp3cp5BKn2e",
+          "GamCdLGJ7o8RlMxnxS7c8HHtn8d",
+          "ONSddKZutoKTGcxIRtecb5Cnnvh"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "设置时区",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "N9aCdoVESo9cMVxIDpycYLwQnRc",
+        "block_type": 2,
+        "parent_id": "F5fUdWRdBo5VVPxiqNdcWoWtnKe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "默认情况下，系统时区的设置会与首次登录地保持一致，并会应用 Zilliz Cloud 中显示的所有时间字符串。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "S4FpdnAf5onorsxXiONcJ6cYnXT",
+        "block_type": 26,
+        "comment_ids": [
+          "7278895360830275587"
+        ],
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6161-1683%26t%3DnwCpDmwxsvCUk85L-4"
+          }
+        },
+        "parent_id": "F5fUdWRdBo5VVPxiqNdcWoWtnKe"
+      },
+      {
+        "block_id": "Yultd9wvso6iO8xUYupcT2d8ngh",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看当前时区{#view-the-current-time-zone}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "F5fUdWRdBo5VVPxiqNdcWoWtnKe"
+      },
+      {
+        "block_id": "JqghdUyaPo5D7Jxu8SrcOvhSnLd",
+        "block_type": 2,
+        "parent_id": "F5fUdWRdBo5VVPxiqNdcWoWtnKe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要查看当前时区，请从左侧导航栏中选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "系统",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "设置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，并在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "时区",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "区域的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "系统时区",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "下找到当前应用的时区。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "I94XdFd29oExcGxsRwZcZhctnfh",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "编辑时区{#edit-the-time-zone}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "F5fUdWRdBo5VVPxiqNdcWoWtnKe"
+      },
+      {
+        "block_id": "Tn0sd5SRro5LxdxjX1mcFoJHnDb",
+        "block_type": 2,
+        "parent_id": "F5fUdWRdBo5VVPxiqNdcWoWtnKe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要更改系统时区，请单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "编辑",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "以打开",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "时区设置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "对话框，并从下拉列表中选择时区。您还可以输入时区名称以快速检索所需的时区。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "R7JUdOihNo705qx00WIcLU15nYd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相关文档{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "F5fUdWRdBo5VVPxiqNdcWoWtnKe"
+      },
+      {
+        "block_id": "G2vFdH67QormZAxqOp3cp5BKn2e",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "设置运维窗口",
+                "token": "Ah5HwOryHilTp4klJ6VcR4eJnvd",
+                "url": "https://zilliverse.feishu.cn/wiki/Ah5HwOryHilTp4klJ6VcR4eJnvd"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "F5fUdWRdBo5VVPxiqNdcWoWtnKe"
+      },
+      {
+        "block_id": "GamCdLGJ7o8RlMxnxS7c8HHtn8d",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "删除组织",
+                "token": "MkZjwrXIpicJ5xkYwu6cMK8inVb",
+                "url": "https://zilliverse.feishu.cn/wiki/MkZjwrXIpicJ5xkYwu6cMK8inVb"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "F5fUdWRdBo5VVPxiqNdcWoWtnKe"
+      },
+      {
+        "block_id": "ONSddKZutoKTGcxIRtecb5Cnnvh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "使用回收站",
+                "token": "XVQcw6qgxiC31ikfk06cOo1jnch",
+                "url": "https://zilliverse.feishu.cn/wiki/XVQcw6qgxiC31ikfk06cOo1jnch"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "F5fUdWRdBo5VVPxiqNdcWoWtnKe"
+      }
+    ],
+    "counts": 11
+  }
+}

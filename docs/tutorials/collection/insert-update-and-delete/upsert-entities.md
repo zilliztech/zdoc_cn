@@ -2,6 +2,7 @@
 slug: /upsert-entities
 beta: TRUE
 notebook: 08_upsert_entities.ipynb
+token: FdqOwWn9siVmS2kHLjpczaTlnlc
 sidebar_position: 2
 ---
 
@@ -25,7 +26,7 @@ import TabItem from '@theme/TabItem';
 
 </Admonition>
 
-## 开始前{#before-you-start}
+## 开始前{#before-you-start}{#before-you-start}
 
 在执行 Upsert 操作前，请确保以下几点：
 
@@ -35,7 +36,7 @@ import TabItem from '@theme/TabItem';
 
 - 您已根据示例数据集创建了相应 Schema 的 Collection，并且该 Collection 已完成索引构建及加载。详细信息请参见[开启动态 Schema](./enable-dynamic-schema)。
 
-## 准备数据{#prepare-data}
+## 准备数据{#prepare-data}{#prepare-data}
 
 本示例中，我们将对示例数据集中的 Entity 进行 Upsert 操作。您可以用以下代码来处理数据：
 
@@ -233,7 +234,7 @@ data="$(cat path/to/medium_articles_2020_dpr.json \
 </TabItem>
 </Tabs>
 
-## Upsert 数据{#upsert-data}
+## Upsert 数据{#upsert-data}{#upsert-upsert-data}
 
 数据准备完毕后，可使用以下代码将其 Upsert 至 Collection：
 
@@ -373,7 +374,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 写入数据{#understand-flushing-data}
+## 写入数据{#understand-flushing-data}{#understand-flushing-data}
 
 Zilliz Cloud 会自动存储已插入的数据。
 
@@ -383,16 +384,17 @@ Zilliz Cloud 会自动存储已插入的数据。
 
 在大多数情况下，您无需手动调用 `flush()`。系统会自动优雅地处理这一过程。
 
-## 使用限制{#limits}
+## 使用限制{#limits}{#limits}
 
 - Upsert 操作不会更新主键值。
 
 - Upsert 操作不支持开启了 `autoID` 的 Collection。
 
-## 相关文档{#related-topics}
+## 相关文档{#related-topics}{#related-topics}
 
 - [创建 Collection](./create-collection)
 
 - [开启动态 Schema](./enable-dynamic-schema)
 
 - [使用 Partition Key](./use-partition-key)
+

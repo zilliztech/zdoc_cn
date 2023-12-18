@@ -1,0 +1,3618 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1701681233",
+  "node_token": "WkqDwkOXMiP1B3kI1YKcIueFndh",
+  "node_type": "origin",
+  "obj_create_time": "1701681233",
+  "obj_edit_time": "1701769501",
+  "obj_token": "Sb2ldcEl2olcbcxsCNucuWe8ndb",
+  "obj_type": "docx",
+  "origin_node_token": "WkqDwkOXMiP1B3kI1YKcIueFndh",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "R8KJwdSVIiaM6VkQN8kcqd5en6c",
+  "space_id": "7167193056431783939",
+  "title": "通过 Web 控制台创建 Pipelines",
+  "slug": "create-pipelines-on-web-ui",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb",
+        "block_type": 1,
+        "children": [
+          "DchZdQD0DobIyGxpiXmcGpwYncf",
+          "HhBgdon8bobLeqx4g9YcQsrvnvd",
+          "NkMgdA7HCoTRvgxBifxcVtjknPf",
+          "KA6adMYX2o8Q0hxZysvc011gnGc",
+          "Scejdsh4kosezmxQGJpc49HVnKe",
+          "RDBdd4RUfoEl8wx0HzEcWxcVnmf",
+          "BaYBdNVCZoiu4wxFbwLcJ2hgnOf",
+          "SR3IdtKEVowarFxSkQPcpsicnHf",
+          "USBpdlPTIooAyixy18Dc0NNbnIg",
+          "HNqDdZw9NoAwUKxonWacVYafnyd",
+          "DIE6dP8W4ocM6zxn3gpcI101nab",
+          "BGhkdYAdOo3hFRxPMeocmv3HnTd",
+          "ZZLZd1tfroGa85xSWuBcqOyHnuf",
+          "MfRVd10CfoYJdCxL9T2cfQ5cnYg",
+          "H1XGd76SIow3blxS0KDcJjmFnzs",
+          "MNswd2cIkoVznRxTlV7cv0BZnwg",
+          "PjbidUkvVoL6OgxztEDcjSc2nXc",
+          "DLjsdImuOocbJYxgvsecirHLn7c",
+          "WkAlduukxoE5cZxmJ99cZ8kpnhd",
+          "MKj1d5JEZo8ZhjxykiacPRa6n6c",
+          "IfWGdLKSFoUtQRxe6BQcouNwnhe",
+          "A4j7dXFTpo3BWMxSM4vcwBqpnWc",
+          "VLCfdjrygoltCBxBHq5cfZXRnXU",
+          "SclLdrRAjomzgJxuw1Kc72IgnZe",
+          "HMDCd5LTOoSZ0axVruwcyqExnxb",
+          "EMAfdmCByoseH1xwRbKc7XrdnVS",
+          "XLGNdxhGkoly1AxnkW3cpya9nzc",
+          "JdyGdUi7XoHPRhxygYocO9ZPnQs",
+          "GgcxdTnuboFhWMxCWwhcVNylnCd",
+          "PYwldSDyAosPnqxQUrPcgb98nge",
+          "SFnedBsTMoHbxaxu6MDc78Ngn2d",
+          "I7mndgTulo2H3DxkLAdcpq5xn4g",
+          "NcUddrfBFoes7ex9Pshc3HmVnlg",
+          "Xa0QdpcO0okSPkxc5bccpPBdnib",
+          "EPXOdauUAoXR8ixMZd1cUm8dnse",
+          "XqYedVqPVomMTzxPEIycQ7kjnrg",
+          "SPPUdL4ZgoEvnLxqnAgcDFjdnie"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过 Web 控制台创建 Pipelines",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "DchZdQD0DobIyGxpiXmcGpwYncf",
+        "block_type": 2,
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以通过 Zilliz Cloud Web 控制台轻松直观地创建 Pipelines。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HhBgdon8bobLeqx4g9YcQsrvnvd",
+        "block_type": 2,
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NkMgdA7HCoTRvgxBifxcVtjknPf",
+        "block_type": 34,
+        "children": [
+          "PVLidkgAuoa8kJxRh1xcgqlLnFg",
+          "Umjcd0Rbdo1viqx9q4ucq9CInnf"
+        ],
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb",
+        "quote_container": {}
+      },
+      {
+        "block_id": "PVLidkgAuoa8kJxRh1xcgqlLnFg",
+        "block_type": 2,
+        "parent_id": "NkMgdA7HCoTRvgxBifxcVtjknPf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Umjcd0Rbdo1viqx9q4ucq9CInnf",
+        "block_type": 2,
+        "parent_id": "NkMgdA7HCoTRvgxBifxcVtjknPf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在创建 Pipelines，您需要先创建 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "serverless 集群",
+                "text_element_style": {
+                  "background_color": 1,
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fdocx%2FCDOJd3wbeoPsxyxfguxcfe89n5g%3Fchunked%3Dfalse%23X6z6dlvhkoBxj6xvn48cGzefnHf"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "background_color": 1,
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KA6adMYX2o8Q0hxZysvc011gnGc",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建 Ingestion pipeline{#create-an-ingestion-pipeline}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "Scejdsh4kosezmxQGJpc49HVnKe",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择项目。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "RDBdd4RUfoEl8wx0HzEcWxcVnmf",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击左侧导航栏中 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Pipelines",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "点击 + Pipeline。",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "BaYBdNVCZoiu4wxFbwLcJ2hgnOf",
+        "block_type": 13,
+        "children": [
+          "HrztdNxdZobCX4xGzWVcjOiPnkc"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择需要创建的 Pipeline 类型。点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " Ingestion Pipeline ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "下的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "+ Pipeline ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "按钮。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "HrztdNxdZobCX4xGzWVcjOiPnkc",
+        "block_type": 34,
+        "children": [
+          "Zzi2ddqRqoSvVdxsjQqcilSInsf",
+          "Ctuzd7s5Bo0kmuxN3w4cFKQ4nqd"
+        ],
+        "parent_id": "BaYBdNVCZoiu4wxFbwLcJ2hgnOf",
+        "quote_container": {}
+      },
+      {
+        "block_id": "Zzi2ddqRqoSvVdxsjQqcilSInsf",
+        "block_type": 2,
+        "parent_id": "HrztdNxdZobCX4xGzWVcjOiPnkc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ctuzd7s5Bo0kmuxN3w4cFKQ4nqd",
+        "block_type": 2,
+        "parent_id": "HrztdNxdZobCX4xGzWVcjOiPnkc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "只有在完成创建 Ingestion pipeline 后方可创建",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " Search 和 Deletion pipeline",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SR3IdtKEVowarFxSkQPcpsicnHf",
+        "block_type": 13,
+        "children": [
+          "RHwkdQe0zo9nqQxvz1Wcwr7HnEg"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "设置 Ingestion pipeline。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "RHwkdQe0zo9nqQxvz1Wcwr7HnEg",
+        "block_type": 31,
+        "children": [
+          "L1KZdixE5oU8Z3xLMKeck3mznfd",
+          "Kr4FdPw68o1IasxCovpclpUrnB6",
+          "MJHedU7AsomGFExx5yxcs2Tlnmb",
+          "WyKtdZ4deoxbVLxev9icLsgOnpe",
+          "Ibaid5s2IoU9DNxlQCHcyAXtn7f",
+          "BJD9d96KtopcIbxGvsycopAGnOc",
+          "NpKBdQtxcoTDLaxyUyOc9ut9nzh",
+          "NeO0dlAcborFCWxLB2Bc5fT3n2e",
+          "FIBcdJCS8orLA3x54C9cpoLzn5f",
+          "WP9hdxrIboArgWxBrIVcep1Kn2e"
+        ],
+        "parent_id": "SR3IdtKEVowarFxSkQPcpsicnHf",
+        "table": {
+          "cells": [
+            "L1KZdixE5oU8Z3xLMKeck3mznfd",
+            "Kr4FdPw68o1IasxCovpclpUrnB6",
+            "MJHedU7AsomGFExx5yxcs2Tlnmb",
+            "WyKtdZ4deoxbVLxev9icLsgOnpe",
+            "Ibaid5s2IoU9DNxlQCHcyAXtn7f",
+            "BJD9d96KtopcIbxGvsycopAGnOc",
+            "NpKBdQtxcoTDLaxyUyOc9ut9nzh",
+            "NeO0dlAcborFCWxLB2Bc5fT3n2e",
+            "FIBcdJCS8orLA3x54C9cpoLzn5f",
+            "WP9hdxrIboArgWxBrIVcep1Kn2e"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              180,
+              315
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 5
+          }
+        }
+      },
+      {
+        "block_id": "L1KZdixE5oU8Z3xLMKeck3mznfd",
+        "block_type": 32,
+        "children": [
+          "LbzcdXFaookt6axFqEGcxRd8nrg"
+        ],
+        "parent_id": "RHwkdQe0zo9nqQxvz1Wcwr7HnEg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "LbzcdXFaookt6axFqEGcxRd8nrg",
+        "block_type": 2,
+        "parent_id": "L1KZdixE5oU8Z3xLMKeck3mznfd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "参数",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Kr4FdPw68o1IasxCovpclpUrnB6",
+        "block_type": 32,
+        "children": [
+          "CBTtdczoroqX1WxfosJcLQ5Cnvf"
+        ],
+        "parent_id": "RHwkdQe0zo9nqQxvz1Wcwr7HnEg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "CBTtdczoroqX1WxfosJcLQ5Cnvf",
+        "block_type": 2,
+        "parent_id": "Kr4FdPw68o1IasxCovpclpUrnB6",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MJHedU7AsomGFExx5yxcs2Tlnmb",
+        "block_type": 32,
+        "children": [
+          "HwXfdQOG4oVmSuxAUhpcVsekngh"
+        ],
+        "parent_id": "RHwkdQe0zo9nqQxvz1Wcwr7HnEg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "HwXfdQOG4oVmSuxAUhpcVsekngh",
+        "block_type": 2,
+        "parent_id": "MJHedU7AsomGFExx5yxcs2Tlnmb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "目标集群",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WyKtdZ4deoxbVLxev9icLsgOnpe",
+        "block_type": 32,
+        "children": [
+          "VrkDdMmcooMowlxu7ajcM4W5ndc"
+        ],
+        "parent_id": "RHwkdQe0zo9nqQxvz1Wcwr7HnEg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "VrkDdMmcooMowlxu7ajcM4W5ndc",
+        "block_type": 2,
+        "parent_id": "WyKtdZ4deoxbVLxev9icLsgOnpe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建 Pipeline 时自动创建的 Collection 所属集群。目标集群必须为 Serverless 集群。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ibaid5s2IoU9DNxlQCHcyAXtn7f",
+        "block_type": 32,
+        "children": [
+          "RsVbduIKyocAtPxoDRlcgtHanQd"
+        ],
+        "parent_id": "RHwkdQe0zo9nqQxvz1Wcwr7HnEg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RsVbduIKyocAtPxoDRlcgtHanQd",
+        "block_type": 2,
+        "parent_id": "Ibaid5s2IoU9DNxlQCHcyAXtn7f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Collection 名称",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BJD9d96KtopcIbxGvsycopAGnOc",
+        "block_type": 32,
+        "children": [
+          "SPBNd8PUZouD9Ax5I2uccqRUnig"
+        ],
+        "parent_id": "RHwkdQe0zo9nqQxvz1Wcwr7HnEg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "SPBNd8PUZouD9Ax5I2uccqRUnig",
+        "block_type": 2,
+        "parent_id": "BJD9d96KtopcIbxGvsycopAGnOc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "自动创建的 Collection 的名称。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NpKBdQtxcoTDLaxyUyOc9ut9nzh",
+        "block_type": 32,
+        "children": [
+          "NYL6dwy4doskPixj7vAcIMZxnIf"
+        ],
+        "parent_id": "RHwkdQe0zo9nqQxvz1Wcwr7HnEg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "NYL6dwy4doskPixj7vAcIMZxnIf",
+        "block_type": 2,
+        "parent_id": "NpKBdQtxcoTDLaxyUyOc9ut9nzh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Pipeline 名称",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NeO0dlAcborFCWxLB2Bc5fT3n2e",
+        "block_type": 32,
+        "children": [
+          "HGI7dRlRDorx0YxPNU5cHLuxnwc"
+        ],
+        "parent_id": "RHwkdQe0zo9nqQxvz1Wcwr7HnEg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "HGI7dRlRDorx0YxPNU5cHLuxnwc",
+        "block_type": 2,
+        "parent_id": "NeO0dlAcborFCWxLB2Bc5fT3n2e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "新创建的 Ingestion pipeline 名称。Pipeline 名称只能包含小写字母、数字和下划线（_)。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FIBcdJCS8orLA3x54C9cpoLzn5f",
+        "block_type": 32,
+        "children": [
+          "ChiTdkxu7obtFMxPTTTcKKQ0nff"
+        ],
+        "parent_id": "RHwkdQe0zo9nqQxvz1Wcwr7HnEg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ChiTdkxu7obtFMxPTTTcKKQ0nff",
+        "block_type": 2,
+        "parent_id": "FIBcdJCS8orLA3x54C9cpoLzn5f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述（可选）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WP9hdxrIboArgWxBrIVcep1Kn2e",
+        "block_type": 32,
+        "children": [
+          "B5jLdWtsmohobExDXpQcWeRFnfd"
+        ],
+        "parent_id": "RHwkdQe0zo9nqQxvz1Wcwr7HnEg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "B5jLdWtsmohobExDXpQcWeRFnfd",
+        "block_type": 2,
+        "parent_id": "WP9hdxrIboArgWxBrIVcep1Kn2e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "新创建的 Ingestion pipeline 描述。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "USBpdlPTIooAyixy18Dc0NNbnIg",
+        "block_type": 13,
+        "children": [
+          "HS3sdoye9oWb9cxfa6octTF1nsg",
+          "VwOSdMIsSoqBkIx7ZBhcXReqnSc"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "添加函数。1 个 Ingestion pipeline 中只可添加 1 个 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "INDEX_DOC ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "函数和至多 5 个 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "PRESERVE",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 函数。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "HS3sdoye9oWb9cxfa6octTF1nsg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "添加 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "INDEX_DOC",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 函数。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "GRzMddQWNo9biuxQs2hcsOk6nUh",
+          "NxGedUBC7oNA1sxYonOcqhJdnAf",
+          "CZW7d5oOgoEsCYx7lI4cCsQ9n6d",
+          "Zyjzdah0LoR4zNxa5vQcpKWJndf"
+        ],
+        "parent_id": "USBpdlPTIooAyixy18Dc0NNbnIg"
+      },
+      {
+        "block_id": "GRzMddQWNo9biuxQs2hcsOk6nUh",
+        "block_type": 2,
+        "parent_id": "HS3sdoye9oWb9cxfa6octTF1nsg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "INDEX_DOC",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 函数将文档切分为多个文档块，将文档块转换为 Embedding 向量并存储在 Collection 中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NxGedUBC7oNA1sxYonOcqhJdnAf",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "输入函数名称。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "HS3sdoye9oWb9cxfa6octTF1nsg"
+      },
+      {
+        "block_id": "CZW7d5oOgoEsCYx7lI4cCsQ9n6d",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择文档语言。您选择的语言将决定 Zilliz Cloud Pipelines 使用何种模型生成 Embedding 向量。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "HS3sdoye9oWb9cxfa6octTF1nsg"
+      },
+      {
+        "block_id": "Zyjzdah0LoR4zNxa5vQcpKWJndf",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "添加",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "HS3sdoye9oWb9cxfa6octTF1nsg"
+      },
+      {
+        "block_id": "VwOSdMIsSoqBkIx7ZBhcXReqnSc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "添加 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "PRESERVE",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 函数。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "PZP4dJjAaotbQyxULmkc1O0pnNf",
+          "IlAYd1Pw5oaqQlxNJGYcy3AbnCb",
+          "Z0npdvcPXo2yYTx3vPOcu8GMnuz",
+          "KpREdllzKoz3FbxodyicQC7jnLc"
+        ],
+        "parent_id": "USBpdlPTIooAyixy18Dc0NNbnIg"
+      },
+      {
+        "block_id": "PZP4dJjAaotbQyxULmkc1O0pnNf",
+        "block_type": 2,
+        "parent_id": "VwOSdMIsSoqBkIx7ZBhcXReqnSc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "PRESERVE",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 函数在 Collection 中添加标量字段，用于保留文档元数据。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IlAYd1Pw5oaqQlxNJGYcy3AbnCb",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "输入函数名称。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VwOSdMIsSoqBkIx7ZBhcXReqnSc"
+      },
+      {
+        "block_id": "Z0npdvcPXo2yYTx3vPOcu8GMnuz",
+        "block_type": 13,
+        "children": [
+          "MlyvdsfIjo4z4VxAgvYcD3XPnmh"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "设置输入字段名称和类型。支持的字段类型包括 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Bool、Int8、Int16、Int32、Int64、Float、Double",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "VarChar",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VwOSdMIsSoqBkIx7ZBhcXReqnSc"
+      },
+      {
+        "block_id": "MlyvdsfIjo4z4VxAgvYcD3XPnmh",
+        "block_type": 34,
+        "children": [
+          "OFTAdZgmWoqUHBxwSyDcpDp3nLd",
+          "SgC6dJXnPo70J8xXaPQcrlnDnpe",
+          "S6BOdZjyKoNy8lxWPIrcMq27njg",
+          "EGlydcNGOoE13HxRrCDcEyi9nEd"
+        ],
+        "parent_id": "Z0npdvcPXo2yYTx3vPOcu8GMnuz",
+        "quote_container": {}
+      },
+      {
+        "block_id": "OFTAdZgmWoqUHBxwSyDcpDp3nLd",
+        "block_type": 2,
+        "parent_id": "MlyvdsfIjo4z4VxAgvYcD3XPnmh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SgC6dJXnPo70J8xXaPQcrlnDnpe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "目前，输出字段名称必须与输入字段名称保持一致。在运行 Ingestion pipeline 时，您将使用到输入字段名称。而输出字段名称用于自动生成的 Collection Schema 中作为保留的标量字段名称。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MlyvdsfIjo4z4VxAgvYcD3XPnmh"
+      },
+      {
+        "block_id": "S6BOdZjyKoNy8lxWPIrcMq27njg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "字段类型为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "VarChar",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 时，字符串最大长度为 100 个字符，且只可包含数字、字母。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MlyvdsfIjo4z4VxAgvYcD3XPnmh"
+      },
+      {
+        "block_id": "EGlydcNGOoE13HxRrCDcEyi9nEd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在标量字段中存储日期时，我们推荐使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Int16 ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "的数据类型。存储时间时，我们推荐使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Int32 ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "的数据类型。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MlyvdsfIjo4z4VxAgvYcD3XPnmh"
+      },
+      {
+        "block_id": "KpREdllzKoz3FbxodyicQC7jnLc",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "添加",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VwOSdMIsSoqBkIx7ZBhcXReqnSc"
+      },
+      {
+        "block_id": "HNqDdZw9NoAwUKxonWacVYafnyd",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建 Ingestion Pipeline",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "DIE6dP8W4ocM6zxn3gpcI101nab",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Ingestion pipeline 创建成功后，我们推荐您选择继续创建与新 Ingestion pipeline 兼容的 Search 和 Deletion pipeline。您也可以后续手动自行创建。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "BGhkdYAdOo3hFRxPMeocmv3HnTd",
+        "block_type": 2,
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZZLZd1tfroGa85xSWuBcqOyHnuf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建 Search pipeline{#create-a-search-pipeline}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "MfRVd10CfoYJdCxL9T2cfQ5cnYg",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择项目",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "H1XGd76SIow3blxS0KDcJjmFnzs",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击左侧导航栏中 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Pipelines",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "点击 + Pipeline。",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "MNswd2cIkoVznRxTlV7cv0BZnwg",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择需要创建的 Pipeline 类型。点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " Search Pipeline ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "下的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "+ Pipeline ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "按钮。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "PjbidUkvVoL6OgxztEDcjSc2nXc",
+        "block_type": 13,
+        "children": [
+          "QnAfdCVFGoCWasxjgOmcSsqgn3w"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "设置 Search pipeline。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "QnAfdCVFGoCWasxjgOmcSsqgn3w",
+        "block_type": 31,
+        "children": [
+          "VYPcdh1ProziFKxhn2vc4MDYnMg",
+          "XtYVdDj7GoVd3NxQlgcc3P9Snsf",
+          "LHBtd4yiFo7mZUxdzr4cUR2CnBd",
+          "JPBEdaDVkoR9naxb50jcSyFin1e",
+          "YXKZdt24XouPF6xnBNycFnGZn2f",
+          "DQSYd44NHohP4HxajlocTbqVnrg"
+        ],
+        "parent_id": "PjbidUkvVoL6OgxztEDcjSc2nXc",
+        "table": {
+          "cells": [
+            "VYPcdh1ProziFKxhn2vc4MDYnMg",
+            "XtYVdDj7GoVd3NxQlgcc3P9Snsf",
+            "LHBtd4yiFo7mZUxdzr4cUR2CnBd",
+            "JPBEdaDVkoR9naxb50jcSyFin1e",
+            "YXKZdt24XouPF6xnBNycFnGZn2f",
+            "DQSYd44NHohP4HxajlocTbqVnrg"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              180,
+              315
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 3
+          }
+        }
+      },
+      {
+        "block_id": "VYPcdh1ProziFKxhn2vc4MDYnMg",
+        "block_type": 32,
+        "children": [
+          "Moa7dSc5VoHwroxcVlhchCTVn8b"
+        ],
+        "parent_id": "QnAfdCVFGoCWasxjgOmcSsqgn3w",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Moa7dSc5VoHwroxcVlhchCTVn8b",
+        "block_type": 2,
+        "parent_id": "VYPcdh1ProziFKxhn2vc4MDYnMg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "参数",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XtYVdDj7GoVd3NxQlgcc3P9Snsf",
+        "block_type": 32,
+        "children": [
+          "PRfud7dTOo0l7Fx2PFPcjyQFn9d"
+        ],
+        "parent_id": "QnAfdCVFGoCWasxjgOmcSsqgn3w",
+        "table_cell": {}
+      },
+      {
+        "block_id": "PRfud7dTOo0l7Fx2PFPcjyQFn9d",
+        "block_type": 2,
+        "parent_id": "XtYVdDj7GoVd3NxQlgcc3P9Snsf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LHBtd4yiFo7mZUxdzr4cUR2CnBd",
+        "block_type": 32,
+        "children": [
+          "X7mYd9ab2o2zjVxwHwmcUCw1nud"
+        ],
+        "parent_id": "QnAfdCVFGoCWasxjgOmcSsqgn3w",
+        "table_cell": {}
+      },
+      {
+        "block_id": "X7mYd9ab2o2zjVxwHwmcUCw1nud",
+        "block_type": 2,
+        "parent_id": "LHBtd4yiFo7mZUxdzr4cUR2CnBd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Pipeline 名称",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JPBEdaDVkoR9naxb50jcSyFin1e",
+        "block_type": 32,
+        "children": [
+          "E7jPdlPwxoOXhTxtqSecd8U3nUe"
+        ],
+        "parent_id": "QnAfdCVFGoCWasxjgOmcSsqgn3w",
+        "table_cell": {}
+      },
+      {
+        "block_id": "E7jPdlPwxoOXhTxtqSecd8U3nUe",
+        "block_type": 2,
+        "parent_id": "JPBEdaDVkoR9naxb50jcSyFin1e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "新创建的 Search pipeline 名称。Pipeline 名称只能包含小写字母、数字和下划线（_)。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YXKZdt24XouPF6xnBNycFnGZn2f",
+        "block_type": 32,
+        "children": [
+          "UknhdQjFyo1719xMI7hcDQ4anse"
+        ],
+        "parent_id": "QnAfdCVFGoCWasxjgOmcSsqgn3w",
+        "table_cell": {}
+      },
+      {
+        "block_id": "UknhdQjFyo1719xMI7hcDQ4anse",
+        "block_type": 2,
+        "parent_id": "YXKZdt24XouPF6xnBNycFnGZn2f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述（可选）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DQSYd44NHohP4HxajlocTbqVnrg",
+        "block_type": 32,
+        "children": [
+          "OS5cdTJb7o035Ex91J6cZqQFnbg"
+        ],
+        "parent_id": "QnAfdCVFGoCWasxjgOmcSsqgn3w",
+        "table_cell": {}
+      },
+      {
+        "block_id": "OS5cdTJb7o035Ex91J6cZqQFnbg",
+        "block_type": 2,
+        "parent_id": "DQSYd44NHohP4HxajlocTbqVnrg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "新创建的 Search pipeline 描述。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DLjsdImuOocbJYxgvsecirHLn7c",
+        "block_type": 13,
+        "children": [
+          "NZ7sdJWRKo7LgjxrnGbc0KbLnhc",
+          "KWp9dgpYLoyD0DxGQfBc4pFxnte",
+          "JeOkdSLvbod2EWx6FphcSk8un3c",
+          "LuMxdyH4soRQl6xEd9vcMgjhnAe"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "添加函数。您只可添加 1 个 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "SEARCH_DOC_CHUNK",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 函数。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "NZ7sdJWRKo7LgjxrnGbc0KbLnhc",
+        "block_type": 34,
+        "children": [
+          "BbQpdOI0xoAGMjxaVn5cEEEhnme",
+          "FYm9dSuxOoZE1CxG6ilcYUwqnso"
+        ],
+        "parent_id": "DLjsdImuOocbJYxgvsecirHLn7c",
+        "quote_container": {}
+      },
+      {
+        "block_id": "BbQpdOI0xoAGMjxaVn5cEEEhnme",
+        "block_type": 2,
+        "parent_id": "NZ7sdJWRKo7LgjxrnGbc0KbLnhc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FYm9dSuxOoZE1CxG6ilcYUwqnso",
+        "block_type": 2,
+        "parent_id": "NZ7sdJWRKo7LgjxrnGbc0KbLnhc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为了方便您使用，Web 控制台界面上的输入字段名称默认设置为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "query_text",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 且不可修改。如需修改输入字段名称，请",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "通过 Restful API 创建 Search pipeline",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FOZXAwPFrnivOHAkGEGIcihgxnxe%23LXjBdM4FfoLMd5xa56CcmwP4nqZ"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KWp9dgpYLoyD0DxGQfBc4pFxnte",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "输入函数名称。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "DLjsdImuOocbJYxgvsecirHLn7c"
+      },
+      {
+        "block_id": "JeOkdSLvbod2EWx6FphcSk8un3c",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "目标集群",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "目标 Collection",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。目标集群必须为 Serverless 集群。目标 Collection 必须为创建 Ingestion pipeline 时自动创建的 Collection，否则创建的 Search Pipeline 将不兼容。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "DLjsdImuOocbJYxgvsecirHLn7c"
+      },
+      {
+        "block_id": "LuMxdyH4soRQl6xEd9vcMgjhnAe",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "添加",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "DLjsdImuOocbJYxgvsecirHLn7c"
+      },
+      {
+        "block_id": "WkAlduukxoE5cZxmJ99cZ8kpnhd",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建 Search Pipeline",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "MKj1d5JEZo8ZhjxykiacPRa6n6c",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建 Deletion pipeline{#create-a-deletion-pipeline}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "IfWGdLKSFoUtQRxe6BQcouNwnhe",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择项目。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "A4j7dXFTpo3BWMxSM4vcwBqpnWc",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击左侧导航栏中 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Pipelines",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "点击 + Pipeline。",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "VLCfdjrygoltCBxBHq5cfZXRnXU",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择需要创建的 Pipeline 类型。点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " Deletion Pipeline ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "下的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "+ Pipeline ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "按钮。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "SclLdrRAjomzgJxuw1Kc72IgnZe",
+        "block_type": 13,
+        "children": [
+          "OZlrdx4yooYqGtxiJmbcFwrPnUg"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "设置 Deletion pipeline。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "OZlrdx4yooYqGtxiJmbcFwrPnUg",
+        "block_type": 31,
+        "children": [
+          "R2OFdEzYTo1g4kxLQRJchgyNn7e",
+          "T4lRdWCivoWraoxNPcscRYq8n8g",
+          "MRBTdnfHpoFuzAxOYj9c50MznQd",
+          "MihIdCTbxokRgzxyjeDcF1spnJg",
+          "D7RkdZyWFooyCgxRRJ6c59z6nxe",
+          "HNqWdhQ8uoCvitxiam0cTm2Injb"
+        ],
+        "parent_id": "SclLdrRAjomzgJxuw1Kc72IgnZe",
+        "table": {
+          "cells": [
+            "R2OFdEzYTo1g4kxLQRJchgyNn7e",
+            "T4lRdWCivoWraoxNPcscRYq8n8g",
+            "MRBTdnfHpoFuzAxOYj9c50MznQd",
+            "MihIdCTbxokRgzxyjeDcF1spnJg",
+            "D7RkdZyWFooyCgxRRJ6c59z6nxe",
+            "HNqWdhQ8uoCvitxiam0cTm2Injb"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              180,
+              315
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 3
+          }
+        }
+      },
+      {
+        "block_id": "R2OFdEzYTo1g4kxLQRJchgyNn7e",
+        "block_type": 32,
+        "children": [
+          "SSKOdbUoioflLlxY7uxcmiDmn6f"
+        ],
+        "parent_id": "OZlrdx4yooYqGtxiJmbcFwrPnUg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "SSKOdbUoioflLlxY7uxcmiDmn6f",
+        "block_type": 2,
+        "parent_id": "R2OFdEzYTo1g4kxLQRJchgyNn7e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "参数",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "T4lRdWCivoWraoxNPcscRYq8n8g",
+        "block_type": 32,
+        "children": [
+          "Aa31dpTTtoYoQPxYqzlc81dinHh"
+        ],
+        "parent_id": "OZlrdx4yooYqGtxiJmbcFwrPnUg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Aa31dpTTtoYoQPxYqzlc81dinHh",
+        "block_type": 2,
+        "parent_id": "T4lRdWCivoWraoxNPcscRYq8n8g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MRBTdnfHpoFuzAxOYj9c50MznQd",
+        "block_type": 32,
+        "children": [
+          "VNnldYwGrouS3axPeNCc539jnyf"
+        ],
+        "parent_id": "OZlrdx4yooYqGtxiJmbcFwrPnUg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "VNnldYwGrouS3axPeNCc539jnyf",
+        "block_type": 2,
+        "parent_id": "MRBTdnfHpoFuzAxOYj9c50MznQd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Pipeline 名称",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MihIdCTbxokRgzxyjeDcF1spnJg",
+        "block_type": 32,
+        "children": [
+          "LrcQdwhTioGZPjxkjNHctQQRnwf"
+        ],
+        "parent_id": "OZlrdx4yooYqGtxiJmbcFwrPnUg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "LrcQdwhTioGZPjxkjNHctQQRnwf",
+        "block_type": 2,
+        "parent_id": "MihIdCTbxokRgzxyjeDcF1spnJg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "新创建的 Deletion pipeline 名称。Pipeline 名称只能包含小写字母、数字和下划线（_)。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "D7RkdZyWFooyCgxRRJ6c59z6nxe",
+        "block_type": 32,
+        "children": [
+          "BjoLdbkF9ogDNvxLrZEcwL5jnzd"
+        ],
+        "parent_id": "OZlrdx4yooYqGtxiJmbcFwrPnUg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "BjoLdbkF9ogDNvxLrZEcwL5jnzd",
+        "block_type": 2,
+        "parent_id": "D7RkdZyWFooyCgxRRJ6c59z6nxe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述（可选）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HNqWdhQ8uoCvitxiam0cTm2Injb",
+        "block_type": 32,
+        "children": [
+          "Fm3QdKnuroaa3OxGZkecPQwmnJh"
+        ],
+        "parent_id": "OZlrdx4yooYqGtxiJmbcFwrPnUg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Fm3QdKnuroaa3OxGZkecPQwmnJh",
+        "block_type": 2,
+        "parent_id": "HNqWdhQ8uoCvitxiam0cTm2Injb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "新创建的 Deletion pipeline 描述。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HMDCd5LTOoSZ0axVruwcyqExnxb",
+        "block_type": 13,
+        "children": [
+          "Dl2tdyhm3olTLvxorPpcmS5unmf",
+          "IqbOdQGoFooblOxMWsjcQStgn6g",
+          "Nb02d8b4BoNVlWxbl3Cc7Tq9nad"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "添加函数。您只可添加 1 个 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "PURGE_DOC_INDEX",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 函数。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "Dl2tdyhm3olTLvxorPpcmS5unmf",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "输入函数名称。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "HMDCd5LTOoSZ0axVruwcyqExnxb"
+      },
+      {
+        "block_id": "IqbOdQGoFooblOxMWsjcQStgn6g",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "输入字段名称必须为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "doc_name",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "HMDCd5LTOoSZ0axVruwcyqExnxb"
+      },
+      {
+        "block_id": "Nb02d8b4BoNVlWxbl3Cc7Tq9nad",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "添加",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "HMDCd5LTOoSZ0axVruwcyqExnxb"
+      },
+      {
+        "block_id": "EMAfdmCByoseH1xwRbKc7XrdnVS",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建 Deletion Pipeline",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "XLGNdxhGkoly1AxnkW3cpya9nzc",
+        "block_type": 2,
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JdyGdUi7XoHPRhxygYocO9ZPnQs",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "管理 Pipeline{#manage-your-pipelines}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "GgcxdTnuboFhWMxCWwhcVNylnCd",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看 Pipeline{#view-your-pipelines}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "PYwldSDyAosPnqxQUrPcgb98nge",
+        "block_type": 2,
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击左侧导航栏中 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Pipelines",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。您可以查看某一项目下所有的 Pipeline 详情。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SFnedBsTMoHbxaxu6MDc78Ngn2d",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "运行 Pipeline{#run-a-pipeline}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "I7mndgTulo2H3DxkLAdcpq5xn4g",
+        "block_type": 2,
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需运行某一 Pipeline，请点击该 Pipeline 右侧的“▶︎”按钮。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NcUddrfBFoes7ex9Pshc3HmVnlg",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "删除 Pipeline{#drop-a-pipeline}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "Xa0QdpcO0okSPkxc5bccpPBdnib",
+        "block_type": 2,
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需删除不再使用的 Pipeline，请点击 Pipeline 右侧的“🗑”按钮。该操作仅删除 Pipeline，不会影响自动创建的 Collection。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EPXOdauUAoXR8ixMZd1cUm8dnse",
+        "block_type": 34,
+        "children": [
+          "CVhud6IRmo41kJx1So7cR5KunxH",
+          "YIQbdgKRNoqoANxpdp9cbxSQnj8",
+          "If7Td261qo7EruxRpB8cyLcpnTh"
+        ],
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb",
+        "quote_container": {}
+      },
+      {
+        "block_id": "CVhud6IRmo41kJx1So7cR5KunxH",
+        "block_type": 2,
+        "parent_id": "EPXOdauUAoXR8ixMZd1cUm8dnse",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "🚧 警告",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YIQbdgKRNoqoANxpdp9cbxSQnj8",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Pipeline 一旦删除后不可恢复，请谨慎操作。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "EPXOdauUAoXR8ixMZd1cUm8dnse"
+      },
+      {
+        "block_id": "If7Td261qo7EruxRpB8cyLcpnTh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "删除 Ingestion pipeline 时不会影响其相关联的 Collection。您的数据十分安全。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "EPXOdauUAoXR8ixMZd1cUm8dnse"
+      },
+      {
+        "block_id": "XqYedVqPVomMTzxPEIycQ7kjnrg",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D21763-4239%26mode%3Ddesign%26t%3DpsyBh4YqzYeWmKgX-4"
+          }
+        },
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb"
+      },
+      {
+        "block_id": "SPPUdL4ZgoEvnLxqnAgcDFjdnie",
+        "block_type": 2,
+        "parent_id": "Sb2ldcEl2olcbcxsCNucuWe8ndb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 117
+  }
+}

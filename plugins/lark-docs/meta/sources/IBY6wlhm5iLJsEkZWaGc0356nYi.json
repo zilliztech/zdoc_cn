@@ -1,0 +1,698 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1700641529",
+  "node_token": "IBY6wlhm5iLJsEkZWaGc0356nYi",
+  "node_type": "origin",
+  "obj_create_time": "1700641529",
+  "obj_edit_time": "1700704962",
+  "obj_token": "FLR9d56IooP3GUxR4OvcZCxPn9c",
+  "obj_type": "docx",
+  "origin_node_token": "IBY6wlhm5iLJsEkZWaGc0356nYi",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "WJJvw84crikA8Xk4P4IcJJvSnKd",
+  "space_id": "7167193056431783939",
+  "title": "一致性等级",
+  "slug": "consistency-level",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "FLR9d56IooP3GUxR4OvcZCxPn9c",
+        "block_type": 1,
+        "children": [
+          "DawldTNEdoajPVxriHWc8yJXn4f",
+          "Uze3dd6gBokIPhxshI6c9OEXnzd",
+          "H8k1d25fOosyU3xHF9vcOowanHf",
+          "JBDrd8Y4gotersxHO0Sc2LsenHe",
+          "NQoIdyvK8oExjVxZHEVcfAAsnEd",
+          "FMJtd6gEZol62hxTKOYc5VVknEh",
+          "Tgx8dks1NoThOzx38iRc2Tb4n9o",
+          "RwVTdu1QjofTJJxvxEqcYmWPnoe",
+          "EoiidmhfnoGcd4xpN31c47utnlh",
+          "QjoSdvLtnoUY3rxeR8ocHId2nU7",
+          "P3tzdHJVZokr4axzO2VcvxMinhe",
+          "JcbRdRaAGojsYpxm9EHc9gGrnCd",
+          "U11Gd4FR5o3hI9xZbYWcwOnenHd",
+          "FDBtdFXxQoe4XixbCxPccbUgnkg"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "一致性等级",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "DawldTNEdoajPVxriHWc8yJXn4f",
+        "block_type": 2,
+        "parent_id": "FLR9d56IooP3GUxR4OvcZCxPn9c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在分布式数据库中，一致性等级确保在读写操作期间，每个节点或副本都能获取到相同的数据。Zilliz Cloud 提供 3 种一致性级别：Strong、Bounded 和 Eventually。Zilliz Cloud 默认采用的一致性水平为 Bounded。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Uze3dd6gBokIPhxshI6c9OEXnzd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "PACELC 定理：权衡一致性、可用性、延时",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#understanding-the-balance-the-pacelc-theorem}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FLR9d56IooP3GUxR4OvcZCxPn9c"
+      },
+      {
+        "block_id": "H8k1d25fOosyU3xHF9vcOowanHf",
+        "block_type": 2,
+        "parent_id": "FLR9d56IooP3GUxR4OvcZCxPn9c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "PACELC 定理是 CAP 定理的延伸，是指在网络分区的情况下，需要在可用性和一致性之间做选择，否则，就在延迟和一致性之间做选择。虽然高一致性保证了数据的准确性，但其代价是更长的搜索延时。相反，低一致性保证了更快的搜索速度，但可能会牺牲数据准确性。因此，您需要根据具体的使用案例场景选择合适的一致性水平。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JBDrd8Y4gotersxHO0Sc2LsenHe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "强一致性（Strong）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "YoIjdbdY0oeA9jxgjL8cHebPnNd",
+          "AvtPdraE1oh9JOxWBd8c5hNDnRg",
+          "EUhrdzZLvoOIhhx8K5nc6d8gnfp"
+        ],
+        "parent_id": "FLR9d56IooP3GUxR4OvcZCxPn9c"
+      },
+      {
+        "block_id": "YoIjdbdY0oeA9jxgjL8cHebPnNd",
+        "block_type": 2,
+        "parent_id": "JBDrd8Y4gotersxHO0Sc2LsenHe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "强一致性（Strong）是最严格的级别，确保用户始终读取最新版本的数据，提供最高的数据准确性。但是，采用 Strong 等级一致性可能导致搜索延迟增加。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AvtPdraE1oh9JOxWBd8c5hNDnRg",
+        "block_type": 27,
+        "image": {
+          "align": 2,
+          "height": 617,
+          "token": "ETVBbtdQooUhB3xm9aScmWyinvd",
+          "width": 877
+        },
+        "parent_id": "JBDrd8Y4gotersxHO0Sc2LsenHe"
+      },
+      {
+        "block_id": "EUhrdzZLvoOIhhx8K5nc6d8gnfp",
+        "block_type": 2,
+        "parent_id": "JBDrd8Y4gotersxHO0Sc2LsenHe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Strong 一致性级别最适用于功能测试和在线金融系统等对于数据准确性有着极高要求的场景。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NQoIdyvK8oExjVxZHEVcfAAsnEd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "有限过期一致性（Bounded）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "EXF9d3h8Co7odrx3pKmc6A1xn7c",
+          "Dw61da8Ebo0iJ3xZoDdc4pfjnig",
+          "MznKdFGxyoSzg7xLQhPcVRISnDg"
+        ],
+        "parent_id": "FLR9d56IooP3GUxR4OvcZCxPn9c"
+      },
+      {
+        "block_id": "EXF9d3h8Co7odrx3pKmc6A1xn7c",
+        "block_type": 2,
+        "parent_id": "NQoIdyvK8oExjVxZHEVcfAAsnEd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "有限过期一致性（Bounded）顾名思义，允许数据在一小段时间内不一致，但整体而言数据还是一致的。Bounded 能够平衡延时和数据准确性。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Dw61da8Ebo0iJ3xZoDdc4pfjnig",
+        "block_type": 27,
+        "image": {
+          "align": 2,
+          "height": 711,
+          "token": "MIF3bSN8yoWbjhxnDL5cDeK4n1g",
+          "width": 1000
+        },
+        "parent_id": "NQoIdyvK8oExjVxZHEVcfAAsnEd"
+      },
+      {
+        "block_id": "MznKdFGxyoSzg7xLQhPcVRISnDg",
+        "block_type": 2,
+        "parent_id": "NQoIdyvK8oExjVxZHEVcfAAsnEd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Bounded 适用于视频推荐平台等系统，偶尔的数据不一致不会严重影响系统性能。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FMJtd6gEZol62hxTKOYc5VVknEh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "最终一致性（Eventually）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "KiMedM7mjoMcTmxd3RqcYRi5nIg",
+          "EawOd8FjvozL4nxiaOkc1ZSbnUf",
+          "UVHkdCMoSocZzjxH4NScaKddnRu"
+        ],
+        "parent_id": "FLR9d56IooP3GUxR4OvcZCxPn9c"
+      },
+      {
+        "block_id": "KiMedM7mjoMcTmxd3RqcYRi5nIg",
+        "block_type": 2,
+        "parent_id": "FMJtd6gEZol62hxTKOYc5VVknEh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "最终一致性（Eventually）是最宽松的级别，允许数据不一致，但最终随着时间推移收敛到数据一致的状态。Eventually 不会严格遵照数据读写顺序。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EawOd8FjvozL4nxiaOkc1ZSbnUf",
+        "block_type": 27,
+        "image": {
+          "align": 2,
+          "height": 711,
+          "token": "NErQbWhpVotFHLxHpG2cDbuGnxe",
+          "width": 1000
+        },
+        "parent_id": "FMJtd6gEZol62hxTKOYc5VVknEh"
+      },
+      {
+        "block_id": "UVHkdCMoSocZzjxH4NScaKddnRu",
+        "block_type": 2,
+        "parent_id": "FMJtd6gEZol62hxTKOYc5VVknEh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Eventually 通过牺牲即时一致性来提升搜索性能，因此用于追求搜索速度而非即时数据准确性的场景，如产品评论展示系统等。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Tgx8dks1NoThOzx38iRc2Tb4n9o",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "利用保证时间戳实现一致性",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#leveraging-guarantee-timestamp-for-consistency}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FLR9d56IooP3GUxR4OvcZCxPn9c"
+      },
+      {
+        "block_id": "RwVTdu1QjofTJJxvxEqcYmWPnoe",
+        "block_type": 2,
+        "parent_id": "FLR9d56IooP3GUxR4OvcZCxPn9c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 通过保证时间戳（GuaranteeTs）实现不同的一致性水平。保证时间戳主要用于控制查询节点，需要等到  GuaranteeTs 之前的所有都可查看后，才能开始执行搜索或查询。不同一致性级别，GuaranteeTs 值也不同：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EoiidmhfnoGcd4xpN31c47utnlh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "强一致性（Strong）：",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "GuaranteeTs 设为系统最新时间戳，QueryNodes 需要等待 ServiceTime 推进到 当前最新时间戳才能执行该 Search 请求。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FLR9d56IooP3GUxR4OvcZCxPn9c"
+      },
+      {
+        "block_id": "QjoSdvLtnoUY3rxeR8ocHId2nU7",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "最终一致性（Eventually）：",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "GuaranteeTs 设为一个特别小的值（比如说设为 1），跳过一致性检查，立刻在当 前已有数据上执行 Search 查询。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FLR9d56IooP3GUxR4OvcZCxPn9c"
+      },
+      {
+        "block_id": "P3tzdHJVZokr4axzO2VcvxMinhe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "有限过期一致性（Bounded）：",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "GuaranteeTs 是一个比系统最新时间稍旧的时间，在可容忍范围内可以立刻执行查询。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FLR9d56IooP3GUxR4OvcZCxPn9c"
+      },
+      {
+        "block_id": "JcbRdRaAGojsYpxm9EHc9gGrnCd",
+        "block_type": 2,
+        "parent_id": "FLR9d56IooP3GUxR4OvcZCxPn9c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "U11Gd4FR5o3hI9xZbYWcwOnenHd",
+        "block_type": 2,
+        "parent_id": "FLR9d56IooP3GUxR4OvcZCxPn9c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需了解一致性和保证时间戳的实现机制，请阅读",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "本文",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fgithub.com%2Fmilvus-io%2Fmilvus%2Fblob%2Ff3f46d3bb2dcae2de0bdb7bc0f7b20a72efceaab%2Fdocs%2Fdeveloper_guides%2Fhow-guarantee-ts-works-cn.md"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FDBtdFXxQoe4XixbCxPccbUgnkg",
+        "block_type": 2,
+        "parent_id": "FLR9d56IooP3GUxR4OvcZCxPn9c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 24
+  }
+}

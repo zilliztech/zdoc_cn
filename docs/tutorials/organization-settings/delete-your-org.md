@@ -2,6 +2,7 @@
 slug: /delete-your-org
 beta: FALSE
 notebook: FALSE
+token: MkZjwrXIpicJ5xkYwu6cMK8inVb
 sidebar_position: 3
 ---
 
@@ -12,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 本教程介绍如何删除 Zilliz Cloud 组织。组织删除后，其数据将被清空且无法恢复。
 
-## 前提条件{#before-you-start}
+## 前提条件{#before-you-start}{#before-you-start}
 
 开始前，请先确保：
 
@@ -20,7 +21,7 @@ import Admonition from '@theme/Admonition';
 
 - 当前组织中的[账单](./view-invoice)已全部付清。
 
-## 删除组织{#delete-organization}
+## 删除组织{#delete-organization}{#delete-organization}
 
 1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com.cn/login)。
 
@@ -38,10 +39,11 @@ import Admonition from '@theme/Admonition';
 
 ![delete-organization-cn](/img/delete-organization-cn.png)
 
-## 文档推荐{#related-topics}
+## 文档推荐{#related-topics}{#related-topics}
 
 - [权限概览](./a-panorama-view)
 
 - [管理组织与成员](./manage-orgs-and-members)
 
 - [管理项目与成员](./manage-projects-and-collaborator)
+

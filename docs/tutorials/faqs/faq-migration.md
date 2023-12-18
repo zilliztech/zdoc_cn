@@ -2,6 +2,7 @@
 slug: /faq-migration
 beta: null
 notebook: null
+token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 5
 ---
 
@@ -9,11 +10,11 @@ sidebar_position: 5
 
 本文列举了在 Zilliz Cloud 进行数据迁移时可能遇到的常见问题及对应解决方法。
 
-## Contents
+## 目录
 
 - [如何将数据批量从 Elasticsearch 导入 Zilliz Cloud？](#how-to-migrate-data-from-elasticsearch-to-zilliz-cloud)
 
-## 常见问题
+## 问题
 
 
 

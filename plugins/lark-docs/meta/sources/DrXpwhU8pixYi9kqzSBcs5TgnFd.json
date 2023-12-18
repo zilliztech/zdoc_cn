@@ -1,0 +1,1545 @@
+{
+  "creator": "ou_8554528ee6e965bad56710acde1c7847",
+  "has_child": false,
+  "node_create_time": "1695091939",
+  "node_token": "DrXpwhU8pixYi9kqzSBcs5TgnFd",
+  "node_type": "origin",
+  "obj_create_time": "1695091939",
+  "obj_edit_time": "1700715471",
+  "obj_token": "BJWZdRoQboreVixyMGJcNACxnAf",
+  "obj_type": "docx",
+  "origin_node_token": "DrXpwhU8pixYi9kqzSBcs5TgnFd",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_8554528ee6e965bad56710acde1c7847",
+  "parent_node_token": "IkILwih8Jidof9kvr2pcahdon2e",
+  "space_id": "7167193056431783939",
+  "title": "使用 Partition Key",
+  "slug": "use-partition-key",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "BJWZdRoQboreVixyMGJcNACxnAf",
+        "block_type": 1,
+        "children": [
+          "JkDtd77kAo8vzJxYx5qcfPtOnBf",
+          "Ol5HdzKQHodPfbxb9kjcKZJEnUh",
+          "Thfkdf6SjoxRUJxZYkFcA5ymnFb",
+          "DGSudMljboiy68x8i2FcvD22nTh",
+          "ILVydN9ZzoUzyAxcShhcEE6GnDd",
+          "MnvzdyitEoI63Xxzqkjc29OXnVe",
+          "N7CLdmsliop7nOxjpVecYpUJndg",
+          "GscydrArsoKLoax7oipcBGYznyf",
+          "HSvBd8bp3ooXZnxcDHgcNDypnNg",
+          "ByQwd5KAconhi9x8lb5cv6dEndb",
+          "KszadcUQFoAKUTxa6wucc8pvn28",
+          "AW7fdXXouo8HbpxMhvdcHC0InNc",
+          "OE9ldXPS4ogmSFxnajXcJhyPndd",
+          "PjsvdbrNaokrZexUBBjcPaLsnxh",
+          "SC9pdolXxoFspKxZ5XpcvkikntY",
+          "Ta2fdsYgoo4cKQx4LcRcsoDPnAc",
+          "P1Qld9cYcoYKtAxPrv3cnEXfnUe",
+          "R1FZdoiaroNi7uxPXoCc8fbLnjd",
+          "XvMcdZpiLoYkSwxwiwfcgqZ9nvV",
+          "Pgj2dfgxFoMkQqxbTGccQGkAneD",
+          "ScKzdtKkmopvdixyNP1cMhZTnBg",
+          "V7N0dXI46oR4slxJEjecxlBFnCm",
+          "RautdUkeCoqGrexcf1ycD5qMn8f",
+          "WA7edmbQMo3gx3x4LcxccLTdn2e",
+          "YmaKdxI0lot50Lx3CV9c6PRsn2e",
+          "WAqCduIeqoN2uFxRlTGcg3jln2C",
+          "E55ud5EGtoiUf0xSH8fceOwxnwg",
+          "LpkOdXJNToyiI3xrLRIcgTE2njf",
+          "QniKdtWw7o9Dk8xoeSUc7zgMnZd",
+          "KahgdEXNqovp4IxeoVlcbV6Snse",
+          "L7DrdxazPobo6hxBBOzctmIZnLg",
+          "GESydEGQEomrw6x8MJ7cjFdZnpg",
+          "QW9JdAuJ2oi3GaxsFwrcWPRYnvd",
+          "Sk8FdelUMo4gM3xABfWcKdLFnRh",
+          "HKDHdq5ucodR0hxBDmhcGAJhnqh",
+          "Q5TjdnRKsoz5IHxljFZcg6AmnGg",
+          "IaGmdLLlcoaCN8xW8ErclqH9n84",
+          "J4uXdOzWToVWcMxH4JPc0Aoqnce",
+          "WOJHdfoSAoFC6gxcEFych1Jlnkg",
+          "FoXldZKfgoUJZ4xvGWpcQAHgnZd"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "使用 Partition Key",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "JkDtd77kAo8vzJxYx5qcfPtOnBf",
+        "block_type": 2,
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本节将帮助您了解如何使用 Partition Key 加速在 Collection 中的数据检索。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ol5HdzKQHodPfbxb9kjcKZJEnUh",
+        "block_type": 2,
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Partition Key 允许 Zilliz Cloud 根据数据的指定键值将数据存入不同的 Partition 中。这样您就可以根据指定键值为数据分组，从而在根据键值过滤时避免扫描完全无关的 Partition。相比传统的过滤查询方式，启用该特性后可以极大地提升查询性能。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Thfkdf6SjoxRUJxZYkFcA5ymnFb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "准备工作",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#before-you-start}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "DGSudMljboiy68x8i2FcvD22nTh",
+        "block_type": 2,
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在创建 Collection 之前，确保",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ILVydN9ZzoUzyAxcShhcEE6GnDd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "已经根据您的数据完成了 Schema 的设计。如需了解更多，可阅读",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "数据模型",
+                "token": "ZgcQw57PxiKaeSkuQmCchK8snP0",
+                "url": "https://zilliverse.feishu.cn/wiki/ZgcQw57PxiKaeSkuQmCchK8snP0"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "MnvzdyitEoI63Xxzqkjc29OXnVe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "已经创建了一个集群。如需了解更多，可阅读",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建集群",
+                "token": "MAFcwBTqqiR5YZkdkd4cADg0nub",
+                "url": "https://zilliverse.feishu.cn/wiki/MAFcwBTqqiR5YZkdkd4cADg0nub"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "N7CLdmsliop7nOxjpVecYpUJndg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "已下载示例数据集。详情请参见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "示例数据集",
+                "token": "ZoXbwP8hJivPw2ktsLrckw0Snif",
+                "url": "https://zilliverse.feishu.cn/wiki/ZoXbwP8hJivPw2ktsLrckw0Snif"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "GscydrArsoKLoax7oipcBGYznyf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建启用 Partition Key 的 Collection",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#create-collection-with-partition-key-enabled}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "HSvBd8bp3ooXZnxcDHgcNDypnNg",
+        "block_type": 2,
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为了演示 Partition Key 的使用，我们将继续使用包含了 5,000 篇文章的示例数据集。其中，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "publication",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 将作为 Partition Key。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ByQwd5KAconhi9x8lb5cv6dEndb",
+        "block_type": 2,
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "示例代码中将创建的 Collection 的 Schema 与",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "示例数据集",
+                "token": "ZoXbwP8hJivPw2ktsLrckw0Snif",
+                "url": "https://zilliverse.feishu.cn/wiki/ZoXbwP8hJivPw2ktsLrckw0Snif"
+              }
+            },
+            {
+              "text_run": {
+                "content": "中定义的类似。差异就在作为 Partition Key 使用的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "publication",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 字段。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KszadcUQFoAKUTxa6wucc8pvn28",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "import json, time\nfrom pymilvus import connections, FieldSchema, CollectionSchema, DataType, Collection, utility\n\nCLUSTER_ENDPOINT=\"YOUR_CLUSTER_ENDPOINT\" # Set your cluster endpoint\nTOKEN=\"YOUR_CLUSTER_TOKEN\" # Set your token\nCOLLECTION_NAME=\"medium_articles_2020\" # Set your collection name\nDATASET_PATH=\"{}/../medium_articles_2020_dpr.json\".format(os.path.dirname(__file__)) # Set your dataset path\n\nconnections.connect(\n  alias='default', \n  #  Public endpoint obtained from Zilliz Cloud\n  uri=CLUSTER_ENDPOINT,\n  # API key or a colon-separated cluster username and password\n  token=TOKEN, \n)\n\n# 1. Define fields\nfields = [\n    FieldSchema(name=\"id\", dtype=DataType.INT64, is_primary=True),\n    FieldSchema(name=\"title\", dtype=DataType.VARCHAR, max_length=512),   \n    FieldSchema(name=\"title_vector\", dtype=DataType.FLOAT_VECTOR, dim=768),\n    FieldSchema(name=\"link\", dtype=DataType.VARCHAR, max_length=512),\n    FieldSchema(name=\"reading_time\", dtype=DataType.INT64),\n    # The field \"publication\" acts as the partition key.\n    FieldSchema(name=\"publication\", dtype=DataType.VARCHAR, max_length=512, is_partition_key=True),\n    FieldSchema(name=\"claps\", dtype=DataType.INT64),\n    FieldSchema(name=\"responses\", dtype=DataType.INT64)\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "]",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "AW7fdXXouo8HbpxMhvdcHC0InNc",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "const fs = require(\"fs\")\nconst { MilvusClient, DataType, sleep } = require(\"@zilliz/milvus2-sdk-node\")\n\nconst address = \"YOUR_CLUSTER_ENDPOINT\"\nconst token = \"YOUR_CLUSTER_TOKEN\"\nconst collectionName = \"medium_articles_2020\"\nconst data_file = `./medium_articles_2020_dpr.json`\n\nasync function main() {\n    // Connect to the cluster\n    const client = new MilvusClient({address, token})\n    \n    // 2. Define fields\n    fields = [\n        {\n            name: \"id\",\n            data_type: DataType.Int64,\n            is_primary_key: true,\n            auto_id: true\n        },\n        {\n            name: \"title\",\n            data_type: DataType.VarChar,\n            max_length: 512\n        },\n        {\n            name: \"title_vector\",\n            data_type: DataType.FloatVector,\n            dim: 768\n        },\n        {\n            name: \"link\",\n            data_type: DataType.VarChar,\n            max_length: 512\n        },\n        {\n            name: \"reading_time\",\n            data_type: DataType.Int64\n        },\n        {\n            name: \"publication\",\n            data_type: DataType.VarChar,\n            max_length: 512,\n            // The field \"publication\" acts as the primary key\n            is_partition_key: true\n        },\n        {\n            name: \"claps\",\n            data_type: DataType.Int64\n        },\n        {\n            name: \"responses\",\n            data_type: DataType.Int64\n        }\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "    ]",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 30,
+            "wrap": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "OE9ldXPS4ogmSFxnajXcJhyPndd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "// You should include the following in the main function\n\nString clusterEndpoint = \"YOUR_CLUSTER_ENDPOINT\";\nString token = \"YOUR_CLUSTER_TOKEN\";\nString collectionName = \"medium_articles\";\nString data_file = System.getProperty(\"user.dir\") + \"/medium_articles_2020_dpr.json\";\n\n// 1. Connect to Zilliz Cloud cluster\nConnectParam connectParam = ConnectParam.newBuilder()\n    .withUri(clusterEndpoint)\n    .withToken(token)\n    .build();\n\nMilvusServiceClient client = new MilvusServiceClient(connectParam);\n\nSystem.out.println(\"Connected to Zilliz Cloud!\");\n\n// Output:\n// Connected to Zilliz Cloud!\n\n// 2. Define fields\n\nFieldType id = FieldType.newBuilder()\n    .withName(\"id\")\n    .withDataType(DataType.Int64)\n    .withPrimaryKey(true)\n    .withAutoID(true)\n    .build();\n\nFieldType title = FieldType.newBuilder()\n    .withName(\"title\")\n    .withDataType(DataType.VarChar)\n    .withMaxLength(512)\n    .build();\n\nFieldType title_vector = FieldType.newBuilder()\n    .withName(\"title_vector\")\n    .withDataType(DataType.FloatVector)\n    .withDimension(768)\n    .build();\n\nFieldType link = FieldType.newBuilder()\n    .withName(\"link\")\n    .withDataType(DataType.VarChar)\n    .withMaxLength(512)\n    .build();\n\nFieldType reading_time = FieldType.newBuilder()\n    .withName(\"reading_time\")\n    .withDataType(DataType.Int64)\n    .build();\n\nFieldType publication = FieldType.newBuilder()\n    .withName(\"publication\")\n    .withDataType(DataType.VarChar)\n    .withMaxLength(512)\n    // This field is set as the partition key.\n    .withPartitionKey(true)\n    .build();\n\nFieldType claps = FieldType.newBuilder()\n    .withName(\"claps\")\n    .withDataType(DataType.Int64)\n    .build();\n\nFieldType responses = FieldType.newBuilder()\n    .withName(\"responses\")\n    .withDataType(DataType.Int64)\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "    .build();",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 29,
+            "wrap": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "PjsvdbrNaokrZexUBBjcPaLsnxh",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "// You should include the following in the main function\n\nCLUSTER_ENDPOINT := \"YOUR_CLUSTER_ENDPOINT\"\nTOKEN := \"YOUR_CLUSTER_TOKEN\"\nCOLLNAME := \"medium_articles_2020\"\nDATA_FILE := \"../../medium_articles_2020_dpr.json\"\n\n// 1. Connect to cluster\nconnParams := client.Config{\n    Address: CLUSTER_ENDPOINT,\n    APIKey:  TOKEN,\n}\n\nconn, err := client.NewClient(context.Background(), connParams)\n\nif err != nil {\n    log.Fatal(\"Failed to connect to Zilliz Cloud:\", err.Error())\n}\n\n// 2. Create collection\n\n// Define fields\nid := entity.NewField().\n    WithName(\"id\").\n    WithDataType(entity.FieldTypeInt64).\n    WithIsPrimaryKey(true)\n\ntitle := entity.NewField().\n    WithName(\"title\").\n    WithDataType(entity.FieldTypeVarChar).\n    WithMaxLength(512)\n\ntitle_vector := entity.NewField().\n    WithName(\"title_vector\").\n    WithDataType(entity.FieldTypeFloatVector).\n    WithDim(768)\n\nlink := entity.NewField().\n    WithName(\"link\").\n    WithDataType(entity.FieldTypeVarChar).\n    WithMaxLength(512)\n\nreading_time := entity.NewField().\n    WithName(\"reading_time\").\n    WithDataType(entity.FieldTypeInt64)\n\n// The following field is set as the partition key.\npublication := entity.NewField().\n    WithName(\"publication\").\n    WithDataType(entity.FieldTypeVarChar).\n    WithMaxLength(512).\n    WithIsPartitionKey(true)\n\nclaps := entity.NewField().\n    WithName(\"claps\").\n    WithDataType(entity.FieldTypeInt64)\n\nresponses := entity.NewField().\n    WithName(\"responses\").\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "    WithDataType(entity.FieldTypeInt64)",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 22,
+            "wrap": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "SC9pdolXxoFspKxZ5XpcvkikntY",
+        "block_type": 2,
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在完成字段定义之后，创建 Collection 的 Schema。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ta2fdsYgoo4cKQx4LcRcsoDPnAc",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# 2. Build the schema\nschema = CollectionSchema(\n    fields,\n    description=\"Schema of Medium articles\",\n    # As an alternative, you can set the partition key by its name in the collection schema\n    # partition_key_field=\"publication\"\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ")",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "P1Qld9cYcoYKtAxPrv3cnEXfnUe",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "// 3. Build the requst for creating a collection\n\n// You should include the following in the async function declaration.\n\nconst collection_name = \"medium_articles\";\n\nconst req = {\n    collection_name: collectionName,\n    fields: fields,\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 30,
+            "wrap": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "R1FZdoiaroNi7uxPXoCc8fbLnjd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "// 3. Build the schema\n\n// You should include the following in the main function\n\nCreateCollectionParam createCollectionParam = CreateCollectionParam.newBuilder()\n    .withCollectionName(collectionName)\n    .addFieldType(id)\n    .addFieldType(title)\n    .addFieldType(title_vector)\n    .addFieldType(link)\n    .addFieldType(reading_time)\n    .addFieldType(publication)\n    .addFieldType(claps)\n    .addFieldType(responses)\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "    .build();",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 29,
+            "wrap": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "XvMcdZpiLoYkSwxwiwfcgqZ9nvV",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "// Define schema\nschema := &entity.Schema{\n    CollectionName: COLLNAME,\n    AutoID:         true,\n    Fields: []*entity.Field{\n        id,\n        title,\n        title_vector,\n        link,\n        reading_time,\n        publication,\n        claps,\n        responses,\n    },\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 22,
+            "wrap": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "Pgj2dfgxFoMkQqxbTGccQGkAneD",
+        "block_type": 2,
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "最后，使用上述 Schema 创建 Collection。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ScKzdtKkmopvdixyNP1cMhZTnBg",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# 3. Create collection\ncollection = Collection(\n    name=COLLECTION_NAME, \n    description=\"Medium articles published between Jan and August in 2020 in prominent publications\",\n    schema=schema\n)\n\nprint(\"Collection created successfully\")\n\n# Output\n#\n# Collection created successfully\n\n# 4. Index collection\n# 'index_type' defines the index algorithm to be used.\n#    AUTOINDEX is the only option.\n#\n# 'metric_type' defines the way to measure the distance \n#    between vectors. Possible values are L2, IP, and Cosine,\n#    and defaults to Cosine.\nindex_params = {\n    \"index_type\": \"AUTOINDEX\",\n    \"metric_type\": \"L2\",\n    \"params\": {}\n}\n\n# To name the index, do as follows:\ncollection.create_index(\n  field_name=\"title_vector\", \n  index_params=index_params,\n  index_name='title_vector_index'\n)\n\n# 5. Load collection\ncollection.load()\n\n# Get loading progress\nprogress = utility.loading_progress(COLLECTION_NAME)\n\nprint(progress)\n\n# Output\n#\n# {\n#     \"loading_progress\": \"100%\"\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# }",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "V7N0dXI46oR4slxJEjecxlBFnCm",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "// 3. Create collection\n\nres = await client.createCollection({\n    collection_name: collectionName,\n    fields: fields,\n    // As an alternative, you can set the partition key by its name when creating a collection.\n    // partition_key_field: \"publication\"\n})\n\nconsole.log(res)\n\n// Output\n// \n// { error_code: 'Success', reason: '', code: 0 }\n// \n\n// 4. Create index\nres = await client.createIndex({\n    collection_name: collectionName,\n    field_name: \"title_vector\",\n    index_type: \"IVF_FLAT\",\n    metric_type: \"L2\",\n    params: {\n        nlist: 16384\n    }\n})\n\nconsole.log(res)\n\n// Output\n// \n// { error_code: 'Success', reason: '', code: 0 }\n// \n\nres = await client.loadCollection({\n    collection_name: collectionName\n})\n\nconsole.log(res)  \n\n// Output\n// \n// { error_code: 'Success', reason: '', code: 0 }\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "// ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 30,
+            "wrap": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "RautdUkeCoqGrexcf1ycD5qMn8f",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "// 3. Create collection\nR<RpcStatus> collection = client.createCollection(createCollectionParam);\n\nif (collection.getException() != null) {\n    System.err.println(\"Failed to create collection: \" + collection.getException().getMessage());\n    return;\n}\n\nSystem.out.println(\"Collection created!\");\n\n// Output:\n// Collection created!\n\n\n// 4. Create index\nCreateIndexParam createIndexParam = CreateIndexParam.newBuilder()\n    .withCollectionName(collectionName)\n    .withFieldName(\"title_vector\")\n    .withIndexName(\"title_vector_index\")\n    .withIndexType(IndexType.AUTOINDEX)\n    .withMetricType(MetricType.L2)\n    .build();\n\nR<RpcStatus> res = client.createIndex(createIndexParam);\n\nif (res.getException() != null) {\nSystem.err.println(\"Failed to create index: \" + res.getException().getMessage());\nreturn;\n}\n\nSystem.out.println(\"Index created!\");\n\n// Output:\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "// Index created!",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 29,
+            "wrap": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "WA7edmbQMo3gx3x4LcxccLTdn2e",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "// Create collection\n\nerr = conn.CreateCollection(context.Background(), schema, 2)\n\nif err != nil {\n    log.Fatal(\"Failed to create collection:\", err.Error())\n}\n\n// Create index for cluster\nindex, err := entity.NewIndexAUTOINDEX(entity.MetricType(\"L2\"))\n\nif err != nil {\n    log.Fatal(\"Failed to prepare the index:\", err.Error())\n}\n\nfmt.Println(index.Name())\n\n// Output: \n//\n// AUTOINDEX\n\nerr = conn.CreateIndex(context.Background(), COLLNAME, \"title_vector\", index, false)\n\nif err != nil {\n    log.Fatal(\"Failed to create the index:\", err.Error())\n}\n\n// Load collection\nloadCollErr := conn.LoadCollection(context.Background(), COLLNAME, false)\n\nif loadCollErr != nil {\n    log.Fatal(\"Failed to load collection:\", loadCollErr.Error())\n}\n\n// Get load progress\nprogress, err := conn.GetLoadingProgress(context.Background(), COLLNAME, nil)\n\nif err != nil {\n    log.Fatal(\"Failed to get loading progress:\", err.Error())\n}\n\nfmt.Println(\"Loading progress:\", progress)\n\n// Output: \n//\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "// Loading progress: 100",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 22,
+            "wrap": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "YmaKdxI0lot50Lx3CV9c6PRsn2e",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "基于 Partition Key 的 ANN 搜索",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#conduct-ann-search-using-partition-key}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "WAqCduIeqoN2uFxRlTGcg3jln2C",
+        "block_type": 2,
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在为创建的 Collection 建立索引，加载索引文件至内存并将示例数据集中的数据插入 Collection 后，就可以进行基于 Partition Key 的近似最近邻（ANN）搜索了。相关操作，可参考",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "向量搜索和查询",
+                "token": "SPaWwHEVuipu3bkeg17coFgnnUo",
+                "url": "https://zilliverse.feishu.cn/wiki/SPaWwHEVuipu3bkeg17coFgnnUo"
+              }
+            },
+            {
+              "text_run": {
+                "content": "中的具体内容。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "E55ud5EGtoiUf0xSH8fceOwxnwg",
+        "block_type": 2,
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在创建搜索请求时，须在请求中包含如下过滤表达式，并将",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "<partition_key>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "替换为实际担任 Partition Key 的字段名称：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LpkOdXJNToyiI3xrLRIcgTE2njf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "expr='<partition_key>==\"xxx\"'",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "QniKdtWw7o9Dk8xoeSUc7zgMnZd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "expr='<partition_key> in [\"xxx\", \"xxx\"]'",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "KahgdEXNqovp4IxeoVlcbV6Snse",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# 8. Search data\n# Metric type should be the same as\n# that defined in the index parameters \n# used to create the index.\nsearch_params = {\n    \"metric_type\": \"L2\"\n}\n\nresults = collection.search(\n    data=[rows[0]['title_vector']],\n    anns_field=\"title_vector\",\n    param=search_params,\n    # When conducting searches and queries, include the partition key in the bolean expression\n    expr=\"claps > 30 and reading_time < 10 and publication in ['Towards Data Science', 'Personal Growth']\",\n    output_fields=[\"title\", \"link\"],\n    limit=5\n)\n\n# Get all returned IDs\n# results[0] indicates the result \n# of the first query vector in the 'data' list\nids = results[0].ids\n\nprint(ids)\n\n# Output\n#\n# [5641, 938, 842, 70, 3954]\n\n\n\n# Get the distance from \n# all returned vectors to the query vector.\ndistances = results[0].distances\n\nprint(distances)\n\n# Output\n#\n# [0.37674015760421753, 0.436093807220459, 0.49443870782852173, 0.4948430061340332, 0.5028785467147827]\n\n\n\n# Get the values of the output fields\n# specified in the search request\nentities = [ x.entity.to_dict()[\"entity\"] for x in results[0]]\n\nprint(entities)\n\n# Output\n#\n# [\n#     {\n#         \"title\": \"Why The Coronavirus Mortality Rate is Misleading\",\n#         \"link\": \"https://towardsdatascience.com/why-the-coronavirus-mortality-rate-is-misleading-cc63f571b6a6\"\n#     },\n#     {\n#         \"title\": \"Mortality Rate As an Indicator of an Epidemic Outbreak\",\n#         \"link\": \"https://towardsdatascience.com/mortality-rate-as-an-indicator-of-an-epidemic-outbreak-704592f3bb39\"\n#     },\n#     {\n#         \"title\": \"Choosing the right performance metrics can save lives against Coronavirus\",\n#         \"link\": \"https://towardsdatascience.com/choosing-the-right-performance-metrics-can-save-lives-against-coronavirus-2f27492f6638\"\n#     },\n#     {\n#         \"title\": \"How bad will the Coronavirus Outbreak get? \\u2014 Predicting the outbreak figures\",\n#         \"link\": \"https://towardsdatascience.com/how-bad-will-the-coronavirus-outbreak-get-predicting-the-outbreak-figures-f0b8e8b61991\"\n#     },\n#     {\n#         \"title\": \"How similar is COVID-19 to previously discovered Coronaviruses\",\n#         \"link\": \"https://towardsdatascience.com/how-similar-is-covid-19-to-previously-discovered-coronaviruses-c3d9f25840f7\"\n#     }\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# ]",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "L7DrdxazPobo6hxBBOzctmIZnLg",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "// 6. Conduct an ANN search\n\nres = await client.search({\n    collection_name: collectionName,\n    vector: rows[0].title_vector,\n    limit: 3,\n    filter: \"claps > 30 and reading_time < 10 and publication in ['Towards Data Science', 'Personal Growth']\",\n    output_fields: [\"title\", \"link\"]\n});\n\nconsole.log(res);\n\n// Output\n// \n// {\n//   status: { error_code: 'Success', reason: '', code: 0 },\n//   results: [\n//     {\n//       score: 0.37674015760421753,\n//       id: '5641',\n//       title: 'Why The Coronavirus Mortality Rate is Misleading',\n//       link: 'https://towardsdatascience.com/why-the-coronavirus-mortality-rate-is-misleading-cc63f571b6a6'\n//     },\n//     {\n//       score: 0.436093807220459,\n//       id: '938',\n//       title: 'Mortality Rate As an Indicator of an Epidemic Outbreak',\n//       link: 'https://towardsdatascience.com/mortality-rate-as-an-indicator-of-an-epidemic-outbreak-704592f3bb39'\n//     },\n//     {\n//       score: 0.49443864822387695,\n//       id: '842',\n//       title: 'Choosing the right performance metrics can save lives against Coronavirus',\n//       link: 'https://towardsdatascience.com/choosing-the-right-performance-metrics-can-save-lives-against-coronavirus-2f27492f6638'\n//     }\n//   ]\n// }\n// \n\n// 7. Get collection info\n\nres = await client.describeCollection({\n    collection_name: collectionName\n})\n\nconsole.log(res);\n\n// Output\n// \n// {\n//   virtual_channel_names: [ 'by-dev-rootcoord-dml_11_445311585782775508v0' ],\n//   physical_channel_names: [ 'by-dev-rootcoord-dml_11' ],\n//   aliases: [],\n//   start_positions: [],\n//   properties: [],\n//   status: { error_code: 'Success', reason: '', code: 0 },\n//   schema: {\n//     fields: [\n//       [Object], [Object],\n//       [Object], [Object],\n//       [Object], [Object],\n//       [Object], [Object]\n//     ],\n//     name: 'medium_articles_2020',\n//     description: '',\n//     autoID: false,\n//     enable_dynamic_field: false\n//   },\n//   collectionID: '445311585782775508',\n//   created_timestamp: '445316810423664644',\n//   created_utc_timestamp: '1698748819060',\n//   shards_num: 1,\n//   consistency_level: 'Bounded',\n//   collection_name: 'medium_articles_2020',\n//   db_name: 'default',\n//   num_partitions: '64'\n// }\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "// ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 30,
+            "wrap": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "GESydEGQEomrw6x8MJ7cjFdZnpg",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "// 7. Search vectors\n\nList<List<Float>> queryVectors = new ArrayList<>();\nList<Float> queryVector1 = rows.get(0).getJSONArray(\"title_vector\").toJavaList(Float.class);\nqueryVectors.add(queryVector1);\n\nList<String> outputFields = new ArrayList<>();\noutputFields.add(\"title\");\noutputFields.add(\"link\");\n\n// Search vectors in a collection\n\nSearchParam searchParam = SearchParam.newBuilder()\n    .withCollectionName(collectionName)\n    .withVectorFieldName(\"title_vector\")\n    .withVectors(queryVectors)\n    .withTopK(5)   \n    .withMetricType(MetricType.L2)  \n    .withParams(\"{\\\"nprobe\\\":10,\\\"offset\\\":2, \\\"limit\\\":3}\")\n    .withConsistencyLevel(ConsistencyLevelEnum.BOUNDED)\n    .withOutFields(outputFields)\n    .withExpr(\"(publication == \\\"Towards Data Science\\\") and ((claps > 1500 and responses > 15) or (10 < reading_time < 15))\")\n    .build();\n\nR<SearchResults> response = client.search(searchParam);\n\nSearchResultsWrapper wrapper = new SearchResultsWrapper(response.getData().getResults());\n\nList<List<JSONObject>> results = new ArrayList<>();\n\nfor (int i = 0; i < queryVectors.size(); ++i) {\n    List<SearchResultsWrapper.IDScore> scores = wrapper.getIDScore(i);\n    List<JSONObject> entities = new ArrayList<>();\n    for (int j = 0; j < scores.size(); ++j) {\n        SearchResultsWrapper.IDScore score = scores.get(j);\n        JSONObject entity = new JSONObject(1, true);\n        entity.put(\"id\", score.getLongID());\n        entity.put(\"distance\", score.getScore());\n        entity.put(\"title\", scores.get(j).get(\"title\"));\n        entity.put(\"link\", scores.get(j).get(\"link\"));\n        entities.add(entity);\n    }\n    \n    results.add(entities);\n} \n\nSystem.out.println(results);\n\n// Output:\n// [[\n//     {\n//         \"distance\": 0.85477614,\n//         \"link\": \"https://towardsdatascience.com/finding-optimal-nba-physiques-using-data-visualization-with-python-6ce27ac5b68f\",\n//         \"id\": 445297206350548235,\n//         \"title\": \"Finding optimal NBA physiques using data visualization with Python\"\n//     },\n//     {\n//         \"distance\": 0.8702322,\n//         \"link\": \"https://towardsdatascience.com/understanding-nlp-how-ai-understands-our-languages-77601002cffc\",\n//         \"id\": 445297206350548216,\n//         \"title\": \"Understanding Natural Language Processing: how AI understands our languages\"\n//     },\n//     {\n//         \"distance\": 0.9109591,\n//         \"link\": \"https://towardsdatascience.com/rage-quitting-cancer-research-5e79cb04801\",\n//         \"id\": 445297206350548215,\n//         \"title\": \"Rage Quitting Cancer Research\"\n//     },\n//     {\n//         \"distance\": 0.9840777,\n//         \"link\": \"https://towardsdatascience.com/data-cleaning-in-python-the-ultimate-guide-2020-c63b88bf0a0d\",\n//         \"id\": 445297206350548209,\n//         \"title\": \"Data Cleaning in Python: the Ultimate Guide (2020)\"\n//     },\n//     {\n//         \"distance\": 1.091625,\n//         \"link\": \"https://towardsdatascience.com/top-10-in-demand-programming-languages-to-learn-in-2020-4462eb7d8d3e\",\n//         \"id\": 445297206350548205,\n//         \"title\": \"Top 10 In-Demand programming languages to learn in 2020\"\n//     }\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "// ]]",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 29,
+            "wrap": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "QW9JdAuJ2oi3GaxsFwrcWPRYnvd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "// Search\n\nfmt.Println(\"Start searching ...\")\n\n// Output: \n//\n// Start searching ...\n\nvectors := []entity.Vector{}\n\nfor _, row := range data.Rows[:1] {\n    vector := make(entity.FloatVector, 0, 768)\n    vector = append(vector, row.TitleVector...)\n    vectors = append(vectors, vector)\n}\n\nsp, _ := entity.NewIndexAUTOINDEXSearchParam(1)\n\nlimit := client.WithLimit(10)\noffset := client.WithOffset(0)\ntopK := 5\noutputFields := []string{\"title\", \"claps\", \"publication\", \"responses\", \"reading_time\"}\nexpr := \"(publication == \\\"Towards Data Science\\\") and ((claps > 1500 and responses > 15) or (10 < reading_time < 15))\"\n\nres, err := conn.Search(\n    context.Background(),    // context\n    COLLNAME,                // collectionName\n    []string{},              // partitionNames\n    expr,                    // expr\n    outputFields,            // outputFields\n    vectors,                 // vectors\n    \"title_vector\",          // vectorField\n    entity.MetricType(\"L2\"), // metricType\n    topK,                    // topK\n    sp,                      // sp\n    limit,                   // opts\n    offset,                  // opts\n)\n\nif err != nil {\n    log.Fatal(\"Failed to insert rows:\", err.Error())\n}\n\nfmt.Println(resultsToJSON(res))\n\n// Output: \n// [\n//  {\n//      \"counts\": 5,\n//      \"distances\": [\n//          0.37674016,\n//          0.45862228,\n//          0.5037479,\n//          0.52556163,\n//          0.58774835\n//      ],\n//      \"rows\": [\n//          {\n//              \"claps\": 2900,\n//              \"publication\": \"Towards Data Science\",\n//              \"reading_time\": 9,\n//              \"responses\": 47,\n//              \"title\": \"Why The Coronavirus Mortality Rate is Misleading\"\n//          },\n//          {\n//              \"claps\": 15,\n//              \"publication\": \"Towards Data Science\",\n//              \"reading_time\": 12,\n//              \"responses\": 0,\n//              \"title\": \"Heart Disease Risk Assessment Using Machine Learning\"\n//          },\n//          {\n//              \"claps\": 161,\n//              \"publication\": \"Towards Data Science\",\n//              \"reading_time\": 13,\n//              \"responses\": 3,\n//              \"title\": \"New Data Shows a Lower Covid-19 Fatality Rate\"\n//          },\n//          {\n//              \"claps\": 20,\n//              \"publication\": \"Towards Data Science\",\n//              \"reading_time\": 11,\n//              \"responses\": 1,\n//              \"title\": \"Common Pipenv Errors\"\n//          },\n//          {\n//              \"claps\": 61,\n//              \"publication\": \"Towards Data Science\",\n//              \"reading_time\": 12,\n//              \"responses\": 0,\n//              \"title\": \"Data quality impact on the dataset\"\n//          }\n//      ]\n//  }\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "// ]",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 22,
+            "wrap": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "Sk8FdelUMo4gM3xABfWcKdLFnRh",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "典型使用场景",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#typical-use-cases}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "HKDHdq5ucodR0hxBDmhcGAJhnqh",
+        "block_type": 2,
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "该特性可在多租户场景中用于区分租户。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Q5TjdnRKsoz5IHxljFZcg6AmnGg",
+        "block_type": 2,
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "具体来说，可以将每条记录中的某个字段确定为 Partition Key。当进行搜索或查询时，可以用该字段过滤查询结果，实现租户数据隔离的同时，避免在查询时扫描其它租户的 Partition。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IaGmdLLlcoaCN8xW8ErclqH9n84",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相关文档{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "J4uXdOzWToVWcMxH4JPc0Aoqnce",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建 Collection",
+                "token": "MNcZwAfV6iZxbckfKBlcmCzanti",
+                "url": "https://zilliverse.feishu.cn/wiki/MNcZwAfV6iZxbckfKBlcmCzanti"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "WOJHdfoSAoFC6gxcEFych1Jlnkg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "开启动态 Schema",
+                "token": "EpHowtn3miepTyk2pNlcLwDonyD",
+                "url": "https://zilliverse.feishu.cn/wiki/EpHowtn3miepTyk2pNlcLwDonyD"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      },
+      {
+        "block_id": "FoXldZKfgoUJZ4xvGWpcQAHgnZd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "使用 JSON 类型字段",
+                "token": "UXBjwVpKmirzg9kgWgmcLixwnIe",
+                "url": "https://zilliverse.feishu.cn/wiki/UXBjwVpKmirzg9kgWgmcLixwnIe"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BJWZdRoQboreVixyMGJcNACxnAf"
+      }
+    ],
+    "counts": 41
+  }
+}

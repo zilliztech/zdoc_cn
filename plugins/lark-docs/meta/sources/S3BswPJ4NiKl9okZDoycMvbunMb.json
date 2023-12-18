@@ -1,0 +1,891 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": false,
+  "node_create_time": "1687140974",
+  "node_token": "S3BswPJ4NiKl9okZDoycMvbunMb",
+  "node_type": "origin",
+  "obj_create_time": "1687140974",
+  "obj_edit_time": "1700704234",
+  "obj_token": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR",
+  "obj_type": "docx",
+  "origin_node_token": "S3BswPJ4NiKl9okZDoycMvbunMb",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "SlItwMcOyikiWVkr7Glcy9sinMg",
+  "space_id": "7167193056431783939",
+  "title": "查看集群性能指标",
+  "slug": "monitor-metrics",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR",
+        "block_type": 1,
+        "children": [
+          "OkIddqTXfobnBsxgOwqcYH8Anbf",
+          "RwuudEFZZokvNjxml8kcZpSJnsd",
+          "BJxrd20YqoCyjWxORqmcVKgqnDh",
+          "Ov5BdhgR2olUFGxyirMc03S8nKf",
+          "Oomjdli3oongd8xjME8cgfisnJg",
+          "HJh6ddxWso248px5bbocObuDnWb",
+          "Z0qXdwrMUoJrDRxEi6DcEG1Tnoe",
+          "DamYdptOFojbX3xij1OcivQunOQ",
+          "DgnZdE0tCo3H04xmKFhcxjbRnAf",
+          "Eec5d8tNcordSgxYy0LcHKAAnYd",
+          "K80wdxorRoSGRyxk8AJcQet1nLf",
+          "EVSRd1y4qoaUFvxfF3yc4Sk6nEg",
+          "QQXwdKegpotAcRx6UIYcgkCqnlX",
+          "KUMzdMLEqotAKPxCZC9ce0MJnvd",
+          "CvePd8XDgoKtmSxbb5XcoHqXndd",
+          "Ak04deOmjoC6LCxKB39cLUyjnfg",
+          "IqujddBdVokhSzxOCwfcJduRnbd",
+          "FKR5daotgoOXnsxDRPUc7EFKnsc",
+          "CTwtdcndQoqLWkxq037ctNlgnmc",
+          "YC1gd6RYRoL2PFxvPGbc0JXmnug",
+          "JVBxds0nvolbc4x6P77cRkfsn7d"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看集群性能指标",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "OkIddqTXfobnBsxgOwqcYH8Anbf",
+        "block_type": 2,
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为更好地了解集群性能，Zilliz Cloud 提供集群监控面板，您可以在其中查看特定集群的相关性能指标。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RwuudEFZZokvNjxml8kcZpSJnsd",
+        "block_type": 26,
+        "comment_ids": [
+          "7278895262351769603"
+        ],
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6176-1683%26mode%3Ddesign%26t%3DqpjCelUPcMoUU1Rz-4"
+          }
+        },
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "BJxrd20YqoCyjWxORqmcVKgqnDh",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "指标说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#understanding-metrics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "Ov5BdhgR2olUFGxyirMc03S8nKf",
+        "block_type": 2,
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "指标",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页签下，您可以查看以下集群性能指标：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Oomjdli3oongd8xjME8cgfisnJg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "CU 计算资源",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "WTcrdeHiKodZMtxLb3AcSzkfn8e"
+        ],
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "WTcrdeHiKodZMtxLb3AcSzkfn8e",
+        "block_type": 2,
+        "parent_id": "Oomjdli3oongd8xjME8cgfisnJg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "统计在指定时间范围内集群的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "CPU",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 或内存使用率。单位：秒。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HJh6ddxWso248px5bbocObuDnWb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "存储用量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "S7afdKtFIo9Yb9xgIWdcCn2Hnzg"
+        ],
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "S7afdKtFIo9Yb9xgIWdcCn2Hnzg",
+        "block_type": 2,
+        "parent_id": "HJh6ddxWso248px5bbocObuDnWb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "统计在指定时间范围内，占用的块存储大小。单位：千兆字节/秒。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Z0qXdwrMUoJrDRxEi6DcEG1Tnoe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "每秒查询数 (",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "QPS",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ")",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "QOsXdYMw5oKCUqxi3V4cDGdGnYe"
+        ],
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "QOsXdYMw5oKCUqxi3V4cDGdGnYe",
+        "block_type": 2,
+        "parent_id": "Z0qXdwrMUoJrDRxEi6DcEG1Tnoe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "统计在指定时间范围内平均每秒的查询数量变化情况。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DamYdptOFojbX3xij1OcivQunOQ",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查询延迟",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "AbLZdtBlrofFJPx7LCQcjZRunOg"
+        ],
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "AbLZdtBlrofFJPx7LCQcjZRunOg",
+        "block_type": 2,
+        "parent_id": "DamYdptOFojbX3xij1OcivQunOQ",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "统计在指定时间范围内查询延时的变化情况。单位：毫秒。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DgnZdE0tCo3H04xmKFhcxjbRnAf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "调整统计频率",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#modify-curve-window-size}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "Eec5d8tNcordSgxYy0LcHKAAnYd",
+        "block_type": 2,
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要调整统计频率，展开",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "所有监控指标",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "区域右侧的下拉菜单，选择合适的统计时间范围。可选项包括：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "K80wdxorRoSGRyxk8AJcQet1nLf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "过去 10 分钟",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "EVSRd1y4qoaUFvxfF3yc4Sk6nEg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "过去 1 小时",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "QQXwdKegpotAcRx6UIYcgkCqnlX",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "过去 1 天",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "KUMzdMLEqotAKPxCZC9ce0MJnvd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "过去 1 周",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "CvePd8XDgoKtmSxbb5XcoHqXndd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "过去 1 月",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "Ak04deOmjoC6LCxKB39cLUyjnfg",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "文档推荐{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "IqujddBdVokhSzxOCwfcJduRnbd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "CU 资源监控",
+                "token": "J4YtwCZUbiHd5LkS3SdcQi9GnOg",
+                "url": "https://zilliverse.feishu.cn/wiki/J4YtwCZUbiHd5LkS3SdcQi9GnOg"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "FKR5daotgoOXnsxDRPUc7EFKnsc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "QPS 资源监控",
+                "token": "LL1Iw34rqikxZrkZZ5Ecakm8nJe",
+                "url": "https://zilliverse.feishu.cn/wiki/LL1Iw34rqikxZrkZZ5Ecakm8nJe"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "CTwtdcndQoqLWkxq037ctNlgnmc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "查询时延监控",
+                "token": "QBaRweeRriuYskkMWxhcLOkyneI",
+                "url": "https://zilliverse.feishu.cn/wiki/QBaRweeRriuYskkMWxhcLOkyneI"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "YC1gd6RYRoL2PFxvPGbc0JXmnug",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "已使用容量监控",
+                "token": "HayvwbjUtiAcqak1fDMcigc3nUc",
+                "url": "https://zilliverse.feishu.cn/wiki/HayvwbjUtiAcqak1fDMcigc3nUc"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "JVBxds0nvolbc4x6P77cRkfsn7d",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "现金余额监控",
+                "token": "RVukw4utriu4S6k18hBc9xiSn0d",
+                "url": "https://zilliverse.feishu.cn/wiki/RVukw4utriu4S6k18hBc9xiSn0d"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      }
+    ],
+    "counts": 26
+  }
+}

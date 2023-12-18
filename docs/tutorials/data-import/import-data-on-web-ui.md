@@ -2,6 +2,7 @@
 slug: /import-data-on-web-ui
 beta: FALSE
 notebook: FALSE
+token: BXBvwZh9Yiis0Vk8LcdcjZSPnQd
 sidebar_position: 2
 ---
 
@@ -12,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 本文介绍如何通过 Zilliz Cloud Web 控制台将数据导入现有 Collection 中。
 
-## 开始前{#before-you-start}
+## 开始前{#before-you-start}{#before-you-start}
 
 请确保已完成以下步骤：
 
@@ -22,19 +23,21 @@ import Admonition from '@theme/Admonition';
 
 - 已创建 Collection，且该 Collection 的 Schema 与示例数据集相匹配。已为该 Collection 创建索引，并已加载 Collection。详情请参见[创建 Collection](./create-collection)。
 
-## 准备数据文件{#prepare-data-files}
+## 准备数据文件{#prepare-data-files}{#prepare-data-files}
 
 Zilliz Cloud 支持从单个本地文件或一个或多个远程文件导入数据。导入的数据类型可以是 JSON 和 NumPy。如果您的数据不是这两种格式，您可以使用 BulkWriter 转换数据格式。详情请参见[使用 BulkWriter 导入](./use-bulkwriter-for-data-import)。
 
-### 准备单个本地 JSON 文件{#local-json-file}
+### 准备单个本地 JSON 文件{#local-json-file}{#json-local-json-file}
 
-本地导入仅支持 JSON 格式的数据文件，并且每次导入只支持上传单个文件。文件大小不能超过 1 GB。
+本地导入仅支持 JSON 格式的数据文件，并且每次导入只支持上传单个文件。
+
+如果您的集群是 Serverless 集群，文件大小不能超过 512 MB。如果您的集群是 Dedicated 集群，文件大小不能超过 1 GB。
 
 本指南所使用的[示例数据集](./example-dataset)是基于行的 JSON 文件，您可以直接从本地导入至 Zilliz Cloud 集群。
 
 在实际应用场景中，您可能需要一次导入多个或更大的数据文件。在这种情况下，我们建议准备远程文件。
 
-### 准备远程文件{#remote-files}
+### 准备远程文件{#remote-files}{#remote-files}
 
 Zilliz Cloud 支持远程导入 JSON 和 NumPy 数据文件。在准备远程文件时，请注意以下事项：
 
@@ -67,7 +70,7 @@ with open('path/to/medium_articles_2020_dpr.json') as f:
     # ]))
 ```
 
-## 导入数据{#import-data-on-the-web-ui}
+## 导入数据{#import-data-on-the-web-ui}{#import-data-on-the-web-ui}
 
 数据文件准备好后，您可以直接从本地导入，也可以先将文件上传到对象存储桶（如阿里云 OSS），然后进行远程导入。
 
@@ -77,13 +80,13 @@ with open('path/to/medium_articles_2020_dpr.json') as f:
 
 </Admonition>
 
-### 导入本地 JSON 文件{#local-json-file}
+### 导入本地 JSON 文件{#local-json-file}{#json-local-json-file}
 
 要导入数据，您可以将本地文件拖放到上传区域中，或单击**上传文件**并选择文件。
 
 ![zh_import_data_from_local_files](/img/zh_import_data_from_local_files.png)
 
-### 从对象存储桶中导入远程文件{#remote-files-from-an-object-storage-bucket}
+### 从对象存储桶中导入远程文件{#remote-files-from-an-object-storage-bucket}{#remote-files-from-an-object-storage-bucket}
 
 要导入远程文件，您必须先将它们上传到对象存储桶中。您可以将单个 JSON 文件或一组 NumPy 文件上传到桶中。上传后，填写文件路径和桶凭据，以便 Zilliz Cloud 从您的桶中提取数据。
 
@@ -93,16 +96,17 @@ with open('path/to/medium_articles_2020_dpr.json') as f:
 
 ![zh_import_data_from_object_storage](/img/zh_import_data_from_object_storage.png)
 
-## 结果验证{#verify-the-result}
+## 结果验证{#verify-the-result}{#verify-the-result}
 
 单击**导入**后，后台开始导入数据，您可以实时查看导入进度。导入完成后，您将收到以下信息。此时，您可以查看导入详情或开始探索已导入的数据。
 
 ![zh_data_import_complete](/img/zh_data_import_complete.png)
 
-## 推荐阅读{#related-topics}
+## 推荐阅读{#related-topics}{#related-topics}
 
 - [使用 BulkWriter 导入](./use-bulkwriter-for-data-import)
 
 - [通过 RESTful API 导入](./import-data-via-restful-api)
 
 - [通过 SDK 导入](./import-data-via-sdks)
+

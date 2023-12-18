@@ -1,0 +1,873 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1700618756",
+  "node_token": "XVQcw6qgxiC31ikfk06cOo1jnch",
+  "node_type": "origin",
+  "obj_create_time": "1700618756",
+  "obj_edit_time": "1700715701",
+  "obj_token": "BHIjdEdABoKZdIxZxfCc78PLn7g",
+  "obj_type": "docx",
+  "origin_node_token": "XVQcw6qgxiC31ikfk06cOo1jnch",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "DaoawdnS1iEOT8kFGW0cAc8qntc",
+  "space_id": "7167193056431783939",
+  "title": "使用回收站",
+  "slug": "use-recycle-bin",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "BHIjdEdABoKZdIxZxfCc78PLn7g",
+        "block_type": 1,
+        "children": [
+          "BfzvdQmAAoNpb3xLGIzcAg7dnte",
+          "NmzQdohnuo2DEdxdLA0cCp8qnCf",
+          "HJU1d4x6UoCO06xMdWMctpeGnWb",
+          "ED4Md187roRnCkxgZXHc602Nnyg",
+          "WQg2d3NbHoPxPjxjwssc1rwrnMc",
+          "Wt6ndKgOooumGkxMFuIcImc8nwe",
+          "POusddYgboMgTuxt2YDcqRuwn4E",
+          "XwZrdt7BdopRo1xaKdpcOuRWnLb",
+          "QbZfdUQ1OoE8G8x4Ktgc3SEonec",
+          "Foczd8FYio9Zyvx732lcu1STnmg",
+          "Qsm0d4nMhoSxEgxt0u0cCaBenN2",
+          "CI9idig8qoDtKhxy8NGcTDpdnsf",
+          "HA4Ud3S3koyHjUxCdgwcqWaHnWh",
+          "AksRdKxVZorgV9x9ohvcp0ufnjh",
+          "S0umdKIcBo9FMpx3a3Ocypphnyc",
+          "F9xHdvNofonai2xVIuNcoApRn5b",
+          "JpstdDN05osAjcxbIEscZU5wn5e"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "使用回收站",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "BfzvdQmAAoNpb3xLGIzcAg7dnte",
+        "block_type": 2,
+        "parent_id": "BHIjdEdABoKZdIxZxfCc78PLn7g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为进一步保护您的数据，任何删除的集群都会在回收站种保留 30 天。这样一来不论是因为操作失误还是试用到期或欠费导致集群删除，您都可以在 30 天内安全恢复集群数据。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NmzQdohnuo2DEdxdLA0cCp8qnCf",
+        "block_type": 2,
+        "parent_id": "BHIjdEdABoKZdIxZxfCc78PLn7g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HJU1d4x6UoCO06xMdWMctpeGnWb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "前提条件",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#prerequisites}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BHIjdEdABoKZdIxZxfCc78PLn7g"
+      },
+      {
+        "block_id": "ED4Md187roRnCkxgZXHc602Nnyg",
+        "block_type": 2,
+        "parent_id": "BHIjdEdABoKZdIxZxfCc78PLn7g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需还原回收站中集群，请先添加",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "支付方式",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fdocs.zilliz.com.cn%2Fdocs%2Fpayment-billing"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WQg2d3NbHoPxPjxjwssc1rwrnMc",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "恢复回收站中集群",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#restore-a-dropped-cluster-in-the-recycle-bin}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BHIjdEdABoKZdIxZxfCc78PLn7g"
+      },
+      {
+        "block_id": "Wt6ndKgOooumGkxMFuIcImc8nwe",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "进入已删除集群所属的组织。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BHIjdEdABoKZdIxZxfCc78PLn7g"
+      },
+      {
+        "block_id": "POusddYgboMgTuxt2YDcqRuwn4E",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过左侧导航栏或顶部导航栏中的垃圾箱图标进入回收站。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BHIjdEdABoKZdIxZxfCc78PLn7g"
+      },
+      {
+        "block_id": "XwZrdt7BdopRo1xaKdpcOuRWnLb",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在需要恢复的集群的操作栏中选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "恢复集群",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BHIjdEdABoKZdIxZxfCc78PLn7g"
+      },
+      {
+        "block_id": "QbZfdUQ1OoE8G8x4Ktgc3SEonec",
+        "block_type": 13,
+        "children": [
+          "ZX3NdYYF0oz2uBxj9kLcezXunCd",
+          "FVLfdFMcKoIkjcx0vQVc8A9DnDf",
+          "NPvIdyyf9oerGnxC0J7cQL3Lnte"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "配置需要恢复的集群。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BHIjdEdABoKZdIxZxfCc78PLn7g"
+      },
+      {
+        "block_id": "ZX3NdYYF0oz2uBxj9kLcezXunCd",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以将集群恢复到同一组织下的不同项目中，但是集群恢复不可跨地域。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "QbZfdUQ1OoE8G8x4Ktgc3SEonec"
+      },
+      {
+        "block_id": "FVLfdFMcKoIkjcx0vQVc8A9DnDf",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以选择保留集群中集合的加载状态。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "QbZfdUQ1OoE8G8x4Ktgc3SEonec"
+      },
+      {
+        "block_id": "NPvIdyyf9oerGnxC0J7cQL3Lnte",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以重命名集群，重新选择集群 CU 大小，并重置集群连接密码。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "QbZfdUQ1OoE8G8x4Ktgc3SEonec"
+      },
+      {
+        "block_id": "Foczd8FYio9Zyvx732lcu1STnmg",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "恢复",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。Zilliz Cloud 将开始根据您在上一步骤中的配置创建新集群，并将你的数据恢复到集群中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BHIjdEdABoKZdIxZxfCc78PLn7g"
+      },
+      {
+        "block_id": "Qsm0d4nMhoSxEgxt0u0cCaBenN2",
+        "block_type": 34,
+        "children": [
+          "ZAAHdblc7oczHYxE0ZXciJrun1a",
+          "NoUWdQS5yoJlPbxyes0cU5hLnl3"
+        ],
+        "parent_id": "BHIjdEdABoKZdIxZxfCc78PLn7g",
+        "quote_container": {}
+      },
+      {
+        "block_id": "ZAAHdblc7oczHYxE0ZXciJrun1a",
+        "block_type": 2,
+        "parent_id": "Qsm0d4nMhoSxEgxt0u0cCaBenN2",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NoUWdQS5yoJlPbxyes0cU5hLnl3",
+        "block_type": 2,
+        "parent_id": "Qsm0d4nMhoSxEgxt0u0cCaBenN2",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群恢复过程中，其状态将从",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建中",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "变为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "恢复中",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，最后变为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "运行中",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。集群状态变为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "运行中",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "即代表所有被删除的数据已恢复。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CI9idig8qoDtKhxy8NGcTDpdnsf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "文档推荐",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BHIjdEdABoKZdIxZxfCc78PLn7g"
+      },
+      {
+        "block_id": "HA4Ud3S3koyHjUxCdgwcqWaHnWh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建备份快照",
+                "token": "GFFswc3z1iQtjQkpmyScL00dnSx",
+                "url": "https://zilliverse.feishu.cn/wiki/GFFswc3z1iQtjQkpmyScL00dnSx"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BHIjdEdABoKZdIxZxfCc78PLn7g"
+      },
+      {
+        "block_id": "AksRdKxVZorgV9x9ohvcp0ufnjh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建自动备份",
+                "token": "TXyTwrfxCiStfek4hc7c2nKwnJc",
+                "url": "https://zilliverse.feishu.cn/wiki/TXyTwrfxCiStfek4hc7c2nKwnJc"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BHIjdEdABoKZdIxZxfCc78PLn7g"
+      },
+      {
+        "block_id": "S0umdKIcBo9FMpx3a3Ocypphnyc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "查看备份快照",
+                "token": "PS8EwUahQiNPTikPIMbcBxvGnKS",
+                "url": "https://zilliverse.feishu.cn/wiki/PS8EwUahQiNPTikPIMbcBxvGnKS"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BHIjdEdABoKZdIxZxfCc78PLn7g"
+      },
+      {
+        "block_id": "F9xHdvNofonai2xVIuNcoApRn5b",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "恢复备份",
+                "token": "NtkswF6UEi3kB0k8XSEcOKkhnld",
+                "url": "https://zilliverse.feishu.cn/wiki/NtkswF6UEi3kB0k8XSEcOKkhnld"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "BHIjdEdABoKZdIxZxfCc78PLn7g"
+      },
+      {
+        "block_id": "JpstdDN05osAjcxbIEscZU5wn5e",
+        "block_type": 2,
+        "parent_id": "BHIjdEdABoKZdIxZxfCc78PLn7g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 23
+  }
+}

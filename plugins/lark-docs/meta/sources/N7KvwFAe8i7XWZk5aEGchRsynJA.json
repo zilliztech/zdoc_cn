@@ -1,0 +1,1385 @@
+{
+  "creator": "ou_8554528ee6e965bad56710acde1c7847",
+  "has_child": false,
+  "node_create_time": "1687318491",
+  "node_token": "N7KvwFAe8i7XWZk5aEGchRsynJA",
+  "node_type": "origin",
+  "obj_create_time": "1687318491",
+  "obj_edit_time": "1700719917",
+  "obj_token": "IKckdE4UIodjLrxS6XccvsjInBR",
+  "obj_type": "docx",
+  "origin_node_token": "N7KvwFAe8i7XWZk5aEGchRsynJA",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_8554528ee6e965bad56710acde1c7847",
+  "parent_node_token": "B11mwdhmYiGFsck0eCYcU5wnngX",
+  "space_id": "7167193056431783939",
+  "title": "与 Cohere 集成搭建智能问答系统",
+  "slug": "question-answering-using-zilliz-cloud-and-cohere",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "IKckdE4UIodjLrxS6XccvsjInBR",
+        "block_type": 1,
+        "children": [
+          "YmIWdWP3lo86mixcQgfcndc5nOg",
+          "FDNydWGXJoskWYxh5XvcyIEWnGb",
+          "JNJRdmAthoDWHyx4nYEcBOilnfc",
+          "A8jYdUHk7oPByuxJSPzc2LNWnTd",
+          "Hy9qd1YY6omtmpxW8bucIUmXnSI",
+          "Pxwmd9dDPoapeoxvd9xcRSEAnWf",
+          "L0oxdV1NFoDbPkx60uRckmLJnLc",
+          "PSU2dTrLNoIReoxlFoDchwL9nXe",
+          "OCqEdRFV5oPenGxpFQXcKemSnrc",
+          "IttpdJ56fow5yIxd9xVcMn5Enef",
+          "TxZYdZWAHofti3xGmvycsYGonhg",
+          "ZWzKdRNKfo8RIoxot4lckyB1nEe",
+          "K2dvd65V1oyO3sx4bv0caVGFn6b",
+          "NV7FdhNABoBsXoxFtBIciFz6nOb",
+          "X1DxdRCqIonjQmx76iuchUv8nZg",
+          "Zt4Kd2qjWo0w16xgA4jcZuY7nXg",
+          "UprldDlzToefp6xBJeOcNaT2nIe",
+          "P9aCdTmjVoy5e2xkT3TcbOyTnnd",
+          "OSsidmibxosGLfxsuAIch34ZnLh",
+          "YVWcdZ6LAo8jrhxxuKBcP6tOnbh",
+          "SBkGdRDR8oBSUExor8gcnWt3nTe",
+          "N0BGdl31womWaOxv6dIcgdrknTh",
+          "Q5Wld8IsmowH52xcuTEchT1Sn6b",
+          "C48zdwqdtogbZAxIJ75cCBk5nVb",
+          "UrZ3dCyKSo9eASx7ZHVcxjbunSd",
+          "EmvLdke50o7YBexTB4tcsBbxnHf",
+          "RVpXdMo0EoYg8Qx0zr5c1Wcmnxd",
+          "XYaMd2RwSojnUcxikIZcmJL4nfd",
+          "APUPdTCsdo4cRExzU3ic1R0wnjd",
+          "SaoId4QDgoqo29xFszfcUDzwnXg",
+          "Vw3xdlcEeo7PUxxJHu4cLQNKnSf",
+          "QTzidwTAxox96wx1izjcHWSNnHe",
+          "DDy6d54FNoKCkjxR3rccJ6JinVg",
+          "EkPXdN81Kos4cYxrpmvc12OAnvb"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "与 Cohere 集成搭建智能问答系统",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "YmIWdWP3lo86mixcQgfcndc5nOg",
+        "block_type": 2,
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文将演示如何使用 Zilliz Cloud 和 Cohere 搭建基于 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "SQuAD 数据集",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Frajpurkar.github.io%2FSQuAD-explorer%2F"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 的问答系统。其中，Zilliz Cloud 负责提供向量数据库，Cohere 负责提供获取指定文字向量表示的接口。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FDNydWGXJoskWYxh5XvcyIEWnGb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "准备工作",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#before-you-start}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "JNJRdmAthoDWHyx4nYEcBOilnfc",
+        "block_type": 2,
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本示例中的脚本需要安装 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "pymilvus",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "cohere",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "pandas",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "numpy",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "tqdm",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。其中，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "pymilvus",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 是 Zilliz Cloud的 Python 客户端，如果你的系统中没有安装它们，可以使用如下命令完成安装。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "A8jYdUHk7oPByuxJSPzc2LNWnTd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "pip install pymilvus cohere pandas numpy tqdm",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 60,
+            "wrap": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "Hy9qd1YY6omtmpxW8bucIUmXnSI",
+        "block_type": 2,
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "然后，你可以按照如下方式加载它们。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Pxwmd9dDPoapeoxvd9xcRSEAnWf",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "import cohere\nimport pandas\nimport numpy as np\nfrom tqdm import tqdm\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "from pymilvus import connections, FieldSchema, CollectionSchema, DataType, Collection, utility",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "L0oxdV1NFoDbPkx60uRckmLJnLc",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "主要参数",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#parameters}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "PSU2dTrLNoIReoxlFoDchwL9nXe",
+        "block_type": 2,
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在这里，我们定义了一些示例中将要使用的主要参数。你需要根据实际情况和参数旁的注释填写或替换成相应的内容。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OCqEdRFV5oPenGxpFQXcKemSnrc",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "FILE = 'https://rajpurkar.github.io/SQuAD-explorer/dataset/train-v2.0.json'  # SQuAD 数据集的 URL 地址\nCOLLECTION_NAME = 'question_answering_db'  # Collection 名称\nDIMENSION = 768  # 向量维度，Cohere 大模型默认的向量维度是4096\nCOUNT = 5000  # 需要插入的问题数量\nBATCH_SIZE = 96 # 单次插入的问题数量\nURI = 'https://replace-this-with-the-public-endpoint-of-your-cluster-on-zilliz-clou'  # Zilliz Cloud 上获取的 Cluster 的公开端点\nUSER = 'replace-this-with-the-cluster-user-name'  # 创建 Cluster 时指定的用户名\nPASSWORD = 'replace-this-with-the-cluster-password'  # 创建 Cluster 时指定的密码\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "COHERE_API_KEY = 'replace-this-with-the-cohere-api-key'  # 从 Cohere 上获取的 API 密钥",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "IttpdJ56fow5yIxd9xVcMn5Enef",
+        "block_type": 2,
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "关于本示例使用的模型和数据集，可以参考 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Cohere",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fcohere.ai%2F"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "SQuAD",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Frajpurkar.github.io%2FSQuAD-explorer%2F"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TxZYdZWAHofti3xGmvycsYGonhg",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "准备数据",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#prepare-dataset}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "ZWzKdRNKfo8RIoxot4lckyB1nEe",
+        "block_type": 2,
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在本例中，我们将使用SQuAD数据集做为回答问题的信源。数据集的原始格式为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "JSON",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，我们会使用",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "pandas",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "加载该数据集。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "K2dvd65V1oyO3sx4bv0caVGFn6b",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# 下载数据集\ndataset = pandas.read_json(FILE)\n\n# 清理数据集，获取数据集中所有的问答对\nsimplified_records = []\nfor x in dataset['data']:\n    for y in x['paragraphs']:\n        for z in y['qas']:\n            if len(z['answers']) != 0:\n                simplified_records.append({'question': z['question'], 'answer': z['answers'][0]['text']})\n\n# 按照 COUNT 参数从清理过的数据集中抽取指定数量的记录\nsimplified_records = pandas.DataFrame.from_records(simplified_records)\nsimplified_records = simplified_records.sample(n=min(COUNT, len(simplified_records)), random_state = 42)\n\n# 检查获取的记录数量是否和 COUNT 参数的值一致\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "print(len(simplified_records))",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "NV7FdhNABoBsXoxFtBIciFz6nOb",
+        "block_type": 2,
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "上面这段代码的输出如下",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "X1DxdRCqIonjQmx76iuchUv8nZg",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "5000",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "Zt4Kd2qjWo0w16xgA4jcZuY7nXg",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建 Collection",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#create-a-collection}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "UprldDlzToefp6xBJeOcNaT2nIe",
+        "block_type": 2,
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "我们需要事先在 Zilliz Cloud 上准备好一个 Cluster。在这一小节里，我们将演示如何在这个 Cluster 里创建一个 Collection 并为其创建索引。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "P9aCdTmjVoy5e2xkT3TcbOyTnnd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# 连接到 Zilliz Cloud cluster\nconnections.connect(uri=URI, user=USER, password=PASSWORD, secure=True)\n\n# 如果要创建的 Collection 已存在，删除该 Collection\nif utility.has_collection(COLLECTION_NAME):\n    utility.drop_collection(COLLECTION_NAME)\n\n# 创建一个 Collection，有如下4个字段：ID，问题，问题的向量表示及对应的答案\nfields = [\n    FieldSchema(name='id', dtype=DataType.INT64, is_primary=True, auto_id=True),\n    FieldSchema(name='original_question', dtype=DataType.VARCHAR, max_length=1000),\n    FieldSchema(name='answer', dtype=DataType.VARCHAR, max_length=1000),\n    FieldSchema(name='original_question_embedding', dtype=DataType.FLOAT_VECTOR, dim=DIMENSION)\n]\nschema = CollectionSchema(fields=fields)\ncollection = Collection(name=COLLECTION_NAME, schema=schema)\n\n# 创建一个类型为 AUTOINDEX 的索引\nindex_params = {\n    'index_type': 'AUTOINDEX',\n    'metric_type': 'IP'\n    'params': {}\n}\ncollection.create_index(field_name=\"original_question_embedding\", index_params=index_params)\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "collection.load()",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "OSsidmibxosGLfxsuAIch34ZnLh",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "插入数据",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#insert-data}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "YVWcdZ6LAo8jrhxxuKBcP6tOnbh",
+        "block_type": 2,
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "向 Collection 中插入我们准备好的数据分为如下三步：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SBkGdRDR8oBSUExor8gcnWt3nTe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "读取准备好的数据集。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "N0BGdl31womWaOxv6dIcgdrknTh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "获取数据集中原始问题对应的向量表示。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "Q5Wld8IsmowH52xcuTEchT1Sn6b",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "将数据插入之前创建的 Collection 中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "C48zdwqdtogbZAxIJ75cCBk5nVb",
+        "block_type": 2,
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在本示例中，每一条数据都包含一个原始问题，该问题的向量表示及对应的回答。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UrZ3dCyKSo9eASx7ZHVcxjbunSd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# 创建 Cohere 客户端\ncohere_client = cohere.Client(COHERE_API_KEY)\n\n# 使用 Cohere 客户端获取指定问题的向量表示\ndef embed(texts):\n    res = cohere_client.embed(texts, model='multilingual-22-12')\n    return res.embeddings\n\n# 向 Colletion 中插入每个问题、该问题的向量表示及对应的回答。\ntotal = pandas.DataFrame()\nfor batch in tqdm(np.array_split(simplified_records, (COUNT/BATCH_SIZE) + 1)):\n    questions = batch['question'].tolist()\n    \n    data = [\n        questions,\n        batch['answer'].tolist(),\n        embed(questions)      \n    ]\n\n    collection.insert(data)\n\n# 在插入结束后，执行写入操作，确保所有记录均被索引。 \n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "collection.flush()",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "EmvLdke50o7YBexTB4tcsBbxnHf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "测试问答",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#ask-questions}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "RVpXdMo0EoYg8Qx0zr5c1Wcmnxd",
+        "block_type": 2,
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在我们向 Collection 中插入所有的数据后，就可以开始向这个问答系统提问了。提问的过程也分为三步，分别是：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XYaMd2RwSojnUcxikIZcmJL4nfd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "提出问题",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "APUPdTCsdo4cRExzU3ic1R0wnjd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "使用 Cohere 获取该问题的向量表示",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "SaoId4QDgoqo29xFszfcUDzwnXg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "使用 Zilliz Cloud 对该向量表示进行相似性搜索",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "Vw3xdlcEeo7PUxxJHu4cLQNKnSf",
+        "block_type": 34,
+        "children": [
+          "LyINdU9zGohCSAxffPlcvpGbnIg",
+          "Jfn8dDKaSovxjWxJ3ujcyqPOnoc"
+        ],
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR",
+        "quote_container": {}
+      },
+      {
+        "block_id": "LyINdU9zGohCSAxffPlcvpGbnIg",
+        "block_type": 2,
+        "parent_id": "Vw3xdlcEeo7PUxxJHu4cLQNKnSf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Jfn8dDKaSovxjWxJ3ujcyqPOnoc",
+        "block_type": 2,
+        "parent_id": "Vw3xdlcEeo7PUxxJHu4cLQNKnSf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在数据插入后立即进行搜索可能会比较慢。因为在数据完成索引前，Zilliz Cloud 会使用暴力搜索的方式在这些数据中查找相似的结果。当所有数据均完成索引后，搜索速度会变快。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QTzidwTAxox96wx1izjcHWSNnHe",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# 在数据集中查找指定提问对应的答案\ndef search(text, top_k = 5):\n\n    # AUTOINDEX 无须提供搜索参数\n    search_params = {}\n\n    results = collection.search(\n        data = embed([text]),  # 获取提问的向量表示\n        anns_field=\"original_question_embedding\",  # 在库中所有原始提问的向量表示中进行搜索\n        param=search_params,\n        limit = top_k,  # 指定每次搜索返回的结果数量\n        output_fields=['original_question', 'answer']  # 要求返回的结果中包含原始提问和回答\n    )\n\n    ret = []\n    for hit in results[0]:\n        row = []\n        row.extend([hit.entity.get('answer'), hit.score, hit.entity.get('original_question') ])  # 从返回的结果中获取答案，距离和原始提问\n        ret.append(row)\n    return ret\n\n# 提出问题\nsearch_questions = ['What kills bacteria?', 'Whats the biggest dog?']\n\n# 按 答案、相似度得分及原始提问的顺序打印搜索结果\nfor question in search_questions:\n    print('Question:', question)\n    print('\\nAnswer,', 'Distance,', 'Original Question')\n    for result in search(question):\n        print(result)\n    print()\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      },
+      {
+        "block_id": "DDy6d54FNoKCkjxR3rccJ6JinVg",
+        "block_type": 2,
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本示例返回的搜索结果如下：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EkPXdN81Kos4cYxrpmvc12OAnvb",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Question: What kills bacteria?\n\nAnswer, Distance, Original Question\n['Phage therapy', 5976.171875, 'What has been talked about to treat resistant bacteria?']\n['oral contraceptives', 7065.4130859375, 'In therapy, what does the antibacterial interact with?']\n['farming', 7250.0791015625, 'What makes bacteria resistant to antibiotic treatment?']\n['slowing down the multiplication of bacteria or killing the bacteria', 7291.306640625, 'How do antibiotics work?']\n['converting nitrogen gas to nitrogenous compounds', 7310.67724609375, 'What do bacteria do in soil?']\n\nQuestion: Whats the biggest dog?\n\nAnswer, Distance, Original Question\n['English Mastiff', 4205.16064453125, 'What breed was the largest dog known to have lived?']\n['Rico', 6108.88427734375, 'What is the name of the dog that could ID over 200 things?']\n['part of the family', 7904.853515625, 'Most people today describe their dogs as what?']\n['77.5 million', 8752.98828125, 'How many people in the United States are said to own dog?']\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "['Iditarod Trail Sled Dog Race', 9251.58984375, 'Which dog-sled race in Alaska is the most famous?']",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "IKckdE4UIodjLrxS6XccvsjInBR"
+      }
+    ],
+    "counts": 37
+  }
+}

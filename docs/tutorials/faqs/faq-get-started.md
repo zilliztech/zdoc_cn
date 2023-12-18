@@ -2,6 +2,7 @@
 slug: /faq-get-started
 beta: null
 notebook: null
+token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 1
 ---
 
@@ -9,7 +10,7 @@ sidebar_position: 1
 
 本文列举了快速上手 Zilliz Cloud 时可能遇到的常见问题及对应解决方法。
 
-## Contents
+## 目录
 
 - [是否提供 Zilliz Cloud 与其他竞品间的性能对比？](#is-there-any-performance-comparison-between-zilliz-cloud-and-other-vector-search-solutions)
 - [免费试用结束后，我的数据是否会被删除？](#what-happens-after-the-free-trial)
@@ -17,7 +18,7 @@ sidebar_position: 1
 - [Zilliz Cloud 搜索延迟是多少？](#what-is-the-search-latency-of-zilliz-cloud)
 - [Zilliz Cloud 支持哪些索引类型？](#which-type-of-index-is-supported-by-zilliz-cloud)
 
-## 常见问题
+## 问题
 
 
 

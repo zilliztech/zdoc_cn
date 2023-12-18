@@ -1,0 +1,1670 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1687157441",
+  "node_token": "WWlIwejMNiAEmmkce5fcZu4UnMd",
+  "node_type": "origin",
+  "obj_create_time": "1687157441",
+  "obj_edit_time": "1701859537",
+  "obj_token": "AdsudX2IuoDnnWxtXtQcpgaAnAh",
+  "obj_type": "docx",
+  "origin_node_token": "WWlIwejMNiAEmmkce5fcZu4UnMd",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "F8qDwqK7di4rl3kloZ7cNaUTnse",
+  "space_id": "7167193056431783939",
+  "title": "免费试用",
+  "slug": "free-trials",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh",
+        "block_type": 1,
+        "children": [
+          "Pw0UdIM75o6SHcxPXRkcwpiNnP8",
+          "Woa8dXdt1olhuOxUhhqc0EZJnHb",
+          "TJ3fdpfoZocbwKxmr7vce3SMn19",
+          "EW71dmIICoozKXxaws0c1JwinJE",
+          "PbiKdTBBQoGzypxvwi3cB551nke",
+          "RX4ydfNigoBsg0xC7R2cv9luntd",
+          "MYwtdpURFof5s0xsPaTcUJCEnJf",
+          "UmbydlLjDoz6TYxsuWWcfqdLnRd",
+          "DcdZdRwaNo04SIxmOSmclMiMnzc",
+          "Wq7Tdou3KowFxHxWzrOc6t9inYd",
+          "Le8Hdz8UHoKJ37x933hc1LMlnab",
+          "SZq9dWlYooFtbpxo9YQcennFnKe",
+          "F54Xd0Hvho9uQnxdLwOcLPgPnRb",
+          "J6ewd9Y6jo0IN9xqIfVcfaFznnb",
+          "TDupdxgu7ob9nMx9PjRcQytLnRh",
+          "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+          "XM8XddxIroHxJdxgsTHcXYw2nre",
+          "KCDOd9ogDoVqPAxIn0wc3bbTnee",
+          "EgwudIBTSo3PHPxPCgzczOytnQg",
+          "ZWGvdWwBRo4X9cxPRy9cqwv7n2d",
+          "Yz2gdzRC1oqNCMxQW4ecVrHlnEd",
+          "J4ACdCHJXoLpW1x0qYpcDfoun6d",
+          "AYm4dfdIOoiFdXxgmyLcRjf9nCh"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "免费试用",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "Pw0UdIM75o6SHcxPXRkcwpiNnP8",
+        "block_type": 2,
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "当前",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "提供",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "两种",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "可免费试用的订阅版本：免费版和企业版。首次注册 Zilliz Cloud 时，您将获赠 ¥300 免费额度，有效期为 30 天，可用于试用 Zilliz Cloud 企业版。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Woa8dXdt1olhuOxUhhqc0EZJnHb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "免费版",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh"
+      },
+      {
+        "block_id": "TJ3fdpfoZocbwKxmr7vce3SMn19",
+        "block_type": 2,
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "免费版适合想要尝试向量数据库的开发人员。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EW71dmIICoozKXxaws0c1JwinJE",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "特性：",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "一个部署在阿里云上的免费 Serverless 集群。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh"
+      },
+      {
+        "block_id": "PbiKdTBBQoGzypxvwi3cB551nke",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "定价：",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "免费，无需绑定任何支付方式。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh"
+      },
+      {
+        "block_id": "RX4ydfNigoBsg0xC7R2cv9luntd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "配置：",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "无需额外配置即可快速开始。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh"
+      },
+      {
+        "block_id": "MYwtdpURFof5s0xsPaTcUJCEnJf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "能否免费试用：",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "可以。您可最多创建 2 个Collection。每个 Collection 容量约为 50 万 768维向量。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh"
+      },
+      {
+        "block_id": "UmbydlLjDoz6TYxsuWWcfqdLnRd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "适合人群：",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "向量数据库领域新手或想要快速搭建 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "AI",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 应用的开发人员。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh"
+      },
+      {
+        "block_id": "DcdZdRwaNo04SIxmOSmclMiMnzc",
+        "block_type": 2,
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Wq7Tdou3KowFxHxWzrOc6t9inYd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "企业版",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh"
+      },
+      {
+        "block_id": "Le8Hdz8UHoKJ37x933hc1LMlnab",
+        "block_type": 2,
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "企业版适合大型企业或组织，是构建向量数据平台首选方案。该方案提供高可用、数据安全、专家技术支持。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SZq9dWlYooFtbpxo9YQcennFnKe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "特性：",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "高级功能。提供全天候技术支持。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh"
+      },
+      {
+        "block_id": "F54Xd0Hvho9uQnxdLwOcLPgPnRb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "云服务提供商：",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "阿里云。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh"
+      },
+      {
+        "block_id": "J6ewd9Y6jo0IN9xqIfVcfaFznnb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "定价：",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "详见 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 定价",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com.cn%2Fpricing"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh"
+      },
+      {
+        "block_id": "TDupdxgu7ob9nMx9PjRcQytLnRh",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "不同版本的免费试用对比",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh"
+      },
+      {
+        "block_id": "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+        "block_type": 31,
+        "children": [
+          "FeEJdQAmoog2PmxfnnQcY1BLnQk",
+          "BYf1dY9O4opACMxPlmjcBT5wnke",
+          "S3RedKro6odTiGxSisBck7xdnjc",
+          "P4xvddyAaoHT5IxNiIJcN9renxf",
+          "TnlKd6oLgoNxWOx6W2HclKpcnIv",
+          "CZ7ndL1aDoxMoJxEQL9cNKl6nwJ",
+          "SwjddJ29foA46oxSAwyc4aHan8x",
+          "Z3p5dU7OFo2Blzx7qxAcuRyinff",
+          "RwbRd2fsdoSSOIxqMINcBx8Ynyt",
+          "E8bRd13yHoEIv7xGR0Gc3ApRnac",
+          "Cwvqd00fyotWJrxsBVOcjibInZf",
+          "KhiMdifxroRFSMx9tzRcrJS8nVc",
+          "J128dMP9oo9KnuxpjdRcmGhpnMc",
+          "KmaQdBDWBo7M6XxopyNcXy4Nnlc",
+          "FRJUdWnPboM4EexwMF7ccvAjnEh",
+          "TzqSdaNogohQAbxplgFcQStknLd",
+          "A6o1dsjrLoDCC1xZh2OcfZFMnGO",
+          "QCngdVOq3oV0kNxel6bc3Mz9nzh"
+        ],
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh",
+        "table": {
+          "cells": [
+            "FeEJdQAmoog2PmxfnnQcY1BLnQk",
+            "BYf1dY9O4opACMxPlmjcBT5wnke",
+            "S3RedKro6odTiGxSisBck7xdnjc",
+            "P4xvddyAaoHT5IxNiIJcN9renxf",
+            "TnlKd6oLgoNxWOx6W2HclKpcnIv",
+            "CZ7ndL1aDoxMoJxEQL9cNKl6nwJ",
+            "SwjddJ29foA46oxSAwyc4aHan8x",
+            "Z3p5dU7OFo2Blzx7qxAcuRyinff",
+            "RwbRd2fsdoSSOIxqMINcBx8Ynyt",
+            "E8bRd13yHoEIv7xGR0Gc3ApRnac",
+            "Cwvqd00fyotWJrxsBVOcjibInZf",
+            "KhiMdifxroRFSMx9tzRcrJS8nVc",
+            "J128dMP9oo9KnuxpjdRcmGhpnMc",
+            "KmaQdBDWBo7M6XxopyNcXy4Nnlc",
+            "FRJUdWnPboM4EexwMF7ccvAjnEh",
+            "TzqSdaNogohQAbxplgFcQStknLd",
+            "A6o1dsjrLoDCC1xZh2OcfZFMnGO",
+            "QCngdVOq3oV0kNxel6bc3Mz9nzh"
+          ],
+          "property": {
+            "column_size": 3,
+            "column_width": [
+              100,
+              100,
+              100
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 6
+          }
+        }
+      },
+      {
+        "block_id": "FeEJdQAmoog2PmxfnnQcY1BLnQk",
+        "block_type": 32,
+        "children": [
+          "WXSBdFBqGo4asexcwkjcbWZXn2f"
+        ],
+        "parent_id": "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "WXSBdFBqGo4asexcwkjcbWZXn2f",
+        "block_type": 2,
+        "parent_id": "FeEJdQAmoog2PmxfnnQcY1BLnQk",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BYf1dY9O4opACMxPlmjcBT5wnke",
+        "block_type": 32,
+        "children": [
+          "Tr3hdXScPo6sD5x3qlIcus7WnVm"
+        ],
+        "parent_id": "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Tr3hdXScPo6sD5x3qlIcus7WnVm",
+        "block_type": 2,
+        "parent_id": "BYf1dY9O4opACMxPlmjcBT5wnke",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "免费版",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "S3RedKro6odTiGxSisBck7xdnjc",
+        "block_type": 32,
+        "children": [
+          "C69kdcMeroMtfexLDWBcAFAPnfh"
+        ],
+        "parent_id": "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "C69kdcMeroMtfexLDWBcAFAPnfh",
+        "block_type": 2,
+        "parent_id": "S3RedKro6odTiGxSisBck7xdnjc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "企业版",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "P4xvddyAaoHT5IxNiIJcN9renxf",
+        "block_type": 32,
+        "children": [
+          "PgdWdrEUjor0m8xNXfcctU9pnpc"
+        ],
+        "parent_id": "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "PgdWdrEUjor0m8xNXfcctU9pnpc",
+        "block_type": 2,
+        "parent_id": "P4xvddyAaoHT5IxNiIJcN9renxf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群类型",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TnlKd6oLgoNxWOx6W2HclKpcnIv",
+        "block_type": 32,
+        "children": [
+          "EhqGdjOQnoFnWFxsOMBcGxUJnmc"
+        ],
+        "parent_id": "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "EhqGdjOQnoFnWFxsOMBcGxUJnmc",
+        "block_type": 2,
+        "parent_id": "TnlKd6oLgoNxWOx6W2HclKpcnIv",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Serverless ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CZ7ndL1aDoxMoJxEQL9cNKl6nwJ",
+        "block_type": 32,
+        "children": [
+          "RXf2d13RwoUlTAx4nM0cX04Mnoe"
+        ],
+        "parent_id": "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RXf2d13RwoUlTAx4nM0cX04Mnoe",
+        "block_type": 2,
+        "parent_id": "CZ7ndL1aDoxMoJxEQL9cNKl6nwJ",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Dedicated",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SwjddJ29foA46oxSAwyc4aHan8x",
+        "block_type": 32,
+        "children": [
+          "WVyVd9258oqZMNx6KpicVp78nHf"
+        ],
+        "parent_id": "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "WVyVd9258oqZMNx6KpicVp78nHf",
+        "block_type": 2,
+        "parent_id": "SwjddJ29foA46oxSAwyc4aHan8x",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "试用有效期",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Z3p5dU7OFo2Blzx7qxAcuRyinff",
+        "block_type": 32,
+        "children": [
+          "RSDDdaMY5o8LkFxGL60csBpRn0c"
+        ],
+        "parent_id": "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RSDDdaMY5o8LkFxGL60csBpRn0c",
+        "block_type": 2,
+        "parent_id": "Z3p5dU7OFo2Blzx7qxAcuRyinff",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "永久",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RwbRd2fsdoSSOIxqMINcBx8Ynyt",
+        "block_type": 32,
+        "children": [
+          "T2uHdz13eosiDGxGKkhcI1Abnnb"
+        ],
+        "parent_id": "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "T2uHdz13eosiDGxGKkhcI1Abnnb",
+        "block_type": 2,
+        "parent_id": "RwbRd2fsdoSSOIxqMINcBx8Ynyt",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "30 天",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "E8bRd13yHoEIv7xGR0Gc3ApRnac",
+        "block_type": 32,
+        "children": [
+          "Z45jdvBVioP8CNxdoj5ckYzsneh"
+        ],
+        "parent_id": "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Z45jdvBVioP8CNxdoj5ckYzsneh",
+        "block_type": 2,
+        "parent_id": "E8bRd13yHoEIv7xGR0Gc3ApRnac",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "适合用例",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Cwvqd00fyotWJrxsBVOcjibInZf",
+        "block_type": 32,
+        "children": [
+          "XXTcdktrpoxXJhxyvUpceTYrnMd"
+        ],
+        "parent_id": "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "XXTcdktrpoxXJhxyvUpceTYrnMd",
+        "block_type": 2,
+        "parent_id": "Cwvqd00fyotWJrxsBVOcjibInZf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "快速开始",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KhiMdifxroRFSMx9tzRcrJS8nVc",
+        "block_type": 32,
+        "children": [
+          "TQGAdm4WfoBPrKxSiHicZyUunjc"
+        ],
+        "parent_id": "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "TQGAdm4WfoBPrKxSiHicZyUunjc",
+        "block_type": 2,
+        "parent_id": "KhiMdifxroRFSMx9tzRcrJS8nVc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "验证性测试（",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "PoC",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "J128dMP9oo9KnuxpjdRcmGhpnMc",
+        "block_type": 32,
+        "children": [
+          "WVWJdERgioU1SPxrpPMctueCnjg"
+        ],
+        "parent_id": "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "WVWJdERgioU1SPxrpPMctueCnjg",
+        "block_type": 2,
+        "parent_id": "J128dMP9oo9KnuxpjdRcmGhpnMc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "可创建 Collection 数量上限",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KmaQdBDWBo7M6XxopyNcXy4Nnlc",
+        "block_type": 32,
+        "children": [
+          "M6RNd89oboTbtSxFllrcd3K9nzV"
+        ],
+        "parent_id": "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "M6RNd89oboTbtSxFllrcd3K9nzV",
+        "block_type": 2,
+        "parent_id": "KmaQdBDWBo7M6XxopyNcXy4Nnlc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "2",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FRJUdWnPboM4EexwMF7ccvAjnEh",
+        "block_type": 32,
+        "children": [
+          "IaFkd8KIkoOHeQxI4QTcAc2Tn3c"
+        ],
+        "parent_id": "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "IaFkd8KIkoOHeQxI4QTcAc2Tn3c",
+        "block_type": 2,
+        "parent_id": "FRJUdWnPboM4EexwMF7ccvAjnEh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "可根据您的需求灵活创建 Collection",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TzqSdaNogohQAbxplgFcQStknLd",
+        "block_type": 32,
+        "children": [
+          "TASRd4A44oCwkbxyVgEcEjc3njC"
+        ],
+        "parent_id": "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "TASRd4A44oCwkbxyVgEcEjc3njC",
+        "block_type": 2,
+        "parent_id": "TzqSdaNogohQAbxplgFcQStknLd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "CU 计算资源大小",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "A6o1dsjrLoDCC1xZh2OcfZFMnGO",
+        "block_type": 32,
+        "children": [
+          "QznAdwn3ooekH6xnASMcKTEDnBc"
+        ],
+        "parent_id": "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QznAdwn3ooekH6xnASMcKTEDnBc",
+        "block_type": 2,
+        "parent_id": "A6o1dsjrLoDCC1xZh2OcfZFMnGO",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "共享， 1 CU",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QCngdVOq3oV0kNxel6bc3Mz9nzh",
+        "block_type": 32,
+        "children": [
+          "CxrxdGZQToLJcQx5S7icYWrKnJg"
+        ],
+        "parent_id": "W67hdOtpIoVSEzxdvFmcOq2PnQe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "CxrxdGZQToLJcQx5S7icYWrKnJg",
+        "block_type": 2,
+        "parent_id": "QCngdVOq3oV0kNxel6bc3Mz9nzh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "可根据您的需求灵活选择 CU 大小。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XM8XddxIroHxJdxgsTHcXYw2nre",
+        "block_type": 2,
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需了解如何创建集群，请阅读",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建集群",
+                "token": "MAFcwBTqqiR5YZkdkd4cADg0nub",
+                "url": "https://zilliverse.feishu.cn/wiki/MAFcwBTqqiR5YZkdkd4cADg0nub"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KCDOd9ogDoVqPAxIn0wc3bbTnee",
+        "block_type": 2,
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EgwudIBTSo3PHPxPCgzczOytnQg",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "文档推荐",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh"
+      },
+      {
+        "block_id": "ZWGvdWwBRo4X9cxPRy9cqwv7n2d",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "连接集群",
+                "token": "HU31wDHCCiN9qIknZ2fcLmconNh",
+                "url": "https://zilliverse.feishu.cn/wiki/HU31wDHCCiN9qIknZ2fcLmconNh"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.notion.so%2FConnect-to-Cluster-6b8f0f0e96234400ad9dce8781eb94f4%3Fpvs%3D21"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh"
+      },
+      {
+        "block_id": "Yz2gdzRC1oqNCMxQW4ecVrHlnEd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "删除 Collection",
+                "token": "FrMbwwoTwiqJO4kofPkcndsAnoh",
+                "url": "https://zilliverse.feishu.cn/wiki/FrMbwwoTwiqJO4kofPkcndsAnoh"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.notion.so%2FDrop-Collection-523172cacd21488c9910e759287f5604%3Fpvs%3D21"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh"
+      },
+      {
+        "block_id": "J4ACdCHJXoLpW1x0qYpcDfoun6d",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "插入 Entity",
+                "token": "Am0bwdNmliIZ9OkUB2DcdkOBnAe",
+                "url": "https://zilliverse.feishu.cn/wiki/Am0bwdNmliIZ9OkUB2DcdkOBnAe"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.notion.so%2FInsert-Entities-375dd098632d4a5297617a51c69c7967%3Fpvs%3D21"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh"
+      },
+      {
+        "block_id": "AYm4dfdIOoiFdXxgmyLcRjf9nCh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "向量搜索和查询",
+                "token": "SPaWwHEVuipu3bkeg17coFgnnUo",
+                "url": "https://zilliverse.feishu.cn/wiki/SPaWwHEVuipu3bkeg17coFgnnUo"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.notion.so%2FSearch-and-Query-40930370867642c6b8b65249cfb58c5b%3Fpvs%3D21"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AdsudX2IuoDnnWxtXtQcpgaAnAh"
+      }
+    ],
+    "counts": 60
+  }
+}

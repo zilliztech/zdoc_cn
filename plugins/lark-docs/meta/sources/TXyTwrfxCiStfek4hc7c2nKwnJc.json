@@ -1,0 +1,632 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": false,
+  "node_create_time": "1687140693",
+  "node_token": "TXyTwrfxCiStfek4hc7c2nKwnJc",
+  "node_type": "origin",
+  "obj_create_time": "1687140693",
+  "obj_edit_time": "1700707017",
+  "obj_token": "Q4XvdnUHNoVxFFxRQakcvbdPncc",
+  "obj_type": "docx",
+  "origin_node_token": "TXyTwrfxCiStfek4hc7c2nKwnJc",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "SbePwiLrZi2hZqk5NpRcmramnEN",
+  "space_id": "7167193056431783939",
+  "title": "创建自动备份",
+  "slug": "schedule-automatic-backups",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "Q4XvdnUHNoVxFFxRQakcvbdPncc",
+        "block_type": 1,
+        "children": [
+          "CfmHdo5i4omRzVxVKExcJSjDnGe",
+          "QFyZdczNOoLM7jxT1J7cgGcUnmb",
+          "U5wrd4dV0oyEtQxsGsdcVOpYnjd",
+          "DFFldUwNlo9LNKxOLPec7mxmnDh",
+          "JWpbdjSKWoOPGJxqusqcjoPjntb",
+          "Ytn8dNeK6oa3O6xzxzCcXWvbnUf",
+          "Y1FBd1ONaoIcJtxp2y6cwsVpnpc",
+          "PZ9ndkoWdobW1Kx5uv6cWHtwn0d",
+          "UDTMd0iAuoFN8KxD3Njc03zpnla",
+          "QOOqdWM0xovV5kxA08gcJDJ5ncg",
+          "UceNdHeF5oFDeZxTsGbc68nhnqf",
+          "PXlfduFg0oAnhUxEkTkcrsWwnuh",
+          "JWAsde4AtoVlkmxZoK0cC2punkc",
+          "YIbrdCMAeoefz9xTIwHcnFcNnEc",
+          "TX6fdJtHdoZxkExEkkycze8FnLT"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建自动备份",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "CfmHdo5i4omRzVxVKExcJSjDnGe",
+        "block_type": 2,
+        "parent_id": "Q4XvdnUHNoVxFFxRQakcvbdPncc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 允许您为集群创建自动备份，确保意外发生时可以进行数据恢复。定期备份可以防止数据丢失，您也可以通过快照轻松将数据恢复到特定时间点。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QFyZdczNOoLM7jxT1J7cgGcUnmb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建备份计划{#create-snapshot-schedule}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Q4XvdnUHNoVxFFxRQakcvbdPncc"
+      },
+      {
+        "block_id": "U5wrd4dV0oyEtQxsGsdcVOpYnjd",
+        "block_type": 2,
+        "parent_id": "Q4XvdnUHNoVxFFxRQakcvbdPncc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要创建备份计划，请完成以下步骤：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DFFldUwNlo9LNKxOLPec7mxmnDh",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "进入目标集群的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "备份",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "标签页，单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "备份计划",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Q4XvdnUHNoVxFFxRQakcvbdPncc"
+      },
+      {
+        "block_id": "JWpbdjSKWoOPGJxqusqcjoPjntb",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "编辑备份计划",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "对话框中，开启",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建自动备份计划",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Q4XvdnUHNoVxFFxRQakcvbdPncc"
+      },
+      {
+        "block_id": "Ytn8dNeK6oa3O6xzxzCcXWvbnUf",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "设置",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "备份频率",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "备份保留天数",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "时间段 (",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "UTC",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ")",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Q4XvdnUHNoVxFFxRQakcvbdPncc"
+      },
+      {
+        "block_id": "Y1FBd1ONaoIcJtxp2y6cwsVpnpc",
+        "block_type": 26,
+        "comment_ids": [
+          "7278894102775578628"
+        ],
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6169-1683%26t%3DWINE4vRNDoLjbB9c-4"
+          }
+        },
+        "parent_id": "Q4XvdnUHNoVxFFxRQakcvbdPncc"
+      },
+      {
+        "block_id": "PZ9ndkoWdobW1Kx5uv6cWHtwn0d",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "调整备份计划{#adjust-snapshot-schedule-settings}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Q4XvdnUHNoVxFFxRQakcvbdPncc"
+      },
+      {
+        "block_id": "UDTMd0iAuoFN8KxD3Njc03zpnla",
+        "block_type": 2,
+        "parent_id": "Q4XvdnUHNoVxFFxRQakcvbdPncc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以为集群调整备份计划。默认情况下自动备份处于关闭状态。由于存储快照需要成本，您可以自行决定何时以及如何创建快照。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QOOqdWM0xovV5kxA08gcJDJ5ncg",
+        "block_type": 2,
+        "parent_id": "Q4XvdnUHNoVxFFxRQakcvbdPncc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "自动备份开启后，Zilliz Cloud 默认每日上午 8 点到 10 点之间自动为您的集群创建快照，快照将保留 7 天。您可以按需更改设置。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UceNdHeF5oFDeZxTsGbc68nhnqf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相关文档{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Q4XvdnUHNoVxFFxRQakcvbdPncc"
+      },
+      {
+        "block_id": "PXlfduFg0oAnhUxEkTkcrsWwnuh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建备份快照",
+                "token": "GFFswc3z1iQtjQkpmyScL00dnSx",
+                "url": "https://zilliverse.feishu.cn/wiki/GFFswc3z1iQtjQkpmyScL00dnSx"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Q4XvdnUHNoVxFFxRQakcvbdPncc"
+      },
+      {
+        "block_id": "JWAsde4AtoVlkmxZoK0cC2punkc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "查看备份快照",
+                "token": "PS8EwUahQiNPTikPIMbcBxvGnKS",
+                "url": "https://zilliverse.feishu.cn/wiki/PS8EwUahQiNPTikPIMbcBxvGnKS"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Q4XvdnUHNoVxFFxRQakcvbdPncc"
+      },
+      {
+        "block_id": "YIbrdCMAeoefz9xTIwHcnFcNnEc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "恢复备份",
+                "token": "NtkswF6UEi3kB0k8XSEcOKkhnld",
+                "url": "https://zilliverse.feishu.cn/wiki/NtkswF6UEi3kB0k8XSEcOKkhnld"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Q4XvdnUHNoVxFFxRQakcvbdPncc"
+      },
+      {
+        "block_id": "TX6fdJtHdoZxkExEkkycze8FnLT",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "删除备份快照",
+                "token": "FW37wt3qEiKvZzkzBducXgHZnIe",
+                "url": "https://zilliverse.feishu.cn/wiki/FW37wt3qEiKvZzkzBducXgHZnIe"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Q4XvdnUHNoVxFFxRQakcvbdPncc"
+      }
+    ],
+    "counts": 16
+  }
+}

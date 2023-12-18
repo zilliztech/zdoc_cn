@@ -1,0 +1,1035 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1687160535",
+  "node_token": "Jxqfwnd80i8ibIkRhEKcnkK6nzd",
+  "node_type": "origin",
+  "obj_create_time": "1687160535",
+  "obj_edit_time": "1700706934",
+  "obj_token": "Chted68OWoHPUAxKu0Jcy9QFnPh",
+  "obj_type": "docx",
+  "origin_node_token": "Jxqfwnd80i8ibIkRhEKcnkK6nzd",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "EruqwJUYliwbOgkLjsAcqRwYn0b",
+  "space_id": "7167193056431783939",
+  "title": "价格计算器",
+  "slug": "pricing-calculator",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "Chted68OWoHPUAxKu0Jcy9QFnPh",
+        "block_type": 1,
+        "children": [
+          "CQ9id7PTyoFDRwxskTscSJJanAh",
+          "MiCPd9ShOoXSr1xRLpjcxqjNnn2",
+          "NPFrdCyKgo2N5GxfSDUc1VDUnsb",
+          "AYsTd4Knyo78CVxHhKlc6whxndZ",
+          "RhYMdoLIdoydlpx2PilcQU46nMd",
+          "CzB8dowkNoy0ydx0xXxcl8BTn1f",
+          "AWv2dCjy6oAgd2xomf0cpclenLc",
+          "E2GCdzBD4oUxStxLTfKcI2CanMy",
+          "XBiAdyJDVo6VhGxLhjacPsJnnTM",
+          "HZ45dpi3ToMijExkbNncA5sAnlh",
+          "AP7idjy3po4F1Wx7i1nc5FPvnnf",
+          "O2RldqrjFoWYTXxrFzoc5gHgnhe",
+          "ISv9davs7oVvLxxkCrrcsScFnbb",
+          "MxmTdglxQoCgWLxE9L0cEqwCnJd",
+          "ZM6QdwIbWolOlPxic7Dcln0FnHb",
+          "EfOzdtwmjoGiCQxvqdVc71Yinzh",
+          "EQ9zdG55Ho52M9xLuBVcNS9cnuc",
+          "NuSddY7M5oJcVgxUPCdcXOU7nAe",
+          "ZNiZdB4z4oCCcyxb4rycvy80nRd",
+          "GFAodiz0roYItuxCps8cL0axnBg",
+          "IBDfdJqrBohT09xKXCac16Gcnfh",
+          "MkTDdbniLoKbMhxyp2ZcmxBqnve",
+          "Jl34dB770o9B1YxxIqPcWOEUn6g",
+          "HbxedUxQIoIZnYxUadacQGRKnlc",
+          "STGrdpFsNoIQtBxtVF4c0vaNnGh",
+          "OjQqd8GwTo3yT3x17zjcZ74XnAe",
+          "E4EPdyNE4oWZMGxEn2rc3Bpinab",
+          "A8zbd1fuwoYy7Gxv0JEcCHhFnPg",
+          "VCM1dyq5xo3n9TxA8f2cYcWcn8f",
+          "E2Oyd4k05opROexJZ3bcBebrnie",
+          "AjXKdCRdDoYo4JxGZ7bc28hdnlh"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "价格计算器",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "CQ9id7PTyoFDRwxskTscSJJanAh",
+        "block_type": 2,
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 价格计算器",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com.cn%2Fpricing"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "可以帮助您了解 Zilliz Cloud 定价策略，自助估算价格，挑选最适合的解决方案。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "本指南将介绍如何使用该计算器，以获得精准的成本估算。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MiCPd9ShOoXSr1xRLpjcxqjNnn2",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "数据组件{#data-components}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "NPFrdCyKgo2N5GxfSDUc1VDUnsb",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "向量数量{#number-of-entities}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "AYsTd4Knyo78CVxHhKlc6whxndZ",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "定义：存储在 Zilliz Cloud 集群中的可处理的数据对象。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "RhYMdoLIdoydlpx2PilcQU46nMd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "调整范围：从 0 到 100,000,000。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "CzB8dowkNoy0ydx0xXxcl8BTn1f",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "测量：以 100 万个为单位进行计量，以确保准确性和有效管理。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "AWv2dCjy6oAgd2xomf0cpclenLc",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "向量维度{#vector-dimension}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "E2GCdzBD4oUxStxLTfKcI2CanMy",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "功能：向量中所包含的元素个数，也就是向量的长度。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "XBiAdyJDVo6VhGxLhjacPsJnnTM",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "调整范围：从 32 到 32,768 维。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "HZ45dpi3ToMijExkbNncA5sAnlh",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "标量字段{#scalar-fields}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "AP7idjy3po4F1Wx7i1nc5FPvnnf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "功能：添加数据的标量字段，以获得更精确的价格估算。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "O2RldqrjFoWYTXxrFzoc5gHgnhe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "详情：为主键和其他字段选择数据类型。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "ISv9davs7oVvLxxkCrrcsScFnbb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "定价变量{#pricing-variables}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "MxmTdglxQoCgWLxE9L0cEqwCnJd",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "CU 类型{#cu-type}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "ZM6QdwIbWolOlPxic7Dcln0FnHb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "性能型：适用于性能关键场景，具有高",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "吞吐量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和低延迟。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "EfOzdtwmjoGiCQxvqdVc71Yinzh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "容量型：适合大数据量，存储容量是性能优化 CU 的五倍。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "EQ9zdG55Ho52M9xLuBVcNS9cnuc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "经济型：容量与容量优化 CU 相似，但更具成本效益，性能略有降低。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "NuSddY7M5oJcVgxUPCdcXOU7nAe",
+        "block_type": 2,
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "有关更多信息，请参见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "选择合适的 CU 类型",
+                "token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
+                "url": "https://zilliverse.feishu.cn/wiki/DP6Fw8vkzi7pD7kAMB3cjunYn6g"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZNiZdB4z4oCCcyxb4rycvy80nRd",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "云服务提供商和地域{#cloud-provider}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "GFAodiz0roYItuxCps8cL0axnBg",
+        "block_type": 2,
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "目前，Zilliz Cloud 仅支持阿里云，部署地域仅支持华东1（杭州）。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IBDfdJqrBohT09xKXCac16Gcnfh",
+        "block_type": 2,
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "有关更多信息，请参见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "云服务提供商和地域",
+                "token": "BErdww1kOirndzkHrKoc2ibynlb",
+                "url": "https://zilliverse.feishu.cn/wiki/BErdww1kOirndzkHrKoc2ibynlb"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MkTDdbniLoKbMhxyp2ZcmxBqnve",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 版本{#pricing-plan}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "Jl34dB770o9B1YxxIqPcWOEUn6g",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "企业版",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：适合大型企业或组织，是构建向量数据平台首选方案，提供高可用、数据安全、专家技术支持。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "HbxedUxQIoIZnYxUadacQGRKnlc",
+        "block_type": 2,
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "有关更多信息，请参见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "Zilliz Cloud 版本类型",
+                "token": "XNCIwt9i6iFgEDkEQE9cTMf8nSe",
+                "url": "https://zilliverse.feishu.cn/wiki/XNCIwt9i6iFgEDkEQE9cTMf8nSe"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "STGrdpFsNoIQtBxtVF4c0vaNnGh",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "注意事项{#considerations}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "OjQqd8GwTo3yT3x17zjcZ74XnAe",
+        "block_type": 2,
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需了解专有部署定价，请",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "联系销售",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com.cn%2Fcontact-sales"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "E4EPdyNE4oWZMGxEn2rc3Bpinab",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "文档推荐{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "A8zbd1fuwoYy7Gxv0JEcCHhFnPg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "Zilliz Cloud 版本类型",
+                "token": "XNCIwt9i6iFgEDkEQE9cTMf8nSe",
+                "url": "https://zilliverse.feishu.cn/wiki/XNCIwt9i6iFgEDkEQE9cTMf8nSe"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "VCM1dyq5xo3n9TxA8f2cYcWcn8f",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "选择合适的 CU 类型",
+                "token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
+                "url": "https://zilliverse.feishu.cn/wiki/DP6Fw8vkzi7pD7kAMB3cjunYn6g"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "E2Oyd4k05opROexJZ3bcBebrnie",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "云服务提供商和地域",
+                "token": "BErdww1kOirndzkHrKoc2ibynlb",
+                "url": "https://zilliverse.feishu.cn/wiki/BErdww1kOirndzkHrKoc2ibynlb"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
+      },
+      {
+        "block_id": "AjXKdCRdDoYo4JxGZ7bc28hdnlh",
+        "block_type": 2,
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 32
+  }
+}

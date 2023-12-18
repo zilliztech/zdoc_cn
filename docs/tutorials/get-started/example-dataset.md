@@ -2,6 +2,7 @@
 slug: /example-dataset
 beta: FALSE
 notebook: FALSE
+token: ZoXbwP8hJivPw2ktsLrckw0Snif
 sidebar_position: 4
 ---
 
@@ -12,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 本指南系列中的操作示例都是基于同一个示例数据集。该数据集包含了从 2020 年 1 月至 2020 年 8 月期间在各知名出版物上发表的 5000 多篇 Medium 文章的详细信息。
 
-## 获取数据集**{#acquire-the-dataset}**
+## 获取数据集**{#acquire-the-dataset}**{#acquire-the-dataset}
 
 数据集存放在公共 S3 存储桶中，您可以通过以下命令下载文件：
 
@@ -29,7 +30,7 @@ curl https://assets.zilliz.com/medium_articles_2020_dpr_a13e0377ae.json \
 
 有关数据集的更多信息，请访问 [Kaggle 相关页面](https://www.kaggle.com/datasets/shiyu22chen/cleaned-medium-articles-dataset)。
 
-## 数据集 Schema**{#dataset-schema}**
+## 数据集 Schema**{#dataset-schema}**{#schemadataset-schema}
 
 数据集中的记录具有 8 个共同属性。创建 Collection 时，请以此表作为参考。
 
@@ -44,7 +45,7 @@ curl https://assets.zilliz.com/medium_articles_2020_dpr_a13e0377ae.json \
 |  `claps`        |  INT64        |  N/A      |
 |  `responses`    |  INT64        |  N/A      |
 
-## 相关文档
+## 相关文档{#}
 
 - [连接集群](./connect-to-cluster)
 
@@ -55,3 +56,4 @@ curl https://assets.zilliz.com/medium_articles_2020_dpr_a13e0377ae.json \
 - [插入 Entity](./insert-entities)
 
 - [向量搜索和查询](./search-query-and-get)
+

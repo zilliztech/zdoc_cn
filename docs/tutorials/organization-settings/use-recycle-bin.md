@@ -2,6 +2,7 @@
 slug: /use-recycle-bin
 beta: FALSE
 notebook: FALSE
+token: XVQcw6qgxiC31ikfk06cOo1jnch
 sidebar_position: 4
 ---
 
@@ -12,11 +13,11 @@ import Admonition from '@theme/Admonition';
 
 为进一步保护您的数据，任何删除的集群都会在回收站种保留 30 天。这样一来不论是因为操作失误还是试用到期或欠费导致集群删除，您都可以在 30 天内安全恢复集群数据。
 
-## 前提条件{#prerequisites}
+## 前提条件{#prerequisites}{#prerequisites}
 
 如需还原回收站中集群，请先添加[支付方式](https://docs.zilliz.com.cn/docs/payment-billing)。
 
-## 恢复回收站中集群{#restore-a-dropped-cluster-in-the-recycle-bin}
+## 恢复回收站中集群{#restore-a-dropped-cluster-in-the-recycle-bin}{#restore-a-dropped-cluster-in-the-recycle-bin}
 
 1. 进入已删除集群所属的组织。
 
@@ -25,6 +26,7 @@ import Admonition from '@theme/Admonition';
 1. 在需要恢复的集群的操作栏中选择**恢复集群**。
 
 1. 配置需要恢复的集群。
+
     1. 您可以将集群恢复到同一组织下的不同项目中，但是集群恢复不可跨地域。
 
     1. 您可以选择保留集群中集合的加载状态。
@@ -39,7 +41,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 文档推荐{#related-topics}
+## 文档推荐{#related-topics}{#related-topics}
 
 - [创建备份快照](./create-snapshot) 
 

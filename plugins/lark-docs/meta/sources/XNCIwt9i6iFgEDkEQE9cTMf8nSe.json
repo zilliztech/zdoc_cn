@@ -1,0 +1,3242 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1687159091",
+  "node_token": "XNCIwt9i6iFgEDkEQE9cTMf8nSe",
+  "node_type": "origin",
+  "obj_create_time": "1687159091",
+  "obj_edit_time": "1701775126",
+  "obj_token": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+  "obj_type": "docx",
+  "origin_node_token": "XNCIwt9i6iFgEDkEQE9cTMf8nSe",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "EruqwJUYliwbOgkLjsAcqRwYn0b",
+  "space_id": "7167193056431783939",
+  "title": "Zilliz Cloud 版本类型",
+  "slug": "select-zilliz-cloud-service-plans",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "block_type": 1,
+        "children": [
+          "MVWOd2shuonzhJxUwatcPjdRnIh",
+          "WDEBdeVM9ozB4px1mJvcdcbwnmg",
+          "GjXMdFRXKo9XwSxDFKuc5qyknJe",
+          "XnUCdhhzlom6oDxLDkBcrXNJnmg",
+          "SzGSdI0A5ozIJDx1IImcBNpEn5b",
+          "WG7ad147QoCVo4xuboackZ11nCc",
+          "NxrMd3kONowuoIxkc8Wc5C0An2c",
+          "Z5eQdtIiGoKOrKxUHCdcPjygnMe",
+          "Z4mKdn6FDorTFaxV3bXcdwKnnwd",
+          "NmrOdVR3moGbtwxCpQIcFm25nig",
+          "Efj4dBeQBo5VEFxnciKcboB6nJb",
+          "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+          "Keu4dKrFQoErGfxDwYscVOWBn7d",
+          "YwWNdQnbqoqb4SxO0P0cvJy2nvd",
+          "Y71Gdvc0roPeq1x7k7zc1Hgdnrb",
+          "LSDPdMOmVovFilxCCbXciCmjnLe",
+          "R6V2d8CRIoOCfGxGQyUcS6KtnIc",
+          "Dp0AdCwuOofMhJxslVIcQKSxn7c",
+          "DHyPd74F1oWrGRxG623cRGJunfd",
+          "DNoBdzYcEo3oBFxpGoWcCmCEnTb",
+          "TU7Ld4GKooRo9FxtCNkcAvqFnwg",
+          "QEhcdIvqvoaiTBxhf5jcJUcRnQf",
+          "M6RjdLtZ9oKRvSxGC0Bc98lQnLe",
+          "Uub7djyyJoTtncxhOnmc4AKNnMd",
+          "DC6Yd0AhoozKPTx5Ddac2Jdpnpd",
+          "FbLpdo5EaoBeUhxAIZCcNaA2nie",
+          "HfpTdPyhRo7awGxbSBkc6j3nn1f",
+          "P7EFdS6qGo05X6xAv2icaOV6nve",
+          "LUoedYZA9oVuT6xRexccjEQOnob",
+          "NKPBdYe6ZoyMZVxEDvGcwTPTn6c",
+          "Km3DdYpVHouzqAxeFSHcPFNvn9g"
+        ],
+        "comment_ids": [
+          "7309051206375931908"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 版本类型",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7309051206375931908"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "MVWOd2shuonzhJxUwatcPjdRnIh",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在配置集群前，您需要先选择版本。Zilliz Cloud 各版本提供不同的服务体验、计费模型，且性能及可扩展性也都有所不同 。目前， Zilliz Cloud 共有 3 个版本可供选择，以满足多样的用户需求。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WDEBdeVM9ozB4px1mJvcdcbwnmg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "免费版",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "GjXMdFRXKo9XwSxDFKuc5qyknJe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "企业版",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "XnUCdhhzlom6oDxLDkBcrXNJnmg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "BYOC (Bring Your Own Cloud)",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "SzGSdI0A5ozIJDx1IImcBNpEn5b",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "3 个不同的版本为不同的用户需求及使用场景设计，您可以根据自己的需求灵活选择。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WG7ad147QoCVo4xuboackZ11nCc",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 集群类型{#understand-cluster-types}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "NxrMd3kONowuoIxkc8Wc5C0An2c",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本质上，Zilliz Cloud 提供两种不同的集群类型——",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Serverless",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Dedicated",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Z5eQdtIiGoKOrKxUHCdcPjygnMe",
+        "block_type": 31,
+        "children": [
+          "OPB8dNcfroQCE9x9frAcf3u9nPd",
+          "GfB7drcRmo43vvxDMBPc3yJLnKb",
+          "U6URduZkgoiCaWxhMbmcHJ7Zn3d",
+          "GhvYdOsVGoKvvhxzBxScwZ3unBc",
+          "VieFdE5qEo0PLcxAA6Hc65PXnUb",
+          "UaDadi4EFoC6khxtof3cfeZvnyh",
+          "Dswpd5GP3oAhYUxWqfCc6Hj2nzb",
+          "LaRrdNJaroZuDtxgCDGcSn5Gnec",
+          "IOYkdlImuoY4lrxboMfcyQVynth",
+          "IqRRdUTLQohhH6xtTK8cRwynnlh",
+          "ExqAdgw8BoNjQPxjBmscB2vQnGg",
+          "Soobd50WzorPMHxfn0sc8POgnXR"
+        ],
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "table": {
+          "cells": [
+            "OPB8dNcfroQCE9x9frAcf3u9nPd",
+            "GfB7drcRmo43vvxDMBPc3yJLnKb",
+            "U6URduZkgoiCaWxhMbmcHJ7Zn3d",
+            "GhvYdOsVGoKvvhxzBxScwZ3unBc",
+            "VieFdE5qEo0PLcxAA6Hc65PXnUb",
+            "UaDadi4EFoC6khxtof3cfeZvnyh",
+            "Dswpd5GP3oAhYUxWqfCc6Hj2nzb",
+            "LaRrdNJaroZuDtxgCDGcSn5Gnec",
+            "IOYkdlImuoY4lrxboMfcyQVynth",
+            "IqRRdUTLQohhH6xtTK8cRwynnlh",
+            "ExqAdgw8BoNjQPxjBmscB2vQnGg",
+            "Soobd50WzorPMHxfn0sc8POgnXR"
+          ],
+          "property": {
+            "column_size": 4,
+            "column_width": [
+              100,
+              175,
+              142,
+              178
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 3
+          }
+        }
+      },
+      {
+        "block_id": "OPB8dNcfroQCE9x9frAcf3u9nPd",
+        "block_type": 32,
+        "children": [
+          "TcKudkMJ3oUA2XxCasqcZerhnOe"
+        ],
+        "parent_id": "Z5eQdtIiGoKOrKxUHCdcPjygnMe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "TcKudkMJ3oUA2XxCasqcZerhnOe",
+        "block_type": 2,
+        "parent_id": "OPB8dNcfroQCE9x9frAcf3u9nPd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群类型",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GfB7drcRmo43vvxDMBPc3yJLnKb",
+        "block_type": 32,
+        "children": [
+          "KS2hdQXkYoTfugx3cbmcpGzKnmf",
+          "PeFCdPf4Dot72Fxsm3gc6oGkneh"
+        ],
+        "parent_id": "Z5eQdtIiGoKOrKxUHCdcPjygnMe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "KS2hdQXkYoTfugx3cbmcpGzKnmf",
+        "block_type": 2,
+        "parent_id": "GfB7drcRmo43vvxDMBPc3yJLnKb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PeFCdPf4Dot72Fxsm3gc6oGkneh",
+        "block_type": 2,
+        "parent_id": "GfB7drcRmo43vvxDMBPc3yJLnKb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "U6URduZkgoiCaWxhMbmcHJ7Zn3d",
+        "block_type": 32,
+        "children": [
+          "Me4TdTog7ogiC8xu6BwcYHUUnke"
+        ],
+        "parent_id": "Z5eQdtIiGoKOrKxUHCdcPjygnMe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Me4TdTog7ogiC8xu6BwcYHUUnke",
+        "block_type": 2,
+        "parent_id": "U6URduZkgoiCaWxhMbmcHJ7Zn3d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "资源分配",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GhvYdOsVGoKvvhxzBxScwZ3unBc",
+        "block_type": 32,
+        "children": [
+          "LilydVOq0ojPUJxofngcJ3Cgnzg"
+        ],
+        "parent_id": "Z5eQdtIiGoKOrKxUHCdcPjygnMe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "LilydVOq0ojPUJxofngcJ3Cgnzg",
+        "block_type": 2,
+        "parent_id": "GhvYdOsVGoKvvhxzBxScwZ3unBc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "适用场景",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VieFdE5qEo0PLcxAA6Hc65PXnUb",
+        "block_type": 32,
+        "children": [
+          "OwkKdFv87ooAS9xlHTlcDXQSnAg"
+        ],
+        "parent_id": "Z5eQdtIiGoKOrKxUHCdcPjygnMe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "OwkKdFv87ooAS9xlHTlcDXQSnAg",
+        "block_type": 2,
+        "parent_id": "VieFdE5qEo0PLcxAA6Hc65PXnUb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Serverless",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UaDadi4EFoC6khxtof3cfeZvnyh",
+        "block_type": 32,
+        "children": [
+          "ESSYd9Nw2oJPhmxjPPdc1Qpyncb"
+        ],
+        "parent_id": "Z5eQdtIiGoKOrKxUHCdcPjygnMe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ESSYd9Nw2oJPhmxjPPdc1Qpyncb",
+        "block_type": 2,
+        "parent_id": "UaDadi4EFoC6khxtof3cfeZvnyh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "简单易用的全托管向量数据库集群",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Dswpd5GP3oAhYUxWqfCc6Hj2nzb",
+        "block_type": 32,
+        "children": [
+          "S2brdYcRRo3QiuxgIDecpv8jnHM"
+        ],
+        "parent_id": "Z5eQdtIiGoKOrKxUHCdcPjygnMe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "S2brdYcRRo3QiuxgIDecpv8jnHM",
+        "block_type": 2,
+        "parent_id": "Dswpd5GP3oAhYUxWqfCc6Hj2nzb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "- 动态卷供应（Dynamic Provisioning）\n\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "- 与其他用户共享资源",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LaRrdNJaroZuDtxgCDGcSn5Gnec",
+        "block_type": 32,
+        "children": [
+          "JmdldKBCooq7txx8f21cTuXrnde"
+        ],
+        "parent_id": "Z5eQdtIiGoKOrKxUHCdcPjygnMe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "JmdldKBCooq7txx8f21cTuXrnde",
+        "block_type": 2,
+        "parent_id": "LaRrdNJaroZuDtxgCDGcSn5Gnec",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "- 向量数据库新手\n\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "- 寻求省时省力的向量数据库",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IOYkdlImuoY4lrxboMfcyQVynth",
+        "block_type": 32,
+        "children": [
+          "ENrwdGzlMoSEIKx7Zp4cQ4F9nTb"
+        ],
+        "parent_id": "Z5eQdtIiGoKOrKxUHCdcPjygnMe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ENrwdGzlMoSEIKx7Zp4cQ4F9nTb",
+        "block_type": 2,
+        "parent_id": "IOYkdlImuoY4lrxboMfcyQVynth",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Dedicated",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IqRRdUTLQohhH6xtTK8cRwynnlh",
+        "block_type": 32,
+        "children": [
+          "ZQGqdWqKSo5DzoxKdF4cAaBHn7d"
+        ],
+        "parent_id": "Z5eQdtIiGoKOrKxUHCdcPjygnMe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ZQGqdWqKSo5DzoxKdF4cAaBHn7d",
+        "block_type": 2,
+        "parent_id": "IqRRdUTLQohhH6xtTK8cRwynnlh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "- 开放所有功能\n\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "- 高可用性及数据安全保障",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ExqAdgw8BoNjQPxjBmscB2vQnGg",
+        "block_type": 32,
+        "children": [
+          "UscLdP2QqocVIux2jzYcEqMXnDc"
+        ],
+        "parent_id": "Z5eQdtIiGoKOrKxUHCdcPjygnMe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "UscLdP2QqocVIux2jzYcEqMXnDc",
+        "block_type": 2,
+        "parent_id": "ExqAdgw8BoNjQPxjBmscB2vQnGg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "- 专有 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "CU",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FDP6Fw8vkzi7pD7kAMB3cjunYn6g"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 资源\n\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "- 最佳性能",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Soobd50WzorPMHxfn0sc8POgnXR",
+        "block_type": 32,
+        "children": [
+          "JcspdO5oVobFoqxfpt7cXMXHnrf"
+        ],
+        "parent_id": "Z5eQdtIiGoKOrKxUHCdcPjygnMe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "JcspdO5oVobFoqxfpt7cXMXHnrf",
+        "block_type": 2,
+        "parent_id": "Soobd50WzorPMHxfn0sc8POgnXR",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "- 企业用户\n\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "- 严格要求性能和数据安全",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Z4mKdn6FDorTFaxV3bXcdwKnnwd",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需深入了解集群配置，请见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "免费试用",
+                "token": "WWlIwejMNiAEmmkce5fcZu4UnMd",
+                "url": "https://zilliverse.feishu.cn/wiki/WWlIwejMNiAEmmkce5fcZu4UnMd"
+              }
+            },
+            {
+              "text_run": {
+                "content": "和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "价格计算器",
+                "token": "Jxqfwnd80i8ibIkRhEKcnkK6nzd",
+                "url": "https://zilliverse.feishu.cn/wiki/Jxqfwnd80i8ibIkRhEKcnkK6nzd"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NmrOdVR3moGbtwxCpQIcFm25nig",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择版本类型{#select-a-cluster-plan}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "Efj4dBeQBo5VEFxnciKcboB6nJb",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 提供三种版本。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "block_type": 31,
+        "children": [
+          "IRvOdigSQoplZQxfI6jcaP0ynnc",
+          "WBnodYIzMoG4VRxSXAOc97R3nRe",
+          "G11gdxrcnofawFxdcAzcPV76nPc",
+          "CpX6dzotdodLN6x69kbciRNCnVe",
+          "ZhHAd7MQYoBA1CxprZtc2okknmg",
+          "VtQ4dNr9RoGXXGxsUatc41qQned",
+          "O4z5dSVzSoUh7Oxz5B3cRP5hndg",
+          "RIu3dFFR5o1ilNxvtTFcVYCynuc",
+          "AJGld8W5HoYUoux7l3scmYtlnOc",
+          "QK7zdMqFSoqQrOx1rKbcT7Yvnvd",
+          "KrL6dxAq6osCQFxThaHctzaPnif",
+          "AyLYdNPa0oSOCOxFCW4cawD7n6b",
+          "Dl2Yd0ytdoaH8zxvcMlceX1vnWe",
+          "YZntdrNymozm6ux2bwIcxlOfnFe",
+          "LCw6dVxLMoEAkaxnq0jcap5JnHg",
+          "BWLBdCjSmoLj6sx9qRRcBbZjnlf",
+          "Z1JGdNRfuo9zGIxZpd9coI9Xn1f",
+          "GUgdda20ToHCPWxtKrwcy9Ufn9e",
+          "U6SZddzXTof91Ex5BJ1crWljnxg",
+          "JrJ3dX5hAoDFhGxxnXncB1D4nPR",
+          "Fw4QdDLKRo6XBcx6qd6coH0on8b",
+          "Kt43dAHyjonT4RxcuhKcLom2nog",
+          "RVYpdzzVYodXAcxEAx5cSS1tnUb",
+          "EHZUdoV0eoxxZlxb30PcxhT9nWf",
+          "DUW5dp0wqoGAutxsInbcYnvinCb",
+          "EjLRdp12dow60HxvYPAcxd5vnKb",
+          "ZBXmdczFFoiEOmx3HzdcRtEqnjd",
+          "IxDvdPWhRo2eVaxxWZUc3ddlnt4",
+          "L56idgqhvoAT3Kx5WZucSSZVnqd",
+          "GzvadqZ7eoz2olxH8q5ckzr8nEe",
+          "SZVkdSw99oDpkoxHtWjcdrvbnFd",
+          "SLXqdlfIKoQT1gxKwH6chyNNnfg",
+          "X9HidQn5honqLLxT20DcHqa3nLe",
+          "OrT0dPzlJol3iaxCHdWcnTT5nnb",
+          "KKtNdiiIyoyujdxYLo7czVArnzg",
+          "OWiwdPy3JouKgPxnLMscEtmbnue"
+        ],
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "table": {
+          "cells": [
+            "IRvOdigSQoplZQxfI6jcaP0ynnc",
+            "WBnodYIzMoG4VRxSXAOc97R3nRe",
+            "G11gdxrcnofawFxdcAzcPV76nPc",
+            "CpX6dzotdodLN6x69kbciRNCnVe",
+            "ZhHAd7MQYoBA1CxprZtc2okknmg",
+            "VtQ4dNr9RoGXXGxsUatc41qQned",
+            "O4z5dSVzSoUh7Oxz5B3cRP5hndg",
+            "RIu3dFFR5o1ilNxvtTFcVYCynuc",
+            "AJGld8W5HoYUoux7l3scmYtlnOc",
+            "QK7zdMqFSoqQrOx1rKbcT7Yvnvd",
+            "KrL6dxAq6osCQFxThaHctzaPnif",
+            "AyLYdNPa0oSOCOxFCW4cawD7n6b",
+            "Dl2Yd0ytdoaH8zxvcMlceX1vnWe",
+            "YZntdrNymozm6ux2bwIcxlOfnFe",
+            "LCw6dVxLMoEAkaxnq0jcap5JnHg",
+            "BWLBdCjSmoLj6sx9qRRcBbZjnlf",
+            "Z1JGdNRfuo9zGIxZpd9coI9Xn1f",
+            "GUgdda20ToHCPWxtKrwcy9Ufn9e",
+            "U6SZddzXTof91Ex5BJ1crWljnxg",
+            "JrJ3dX5hAoDFhGxxnXncB1D4nPR",
+            "Fw4QdDLKRo6XBcx6qd6coH0on8b",
+            "Kt43dAHyjonT4RxcuhKcLom2nog",
+            "RVYpdzzVYodXAcxEAx5cSS1tnUb",
+            "EHZUdoV0eoxxZlxb30PcxhT9nWf",
+            "DUW5dp0wqoGAutxsInbcYnvinCb",
+            "EjLRdp12dow60HxvYPAcxd5vnKb",
+            "ZBXmdczFFoiEOmx3HzdcRtEqnjd",
+            "IxDvdPWhRo2eVaxxWZUc3ddlnt4",
+            "L56idgqhvoAT3Kx5WZucSSZVnqd",
+            "GzvadqZ7eoz2olxH8q5ckzr8nEe",
+            "SZVkdSw99oDpkoxHtWjcdrvbnFd",
+            "SLXqdlfIKoQT1gxKwH6chyNNnfg",
+            "X9HidQn5honqLLxT20DcHqa3nLe",
+            "OrT0dPzlJol3iaxCHdWcnTT5nnb",
+            "KKtNdiiIyoyujdxYLo7czVArnzg",
+            "OWiwdPy3JouKgPxnLMscEtmbnue"
+          ],
+          "property": {
+            "column_size": 4,
+            "column_width": [
+              100,
+              100,
+              100,
+              100
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 9
+          }
+        }
+      },
+      {
+        "block_id": "IRvOdigSQoplZQxfI6jcaP0ynnc",
+        "block_type": 32,
+        "children": [
+          "HFxCdVJyYokrJJxjhjtceP26noc"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "HFxCdVJyYokrJJxjhjtceP26noc",
+        "block_type": 2,
+        "parent_id": "IRvOdigSQoplZQxfI6jcaP0ynnc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "功能特性",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WBnodYIzMoG4VRxSXAOc97R3nRe",
+        "block_type": 32,
+        "children": [
+          "WOIadia5kouwYqxe5cEcL1Kfnng"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "WOIadia5kouwYqxe5cEcL1Kfnng",
+        "block_type": 2,
+        "parent_id": "WBnodYIzMoG4VRxSXAOc97R3nRe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "免费版",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "G11gdxrcnofawFxdcAzcPV76nPc",
+        "block_type": 32,
+        "children": [
+          "PT9EdY4iDoDSLGxVLUPcSwZGnFe"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "PT9EdY4iDoDSLGxVLUPcSwZGnFe",
+        "block_type": 2,
+        "parent_id": "G11gdxrcnofawFxdcAzcPV76nPc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "企业版",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CpX6dzotdodLN6x69kbciRNCnVe",
+        "block_type": 32,
+        "children": [
+          "LISAdI8VwoFsWdxT6FHcHrEanbh"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "LISAdI8VwoFsWdxT6FHcHrEanbh",
+        "block_type": 2,
+        "parent_id": "CpX6dzotdodLN6x69kbciRNCnVe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Bring Your Own Cloud (BYOC)",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZhHAd7MQYoBA1CxprZtc2okknmg",
+        "block_type": 32,
+        "children": [
+          "JGe9dWX6go4VOGxG4nEc9h8nnVe"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "JGe9dWX6go4VOGxG4nEc9h8nnVe",
+        "block_type": 2,
+        "parent_id": "ZhHAd7MQYoBA1CxprZtc2okknmg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群类型",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VtQ4dNr9RoGXXGxsUatc41qQned",
+        "block_type": 32,
+        "children": [
+          "BLKVdtzTTocGtJxJ4WVcDb1hn0b"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "BLKVdtzTTocGtJxJ4WVcDb1hn0b",
+        "block_type": 2,
+        "parent_id": "VtQ4dNr9RoGXXGxsUatc41qQned",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Serverless",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "O4z5dSVzSoUh7Oxz5B3cRP5hndg",
+        "block_type": 32,
+        "children": [
+          "FxqidU4hUot9YpxvBZPcn9OvnFc"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "FxqidU4hUot9YpxvBZPcn9OvnFc",
+        "block_type": 2,
+        "parent_id": "O4z5dSVzSoUh7Oxz5B3cRP5hndg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Dedicated",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RIu3dFFR5o1ilNxvtTFcVYCynuc",
+        "block_type": 32,
+        "children": [
+          "JTuGdjdksoPcZ3xUxj9cdysmnmg"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "JTuGdjdksoPcZ3xUxj9cdysmnmg",
+        "block_type": 2,
+        "parent_id": "RIu3dFFR5o1ilNxvtTFcVYCynuc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Dedicated",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AJGld8W5HoYUoux7l3scmYtlnOc",
+        "block_type": 32,
+        "children": [
+          "UW3kdKs97ojM8AxkK0Ec7r5nnrh"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "UW3kdKs97ojM8AxkK0Ec7r5nnrh",
+        "block_type": 2,
+        "parent_id": "AJGld8W5HoYUoux7l3scmYtlnOc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "定价",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QK7zdMqFSoqQrOx1rKbcT7Yvnvd",
+        "block_type": 32,
+        "children": [
+          "AH2kdmLhSobZhYx3AAjcLPBVnqh"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "AH2kdmLhSobZhYx3AAjcLPBVnqh",
+        "block_type": 2,
+        "parent_id": "QK7zdMqFSoqQrOx1rKbcT7Yvnvd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "免费",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KrL6dxAq6osCQFxThaHctzaPnif",
+        "block_type": 32,
+        "children": [
+          "SRCSdYLbqo7Xnhxq9dMcDaMKnab"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "SRCSdYLbqo7Xnhxq9dMcDaMKnab",
+        "block_type": 2,
+        "parent_id": "KrL6dxAq6osCQFxThaHctzaPnif",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "详见 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Zilliz 定价",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com.cn%2Fpricing"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AyLYdNPa0oSOCOxFCW4cawD7n6b",
+        "block_type": 32,
+        "children": [
+          "JJpgd6fgJoYmGrxh1GvcZxDInvg"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "JJpgd6fgJoYmGrxh1GvcZxDInvg",
+        "block_type": 2,
+        "parent_id": "AyLYdNPa0oSOCOxFCW4cawD7n6b",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "详见 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Zilliz 定价",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com.cn%2Fpricing"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Dl2Yd0ytdoaH8zxvcMlceX1vnWe",
+        "block_type": 32,
+        "children": [
+          "QlZEdkr13otkb8xRrKPcqRORnog"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QlZEdkr13otkb8xRrKPcqRORnog",
+        "block_type": 2,
+        "parent_id": "Dl2Yd0ytdoaH8zxvcMlceX1vnWe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "云服务提供上和地域",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YZntdrNymozm6ux2bwIcxlOfnFe",
+        "block_type": 32,
+        "children": [
+          "RcjFdjvcsomRSfxu6dtcIZPhnxh"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RcjFdjvcsomRSfxu6dtcIZPhnxh",
+        "block_type": 2,
+        "parent_id": "YZntdrNymozm6ux2bwIcxlOfnFe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "阿里云华东1（杭州）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LCw6dVxLMoEAkaxnq0jcap5JnHg",
+        "block_type": 32,
+        "children": [
+          "JufmdnpYIoVoEXx5K1FcKDk5nMh"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "JufmdnpYIoVoEXx5K1FcKDk5nMh",
+        "block_type": 2,
+        "parent_id": "LCw6dVxLMoEAkaxnq0jcap5JnHg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "阿里云华东1（杭州）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BWLBdCjSmoLj6sx9qRRcBbZjnlf",
+        "block_type": 32,
+        "children": [
+          "NxVtd0qSqow9vrxk8rZc0Q0Cnsb",
+          "QlVzdE2kDo3d0ZxTW2hcmWTCnWh",
+          "RiUqdWNBmofhNaxwD6Aciy22noZ"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "NxVtd0qSqow9vrxk8rZc0Q0Cnsb",
+        "block_type": 2,
+        "parent_id": "BWLBdCjSmoLj6sx9qRRcBbZjnlf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "阿里云、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QlVzdE2kDo3d0ZxTW2hcmWTCnWh",
+        "block_type": 2,
+        "parent_id": "BWLBdCjSmoLj6sx9qRRcBbZjnlf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "百度智能云、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RiUqdWNBmofhNaxwD6Aciy22noZ",
+        "block_type": 2,
+        "parent_id": "BWLBdCjSmoLj6sx9qRRcBbZjnlf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "金山云、腾讯云",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Z1JGdNRfuo9zGIxZpd9coI9Xn1f",
+        "block_type": 32,
+        "children": [
+          "H2wJdHDA4oC5cgxBLmrcL4cinEg"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "H2wJdHDA4oC5cgxBLmrcL4cinEg",
+        "block_type": 2,
+        "parent_id": "Z1JGdNRfuo9zGIxZpd9coI9Xn1f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "CU 大小",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GUgdda20ToHCPWxtKrwcy9Ufn9e",
+        "block_type": 32,
+        "children": [
+          "RHGqdvHxUoycnyx7uupcDSyfnJb"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RHGqdvHxUoycnyx7uupcDSyfnJb",
+        "block_type": 2,
+        "parent_id": "GUgdda20ToHCPWxtKrwcy9Ufn9e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "1 CU",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "U6SZddzXTof91Ex5BJ1crWljnxg",
+        "block_type": 32,
+        "children": [
+          "DrZ9dGLTXoibqXxeZyVcLjDcnSc"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "DrZ9dGLTXoibqXxeZyVcLjDcnSc",
+        "block_type": 2,
+        "parent_id": "U6SZddzXTof91Ex5BJ1crWljnxg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "最多 32 CU (支持 CU 大小包括: 1, 2, 4, 6, 8, 12, 16, 20, 24, 28, 32)",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JrJ3dX5hAoDFhGxxnXncB1D4nPR",
+        "block_type": 32,
+        "children": [
+          "UeZxd7KnZoWl01xwh3UcTdcFnWd"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "UeZxd7KnZoWl01xwh3UcTdcFnWd",
+        "block_type": 2,
+        "parent_id": "JrJ3dX5hAoDFhGxxnXncB1D4nPR",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "可根据用户需求定制",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Fw4QdDLKRo6XBcx6qd6coH0on8b",
+        "block_type": 32,
+        "children": [
+          "RYaGdjwvgoULyDxI8txczROxnUg"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RYaGdjwvgoULyDxI8txczROxnUg",
+        "block_type": 2,
+        "parent_id": "Fw4QdDLKRo6XBcx6qd6coH0on8b",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "最多可创建 Collection 数量",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Kt43dAHyjonT4RxcuhKcLom2nog",
+        "block_type": 32,
+        "children": [
+          "DwrKdFEf6oazUlxBiRzcC402ngg"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "DwrKdFEf6oazUlxBiRzcC402ngg",
+        "block_type": 2,
+        "parent_id": "Kt43dAHyjonT4RxcuhKcLom2nog",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "2",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RVYpdzzVYodXAcxEAx5cSS1tnUb",
+        "block_type": 32,
+        "children": [
+          "Z0TkdhqEXoKDYfxRJ2TcoB79ned"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Z0TkdhqEXoKDYfxRJ2TcoB79ned",
+        "block_type": 2,
+        "parent_id": "RVYpdzzVYodXAcxEAx5cSS1tnUb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "根据 CU 大小决定",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EHZUdoV0eoxxZlxb30PcxhT9nWf",
+        "block_type": 32,
+        "children": [
+          "GK3CdUxe1oVgCVxa04Lc3g07ndh"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "GK3CdUxe1oVgCVxa04Lc3g07ndh",
+        "block_type": 2,
+        "parent_id": "EHZUdoV0eoxxZlxb30PcxhT9nWf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "根据 CU 大小决定",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DUW5dp0wqoGAutxsInbcYnvinCb",
+        "block_type": 32,
+        "children": [
+          "ELx6dmkbZojDjDxmn71cOm9LnLd"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ELx6dmkbZojDjDxmn71cOm9LnLd",
+        "block_type": 2,
+        "parent_id": "DUW5dp0wqoGAutxsInbcYnvinCb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "私网连接",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EjLRdp12dow60HxvYPAcxd5vnKb",
+        "block_type": 32,
+        "children": [
+          "OvdidvYnzoOXrlxDnSdcsuAFnAd"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "OvdidvYnzoOXrlxDnSdcsuAFnAd",
+        "block_type": 2,
+        "parent_id": "EjLRdp12dow60HxvYPAcxd5vnKb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "不可用",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZBXmdczFFoiEOmx3HzdcRtEqnjd",
+        "block_type": 32,
+        "children": [
+          "ASQadEHqOo2SitxhQBfcy8QWnkc"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ASQadEHqOo2SitxhQBfcy8QWnkc",
+        "block_type": 2,
+        "parent_id": "ZBXmdczFFoiEOmx3HzdcRtEqnjd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "可用",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IxDvdPWhRo2eVaxxWZUc3ddlnt4",
+        "block_type": 32,
+        "children": [
+          "SCcdd7CcYojkawxKlB6cJ6Lpnoe"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "SCcdd7CcYojkawxKlB6cJ6Lpnoe",
+        "block_type": 2,
+        "parent_id": "IxDvdPWhRo2eVaxxWZUc3ddlnt4",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "可用",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "L56idgqhvoAT3Kx5WZucSSZVnqd",
+        "block_type": 32,
+        "children": [
+          "GKMnd5OGFoAp8oxgqbbcElBYnqd"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "GKMnd5OGFoAp8oxgqbbcElBYnqd",
+        "block_type": 2,
+        "parent_id": "L56idgqhvoAT3Kx5WZucSSZVnqd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "备份",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GzvadqZ7eoz2olxH8q5ckzr8nEe",
+        "block_type": 32,
+        "children": [
+          "LgpddYUHkoPC6kx8VPKcidhcnYc"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "LgpddYUHkoPC6kx8VPKcidhcnYc",
+        "block_type": 2,
+        "parent_id": "GzvadqZ7eoz2olxH8q5ckzr8nEe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "不可用",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SZVkdSw99oDpkoxHtWjcdrvbnFd",
+        "block_type": 32,
+        "children": [
+          "OyHSdAVDsoKmWZxysTyc5T84n0c"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "OyHSdAVDsoKmWZxysTyc5T84n0c",
+        "block_type": 2,
+        "parent_id": "SZVkdSw99oDpkoxHtWjcdrvbnFd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "可用",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SLXqdlfIKoQT1gxKwH6chyNNnfg",
+        "block_type": 32,
+        "children": [
+          "BUrFd1RgloAqNrxSuwncDFFan0d"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "BUrFd1RgloAqNrxSuwncDFFan0d",
+        "block_type": 2,
+        "parent_id": "SLXqdlfIKoQT1gxKwH6chyNNnfg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "可用",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "X9HidQn5honqLLxT20DcHqa3nLe",
+        "block_type": 32,
+        "children": [
+          "O6xudhcdzohXRvx0gygcO8R0nVf"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "O6xudhcdzohXRvx0gygcO8R0nVf",
+        "block_type": 2,
+        "parent_id": "X9HidQn5honqLLxT20DcHqa3nLe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "迁移",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OrT0dPzlJol3iaxCHdWcnTT5nnb",
+        "block_type": 32,
+        "children": [
+          "Bd5UdtcRroxT5JxlsnJciRnenVB"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Bd5UdtcRroxT5JxlsnJciRnenVB",
+        "block_type": 2,
+        "parent_id": "OrT0dPzlJol3iaxCHdWcnTT5nnb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "不可用",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KKtNdiiIyoyujdxYLo7czVArnzg",
+        "block_type": 32,
+        "children": [
+          "UMxmdnR1noYJbex9hEBcVFh8n1b"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "UMxmdnR1noYJbex9hEBcVFh8n1b",
+        "block_type": 2,
+        "parent_id": "KKtNdiiIyoyujdxYLo7czVArnzg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "可用",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OWiwdPy3JouKgPxnLMscEtmbnue",
+        "block_type": 32,
+        "children": [
+          "PmAjdg9RqoAPQWxugrkcOaUOnFh"
+        ],
+        "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "PmAjdg9RqoAPQWxugrkcOaUOnFh",
+        "block_type": 2,
+        "parent_id": "OWiwdPy3JouKgPxnLMscEtmbnue",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "可用",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Keu4dKrFQoErGfxDwYscVOWBn7d",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "免费版{#starter-plan}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "YwWNdQnbqoqb4SxO0P0cvJy2nvd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": " 适合个人开发者或测试初期。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "Y71Gdvc0roPeq1x7k7zc1Hgdnrb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "至多可创建 2 个 Collection，最多可处理 50 万 768 维向量。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "LSDPdMOmVovFilxCCbXciCmjnLe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "1 个免费的 Serverless 集群",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "R6V2d8CRIoOCfGxGQyUcS6KtnIc",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "企业版",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#enterprise-plan}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "Dp0AdCwuOofMhJxslVIcQKSxn7c",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "专为企业用户设计，承诺每月 99.9% 正常运行时间。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "DHyPd74F1oWrGRxG623cRGJunfd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "CU 大小上限为 256 CU。高扩展性，可创建上千个 CU。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "DNoBdzYcEo3oBFxpGoWcCmCEnTb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "支持高级功能（例如：私网连接、自动备份等）。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "TU7Ld4GKooRo9FxtCNkcAvqFnwg",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "BYOC (Bring Your Own Cloud)",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "byoc",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "QEhcdIvqvoaiTBxhf5jcJUcRnQf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "支持在您自己的虚拟私有云（VPC）上部署全托管的向量数据库服务。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "M6RjdLtZ9oKRvSxGC0Bc98lQnLe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "适用于高度注重数据隐私和合规的场景。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "Uub7djyyJoTtncxhOnmc4AKNnMd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "CU 大小可达 128 CU 以上。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "DC6Yd0AhoozKPTx5Ddac2Jdpnpd",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "更多 Zilliz Cloud 版本详情，请访问",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "定价页面",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com.cn%2Fpricing"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "或",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "联系销售",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com.cn%2Fcontact-sales"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FbLpdo5EaoBeUhxAIZCcNaA2nie",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "版本限制{#plan-limitations}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "HfpTdPyhRo7awGxbSBkc6j3nn1f",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "免费版：",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "每位免费版用户只可在阿里云上创建 1 个集群，至多可创建 2 个 Collection。用户无法使用备份等高级功能。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "P7EFdS6qGo05X6xAv2icaOV6nve",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "企业版：",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "每个集群中可创建 Collection 数量取决于集群 CU 大小。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "LUoedYZA9oVuT6xRexccjEQOnob",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "BYOC (Bring Your Own Cloud)：",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "仅适合需要 128 CU 或以上且高度注重数据隐私和合规的用户。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "NKPBdYe6ZoyMZVxEDvGcwTPTn6c",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "文档推荐",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "Km3DdYpVHouzqAxeFSHcPFNvn9g",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "注册账号",
+                "token": "CCVpw6BVti8P8LkfcdJcdRH1nHg",
+                "url": "https://zilliverse.feishu.cn/wiki/CCVpw6BVti8P8LkfcdJcdRH1nHg"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.notion.so%2F3448a65a5da048b88e7d5bda806fa702%3Fpvs%3D21"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      }
+    ],
+    "counts": 131
+  }
+}

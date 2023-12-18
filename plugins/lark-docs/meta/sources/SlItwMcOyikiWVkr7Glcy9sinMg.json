@@ -1,0 +1,175 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": true,
+  "node_create_time": "1687140898",
+  "node_token": "SlItwMcOyikiWVkr7Glcy9sinMg",
+  "node_type": "origin",
+  "obj_create_time": "1687140898",
+  "obj_edit_time": "1687140902",
+  "obj_token": "UgOEdaTV8oFm18xfK4yc2RHPnke",
+  "obj_type": "docx",
+  "origin_node_token": "SlItwMcOyikiWVkr7Glcy9sinMg",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "XyeFwdx6kiK9A6kq3yIcLNdEnDd",
+  "space_id": "7167193056431783939",
+  "title": "监控与指标",
+  "slug": "monitors-metrics",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "UgOEdaTV8oFm18xfK4yc2RHPnke",
+        "block_type": 1,
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "监控与指标",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      }
+    ],
+    "counts": 1
+  },
+  "children": [
+    {
+      "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+      "has_child": false,
+      "node_create_time": "1687140914",
+      "node_token": "J4YtwCZUbiHd5LkS3SdcQi9GnOg",
+      "node_type": "origin",
+      "obj_create_time": "1687140914",
+      "obj_edit_time": "1700704076",
+      "obj_token": "STgWdUrw0oYI0TxVFJzcuF0Cnqe",
+      "obj_type": "docx",
+      "origin_node_token": "J4YtwCZUbiHd5LkS3SdcQi9GnOg",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+      "parent_node_token": "SlItwMcOyikiWVkr7Glcy9sinMg",
+      "space_id": "7167193056431783939",
+      "title": "CU 资源监控",
+      "slug": "cu-resource-monitor"
+    },
+    {
+      "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+      "has_child": false,
+      "node_create_time": "1687140927",
+      "node_token": "LL1Iw34rqikxZrkZZ5Ecakm8nJe",
+      "node_type": "origin",
+      "obj_create_time": "1687140927",
+      "obj_edit_time": "1700704111",
+      "obj_token": "MFGEdFGsGox2koxnkWUcqabVnqg",
+      "obj_type": "docx",
+      "origin_node_token": "LL1Iw34rqikxZrkZZ5Ecakm8nJe",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+      "parent_node_token": "SlItwMcOyikiWVkr7Glcy9sinMg",
+      "space_id": "7167193056431783939",
+      "title": "QPS 资源监控",
+      "slug": "qps-resource-monitor"
+    },
+    {
+      "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+      "has_child": false,
+      "node_create_time": "1687140941",
+      "node_token": "QBaRweeRriuYskkMWxhcLOkyneI",
+      "node_type": "origin",
+      "obj_create_time": "1687140941",
+      "obj_edit_time": "1700704143",
+      "obj_token": "CvOldGIkvokpgyxHfaCczkYHn9b",
+      "obj_type": "docx",
+      "origin_node_token": "QBaRweeRriuYskkMWxhcLOkyneI",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+      "parent_node_token": "SlItwMcOyikiWVkr7Glcy9sinMg",
+      "space_id": "7167193056431783939",
+      "title": "查询时延监控",
+      "slug": "query-latency-monitor"
+    },
+    {
+      "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+      "has_child": false,
+      "node_create_time": "1687140955",
+      "node_token": "HayvwbjUtiAcqak1fDMcigc3nUc",
+      "node_type": "origin",
+      "obj_create_time": "1687140955",
+      "obj_edit_time": "1700704169",
+      "obj_token": "PaYHdYt2FoM27xx8c5VcEOhHneg",
+      "obj_type": "docx",
+      "origin_node_token": "HayvwbjUtiAcqak1fDMcigc3nUc",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+      "parent_node_token": "SlItwMcOyikiWVkr7Glcy9sinMg",
+      "space_id": "7167193056431783939",
+      "title": "已使用容量监控",
+      "slug": "load-capacity-resource-monitor"
+    },
+    {
+      "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+      "has_child": false,
+      "node_create_time": "1693467083",
+      "node_token": "RVukw4utriu4S6k18hBc9xiSn0d",
+      "node_type": "origin",
+      "obj_create_time": "1693467083",
+      "obj_edit_time": "1700704206",
+      "obj_token": "TBendMTm1oOMVIxYIqJc8ogan1c",
+      "obj_type": "docx",
+      "origin_node_token": "RVukw4utriu4S6k18hBc9xiSn0d",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+      "parent_node_token": "SlItwMcOyikiWVkr7Glcy9sinMg",
+      "space_id": "7167193056431783939",
+      "title": "现金余额监控",
+      "slug": "advance-pay-balance-monitor"
+    },
+    {
+      "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+      "has_child": false,
+      "node_create_time": "1687140974",
+      "node_token": "S3BswPJ4NiKl9okZDoycMvbunMb",
+      "node_type": "origin",
+      "obj_create_time": "1687140974",
+      "obj_edit_time": "1700704234",
+      "obj_token": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR",
+      "obj_type": "docx",
+      "origin_node_token": "S3BswPJ4NiKl9okZDoycMvbunMb",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+      "parent_node_token": "SlItwMcOyikiWVkr7Glcy9sinMg",
+      "space_id": "7167193056431783939",
+      "title": "查看集群性能指标",
+      "slug": "monitor-metrics"
+    },
+    {
+      "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+      "has_child": false,
+      "node_create_time": "1694598248",
+      "node_token": "WllVwhQakiUVLXkMm7ocRk5xnxh",
+      "node_type": "origin",
+      "obj_create_time": "1694598248",
+      "obj_edit_time": "1700719940",
+      "obj_token": "MJlwdn7OSoIXgDxce9Lcw50TnOd",
+      "obj_type": "docx",
+      "origin_node_token": "WllVwhQakiUVLXkMm7ocRk5xnxh",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+      "parent_node_token": "SlItwMcOyikiWVkr7Glcy9sinMg",
+      "space_id": "7167193056431783939",
+      "title": "查看事件",
+      "slug": "view-activities"
+    }
+  ]
+}

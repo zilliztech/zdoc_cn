@@ -1,0 +1,861 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": false,
+  "node_create_time": "1687140941",
+  "node_token": "QBaRweeRriuYskkMWxhcLOkyneI",
+  "node_type": "origin",
+  "obj_create_time": "1687140941",
+  "obj_edit_time": "1700704143",
+  "obj_token": "CvOldGIkvokpgyxHfaCczkYHn9b",
+  "obj_type": "docx",
+  "origin_node_token": "QBaRweeRriuYskkMWxhcLOkyneI",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "SlItwMcOyikiWVkr7Glcy9sinMg",
+  "space_id": "7167193056431783939",
+  "title": "查询时延监控",
+  "slug": "query-latency-monitor",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "CvOldGIkvokpgyxHfaCczkYHn9b",
+        "block_type": 1,
+        "children": [
+          "G7ltdit8vo9X1zxuLRtcuWAHnNh",
+          "EaMndD1Alo8nbyxyGAEcccrOnrd",
+          "QpEFdWqhvoXEWUx8IeVcnXB5nkh",
+          "Pio0da3WYokyifx1pSQcfegznFe",
+          "QBT8dksvxoaGtnxmrLVcsKnknbX",
+          "HiVWdA024oalSix2KMCcarqSnRc",
+          "XKDnd2Dnfoq6jJxFMvNc0qbVn3d",
+          "QL4hd8GTYoYB0XxkHdwcMhhhnYg",
+          "PI3odKDgfo3xyxxRIyLcTT2qnxg",
+          "OKbld1j8kosQOAxQhDQc5mX2nMd",
+          "VVPVdtVdIoSL8lx7u3dcISAenEg",
+          "HTewdm7Lho00XrxqtejcxDOyngd",
+          "ZmYXdDLsZoFfulxfWGpc5Zrvncc",
+          "URH6dR6neoOgGQxIzf9cqhTknWb",
+          "AyRMdhgtRo9KkPxpnZJc3DbKnzf",
+          "L1pjdnLzgoBp4ixSMBKcwePLnsd"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查询",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "时延",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "监控",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "G7ltdit8vo9X1zxuLRtcuWAHnNh",
+        "block_type": 2,
+        "parent_id": "CvOldGIkvokpgyxHfaCczkYHn9b",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为了及时调优 Zilliz Cloud 集群性能，建议启用查询",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "时延",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "监控。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EaMndD1Alo8nbyxyGAEcccrOnrd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "设置告警条件",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#set-alert-condition}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CvOldGIkvokpgyxHfaCczkYHn9b"
+      },
+      {
+        "block_id": "QpEFdWqhvoXEWUx8IeVcnXB5nkh",
+        "block_type": 2,
+        "parent_id": "CvOldGIkvokpgyxHfaCczkYHn9b",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要在项目中设置集群的查询",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "时延",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "告警条件，请执行以下步骤：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Pio0da3WYokyifx1pSQcfegznFe",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在项目左侧导航栏中选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "监控",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CvOldGIkvokpgyxHfaCczkYHn9b"
+      },
+      {
+        "block_id": "QBT8dksvxoaGtnxmrLVcsKnknbX",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "打开",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "监控设置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页签。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CvOldGIkvokpgyxHfaCczkYHn9b"
+      },
+      {
+        "block_id": "HiVWdA024oalSix2KMCcarqSnRc",
+        "block_type": 13,
+        "children": [
+          "Tgy3dRs8RoFZtlxGQUWcy6y0nEf"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "定位到",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "资源监控",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "区域下的第三行条件。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CvOldGIkvokpgyxHfaCczkYHn9b"
+      },
+      {
+        "block_id": "Tgy3dRs8RoFZtlxGQUWcy6y0nEf",
+        "block_type": 2,
+        "parent_id": "HiVWdA024oalSix2KMCcarqSnRc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "默认情况下，当查询",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "时延",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "超过 90 毫秒且持续时间超过 10 分钟时，我们将向您发送告警通知。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XKDnd2Dnfoq6jJxFMvNc0qbVn3d",
+        "block_type": 13,
+        "children": [
+          "T3rsdQbldoE2h5xdD3Vc6ZkKntg"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "单击操作列的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "更多",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "按钮，选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "编辑",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CvOldGIkvokpgyxHfaCczkYHn9b"
+      },
+      {
+        "block_id": "T3rsdQbldoE2h5xdD3Vc6ZkKntg",
+        "block_type": 2,
+        "parent_id": "XKDnd2Dnfoq6jJxFMvNc0qbVn3d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在提示的对话框中调整",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "时延",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和持续时长，然后单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "保存",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QL4hd8GTYoYB0XxkHdwcMhhhnYg",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "开启监控功能",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#enable-the-monitor}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CvOldGIkvokpgyxHfaCczkYHn9b"
+      },
+      {
+        "block_id": "PI3odKDgfo3xyxxRIyLcTT2qnxg",
+        "block_type": 2,
+        "parent_id": "CvOldGIkvokpgyxHfaCczkYHn9b",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要开启监控功能，需在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "状态",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "列中打开开关。单击开关即可切换开启或关闭状态。请确保开关指示器在右侧，并且背景颜色变为蓝色。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OKbld1j8kosQOAxQhDQc5mX2nMd",
+        "block_type": 26,
+        "comment_ids": [
+          "7278895072211402756"
+        ],
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6178-1683%26t%3DKeTy8a58wpAUhRPY-4"
+          }
+        },
+        "parent_id": "CvOldGIkvokpgyxHfaCczkYHn9b"
+      },
+      {
+        "block_id": "VVPVdtVdIoSL8lx7u3dcISAenEg",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相关文档",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CvOldGIkvokpgyxHfaCczkYHn9b"
+      },
+      {
+        "block_id": "HTewdm7Lho00XrxqtejcxDOyngd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "CU 资源监控",
+                "token": "J4YtwCZUbiHd5LkS3SdcQi9GnOg",
+                "url": "https://zilliverse.feishu.cn/wiki/J4YtwCZUbiHd5LkS3SdcQi9GnOg"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CvOldGIkvokpgyxHfaCczkYHn9b"
+      },
+      {
+        "block_id": "ZmYXdDLsZoFfulxfWGpc5Zrvncc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "QPS 资源监控",
+                "token": "LL1Iw34rqikxZrkZZ5Ecakm8nJe",
+                "url": "https://zilliverse.feishu.cn/wiki/LL1Iw34rqikxZrkZZ5Ecakm8nJe"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CvOldGIkvokpgyxHfaCczkYHn9b"
+      },
+      {
+        "block_id": "URH6dR6neoOgGQxIzf9cqhTknWb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "已使用容量监控",
+                "token": "HayvwbjUtiAcqak1fDMcigc3nUc",
+                "url": "https://zilliverse.feishu.cn/wiki/HayvwbjUtiAcqak1fDMcigc3nUc"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CvOldGIkvokpgyxHfaCczkYHn9b"
+      },
+      {
+        "block_id": "AyRMdhgtRo9KkPxpnZJc3DbKnzf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "查看集群性能指标",
+                "token": "S3BswPJ4NiKl9okZDoycMvbunMb",
+                "url": "https://zilliverse.feishu.cn/wiki/S3BswPJ4NiKl9okZDoycMvbunMb"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CvOldGIkvokpgyxHfaCczkYHn9b"
+      },
+      {
+        "block_id": "L1pjdnLzgoBp4ixSMBKcwePLnsd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "现金余额监控",
+                "token": "RVukw4utriu4S6k18hBc9xiSn0d",
+                "url": "https://zilliverse.feishu.cn/wiki/RVukw4utriu4S6k18hBc9xiSn0d"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CvOldGIkvokpgyxHfaCczkYHn9b"
+      }
+    ],
+    "counts": 19
+  }
+}

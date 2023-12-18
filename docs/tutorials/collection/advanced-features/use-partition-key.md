@@ -2,7 +2,8 @@
 slug: /use-partition-key
 beta: FALSE
 notebook: 03_use_partition_key.ipynb
-sidebar_position: 2
+token: DrXpwhU8pixYi9kqzSBcs5TgnFd
+sidebar_position: 3
 ---
 
 import Admonition from '@theme/Admonition';
@@ -15,7 +16,7 @@ import TabItem from '@theme/TabItem';
 
 Partition Key 允许 Zilliz Cloud 根据数据的指定键值将数据存入不同的 Partition 中。这样您就可以根据指定键值为数据分组，从而在根据键值过滤时避免扫描完全无关的 Partition。相比传统的过滤查询方式，启用该特性后可以极大地提升查询性能。
 
-## 准备工作{#before-you-start}
+## 准备工作{#before-you-start}{#before-you-start}
 
 在创建 Collection 之前，确保
 
@@ -25,7 +26,7 @@ Partition Key 允许 Zilliz Cloud 根据数据的指定键值将数据存入不�
 
 - 已下载示例数据集。详情请参见[示例数据集](./example-dataset)。
 
-## 创建启用 Partition Key 的 Collection{#create-collection-with-partition-key-enabled}
+## 创建启用 Partition Key 的 Collection{#create-collection-with-partition-key-enabled}{#partition-key-collectioncreate-collection-with-partition-key-enabled}
 
 为了演示 Partition Key 的使用，我们将继续使用包含了 5,000 篇文章的示例数据集。其中，`publication` 将作为 Partition Key。
 
@@ -553,7 +554,7 @@ fmt.Println("Loading progress:", progress)
 </TabItem>
 </Tabs>
 
-## 基于 Partition Key 的 ANN 搜索{#conduct-ann-search-using-partition-key}
+## 基于 Partition Key 的 ANN 搜索{#conduct-ann-search-using-partition-key}{#partition-key-ann-conduct-ann-search-using-partition-key}
 
 在为创建的 Collection 建立索引，加载索引文件至内存并将示例数据集中的数据插入 Collection 后，就可以进行基于 Partition Key 的近似最近邻（ANN）搜索了。相关操作，可参考[向量搜索和查询](./search-query-and-get)中的具体内容。
 
@@ -916,16 +917,17 @@ fmt.Println(resultsToJSON(res))
 </TabItem>
 </Tabs>
 
-## 典型使用场景{#typical-use-cases}
+## 典型使用场景{#typical-use-cases}{#typical-use-cases}
 
 该特性可在多租户场景中用于区分租户。
 
 具体来说，可以将每条记录中的某个字段确定为 Partition Key。当进行搜索或查询时，可以用该字段过滤查询结果，实现租户数据隔离的同时，避免在查询时扫描其它租户的 Partition。
 
-## 相关文档{#related-topics}
+## 相关文档{#related-topics}{#related-topics}
 
 - [创建 Collection](./create-collection)
 
 - [开启动态 Schema](./enable-dynamic-schema)
 
 - [使用 JSON 类型字段](./javascript-object-notation-json)
+

@@ -1,0 +1,2144 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1687246609",
+  "node_token": "ZgcQw57PxiKaeSkuQmCchK8snP0",
+  "node_type": "origin",
+  "obj_create_time": "1687246609",
+  "obj_edit_time": "1700719837",
+  "obj_token": "TvNkdjh78o7EZ0xdnhDcEsv4nId",
+  "obj_type": "docx",
+  "origin_node_token": "ZgcQw57PxiKaeSkuQmCchK8snP0",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "WJJvw84crikA8Xk4P4IcJJvSnKd",
+  "space_id": "7167193056431783939",
+  "title": "Schema",
+  "slug": "data-models-explained",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId",
+        "block_type": 1,
+        "children": [
+          "AMpLdoCLSobA5Cxq0Tlc4CJ2nMf",
+          "OZdwdboEco3uCaxmOOAceQEFnwb",
+          "T6otdWSf9ooaPsxLEhIcjKQdnic",
+          "N8r4dwwMKogpxNxiCHlcYSoGnec",
+          "Tlvzd0O5PoW3y0xnExxck0IRnDg",
+          "AOFmdY3OWoDvUdxzWKrc2Bl9npd",
+          "SjVvdfiMYo5DVExGux8cW6AHnId",
+          "TVogdZI00oh5hIxR4BdcmYJ0nHh",
+          "FwKZdVHFLoKoiJxv7AYcP5dEnng",
+          "KMzQdYnffoI4tPxipWvcp9H0np1",
+          "N60vdTxwvoIHjHxizdocunHanCd",
+          "IpGddo056oVXfIxr3crcxwr5nwO",
+          "QOtLdbiLaoXZtYxyptTc2GGUnPf",
+          "EIzZdqFjfoT3KIxQsqjcJLCWnfh",
+          "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+          "R9VWd8U4GoUXDUx7PaecyghRnwe",
+          "QJNVdaFgLoSHkBxcwhpcHpwMnjf",
+          "OtNvdCymIoOWNBxhfo6c6Eyhngd",
+          "H9EzdbwUMo8PZ7xIIsJc73tWngf",
+          "K7stdwK1Jo41ubxZZXUcQ15Kndf",
+          "FufmdD9LUoaIUOxc8uxc4zFAnAe",
+          "XSDrdvgZnoJtXYxaa9jcpwgznkh",
+          "YWRrdlPCKospuExDAcBcmemunQs",
+          "RDyjdpl1ToVG8ZxvqaucRzQ6nec",
+          "UpdDdZubco3bRvxw40McnByen3f",
+          "UYZQdIzwdokFS7xtrX3cCivPnSc",
+          "RrIMdfDM4o56DrxZfECcYgnbnSb",
+          "Sm5zdCF6cogmGvx57lIc6XB7nqh",
+          "ONpddzKFvoNngMxMKcoc0Z92nPb",
+          "Sws8dc7oVoLhQNx23Sic3TrinOf",
+          "DOdodqmVxoMbZXxp3WqcJTuinAh",
+          "HYHhdVf5jo0Hpqxby6gc1bjHnOb",
+          "ThpTdSIZRo3kXyxb96hcva7on6b",
+          "PP4GdehMvo61fDxkYk8cbC6UnHf"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Schema",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "AMpLdoCLSobA5Cxq0Tlc4CJ2nMf",
+        "block_type": 2,
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "定义数据模型是指为数据库中数据创建一个清晰有序的数据模型。数据模型可以揭示数据之间的关系。因此，定义数据模型是为了了解数据集中的所有数据，展示数据间联系，从而用最有效的方式表示数据关系。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OZdwdboEco3uCaxmOOAceQEFnwb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "数据模型",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#defining-data-models}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "T6otdWSf9ooaPsxLEhIcjKQdnic",
+        "block_type": 2,
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在 Zilliz Cloud 集群中，不同 Collection 的 Schema 可能不同。正确定义数据模型以表示数据集的结构十分重要。定义数据模型时，您需要考虑以下几个方面：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "N8r4dwwMKogpxNxiCHlcYSoGnec",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Entity",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "RywmdMSBRo3AnTx5PnAcMoQwn7g",
+          "DLrsdePVPoQzqIx9g2tcUntRnlg"
+        ],
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "RywmdMSBRo3AnTx5PnAcMoQwn7g",
+        "block_type": 2,
+        "parent_id": "N8r4dwwMKogpxNxiCHlcYSoGnec",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Collection 中的 Entity 类似于传统数据库表格中的行。Entity 的每个属性对应传统数据库表格中的列。向 Collection 插入数据前，请先观察 Entity 之间共享的属性。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DLrsdePVPoQzqIx9g2tcUntRnlg",
+        "block_type": 2,
+        "parent_id": "N8r4dwwMKogpxNxiCHlcYSoGnec",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "例如， 您可以将书可以作为 Collection 中的 Entity，书的属性可以包括标题、作者、ISBN 和语言。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Tlvzd0O5PoW3y0xnExxck0IRnDg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "数据类型",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "RPKpdRHMnoNRWBxXBVlcYT4inrb",
+          "RVJNd6IjMoe5HoxrpB3cXKLqnsh"
+        ],
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "RPKpdRHMnoNRWBxXBVlcYT4inrb",
+        "block_type": 2,
+        "parent_id": "Tlvzd0O5PoW3y0xnExxck0IRnDg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Entity 的每个属性都有自己的数据类型。设置合适的数据类型以定义属性。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RVJNd6IjMoe5HoxrpB3cXKLqnsh",
+        "block_type": 2,
+        "parent_id": "Tlvzd0O5PoW3y0xnExxck0IRnDg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "例如，标题的数据类型应为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "可变长度字符串（VarChar）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AOFmdY3OWoDvUdxzWKrc2Bl9npd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Entity 属性值限制",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "Pf6HdOJzEo3Usjx1YfIcJDisncd"
+        ],
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "Pf6HdOJzEo3Usjx1YfIcJDisncd",
+        "block_type": 2,
+        "parent_id": "AOFmdY3OWoDvUdxzWKrc2Bl9npd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "不同的数据类型可能带有不同的限制。例如，向量字段对向量维数有限制、VarChar字段对字符的最大长度有限制。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SjVvdfiMYo5DVExGux8cW6AHnId",
+        "block_type": 2,
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您需要花费一些时间来定义 Collection 的数据模型。当需要定义的数据属性特别多时，你需要花费",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "的时间可能更多",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。因此，Zilliz Cloud 集群",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "提供了",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "动态和静态数据模型以满足您的不同需求。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TVogdZI00oh5hIxR4BdcmYJ0nHh",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "动态数据模型",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#dynamic-data-modeling}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "FwKZdVHFLoKoiJxv7AYcP5dEnng",
+        "block_type": 2,
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "1 个 Collection 可拥有 1 个主键字段和 1 个向量字段。您可以使用动态数据模型直接创建 Collection，无需手动定义数据集中 Entity 属性。您只需输入 Collection 名称和向量维数即可。Zilliz Cloud 会自动根据插入的数据推断数据类型和限制。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KMzQdYnffoI4tPxipWvcp9H0np1",
+        "block_type": 2,
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "以下示例代码片段创建了 1 个名为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "medium_articles",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 的 Collection，且为该 Collection 设置了动态数据模型。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "N60vdTxwvoIHjHxizdocunHanCd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from pymilvus import MilvusClient\n\n# 初始化 MilvsuClient 实例\n# 使用您自己的 uri 和 API 密钥替换以下参数值\nclient = MilvusClient(\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "        uri=\"https://<CLUSTER-ID>.<CLOUD-REGION>.",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "vectordb.zillizcloud.com",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ":<ACCESS-PORT>\",\n        api_key=\"<API-KEY>\"\n)\n\n# 创建 Collection\nclient.create_collection(\n        collection_name=\"medium_articles\",\n        dimension=768\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ")",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "IpGddo056oVXfIxr3crcxwr5nwO",
+        "block_type": 2,
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "当您将 Entity 插入 Collection 时，Zilliz Cloud 将自动解析数据并动态推断 Collection Schema。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QOtLdbiLaoXZtYxyptTc2GGUnPf",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "client.insert(\n        collection_name=\"medium_articles\",\n        data: {\n                \"id\": 0,\n                \"title\": \"The Reported Mortality Rate of Coronavirus Is Not Important\",\n                \"vector\": [0.041732933, 0.013779674, ...., -0.013061441],\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "                \"link\": \"<",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "https://medium.com/swlh/the-reported-mortality-rate-of-coronavirus-is-not-important-369989c8d912>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\",\n                \"reading_time\": 13,\n                \"publication\": \"The Startup\",\n                \"claps\": 1100,\n                \"responses\": 18\n  }\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ")",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 28,
+            "wrap": false
+          }
+        },
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "EIzZdqFjfoT3KIxQsqjcJLCWnfh",
+        "block_type": 2,
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "根据上述数据，Zilliz Cloud 推断的 Collection Schema 应如下所示：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+        "block_type": 31,
+        "children": [
+          "FbJKd0p7eoIvU3x7eCBclJdHnmg",
+          "P5p7dSj6aozgloxghTxch2Cqnyg",
+          "Ac3dd2odmoOtlWxf4hFcG4AinjI",
+          "GZZFd9DfPop6Uxx4sOYcw2jqnKf",
+          "Fa9jdsdVyo8H0TxDLMXcHLkvnSd",
+          "XwfmdRzrroyBGsxlkyMcn8Krnzf",
+          "BKJodq5eCoj8kmxO7nucaVA1nqh",
+          "TKBtdxCFsoA6CaxKvlncQgUsnie",
+          "XWK1dUSkmoTMuDxMATZcNtJ8nAg",
+          "PPjjdyUfIoU4KjxixO8c4egqnYb",
+          "W4szdLThXo0bAxxWTXFclzCBnzf",
+          "Ur5GdPFESoLCNTxJfTmcLqiQnTg",
+          "UcG2dfhCWoVAy3xrWoscnceanlg",
+          "OyAZdcgbToiu4AxAJkFclQFJnjf",
+          "WGWGdbEBooSSCSxnNoYcIRm0nOf",
+          "GxsldMtWOos80SxCSxFcgfYhnKe",
+          "O5lydKcdHon3IMxpzOAcnGOXnwf",
+          "LpktdgSNHoiPv1xwHn7clvJSnho"
+        ],
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId",
+        "table": {
+          "cells": [
+            "FbJKd0p7eoIvU3x7eCBclJdHnmg",
+            "P5p7dSj6aozgloxghTxch2Cqnyg",
+            "Ac3dd2odmoOtlWxf4hFcG4AinjI",
+            "GZZFd9DfPop6Uxx4sOYcw2jqnKf",
+            "Fa9jdsdVyo8H0TxDLMXcHLkvnSd",
+            "XwfmdRzrroyBGsxlkyMcn8Krnzf",
+            "BKJodq5eCoj8kmxO7nucaVA1nqh",
+            "TKBtdxCFsoA6CaxKvlncQgUsnie",
+            "XWK1dUSkmoTMuDxMATZcNtJ8nAg",
+            "PPjjdyUfIoU4KjxixO8c4egqnYb",
+            "W4szdLThXo0bAxxWTXFclzCBnzf",
+            "Ur5GdPFESoLCNTxJfTmcLqiQnTg",
+            "UcG2dfhCWoVAy3xrWoscnceanlg",
+            "OyAZdcgbToiu4AxAJkFclQFJnjf",
+            "WGWGdbEBooSSCSxnNoYcIRm0nOf",
+            "GxsldMtWOos80SxCSxFcgfYhnKe",
+            "O5lydKcdHon3IMxpzOAcnGOXnwf",
+            "LpktdgSNHoiPv1xwHn7clvJSnho"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              172,
+              215
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 9
+          }
+        }
+      },
+      {
+        "block_id": "FbJKd0p7eoIvU3x7eCBclJdHnmg",
+        "block_type": 32,
+        "children": [
+          "CQKydLWY2o7jxExtsgCcVaAxntb"
+        ],
+        "parent_id": "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "CQKydLWY2o7jxExtsgCcVaAxntb",
+        "block_type": 2,
+        "parent_id": "FbJKd0p7eoIvU3x7eCBclJdHnmg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "字段",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 2,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "P5p7dSj6aozgloxghTxch2Cqnyg",
+        "block_type": 32,
+        "children": [
+          "PlytdedNgoB9upx3Axhc97gjnbc"
+        ],
+        "parent_id": "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "PlytdedNgoB9upx3Axhc97gjnbc",
+        "block_type": 2,
+        "parent_id": "P5p7dSj6aozgloxghTxch2Cqnyg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "推断的数据类型",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 2,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ac3dd2odmoOtlWxf4hFcG4AinjI",
+        "block_type": 32,
+        "children": [
+          "TCy6dor4momekxxu6jxcS729nff"
+        ],
+        "parent_id": "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "TCy6dor4momekxxu6jxcS729nff",
+        "block_type": 2,
+        "parent_id": "Ac3dd2odmoOtlWxf4hFcG4AinjI",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "id",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GZZFd9DfPop6Uxx4sOYcw2jqnKf",
+        "block_type": 32,
+        "children": [
+          "G26Sd2sTVoHNWBxG4jIc292PnLb"
+        ],
+        "parent_id": "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "G26Sd2sTVoHNWBxG4jIc292PnLb",
+        "block_type": 2,
+        "parent_id": "GZZFd9DfPop6Uxx4sOYcw2jqnKf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Int64",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Fa9jdsdVyo8H0TxDLMXcHLkvnSd",
+        "block_type": 32,
+        "children": [
+          "ZMM4ddfLBoZmkYx4WeXcXYg2nlh"
+        ],
+        "parent_id": "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ZMM4ddfLBoZmkYx4WeXcXYg2nlh",
+        "block_type": 2,
+        "parent_id": "Fa9jdsdVyo8H0TxDLMXcHLkvnSd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "title",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XwfmdRzrroyBGsxlkyMcn8Krnzf",
+        "block_type": 32,
+        "children": [
+          "EprndKO75oZtMvxmz8Jc7tCDnzb"
+        ],
+        "parent_id": "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "EprndKO75oZtMvxmz8Jc7tCDnzb",
+        "block_type": 2,
+        "parent_id": "XwfmdRzrroyBGsxlkyMcn8Krnzf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "VarChar(512)",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BKJodq5eCoj8kmxO7nucaVA1nqh",
+        "block_type": 32,
+        "children": [
+          "MtMFdmVMHodRg0xQ5J7cIlBgnbe"
+        ],
+        "parent_id": "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "MtMFdmVMHodRg0xQ5J7cIlBgnbe",
+        "block_type": 2,
+        "parent_id": "BKJodq5eCoj8kmxO7nucaVA1nqh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "vector",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TKBtdxCFsoA6CaxKvlncQgUsnie",
+        "block_type": 32,
+        "children": [
+          "CaZVdMCMso8BNIxp0qmc4un7nec"
+        ],
+        "parent_id": "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "CaZVdMCMso8BNIxp0qmc4un7nec",
+        "block_type": 2,
+        "parent_id": "TKBtdxCFsoA6CaxKvlncQgUsnie",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "FloatVector(768)",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XWK1dUSkmoTMuDxMATZcNtJ8nAg",
+        "block_type": 32,
+        "children": [
+          "AboOdlhFdowdwbxa1DMcca6Innb"
+        ],
+        "parent_id": "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "AboOdlhFdowdwbxa1DMcca6Innb",
+        "block_type": 2,
+        "parent_id": "XWK1dUSkmoTMuDxMATZcNtJ8nAg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "link",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PPjjdyUfIoU4KjxixO8c4egqnYb",
+        "block_type": 32,
+        "children": [
+          "JyoidybCXohH1RxAaZkcflPxn0b"
+        ],
+        "parent_id": "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "JyoidybCXohH1RxAaZkcflPxn0b",
+        "block_type": 2,
+        "parent_id": "PPjjdyUfIoU4KjxixO8c4egqnYb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "VarChar(512)",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "W4szdLThXo0bAxxWTXFclzCBnzf",
+        "block_type": 32,
+        "children": [
+          "RwlidFHj6owxhpxedwucrtLGn5c"
+        ],
+        "parent_id": "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RwlidFHj6owxhpxedwucrtLGn5c",
+        "block_type": 2,
+        "parent_id": "W4szdLThXo0bAxxWTXFclzCBnzf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "reading_time",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ur5GdPFESoLCNTxJfTmcLqiQnTg",
+        "block_type": 32,
+        "children": [
+          "GzBEdp2v8ofs2KxPEYxcXHk2nXf"
+        ],
+        "parent_id": "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "GzBEdp2v8ofs2KxPEYxcXHk2nXf",
+        "block_type": 2,
+        "parent_id": "Ur5GdPFESoLCNTxJfTmcLqiQnTg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Int64",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UcG2dfhCWoVAy3xrWoscnceanlg",
+        "block_type": 32,
+        "children": [
+          "NXuIdwFABoaBZsxoqzSc4180nOZ"
+        ],
+        "parent_id": "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "NXuIdwFABoaBZsxoqzSc4180nOZ",
+        "block_type": 2,
+        "parent_id": "UcG2dfhCWoVAy3xrWoscnceanlg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "publication",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OyAZdcgbToiu4AxAJkFclQFJnjf",
+        "block_type": 32,
+        "children": [
+          "OUISdydrLoULurxH4xPcdFRFnzb"
+        ],
+        "parent_id": "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "OUISdydrLoULurxH4xPcdFRFnzb",
+        "block_type": 2,
+        "parent_id": "OyAZdcgbToiu4AxAJkFclQFJnjf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "VarChar(512)",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WGWGdbEBooSSCSxnNoYcIRm0nOf",
+        "block_type": 32,
+        "children": [
+          "VNwHd1wdfoR6w0xdVADc2rWznxe"
+        ],
+        "parent_id": "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "VNwHd1wdfoR6w0xdVADc2rWznxe",
+        "block_type": 2,
+        "parent_id": "WGWGdbEBooSSCSxnNoYcIRm0nOf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "claps",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GxsldMtWOos80SxCSxFcgfYhnKe",
+        "block_type": 32,
+        "children": [
+          "S757d3bdeopiFAx60u8c9Oh3nkh"
+        ],
+        "parent_id": "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "S757d3bdeopiFAx60u8c9Oh3nkh",
+        "block_type": 2,
+        "parent_id": "GxsldMtWOos80SxCSxFcgfYhnKe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Int64",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "O5lydKcdHon3IMxpzOAcnGOXnwf",
+        "block_type": 32,
+        "children": [
+          "Eju9dlWaAoZX7DxAdP5cj9dNnkd"
+        ],
+        "parent_id": "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Eju9dlWaAoZX7DxAdP5cj9dNnkd",
+        "block_type": 2,
+        "parent_id": "O5lydKcdHon3IMxpzOAcnGOXnwf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "responses",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LpktdgSNHoiPv1xwHn7clvJSnho",
+        "block_type": 32,
+        "children": [
+          "QFfAd4Y7hoqgWVxZAyQc5oYlnWI"
+        ],
+        "parent_id": "Pdm5dXNhwoHTO3xxpOlcPJgvnAc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QFfAd4Y7hoqgWVxZAyQc5oYlnWI",
+        "block_type": 2,
+        "parent_id": "LpktdgSNHoiPv1xwHn7clvJSnho",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Int64",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "R9VWd8U4GoUXDUx7PaecyghRnwe",
+        "block_type": 34,
+        "children": [
+          "DsQBdlUVIoeEAexwSDYcWCuRnAt",
+          "U8LRdfqOZowFj4xkvHYcrmV9nQd"
+        ],
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId",
+        "quote_container": {}
+      },
+      {
+        "block_id": "DsQBdlUVIoeEAexwSDYcWCuRnAt",
+        "block_type": 2,
+        "parent_id": "R9VWd8U4GoUXDUx7PaecyghRnwe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "U8LRdfqOZowFj4xkvHYcrmV9nQd",
+        "block_type": 2,
+        "parent_id": "R9VWd8U4GoUXDUx7PaecyghRnwe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "插入的数据极为复杂且难以解析时，我们不推荐使用动态数据模型，请考虑改用静态数据模型。否则您可能",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "无法获得预期结果",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QJNVdaFgLoSHkBxcwhpcHpwMnjf",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "静态数据模型",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#fixed-data-modeling}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "OtNvdCymIoOWNBxhfo6c6Eyhngd",
+        "block_type": 2,
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "使用静态数据模型可以确保数据准确，提高搜索结果可靠性。虽然创建静态数据模型需要花费时间，但是更改数据模型也十分容易。我们推荐你为数据集使用静态数据模型。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "H9EzdbwUMo8PZ7xIIsJc73tWngf",
+        "block_type": 2,
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "执行以下操作以使用静态数据模型创建 Collection Schema：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "K7stdwK1Jo41ubxZZXUcQ15Kndf",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from pymilvus import FieldSchema, CollectionSchema, DataType, Collection\n\nfields = [\n    FieldSchema(name=\"id\", dtype=DataType.INT64, is_primary=True),\n    FieldSchema(name=\"title\", dtype=DataType.VARCHAR, max_length=512),\n    FieldSchema(name=\"title_vector\", dtype=DataType.FLOAT_VECTOR, dim=768),\n    FieldSchema(name=\"link\", dtype=DataType.VARCHAR, max_length=512),\n    FieldSchema(name=\"reading_time\", dtype=DataType.INT64),\n    FieldSchema(name=\"publication\", dtype=DataType.VARCHAR, max_length=512),\n    FieldSchema(name=\"claps\", dtype=DataType.INT64),\n    FieldSchema(name=\"responses\", dtype=DataType.INT64)\n]\n\n# 创建 Schema\nschema = CollectionSchema(\n    fields,\n    description=\"Schema of Medium articles\"\n)\n\ncollection = Collection(\n    name=\"medium_articles\",\n    description=\"Medium articles published between Jan and August in 2020 in prominent publications\",\n    schema=schema\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ")",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 28,
+            "wrap": false
+          }
+        },
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "FufmdD9LUoaIUOxc8uxc4zFAnAe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "数据类型",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#data-types}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "XSDrdvgZnoJtXYxaa9jcpwgznkh",
+        "block_type": 2,
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 支持以下数据类型：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YWRrdlPCKospuExDAcBcmemunQs",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "布尔值（BOOLEAN）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "RDyjdpl1ToVG8ZxvqaucRzQ6nec",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "双精度浮点数（DOUBLE）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "UpdDdZubco3bRvxw40McnByen3f",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "单精度浮点数（FLOAT）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "UYZQdIzwdokFS7xtrX3cCivPnSc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "浮点向量（FLOAT_VECTOR）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "RrIMdfDM4o56DrxZfECcYgnbnSb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "8 位有符号整数（INT8）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "Sm5zdCF6cogmGvx57lIc6XB7nqh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "32 位有符号整（INT32）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "ONpddzKFvoNngMxMKcoc0Z92nPb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "64 位有符号整（INT64）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "Sws8dc7oVoLhQNx23Sic3TrinOf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "可变长度字符串（VARCHAR）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "DOdodqmVxoMbZXxp3WqcJTuinAh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "JSON",
+                "token": "UXBjwVpKmirzg9kgWgmcLixwnIe",
+                "url": "https://zilliverse.feishu.cn/wiki/UXBjwVpKmirzg9kgWgmcLixwnIe"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "HYHhdVf5jo0Hpqxby6gc1bjHnOb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "文档推荐",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "ThpTdSIZRo3kXyxb96hcva7on6b",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "开启动态 Schema",
+                "token": "EpHowtn3miepTyk2pNlcLwDonyD",
+                "url": "https://zilliverse.feishu.cn/wiki/EpHowtn3miepTyk2pNlcLwDonyD"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.notion.so%2FEnable-Dynamic-Schema-353bcaa305154240aa15baad91e7549f%3Fpvs%3D21"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      },
+      {
+        "block_id": "PP4GdehMvo61fDxkYk8cbC6UnHf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "JSON",
+                "token": "UXBjwVpKmirzg9kgWgmcLixwnIe",
+                "url": "https://zilliverse.feishu.cn/wiki/UXBjwVpKmirzg9kgWgmcLixwnIe"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TvNkdjh78o7EZ0xdnhDcEsv4nId"
+      }
+    ],
+    "counts": 78
+  }
+}

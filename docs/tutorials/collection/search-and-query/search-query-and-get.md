@@ -2,6 +2,7 @@
 slug: /search-query-and-get
 beta: FALSE
 notebook: 00_quick_start.ipynb,01_use_customized_schema.ipynb
+token: SPaWwHEVuipu3bkeg17coFgnnUo
 sidebar_position: 1
 ---
 
@@ -13,11 +14,11 @@ import TabItem from '@theme/TabItem';
 
 本文介绍如何在 Zilliz Cloud 中执行近似最近邻（Approximate Nearest Neighbour，ANN）搜索和查询。搜索是指在 Collection 中查找与指定查询向量最接近的向量，查询是基于指定条件筛选出满足条件的数据。
 
-## 概述{#overview}
+## 概述{#overview}{#overview}
 
 Zilliz Cloud 采用 ANN 算法来处理向量搜索请求，支持搜索并返回与指定查询向量最相似的前 *K* 个 Entity。为优化性能和吞吐，Zilliz Cloud 支持批量搜索，即同时指定多个查询向量并行搜索。您可以定义布尔表达式来缩小 ANN 搜索的范围。
 
-## 开始前{#before-you-start}
+## 开始前{#before-you-start}{#before-you-start}
 
 执行 ANN 搜索或查询前，请确保已完成以下步骤：
 
@@ -25,9 +26,9 @@ Zilliz Cloud 采用 ANN 算法来处理向量搜索请求，支持搜索并返�
 
 - 已下载示例数据集并已将数据插入到 Collection 中。详情请参见[示例数据集](./example-dataset)和[插入 Entity](./insert-entities)。
 
-## 搜索{#search}
+## 搜索{#search}{#search}
 
-### 单向量搜索{#single-vector-search}
+### 单向量搜索{#single-vector-search}{#single-vector-search}
 
 单向量搜索是指搜索并返回与指定的某个查询向量最相似的前 *K* 个Entity。
 
@@ -560,7 +561,7 @@ curl --request POST \
 
 每个查询向量对应返回结果中的一个命中对象集。您可以通过循环迭代的方式获取该命中对象集中的每一个命中对象。如果你在搜索参数中还指定了输出字段，那么还可以使用`get`方法获取每个命中对象中相应字段的信息。
 
-### 批量搜索{#bulk-search}
+### 批量搜索{#bulk-search}{#bulk-search}
 
 Zilliz Cloud 支持在单个请求中同时指定多个查询向量来进行批量搜索。大多数情况下，批量搜索比单向量搜索效率更高，因为批量搜索的总延时会比逐一执行单向量搜索的累计延时要低。
 
@@ -1087,7 +1088,7 @@ func main() {
 
 提交的搜索请求中包含了几条查询向量，返回的结果中就有对应数量的命中对象集。你可以使用查询向量的索引来访问返回结果中对应的命中对象集。
 
-### 基于条件搜索{#search-with-filters}
+### 基于条件搜索{#search-with-filters}{#search-with-filters}
 
 过滤条件是用于定义 ANN 搜索条件的布尔表达式。您可以使用算术、逻辑和比较运算符来定义过滤条件。
 
@@ -1108,6 +1109,7 @@ func main() {
 以下是一些带有过滤条件的 ANN 搜索示例。
 
 - 搜索阅读时间（`reading_time`）在 10 到 15 分钟内的文章：
+
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"Bash","value":"bash"}]}>
     <TabItem value='python'>
 
@@ -1517,6 +1519,7 @@ func main() {
     </Tabs>
 
 - 搜索点赞数（`claps`）超过 1500 且回应数（`responses`）超过 15 的文章：
+
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"Bash","value":"bash"}]}>
     <TabItem value='python'>
 
@@ -1949,6 +1952,7 @@ func main() {
     </Tabs>
 
 - 搜索由 **Towards Data Science** 发布的文章：
+
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"Bash","value":"bash"}]}>
     <TabItem value='python'>
 
@@ -2368,6 +2372,7 @@ func main() {
     </Tabs>
 
 - 搜索不是由 **Towards Data Science** 和 **Personal Growth** 发布的文章：
+
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"Bash","value":"bash"}]}>
     <TabItem value='python'>
 
@@ -2773,6 +2778,7 @@ func main() {
     </Tabs>
 
 - 搜索标题以 **Top** 开头的文章：
+
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"Bash","value":"bash"}]}>
     <TabItem value='python'>
 
@@ -3160,6 +3166,7 @@ func main() {
     </Tabs>
 
 - 搜索由 **Towards Data Science** 发布的文章，且文章拥有超过 1500 个回应（`responses`）和 15 个点赞（`claps`）或阅读时间在 10 到 15 分钟内：
+
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"Bash","value":"bash"}]}>
     <TabItem value='python'>
 
@@ -3666,7 +3673,7 @@ func main() {
     </TabItem>
     </Tabs>
 
-## 查询{#query}
+## 查询{#query}{#query}
 
 查询是指使用布尔表达式筛选出满足条件的 Entity。查询时使用的布尔表达式仅支持标量字段。
 
@@ -4087,7 +4094,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 点查{#get}
+## 点查{#get}{#get}
 
 点查可以快速地根据 Entity 的 ID 获取该 Entity。
 
@@ -4424,7 +4431,7 @@ func main() {
 </TabItem>
 </Tabs>
 
-## 相关文档{#related-topics}
+## 相关文档{#related-topics}{#related-topics}
 
 - [创建 Collection](./create-collection) 
 
@@ -4433,3 +4440,4 @@ func main() {
 - [开启动态 Schema](./enable-dynamic-schema) 
 
 - [使用 JSON 类型字段](./javascript-object-notation-json) 
+
