@@ -13,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 允许您通过私网连接（PrivateLink）访问您的集群。如果您不希望通过公众互联网访问您位于 Zilliz Cloud 上的集群， 可以按照本章的步骤为您的集群创建私网连接。
 
-## 配置思路{configuration-principle}{#configuration-principle}
+## 配置思路{#configuration-principle}
 
 ![private_link_cn](/img/private_link_cn.png)
 
@@ -25,17 +25,17 @@ Zilliz Cloud 允许您通过私网连接（PrivateLink）访问您的集群。�
 
 - 前往阿里云控制台，使用该域名前缀创建一条私网解析记录。
 
-## 前提条件{#before-you-start}{#before-you-start}
+## 前提条件{#before-you-start}
 
 - 您已经注册了 Zilliz Cloud。
 
 - 您已经创建了集群。
 
-## 配置步骤{#procedures}{#procedures}
+## 配置步骤{#procedures}
 
 本节将按照配置思路详细介绍如何为您的 Zilliz Cloud 集群创建私网连接。
 
-### 登记私网连接参数{#set-private-link-parameters}{#set-private-link-parameters}
+### 登记私网连接参数{#set-private-link-parameters}
 
 1. 登录Zilliz Cloud，并在左侧导航栏顶部的下拉菜单中选择合适的项目。
 
@@ -63,7 +63,7 @@ Zilliz Cloud 允许您通过私网连接（PrivateLink）访问您的集群。�
 
     </Admonition>
 
-### 创建终端节点{#create-endpoint}{#create-endpoint}
+### 创建终端节点{#create-endpoint}
 
 1. 登录阿里云，前往[**专有网络**](https://vpc.console.aliyun.com/endpoint/cn-hangzhou/endpoints)[ > ](https://vpc.console.aliyun.com/endpoint/cn-hangzhou/endpoints)[**终端节点](https://vpc.console.aliyun.com/endpoint/cn-hangzhou/endpoints)。**
 
@@ -89,7 +89,7 @@ Zilliz Cloud 允许您通过私网连接（PrivateLink）访问您的集群。�
 
     此时，**可用区与网卡**页签中显示的可用区**状态**为**等待连接**，**服务状态**为**异常**。
 
-### 创建私网连接{#create-private-link}{#create-private-link}
+### 创建私网连接{#create-private-link}
 
 1. 返回 Zilliz Cloud，将复制好的终端节点实例 ID 填入**创建私网连接**对话框中的**终端节点实例 ID **字段中。
 
@@ -101,7 +101,7 @@ Zilliz Cloud 允许您通过私网连接（PrivateLink）访问您的集群。�
 
     此时，终端节点实例的**可用区与网卡**页签中显示的可用区**状态**变更为**已连接**，**服务状态**变更为**正常**。
 
-### 添加私域解析记录{#add-private-zone-record}{#add-private-zone-record}
+### 添加私域解析记录{#add-private-zone-record}
 
 1. 返回阿里云控制台，前往[**私域解析**](https://dns.console.aliyun.com/#/privateZone/list)。
 
@@ -134,6 +134,6 @@ Zilliz Cloud 允许您通过私网连接（PrivateLink）访问您的集群。�
 
 1. 返回[**私域解析**](https://dns.console.aliyun.com/#/privateZone/list)页面。此时，当前 Zone 记录的**关联VPC状态**已变更为**已关联**。
 
-## 后续操作{next-steps}{#next-steps}
+## 后续操作{#next-steps}
 
 在私网连接创建完成后，可按照集群详情页面右上角的连接指南使用私网连接进行连通性验证。

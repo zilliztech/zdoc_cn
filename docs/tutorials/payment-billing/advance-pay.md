@@ -13,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 免费试用到期后，您需要添加支付方式方可继续使用 Zilliz Cloud。Zilliz Cloud 支持多种支付方式，包括现金充值和[订阅](./subscribe-on-aliyun-marketplace)[阿里云市场](./subscribe-on-aliyun-marketplace)。本章主要介绍如何通过线下转账的方式进行现金充值。如需开具发票，请参考[开具发票](./invoice) 。
 
-## 现金充值（线下转账）{#add-funds}{#add-funds}
+## 现金充值（线下转账）{#add-funds}
 
 如需进行现金充值，您需要先通过[企业认证](./enterprise-certification)。
 
@@ -35,7 +35,7 @@ import Admonition from '@theme/Admonition';
 
 1. 现金余额监控默认关闭，如果需要打开现金余额监控，请参阅[现金余额监控](./advance-pay-balance-monitor)。
 
-## 相关文档{#related-topics}{#related-topics}
+## 相关文档{#related-topics}
 
 - [企业认证](./enterprise-certification) 
 

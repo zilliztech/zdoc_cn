@@ -67,7 +67,6 @@ curl --request POST \
 
     | 参数名称        | 参数说明                                                                             |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `public-endpoint`  | **string**（必选）<br/>|
 
 ### 请求体
 
@@ -89,6 +88,7 @@ curl --request POST \
 {
     "dbName": "string",
     "collectionName": "string",
+    "partitionName": "string",
     "data": [
         {}
     ]
@@ -99,6 +99,7 @@ curl --request POST \
 |------------------|-------------------------------------------------------------------------------------------|
 | `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
 | `collectionName`  | **string**（必选）<br/>插入操作的目标 Collection。|
+| `partitionName`  | **string**<br/>当前操作的目标 Partition。可选参数，默认值为**default**。|
 | `data`  | **array**（必选）<br/>一个以 Entity 对象为成员的列表。注意，对象里每个键值对中的键必须严格对应 Collection 的 Schema。|
 
 ## 响应

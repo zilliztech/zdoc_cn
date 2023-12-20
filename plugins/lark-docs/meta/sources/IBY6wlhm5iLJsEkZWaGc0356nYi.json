@@ -5,7 +5,7 @@
   "node_token": "IBY6wlhm5iLJsEkZWaGc0356nYi",
   "node_type": "origin",
   "obj_create_time": "1700641529",
-  "obj_edit_time": "1700704962",
+  "obj_edit_time": "1702878545",
   "obj_token": "FLR9d56IooP3GUxR4OvcZCxPn9c",
   "obj_type": "docx",
   "origin_node_token": "IBY6wlhm5iLJsEkZWaGc0356nYi",
@@ -13,7 +13,7 @@
   "owner": "ou_fbc044d19930afd389d5c369466c38b1",
   "parent_node_token": "WJJvw84crikA8Xk4P4IcJJvSnKd",
   "space_id": "7167193056431783939",
-  "title": "一致性等级",
+  "title": "一致性水平",
   "slug": "consistency-level",
   "blocks": {
     "items": [
@@ -40,7 +40,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "一致性等级",
+                "content": "一致性",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "水平",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -65,7 +77,31 @@
           "elements": [
             {
               "text_run": {
-                "content": "在分布式数据库中，一致性等级确保在读写操作期间，每个节点或副本都能获取到相同的数据。Zilliz Cloud 提供 3 种一致性级别：Strong、Bounded 和 Eventually。Zilliz Cloud 默认采用的一致性水平为 Bounded。",
+                "content": "在分布式数据库中，一致性",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "水平",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "确保在读写操作期间，每个节点或副本都能获取到相同的数据。Zilliz Cloud 提供 3 种一致性级别：Strong、Bounded 和 Eventually。Zilliz Cloud 默认采用的一致性水平为 Bounded。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -89,7 +125,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "PACELC 定理：权衡一致性、可用性、延时",
+                "content": "PACELC 定理：权衡一致性、可用性、时",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -101,7 +137,7 @@
             },
             {
               "text_run": {
-                "content": "{#understanding-the-balance-the-pacelc-theorem}",
+                "content": "延{#understanding-the-balance-the-pacelc-theorem}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -127,7 +163,55 @@
           "elements": [
             {
               "text_run": {
-                "content": "PACELC 定理是 CAP 定理的延伸，是指在网络分区的情况下，需要在可用性和一致性之间做选择，否则，就在延迟和一致性之间做选择。虽然高一致性保证了数据的准确性，但其代价是更长的搜索延时。相反，低一致性保证了更快的搜索速度，但可能会牺牲数据准确性。因此，您需要根据具体的使用案例场景选择合适的一致性水平。",
+                "content": "PACELC 定理是 CAP 定理的延伸，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "在分布式数据库中",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "用户",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "需要在可用性和一致性之间做选择，否则，就在延迟和一致性之间做选择。虽然高一致性保证了数据的准确性，但其代价是更长的搜索延时。相反，低一致性保证了更快的搜索速度，但可能会牺牲数据准确性。因此，您需要根据具体的使用案例场景选择合适的一致性水平。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -218,7 +302,31 @@
           "elements": [
             {
               "text_run": {
-                "content": "Strong 一致性级别最适用于功能测试和在线金融系统等对于数据准确性有着极高要求的场景。",
+                "content": "Strong 一致性",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "水平",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "最适用于功能测试和在线金融系统等对于数据准确性有着极高要求的场景。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

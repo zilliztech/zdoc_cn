@@ -15,7 +15,7 @@ import Admonition from '@theme/Admonition';
 
 ![view_system_metrics](/img/view_system_metrics.png)
 
-## 指标说明{#understanding-metrics}{#understanding-metrics}
+## 指标说明{#understanding-metrics}
 
 在**指标**页签下，您可以查看以下集群性能指标：
 
@@ -35,7 +35,7 @@ import Admonition from '@theme/Admonition';
 
     统计在指定时间范围内查询延时的变化情况。单位：毫秒。
 
-## 调整统计频率{#modify-curve-window-size}{#modify-curve-window-size}
+## 调整统计频率{#modify-curve-window-size}
 
 要调整统计频率，展开**所有监控指标**区域右侧的下拉菜单，选择合适的统计时间范围。可选项包括：
 
@@ -49,7 +49,7 @@ import Admonition from '@theme/Admonition';
 
 - 过去 1 月
 
-## 文档推荐{#related-topics}{#related-topics}
+## 文档推荐{#related-topics}
 
 - [CU 资源监控](./cu-resource-monitor) 
 

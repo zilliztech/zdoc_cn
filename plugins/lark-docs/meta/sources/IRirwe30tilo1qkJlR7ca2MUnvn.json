@@ -5,7 +5,7 @@
   "node_token": "IRirwe30tilo1qkJlR7ca2MUnvn",
   "node_type": "origin",
   "obj_create_time": "1692253266",
-  "obj_edit_time": "1701859339",
+  "obj_edit_time": "1703065071",
   "obj_token": "Jur1dPOePodawBxfdkQc9WqknAb",
   "obj_type": "docx",
   "origin_node_token": "IRirwe30tilo1qkJlR7ca2MUnvn",
@@ -22,15 +22,18 @@
         "block_type": 1,
         "children": [
           "Qc6Sdmxwhomzrmx4bcJcCttmn0c",
+          "NbdbdXFcUoIh9HxBuanc0jDUnkw",
           "VGMFdqpfCo99QPxuqP0c4TDBn8d",
           "E4uDd4XJDoT0LgxNloDcA0btnDb",
           "SnUed4qxWoUTeVxz1wpcCXYcnxA",
           "KXnidQtO9ofmIxx8XcQcO0TlnMb",
+          "ZnXidWbjUoSKJJx5T3kci5Fqndb",
           "R730dcPNdott8cxYIF5cLqeUnKh",
           "LuWidTitco1gvMxEOQacvjvWnHd",
           "JOecda3LFoS1VaxTYECcXuUdnhf",
           "Rw5XdCEHyozhQIxSeLzcdVAJnBg",
           "BGtzd2WXAo2gK9xlYpEcpEhlnQe",
+          "LJsTd2O7zodoT4xi054cevOsnRf",
           "CWucdHza9omSXmxunmCcDFY5n1d",
           "AESXdCcCKodZRFx9QTjcTU4Nn4C",
           "TBHXduG2uonJlExVQpScRQdKnZg",
@@ -42,6 +45,7 @@
           "MxDrd5wNpo4FTQxgTJgceii0nWg",
           "GoxudADRgoAlo9x697OcG39Enwe",
           "KrUHdp3qOozpoZxzshScIEBJnpM",
+          "DFIUdDeouoC8B7xT9Gxct6PenQf",
           "Mu3xd03hpoOTlmxUP34cgOOmnuf",
           "Hf2BdYKChoS4OFxnZakcCKtfnzf",
           "A8e4d2z0zoEf8zxQG8QcIP7vnYb",
@@ -49,13 +53,14 @@
           "NxPtdlLI9og4N6xKs6LcXG7wnze",
           "YWKFdOneporDyGxX1mkc0Whmnkf",
           "IzeEd7YqwonY0sxSMOTcFLESnfe",
-          "HtpmdVS7moWDTZx0RpmcxzI4nbb",
-          "Cxz7dHsKdoV1qax6tN6cRaxonHb",
           "Uhy1dqnT1oliY3x0E9tco8gdnjc",
+          "HrpBdtUi7oNKRHxoy6lcrhLsnoc",
+          "H9UVd61FJoBK90x4XaPcGLvAnKb",
+          "VSi1dmwVrorWmOxy4Owcgz2Pn0c",
           "WDMJdXuquo8xZSxqABFctGX4nFf",
-          "WeeadaKWKoN92ZxiJWOcxDROn5g",
-          "ZlEGdRZq0oA3czxH8q7c1jdznnb",
-          "E883dbzVuooySjxBnrvcUn6EnqL",
+          "KG7Adx9LZoxqYtxow68c3vMyn5d",
+          "Ho3HdSHE1olKdxxJAkcc0MxpnBe",
+          "U0wQd6fiood8EkxsntzctOZZnNb",
           "R94bdKAjFoWpaDxWVNZckLt9npe",
           "RqPMdPe6QodiYlxSBqLcVlhhnCh",
           "WPexdFKvxoioNSxooIWcpINnnYc",
@@ -114,6 +119,55 @@
             {
               "text_run": {
                 "content": "本文介绍如何通过 Zilliz Cloud 控制台管理集群。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NbdbdXFcUoIh9HxBuanc0jDUnkw",
+        "block_type": 2,
+        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -255,6 +309,31 @@
             {
               "text_run": {
                 "content": "您只可创建 1 个免费的 Serverless 集群。在 Serverless 集群中，您最多可创建 2 个 Collection。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZnXidWbjUoSKJJx5T3kci5Fqndb",
+        "block_type": 2,
+        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</exclude>",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -503,6 +582,55 @@
             {
               "text_run": {
                 "content": "对话框中确认删除操作后，Zilliz Cloud 才会该删除集群。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LJsTd2O7zodoT4xi054cevOsnRf",
+        "block_type": 2,
+        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1161,6 +1289,31 @@
         }
       },
       {
+        "block_id": "DFIUdDeouoC8B7xT9Gxct6PenQf",
+        "block_type": 2,
+        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</exclude>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
         "block_id": "Mu3xd03hpoOTlmxUP34cgOOmnuf",
         "block_type": 4,
         "heading2": {
@@ -1460,9 +1613,52 @@
         "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb"
       },
       {
+        "block_id": "Uhy1dqnT1oliY3x0E9tco8gdnjc",
+        "block_type": 26,
+        "comment_ids": [
+          "7278891895216701443"
+        ],
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D8017-42%26mode%3Ddesign%26t%3DM3mjY7s6iNzNwDFH-4"
+          }
+        },
+        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb"
+      },
+      {
+        "block_id": "HrpBdtUi7oNKRHxoy6lcrhLsnoc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Collection",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "HtpmdVS7moWDTZx0RpmcxzI4nbb",
+          "SGFed4pVxoBMa1xIvJOcBgU0nQd"
+        ],
+        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb"
+      },
+      {
         "block_id": "HtpmdVS7moWDTZx0RpmcxzI4nbb",
         "block_type": 2,
-        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb",
+        "parent_id": "HrpBdtUi7oNKRHxoy6lcrhLsnoc",
         "text": {
           "elements": [
             {
@@ -1491,7 +1687,55 @@
             },
             {
               "text_run": {
-                "content": " 页签下，您可以管理集群中的 Collection。您可以创建 Collection、将数据导入 Collection、加载或释放 Collection、重命名 Collection 和删除 Collection。",
+                "content": " 页签下，您可以管理集群中的 Collection。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "具体来说，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "您可以创建 Collection、将数据导入 Collection、加载或释放 Collection、重命名 Collection ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "及",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "删除 Collection。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1509,14 +1753,14 @@
         }
       },
       {
-        "block_id": "Cxz7dHsKdoV1qax6tN6cRaxonHb",
+        "block_id": "SGFed4pVxoBMa1xIvJOcBgU0nQd",
         "block_type": 2,
-        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb",
+        "parent_id": "HrpBdtUi7oNKRHxoy6lcrhLsnoc",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "有关数据导入的详细信息，请参阅",
+                "content": "有关数据导入的详细情况，可以参考",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1524,75 +1768,21 @@
                   "strikethrough": false,
                   "underline": false
                 }
-              }
-            },
-            {
-              "mention_doc": {
-                "obj_type": 16,
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                },
-                "title": "通过 Web 控制台导入",
-                "token": "BXBvwZh9Yiis0Vk8LcdcjZSPnQd",
-                "url": "https://zilliverse.feishu.cn/wiki/BXBvwZh9Yiis0Vk8LcdcjZSPnQd"
               }
             },
             {
               "text_run": {
-                "content": "、",
+                "content": "数据导入",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
                   "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fdocs.zilliz.com.cn%2Fdocs%2Fdata-import"
+                  },
                   "strikethrough": false,
                   "underline": false
                 }
-              }
-            },
-            {
-              "mention_doc": {
-                "obj_type": 16,
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                },
-                "title": "通过 RESTful API 导入",
-                "token": "FzANwnN8siARelkAp4vcJVJNnnf",
-                "url": "https://zilliverse.feishu.cn/wiki/FzANwnN8siARelkAp4vcJVJNnnf"
-              }
-            },
-            {
-              "text_run": {
-                "content": "和",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "mention_doc": {
-                "obj_type": 16,
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                },
-                "title": "通过 SDK 导入",
-                "token": "Xv4awWJZpiKoJjkPTlic98Mindc",
-                "url": "https://zilliverse.feishu.cn/wiki/Xv4awWJZpiKoJjkPTlic98Mindc"
               }
             },
             {
@@ -1615,27 +1805,42 @@
         }
       },
       {
-        "block_id": "Uhy1dqnT1oliY3x0E9tco8gdnjc",
-        "block_type": 26,
-        "comment_ids": [
-          "7278891895216701443"
-        ],
-        "iframe": {
-          "component": {
-            "iframe_type": 8,
-            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D8017-42%26mode%3Ddesign%26t%3DM3mjY7s6iNzNwDFH-4"
-          }
-        },
-        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb"
-      },
-      {
-        "block_id": "WDMJdXuquo8xZSxqABFctGX4nFf",
-        "block_type": 5,
-        "heading3": {
+        "block_id": "H9UVd61FJoBK90x4XaPcGLvAnKb",
+        "block_type": 12,
+        "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "管理集群用户",
+                "content": "备份",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "YubjdNxvHoGvGcx8Eihca869nJf"
+        ],
+        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb"
+      },
+      {
+        "block_id": "YubjdNxvHoGvGcx8Eihca869nJf",
+        "block_type": 2,
+        "parent_id": "H9UVd61FJoBK90x4XaPcGLvAnKb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在 Cluster 详情页右上角的",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1647,7 +1852,222 @@
             },
             {
               "text_run": {
-                "content": "{#users-and-access-control}",
+                "content": "操作",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "下拉菜单中，可以选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建备份快照",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。你可以在备份页签中找到所有已创建的备份快照。关于备份与恢复的详细情况，可参考",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "备份与恢复",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fdocs.zilliz.com.cn%2Fdocs%2Fbackup-and-restore"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VSi1dmwVrorWmOxy4Owcgz2Pn0c",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "数据迁移",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "Cxz7dHsKdoV1qax6tN6cRaxonHb"
+        ],
+        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb"
+      },
+      {
+        "block_id": "Cxz7dHsKdoV1qax6tN6cRaxonHb",
+        "block_type": 2,
+        "parent_id": "VSi1dmwVrorWmOxy4Owcgz2Pn0c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在 Cluster 详情页右上角的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "操作",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "下拉菜单中，可以选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "迁移数据",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。有关数据迁移的详细情况，可以参考",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "数据迁移",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fdocs.zilliz.com.cn%2Fdocs%2Fmigrations"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WDMJdXuquo8xZSxqABFctGX4nFf",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "用户与访问控制{#users-and-access-control}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1666,9 +2086,39 @@
         "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb"
       },
       {
+        "block_id": "KG7Adx9LZoxqYtxow68c3vMyn5d",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "用户",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "WeeadaKWKoN92ZxiJWOcxDROn5g",
+          "ZlEGdRZq0oA3czxH8q7c1jdznnb",
+          "E883dbzVuooySjxBnrvcUn6EnqL"
+        ],
+        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb"
+      },
+      {
         "block_id": "WeeadaKWKoN92ZxiJWOcxDROn5g",
         "block_type": 2,
-        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb",
+        "parent_id": "KG7Adx9LZoxqYtxow68c3vMyn5d",
         "text": {
           "elements": [
             {
@@ -1723,7 +2173,7 @@
             "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D8020-88%26mode%3Ddesign%26t%3DgkSievJGZA7lfI5x-4"
           }
         },
-        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb"
+        "parent_id": "KG7Adx9LZoxqYtxow68c3vMyn5d"
       },
       {
         "block_id": "E883dbzVuooySjxBnrvcUn6EnqL",
@@ -1732,7 +2182,7 @@
           "O2wKdVf56oLvmVxsYddc7VRUn4f",
           "NR9qdyjJRoxiWhxpIvAc8ta8n1f"
         ],
-        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb",
+        "parent_id": "KG7Adx9LZoxqYtxow68c3vMyn5d",
         "quote_container": {}
       },
       {
@@ -1793,6 +2243,438 @@
             {
               "text_run": {
                 "content": "用户。对于已添加到集群中的用户，Zilliz Cloud 会向其授予集群中所有 Collection 的访问权限。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ho3HdSHE1olKdxxJAkcc0MxpnBe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "私网连接",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "NGQ8dky62oAGhwxHwDecEXsonEp",
+          "UwHedXKeQoDS2fxQ8G1crRCtnRf"
+        ],
+        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb"
+      },
+      {
+        "block_id": "NGQ8dky62oAGhwxHwDecEXsonEp",
+        "block_type": 2,
+        "parent_id": "Ho3HdSHE1olKdxxJAkcc0MxpnBe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "集群详情",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页签的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "连接信息",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "区域下方，单击 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "+ 创建私网连接",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，可创建私网连接。使用私网连接可以避免通过公网访问当前项目中的集群，确保数据安全。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UwHedXKeQoDS2fxQ8G1crRCtnRf",
+        "block_type": 2,
+        "parent_id": "Ho3HdSHE1olKdxxJAkcc0MxpnBe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "关于私网连接的更多配置，请参阅",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建私网连接",
+                "token": "JLHPwhdssifn2dkR5lDcA4SWnVg",
+                "url": "https://zilliverse.feishu.cn/wiki/JLHPwhdssifn2dkR5lDcA4SWnVg"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "U0wQd6fiood8EkxsntzctOZZnNb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "白名单",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "QA4Jd3PreouWqpxZF2YcwRrOnih",
+          "OWFGdTezMo02pyxAVdOcbvG9ncf",
+          "KaGXdR68hotFg9xQDi6cZSSHnLh",
+          "UHXCdgdiRoHpmZx4A8gcPnyvnmB"
+        ],
+        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb"
+      },
+      {
+        "block_id": "QA4Jd3PreouWqpxZF2YcwRrOnih",
+        "block_type": 2,
+        "parent_id": "U0wQd6fiood8EkxsntzctOZZnNb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "集群详情",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页签的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "集群信息",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "区域，单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " IP 白名单",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "旁的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "前往配置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "可添加白名单地址。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OWFGdTezMo02pyxAVdOcbvG9ncf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "地址列表为空时，白名单不生效。任意地址均可访问当前项目中的集群。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "U0wQd6fiood8EkxsntzctOZZnNb"
+      },
+      {
+        "block_id": "KaGXdR68hotFg9xQDi6cZSSHnLh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在添加任意一条非全零（0.0.0.0/0）的记录后，白名单生效。此时，Zilliz Cloud仅允许已添加网段中的IP地址访问当前项目中的集群。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "U0wQd6fiood8EkxsntzctOZZnNb"
+      },
+      {
+        "block_id": "UHXCdgdiRoHpmZx4A8gcPnyvnmB",
+        "block_type": 2,
+        "parent_id": "U0wQd6fiood8EkxsntzctOZZnNb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "关于白名单的更多配置，请参阅",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "设置白名单",
+                "token": "RwEzw2l4siJB5Ake7FOcVU4knre",
+                "url": "https://zilliverse.feishu.cn/wiki/RwEzw2l4siJB5Ake7FOcVU4knre"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3423,6 +4305,18 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#related-docs}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -3598,6 +4492,6 @@
         }
       }
     ],
-    "counts": 79
+    "counts": 97
   }
 }

@@ -5,7 +5,7 @@
   "node_token": "M4cQwZQ0QiqBy6kzZftc0fQPn1f",
   "node_type": "origin",
   "obj_create_time": "1687140134",
-  "obj_edit_time": "1702737857",
+  "obj_edit_time": "1703062820",
   "obj_token": "FIzodmN5aoT8e4xPN4Sc1xA7nNe",
   "obj_type": "docx",
   "origin_node_token": "M4cQwZQ0QiqBy6kzZftc0fQPn1f",
@@ -25,18 +25,27 @@
           "HRlod9Tx6oTzjBxvzlBcZ8JOnW9",
           "LmAVdlXVCoIb4TxJTVicsTR1nee",
           "Ig6MdaWBZon2tjxElx4c7Z0EnBg",
+          "XFVUdF6ldoDijnxDdtgcUe07nAd",
           "Ft9Ad6A9Wo2jYvxW6Ptc08Yrnsd",
+          "IHC9dg0dqomx0ix9a3kcJxm3nAS",
           "E5Mpdkj7Hoq1lcx2XJzcwIscnUb",
           "AJypdHx2Qo2K0wx5gVPcxDzyn96",
           "KgTwdyYvPogbmvxaRrzcGkFgnyg",
+          "QdZLdQ3oXorfVlxP4HLc0PX7nld",
           "QWmhdNxhIoGtCKxme2Ec0WIGnXd",
           "Low0djkiYop4ucxT7x8cyPWUnSe",
+          "SAbxdECGfosxYOxLahocPcu1nJh",
+          "BUyidoZZvoZSe4xIEwzcQqR2nke",
+          "TLJndhnJRoOSUpxtJIscBtpdncg",
+          "DAS3daJnKo5ZHPx3WI6caxJEnPf",
           "OJR5dWAoEoLahwxMDpYcXTbXnmd",
           "E7S9dSCKcoIihax7LmscRv7Hn9g",
           "BJE0dsiGWoiEIGxaNlJcAZoTnAh",
           "Bxc7dz7vWoeaX0xIqNOcW9QRndc",
           "WcZMdwSk6oTK7cxhRkrcNuvTnQc",
+          "FgZsdrPBgoYNrkxfgXScaZiPnld",
           "ErU0dZ42SojRRTxpkg5cKgGlnkc",
+          "LWo3dsOt3orelYxiHePcvmVzn4b",
           "LKbsdUCspoQE9axx0bDc6srxncf",
           "NCDIdb317o5URZxrfvucIY5anLe",
           "MGVLdsKUDoVAylxYTy4cLWrenvh",
@@ -170,7 +179,7 @@
             },
             {
               "text_run": {
-                "content": "集群中进行“增、删、改、查”的操作。",
+                "content": "集群中进行“增、删、改、查”的操作。<exclude target=\"",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -182,7 +191,55 @@
             },
             {
               "text_run": {
-                "content": "本文将以 Serverless 集群作为示例。",
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "本文将以 Serverless 集群作为示例",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "</exclude>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -386,6 +443,55 @@
         "parent_id": "FIzodmN5aoT8e4xPN4Sc1xA7nNe"
       },
       {
+        "block_id": "XFVUdF6ldoDijnxDdtgcUe07nAd",
+        "block_type": 2,
+        "parent_id": "FIzodmN5aoT8e4xPN4Sc1xA7nNe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
         "block_id": "Ft9Ad6A9Wo2jYvxW6Ptc08Yrnsd",
         "block_type": 12,
         "bullet": {
@@ -475,6 +581,31 @@
           }
         },
         "parent_id": "FIzodmN5aoT8e4xPN4Sc1xA7nNe"
+      },
+      {
+        "block_id": "IHC9dg0dqomx0ix9a3kcJxm3nAS",
+        "block_type": 2,
+        "parent_id": "FIzodmN5aoT8e4xPN4Sc1xA7nNe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</exclude>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
       },
       {
         "block_id": "E5Mpdkj7Hoq1lcx2XJzcwIscnUb",
@@ -750,6 +881,55 @@
         "parent_id": "FIzodmN5aoT8e4xPN4Sc1xA7nNe"
       },
       {
+        "block_id": "QdZLdQ3oXorfVlxP4HLc0PX7nld",
+        "block_type": 2,
+        "parent_id": "FIzodmN5aoT8e4xPN4Sc1xA7nNe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
         "block_id": "QWmhdNxhIoGtCKxme2Ec0WIGnXd",
         "block_type": 2,
         "parent_id": "FIzodmN5aoT8e4xPN4Sc1xA7nNe",
@@ -855,6 +1035,130 @@
             {
               "text_run": {
                 "content": "如需创建更多新 Collection，请遵循以下步骤",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SAbxdECGfosxYOxLahocPcu1nJh",
+        "block_type": 2,
+        "parent_id": "FIzodmN5aoT8e4xPN4Sc1xA7nNe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</exclude>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BUyidoZZvoZSe4xIEwzcQqR2nke",
+        "block_type": 2,
+        "parent_id": "FIzodmN5aoT8e4xPN4Sc1xA7nNe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<include target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TLJndhnJRoOSUpxtJIscBtpdncg",
+        "block_type": 2,
+        "parent_id": "FIzodmN5aoT8e4xPN4Sc1xA7nNe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以使用如下方式在您的集群中创建 Collection。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DAS3daJnKo5ZHPx3WI6caxJEnPf",
+        "block_type": 2,
+        "parent_id": "FIzodmN5aoT8e4xPN4Sc1xA7nNe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</include>",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1072,6 +1376,55 @@
         }
       },
       {
+        "block_id": "FgZsdrPBgoYNrkxfgXScaZiPnld",
+        "block_type": 2,
+        "parent_id": "FIzodmN5aoT8e4xPN4Sc1xA7nNe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
         "block_id": "ErU0dZ42SojRRTxpkg5cKgGlnkc",
         "block_type": 34,
         "children": [
@@ -1163,6 +1516,31 @@
             {
               "text_run": {
                 "content": " 创建 Collection 过程中遇到问题，请前往 Zilliz Cloud 界面查看集群下 Collection 数量。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LWo3dsOt3orelYxiHePcvmVzn4b",
+        "block_type": 2,
+        "parent_id": "FIzodmN5aoT8e4xPN4Sc1xA7nNe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</exclude>",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4862,6 +5240,6 @@
         "parent_id": "FIzodmN5aoT8e4xPN4Sc1xA7nNe"
       }
     ],
-    "counts": 98
+    "counts": 107
   }
 }

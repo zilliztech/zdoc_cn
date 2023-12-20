@@ -5,7 +5,7 @@
   "node_token": "XNCIwt9i6iFgEDkEQE9cTMf8nSe",
   "node_type": "origin",
   "obj_create_time": "1687159091",
-  "obj_edit_time": "1701775126",
+  "obj_edit_time": "1703064244",
   "obj_token": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
   "obj_type": "docx",
   "origin_node_token": "XNCIwt9i6iFgEDkEQE9cTMf8nSe",
@@ -22,10 +22,23 @@
         "block_type": 1,
         "children": [
           "MVWOd2shuonzhJxUwatcPjdRnIh",
+          "CSvUdZ3Kmo8otOxP3T8coNUlnhN",
           "WDEBdeVM9ozB4px1mJvcdcbwnmg",
+          "KNgbdYRBtoihf0xWkhIcxsc0nxh",
           "GjXMdFRXKo9XwSxDFKuc5qyknJe",
+          "E26kdJ2D9ozi3qx0axKcjPZOnT0",
+          "NBagdrvCWogh60xl7l4caMPnnXg",
+          "RGbydK7HZoxbwxxDSs3cfF49nkc",
+          "Us1bdFHpbokEXExJHoWcpXjTnXg",
           "XnUCdhhzlom6oDxLDkBcrXNJnmg",
+          "ATw0dH2e2o3o7pxray8cA4GMnzd",
+          "PJ5od52MDoJ9HxxDKBYcj3gXnkg",
           "SzGSdI0A5ozIJDx1IImcBNpEn5b",
+          "B33hdMd8EohSVVxiFTUcpNncnCh",
+          "SIsZdmklIoEpk4xJ6x4ckfyRn0c",
+          "F9StdKD9XohRlOxGKKDcA65mnVh",
+          "WYqrdFDLloNa27xf2LicmyE8n6f",
+          "LbiHd6m0doWP5AxdV6Ccml2Cn8k",
           "WG7ad147QoCVo4xuboackZ11nCc",
           "NxrMd3kONowuoIxkc8Wc5C0An2c",
           "Z5eQdtIiGoKOrKxUHCdcPjygnMe",
@@ -50,6 +63,14 @@
           "HfpTdPyhRo7awGxbSBkc6j3nn1f",
           "P7EFdS6qGo05X6xAv2icaOV6nve",
           "LUoedYZA9oVuT6xRexccjEQOnob",
+          "Kqw6dSXPVomw6SxXLapcclPnnPf",
+          "ZfW1dOzFCo5LILxtmtAcED4PnSe",
+          "LD2vdZiISoEoknxQGvccmKgTn3b",
+          "BGUWdWK6CoHkgAxQ6a3c4Fn9nog",
+          "TbFoduPUZom3Qvxj5tjc7BaKn6c",
+          "BB7DddUSroQNUvx3r7ucA50nn7f",
+          "DD7BdHR7roHYFYx51XDc3aS5nUd",
+          "EQKydvD2eoriJcxS43kchAy5nig",
           "NKPBdYe6ZoyMZVxEDvGcwTPTn6c",
           "Km3DdYpVHouzqAxeFSHcPFNvn9g"
         ],
@@ -88,7 +109,116 @@
           "elements": [
             {
               "text_run": {
-                "content": "在配置集群前，您需要先选择版本。Zilliz Cloud 各版本提供不同的服务体验、计费模型，且性能及可扩展性也都有所不同 。目前， Zilliz Cloud 共有 3 个版本可供选择，以满足多样的用户需求。",
+                "content": "在配置集群前，您需要先选择版本。Zilliz Cloud 各版本提供不同的服务体验、计费模型，且性能及可扩展性也都有所不同 。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "目前， Zilliz Cloud 共有 3 个版本可供选择，以满足多样的用户需求。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "</exclude><include target=\"saas\">目前， Zilliz Cloud 共有 2 个版本可供选择，以满足多样的用户需求。</include>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CSvUdZ3Kmo8otOxP3T8coNUlnhN",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -131,6 +261,31 @@
         "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
       },
       {
+        "block_id": "KNgbdYRBtoihf0xWkhIcxsc0nxh",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</exclude>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
         "block_id": "GjXMdFRXKo9XwSxDFKuc5qyknJe",
         "block_type": 12,
         "bullet": {
@@ -154,6 +309,154 @@
           }
         },
         "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "E26kdJ2D9ozi3qx0axKcjPZOnT0",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<include target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NBagdrvCWogh60xl7l4caMPnnXg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "专有部署",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "RGbydK7HZoxbwxxDSs3cfF49nkc",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</include>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Us1bdFHpbokEXExJHoWcpXjTnXg",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
       },
       {
         "block_id": "XnUCdhhzlom6oDxLDkBcrXNJnmg",
@@ -181,6 +484,80 @@
         "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
       },
       {
+        "block_id": "ATw0dH2e2o3o7pxray8cA4GMnzd",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</exclude>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PJ5od52MDoJ9HxxDKBYcj3gXnkg",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
         "block_id": "SzGSdI0A5ozIJDx1IImcBNpEn5b",
         "block_type": 2,
         "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
@@ -189,6 +566,179 @@
             {
               "text_run": {
                 "content": "3 个不同的版本为不同的用户需求及使用场景设计，您可以根据自己的需求灵活选择。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "B33hdMd8EohSVVxiFTUcpNncnCh",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</exclude>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SIsZdmklIoEpk4xJ6x4ckfyRn0c",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<include target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "F9StdKD9XohRlOxGKKDcA65mnVh",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "2 个不同的版本为不同的用户需求及使用场景设计，您可以根据自己的需求灵活选择。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WYqrdFDLloNa27xf2LicmyE8n6f",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</include>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LbiHd6m0doWP5AxdV6Ccml2Cn8k",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3157,6 +3707,335 @@
         "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
       },
       {
+        "block_id": "Kqw6dSXPVomw6SxXLapcclPnnPf",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</exclude>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZfW1dOzFCo5LILxtmtAcED4PnSe",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<include target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LD2vdZiISoEoknxQGvccmKgTn3b",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "企业版{#enterprise-plan}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "BGUWdWK6CoHkgAxQ6a3c4Fn9nog",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "企业版支持阿里云部署，提供 3 种不同类型的 CU——性能型、容量型和经济型 CU。企业版还提供多 AZ 高可用、私网连接（Private Link）、数据自动备份、专家技术支持等功能特性。企业版还提供 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "SLA",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，保证每月 99.9% 正常运行时间。适合个人开发者、小规模团队、或大型企业或组织，是构建向量数据平台首选方案，提供高可用、数据安全、专家技术支持。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TbFoduPUZom3Qvxj5tjc7BaKn6c",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "专有部署{#self-host}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
+      },
+      {
+        "block_id": "BB7DddUSroQNUvx3r7ucA50nn7f",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "专有部署包含所有企业版特性，支持在您自己的虚拟私有云（VPC）上部署全托管的向量数据库服务。适用于高度注重数据隐私和合规的场景。通常，我们推荐需要 128 CU 以上的用户选择专有部署。更多详情，请",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "联系销售",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com.cn%2Fcontact-sales"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DD7BdHR7roHYFYx51XDc3aS5nUd",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "更多 Zilliz Cloud 版本详情，请访问",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "定价页面",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com.cn%2Fpricing"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "或",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "联系销售",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com.cn%2Fcontact-sales"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EQKydvD2eoriJcxS43kchAy5nig",
+        "block_type": 2,
+        "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</include>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
         "block_id": "NKPBdYe6ZoyMZVxEDvGcwTPTn6c",
         "block_type": 4,
         "heading2": {
@@ -3237,6 +4116,6 @@
         "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
       }
     ],
-    "counts": 131
+    "counts": 152
   }
 }

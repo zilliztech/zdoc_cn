@@ -5,7 +5,7 @@
   "node_token": "Msbqwd1izicbFlkT56scmGlWnbb",
   "node_type": "origin",
   "obj_create_time": "1687673460",
-  "obj_edit_time": "1700719899",
+  "obj_edit_time": "1702888577",
   "obj_token": "Ua1edTZW9osWFhxGSlCc11o4nmd",
   "obj_type": "docx",
   "origin_node_token": "Msbqwd1izicbFlkT56scmGlWnbb",
@@ -34,8 +34,6 @@
           "Adg6dpHr0oYYepxkYGdckdQmnce",
           "B7gqd09Uiog7Gzxs6QncaijVn5g",
           "B2WhdwgXwowjiSxAugOcYUEPncd",
-          "M8KvdkqjTojKF9xrg3Ucv1BTnGh",
-          "HL5NdO71Nop5R6xpLdTcPVtSnre",
           "WbyvdSKqropaXWxY4N7cfpEKnhd",
           "LjUJdOtC0ouurXxqyhzcWjKvn9o",
           "HC5AdCzSgoE2BSxSVJ1cboMOndb",
@@ -44,7 +42,6 @@
           "Pdi4dz4lJo6TQbxNuZHczRj6nOc",
           "RlnaddBfmoKPn8xEYI8cl2fNnNQ",
           "BW2vdr8IfocyT8xAvRBcTZPTn1c",
-          "DBEjdxX4Zo4cBhxjBFAcDM5gnUj",
           "KWpud5BWxo9st9x10FucDETwnFW",
           "NH5qdLhRzo2JqCxvEtdcZmfAnnd",
           "VdnzdkdsvoGUxxxOICVcnzFan2g",
@@ -262,7 +259,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "python3 -m pip install --upgrade pymilvus langchain openai tiktoken",
+                "content": "python -m pip install --upgrade pymilvus langchain openai tiktoken",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -349,7 +346,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "from os import environ\n\nZILLIZ_ENDPOINT = \"https://<instance-id>.<cloud-region-id>.vectordb.zillizcloud.com:19535\" # example: \"in01-17f69c292d4a50a.aws-us-west-2.vectordb.zillizcloud.com\"\nZILLIZ_USER = \"db_admin\" # cluster 用户名\nZILLIZ_PASS = \"******\" # 上述用户名对应的密码\nOPENAI_API_KEY = \"sk-******\" # OpenAI API 密钥, 示例: \"sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"\n\n## Set up environment variables\n",
+                "content": "from langchain.embeddings.openai import OpenAIEmbeddings\nfrom langchain.vectorstores.zilliz import Zilliz\nfrom langchain.document_loaders import WebBaseLoader\nfrom langchain.text_splitter import RecursiveCharacterTextSplitter\nfrom langchain.chat_models import ChatOpenAI\nfrom langchain.schema.runnable import RunnablePassthrough\nfrom langchain.prompts import PromptTemplate\n\nimport os\n\n# 1. Set up the name of the collection to be created.\nCOLLECTION_NAME = 'doc_qa_db'\n\n# 2. Set up the dimension of the embeddings.\nDIMENSION = 768\n\n# 3. Set up the cohere api key\nOPENAI_API_KEY = \"YOUR_OPENAI_API_KEY\"\nos.environ[\"OPENAI_API_KEY\"] = OPENAI_API_KEY\n\n# 4. Set up the connection parameters for your Zilliz Cloud cluster.\nURI = 'YOUR_CLUSTER_ENDPOINT'\n\n# 5. Set up the token for your Zilliz Cloud cluster.\n# You can either use an API key or a set of cluster username and password joined by a colon.\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -361,7 +358,7 @@
             },
             {
               "text_run": {
-                "content": "environ[\"OPENAI_API_KEY\"] = OPENAI_API_KEY",
+                "content": "TOKEN = 'YOUR_CLUSTER_TOKEN'",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -523,7 +520,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "from langchain.embeddings.openai import OpenAIEmbeddings\n",
+                "content": "# Use the WebBaseLoader to load specified web pages into documents\nloader = WebBaseLoader([\n    'https://milvus.io/docs/overview.md',\n    'https://milvus.io/docs/release_notes.md',\n    'https://milvus.io/docs/architecture_overview.md',\n    'https://milvus.io/docs/four_layers.md',\n    'https://milvus.io/docs/main_components.md',\n    'https://milvus.io/docs/data_processing.md',\n    'https://milvus.io/docs/bitset.md',\n    'https://milvus.io/docs/boolean.md',\n    'https://milvus.io/docs/consistency.md',\n    'https://milvus.io/docs/coordinator_ha.md',\n    'https://milvus.io/docs/replica.md',\n    'https://milvus.io/docs/knowhere.md',\n    'https://milvus.io/docs/schema.md',\n    'https://milvus.io/docs/dynamic_schema.md',\n    'https://milvus.io/docs/json_data_type.md',\n    'https://milvus.io/docs/metric.md',\n    'https://milvus.io/docs/partition_key.md',\n    'https://milvus.io/docs/multi_tenancy.md',\n    'https://milvus.io/docs/timestamp.md',\n    'https://milvus.io/docs/users_and_roles.md',\n    'https://milvus.io/docs/index.md',\n    'https://milvus.io/docs/disk_index.md',\n    'https://milvus.io/docs/scalar_index.md',\n    'https://milvus.io/docs/performance_faq.md',\n    'https://milvus.io/docs/product_faq.md',\n    'https://milvus.io/docs/operational_faq.md',\n    'https://milvus.io/docs/troubleshooting.md',\n])\n\ndocs = loader.load()\n\n# Split the documents into smaller chunks\ntext_splitter = RecursiveCharacterTextSplitter(chunk_size=1024, chunk_overlap=0)\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -535,43 +532,7 @@
             },
             {
               "text_run": {
-                "content": "from langchain.vectorstores import ",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "Zilliz",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "\nfrom langchain.document_loaders import WebBaseLoader\nfrom langchain.text_splitter import CharacterTextSplitter\n\n# 使用 WebBaseLoader 加载指定的页面\nloader = WebBaseLoader([\n    \"https://milvus.io/docs/overview.md\",\n])\n\ndocs = loader.load()\n\n# 使用文本分割器将文档分割成指定大小的块\ntext_splitter = CharacterTextSplitter(chunk_size=1024, chunk_overlap=0)\n",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "docs = text_splitter.split_documents(docs)",
+                "content": "all_splits = text_splitter.split_documents(docs)",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -584,68 +545,6 @@
           ],
           "style": {
             "language": 49,
-            "wrap": false
-          }
-        },
-        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd"
-      },
-      {
-        "block_id": "M8KvdkqjTojKF9xrg3Ucv1BTnGh",
-        "block_type": 2,
-        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "如果最终分割的块大小大于指定大小，会输出如下指示：",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "HL5NdO71Nop5R6xpLdTcPVtSnre",
-        "block_type": 14,
-        "code": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "Created a chunk of size 1745, which is longer than the specified 1024\n",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "Created a chunk of size 1278, which is longer than the specified 1024",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "language": 60,
             "wrap": false
           }
         },
@@ -683,7 +582,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "# 指定用来将文档转换成对应向量表示的 Embedding 模型\nembeddings = OpenAIEmbeddings(model=\"ada\")\n\n# 创建一个向量数据库来保存文档的向量表示。这里我们使用 Zilliz Cloud 来创建该数据库\nvector_store = Zilliz.from_documents(\n    docs,\n    embedding=embeddings,\n    connection_args={\"uri\": ZILLIZ_ENDPOINT, \"user\": ZILLIZ_USER, \"password\": ZILLIZ_PASS, \"secure\": True}\n",
+                "content": "embeddings = OpenAIEmbeddings()\nconnection_args = { 'uri': URI, 'token': TOKEN }\n\nvector_store = Zilliz(\n    embedding_function=embeddings, \n    connection_args=connection_args,\n    collection_name=COLLECTION_NAME,\n    drop_old=True,\n).from_documents(\n    all_splits,\n    embedding=embeddings,\n    collection_name=COLLECTION_NAME,\n    connection_args=connection_args,\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -745,7 +644,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "query = \"What is milvus?\"\ndocs = vector_store.similarity_search(query)\n\n",
+                "content": "query = \"What are the main components of Milvus?\"\ndocs = vector_store.similarity_search(query)\n\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -757,7 +656,7 @@
             },
             {
               "text_run": {
-                "content": "print(docs)",
+                "content": "print(len(docs))",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -807,7 +706,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "[Document(page_content='Milvus workflow.', metadata={'source': 'https://milvus.io/docs/overview.md', 'title': 'Introduction Milvus documentation', 'description': 'Milvus is an open-source vector database designed specifically for AI application development, embeddings similarity search, and MLOps v2.2.x.', 'language': 'en'}), Document(page_content=\"Installat...rved.\", metadata={'source': 'https://milvus.io/docs/overview.md', 'title': 'Introduction Milvus documentation', 'description': 'Milvus is an open-source vector database designed specifically for AI application development, embeddings similarity search, and MLOps v2.2.x.', 'language': 'en'}), Document(page_content='Introduction ... Milvus is able to analyze the correlation between two vectors by calculating their similarity distance. If the two embedding vectors are very similar, it means that the original data sources are similar as well.', metadata={'source': 'https://milvus.io/docs/overview.md', 'title': 'Introduction Milvus documentation', 'description': 'Milvus is an open-source vector database designed specifically for AI application development, embeddings similarity search, and MLOps v2.2.x.', 'language': 'en'}), Document(page_content=\"Key concepts\\n...search algorithms are used to accelerate the searching process. If the two embedding vectors are very similar, it means that the original data sources are similar as well.\\nWhy Milvus?\", metadata={'source': 'https://milvus.io/docs/overview.md', 'title': 'Introduction Milvus documentation', 'description': 'Milvus is an open-source vector database designed specifically for AI application development, embeddings similarity search, and MLOps v2.2.x.', 'language': 'en'})]",
+                "content": "4",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -888,119 +787,6 @@
         }
       },
       {
-        "block_id": "DBEjdxX4Zo4cBhxjBFAcDM5gnUj",
-        "block_type": 34,
-        "children": [
-          "VZYydViJpojLMHx4Htbc6slinyd",
-          "CiB9d50hZoMWQ5xTkooc2i7lnDh",
-          "ZDFKd8gZ8of5EhxgtFjcrVxWnnc"
-        ],
-        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd",
-        "quote_container": {}
-      },
-      {
-        "block_id": "VZYydViJpojLMHx4Htbc6slinyd",
-        "block_type": 2,
-        "parent_id": "DBEjdxX4Zo4cBhxjBFAcDM5gnUj",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "📘 说明",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "CiB9d50hZoMWQ5xTkooc2i7lnDh",
-        "block_type": 2,
-        "parent_id": "DBEjdxX4Zo4cBhxjBFAcDM5gnUj",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "LangChain 提供了四种用于搭建指定源问答的链，它们分别是 Stuff 链，MapReduce 链，Refine 链 和 MapRerank 链。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "ZDFKd8gZ8of5EhxgtFjcrVxWnnc",
-        "block_type": 2,
-        "parent_id": "DBEjdxX4Zo4cBhxjBFAcDM5gnUj",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "简单来说，Stuff 链会将整个文档包含在提示词中。因此，它只适用于文档规模较小的场景。大多数大语言模型对一条提示词可以包含的符号数量有数量限制，因此建议使用其它三种链。然后我们就可以使用创建好的链将文档分割成合适大小的块并通过不同的方式将它们喂给大语言模型。想了解更多，可以参考 LangChain 文档里关于",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "索引链",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "link": {
-                    "url": "https%3A%2F%2Fdocs.langchain.com%2Fdocs%2Fcomponents%2Fchains%2Findex_related_chains"
-                  },
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "的相关描述。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
         "block_id": "KWpud5BWxo9st9x10FucDETwnFW",
         "block_type": 2,
         "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd",
@@ -1008,7 +794,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "下面的脚本会以OpenAI为目标大语言模型创建一条MapReduce类型的链。",
+                "content": "下面的脚本会以OpenAI为目标大语言模型创建一条 RAG 链。该链将使用 OpenAI 为大语言模型，",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1032,7 +818,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "from langchain.chains.qa_with_sources import load_qa_with_sources_chain\nfrom langchain.llms import OpenAI\n\nchain = load_qa_with_sources_chain(OpenAI(temperature=0), chain_type=\"map_reduce\", return_intermediate_steps=True)\nquery = \"When was milvus created?\"\n",
+                "content": "llm = ChatOpenAI(model_name=\"gpt-3.5-turbo\", temperature=0) \nretriever = vector_store.as_retriever()\n\ntemplate = \"\"\"Use the following pieces of context to answer the question at the end. \nIf you don't know the answer, just say that you don't know, don't try to make up an answer. \nUse three sentences maximum and keep the answer as concise as possible. \nAlways say \"thanks for asking!\" at the end of the answer. \n{context}\nQuestion: {question}\nHelpful Answer:\"\"\"\nrag_prompt = PromptTemplate.from_template(template)\n\nrag_chain = (\n    {\"context\": retriever, \"question\": RunnablePassthrough()}\n    | rag_prompt\n    | llm\n)\n\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1044,7 +830,7 @@
             },
             {
               "text_run": {
-                "content": "chain({\"input_documents\": docs, \"question\": query}, return_only_outputs=True)",
+                "content": "print(rag_chain.invoke(\"Explain IVF_FLAT in Milvus.\"))",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1142,7 +928,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "{'intermediate_steps': [' No relevant text.',\n  ' Milvus was created in 2019 with a singular goal: store, index, and manage massive embedding vectors generated by deep neural networks and other machine learning (ML) models.',\n  ' Milvus. 2023 All rights reserved.',\n  ' None'],\n",
+                "content": "# Output",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1154,9 +952,33 @@
             },
             {
               "text_run": {
-                "content": " 'output_text': ' Milvus was created in 2019.\\nSOURCES: https://milvus.io/docs/overview.md'}",
+                "content": "#",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\n",
                 "text_element_style": {
                   "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# content='IVF_FLAT is an index mechanism in Milvus that divides a vector space into clusters. It compares the distances between a target vector and the centers of all clusters to find the nearest clusters. Then, it compares the distances between the target vector and the vectors in the selected clusters to find the nearest vectors. IVF_FLAT demonstrates performance advantages when the number of vectors exceeds the value of nlist. Thanks for asking!'",
+                "text_element_style": {
+                  "bold": true,
                   "inline_code": false,
                   "italic": false,
                   "strikethrough": false,
@@ -1198,6 +1020,6 @@
         }
       }
     ],
-    "counts": 33
+    "counts": 27
   }
 }

@@ -5,7 +5,7 @@
   "node_token": "QdD7w2k6ii7mKFkTJ2tcNhYznAf",
   "node_type": "origin",
   "obj_create_time": "1687683862",
-  "obj_edit_time": "1700705659",
+  "obj_edit_time": "1702889402",
   "obj_token": "TyZJdWsxtoGoBIxtYtic08dnnXe",
   "obj_type": "docx",
   "origin_node_token": "QdD7w2k6ii7mKFkTJ2tcNhYznAf",
@@ -525,7 +525,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "# Zilliz Cloud 设置参数\nCOLLECTION_NAME = 'movies_db'  # Collection 名称\nDIMENSION = 384  # 向量维度\nURI = 'https://replace-this-with-your-zilliz-cloud-endpoint'  # Cluster 公共端点 URI, 可从 Zilliz Cloud 获取 \nUSER = 'replace-this-with-your-zilliz-cloud-database-user'  # 创建 Cluster 时指定的用户名\nPASSWORD = 'replace-this-with-your-zilliz-cloud-database-password'  # 上述用户名对应的密码\n\n# 推理参数\nBATCH_SIZE = 128\n\n# 搜索参数\n",
+                "content": "# Parameters for set up Zilliz Cloud\nCOLLECTION_NAME = 'movies_db'  # Collection name\nDIMENSION = 384  # Embeddings size\nURI = 'YOUR_CLUSTER_ENDPOINT'  # Endpoint URI obtained from Zilliz Cloud\nTOKEN = 'YOUR_CLUSTER_TOKEN'  # API key or a colon-separated cluster username and password\n\n# Inference Arguments\nBATCH_SIZE = 128\n\n# Search Arguments\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -676,7 +676,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "from pymilvus import connections\n\n# 连接 Cluster\n",
+                "content": "from pymilvus import connections\n\n# Connect to Milvus Database\nconnections.connect(\n    uri=URI, \n    token=TOKEN\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -688,7 +688,7 @@
             },
             {
               "text_run": {
-                "content": "connections.connect(uri=URI, user=USER, password=PASSWORD, secure=True)",
+                "content": ")",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -741,7 +741,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "from pymilvus import utility\n\n# 删除已存在的同名 Collection\nif utility.has_collection(COLLECTION_NAME):\n",
+                "content": "from pymilvus import utility\n\n# Remove any previous collections with the same name\nif utility.has_collection(COLLECTION_NAME):\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -806,7 +806,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "from pymilvus import FieldSchema, CollectionSchema, DataType, Collection\n\n# 创建一个 Collection，包含 id，title 和 embedding 三个字段\nfields = [\n    FieldSchema(name='id', dtype=DataType.INT64, is_primary=True, auto_id=True),\n    FieldSchema(name='title', dtype=DataType.VARCHAR, max_length=200),  # VARCHARS need a maximum length, so for this example they are set to 200 characters\n    FieldSchema(name='embedding', dtype=DataType.FLOAT_VECTOR, dim=DIMENSION)\n]\nschema = CollectionSchema(fields=fields)\n",
+                "content": "from pymilvus import FieldSchema, CollectionSchema, DataType, Collection\n\n# Create collection which includes the id, title, and embedding.\nfields = [\n    FieldSchema(name='id', dtype=DataType.INT64, is_primary=True, auto_id=True),\n    FieldSchema(name='title', dtype=DataType.VARCHAR, max_length=200),  # VARCHARS need a maximum length, so for this example they are set to 200 characters\n    FieldSchema(name='embedding', dtype=DataType.FLOAT_VECTOR, dim=DIMENSION)\n]\nschema = CollectionSchema(fields=fields)\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -871,7 +871,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "# 使用 AUTOINDEX 为 Collection 创建索引\nindex_params = {\n    'index_type': 'AUTOINDEX',\n    'metric_type': 'L2',\n    'params': {}\n}\ncollection.create_index(field_name=\"image_embedding\", index_params=index_params)\n",
+                "content": "# Create an IVF_FLAT index for collection.\nindex_params = {\n    'index_type': 'AUTOINDEX',\n    'metric_type': 'L2',\n    'params': {}\n}\ncollection.create_index(field_name=\"embedding\", index_params=index_params)\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1095,7 +1095,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "import csv\nfrom sentence_transformers import SentenceTransformer\n\ntransformer = SentenceTransformer('all-MiniLM-L6-v2')\n\n# 抽取电影标题\ndef csv_load(file):\n    with open(file, newline='') as f:\n        reader = csv.reader(f, delimiter=',')\n        for row in reader:\n            if '' in (row[1], row[7]):\n                continue\n            yield (row[1], row[7])\n\n\n# 使用 SentenceTransformer 生成对应的向量表示\ndef embed_insert(data):\n    embeds = transformer.encode(data[1])\n    ins = [\n            data[0],\n            [x for x in embeds]\n    ]\n    collection.insert(ins)\n\nimport time\n\ndata_batch = [[],[]]\n\nfor title, plot in csv_load('./movies/plots.csv'):\n    data_batch[0].append(title)\n    data_batch[1].append(plot)\n    if len(data_batch[0]) % BATCH_SIZE == 0:\n        embed_insert(data_batch)\n        data_batch = [[],[]]\n\n# 为剩余数据生成对应的向量表示并存入数据库。\nif len(data_batch[0]) != 0:\n    embed_insert(data_batch)\n\n# 调用写入方法，让 Zilliz Cloud 自动索引数据。\n",
+                "content": "import csv\nfrom sentence_transformers import SentenceTransformer\n\ntransformer = SentenceTransformer('all-MiniLM-L6-v2')\n\n# Extract the book titles\ndef csv_load(file):\n    with open(file, newline='') as f:\n        reader = csv.reader(f, delimiter=',')\n        for row in reader:\n            if '' in (row[1], row[7]):\n                continue\n            yield (row[1], row[7])\n\n# Extract embedding from text using OpenAI\ndef embed_insert(data):\n    embeds = transformer.encode(data[1])\n    ins = [\n            data[0],\n            [x for x in embeds]\n    ]\n    collection.insert(ins)\n\nimport time\n\ndata_batch = [[],[]]\n\nwith open('../movies/plots.csv') as f:\n    total = len(f.readlines()) / BATCH_SIZE\n\nfor title, plot in tqdm(csv_load('{}/plots.csv'.format(output_folder)), total=total):\n    data_batch[0].append(title)\n    data_batch[1].append(plot)\n    if len(data_batch[0]) % BATCH_SIZE == 0:\n        embed_insert(data_batch)\n        data_batch = [[],[]]\n\n# Embed and insert the remainder\nif len(data_batch[0]) != 0:\n    embed_insert(data_batch)\n\n# Call a flush to index any unsealed segments.\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1194,7 +1194,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "# 搜索与关键词最相近的标题\nsearch_terms = ['A movie about cars', 'A movie about monsters']\n\n# 在数据库中对输入文本进行相似性搜索的函数\ndef embed_search(data):\n    embeds = transformer.encode(data)\n    return [x for x in embeds]\n\nsearch_data = embed_search(search_terms)\n\nstart = time.time()\nres = collection.search(\n    data=search_data,  # 输入文本对应的向量表示\n    anns_field=\"embedding\",  # 在 embedding 字段中进行相似性搜索\n    param={},\n    limit = TOP_K,  # 每次搜索返回的结果数量\n    output_fields=['title']  # 在返回的结果中需要包含 title 字段\n)\nend = time.time()\n\nfor hits_i, hits in enumerate(res):\n    print('Title:', search_terms[hits_i])\n    print('Search Time:', end-start)\n    print('Results:')\n    for hit in hits:\n        print( hit.entity.get('title'), '----', hit.distance)\n",
+                "content": "# Search for titles that closest match these phrases.\nsearch_terms = ['A movie about cars', 'A movie about monsters']\n\n# Search the database based on input text\ndef embed_search(data):\n    embeds = transformer.encode(data)\n    return [x for x in embeds]\n\nsearch_data = embed_search(search_terms)\n\nstart = time.time()\nres = collection.search(\n    data=search_data,  # Embeded search value\n    anns_field=\"embedding\",  # Search across embeddings\n    param={},\n    limit = TOP_K,  # Limit to top_k results per search\n    output_fields=['title']  # Include title field in result\n)\nend = time.time()\n\nfor hits_i, hits in enumerate(res):\n    print('Title:', search_terms[hits_i])\n    print('Search Time:', end-start)\n    print('Results:')\n    for hit in hits:\n        print( hit.entity.get('title'), '----', hit.distance)\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1256,7 +1256,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "Title: A movie about cars\nSearch Time: 0.04272913932800293\nResults:\nRed Line 7000 ---- 0.9104408621788025\nThe Mysterious Mr. Valentine ---- 0.9127437472343445\nTomboy ---- 0.9254708290100098\n\nTitle: A movie about monsters\nSearch Time: 0.04272913932800293\nResults:\nMonster Hunt ---- 0.8105474710464478\nThe Astro-Zombies ---- 0.8998500108718872\n",
+                "content": "# Title: A movie about cars\n# Search Time: 0.04272913932800293\n# Results:\n# Red Line 7000 ---- 0.9104408621788025\n# The Mysterious Mr. Valentine ---- 0.9127437472343445\n# Tomboy ---- 0.9254708290100098\n\n# Title: A movie about monsters\n# Search Time: 0.04272913932800293\n# Results:\n# Monster Hunt ---- 0.8105474710464478\n# The Astro-Zombies ---- 0.8998500108718872\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1268,7 +1268,7 @@
             },
             {
               "text_run": {
-                "content": "Wild Country ---- 0.9238440990447998",
+                "content": "# Wild Country ---- 0.9238440990447998",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

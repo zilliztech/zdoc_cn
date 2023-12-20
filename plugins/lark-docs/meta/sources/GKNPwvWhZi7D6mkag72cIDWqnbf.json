@@ -1,0 +1,519 @@
+{
+  "creator": "ou_8554528ee6e965bad56710acde1c7847",
+  "has_child": false,
+  "node_create_time": "1703060695",
+  "node_token": "GKNPwvWhZi7D6mkag72cIDWqnbf",
+  "node_type": "origin",
+  "obj_create_time": "1703060695",
+  "obj_edit_time": "1703067531",
+  "obj_token": "MMj9dUixqocVfcxHcmvcS7xFnMd",
+  "obj_type": "docx",
+  "origin_node_token": "GKNPwvWhZi7D6mkag72cIDWqnbf",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_8554528ee6e965bad56710acde1c7847",
+  "parent_node_token": "QxcnwBks8izBAQkjP8Ycl1cEnQh",
+  "space_id": "7167193056431783939",
+  "title": "版本说明书 2.4.0",
+  "slug": "release-notes-240",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "MMj9dUixqocVfcxHcmvcS7xFnMd",
+        "block_type": 1,
+        "children": [
+          "PE8nds1CnoNQAgxLU0LcSkwbnbf",
+          "O5qedBGegorMFbxoyBOc6wDCnxh",
+          "MeGFdCdkToLH6DxzG7ucZLYZnZb",
+          "MRagdQphmo8qzyxjRqxclTbpn6e",
+          "YsKddBJ2joMgNJxNKRbcHq6Nnxb",
+          "FVdvdwoROoAgW0xcc1mcwfvBn0d",
+          "Pb8odAcVZoyeZlxyTvlcQbhlnkg",
+          "OrTmd7sPAoOJBoxEkHscJENXnbd",
+          "ZfKJd0HdDopkPvxSOasc0ReRnqe",
+          "QptudTtrSouMp7xx6A1cSf6Cnxg"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "版本说明书 2.4.0",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "PE8nds1CnoNQAgxLU0LcSkwbnbf",
+        "block_type": 2,
+        "parent_id": "MMj9dUixqocVfcxHcmvcS7xFnMd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "发布日期：2023 年 12 月 20 日",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "O5qedBGegorMFbxoyBOc6wDCnxh",
+        "block_type": 2,
+        "parent_id": "MMj9dUixqocVfcxHcmvcS7xFnMd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "我们很高兴地宣布 Zilliz Cloud 2.4.0 的发布。此版本引入了一系列增强和功能更新。主要包括",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MeGFdCdkToLH6DxzG7ucZLYZnZb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Partition ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "SDK",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#partition-sdk}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MMj9dUixqocVfcxHcmvcS7xFnMd"
+      },
+      {
+        "block_id": "MRagdQphmo8qzyxjRqxclTbpn6e",
+        "block_type": 2,
+        "parent_id": "MMj9dUixqocVfcxHcmvcS7xFnMd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "SDK",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 在 Zilliz Cloud 集群中的 Collection 里创建和管理 Partition。具体内容，可参阅 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "使用 Partition",
+                "token": "BtktwpcxUiFrtHkpvxuc44ganWd",
+                "url": "https://zilliverse.feishu.cn/wiki/BtktwpcxUiFrtHkpvxuc44ganWd"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YsKddBJ2joMgNJxNKRbcHq6Nnxb",
+        "block_type": 2,
+        "parent_id": "MMj9dUixqocVfcxHcmvcS7xFnMd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "值得注意的是，当您",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "在您的 Collection 中指定某字段为 Partition Key",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FDrXpwhU8pixYi9kqzSBcs5TgnFd"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 后，Zilliz Cloud 将接管该 Collection 中的所有 Partition。此时，你无法在该 Collection 中使用 Partition 相关接口。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FVdvdwoROoAgW0xcc1mcwfvBn0d",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群管理接口{#cluster-management-apis}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MMj9dUixqocVfcxHcmvcS7xFnMd"
+      },
+      {
+        "block_id": "Pb8odAcVZoyeZlxyTvlcQbhlnkg",
+        "block_type": 2,
+        "parent_id": "MMj9dUixqocVfcxHcmvcS7xFnMd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "此次发布，我们为集群管理推出了一系列新的 RESTful 接口，包括",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fdocs.zilliz.com.cn%2Freference%2Fcreate-cluster"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "修改",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fdocs.zilliz.com.cn%2Freference%2Fmodify-cluster"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "删除",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fdocs.zilliz.com.cn%2Freference%2Fdrop-cluster"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "集群的接口以及用于",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "查看您的组织中所有项目详情",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fdocs.zilliz.com.cn%2Freference%2Flist-projects"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "的接口。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OrTmd7sPAoOJBoxEkHscJENXnbd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "其它增强{#other-enhancements}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MMj9dUixqocVfcxHcmvcS7xFnMd"
+      },
+      {
+        "block_id": "ZfKJd0HdDopkPvxSOasc0ReRnqe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "对所有项目的项目 ID 进行了重新配置，以便您通过接口获取项目相关情况。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MMj9dUixqocVfcxHcmvcS7xFnMd"
+      },
+      {
+        "block_id": "QptudTtrSouMp7xx6A1cSf6Cnxg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "增强错误消息内容，并提高业务稳定性，以便为您提供更加可靠的服务。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MMj9dUixqocVfcxHcmvcS7xFnMd"
+      }
+    ],
+    "counts": 11
+  }
+}

@@ -54,7 +54,6 @@ curl --request POST \
 
     | 参数名称        | 参数说明                                                                             |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `CLUSTER_ENDPOINT`  | **string**（必选）<br/>目标集群的 Endpoint。|
 
 ### 请求体
 
@@ -123,7 +122,7 @@ curl --request POST \
 | 80002 | The token is invalid |
 | 80007 | " This CU Size requires significant resource consumption. If you want to use it |
 | 80010 | "Duplicated ClusterName. You have already created a running Cluster with the same name. To avoid complexity in management |
-| 80014 | Your input cuSize value is not supported yet. |
+| 80014 | Invalid projectId. The projectId should like proj-xxxxxx |
 | 80022 | Dedicated cluster not support this operation. |
 | 90013 | The parameter shardsNum should have a value range between 1 and 32. |
 | 90014 | The length of parameter description can not exceed 4096. |

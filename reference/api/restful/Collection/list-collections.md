@@ -49,13 +49,12 @@ curl --request GET \
 
     | 参数名称          | 参数说明                                                                               |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
+    | `dbName`  | **string**<br/>目标集群的 Endpoint。|
 
 - 路径参数
 
     | 参数名称        | 参数说明                                                                             |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `CLUSTER_ENDPOINT`  | **string**（必选）<br/>目标集群的 Endpoint。|
 
 ### 请求体
 
@@ -104,7 +103,7 @@ curl --request GET \
 | 80000 | Incorrect parameter: xxx |
 | 80001 | The token is illegal |
 | 80002 | The token is invalid |
-| 80020 | Invalid clusterId or you do not have permission to access that Cluster. |
+| 80020 | Cluster not exist or you don't have permission. |
 | 80022 | Dedicated cluster not support this operation. |
 | 90011 | Invalid CollectionName. Reason: Name contains only alphanumeric letters and underscores |
 | 90102 | The cluster does not exist in current region. |

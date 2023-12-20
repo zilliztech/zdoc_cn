@@ -5,7 +5,7 @@
   "node_token": "LmbYwqEJQinfLMkkKr5cZxjZnFb",
   "node_type": "origin",
   "obj_create_time": "1687140592",
-  "obj_edit_time": "1702735713",
+  "obj_edit_time": "1702887669",
   "obj_token": "FN7Ad8kEHoX2oLxatT6c85H9nGp",
   "obj_type": "docx",
   "origin_node_token": "LmbYwqEJQinfLMkkKr5cZxjZnFb",
@@ -46,12 +46,37 @@
       },
       {
         "block_id": "ITEWdPD1Zoq3njxYTbmcvh2ZnEf",
-        "block_type": 4,
-        "heading2": {
+        "block_type": 2,
+        "parent_id": "FN7Ad8kEHoX2oLxatT6c85H9nGp",
+        "text": {
           "elements": [
             {
               "text_run": {
-                "content": "",
+                "content": "了解如何管理您的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 密钥、集群访问凭证及多元素鉴权（MFA）等鉴权手段。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -66,8 +91,7 @@
             "align": 1,
             "folded": false
           }
-        },
-        "parent_id": "FN7Ad8kEHoX2oLxatT6c85H9nGp"
+        }
       }
     ],
     "counts": 2
@@ -98,7 +122,7 @@
       "node_token": "FGluwzZltiZo8LkJyWVcD8qdnxc",
       "node_type": "origin",
       "obj_create_time": "1701417042",
-      "obj_edit_time": "1702735719",
+      "obj_edit_time": "1702887718",
       "obj_token": "KDaDd79AyoWQZKxl9fsc7ADynYf",
       "obj_type": "docx",
       "origin_node_token": "FGluwzZltiZo8LkJyWVcD8qdnxc",
@@ -116,7 +140,7 @@
       "node_token": "EWAWwESijisVHFkoAEbcfhvPnZb",
       "node_type": "origin",
       "obj_create_time": "1688529429",
-      "obj_edit_time": "1700704691",
+      "obj_edit_time": "1703038924",
       "obj_token": "XAQzdD6AJoYgURxnPgNcr7pmnMg",
       "obj_type": "docx",
       "origin_node_token": "EWAWwESijisVHFkoAEbcfhvPnZb",

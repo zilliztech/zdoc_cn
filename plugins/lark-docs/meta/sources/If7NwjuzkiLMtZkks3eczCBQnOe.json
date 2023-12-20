@@ -5,7 +5,7 @@
   "node_token": "If7NwjuzkiLMtZkks3eczCBQnOe",
   "node_type": "origin",
   "obj_create_time": "1687140580",
-  "obj_edit_time": "1702735693",
+  "obj_edit_time": "1702887609",
   "obj_token": "CkiTdrzkAoUNK8xPIPOccGLpnDh",
   "obj_type": "docx",
   "origin_node_token": "If7NwjuzkiLMtZkks3eczCBQnOe",
@@ -52,7 +52,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "",
+                "content": "了解如何注册 Zilliz Cloud 并管理您的帐户。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

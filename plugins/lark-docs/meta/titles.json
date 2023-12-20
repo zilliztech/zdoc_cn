@@ -184,5 +184,7 @@
     "帐户": "accounts",
     "鉴权": "authentication",
     "安全": "security",
-    "常见问题": "faqs"
+    "常见问题": "faqs",
+    "创建 Pipelines": "create-pipelines",
+    "导入数据": "import-data"
 }

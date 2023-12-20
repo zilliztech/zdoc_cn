@@ -5,7 +5,7 @@
   "node_token": "FGluwzZltiZo8LkJyWVcD8qdnxc",
   "node_type": "origin",
   "obj_create_time": "1701417042",
-  "obj_edit_time": "1702735719",
+  "obj_edit_time": "1702887718",
   "obj_token": "KDaDd79AyoWQZKxl9fsc7ADynYf",
   "obj_type": "docx",
   "origin_node_token": "FGluwzZltiZo8LkJyWVcD8qdnxc",
@@ -52,7 +52,31 @@
           "elements": [
             {
               "text_run": {
-                "content": " ",
+                "content": "您可以通过 Zilliz Cloud 控制台或 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "SDK",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 来管理集群的内建角色。 ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -88,7 +112,8 @@
       "owner": "ou_fbc044d19930afd389d5c369466c38b1",
       "parent_node_token": "FGluwzZltiZo8LkJyWVcD8qdnxc",
       "space_id": "7167193056431783939",
-      "title": "通过 Web UI 管理身份凭证"
+      "title": "通过 Web UI 管理身份凭证",
+      "slug": "manage-cluster-credentials-console"
     },
     {
       "creator": "ou_e55a208a81fc721928685fc3df9cb678",
@@ -105,7 +130,8 @@
       "owner": "ou_e55a208a81fc721928685fc3df9cb678",
       "parent_node_token": "FGluwzZltiZo8LkJyWVcD8qdnxc",
       "space_id": "7167193056431783939",
-      "title": "通过 SDK 管理身份凭证"
+      "title": "通过 SDK 管理身份凭证",
+      "slug": "manage-cluster-credentials-sdk"
     }
   ]
 }

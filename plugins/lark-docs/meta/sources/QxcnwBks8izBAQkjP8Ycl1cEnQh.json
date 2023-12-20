@@ -5,7 +5,7 @@
   "node_token": "QxcnwBks8izBAQkjP8Ycl1cEnQh",
   "node_type": "origin",
   "obj_create_time": "1688433552",
-  "obj_edit_time": "1692687121",
+  "obj_edit_time": "1702887953",
   "obj_token": "XTJOdjonKoahHUxOwYuc5h0SnJ0",
   "obj_type": "docx",
   "origin_node_token": "QxcnwBks8izBAQkjP8Ycl1cEnQh",
@@ -52,7 +52,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "",
+                "content": "了解 Zilliz Cloud 的发布记录。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -74,13 +74,31 @@
   },
   "children": [
     {
+      "creator": "ou_8554528ee6e965bad56710acde1c7847",
+      "has_child": false,
+      "node_create_time": "1703060695",
+      "node_token": "GKNPwvWhZi7D6mkag72cIDWqnbf",
+      "node_type": "origin",
+      "obj_create_time": "1703060695",
+      "obj_edit_time": "1703065435",
+      "obj_token": "MMj9dUixqocVfcxHcmvcS7xFnMd",
+      "obj_type": "docx",
+      "origin_node_token": "GKNPwvWhZi7D6mkag72cIDWqnbf",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_8554528ee6e965bad56710acde1c7847",
+      "parent_node_token": "QxcnwBks8izBAQkjP8Ycl1cEnQh",
+      "space_id": "7167193056431783939",
+      "title": "版本说明书 2.4.0",
+      "slug": "release-notes-240"
+    },
+    {
       "creator": "ou_fbc044d19930afd389d5c369466c38b1",
       "has_child": false,
       "node_create_time": "1700646241",
       "node_token": "BuuSwsbhEiIHDJkB9YSc63xAnrh",
       "node_type": "origin",
       "obj_create_time": "1700646241",
-      "obj_edit_time": "1700705250",
+      "obj_edit_time": "1703060816",
       "obj_token": "DkQNddkKuoiGK0xxdd0cqxJLnIc",
       "obj_type": "docx",
       "origin_node_token": "BuuSwsbhEiIHDJkB9YSc63xAnrh",

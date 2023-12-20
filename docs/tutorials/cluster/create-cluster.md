@@ -13,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 提供多种集群版本以满足不同的业务需求。请先查阅[选择合适的 CU 类型](./cu-types-explained)进行合理的资源规划。本文介绍如何创建集群。
 
-## 开始前{#prerequisites}{#prerequisites}
+## 开始前{#prerequisites}
 
 请确保已完成以下步骤：
 
@@ -21,42 +21,7 @@ Zilliz Cloud 提供多种集群版本以满足不同的业务需求。请先查�
 
 - 在目标组织或项目中，您具有集群创建权限。有关角色和权限的信息，请参见[角色与权限](./a-panorama-view)。
 
-## 创建 Serverless 集群{#set-up-a-serverless-cluster}{#serverless-set-up-a-serverless-cluster}
-
-1. 登录 Zilliz Cloud 控制台。
-
-1. 进入您需要创建集群的组织和项目。
-
-1. 点击**创建集群**。
-
-【Insert Screenshot】
-
-1. 选择**免费版**并设置集群。
-
-    <Admonition type="info" icon="📘" title="说明">
-
-    您最多可创建 1 个免费的 Serverless 集群。如需更多集群，请选择企业版。
-
-    </Admonition>
-
-    |  参数        |  描述                                                                                              |
-    | ---------- | ------------------------------------------------------------------------------------------------ |
-    |  集群名称      |  集群的名称。                                                                                          |
-    |  云服务提供商和地域 |  集群部署的云服务提供商和地域。目前，Zilliz Cloud 仅支持阿里云华东1（杭州）。更多详情，请见[云服务提供商和地域](./cloud-providers-and-regions)。 |
-
-【Insert screenshot】
-
-1. 点击**下一步：创建 Collection**。
-
-1. 选择**创建新 Collection**。
-
-    【Insert screenshot】
-
-    设置以下 Collection 参数：
-
-1. 点击**创建 Collection 和 Cluster**。弹出的对话框中将提示集群 Endpoint 和 API 密钥信息。请务必妥善保存。
-
-## 创建 Dedicated 集群{#create-a-dedicated-cluster}{#dedicated-create-a-dedicated-cluster}
+## 创建集群{#create-a-dedicated-cluster}
 
 1. 登录 Zilliz Cloud 控制台。
 
@@ -79,7 +44,7 @@ Zilliz Cloud 提供多种集群版本以满足不同的业务需求。请先查�
 
 1. 点击**创建集群**。
 
-## 结果验证{#verification}{#verification}
+## 结果验证{#verification}
 
 创建集群后，您可以在集群列表页面上检查集群状态。如果集群的状态为**运行中**，则表示集群创建成功。
 

@@ -44,7 +44,6 @@ curl --request POST \
 
     | 参数名称        | 参数说明                                                                             |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `public-endpoint`  | **string**（必选）<br/>目标集群的 Endpoint。|
 
 ### 请求体
 
@@ -52,6 +51,9 @@ curl --request POST \
 {
     "dbName": "string",
     "collectionName": "string",
+    "partitionNames": [
+        {}
+    ],
     "filter": "string",
     "limit": "integer",
     "offset": "integer",
@@ -65,6 +67,7 @@ curl --request POST \
 |------------------|-------------------------------------------------------------------------------------------|
 | `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
 | `collectionName`  | **string**（必选）<br/>目标 Collection 名称。|
+| `partitionNames`  | **array**<br/>当前操作的目标 Partition。可选参数，默认值为**default**。|
 | `filter`  | **string**（必选）<br/>查询时使用的过滤条件。|
 | `limit`  | **integer**<br/>要返回的最大 Entity 数。<br/>本参数值和 `offset` 参数值的和不能大于 **16384**。<br/>默认值为 **100**.<br/>参数取值在 **1** 和 **100** 之间.|
 | `offset`  | **integer**<br/>表示从第几个 Entity 开始返回搜索结果。<br/>本参数值和 `limit` 参数值的和不能大于 **16384**。<br/>最大值为 **16384**.|
@@ -113,7 +116,7 @@ curl --request POST \
 | 80000 | Incorrect parameter: xxx |
 | 80001 | The token is illegal |
 | 80002 | The token is invalid |
-| 80020 | Invalid clusterId or you do not have permission to access that Cluster. |
+| 80020 | Cluster not exist or you don't have permission. |
 | 90001 | The collection xxx does not exist. You can use ListCollections to view the list of existing collections. |
 | 90002 | The return value property xxx does not exist on collection xxx. |
 | 90004 | The parameter value for 'limit' should be between 1 and 100. |

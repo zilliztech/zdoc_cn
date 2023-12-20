@@ -55,6 +55,66 @@ curl --request GET \
 }
 ```
 
+## 查看项目
+
+查看当前地域内所有项目情况。
+
+```shell
+curl --request GET \
+    --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/projects" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --header "accept: application/json" \
+    --header "content-type: application/json"
+```
+
+Success response:
+
+```shell
+{
+    "code": 200,
+    "data": [
+       {
+          "instanceCount": 1,
+          "projectId": "8342669010291064832",
+          "projectName": "test"
+       }
+    ]
+}
+```
+
+## 创建集群
+
+创建一个集群。
+
+```shell
+curl --request POST \
+    --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/clusters/create" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --header "accept: application/json" \
+    --header "content-type: application/json" \
+    --data-raw '{
+    "plan": "Standard",
+    "clusterName": "cluster-02",
+    "cuSize": 1,
+    "cuType": "Performance-optimized",
+    "projectId": "8342669010291064832"
+    }'
+```
+
+Success response:
+
+```shell
+{
+    "code": 200,
+    "data": {
+       "clusterId": "in01-4d71039fd8754a4",
+       "username": "db_admin",
+       "password": "Wu5@|71UG)[5zB9n",
+       "prompt": "Submission successful, Cluster is being created, You can use the DescribeCluster interface to obtain the creation progress and the status of the Cluster. When the Cluster status is RUNNING, you can access your vector database using the SDK with the admin account and the initialization password you provided."
+    }
+}
+```
+
 ## 查看集群详情
 
 描述集群的详细信息。
@@ -86,6 +146,33 @@ curl --request GET \
         "storageSize": "string",
         "snapshotNumber": "string",
         "createProgress": "string"
+    }
+}
+```
+
+## 修改集群配置
+
+修改指定集群的配置。当前支持修改集群的 CU 大小。
+
+```shell
+curl --request POST \
+    --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/clusters/<Cluster-ID>/modify" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --header "accept: application/json" \
+    --header "content-type: application/json" \
+    --data-raw '{
+    "cuSize": 2
+    }'
+```
+
+Success response:
+
+```shell
+{
+    "code": 200,
+    "data": {
+       "clusterId": "in01-2040352a6a0b1b7",
+       "prompt": "Submission successful, Cluster is currently upgrading and will take several minutes, you can use the DescribeCluster interface to obtain the creation progress and the status of the Cluster. When the Cluster status is RUNNING, you can access your vector database using the SDK."
     }
 }
 ```
@@ -141,6 +228,30 @@ curl --request POST \
      "clusterId": "cluster01",
      "prompt": "Submission successful. Cluster is currently resuming, which typically takes several minutes. You can use the DescribeCluster interface to obtain the creation progress and the status of the Cluster. When the Cluster's status is RUNNING, you can access your vector database using the SDK."
   }
+}
+```
+
+## 删除集群
+
+删除指定集群。该操作会将指定的集群移动到回收站。所有集群在移动到回收站 30 天后彻底删除。
+
+```shell
+curl --request DELETE \
+    --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/clusters/<Cluster-ID>/drop" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --header "accept: application/json" \
+    --header "content-type: application/json"
+```
+
+Success response:
+
+```shell
+{
+    "code": 200,
+    "data": {
+       "clusterId": "in01-4d71039fd8754a4",
+       "prompt": "The Cluster has been deleted. If you believe this was a mistake, you can restore the Cluster from the recycle bin within 30 days (this not include serverless)."
+    }
 }
 ```
 

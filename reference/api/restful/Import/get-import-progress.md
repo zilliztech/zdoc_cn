@@ -35,14 +35,13 @@ curl --request GET \
 
     | 参数名称          | 参数说明                                                                               |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `jobId`  | **string**（必选）<br/>指定的导入任务 ID。|
-    | `clusterId`  | **string**（必选）<br/>应用当前操作的集群 ID。|
+    | `jobId`  | **string**（必选）<br/>一组可用的云服务提供商和云服务区域，如“ali-cn-hangzhou”。|
+    | `clusterId`  | **string**（必选）<br/>指定的导入任务 ID。|
 
 - 路径参数
 
     | 参数名称        | 参数说明                                                                             |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `CLOUD_REGION_ID`  | **string**（必选）<br/>一组可用的云服务提供商和云服务区域，如“ali-cn-hangzhou”。|
 
 ### 请求体
 
@@ -118,8 +117,8 @@ curl --request GET \
 | ---- | ------------- |
 | 40021 | The cluster ID does not exist. |
 | 40022 | No access to this cluster. Please request access from your admin. |
-| 80020 | Invalid clusterId or you do not have permission to access that Cluster. |
-| 80020 | Invalid clusterId or you do not have permission to access that Cluster. |
+| 80020 | Cluster not exist or you don't have permission. |
+| 80020 | Cluster not exist or you don't have permission. |
 | 90102 | The cluster does not exist in current region. |
 | 90102 | The cluster does not exist in current region. |
 | 90103 | The clusterId parameter is empty in the request path. |

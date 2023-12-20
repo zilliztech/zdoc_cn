@@ -17,5 +17,9 @@
     "按 ID 查询": "get",
     "插入 Entity": "insert",
     "删除 Entity": "delete",
-    "Upsert Entity": "upsert"
+    "Upsert Entity": "upsert",
+    "创建集群": "create-cluster",
+    "删除集群": "drop-cluster",
+    "修改集群配置": "modify-cluster",
+    "查看项目": "list-projects"
 }

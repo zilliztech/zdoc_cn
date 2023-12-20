@@ -49,7 +49,6 @@ curl --request POST \
 
     | 参数名称        | 参数说明                                                                             |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `CLUSTER_ENDPOINT`  | **string**（必选）<br/>目标集群的 Endpoint。|
 
 ### 请求体
 
@@ -106,7 +105,7 @@ curl --request POST \
 | 80000 | Incorrect parameter: xxx |
 | 80001 | The token is illegal |
 | 80002 | The token is invalid |
-| 80020 | Invalid clusterId or you do not have permission to access that Cluster. |
+| 80020 | Cluster not exist or you don't have permission. |
 | 80022 | Dedicated cluster not support this operation. |
 | 90001 | The collection xxx does not exist. You can use ListCollections to view the list of existing collections. |
 | 90011 | Invalid CollectionName. Reason: Name contains only alphanumeric letters and underscores |

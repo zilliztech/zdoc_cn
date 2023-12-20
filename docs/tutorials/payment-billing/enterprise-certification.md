@@ -13,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 现已开通企业认证渠道。如需进行[现金充值](./advance-pay)，您需要先通过企业认证。本章主要介绍如何在 Zilliz Cloud 界面上申请企业认证。
 
-## 操作步骤{#procedures}{#procedures}
+## 操作步骤{#procedures}
 
 1. 选择组织并点击左侧导航栏中的**系统设置**。
 
@@ -41,7 +41,7 @@ Zilliz Cloud 现已开通企业认证渠道。如需进行[现金充值](./advan
 
 ![enterprise-verified-cn](/img/enterprise-verified-cn.png)
 
-## 相关文档{#related-topics}{#related-topics}
+## 相关文档{#related-topics}
 
 - [现金充值](./advance-pay) 
 

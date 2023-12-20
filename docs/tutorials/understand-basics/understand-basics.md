@@ -11,3 +11,4 @@ import Admonition from '@theme/Admonition';
 
 # 了解 Zilliz Cloud
 
+在讨论如何使用 Zilliz Cloud 时经常会用到的一些术语和概念。

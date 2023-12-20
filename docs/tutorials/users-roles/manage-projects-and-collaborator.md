@@ -27,7 +27,7 @@ import Admonition from '@theme/Admonition';
 
 - [离开项目](./manage-projects-and-collaborator#leave-a-project)
 
-## 创建项目{#create-a-project}{#create-a-project}
+## 创建项目{#create-a-project}
 
 要创建项目，您必须是[组织管理员](./a-panorama-view#organization-roles)。
 
@@ -39,7 +39,7 @@ import Admonition from '@theme/Admonition';
 
 ![create-project-zh](/img/create-project-zh.png)
 
-## 重命名项目{#rename-a-project}{#rename-a-project}
+## 重命名项目{#rename-a-project}
 
 要重命名项目，您必须是[组织管理员](./a-panorama-view#organization-roles)。
 
@@ -51,7 +51,7 @@ import Admonition from '@theme/Admonition';
 
 ![rename-project-zh](/img/rename-project-zh.png)
 
-## 删除项目{#delete-a-project}{#delete-a-project}
+## 删除项目{#delete-a-project}
 
 要创建项目，您必须是[组织管理员](./a-panorama-view#organization-roles)。
 
@@ -63,7 +63,7 @@ import Admonition from '@theme/Admonition';
 
 ![delete-project-zh](/img/delete-project-zh.png)
 
-## 邀请用户加入项目{#invite-a-user-to-join-a-project}{#invite-a-user-to-join-a-project}
+## 邀请用户加入项目{#invite-a-user-to-join-a-project}
 
 要邀请用户加入项目，您必须是[组织管理员](./a-panorama-view#organization-roles)或[项目管理员](./a-panorama-view#project-roles)。
 
@@ -75,7 +75,7 @@ import Admonition from '@theme/Admonition';
 
 ![invite-user-to-project-zh](/img/invite-user-to-project-zh.png)
 
-## 撤销或重发邀请{#revoke-or-resend-an-invitation}{#revoke-or-resend-an-invitation}
+## 撤销或重发邀请{#revoke-or-resend-an-invitation}
 
 当您邀请现有组织成员加入同一组织内的项目时，他们会自动获得对项目的访问权限，无需接收单独的邀请。但如果您邀请用户加入他们还未加入的组织的项目，他们将会收到加入该组织的邀请，并会获得项目内指定项目的访问权限。
 要撤销或重发邀请，你必须是[组织管理员](./a-panorama-view#organization-roles)或[项目管理员](./a-panorama-view#project-roles)。
@@ -88,7 +88,7 @@ import Admonition from '@theme/Admonition';
 
 ![revoke-or-resend-project-invitation-zh](/img/revoke-or-resend-project-invitation-zh.png)
 
-## 编辑成员角色或移出成员{#edit-a-collaborators-role-or-remove-a-collaborator}{#edit-a-collaborators-role-or-remove-a-collaborator}
+## 编辑成员角色或移出成员{#edit-a-collaborators-role-or-remove-a-collaborator}
 
 当用户接受邀请后，他们将成为项目成员。之后，您可以根据需求编辑他们的角色或从项目中移出他们。
 
@@ -96,7 +96,7 @@ import Admonition from '@theme/Admonition';
 
 ![edit-user-role-or-remove-project-user-zh](/img/edit-user-role-or-remove-project-user-zh.png)
 
-## 离开项目{#leave-a-project}{#leave-a-project}
+## 离开项目{#leave-a-project}
 
 当您不再属于某个项目时，您可以选择离开项目。
 
@@ -110,7 +110,7 @@ import Admonition from '@theme/Admonition';
 
 ![leave-project-zh](/img/leave-project-zh.png)
 
-## 文档推荐{#related-topics}{#related-topics}
+## 文档推荐{#related-topics}
 
 - [角色与权限](./a-panorama-view) 
 

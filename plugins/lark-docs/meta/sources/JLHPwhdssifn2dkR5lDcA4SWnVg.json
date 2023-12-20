@@ -5,7 +5,7 @@
   "node_token": "JLHPwhdssifn2dkR5lDcA4SWnVg",
   "node_type": "origin",
   "obj_create_time": "1697438465",
-  "obj_edit_time": "1700705040",
+  "obj_edit_time": "1703043550",
   "obj_token": "HXd6d0M3foNlKKxkYIvcD1sMn5b",
   "obj_type": "docx",
   "origin_node_token": "JLHPwhdssifn2dkR5lDcA4SWnVg",
@@ -121,7 +121,31 @@
             },
             {
               "text_run": {
-                "content": "{configuration-principle}",
+                "content": "{",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "#",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "configuration-principle}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4888,7 +4912,31 @@
             },
             {
               "text_run": {
-                "content": "{next-steps}",
+                "content": "{",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "#",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "next-steps}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

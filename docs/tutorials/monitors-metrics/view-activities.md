@@ -13,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud **事件**页面记录了[组织](./a-panorama-view#understand-organizations)中发生的事件，包括免费额度增减、集群状态变更、授予或撤销组织和项目权限等。
 
-## 查看事件{#view-activities}{#view-activities}
+## 查看事件{#view-activities}
 
 您可以在 Zilliz Cloud 界面查看组织级别的事件。
 
@@ -23,7 +23,7 @@ Zilliz Cloud **事件**页面记录了[组织](./a-panorama-view#understand-orga
 
 ![view-activities-cn](/img/view-activities-cn.png)
 
-## 筛选事件{#filter-activities}{#filter-activities}
+## 筛选事件{#filter-activities}
 
 您可以根据事件类型和事件发生的时段来筛选展示的事件记录。您可以组合这 2 个筛选条件。
 
@@ -53,7 +53,7 @@ Zilliz Cloud **事件**页面记录了[组织](./a-panorama-view#understand-orga
 
     ![filter-by-activity-type-cn](/img/filter-by-activity-type-cn.png)
 
-## 相关文档{#related-topics}{#related-topics}
+## 相关文档{#related-topics}
 
 - [权限概览](./a-panorama-view) 
 

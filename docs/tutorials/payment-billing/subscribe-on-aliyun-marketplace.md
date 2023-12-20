@@ -15,7 +15,7 @@ Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云�
 
 ![alibabacloud_procedure](/img/alibabacloud_procedure.png)
 
-## 准备工作{#before-you-start}{#before-you-start}
+## 准备工作{#before-you-start}
 
 1. 您已注册并登录您的阿里云帐号。
 
@@ -25,7 +25,7 @@ Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云�
 
     1. 如果您尚未注册 Zilliz Cloud，并计划通过阿里云云市场缴纳您名下组织产生的费用。您可以直接前往[阿里云云市场](https://market.aliyun.com/products/56024006/cmgj00063418.html)。
 
-## 操作步骤{#procedures}{#procedures}
+## 操作步骤{#procedures}
 
 1. 前往[阿里云云市场](https://market.aliyun.com/products/56024006/cmgj00063418.html)开通 Zilliz Cloud 服务。
 
@@ -69,7 +69,7 @@ Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云�
 
     ![HsZ9bVAnEo5dOpxVSaBcezaknjd](/img/HsZ9bVAnEo5dOpxVSaBcezaknjd.png)
 
-## 取消订阅{#unsubscribe-alibaba-marketplace}{#unsubscribe-alibaba-marketplace}
+## 取消订阅{#unsubscribe-alibaba-marketplace}
 
 1. 前往阿里云[云市场控制台](https://market.console.aliyun.com/)。
 
@@ -83,9 +83,9 @@ Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云�
 
 ![unsubscribe-alibaba-marketplace-cn](/img/unsubscribe-alibaba-marketplace-cn.png)
 
-## Zilliz Cloud 定价{#zilliz-cloud-pricing}{#zilliz-cloud-zilliz-cloud-pricing}
+## Zilliz Cloud 定价{#zilliz-cloud-pricing}
 
-### 企业版{#enterprise}{#enterprise}
+### 企业版{#enterprise}
 
 |  Zilliz Cloud 用量 |  价格            |  阿里云市场 Unit 数量 |
 | ---------------- | -------------- | -------------- |
@@ -99,7 +99,7 @@ Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云�
 
 如需使用 Zilliz Cloud 专有部署版，请[联系销售](https://zilliz.com.cn/contact-sales)。
 
-## 后续操作{#next-steps}{#next-steps}
+## 后续操作{#next-steps}
 
 - 您可以前往 [Zilliz Cloud 文档站](https://docs.zilliz.com.cn)查看产品使用指南。
 

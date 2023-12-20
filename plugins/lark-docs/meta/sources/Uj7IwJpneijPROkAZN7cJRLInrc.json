@@ -5,7 +5,7 @@
   "node_token": "Uj7IwJpneijPROkAZN7cJRLInrc",
   "node_type": "origin",
   "obj_create_time": "1687158762",
-  "obj_edit_time": "1687158767",
+  "obj_edit_time": "1702887837",
   "obj_token": "YrF5dDrkiowIkdxQMlfc9rLVnAd",
   "obj_type": "docx",
   "origin_node_token": "Uj7IwJpneijPROkAZN7cJRLInrc",
@@ -20,6 +20,9 @@
       {
         "block_id": "YrF5dDrkiowIkdxQMlfc9rLVnAd",
         "block_type": 1,
+        "children": [
+          "KPFSdUib6oTqC5xJSgBcHndSnDc"
+        ],
         "page": {
           "elements": [
             {
@@ -40,9 +43,34 @@
           }
         },
         "parent_id": ""
+      },
+      {
+        "block_id": "KPFSdUib6oTqC5xJSgBcHndSnDc",
+        "block_type": 2,
+        "parent_id": "YrF5dDrkiowIkdxQMlfc9rLVnAd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "了解订阅 Zilliz Cloud 服务的多种方式及发票开具的相关说明。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
       }
     ],
-    "counts": 1
+    "counts": 2
   },
   "children": [
     {

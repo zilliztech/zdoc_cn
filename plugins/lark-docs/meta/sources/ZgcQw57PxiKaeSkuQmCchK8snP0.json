@@ -5,7 +5,7 @@
   "node_token": "ZgcQw57PxiKaeSkuQmCchK8snP0",
   "node_type": "origin",
   "obj_create_time": "1687246609",
-  "obj_edit_time": "1700719837",
+  "obj_edit_time": "1702884699",
   "obj_token": "TvNkdjh78o7EZ0xdnhDcEsv4nId",
   "obj_type": "docx",
   "origin_node_token": "ZgcQw57PxiKaeSkuQmCchK8snP0",
@@ -85,7 +85,127 @@
           "elements": [
             {
               "text_run": {
-                "content": "定义数据模型是指为数据库中数据创建一个清晰有序的数据模型。数据模型可以揭示数据之间的关系。因此，定义数据模型是为了了解数据集中的所有数据，展示数据间联系，从而用最有效的方式表示数据关系。",
+                "content": "定义",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " Schema ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "是指为数据库中数据创建一个清晰有序的数据",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "结构",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Schema ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "可以揭示",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和解列",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "数据之间的关系。因此，定义",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " Schema ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "是为了了解数据集中的所有数据，展示数据间联系，从而用最有效的方式表示数据关系。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -109,19 +229,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "数据模型",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "{#defining-data-models}",
+                "content": "定义 Schema{#defining-a-data-schema}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -479,7 +587,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "动态数据模型",
+                "content": "动态数据",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -491,7 +599,7 @@
             },
             {
               "text_run": {
-                "content": "{#dynamic-data-modeling}",
+                "content": "列{#dynamic-data-fields}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -517,7 +625,151 @@
           "elements": [
             {
               "text_run": {
-                "content": "1 个 Collection 可拥有 1 个主键字段和 1 个向量字段。您可以使用动态数据模型直接创建 Collection，无需手动定义数据集中 Entity 属性。您只需输入 Collection 名称和向量维数即可。Zilliz Cloud 会自动根据插入的数据推断数据类型和限制。",
+                "content": "1 个 Collection 可拥有 1 个主键字段和 1 个向量字段。您可以",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "在待插入数据中包含",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "动态数据",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "列",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，无需手动定义数据集中",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " Entity 属性。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "简单来说，在创建 Collection 时",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "输入 Collection 名称和向量维数",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 会自动根据",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "后续",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "插入的数据推断数据类型和限制。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -590,43 +842,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "from pymilvus import MilvusClient\n\n# 初始化 MilvsuClient 实例\n# 使用您自己的 uri 和 API 密钥替换以下参数值\nclient = MilvusClient(\n",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "        uri=\"https://<CLUSTER-ID>.<CLOUD-REGION>.",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "vectordb.zillizcloud.com",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": ":<ACCESS-PORT>\",\n        api_key=\"<API-KEY>\"\n)\n\n# 创建 Collection\nclient.create_collection(\n        collection_name=\"medium_articles\",\n        dimension=768\n",
+                "content": "# Connect using a MilvusClient object\nfrom pymilvus import MilvusClient\n\nCLUSTER_ENDPOINT=\"YOUR_CLUSTER_ENDPOINT\" # Set your cluster endpoint\nTOKEN=\"YOUR_CLUSTER_TOKEN\" # Set your token\n\n# Initialize a MilvusClient instance\n# Replace uri and API key with your own\nclient = MilvusClient(\n    uri=CLUSTER_ENDPOINT, # Cluster endpoint obtained from the console\n    token=TOKEN # API key or a colon-separated cluster username and password\n)\n\n# Create a collection\nclient.create_collection(\n        collection_name=\"medium_articles\",\n        dimension=768\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -748,7 +964,7 @@
             }
           ],
           "style": {
-            "language": 28,
+            "language": 49,
             "wrap": false
           }
         },
@@ -1722,7 +1938,7 @@
             }
           ],
           "style": {
-            "language": 28,
+            "language": 49,
             "wrap": false
           }
         },
@@ -1996,27 +2212,15 @@
         "bullet": {
           "elements": [
             {
-              "mention_doc": {
-                "obj_type": 16,
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                },
-                "title": "JSON",
-                "token": "UXBjwVpKmirzg9kgWgmcLixwnIe",
-                "url": "https://zilliverse.feishu.cn/wiki/UXBjwVpKmirzg9kgWgmcLixwnIe"
-              }
-            },
-            {
               "text_run": {
-                "content": " ",
+                "content": "JSON",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
                   "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FUXBjwVpKmirzg9kgWgmcLixwnIe"
+                  },
                   "strikethrough": false,
                   "underline": false
                 }
@@ -2038,6 +2242,18 @@
             {
               "text_run": {
                 "content": "文档推荐",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#whats-next}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

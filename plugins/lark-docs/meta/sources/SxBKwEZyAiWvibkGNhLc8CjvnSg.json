@@ -5,7 +5,7 @@
   "node_token": "SxBKwEZyAiWvibkGNhLc8CjvnSg",
   "node_type": "origin",
   "obj_create_time": "1687246533",
-  "obj_edit_time": "1700714909",
+  "obj_edit_time": "1702870533",
   "obj_token": "FQM1ddL5noYH3Cx313lcjGPHnIe",
   "obj_type": "docx",
   "origin_node_token": "SxBKwEZyAiWvibkGNhLc8CjvnSg",
@@ -50,6 +50,10 @@
           "WF4NdAGF0ovXEwxAJIJcu37snPb",
           "NpDwdISp4o2uXMxa2vccY6qAnCf",
           "RxXUdpuJAoikVCxyVlIcHnRhnsf",
+          "AWfSdXhIuojUJExwL3GczrtanTN",
+          "G4A6dH9HQoDOAMxHXIlcWwBzng8",
+          "Aq7FdH3NLoAwUZxL9ZUc7hm8nC9",
+          "PIYbdQTVyoVz47xfMh1cOdDjn4c",
           "HEpGdyjado8Ao2xzAjjcYSBDnzt",
           "MCvpdyGpTogO8gxkXzOcQRa8nOc",
           "E3G3d4zQfolAcpxJBzVc1HoynTe",
@@ -911,29 +915,14 @@
         "bullet": {
           "elements": [
             {
-              "mention_doc": {
-                "obj_type": 16,
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                },
-                "title": "JSON",
-                "token": "UXBjwVpKmirzg9kgWgmcLixwnIe",
-                "url": "https://zilliverse.feishu.cn/wiki/UXBjwVpKmirzg9kgWgmcLixwnIe"
-              }
-            },
-            {
               "text_run": {
-                "content": " ",
+                "content": "JSON",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
                   "italic": false,
                   "link": {
-                    "url": "https%3A%2F%2Fwww.notion.so%2FJavaScript-Object-Notation-JSON-5ba1d65c243d4c5c8ff08f7188efeb25%3Fpvs%3D21"
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FUXBjwVpKmirzg9kgWgmcLixwnIe"
                   },
                   "strikethrough": false,
                   "underline": false
@@ -1130,6 +1119,133 @@
             {
               "text_run": {
                 "content": " 。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AWfSdXhIuojUJExwL3GczrtanTN",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Partition{#partitions}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe"
+      },
+      {
+        "block_id": "G4A6dH9HQoDOAMxHXIlcWwBzng8",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Partition 是从 Collection 中划分而来。Zilliz Cloud 支持将物理存储划分成若干部分，每一部分被称为一个 Partition。每个 Partition 都可以包含多个 Segment。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Aq7FdH3NLoAwUZxL9ZUc7hm8nC9",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过将 Entity 分别存入不同的 Partition，Zilliz Cloud 实现了对 Entity 的隔离与分组。在按 Partition 进行检索时，由于无须关注 Collection 中其它 Partition 的数据，检索效率得到了较大的提升。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PIYbdQTVyoVz47xfMh1cOdDjn4c",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "关于 Partition 的更多内容，可以查看",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "使用 Partition",
+                "token": "BtktwpcxUiFrtHkpvxuc44ganWd",
+                "url": "https://zilliverse.feishu.cn/wiki/BtktwpcxUiFrtHkpvxuc44ganWd"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1361,6 +1477,6 @@
         }
       }
     ],
-    "counts": 36
+    "counts": 40
   }
 }

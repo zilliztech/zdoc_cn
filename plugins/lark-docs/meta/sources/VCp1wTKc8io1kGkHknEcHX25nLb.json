@@ -5,7 +5,7 @@
   "node_token": "VCp1wTKc8io1kGkHknEcHX25nLb",
   "node_type": "origin",
   "obj_create_time": "1687140623",
-  "obj_edit_time": "1702735771",
+  "obj_edit_time": "1702887764",
   "obj_token": "SDxpdQoZho1OQ7xaBYscwNEjnMf",
   "obj_type": "docx",
   "origin_node_token": "VCp1wTKc8io1kGkHknEcHX25nLb",
@@ -52,7 +52,7 @@
           "elements": [
             {
               "text_run": {
-                "content": " ",
+                "content": " 了解如何设置集群访问白名单及添加私网连接来确保集群访问安全。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -98,7 +98,7 @@
       "node_token": "JLHPwhdssifn2dkR5lDcA4SWnVg",
       "node_type": "origin",
       "obj_create_time": "1697438465",
-      "obj_edit_time": "1700705040",
+      "obj_edit_time": "1703043550",
       "obj_token": "HXd6d0M3foNlKKxkYIvcD1sMn5b",
       "obj_type": "docx",
       "origin_node_token": "JLHPwhdssifn2dkR5lDcA4SWnVg",

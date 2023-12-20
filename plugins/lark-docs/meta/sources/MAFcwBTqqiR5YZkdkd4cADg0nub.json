@@ -5,7 +5,7 @@
   "node_token": "MAFcwBTqqiR5YZkdkd4cADg0nub",
   "node_type": "origin",
   "obj_create_time": "1687140289",
-  "obj_edit_time": "1701858270",
+  "obj_edit_time": "1703061664",
   "obj_token": "OBowdXEYGod06gxEDe1cMjMwnNf",
   "obj_type": "docx",
   "origin_node_token": "MAFcwBTqqiR5YZkdkd4cADg0nub",
@@ -26,6 +26,7 @@
           "QvoPdUZv8oXSNrxxUxacuHF5nud",
           "KlgsdnoTToX16fx4b0qcOsEHnAg",
           "HkTcdvfCQom5KXxprgbcPEXknPO",
+          "GQ1LdqmjTovk72xbsiOczr0KnCi",
           "HN3OdT5mwo0LQIxQRA8cSYPNnye",
           "XXeldishIooR5rxBIGHc43aJn2c",
           "Vqg2dlK67o6VnOxWSIZc1l0on6c",
@@ -36,6 +37,7 @@
           "Hv0KdGPEooev3jx2PwAcBIjvnOg",
           "DpnHdvUTSofCozxa52LcKO51nhc",
           "Q067dKEMHoBxqsx8qQ6cn7jEnOA",
+          "M0P9dqY5molMj1xWOc0cDtsEnrf",
           "J1rWdg0T9olWM2xoduScHAeknxe",
           "WXHUdlxBkotjQfxVoP2cYjF3n0f",
           "DMwcdJpuRoqeJFxbu7gcF6ddnGe",
@@ -297,6 +299,55 @@
           }
         },
         "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "GQ1LdqmjTovk72xbsiOczr0KnCi",
+        "block_type": 2,
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
       },
       {
         "block_id": "HN3OdT5mwo0LQIxQRA8cSYPNnye",
@@ -1643,13 +1694,110 @@
         "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
       },
       {
+        "block_id": "M0P9dqY5molMj1xWOc0cDtsEnrf",
+        "block_type": 2,
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</exclude>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
         "block_id": "J1rWdg0T9olWM2xoduScHAeknxe",
         "block_type": 4,
         "heading2": {
           "elements": [
             {
               "text_run": {
-                "content": "创建 Dedicated 集群",
+                "content": "创建",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\"> ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Dedicated ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "</exclude>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "集群",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3059,6 +3207,6 @@
         }
       }
     ],
-    "counts": 96
+    "counts": 98
   }
 }

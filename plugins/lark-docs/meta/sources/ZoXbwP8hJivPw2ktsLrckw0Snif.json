@@ -5,7 +5,7 @@
   "node_token": "ZoXbwP8hJivPw2ktsLrckw0Snif",
   "node_type": "origin",
   "obj_create_time": "1687140480",
-  "obj_edit_time": "1700702529",
+  "obj_edit_time": "1702869719",
   "obj_token": "GROvdTuvqo35Yvxf3YmcXVibnwg",
   "obj_type": "docx",
   "origin_node_token": "ZoXbwP8hJivPw2ktsLrckw0Snif",
@@ -127,7 +127,7 @@
               "text_run": {
                 "content": "{#acquire-the-dataset}",
                 "text_element_style": {
-                  "bold": true,
+                  "bold": false,
                   "inline_code": false,
                   "italic": false,
                   "strikethrough": false,
@@ -302,7 +302,7 @@
               "text_run": {
                 "content": "{#dataset-schema}",
                 "text_element_style": {
-                  "bold": true,
+                  "bold": false,
                   "inline_code": false,
                   "italic": false,
                   "strikethrough": false,
@@ -1466,6 +1466,18 @@
             {
               "text_run": {
                 "content": "相关文档",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#related-topics}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

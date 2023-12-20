@@ -5,7 +5,7 @@
   "node_token": "PMHbwHT0HiOnvDk8sUocOy34nPw",
   "node_type": "origin",
   "obj_create_time": "1687315662",
-  "obj_edit_time": "1700705308",
+  "obj_edit_time": "1703063329",
   "obj_token": "Jz4idVi9PoK1akxlB6hc2gVwnic",
   "obj_type": "docx",
   "origin_node_token": "PMHbwHT0HiOnvDk8sUocOy34nPw",
@@ -251,7 +251,31 @@
             },
             {
               "text_run": {
-                "content": " 密钥。另外，如果你还没有一个向量数据库，可前往 Zilliz Cloud 创建一个免费的 Serverless Cluster 来完成本文中的示例。",
+                "content": " 密钥。<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">另外，如果你还没有一个向量数据库，可前往 Zilliz Cloud 创建一个免费的 Serverless Cluster 来完成本文中的示例。</exclude><include target=\"saas\">另外，如果你还没有一个向量数据库，可前往 Zilliz Cloud 使用您的免费额度创建一个免费的集群来完成本文中的示例。</include>",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -448,7 +472,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "FILE = '/content/books.csv'  # 可以从这里下载数据集 https://www.kaggle.com/datasets/jealousleopard/goodreadsbooks and save it in the folder that holds your script.\nCOLLECTION_NAME = 'title_db'  # Collection 名称\nDIMENSION = 1536  # 向量表示的维度\nCOUNT = 100  # 将插入的记录数量\nURI='https://replace-this-with-the-public-endpoint-of-your-cluster-on-zilliz-cloud'  # 从 Zilliz Cloud 上获取的 Cluster 的公共端点\nUSER='replace-this-with-the-cluster-user-name'  # 在创建 Cluster 时指定的用户名\nPASSWORD='replace-this-with-the-cluster-password'  # 在创建 Cluster 时指定的密码\nOPENAI_ENGINE = 'text-embedding-ada-002'  # 待使用的预训练模型名称\n",
+                "content": "# 1. Go to https://www.kaggle.com/datasets/jealousleopard/goodreadsbooks, download the dataset, and save it locally.\nFILE = '../books.csv'\n\n# 2. Set up the name of the collection to be created.\nCOLLECTION_NAME = 'title_db'\n\n# 3. Set up the dimension of the embeddings.\nDIMENSION = 1536\n\n# 4. Set up the number of records to process.\nCOUNT = 100\n\n# 5. Set up the connection parameters for your Zilliz Cloud cluster.\nURI = 'YOUR_CLUSTER_ENDPOINT'\nTOKEN = 'YOUR_CLUSTER_TOKEN'\n\n# 6. Set up the OpenAI engine and API key to use.\nOPENAI_ENGINE = 'text-embedding-ada-002'  # Which engine to use\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -460,7 +484,7 @@
             },
             {
               "text_run": {
-                "content": "openai.api_key = ''  # Open API 的 API 密钥",
+                "content": "openai.api_key = 'YOUR_OPENAI_API_KEY'  # Use your own Open AI API Key here",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -574,7 +598,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "接下来，我们将连接在 Zilliz Cloud 上创建好的 Serverless Cluster，在其中创建一个 Collection ，并为其创建索引文件。关于如何设置和使用 Zilliz Cloud, 可以参考",
+                "content": "接下来，我们将连接在 Zilliz Cloud 上创建好的集群，在其中创建一个 Collection ，并为其创建索引文件。关于如何设置和使用 Zilliz Cloud, 可以参考",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -625,7 +649,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "# 连接到 Zilliz Cloud\nconnections.connect(uri=URI, user=USER, password=PASSWORD, secure=True)\n\n# 如果 Collection 已存在，先删除该 Collection\nif utility.has_collection(COLLECTION_NAME):\n    utility.drop_collection(COLLECTION_NAME)\n\n# 创建一个包含 id, title 和 embedding 三个字段的 Collection\nfields = [\n    FieldSchema(name='id', dtype=DataType.INT64, descrition='Ids', is_primary=True, auto_id=False),\n    FieldSchema(name='title', dtype=DataType.VARCHAR, description='Title texts', max_length=200),\n    FieldSchema(name='embedding', dtype=DataType.FLOAT_VECTOR, description='Embedding vectors', dim=DIMENSION)\n]\nschema = CollectionSchema(fields=fields, description='Title collection')\ncollection = Collection(name=COLLECTION_NAME, schema=schema)\n\n# 为 Collection 创建索引文件\nindex_params = {\n    'index_type': 'AUTOINDEX',\n    'metric_type': 'L2',\n    'params': {}\n}\n",
+                "content": "# Connect to Zilliz Cloud and create a collection\nconnections.connect(\n    alias='default',\n    # Public endpoint obtained from Zilliz Cloud\n    uri=URI,\n    token=TOKEN\n)\n\nif COLLECTION_NAME in utility.list_collections():\n    utility.drop_collection(COLLECTION_NAME)\n\nfields = [\n    FieldSchema(name='id', dtype=DataType.INT64, descrition='Ids', is_primary=True, auto_id=False),\n    FieldSchema(name='title', dtype=DataType.VARCHAR, description='Title texts', max_length=200),\n    FieldSchema(name='embedding', dtype=DataType.FLOAT_VECTOR, description='Embedding vectors', dim=DIMENSION)\n]\n\nschema = CollectionSchema(fields=fields, description='Title collection')\n\ncollection = Collection(\n    name=COLLECTION_NAME,\n    schema=schema,\n)\n\nindex_params = {\n    'metric_type': 'L2',\n    'index_type': 'AUTOINDEX',\n    'params': {'nlist': 1024}\n}\n\ncollection.create_index(\n    field_name='embedding',\n    index_params=index_params\n)\n\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -637,7 +661,7 @@
             },
             {
               "text_run": {
-                "content": "collection.create_index(field_name=\"embedding\", index_params=index_params)",
+                "content": "collection.load()",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -687,7 +711,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "# 使用 Open AI 获取指定文字的向量化表示\ndef embed(text):\n    return openai.Embedding.create(\n        input=text, \n        engine=OPENAI_ENGINE)[\"data\"][0][\"embedding\"]\n\n# 向 Collection 中插入图书标题及其向量化表示\nfor idx, text in enumerate(random.sample(sorted(csv_load(FILE)), k=COUNT)):  # Load COUNT amount of random values from dataset\n    ins=[[idx], [(text[:198] + '..') if len(text) > 200 else text], [embed(text)]]  # Insert the title id, the title text, and the title embedding vector\n    collection.insert(ins)\n    time.sleep(3)  # Free OpenAI account limited to 60 RPM\n\n# 加载数据到内存中以便开始搜索\ncollection.load()\n\n# 根据输入的关键词进行相似性搜索\ndef search(text):\n    # 设置检索参数\n    search_params={\n        \"metric_type\": \"L2\"\n    }\n\n    results=collection.search(\n        data=[embed(text)],  # 获取输入关键词的向量化表示\n        anns_field=\"embedding\",  # 在 embedding 列进行搜索\n        param=search_params,\n        limit=5,  # 将输出结果数量限制为 5 个\n        output_fields=['title']  # 要求输出结果中包含 title 列\n    )\n\n    ret=[]\n    for hit in results[0]:\n        row=[]\n        row.extend([hit.id, hit.score, hit.entity.get('title')])  # 获取匹配结果的 id，距离和 title 字段\n        ret.append(row)\n    return ret\n\nsearch_terms=['self-improvement', 'landscape']\n\nfor x in search_terms:\n    print('Search term:', x)\n    for result in search(x):\n        print(result)\n",
+                "content": "# Load the csv file and extract embeddings from the text\ndef csv_load(file):\n    with open(file, newline='') as f:\n        reader=csv.reader(f, delimiter=',')\n        for row in reader:\n            yield row[1]\n\ndef embed(text):\n    return openai.Embedding.create(\n        input=text, \n        engine=OPENAI_ENGINE)[\"data\"][0][\"embedding\"]\n\n# Insert each title and its embeddings\n\ninserted = []\n\nfor idx, text in enumerate(random.sample(sorted(csv_load(FILE)), k=COUNT)):\n    ins = {\n        'id': idx,\n        'title': (text[:198] + '..') if len(text) > 200 else text,\n        'embedding': embed(text)\n    }\n    collection.insert(data=ins)\n    time.sleep(3)\n    inserted.append(ins)\n\n# Search for similar titles\ndef search(text):\n    res = collection.search(\n        data=[embed(text)],\n        anns_field='embedding',\n        param={\"metric_type\": \"L2\", \"params\": {\"nprobe\": 10}},\n        output_fields=['title'],\n        limit=5,\n    )\n\n    ret = []\n\n    for hits in res:\n        for hit in hits:\n            row = []\n            row.extend([hit.id, hit.distance, hit.entity.get('title')])\n            ret.append(row)\n\n    return ret\n\nsearch_terms = [\n    'self-improvement',\n    'landscape',\n]\n\nfor x in search_terms:\n    print('Search term: ', x)\n    for x in search(x):\n        print(x)\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -749,7 +773,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "Search term: self-improvement\n[70, 0.34909766912460327, 'Life Management for Busy Woman: Growth and Study Guide']\n[18, 0.4245884120464325, 'From Socrates to Sartre: The Philosophic Quest']\n[63, 0.4264194667339325, 'Love']\n[88, 0.44693559408187866, \"The Innovator's Dilemma: The Revolutionary Book that Will Change the Way You Do Business\"]\n[29, 0.4684774875640869, 'The Thousandfold Thought (The Prince of Nothing  #3)']\n\nSearch term: landscape\n[63, 0.34171175956726074, 'Love']\n[48, 0.4100739061832428, 'Outlander']\n[67, 0.41952890157699585, 'Ice Castles']\n[98, 0.42765650153160095, 'The Long Walk']\n",
+                "content": "# Output\n#\n# Search term:  self-improvement\n# [9, 0.40222519636154175, 'Awakening Intuition: Using Your Mind-Body Network for Insight and Healing']\n# [66, 0.40565189719200134, 'The War of Art: Break Through the Blocks & Win Your Inner Creative Battles']\n# [73, 0.4130449891090393, 'The Organized Student: Teaching Children the Skills for Success in School and Beyond']\n# [34, 0.41660943627357483, 'The Consolation of Philosophy']\n# [61, 0.4331777095794678, 'Orientalism']\n\n# Search term:  landscape\n# [61, 0.3965946137905121, 'Orientalism']\n# [24, 0.4071578085422516, 'Andreas Gursky']\n# [1, 0.4108707904815674, 'The Art of Warfare']\n# [45, 0.4112565815448761, 'Sunshine']\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -761,7 +785,7 @@
             },
             {
               "text_run": {
-                "content": "[24, 0.43053609132766724, 'Notes from a Small Island']",
+                "content": "# [39, 0.41171979904174805, 'Wonderful Life: The Burgess Shale and the Nature of History']",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

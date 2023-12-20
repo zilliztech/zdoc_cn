@@ -44,7 +44,6 @@ curl --request POST \
 
     | 参数名称        | 参数说明                                                                             |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `CLOUD_REGION_ID`  | **string**（必选）<br/>一组可用的云服务提供商和云服务区域，如“ali-cn-hangzhou”。|
 
 ### 请求体
 
@@ -52,6 +51,7 @@ curl --request POST \
 {
     "clusterId": "string",
     "collectionName": "string",
+    "partitionName": "string",
     "objectUrl": "string",
     "accessKey": "string",
     "secretKey": "string"
@@ -62,6 +62,7 @@ curl --request POST \
 |------------------|-------------------------------------------------------------------------------------------|
 | `clusterId`  | **string**（必选）<br/>目标集群 ID。|
 | `collectionName`  | **string**（必选）<br/>目标 Collection 名称。|
+| `partitionName`  | **string**<br/>当前操作影响的 partition 名称。|
 | `objectUrl`  | **string**（必选）<br/>用于存储待导入数据的对象的 URL。|
 | `accessKey`  | **string**<br/>用于访问指定对象的访问密钥（AK）。|
 | `secretKey`  | **string**<br/>用于访问指定对象的访问密钥（SK）。|
@@ -118,9 +119,9 @@ curl --request POST \
 | 47039 | The specified cluster do not support multiple imports at the same time. |
 | 47053 | Failed to checkFiles {xxx}. |
 | 47055 | The current cluster is currently importing data (xxx). To ensure more stable service of your Milvus cluster |
-| 80020 | Invalid clusterId or you do not have permission to access that Cluster. |
-| 80020 | Invalid clusterId or you do not have permission to access that Cluster. |
-| 80020 | Invalid clusterId or you do not have permission to access that Cluster. |
+| 80020 | Cluster not exist or you don't have permission. |
+| 80020 | Cluster not exist or you don't have permission. |
+| 80020 | Cluster not exist or you don't have permission. |
 | 83001 | Failed to getObjectMeta {xxx}. |
 | 83001 | Failed to getObjectMeta {xxx}. |
 | 83004 | Importing files across clouds is not currently supported |

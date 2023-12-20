@@ -60,8 +60,7 @@ curl --request GET \
 
     | 参数名称        | 参数说明                                                                             |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `CLOUD_REGION_ID`  | **string**（必选）<br/>一组可用的云服务提供商和云服务区域，如“ali-cn-hangzhou”。|
-    | `clusterId`  | **string**（必选）<br/>目标集群 ID。|
+    | `clusterId`  | **string**（必选）<br/>一组可用的云服务提供商和云服务区域，如“ali-cn-hangzhou”。|
 
 ### 请求体
 
@@ -134,7 +133,7 @@ curl --request GET \
 | ---- | ------------- |
 | 80001 | The token is illegal |
 | 80002 | The token is invalid |
-| 80020 | Invalid clusterId or you do not have permission to access that Cluster. |
+| 80020 | Cluster not exist or you don't have permission. |
 | 90103 | The clusterId parameter is empty in the request path. |
 | 90117 | "Invalid domain name used |
 

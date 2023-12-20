@@ -16,7 +16,7 @@ Zilliz Cloud 提供了先进的数据基础架构，可帮助您优化向量搜�
 
 本文档介绍如何准备迁移数据、执行迁移和验证迁移结果。
 
-## 准备迁移数据{#prepare-migration-data}{#prepare-migration-data}
+## 准备迁移数据{#prepare-migration-data}
 
 <Tabs defaultValue="1x" values={[{"label":"From Milvus 1.x","value":"1x"},{"label":"From Milvus 2.x","value":"2x"}]}>
 
@@ -133,7 +133,7 @@ backup
 
 </Tabs>
 
-## 将数据迁移到 Zilliz Cloud{#migrate-data-to-zilliz-cloud}{#zilliz-cloudmigrate-data-to-zilliz-cloud}
+## 将数据迁移到 Zilliz Cloud{#migrate-data-to-zilliz-cloud}
 
 迁移数据准备就绪后，就可以将数据上传到 Zilliz Cloud。
 
@@ -143,7 +143,7 @@ backup
 
 ![migrate_from_milvus_1x](/img/migrate_from_milvus_1x.png)
 
-## 结果验证{#verify-the-migration-results}{#verify-the-migration-results}
+## 结果验证{#verify-the-migration-results}
 
 如果迁移任务的状态从 **迁移中** 变更为 **成功**，则代表迁移成功。
 
@@ -151,7 +151,7 @@ Zilliz Cloud 仅支持 [AUTOINDEX](./autoindex-explained)。**AUTOINDEX** 是一
 
 Collection 加载后，您可以自行连接和管理 Collection。
 
-## 相关文档{#related-topics}{#related-topics}
+## 相关文档{#related-topics}
 
 - [AUTOINDEX](./autoindex-explained)
 

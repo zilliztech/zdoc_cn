@@ -301,10 +301,10 @@ class larkDocWriter {
             fs.writeFileSync(`${path}/${slug}.md`, markdown)
 
             sub_pages.forEach((sub_page, index) => {
-                let raw = sub_page[0].replace(/^## /g, '').replace(/{#[\w-]+}/g, '').trim()
-                let title = raw.split('{/')[0]
+                let raw = sub_page[0].replace(/^## /g, '').trim()
+                let title = raw.split('{#')[0]
                 let short_description = sub_page.filter(line => line.length > 0)[1]
-                let slug = raw.split('{/')[1].replace('}', '')
+                let slug = raw.split('{#')[1].replace('}', '')
                 let front_matter = this.__front_matters(slug, null, null, source.node_token, index+1)
                 let links = []
 
@@ -557,8 +557,16 @@ class larkDocWriter {
     async __heading(heading, level) {
         let content = await this.__text_elements(heading['elements'])
         content = this.__filter_content(content, this.target).replace(/\*\*/g, '')
-        let title = content.split('{#')[0]
-        let slug = content.split('{#')[1].replace('}', '')
+        var title
+        var slug
+        try {
+            title = content.split('{#')[0]
+            slug = content.split('{#')[1].replace('}', '')            
+        } catch (error) {
+            title = content.split('{/')[0]
+            slug = content.split('{/')[1].replace('}', '')
+        }
+
         return '#'.repeat(level) + ' ' + title + '{#'+slug+'}';
     }
 

@@ -5,7 +5,7 @@
   "node_token": "R8KJwdSVIiaM6VkQN8kcqd5en6c",
   "node_type": "origin",
   "obj_create_time": "1701681210",
-  "obj_edit_time": "1701681219",
+  "obj_edit_time": "1702886307",
   "obj_token": "D6dudw30somz73xiwCNcZ1cZnlc",
   "obj_type": "docx",
   "origin_node_token": "R8KJwdSVIiaM6VkQN8kcqd5en6c",
@@ -14,6 +14,7 @@
   "parent_node_token": "MJeiwGDSniNQ7BkAFGCczemxnDg",
   "space_id": "7167193056431783939",
   "title": "创建 Pipelines",
+  "slug": "create-pipelines",
   "blocks": {
     "items": [
       {
@@ -51,7 +52,31 @@
           "elements": [
             {
               "text_run": {
-                "content": "",
+                "content": "您可以通过 Zilliz Cloud 控制台或 RESTful ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 来创建 Pipelines。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

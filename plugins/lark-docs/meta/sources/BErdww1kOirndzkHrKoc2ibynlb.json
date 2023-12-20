@@ -5,7 +5,7 @@
   "node_token": "BErdww1kOirndzkHrKoc2ibynlb",
   "node_type": "origin",
   "obj_create_time": "1687248645",
-  "obj_edit_time": "1701849418",
+  "obj_edit_time": "1703063984",
   "obj_token": "CIs5dpC04o4KyExCxIacgMAknFf",
   "obj_type": "docx",
   "origin_node_token": "BErdww1kOirndzkHrKoc2ibynlb",
@@ -24,8 +24,13 @@
           "QBMBdr5pGoYvT4xSRA9cIu57nmb",
           "NJlAdTGHdoU2GTxCafbcggBAnJf",
           "Xp31dP0twogx0TxEbUbczNB0nle",
+          "Ah9jdlx2xotUa2xzt87cwWbTnbR",
           "OLtfdemGyoORLJxStSfcXzsSnwd",
-          "JfB0dj22EoJ6JQxK4qlclMkKnqg"
+          "JfB0dj22EoJ6JQxK4qlclMkKnqg",
+          "DW3mdqJ75oyHg4xoUTNcE8r1ncf",
+          "L4xZd4L3goyoN9xEGIMcLgtanpf",
+          "G75edmYftovDoCxfagJcdBlqnwg",
+          "CJPBdNNjcoXUnxxeix7ckh4jn7w"
         ],
         "page": {
           "elements": [
@@ -119,6 +124,55 @@
             {
               "text_run": {
                 "content": "Zilliz Cloud 支持在阿里云上部署集群。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ah9jdlx2xotUa2xzt87cwWbTnbR",
+        "block_type": 2,
+        "parent_id": "CIs5dpC04o4KyExCxIacgMAknFf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -405,6 +459,286 @@
           "elements": [
             {
               "text_run": {
+                "content": "</exclude>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DW3mdqJ75oyHg4xoUTNcE8r1ncf",
+        "block_type": 2,
+        "parent_id": "CIs5dpC04o4KyExCxIacgMAknFf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<include target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "L4xZd4L3goyoN9xEGIMcLgtanpf",
+        "block_type": 31,
+        "children": [
+          "ZITTd6pgWoaBEixqv89c3QkUnjg",
+          "OrOGd59TZo6hblxiiNacQXfynQb",
+          "MLkqdaNAzoccN7xGBF0cyzVnn3d",
+          "G9dtdGUUsofZprxNuSCc2VS1nCg"
+        ],
+        "parent_id": "CIs5dpC04o4KyExCxIacgMAknFf",
+        "table": {
+          "cells": [
+            "ZITTd6pgWoaBEixqv89c3QkUnjg",
+            "OrOGd59TZo6hblxiiNacQXfynQb",
+            "MLkqdaNAzoccN7xGBF0cyzVnn3d",
+            "G9dtdGUUsofZprxNuSCc2VS1nCg"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              161,
+              239
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 2
+          }
+        }
+      },
+      {
+        "block_id": "ZITTd6pgWoaBEixqv89c3QkUnjg",
+        "block_type": 32,
+        "children": [
+          "N8FWdWO2EoGvn6xWZSGcEyQ9nXc"
+        ],
+        "parent_id": "L4xZd4L3goyoN9xEGIMcLgtanpf",
+        "table_cell": {}
+      },
+      {
+        "block_id": "N8FWdWO2EoGvn6xWZSGcEyQ9nXc",
+        "block_type": 2,
+        "parent_id": "ZITTd6pgWoaBEixqv89c3QkUnjg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "阿里云地域名称",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 2,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OrOGd59TZo6hblxiiNacQXfynQb",
+        "block_type": 32,
+        "children": [
+          "NzfPdPyHroZ3FWxn49XchqgznKX"
+        ],
+        "parent_id": "L4xZd4L3goyoN9xEGIMcLgtanpf",
+        "table_cell": {}
+      },
+      {
+        "block_id": "NzfPdPyHroZ3FWxn49XchqgznKX",
+        "block_type": 2,
+        "parent_id": "OrOGd59TZo6hblxiiNacQXfynQb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Dedicated 集群（企业版）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 2,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MLkqdaNAzoccN7xGBF0cyzVnn3d",
+        "block_type": 32,
+        "children": [
+          "BMyZd9MZ6orzD4xyH3Tch4ocnQh"
+        ],
+        "parent_id": "L4xZd4L3goyoN9xEGIMcLgtanpf",
+        "table_cell": {}
+      },
+      {
+        "block_id": "BMyZd9MZ6orzD4xyH3Tch4ocnQh",
+        "block_type": 2,
+        "parent_id": "MLkqdaNAzoccN7xGBF0cyzVnn3d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "华东1（杭州）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "G9dtdGUUsofZprxNuSCc2VS1nCg",
+        "block_type": 32,
+        "children": [
+          "MjIGdjBlgoGEMAxrGQAcCjOYn1h"
+        ],
+        "parent_id": "L4xZd4L3goyoN9xEGIMcLgtanpf",
+        "table_cell": {}
+      },
+      {
+        "block_id": "MjIGdjBlgoGEMAxrGQAcCjOYn1h",
+        "block_type": 2,
+        "parent_id": "G9dtdGUUsofZprxNuSCc2VS1nCg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "☑️",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "G75edmYftovDoCxfagJcdBlqnwg",
+        "block_type": 2,
+        "parent_id": "CIs5dpC04o4KyExCxIacgMAknFf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</include>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CJPBdNNjcoXUnxxeix7ckh4jn7w",
+        "block_type": 2,
+        "parent_id": "CIs5dpC04o4KyExCxIacgMAknFf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
                 "content": "",
                 "text_element_style": {
                   "bold": false,
@@ -423,6 +757,6 @@
         }
       }
     ],
-    "counts": 18
+    "counts": 31
   }
 }

@@ -19,19 +19,28 @@ class larkUtils {
     post_process_file_paths() {
         const paths = fs.readdirSync(this.outputDir, {recursive: true})
         const folders = paths.filter(path => fs.statSync(`${this.outputDir}/${path}`).isDirectory())
+        var removedCounts = 0
 
         for (const folder of folders) {
             const files = fs.readdirSync(`${this.outputDir}/${folder}`)
 
             if (files.length === 1 && files[0] === folder.split('/').slice(-1)[0] + '.md') {
-                fs.rmdirSync(`${this.outputDir}/${folder}`)
+                fs.rmSync(`${this.outputDir}/${folder}`, { recursive: true, force: true })
+                removedCounts += 1
             }   
 
             if (files.length > 1) {
                 const index_file = `${this.outputDir}/${folder}/${folder.split('/').slice(-1)[0]}.md`
                 const original = fs.readFileSync(index_file, {encoding: 'utf-8', flag: 'r'})
+                if (original.includes('import DocCardList from \'@theme/DocCardList\';')) {
+                    continue
+                }
                 const new_lines = "import DocCardList from '@theme/DocCardList';\n\n<DocCardList />"
                 fs.writeFileSync(index_file, original + '\n\n' + new_lines, {encoding: 'utf-8', flag: 'w'})
+            }
+
+            if (removedCounts > 0) {
+                this.post_process_file_paths()
             }
         }
     }

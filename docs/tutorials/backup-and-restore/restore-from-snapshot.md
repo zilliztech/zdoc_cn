@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 ![view_restore_history](/img/view_restore_history.png)
 
-## 相关文档{#related-topics}{#related-topics}
+## 相关文档{#related-topics}
 
 - [创建备份快照](./create-snapshot)
 

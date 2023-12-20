@@ -21,7 +21,7 @@ Zilliz Cloud 通过以下层面实现访问控制：
 
 ![a-panorama-view-1-zh](/img/a-panorama-view-1-zh.png)
 
-## 什么是组织{#understand-organizations}{#understand-organizations}
+## 什么是组织{#understand-organizations}
 
 组织是将拥有共同目标的多个项目汇聚在一起，例如，将某个特定业务单元下的所有项目整合在同一组织中。
 
@@ -29,7 +29,7 @@ Zilliz Cloud 通过以下层面实现访问控制：
 
 ![a-panorama-view-2-zh](/img/a-panorama-view-2-zh.png)
 
-## 什么是项目{#understand-projects}{#understand-projects}
+## 什么是项目{#understand-projects}
 
 项目是组织内部用于归类集群和其他相关资源的逻辑分组单位。
 
@@ -37,7 +37,7 @@ Zilliz Cloud 通过以下层面实现访问控制：
 
 ![a-panorama-view-3-zh](/img/a-panorama-view-3-zh.png)
 
-## 组织角色和权限{#organization-roles}{#organization-roles}
+## 组织角色和权限{#organization-roles}
 
 为了在组织层面上精准控制访问及操作权限，Zilliz Cloud 提供两种组织角色，明确规定了某一用户是否有权限访问特性资源及进行特定操作。
 
@@ -45,7 +45,7 @@ Zilliz Cloud 通过以下层面实现访问控制：
 
 - **组织成员**：拥有有限的组织访问权限，可以查看组织设置，并有权邀请用户加入组织。组织成员对项目和集群级别资源的具体权限范围取决于他们在项目中的角色。
 
-## 项目角色和权限{#project-roles}{#project-roles}
+## 项目角色和权限{#project-roles}
 
 在项目层面上，Zilliz Cloud 设置了两种角色，以便实现更精细化的访问控制：
 
@@ -53,7 +53,7 @@ Zilliz Cloud 通过以下层面实现访问控制：
 
 - **项目成员**：拥有对项目内集群的读写权限，可以查看集群详情并管理 Collection 和索引。
 
-## 访问权限等级{#access-levels}{#access-levels}
+## 访问权限等级{#access-levels}
 
 |  权限 / 访问级别                                          |  组织管理员                    |  项目管理员                    |  项目成员         |
 | --------------------------------------------------- | ------------------------- | ------------------------- | ------------- |
@@ -80,7 +80,7 @@ Zilliz Cloud 通过以下层面实现访问控制：
 |  管理 Collection                                      |  ✔︎                       |  ✔︎                       |  ✔︎           |
 |  管理索引                                               |  ✔︎                       |  ✔︎                       |  ✔︎           |
 
-## 文档推荐{#related-topics}{#related-topics}
+## 文档推荐{#related-topics}
 
 - [添加组织成员](./manage-orgs-and-members) 
 

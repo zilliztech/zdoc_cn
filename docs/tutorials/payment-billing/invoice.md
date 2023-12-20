@@ -19,7 +19,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 通过 Zilliz Cloud 开票{#invoicing-on-zilliz-cloud}{#zilliz-cloud-invoicing-on-zilliz-cloud}
+## 通过 Zilliz Cloud 开票{#invoicing-on-zilliz-cloud}
 
 在进行现金充值后，您可以在 Zilliz Cloud 界面申请开票。当前 Zilliz Cloud 仅支持为已结清的账单开具发票，且不可重复开票。
 
@@ -53,7 +53,7 @@ import Admonition from '@theme/Admonition';
 
 1. 我们预计在 1～3 个工作日后以邮件形式通知您开票结果。如开票成功，您可在 **Zilliz Cloud 开票成功**通知邮件中下载发票。
 
-## 通过阿里云云市场开票{#invoicing-on-alibaba-cloud-marketplace}{#invoicing-on-alibaba-cloud-marketplace}
+## 通过阿里云云市场开票{#invoicing-on-alibaba-cloud-marketplace}
 
 如您开通了阿里云云市场扣费渠道并需要开具发票，请参考[申请发票](https://help.aliyun.com/document_detail/150571.html)。
 

@@ -5,7 +5,7 @@
   "node_token": "H4Jlw1x88iCj9Pk2LUxcChVtnzb",
   "node_type": "origin",
   "obj_create_time": "1687139534",
-  "obj_edit_time": "1700122731",
+  "obj_edit_time": "1702878713",
   "obj_token": "PmrZdBe9Nolqh4xdEJ3cdTS1nKd",
   "obj_type": "docx",
   "origin_node_token": "H4Jlw1x88iCj9Pk2LUxcChVtnzb",
@@ -20,6 +20,9 @@
       {
         "block_id": "PmrZdBe9Nolqh4xdEJ3cdTS1nKd",
         "block_type": 1,
+        "children": [
+          "INeHdLX0MoTz1txbr2Jc53H3nge"
+        ],
         "page": {
           "elements": [
             {
@@ -40,9 +43,34 @@
           }
         },
         "parent_id": ""
+      },
+      {
+        "block_id": "INeHdLX0MoTz1txbr2Jc53H3nge",
+        "block_type": 2,
+        "parent_id": "PmrZdBe9Nolqh4xdEJ3cdTS1nKd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "关于在 Zilliz Cloud 上管理集群需要知道的内容。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
       }
     ],
-    "counts": 1
+    "counts": 2
   },
   "children": [
     {
@@ -52,7 +80,7 @@
       "node_token": "MAFcwBTqqiR5YZkdkd4cADg0nub",
       "node_type": "origin",
       "obj_create_time": "1687140289",
-      "obj_edit_time": "1701858270",
+      "obj_edit_time": "1703061664",
       "obj_token": "OBowdXEYGod06gxEDe1cMjMwnNf",
       "obj_type": "docx",
       "origin_node_token": "MAFcwBTqqiR5YZkdkd4cADg0nub",
@@ -88,7 +116,7 @@
       "node_token": "IRirwe30tilo1qkJlR7ca2MUnvn",
       "node_type": "origin",
       "obj_create_time": "1692253266",
-      "obj_edit_time": "1701859339",
+      "obj_edit_time": "1703065071",
       "obj_token": "Jur1dPOePodawBxfdkQc9WqknAb",
       "obj_type": "docx",
       "origin_node_token": "IRirwe30tilo1qkJlR7ca2MUnvn",

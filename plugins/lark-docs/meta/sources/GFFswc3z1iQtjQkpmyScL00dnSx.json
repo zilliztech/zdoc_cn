@@ -5,7 +5,7 @@
   "node_token": "GFFswc3z1iQtjQkpmyScL00dnSx",
   "node_type": "origin",
   "obj_create_time": "1687140680",
-  "obj_edit_time": "1701772039",
+  "obj_edit_time": "1703062983",
   "obj_token": "WIwudzIxPoBMrLxFgzmcM2B6nzh",
   "obj_type": "docx",
   "origin_node_token": "GFFswc3z1iQtjQkpmyScL00dnSx",
@@ -22,7 +22,9 @@
         "block_type": 1,
         "children": [
           "J6EqdmUQvoWqRSxoo0TclC32nEh",
+          "X4C1dC5bEo79hKxTWn2cN5Mnn6b",
           "UmvRdAjtIoQ7G0xiBT7cstuQnve",
+          "QZ9adOGgkoQQyNx4qBocw2MWnTh",
           "PebfdDhfRoBvSVxqo1fcREipnVd",
           "Y3HydUqmJolJvFx2ho2cfMPhnUd",
           "Lt1KdgFr4oEkGlxiaUocGY5ZnJh",
@@ -138,6 +140,55 @@
             {
               "text_run": {
                 "content": "备份。您可以基于快照创建新的集群或将快照用作集群数据备份。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "X4C1dC5bEo79hKxTWn2cN5Mnn6b",
+        "block_type": 2,
+        "parent_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -300,6 +351,31 @@
             {
               "text_run": {
                 "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QZ9adOGgkoQQyNx4qBocw2MWnTh",
+        "block_type": 2,
+        "parent_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</exclude>",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -773,6 +849,6 @@
         "parent_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh"
       }
     ],
-    "counts": 19
+    "counts": 21
   }
 }

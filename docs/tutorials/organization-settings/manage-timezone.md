@@ -15,15 +15,15 @@ import Admonition from '@theme/Admonition';
 
 ![timezone-settings](/img/timezone-settings.png)
 
-## 查看当前时区{#view-the-current-time-zone}{#view-the-current-time-zone}
+## 查看当前时区{#view-the-current-time-zone}
 
 要查看当前时区，请从左侧导航栏中选择**系统设置**，并在**时区**区域的**系统时区**下找到当前应用的时区。
 
-## 编辑时区{#edit-the-time-zone}{#edit-the-time-zone}
+## 编辑时区{#edit-the-time-zone}
 
 要更改系统时区，请单击**编辑**以打开**时区设置**对话框，并从下拉列表中选择时区。您还可以输入时区名称以快速检索所需的时区。
 
-## 相关文档{#related-topics}{#related-topics}
+## 相关文档{#related-topics}
 
 - [设置运维窗口](./set-up-maintenance-window)
 

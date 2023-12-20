@@ -13,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 为了及时调整 Zilliz Cloud 集群的 QPS，建议启用 QPS 资源监控。
 
-## 设置告警条件{#set-alert-condition}{#set-alert-condition}
+## 设置告警条件{#set-alert-condition}
 
 要在项目中设置集群的 QPS 告警条件，请执行以下步骤：
 
@@ -29,13 +29,13 @@ import Admonition from '@theme/Admonition';
 
     在提示的对话框中调整 QPS 和持续时长，然后单击**保存**。
 
-## 开启监控功能{#enable-the-monitor}{#enable-the-monitor}
+## 开启监控功能{#enable-the-monitor}
 
 要开启监控功能，需在**状态**列中打开开关。单击开关即可切换开启或关闭状态。请确保开关指示器在右侧，并且背景颜色变为蓝色。
 
 ![resource-monitors](/img/resource-monitors.png)
 
-## 相关文档{#related-topics}{#related-topics}
+## 相关文档{#related-topics}
 
 - [CU 资源监控](./cu-resource-monitor)
 

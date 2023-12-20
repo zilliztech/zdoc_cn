@@ -15,7 +15,7 @@ import Admonition from '@theme/Admonition';
 
 **AUTOINDEX** 是Zilliz Cloud 独有的索引类型，可以帮助您获取最佳搜索性能。当您在 Zilliz Cloud 上为 Collection 中的向量字段创建索引时，会自动应用 **AUTOINDEX** 索引。
 
-## 特性与收益{#features-and-benefits}{#features-and-benefits}
+## 特性与收益{#features-and-benefits}
 
 相对于开源的 Milvus 提供的能力而言，AUTOINDEX 有着显著的性能优势。根据一项基准测试结果，在特定的数据集上，AUTOINDEX 的 QPS 是其它索引类型的 3 倍。
 
@@ -27,17 +27,17 @@ AUTOINDEX 可以在如下场景中提供较高性能：
 
 - 实现动态量化策略，减少距离计算开销。
 
-## 同样成本，更高收益{#cost-efficiency}{#cost-efficiency}
+## 同样成本，更高收益{#cost-efficiency}
 
 根据用户对存储容量和检索性能的不同需求，AUTOINDEX 支持纯内存检索、磁盘混合检索及内存映射检索等多种检索模式。在纯内存检索模式下，AUTOINDEX 使用动态量化技术显著降低内存使用。在磁盘混合检索模式下，AUTOINDEX 动态缓存数据，并使用算法减少 I/O 操作，从而保持高性能。
 
-## 自动调优{#autonomous-tuning}{#autonomous-tuning}
+## 自动调优{#autonomous-tuning}
 
 近似最近邻（ANN）算法要求在召回率和性能之间做出取舍。查询参数的设置对检索结果影响巨大。如果检索参数确定召回范围过小，可能会导致极低的召回率，达不到业务要求。反之而言，如果检索参数确定的召回范围过大，查询性能则会极速降低。
 
 选择合适的查询参数需要掌握相关领域的知识，对用户来说，学习曲线过高。为了降低用户的学习曲线，AUTOINDEX 实现了一套智能算法，通过在建立索引时分析用户数据的分布情况，使用机器学习模型自动选择检索参数，实现召回率和检索性能间的平衡。这样一来，用户就无需手动设置检索参数了。
 
-## 创建索引和向量搜索{#index-building-and-search-settings}{#index-building-and-search-settings}
+## 创建索引和向量搜索{#index-building-and-search-settings}
 
 创建索引是指将 Collection 中的 Entity 按照特定顺序进行排序，以提高搜索效率。
 
@@ -45,7 +45,7 @@ AUTOINDEX 可以在如下场景中提供较高性能：
 
 在 Milvus 和 Zilliz Cloud 上创建索引和向量搜索时的参数设置区别如下所示：
 
-```plaintext
+```python
 *# For index-building*
 *# On Milvus*
 index_params = {
@@ -88,6 +88,6 @@ search_params = {
 }
 ```
 
-## 总结{#conclusion}{#conclusion}
+## 总结{#conclusion}
 
 希望您能通过阅读本教程，了解什么是 **AUTOINDEX**，以及如何使用 **AUTOINDEX** 简化在 Zilliz Cloud 上创建索引和搜索向量的流程。选择 **AUTOINDEX** 后，您无需根据集群 CU 类型考虑选择何种索引类型。Zilliz Cloud 为自动为您选择最优的搜索和索引配置，帮助您节省时间和精力。如对 **AUTOINDEX** 有任何疑问，欢迎通过 [support@zilliz.com](mailto:support@zilliz.com) 联系我们。

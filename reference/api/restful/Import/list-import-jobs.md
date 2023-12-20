@@ -33,15 +33,14 @@ curl --request GET \
 
     | 参数名称          | 参数说明                                                                               |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `clusterId`  | **string**（必选）<br/>Zilliz Cloud 集群 ID。|
-    | `pageSize`  | **string**<br/>每次返回的导入任务数量。|
-    | `currentPage`  | **string**<br/>当前页码。|
+    | `clusterId`  | **string**（必选）<br/>|
+    | `pageSize`  | **string**<br/>Zilliz Cloud 集群 ID。|
+    | `currentPage`  | **string**<br/>每次返回的导入任务数量。|
 
 - 路径参数
 
     | 参数名称        | 参数说明                                                                             |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `CLOUD_REGION_ID`  | **string**（必选）<br/>|
 
 ### 请求体
 
@@ -108,7 +107,7 @@ curl --request GET \
 | 80000 | Incorrect parameter: xxx |
 | 80003 | The parameter value for 'pageSize' should be between 5 and 100. |
 | 80004 | The parameter 'currentPage' should have a value between 1 and the maximum value of Int. |
-| 80020 | Invalid clusterId or you do not have permission to access that Cluster. |
+| 80020 | Cluster not exist or you don't have permission. |
 | 90102 | The cluster does not exist in current region. |
 | 90104 | The clusterId parameter is empty in the request parameter. |
 | 90117 | "Invalid domain name used |

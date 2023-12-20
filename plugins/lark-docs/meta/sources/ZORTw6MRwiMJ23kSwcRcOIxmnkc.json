@@ -5,7 +5,7 @@
   "node_token": "ZORTw6MRwiMJ23kSwcRcOIxmnkc",
   "node_type": "origin",
   "obj_create_time": "1687139778",
-  "obj_edit_time": "1700123082",
+  "obj_edit_time": "1702886090",
   "obj_token": "ZsxBdPG5woQHNWxVOAJcqEFgndf",
   "obj_type": "docx",
   "origin_node_token": "ZORTw6MRwiMJ23kSwcRcOIxmnkc",
@@ -52,7 +52,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "",
+                "content": "Zilliz Cloud 数据导入教程，从入门到精通。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -92,58 +92,22 @@
       "slug": "use-bulkwriter-for-data-import"
     },
     {
-      "creator": "ou_e55a208a81fc721928685fc3df9cb678",
-      "has_child": false,
-      "node_create_time": "1694688023",
-      "node_token": "BXBvwZh9Yiis0Vk8LcdcjZSPnQd",
-      "node_type": "origin",
-      "obj_create_time": "1694688023",
-      "obj_edit_time": "1701773596",
-      "obj_token": "RCjpdUbjwoaHKTxS8W0cxs6enqg",
-      "obj_type": "docx",
-      "origin_node_token": "BXBvwZh9Yiis0Vk8LcdcjZSPnQd",
-      "origin_space_id": "7167193056431783939",
-      "owner": "ou_e55a208a81fc721928685fc3df9cb678",
-      "parent_node_token": "ZORTw6MRwiMJ23kSwcRcOIxmnkc",
-      "space_id": "7167193056431783939",
-      "title": "通过 Web 控制台导入",
-      "slug": "import-data-on-web-ui"
-    },
-    {
-      "creator": "ou_e55a208a81fc721928685fc3df9cb678",
-      "has_child": false,
-      "node_create_time": "1694688045",
-      "node_token": "FzANwnN8siARelkAp4vcJVJNnnf",
-      "node_type": "origin",
-      "obj_create_time": "1694688045",
-      "obj_edit_time": "1701324796",
-      "obj_token": "Y9vad8dvPozCe4xuCv5c85tHnyg",
-      "obj_type": "docx",
-      "origin_node_token": "FzANwnN8siARelkAp4vcJVJNnnf",
-      "origin_space_id": "7167193056431783939",
-      "owner": "ou_e55a208a81fc721928685fc3df9cb678",
-      "parent_node_token": "ZORTw6MRwiMJ23kSwcRcOIxmnkc",
-      "space_id": "7167193056431783939",
-      "title": "通过 RESTful API 导入",
-      "slug": "import-data-via-restful-api"
-    },
-    {
       "creator": "ou_8554528ee6e965bad56710acde1c7847",
-      "has_child": false,
-      "node_create_time": "1694934142",
-      "node_token": "Xv4awWJZpiKoJjkPTlic98Mindc",
+      "has_child": true,
+      "node_create_time": "1702885809",
+      "node_token": "I6NPw1WoniB9JJknoibcemv3n03",
       "node_type": "origin",
-      "obj_create_time": "1694934142",
-      "obj_edit_time": "1700706203",
-      "obj_token": "PtPjd3WfSozYoExHaRtcGhxEnUc",
+      "obj_create_time": "1702885809",
+      "obj_edit_time": "1702886168",
+      "obj_token": "KPWPdp5Uwo60Xuxm0jHcyQ9Mnzd",
       "obj_type": "docx",
-      "origin_node_token": "Xv4awWJZpiKoJjkPTlic98Mindc",
+      "origin_node_token": "I6NPw1WoniB9JJknoibcemv3n03",
       "origin_space_id": "7167193056431783939",
       "owner": "ou_8554528ee6e965bad56710acde1c7847",
       "parent_node_token": "ZORTw6MRwiMJ23kSwcRcOIxmnkc",
       "space_id": "7167193056431783939",
-      "title": "通过 SDK 导入",
-      "slug": "import-data-via-sdks"
+      "title": "导入数据",
+      "slug": "import-data"
     }
   ]
 }

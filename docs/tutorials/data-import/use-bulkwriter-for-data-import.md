@@ -13,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 本节将介绍如何使用 PyMilvus 中的 BulkWriter 来准备须导入 Zilliz Cloud 的数据。
 
-## 简介{#overview}{#overview}
+## 简介{#overview}
 
 BulkWriter 是 PyMilvus 提供的用于将指定数据集转换成合适的格式，以便通过 Zilliz Cloud 提供的多种导入方式完成批量数据导入任务。当前，Zilliz Cloud允许您[通过 Web 控制台导入](./import-data-on-web-ui)，[通过 RESTful API 导入](./import-data-via-restful-api)，以及[通过 SDK 导入](./import-data-via-sdks)数据。
 
@@ -24,7 +24,7 @@ BulkWriter 提供了 LocalBulkWriter 和 RemoteBulkWriter 两个对象。LocalBu
 |  可接受的数据格式 |  字典列表            |  字典列表             |
 |  可输出的数据格式 |  字典或 NumPy 文件    |  NumPy 文件         |
 
-## 具体步骤{#procedure}{#procedure}
+## 具体步骤{#procedure}
 
 本节将使用示例数据集演示数据处理的基本流程。最终的目标是生成一个可供 BulkWriter 消费的字典列表。具体步骤如下：
 
@@ -168,7 +168,7 @@ BulkWriter 提供了 LocalBulkWriter 和 RemoteBulkWriter 两个对象。LocalBu
         # /bulk_data/8f808cdc-ce4d-4aed-89b9-2f343d44b2e0
         ```
 
-## 动态 Schema 支持{#dynamic-schema-support}{#schema-dynamic-schema-support}
+## 动态 Schema 支持{#dynamic-schema-support}
 
 如需为开启了动态 Schema 的 Collection 生成数据文件，可以在定义 Collection 的 Schema 时，将`enable_dynamic_schema` 设置为 `True`。
 
@@ -182,7 +182,7 @@ fields = [
 schema = CollectionSchema(fields, enable_dynamic_field=True)
 ```
 
-## 检查结果{#verify-the-result}{#verify-the-result}
+## 检查结果{#verify-the-result}
 
 - 使用 LocalBulkWriter 生成的结果，可使用 `writer.data_path` 获取文件存储路径。
 
@@ -200,7 +200,7 @@ schema = CollectionSchema(fields, enable_dynamic_field=True)
     [2023-09-07 16:58:05 CST] 4.7MiB STANDARD title_vector.npy
     ```
 
-## 推荐阅读{#related-topics}{#related-topics}
+## 推荐阅读{#related-topics}
 
 - [通过 Web 控制台导入](./import-data-on-web-ui) 
 

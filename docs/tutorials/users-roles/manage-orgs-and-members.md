@@ -25,7 +25,7 @@ import Admonition from '@theme/Admonition';
 
 - [离开组织](./manage-orgs-and-members#leave-an-organization)
 
-## 查看系统设置{#view-system-settings}{#view-system-settings}
+## 查看系统设置{#view-system-settings}
 
 加入组织后，您成为组织成员，并有权限查看系统设置。
 
@@ -33,13 +33,13 @@ import Admonition from '@theme/Admonition';
 
 ![view-organization-zh](/img/view-organization-zh.png)
 
-## 编辑组织名称{#edit-organization-name}{#edit-organization-name}
+## 编辑组织名称{#edit-organization-name}
 
 要编辑组织名称，您必须是[组织管理员](./a-panorama-view#organization-roles)。
 
 ![edit-organization-name-zh](/img/edit-organization-name-zh.png)
 
-## 邀请用户加入组织{#invite-a-user-to-join-your-organization}{#invite-a-user-to-join-your-organization}
+## 邀请用户加入组织{#invite-a-user-to-join-your-organization}
 
 要邀请用户加入组织，您可以是[组织管理员](./a-panorama-view#organization-roles)或[普通组织成员](./a-panorama-view#organization-roles)。
 
@@ -53,13 +53,13 @@ import Admonition from '@theme/Admonition';
 
 ![invite-user-to-org-zh](/img/invite-user-to-org-zh.png)
 
-## 撤销或重发邀请{#revoke-or-resend-an-invitation}{#revoke-or-resend-an-invitation}
+## 撤销或重发邀请{#revoke-or-resend-an-invitation}
 
 在您邀请用户加入组织后，Zilliz Cloud 会向用户发送邀请邮件。在用户接受邀请之前，您可以选择撤销或重发邀请。
 
 ![revoke-or-resend-org-invitation-zh](/img/revoke-or-resend-org-invitation-zh.png)
 
-## 编辑成员角色或移出成员{#edit-a-members-role-or-remove-a-member}{#edit-a-members-role-or-remove-a-member}
+## 编辑成员角色或移出成员{#edit-a-members-role-or-remove-a-member}
 
 当用户接受邀请后，他们将成为组织成员。之后，您可以根据需求编辑他们的角色或从组织中移出他们。
 
@@ -67,7 +67,7 @@ import Admonition from '@theme/Admonition';
 
 ![edit-user-role-or-remove-org-user-zh](/img/edit-user-role-or-remove-org-user-zh.png)
 
-## 离开组织{#leave-an-organization}{#leave-an-organization}
+## 离开组织{#leave-an-organization}
 
 当您不再属于某个组织时，您可以选择离开组织。
 
@@ -81,7 +81,7 @@ import Admonition from '@theme/Admonition';
 
 ![leave-organization-zh](/img/leave-organization-zh.png)
 
-## 文档推荐{#related-topics}{#related-topics}
+## 文档推荐{#related-topics}
 
 - [角色与权限](./a-panorama-view) 
 

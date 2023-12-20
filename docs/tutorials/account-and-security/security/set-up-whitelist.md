@@ -15,7 +15,7 @@ import Admonition from '@theme/Admonition';
 
 本教程将介绍如何设置白名单。
 
-## 前提条件{#before-you-start}{#before-you-start}
+## 前提条件{#before-you-start}
 
 确保满足以下条件：
 
@@ -25,7 +25,7 @@ import Admonition from '@theme/Admonition';
 
 - 您是组织或项目管理员。更多用户角色和权限详情，请阅读[角色与权限](./a-panorama-view) 。
 
-## 操作步骤{#procedure}{#procedure}
+## 操作步骤{#procedure}
 
 1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com.cn/login)。
 
@@ -52,11 +52,11 @@ import Admonition from '@theme/Admonition';
 
 ![whitelist-ip-access](/img/whitelist-ip-access.png)
 
-## 相关文档{#related-topics}{#related-topics}
+## 相关文档{#related-topics}
 
 - [管理 API 密钥](./manage-api-keys) 
 
-- [管理身份凭证](./undefined) 
+- [管理身份凭证](./manage-cluster-credentials-console) 
 
 - [管理 MFA](./multi-factor-authentication) 
 

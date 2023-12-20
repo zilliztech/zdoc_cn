@@ -5,13 +5,13 @@
   "node_token": "BXBvwZh9Yiis0Vk8LcdcjZSPnQd",
   "node_type": "origin",
   "obj_create_time": "1694688023",
-  "obj_edit_time": "1701773596",
+  "obj_edit_time": "1703062694",
   "obj_token": "RCjpdUbjwoaHKTxS8W0cxs6enqg",
   "obj_type": "docx",
   "origin_node_token": "BXBvwZh9Yiis0Vk8LcdcjZSPnQd",
   "origin_space_id": "7167193056431783939",
   "owner": "ou_e55a208a81fc721928685fc3df9cb678",
-  "parent_node_token": "ZORTw6MRwiMJ23kSwcRcOIxmnkc",
+  "parent_node_token": "I6NPw1WoniB9JJknoibcemv3n03",
   "space_id": "7167193056431783939",
   "title": "通过 Web 控制台导入",
   "slug": "import-data-on-web-ui",
@@ -31,7 +31,9 @@
           "Gs5fdaet7oIXuLx6hbgcyUzon6c",
           "FYK2dtgKdoGa9RxaKhjcrm9enDm",
           "C0svdUPQUo3Cpfx3fsEcgJgYnkg",
+          "B0k7deAI8oqulixTLaac8KFkncb",
           "XuGXdJsrQor2UZxNF51cTFPDnIg",
+          "IZIedTp4IoOxI0xhF9xcf6NYnlg",
           "MnIWdH5VOonPNVxTNUScLFVJnPb",
           "LCCydxgrJo29sFxP9GTc0oHlnvb",
           "InqndZvs7ou2A1xiLmccmulAnIw",
@@ -509,6 +511,91 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "<include target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">文件大小不能超过 1 GB。</include>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "B0k7deAI8oqulixTLaac8KFkncb",
+        "block_type": 2,
+        "parent_id": "RCjpdUbjwoaHKTxS8W0cxs6enqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -586,6 +673,31 @@
             {
               "text_run": {
                 "content": "如果您的集群是 Dedicated 集群，文件大小不能超过 1 GB。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IZIedTp4IoOxI0xhF9xcf6NYnlg",
+        "block_type": 2,
+        "parent_id": "RCjpdUbjwoaHKTxS8W0cxs6enqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</exclude>",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1637,6 +1749,6 @@
         "parent_id": "RCjpdUbjwoaHKTxS8W0cxs6enqg"
       }
     ],
-    "counts": 41
+    "counts": 43
   }
 }

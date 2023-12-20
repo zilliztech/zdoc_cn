@@ -5,7 +5,7 @@
   "node_token": "N6tlwTPPvi0FXvkj4fccCgtTnOg",
   "node_type": "origin",
   "obj_create_time": "1693559277",
-  "obj_edit_time": "1701835424",
+  "obj_edit_time": "1703063905",
   "obj_token": "VfhBdjfjyoXnS8xBunHchlVvnhd",
   "obj_type": "docx",
   "origin_node_token": "N6tlwTPPvi0FXvkj4fccCgtTnOg",
@@ -22,6 +22,8 @@
         "block_type": 1,
         "children": [
           "DKBUdPl1dot7btxzeO7cnzYNnud",
+          "TKWAdKwcgoPQksx5FTHcws0tnhh",
+          "Amxnd8djboZBIIxr2ZDcOQJYnLb",
           "XOy5dQ6Z7oTs0PxYGV3cPSdRnxc",
           "B0vFd3Ko5oYGLixpGp3cIicsntb",
           "Fbeyd0SIDoWvroxTdyBcKuejnmh",
@@ -33,6 +35,7 @@
           "K66ddDVMOoCou1xPRo7cwioWnXb",
           "Rh4rdrHmeo71zRxr8xdcrszGneh",
           "B08vdp9VcoJ6QjxPMOwco2pmnPg",
+          "VZ3qdaJ1ao0ZGCxeTI5c7gjanMU",
           "WIDydMJMTog4P0x0S2RcAvOhn3c",
           "Uk3FdfTAto6KFKxGVaEctBBFnVh",
           "NkKJdwl9NoSimPxSDuwc8RjYnpd",
@@ -69,7 +72,105 @@
           "elements": [
             {
               "text_run": {
-                "content": "Zilliz Cloud 支持在同一个组织下，将一个集群中的数据迁移至另一个集群中。您可以将数据从一个 Serverless 集群迁移至一个 Dedicated 集群中，或者在两个 Dedicated 集群中迁移数据。",
+                "content": "Zilliz Cloud 支持在同一个组织下，将一个集群中的数据迁移至另一个集群中。您可以<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">将数据从一个 Serverless 集群迁移至一个 Dedicated 集群中，或者</exclude>在两个<exclude target=\"saas\"> Dedicated </exclude>集群中迁移数据。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TKWAdKwcgoPQksx5FTHcws0tnhh",
+        "block_type": 2,
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Amxnd8djboZBIIxr2ZDcOQJYnLb",
+        "block_type": 2,
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -94,6 +195,18 @@
             {
               "text_run": {
                 "content": "从 Serverless 集群迁移至 Dedicated 集群",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#from-serverless-to-dedicated-cluster}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -728,6 +841,55 @@
         }
       },
       {
+        "block_id": "VZ3qdaJ1ao0ZGCxeTI5c7gjanMU",
+        "block_type": 2,
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "/",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "exclude>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
         "block_id": "WIDydMJMTog4P0x0S2RcAvOhn3c",
         "block_type": 4,
         "heading2": {
@@ -855,7 +1017,7 @@
             },
             {
               "text_run": {
-                "content": "从 Dedicated 集群",
+                "content": "从 Zilliz Cloud 集群",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -1206,6 +1368,6 @@
         }
       }
     ],
-    "counts": 23
+    "counts": 26
   }
 }

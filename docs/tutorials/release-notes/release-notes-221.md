@@ -1,0 +1,25 @@
+---
+slug: /release-notes-221
+beta: FALSE
+notebook: FALSE
+token: Ra4qwdd7kicpt6k9Y2tc3OJ5niX
+sidebar_position: 2
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# 版本说明书 2.2.1
+
+**发布日期：2023年10月17日**
+
+我们很高兴地宣布Zilliz Cloud 2.2.1的发布。此版本引入了一系列增强和功能：
+
+## 集群增强：引入新 CU ，提升灵活性{#cluster-enhancements-increased-flexibility-with-a-new-cu-size-option}
+
+通过新的集群规模选项--6 CU，集群管理变得更加灵活。如果您数据集规模较小、希望获得更具成本效益和效率的集群，该选项非常适合您。期望此次更新能够更好地提升您的使用体验。
+
+## 现金充值{#support-for-advance-pay}
+
+我们现在提供现金充值服务。如果您选择与我们签订离线合同并提前支付服务费用，可以使用我们提供的现金充值渠道。该功能旨在简化您的内部财务和采购流程，最大限度地降低您可能面临的风险。
+如果您或您的组织有特殊要求或想了解更多有关现金充值服务的信息，请随时联系我们。

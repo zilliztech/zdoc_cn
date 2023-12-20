@@ -13,13 +13,13 @@ import Admonition from '@theme/Admonition';
 
 本教程将介绍如何创建 Zilliz Cloud 账号。
 
-## 前提条件{#before-you-start}{#before-you-start}
+## 前提条件{#before-you-start}
 
 打开注册页面 https://cloud.zilliz.com.cn/signup。
 
 ![register_account](/img/register_account.png)
 
-## 注册账号{#registration-options}{#registration-options}
+## 注册账号{#registration-options}
 
 目前，您仅能够通过企业邮箱注册 Zilliz Cloud 账号。
 
@@ -45,7 +45,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 文档推荐{#whats-next}{#whats-next}
+## 文档推荐{#whats-next}
 
 - [快速开始](./quick-start) 
 

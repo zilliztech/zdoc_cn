@@ -11,9 +11,9 @@ import Admonition from '@theme/Admonition';
 
 # Schema
 
-定义数据模型是指为数据库中数据创建一个清晰有序的数据模型。数据模型可以揭示数据之间的关系。因此，定义数据模型是为了了解数据集中的所有数据，展示数据间联系，从而用最有效的方式表示数据关系。
+定义 Schema 是指为数据库中数据创建一个清晰有序的数据结构。Schema 可以揭示和解列数据之间的关系。因此，定义 Schema 是为了了解数据集中的所有数据，展示数据间联系，从而用最有效的方式表示数据关系。
 
-## 数据模型{#defining-data-models}{#defining-data-models}
+## 定义 Schema{#defining-a-data-schema}
 
 在 Zilliz Cloud 集群中，不同 Collection 的 Schema 可能不同。正确定义数据模型以表示数据集的结构十分重要。定义数据模型时，您需要考虑以下几个方面：
 
@@ -35,23 +35,27 @@ import Admonition from '@theme/Admonition';
 
 您需要花费一些时间来定义 Collection 的数据模型。当需要定义的数据属性特别多时，你需要花费的时间可能更多。因此，Zilliz Cloud 集群提供了动态和静态数据模型以满足您的不同需求。
 
-### 动态数据模型{#dynamic-data-modeling}{#dynamic-data-modeling}
+### 动态数据列{#dynamic-data-fields}
 
-1 个 Collection 可拥有 1 个主键字段和 1 个向量字段。您可以使用动态数据模型直接创建 Collection，无需手动定义数据集中 Entity 属性。您只需输入 Collection 名称和向量维数即可。Zilliz Cloud 会自动根据插入的数据推断数据类型和限制。
+1 个 Collection 可拥有 1 个主键字段和 1 个向量字段。您可以在待插入数据中包含动态数据列，无需手动定义数据集中的 Entity 属性。简单来说，在创建 Collection 时输入 Collection 名称和向量维数，Zilliz Cloud 会自动根据后续插入的数据推断数据类型和限制。
 
 以下示例代码片段创建了 1 个名为 **medium_articles** 的 Collection，且为该 Collection 设置了动态数据模型。
 
 ```python
+# Connect using a MilvusClient object
 from pymilvus import MilvusClient
 
-# 初始化 MilvsuClient 实例
-# 使用您自己的 uri 和 API 密钥替换以下参数值
+CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT" # Set your cluster endpoint
+TOKEN="YOUR_CLUSTER_TOKEN" # Set your token
+
+# Initialize a MilvusClient instance
+# Replace uri and API key with your own
 client = MilvusClient(
-        uri="https://<CLUSTER-ID>.<CLOUD-REGION>.vectordb.zillizcloud.com:<ACCESS-PORT>",
-        api_key="<API-KEY>"
+    uri=CLUSTER_ENDPOINT, # Cluster endpoint obtained from the console
+    token=TOKEN # API key or a colon-separated cluster username and password
 )
 
-# 创建 Collection
+# Create a collection
 client.create_collection(
         collection_name="medium_articles",
         dimension=768
@@ -60,7 +64,7 @@ client.create_collection(
 
 当您将 Entity 插入 Collection 时，Zilliz Cloud 将自动解析数据并动态推断 Collection Schema。
 
-```json
+```python
 client.insert(
         collection_name="medium_articles",
         data: {
@@ -95,13 +99,13 @@ client.insert(
 
 </Admonition>
 
-### 静态数据模型{#fixed-data-modeling}{#fixed-data-modeling}
+### 静态数据模型{#fixed-data-modeling}
 
 使用静态数据模型可以确保数据准确，提高搜索结果可靠性。虽然创建静态数据模型需要花费时间，但是更改数据模型也十分容易。我们推荐你为数据集使用静态数据模型。
 
 执行以下操作以使用静态数据模型创建 Collection Schema：
 
-```json
+```python
 from pymilvus import FieldSchema, CollectionSchema, DataType, Collection
 
 fields = [
@@ -128,7 +132,7 @@ collection = Collection(
 )
 ```
 
-## 数据类型{#data-types}{#data-types}
+## 数据类型{#data-types}
 
 Zilliz Cloud 支持以下数据类型：
 
@@ -148,9 +152,9 @@ Zilliz Cloud 支持以下数据类型：
 
 - 可变长度字符串（VARCHAR）
 
-- [JSON](./javascript-object-notation-json) 
+- [JSON](./javascript-object-notation-json)
 
-## 文档推荐{#}
+## 文档推荐{#whats-next}
 
 - [开启动态 Schema](./enable-dynamic-schema) 
 

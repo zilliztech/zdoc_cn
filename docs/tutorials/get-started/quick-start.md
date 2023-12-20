@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 # 快速开始
 
-在本文中，您将了解如何在 Zilliz Cloud 集群中进行“增、删、改、查”的操作。本文将以 Serverless 集群作为示例。
+在本文中，您将了解如何在 Zilliz Cloud 集群中进行“增、删、改、查”的操作。。
 
 ## 前提条件{#before-you-start}
 
@@ -20,17 +20,13 @@ import TabItem from '@theme/TabItem';
 
 - 您已在 https://cloud.zilliz.com.cn/signup 注册了 Zilliz Cloud 账号。更多详情，请参见[注册账号](./register-with-zilliz-cloud)。
 
-- 您已订阅 Zilliz Cloud 免费版并在项目中创建了一个 Serverless 集群。更多详情，请参见[免费试用](./free-trials) 和[创建集群](./create-cluster)。
-
 - 您已安装需要使用的 SDK。当前，有四种 SDK 可供选择，分别是 [Python](./install-sdks#pymilvuspython-sdkinstall-pymilvus-python-sdk)，[Java](./install-sdks#java-sdkinstall-java-sdk)，[Go](./install-sdks#go-sdkinstall-go-sdk) 和 [Node.js](./install-sdks#nodejs-sdkinstall-nodejs-sdk)。更多详情，请参见[安装 SDK](./install-sdks)。
 
 - 您已下载示例数据集。更多详情，请参见[示例数据集](./example-dataset)。
 
 ## 创建 Collection{#create-a-collection}
 
-创建 Serverless 集群的同时，Zilliz Cloud 会自动为您在该集群下创建 1 个 Collection。该 Collection 自动开启动态 Schema，且包含 **id **和** vector** 字段作为 Collection 中的主键字段和向量字段。Collection 主键字段开启了 **autoId**。
-
-如需创建更多新 Collection，请遵循以下步骤
+您可以使用如下方式在您的集群中创建 Collection。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Bash","value":"bash"}]}>
 <TabItem value='python'>
@@ -177,12 +173,6 @@ curl --location --request POST "${PUBLIC_ENDPOINT}/v1/vector/collections/create"
 </Tabs>
 
 上述实例调用高阶接口创建了一个仅包含主键及向量列的 Collection。在该 Collection 中，启用了  autoID 及动态 Schema。如果您需要添加更多的字段或者关闭动态 Schema 功能，可参考[创建 Collection](./create-collection) 中的步骤。
-
-<Admonition type="info" icon="📘" title="说明">
-
-1 个 Serverless 集群中最多可创建 2 个基本配置的 Collection。如果在使用 API 或 SDK 创建 Collection 过程中遇到问题，请前往 Zilliz Cloud 界面查看集群下 Collection 数量。
-
-</Admonition>
 
 ## 查看 Collection{#view-collections}
 
@@ -1439,7 +1429,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 标量查询**{#perform-a-query**}
+### 标量查询{#perform-a-query}
 
 除 **vector** 字段以外，数据集中的所有字段均为标量字段。您可以对标量字段设置过滤条件，从而筛选所需数据。以下示例展示如何进行向量查询。
 
@@ -1618,7 +1608,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 根据 ID 获取 Entity**{#get-entities-by-ids**}
+### 根据 ID 获取 Entity{#get-entities-by-ids}
 
 您可以根据 Entity ID 获取特定 Entity。以下示例展示如何根据 ID 获取 Entity。
 

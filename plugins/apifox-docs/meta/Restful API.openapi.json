@@ -33,17 +33,7 @@
         "tags": [
           "Cloud Meta"
         ],
-        "parameters": [
-          {
-            "name": "CLOUD_REGION_ID",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "Returns a list of all available cloud providers on Zilliz Cloud.",
@@ -93,15 +83,6 @@
         ],
         "parameters": [
           {
-            "name": "CLOUD_REGION_ID",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "cloudId",
             "in": "query",
             "description": "The ID of a valid cloud provider.",
@@ -139,6 +120,54 @@
         ]
       }
     },
+    "/v1/clusters/create": {
+      "post": {
+        "summary": "Create Cluster",
+        "x-apifox-folder": "Cluster Operations",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "Creates a new cluster.",
+        "tags": [
+          "Cluster Operations"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCluster"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Returns an object that contains the details of the created cluster.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ClusterOps"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Error"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/2645146/apis/api-77767162-run",
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
     "/v1/clusters": {
       "get": {
         "summary": "List Clusters",
@@ -150,15 +179,6 @@
           "Cluster Operations"
         ],
         "parameters": [
-          {
-            "name": "CLOUD_REGION_ID",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "pageSize",
             "in": "query",
@@ -219,15 +239,6 @@
         ],
         "parameters": [
           {
-            "name": "CLOUD_REGION_ID",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "clusterId",
             "in": "path",
             "description": "The ID of a cluster to which this operation applies.",
@@ -258,6 +269,112 @@
         ]
       }
     },
+    "/v1/clusters/{clusterId}/drop": {
+      "delete": {
+        "summary": "Drop Cluster",
+        "x-apifox-folder": "Cluster Operations",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "Deletes a cluster. This operation moves your cluster to the recycle bin. All clusters in the recycle bin are pending permanent deletion in 30 days.",
+        "tags": [
+          "Cluster Operations"
+        ],
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "The ID of a cluster to which this operation applies.",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the ID of the deleted cluster.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/httpapi.GenericResp-resp_ActionClusterResp"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/2645146/apis/api-77767165-run",
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/clusters/{clusterId}/modify": {
+      "post": {
+        "summary": "Modify Cluster",
+        "x-apifox-folder": "Cluster Operations",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "Modify the configuration of a specified cluster. Currently, you can use this API to change the size of the CU associated with your cluster.",
+        "tags": [
+          "Cluster Operations"
+        ],
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "The ID of a cluster to which this operation applies.",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "cuSize": {
+                    "type": "integer",
+                    "description": "The size of the CU to be associated to your cluster after the configuration."
+                  }
+                },
+                "x-apifox-orders": [
+                  "cuSize"
+                ],
+                "required": [
+                  "cuSize"
+                ],
+                "x-apifox-ignore-properties": []
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Returns the ID of the affected cluster.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/httpapi.GenericResp-resp_ActionClusterResp"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/2645146/apis/api-77767166-run",
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
     "/v1/clusters/{clusterId}/resume": {
       "post": {
         "summary": "Resume Cluster",
@@ -269,15 +386,6 @@
           "Cluster Operations"
         ],
         "parameters": [
-          {
-            "name": "CLOUD_REGION_ID",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "clusterId",
             "in": "path",
@@ -321,15 +429,6 @@
         ],
         "parameters": [
           {
-            "name": "CLOUD_REGION_ID",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "clusterId",
             "in": "path",
             "description": "The ID of a cluster to which this operation applies.",
@@ -372,15 +471,6 @@
         ],
         "parameters": [
           {
-            "name": "CLUSTER_ENDPOINT",
-            "in": "path",
-            "description": "The endpoint of your cluster.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "dbName",
             "in": "query",
             "description": "The name of the database",
@@ -421,17 +511,7 @@
         "tags": [
           "Collection Operations"
         ],
-        "parameters": [
-          {
-            "name": "CLUSTER_ENDPOINT",
-            "in": "path",
-            "description": "The endpoint of your cluster.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -473,15 +553,6 @@
           "Collection Operations"
         ],
         "parameters": [
-          {
-            "name": "CLUSTER_ENDPOINT",
-            "in": "path",
-            "description": "The endpoint of your cluster.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "collectionName",
             "in": "query",
@@ -533,17 +604,7 @@
         "tags": [
           "Collection Operations"
         ],
-        "parameters": [
-          {
-            "name": "CLUSTER_ENDPOINT",
-            "in": "path",
-            "description": "The endpoint of your cluster.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -610,17 +671,7 @@
         "tags": [
           "Vector Operations"
         ],
-        "parameters": [
-          {
-            "name": "public-endpoint",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -780,17 +831,7 @@
         "tags": [
           "Vector Operations"
         ],
-        "parameters": [
-          {
-            "name": "public-endpoint",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -910,17 +951,7 @@
         "tags": [
           "Vector Operations"
         ],
-        "parameters": [
-          {
-            "name": "public-endpoint",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -1087,17 +1118,7 @@
         "tags": [
           "Vector Operations"
         ],
-        "parameters": [
-          {
-            "name": "public-endpoint",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -1222,17 +1243,7 @@
         "tags": [
           "Vector Operations"
         ],
-        "parameters": [
-          {
-            "name": "public-endpoint",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -1497,15 +1508,6 @@
         ],
         "parameters": [
           {
-            "name": "CLOUD_REGION_ID",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "Authorization",
             "in": "header",
             "description": "",
@@ -1567,15 +1569,6 @@
         ],
         "parameters": [
           {
-            "name": "CLOUD_REGION_ID",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "jobId",
             "in": "query",
             "description": "The ID of the import task in concern",
@@ -1627,15 +1620,6 @@
           "Import Operations"
         ],
         "parameters": [
-          {
-            "name": "CLOUD_REGION_ID",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "clusterId",
             "in": "query",
@@ -1779,17 +1763,7 @@
         "tags": [
           "Vector Operations"
         ],
-        "parameters": [
-          {
-            "name": "public-endpoint",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -1898,10 +1872,157 @@
           }
         ]
       }
+    },
+    "/v1/projects": {
+      "get": {
+        "summary": "List Projects",
+        "x-apifox-folder": "Cluster Operations",
+        "x-apifox-status": "testing",
+        "deprecated": false,
+        "description": "Lists all projects in the specified cloud region.",
+        "tags": [
+          "Cluster Operations"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Returns a list of projects.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "x-apifox-orders": [
+                        "01HG7SGE48TCPY42XCVV3FNYFR"
+                      ],
+                      "properties": {
+                        "code": {
+                          "type": "integer"
+                        },
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "instanceCount": {
+                                "type": "integer"
+                              },
+                              "projectId": {
+                                "type": "string"
+                              },
+                              "projectName": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "instanceCount",
+                              "projectId",
+                              "projectName"
+                            ],
+                            "x-apifox-orders": [
+                              "instanceCount",
+                              "projectId",
+                              "projectName"
+                            ],
+                            "x-apifox-ignore-properties": []
+                          }
+                        }
+                      },
+                      "x-apifox-refs": {
+                        "01HG7SGE48TCPY42XCVV3FNYFR": {
+                          "$ref": "#/components/schemas/resp.listProjects"
+                        }
+                      },
+                      "x-apifox-ignore-properties": [
+                        "code",
+                        "data"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "x-apifox-orders": [
+                        "01HG7SPB096Q8Y3JE6NMJCR3E2"
+                      ],
+                      "properties": {
+                        "code": {
+                          "type": "integer"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      },
+                      "x-apifox-refs": {
+                        "01HG7SPB096Q8Y3JE6NMJCR3E2": {
+                          "$ref": "#/components/schemas/Error"
+                        }
+                      },
+                      "x-apifox-ignore-properties": [
+                        "code",
+                        "message"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/2645146/apis/api-128364308-run",
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
     }
   },
   "components": {
     "schemas": {
+      "resp.listProjects": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "instanceCount": {
+                  "type": "integer"
+                },
+                "projectId": {
+                  "type": "string"
+                },
+                "projectName": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "instanceCount",
+                "projectId",
+                "projectName"
+              ],
+              "x-apifox-orders": [
+                "instanceCount",
+                "projectId",
+                "projectName"
+              ],
+              "x-apifox-ignore-properties": []
+            }
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
       "httpapi.GenericResp-customer_UpsertResp": {
         "type": "object",
         "properties": {
@@ -2196,6 +2317,10 @@
             "type": "string",
             "description": "The name of the collection to which this operation applies."
           },
+          "partitionName": {
+            "type": "string",
+            "description": "The name of the partition to which this operation applies."
+          },
           "objectUrl": {
             "type": "string",
             "description": "The URL of the object that stores the data to be imported."
@@ -2212,6 +2337,7 @@
         "x-apifox-orders": [
           "clusterId",
           "collectionName",
+          "partitionName",
           "objectUrl",
           "accessKey",
           "secretKey"
@@ -2978,7 +3104,7 @@
               },
               "storageSize": {
                 "type": "integer",
-                "description": "The storage size of the cluster.",
+                "description": "The storage size of the cluster in MB.",
                 "format": "sint64"
               },
               "snapshotNumber": {
@@ -3203,6 +3329,90 @@
         "x-apifox-orders": [
           "currentPage",
           "pageSize"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ClusterOps": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "clusterId": {
+                "type": "string",
+                "description": "The ID of the cluster affected by this operation."
+              },
+              "username": {
+                "type": "string",
+                "description": "The name of the cluster user generated by default."
+              },
+              "password": {
+                "type": "string",
+                "description": "The password of the cluster user generated by default. It will not be displayed again, so note it down and securely store it."
+              },
+              "prompt": {
+                "type": "string",
+                "description": "The statement indicating that this operation succeeds."
+              }
+            },
+            "x-apifox-orders": [
+              "clusterId",
+              "username",
+              "password",
+              "prompt"
+            ],
+            "x-apifox-ignore-properties": []
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "CreateCluster": {
+        "type": "object",
+        "properties": {
+          "plan": {
+            "description": "The plan tier of the Zilliz Cloud service. Available options are **Standard** and **Enterprise**.",
+            "type": "string"
+          },
+          "clusterName": {
+            "description": "The name of the cluster to be created. It is a string of no more than 32 characters.",
+            "type": "string"
+          },
+          "cuSize": {
+            "description": "The size of the CU to be used for the created cluster. It is an integer from 1 to 256.",
+            "type": "integer"
+          },
+          "cuType": {
+            "description": "The type of the CU used for the Zilliz Cloud cluster to be created. Available options are **Performance-optimized**, **Capacity-optimized**, and **Cost-optimized**. This parameter defaults to **Performance-optimized**.",
+            "default": "Performance-optimized",
+            "type": "string"
+          },
+          "projectId": {
+            "description": "The ID of the project where the cluster is to be created.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "cuSize",
+          "clusterName",
+          "projectId",
+          "plan",
+          "cuType"
+        ],
+        "x-apifox-orders": [
+          "plan",
+          "clusterName",
+          "cuSize",
+          "cuType",
+          "projectId"
         ],
         "x-apifox-ignore-properties": [],
         "x-apifox-folder": "Schemas"

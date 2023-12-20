@@ -5,7 +5,7 @@
   "node_token": "BuuSwsbhEiIHDJkB9YSc63xAnrh",
   "node_type": "origin",
   "obj_create_time": "1700646241",
-  "obj_edit_time": "1700705250",
+  "obj_edit_time": "1703060816",
   "obj_token": "DkQNddkKuoiGK0xxdd0cqxJLnIc",
   "obj_type": "docx",
   "origin_node_token": "BuuSwsbhEiIHDJkB9YSc63xAnrh",
@@ -22,7 +22,7 @@
         "block_type": 1,
         "children": [
           "PVcPdq7AjogN1jxeucJcHDuXnqb",
-          "HZF0deWBkoc4TMxGJ2tcuu1bnXf",
+          "JVu8dQYWeoKwdextQbTc0yn1npf",
           "XsBPdx4uyoephXxF8pfcfXtRnxe",
           "TuVAdzWYZotjhJx1HQCcgEVUn5b",
           "SlOodz5v0okHPKxpZu3chSlKn8g",
@@ -113,14 +113,14 @@
         }
       },
       {
-        "block_id": "HZF0deWBkoc4TMxGJ2tcuu1bnXf",
+        "block_id": "JVu8dQYWeoKwdextQbTc0yn1npf",
         "block_type": 2,
         "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "",
+                "content": "我们很高兴地宣布 Zilliz Cloud 2.3.0 的发布。此版本引入了一系列创新 Beta 特性和功能改进：",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

@@ -13,13 +13,7 @@ import Admonition from '@theme/Admonition';
 
 快照是为某个集群在指定时间点创建的备份。您可以基于快照创建新的集群或将快照用作集群数据备份。
 
-<Admonition type="info" icon="📘" title="说明">
-
-快照功能目前仅对企业版用户开放。如果您是免费版用户，请先将您的 Serverless 集群[迁移](./migrate-between-clusters#serverless-dedicated)至企业版 Dedicated 集群。更多集群类型详情，请见 [Zilliz Cloud 版本类型](./select-zilliz-cloud-service-plans)。
-
-</Admonition>
-
-## 创建快照{#create-snapshot}{#create-snapshot}
+## 创建快照{#create-snapshot}
 
 快照创建是异步操作，创建所需时间取决于集群大小和集群使用的 CU 大小。例如，如果某集群包含 4 CU 和一个 Collection，Collection 中包含了超过 1.2 亿个 128 维向量记录，则为该 Collection 创建一个快照大约耗时 5 分钟。
 
@@ -27,7 +21,7 @@ import Admonition from '@theme/Admonition';
 
 ![create_snapshot](/img/create_snapshot.png)
 
-## 调整快照保留天数{#adjust-snapshot-retention-period}{#adjust-snapshot-retention-period}
+## 调整快照保留天数{#adjust-snapshot-retention-period}
 
 您可以通过设置保留天数（以天为单位）来调整 Zilliz Cloud 保留快照的时间。当前默认保留天数为 7 天，最长为 30 天。
 
@@ -37,7 +31,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 相关文档{#related-topics}{#related-topics}
+## 相关文档{#related-topics}
 
 - [创建自动备份](./schedule-automatic-backups)
 

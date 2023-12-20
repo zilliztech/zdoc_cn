@@ -13,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 本教程将介绍如何在 Zilliz Cloud 账号设置中管理多重身份认证（MFA）。目前，Zilliz Cloud 仅支持通过邮箱进行多重身份认证。
 
-## 开启 MFA{#enable-mfa}{#mfaenable-mfa}
+## 开启 MFA{#enable-mfa}
 
 执行以下步骤以开启 MFA：
 
@@ -45,7 +45,7 @@ import Admonition from '@theme/Admonition';
 
 1. 通过验证后，您将自动登录并进入 Zilliz Cloud 操作界面。
 
-## 关闭 MFA{#disable-mfa}{#mfadisable-mfa}
+## 关闭 MFA{#disable-mfa}
 
 如过您已开启 MFA，请执行以下步骤以关闭 MFA：
 
@@ -68,12 +68,3 @@ import Admonition from '@theme/Admonition';
 1. MFA 关闭成功后，界面右上角弹出确认信息"关闭邮箱验证"。
 
     ![disable_mfa_success](/img/disable_mfa_success.png)
-
-## 文档推荐{#}
-
-- [管理 API 密钥](./manage-api-keys) 
-
-- [管理身份凭证](./undefined) 
-
-- [设置白名单](./set-up-whitelist) 
-

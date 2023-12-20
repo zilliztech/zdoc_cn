@@ -5,7 +5,7 @@
   "node_token": "SlItwMcOyikiWVkr7Glcy9sinMg",
   "node_type": "origin",
   "obj_create_time": "1687140898",
-  "obj_edit_time": "1687140902",
+  "obj_edit_time": "1702887493",
   "obj_token": "UgOEdaTV8oFm18xfK4yc2RHPnke",
   "obj_type": "docx",
   "origin_node_token": "SlItwMcOyikiWVkr7Glcy9sinMg",
@@ -20,6 +20,9 @@
       {
         "block_id": "UgOEdaTV8oFm18xfK4yc2RHPnke",
         "block_type": 1,
+        "children": [
+          "PF8pdZttWoGRIAxzTRmcQIX2nIc"
+        ],
         "page": {
           "elements": [
             {
@@ -40,9 +43,34 @@
           }
         },
         "parent_id": ""
+      },
+      {
+        "block_id": "PF8pdZttWoGRIAxzTRmcQIX2nIc",
+        "block_type": 2,
+        "parent_id": "UgOEdaTV8oFm18xfK4yc2RHPnke",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 提供了一系列的监控和指标，希望帮助你了解您的集群当前所处的状况。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
       }
     ],
-    "counts": 1
+    "counts": 2
   },
   "children": [
     {

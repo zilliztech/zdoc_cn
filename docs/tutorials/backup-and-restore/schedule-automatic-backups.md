@@ -13,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 允许您为集群创建自动备份，确保意外发生时可以进行数据恢复。定期备份可以防止数据丢失，您也可以通过快照轻松将数据恢复到特定时间点。
 
-## 创建备份计划{#create-snapshot-schedule}{#create-snapshot-schedule}
+## 创建备份计划{#create-snapshot-schedule}
 
 要创建备份计划，请完成以下步骤：
 
@@ -25,13 +25,13 @@ Zilliz Cloud 允许您为集群创建自动备份，确保意外发生时可以�
 
 ![create-snapshot-schedule](/img/create-snapshot-schedule.png)
 
-## 调整备份计划{#adjust-snapshot-schedule-settings}{#adjust-snapshot-schedule-settings}
+## 调整备份计划{#adjust-snapshot-schedule-settings}
 
 您可以为集群调整备份计划。默认情况下自动备份处于关闭状态。由于存储快照需要成本，您可以自行决定何时以及如何创建快照。
 
 自动备份开启后，Zilliz Cloud 默认每日上午 8 点到 10 点之间自动为您的集群创建快照，快照将保留 7 天。您可以按需更改设置。
 
-## 相关文档{#related-topics}{#related-topics}
+## 相关文档{#related-topics}
 
 - [创建备份快照](./create-snapshot)
 

@@ -5,7 +5,7 @@
   "node_token": "MJeiwGDSniNQ7BkAFGCczemxnDg",
   "node_type": "origin",
   "obj_create_time": "1701681177",
-  "obj_edit_time": "1701681182",
+  "obj_edit_time": "1702886262",
   "obj_token": "REHLdDyG8oFIiIxqs2vcD3rgnOf",
   "obj_type": "docx",
   "origin_node_token": "MJeiwGDSniNQ7BkAFGCczemxnDg",
@@ -20,6 +20,9 @@
       {
         "block_id": "REHLdDyG8oFIiIxqs2vcD3rgnOf",
         "block_type": 1,
+        "children": [
+          "OBr2dDshSotSzmxYesaceSmlnHg"
+        ],
         "page": {
           "elements": [
             {
@@ -40,9 +43,34 @@
           }
         },
         "parent_id": ""
+      },
+      {
+        "block_id": "OBr2dDshSotSzmxYesaceSmlnHg",
+        "block_type": 2,
+        "parent_id": "REHLdDyG8oFIiIxqs2vcD3rgnOf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Pipelines 可以将您的非结构化数据转换成可以进行语义查询的向量 Collection，串接了语义嵌入、数据导入、语义查询和数据删除等步骤。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
       }
     ],
-    "counts": 1
+    "counts": 2
   },
   "children": [
     {
@@ -52,7 +80,7 @@
       "node_token": "WfbLwEnVviFQnzk4VFWcmC76ndd",
       "node_type": "origin",
       "obj_create_time": "1701681197",
-      "obj_edit_time": "1701769427",
+      "obj_edit_time": "1703039165",
       "obj_token": "L2RudZOGho2de6xtPCdc2wgGnre",
       "obj_type": "docx",
       "origin_node_token": "WfbLwEnVviFQnzk4VFWcmC76ndd",
@@ -60,7 +88,7 @@
       "owner": "ou_fbc044d19930afd389d5c369466c38b1",
       "parent_node_token": "MJeiwGDSniNQ7BkAFGCczemxnDg",
       "space_id": "7167193056431783939",
-      "title": "理解 Pipelines",
+      "title": "了解 Pipelines",
       "slug": "understanding-pipelines"
     },
     {
@@ -70,7 +98,7 @@
       "node_token": "R8KJwdSVIiaM6VkQN8kcqd5en6c",
       "node_type": "origin",
       "obj_create_time": "1701681210",
-      "obj_edit_time": "1701681219",
+      "obj_edit_time": "1702886307",
       "obj_token": "D6dudw30somz73xiwCNcZ1cZnlc",
       "obj_type": "docx",
       "origin_node_token": "R8KJwdSVIiaM6VkQN8kcqd5en6c",
@@ -78,7 +106,8 @@
       "owner": "ou_fbc044d19930afd389d5c369466c38b1",
       "parent_node_token": "MJeiwGDSniNQ7BkAFGCczemxnDg",
       "space_id": "7167193056431783939",
-      "title": "创建 Pipelines"
+      "title": "创建 Pipelines",
+      "slug": "create-pipelines"
     },
     {
       "creator": "ou_fbc044d19930afd389d5c369466c38b1",

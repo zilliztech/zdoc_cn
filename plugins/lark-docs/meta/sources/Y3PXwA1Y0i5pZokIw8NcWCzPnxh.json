@@ -5,7 +5,7 @@
   "node_token": "Y3PXwA1Y0i5pZokIw8NcWCzPnxh",
   "node_type": "origin",
   "obj_create_time": "1687139916",
-  "obj_edit_time": "1700123646",
+  "obj_edit_time": "1702887931",
   "obj_token": "MhsjdgVslopqUAxWLQoc4hlBnFe",
   "obj_type": "docx",
   "origin_node_token": "Y3PXwA1Y0i5pZokIw8NcWCzPnxh",
@@ -20,6 +20,9 @@
       {
         "block_id": "MhsjdgVslopqUAxWLQoc4hlBnFe",
         "block_type": 1,
+        "children": [
+          "A1fQdoAAuoPwmVx2EqLc07UhnRh"
+        ],
         "page": {
           "elements": [
             {
@@ -40,9 +43,34 @@
           }
         },
         "parent_id": ""
+      },
+      {
+        "block_id": "A1fQdoAAuoPwmVx2EqLc07UhnRh",
+        "block_type": 2,
+        "parent_id": "MhsjdgVslopqUAxWLQoc4hlBnFe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "了解 Zilliz Cloud 使用上的相关约束与限制。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
       }
     ],
-    "counts": 1
+    "counts": 2
   },
   "children": [
     {

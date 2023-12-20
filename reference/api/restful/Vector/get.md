@@ -87,7 +87,6 @@ curl --request POST \
 
     | 参数名称        | 参数说明                                                                             |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `public-endpoint`  | **string**（必选）<br/>目标集群的 Endpoint。|
 
 ### 请求体
 
@@ -95,6 +94,9 @@ curl --request POST \
 {
     "dbName": "string",
     "collectionName": "string",
+    "partitionNames": [
+        {}
+    ],
     "outputFields": [
         {}
     ],
@@ -106,6 +108,7 @@ curl --request POST \
 |------------------|-------------------------------------------------------------------------------------------|
 | `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
 | `collectionName`  | **string**（必选）<br/>目标 Collection 名称。|
+| `partitionNames`  | **array**<br/>当前操作的目标 Partition。可选参数，默认值为**default**。|
 | `outputFields`  | **array**<br/>返回字段，以数组形式表示。|
 | `id`  | **string**（必选）<br/>待查询的 Entity ID。|
 
@@ -210,7 +213,7 @@ curl --request POST \
 | 80000 | Incorrect parameter: xxx |
 | 80001 | The token is illegal |
 | 80002 | The token is invalid |
-| 80020 | Invalid clusterId or you do not have permission to access that Cluster. |
+| 80020 | Cluster not exist or you don't have permission. |
 | 90001 | The collection xxx does not exist. You can use ListCollections to view the list of existing collections. |
 | 90002 | The return value property xxx does not exist on collection xxx. |
 | 90011 | Invalid CollectionName. Reason: Name contains only alphanumeric letters and underscores |

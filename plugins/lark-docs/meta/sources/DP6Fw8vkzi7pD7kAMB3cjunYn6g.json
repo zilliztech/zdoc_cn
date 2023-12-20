@@ -5,7 +5,7 @@
   "node_token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
   "node_type": "origin",
   "obj_create_time": "1688959925",
-  "obj_edit_time": "1702275628",
+  "obj_edit_time": "1702887279",
   "obj_token": "Glc5dJHBLoiXyux5Rjdc8D06nUg",
   "obj_type": "docx",
   "origin_node_token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
@@ -1706,7 +1706,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "296 万",
+                "content": "300",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 万",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1740,7 +1752,31 @@
           "elements": [
             {
               "text_run": {
-                "content": "1487 万",
+                "content": "1",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "500",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 万",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1774,7 +1810,31 @@
           "elements": [
             {
               "text_run": {
-                "content": "1487 万",
+                "content": "1",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "500",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 万",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1842,7 +1902,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "163 万",
+                "content": "150",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 万",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1876,7 +1948,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "822 万",
+                "content": "750",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 万",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1910,7 +1994,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "822 万",
+                "content": "750",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 万",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1978,7 +2074,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "120 万",
+                "content": "100",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 万",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2012,7 +2120,31 @@
           "elements": [
             {
               "text_run": {
-                "content": "560 万",
+                "content": "5",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "00",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 万",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2046,7 +2178,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "560 万",
+                "content": "500",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 万",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2114,7 +2258,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "86 万",
+                "content": "75",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 万",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2148,7 +2304,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "434 万",
+                "content": "375",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 万",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2182,7 +2350,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "434 万",
+                "content": "375",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 万",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
