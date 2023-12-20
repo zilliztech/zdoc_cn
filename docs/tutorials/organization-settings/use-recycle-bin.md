@@ -15,7 +15,7 @@ import Admonition from '@theme/Admonition';
 
 ## 前提条件{#prerequisites}
 
-如需还原回收站中集群，请先添加[支付方式](./docs/payment-billing)。
+如需还原回收站中集群，请先添加[支付方式](./payment-billing)。
 
 ## 恢复回收站中集群{#restore-a-dropped-cluster-in-the-recycle-bin}
 
