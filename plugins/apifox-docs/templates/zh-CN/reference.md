@@ -37,7 +37,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 {%- endif %}
 
-{% if path_params -%}
+{% if path_params | length > 0 -%}
 
 - 路径参数
 
