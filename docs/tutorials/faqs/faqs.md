@@ -8,3 +8,8 @@ sidebar_position: 999
 
 # 常见问题
 
+
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

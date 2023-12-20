@@ -12,3 +12,7 @@ import Admonition from '@theme/Admonition';
 # 版本说明书
 
 了解 Zilliz Cloud 的发布记录。
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

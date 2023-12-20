@@ -12,3 +12,7 @@ import Admonition from '@theme/Admonition';
 # 备份与恢复
 
 Zilliz Cloud 集群中的数据备份与恢复。
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

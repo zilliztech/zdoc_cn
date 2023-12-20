@@ -12,3 +12,7 @@ import Admonition from '@theme/Admonition';
 # 管理身份凭证
 
 您可以通过 Zilliz Cloud 控制台或 SDK 来管理集群的内建角色。 
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

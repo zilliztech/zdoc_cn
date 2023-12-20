@@ -12,3 +12,7 @@ import Admonition from '@theme/Admonition';
 # 约束与限制
 
 了解 Zilliz Cloud 使用上的相关约束与限制。
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

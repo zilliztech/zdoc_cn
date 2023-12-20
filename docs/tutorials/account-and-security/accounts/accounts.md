@@ -12,3 +12,7 @@ import Admonition from '@theme/Admonition';
 # 帐户
 
 了解如何注册 Zilliz Cloud 并管理您的帐户。
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

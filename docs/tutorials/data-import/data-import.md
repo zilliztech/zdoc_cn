@@ -12,3 +12,7 @@ import Admonition from '@theme/Admonition';
 # 数据导入
 
 Zilliz Cloud 数据导入教程，从入门到精通。
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

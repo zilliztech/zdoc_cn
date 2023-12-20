@@ -12,3 +12,7 @@ import Admonition from '@theme/Admonition';
 # 集群
 
 关于在 Zilliz Cloud 上管理集群需要知道的内容。
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

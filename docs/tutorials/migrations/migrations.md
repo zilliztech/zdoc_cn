@@ -11,3 +11,8 @@ import Admonition from '@theme/Admonition';
 
 # 数据迁移
 
+
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
