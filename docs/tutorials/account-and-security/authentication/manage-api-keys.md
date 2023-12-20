@@ -13,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 在 Zilliz Cloud 上，每个项目都有自己的 API 密钥集，这些密钥用作身份验证令牌，对于调用 RESTful API 或 SDK 至关重要。无论是为项目创建新的 API 密钥，还是使用 Zilliz Cloud 提供的默认密钥，您都能通过该密钥访问并管理项目内的所有集群及其关联资源。
 
-为了确保安全，只有组织或项目[管理员](./a-panorama-view)才有权限创建和管理 API 密钥。有关更多信息，请参见[用户和角色](https://docs.zilliz.com.cn/docs/users-roles)。
+为了确保安全，只有组织或项目[管理员](./a-panorama-view)才有权限创建和管理 API 密钥。有关更多信息，请参见[用户和角色](./users-roles)。
 
 ## API 密钥 vs. 集群用户名和密码对{#comparative-overview-api-keys-vs-username-and-password-pairs}
 

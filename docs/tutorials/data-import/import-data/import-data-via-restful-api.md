@@ -99,7 +99,7 @@ curl --request GET \
      --header "content-type: application/json" \
 ```
 
-有关更多信息，请参见[导入](https://docs.zilliz.com.cn/reference/import)和[查看导入进度](https://docs.zilliz.com.cn/reference/get-import-progress)。
+有关更多信息，请参见[导入](/reference/import)和[查看导入进度](/reference/get-import-progress)。
 
 ## 结果验证{#verify-the-result}
 

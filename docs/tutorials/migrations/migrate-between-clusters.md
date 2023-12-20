@@ -13,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 支持在同一个组织下，将一个集群中的数据迁移至另一个集群中。您可以在两个集群中迁移数据。
 
-## Dedicated 集群间迁移{#procedure}
+## 集群间迁移{#procedure}
 
 1. 点击并进入您的目标集群。在**集群详情**页的右上角，点击**操作**下的**迁移数据**，并选择**从 Zilliz Cloud 集群**。
 

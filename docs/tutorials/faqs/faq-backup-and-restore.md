@@ -21,4 +21,4 @@ sidebar_position: 7
 
 ### 我是否可以免费试用备份和恢复功能？{#is-the-backup-and-restore-feature-available-in-the-free-trial}
 
-备份和恢复功能不可免费试用。如需使用，请先添加[支付方式](https://docs.zilliz.com.cn/docs/payment-billing)。
+备份和恢复功能不可免费试用。如需使用，请先添加[支付方式](./docs/payment-billing)。

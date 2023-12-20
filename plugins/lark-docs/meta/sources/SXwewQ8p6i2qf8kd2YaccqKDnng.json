@@ -5,7 +5,7 @@
   "node_token": "SXwewQ8p6i2qf8kd2YaccqKDnng",
   "node_type": "origin",
   "obj_create_time": "1701398087",
-  "obj_edit_time": "1701945237",
+  "obj_edit_time": "1703068888",
   "obj_token": "TL1OdQAgtozxGwx1uwecRHUYnLb",
   "obj_type": "docx",
   "origin_node_token": "SXwewQ8p6i2qf8kd2YaccqKDnng",
@@ -544,7 +544,55 @@
           "elements": [
             {
               "text_run": {
-                "content": "内置角色仅适用于 Dedicated 集群类型；Serverless 集群只支持默认角色 ",
+                "content": "内置角色仅适用于 Dedicated 集群类型",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "；Serverless 集群只支持默认角色 ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -560,6 +608,18 @@
                 "text_element_style": {
                   "bold": false,
                   "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "</exclude>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
                   "italic": false,
                   "strikethrough": false,
                   "underline": false

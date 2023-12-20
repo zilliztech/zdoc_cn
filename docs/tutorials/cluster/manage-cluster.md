@@ -43,15 +43,15 @@ import Admonition from '@theme/Admonition';
 
     在 **Collection** 页签下，您可以管理集群中的 Collection。具体来说，您可以创建 Collection、将数据导入 Collection、加载或释放 Collection、重命名 Collection 及删除 Collection。
 
-    有关数据导入的详细情况，可以参考[数据导入](https://docs.zilliz.com.cn/docs/data-import)。
+    有关数据导入的详细情况，可以参考[数据导入](./docs/data-import)。
 
 - 备份
 
-    在 Cluster 详情页右上角的**操作**下拉菜单中，可以选择**创建备份快照**。你可以在备份页签中找到所有已创建的备份快照。关于备份与恢复的详细情况，可参考[备份与恢复](https://docs.zilliz.com.cn/docs/backup-and-restore)。
+    在 Cluster 详情页右上角的**操作**下拉菜单中，可以选择**创建备份快照**。你可以在备份页签中找到所有已创建的备份快照。关于备份与恢复的详细情况，可参考[备份与恢复](./docs/backup-and-restore)。
 
 - 数据迁移
 
-    在 Cluster 详情页右上角的**操作**下拉菜单中，可以选择**迁移数据**。有关数据迁移的详细情况，可以参考[数据迁移](https://docs.zilliz.com.cn/docs/migrations)。
+    在 Cluster 详情页右上角的**操作**下拉菜单中，可以选择**迁移数据**。有关数据迁移的详细情况，可以参考[数据迁移](./docs/migrations)。
 
 ### 用户与访问控制{#users-and-access-control}
 
@@ -87,11 +87,11 @@ import Admonition from '@theme/Admonition';
 
 #### 管理备份{#manage-backups}
 
-在**操作**下拉列表中，您可以选择**创建备份快照**来为集群创建备份。您可以在**备份**页签下找到已创建的所有快照。有关备份和恢复的详细信息，请参阅[备份与恢复](https://docs.zilliz.com.cn/docs/backup-and-restore)。
+在**操作**下拉列表中，您可以选择**创建备份快照**来为集群创建备份。您可以在**备份**页签下找到已创建的所有快照。有关备份和恢复的详细信息，请参阅[备份与恢复](./docs/backup-and-restore)。
 
 #### 管理数据迁移{#manage-migrations}
 
-在**操作**下拉列表中，您可以选择**迁移数据**来创建数据迁移任务，以从 Milvus 迁移数据到 Zilliz Cloud 集群。有关更多信息，请参阅[数据迁移](https://docs.zilliz.com.cn/docs/migrations)。
+在**操作**下拉列表中，您可以选择**迁移数据**来创建数据迁移任务，以从 Milvus 迁移数据到 Zilliz Cloud 集群。有关更多信息，请参阅[数据迁移](./docs/migrations)。
 
 #### 扩容集群{#scale-up-cluster}
 
@@ -123,7 +123,7 @@ import Admonition from '@theme/Admonition';
 
 要恢复挂起中的集群，请单击**操作**并从下拉列表中选择**恢复**。在**恢复集群**对话框中确认此操作后，集群的状态将从**挂起中**变为**恢复运行中**，然后再变为**运行中**。此时将根据集群 CU 大小和集群类型产生费用。
 
-此外，您还可以通过 RESTful API 挂起或恢复集群。有关更多接口信息，请参阅 [Suspend Cluster](https://docs.zilliz.com.cn/reference/suspend-cluster) 和 [Resume Cluster](https://docs.zilliz.com.cn/reference/resume-cluster)。
+此外，您还可以通过 RESTful API 挂起或恢复集群。有关更多接口信息，请参阅 [Suspend Cluster](/reference/suspend-cluster) 和 [Resume Cluster](/reference/resume-cluster)。
 
 #### 删除集群{#delete-cluster}
 
@@ -135,7 +135,7 @@ import Admonition from '@theme/Admonition';
 
 - [备份与恢复](./backup-and-restore)
 
-- [数据迁移](https://docs.zilliz.com.cn/docs/migrations)
+- [数据迁移](./docs/migrations)
 
 - [选择合适的 CU 类型](./cu-types-explained)
 

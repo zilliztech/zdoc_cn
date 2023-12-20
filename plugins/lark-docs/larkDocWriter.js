@@ -979,8 +979,12 @@ class larkDocWriter {
             }
         }
 
-        if (url.startsWith('https://docs.zilliz.com/docs/')) {
-            url = url.replace('https://docs.zilliz.com/docs/', './');
+        if (url.startsWith('https://docs.zilliz.com.cn/docs/')) {
+            url = url.replace('https://docs.zilliz.com.cn/docs/', './');
+        }
+
+        if (url.startsWith('https://docs.zilliz.com.cn/reference/')) {
+            url = url.replace('https://docs.zilliz.com.cn/reference/', '/reference/');
         }
             
         return url;

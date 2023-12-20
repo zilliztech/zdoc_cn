@@ -3,7 +3,7 @@ slug: /release-notes-240
 beta: FALSE
 notebook: FALSE
 token: GKNPwvWhZi7D6mkag72cIDWqnbf
-sidebar_position: 1
+sidebar_position: 0
 ---
 
 import Admonition from '@theme/Admonition';
@@ -23,7 +23,7 @@ import Admonition from '@theme/Admonition';
 
 ## 集群管理接口{#cluster-management-apis}
 
-此次发布，我们为集群管理推出了一系列新的 RESTful 接口，包括[创建](https://docs.zilliz.com.cn/reference/create-cluster)、[修改](https://docs.zilliz.com.cn/reference/modify-cluster)和[删除](https://docs.zilliz.com.cn/reference/drop-cluster)集群的接口以及用于[查看您的组织中所有项目详情](https://docs.zilliz.com.cn/reference/list-projects)的接口。
+此次发布，我们为集群管理推出了一系列新的 RESTful 接口，包括[创建](/reference/create-cluster)、[修改](/reference/modify-cluster)和[删除](/reference/drop-cluster)集群的接口以及用于[查看您的组织中所有项目详情](/reference/list-projects)的接口。
 
 ## 其它增强{#other-enhancements}
 

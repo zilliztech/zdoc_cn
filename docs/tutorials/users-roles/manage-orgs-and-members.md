@@ -29,7 +29,7 @@ import Admonition from '@theme/Admonition';
 
 加入组织后，您成为组织成员，并有权限查看系统设置。
 
-有关组织设置的更多详细信息，请参见[组织设置](https://docs.zilliz.com.cn/docs/organization-settings)。
+有关组织设置的更多详细信息，请参见[组织设置](./docs/organization-settings)。
 
 ![view-organization-zh](/img/view-organization-zh.png)
 

@@ -5,7 +5,7 @@
   "node_token": "N6tlwTPPvi0FXvkj4fccCgtTnOg",
   "node_type": "origin",
   "obj_create_time": "1693559277",
-  "obj_edit_time": "1703063905",
+  "obj_edit_time": "1703069255",
   "obj_token": "VfhBdjfjyoXnS8xBunHchlVvnhd",
   "obj_type": "docx",
   "origin_node_token": "N6tlwTPPvi0FXvkj4fccCgtTnOg",
@@ -36,7 +36,12 @@
           "Rh4rdrHmeo71zRxr8xdcrszGneh",
           "B08vdp9VcoJ6QjxPMOwco2pmnPg",
           "VZ3qdaJ1ao0ZGCxeTI5c7gjanMU",
+          "Y6pJdhdpvoJHqqxlKgTcKgeunzd",
           "WIDydMJMTog4P0x0S2RcAvOhn3c",
+          "F5TldXt2Yor3hUxUBwJcEpr4nLd",
+          "CXw7dCFGRoOrtpxFPdocKVaCnUh",
+          "VmEzdMoqxoJeO7xFyyBcPwqEnRh",
+          "XAYgdrgA4oqB02xnjRpcFCHAnbg",
           "Uk3FdfTAto6KFKxGVaEctBBFnVh",
           "NkKJdwl9NoSimPxSDuwc8RjYnpd",
           "KkkLdWndOoRjJDx761McTaMhnAb",
@@ -890,6 +895,55 @@
         }
       },
       {
+        "block_id": "Y6pJdhdpvoJHqqxlKgTcKgeunzd",
+        "block_type": 2,
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
         "block_id": "WIDydMJMTog4P0x0S2RcAvOhn3c",
         "block_type": 4,
         "heading2": {
@@ -925,6 +979,130 @@
           }
         },
         "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd"
+      },
+      {
+        "block_id": "F5TldXt2Yor3hUxUBwJcEpr4nLd",
+        "block_type": 2,
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</exclude>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CXw7dCFGRoOrtpxFPdocKVaCnUh",
+        "block_type": 2,
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<include target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VmEzdMoqxoJeO7xFyyBcPwqEnRh",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群间迁移{#procedure}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd"
+      },
+      {
+        "block_id": "XAYgdrgA4oqB02xnjRpcFCHAnbg",
+        "block_type": 2,
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</include>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
       },
       {
         "block_id": "Uk3FdfTAto6KFKxGVaEctBBFnVh",
@@ -1368,6 +1546,6 @@
         }
       }
     ],
-    "counts": 26
+    "counts": 31
   }
 }
