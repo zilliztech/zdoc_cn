@@ -73,7 +73,7 @@ Success response:
 | `plan`  | **string**（必选）<br/>Zilliz Cloud 支持的订阅计划。可选计划有 **Standard** 和 **Enterprise**。|
 | `clusterName`  | **string**（必选）<br/>待创建集群名称。最多包含 32 个半角字符。|
 | `cuSize`  | **integer**（必选）<br/>为待创建集群分配的 CU 大小。参数取值为 1 至 256 之间的整数。|
-| `cuType`  | **string**（必选）<br/>The type of the CU used for the Zilliz Cloud cluster to be created. Available options are **Performance-optimized**, **Capacity-optimized**, and **Cost-optimized**. This parameter defaults to **Performance-optimized**.<br/>默认值为 **Performance-optimized**.|
+| `cuType`  | **string**（必选）<br/>为待创建集群分配的 CU 类型。当前可用选项包括 **Performance-optimized**， **Capacity-optimized** 以及 **Cost-optimized**。<br/>默认值为 **Performance-optimized**.|
 | `projectId`  | **string**（必选）<br/>待创建集群所属项目 ID。|
 
 ## 响应
