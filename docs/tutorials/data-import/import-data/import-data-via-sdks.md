@@ -17,235 +17,292 @@ import Admonition from '@theme/Admonition';
 
 在执行本节操作前，请确认如下工作已经完成。
 
-- 安装最新版本的 Python SDK。具体可参考 [安装 SDK](./install-sdks#pymilvuspython-sdkinstall-pymilvus-python-sdk) 。
+- 您已安装所需依赖项，包括 PyMilvus 和 MinIO Python 客户端。详情请参阅 [安装 SDK](./install-sdks#pymilvuspython-sdkinstall-pymilvus-python-sdk) 。
 
-    当前，仅 PyMilvus 提供了 BulkWriter 和 BulkImport API。本节将使用 PyMilvus 演示批量导入数据的过程。
+- 您已准备好示例数据集。详情请参阅[准备导入数据](./use-bulkwriter-for-data-import)。
 
-- 已在 Zilliz Cloud 上创建了一个 Cluster，并在该 Cluster 中创建了一个 Collection。具体可参考[创建集群](./create-cluster)和[创建 Collection](./create-collection)。
-
-- 已下载格式为CSV的[示例数据集](https://drive.google.com/file/d/12RkoDPAlk-sclXdjeXT6DMFVsQr4612w/view?usp=sharing)。关于该数据集的更多信息，请[阅读简介](https://www.kaggle.com/datasets/shiyu22chen/cleaned-medium-articles-dataset)。
+- 您已创建用于存储 BulkWriter 输出数据的文件夹。
 
 ## 具体步骤{#procedure}
 
-向 Zilliz Cloud 批量导入您 的数据，需要先使用 BulkWriter API 将您的数据转换成一个合适的格式，然后再使用 BulkImport API 将转换后的数据文件中的数据批量存入指定的 Collection 中。
+向 Zilliz Cloud 批量导入您的数据，需要先使用 BulkWriter API 将您的数据转换成一个合适的格式，然后再使用 BulkImport API 将转换后的数据文件中的数据批量存入指定的 Collection 中。
 
-### 转化数据{#converting-your-data}
+### 导入依赖项{#import-dependencies}
 
-1. 获取已创建的 Collection 的 Schema。
+首先，导入任务所需的依赖项：
 
-    按照示例数据集，该 Collection 的 Schema 中应包含两个主要字段，分别为 `id` 和 `vector`。其中，`id` 字段为开启了auto-id的主键，`vector` 字段的维度为 768。数据集中的其它字段均为动态字段。
+```python
+from urllib.parse import urlparse
+import time, json
 
-    ```python
-    from pymilvus import (
-        connections,
-        FieldSchema, CollectionSchema, DataType,
-        Collection,
-        utility,
-        bulk_import,
-        get_import_progress,
-        list_import_jobs,
-    )
-    
-    # set up your collection
-    
-    connections.connect(
-      alias='default', 
-      #  Public endpoint obtained from Zilliz Cloud
-      uri=CLUSTER_ENDPOINT,
-      # API key or a colon-separated cluster username and password
-      token=TOKEN, 
-    )
-    
-    # Get an existing collection
-    collection = Collection("medium_articles_2020")
-    
-    # Get the schema of the collection
-    schema = collection.schema
-    ```
+from minio import Minio
 
-1. 使用 BulkWriter API 将您的数据转换为 Zilliz Cloud 可以消费的格式。
+from pymilvus import (
+    connections,
+    FieldSchema, CollectionSchema, DataType,
+    Collection,
+    utility,
+    bulk_import,
+    get_import_progress,
+    list_import_jobs,
+)
 
-    示例数据集的格式为CSV。可以使用 Pandas 库对其进行处理。最终目标是生成一个在下一步中供 BulkWriter 消费的字典列表。
+# Check the prepared data files you have
 
-    ```python
-    import json
-    import pandas as pd
-    
-    # 将数据集中的数据读取到一个 DataFrame 中
-    dataset = pd.read_csv("New_Medium_data.csv")
-    
-    # 可循环使用如下语句读取数据集中指定行的记录
-    row = dataset.iloc[0].to_dict()
-    row["vector"] = json.loads(row["vector"])
-    ```
+ACCESS_KEY = "YOUR_OBJECT_STORAGE_ACCESS_KEY"
+SECRET_KEY = "YOUR_OBJECT_STORAGE_SECRET_KEY"
+BUCKET_NAME = "YOUR_OBJECT_STORAGE_BUCKET_NAME"
+REMOTE_PATH = "DATA_FILES_PATH_IN_BLOCK_STORAGE"
+```
 
-1. 创建一个 RemoteBulkWriter 对象。输入包括目标 Collection 的 Schema 及其它必要的参数。
+### 检查数据{#check-prepared-data}
 
-    示例代码中指定了一个 AWS S3 桶。请使用与您的目标集群处于同一公有云的对象存储桶。
+在通过 LocalBulkWriter 处理并上传数据文件到对象存储，或者使用 RemoteBulkWriter 并获取远程文件夹路径后，您的数据即准备就绪，可以导入到 Zilliz Cloud 的 Collection 中。
 
-    ```python
-    from pymilvus import RemoteBulkWriter
-    
-    # 连接阿里云 OSS
-    # 关于如何创建 RAM 用户及对其进行授权，可参考 
-    # https://help.aliyun.com/zh/ram/getting-started/create-a-ram-user-1
-    # https://help.aliyun.com/zh/ram/getting-started/grant-permissions-to-a-ram-user
-    
-    connect_param = RemoteBulkWriter.ConnectParam(
-        endpoint="oss-cn-hangzhou.aliyuncs.com",
-        access_key="RAM_USER_ACCESS_KEY",
-        secret_key="RAM_USER_SECRET_KEY",
-        bucket_name="OBJECT_STORAGE_BUCKET_NAME",
-        region="oss-cn-hangzhou",
-        secure=True
-    )
-    
-    # 创建 RemoteBulkWriter
-    writer = RemoteBulkWriter(
-        schema=schema, # 目标 Collection 的 Schema
-        remote_path="bulk_data", # 当前操作的目标路径，RemoteBulkWriter会在指定存储桶中自动创建同名目录。
-        connect_param=connect_param, # 存储桶连接参数
-    )
-    
-    # 向 RemoteBulkWriter 对象传入数据。
-    for i in range(len(dataset)):
-        try:
-            row = dataset.iloc[i].to_dict()
-            row["vector"] = json.loads(row["vector"])
-            writer.append_row(row)
-        except Exception as e:
-            print(e)
-            break;
-    
-    writer.commit()
-    print(writer.data_path)
-    
-    # 输出结果
-    # 在指定存储桶下生成的数据文件路径
-    # /bulk_data/8f808cdc-ce4d-4aed-89b9-2f343d44b2e0
-    ```
+要检查数据是否准备就绪，可参考以下代码：
 
-1. 检查结果
+```python
+client = Minio(
+    endpoint="storage.googleapis.com", # use 's3.amazonaws.com' for GCS
+    access_key=ACCESS_KEY,
+    secret_key=SECRET_KEY,
+    secure=True)
 
-    如下示例使用 MinIO 的 Python Client 检查指定存储桶中的文件。您可以使用其它您认为合适的方式对指定存储进行检查。
+objects = client.list_objects(
+    bucket_name=BUCKET_NAME,
+    prefix=REMOTE_PATH,
+    recursive=True
+)
 
-    ```python
-    from minio import Minio
-    
-    minio_client = Minio(
-        endpoint="oss-cn-hangzhou.aliyuncs.com",
-        access_key="RAM_USER_ACCESS_KEY",
-        secret_key="RAM_USER_SECRET_KEY",
-        bucket_name="OBJECT_STORAGE_BUCKET_NAME",
-        region="oss-cn-hangzhou",
-        secure=True
-    )
-    
-    found = minio_client.bucket_exists(OBJECT_STORAGE_BUCKET_NAME)
-    
-    if found:
-        objects = minio_client.list_objects(OBJECT_STORAGE_BUCKET_NAME, prefix=str(remote_path)[1:], recursive=True)
-        files = [ x.object_name for x in objects ]
-    
-    # Output
-    # [
-    #    'bulk_data/08a92d25-c703-4694-bfaa-5be4e8d0f6f9/1/vector.npy'
-    #    'bulk_data/08a92d25-c703-4694-bfaa-5be4e8d0f6f9/1/$meta.npy'
-    # ]
-    ```
+print([obj.object_name for obj in objects])
 
-### 批量导入数据{#bulk-inserting-data}
+# Output
+#
+# [
+#     "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/claps.npy",
+#     "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/id.npy",
+#     "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/link.npy",
+#     "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/publication.npy",
+#     "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/reading_time.npy",
+#     "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/responses.npy",
+#     "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/title.npy",
+#     "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/vector.npy"
+# ]
 
-为了方便用户在 Python 代码中调用 Zilliz Cloud 的 Import RESTful APIs，PyMilvus 对相关的 RESTful 接口进行了包括，提供了 BulkImport 接口。
+```
 
-1. 引入 PyMilvus 的 BulkImport 接口。
+### 创建 Collection 并导入数据{#create-collection-and-import-data}
 
-    ```python
-    import time
-    from pymilvus import (
-        bulk_import,
-        get_import_progress,
-        list_import_jobs,
-    )
-    ```
+准备好数据文件后，您需要先连接到 Zilliz Cloud 集群，根据数据集的格式创建相应的 Collection，并从存储桶中导入数据文件。
 
-1. 创建一个批量导入任务。
+注意，由于 Zilliz Cloud 目前不支持跨云数据传输，您的 Zilliz Cloud 集群和数据集需位于同一公共云平台上。
 
-    该接口返回已创建的 BulkImport 任务ID。
+```python
+# set up your collection
 
-    ```python
-    # A valid object URL should be similar as follows:
-    # https://<bucket-name>.<aliyun-region-id>.aliyuncs.com/<object-name>
-    
-    resp = bulk_import(
-        url=CLOUD_PLATFORM_ENDPOINT, # Cluster endpoint
-        api_key=API_KEY, # Your Zilliz Cloud API Key
-        object_url=OBJECT_URL, # Your object storage url
-        access_key=MINIO_ACCESS_KEY, # Your object storage access key
-        secret_key=MINIO_SECRET_KEY, # Your object storage secret key
-        cluster_id=CLUSTER_ID, # Your cluster ID
-        collection_name=COLLECTION_NAME # Your collection name
-    )
-    
-    print(resp.json())
-    
-    # Output
-    # {
-    #     'code': 200, 
-    #     'data': {
-    #         'jobId': '84e3f533-0c13-4823-a3f0-db4e62dac2a6'
-    #      }
-    # }
-    ```
+CLUSTER_ENDPOINT = "YOUR_CLUSTER_ENDPOINT"
+CLUSTER_TOKEN = "YOUR_CLUSTER_TOKEN"
+COLLECTION_NAME = "medium_articles"
+API_KEY = "YOUR_CLUSTER_TOKEN"
+CLUSTER_ID = urlparse(CLUSTER_ENDPOINT).netloc.split(".")[0] if urlparse(CLUSTER_ENDPOINT).netloc.startswith("in") else None
+CLOUD_REGION = [ x for x in urlparse(CLUSTER_ENDPOINT).netloc.split(".") if x.startswith("gcp") or x.startswith("aws") or x.startswith("ali")][0] if urlparse(CLUSTER_ENDPOINT).netloc.startswith("in") else None
 
-1. 获取 BulkImport 任务的进度信息。
+if CLOUD_REGION is None:
+    raise Exception("Invalid cluster endpoint")
+elif CLOUD_REGION.startswith("gcp"):
+    OBJECT_URL = f"gs://{BUCKET_NAME}/{REMOTE_PATH}/"
+elif CLOUD_REGION.startswith("aws"):
+    OBJECT_URL = f"s3://{BUCKET_NAME}/{REMOTE_PATH}/"
+elif CLOUD_REGION.startswith("ali"):
+    OBJECT_URL = f"oss://{BUCKET_NAME}/{REMOTE_PATH}/"
 
-    ```python
-    job_id = resp.json()['data']['jobId']
-    resp = get_import_progress(
-        url=CLOUD_PLATFORM_ENDPOINT,
+fields = [
+    FieldSchema(name="id", dtype=DataType.INT64, is_primary=True),
+    FieldSchema(name="title", dtype=DataType.VARCHAR, max_length=512),
+    FieldSchema(name="vector", dtype=DataType.FLOAT_VECTOR, dim=768),
+    FieldSchema(name="link", dtype=DataType.VARCHAR, max_length=512),
+    FieldSchema(name="reading_time", dtype=DataType.INT64),
+    FieldSchema(name="publication", dtype=DataType.VARCHAR, max_length=512),
+    FieldSchema(name="claps", dtype=DataType.INT64),
+    FieldSchema(name="responses", dtype=DataType.INT64)
+]
+
+schema = CollectionSchema(fields)
+
+connections.connect(
+    uri=CLUSTER_ENDPOINT,
+    token=CLUSTER_TOKEN,
+    secure=True
+)
+
+collection = Collection(COLLECTION_NAME, schema)
+
+collection.create_index(
+    field_name="vector",
+    index_params={
+        "index_type": "AUTOINDEX",
+        "metric_type": "L2"
+    }
+)
+
+collection.load()
+
+# bulk-import your data from the prepared data files
+
+res = bulk_import(
+    url=f"controller.api.{CLOUD_REGION}.zillizcloud.com",
+    api_key=API_KEY,
+    object_url=OBJECT_URL,
+    access_key=ACCESS_KEY,
+    secret_key=SECRET_KEY,
+    cluster_id=CLUSTER_ID,
+    collection_name=COLLECTION_NAME
+)
+
+print(res.json())
+
+# Output
+#
+# {
+#     "code": 200,
+#     "data": {
+#         "jobId": "9d0bc230-6b99-4739-a872-0b91cfe2515a"
+#     }
+# }
+```
+
+### 查看批量导入进度{#check-bulk-import-progress}
+
+可通过以下代码查看批量导入进度：
+
+```python
+job_id = res.json()['data']['jobId']
+res = get_import_progress(
+    url=f"controller.api.{CLOUD_REGION}.zillizcloud.com",
+    api_key=API_KEY,
+    job_id=job_id,
+    cluster_id=CLUSTER_ID
+)
+
+# check the bulk-import progress
+
+while res.json()["data"]["readyPercentage"] < 1:
+    time.sleep(5)
+
+    res = get_import_progress(
+        url=f"controller.api.{CLOUD_REGION}.zillizcloud.com",
         api_key=API_KEY,
-        job_id=JOB_ID,
-        cluster_id=INSTANCE_ID
+        job_id=job_id,
+        cluster_id=CLUSTER_ID
     )
-    
-    # Send request until the bulk-import progress ends.
-    while resp.json()["data"]["readyPercentage"] < 1:
-        time.sleep(5)
-        print(resp.json())
-    
-        resp = get_import_progress(
-            url=CLOUD_PLATFORM_ENDPOINT,
-            api_key=API_KEY,
-            job_id=JOB_ID,
-            cluster_id=INSTANCE_ID
-        )
-    
-    # Output
-    # {
-    #     'code': 200, 
-    #     'data': {
-    #         'collectionName': 'medium_articles', 
-    #         'fileName': 'medium_articles/293dbffc-465e-4ce1-b25b-a692c9b77dd8/1/', 
-    #         'fileSize': 28340716, 
-    #         'readyPercentage': 0, # Watch this for the progress
-    #         'completeTime': None, 
-    #         'errorMessage': None, 
-    #         'jobId': '84e3f533-0c13-4823-a3f0-db4e62dac2a6', 
-    #         'details': [
-    #              {
-    #                  'fileName': 'medium_articles/293dbffc-465e-4ce1-b25b-a692c9b77dd8/1/', 
-    #                  'fileSize': 28340716, 
-    #                  'readyPercentage': 0, 
-    #                  'completeTime': None, 
-    #                  'errorMessage': None
-    #              }
-    #          ]
-    #    }
-    # }
-    ```
 
-您还可以调用 ListImportJobs API来了解其它批量导入任务的运行情况。
+print(res.json())
+
+# Output
+#
+# {
+#     "code": 200,
+#     "data": {
+#         "collectionName": "medium_articles",
+#         "fileName": "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/",
+#         "fileSize": 26571700,
+#         "readyPercentage": 1,
+#         "completeTime": "2023-10-28T06:51:49Z",
+#         "errorMessage": null,
+#         "jobId": "9d0bc230-6b99-4739-a872-0b91cfe2515a",
+#         "details": [
+#             {
+#                 "fileName": "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/",
+#                 "fileSize": 26571700,
+#                 "readyPercentage": 1,
+#                 "completeTime": "2023-10-28T06:51:49Z",
+#                 "errorMessage": null
+#             }
+#         ]
+#     }
+# }
+```
+
+### 列出所有批量导入任务{#list-all-bulk-import-jobs}
+
+您还可以调用 ListImportJobs API 来了解其它批量导入任务的运行情况：
+
+```python
+# list bulk-import jobs
+
+res = list_import_jobs(
+    url=f"controller.api.{CLOUD_REGION}.zillizcloud.com",
+    api_key=API_KEY,
+    cluster_id=CLUSTER_ID,
+    page_size=10,
+    current_page=1,
+)
+
+print(res.json())
+
+# Output
+#
+# {
+#     "code": 200,
+#     "data": {
+#         "tasks": [
+#             {
+#                 "collectionName": "medium_articles",
+#                 "jobId": "9d0bc230-6b99-4739-a872-0b91cfe2515a",
+#                 "state": "ImportCompleted"
+#             },
+#             {
+#                 "collectionName": "medium_articles",
+#                 "jobId": "53632e6c-c078-4476-b840-10c4793d9c08",
+#                 "state": "ImportCompleted"
+#             },
+#             {
+#                 "collectionName": "medium_articles",
+#                 "jobId": "95e7d4c4-cf60-4ce1-ac49-145459ee0f99",
+#                 "state": "ImportCompleted"
+#             },
+#             {
+#                 "collectionName": "medium_articles",
+#                 "jobId": "ddca617e-8f2f-4612-9d6a-12b6edb69833",
+#                 "state": "ImportCompleted"
+#             },
+#             {
+#                 "collectionName": "medium_articles",
+#                 "jobId": "79fb0137-9e28-48e0-b7b1-e96706bb921f",
+#                 "state": "ImportCompleted"
+#             },
+#             {
+#                 "collectionName": "YOUR_COLLECTION_NAME",
+#                 "jobId": "dd391fed-822f-4e17-b5a7-8a43d49f1eb7",
+#                 "state": "ImportCompleted"
+#             },
+#             {
+#                 "collectionName": "YOUR_COLLECTION_NAME",
+#                 "jobId": "cf11ac48-2e1e-47d3-ab88-0e38736d9629",
+#                 "state": "ImportCompleted"
+#             },
+#             {
+#                 "collectionName": "YOUR_COLLECTION_NAME",
+#                 "jobId": "3fe83873-6154-4d99-aa40-4328bd724a65",
+#                 "state": "ImportCompleted"
+#             },
+#             {
+#                 "collectionName": "YOUR_COLLECTION_NAME",
+#                 "jobId": "9d6cd64d-cfe3-46fd-9864-b417226324e8",
+#                 "state": "ImportCompleted"
+#             },
+#             {
+#                 "collectionName": "YOUR_COLLECTION_NAME",
+#                 "jobId": "aa6c0712-83a1-4729-96a3-f87b0c8b4a00",
+#                 "state": "ImportCompleted"
+#             }
+#         ],
+#         "count": 15,
+#         "currentPage": 1,
+#         "pageSize": 10
+#     }
+# }
+```
 
 ## 推荐阅读{#related-topics}
 
