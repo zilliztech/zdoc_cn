@@ -61,7 +61,7 @@ curl --request GET \
 
 ```shell
 curl --request GET \
-    --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/projects" \
+    --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/projects" \
     --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --header "accept: application/json" \
     --header "content-type: application/json"
@@ -88,7 +88,7 @@ Success response:
 
 ```shell
 curl --request POST \
-    --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/clusters/create" \
+    --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/create" \
     --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --header "accept: application/json" \
     --header "content-type: application/json" \
@@ -156,7 +156,7 @@ curl --request GET \
 
 ```shell
 curl --request POST \
-    --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/clusters/<Cluster-ID>/modify" \
+    --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/modify" \
     --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --header "accept: application/json" \
     --header "content-type: application/json" \
@@ -237,7 +237,7 @@ curl --request POST \
 
 ```shell
 curl --request DELETE \
-    --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/clusters/<Cluster-ID>/drop" \
+    --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/drop" \
     --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --header "accept: application/json" \
     --header "content-type: application/json"
@@ -697,7 +697,7 @@ curl --request GET \
 
 ```shell
 curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/vector/collections/import/list?clusterId=${CLUSTERID}" \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import/list?clusterId=${CLUSTERID}" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
