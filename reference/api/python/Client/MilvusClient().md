@@ -22,7 +22,7 @@ MilvusClient(
 使用用户名和密码为集群创建 MilvusClient 实例：
 
 ```python
-    from pymilvs import MilvusClient
+    from pymilvus import MilvusClient
 
     client = MilvusClient(
     uri='https://<CLUSTER-ID>.<CLOUD-REGION>.vectordb.zillizcloud.com:<ACCESS-PORT>',
