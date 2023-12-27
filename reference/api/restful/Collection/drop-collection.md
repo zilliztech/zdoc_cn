@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 删除 Collection。本操作会清除 Collection 数据，请谨慎执行此操作。
 
-<RestHeader method="post" endpoint="https://{cluster_endpoint}/v1/vector/collections/drop" />
+<RestHeader method="post" endpoint="https://{cluster-endpoint}/v1/vector/collections/drop" />
 
 ---
 
@@ -20,7 +20,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ```shell
 curl --request POST \
-     --url "${CLUSTER_ENDPOINT}/v1/vector/collections/drop" \
+     --url "${cluster-endpoint}/v1/vector/collections/drop" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \

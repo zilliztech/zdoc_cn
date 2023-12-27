@@ -20,7 +20,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ```shell
 curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>" \
+     --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
@@ -60,7 +60,7 @@ curl --request GET \
 
     | 参数名称        | 参数说明                                                                             |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `clusterId`  | **string**（必选）<br/>一组可用的云服务提供商和云服务区域，如“ali-cn-hangzhou”。|
+    | `clusterId`  | **string**（必选）<br/>目标集群 ID。|
 
 ### 请求体
 

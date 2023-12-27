@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 列出集群中已创建的 Collection。
 
-<RestHeader method="get" endpoint="https://{cluster_endpoint}/v1/vector/collections" />
+<RestHeader method="get" endpoint="https://{cluster-endpoint}/v1/vector/collections" />
 
 ---
 
@@ -20,7 +20,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ```shell
 curl --request GET \
-     --url "${CLUSTER_ENDPOINT}/v1/vector/collections" \
+     --url "${cluster-endpoint}/v1/vector/collections" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"

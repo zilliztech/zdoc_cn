@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 在 Collection 中插入一条或多条 Entity。一次最多插入 100 条数据。如需插入大量数据，请使用 [Bulk Insert API](https://docs.zilliz.com.cn/docs/data-import)。
 
-<RestHeader method="post" endpoint="https://{cluster_endpoint}/v1/vector/insert" />
+<RestHeader method="post" endpoint="https://{cluster-endpoint}/v1/vector/insert" />
 
 ---
 
@@ -20,7 +20,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ```shell
 curl --request POST \
-     --url "${CLUSTER_ENDPOINT}/v1/vector/insert" \
+     --url "${cluster-endpoint}/v1/vector/insert" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
@@ -38,7 +38,7 @@ curl --request POST \
 
 ```shell
 curl --request POST \
-     --url "${CLUSTER_ENDPOINT}/v1/vector/insert" \
+     --url "${cluster-endpoint}/v1/vector/insert" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \

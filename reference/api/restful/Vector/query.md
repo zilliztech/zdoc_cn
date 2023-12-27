@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 在 Collection 的指定标题列上按指定条件执行查询操作。
 
-<RestHeader method="post" endpoint="https://{cluster_endpoint}/v1/vector/query" />
+<RestHeader method="post" endpoint="https://{cluster-endpoint}/v1/vector/query" />
 
 ---
 
@@ -20,7 +20,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ```shell
 curl --request POST \
-     --url "${CLUSTER_ENDPOINT}/v1/vector/query" \
+     --url "${cluster-endpoint}/v1/vector/query" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \

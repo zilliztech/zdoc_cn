@@ -49,7 +49,7 @@ class refGen {
         const page_method = method.toLowerCase()
         const host = lang === 'zh-CN' ? 'cloud.zilliz.com.cn' : 'zillizcloud.com'
         const condition = (page_slug.includes('cloud') || page_slug.includes('cluster') || page_slug.includes('import') || page_slug.includes('project'))
-        const server = condition ? `https://controller.api.{cloud-region}.${host}` : "https://{cluster_endpoint}"
+        const server = condition ? `https://controller.api.{cloud-region}.${host}` : "https://{cluster-endpoint}"
 
         if (specifications.paths[page_url][method].parameters) {
           for (const param of specifications.paths[page_url][method].parameters) {
@@ -289,7 +289,7 @@ class refGen {
         }
       }
     }
-
+    fs.writeFileSync(`plugins/apifox-docs/meta/clean.json`, JSON.stringify(specifications, null, 4))
     return specifications
   }
 

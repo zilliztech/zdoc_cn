@@ -26,7 +26,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ```shell
 curl --request POST \ 
-     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/resume" \
+     --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/resume" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"

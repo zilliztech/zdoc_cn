@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 在 Collection 的向量列上执行相似性搜索。
 
-<RestHeader method="post" endpoint="https://{cluster_endpoint}/v1/vector/search" />
+<RestHeader method="post" endpoint="https://{cluster-endpoint}/v1/vector/search" />
 
 ---
 
@@ -20,7 +20,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ```shell
 curl --request POST \
-     --url "${CLUSTER_ENDPOINT}/v1/vector/search" \
+     --url "${cluster-endpoint}/v1/vector/search" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
@@ -34,7 +34,7 @@ curl --request POST \
 
 ```shell
 curl --request POST \
-     --url "${CLUSTER_ENDPOINT}/v1/vector/search" \
+     --url "${cluster-endpoint}/v1/vector/search" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \

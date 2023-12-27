@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 在集群中创建 Collection。
 
-<RestHeader method="post" endpoint="https://{cluster_endpoint}/v1/vector/collections/create" />
+<RestHeader method="post" endpoint="https://{cluster-endpoint}/v1/vector/collections/create" />
 
 ---
 
@@ -20,7 +20,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ```shell
 curl --request POST \
-     --url "${CLUSTER_ENDPOINT}/v1/vector/collections/create" \
+     --url "${cluster-endpoint}/v1/vector/collections/create" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \

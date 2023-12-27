@@ -20,7 +20,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ```shell
 curl --request POST \
-    --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/modify" \
+    --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/modify" \
     --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --header "accept: application/json" \
     --header "content-type: application/json" \
@@ -101,7 +101,7 @@ Success response:
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
 | `data`    | **object**<br/>表示响应中携带的数据对象。 |
-| `data.clusterId`   | **string**<br/>集群 ID |
+| `data.clusterId`   | **string**<br/>clusterId |
 | `data.prompt`   | **string**<br/>提示当前操作已成功 |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
