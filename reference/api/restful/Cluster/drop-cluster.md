@@ -32,7 +32,7 @@ curl --request DELETE \
     --header "content-type: application/json"
 ```
 
-Success response:
+成功响应示例
 
 ```shell
 {

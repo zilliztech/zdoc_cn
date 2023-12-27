@@ -16,8 +16,6 @@ import RestHeader from '@site/src/components/RestHeader';
 ## 示例
 
 
-在 Collection 按指定条件执行查询操作。
-
 :::note 说明
 
 本接口可以使用如下两种鉴权方式：

@@ -16,8 +16,6 @@ import RestHeader from '@site/src/components/RestHeader';
 ## 示例
 
 
-修改指定集群的配置。当前支持修改集群的 CU 大小。
-
 :::note 说明
 
 - 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
@@ -35,7 +33,7 @@ curl --request POST \
     }'
 ```
 
-Success response:
+成功响应示例
 
 ```shell
 {

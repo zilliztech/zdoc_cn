@@ -16,8 +16,6 @@ import RestHeader from '@site/src/components/RestHeader';
 ## 示例
 
 
-列出 Zilliz Cloud 上所有可用的云服务提供商。
-
 :::note 说明
 
 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。

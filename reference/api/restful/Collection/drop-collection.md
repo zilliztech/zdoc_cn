@@ -16,8 +16,6 @@ import RestHeader from '@site/src/components/RestHeader';
 ## 示例
 
 
-删除 Collection。本操作会清除 Collection 数据，请谨慎执行此操作。本示例将删除一个名为 `medium_articles` 的 Collection。
-
 :::note 说明
 
 本接口可以使用如下两种鉴权方式：

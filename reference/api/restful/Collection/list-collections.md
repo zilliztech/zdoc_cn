@@ -16,8 +16,6 @@ import RestHeader from '@site/src/components/RestHeader';
 ## 示例
 
 
-列出集群中已创建的 Collection。
-
 :::note 说明
 
 本接口可以使用如下两种鉴权方式：

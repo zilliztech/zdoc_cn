@@ -16,8 +16,6 @@ import RestHeader from '@site/src/components/RestHeader';
 ## 示例
 
 
-描述集群的详细信息。
-
 :::note 说明
 
 - 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。

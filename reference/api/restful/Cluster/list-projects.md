@@ -16,8 +16,6 @@ import RestHeader from '@site/src/components/RestHeader';
 ## 示例
 
 
-查看当前地域内所有项目情况。
-
 :::note 说明
 
 - 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
@@ -32,7 +30,7 @@ curl --request GET \
     --header "content-type: application/json"
 ```
 
-Success response:
+成功响应示例
 
 ```shell
 {

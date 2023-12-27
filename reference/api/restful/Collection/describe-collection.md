@@ -16,8 +16,6 @@ import RestHeader from '@site/src/components/RestHeader';
 ## 示例
 
 
-描述 Collection 的详细信息。本示例将查看一个名为 `medium_articles` 的 Collection。
-
 :::note 说明
 
 本接口可以使用如下两种鉴权方式：

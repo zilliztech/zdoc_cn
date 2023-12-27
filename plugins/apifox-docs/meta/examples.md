@@ -2,8 +2,6 @@
 
 ## 查看云服务提供商
 
-列出 Zilliz Cloud 上所有可用的云服务提供商。
-
 :::note 说明
 
 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
@@ -33,8 +31,6 @@ curl --request GET \
 ```
 
 ## 查看云服务区域
-
-列出指定云服务提供商的所有可用云区域。
 
 :::note 说明
 
@@ -69,8 +65,6 @@ curl --request GET \
 
 ## 查看项目
 
-查看当前地域内所有项目情况。
-
 :::note 说明
 
 - 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
@@ -85,7 +79,7 @@ curl --request GET \
     --header "content-type: application/json"
 ```
 
-Success response:
+成功响应示例
 
 ```shell
 {
@@ -101,8 +95,6 @@ Success response:
 ```
 
 ## 创建集群
-
-创建一个集群。
 
 :::note 说明
 
@@ -125,7 +117,7 @@ curl --request POST \
     }'
 ```
 
-Success response:
+成功响应示例
 
 ```shell
 {
@@ -140,8 +132,6 @@ Success response:
 ```
 
 ## 查看集群详情
-
-描述集群的详细信息。
 
 :::note 说明
 
@@ -182,8 +172,6 @@ curl --request GET \
 
 ## 修改集群配置
 
-修改指定集群的配置。当前支持修改集群的 CU 大小。
-
 :::note 说明
 
 - 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
@@ -201,7 +189,7 @@ curl --request POST \
     }'
 ```
 
-Success response:
+成功响应示例
 
 ```shell
 {
@@ -214,8 +202,6 @@ Success response:
 ```
 
 ## 挂起集群
-
-挂起集群。本操作会中断集群运行，不会影响集群数据完整性。
 
 :::note 说明
 
@@ -244,8 +230,6 @@ curl --request POST \
 ```
 
 ## 恢复集群
-
-恢复当前已挂起的集群。
 
 :::info 说明
 
@@ -292,7 +276,7 @@ curl --request DELETE \
     --header "content-type: application/json"
 ```
 
-Success response:
+成功响应示例
 
 ```shell
 {
@@ -305,8 +289,6 @@ Success response:
 ```
 
 ## 查看集群
-
-列出指定云服务提供商的所有可用云区域。
 
 :::note 说明
 
@@ -376,8 +358,6 @@ curl --request POST \
 
 ## 删除 Collection
 
-删除 Collection。本操作会清除 Collection 数据，请谨慎执行此操作。本示例将删除一个名为 `medium_articles` 的 Collection。
-
 :::note 说明
 
 本接口可以使用如下两种鉴权方式：
@@ -408,8 +388,6 @@ curl --request POST \
 ```
 
 ## 查看 Collection 详情
-
-描述 Collection 的详细信息。本示例将查看一个名为 `medium_articles` 的 Collection。
 
 :::note 说明
 
@@ -460,8 +438,6 @@ curl --request GET \
 ```
 
 ## 查看 Collection
-
-列出集群中已创建的 Collection。
 
 :::note 说明
 
@@ -640,8 +616,6 @@ curl --request POST \
 ```
 
 ## 按条件查询
-
-在 Collection 按指定条件执行查询操作。
 
 :::note 说明
 
