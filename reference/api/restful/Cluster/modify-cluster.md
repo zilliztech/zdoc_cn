@@ -18,10 +18,16 @@ import RestHeader from '@site/src/components/RestHeader';
 
 修改指定集群的配置。当前支持修改集群的 CU 大小。
 
+:::note 说明
+
+- 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+
+:::
+
 ```shell
 curl --request POST \
     --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/${clusterId}}/modify" \
-    --header "Authorization: Bearer ${YOUR_TOKEN}" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --header "accept: application/json" \
     --header "content-type: application/json" \
     --data-raw '{

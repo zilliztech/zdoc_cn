@@ -18,10 +18,16 @@ import RestHeader from '@site/src/components/RestHeader';
 
 描述集群的详细信息。
 
+:::note 说明
+
+- 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+
+:::
+
 ```shell
 curl --request GET \
      --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/${clusterId}" \
-     --header "Authorization: Bearer ${YOUR_TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_API_KEY}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
@@ -30,22 +36,22 @@ curl --request GET \
 
 ```shell
 {
-    "code": 200,
-    "data": {
-        "clusterId": "string",
-        "clusterName": "string",
-        "description": "string",
-        "regionId": "string",
-        "clusterType": "string",
-        "cuSize": "string",
-        "status": "string",
-        "connectAddress": "string",
-        "privateLinkAddress": "string",
-        "createTime": "string",
-        "storageSize": "string",
-        "snapshotNumber": "string",
-        "createProgress": "string"
-    }
+     "code": 200,
+     "data": {
+          "clusterId": "in01-****************",
+          "clusterName": "cluster-02",
+          "description": "pre create instance",
+          "regionId": "ali-cn-hangzhou",
+          "clusterType": "Performance-optimized",
+          "cuSize": 1,
+          "status": "RUNNING",
+          "connectAddress": "https://in01-***************.ali-cn-hangzhou.vectordb.zilliz.com.cn:19530",
+          "privateLinkAddress": "",
+          "createTime": "2023-12-27T10:27:02Z",
+          "storageSize": 0,
+          "snapshotNumber": 0,
+          "createProgress": 100
+     }
 }
 ```
 

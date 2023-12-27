@@ -18,10 +18,16 @@ import RestHeader from '@site/src/components/RestHeader';
 
 查看当前地域内所有项目情况。
 
+:::note 说明
+
+- 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+
+:::
+
 ```shell
 curl --request GET \
     --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/projects" \
-    --header "Authorization: Bearer ${YOUR_TOKEN}" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --header "accept: application/json" \
     --header "content-type: application/json"
 ```
@@ -34,7 +40,7 @@ Success response:
     "data": [
        {
           "instanceCount": 1,
-          "projectId": "8342669010291064832",
+          "projectId": "proj-***************",
           "projectName": "test"
        }
     ]

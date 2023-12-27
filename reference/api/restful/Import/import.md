@@ -16,12 +16,18 @@ import RestHeader from '@site/src/components/RestHeader';
 ## 示例
 
 
+:::note 说明
+
+本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+
+:::
+
 从指定的对象存储桶中的文件导入数据。该对象存储桶须与目标集群处于同一公有云网络。
 
 ```shell
 curl --request POST \
      --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/vector/collections/import" \
-     --header "Authorization: Bearer ${YOUR_TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_API_KEY}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{

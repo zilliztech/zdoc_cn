@@ -4,10 +4,16 @@
 
 列出 Zilliz Cloud 上所有可用的云服务提供商。
 
+:::note 说明
+
+本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+
+:::
+
 ```shell
 curl --request GET \
      --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clouds" \
-     --header "Authorization: Bearer ${YOUR_TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_API_KEY}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
@@ -30,15 +36,21 @@ curl --request GET \
 
 列出指定云服务提供商的所有可用云区域。
 
+:::note 说明
+
+本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+
+:::
+
 ```shell
 curl --request GET \
      --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/regions?cloudId=ali" \
-     --header "Authorization: Bearer ${YOUR_TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_API_KEY}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
 
-您可以使用 `ListClouds` 接口获取 `cloudId`。
+您可以使用 [查看云服务提供商](./list-cloud-providers) 接口获取 `cloudId`。
 
 成功响应示例：
 
@@ -59,10 +71,16 @@ curl --request GET \
 
 查看当前地域内所有项目情况。
 
+:::note 说明
+
+- 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+
+:::
+
 ```shell
 curl --request GET \
     --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/projects" \
-    --header "Authorization: Bearer ${YOUR_TOKEN}" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --header "accept: application/json" \
     --header "content-type: application/json"
 ```
@@ -75,7 +93,7 @@ Success response:
     "data": [
        {
           "instanceCount": 1,
-          "projectId": "8342669010291064832",
+          "projectId": "proj-***************",
           "projectName": "test"
        }
     ]
@@ -86,18 +104,24 @@ Success response:
 
 创建一个集群。
 
+:::note 说明
+
+- 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+
+:::
+
 ```shell
 curl --request POST \
     --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/create" \
-    --header "Authorization: Bearer ${YOUR_TOKEN}" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --header "accept: application/json" \
     --header "content-type: application/json" \
     --data-raw '{
-    "plan": "Standard",
-    "clusterName": "cluster-02",
-    "cuSize": 1,
-    "cuType": "Performance-optimized",
-    "projectId": "8342669010291064832"
+          "plan": "Enterprise",
+          "clusterName": "cluster-02",
+          "cuSize": 1,
+          "cuType": "Performance-optimized",
+          "projectId": "proj-***************"
     }'
 ```
 
@@ -109,7 +133,7 @@ Success response:
     "data": {
        "clusterId": "in01-4d71039fd8754a4",
        "username": "db_admin",
-       "password": "Wu5@|71UG)[5zB9n",
+       "password": "Wu5***************",
        "prompt": "Submission successful, Cluster is being created, You can use the DescribeCluster interface to obtain the creation progress and the status of the Cluster. When the Cluster status is RUNNING, you can access your vector database using the SDK with the admin account and the initialization password you provided."
     }
 }
@@ -119,10 +143,16 @@ Success response:
 
 描述集群的详细信息。
 
+:::note 说明
+
+- 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+
+:::
+
 ```shell
 curl --request GET \
      --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/${clusterId}" \
-     --header "Authorization: Bearer ${YOUR_TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_API_KEY}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
@@ -131,22 +161,22 @@ curl --request GET \
 
 ```shell
 {
-    "code": 200,
-    "data": {
-        "clusterId": "string",
-        "clusterName": "string",
-        "description": "string",
-        "regionId": "string",
-        "clusterType": "string",
-        "cuSize": "string",
-        "status": "string",
-        "connectAddress": "string",
-        "privateLinkAddress": "string",
-        "createTime": "string",
-        "storageSize": "string",
-        "snapshotNumber": "string",
-        "createProgress": "string"
-    }
+     "code": 200,
+     "data": {
+          "clusterId": "in01-****************",
+          "clusterName": "cluster-02",
+          "description": "pre create instance",
+          "regionId": "ali-cn-hangzhou",
+          "clusterType": "Performance-optimized",
+          "cuSize": 1,
+          "status": "RUNNING",
+          "connectAddress": "https://in01-***************.ali-cn-hangzhou.vectordb.zilliz.com.cn:19530",
+          "privateLinkAddress": "",
+          "createTime": "2023-12-27T10:27:02Z",
+          "storageSize": 0,
+          "snapshotNumber": 0,
+          "createProgress": 100
+     }
 }
 ```
 
@@ -154,10 +184,16 @@ curl --request GET \
 
 修改指定集群的配置。当前支持修改集群的 CU 大小。
 
+:::note 说明
+
+- 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+
+:::
+
 ```shell
 curl --request POST \
     --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/${clusterId}}/modify" \
-    --header "Authorization: Bearer ${YOUR_TOKEN}" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --header "accept: application/json" \
     --header "content-type: application/json" \
     --data-raw '{
@@ -181,10 +217,16 @@ Success response:
 
 挂起集群。本操作会中断集群运行，不会影响集群数据完整性。
 
+:::note 说明
+
+- 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+
+:::
+
 ```shell
 curl --request POST \ 
      --url "https://controller.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/${clusterId}/suspend" \
-     --header "Authorization: Bearer ${YOUR_TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_API_KEY}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
@@ -207,14 +249,15 @@ curl --request POST \
 
 :::info 说明
 
-请在添加支付方式后使用该功能。
+- 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+- 请在[添加支付方式](/docs/payment-billing)后使用该功能。
 
 :::
 
 ```shell
 curl --request POST \ 
      --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/${clusterId}}/resume" \
-     --header "Authorization: Bearer ${YOUR_TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_API_KEY}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
@@ -233,12 +276,18 @@ curl --request POST \
 
 ## 删除集群
 
+:::note 说明
+
+- 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+
+:::
+
 删除指定集群。该操作会将指定的集群移动到回收站。所有集群在移动到回收站 30 天后彻底删除。
 
 ```shell
 curl --request DELETE \
     --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/${clusterId}/drop" \
-    --header "Authorization: Bearer ${YOUR_TOKEN}" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --header "accept: application/json" \
     --header "content-type: application/json"
 ```
@@ -259,10 +308,16 @@ Success response:
 
 列出指定云服务提供商的所有可用云区域。
 
+:::note 说明
+
+- 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+
+:::
+
 ```shell
 curl --request GET \
      --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters?pageSize=&current=" \
-     --header "Authorization: Bearer ${YOUR_TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_API_KEY}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
@@ -283,6 +338,15 @@ curl --request GET \
 
 ## 创建 Collection
 
+:::note 说明
+
+本接口可以使用如下两种鉴权方式：
+
+- [API 密钥](/docs/manage-api-keys)
+- 使用半角冒号（:）连接的目标集群的用户名和密码，如 `username:p@ssw0rd`。
+
+:::
+
 在集群中创建 Collection。本示例将创建一个名为 `medium_articles` 的 Collection。
 
 ```shell
@@ -298,7 +362,7 @@ curl --request POST \
        "metricType": "L2",
        "primaryField": "id",
        "vectorField": "vector"
-      }'
+     }'
 ```
 
 成功响应示例：
@@ -313,6 +377,15 @@ curl --request POST \
 ## 删除 Collection
 
 删除 Collection。本操作会清除 Collection 数据，请谨慎执行此操作。本示例将删除一个名为 `medium_articles` 的 Collection。
+
+:::note 说明
+
+本接口可以使用如下两种鉴权方式：
+
+- [API 密钥](/docs/manage-api-keys)
+- 使用半角冒号（:）连接的目标集群的用户名和密码，如 `username:p@ssw0rd`。
+
+:::
 
 ```shell
 curl --request POST \
@@ -337,6 +410,15 @@ curl --request POST \
 ## 查看 Collection 详情
 
 描述 Collection 的详细信息。本示例将查看一个名为 `medium_articles` 的 Collection。
+
+:::note 说明
+
+本接口可以使用如下两种鉴权方式：
+
+- [API 密钥](/docs/manage-api-keys)
+- 使用半角冒号（:）连接的目标集群的用户名和密码，如 `username:p@ssw0rd`。
+
+:::
 
 ```shell
 curl --request GET \
@@ -381,6 +463,15 @@ curl --request GET \
 
 列出集群中已创建的 Collection。
 
+:::note 说明
+
+本接口可以使用如下两种鉴权方式：
+
+- [API 密钥](/docs/manage-api-keys)
+- 使用半角冒号（:）连接的目标集群的用户名和密码，如 `username:p@ssw0rd`。
+
+:::
+
 ```shell
 curl --request GET \
      --url "${cluster-endpoint}/v1/vector/collections" \
@@ -404,6 +495,15 @@ curl --request GET \
 ```
 
 ## 插入 Entity
+
+:::note 说明
+
+本接口可以使用如下两种鉴权方式：
+
+- [API 密钥](/docs/manage-api-keys)
+- 使用半角冒号（:）连接的目标集群的用户名和密码，如 `username:p@ssw0rd`。
+
+:::
 
 - 向名为 `medium_articles` 的 Collection 中插入一个 Entity。
 
@@ -447,6 +547,15 @@ curl --request POST \
 
 ## Upsert Entity
 
+:::note 说明
+
+本接口可以使用如下两种鉴权方式：
+
+- [API 密钥](/docs/manage-api-keys)
+- 使用半角冒号（:）连接的目标集群的用户名和密码，如 `username:p@ssw0rd`。
+
+:::
+
 - 向名为 `medium_articles` 的 Collection 中 Upsert 一个 Entity。
 
 ```shell
@@ -489,6 +598,15 @@ curl --request POST \
 
 ## 搜索
 
+:::note 说明
+
+本接口可以使用如下两种鉴权方式：
+
+- [API 密钥](/docs/manage-api-keys)
+- 使用半角冒号（:）连接的目标集群的用户名和密码，如 `username:p@ssw0rd`。
+
+:::
+
 - 基于指定的向量进行相似性搜索。
 
 ```shell
@@ -525,6 +643,15 @@ curl --request POST \
 
 在 Collection 按指定条件执行查询操作。
 
+:::note 说明
+
+本接口可以使用如下两种鉴权方式：
+
+- [API 密钥](/docs/manage-api-keys)
+- 使用半角冒号（:）连接的目标集群的用户名和密码，如 `username:p@ssw0rd`。
+
+:::
+
 ```shell
 curl --request POST \
      --url "${cluster-endpoint}/v1/vector/query" \
@@ -541,6 +668,15 @@ curl --request POST \
 ```
 
 ## 按 ID 查询
+
+:::note 说明
+
+本接口可以使用如下两种鉴权方式：
+
+- [API 密钥](/docs/manage-api-keys)
+- 使用半角冒号（:）连接的目标集群的用户名和密码，如 `username:p@ssw0rd`。
+
+:::
 
 - 获取一个 ID 为整数的 Entity.
 
@@ -604,6 +740,15 @@ curl --request POST \
 
 ## 删除 Entity
 
+:::note 说明
+
+本接口可以使用如下两种鉴权方式：
+
+- [API 密钥](/docs/manage-api-keys)
+- 使用半角冒号（:）连接的目标集群的用户名和密码，如 `username:p@ssw0rd`。
+
+:::
+
 - 删除一个 ID 为整数的 Entity.
 
 ```shell
@@ -662,12 +807,18 @@ curl --request POST \
 
 ## 导入
 
+:::note 说明
+
+本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+
+:::
+
 从指定的对象存储桶中的文件导入数据。该对象存储桶须与目标集群处于同一公有云网络。
 
 ```shell
 curl --request POST \
      --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/vector/collections/import" \
-     --header "Authorization: Bearer ${YOUR_TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_API_KEY}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{
@@ -681,6 +832,12 @@ curl --request POST \
 
 ## 查看导入进度
 
+:::note 说明
+
+本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+
+:::
+
 获取指定导入任务的进度。
 
 ```shell
@@ -692,6 +849,12 @@ curl --request GET \
 ```
 
 ## 查看数据导入任务
+
+:::note 说明
+
+本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+
+:::
 
 列出指定集群上的数据导入任务。
 

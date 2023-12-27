@@ -16,6 +16,12 @@ import RestHeader from '@site/src/components/RestHeader';
 ## 示例
 
 
+:::note 说明
+
+本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+
+:::
+
 列出指定集群上的数据导入任务。
 
 ```shell

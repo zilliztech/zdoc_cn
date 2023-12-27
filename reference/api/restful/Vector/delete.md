@@ -16,6 +16,15 @@ import RestHeader from '@site/src/components/RestHeader';
 ## 示例
 
 
+:::note 说明
+
+本接口可以使用如下两种鉴权方式：
+
+- [API 密钥](/docs/manage-api-keys)
+- 使用半角冒号（:）连接的目标集群的用户名和密码，如 `username:p@ssw0rd`。
+
+:::
+
 - 删除一个 ID 为整数的 Entity.
 
 ```shell

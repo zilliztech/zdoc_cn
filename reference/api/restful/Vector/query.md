@@ -18,6 +18,15 @@ import RestHeader from '@site/src/components/RestHeader';
 
 在 Collection 按指定条件执行查询操作。
 
+:::note 说明
+
+本接口可以使用如下两种鉴权方式：
+
+- [API 密钥](/docs/manage-api-keys)
+- 使用半角冒号（:）连接的目标集群的用户名和密码，如 `username:p@ssw0rd`。
+
+:::
+
 ```shell
 curl --request POST \
      --url "${cluster-endpoint}/v1/vector/query" \

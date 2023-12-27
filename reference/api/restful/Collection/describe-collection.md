@@ -18,6 +18,15 @@ import RestHeader from '@site/src/components/RestHeader';
 
 描述 Collection 的详细信息。本示例将查看一个名为 `medium_articles` 的 Collection。
 
+:::note 说明
+
+本接口可以使用如下两种鉴权方式：
+
+- [API 密钥](/docs/manage-api-keys)
+- 使用半角冒号（:）连接的目标集群的用户名和密码，如 `username:p@ssw0rd`。
+
+:::
+
 ```shell
 curl --request GET \
      --url "${cluster-endpoint}/v1/vector/collections/describe?collectionName=medium_articles" \

@@ -235,7 +235,7 @@
                                 "type": "object",
                                 "properties": {
                                     "plan": {
-                                        "description": "Zilliz Cloud 支持的订阅计划。可选计划有 **Standard** 和 **Enterprise**。",
+                                        "description": "Zilliz Cloud 支持的订阅计划。当前仅支持 **Enterprise**。",
                                         "type": "string"
                                     },
                                     "clusterName": {
@@ -252,7 +252,7 @@
                                         "type": "string"
                                     },
                                     "projectId": {
-                                        "description": "待创建集群所属项目 ID。",
+                                        "description": "待创建集群所属项目 ID。您可以在 Zilliz Cloud 控制台**集群**页面的 URL 中获取以`proj-`开头的字符串作为项目 ID 使用。",
                                         "type": "string"
                                     }
                                 },

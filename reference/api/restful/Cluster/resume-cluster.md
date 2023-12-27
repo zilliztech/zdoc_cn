@@ -20,14 +20,15 @@ import RestHeader from '@site/src/components/RestHeader';
 
 :::info 说明
 
-请在添加支付方式后使用该功能。
+- 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+- 请在[添加支付方式](/docs/payment-billing)后使用该功能。
 
 :::
 
 ```shell
 curl --request POST \ 
      --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/${clusterId}}/resume" \
-     --header "Authorization: Bearer ${YOUR_TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_API_KEY}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```

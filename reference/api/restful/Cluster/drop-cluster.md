@@ -16,12 +16,18 @@ import RestHeader from '@site/src/components/RestHeader';
 ## 示例
 
 
+:::note 说明
+
+- 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+
+:::
+
 删除指定集群。该操作会将指定的集群移动到回收站。所有集群在移动到回收站 30 天后彻底删除。
 
 ```shell
 curl --request DELETE \
     --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/${clusterId}/drop" \
-    --header "Authorization: Bearer ${YOUR_TOKEN}" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --header "accept: application/json" \
     --header "content-type: application/json"
 ```

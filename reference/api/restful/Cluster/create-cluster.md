@@ -18,18 +18,24 @@ import RestHeader from '@site/src/components/RestHeader';
 
 创建一个集群。
 
+:::note 说明
+
+- 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+
+:::
+
 ```shell
 curl --request POST \
     --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/create" \
-    --header "Authorization: Bearer ${YOUR_TOKEN}" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --header "accept: application/json" \
     --header "content-type: application/json" \
     --data-raw '{
-    "plan": "Standard",
-    "clusterName": "cluster-02",
-    "cuSize": 1,
-    "cuType": "Performance-optimized",
-    "projectId": "8342669010291064832"
+          "plan": "Enterprise",
+          "clusterName": "cluster-02",
+          "cuSize": 1,
+          "cuType": "Performance-optimized",
+          "projectId": "proj-***************"
     }'
 ```
 
@@ -41,7 +47,7 @@ Success response:
     "data": {
        "clusterId": "in01-4d71039fd8754a4",
        "username": "db_admin",
-       "password": "Wu5@|71UG)[5zB9n",
+       "password": "Wu5***************",
        "prompt": "Submission successful, Cluster is being created, You can use the DescribeCluster interface to obtain the creation progress and the status of the Cluster. When the Cluster status is RUNNING, you can access your vector database using the SDK with the admin account and the initialization password you provided."
     }
 }
@@ -70,11 +76,11 @@ Success response:
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| `plan`  | **string**（必选）<br/>Zilliz Cloud 支持的订阅计划。可选计划有 **Standard** 和 **Enterprise**。|
+| `plan`  | **string**（必选）<br/>Zilliz Cloud 支持的订阅计划。当前仅支持 **Enterprise**。|
 | `clusterName`  | **string**（必选）<br/>待创建集群名称。最多包含 32 个半角字符。|
 | `cuSize`  | **integer**（必选）<br/>为待创建集群分配的 CU 大小。参数取值为 1 至 256 之间的整数。|
 | `cuType`  | **string**（必选）<br/>为待创建集群分配的 CU 类型。可选值有 **Performance-optimized**， **Capacity-optimized** 以及 **Cost-optimized**。 若不填写，默认为 **Performance-optimized**。<br/>默认值为 **Performance-optimized**.|
-| `projectId`  | **string**（必选）<br/>待创建集群所属项目 ID。|
+| `projectId`  | **string**（必选）<br/>待创建集群所属项目 ID。您可以在 Zilliz Cloud 控制台**集群**页面的 URL 中获取以`proj-`开头的字符串作为项目 ID 使用。|
 
 ## 响应
 
