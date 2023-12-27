@@ -16,9 +16,10 @@ import RestHeader from '@site/src/components/RestHeader';
 ## 示例
 
 
-:::note 说明
+:::info 说明
 
 - 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+- 本接口需要指定创建集群所需的项目 ID。
 
 :::
 
@@ -50,6 +51,21 @@ curl --request POST \
     }
 }
 ```
+
+:::info 如何获取项目 ID ？
+
+1. 前往 Zilliz Cloud 控制台，单击左侧导航栏中的 **集群** 进入 **集群** 页面。
+2. 从浏览器地址栏中获取 `proj-` 开头的一段字符串作为项目 ID 使用。
+
+**示例**
+
+- 如下为 Zilliz Cloud 控制台 **集群** 页面的 URL 示例：
+
+     `https://cloud.zilliz.com.cn/orgs/org-********************/projects/proj-*********************/clusters`
+
+     其项目 ID 为 `proj-*********************`。
+
+:::
 
 
 ## 请求

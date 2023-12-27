@@ -2,7 +2,7 @@
 
 ## 查看云服务提供商
 
-:::note 说明
+:::info 说明
 
 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
 
@@ -32,7 +32,7 @@ curl --request GET \
 
 ## 查看云服务区域
 
-:::note 说明
+:::info 说明
 
 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
 
@@ -65,7 +65,7 @@ curl --request GET \
 
 ## 查看项目
 
-:::note 说明
+:::info 说明
 
 - 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
 
@@ -96,9 +96,10 @@ curl --request GET \
 
 ## 创建集群
 
-:::note 说明
+:::info 说明
 
 - 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
+- 本接口需要指定创建集群所需的项目 ID。
 
 :::
 
@@ -131,9 +132,24 @@ curl --request POST \
 }
 ```
 
+:::info 如何获取项目 ID ？
+
+1. 前往 Zilliz Cloud 控制台，单击左侧导航栏中的 **集群** 进入 **集群** 页面。
+2. 从浏览器地址栏中获取 `proj-` 开头的一段字符串作为项目 ID 使用。
+
+**示例**
+
+- 如下为 Zilliz Cloud 控制台 **集群** 页面的 URL 示例：
+
+     `https://cloud.zilliz.com.cn/orgs/org-********************/projects/proj-*********************/clusters`
+
+     其项目 ID 为 `proj-*********************`。
+
+:::
+
 ## 查看集群详情
 
-:::note 说明
+:::info 说明
 
 - 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
 
@@ -172,7 +188,7 @@ curl --request GET \
 
 ## 修改集群配置
 
-:::note 说明
+:::info 说明
 
 - 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
 
@@ -203,7 +219,7 @@ curl --request POST \
 
 ## 挂起集群
 
-:::note 说明
+:::info 说明
 
 - 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
 
@@ -260,7 +276,7 @@ curl --request POST \
 
 ## 删除集群
 
-:::note 说明
+:::info 说明
 
 - 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
 
@@ -290,7 +306,7 @@ curl --request DELETE \
 
 ## 查看集群
 
-:::note 说明
+:::info 说明
 
 - 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
 
@@ -320,7 +336,7 @@ curl --request GET \
 
 ## 创建 Collection
 
-:::note 说明
+:::info 说明
 
 本接口可以使用如下两种鉴权方式：
 
@@ -358,7 +374,7 @@ curl --request POST \
 
 ## 删除 Collection
 
-:::note 说明
+:::info 说明
 
 本接口可以使用如下两种鉴权方式：
 
@@ -389,7 +405,7 @@ curl --request POST \
 
 ## 查看 Collection 详情
 
-:::note 说明
+:::info 说明
 
 本接口可以使用如下两种鉴权方式：
 
@@ -439,7 +455,7 @@ curl --request GET \
 
 ## 查看 Collection
 
-:::note 说明
+:::info 说明
 
 本接口可以使用如下两种鉴权方式：
 
@@ -472,7 +488,7 @@ curl --request GET \
 
 ## 插入 Entity
 
-:::note 说明
+:::info 说明
 
 本接口可以使用如下两种鉴权方式：
 
@@ -523,7 +539,7 @@ curl --request POST \
 
 ## Upsert Entity
 
-:::note 说明
+:::info 说明
 
 本接口可以使用如下两种鉴权方式：
 
@@ -574,7 +590,7 @@ curl --request POST \
 
 ## 搜索
 
-:::note 说明
+:::info 说明
 
 本接口可以使用如下两种鉴权方式：
 
@@ -617,7 +633,7 @@ curl --request POST \
 
 ## 按条件查询
 
-:::note 说明
+:::info 说明
 
 本接口可以使用如下两种鉴权方式：
 
@@ -643,7 +659,7 @@ curl --request POST \
 
 ## 按 ID 查询
 
-:::note 说明
+:::info 说明
 
 本接口可以使用如下两种鉴权方式：
 
@@ -714,7 +730,7 @@ curl --request POST \
 
 ## 删除 Entity
 
-:::note 说明
+:::info 说明
 
 本接口可以使用如下两种鉴权方式：
 
@@ -781,7 +797,7 @@ curl --request POST \
 
 ## 导入
 
-:::note 说明
+:::info 说明
 
 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
 
@@ -806,7 +822,7 @@ curl --request POST \
 
 ## 查看导入进度
 
-:::note 说明
+:::info 说明
 
 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
 
@@ -824,7 +840,7 @@ curl --request GET \
 
 ## 查看数据导入任务
 
-:::note 说明
+:::info 说明
 
 本接口需要使用 [API 密钥](/docs/manage-api-keys)作为鉴权凭据。
 
