@@ -14,7 +14,7 @@ COPY . /home/node/app
 ## development
 FROM base as development
 WORKDIR /home/node/app
-RUN yarn set version stable && yarn install
+RUN yarn set version 3.6.4 && yarn install
 EXPOSE 3000
 CMD ["yarn", "start", "-h", "0.0.0.0"]
 
