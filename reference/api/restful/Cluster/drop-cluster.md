@@ -20,8 +20,8 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ```shell
 curl --request DELETE \
-    --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/drop" \
-    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/${clusterId}/drop" \
+    --header "Authorization: Bearer ${YOUR_TOKEN}" \
     --header "accept: application/json" \
     --header "content-type: application/json"
 ```

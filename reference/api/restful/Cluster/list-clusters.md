@@ -21,7 +21,7 @@ import RestHeader from '@site/src/components/RestHeader';
 ```shell
 curl --request GET \
      --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters?pageSize=&current=" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```

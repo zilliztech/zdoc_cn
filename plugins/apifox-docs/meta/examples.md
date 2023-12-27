@@ -7,7 +7,7 @@
 ```shell
 curl --request GET \
      --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clouds" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
@@ -33,7 +33,7 @@ curl --request GET \
 ```shell
 curl --request GET \
      --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/regions?cloudId=ali" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
@@ -62,7 +62,7 @@ curl --request GET \
 ```shell
 curl --request GET \
     --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/projects" \
-    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --header "Authorization: Bearer ${YOUR_TOKEN}" \
     --header "accept: application/json" \
     --header "content-type: application/json"
 ```
@@ -89,7 +89,7 @@ Success response:
 ```shell
 curl --request POST \
     --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/create" \
-    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --header "Authorization: Bearer ${YOUR_TOKEN}" \
     --header "accept: application/json" \
     --header "content-type: application/json" \
     --data-raw '{
@@ -121,8 +121,8 @@ Success response:
 
 ```shell
 curl --request GET \
-     --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/${clusterId}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
@@ -156,8 +156,8 @@ curl --request GET \
 
 ```shell
 curl --request POST \
-    --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/modify" \
-    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/${clusterId}}/modify" \
+    --header "Authorization: Bearer ${YOUR_TOKEN}" \
     --header "accept: application/json" \
     --header "content-type: application/json" \
     --data-raw '{
@@ -183,8 +183,8 @@ Success response:
 
 ```shell
 curl --request POST \ 
-     --url "https://controller.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/suspend" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --url "https://controller.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/${clusterId}/suspend" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
@@ -213,8 +213,8 @@ curl --request POST \
 
 ```shell
 curl --request POST \ 
-     --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/resume" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/${clusterId}}/resume" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
@@ -237,8 +237,8 @@ curl --request POST \
 
 ```shell
 curl --request DELETE \
-    --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/drop" \
-    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/${clusterId}/drop" \
+    --header "Authorization: Bearer ${YOUR_TOKEN}" \
     --header "accept: application/json" \
     --header "content-type: application/json"
 ```
@@ -262,7 +262,7 @@ Success response:
 ```shell
 curl --request GET \
      --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters?pageSize=&current=" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
@@ -288,7 +288,7 @@ curl --request GET \
 ```shell
 curl --request POST \
      --url "${cluster-endpoint}/v1/vector/collections/create" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{
@@ -317,7 +317,7 @@ curl --request POST \
 ```shell
 curl --request POST \
      --url "${cluster-endpoint}/v1/vector/collections/drop" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{
@@ -341,7 +341,7 @@ curl --request POST \
 ```shell
 curl --request GET \
      --url "${cluster-endpoint}/v1/vector/collections/describe?collectionName=medium_articles" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
@@ -384,7 +384,7 @@ curl --request GET \
 ```shell
 curl --request GET \
      --url "${cluster-endpoint}/v1/vector/collections" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
 ```
@@ -410,7 +410,7 @@ curl --request GET \
 ```shell
 curl --request POST \
      --url "${cluster-endpoint}/v1/vector/insert" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{
@@ -428,7 +428,7 @@ curl --request POST \
 ```shell
 curl --request POST \
      --url "${cluster-endpoint}/v1/vector/insert" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{
@@ -452,7 +452,7 @@ curl --request POST \
 ```shell
 curl --request POST \
      --url "${cluster-endpoint}/v1/vector/upsert" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{
@@ -470,7 +470,7 @@ curl --request POST \
 ```shell
 curl --request POST \
      --url "${cluster-endpoint}/v1/vector/upsert" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{
@@ -494,7 +494,7 @@ curl --request POST \
 ```shell
 curl --request POST \
      --url "${cluster-endpoint}/v1/vector/search" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{
@@ -508,7 +508,7 @@ curl --request POST \
 ```shell
 curl --request POST \
      --url "${cluster-endpoint}/v1/vector/search" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{
@@ -528,7 +528,7 @@ curl --request POST \
 ```shell
 curl --request POST \
      --url "${cluster-endpoint}/v1/vector/query" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{
@@ -547,7 +547,7 @@ curl --request POST \
 ```shell
 curl --request POST \
      --url "${cluster-endpoint}/v1/vector/get" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{
@@ -562,7 +562,7 @@ curl --request POST \
 ```shell
 curl --request POST \
      --url "${cluster-endpoint}/v1/vector/get" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{
@@ -577,7 +577,7 @@ curl --request POST \
 ```shell
 curl --request POST \
      --url "${cluster-endpoint}/v1/vector/get" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{
@@ -592,7 +592,7 @@ curl --request POST \
 ```shell
 curl --request POST \
      --url "${cluster-endpoint}/v1/vector/get" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d "{
@@ -609,7 +609,7 @@ curl --request POST \
 ```shell
 curl --request POST \
      --url "${cluster-endpoint}/v1/vector/delete" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{
@@ -623,7 +623,7 @@ curl --request POST \
 ```shell
 curl --request POST \
      --url "${cluster-endpoint}/v1/vector/delete" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{
@@ -637,7 +637,7 @@ curl --request POST \
 ```shell
 curl --request POST \
      --url "${cluster-endpoint}/v1/vector/delete" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{
@@ -651,7 +651,7 @@ curl --request POST \
 ```shell
 curl --request POST \
      --url "${cluster-endpoint}/v1/vector/delete" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{
@@ -667,7 +667,7 @@ curl --request POST \
 ```shell
 curl --request POST \
      --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/vector/collections/import" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
      -d '{
@@ -686,7 +686,7 @@ curl --request POST \
 ```shell
 curl --request GET \
      --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/vector/collections/import/get?jobId=${JOBID}&clusterId=${CLUSTERID}" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
 ```
@@ -698,7 +698,7 @@ curl --request GET \
 ```shell
 curl --request GET \
      --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/vector/collections/import/list?clusterId=${CLUSTERID}" \
-     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Authorization: Bearer ${YOUR_TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
 ```
