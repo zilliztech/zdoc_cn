@@ -23,8 +23,8 @@ import RestHeader from '@site/src/components/RestHeader';
 :::
 
 ```shell
-curl --request POST \ 
-     --url "https://controller.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/${clusterId}/suspend" \
+curl --request POST \
+     --url "https://controller.api.${cloud-region}.cloud.zilliz.com.cn/v1/clusters/${clusterId}/suspend" \
      --header "Authorization: Bearer ${YOUR_API_KEY}" \
      --header "accept: application/json" \
      --header "content-type: application/json"
