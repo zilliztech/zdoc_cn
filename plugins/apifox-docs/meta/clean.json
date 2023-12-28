@@ -3422,15 +3422,15 @@
                                                         "properties": {
                                                             "instanceCount": {
                                                                 "type": "integer",
-                                                                "description": "Number of clusters in the current project."
+                                                                "description": "当前项目中已有的集群数量。"
                                                             },
                                                             "projectId": {
                                                                 "type": "string",
-                                                                "description": "ID of the current project"
+                                                                "description": "当前项目的 ID。"
                                                             },
                                                             "projectName": {
                                                                 "type": "string",
-                                                                "description": "Name of the current project"
+                                                                "description": "当前项目的名称。"
                                                             }
                                                         },
                                                         "required": [

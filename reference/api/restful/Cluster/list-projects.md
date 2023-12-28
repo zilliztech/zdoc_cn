@@ -96,9 +96,9 @@ curl --request GET \
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
 | `data`  | **array**<br/>表示响应中携带的 object 数组. |
-| `data.instanceCount`   | **integer**<br/>Number of clusters in the current project. |
-| `data.projectId`   | **string**<br/>ID of the current project |
-| `data.projectName`   | **string**<br/>Name of the current project |
+| `data.instanceCount`   | **integer**<br/>当前项目中已有的集群数量。 |
+| `data.projectId`   | **string**<br/>当前项目的 ID。 |
+| `data.projectName`   | **string**<br/>当前项目的名称。 |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单
