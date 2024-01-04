@@ -5,7 +5,7 @@
   "node_token": "Jxqfwnd80i8ibIkRhEKcnkK6nzd",
   "node_type": "origin",
   "obj_create_time": "1687160535",
-  "obj_edit_time": "1700706934",
+  "obj_edit_time": "1704355166",
   "obj_token": "Chted68OWoHPUAxKu0Jcy9QFnPh",
   "obj_type": "docx",
   "origin_node_token": "Jxqfwnd80i8ibIkRhEKcnkK6nzd",
@@ -635,7 +635,31 @@
           "elements": [
             {
               "text_run": {
-                "content": "目前，Zilliz Cloud 仅支持阿里云，部署地域仅支持华东1（杭州）。",
+                "content": "目前，Zilliz Cloud 仅支持阿里云，部署地域支持华东1（杭州）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和华北2（北京）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

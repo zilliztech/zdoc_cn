@@ -5,7 +5,7 @@
   "node_token": "MAFcwBTqqiR5YZkdkd4cADg0nub",
   "node_type": "origin",
   "obj_create_time": "1687140289",
-  "obj_edit_time": "1703061664",
+  "obj_edit_time": "1704355572",
   "obj_token": "OBowdXEYGod06gxEDe1cMjMwnNf",
   "obj_type": "docx",
   "origin_node_token": "MAFcwBTqqiR5YZkdkd4cADg0nub",
@@ -31,7 +31,6 @@
           "XXeldishIooR5rxBIGHc43aJn2c",
           "Vqg2dlK67o6VnOxWSIZc1l0on6c",
           "GjhAdvVQFoSo8rxXIHCcU6d9nbn",
-          "MLzFd2oaMo4bNpxIX5UcIiZunxe",
           "Z8ZEduOQeovhrrxzc5zc3fUVn5e",
           "Qp7ad8yFEoVHezx6CIIcgJp2nHc",
           "Hv0KdGPEooev3jx2PwAcBIjvnOg",
@@ -451,6 +450,9 @@
       {
         "block_id": "GjhAdvVQFoSo8rxXIHCcU6d9nbn",
         "block_type": 13,
+        "children": [
+          "KmZNdREs3olXUHxYyutc3z7enby"
+        ],
         "ordered": {
           "elements": [
             {
@@ -498,35 +500,18 @@
         "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
       },
       {
-        "block_id": "MLzFd2oaMo4bNpxIX5UcIiZunxe",
-        "block_type": 2,
+        "block_id": "KmZNdREs3olXUHxYyutc3z7enby",
+        "block_type": 26,
         "comment_ids": [
           "7309422438403522563"
         ],
-        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "【Insert Screenshot】",
-                "text_element_style": {
-                  "bold": false,
-                  "comment_ids": [
-                    "7309422438403522563"
-                  ],
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D7048-2%26mode%3Ddesign%26t%3DdEDu09CUu6LdGkX2-4"
           }
-        }
+        },
+        "parent_id": "GjhAdvVQFoSo8rxXIHCcU6d9nbn"
       },
       {
         "block_id": "Z8ZEduOQeovhrrxzc5zc3fUVn5e",
@@ -885,7 +870,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "集群部署的云服务提供商和地域。目前，Zilliz Cloud 仅支持阿里云华东1（杭州）。更多详情，请见",
+                "content": "集群部署的云服务提供商和地域。目前，Zilliz Cloud 支持阿里云华东1（杭州）和华北2（北京）。更多详情，请见",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2447,6 +2432,30 @@
             {
               "text_run": {
                 "content": "华东1（杭州）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "华北2（北京）",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,

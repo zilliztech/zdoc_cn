@@ -5,7 +5,7 @@
   "node_token": "XNCIwt9i6iFgEDkEQE9cTMf8nSe",
   "node_type": "origin",
   "obj_create_time": "1687159091",
-  "obj_edit_time": "1703064244",
+  "obj_edit_time": "1704355219",
   "obj_token": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
   "obj_type": "docx",
   "origin_node_token": "XNCIwt9i6iFgEDkEQE9cTMf8nSe",
@@ -2313,7 +2313,8 @@
         "block_id": "YZntdrNymozm6ux2bwIcxlOfnFe",
         "block_type": 32,
         "children": [
-          "RcjFdjvcsomRSfxu6dtcIZPhnxh"
+          "RcjFdjvcsomRSfxu6dtcIZPhnxh",
+          "SyjUdTx54ogPvCxI5rKclPU9n7O"
         ],
         "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
         "table_cell": {}
@@ -2326,7 +2327,32 @@
           "elements": [
             {
               "text_run": {
-                "content": "阿里云华东1（杭州）",
+                "content": "阿里云华东1（杭州）、华北2（北京）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SyjUdTx54ogPvCxI5rKclPU9n7O",
+        "block_type": 2,
+        "parent_id": "YZntdrNymozm6ux2bwIcxlOfnFe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2347,20 +2373,20 @@
         "block_id": "LCw6dVxLMoEAkaxnq0jcap5JnHg",
         "block_type": 32,
         "children": [
-          "JufmdnpYIoVoEXx5K1FcKDk5nMh"
+          "UY9adxLpHoCKLnxqrkJcH2qhnoc"
         ],
         "parent_id": "Jp4RdPOLqoxBo7xyPpPciSTMnWh",
         "table_cell": {}
       },
       {
-        "block_id": "JufmdnpYIoVoEXx5K1FcKDk5nMh",
+        "block_id": "UY9adxLpHoCKLnxqrkJcH2qhnoc",
         "block_type": 2,
         "parent_id": "LCw6dVxLMoEAkaxnq0jcap5JnHg",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "阿里云华东1（杭州）",
+                "content": "阿里云华东1（杭州）、华北2（北京）",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4116,6 +4142,6 @@
         "parent_id": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg"
       }
     ],
-    "counts": 152
+    "counts": 153
   }
 }
