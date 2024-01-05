@@ -30,9 +30,9 @@ import Admonition from '@theme/Admonition';
 |             |  getBulkInsertState()          |  ✔︎         |  ✔︎            |
 |             |  listBulkInsertTasks()         |  ✔︎         |  ✔︎            |
 |  Collection |  getCollectionStatistics()     |  ✘          |  ✔︎            |
-|             |  createCollection              |  ✔︎         |  ✔︎            |
-|             |  describeCollection            |  ✔︎         |  ✔︎            |
-|             |  dropCollection                |  ✔︎         |  ✔︎            |
+|             |  createCollection()            |  ✔︎         |  ✔︎            |
+|             |  describeCollection()          |  ✔︎         |  ✔︎            |
+|             |  dropCollection()              |  ✔︎         |  ✔︎            |
 |             |  getLoadingProgress()          |  ✔︎         |  ✔︎            |
 |             |  getPersistentSgementInfo()    |  ✘          |  ✘             |
 |             |  getQuerySegmentInfo()         |  ✘          |  ✘             |
