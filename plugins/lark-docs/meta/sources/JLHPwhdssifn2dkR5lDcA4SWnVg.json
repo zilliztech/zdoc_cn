@@ -5,7 +5,7 @@
   "node_token": "JLHPwhdssifn2dkR5lDcA4SWnVg",
   "node_type": "origin",
   "obj_create_time": "1697438465",
-  "obj_edit_time": "1704967829",
+  "obj_edit_time": "1704968694",
   "obj_token": "HXd6d0M3foNlKKxkYIvcD1sMn5b",
   "obj_type": "docx",
   "origin_node_token": "JLHPwhdssifn2dkR5lDcA4SWnVg",
@@ -2900,16 +2900,16 @@
           "C8XXdzXYDoz6QXx4Tw8c9F80n6d",
           "XfAodXrBDofHeFxhzP7c6YC2nPg",
           "LsjKdzbaDoAoFxxtIWoc2xOcnvg",
-          "CJLtdxSqco7Lpnx2cR8cp6QDnCg",
-          "U1HNdCr0bo43gMxMK6Lci8Oqngg",
+          "WQghdgbXboImpCxJHmPctGbUnfe",
+          "FNK6dvgpgouhoPxKKCQcLeXknWe",
           "FL64dl7jioCshZxy8ILcOeETnxh",
           "JY1rdoCknopmUbxVhcjchobfnbf",
-          "WEdOdIbsWoVrYjxs4LwcUFdPnQf",
-          "Imv8dbAKFoF5sUxyrybcDY9endc",
+          "N8e4dKFf7o50P2xCL7Pc26dFnAb",
+          "Vax4dwXP8oaKOUxAu28chIyLnDe",
           "Vyt5dAJ7ToNf91xXpFHc29dUncd",
-          "XgPtdRVATo8fatx6gfhcm3LQnvh",
-          "SQIHdmfI0oPJ6uxA53Pc8tqmnae",
-          "F1rSdFax7o6Eskxa8HLcy6W6nIn",
+          "TR2BdfwAqocG0lxqFmhcNLrnnJN",
+          "CxqjdPWfXoC6LXxGiAzcZPagnnb",
+          "R3K8dcMtbo7shwxAajOc1N0Qnab",
           "SjXDdXCNWoMK8uxwuqecjleMnqh"
         ],
         "parent_id": "NRUldjfFLoB0dDxFhzCcjtmLnKc",
@@ -2997,7 +2997,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "cn-hangzhou-h",
+                "content": "杭州 可用区 H",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3016,13 +3016,13 @@
         "parent_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv"
       },
       {
-        "block_id": "CJLtdxSqco7Lpnx2cR8cp6QDnCg",
+        "block_id": "WQghdgbXboImpCxJHmPctGbUnfe",
         "block_type": 12,
         "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "cn-hangzhou-j",
+                "content": "杭州 可用区 J",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3041,13 +3041,13 @@
         "parent_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv"
       },
       {
-        "block_id": "U1HNdCr0bo43gMxMK6Lci8Oqngg",
+        "block_id": "FNK6dvgpgouhoPxKKCQcLeXknWe",
         "block_type": 12,
         "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "cn-hangzhou-k",
+                "content": "杭州 可用区 K",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3097,7 +3097,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "cn-beijing-g",
+                "content": "北京 可用区 G",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3116,13 +3116,13 @@
         "parent_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv"
       },
       {
-        "block_id": "WEdOdIbsWoVrYjxs4LwcUFdPnQf",
+        "block_id": "N8e4dKFf7o50P2xCL7Pc26dFnAb",
         "block_type": 12,
         "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "cn-beijing-h",
+                "content": "北京 可用区 H",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3141,13 +3141,13 @@
         "parent_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv"
       },
       {
-        "block_id": "Imv8dbAKFoF5sUxyrybcDY9endc",
+        "block_id": "Vax4dwXP8oaKOUxAu28chIyLnDe",
         "block_type": 12,
         "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "cn-beijing-i",
+                "content": "北京 可用区 I",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3191,13 +3191,13 @@
         }
       },
       {
-        "block_id": "XgPtdRVATo8fatx6gfhcm3LQnvh",
+        "block_id": "TR2BdfwAqocG0lxqFmhcNLrnnJN",
         "block_type": 12,
         "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "cn-shenzhen-d",
+                "content": "深圳 可用区 D",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3216,13 +3216,13 @@
         "parent_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv"
       },
       {
-        "block_id": "SQIHdmfI0oPJ6uxA53Pc8tqmnae",
+        "block_id": "CxqjdPWfXoC6LXxGiAzcZPagnnb",
         "block_type": 12,
         "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "cn-shenzhen-e",
+                "content": "深圳 可用区 E",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3241,13 +3241,13 @@
         "parent_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv"
       },
       {
-        "block_id": "F1rSdFax7o6Eskxa8HLcy6W6nIn",
+        "block_id": "R3K8dcMtbo7shwxAajOc1N0Qnab",
         "block_type": 12,
         "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "cn-shenzhen-f",
+                "content": "深圳 可用区 F",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
