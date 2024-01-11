@@ -5,7 +5,7 @@
   "node_token": "JLHPwhdssifn2dkR5lDcA4SWnVg",
   "node_type": "origin",
   "obj_create_time": "1697438465",
-  "obj_edit_time": "1703043550",
+  "obj_edit_time": "1704967829",
   "obj_token": "HXd6d0M3foNlKKxkYIvcD1sMn5b",
   "obj_type": "docx",
   "origin_node_token": "JLHPwhdssifn2dkR5lDcA4SWnVg",
@@ -2836,7 +2836,8 @@
         "block_id": "CCPIdPTwhoLHU4xpU6mcozyinEf",
         "block_type": 32,
         "children": [
-          "Bl08dABXuosWa6x1kWtczxhdnOd"
+          "Bl08dABXuosWa6x1kWtczxhdnOd",
+          "LCuRdTw8ioVuloxe8OOcTv1Cnz4"
         ],
         "parent_id": "NRUldjfFLoB0dDxFhzCcjtmLnKc",
         "table_cell": {}
@@ -2867,11 +2868,49 @@
         }
       },
       {
+        "block_id": "LCuRdTw8ioVuloxe8OOcTv1Cnz4",
+        "block_type": 2,
+        "parent_id": "CCPIdPTwhoLHU4xpU6mcozyinEf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
         "block_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv",
         "block_type": 32,
         "children": [
           "Gw0AdQwdjoWsJFxWvETczpDInBc",
-          "C8XXdzXYDoz6QXx4Tw8c9F80n6d"
+          "C8XXdzXYDoz6QXx4Tw8c9F80n6d",
+          "XfAodXrBDofHeFxhzP7c6YC2nPg",
+          "LsjKdzbaDoAoFxxtIWoc2xOcnvg",
+          "CJLtdxSqco7Lpnx2cR8cp6QDnCg",
+          "U1HNdCr0bo43gMxMK6Lci8Oqngg",
+          "FL64dl7jioCshZxy8ILcOeETnxh",
+          "JY1rdoCknopmUbxVhcjchobfnbf",
+          "WEdOdIbsWoVrYjxs4LwcUFdPnQf",
+          "Imv8dbAKFoF5sUxyrybcDY9endc",
+          "Vyt5dAJ7ToNf91xXpFHc29dUncd",
+          "XgPtdRVATo8fatx6gfhcm3LQnvh",
+          "SQIHdmfI0oPJ6uxA53Pc8tqmnae",
+          "F1rSdFax7o6Eskxa8HLcy6W6nIn",
+          "SjXDdXCNWoMK8uxwuqecjleMnqh"
         ],
         "parent_id": "NRUldjfFLoB0dDxFhzCcjtmLnKc",
         "table_cell": {}
@@ -2909,7 +2948,332 @@
           "elements": [
             {
               "text_run": {
-                "content": "目前，Zilliz Cloud 集群可选可用区有 H，J，K。交换机配置无特殊要求，保持默认即可。",
+                "content": "目前，Zilliz Cloud 集群可选可用区如下：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XfAodXrBDofHeFxhzP7c6YC2nPg",
+        "block_type": 2,
+        "parent_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "杭州",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LsjKdzbaDoAoFxxtIWoc2xOcnvg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "cn-hangzhou-h",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv"
+      },
+      {
+        "block_id": "CJLtdxSqco7Lpnx2cR8cp6QDnCg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "cn-hangzhou-j",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv"
+      },
+      {
+        "block_id": "U1HNdCr0bo43gMxMK6Lci8Oqngg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "cn-hangzhou-k",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv"
+      },
+      {
+        "block_id": "FL64dl7jioCshZxy8ILcOeETnxh",
+        "block_type": 2,
+        "parent_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "北京",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JY1rdoCknopmUbxVhcjchobfnbf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "cn-beijing-g",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv"
+      },
+      {
+        "block_id": "WEdOdIbsWoVrYjxs4LwcUFdPnQf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "cn-beijing-h",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv"
+      },
+      {
+        "block_id": "Imv8dbAKFoF5sUxyrybcDY9endc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "cn-beijing-i",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv"
+      },
+      {
+        "block_id": "Vyt5dAJ7ToNf91xXpFHc29dUncd",
+        "block_type": 2,
+        "parent_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "深圳",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XgPtdRVATo8fatx6gfhcm3LQnvh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "cn-shenzhen-d",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv"
+      },
+      {
+        "block_id": "SQIHdmfI0oPJ6uxA53Pc8tqmnae",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "cn-shenzhen-e",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv"
+      },
+      {
+        "block_id": "F1rSdFax7o6Eskxa8HLcy6W6nIn",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "cn-shenzhen-f",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv"
+      },
+      {
+        "block_id": "SjXDdXCNWoMK8uxwuqecjleMnqh",
+        "block_type": 2,
+        "parent_id": "F0mVdQJ21o2V7ZxMwXXc3qnBnYv",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "交换机配置无特殊要求，保持默认即可。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4980,6 +5344,6 @@
         }
       }
     ],
-    "counts": 134
+    "counts": 148
   }
 }

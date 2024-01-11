@@ -5,7 +5,7 @@
   "node_token": "MAFcwBTqqiR5YZkdkd4cADg0nub",
   "node_type": "origin",
   "obj_create_time": "1687140289",
-  "obj_edit_time": "1704355572",
+  "obj_edit_time": "1704968312",
   "obj_token": "OBowdXEYGod06gxEDe1cMjMwnNf",
   "obj_type": "docx",
   "origin_node_token": "MAFcwBTqqiR5YZkdkd4cADg0nub",
@@ -870,7 +870,55 @@
           "elements": [
             {
               "text_run": {
-                "content": "集群部署的云服务提供商和地域。目前，Zilliz Cloud 支持阿里云华东1（杭州）和华北2（北京）。更多详情，请见",
+                "content": "集群部署的云服务提供商和地域。目前，Zilliz Cloud 支持阿里云华东1（杭州）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "华北2（北京）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和华南1（深圳）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。更多详情，请见",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2443,7 +2491,7 @@
             },
             {
               "text_run": {
-                "content": "和",
+                "content": "，",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2456,6 +2504,30 @@
             {
               "text_run": {
                 "content": "华北2（北京）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "华南1（深圳）",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,

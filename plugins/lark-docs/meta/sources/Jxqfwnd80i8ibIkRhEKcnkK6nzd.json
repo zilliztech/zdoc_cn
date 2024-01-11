@@ -5,7 +5,7 @@
   "node_token": "Jxqfwnd80i8ibIkRhEKcnkK6nzd",
   "node_type": "origin",
   "obj_create_time": "1687160535",
-  "obj_edit_time": "1704355166",
+  "obj_edit_time": "1704968256",
   "obj_token": "Chted68OWoHPUAxKu0Jcy9QFnPh",
   "obj_type": "docx",
   "origin_node_token": "Jxqfwnd80i8ibIkRhEKcnkK6nzd",
@@ -647,7 +647,31 @@
             },
             {
               "text_run": {
-                "content": "和华北2（北京）",
+                "content": "，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "华北2（北京）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，华南1（深圳）",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

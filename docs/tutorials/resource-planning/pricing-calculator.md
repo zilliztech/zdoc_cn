@@ -49,7 +49,7 @@ import Admonition from '@theme/Admonition';
 
 ### 云服务提供商和地域{#cloud-provider}
 
-目前，Zilliz Cloud 仅支持阿里云，部署地域支持华东1（杭州）和华北2（北京）。
+目前，Zilliz Cloud 仅支持阿里云，部署地域支持华东1（杭州），华北2（北京），华南1（深圳）。
 
 有关更多信息，请参见[云服务提供商和地域](./cloud-providers-and-regions)。
 
