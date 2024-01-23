@@ -2,6 +2,7 @@
 slug: /autoindex-explained
 beta: FALSE
 notebook: FALSE
+token: YUETwzDssiTUs9kCSn4cgUYLnrd
 sidebar_position: 1
 ---
 
@@ -44,7 +45,7 @@ AUTOINDEX 可以在如下场景中提供较高性能：
 
 在 Milvus 和 Zilliz Cloud 上创建索引和向量搜索时的参数设置区别如下所示：
 
-```plaintext
+```python
 *# For index-building*
 *# On Milvus*
 index_params = {

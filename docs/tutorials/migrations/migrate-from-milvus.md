@@ -2,6 +2,7 @@
 slug: /migrate-from-milvus
 beta: FALSE
 notebook: FALSE
+token: YBlmwO9ajiU4tYklnjmc6fJPn8e
 sidebar_position: 1
 ---
 
@@ -30,17 +31,21 @@ Zilliz Cloud 支持从 Milvus 1.x（包括 0.9.x 及以上）和更高版本迁�
 1. 停止 Milvus 安装进程或至少停止在 Milvus 中执行的所有 DML 操作。
 
 1. 导出安装相关的元数据到 `meta.json`。
+
     - 如果后端为 MySQL，执行以下命令：
+
         ```bash
         ./milvus-migration export -m "user:password@tcp(adderss)/milvus?charset=utf8mb4&parseTime=True&loc=Local" -o outputDir
         ```
 
     - 如果后端为 SQLite，执行以下命令：
+
         ```bash
         ./milvus-migration export -s /milvus/db/meta.sqlite -o outputDir
         ```
 
 1. 复制 Milvus 安装目录下的 `tables` 文件夹，将 `meta.json` 和 `tables` 文件夹移动到一个空文件夹。
+
     此步骤完成后，空文件夹的结构应如下所示：
 
     ```plaintext
@@ -62,6 +67,7 @@ Zilliz Cloud 支持从 Milvus 2.x 和更高版本迁移数据。Milvus 向量数
 1. 下载 [milvus-backup](https://github.com/zilliztech/milvus-backup/releases)。推荐下载最新版本。
 
 1. 在下载的二进制文件所在的同级目录下，创建 `configs` 文件夹，然后将 [backup.yaml](https://raw.githubusercontent.com/zilliztech/milvus-backup/master/configs/backup.yaml) 保存到 `configs`。
+
     此步骤完成后，文件夹的结构应如下所示：
 
     ```plaintext
@@ -72,11 +78,11 @@ Zilliz Cloud 支持从 Milvus 2.x 和更高版本迁移数据。Milvus 向量数
     ```
 
 1. 自定义 `backup.yaml` 配置。
+
     一般情况下，您不需要自定义该文件。 在下一步前，您可以检查以下配置项是否正确：
 
-    <Admonition type="info" icon="📘" title="说明">    
-    
-    
+    <Admonition type="info" icon="📘" title="说明">
+
     如果 Milvus 实例是通过 Docker Compose 安装，`minio.bucketName` 默认为 `a-bucket`， `rootPath` 默认为 `files`。    
     
     如果 Milvus 实例是通过 Kubernetes 安装，`minio.bucketName` 默认为 `milvus-bucket`， `rootPath` 默认为 `file`。
@@ -96,9 +102,11 @@ Zilliz Cloud 支持从 Milvus 2.x 和更高版本迁移数据。Milvus 向量数
 ```
 
 1. 检查备份文件。
+
     - 如果您将 `minio.address` 和 `minio.port` 设置为 OSS 存储，则您的备份文件已在 OSS 存储中。
 
     - 如果您将 `minio.address` 和 `minio.port` 设置为 MinIO 存储，则可以通过 MinIO 控制台或 mc 客户端下载备份文件。 
+
         - 如果从 [MinIO 控制台](https://min.io/docs/minio/kubernetes/upstream/administration/minio-console.html)下载，请先登录 MinIO 控制台，找到 `minio.address` 中指定的存储桶，选择存储桶中的文件，然后开始下载。
 
         - 如果使用 [mc](https://min.io/docs/minio/linux/reference/minio-mc.html#mc-install) 客户端，则执行以下命令：
@@ -147,8 +155,9 @@ Collection 加载后，您可以自行连接和管理 Collection。
 
 - [AUTOINDEX](./autoindex-explained)
 
-- [选择合适的 CU 类型](./cu-types-explained) 
+- [选择合适的 CU 类型](./cu-types-explained)
 
 - [API 异同](./api-comparison)
 
 - [其他异同](./other-differences)
+

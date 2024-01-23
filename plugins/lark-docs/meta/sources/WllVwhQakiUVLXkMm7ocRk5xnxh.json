@@ -1,0 +1,1290 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1694598248",
+  "node_token": "WllVwhQakiUVLXkMm7ocRk5xnxh",
+  "node_type": "origin",
+  "obj_create_time": "1694598248",
+  "obj_edit_time": "1700719940",
+  "obj_token": "MJlwdn7OSoIXgDxce9Lcw50TnOd",
+  "obj_type": "docx",
+  "origin_node_token": "WllVwhQakiUVLXkMm7ocRk5xnxh",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "DaoawdnS1iEOT8kFGW0cAc8qntc",
+  "space_id": "7167193056431783939",
+  "title": "查看事件",
+  "slug": "view-activities",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "MJlwdn7OSoIXgDxce9Lcw50TnOd",
+        "block_type": 1,
+        "children": [
+          "BNAvdp1Kuow6arxwJUJc6krBnhd",
+          "PbMjdEgxGo4HdgxGDxQcuGTmnmb",
+          "ClBsdKHW5on3EDx8Evdc5NIZnmh",
+          "YekudM9s4oSjhdx6ghMcaQ2An6d",
+          "Dp7MdVIvuovRgEx4DRwcDEm5nkb",
+          "EchGdTqXDoAaU6xMmhLctwkTnVt",
+          "L6XQdyq1so7SDbx1f5gcExnvn5c",
+          "YUIjdtHZOojGv8xsSlYchTbenhb",
+          "Aa1FdEyEdoSJTOxIz5rcvMganoe",
+          "DRNCdwmtgoEeX0xMk1bc9DREnFh",
+          "IfJndyFrzobo0ax1LvCceGGknzc",
+          "KEYUd5RNaoPSAyxhAz1cfaRfnMf",
+          "KlGUd90xcojHftxnWFacXnnJnAe",
+          "DnF5ddvAEoySCQxe2WWcZ5vBne9",
+          "Y8Bzdrbs4obk3oxNWC2cFCIgnjg",
+          "AVPCdVrkHoNPBJxwvPWcmBLinDb"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看事件",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "BNAvdp1Kuow6arxwJUJc6krBnhd",
+        "block_type": 2,
+        "parent_id": "MJlwdn7OSoIXgDxce9Lcw50TnOd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "事件",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页面记录了",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "组织",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fdocx%2FA2hxdw23IokIAXxadTHcBGxUned%23Q9Z9dAz4zorYI2x4TzbcupaknWe"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "中发生的事件，包括免费额度增减、集群状态变更、授予或撤销组织和项目权限等。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PbMjdEgxGo4HdgxGDxQcuGTmnmb",
+        "block_type": 2,
+        "parent_id": "MJlwdn7OSoIXgDxce9Lcw50TnOd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ClBsdKHW5on3EDx8Evdc5NIZnmh",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看事件{#view-activities}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MJlwdn7OSoIXgDxce9Lcw50TnOd"
+      },
+      {
+        "block_id": "YekudM9s4oSjhdx6ghMcaQ2An6d",
+        "block_type": 2,
+        "parent_id": "MJlwdn7OSoIXgDxce9Lcw50TnOd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以在 Zilliz Cloud 界面查看组织级别的事件。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Dp7MdVIvuovRgEx4DRwcDEm5nkb",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击进入组织。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MJlwdn7OSoIXgDxce9Lcw50TnOd"
+      },
+      {
+        "block_id": "EchGdTqXDoAaU6xMmhLctwkTnVt",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在左侧导航栏中，点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "事件",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "事件",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页面，您可以查看事件内容、事件发生时间以及对应的操作人。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MJlwdn7OSoIXgDxce9Lcw50TnOd"
+      },
+      {
+        "block_id": "L6XQdyq1so7SDbx1f5gcExnvn5c",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D10510-479%26mode%3Ddesign%26t%3Dj9BaZkTrB1F4rvH5-4"
+          }
+        },
+        "parent_id": "MJlwdn7OSoIXgDxce9Lcw50TnOd"
+      },
+      {
+        "block_id": "YUIjdtHZOojGv8xsSlYchTbenhb",
+        "block_type": 2,
+        "parent_id": "MJlwdn7OSoIXgDxce9Lcw50TnOd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Aa1FdEyEdoSJTOxIz5rcvMganoe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "筛选事件{#filter-activities}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MJlwdn7OSoIXgDxce9Lcw50TnOd"
+      },
+      {
+        "block_id": "DRNCdwmtgoEeX0xMk1bc9DREnFh",
+        "block_type": 2,
+        "parent_id": "MJlwdn7OSoIXgDxce9Lcw50TnOd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以根据事件类型和事件发生的时段来筛选展示的事件记录。您可以组合这 2 个筛选条件。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IfJndyFrzobo0ax1LvCceGGknzc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "根据时间筛选事件",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "SGD8dn8c2oX24yx74LlcPHwOnnh",
+          "XsWadAWEyoBfowxB1HEcTw03nrd",
+          "I16qdxETYo2NR7x7Qkscb7RpnGg",
+          "AHgrdBqyRoPybpx9DavcYQtpnNf"
+        ],
+        "parent_id": "MJlwdn7OSoIXgDxce9Lcw50TnOd"
+      },
+      {
+        "block_id": "SGD8dn8c2oX24yx74LlcPHwOnnh",
+        "block_type": 2,
+        "parent_id": "IfJndyFrzobo0ax1LvCceGGknzc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需查看特定时间段内发生的事件，请点击时间组件，选择起始日期和终止日期，点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "确认",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XsWadAWEyoBfowxB1HEcTw03nrd",
+        "block_type": 34,
+        "children": [
+          "WCnXdBnQxo0iSXxkX5EcLnWtn0d",
+          "LRy2dBtyWoJTSLxgsoPcdoTBnyh"
+        ],
+        "parent_id": "IfJndyFrzobo0ax1LvCceGGknzc",
+        "quote_container": {}
+      },
+      {
+        "block_id": "WCnXdBnQxo0iSXxkX5EcLnWtn0d",
+        "block_type": 2,
+        "parent_id": "XsWadAWEyoBfowxB1HEcTw03nrd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LRy2dBtyWoJTSLxgsoPcdoTBnyh",
+        "block_type": 2,
+        "parent_id": "XsWadAWEyoBfowxB1HEcTw03nrd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "起始日期和终止日期之间应小于 30 天。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "I16qdxETYo2NR7x7Qkscb7RpnGg",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D10510-492%26mode%3Ddesign%26t%3Dj9BaZkTrB1F4rvH5-4"
+          }
+        },
+        "parent_id": "IfJndyFrzobo0ax1LvCceGGknzc"
+      },
+      {
+        "block_id": "AHgrdBqyRoPybpx9DavcYQtpnNf",
+        "block_type": 2,
+        "parent_id": "IfJndyFrzobo0ax1LvCceGGknzc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KEYUd5RNaoPSAyxhAz1cfaRfnMf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "根据事件类型筛选",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "Q4nKdPhvtokfapxkkexc702PnDe",
+          "ZQ6sdjXI4oIMNVxfIpgcfFhEnvc",
+          "IQbgdPYRXonEm7x8hl7ci5GFnNb"
+        ],
+        "parent_id": "MJlwdn7OSoIXgDxce9Lcw50TnOd"
+      },
+      {
+        "block_id": "Q4nKdPhvtokfapxkkexc702PnDe",
+        "block_type": 2,
+        "parent_id": "KEYUd5RNaoPSAyxhAz1cfaRfnMf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需根据事件类型筛选，请点击事件类型下拉框并选择您想要查看的事件类型。Zilliz Cloud 中有 3 种事件类型：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "信息",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "警告",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "错误",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZQ6sdjXI4oIMNVxfIpgcfFhEnvc",
+        "block_type": 31,
+        "children": [
+          "EDnudKJoVo4AUwxuUoYc1pzInYK",
+          "CQJrdVrTooZ4Djxu1eccU5SYn3e",
+          "KL6hd12r3ovaYxxBWjyc2GvKnCg",
+          "RtAEdWmmLotILRxHrsVcQv20nCd",
+          "SY2FdaclMoM15ixzi92cRq8VnJc",
+          "AZjIdsA7moZ3d5xu4P6cuOFCnEb",
+          "QKtod1TfsoCKLwxFaNpchIbRnxe",
+          "CW8bdZIycokYvhxlaZJcGrMxn2e"
+        ],
+        "parent_id": "KEYUd5RNaoPSAyxhAz1cfaRfnMf",
+        "table": {
+          "cells": [
+            "EDnudKJoVo4AUwxuUoYc1pzInYK",
+            "CQJrdVrTooZ4Djxu1eccU5SYn3e",
+            "KL6hd12r3ovaYxxBWjyc2GvKnCg",
+            "RtAEdWmmLotILRxHrsVcQv20nCd",
+            "SY2FdaclMoM15ixzi92cRq8VnJc",
+            "AZjIdsA7moZ3d5xu4P6cuOFCnEb",
+            "QKtod1TfsoCKLwxFaNpchIbRnxe",
+            "CW8bdZIycokYvhxlaZJcGrMxn2e"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              157,
+              421
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 4
+          }
+        }
+      },
+      {
+        "block_id": "EDnudKJoVo4AUwxuUoYc1pzInYK",
+        "block_type": 32,
+        "children": [
+          "V7q5d6FvDoy55exLLRTc0BbmnXe"
+        ],
+        "parent_id": "ZQ6sdjXI4oIMNVxfIpgcfFhEnvc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "V7q5d6FvDoy55exLLRTc0BbmnXe",
+        "block_type": 2,
+        "parent_id": "EDnudKJoVo4AUwxuUoYc1pzInYK",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "事件类型",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CQJrdVrTooZ4Djxu1eccU5SYn3e",
+        "block_type": 32,
+        "children": [
+          "FG0TdwScjo3vE5x3lbwcJJHbnRh"
+        ],
+        "parent_id": "ZQ6sdjXI4oIMNVxfIpgcfFhEnvc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "FG0TdwScjo3vE5x3lbwcJJHbnRh",
+        "block_type": 2,
+        "parent_id": "CQJrdVrTooZ4Djxu1eccU5SYn3e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KL6hd12r3ovaYxxBWjyc2GvKnCg",
+        "block_type": 32,
+        "children": [
+          "RQLkdBSu8o0qhexPMzjcV68znzf"
+        ],
+        "parent_id": "ZQ6sdjXI4oIMNVxfIpgcfFhEnvc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RQLkdBSu8o0qhexPMzjcV68znzf",
+        "block_type": 2,
+        "parent_id": "KL6hd12r3ovaYxxBWjyc2GvKnCg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "信息",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RtAEdWmmLotILRxHrsVcQv20nCd",
+        "block_type": 32,
+        "children": [
+          "XB6cd7Zx0oOiYxx2mH9cJIdtniT",
+          "D2xhdgRAromXfHxvmmkcPQ5Rn5d"
+        ],
+        "parent_id": "ZQ6sdjXI4oIMNVxfIpgcfFhEnvc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "XB6cd7Zx0oOiYxx2mH9cJIdtniT",
+        "block_type": 2,
+        "parent_id": "RtAEdWmmLotILRxHrsVcQv20nCd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群、权限、账单等相关信息。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "D2xhdgRAromXfHxvmmkcPQ5Rn5d",
+        "block_type": 2,
+        "parent_id": "RtAEdWmmLotILRxHrsVcQv20nCd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "例如：集群 in01-xxxxxxxxxxxxxxx 已创建。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SY2FdaclMoM15ixzi92cRq8VnJc",
+        "block_type": 32,
+        "children": [
+          "WmfNdAMtWoOQFexbV6GcaYxLnMg"
+        ],
+        "parent_id": "ZQ6sdjXI4oIMNVxfIpgcfFhEnvc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "WmfNdAMtWoOQFexbV6GcaYxLnMg",
+        "block_type": 2,
+        "parent_id": "SY2FdaclMoM15ixzi92cRq8VnJc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "警告",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AZjIdsA7moZ3d5xu4P6cuOFCnEb",
+        "block_type": 32,
+        "children": [
+          "HQyIdNdono1NJ9xoHgfcWiiYnsd",
+          "FyNwddRvsodKRZxDjj0ckaI7nuf"
+        ],
+        "parent_id": "ZQ6sdjXI4oIMNVxfIpgcfFhEnvc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "HQyIdNdono1NJ9xoHgfcWiiYnsd",
+        "block_type": 2,
+        "parent_id": "AZjIdsA7moZ3d5xu4P6cuOFCnEb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "资源状态更新等需要留意的信息。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FyNwddRvsodKRZxDjj0ckaI7nuf",
+        "block_type": 2,
+        "parent_id": "AZjIdsA7moZ3d5xu4P6cuOFCnEb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "例如：集群 in01-xxxxxxxxxxxxxxx 已删除。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QKtod1TfsoCKLwxFaNpchIbRnxe",
+        "block_type": 32,
+        "children": [
+          "Y5RhdA5WqoiBG4xLPlpcU3upnee"
+        ],
+        "parent_id": "ZQ6sdjXI4oIMNVxfIpgcfFhEnvc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Y5RhdA5WqoiBG4xLPlpcU3upnee",
+        "block_type": 2,
+        "parent_id": "QKtod1TfsoCKLwxFaNpchIbRnxe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "错误",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CW8bdZIycokYvhxlaZJcGrMxn2e",
+        "block_type": 32,
+        "children": [
+          "Pzc7duJZ6oErkkx2uHuckiprnQh",
+          "HSxPdgz3SoMtBixbQdNcTh7DnbY"
+        ],
+        "parent_id": "ZQ6sdjXI4oIMNVxfIpgcfFhEnvc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Pzc7duJZ6oErkkx2uHuckiprnQh",
+        "block_type": 2,
+        "parent_id": "CW8bdZIycokYvhxlaZJcGrMxn2e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "账单支付失败或系统出错等需要立刻注意或采取行动的信息。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HSxPdgz3SoMtBixbQdNcTh7DnbY",
+        "block_type": 2,
+        "parent_id": "CW8bdZIycokYvhxlaZJcGrMxn2e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "例如：账单 invo-xxxxxxxxxxxxxxxxxxxxxxxx 支付失败。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IQbgdPYRXonEm7x8hl7ci5GFnNb",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D10510-487%26mode%3Ddesign%26t%3Dj9BaZkTrB1F4rvH5-4"
+          }
+        },
+        "parent_id": "KEYUd5RNaoPSAyxhAz1cfaRfnMf"
+      },
+      {
+        "block_id": "KlGUd90xcojHftxnWFacXnnJnAe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相关文档{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MJlwdn7OSoIXgDxce9Lcw50TnOd"
+      },
+      {
+        "block_id": "DnF5ddvAEoySCQxe2WWcZ5vBne9",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "权限概览",
+                "token": "WYzywSL2ViDcZGk9vgqcq9XOned",
+                "url": "https://zilliverse.feishu.cn/wiki/WYzywSL2ViDcZGk9vgqcq9XOned"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MJlwdn7OSoIXgDxce9Lcw50TnOd"
+      },
+      {
+        "block_id": "Y8Bzdrbs4obk3oxNWC2cFCIgnjg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "管理组织与成员",
+                "token": "I9ktwIylxiDTKik4ckUctIOvnjm",
+                "url": "https://zilliverse.feishu.cn/wiki/I9ktwIylxiDTKik4ckUctIOvnjm"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MJlwdn7OSoIXgDxce9Lcw50TnOd"
+      },
+      {
+        "block_id": "AVPCdVrkHoNPBJxwvPWcmBLinDb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "管理项目与成员",
+                "token": "Sw1Kwj0oViAYuAkoUIZcvhsJnBd",
+                "url": "https://zilliverse.feishu.cn/wiki/Sw1Kwj0oViAYuAkoUIZcvhsJnBd"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MJlwdn7OSoIXgDxce9Lcw50TnOd"
+      }
+    ],
+    "counts": 45
+  }
+}

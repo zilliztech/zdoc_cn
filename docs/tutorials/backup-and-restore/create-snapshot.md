@@ -2,6 +2,7 @@
 slug: /create-snapshot
 beta: FALSE
 notebook: FALSE
+token: GFFswc3z1iQtjQkpmyScL00dnSx
 sidebar_position: 1
 ---
 
@@ -11,12 +12,6 @@ import Admonition from '@theme/Admonition';
 # 创建备份快照
 
 快照是为某个集群在指定时间点创建的备份。您可以基于快照创建新的集群或将快照用作集群数据备份。
-
-<Admonition type="info" icon="📘" title="说明">
-
-快照功能目前仅对签约用户开放。如需使用该功能，请联系我们。
-
-</Admonition>
 
 ## 创建快照{#create-snapshot}
 
@@ -45,3 +40,4 @@ import Admonition from '@theme/Admonition';
 - [恢复备份](./restore-from-snapshot)
 
 - [删除备份快照](./delete-snapshot)
+

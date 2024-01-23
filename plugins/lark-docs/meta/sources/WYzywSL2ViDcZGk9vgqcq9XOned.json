@@ -1,0 +1,996 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1687164427",
+  "node_token": "WYzywSL2ViDcZGk9vgqcq9XOned",
+  "node_type": "origin",
+  "obj_create_time": "1687164427",
+  "obj_edit_time": "1705906531",
+  "obj_token": "A2hxdw23IokIAXxadTHcBGxUned",
+  "obj_type": "docx",
+  "origin_node_token": "WYzywSL2ViDcZGk9vgqcq9XOned",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "HaV5wsgX8ifrA2kyH4LchfhEnbf",
+  "space_id": "7167193056431783939",
+  "title": "资源概览",
+  "slug": "resource-hierarchy",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "A2hxdw23IokIAXxadTHcBGxUned",
+        "block_type": 1,
+        "children": [
+          "CiOxdOIRjoa8egxisuKcyRPYnJc",
+          "LAitd7v3dozqQXxMF9ec2CS3nef",
+          "PPNIdy10Vo0w6Ix4NN4cyzignYd",
+          "VI4jdRpSeou8hFxUjXKc6BwZnse",
+          "QHf9dsnLaoPUhdxv7jycsTjhnH1",
+          "Q9Z9dAz4zorYI2x4TzbcupaknWe",
+          "RUcYdfpH6opQ0bxdMtpcUXppnde",
+          "W2tFdaQa6o5JfIxAGR6cfii3nLV",
+          "GSWldEu43ogvSQxxJjJcah4qn3e",
+          "EXNGdFxi8o6p7YxTkgMc0EK0nDe",
+          "Urnzd4jRwoJreuxjHFxct9vwn5f",
+          "TnjodYtAmolyLix79LHch2Dqnnh",
+          "S5bPdMqzzoop7mxW7RMcbzYunOd",
+          "V8NMdUxVboC71Zx0HHdcI957nbd",
+          "QQhUd9weWoSvGXxQESLcjiGKnke",
+          "PDy8diZj0o4hWdxYoW4cmbOwnue",
+          "IxBDdYTwqoitzvxP2WNcMimMnrg",
+          "UGfcdRsiYonb1QxHvLqc1I3QnAe",
+          "X7yYdgd9tocODjxiBNxc3fSRnve",
+          "FjQRdQfLZoBdmCxgLzpczSggn8c",
+          "LwLwdzLCfojUUFxcMUvcJbKGnKd",
+          "ZPlSdooiiogk7KxFEv2cwpt4nIe",
+          "HbxMdiFZxohjwsxUthdc11kqnwe",
+          "VL6hdQKSAoyQzpxL77tc9bnzn1c",
+          "S2Z3dxIWUoP6oWxBCCtcllKpn1f"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "资源概览",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "CiOxdOIRjoa8egxisuKcyRPYnJc",
+        "block_type": 2,
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "通过以下层面实现访问控制：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LAitd7v3dozqQXxMF9ec2CS3nef",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "用户账户",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned"
+      },
+      {
+        "block_id": "PPNIdy10Vo0w6Ix4NN4cyzignYd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "组织",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned"
+      },
+      {
+        "block_id": "VI4jdRpSeou8hFxUjXKc6BwZnse",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "项目",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned"
+      },
+      {
+        "block_id": "QHf9dsnLaoPUhdxv7jycsTjhnH1",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D16209-488%26mode%3Ddesign%26t%3DJWK7nYgivAsH3tuw-4"
+          }
+        },
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned"
+      },
+      {
+        "block_id": "Q9Z9dAz4zorYI2x4TzbcupaknWe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "什么是",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "组织",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#understand-organizations}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned"
+      },
+      {
+        "block_id": "RUcYdfpH6opQ0bxdMtpcUXppnde",
+        "block_type": 2,
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "组织是将拥有共同目标的多个项目汇聚在一起，例如，将某个特定业务单元下的所有项目整合在同一组织中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "W2tFdaQa6o5JfIxAGR6cfii3nLV",
+        "block_type": 2,
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在一个组织下，您可以创建若干项目，并管理组织级别的资源，包括",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "账单",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "组织成员",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "事件",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "系统设置",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "以及回收站等。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GSWldEu43ogvSQxxJjJcah4qn3e",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D16221-528%26mode%3Ddesign%26t%3DJWK7nYgivAsH3tuw-4"
+          }
+        },
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned"
+      },
+      {
+        "block_id": "EXNGdFxi8o6p7YxTkgMc0EK0nDe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "什么是项目{#understand-projects}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned"
+      },
+      {
+        "block_id": "Urnzd4jRwoJreuxjHFxct9vwn5f",
+        "block_type": 2,
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "项目是组织内部用于归类集群和其他相关资源的逻辑分组单位。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TnjodYtAmolyLix79LHch2Dqnnh",
+        "block_type": 2,
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在一个项目中，你可以创建若干集群，并管理集群级别的资源，包括",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "项目成员",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 密钥",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、安全设置和监控等。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "S5bPdMqzzoop7mxW7RMcbzYunOd",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D16223-559%26mode%3Ddesign%26t%3DJWK7nYgivAsH3tuw-4"
+          }
+        },
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned"
+      },
+      {
+        "block_id": "V8NMdUxVboC71Zx0HHdcI957nbd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "组织",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "角色和权限",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#organization-roles}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned"
+      },
+      {
+        "block_id": "QQhUd9weWoSvGXxQESLcjiGKnke",
+        "block_type": 2,
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为了在组织层面上精准控制访问及操作权限，Zilliz Cloud 提供两种组织角色，明确规定了某一用户是否有权限访问特性资源及进行特定操作。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PDy8diZj0o4hWdxYoW4cmbOwnue",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "组织管理员",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "拥有对组织的全权管理权限，包括管理系统设置、组织内的所有项目以及其他相关资源。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned"
+      },
+      {
+        "block_id": "IxBDdYTwqoitzvxP2WNcMimMnrg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "组织成员",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "拥有有限的组织访问权限，可以查看组织设置，并有权邀请用户加入组织。组织成员对项目和集群级别资源的具体权限范围取决于他们在项目中的角色。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned"
+      },
+      {
+        "block_id": "UGfcdRsiYonb1QxHvLqc1I3QnAe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "项目角色和权限{#project-roles}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned"
+      },
+      {
+        "block_id": "X7yYdgd9tocODjxiBNxc3fSRnve",
+        "block_type": 2,
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在项目层面上，Zilliz Cloud 设置了两种角色，以便实现更精细化的访问控制：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FjQRdQfLZoBdmCxgLzpczSggn8c",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "项目管理员",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：拥有对项目的全权管理权限，包括管理项目设置、项目中的所有集群以及相关资源。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned"
+      },
+      {
+        "block_id": "LwLwdzLCfojUUFxcMUvcJbKGnKd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "项目成员",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：拥有对项目内集群的读写权限，可以查看集群详情并管理 Collection 和索引。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned"
+      },
+      {
+        "block_id": "ZPlSdooiiogk7KxFEv2cwpt4nIe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "文档推荐",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned"
+      },
+      {
+        "block_id": "HbxMdiFZxohjwsxUthdc11kqnwe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "添加组织成员",
+                "token": "I9ktwIylxiDTKik4ckUctIOvnjm",
+                "url": "https://zilliverse.feishu.cn/wiki/I9ktwIylxiDTKik4ckUctIOvnjm"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.notion.so%2FAdd-Organization-Members-c2826219b17b4311881b10ffef61ec1e%3Fpvs%3D21"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned"
+      },
+      {
+        "block_id": "VL6hdQKSAoyQzpxL77tc9bnzn1c",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "添加项目成员",
+                "token": "Sw1Kwj0oViAYuAkoUIZcvhsJnBd",
+                "url": "https://zilliverse.feishu.cn/wiki/Sw1Kwj0oViAYuAkoUIZcvhsJnBd"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.notion.so%2F98b81f44a014475e86c93056ed22e975%3Fpvs%3D21"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned"
+      },
+      {
+        "block_id": "S2Z3dxIWUoP6oWxBCCtcllKpn1f",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "删除组织",
+                "token": "MkZjwrXIpicJ5xkYwu6cMK8inVb",
+                "url": "https://zilliverse.feishu.cn/wiki/MkZjwrXIpicJ5xkYwu6cMK8inVb"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A2hxdw23IokIAXxadTHcBGxUned"
+      }
+    ],
+    "counts": 26
+  }
+}

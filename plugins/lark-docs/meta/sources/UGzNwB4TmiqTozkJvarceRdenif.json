@@ -1,0 +1,3937 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1687171681",
+  "node_token": "UGzNwB4TmiqTozkJvarceRdenif",
+  "node_type": "origin",
+  "obj_create_time": "1687171681",
+  "obj_edit_time": "1705895857",
+  "obj_token": "GQTCdYpOqop0UIxqBUScktmrnJb",
+  "obj_type": "docx",
+  "origin_node_token": "UGzNwB4TmiqTozkJvarceRdenif",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "ZdQxwDlFbiPLCNkXISXcyqtBn3r",
+  "space_id": "7167193056431783939",
+  "title": "API 密钥",
+  "slug": "manage-api-keys",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "block_type": 1,
+        "children": [
+          "Ie3Rdxk13oNhVox5aXzcAIMRnyd",
+          "HWJ3d6Bf3otoi8xyzWtcsZ8on8f",
+          "GSJqdrX9soZL3Sx83tzcdKfAnod",
+          "MhL3dZFDXoZFtIx3Mouc9wNLnCc",
+          "ZOoQdUGYToFOOCxFK00c0Qqjnmh",
+          "E6nUdKHn0ogbTtxl6ZTcu1PUnMW",
+          "XrbWdXMVDopDxix0ipacqeCRnxe",
+          "EIu3dZYhPoCKvNx9f4rci1Cpnnb",
+          "S8zyde7O0omxKBxPySscANdVnBb",
+          "GxmbdsXoSoQiVSxeLVRcGzKwnLc",
+          "B5mYdmfu8ogHWux9tIgc2AiJnth",
+          "LhDNdstSjoKPD4xx2juctEtCnZe",
+          "HRvBdJx7Doz924xniLJcvUpyntb",
+          "M0ZSdN4zsof1Jgx5CFHcsfeVnUc",
+          "IJTXdv9QaoeclSxI4lHceAt0ncT",
+          "VSuudDpWYoBi6pxkIL4cepYjnuf",
+          "FrqOdJmKWosGd6xfHsYczb0Znzf",
+          "BCXMdnckBoFeQZxSLqKc4Y1HnFf",
+          "JEzEdPp0WoB64PxrnuNc75qong2",
+          "A91mdLd6MocaaRxPeoQcI6yMn6g",
+          "FWUGdWazUodRRyx5CXdc2tyRnCb",
+          "TvlSdkSrpoKoltxhoRNcaGw5nPe",
+          "QiwBdfVTcoFCWuxVeNic0RD2npb",
+          "MZxfdxku0oQMvZx9CY2cs6A2nif",
+          "EWCjdMCgNoD0nHxWykecguLlnib",
+          "RoGgdjNaGopfYbx819gcZc8rnsb",
+          "DS0ldtrlmoBIQfx8RtXcGoGKnIb",
+          "FXo5d2jBzoRT92xbFANcEXwpnYf",
+          "EYSzdQMfkoB6jLxT2PyciBbXnTC",
+          "XmnRdBbkboYjDExsVRUcGu0znCf",
+          "JLUZdFv9zoHeA1xgssVcMqrLnef",
+          "WNIldGLaJooobZxy2NPc22tqnAb",
+          "NWOgdLypyogrImxLw8RcgpV8nLe",
+          "CdIBd2F0robcTKx8RDOcMtCNnTh",
+          "IbqKdLJqpov7MaxicG8cntNxnPg",
+          "NGeddGEavovP25xOdT5cZp5SnId",
+          "V6tEdv3crosZ8DxwmgvcazBonie",
+          "Oa8ddE2hEor6zMx91TacPAhrn0b",
+          "TrGsduNh4oQJ5GxfJkmchLydnld",
+          "XN9AdURUyoXkDAx5HbjchRhsnqg",
+          "FI7LdRnZKo5jcTxcKj9c5UMqnLg",
+          "UqtXdFjHFo48aBxe3QbcmqwbnCc",
+          "RdDyd8obQoZz7hxzM8bcjxR5ngh",
+          "TK9GdiFOLo9NOGx1oZuc6YgfnBh",
+          "WzLldFrCeofNmRxOa8ycuPyLnGg",
+          "LEL4dkrJMoPxRexqypJcAVzangh",
+          "ZcuidhxTUorEwWxE2C4c1honnwe",
+          "ZpJ1dmJ2noBA4DxXEHRcsomen9d",
+          "W0r4dGkanoswcpxFH5jcoTyDnAT",
+          "HWwOd3PMkoOZVbxbuWjcZVwXnqb",
+          "MGf5d5llAoNYRMxx4MbcT4x8npe",
+          "NlGad2hUho3CG3xmneYcWsj2n1d",
+          "KgUCdJRgsoL5vsx3RwocVS8jnkb"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 密钥",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "Ie3Rdxk13oNhVox5aXzcAIMRnyd",
+        "block_type": 2,
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在 Zilliz Cloud 平台，您可以在组织下分配和管理 API 密钥。这些密钥是用于对指定项目和资源进行访问所必需的认证令牌，并且可用于对 RESTful API 或 SDK 调用进行鉴权。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HWJ3d6Bf3otoi8xyzWtcsZ8on8f",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "API 密钥概述{#overview-of-api-keys}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "GSJqdrX9soZL3Sx83tzcdKfAnod",
+        "block_type": 2,
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为应对不同需求场景，Zilliz Cloud 提供了两种主要的 API 密钥类型：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MhL3dZFDXoZFtIx3Mouc9wNLnCc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "个人密钥",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：这类密钥与单独的用户账户关联，由 Zilliz Cloud 自动为每位组织用户生成，并继承相应用户角色的权限。若用户离开组织，其个人密钥也将随之自动删除。因此，不建议在需要长期维护的项目中使用个人密钥。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "ZOoQdUGYToFOOCxFK00c0Qqjnmh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "自定义密钥",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：这种密钥与特定的应用程序或程序相关联，而不是与单个用户绑定。具有",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "管理员",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FSXwewQ8p6i2qf8kd2YaccqKDnng"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "身份的用户可创建并管理这类密钥。自定义密钥更适用于开发场景，提供了稳定的长期 API 集成及自动化功能。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "E6nUdKHn0ogbTtxl6ZTcu1PUnMW",
+        "block_type": 34,
+        "children": [
+          "J14FdYSbAoVFBjxTqyKct2H7nCb",
+          "ApLNdlZRxoR3JVx3vzJc09dNnCb"
+        ],
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "quote_container": {}
+      },
+      {
+        "block_id": "J14FdYSbAoVFBjxTqyKct2H7nCb",
+        "block_type": 2,
+        "parent_id": "E6nUdKHn0ogbTtxl6ZTcu1PUnMW",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ApLNdlZRxoR3JVx3vzJc09dNnCb",
+        "block_type": 2,
+        "parent_id": "E6nUdKHn0ogbTtxl6ZTcu1PUnMW",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在 2024 年 1 月 26 日之前发布的版本中，并未对 API 密钥进行分类。如果您的 Zilliz Cloud 服务是从该日期前的版本升级而来，您之前生成的 API 密钥将被默认设置为自定义密钥，并继承原 API 密钥所拥有的项目级权限。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XrbWdXMVDopDxix0ipacqeCRnxe",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "API 安全调用{#secure-api-calls-with-rbac}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "EIu3dZYhPoCKvNx9f4rci1Cpnnb",
+        "block_type": 2,
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在 Zilliz Cloud 中，基于角色的访问控制（",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "RBAC",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FSXwewQ8p6i2qf8kd2YaccqKDnng"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "）在安全保障方面发挥着重要作用，并应用于 API 调用管理。通过为组织内的用户分配具备特定权限的角色，RBAC 能够实现对资源访问的精细管理。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "S8zyde7O0omxKBxPySscANdVnBb",
+        "block_type": 2,
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "有关更多用户角色信息，请参见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "用户与权限",
+                "token": "HaV5wsgX8ifrA2kyH4LchfhEnbf",
+                "url": "https://zilliverse.feishu.cn/wiki/HaV5wsgX8ifrA2kyH4LchfhEnbf"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GxmbdsXoSoQiVSxeLVRcGzKwnLc",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D32982-1140%26mode%3Ddesign%26t%3DtRIs5rm1TPXPf6hz-4"
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "B5mYdmfu8ogHWux9tIgc2AiJnth",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "API 密钥管理{#api-key-management}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "LhDNdstSjoKPD4xx2juctEtCnZe",
+        "block_type": 2,
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在 Zilliz Cloud 中，用户在组织内的角色决定了其管理 API 密钥的权限范围，具体如下：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "block_type": 31,
+        "children": [
+          "IT0BdcQX5oNg9Sx6ziucIkninjg",
+          "A2jsd8YyIoGOydxjBkGcBGePnsb",
+          "OHeSdQI3bozJiMx48uvcOkmNnjc",
+          "NwF8dq9Y6ogaOQxStobcQxosnse",
+          "U7GZdDCfloMdBAxhSPHcrXeJnlq",
+          "UpL1dKTymoSVgHxiXencak2dn4b",
+          "AvlCduJU2oLmtxxdonFcwb3Nnzc",
+          "BXADdeUcBoz9GyxaP0dctycWnnf",
+          "PyT2dmpycoLvYVxfljAcsPySn6d",
+          "OTDjdffXio7np7x8YQtcLaFTnDb",
+          "Eh8Mdk3SDoryGkxmhrmcm0w5nxh",
+          "GTm6dMmhhozy6yxxLXHczMhLnmg",
+          "U8KFdatbbovChAxkt7Jc0EyRnQg",
+          "FrCLdn3ohosUhqxYByecFODun6V",
+          "HP7PdFf0Uo4jD5xz6ZncWtNonie",
+          "KZ3JdTqngocp7xx3H2ccxTbqnUg",
+          "JWgVdZ0H6oomPQx39nccmjLVnPf",
+          "C9imdPL0soDQ37xwjN8c23Apnec",
+          "OWfEdDDCSoxJicxkMCrc6vifn6d",
+          "SPmUdTdOmoyo9fxcqnmcstS5nIf",
+          "OYGrdzFCbooxzIx13OHcVuG8ngc",
+          "FL5cdzPV2oDQH0xT9FjcKbR2n6f",
+          "AoSMduhTRo3PmxxJnCqcU6yVn2b",
+          "MgPzd17AloGHTExaunxcHQYln9e",
+          "MsfxdXBlDooHJrxXTYhckPYknnh",
+          "RkEfdjhoko7zYcxNaGVculKtncc",
+          "VkZzdVbcBoqKn8xRQVXcil6Zncd",
+          "YNLUdwAnnoLkKgxNww4cKIoQnWc",
+          "XwMudLJW5o7RuRxjqCJcHyUiniP",
+          "U2XndIQ0xoCPZ3xNRQMcgwBHneg",
+          "PuMbdxbvJoexSZx5PHPcxG4in53",
+          "FhMrdxh0qo7qUXxigxXcJPh2nGI",
+          "TGTIdQyvmo9S42xAVcAcPBlKn0f",
+          "SxpodZNhRo2zsOxaVU4cIFq8n5J",
+          "Dm50dtPAooLD8fxJiR1cHECAn3g",
+          "BObjdsm9LoWMHGxVmTVcJu1WnIu",
+          "SzIgd0YjPoWbBrx52PxcxObDnlh",
+          "YdczdU1unojDhlxZ3SMcEluSnQg",
+          "TibcdZKVnoRlV6x8vp5c2C1enFh",
+          "YRNcdxDImo48BgxBH7zcnf4LnQd",
+          "AvBtdgNEIodHpMxyxVQcAFulnCe",
+          "Qw8Zd9R3yoYFBDxk7Uoc5Aiin4e",
+          "DFJidcCqaoVi4bxnf48cJ6obnSg",
+          "RiEBdd4gXoldU3xeBl8cb3a6nCb",
+          "UMUNdjmbsoIFB4xWHhEcp6tvnyf",
+          "VlkbdEmHco0qtDxxUGvctvY0nSb",
+          "N5UCdmJDfoUgPaxSe3UcaIVRnbb",
+          "VZpodvcogoL8BGx9ORKct7xwnkb",
+          "HPupdPFCNoyJntxzAQkcuG5VnBd",
+          "L6ejdOCyroCuazxw3w7cBuCln0d",
+          "B5qAdU5Y5o13tHxGSoZchpUAnnc",
+          "LElwdJrskoXgDHxyXsIcTttwn5g"
+        ],
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "table": {
+          "cells": [
+            "IT0BdcQX5oNg9Sx6ziucIkninjg",
+            "A2jsd8YyIoGOydxjBkGcBGePnsb",
+            "OHeSdQI3bozJiMx48uvcOkmNnjc",
+            "NwF8dq9Y6ogaOQxStobcQxosnse",
+            "U7GZdDCfloMdBAxhSPHcrXeJnlq",
+            "UpL1dKTymoSVgHxiXencak2dn4b",
+            "AvlCduJU2oLmtxxdonFcwb3Nnzc",
+            "BXADdeUcBoz9GyxaP0dctycWnnf",
+            "PyT2dmpycoLvYVxfljAcsPySn6d",
+            "OTDjdffXio7np7x8YQtcLaFTnDb",
+            "Eh8Mdk3SDoryGkxmhrmcm0w5nxh",
+            "GTm6dMmhhozy6yxxLXHczMhLnmg",
+            "U8KFdatbbovChAxkt7Jc0EyRnQg",
+            "FrCLdn3ohosUhqxYByecFODun6V",
+            "HP7PdFf0Uo4jD5xz6ZncWtNonie",
+            "KZ3JdTqngocp7xx3H2ccxTbqnUg",
+            "JWgVdZ0H6oomPQx39nccmjLVnPf",
+            "C9imdPL0soDQ37xwjN8c23Apnec",
+            "OWfEdDDCSoxJicxkMCrc6vifn6d",
+            "SPmUdTdOmoyo9fxcqnmcstS5nIf",
+            "OYGrdzFCbooxzIx13OHcVuG8ngc",
+            "FL5cdzPV2oDQH0xT9FjcKbR2n6f",
+            "AoSMduhTRo3PmxxJnCqcU6yVn2b",
+            "MgPzd17AloGHTExaunxcHQYln9e",
+            "MsfxdXBlDooHJrxXTYhckPYknnh",
+            "RkEfdjhoko7zYcxNaGVculKtncc",
+            "VkZzdVbcBoqKn8xRQVXcil6Zncd",
+            "YNLUdwAnnoLkKgxNww4cKIoQnWc",
+            "XwMudLJW5o7RuRxjqCJcHyUiniP",
+            "U2XndIQ0xoCPZ3xNRQMcgwBHneg",
+            "PuMbdxbvJoexSZx5PHPcxG4in53",
+            "FhMrdxh0qo7qUXxigxXcJPh2nGI",
+            "TGTIdQyvmo9S42xAVcAcPBlKn0f",
+            "SxpodZNhRo2zsOxaVU4cIFq8n5J",
+            "Dm50dtPAooLD8fxJiR1cHECAn3g",
+            "BObjdsm9LoWMHGxVmTVcJu1WnIu",
+            "SzIgd0YjPoWbBrx52PxcxObDnlh",
+            "YdczdU1unojDhlxZ3SMcEluSnQg",
+            "TibcdZKVnoRlV6x8vp5c2C1enFh",
+            "YRNcdxDImo48BgxBH7zcnf4LnQd",
+            "AvBtdgNEIodHpMxyxVQcAFulnCe",
+            "Qw8Zd9R3yoYFBDxk7Uoc5Aiin4e",
+            "DFJidcCqaoVi4bxnf48cJ6obnSg",
+            "RiEBdd4gXoldU3xeBl8cb3a6nCb",
+            "UMUNdjmbsoIFB4xWHhEcp6tvnyf",
+            "VlkbdEmHco0qtDxxUGvctvY0nSb",
+            "N5UCdmJDfoUgPaxSe3UcaIVRnbb",
+            "VZpodvcogoL8BGx9ORKct7xwnkb",
+            "HPupdPFCNoyJntxzAQkcuG5VnBd",
+            "L6ejdOCyroCuazxw3w7cBuCln0d",
+            "B5qAdU5Y5o13tHxGSoZchpUAnnc",
+            "LElwdJrskoXgDHxyXsIcTttwn5g"
+          ],
+          "property": {
+            "column_size": 4,
+            "column_width": [
+              254,
+              163,
+              174,
+              221
+            ],
+            "header_row": true,
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 13
+          }
+        }
+      },
+      {
+        "block_id": "IT0BdcQX5oNg9Sx6ziucIkninjg",
+        "block_type": 32,
+        "children": [
+          "KwoCd02L3orOC0xNxKLc0N1Ln4b"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "KwoCd02L3orOC0xNxKLc0N1Ln4b",
+        "block_type": 2,
+        "parent_id": "IT0BdcQX5oNg9Sx6ziucIkninjg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "A2jsd8YyIoGOydxjBkGcBGePnsb",
+        "block_type": 32,
+        "children": [
+          "D7PXdXR6doboT9xFJiacYUpFn8b"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "D7PXdXR6doboT9xFJiacYUpFn8b",
+        "block_type": 2,
+        "parent_id": "A2jsd8YyIoGOydxjBkGcBGePnsb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "组织管理员",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OHeSdQI3bozJiMx48uvcOkmNnjc",
+        "block_type": 32,
+        "children": [
+          "MkpFdmTsBon78OxS5bDcR1ZinVe"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "MkpFdmTsBon78OxS5bDcR1ZinVe",
+        "block_type": 2,
+        "parent_id": "OHeSdQI3bozJiMx48uvcOkmNnjc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "项目管理员",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NwF8dq9Y6ogaOQxStobcQxosnse",
+        "block_type": 32,
+        "children": [
+          "IHxTdJ070odSOwxwv8wcv4mRncH"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "IHxTdJ070odSOwxwv8wcv4mRncH",
+        "block_type": 2,
+        "parent_id": "NwF8dq9Y6ogaOQxStobcQxosnse",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "项目成员",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "U7GZdDCfloMdBAxhSPHcrXeJnlq",
+        "block_type": 32,
+        "children": [
+          "ReIHd2d3So1MKfxFq96cYv7Rn6f"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ReIHd2d3So1MKfxFq96cYv7Rn6f",
+        "block_type": 2,
+        "parent_id": "U7GZdDCfloMdBAxhSPHcrXeJnlq",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "个人密钥",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UpL1dKTymoSVgHxiXencak2dn4b",
+        "block_type": 32,
+        "children": [
+          "Uk2ydw5xtoTBn9xDbOdcjqBzn6g"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Uk2ydw5xtoTBn9xDbOdcjqBzn6g",
+        "block_type": 2,
+        "parent_id": "UpL1dKTymoSVgHxiXencak2dn4b",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AvlCduJU2oLmtxxdonFcwb3Nnzc",
+        "block_type": 32,
+        "children": [
+          "TvCBdOnJfosYewx9lfDcSp94ngc"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "TvCBdOnJfosYewx9lfDcSp94ngc",
+        "block_type": 2,
+        "parent_id": "AvlCduJU2oLmtxxdonFcwb3Nnzc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BXADdeUcBoz9GyxaP0dctycWnnf",
+        "block_type": 32,
+        "children": [
+          "CqXEdHqIxojeUKxqxnJcg0sbnhb"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "CqXEdHqIxojeUKxqxnJcg0sbnhb",
+        "block_type": 2,
+        "parent_id": "BXADdeUcBoz9GyxaP0dctycWnnf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PyT2dmpycoLvYVxfljAcsPySn6d",
+        "block_type": 32,
+        "children": [
+          "VwRvdeSjfoU31qxbCQbchlM6nIh"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "VwRvdeSjfoU31qxbCQbchlM6nIh",
+        "block_type": 2,
+        "parent_id": "PyT2dmpycoLvYVxfljAcsPySn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OTDjdffXio7np7x8YQtcLaFTnDb",
+        "block_type": 32,
+        "children": [
+          "JJcwdYhFKo1Q1Vx1ippcNxK8nAd"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "JJcwdYhFKo1Q1Vx1ippcNxK8nAd",
+        "block_type": 2,
+        "parent_id": "OTDjdffXio7np7x8YQtcLaFTnDb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "系统自动分配",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Eh8Mdk3SDoryGkxmhrmcm0w5nxh",
+        "block_type": 32,
+        "children": [
+          "RAuadRN1DoX54JxAuO8chFtnnjg"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RAuadRN1DoX54JxAuO8chFtnnjg",
+        "block_type": 2,
+        "parent_id": "Eh8Mdk3SDoryGkxmhrmcm0w5nxh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "系统自动分配",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GTm6dMmhhozy6yxxLXHczMhLnmg",
+        "block_type": 32,
+        "children": [
+          "PfcbdXYu8oO4bRx1eZEcGQaYnoc"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "PfcbdXYu8oO4bRx1eZEcGQaYnoc",
+        "block_type": 2,
+        "parent_id": "GTm6dMmhhozy6yxxLXHczMhLnmg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "系统自动分配",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "U8KFdatbbovChAxkt7Jc0EyRnQg",
+        "block_type": 32,
+        "children": [
+          "FzEbdxeB4oMWe6xeAnncZzXinLg"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "FzEbdxeB4oMWe6xeAnncZzXinLg",
+        "block_type": 2,
+        "parent_id": "U8KFdatbbovChAxkt7Jc0EyRnQg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看自身的 API 密钥",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FrCLdn3ohosUhqxYByecFODun6V",
+        "block_type": 32,
+        "children": [
+          "PsNZdHqUgo0AMfxjYs8cyUv4nMd"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "PsNZdHqUgo0AMfxjYs8cyUv4nMd",
+        "block_type": 2,
+        "parent_id": "FrCLdn3ohosUhqxYByecFODun6V",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✔️ ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HP7PdFf0Uo4jD5xz6ZncWtNonie",
+        "block_type": 32,
+        "children": [
+          "QnN3dGxWCohxObxgKVJcrR8QnCQ"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QnN3dGxWCohxObxgKVJcrR8QnCQ",
+        "block_type": 2,
+        "parent_id": "HP7PdFf0Uo4jD5xz6ZncWtNonie",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✔️",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KZ3JdTqngocp7xx3H2ccxTbqnUg",
+        "block_type": 32,
+        "children": [
+          "Pe8Td7ShoovCSexRAzfcwNBFnoc"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Pe8Td7ShoovCSexRAzfcwNBFnoc",
+        "block_type": 2,
+        "parent_id": "KZ3JdTqngocp7xx3H2ccxTbqnUg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✔️",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JWgVdZ0H6oomPQx39nccmjLVnPf",
+        "block_type": 32,
+        "children": [
+          "QlIzdjc72oBbPgxkLqeczHtOnIc"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QlIzdjc72oBbPgxkLqeczHtOnIc",
+        "block_type": 2,
+        "parent_id": "JWgVdZ0H6oomPQx39nccmjLVnPf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看其他成员的 API 密钥名称 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "[1]",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "C9imdPL0soDQ37xwjN8c23Apnec",
+        "block_type": 32,
+        "children": [
+          "ZMfrdOw9mo3sofxPUmNcdl8aniQ"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ZMfrdOw9mo3sofxPUmNcdl8aniQ",
+        "block_type": 2,
+        "parent_id": "C9imdPL0soDQ37xwjN8c23Apnec",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✔️ ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OWfEdDDCSoxJicxkMCrc6vifn6d",
+        "block_type": 32,
+        "children": [
+          "KOpRdW5zsoWB5AxdL2Tc7SCAnhg"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "KOpRdW5zsoWB5AxdL2Tc7SCAnhg",
+        "block_type": 2,
+        "parent_id": "OWfEdDDCSoxJicxkMCrc6vifn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✔️ ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SPmUdTdOmoyo9fxcqnmcstS5nIf",
+        "block_type": 32,
+        "children": [
+          "D8dndADZAoQrmexkgfkcFuMdnVe"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "D8dndADZAoQrmexkgfkcFuMdnVe",
+        "block_type": 2,
+        "parent_id": "SPmUdTdOmoyo9fxcqnmcstS5nIf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✘",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OYGrdzFCbooxzIx13OHcVuG8ngc",
+        "block_type": 32,
+        "children": [
+          "HHn0dikkFoHRa5xvNWRc5U7Lnvb"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "HHn0dikkFoHRa5xvNWRc5U7Lnvb",
+        "block_type": 2,
+        "parent_id": "OYGrdzFCbooxzIx13OHcVuG8ngc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "重置 API 密钥 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "[2]",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FL5cdzPV2oDQH0xT9FjcKbR2n6f",
+        "block_type": 32,
+        "children": [
+          "GxFodhneEozMcnx836Dc7lMCnYf"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "GxFodhneEozMcnx836Dc7lMCnYf",
+        "block_type": 2,
+        "parent_id": "FL5cdzPV2oDQH0xT9FjcKbR2n6f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✔️",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AoSMduhTRo3PmxxJnCqcU6yVn2b",
+        "block_type": 32,
+        "children": [
+          "WvQodcEnpon26VxlT6bcqWuFnde"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "WvQodcEnpon26VxlT6bcqWuFnde",
+        "block_type": 2,
+        "parent_id": "AoSMduhTRo3PmxxJnCqcU6yVn2b",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✔️",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MgPzd17AloGHTExaunxcHQYln9e",
+        "block_type": 32,
+        "children": [
+          "RuPMdPiQFoysKVxoyIKcguponEb"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RuPMdPiQFoysKVxoyIKcguponEb",
+        "block_type": 2,
+        "parent_id": "MgPzd17AloGHTExaunxcHQYln9e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✔️",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MsfxdXBlDooHJrxXTYhckPYknnh",
+        "block_type": 32,
+        "children": [
+          "Ku0xdxAyXo5yfAxGrtKc0hj9nlc"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Ku0xdxAyXo5yfAxGrtKc0hj9nlc",
+        "block_type": 2,
+        "parent_id": "MsfxdXBlDooHJrxXTYhckPYknnh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "自定义密钥",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RkEfdjhoko7zYcxNaGVculKtncc",
+        "block_type": 32,
+        "children": [
+          "MeaId9LPgovfFqxWS2mc2FY4n1e"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "MeaId9LPgovfFqxWS2mc2FY4n1e",
+        "block_type": 2,
+        "parent_id": "RkEfdjhoko7zYcxNaGVculKtncc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VkZzdVbcBoqKn8xRQVXcil6Zncd",
+        "block_type": 32,
+        "children": [
+          "YISSd9o3FohleSxwiTvcQBNjnSf"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "YISSd9o3FohleSxwiTvcQBNjnSf",
+        "block_type": 2,
+        "parent_id": "VkZzdVbcBoqKn8xRQVXcil6Zncd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YNLUdwAnnoLkKgxNww4cKIoQnWc",
+        "block_type": 32,
+        "children": [
+          "LY76dN5eoonanLxs9q8cBF2znnd"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "LY76dN5eoonanLxs9q8cBF2znnd",
+        "block_type": 2,
+        "parent_id": "YNLUdwAnnoLkKgxNww4cKIoQnWc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XwMudLJW5o7RuRxjqCJcHyUiniP",
+        "block_type": 32,
+        "children": [
+          "VtYHdMcC3ol8z8xIV1Dch9rRn9d"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "VtYHdMcC3ol8z8xIV1Dch9rRn9d",
+        "block_type": 2,
+        "parent_id": "XwMudLJW5o7RuRxjqCJcHyUiniP",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "U2XndIQ0xoCPZ3xNRQMcgwBHneg",
+        "block_type": 32,
+        "children": [
+          "UP2wdErhWoTUB0xYtWVcOZXLnuf"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "UP2wdErhWoTUB0xYtWVcOZXLnuf",
+        "block_type": 2,
+        "parent_id": "U2XndIQ0xoCPZ3xNRQMcgwBHneg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✔️",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PuMbdxbvJoexSZx5PHPcxG4in53",
+        "block_type": 32,
+        "children": [
+          "MY5odoJpgoxoE3xnuhJcLBTUn1s"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "MY5odoJpgoxoE3xnuhJcLBTUn1s",
+        "block_type": 2,
+        "parent_id": "PuMbdxbvJoexSZx5PHPcxG4in53",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✔️ ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "[3]",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FhMrdxh0qo7qUXxigxXcJPh2nGI",
+        "block_type": 32,
+        "children": [
+          "G5FUdiXwhoeNQsxoTBLcDIisnVe"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "G5FUdiXwhoeNQsxoTBLcDIisnVe",
+        "block_type": 2,
+        "parent_id": "FhMrdxh0qo7qUXxigxXcJPh2nGI",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✘",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TGTIdQyvmo9S42xAVcAcPBlKn0f",
+        "block_type": 32,
+        "children": [
+          "VYNwdmTOdoMw2kxurf0cbiemnLd"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "VYNwdmTOdoMw2kxurf0cbiemnLd",
+        "block_type": 2,
+        "parent_id": "TGTIdQyvmo9S42xAVcAcPBlKn0f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SxpodZNhRo2zsOxaVU4cIFq8n5J",
+        "block_type": 32,
+        "children": [
+          "GrbKdrGriox4shxbpTockhzZn2b"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "GrbKdrGriox4shxbpTockhzZn2b",
+        "block_type": 2,
+        "parent_id": "SxpodZNhRo2zsOxaVU4cIFq8n5J",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✔️",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Dm50dtPAooLD8fxJiR1cHECAn3g",
+        "block_type": 32,
+        "children": [
+          "QZR9dGqSpo1wVdx2HjYcNI6Lnoe"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QZR9dGqSpo1wVdx2HjYcNI6Lnoe",
+        "block_type": 2,
+        "parent_id": "Dm50dtPAooLD8fxJiR1cHECAn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✔️ ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "[4]",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BObjdsm9LoWMHGxVmTVcJu1WnIu",
+        "block_type": 32,
+        "children": [
+          "QEZod8gYaoEouZxVhYScpBcuno9"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QEZod8gYaoEouZxVhYScpBcuno9",
+        "block_type": 2,
+        "parent_id": "BObjdsm9LoWMHGxVmTVcJu1WnIu",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✘",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SzIgd0YjPoWbBrx52PxcxObDnlh",
+        "block_type": 32,
+        "children": [
+          "AJ8xd53yPo9n1lxFvvdcgNsZnYd"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "AJ8xd53yPo9n1lxFvvdcgNsZnYd",
+        "block_type": 2,
+        "parent_id": "SzIgd0YjPoWbBrx52PxcxObDnlh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "移除 API 密钥权限 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YdczdU1unojDhlxZ3SMcEluSnQg",
+        "block_type": 32,
+        "children": [
+          "UDUvdVI5poUcwJxBXg9cKViinJ9"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "UDUvdVI5poUcwJxBXg9cKViinJ9",
+        "block_type": 2,
+        "parent_id": "YdczdU1unojDhlxZ3SMcEluSnQg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✔️",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TibcdZKVnoRlV6x8vp5c2C1enFh",
+        "block_type": 32,
+        "children": [
+          "TE4FdPzyioieEpxCkxZcK740nIb"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "TE4FdPzyioieEpxCkxZcK740nIb",
+        "block_type": 2,
+        "parent_id": "TibcdZKVnoRlV6x8vp5c2C1enFh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✔️ ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "[4]",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YRNcdxDImo48BgxBH7zcnf4LnQd",
+        "block_type": 32,
+        "children": [
+          "O1nDdD9ZzoIxY0xz5excojiqneb"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "O1nDdD9ZzoIxY0xz5excojiqneb",
+        "block_type": 2,
+        "parent_id": "YRNcdxDImo48BgxBH7zcnf4LnQd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✘",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AvBtdgNEIodHpMxyxVQcAFulnCe",
+        "block_type": 32,
+        "children": [
+          "TL9XdqXQpouu7xxGYG0cF67QnJf"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "TL9XdqXQpouu7xxGYG0cF67QnJf",
+        "block_type": 2,
+        "parent_id": "AvBtdgNEIodHpMxyxVQcAFulnCe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "编辑 API 密钥名称",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Qw8Zd9R3yoYFBDxk7Uoc5Aiin4e",
+        "block_type": 32,
+        "children": [
+          "BemEdiy8CoclrCxNqxjc3SR7ny6"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "BemEdiy8CoclrCxNqxjc3SR7ny6",
+        "block_type": 2,
+        "parent_id": "Qw8Zd9R3yoYFBDxk7Uoc5Aiin4e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✔️",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DFJidcCqaoVi4bxnf48cJ6obnSg",
+        "block_type": 32,
+        "children": [
+          "Q9vsdsJaRoi0haxnobncBk4cnve"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Q9vsdsJaRoi0haxnobncBk4cnve",
+        "block_type": 2,
+        "parent_id": "DFJidcCqaoVi4bxnf48cJ6obnSg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✘",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RiEBdd4gXoldU3xeBl8cb3a6nCb",
+        "block_type": 32,
+        "children": [
+          "JntOdyqq8o5ZvIxZh0gcL8DUnbe"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "JntOdyqq8o5ZvIxZh0gcL8DUnbe",
+        "block_type": 2,
+        "parent_id": "RiEBdd4gXoldU3xeBl8cb3a6nCb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✘",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UMUNdjmbsoIFB4xWHhEcp6tvnyf",
+        "block_type": 32,
+        "children": [
+          "MrqBdY9fWo65p2x2SZVccaqZnSb"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "MrqBdY9fWo65p2x2SZVccaqZnSb",
+        "block_type": 2,
+        "parent_id": "UMUNdjmbsoIFB4xWHhEcp6tvnyf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "重置 API 密钥",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VlkbdEmHco0qtDxxUGvctvY0nSb",
+        "block_type": 32,
+        "children": [
+          "QjK5dKgLwotefXxOW52cqI2ondf"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QjK5dKgLwotefXxOW52cqI2ondf",
+        "block_type": 2,
+        "parent_id": "VlkbdEmHco0qtDxxUGvctvY0nSb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✔️",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "N5UCdmJDfoUgPaxSe3UcaIVRnbb",
+        "block_type": 32,
+        "children": [
+          "K7addJMzyoE7YyxKBlzcgb9HnJc"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "K7addJMzyoE7YyxKBlzcgb9HnJc",
+        "block_type": 2,
+        "parent_id": "N5UCdmJDfoUgPaxSe3UcaIVRnbb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✘",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VZpodvcogoL8BGx9ORKct7xwnkb",
+        "block_type": 32,
+        "children": [
+          "OaWadOt4bon6kUxcC6YcTMvenFc"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "OaWadOt4bon6kUxcC6YcTMvenFc",
+        "block_type": 2,
+        "parent_id": "VZpodvcogoL8BGx9ORKct7xwnkb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✘",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HPupdPFCNoyJntxzAQkcuG5VnBd",
+        "block_type": 32,
+        "children": [
+          "QoebdDUSioZ7WgxXvogczB0bnZf"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QoebdDUSioZ7WgxXvogczB0bnZf",
+        "block_type": 2,
+        "parent_id": "HPupdPFCNoyJntxzAQkcuG5VnBd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "删除 API 密钥",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "L6ejdOCyroCuazxw3w7cBuCln0d",
+        "block_type": 32,
+        "children": [
+          "M0yrdS7NXoOR7Hx9MgpcSDQWnfg"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "M0yrdS7NXoOR7Hx9MgpcSDQWnfg",
+        "block_type": 2,
+        "parent_id": "L6ejdOCyroCuazxw3w7cBuCln0d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✔️",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "B5qAdU5Y5o13tHxGSoZchpUAnnc",
+        "block_type": 32,
+        "children": [
+          "HqItdcsqBo99VFxfzk7clbMkn6d"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "HqItdcsqBo99VFxfzk7clbMkn6d",
+        "block_type": 2,
+        "parent_id": "B5qAdU5Y5o13tHxGSoZchpUAnnc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✘",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LElwdJrskoXgDHxyXsIcTttwn5g",
+        "block_type": 32,
+        "children": [
+          "PVh7duR1eoElfxxKoUmcDDvXn8d"
+        ],
+        "parent_id": "HRvBdJx7Doz924xniLJcvUpyntb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "PVh7duR1eoElfxxKoUmcDDvXn8d",
+        "block_type": 2,
+        "parent_id": "LElwdJrskoXgDHxyXsIcTttwn5g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "✘",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "M0ZSdN4zsof1Jgx5CFHcsfeVnUc",
+        "block_type": 2,
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "备注：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IJTXdv9QaoeclSxI4lHceAt0ncT",
+        "block_type": 2,
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "[1] 拥有管理员身份的用户可以根据其权限范围查看其他成员的 API 密钥名称。组织管理员可查看整个组织内所有成员的 API 密钥名称，而项目管理员仅能查看自己权限范围内的密钥。项目成员只能查看自己的个人密钥。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VSuudDpWYoBi6pxkIL4cepYjnuf",
+        "block_type": 2,
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "[2] 每个用户只能重置自己的个人密钥。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FrqOdJmKWosGd6xfHsYczb0Znzf",
+        "block_type": 2,
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "[3] 项目管理员授予自定义 API 密钥的权限受到其自身权限范围的限制。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BCXMdnckBoFeQZxSLqKc4Y1HnFf",
+        "block_type": 2,
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "[4] 项目管理员只能查看或管理其自身权限范围内的自定义 API 密钥。例如，用户 1 拥有项目 A 的权限。如果某个自定义 API 密钥（密钥 1）具有访问项目 A、B 和 C 的权限，由于该密钥的访问范围超出了用户 1 的权限，用户 1 无法访问密钥 1。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JEzEdPp0WoB64PxrnuNc75qong2",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建 API 密钥{#create-an-api-key}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "A91mdLd6MocaaRxPeoQcI6yMn6g",
+        "block_type": 2,
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在 Zilliz Cloud 中，除了系统为每位组织用户自动生成的个人密钥外，您还可以手动创建自定义密钥。对于需要长期维护的项目或应用程序开发，推荐使用自定义 API 密钥而非个人密钥。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FWUGdWazUodRRyx5CXdc2tyRnCb",
+        "block_type": 2,
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "每位组织管理员或项目管理员均有权限创建自定义 API 密钥。创建 API 密钥的关键是确定其访问范围，包括定义该密钥能访问的项目和集群。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TvlSdkSrpoKoltxhoRNcaGw5nPe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "API 密钥访问权限",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：您可以通过设定适当的组织角色、明确密钥所能访问的特定项目，并为该项目内的密钥设定角色来定义该自定义 API 密钥的访问范围。为实现更精细化的访问控制，您还可以设置“仅限访问特定集群”的白名单，以此来限制密钥的访问范围。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "QiwBdfVTcoFCWuxVeNic0RD2npb",
+        "block_type": 2,
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API 密钥访问权限",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "设置中，您可以添加 API 密钥的可访问项目。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MZxfdxku0oQMvZx9CY2cs6A2nif",
+        "block_type": 34,
+        "children": [
+          "X4OYdJzDlo7u4Gxps2dcca58nzd",
+          "Iflhdhqfroy3nOxQBxKcQIGWnJh"
+        ],
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "quote_container": {}
+      },
+      {
+        "block_id": "X4OYdJzDlo7u4Gxps2dcca58nzd",
+        "block_type": 2,
+        "parent_id": "MZxfdxku0oQMvZx9CY2cs6A2nif",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Iflhdhqfroy3nOxQBxKcQIGWnJh",
+        "block_type": 2,
+        "parent_id": "MZxfdxku0oQMvZx9CY2cs6A2nif",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "对于创建自定义 API 密钥的项目管理员而言，您所能授予 API 密钥的权限范围取决于您自身的权限范围。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EWCjdMCgNoD0nHxWykecguLlnib",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D32982-1200%26mode%3Ddesign%26t%3DtRIs5rm1TPXPf6hz-4"
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "RoGgdjNaGopfYbx819gcZc8rnsb",
+        "block_type": 2,
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "之后，您便可以使用该自定义 API 密钥连接到集群。查看",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "连接集群",
+                "token": "HU31wDHCCiN9qIknZ2fcLmconNh",
+                "url": "https://zilliverse.feishu.cn/wiki/HU31wDHCCiN9qIknZ2fcLmconNh"
+              }
+            },
+            {
+              "text_run": {
+                "content": "了解更多。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DS0ldtrlmoBIQfx8RtXcGoGKnIb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看 API 密钥{#view-api-keys}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "FXo5d2jBzoRT92xbFANcEXwpnYf",
+        "block_type": 2,
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在 Zilliz Cloud 中，只有组织管理员或项目管理员才有权查看已创建的 API 密钥。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EYSzdQMfkoB6jLxT2PyciBbXnTC",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "个人密钥",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：组织管理员或项目管理员可以查看组织内为用户生成的 API 密钥名称。但是，他们不能获取这些个人 API 密钥的实际值，以此来保障用户隐私和安全性。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "XmnRdBbkboYjDExsVRUcGu0znCf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "自定义密钥",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：组织管理员有权查看组织内所有创建的自定义 API 密钥。如果您是项目管理员，您只能查看您管理权限范围内的 API 密钥。也就是说，您只能访问与您的项目相关，并处于您管理权限之内的 API 密钥。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "JLUZdFv9zoHeA1xgssVcMqrLnef",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D33025-1227%26mode%3Ddesign%26t%3DtRIs5rm1TPXPf6hz-4"
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "WNIldGLaJooobZxy2NPc22tqnAb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "编辑 API 密钥{#edit-an-api-key}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "NWOgdLypyogrImxLw8RcgpV8nLe",
+        "block_type": 2,
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "作为组织管理员或项目管理员，您可以编辑 API 密钥，包括更改其名称或修改其访问权限。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CdIBd2F0robcTKx8RDOcMtCNnTh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "更改自定义密钥名称：只有组织管理员有权限更改自定义 API 密钥的名称。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "IbqKdLJqpov7MaxicG8cntNxnPg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "修改访问权限：作为组织管理员，您可以修改 API 密钥的访问权限。如果您是项目管理员，您修改 API 密钥权限的能力将取决于您已有的权限范围。这意味着作为项目管理员，您无法将权限提升到超出您当前访问权限的更高级别，以确保不会发生权限膨胀。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "NGeddGEavovP25xOdT5cZp5SnId",
+        "block_type": 34,
+        "children": [
+          "CjYAdrnvbogOeNxKgfbcDCFPn0d"
+        ],
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "quote_container": {}
+      },
+      {
+        "block_id": "CjYAdrnvbogOeNxKgfbcDCFPn0d",
+        "block_type": 2,
+        "parent_id": "NGeddGEavovP25xOdT5cZp5SnId",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "只有自定义 API 密钥才可被编辑。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "V6tEdv3crosZ8DxwmgvcazBonie",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D33025-1263%26mode%3Ddesign%26t%3DtRIs5rm1TPXPf6hz-4"
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "Oa8ddE2hEor6zMx91TacPAhrn0b",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "重置 API 密钥{#reset-an-api-key}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "TrGsduNh4oQJ5GxfJkmchLydnld",
+        "block_type": 2,
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为保持访问控制的安全性和完整性，重置 API 密钥是至关重要的。根据密钥的类型，其处理方式也有所不同：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XN9AdURUyoXkDAx5HbjchRhsnqg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "个人密钥",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：组织中的每位用户都可以只重置自己的个人 API 密钥，而不论其角色。这确保用户能够迅速应对任何安全问题或访问障碍，通过生成新密钥来维持一个安全、个性化的访问系统。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "FI7LdRnZKo5jcTxcKj9c5UMqnLg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "自定义密钥",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：只有组织管理员有权重置自定义 API 密钥。这种控制级别在管理广泛的组织级访问和安全方面至关重要。组织管理员可以重置这些密钥，以解决安全问题或更新访问协议，确保应用级别访问的完整性不受影响。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "UqtXdFjHFo48aBxe3QbcmqwbnCc",
+        "block_type": 34,
+        "children": [
+          "Gcr4ddCuyoNxAMxViZrcyZD1nMf",
+          "ZzyDd8FNUoWuQvxXD31cZlr9nmd"
+        ],
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "quote_container": {}
+      },
+      {
+        "block_id": "Gcr4ddCuyoNxAMxViZrcyZD1nMf",
+        "block_type": 2,
+        "parent_id": "UqtXdFjHFo48aBxe3QbcmqwbnCc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "🚧 警告",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZzyDd8FNUoWuQvxXD31cZlr9nmd",
+        "block_type": 2,
+        "parent_id": "UqtXdFjHFo48aBxe3QbcmqwbnCc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "此操作将重置并使当前 API 密钥失效。依赖此密钥的任何代码将停止运行，直至您用新密钥更新相关代码。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RdDyd8obQoZz7hxzM8bcjxR5ngh",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D33025-1292%26mode%3Ddesign%26t%3DtRIs5rm1TPXPf6hz-4"
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "TK9GdiFOLo9NOGx1oZuc6YgfnBh",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "删除 API 密钥{#delete-an-api-key}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "WzLldFrCeofNmRxOa8ycuPyLnGg",
+        "block_type": 2,
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "当不再需要某个 API 密钥时，作为组织管理员，您可以将其删除。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LEL4dkrJMoPxRexqypJcAVzangh",
+        "block_type": 2,
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "只有自定义 API 密钥可以被删除。个人密钥可以由用户本人重置，但无法删除。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZcuidhxTUorEwWxE2C4c1honnwe",
+        "block_type": 34,
+        "children": [
+          "JEeUdKEoWoAUtaxqQcTcvV9AnCg",
+          "RRpBdScGdoJImQxq4NUcMGutnAc"
+        ],
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb",
+        "quote_container": {}
+      },
+      {
+        "block_id": "JEeUdKEoWoAUtaxqQcTcvV9AnCg",
+        "block_type": 2,
+        "parent_id": "ZcuidhxTUorEwWxE2C4c1honnwe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "🚧 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "警告",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RRpBdScGdoJImQxq4NUcMGutnAc",
+        "block_type": 2,
+        "parent_id": "ZcuidhxTUorEwWxE2C4c1honnwe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在删除 API 密钥时请格外小心。这将立即撤销所有使用该密钥的资源的访问权。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZpJ1dmJ2noBA4DxXEHRcsomen9d",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D33025-1321%26mode%3Ddesign%26t%3DtRIs5rm1TPXPf6hz-4"
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "W0r4dGkanoswcpxFH5jcoTyDnAT",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "文档推荐{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "HWwOd3PMkoOZVbxbuWjcZVwXnqb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "连接集群",
+                "token": "HU31wDHCCiN9qIknZ2fcLmconNh",
+                "url": "https://zilliverse.feishu.cn/wiki/HU31wDHCCiN9qIknZ2fcLmconNh"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "MGf5d5llAoNYRMxx4MbcT4x8npe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "管理身份凭证",
+                "token": "VNWiwtYwGi9m0Okhj3Zce8wAnte",
+                "url": "https://zilliverse.feishu.cn/wiki/VNWiwtYwGi9m0Okhj3Zce8wAnte"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.notion.so%2FManage-Cluster-Credentials-562e60b054a64026b6f3e45ff6fe4338%3Fpvs%3D21"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "NlGad2hUho3CG3xmneYcWsj2n1d",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "设置白名单",
+                "token": "RwEzw2l4siJB5Ake7FOcVU4knre",
+                "url": "https://zilliverse.feishu.cn/wiki/RwEzw2l4siJB5Ake7FOcVU4knre"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.notion.so%2Fcf88e3f8ced34279a2f4515e472d6e12%3Fpvs%3D21"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      },
+      {
+        "block_id": "KgUCdJRgsoL5vsx3RwocVS8jnkb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "管理 MFA",
+                "token": "EWAWwESijisVHFkoAEbcfhvPnZb",
+                "url": "https://zilliverse.feishu.cn/wiki/EWAWwESijisVHFkoAEbcfhvPnZb"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GQTCdYpOqop0UIxqBUScktmrnJb"
+      }
+    ],
+    "counts": 167
+  }
+}

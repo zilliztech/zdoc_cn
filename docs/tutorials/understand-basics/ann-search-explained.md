@@ -2,6 +2,7 @@
 slug: /ann-search-explained
 beta: FALSE
 notebook: FALSE
+token: E4Ggw2FU3iXekOklaytcDy47nRg
 sidebar_position: 4
 ---
 
@@ -31,29 +32,8 @@ Hierarchical Navigable Small World（HNSW）算法通过创建多层接近图（
 1. 一旦确定了顶层的最近向量，使用较低层的相同向量作为入口点，在该层中找到其最近邻。
 
 1. 重复上述步骤，直到找到底层的最近向量。
+
     ![Dkj8bpJswoXHzPxBz3hcOHSDnRg](/img/Dkj8bpJswoXHzPxBz3hcOHSDnRg.png)
-
-## ANNOY：树索引算法{#annoy-a-tree-based-indexing-algorithm}
-
-Approximate Nearest Neighbor Oh Yeah（ANNOY）通过构建二叉树森林来索引向量空间。ANNOY 使用在向量空间中距离两个随机向量相等的超平面来将空间分成 2 个子空间。对每个子空间重复此过程，直到每个子空间中最多有 K 项。
-
-单棵树可能不够，因为一些最近邻可能存在于叶多边形之外。ANNOY 建议构建二叉树森林，并从找到的多个叶多边形中选择 top-K 最近邻。
-
-下图为树索引分割超平面的过程。
-
-![ExS8bUPxNodT7dxN0Ezc8P57nke](/img/ExS8bUPxNodT7dxN0Ezc8P57nke.png)
-
-二叉树森林准备就绪后，搜索步骤如下：
-
-1. 启动优先队列并将每个树的根插入队列。
-
-1. 使用优先队列在这些树中进行搜索，直到找到 K 个候选项。
-
-1. 删除重复的候选项。
-
-1. 计算与候选项的距离。
-
-1. 按距离对候选项进行排序，并列出 top-K 个结果。
 
 ## LSH：哈希索引算法{#lsh-a-hash-based-ann-indexing-algorithm}
 

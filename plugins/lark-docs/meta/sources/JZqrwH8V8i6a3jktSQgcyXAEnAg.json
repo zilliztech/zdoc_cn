@@ -1,0 +1,847 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1693380607",
+  "node_token": "JZqrwH8V8i6a3jktSQgcyXAEnAg",
+  "node_type": "origin",
+  "obj_create_time": "1693380607",
+  "obj_edit_time": "1700705149",
+  "obj_token": "WlTAdi6lkonSNOx9AvEcoKYcn4f",
+  "obj_type": "docx",
+  "origin_node_token": "JZqrwH8V8i6a3jktSQgcyXAEnAg",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "Uj7IwJpneijPROkAZN7cJRLInrc",
+  "space_id": "7167193056431783939",
+  "title": "现金充值",
+  "slug": "advance-pay",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "WlTAdi6lkonSNOx9AvEcoKYcn4f",
+        "block_type": 1,
+        "children": [
+          "TL1hdzyB4o2nyCxUWX7c3JEGnwb",
+          "GnLbdGQFpoeg4cx1NjOcpXY0n3e",
+          "W1VUdWbrWogcMkxFQHpcd9pinGb",
+          "I30QdGghRoCmxGxxgcgckx5rn1e",
+          "JdyMdEQZMo5zpexu0LkcPaSgnqh",
+          "NCOLdEs0noeA82xZoApcAi2kn3e",
+          "XnpYd2k7Ooy8xyx10pYcp4Idn1c",
+          "Ggf6drCzxoaExRxVQMpcghbCnPd",
+          "BI8BdF9Eho0ZIGx5Z25cMlXbnZg",
+          "GbnZdi8JDoDOYRxtVE4ciW8jnAg",
+          "KF0mduW7ToNfYpx1LMYc9ipVnzd",
+          "NaLYd73IZobmcNxCyHpcmwkPn8Q",
+          "S1TDde0QyomaD5xvcPycZ9nsn9b",
+          "XBMxdKWUoonrCkxyXr3cnUwxnfb",
+          "TAg7duFEeoJQYdx8WBbcWumvn2e"
+        ],
+        "comment_ids": [
+          "7275918830940291076"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "现金充值",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7275918830940291076"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "TL1hdzyB4o2nyCxUWX7c3JEGnwb",
+        "block_type": 2,
+        "parent_id": "WlTAdi6lkonSNOx9AvEcoKYcn4f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "免费试用到期后，您需要添加支付方式方可继续使用 Zilliz Cloud。Zilliz Cloud 支持多种支付方式，包括现金充值和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "订阅",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FUTRZwxLf3ikwvbkXrKjcWAwOnmg"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "阿里云市场",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FUTRZwxLf3ikwvbkXrKjcWAwOnmg"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。本章主要介绍如何通过线下转账的方式进行现金充值。如需开具发票，请参考",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "开具发票",
+                "token": "JTuUwoHUyiqJU6kuu30cN9ibnkh",
+                "url": "https://zilliverse.feishu.cn/wiki/JTuUwoHUyiqJU6kuu30cN9ibnkh"
+              }
+            },
+            {
+              "text_run": {
+                "content": " 。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GnLbdGQFpoeg4cx1NjOcpXY0n3e",
+        "block_type": 2,
+        "parent_id": "WlTAdi6lkonSNOx9AvEcoKYcn4f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "W1VUdWbrWogcMkxFQHpcd9pinGb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "现金充值（线下转账）{#add-funds}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WlTAdi6lkonSNOx9AvEcoKYcn4f"
+      },
+      {
+        "block_id": "I30QdGghRoCmxGxxgcgckx5rn1e",
+        "block_type": 2,
+        "parent_id": "WlTAdi6lkonSNOx9AvEcoKYcn4f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需进行现金充值，您需要先通过",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "企业认证",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FVRLOw9Mc7iPWnCkZs2YcoGwSnLh"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JdyMdEQZMo5zpexu0LkcPaSgnqh",
+        "block_type": 13,
+        "children": [
+          "RKEVdsOqkoiPY7xi0Zfcasq1nqh"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击左侧导航栏中的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "账单",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "现金余额",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "部分，点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "充值",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "按钮。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WlTAdi6lkonSNOx9AvEcoKYcn4f"
+      },
+      {
+        "block_id": "RKEVdsOqkoiPY7xi0Zfcasq1nqh",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D9409-5753%26mode%3Ddesign%26t%3D2JDGU6o9z15UAvTp-4"
+          }
+        },
+        "parent_id": "JdyMdEQZMo5zpexu0LkcPaSgnqh"
+      },
+      {
+        "block_id": "NCOLdEs0noeA82xZoApcAi2kn3e",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看弹窗中的对公转账收款信息，并进行线下转账。转账成功后，您将收到 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 充值成功",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "的邮件提醒。请注意：充值金额预计在转账后的 5～10 分钟后到账。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WlTAdi6lkonSNOx9AvEcoKYcn4f"
+      },
+      {
+        "block_id": "XnpYd2k7Ooy8xyx10pYcp4Idn1c",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "现金余额",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "部分查看余额并点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "充值记录",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "查看所有历史充值记录的详情。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WlTAdi6lkonSNOx9AvEcoKYcn4f"
+      },
+      {
+        "block_id": "Ggf6drCzxoaExRxVQMpcghbCnPd",
+        "block_type": 34,
+        "children": [
+          "JJBTdGjoeo9c9MxWw24cr8v4ndh",
+          "US3ydH38NosTflxa9CucQ01xnWB",
+          "BhdedoQikoj5PIxV8Bgcrm2eneb"
+        ],
+        "parent_id": "WlTAdi6lkonSNOx9AvEcoKYcn4f",
+        "quote_container": {}
+      },
+      {
+        "block_id": "JJBTdGjoeo9c9MxWw24cr8v4ndh",
+        "block_type": 2,
+        "parent_id": "Ggf6drCzxoaExRxVQMpcghbCnPd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "US3ydH38NosTflxa9CucQ01xnWB",
+        "block_type": 2,
+        "parent_id": "Ggf6drCzxoaExRxVQMpcghbCnPd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您的组织账号中还有剩余免费额度，已进行过线下转账充值，并同时开通阿里云云市场扣费渠道，则扣费顺序为：免费额度>现金余额>阿里云市场。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BhdedoQikoj5PIxV8Bgcrm2eneb",
+        "block_type": 2,
+        "parent_id": "Ggf6drCzxoaExRxVQMpcghbCnPd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "例如，当您有一份账单需要支付时，我们会先扣除您的免费额度。如果剩余免费额度不足以抵扣全部账单金额，我们会扣除所有剩余免费额度，剩余账单金额部分将扣除您的现金余额。如扣除免费额度和现金余额后，依旧不足以抵扣全部账单金额，我们将通过您绑定的阿里云云市场账号进行扣费。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BI8BdF9Eho0ZIGx5Z25cMlXbnZg",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "现金余额监控默认关闭，如果需要打开现金余额监控，请参阅",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "现金余额监控",
+                "token": "RVukw4utriu4S6k18hBc9xiSn0d",
+                "url": "https://zilliverse.feishu.cn/wiki/RVukw4utriu4S6k18hBc9xiSn0d"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WlTAdi6lkonSNOx9AvEcoKYcn4f"
+      },
+      {
+        "block_id": "GbnZdi8JDoDOYRxtVE4ciW8jnAg",
+        "block_type": 2,
+        "parent_id": "WlTAdi6lkonSNOx9AvEcoKYcn4f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KF0mduW7ToNfYpx1LMYc9ipVnzd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相关文档{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WlTAdi6lkonSNOx9AvEcoKYcn4f"
+      },
+      {
+        "block_id": "NaLYd73IZobmcNxCyHpcmwkPn8Q",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "企业认证",
+                "token": "VRLOw9Mc7iPWnCkZs2YcoGwSnLh",
+                "url": "https://zilliverse.feishu.cn/wiki/VRLOw9Mc7iPWnCkZs2YcoGwSnLh"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WlTAdi6lkonSNOx9AvEcoKYcn4f"
+      },
+      {
+        "block_id": "S1TDde0QyomaD5xvcPycZ9nsn9b",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "订阅阿里云市场",
+                "token": "UTRZwxLf3ikwvbkXrKjcWAwOnmg",
+                "url": "https://zilliverse.feishu.cn/wiki/UTRZwxLf3ikwvbkXrKjcWAwOnmg"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WlTAdi6lkonSNOx9AvEcoKYcn4f"
+      },
+      {
+        "block_id": "XBMxdKWUoonrCkxyXr3cnUwxnfb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "查看账单与支付方式",
+                "token": "NhbHwPiL2i4KWskrcO4cDrSNnzh",
+                "url": "https://zilliverse.feishu.cn/wiki/NhbHwPiL2i4KWskrcO4cDrSNnzh"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WlTAdi6lkonSNOx9AvEcoKYcn4f"
+      },
+      {
+        "block_id": "TAg7duFEeoJQYdx8WBbcWumvn2e",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "开具发票",
+                "token": "JTuUwoHUyiqJU6kuu30cN9ibnkh",
+                "url": "https://zilliverse.feishu.cn/wiki/JTuUwoHUyiqJU6kuu30cN9ibnkh"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WlTAdi6lkonSNOx9AvEcoKYcn4f"
+      }
+    ],
+    "counts": 20
+  }
+}

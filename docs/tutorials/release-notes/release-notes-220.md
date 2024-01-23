@@ -2,25 +2,28 @@
 slug: /release-notes-220
 beta: FALSE
 notebook: FALSE
-sidebar_position: 3
+token: P1JAwZEf4i1ALqkidS9cYfLZnef
+sidebar_position: 4
 ---
 
 import Admonition from '@theme/Admonition';
 
 
-# 版本说明书 2.2.0
+# 版本说明书（2023/09/19）
 
-**发布日期：2023年9月19日**
-
-我们很高兴地宣布Zilliz Cloud 2.2.0的发布。此版本引入了一系列增强和功能：
+我们很高兴地宣布Zilliz Cloud 新版本的发布。此版本引入了一系列增强和功能：
 
 ## 概述{#overview}
 
 此次发布引入了新的提单系统，您可以通过该系统方便地提交您的疑问和需要咨询的问题。另外，我们更新了数据导入和迁移工具，实现了 Zilliz Cloud 集群间的无缝转换，并改进了对一次性导入多个文件的支持。我们诚邀您探索这些工具和新特性，亲身体验它们的优势。
 
+## Milvus 兼容性
+
+此次发布兼容 **Milvus 2.2.x**。
+
 ## Zilliz Cloud 集群间的数据迁移{#data-migration-across-zilliz-cloud-clusters}
 
-此次发布，用户可以通过 Zilliz Cloud 的数据迁移能力，轻松完成集群间的数据整合与配置。具体内容，可[查阅此处](./migrate-beween-clusters)。
+此次发布，用户可以通过 Zilliz Cloud 的数据迁移能力，轻松完成集群间的数据整合与配置。具体内容，可[查阅此处](./migrate-between-clusters)。
 
 - 轻松迁移：在多个 Zilliz Cloud 集群间实现数据的无缝迁移。
 
@@ -38,11 +41,13 @@ import Admonition from '@theme/Admonition';
 
 ## 数据导入能力增强{#enhanced-data-import-capabilities}
 
-我们重新设计了您向 Zilliz Cloud 导入数据的方式。具体内容，可[查阅此处](./use-bulkwriter-for-data-import)。
+我们重新设计了您向 Zilliz Cloud 导入数据的方式。具体内容，可[查阅此处](./prepare-source-data)。
 
 - 导入目录
+
     摆脱以往单一文件模式的束缚。您现在可以使用整个文件夹的文件导入数据，从而简化批量数据导入。
 
 - 导入任务监控
+
     通过 Zilliz Cloud 控制台实时查看您的数据导入任务，保障您对整个数据上传过程的掌控能力。
 

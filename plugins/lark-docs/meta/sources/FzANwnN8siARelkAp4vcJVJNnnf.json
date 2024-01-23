@@ -1,0 +1,1669 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": false,
+  "node_create_time": "1694688045",
+  "node_token": "FzANwnN8siARelkAp4vcJVJNnnf",
+  "node_type": "origin",
+  "obj_create_time": "1694688045",
+  "obj_edit_time": "1701324796",
+  "obj_token": "Y9vad8dvPozCe4xuCv5c85tHnyg",
+  "obj_type": "docx",
+  "origin_node_token": "FzANwnN8siARelkAp4vcJVJNnnf",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "I6NPw1WoniB9JJknoibcemv3n03",
+  "space_id": "7167193056431783939",
+  "title": "通过 RESTful API 导入",
+  "slug": "import-data-via-restful-api",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "Y9vad8dvPozCe4xuCv5c85tHnyg",
+        "block_type": 1,
+        "children": [
+          "MhuGdEJ7cot2whxpCKKcdkSvnjY",
+          "MHWfdEsxDo8w5MxyAyEchWQQnyt",
+          "PKVwdk6UjoYr0kxyKd8cn48cnNd",
+          "NThfdsxgFoYQ2gx6GPnc7mhyntb",
+          "WTeodMY2hoiBV1xO5TEczBaSnYd",
+          "USb2d1ZE4o9eeHxth4cclMVYnhg",
+          "Nx9ddoEhyoybYtxmRU5c7rL9nxf",
+          "TfcEdoKE1onGUexieUEcIy0Wnvg",
+          "QqKwd8LMhoFHE5xljVecFWSXnEf",
+          "ZRUVdzq27oUOP3xIhGtcdoEGnmc",
+          "OWBrdgj1xoYQ8lxSx4vcoCQ1noc",
+          "UmKBdvjyKojQa0x0EmFcoQrQnfo",
+          "LDF8dkbuuoKqvVx06ibcTnqLn3e",
+          "H55mdkJfxouKHBxGDWyc9s5wn4f",
+          "LihadJ262oIzB3x445gc71rVnDg",
+          "MXjfdxuHVoj3YPxH8VZcYWFgnQg",
+          "Rwqado6AVobDtNxuPaocz6wpn5g",
+          "KIJkda3KtoN77cxiZZ6cVdnKnCc",
+          "OVWzdq0vlosneMxwMBYcXftanKh",
+          "OKUTdKHdgoXcIKxsPQscupVRn4e",
+          "UlrAdzphzolQU2x5FWAcH8A7nFh",
+          "OPQidvRgaoiyoSxIdXlcGxUEnCE",
+          "UbCVdZoiaojTQCxwT28ciQb9n5I",
+          "Mn5GdOAxNoH573xyx5Hcre4kn5b",
+          "FNGZdBzXAoyjYDxDFuEcpUTxndd",
+          "LFKWdQ0xuoau5vxyL4ac6YVwnmc",
+          "THnmd9wTbopbz4xBcaAcbwHMntg",
+          "CmbPdKOFUoNBXlxZCkcciLICnIe",
+          "YfRxdKFGporPpnxQ9iWcJlPpn3e",
+          "TZifdfo8comiPkxyVkYctntFnzh"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过 RESTful ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 导入",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "MhuGdEJ7cot2whxpCKKcdkSvnjY",
+        "block_type": 2,
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文介绍如何通过 RESTful ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 将数据导入现有 Collection 中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MHWfdEsxDo8w5MxyAyEchWQQnyt",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "开始前{#before-you-start}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg"
+      },
+      {
+        "block_id": "PKVwdk6UjoYr0kxyKd8cn48cnNd",
+        "block_type": 2,
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "请确保已完成以下步骤：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NThfdsxgFoYQ2gx6GPnc7mhyntb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "已获取集群的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 密钥。详情请参见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "管理 API 密钥",
+                "token": "UGzNwB4TmiqTozkJvarceRdenif",
+                "url": "https://zilliverse.feishu.cn/wiki/UGzNwB4TmiqTozkJvarceRdenif"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg"
+      },
+      {
+        "block_id": "WTeodMY2hoiBV1xO5TEczBaSnYd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "已下载示例数据集。详情请参见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "示例数据集",
+                "token": "ZoXbwP8hJivPw2ktsLrckw0Snif",
+                "url": "https://zilliverse.feishu.cn/wiki/ZoXbwP8hJivPw2ktsLrckw0Snif"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg"
+      },
+      {
+        "block_id": "USb2d1ZE4o9eeHxth4cclMVYnhg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "已创建 Collection，且该 Collection 的 Schema 与示例数据集相匹配。已为该 Collection 创建索引，并已加载 Collection。详情请参见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建 Collection",
+                "token": "MNcZwAfV6iZxbckfKBlcmCzanti",
+                "url": "https://zilliverse.feishu.cn/wiki/MNcZwAfV6iZxbckfKBlcmCzanti"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg"
+      },
+      {
+        "block_id": "Nx9ddoEhyoybYtxmRU5c7rL9nxf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "准备数据文件{#prepare-data-files}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg"
+      },
+      {
+        "block_id": "TfcEdoKE1onGUexieUEcIy0Wnvg",
+        "block_type": 2,
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过 RESTful ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，您可以从单个 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "JSON",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 文件或多个 NumPy 文件导入数据。如果您的数据不是这两种格式，您可以使用 BulkWriter 转换数据格式。详情请参阅",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "使用 BulkWriter 导入",
+                "token": "GLk6wr8jviPyzHk7DjRc56YsnNf",
+                "url": "https://zilliverse.feishu.cn/wiki/GLk6wr8jviPyzHk7DjRc56YsnNf"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QqKwd8LMhoFHE5xljVecFWSXnEf",
+        "block_type": 2,
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在准备数据文件时，请注意以下事项：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZRUVdzq27oUOP3xIhGtcdoEGnmc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "当数据类型为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "JSON",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 时，每次导入仅支持一个 JSON 文件。这意味着您无法一次上传多个 JSON 文件。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg"
+      },
+      {
+        "block_id": "OWBrdgj1xoYQ8lxSx4vcoCQ1noc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果数据类型为 NumPy，则可以选择一次上传多个文件，或将这些文件组织成一个文件夹，批量上传至 Zilliz Cloud 集群。请注意，每个子文件夹的大小不能超过 10 GB，父文件夹的大小不超过 100 GB。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg"
+      },
+      {
+        "block_id": "UmKBdvjyKojQa0x0EmFcoQrQnfo",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "当组织多个文件的文件夹时，请确保文件夹中所有文件的数据类型均一致，并且文件夹含有不超过两个子目录。如果目标文件夹同时包含 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "JSON",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 NumPy 数据，或超过两个子目录，则在导入数据时会出现错误。如果文件夹同时包含 NumPy 文件和其他不支持的数据类型，则会忽略不支持的文件类型，仅导入 NumPy 文件。例如，您可以指定类似于 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "/dataset1/",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 或 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "/dataset2/sub/",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 的有效路径。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg"
+      },
+      {
+        "block_id": "LDF8dkbuuoKqvVx06ibcTnqLn3e",
+        "block_type": 2,
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要将示例数据集转换为多个 NumPy 文件，请使用以下代码：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "H55mdkJfxouKHBxGDWyc9s5wn4f",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "import json\nimport numpy\n\nwith open('path/to/medium_articles_2020_dpr.json') as f:\n    dataset = json.load(f)\n    keys = dataset['rows'][0].keys()\n\n    for key in keys:\n        numpy.save(f'{key}.npy', numpy.array([ x[key] for x in dataset['rows'] ]))\n\n    # For JSON fields, you should dump the field values before saving them\n    # numpy.save(f'json_field.npy', numpy.array([\n    #     json.dumps({\"year\": 2015, \"price\": 23.43}),\n    #     json.dumps({\"year\": 2018, \"price\": 15.05}),\n    #     json.dumps({\"year\": 2020, \"price\": 36.68}),\n    #     json.dumps({\"year\": 2019, \"price\": 20.14}),\n    #     json.dumps({\"year\": 2021, \"price\": 9.36}))\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "    # ]))",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg"
+      },
+      {
+        "block_id": "LihadJ262oIzB3x445gc71rVnDg",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过 RESTful ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 导入数据{#import-data-using-the-restful-api}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg"
+      },
+      {
+        "block_id": "MXjfdxuHVoj3YPxH8VZcYWFgnQg",
+        "block_type": 2,
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要导入数据，需要先将数据上传到对象存储桶（如阿里云 OSS）。上传完成后，需获取文件路径和桶凭据，以便 Zilliz Cloud 从您的桶中提取数据。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Rwqado6AVobDtNxuPaocz6wpn5g",
+        "block_type": 2,
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "有关如何获取文件 URL 和访问密钥，请参见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "获取单个或多个文件的 URL",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fhelp.aliyun.com%2Fzh%2Foss%2Fuser-guide%2Fhow-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects%3Fspm%3Da2c4g.11186623.0.i18"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建 Access Key",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fhelp.aliyun.com%2Fdocument_detail%2F53045.html%3Fspm%3Da2c4g.53045.0.0.718a7f80sYRRJB"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KIJkda3KtoN77cxiZZ6cVdnKnCc",
+        "block_type": 34,
+        "children": [
+          "HrNHdAe3poblbGxH6KKcVkDFnNh",
+          "EDEqdXFMkoTGRHx8j8ucjGfHnxc"
+        ],
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg",
+        "quote_container": {}
+      },
+      {
+        "block_id": "HrNHdAe3poblbGxH6KKcVkDFnNh",
+        "block_type": 2,
+        "parent_id": "KIJkda3KtoN77cxiZZ6cVdnKnCc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EDEqdXFMkoTGRHx8j8ucjGfHnxc",
+        "block_type": 2,
+        "parent_id": "KIJkda3KtoN77cxiZZ6cVdnKnCc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为了成功导入数据，请确保您使用的对象存储桶与您的集群位于相同的云中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OVWzdq0vlosneMxwMBYcXftanKh",
+        "block_type": 2,
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "一旦获取到文件路径和存储桶凭证，按以下方式调用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OKUTdKHdgoXcIKxsPQscupVRn4e",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "curl --request POST \\\n     --url \"<https://controller.api.$>{CLOUD_REGION_ID}.zillizcloud.com/v1/vector/collections/import\" \\\\\n     --header \"Authorization: Bearer ${TOKEN}\" \\\n     --header \"accept: application/json\" \\\n     --header \"content-type: application/json\" \\\n     -d '{\n       \"clusterId\": \"${CLUSTER_ID}\",\n       \"collectionName\": \"medium_articles\",\n       \"objectUrl\": \"gs://publicdataset-zillizcloud-com/medium_articles_2020.json\"\n       \"accessKey\": \"your-access-key\"\n       \"secretKey\": \"your-secret-key\"\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "     }'",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 7,
+            "wrap": false
+          }
+        },
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg"
+      },
+      {
+        "block_id": "UlrAdzphzolQU2x5FWAcH8A7nFh",
+        "block_type": 2,
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在上述代码中，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "${CLOUD_REGION_ID}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 代表您集群所在的云地域的 ID，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "${TOKEN}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 是用于授权 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 请求的集群 API 密钥，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "${CLUSTER_ID}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 是您的集群的 ID。在调用 API 时，请确保将这些占位符替换为您的实际值。您可以从集群的公共访问端点获取 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "CLOUD_REGION_ID",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "CLUSTER_ID",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。例如，在公共访问端点 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "https://in03-3bf3c31f4248e22.api.gcp-us-west1.zillizcloud.com",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 中，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "CLOUD_REGION_ID",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 是 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "gcp-us-west1",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "CLUSTER_ID",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 是 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "in03-3bf3c31f4248e22",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。有关更多信息，请参见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "管理集群",
+                "token": "IRirwe30tilo1qkJlR7ca2MUnvn",
+                "url": "https://zilliverse.feishu.cn/wiki/IRirwe30tilo1qkJlR7ca2MUnvn"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OPQidvRgaoiyoSxIdXlcGxUEnCE",
+        "block_type": 2,
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "提交请求后，将返回任务 ID。您可以通过任务 ID 查询数据导入进度。示例代码如下：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UbCVdZoiaojTQCxwT28ciQb9n5I",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "curl --request GET \\\n     --url \"<https://controller.api.$>{CLOUD_REGION_ID}.zillizcloud.com/v1/vector/collections/import/get?jobId=${JOBID}&clusterId=${CLUSTERID}\" \\\\\n     --header \"Authorization: Bearer ${TOKEN}\" \\\n     --header \"accept: application/json\" \\\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "     --header \"content-type: application/json\" \\",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 7,
+            "wrap": false
+          }
+        },
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg"
+      },
+      {
+        "block_id": "Mn5GdOAxNoH573xyx5Hcre4kn5b",
+        "block_type": 2,
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "有关更多信息，请参见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "导入",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fdocs.zilliz.com.cn%2Freference%2Fimport"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "查看导入进度",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fdocs.zilliz.com.cn%2Freference%2Fget-import-progress"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FNGZdBzXAoyjYDxDFuEcpUTxndd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "结果验证{#verify-the-result}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg"
+      },
+      {
+        "block_id": "LFKWdQ0xuoau5vxyL4ac6YVwnmc",
+        "block_type": 2,
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果请求返回以下类似内容，则表示数据导入成功：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "THnmd9wTbopbz4xBcaAcbwHMntg",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "{\n    \"code\": 200,\n    \"data\": {\n        \"jobId\": \"string\"\n    }\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 7,
+            "wrap": false
+          }
+        },
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg"
+      },
+      {
+        "block_id": "CmbPdKOFUoNBXlxZCkcciLICnIe",
+        "block_type": 2,
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您也可以前往 Zilliz Cloud 控制台查看结果和任务详情：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YfRxdKFGporPpnxQ9iWcJlPpn3e",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D10765-544%26mode%3Ddesign%26t%3DDuDFZdxmjYYx1PQk-4"
+          }
+        },
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg"
+      },
+      {
+        "block_id": "TZifdfo8comiPkxyVkYctntFnzh",
+        "block_type": 2,
+        "parent_id": "Y9vad8dvPozCe4xuCv5c85tHnyg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 33
+  }
+}

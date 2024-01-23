@@ -2,6 +2,7 @@
 slug: /question-answering-over-documents-with-zilliz-cloud-and-langchain
 beta: FALSE
 notebook: 83_integrations_langchain.ipynb
+token: Msbqwd1izicbFlkT56scmGlWnbb
 sidebar_position: 4
 ---
 
@@ -17,7 +18,7 @@ import Admonition from '@theme/Admonition';
 运行本页中的脚本需要 **pymilvus** 和 **langchain**。另外，我们还需要使用 OpenAI 的 Embedding API 来获取指定文本的向量表示并将其存入向量数据库中，所以还需要安装 openai 和 tiktoken。如果你的系统中还没有安装这些依赖，可以运行如下命令。
 
 ```shell
-python3 -m pip install --upgrade pymilvus langchain openai tiktoken
+python -m pip install --upgrade pymilvus langchain openai tiktoken
 ```
 
 ## 主要参数{#parameters}
@@ -140,7 +141,7 @@ print(len(docs))
 
 在准备好文档后，我们可以创建一条 Stuff 链将文档包含在一个提示词中并将该提示词喂给大语言模型。这样大语言模型就可以在回答我们的提问时参考文档中的内容。
 
-如下脚本使用 OpenAI 做为大语言模型创建了一个 RAG 链，并定义了一个提示词模板。
+下面的脚本会以OpenAI为目标大语言模型创建一条 RAG 链。该链将使用 OpenAI 为大语言模型，
 
 ```python
 llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0) 
@@ -167,8 +168,8 @@ print(rag_chain.invoke("Explain IVF_FLAT in Milvus."))
 返回的结果包含了中间步骤（ `intermediate_steps` ）和输出文本 ( `output_text` )两个部分。前者用于表明在搜索过程中参考的文档，后者则是对用户提问的回答。
 
 ```shell
-# Output
-#
-# content='IVF_FLAT is an index mechanism in Milvus that divides a vector space into clusters. It compares the distances between a target vector and the centers of all clusters to find the nearest clusters. Then, it compares the distances between the target vector and the vectors in the selected clusters to find the nearest vectors. IVF_FLAT demonstrates performance advantages when the number of vectors exceeds the value of nlist. Thanks for asking!'
+**# Output**
+**#**
+**# content='IVF_FLAT is an index mechanism in Milvus that divides a vector space into clusters. It compares the distances between a target vector and the centers of all clusters to find the nearest clusters. Then, it compares the distances between the target vector and the vectors in the selected clusters to find the nearest vectors. IVF_FLAT demonstrates performance advantages when the number of vectors exceeds the value of nlist. Thanks for asking!'**
 ```
 

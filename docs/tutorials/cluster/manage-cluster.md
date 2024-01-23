@@ -2,6 +2,7 @@
 slug: /manage-cluster
 beta: FALSE
 notebook: FALSE
+token: IRirwe30tilo1qkJlR7ca2MUnvn
 sidebar_position: 3
 ---
 
@@ -12,45 +13,87 @@ import Admonition from '@theme/Admonition';
 
 本文介绍如何通过 Zilliz Cloud 控制台管理集群。
 
-## 连接集群{#connect-to-cluster}
+### 连接集群{#connect-to-cluster}
+
+在**连接信息**区域，您可以找到用于连接到集群的公共 Endpoint 和 Token。
+
+更多相关信息，请参阅[连接集群](./connect-to-cluster)。
+
+### 删除集群{#drop-cluster}
+
+在**操作**下拉列表中，选择**删除**可删除集群及其相关数据。只有当您在**删除集群**对话框中确认删除操作后，Zilliz Cloud 才会该删除集群。
+
+## Dedicated 集群{#dedicated-cluster}
 
 集群创建完成后，您可以在控制台看到如下信息：
 
 ![cluster-lifecycle](/img/cluster-lifecycle.png)
 
+### 连接集群{#establish-connection}
+
 在**连接信息**区域，您可以找到用于连接到集群的公共 Endpoint 和 Token。
 
 要连接到集群，您需要使用由冒号（:）连接的集群用户名和密码作为身份验证标记，如 **user:password**。有关更多相关信息，请参阅[连接集群](./connect-to-cluster)。
 
-## 管理 Collection{#manage-collections-and-data}
-
-在 **Collection** 页签下，您可以管理集群中的 Collection。您可以创建 Collection、将数据导入 Collection、加载或释放 Collection、重命名 Collection 和删除 Collection。
-
-有关数据导入的详细信息，请参阅[通过 Web 控制台导入](./import-data-on-web-ui)、[通过 RESTful API 导入](./import-data-via-restful-api)和[通过 SDK 导入](./import-data-via-sdks)。
+### 管理 Collection{#manage-collections-and-data}
 
 ![manage-collections](/img/manage-collections.png)
 
-## 管理集群用户{#users-and-access-control}
+- Collection
 
-在**用户**页签下，您可以添加用户、重置用户密码和删除用户。
+    在 **Collection** 页签下，您可以管理集群中的 Collection。具体来说，您可以创建 Collection、将数据导入 Collection、加载或释放 Collection、重命名 Collection 及删除 Collection。
 
-![manage-users](/img/manage-users.png)
+    有关数据导入的详细情况，可以参考[数据导入](https://docs.zilliz.com.cn/docs/data-import)。
 
-<Admonition type="info" icon="📘" title="说明">
+- 备份
 
-不能删除 **db_admin **用户。对于已添加到集群中的用户，Zilliz Cloud 会向其授予集群中所有 Collection 的访问权限。
+    在 Cluster 详情页右上角的**操作**下拉菜单中，可以选择**创建备份快照**。你可以在备份页签中找到所有已创建的备份快照。关于备份与恢复的详细情况，可参考[备份与恢复](https://docs.zilliz.com.cn/docs/backup-and-restore)。
 
-</Admonition>
+- 数据迁移
 
-## 管理备份{#manage-backups}
+    在 Cluster 详情页右上角的**操作**下拉菜单中，可以选择**迁移数据**。有关数据迁移的详细情况，可以参考[数据迁移](https://docs.zilliz.com.cn/docs/migrations)。
+
+### 用户与访问控制{#users-and-access-control}
+
+- 用户
+
+    在**用户**页签下，您可以添加用户、重置用户密码和删除用户。
+
+    ![manage-users](/img/manage-users.png)
+
+    <Admonition type="info" icon="📘" title="说明">
+
+    不能删除 **db_admin **用户。对于已添加到集群中的用户，Zilliz Cloud 会向其授予集群中所有 Collection 的访问权限。
+
+    </Admonition>
+
+- 私网连接
+
+    在**集群详情**页签的**连接信息**区域下方，单击 **+ 创建私网连接**，可创建私网连接。使用私网连接可以避免通过公网访问当前项目中的集群，确保数据安全。
+
+    关于私网连接的更多配置，请参阅[创建私网连接](./setup-a-private-link)。
+
+- 白名单
+
+    在**集群详情**页签的**集群信息**区域，单击** IP 白名单**旁的**前往配置**可添加白名单地址。
+
+    - 地址列表为空时，白名单不生效。任意地址均可访问当前项目中的集群。
+
+    - 在添加任意一条非全零（0.0.0.0/0）的记录后，白名单生效。此时，Zilliz Cloud仅允许已添加网段中的IP地址访问当前项目中的集群。
+
+    关于白名单的更多配置，请参阅[设置白名单](./set-up-whitelist)。
+
+### 管理和设置集群{#manage-and-configure-clusters}
+
+#### 管理备份{#manage-backups}
 
 在**操作**下拉列表中，您可以选择**创建备份快照**来为集群创建备份。您可以在**备份**页签下找到已创建的所有快照。有关备份和恢复的详细信息，请参阅[备份与恢复](https://docs.zilliz.com.cn/docs/backup-and-restore)。
 
-## 管理数据迁移{#manage-migrations}
+#### 管理数据迁移{#manage-migrations}
 
 在**操作**下拉列表中，您可以选择**迁移数据**来创建数据迁移任务，以从 Milvus 迁移数据到 Zilliz Cloud 集群。有关更多信息，请参阅[数据迁移](https://docs.zilliz.com.cn/docs/migrations)。
 
-## 扩容集群{#scale-up-cluster}
+#### 扩容集群{#scale-up-cluster}
 
 在**集群信息**区域，单击**大小**右侧的**扩容**，以打开**扩容集群**对话框。您可以为集群增加计算和存储资源。在对话框中，您最多可将集群资源扩展到 24 个 CU。如果您需要更大的 CU，请联系我们。
 
@@ -62,13 +105,13 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 设置 IP 白名单{#set-up-whitelist}
+#### 设置 IP 白名单{#set-up-whitelist}
 
 在**集群信息**区域，单击 **IP 白名单**右侧的**前往配置**，可将指定 IP 地址段添加到白名单。将 IP 地址段添加到白名单后，Zilliz Cloud 只允许白名单 IP 地址段内的 IP 地址访问集群。若添加 0.0.0.0/0，则表示允许所有 IP 地址访问集群。
 
 有关如何设置白名单的详细信息，请参阅[设置白名单](./set-up-whitelist)。
 
-## 挂起 / 恢复集群{#suspend-resume-cluster}
+#### 挂起 / 恢复集群{#suspend-resume-cluster}
 
 在**操作**下拉列表中，选择**挂起**以中断集群运行。在**挂起集群**对话框中确认此操作后，集群状态将从**运行中**变为**挂起中**，在此期间，您无法对集群执行其他操作。
 
@@ -82,15 +125,15 @@ import Admonition from '@theme/Admonition';
 
 此外，您还可以通过 RESTful API 挂起或恢复集群。有关更多接口信息，请参阅 [Suspend Cluster](https://docs.zilliz.com.cn/reference/suspend-cluster) 和 [Resume Cluster](https://docs.zilliz.com.cn/reference/resume-cluster)。
 
-## 删除集群{#delete-cluster}
+#### 删除集群{#delete-cluster}
 
 在**操作**下拉列表中，选择**删除**可删除集群及其相关数据。只有当您在**删除集群**对话框中确认删除操作后，Zilliz Cloud 才会该删除集群。
 
-## 相关文档
+## 相关文档{#related-docs}
 
 - [连接集群](./connect-to-cluster)
 
-- [备份与恢复](https://docs.zilliz.com/docs/backup-and-restore)
+- [备份与恢复](./backup-and-restore)
 
 - [数据迁移](https://docs.zilliz.com.cn/docs/migrations)
 

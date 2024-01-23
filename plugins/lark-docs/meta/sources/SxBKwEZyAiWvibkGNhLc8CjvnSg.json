@@ -1,0 +1,1482 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1687246533",
+  "node_token": "SxBKwEZyAiWvibkGNhLc8CjvnSg",
+  "node_type": "origin",
+  "obj_create_time": "1687246533",
+  "obj_edit_time": "1702870533",
+  "obj_token": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+  "obj_type": "docx",
+  "origin_node_token": "SxBKwEZyAiWvibkGNhLc8CjvnSg",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "WJJvw84crikA8Xk4P4IcJJvSnKd",
+  "space_id": "7167193056431783939",
+  "title": "集群、Collection 及 Entity",
+  "slug": "cluster-collection-and-entities",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "block_type": 1,
+        "children": [
+          "GjZ8dtljDoqsC0xAYHbcKl3Cnhh",
+          "M8RldNWauoYvVhxJuBBcK9PTnmf",
+          "PWVxd57pBohk4Qxbd8Zc3uQCnGe",
+          "AnlwddmoTofXSjxkRAycLF5Onfg",
+          "QsFadUuSEojoiKxW1HccdvKHnyf",
+          "Oczndye7EoiRCKxeo69cI977n2e",
+          "THe7dcIC6oUxRAxE3fCcbjSWnSh",
+          "SFzjdXchVoDfFZxaG5LcFSGfnYg",
+          "Taq6dUEKfohDIkx3Kb2ca2eMnMf",
+          "PVtYdUKF1oiHWFxsiuictgzIn7d",
+          "EKfGdt2ymoMjoCxMsbxcHf6fnmd",
+          "HmLodtXCSouQ9hxliAecPQx4nIg",
+          "TshjdPtzSoIdnBxwuXNccYxxn3e",
+          "C4q8d51OzocaFWxPxlUce09Snnc",
+          "JcjWdY5SgofBtLx6X5AcAmQbnTb",
+          "DInqdy8hKoio2Kx5lWYc87F0nJf",
+          "GKLGdKtnqofvIqxvXPycBkSdnLe",
+          "AxBIdfvdfoQKtUxqQ75cYugunQi",
+          "IWptdcUpjoBWTsxQICKc7rKRnvy",
+          "D9CUdJVPzoJFlOxSGwecIXYMnBb",
+          "CxmYdCOEXoPTDsx4Z6ZcwLT2nze",
+          "UIdEd4tHlonN3xx6mW5cmaBGn6c",
+          "Uh8ideg0io3MvZx5nNjcShs0nde",
+          "Jw2RdFNQFoppvYxXGEJcf5YLnUg",
+          "Gjh3d6zpGoi2t6xCtkCcTQqYnxa",
+          "BZ7sdgICuoeCdxxhU09cgmxRn5b",
+          "WF4NdAGF0ovXEwxAJIJcu37snPb",
+          "NpDwdISp4o2uXMxa2vccY6qAnCf",
+          "RxXUdpuJAoikVCxyVlIcHnRhnsf",
+          "AWfSdXhIuojUJExwL3GczrtanTN",
+          "G4A6dH9HQoDOAMxHXIlcWwBzng8",
+          "Aq7FdH3NLoAwUZxL9ZUc7hm8nC9",
+          "PIYbdQTVyoVz47xfMh1cOdDjn4c",
+          "HEpGdyjado8Ao2xzAjjcYSBDnzt",
+          "MCvpdyGpTogO8gxkXzOcQRa8nOc",
+          "E3G3d4zQfolAcpxJBzVc1HoynTe",
+          "Aqc7dvEzHooXSYxqObucsHj3nUM"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群、Collection 及 Entity",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "GjZ8dtljDoqsC0xAYHbcKl3Cnhh",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 集群由全托管 Milvus 实例及相关计算资源构成。您可以在 Zilliz Cloud 集群中创建 Collection，然后在 Collection 中插入 Entity。Zilliz Cloud 集群中的 Collection 类似于关系型数据库中的表。Collection 中的 Entity 类似于表中的记录。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "M8RldNWauoYvVhxJuBBcK9PTnmf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#cluster}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe"
+      },
+      {
+        "block_id": "PWVxd57pBohk4Qxbd8Zc3uQCnGe",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在 Zilliz Cloud 上创建集群时，您需要选择集群 CU 类型。CU 类型有 3 种选项：性能型、容量型和经济型。不同 CU 类型的区别，请阅读",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "选择合适的 CU 类型",
+                "token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
+                "url": "https://zilliverse.feishu.cn/wiki/DP6Fw8vkzi7pD7kAMB3cjunYn6g"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AnlwddmoTofXSjxkRAycLF5Onfg",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "确定 CU 类型后，您还需要选择 CU 大小。CU 大小决定了集群可容纳的 Collection 数量。小于 8  CU 的集群最多可容纳 32 个 Collection。大于 8  CU 的集群最多可容纳 256 个 Collection。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QsFadUuSEojoiKxW1HccdvKHnyf",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群中的所有 Collection 共享 CU 资源。为节省 CU 资源，我们推荐您",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "将",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "一些不",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "再",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "使用的 Collection",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 从 CU 中释放出来",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。Collection 被",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "释放",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "后，其中的数据被转移到磁盘存储，从而可以释放 CU 资源以供其他已加载的 Collection 使用。需要查询已被卸载的 Collection 时，您可以将其重新加载至内存中。请注意，Collection 加载需要等待一段时间，因此我们不推荐频繁卸载和加载 Collection。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Oczndye7EoiRCKxeo69cI977n2e",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Collection",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#collection}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe"
+      },
+      {
+        "block_id": "THe7dcIC6oUxRAxE3fCcbjSWnSh",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Collection 是一张二维数据表，包含固定列数和可变行数。Collection 数据表中的每 1 列对应 1 个字段，每 1 行表示 1 个 Entity。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SFzjdXchVoDfFZxaG5LcFSGfnYg",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "下图中的示例 Collection 包含 6 个 Entity 和 8 个字段。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Taq6dUEKfohDIkx3Kb2ca2eMnMf",
+        "block_type": 27,
+        "image": {
+          "align": 2,
+          "height": 692,
+          "token": "MVBWbzkuyonO5tx99TscU93Knfg",
+          "width": 1280
+        },
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe"
+      },
+      {
+        "block_id": "PVtYdUKF1oiHWFxsiuictgzIn7d",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EKfGdt2ymoMjoCxMsbxcHf6fnmd",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "字段",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#fields}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe"
+      },
+      {
+        "block_id": "HmLodtXCSouQ9hxliAecPQx4nIg",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通常我们会根据属性（如大小、重量、位置等）描述对象。对象属性类似于 Collection 中的字段。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TshjdPtzSoIdnBxwuXNccYxxn3e",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Collection 中，主键是最特殊的字段，每个主键字段的值唯一且不重复。每 1 个主键都可以对应 Collection 中的 1 条 Entity 记录。如上图所示， 示例 Collection 中的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "id",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 字段是主键。第 1 个 ID ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "0",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 对应标题为《The Mortality Rate of Coronavirus is Not Important》的文章。Collection 中的任何其他文章的 ID 都不会为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "0",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "C4q8d51OzocaFWxPxlUce09Snnc",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Schema",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#schema}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe"
+      },
+      {
+        "block_id": "JcjWdY5SgofBtLx6X5AcAmQbnTb",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "每个字段都具有自己的属性——字段中数据类型和相关限制（如向量维度和相似性类型）。通过定义字段及顺序，您的 Collection 会有 1 个 Schema，也就是 1 个数据结构框架。Collection Schema 类似于传统数据表的结构。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DInqdy8hKoio2Kx5lWYc87F0nJf",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 支持以下数据类型：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GKLGdKtnqofvIqxvXPycBkSdnLe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "布尔值（BOOLEAN）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe"
+      },
+      {
+        "block_id": "AxBIdfvdfoQKtUxqQ75cYugunQi",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "双精度浮点数（DOUBLE）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe"
+      },
+      {
+        "block_id": "IWptdcUpjoBWTsxQICKc7rKRnvy",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "单精度浮点数（FLOAT）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe"
+      },
+      {
+        "block_id": "D9CUdJVPzoJFlOxSGwecIXYMnBb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "浮点向量（FLOAT_VECTOR）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe"
+      },
+      {
+        "block_id": "CxmYdCOEXoPTDsx4Z6ZcwLT2nze",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "8 位有符号整数（INT8）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe"
+      },
+      {
+        "block_id": "UIdEd4tHlonN3xx6mW5cmaBGn6c",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "32 位有符号整（INT32）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe"
+      },
+      {
+        "block_id": "Uh8ideg0io3MvZx5nNjcShs0nde",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "64 位有符号整（INT64）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe"
+      },
+      {
+        "block_id": "Jw2RdFNQFoppvYxXGEJcf5YLnUg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "可变长度字符串（VARCHAR）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe"
+      },
+      {
+        "block_id": "Gjh3d6zpGoi2t6xCtkCcTQqYnxa",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "JSON",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FUXBjwVpKmirzg9kgWgmcLixwnIe"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe"
+      },
+      {
+        "block_id": "BZ7sdgICuoeCdxxhU09cgmxRn5b",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 提供 3 种 CU 类型。不同 CU 类型适用于不同的场景，搜索性能也有所不同。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WF4NdAGF0ovXEwxAJIJcu37snPb",
+        "block_type": 34,
+        "children": [
+          "MmU9dBvxzosfJnxEnoqcrtJSnEc",
+          "ZEwidZ5uYozYNWxJ52fczlrCnTc"
+        ],
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "quote_container": {}
+      },
+      {
+        "block_id": "MmU9dBvxzosfJnxEnoqcrtJSnEc",
+        "block_type": 2,
+        "parent_id": "WF4NdAGF0ovXEwxAJIJcu37snPb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZEwidZ5uYozYNWxJ52fczlrCnTc",
+        "block_type": 2,
+        "parent_id": "WF4NdAGF0ovXEwxAJIJcu37snPb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 集群中仅 FLOAT_VECTOR 支持向量的数据类型。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NpDwdISp4o2uXMxa2vccY6qAnCf",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "索引",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#index}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe"
+      },
+      {
+        "block_id": "RxXUdpuJAoikVCxyVlIcHnRhnsf",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "与 Milvus 实例不同，Zilliz Cloud 集群仅支持 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "AUTOINDEX",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 索引。该索引类型针对 Zilliz Cloud 提供的 3 种 CU 进行了优化。更多详情，请阅读 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "AUTOINDEX",
+                "token": "YUETwzDssiTUs9kCSn4cgUYLnrd",
+                "url": "https://zilliverse.feishu.cn/wiki/YUETwzDssiTUs9kCSn4cgUYLnrd"
+              }
+            },
+            {
+              "text_run": {
+                "content": " 。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AWfSdXhIuojUJExwL3GczrtanTN",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Partition{#partitions}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe"
+      },
+      {
+        "block_id": "G4A6dH9HQoDOAMxHXIlcWwBzng8",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Partition 是从 Collection 中划分而来。Zilliz Cloud 支持将物理存储划分成若干部分，每一部分被称为一个 Partition。每个 Partition 都可以包含多个 Segment。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Aq7FdH3NLoAwUZxL9ZUc7hm8nC9",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过将 Entity 分别存入不同的 Partition，Zilliz Cloud 实现了对 Entity 的隔离与分组。在按 Partition 进行检索时，由于无须关注 Collection 中其它 Partition 的数据，检索效率得到了较大的提升。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PIYbdQTVyoVz47xfMh1cOdDjn4c",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "关于 Partition 的更多内容，可以查看",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "使用 Partition",
+                "token": "BtktwpcxUiFrtHkpvxuc44ganWd",
+                "url": "https://zilliverse.feishu.cn/wiki/BtktwpcxUiFrtHkpvxuc44ganWd"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HEpGdyjado8Ao2xzAjjcYSBDnzt",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Entity",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#entities}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe"
+      },
+      {
+        "block_id": "MCvpdyGpTogO8gxkXzOcQRa8nOc",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Collection 中的 Entity 是指共享相同字段集的数据记录，如图书馆中的图书或基因组中的基因。存储在每个字段中的数据共同形成 1 个 Entity。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "E3G3d4zQfolAcpxJBzVc1HoynTe",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "输入查询向量、选择相似性类型和过滤条件（可选）后，您可以对 Collection 中的 Entity 进行向量搜索。例如，如果您使用关键字 “Interesting Python demo” 进行搜索，Zilliz Cloud ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "会",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "返回所有标题语义相似的的文章。在此过程中，搜索实际是在向量字段 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "title_vector",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 上执行的。更多向量搜索详情，请阅读",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "向量搜索和查询",
+                "token": "SPaWwHEVuipu3bkeg17coFgnnUo",
+                "url": "https://zilliverse.feishu.cn/wiki/SPaWwHEVuipu3bkeg17coFgnnUo"
+              }
+            },
+            {
+              "text_run": {
+                "content": " 。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Aqc7dvEzHooXSYxqObucsHj3nUM",
+        "block_type": 2,
+        "parent_id": "FQM1ddL5noYH3Cx313lcjGPHnIe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以向 Collection 中添加任意数量的 Entity。但是，随着 Entity 数量和维度增加，Entity占用的内存大小也会增加，影响 Collection 的搜索性能。请参考 Zilliz Cloud ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "数据模型",
+                "token": "ZgcQw57PxiKaeSkuQmCchK8snP0",
+                "url": "https://zilliverse.feishu.cn/wiki/ZgcQw57PxiKaeSkuQmCchK8snP0"
+              }
+            },
+            {
+              "text_run": {
+                "content": " 以合理规划您的 Collection。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 40
+  }
+}

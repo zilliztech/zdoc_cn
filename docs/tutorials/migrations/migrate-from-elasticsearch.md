@@ -2,6 +2,7 @@
 slug: /migrate-from-elasticsearch
 beta: FALSE
 notebook: FALSE
+token: CJN4wlKiGi1P8Zk4BHKcF04GnLb
 sidebar_position: 2
 ---
 
@@ -92,3 +93,4 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
 - [AUTOINDEX](./autoindex-explained)
 
 - [选择合适的 CU 类型](./cu-types-explained) 
+

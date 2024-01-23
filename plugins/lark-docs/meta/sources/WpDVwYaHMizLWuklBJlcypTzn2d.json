@@ -1,0 +1,2608 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": false,
+  "node_create_time": "1705889112",
+  "node_token": "WpDVwYaHMizLWuklBJlcypTzn2d",
+  "node_type": "origin",
+  "obj_create_time": "1705889112",
+  "obj_edit_time": "1705920047",
+  "obj_token": "CtFqdkFwKorG0mxk90UchuFHnEu",
+  "obj_type": "docx",
+  "origin_node_token": "WpDVwYaHMizLWuklBJlcypTzn2d",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "SlItwMcOyikiWVkr7Glcy9sinMg",
+  "space_id": "7167193056431783939",
+  "title": "管理组织告警",
+  "slug": "manage-organization-alerts",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "CtFqdkFwKorG0mxk90UchuFHnEu",
+        "block_type": 1,
+        "children": [
+          "PZKedjsO3oR0BDxojNqcZgd8nOh",
+          "LBR3d0fb1orK6ix2l9mc6Scznvg",
+          "DdzedWnlxo8xqjx1H4VcPmemnPf",
+          "QSAmdIRfwoe6plxFMbIczT7Anpf",
+          "Dk0iduGipoM5FMxOJQEcmTe9nQZ",
+          "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+          "ETKxdhSD4oCqsgx9fczc5qoEnRb",
+          "KgEjd60o5okH9OxAESocn27xnLf",
+          "G81udEy2aowTw8x62aKcwch7nRb",
+          "J7qFdWizEoQmuyxMRH9cZROUnue",
+          "NpaFdI6RrorOydxP0M8cHn1pnF9",
+          "Dq5QdWTydo3ItfxEiwfc8Cu8nmf",
+          "YVMGdANZrosnNTxm7pecoH68n0f",
+          "JPridE6CfoBwRXxmZMocPG1Rnxf",
+          "OBZrddrtGolHfSxUcy9cTyvYnqg",
+          "A2FudHKKEop14AxfED4cBcdIn5b",
+          "UTgmdXhhyoza9vxUVJrclMWWnPc",
+          "RHfUd0xdWoe2PQxw4jIcuGIHn3c",
+          "Rq3sdTDuWoFuD9xFGf7c2jw7nLh",
+          "AY9sd8RQDowhApxt8akc6wBFnCf",
+          "Dzprdak4XosKDhxveJechoXVnHb",
+          "ORqBd2lusouaZQx0fDIcwUm9nAh",
+          "KWxNdHoubo3NXRxtiGvcRoUTnVF",
+          "CAFddAWz8odqRPxUe3gcSWSQnlf",
+          "G4SLdfywyoHchAx7nCkcmIYcnjc",
+          "RHX6dUwJloWxYAx7m4Ic492PnPb",
+          "IG9MdJsqDoAjZwxbZ3ZcPrpZnYe",
+          "PEo0dcFtgoTj9mx5aAQcXTjunNb",
+          "IheBdM1rvovZESxBYARcvwQsnlb",
+          "ATand3DbZolfH4xMyj6c9zvFnQb",
+          "KbnBdhGRKoB98kxKssGcIy0QnL5",
+          "ATozd10ORo9grAxhYQJcChdhnhe",
+          "MBRfdq1pfo8J4cxDWVRcb6Y1n9e",
+          "Bqugdwx05oOy0QxcgfTcWIIkn9r",
+          "D2yndPUqPo8DwJxzyOoccnNgnjd"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "管理组织告警",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "PZKedjsO3oR0BDxojNqcZgd8nOh",
+        "block_type": 2,
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关的组织告警，二是针对特定项目中集群性能的项目告警。更多详细信息，请参阅",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "指标与告警快速参考",
+                "token": "Rca8w6kRRiy7a9kr6adczTcGnoh",
+                "url": "https://zilliverse.feishu.cn/wiki/Rca8w6kRRiy7a9kr6adczTcGnoh"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LBR3d0fb1orK6ix2l9mc6Scznvg",
+        "block_type": 2,
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文将介绍如何查看及管理组织告警。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DdzedWnlxo8xqjx1H4VcPmemnPf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "概览{#overview}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "QSAmdIRfwoe6plxFMbIczT7Anpf",
+        "block_type": 2,
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "下表展示了各组织告警的默认配置。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Dk0iduGipoM5FMxOJQEcmTe9nQZ",
+        "block_type": 2,
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "当告警处于",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "开启",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "状态时，一旦满足告警条件，指定的接收者将收到告警通知。您可以编辑告警以更改其状态。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "block_type": 31,
+        "children": [
+          "LgEXd1hNKotmMXxg9v9cxdMSnnp",
+          "Jc7GdLdbXokH7WxTmGacgaJenKb",
+          "ClOqdFUWNoup4wxnYrQcaaBanUh",
+          "DyJsd7HcsoI7WZxEVt3cFd2EnZd",
+          "XBEhdezqdoCC5Bxw64hcBhcvnIb",
+          "GFHZdOIekoIe1IxW4gbcDsbwnpb",
+          "PWAcd9Htsobma9xeAGkc3c42nIJ",
+          "D1CfdRpdKoAokUxsfy5cg34vn0Y",
+          "Cu61dfboIoMw9kxDr70cHSvinKh",
+          "KzUQdtk0co4k4sxF9DpcYxJvnme",
+          "QpmGdMUsiosQdHxkRo2cfEpMnDH",
+          "KW9AdBzbxoknAqxhatdcF51PnYf",
+          "E8zFdJBxloIGgoxawAKcCMUFnVe",
+          "RYvBdFLHYob00jxXD4dcwGwwn4c",
+          "Wji8dObwhoLJZExTmvIcYidGnSL",
+          "DuHEdOkEfoVs2Uxpt7bc8Waqnce",
+          "PCO5dvUqmolkMWxsIfbcQHQXnZf",
+          "LP3sdxKMVogyxxxsmDHcslIznZe",
+          "RNjpdrhOOo7MRtxhwfDc7MivnMh",
+          "WHZHduuyUobF5TxjYG1cgZ2OnNb",
+          "B23WdvcYqoQqOKxvG4rc6geAnKc",
+          "K2cYdcYRSoZCDzxPlFOcOdGlnoh",
+          "ZhiodVYQLoef4Qx7gdBcCgNynUg",
+          "IpoodAEdSoDshix3Y2SccdTmnPf",
+          "UkJodAaWSodoasxVGlVcgv6bnLg"
+        ],
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu",
+        "table": {
+          "cells": [
+            "LgEXd1hNKotmMXxg9v9cxdMSnnp",
+            "Jc7GdLdbXokH7WxTmGacgaJenKb",
+            "ClOqdFUWNoup4wxnYrQcaaBanUh",
+            "DyJsd7HcsoI7WZxEVt3cFd2EnZd",
+            "XBEhdezqdoCC5Bxw64hcBhcvnIb",
+            "GFHZdOIekoIe1IxW4gbcDsbwnpb",
+            "PWAcd9Htsobma9xeAGkc3c42nIJ",
+            "D1CfdRpdKoAokUxsfy5cg34vn0Y",
+            "Cu61dfboIoMw9kxDr70cHSvinKh",
+            "KzUQdtk0co4k4sxF9DpcYxJvnme",
+            "QpmGdMUsiosQdHxkRo2cfEpMnDH",
+            "KW9AdBzbxoknAqxhatdcF51PnYf",
+            "E8zFdJBxloIGgoxawAKcCMUFnVe",
+            "RYvBdFLHYob00jxXD4dcwGwwn4c",
+            "Wji8dObwhoLJZExTmvIcYidGnSL",
+            "DuHEdOkEfoVs2Uxpt7bc8Waqnce",
+            "PCO5dvUqmolkMWxsIfbcQHQXnZf",
+            "LP3sdxKMVogyxxxsmDHcslIznZe",
+            "RNjpdrhOOo7MRtxhwfDc7MivnMh",
+            "WHZHduuyUobF5TxjYG1cgZ2OnNb",
+            "B23WdvcYqoQqOKxvG4rc6geAnKc",
+            "K2cYdcYRSoZCDzxPlFOcOdGlnoh",
+            "ZhiodVYQLoef4Qx7gdBcCgNynUg",
+            "IpoodAEdSoDshix3Y2SccdTmnPf",
+            "UkJodAaWSodoasxVGlVcgv6bnLg"
+          ],
+          "property": {
+            "column_size": 5,
+            "column_width": [
+              184,
+              80,
+              150,
+              281,
+              100
+            ],
+            "header_row": true,
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 5
+          }
+        }
+      },
+      {
+        "block_id": "LgEXd1hNKotmMXxg9v9cxdMSnnp",
+        "block_type": 32,
+        "children": [
+          "SrgjdLv3notCj9xofsyct63nnUg"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "SrgjdLv3notCj9xofsyct63nnUg",
+        "block_type": 2,
+        "parent_id": "LgEXd1hNKotmMXxg9v9cxdMSnnp",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "告警项",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Jc7GdLdbXokH7WxTmGacgaJenKb",
+        "block_type": 32,
+        "children": [
+          "LFiYdO5tmoRNLAxl7ebcxdWlnnd"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "LFiYdO5tmoRNLAxl7ebcxdWlnnd",
+        "block_type": 2,
+        "parent_id": "Jc7GdLdbXokH7WxTmGacgaJenKb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "单位",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ClOqdFUWNoup4wxnYrQcaaBanUh",
+        "block_type": 32,
+        "children": [
+          "MV49dNT6ioYSGCxSwqHcLfXPnsb"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "MV49dNT6ioYSGCxSwqHcLfXPnsb",
+        "block_type": 2,
+        "parent_id": "ClOqdFUWNoup4wxnYrQcaaBanUh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "告警等级",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DyJsd7HcsoI7WZxEVt3cFd2EnZd",
+        "block_type": 32,
+        "children": [
+          "OFWRdKiReolbUlxGw3oc3fwlnQb"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "OFWRdKiReolbUlxGw3oc3fwlnQb",
+        "block_type": 2,
+        "parent_id": "DyJsd7HcsoI7WZxEVt3cFd2EnZd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "默认告警条件",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XBEhdezqdoCC5Bxw64hcBhcvnIb",
+        "block_type": 32,
+        "children": [
+          "ZNBWd0G8govyurx9Zl6cV26InVh"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ZNBWd0G8govyurx9Zl6cV26InVh",
+        "block_type": 2,
+        "parent_id": "XBEhdezqdoCC5Bxw64hcBhcvnIb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "默认状态",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GFHZdOIekoIe1IxW4gbcDsbwnpb",
+        "block_type": 32,
+        "children": [
+          "KX5pdaqBBozXS3xFKJscnwMNnRG",
+          "CemVdwmnko4O6dxUTPicInJvnTc"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "KX5pdaqBBozXS3xFKJscnwMNnRG",
+        "block_type": 2,
+        "parent_id": "GFHZdOIekoIe1IxW4gbcDsbwnpb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "信用卡有效期",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CemVdwmnko4O6dxUTPicInJvnTc",
+        "block_type": 2,
+        "parent_id": "GFHZdOIekoIe1IxW4gbcDsbwnpb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PWAcd9Htsobma9xeAGkc3c42nIJ",
+        "block_type": 32,
+        "children": [
+          "QqMWdc40EogeG9xJ48RcEEl8nDe"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QqMWdc40EogeG9xJ48RcEEl8nDe",
+        "block_type": 2,
+        "parent_id": "PWAcd9Htsobma9xeAGkc3c42nIJ",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "天",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "D1CfdRpdKoAokUxsfy5cg34vn0Y",
+        "block_type": 32,
+        "children": [
+          "QU6Edt3HKo0CylxOepLcZAQDnTh",
+          "J13HdsGUPoFhzdxjwtNci21Bncd"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QU6Edt3HKo0CylxOepLcZAQDnTh",
+        "block_type": 2,
+        "parent_id": "D1CfdRpdKoAokUxsfy5cg34vn0Y",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "告警",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " / ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "紧急",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "J13HdsGUPoFhzdxjwtNci21Bncd",
+        "block_type": 2,
+        "parent_id": "D1CfdRpdKoAokUxsfy5cg34vn0Y",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Cu61dfboIoMw9kxDr70cHSvinKh",
+        "block_type": 32,
+        "children": [
+          "TVgGdmpbyoOmlixZv0bcwmXDnOe",
+          "CSuydLiznole3GxfD3ncwjPxnCf",
+          "UBahdvisNobJzfx06escLMC3nGg"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "TVgGdmpbyoOmlixZv0bcwmXDnOe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "告警",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：信用卡有效期小于 30 天时触发告警。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Cu61dfboIoMw9kxDr70cHSvinKh"
+      },
+      {
+        "block_id": "CSuydLiznole3GxfD3ncwjPxnCf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "紧急",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：信用卡有效期小于 7 天时触发告警。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Cu61dfboIoMw9kxDr70cHSvinKh"
+      },
+      {
+        "block_id": "UBahdvisNobJzfx06escLMC3nGg",
+        "block_type": 2,
+        "parent_id": "Cu61dfboIoMw9kxDr70cHSvinKh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KzUQdtk0co4k4sxF9DpcYxJvnme",
+        "block_type": 32,
+        "children": [
+          "Pt17dCay0oo4y0xKXaFcS0HVnUf"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Pt17dCay0oo4y0xKXaFcS0HVnUf",
+        "block_type": 2,
+        "parent_id": "KzUQdtk0co4k4sxF9DpcYxJvnme",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "开启",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QpmGdMUsiosQdHxkRo2cfEpMnDH",
+        "block_type": 32,
+        "children": [
+          "Aj9odVhV8otbapxY76Uc0LD7nid"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Aj9odVhV8otbapxY76Uc0LD7nid",
+        "block_type": 2,
+        "parent_id": "QpmGdMUsiosQdHxkRo2cfEpMnDH",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "免费额度（余额/有效期）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KW9AdBzbxoknAqxhatdcF51PnYf",
+        "block_type": 32,
+        "children": [
+          "ADNcdNMzUoh28hxgXCucWIUXnTe",
+          "BsmDdCin5oeCwuxh105cWypRnsg"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ADNcdNMzUoh28hxgXCucWIUXnTe",
+        "block_type": 2,
+        "parent_id": "KW9AdBzbxoknAqxhatdcF51PnYf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "% / 天",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BsmDdCin5oeCwuxh105cWypRnsg",
+        "block_type": 2,
+        "parent_id": "KW9AdBzbxoknAqxhatdcF51PnYf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "E8zFdJBxloIGgoxawAKcCMUFnVe",
+        "block_type": 32,
+        "children": [
+          "V9svdEmBUo9DDMx4dHPc4FOLnFc"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "V9svdEmBUo9DDMx4dHPc4FOLnFc",
+        "block_type": 2,
+        "parent_id": "E8zFdJBxloIGgoxawAKcCMUFnVe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "告警",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RYvBdFLHYob00jxXD4dcwGwwn4c",
+        "block_type": 32,
+        "children": [
+          "WsHPdHvDtoauBsx7q2wcgyegnrc"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "WsHPdHvDtoauBsx7q2wcgyegnrc",
+        "block_type": 2,
+        "parent_id": "RYvBdFLHYob00jxXD4dcwGwwn4c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "免费额度余额小于 ¥10 或免费额度有效期小于 0 天时触发告警。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Wji8dObwhoLJZExTmvIcYidGnSL",
+        "block_type": 32,
+        "children": [
+          "WQYcdpzlPoNlCZxHNGYctADvnte",
+          "OEgYdVZAUokabLxkryocpRsYnRb"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "WQYcdpzlPoNlCZxHNGYctADvnte",
+        "block_type": 2,
+        "parent_id": "Wji8dObwhoLJZExTmvIcYidGnSL",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "开启",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OEgYdVZAUokabLxkryocpRsYnRb",
+        "block_type": 2,
+        "parent_id": "Wji8dObwhoLJZExTmvIcYidGnSL",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DuHEdOkEfoVs2Uxpt7bc8Waqnce",
+        "block_type": 32,
+        "children": [
+          "RR88dcIDbothLvxb2pncEehNnrc"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RR88dcIDbothLvxb2pncEehNnrc",
+        "block_type": 2,
+        "parent_id": "DuHEdOkEfoVs2Uxpt7bc8Waqnce",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "现金余额",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PCO5dvUqmolkMWxsIfbcQHQXnZf",
+        "block_type": 32,
+        "children": [
+          "DStldvK6xomAfix6EVwczuQpnMc"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "DStldvK6xomAfix6EVwczuQpnMc",
+        "block_type": 2,
+        "parent_id": "PCO5dvUqmolkMWxsIfbcQHQXnZf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "¥",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LP3sdxKMVogyxxxsmDHcslIznZe",
+        "block_type": 32,
+        "children": [
+          "D0UpdtC2GoPvX1xJJc2cgYNxnqM"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "D0UpdtC2GoPvX1xJJc2cgYNxnqM",
+        "block_type": 2,
+        "parent_id": "LP3sdxKMVogyxxxsmDHcslIznZe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "紧急",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RNjpdrhOOo7MRtxhwfDc7MivnMh",
+        "block_type": 32,
+        "children": [
+          "DLCkdlJ8ro353HxfBEKcPnDJnkg"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "DLCkdlJ8ro353HxfBEKcPnDJnkg",
+        "block_type": 2,
+        "parent_id": "RNjpdrhOOo7MRtxhwfDc7MivnMh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "现金余额小于 ¥100 时触发告警。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WHZHduuyUobF5TxjYG1cgZ2OnNb",
+        "block_type": 32,
+        "children": [
+          "Ph4EdYARuoVICcxoR2gclM5Pnnf"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Ph4EdYARuoVICcxoR2gclM5Pnnf",
+        "block_type": 2,
+        "parent_id": "WHZHduuyUobF5TxjYG1cgZ2OnNb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "开启",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "B23WdvcYqoQqOKxvG4rc6geAnKc",
+        "block_type": 32,
+        "children": [
+          "QDzAdVIHqoMhAFx0F5OcAV1Ynjd"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QDzAdVIHqoMhAFx0F5OcAV1Ynjd",
+        "block_type": 2,
+        "parent_id": "B23WdvcYqoQqOKxvG4rc6geAnKc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "用量金额",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "K2cYdcYRSoZCDzxPlFOcOdGlnoh",
+        "block_type": 32,
+        "children": [
+          "CAKvd7W9koa01YxxeNrcBPcanFb"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "CAKvd7W9koa01YxxeNrcBPcanFb",
+        "block_type": 2,
+        "parent_id": "K2cYdcYRSoZCDzxPlFOcOdGlnoh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "¥",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZhiodVYQLoef4Qx7gdBcCgNynUg",
+        "block_type": 32,
+        "children": [
+          "KoxVdeSPDoa1N9xTBs3cyHM1n0c"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "KoxVdeSPDoa1N9xTBs3cyHM1n0c",
+        "block_type": 2,
+        "parent_id": "ZhiodVYQLoef4Qx7gdBcCgNynUg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "告警",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IpoodAEdSoDshix3Y2SccdTmnPf",
+        "block_type": 32,
+        "children": [
+          "AXA8dlU4Lo6mMbxtbzkcH8StnHh"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "AXA8dlU4Lo6mMbxtbzkcH8StnHh",
+        "block_type": 2,
+        "parent_id": "IpoodAEdSoDshix3Y2SccdTmnPf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "用量金额大于 ¥100 时触发告警。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UkJodAaWSodoasxVGlVcgv6bnLg",
+        "block_type": 32,
+        "children": [
+          "HxuzdzUR8ojkoIxH4ZJcg85gnUd"
+        ],
+        "parent_id": "XCO4d0mf4o3x5Rx1zQMcuaXRnZa",
+        "table_cell": {}
+      },
+      {
+        "block_id": "HxuzdzUR8ojkoIxH4ZJcg85gnUd",
+        "block_type": 2,
+        "parent_id": "UkJodAaWSodoasxVGlVcgv6bnLg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "关闭",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ETKxdhSD4oCqsgx9fczc5qoEnRb",
+        "block_type": 2,
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "权限",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KgEjd60o5okH9OxAESocn27xnLf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看和配置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：仅对组织管理员开放。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "G81udEy2aowTw8x62aKcwch7nRb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "接收告警通知",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：如果被管理员指定为接收人，任何组织成员都可以接收告警通知。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "J7qFdWizEoQmuyxMRH9cZROUnue",
+        "block_type": 2,
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要了解用户角色的详细说明，请参阅",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "用户角色",
+                "token": "SXwewQ8p6i2qf8kd2YaccqKDnng",
+                "url": "https://zilliverse.feishu.cn/wiki/SXwewQ8p6i2qf8kd2YaccqKDnng"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NpaFdI6RrorOydxP0M8cHn1pnF9",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看组织告警{#view-organization-alerts}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "Dq5QdWTydo3ItfxEiwfc8Cu8nmf",
+        "block_type": 2,
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "组织告警",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页面，查看各种账单相关的告警。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YVMGdANZrosnNTxm7pecoH68n0f",
+        "block_type": 2,
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "告警的组成部分",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JPridE6CfoBwRXxmZMocPG1Rnxf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "告警项",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：由 Zilliz Cloud 预设的触发条件和严重性。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "OBZrddrtGolHfSxUcy9cTyvYnqg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "告警等级",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：根据告警严重情况，分为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "告警",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "或",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "紧急",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "A2FudHKKEop14AxfED4cBcdIn5b",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "触发条件",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：触发告警的条件。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "UTgmdXhhyoza9vxUVJrclMWWnPc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "状态",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：显示告警是否处于",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "开启",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "状态。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "RHfUd0xdWoe2PQxw4jIcuGIHn3c",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Receiver",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：接收通知的指定角色、电子邮箱地址或电话号码。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "Rq3sdTDuWoFuD9xFGf7c2jw7nLh",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D33460-1520%26mode%3Ddesign%26t%3DtRIs5rm1TPXPf6hz-4"
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "AY9sd8RQDowhApxt8akc6wBFnCf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "编辑组织告警{#edit-organization-alerts}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "Dzprdak4XosKDhxveJechoXVnHb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "自定义设置：修改告警触发条件、更新通知接收人以及更改告警状态。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "ORqBd2lusouaZQx0fDIcwUm9nAh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "限制：暂不支持修改告警项和告警等级。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "KWxNdHoubo3NXRxtiGvcRoUTnVF",
+        "block_type": 34,
+        "children": [
+          "YfrOdMO2CocqG7x3XfjcuaQnnxf"
+        ],
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu",
+        "quote_container": {}
+      },
+      {
+        "block_id": "YfrOdMO2CocqG7x3XfjcuaQnnxf",
+        "block_type": 2,
+        "parent_id": "KWxNdHoubo3NXRxtiGvcRoUTnVF",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "要快速开启或关闭一个告警，您可以在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "操作",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "栏中选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "开启",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "或",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "关闭",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CAFddAWz8odqRPxUe3gcSWSQnlf",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D33472-1528%26mode%3Ddesign%26t%3DtRIs5rm1TPXPf6hz-4"
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "G4SLdfywyoHchAx7nCkcmIYcnjc",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "开启或关闭组织告警{#turn-on-or-off-an-organization-alert}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "RHX6dUwJloWxYAx7m4Ic492PnPb",
+        "block_type": 2,
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要快速开启或关闭一个告警，在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "操作",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "栏中选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "开启",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "或",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "关闭",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IG9MdJsqDoAjZwxbZ3ZcPrpZnYe",
+        "block_type": 34,
+        "children": [
+          "P4v9dxqHqoCd6Ax4I9wcInFqnbg"
+        ],
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu",
+        "quote_container": {}
+      },
+      {
+        "block_id": "P4v9dxqHqoCd6Ax4I9wcInFqnbg",
+        "block_type": 2,
+        "parent_id": "IG9MdJsqDoAjZwxbZ3ZcPrpZnYe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "告警关闭后，您无法再接收到任何告警通知。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PEo0dcFtgoTj9mx5aAQcXTjunNb",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D33486-1555%26mode%3Ddesign%26t%3DtRIs5rm1TPXPf6hz-4"
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "IheBdM1rvovZESxBYARcvwQsnlb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看告警历史{#view-alert-history}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "ATand3DbZolfH4xMyj6c9zvFnQb",
+        "block_type": 2,
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "告警历史",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页签，查看已触发的告警历史列表。您可以根据告警项、告警等级和告警时间范围筛选满足条件的告警。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KbnBdhGRKoB98kxKssGcIy0QnL5",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D33486-1578%26mode%3Ddesign%26t%3DtRIs5rm1TPXPf6hz-4"
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "ATozd10ORo9grAxhYQJcChdhnhe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "文档推荐{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "MBRfdq1pfo8J4cxDWVRcb6Y1n9e",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "查看集群性能指标",
+                "token": "S3BswPJ4NiKl9okZDoycMvbunMb",
+                "url": "https://zilliverse.feishu.cn/wiki/S3BswPJ4NiKl9okZDoycMvbunMb"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "Bqugdwx05oOy0QxcgfTcWIIkn9r",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "管理项目告警",
+                "token": "EUS8w4x9Ii0BmhkJBfQcsoFln5c",
+                "url": "https://zilliverse.feishu.cn/wiki/EUS8w4x9Ii0BmhkJBfQcsoFln5c"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      },
+      {
+        "block_id": "D2yndPUqPo8DwJxzyOoccnNgnjd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "指标与告警快速参考",
+                "token": "Rca8w6kRRiy7a9kr6adczTcGnoh",
+                "url": "https://zilliverse.feishu.cn/wiki/Rca8w6kRRiy7a9kr6adczTcGnoh"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "CtFqdkFwKorG0mxk90UchuFHnEu"
+      }
+    ],
+    "counts": 94
+  }
+}

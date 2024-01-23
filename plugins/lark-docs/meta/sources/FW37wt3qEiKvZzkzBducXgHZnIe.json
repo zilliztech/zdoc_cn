@@ -1,0 +1,258 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": false,
+  "node_create_time": "1687140733",
+  "node_token": "FW37wt3qEiKvZzkzBducXgHZnIe",
+  "node_type": "origin",
+  "obj_create_time": "1687140733",
+  "obj_edit_time": "1700707107",
+  "obj_token": "Qcwyd2Ky8oP83vxT6w3cp62GnYZ",
+  "obj_type": "docx",
+  "origin_node_token": "FW37wt3qEiKvZzkzBducXgHZnIe",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "SbePwiLrZi2hZqk5NpRcmramnEN",
+  "space_id": "7167193056431783939",
+  "title": "删除备份快照",
+  "slug": "delete-snapshot",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "Qcwyd2Ky8oP83vxT6w3cp62GnYZ",
+        "block_type": 1,
+        "children": [
+          "LmjKd0NS1o5df6xmdnaclgrenIY",
+          "JtJGd0G2LoNnVYxKbWycaz02nRd",
+          "JnAUdUCVIoigyRxtRF4cm7ZTnCb",
+          "QrUIdQKt3oR70LxdM7ccYVodnUh",
+          "SxagdO0klo5wj8xFUfBcU2axnWd",
+          "R0e0dBkb8oqEjixAudgcoGo1nhg",
+          "I0UkdQKs1oj7adxX2Azc8zVknkc",
+          "Dsw8dzjmtoacfoxbivycAGjMnmc"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "删除备份快照",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "LmjKd0NS1o5df6xmdnaclgrenIY",
+        "block_type": 2,
+        "parent_id": "Qcwyd2Ky8oP83vxT6w3cp62GnYZ",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在快照达到指定保留天数后，Zilliz Cloud 将自动删除快照。您也可以在到达保留天数之前手动删除不需要的快照。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JtJGd0G2LoNnVYxKbWycaz02nRd",
+        "block_type": 26,
+        "comment_ids": [
+          "7278894338502115332"
+        ],
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6340-1843%26mode%3Ddesign%26t%3Dkrs3Srz019NF5ejw-4"
+          }
+        },
+        "parent_id": "Qcwyd2Ky8oP83vxT6w3cp62GnYZ"
+      },
+      {
+        "block_id": "JnAUdUCVIoigyRxtRF4cm7ZTnCb",
+        "block_type": 2,
+        "parent_id": "Qcwyd2Ky8oP83vxT6w3cp62GnYZ",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在执行删除操作之前，系统会提示您确认是否删除快照。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QrUIdQKt3oR70LxdM7ccYVodnUh",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相关文档{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Qcwyd2Ky8oP83vxT6w3cp62GnYZ"
+      },
+      {
+        "block_id": "SxagdO0klo5wj8xFUfBcU2axnWd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建备份快照",
+                "token": "GFFswc3z1iQtjQkpmyScL00dnSx",
+                "url": "https://zilliverse.feishu.cn/wiki/GFFswc3z1iQtjQkpmyScL00dnSx"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Qcwyd2Ky8oP83vxT6w3cp62GnYZ"
+      },
+      {
+        "block_id": "R0e0dBkb8oqEjixAudgcoGo1nhg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建自动备份",
+                "token": "TXyTwrfxCiStfek4hc7c2nKwnJc",
+                "url": "https://zilliverse.feishu.cn/wiki/TXyTwrfxCiStfek4hc7c2nKwnJc"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Qcwyd2Ky8oP83vxT6w3cp62GnYZ"
+      },
+      {
+        "block_id": "I0UkdQKs1oj7adxX2Azc8zVknkc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "查看备份快照",
+                "token": "PS8EwUahQiNPTikPIMbcBxvGnKS",
+                "url": "https://zilliverse.feishu.cn/wiki/PS8EwUahQiNPTikPIMbcBxvGnKS"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Qcwyd2Ky8oP83vxT6w3cp62GnYZ"
+      },
+      {
+        "block_id": "Dsw8dzjmtoacfoxbivycAGjMnmc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "恢复备份",
+                "token": "NtkswF6UEi3kB0k8XSEcOKkhnld",
+                "url": "https://zilliverse.feishu.cn/wiki/NtkswF6UEi3kB0k8XSEcOKkhnld"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Qcwyd2Ky8oP83vxT6w3cp62GnYZ"
+      }
+    ],
+    "counts": 9
+  }
+}

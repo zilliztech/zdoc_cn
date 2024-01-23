@@ -2,6 +2,7 @@
 slug: /faq-users-and-roles
 beta: null
 notebook: null
+token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 8
 ---
 
@@ -9,13 +10,13 @@ sidebar_position: 8
 
 本文列举了 Zilliz Cloud 用户和角色相关的常见问题及对应解决方法。
 
-## Contents
+## 目录
 
 - [是否可以离开组织？](#can-i-leave-my-organization)
 - [如何修改组织名称？](#how-can-i-edit-my-organization-name)
 - [如何邀请同事或团队成员进行协作？](#how-can-i-invite-a-colleague-or-teammate-to-collaborate)
 
-## 常见问题
+## 问答
 
 
 

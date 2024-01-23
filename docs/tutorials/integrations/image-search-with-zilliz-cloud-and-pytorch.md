@@ -2,6 +2,7 @@
 slug: /image-search-with-zilliz-cloud-and-pytorch
 beta: FALSE
 notebook: 84_integrations_pytorch.ipynb
+token: FpeXw3b5piUAG7kUCgucgI1unFh
 sidebar_position: 5
 ---
 
@@ -32,7 +33,7 @@ pip install pymilvus torch gdown torchvision tqdm
 import gdown
 import zipfile
 
-url = '<https://drive.google.com/uc?id=1OYDHLEy992qu5C4C8HV5uDIkOWRTAR1_>'
+url = 'https://drive.google.com/uc?id=1OYDHLEy992qu5C4C8HV5uDIkOWRTAR1_'
 output = './paintings.zip'
 gdown.download(url, output)
 
@@ -71,9 +72,10 @@ TOKEN = 'YOUR_CLUSTER_TOKEN'
 在这一小节，我们将完成 Zilliz Cloud 的设置，涉及如下步骤：
 
 1. 使用提供的端点 URI 连接 Zilliz Cloud cluster。
+
     ```python
     from pymilvus import connections
-
+    
     # Connect to Zilliz Cloud and create a collection
     connections.connect(
         alias='default',
@@ -84,26 +86,28 @@ TOKEN = 'YOUR_CLUSTER_TOKEN'
     ```
 
 1. 如果需要创建的 Collection 已存在，删除该 Collection。
+
     ```python
     from pymilvus import utility
-
+    
     # Remove any previous collections with the same name
     if COLLECTION_NAME in utility.list_collections():
         utility.drop_collection(COLLECTION_NAME)
     ```
 
 1. 创建一个 Collection 用于存储图片 ID，图片路径以及该图片的向量表示。
+
     ```python
     from pymilvus import FieldSchema, CollectionSchema, DataType, Collection
-
+    
     fields = [
         FieldSchema(name='id', dtype=DataType.INT64, is_primary=True, auto_id=True),
-        FieldSchema(name='filepath', dtype=DataType.VARCHAR, max_length=200),  # VARCHARS need a maximum length, so for this example they are set to 200 characters
+        FieldSchema(name='filepath', dtype=DataType.VARCHAR, max_length=200),  *# VARCHARS need a maximum length, so for this example they are set to 200 characters*
         FieldSchema(name='image_embedding', dtype=DataType.FLOAT_VECTOR, dim=DIMENSION)
     ]
-
+    
     schema = CollectionSchema(fields=fields)
-
+    
     collection = Collection(
         name=COLLECTION_NAME,
         schema=schema,
@@ -111,18 +115,19 @@ TOKEN = 'YOUR_CLUSTER_TOKEN'
     ```
 
 1. 为 Collection 创建索引文件，并将 Collection 加载到内存。
+
     ```python
     index_params = {
         'index_type': 'AUTOINDEX',
         'metric_type': 'L2',
         'params': {}
     }
-
+    
     collection.create_index(
         field_name='image_embedding', 
         index_params=index_params
     )
-
+    
     collection.load()
     ```
 
@@ -135,33 +140,36 @@ TOKEN = 'YOUR_CLUSTER_TOKEN'
 在下列步骤中，我们将会：
 
 1. 加载数据。
+
     ```python
     import glob
-
+    
     # Get the filepaths of the images
     paths = glob.glob('./paintings/paintings/**/*.jpg', recursive=True)
     len(paths)
-
+    
     # Output
     #
     # 4978
     ```
 
 1. 预处理数据，将其分为不同的批次。
+
     ```python
     import torch
-
-    # Load the embedding model with the last layer removed
-    model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet50', weights=ResNet50_Weights.DEFAULT)
+    
+    # 加载 Embedding 模型，并移除模型的最后一层。
+    model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet50', pretrained=True)
     model = torch.nn.Sequential(*(list(model.children())[:-1]))
     model.eval()
     ```
 
 1. 获取数据的向量表示。
+
     ```python
     from torchvision import transforms
-
-    # Preprocessing for images
+    
+    # 对图片进行预处理。
     preprocess = transforms.Compose([
         transforms.Resize(256),
         transforms.CenterCrop(224),
@@ -171,18 +179,19 @@ TOKEN = 'YOUR_CLUSTER_TOKEN'
     ```
 
 1. 向 Collection 插入数据。
+
     ```python
     from PIL import Image
     from tqdm import tqdm
-
+    
     # Embed function that embeds the batch and inserts it
     def embed(data):
         with torch.no_grad():
             output = model(torch.stack(data[0])).squeeze()
             collection.insert([data[1], output.tolist()])
-
+    
     data_batch = [[],[]]
-
+    
     # Read the images into batches for embedding and insertion
     for path in tqdm(paths):
         im = Image.open(path).convert('RGB')
@@ -191,11 +200,11 @@ TOKEN = 'YOUR_CLUSTER_TOKEN'
         if len(data_batch[0]) % BATCH_SIZE == 0:
             embed(data_batch)
             data_batch = [[],[]]
-
+    
     # Embed and insert the remainder
     if len(data_batch[0]) != 0:
         embed(data_batch)
-
+    
     # Call a flush to index any unsealed segments.
     time.sleep(5)
     ```

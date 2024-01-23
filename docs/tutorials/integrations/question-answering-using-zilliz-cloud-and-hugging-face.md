@@ -2,6 +2,7 @@
 slug: /question-answering-using-zilliz-cloud-and-hugging-face
 beta: FALSE
 notebook: 81_integrations_huggingface.ipynb
+token: MVYEwIkZCiZd3CkRWFmc9EH2nSf
 sidebar_position: 2
 ---
 
@@ -35,28 +36,27 @@ import time
 在这里，我们定义了一些示例中将要使用的主要参数。你需要根据实际情况和参数旁的注释填写或替换成相应的内容。
 
 ```python
-# 1. Set the name of a dataset available on HuggingFace.
+**# 1. Set the name of a dataset available on HuggingFace.**
 DATASET = 'squad' 
 
-# 2. Set parameters for the generation of a subset of the dataset.
+**# 2. Set parameters for the generation of a subset of the dataset.**
 MODEL = 'bert-base-cased'
 TOKENIZATION_BATCH_SIZE = 1000
 INFERENCE_BATCH_SIZE = 64
 INSERT_RATIO = 0.01
 
-# 3. Set up the name of the collection to be created.
+**# 3. Set up the name of the collection to be created.**
 COLLECTION_NAME = 'huggingface_db'
 
-# 4. Set up the dimension of the embeddings.
+**# 4. Set up the dimension of the embeddings.**
 DIMENSION = 768
 
-# 5. Set the number of records to return.
+**# 5. Set the number of records to return.**
 LIMIT = 100
 
-# 6. Set up the connection parameters for your Zilliz Cloud cluster.
+**# 6. Set up the connection parameters for your Zilliz Cloud cluster.**
 URI = 'YOUR_CLUSTER_ENDPOINT'
 TOKEN = 'YOUR_CLUSTER_TOKEN'
-
 ```
 
 如需进一步了解上述 Transformer 模型及数据集，可参考 [bert-base-uncased](https://huggingface.co/bert-base-uncased) 及 [squad](https://huggingface.co/datasets/squad)。
@@ -281,4 +281,5 @@ for x in question_dataset:
 # ('Worms', tensor(26.6245), 'Where did Luther refuse to change his beliefs?')
 # ('Collaborationist units', tensor(26.8737), 'What type of soldiers came from Hong Kong? ')
 # ('1996', tensor(27.1454), 'When did Ross Sackett study time and energy for hunter-gartherer groups?')
+
 ```

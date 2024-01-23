@@ -1,0 +1,1539 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1700646241",
+  "node_token": "BuuSwsbhEiIHDJkB9YSc63xAnrh",
+  "node_type": "origin",
+  "obj_create_time": "1700646241",
+  "obj_edit_time": "1705926566",
+  "obj_token": "DkQNddkKuoiGK0xxdd0cqxJLnIc",
+  "obj_type": "docx",
+  "origin_node_token": "BuuSwsbhEiIHDJkB9YSc63xAnrh",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "QxcnwBks8izBAQkjP8Ycl1cEnQh",
+  "space_id": "7167193056431783939",
+  "title": "版本说明书（2023/11/23）",
+  "slug": "release-notes-230",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc",
+        "block_type": 1,
+        "children": [
+          "PVcPdq7AjogN1jxeucJcHDuXnqb",
+          "JVu8dQYWeoKwdextQbTc0yn1npf",
+          "B5fUdzLbzo4l4RxWlgVciH0Gn8e",
+          "BJysdmXKLoolhnxMbRgcxDy6nmd",
+          "XsBPdx4uyoephXxF8pfcfXtRnxe",
+          "TuVAdzWYZotjhJx1HQCcgEVUn5b",
+          "SlOodz5v0okHPKxpZu3chSlKn8g",
+          "TaYWdwucQoYg7ZxOTguchLDPnoc",
+          "J0QkdtgSCokCdUxuePDcXS6Nnxh",
+          "WCP6dRfW5opOCMx7XPZciE8Pnch",
+          "ECkrdhMProt0sAxUnlUcm7pInkg",
+          "AlhadmdpQob3nKx4ZYRcjbIcnQe",
+          "ZTh9d20qGoqxEJx5FYlcR1FDnEf",
+          "Sp4EdbyuMoTKzUx6ESAcH14ankf",
+          "PGnJdAz3WoljELxCG8vcs830nPh",
+          "Kkh2dPT63ohjITxkVYec3cQ8nZA",
+          "SGG2ddXi9oqfUmxUxnkcndrMnZd",
+          "EveNdDqghoOsZJxzNmCc4z28n7d",
+          "ZIrRdQEWWo2PxxxIOYIc3O8Gntg",
+          "WSl4dxbzGoYC4rxA2CTcJKhnn8e",
+          "FFUEdSmUjoeJZExCvfFcfluWnqJ",
+          "Ye7wdhwtMoR6JGxCLaccd5fKnE8"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "版本说明书",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "（2023/11/23）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "PVcPdq7AjogN1jxeucJcHDuXnqb",
+        "block_type": 2,
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "发布日期：2023年11月",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "23",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "日",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JVu8dQYWeoKwdextQbTc0yn1npf",
+        "block_type": 2,
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "我们很高兴地宣布 Zilliz Cloud 2.3.0 的发布。此版本引入了一系列创新 Beta 特性和功能改进：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "B5fUdzLbzo4l4RxWlgVciH0Gn8e",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Milvus 兼容性",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc"
+      },
+      {
+        "block_id": "BJysdmXKLoolhnxMbRgcxDy6nmd",
+        "block_type": 2,
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "此次发布兼容 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Milvus 2.2.x",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 以及 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Milvus 2.3.x (Beta)",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XsBPdx4uyoephXxF8pfcfXtRnxe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创新 Beta 特性",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#innovative-beta-features}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc"
+      },
+      {
+        "block_id": "TuVAdzWYZotjhJx1HQCcgEVUn5b",
+        "block_type": 2,
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过我们最新的 Beta 特性，探索未来",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "立即升级以体验这些增强功能：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SlOodz5v0okHPKxpZu3chSlKn8g",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "范围搜索",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "RjEtd31N3oZ8zJxCnctcuhdOnrg"
+        ],
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc"
+      },
+      {
+        "block_id": "RjEtd31N3oZ8zJxCnctcuhdOnrg",
+        "block_type": 2,
+        "parent_id": "SlOodz5v0okHPKxpZu3chSlKn8g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "用",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "范围搜索",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FVdpLwTKnPinYj6kBGOBckmpfnud"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "重新定义你的查询，让你为搜索设置半径。与传统的 ANN 搜索不同，范围搜索确保包括指定半径内的所有向量，提供更全面的视图。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TaYWdwucQoYg7ZxOTguchLDPnoc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Upsert",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "OV38dyIXho0fglxFkjAcyuhgn0c"
+        ],
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc"
+      },
+      {
+        "block_id": "OV38dyIXho0fglxFkjAcyuhgn0c",
+        "block_type": 2,
+        "parent_id": "TaYWdwucQoYg7ZxOTguchLDPnoc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Upsert",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FFdqOwWn9siVmS2kHLjpczaTlnlc"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "（“更新”和“插入”的融合）轻松管理动态数据集。享受频繁变化的数据集更高的效率。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "J0QkdtgSCokCdUxuePDcXS6Nnxh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "余弦度量类型",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "JhaddW0NIorFOjxFbtlcF2cqnfc"
+        ],
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc"
+      },
+      {
+        "block_id": "JhaddW0NIorFOjxFbtlcF2cqnfc",
+        "block_type": 2,
+        "parent_id": "J0QkdtgSCokCdUxuePDcXS6Nnxh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "体验先进的向量搜索，支持",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "余弦",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fdocx%2FAkJJdU3uwoEbAgx5S52cg42Cn8c%23Y0htdEEQaoEhXYxG6veccLksnOf"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "内积",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fdocx%2FAkJJdU3uwoEbAgx5S52cg42Cn8c%23H28Md5oafoUg28xqY3ic5kAAnFc"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "欧式距离",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fdocx%2FAkJJdU3uwoEbAgx5S52cg42Cn8c%23I9lDdEzdponPLOx18cGciMg8nve"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。余弦度量消除了向量标准化的先决条件，简化了搜索过程。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WCP6dRfW5opOCMx7XPZciE8Pnch",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "访问控制",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "LNA8dWABIoanw0xXsPtcFoWQnkh"
+        ],
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc"
+      },
+      {
+        "block_id": "LNA8dWABIoanw0xXsPtcFoWQnkh",
+        "block_type": 2,
+        "parent_id": "WCP6dRfW5opOCMx7XPZciE8Pnch",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API 密钥",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FUGzNwB4TmiqTozkJvarceRdenif"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "或",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "用户名密码身份验证",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FVNWiwtYwGi9m0Okhj3Zce8wAnte"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "安全地访问专用集群和无服务器实例。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ECkrdhMProt0sAxUnlUcm7pInkg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "返回原始向量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "OmI7dLWjkomoH4xX1spcGamCnLe"
+        ],
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc"
+      },
+      {
+        "block_id": "OmI7dLWjkomoH4xX1spcGamCnLe",
+        "block_type": 2,
+        "parent_id": "ECkrdhMProt0sAxUnlUcm7pInkg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "搜索参数",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FSPaWwHEVuipu3bkeg17coFgnnUo"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "中指定向量字段，以将其作为搜索结果的一部分接收。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AlhadmdpQob3nKx4ZYRcjbIcnQe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "JSON_CONTAINS 过滤器",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "YRbMdEahdotQDWxnqBHcqnpXnAf"
+        ],
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc"
+      },
+      {
+        "block_id": "YRbMdEahdotQDWxnqBHcqnpXnAf",
+        "block_type": 2,
+        "parent_id": "AlhadmdpQob3nKx4ZYRcjbIcnQe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "JSON_CONTAINS 运算符",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fdocx%2FYBiad4N6IotJCWx95RccjWxynJb%23GpmadLNqjoEngBxCfylcthSonWh"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "进一步细化搜索，允许你基于 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "JSON",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 字段值指定过滤条件。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZTh9d20qGoqxEJx5FYlcR1FDnEf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Entity ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "计数",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "TpgadDC6Kopc3fxDdCaclcuVn8e"
+        ],
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc"
+      },
+      {
+        "block_id": "TpgadDC6Kopc3fxDdCaclcuVn8e",
+        "block_type": 2,
+        "parent_id": "ZTh9d20qGoqxEJx5FYlcR1FDnEf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "快速概览加载的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "集合中的 Entity 总数",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fdocx%2FYBiad4N6IotJCWx95RccjWxynJb%23Oe1adGsQXo4Skexc1Tbco9UZn0d"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，以更好地管理数据。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Sp4EdbyuMoTKzUx6ESAcH14ankf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "功能改进",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#enhancements}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc"
+      },
+      {
+        "block_id": "PGnJdAz3WoljELxCG8vcs830nPh",
+        "block_type": 2,
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "我们还实施了几项增强功能，以提升您的整体体验：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Kkh2dPT63ohjITxkVYec3cQ8nZA",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "RBAC",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 新角色",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "LDufdIw5QoBtsJxYrq2c9vgNnNe"
+        ],
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc"
+      },
+      {
+        "block_id": "LDufdIw5QoBtsJxYrq2c9vgNnNe",
+        "block_type": 2,
+        "parent_id": "Kkh2dPT63ohjITxkVYec3cQ8nZA",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "授予",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "项目成员角色",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FWYzywSL2ViDcZGk9vgqcq9XOned"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "给项目协作者，以更流畅的协作。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SGG2ddXi9oqfUmxUxnkcndrMnZd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "计费优化",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "AdmUd2QoposyTdxssWCcbuqCnyb"
+        ],
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc"
+      },
+      {
+        "block_id": "AdmUd2QoposyTdxssWCcbuqCnyb",
+        "block_type": 2,
+        "parent_id": "SGG2ddXi9oqfUmxUxnkcndrMnZd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "享受更高效的计费管理，流程更简化。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EveNdDqghoOsZJxzNmCc4z28n7d",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "高级",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "价格计算器",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "GPPGdRZ5josWJFx2JTpclOqAnVe"
+        ],
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc"
+      },
+      {
+        "block_id": "GPPGdRZ5josWJFx2JTpclOqAnVe",
+        "block_type": 2,
+        "parent_id": "EveNdDqghoOsZJxzNmCc4z28n7d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "使用",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "价格计算器",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com%2Fpricing%23calculator"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "获取综合估计，结合主键、向量字段和字符串字段，以提供更准确的价格概览。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZIrRdQEWWo2PxxxIOYIc3O8Gntg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "自助服务账户删除",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "EKa0dKKP9oh9KnxzBHacQIbonte"
+        ],
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc"
+      },
+      {
+        "block_id": "EKa0dKKP9oh9KnxzBHacQIbonte",
+        "block_type": 2,
+        "parent_id": "ZIrRdQEWWo2PxxxIOYIc3O8Gntg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "轻松删除您自己的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "账户",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fdocx%2FArBTdYKdIobUhGxY885cGQmHnbh%23Nskxd9zARoATTwxC5mhcbmBNnJe"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "或",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "组织",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FMkZjwrXIpicJ5xkYwu6cMK8inVb"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，更好地控制您的个人资料。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WSl4dxbzGoYC4rxA2CTcJKhnn8e",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "稳定性增强",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "YCCRdzuRLoCIGvxomRmckKMonDe"
+        ],
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc"
+      },
+      {
+        "block_id": "YCCRdzuRLoCIGvxomRmckKMonDe",
+        "block_type": 2,
+        "parent_id": "WSl4dxbzGoYC4rxA2CTcJKhnn8e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "我们解决了已知问题，以增强我们服务的可靠性。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FFUEdSmUjoeJZExCvfFcfluWnqJ",
+        "block_type": 2,
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "感谢您选择 Zilliz Cloud，创新与性能的结合！",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ye7wdhwtMoR6JGxCLaccd5fKnE8",
+        "block_type": 2,
+        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 35
+  }
+}

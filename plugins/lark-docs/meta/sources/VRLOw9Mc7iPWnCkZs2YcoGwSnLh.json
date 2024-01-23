@@ -1,0 +1,1357 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1694757970",
+  "node_token": "VRLOw9Mc7iPWnCkZs2YcoGwSnLh",
+  "node_type": "origin",
+  "obj_create_time": "1694757970",
+  "obj_edit_time": "1700705240",
+  "obj_token": "Dr63dR7QLo1ztDx0nzdcIkFRnUB",
+  "obj_type": "docx",
+  "origin_node_token": "VRLOw9Mc7iPWnCkZs2YcoGwSnLh",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "Uj7IwJpneijPROkAZN7cJRLInrc",
+  "space_id": "7167193056431783939",
+  "title": "企业认证",
+  "slug": "enterprise-certification",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "Dr63dR7QLo1ztDx0nzdcIkFRnUB",
+        "block_type": 1,
+        "children": [
+          "MI6sdgk0loCM0SxTRf9cUJVYn8d",
+          "W2DodGzkro9MrwxcEpjc5cN0nVf",
+          "HVzydVzQ2oBj6hxvU8GcMVk6nhg",
+          "OszWdPFETou9rZxfz5LcbC0inKc",
+          "CmisdMz1MoYLs6xLOPsc1684nFc",
+          "SNrqdLlUsonknmxmosZchRiPn8e",
+          "Vq3DdA1JGoNDDexISCvcBRB5nxc",
+          "OX26dObLBoChhgxxcqYco8ZGnbb",
+          "EoDld4v8nohHspxfmQicgk6FnHe",
+          "R3Pnddkxwobo5TxsMyfcZl9DnHD",
+          "Mc3kdd6ufoKNuBxsemUcQuoZn6e",
+          "J9sBd5gqXoA9bVxncB3cLWfJnVU",
+          "ZR0sdREROo8QAKxyZ8Dc6C9lnSg"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "企业认证",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "MI6sdgk0loCM0SxTRf9cUJVYn8d",
+        "block_type": 2,
+        "parent_id": "Dr63dR7QLo1ztDx0nzdcIkFRnUB",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 现已开通企业认证渠道。如需进行",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "现金充值",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FJZqrwH8V8i6a3jktSQgcyXAEnAg"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，您需要先通过企业认证。本章主要介绍如何在 Zilliz Cloud 界面上申请企业认证。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "W2DodGzkro9MrwxcEpjc5cN0nVf",
+        "block_type": 2,
+        "parent_id": "Dr63dR7QLo1ztDx0nzdcIkFRnUB",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HVzydVzQ2oBj6hxvU8GcMVk6nhg",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "操作步骤{#procedures}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Dr63dR7QLo1ztDx0nzdcIkFRnUB"
+      },
+      {
+        "block_id": "OszWdPFETou9rZxfz5LcbC0inKc",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择组织并点击左侧导航栏中的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "系统设置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Dr63dR7QLo1ztDx0nzdcIkFRnUB"
+      },
+      {
+        "block_id": "CmisdMz1MoYLs6xLOPsc1684nFc",
+        "block_type": 13,
+        "children": [
+          "ZzO0d67WHoGgTSxFb96cJIDsnXb"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "企业认证",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "部分，点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "立即认证",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Dr63dR7QLo1ztDx0nzdcIkFRnUB"
+      },
+      {
+        "block_id": "ZzO0d67WHoGgTSxFb96cJIDsnXb",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D9409-5538%26mode%3Ddesign%26t%3D2JDGU6o9z15UAvTp-4"
+          }
+        },
+        "parent_id": "CmisdMz1MoYLs6xLOPsc1684nFc"
+      },
+      {
+        "block_id": "SNrqdLlUsonknmxmosZchRiPn8e",
+        "block_type": 13,
+        "children": [
+          "EJtWdnTTdoWnZAxqO4HcL4uJnVh"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "填写",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "申请企业认证",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "表单并点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "提交申请",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。相关参数请见下表。请确保提供正确信息。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Dr63dR7QLo1ztDx0nzdcIkFRnUB"
+      },
+      {
+        "block_id": "EJtWdnTTdoWnZAxqO4HcL4uJnVh",
+        "block_type": 31,
+        "children": [
+          "UdSPdDkqHoQJOBxRwUzcOcCNn4d",
+          "RgA3dkyBhoySNDxkjFrcODrWnPA",
+          "WXkIdYs4FoI96WxeyRlczMdNnqg",
+          "W2FvdOx4PohlfWx7HoxcwaZhnTf",
+          "IlY0dBFFtoXcPTx8Z7hcDQ34nch",
+          "FwGIdxD9ro9TzWxwuMKcit5anxh",
+          "RPZTdOcRGowigYxv1Zlc4S6DnLh",
+          "CaEAd01EWotwajx4zcpcLwHjnMc",
+          "Lgged8Pp3oYnUsxJvEocSqZonwh",
+          "ChLPdNRddo5FV2xFZuscd2p1nmc",
+          "PO7ldjd5ZoZTnAxlRg4cc5iQnBd",
+          "KRwVdcerto8MGIx2DRtcituDnVb",
+          "EBP7dZW9UoyZbBx0AMrcAAcDnjh",
+          "ER6ddf9Weo7B4Kxnz8XcOhPsnpu",
+          "Gi4mdQG5AonIjpxTYZhciPwtnvd",
+          "DBkGduaFsormHQxR9ZzcwDb6nNb"
+        ],
+        "parent_id": "SNrqdLlUsonknmxmosZchRiPn8e",
+        "table": {
+          "cells": [
+            "UdSPdDkqHoQJOBxRwUzcOcCNn4d",
+            "RgA3dkyBhoySNDxkjFrcODrWnPA",
+            "WXkIdYs4FoI96WxeyRlczMdNnqg",
+            "W2FvdOx4PohlfWx7HoxcwaZhnTf",
+            "IlY0dBFFtoXcPTx8Z7hcDQ34nch",
+            "FwGIdxD9ro9TzWxwuMKcit5anxh",
+            "RPZTdOcRGowigYxv1Zlc4S6DnLh",
+            "CaEAd01EWotwajx4zcpcLwHjnMc",
+            "Lgged8Pp3oYnUsxJvEocSqZonwh",
+            "ChLPdNRddo5FV2xFZuscd2p1nmc",
+            "PO7ldjd5ZoZTnAxlRg4cc5iQnBd",
+            "KRwVdcerto8MGIx2DRtcituDnVb",
+            "EBP7dZW9UoyZbBx0AMrcAAcDnjh",
+            "ER6ddf9Weo7B4Kxnz8XcOhPsnpu",
+            "Gi4mdQG5AonIjpxTYZhciPwtnvd",
+            "DBkGduaFsormHQxR9ZzcwDb6nNb"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              174,
+              554
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 8
+          }
+        }
+      },
+      {
+        "block_id": "UdSPdDkqHoQJOBxRwUzcOcCNn4d",
+        "block_type": 32,
+        "children": [
+          "QRmOdryMMoPi6cxmVeVcM0iUnWg"
+        ],
+        "parent_id": "EJtWdnTTdoWnZAxqO4HcL4uJnVh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QRmOdryMMoPi6cxmVeVcM0iUnWg",
+        "block_type": 2,
+        "parent_id": "UdSPdDkqHoQJOBxRwUzcOcCNn4d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "参数",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 2,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RgA3dkyBhoySNDxkjFrcODrWnPA",
+        "block_type": 32,
+        "children": [
+          "MMXMd28zLoHMsSxFSVNcwnzXnKd"
+        ],
+        "parent_id": "EJtWdnTTdoWnZAxqO4HcL4uJnVh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "MMXMd28zLoHMsSxFSVNcwnzXnKd",
+        "block_type": 2,
+        "parent_id": "RgA3dkyBhoySNDxkjFrcODrWnPA",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 2,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WXkIdYs4FoI96WxeyRlczMdNnqg",
+        "block_type": 32,
+        "children": [
+          "BwiOd89DFokxaAxeUVwcuRh5n3r"
+        ],
+        "parent_id": "EJtWdnTTdoWnZAxqO4HcL4uJnVh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "BwiOd89DFokxaAxeUVwcuRh5n3r",
+        "block_type": 2,
+        "parent_id": "WXkIdYs4FoI96WxeyRlczMdNnqg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "企业名称",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "W2FvdOx4PohlfWx7HoxcwaZhnTf",
+        "block_type": 32,
+        "children": [
+          "GksbdBpDlocT9Jxw7UicpZ8gnoh"
+        ],
+        "parent_id": "EJtWdnTTdoWnZAxqO4HcL4uJnVh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "GksbdBpDlocT9Jxw7UicpZ8gnoh",
+        "block_type": 2,
+        "parent_id": "W2FvdOx4PohlfWx7HoxcwaZhnTf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "需要进行认证的企业名称。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IlY0dBFFtoXcPTx8Z7hcDQ34nch",
+        "block_type": 32,
+        "children": [
+          "XEdQdkrMfoYaFhxnIqfcHq8ynuh"
+        ],
+        "parent_id": "EJtWdnTTdoWnZAxqO4HcL4uJnVh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "XEdQdkrMfoYaFhxnIqfcHq8ynuh",
+        "block_type": 2,
+        "parent_id": "IlY0dBFFtoXcPTx8Z7hcDQ34nch",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "统一社会信用代码",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FwGIdxD9ro9TzWxwuMKcit5anxh",
+        "block_type": 32,
+        "children": [
+          "LAXndMY92ogMD6xsVGmcQiehnOb"
+        ],
+        "parent_id": "EJtWdnTTdoWnZAxqO4HcL4uJnVh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "LAXndMY92ogMD6xsVGmcQiehnOb",
+        "block_type": 2,
+        "parent_id": "FwGIdxD9ro9TzWxwuMKcit5anxh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "统一社会信用代码由 18 位数字或大写字母组成。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RPZTdOcRGowigYxv1Zlc4S6DnLh",
+        "block_type": 32,
+        "children": [
+          "Xdj0dq4e7oMfFPxlAoicXpHUnXg"
+        ],
+        "parent_id": "EJtWdnTTdoWnZAxqO4HcL4uJnVh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Xdj0dq4e7oMfFPxlAoicXpHUnXg",
+        "block_type": 2,
+        "parent_id": "RPZTdOcRGowigYxv1Zlc4S6DnLh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "营业执照",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CaEAd01EWotwajx4zcpcLwHjnMc",
+        "block_type": 32,
+        "children": [
+          "RgaVdwLEgoaHwoxgjyPc99eunKh"
+        ],
+        "parent_id": "EJtWdnTTdoWnZAxqO4HcL4uJnVh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RgaVdwLEgoaHwoxgjyPc99eunKh",
+        "block_type": 2,
+        "parent_id": "CaEAd01EWotwajx4zcpcLwHjnMc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "图片格式为 .jpg 或 .png 文件且大小不得超过 5 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "MB",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Lgged8Pp3oYnUsxJvEocSqZonwh",
+        "block_type": 32,
+        "children": [
+          "YbgFdtl9toZ7ytxFrw8cYzTJnNf"
+        ],
+        "parent_id": "EJtWdnTTdoWnZAxqO4HcL4uJnVh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "YbgFdtl9toZ7ytxFrw8cYzTJnNf",
+        "block_type": 2,
+        "parent_id": "Lgged8Pp3oYnUsxJvEocSqZonwh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "法人姓名",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ChLPdNRddo5FV2xFZuscd2p1nmc",
+        "block_type": 32,
+        "children": [
+          "XmLNdqgIRocNs9xy22Kcqc2knPc"
+        ],
+        "parent_id": "EJtWdnTTdoWnZAxqO4HcL4uJnVh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "XmLNdqgIRocNs9xy22Kcqc2knPc",
+        "block_type": 2,
+        "parent_id": "ChLPdNRddo5FV2xFZuscd2p1nmc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "企业法人的姓名。请确保与营业执照上的法定代表人姓名一致。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PO7ldjd5ZoZTnAxlRg4cc5iQnBd",
+        "block_type": 32,
+        "children": [
+          "QAp6dhWkVo9c8ox4ldWcKYtxnpc"
+        ],
+        "parent_id": "EJtWdnTTdoWnZAxqO4HcL4uJnVh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QAp6dhWkVo9c8ox4ldWcKYtxnpc",
+        "block_type": 2,
+        "parent_id": "PO7ldjd5ZoZTnAxlRg4cc5iQnBd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "法人身份证照片",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KRwVdcerto8MGIx2DRtcituDnVb",
+        "block_type": 32,
+        "children": [
+          "Q7IAdUgapoSxuUxEWlWclCkZnEc"
+        ],
+        "parent_id": "EJtWdnTTdoWnZAxqO4HcL4uJnVh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Q7IAdUgapoSxuUxEWlWclCkZnEc",
+        "block_type": 2,
+        "parent_id": "KRwVdcerto8MGIx2DRtcituDnVb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "法人身份证正反面照片。图片格式为 .jpg 或 .png 文件且大小不得超过 5 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "MB",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EBP7dZW9UoyZbBx0AMrcAAcDnjh",
+        "block_type": 32,
+        "children": [
+          "XgoxdWTUwoFdoMxaDa5c6I0cncn"
+        ],
+        "parent_id": "EJtWdnTTdoWnZAxqO4HcL4uJnVh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "XgoxdWTUwoFdoMxaDa5c6I0cncn",
+        "block_type": 2,
+        "parent_id": "EBP7dZW9UoyZbBx0AMrcAAcDnjh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "注册地址",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ER6ddf9Weo7B4Kxnz8XcOhPsnpu",
+        "block_type": 32,
+        "children": [
+          "IA3vdH8rxow1nHxG5rwcTZYLnbf"
+        ],
+        "parent_id": "EJtWdnTTdoWnZAxqO4HcL4uJnVh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "IA3vdH8rxow1nHxG5rwcTZYLnbf",
+        "block_type": 2,
+        "parent_id": "ER6ddf9Weo7B4Kxnz8XcOhPsnpu",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "企业注册地址。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Gi4mdQG5AonIjpxTYZhciPwtnvd",
+        "block_type": 32,
+        "children": [
+          "QB2Vdh18BoopatxxEEjcXwlGnyf"
+        ],
+        "parent_id": "EJtWdnTTdoWnZAxqO4HcL4uJnVh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QB2Vdh18BoopatxxEEjcXwlGnyf",
+        "block_type": 2,
+        "parent_id": "Gi4mdQG5AonIjpxTYZhciPwtnvd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "注册电话",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DBkGduaFsormHQxR9ZzcwDb6nNb",
+        "block_type": 32,
+        "children": [
+          "TyhFd5EjuocCzrxb8QlcGQOyn0b"
+        ],
+        "parent_id": "EJtWdnTTdoWnZAxqO4HcL4uJnVh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "TyhFd5EjuocCzrxb8QlcGQOyn0b",
+        "block_type": 2,
+        "parent_id": "DBkGduaFsormHQxR9ZzcwDb6nNb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "企业注册电话。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Vq3DdA1JGoNDDexISCvcBRB5nxc",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "阅读",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "信息确认",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "弹窗中的内容，点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "我已阅读并同意",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Dr63dR7QLo1ztDx0nzdcIkFRnUB"
+      },
+      {
+        "block_id": "OX26dObLBoChhgxxcqYco8ZGnbb",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "收到您的企业认证申请后，我们将在 1～3 个工作日内完成审核，请您耐心等待。认证结果将以邮件形式发送至您的邮箱，请注意查收。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Dr63dR7QLo1ztDx0nzdcIkFRnUB"
+      },
+      {
+        "block_id": "EoDld4v8nohHspxfmQicgk6FnHe",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "企业认证成功后，您可以在组织",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "系统设置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "企业认证",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "部分查看企业信息。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Dr63dR7QLo1ztDx0nzdcIkFRnUB"
+      },
+      {
+        "block_id": "R3Pnddkxwobo5TxsMyfcZl9DnHD",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D9409-6197%26mode%3Ddesign%26t%3D2JDGU6o9z15UAvTp-4"
+          }
+        },
+        "parent_id": "Dr63dR7QLo1ztDx0nzdcIkFRnUB"
+      },
+      {
+        "block_id": "Mc3kdd6ufoKNuBxsemUcQuoZn6e",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相关文档{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Dr63dR7QLo1ztDx0nzdcIkFRnUB"
+      },
+      {
+        "block_id": "J9sBd5gqXoA9bVxncB3cLWfJnVU",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "现金充值",
+                "token": "JZqrwH8V8i6a3jktSQgcyXAEnAg",
+                "url": "https://zilliverse.feishu.cn/wiki/JZqrwH8V8i6a3jktSQgcyXAEnAg"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Dr63dR7QLo1ztDx0nzdcIkFRnUB"
+      },
+      {
+        "block_id": "ZR0sdREROo8QAKxyZ8Dc6C9lnSg",
+        "block_type": 2,
+        "parent_id": "Dr63dR7QLo1ztDx0nzdcIkFRnUB",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 48
+  }
+}

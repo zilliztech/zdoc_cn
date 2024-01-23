@@ -1,0 +1,167 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": true,
+  "node_create_time": "1687140035",
+  "node_token": "SbePwiLrZi2hZqk5NpRcmramnEN",
+  "node_type": "origin",
+  "obj_create_time": "1687140035",
+  "obj_edit_time": "1702886651",
+  "obj_token": "DjCYdiwv5oikbDxwWA0c1w5Onoh",
+  "obj_type": "docx",
+  "origin_node_token": "SbePwiLrZi2hZqk5NpRcmramnEN",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "XyeFwdx6kiK9A6kq3yIcLNdEnDd",
+  "space_id": "7167193056431783939",
+  "title": "备份与恢复",
+  "slug": "backup-and-restore",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "DjCYdiwv5oikbDxwWA0c1w5Onoh",
+        "block_type": 1,
+        "children": [
+          "Z9AUdRUXbo35DzxaxstcwcVlnNe"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "备份与恢复",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "Z9AUdRUXbo35DzxaxstcwcVlnNe",
+        "block_type": 2,
+        "parent_id": "DjCYdiwv5oikbDxwWA0c1w5Onoh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 集群中的数据备份与恢复。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 2
+  },
+  "children": [
+    {
+      "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+      "has_child": false,
+      "node_create_time": "1687140680",
+      "node_token": "GFFswc3z1iQtjQkpmyScL00dnSx",
+      "node_type": "origin",
+      "obj_create_time": "1687140680",
+      "obj_edit_time": "1703062983",
+      "obj_token": "WIwudzIxPoBMrLxFgzmcM2B6nzh",
+      "obj_type": "docx",
+      "origin_node_token": "GFFswc3z1iQtjQkpmyScL00dnSx",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+      "parent_node_token": "SbePwiLrZi2hZqk5NpRcmramnEN",
+      "space_id": "7167193056431783939",
+      "title": "创建备份快照",
+      "slug": "create-snapshot"
+    },
+    {
+      "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+      "has_child": false,
+      "node_create_time": "1687140693",
+      "node_token": "TXyTwrfxCiStfek4hc7c2nKwnJc",
+      "node_type": "origin",
+      "obj_create_time": "1687140693",
+      "obj_edit_time": "1700707017",
+      "obj_token": "Q4XvdnUHNoVxFFxRQakcvbdPncc",
+      "obj_type": "docx",
+      "origin_node_token": "TXyTwrfxCiStfek4hc7c2nKwnJc",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+      "parent_node_token": "SbePwiLrZi2hZqk5NpRcmramnEN",
+      "space_id": "7167193056431783939",
+      "title": "创建自动备份",
+      "slug": "schedule-automatic-backups"
+    },
+    {
+      "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+      "has_child": false,
+      "node_create_time": "1687140705",
+      "node_token": "PS8EwUahQiNPTikPIMbcBxvGnKS",
+      "node_type": "origin",
+      "obj_create_time": "1687140705",
+      "obj_edit_time": "1700707056",
+      "obj_token": "IPQkdwZdUo3I72xP5etcDTSYnAd",
+      "obj_type": "docx",
+      "origin_node_token": "PS8EwUahQiNPTikPIMbcBxvGnKS",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+      "parent_node_token": "SbePwiLrZi2hZqk5NpRcmramnEN",
+      "space_id": "7167193056431783939",
+      "title": "查看备份快照",
+      "slug": "view-snapshot-details"
+    },
+    {
+      "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+      "has_child": false,
+      "node_create_time": "1687140718",
+      "node_token": "NtkswF6UEi3kB0k8XSEcOKkhnld",
+      "node_type": "origin",
+      "obj_create_time": "1687140718",
+      "obj_edit_time": "1700707081",
+      "obj_token": "J0XsdaQC1oaZkkxSjVHc5BqNnAe",
+      "obj_type": "docx",
+      "origin_node_token": "NtkswF6UEi3kB0k8XSEcOKkhnld",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+      "parent_node_token": "SbePwiLrZi2hZqk5NpRcmramnEN",
+      "space_id": "7167193056431783939",
+      "title": "恢复备份",
+      "slug": "restore-from-snapshot"
+    },
+    {
+      "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+      "has_child": false,
+      "node_create_time": "1687140733",
+      "node_token": "FW37wt3qEiKvZzkzBducXgHZnIe",
+      "node_type": "origin",
+      "obj_create_time": "1687140733",
+      "obj_edit_time": "1700707107",
+      "obj_token": "Qcwyd2Ky8oP83vxT6w3cp62GnYZ",
+      "obj_type": "docx",
+      "origin_node_token": "FW37wt3qEiKvZzkzBducXgHZnIe",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+      "parent_node_token": "SbePwiLrZi2hZqk5NpRcmramnEN",
+      "space_id": "7167193056431783939",
+      "title": "删除备份快照",
+      "slug": "delete-snapshot"
+    }
+  ]
+}

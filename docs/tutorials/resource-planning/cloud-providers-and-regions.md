@@ -2,6 +2,7 @@
 slug: /cloud-providers-and-regions
 beta: FALSE
 notebook: FALSE
+token: BErdww1kOirndzkHrKoc2ibynlb
 sidebar_position: 3
 ---
 
@@ -16,7 +17,9 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 支持在阿里云上部署集群。
 
-|  **阿里云地域名称** |  **Zilliz Cloud 企业版** |
-| ------------ | --------------------- |
-|  华东1（杭州）     |  ☑️                   |
+|  **阿里云地域名称** |  **Dedicated 集群（企业版）** |
+| ------------ | ---------------------- |
+|  华东1（杭州）     |  ☑️                    |
+|  华北2（北京）     |  ☑️                    |
+|  华南1（深圳）     |  ☑️                    |
 

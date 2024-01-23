@@ -1,0 +1,5359 @@
+{
+  "creator": "ou_8554528ee6e965bad56710acde1c7847",
+  "has_child": false,
+  "node_create_time": "1705903747",
+  "node_token": "FXGWwcjyViaQm8kvJgScITzBnr3",
+  "node_type": "origin",
+  "obj_create_time": "1705903747",
+  "obj_edit_time": "1705931669",
+  "obj_token": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+  "obj_type": "docx",
+  "origin_node_token": "FXGWwcjyViaQm8kvJgScITzBnr3",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_8554528ee6e965bad56710acde1c7847",
+  "parent_node_token": "ZORTw6MRwiMJ23kSwcRcOIxmnkc",
+  "space_id": "7167193056431783939",
+  "title": "用户指南：数据导入从入门到精通",
+  "slug": "data-import-zero-to-hero",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "block_type": 1,
+        "children": [
+          "doxcn1lc8gp6tiZlkHg0lxRFyhe",
+          "Ab0GdvZ3noZeJOx3WcrcOJvFnIg",
+          "KJ85dzrnTo9DC2xVxNScmzuLnFb",
+          "TK3tdBXQFom2r5xGUtvcBQvunye",
+          "EwiXdK1dpoWz94xpdmAcFcb5nAE",
+          "S8e9dELK5oxbODxuW6uc4gFDnmg",
+          "ChuSd0VLkoO740x9S4qcOdCqnnc",
+          "U0zEdK2d9otThDxmWtSc6V3tnih",
+          "ZuUcdkN9RorYWgxs1lpcklpEnSd",
+          "CdXodT762oomFNx7US2crq5ynRh",
+          "TD90d2qLZoy4T5x2FZfc4GnynIh",
+          "QGWddRwOso5L0jx1AcJcIPTInpe",
+          "PbKFdl204oynzpxdYHUcTwmHndc",
+          "DSTDd0LsFoswqjxwsq3cFttpnph",
+          "DwLbdAMimo2TLvxPlh7cSkDBnTg",
+          "W17udLaw8o6WXzxURcIc2SoDnQd",
+          "RF14d1ybdoYKylxquPAc6aqbn9e",
+          "U2CZdXLHgouK9Ax538ecHpLbnbe",
+          "NTaYd7DiGoMP9gxZYjjciyDLn3e",
+          "UbXrdvuEtoSvTsx1BkpcXWOznSe",
+          "E0gldgAJXonsSBx5ArhcIhVbn0d",
+          "HoYfdDPwto4tE8xXlHCcGYr6n8b",
+          "GHy7dU1Ysoxb4axspYjc86ArnFf",
+          "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+          "QnHSdq5Zsonbq5xpteKcaic8nle",
+          "Ovykd8Jd0oLo3ZxfP4TcwR1TnGe",
+          "BYDbdal0coGNC8x7OU0cun4enRg",
+          "OpbEda9W2oTHz2xMU4ucK8EUn4f",
+          "R3DRdGFTsoff6WxSfTKcV9KdnTg",
+          "TNZldzoUaoAKupxwF47cD1Egnhb",
+          "FhugdS3JOolyUexxS53c2Julnnc",
+          "DrAMdeBisoMDPKxUcC9cZTuWnxf",
+          "IdYYd8dUPobJYVxJjH2cCo77nWg",
+          "Rnerdb7zWoO57qxhmR4co00Fn2d",
+          "A1hYdhAv2ofQKhxnZ4gcYV05nac",
+          "QPijd7HPLobAVqxMhJTcHct4nmg",
+          "IhYwdCkyvo0i5kxk0D1cBv0Unsd",
+          "SUNldiYfCoNGBkxoAXsc7lBEnad",
+          "Sxkpd0VRgof2fxx9gbOcNcHunzg",
+          "PBsxdkUOTodnZaxSLBScLh2hnjd",
+          "DAnhdVsU2o3Q0pxJppJcuCV0nP2",
+          "Ha5wdevfEoYjz4xAA3McavNGn3b",
+          "PlIwdxahho56joxoyY4cRDc7n2e",
+          "PpKfdWVibo2PuWxI9NLcRsMJnVd",
+          "UTeodQuAQoagmjxMshhcmpapnp5",
+          "OcKIdPF0LoY60ExtBXxcHnVGnoc",
+          "BPiTdwh1Go3QXaxNtMTcUAVHnmd",
+          "TVTkdG18YoASR0xWDuEc1hPCnSg",
+          "TnAmdNhFPoMEXbxmUwYcfYjBnqc",
+          "IGZWd7xuTotOs1xXkstctDs3ntc",
+          "YP24dcjlVoHGK1xdZskcW9cwn7c",
+          "N6Hgd4vfYoQIEtxyNvrcnFgln0f",
+          "VWindKsGToPcE3xeJGocJCDYnHf",
+          "T5pldFKGkoD8S3xJOvEcXKXWnpK",
+          "VRwbdiROaoY7WSxeKhtctjxAnKe",
+          "OjXjdKrsSohBzHxbnWScBgahnOd",
+          "KUeWdblU5o2CuLxmCGMceJQOnpd",
+          "Od1sdpTizozUzwxdKGAcCn7rnge",
+          "RaXvd1efKosHaYx7Qxscdt85n0N",
+          "RfJndEPi7oPGl8x9JKIcDxPvn66",
+          "UfLXdCDVooQ5enxfPlZc1Qq6nag",
+          "VsrHdPOZFoD88zxiwb4c4ttDnb3",
+          "WFFQdgomaoRQA9xwUAecyHdinmc",
+          "KzjId1CQtorjvrxzlCVcFifvnme",
+          "YCcldctSooxj6MxVAmjcsOMjnzg",
+          "V0hJdqjtXom0zdxwJVYcVxMCnhw",
+          "VEZYddrYGo415hxe1q9cBUREnXe",
+          "AkwRdTSS3omzknx8FBVcXP55nwd",
+          "VTqedkd8Ookiqnx9r2OcAXfKnue",
+          "GrjKdtd8Yokrw8xlSoscpzN3nUe",
+          "Krk2dXfyeof7zOxSce8chbX9nLg",
+          "QDUOdKPmDoGoZ6xAr8McIyQbnkh",
+          "M1m4dJlG6oyWKBx4dKJc0lqJnvf",
+          "PAvldlfvzoPrzaxz68ucvfrZn7W",
+          "Y0ksd4nwJovVBZxQA3sc9CRanme",
+          "XRwUdU7ZJoXELvxatDocvncZn5f",
+          "TmeRd583YolzJBxNyAWcA3o5nQd"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "用户指南：数据导入从入门到精通",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "doxcn1lc8gp6tiZlkHg0lxRFyhe",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本小节为一个快速引导教程，旨在帮助您在 Zilliz Cloud 上快速开始包含数据准备、建立 Collection 到开始导入数据等子任务在内的全流程数据导入任务。通过本节，你将掌握：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ab0GdvZ3noZeJOx3WcrcOJvFnIg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如何定义 Schema 及创建导入任务的目标 Collection",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "KJ85dzrnTo9DC2xVxNScmzuLnFb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如何使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "BulkWriter",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 准备源数据并将其写入远程对象存储桶",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "TK3tdBXQFom2r5xGUtvcBQvunye",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果调用批量导入 API 将准备好的源数据导入目标 Collection",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "EwiXdK1dpoWz94xpdmAcFcb5nAE",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "开始之前{#before-you-start}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "S8e9dELK5oxbODxuW6uc4gFDnmg",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为了保证整个数据导入流程的连续性，请在开始本教程前完成如下准备工作：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ChuSd0VLkoO740x9S4qcOdCqnnc",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在 Zilliz Cloud 上创建集群{#set-up-your-zilliz-cloud-cluster}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "U0zEdK2d9otThDxmWtSc6V3tnih",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您还未创建任何集群，参考",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "此处创建一个集群",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FMAFcwBTqqiR5YZkdkd4cADg0nub"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "ZuUcdkN9RorYWgxs1lpcklpEnSd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "收集如下信息：集群 Endpoint、API 密钥、集群 ID 和 集群所在云地域。您可以在 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 控制台",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FJBXmw3fcviPIiakfkRxchfLknCb"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "上找到这些信息。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "CdXodT762oomFNx7US2crq5ynRh",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "安装依赖{#install-dependencies}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "TD90d2qLZoy4T5x2FZfc4GnynIh",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在终端中运行以下命令安装 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "pymilvus",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "minio",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 或将它们升级到最新的版本。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QGWddRwOso5L0jx1AcJcIPTInpe",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "python3 -m pip install --upgrade pymilvus minio",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 60,
+            "wrap": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "PbKFdl204oynzpxdYHUcTwmHndc",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "配置远程对象存储桶{#configure-your-remote-storage-bucket}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "DSTDd0LsFoswqjxwsq3cFttpnph",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在您的阿里云控制台上创建一个对象存储桶。请确保该存储桶所属云地域与上述 Zilliz Cloud 集群的云地域一致。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "DwLbdAMimo2TLvxPlh7cSkDBnTg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "记录下访问该对象存储桶的 Access Key、Secret Key 以及 桶名称。您可以在阿里云控制台中找到这些信息。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "W17udLaw8o6WXzxURcIc2SoDnQd",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为了更好地利用本教程中的示例代码，建议您使用收集到的信息设置如下变量：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RF14d1ybdoYKylxquPAc6aqbn9e",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# Zilliz Cloud 集群配置\nCLUSTER_ENDPOINT=\"\"\nAPI_KEY=\"\"\nTOKEN=\"\"\nCLUSTER_ID=\"\"\nCLOUD_REGION=\"\"\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "CLOUD_API_ENDPOINT=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "controller.api.{0}.c",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "loud.zilliz.com.cn\".format(CLOUD_REGION)\nCOLLECTION_NAME=\"\"\n\n# 远程对象存储桶访问参数\nACCESS_KEY=\"\"\nSECRET_KEY=\"\"\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "BUCKET_NAME=\"\" ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "U2CZdXLHgouK9Ax538ecHpLbnbe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "下载示例数据{#download-example-dataset}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "NTaYd7DiGoMP9gxZYjjciyDLn3e",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在终端中运行如下命令下载格式为 CSV 的示例数据集。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UbXrdvuEtoSvTsx1BkpcXWOznSe",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "curl https://assets.zilliz.com/doc-assets/medium_articles_partial_a13e0f2a.csv \\\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "        --output medium_articles_partial.csv ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 60,
+            "wrap": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "E0gldgAJXonsSBx5ArhcIhVbn0d",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "上述命令会按如下方式打印下载进度。您也可以",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "单击此处",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fassets.zilliz.com%2Fmedium_articles_partial.csv"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "从浏览器下载此数据集。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HoYfdDPwto4tE8xXlHCcGYr6n8b",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "100 5133k  100 5133k    0     0   430k      0  0:00:11  0:00:11 --:--:--  599k0",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 60,
+            "wrap": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "GHy7dU1Ysoxb4axspYjc86ArnFf",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "下表详细描述了该数据集的结构及第一行数据各列的取值。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "block_type": 31,
+        "children": [
+          "N56JdV0eWoRii0xVlx1c8lkYnUf",
+          "N1HPdm2qUoe2bQxi5e1c3Dx8neg",
+          "Fa0KdPYULoHP0TxAn8KcM0hLnRf",
+          "PJiJdfba8oMIgjx0NRdcT4jCnze",
+          "PyTzdSyWdoajY8xzVIMcmPi9nPf",
+          "ZX0qdjMyOoTBnMxUv8ycUO2BnKg",
+          "UhV8dJ7baoVjMSxhySrcU2Hgnpd",
+          "GwtAdtvrNooxi7xoeXNcR2iXnXd",
+          "MXqMdUx8xoBxv6x2ycfcyLU5n0f",
+          "AjAyddutHofSiYxIrcFc6Xb7nCb",
+          "ASLrdPzTjoOEBFxTzofcgJK0nwg",
+          "B5pfd8S9lomi8AxJTr2cptJWnSc",
+          "Ld76dql5AokyGUxsLpNcsAKsnHh",
+          "TS6dduQNEoqXwSxZ0w8cZAVRnzZ",
+          "N6USd4irKoPsqnxgcLmcyt4Inac",
+          "CZSydAN2noRsO1xFdQdc3yq6nCG",
+          "ZEMIdPOtbos2vhxfcAZcBHBTnCe",
+          "H1QOdhNIpoWjGgx4uZ3cEtU7nah",
+          "OeI1d1uUfoRyQlxIHckcN7honfe",
+          "YJ95dNlvSoNvv5xXTaHcSiohnw3",
+          "UuF1deA39o9fxrxELqxcdhGYnih",
+          "TaR5dsFzmoLdcnxa82GcOIArnBc",
+          "Bux1dEH56okvyRxRVoIc0vddnwh",
+          "Db57dgeNfoLNgRxaeH7cRg0Gnob",
+          "Plb2d3frdoKXO9xHgcicj0U8ned",
+          "Sd41d6C4foJFNgxSFccc7a1knse",
+          "NC6ndT8fdoM0wrxTJD5cAzNLn3c",
+          "IwV4deyRMoFU07xopKncIUpqnob",
+          "PTjvdUfe1o0pnjxKTeacwD5gnUg",
+          "EHuid8z32oc35Wxsi5hcK5Djn7e",
+          "XRAVd5RT2o4FPcxePxJcIEhQnge",
+          "SVcXd7GEbo9UdoxQwOochS6Nnht",
+          "UL8GdSS4OoILrlxx7yncBrUynwb",
+          "Ev6VdaQIVoVS2axPG4xcIxtVnVc",
+          "XfG1dzKWxoFQOHxlzI9c4IEGnWe",
+          "AmX2dDfYSo76iLxQj4OcyKiynsd"
+        ],
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "table": {
+          "cells": [
+            "N56JdV0eWoRii0xVlx1c8lkYnUf",
+            "N1HPdm2qUoe2bQxi5e1c3Dx8neg",
+            "Fa0KdPYULoHP0TxAn8KcM0hLnRf",
+            "PJiJdfba8oMIgjx0NRdcT4jCnze",
+            "PyTzdSyWdoajY8xzVIMcmPi9nPf",
+            "ZX0qdjMyOoTBnMxUv8ycUO2BnKg",
+            "UhV8dJ7baoVjMSxhySrcU2Hgnpd",
+            "GwtAdtvrNooxi7xoeXNcR2iXnXd",
+            "MXqMdUx8xoBxv6x2ycfcyLU5n0f",
+            "AjAyddutHofSiYxIrcFc6Xb7nCb",
+            "ASLrdPzTjoOEBFxTzofcgJK0nwg",
+            "B5pfd8S9lomi8AxJTr2cptJWnSc",
+            "Ld76dql5AokyGUxsLpNcsAKsnHh",
+            "TS6dduQNEoqXwSxZ0w8cZAVRnzZ",
+            "N6USd4irKoPsqnxgcLmcyt4Inac",
+            "CZSydAN2noRsO1xFdQdc3yq6nCG",
+            "ZEMIdPOtbos2vhxfcAZcBHBTnCe",
+            "H1QOdhNIpoWjGgx4uZ3cEtU7nah",
+            "OeI1d1uUfoRyQlxIHckcN7honfe",
+            "YJ95dNlvSoNvv5xXTaHcSiohnw3",
+            "UuF1deA39o9fxrxELqxcdhGYnih",
+            "TaR5dsFzmoLdcnxa82GcOIArnBc",
+            "Bux1dEH56okvyRxRVoIc0vddnwh",
+            "Db57dgeNfoLNgRxaeH7cRg0Gnob",
+            "Plb2d3frdoKXO9xHgcicj0U8ned",
+            "Sd41d6C4foJFNgxSFccc7a1knse",
+            "NC6ndT8fdoM0wrxTJD5cAzNLn3c",
+            "IwV4deyRMoFU07xopKncIUpqnob",
+            "PTjvdUfe1o0pnjxKTeacwD5gnUg",
+            "EHuid8z32oc35Wxsi5hcK5Djn7e",
+            "XRAVd5RT2o4FPcxePxJcIEhQnge",
+            "SVcXd7GEbo9UdoxQwOochS6Nnht",
+            "UL8GdSS4OoILrlxx7yncBrUynwb",
+            "Ev6VdaQIVoVS2axPG4xcIxtVnVc",
+            "XfG1dzKWxoFQOHxlzI9c4IEGnWe",
+            "AmX2dDfYSo76iLxQj4OcyKiynsd"
+          ],
+          "property": {
+            "column_size": 4,
+            "column_width": [
+              111,
+              135,
+              135,
+              409
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 9
+          }
+        }
+      },
+      {
+        "block_id": "N56JdV0eWoRii0xVlx1c8lkYnUf",
+        "block_type": 32,
+        "children": [
+          "TbbedgHTpoflElxnSGMccNvinsh"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "TbbedgHTpoflElxnSGMccNvinsh",
+        "block_type": 2,
+        "parent_id": "N56JdV0eWoRii0xVlx1c8lkYnUf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "字段名称",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 2,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "N1HPdm2qUoe2bQxi5e1c3Dx8neg",
+        "block_type": 32,
+        "children": [
+          "NOJedjK8ioIxMBxBXnDcgdyLnb9"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "NOJedjK8ioIxMBxBXnDcgdyLnb9",
+        "block_type": 2,
+        "parent_id": "N1HPdm2qUoe2bQxi5e1c3Dx8neg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "字段类型",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 2,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Fa0KdPYULoHP0TxAn8KcM0hLnRf",
+        "block_type": 32,
+        "children": [
+          "TWfed3IcRoti3HxL8VPcUgT8n2b"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "TWfed3IcRoti3HxL8VPcUgT8n2b",
+        "block_type": 2,
+        "parent_id": "Fa0KdPYULoHP0TxAn8KcM0hLnRf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "字段属性",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 2,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PJiJdfba8oMIgjx0NRdcT4jCnze",
+        "block_type": 32,
+        "children": [
+          "PBqQdNO4wovEh1xmAfacv8PqnWd"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "PBqQdNO4wovEh1xmAfacv8PqnWd",
+        "block_type": 2,
+        "parent_id": "PJiJdfba8oMIgjx0NRdcT4jCnze",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "样例取值",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PyTzdSyWdoajY8xzVIMcmPi9nPf",
+        "block_type": 32,
+        "children": [
+          "ESY0do9DjotQMNxJ7hScnN2pnBb"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ESY0do9DjotQMNxJ7hScnN2pnBb",
+        "block_type": 2,
+        "parent_id": "PyTzdSyWdoajY8xzVIMcmPi9nPf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "id",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZX0qdjMyOoTBnMxUv8ycUO2BnKg",
+        "block_type": 32,
+        "children": [
+          "AG1Zd1Xp8oKc1Ax9Aegc9iTNn1d"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "AG1Zd1Xp8oKc1Ax9Aegc9iTNn1d",
+        "block_type": 2,
+        "parent_id": "ZX0qdjMyOoTBnMxUv8ycUO2BnKg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "INT64",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UhV8dJ7baoVjMSxhySrcU2Hgnpd",
+        "block_type": 32,
+        "children": [
+          "SNledOqf2oAcQIx8jCrcrpxonTg"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "SNledOqf2oAcQIx8jCrcrpxonTg",
+        "block_type": 2,
+        "parent_id": "UhV8dJ7baoVjMSxhySrcU2Hgnpd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "N/A",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GwtAdtvrNooxi7xoeXNcR2iXnXd",
+        "block_type": 32,
+        "children": [
+          "JGpwdC396oa3SUxt9wic4cUtnqb"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "JGpwdC396oa3SUxt9wic4cUtnqb",
+        "block_type": 2,
+        "parent_id": "GwtAdtvrNooxi7xoeXNcR2iXnXd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "0",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MXqMdUx8xoBxv6x2ycfcyLU5n0f",
+        "block_type": 32,
+        "children": [
+          "BKg5daIrfo5GTrxrboMcwbWmnAf"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "BKg5daIrfo5GTrxrboMcwbWmnAf",
+        "block_type": 2,
+        "parent_id": "MXqMdUx8xoBxv6x2ycfcyLU5n0f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "title_vector",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AjAyddutHofSiYxIrcFc6Xb7nCb",
+        "block_type": 32,
+        "children": [
+          "Vjw3dCCZvoj2gHxdVxFc9ljYnxd"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Vjw3dCCZvoj2gHxdVxFc9ljYnxd",
+        "block_type": 2,
+        "parent_id": "AjAyddutHofSiYxIrcFc6Xb7nCb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "FLOAT_VECTOR",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ASLrdPzTjoOEBFxTzofcgJK0nwg",
+        "block_type": 32,
+        "children": [
+          "Io8pdNxKLoeUExxidhZcs2pWncc"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Io8pdNxKLoeUExxidhZcs2pWncc",
+        "block_type": 2,
+        "parent_id": "ASLrdPzTjoOEBFxTzofcgJK0nwg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Dimension: 768",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "B5pfd8S9lomi8AxJTr2cptJWnSc",
+        "block_type": 32,
+        "children": [
+          "BkOxdcwxzo6BgExffCYcUlLlnRZ"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "BkOxdcwxzo6BgExffCYcUlLlnRZ",
+        "block_type": 2,
+        "parent_id": "B5pfd8S9lomi8AxJTr2cptJWnSc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "[0.041732933, 0.013779674, -0.027564144, -0.01...",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ld76dql5AokyGUxsLpNcsAKsnHh",
+        "block_type": 32,
+        "children": [
+          "FEgedu9W0otLJSxDxbLco3v8nnd"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "FEgedu9W0otLJSxDxbLco3v8nnd",
+        "block_type": 2,
+        "parent_id": "Ld76dql5AokyGUxsLpNcsAKsnHh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "title",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TS6dduQNEoqXwSxZ0w8cZAVRnzZ",
+        "block_type": 32,
+        "children": [
+          "XuN2dMG66oFmTLxKpqwcwqofnfe"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "XuN2dMG66oFmTLxKpqwcwqofnfe",
+        "block_type": 2,
+        "parent_id": "TS6dduQNEoqXwSxZ0w8cZAVRnzZ",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "VARCHAR",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "N6USd4irKoPsqnxgcLmcyt4Inac",
+        "block_type": 32,
+        "children": [
+          "FEFSdFrvFob0c5xYtRScCxc7nVh"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "FEFSdFrvFob0c5xYtRScCxc7nVh",
+        "block_type": 2,
+        "parent_id": "N6USd4irKoPsqnxgcLmcyt4Inac",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Max length: 512",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CZSydAN2noRsO1xFdQdc3yq6nCG",
+        "block_type": 32,
+        "children": [
+          "YvdzdYoXyoZvW4x2MFxczZYKnhg"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "YvdzdYoXyoZvW4x2MFxczZYKnhg",
+        "block_type": 2,
+        "parent_id": "CZSydAN2noRsO1xFdQdc3yq6nCG",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "The Reported Mortality Rate of Coronavirus Is ...",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZEMIdPOtbos2vhxfcAZcBHBTnCe",
+        "block_type": 32,
+        "children": [
+          "V1SpdNi75obyVuxdfI2ccS7LnVh"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "V1SpdNi75obyVuxdfI2ccS7LnVh",
+        "block_type": 2,
+        "parent_id": "ZEMIdPOtbos2vhxfcAZcBHBTnCe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "link",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "H1QOdhNIpoWjGgx4uZ3cEtU7nah",
+        "block_type": 32,
+        "children": [
+          "LLN2dcTl4o3pH9xtmLecwkRuntg"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "LLN2dcTl4o3pH9xtmLecwkRuntg",
+        "block_type": 2,
+        "parent_id": "H1QOdhNIpoWjGgx4uZ3cEtU7nah",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "VARCHAR",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OeI1d1uUfoRyQlxIHckcN7honfe",
+        "block_type": 32,
+        "children": [
+          "OetOdFJ2VoOO3sx22V2cFKtunqg"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "OetOdFJ2VoOO3sx22V2cFKtunqg",
+        "block_type": 2,
+        "parent_id": "OeI1d1uUfoRyQlxIHckcN7honfe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Max length: 512",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YJ95dNlvSoNvv5xXTaHcSiohnw3",
+        "block_type": 32,
+        "children": [
+          "JAy3dggYDoBGmoxYDLVcLfKnnRb"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "JAy3dggYDoBGmoxYDLVcLfKnnRb",
+        "block_type": 2,
+        "parent_id": "YJ95dNlvSoNvv5xXTaHcSiohnw3",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "https://medium.com/swlh/the-reported-mortality",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "...",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UuF1deA39o9fxrxELqxcdhGYnih",
+        "block_type": 32,
+        "children": [
+          "JBTvdu72To6ZIwxZQCgcwHVHnb9"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "JBTvdu72To6ZIwxZQCgcwHVHnb9",
+        "block_type": 2,
+        "parent_id": "UuF1deA39o9fxrxELqxcdhGYnih",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "reading_time",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TaR5dsFzmoLdcnxa82GcOIArnBc",
+        "block_type": 32,
+        "children": [
+          "FejVdzT5CoQMOmxGt0tcNecnnMd"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "FejVdzT5CoQMOmxGt0tcNecnnMd",
+        "block_type": 2,
+        "parent_id": "TaR5dsFzmoLdcnxa82GcOIArnBc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "INT64",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Bux1dEH56okvyRxRVoIc0vddnwh",
+        "block_type": 32,
+        "children": [
+          "Dfyfd5wMGo4tVixK17Xclczinmc"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Dfyfd5wMGo4tVixK17Xclczinmc",
+        "block_type": 2,
+        "parent_id": "Bux1dEH56okvyRxRVoIc0vddnwh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "N/A",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Db57dgeNfoLNgRxaeH7cRg0Gnob",
+        "block_type": 32,
+        "children": [
+          "UNrEdeRt9ojMnyxnTowcgKMrnRf"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "UNrEdeRt9ojMnyxnTowcgKMrnRf",
+        "block_type": 2,
+        "parent_id": "Db57dgeNfoLNgRxaeH7cRg0Gnob",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "13",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Plb2d3frdoKXO9xHgcicj0U8ned",
+        "block_type": 32,
+        "children": [
+          "J836dGK6IoD5nZxCVpKczjU8nbg"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "J836dGK6IoD5nZxCVpKczjU8nbg",
+        "block_type": 2,
+        "parent_id": "Plb2d3frdoKXO9xHgcicj0U8ned",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "publication",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Sd41d6C4foJFNgxSFccc7a1knse",
+        "block_type": 32,
+        "children": [
+          "MoE4dbPO3o8VFtx86MkcXyaBnWO"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "MoE4dbPO3o8VFtx86MkcXyaBnWO",
+        "block_type": 2,
+        "parent_id": "Sd41d6C4foJFNgxSFccc7a1knse",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "VARCHAR",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NC6ndT8fdoM0wrxTJD5cAzNLn3c",
+        "block_type": 32,
+        "children": [
+          "TQ9rd42yioKAh5xekqoc6RoonRb"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "TQ9rd42yioKAh5xekqoc6RoonRb",
+        "block_type": 2,
+        "parent_id": "NC6ndT8fdoM0wrxTJD5cAzNLn3c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Max length: 512",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IwV4deyRMoFU07xopKncIUpqnob",
+        "block_type": 32,
+        "children": [
+          "KNXzdYcqSoecFFx113UcZdVXnKc"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "KNXzdYcqSoecFFx113UcZdVXnKc",
+        "block_type": 2,
+        "parent_id": "IwV4deyRMoFU07xopKncIUpqnob",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "The Startup",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PTjvdUfe1o0pnjxKTeacwD5gnUg",
+        "block_type": 32,
+        "children": [
+          "DdgMdsEuDo9lUlxBPe8cePdxnCc"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "DdgMdsEuDo9lUlxBPe8cePdxnCc",
+        "block_type": 2,
+        "parent_id": "PTjvdUfe1o0pnjxKTeacwD5gnUg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "claps",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EHuid8z32oc35Wxsi5hcK5Djn7e",
+        "block_type": 32,
+        "children": [
+          "LhN2dhQdio7JH8xqqICc0c5Ln66"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "LhN2dhQdio7JH8xqqICc0c5Ln66",
+        "block_type": 2,
+        "parent_id": "EHuid8z32oc35Wxsi5hcK5Djn7e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "INT64",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XRAVd5RT2o4FPcxePxJcIEhQnge",
+        "block_type": 32,
+        "children": [
+          "WR7IdMSaMoOQlDxavZOczx32nLe"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "WR7IdMSaMoOQlDxavZOczx32nLe",
+        "block_type": 2,
+        "parent_id": "XRAVd5RT2o4FPcxePxJcIEhQnge",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "N/A",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SVcXd7GEbo9UdoxQwOochS6Nnht",
+        "block_type": 32,
+        "children": [
+          "GB1CdM5xuo9p5PxFMHfcVTjVnSe"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "GB1CdM5xuo9p5PxFMHfcVTjVnSe",
+        "block_type": 2,
+        "parent_id": "SVcXd7GEbo9UdoxQwOochS6Nnht",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "1100",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UL8GdSS4OoILrlxx7yncBrUynwb",
+        "block_type": 32,
+        "children": [
+          "V29KdCO3UocTyexJrkRcGzD8nxh"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "V29KdCO3UocTyexJrkRcGzD8nxh",
+        "block_type": 2,
+        "parent_id": "UL8GdSS4OoILrlxx7yncBrUynwb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "responses",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ev6VdaQIVoVS2axPG4xcIxtVnVc",
+        "block_type": 32,
+        "children": [
+          "DLiodpj1loxdfixyNkzcUEFInkc"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "DLiodpj1loxdfixyNkzcUEFInkc",
+        "block_type": 2,
+        "parent_id": "Ev6VdaQIVoVS2axPG4xcIxtVnVc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "INT64",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XfG1dzKWxoFQOHxlzI9c4IEGnWe",
+        "block_type": 32,
+        "children": [
+          "VeV8dIFEMosfEJxAwt9covten4f"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "VeV8dIFEMosfEJxAwt9covten4f",
+        "block_type": 2,
+        "parent_id": "XfG1dzKWxoFQOHxlzI9c4IEGnWe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "N/A",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AmX2dDfYSo76iLxQj4OcyKiynsd",
+        "block_type": 32,
+        "children": [
+          "Q5YDdqotaoZ4nXxRd9hck25Ln0b"
+        ],
+        "parent_id": "H6erdnqz1ouRY1xSEb3cHNnYnkb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Q5YDdqotaoZ4nXxRd9hck25Ln0b",
+        "block_type": 2,
+        "parent_id": "AmX2dDfYSo76iLxQj4OcyKiynsd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "18",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QnHSdq5Zsonbq5xpteKcaic8nle",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "示例数据集包含了 5,000 篇在 medium.com 发布的文章。关于该数据集更多信息，可参考",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "此 Kaggle 页面",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.kaggle.com%2Fdatasets%2Fshiyu22chen%2Fcleaned-medium-articles-dataset"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ovykd8Jd0oLo3ZxfP4TcwR1TnGe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建目标 Collection{#set-up-target-collection}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "BYDbdal0coGNC8x7OU0cun4enRg",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "我们可以根据上表的内容设计目标 Collection 的 Schema。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OpbEda9W2oTHz2xMU4ucK8EUn4f",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为了更好地演示 Collection 的能力，我们在目标 Collection 的 Schema 中包含了前 4 个字段，并将后 4 个字段做为动态字段使用。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "R3DRdGFTsoff6WxSfTKcV9KdnTg",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from pymilvus import FieldSchema, CollectionSchema, DataType\n\nschema = CollectionSchema(\n    fields=[\n        FieldSchema(name='id', dtype=DataType.INT64, is_primary=True),\n        FieldSchema(name='title_vector', dtype=DataType.FLOAT_VECTOR, dim=768),\n        FieldSchema(name='title', dtype=DataType.VARCHAR, max_length=512),\n        FieldSchema(name='link', dtype=DataType.VARCHAR, max_length=512),\n    ],\n    description=\"A series of articles from medium.com\",\n    auto_id=False,\n    enable_dynamic_field=True\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ")",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "TNZldzoUaoAKupxwF47cD1Egnhb",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "上述代码中的字段解释如下：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FhugdS3JOolyUexxS53c2Julnnc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "fields",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ":",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "QU19dHtOEoXttpxNFuWcVOownXd",
+          "U7tTdgvn7oX1mAxDfUecLVkunue",
+          "FuS9dIIEpoqfquxb0UrcsndnnCc"
+        ],
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "QU19dHtOEoXttpxNFuWcVOownXd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "id",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 是主键。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FhugdS3JOolyUexxS53c2Julnnc"
+      },
+      {
+        "block_id": "U7tTdgvn7oX1mAxDfUecLVkunue",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "title_vector",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 用于存储 768 维的向量数据。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FhugdS3JOolyUexxS53c2Julnnc"
+      },
+      {
+        "block_id": "FuS9dIIEpoqfquxb0UrcsndnnCc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "title",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "link",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 是两个标量字段。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "FhugdS3JOolyUexxS53c2Julnnc"
+      },
+      {
+        "block_id": "DrAMdeBisoMDPKxUcC9cZTuWnxf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "auto_id=False",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "UoqldtEnxoc5sBxXXrdc3Mpvnnb"
+        ],
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "UoqldtEnxoc5sBxXXrdc3Mpvnnb",
+        "block_type": 2,
+        "parent_id": "DrAMdeBisoMDPKxUcC9cZTuWnxf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "该参数默认值为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "False",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，表示主键不会随数据插入自动增长。将其设置为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "True",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 可阻止 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "BulkWriter",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 在生成的文件中包含主键。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IdYYd8dUPobJYVxJjH2cCo77nWg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "enable_dynamic_field=True",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "XQdNdww9ZoSqW7x4zPAcrMplnbE"
+        ],
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "XQdNdww9ZoSqW7x4zPAcrMplnbE",
+        "block_type": 2,
+        "parent_id": "IdYYd8dUPobJYVxJjH2cCo77nWg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "该参数默认为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "False",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，表示 Schema 中未定义的字段将会被忽略。将其设置为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "True",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 将允许 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "BulkWriter ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "将未在 Schema 中定义的字段以键值对的形式存储到一个名为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " $meta",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 的预留 JSON 字段中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Rnerdb7zWoO57qxhmR4co00Fn2d",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在创建 Schema 后，就可以继续创建目标 Collection 了。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "A1hYdhAv2ofQKhxnZ4gcYV05nac",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from pymilvus import connections, Collection\n\n# 1. 建立连接\nconnections.connect(\n        uri=CLUSTER_ENDPOINT,\n        token=TOKEN\n)\n# 2. 创建 Collection\ncollection = Collection(name=COLLECTION_NAME, schema=schema)\n\n# 3. 设置索引参数\nindex_params = {\n    \"index_type\": \"AUTOINDEX\",\n    \"metric_type\": \"IP\",\n    \"params\": {}\n}\n\n# 4. 创建索引\ncollection.create_index(\n        field_name=\"title_vector\",\n        index_params=index_params,\n)\n\n# 5. 加载 Collection 数据到内存\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "collection.load()",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "QPijd7HPLobAVqxMhJTcHct4nmg",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "准备源数据{#prepare-source-data}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "IhYwdCkyvo0i5kxk0D1cBv0Unsd",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "BulkWriter",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 会将您提供的数据转换成 JSON、Parquet 或 NumPy 文件。在下面的示例中，我们将创建一个 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "RemoteBulkWriter",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 并使用该 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "RemoteBulkWriter",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 将您的数据转换成上述格式。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SUNldiYfCoNGBkxoAXsc7lBEnad",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建 RemoteBulkWriter{#create-remotebulkwriter}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "Sxkpd0VRgof2fxx9gbOcNcHunzg",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "当 Schema 准备好后，就可以使用该 Schema 创建 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "RemoteBulkWriter",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 了。由于 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "RemoteBulkWriter",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 需要访问您的远程对象存储桶。因此，您需要先设置好连接远程对象存储桶的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "ConnectParam",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 对象并在创建 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "RemoteBulkWriter",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 时引用该参数。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PBsxdkUOTodnZaxSLBScLh2hnjd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from pymilvus import RemoteBulkWriter, BulkFileType\n\n# 远程对象存储桶连接参数\nconn = RemoteBulkWriter.ConnectParam(\n    endpoint=\"oss-cn-hangzhou.aliyuncs.com\", # 替换成您的 oss endpoint。具体可参考 https://help.aliyun.com/zh/oss/user-guide/regions-and-endpoints\n    access_key=ACCESS_KEY,\n    secret_key=SECRET_KEY,\n    bucket_name=BUCKET_NAME, # 替换成您的远程对象存储桶名称\n    region=\"oss-cn-hangzhou\", # 替换成您的桶所在地域。具体可参考 https://help.aliyun.com/zh/oss/user-guide/regions-and-endpoints\n    secure=True\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ")",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "DAnhdVsU2o3Q0pxJppJcuCV0nP2",
+        "block_type": 19,
+        "callout": {
+          "background_color": 2,
+          "border_color": 2,
+          "emoji_id": "blue_book"
+        },
+        "children": [
+          "Q2EYd9ER0oif3PxTbQ3cwALyn8g",
+          "TaFld9Ytvof1Kyx9zijcHonWnkf",
+          "INfAdk4FJo0ZpXx8If4clluyni0"
+        ],
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "Q2EYd9ER0oif3PxTbQ3cwALyn8g",
+        "block_type": 2,
+        "parent_id": "DAnhdVsU2o3Q0pxJppJcuCV0nP2",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TaFld9Ytvof1Kyx9zijcHonWnkf",
+        "block_type": 2,
+        "parent_id": "DAnhdVsU2o3Q0pxJppJcuCV0nP2",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "参数 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "endpoint",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 决定了生成文件的输出路径。请务必确保您的目标 Collection 所在地域与您的远程对象存储桶所在地域一致。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "INfAdk4FJo0ZpXx8If4clluyni0",
+        "block_type": 2,
+        "parent_id": "DAnhdVsU2o3Q0pxJppJcuCV0nP2",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "关于阿里云下 OSS Region 和 Endpoint 对照关系，可",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "参考此文",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fhelp.aliyun.com%2Fzh%2Foss%2Fuser-guide%2Fregions-and-endpoints"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ha5wdevfEoYjz4xAA3McavNGn3b",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "然后，在创建 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "RemoteBulkWriter",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 时需要引用上述 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "ConnectParam",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 对象。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PlIwdxahho56joxoyY4cRDc7n2e",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "writer = RemoteBulkWriter(\n    schema=schema, # 目标 Collection 的 Schema\n    remote_path=\"/\", # 相对于远程对象存储桶根目录的输出路径\n    segment_size=512*1024*1024, # 原始数据分段大小\n    connect_param=conn, # 远程对象存储桶的连接参数\n    file_type=BulkFileType.JSON_RB # 输出文件类型.\n)\n\n# 支持的输出文件类型:\n# - BulkFileType.JSON_RB, \n# - BulkFileType.NPY, and \n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# - BulkFileType.PARQUET",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "PpKfdWVibo2PuWxI9NLcRsMJnVd",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "上述代码将生成 JSON 格式的文件并将其上传到指定桶的根目录下。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UTeodQuAQoagmjxMshhcmpapnp5",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "remote_path=\"/\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "Ti5rd3qwmol3COxIDdDcbISpnZc",
+          "UQM8dSJTboie5VxTdJAcTMxrn5e"
+        ],
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "Ti5rd3qwmol3COxIDdDcbISpnZc",
+        "block_type": 2,
+        "parent_id": "UTeodQuAQoagmjxMshhcmpapnp5",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "此参数决定了生成文件在远程对象存储桶中的输出路径。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UQM8dSJTboie5VxTdJAcTMxrn5e",
+        "block_type": 2,
+        "parent_id": "UTeodQuAQoagmjxMshhcmpapnp5",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "将其设置为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\"/\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 会使 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "RemoteBulkWriter",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 将生成的文件放入远程对象存储桶的根目录下。若需放入其它路径，请使用相对于桶根目录的相对路径。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OcKIdPF0LoY60ExtBXxcHnVGnoc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "file_type=BulkFileType.PARQUET",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "PlOZdtNFao7YAVxFBiicVTbwnKf",
+          "MoM9dk9PSonZvgxHrAycKXIrnUb",
+          "XbQNdFrNfoLJLKx8P7UczIa9ndd",
+          "MBdCd9I0uo1DXlx6Y9hccG0onjf"
+        ],
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "PlOZdtNFao7YAVxFBiicVTbwnKf",
+        "block_type": 2,
+        "parent_id": "OcKIdPF0LoY60ExtBXxcHnVGnoc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "此参数决定了生成文件的文件类型。可选值如下：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MoM9dk9PSonZvgxHrAycKXIrnUb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "BulkFileType.JSON_RB",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OcKIdPF0LoY60ExtBXxcHnVGnoc"
+      },
+      {
+        "block_id": "XbQNdFrNfoLJLKx8P7UczIa9ndd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "BulkFileType.PARQUET",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OcKIdPF0LoY60ExtBXxcHnVGnoc"
+      },
+      {
+        "block_id": "MBdCd9I0uo1DXlx6Y9hccG0onjf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "BulkFileType.NPY",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OcKIdPF0LoY60ExtBXxcHnVGnoc"
+      },
+      {
+        "block_id": "BPiTdwh1Go3QXaxNtMTcUAVHnmd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "segment_size=512*1024*1024",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "I0fGdAp1io3LfnxuzDecuN0Qnob"
+        ],
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "I0fGdAp1io3LfnxuzDecuN0Qnob",
+        "block_type": 2,
+        "parent_id": "BPiTdwh1Go3QXaxNtMTcUAVHnmd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "此参数决定了 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "BulkWriter ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "如何对原始数据进行分段。该参数默认值为 512 MB (512 * 1024 * 1024)。如果您的数据集包含数据量较大时，可以考虑使用该参数对数据进行合理分段。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TVTkdG18YoASR0xWDuEc1hPCnSg",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "使用 Writer{#use-the-writer}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "TnAmdNhFPoMEXbxmUwYcfYjBnqc",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Writer",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 对象有两个方法：一个是将原始数据以行的形式添加到缓存中，另一个则是将缓存中的数据写入到远程对象存储桶中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IGZWd7xuTotOs1xXkstctDs3ntc",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以参考如下代码将原始数据以行的形式添加到缓存中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YP24dcjlVoHGK1xdZskcW9cwn7c",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "import pandas as pd\n\ndf = pd.read_csv(\"path/to/medium_articles_partial.csv\") # 请使用原始数据文件所在路径\n\nfor i in range(len(df)):\n    row = df.iloc[i].to_dict()\n    row[\"title_vector\"] = [float(x) for x in row[\"title_vector\"][1:-1].split(\",\")]\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "    writer.append_row(row)",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "N6Hgd4vfYoQIEtxyNvrcnFgln0f",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如上述代码所示，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "accept_row()",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 方法接收一个字典。该字典以键值对的形式表示一条数据。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VWindKsGToPcE3xeJGocJCDYnHf",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "需要注意的是，该字典需要包含所有在 Schema 中定义了的字段。如果 Schema 中还开启了动态字段，该字典还允许携带 Schema 中未定义的字段。具体内容，可参考",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "使用 BulkWriter",
+                "token": "B9IdwtZhLi0tB8kb6czce8KXnvb",
+                "url": "https://zilliverse.feishu.cn/wiki/B9IdwtZhLi0tB8kb6czce8KXnvb"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "T5pldFKGkoD8S3xJOvEcXKXWnpK",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您还需要调用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "commit()",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 方法才能将缓存中的数据写入到远程对象存储桶中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VRwbdiROaoY7WSxeKhtctjxAnKe",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "writer.commit()",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "OjXjdKrsSohBzHxbnWScBgahnOd",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "至此，BulkWriter 将原始数据按您的要求转换成 Zilliz Cloud 可识别的格式并将其存放到指定的远程对象存储桶中。您可以运行如下指令查看输入路径。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KUeWdblU5o2CuLxmCGMceJQOnpd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "print(writer.data_path)\n\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# /5868ba87-743e-4d9e-8fa6-e07b39229425",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "Od1sdpTizozUzwxdKGAcCn7rnge",
+        "block_type": 19,
+        "callout": {
+          "background_color": 2,
+          "border_color": 2,
+          "emoji_id": "blue_book"
+        },
+        "children": [
+          "VUHcdDq17oqH2DxjSowcGpJan0d",
+          "BwyddrYNTod4v9xVmPMcIszunLd"
+        ],
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "VUHcdDq17oqH2DxjSowcGpJan0d",
+        "block_type": 2,
+        "parent_id": "Od1sdpTizozUzwxdKGAcCn7rnge",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BwyddrYNTod4v9xVmPMcIszunLd",
+        "block_type": 2,
+        "parent_id": "Od1sdpTizozUzwxdKGAcCn7rnge",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "BulkWriter ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "生成一个 UUID，并使用该 UUID 在指定的输入路径下创建一个子路径，然后将生成的文件放在创建的子路径下。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RaXvd1efKosHaYx7Qxscdt85n0N",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "更多内容，可参考",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "使用 BulkWriter",
+                "token": "B9IdwtZhLi0tB8kb6czce8KXnvb",
+                "url": "https://zilliverse.feishu.cn/wiki/B9IdwtZhLi0tB8kb6czce8KXnvb"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RfJndEPi7oPGl8x9JKIcDxPvn66",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "导入源数据{#import-prepared-data}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "UfLXdCDVooQ5enxfPlZc1Qq6nag",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在此步骤之前，请再次确认源数据和您的 Zilliz Cloud 集群均托管在阿里云上。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VsrHdPOZFoD88zxiwb4c4ttDnb3",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建批量导入任务{#start-importing}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "WFFQdgomaoRQA9xwUAecyHdinmc",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以使用 bulk_import() 函数导入准备好的源数据。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KzjId1CQtorjvrxzlCVcFifvnme",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from pymilvus import bulk_import\n\n# 远程对象存储桶中的源数据外网访问地址\nobject_url = \"https://{0}.oss-cn-hangzhou.aliyuncs.com/{1}/\".format(BUCKET_NAME, str(writer.data_path)[1:])\n\n# 开始批量导入\nres = bulk_import(\n    # Zilliz Cloud 访问参数\n    # highlight-next-line\n    url=CLOUD_API_ENDPOINT,\n    api_key=API_KEY,\n    cluster_id=CLUSTER_ID,\n    collection_name=COLLECTION_NAME,\n    # 远程对象存储桶访问参数\n    object_url=object_url,\n    access_key=ACCESS_KEY,\n    secret_key=SECRET_KEY,\n\n)\n\nprint(res.json())\n\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# {'code': 200, 'data': {'jobId': '0f7fe853-d93e-4681-99f2-4719c63585cc'}}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "YCcldctSooxj6MxVAmjcsOMjnzg",
+        "block_type": 19,
+        "callout": {
+          "background_color": 2,
+          "border_color": 2,
+          "emoji_id": "blue_book"
+        },
+        "children": [
+          "YSDidiu9HoYHg2xwVrBcgvlinSg",
+          "QFCGdEpfko0DrXxdsmrcHehznVe",
+          "WlwpdyGaFo0ZvdxQuG4cjHrWnUg"
+        ],
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "YSDidiu9HoYHg2xwVrBcgvlinSg",
+        "block_type": 2,
+        "parent_id": "YCcldctSooxj6MxVAmjcsOMjnzg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Notes",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QFCGdEpfko0DrXxdsmrcHehznVe",
+        "block_type": 2,
+        "parent_id": "YCcldctSooxj6MxVAmjcsOMjnzg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "参数 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "object_url",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 需为远程对象存储桶中一个合法的文件或目录。在上述代码中，我们使用了 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "format()",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 方法将桶名称和 Writer 返回的路径拼接成一个合法的目录路径。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WlwpdyGaFo0ZvdxQuG4cjHrWnUg",
+        "block_type": 2,
+        "parent_id": "YCcldctSooxj6MxVAmjcsOMjnzg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需了解更多信息，可参考 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "OSS 访问域名使用规则",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fhelp.aliyun.com%2Fzh%2Foss%2Fuser-guide%2Foss-domain-names"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "V0hJdqjtXom0zdxwJVYcVxMCnhw",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "检查任务进度{#check-task-progress}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "VEZYddrYGo415hxe1q9cBUREnXe",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如下代码每 5 秒钟检查一次任务进度，并打印进度信息。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AkwRdTSS3omzknx8FBVcXP55nwd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "import time\nfrom pymilvus import get_import_progress\n\njob_id = res.json()['data']['jobId']\n\nres = get_import_progress(\n    # highlight-next-line\n    url=CLOUD_API_ENDPOINT,\n    api_key=API_KEY,\n    job_id=job_id,\n    cluster_id=CLUSTER_ID\n)\n\nprint(res.json()[\"data\"][\"readyPercentage\"])\n\n# 循环检查导入进度\nwhile res.json()[\"data\"][\"readyPercentage\"] < 1:\n    time.sleep(5)\n\n    res = get_import_progress(\n        # highlight-next-line\n        url=CLOUD_API_ENDPOINT,\n        api_key=API_KEY,\n        job_id=job_id,\n        cluster_id=CLUSTER_ID\n    )\n    \n    print(res.json()[\"data\"][\"readyPercentage\"])\n\n# 0.01   -- 导入进度 1%\n# 0.5    -- 导入进度 50%\n# 0.5\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# 1      -- 导入完成",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "VTqedkd8Ookiqnx9r2OcAXfKnue",
+        "block_type": 19,
+        "callout": {
+          "background_color": 2,
+          "border_color": 2,
+          "emoji_id": "blue_book"
+        },
+        "children": [
+          "DWxPd5mVuodTf1xW5xxcnMHinTB",
+          "CwAxd7hx3oCbOAxrJL6cmjQKnlh"
+        ],
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "DWxPd5mVuodTf1xW5xxcnMHinTB",
+        "block_type": 2,
+        "parent_id": "VTqedkd8Ookiqnx9r2OcAXfKnue",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CwAxd7hx3oCbOAxrJL6cmjQKnlh",
+        "block_type": 2,
+        "parent_id": "VTqedkd8Ookiqnx9r2OcAXfKnue",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "上述代码中，参数 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "url ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "为 Zilliz Cloud RESTful API 的服务器路径，其取值须与目标 Collection 所在云地域保持一致。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GrjKdtd8Yokrw8xlSoscpzN3nUe",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您还可以列出所有批量导入任务。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Krk2dXfyeof7zOxSce8chbX9nLg",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from pymilvus import list_import_jobs\n\nres = list_import_jobs(\n    # highlight-next-line\n    url=CLOUD_API_ENDPOINT,\n    api_key=API_KEY,\n    cluster_id=CLUSTER_ID,\n    page_size=10,\n    current_page=1,\n)\n\nprint(res.json())\n\n# {\n#    \"code\":200,\n#    \"data\":{\n#       \"tasks\":[\n#          {\n#             \"collectionName\":\"medium_aritlces\",\n#             \"jobId\":\"0f7fe853-d93e-4681-99f2-4719c63585cc\",\n#             \"state\":\"ImportCompleted\"\n#          }\n#       ],\n#       \"count\":1,\n#       \"currentPage\":1,\n#       \"pageSize\":10\n#    }\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# }",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "QDUOdKPmDoGoZ6xAr8McIyQbnkh",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "小结{#recaps}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "M1m4dJlG6oyWKBx4dKJc0lqJnvf",
+        "block_type": 2,
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本教程涵盖了数据导入的全流程。下面是一些在进行数据导入时需要遵循的一些原则：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PAvldlfvzoPrzaxz68ucvfrZn7W",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "仔细分析您的原始数据，以便更好地完成目标 Collection 的 Schema 设计。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "Y0ksd4nwJovVBZxQA3sc9CRanme",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在导入数据前，请确保 Zilliz Cloud 集群和 BulkWriter 的输出路径所在对象存储桶由同一家云服务提供商托管。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "XRwUdU7ZJoXELvxatDocvncZn5f",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "BulkWriter",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 时，请注意：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "CHjIdVrqGon8maxpSGhczLNbn4c",
+          "Hzp6dBwg1oniSuxCEQUc7kCGnkd"
+        ],
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      },
+      {
+        "block_id": "CHjIdVrqGon8maxpSGhczLNbn4c",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "append_row()",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 中，务必确保参数字典中包含所有 Schema 中定义的字段。如果 Schema 还允许动态字段，您还可以在该字典中包含未在 Schema 中定义的字段。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XRwUdU7ZJoXELvxatDocvncZn5f"
+      },
+      {
+        "block_id": "Hzp6dBwg1oniSuxCEQUc7kCGnkd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在将所有数据添加到缓存中后，还需要调用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "commit()",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 方法才能将转换好的数据上传到指定的远程对象存储桶中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "XRwUdU7ZJoXELvxatDocvncZn5f"
+      },
+      {
+        "block_id": "TmeRd583YolzJBxNyAWcA3o5nQd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "bulk_import()",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 函数时，您需要将桶名称、桶中文件或目录的外部访问域名，以及 Writer 返回的路径拼接在一起合成一个合法的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "object_url",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KCxddUcJ5oek6dxQEZUcp7vUnwd"
+      }
+    ],
+    "counts": 174
+  }
+}

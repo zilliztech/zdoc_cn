@@ -2,6 +2,7 @@
 slug: /view-invoice
 beta: FALSE
 notebook: FALSE
+token: NhbHwPiL2i4KWskrcO4cDrSNnzh
 sidebar_position: 3
 ---
 
@@ -41,10 +42,11 @@ Zilliz Cloud 支持线上开票。具体操作步骤，请阅读[申请开票](.
 
 ## 相关文档{#related-topics}
 
-- [订阅阿里云市场](./subscribe-on-aliyun-marketplace) 
+- [订阅阿里云市场](./subscribe-on-aliyun-marketplace)
 
-- [现金充值](./advance-pay) 
+- [现金充值](./advance-pay)
 
-- [企业认证](./enterprise-certification) 
+- [企业认证](./enterprise-certification)
 
 - [开具发票](./invoice) 
+

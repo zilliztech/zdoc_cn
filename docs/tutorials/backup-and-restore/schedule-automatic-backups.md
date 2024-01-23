@@ -2,6 +2,7 @@
 slug: /schedule-automatic-backups
 beta: FALSE
 notebook: FALSE
+token: TXyTwrfxCiStfek4hc7c2nKwnJc
 sidebar_position: 2
 ---
 
@@ -39,3 +40,4 @@ Zilliz Cloud 允许您为集群创建自动备份，确保意外发生时可以�
 - [恢复备份](./restore-from-snapshot)
 
 - [删除备份快照](./delete-snapshot)
+

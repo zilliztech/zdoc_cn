@@ -2,6 +2,7 @@
 slug: /connect-to-cluster
 beta: FALSE
 notebook: FALSE
+token: HU31wDHCCiN9qIknZ2fcLmconNh
 sidebar_position: 2
 ---
 
@@ -21,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 - 已创建集群。详情请参见[创建集群](./create-cluster)。
 
-- 已获取集群的用户名和密码。详情请参见[管理身份凭证](./manage-cluster-credentials)。
+- 已获取集群的用户名和密码。详情请参见[管理身份凭证](./manage-cluster-credentials-console)。
 
 - 已安装合适版本的 Milvus SDK。详情请参见[安装 SDK](./install-sdks)。
 
@@ -167,11 +168,11 @@ curl --request GET \\
 
 ## 相关文档{#related-topics}
 
-- [创建 Collection](./create-collection) 
+- [创建 Collection](./create-collection)
 
-- [插入 Entity](./insert-entities) 
+- [插入 Entity](./insert-entities)
 
-- [向量搜索和查询](./search-query-and-get) 
+- [向量搜索和查询](./search-query-and-get)
 
-- [删除 Collection](./drop-collection) 
+- [删除 Collection](./drop-collection)
 

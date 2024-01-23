@@ -2,6 +2,7 @@
 slug: /faq-resource-planning
 beta: null
 notebook: null
+token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 6
 ---
 
@@ -9,7 +10,7 @@ sidebar_position: 6
 
 本文列举了在 Zilliz Cloud 规划资源和使用成本时可能遇到的常见问题及对应解决方法。
 
-## Contents
+## 目录
 
 - [什么是计算单元（Compute Unit, CU）?](#what-is-a-compute-unit-cu)
 - [如何查看订阅的 Zilliz Cloud 版本？](#how-can-i-know-which-plan-i-am-on)
@@ -19,7 +20,7 @@ sidebar_position: 6
 - [如何估算使用 Zilliz Cloud 的成本？](#how-can-i-estimate-the-cost-of-using-zilliz-cloud)
 - [预算有限的情况下，如何在使用 Zilliz Cloud 服务时节省成本？](#how-can-i-save-costs-on-using-zilliz-cloud-if-i-have-a-limited-budget)
 
-## 常见问题
+## 问答
 
 
 
@@ -36,7 +37,11 @@ sidebar_position: 6
 
 ### 性能型 CU、容量型 CU 和经济型 CU 之间有什么区别？{#whats-the-difference-between-performance-optimized-cu-capacity-optimized-cu-and-cost-optimized-cu}
 
-性能型 CU 适用于需要低延迟和高吞吐量的向量相似性检索场景。 容量型 CU 相比性能型 CU 能够存储多 5 倍的数据，但延迟可能会增加，因此适用于需要大量存储空间的场景。 经济型 CU 可支持的数据规模与容量型 CU 一致，但价格更低，性能略有下降，适用于追求高性价比或预算敏感的场景。
+性能型 CU 适用于需要低延迟和高吞吐量的向量相似性检索场景。 
+
+容量型 CU 相比性能型 CU 能够存储多 5 倍的数据，适用于需要大量存储空间的场景。 
+
+经济型 CU 可支持的数据规模与容量型 CU 一致，但价格更低，适用于追求高性价比或预算敏感的场景。
 
 ### 我的数据需要使用多少 CU？{#how-many-cus-do-i-need-for-a-given-collection}
 

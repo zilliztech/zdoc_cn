@@ -1,0 +1,647 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": false,
+  "node_create_time": "1687140718",
+  "node_token": "NtkswF6UEi3kB0k8XSEcOKkhnld",
+  "node_type": "origin",
+  "obj_create_time": "1687140718",
+  "obj_edit_time": "1700707081",
+  "obj_token": "J0XsdaQC1oaZkkxSjVHc5BqNnAe",
+  "obj_type": "docx",
+  "origin_node_token": "NtkswF6UEi3kB0k8XSEcOKkhnld",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "SbePwiLrZi2hZqk5NpRcmramnEN",
+  "space_id": "7167193056431783939",
+  "title": "恢复备份",
+  "slug": "restore-from-snapshot",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "J0XsdaQC1oaZkkxSjVHc5BqNnAe",
+        "block_type": 1,
+        "children": [
+          "Cgtmdg53foo7r7xYtFtcCheonPh",
+          "RaXrdZNAjowuyYxzQxpcuZAxnnb",
+          "DUqHdTPVuoAyjGxOZ6JchM7Endg",
+          "EyoUdynCgo3Z2WxdrqLcnOAynMc",
+          "H5IEdiD15osYL4xW14ncjryZnYe",
+          "Ms3SdqA7ooLJeCxPWDucXJgknMf",
+          "HJHldN2RioqK48xTHSLc9XYnnsf",
+          "TFxxd00ojoJrrOxrWBlci2HPnSd",
+          "BusFdPGNyowTX2x7Mv3ceMHsnPd",
+          "XiE3d1xVhoGpJ1xsvpFcbY3AnTc",
+          "OiPJd0fqaoAzBIxbhACctWPSn8e",
+          "Q3ADdhKYwoYExOxfVuLcvSG3nNh",
+          "IhtLdD7rYovOlMx9FCkcsAjbnmf",
+          "LmMrd9FeAoL27KxekJNc2URHnah",
+          "KxTPdLKFHoRcGkxTASLcQcXlnXf",
+          "GLaFdIGYHoaus2xxrY8cHOOjnrb"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "恢复备份",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "Cgtmdg53foo7r7xYtFtcCheonPh",
+        "block_type": 2,
+        "parent_id": "J0XsdaQC1oaZkkxSjVHc5BqNnAe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文介绍如何从快照备份中恢复 Zilliz Cloud 集群。您只能使用",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建成功",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "的快照进行集群恢复。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RaXrdZNAjowuyYxzQxpcuZAxnnb",
+        "block_type": 2,
+        "parent_id": "J0XsdaQC1oaZkkxSjVHc5BqNnAe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要恢复集群到快照，单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "操作列",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "中的更多按钮，然后选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "恢复数据库",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DUqHdTPVuoAyjGxOZ6JchM7Endg",
+        "block_type": 2,
+        "parent_id": "J0XsdaQC1oaZkkxSjVHc5BqNnAe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "然后根据提示设置相关属性，以从快照备份中还原集群。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EyoUdynCgo3Z2WxdrqLcnOAynMc",
+        "block_type": 26,
+        "comment_ids": [
+          "7278894247548665859"
+        ],
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6340-1796%26mode%3Ddesign%26t%3Dkrs3Srz019NF5ejw-4"
+          }
+        },
+        "parent_id": "J0XsdaQC1oaZkkxSjVHc5BqNnAe"
+      },
+      {
+        "block_id": "H5IEdiD15osYL4xW14ncjryZnYe",
+        "block_type": 2,
+        "parent_id": "J0XsdaQC1oaZkkxSjVHc5BqNnAe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "设置属性时，需注意以下几点：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ms3SdqA7ooLJeCxPWDucXJgknMf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以通过备份快照在不同项目中创建目标集群，但目标集群不能和源集群位于不同的云地域。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "J0XsdaQC1oaZkkxSjVHc5BqNnAe"
+      },
+      {
+        "block_id": "HJHldN2RioqK48xTHSLc9XYnnsf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以选择是否保留集群 Collection 的加载状态。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "J0XsdaQC1oaZkkxSjVHc5BqNnAe"
+      },
+      {
+        "block_id": "TFxxd00ojoJrrOxrWBlci2HPnSd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以重命名目标集群并重置集群大小和用户名密码。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "J0XsdaQC1oaZkkxSjVHc5BqNnAe"
+      },
+      {
+        "block_id": "BusFdPGNyowTX2x7Mv3ceMHsnPd",
+        "block_type": 2,
+        "parent_id": "J0XsdaQC1oaZkkxSjVHc5BqNnAe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "恢复数据库",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "中单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "恢复",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "后，Zilliz Cloud 会使用指定的属性创建目标集群，然后将快照中的 Collection 还原到目标集群中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XiE3d1xVhoGpJ1xsvpFcbY3AnTc",
+        "block_type": 2,
+        "parent_id": "J0XsdaQC1oaZkkxSjVHc5BqNnAe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "目标集群的状态从",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建中",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "变为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "恢复中",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "后，源集群的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "备份恢复历史",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "列表中将出现一条备份恢复记录。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OiPJd0fqaoAzBIxbhACctWPSn8e",
+        "block_type": 26,
+        "comment_ids": [
+          "7278894263553835012"
+        ],
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6340-1840%26mode%3Ddesign%26t%3Dkrs3Srz019NF5ejw-4"
+          }
+        },
+        "parent_id": "J0XsdaQC1oaZkkxSjVHc5BqNnAe"
+      },
+      {
+        "block_id": "Q3ADdhKYwoYExOxfVuLcvSG3nNh",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相关文档{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "J0XsdaQC1oaZkkxSjVHc5BqNnAe"
+      },
+      {
+        "block_id": "IhtLdD7rYovOlMx9FCkcsAjbnmf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建备份快照",
+                "token": "GFFswc3z1iQtjQkpmyScL00dnSx",
+                "url": "https://zilliverse.feishu.cn/wiki/GFFswc3z1iQtjQkpmyScL00dnSx"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "J0XsdaQC1oaZkkxSjVHc5BqNnAe"
+      },
+      {
+        "block_id": "LmMrd9FeAoL27KxekJNc2URHnah",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建自动备份",
+                "token": "TXyTwrfxCiStfek4hc7c2nKwnJc",
+                "url": "https://zilliverse.feishu.cn/wiki/TXyTwrfxCiStfek4hc7c2nKwnJc"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "J0XsdaQC1oaZkkxSjVHc5BqNnAe"
+      },
+      {
+        "block_id": "KxTPdLKFHoRcGkxTASLcQcXlnXf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "查看备份快照",
+                "token": "PS8EwUahQiNPTikPIMbcBxvGnKS",
+                "url": "https://zilliverse.feishu.cn/wiki/PS8EwUahQiNPTikPIMbcBxvGnKS"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "J0XsdaQC1oaZkkxSjVHc5BqNnAe"
+      },
+      {
+        "block_id": "GLaFdIGYHoaus2xxrY8cHOOjnrb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "删除备份快照",
+                "token": "FW37wt3qEiKvZzkzBducXgHZnIe",
+                "url": "https://zilliverse.feishu.cn/wiki/FW37wt3qEiKvZzkzBducXgHZnIe"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "J0XsdaQC1oaZkkxSjVHc5BqNnAe"
+      }
+    ],
+    "counts": 17
+  }
+}

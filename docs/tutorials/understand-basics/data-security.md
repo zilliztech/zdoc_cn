@@ -2,6 +2,7 @@
 slug: /data-security
 beta: FALSE
 notebook: FALSE
+token: E7X4wc69bibTo4kFfNic5hBVnhb
 sidebar_position: 7
 ---
 
@@ -34,7 +35,7 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 使用 OAuth2 协议实现身份验证。当访问集群时，Zilliz Cloud 要求用户提供身份凭证（或令牌）以证明用户身份。身份认证通过后，用户才能访问或操作集群资源。身份凭证通常由用户名和密码对或 API 密钥组成。
 
-有关详细信息，请参见[管理身份凭证](./manage-cluster-credentials)和[管理 API 密钥](./manage-api-keys)。
+有关详细信息，请参见[管理身份凭证](./manage-cluster-credentials-console)和[管理 API 密钥](./manage-api-keys)。
 
 ### 访问控制{#access-control}
 
@@ -42,7 +43,7 @@ Zilliz Cloud 使用 OAuth2 协议实现身份验证。当访问集群时，Zilli
 
 为了满足这些需求，Zilliz Cloud 启用了访问控制。该特性允许您限制用户权限，授权用户仅访问指定资源的最小权限。通过此机制，集群管理员可以向用户授予一个或多个角色，并通过角色定义用户对集群资源的访问和操作权限。这有助于避免未授权的访问。
 
-有关详细信息，请参见[角色与权限](./a-panorama-view)。
+有关详细信息，请参见[角色与权限](./resource-hierarchy)。
 
 ### 白名单{#whitelists}
 

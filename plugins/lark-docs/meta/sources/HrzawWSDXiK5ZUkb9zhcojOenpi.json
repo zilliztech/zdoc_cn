@@ -1,0 +1,131 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": true,
+  "node_create_time": "1705888790",
+  "node_token": "HrzawWSDXiK5ZUkb9zhcojOenpi",
+  "node_type": "origin",
+  "obj_create_time": "1705888790",
+  "obj_edit_time": "1705925951",
+  "obj_token": "O9fkdO1IAo0hkwxZSAzcBwpMncc",
+  "obj_type": "docx",
+  "origin_node_token": "HrzawWSDXiK5ZUkb9zhcojOenpi",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "HaV5wsgX8ifrA2kyH4LchfhEnbf",
+  "space_id": "7167193056431783939",
+  "title": "组织权限",
+  "slug": "organization-access",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "O9fkdO1IAo0hkwxZSAzcBwpMncc",
+        "block_type": 1,
+        "children": [
+          "AthndZgkzorrOVxgblEcmySdnIe"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "组织权限",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "AthndZgkzorrOVxgblEcmySdnIe",
+        "block_type": 2,
+        "parent_id": "O9fkdO1IAo0hkwxZSAzcBwpMncc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "了解如何管理组织、组织用户和组织设置。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 2
+  },
+  "children": [
+    {
+      "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+      "has_child": false,
+      "node_create_time": "1687166390",
+      "node_token": "I9ktwIylxiDTKik4ckUctIOvnjm",
+      "node_type": "origin",
+      "obj_create_time": "1687166390",
+      "obj_edit_time": "1705907928",
+      "obj_token": "LO95dfmh2oWoWgxLoiqcPz1dnCh",
+      "obj_type": "docx",
+      "origin_node_token": "I9ktwIylxiDTKik4ckUctIOvnjm",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+      "parent_node_token": "HrzawWSDXiK5ZUkb9zhcojOenpi",
+      "space_id": "7167193056431783939",
+      "title": "组织管理",
+      "slug": "organizations"
+    },
+    {
+      "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+      "has_child": false,
+      "node_create_time": "1705888901",
+      "node_token": "WGqBwcKmViC7xJkEfPcchOVKnsd",
+      "node_type": "origin",
+      "obj_create_time": "1705888901",
+      "obj_edit_time": "1705908342",
+      "obj_token": "WaUhdluKBo55THxEbwRcTHfxn7g",
+      "obj_type": "docx",
+      "origin_node_token": "WGqBwcKmViC7xJkEfPcchOVKnsd",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+      "parent_node_token": "HrzawWSDXiK5ZUkb9zhcojOenpi",
+      "space_id": "7167193056431783939",
+      "title": "组织成员管理",
+      "slug": "organization-users"
+    },
+    {
+      "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+      "has_child": true,
+      "node_create_time": "1687140840",
+      "node_token": "DaoawdnS1iEOT8kFGW0cAc8qntc",
+      "node_type": "origin",
+      "obj_create_time": "1687140840",
+      "obj_edit_time": "1702887368",
+      "obj_token": "QOvBdzY7ZonWY4xRqPccsOVonKQ",
+      "obj_type": "docx",
+      "origin_node_token": "DaoawdnS1iEOT8kFGW0cAc8qntc",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+      "parent_node_token": "HrzawWSDXiK5ZUkb9zhcojOenpi",
+      "space_id": "7167193056431783939",
+      "title": "组织设置",
+      "slug": "organization-settings"
+    }
+  ]
+}

@@ -1,0 +1,279 @@
+{
+  "creator": "ou_8554528ee6e965bad56710acde1c7847",
+  "has_child": false,
+  "node_create_time": "1705906032",
+  "node_token": "JBXmw3fcviPIiakfkRxchfLknCb",
+  "node_type": "origin",
+  "obj_create_time": "1705906032",
+  "obj_edit_time": "1705924396",
+  "obj_token": "VwGHdx2OsoCy9mxMEoZc5MiVnOb",
+  "obj_type": "docx",
+  "origin_node_token": "JBXmw3fcviPIiakfkRxchfLknCb",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_8554528ee6e965bad56710acde1c7847",
+  "parent_node_token": "F8qDwqK7di4rl3kloZ7cNaUTnse",
+  "space_id": "7167193056431783939",
+  "title": "Zilliz Cloud 控制台",
+  "slug": "on-zilliz-cloud-console",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "VwGHdx2OsoCy9mxMEoZc5MiVnOb",
+        "block_type": 1,
+        "children": [
+          "Smhhdf7amowJCLxEMgOcUR16nTh",
+          "CTVbdz3YFoK35AxxQa4c4Gqmn4U",
+          "E3HfdQEDLofaBvxe5kecD4g4nSf",
+          "HS7yd6M8CoYJPLxnWn4cK26Onld",
+          "XWy4dMXJtoRAnPx92bectYbvnNf",
+          "UoKLdXrZRohRyuxHUWIcxj87nVd",
+          "Yfc8dzZotoNnIrxi9kNc3BgunOv",
+          "I71MdIh7do65B3xzW7FcEsRyngc",
+          "MM1bdIdOMoKARhx8bhgcQ3wRnTc",
+          "Fhl4dJATdoM0VLxC0V7cUM9sn4c",
+          "XIoJdNNhPoPLKwxapBOcVyranxc"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 控制台",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "Smhhdf7amowJCLxEMgOcUR16nTh",
+        "block_type": 2,
+        "parent_id": "VwGHdx2OsoCy9mxMEoZc5MiVnOb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过 Zilliz Cloud 控制台，您可以直观地操控您在 Zilliz Cloud 上的所有资产。本章将帮助您了解 Zilliz Cloud 控制台以及如何在 Zilliz Cloud 控制台上找到您需要的信息。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CTVbdz3YFoK35AxxQa4c4Gqmn4U",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "概览{#overview}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VwGHdx2OsoCy9mxMEoZc5MiVnOb"
+      },
+      {
+        "block_id": "E3HfdQEDLofaBvxe5kecD4g4nSf",
+        "block_type": 2,
+        "parent_id": "VwGHdx2OsoCy9mxMEoZc5MiVnOb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "当您在 Zilliz Cloud 上创建了一个集群后，您就能看到如下操作界面。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HS7yd6M8CoYJPLxnWn4cK26Onld",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D29573-1273%26mode%3Ddesign%26t%3DXqipQjWIO5QtpNgP-4"
+          }
+        },
+        "parent_id": "VwGHdx2OsoCy9mxMEoZc5MiVnOb"
+      },
+      {
+        "block_id": "XWy4dMXJtoRAnPx92bectYbvnNf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群详情{#cluster-details}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VwGHdx2OsoCy9mxMEoZc5MiVnOb"
+      },
+      {
+        "block_id": "UoKLdXrZRohRyuxHUWIcxj87nVd",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D29573-1321%26mode%3Ddesign%26t%3DXqipQjWIO5QtpNgP-4"
+          }
+        },
+        "parent_id": "VwGHdx2OsoCy9mxMEoZc5MiVnOb"
+      },
+      {
+        "block_id": "Yfc8dzZotoNnIrxi9kNc3BgunOv",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "API 密钥{#api-keys}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VwGHdx2OsoCy9mxMEoZc5MiVnOb"
+      },
+      {
+        "block_id": "I71MdIh7do65B3xzW7FcEsRyngc",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D30171-1490%26mode%3Ddesign%26t%3DfiFq1IiaD6q1UOrq-4"
+          }
+        },
+        "parent_id": "VwGHdx2OsoCy9mxMEoZc5MiVnOb"
+      },
+      {
+        "block_id": "MM1bdIdOMoKARhx8bhgcQ3wRnTc",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "项目 ID{#project-ids}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VwGHdx2OsoCy9mxMEoZc5MiVnOb"
+      },
+      {
+        "block_id": "Fhl4dJATdoM0VLxC0V7cUM9sn4c",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D29573-1359%26mode%3Ddesign%26t%3DXqipQjWIO5QtpNgP-4"
+          }
+        },
+        "parent_id": "VwGHdx2OsoCy9mxMEoZc5MiVnOb"
+      },
+      {
+        "block_id": "XIoJdNNhPoPLKwxapBOcVyranxc",
+        "block_type": 2,
+        "parent_id": "VwGHdx2OsoCy9mxMEoZc5MiVnOb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 12
+  }
+}

@@ -1,0 +1,1025 @@
+{
+  "creator": "ou_8554528ee6e965bad56710acde1c7847",
+  "has_child": false,
+  "node_create_time": "1687673460",
+  "node_token": "Msbqwd1izicbFlkT56scmGlWnbb",
+  "node_type": "origin",
+  "obj_create_time": "1687673460",
+  "obj_edit_time": "1702888577",
+  "obj_token": "Ua1edTZW9osWFhxGSlCc11o4nmd",
+  "obj_type": "docx",
+  "origin_node_token": "Msbqwd1izicbFlkT56scmGlWnbb",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_8554528ee6e965bad56710acde1c7847",
+  "parent_node_token": "B11mwdhmYiGFsck0eCYcU5wnngX",
+  "space_id": "7167193056431783939",
+  "title": "与 LangChain 集成搭建智能文档问答系统",
+  "slug": "question-answering-over-documents-with-zilliz-cloud-and-langchain",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "Ua1edTZW9osWFhxGSlCc11o4nmd",
+        "block_type": 1,
+        "children": [
+          "Um9Fd6W2YoRgGzxnrTWciOoQnqd",
+          "BpK6dvqqBomFy4xavt3cIZcondc",
+          "FHJPdvxA7oSqwMxDZyVcnDK7nZH",
+          "QVIXdjILnoNy0Uxe3Kvc3JrnnDX",
+          "YOG9dY5ZooYyuSxqXPMcWcWVnjc",
+          "PzS0dzgacoV3kwxkqCjczGqPnoh",
+          "YYgadZQ2HoMMwKxglZ6cyebznre",
+          "W92rdyplKobwrLxyfuccsLakn3G",
+          "ZCCcdwi9Xobh1zxtLgRcO264nSe",
+          "OUNXdKXiRoOkSdxgCaDcmGubnqc",
+          "Adg6dpHr0oYYepxkYGdckdQmnce",
+          "B7gqd09Uiog7Gzxs6QncaijVn5g",
+          "B2WhdwgXwowjiSxAugOcYUEPncd",
+          "WbyvdSKqropaXWxY4N7cfpEKnhd",
+          "LjUJdOtC0ouurXxqyhzcWjKvn9o",
+          "HC5AdCzSgoE2BSxSVJ1cboMOndb",
+          "MO8SdaG0uoy1KtxMz8Vc9p6lnFd",
+          "JMTidssmfolLapxXXrccZVIHnib",
+          "Pdi4dz4lJo6TQbxNuZHczRj6nOc",
+          "RlnaddBfmoKPn8xEYI8cl2fNnNQ",
+          "BW2vdr8IfocyT8xAvRBcTZPTn1c",
+          "KWpud5BWxo9st9x10FucDETwnFW",
+          "NH5qdLhRzo2JqCxvEtdcZmfAnnd",
+          "VdnzdkdsvoGUxxxOICVcnzFan2g",
+          "U8jzdNOJAoLNRlxfxE3cmpW9nkr",
+          "RdStdlS17o2H2NxKk9rcQCapnGh"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "与 LangChain 集成搭建智能文档问答系统",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "Um9Fd6W2YoRgGzxnrTWciOoQnqd",
+        "block_type": 2,
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文将演示如何使用 Zilliz Cloud 和 LangChain 搭建基于大语言模型（LLM）的问答系统。在本例中，我们将使用一个 1 CU 的 Cluster，还将使用 OpenAI 的 Embedding ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 来获取指定文本的向量表示。现在就让我们开始吧。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BpK6dvqqBomFy4xavt3cIZcondc",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "准备工作",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#before-you-start}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd"
+      },
+      {
+        "block_id": "FHJPdvxA7oSqwMxDZyVcnDK7nZH",
+        "block_type": 2,
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "运行本页中的脚本需要 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "pymilvus",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "langchain",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。另外，我们还需要使用 OpenAI 的 Embedding ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 来获取指定文本的向量表示并将其存入向量数据库中，所以还需要安装 openai 和 tiktoken。如果你的系统中还没有安装这些依赖，可以运行如下命令。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QVIXdjILnoNy0Uxe3Kvc3JrnnDX",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "python -m pip install --upgrade pymilvus langchain openai tiktoken",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 60,
+            "wrap": false
+          }
+        },
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd"
+      },
+      {
+        "block_id": "YOG9dY5ZooYyuSxqXPMcWcWVnjc",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "主要参数",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#parameters}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd"
+      },
+      {
+        "block_id": "PzS0dzgacoV3kwxkqCjczGqPnoh",
+        "block_type": 2,
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在这一小节里，我们需要为本页中的脚本设置一些公共参数。请根据需要将它们的值修改成自己的。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YYgadZQ2HoMMwKxglZ6cyebznre",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from langchain.embeddings.openai import OpenAIEmbeddings\nfrom langchain.vectorstores.zilliz import Zilliz\nfrom langchain.document_loaders import WebBaseLoader\nfrom langchain.text_splitter import RecursiveCharacterTextSplitter\nfrom langchain.chat_models import ChatOpenAI\nfrom langchain.schema.runnable import RunnablePassthrough\nfrom langchain.prompts import PromptTemplate\n\nimport os\n\n# 1. Set up the name of the collection to be created.\nCOLLECTION_NAME = 'doc_qa_db'\n\n# 2. Set up the dimension of the embeddings.\nDIMENSION = 768\n\n# 3. Set up the cohere api key\nOPENAI_API_KEY = \"YOUR_OPENAI_API_KEY\"\nos.environ[\"OPENAI_API_KEY\"] = OPENAI_API_KEY\n\n# 4. Set up the connection parameters for your Zilliz Cloud cluster.\nURI = 'YOUR_CLUSTER_ENDPOINT'\n\n# 5. Set up the token for your Zilliz Cloud cluster.\n# You can either use an API key or a set of cluster username and password joined by a colon.\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "TOKEN = 'YOUR_CLUSTER_TOKEN'",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd"
+      },
+      {
+        "block_id": "W92rdyplKobwrLxyfuccsLakn3G",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "准备数据",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#prepare-data}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd"
+      },
+      {
+        "block_id": "ZCCcdwi9Xobh1zxtLgRcO264nSe",
+        "block_type": 2,
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在开始前，需要完成如下步骤",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OUNXdKXiRoOkSdxgCaDcmGubnqc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "准备好需要让大语言模型在推理过程中参考的文档。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd"
+      },
+      {
+        "block_id": "Adg6dpHr0oYYepxkYGdckdQmnce",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "搭建好一个 Embedding 模型将该文档转换成对应的向量表示。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd"
+      },
+      {
+        "block_id": "B7gqd09Uiog7Gzxs6QncaijVn5g",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "搭建好一个向量数据库来保存这些向量表示。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd"
+      },
+      {
+        "block_id": "B2WhdwgXwowjiSxAugOcYUEPncd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# Use the WebBaseLoader to load specified web pages into documents\nloader = WebBaseLoader([\n    'https://milvus.io/docs/overview.md',\n    'https://milvus.io/docs/release_notes.md',\n    'https://milvus.io/docs/architecture_overview.md',\n    'https://milvus.io/docs/four_layers.md',\n    'https://milvus.io/docs/main_components.md',\n    'https://milvus.io/docs/data_processing.md',\n    'https://milvus.io/docs/bitset.md',\n    'https://milvus.io/docs/boolean.md',\n    'https://milvus.io/docs/consistency.md',\n    'https://milvus.io/docs/coordinator_ha.md',\n    'https://milvus.io/docs/replica.md',\n    'https://milvus.io/docs/knowhere.md',\n    'https://milvus.io/docs/schema.md',\n    'https://milvus.io/docs/dynamic_schema.md',\n    'https://milvus.io/docs/json_data_type.md',\n    'https://milvus.io/docs/metric.md',\n    'https://milvus.io/docs/partition_key.md',\n    'https://milvus.io/docs/multi_tenancy.md',\n    'https://milvus.io/docs/timestamp.md',\n    'https://milvus.io/docs/users_and_roles.md',\n    'https://milvus.io/docs/index.md',\n    'https://milvus.io/docs/disk_index.md',\n    'https://milvus.io/docs/scalar_index.md',\n    'https://milvus.io/docs/performance_faq.md',\n    'https://milvus.io/docs/product_faq.md',\n    'https://milvus.io/docs/operational_faq.md',\n    'https://milvus.io/docs/troubleshooting.md',\n])\n\ndocs = loader.load()\n\n# Split the documents into smaller chunks\ntext_splitter = RecursiveCharacterTextSplitter(chunk_size=1024, chunk_overlap=0)\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "all_splits = text_splitter.split_documents(docs)",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd"
+      },
+      {
+        "block_id": "WbyvdSKqropaXWxY4N7cfpEKnhd",
+        "block_type": 2,
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在准备好数据后，下一步就是将它们转换成对应的向量表示，并将它们存储在指定的向量数据库中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LjUJdOtC0ouurXxqyhzcWjKvn9o",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "embeddings = OpenAIEmbeddings()\nconnection_args = { 'uri': URI, 'token': TOKEN }\n\nvector_store = Zilliz(\n    embedding_function=embeddings, \n    connection_args=connection_args,\n    collection_name=COLLECTION_NAME,\n    drop_old=True,\n).from_documents(\n    all_splits,\n    embedding=embeddings,\n    collection_name=COLLECTION_NAME,\n    connection_args=connection_args,\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ")",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd"
+      },
+      {
+        "block_id": "HC5AdCzSgoE2BSxSVJ1cboMOndb",
+        "block_type": 2,
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "接下来，我们就可以使用如下代码进行相似性搜索了。搜索结果将会是文档中与提问最相关的文本内容。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MO8SdaG0uoy1KtxMz8Vc9p6lnFd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "query = \"What are the main components of Milvus?\"\ndocs = vector_store.similarity_search(query)\n\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "print(len(docs))",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd"
+      },
+      {
+        "block_id": "JMTidssmfolLapxXXrccZVIHnib",
+        "block_type": 2,
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "返回的结果应与如下代码类似。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Pdi4dz4lJo6TQbxNuZHczRj6nOc",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "4",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 60,
+            "wrap": false
+          }
+        },
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd"
+      },
+      {
+        "block_id": "RlnaddBfmoKPn8xEYI8cl2fNnNQ",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "开始提问",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#ask-your-question}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd"
+      },
+      {
+        "block_id": "BW2vdr8IfocyT8xAvRBcTZPTn1c",
+        "block_type": 2,
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在准备好文档后，我们可以创建一条 Stuff 链将文档包含在一个提示词中并将该提示词喂给大语言模型。这样大语言模型就可以在回答我们的提问时参考文档中的内容。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KWpud5BWxo9st9x10FucDETwnFW",
+        "block_type": 2,
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "下面的脚本会以OpenAI为目标大语言模型创建一条 RAG 链。该链将使用 OpenAI 为大语言模型，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NH5qdLhRzo2JqCxvEtdcZmfAnnd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "llm = ChatOpenAI(model_name=\"gpt-3.5-turbo\", temperature=0) \nretriever = vector_store.as_retriever()\n\ntemplate = \"\"\"Use the following pieces of context to answer the question at the end. \nIf you don't know the answer, just say that you don't know, don't try to make up an answer. \nUse three sentences maximum and keep the answer as concise as possible. \nAlways say \"thanks for asking!\" at the end of the answer. \n{context}\nQuestion: {question}\nHelpful Answer:\"\"\"\nrag_prompt = PromptTemplate.from_template(template)\n\nrag_chain = (\n    {\"context\": retriever, \"question\": RunnablePassthrough()}\n    | rag_prompt\n    | llm\n)\n\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "print(rag_chain.invoke(\"Explain IVF_FLAT in Milvus.\"))",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd"
+      },
+      {
+        "block_id": "VdnzdkdsvoGUxxxOICVcnzFan2g",
+        "block_type": 2,
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "返回的结果包含了中间步骤（ ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "intermediate_steps",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ）和输出文本 ( ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "output_text",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " )两个部分。前者用于表明在搜索过程中参考的文档，后者则是对用户提问的回答。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "U8jzdNOJAoLNRlxfxE3cmpW9nkr",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# Output",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "#",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# content='IVF_FLAT is an index mechanism in Milvus that divides a vector space into clusters. It compares the distances between a target vector and the centers of all clusters to find the nearest clusters. Then, it compares the distances between the target vector and the vectors in the selected clusters to find the nearest vectors. IVF_FLAT demonstrates performance advantages when the number of vectors exceeds the value of nlist. Thanks for asking!'",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 60,
+            "wrap": false
+          }
+        },
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd"
+      },
+      {
+        "block_id": "RdStdlS17o2H2NxKk9rcQCapnGh",
+        "block_type": 2,
+        "parent_id": "Ua1edTZW9osWFhxGSlCc11o4nmd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 27
+  }
+}

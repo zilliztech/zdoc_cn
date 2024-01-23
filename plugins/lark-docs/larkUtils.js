@@ -10,10 +10,14 @@ class larkUtils {
     }
 
     determine_file_path(token) {
-        const source = this.__fetch_doc_source('node_token', token)
-        this.__iterate_path(source.parent_node_token)
+        try {
+            const source = this.__fetch_doc_source('node_token', token)
+            this.__iterate_path(source.parent_node_token)
 
-        return this.file_path
+            return this.file_path
+        } catch (error) {
+            return ""
+        }
     }
 
     post_process_file_paths() {
@@ -24,7 +28,7 @@ class larkUtils {
             const files = fs.readdirSync(`${this.outputDir}/${folder}`)
 
             if (files.length === 1 && files[0] === folder.split('/').slice(-1)[0] + '.md') {
-                fs.rmdirSync(`${this.outputDir}/${folder}`)
+                fs.rmSync(`${this.outputDir}/${folder}`, {recursive: true, force: true})
             }   
 
             if (files.length > 1) {

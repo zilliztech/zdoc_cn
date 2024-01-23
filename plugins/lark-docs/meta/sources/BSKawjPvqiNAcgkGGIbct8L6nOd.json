@@ -1,0 +1,855 @@
+{
+  "creator": "ou_8554528ee6e965bad56710acde1c7847",
+  "has_child": false,
+  "node_create_time": "1687680874",
+  "node_token": "BSKawjPvqiNAcgkGGIbct8L6nOd",
+  "node_type": "origin",
+  "obj_create_time": "1687680874",
+  "obj_edit_time": "1702889236",
+  "obj_token": "PDrFdpvz0oMAecxwpKCcIDoenab",
+  "obj_type": "docx",
+  "origin_node_token": "BSKawjPvqiNAcgkGGIbct8L6nOd",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_8554528ee6e965bad56710acde1c7847",
+  "parent_node_token": "B11mwdhmYiGFsck0eCYcU5wnngX",
+  "space_id": "7167193056431783939",
+  "title": "与 LlamaIndex 集成搭建文档问答系统",
+  "slug": "documentation-qa-using-zilliz-cloud-and-llamaindex",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "PDrFdpvz0oMAecxwpKCcIDoenab",
+        "block_type": 1,
+        "children": [
+          "TtJ7dGOjUokLn6xMwlQcmZhBnkc",
+          "O9VadCj1SoCBo8x9NuzcnQBHnnf",
+          "RgAVdEjtyoCbypxdb24cDkvCngh",
+          "YlsudT9PLoCC72x0azYcsacunmc",
+          "U4a8dClulo0tgXx4yHKcfXv3nng",
+          "U4VXdLdpYogCWaxLzdHcH9KNnsd",
+          "ZZoedBxQfoGUY5xY7TCc4bgHnue",
+          "DmFNdH6j9o1TynxB9dUcrDM5nrc",
+          "NDiCdimwpoC46MxprLIcsahJnmb",
+          "HleLdsrxboKh7txVFi3cfWmhnbg",
+          "HZR6dEcUVoO1kMxpkjVcx1FZnGg",
+          "XbUQdLvWTowTD2xb7MgcbM62nte",
+          "I3q7dzR1foHFbmxcCSocIF9gnlh",
+          "VqakdB8NqoHNK1xhqb9cj3fZnfh",
+          "LjAHdceP7oXyYxxlQVwcCWkRnqe",
+          "JIpqdCavdo9lx6xf2XJcMGIhn6e",
+          "Ips7dCfUfozUixxo2BrcpBk3nQb",
+          "ZhEldxuNsoMOtMxFr9HcX0Pyn2e",
+          "MOZ2dgPRAoVzKGxNZUScRFzEnVh",
+          "RpiRdt2cdo0soBxkUMgcPKs0nHg",
+          "C6hbdXwQPopfavxmvg9cJenPnXc"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "与 LlamaIndex 集成搭建文档问答系统",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "TtJ7dGOjUokLn6xMwlQcmZhBnkc",
+        "block_type": 2,
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文将演示如何与集成 LlamaIndex 从指定源获取信息。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "O9VadCj1SoCBo8x9NuzcnQBHnnf",
+        "block_type": 2,
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在 ChatGPT 占领各大头条时，越来越多的企业在考虑如何在它们的产品中使用 ChatGPT。一个比较大的使用场景就是如何使用 ChatGPT 来改造产品文档孱弱的搜索能力。当前，如果用户希望了解如何使用一个产品，他们需要查看每个文档页面来找到他们需要的答案。如果使用 ChatGPT 来代替这个过程呢？如果 ChatGPT 可以帮助用户归纳所需的信息并回答用户可能会有的问题呢？这些都是让 LlamaIndex 可以和 Zilliz Cloud 集成的可能性。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RgAVdEjtyoCbypxdb24cDkvCngh",
+        "block_type": 2,
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "简单来说，LlamaIndex 和 Zilliz Cloud 可以联手完成信息的提取与搜索。LlamaIndex 可以使用 OpenAI 的接口将不同的文档页面转换成对应的向量表示。之后，我们可以将这些向量表示及相关的文字和元数据存储到 Zilliz Cloud 上。如果用户希望提问，LlamaIndex 可以通过搜索存储在 Zilliz Cloud 上的数据获取最相近的答案，然后再使用 ChatGPT 对这些答案进行总结。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YlsudT9PLoCC72x0azYcsacunmc",
+        "block_type": 2,
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在本示例中，我们将使用 Milvus 的产品文档做为信息源来搭建一个文档问答系统。您需要在 Zilliz Cloud 上创建一个大小为 1 CU 的 Cluster。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "U4a8dClulo0tgXx4yHKcfXv3nng",
+        "block_type": 2,
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "现在让我们开始吧。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "U4VXdLdpYogCWaxLzdHcH9KNnsd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "准备工作",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#before-you-start}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab"
+      },
+      {
+        "block_id": "ZZoedBxQfoGUY5xY7TCc4bgHnue",
+        "block_type": 2,
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在本例中，我们将使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "pymilvus",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 来连接 Zilliz Cloud，使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "llama-index",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 来处理数据及流水线相关的工作。同时，您还需要获取一个 OpenAI 的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 密钥来生成向量。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DmFNdH6j9o1TynxB9dUcrDM5nrc",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "pip install pymilvus llama-index",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 60,
+            "wrap": false
+          }
+        },
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab"
+      },
+      {
+        "block_id": "NDiCdimwpoC46MxprLIcsahJnmb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "准备数据",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#prepare-data}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab"
+      },
+      {
+        "block_id": "HleLdsrxboKh7txVFi3cfWmhnbg",
+        "block_type": 2,
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "我们将使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "git ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "来拉取 Milvus 的官方文档站。文档站中大部分的文档都是 markdown 格式的。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HZR6dEcUVoO1kMxpkjVcx1FZnGg",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "git clone https://github.com/milvus-io/milvus-docs",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 60,
+            "wrap": false
+          }
+        },
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab"
+      },
+      {
+        "block_id": "XbUQdLvWTowTD2xb7MgcbM62nte",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "主要参数",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#parameters}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab"
+      },
+      {
+        "block_id": "I3q7dzR1foHFbmxcCSocIF9gnlh",
+        "block_type": 2,
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本示例中使用的主要公共参数都在此处定义。请根据需求修改参数值。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VqakdB8NqoHNK1xhqb9cj3fZnfh",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from os import environ\n\n# 1. Set up the name of the collection to be created.\nCOLLECTION_NAME = 'document_qa_db'\n\n# 2. Set up the dimension of the embeddings.\nDIMENSION = 1536\n\n# 3. Set the inference parameters\nBATCH_SIZE = 128\nTOP_K = 3\n\n# 4. Set up the connection parameters for your Zilliz Cloud cluster.\nURI = 'YOUR_CLUSTER_ENDPOINT'\n\nTOKEN = 'YOUR_CLUSTER_TOKEN'\n\n# OpenAI API key\nenviron[\"OPENAI_API_KEY\"] = \"YOUR_OPENAI_API_KEY\"\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "environ[\"TOKENIZERS_PARALLELISM\"] = \"false\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab"
+      },
+      {
+        "block_id": "LjAHdceP7oXyYxxlQVwcCWkRnqe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "处理数据",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#consume-the-knowledge}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab"
+      },
+      {
+        "block_id": "JIpqdCavdo9lx6xf2XJcMGIhn6e",
+        "block_type": 2,
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "当我们完成数据下载后，就可以使用 LlamaIndex 来处理它们，并将处理后的数据上传到 Zilliz Cloud。具体来说，需要完成如下两步：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ips7dCfUfozUixxo2BrcpBk3nQb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "使用 Llama Hub 提供的 MarkdownReader 将所有 Markdown 页面转换成 LlamaIndex 文档对象。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "FtLbdO9E3oIq76xJcNUcxJUvnCb"
+        ],
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab"
+      },
+      {
+        "block_id": "FtLbdO9E3oIq76xJcNUcxJUvnCb",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from llama_index import download_loader\nfrom glob import glob\n\n# Load the markdown reader from the hub\nMarkdownReader = download_loader(\"MarkdownReader\")\nmarkdownreader = MarkdownReader()\n\n# Grab all markdown files and convert them using the reader\ndocs = []\nfor file in glob(\"./milvus-docs/site/en/**/*.md\", recursive=True):\n    docs.extend(markdownreader.load_data(file=file))\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "print(len(docs))",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "Ips7dCfUfozUixxo2BrcpBk3nQb"
+      },
+      {
+        "block_id": "ZhEldxuNsoMOtMxFr9HcX0Pyn2e",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "将这些文档对象存入 Zilliz Cloud。该步骤要求同时配置 Zilliz Cloud 和 OpenAI。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "EDkad6F0koQvvVxdrg1cyq3Tnmf"
+        ],
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab"
+      },
+      {
+        "block_id": "EDkad6F0koQvvVxdrg1cyq3Tnmf",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from llama_index import download_loader, VectorStoreIndex, ServiceContext\nfrom llama_index.vector_stores import MilvusVectorStore\n\n# Push all markdown files into Zilliz Cloud\nvector_store = MilvusVectorStore(\n    uri=URI, \n    token=TOKEN, \n    collection_name=COLLECTION_NAME, \n    similarity_metric=\"L2\",\n    dim=DIMENSION,\n)\n\nembed_model = HuggingFaceEmbedding(model_name=\"sentence-transformers/all-MiniLM-L12-v2\")\nservice_context = ServiceContext.from_defaults(embed_model=embed_model)\n\nindex = VectorStoreIndex.from_documents(\n    documents=docs, \n    service_context=service_context,\n    show_progress=True\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ")",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "ZhEldxuNsoMOtMxFr9HcX0Pyn2e"
+      },
+      {
+        "block_id": "MOZ2dgPRAoVzKGxNZUScRFzEnVh",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "开始提问",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#ask-question}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab"
+      },
+      {
+        "block_id": "RpiRdt2cdo0soBxkUMgcPKs0nHg",
+        "block_type": 2,
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在把所有文档都存入 Zilliz Cloud 后，我们就可以开始提问了。所有提问都会触发在知识库范围内的相似性搜索，所有相关结果都会被用来生成问题的答案。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "C6hbdXwQPopfavxmvg9cJenPnXc",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "query_engine = index.as_query_engine()\nresponse = query_engine.query(\"What is IVF_FLAT?\")\nprint(str(response))\n\n# Output\n#\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# IVF_FLAT is an index used in Milvus that divides vector space into list clusters. It compares the distances between the target vector and the centroids of all the clusters to return the nearest clusters. Then, it compares the distances between the target vector and the vectors in the selected clusters to find the nearest vectors. IVF_FLAT has performance advantages over FLAT when the number of vectors exceeds a certain threshold.",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "PDrFdpvz0oMAecxwpKCcIDoenab"
+      }
+    ],
+    "counts": 24
+  }
+}

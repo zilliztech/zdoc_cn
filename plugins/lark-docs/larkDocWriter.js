@@ -148,7 +148,7 @@ class larkDocWriter {
         if (file.length > 0) {
             return JSON.parse(fs.readFileSync(`${this.docSourceDir}/${file[0]}`, {encoding: 'utf-8', flag: 'r'}))
         } else {
-            throw new Error(`Cannot find ${title} in ${this.docSourceDir}`)
+            throw new Error(`Cannot find ${value} in ${this.docSourceDir}`)
         }
     }
 
@@ -177,7 +177,8 @@ class larkDocWriter {
                         page_beta: false,
                         notebook: false,
                         page_token: child.node_token,
-                        sidebar_position: index+1
+                        sidebar_position: index+1,
+                        docCardList: true,
                     })
                     await this.write_docs(`${current_path}/${child.slug}`, child.node_token)
                 } else {
@@ -196,6 +197,8 @@ class larkDocWriter {
                                 const slug = child.slug
                                 const beta = meta['beta']
                                 const notebook = meta['notebook']
+                                const label = meta['label']
+                                const keywords = meta['keywords']
                                 console.log(`${current_path}/${slug}.md`)
                                 await this.write_doc({
                                     path: current_path,
@@ -204,7 +207,10 @@ class larkDocWriter {
                                     page_beta: beta,
                                     notebook: notebook,
                                     page_token: token,
-                                    sidebar_position: index+1
+                                    sidebar_position: index+1,
+                                    sidebar_label: label,
+                                    keywords: keywords,
+                                    docCardList: false,
                                 })
                             }
                             break;
@@ -221,7 +227,10 @@ class larkDocWriter {
         page_beta,
         notebook,
         page_token,
-        sidebar_position
+        sidebar_position,
+        sidebar_label,
+        keywords,
+        docCardList,
     }) {
         let obj;
         let blocks;
@@ -256,13 +265,16 @@ class larkDocWriter {
                 notebook: notebook,
                 path: path, 
                 token: page_token,
-                sidebar_position: sidebar_position
+                sidebar_position: sidebar_position,
+                sidebar_label: sidebar_label,
+                keywords: keywords,
+                docCardList: docCardList,
             })
         }
     }
 
     async write_faqs (path) {
-        const source = this.__fetch_doc_source('title', 'FAQs')
+        const source = this.__fetch_doc_source('title', '常见问题')
         const blocks = source.blocks.items
 
         if (blocks) {
@@ -294,23 +306,23 @@ class larkDocWriter {
             }
 
             // Write FAQs root page
-            let title = 'FAQs'
+            let title = '常见问题'
             let slug = 'faqs'
             let front_matter = this.__front_matters(slug, null, null, source.node_token, 999)
             const markdown = `${front_matter}\n\n# ${title}\n\n`
             fs.writeFileSync(`${path}/${slug}.md`, markdown)
 
             sub_pages.forEach((sub_page, index) => {
-                let title = sub_page[0].replace(/^## /g, '').replace(/{#[\w-]+}/g, '').trim()
+                let title = sub_page[0].split('{/')[0].split('## ')[1]
                 let short_description = sub_page.filter(line => line.length > 0)[1]
-                let slug = slugify(title, {lower: true, strict: true})
+                let slug = /{\/([\w-]+)}/.exec(sub_page[0])[1]
                 let front_matter = this.__front_matters(slug, null, null, source.node_token, index+1)
                 let links = []
 
                 sub_page = sub_page.map(line => {
                     if (line.startsWith('**')) {
-                        let qtext = line.replace(/\*/g, '').trim()
-                        let qslug = slugify(qtext, {lower: true, strict: true})
+                        let qtext = line.split('{#')[0].split('**')[1]
+                        let qslug = line.split('{#')[1].split('}')[0]
                         line = `### ${qtext}{#${qslug}}`
                         links.push(`- [${qtext}](#${qslug})`)
                     }
@@ -322,7 +334,7 @@ class larkDocWriter {
                     return line
                 })
 
-                const markdown = `${front_matter}\n\n# ${title}\n\n${short_description}\n\n## Contents\n\n${links.join('\n')}\n\n## FAQs\n\n${sub_page.slice(1).join('\n')}`    
+                const markdown = `${front_matter}\n\n# ${title}\n\n${short_description}\n\n## 目录\n\n${links.join('\n')}\n\n## 问答\n\n${sub_page.slice(1).join('\n')}`    
                 fs.writeFileSync(`${path}/${slug}.md`, markdown)
             })
         }
@@ -387,6 +399,8 @@ class larkDocWriter {
                 slug: result[0]["fields"]["Slug"],
                 beta: result[0]["fields"]["Beta"],
                 notebook: result[0]["fields"]["Notebook"],
+                label: result[0]["fields"]["Labels"],
+                keywords: result[0]["fields"]["Keywords"]
             }
         } else {
             return {
@@ -420,18 +434,19 @@ class larkDocWriter {
         return markdown.replace(/\n{3,}/g, '\n\n').replace(/^\|(\s*\|)*\s*\n/gm, '')
     }
 
-    async __write_page({slug, beta, notebook, path, token, sidebar_position}) {
-        let front_matter = this.__front_matters(slug, beta, notebook, token, sidebar_position)
+    async __write_page({slug, beta, notebook, path, token, sidebar_position, sidebar_label, keywords, docCardList}) {
+        let front_matter = this.__front_matters(slug, beta, notebook, token, sidebar_position, sidebar_label, keywords)
         let markdown = await this.__markdown()
         markdown = this.__filter_content(markdown, this.target)
-        if (!this.sdks) {
-            this.sdks = await this.__fetch_sdk_versions()
-        }
+        // if (!this.sdks) {
+        //     this.sdks = await this.__fetch_sdk_versions()
+        // }
 
-        markdown = markdown.replace(/{versions.python.version}/g, this.sdks.python.version)
-        markdown = markdown.replace(/{versions.java.version}/g, this.sdks.java.version)
-        markdown = markdown.replace(/{versions.node.version}/g, this.sdks.node.version)
-        markdown = markdown.replace(/{versions.go.version}/g, this.sdks.go.version)
+        // markdown = markdown.replace(/{versions.python.version}/g, this.sdks.python.version)
+        // markdown = markdown.replace(/{versions.java.version}/g, this.sdks.java.version)
+        // markdown = markdown.replace(/{versions.node.version}/g, this.sdks.node.version)
+        // markdown = markdown.replace(/{versions.go.version}/g, this.sdks.go.version)
+        markdown = markdown.replace(/(\s*\n){3,}/g, '\n\n').replace(/(<br\/>){2,}/, "<br/>").replace(/<br>/g, '<br/>');
 
         let tabs = markdown.split('\n').filter(line => {
             return line.trim().startsWith("<Tab")
@@ -447,31 +462,34 @@ class larkDocWriter {
 
         // console.log(file_path)
 
+        if (docCardList) {
+            markdown = markdown + '\n\n' + "import DocCardList from '@theme/DocCardList';\n\n<DocCardList />"
+        }
+
         fs.writeFileSync(file_path, front_matter + '\n\n' + imports + '\n\n' + markdown)
     }
 
-    __front_matters (slug, beta, notebook, token, sidebar_position=undefined) {
-        var sidebar_label = fs.readFileSync('plugins/lark-docs/meta/sidebarLables.json', {encoding: 'utf-8', flag: 'r'})
-
-        if (sidebar_label[slug]) {
-            sidebar_label = `sidebar_label: ${sidebar_label[slug]}` + '\n'
+    __front_matters (slug, beta, notebook, token, sidebar_position=undefined, sidebar_label=undefined, keywords=undefined) {
+        if (sidebar_label) {
+            sidebar_label = `sidebar_label: ${sidebar_label}` + '\n'
         } else {
             sidebar_label = ''
         }
 
-        // let displayed_sidebar = this.target === 'saas' ? "" : "displayed_sidebar: paasSidebar\n"
-        // slug = this.target === 'saas' ? `/${slug}` : `/byoc/${slug}`
-        // slug = `/${slug}`
-        // slug = slug.replace(/\/\//g, '/').replace(/^\//, '')
-        // slug = slug === 'docs/' ? '' : slug
+        if (keywords) {
+            keywords = 'keywords:\n  - ' + keywords.split(',').map(item => item.trim()).join('\n  - ') + '\n'
+        } else {
+            keywords = ''
+        }
 
         let front_matter = '---\n' + 
         // displayed_sidebar +
         `slug: /${slug}` + '\n' +
-        sidebar_label +
         `beta: ${beta}` + '\n' +
         `notebook: ${notebook}` + '\n' +
         `token: ${token}` + '\n' +
+        sidebar_label +
+        keywords +
         `sidebar_position: ${sidebar_position}` + '\n' +
         '---'
 
@@ -541,7 +559,7 @@ class larkDocWriter {
             }
         }
     
-        return markdown.join('\n\n').replace(/\n{3,}/g, '\n\n').replace(/<br>/g, '<br/>');
+        return markdown.join('\n\n').replace(/(\s*\n){3,}/g, '\n\n').replace(/(<br>){2,}/g, '<br>').replace(/<br>/g, '<br/>');
     }
 
     async __page(page) {
@@ -555,8 +573,7 @@ class larkDocWriter {
     async __heading(heading, level) {
         let content = await this.__text_elements(heading['elements'])
         content = this.__filter_content(content, this.target)
-        let slug = slugify(content, {lower: true, strict: true})
-        return '#'.repeat(level) + ' ' + content + '{#'+slug+'}';
+        return '#'.repeat(level) + ' ' + content;
     }
 
     async __bullet(block, indent) {
@@ -809,7 +826,7 @@ class larkDocWriter {
         });
         const cell_texts = await Promise.all(cell_blocks.map(async (cell) => {
             let blocks = cell.map(block => this.__retrieve_block_by_id(block));
-            return (await this.__markdown(blocks, 1)).replace(/\n/g, '<br> ');
+            return (await this.__markdown(blocks, 1)).replace(/\n/g, '<br>');
         }));
         const cell_lengths = cell_texts.map(cell => cell.length);
         const cell_length_matrix = chunkArray(cell_lengths, properties['column_size']);
@@ -943,8 +960,8 @@ class larkDocWriter {
 
             if (page) {
                 const title = page['title'];
-                const meta = await this.__is_to_publish(title);
-                const slug = meta['slug'];
+                // const meta = await this.__is_to_publish(title);
+                const slug = page['slug'];
 
                 // let newUrl = this.target === 'saas' ? `./${slug}` : `./byoc/${slug}`;
                 let newUrl = `./${slug}`;

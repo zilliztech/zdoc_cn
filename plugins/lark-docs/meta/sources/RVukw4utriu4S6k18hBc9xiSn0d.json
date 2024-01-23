@@ -1,0 +1,771 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1693467083",
+  "node_token": "RVukw4utriu4S6k18hBc9xiSn0d",
+  "node_type": "origin",
+  "obj_create_time": "1693467083",
+  "obj_edit_time": "1705889271",
+  "obj_token": "TBendMTm1oOMVIxYIqJc8ogan1c",
+  "obj_type": "docx",
+  "origin_node_token": "RVukw4utriu4S6k18hBc9xiSn0d",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "SlItwMcOyikiWVkr7Glcy9sinMg",
+  "space_id": "7167193056431783939",
+  "title": "[DEPRECATE] 现金余额监控",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "TBendMTm1oOMVIxYIqJc8ogan1c",
+        "block_type": 1,
+        "children": [
+          "DvXbdeNk0oO6zCxQ49UckVixnUE",
+          "MJ1zdbZ7CoEAExxY7gac97Sunbh",
+          "U9AndXKi6oFBlNxSSQccvY9Hnvd",
+          "MuvYdStMno0xq6xKnO0cbtZ6nzy",
+          "O2KIdpEXtoWLelxGU1wcjyypn1L",
+          "XRltdeetRoLossx5fLBc3hiYntd",
+          "Ccr1ddF9SowdhvxecH8c1ta3nrb",
+          "JvNIdaRgpogvcFxy3cdcK1ywn4c",
+          "MFZZduPbuoIBQWxeR0pc6rZinhc",
+          "TRS7dFsQaom5rBx6tErclHx5npd",
+          "NSOdduybkoWjCcxmAJqckpQdndd",
+          "JeQ2deFjjojUxxxmHtncCHO9nLc",
+          "JCgodIufRownruxzgVLclgRhnUc",
+          "Qn5LdMKiwojFkpx6gFicUk2mnoh",
+          "Qd6rd3aCVodzgzx4OJScwkSvn2c",
+          "Yi8GdsG6Xo6zwCxdPzlcsuzRnbh",
+          "ZVZ9dcjcAoias4xWlMDcwLKlnUg",
+          "Mqqddf4WXoDrfoxx7TqcDAUVn0d"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "[DEPRECATE] ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "现金余额监控",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "DvXbdeNk0oO6zCxQ49UckVixnUE",
+        "block_type": 2,
+        "parent_id": "TBendMTm1oOMVIxYIqJc8ogan1c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 提供现金余额监控功能。该监控默认关闭。如果您进行过现金充值，您可以打开此监控，从而在现金余额即将不足时收到预警提醒。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MJ1zdbZ7CoEAExxY7gac97Sunbh",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "设置告警条件{#set-alert-condition}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TBendMTm1oOMVIxYIqJc8ogan1c"
+      },
+      {
+        "block_id": "U9AndXKi6oFBlNxSSQccvY9Hnvd",
+        "block_type": 2,
+        "parent_id": "TBendMTm1oOMVIxYIqJc8ogan1c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要在项目中设置现金余额告警条件，请执行以下步骤：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MuvYdStMno0xq6xKnO0cbtZ6nzy",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在项目左侧导航栏中选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "监控",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TBendMTm1oOMVIxYIqJc8ogan1c"
+      },
+      {
+        "block_id": "O2KIdpEXtoWLelxGU1wcjyypn1L",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "打开",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "监控设置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页签。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TBendMTm1oOMVIxYIqJc8ogan1c"
+      },
+      {
+        "block_id": "XRltdeetRoLossx5fLBc3hiYntd",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "定位到",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "账单监控",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "区域下的第一行条件。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TBendMTm1oOMVIxYIqJc8ogan1c"
+      },
+      {
+        "block_id": "Ccr1ddF9SowdhvxecH8c1ta3nrb",
+        "block_type": 13,
+        "children": [
+          "U7TodTW0xoHarExcJ1FcaxJinib"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "单击操作列的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "更多",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "按钮，选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "编辑",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TBendMTm1oOMVIxYIqJc8ogan1c"
+      },
+      {
+        "block_id": "U7TodTW0xoHarExcJ1FcaxJinib",
+        "block_type": 2,
+        "parent_id": "Ccr1ddF9SowdhvxecH8c1ta3nrb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在提示的对话框中输入金额数，然后单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "保存",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。当现金余额小于以下指定的数额时，系统会自动向所有组织管理员连续发送 3 次告警邮件，每封邮件的间隔时间为 1 小时。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JvNIdaRgpogvcFxy3cdcK1ywn4c",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D9245-5522%26mode%3Ddesign%26t%3D2JDGU6o9z15UAvTp-4"
+          }
+        },
+        "parent_id": "TBendMTm1oOMVIxYIqJc8ogan1c"
+      },
+      {
+        "block_id": "MFZZduPbuoIBQWxeR0pc6rZinhc",
+        "block_type": 2,
+        "parent_id": "TBendMTm1oOMVIxYIqJc8ogan1c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TRS7dFsQaom5rBx6tErclHx5npd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "开启监控功能{#enable-advance-pay-balance-monitor}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TBendMTm1oOMVIxYIqJc8ogan1c"
+      },
+      {
+        "block_id": "NSOdduybkoWjCcxmAJqckpQdndd",
+        "block_type": 2,
+        "parent_id": "TBendMTm1oOMVIxYIqJc8ogan1c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要开启监控功能，需在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "状态",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "列中打开开关。单击开关即可切换开启或关闭状态。请确保开关指示器在右侧，并且背景颜色变为蓝色。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JeQ2deFjjojUxxxmHtncCHO9nLc",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D9245-5475%26mode%3Ddesign%26t%3D2JDGU6o9z15UAvTp-4"
+          }
+        },
+        "parent_id": "TBendMTm1oOMVIxYIqJc8ogan1c"
+      },
+      {
+        "block_id": "JCgodIufRownruxzgVLclgRhnUc",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "文档推荐{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TBendMTm1oOMVIxYIqJc8ogan1c"
+      },
+      {
+        "block_id": "Qn5LdMKiwojFkpx6gFicUk2mnoh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "CU 资源监控",
+                "token": "J4YtwCZUbiHd5LkS3SdcQi9GnOg",
+                "url": "https://zilliverse.feishu.cn/wiki/J4YtwCZUbiHd5LkS3SdcQi9GnOg"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TBendMTm1oOMVIxYIqJc8ogan1c"
+      },
+      {
+        "block_id": "Qd6rd3aCVodzgzx4OJScwkSvn2c",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "QPS 资源监控",
+                "token": "LL1Iw34rqikxZrkZZ5Ecakm8nJe",
+                "url": "https://zilliverse.feishu.cn/wiki/LL1Iw34rqikxZrkZZ5Ecakm8nJe"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TBendMTm1oOMVIxYIqJc8ogan1c"
+      },
+      {
+        "block_id": "Yi8GdsG6Xo6zwCxdPzlcsuzRnbh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "查询时延监控",
+                "token": "QBaRweeRriuYskkMWxhcLOkyneI",
+                "url": "https://zilliverse.feishu.cn/wiki/QBaRweeRriuYskkMWxhcLOkyneI"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TBendMTm1oOMVIxYIqJc8ogan1c"
+      },
+      {
+        "block_id": "ZVZ9dcjcAoias4xWlMDcwLKlnUg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "已使用容量监控",
+                "token": "HayvwbjUtiAcqak1fDMcigc3nUc",
+                "url": "https://zilliverse.feishu.cn/wiki/HayvwbjUtiAcqak1fDMcigc3nUc"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TBendMTm1oOMVIxYIqJc8ogan1c"
+      },
+      {
+        "block_id": "Mqqddf4WXoDrfoxx7TqcDAUVn0d",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "查看集群性能指标",
+                "token": "S3BswPJ4NiKl9okZDoycMvbunMb",
+                "url": "https://zilliverse.feishu.cn/wiki/S3BswPJ4NiKl9okZDoycMvbunMb"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "TBendMTm1oOMVIxYIqJc8ogan1c"
+      }
+    ],
+    "counts": 20
+  }
+}

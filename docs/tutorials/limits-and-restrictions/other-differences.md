@@ -2,6 +2,7 @@
 slug: /other-differences
 beta: FALSE
 notebook: FALSE
+token: LCqjwnEPWi2YPkkdHOwc5eQXnPd
 sidebar_position: 2
 ---
 
@@ -34,6 +35,7 @@ Zilliz Cloud 提供 **AUTOINDEX** 作为索引类型，免去在 Milvus 中进�
 
 - [AUTOINDEX](./autoindex-explained)
 
-- [选择合适的 CU 类型](./cu-types-explained) 
+- [选择合适的 CU 类型](./cu-types-explained)
 
 - [API 异同](./api-comparison)
+

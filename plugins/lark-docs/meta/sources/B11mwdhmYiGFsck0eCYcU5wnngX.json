@@ -1,0 +1,215 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": true,
+  "node_create_time": "1687139763",
+  "node_token": "B11mwdhmYiGFsck0eCYcU5wnngX",
+  "node_type": "origin",
+  "obj_create_time": "1687139763",
+  "obj_edit_time": "1705904561",
+  "obj_token": "Xs0pdVoROoksmbxlHcJcdmXWnoe",
+  "obj_type": "docx",
+  "origin_node_token": "B11mwdhmYiGFsck0eCYcU5wnngX",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "XyeFwdx6kiK9A6kq3yIcLNdEnDd",
+  "space_id": "7167193056431783939",
+  "title": "第三方集成",
+  "slug": "integrations",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "Xs0pdVoROoksmbxlHcJcdmXWnoe",
+        "block_type": 1,
+        "children": [
+          "LIDLdqbxGoFgRix0tcdcXnZMn0d"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "第三方",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "集成",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "LIDLdqbxGoFgRix0tcdcXnZMn0d",
+        "block_type": 2,
+        "parent_id": "Xs0pdVoROoksmbxlHcJcdmXWnoe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本章将为您将 Zilliz Cloud 与开源或第三方服务进行集成开发提供相关指导。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 2
+  },
+  "children": [
+    {
+      "creator": "ou_8554528ee6e965bad56710acde1c7847",
+      "has_child": false,
+      "node_create_time": "1687315662",
+      "node_token": "PMHbwHT0HiOnvDk8sUocOy34nPw",
+      "node_type": "origin",
+      "obj_create_time": "1687315662",
+      "obj_edit_time": "1703063329",
+      "obj_token": "Jz4idVi9PoK1akxlB6hc2gVwnic",
+      "obj_type": "docx",
+      "origin_node_token": "PMHbwHT0HiOnvDk8sUocOy34nPw",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_8554528ee6e965bad56710acde1c7847",
+      "parent_node_token": "B11mwdhmYiGFsck0eCYcU5wnngX",
+      "space_id": "7167193056431783939",
+      "title": "与 OpenAI 集成搭建相似性搜索系统",
+      "slug": "similarity-search-with-zilliz-cloud-and-openai"
+    },
+    {
+      "creator": "ou_8554528ee6e965bad56710acde1c7847",
+      "has_child": false,
+      "node_create_time": "1687662960",
+      "node_token": "MVYEwIkZCiZd3CkRWFmc9EH2nSf",
+      "node_type": "origin",
+      "obj_create_time": "1687662960",
+      "obj_edit_time": "1702888212",
+      "obj_token": "Ye05dZbTloqq22xhgAQcynWQnJh",
+      "obj_type": "docx",
+      "origin_node_token": "MVYEwIkZCiZd3CkRWFmc9EH2nSf",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_8554528ee6e965bad56710acde1c7847",
+      "parent_node_token": "B11mwdhmYiGFsck0eCYcU5wnngX",
+      "space_id": "7167193056431783939",
+      "title": "与 HuggingFace 集成搭建问答系统",
+      "slug": "question-answering-using-zilliz-cloud-and-hugging-face"
+    },
+    {
+      "creator": "ou_8554528ee6e965bad56710acde1c7847",
+      "has_child": false,
+      "node_create_time": "1687318491",
+      "node_token": "N7KvwFAe8i7XWZk5aEGchRsynJA",
+      "node_type": "origin",
+      "obj_create_time": "1687318491",
+      "obj_edit_time": "1702888377",
+      "obj_token": "IKckdE4UIodjLrxS6XccvsjInBR",
+      "obj_type": "docx",
+      "origin_node_token": "N7KvwFAe8i7XWZk5aEGchRsynJA",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_8554528ee6e965bad56710acde1c7847",
+      "parent_node_token": "B11mwdhmYiGFsck0eCYcU5wnngX",
+      "space_id": "7167193056431783939",
+      "title": "与 Cohere 集成搭建智能问答系统",
+      "slug": "question-answering-using-zilliz-cloud-and-cohere"
+    },
+    {
+      "creator": "ou_8554528ee6e965bad56710acde1c7847",
+      "has_child": false,
+      "node_create_time": "1687673460",
+      "node_token": "Msbqwd1izicbFlkT56scmGlWnbb",
+      "node_type": "origin",
+      "obj_create_time": "1687673460",
+      "obj_edit_time": "1702888577",
+      "obj_token": "Ua1edTZW9osWFhxGSlCc11o4nmd",
+      "obj_type": "docx",
+      "origin_node_token": "Msbqwd1izicbFlkT56scmGlWnbb",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_8554528ee6e965bad56710acde1c7847",
+      "parent_node_token": "B11mwdhmYiGFsck0eCYcU5wnngX",
+      "space_id": "7167193056431783939",
+      "title": "与 LangChain 集成搭建智能文档问答系统",
+      "slug": "question-answering-over-documents-with-zilliz-cloud-and-langchain"
+    },
+    {
+      "creator": "ou_8554528ee6e965bad56710acde1c7847",
+      "has_child": false,
+      "node_create_time": "1687676297",
+      "node_token": "FpeXw3b5piUAG7kUCgucgI1unFh",
+      "node_type": "origin",
+      "obj_create_time": "1687676297",
+      "obj_edit_time": "1702888844",
+      "obj_token": "KdmIdXX4yoNR7Zx9CQecHEaMnyf",
+      "obj_type": "docx",
+      "origin_node_token": "FpeXw3b5piUAG7kUCgucgI1unFh",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_8554528ee6e965bad56710acde1c7847",
+      "parent_node_token": "B11mwdhmYiGFsck0eCYcU5wnngX",
+      "space_id": "7167193056431783939",
+      "title": "与 PyTorch 集成搭建图片搜索系统",
+      "slug": "image-search-with-zilliz-cloud-and-pytorch"
+    },
+    {
+      "creator": "ou_8554528ee6e965bad56710acde1c7847",
+      "has_child": false,
+      "node_create_time": "1687680874",
+      "node_token": "BSKawjPvqiNAcgkGGIbct8L6nOd",
+      "node_type": "origin",
+      "obj_create_time": "1687680874",
+      "obj_edit_time": "1702889236",
+      "obj_token": "PDrFdpvz0oMAecxwpKCcIDoenab",
+      "obj_type": "docx",
+      "origin_node_token": "BSKawjPvqiNAcgkGGIbct8L6nOd",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_8554528ee6e965bad56710acde1c7847",
+      "parent_node_token": "B11mwdhmYiGFsck0eCYcU5wnngX",
+      "space_id": "7167193056431783939",
+      "title": "与 LlamaIndex 集成搭建文档问答系统",
+      "slug": "documentation-qa-using-zilliz-cloud-and-llamaindex"
+    },
+    {
+      "creator": "ou_8554528ee6e965bad56710acde1c7847",
+      "has_child": false,
+      "node_create_time": "1687683862",
+      "node_token": "QdD7w2k6ii7mKFkTJ2tcNhYznAf",
+      "node_type": "origin",
+      "obj_create_time": "1687683862",
+      "obj_edit_time": "1702889402",
+      "obj_token": "TyZJdWsxtoGoBIxtYtic08dnnXe",
+      "obj_type": "docx",
+      "origin_node_token": "QdD7w2k6ii7mKFkTJ2tcNhYznAf",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_8554528ee6e965bad56710acde1c7847",
+      "parent_node_token": "B11mwdhmYiGFsck0eCYcU5wnngX",
+      "space_id": "7167193056431783939",
+      "title": "与 SentenceTransformers 集成搭建电影搜索系统",
+      "slug": "movie-search-using-zilliz-cloud-and-sentencetransformers"
+    }
+  ]
+}

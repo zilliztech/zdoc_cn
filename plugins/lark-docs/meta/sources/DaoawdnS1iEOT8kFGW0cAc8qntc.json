@@ -1,0 +1,184 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": true,
+  "node_create_time": "1687140840",
+  "node_token": "DaoawdnS1iEOT8kFGW0cAc8qntc",
+  "node_type": "origin",
+  "obj_create_time": "1687140840",
+  "obj_edit_time": "1702887368",
+  "obj_token": "QOvBdzY7ZonWY4xRqPccsOVonKQ",
+  "obj_type": "docx",
+  "origin_node_token": "DaoawdnS1iEOT8kFGW0cAc8qntc",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "HrzawWSDXiK5ZUkb9zhcojOenpi",
+  "space_id": "7167193056431783939",
+  "title": "组织设置",
+  "slug": "organization-settings",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "QOvBdzY7ZonWY4xRqPccsOVonKQ",
+        "block_type": 1,
+        "children": [
+          "JSyZdoA9zo5NuRxigtBcjYU7n76"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "组织设置",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "JSyZdoA9zo5NuRxigtBcjYU7n76",
+        "block_type": 2,
+        "parent_id": "QOvBdzY7ZonWY4xRqPccsOVonKQ",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 上的所有资源都是按组织进行管理的。本章将介绍如何设置您的组织以满足您的管理需要。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 2
+  },
+  "children": [
+    {
+      "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+      "has_child": false,
+      "node_create_time": "1705931444",
+      "node_token": "B5nRw42QlikYTVkIkpDcC22mnOd",
+      "node_type": "origin",
+      "obj_create_time": "1705931444",
+      "obj_edit_time": "1705932017",
+      "obj_token": "ULJAdGcfWo5x4dxvJ35cGMT0n9r",
+      "obj_type": "docx",
+      "origin_node_token": "B5nRw42QlikYTVkIkpDcC22mnOd",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+      "parent_node_token": "DaoawdnS1iEOT8kFGW0cAc8qntc",
+      "space_id": "7167193056431783939",
+      "title": "查看系统设置"
+    },
+    {
+      "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+      "has_child": false,
+      "node_create_time": "1694598248",
+      "node_token": "WllVwhQakiUVLXkMm7ocRk5xnxh",
+      "node_type": "origin",
+      "obj_create_time": "1694598248",
+      "obj_edit_time": "1700719940",
+      "obj_token": "MJlwdn7OSoIXgDxce9Lcw50TnOd",
+      "obj_type": "docx",
+      "origin_node_token": "WllVwhQakiUVLXkMm7ocRk5xnxh",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+      "parent_node_token": "DaoawdnS1iEOT8kFGW0cAc8qntc",
+      "space_id": "7167193056431783939",
+      "title": "查看事件",
+      "slug": "view-activities"
+    },
+    {
+      "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+      "has_child": false,
+      "node_create_time": "1687140859",
+      "node_token": "AAAmwoQdJid8FOkN3Z8cu8jAnNg",
+      "node_type": "origin",
+      "obj_create_time": "1687140859",
+      "obj_edit_time": "1700714842",
+      "obj_token": "F5fUdWRdBo5VVPxiqNdcWoWtnKe",
+      "obj_type": "docx",
+      "origin_node_token": "AAAmwoQdJid8FOkN3Z8cu8jAnNg",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+      "parent_node_token": "DaoawdnS1iEOT8kFGW0cAc8qntc",
+      "space_id": "7167193056431783939",
+      "title": "设置时区",
+      "slug": "manage-timezone"
+    },
+    {
+      "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+      "has_child": false,
+      "node_create_time": "1687140873",
+      "node_token": "Ah5HwOryHilTp4klJ6VcR4eJnvd",
+      "node_type": "origin",
+      "obj_create_time": "1687140873",
+      "obj_edit_time": "1700714862",
+      "obj_token": "JGdHd84CyonxIBxpGHMcNrtPnUb",
+      "obj_type": "docx",
+      "origin_node_token": "Ah5HwOryHilTp4klJ6VcR4eJnvd",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+      "parent_node_token": "DaoawdnS1iEOT8kFGW0cAc8qntc",
+      "space_id": "7167193056431783939",
+      "title": "设置运维窗口",
+      "slug": "set-up-maintenance-window"
+    },
+    {
+      "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+      "has_child": false,
+      "node_create_time": "1693540472",
+      "node_token": "MkZjwrXIpicJ5xkYwu6cMK8inVb",
+      "node_type": "origin",
+      "obj_create_time": "1693540472",
+      "obj_edit_time": "1700717154",
+      "obj_token": "UbExdUSjJoDvVaxI7YOcbkpDnxg",
+      "obj_type": "docx",
+      "origin_node_token": "MkZjwrXIpicJ5xkYwu6cMK8inVb",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+      "parent_node_token": "DaoawdnS1iEOT8kFGW0cAc8qntc",
+      "space_id": "7167193056431783939",
+      "title": "删除组织",
+      "slug": "delete-your-organization"
+    },
+    {
+      "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+      "has_child": false,
+      "node_create_time": "1700618756",
+      "node_token": "XVQcw6qgxiC31ikfk06cOo1jnch",
+      "node_type": "origin",
+      "obj_create_time": "1700618756",
+      "obj_edit_time": "1700715701",
+      "obj_token": "BHIjdEdABoKZdIxZxfCc78PLn7g",
+      "obj_type": "docx",
+      "origin_node_token": "XVQcw6qgxiC31ikfk06cOo1jnch",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+      "parent_node_token": "DaoawdnS1iEOT8kFGW0cAc8qntc",
+      "space_id": "7167193056431783939",
+      "title": "使用回收站",
+      "slug": "use-recycle-bin"
+    }
+  ]
+}

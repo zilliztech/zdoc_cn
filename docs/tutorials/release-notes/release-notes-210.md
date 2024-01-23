@@ -2,17 +2,20 @@
 slug: /release-notes-210
 beta: FALSE
 notebook: FALSE
-sidebar_position: 4
+token: DsIxwJXnJiM2k7klUY0cr5dunBh
+sidebar_position: 5
 ---
 
 import Admonition from '@theme/Admonition';
 
 
-# 版本说明书 2.1.0
+# 版本说明书（2023/08/21）
 
-**发布日期：2023年8月21日**
+我们很高兴地宣布Zilliz Cloud 新版本的发布。此版本引入了一系列增强和功能：
 
-我们很高兴地宣布Zilliz Cloud 2.1.0的发布。此版本引入了一系列增强和功能：
+## Milvus 兼容性
+
+此次发布兼容 **Milvus 2.1.x**。
 
 ### RESTful API{#restful-api-enhancements}
 

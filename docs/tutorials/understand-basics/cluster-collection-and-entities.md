@@ -2,6 +2,7 @@
 slug: /cluster-collection-and-entities
 beta: FALSE
 notebook: FALSE
+token: SxBKwEZyAiWvibkGNhLc8CjvnSg
 sidebar_position: 2
 ---
 
@@ -56,7 +57,7 @@ Zilliz Cloud 支持以下数据类型：
 
 - 可变长度字符串（VARCHAR）
 
-- [JSON](./javascript-object-notation-json) 
+- [JSON](./javascript-object-notation-json)
 
 Zilliz Cloud 提供 3 种 CU 类型。不同 CU 类型适用于不同的场景，搜索性能也有所不同。
 
@@ -69,6 +70,14 @@ Zilliz Cloud 集群中仅 FLOAT_VECTOR 支持向量的数据类型。
 ### 索引{#index}
 
 与 Milvus 实例不同，Zilliz Cloud 集群仅支持 **AUTOINDEX** 索引。该索引类型针对 Zilliz Cloud 提供的 3 种 CU 进行了优化。更多详情，请阅读 [AUTOINDEX](./autoindex-explained) 。
+
+## Partition{#partitions}
+
+Partition 是从 Collection 中划分而来。Zilliz Cloud 支持将物理存储划分成若干部分，每一部分被称为一个 Partition。每个 Partition 都可以包含多个 Segment。
+
+通过将 Entity 分别存入不同的 Partition，Zilliz Cloud 实现了对 Entity 的隔离与分组。在按 Partition 进行检索时，由于无须关注 Collection 中其它 Partition 的数据，检索效率得到了较大的提升。
+
+关于 Partition 的更多内容，可以查看[使用 Partition](./use-partitions)。
 
 ## Entity{#entities}
 

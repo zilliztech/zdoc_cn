@@ -1,0 +1,409 @@
+{
+  "creator": "ou_8554528ee6e965bad56710acde1c7847",
+  "has_child": false,
+  "node_create_time": "1692687190",
+  "node_token": "DsIxwJXnJiM2k7klUY0cr5dunBh",
+  "node_type": "origin",
+  "obj_create_time": "1692687190",
+  "obj_edit_time": "1705926463",
+  "obj_token": "IUmxdt83UozzK9xyENac8MtpnNh",
+  "obj_type": "docx",
+  "origin_node_token": "DsIxwJXnJiM2k7klUY0cr5dunBh",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_8554528ee6e965bad56710acde1c7847",
+  "parent_node_token": "QxcnwBks8izBAQkjP8Ycl1cEnQh",
+  "space_id": "7167193056431783939",
+  "title": "版本说明书（2023/08/21）",
+  "slug": "release-notes-210",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "IUmxdt83UozzK9xyENac8MtpnNh",
+        "block_type": 1,
+        "children": [
+          "GDDfdKh35ooF1OxzihdcfDesnKd",
+          "IGhJdSwAUoxmR3xjDr0cvnfknHf",
+          "QpaLdjjBZopEh7x49QOc7kPtntd",
+          "H3t4dIrRKowtnXxRxTRcdiv5nNc",
+          "J4xpdhI6boOCeExyY5KcWdUxnnb",
+          "M402dno9Fo6lXWxmYRacRTuYnrf",
+          "IX7vdgfDToJUb3x9CIFcNfXBn8e",
+          "TyiidT7nEob2DwxoaHdcZWdwn1f",
+          "ZG2XdGguYoNaf2xeqONcS4bynee"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "版本说明书（2023/08/21）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "GDDfdKh35ooF1OxzihdcfDesnKd",
+        "block_type": 2,
+        "parent_id": "IUmxdt83UozzK9xyENac8MtpnNh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "发布日期：2023年8月21日",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IGhJdSwAUoxmR3xjDr0cvnfknHf",
+        "block_type": 2,
+        "parent_id": "IUmxdt83UozzK9xyENac8MtpnNh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "我们很高兴地宣布Zilliz Cloud 2.1.0的发布。此版本引入了一系列增强和功能：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QpaLdjjBZopEh7x49QOc7kPtntd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Milvus 兼容性",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IUmxdt83UozzK9xyENac8MtpnNh"
+      },
+      {
+        "block_id": "H3t4dIrRKowtnXxRxTRcdiv5nNc",
+        "block_type": 2,
+        "parent_id": "IUmxdt83UozzK9xyENac8MtpnNh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "此次发布兼容 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Milvus 2.1.x",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "J4xpdhI6boOCeExyY5KcWdUxnnb",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "RESTful ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#restful-api-enhancements}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IUmxdt83UozzK9xyENac8MtpnNh"
+      },
+      {
+        "block_id": "M402dno9Fo6lXWxmYRacRTuYnrf",
+        "block_type": 2,
+        "parent_id": "IUmxdt83UozzK9xyENac8MtpnNh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为了方便用户操作，我们开放了RESTful ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "接口。用户可以通过调用这些接口来操作 Zilliz Cloud 上的集群、Collection 及存放在 Collection 中的向量数据。欲了解更多，请前往 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API 参考",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fdocs.zilliz.com.cn%2Freference%2Fcloud-meta"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IX7vdgfDToJUb3x9CIFcNfXBn8e",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "阿里云云市场{#aliyun-marketplace}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IUmxdt83UozzK9xyENac8MtpnNh"
+      },
+      {
+        "block_id": "TyiidT7nEob2DwxoaHdcZWdwn1f",
+        "block_type": 2,
+        "parent_id": "IUmxdt83UozzK9xyENac8MtpnNh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为了方便用户订阅 Zilliz Cloud 的服务，我们开放了新的订阅渠道。现在用户可以通过阿里云云市场订阅我们的服务。欲了解更多，请前往",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "订阅阿里云市场",
+                "token": "UTRZwxLf3ikwvbkXrKjcWAwOnmg",
+                "url": "https://zilliverse.feishu.cn/wiki/UTRZwxLf3ikwvbkXrKjcWAwOnmg"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZG2XdGguYoNaf2xeqONcS4bynee",
+        "block_type": 2,
+        "parent_id": "IUmxdt83UozzK9xyENac8MtpnNh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 10
+  }
+}

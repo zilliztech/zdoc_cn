@@ -1,0 +1,809 @@
+{
+  "creator": "ou_8554528ee6e965bad56710acde1c7847",
+  "has_child": false,
+  "node_create_time": "1687315662",
+  "node_token": "PMHbwHT0HiOnvDk8sUocOy34nPw",
+  "node_type": "origin",
+  "obj_create_time": "1687315662",
+  "obj_edit_time": "1703063329",
+  "obj_token": "Jz4idVi9PoK1akxlB6hc2gVwnic",
+  "obj_type": "docx",
+  "origin_node_token": "PMHbwHT0HiOnvDk8sUocOy34nPw",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_8554528ee6e965bad56710acde1c7847",
+  "parent_node_token": "B11mwdhmYiGFsck0eCYcU5wnngX",
+  "space_id": "7167193056431783939",
+  "title": "与 OpenAI 集成搭建相似性搜索系统",
+  "slug": "similarity-search-with-zilliz-cloud-and-openai",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "Jz4idVi9PoK1akxlB6hc2gVwnic",
+        "block_type": 1,
+        "children": [
+          "YU2Fd2Os2oHuuUxTUcgcOosunSh",
+          "GmnTdAPwIoOSXNxPfJdc1vXHnKf",
+          "Yiand3VhzocL0XxTPX1cjq3Enw9",
+          "UI06d9DczoheSuxnxQfcjPuon4e",
+          "CvRTdUcNho21flxDAiXcYC9anUd",
+          "BMCOdcgeGo7FkHxRwZucRBXjn5c",
+          "Tcc8dKuueotYOAxTIn3cwU6intc",
+          "JCUedNENtoS1NqxWvLPcMnG0nyR",
+          "OCd0dRBDVodtKQxwK78cNgBJnWf",
+          "A4NEdMIBQocePaxgYmEcECtWnYc",
+          "MjXsdDluAoYQw3xSmL9ceaVQnbc",
+          "R7S2dXpo9oSZGZx8KzMceUW2nhd",
+          "EP0sd2nDtosVefxpBoFc6vdInYd",
+          "FJFkdS1kTohKUQxnvKFc9Hqjnfe",
+          "SiLAd7nfoowAFjxaS5OcQNAynHe",
+          "PX2td6cnIoR1g4xs1EwcEB3Mndf",
+          "V6JydwYwioHeeqxspVzcd9yBnJd"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "与 OpenAI 集成搭建相似性搜索系统",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "YU2Fd2Os2oHuuUxTUcgcOosunSh",
+        "block_type": 2,
+        "parent_id": "Jz4idVi9PoK1akxlB6hc2gVwnic",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文将讨论如何使用 OpenAI 的 Embedding ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 与 Zilliz Cloud 搭建相似性搜索系统。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GmnTdAPwIoOSXNxPfJdc1vXHnKf",
+        "block_type": 2,
+        "parent_id": "Jz4idVi9PoK1akxlB6hc2gVwnic",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在本篇中你将看到如何使用 OpenAI 的 Embedding ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 Zilliz Cloud 完成图书检索。当前，很多的图书检索方案，包括公共图书馆里使用的那些方案，都是使用关键词匹配的方式获取检索结果，并没有真正理解书名的含义。本文搭建的相似性搜索系统实现了基于语义的搜索能力。该方案将使用一个预训练模型来获取输入数据的向量化表示并根据这个表示进行相似性搜索来获取与输入数据在语义层面相似的结果。该方案可用于一系列基于文字的使用场景，包括匿名检测及文档搜索。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Yiand3VhzocL0XxTPX1cjq3Enw9",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "准备工作",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#get-started}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Jz4idVi9PoK1akxlB6hc2gVwnic"
+      },
+      {
+        "block_id": "UI06d9DczoheSuxnxQfcjPuon4e",
+        "block_type": 2,
+        "parent_id": "Jz4idVi9PoK1akxlB6hc2gVwnic",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "首先，我们需要从 Open ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "AI",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 网站获取一个 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 密钥。<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">另外，如果你还没有一个向量数据库，可前往 Zilliz Cloud 创建一个免费的 Serverless Cluster 来完成本文中的示例。</exclude><include target=\"saas\">另外，如果你还没有一个向量数据库，可前往 Zilliz Cloud 使用您的免费额度创建一个免费的集群来完成本文中的示例。</include>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CvRTdUcNho21flxDAiXcYC9anUd",
+        "block_type": 2,
+        "parent_id": "Jz4idVi9PoK1akxlB6hc2gVwnic",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "你可以单击此处下载我们将在示例代码中使用的数据集。数据集的格式为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "CSV",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ，我们可以使用如下代码加载该数据集。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BMCOdcgeGo7FkHxRwZucRBXjn5c",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "import csv\nimport json\nimport random\nimport openai\nimport time\nfrom pymilvus import connections, FieldSchema, CollectionSchema, DataType, Collection, utility\n\n# Extract the book titles\ndef csv_load(file):\n    with open(file, newline='') as f:\n        reader=csv.reader(f, delimiter=',')\n        for row in reader:\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "            yield row[1]",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "Jz4idVi9PoK1akxlB6hc2gVwnic"
+      },
+      {
+        "block_id": "Tcc8dKuueotYOAxTIn3cwU6intc",
+        "block_type": 2,
+        "parent_id": "Jz4idVi9PoK1akxlB6hc2gVwnic",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "有了数据集，接下来我们就可以为其中的数据生成向量表征了。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JCUedNENtoS1NqxWvLPcMnG0nyR",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "检索图书",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#searching-book-titles}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Jz4idVi9PoK1akxlB6hc2gVwnic"
+      },
+      {
+        "block_id": "OCd0dRBDVodtKQxwK78cNgBJnWf",
+        "block_type": 2,
+        "parent_id": "Jz4idVi9PoK1akxlB6hc2gVwnic",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在这里，我们定义了一些示例中将要使用的主要参数。你需要根据实际情况和参数旁的注释填上相应的内容。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "A4NEdMIBQocePaxgYmEcECtWnYc",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# 1. Go to https://www.kaggle.com/datasets/jealousleopard/goodreadsbooks, download the dataset, and save it locally.\nFILE = '../books.csv'\n\n# 2. Set up the name of the collection to be created.\nCOLLECTION_NAME = 'title_db'\n\n# 3. Set up the dimension of the embeddings.\nDIMENSION = 1536\n\n# 4. Set up the number of records to process.\nCOUNT = 100\n\n# 5. Set up the connection parameters for your Zilliz Cloud cluster.\nURI = 'YOUR_CLUSTER_ENDPOINT'\nTOKEN = 'YOUR_CLUSTER_TOKEN'\n\n# 6. Set up the OpenAI engine and API key to use.\nOPENAI_ENGINE = 'text-embedding-ada-002'  # Which engine to use\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "openai.api_key = 'YOUR_OPENAI_API_KEY'  # Use your own Open AI API Key here",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "Jz4idVi9PoK1akxlB6hc2gVwnic"
+      },
+      {
+        "block_id": "MjXsdDluAoYQw3xSmL9ceaVQnbc",
+        "block_type": 19,
+        "callout": {
+          "background_color": 2,
+          "border_color": 2,
+          "emoji_id": "blue_book"
+        },
+        "children": [
+          "Y0rDdKAEZonQiExLTjdcX3qan3F",
+          "NDEUd8OvaognmuxckzUcYreXnTe"
+        ],
+        "parent_id": "Jz4idVi9PoK1akxlB6hc2gVwnic"
+      },
+      {
+        "block_id": "Y0rDdKAEZonQiExLTjdcX3qan3F",
+        "block_type": 2,
+        "parent_id": "MjXsdDluAoYQw3xSmL9ceaVQnbc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": " Notes",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NDEUd8OvaognmuxckzUcYreXnTe",
+        "block_type": 2,
+        "parent_id": "MjXsdDluAoYQw3xSmL9ceaVQnbc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "使用免费的 OpenAI 账号获取指定文字的向量化表征比较耗时。为此，我们在示例中使用了数据集的一个较小的子集，试图在脚本执行时间和检索精度间找到一个平衡点。你可以根据需要调整上述参数中的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "COUNT",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 常量来改变子集的大小。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "R7S2dXpo9oSZGZx8KzMceUW2nhd",
+        "block_type": 2,
+        "parent_id": "Jz4idVi9PoK1akxlB6hc2gVwnic",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "接下来，我们将连接在 Zilliz Cloud 上创建好的集群，在其中创建一个 Collection ，并为其创建索引文件。关于如何设置和使用 Zilliz Cloud, 可以参考",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "此文",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FM4cQwZQ0QiqBy6kzZftc0fQPn1f"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EP0sd2nDtosVefxpBoFc6vdInYd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# Connect to Zilliz Cloud and create a collection\nconnections.connect(\n    alias='default',\n    # Public endpoint obtained from Zilliz Cloud\n    uri=URI,\n    token=TOKEN\n)\n\nif COLLECTION_NAME in utility.list_collections():\n    utility.drop_collection(COLLECTION_NAME)\n\nfields = [\n    FieldSchema(name='id', dtype=DataType.INT64, descrition='Ids', is_primary=True, auto_id=False),\n    FieldSchema(name='title', dtype=DataType.VARCHAR, description='Title texts', max_length=200),\n    FieldSchema(name='embedding', dtype=DataType.FLOAT_VECTOR, description='Embedding vectors', dim=DIMENSION)\n]\n\nschema = CollectionSchema(fields=fields, description='Title collection')\n\ncollection = Collection(\n    name=COLLECTION_NAME,\n    schema=schema,\n)\n\nindex_params = {\n    'metric_type': 'L2',\n    'index_type': 'AUTOINDEX',\n    'params': {'nlist': 1024}\n}\n\ncollection.create_index(\n    field_name='embedding',\n    index_params=index_params\n)\n\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "collection.load()",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "Jz4idVi9PoK1akxlB6hc2gVwnic"
+      },
+      {
+        "block_id": "FJFkdS1kTohKUQxnvKFc9Hqjnfe",
+        "block_type": 2,
+        "parent_id": "Jz4idVi9PoK1akxlB6hc2gVwnic",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在完成上述任务后，我们可以开始向 Collection 中插入数据。插入数据包含三个步骤：读取数据，获取数据的向量化表示，将其插入已连接的 Cluster 的指定 Collection 中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SiLAd7nfoowAFjxaS5OcQNAynHe",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# Load the csv file and extract embeddings from the text\ndef csv_load(file):\n    with open(file, newline='') as f:\n        reader=csv.reader(f, delimiter=',')\n        for row in reader:\n            yield row[1]\n\ndef embed(text):\n    return openai.Embedding.create(\n        input=text, \n        engine=OPENAI_ENGINE)[\"data\"][0][\"embedding\"]\n\n# Insert each title and its embeddings\n\ninserted = []\n\nfor idx, text in enumerate(random.sample(sorted(csv_load(FILE)), k=COUNT)):\n    ins = {\n        'id': idx,\n        'title': (text[:198] + '..') if len(text) > 200 else text,\n        'embedding': embed(text)\n    }\n    collection.insert(data=ins)\n    time.sleep(3)\n    inserted.append(ins)\n\n# Search for similar titles\ndef search(text):\n    res = collection.search(\n        data=[embed(text)],\n        anns_field='embedding',\n        param={\"metric_type\": \"L2\", \"params\": {\"nprobe\": 10}},\n        output_fields=['title'],\n        limit=5,\n    )\n\n    ret = []\n\n    for hits in res:\n        for hit in hits:\n            row = []\n            row.extend([hit.id, hit.distance, hit.entity.get('title')])\n            ret.append(row)\n\n    return ret\n\nsearch_terms = [\n    'self-improvement',\n    'landscape',\n]\n\nfor x in search_terms:\n    print('Search term: ', x)\n    for x in search(x):\n        print(x)\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "    print()",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "Jz4idVi9PoK1akxlB6hc2gVwnic"
+      },
+      {
+        "block_id": "PX2td6cnIoR1g4xs1EwcEB3Mndf",
+        "block_type": 2,
+        "parent_id": "Jz4idVi9PoK1akxlB6hc2gVwnic",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "根据你设置的数量集的大小，搜索结果可能会有差异。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "V6JydwYwioHeeqxspVzcd9yBnJd",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# Output\n#\n# Search term:  self-improvement\n# [9, 0.40222519636154175, 'Awakening Intuition: Using Your Mind-Body Network for Insight and Healing']\n# [66, 0.40565189719200134, 'The War of Art: Break Through the Blocks & Win Your Inner Creative Battles']\n# [73, 0.4130449891090393, 'The Organized Student: Teaching Children the Skills for Success in School and Beyond']\n# [34, 0.41660943627357483, 'The Consolation of Philosophy']\n# [61, 0.4331777095794678, 'Orientalism']\n\n# Search term:  landscape\n# [61, 0.3965946137905121, 'Orientalism']\n# [24, 0.4071578085422516, 'Andreas Gursky']\n# [1, 0.4108707904815674, 'The Art of Warfare']\n# [45, 0.4112565815448761, 'Sunshine']\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# [39, 0.41171979904174805, 'Wonderful Life: The Burgess Shale and the Nature of History']",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "Jz4idVi9PoK1akxlB6hc2gVwnic"
+      }
+    ],
+    "counts": 20
+  }
+}

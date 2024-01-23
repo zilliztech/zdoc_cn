@@ -1,0 +1,647 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": false,
+  "node_create_time": "1687141188",
+  "node_token": "LCqjwnEPWi2YPkkdHOwc5eQXnPd",
+  "node_type": "origin",
+  "obj_create_time": "1687141188",
+  "obj_edit_time": "1700714650",
+  "obj_token": "PmMRd2YOnoOjRmxB6ftcfu4nnEA",
+  "obj_type": "docx",
+  "origin_node_token": "LCqjwnEPWi2YPkkdHOwc5eQXnPd",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "Y3PXwA1Y0i5pZokIw8NcWCzPnxh",
+  "space_id": "7167193056431783939",
+  "title": "其他异同",
+  "slug": "other-differences",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "PmMRd2YOnoOjRmxB6ftcfu4nnEA",
+        "block_type": 1,
+        "children": [
+          "C4eldP5b3okH3jxZ0AqcXoAqn6d",
+          "QXg4dkoFComFo2xLOgOcFXqrnyg",
+          "B8DId1wJKownN1x7hznc9NVmngc",
+          "WITjdFmHioVunIxKRPTcqWfYnwb",
+          "PpQedP2dzoyGGJxoO44cKnbInbd",
+          "AtsXdcqqUoieBgxYvLCcb8fynqd",
+          "McIMdVeE8oFxzAxV2rScMSw7nUh",
+          "D6s1daxbyoB0hMxru4PcJptlnE0",
+          "ZAkndfDxJopWa7xCt6wcseA8nFc",
+          "S2yFdg5jOowircxAe6QczlTFnGk",
+          "DVT2d6zcZoE187xaOKFchyqen3b",
+          "QW2Edrsydo97H3xjUAtccQcBnbf",
+          "NA7xd9OFboEzKMxlaIQc6javnWg",
+          "KLlmdX3BdoyzhsxlotMcPg2enjh"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "其他异同",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "C4eldP5b3okH3jxZ0AqcXoAqn6d",
+        "block_type": 2,
+        "parent_id": "PmMRd2YOnoOjRmxB6ftcfu4nnEA",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文将介绍 Zilliz Cloud 和 Milvus 在数据类型、索引类型等方面的差异。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QXg4dkoFComFo2xLOgOcFXqrnyg",
+        "block_type": 2,
+        "parent_id": "PmMRd2YOnoOjRmxB6ftcfu4nnEA",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您计划从 Milvus 迁移到 Zilliz Cloud，可能需要对历史代码进行一些必要的修改。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "B8DId1wJKownN1x7hznc9NVmngc",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "数据类型",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#data-type}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PmMRd2YOnoOjRmxB6ftcfu4nnEA"
+      },
+      {
+        "block_id": "WITjdFmHioVunIxKRPTcqWfYnwb",
+        "block_type": 2,
+        "parent_id": "PmMRd2YOnoOjRmxB6ftcfu4nnEA",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 几乎完全兼容 Milvus 的所有数据类型，包括 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "JSON",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。但是，目前 BinaryVector 还不可用。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PpQedP2dzoyGGJxoO44cKnbInbd",
+        "block_type": 2,
+        "parent_id": "PmMRd2YOnoOjRmxB6ftcfu4nnEA",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "有关 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "JSON",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 的更多信息，请参见 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "JSON",
+                "token": "UXBjwVpKmirzg9kgWgmcLixwnIe",
+                "url": "https://zilliverse.feishu.cn/wiki/UXBjwVpKmirzg9kgWgmcLixwnIe"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AtsXdcqqUoieBgxYvLCcb8fynqd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "索引类型",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#index-type}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PmMRd2YOnoOjRmxB6ftcfu4nnEA"
+      },
+      {
+        "block_id": "McIMdVeE8oFxzAxV2rScMSw7nUh",
+        "block_type": 2,
+        "parent_id": "PmMRd2YOnoOjRmxB6ftcfu4nnEA",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 提供 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "AUTOINDEX",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 作为索引类型，免去在 Milvus 中进行索引选型时的复杂性。有关更多信息，请参见 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "AUTOINDEX",
+                "token": "YUETwzDssiTUs9kCSn4cgUYLnrd",
+                "url": "https://zilliverse.feishu.cn/wiki/YUETwzDssiTUs9kCSn4cgUYLnrd"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "D6s1daxbyoB0hMxru4PcJptlnE0",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 控制台",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#web-console}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PmMRd2YOnoOjRmxB6ftcfu4nnEA"
+      },
+      {
+        "block_id": "ZAkndfDxJopWa7xCt6wcseA8nFc",
+        "block_type": 2,
+        "parent_id": "PmMRd2YOnoOjRmxB6ftcfu4nnEA",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在控制台上创建 Collection 时，Zilliz Cloud 会自动为向量字段创建索引并将 Collection 加载到计算单元（CU）中，以方便您的使用。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "S2yFdg5jOowircxAe6QczlTFnGk",
+        "block_type": 2,
+        "parent_id": "PmMRd2YOnoOjRmxB6ftcfu4nnEA",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "有关 CU 的更多信息，请参见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "选择合适的 CU 类型",
+                "token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
+                "url": "https://zilliverse.feishu.cn/wiki/DP6Fw8vkzi7pD7kAMB3cjunYn6g"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DVT2d6zcZoE187xaOKFchyqen3b",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相关文档",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PmMRd2YOnoOjRmxB6ftcfu4nnEA"
+      },
+      {
+        "block_id": "QW2Edrsydo97H3xjUAtccQcBnbf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "AUTOINDEX",
+                "token": "YUETwzDssiTUs9kCSn4cgUYLnrd",
+                "url": "https://zilliverse.feishu.cn/wiki/YUETwzDssiTUs9kCSn4cgUYLnrd"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PmMRd2YOnoOjRmxB6ftcfu4nnEA"
+      },
+      {
+        "block_id": "NA7xd9OFboEzKMxlaIQc6javnWg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "选择合适的 CU 类型",
+                "token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
+                "url": "https://zilliverse.feishu.cn/wiki/DP6Fw8vkzi7pD7kAMB3cjunYn6g"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PmMRd2YOnoOjRmxB6ftcfu4nnEA"
+      },
+      {
+        "block_id": "KLlmdX3BdoyzhsxlotMcPg2enjh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "API 异同",
+                "token": "KOD2wN5jDimhSOk1GshcUbn2nJe",
+                "url": "https://zilliverse.feishu.cn/wiki/KOD2wN5jDimhSOk1GshcUbn2nJe"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PmMRd2YOnoOjRmxB6ftcfu4nnEA"
+      }
+    ],
+    "counts": 15
+  }
+}

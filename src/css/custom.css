@@ -49,53 +49,96 @@ h2 {
   font-size: 1.5rem;
 }
 
-article.margin-top--lg {
+section.row {
+  margin-top: 2rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+section.row > article.col--6 {
+  --ifm-col-width: 1;
+}
+
+section.row > article > a.padding--lg {
+  padding: 0 1rem !important;
+}
+
+section.row > article > a > h2 span.tooltip {
+  visibility: hidden;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+section.row > article > a:hover {
+  color: var(--ifm-color-primary);
+}
+
+section.row > article > a:hover > h2 span.tooltip {
+  visibility: visible;
+}
+
+section.row > article > a > p.text--truncate {
+  overflow: visible;
+  white-space: normal;
+  font-size: 1rem;
+  color:rgba(0, 0, 0, 0.6);
+}
+
+section.row > article > a > p.text--truncate a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+section.row > article > a > p.text--truncate a:hover {
+  color: var(--ifm-color-primary-light);
+}
+
+/* section.row  article.margin-top--lg {
   margin-top: 4rem !important;
 }
 
-article > section {
+.row > article > section {
   flex-direction: column;
   gap: 2rem;
   border-right: 1px solid #eaecef;
 }
 
-article > section > article.col {
+.row > article > section > article.col {
   margin-left: 2rem !important;
   margin-bottom: 0 !important;
   min-width: 90% !important;
   flex-grow: 2;
 }
 
-article > section a.card {
+.row > article > section a.card {
   border: none;
   box-shadow: none;
   padding: 0 !important;
   gap: 0.5rem;
 }
 
-article > section a.card:hover {
+.row > article > section a.card:hover {
   box-shadow: none;
   border: none;
   border-radius: 0;
 }
 
-article > section a.card:hover > h2 {
+.row > article > section a.card:hover > h2 {
   color: var(--ifm-color-primary-light);
 }
 
-article > section a.card > h2 {
+.row > article > section a.card > h2 {
   margin-bottom: 0;
   border-radius: none;
   font-size: 1.2rem;
 }
 
-article > section a.card > p {
+.row > article > section a.card > p {
   overflow: visible;
   white-space: normal;
   font-size: 0.9rem;
   margin-left: 1.5rem;
   font-weight: 400;
-}
+} */
 
 #exec > a {
   color: #000000 !important;
@@ -139,4 +182,14 @@ div[role="tabpanel"] .tabs > li.tabs__item--active {
   color: var(--ifm-color-primary-light);
 }
 
+nav.pagination-nav > a {
+  border: none;
+}
 
+nav.pagination-nav .pagination-nav__sublabel {
+  display: none;
+}
+
+table {
+  width: 100%;
+}

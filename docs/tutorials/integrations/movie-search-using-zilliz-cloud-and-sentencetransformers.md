@@ -2,6 +2,7 @@
 slug: /movie-search-using-zilliz-cloud-and-sentencetransformers
 beta: FALSE
 notebook: 86_integrations_sentencetransformers.ipynb
+token: QdD7w2k6ii7mKFkTJ2tcNhYznAf
 sidebar_position: 7
 ---
 
@@ -28,14 +29,14 @@ pip install pymilvus sentence-transformers gdown
 
 ```python
 import gdown
-
 url = 'https://drive.google.com/uc?id=11ISS45aO2ubNCGaC3Lvd3D7NT8Y7MeO8'
-zipball = '../movies.zip'
-output_folder = '../movies'
-gdown.download(url, zipball)
+output = './movies.zip'
+gdown.download(url, output)
 
-with zipfile.ZipFile(zipball,"r") as zip_ref:
-    zip_ref.extractall(output_folder)
+import zipfile
+
+with zipfile.ZipFile("./movies.zip","r") as zip_ref:
+    zip_ref.extractall("./movies")
 ```
 
 ## 主要参数{#parameters}
@@ -61,9 +62,10 @@ TOP_K = 3
 在这一小节，我们将完成 Zilliz Cloud 的设置，涉及如下步骤：
 
 1. 使用提供的端点 URI 连接 Zilliz Cloud cluster。
+
     ```python
     from pymilvus import connections
-
+    
     # Connect to Milvus Database
     connections.connect(
         uri=URI, 
@@ -72,18 +74,20 @@ TOP_K = 3
     ```
 
 1. 如果需要创建的 Collection 已存在，删除该 Collection。
+
     ```python
     from pymilvus import utility
-
+    
     # Remove any previous collections with the same name
     if utility.has_collection(COLLECTION_NAME):
         utility.drop_collection(COLLECTION_NAME)
     ```
 
 1. 创建一个 Collection 用于存储电影 ID，电影名称以及该名称的向量表示。
+
     ```python
     from pymilvus import FieldSchema, CollectionSchema, DataType, Collection
-
+    
     # Create collection which includes the id, title, and embedding.
     fields = [
         FieldSchema(name='id', dtype=DataType.INT64, is_primary=True, auto_id=True),
@@ -95,6 +99,7 @@ TOP_K = 3
     ```
 
 1. 为 Collection 创建索引文件，并将 Collection 加载到内存。
+
     ```python
     # Create an IVF_FLAT index for collection.
     index_params = {
@@ -203,17 +208,17 @@ for hits_i, hits in enumerate(res):
 输出的结果与如下类似。
 
 ```python
-Title: A movie about cars
-Search Time: 0.04272913932800293
-Results:
-Red Line 7000 ---- 0.9104408621788025
-The Mysterious Mr. Valentine ---- 0.9127437472343445
-Tomboy ---- 0.9254708290100098
+# Title: A movie about cars
+# Search Time: 0.04272913932800293
+# Results:
+# Red Line 7000 ---- 0.9104408621788025
+# The Mysterious Mr. Valentine ---- 0.9127437472343445
+# Tomboy ---- 0.9254708290100098
 
-Title: A movie about monsters
-Search Time: 0.04272913932800293
-Results:
-Monster Hunt ---- 0.8105474710464478
-The Astro-Zombies ---- 0.8998500108718872
-Wild Country ---- 0.9238440990447998
+# Title: A movie about monsters
+# Search Time: 0.04272913932800293
+# Results:
+# Monster Hunt ---- 0.8105474710464478
+# The Astro-Zombies ---- 0.8998500108718872
+# Wild Country ---- 0.9238440990447998
 ```

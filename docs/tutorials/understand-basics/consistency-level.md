@@ -2,28 +2,31 @@
 slug: /consistency-level
 beta: FALSE
 notebook: FALSE
+token: IBY6wlhm5iLJsEkZWaGc0356nYi
 sidebar_position: 6
 ---
 
 import Admonition from '@theme/Admonition';
 
 
-# 一致性等级
+# 一致性水平
 
-在分布式数据库中，一致性等级确保在读写操作期间，每个节点或副本都能获取到相同的数据。Zilliz Cloud 提供 3 种一致性级别：Strong、Bounded 和 Eventually。Zilliz Cloud 默认采用的一致性水平为 Bounded。
+在分布式数据库中，一致性水平确保在读写操作期间，每个节点或副本都能获取到相同的数据。Zilliz Cloud 提供 3 种一致性级别：Strong、Bounded 和 Eventually。Zilliz Cloud 默认采用的一致性水平为 Bounded。
 
-## PACELC 定理：权衡一致性、可用性、延时{#understanding-the-balance-the-pacelc-theorem}
+## PACELC 定理：权衡一致性、可用性、时延{#understanding-the-balance-the-pacelc-theorem}
 
-PACELC 定理是 CAP 定理的延伸，是指在网络分区的情况下，需要在可用性和一致性之间做选择，否则，就在延迟和一致性之间做选择。虽然高一致性保证了数据的准确性，但其代价是更长的搜索延时。相反，低一致性保证了更快的搜索速度，但可能会牺牲数据准确性。因此，您需要根据具体的使用案例场景选择合适的一致性水平。
+PACELC 定理是 CAP 定理的延伸，在分布式数据库中，用户需要在可用性和一致性之间做选择，否则，就在延迟和一致性之间做选择。虽然高一致性保证了数据的准确性，但其代价是更长的搜索延时。相反，低一致性保证了更快的搜索速度，但可能会牺牲数据准确性。因此，您需要根据具体的使用案例场景选择合适的一致性水平。
 
 - **强一致性（Strong）**
+
     强一致性（Strong）是最严格的级别，确保用户始终读取最新版本的数据，提供最高的数据准确性。但是，采用 Strong 等级一致性可能导致搜索延迟增加。
 
     ![ETVBbtdQooUhB3xm9aScmWyinvd](/img/ETVBbtdQooUhB3xm9aScmWyinvd.png)
 
-    Strong 一致性级别最适用于功能测试和在线金融系统等对于数据准确性有着极高要求的场景。
+    Strong 一致性水平最适用于功能测试和在线金融系统等对于数据准确性有着极高要求的场景。
 
 - **有限过期一致性（Bounded）**
+
     有限过期一致性（Bounded）顾名思义，允许数据在一小段时间内不一致，但整体而言数据还是一致的。Bounded 能够平衡延时和数据准确性。
 
     ![MIF3bSN8yoWbjhxnDL5cDeK4n1g](/img/MIF3bSN8yoWbjhxnDL5cDeK4n1g.png)
@@ -31,6 +34,7 @@ PACELC 定理是 CAP 定理的延伸，是指在网络分区的情况下，需�
     Bounded 适用于视频推荐平台等系统，偶尔的数据不一致不会严重影响系统性能。
 
 - **最终一致性（Eventually）**
+
     最终一致性（Eventually）是最宽松的级别，允许数据不一致，但最终随着时间推移收敛到数据一致的状态。Eventually 不会严格遵照数据读写顺序。
 
     ![NErQbWhpVotFHLxHpG2cDbuGnxe](/img/NErQbWhpVotFHLxHpG2cDbuGnxe.png)

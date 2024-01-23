@@ -1,0 +1,2633 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": false,
+  "node_create_time": "1687141078",
+  "node_token": "YBlmwO9ajiU4tYklnjmc6fJPn8e",
+  "node_type": "origin",
+  "obj_create_time": "1687141078",
+  "obj_edit_time": "1700714692",
+  "obj_token": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+  "obj_type": "docx",
+  "origin_node_token": "YBlmwO9ajiU4tYklnjmc6fJPn8e",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "PU8HwyM6Kiv0C4krF58cTNOVnSe",
+  "space_id": "7167193056431783939",
+  "title": "从 Milvus 迁移至 Zilliz Cloud",
+  "slug": "migrate-from-milvus",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+        "block_type": 1,
+        "children": [
+          "TRPuditjgoEUEexMjqacjj4cnmc",
+          "SAS1d8OFZoCtbSxa2QqcLWDCnWh",
+          "ABOodlPc4o0XGUxv6QjcyNV0ntg",
+          "I5pVdsfJ7o2flXx3AxUcjQzBnfc",
+          "GXotd5zmvoGvErxgSxgcWTfBnTc",
+          "A9WJdz1uVou08Hx1Q1GcJDRynQe",
+          "PttUdPjEnoZoBOx4CUEc3mmun7c",
+          "DpDsdfxLCo7a1txfdwpcMpMznOf",
+          "R7F5dhOI8oJxBTxptqTcSfgRn7u",
+          "YkB5dSzl5o9PlJxsSjQcqdGWnhg",
+          "Lj5LdPVZqo6ELbxfFpwclVhDnKl",
+          "EstrdFexiol2ydx6sHBcFsgonjf",
+          "JHjFdqehkocLWexTbnqcXhERnZg",
+          "ZhMtdsi66oX2B0xQjL2cpUuOnYc",
+          "E0JmdKsk3oBT1QxWMBrcewIqnJg",
+          "MhyTdIZmIobJ5DxPgwscPxPIncn",
+          "CsUodgARooG4P3xIKlKc7jfzn8b",
+          "ZJw7dfqyIoXpO1xh4HOc3coVnJd",
+          "CpRvd1qnLo4LoFxAQDmcvqYgnMb",
+          "AWDSdfX8Fonyi7xn1WictW2tnOf",
+          "AexFdddWvo9bu4xuXcUctvzInbb",
+          "INgbdyuPNouHrcxmdHicleQenXd",
+          "AouOdPh47oE3PjxcffEcvH4Anad",
+          "PNQLd7zIuoLkArxyd8LcU3WRnRg",
+          "PXALdPlaRoUG1PxrawkczQeon2b",
+          "MMbhddraDoKi8AxXEyDcbSIEntb",
+          "LzJ1dAZYRozNigxUc3lcP6nvnto",
+          "G6HAdYJM1o1mkTxaSYPctqtTnaf",
+          "JuITd5lTGoWuXLx1ZhccxA34nah",
+          "PiJJdmHaFoAZrJxgHJecSiQHn5c",
+          "CfCidr2JRolCluxtfjrc82Kfnsh",
+          "MYXvdMfpNoG6ngxa18McdZVwnOe",
+          "HfB7ddcBcoyQPnxpqBuc9pmIn6e",
+          "L26bdyEwCoDs0Mx1UYScxjZwnVb",
+          "FbVydVHzQoOpaqxSibcceS0VnIf",
+          "EgS2d7nFFouKMuxGhjjceuo2nre",
+          "QeADdfKuVoc6H8xGGYbcdahgn9c",
+          "XfzId35oyoJ8uNxtuNhcTkLinVf",
+          "U3AfdOWQwosI2Txlrqfc98XPnAg",
+          "Oggpdt8RWoR1cAx53uwcSln2nEf",
+          "M8o1dVsC0opBXcxeooocqUC4npb",
+          "RSdhdUp28oOeGlx2ATtcfvHzn6c"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "从 Milvus 迁移至 Zilliz Cloud",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "TRPuditjgoEUEexMjqacjj4cnmc",
+        "block_type": 2,
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 提供了先进的数据基础架构，可帮助您优化向量搜索并轻松实现 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "AI",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 应用。如果您是 Milvus 用户，可以将数据迁移到 Zilliz Cloud。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SAS1d8OFZoCtbSxa2QqcLWDCnWh",
+        "block_type": 2,
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文档介绍如何准备迁移数据、执行迁移和验证迁移结果。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ABOodlPc4o0XGUxv6QjcyNV0ntg",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "准备迁移数据{#prepare-migration-data}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "I5pVdsfJ7o2flXx3AxUcjQzBnfc",
+        "block_type": 2,
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<Tabs defaultValue=\"1x\" values={[{\"label\":\"From Milvus 1.x\",\"value\":\"1x\"},{\"label\":\"From Milvus 2.x\",\"value\":\"2x\"}]}>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GXotd5zmvoGvErxgSxgcWTfBnTc",
+        "block_type": 2,
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<TabItem value=\"1x\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "A9WJdz1uVou08Hx1Q1GcJDRynQe",
+        "block_type": 2,
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 支持从 Milvus 1.x（包括 0.9.x 及以上）和更高版本迁移数据。Milvus 向量数据库正持续发展，各版本间通常会存在重大变化。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PttUdPjEnoZoBOx4CUEc3mmun7c",
+        "block_type": 2,
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要从 Milvus 0.9.x 到 1.x 迁移数据，需要按如下准备数据：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DpDsdfxLCo7a1txfdwpcMpMznOf",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "下载 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "milvus-migration",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fassets.zilliz.com%2Ftools%2Fmilvus-migration"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。推荐下载最新版本。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "R7F5dhOI8oJxBTxptqTcSfgRn7u",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "停止 Milvus 安装进程或至少停止在 Milvus 中执行的所有 DML 操作。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "YkB5dSzl5o9PlJxsSjQcqdGWnhg",
+        "block_type": 13,
+        "children": [
+          "JbWJdNVw4ofCwnxKrjQc8mf0nSc",
+          "JkbCdRMlcojdPwxWuhMcwC9tnGc"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "导出安装相关的元数据到 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "meta.json",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "JbWJdNVw4ofCwnxKrjQc8mf0nSc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果后端为 MySQL，执行以下命令：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "Fyl6dvTCJoezByx7U8EcWR8lnUp"
+        ],
+        "parent_id": "YkB5dSzl5o9PlJxsSjQcqdGWnhg"
+      },
+      {
+        "block_id": "Fyl6dvTCJoezByx7U8EcWR8lnUp",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "./milvus-migration export -m \"user:password@tcp(adderss)/milvus?charset=utf8mb4&parseTime=True&loc=Local\" -o outputDir",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 7,
+            "wrap": false
+          }
+        },
+        "parent_id": "JbWJdNVw4ofCwnxKrjQc8mf0nSc"
+      },
+      {
+        "block_id": "JkbCdRMlcojdPwxWuhMcwC9tnGc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果后端为 SQLite，执行以下命令：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "AXcOd7zo7ov39xxAGUocoDi9nRf"
+        ],
+        "parent_id": "YkB5dSzl5o9PlJxsSjQcqdGWnhg"
+      },
+      {
+        "block_id": "AXcOd7zo7ov39xxAGUocoDi9nRf",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "./milvus-migration export -s /milvus/db/meta.sqlite -o outputDir",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 7,
+            "wrap": false
+          }
+        },
+        "parent_id": "JkbCdRMlcojdPwxWuhMcwC9tnGc"
+      },
+      {
+        "block_id": "Lj5LdPVZqo6ELbxfFpwclVhDnKl",
+        "block_type": 13,
+        "children": [
+          "UFbYdNkoRoCNRQxdH34cMNhOnig",
+          "WLP0dpWykoABNXx4EI0cNvrdnvh"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "复制 Milvus 安装目录下的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "tables",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 文件夹，将 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "meta.json",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "tables",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 文件夹移动到一个空文件夹。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "UFbYdNkoRoCNRQxdH34cMNhOnig",
+        "block_type": 2,
+        "parent_id": "Lj5LdPVZqo6ELbxfFpwclVhDnKl",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "此步骤完成后，空文件夹的结构应如下所示：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WLP0dpWykoABNXx4EI0cNvrdnvh",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "migration_data\n├── meta.json\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "└── tables",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "wrap": false
+          }
+        },
+        "parent_id": "Lj5LdPVZqo6ELbxfFpwclVhDnKl"
+      },
+      {
+        "block_id": "EstrdFexiol2ydx6sHBcFsgonjf",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "将准备好的文件夹上传到 OSS 存储，或直接使用本地文件夹开始迁移。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "JHjFdqehkocLWexTbnqcXhERnZg",
+        "block_type": 2,
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</TabItem>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZhMtdsi66oX2B0xQjL2cpUuOnYc",
+        "block_type": 2,
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<TabItem value=\"2x\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "E0JmdKsk3oBT1QxWMBrcewIqnJg",
+        "block_type": 2,
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 支持从 Milvus 2.x 和更高版本迁移数据。Milvus 向量数据库如今正在持续发展，各版本之间通常会存在重大变化。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MhyTdIZmIobJ5DxPgwscPxPIncn",
+        "block_type": 2,
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "要从 Milvus 2.x 迁移数据，您需要按如下准备数据：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CsUodgARooG4P3xIKlKc7jfzn8b",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "下载 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "milvus-backup",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fgithub.com%2Fzilliztech%2Fmilvus-backup%2Freleases"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。推荐下载最新版本。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "ZJw7dfqyIoXpO1xh4HOc3coVnJd",
+        "block_type": 13,
+        "children": [
+          "SCwTdUoVxoW4kLxZJPCcmM05ntf",
+          "Yz9zdFfWzoKBsjxdmjUcUK96nTe"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在下载的二进制文件所在的同级目录下，创建 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "configs",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 文件夹，然后将 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "backup.yaml",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fraw.githubusercontent.com%2Fzilliztech%2Fmilvus-backup%2Fmaster%2Fconfigs%2Fbackup.yaml"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 保存到 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "configs",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "SCwTdUoVxoW4kLxZJPCcmM05ntf",
+        "block_type": 2,
+        "parent_id": "ZJw7dfqyIoXpO1xh4HOc3coVnJd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "此步骤完成后，文件夹的结构应如下所示：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Yz9zdFfWzoKBsjxdmjUcUK96nTe",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "workspace\n├── milvus-backup\n└── configs\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "     └── backup.yaml",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "wrap": false
+          }
+        },
+        "parent_id": "ZJw7dfqyIoXpO1xh4HOc3coVnJd"
+      },
+      {
+        "block_id": "CpRvd1qnLo4LoFxAQDmcvqYgnMb",
+        "block_type": 13,
+        "children": [
+          "Z7XLdOOXuoYZVgxZQvkcFg7inPb",
+          "KW9Qd7YfZo5arwxr9RlcvN8ln4e"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "自定义 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "backup.yaml",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 配置。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "Z7XLdOOXuoYZVgxZQvkcFg7inPb",
+        "block_type": 2,
+        "children": [
+          "Z7PFdU1h5oc755xtZxMc3itWnxe",
+          "GZlzdPrpgogy8sxeoiLcww5ZnVd",
+          "H7EBdSn9HoHksbxpLG3cgCHynjh",
+          "Bq5fdgUOJoYVyOxj0DlcVJqtnD2",
+          "LBhMdK4v9ordknxMHIzco3TPnob",
+          "ObkbdBD0cocS5Ixz9QncZwpkn0x",
+          "JOigdQ0JJoodImxDo2OchDB8nDb"
+        ],
+        "parent_id": "CpRvd1qnLo4LoFxAQDmcvqYgnMb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "一般情况下，您不需要自定义该文件。 在下一步前，您可以检查以下配置项是否正确：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Z7PFdU1h5oc755xtZxMc3itWnxe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "milvus.address",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Z7XLdOOXuoYZVgxZQvkcFg7inPb"
+      },
+      {
+        "block_id": "GZlzdPrpgogy8sxeoiLcww5ZnVd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "mivlus.port",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Z7XLdOOXuoYZVgxZQvkcFg7inPb"
+      },
+      {
+        "block_id": "H7EBdSn9HoHksbxpLG3cgCHynjh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "minio.address",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Z7XLdOOXuoYZVgxZQvkcFg7inPb"
+      },
+      {
+        "block_id": "Bq5fdgUOJoYVyOxj0DlcVJqtnD2",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "minio.port",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Z7XLdOOXuoYZVgxZQvkcFg7inPb"
+      },
+      {
+        "block_id": "LBhMdK4v9ordknxMHIzco3TPnob",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "minio.bucketName",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Z7XLdOOXuoYZVgxZQvkcFg7inPb"
+      },
+      {
+        "block_id": "ObkbdBD0cocS5Ixz9QncZwpkn0x",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "minio.backupBucketName",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Z7XLdOOXuoYZVgxZQvkcFg7inPb"
+      },
+      {
+        "block_id": "JOigdQ0JJoodImxDo2OchDB8nDb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "rootPath",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Z7XLdOOXuoYZVgxZQvkcFg7inPb"
+      },
+      {
+        "block_id": "KW9Qd7YfZo5arwxr9RlcvN8ln4e",
+        "block_type": 34,
+        "children": [
+          "RJZ4da84HokgvkxdTYMcdouKnCc",
+          "CzVZdVUCHonlscxAbHMczxsMnnd",
+          "N9Hld295Eois5Bxcujhcr2Exnrc"
+        ],
+        "parent_id": "CpRvd1qnLo4LoFxAQDmcvqYgnMb",
+        "quote_container": {}
+      },
+      {
+        "block_id": "RJZ4da84HokgvkxdTYMcdouKnCc",
+        "block_type": 2,
+        "parent_id": "KW9Qd7YfZo5arwxr9RlcvN8ln4e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CzVZdVUCHonlscxAbHMczxsMnnd",
+        "block_type": 2,
+        "parent_id": "KW9Qd7YfZo5arwxr9RlcvN8ln4e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果 Milvus 实例是通过 Docker Compose 安装，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "minio.bucketName",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 默认为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "a-bucket",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "， ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "rootPath",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 默认为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "files",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "N9Hld295Eois5Bxcujhcr2Exnrc",
+        "block_type": 2,
+        "parent_id": "KW9Qd7YfZo5arwxr9RlcvN8ln4e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果 Milvus 实例是通过 Kubernetes 安装，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "minio.bucketName",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 默认为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "milvus-bucket",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "， ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "rootPath",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 默认为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "file",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AWDSdfX8Fonyi7xn1WictW2tnOf",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建 Milvus 的安装备份。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "AexFdddWvo9bu4xuXcUctvzInbb",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "./milvus-backup --config backup.yaml create -n my_backup",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 7,
+            "wrap": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "INgbdyuPNouHrcxmdHicleQenXd",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "获取备份文件。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "AouOdPh47oE3PjxcffEcvH4Anad",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "./milvus-backup --config backup.yaml get -n my_backup",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 7,
+            "wrap": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "PNQLd7zIuoLkArxyd8LcU3WRnRg",
+        "block_type": 13,
+        "children": [
+          "LmMYdgyN5oW1uBxFhfXcPXiqnZb",
+          "NHMCdN0ruo7NTXxfANBcvutqnwc"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "检查备份文件。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "LmMYdgyN5oW1uBxFhfXcPXiqnZb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您将 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "minio.address",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "minio.port",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 设置为 OSS 存储，则您的备份文件已在 OSS 存储中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PNQLd7zIuoLkArxyd8LcU3WRnRg"
+      },
+      {
+        "block_id": "NHMCdN0ruo7NTXxfANBcvutqnwc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您将 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "minio.address",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "minio.port",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 设置为 MinIO 存储，则可以通过 MinIO 控制台或 mc 客户端下载备份文件。 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "WCOnd7jRAooan7xI2pGczP8rnqh",
+          "KnIMdM3h1omG1exmkSfc3XMQndg",
+          "RM0WdiHqRoJZvMxAxwrcnLrznSg"
+        ],
+        "parent_id": "PNQLd7zIuoLkArxyd8LcU3WRnRg"
+      },
+      {
+        "block_id": "WCOnd7jRAooan7xI2pGczP8rnqh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果从 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "MinIO 控制台",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fmin.io%2Fdocs%2Fminio%2Fkubernetes%2Fupstream%2Fadministration%2Fminio-console.html"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "下载，请先登录 MinIO 控制台，找到 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "minio.address",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 中指定的存储桶，选择存储桶中的文件，然后开始下载。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "NHMCdN0ruo7NTXxfANBcvutqnwc"
+      },
+      {
+        "block_id": "KnIMdM3h1omG1exmkSfc3XMQndg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "mc",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fmin.io%2Fdocs%2Fminio%2Flinux%2Freference%2Fminio-mc.html%23mc-install"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 客户端，则执行以下命令：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "NHMCdN0ruo7NTXxfANBcvutqnwc"
+      },
+      {
+        "block_id": "RM0WdiHqRoJZvMxAxwrcnLrznSg",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# 配置 Minio 主机\nmc alias set my_minio https://<minio_endpoint> <accessKey> <secretKey>\n\n# 查询当前桶列表\nmc ls my_minio\n\n# 从桶中下载文件\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "mc cp --recursive my_minio/<your-bucket-path> <local_dir_path>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 7,
+            "wrap": false
+          }
+        },
+        "parent_id": "NHMCdN0ruo7NTXxfANBcvutqnwc"
+      },
+      {
+        "block_id": "PXALdPlaRoUG1PxrawkczQeon2b",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "解压下载的文件，然后将备份文件夹下的子文件夹上传到 Zilliz Cloud。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "MMbhddraDoKi8AxXEyDcbSIEntb",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "backup\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "└── my_backup  <= 上传此文件夹",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "wrap": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "LzJ1dAZYRozNigxUc3lcP6nvnto",
+        "block_type": 2,
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</TabItem>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "G6HAdYJM1o1mkTxaSYPctqtTnaf",
+        "block_type": 2,
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</Tabs>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JuITd5lTGoWuXLx1ZhccxA34nah",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "将数据迁移到 Zilliz Cloud{#migrate-data-to-zilliz-cloud}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "PiJJdmHaFoAZrJxgHJecSiQHn5c",
+        "block_type": 2,
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "迁移数据准备就绪后，就可以将数据上传到 Zilliz Cloud。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CfCidr2JRolCluxtfjrc82Kfnsh",
+        "block_type": 2,
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您已将迁移数据上传到个人 OSS 存储中，请选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "从 OSS 导入文件夹",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，然后填写文件夹路径和身份验证凭据。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MYXvdMfpNoG6ngxa18McdZVwnOe",
+        "block_type": 2,
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果要将本地文件夹上传到 Zilliz Cloud，请选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "导入本地文件夹",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，然后将文件夹拖到指定区域上传。注意，上传文件夹的最大尺寸为 1 GB。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HfB7ddcBcoyQPnxpqBuc9pmIn6e",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6660-1739%26mode%3Ddesign%26t%3D1DFymMfRqR6gyN5M-4"
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "L26bdyEwCoDs0Mx1UYScxjZwnVb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "结果验证{#verify-the-migration-results}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "FbVydVHzQoOpaqxSibcceS0VnIf",
+        "block_type": 2,
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果迁移任务的状态从 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "迁移中",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 变更为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "成功",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，则代表迁移成功。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EgS2d7nFFouKMuxGhjjceuo2nre",
+        "block_type": 2,
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 仅支持 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "AUTOINDEX",
+                "token": "YUETwzDssiTUs9kCSn4cgUYLnrd",
+                "url": "https://zilliverse.feishu.cn/wiki/YUETwzDssiTUs9kCSn4cgUYLnrd"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "AUTOINDEX",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 是一种优化的索引算法，Zilliz Cloud 将使用此算法为您迁移的 Collection 自动创建索引。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QeADdfKuVoc6H8xGGYbcdahgn9c",
+        "block_type": 2,
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Collection 加载后，您可以自行连接和管理 Collection。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XfzId35oyoJ8uNxtuNhcTkLinVf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相关文档{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "U3AfdOWQwosI2Txlrqfc98XPnAg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "AUTOINDEX",
+                "token": "YUETwzDssiTUs9kCSn4cgUYLnrd",
+                "url": "https://zilliverse.feishu.cn/wiki/YUETwzDssiTUs9kCSn4cgUYLnrd"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "Oggpdt8RWoR1cAx53uwcSln2nEf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "选择合适的 CU 类型",
+                "token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
+                "url": "https://zilliverse.feishu.cn/wiki/DP6Fw8vkzi7pD7kAMB3cjunYn6g"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "M8o1dVsC0opBXcxeooocqUC4npb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "API 异同",
+                "token": "KOD2wN5jDimhSOk1GshcUbn2nJe",
+                "url": "https://zilliverse.feishu.cn/wiki/KOD2wN5jDimhSOk1GshcUbn2nJe"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      },
+      {
+        "block_id": "RSdhdUp28oOeGlx2ATtcfvHzn6c",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "其他异同",
+                "token": "LCqjwnEPWi2YPkkdHOwc5eQXnPd",
+                "url": "https://zilliverse.feishu.cn/wiki/LCqjwnEPWi2YPkkdHOwc5eQXnPd"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "B7mKdVLsxoZyNMxZKwDcjcSlnbg"
+      }
+    ],
+    "counts": 68
+  }
+}

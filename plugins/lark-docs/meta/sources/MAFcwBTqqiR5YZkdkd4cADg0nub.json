@@ -1,0 +1,3293 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": false,
+  "node_create_time": "1687140289",
+  "node_token": "MAFcwBTqqiR5YZkdkd4cADg0nub",
+  "node_type": "origin",
+  "obj_create_time": "1687140289",
+  "obj_edit_time": "1704968312",
+  "obj_token": "OBowdXEYGod06gxEDe1cMjMwnNf",
+  "obj_type": "docx",
+  "origin_node_token": "MAFcwBTqqiR5YZkdkd4cADg0nub",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "H4Jlw1x88iCj9Pk2LUxcChVtnzb",
+  "space_id": "7167193056431783939",
+  "title": "创建集群",
+  "slug": "create-cluster",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "OBowdXEYGod06gxEDe1cMjMwnNf",
+        "block_type": 1,
+        "children": [
+          "RxD8dEj62oHCmyxa0nVchVOinLb",
+          "RYBBdyxSpo2Vp2xKjnecMIQJn0c",
+          "QvoPdUZv8oXSNrxxUxacuHF5nud",
+          "KlgsdnoTToX16fx4b0qcOsEHnAg",
+          "HkTcdvfCQom5KXxprgbcPEXknPO",
+          "GQ1LdqmjTovk72xbsiOczr0KnCi",
+          "HN3OdT5mwo0LQIxQRA8cSYPNnye",
+          "XXeldishIooR5rxBIGHc43aJn2c",
+          "Vqg2dlK67o6VnOxWSIZc1l0on6c",
+          "GjhAdvVQFoSo8rxXIHCcU6d9nbn",
+          "Z8ZEduOQeovhrrxzc5zc3fUVn5e",
+          "Qp7ad8yFEoVHezx6CIIcgJp2nHc",
+          "Hv0KdGPEooev3jx2PwAcBIjvnOg",
+          "DpnHdvUTSofCozxa52LcKO51nhc",
+          "Q067dKEMHoBxqsx8qQ6cn7jEnOA",
+          "M0P9dqY5molMj1xWOc0cDtsEnrf",
+          "J1rWdg0T9olWM2xoduScHAeknxe",
+          "WXHUdlxBkotjQfxVoP2cYjF3n0f",
+          "DMwcdJpuRoqeJFxbu7gcF6ddnGe",
+          "MhF1de4HgoXmPSxoBwzcmSAnnfX",
+          "I6NRdZ2zwoMJnHxNJV1cLP3BnFz",
+          "OtHvdOlr2ox2Q3xXG6ecjRXOnWc",
+          "WSB4dJfY2oTiYrxMw7ccOlqPn0f",
+          "JHOodJyRuoMFYux2Vt2ctv6hnZV",
+          "Ocp7dol1zoj9jUxpV57c8H8Inqh",
+          "R26LdPqKkoDcXvx60EzcnZ7rnKb"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建集群",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "RxD8dEj62oHCmyxa0nVchVOinLb",
+        "block_type": 2,
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 提供多种集群版本以满足不同的业务需求。请先查阅",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "选择合适的 CU 类型",
+                "token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
+                "url": "https://zilliverse.feishu.cn/wiki/DP6Fw8vkzi7pD7kAMB3cjunYn6g"
+              }
+            },
+            {
+              "text_run": {
+                "content": "进行合理的资源规划。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "本文介绍如何创建集群。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RYBBdyxSpo2Vp2xKjnecMIQJn0c",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "开始前",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#prerequisites}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "QvoPdUZv8oXSNrxxUxacuHF5nud",
+        "block_type": 2,
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "请确保已完成以下步骤：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KlgsdnoTToX16fx4b0qcOsEHnAg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "已注册 Zilliz Cloud 账户。有关更多信息，请参见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "注册账号",
+                "token": "CCVpw6BVti8P8LkfcdJcdRH1nHg",
+                "url": "https://zilliverse.feishu.cn/wiki/CCVpw6BVti8P8LkfcdJcdRH1nHg"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "HkTcdvfCQom5KXxprgbcPEXknPO",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在目标组织或项目中，您具有集群创建权限。有关角色和权限的信息，请参见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "角色与权限",
+                "token": "WYzywSL2ViDcZGk9vgqcq9XOned",
+                "url": "https://zilliverse.feishu.cn/wiki/WYzywSL2ViDcZGk9vgqcq9XOned"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "GQ1LdqmjTovk72xbsiOczr0KnCi",
+        "block_type": 2,
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HN3OdT5mwo0LQIxQRA8cSYPNnye",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建 Serverless 集群{#set-up-a-serverless-cluster}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "XXeldishIooR5rxBIGHc43aJn2c",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "登录 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 控制台",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "Vqg2dlK67o6VnOxWSIZc1l0on6c",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "进入您需要创建集群的组织和项目。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "GjhAdvVQFoSo8rxXIHCcU6d9nbn",
+        "block_type": 13,
+        "children": [
+          "KmZNdREs3olXUHxYyutc3z7enby"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建集群",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "KmZNdREs3olXUHxYyutc3z7enby",
+        "block_type": 26,
+        "comment_ids": [
+          "7309422438403522563"
+        ],
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D7048-2%26mode%3Ddesign%26t%3DdEDu09CUu6LdGkX2-4"
+          }
+        },
+        "parent_id": "GjhAdvVQFoSo8rxXIHCcU6d9nbn"
+      },
+      {
+        "block_id": "Z8ZEduOQeovhrrxzc5zc3fUVn5e",
+        "block_type": 13,
+        "children": [
+          "TdwsddhqIoSERYx4JZ7coE6pn9b",
+          "LydTdR9Czoa3O0xZ2LScnBP7nJg"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "免费版",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "并设置集群。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "TdwsddhqIoSERYx4JZ7coE6pn9b",
+        "block_type": 34,
+        "children": [
+          "VrJ2dfl4loDtLxxLU7GczyJnnif",
+          "AIpadWak7oYT74xWrT3cfzx4n2b"
+        ],
+        "parent_id": "Z8ZEduOQeovhrrxzc5zc3fUVn5e",
+        "quote_container": {}
+      },
+      {
+        "block_id": "VrJ2dfl4loDtLxxLU7GczyJnnif",
+        "block_type": 2,
+        "parent_id": "TdwsddhqIoSERYx4JZ7coE6pn9b",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AIpadWak7oYT74xWrT3cfzx4n2b",
+        "block_type": 2,
+        "parent_id": "TdwsddhqIoSERYx4JZ7coE6pn9b",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您最多可创建 1 个免费的 Serverless 集群。如需更多集群，请选择企业版。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LydTdR9Czoa3O0xZ2LScnBP7nJg",
+        "block_type": 31,
+        "children": [
+          "FbPrdE9acobY18xjfxocKgKLnrc",
+          "QrtddEGLBoSGRZxNtAYctsHqnpJ",
+          "RDGGdArgoosAloxVt3ZcMYASn0f",
+          "FuKTdEo5MoUd8BxgdH6cADQCnQe",
+          "IlwYd0T2lox2UzxthilcEWQHn5f",
+          "EgfedE1ZZoudtTxTiLtcXXVunLg"
+        ],
+        "parent_id": "Z8ZEduOQeovhrrxzc5zc3fUVn5e",
+        "table": {
+          "cells": [
+            "FbPrdE9acobY18xjfxocKgKLnrc",
+            "QrtddEGLBoSGRZxNtAYctsHqnpJ",
+            "RDGGdArgoosAloxVt3ZcMYASn0f",
+            "FuKTdEo5MoUd8BxgdH6cADQCnQe",
+            "IlwYd0T2lox2UzxthilcEWQHn5f",
+            "EgfedE1ZZoudtTxTiLtcXXVunLg"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              100,
+              240
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 3
+          }
+        }
+      },
+      {
+        "block_id": "FbPrdE9acobY18xjfxocKgKLnrc",
+        "block_type": 32,
+        "children": [
+          "BOS2dzSNcoyVS4xvUoWcvfI8n0c"
+        ],
+        "parent_id": "LydTdR9Czoa3O0xZ2LScnBP7nJg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "BOS2dzSNcoyVS4xvUoWcvfI8n0c",
+        "block_type": 2,
+        "parent_id": "FbPrdE9acobY18xjfxocKgKLnrc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "参数",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QrtddEGLBoSGRZxNtAYctsHqnpJ",
+        "block_type": 32,
+        "children": [
+          "DgiIdM4V5oHRbdxoqzQcJ2EAnhO"
+        ],
+        "parent_id": "LydTdR9Czoa3O0xZ2LScnBP7nJg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "DgiIdM4V5oHRbdxoqzQcJ2EAnhO",
+        "block_type": 2,
+        "parent_id": "QrtddEGLBoSGRZxNtAYctsHqnpJ",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RDGGdArgoosAloxVt3ZcMYASn0f",
+        "block_type": 32,
+        "children": [
+          "TaFRdXkbPo8VDkxF6ILc1E5znLd"
+        ],
+        "parent_id": "LydTdR9Czoa3O0xZ2LScnBP7nJg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "TaFRdXkbPo8VDkxF6ILc1E5znLd",
+        "block_type": 2,
+        "parent_id": "RDGGdArgoosAloxVt3ZcMYASn0f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群名称",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FuKTdEo5MoUd8BxgdH6cADQCnQe",
+        "block_type": 32,
+        "children": [
+          "KHJ5db9Gmo8a6oxT9eUcy709nxd"
+        ],
+        "parent_id": "LydTdR9Czoa3O0xZ2LScnBP7nJg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "KHJ5db9Gmo8a6oxT9eUcy709nxd",
+        "block_type": 2,
+        "parent_id": "FuKTdEo5MoUd8BxgdH6cADQCnQe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群的名称。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IlwYd0T2lox2UzxthilcEWQHn5f",
+        "block_type": 32,
+        "children": [
+          "MLnIduNSBooDzDxyiCzck2Kwnzh"
+        ],
+        "parent_id": "LydTdR9Czoa3O0xZ2LScnBP7nJg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "MLnIduNSBooDzDxyiCzck2Kwnzh",
+        "block_type": 2,
+        "parent_id": "IlwYd0T2lox2UzxthilcEWQHn5f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "云服务提供商和地域",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EgfedE1ZZoudtTxTiLtcXXVunLg",
+        "block_type": 32,
+        "children": [
+          "G9ezdS0MQotmKlx9IwJcoKVYnvg"
+        ],
+        "parent_id": "LydTdR9Czoa3O0xZ2LScnBP7nJg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "G9ezdS0MQotmKlx9IwJcoKVYnvg",
+        "block_type": 2,
+        "parent_id": "EgfedE1ZZoudtTxTiLtcXXVunLg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群部署的云服务提供商和地域。目前，Zilliz Cloud 支持阿里云华东1（杭州）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "华北2（北京）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和华南1（深圳）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。更多详情，请见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "云服务提供商和地域",
+                "token": "BErdww1kOirndzkHrKoc2ibynlb",
+                "url": "https://zilliverse.feishu.cn/wiki/BErdww1kOirndzkHrKoc2ibynlb"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Qp7ad8yFEoVHezx6CIIcgJp2nHc",
+        "block_type": 2,
+        "comment_ids": [
+          "7309423607145496579"
+        ],
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "【Insert screenshot】",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7309423607145496579"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Hv0KdGPEooev3jx2PwAcBIjvnOg",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "下一步：创建 Collection",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "DpnHdvUTSofCozxa52LcKO51nhc",
+        "block_type": 13,
+        "children": [
+          "Ylxgdd0t0oO9vrxrvhUc5DZtnSh",
+          "VJDdd52reos6ANxWZRBcLBINnYJ"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建新 Collection",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "Ylxgdd0t0oO9vrxrvhUc5DZtnSh",
+        "block_type": 2,
+        "comment_ids": [
+          "7309423915821383684"
+        ],
+        "parent_id": "DpnHdvUTSofCozxa52LcKO51nhc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "【Insert screenshot】",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7309423915821383684"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VJDdd52reos6ANxWZRBcLBINnYJ",
+        "block_type": 2,
+        "children": [
+          "M1xzdSootoXYiAxI6qbco9minAf"
+        ],
+        "parent_id": "DpnHdvUTSofCozxa52LcKO51nhc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "设置以下 Collection 参数：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "M1xzdSootoXYiAxI6qbco9minAf",
+        "block_type": 31,
+        "children": [
+          "NYvvdUaxRobxZkxKhvCc3v9LnNw",
+          "Ll7ddALTZobHdUxg4uEc54vdnoc",
+          "JRdxdtnYuokeKAxXbhscyQBFnOc",
+          "GQsJdx2VaoMx0yxs01HcRFmZn6l",
+          "Iy2qdJc5Hoq1tfx1Ptyc5H61nGc",
+          "AMe6dTI9To4uhmximo4cWb3dnOh",
+          "B4x6ddhsaowqXLxN8GqcRi4Zndb",
+          "RNK5dB6ZxoAXrhxSa6bckR6gnc3",
+          "JPuwdB8Kuo2bwzx7iQfcwGsLn8b",
+          "F8cNdqlUao9MnKxqS2wc2GxOnkd"
+        ],
+        "parent_id": "VJDdd52reos6ANxWZRBcLBINnYJ",
+        "table": {
+          "cells": [
+            "NYvvdUaxRobxZkxKhvCc3v9LnNw",
+            "Ll7ddALTZobHdUxg4uEc54vdnoc",
+            "JRdxdtnYuokeKAxXbhscyQBFnOc",
+            "GQsJdx2VaoMx0yxs01HcRFmZn6l",
+            "Iy2qdJc5Hoq1tfx1Ptyc5H61nGc",
+            "AMe6dTI9To4uhmximo4cWb3dnOh",
+            "B4x6ddhsaowqXLxN8GqcRi4Zndb",
+            "RNK5dB6ZxoAXrhxSa6bckR6gnc3",
+            "JPuwdB8Kuo2bwzx7iQfcwGsLn8b",
+            "F8cNdqlUao9MnKxqS2wc2GxOnkd"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              163,
+              419
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 5
+          }
+        }
+      },
+      {
+        "block_id": "NYvvdUaxRobxZkxKhvCc3v9LnNw",
+        "block_type": 32,
+        "children": [
+          "PDkFdo6nqoqwXgxRh7IcfyKWnCc"
+        ],
+        "parent_id": "M1xzdSootoXYiAxI6qbco9minAf",
+        "table_cell": {}
+      },
+      {
+        "block_id": "PDkFdo6nqoqwXgxRh7IcfyKWnCc",
+        "block_type": 2,
+        "parent_id": "NYvvdUaxRobxZkxKhvCc3v9LnNw",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "参数",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ll7ddALTZobHdUxg4uEc54vdnoc",
+        "block_type": 32,
+        "children": [
+          "U6KpdVRB7obFqTxurRrcWf3Cneb"
+        ],
+        "parent_id": "M1xzdSootoXYiAxI6qbco9minAf",
+        "table_cell": {}
+      },
+      {
+        "block_id": "U6KpdVRB7obFqTxurRrcWf3Cneb",
+        "block_type": 2,
+        "parent_id": "Ll7ddALTZobHdUxg4uEc54vdnoc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JRdxdtnYuokeKAxXbhscyQBFnOc",
+        "block_type": 32,
+        "children": [
+          "RoSVdCD1eozJGOxM0J3cpC4qn1c"
+        ],
+        "parent_id": "M1xzdSootoXYiAxI6qbco9minAf",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RoSVdCD1eozJGOxM0J3cpC4qn1c",
+        "block_type": 2,
+        "parent_id": "JRdxdtnYuokeKAxXbhscyQBFnOc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Collection 名称",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GQsJdx2VaoMx0yxs01HcRFmZn6l",
+        "block_type": 32,
+        "children": [
+          "QNJCdGSBgo7zJJxiBQGcoN3nnIg"
+        ],
+        "parent_id": "M1xzdSootoXYiAxI6qbco9minAf",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QNJCdGSBgo7zJJxiBQGcoN3nnIg",
+        "block_type": 2,
+        "parent_id": "GQsJdx2VaoMx0yxs01HcRFmZn6l",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Collection 的名称。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Iy2qdJc5Hoq1tfx1Ptyc5H61nGc",
+        "block_type": 32,
+        "children": [
+          "Ph9CdRUTHoeBiVx862lc6hqJnKf"
+        ],
+        "parent_id": "M1xzdSootoXYiAxI6qbco9minAf",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Ph9CdRUTHoeBiVx862lc6hqJnKf",
+        "block_type": 2,
+        "parent_id": "Iy2qdJc5Hoq1tfx1Ptyc5H61nGc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "向量维度",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AMe6dTI9To4uhmximo4cWb3dnOh",
+        "block_type": 32,
+        "children": [
+          "Jdj3dNjyvoQoPaxeTAOc89CUnZd"
+        ],
+        "parent_id": "M1xzdSootoXYiAxI6qbco9minAf",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Jdj3dNjyvoQoPaxeTAOc89CUnZd",
+        "block_type": 2,
+        "parent_id": "AMe6dTI9To4uhmximo4cWb3dnOh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Collection 中向量数据的维数。默认值为 768。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "B4x6ddhsaowqXLxN8GqcRi4Zndb",
+        "block_type": 32,
+        "children": [
+          "I4Y8d3RugoVrPVxQJe5cVgTJnEg",
+          "KLRWdTQkWoPn73xUgAdcrCtSnVG"
+        ],
+        "parent_id": "M1xzdSootoXYiAxI6qbco9minAf",
+        "table_cell": {}
+      },
+      {
+        "block_id": "I4Y8d3RugoVrPVxQJe5cVgTJnEg",
+        "block_type": 2,
+        "parent_id": "B4x6ddhsaowqXLxN8GqcRi4Zndb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相似度类型",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KLRWdTQkWoPn73xUgAdcrCtSnVG",
+        "block_type": 2,
+        "parent_id": "B4x6ddhsaowqXLxN8GqcRi4Zndb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RNK5dB6ZxoAXrhxSa6bckR6gnc3",
+        "block_type": 32,
+        "children": [
+          "RaPDdG34fopZYBx1W8SczZ4XnFb",
+          "WiRxdYmlso7vrix45E7cDhYQnkf",
+          "NjOtdmg50oLqLkxfTQZc5j1TnVb"
+        ],
+        "parent_id": "M1xzdSootoXYiAxI6qbco9minAf",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RaPDdG34fopZYBx1W8SczZ4XnFb",
+        "block_type": 2,
+        "parent_id": "RNK5dB6ZxoAXrhxSa6bckR6gnc3",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相似度类型计算向量之间距离和相似性。可选择的相似度类型包括：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WiRxdYmlso7vrix45E7cDhYQnkf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "欧氏距离（Euclidean / L2）计算两条向量间的欧式距离。计算结果越小，两个向量越相似。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "RNK5dB6ZxoAXrhxSa6bckR6gnc3"
+      },
+      {
+        "block_id": "NjOtdmg50oLqLkxfTQZc5j1TnVb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "内积（Inner Product / IP）将两条向量相乘。计算结果为正数，两个向量越相似。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "RNK5dB6ZxoAXrhxSa6bckR6gnc3"
+      },
+      {
+        "block_id": "JPuwdB8Kuo2bwzx7iQfcwGsLn8b",
+        "block_type": 32,
+        "children": [
+          "JMFXdRmhJoUFgdxs81zcEeXTnGh"
+        ],
+        "parent_id": "M1xzdSootoXYiAxI6qbco9minAf",
+        "table_cell": {}
+      },
+      {
+        "block_id": "JMFXdRmhJoUFgdxs81zcEeXTnGh",
+        "block_type": 2,
+        "parent_id": "JPuwdB8Kuo2bwzx7iQfcwGsLn8b",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "F8cNdqlUao9MnKxqS2wc2GxOnkd",
+        "block_type": 32,
+        "children": [
+          "N1ZodTm7vocKE7xjrYAc7AJunxd"
+        ],
+        "parent_id": "M1xzdSootoXYiAxI6qbco9minAf",
+        "table_cell": {}
+      },
+      {
+        "block_id": "N1ZodTm7vocKE7xjrYAc7AJunxd",
+        "block_type": 2,
+        "parent_id": "F8cNdqlUao9MnKxqS2wc2GxOnkd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Collection 描述。该参数为可选参数。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Q067dKEMHoBxqsx8qQ6cn7jEnOA",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建 Collection 和 Cluster",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。弹出的对话框中将提示集群 Endpoint 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "API",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 密钥信息。请务必妥善保存。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "M0P9dqY5molMj1xWOc0cDtsEnrf",
+        "block_type": 2,
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</exclude>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "J1rWdg0T9olWM2xoduScHAeknxe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\"> ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Dedicated ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "</exclude>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "集群",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "#create-a-dedicated-cluster",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "WXHUdlxBkotjQfxVoP2cYjF3n0f",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "登录 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 控制台",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "DMwcdJpuRoqeJFxbu7gcF6ddnGe",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "进入您需要创建集群的组织和项目。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "MhF1de4HgoXmPSxoBwzcmSAnnfX",
+        "block_type": 13,
+        "children": [
+          "MmQNdCbXyoHp1qxkRhwcaWQZnHg"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在打开的页面中",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建集群",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "MmQNdCbXyoHp1qxkRhwcaWQZnHg",
+        "block_type": 26,
+        "comment_ids": [
+          "7278891468209799172"
+        ],
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6291-1692%26mode%3Ddesign%26t%3Dkrs3Srz019NF5ejw-4"
+          }
+        },
+        "parent_id": "MhF1de4HgoXmPSxoBwzcmSAnnfX"
+      },
+      {
+        "block_id": "I6NRdZ2zwoMJnHxNJV1cLP3BnFz",
+        "block_type": 13,
+        "children": [
+          "JsRydSH1PouIRexc5AScVfqAnFh",
+          "N8JjdCIMwoxyoexmRC2cVMqQnGb"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "新集群",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页面，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "企业版",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "并配置相关参数",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "JsRydSH1PouIRexc5AScVfqAnFh",
+        "block_type": 31,
+        "children": [
+          "CO0zdAGP0ohkAJxogSUchPJvnNg",
+          "YE4rdQ9uwoARPhxDRiCcESUcnZb",
+          "LmkudwuQyogdcWxLfRuclbvfnDb",
+          "V5nmdbMkYoOCEtxjmthccO21nXg",
+          "SMZodxOpgoMtRfx6ockchObgn0z",
+          "OlIWdf30ooesvuxdsn5cbm9Nn6g",
+          "EqLIdg1wHoG1fyx5ML1cRtxPnQh",
+          "SapEdMB0GoujCZxZcYCcebAbnKb",
+          "Qo1hdue4LohWLTxpvpdclGpCnyd",
+          "BtyFdDOmjoVYaAxLposcW29Enxb"
+        ],
+        "parent_id": "I6NRdZ2zwoMJnHxNJV1cLP3BnFz",
+        "table": {
+          "cells": [
+            "CO0zdAGP0ohkAJxogSUchPJvnNg",
+            "YE4rdQ9uwoARPhxDRiCcESUcnZb",
+            "LmkudwuQyogdcWxLfRuclbvfnDb",
+            "V5nmdbMkYoOCEtxjmthccO21nXg",
+            "SMZodxOpgoMtRfx6ockchObgn0z",
+            "OlIWdf30ooesvuxdsn5cbm9Nn6g",
+            "EqLIdg1wHoG1fyx5ML1cRtxPnQh",
+            "SapEdMB0GoujCZxZcYCcebAbnKb",
+            "Qo1hdue4LohWLTxpvpdclGpCnyd",
+            "BtyFdDOmjoVYaAxLposcW29Enxb"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              197,
+              504
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 5
+          }
+        }
+      },
+      {
+        "block_id": "CO0zdAGP0ohkAJxogSUchPJvnNg",
+        "block_type": 32,
+        "children": [
+          "ZxaUdkYJYoaPw6xwua2c8cxpnnh"
+        ],
+        "parent_id": "JsRydSH1PouIRexc5AScVfqAnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ZxaUdkYJYoaPw6xwua2c8cxpnnh",
+        "block_type": 2,
+        "parent_id": "CO0zdAGP0ohkAJxogSUchPJvnNg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "参数",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YE4rdQ9uwoARPhxDRiCcESUcnZb",
+        "block_type": 32,
+        "children": [
+          "NRnXdTGv6onY4Hx1rvOcNlsVnGc"
+        ],
+        "parent_id": "JsRydSH1PouIRexc5AScVfqAnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "NRnXdTGv6onY4Hx1rvOcNlsVnGc",
+        "block_type": 2,
+        "parent_id": "YE4rdQ9uwoARPhxDRiCcESUcnZb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LmkudwuQyogdcWxLfRuclbvfnDb",
+        "block_type": 32,
+        "children": [
+          "B7Fbdy8UOoAIs5xYe3gceVeJndi"
+        ],
+        "parent_id": "JsRydSH1PouIRexc5AScVfqAnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "B7Fbdy8UOoAIs5xYe3gceVeJndi",
+        "block_type": 2,
+        "parent_id": "LmkudwuQyogdcWxLfRuclbvfnDb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群名称",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "V5nmdbMkYoOCEtxjmthccO21nXg",
+        "block_type": 32,
+        "children": [
+          "GkqsdMtTaoRtHExp94ocj0KMnBh"
+        ],
+        "parent_id": "JsRydSH1PouIRexc5AScVfqAnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "GkqsdMtTaoRtHExp94ocj0KMnBh",
+        "block_type": 2,
+        "parent_id": "V5nmdbMkYoOCEtxjmthccO21nXg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "请输入集群的名称。当前存在随机默认值，您可根据需要修改该名称。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SMZodxOpgoMtRfx6ockchObgn0z",
+        "block_type": 32,
+        "children": [
+          "Q3U5dNqCloZ5QCxU5zvckKnun4g"
+        ],
+        "parent_id": "JsRydSH1PouIRexc5AScVfqAnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Q3U5dNqCloZ5QCxU5zvckKnun4g",
+        "block_type": 2,
+        "parent_id": "SMZodxOpgoMtRfx6ockchObgn0z",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "云服务提供商和地域",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OlIWdf30ooesvuxdsn5cbm9Nn6g",
+        "block_type": 32,
+        "children": [
+          "Asnhdn5UPoqwAWxw0cWc8dWXnHc",
+          "WPwMdtZ9fomyIRxrjxYc9yyGn1b"
+        ],
+        "parent_id": "JsRydSH1PouIRexc5AScVfqAnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Asnhdn5UPoqwAWxw0cWc8dWXnHc",
+        "block_type": 2,
+        "parent_id": "OlIWdf30ooesvuxdsn5cbm9Nn6g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群所处地理位置及提供连接服务的云服务提供商。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WPwMdtZ9fomyIRxrjxYc9yyGn1b",
+        "block_type": 2,
+        "parent_id": "OlIWdf30ooesvuxdsn5cbm9Nn6g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "当前可供选择的云服务提供商为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "阿里云",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，可选地址为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "华东1（杭州）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "华北2（北京）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "华南1（深圳）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EqLIdg1wHoG1fyx5ML1cRtxPnQh",
+        "block_type": 32,
+        "children": [
+          "CBLzdtD75oVIB3x7yb7c4CNdnBd"
+        ],
+        "parent_id": "JsRydSH1PouIRexc5AScVfqAnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "CBLzdtD75oVIB3x7yb7c4CNdnBd",
+        "block_type": 2,
+        "parent_id": "EqLIdg1wHoG1fyx5ML1cRtxPnQh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "CU",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "类型和大小",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SapEdMB0GoujCZxZcYCcebAbnKb",
+        "block_type": 32,
+        "children": [
+          "E1nBdUHLmobsbKxOmNTcmZqbnqf",
+          "FYpUdrS98oPeFRx4yKrcW0OenBg",
+          "JRHVdxnFxorsUUx1fnQcOIhNnlh"
+        ],
+        "parent_id": "JsRydSH1PouIRexc5AScVfqAnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "E1nBdUHLmobsbKxOmNTcmZqbnqf",
+        "block_type": 2,
+        "parent_id": "SapEdMB0GoujCZxZcYCcebAbnKb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群需要使用的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "CU",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "类型及大小。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FYpUdrS98oPeFRx4yKrcW0OenBg",
+        "block_type": 2,
+        "parent_id": "SapEdMB0GoujCZxZcYCcebAbnKb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "界面上有关于",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "CU",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "类型的简要介绍，并提供了",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "价格计算器",
+                "token": "Jxqfwnd80i8ibIkRhEKcnkK6nzd",
+                "url": "https://zilliverse.feishu.cn/wiki/Jxqfwnd80i8ibIkRhEKcnkK6nzd"
+              }
+            },
+            {
+              "text_run": {
+                "content": "供您自助估算成本。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JRHVdxnFxorsUUx1fnQcOIhNnlh",
+        "block_type": 2,
+        "parent_id": "SapEdMB0GoujCZxZcYCcebAbnKb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "想了解更多关于",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "CU",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "选型的相关内容，可参见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "选择合适的 CU 类型",
+                "token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
+                "url": "https://zilliverse.feishu.cn/wiki/DP6Fw8vkzi7pD7kAMB3cjunYn6g"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Qo1hdue4LohWLTxpvpdclGpCnyd",
+        "block_type": 32,
+        "children": [
+          "RyDxdhngio80zBxkN8Acf4iWnph"
+        ],
+        "parent_id": "JsRydSH1PouIRexc5AScVfqAnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RyDxdhngio80zBxkN8Acf4iWnph",
+        "block_type": 2,
+        "parent_id": "Qo1hdue4LohWLTxpvpdclGpCnyd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "用户名和密码",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BtyFdDOmjoVYaAxLposcW29Enxb",
+        "block_type": 32,
+        "children": [
+          "ZJfidTO4roBbrnxAOAQcl2Wmnve",
+          "LXoHdwiIhoZmmAx6GiEcRe6snbc",
+          "I959dWYU0o9leexUP9YcnrYknxd"
+        ],
+        "parent_id": "JsRydSH1PouIRexc5AScVfqAnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ZJfidTO4roBbrnxAOAQcl2Wmnve",
+        "block_type": 2,
+        "parent_id": "BtyFdDOmjoVYaAxLposcW29Enxb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "用于在集群创建完成后访问该集群的凭据。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LXoHdwiIhoZmmAx6GiEcRe6snbc",
+        "block_type": 2,
+        "parent_id": "BtyFdDOmjoVYaAxLposcW29Enxb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "用户名",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "默认为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "db_admin",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "且不可修改，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "密码",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "需要满足界面提示中的条件。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "I959dWYU0o9leexUP9YcnrYknxd",
+        "block_type": 2,
+        "parent_id": "BtyFdDOmjoVYaAxLposcW29Enxb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "记住在此处设置的用户名和密码，之后你需要它们来连接到集群。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "N8JjdCIMwoxyoexmRC2cVMqQnGb",
+        "block_type": 26,
+        "comment_ids": [
+          "7278891479999823875"
+        ],
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6209-1689%26t%3D164LVOROKJyC62Dn-4"
+          }
+        },
+        "parent_id": "I6NRdZ2zwoMJnHxNJV1cLP3BnFz"
+      },
+      {
+        "block_id": "OtHvdOlr2ox2Q3xXG6ecjRXOnWc",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建集群",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "WSB4dJfY2oTiYrxMw7ccOlqPn0f",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "结果验证",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#verification}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "JHOodJyRuoMFYux2Vt2ctv6hnZV",
+        "block_type": 2,
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建集群后，您可以在集群列表页面上检查集群状态。如果集群的状态为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "运行中",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，则表示集群创建成功。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ocp7dol1zoj9jUxpV57c8H8Inqh",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6458-1696%26mode%3Ddesign%26t%3DzS30cuaHCsTTHJva-4"
+          }
+        },
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf"
+      },
+      {
+        "block_id": "R26LdPqKkoDcXvx60EzcnZ7rnKb",
+        "block_type": 2,
+        "parent_id": "OBowdXEYGod06gxEDe1cMjMwnNf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 98
+  }
+}

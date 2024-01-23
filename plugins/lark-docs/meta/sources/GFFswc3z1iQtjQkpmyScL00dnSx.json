@@ -1,0 +1,854 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": false,
+  "node_create_time": "1687140680",
+  "node_token": "GFFswc3z1iQtjQkpmyScL00dnSx",
+  "node_type": "origin",
+  "obj_create_time": "1687140680",
+  "obj_edit_time": "1703062983",
+  "obj_token": "WIwudzIxPoBMrLxFgzmcM2B6nzh",
+  "obj_type": "docx",
+  "origin_node_token": "GFFswc3z1iQtjQkpmyScL00dnSx",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "SbePwiLrZi2hZqk5NpRcmramnEN",
+  "space_id": "7167193056431783939",
+  "title": "创建备份快照",
+  "slug": "create-snapshot",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh",
+        "block_type": 1,
+        "children": [
+          "J6EqdmUQvoWqRSxoo0TclC32nEh",
+          "X4C1dC5bEo79hKxTWn2cN5Mnn6b",
+          "UmvRdAjtIoQ7G0xiBT7cstuQnve",
+          "QZ9adOGgkoQQyNx4qBocw2MWnTh",
+          "PebfdDhfRoBvSVxqo1fcREipnVd",
+          "Y3HydUqmJolJvFx2ho2cfMPhnUd",
+          "Lt1KdgFr4oEkGlxiaUocGY5ZnJh",
+          "GvLEdPBGmoQMrJxCpcMcNKSGnre",
+          "UJJfdRQIZo4mZZxqm19cmYxznwf",
+          "Wt3CduGJsozm5WxEFSiciKnDnmh",
+          "J36tdmfvzoW8QbxEQhEcdpU5nRh",
+          "UuUmdUpdkoASL0x3YSKchJkyn1f",
+          "LlbFdg8UkooJqQx5UwUcPLarn0v",
+          "U4Rtdb6eho1atoxxARCcwHdLnGd",
+          "JIybdMNFKoEkrixQdJycEVi7n6c",
+          "JqSNdj6gQo7VN2xrbaZcJAIjnsd"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建备份快照",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "J6EqdmUQvoWqRSxoo0TclC32nEh",
+        "block_type": 2,
+        "parent_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "快照是",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "为某个",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "集群",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "在指定",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "时间点",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "备份。您可以基于快照创建新的集群或将快照用作集群数据备份。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "X4C1dC5bEo79hKxTWn2cN5Mnn6b",
+        "block_type": 2,
+        "parent_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<exclude target=\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "saas",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\">",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UmvRdAjtIoQ7G0xiBT7cstuQnve",
+        "block_type": 34,
+        "children": [
+          "QzRRdz21NoBrkrxLqZ5cgW58nHc",
+          "C36jdscBxoFxAgxx9ClcBrS0nfd"
+        ],
+        "parent_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh",
+        "quote_container": {}
+      },
+      {
+        "block_id": "QzRRdz21NoBrkrxLqZ5cgW58nHc",
+        "block_type": 2,
+        "parent_id": "UmvRdAjtIoQ7G0xiBT7cstuQnve",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "C36jdscBxoFxAgxx9ClcBrS0nfd",
+        "block_type": 2,
+        "parent_id": "UmvRdAjtIoQ7G0xiBT7cstuQnve",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "快照功能目前仅对",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "企业版",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "用户",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "开放。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "如果您是免费版用户，请先将您的 Serverless 集群",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "迁移",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FN6tlwTPPvi0FXvkj4fccCgtTnOg%23XOy5dQ6Z7oTs0PxYGV3cPSdRnxc"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "至企业版 Dedicated 集群。更多集群类型详情，请见 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "Zilliz Cloud 版本类型",
+                "token": "XNCIwt9i6iFgEDkEQE9cTMf8nSe",
+                "url": "https://zilliverse.feishu.cn/wiki/XNCIwt9i6iFgEDkEQE9cTMf8nSe"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QZ9adOGgkoQQyNx4qBocw2MWnTh",
+        "block_type": 2,
+        "parent_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</exclude>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PebfdDhfRoBvSVxqo1fcREipnVd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建快照{#create-snapshot}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh"
+      },
+      {
+        "block_id": "Y3HydUqmJolJvFx2ho2cfMPhnUd",
+        "block_type": 2,
+        "parent_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "快照创建是异步操作，创建所需时间取决于集群大小和集群使用的 CU 大小。例如，如果某集群包含 4 CU 和一个 Collection，Collection 中包含了超过 1.2 亿个 128 维向量记录，则",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "为该 Collection ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "一个",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "快照",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "大约耗时",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "5",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "分钟",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Lt1KdgFr4oEkGlxiaUocGY5ZnJh",
+        "block_type": 2,
+        "parent_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以参考以下截图为集群创建快照。创建快照时，您的集群仍处于运行状态。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GvLEdPBGmoQMrJxCpcMcNKSGnre",
+        "block_type": 26,
+        "comment_ids": [
+          "7278894034913902595"
+        ],
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6291-1699%26mode%3Ddesign%26t%3Dkrs3Srz019NF5ejw-4"
+          }
+        },
+        "parent_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh"
+      },
+      {
+        "block_id": "UJJfdRQIZo4mZZxqm19cmYxznwf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "调整快照保留天数{#adjust-snapshot-retention-period}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh"
+      },
+      {
+        "block_id": "Wt3CduGJsozm5WxEFSiciKnDnmh",
+        "block_type": 2,
+        "parent_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以通过设置保留天数（以天为单位）来调整 Zilliz Cloud 保留快照的时间。当前默认保留天数为 7 天，最长为 30 天。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "J36tdmfvzoW8QbxEQhEcdpU5nRh",
+        "block_type": 34,
+        "children": [
+          "Del4duGgroR5TxxbeYpc19TKnBc",
+          "KczddXkStoZk0zxrlGDczqtXn9e"
+        ],
+        "parent_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh",
+        "quote_container": {}
+      },
+      {
+        "block_id": "Del4duGgroR5TxxbeYpc19TKnBc",
+        "block_type": 2,
+        "parent_id": "J36tdmfvzoW8QbxEQhEcdpU5nRh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KczddXkStoZk0zxrlGDczqtXn9e",
+        "block_type": 2,
+        "parent_id": "J36tdmfvzoW8QbxEQhEcdpU5nRh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "用于创建快照的数据传输单独收费，收费标准为￥0.5 / GB。例如，一个 20 GB 的快照将产生一次性的数据传输费用为￥0.5 x 20 = ￥10。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UuUmdUpdkoASL0x3YSKchJkyn1f",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相关文档{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh"
+      },
+      {
+        "block_id": "LlbFdg8UkooJqQx5UwUcPLarn0v",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建自动备份",
+                "token": "TXyTwrfxCiStfek4hc7c2nKwnJc",
+                "url": "https://zilliverse.feishu.cn/wiki/TXyTwrfxCiStfek4hc7c2nKwnJc"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh"
+      },
+      {
+        "block_id": "U4Rtdb6eho1atoxxARCcwHdLnGd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "查看备份快照",
+                "token": "PS8EwUahQiNPTikPIMbcBxvGnKS",
+                "url": "https://zilliverse.feishu.cn/wiki/PS8EwUahQiNPTikPIMbcBxvGnKS"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh"
+      },
+      {
+        "block_id": "JIybdMNFKoEkrixQdJycEVi7n6c",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "恢复备份",
+                "token": "NtkswF6UEi3kB0k8XSEcOKkhnld",
+                "url": "https://zilliverse.feishu.cn/wiki/NtkswF6UEi3kB0k8XSEcOKkhnld"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh"
+      },
+      {
+        "block_id": "JqSNdj6gQo7VN2xrbaZcJAIjnsd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "删除备份快照",
+                "token": "FW37wt3qEiKvZzkzBducXgHZnIe",
+                "url": "https://zilliverse.feishu.cn/wiki/FW37wt3qEiKvZzkzBducXgHZnIe"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WIwudzIxPoBMrLxFgzmcM2B6nzh"
+      }
+    ],
+    "counts": 21
+  }
+}

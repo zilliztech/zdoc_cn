@@ -2,6 +2,7 @@
 slug: /similarity-search-with-zilliz-cloud-and-openai
 beta: FALSE
 notebook: 80_integrations_openai.ipynb
+token: PMHbwHT0HiOnvDk8sUocOy34nPw
 sidebar_position: 1
 ---
 
@@ -16,7 +17,7 @@ import Admonition from '@theme/Admonition';
 
 ## 准备工作{#get-started}
 
-首先，我们需要从 Open AI 网站获取一个 API 密钥。另外，如果你还没有一个向量数据库，可前往 Zilliz Cloud 创建一个免费的 Serverless Cluster 来完成本文中的示例。
+首先，我们需要从 Open AI 网站获取一个 API 密钥。另外，如果你还没有一个向量数据库，可前往 Zilliz Cloud 使用您的免费额度创建一个免费的集群来完成本文中的示例。
 
 你可以单击此处下载我们将在示例代码中使用的数据集。数据集的格式为 **CSV** ，我们可以使用如下代码加载该数据集。
 
@@ -64,13 +65,13 @@ OPENAI_ENGINE = 'text-embedding-ada-002'  # Which engine to use
 openai.api_key = 'YOUR_OPENAI_API_KEY'  # Use your own Open AI API Key here
 ```
 
-<Admonition type="info" icon="📘" title="Notes">
+<Admonition type="info" icon="📘" title="说明">
 
 使用免费的 OpenAI 账号获取指定文字的向量化表征比较耗时。为此，我们在示例中使用了数据集的一个较小的子集，试图在脚本执行时间和检索精度间找到一个平衡点。你可以根据需要调整上述参数中的 **COUNT** 常量来改变子集的大小。
 
 </Admonition>
 
-接下来，我们将连接在 Zilliz Cloud 上创建好的 Serverless Cluster，在其中创建一个 Collection ，并为其创建索引文件。关于如何设置和使用 Zilliz Cloud, 可以参考[此文](./quick-start)。
+接下来，我们将连接在 Zilliz Cloud 上创建好的集群，在其中创建一个 Collection ，并为其创建索引文件。关于如何设置和使用 Zilliz Cloud, 可以参考[此文](./quick-start)。
 
 ```python
 # Connect to Zilliz Cloud and create a collection

@@ -2,6 +2,7 @@
 slug: /faq-account
 beta: null
 notebook: null
+token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 10
 ---
 
@@ -9,7 +10,7 @@ sidebar_position: 10
 
 本文列举了 Zilliz Cloud 账户相关的常见问题及对应解决方法。
 
-## Contents
+## 目录
 
 - [如何修改账号电子邮箱？](#how-can-i-change-my-account-email-address)
 - [如何删除账号？](#how-to-delete-my-account)
@@ -18,7 +19,7 @@ sidebar_position: 10
 - [组织冻结后会发生什么？](#what-happens-if-my-organization-is-frozen)
 - [如何解冻我的组织？](#how-to-unfreeze-my-organization)
 
-## 常见问题
+## 问答
 
 
 
@@ -29,7 +30,7 @@ sidebar_position: 10
 
 ### 如何删除账号？{#how-to-delete-my-account}
 
-如需删除账号，请参见[管理账号](./delete-your-account#delete-your-account)。
+如需删除账号，请参见[管理账号](./email-accounts#delete-your-account)。
 
 ### 我的帐号为什么被锁定了？如何解锁账号？{#why-is-my-account-locked-and-how-to-unlock-it}
 

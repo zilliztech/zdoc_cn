@@ -2,6 +2,7 @@
 slug: /enterprise-certification
 beta: FALSE
 notebook: FALSE
+token: VRLOw9Mc7iPWnCkZs2YcoGwSnLh
 sidebar_position: 4
 ---
 
@@ -17,6 +18,7 @@ Zilliz Cloud 现已开通企业认证渠道。如需进行[现金充值](./advan
 1. 选择组织并点击左侧导航栏中的**系统设置**。
 
 1. 在**企业认证**部分，点击**立即认证**。
+
     ![enterprise-verification-cn](/img/enterprise-verification-cn.png)
 
 1. 填写**申请企业认证**表单并点击**提交申请**。相关参数请见下表。请确保提供正确信息。
@@ -41,5 +43,5 @@ Zilliz Cloud 现已开通企业认证渠道。如需进行[现金充值](./advan
 
 ## 相关文档{#related-topics}
 
-- [现金充值](./advance-pay) 
+- [现金充值](./advance-pay)
 

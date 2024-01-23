@@ -1,0 +1,1698 @@
+{
+  "creator": "ou_8554528ee6e965bad56710acde1c7847",
+  "has_child": false,
+  "node_create_time": "1687676297",
+  "node_token": "FpeXw3b5piUAG7kUCgucgI1unFh",
+  "node_type": "origin",
+  "obj_create_time": "1687676297",
+  "obj_edit_time": "1702888844",
+  "obj_token": "KdmIdXX4yoNR7Zx9CQecHEaMnyf",
+  "obj_type": "docx",
+  "origin_node_token": "FpeXw3b5piUAG7kUCgucgI1unFh",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_8554528ee6e965bad56710acde1c7847",
+  "parent_node_token": "B11mwdhmYiGFsck0eCYcU5wnngX",
+  "space_id": "7167193056431783939",
+  "title": "与 PyTorch 集成搭建图片搜索系统",
+  "slug": "image-search-with-zilliz-cloud-and-pytorch",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf",
+        "block_type": 1,
+        "children": [
+          "GtiddFWAJoEtU2xJ07FcPd9knzf",
+          "JUa1d05GtofFT1xXpMmcbcQInGW",
+          "O8aWdqZGMoRMksxXPfscy8Lenib",
+          "IUZ6de8EGoWFPRxN4Nxca7Omnmb",
+          "L0m9d9MY3oFOl5xDZ4KcFkUhnI5",
+          "VG85dYQTKoegcTxL139cIYtqn9b",
+          "IPIYdgTFNohFH0xSOuQcLmM1nhb",
+          "TRghdihQmon8HjxafVqcNzE1nBe",
+          "D2CgdXN6oowQjZxgQuPcbLqTnMg",
+          "F00JdVbfNovM17x9AW9cXii3n5X",
+          "UvJbdUlJGoS9vexQmNicbskDn8d",
+          "Q1KEddT3xomnbRxdO3Mc2aqrn0b",
+          "XGbqdd0ivoxI2cxwSDOcVGH7nch",
+          "B4yjdVchhoLMIPxPmLdcfuennSe",
+          "OiHWdHpPCot1j7xinSYc4ogRnfb",
+          "ApuGdqcOMoKWIoxI8Ohc9StDnLb",
+          "UEOGdaWckobTlyxZbHSc1ALynMg",
+          "NeNid5diroxBzRx8dOYcaABunVb",
+          "Q1EFd4wlkoD9MixypCbcRbHTnwf",
+          "MRFAdm6dnoUbnDxtJwhc1Ub2nLd",
+          "JVxgdqPZ3oBfs9xwb1yc4V5Jnbd",
+          "G7UidyfWwotAHPxYYO2cY2V8nqh",
+          "L1WldBrI6oArCXxjDCPcgPYOnbf",
+          "ZJ5edLYAXoNgQlxhMurcPt9Fnye",
+          "OYzPdsaWyoD4NCx7JdIcW3uBneh",
+          "P7D9d4Gmyottb5xJUTHcE5stnTg",
+          "QW0sd8DwBoLNaTxP1nQcAjfAn4X",
+          "L4rRdes30oXQ9YxABdQcscaJnvf",
+          "PnoudLNEEoSjemxg6GxcXezMnHb",
+          "HEscdRu87o8dokxFkDMcmYQnn4a",
+          "HHs0d4qzsoblM3xZCzbcvFTanph",
+          "TUfndhtnFoef9WxhnmscqIxxnxe",
+          "LYb7d7jlEoQmLuxIr2Acpsa0ny9",
+          "DlZWdmtgHofGrxxAvR6cw0N1neg"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "与 PyTorch 集成搭建图片搜索系统",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "GtiddFWAJoEtU2xJ07FcPd9knzf",
+        "block_type": 2,
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在本文中，我们将演示如何使用 Zilliz Cloud 搭建一个简单的图片搜索系统。该系统使用的数据集是 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Kaggle",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.kaggle.com%2Fdatasets%2Fdelayedkarma%2Fimpressionist-classifier-data"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 上提供的印象派大师分类器数据集（ Impressionist-Classifier Dataset ）。在本示例中，我们将该数据库重新托管到了一个公共的 Google Drive 中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JUa1d05GtofFT1xXpMmcbcQInGW",
+        "block_type": 2,
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本示例需要使用一个 1 CU 的 Zilliz Cloud Cluster，并使用 PyTorch 的预训练 ResNet50 模型获取指定图片的向量表示。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "O8aWdqZGMoRMksxXPfscy8Lenib",
+        "block_type": 2,
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "现在，让我们开始吧！",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IUZ6de8EGoWFPRxN4Nxca7Omnmb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "准备工作",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#before-you-start}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf"
+      },
+      {
+        "block_id": "L0m9d9MY3oFOl5xDZ4KcFkUhnI5",
+        "block_type": 2,
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本页中的脚本需要使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "pymilvus",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 连接 Zilliz Cloud，使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "torch",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 运行 Embedding 模型，使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "torchvision",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 调用模型并对图片进行预处理，使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "gdown",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 下载示例数据集，使用 tqdm 在命令行中显示进度条。我们可以运行如下命令安装这些依赖。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VG85dYQTKoegcTxL139cIYtqn9b",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "pip install pymilvus torch gdown torchvision tqdm",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 60,
+            "wrap": false
+          }
+        },
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf"
+      },
+      {
+        "block_id": "IPIYdgTFNohFH0xSOuQcLmM1nhb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "准备数据",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#prepare-data}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf"
+      },
+      {
+        "block_id": "TRghdihQmon8HjxafVqcNzE1nBe",
+        "block_type": 2,
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "首先，我们需要使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "gdown",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 从公共 Google Drive 中获取压缩文件，并使用 Python 自带的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "zipfile",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 包将其解压。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "D2CgdXN6oowQjZxgQuPcbLqTnMg",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "import gdown\nimport zipfile\n\nurl = 'https://drive.google.com/uc?id=1OYDHLEy992qu5C4C8HV5uDIkOWRTAR1_'\noutput = './paintings.zip'\ngdown.download(url, output)\n\nwith zipfile.ZipFile(\"./paintings.zip\",\"r\") as zip_ref:\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "    zip_ref.extractall(\"./paintings\")",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf"
+      },
+      {
+        "block_id": "F00JdVbfNovM17x9AW9cXii3n5X",
+        "block_type": 34,
+        "children": [
+          "UQcXdtj4Ao4zC2xXFf1cOrOFn8y",
+          "UywIdaKOuowd8zxJzXZcr6GInsg"
+        ],
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf",
+        "quote_container": {}
+      },
+      {
+        "block_id": "UQcXdtj4Ao4zC2xXFf1cOrOFn8y",
+        "block_type": 2,
+        "parent_id": "F00JdVbfNovM17x9AW9cXii3n5X",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UywIdaKOuowd8zxJzXZcr6GInsg",
+        "block_type": 2,
+        "parent_id": "F00JdVbfNovM17x9AW9cXii3n5X",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "数据集大小为 2.35 GB , 下载耗时取决于您的网络状况。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UvJbdUlJGoS9vexQmNicbskDn8d",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "主要参数",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#parameters}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf"
+      },
+      {
+        "block_id": "Q1KEddT3xomnbRxdO3Mc2aqrn0b",
+        "block_type": 2,
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为了更好的管理脚本，我们将一些主要的公共参数提取出来列在下方。你可以根据需要修改这些参数。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XGbqdd0ivoxI2cxwSDOcVGH7nch",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "# 1. Set up the name of the collection to be created.\nCOLLECTION_NAME = 'image_search_db'\n\n# 2. Set up the dimension of the embeddings.\nDIMENSION = 2048\n\n# 3. Set the inference parameters\nBATCH_SIZE = 128\nTOP_K = 3\n\n# 4. Set up the connection parameters for your Zilliz Cloud cluster.\nURI = 'YOUR_CLUSTER_ENDPOINT'\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "TOKEN = 'YOUR_CLUSTER_TOKEN'",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf"
+      },
+      {
+        "block_id": "B4yjdVchhoLMIPxPmLdcfuennSe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "设置 Zilliz Cloud",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#setting-up-zilliz-cloud}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf"
+      },
+      {
+        "block_id": "OiHWdHpPCot1j7xinSYc4ogRnfb",
+        "block_type": 2,
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在这一小节，我们将完成 Zilliz Cloud 的设置，涉及如下步骤：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ApuGdqcOMoKWIoxI8Ohc9StDnLb",
+        "block_type": 13,
+        "children": [
+          "FVBPdjAgboP48MxAKRycfmbuned"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "使用提供的端点 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "URI",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 连接 Zilliz Cloud cluster。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf"
+      },
+      {
+        "block_id": "FVBPdjAgboP48MxAKRycfmbuned",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from pymilvus import connections\n\n# Connect to Zilliz Cloud and create a collection\nconnections.connect(\n    alias='default',\n    # Public endpoint obtained from Zilliz Cloud\n    uri=URI,\n    token=TOKEN\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ")",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "ApuGdqcOMoKWIoxI8Ohc9StDnLb"
+      },
+      {
+        "block_id": "UEOGdaWckobTlyxZbHSc1ALynMg",
+        "block_type": 13,
+        "children": [
+          "JNjXdbLWZoOLNlxyBhRcmRgKnIf"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果需要创建的 Collection 已存在，删除该 Collection。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf"
+      },
+      {
+        "block_id": "JNjXdbLWZoOLNlxyBhRcmRgKnIf",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from pymilvus import utility\n\n# Remove any previous collections with the same name\nif COLLECTION_NAME in utility.list_collections():\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "    utility.drop_collection(COLLECTION_NAME)",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "UEOGdaWckobTlyxZbHSc1ALynMg"
+      },
+      {
+        "block_id": "NeNid5diroxBzRx8dOYcaABunVb",
+        "block_type": 13,
+        "children": [
+          "KLWCdl1zFo00yFxt5StcLLH9nRe"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建一个 Collection 用于存储图片 ID，图片路径以及该图片的向量表示。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf"
+      },
+      {
+        "block_id": "KLWCdl1zFo00yFxt5StcLLH9nRe",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from pymilvus import FieldSchema, CollectionSchema, DataType, Collection\n\nfields = [\n    FieldSchema(name='id', dtype=DataType.INT64, is_primary=True, auto_id=True),\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "    FieldSchema(name='filepath', dtype=DataType.VARCHAR, max_length=200),  ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# VARCHARS need a maximum length, so for this example they are set to 200 characters",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": true,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\n    FieldSchema(name='image_embedding', dtype=DataType.FLOAT_VECTOR, dim=DIMENSION)\n]\n\nschema = CollectionSchema(fields=fields)\n\ncollection = Collection(\n    name=COLLECTION_NAME,\n    schema=schema,\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ")",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "NeNid5diroxBzRx8dOYcaABunVb"
+      },
+      {
+        "block_id": "Q1EFd4wlkoD9MixypCbcRbHTnwf",
+        "block_type": 13,
+        "children": [
+          "Pc5ddJP08oCpHWxCTsZceGgQn3d"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为 Collection 创建索引文件，并将 Collection 加载到内存。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf"
+      },
+      {
+        "block_id": "Pc5ddJP08oCpHWxCTsZceGgQn3d",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "index_params = {\n    'index_type': 'AUTOINDEX',\n    'metric_type': 'L2',\n    'params': {}\n}\n\ncollection.create_index(\n    field_name='image_embedding', \n    index_params=index_params\n)\n\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "collection.load()",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "Q1EFd4wlkoD9MixypCbcRbHTnwf"
+      },
+      {
+        "block_id": "MRFAdm6dnoUbnDxtJwhc1Ub2nLd",
+        "block_type": 2,
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在完成上述步骤后，我们就可以向 Collection 中插入数据了。在创建索引文件后插入的任何数据都会被自动索引并可被立即用于搜索。如果数据正在索引过程中，Zilliz Cloud 会使用暴力搜索模式，所以搜索过程可能会比较慢。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JVxgdqPZ3oBfs9xwb1yc4V5Jnbd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "插入数据",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#insert-data}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf"
+      },
+      {
+        "block_id": "G7UidyfWwotAHPxYYO2cY2V8nqh",
+        "block_type": 2,
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在本示例中，我们将使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "torch",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 包中的 ResNet50 模型。为了获取指定图片的向量表示，我们将移除模型的最后一个分类层。这样一来，经过模型获取的向量维度均为2048。下列代码块中，我们使用了 torch 包中所有模型均会使用相同的预处理方法。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "L1WldBrI6oArCXxjDCPcgPYOnbf",
+        "block_type": 2,
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在下列步骤中，我们将会：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZJ5edLYAXoNgQlxhMurcPt9Fnye",
+        "block_type": 13,
+        "children": [
+          "VAvBdDvFRo00XexHdHAcHoWdnVb"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "加载数据。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf"
+      },
+      {
+        "block_id": "VAvBdDvFRo00XexHdHAcHoWdnVb",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "import glob\n\n# Get the filepaths of the images\npaths = glob.glob('./paintings/paintings/**/*.jpg', recursive=True)\nlen(paths)\n\n# Output\n#\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# 4978",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "ZJ5edLYAXoNgQlxhMurcPt9Fnye"
+      },
+      {
+        "block_id": "OYzPdsaWyoD4NCx7JdIcW3uBneh",
+        "block_type": 13,
+        "children": [
+          "HA7zdAeudoC3OOxHF7GcpAZwnee"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "预处理数据，将其分为不同的批次。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf"
+      },
+      {
+        "block_id": "HA7zdAeudoC3OOxHF7GcpAZwnee",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "import torch\n\n# 加载 Embedding 模型，并移除模型的最后一层。\nmodel = torch.hub.load('pytorch/vision:v0.10.0', 'resnet50', pretrained=True)\nmodel = torch.nn.Sequential(*(list(model.children())[:-1]))\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "model.eval()",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "OYzPdsaWyoD4NCx7JdIcW3uBneh"
+      },
+      {
+        "block_id": "P7D9d4Gmyottb5xJUTHcE5stnTg",
+        "block_type": 13,
+        "children": [
+          "KDBod05JQo4fBkxxBC3cMUBVnxh"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "获取数据的向量表示。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf"
+      },
+      {
+        "block_id": "KDBod05JQo4fBkxxBC3cMUBVnxh",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from torchvision import transforms\n\n# 对图片进行预处理。\npreprocess = transforms.Compose([\n    transforms.Resize(256),\n    transforms.CenterCrop(224),\n    transforms.ToTensor(),\n    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "])",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "P7D9d4Gmyottb5xJUTHcE5stnTg"
+      },
+      {
+        "block_id": "QW0sd8DwBoLNaTxP1nQcAjfAn4X",
+        "block_type": 13,
+        "children": [
+          "N7oOdlel5ogYAExnj7NcR4tnnMh"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "向 Collection 插入数据。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf"
+      },
+      {
+        "block_id": "N7oOdlel5ogYAExnj7NcR4tnnMh",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from PIL import Image\nfrom tqdm import tqdm\n\n# Embed function that embeds the batch and inserts it\ndef embed(data):\n    with torch.no_grad():\n        output = model(torch.stack(data[0])).squeeze()\n        collection.insert([data[1], output.tolist()])\n\ndata_batch = [[],[]]\n\n# Read the images into batches for embedding and insertion\nfor path in tqdm(paths):\n    im = Image.open(path).convert('RGB')\n    data_batch[0].append(preprocess(im))\n    data_batch[1].append(path)\n    if len(data_batch[0]) % BATCH_SIZE == 0:\n        embed(data_batch)\n        data_batch = [[],[]]\n\n# Embed and insert the remainder\nif len(data_batch[0]) != 0:\n    embed(data_batch)\n\n# Call a flush to index any unsealed segments.\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "time.sleep(5)",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "QW0sd8DwBoLNaTxP1nQcAjfAn4X"
+      },
+      {
+        "block_id": "L4rRdes30oXQ9YxABdQcscaJnvf",
+        "block_type": 34,
+        "children": [
+          "K5lrddivyoQiAhxt1ivcvIYfncu",
+          "FiCsdHb7UoKOPuxf68LcRXshnMe",
+          "ZXhpdGPD6o1gsLxM7YRcYKcunFf"
+        ],
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf",
+        "quote_container": {}
+      },
+      {
+        "block_id": "K5lrddivyoQiAhxt1ivcvIYfncu",
+        "block_type": 2,
+        "parent_id": "L4rRdes30oXQ9YxABdQcscaJnvf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FiCsdHb7UoKOPuxf68LcRXshnMe",
+        "block_type": 2,
+        "parent_id": "L4rRdes30oXQ9YxABdQcscaJnvf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "由于获取图片的向量表示耗时较长，本步骤相对比较耗时。可以喝点咖啡，稍事休息。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZXhpdGPD6o1gsLxM7YRcYKcunFf",
+        "block_type": 2,
+        "parent_id": "L4rRdes30oXQ9YxABdQcscaJnvf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "PyTorch 可能与 Python 3.9 及之前版本存在不兼容的问题。建议使用 Python 3.10 及之后版本。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PnoudLNEEoSjemxg6GxcXezMnHb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "执行搜索",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#perform-search}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf"
+      },
+      {
+        "block_id": "HEscdRu87o8dokxFkDMcmYQnn4a",
+        "block_type": 2,
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在向 Zilliz Cloud 插入所有数据后，我们就可以开始执行搜索了。在本示例中，我们将使用两张示例图片执行相似性搜索。由于代码中执行的是批量搜索，因此搜索时间是指完成同一批次中所有图片的相似性搜索的时间。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HHs0d4qzsoblM3xZCzbcvFTanph",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "import glob\n\n# Get the filepaths of the search images\nsearch_paths = glob.glob('./paintings/test_paintings/**/*.jpg', recursive=True)\nprint(len(search_paths))\n\n# Output\n#\n# 2\n\nimport time\nfrom matplotlib import pyplot as plt\n\n# Embed the search images\ndef embed(data):\n    with torch.no_grad():\n        ret = model(torch.stack(data))\n        # If more than one image, use squeeze\n        if len(ret) > 1:\n            return ret.squeeze().tolist()\n        # Squeeze would remove batch for single image, so using flatten\n        else:\n            return torch.flatten(ret, start_dim=1).tolist()\n\ndata_batch = [[],[]]\n\nfor path in search_paths:\n    im = Image.open(path).convert('RGB')\n    data_batch[0].append(preprocess(im))\n    data_batch[1].append(path)\n\nembeds = embed(data_batch[0])\nstart = time.time()\nres = collection.search(embeds, anns_field='image_embedding', param={}, limit=TOP_K, output_fields=['filepath'])\nfinish = time.time()\n\n# Show the image results\nf, axarr = plt.subplots(len(data_batch[1]), TOP_K + 1, figsize=(20, 10), squeeze=False)\n\nfor hits_i, hits in enumerate(res):\n    axarr[hits_i][0].imshow(Image.open(data_batch[1][hits_i]))\n    axarr[hits_i][0].set_axis_off()\n    axarr[hits_i][0].set_title('Search Time: ' + str(finish - start))\n    for hit_i, hit in enumerate(hits):\n        axarr[hits_i][hit_i + 1].imshow(Image.open(hit.entity.get('filepath')))\n        axarr[hits_i][hit_i + 1].set_axis_off()\n        axarr[hits_i][hit_i + 1].set_title('Distance: ' + str(hit.distance))\n\n# Save the search result in a separate image file alongside your script.\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "plt.savefig('search_result.png')",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf"
+      },
+      {
+        "block_id": "TUfndhtnFoef9WxhnmscqIxxnxe",
+        "block_type": 2,
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本示例的搜索结果如下。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LYb7d7jlEoQmLuxIr2Acpsa0ny9",
+        "block_type": 27,
+        "image": {
+          "align": 2,
+          "height": 1455,
+          "token": "XMxqbJd9io3Vx3x8Qcocj7avn2f",
+          "width": 2766
+        },
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf"
+      },
+      {
+        "block_id": "DlZWdmtgHofGrxxAvR6cw0N1neg",
+        "block_type": 2,
+        "parent_id": "KdmIdXX4yoNR7Zx9CQecHEaMnyf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 48
+  }
+}

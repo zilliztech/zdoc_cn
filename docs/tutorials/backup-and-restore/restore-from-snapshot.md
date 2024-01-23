@@ -2,6 +2,7 @@
 slug: /restore-from-snapshot
 beta: FALSE
 notebook: FALSE
+token: NtkswF6UEi3kB0k8XSEcOKkhnld
 sidebar_position: 4
 ---
 
@@ -41,3 +42,4 @@ import Admonition from '@theme/Admonition';
 - [查看备份快照](./view-snapshot-details)
 
 - [删除备份快照](./delete-snapshot)
+

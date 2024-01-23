@@ -2,6 +2,7 @@
 slug: /faq-collection
 beta: null
 notebook: null
+token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 3
 ---
 
@@ -9,7 +10,7 @@ sidebar_position: 3
 
 **1 个集群中最多可创建多少个 Collection？{#how-many-collections-are-allowed-in-a-single-cluster}**
 
-## Contents
+## 目录
 
 - [1 个集群中最多可创建多少个 Collection？](#how-many-collections-are-allowed-in-a-single-cluster)
 - [如何确认我的 Collection 是否开启了动态 Schema？](#how-can-i-know-if-dynamic-schema-is-enabled-for-my-collection)
@@ -20,12 +21,25 @@ sidebar_position: 3
 - [如何为创建的 Collection 设置存留时间（TTL）属性？](#how-to-set-the-ttl-time-to-live-property-of-a-created-collection)
 - [1 个 Collection 中最多可以添加多少个字段？](#is-there-any-limit-to-the-number-of-fields-i-can-add-in-a-collection)
 
-## 常见问题
+## 问答
 
 
 ### 1 个集群中最多可创建多少个 Collection？{#how-many-collections-are-allowed-in-a-single-cluster}
 
-1 个集群中可创建的 Collection 数量取决于集群的 CU 大小。1 CU 的集群中可最多创建 32 个 Collection。
+集群可创建的 Collection 数量受集群的 CU 数量影响：
+
+|            |  最大 Collection 数 |
+| ---------- | ---------------- |
+|  小于等于 8 CU |  32              |
+|  大于 8 CU   |  256             |
+
+如达到集群可创建 Collection 数量上限，请尝试以下方法：
+
+1. 为集群[扩容](./manage-cluster#scale-up-cluster)。
+
+1. [删除](./drop-collection)未使用的 Collection。
+
+1. 使用 [Partition Key](./use-partition-key) 创建 Partition。
 
 ### 如何确认我的 Collection 是否开启了动态 Schema？{#how-can-i-know-if-dynamic-schema-is-enabled-for-my-collection}
 

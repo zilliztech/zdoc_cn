@@ -2,6 +2,7 @@
 slug: /question-answering-using-zilliz-cloud-and-cohere
 beta: FALSE
 notebook: 82_integrations_cohere.ipynb
+token: N7KvwFAe8i7XWZk5aEGchRsynJA
 sidebar_position: 3
 ---
 
@@ -17,7 +18,7 @@ import Admonition from '@theme/Admonition';
 本示例中的脚本需要安装 **pymilvus**，**cohere**，**pandas**，**numpy** 和 **tqdm**。其中，**pymilvus** 是 Zilliz Cloud的 Python 客户端，如果你的系统中没有安装它们，可以使用如下命令完成安装。
 
 ```shell
-pip install pymilvus cohere pandas numpy tqdm
+pip install pymilvus cohere pandas numpy tqdm openai tiktoken
 ```
 
 然后，你可以按照如下方式加载它们。
@@ -36,27 +37,27 @@ import time, os, json
 在这里，我们定义了一些示例中将要使用的主要参数。你需要根据实际情况和参数旁的注释填写或替换成相应的内容。
 
 ```python
-# 1. Set the The SQuAD dataset url.
+**# 1. Set the The SQuAD dataset url.**
 FILE = 'https://rajpurkar.github.io/SQuAD-explorer/dataset/train-v2.0.json' 
 
-# 2. Set up the name of the collection to be created.
+**# 2. Set up the name of the collection to be created.**
 COLLECTION_NAME = 'question_answering_db'
 
-# 3. Set up the dimension of the embeddings.
+**# 3. Set up the dimension of the embeddings.**
 DIMENSION = 768
 
-# 4. Set the number of entities to create and the number of entities to insert at a time.
+**# 4. Set the number of entities to create and the number of entities to insert at a time.**
 COUNT = 5000
 BATCH_SIZE = 96
 
-# 5. Set up the cohere api key
+**# 5. Set up the cohere api key**
 COHERE_API_KEY = "YOUR_COHERE_API_KEY"
 
-# 6. Set up the connection parameters for your Zilliz Cloud cluster.
+**# 6. Set up the connection parameters for your Zilliz Cloud cluster.**
 URI = 'YOUR_CLUSTER_ENDPOINT'
 
-# 7. Set up the token for your Zilliz Cloud cluster.
-# You can either use an API key or a set of cluster username and password joined by a colon.
+**# 7. Set up the token for your Zilliz Cloud cluster.**
+**# You can either use an API key or a set of cluster username and password joined by a colon.**
 TOKEN = 'YOUR_CLUSTER_TOKEN'
 ```
 
@@ -195,7 +196,6 @@ time.sleep(10)
 
 ```python
 # Search the cluster for an answer to a question text
-# Search the cluster for an answer to a question text
 def search(text, top_k = 5):
 
     # AUTOINDEX does not require any search params 
@@ -219,7 +219,6 @@ def search(text, top_k = 5):
     } for x in zip(distances, entities)]
 
     return ret
-            
 
 # Ask these questions
 search_questions = ['What kills bacteria?', 'What\'s the biggest dog?']

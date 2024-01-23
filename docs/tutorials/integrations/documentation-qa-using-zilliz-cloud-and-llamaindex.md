@@ -2,6 +2,7 @@
 slug: /documentation-qa-using-zilliz-cloud-and-llamaindex
 beta: FALSE
 notebook: 85_integrations_llamaindex.ipynb
+token: BSKawjPvqiNAcgkGGIbct8L6nOd
 sidebar_position: 6
 ---
 
@@ -68,14 +69,15 @@ environ["TOKENIZERS_PARALLELISM"] = "false"
 当我们完成数据下载后，就可以使用 LlamaIndex 来处理它们，并将处理后的数据上传到 Zilliz Cloud。具体来说，需要完成如下两步：
 
 - 使用 Llama Hub 提供的 MarkdownReader 将所有 Markdown 页面转换成 LlamaIndex 文档对象。
+
     ```python
     from llama_index import download_loader
     from glob import glob
-
+    
     # Load the markdown reader from the hub
     MarkdownReader = download_loader("MarkdownReader")
     markdownreader = MarkdownReader()
-
+    
     # Grab all markdown files and convert them using the reader
     docs = []
     for file in glob("./milvus-docs/site/en/**/*.md", recursive=True):
@@ -84,10 +86,11 @@ environ["TOKENIZERS_PARALLELISM"] = "false"
     ```
 
 - 将这些文档对象存入 Zilliz Cloud。该步骤要求同时配置 Zilliz Cloud 和 OpenAI。
+
     ```python
     from llama_index import download_loader, VectorStoreIndex, ServiceContext
     from llama_index.vector_stores import MilvusVectorStore
-
+    
     # Push all markdown files into Zilliz Cloud
     vector_store = MilvusVectorStore(
         uri=URI, 
@@ -96,10 +99,10 @@ environ["TOKENIZERS_PARALLELISM"] = "false"
         similarity_metric="L2",
         dim=DIMENSION,
     )
-
+    
     embed_model = HuggingFaceEmbedding(model_name="sentence-transformers/all-MiniLM-L12-v2")
     service_context = ServiceContext.from_defaults(embed_model=embed_model)
-
+    
     index = VectorStoreIndex.from_documents(
         documents=docs, 
         service_context=service_context,
@@ -110,16 +113,6 @@ environ["TOKENIZERS_PARALLELISM"] = "false"
 ## 开始提问{#ask-question}
 
 在把所有文档都存入 Zilliz Cloud 后，我们就可以开始提问了。所有提问都会触发在知识库范围内的相似性搜索，所有相关结果都会被用来生成问题的答案。
-
-```python
-s = index.query("What is a collection?")
-print(s)
-
-# Output:
-# A collection in Milvus is a logical grouping of entities, similar to a table in a relational database management system (RDBMS). It is used to store and manage entities.
-```
-
-另外，我们还可以保存我们的连接信息，并使用 **save_to_dict()** 和 **load_from_dict()** 来加载这些信息。
 
 ```python
 query_engine = index.as_query_engine()

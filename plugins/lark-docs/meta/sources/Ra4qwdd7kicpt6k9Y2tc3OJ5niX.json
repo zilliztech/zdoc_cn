@@ -1,0 +1,293 @@
+{
+  "creator": "ou_8554528ee6e965bad56710acde1c7847",
+  "has_child": false,
+  "node_create_time": "1697523881",
+  "node_token": "Ra4qwdd7kicpt6k9Y2tc3OJ5niX",
+  "node_type": "origin",
+  "obj_create_time": "1697523881",
+  "obj_edit_time": "1705926503",
+  "obj_token": "RnoOdVlBAoSsWOxfHR0cnsffnAd",
+  "obj_type": "docx",
+  "origin_node_token": "Ra4qwdd7kicpt6k9Y2tc3OJ5niX",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_8554528ee6e965bad56710acde1c7847",
+  "parent_node_token": "QxcnwBks8izBAQkjP8Ycl1cEnQh",
+  "space_id": "7167193056431783939",
+  "title": "版本说明书（2023/10/17）",
+  "slug": "release-notes-221",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "RnoOdVlBAoSsWOxfHR0cnsffnAd",
+        "block_type": 1,
+        "children": [
+          "NsLwd5DdNomZWkx9Ykec3XLqnPO",
+          "Cglzd1coIo59ZIxx7rocJghznhc",
+          "Re2Jd2VJsoKPXBxiX3fcoHrnnGb",
+          "Tnd3dGP0MoZj86xawSgcz4QOnAg",
+          "IRkRdI4DSoLehTxXOdfcdaJjn7e",
+          "NuCudDQbKorNv0xaNxJc2dPLnBc",
+          "YRTXdhUoko0nlUxCNB3cfIMAntg",
+          "WdfEddh9BoVxkBxNu9Zcnq99nYg"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "版本说明书（2023/10/17）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "NsLwd5DdNomZWkx9Ykec3XLqnPO",
+        "block_type": 2,
+        "parent_id": "RnoOdVlBAoSsWOxfHR0cnsffnAd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "发布日期：2023年10月17日",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Cglzd1coIo59ZIxx7rocJghznhc",
+        "block_type": 2,
+        "parent_id": "RnoOdVlBAoSsWOxfHR0cnsffnAd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "我们很高兴地宣布Zilliz Cloud 2.2.1的发布。此版本引入了一系列增强和功能：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Re2Jd2VJsoKPXBxiX3fcoHrnnGb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Milvus 兼容性",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "RnoOdVlBAoSsWOxfHR0cnsffnAd"
+      },
+      {
+        "block_id": "Tnd3dGP0MoZj86xawSgcz4QOnAg",
+        "block_type": 2,
+        "parent_id": "RnoOdVlBAoSsWOxfHR0cnsffnAd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "此次发布兼容 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Milvus 2.2.x",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IRkRdI4DSoLehTxXOdfcdaJjn7e",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集群增强：引入新 CU ，提升灵活性{#cluster-enhancements-increased-flexibility-with-a-new-cu-size-option}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "RnoOdVlBAoSsWOxfHR0cnsffnAd"
+      },
+      {
+        "block_id": "NuCudDQbKorNv0xaNxJc2dPLnBc",
+        "block_type": 2,
+        "parent_id": "RnoOdVlBAoSsWOxfHR0cnsffnAd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过新的集群规模选项--6 CU，集群管理变得更加灵活。如果您数据集规模较小、希望获得更具成本效益和效率的集群，该选项非常适合您。期望此次更新能够更好地提升您的使用体验。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YRTXdhUoko0nlUxCNB3cfIMAntg",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "现金充值{#support-for-advance-pay}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "RnoOdVlBAoSsWOxfHR0cnsffnAd"
+      },
+      {
+        "block_id": "WdfEddh9BoVxkBxNu9Zcnq99nYg",
+        "block_type": 2,
+        "parent_id": "RnoOdVlBAoSsWOxfHR0cnsffnAd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "我们现在提供现金充值服务。如果您选择与我们签订离线合同并提前支付服务费用，可以使用我们提供的现金充值渠道。该功能旨在简化您的内部财务和采购流程，最大限度地降低您可能面临的风险。\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "如果您或您的组织有特殊要求或想了解更多有关现金充值服务的信息，请随时联系我们。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 9
+  }
+}

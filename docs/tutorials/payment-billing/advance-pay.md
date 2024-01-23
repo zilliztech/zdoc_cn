@@ -2,6 +2,7 @@
 slug: /advance-pay
 beta: FALSE
 notebook: FALSE
+token: JZqrwH8V8i6a3jktSQgcyXAEnAg
 sidebar_position: 2
 ---
 
@@ -17,6 +18,7 @@ import Admonition from '@theme/Admonition';
 如需进行现金充值，您需要先通过[企业认证](./enterprise-certification)。
 
 1. 点击左侧导航栏中的**账单**。在**现金余额**部分，点击**充值**按钮。
+
     ![add-fund-cn](/img/add-fund-cn.png)
 
 1. 查看弹窗中的对公转账收款信息，并进行线下转账。转账成功后，您将收到 **Zilliz Cloud 充值成功**的邮件提醒。请注意：充值金额预计在转账后的 5～10 分钟后到账。
@@ -31,14 +33,15 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-1. 现金余额监控默认关闭，如果需要打开现金余额监控，请参阅[现金余额监控](./advance-pay-balance-monitor)。
+1. 现金余额监控默认关闭，如果需要打开现金余额监控，请参阅[现金余额监控](./undefined)。
 
 ## 相关文档{#related-topics}
 
-- [企业认证](./enterprise-certification) 
+- [企业认证](./enterprise-certification)
 
-- [订阅阿里云市场](./subscribe-on-aliyun-marketplace) 
+- [订阅阿里云市场](./subscribe-on-aliyun-marketplace)
 
-- [查看账单与支付方式](./view-invoice) 
+- [查看账单与支付方式](./view-invoice)
 
 - [开具发票](./invoice) 
+

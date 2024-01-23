@@ -2,6 +2,7 @@
 slug: /faq-monitors-and-metrics
 beta: null
 notebook: null
+token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 9
 ---
 
@@ -9,12 +10,12 @@ sidebar_position: 9
 
 本文列举了在 Zilliz Cloud 使用监控与指标时可能遇到的常见问题及对应解决方法。
 
-## Contents
+## 目录
 
 - [集群内容达到上限后，无法插入数据。如何解决这个问题？](#what-can-i-do-if-my-cluster-memory-quota-has-been-exhausted-and-i-cannot-insert-data-as-a-result)
 - [为什么删除 Collection 后，内存用量依旧保持不变？](#why-doesnt-the-memory-consumption-decrease-even-if-i-dropped-a-collection)
 
-## 常见问题
+## 问答
 
 
 

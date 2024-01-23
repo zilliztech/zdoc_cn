@@ -1,0 +1,4448 @@
+{
+  "creator": "ou_e55a208a81fc721928685fc3df9cb678",
+  "has_child": false,
+  "node_create_time": "1694688156",
+  "node_token": "GLk6wr8jviPyzHk7DjRc56YsnNf",
+  "node_type": "origin",
+  "obj_create_time": "1694688156",
+  "obj_edit_time": "1705924476",
+  "obj_token": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+  "obj_type": "docx",
+  "origin_node_token": "GLk6wr8jviPyzHk7DjRc56YsnNf",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_node_token": "BKs7wBx3KiIvy0kxpE1cVxKNnQp",
+  "space_id": "7167193056431783939",
+  "title": "准备导入数据",
+  "slug": "prepare-source-data",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "block_type": 1,
+        "children": [
+          "JgH0du7Y5omQFIxDzOWclNQTn8f",
+          "AJfvdboexogjdWxpXoEc4GT8nob",
+          "EH41dATntoLf5KxyJnpcKH01nNe",
+          "UzdHd2fD3oWgb2xMje4ck54Mnl4",
+          "LsDkduRDpoYB7GxzyMAcmK0Dn9g",
+          "I2uHdj4plo5wW8xg9DscOBUNnte",
+          "XKG6dpYlqopF1Jx3TMrc2gKOngb",
+          "JGCYdl31eoAdXVxzs2Scloa6nRd",
+          "HwE6dHgleoHeTGxJpVFcX8KmnLc",
+          "SbikdFRlKoPawLxwSeccofucnSe",
+          "SglGdFzEFoFmEoxkK3qcjAdjnNe",
+          "Gz0dd8oKFoiwUox3RStcwLLonGc",
+          "JwmddwAfQoPxLVxCMdlcBqAKnhY",
+          "Fyzwdqi38ofURdxq1sbcpW5Lnqg",
+          "W5q4dIF4UoO2k1xUI00c8vL2n9b",
+          "Stk9dHIPPoQRbsxxmc2co4WXnuh",
+          "CgYkdX4ksod9raxFchgc1OoGndc",
+          "EpfPdVc9Vo9s6ixcuaVcgfcZn2d",
+          "WHBMdQv1RojkcyxCpKicbdwlnHh",
+          "TxRldvNrHoY3JRxckktc0Jvjnvb",
+          "GWu7dH82sompLExj3gJcNo59nNc",
+          "Y2Azd5am0oUUSlx4B6Qc8BbVndb",
+          "AVdadC2PsodLdPxgTgScCJOXnRf",
+          "DPW4do7avoJqJ6x22xecSk34n5e",
+          "XP4SdTFIGor4bOxspI4c7Kkunqb",
+          "LUL0dpTFao6cWPxswYTcqJR9nag",
+          "N5rgduckmo8rFgxRWmzc4vc6nOb",
+          "SOJ7dBsiKoDQmQxNWU4cd3itn5c",
+          "E8yNdHBPlob4Uzx8f0JcNxdynHg",
+          "GzPqd4qYSoAroXxJd7Dc3C1pnbf",
+          "DoZJdThq1oKo6axgnu1ciiFQn3d",
+          "El0OdwoRco1c8Ix9kvucjFBjnoe",
+          "CCyFdKhH7ooR2zxDmA0cRY66nYK",
+          "MAuZdD8uPoFrVNxhKdhcwc9GnBn",
+          "Ij3GdJQlxodO3RxYNepcVTFWnog",
+          "N1Msd7xypom25zxrTBqcbw1snwg",
+          "HhTbdsFWioV8pjxtunKc2CjNnLe",
+          "Pb2vdCYRdof82LxHHXhcbYOOn7g",
+          "H8pVd9Iogons7hxD31Dca7RUnOg",
+          "JfqqdJsLboYpN0xxWHPcpr0Ynkf"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "准备导入数据",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "JgH0du7Y5omQFIxDzOWclNQTn8f",
+        "block_type": 2,
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本节将介绍在 Zilliz Cloud 上进行批量数据导入前需要完成的准备工作以及待导入数据需要满足的相关要求。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AJfvdboexogjdWxpXoEc4GT8nob",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "源数据与目标 Collection{#map-source-data-to-collection}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "EH41dATntoLf5KxyJnpcKH01nNe",
+        "block_type": 2,
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "批量导入的目标 Collection 要求待导入源数据的结构和 Collection 的 Schema 对齐。下图演示了源数据各字段和目标 Collection 的 Schema 的各列的映射关系。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UzdHd2fD3oWgb2xMje4ck54Mnl4",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D21994-1137%26mode%3Ddesign%26t%3DV8RJ3UClJyyi2YEW-4"
+          }
+        },
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "LsDkduRDpoYB7GxzyMAcmK0Dn9g",
+        "block_type": 2,
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您需要仔细分析您的数据，并根据分析结果设计目标 Collection 的 Schema。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "I2uHdj4plo5wW8xg9DscOBUNnte",
+        "block_type": 2,
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "以上图中的 JSON 数据为例，源数据中包含两条记录，每条数据包含 6 个字段。而目标 Collection 的 Schema 中选择性地包含了其中的四个字段，分别是 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "id",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "vector",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "scalar_1 ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "scalar_2",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XKG6dpYlqopF1Jx3TMrc2gKOngb",
+        "block_type": 2,
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在设计 Schema 时，还有两个问题需要注意：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JGCYdl31eoAdXVxzs2Scloa6nRd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "是否启用 AutoID",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "QtRddkPcloNMedxsj7lc85PBnng"
+        ],
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "QtRddkPcloNMedxsj7lc85PBnng",
+        "block_type": 2,
+        "parent_id": "JGCYdl31eoAdXVxzs2Scloa6nRd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "字段 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "id",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 为 Collection 的主键。如果需要主键随数据插入自动增长，可以选择启用 AutoID。在这种情况下，源数据中不需要包含 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "id ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "字段。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HwE6dHgleoHeTGxJpVFcX8KmnLc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "是否启用动态字段",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "XATqdkMpgonexaxpq8Uc99imnSg"
+        ],
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "XATqdkMpgonexaxpq8Uc99imnSg",
+        "block_type": 2,
+        "parent_id": "HwE6dHgleoHeTGxJpVFcX8KmnLc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在启用了动态字段后，目标 Collection 也可以存储 Schema 中未定义的字段。Zilliz Cloud 预留了一个名为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "$meta",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 的 JSON 字段用来以键值对的方式存放这些未定义字段。在上图中，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "dynamic_field_1",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "dynamic_field_2",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 字段及这些字段对应的值将会以键值对的方式存放在 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "$meta",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 字段中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SbikdFRlKoPawLxwSeccofucnSe",
+        "block_type": 2,
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "我们可以按上图所示的数据，创建目标 Collection 的 Schema。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SglGdFzEFoFmEoxkK3qcjAdjnNe",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from pymilvus import CollectionSchema, FieldSchema, DataType\n\nschema = CollectionSchema(\n    fields=[\n        FieldSchema(name=\"id\", dtype=DataType.INT64, is_primary=True),\n        FieldSchema(name=\"vector\", dtype=DataType.FLOAT_VECTOR, dim=768),\n        FieldSchema(name=\"scalar_1\", dtype=DataType.VARCHAR, max_length=512),\n        FieldSchema(name=\"scalar_2\", dtype=DataType.INT64)\n    ],\n    auto_id=False,\n    enable_dynamic_field=True,\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ")",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "Gz0dd8oKFoiwUox3RStcwLLonGc",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "源数据格式相关要求{#source-data-requirements}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "JwmddwAfQoPxLVxCMdlcBqAKnhY",
+        "block_type": 2,
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 支持导入 JSON、Parquet 和 NumPy 数据。如果您的数据是这些格式但是无法导入到您的目标 Collection 中，请检查您的数据是否满足相关要求。如果您的数据并不是这些格式，请使用 BulkWriter 将您的原始数据转换成 Zilliz Cloud 可识别的格式。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Fyzwdqi38ofURdxq1sbcpW5Lnqg",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "JSON{#json-file}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "W5q4dIF4UoO2k1xUI00c8vL2n9b",
+        "block_type": 2,
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "一个合法的 JSON 文件有一个名为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "rows",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 的根字段，其对应的值为一个字典列表。该列表中，每个字典均对应一个匹配目标 Collection Schema 的 Entity 记录。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Stk9dHIPPoQRbsxxmc2co4WXnuh",
+        "block_type": 31,
+        "children": [
+          "AKxXd6gU4oqggKxR7NTcF2H3ncd",
+          "JqYBdyYodoE4vjxtrL7coUS9nJb",
+          "Nhqvd1uTboB3U8xaBMGcPBJIndb",
+          "OGTAdAKNVoVTDVxU3FPcIfkXndd",
+          "YCcTdme1KoTffaxiTZMcA18dncd",
+          "ZNupd7AgDoJZ4vx4DX0cu3wWngf",
+          "KiX6dFnEdokVVsx4DUvcDsJ8nBd",
+          "NK79dY0H6okElBxpIQHc7f3Fngh"
+        ],
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "table": {
+          "cells": [
+            "AKxXd6gU4oqggKxR7NTcF2H3ncd",
+            "JqYBdyYodoE4vjxtrL7coUS9nJb",
+            "Nhqvd1uTboB3U8xaBMGcPBJIndb",
+            "OGTAdAKNVoVTDVxU3FPcIfkXndd",
+            "YCcTdme1KoTffaxiTZMcA18dncd",
+            "ZNupd7AgDoJZ4vx4DX0cu3wWngf",
+            "KiX6dFnEdokVVsx4DUvcDsJ8nBd",
+            "NK79dY0H6okElBxpIQHc7f3Fngh"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              255,
+              540
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 4
+          }
+        }
+      },
+      {
+        "block_id": "AKxXd6gU4oqggKxR7NTcF2H3ncd",
+        "block_type": 32,
+        "children": [
+          "ZbSGdyK39owKomxFDCwcZOV8nfh"
+        ],
+        "parent_id": "Stk9dHIPPoQRbsxxmc2co4WXnuh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ZbSGdyK39owKomxFDCwcZOV8nfh",
+        "block_type": 2,
+        "parent_id": "AKxXd6gU4oqggKxR7NTcF2H3ncd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "项目",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JqYBdyYodoE4vjxtrL7coUS9nJb",
+        "block_type": 32,
+        "children": [
+          "YRmmdSxaQoL3s1xOLcNcEYu9nqc"
+        ],
+        "parent_id": "Stk9dHIPPoQRbsxxmc2co4WXnuh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "YRmmdSxaQoL3s1xOLcNcEYu9nqc",
+        "block_type": 2,
+        "parent_id": "JqYBdyYodoE4vjxtrL7coUS9nJb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Nhqvd1uTboB3U8xaBMGcPBJIndb",
+        "block_type": 32,
+        "children": [
+          "HDjld8KB1ovMVExkECmcJUfGnEh"
+        ],
+        "parent_id": "Stk9dHIPPoQRbsxxmc2co4WXnuh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "HDjld8KB1ovMVExkECmcJUfGnEh",
+        "block_type": 2,
+        "parent_id": "Nhqvd1uTboB3U8xaBMGcPBJIndb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "多文件导入（单批次）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OGTAdAKNVoVTDVxU3FPcIfkXndd",
+        "block_type": 32,
+        "children": [
+          "YmHMdnVc3ovzPTxuhR2cdGnjnfR"
+        ],
+        "parent_id": "Stk9dHIPPoQRbsxxmc2co4WXnuh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "YmHMdnVc3ovzPTxuhR2cdGnjnfR",
+        "block_type": 2,
+        "parent_id": "OGTAdAKNVoVTDVxU3FPcIfkXndd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "支持",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YCcTdme1KoTffaxiTZMcA18dncd",
+        "block_type": 32,
+        "children": [
+          "Y6H7dAVKloOXi0xUspwccA06nLf",
+          "MuJNdZvEOo600txHIIhc4fHvnDo"
+        ],
+        "parent_id": "Stk9dHIPPoQRbsxxmc2co4WXnuh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Y6H7dAVKloOXi0xUspwccA06nLf",
+        "block_type": 2,
+        "parent_id": "YCcTdme1KoTffaxiTZMcA18dncd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "最大文件大小（单批次）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MuJNdZvEOo600txHIIhc4fHvnDo",
+        "block_type": 2,
+        "parent_id": "YCcTdme1KoTffaxiTZMcA18dncd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZNupd7AgDoJZ4vx4DX0cu3wWngf",
+        "block_type": 32,
+        "children": [
+          "JlemdPNqQofwSQxmazNcP42inkx",
+          "TbYQdfl77ox5F6xE5K2cZbbln9b"
+        ],
+        "parent_id": "Stk9dHIPPoQRbsxxmc2co4WXnuh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "JlemdPNqQofwSQxmazNcP42inkx",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "总大小： 100 GB",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZNupd7AgDoJZ4vx4DX0cu3wWngf"
+      },
+      {
+        "block_id": "TbYQdfl77ox5F6xE5K2cZbbln9b",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "单文件大小： 10 GB",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZNupd7AgDoJZ4vx4DX0cu3wWngf"
+      },
+      {
+        "block_id": "KiX6dFnEdokVVsx4DUvcDsJ8nBd",
+        "block_type": 32,
+        "children": [
+          "RLGAdqLnRom5FSxsSSLcIxGoncb"
+        ],
+        "parent_id": "Stk9dHIPPoQRbsxxmc2co4WXnuh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RLGAdqLnRom5FSxsSSLcIxGoncb",
+        "block_type": 2,
+        "parent_id": "KiX6dFnEdokVVsx4DUvcDsJ8nBd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "数据文件存放位置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NK79dY0H6okElBxpIQHc7f3Fngh",
+        "block_type": 32,
+        "children": [
+          "NglKdijPeo7TM7xxta0cE8U7npb"
+        ],
+        "parent_id": "Stk9dHIPPoQRbsxxmc2co4WXnuh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "NglKdijPeo7TM7xxta0cE8U7npb",
+        "block_type": 2,
+        "parent_id": "NK79dY0H6okElBxpIQHc7f3Fngh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本地或远程",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CgYkdX4ksod9raxFchgc1OoGndc",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D27453-1183%26mode%3Ddesign%26t%3DSig369HFISdVvcS6-4"
+          }
+        },
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "EpfPdVc9Vo9s6ixcuaVcgfcZn2d",
+        "block_type": 19,
+        "callout": {
+          "background_color": 2,
+          "border_color": 2,
+          "emoji_id": "blue_book"
+        },
+        "children": [
+          "B0tCdZ0xgo4vt2xTNpNcuizdnSf",
+          "G4ePd0wvWol8y8xBGnOcO9GanOc",
+          "ItKsdZ6eQoNcUsxu6Vlca0kunDE",
+          "BIQidzx8poXZCgxnTaocm6WhnVd"
+        ],
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "B0tCdZ0xgo4vt2xTNpNcuizdnSf",
+        "block_type": 2,
+        "parent_id": "EpfPdVc9Vo9s6ixcuaVcgfcZn2d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "G4ePd0wvWol8y8xBGnOcO9GanOc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果目标 Collection 在 Schema 中启用了 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "AutoID",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，待导入数据中不应包含主键。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "EpfPdVc9Vo9s6ixcuaVcgfcZn2d"
+      },
+      {
+        "block_id": "ItKsdZ6eQoNcUsxu6Vlca0kunDE",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果目标 Collection 在 Schema 中启用了动态字段，待导入数据中可以包含 Schema 中未定义的字段。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "EpfPdVc9Vo9s6ixcuaVcgfcZn2d"
+      },
+      {
+        "block_id": "BIQidzx8poXZCgxnTaocm6WhnVd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "字典中的键与值均大小写敏感。请确保数据字典中各字段名称和 Schema 中各字段名称大小写完全一致。如果目标 Collection 有一个名为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "id",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 的字段，每条待导入数据记录中也应该包含一个 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "id",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 的字段。使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "ID",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 或 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Id",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 可能会导致错误。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "EpfPdVc9Vo9s6ixcuaVcgfcZn2d"
+      },
+      {
+        "block_id": "WHBMdQv1RojkcyxCpKicbdwlnHh",
+        "block_type": 2,
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以参考上述描述手动重构您的数据或者",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "使用 BulkWriter",
+                "token": "B9IdwtZhLi0tB8kb6czce8KXnvb",
+                "url": "https://zilliverse.feishu.cn/wiki/B9IdwtZhLi0tB8kb6czce8KXnvb"
+              }
+            },
+            {
+              "text_run": {
+                "content": "来重写您的文件。您也可以",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "单击此处",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fassets.zilliz.com%2Fprepared_json_data.json"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "下载样例数据进行参考。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TxRldvNrHoY3JRxckktc0Jvjnvb",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Parquet{#parquet-file}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "GWu7dH82sompLExj3gJcNo59nNc",
+        "block_type": 31,
+        "children": [
+          "FWehdVAeXox310xl1MkcjUP2nWf",
+          "KqS6ddNaWohB8LxyACIcnTH5nfc",
+          "CCxOdVhjwogh7MxZKOAcKKsYnZc",
+          "TdC5dJZksoiNUUx7zAUckctLn4e",
+          "WdAZdzInvoDowlxvWGGcaz6VnLh",
+          "At9LdvzPdoGhYlxQZocc7GELnds",
+          "OjojdY6eEozEgQxR4cCcWKxpnId",
+          "WgiBdcR3po6achxbZ5KcYkBenMf"
+        ],
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "table": {
+          "cells": [
+            "FWehdVAeXox310xl1MkcjUP2nWf",
+            "KqS6ddNaWohB8LxyACIcnTH5nfc",
+            "CCxOdVhjwogh7MxZKOAcKKsYnZc",
+            "TdC5dJZksoiNUUx7zAUckctLn4e",
+            "WdAZdzInvoDowlxvWGGcaz6VnLh",
+            "At9LdvzPdoGhYlxQZocc7GELnds",
+            "OjojdY6eEozEgQxR4cCcWKxpnId",
+            "WgiBdcR3po6achxbZ5KcYkBenMf"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              255,
+              540
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 4
+          }
+        }
+      },
+      {
+        "block_id": "FWehdVAeXox310xl1MkcjUP2nWf",
+        "block_type": 32,
+        "children": [
+          "YGoId4K9aopaWVxThddcqpQbnpd"
+        ],
+        "parent_id": "GWu7dH82sompLExj3gJcNo59nNc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "YGoId4K9aopaWVxThddcqpQbnpd",
+        "block_type": 2,
+        "parent_id": "FWehdVAeXox310xl1MkcjUP2nWf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "项目",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KqS6ddNaWohB8LxyACIcnTH5nfc",
+        "block_type": 32,
+        "children": [
+          "YrTNdbAVsoS0Rdx5xjYcqsJFnJg"
+        ],
+        "parent_id": "GWu7dH82sompLExj3gJcNo59nNc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "YrTNdbAVsoS0Rdx5xjYcqsJFnJg",
+        "block_type": 2,
+        "parent_id": "KqS6ddNaWohB8LxyACIcnTH5nfc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CCxOdVhjwogh7MxZKOAcKKsYnZc",
+        "block_type": 32,
+        "children": [
+          "SNDzdkaOmouQmpxZ3h7chiI1npf"
+        ],
+        "parent_id": "GWu7dH82sompLExj3gJcNo59nNc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "SNDzdkaOmouQmpxZ3h7chiI1npf",
+        "block_type": 2,
+        "parent_id": "CCxOdVhjwogh7MxZKOAcKKsYnZc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "多文件导入（单批次）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TdC5dJZksoiNUUx7zAUckctLn4e",
+        "block_type": 32,
+        "children": [
+          "AqqPduQOeoyU6jxQf43ci8JAnhf"
+        ],
+        "parent_id": "GWu7dH82sompLExj3gJcNo59nNc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "AqqPduQOeoyU6jxQf43ci8JAnhf",
+        "block_type": 2,
+        "parent_id": "TdC5dJZksoiNUUx7zAUckctLn4e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "支持",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WdAZdzInvoDowlxvWGGcaz6VnLh",
+        "block_type": 32,
+        "children": [
+          "QuxedCHSZoFuOKxiYIKcUQRVnQ8",
+          "F8I3dzfsQoH9eXxbAD2cDaxXnyb"
+        ],
+        "parent_id": "GWu7dH82sompLExj3gJcNo59nNc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QuxedCHSZoFuOKxiYIKcUQRVnQ8",
+        "block_type": 2,
+        "parent_id": "WdAZdzInvoDowlxvWGGcaz6VnLh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "最大文件大小（单批次）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "F8I3dzfsQoH9eXxbAD2cDaxXnyb",
+        "block_type": 2,
+        "parent_id": "WdAZdzInvoDowlxvWGGcaz6VnLh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "At9LdvzPdoGhYlxQZocc7GELnds",
+        "block_type": 32,
+        "children": [
+          "UiOEd1ofOo4REGxVN1tcVlTonUe",
+          "WKw2dp1c2odYhvxExWKcV9mjnXb"
+        ],
+        "parent_id": "GWu7dH82sompLExj3gJcNo59nNc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "UiOEd1ofOo4REGxVN1tcVlTonUe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "总大小： 100 GB",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "At9LdvzPdoGhYlxQZocc7GELnds"
+      },
+      {
+        "block_id": "WKw2dp1c2odYhvxExWKcV9mjnXb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "单文件大小： 10 GB",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "At9LdvzPdoGhYlxQZocc7GELnds"
+      },
+      {
+        "block_id": "OjojdY6eEozEgQxR4cCcWKxpnId",
+        "block_type": 32,
+        "children": [
+          "GLT3dqyX4oCJu9xa8eRcNilynzh"
+        ],
+        "parent_id": "GWu7dH82sompLExj3gJcNo59nNc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "GLT3dqyX4oCJu9xa8eRcNilynzh",
+        "block_type": 2,
+        "parent_id": "OjojdY6eEozEgQxR4cCcWKxpnId",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "数据文件存放位置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WgiBdcR3po6achxbZ5KcYkBenMf",
+        "block_type": 32,
+        "children": [
+          "GCUBdXvUso1OUyxOGyVct4DFnWb"
+        ],
+        "parent_id": "GWu7dH82sompLExj3gJcNo59nNc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "GCUBdXvUso1OUyxOGyVct4DFnWb",
+        "block_type": 2,
+        "parent_id": "WgiBdcR3po6achxbZ5KcYkBenMf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "仅远程",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Y2Azd5am0oUUSlx4B6Qc8BbVndb",
+        "block_type": 2,
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "建议您使用 BulkWriter 来将您的原始数据转换成 Parquet 文件。您也可以",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "单击此处",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fassets.zilliz.com%2Fprepared_parquet_data.parquet"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "下载样例数据进行参考。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AVdadC2PsodLdPxgTgScCJOXnRf",
+        "block_type": 19,
+        "callout": {
+          "background_color": 2,
+          "border_color": 2,
+          "emoji_id": "blue_book"
+        },
+        "children": [
+          "JCYxdthWToBJWSxsrEMcQSdgnb2",
+          "RSo1dNrNHoJAeEx08udcUFtRnSd"
+        ],
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "JCYxdthWToBJWSxsrEMcQSdgnb2",
+        "block_type": 2,
+        "parent_id": "AVdadC2PsodLdPxgTgScCJOXnRf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RSo1dNrNHoJAeEx08udcUFtRnSd",
+        "block_type": 2,
+        "parent_id": "AVdadC2PsodLdPxgTgScCJOXnRf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需批量导入 Parquet 文件，您的 Zilliz Cloud 集群版本须与 Milvus 2.3.x 兼容。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DPW4do7avoJqJ6x22xecSk34n5e",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "NumPy{#numpy-files}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "XP4SdTFIGor4bOxspI4c7Kkunqb",
+        "block_type": 2,
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "一组合法的 NumPy 文件应该和目标 Collection 的 Schema 中定义的列同名，文件中存放的数据应符合列定义。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LUL0dpTFao6cWPxswYTcqJR9nag",
+        "block_type": 31,
+        "children": [
+          "NN9WdGu4Ro9adVxpdTBcFQChn6e",
+          "Bj45dMMmNo1h5cxLWaicMlxBncI",
+          "VmYRd3xe1oYTaCxx7PHclrEjnNc",
+          "QAc2dDehvoMMc6xVGVucNiK1nQd",
+          "Kc9MdPmmwoqiZuxnEsEcPZNcnyb",
+          "HKZzde3ueoXkP4xdXAac9FLTnrb",
+          "LTcUdCptqoad49xMQoIcJs97nvf",
+          "CfmadKSjbogg7FxIWt7cNYPmnhh",
+          "LLcrd1hhaonkV4xLsPOc9YvQnbb",
+          "VAAGd8p5woE1JbxWEJicQz1lncd",
+          "TrywdwUM1oykOqxLe9lcBlLHnRg",
+          "SUAjdeaMKoXss0xXKzZcIMQKnCd"
+        ],
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "table": {
+          "cells": [
+            "NN9WdGu4Ro9adVxpdTBcFQChn6e",
+            "Bj45dMMmNo1h5cxLWaicMlxBncI",
+            "VmYRd3xe1oYTaCxx7PHclrEjnNc",
+            "QAc2dDehvoMMc6xVGVucNiK1nQd",
+            "Kc9MdPmmwoqiZuxnEsEcPZNcnyb",
+            "HKZzde3ueoXkP4xdXAac9FLTnrb",
+            "LTcUdCptqoad49xMQoIcJs97nvf",
+            "CfmadKSjbogg7FxIWt7cNYPmnhh",
+            "LLcrd1hhaonkV4xLsPOc9YvQnbb",
+            "VAAGd8p5woE1JbxWEJicQz1lncd",
+            "TrywdwUM1oykOqxLe9lcBlLHnRg",
+            "SUAjdeaMKoXss0xXKzZcIMQKnCd"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              255,
+              540
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 6
+          }
+        }
+      },
+      {
+        "block_id": "NN9WdGu4Ro9adVxpdTBcFQChn6e",
+        "block_type": 32,
+        "children": [
+          "RdSGdbVXooFw4qxLaEucNRewnPe"
+        ],
+        "parent_id": "LUL0dpTFao6cWPxswYTcqJR9nag",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RdSGdbVXooFw4qxLaEucNRewnPe",
+        "block_type": 2,
+        "parent_id": "NN9WdGu4Ro9adVxpdTBcFQChn6e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "项目",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Bj45dMMmNo1h5cxLWaicMlxBncI",
+        "block_type": 32,
+        "children": [
+          "JAjPdUZnUoacOux02pVcddfgnmb"
+        ],
+        "parent_id": "LUL0dpTFao6cWPxswYTcqJR9nag",
+        "table_cell": {}
+      },
+      {
+        "block_id": "JAjPdUZnUoacOux02pVcddfgnmb",
+        "block_type": 2,
+        "parent_id": "Bj45dMMmNo1h5cxLWaicMlxBncI",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VmYRd3xe1oYTaCxx7PHclrEjnNc",
+        "block_type": 32,
+        "children": [
+          "DILfdS0LMoJkBkxVFU0ctLJFnVc"
+        ],
+        "parent_id": "LUL0dpTFao6cWPxswYTcqJR9nag",
+        "table_cell": {}
+      },
+      {
+        "block_id": "DILfdS0LMoJkBkxVFU0ctLJFnVc",
+        "block_type": 2,
+        "parent_id": "VmYRd3xe1oYTaCxx7PHclrEjnNc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "多文件导入（单批次）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QAc2dDehvoMMc6xVGVucNiK1nQd",
+        "block_type": 32,
+        "children": [
+          "HD0Pduk9boTjg7xSOmAcEdIAnYd"
+        ],
+        "parent_id": "LUL0dpTFao6cWPxswYTcqJR9nag",
+        "table_cell": {}
+      },
+      {
+        "block_id": "HD0Pduk9boTjg7xSOmAcEdIAnYd",
+        "block_type": 2,
+        "parent_id": "QAc2dDehvoMMc6xVGVucNiK1nQd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "支持",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Kc9MdPmmwoqiZuxnEsEcPZNcnyb",
+        "block_type": 32,
+        "children": [
+          "A9itdCTPTorDZYxEfHVcN9Qwnic"
+        ],
+        "parent_id": "LUL0dpTFao6cWPxswYTcqJR9nag",
+        "table_cell": {}
+      },
+      {
+        "block_id": "A9itdCTPTorDZYxEfHVcN9Qwnic",
+        "block_type": 2,
+        "parent_id": "Kc9MdPmmwoqiZuxnEsEcPZNcnyb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "读取子目录下的文件（仅一层）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HKZzde3ueoXkP4xdXAac9FLTnrb",
+        "block_type": 32,
+        "children": [
+          "ZPOidlXnhos9rox7j7nc8AsOnQd"
+        ],
+        "parent_id": "LUL0dpTFao6cWPxswYTcqJR9nag",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ZPOidlXnhos9rox7j7nc8AsOnQd",
+        "block_type": 2,
+        "parent_id": "HKZzde3ueoXkP4xdXAac9FLTnrb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "支持",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LTcUdCptqoad49xMQoIcJs97nvf",
+        "block_type": 32,
+        "children": [
+          "MggxdFzu7oF3TExV4VOcvoEMnTb"
+        ],
+        "parent_id": "LUL0dpTFao6cWPxswYTcqJR9nag",
+        "table_cell": {}
+      },
+      {
+        "block_id": "MggxdFzu7oF3TExV4VOcvoEMnTb",
+        "block_type": 2,
+        "parent_id": "LTcUdCptqoad49xMQoIcJs97nvf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "子目录下最大文件数量（仅一层）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CfmadKSjbogg7FxIWt7cNYPmnhh",
+        "block_type": 32,
+        "children": [
+          "JkTtdPwzVo38CTxPnEFceDNvnMh"
+        ],
+        "parent_id": "LUL0dpTFao6cWPxswYTcqJR9nag",
+        "table_cell": {}
+      },
+      {
+        "block_id": "JkTtdPwzVo38CTxPnEFceDNvnMh",
+        "block_type": 2,
+        "parent_id": "CfmadKSjbogg7FxIWt7cNYPmnhh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "100",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LLcrd1hhaonkV4xLsPOc9YvQnbb",
+        "block_type": 32,
+        "children": [
+          "HTzid69eRonPWXxnF57cWDoWnmg",
+          "HT9bdw7UWo5WYNxkg86c2A1Bnrc"
+        ],
+        "parent_id": "LUL0dpTFao6cWPxswYTcqJR9nag",
+        "table_cell": {}
+      },
+      {
+        "block_id": "HTzid69eRonPWXxnF57cWDoWnmg",
+        "block_type": 2,
+        "parent_id": "LLcrd1hhaonkV4xLsPOc9YvQnbb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "最大文件大小（单批次）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HT9bdw7UWo5WYNxkg86c2A1Bnrc",
+        "block_type": 2,
+        "parent_id": "LLcrd1hhaonkV4xLsPOc9YvQnbb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VAAGd8p5woE1JbxWEJicQz1lncd",
+        "block_type": 32,
+        "children": [
+          "IY76dvC3YoBgxFx12xRcS6CNnde",
+          "RS2JdZuCfodIrrxdXuWclvywnEb"
+        ],
+        "parent_id": "LUL0dpTFao6cWPxswYTcqJR9nag",
+        "table_cell": {}
+      },
+      {
+        "block_id": "IY76dvC3YoBgxFx12xRcS6CNnde",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "总大小： 100 GB",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VAAGd8p5woE1JbxWEJicQz1lncd"
+      },
+      {
+        "block_id": "RS2JdZuCfodIrrxdXuWclvywnEb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "每个一层子目录下的文件大小： 10 GB",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "VAAGd8p5woE1JbxWEJicQz1lncd"
+      },
+      {
+        "block_id": "TrywdwUM1oykOqxLe9lcBlLHnRg",
+        "block_type": 32,
+        "children": [
+          "XmjcdBzOgoEWTlxZsR2c4ZP4nJb"
+        ],
+        "parent_id": "LUL0dpTFao6cWPxswYTcqJR9nag",
+        "table_cell": {}
+      },
+      {
+        "block_id": "XmjcdBzOgoEWTlxZsR2c4ZP4nJb",
+        "block_type": 2,
+        "parent_id": "TrywdwUM1oykOqxLe9lcBlLHnRg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "数据文件存放位置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SUAjdeaMKoXss0xXKzZcIMQKnCd",
+        "block_type": 32,
+        "children": [
+          "PSZFd7vxGo8E1gx85lscQxYanrb"
+        ],
+        "parent_id": "LUL0dpTFao6cWPxswYTcqJR9nag",
+        "table_cell": {}
+      },
+      {
+        "block_id": "PSZFd7vxGo8E1gx85lscQxYanrb",
+        "block_type": 2,
+        "parent_id": "SUAjdeaMKoXss0xXKzZcIMQKnCd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "仅远程",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "N5rgduckmo8rFgxRWmzc4vc6nOb",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D27453-1269%26mode%3Ddesign%26t%3Dndm5bzqpzVfQ6bJg-4"
+          }
+        },
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "SOJ7dBsiKoDQmQxNWU4cd3itn5c",
+        "block_type": 19,
+        "callout": {
+          "background_color": 2,
+          "border_color": 2,
+          "emoji_id": "blue_book"
+        },
+        "children": [
+          "EAbEd1NWXoFRgexyUVFcg7qinrf",
+          "QkDxdFcoeonTaMxP3Yuc5rsxnfe",
+          "KqmcdWxb7omx3WxJHgNcfkbGnPg",
+          "ZcNUdBGnSo5dsCx1Ll7cOpDJnad"
+        ],
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "EAbEd1NWXoFRgexyUVFcg7qinrf",
+        "block_type": 2,
+        "parent_id": "SOJ7dBsiKoDQmQxNWU4cd3itn5c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QkDxdFcoeonTaMxP3Yuc5rsxnfe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果目标 Collection 在 Schema 中启用了 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "AutoID",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，待导入数据中不应包含主键对应的 Numpy 文件。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "SOJ7dBsiKoDQmQxNWU4cd3itn5c"
+      },
+      {
+        "block_id": "KqmcdWxb7omx3WxJHgNcfkbGnPg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果目标 Collection 在 Schema 中启用了动态字段，待导入数据中可以包含 Schema 中未定义的字段。这些字段应以键值对的方式存入一个名为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "$meta.npy",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 的文件中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "SOJ7dBsiKoDQmQxNWU4cd3itn5c"
+      },
+      {
+        "block_id": "ZcNUdBGnSo5dsCx1Ll7cOpDJnad",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "文件名大小写敏感。请确保文件名和 Schema 中各字段名称大小写完全一致。如果目标 Collection 有一个名为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "id",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 的字段，则在待导入数据中应该包含一个名为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "id.npy",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 的文件。使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "ID.npy",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 或 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Id.npy",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 可能会导致错误。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "SOJ7dBsiKoDQmQxNWU4cd3itn5c"
+      },
+      {
+        "block_id": "E8yNdHBPlob4Uzx8f0JcNxdynHg",
+        "block_type": 2,
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "参考此处",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fmilvus.io%2Fdocs%2Fbulk_insert.md%23Prepare-the-data-file"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "将您的数据转换成可导入的 NumPy 文件或",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "使用 BulkWriter",
+                "token": "B9IdwtZhLi0tB8kb6czce8KXnvb",
+                "url": "https://zilliverse.feishu.cn/wiki/B9IdwtZhLi0tB8kb6czce8KXnvb"
+              }
+            },
+            {
+              "text_run": {
+                "content": "对您的原始数据进行转换。您也可以",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "单击此处",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fassets.zilliz.com%2Fprepared_numpy_data.zip"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "下载样例数据进行参考。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GzPqd4qYSoAroXxJd7Dc3C1pnbf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "源数据路径拼接相关要求{#tips-on-import-paths}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "DoZJdThq1oKo6axgnu1ciiFQn3d",
+        "block_type": 2,
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 支持通过 Zilliz Cloud 控制台，RESTful API 以及 SDK 批量导入数据。在执行批量导入任务前，您需要准备好一个合法的源数据路径。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "El0OdwoRco1c8Ix9kvucjFBjnoe",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "从本地导入{#from-local-folders}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "CCyFdKhH7ooR2zxDmA0cRY66nYK",
+        "block_type": 2,
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 支持在 Zilliz Cloud 控制台中从本地导入满足上述要求的 JSON 文件。如下图所示，您可以拖放准备好的数据文件到 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Import Data",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 对话框或单击 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "upload a file ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "并选择该文件，然后单击 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Import",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 将文件中的数据导入到目标 Collection 中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MAuZdD8uPoFrVNxhKdhcwc9GnBn",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D27607-1137%26mode%3Ddesign%26t%3DN1yBTNMBBF8KSIw9-4"
+          }
+        },
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "Ij3GdJQlxodO3RxYNepcVTFWnog",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "从远程对象存储桶导入{#from-remote-buckets}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "N1Msd7xypom25zxrTBqcbw1snwg",
+        "block_type": 2,
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 还支持从阿里云 OSS 桶中导入准备好的数据。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HhTbdsFWioV8pjxtunKc2CjNnLe",
+        "block_type": 19,
+        "callout": {
+          "background_color": 2,
+          "border_color": 2,
+          "emoji_id": "blue_book"
+        },
+        "children": [
+          "U96qdLYUboJE3XxX5l1c38zKnRb",
+          "V1AZd7j6voNaivxQkQcco9TRnke"
+        ],
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "U96qdLYUboJE3XxX5l1c38zKnRb",
+        "block_type": 2,
+        "parent_id": "HhTbdsFWioV8pjxtunKc2CjNnLe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "V1AZd7j6voNaivxQkQcco9TRnke",
+        "block_type": 2,
+        "parent_id": "HhTbdsFWioV8pjxtunKc2CjNnLe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "远程对象存储桶须与数据导入目标集群处于同一云服务提供商网络。例如，如果目标集群托管在阿里云上，则源数据须存放在阿里云 OSS 桶中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Pb2vdCYRdof82LxHHXhcbYOOn7g",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "对象访问 URI",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "FgOsdHVEUofaXmx6NX2c7nEAnwL"
+        ],
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "FgOsdHVEUofaXmx6NX2c7nEAnwL",
+        "block_type": 31,
+        "children": [
+          "NgjCdTwqmo1DOKxQgkRc4trTnyc",
+          "QMM3dtOCIol1nZxh314c1s5unre",
+          "V5NOd3YsJorBujxgMwVc19q8n5f",
+          "QhzLdyjYCoUz0hxkkXKcp8tTnVc",
+          "XKI6dDWmWogauRxmFuMcrPWjnNe",
+          "D0endKrvEopHucx1UhvcWlTRnBg",
+          "NfondMvQ5o5dC7xl2akcsWITndg",
+          "KqJIdVcc7oOZh2xoH3rcaZdhnfg",
+          "M8sSds8qgo39odx0L9IcZUa1nVe",
+          "FNPxdxHBooripCxjMQtcz1hinSe",
+          "ZOIxdV5oVorJY8xhvRzceRBHnXc",
+          "QxnkdZIztoDMgPxqwuAcMhnKneg"
+        ],
+        "parent_id": "Pb2vdCYRdof82LxHHXhcbYOOn7g",
+        "table": {
+          "cells": [
+            "NgjCdTwqmo1DOKxQgkRc4trTnyc",
+            "QMM3dtOCIol1nZxh314c1s5unre",
+            "V5NOd3YsJorBujxgMwVc19q8n5f",
+            "QhzLdyjYCoUz0hxkkXKcp8tTnVc",
+            "XKI6dDWmWogauRxmFuMcrPWjnNe",
+            "D0endKrvEopHucx1UhvcWlTRnBg",
+            "NfondMvQ5o5dC7xl2akcsWITndg",
+            "KqJIdVcc7oOZh2xoH3rcaZdhnfg",
+            "M8sSds8qgo39odx0L9IcZUa1nVe",
+            "FNPxdxHBooripCxjMQtcz1hinSe",
+            "ZOIxdV5oVorJY8xhvRzceRBHnXc",
+            "QxnkdZIztoDMgPxqwuAcMhnKneg"
+          ],
+          "property": {
+            "column_size": 3,
+            "column_width": [
+              137,
+              439,
+              134
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 4
+          }
+        }
+      },
+      {
+        "block_id": "NgjCdTwqmo1DOKxQgkRc4trTnyc",
+        "block_type": 32,
+        "children": [
+          "GNMQdssCloPxF1xn3EJcV3pcnNb"
+        ],
+        "parent_id": "FgOsdHVEUofaXmx6NX2c7nEAnwL",
+        "table_cell": {}
+      },
+      {
+        "block_id": "GNMQdssCloPxF1xn3EJcV3pcnNb",
+        "block_type": 2,
+        "parent_id": "NgjCdTwqmo1DOKxQgkRc4trTnyc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "地域",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QMM3dtOCIol1nZxh314c1s5unre",
+        "block_type": 32,
+        "children": [
+          "NnlWdqr46ouQb4xfNCxcFt77nhd"
+        ],
+        "parent_id": "FgOsdHVEUofaXmx6NX2c7nEAnwL",
+        "table_cell": {}
+      },
+      {
+        "block_id": "NnlWdqr46ouQb4xfNCxcFt77nhd",
+        "block_type": 2,
+        "parent_id": "QMM3dtOCIol1nZxh314c1s5unre",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "URI",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "V5NOd3YsJorBujxgMwVc19q8n5f",
+        "block_type": 32,
+        "children": [
+          "AyJPdjAbsoHxRGxZ6H3cY0dNnXf"
+        ],
+        "parent_id": "FgOsdHVEUofaXmx6NX2c7nEAnwL",
+        "table_cell": {}
+      },
+      {
+        "block_id": "AyJPdjAbsoHxRGxZ6H3cY0dNnXf",
+        "block_type": 2,
+        "parent_id": "V5NOd3YsJorBujxgMwVc19q8n5f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "地域 ID",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QhzLdyjYCoUz0hxkkXKcp8tTnVc",
+        "block_type": 32,
+        "children": [
+          "FXaPdx4ByoN2bVxEeAPcCyBqnKb",
+          "L7sydfOgQov4TXxRrVncsCIInyf"
+        ],
+        "parent_id": "FgOsdHVEUofaXmx6NX2c7nEAnwL",
+        "table_cell": {}
+      },
+      {
+        "block_id": "FXaPdx4ByoN2bVxEeAPcCyBqnKb",
+        "block_type": 2,
+        "parent_id": "QhzLdyjYCoUz0hxkkXKcp8tTnVc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "华东1（杭州）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "L7sydfOgQov4TXxRrVncsCIInyf",
+        "block_type": 2,
+        "parent_id": "QhzLdyjYCoUz0hxkkXKcp8tTnVc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XKI6dDWmWogauRxmFuMcrPWjnNe",
+        "block_type": 32,
+        "children": [
+          "Kpo3dOG4WoVp6nx1IORcTKFTn8e"
+        ],
+        "parent_id": "FgOsdHVEUofaXmx6NX2c7nEAnwL",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Kpo3dOG4WoVp6nx1IORcTKFTn8e",
+        "block_type": 2,
+        "parent_id": "XKI6dDWmWogauRxmFuMcrPWjnNe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "https://bucket-name.oss-cn-hangzhou.aliyuncs.com",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "D0endKrvEopHucx1UhvcWlTRnBg",
+        "block_type": 32,
+        "children": [
+          "ZLJpdk8Zbo6Lhqxj1Kkckue9nDd"
+        ],
+        "parent_id": "FgOsdHVEUofaXmx6NX2c7nEAnwL",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ZLJpdk8Zbo6Lhqxj1Kkckue9nDd",
+        "block_type": 2,
+        "parent_id": "D0endKrvEopHucx1UhvcWlTRnBg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "oss-cn-hangzhou",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NfondMvQ5o5dC7xl2akcsWITndg",
+        "block_type": 32,
+        "children": [
+          "TERSdvKfaoRzWHxQe4ncI6MQnKb"
+        ],
+        "parent_id": "FgOsdHVEUofaXmx6NX2c7nEAnwL",
+        "table_cell": {}
+      },
+      {
+        "block_id": "TERSdvKfaoRzWHxQe4ncI6MQnKb",
+        "block_type": 2,
+        "parent_id": "NfondMvQ5o5dC7xl2akcsWITndg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "华北2（北京）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KqJIdVcc7oOZh2xoH3rcaZdhnfg",
+        "block_type": 32,
+        "children": [
+          "RpmtdL3qUoyIB5xgnqIcK13Gn9R"
+        ],
+        "parent_id": "FgOsdHVEUofaXmx6NX2c7nEAnwL",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RpmtdL3qUoyIB5xgnqIcK13Gn9R",
+        "block_type": 2,
+        "parent_id": "KqJIdVcc7oOZh2xoH3rcaZdhnfg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "https://bucket-name.oss-cn-beijing.aliyuncs.com",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "M8sSds8qgo39odx0L9IcZUa1nVe",
+        "block_type": 32,
+        "children": [
+          "M2LDd6QezoUN2DxU5Ntcd36hnCg"
+        ],
+        "parent_id": "FgOsdHVEUofaXmx6NX2c7nEAnwL",
+        "table_cell": {}
+      },
+      {
+        "block_id": "M2LDd6QezoUN2DxU5Ntcd36hnCg",
+        "block_type": 2,
+        "parent_id": "M8sSds8qgo39odx0L9IcZUa1nVe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "oss-cn-beijing",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FNPxdxHBooripCxjMQtcz1hinSe",
+        "block_type": 32,
+        "children": [
+          "RQYTdI31GoJnxVxm95lcyldKn1g"
+        ],
+        "parent_id": "FgOsdHVEUofaXmx6NX2c7nEAnwL",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RQYTdI31GoJnxVxm95lcyldKn1g",
+        "block_type": 2,
+        "parent_id": "FNPxdxHBooripCxjMQtcz1hinSe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "华南1（深圳）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZOIxdV5oVorJY8xhvRzceRBHnXc",
+        "block_type": 32,
+        "children": [
+          "IFbNdclSpoVYrExlYDscAdqsnaf"
+        ],
+        "parent_id": "FgOsdHVEUofaXmx6NX2c7nEAnwL",
+        "table_cell": {}
+      },
+      {
+        "block_id": "IFbNdclSpoVYrExlYDscAdqsnaf",
+        "block_type": 2,
+        "parent_id": "ZOIxdV5oVorJY8xhvRzceRBHnXc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "https://bucket-name.oss-cn-shenzhen.aliyuncs.com",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QxnkdZIztoDMgPxqwuAcMhnKneg",
+        "block_type": 32,
+        "children": [
+          "N6fvdKukiondT1xhPx6c45NXnSb"
+        ],
+        "parent_id": "FgOsdHVEUofaXmx6NX2c7nEAnwL",
+        "table_cell": {}
+      },
+      {
+        "block_id": "N6fvdKukiondT1xhPx6c45NXnSb",
+        "block_type": 2,
+        "parent_id": "QxnkdZIztoDMgPxqwuAcMhnKneg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "oss-cn-shenzhen",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "H8pVd9Iogons7hxD31Dca7RUnOg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "示例",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "JhzOdlS72oUkrtxRNMucaBc5n6e"
+        ],
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
+      },
+      {
+        "block_id": "JhzOdlS72oUkrtxRNMucaBc5n6e",
+        "block_type": 31,
+        "children": [
+          "P6ahdJetMoedSmxyvOXcCJZknne",
+          "C3bOdOxU5oneYZxTgyVccEhLnKh",
+          "IylTdK5V1oJASbxO7ryc5sKinJc",
+          "DG8tdU5JCoURSFxdCYFcyeI4n7c",
+          "J2WpdqgujoRWhoxZkmycaSVVn7c",
+          "SEJPdjf8JoIHJlxkY2jcRfdMnDg",
+          "JXhgdlKieo7iszxkCqccDutSnme",
+          "Vx2ydzKp4o6DtTxHFGdcHcOonIf"
+        ],
+        "parent_id": "H8pVd9Iogons7hxD31Dca7RUnOg",
+        "table": {
+          "cells": [
+            "P6ahdJetMoedSmxyvOXcCJZknne",
+            "C3bOdOxU5oneYZxTgyVccEhLnKh",
+            "IylTdK5V1oJASbxO7ryc5sKinJc",
+            "DG8tdU5JCoURSFxdCYFcyeI4n7c",
+            "J2WpdqgujoRWhoxZkmycaSVVn7c",
+            "SEJPdjf8JoIHJlxkY2jcRfdMnDg",
+            "JXhgdlKieo7iszxkCqccDutSnme",
+            "Vx2ydzKp4o6DtTxHFGdcHcOonIf"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              100,
+              592
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 4
+          }
+        }
+      },
+      {
+        "block_id": "P6ahdJetMoedSmxyvOXcCJZknne",
+        "block_type": 32,
+        "children": [
+          "Q9iUdoOKLo6dTUxZYcsc3XBlnuh"
+        ],
+        "parent_id": "JhzOdlS72oUkrtxRNMucaBc5n6e",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Q9iUdoOKLo6dTUxZYcsc3XBlnuh",
+        "block_type": 2,
+        "parent_id": "P6ahdJetMoedSmxyvOXcCJZknne",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "文件类型",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "C3bOdOxU5oneYZxTgyVccEhLnKh",
+        "block_type": 32,
+        "children": [
+          "RKE2dv00Oo5643xCBPacTarsneg"
+        ],
+        "parent_id": "JhzOdlS72oUkrtxRNMucaBc5n6e",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RKE2dv00Oo5643xCBPacTarsneg",
+        "block_type": 2,
+        "parent_id": "C3bOdOxU5oneYZxTgyVccEhLnKh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "路径示例",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IylTdK5V1oJASbxO7ryc5sKinJc",
+        "block_type": 32,
+        "children": [
+          "IFPqdpw0Po624lxUSW1cOX9Qnde"
+        ],
+        "parent_id": "JhzOdlS72oUkrtxRNMucaBc5n6e",
+        "table_cell": {}
+      },
+      {
+        "block_id": "IFPqdpw0Po624lxUSW1cOX9Qnde",
+        "block_type": 2,
+        "parent_id": "IylTdK5V1oJASbxO7ryc5sKinJc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "JSON",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DG8tdU5JCoURSFxdCYFcyeI4n7c",
+        "block_type": 32,
+        "children": [
+          "EJ5SdbGgHomDsVx6cVrcHanbnlh",
+          "KAcsdnC6Ao2XXbxhUFdclyCcnCh"
+        ],
+        "parent_id": "JhzOdlS72oUkrtxRNMucaBc5n6e",
+        "table_cell": {}
+      },
+      {
+        "block_id": "EJ5SdbGgHomDsVx6cVrcHanbnlh",
+        "block_type": 2,
+        "parent_id": "DG8tdU5JCoURSFxdCYFcyeI4n7c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "https://bucket-name.oss-cn-hangzhou.aliyuncs.com",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "/json-folder",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KAcsdnC6Ao2XXbxhUFdclyCcnCh",
+        "block_type": 2,
+        "parent_id": "DG8tdU5JCoURSFxdCYFcyeI4n7c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "https://bucket-name.oss-cn-hangzhou.aliyuncs.com",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "/json-folder",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "/data.json",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "J2WpdqgujoRWhoxZkmycaSVVn7c",
+        "block_type": 32,
+        "children": [
+          "L6I7dOUUJogUMTxDiaDcxS7pndk"
+        ],
+        "parent_id": "JhzOdlS72oUkrtxRNMucaBc5n6e",
+        "table_cell": {}
+      },
+      {
+        "block_id": "L6I7dOUUJogUMTxDiaDcxS7pndk",
+        "block_type": 2,
+        "parent_id": "J2WpdqgujoRWhoxZkmycaSVVn7c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "NumPy",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SEJPdjf8JoIHJlxkY2jcRfdMnDg",
+        "block_type": 32,
+        "children": [
+          "I6rZdhbJlo8CyAxRgYRc2xmJnmg",
+          "SNA5d2p6yo6XFqxvtbwcMOx5nfh"
+        ],
+        "parent_id": "JhzOdlS72oUkrtxRNMucaBc5n6e",
+        "table_cell": {}
+      },
+      {
+        "block_id": "I6rZdhbJlo8CyAxRgYRc2xmJnmg",
+        "block_type": 2,
+        "parent_id": "SEJPdjf8JoIHJlxkY2jcRfdMnDg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "https://bucket-name.oss-cn-hangzhou.aliyuncs.com",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "/numpy-folder",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SNA5d2p6yo6XFqxvtbwcMOx5nfh",
+        "block_type": 2,
+        "parent_id": "SEJPdjf8JoIHJlxkY2jcRfdMnDg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "https://bucket-name.oss-cn-hangzhou.aliyuncs.com",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "/numpy-folder",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "/*.npy",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JXhgdlKieo7iszxkCqccDutSnme",
+        "block_type": 32,
+        "children": [
+          "FJNDdmFLMoLfpCxHLBLcPl97nNd"
+        ],
+        "parent_id": "JhzOdlS72oUkrtxRNMucaBc5n6e",
+        "table_cell": {}
+      },
+      {
+        "block_id": "FJNDdmFLMoLfpCxHLBLcPl97nNd",
+        "block_type": 2,
+        "parent_id": "JXhgdlKieo7iszxkCqccDutSnme",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Parquet",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Vx2ydzKp4o6DtTxHFGdcHcOonIf",
+        "block_type": 32,
+        "children": [
+          "R8j8dGzzroUpYjxCoxQcm5wkn9d",
+          "Xz4Ydr5zao9aPCxaun0c2JTEnpf"
+        ],
+        "parent_id": "JhzOdlS72oUkrtxRNMucaBc5n6e",
+        "table_cell": {}
+      },
+      {
+        "block_id": "R8j8dGzzroUpYjxCoxQcm5wkn9d",
+        "block_type": 2,
+        "parent_id": "Vx2ydzKp4o6DtTxHFGdcHcOonIf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "https://bucket-name.oss-cn-hangzhou.aliyuncs.com",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "/parquet-folder",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Xz4Ydr5zao9aPCxaun0c2JTEnpf",
+        "block_type": 2,
+        "parent_id": "Vx2ydzKp4o6DtTxHFGdcHcOonIf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "https://bucket-name.oss-cn-hangzhou.aliyuncs.com",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "/parquet-folder",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "/data.parquet",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JfqqdJsLboYpN0xxWHPcpr0Ynkf",
+        "block_type": 2,
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 163
+  }
+}

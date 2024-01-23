@@ -2,6 +2,7 @@
 slug: /api-comparison
 beta: FALSE
 notebook: FALSE
+token: KOD2wN5jDimhSOk1GshcUbn2nJe
 sidebar_position: 1
 ---
 
@@ -16,61 +17,67 @@ import Admonition from '@theme/Admonition';
 
 ## 特定场景权限{#scenario-specific-privileges}
 
-|             |  API                           |  GUI 操作 |  企业版 |
-| ----------- | ------------------------------ | ------- | ---- |
-|  别名         |  alterAlias()                  |  ✘      |  ✘   |
-|             |  createAlias()                 |  ✘      |  ✘   |
-|             |  dropAlias()                   |  ✘      |  ✘   |
-|  认证         |  createCredential()            |  ✔︎     |  ✘   |
-|             |  deleteCredential()            |  ✔︎     |  ✘   |
-|             |  listCredUsers()               |  ✔︎     |  ✘   |
-|             |  updateCredential()            |  ✔︎     |  ✘   |
-|  批量插入       |  bulkInsert()                  |  ✔︎     |  ✘   |
-|             |  getBulkInsertState()          |  ✔︎     |  ✔︎  |
-|             |  listBulkInsertTasks()         |  ✔︎     |  ✔︎  |
-|  Collection |  getCollectionStatistics()     |  ✘      |  ✔︎  |
-|             |  getLoadingProgress()          |  ✔︎     |  ✔︎  |
-|             |  getPersistentSgementInfo()    |  ✘      |  ✘   |
-|             |  getQuerySegmentInfo()         |  ✘      |  ✘   |
-|             |  getReplicas()                 |  ✘      |  ✘   |
-|             |  insert()                      |  ✘      |  ✔︎  |
-|             |  loadCollection()              |  ✔︎     |  ✔︎  |
-|             |  releaseCollection()           |  ✔︎     |  ✔︎  |
-|             |  showCollections()             |  ✔︎     |  ✔︎  |
-|             |  getLoadState()                |  ✔︎     |  ✔︎  |
-|             |  renameCollection()            |  ✔︎     |  ✔︎  |
-|  数据库        |  ListDatabases                 |  ✘      |  ✘   |
-|             |  DropDatabase                  |  ✘      |  ✘   |
-|             |  CreateDatabase                |  ✘      |  ✘   |
-|  索引         |  createIndex()                 |  ✔︎     |  ✔︎  |
-|             |  describeIndex()               |  ✔︎     |  ✔︎  |
-|             |  dropIndex()                   |  ✔︎     |  ✔︎  |
-|             |  getIndexBuildProgress()       |  ✔︎     |  ✔︎  |
-|             |  getIndexState()               |  ✔︎     |  ✔︎  |
-|  管理         |  getCompactionState()          |  ✘      |  ✔︎  |
-|             |  getCompactionStateWithPlan()  |  ✘      |  ✔︎  |
-|             |  getFlushState()               |  ✘      |  ✔︎  |
-|             |  getMetrics()                  |  ✘      |  ✘   |
-|             |  loadBalance()                 |  ✘      |  ✘   |
-|             |  manualCompact()               |  ✘      |  ✔︎  |
-|  分区         |  createPartition()             |  ✘      |  ✘   |
-|             |  dropPartition()               |  ✘      |  ✘   |
-|             |  getPartitionStatistics()      |  ✘      |  ✘   |
-|             |  hasPartiotion()               |  ✘      |  ✘   |
-|             |  loadPartitions()              |  ✘      |  ✘   |
-|             |  releasePartitions()           |  ✘      |  ✘   |
-|             |  showPartitions()              |  ✘      |  ✘   |
-|  搜索和查询      |  search()                      |  ✔︎     |  ✔︎  |
-|             |  query()                       |  ✘      |  ✔︎  |
-|  RBAC       |  addUserToRole()               |  ✘      |  ✘   |
-|             |  createRole()                  |  ✘      |  ✘   |
-|             |  dropRole()                    |  ✘      |  ✘   |
-|             |  grantRolePrivilege()          |  ✘      |  ✘   |
-|             |  removeUserFromRole()          |  ✘      |  ✘   |
-|             |  revokeRolePrivilege           |  ✘      |  ✘   |
-|             |  selectGrantForRole()          |  ✘      |  ✘   |
-|             |  selectGrantForRoleAndObject() |  ✘      |  ✘   |
-|             |  selectRole()                  |  ✘      |  ✘   |
-|             |  selectUser()                  |  ✘      |  ✘   |
-|  系统         |  getVersion()                  |  ✘      |  ✘   |
-|             |  checkHealth()                 |  ✘      |  ✔︎  |
+|             |  **API**                       |  **GUI 操作** |  **企业版**     |
+| ----------- | ------------------------------ | ----------- | ------------ |
+|  别名         |  alterAlias()                  |  ✘          |  ✘           |
+|             |  createAlias()                 |  ✘          |  ✘           |
+|             |  dropAlias()                   |  ✘          |  ✘           |
+|  认证         |  createCredential()            |  ✔︎         |  ✔︎          |
+|             |  deleteCredential()            |  ✔︎         |  ✔︎          |
+|             |  listCredUsers()               |  ✔︎         |  ✔︎          |
+|             |  updateCredential()            |  ✔︎         |  ✔︎          |
+|  批量插入       |  bulkInsert()                  |  ✔︎         |  ✘           |
+|             |  getBulkInsertState()          |  ✔︎         |  ✔︎          |
+|             |  listBulkInsertTasks()         |  ✔︎         |  ✔︎          |
+|  Collection |  getCollectionStatistics()     |  ✘          |  ✔︎          |
+|             |  createCollection()            |  ✔︎         |  ✔︎          |
+|             |  describeCollection()          |  ✔︎         |  ✔︎          |
+|             |  dropCollection()              |  ✔︎         |  ✔︎          |
+|             |  alterCollection()             |  ✘          |  ✔︎          |
+|             |  getLoadingProgress()          |  ✔︎         |  ✔︎          |
+|             |  getPersistentSgementInfo()    |  ✘          |  ✘           |
+|             |  getQuerySegmentInfo()         |  ✘          |  ✘           |
+|             |  getReplicas()                 |  ✘          |  ✘           |
+|             |  insert()                      |  ✘          |  ✔︎          |
+|             |  loadCollection()              |  ✔︎         |  ✔︎          |
+|             |  releaseCollection()           |  ✔︎         |  ✔︎          |
+|             |  showCollections()             |  ✔︎         |  ✔︎          |
+|             |  getLoadState()                |  ✔︎         |  ✔︎          |
+|             |  renameCollection()            |  ✔︎         |  ✔︎          |
+|             |  upsert()                      |  ✘          |  ✔︎          |
+|  数据库        |  ListDatabases                 |  ✘          |  ✘           |
+|             |  DropDatabase                  |  ✘          |  ✘           |
+|             |  CreateDatabase                |  ✘          |  ✘           |
+|  索引         |  createIndex()                 |  ✔︎         |  ✔︎          |
+|             |  describeIndex()               |  ✔︎         |  ✔︎          |
+|             |  dropIndex()                   |  ✔︎         |  ✔︎          |
+|             |  getIndexBuildProgress()       |  ✔︎         |  ✔︎          |
+|             |  getIndexState()               |  ✔︎         |  ✔︎          |
+|  管理         |  getCompactionState()          |  ✘          |  ✔︎          |
+|             |  getCompactionStateWithPlan()  |  ✘          |  ✔︎          |
+|             |  getFlushState()               |  ✘          |  ✔︎          |
+|             |  getMetrics()                  |  ✘          |  ✘           |
+|             |  loadBalance()                 |  ✘          |  ✘           |
+|             |  manualCompact()               |  ✘          |  ✔︎          |
+|  分区         |  createPartition()             |  ✘          |  ✔︎          |
+|             |  dropPartition()               |  ✘          |  ✔︎          |
+|             |  getPartitionStatistics()      |  ✘          |  ✔︎          |
+|             |  hasPartiotion()               |  ✘          |  ✔︎          |
+|             |  loadPartitions()              |  ✘          |  ✔︎          |
+|             |  releasePartitions()           |  ✘          |  ✔︎          |
+|             |  showPartitions()              |  ✘          |  ✔︎          |
+|  搜索 & 查询    |  search()                      |  ✔︎         |  ✔︎          |
+|             |  query()                       |  ✘          |  ✔︎          |
+|  访问控制（RBAC） |  addUserToRole()               |  ✔︎         |  ✔︎<br/>  |
+|             |  createRole()                  |  ✘          |  ✘           |
+|             |  dropRole()                    |  ✘          |  ✘           |
+|             |  grantRolePrivilege()          |  ✘          |  ✘           |
+|             |  removeUserFromRole()          |  ✔︎         |  ✔︎          |
+|             |  revokeRolePrivilege()         |  ✘          |  ✘           |
+|             |  selectGrantForRole()          |  ✘          |  ✔︎          |
+|             |  selectGrantForRoleAndObject() |  ✘          |  ✔︎          |
+|             |  selectRole()                  |  ✘          |  ✔︎          |
+|             |  selectUser()                  |  ✘          |  ✔︎          |
+|  系统         |  getVersion()                  |  ✔︎         |  ✔︎          |
+|             |  checkHealth()                 |  ✘          |  ✔︎          |
+

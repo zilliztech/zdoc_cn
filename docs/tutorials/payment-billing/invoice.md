@@ -2,6 +2,7 @@
 slug: /invoice
 beta: FALSE
 notebook: FALSE
+token: JTuUwoHUyiqJU6kuu30cN9ibnkh
 sidebar_position: 5
 ---
 
@@ -25,11 +26,13 @@ import Admonition from '@theme/Admonition';
 1. 选择组织并点击左侧导航栏中的**系统设置**。
 
 1. 打开**发票管理**页签。点击**可开票账单**。勾选您希望开具发票的账单。在底部提示栏上，您可查看已选中的开票账单数量及开票总金额。确认无误后，请点击**开票**按钮。
+
     ![invoicing-cn](/img/invoicing-cn.png)
 
 1. 选择发票抬头类型。如选择个人抬头，Zilliz Cloud 仅支持开具增值税普通发票。如需开具增值税专用发票，请选择企业抬头。
 
 1. 选择发票类型并填写所需开票信息。
+
     - 如选择开具增值税普通发票，相关参数请见下表。**发票抬头**和**统一社会信用代码**自动录入企业认证中的信息，且不可修改。
 
         |  **参数**       |  **描述**                          |

@@ -2,6 +2,7 @@
 slug: /select-zilliz-cloud-service-plans
 beta: FALSE
 notebook: FALSE
+token: XNCIwt9i6iFgEDkEQE9cTMf8nSe
 sidebar_position: 1
 ---
 
@@ -22,7 +23,7 @@ import Admonition from '@theme/Admonition';
 
 企业版支持阿里云部署，提供 3 种不同类型的 CU——性能型、容量型和经济型 CU。企业版还提供多 AZ 高可用、私网连接（Private Link）、数据自动备份、专家技术支持等功能特性。企业版还提供 SLA，保证每月 99.9% 正常运行时间。适合个人开发者、小规模团队、或大型企业或组织，是构建向量数据平台首选方案，提供高可用、数据安全、专家技术支持。
 
-## 专有部署{#self-hosted-plan}
+## 专有部署{#self-host}
 
 专有部署包含所有企业版特性，支持在您自己的虚拟私有云（VPC）上部署全托管的向量数据库服务。适用于高度注重数据隐私和合规的场景。通常，我们推荐需要 128 CU 以上的用户选择专有部署。更多详情，请[联系销售](https://zilliz.com.cn/contact-sales)。
 
@@ -31,3 +32,4 @@ import Admonition from '@theme/Admonition';
 ## 文档推荐{#related-topics}
 
 - [注册账号](./register-with-zilliz-cloud) 
+

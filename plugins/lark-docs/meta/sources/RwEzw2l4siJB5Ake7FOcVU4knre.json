@@ -1,0 +1,1168 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1687232659",
+  "node_token": "RwEzw2l4siJB5Ake7FOcVU4knre",
+  "node_type": "origin",
+  "obj_create_time": "1687232659",
+  "obj_edit_time": "1700704795",
+  "obj_token": "WAlfdfAg9o39PaxOURvc5hAwnqc",
+  "obj_type": "docx",
+  "origin_node_token": "RwEzw2l4siJB5Ake7FOcVU4knre",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "VCp1wTKc8io1kGkHknEcHX25nLb",
+  "space_id": "7167193056431783939",
+  "title": "设置白名单",
+  "slug": "set-up-whitelist",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "WAlfdfAg9o39PaxOURvc5hAwnqc",
+        "block_type": 1,
+        "children": [
+          "O9o2dwRs6oFIR7xRTSecBK4vnNg",
+          "Dzp4dY8itoNP3Gxn77wc5P15nOb",
+          "IhUHdiLfRohC9Xx4WcwcgUZdnKh",
+          "EryOdbglGoEJKbxaQf2cbQWBnEg",
+          "HiEhdczSEor2UXxPpyOcmVS2nmb",
+          "J7Cddi4iwoOKivx38AdcGMsAndg",
+          "ATZudfckeo0orFxWCAucY9lgnKe",
+          "QP7rdiqRloebMuxrqzgcJfiTnZc",
+          "NmFCdMEZioWBpQxvW65cJVpun0g",
+          "OJ3BdaESTorQVSx8dVwcW0KdnPy",
+          "PW45d9ndYodVLPx8Pb9cNBnwnmd",
+          "B9g8dBus0oeugWxH6fvcefHEnQf",
+          "ApDRdbVLDoE9KQxLEDfc2NvBnpe",
+          "Lp43dfdhiorrVkxfpVLcwauUnCq",
+          "FDsRdRwKCoYynUxIONAcacshnZb",
+          "PYV5d8pqcomK4LxyUCSceZcrnvg",
+          "UQAddI8dTobaNGxA7DDcF5Cwnvd",
+          "PCKpdqOIlo6JUMxQOxqcRcB1n9b",
+          "KrNtdfriEogFPUxT0vQcotQbnPc",
+          "I9WCdPUCYo5OsUx5zoeclh1Snif"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "设置白名单",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "O9o2dwRs6oFIR7xRTSecBK4vnNg",
+        "block_type": 2,
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在 Zilliz Cloud 中，白名单是针对项目的安全设置，适用于项目下的所有集群。设置白名单后，仅白名单中的 IP 地址可以访问您项目下的所有集群。白名单能够有效降低受到恶意攻击的风险",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Dzp4dY8itoNP3Gxn77wc5P15nOb",
+        "block_type": 2,
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本教程将介绍如何设置白名单。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IhUHdiLfRohC9Xx4WcwcgUZdnKh",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "前提条件{#before-you-start}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc"
+      },
+      {
+        "block_id": "EryOdbglGoEJKbxaQf2cbQWBnEg",
+        "block_type": 2,
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "确保满足以下条件：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HiEhdczSEor2UXxPpyOcmVS2nmb",
+        "block_type": 2,
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "开始前，请先确保：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "J7Cddi4iwoOKivx38AdcGMsAndg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您已注册 Zilliz Cloud。如未注册，请先阅读",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "注册账号",
+                "token": "CCVpw6BVti8P8LkfcdJcdRH1nHg",
+                "url": "https://zilliverse.feishu.cn/wiki/CCVpw6BVti8P8LkfcdJcdRH1nHg"
+              }
+            },
+            {
+              "text_run": {
+                "content": "并完成注册。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc"
+      },
+      {
+        "block_id": "ATZudfckeo0orFxWCAucY9lgnKe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您是组织或项目管理员。更多用户角色和权限详情，请阅读",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "角色与权限",
+                "token": "WYzywSL2ViDcZGk9vgqcq9XOned",
+                "url": "https://zilliverse.feishu.cn/wiki/WYzywSL2ViDcZGk9vgqcq9XOned"
+              }
+            },
+            {
+              "text_run": {
+                "content": " 。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc"
+      },
+      {
+        "block_id": "QP7rdiqRloebMuxrqzgcJfiTnZc",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "操作步骤{#procedure}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc"
+      },
+      {
+        "block_id": "NmFCdMEZioWBpQxvW65cJVpun0g",
+        "block_type": 13,
+        "comment_ids": [
+          "7249935465221734404"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "登录",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "background_color": 3,
+                  "bold": false,
+                  "comment_ids": [
+                    "7249935465221734404"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Zilliz Cloud 界面",
+                "text_element_style": {
+                  "background_color": 3,
+                  "bold": false,
+                  "comment_ids": [
+                    "7249935465221734404"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fcloud.zilliz.com.cn%2Flogin"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc"
+      },
+      {
+        "block_id": "OJ3BdaESTorQVSx8dVwcW0KdnPy",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击进入需要设置白名单的组织和项目。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc"
+      },
+      {
+        "block_id": "PW45d9ndYodVLPx8Pb9cNBnwnmd",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在左侧导航栏中，点击 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "安全",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " > ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "+ ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "IP",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "地址",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc"
+      },
+      {
+        "block_id": "B9g8dBus0oeugWxH6fvcefHEnQf",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在弹出的对话框中，输入 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "IP地址（CIDR）和描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc"
+      },
+      {
+        "block_id": "ApDRdbVLDoE9KQxLEDfc2NvBnpe",
+        "block_type": 13,
+        "children": [
+          "HjjadgOMvoqwkdxKA5acdu14nEe"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "字段描述如下表所示。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc"
+      },
+      {
+        "block_id": "HjjadgOMvoqwkdxKA5acdu14nEe",
+        "block_type": 31,
+        "children": [
+          "M2o3dxu4Hogke7xM0B3cNeCsnke",
+          "YrkGd5zyooLa70xXU1xcsCWHnHh",
+          "Ht4id3valoMEY6xhGREcE9ilneg",
+          "Jg2ddCqiXofknxxNF2dc6jL7nYJ",
+          "IlI0dRI2vohlKYx4J2zcvw7En0u",
+          "Kh7odrGiaoUXf7xCfCwco2WFnBh"
+        ],
+        "parent_id": "ApDRdbVLDoE9KQxLEDfc2NvBnpe",
+        "table": {
+          "cells": [
+            "M2o3dxu4Hogke7xM0B3cNeCsnke",
+            "YrkGd5zyooLa70xXU1xcsCWHnHh",
+            "Ht4id3valoMEY6xhGREcE9ilneg",
+            "Jg2ddCqiXofknxxNF2dc6jL7nYJ",
+            "IlI0dRI2vohlKYx4J2zcvw7En0u",
+            "Kh7odrGiaoUXf7xCfCwco2WFnBh"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              100,
+              345
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 3
+          }
+        }
+      },
+      {
+        "block_id": "M2o3dxu4Hogke7xM0B3cNeCsnke",
+        "block_type": 32,
+        "children": [
+          "S3EDde92yoNDoPxEbUXcYvq1naf"
+        ],
+        "parent_id": "HjjadgOMvoqwkdxKA5acdu14nEe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "S3EDde92yoNDoPxEbUXcYvq1naf",
+        "block_type": 2,
+        "parent_id": "M2o3dxu4Hogke7xM0B3cNeCsnke",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "字段",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 2,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "YrkGd5zyooLa70xXU1xcsCWHnHh",
+        "block_type": 32,
+        "children": [
+          "UoUcdeJn9omCQOxMpMecFXvLnse"
+        ],
+        "parent_id": "HjjadgOMvoqwkdxKA5acdu14nEe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "UoUcdeJn9omCQOxMpMecFXvLnse",
+        "block_type": 2,
+        "parent_id": "YrkGd5zyooLa70xXU1xcsCWHnHh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 2,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ht4id3valoMEY6xhGREcE9ilneg",
+        "block_type": 32,
+        "children": [
+          "IFwbdaqfLoi8j0xPN6ecalDDnIe"
+        ],
+        "parent_id": "HjjadgOMvoqwkdxKA5acdu14nEe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "IFwbdaqfLoi8j0xPN6ecalDDnIe",
+        "block_type": 2,
+        "parent_id": "Ht4id3valoMEY6xhGREcE9ilneg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "IP地址（CIDR）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Jg2ddCqiXofknxxNF2dc6jL7nYJ",
+        "block_type": 32,
+        "children": [
+          "QOSTdZD4YooAGxxI3WLcA71VnR2"
+        ],
+        "parent_id": "HjjadgOMvoqwkdxKA5acdu14nEe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QOSTdZD4YooAGxxI3WLcA71VnR2",
+        "block_type": 2,
+        "parent_id": "Jg2ddCqiXofknxxNF2dc6jL7nYJ",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您要添加到白名单中的 IP 地址或无类别域间路由（CIDR）。您可最多添加 20 个 CIDR。示例值：192.168.1.1/20。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IlI0dRI2vohlKYx4J2zcvw7En0u",
+        "block_type": 32,
+        "children": [
+          "RMZFdBSUao5TFRxSe0AcPudYn2M"
+        ],
+        "parent_id": "HjjadgOMvoqwkdxKA5acdu14nEe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RMZFdBSUao5TFRxSe0AcPudYn2M",
+        "block_type": 2,
+        "parent_id": "IlI0dRI2vohlKYx4J2zcvw7En0u",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Kh7odrGiaoUXf7xCfCwco2WFnBh",
+        "block_type": 32,
+        "children": [
+          "A6aAdq6JHon3Ekx2XHvcPHd2nJf"
+        ],
+        "parent_id": "HjjadgOMvoqwkdxKA5acdu14nEe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "A6aAdq6JHon3Ekx2XHvcPHd2nJf",
+        "block_type": 2,
+        "parent_id": "Kh7odrGiaoUXf7xCfCwco2WFnBh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "白名单 IP 地址或 CIDR 的描述。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Lp43dfdhiorrVkxfpVLcwauUnCq",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "添加",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "完成操作",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc"
+      },
+      {
+        "block_id": "FDsRdRwKCoYynUxIONAcacshnZb",
+        "block_type": 34,
+        "children": [
+          "JjiDd5htToekKBxdYiQccxZFnse",
+          "GWWTd7C8WobftHxPHg3cIOjPnId"
+        ],
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc",
+        "quote_container": {}
+      },
+      {
+        "block_id": "JjiDd5htToekKBxdYiQccxZFnse",
+        "block_type": 2,
+        "parent_id": "FDsRdRwKCoYynUxIONAcacshnZb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GWWTd7C8WobftHxPHg3cIOjPnId",
+        "block_type": 2,
+        "parent_id": "FDsRdRwKCoYynUxIONAcacshnZb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果白名单中没有记录，Zilliz Cloud 将允许所有 IP 地址访问项目集群。一旦添加了 CIDR ，仅CIDR 中的 IP 地址可以访问该集群。添加 0.0.0.0/0 的效果等同于白名单中没有记录。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PYV5d8pqcomK4LxyUCSceZcrnvg",
+        "block_type": 26,
+        "comment_ids": [
+          "7278893895487143940"
+        ],
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D6333-1683%26mode%3Ddesign%26t%3DTRha1HEOAolThSqq-4"
+          }
+        },
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc"
+      },
+      {
+        "block_id": "UQAddI8dTobaNGxA7DDcF5Cwnvd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相关文档{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc"
+      },
+      {
+        "block_id": "PCKpdqOIlo6JUMxQOxqcRcB1n9b",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "管理 API 密钥",
+                "token": "UGzNwB4TmiqTozkJvarceRdenif",
+                "url": "https://zilliverse.feishu.cn/wiki/UGzNwB4TmiqTozkJvarceRdenif"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.notion.so%2F9e136327da194cfc9f3b1840554298f1%3Fpvs%3D21"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc"
+      },
+      {
+        "block_id": "KrNtdfriEogFPUxT0vQcotQbnPc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "管理身份凭证",
+                "token": "VNWiwtYwGi9m0Okhj3Zce8wAnte",
+                "url": "https://zilliverse.feishu.cn/wiki/VNWiwtYwGi9m0Okhj3Zce8wAnte"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.notion.so%2F562e60b054a64026b6f3e45ff6fe4338%3Fpvs%3D21"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc"
+      },
+      {
+        "block_id": "I9WCdPUCYo5OsUx5zoeclh1Snif",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "管理 MFA",
+                "token": "EWAWwESijisVHFkoAEbcfhvPnZb",
+                "url": "https://zilliverse.feishu.cn/wiki/EWAWwESijisVHFkoAEbcfhvPnZb"
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "WAlfdfAg9o39PaxOURvc5hAwnqc"
+      }
+    ],
+    "counts": 36
+  }
+}
