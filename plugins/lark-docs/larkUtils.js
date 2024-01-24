@@ -10,13 +10,27 @@ class larkUtils {
     }
 
     determine_file_path(token) {
-        try {
-            const source = this.__fetch_doc_source('node_token', token)
-            this.__iterate_path(source.parent_node_token)
+        const path = fs.readdirSync(this.outputDir, {recursive: true}).filter(file => file.endsWith('.md')).filter(file => {
+            const regex = new RegExp(/token: (.*)/g)
+            const content = fs.readFileSync(`${this.outputDir}/${file}`, {encoding: 'utf-8', flag: 'r'})
+            const file_token = regex.exec(content)[1]
 
-            return this.file_path
-        } catch (error) {
-            return ""
+            return file_token === token
+        })
+
+        if (path.length > 0) {
+            return path[0]
+        } else {
+            throw new Error(`Cannot find file for token ${token} in ${this.outputDir}`)
+        }
+    }
+
+    pre_process_file_paths() {
+        const paths = fs.readdirSync(this.outputDir, {recursive: true})
+        const folders = paths.filter(path => fs.statSync(`${this.outputDir}/${path}`).isDirectory())   
+
+        for (const folder of folders) {
+            fs.rmSync(`${this.outputDir}/${folder}`, {recursive: true, force: true})
         }
     }
 
@@ -31,12 +45,12 @@ class larkUtils {
                 fs.rmSync(`${this.outputDir}/${folder}`, {recursive: true, force: true})
             }   
 
-            if (files.length > 1) {
-                const index_file = `${this.outputDir}/${folder}/${folder.split('/').slice(-1)[0]}.md`
-                const original = fs.readFileSync(index_file, {encoding: 'utf-8', flag: 'r'})
-                const new_lines = "import DocCardList from '@theme/DocCardList';\n\n<DocCardList />"
-                fs.writeFileSync(index_file, original + '\n\n' + new_lines, {encoding: 'utf-8', flag: 'w'})
-            }
+            // if (files.length > 1) {
+            //   const index_file = `${this.outputDir}/${folder}/${folder.split('/').slice(-1)[0]}.md`
+            //   const original = fs.readFileSync(index_file, {encoding: 'utf-8', flag: 'r'})
+            //   const new_lines = "import DocCardList from '@theme/DocCardList';\n\n<DocCardList />"
+            //   fs.writeFileSync(index_file, original + '\n\n' + new_lines, {encoding: 'utf-8', flag: 'w'})
+            // }
         }
     }
 
