@@ -189,7 +189,8 @@ class larkDocWriter {
                             page_token: child.node_token,
                             sidebar_position: index+1,
                             sidebar_label: labels,
-                            keywords: keywords
+                            keywords: keywords,
+                            doc_card_list: true
                         })
 
                         await this.write_docs(`${current_path}/${slug}`, token)
@@ -222,7 +223,8 @@ class larkDocWriter {
                                     page_token: token,
                                     sidebar_position: index+1,
                                     sidebar_label: labels,
-                                    keywords: keywords
+                                    keywords: keywords,
+                                    doc_card_list: false
                                 })
                             }
                             break;
@@ -241,7 +243,8 @@ class larkDocWriter {
         page_token,
         sidebar_position,
         sidebar_label,
-        keywords
+        keywords,
+        doc_card_list
     }) {
         let obj;
         let blocks;
@@ -278,7 +281,8 @@ class larkDocWriter {
                 token: page_token,
                 sidebar_position: sidebar_position,
                 sidebar_label: sidebar_label,
-                keywords: keywords
+                keywords: keywords,
+                doc_card_list: doc_card_list
             })
         }
     }
@@ -444,7 +448,7 @@ class larkDocWriter {
         return markdown.replace(/\n{3,}/g, '\n\n').replace(/^\|(\s*\|)*\s*\n/gm, '')
     }
 
-    async __write_page({slug, beta, notebook, path, token, sidebar_position, sidebar_label, keywords}) {
+    async __write_page({slug, beta, notebook, path, token, sidebar_position, sidebar_label, keywords, doc_card_list}) {
         let front_matter = this.__front_matters(slug, beta, notebook, token, sidebar_position, sidebar_label, keywords)
         let markdown = await this.__markdown()
         markdown = this.__filter_content(markdown, this.target)
@@ -457,6 +461,10 @@ class larkDocWriter {
         let imports = await this.__imports(tabs > 0)
 
         var file_path = `${path}/${slug}.md`
+
+        if (doc_card_list) {
+            markdown += "\n\nimport DocCardList from '@theme/DocCardList';\n\n<DocCardList />"
+        }
 
         fs.writeFileSync(file_path, front_matter + '\n\n' + imports + '\n\n' + markdown)
     }

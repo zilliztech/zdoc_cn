@@ -105,6 +105,16 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
+#### 缩容集群{#scale-down-cluster}
+
+如果您需要缩小集群 CU 大小，请先创建一个新集群，并在创建时选择您需要的 CU 大小。随后，将原集群中的数据[迁移](./migrate-between-clusters#dedicated-procedure)至新集群中。如在迁移过程中遇到任何问题，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
+
+<Admonition type="info" icon="📘" title="说明">
+
+为集群缩容前，请先使用 [CU 计算器](https://zilliz.com.cn/pricing#calculator)估算您的数据需要使用的最小 CU 大小。否则，过小的 CU 将无法存储您的数据，最终导致数据迁移任务失败。
+
+</Admonition>
+
 #### 设置 IP 白名单{#set-up-whitelist}
 
 在**集群信息**区域，单击 **IP 白名单**右侧的**前往配置**，可将指定 IP 地址段添加到白名单。将 IP 地址段添加到白名单后，Zilliz Cloud 只允许白名单 IP 地址段内的 IP 地址访问集群。若添加 0.0.0.0/0，则表示允许所有 IP 地址访问集群。

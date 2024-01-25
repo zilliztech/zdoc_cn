@@ -1,7 +1,7 @@
 ---
 slug: /project-access
-beta: false
-notebook: false
+beta: FALSE
+notebook: FALSE
 token: NBcmwUP0cigvtjk9EAWc4HwnnDg
 sidebar_position: 4
 ---

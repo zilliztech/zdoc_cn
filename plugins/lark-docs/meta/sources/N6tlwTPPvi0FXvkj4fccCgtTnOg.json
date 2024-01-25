@@ -5,7 +5,7 @@
   "node_token": "N6tlwTPPvi0FXvkj4fccCgtTnOg",
   "node_type": "origin",
   "obj_create_time": "1693559277",
-  "obj_edit_time": "1703069255",
+  "obj_edit_time": "1706151116",
   "obj_token": "VfhBdjfjyoXnS8xBunHchlVvnhd",
   "obj_type": "docx",
   "origin_node_token": "N6tlwTPPvi0FXvkj4fccCgtTnOg",
@@ -41,6 +41,7 @@
           "F5TldXt2Yor3hUxUBwJcEpr4nLd",
           "CXw7dCFGRoOrtpxFPdocKVaCnUh",
           "VmEzdMoqxoJeO7xFyyBcPwqEnRh",
+          "XjbWdI3BAotFVrxlrPIcYtl7nke",
           "XAYgdrgA4oqB02xnjRpcFCHAnbg",
           "Uk3FdfTAto6KFKxGVaEctBBFnVh",
           "NkKJdwl9NoSimPxSDuwc8RjYnpd",
@@ -1080,6 +1081,31 @@
         "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd"
       },
       {
+        "block_id": "XjbWdI3BAotFVrxlrPIcYtl7nke",
+        "block_type": 2,
+        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过集群间迁移，您可以轻松修改集群 CU 类型、部署地域或为集群缩容。集群迁移将不会影响您原有集群的状态。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
         "block_id": "XAYgdrgA4oqB02xnjRpcFCHAnbg",
         "block_type": 2,
         "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd",
@@ -1546,6 +1572,6 @@
         }
       }
     ],
-    "counts": 31
+    "counts": 32
   }
 }

@@ -260,7 +260,7 @@
       "node_token": "ZdQxwDlFbiPLCNkXISXcyqtBn3r",
       "node_type": "origin",
       "obj_create_time": "1687140567",
-      "obj_edit_time": "1705888684",
+      "obj_edit_time": "1705981396",
       "obj_token": "VxzGdIysCo5fokxWYHUcYIZenPc",
       "obj_type": "docx",
       "origin_node_token": "ZdQxwDlFbiPLCNkXISXcyqtBn3r",
@@ -268,8 +268,7 @@
       "owner": "ou_e55a208a81fc721928685fc3df9cb678",
       "parent_node_token": "XyeFwdx6kiK9A6kq3yIcLNdEnDd",
       "space_id": "7167193056431783939",
-      "title": "用户与鉴权",
-      "slug": "authentication"
+      "title": "用户鉴权"
     },
     {
       "creator": "ou_fbc044d19930afd389d5c369466c38b1",
@@ -278,7 +277,7 @@
       "node_token": "HaV5wsgX8ifrA2kyH4LchfhEnbf",
       "node_type": "origin",
       "obj_create_time": "1687158719",
-      "obj_edit_time": "1705888690",
+      "obj_edit_time": "1705981404",
       "obj_token": "YM7GdxO0ToAbY1xdQQUcQQkdn0g",
       "obj_type": "docx",
       "origin_node_token": "HaV5wsgX8ifrA2kyH4LchfhEnbf",
@@ -286,8 +285,7 @@
       "owner": "ou_fbc044d19930afd389d5c369466c38b1",
       "parent_node_token": "XyeFwdx6kiK9A6kq3yIcLNdEnDd",
       "space_id": "7167193056431783939",
-      "title": "用户与权限",
-      "slug": "authorization"
+      "title": "用户授权"
     },
     {
       "creator": "ou_e55a208a81fc721928685fc3df9cb678",
@@ -386,7 +384,7 @@
       "node_token": "YVAzwqHdti7uHSkZL6icsY7hnpe",
       "node_type": "origin",
       "obj_create_time": "1687158830",
-      "obj_edit_time": "1705652236",
+      "obj_edit_time": "1706150978",
       "obj_token": "A558dloqnoQ4v2x7o7VcKFKVn6d",
       "obj_type": "docx",
       "origin_node_token": "YVAzwqHdti7uHSkZL6icsY7hnpe",
@@ -422,7 +420,7 @@
       "node_token": "JX2ewvwbHioVkykbIhacucpvnzh",
       "node_type": "origin",
       "obj_create_time": "1692175168",
-      "obj_edit_time": "1705979184",
+      "obj_edit_time": "1706151343",
       "obj_token": "MQI8b662gabapmsTl7ZcnTExnSc",
       "obj_type": "bitable",
       "origin_node_token": "JX2ewvwbHioVkykbIhacucpvnzh",

@@ -5,7 +5,7 @@
   "node_token": "IRirwe30tilo1qkJlR7ca2MUnvn",
   "node_type": "origin",
   "obj_create_time": "1692253266",
-  "obj_edit_time": "1703065071",
+  "obj_edit_time": "1706151336",
   "obj_token": "Jur1dPOePodawBxfdkQc9WqknAb",
   "obj_type": "docx",
   "origin_node_token": "IRirwe30tilo1qkJlR7ca2MUnvn",
@@ -70,6 +70,9 @@
           "If4hdRdIioufQbxqKQxc4YNCnZg",
           "YtBtdySBPohvvcxQnRfceRDAnFh",
           "MGCddkHfdoyYEgxTNtqcFKShnVd",
+          "OfQSdQgBiorKhIxm0YvcNe50ngf",
+          "HptWdTj3MozZVtxYUwucSyPSnw8",
+          "XqMbdMibVoevfTxJatBc84ABnsg",
           "Wg4cdveGwoVj7RxtFHbc5I4Ynnc",
           "QFZbddHAno886yxi8XLcNNFFnEf",
           "T6lZdbZb7ocHuixzRphc1a1Nn8b",
@@ -3285,6 +3288,197 @@
         }
       },
       {
+        "block_id": "OfQSdQgBiorKhIxm0YvcNe50ngf",
+        "block_type": 6,
+        "heading4": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "缩容集群{#scale-down-cluster}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb"
+      },
+      {
+        "block_id": "HptWdTj3MozZVtxYUwucSyPSnw8",
+        "block_type": 2,
+        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您需要缩小集群 CU 大小，请先创建一个新集群，并在创建时选择您需要的 CU 大小。随后，将原集群中的数据",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "迁移",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FN6tlwTPPvi0FXvkj4fccCgtTnOg%23WIDydMJMTog4P0x0S2RcAvOhn3c"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "至新集群中。如在迁移过程中遇到任何问题，请",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "提交工单",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fsupport.zilliz.com.cn%2Fhc%2Fzh-cn"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XqMbdMibVoevfTxJatBc84ABnsg",
+        "block_type": 34,
+        "children": [
+          "UQ4zdYwYIoIUi6xbZBNcMTFenXd",
+          "KJ7QdIbKDoHy4LxRxJTcRnEtndh"
+        ],
+        "parent_id": "Jur1dPOePodawBxfdkQc9WqknAb",
+        "quote_container": {}
+      },
+      {
+        "block_id": "UQ4zdYwYIoIUi6xbZBNcMTFenXd",
+        "block_type": 2,
+        "parent_id": "XqMbdMibVoevfTxJatBc84ABnsg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KJ7QdIbKDoHy4LxRxJTcRnEtndh",
+        "block_type": 2,
+        "parent_id": "XqMbdMibVoevfTxJatBc84ABnsg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为集群缩容前，请先使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "CU 计算器",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliz.com.cn%2Fpricing%23calculator"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "估算您的数据需要使用的最小 CU 大小。否则，过小的 CU 将无法存储您的数据，最终导致数据迁移任务失败。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
         "block_id": "Wg4cdveGwoVj7RxtFHbc5I4Ynnc",
         "block_type": 6,
         "heading4": {
@@ -4492,6 +4686,6 @@
         }
       }
     ],
-    "counts": 97
+    "counts": 102
   }
 }
