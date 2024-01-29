@@ -64,7 +64,7 @@ Zilliz Cloud 支持导入 JSON、Parquet 和 NumPy 数据。如果您的数据�
 |  **最大文件大小（单批次）**<br/>  |  - 总大小： 100 GB<br/> - 单文件大小： 10 GB<br/> |
 |  **数据文件存放位置**             |  本地或远程                                        |
 
-![json_data_structure](/img/json_data_structure.png)
+![json_data_structure_zh](/img/json_data_structure_zh.png)
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -106,7 +106,7 @@ Zilliz Cloud 支持导入 JSON、Parquet 和 NumPy 数据。如果您的数据�
 |  **最大文件大小（单批次）**<br/>  |  - 总大小： 100 GB<br/> - 每个一层子目录下的文件大小： 10 GB<br/> |
 |  **数据文件存放位置**             |  仅远程                                                  |
 
-![numpy_file_structure](/img/numpy_file_structure.png)
+![numpy_file_structure_zh](/img/numpy_file_structure_zh.png)
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -128,17 +128,19 @@ Zilliz Cloud 支持通过 Zilliz Cloud 控制台，RESTful API 以及 SDK 批量
 
 Zilliz Cloud 支持在 Zilliz Cloud 控制台中从本地导入满足上述要求的 JSON 文件。如下图所示，您可以拖放准备好的数据文件到 **Import Data** 对话框或单击 **upload a file **并选择该文件，然后单击 **Import** 将文件中的数据导入到目标 Collection 中。
 
-![data-import-on-console](/img/data-import-on-console.png)
+![data-import-on-console_zh](/img/data-import-on-console_zh.png)
 
 ### 从远程对象存储桶导入{#from-remote-buckets}
 
-Zilliz Cloud 还支持从阿里云 OSS 桶中导入准备好的数据。
+Zilliz Cloud 还支持通过 Zilliz Cloud 控制台或使用 RESTful API / SDK 从阿里云  OSS  桶中导入准备好的数据。
 
 <Admonition type="info" icon="📘" title="说明">
 
 远程对象存储桶须与数据导入目标集群处于同一云服务提供商网络。例如，如果目标集群托管在阿里云上，则源数据须存放在阿里云 OSS 桶中。
 
 </Admonition>
+
+![data-import-on-console-remote_zh](/img/data-import-on-console-remote_zh.png)
 
 - 对象访问 URI
 

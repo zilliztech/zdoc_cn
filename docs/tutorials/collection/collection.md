@@ -1,7 +1,7 @@
 ---
 slug: /collection
-beta: false
-notebook: false
+beta: FALSE
+notebook: FALSE
 token: Yd32wNk7uiNEw3kd1dAcSV05nAb
 sidebar_position: 4
 ---

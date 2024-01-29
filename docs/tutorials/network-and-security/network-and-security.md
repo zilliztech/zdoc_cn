@@ -1,7 +1,7 @@
 ---
 slug: /network-and-security
-beta: false
-notebook: false
+beta: FALSE
+notebook: FALSE
 token: VCp1wTKc8io1kGkHknEcHX25nLb
 sidebar_position: 13
 ---

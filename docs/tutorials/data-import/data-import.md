@@ -1,7 +1,7 @@
 ---
 slug: /data-import
-beta: false
-notebook: false
+beta: FALSE
+notebook: FALSE
 token: ZORTw6MRwiMJ23kSwcRcOIxmnkc
 sidebar_position: 5
 ---

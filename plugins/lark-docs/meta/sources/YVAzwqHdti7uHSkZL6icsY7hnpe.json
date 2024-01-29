@@ -5,7 +5,7 @@
   "node_token": "YVAzwqHdti7uHSkZL6icsY7hnpe",
   "node_type": "origin",
   "obj_create_time": "1687158830",
-  "obj_edit_time": "1705652236",
+  "obj_edit_time": "1706150978",
   "obj_token": "A558dloqnoQ4v2x7o7VcKFKVn6d",
   "obj_type": "docx",
   "origin_node_token": "YVAzwqHdti7uHSkZL6icsY7hnpe",
@@ -961,7 +961,34 @@
           "elements": [
             {
               "text_run": {
-                "content": "如果您需要缩小集群 CU 大小，请",
+                "content": "如果您需要缩小集群 CU 大小，请先创建一个新集群，并在创建时选择您需要的 CU 大小。随后，将原集群中的数据",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "迁移",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FN6tlwTPPvi0FXvkj4fccCgtTnOg%23WIDydMJMTog4P0x0S2RcAvOhn3c"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "至新集群中。如在迁移过程中遇到任何问题，请",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -988,7 +1015,7 @@
             },
             {
               "text_run": {
-                "content": "。我们将在 8 小时以内为您的集群缩容。",
+                "content": "。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

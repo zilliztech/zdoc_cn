@@ -11,7 +11,9 @@ import Admonition from '@theme/Admonition';
 
 # 版本说明书（2023/09/19）
 
-我们很高兴地宣布Zilliz Cloud 新版本的发布。此版本引入了一系列增强和功能：
+**发布日期：2023年9月19日**
+
+我们很高兴地宣布Zilliz Cloud 2.2.0的发布。此版本引入了一系列增强和功能：
 
 ## 概述{#overview}
 

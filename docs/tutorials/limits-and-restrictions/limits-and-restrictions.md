@@ -1,7 +1,7 @@
 ---
 slug: /limits-and-restrictions
-beta: false
-notebook: false
+beta: FALSE
+notebook: FALSE
 token: Y3PXwA1Y0i5pZokIw8NcWCzPnxh
 sidebar_position: 16
 ---

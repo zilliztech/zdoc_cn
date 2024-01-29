@@ -1,7 +1,7 @@
 ---
 slug: /release-notes
-beta: false
-notebook: false
+beta: FALSE
+notebook: undefined
 token: QxcnwBks8izBAQkjP8Ycl1cEnQh
 sidebar_position: 18
 ---
