@@ -5,7 +5,7 @@
   "node_token": "FGluwzZltiZo8LkJyWVcD8qdnxc",
   "node_type": "origin",
   "obj_create_time": "1701417042",
-  "obj_edit_time": "1705888454",
+  "obj_edit_time": "1705981931",
   "obj_token": "KDaDd79AyoWQZKxl9fsc7ADynYf",
   "obj_type": "docx",
   "origin_node_token": "FGluwzZltiZo8LkJyWVcD8qdnxc",
@@ -76,7 +76,31 @@
             },
             {
               "text_run": {
-                "content": " 来管理集群的内建角色。 ",
+                "content": " 来管理集群",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "身份凭证",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。 ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

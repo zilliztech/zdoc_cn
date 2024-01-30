@@ -5,7 +5,7 @@
   "node_token": "GLk6wr8jviPyzHk7DjRc56YsnNf",
   "node_type": "origin",
   "obj_create_time": "1694688156",
-  "obj_edit_time": "1705924476",
+  "obj_edit_time": "1706083191",
   "obj_token": "YBMQdFaJLom9yvxVp9hcmGnmnye",
   "obj_type": "docx",
   "origin_node_token": "GLk6wr8jviPyzHk7DjRc56YsnNf",
@@ -37,7 +37,7 @@
           "Fyzwdqi38ofURdxq1sbcpW5Lnqg",
           "W5q4dIF4UoO2k1xUI00c8vL2n9b",
           "Stk9dHIPPoQRbsxxmc2co4WXnuh",
-          "CgYkdX4ksod9raxFchgc1OoGndc",
+          "CcuadJNfToyUTsxIAuIcdyzVnUf",
           "EpfPdVc9Vo9s6ixcuaVcgfcZn2d",
           "WHBMdQv1RojkcyxCpKicbdwlnHh",
           "TxRldvNrHoY3JRxckktc0Jvjnvb",
@@ -47,17 +47,18 @@
           "DPW4do7avoJqJ6x22xecSk34n5e",
           "XP4SdTFIGor4bOxspI4c7Kkunqb",
           "LUL0dpTFao6cWPxswYTcqJR9nag",
-          "N5rgduckmo8rFgxRWmzc4vc6nOb",
+          "BAiMdm2SyoqOlRxFBGEc0fUbnog",
           "SOJ7dBsiKoDQmQxNWU4cd3itn5c",
           "E8yNdHBPlob4Uzx8f0JcNxdynHg",
           "GzPqd4qYSoAroXxJd7Dc3C1pnbf",
           "DoZJdThq1oKo6axgnu1ciiFQn3d",
           "El0OdwoRco1c8Ix9kvucjFBjnoe",
           "CCyFdKhH7ooR2zxDmA0cRY66nYK",
-          "MAuZdD8uPoFrVNxhKdhcwc9GnBn",
+          "WuIQdOa9Yog993xsPSpcXk6sncb",
           "Ij3GdJQlxodO3RxYNepcVTFWnog",
           "N1Msd7xypom25zxrTBqcbw1snwg",
           "HhTbdsFWioV8pjxtunKc2CjNnLe",
+          "ZnHDd5AlNojiuVxGwlscYkoxnKf",
           "Pb2vdCYRdof82LxHHXhcbYOOn7g",
           "H8pVd9Iogons7hxD31Dca7RUnOg",
           "JfqqdJsLboYpN0xxWHPcpr0Ynkf"
@@ -1170,12 +1171,12 @@
         }
       },
       {
-        "block_id": "CgYkdX4ksod9raxFchgc1OoGndc",
+        "block_id": "CcuadJNfToyUTsxIAuIcdyzVnUf",
         "block_type": 26,
         "iframe": {
           "component": {
             "iframe_type": 8,
-            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D27453-1183%26mode%3Ddesign%26t%3DSig369HFISdVvcS6-4"
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D35167-1202%26mode%3Ddesign%26t%3D9L8YCdafyPAOYOHV-4"
           }
         },
         "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
@@ -2633,12 +2634,12 @@
         }
       },
       {
-        "block_id": "N5rgduckmo8rFgxRWmzc4vc6nOb",
+        "block_id": "BAiMdm2SyoqOlRxFBGEc0fUbnog",
         "block_type": 26,
         "iframe": {
           "component": {
             "iframe_type": 8,
-            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D27453-1269%26mode%3Ddesign%26t%3Dndm5bzqpzVfQ6bJg-4"
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D35167-1369%26mode%3Ddesign%26t%3D9L8YCdafyPAOYOHV-4"
           }
         },
         "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
@@ -3182,12 +3183,12 @@
         }
       },
       {
-        "block_id": "MAuZdD8uPoFrVNxhKdhcwc9GnBn",
+        "block_id": "WuIQdOa9Yog993xsPSpcXk6sncb",
         "block_type": 26,
         "iframe": {
           "component": {
             "iframe_type": 8,
-            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D27607-1137%26mode%3Ddesign%26t%3DN1yBTNMBBF8KSIw9-4"
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D35197-1488%26mode%3Ddesign%26t%3D9L8YCdafyPAOYOHV-4"
           }
         },
         "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
@@ -3225,7 +3226,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "Zilliz Cloud 还支持从阿里云 OSS 桶中导入准备好的数据。",
+                "content": "Zilliz Cloud 还支持通过 Zilliz Cloud 控制台或使用 RESTful API / SDK 从阿里云  OSS  桶中导入准备好的数据。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3305,6 +3306,17 @@
             "folded": false
           }
         }
+      },
+      {
+        "block_id": "ZnHDd5AlNojiuVxGwlscYkoxnKf",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D35197-1509%26mode%3Ddesign%26t%3D9L8YCdafyPAOYOHV-4"
+          }
+        },
+        "parent_id": "YBMQdFaJLom9yvxVp9hcmGnmnye"
       },
       {
         "block_id": "Pb2vdCYRdof82LxHHXhcbYOOn7g",
@@ -4443,6 +4455,6 @@
         }
       }
     ],
-    "counts": 163
+    "counts": 164
   }
 }

@@ -5,7 +5,7 @@
   "node_token": "SXwewQ8p6i2qf8kd2YaccqKDnng",
   "node_type": "origin",
   "obj_create_time": "1701398087",
-  "obj_edit_time": "1705930177",
+  "obj_edit_time": "1706179424",
   "obj_token": "TL1OdQAgtozxGwx1uwecRHUYnLb",
   "obj_type": "docx",
   "origin_node_token": "SXwewQ8p6i2qf8kd2YaccqKDnng",
@@ -154,7 +154,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "组织成员角色{#organization-roles}",
+                "content": "组织用户角色{#organization-roles}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -180,7 +180,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "为了在组织层面上精准控制访问及操作权限，Zilliz Cloud 提供两种组织角色，明确规定了某一用户是否有权限访问特性资源及进行特定操作。",
+                "content": "为了实现组织层面上的精准控制访问，Zilliz Cloud 提供两种组织用户角色，规定了用户是否有权限访问特定资源或执行特定操作。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -278,7 +278,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "项目成员角色{#project-roles}",
+                "content": "项目用户角色{#project-roles}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -304,7 +304,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "在项目层面上，Zilliz Cloud 设置了两种角色，以便实现更精细化的访问控制：",
+                "content": "在项目层面上，Zilliz Cloud 设置了两种角色：",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -453,7 +453,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "在 Zilliz Cloud 中创建集群时，系统会默认创建一个名为 ",
+                "content": "创建 Zilliz Cloud 集群时，系统会默认创建一个名为 ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -477,7 +477,7 @@
             },
             {
               "text_run": {
-                "content": " 的集群用户，并自动生成其密码。作为管理员，",
+                "content": " 的集群用户，并自动生成用户密码。作为集群管理员，",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -501,7 +501,7 @@
             },
             {
               "text_run": {
-                "content": " 用户被赋予了完整的权限，可以访问和操作所有集群级别的资源。",
+                "content": " 被赋予了完整的集群管理权限，可以访问和操作所有集群级别的资源。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -611,7 +611,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "在默认的 ",
+                "content": "除了默认的 ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -659,7 +659,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "管理员：拥有对集群及其关联资源的全面控制权。",
+                "content": "管理员（Admin）：拥有对集群及其关联资源的全面控制权。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -684,7 +684,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "读写权限：能够读取、写入以及管理集群内的 Collection 和索引。",
+                "content": "读写权限（Read-Write）：能够读取、写入以及管理集群内的 Collection 和索引。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -709,7 +709,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "只读权限：仅可查看大部分集群资源，不具备创建、修改或删除的权限。",
+                "content": "只读权限（Read-Only）：仅可查看大部分集群资源，不具备创建、修改或删除的权限。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1108,7 +1108,7 @@
             "column_width": [
               187,
               213,
-              198
+              442
             ],
             "header_row": true,
             "merge_info": [
@@ -4870,7 +4870,6 @@
           "ItrAdFTNzo7NJmxViTWceB2Cnqf",
           "J7XKd6wFWof9TFxrKUQc45eCnmg",
           "VPejd0gsnoqwg3xrKU0cGnwJn8f",
-          "AWIDdsN57obamkxaRqucRZWXnis",
           "RdatdiT9tog8WcxJX3ccLCfOnIf",
           "KtrEd3r3qoH99dxvQNpcHA7Jn9b",
           "I8UWdXso7o6u6Ex4tRDc7UAznLf",
@@ -5705,31 +5704,6 @@
             "folded": false
           }
         }
-      },
-      {
-        "block_id": "AWIDdsN57obamkxaRqucRZWXnis",
-        "block_type": 12,
-        "bullet": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "Credential (create, delete, list, update, addUserToRole, selectUser)",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "M6VJdHJIBobvmQxeU1IcaHIsnld"
       },
       {
         "block_id": "RdatdiT9tog8WcxJX3ccLCfOnIf",
@@ -8094,6 +8068,6 @@
         "parent_id": "TL1OdQAgtozxGwx1uwecRHUYnLb"
       }
     ],
-    "counts": 180
+    "counts": 179
   }
 }

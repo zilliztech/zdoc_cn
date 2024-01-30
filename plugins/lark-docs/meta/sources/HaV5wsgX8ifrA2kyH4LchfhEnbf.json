@@ -5,7 +5,7 @@
   "node_token": "HaV5wsgX8ifrA2kyH4LchfhEnbf",
   "node_type": "origin",
   "obj_create_time": "1687158719",
-  "obj_edit_time": "1705888690",
+  "obj_edit_time": "1705981404",
   "obj_token": "YM7GdxO0ToAbY1xdQQUcQQkdn0g",
   "obj_type": "docx",
   "origin_node_token": "HaV5wsgX8ifrA2kyH4LchfhEnbf",
@@ -13,8 +13,7 @@
   "owner": "ou_fbc044d19930afd389d5c369466c38b1",
   "parent_node_token": "XyeFwdx6kiK9A6kq3yIcLNdEnDd",
   "space_id": "7167193056431783939",
-  "title": "用户与权限",
-  "slug": "authorization",
+  "title": "用户授权",
   "blocks": {
     "items": [
       {
@@ -40,7 +39,7 @@
             },
             {
               "text_run": {
-                "content": "与权限",
+                "content": "授权",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -142,7 +141,7 @@
       "node_token": "SXwewQ8p6i2qf8kd2YaccqKDnng",
       "node_type": "origin",
       "obj_create_time": "1701398087",
-      "obj_edit_time": "1705930177",
+      "obj_edit_time": "1706179424",
       "obj_token": "TL1OdQAgtozxGwx1uwecRHUYnLb",
       "obj_type": "docx",
       "origin_node_token": "SXwewQ8p6i2qf8kd2YaccqKDnng",

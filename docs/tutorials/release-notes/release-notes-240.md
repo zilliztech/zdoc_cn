@@ -11,7 +11,9 @@ import Admonition from '@theme/Admonition';
 
 # 版本说明书（2023/12/20）
 
-我们很高兴地宣布 Zilliz Cloud 新版本的发布。此版本引入了一系列增强和功能更新。主要包括
+**发布日期：2023 年 12 月 20 日**
+
+我们很高兴地宣布 Zilliz Cloud 2.4.0 的发布。此版本引入了一系列增强和功能更新。主要包括
 
 ## Milvus 兼容性
 

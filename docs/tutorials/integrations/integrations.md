@@ -1,7 +1,7 @@
 ---
 slug: /integrations
-beta: false
-notebook: false
+beta: FALSE
+notebook: FALSE
 token: B11mwdhmYiGFsck0eCYcU5wnngX
 sidebar_position: 15
 ---

@@ -17,17 +17,17 @@ import Admonition from '@theme/Admonition';
 
 当您在 Zilliz Cloud 上创建了一个集群后，您就能看到如下操作界面。
 
-![console_overview](/img/console_overview.png)
+![console_overview_zh](/img/console_overview_zh.png)
 
 ## 集群详情{#cluster-details}
 
-![dedicated_cluster](/img/dedicated_cluster.png)
+![dedicated_cluster_zh](/img/dedicated_cluster_zh.png)
 
 ## API 密钥{#api-keys}
 
-![byoc-api-keys](/img/byoc-api-keys.png)
+![api-keys-zh](/img/api-keys-zh.png)
 
 ## 项目 ID{#project-ids}
 
-![project_ids](/img/project_ids.png)
+![project_id_zh](/img/project_id_zh.png)
 

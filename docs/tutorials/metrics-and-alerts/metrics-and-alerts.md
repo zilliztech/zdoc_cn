@@ -1,7 +1,7 @@
 ---
 slug: /metrics-and-alerts
-beta: false
-notebook: false
+beta: FALSE
+notebook: FALSE
 token: SlItwMcOyikiWVkr7Glcy9sinMg
 sidebar_position: 12
 ---

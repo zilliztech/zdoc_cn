@@ -5,7 +5,7 @@
   "node_token": "ZdQxwDlFbiPLCNkXISXcyqtBn3r",
   "node_type": "origin",
   "obj_create_time": "1687140567",
-  "obj_edit_time": "1705888684",
+  "obj_edit_time": "1705981396",
   "obj_token": "VxzGdIysCo5fokxWYHUcYIZenPc",
   "obj_type": "docx",
   "origin_node_token": "ZdQxwDlFbiPLCNkXISXcyqtBn3r",
@@ -13,8 +13,7 @@
   "owner": "ou_e55a208a81fc721928685fc3df9cb678",
   "parent_node_token": "XyeFwdx6kiK9A6kq3yIcLNdEnDd",
   "space_id": "7167193056431783939",
-  "title": "用户与鉴权",
-  "slug": "authentication",
+  "title": "用户鉴权",
   "blocks": {
     "items": [
       {
@@ -28,7 +27,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "用户与鉴权",
+                "content": "用户鉴权",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -124,7 +123,7 @@
       "node_token": "UGzNwB4TmiqTozkJvarceRdenif",
       "node_type": "origin",
       "obj_create_time": "1687171681",
-      "obj_edit_time": "1705895857",
+      "obj_edit_time": "1705981903",
       "obj_token": "GQTCdYpOqop0UIxqBUScktmrnJb",
       "obj_type": "docx",
       "origin_node_token": "UGzNwB4TmiqTozkJvarceRdenif",
@@ -142,7 +141,7 @@
       "node_token": "FGluwzZltiZo8LkJyWVcD8qdnxc",
       "node_type": "origin",
       "obj_create_time": "1701417042",
-      "obj_edit_time": "1705888454",
+      "obj_edit_time": "1705981931",
       "obj_token": "KDaDd79AyoWQZKxl9fsc7ADynYf",
       "obj_type": "docx",
       "origin_node_token": "FGluwzZltiZo8LkJyWVcD8qdnxc",

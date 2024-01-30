@@ -5,7 +5,7 @@
   "node_token": "UGzNwB4TmiqTozkJvarceRdenif",
   "node_type": "origin",
   "obj_create_time": "1687171681",
-  "obj_edit_time": "1705895857",
+  "obj_edit_time": "1705981903",
   "obj_token": "GQTCdYpOqop0UIxqBUScktmrnJb",
   "obj_type": "docx",
   "origin_node_token": "UGzNwB4TmiqTozkJvarceRdenif",
@@ -116,7 +116,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "在 Zilliz Cloud 平台，您可以在组织下分配和管理 API 密钥。这些密钥是用于对指定项目和资源进行访问所必需的认证令牌，并且可用于对 RESTful API 或 SDK 调用进行鉴权。",
+                "content": "在 Zilliz Cloud 平台，您可以在组织下分配和管理 API 密钥。这些密钥是用于对指定项目和资源进行访问所必需的认证令牌，可用于对 RESTful API 或 SDK 调用进行鉴权。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -239,7 +239,7 @@
             },
             {
               "text_run": {
-                "content": "：这种密钥与特定的应用程序或程序相关联，而不是与单个用户绑定。具有",
+                "content": "：这种密钥与特定的应用程序相关联，而不是与单个用户绑定。具有",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -266,7 +266,7 @@
             },
             {
               "text_run": {
-                "content": "身份的用户可创建并管理这类密钥。自定义密钥更适用于开发场景，提供了稳定的长期 API 集成及自动化功能。",
+                "content": "身份的用户可创建并管理自定义密钥。此类密钥更适用于开发场景，提供了稳定的长期 API 集成及自动化功能。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -327,7 +327,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "在 2024 年 1 月 26 日之前发布的版本中，并未对 API 密钥进行分类。如果您的 Zilliz Cloud 服务是从该日期前的版本升级而来，您之前生成的 API 密钥将被默认设置为自定义密钥，并继承原 API 密钥所拥有的项目级权限。",
+                "content": "在 2024 年 1 月 29 日之前发布的版本中，并未对 API 密钥进行分类。如果您的 Zilliz Cloud 服务是从该日期前的版本升级而来，您之前版本的 API 密钥将被默认设置为自定义密钥，并继承原 API 密钥所拥有的项目级权限。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2731,7 +2731,34 @@
           "elements": [
             {
               "text_run": {
-                "content": "[1] 拥有管理员身份的用户可以根据其权限范围查看其他成员的 API 密钥名称。组织管理员可查看整个组织内所有成员的 API 密钥名称，而项目管理员仅能查看自己权限范围内的密钥。项目成员只能查看自己的个人密钥。",
+                "content": "[1] 拥有",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "管理员",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FSXwewQ8p6i2qf8kd2YaccqKDnng"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "身份的用户可以根据其权限范围查看其他成员的 API 密钥名称。组织管理员可查看整个组织内所有成员的 API 密钥名称，而项目管理员仅能查看自己权限范围内的密钥。项目成员只能查看自己的个人密钥。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2856,7 +2883,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "在 Zilliz Cloud 中，除了系统为每位组织用户自动生成的个人密钥外，您还可以手动创建自定义密钥。对于需要长期维护的项目或应用程序开发，推荐使用自定义 API 密钥而非个人密钥。",
+                "content": "在 Zilliz Cloud 中，除了系统为每位组织用户自动生成的个人密钥外，您还可以手动创建自定义密钥。对于需要长期维护的项目或应用程序开发，推荐使用自定义 API 密钥。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2917,7 +2944,31 @@
             },
             {
               "text_run": {
-                "content": "：您可以通过设定适当的组织角色、明确密钥所能访问的特定项目，并为该项目内的密钥设定角色来定义该自定义 API 密钥的访问范围。为实现更精细化的访问控制，您还可以设置“仅限访问特定集群”的白名单，以此来限制密钥的访问范围。",
+                "content": "：您可以通过指定用户角色或特定项目，来定义自定义 API 密钥的访问范围。为实现更精细化的访问控制，您还可以通过",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "选择可访问的集群",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "来设置可访问的白名单，以限制密钥可访问的集群范围。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2955,7 +3006,7 @@
             },
             {
               "text_run": {
-                "content": "API 密钥访问权限",
+                "content": "API 密钥权限",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -2967,7 +3018,7 @@
             },
             {
               "text_run": {
-                "content": "设置中，您可以添加 API 密钥的可访问项目。",
+                "content": "设置中，您也可以添加 API 密钥的可访问项目。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3176,7 +3227,34 @@
             },
             {
               "text_run": {
-                "content": "：组织管理员或项目管理员可以查看组织内为用户生成的 API 密钥名称。但是，他们不能获取这些个人 API 密钥的实际值，以此来保障用户隐私和安全性。",
+                "content": "：组织",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "管理员",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FSXwewQ8p6i2qf8kd2YaccqKDnng"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "或项目管理员可以查看组织内为用户生成的 API 密钥名称。但是，他们无法获取个人 API 密钥的实际值，以此来保障用户隐私和安全性。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3213,7 +3291,34 @@
             },
             {
               "text_run": {
-                "content": "：组织管理员有权查看组织内所有创建的自定义 API 密钥。如果您是项目管理员，您只能查看您管理权限范围内的 API 密钥。也就是说，您只能访问与您的项目相关，并处于您管理权限之内的 API 密钥。",
+                "content": "：组织",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "管理员",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FSXwewQ8p6i2qf8kd2YaccqKDnng"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "有权查看组织内所有已创建的自定义 API 密钥。如果您是项目管理员，您只能查看自身管理权限范围内的 API 密钥。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3275,7 +3380,34 @@
           "elements": [
             {
               "text_run": {
-                "content": "作为组织管理员或项目管理员，您可以编辑 API 密钥，包括更改其名称或修改其访问权限。",
+                "content": "作为组织",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "管理员",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FSXwewQ8p6i2qf8kd2YaccqKDnng"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "或项目管理员，您可以编辑 API 密钥，包括更改密钥名称或修改访问权限。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3299,7 +3431,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "更改自定义密钥名称：只有组织管理员有权限更改自定义 API 密钥的名称。",
+                "content": "更改自定义密钥名称",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：只有组织管理员有权限更改自定义 API 密钥的名称。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3324,7 +3468,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "修改访问权限：作为组织管理员，您可以修改 API 密钥的访问权限。如果您是项目管理员，您修改 API 密钥权限的能力将取决于您已有的权限范围。这意味着作为项目管理员，您无法将权限提升到超出您当前访问权限的更高级别，以确保不会发生权限膨胀。",
+                "content": "修改访问权限",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：作为组织管理员，您可以修改自定义 API 密钥的访问权限。如果您是项目管理员，您修改 API 密钥权限的能力将取决于您已有的权限范围。也就是说，作为项目管理员，您无法将权限提升到超出您当前访问权限的更高级别，以确保不会发生权限膨胀。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3371,7 +3527,7 @@
             },
             {
               "text_run": {
-                "content": "只有自定义 API 密钥才可被编辑。",
+                "content": "暂不支持编辑个人密钥。只有自定义 API 密钥才可被编辑。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3468,7 +3624,7 @@
             },
             {
               "text_run": {
-                "content": "：组织中的每位用户都可以只重置自己的个人 API 密钥，而不论其角色。这确保用户能够迅速应对任何安全问题或访问障碍，通过生成新密钥来维持一个安全、个性化的访问系统。",
+                "content": "：无论用户角色如何，组织中的每个用户都有权重置自己的个人 API 密钥，并且只能重置自己的密钥。这确保用户能够迅速应对任何安全问题或访问障碍，并通过重置生成新的密钥来维护安全、个性化的访问系统。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3505,7 +3661,34 @@
             },
             {
               "text_run": {
-                "content": "：只有组织管理员有权重置自定义 API 密钥。这种控制级别在管理广泛的组织级访问和安全方面至关重要。组织管理员可以重置这些密钥，以解决安全问题或更新访问协议，确保应用级别访问的完整性不受影响。",
+                "content": "：只有组织",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "管理员",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FSXwewQ8p6i2qf8kd2YaccqKDnng"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "有权重置自定义 API 密钥。这种控制级别在管理广泛的组织级访问和安全方面至关重要。组织管理员可以通过重置这些密钥来解决安全问题或更新访问协议，以确保应用级别访问的完整性不受影响。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3627,7 +3810,34 @@
           "elements": [
             {
               "text_run": {
-                "content": "当不再需要某个 API 密钥时，作为组织管理员，您可以将其删除。",
+                "content": "当不再需要某个 API 密钥时，作为组织",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "管理员",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FSXwewQ8p6i2qf8kd2YaccqKDnng"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，您可以将其删除。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3724,7 +3934,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "在删除 API 密钥时请格外小心。这将立即撤销所有使用该密钥的资源的访问权。",
+                "content": "删除 API 密钥时，请谨慎操作。这将立即撤销所有使用该密钥的资源的访问权限。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
