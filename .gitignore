@@ -11,4 +11,3 @@ node_modules
 build
 .docusaurus
 broken_links.txt
-yarn.lock
