@@ -5,7 +5,7 @@
   "node_token": "E7X4wc69bibTo4kFfNic5hBVnhb",
   "node_type": "origin",
   "obj_create_time": "1693794593",
-  "obj_edit_time": "1700715822",
+  "obj_edit_time": "1706594264",
   "obj_token": "VoSLd0qrLo68DdxJJr6cfs6knRb",
   "obj_type": "docx",
   "origin_node_token": "E7X4wc69bibTo4kFfNic5hBVnhb",
@@ -518,7 +518,7 @@
                   "strikethrough": false,
                   "underline": false
                 },
-                "title": "管理身份凭证",
+                "title": "通过 Web UI 管理身份凭证",
                 "token": "VNWiwtYwGi9m0Okhj3Zce8wAnte",
                 "url": "https://zilliverse.feishu.cn/wiki/VNWiwtYwGi9m0Okhj3Zce8wAnte"
               }
@@ -545,7 +545,7 @@
                   "strikethrough": false,
                   "underline": false
                 },
-                "title": "管理 API 密钥",
+                "title": "API 密钥",
                 "token": "UGzNwB4TmiqTozkJvarceRdenif",
                 "url": "https://zilliverse.feishu.cn/wiki/UGzNwB4TmiqTozkJvarceRdenif"
               }
@@ -684,9 +684,9 @@
                   "strikethrough": false,
                   "underline": false
                 },
-                "title": "角色与权限",
-                "token": "WYzywSL2ViDcZGk9vgqcq9XOned",
-                "url": "https://zilliverse.feishu.cn/wiki/WYzywSL2ViDcZGk9vgqcq9XOned"
+                "title": "用户授权",
+                "token": "HaV5wsgX8ifrA2kyH4LchfhEnbf",
+                "url": "https://zilliverse.feishu.cn/wiki/HaV5wsgX8ifrA2kyH4LchfhEnbf"
               }
             },
             {

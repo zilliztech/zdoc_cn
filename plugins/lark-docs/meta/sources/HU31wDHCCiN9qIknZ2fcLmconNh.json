@@ -5,7 +5,7 @@
   "node_token": "HU31wDHCCiN9qIknZ2fcLmconNh",
   "node_type": "origin",
   "obj_create_time": "1687140341",
-  "obj_edit_time": "1700718364",
+  "obj_edit_time": "1706594124",
   "obj_token": "I6eydN6nsoJ3gYxrMU6c6b0en8c",
   "obj_type": "docx",
   "origin_node_token": "HU31wDHCCiN9qIknZ2fcLmconNh",
@@ -282,7 +282,7 @@
                   "strikethrough": false,
                   "underline": false
                 },
-                "title": "管理身份凭证",
+                "title": "通过 Web UI 管理身份凭证",
                 "token": "VNWiwtYwGi9m0Okhj3Zce8wAnte",
                 "url": "https://zilliverse.feishu.cn/wiki/VNWiwtYwGi9m0Okhj3Zce8wAnte"
               }

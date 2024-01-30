@@ -5,7 +5,7 @@
   "node_token": "YVAzwqHdti7uHSkZL6icsY7hnpe",
   "node_type": "origin",
   "obj_create_time": "1687158830",
-  "obj_edit_time": "1706150978",
+  "obj_edit_time": "1706594330",
   "obj_token": "A558dloqnoQ4v2x7o7VcKFKVn6d",
   "obj_type": "docx",
   "origin_node_token": "YVAzwqHdti7uHSkZL6icsY7hnpe",
@@ -5533,7 +5533,7 @@
             },
             {
               "mention_doc": {
-                "obj_type": 22,
+                "obj_type": 16,
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -5541,9 +5541,9 @@
                   "strikethrough": false,
                   "underline": false
                 },
-                "title": "管理账号",
-                "token": "ArBTdYKdIobUhGxY885cGQmHnbh",
-                "url": "https://zilliverse.feishu.cn/docx/ArBTdYKdIobUhGxY885cGQmHnbh#Nskxd9zARoATTwxC5mhcbmBNnJe"
+                "title": "邮箱账号",
+                "token": "SVnkw5IkNiOfALkijr1cw91vn3L",
+                "url": "https://zilliverse.feishu.cn/wiki/SVnkw5IkNiOfALkijr1cw91vn3L#Nskxd9zARoATTwxC5mhcbmBNnJe"
               }
             },
             {

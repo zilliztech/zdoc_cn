@@ -268,7 +268,8 @@
       "owner": "ou_e55a208a81fc721928685fc3df9cb678",
       "parent_node_token": "XyeFwdx6kiK9A6kq3yIcLNdEnDd",
       "space_id": "7167193056431783939",
-      "title": "用户鉴权"
+      "title": "用户鉴权",
+      "slug": "authentication"
     },
     {
       "creator": "ou_fbc044d19930afd389d5c369466c38b1",
@@ -285,7 +286,8 @@
       "owner": "ou_fbc044d19930afd389d5c369466c38b1",
       "parent_node_token": "XyeFwdx6kiK9A6kq3yIcLNdEnDd",
       "space_id": "7167193056431783939",
-      "title": "用户授权"
+      "title": "用户授权",
+      "slug": "authorization"
     },
     {
       "creator": "ou_e55a208a81fc721928685fc3df9cb678",
@@ -384,7 +386,7 @@
       "node_token": "YVAzwqHdti7uHSkZL6icsY7hnpe",
       "node_type": "origin",
       "obj_create_time": "1687158830",
-      "obj_edit_time": "1706150978",
+      "obj_edit_time": "1706594330",
       "obj_token": "A558dloqnoQ4v2x7o7VcKFKVn6d",
       "obj_type": "docx",
       "origin_node_token": "YVAzwqHdti7uHSkZL6icsY7hnpe",
@@ -420,7 +422,7 @@
       "node_token": "JX2ewvwbHioVkykbIhacucpvnzh",
       "node_type": "origin",
       "obj_create_time": "1692175168",
-      "obj_edit_time": "1706151343",
+      "obj_edit_time": "1706594844",
       "obj_token": "MQI8b662gabapmsTl7ZcnTExnSc",
       "obj_type": "bitable",
       "origin_node_token": "JX2ewvwbHioVkykbIhacucpvnzh",

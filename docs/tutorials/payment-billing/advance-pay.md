@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-1. 现金余额监控默认关闭，如果需要打开现金余额监控，请参阅[现金余额监控](./undefined)。
+1. 现金余额监控默认关闭，如果需要打开现金余额监控，请参阅[管理组织告警](./manage-organization-alerts)。
 
 ## 相关文档{#related-topics}
 

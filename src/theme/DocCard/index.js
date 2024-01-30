@@ -21,7 +21,7 @@ function CardLayout({href, icon, title, description}) {
   return (
     <CardContainer href={href}>
       <h2 className={clsx('text--truncate', styles.cardTitle)} title={title}>
-        {title} <span class="tooltip">[READ MORE]</span>
+        {title} <span class="tooltip">[阅读更多]</span>
       </h2>
       {description && (
         <p

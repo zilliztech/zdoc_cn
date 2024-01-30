@@ -30,7 +30,7 @@ sidebar_position: 10
 
 ### 如何删除账号？{#how-to-delete-my-account}
 
-如需删除账号，请参见[管理账号](./email-accounts#delete-your-account)。
+如需删除账号，请参见[邮箱账号](./email-accounts#delete-your-account)。
 
 ### 我的帐号为什么被锁定了？如何解锁账号？{#why-is-my-account-locked-and-how-to-unlock-it}
 

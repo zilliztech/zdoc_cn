@@ -19,7 +19,7 @@ Zilliz Cloud 提供多种集群版本以满足不同的业务需求。请先查�
 
 - 已注册 Zilliz Cloud 账户。有关更多信息，请参见[注册账号](./register-with-zilliz-cloud)。
 
-- 在目标组织或项目中，您具有集群创建权限。有关角色和权限的信息，请参见[角色与权限](./resource-hierarchy)。
+- 在目标组织或项目中，您具有集群创建权限。有关角色和权限的信息，请参见[用户授权](./authorization)。
 
 ## 创建集群{#create-a-dedicated-cluster}
 
