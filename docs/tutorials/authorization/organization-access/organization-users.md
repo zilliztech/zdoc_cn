@@ -25,7 +25,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-您可以同时邀请一个或多个用户加入组织，但他们的角色需相同。每个组织最多可拥有 1000 名成员。
+<p>您可以同时邀请一个或多个用户加入组织，但他们的角色需相同。每个组织最多可拥有 1000 名成员。</p>
 
 </Admonition>
 

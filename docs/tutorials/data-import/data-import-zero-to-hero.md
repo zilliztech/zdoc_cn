@@ -187,9 +187,8 @@ conn = RemoteBulkWriter.ConnectParam(
 
 <Admonition type="info" icon="📘" title="说明">
 
-参数 **endpoint** 决定了生成文件的输出路径。请务必确保您的目标 Collection 所在地域与您的远程对象存储桶所在地域一致。
-
-关于阿里云下 OSS Region 和 Endpoint 对照关系，可[参考此文](https://help.aliyun.com/zh/oss/user-guide/regions-and-endpoints)。
+<p>参数 <strong>endpoint</strong> 决定了生成文件的输出路径。请务必确保您的目标 Collection 所在地域与您的远程对象存储桶所在地域一致。</p>
+<p>关于阿里云下 OSS Region 和 Endpoint 对照关系，可<a href="https://help.aliyun.com/zh/oss/user-guide/regions-and-endpoints">参考此文</a>。</p>
 
 </Admonition>
 
@@ -269,7 +268,7 @@ print(writer.data_path)
 
 <Admonition type="info" icon="📘" title="说明">
 
-**BulkWriter **生成一个 UUID，并使用该 UUID 在指定的输入路径下创建一个子路径，然后将生成的文件放在创建的子路径下。
+<p>**BulkWriter **生成一个 UUID，并使用该 UUID 在指定的输入路径下创建一个子路径，然后将生成的文件放在创建的子路径下。</p>
 
 </Admonition>
 
@@ -311,9 +310,8 @@ print(res.json())
 
 <Admonition type="info" icon="📘" title="说明">
 
-参数 **object_url** 需为远程对象存储桶中一个合法的文件或目录。在上述代码中，我们使用了 **format()** 方法将桶名称和 Writer 返回的路径拼接成一个合法的目录路径。
-
-如需了解更多信息，可参考 [OSS 访问域名使用规则](https://help.aliyun.com/zh/oss/user-guide/oss-domain-names)。
+<p>参数 <strong>object_url</strong> 需为远程对象存储桶中一个合法的文件或目录。在上述代码中，我们使用了 <strong>format()</strong> 方法将桶名称和 Writer 返回的路径拼接成一个合法的目录路径。</p>
+<p>如需了解更多信息，可参考 <a href="https://help.aliyun.com/zh/oss/user-guide/oss-domain-names">OSS 访问域名使用规则</a>。</p>
 
 </Admonition>
 
@@ -359,7 +357,7 @@ while res.json()["data"]["readyPercentage"] < 1:
 
 <Admonition type="info" icon="📘" title="说明">
 
-上述代码中，参数 **url **为 Zilliz Cloud RESTful API 的服务器路径，其取值须与目标 Collection 所在云地域保持一致。
+<p>上述代码中，参数 **url **为 Zilliz Cloud RESTful API 的服务器路径，其取值须与目标 Collection 所在云地域保持一致。</p>
 
 </Admonition>
 

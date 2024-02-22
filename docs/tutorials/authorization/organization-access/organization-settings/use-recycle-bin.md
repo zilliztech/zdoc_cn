@@ -37,7 +37,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-集群恢复过程中，其状态将从**创建中**变为**恢复中**，最后变为**运行中**。集群状态变为**运行中**即代表所有被删除的数据已恢复。
+<p>集群恢复过程中，其状态将从<strong>创建中</strong>变为<strong>恢复中</strong>，最后变为<strong>运行中</strong>。集群状态变为<strong>运行中</strong>即代表所有被删除的数据已恢复。</p>
 
 </Admonition>
 

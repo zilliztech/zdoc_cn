@@ -27,7 +27,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-目前，迭代器功能处于 Beta 测试阶段。请注意，该功能及相关文档在 Beta 测试期间可能会有所更改。
+<p>目前，迭代器功能处于 Beta 测试阶段。请注意，该功能及相关文档在 Beta 测试期间可能会有所更改。</p>
 
 </Admonition>
 

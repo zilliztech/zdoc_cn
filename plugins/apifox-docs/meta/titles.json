@@ -17,5 +17,14 @@
     "按 ID 查询": "get",
     "插入 Entity": "insert",
     "删除 Entity": "delete",
-    "Upsert Entity": "upsert"
+    "Upsert Entity": "upsert",
+    "创建集群": "create-cluster",
+    "修改集群配置": "modify-cluster",
+    "删除集群": "drop-cluster",
+    "查看项目列表": "list-projects",
+    "查看 Pipeline 详情": "describe-pipeline",
+    "删除 Pipeline": "drop-pipeline",
+    "创建 Pipeline": "create-pipeline",
+    "查看 Pipeline 列表": "list-pipelines",
+    "执行 Pipeline": "run-pipeline"
 }

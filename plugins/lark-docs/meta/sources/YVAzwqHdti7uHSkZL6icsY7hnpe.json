@@ -5,7 +5,7 @@
   "node_token": "YVAzwqHdti7uHSkZL6icsY7hnpe",
   "node_type": "origin",
   "obj_create_time": "1687158830",
-  "obj_edit_time": "1706594330",
+  "obj_edit_time": "1708589397",
   "obj_token": "A558dloqnoQ4v2x7o7VcKFKVn6d",
   "obj_type": "docx",
   "origin_node_token": "YVAzwqHdti7uHSkZL6icsY7hnpe",
@@ -103,6 +103,25 @@
           "SSvrdnJ7VoBHOrxHstmcWHbJnld",
           "XOlSdifApoF4RyxiLEmcEzJansf",
           "Xq1JdrYmxof3bqxy7QeceJ6EnUh",
+          "DgNWdkZWIoyQ01xiTqBcy3Uunah",
+          "Zx1LdtL61on7jex85Fpcmx3In6i",
+          "AuXSde8nsocISjxzLjvcL7kznah",
+          "E8d4dHnBkojLQYxSkSXccqTunLe",
+          "IpgzdRdiPoKkK6xrJuxcsWjOn2e",
+          "VReCdB6KKolYQaxATT7chJfznzf",
+          "XgNQdLIncoyVt9xZDancDX8pn2d",
+          "OKNgdM4rvoQ9qXxuA2YcWJEUnTd",
+          "Ep3odtqwVojAuHxPjHCcV0FmnLh",
+          "G1oYdxQmZo4Xg4xGxHrcE0z0nRd",
+          "MRzVdvC4foARaixIovYcB8WenRc",
+          "BBKZd9ikNo5e5VxNTwtcolAwnjb",
+          "OzA5dt6vJoKTApxhyg2ciLzYnXf",
+          "UvhRdl1DAoHRAUxRfNjcIUvbnbb",
+          "IcyadSkHYoaP7KxO0QLcFSLwnGb",
+          "WsHUdsuDXot6GaxOMChckLXWnte",
+          "KkordJl4zoXWwVx43xFcKS0Sn7c",
+          "Obv1d6wEHoFLctxInnOcZGFznfc",
+          "Q3TmdFylYolCj8xjHI2cuJVanHb",
           "WgBddayz9oyNkix6TGFcDSV6nXc",
           "ZKNFdhIx7ovssxxFSXJc0FBonzb",
           "AYxWdvacfoLcQSx1nxgcs0HnnCe",
@@ -3738,6 +3757,967 @@
         "parent_id": "Xq1JdrYmxof3bqxy7QeceJ6EnUh"
       },
       {
+        "block_id": "DgNWdkZWIoyQ01xiTqBcy3Uunah",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "FAQ：Pipelines{/faq-pipelines}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "Zx1LdtL61on7jex85Fpcmx3In6i",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文列举了在使用 Zilliz Cloud Pipelines 时可能遇到的常见问题及对应解决方法。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AuXSde8nsocISjxzLjvcL7kznah",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud Pipelines 如何提升语义搜索能力？",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#how-can-zilliz-cloud-pipelines-enhance-my-semantic-search-capabilities}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "E8d4dHnBkojLQYxSkSXccqTunLe",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Pipelines 可以将非结构化数据转化为高质量的 Embedding 向量，从而有效提升语义搜索结果的相关性。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IpgzdRdiPoKkK6xrJuxcsWjOn2e",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "哪些 Zilliz Cloud 版本提供 Pipelines 功能？",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#which-zilliz-cloud-product-tiers-are-pipelines-available-in}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VReCdB6KKolYQaxATT7chJfznzf",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "所有 Zilliz Cloud 版本均提供 Pipelines 功能。但是，您只可在部署于阿里云（杭州）的集群中创建和运行 Pipelines。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XgNQdLIncoyVt9xZDancDX8pn2d",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud Pipelines 使用哪些 Embedding 模型？",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#which-embedding-model-does-zilliz-cloud-pipelines-use}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OKNgdM4rvoQ9qXxuA2YcWJEUnTd",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "针对文本文档，Ingestion 和 Search Pipeline 提供多样化的 Embedding 模型选择。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ep3odtqwVojAuHxPjHCcV0FmnLh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "zilliz/bge-base-en-v1.5",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "（针对英语文档）：智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "G1oYdxQmZo4Xg4xGxHrcE0z0nRd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "zilliz/bge-base-zh-v1.5",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "（针对中文文档）：智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "MRzVdvC4foARaixIovYcB8WenRc",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud Pipelines 如何收费？",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#how-is-zilliz-cloud-pipelines-charged}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BBKZd9ikNo5e5VxNTwtcolAwnjb",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "目前，Zilliz Cloud Pipelines 可免费使用。您仅需为 Zilliz Cloud 集群用量付费。Zilliz Cloud 集群定价详情请见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "https://zilliz.com.cn/pricing",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OzA5dt6vJoKTApxhyg2ciLzYnXf",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud Pipelines 能否独立于 Zilliz Cloud 使用？",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#can-i-use-zilliz-cloud-pipelines-standalone}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UvhRdl1DAoHRAUxRfNjcIUvbnbb",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "不可以。如需使用 Zilliz Cloud Pipelines，您必须先注册 Zilliz Cloud 账号。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IcyadSkHYoaP7KxO0QLcFSLwnGb",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Ingestion Pipeline 支持哪些数据来源？",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#what-data-sources-are-supported-by-ingestion-pipelines}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WsHUdsuDXot6GaxOMChckLXWnte",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "目前 Ingestion Pipeline 支持本地文件和存储在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "阿里云对象存储 OSS ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.alibabacloud.com%2Fzh%2Fproduct%2Fobject-storage-service"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "中的数据。后续会支持更广泛的数据来源。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KkordJl4zoXWwVx43xFcKS0Sn7c",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Pipelines 支持哪些文档文件类型？",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#what-document-file-formats-are-supported-by-pipelines}",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Pipelines 支持一下文件类型的文档：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".txt",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".pdf",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".md",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".html",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".epub",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".csv",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".doc",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".docx",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".xls",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".xlsx",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".ppt",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " .pptx",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Obv1d6wEHoFLctxInnOcZGFznfc",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "运行 Ingestion Pipelines",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FHAXiw8277i0mBXk8L1Gcrei7nle"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 时，您可以上传本地文件或使用阿里云对象存储 OSS 签名 URL。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Q3TmdFylYolCj8xjHI2cuJVanHb",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
         "block_id": "WgBddayz9oyNkix6TGFcDSV6nXc",
         "block_type": 4,
         "heading2": {
@@ -6579,6 +7559,6 @@
         }
       }
     ],
-    "counts": 192
+    "counts": 211
   }
 }

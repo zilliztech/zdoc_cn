@@ -51,7 +51,7 @@ Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云�
 
     <Admonition type="info" icon="📘" title="说明">
 
-    如果您已经上述“免登”链接为某个 Zilliz Cloud 组织绑定了支付方式，再次单击该“免登”链接可直接进入 Zilliz Cloud，无须再次登录。
+    <p>如果您已经上述“免登”链接为某个 Zilliz Cloud 组织绑定了支付方式，再次单击该“免登”链接可直接进入 Zilliz Cloud，无须再次登录。</p>
 
     </Admonition>
 

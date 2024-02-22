@@ -33,7 +33,7 @@ Zilliz Cloud **事件**页面记录了[组织](./resource-hierarchy#understand-o
 
     <Admonition type="info" icon="📘" title="说明">
 
-    起始日期和终止日期之间应小于 30 天。
+    <p>起始日期和终止日期之间应小于 30 天。</p>
 
     </Admonition>
 

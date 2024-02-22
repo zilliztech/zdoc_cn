@@ -192,7 +192,7 @@ curl --request POST \
 
 <Admonition type="caution" icon="🚧" title="警告">
 
-删除 Entity 是不可逆操作。在执行操作之前，请务必备份或确认数据不再需要。
+<p>删除 Entity 是不可逆操作。在执行操作之前，请务必备份或确认数据不再需要。</p>
 
 </Admonition>
 

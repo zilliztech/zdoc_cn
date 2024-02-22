@@ -21,7 +21,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-每次您可以以相同角色邀请一个或多个用户加入项目。
+<p>每次您可以以相同角色邀请一个或多个用户加入项目。</p>
 
 </Admonition>
 
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-在用户接受邀请之前，您可以选择撤销或重发邀请。
+<p>在用户接受邀请之前，您可以选择撤销或重发邀请。</p>
 
 </Admonition>
 
@@ -56,7 +56,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="caution" icon="🚧" title="警告">
 
-一旦您离开项目，您对该项目及其相关资源的访问权限将被取消。
+<p>一旦您离开项目，您对该项目及其相关资源的访问权限将被取消。</p>
 
 </Admonition>
 

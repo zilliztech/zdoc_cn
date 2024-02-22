@@ -74,7 +74,7 @@ with open('path/to/medium_articles_2020_dpr.json') as f:
 
 <Admonition type="info" icon="📘" title="说明">
 
-为了成功导入数据，请确保您使用的对象存储桶与您的集群位于相同的云中。
+<p>为了成功导入数据，请确保您使用的对象存储桶与您的集群位于相同的云中。</p>
 
 </Admonition>
 

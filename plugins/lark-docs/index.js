@@ -109,7 +109,7 @@ module.exports = function (context, options) {
                                     sidebar_position: sidebarPos,
                                     sidebar_label: labels,
                                     keywords: keywords,
-                                    doc_card_list: doc_card_list
+                                    doc_card_list: doc_card_list,
                                 }
     
                                 await writer.write_doc(req)

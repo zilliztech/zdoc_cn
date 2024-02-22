@@ -8,6 +8,21 @@ import {
 import isInternalUrl from '@docusaurus/isInternalUrl';
 import {translate} from '@docusaurus/Translate';
 import styles from './styles.module.css';
+
+function findCategoryDocId(item, level=0) {
+  var docId;
+  if (item.type === 'category') {
+    level -= 1;
+    if (item.items[0].type === 'link') {
+      docId = item.items[0].docId.split('/').slice(0, level).join('/') + '/' + item.items[0].docId.split('/').slice(0, level).pop();
+    } else {
+      docId = findCategoryDocId(item.items[0], level);
+    }
+  }
+
+  return docId;
+}
+
 function CardContainer({href, children}) {
   return (
     <Link
@@ -21,7 +36,7 @@ function CardLayout({href, icon, title, description}) {
   return (
     <CardContainer href={href}>
       <h2 className={clsx('text--truncate', styles.cardTitle)} title={title}>
-        {title} <span class="tooltip">[阅读更多]</span>
+        {title} <span class="tooltip">[READ MORE]</span>
       </h2>
       {description && (
         <p
@@ -39,22 +54,25 @@ function CardCategory({item}) {
   if (!href) {
     return null;
   }
+
+  var docId = findCategoryDocId(item);
+
   return (
     <CardLayout
       href={href}
       icon="🗃️"
       title={item.label}
       description={
-        item.description ??
-        translate(
-          {
-            message: '{count} items',
-            id: 'theme.docs.DocCard.categoryDescription',
-            description:
-              'The default description for a category card in the generated index about how many items this category includes',
-          },
-          {count: item.items.length},
-        )
+        item.description ?? useDocById(docId ?? undefined) ?.description
+        // translate(
+        //   {
+        //     message: '{count} items',
+        //     id: 'theme.docs.DocCard.categoryDescription',
+        //     description:
+        //       'The default description for a category card in the generated index about how many items this category includes',
+        //   },
+        //   {count: item.items.length},
+        // )
       }
     />
   );

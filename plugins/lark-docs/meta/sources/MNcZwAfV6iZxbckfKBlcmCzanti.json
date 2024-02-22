@@ -5,7 +5,7 @@
   "node_token": "MNcZwAfV6iZxbckfKBlcmCzanti",
   "node_type": "origin",
   "obj_create_time": "1687140353",
-  "obj_edit_time": "1703062607",
+  "obj_edit_time": "1708424996",
   "obj_token": "Gm2ydAPIZoLMazxn2YYcHCADnWe",
   "obj_type": "docx",
   "origin_node_token": "MNcZwAfV6iZxbckfKBlcmCzanti",
@@ -41,8 +41,8 @@
           "OSbTdsrEdocFhgxcExFcE7Klndd",
           "GNd5dAmDwovpnzxt430crRENn2b",
           "NWqQd6aaxoYUhfxOsDbcGbGznbd",
-          "SBxTdkyLworNyyxssUocoCXZn5b",
-          "D8kBdCXHBoNKS8xqMedcoQbenEf",
+          "S9XmdEI6moWAmLxt60ccBhyHn8f",
+          "PDKldkywIoa3bTxhJTacDXFSnkc",
           "R6bbd4xH6oMoPIxL6EMc2tZunAb",
           "C4qodhsCPo2qBJxVpWTcRoxunvh",
           "Ihlzd3MIfovtIvxhne5cR1Ehn0f",
@@ -1100,116 +1100,32 @@
         "parent_id": "Gm2ydAPIZoLMazxn2YYcHCADnWe"
       },
       {
-        "block_id": "SBxTdkyLworNyyxssUocoCXZn5b",
-        "block_type": 2,
-        "parent_id": "Gm2ydAPIZoLMazxn2YYcHCADnWe",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "<exclude target=\"",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "saas",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "\">",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "1 个 Serverless 集群中最多可创建 2 个 Collection。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "</exclude>",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "1 个 Dedicated 集群中可创建的 Collection 数量上限取决于集群 CU 大小。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "D8kBdCXHBoNKS8xqMedcoQbenEf",
+        "block_id": "S9XmdEI6moWAmLxt60ccBhyHn8f",
         "block_type": 31,
         "children": [
-          "McbOdhVlEoM2hnxrB1XcO0qHnVc",
-          "U8s0d3QJqob42WxdNPMcfigEnle",
-          "EayHdmtlooZU7wxLeizcmPufndg",
-          "PPV6dBku1ohwTLxk0GoczIrTnQd",
-          "Ob40dfAJwozZq2xSxlrcqZ1QnSd",
-          "KvnqdcvOmoki1XxE4WFcmOnLnEd"
+          "SJKTd7tRzoPRExx4DCKcmMNfnyd",
+          "OfAUdHpjEor7sjxL2m3cKnWdnQb",
+          "QKdhdF760oDou7xBZVqcsb0endf",
+          "Tfu9dngoboGmPix48T0cOa1inAg",
+          "JJp8d6xXkodbpUx7bRLcr23QnnT",
+          "L5eMdxXRpoNu0kxqRVTcIxZXnIe"
         ],
         "parent_id": "Gm2ydAPIZoLMazxn2YYcHCADnWe",
         "table": {
           "cells": [
-            "McbOdhVlEoM2hnxrB1XcO0qHnVc",
-            "U8s0d3QJqob42WxdNPMcfigEnle",
-            "EayHdmtlooZU7wxLeizcmPufndg",
-            "PPV6dBku1ohwTLxk0GoczIrTnQd",
-            "Ob40dfAJwozZq2xSxlrcqZ1QnSd",
-            "KvnqdcvOmoki1XxE4WFcmOnLnEd"
+            "SJKTd7tRzoPRExx4DCKcmMNfnyd",
+            "OfAUdHpjEor7sjxL2m3cKnWdnQb",
+            "QKdhdF760oDou7xBZVqcsb0endf",
+            "Tfu9dngoboGmPix48T0cOa1inAg",
+            "JJp8d6xXkodbpUx7bRLcr23QnnT",
+            "L5eMdxXRpoNu0kxqRVTcIxZXnIe"
           ],
           "property": {
-            "column_size": 2,
+            "column_size": 3,
             "column_width": [
-              142,
-              154
+              134,
+              209,
+              477
             ],
             "merge_info": [
               {
@@ -1237,23 +1153,151 @@
                 "row_span": 1
               }
             ],
-            "row_size": 3
+            "row_size": 2
           }
         }
       },
       {
-        "block_id": "McbOdhVlEoM2hnxrB1XcO0qHnVc",
+        "block_id": "SJKTd7tRzoPRExx4DCKcmMNfnyd",
         "block_type": 32,
         "children": [
-          "U0redF55qoQpjExSEvwcL8BInCe"
+          "Qg6hdBmYNoEeKtxnsrNcyU0Mnee"
         ],
-        "parent_id": "D8kBdCXHBoNKS8xqMedcoQbenEf",
+        "parent_id": "S9XmdEI6moWAmLxt60ccBhyHn8f",
         "table_cell": {}
       },
       {
-        "block_id": "U0redF55qoQpjExSEvwcL8BInCe",
+        "block_id": "Qg6hdBmYNoEeKtxnsrNcyU0Mnee",
         "block_type": 2,
-        "parent_id": "McbOdhVlEoM2hnxrB1XcO0qHnVc",
+        "parent_id": "SJKTd7tRzoPRExx4DCKcmMNfnyd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "类型",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OfAUdHpjEor7sjxL2m3cKnWdnQb",
+        "block_type": 32,
+        "children": [
+          "Yx0pddWoAoVMioxoTx6cKt4BnTb"
+        ],
+        "parent_id": "S9XmdEI6moWAmLxt60ccBhyHn8f",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Yx0pddWoAoVMioxoTx6cKt4BnTb",
+        "block_type": 2,
+        "parent_id": "OfAUdHpjEor7sjxL2m3cKnWdnQb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "最大数量",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QKdhdF760oDou7xBZVqcsb0endf",
+        "block_type": 32,
+        "children": [
+          "QeV2dLtD0o9kEkxysU0cfrWOn1e"
+        ],
+        "parent_id": "S9XmdEI6moWAmLxt60ccBhyHn8f",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QeV2dLtD0o9kEkxysU0cfrWOn1e",
+        "block_type": 2,
+        "parent_id": "QKdhdF760oDou7xBZVqcsb0endf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Tfu9dngoboGmPix48T0cOa1inAg",
+        "block_type": 32,
+        "children": [
+          "LPLWdjQftoYtOxxUGZqctOYRnfb",
+          "Z9d4deIN8oTeV9xrB3scpeMonU2"
+        ],
+        "parent_id": "S9XmdEI6moWAmLxt60ccBhyHn8f",
+        "table_cell": {}
+      },
+      {
+        "block_id": "LPLWdjQftoYtOxxUGZqctOYRnfb",
+        "block_type": 2,
+        "parent_id": "Tfu9dngoboGmPix48T0cOa1inAg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "企业版集群",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Z9d4deIN8oTeV9xrB3scpeMonU2",
+        "block_type": 2,
+        "parent_id": "Tfu9dngoboGmPix48T0cOa1inAg",
         "text": {
           "elements": [
             {
@@ -1276,23 +1320,24 @@
         }
       },
       {
-        "block_id": "U8s0d3QJqob42WxdNPMcfigEnle",
+        "block_id": "JJp8d6xXkodbpUx7bRLcr23QnnT",
         "block_type": 32,
         "children": [
-          "LEzpdvu44obSoYxAPshcvvuqnFB"
+          "YF6LdlNoVo3QHVxRga2cYvrpnJh",
+          "A4fTdQkUCoi1vpxLinBcqIAIncd"
         ],
-        "parent_id": "D8kBdCXHBoNKS8xqMedcoQbenEf",
+        "parent_id": "S9XmdEI6moWAmLxt60ccBhyHn8f",
         "table_cell": {}
       },
       {
-        "block_id": "LEzpdvu44obSoYxAPshcvvuqnFB",
+        "block_id": "YF6LdlNoVo3QHVxRga2cYvrpnJh",
         "block_type": 2,
-        "parent_id": "U8s0d3QJqob42WxdNPMcfigEnle",
+        "parent_id": "JJp8d6xXkodbpUx7bRLcr23QnnT",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "最大 Collection 数",
+                "content": "每 CU：<= 64",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1310,23 +1355,14 @@
         }
       },
       {
-        "block_id": "EayHdmtlooZU7wxLeizcmPufndg",
-        "block_type": 32,
-        "children": [
-          "CDaWdMGvDoqTpOx36w6cwKoHnGf"
-        ],
-        "parent_id": "D8kBdCXHBoNKS8xqMedcoQbenEf",
-        "table_cell": {}
-      },
-      {
-        "block_id": "CDaWdMGvDoqTpOx36w6cwKoHnGf",
+        "block_id": "A4fTdQkUCoi1vpxLinBcqIAIncd",
         "block_type": 2,
-        "parent_id": "EayHdmtlooZU7wxLeizcmPufndg",
+        "parent_id": "JJp8d6xXkodbpUx7bRLcr23QnnT",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "小于等于 8 CU",
+                "content": "每集群：<= 4096",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1344,23 +1380,23 @@
         }
       },
       {
-        "block_id": "PPV6dBku1ohwTLxk0GoczIrTnQd",
+        "block_id": "L5eMdxXRpoNu0kxqRVTcIxZXnIe",
         "block_type": 32,
         "children": [
-          "Ga2fdMBemo3ThUxkjK0c934onxe"
+          "ROsOdgzpso2eJfxiO4LcPVqon4c"
         ],
-        "parent_id": "D8kBdCXHBoNKS8xqMedcoQbenEf",
+        "parent_id": "S9XmdEI6moWAmLxt60ccBhyHn8f",
         "table_cell": {}
       },
       {
-        "block_id": "Ga2fdMBemo3ThUxkjK0c934onxe",
+        "block_id": "ROsOdgzpso2eJfxiO4LcPVqon4c",
         "block_type": 2,
-        "parent_id": "PPV6dBku1ohwTLxk0GoczIrTnQd",
+        "parent_id": "L5eMdxXRpoNu0kxqRVTcIxZXnIe",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "32",
+                "content": "在企业版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1378,23 +1414,14 @@
         }
       },
       {
-        "block_id": "Ob40dfAJwozZq2xSxlrcqZ1QnSd",
-        "block_type": 32,
-        "children": [
-          "KDrod8Qd8oGb5MxnD1EcHnDUnjh"
-        ],
-        "parent_id": "D8kBdCXHBoNKS8xqMedcoQbenEf",
-        "table_cell": {}
-      },
-      {
-        "block_id": "KDrod8Qd8oGb5MxnD1EcHnDUnjh",
+        "block_id": "PDKldkywIoa3bTxhJTacDXFSnkc",
         "block_type": 2,
-        "parent_id": "Ob40dfAJwozZq2xSxlrcqZ1QnSd",
+        "parent_id": "Gm2ydAPIZoLMazxn2YYcHCADnWe",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "大于 8 CU",
+                "content": "有关更多信息，请参阅",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1403,32 +1430,25 @@
                   "underline": false
                 }
               }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "KvnqdcvOmoki1XxE4WFcmOnLnEd",
-        "block_type": 32,
-        "children": [
-          "HQpid6RUroCh9ixouiDcpTyAnbf"
-        ],
-        "parent_id": "D8kBdCXHBoNKS8xqMedcoQbenEf",
-        "table_cell": {}
-      },
-      {
-        "block_id": "HQpid6RUroCh9ixouiDcpTyAnbf",
-        "block_type": 2,
-        "parent_id": "KvnqdcvOmoki1XxE4WFcmOnLnEd",
-        "text": {
-          "elements": [
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "使用限制",
+                "token": "A8UFwSbMniMl6IkpJkNc4HsHnLc",
+                "url": "https://zilliverse.feishu.cn/wiki/A8UFwSbMniMl6IkpJkNc4HsHnLc"
+              }
+            },
             {
               "text_run": {
-                "content": "256",
+                "content": "。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1611,6 +1631,6 @@
         "parent_id": "Gm2ydAPIZoLMazxn2YYcHCADnWe"
       }
     ],
-    "counts": 43
+    "counts": 45
   }
 }

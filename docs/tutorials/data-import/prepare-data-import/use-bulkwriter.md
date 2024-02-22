@@ -92,9 +92,8 @@ PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建
 
     <Admonition type="info" icon="📘" title="说明">
 
-    使用 LocalBulkWriter 生成的 JSON 文件可以直接在 Zilliz Cloud 控制台上导入。    
-    
-    如需导入其它格式的文件，需要先将它们上传到和集群同云的对象存储桶中。
+    <p>使用 LocalBulkWriter 生成的 JSON 文件可以直接在 Zilliz Cloud 控制台上导入。</p>
+    <p>如需导入其它格式的文件，需要先将它们上传到和集群同云的对象存储桶中。</p>
 
     </Admonition>
 

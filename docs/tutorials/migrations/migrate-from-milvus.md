@@ -83,9 +83,8 @@ Zilliz Cloud 支持从 Milvus 2.x 和更高版本迁移数据。Milvus 向量数
 
     <Admonition type="info" icon="📘" title="说明">
 
-    如果 Milvus 实例是通过 Docker Compose 安装，`minio.bucketName` 默认为 `a-bucket`， `rootPath` 默认为 `files`。    
-    
-    如果 Milvus 实例是通过 Kubernetes 安装，`minio.bucketName` 默认为 `milvus-bucket`， `rootPath` 默认为 `file`。
+    <p>如果 Milvus 实例是通过 Docker Compose 安装，<code>minio.bucketName</code> 默认为 <code>a-bucket</code>， <code>rootPath</code> 默认为 <code>files</code>。</p>
+    <p>如果 Milvus 实例是通过 Kubernetes 安装，<code>minio.bucketName</code> 默认为 <code>milvus-bucket</code>， <code>rootPath</code> 默认为 <code>file</code>。</p>
 
     </Admonition>
 

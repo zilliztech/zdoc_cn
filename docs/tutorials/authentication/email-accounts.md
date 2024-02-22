@@ -25,7 +25,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-账户邮箱无法直接修改。若需更改邮箱，请参考我们在[常见问题](https://docs.zilliz.com.cn/docs/faq-account)中的相关指南。
+<p>账户邮箱无法直接修改。若需更改邮箱，请参考我们在<a href="https://docs.zilliz.com.cn/docs/faq-account">常见问题</a>中的相关指南。</p>
 
 </Admonition>
 
@@ -51,7 +51,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="caution" icon="🚧" title="警告">
 
-删除账号的操作不可逆，请谨慎操作！
+<p>删除账号的操作不可逆，请谨慎操作！</p>
 
 </Admonition>
 

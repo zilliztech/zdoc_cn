@@ -1,0 +1,121 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": true,
+  "node_create_time": "1708398089",
+  "node_token": "HOL1wcSsYi6tzXkbQsccMTQhn9e",
+  "node_type": "origin",
+  "obj_create_time": "1708398089",
+  "obj_edit_time": "1708596468",
+  "obj_token": "F4xZdn0xloD73DxlIGrc4fckned",
+  "obj_type": "docx",
+  "origin_node_token": "HOL1wcSsYi6tzXkbQsccMTQhn9e",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "MJeiwGDSniNQ7BkAFGCczemxnDg",
+  "space_id": "7167193056431783939",
+  "title": "Pipelines 第三方集成",
+  "slug": "pipeline-integrations",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "F4xZdn0xloD73DxlIGrc4fckned",
+        "block_type": 1,
+        "children": [
+          "IUZ1dz3dNo5MZdxAzEJckQCDnxd",
+          "BA8ldsLYWo7mdaxeiTlcEkhGncf"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Pipelines 第三方集成",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "IUZ1dz3dNo5MZdxAzEJckQCDnxd",
+        "block_type": 2,
+        "parent_id": "F4xZdn0xloD73DxlIGrc4fckned",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "仍然不知道如何将 Zilliz Cloud Pipelines 与开源和第三方服务集成吗？那就从下面这些指南开始吧。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BA8ldsLYWo7mdaxeiTlcEkhGncf",
+        "block_type": 2,
+        "parent_id": "F4xZdn0xloD73DxlIGrc4fckned",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 3
+  },
+  "children": [
+    {
+      "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+      "has_child": false,
+      "node_create_time": "1708398104",
+      "node_token": "LTs4wVOhbiJirSkdBn2cblmin4g",
+      "node_type": "origin",
+      "obj_create_time": "1708398104",
+      "obj_edit_time": "1708593693",
+      "obj_token": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+      "obj_type": "docx",
+      "origin_node_token": "LTs4wVOhbiJirSkdBn2cblmin4g",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+      "parent_node_token": "HOL1wcSsYi6tzXkbQsccMTQhn9e",
+      "space_id": "7167193056431783939",
+      "title": "在 LlamaIndex 中使用 Pipelines",
+      "slug": "use-pipeline-in-llamaindex"
+    }
+  ]
+}

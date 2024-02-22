@@ -27,7 +27,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-用于创建快照的数据传输单独收费，收费标准为￥0.5 / GB。例如，一个 20 GB 的快照将产生一次性的数据传输费用为￥0.5 x 20 = ￥10。
+<p>用于创建快照的数据传输单独收费，收费标准为￥0.5 / GB。例如，一个 20 GB 的快照将产生一次性的数据传输费用为￥0.5 x 20 = ￥10。</p>
 
 </Admonition>
 

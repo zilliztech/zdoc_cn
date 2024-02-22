@@ -5,7 +5,7 @@
   "node_token": "WfbLwEnVviFQnzk4VFWcmC76ndd",
   "node_type": "origin",
   "obj_create_time": "1701681197",
-  "obj_edit_time": "1703039165",
+  "obj_edit_time": "1708407887",
   "obj_token": "L2RudZOGho2de6xtPCdc2wgGnre",
   "obj_type": "docx",
   "origin_node_token": "WfbLwEnVviFQnzk4VFWcmC76ndd",
@@ -14,6 +14,7 @@
   "parent_node_token": "MJeiwGDSniNQ7BkAFGCczemxnDg",
   "space_id": "7167193056431783939",
   "title": "了解 Pipelines",
+  "slug": "understanding-pipelines",
   "blocks": {
     "items": [
       {
@@ -51,7 +52,10 @@
           "EdondujedoVIexxLoC3c5fNCnrf",
           "AiCddSuYuoczXixOBDkcQ1UanOe",
           "Q0emdjxUEoNac4xfJVFcSsxdnJf",
-          "L9EHdmBs6oqyVFxBHFrcFr0vnoh"
+          "D7SbdvcJ8oSEbRxAuGNczhxln4g",
+          "TeSPdgEK2ocPrGxRW2dc238anWb",
+          "In3Odm6Jdo4cTNxLz13cur8PnVe",
+          "QJgGd9jGGoEhWNxdkpicsAunnPd"
         ],
         "comment_ids": [
           "7314497367259070468"
@@ -115,7 +119,7 @@
             },
             {
               "text_run": {
-                "content": " 中。本文将介绍 Zilliz Cloud Pipelines 的三种主要类型及其函数。",
+                "content": " 中。本文将介绍 Zilliz Cloud Pipelines 的三种主要类型及其 Function。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -251,7 +255,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "1 个 Ingestion pipeline 中可创建多个函数，用于将输入字段通过转换器处理，生成输出字段。例如，您可以将文档作为输入，函数会将这些文档自动切块并转换为 Embedding 向量或保留文档的一些元数据信息，以便后续进行向量搜索时过滤搜索结果。",
+                "content": "1 个 Ingestion pipeline 中可创建多个 Function，用于将输入字段通过转换器处理，生成输出字段。例如，您可以将文档作为输入，Function 会将这些文档自动切块并转换为 Embedding 向量或保留文档的一些元数据信息，以便后续进行向量搜索时过滤搜索结果。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -276,7 +280,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "在Zilliz Cloud 中，1 个 Ingestion pipeline 只对应 1 个 Collection。当您创建 Ingestion pipeline 时，Zilliz Cloud 会自动创建 1 个对应的 Collection，并根据您添加的 Pipeline 函数自动设置 Collection Schema。",
+                "content": "在Zilliz Cloud 中，1 个 Ingestion pipeline 只对应 1 个 Collection。当您创建 Ingestion pipeline 时，Zilliz Cloud 会自动创建 1 个对应的 Collection，并根据您添加的 Pipeline Function 自动设置 Collection Schema。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -300,7 +304,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "INDEX_DOC 函数{#indexdoc-function}",
+                "content": "INDEX_DOC Function{#indexdoc-function}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -326,7 +330,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "INDEX_DOC 函数将输入文本文档拆分成块，并将文档块转换为 Embedding 向量。此函数将输入字段（",
+                "content": "INDEX_DOC Function 将输入文本文档拆分成块，并将文档块转换为 Embedding 向量。此 Function 将输入字段（",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -514,7 +518,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "1 个 Ingestion pipeline 需要添加且只能添加 1 个 INDEX_DOC 函数。",
+                "content": "1 个 Ingestion pipeline 需要添加且只能添加 1 个 INDEX_DOC Function。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -538,7 +542,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "PRESERVE 函数{#preserve-function}",
+                "content": "PRESERVE Function{#preserve-function}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -564,7 +568,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "PRESERVE 函数将用户定义的输入字段存储为自动生成 Collection 中额外的标量字段，用于存储元数据。您可以使用 PRESERVE 函数来保留文档的元数据。一个 PRESERVE 函数仅保存一个标量字段，一个 Ingestion pipeline 中最多可添加 5 个 PRESERVE 函数。",
+                "content": "PRESERVE Function 将用户定义的输入字段存储为自动生成 Collection 中额外的标量字段，用于存储元数据。您可以使用 PRESERVE Function 来保留文档的元数据。一个 PRESERVE Function 仅保存一个标量字段，一个 Ingestion pipeline 中最多可添加 5 个 PRESERVE Function。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -675,7 +679,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "Search pipeline 将查询语句（字符串）转换为 Embedding 向量，并在向量数据库中进行向量相似性搜索，从而获取Top-k 相似向量、对应的文档块和文档元数据。您可以使用 Search pipeline 实现语义搜索。1 个 Search pipeline 中仅可添加 SEARCH_DOC_CHUNK 1 种函数。",
+                "content": "Search pipeline 将查询语句（字符串）转换为 Embedding 向量，并在向量数据库中进行向量相似性搜索，从而获取Top-k 相似向量、对应的文档块和文档元数据。您可以使用 Search pipeline 实现语义搜索。1 个 Search pipeline 中仅可添加 SEARCH_DOC_CHUNK 1 种 Function。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -699,7 +703,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "SEARCH_DOC_CHUNK 函数{#searchdocchunk-function}",
+                "content": "SEARCH_DOC_CHUNK Function{#searchdocchunk-function}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -725,7 +729,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "此函数将查询文本转换为 Embedding 向量，并在向量数据库中检索与查询向量最相关的 Top-k 个文档块向量。",
+                "content": "此 Function 将查询文本转换为 Embedding 向量，并在向量数据库中检索与查询向量最相关的 Top-k 个文档块向量。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -836,7 +840,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "Deletion pipeline 从 Collection 中删除指定文档的所有文档块。1 个 Deletion pipeline 中仅可添加 PURGE_DOC_INDEX 1 种函数。",
+                "content": "Deletion pipeline 从 Collection 中删除指定文档的所有文档块。1 个 Deletion pipeline 中仅可添加 PURGE_DOC_INDEX 1 种 Function。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -860,7 +864,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "PURGE_DOC_INDEX 函数{#purgedocindex-function}",
+                "content": "PURGE_DOC_INDEX Function{#purgedocindex-function}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -886,7 +890,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "此函数删除具有指定 ",
+                "content": "此 Function 删除具有指定 ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -910,7 +914,7 @@
             },
             {
               "text_run": {
-                "content": " 的所有文档块。您可以 PURGE_DOC_INDEX 函数从向量数据库中高效删除文档。",
+                "content": " 的所有文档块。您可以 PURGE_DOC_INDEX Function 从向量数据库中高效删除文档。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1013,14 +1017,13 @@
         "parent_id": "L2RudZOGho2de6xtPCdc2wgGnre"
       },
       {
-        "block_id": "L9EHdmBs6oqyVFxBHFrcFr0vnoh",
-        "block_type": 2,
-        "parent_id": "L2RudZOGho2de6xtPCdc2wgGnre",
-        "text": {
+        "block_id": "D7SbdvcJ8oSEbRxAuGNczhxln4g",
+        "block_type": 4,
+        "heading2": {
           "elements": [
             {
               "text_run": {
-                "content": "",
+                "content": "相关文档{#related-topics}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1035,9 +1038,94 @@
             "align": 1,
             "folded": false
           }
-        }
+        },
+        "parent_id": "L2RudZOGho2de6xtPCdc2wgGnre"
+      },
+      {
+        "block_id": "TeSPdgEK2ocPrGxRW2dc238anWb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建 Ingestion Pipelines",
+                "token": "QN9PwG3kpiSG46k2LYDc5yQCnVg",
+                "url": "https://zilliverse.feishu.cn/wiki/QN9PwG3kpiSG46k2LYDc5yQCnVg"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "L2RudZOGho2de6xtPCdc2wgGnre"
+      },
+      {
+        "block_id": "In3Odm6Jdo4cTNxLz13cur8PnVe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建 Search Pipelines",
+                "token": "UvarwFhiJimKxfkduyVcTOqTndb",
+                "url": "https://zilliverse.feishu.cn/wiki/UvarwFhiJimKxfkduyVcTOqTndb"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "L2RudZOGho2de6xtPCdc2wgGnre"
+      },
+      {
+        "block_id": "QJgGd9jGGoEhWNxdkpicsAunnPd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建 Deletion Pipelines",
+                "token": "Kiu5wA3XFi6E3lkl7nZc7y7Rnnc",
+                "url": "https://zilliverse.feishu.cn/wiki/Kiu5wA3XFi6E3lkl7nZc7y7Rnnc"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "L2RudZOGho2de6xtPCdc2wgGnre"
       }
     ],
-    "counts": 35
+    "counts": 38
   }
 }

@@ -68,11 +68,11 @@ Zilliz Cloud 支持导入 JSON、Parquet 和 NumPy 数据。如果您的数据�
 
 <Admonition type="info" icon="📘" title="说明">
 
-- 如果目标 Collection 在 Schema 中启用了 **AutoID**，待导入数据中不应包含主键。
-
-- 如果目标 Collection 在 Schema 中启用了动态字段，待导入数据中可以包含 Schema 中未定义的字段。
-
-- 字典中的键与值均大小写敏感。请确保数据字典中各字段名称和 Schema 中各字段名称大小写完全一致。如果目标 Collection 有一个名为 **id** 的字段，每条待导入数据记录中也应该包含一个 **id** 的字段。使用 **ID** 或 **Id** 可能会导致错误。
+<ul>
+<li><p>如果目标 Collection 在 Schema 中启用了 <strong>AutoID</strong>，待导入数据中不应包含主键。</p></li>
+<li><p>如果目标 Collection 在 Schema 中启用了动态字段，待导入数据中可以包含 Schema 中未定义的字段。</p></li>
+<li><p>字典中的键与值均大小写敏感。请确保数据字典中各字段名称和 Schema 中各字段名称大小写完全一致。如果目标 Collection 有一个名为 <strong>id</strong> 的字段，每条待导入数据记录中也应该包含一个 <strong>id</strong> 的字段。使用 <strong>ID</strong> 或 <strong>Id</strong> 可能会导致错误。</p></li>
+</ul>
 
 </Admonition>
 
@@ -90,7 +90,7 @@ Zilliz Cloud 支持导入 JSON、Parquet 和 NumPy 数据。如果您的数据�
 
 <Admonition type="info" icon="📘" title="说明">
 
-如需批量导入 Parquet 文件，您的 Zilliz Cloud 集群版本须与 Milvus 2.3.x 兼容。
+<p>如需批量导入 Parquet 文件，您的 Zilliz Cloud 集群版本须与 Milvus 2.3.x 兼容。</p>
 
 </Admonition>
 
@@ -110,11 +110,11 @@ Zilliz Cloud 支持导入 JSON、Parquet 和 NumPy 数据。如果您的数据�
 
 <Admonition type="info" icon="📘" title="说明">
 
-- 如果目标 Collection 在 Schema 中启用了 **AutoID**，待导入数据中不应包含主键对应的 Numpy 文件。
-
-- 如果目标 Collection 在 Schema 中启用了动态字段，待导入数据中可以包含 Schema 中未定义的字段。这些字段应以键值对的方式存入一个名为 **$meta.npy** 的文件中。
-
-- 文件名大小写敏感。请确保文件名和 Schema 中各字段名称大小写完全一致。如果目标 Collection 有一个名为 **id** 的字段，则在待导入数据中应该包含一个名为 **id.npy** 的文件。使用 **ID.npy** 或 **Id.npy** 可能会导致错误。
+<ul>
+<li><p>如果目标 Collection 在 Schema 中启用了 <strong>AutoID</strong>，待导入数据中不应包含主键对应的 Numpy 文件。</p></li>
+<li><p>如果目标 Collection 在 Schema 中启用了动态字段，待导入数据中可以包含 Schema 中未定义的字段。这些字段应以键值对的方式存入一个名为 <strong>$meta.npy</strong> 的文件中。</p></li>
+<li><p>文件名大小写敏感。请确保文件名和 Schema 中各字段名称大小写完全一致。如果目标 Collection 有一个名为 <strong>id</strong> 的字段，则在待导入数据中应该包含一个名为 <strong>id.npy</strong> 的文件。使用 <strong>ID.npy</strong> 或 <strong>Id.npy</strong> 可能会导致错误。</p></li>
+</ul>
 
 </Admonition>
 
@@ -136,7 +136,7 @@ Zilliz Cloud 还支持通过 Zilliz Cloud 控制台或使用 RESTful API / SDK �
 
 <Admonition type="info" icon="📘" title="说明">
 
-远程对象存储桶须与数据导入目标集群处于同一云服务提供商网络。例如，如果目标集群托管在阿里云上，则源数据须存放在阿里云 OSS 桶中。
+<p>远程对象存储桶须与数据导入目标集群处于同一云服务提供商网络。例如，如果目标集群托管在阿里云上，则源数据须存放在阿里云 OSS 桶中。</p>
 
 </Admonition>
 

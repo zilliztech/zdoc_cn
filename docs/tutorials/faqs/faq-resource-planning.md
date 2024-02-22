@@ -3,7 +3,7 @@ slug: /faq-resource-planning
 beta: null
 notebook: null
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 # FAQ：资源规划

@@ -1,0 +1,26 @@
+[
+    {
+        "name": "cloud-meta",
+        "description": "本系列 API 用于查看云服务提供商和云地域。"
+    },
+    {
+        "name": "cluster-operations",
+        "description": "本系列 API 用于管理由指定云服务提供商托管的 Zilliz Cloud 集群。"
+    },
+    {
+        "name": "collection-operations",
+        "description": "本系列 API 用于管理 Zilliz Cloud 中的 Collection。"
+    },
+    {
+        "name": "import-operations",
+        "description": "本系列 API 用于大规模数据导入。"
+    },
+    {
+        "name": "pipeline-operations",
+        "description": "本系列 API 用于管理 Zilliz Cloud Pipelines。"
+    },
+    {
+        "name": "vector-operations",
+        "description": "本系列 API 用于在 Zilliz Cloud 上进行向量检索。"
+    }
+]

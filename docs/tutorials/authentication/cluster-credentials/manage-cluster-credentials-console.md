@@ -35,7 +35,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-密码将不会再次显示，请务必记下并妥善保存在安全的地方。
+<p>密码将不会再次显示，请务必记下并妥善保存在安全的地方。</p>
 
 </Admonition>
 
@@ -49,7 +49,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-密码将不会再次显示，请务必记下并妥善保存在安全的地方。
+<p>密码将不会再次显示，请务必记下并妥善保存在安全的地方。</p>
 
 </Admonition>
 
@@ -61,7 +61,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-集群默认用户 **db_admin** 不支持删除。
+<p>集群默认用户 <strong>db_admin</strong> 不支持删除。</p>
 
 </Admonition>
 

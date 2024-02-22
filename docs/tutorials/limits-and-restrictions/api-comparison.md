@@ -3,7 +3,7 @@ slug: /api-comparison
 beta: FALSE
 notebook: FALSE
 token: KOD2wN5jDimhSOk1GshcUbn2nJe
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 import Admonition from '@theme/Admonition';

@@ -24,7 +24,7 @@ Zilliz Cloud 现已支持在搜索或查询时使用高级表达式 `count()` �
 
 <Admonition type="info" icon="📘" title="说明">
 
-目前，`count()` 和 `json_contains()` 处于 Beta 测试阶段。请注意，该功能及相关文档在 Beta 测试期间可能会有所更改。
+<p>目前，<code>count()</code> 和 <code>json_contains()</code> 处于 Beta 测试阶段。请注意，该功能及相关文档在 Beta 测试期间可能会有所更改。</p>
 
 </Admonition>
 

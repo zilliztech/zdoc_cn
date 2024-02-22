@@ -63,7 +63,7 @@ import Admonition from '@theme/Admonition';
 
     <Admonition type="info" icon="📘" title="说明">
 
-    不能删除 **db_admin **用户。对于已添加到集群中的用户，Zilliz Cloud 会向其授予集群中所有 Collection 的访问权限。
+    <p>不能删除 **db_admin **用户。对于已添加到集群中的用户，Zilliz Cloud 会向其授予集群中所有 Collection 的访问权限。</p>
 
     </Admonition>
 
@@ -101,7 +101,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="caution" icon="🚧" title="警告">
 
-扩容集群可能会导致几分钟的停机时间。请谨慎操作。
+<p>扩容集群可能会导致几分钟的停机时间。请谨慎操作。</p>
 
 </Admonition>
 
@@ -111,7 +111,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-为集群缩容前，请先使用 [CU 计算器](https://zilliz.com.cn/pricing#calculator)估算您的数据需要使用的最小 CU 大小。否则，过小的 CU 将无法存储您的数据，最终导致数据迁移任务失败。
+<p>为集群缩容前，请先使用 <a href="https://zilliz.com.cn/pricing#calculator">CU 计算器</a>估算您的数据需要使用的最小 CU 大小。否则，过小的 CU 将无法存储您的数据，最终导致数据迁移任务失败。</p>
 
 </Admonition>
 

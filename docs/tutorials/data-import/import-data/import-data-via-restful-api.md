@@ -66,7 +66,7 @@ with open('path/to/medium_articles_2020_dpr.json') as f:
 
 <Admonition type="info" icon="📘" title="说明">
 
-为了成功导入数据，请确保您使用的对象存储桶与您的集群位于相同的云中。
+<p>为了成功导入数据，请确保您使用的对象存储桶与您的集群位于相同的云中。</p>
 
 </Admonition>
 
@@ -74,7 +74,7 @@ with open('path/to/medium_articles_2020_dpr.json') as f:
 
 ```bash
 curl --request POST \
-     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/vector/collections/import" \
+     --url "<https://controller.api.$>{CLOUD_REGION_ID}.zillizcloud.com/v1/vector/collections/import" \\
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
@@ -87,13 +87,13 @@ curl --request POST \
      }'
 ```
 
-在上述代码中，`${CLOUD_REGION_ID}` 代表您集群所在的云地域的 ID，`${TOKEN}` 是用于授权 API 请求的集群 API 密钥，`${CLUSTER_ID}` 是您的集群的 ID。在调用 API 时，请确保将这些占位符替换为您的实际值。您可以从集群的公共访问端点获取 `CLOUD_REGION_ID` 和 `CLUSTER_ID`。例如，在公共访问端点 `https://in03-3bf3c31f4248e22.api.gcp-us-west1.zillizcloud.com` 中，`CLOUD_REGION_ID` 是 **gcp-us-west1**，`CLUSTER_ID` 是 **in03-3bf3c31f4248e22**。有关更多信息，请参见[管理集群](./manage-cluster)。
+在上述代码中，`${CLOUD_REGION_ID}` 代表您集群所在的云地域的 ID，`${TOKEN}` 是用于授权 API 请求的集群 API 密钥，`${CLUSTER_ID}` 是您的集群的 ID。在调用 API 时，请确保将这些占位符替换为您的实际值。您可以从集群的公共访问端点获取 `CLOUD_REGION_ID` 和 `CLUSTER_ID`。例如，在公共访问端点 **https://in03-3bf3c31f4248e22.api.gcp-us-west1.zillizcloud.com** 中，`CLOUD_REGION_ID` 是 **gcp-us-west1**，`CLUSTER_ID` 是 **in03-3bf3c31f4248e22**。有关更多信息，请参见[管理集群](./manage-cluster)。
 
 提交请求后，将返回任务 ID。您可以通过任务 ID 查询数据导入进度。示例代码如下：
 
 ```bash
 curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.zillizcloud.com/v1/vector/collections/import/get?jobId=${JOBID}&clusterId=${CLUSTERID}" \\
+     --url "<https://controller.api.$>{CLOUD_REGION_ID}.zillizcloud.com/v1/vector/collections/import/get?jobId=${JOBID}&clusterId=${CLUSTERID}" \\
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \

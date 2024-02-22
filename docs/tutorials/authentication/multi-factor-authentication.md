@@ -31,7 +31,7 @@ import Admonition from '@theme/Admonition';
 
     <Admonition type="info" icon="📘" title="说明">
 
-    如未收到验证码或验证码过期，请点击重新发送验证码。
+    <p>如未收到验证码或验证码过期，请点击重新发送验证码。</p>
 
     </Admonition>
 
@@ -61,7 +61,7 @@ import Admonition from '@theme/Admonition';
 
     <Admonition type="info" icon="📘" title="说明">
 
-    如未收到验证码或验证码过期，请点击重新发送验证码。
+    <p>如未收到验证码或验证码过期，请点击重新发送验证码。</p>
 
     </Admonition>
 

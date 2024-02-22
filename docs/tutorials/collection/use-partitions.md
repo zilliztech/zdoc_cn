@@ -18,7 +18,7 @@ Partition 是一种根据一定规则组织数据的技术。通过该特性，�
 
 <Admonition type="info" icon="📘" title="说明">
 
-在使用 Partition 功能时，需确保未启用任何 Partition Key，否则可能出现错误。
+<p>在使用 Partition 功能时，需确保未启用任何 Partition Key，否则可能出现错误。</p>
 
 </Admonition>
 
@@ -48,7 +48,7 @@ Partition 是一种根据一定规则组织数据的技术。通过该特性，�
 
 <Admonition type="info" icon="📘" title="说明">
 
-本页提供的代码示例假定您已按照[创建 Collection](./create-collection) 的步骤完成了 Collection 创建。
+<p>本页提供的代码示例假定您已按照<a href="./create-collection">创建 Collection</a> 的步骤完成了 Collection 创建。</p>
 
 </Admonition>
 
@@ -1659,9 +1659,10 @@ fmt.Println(resultSetToJSON(qres, false))
 
 <Admonition type="caution" icon="🚧" title="警告">
 
-- 在删除 Partition 之前，必须先将其释放。
-
-- 删除 Partition 将永久删除其中的所有数据。请谨慎操作。
+<ul>
+<li><p>在删除 Partition 之前，必须先将其释放。</p></li>
+<li><p>删除 Partition 将永久删除其中的所有数据。请谨慎操作。</p></li>
+</ul>
 
 </Admonition>
 

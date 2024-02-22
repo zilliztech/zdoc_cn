@@ -43,7 +43,7 @@ with zipfile.ZipFile("./paintings.zip","r") as zip_ref:
 
 <Admonition type="info" icon="📘" title="说明">
 
-数据集大小为 2.35 GB , 下载耗时取决于您的网络状况。
+<p>数据集大小为 2.35 GB , 下载耗时取决于您的网络状况。</p>
 
 </Admonition>
 
@@ -211,9 +211,8 @@ TOKEN = 'YOUR_CLUSTER_TOKEN'
 
 <Admonition type="info" icon="📘" title="说明">
 
-由于获取图片的向量表示耗时较长，本步骤相对比较耗时。可以喝点咖啡，稍事休息。
-
-PyTorch 可能与 Python 3.9 及之前版本存在不兼容的问题。建议使用 Python 3.10 及之后版本。
+<p>由于获取图片的向量表示耗时较长，本步骤相对比较耗时。可以喝点咖啡，稍事休息。</p>
+<p>PyTorch 可能与 Python 3.9 及之前版本存在不兼容的问题。建议使用 Python 3.10 及之后版本。</p>
 
 </Admonition>
 

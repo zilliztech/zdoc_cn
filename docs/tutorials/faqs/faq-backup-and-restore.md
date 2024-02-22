@@ -3,7 +3,7 @@ slug: /faq-backup-and-restore
 beta: null
 notebook: null
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 # FAQ：备份与恢复

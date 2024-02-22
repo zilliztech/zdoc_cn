@@ -80,7 +80,7 @@
       "node_token": "WfbLwEnVviFQnzk4VFWcmC76ndd",
       "node_type": "origin",
       "obj_create_time": "1701681197",
-      "obj_edit_time": "1703039165",
+      "obj_edit_time": "1708407887",
       "obj_token": "L2RudZOGho2de6xtPCdc2wgGnre",
       "obj_type": "docx",
       "origin_node_token": "WfbLwEnVviFQnzk4VFWcmC76ndd",
@@ -88,7 +88,8 @@
       "owner": "ou_fbc044d19930afd389d5c369466c38b1",
       "parent_node_token": "MJeiwGDSniNQ7BkAFGCczemxnDg",
       "space_id": "7167193056431783939",
-      "title": "了解 Pipelines"
+      "title": "了解 Pipelines",
+      "slug": "understanding-pipelines"
     },
     {
       "creator": "ou_fbc044d19930afd389d5c369466c38b1",
@@ -105,16 +106,35 @@
       "owner": "ou_fbc044d19930afd389d5c369466c38b1",
       "parent_node_token": "MJeiwGDSniNQ7BkAFGCczemxnDg",
       "space_id": "7167193056431783939",
-      "title": "创建 Pipelines"
+      "title": "创建 Pipelines",
+      "slug": "create-pipelines"
     },
     {
       "creator": "ou_fbc044d19930afd389d5c369466c38b1",
       "has_child": false,
+      "node_create_time": "1708397983",
+      "node_token": "BCCjwd2xFivKqUkQrDXcbv0dn5f",
+      "node_type": "origin",
+      "obj_create_time": "1708397983",
+      "obj_edit_time": "1708426191",
+      "obj_token": "QC79dHokloVVakxVT85cutwInZc",
+      "obj_type": "docx",
+      "origin_node_token": "BCCjwd2xFivKqUkQrDXcbv0dn5f",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+      "parent_node_token": "MJeiwGDSniNQ7BkAFGCczemxnDg",
+      "space_id": "7167193056431783939",
+      "title": "管理 Pipelines",
+      "slug": "manage-pipelines"
+    },
+    {
+      "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+      "has_child": true,
       "node_create_time": "1701681223",
       "node_token": "DU8QwV6kdiv4LXkqPKqcOvoPnNE",
       "node_type": "origin",
       "obj_create_time": "1701681223",
-      "obj_edit_time": "1701769815",
+      "obj_edit_time": "1708426464",
       "obj_token": "XpdJdsQGBoMekLxWZIBcGzfOn5d",
       "obj_type": "docx",
       "origin_node_token": "DU8QwV6kdiv4LXkqPKqcOvoPnNE",
@@ -122,7 +142,44 @@
       "owner": "ou_fbc044d19930afd389d5c369466c38b1",
       "parent_node_token": "MJeiwGDSniNQ7BkAFGCczemxnDg",
       "space_id": "7167193056431783939",
-      "title": "运行 Pipelines"
+      "title": "运行 Pipelines",
+      "slug": "run-pipelines"
+    },
+    {
+      "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+      "has_child": false,
+      "node_create_time": "1708398060",
+      "node_token": "TNwlw4PRxiFoewkSQzhcU06BnyA",
+      "node_type": "origin",
+      "obj_create_time": "1708398060",
+      "obj_edit_time": "1708426428",
+      "obj_token": "MxondUDCCoIWaqxYhHGcJG3Snyh",
+      "obj_type": "docx",
+      "origin_node_token": "TNwlw4PRxiFoewkSQzhcU06BnyA",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+      "parent_node_token": "MJeiwGDSniNQ7BkAFGCczemxnDg",
+      "space_id": "7167193056431783939",
+      "title": "估算 Pipelines 用量",
+      "slug": "estimate-pipelines-usage"
+    },
+    {
+      "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+      "has_child": true,
+      "node_create_time": "1708398089",
+      "node_token": "HOL1wcSsYi6tzXkbQsccMTQhn9e",
+      "node_type": "origin",
+      "obj_create_time": "1708398089",
+      "obj_edit_time": "1708398100",
+      "obj_token": "F4xZdn0xloD73DxlIGrc4fckned",
+      "obj_type": "docx",
+      "origin_node_token": "HOL1wcSsYi6tzXkbQsccMTQhn9e",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+      "parent_node_token": "MJeiwGDSniNQ7BkAFGCczemxnDg",
+      "space_id": "7167193056431783939",
+      "title": "Pipelines 第三方集成",
+      "slug": "pipeline-integrations"
     }
   ]
 }

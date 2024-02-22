@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="caution" icon="🚧" title="警告">
 
-删除组织的操作不可逆，请谨慎操作！
+<p>删除组织的操作不可逆，请谨慎操作！</p>
 
 </Admonition>
 

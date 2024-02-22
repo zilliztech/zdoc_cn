@@ -1,0 +1,1998 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1708398104",
+  "node_token": "LTs4wVOhbiJirSkdBn2cblmin4g",
+  "node_type": "origin",
+  "obj_create_time": "1708398104",
+  "obj_edit_time": "1708593693",
+  "obj_token": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+  "obj_type": "docx",
+  "origin_node_token": "LTs4wVOhbiJirSkdBn2cblmin4g",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "HOL1wcSsYi6tzXkbQsccMTQhn9e",
+  "space_id": "7167193056431783939",
+  "title": "在 LlamaIndex 中使用 Pipelines",
+  "slug": "use-pipeline-in-llamaindex",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+        "block_type": 1,
+        "children": [
+          "E7I8dTAKUoNGynx4mNnc0TvhnIc",
+          "O6IwdHGyGoYvTixxp07cf4mynSg",
+          "Wv8MdUln8oJBqPx9e9KcWH3bnZe",
+          "L6jddhDcNoMKSsxEqSicvAQYnah",
+          "IpqcdQEpBoKq4ax4UFpcjTkwn3c",
+          "DusRdcvNmouajJxOMSfcpcBcnKe",
+          "TAyadJvAaoroXzxYjNecPQGUnxd",
+          "Lj19dnTyaoexboxdmHncaxuYnwf",
+          "Lr0odCfpZo1LYmx6BpecthW9nDg",
+          "TtaHdG4XqoRsVcxHwJYcr2iUnrb",
+          "Uaojdyv2OoImvHxJje5chffJnhf",
+          "ZHogdC96mogNs6x2rIqcXfFNnmc",
+          "Cn63doQYVobQ3Hx03n5cLwe4n9e",
+          "BfWydGFJpon3LRx9M1Tcyc3mnHf",
+          "ZTgfd5rSFom39dxxzdmc9zwSnuz",
+          "O0i8duo4AoFzLhxlVhDc27CFnFd",
+          "LwftdpDdyo9zRux68duccM2Tnnd",
+          "YdyKdcu2voO6I6x6wGScyVpInkf",
+          "D1G7dBKsKok2MTxm8cwcMDSynHg",
+          "CFjddRx7ZoGmf3xGeswcVq3tn3g",
+          "S9bYdhdbho0LWLxy9uJcEUwTnTe",
+          "Lj3sdCmZFoxrFDxOwsscUa4Wnlf",
+          "Ul2gdSJftocBWIxhwIvcDT4inSc",
+          "AO3DdiVBOocxObxv1p3czRhPnZd",
+          "Zkl3dkeELoeMAgxYh0EcQUPHnJb",
+          "H0IXdxmIuotWvexJXKMcHB0anhf",
+          "JsTFd3uZXo5khhxPT6EcSHnZn2f",
+          "OX5ddw61goN4xOx4FrOcG1TMnBg",
+          "FKESd3Gz7oJ4FoxshgRcJalJnXe",
+          "OybHdYVTZopFeMxnXJWcZFX9nug",
+          "Zh7Wdayu8oTK9FxXs8ecvdDKnTe",
+          "XVbhdp85zofjcoxIm88cK0sbnsg",
+          "P8gSdFxoHoRWiZxZWA4cZ2apnLg",
+          "KsvodYxZXoYEVIxxQTlc4RovnNf",
+          "RHjZdftT9o1bXexGzINcLda7noc",
+          "AOS4dqQXcoB0aZxaKDTcx62Cngf",
+          "FmwMdcr1poLVikx6AjocfGBGnMC",
+          "Ysc5ddDp0owoy9x0X1dcVQfenYe",
+          "D5P4dOYbSo5SYWxaUD0cIjwmnMc",
+          "B7LWdDGK4oDe5cxcUJJcLTthnCg",
+          "EcPQdmhVvonDA8xh1QkcP5cUnSe",
+          "NamfdxZcMoaXgVxJfl2cKciWnKd",
+          "EeAEd0EXDo8n6KxBEojcmbsInB6",
+          "XOX3dExSEo2Muuxkh6FcagbEnEf"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在 LlamaIndex 中使用 Pipelines",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "E7I8dTAKUoNGynx4mNnc0TvhnIc",
+        "block_type": 2,
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud Pipelines",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FMJeiwGDSniNQ7BkAFGCczemxnDg"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 是一个可扩展的 API 服务，用于检索。您可以将 Zilliz Cloud Pipelines 用作 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "LLamaIndex",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fdocs.llamaindex.ai%2Fen%2Fstable%2Fexamples%2Fmanaged%2FzcpDemo.html"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 中的托管索引。该服务可以将文档转换为 Embedding 向量，并将它们存储在 Zilliz Cloud 中，以实现高效的语义搜索。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "O6IwdHGyGoYvTixxp07cf4mynSg",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "前提条件{#before-you-start}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "Wv8MdUln8oJBqPx9e9KcWH3bnZe",
+        "block_type": 2,
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "开始前，请先：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "L6jddhDcNoMKSsxEqSicvAQYnah",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "安装 LLamaIndex Python SDK",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "BHrIdfxzKoWOA3xOlDScuLJAnBe"
+        ],
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "BHrIdfxzKoWOA3xOlDScuLJAnBe",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "pip install llama-index",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 7,
+            "wrap": false
+          }
+        },
+        "parent_id": "L6jddhDcNoMKSsxEqSicvAQYnah"
+      },
+      {
+        "block_id": "IpqcdQEpBoKq4ax4UFpcjTkwn3c",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "配置",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "OpenAI",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fplatform.openai.com%2F"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Zilliz Cloud",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fcloud.zilliz.com.cn%2Fsignup%3Futm_source%3Dtwitter%26amp%3Butm_medium%3Dsocial%2520%26amp%3Butm_campaign%3D2023-12-22_social_pipeline-llamaindex_twitter"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 账号鉴权信息",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "WJ5vdK1h3on783xw1EHc4Wz5n0c",
+          "EgmfdsskkoOrqXxWu7GcKVV3nLd"
+        ],
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "WJ5vdK1h3on783xw1EHc4Wz5n0c",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from getpass import getpass\nimport os\n\nos.environ[\"OPENAI_API_KEY\"] = getpass(\"Enter your OpenAI API Key:\")\n\nZILLIZ_PROJECT_ID = getpass(\"Enter your Zilliz Project ID:\")\nZILLIZ_CLUSTER_ID = getpass(\"Enter your Zilliz Cluster ID:\")\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "ZILLIZ_TOKEN = getpass(\"Enter your Zilliz API Key:\")",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "IpqcdQEpBoKq4ax4UFpcjTkwn3c"
+      },
+      {
+        "block_id": "EgmfdsskkoOrqXxWu7GcKVV3nLd",
+        "block_type": 19,
+        "callout": {
+          "background_color": 2,
+          "border_color": 2,
+          "emoji_id": "blue_book"
+        },
+        "children": [
+          "Ao2Vd6SAfoGQZ9xg2Oicks81nvb",
+          "S1J7dVzUJorAtcxowDncoe12noc",
+          "V4xIdwF6foO7QIxC26jc51MpnDc"
+        ],
+        "parent_id": "IpqcdQEpBoKq4ax4UFpcjTkwn3c"
+      },
+      {
+        "block_id": "Ao2Vd6SAfoGQZ9xg2Oicks81nvb",
+        "block_type": 2,
+        "parent_id": "EgmfdsskkoOrqXxWu7GcKVV3nLd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "S1J7dVzUJorAtcxowDncoe12noc",
+        "block_type": 2,
+        "parent_id": "EgmfdsskkoOrqXxWu7GcKVV3nLd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "获取 OpenAI API 密钥",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fbeta.openai.com%2Faccount%2Fapi-keys"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "V4xIdwF6foO7QIxC26jc51MpnDc",
+        "block_type": 2,
+        "parent_id": "EgmfdsskkoOrqXxWu7GcKVV3nLd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "获取 Zilliz Cloud 鉴权信息",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FUGzNwB4TmiqTozkJvarceRdenif"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DusRdcvNmouajJxOMSfcpcBcnKe",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为文档创建索引",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "TAyadJvAaoroXzxYjNecPQGUnxd",
+        "block_type": 2,
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud Pipelines 支持来自 AWS S3 和 Google Cloud Storage 的文件。您可以从对象存储生成预签名 URL，并使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "from_document_url()",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 或 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "insert_doc_url()",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 来上传文件。它可以自动索引文档并将文档块作为向量存储在 Zilliz Cloud 上。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Lj19dnTyaoexboxdmHncaxuYnwf",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from llama_index.indices import ZillizCloudPipelineIndex\n\nzcp_index = ZillizCloudPipelineIndex.from_document_url(\n    # a public or pre-signed url of a file stored on AWS S3 or Google Cloud Storage\n    url=\"https://publicdataset.zillizcloud.com/milvus_doc.md\",\n    project_id=ZILLIZ_PROJECT_ID,\n    cluster_id=ZILLIZ_CLUSTER_ID,\n    token=ZILLIZ_TOKEN,\n    # optional\n    metadata={\"version\": \"2.3\"},  # used for filtering\n    collection_name=\"zcp_llamalection\",  # change this value will specify customized collection name\n)\n\n# Insert more docs, eg. a Milvus v2.2 document\nzcp_index.insert_doc_url(\n    url=\"https://publicdataset.zillizcloud.com/milvus_doc_22.md\",\n    metadata={\"version\": \"2.2\"},\n)\n\n# Output\n# {'token_usage': 984, 'doc_name': 'milvus_doc_22.md', 'num_chunks': 7}\n\n# # Delete docs by doc name\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# zcp_index.delete_by_doc_name(doc_name=\"milvus_doc_22.md\")",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "Lr0odCfpZo1LYmx6BpecthW9nDg",
+        "block_type": 19,
+        "callout": {
+          "background_color": 2,
+          "border_color": 2,
+          "emoji_id": "blue_book"
+        },
+        "children": [
+          "WJTVdhUZJoXZUUxcyeTcJ2ewnAg",
+          "AuPQdykdconophxc2PAcmUEgntf",
+          "A7Xkd7NgxoPvF2xlAJycKkpVn3e"
+        ],
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "WJTVdhUZJoXZUUxcyeTcJ2ewnAg",
+        "block_type": 2,
+        "parent_id": "Lr0odCfpZo1LYmx6BpecthW9nDg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AuPQdykdconophxc2PAcmUEgntf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果未创建 Zilliz Cloud Pipelines，上述代码将自动创建 Pipeline。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Lr0odCfpZo1LYmx6BpecthW9nDg"
+      },
+      {
+        "block_id": "A7Xkd7NgxoPvF2xlAJycKkpVn3e",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以按需选择是否为每篇文档添加元数据。元数据可以在检索文档时用于过滤文档片段。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Lr0odCfpZo1LYmx6BpecthW9nDg"
+      },
+      {
+        "block_id": "TtaHdG4XqoRsVcxHwJYcr2iUnrb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "使用 Pipeline 作为查询引擎",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "Uaojdyv2OoImvHxJje5chffJnhf",
+        "block_type": 2,
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "ZillizCloudPipelineIndex",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "进行语义搜索时，您可以通过指定一些参数将其用作查询引擎 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "as_query_engine()",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZHogdC96mogNs6x2rIqcXfFNnmc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "search_top_k",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：要检索的文本节点/块数量。默认为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "DEFAULT_SIMILARITY_TOP_K",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " (2)。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "Cn63doQYVobQ3Hx03n5cLwe4n9e",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "filters",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：元数据过滤器。默认为 None。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "BfWydGFJpon3LRx9M1Tcyc3mnHf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "output_metadata",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：要与检索到的文本节点一起返回的元数据字段的名称列表。默认为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "[]",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "ZTgfd5rSFom39dxxzdmc9zwSnuz",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from llama_index.vector_stores.types import ExactMatchFilter, MetadataFilters\n\nquery_engine_milvus23 = zcp_index.as_query_engine(\n    search_top_k=3,\n    filters=MetadataFilters(\n        filters=[\n            ExactMatchFilter(key=\"version\", value=\"2.3\")\n        ]  # version == \"2.3\"\n    ),\n    output_metadata=[\"version\"],\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ")",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "O0i8duo4AoFzLhxlVhDc27CFnFd",
+        "block_type": 2,
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Milvus 2.3 文档语义搜索或检索增强生成（RAG）引擎已经准备就绪。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LwftdpDdyo9zRux68duccM2Tnnd",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "检索",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "YdyKdcu2voO6I6x6wGScyVpInkf",
+        "block_type": 2,
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "以下代码片段演示了如何使用 Zilliz Cloud Pipelines 进行语义搜索。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "D1G7dBKsKok2MTxm8cwcMDSynHg",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "question = \"Can users delete entities by filtering non-primary fields?\"\nretrieved_nodes = query_engine_milvus23.retrieve(question)\nprint(retrieved_nodes)\n\n# Output\n# [NodeWithScore(node=TextNode(id_='447198459513870883', embedding=None, metadata={'version': '2.3'}, excluded_embed_metadata_keys=[], excluded_llm_metadata_keys=[], relationships={}, text='# Delete Entities\\nThis topic describes how to delete entities in Milvus.  \\nMilvus supports deleting entities by primary key or complex boolean expressions. Deleting entities by primary key is much faster and lighter than deleting them by complex boolean expressions. This is because Milvus executes queries first when deleting data by complex boolean expressions.  \\nDeleted entities can still be retrieved immediately after the deletion if the consistency level is set lower than Strong.\\nEntities deleted beyond the pre-specified span of time for Time Travel cannot be retrieved again.\\nFrequent deletion operations will impact the system performance.  \\nBefore deleting entities by comlpex boolean expressions, make sure the collection has been loaded.\\nDeleting entities by complex boolean expressions is not an atomic operation. Therefore, if it fails halfway through, some data may still be deleted.\\nDeleting entities by complex boolean expressions is supported only when the consistency is set to Bounded. For details, see Consistency.', start_char_idx=None, end_char_idx=None, text_template='{metadata_str}\\n\\n{content}', metadata_template='{key}: {value}', metadata_seperator='\\n'), score=0.728226900100708), NodeWithScore(node=TextNode(id_='447198459513870886', embedding=None, metadata={'version': '2.3'}, excluded_embed_metadata_keys=[], excluded_llm_metadata_keys=[], relationships={}, text='# Delete Entities\\n## Prepare boolean expression\\n### Complex boolean expression\\nTo filter entities that meet specific conditions, define complex boolean expressions.  \\nFilter entities whose word_count is greater than or equal to 11000:  \\n```python\\nexpr = \"word_count >= 11000\"\\n```  \\nFilter entities whose book_name is not Unknown:  \\n```python\\nexpr = \"book_name != Unknown\"\\n```  \\nFilter entities whose primary key values are greater than 5 and word_count is smaller than or equal to 9999:  \\n```python\\nexpr = \"book_id > 5 && word_count <= 9999\"\\n```', start_char_idx=None, end_char_idx=None, text_template='{metadata_str}\\n\\n{content}', metadata_template='{key}: {value}', metadata_seperator='\\n'), score=0.687866747379303), NodeWithScore(node=TextNode(id_='447198459513870884', embedding=None, metadata={'version': '2.3'}, excluded_embed_metadata_keys=[], excluded_llm_metadata_keys=[], relationships={}, text='# Delete Entities\\n## Prepare boolean expression\\nPrepare the boolean expression that filters the entities to delete.  \\nMilvus supports deleting entities by primary key or complex boolean expressions. For more information on expression rules and supported operators, see Boolean Expression Rules.', start_char_idx=None, end_char_idx=None, text_template='{metadata_str}\\n\\n{content}', metadata_template='{key}: {value}', metadata_seperator='\\n'), score=0.6814976334571838)]\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "CFjddRx7ZoGmf3xGeswcVq3tn3g",
+        "block_type": 2,
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "带有过滤器的查询引擎仅检索带有 \"版本 2.3\" 标签的文本节点。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "S9bYdhdbho0LWLxy9uJcEUwTnTe",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查询",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "Lj3sdCmZFoxrFDxOwsscUa4Wnlf",
+        "block_type": 2,
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "以下代码片段展示了如何将查询引擎作为由 Zilliz Cloud Pipelines 和 OpenAI 的大型语言模型支持的 RAG 代理来使用。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ul2gdSJftocBWIxhwIvcDT4inSc",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "response = query_engine_milvus23.query(question)\nprint(response.response)\n\n# Output\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# Yes, users can delete entities by filtering non-primary fields using complex boolean expressions in Milvus. The complex boolean expressions allow users to define specific conditions to filter entities based on non-primary fields, such as word_count or book_name. By specifying the desired conditions in the boolean expression, users can delete entities that meet those conditions. However, it is important to note that deleting entities by complex boolean expressions is not an atomic operation, and if it fails halfway through, some data may still be deleted.",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "AO3DdiVBOocxObxv1p3czRhPnZd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "高级用例",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "Zkl3dkeELoeMAgxYh0EcQUPHnJb",
+        "block_type": 2,
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以在不进行数据摄取的情况下获取托管索引。要开始使用 Zilliz Cloud Pipelines，您需要提供管道 ID 或相关联的集合名称：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "H0IXdxmIuotWvexJXKMcHB0anhf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Pipeline IDs",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "EzmPd8i17odpqLx6f0jcRLEznhh"
+        ],
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "EzmPd8i17odpqLx6f0jcRLEznhh",
+        "block_type": 2,
+        "parent_id": "H0IXdxmIuotWvexJXKMcHB0anhf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "1 个包含 INGESTION、 SEARCH 和 DELETION Pipelines ID 的字典（dictionary）。例如：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{\"INGESTION\": \"pipe-xx1\", \"SEARCH\": \"pipe-xx2\", \"DELETION\": “pipe-xx3”}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JsTFd3uZXo5khhxPT6EcSHnZn2f",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Collection name",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "NKLRdB2LboRwaVxDFFoccTQOnlR"
+        ],
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "NKLRdB2LboRwaVxDFFoccTQOnlR",
+        "block_type": 2,
+        "parent_id": "JsTFd3uZXo5khhxPT6EcSHnZn2f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "集合名称默认为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "zcp_llamalection",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。如果没有提供 Pipeline ID，索引将尝试获取与相关联的集合名称相同的 Pipeline",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OX5ddw61goN4xOx4FrOcG1TMnBg",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from llama_index.indices import ZillizCloudPipelineIndex\n\nadvanced_zcp_index = ZillizCloudPipelineIndex(\n    project_id=ZILLIZ_PROJECT_ID,\n    cluster_id=ZILLIZ_CLUSTER_ID,\n    token=ZILLIZ_TOKEN,\n    collection_name=\"zcp_llamalection_advanced\",\n)\n\n# Output\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# No available pipelines. Please create pipelines first.",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "FKESd3Gz7oJ4FoxshgRcJalJnXe",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "定制化 Pipelines",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "OybHdYVTZopFeMxnXJWcZFX9nug",
+        "block_type": 2,
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果没有提供或找到 Pipelines，那么您可以使用以下",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "可选",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "参数手动创建和自定义 Pipelines：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Zh7Wdayu8oTK9FxXs8ecvdDKnTe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "metadata_schema",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ": 带有字段名称作为键（key），数据类型作为值的元数据架构字典。例如：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{\"user_id\": \"VarChar\"}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "XVbhdp85zofjcoxIm88cK0sbnsg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "chunkSize",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ": 使用 Token 作为单位的块大小整数。如果没有指定块大小，那么 Zilliz Cloud Pipeline 将使用内置默认块大小（500 Tokens）来分割文档。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "P8gSdFxoHoRWiZxZWA4cZ2apnLg",
+        "block_type": 2,
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "更多其他可用参数，请参阅 Zilliz Cloud Pipelines。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "KsvodYxZXoYEVIxxQTlc4RovnNf",
+        "block_type": 2,
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "For other applicable parameters, refer to ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Zilliz Cloud Pipelines",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FMJeiwGDSniNQ7BkAFGCczemxnDg"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " for more available pipeline parameters.",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RHjZdftT9o1bXexGzINcLda7noc",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "advanced_zcp_index.create_pipelines(\n    metadata_schema={\"user_id\": \"VarChar\"},\n    chunkSize=350,\n    # other pipeline params\n)\n\n# Output\n# {'INGESTION': 'pipe-***********************,\n#  'SEARCH': 'pipe-***********************',\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "#  'DELETION': 'pipe-***********************'}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "AOS4dqQXcoB0aZxaKDTcx62Cngf",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "多租户",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "FmwMdcr1poLVikx6AjocfGBGnMC",
+        "block_type": 2,
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过将特定租户的值（例如用户 ID）作为元数据，托管索引可以通过应用元数据过滤器实现多租性。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ysc5ddDp0owoy9x0X1dcVQfenYe",
+        "block_type": 2,
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过指定元数据值，每个文档在摄取时都会被标记上特定租户的字段。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "D5P4dOYbSo5SYWxaUD0cIjwmnMc",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "advanced_zcp_index.insert_doc_url(\n    url=\"https://publicdataset.zillizcloud.com/milvus_doc.md\",\n    metadata={\"user_id\": \"user_001\"},\n)\n\n# Output\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# {'token_usage': 1247, 'doc_name': 'milvus_doc.md', 'num_chunks': 10}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "B7LWdDGK4oDe5cxcUJJcLTthnCg",
+        "block_type": 2,
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "然后，托管索引可以通过过滤特定于租户的字段，为每个租户构建一个查询引擎。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EcPQdmhVvonDA8xh1QkcP5cUnSe",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "from llama_index.vector_stores.types import ExactMatchFilter, MetadataFilters\n\nquery_engine_for_user_001 = advanced_zcp_index.as_query_engine(\n    search_top_k=3,\n    filters=MetadataFilters(\n        filters=[ExactMatchFilter(key=\"user_id\", value=\"user_001\")]\n    ),\n    output_metadata=[\"user_id\"],  # optional, display user_id in outputs\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ")",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "NamfdxZcMoaXgVxJfl2cKciWnKd",
+        "block_type": 2,
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以更改过滤条件（",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "filters",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "）来构建具有不同条件的查询引擎。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EeAEd0EXDo8n6KxBEojcmbsInB6",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "question = \"Can I delete entities by filtering non-primary fields?\"\n\n# search_results = query_engine_for_user_001.retrieve(question)\nresponse = query_engine_for_user_001.query(question)\nprint(response.response)\n\n# Output\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "# Yes, you can delete entities by filtering non-primary fields. Milvus supports deleting entities by complex boolean expressions, which allows you to filter entities based on specific conditions on non-primary fields. You can define complex boolean expressions using operators such as greater than or equal to, not equal to, and logical operators like AND and OR. By using these expressions, you can filter entities based on the values of non-primary fields and delete them accordingly.",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g"
+      },
+      {
+        "block_id": "XOX3dExSEo2Muuxkh6FcagbEnEf",
+        "block_type": 2,
+        "parent_id": "HkR5dA5OIogUa8xbeKFceGJfn3g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 56
+  }
+}

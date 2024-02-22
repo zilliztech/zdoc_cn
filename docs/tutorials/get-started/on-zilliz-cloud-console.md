@@ -31,3 +31,7 @@ import Admonition from '@theme/Admonition';
 
 ![project_id_zh](/img/project_id_zh.png)
 
+## Pipeline IDs{#pipeline-ids}
+
+![pipeline_ids](/img/pipeline_ids.png)
+

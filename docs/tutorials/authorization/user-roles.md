@@ -39,7 +39,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-集群创建者将自动获得管理员角色。
+<p>集群创建者将自动获得管理员角色。</p>
 
 </Admonition>
 
@@ -57,9 +57,10 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-- 内置角色仅适用于 Dedicated 集群类型。有关更多信息，请参考[Zilliz Cloud 版本类型](./select-zilliz-cloud-service-plans)。
-
-- 使用集群的内置角色功能遇到问题时，请及时[与我们联系](https://zilliz.com.cn/contact-sales)，我们将提供故障排除支持。
+<ul>
+<li><p>内置角色仅适用于 Dedicated 集群类型。有关更多信息，请参考<a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></li>
+<li><p>使用集群的内置角色功能遇到问题时，请及时<a href="https://zilliz.com.cn/contact-sales">与我们联系</a>，我们将提供故障排除支持。</p></li>
+</ul>
 
 </Admonition>
 

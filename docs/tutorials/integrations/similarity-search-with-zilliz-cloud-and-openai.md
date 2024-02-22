@@ -67,7 +67,7 @@ openai.api_key = 'YOUR_OPENAI_API_KEY'  # Use your own Open AI API Key here
 
 <Admonition type="info" icon="📘" title="说明">
 
-使用免费的 OpenAI 账号获取指定文字的向量化表征比较耗时。为此，我们在示例中使用了数据集的一个较小的子集，试图在脚本执行时间和检索精度间找到一个平衡点。你可以根据需要调整上述参数中的 **COUNT** 常量来改变子集的大小。
+<p>使用免费的 OpenAI 账号获取指定文字的向量化表征比较耗时。为此，我们在示例中使用了数据集的一个较小的子集，试图在脚本执行时间和检索精度间找到一个平衡点。你可以根据需要调整上述参数中的 <strong>COUNT</strong> 常量来改变子集的大小。</p>
 
 </Admonition>
 

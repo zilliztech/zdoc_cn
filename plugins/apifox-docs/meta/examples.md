@@ -2,7 +2,11 @@
 
 ## 查看云服务提供商
 
-列出 Zilliz Cloud 上所有可用的云服务提供商。
+:::info 说明
+
+- 此 API 要求您拥有 [API 密钥](/docs/manage-api-keys) 作为认证令牌。
+
+:::
 
 ```shell
 curl --request GET \
@@ -28,7 +32,11 @@ curl --request GET \
 
 ## 查看云服务区域
 
-列出指定云服务提供商的所有可用云区域。
+:::info 说明
+
+- 此 API 要求您拥有 [API 密钥](/docs/manage-api-keys) 作为认证令牌。
+
+:::
 
 ```shell
 curl --request GET \
@@ -55,9 +63,95 @@ curl --request GET \
 }
 ```
 
+## 查看项目列表
+
+:::info 说明
+
+- 此 API 要求您拥有 [API 密钥](/docs/manage-api-keys) 作为认证令牌。
+
+:::
+
+```shell
+curl --request GET \
+    --url "https://controller.api.${cloud-region}.zillizcloud.com/v1/projects" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --header "accept: application/json" \
+    --header "content-type: application/json"
+```
+
+成功响应示例：
+
+```shell
+{
+    "code": 200,
+    "data": [
+       {
+          "instanceCount": 1,
+          "projectId": "proj-********************",
+          "projectName": "test"
+       }
+    ]
+}
+```
+
+## 创建集群
+
+:::info 说明
+
+- 此 API 要求您拥有 [API 密钥](/docs/manage-api-keys) 作为认证令牌。
+- 此 API 要求提供目标项目 ID。
+
+:::
+
+```shell
+curl --request POST \
+    --url "https://controller.api.${cloud-region}.zillizcloud.com/v1/clusters/create" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --header "accept: application/json" \
+    --header "content-type: application/json" \
+    --data-raw '{
+    "plan": "Standard",
+    "clusterName": "cluster-02",
+    "cuSize": 1,
+    "cuType": "Performance-optimized",
+    "projectId": "proj-*****************"
+    }'
+```
+
+成功响应示例：
+
+```shell
+{
+    "code": 200,
+    "data": {
+       "clusterId": "in01-*****************",
+       "username": "db_admin",
+       "password": "******************",
+       "prompt": "Submission successful, Cluster is being created, You can use the DescribeCluster interface to obtain the creation progress and the status of the Cluster. When the Cluster status is RUNNING, you can access your vector database using the SDK with the admin account and the initialization password you provided."
+    }
+}
+```
+
+:::提示 如何获取项目 ID？
+
+您可以通过以下方式获取项目 ID：
+
+- 通过 Zilliz Cloud 控制台查看：
+
+    1. 在控制台导航栏中，选择 **项目** 菜单。
+    2. 找到目标项目，并复制其 **项目 ID** 列中的值。
+
+- 通过调用[查看项目列表](./list-projects)查看。
+
+:::
+
 ## 查看集群详情
 
-描述集群的详细信息。
+:::info 说明
+
+- 此 API 要求您拥有 [API 密钥](/docs/manage-api-keys) 作为认证令牌。
+
+:::
 
 ```shell
 curl --request GET \
@@ -90,9 +184,44 @@ curl --request GET \
 }
 ```
 
+## 修改集群配置
+
+:::info 说明
+
+- 此 API 要求您拥有 [API 密钥](/docs/manage-api-keys) 作为认证令牌。
+
+:::
+
+```shell
+curl --request POST \
+    --url "https://controller.api.${cloud-region}.zillizcloud.com/v1/clusters/${clusterId}/modify" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --header "accept: application/json" \
+    --header "content-type: application/json" \
+    --data-raw '{
+    "cuSize": 2
+    }'
+```
+
+成功响应示例：
+
+```shell
+{
+    "code": 200,
+    "data": {
+       "clusterId": "in01-***************",
+       "prompt": "Submission successful, Cluster is currently upgrading and will take several minutes, you can use the DescribeCluster interface to obtain the creation progress and the status of the Cluster. When the Cluster status is RUNNING, you can access your vector database using the SDK."
+    }
+}
+```
+
 ## 挂起集群
 
-挂起集群。本操作会中断集群运行，不会影响集群数据完整性。
+:::info 说明
+
+- 此 API 要求您拥有 [API 密钥](/docs/manage-api-keys) 作为认证令牌。
+
+:::
 
 ```shell
 curl --request POST \ 
@@ -116,11 +245,10 @@ curl --request POST \
 
 ## 恢复集群
 
-恢复当前已挂起的集群。
-
 :::info 说明
 
-请在添加支付方式后使用该功能。
+- 此 API 要求您拥有 [API 密钥](/docs/manage-api-keys) 作为认证令牌。
+- 请在添加支付方式后使用该功能。
 
 :::
 
@@ -144,9 +272,41 @@ curl --request POST \
 }
 ```
 
+## 删除集群
+
+:::info 说明
+
+- 此 API 要求您拥有 [API 密钥](/docs/manage-api-keys) 作为认证令牌。
+
+:::
+
+```shell
+curl --request DELETE \
+    --url "https://controller.api.${cloud-region}.zillizcloud.com/v1/clusters/${clusterId}/drop" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --header "accept: application/json" \
+    --header "content-type: application/json"
+```
+
+成功响应示例：
+
+```shell
+{
+    "code": 200,
+    "data": {
+       "clusterId": "in01-***************",
+       "prompt": "The Cluster has been deleted. If you believe this was a mistake, you can restore the Cluster from the recycle bin within 30 days (this not include serverless)."
+    }
+}
+```
+
 ## 查看集群
 
-列出指定云服务提供商的所有可用云区域。
+:::info 说明
+
+- 此 API 要求您拥有 [API 密钥](/docs/manage-api-keys) 作为认证令牌。
+
+:::
 
 ```shell
 curl --request GET \
@@ -172,7 +332,16 @@ curl --request GET \
 
 ## 创建 Collection
 
-在集群中创建 Collection。本示例将创建一个名为 `medium_articles` 的 Collection。
+:::info 说明
+
+您可以使用以下任一方式完成鉴权：
+
+- 拥有相应权限的 [API 密钥](/docs/manage-api-keys)。
+- 目标集群的用户名和密码，中间用冒号分隔。例如，`username:p@ssw0rd`。
+
+当前，RESTful API 不支持 JSON 和 Array 类型的字段。
+
+:::
 
 ```shell
 curl --request POST \
@@ -201,7 +370,14 @@ curl --request POST \
 
 ## 删除 Collection
 
-删除 Collection。本操作会清除 Collection 数据，请谨慎执行此操作。本示例将删除一个名为 `medium_articles` 的 Collection。
+:::info 说明
+
+您可以使用以下任一方式完成鉴权：
+
+- 拥有相应权限的 [API 密钥](/docs/manage-api-keys)。
+- 目标集群的用户名和密码，中间用冒号分隔。例如，`username:p@ssw0rd`。
+
+:::
 
 ```shell
 curl --request POST \
@@ -225,7 +401,14 @@ curl --request POST \
 
 ## 查看 Collection 详情
 
-描述 Collection 的详细信息。本示例将查看一个名为 `medium_articles` 的 Collection。
+:::info 说明
+
+您可以使用以下任一方式完成鉴权：
+
+- 拥有相应权限的 [API 密钥](/docs/manage-api-keys)。
+- 目标集群的用户名和密码，中间用冒号分隔。例如，`username:p@ssw0rd`。
+
+:::
 
 ```shell
 curl --request GET \
@@ -268,7 +451,14 @@ curl --request GET \
 
 ## 查看 Collection
 
-列出集群中已创建的 Collection。
+:::info 说明
+
+您可以使用以下任一方式完成鉴权：
+
+- 拥有相应权限的 [API 密钥](/docs/manage-api-keys)。
+- 目标集群的用户名和密码，中间用冒号分隔。例如，`username:p@ssw0rd`。
+
+:::
 
 ```shell
 curl --request GET \
@@ -293,6 +483,17 @@ curl --request GET \
 ```
 
 ## 插入 Entity
+
+:::info 说明
+
+您可以使用以下任一方式完成鉴权：
+
+- 拥有相应权限的 [API 密钥](/docs/manage-api-keys)。
+- 目标集群的用户名和密码，中间用冒号分隔。例如，`username:p@ssw0rd`。
+
+当前，RESTful API 不支持 JSON 和 Array 类型的字段。
+
+:::
 
 - 向名为 `medium_articles` 的 Collection 中插入一个 Entity。
 
@@ -336,6 +537,17 @@ curl --request POST \
 
 ## Upsert Entity
 
+:::info 说明
+
+您可以使用以下任一方式完成鉴权：
+
+- 拥有相应权限的 [API 密钥](/docs/manage-api-keys)。
+- 目标集群的用户名和密码，中间用冒号分隔。例如，`username:p@ssw0rd`。
+
+当前，RESTful API 不支持 JSON 和 Array 类型的字段。
+
+:::
+
 - 向名为 `medium_articles` 的 Collection 中 Upsert 一个 Entity。
 
 ```shell
@@ -378,6 +590,17 @@ curl --request POST \
 
 ## 搜索
 
+:::info 说明
+
+您可以使用以下任一方式完成鉴权：
+
+- 拥有相应权限的 [API 密钥](/docs/manage-api-keys)。
+- 目标集群的用户名和密码，中间用冒号分隔。例如，`username:p@ssw0rd`。
+
+当前，RESTful API 不支持 JSON 和 Array 类型的字段。
+
+:::
+
 - 基于指定的向量进行相似性搜索。
 
 ```shell
@@ -412,7 +635,16 @@ curl --request POST \
 
 ## 按条件查询
 
-在 Collection 按指定条件执行查询操作。
+:::info 说明
+
+您可以使用以下任一方式完成鉴权：
+
+- 拥有相应权限的 [API 密钥](/docs/manage-api-keys)。
+- 目标集群的用户名和密码，中间用冒号分隔。例如，`username:p@ssw0rd`。
+
+当前，RESTful API 不支持 JSON 和 Array 类型的字段。
+
+:::
 
 ```shell
 curl --request POST \
@@ -430,6 +662,17 @@ curl --request POST \
 ```
 
 ## 按 ID 查询
+
+:::info 说明
+
+您可以使用以下任一方式完成鉴权：
+
+- 拥有相应权限的 [API 密钥](/docs/manage-api-keys)。
+- 目标集群的用户名和密码，中间用冒号分隔。例如，`username:p@ssw0rd`。
+
+当前，RESTful API 不支持 JSON 和 Array 类型的字段。
+
+:::
 
 - 获取一个 ID 为整数的 Entity.
 
@@ -493,6 +736,17 @@ curl --request POST \
 
 ## 删除 Entity
 
+:::info 说明
+
+您可以使用以下任一方式完成鉴权：
+
+- 拥有相应权限的 [API 密钥](/docs/manage-api-keys)。
+- 目标集群的用户名和密码，中间用冒号分隔。例如，`username:p@ssw0rd`。
+
+当前，RESTful API 不支持 JSON 和 Array 类型的字段。
+
+:::
+
 - 删除一个 ID 为整数的 Entity.
 
 ```shell
@@ -551,6 +805,14 @@ curl --request POST \
 
 ## 导入
 
+:::info 说明
+
+您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
+
+当前，RESTful API 不支持 JSON 和 Array 类型的字段。
+
+:::
+
 从指定的对象存储桶中的文件导入数据。该对象存储桶须与目标集群处于同一公有云网络。
 
 ```shell
@@ -570,7 +832,13 @@ curl --request POST \
 
 ## 查看导入进度
 
-获取指定导入任务的进度。
+:::info 说明
+
+您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
+
+当前，RESTful API 不支持 JSON 和 Array 类型的字段。
+
+:::
 
 ```shell
 curl --request GET \
@@ -582,7 +850,13 @@ curl --request GET \
 
 ## 查看数据导入任务
 
-列出指定集群上的数据导入任务。
+:::info 说明
+
+您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
+
+当前，RESTful API 不支持 JSON 和 Array 类型的字段。
+
+:::
 
 ```shell
 curl --request GET \
@@ -591,3 +865,465 @@ curl --request GET \
      --header "accept: application/json" \
      --header "content-type: application/json" \
 ```
+
+## 创建 Pipeline
+
+:::info 说明
+
+您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
+
+当前，RESTful API 不支持 JSON 和 Array 类型的字段。
+
+:::
+
+- 创建 Ingestion Pipeline.
+
+    ```shell
+    curl --request POST \
+        --header "Content-Type: application/json" \
+        --header "Authorization: Bearer ${YOUR_API_KEY}" \
+        --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines" \
+        -d '{
+            "projectId": "proj-**********************",
+            "name": "my_doc_ingestion_pipeline",
+            "description": "A pipeline that splits a text file into chunks and generates embeddings. It also stores the publish_year with each chunk.",
+            "type": "INGESTION",  
+            "functions": [
+                { 
+                    "name": "index_my_doc",
+                    "action": "INDEX_DOC", 
+                    "inputField": "doc_url", 
+                    "language": "ENGLISH",
+                    "chunkSize": 500
+                },
+                {
+                    "name": "keep_doc_info",
+                    "action": "PRESERVE", 
+                    "inputField": "publish_year", 
+                    "outputField": "publish_year",
+                    "fieldType": "Int16" 
+                }
+            ],
+            "clusterId": "${CLUSTER_ID}",
+            "newCollectionName": "my_new_collection"
+        }'
+    ```
+
+    成功响应示例：
+
+    ```shell
+    {
+        "code": 200,
+        "data": {
+            "pipelineId": "pipe-**********************",
+            "name": "my_doc_ingestion_pipeline",
+            "type": "INGESTION",
+            "description": "A pipeline that splits a text file into chunks and generates embeddings. It also stores the publish_year with each chunk.",
+            "status": "SERVING",
+            "totalTokenUsage": 0,
+            "functions": [
+                {
+                    "action": "INDEX_DOC",
+                    "name": "index_my_doc",
+                    "inputField": "doc_url",
+                    "language": "ENGLISH",
+                    "chunkSize": 500
+                },
+                {
+                    "action": "PRESERVE",
+                    "name": "keep_doc_info",
+                    "inputField": "publish_year",
+                    "outputField": "publish_year",
+                    "fieldType": "Int16"
+                }
+            ],
+            "clusterId": "in03-***************",
+            "newCollectionName": "my_new_collection"
+        }
+    }   
+    ```  
+
+- 创建 Search Pipeline.
+
+    ```shell
+    curl --request POST \
+        --header "Content-Type: application/json" \
+        --header "Authorization: Bearer ${YOUR_API_KEY}" \
+        --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines" \
+        -d '{
+            "name": "my_text_search_pipeline",
+            "description": "A pipeline that receives text and search for semantically similar doc chunks",
+            "type": "SEARCH",
+            "functions": [
+                {
+                    "name": "search_chunk_text_and_title",
+                    "action": "SEARCH_DOC_CHUNK",
+                    "inputField": "query_text",
+                    "clusterId": "${CLUSTER_ID}",
+                    "collectionName": "my_new_collection"
+                }
+            ]
+        }'
+    ```
+
+    成功响应示例：
+
+    ```shell
+    {
+        "code": 200,
+        "data": {
+            "pipelineId": "pipe-**********************",
+            "name": "my_text_search_pipeline",
+            "type": "SEARCH",
+            "description": "A pipeline that receives text and search for semantically similar doc chunks",
+            "status": "SERVING",
+            "functions": [
+                {
+                    "action": "SEARCH_DOC_CHUNK",
+                    "name": "search_chunk_text_and_title",
+                    "inputField": "query_text",
+                    "clusterId": "in03-***************",
+                    "collectionName": "my_new_collection"
+                }
+            ]
+        }
+    }
+    ```
+
+- 创建 Deletion Pipeline.
+
+    ```shell
+    curl --request POST \
+        --header "Content-Type: application/json" \
+        --header "Authorization: Bearer ${YOUR_API_KEY}" \
+        --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines" \
+        -d '{
+            "name": "my_doc_deletion_pipeline",
+            "description": "A pipeline that deletes all info associated with a doc",
+            "type": "DELETION",
+            "functions": [
+                {
+                    "name": "purge_chunks_by_doc_name",
+                    "action": "PURGE_DOC_INDEX",
+                    "inputField": "doc_name"
+                }
+            ],
+        
+            "clusterId": "${CLUSTER_ID}",
+            "collectionName": "my_new_collection"
+        }'
+    ```
+
+    成功响应示例：
+
+    ```shell
+    {
+        "code": 200,
+        "data": {
+            "pipelineId": "pipe-**********************",
+            "name": "my_doc_deletion_pipeline",
+            "type": "DELETION",
+            "description": "A pipeline that deletes all info associated with a doc",
+            "status": "SERVING",
+            "functions": [
+                {
+                    "action": "PURGE_DOC_INDEX",
+                    "name": "purge_chunks_by_doc_name",
+                    "inputField": "doc_name"
+                }
+            ],
+            "clusterId": "in03-***************",
+            "collectionName": "my_new_collection"
+        }
+    }
+    ```
+
+## 查看 Pipeline 详情
+
+:::info 说明
+
+您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
+
+当前，RESTful API 不支持 JSON 和 Array 类型的字段。
+
+:::
+
+```shell
+curl --request GET \
+    --header "Content-Type: application/json" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/pipe-**********************"
+```
+
+成功响应示例：
+
+```shell
+{
+    "code": 200,
+    "data": {
+        "pipelineId": "pipe-**********************",
+        "name": "my_doc_ingestion_pipeline",
+        "type": "INGESTION",
+        "description": "A pipeline that splits a text file into chunks and generates embeddings. It also stores the publish_year with each chunk.",
+        "status": "SERVING",
+        "totalTokenUsage": 0,
+        "functions": [
+            {
+                "action": "INDEX_DOC",
+                "name": "index_my_doc",
+                "inputField": "doc_url",
+                "language": "ENGLISH",
+                "chunkSize": 500
+            },
+            {
+                "action": "PRESERVE",
+                "name": "keep_doc_info",
+                "inputField": "publish_year",
+                "outputField": "publish_year",
+                "fieldType": "Int16"
+            }
+        ],
+        "clusterId": "in03-***************",
+        "newCollectionName": "my_new_collection"
+    }
+}
+
+```
+
+## 删除 Pipeline
+
+:::info 说明
+
+您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
+
+当前，RESTful API 不支持 JSON 和 Array 类型的字段。
+
+:::
+
+```shell
+curl --request GET \
+    --header "Content-Type: application/json" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/pipe-**********************"
+```
+
+成功响应示例：
+
+```shell
+{
+    "code": 200,
+    "data": {
+        "pipelineId": "pipe-**********************",
+        "name": "my_doc_ingestion_pipeline",
+        "type": "INGESTION",
+        "description": "A pipeline that splits a text file into chunks and generates embeddings. It also stores the publish_year with each chunk.",
+        "status": "SERVING",
+        "functions": [
+            {
+                "action": "INDEX_DOC",
+                "name": "index_my_doc",
+                "inputField": "doc_url",
+                "language": "ENGLISH"
+            },
+            {
+                "action": "PRESERVE",
+                "name": "keep_doc_info",
+                "inputField": "publish_year",
+                "outputField": "publish_year",
+                "fieldType": "Int16"
+            }
+        ],
+        "clusterId": "in03-***************",
+        "newCollectionName": "my_new_collection"
+    }
+}
+
+```
+
+## 查看 Pipeline 列表
+
+:::info 说明
+
+您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
+
+当前，RESTful API 不支持 JSON 和 Array 类型的字段。
+
+:::
+
+```shell
+curl --request GET \
+    --header "Content-Type: application/json" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines?projectId=proj-**********************"
+```
+
+成功响应示例：
+
+```shell
+{
+  "code": 200,
+  "data": [
+    {
+     "pipelineId": "pipe-**********************",
+     "name": "my_doc_ingestion_pipeline",
+     "type": "INGESTION",
+     "description": "A pipeline that splits a text file into chunks and generates embeddings. It also stores the publish_year with each chunk.",
+     "status": "SERVING",
+     "totalTokenUsage": 0,
+     "functions": [
+        {
+            "action": "INDEX_DOC",
+            "name": "index_my_doc",
+            "inputField": "doc_url",
+            "language": "ENGLISH",
+            "chunkSize": 500
+        },
+        {
+            "action": "PRESERVE",
+            "name": "keep_doc_info",
+            "inputField": "publish_year",
+            "outputField": "publish_year",
+            "fieldType": "Int16"
+        }
+     ],
+     "clusterId": "in03-***************",
+     "newCollectionName": "my_new_collection"
+    },
+    {
+        "pipelineId": "pipe-**********************",
+        "name": "my_text_search_pipeline",
+        "type": "SEARCH",
+        "description": "A pipeline that receives text and search for semantically similar doc chunks",
+        "status": "SERVING",
+        "functions": [
+            {
+                "action": "SEARCH_DOC_CHUNK",
+                "name": "search_chunk_text_and_title",
+                "inputField": null,
+                "clusterId": "in03-***************",
+                "collectionName": "my_new_collection"
+            }
+        ]
+    },
+    {
+        "pipelineId": "pipe-**********************",
+        "name": "my_doc_deletion_pipeline",
+        "type": "DELETION",
+        "description": "A pipeline that deletes all info associated with a doc",
+        "status": "SERVING",
+        "functions": [
+            {
+            "action": "PURGE_DOC_INDEX",
+            "name": "purge_chunks_by_doc_name",
+            "inputField": "doc_name"
+            }
+        ],
+        "clusterId": "in03-***************",
+        "collectionName": "my_new_collection"
+    }
+  ]
+}
+```
+
+## 执行 Pipeline
+
+:::info 说明
+
+您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
+
+当前，RESTful API 不支持 JSON 和 Array 类型的字段。
+
+:::
+
+- 执行 Ingestion Pipeline.
+
+    ```shell
+    curl --request POST \
+        --header "Content-Type: application/json" \
+        --header "Authorization: Bearer ${YOUR_API_KEY}" \
+        --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/pipe-6ca5dd1b4672659d3c3487/run" \
+        -d '{
+            "data": {
+                "doc_url": "https://storage.googleapis.com/example-bucket/zilliz_concept_doc.md?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=example%40example-project.iam.gserviceaccount.com%2F20181026%2Fus-central1%2Fstorage%2Fgoog4_request&X-Goog-Date=20181026T181309Z&X-Goog-Expires=900&X-Goog-SignedHeaders=host&X-Goog-Signature=247a2aa45f169edf4d187d54e7cc46e4731b1e6273242c4f4c39a1d2507a0e58706e25e3a85a7dbb891d62afa8496def8e260c1db863d9ace85ff0a184b894b117fe46d1225c82f2aa19efd52cf21d3e2022b3b868dcc1aca2741951ed5bf3bb25a34f5e9316a2841e8ff4c530b22ceaa1c5ce09c7cbb5732631510c20580e61723f5594de3aea497f195456a2ff2bdd0d13bad47289d8611b6f9cfeef0c46c91a455b94e90a66924f722292d21e24d31dcfb38ce0c0f353ffa5a9756fc2a9f2b40bc2113206a81e324fc4fd6823a29163fa845c8ae7eca1fcf6e5bb48b3200983c56c5ca81fffb151cca7402beddfc4a76b133447032ea7abedc098d2eb14a7", 
+                "publish_year": 2023
+            }
+        }'
+    ```
+
+    成功响应示例：
+
+    ```shell
+    {
+        "code": 200,
+        "data": {
+            "doc_name": "zilliz_concept_doc.md",
+            "num_chunks": 123,
+            "token_usage": 200
+        }
+    }
+    ```
+
+- 执行 Search Pipeline.
+
+    ```shell
+    curl --request POST \
+        --header "Content-Type: application/json" \
+        --header "Authorization: Bearer ${YOUR_API_KEY}" \
+        --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/pipe-26a18a66ffc8c0edfdb874/run" \
+        -d '{
+            "data": {
+                "query_text": "How many collections can a cluster with more than 8 CUs hold?"
+            },
+            "params":{
+                "limit": 1,
+                "offset": 0,
+                "outputFields": [ "chunk_text", "chunk_id", "doc_name" ],
+                "filter": "chunk_id >= 0", 
+            }
+        }'
+    ```
+
+    成功响应示例：
+
+    ```shell
+    {
+        "code": 200,
+        "data": {
+            "token_usage": 200,
+            "result": [
+                {
+                    "id": "445951244000281783",
+                    "distance": 0.7270776033401489,
+                    "chunk_text": "After determining the CU type, you must also specify its size. Note that the\nnumber of collections a cluster can hold varies based on its CU size. A\ncluster with less than 8 CUs can hold no more than 32 collections, while a\ncluster with more than 8 CUs can hold as many as 256 collections.\n\nAll collections in a cluster share the CUs associated with the cluster. To\nsave CUs, you can unload some collections. When a collection is unloaded, its\ndata is moved to disk storage and its CUs are freed up for use by other\ncollections. You can load the collection back into memory when you need to\nquery it. Keep in mind that loading a collection requires some time, so you\nshould only do so when necessary.\n\n## Collection\n\nA collection collects data in a two-dimensional table with a fixed number of\ncolumns and a variable number of rows. In the table, each column corresponds\nto a field, and each row represents an entity.\n\nThe following figure shows a sample collection that comprises six entities and\neight fields.\n\n### Fields\n\nIn most cases, people describe an object in terms of its attributes, including\nsize, weight, position, etc. These attributes of the object are similar to the\nfields in a collection.\n\nAmong all the fields in a collection, the primary key is one of the most\nspecial, because the values stored in this field are unique throughout the\nentire collection. Each primary key maps to a different record in the\ncollection.",
+                    "chunk_id": 123,
+                    "doc_name": "zilliz_concept_doc.md"
+                }
+            ],
+        }
+    }
+    ```
+
+- 执行 Deletion Pipeline.
+
+    ```shell
+    curl --request POST \
+        --header "Content-Type: application/json" \
+        --header "Authorization: Bearer ${YOUR_API_KEY}" \
+        --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/pipe-7227d0729d73e63002ed46/run" \
+        -d '{
+            "data": {
+                "doc_name": "zilliz_concept_doc.md",
+            }
+        }'
+    ```    
+
+    成功响应示例：
+
+    ```shell
+    {
+        "code": 200,
+        "data": {
+            "num_deleted_chunks": 567
+        }
+    }
+    ```

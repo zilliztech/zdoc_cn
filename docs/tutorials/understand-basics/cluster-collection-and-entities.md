@@ -17,7 +17,7 @@ Zilliz Cloud 集群由全托管 Milvus 实例及相关计算资源构成。您�
 
 在 Zilliz Cloud 上创建集群时，您需要选择集群 CU 类型。CU 类型有 3 种选项：性能型、容量型和经济型。不同 CU 类型的区别，请阅读[选择合适的 CU 类型](./cu-types-explained)。
 
-确定 CU 类型后，您还需要选择 CU 大小。CU 大小决定了集群可容纳的 Collection 数量。小于 8  CU 的集群最多可容纳 32 个 Collection。大于 8  CU 的集群最多可容纳 256 个 Collection。
+确定 CU 类型后，您还需要选择 CU 大小。CU 大小决定了集群可容纳的 Collection 数量。在 Dedicated 集群中，每个计算单元（CU）可最多容纳 64 个 Collection，并且每个集群中的 Collection 总数不能超过 4096。有关限制的更多信息，请阅读[使用限制](./limits)。
 
 集群中的所有 Collection 共享 CU 资源。为节省 CU 资源，我们推荐您将一些不再使用的 Collection 从 CU 中释放出来。Collection 被释放后，其中的数据被转移到磁盘存储，从而可以释放 CU 资源以供其他已加载的 Collection 使用。需要查询已被卸载的 Collection 时，您可以将其重新加载至内存中。请注意，Collection 加载需要等待一段时间，因此我们不推荐频繁卸载和加载 Collection。
 
@@ -63,7 +63,7 @@ Zilliz Cloud 提供 3 种 CU 类型。不同 CU 类型适用于不同的场景�
 
 <Admonition type="info" icon="📘" title="说明">
 
-Zilliz Cloud 集群中仅 FLOAT_VECTOR 支持向量的数据类型。
+<p>Zilliz Cloud 集群中仅 FLOAT_VECTOR 支持向量的数据类型。</p>
 
 </Admonition>
 

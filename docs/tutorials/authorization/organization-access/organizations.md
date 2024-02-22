@@ -45,7 +45,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="caution" icon="🚧" title="警告">
 
-一旦您离开组织，您对该组织及其相关资源的访问权限将被取消。
+<p>一旦您离开组织，您对该组织及其相关资源的访问权限将被取消。</p>
 
 </Admonition>
 

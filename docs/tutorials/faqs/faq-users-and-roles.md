@@ -3,7 +3,7 @@ slug: /faq-users-and-roles
 beta: null
 notebook: null
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 # FAQ：用户和角色

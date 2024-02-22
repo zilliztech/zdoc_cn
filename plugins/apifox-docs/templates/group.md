@@ -1,9 +1,17 @@
-{
-    "label": "{{group_name}}",
-    "position": 0,
-    "link": {
-        "type": "generated-index",
-        "title": "{{group_name}}",
-        "slug": "/{{slug}}"
-    }
-}
+---
+slug: /{{slug}}
+beta: FALSE
+notebook: FALSE
+sidebar_position: {{position}}
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# {{group_name}}
+
+{{description}}
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

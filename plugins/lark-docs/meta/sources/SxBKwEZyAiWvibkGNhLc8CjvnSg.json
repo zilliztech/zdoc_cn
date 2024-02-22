@@ -5,7 +5,7 @@
   "node_token": "SxBKwEZyAiWvibkGNhLc8CjvnSg",
   "node_type": "origin",
   "obj_create_time": "1687246533",
-  "obj_edit_time": "1702870533",
+  "obj_edit_time": "1708415629",
   "obj_token": "FQM1ddL5noYH3Cx313lcjGPHnIe",
   "obj_type": "docx",
   "origin_node_token": "SxBKwEZyAiWvibkGNhLc8CjvnSg",
@@ -202,7 +202,46 @@
           "elements": [
             {
               "text_run": {
-                "content": "确定 CU 类型后，您还需要选择 CU 大小。CU 大小决定了集群可容纳的 Collection 数量。小于 8  CU 的集群最多可容纳 32 个 Collection。大于 8  CU 的集群最多可容纳 256 个 Collection。",
+                "content": "确定 CU 类型后，您还需要选择 CU 大小。CU 大小决定了集群可容纳的 Collection 数量。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "在 Dedicated 集群中，每个计算单元（CU）可最多容纳 64 个 Collection，并且每个集群中的 Collection 总数不能超过 4096。有关限制的更多信息，请阅读",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "使用限制",
+                "token": "A8UFwSbMniMl6IkpJkNc4HsHnLc",
+                "url": "https://zilliverse.feishu.cn/wiki/A8UFwSbMniMl6IkpJkNc4HsHnLc"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

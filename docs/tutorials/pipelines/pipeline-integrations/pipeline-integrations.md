@@ -1,0 +1,20 @@
+---
+slug: /pipeline-integrations
+beta: FALSE
+notebook: FALSE
+token: HOL1wcSsYi6tzXkbQsccMTQhn9e
+sidebar_position: 6
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# Pipelines 第三方集成
+
+仍然不知道如何将 Zilliz Cloud Pipelines 与开源和第三方服务集成吗？那就从下面这些指南开始吧。
+
+
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

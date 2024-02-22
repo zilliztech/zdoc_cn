@@ -14,6 +14,7 @@
   "parent_node_token": "MJeiwGDSniNQ7BkAFGCczemxnDg",
   "space_id": "7167193056431783939",
   "title": "创建 Pipelines",
+  "slug": "create-pipelines",
   "blocks": {
     "items": [
       {
@@ -99,36 +100,56 @@
     {
       "creator": "ou_fbc044d19930afd389d5c369466c38b1",
       "has_child": false,
-      "node_create_time": "1701681233",
-      "node_token": "WkqDwkOXMiP1B3kI1YKcIueFndh",
+      "node_create_time": "1708397930",
+      "node_token": "QN9PwG3kpiSG46k2LYDc5yQCnVg",
       "node_type": "origin",
-      "obj_create_time": "1701681233",
-      "obj_edit_time": "1701769501",
-      "obj_token": "Sb2ldcEl2olcbcxsCNucuWe8ndb",
+      "obj_create_time": "1708397930",
+      "obj_edit_time": "1708426180",
+      "obj_token": "C9wadcF3WoowGtxOCXfcORtvnrf",
       "obj_type": "docx",
-      "origin_node_token": "WkqDwkOXMiP1B3kI1YKcIueFndh",
+      "origin_node_token": "QN9PwG3kpiSG46k2LYDc5yQCnVg",
       "origin_space_id": "7167193056431783939",
       "owner": "ou_fbc044d19930afd389d5c369466c38b1",
       "parent_node_token": "R8KJwdSVIiaM6VkQN8kcqd5en6c",
       "space_id": "7167193056431783939",
-      "title": "通过 Web 控制台创建 Pipelines"
+      "title": "创建 Ingestion Pipelines",
+      "slug": "create-ingestion-piplines"
     },
     {
       "creator": "ou_fbc044d19930afd389d5c369466c38b1",
       "has_child": false,
-      "node_create_time": "1701681244",
-      "node_token": "OZXAwPFrnivOHAkGEGIcihgxnxe",
+      "node_create_time": "1708397946",
+      "node_token": "UvarwFhiJimKxfkduyVcTOqTndb",
       "node_type": "origin",
-      "obj_create_time": "1701681244",
-      "obj_edit_time": "1701769580",
-      "obj_token": "X5Rfdj0yhoVerlxr3sIckkANntf",
+      "obj_create_time": "1708397946",
+      "obj_edit_time": "1708426183",
+      "obj_token": "JjdQddq8KoELE8xYOO0cdXb8nPe",
       "obj_type": "docx",
-      "origin_node_token": "OZXAwPFrnivOHAkGEGIcihgxnxe",
+      "origin_node_token": "UvarwFhiJimKxfkduyVcTOqTndb",
       "origin_space_id": "7167193056431783939",
       "owner": "ou_fbc044d19930afd389d5c369466c38b1",
       "parent_node_token": "R8KJwdSVIiaM6VkQN8kcqd5en6c",
       "space_id": "7167193056431783939",
-      "title": "通过 RESTful API 创建 Pipelines"
+      "title": "创建 Search Pipelines",
+      "slug": "create-search-piplines"
+    },
+    {
+      "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+      "has_child": false,
+      "node_create_time": "1708397959",
+      "node_token": "Kiu5wA3XFi6E3lkl7nZc7y7Rnnc",
+      "node_type": "origin",
+      "obj_create_time": "1708397959",
+      "obj_edit_time": "1708426187",
+      "obj_token": "CnOxd6C1goDKd0xToNXcJiHAnnf",
+      "obj_type": "docx",
+      "origin_node_token": "Kiu5wA3XFi6E3lkl7nZc7y7Rnnc",
+      "origin_space_id": "7167193056431783939",
+      "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+      "parent_node_token": "R8KJwdSVIiaM6VkQN8kcqd5en6c",
+      "space_id": "7167193056431783939",
+      "title": "创建 Deletion Pipelines",
+      "slug": "create-deletion-pipelines"
     }
   ]
 }

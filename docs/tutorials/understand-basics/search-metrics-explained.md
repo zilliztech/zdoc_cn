@@ -29,7 +29,7 @@ L2 是最普遍的距离度量方法，在处理连续性数据时尤为有效�
 
 <Admonition type="info" icon="📘" title="说明">
 
-在选择 L2 作为度量标准时，Zilliz Cloud 仅计算开方之前的数值。
+<p>在选择 L2 作为度量标准时，Zilliz Cloud 仅计算开方之前的数值。</p>
 
 </Admonition>
 
@@ -43,7 +43,7 @@ L2 是最普遍的距离度量方法，在处理连续性数据时尤为有效�
 
 <Admonition type="info" icon="📘" title="说明">
 
-使用 IP 计算 Embedding 向量间的相似度时，须先对 Embedding 向量进行归一化。之后，内积即可等同于余弦相似度。
+<p>使用 IP 计算 Embedding 向量间的相似度时，须先对 Embedding 向量进行归一化。之后，内积即可等同于余弦相似度。</p>
 
 </Admonition>
 
@@ -69,7 +69,7 @@ L2 是最普遍的距离度量方法，在处理连续性数据时尤为有效�
 
 <Admonition type="info" icon="📘" title="说明">
 
-该指标目前还在测试阶段。升级您的集群至 Beta 版即可体验 COSINE 相似度指标。
+<p>该指标目前还在测试阶段。升级您的集群至 Beta 版即可体验 COSINE 相似度指标。</p>
 
 </Admonition>
 

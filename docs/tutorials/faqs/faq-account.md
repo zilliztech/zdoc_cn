@@ -3,7 +3,7 @@ slug: /faq-account
 beta: null
 notebook: null
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
-sidebar_position: 10
+sidebar_position: 11
 ---
 
 # FAQ：账户

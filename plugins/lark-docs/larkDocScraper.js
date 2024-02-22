@@ -118,6 +118,7 @@ class larkDocScraper {
                 }))
                 
                 fs.writeFileSync(`plugins/lark-docs/meta/sources/${node.origin_node_token}.json`, JSON.stringify(node, null, 2))
+                console.log(`Fetched ${node.title} (${node.origin_node_token})`)
                 
 
                 if (recursive) {
@@ -136,6 +137,7 @@ class larkDocScraper {
             }
         } else {
             fs.writeFileSync(`plugins/lark-docs/meta/sources/${node.origin_node_token}.json`, JSON.stringify(node, null, 2))
+            console.log(`Fetched ${node.title} (${node.origin_node_token})`)
         }
     }
 
@@ -160,11 +162,11 @@ class larkDocScraper {
                     res.data.items.forEach(item => node.blocks.items.push(item))
                     node.blocks.counts = node.blocks.items.length
                 }
-            } 
 
-            if (res.data.has_more && res.data.page_token) {
-                await this.__fetch_blocks(node, res.data.page_token)
-            }
+                if (res.data.has_more && res.data.page_token) {
+                    await this.__fetch_blocks(node, res.data.page_token)
+                }
+            } 
 
             if (res.code == 429) {
                 timeout = res.headers['x-ogw-ratelimit-reset']

@@ -53,13 +53,14 @@ Zilliz Cloud 允许您通过私网连接（PrivateLink）访问您的集群。�
 
     <Admonition type="info" icon="📘" title="说明">
 
-    - 在填写完阿里云**主帐号 ID** 后，务必单击右侧的**添加**。    
-    
-        验证通过后，在创建终端节点时才能够在可用服务列表中查看到 Zilliz Cloud 的终端节点服务。    
-    
-    - 操作尚未完成！请勿单击对话框中的**创建**。    
-    
-        您需要前往阿里云控制台，[创建终端节点](./setup-a-private-link#create-endpoint)。然后，在对话框中填写成功创建的**终端节点实例 ID **后，才可以单击**创建**。
+    <ul>
+    <li>在填写完阿里云<strong>主帐号 ID</strong> 后，务必单击右侧的<strong>添加</strong>。</li>
+    </ul>
+    <p>验证通过后，在创建终端节点时才能够在可用服务列表中查看到 Zilliz Cloud 的终端节点服务。</p>
+    <ul>
+    <li>操作尚未完成！请勿单击对话框中的<strong>创建</strong>。</li>
+    </ul>
+    <p>您需要前往阿里云控制台，<a href="./setup-a-private-link#create-endpoint">创建终端节点</a>。然后，在对话框中填写成功创建的**终端节点实例 ID **后，才可以单击<strong>创建</strong>。</p>
 
     </Admonition>
 

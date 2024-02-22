@@ -49,7 +49,7 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
 
 <Admonition type="info" icon="📘" title="说明">
 
-有关更多字段映射信息，请参阅[字段映射](./migrate-from-elasticsearch#field-mapping-reference)。
+<p>有关更多字段映射信息，请参阅<a href="./migrate-from-elasticsearch#field-mapping-reference">字段映射</a>。</p>
 
 </Admonition>
 
@@ -63,7 +63,7 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
 
 <Admonition type="info" icon="📘" title="说明">
 
-在迁移过程中，您可以同时向 Elasticsearch 中的源索引插入数据，但最新插入的数据不会实时同步迁移至 Zilliz Cloud。
+<p>在迁移过程中，您可以同时向 Elasticsearch 中的源索引插入数据，但最新插入的数据不会实时同步迁移至 Zilliz Cloud。</p>
 
 </Admonition>
 

@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-目前，范围搜索功能处于 Beta 测试阶段。请注意，该功能及相关文档在 Beta 测试期间可能会有所更改。
+<p>目前，范围搜索功能处于 Beta 测试阶段。请注意，该功能及相关文档在 Beta 测试期间可能会有所更改。</p>
 
 </Admonition>
 
@@ -42,7 +42,7 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-此处的代码示例默认您已按照[创建 Collection](./create-collection) 的步骤完成 Collection 的创建和数据插入。
+<p>此处的代码示例默认您已按照<a href="./create-collection">创建 Collection</a> 的步骤完成 Collection 的创建和数据插入。</p>
 
 </Admonition>
 

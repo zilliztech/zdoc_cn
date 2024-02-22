@@ -5,7 +5,7 @@
   "node_token": "S3BswPJ4NiKl9okZDoycMvbunMb",
   "node_type": "origin",
   "obj_create_time": "1687140974",
-  "obj_edit_time": "1705913956",
+  "obj_edit_time": "1708410680",
   "obj_token": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR",
   "obj_type": "docx",
   "origin_node_token": "S3BswPJ4NiKl9okZDoycMvbunMb",
@@ -41,20 +41,19 @@
           "QwRvda3Nbo8binxdtOBcQnmKn1e",
           "AhLidq7WjoaofCxDVQ5cvJBrn0g",
           "IImsdVOFJoBYR2xU9RscxEWOnwd",
-          "HJc1dodjuocrIjxvtudc3HFJnwr",
-          "YskZdA3Pao47wAxEj51cKypjnMb",
-          "HkPidLx7oon6bcxTDFScnfiKnub",
-          "NABUdTO7zoRIH7x4z9UcyxOKnSc",
+          "RPvcdDf33okgAOxLbZvcpvA1nIc",
+          "LMqXdMrHcozSHlx3g2vcH4D4nXb",
+          "IlbSdcfhSoJTXHxwY2JcDv4onBf",
+          "PajAdy3zSoX0wEx7Ko8cgmy0njR",
+          "YDfvdJDVsoVIpdxOZGLceX6GnVh",
+          "O6gJd831poThYbxtI1ncogROnzg",
+          "IQK3d0YrMoqxE2xMPzjcNBoInMe",
           "K6sJdxPH1o3esgxF9z1cbJERnVg",
-          "XM6gdOzqpotV9exIAaKcc5cWnKh",
-          "OBswd9qyFoYhrKxe8mEcXakznQc",
-          "ErYAdMPT8o7CaAxmPW3ccYS9nbb",
-          "VZUydkbw5ouUDZxxPtMcZTOwnDc",
-          "EFdZdBkOuooHGVxsOTvcgDzEnzc",
-          "W5j3d5cLXoxoFfxEn60cw5Qln6g",
-          "P45jd7Yyxog6JExUjepcf2ipngg",
-          "Y5hSdBAEtoSMc0x7zCDcPvlrnfW",
-          "LpEQd3JxQoufUXxxKtCcv6iqnRe",
+          "T0dsdlfbuoBTnQxelgCcVYNfnec",
+          "XekWddbe9okoXNxN5NLcUHVonBg",
+          "Wq02d95XEopCQdxAhFLcruK6n0e",
+          "JNTodfE0DoefXwxrgn6cQUTBnie",
+          "Vn6Sd5Xtuob8Kaxryjfco5i4nvb",
           "QsgEdkgfJoeExNxrytycy8dVnrf",
           "Ak04deOmjoC6LCxKB39cLUyjnfg",
           "IqujddBdVokhSzxOCwfcJduRnbd",
@@ -773,7 +772,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "CU 计算资源使用率",
+                "content": "CU 计算资源",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -864,7 +863,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "CU 中已加载容量使用率",
+                "content": "CU 加载容量",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -1048,14 +1047,14 @@
         "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
       },
       {
-        "block_id": "HJc1dodjuocrIjxvtudc3HFJnwr",
+        "block_id": "RPvcdDf33okgAOxLbZvcpvA1nIc",
         "block_type": 2,
         "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "要查看关于性能的指标图表，请在",
+                "content": "要查看性能指标图表，请在",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1079,7 +1078,7 @@
             },
             {
               "text_run": {
-                "content": "选项卡中找到",
+                "content": "选项卡上找到",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1103,7 +1102,7 @@
             },
             {
               "text_run": {
-                "content": "部分。这些图表展示了集群的性能状况，包括每秒查询次数（QPS）、每秒向量搜索操作次数（VPS）和响应延迟。",
+                "content": "部分。这些图表提供了集群性能的快照，包括每秒查询请求数（QPS）、每秒向量搜索操作数（VPS）、请求延时（Latency）和请求失败率。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1121,13 +1120,13 @@
         }
       },
       {
-        "block_id": "YskZdA3Pao47wAxEj51cKypjnMb",
+        "block_id": "LMqXdMrHcozSHlx3g2vcH4D4nXb",
         "block_type": 12,
         "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "QPS",
+                "content": "读请求 QPS/VPS",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -1139,7 +1138,7 @@
             },
             {
               "text_run": {
-                "content": "：每秒进行的搜索、查询、批量插入和更新操作的数量。",
+                "content": "：每秒搜索（search）和查询（query）类型请求数。查询请求没有 VPS，因为查询过程不涉及到向量。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1158,13 +1157,13 @@
         "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
       },
       {
-        "block_id": "HkPidLx7oon6bcxTDFScnfiKnub",
+        "block_id": "IlbSdcfhSoJTXHxwY2JcDv4onBf",
         "block_type": 12,
         "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "VPS",
+                "content": "写请求 QPS/VPS",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -1176,7 +1175,7 @@
             },
             {
               "text_run": {
-                "content": "：在多向量操作中每秒进行的向量搜索操作次数。计算公式为 VPS = QPS * N（N 代表多向量操作中涉及的向量数）。",
+                "content": "：每秒数据插入（insert）和 Upsert 类型请求数。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1195,13 +1194,13 @@
         "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
       },
       {
-        "block_id": "NABUdTO7zoRIH7x4z9UcyxOKnSc",
+        "block_id": "PajAdy3zSoX0wEx7Ko8cgmy0njR",
         "block_type": 12,
         "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "查询延迟",
+                "content": "读请求延时（Latency）",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -1213,7 +1212,118 @@
             },
             {
               "text_run": {
-                "content": "：指客户端发送请求到服务器并收到响应所需的时间。这包括平均延迟和 P99 延迟（即最慢的 1% 请求的延迟）。",
+                "content": "：从发起读请求（搜索和查询请求）到返回结果的耗时的平均值或 P99 值。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "YDfvdJDVsoVIpdxOZGLceX6GnVh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "写请求延时（Latency）",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：从发起写请求（数据插入和 Upsert 请求）到返回结果的耗时的平均值或 P99 值。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "O6gJd831poThYbxtI1ncogROnzg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "读请求失败率",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：超时读请求数占比。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
+      },
+      {
+        "block_id": "IQK3d0YrMoqxE2xMPzjcNBoInMe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "写请求失败率",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：超时写请求数占比。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1243,13 +1353,13 @@
         "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
       },
       {
-        "block_id": "XM6gdOzqpotV9exIAaKcc5cWnKh",
+        "block_id": "T0dsdlfbuoBTnQxelgCcVYNfnec",
         "block_type": 5,
         "heading3": {
           "elements": [
             {
               "text_run": {
-                "content": "请求率指标{#request-rate}",
+                "content": "数据监控{#data}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1268,14 +1378,14 @@
         "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
       },
       {
-        "block_id": "OBswd9qyFoYhrKxe8mEcXakznQc",
+        "block_id": "XekWddbe9okoXNxN5NLcUHVonBg",
         "block_type": 2,
         "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "要查看有关请求的性能指标图表，请在",
+                "content": "要查看业务数据的度量图表，请在",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1299,7 +1409,7 @@
             },
             {
               "text_run": {
-                "content": "选项卡中访问",
+                "content": "选项卡上找到",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1311,7 +1421,7 @@
             },
             {
               "text_run": {
-                "content": "请求比例",
+                "content": "数据",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -1323,7 +1433,7 @@
             },
             {
               "text_run": {
-                "content": "部分。这些图表展现了集群处理请求的性能，通过展示成功与失败请求的比例来提供性能快照。",
+                "content": "部分。这些图表通过显示集群中的 Collection 数、Entity 总数和已加载 Entity 数，提供了集群数据的快照。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1341,13 +1451,13 @@
         }
       },
       {
-        "block_id": "ErYAdMPT8o7CaAxmPW3ccYS9nbb",
+        "block_id": "Wq02d95XEopCQdxAhFLcruK6n0e",
         "block_type": 12,
         "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "请求成功率",
+                "content": "Collection 数量",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -1359,7 +1469,7 @@
             },
             {
               "text_run": {
-                "content": "：每秒内所有请求中成功处理的请求所占的百分比。",
+                "content": "：集群中已创建的 Collection 总数。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1378,13 +1488,13 @@
         "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
       },
       {
-        "block_id": "VZUydkbw5ouUDZxxPtMcZTOwnDc",
+        "block_id": "JNTodfE0DoefXwxrgn6cQUTBnie",
         "block_type": 12,
         "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "请求失败率",
+                "content": "Entity 数量",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -1396,7 +1506,7 @@
             },
             {
               "text_run": {
-                "content": "：每秒内所有请求中因超时而失败的请求所占的百分比。",
+                "content": "：集群中已插入的 Entity 总数。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1415,62 +1525,13 @@
         "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
       },
       {
-        "block_id": "EFdZdBkOuooHGVxsOTvcgDzEnzc",
-        "block_type": 26,
-        "iframe": {
-          "component": {
-            "iframe_type": 8,
-            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D33361-1502%26mode%3Ddesign%26t%3DtRIs5rm1TPXPf6hz-4"
-          }
-        },
-        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
-      },
-      {
-        "block_id": "W5j3d5cLXoxoFfxEn60cw5Qln6g",
-        "block_type": 5,
-        "heading3": {
+        "block_id": "Vn6Sd5Xtuob8Kaxryjfco5i4nvb",
+        "block_type": 12,
+        "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "Entity 指标{#entity}",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
-      },
-      {
-        "block_id": "P45jd7Yyxog6JExUjepcf2ipngg",
-        "block_type": 2,
-        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "若要查看关于 Entity 的性能指标图表，请在",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "指标",
+                "content": "已加载 Entity 数量",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -1482,80 +1543,7 @@
             },
             {
               "text_run": {
-                "content": "选项卡中定位到 ",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "Entity",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": " 部分。这些图表反映了集群中 Entity 数据的情况，包括当前的 Entity 总数以及新 Entity 数据的插入速率。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "Y5hSdBAEtoSMc0x7zCDcPvlrnfW",
-        "block_type": 12,
-        "bullet": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "已加载 Entity：指在集群中已加载的 Entity 的总数。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
-      },
-      {
-        "block_id": "LpEQd3JxQoufUXxxKtCcv6iqnRe",
-        "block_type": 12,
-        "bullet": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "Entity 插入速率：指每秒钟插入集群的 Entity 数。",
+                "content": "：集群中已加载的 Entity 总数。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1694,6 +1682,6 @@
         "parent_id": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR"
       }
     ],
-    "counts": 51
+    "counts": 50
   }
 }

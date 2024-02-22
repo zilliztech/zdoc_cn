@@ -5,6 +5,7 @@ const fs = require('node:fs')
 const { URL } = require('node:url')
 const fetch = require('node-fetch')
 const cheerio = require('cheerio')
+const showdown = require('showdown')
 
 class larkDocWriter {
     constructor(root_token, docSourceDir='plugins/lark-docs/meta/sources', imageDir='static/img', target='saas', skip_image_download=false) {
@@ -323,7 +324,7 @@ class larkDocWriter {
             let title = '常见问题'
             let slug = 'faqs'
             let front_matter = this.__front_matters(slug, null, null, source.node_token, 999)
-            const markdown = `${front_matter}\n\n# ${title}\n\n`
+            const markdown = `${front_matter}\n\n# ${title}` + "\n\nimport DocCardList from '@theme/DocCardList';\n\n<DocCardList />"
             fs.writeFileSync(`${path}/${slug}.md`, markdown)
 
             sub_pages.forEach((sub_page, index) => {
@@ -335,6 +336,7 @@ class larkDocWriter {
 
                 sub_page = sub_page.map(line => {
                     if (line.startsWith('**')) {
+                        console.log(line)
                         let qtext = line.split('{#')[0].split('**')[1]
                         let qslug = line.split('{#')[1].split('}')[0]
                         line = `### ${qtext}{#${qslug}}`
@@ -453,6 +455,7 @@ class larkDocWriter {
         let markdown = await this.__markdown()
         markdown = this.__filter_content(markdown, this.target)
         markdown = markdown.replace(/(\s*\n){3,}/g, '\n\n').replace(/(<br\/>){2,}/, "<br/>").replace(/<br>/g, '<br/>');
+        markdown = markdown.replace(/^[\||\s][\s|\||<br\/>]*\|\n/gm, '')
 
         let tabs = markdown.split('\n').filter(line => {
             return line.trim().startsWith("<Tab")
@@ -460,11 +463,11 @@ class larkDocWriter {
 
         let imports = await this.__imports(tabs > 0)
 
-        var file_path = `${path}/${slug}.md`
-
         if (doc_card_list) {
             markdown += "\n\nimport DocCardList from '@theme/DocCardList';\n\n<DocCardList />"
         }
+
+        var file_path = `${path}/${slug}.md`
 
         fs.writeFileSync(file_path, front_matter + '\n\n' + imports + '\n\n' + markdown)
     }
@@ -567,8 +570,12 @@ class larkDocWriter {
 
     async __heading(heading, level) {
         let content = await this.__text_elements(heading['elements'])
-        content = this.__filter_content(content, this.target)
-        return '#'.repeat(level) + ' ' + content;
+        if (content.length > 0) {
+            content = this.__filter_content(content, this.target)
+            return '#'.repeat(level) + ' ' + content;
+        } else {
+            return '';
+        }
     }
 
     async __bullet(block, indent) {
@@ -603,6 +610,7 @@ class larkDocWriter {
             })
 
             children = await this.__markdown(children, indent)
+            children = children.split('\n')
         }
 
         let emoji = block['callout']['emoji_id']
@@ -618,10 +626,13 @@ class larkDocWriter {
             default:
                 type = '<Admonition type="info" icon="📘" title="说明">'
                 break; 
-        }               
+        }  
         
-        const raw = ' '.repeat(indent) + type + '\n\n' + children.split('\n').slice(1).join(' '.repeat(indent) + '\n') + '\n\n' + ' '.repeat(indent) + '</Admonition>';
-        return raw.replace(/(\s*\n){3,}/g, '\n\n');
+        const converter = new showdown.Converter()
+        const html = converter.makeHtml(children.slice(1).map(line => line.replace(/^\s*/g, '')).join('\n'))
+        
+        const raw = ' '.repeat(indent) + type + '\n\n' + ' '.repeat(indent) + html.split('\n').join('\n' + ' '.repeat(indent)) + '\n\n' + ' '.repeat(indent) + '</Admonition>';
+        return raw.replace(/(\s*\n){3,}/g, `\n${' '.repeat(indent)}\n`);
     }
 
     async __code(code, indent, prev, next, blocks) {
@@ -696,7 +707,7 @@ class larkDocWriter {
                     return elements;
             }
         } else {
-            var comment_mark = lang === 'Python' ? '# ' : '// '
+            var comment_mark = lang === 'Python' || lang === 'Bash' ? '# ' : '// '
             var half_1 = elements.slice(0, divider)
             var half_1_label = half_1[0].replace(comment_mark, '') 
             var half_2 = elements.slice(divider)
@@ -770,11 +781,14 @@ class larkDocWriter {
             type = 'caution 🚧 警告';
         }
 
-        res[0] = `<Admonition type="${type.split(' ')[0]}" icon="${type.split(' ')[1]}" title="${type.split(' ')[2]}">`;
+        type = `<Admonition type="${type.split(' ')[0]}" icon="${type.split(' ')[1]}" title="${type.split(' ')[2]}">`;
         res.splice(1, 0, "");
 
-        const raw = ' '.repeat(indent) + res.join(' '.repeat(indent) + '\n') + '\n\n' + ' '.repeat(indent) + '</Admonition>';
-        return raw.replace(/(\s*\n){3,}/g, '\n\n');
+        const converter = new showdown.Converter()
+        const html = converter.makeHtml(res.slice(1).map(line => line.replace(/^\s*/g, '')).join('\n'))
+
+        const raw = ' '.repeat(indent) + type + '\n\n' + ' '.repeat(indent) + html.split('\n').join('\n' + ' '.repeat(indent)) + '\n\n' + ' '.repeat(indent) + '</Admonition>';
+        return raw.replace(/(\s*\n){3,}/g, `\n${' '.repeat(indent)}\n`);
     }  
     
     async __image(image) {

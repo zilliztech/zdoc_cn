@@ -25,7 +25,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-当您创建项目时，您也会成为该项目的[项目管理员](./resource-hierarchy#project-roles)。
+<p>当您创建项目时，您也会成为该项目的<a href="./resource-hierarchy#project-roles">项目管理员</a>。</p>
 
 </Admonition>
 
@@ -37,7 +37,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-每个组织中都有一个默认项目，默认项目的名称暂不支持修改。
+<p>每个组织中都有一个默认项目，默认项目的名称暂不支持修改。</p>
 
 </Admonition>
 
@@ -49,7 +49,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-每个组织中都有一个默认项目，默认项目暂不支持删除。
+<p>每个组织中都有一个默认项目，默认项目暂不支持删除。</p>
 
 </Admonition>
 

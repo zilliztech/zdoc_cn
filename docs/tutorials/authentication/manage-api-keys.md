@@ -23,7 +23,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-在 2024 年 1 月 29 日之前发布的版本中，并未对 API 密钥进行分类。如果您的 Zilliz Cloud 服务是从该日期前的版本升级而来，您之前版本的 API 密钥将被默认设置为自定义密钥，并继承原 API 密钥所拥有的项目级权限。
+<p>在 2024 年 1 月 29 日之前发布的版本中，并未对 API 密钥进行分类。如果您的 Zilliz Cloud 服务是从该日期前的版本升级而来，您之前版本的 API 密钥将被默认设置为自定义密钥，并继承原 API 密钥所拥有的项目级权限。</p>
 
 </Admonition>
 
@@ -76,7 +76,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-对于创建自定义 API 密钥的项目管理员而言，您所能授予 API 密钥的权限范围取决于您自身的权限范围。
+<p>对于创建自定义 API 密钥的项目管理员而言，您所能授予 API 密钥的权限范围取决于您自身的权限范围。</p>
 
 </Admonition>
 
@@ -104,7 +104,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-暂不支持编辑个人密钥。只有自定义 API 密钥才可被编辑。
+<p>暂不支持编辑个人密钥。只有自定义 API 密钥才可被编辑。</p>
 
 </Admonition>
 
@@ -120,7 +120,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="caution" icon="🚧" title="警告">
 
-此操作将重置并使当前 API 密钥失效。依赖此密钥的任何代码将停止运行，直至您用新密钥更新相关代码。
+<p>此操作将重置并使当前 API 密钥失效。依赖此密钥的任何代码将停止运行，直至您用新密钥更新相关代码。</p>
 
 </Admonition>
 
@@ -134,7 +134,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="caution" icon="🚧" title="警告">
 
-删除 API 密钥时，请谨慎操作。这将立即撤销所有使用该密钥的资源的访问权限。
+<p>删除 API 密钥时，请谨慎操作。这将立即撤销所有使用该密钥的资源的访问权限。</p>
 
 </Admonition>
 

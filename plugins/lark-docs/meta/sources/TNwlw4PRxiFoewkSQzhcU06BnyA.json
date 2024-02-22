@@ -1,0 +1,1324 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1708398060",
+  "node_token": "TNwlw4PRxiFoewkSQzhcU06BnyA",
+  "node_type": "origin",
+  "obj_create_time": "1708398060",
+  "obj_edit_time": "1708426428",
+  "obj_token": "MxondUDCCoIWaqxYhHGcJG3Snyh",
+  "obj_type": "docx",
+  "origin_node_token": "TNwlw4PRxiFoewkSQzhcU06BnyA",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "MJeiwGDSniNQ7BkAFGCczemxnDg",
+  "space_id": "7167193056431783939",
+  "title": "估算 Pipelines 用量",
+  "slug": "estimate-pipelines-usage",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "MxondUDCCoIWaqxYhHGcJG3Snyh",
+        "block_type": 1,
+        "children": [
+          "XPmSdbPTxo9A2uxJ6gHcN4SvnOe",
+          "U7RIdtFQ2oar7qxoL5ScSHCQn7e",
+          "T7xHdwmcSoLGW8xc3LbcpXkknhh",
+          "R9R3dGayRoZAyIx1peecnKQrneg",
+          "ZTo8ddJtHoHLJTxvqGNcsuUDn0E",
+          "PXyIdsXOKoWvqfxVgEXcFxAUnbd",
+          "So8td0CpEoRDkwxJ2tscTbULn0c",
+          "S4Zud2Zqzo8vsuxQ6g1ciS6QnZj",
+          "HQd4dKUGmoUqoBx4MwkcUMDhnOg",
+          "GUtGd3NDeoqjdcxsSwLcV2b5nLh",
+          "JtNydy6YLoygdMx7nKAcrjcdnFg",
+          "RevxdZgVsoVw5HxUDmWckSghnPd",
+          "RT8kdGHDCoutIQxq3URcfClln2e",
+          "H91Jd2U5yoEbCKxN2MwcHGXLnic",
+          "D6CqdO4jpoCejVxRrHzc26tqnud",
+          "TdwCd9QGvoDBKmxhMZkcUSYqnei",
+          "U6R1dk5QVoJn1yxwwQecI3hanAd",
+          "ErN7d5KTBoQI0MxFaIlcKEnVnxf",
+          "TKpPdwOXTocieBxz03VcJr69ntM",
+          "BhxcdfTx0o7A9IxjebUcMN8rnQd",
+          "CWZUdDnEXoF1lcxT2Spc93Jgnle",
+          "IQjmdzxOmokVdzx1U3Bc8aElnYg"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "估算 Pipelines 用量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "XPmSdbPTxo9A2uxJ6gHcN4SvnOe",
+        "block_type": 2,
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "运行 Pipelines 的成本以 Token 数作为度量单位。类似于使用 Token 作为基本单位的大型语言模型（LLM），Pipeline 通过将文本转化为向量并解析为一系列 Token 来处理文档和搜索查询。您可以使用我们的用量估算工具来计算文件或文本字符串的 Token 数量。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "U7RIdtFQ2oar7qxoL5ScSHCQn7e",
+        "block_type": 34,
+        "children": [
+          "NBfndH6YQocvGKxI8iKcpsSMnUg",
+          "AOYydB4hJoVQR1xI0Z9cGktEnEc"
+        ],
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh",
+        "quote_container": {}
+      },
+      {
+        "block_id": "NBfndH6YQocvGKxI8iKcpsSMnUg",
+        "block_type": 2,
+        "parent_id": "U7RIdtFQ2oar7qxoL5ScSHCQn7e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AOYydB4hJoVQR1xI0Z9cGktEnEc",
+        "block_type": 2,
+        "parent_id": "U7RIdtFQ2oar7qxoL5ScSHCQn7e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "工具使用字节对编码（BPE）分词器，用量估算结果可能会根据不同的处理策略有 30% 的浮动。估算结果仅供参考。实际用量，请参考 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Pipelines 列表",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FBCCjwd2xFivKqUkQrDXcbv0dn5f%23ZCrZdoUQhoZXGjxgVtrcBoq2n1b"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "T7xHdwmcSoLGW8xc3LbcpXkknhh",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "什么是 tokens？",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh"
+      },
+      {
+        "block_id": "R9R3dGayRoZAyIx1peecnKQrneg",
+        "block_type": 2,
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Token 是自然语言处理（NLP）中的一个特殊概念。它可以被看作是一个子词。一些词本身就是一个 Token，而一些较长的词可能包含多个 Token。Token 长度也与语言有关。一般来说，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZTo8ddJtHoHLJTxvqGNcsuUDn0E",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "1 个 Token = 3~4 个英文字符",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh"
+      },
+      {
+        "block_id": "PXyIdsXOKoWvqfxVgEXcFxAUnbd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "1 个 Token = 1.12 个中文字符",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh"
+      },
+      {
+        "block_id": "So8td0CpEoRDkwxJ2tscTbULn0c",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "1 个英文单词包含 1.3 个 Token",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh"
+      },
+      {
+        "block_id": "S4Zud2Zqzo8vsuxQ6g1ciS6QnZj",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Pipelines 如何处理 Token？",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh"
+      },
+      {
+        "block_id": "HQd4dKUGmoUqoBx4MwkcUMDhnOg",
+        "block_type": 2,
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Ingestion Pipeline",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FWfbLwEnVviFQnzk4VFWcmC76ndd%23GEcpdOG8zov0kHxP0LicjpmvnNc"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 通过将文件解析为 Token，然后将 Token 序列拆分并转化为向量，从而完成处理文档。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GUtGd3NDeoqjdcxsSwLcV2b5nLh",
+        "block_type": 2,
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Search Pipeline",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FWfbLwEnVviFQnzk4VFWcmC76ndd%23GtXmdJmj6oCWl9xHe82cTAplnBS"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 通过将 Token 序列转化为向量来处理查询。通过将 Token 传入深度学习模型（称为 Embedding 模型），文本的“本质含义”被转换为向量表示，这可以被存储并由向量数据库检索。借助这一过程，Pipelines 能够帮助 API 用户理解不同单词及其在句子或文本中的上下文的含义和语义。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JtNydy6YLoygdMx7nKAcrjcdnFg",
+        "block_type": 2,
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Deletion Pipeline",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FWfbLwEnVviFQnzk4VFWcmC76ndd%23APIVd73dLo7RqgxojhNch3oCnHh"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 通常不涉及将文本作为 Token 处理。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RevxdZgVsoVw5HxUDmWckSghnPd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "估算 Pipeline 用量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh"
+      },
+      {
+        "block_id": "RT8kdGHDCoutIQxq3URcfClln2e",
+        "block_type": 2,
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为了帮助您轻松了解 Pipeline 运行的成本，我们提供了一个界面工具，可以估算文件或文本字符串的 Token 数量。您可以在运行 Pipeline 前使用此工具了解运行成本。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "H91Jd2U5yoEbCKxN2MwcHGXLnic",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D39137-2703%26mode%3Ddesign%26t%3D7dWbcd2RIFNsohUV-4"
+          }
+        },
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh"
+      },
+      {
+        "block_id": "D6CqdO4jpoCejVxRrHzc26tqnud",
+        "block_type": 13,
+        "children": [
+          "QQK9doP1QoCH4kxTfXicFDPtnTc",
+          "LfnTdTBFxonrXwxZ1ECcbF44nNg"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "输入",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh"
+      },
+      {
+        "block_id": "QQK9doP1QoCH4kxTfXicFDPtnTc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Ingestion Pipeline 的输入为文件。您可以直接上传本地文件或导入对象存储中的文件。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "Xy0fdMiOTo355Gx7lIYcyBnZnGf",
+          "WW0Sd5aczoL5dKxmLoCckHpqncc"
+        ],
+        "parent_id": "D6CqdO4jpoCejVxRrHzc26tqnud"
+      },
+      {
+        "block_id": "Xy0fdMiOTo355Gx7lIYcyBnZnGf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "上传本地文件",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "OWMRdJochonflmxtkh2coHtfnub"
+        ],
+        "parent_id": "QQK9doP1QoCH4kxTfXicFDPtnTc"
+      },
+      {
+        "block_id": "OWMRdJochonflmxtkh2coHtfnub",
+        "block_type": 2,
+        "parent_id": "Xy0fdMiOTo355Gx7lIYcyBnZnGf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "上传的本地文件大小不得超过 10 MB。支持的文件类型包括 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".txt",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".pdf",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".md",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".html",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".epub",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".csv",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".doc",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".docx",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".xls",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".xlsx",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".ppt",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".pptx",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WW0Sd5aczoL5dKxmLoCckHpqncc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "从对象存储中导入文件",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "PAdudEkVFolRm6xaH4wcsHq4nEg"
+        ],
+        "parent_id": "QQK9doP1QoCH4kxTfXicFDPtnTc"
+      },
+      {
+        "block_id": "PAdudEkVFolRm6xaH4wcsHq4nEg",
+        "block_type": 2,
+        "parent_id": "WW0Sd5aczoL5dKxmLoCckHpqncc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "输入阿里云 OSS ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "签名 URL",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.alibabacloud.com%2Fhelp%2Fzh%2Foss%2Fuser-guide%2Fauthorize-third-party-users-to-download-objects%3Fspm%3Da2c63.p38356.0.0.590c2cb74gHqev%23section-fnd-m6v-bff"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。每次只可输入 1 个 URL。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LfnTdTBFxonrXwxZ1ECcbF44nNg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Search Pipeline 的输入为字符串。您可以直接在输入框中输入文本。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "T43td8yMFoNSKaxTw7icH8jZnmg"
+        ],
+        "parent_id": "D6CqdO4jpoCejVxRrHzc26tqnud"
+      },
+      {
+        "block_id": "T43td8yMFoNSKaxTw7icH8jZnmg",
+        "block_type": 34,
+        "children": [
+          "XCKjdWJOmowhztxrXF1cw9Ycnnb",
+          "J7RUdTt64oAZBwxpEdrcxw1bnRf"
+        ],
+        "parent_id": "LfnTdTBFxonrXwxZ1ECcbF44nNg",
+        "quote_container": {}
+      },
+      {
+        "block_id": "XCKjdWJOmowhztxrXF1cw9Ycnnb",
+        "block_type": 2,
+        "parent_id": "T43td8yMFoNSKaxTw7icH8jZnmg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "J7RUdTt64oAZBwxpEdrcxw1bnRf",
+        "block_type": 2,
+        "parent_id": "T43td8yMFoNSKaxTw7icH8jZnmg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可最多输入 100,000 个字符。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TdwCd9QGvoDBKmxhMZkcUSYqnei",
+        "block_type": 13,
+        "children": [
+          "AeXKdOmOhoIM2YxBEH8cYkIqnNe"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "计算",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh"
+      },
+      {
+        "block_id": "AeXKdOmOhoIM2YxBEH8cYkIqnNe",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D39137-2708%26mode%3Ddesign%26t%3D7dWbcd2RIFNsohUV-4"
+          }
+        },
+        "parent_id": "TdwCd9QGvoDBKmxhMZkcUSYqnei"
+      },
+      {
+        "block_id": "U6R1dk5QVoJn1yxwwQecI3hanAd",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看文件 Token 数量估算结果。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh"
+      },
+      {
+        "block_id": "ErN7d5KTBoQI0MxFaIlcKEnVnxf",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "重置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "重新上传其他本地文件。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh"
+      },
+      {
+        "block_id": "TKpPdwOXTocieBxz03VcJr69ntM",
+        "block_type": 2,
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BhxcdfTx0o7A9IxjebUcMN8rnQd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "相关文档{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh"
+      },
+      {
+        "block_id": "CWZUdDnEXoF1lcxT2Spc93Jgnle",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "运行 Pipelines",
+                "token": "DU8QwV6kdiv4LXkqPKqcOvoPnNE",
+                "url": "https://zilliverse.feishu.cn/wiki/DU8QwV6kdiv4LXkqPKqcOvoPnNE"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh"
+      },
+      {
+        "block_id": "IQjmdzxOmokVdzx1U3Bc8aElnYg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "使用限制",
+                "token": "A8UFwSbMniMl6IkpJkNc4HsHnLc",
+                "url": "https://zilliverse.feishu.cn/wiki/A8UFwSbMniMl6IkpJkNc4HsHnLc#doxcnsjioyRYeM2l82Lu7f0pZDc"
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh"
+      }
+    ],
+    "counts": 35
+  }
+}

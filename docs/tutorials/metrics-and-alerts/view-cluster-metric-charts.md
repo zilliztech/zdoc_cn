@@ -3,7 +3,7 @@ slug: /view-cluster-metric-charts
 beta: FALSE
 notebook: FALSE
 token: S3BswPJ4NiKl9okZDoycMvbunMb
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 import Admonition from '@theme/Admonition';
@@ -53,13 +53,13 @@ Zilliz Cloud 提供了多种指标图表，用于从不同角度监控集群性�
 
 要查看资源使用情况的指标图表，请在**指标**选项卡下找到**资源**部分。这些图表展示了集群的资源用量情况，涵盖了计算、容量和存储方面的数据。
 
-- **CU 计算资源使用率**：显示计算能力使用量占总计算能力的比例。
+- **CU 计算资源**：显示计算能力使用量占总计算能力的比例。
 
     - 70%-80%：开始考虑扩容。
 
     - 90% 或以上：需要立即扩容，以防服务中断。
 
-- **CU 中已加载容量使用率**：展示使用的容量占总容量的百分比。
+- **CU 加载容量**：展示使用的容量占总容量的百分比。
 
     - 70%-80%：开始考虑扩容。
 
@@ -73,33 +73,31 @@ Zilliz Cloud 提供了多种指标图表，用于从不同角度监控集群性�
 
 ### 性能监控{#performance}
 
-要查看关于性能的指标图表，请在**指标**选项卡中找到**性能**部分。这些图表展示了集群的性能状况，包括每秒查询次数（QPS）、每秒向量搜索操作次数（VPS）和响应延迟。
+要查看性能指标图表，请在**指标**选项卡上找到**性能**部分。这些图表提供了集群性能的快照，包括每秒查询请求数（QPS）、每秒向量搜索操作数（VPS）、请求延时（Latency）和请求失败率。
 
-- **QPS**：每秒进行的搜索、查询、批量插入和更新操作的数量。
+- **读请求 QPS/VPS**：每秒搜索（search）和查询（query）类型请求数。查询请求没有 VPS，因为查询过程不涉及到向量。
 
-- **VPS**：在多向量操作中每秒进行的向量搜索操作次数。计算公式为 VPS = QPS * N（N 代表多向量操作中涉及的向量数）。
+- **写请求 QPS/VPS**：每秒数据插入（insert）和 Upsert 类型请求数。
 
-- **查询延迟**：指客户端发送请求到服务器并收到响应所需的时间。这包括平均延迟和 P99 延迟（即最慢的 1% 请求的延迟）。
+- **读请求延时（Latency）**：从发起读请求（搜索和查询请求）到返回结果的耗时的平均值或 P99 值。
+
+- **写请求延时（Latency）**：从发起写请求（数据插入和 Upsert 请求）到返回结果的耗时的平均值或 P99 值。
+
+- **读请求失败率**：超时读请求数占比。
+
+- **写请求失败率**：超时写请求数占比。
 
 ![zh-view_metric_charts_performance](/img/zh-view_metric_charts_performance.png)
 
-### 请求率指标{#request-rate}
+### 数据监控{#data}
 
-要查看有关请求的性能指标图表，请在**指标**选项卡中访问**请求比例**部分。这些图表展现了集群处理请求的性能，通过展示成功与失败请求的比例来提供性能快照。
+要查看业务数据的度量图表，请在**指标**选项卡上找到**数据**部分。这些图表通过显示集群中的 Collection 数、Entity 总数和已加载 Entity 数，提供了集群数据的快照。
 
-- **请求成功率**：每秒内所有请求中成功处理的请求所占的百分比。
+- **Collection 数量**：集群中已创建的 Collection 总数。
 
-- **请求失败率**：每秒内所有请求中因超时而失败的请求所占的百分比。
+- **Entity 数量**：集群中已插入的 Entity 总数。
 
-![zh-view_metric_charts_request_rate](/img/zh-view_metric_charts_request_rate.png)
-
-### Entity 指标{#entity}
-
-若要查看关于 Entity 的性能指标图表，请在**指标**选项卡中定位到 **Entity** 部分。这些图表反映了集群中 Entity 数据的情况，包括当前的 Entity 总数以及新 Entity 数据的插入速率。
-
-- 已加载 Entity：指在集群中已加载的 Entity 的总数。
-
-- Entity 插入速率：指每秒钟插入集群的 Entity 数。
+- **已加载 Entity 数量**：集群中已加载的 Entity 总数。
 
 ![zh-view_metric_charts_entity](/img/zh-view_metric_charts_entity.png)
 

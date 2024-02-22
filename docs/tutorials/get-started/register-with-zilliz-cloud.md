@@ -41,7 +41,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-在使用邮箱和密码首次登录后，请您完成问卷调查。我们希望了解您选择 Zilliz Cloud 的原因及数据规模，从而更有效地为您提供服务。
+<p>在使用邮箱和密码首次登录后，请您完成问卷调查。我们希望了解您选择 Zilliz Cloud 的原因及数据规模，从而更有效地为您提供服务。</p>
 
 </Admonition>
 
