@@ -36,18 +36,18 @@ import Admonition from '@theme/Admonition';
 我们可以按上图所示的数据，创建目标 Collection 的 Schema。
 
 ```python
-from pymilvus import CollectionSchema, FieldSchema, DataType
+from pymilvus import MilvusClient, DataType
 
-schema = CollectionSchema(
-    fields=[
-        FieldSchema(name="id", dtype=DataType.INT64, is_primary=True),
-        FieldSchema(name="vector", dtype=DataType.FLOAT_VECTOR, dim=768),
-        FieldSchema(name="scalar_1", dtype=DataType.VARCHAR, max_length=512),
-        FieldSchema(name="scalar_2", dtype=DataType.INT64)
-    ],
+# You need to work out a collection schema out of your dataset.
+schema = MilvusClient.create_schema(
     auto_id=False,
-    enable_dynamic_field=True,
+    enable_dynamic_field=True
 )
+
+schema.add_field(field_name="id", datatype=DataType.INT64, is_primary=True)
+schema.add_field(field_name="vector", datatype=DataType.FLOAT_VECTOR, dim=768)
+schema.add_field(field_name="scalar_1", datatype=DataType.VARCHAR, max_length=512)
+schema.add_field(field_name="scalar_2", datatype=DataType.INT64)
 ```
 
 ## 源数据格式相关要求{#source-data-requirements}

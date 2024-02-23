@@ -13,64 +13,39 @@ import Admonition from '@theme/Admonition';
 
 本节将帮助你了解如何使用 SDK 的 BulkWriter 和 BulkImport API 向 Collection 中导入数据。
 
-## 准备工作{#before-you-start}
+另外，您还可以参考我们的[快速入门指南](./data-import-zero-to-hero)。其中包含了数据准备和数据导入两个部分的内容。
 
-在执行本节操作前，请确认如下工作已经完成。
+## 安装依赖{#install-denpendencies}
 
-- 您已安装所需依赖项，包括 PyMilvus 和 MinIO Python 客户端。详情请参阅 [安装 SDK](./install-sdks#pymilvuspython-sdkinstall-pymilvus-python-sdk) 。
+在命令行中运行如下命令安装 pymilvus 和 minio 或将它们升级到最新版本。
 
-- 您已准备好示例数据集。详情请参阅[准备导入数据](./prepare-source-data)。
-
-- 您已创建用于存储 BulkWriter 输出数据的文件夹。
-
-## 具体步骤{#procedure}
-
-向 Zilliz Cloud 批量导入您的数据，需要先使用 BulkWriter API 将您的数据转换成一个合适的格式，然后再使用 BulkImport API 将转换后的数据文件中的数据批量存入指定的 Collection 中。
-
-### 导入依赖项{#import-dependencies}
-
-首先，导入任务所需的依赖项：
-
-```python
-from urllib.parse import urlparse
-import time, json
-
-from minio import Minio
-
-from pymilvus import (
-    connections,
-    FieldSchema, CollectionSchema, DataType,
-    Collection,
-    utility,
-    bulk_import,
-    get_import_progress,
-    list_import_jobs,
-)
-
-# Check the prepared data files you have
-
-ACCESS_KEY = "YOUR_OBJECT_STORAGE_ACCESS_KEY"
-SECRET_KEY = "YOUR_OBJECT_STORAGE_SECRET_KEY"
-BUCKET_NAME = "YOUR_OBJECT_STORAGE_BUCKET_NAME"
-REMOTE_PATH = "DATA_FILES_PATH_IN_BLOCK_STORAGE"
+```shell
+python3 -m pip install --upgrade pymilvus minio
 ```
 
-### 检查数据{#check-prepared-data}
+### 检查已准备数据{#check-prepared-data}
 
-在通过 LocalBulkWriter 处理并上传数据文件到对象存储，或者使用 RemoteBulkWriter 并获取远程文件夹路径后，您的数据即准备就绪，可以导入到 Zilliz Cloud 的 Collection 中。
-
-要检查数据是否准备就绪，可参考以下代码：
+在您[使用 BulkWriter](./use-bulkwriter) 完成数据准备工作后，你会获得一个路径，指向准备好的数据文件。您可以使用如下代码来检查这些数据文件。
 
 ```python
+from minio import Minio
+
+# Third-party constants
+YOUR_ACCESS_KEY = "YOUR_ACCESS_KEY"
+YOUR_SECRET_KEY = "YOUR_SECRET_KEY"
+YOUR_BUCKET_NAME = "YOUR_BUCKET_NAME"
+YOUR_REMOTE_PATH = "YOUR_REMOTE_PATH"
+
 client = Minio(
-    endpoint="storage.googleapis.com", # use 's3.amazonaws.com' for GCS
-    access_key=ACCESS_KEY,
-    secret_key=SECRET_KEY,
-    secure=True)
+    endpoint="storage.googleapis.com", # use 's3.amazonaws.com' for AWS S3
+    access_key=YOUR_ACCESS_KEY,
+    secret_key=YOUR_SECRET_KEY,
+    secure=True
+)
 
 objects = client.list_objects(
-    bucket_name=BUCKET_NAME,
-    prefix=REMOTE_PATH,
+    bucket_name=YOUR_BUCKET_NAME,
+    prefix=YOUR_REMOTE_PATH,
     recursive=True
 )
 
@@ -79,14 +54,14 @@ print([obj.object_name for obj in objects])
 # Output
 #
 # [
-#     "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/claps.npy",
-#     "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/id.npy",
-#     "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/link.npy",
-#     "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/publication.npy",
-#     "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/reading_time.npy",
-#     "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/responses.npy",
-#     "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/title.npy",
-#     "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/vector.npy"
+#     "folder/1/claps.npy",
+#     "folder/1/id.npy",
+#     "folder/1/link.npy",
+#     "folder/1/publication.npy",
+#     "folder/1/reading_time.npy",
+#     "folder/1/responses.npy",
+#     "folder/1/title.npy",
+#     "folder/1/vector.npy"
 # ]
 
 ```
@@ -95,59 +70,74 @@ print([obj.object_name for obj in objects])
 
 准备好数据文件后，您需要先连接到 Zilliz Cloud 集群，根据数据集的格式创建相应的 Collection，并从存储桶中导入数据文件。
 
-注意，由于 Zilliz Cloud 目前不支持跨云数据传输，您的 Zilliz Cloud 集群和数据集需位于同一公共云平台上。
+对于如何在 Zilliz Cloud 控制台上获取相关信息，可以参考 [Zilliz Cloud 控制台](./on-zilliz-cloud-console)。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>由于 Zilliz Cloud 目前不支持跨云数据传输，您的 Zilliz Cloud 集群和数据集需位于同一公共云平台上。</p>
+
+</Admonition>
 
 ```python
+from pymilvus import MilvusClient, DataType
+
 # set up your collection
 
+## Zilliz Cloud constants
 CLUSTER_ENDPOINT = "YOUR_CLUSTER_ENDPOINT"
 CLUSTER_TOKEN = "YOUR_CLUSTER_TOKEN"
 COLLECTION_NAME = "medium_articles"
 API_KEY = "YOUR_CLUSTER_TOKEN"
-CLUSTER_ID = urlparse(CLUSTER_ENDPOINT).netloc.split(".")[0] if urlparse(CLUSTER_ENDPOINT).netloc.startswith("in") else None
-CLOUD_REGION = [ x for x in urlparse(CLUSTER_ENDPOINT).netloc.split(".") if x.startswith("gcp") or x.startswith("aws") or x.startswith("ali")][0] if urlparse(CLUSTER_ENDPOINT).netloc.startswith("in") else None
+CLUSTER_ID = "YOUR_CLUSTER_ID"
 
-if CLOUD_REGION is None:
-    raise Exception("Invalid cluster endpoint")
-elif CLOUD_REGION.startswith("gcp"):
-    OBJECT_URL = f"gs://{BUCKET_NAME}/{REMOTE_PATH}/"
-elif CLOUD_REGION.startswith("aws"):
-    OBJECT_URL = f"s3://{BUCKET_NAME}/{REMOTE_PATH}/"
-elif CLOUD_REGION.startswith("ali"):
-    OBJECT_URL = f"oss://{BUCKET_NAME}/{REMOTE_PATH}/"
+## Third-party constants
+YOUR_OBJECT_URL = "YOUR_OBJECT_URL"
 
-fields = [
-    FieldSchema(name="id", dtype=DataType.INT64, is_primary=True),
-    FieldSchema(name="title", dtype=DataType.VARCHAR, max_length=512),
-    FieldSchema(name="vector", dtype=DataType.FLOAT_VECTOR, dim=768),
-    FieldSchema(name="link", dtype=DataType.VARCHAR, max_length=512),
-    FieldSchema(name="reading_time", dtype=DataType.INT64),
-    FieldSchema(name="publication", dtype=DataType.VARCHAR, max_length=512),
-    FieldSchema(name="claps", dtype=DataType.INT64),
-    FieldSchema(name="responses", dtype=DataType.INT64)
-]
-
-schema = CollectionSchema(fields)
-
-connections.connect(
+# create a milvus client
+client = MilvusClient(
     uri=CLUSTER_ENDPOINT,
-    token=CLUSTER_TOKEN,
-    secure=True
+    token=CLUSTER_TOKEN
 )
 
-collection = Collection(COLLECTION_NAME, schema)
+# prepare schema
+schema = MilvusClient.create_schema(
+    auto_id=False,
+    enable_dynamic_schema=False
+)
 
-collection.create_index(
+schema.add_field(field_name="id", datatype=DataType.INT64, is_primary=True)
+schema.add_field(field_name="title", datatype=DataType.VARCHAR, max_length=512)
+schema.add_field(field_name="vector", datatype=DataType.FLOAT_VECTOR, dim=768)
+schema.add_field(field_name="link", datatype=DataType.VARCHAR, max_length=512)
+schema.add_field(field_name="reading_time", datatype=DataType.INT64)
+schema.add_field(field_name="publication", datatype=DataType.VARCHAR, max_length=512)
+schema.add_field(field_name="claps", datatype=DataType.INT64)
+schema.add_field(field_name="responses", datatype=DataType.INT64)
+
+# prepare index parameters
+index_params = MilvusClient.prepare_index_params()
+
+index_params.add_index(
     field_name="vector",
-    index_params={
-        "index_type": "AUTOINDEX",
-        "metric_type": "L2"
-    }
+    index_type="AUTOINDEX",
+    metric_type="L2"
 )
 
-collection.load()
+client.create_collection(
+    collection_name="customized_setup",
+    schema=schema,
+    index_params=index_params
+)# }
+```
 
-# bulk-import your data from the prepared data files
+## 导入数据{#import-data}
+
+在待导入数据和 Collection 都准备就绪后，可以使用如下脚本将数据导入 Collection。
+
+```python
+from pymilvus import bulk_import
+
+# Bulk-import your data from the prepared data files
 
 res = bulk_import(
     url=f"controller.api.{CLOUD_REGION}.zillizcloud.com",
@@ -171,11 +161,13 @@ print(res.json())
 # }
 ```
 
-### 查看批量导入进度{#check-bulk-import-progress}
+### 查看批量导入进度{#check-import-progress}
 
 可通过以下代码查看批量导入进度：
 
 ```python
+from pymilvus import get_import_progress
+
 job_id = res.json()['data']['jobId']
 res = get_import_progress(
     url=f"controller.api.{CLOUD_REGION}.zillizcloud.com",
@@ -204,7 +196,7 @@ print(res.json())
 #     "code": 200,
 #     "data": {
 #         "collectionName": "medium_articles",
-#         "fileName": "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/",
+#         "fileName": "folder/1/",
 #         "fileSize": 26571700,
 #         "readyPercentage": 1,
 #         "completeTime": "2023-10-28T06:51:49Z",
@@ -212,7 +204,7 @@ print(res.json())
 #         "jobId": "9d0bc230-6b99-4739-a872-0b91cfe2515a",
 #         "details": [
 #             {
-#                 "fileName": "DATA_FILES_PATH_IN_BLOCK_STORAGE/1/",
+#                 "fileName": "folder/1/",
 #                 "fileSize": 26571700,
 #                 "readyPercentage": 1,
 #                 "completeTime": "2023-10-28T06:51:49Z",
@@ -223,11 +215,13 @@ print(res.json())
 # }
 ```
 
-### 列出所有批量导入任务{#list-all-bulk-import-jobs}
+### 列出所有批量导入任务{#list-all-import-jobs}
 
 您还可以调用 ListImportJobs API 来了解其它批量导入任务的运行情况：
 
 ```python
+from pymilvus import list_import_jobs
+
 # list bulk-import jobs
 
 res = list_import_jobs(
@@ -256,48 +250,8 @@ print(res.json())
 #                 "jobId": "53632e6c-c078-4476-b840-10c4793d9c08",
 #                 "state": "ImportCompleted"
 #             },
-#             {
-#                 "collectionName": "medium_articles",
-#                 "jobId": "95e7d4c4-cf60-4ce1-ac49-145459ee0f99",
-#                 "state": "ImportCompleted"
-#             },
-#             {
-#                 "collectionName": "medium_articles",
-#                 "jobId": "ddca617e-8f2f-4612-9d6a-12b6edb69833",
-#                 "state": "ImportCompleted"
-#             },
-#             {
-#                 "collectionName": "medium_articles",
-#                 "jobId": "79fb0137-9e28-48e0-b7b1-e96706bb921f",
-#                 "state": "ImportCompleted"
-#             },
-#             {
-#                 "collectionName": "YOUR_COLLECTION_NAME",
-#                 "jobId": "dd391fed-822f-4e17-b5a7-8a43d49f1eb7",
-#                 "state": "ImportCompleted"
-#             },
-#             {
-#                 "collectionName": "YOUR_COLLECTION_NAME",
-#                 "jobId": "cf11ac48-2e1e-47d3-ab88-0e38736d9629",
-#                 "state": "ImportCompleted"
-#             },
-#             {
-#                 "collectionName": "YOUR_COLLECTION_NAME",
-#                 "jobId": "3fe83873-6154-4d99-aa40-4328bd724a65",
-#                 "state": "ImportCompleted"
-#             },
-#             {
-#                 "collectionName": "YOUR_COLLECTION_NAME",
-#                 "jobId": "9d6cd64d-cfe3-46fd-9864-b417226324e8",
-#                 "state": "ImportCompleted"
-#             },
-#             {
-#                 "collectionName": "YOUR_COLLECTION_NAME",
-#                 "jobId": "aa6c0712-83a1-4729-96a3-f87b0c8b4a00",
-#                 "state": "ImportCompleted"
-#             }
 #         ],
-#         "count": 15,
+#         "count": 2,
 #         "currentPage": 1,
 #         "pageSize": 10
 #     }

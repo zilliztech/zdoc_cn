@@ -13,15 +13,15 @@ import Admonition from '@theme/Admonition';
 
 本文介绍如何管理已创建的 Pipelines
 
-## 查看 Pipelines
+## 查看 Pipelines{#view-pipeline}
 
-### 通过 Web 控制台查看 Pipelines
+### 通过 Web 控制台查看 Pipelines{#on-web-ui}
 
 点击左侧导航栏中的 **Pipelines**。选中 **Pipelines** 选项卡。您可以查看所有已创建的 Pipelines 及其详情、用量等。
 
 ![view-pipelines-on-web-ui-cn](/img/view-pipelines-on-web-ui-cn.png)
 
-### 通过 RESTful API 查看 Pipelines
+### 通过 RESTful API 查看 Pipelines{#via-restful-api}
 
 调用以下 API 查看所有 Pipelines 或查看某一特定 Pipeline 详情。
 
@@ -152,7 +152,7 @@ import Admonition from '@theme/Admonition';
     }
     ```
 
-## 删除 Pipeline
+## 删除 Pipeline{#drop-pipeline}
 
 您可以删除不再需要使用的 Pipelines。该操作仅删除 Pipeline，不会影响自动创建的 Collection。
 
@@ -165,13 +165,13 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-### 通过 Web 控制台删除 Pipelines
+### 通过 Web 控制台删除 Pipelines{#on-web-ui}
 
 如需删除不再使用的 Pipeline，请点击操作栏中的**“...”**按钮并选择**删除**。
 
 ![delete-pipeline-cn](/img/delete-pipeline-cn.png)
 
-### 通过 RESTful API 删除 Pipelines
+### 通过 RESTful API 删除 Pipelines{#via-restful-api}
 
 根据以下示例删除 Pipelines。如下示例中使用的 `pipelineId` 为 `pipe-6ca5dd1b4672659d3c3487`。在调用 API 时，请确保将该字段的值替换为您的实际值。
 
@@ -217,7 +217,7 @@ curl --request GET \
 }
 ```
 
-## 相关文档
+## 相关文档{#related-topics}
 
 - [估算 Pipelines 用量](./estimate-pipelines-usage)
 
@@ -227,5 +227,5 @@ curl --request GET \
 
 - [运行 Deletion Pipelines](./run-deletion-pipelines)
 
-- https://zilliverse.feishu.cn/wiki/A8UFwSbMniMl6IkpJkNc4HsHnLc#doxcnsjioyRYeM2l82Lu7f0pZDc
+- [使用限制](./limits#pipelines)
 

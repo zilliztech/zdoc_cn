@@ -48,7 +48,7 @@ import Admonition from '@theme/Admonition';
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>为了方便您使用，Web 控制台界面上的输入字段名称默认设置为 <code>query_text</code> 且不可修改。如需修改输入字段名称，请<a href="./create-search-piplines#restful-apivia-restful-api">通过 Restful API 创建 Search pipeline</a>。</p>
+    <p>为了方便您使用，Web 控制台界面上的输入字段名称默认设置为 <code>query_text</code> 且不可修改。如需修改输入字段名称，请通过 Restful API <a href="./create-search-piplines#via-restful-api">创建 Search Pipelines</a>。</p>
 
     </Admonition>
 
@@ -150,5 +150,5 @@ curl --request POST \
 
 - [估算 Pipelines 用量](./estimate-pipelines-usage)
 
-- [使用限制](./limits#pipeline)
+- [使用限制](./limits#pipelines)
 

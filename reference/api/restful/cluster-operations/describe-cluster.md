@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 描述集群的详细信息。
 
-<RestHeader method="get" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/clusters/{clusterId}" />
+<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/{clusterId}" />
 
 ---
 

@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 在 Collection 的向量列上执行相似性搜索。
 
-<RestHeader method="post" endpoint="https://{cluster_endpoint}/v1/vector/search" />
+<RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v1/vector/search" />
 
 ---
 

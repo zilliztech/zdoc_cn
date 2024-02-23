@@ -5,7 +5,7 @@
   "node_token": "A8UFwSbMniMl6IkpJkNc4HsHnLc",
   "node_type": "origin",
   "obj_create_time": "1708415283",
-  "obj_edit_time": "1708426154",
+  "obj_edit_time": "1708669093",
   "obj_token": "GeIyd0MSeoMReVxNVvRchaWHnWe",
   "obj_type": "docx",
   "origin_node_token": "A8UFwSbMniMl6IkpJkNc4HsHnLc",
@@ -193,6 +193,18 @@
             {
               "text_run": {
                 "content": "组织、项目和成员",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#organizations-projects-and-members}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -931,6 +943,21 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#clusters-and-cus}",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7337597513128181763"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -1619,6 +1646,21 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#pipelines}",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7337597724336750595"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -1636,6 +1678,18 @@
             {
               "text_run": {
                 "content": "Pipeline",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#number-of-pipelines}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2027,6 +2081,18 @@
             {
               "text_run": {
                 "content": "Ingestion",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#ingestion}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2975,6 +3041,21 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#token-usage}",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7337634244804395012"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -3613,6 +3694,18 @@
             {
               "text_run": {
                 "content": "Collection",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#collections}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4674,6 +4767,18 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#partitions}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -5031,6 +5136,18 @@
             {
               "text_run": {
                 "content": "Shard",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#shards}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -5419,6 +5536,18 @@
             {
               "text_run": {
                 "content": "字段",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#fields}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -5909,6 +6038,18 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#dimensions}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -5959,6 +6100,18 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#operations}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -6001,6 +6154,18 @@
             {
               "text_run": {
                 "content": "插入",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#insert}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -6607,6 +6772,18 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#upsert}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -7197,6 +7374,18 @@
             {
               "text_run": {
                 "content": "索引",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#index}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -7877,6 +8066,18 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#flush}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -7991,6 +8192,18 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#load}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -8097,6 +8310,18 @@
             {
               "text_run": {
                 "content": "搜索",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#search}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -8253,6 +8478,18 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#query}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -8352,6 +8589,18 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#delete}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -8433,6 +8682,21 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#drop}",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7337615665932763139"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -8481,6 +8745,18 @@
             {
               "text_run": {
                 "content": "CU 容量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#cu-capacity}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -8558,6 +8834,18 @@
             {
               "text_run": {
                 "content": "数据导入（控制台）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#data-import-on-console}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -9172,6 +9460,18 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#backup-on-console}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -9214,6 +9514,18 @@
             {
               "text_run": {
                 "content": "数据恢复（控制台）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#restore-on-console}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

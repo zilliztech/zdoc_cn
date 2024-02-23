@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 列出集群中已创建的 Collection。
 
-<RestHeader method="get" endpoint="https://{cluster_endpoint}/v1/vector/collections" />
+<RestHeader method="get" endpoint="https://${CLUSTER_ENDPOINT}/v1/vector/collections" />
 
 ---
 

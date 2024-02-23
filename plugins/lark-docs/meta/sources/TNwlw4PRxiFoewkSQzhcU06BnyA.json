@@ -5,7 +5,7 @@
   "node_token": "TNwlw4PRxiFoewkSQzhcU06BnyA",
   "node_type": "origin",
   "obj_create_time": "1708398060",
-  "obj_edit_time": "1708426428",
+  "obj_edit_time": "1708670797",
   "obj_token": "MxondUDCCoIWaqxYhHGcJG3Snyh",
   "obj_type": "docx",
   "origin_node_token": "TNwlw4PRxiFoewkSQzhcU06BnyA",
@@ -42,7 +42,8 @@
           "TKpPdwOXTocieBxz03VcJr69ntM",
           "BhxcdfTx0o7A9IxjebUcMN8rnQd",
           "CWZUdDnEXoF1lcxT2Spc93Jgnle",
-          "IQjmdzxOmokVdzx1U3Bc8aElnYg"
+          "IQjmdzxOmokVdzx1U3Bc8aElnYg",
+          "T5PedgVWAoWHQSxHpCHcxMUEnGR"
         ],
         "page": {
           "elements": [
@@ -193,6 +194,18 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#what-are-tokens}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -310,6 +323,18 @@
             {
               "text_run": {
                 "content": "Pipelines 如何处理 Token？",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#how-is-the-token-processed-by-pipelines}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -455,6 +480,18 @@
             {
               "text_run": {
                 "content": "估算 Pipeline 用量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#estimate-pipelines-usage}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1317,8 +1354,33 @@
           }
         },
         "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh"
+      },
+      {
+        "block_id": "T5PedgVWAoWHQSxHpCHcxMUEnGR",
+        "block_type": 2,
+        "parent_id": "MxondUDCCoIWaqxYhHGcJG3Snyh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
       }
     ],
-    "counts": 35
+    "counts": 36
   }
 }

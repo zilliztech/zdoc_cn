@@ -5,7 +5,7 @@
   "node_token": "BCCjwd2xFivKqUkQrDXcbv0dn5f",
   "node_type": "origin",
   "obj_create_time": "1708397983",
-  "obj_edit_time": "1708426191",
+  "obj_edit_time": "1708671993",
   "obj_token": "QC79dHokloVVakxVT85cutwInZc",
   "obj_type": "docx",
   "origin_node_token": "BCCjwd2xFivKqUkQrDXcbv0dn5f",
@@ -110,6 +110,18 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#view-pipeline}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -127,6 +139,18 @@
             {
               "text_run": {
                 "content": "通过 Web 控制台查看 Pipelines",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#on-web-ui}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -236,6 +260,18 @@
             {
               "text_run": {
                 "content": "通过 RESTful API 查看 Pipelines",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#via-restful-api}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -847,6 +883,18 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#drop-pipeline}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -983,6 +1031,18 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#on-web-ui}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -1084,6 +1144,18 @@
             {
               "text_run": {
                 "content": "通过 RESTful API 删除 Pipelines",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#via-restful-api}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1325,6 +1397,18 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#related-topics}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -1452,15 +1536,18 @@
         "bullet": {
           "elements": [
             {
-              "text_run": {
-                "content": "https://zilliverse.feishu.cn/wiki/A8UFwSbMniMl6IkpJkNc4HsHnLc#doxcnsjioyRYeM2l82Lu7f0pZDc",
+              "mention_doc": {
+                "obj_type": 16,
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
                   "italic": false,
                   "strikethrough": false,
                   "underline": false
-                }
+                },
+                "title": "使用限制",
+                "token": "A8UFwSbMniMl6IkpJkNc4HsHnLc",
+                "url": "https://zilliverse.feishu.cn/wiki/A8UFwSbMniMl6IkpJkNc4HsHnLc#doxcnsjioyRYeM2l82Lu7f0pZDc"
               }
             }
           ],

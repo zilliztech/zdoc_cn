@@ -20,7 +20,7 @@ import TabItem from '@theme/TabItem';
 
 - 您已在 https://cloud.zilliz.com.cn/signup 注册了 Zilliz Cloud 账号。更多详情，请参见[注册账号](./register-with-zilliz-cloud)。
 
-- 您已安装需要使用的 SDK。当前，有四种 SDK 可供选择，分别是 [Python](./install-sdks#pymilvuspython-sdkinstall-pymilvus-python-sdk)，[Java](./install-sdks#java-sdkinstall-java-sdk)，[Go](./install-sdks#go-sdkinstall-go-sdk) 和 [Node.js](./install-sdks#nodejs-sdkinstall-nodejs-sdk)。更多详情，请参见[安装 SDK](./install-sdks)。
+- 您已安装需要使用的 SDK。当前，有四种 SDK 可供选择，分别是 [Python](./install-sdks#install-pymilvus-python-sdk)，[Java](./install-sdks#install-java-sdk)，[Go](./install-sdks#install-go-sdk) 和 [Node.js](./install-sdks#install-nodejs-sdk)。更多详情，请参见[安装 SDK](./install-sdks)。
 
 - 您已下载示例数据集。更多详情，请参见[示例数据集](./example-dataset)。
 

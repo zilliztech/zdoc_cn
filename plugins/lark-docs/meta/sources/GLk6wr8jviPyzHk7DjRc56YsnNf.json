@@ -5,7 +5,7 @@
   "node_token": "GLk6wr8jviPyzHk7DjRc56YsnNf",
   "node_type": "origin",
   "obj_create_time": "1694688156",
-  "obj_edit_time": "1706083191",
+  "obj_edit_time": "1708656963",
   "obj_token": "YBMQdFaJLom9yvxVp9hcmGnmnye",
   "obj_type": "docx",
   "origin_node_token": "GLk6wr8jviPyzHk7DjRc56YsnNf",
@@ -623,7 +623,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "from pymilvus import CollectionSchema, FieldSchema, DataType\n\nschema = CollectionSchema(\n    fields=[\n        FieldSchema(name=\"id\", dtype=DataType.INT64, is_primary=True),\n        FieldSchema(name=\"vector\", dtype=DataType.FLOAT_VECTOR, dim=768),\n        FieldSchema(name=\"scalar_1\", dtype=DataType.VARCHAR, max_length=512),\n        FieldSchema(name=\"scalar_2\", dtype=DataType.INT64)\n    ],\n    auto_id=False,\n    enable_dynamic_field=True,\n",
+                "content": "from pymilvus import MilvusClient, DataType\n\n# You need to work out a collection schema out of your dataset.\nschema = MilvusClient.create_schema(\n    auto_id=False,\n    enable_dynamic_field=True\n)\n\nschema.add_field(field_name=\"id\", datatype=DataType.INT64, is_primary=True)\nschema.add_field(field_name=\"vector\", datatype=DataType.FLOAT_VECTOR, dim=768)\nschema.add_field(field_name=\"scalar_1\", datatype=DataType.VARCHAR, max_length=512)\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -635,7 +635,7 @@
             },
             {
               "text_run": {
-                "content": ")",
+                "content": "schema.add_field(field_name=\"scalar_2\", datatype=DataType.INT64)",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

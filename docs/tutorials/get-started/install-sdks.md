@@ -13,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 本文介绍如何安装 Milvus SDK，以连接到 Zilliz Cloud 集群。
 
-Zilliz Cloud 提供托管式 Milvus 向量数据库服务。您可以按需安装以下语言的 SDK 以连接到集群：[Python](./install-sdks#pymilvuspython-sdkinstall-pymilvus-python-sdk)、[Java](./install-sdks#java-sdkinstall-java-sdk)、[Go](./install-sdks#go-sdkinstall-go-sdk) 或 [Node.js](./install-sdks#nodejs-sdkinstall-nodejs-sdk)。
+Zilliz Cloud 提供托管式 Milvus 向量数据库服务。您可以按需安装以下语言的 SDK 以连接到集群：[Python](./install-sdks#install-pymilvus-python-sdk)、[Java](./install-sdks#install-java-sdk)、[Go](./install-sdks#install-go-sdk) 或 [Node.js](./install-sdks#install-nodejs-sdk)。
 
 <Admonition type="info" icon="📘" title="说明">
 

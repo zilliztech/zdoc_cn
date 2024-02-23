@@ -982,7 +982,8 @@ class larkDocWriter {
                         const blockType = this.block_types[headerBlock['block_type'] - 1];
                         if (parseInt(blockType.slice(-1)) <= 9) {
                             const title = await this.__text_elements(headerBlock[blockType]['elements']);
-                            const slug = slugify(title, {strict: true, lower: true});
+                            console.log(title)
+                            const slug = title.split('{#')[1].replace(/}$/, '')
                             newUrl += `#${slug}`;
                         }
                     }

@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 在 Collection 按指定 ID 返回对应的 Entity。根据实际情况不同，指定的 ID 可能为一个字符串、一个整数、一个字符串列表或一个整数列表等多种形式。具体可参见下方示例中罗列的四种情况。
 
-<RestHeader method="post" endpoint="https://{cluster_endpoint}/v1/vector/get" />
+<RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v1/vector/get" />
 
 ---
 

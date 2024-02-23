@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 从 Collection 中删除一个或多条数据。
 
-<RestHeader method="post" endpoint="https://{cluster_endpoint}/v1/vector/delete" />
+<RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v1/vector/delete" />
 
 ---
 

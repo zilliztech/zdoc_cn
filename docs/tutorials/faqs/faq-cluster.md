@@ -35,7 +35,7 @@ sidebar_position: 2
 
 ### 如何为集群缩容？{#how-can-i-scale-down-my-cluster-cu-size}
 
-如果您需要缩小集群 CU 大小，请先创建一个新集群，并在创建时选择您需要的 CU 大小。随后，将原集群中的数据[迁移](./migrate-between-clusters#dedicated-procedure)至新集群中。如在迁移过程中遇到任何问题，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
+如果您需要缩小集群 CU 大小，请先创建一个新集群，并在创建时选择您需要的 CU 大小。随后，将原集群中的数据[迁移](./migrate-between-clusters#procedure)至新集群中。如在迁移过程中遇到任何问题，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 
 ### Zilliz Cloud 如何处理不活跃集群？{#what-happens-to-my-inactive-clusters}
 

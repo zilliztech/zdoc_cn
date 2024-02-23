@@ -5,7 +5,7 @@
   "node_token": "LTs4wVOhbiJirSkdBn2cblmin4g",
   "node_type": "origin",
   "obj_create_time": "1708398104",
-  "obj_edit_time": "1708593693",
+  "obj_edit_time": "1708672153",
   "obj_token": "HkR5dA5OIogUa8xbeKFceGJfn3g",
   "obj_type": "docx",
   "origin_node_token": "LTs4wVOhbiJirSkdBn2cblmin4g",
@@ -489,6 +489,18 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#index-documents}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -706,6 +718,18 @@
             {
               "text_run": {
                 "content": "使用 Pipeline 作为查询引擎",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#use-pipelines-as-query-engine}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1033,6 +1057,18 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#retrieve}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -1133,6 +1169,18 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "{#query}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -1212,6 +1260,18 @@
             {
               "text_run": {
                 "content": "高级用例",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#advanced-use-cases}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1441,6 +1501,18 @@
             {
               "text_run": {
                 "content": "定制化 Pipelines",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#advanced-use-cases}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1715,6 +1787,18 @@
             {
               "text_run": {
                 "content": "多租户",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "{#multi-tenancy}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

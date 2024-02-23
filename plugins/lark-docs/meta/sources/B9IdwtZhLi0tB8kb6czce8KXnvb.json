@@ -5,7 +5,7 @@
   "node_token": "B9IdwtZhLi0tB8kb6czce8KXnvb",
   "node_type": "origin",
   "obj_create_time": "1705918764",
-  "obj_edit_time": "1705924028",
+  "obj_edit_time": "1708656923",
   "obj_token": "NJGRdRyTSoPgHaxKCPBc2bden2g",
   "obj_type": "docx",
   "origin_node_token": "B9IdwtZhLi0tB8kb6czce8KXnvb",
@@ -699,7 +699,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "from pymilvus import (\n    FieldSchema,\n    CollectionSchema,\n    DataType\n)\n\n# You need to work out a collection schema out of your dataset.\nschema = CollectionSchema(\n    fields=[\n        FieldSchema(name=\"id\", dtype=DataType.INT64, is_priamry=True),\n        FieldSchema(name=\"vector\", dtype=DataType.FLOAT_VECTOR, dim=768),\n        FieldSchema(name=\"scalar_1\", dtype=DataType.VARCHAR, max_length=512),\n        FieldSchema(name=\"scalar_2\", dtype=DataType.INT64)\n    ],\n    auto_id=False,\n    enable_dynamic_field=True,\n",
+                "content": "from pymilvus import MilvusClient, DataType\n\n# You need to work out a collection schema out of your dataset.\nschema = MilvusClient.create_schema(\n    auto_id=False,\n    enable_dynamic_field=True\n)\n\nschema.add_field(field_name=\"id\", datatype=DataType.INT64, is_primary=True)\nschema.add_field(field_name=\"vector\", datatype=DataType.FLOAT_VECTOR, dim=768)\nschema.add_field(field_name=\"scalar_1\", datatype=DataType.VARCHAR, max_length=512)\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -711,7 +711,7 @@
             },
             {
               "text_run": {
-                "content": ")",
+                "content": "schema.add_field(field_name=\"scalar_2\", datatype=DataType.INT64)",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1430,7 +1430,7 @@
           "elements": [
             {
               "text_run": {
-                "content": " from pymilvus import RemoteBulkWriter, BulkFileType\n\nconn = RemoteBulkWriter.ConnectParam(\n    endpoint=\"storage.googleapis.com\",\n    access_key=\"Your-Access-Key\",\n    secret_key=\"Your-Secret-key\",\n    bucket_name=\"Your-Bucket-Name\",\n    secure=True\n)\n\nwriter = RemoteBulkWriter(\n    schema=schema,\n    remote_path=\"/\",\n    connect_param=conn,\n    file_type=BulkFileType.NPY\n",
+                "content": "# AWS S3/GCS\n\nfrom pymilvus import RemoteBulkWriter\n\n# Third-party constants\nYOUR_ACCESS_KEY=\"YOUR_ACCESS_KEY\"\nYOUR_SECRET_KEY=\"YOUR_SECRET_KEY\"\nYOUR_BUCKET_NAME=\"YOUR_BUCKET_NAME\"\n\n# Connections parameters to access the remote bucket\nconn = RemoteBulkWriter.S3ConnectParam(\n    endpoint=\"storage.googleapis.com\", # Use \"s3.amazonaws.com\" for AWS S3\n    access_key=YOUR_ACCESS_KEY,\n    secret_key=YOUR_SECRET_KEY,\n    bucket_name=YOUR_BUCKET_NAME, # Use a bucket hosted in the same cloud as the target cluster\n    secure=True\n)\n\n# ======\n# Azure Blog Storage\n\n# Third-party constants\nAZURE_CONNECT_STRING = \"\"\n\nconn = RemoteBulkWriter.AzureConnectParam(\n    conn_str=AZURE_CONNECT_STRING,\n    container_name=BUCKET_NAME\n)\n\n# or\n\n# Third-party constants\nAZURE_ACCOUNT_URL = \"\"\nAZURE_CREDENTIAL = \"\"\n\nconn = RemoteBulkWriter.AzureConnectParam(\n    account_url=AZURE_ACCOUNT_URL,\n    credential=AZURE_CREDENTIAL,\n    container_name=BUCKET_NAME\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

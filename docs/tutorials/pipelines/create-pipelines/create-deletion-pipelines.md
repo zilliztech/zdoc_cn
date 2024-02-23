@@ -135,5 +135,5 @@ curl --request POST \
 
 - [运行 Deletion Pipelines](./run-deletion-pipelines)
 
-- [使用限制](./limits#pipeline)
+- [使用限制](./limits#pipelines)
 

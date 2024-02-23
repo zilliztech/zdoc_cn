@@ -19,7 +19,7 @@ import Admonition from '@theme/Admonition';
 
 ![view_system_metrics](/img/view_system_metrics.png)
 
-Zilliz Cloud 的性能指标图表展示了包括资源使用、每秒查询量（QPS）、请求结果及数据操作等方面的性能数据，提供了对特定时间段的详细分析。
+Zilliz Cloud 的性能指标图表展示了包括资源使用、Query 请求速率（QPS）、请求结果及数据操作等方面的性能数据，提供了对特定时间段的详细分析。
 
 关于每个性能指标图表的详细信息，请参阅[查看性能指标图表](./view-cluster-metric-charts#view-metric-charts)。
 
@@ -73,15 +73,15 @@ Zilliz Cloud 提供了多种指标图表，用于从不同角度监控集群性�
 
 ### 性能监控{#performance}
 
-要查看性能指标图表，请在**指标**选项卡上找到**性能**部分。这些图表提供了集群性能的快照，包括每秒查询请求数（QPS）、每秒向量搜索操作数（VPS）、请求延时（Latency）和请求失败率。
+要查看性能指标图表，请在**指标**选项卡上找到**性能**部分。这些图表提供了集群性能的快照，包括每秒 Query 请求数（QPS）、每秒向量 Search 操作数（VPS）、请求延时（Latency）和请求失败率。
 
-- **读请求 QPS/VPS**：每秒搜索（search）和查询（query）类型请求数。查询请求没有 VPS，因为查询过程不涉及到向量。
+- **读请求 QPS/VPS**：每秒 Search 和 Query 类型请求数。Query 请求没有 VPS，因为 Query 过程不涉及到向量。
 
 - **写请求 QPS/VPS**：每秒数据插入（insert）和 Upsert 类型请求数。
 
-- **读请求延时（Latency）**：从发起读请求（搜索和查询请求）到返回结果的耗时的平均值或 P99 值。
+- **读请求延时（Latency）**：从发起读请求（Search 和 Query 请求）到返回结果的耗时的平均值或 P99 值。
 
-- **写请求延时（Latency）**：从发起写请求（数据插入和 Upsert 请求）到返回结果的耗时的平均值或 P99 值。
+- **写请求延时（Latency）**：从发起写请求（数据 Insert 和 Upsert 请求）到返回结果的耗时的平均值或 P99 值。
 
 - **读请求失败率**：超时读请求数占比。
 

@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 描述 Collection 的详细信息。
 
-<RestHeader method="get" endpoint="https://{cluster_endpoint}/v1/vector/collections/describe" />
+<RestHeader method="get" endpoint="https://${CLUSTER_ENDPOINT}/v1/vector/collections/describe" />
 
 ---
 

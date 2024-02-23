@@ -11,7 +11,7 @@ import Admonition from '@theme/Admonition';
 
 # 了解 Pipelines
 
-Zilliz Cloud Pipelines 可以将文档、文本片段和图像等非结构化数据转换成可搜索的向量并存储在 [Collection](./cluster-collection-and-entities#collectioncollection) 中。本文将介绍 Zilliz Cloud Pipelines 的三种主要类型及其 Function。
+Zilliz Cloud Pipelines 可以将文档、文本片段和图像等非结构化数据转换成可搜索的向量并存储在 [Collection](./cluster-collection-and-entities#collection) 中。本文将介绍 Zilliz Cloud Pipelines 的三种主要类型及其 Function。
 
 ![MUJnbGxqRo60zGxoPn3cU0MpnQc](/img/MUJnbGxqRo60zGxoPn3cU0MpnQc.png)
 
@@ -33,9 +33,7 @@ INDEX_DOC Function 将输入文本文档拆分成块，并将文档块转换为 
 
 <Admonition type="info" icon="📘" title="说明">
 
-</Admonition>
-
-<Admonition type="info" icon="说明" title="undefined">
+<p>1 个 Ingestion pipeline 需要添加且只能添加 1 个 INDEX_DOC Function。</p>
 
 </Admonition>
 

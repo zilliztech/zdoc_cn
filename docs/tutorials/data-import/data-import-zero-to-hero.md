@@ -7,7 +7,8 @@ sidebar_position: 1
 ---
 
 import Admonition from '@theme/Admonition';
-
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # 用户指南：数据导入从入门到精通
 
@@ -56,9 +57,9 @@ CLOUD_API_ENDPOINT="controller.api.{0}.cloud.zilliz.com.cn".format(CLOUD_REGION)
 COLLECTION_NAME=""
 
 # 远程对象存储桶访问参数
-ACCESS_KEY=""
-SECRET_KEY=""
-BUCKET_NAME="" 
+YOUR_ACCESS_KEY=""
+YOUR_SECRET_KEY=""
+YOUR_BUCKET_NAME="" 
 ```
 
 ## 下载示例数据{#download-example-dataset}
@@ -100,19 +101,18 @@ curl https://assets.zilliz.com/doc-assets/medium_articles_partial_a13e0f2a.csv \
 为了更好地演示 Collection 的能力，我们在目标 Collection 的 Schema 中包含了前 4 个字段，并将后 4 个字段做为动态字段使用。
 
 ```python
-from pymilvus import FieldSchema, CollectionSchema, DataType
+from pymilvus import MilvusClient, DataType
 
-schema = CollectionSchema(
-    fields=[
-        FieldSchema(name='id', dtype=DataType.INT64, is_primary=True),
-        FieldSchema(name='title_vector', dtype=DataType.FLOAT_VECTOR, dim=768),
-        FieldSchema(name='title', dtype=DataType.VARCHAR, max_length=512),
-        FieldSchema(name='link', dtype=DataType.VARCHAR, max_length=512),
-    ],
-    description="A series of articles from medium.com",
+# You need to work out a collection schema out of your dataset.
+schema = MilvusClient.create_schema(
     auto_id=False,
     enable_dynamic_field=True
 )
+
+schema.add_field(field_name="id", datatype=DataType.INT64, is_primary=True)
+schema.add_field(field_name="title_vector", datatype=DataType.FLOAT_VECTOR, dim=768)
+schema.add_field(field_name="title", datatype=DataType.VARCHAR, max_length=512)
+schema.add_field(field_name="link", datatype=DataType.VARCHAR, max_length=512)
 ```
 
 上述代码中的字段解释如下：
@@ -136,31 +136,34 @@ schema = CollectionSchema(
 在创建 Schema 后，就可以继续创建目标 Collection 了。
 
 ```python
-from pymilvus import connections, Collection
+from pymilvus import MilvusClient
 
-# 1. 建立连接
-connections.connect(
-        uri=CLUSTER_ENDPOINT,
-        token=TOKEN
-)
-# 2. 创建 Collection
-collection = Collection(name=COLLECTION_NAME, schema=schema)
+# Zilliz Cloud 常量
+CLUSTER_ENDPOINT = "YOUR_CLUSTER_ENDPOINT"
+TOKEN = "YOUR_TOKEN"
+COLLECTION_NAME = "YOUR_COLLECTION_NAME"
 
-# 3. 设置索引参数
-index_params = {
-    "index_type": "AUTOINDEX",
-    "metric_type": "IP",
-    "params": {}
-}
-
-# 4. 创建索引
-collection.create_index(
-        field_name="title_vector",
-        index_params=index_params,
+# 1. 创建一个 MilvusClient
+client = MilvusClient(
+    uri=CLUSTER_ENDPOINT,
+    token=TOKEN
 )
 
-# 5. 加载 Collection 数据到内存
-collection.load()
+# 2. 设置索引参数
+index_params = MilvusClient.prepare_index_params()
+
+index_params.add_index(
+    field_name="title_vector",
+    index_type="AUTOINDEX",
+    metric_type="IP"
+)
+
+# 3. 创建 Collection
+client.create_collection(
+    collection_name=COLLECTION_NAME,
+    schema=schema,
+    index_params=index_params
+)
 ```
 
 ## 准备源数据{#prepare-source-data}
@@ -171,19 +174,56 @@ collection.load()
 
 当 Schema 准备好后，就可以使用该 Schema 创建 **RemoteBulkWriter** 了。由于 **RemoteBulkWriter** 需要访问您的远程对象存储桶。因此，您需要先设置好连接远程对象存储桶的 **ConnectParam** 对象并在创建 **RemoteBulkWriter** 时引用该参数。
 
+<Tabs groupId="python" defaultValue='python' values={[{"label":"AWS S3/GCS","value":"python"},{"label":"Microsoft Azure","value":"python_1"}]}>
+<TabItem value='python'>
+
 ```python
+
 from pymilvus import RemoteBulkWriter, BulkFileType
 
-# 远程对象存储桶连接参数
-conn = RemoteBulkWriter.ConnectParam(
-    endpoint="oss-cn-hangzhou.aliyuncs.com", # 替换成您的 oss endpoint。具体可参考 https://help.aliyun.com/zh/oss/user-guide/regions-and-endpoints
+# 三方服务常量
+YOUR_ACCESS_KEY = "YOUR_ACCESS_KEY"
+YOUR_SECRET_KEY = "YOUR_SECRET_KEY"
+YOUR_BUCKET_NAME = "YOUR_BUCKET_NAME"
+
+# 远程存储桶连接参数
+conn = RemoteBulkWriter.S3ConnectParam(
+    endpoint="storage.googleapis.com", # Use "s3.amazonaws.com" for AWS S3
     access_key=ACCESS_KEY,
     secret_key=SECRET_KEY,
-    bucket_name=BUCKET_NAME, # 替换成您的远程对象存储桶名称
-    region="oss-cn-hangzhou", # 替换成您的桶所在地域。具体可参考 https://help.aliyun.com/zh/oss/user-guide/regions-and-endpoints
+    bucket_name=BUCKET_NAME, # Use a bucket hosted in the same cloud as the target cluster
     secure=True
 )
+
 ```
+
+</TabItem>
+<TabItem value='python_1'>
+
+```python
+# 三方服务常量
+AZURE_CONNECT_STRING = ""
+
+conn = RemoteBulkWriter.AzureConnectParam(
+    conn_str=AZURE_CONNECT_STRING,
+    container_name=BUCKET_NAME
+)
+
+# 或
+
+# 三方服务常量
+AZURE_ACCOUNT_URL = ""
+AZURE_CREDENTIAL = ""
+
+conn = RemoteBulkWriter.AzureConnectParam(
+    account_url=AZURE_ACCOUNT_URL,
+    credential=AZURE_CREDENTIAL,
+    container_name=BUCKET_NAME
+)
+```
+
+</TabItem>
+</Tabs>
 
 <Admonition type="info" icon="📘" title="说明">
 

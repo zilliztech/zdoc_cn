@@ -13,7 +13,7 @@ import Admonition from '@theme/Admonition';
 
 本文介绍了 Zilliz Cloud 平台和集群的使用限制信息。如需了解更多限制信息，可向我们[提交请求](https://support.zilliz.com.cn/hc/zh-cn)。
 
-## 组织、项目和成员
+## 组织、项目和成员{#organizations-projects-and-members}
 
 下表展示了单个用户可加入的最大组织和项目数。
 
@@ -24,7 +24,7 @@ import Admonition from '@theme/Admonition';
 |  项目     |  10         |  每个用户可以创建 10 个项目。                       |
 |  项目成员   |  100        |  每个项目最多可以容纳 100 个成员。每个用户可以加入同一组织内的多个项目。 |
 
-## 集群和 CU
+## 集群和 CU{#clusters-and-cus}
 
 集群和 CU 数量的限制取决于您的支付方式和订阅计划。下表展示了企业版集群相关限制。
 
@@ -42,9 +42,9 @@ import Admonition from '@theme/Admonition';
 
 如需创建超过 32 个 CU 规格的集群，请[联系我们](https://zilliz.com.cn/contact-sales?firstname=xushuang&lastname=hu&company=Zilliz&name=Zilliz&email=xushuang.hu@zilliz.com&fullname=hu%20xushuang&phone=--&country=)。
 
-## Pipeline
+## Pipeline{#pipelines}
 
-### Pipeline
+### Pipeline{#number-of-pipelines}
 
 下表展示了项目中不同类型的 Pipeline 的相关限制。
 
@@ -54,7 +54,7 @@ import Admonition from '@theme/Admonition';
 |  Deletion Pipeline  |  10             |
 |  Search Pipeline    |  10             |
 
-### Ingestion
+### Ingestion{#ingestion}
 
 下表展示了每个 Embedding 模型可自定义的切片大小范围。
 
@@ -77,7 +77,7 @@ import Admonition from '@theme/Admonition';
 |  zilliz/bge-base-en-v1.5  |  3,500                      |
 |  zilliz/bge-base-zh-v1.5  |  3,500                      |
 
-### Token 用量
+### Token 用量{#token-usage}
 
 下表展示了各模型的 Token 用量限制。
 
@@ -93,7 +93,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## Collection
+## Collection{#collections}
 
 |  **类型**         |  **最大数量**                       |  **描述**                                                                 |
 | --------------- | ------------------------------- | ----------------------------------------------------------------------- |
@@ -131,15 +131,15 @@ import Admonition from '@theme/Admonition';
 
 此外，每个集群创建 Collection 的速率限制为每秒 1 个 Collection。
 
-### Partition
+### Partition{#partitions}
 
 |  **类型**         |  **最大数量（每个 Collection）** |  描述                                               |
 | --------------- | ------------------------ | ------------------------------------------------- |
 |  企业版集群<br/>  |  4096                    |  在企业版集群中，您可以为每个 Collection 创建最多 4096 个 Partition。 |
 
-在计算已使用容量和通用容量时，请参考 [Collection](./limits#collection) 部分的说明。此外，每个集群创建 Partition 的速率限制为每秒 1 个 Partition。
+在计算已使用容量和通用容量时，请参考 [Collection](./limits#collections) 部分的说明。此外，每个集群创建 Partition 的速率限制为每秒 1 个 Partition。
 
-### Shard
+### Shard{#shards}
 
 创建 Collection 时，您可以为 Collection 创建最多 8 个 Shard。如果未指定，Collection 默认具有一个 Shard。
 
@@ -150,9 +150,9 @@ import Admonition from '@theme/Admonition';
 
 建议在创建 Collection 时保持 Shard 数量的默认设置，特别是对于使用不超过 24 个 CU 的集群。
 
-在计算已使用容量和通用容量时，请参考 [Collection](./limits#collection) 部分的说明。
+在计算已使用容量和通用容量时，请参考 [Collection](./limits#collections) 部分的说明。
 
-### 字段
+### 字段{#fields}
 
 |  **内容**              |  **最大数量** |  **描述**          |
 | -------------------- | --------- | ---------------- |
@@ -165,15 +165,15 @@ import Admonition from '@theme/Admonition';
 
 - 某些字段（如 VarChar 或 JSON）使用的内存超出预期，可能导致集群空间耗尽。
 
-### 向量维度
+### 向量维度{#dimensions}
 
 向量字段的最大维度数为 32768。
 
-## 数据操作
+## 数据操作{#operations}
 
 下文将介绍 Zilliz Cloud 集群中常见数据操作的速率限制。
 
-### 插入
+### 插入{#insert}
 
 每个插入请求/响应的大小不应超过 64 MB。
 
@@ -190,7 +190,7 @@ import Admonition from '@theme/Admonition';
 
 为了使插入的数据能够立即被检索到，建议将搜索或查询请求中的一致性级别更改为 **Strong**。详细信息，请参阅[一致性水平](./consistency-level)。
 
-### Upsert
+### Upsert{#upsert}
 
 每个 Upsert 请求/响应的大小不应超过 64 MB。
 
@@ -207,7 +207,7 @@ import Admonition from '@theme/Admonition';
 
 为了使 Upsert 的数据能够立即被检索到，建议将搜索或查询请求中的一致性级别更改为 **Strong**。详细信息，请参阅[一致性水平](./consistency-level)。
 
-### 索引
+### 索引{#index}
 
 不同字段类型对应不同类型的索引。以下表格列出了可索引的字段类型及其对应的索引类型。
 
@@ -218,7 +218,7 @@ import Admonition from '@theme/Admonition';
 |  Int8/16/32/64 |  STL_SORT  |  N/A              |
 |  Float32/64    |  STL_SORT  |  N/A              |
 
-### 写入
+### 写入{#flush}
 
 每个集群的写入请求速率限制为每秒 1 个请求。
 
@@ -228,7 +228,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-### 加载
+### 加载{#load}
 
 每个集群的加载请求速率限制为每秒 1 个请求。
 
@@ -238,7 +238,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-### 搜索
+### 搜索{#search}
 
 每个搜索请求/响应的大小不应超过 64 MB。
 
@@ -246,27 +246,27 @@ import Admonition from '@theme/Admonition';
 
 每个搜索响应返回的 Entity 数量（**topK**）不超过 16384 个。
 
-### 查询
+### 查询{#query}
 
 每个查询请求/响应的大小不应超过 64 MB。
 
 每个查询响应返回的 Entity 数量（**topK**）不超过 16384 个。
 
-### 删除 Entity
+### 删除 Entity{#delete}
 
 每个删除请求/响应的大小不应超过 64 MB。
 
 每个集群的删除请求速率限制为每秒 0.5 MB。
 
-### 删除 Collection
+### 删除 Collection{#drop}
 
 每个集群的删除请求速率限制为每秒 1 个请求。
 
-## CU 容量
+## CU 容量{#cu-capacity}
 
 请参阅[选择合适的 CU 类型](./cu-types-explained)了解更多。
 
-## 数据导入（控制台）
+## 数据导入（控制台）{#data-import-on-console}
 
 |  文件类型           |  本地导入 |  对象存储导入                               |
 | --------------- | ----- | ------------------------------------- |
@@ -276,10 +276,10 @@ import Admonition from '@theme/Admonition';
 
 请参阅[准备导入数据](./prepare-source-data)了解更多。
 
-## 数据备份（控制台）
+## 数据备份（控制台）{#backup-on-console}
 
 Zilliz Cloud 提供免费的备份存储服务，快照可保存长达30天。
 
-## 数据恢复（控制台）
+## 数据恢复（控制台）{#restore-on-console}
 
 您可以从快照中恢复 Zilliz Cloud 集群。恢复的集群和原集群应属于同一地域，并使用相同的 CU 类型。

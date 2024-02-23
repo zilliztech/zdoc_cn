@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 在 Collection 的指定标题列上按指定条件执行查询操作。
 
-<RestHeader method="post" endpoint="https://{cluster_endpoint}/v1/vector/query" />
+<RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v1/vector/query" />
 
 ---
 

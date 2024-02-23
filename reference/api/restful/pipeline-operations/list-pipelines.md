@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 列出指定项目中的所有 Pipeline。
 
-<RestHeader method="get" endpoint="https://{cluster_endpoint}/v1/pipelines" />
+<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/pipelines" />
 
 ---
 
@@ -27,7 +27,7 @@ import RestHeader from '@site/src/components/RestHeader';
 ```shell
 curl --request GET \
     --header "Content-Type: application/json" \
-    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --header "Authorization: Bearer ${API_KEY}" \
     --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines?projectId=proj-**********************"
 ```
 

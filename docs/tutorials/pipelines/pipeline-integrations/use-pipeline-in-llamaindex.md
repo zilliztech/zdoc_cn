@@ -43,7 +43,7 @@ import Admonition from '@theme/Admonition';
 
     </Admonition>
 
-## 为文档创建索引
+## 为文档创建索引{#index-documents}
 
 Zilliz Cloud Pipelines 支持来自 AWS S3 和 Google Cloud Storage 的文件。您可以从对象存储生成预签名 URL，并使用 `from_document_url()` 或 `insert_doc_url()` 来上传文件。它可以自动索引文档并将文档块作为向量存储在 Zilliz Cloud 上。
 
@@ -83,7 +83,7 @@ zcp_index.insert_doc_url(
 
 </Admonition>
 
-## 使用 Pipeline 作为查询引擎
+## 使用 Pipeline 作为查询引擎{#use-pipelines-as-query-engine}
 
 使用 `ZillizCloudPipelineIndex`进行语义搜索时，您可以通过指定一些参数将其用作查询引擎 `as_query_engine()`：
 
@@ -109,7 +109,7 @@ query_engine_milvus23 = zcp_index.as_query_engine(
 
 Milvus 2.3 文档语义搜索或检索增强生成（RAG）引擎已经准备就绪。
 
-### 检索
+### 检索{#retrieve}
 
 以下代码片段演示了如何使用 Zilliz Cloud Pipelines 进行语义搜索。
 
@@ -125,7 +125,7 @@ print(retrieved_nodes)
 
 带有过滤器的查询引擎仅检索带有 "版本 2.3" 标签的文本节点。
 
-### 查询
+### 查询{#query}
 
 以下代码片段展示了如何将查询引擎作为由 Zilliz Cloud Pipelines 和 OpenAI 的大型语言模型支持的 RAG 代理来使用。
 
@@ -137,7 +137,7 @@ print(response.response)
 # Yes, users can delete entities by filtering non-primary fields using complex boolean expressions in Milvus. The complex boolean expressions allow users to define specific conditions to filter entities based on non-primary fields, such as word_count or book_name. By specifying the desired conditions in the boolean expression, users can delete entities that meet those conditions. However, it is important to note that deleting entities by complex boolean expressions is not an atomic operation, and if it fails halfway through, some data may still be deleted.
 ```
 
-## 高级用例
+## 高级用例{#advanced-use-cases}
 
 您可以在不进行数据摄取的情况下获取托管索引。要开始使用 Zilliz Cloud Pipelines，您需要提供管道 ID 或相关联的集合名称：
 
@@ -163,7 +163,7 @@ advanced_zcp_index = ZillizCloudPipelineIndex(
 # No available pipelines. Please create pipelines first.
 ```
 
-### 定制化 Pipelines
+### 定制化 Pipelines{#advanced-use-cases}
 
 如果没有提供或找到 Pipelines，那么您可以使用以下**可选**参数手动创建和自定义 Pipelines：
 
@@ -188,7 +188,7 @@ advanced_zcp_index.create_pipelines(
 #  'DELETION': 'pipe-***********************'}
 ```
 
-### 多租户
+### 多租户{#multi-tenancy}
 
 通过将特定租户的值（例如用户 ID）作为元数据，托管索引可以通过应用元数据过滤器实现多租性。
 

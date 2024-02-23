@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 恢复当前已挂起的集群。
 
-<RestHeader method="post" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/clusters/{clusterId}/resume" />
+<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/{clusterId}/resume" />
 
 ---
 

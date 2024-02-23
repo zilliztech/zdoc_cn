@@ -5,7 +5,7 @@
   "node_token": "S3BswPJ4NiKl9okZDoycMvbunMb",
   "node_type": "origin",
   "obj_create_time": "1687140974",
-  "obj_edit_time": "1708410680",
+  "obj_edit_time": "1708668039",
   "obj_token": "Hm7RdU3v1oDf9pxlnQHcQ8JAnxR",
   "obj_type": "docx",
   "origin_node_token": "S3BswPJ4NiKl9okZDoycMvbunMb",
@@ -202,7 +202,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "Zilliz Cloud 的性能指标图表展示了包括资源使用、每秒查询量（QPS）、请求结果及数据操作等方面的性能数据，提供了对特定时间段的详细分析。",
+                "content": "Zilliz Cloud 的性能指标图表展示了包括资源使用、Query 请求速率（QPS）、请求结果及数据操作等方面的性能数据，提供了对特定时间段的详细分析。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1102,7 +1102,7 @@
             },
             {
               "text_run": {
-                "content": "部分。这些图表提供了集群性能的快照，包括每秒查询请求数（QPS）、每秒向量搜索操作数（VPS）、请求延时（Latency）和请求失败率。",
+                "content": "部分。这些图表提供了集群性能的快照，包括每秒 Query 请求数（QPS）、每秒向量 Search 操作数（VPS）、请求延时（Latency）和请求失败率。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1138,7 +1138,7 @@
             },
             {
               "text_run": {
-                "content": "：每秒搜索（search）和查询（query）类型请求数。查询请求没有 VPS，因为查询过程不涉及到向量。",
+                "content": "：每秒 Search 和 Query 类型请求数。Query 请求没有 VPS，因为 Query 过程不涉及到向量。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1212,7 +1212,7 @@
             },
             {
               "text_run": {
-                "content": "：从发起读请求（搜索和查询请求）到返回结果的耗时的平均值或 P99 值。",
+                "content": "：从发起读请求（Search 和 Query 请求）到返回结果的耗时的平均值或 P99 值。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1249,7 +1249,7 @@
             },
             {
               "text_run": {
-                "content": "：从发起写请求（数据插入和 Upsert 请求）到返回结果的耗时的平均值或 P99 值。",
+                "content": "：从发起写请求（数据 Insert 和 Upsert 请求）到返回结果的耗时的平均值或 P99 值。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

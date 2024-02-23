@@ -34,17 +34,17 @@ Partition 是一种根据一定规则组织数据的技术。通过该特性，�
 
 ## 步骤概览{#quick-steps-for-using-partitions}
 
-1. [创建索引并加载 Collection](./use-partitions#1-collectionstep-1-index-and-load-collection)：首先对 Collection 进行索引并加载到内存中，以便进行搜索和查询。
+1. [创建索引并加载 Collection](./use-partitions#step-1-index-and-load-collection)：首先对 Collection 进行索引并加载到内存中，以便进行搜索和查询。
 
-1. [创建和加载 Partition](./use-partitions#2-partitionstep-2-create-and-load-partition)：在 Collection 中创建一个 Partition 用于组织数据，并加载以便使用。
+1. [创建和加载 Partition](./use-partitions#step-2-create-and-load-partition)：在 Collection 中创建一个 Partition 用于组织数据，并加载以便使用。
 
-1. [插入数据](./use-partitions#3-partition-entitystep-3-insert-one-or-more-entities-into-partition)：向 Partition 中添加数据，以进行搜索和查询操作。
+1. [插入数据](./use-partitions#step-3-insert-one-or-more-entities-into-partition)：向 Partition 中添加数据，以进行搜索和查询操作。
 
-1. [执行 ANN 搜索](./use-partitions#4-partition-ann-step-4-conduct-ann-searches-within-partition)：在 Partition 内根据向量字段的相似度进行搜索。
+1. [执行 ANN 搜索](./use-partitions#step-4-conduct-ann-searches-within-partition)：在 Partition 内根据向量字段的相似度进行搜索。
 
-1. [执行标量查询](./use-partitions#5-partition-step-5-conduct-queries-within-partition)：对 Partition 内的标量字段进行查询。
+1. [执行标量查询](./use-partitions#step-5-conduct-queries-within-partition)：对 Partition 内的标量字段进行查询。
 
-1. [释放和删除 Partition](./use-partitions#6-partitionstep-6-release-and-drop-partition)：为更高效地管理资源，可以释放和删除不再需要的 Partition。
+1. [释放和删除 Partition](./use-partitions#step-6-release-and-drop-partition)：为更高效地管理资源，可以释放和删除不再需要的 Partition。
 
 <Admonition type="info" icon="📘" title="说明">
 

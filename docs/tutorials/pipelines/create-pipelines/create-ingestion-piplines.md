@@ -13,9 +13,9 @@ import Admonition from '@theme/Admonition';
 
 您可以通过 Web 控制台或 RESTful API 创建 Pipelines。Web 控制台操作更简单直观，但 RESTful API 可提供更多灵活性。
 
-在创建 Search 和 Deletion Pipeline 前需要先创建 [Ingestion Pipeline](./understanding-pipelines#ingestion-pipelineingestion-pipelines)。只有在 Ingestion Pipeline 创建成功后，您才可以创建配套的 [Search](./understanding-pipelines#search-pipelinesearch-pipelines) 和 [Deletion Pipeline](./understanding-pipelines#deletion-pipelinedeletion-pipelines)。
+在创建 Search 和 Deletion Pipeline 前需要先创建 [Ingestion Pipeline](./understanding-pipelines#ingestion-pipelines)。只有在 Ingestion Pipeline 创建成功后，您才可以创建配套的 [Search](./understanding-pipelines#search-pipelines) 和 [Deletion Pipeline](./understanding-pipelines#deletion-pipelines)。
 
-在创建 Ingestion pipeline 后，Zilliz Cloud 会自动为其创建一个对应的 [Collection](./cluster-collection-and-entities#collectioncollection)。
+在创建 Ingestion pipeline 后，Zilliz Cloud 会自动为其创建一个对应的 [Collection](./cluster-collection-and-entities#collection)。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -252,5 +252,5 @@ Ingestion Pipeline 创建成功后，Zilliz Cloud 将自动创建名称为 `my_n
 
 - [估算 Pipelines 用量](./estimate-pipelines-usage)
 
-- [使用限制](./limits#pipeline)
+- [使用限制](./limits#pipelines)
 

@@ -5,7 +5,7 @@
   "node_token": "FXGWwcjyViaQm8kvJgScITzBnr3",
   "node_type": "origin",
   "obj_create_time": "1705903747",
-  "obj_edit_time": "1705931669",
+  "obj_edit_time": "1708657127",
   "obj_token": "KCxddUcJ5oek6dxQEZUcp7vUnwd",
   "obj_type": "docx",
   "origin_node_token": "FXGWwcjyViaQm8kvJgScITzBnr3",
@@ -689,7 +689,7 @@
             },
             {
               "text_run": {
-                "content": "loud.zilliz.com.cn\".format(CLOUD_REGION)\nCOLLECTION_NAME=\"\"\n\n# 远程对象存储桶访问参数\nACCESS_KEY=\"\"\nSECRET_KEY=\"\"\n",
+                "content": "loud.zilliz.com.cn\".format(CLOUD_REGION)\nCOLLECTION_NAME=\"\"\n\n# 远程对象存储桶访问参数\nYOUR_ACCESS_KEY=\"\"\nYOUR_SECRET_KEY=\"\"\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -701,7 +701,7 @@
             },
             {
               "text_run": {
-                "content": "BUCKET_NAME=\"\" ",
+                "content": "YOUR_BUCKET_NAME=\"\" ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2529,7 +2529,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "from pymilvus import FieldSchema, CollectionSchema, DataType\n\nschema = CollectionSchema(\n    fields=[\n        FieldSchema(name='id', dtype=DataType.INT64, is_primary=True),\n        FieldSchema(name='title_vector', dtype=DataType.FLOAT_VECTOR, dim=768),\n        FieldSchema(name='title', dtype=DataType.VARCHAR, max_length=512),\n        FieldSchema(name='link', dtype=DataType.VARCHAR, max_length=512),\n    ],\n    description=\"A series of articles from medium.com\",\n    auto_id=False,\n    enable_dynamic_field=True\n",
+                "content": "from pymilvus import MilvusClient, DataType\n\n# You need to work out a collection schema out of your dataset.\nschema = MilvusClient.create_schema(\n    auto_id=False,\n    enable_dynamic_field=True\n)\n\nschema.add_field(field_name=\"id\", datatype=DataType.INT64, is_primary=True)\nschema.add_field(field_name=\"title_vector\", datatype=DataType.FLOAT_VECTOR, dim=768)\nschema.add_field(field_name=\"title\", datatype=DataType.VARCHAR, max_length=512)\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2541,7 +2541,7 @@
             },
             {
               "text_run": {
-                "content": ")",
+                "content": "schema.add_field(field_name=\"link\", datatype=DataType.VARCHAR, max_length=512)",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3067,7 +3067,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "from pymilvus import connections, Collection\n\n# 1. 建立连接\nconnections.connect(\n        uri=CLUSTER_ENDPOINT,\n        token=TOKEN\n)\n# 2. 创建 Collection\ncollection = Collection(name=COLLECTION_NAME, schema=schema)\n\n# 3. 设置索引参数\nindex_params = {\n    \"index_type\": \"AUTOINDEX\",\n    \"metric_type\": \"IP\",\n    \"params\": {}\n}\n\n# 4. 创建索引\ncollection.create_index(\n        field_name=\"title_vector\",\n        index_params=index_params,\n)\n\n# 5. 加载 Collection 数据到内存\n",
+                "content": "from pymilvus import MilvusClient\n\n# Zilliz Cloud 常量\nCLUSTER_ENDPOINT = \"YOUR_CLUSTER_ENDPOINT\"\nTOKEN = \"YOUR_TOKEN\"\nCOLLECTION_NAME = \"YOUR_COLLECTION_NAME\"\n\n# 1. 创建一个 MilvusClient\nclient = MilvusClient(\n    uri=CLUSTER_ENDPOINT,\n    token=TOKEN\n)\n\n# 2. 设置索引参数\nindex_params = MilvusClient.prepare_index_params()\n\nindex_params.add_index(\n    field_name=\"title_vector\",\n    index_type=\"AUTOINDEX\",\n    metric_type=\"IP\"\n)\n\n# 3. 创建 Collection\nclient.create_collection(\n    collection_name=COLLECTION_NAME,\n    schema=schema,\n    index_params=index_params\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3079,7 +3079,7 @@
             },
             {
               "text_run": {
-                "content": "collection.load()",
+                "content": ")",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3360,7 +3360,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "from pymilvus import RemoteBulkWriter, BulkFileType\n\n# 远程对象存储桶连接参数\nconn = RemoteBulkWriter.ConnectParam(\n    endpoint=\"oss-cn-hangzhou.aliyuncs.com\", # 替换成您的 oss endpoint。具体可参考 https://help.aliyun.com/zh/oss/user-guide/regions-and-endpoints\n    access_key=ACCESS_KEY,\n    secret_key=SECRET_KEY,\n    bucket_name=BUCKET_NAME, # 替换成您的远程对象存储桶名称\n    region=\"oss-cn-hangzhou\", # 替换成您的桶所在地域。具体可参考 https://help.aliyun.com/zh/oss/user-guide/regions-and-endpoints\n    secure=True\n",
+                "content": "# AWS S3/GCS\n\nfrom pymilvus import RemoteBulkWriter, BulkFileType\n\n# 三方服务常量\nYOUR_ACCESS_KEY = \"YOUR_ACCESS_KEY\"\nYOUR_SECRET_KEY = \"YOUR_SECRET_KEY\"\nYOUR_BUCKET_NAME = \"YOUR_BUCKET_NAME\"\n\n# 远程存储桶连接参数\nconn = RemoteBulkWriter.S3ConnectParam(\n    endpoint=\"storage.googleapis.com\", # Use \"s3.amazonaws.com\" for AWS S3\n    access_key=ACCESS_KEY,\n    secret_key=SECRET_KEY,\n    bucket_name=BUCKET_NAME, # Use a bucket hosted in the same cloud as the target cluster\n    secure=True\n)\n\n# ======\n# Microsoft Azure\n\n# 三方服务常量\nAZURE_CONNECT_STRING = \"\"\n\nconn = RemoteBulkWriter.AzureConnectParam(\n    conn_str=AZURE_CONNECT_STRING,\n    container_name=BUCKET_NAME\n)\n\n# 或\n\n# 三方服务常量\nAZURE_ACCOUNT_URL = \"\"\nAZURE_CREDENTIAL = \"\"\n\nconn = RemoteBulkWriter.AzureConnectParam(\n    account_url=AZURE_ACCOUNT_URL,\n    credential=AZURE_CREDENTIAL,\n    container_name=BUCKET_NAME\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

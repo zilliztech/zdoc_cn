@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 获取指定导入任务的进度。
 
-<RestHeader method="get" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/vector/collections/import/get" />
+<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import/get" />
 
 ---
 

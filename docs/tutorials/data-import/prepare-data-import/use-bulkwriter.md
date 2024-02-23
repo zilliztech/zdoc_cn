@@ -7,7 +7,8 @@ sidebar_position: 2
 ---
 
 import Admonition from '@theme/Admonition';
-
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # 使用 BulkWriter
 
@@ -40,23 +41,18 @@ python3 -m pip install --upgrade pymilvus
 另外，Schema 中还关闭了 **AutoID** 并开启了动态字段支持。
 
 ```python
-from pymilvus import (
-    FieldSchema,
-    CollectionSchema,
-    DataType
-)
+from pymilvus import MilvusClient, DataType
 
 # You need to work out a collection schema out of your dataset.
-schema = CollectionSchema(
-    fields=[
-        FieldSchema(name="id", dtype=DataType.INT64, is_priamry=True),
-        FieldSchema(name="vector", dtype=DataType.FLOAT_VECTOR, dim=768),
-        FieldSchema(name="scalar_1", dtype=DataType.VARCHAR, max_length=512),
-        FieldSchema(name="scalar_2", dtype=DataType.INT64)
-    ],
+schema = MilvusClient.create_schema(
     auto_id=False,
-    enable_dynamic_field=True,
+    enable_dynamic_field=True
 )
+
+schema.add_field(field_name="id", datatype=DataType.INT64, is_primary=True)
+schema.add_field(field_name="vector", datatype=DataType.FLOAT_VECTOR, dim=768)
+schema.add_field(field_name="scalar_1", datatype=DataType.VARCHAR, max_length=512)
+schema.add_field(field_name="scalar_2", datatype=DataType.INT64)
 ```
 
 ### 创建 BulkWriter{#create-a-bulkwriter}
@@ -101,24 +97,56 @@ PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建
 
     和 **LocalBulkWriter** 不同的是，**RemoteBulkWriter** 将缓存中的数据写入一个远程对象存储桶中。因此，您需要先设置好用于连接该存储桶的 **ConnectParam** 对象，并在创建 RemoteBulkWriter 时引用该 **ConnectParam** 对象。
 
+    <Tabs groupId="python" defaultValue='python' values={[{"label":"AWS S3/GCS","value":"python"},{"label":"Azure Blog Storage","value":"python_1"}]}>
+    <TabItem value='python'>
+
     ```python
-     from pymilvus import RemoteBulkWriter, BulkFileType
     
-    conn = RemoteBulkWriter.ConnectParam(
-        endpoint="storage.googleapis.com",
-        access_key="Your-Access-Key",
-        secret_key="Your-Secret-key",
-        bucket_name="Your-Bucket-Name",
+    from pymilvus import RemoteBulkWriter
+    
+    # Third-party constants
+    YOUR_ACCESS_KEY="YOUR_ACCESS_KEY"
+    YOUR_SECRET_KEY="YOUR_SECRET_KEY"
+    YOUR_BUCKET_NAME="YOUR_BUCKET_NAME"
+    
+    # Connections parameters to access the remote bucket
+    conn = RemoteBulkWriter.S3ConnectParam(
+        endpoint="storage.googleapis.com", # Use "s3.amazonaws.com" for AWS S3
+        access_key=YOUR_ACCESS_KEY,
+        secret_key=YOUR_SECRET_KEY,
+        bucket_name=YOUR_BUCKET_NAME, # Use a bucket hosted in the same cloud as the target cluster
         secure=True
     )
     
-    writer = RemoteBulkWriter(
-        schema=schema,
-        remote_path="/",
-        connect_param=conn,
-        file_type=BulkFileType.NPY
+    ```
+
+    </TabItem>
+    <TabItem value='python_1'>
+
+    ```python
+    # Third-party constants
+    AZURE_CONNECT_STRING = ""
+    
+    conn = RemoteBulkWriter.AzureConnectParam(
+        conn_str=AZURE_CONNECT_STRING,
+        container_name=BUCKET_NAME
+    )
+    
+    # or
+    
+    # Third-party constants
+    AZURE_ACCOUNT_URL = ""
+    AZURE_CREDENTIAL = ""
+    
+    conn = RemoteBulkWriter.AzureConnectParam(
+        account_url=AZURE_ACCOUNT_URL,
+        credential=AZURE_CREDENTIAL,
+        container_name=BUCKET_NAME
     )
     ```
+
+    </TabItem>
+    </Tabs>
 
 除了 **connect_param** 参数外，RemoteBulkWriter 的参数与 LocalBulkWriter 基本相同。更多关于参数设置的信息，可以参考 SDK Reference 中关于 **RemoteBulkWriter** 的介绍。
 

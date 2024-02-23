@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 - 余弦度量类型
 
-    体验先进的向量搜索，支持[余弦](./search-metrics-explained#cosinecosine-similarity)、[内积](./search-metrics-explained#ipinner-product-ip)和[欧式距离](./search-metrics-explained#l2euclidean-distance-l2)。余弦度量消除了向量标准化的先决条件，简化了搜索过程。
+    体验先进的向量搜索，支持[余弦](./search-metrics-explained#cosine-similarity)、[内积](./search-metrics-explained#inner-product-ip)和[欧式距离](./search-metrics-explained#euclidean-distance-l2)。余弦度量消除了向量标准化的先决条件，简化了搜索过程。
 
 - 访问控制
 
@@ -45,11 +45,11 @@ import Admonition from '@theme/Admonition';
 
 - JSON_CONTAINS 过滤器
 
-    使用 [JSON_CONTAINS 运算符](./search-and-query-advanced-expressions#jsoncontains-search-and-query-with-jsoncontains)进一步细化搜索，允许你基于 JSON 字段值指定过滤条件。
+    使用 [JSON_CONTAINS 运算符](./search-and-query-advanced-expressions#search-and-query-with-jsoncontains)进一步细化搜索，允许你基于 JSON 字段值指定过滤条件。
 
 - Entity 计数
 
-    快速概览加载的[集合中的 Entity 总数](./search-and-query-advanced-expressions#countuse-count)，以更好地管理数据。
+    快速概览加载的[集合中的 Entity 总数](./search-and-query-advanced-expressions#use-count)，以更好地管理数据。
 
 ## 功能改进{#enhancements}
 

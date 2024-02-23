@@ -5,7 +5,7 @@
   "node_token": "UvarwFhiJimKxfkduyVcTOqTndb",
   "node_type": "origin",
   "obj_create_time": "1708397946",
-  "obj_edit_time": "1708426183",
+  "obj_edit_time": "1708599580",
   "obj_token": "JjdQddq8KoELE8xYOO0cdXb8nPe",
   "obj_type": "docx",
   "origin_node_token": "UvarwFhiJimKxfkduyVcTOqTndb",
@@ -971,17 +971,29 @@
             },
             {
               "text_run": {
-                "content": "通过 Restful API 创建 Search pipeline",
+                "content": "通过 Restful API ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
                   "italic": false,
-                  "link": {
-                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FUvarwFhiJimKxfkduyVcTOqTndb%23KQO0dzQYmoh4eVxdRCbci8zpnSg"
-                  },
                   "strikethrough": false,
                   "underline": false
                 }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建 Search Pipelines",
+                "token": "UvarwFhiJimKxfkduyVcTOqTndb",
+                "url": "https://zilliverse.feishu.cn/wiki/UvarwFhiJimKxfkduyVcTOqTndb#KQO0dzQYmoh4eVxdRCbci8zpnSg"
               }
             },
             {

@@ -90,5 +90,5 @@ curl --request POST \
 
 - [估算 Pipelines 用量](./estimate-pipelines-usage)
 
-- [使用限制](./limits#pipeline)
+- [使用限制](./limits#pipelines)
 
