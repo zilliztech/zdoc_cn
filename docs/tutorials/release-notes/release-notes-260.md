@@ -3,7 +3,7 @@ slug: /release-notes-260
 beta: FALSE
 notebook: FALSE
 token: FR9Ww6TbRifhQFk1TV0c3a4tnfg
-sidebar_position: 0
+sidebar_position: 1
 ---
 
 import Admonition from '@theme/Admonition';
@@ -65,5 +65,5 @@ Zilliz Cloud 的权限设计遵循 RBAC（基于角色的访问控制）原则�
 
 - 数据指标： 深入了解集合数量、实体总数、用于搜索的加载实体数量以及索引实体数量。
 
-此外，我们的增强型警报系统允许您为上述所有指标设置自定义警报规则。这意味着，您可以针对每秒查询率（QPS）超过 1000 或 CU 满载率超过 70% 等情况创建警报，确保您随时了解系统的健康状况和性能并采取主动行动。
+此外，我们的增强型警报系统允许您为上述所有指标设置自定义警报规则。这意味着，您可以针对每秒查询率（QPS）超过 1000 或 CU 满载率超过 70% 等情况创建警报，确保您随时了解系统的健康状况和性能并采取主动行动。请[参阅文档](./metrics-and-alerts)了解详情。
 
