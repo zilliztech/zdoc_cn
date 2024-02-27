@@ -1,6 +1,6 @@
 ---
 slug: /search-and-query-advanced-expressions
-beta: TRUE
+beta: FALSE
 notebook: 10_search_query_advanced_ops.ipynb
 token: Ty6NwFqHAiXiXIkZl5RcFuK4nUh
 sidebar_position: 10

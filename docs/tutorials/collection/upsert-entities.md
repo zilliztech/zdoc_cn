@@ -1,6 +1,6 @@
 ---
 slug: /upsert-entities
-beta: TRUE
+beta: FALSE
 notebook: 08_upsert_entities.ipynb
 token: FdqOwWn9siVmS2kHLjpczaTlnlc
 sidebar_position: 4

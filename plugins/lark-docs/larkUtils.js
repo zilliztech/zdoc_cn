@@ -15,6 +15,8 @@ class larkUtils {
             const content = fs.readFileSync(`${this.outputDir}/${file}`, {encoding: 'utf-8', flag: 'r'})
             const file_token = regex.exec(content)[1]
 
+            console.log(file_token)
+
             return file_token === token
         })
 

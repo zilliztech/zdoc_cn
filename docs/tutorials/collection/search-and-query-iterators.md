@@ -1,6 +1,6 @@
 ---
 slug: /search-and-query-iterators
-beta: TRUE
+beta: FALSE
 notebook: 09_search_query_iterators.ipynb
 token: GPXpwOFduiAAwskVE5lcaUYznpe
 sidebar_position: 9

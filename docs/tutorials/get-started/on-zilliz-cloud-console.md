@@ -33,5 +33,5 @@ import Admonition from '@theme/Admonition';
 
 ## Pipeline IDs{#pipeline-ids}
 
-![pipeline_ids](/img/pipeline_ids.png)
+![view-pipelines-on-web-ui-cn](/img/view-pipelines-on-web-ui-cn.png)
 

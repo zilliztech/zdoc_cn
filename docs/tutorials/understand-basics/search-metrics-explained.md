@@ -1,6 +1,6 @@
 ---
 slug: /search-metrics-explained
-beta: TRUE
+beta: FALSE
 notebook: FALSE
 token: Tpi2wvNHLiHaJmk4Y8BcwG84neh
 sidebar_position: 5

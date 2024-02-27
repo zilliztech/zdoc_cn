@@ -1,6 +1,6 @@
 ---
 slug: /conduct-a-range-search
-beta: TRUE
+beta: FALSE
 notebook: 11_conduct_a_range_search.ipynb
 token: VdpLwTKnPinYj6kBGOBckmpfnud
 sidebar_position: 8
