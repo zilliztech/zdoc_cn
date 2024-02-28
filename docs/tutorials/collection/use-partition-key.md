@@ -20,7 +20,7 @@ Partition Key 允许 Zilliz Cloud 根据数据的指定键值将数据存入不�
 
 在创建 Collection 之前，确保
 
-- 已经根据您的数据完成了 Schema 的设计。如需了解更多，可阅读[数据模型](./data-models-explained)。
+- 已经根据您的数据完成了 Schema 的设计。如需了解更多，可阅读[数据模型](./schema-explained)。
 
 - 已经创建了一个集群。如需了解更多，可阅读[创建集群](./create-cluster)。
 

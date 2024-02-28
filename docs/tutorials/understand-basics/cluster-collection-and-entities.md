@@ -85,4 +85,4 @@ Collection 中的 Entity 是指共享相同字段集的数据记录，如图书�
 
 输入查询向量、选择相似性类型和过滤条件（可选）后，您可以对 Collection 中的 Entity 进行向量搜索。例如，如果您使用关键字 “Interesting Python demo” 进行搜索，Zilliz Cloud 会返回所有标题语义相似的的文章。在此过程中，搜索实际是在向量字段 **title_vector** 上执行的。更多向量搜索详情，请阅读[向量搜索和查询](./search-query-and-get) 。
 
-您可以向 Collection 中添加任意数量的 Entity。但是，随着 Entity 数量和维度增加，Entity占用的内存大小也会增加，影响 Collection 的搜索性能。请参考 Zilliz Cloud [数据模型](./data-models-explained) 以合理规划您的 Collection。
+您可以向 Collection 中添加任意数量的 Entity。但是，随着 Entity 数量和维度增加，Entity占用的内存大小也会增加，影响 Collection 的搜索性能。请参考 Zilliz Cloud [数据模型](./schema-explained) 以合理规划您的 Collection。

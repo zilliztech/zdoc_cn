@@ -5,7 +5,7 @@
   "node_token": "FR9Ww6TbRifhQFk1TV0c3a4tnfg",
   "node_type": "origin",
   "obj_create_time": "1709044471",
-  "obj_edit_time": "1709045132",
+  "obj_edit_time": "1709046819",
   "obj_token": "ZvGadXaAvoOrGPxTfTZc6Hjznrg",
   "obj_type": "docx",
   "origin_node_token": "FR9Ww6TbRifhQFk1TV0c3a4tnfg",
@@ -129,7 +129,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "Milvus 兼容性",
+                "content": "Milvus 兼容性{#milvus-compatibility}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -203,7 +203,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "Pipelines",
+                "content": "Pipelines{#pipelines}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -441,7 +441,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "数据导入",
+                "content": "数据导入{#data-import}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -543,7 +543,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "API 密钥",
+                "content": "API 密钥{#api-keys}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -770,7 +770,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "指标和告警",
+                "content": "指标和告警{#metrics-and-alerts}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -896,7 +896,34 @@
           "elements": [
             {
               "text_run": {
-                "content": "此外，我们的增强型警报系统允许您为上述所有指标设置自定义警报规则。这意味着，您可以针对每秒查询率（QPS）超过 1000 或 CU 满载率超过 70% 等情况创建警报，确保您随时了解系统的健康状况和性能并采取主动行动。",
+                "content": "此外，我们的增强型警报系统允许您为上述所有指标设置自定义警报规则。这意味着，您可以针对每秒查询率（QPS）超过 1000 或 CU 满载率超过 70% 等情况创建警报，确保您随时了解系统的健康状况和性能并采取主动行动。请",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "参阅文档",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FSlItwMcOyikiWVkr7Glcy9sinMg"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "了解详情。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

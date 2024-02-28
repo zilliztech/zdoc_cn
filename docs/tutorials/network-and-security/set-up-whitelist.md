@@ -58,5 +58,5 @@ import Admonition from '@theme/Admonition';
 
 - [管理身份凭证](./manage-cluster-credentials-console)
 
-- [管理 MFA](./multi-factor-authentication) 
+- [管理 MFA](./multi-factor-auth) 
 

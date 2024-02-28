@@ -75,5 +75,5 @@ import Admonition from '@theme/Admonition';
 
 - [设置白名单](./set-up-whitelist)
 
-- [管理 MFA](./multi-factor-authentication)
+- [管理 MFA](./multi-factor-auth)
 

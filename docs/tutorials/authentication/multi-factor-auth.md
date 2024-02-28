@@ -1,5 +1,5 @@
 ---
-slug: /multi-factor-authentication
+slug: /multi-factor-auth
 beta: FALSE
 notebook: FALSE
 token: EWAWwESijisVHFkoAEbcfhvPnZb
