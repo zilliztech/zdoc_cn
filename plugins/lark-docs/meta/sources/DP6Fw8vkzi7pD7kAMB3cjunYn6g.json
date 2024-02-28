@@ -5,7 +5,7 @@
   "node_token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
   "node_type": "origin",
   "obj_create_time": "1688959925",
-  "obj_edit_time": "1702887279",
+  "obj_edit_time": "1709046385",
   "obj_token": "Glc5dJHBLoiXyux5Rjdc8D06nUg",
   "obj_type": "docx",
   "origin_node_token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
@@ -1534,6 +1534,18 @@
         "parent_id": "EVotdnnidoarmaxxtS1cR0cEnhg",
         "text": {
           "elements": [
+            {
+              "text_run": {
+                "content": "1",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
             {
               "text_run": {
                 "content": "28",
