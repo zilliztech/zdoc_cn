@@ -5,7 +5,7 @@
   "node_token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
   "node_type": "origin",
   "obj_create_time": "1688959925",
-  "obj_edit_time": "1709046385",
+  "obj_edit_time": "1709112272",
   "obj_token": "Glc5dJHBLoiXyux5Rjdc8D06nUg",
   "obj_type": "docx",
   "origin_node_token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
@@ -1582,7 +1582,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "500 万",
+                "content": "800 万",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1718,7 +1718,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "300",
+                "content": "6",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "00",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1914,19 +1926,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "150",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": " 万",
+                "content": "300 万",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2086,7 +2086,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "100",
+                "content": "2",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "00",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2270,19 +2282,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "75",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": " 万",
+                "content": "1.5 万",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4402,7 +4402,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "设想您正在开发一个含有 1000 万张图片的图像推荐应用程序。图库中的每张图像均由一个 768 维 Embedding 向量代表。您的目标是能迅速处理每秒 1000 次的推荐请求，并在 30 毫秒内返回前 100 张推荐图片。",
+                "content": "设想您正在开发一个含有 800 万张图片的图像推荐应用程序。图库中的每张图像均由一个 768 维 Embedding 向量代表。您的目标是能迅速处理每秒 1000 次的推荐请求，并在 30 毫秒内返回前 100 张推荐图片。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4500,7 +4500,7 @@
             },
             {
               "text_run": {
-                "content": "：单个性能型 CU 能处理 120 万个 768 维向量。为容纳全部 1000 万向量，您需配置至少 9 个此类 CU。",
+                "content": "：单个性能型 CU 能处理 200 万个 768 维向量。为容纳全部 800 万向量，您需配置至少 4 个此类 CU。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4585,7 +4585,7 @@
             },
             {
               "text_run": {
-                "content": "综上所述，针对这一应用场景，选择性能型 CU 是最合适的。建议配置 3 套副本，每套包含 9 个 CU，以确保应用运行的完美性能。",
+                "content": "综上所述，针对这一应用场景，选择性能型 CU 是最合适的。建议配置 3 套副本，每套包含 4 个 CU，以确保应用运行的完美性能。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
