@@ -110,7 +110,7 @@ curl --request POST \
     --header "accept: application/json" \
     --header "content-type: application/json" \
     --data-raw '{
-    "plan": "Standard",
+    "plan": "Enterprise",
     "clusterName": "cluster-02",
     "cuSize": 1,
     "cuType": "Performance-optimized",
@@ -132,7 +132,7 @@ curl --request POST \
 }
 ```
 
-:::提示 如何获取项目 ID？
+:::info 如何获取项目 ID？
 
 您可以通过以下方式获取项目 ID：
 

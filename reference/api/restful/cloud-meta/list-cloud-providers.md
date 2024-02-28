@@ -105,8 +105,8 @@ curl --request GET \
 
 | 错误码 | 错误消息 |
 | ---- | ------------- |
-| 63032 | CloudId not exists. |
 | 80001 | The token is illegal |
 | 80002 | The token is invalid |
+| 80016 | CloudId not exists. |
 | 90117 | Invalid domain name used |
 

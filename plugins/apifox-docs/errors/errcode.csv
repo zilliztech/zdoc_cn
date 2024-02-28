@@ -112,3 +112,4 @@
 80015,ProjectId not exist or you do not have permission for this project.
 80020,Cluster not exist or you don't have permission.
 80025,Current region not provider serverless!
+80016,CloudId not exists.

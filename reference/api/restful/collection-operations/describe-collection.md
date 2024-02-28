@@ -73,8 +73,8 @@ curl --request GET \
 
     | 参数名称          | 参数说明                                                                               |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `collectionName`  | **string**（必选）<br/>目标集群的 Endpoint。|
-    | `dbName`  | **string**<br/>目标 Collection 名称。|
+    | `collectionName`  | **string**（必选）<br/>目标 Collection 名称。|
+    | `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
 
 - 路径参数
 

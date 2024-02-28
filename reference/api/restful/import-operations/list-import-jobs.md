@@ -41,9 +41,9 @@ curl --request GET \
 
     | 参数名称          | 参数说明                                                                               |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `clusterId`  | **string**（必选）<br/>|
-    | `pageSize`  | **string**<br/>Zilliz Cloud 集群 ID。|
-    | `currentPage`  | **string**<br/>每次返回的导入任务数量。|
+    | `clusterId`  | **string**（必选）<br/>Zilliz Cloud 集群 ID。|
+    | `pageSize`  | **string**<br/>每次返回的导入任务数量。|
+    | `currentPage`  | **string**<br/>当前页码。|
 
 - 路径参数
 

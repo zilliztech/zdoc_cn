@@ -30,7 +30,7 @@ curl --request POST \
     --header "accept: application/json" \
     --header "content-type: application/json" \
     --data-raw '{
-    "plan": "Standard",
+    "plan": "Enterprise",
     "clusterName": "cluster-02",
     "cuSize": 1,
     "cuType": "Performance-optimized",
@@ -52,7 +52,7 @@ curl --request POST \
 }
 ```
 
-:::提示 如何获取项目 ID？
+:::info 如何获取项目 ID？
 
 您可以通过以下方式获取项目 ID：
 
@@ -91,8 +91,8 @@ curl --request POST \
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| `plan`  | **string**（必选）<br/>The plan tier of the Zilliz Cloud service. Available options are **Standard** and **Enterprise**.|
-| `clusterName`  | **string**（必选）<br/>The name of the cluster to be created. It is a string of no more than 32 characters.|
+| `plan`  | **string**（必选）<br/>Zilliz Cloud 服务订阅计划。当前可选为**企业版**。|
+| `clusterName`  | **string**（必选）<br/>待创建集群名称。名称长度不得走过 32 个半角字符。|
 | `cuSize`  | **integer**（必选）<br/>待创建集群使用的 CU 大小。取值范围在 1 至 256 之间的正整数。|
 | `cuType`  | **string**（必选）<br/>待创建集群使用的 CU 类型。当前可选为 **性能型**, **容量型**, **经济型**。默认取值为**性能型**。<br/>默认值为 **Performance-optimized**.|
 | `projectId`  | **string**（必选）<br/>待创建集群所属项目 ID。|

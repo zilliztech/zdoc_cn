@@ -252,7 +252,7 @@ import RestHeader from '@site/src/components/RestHeader';
 | `data.name`   | **string**<br/>Pipeline 名称。 |
 | `data.type`   | **string**<br/>Pipeline 类型。对于一个 Ingestion Pipeline 而言，其 |
 | `data.description`   | **string**<br/>Pipeline 描述。 |
-| `data.status`   | **string**<br/>Current status of the pipeline. If the value is other than `SERVING`, the pipeline is not working. |
+| `data.status`   | **string**<br/>Pipeline 当前状态。仅当值为`SERVING`时 Pipeline 处于工作状态。 |
 | `data.totalTokenUsage`   | **integer**<br/>当前操作消费的标识符数量。 |
 | `data.functions`   | ****<br/>Pipeline 中的函数。一个 Ingestion Pipeline 仅能包含一个 `INDEX_DOC` 函数。 |
 | `data.clusterID`   | **string**<br/>应用当前 Pipeline 的目标集群。 |
