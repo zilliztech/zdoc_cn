@@ -53,9 +53,9 @@ curl --request GET \
 
     | 参数名称          | 参数说明                                                                               |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `pageSize`  | **integer**<br/>一组可用的云服务提供商和云服务区域，如“ali-cn-hangzhou”。|
-    | `current`  | **integer**<br/>每页返回的记录数。|
-    | `projectId`  | **string**<br/>当前页码。|
+    | `pageSize`  | **integer**<br/>每页返回的记录数。|
+    | `current`  | **integer**<br/>当前页码。|
+    | `projectId`  | **string**<br/>当前集群所属项目 ID。|
 
 - 无路径参数。
 
