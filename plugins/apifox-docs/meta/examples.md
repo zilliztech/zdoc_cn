@@ -110,11 +110,11 @@ curl --request POST \
     --header "accept: application/json" \
     --header "content-type: application/json" \
     --data-raw '{
-    "plan": "Enterprise",
-    "clusterName": "cluster-02",
-    "cuSize": 1,
-    "cuType": "Performance-optimized",
-    "projectId": "proj-*****************"
+        "plan": "Enterprise",
+        "clusterName": "cluster-02",
+        "cuSize": 1,
+        "cuType": "Performance-optimized",
+        "projectId": "proj-*****************"
     }'
 ```
 
@@ -310,7 +310,7 @@ curl --request DELETE \
 
 ```shell
 curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters?pageSize=&current=" \
+     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters?pageSize=10&currentPage=1" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"

@@ -19,9 +19,11 @@ import Admonition from '@theme/Admonition';
 
 |             |  **API**                       |  **GUI 操作** |  **企业版**     |
 | ----------- | ------------------------------ | ----------- | ------------ |
-|  别名         |  alterAlias()                  |  ✘          |  ✘           |
-|             |  createAlias()                 |  ✘          |  ✘           |
-|             |  dropAlias()                   |  ✘          |  ✘           |
+|  别名         |  alterAlias()                  |  ✘          |  ✔︎          |
+|             |  createAlias()                 |  ✘          |  ✔︎          |
+|             |  dropAlias()                   |  ✘          |  ✔︎          |
+|             |  describeAlias()               |  ✘          |  ✔︎          |
+|             |  listAliases()                 |  ✘          |  ✔︎          |
 |  认证         |  createCredential()            |  ✔︎         |  ✔︎          |
 |             |  deleteCredential()            |  ✔︎         |  ✔︎          |
 |             |  listCredUsers()               |  ✔︎         |  ✔︎          |

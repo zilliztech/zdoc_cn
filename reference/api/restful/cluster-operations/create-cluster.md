@@ -30,11 +30,11 @@ curl --request POST \
     --header "accept: application/json" \
     --header "content-type: application/json" \
     --data-raw '{
-    "plan": "Enterprise",
-    "clusterName": "cluster-02",
-    "cuSize": 1,
-    "cuType": "Performance-optimized",
-    "projectId": "proj-*****************"
+        "plan": "Enterprise",
+        "clusterName": "cluster-02",
+        "cuSize": 1,
+        "cuType": "Performance-optimized",
+        "projectId": "proj-*****************"
     }'
 ```
 
