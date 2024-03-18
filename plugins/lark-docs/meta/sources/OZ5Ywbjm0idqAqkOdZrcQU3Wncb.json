@@ -1,0 +1,5617 @@
+{
+  "creator": "ou_8554528ee6e965bad56710acde1c7847",
+  "has_child": false,
+  "node_create_time": "1709522267",
+  "node_token": "OZ5Ywbjm0idqAqkOdZrcQU3Wncb",
+  "node_type": "origin",
+  "obj_create_time": "1709522267",
+  "obj_edit_time": "1709803936",
+  "obj_token": "ZtkednSR3ol86bx1URNcta9MnDb",
+  "obj_type": "docx",
+  "origin_node_token": "OZ5Ywbjm0idqAqkOdZrcQU3Wncb",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_8554528ee6e965bad56710acde1c7847",
+  "parent_node_token": "JLHPwhdssifn2dkR5lDcA4SWnVg",
+  "space_id": "7167193056431783939",
+  "title": "创建私网连接（阿里云）",
+  "slug": "setup-a-private-link-alicloud",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "ZtkednSR3ol86bx1URNcta9MnDb",
+        "block_type": 1,
+        "children": [
+          "RBbudpXFyoed63xHlRnc6mhxn8B",
+          "J2rcdfsOPoxbGJxi5GDcylgAnGb",
+          "Fz7fdiO46oZc10xLMencxZ1inee",
+          "FiMhdTCjPoaB3xxj83OcJRKPnng",
+          "YHzJdwkFvoyREExy53Ucm97inQh",
+          "FTLIdfERZocgWQxYzAhciQsAnab",
+          "RJjodXO3woqkHxx9ruhcdO1Wnuc",
+          "LvEgdmqQVoUu3SxeguJcmWeLnec",
+          "WJ0ydh16EoGIOaxaLvRcs5w3nRd",
+          "WVBFdZl7tod8lexWMn2cbQEQnle",
+          "C4uYdXq5YonbvZxcBBzcUQ8Mnih",
+          "FHsIdAfMLogQr0xdgMQcsTpinpb",
+          "QBVJdCR1Foa9sfxTooocGJjCn1a",
+          "TkXJdnngcou0rGxTbvichsyQnog",
+          "BiDSd0RMXodvvCxu92vcdYUmnPd",
+          "FwARd1e5qobrzkxo59gcjeugnIb",
+          "IELhdrbrGoyos6xyjrAc0UGRnFw",
+          "KrLJdI4hCoXaE9xdhfrcw7gyn43",
+          "CwgadInu8ol2TMxWdgBckOEonhd",
+          "V52DdmAA5oCx7DxMc5VcoEWXnCe",
+          "DfdzdzcLAoe3WMxyLI8c99uvnfb",
+          "SM3ZdFUXzobrTlxsk24cYkVwnMc",
+          "BO7jdHxXuonnBox0MY2cypi9nld",
+          "CyEtdBbmpoT1zGxA8XqcfCqBntc",
+          "IAtVd9Od2oUoDUxwYJLcKHGpnac",
+          "AdiudZ16loNNADxmIrOcKUvzn3b",
+          "BPrCdLYVaoHqdZx1MnucblU1nQg",
+          "PbSBdWl0ZowZ6ixbRwYcKTuAnTf",
+          "K6PXdfkmAo3GdqxS7EYcSVIKneh",
+          "U77sdMqArorEMmxsOGfc7jUKnQf",
+          "NCh7dpXiboQPi4xoHF7cVuEDnLd",
+          "RoOXd6j5SohqBcxuxb6cbdrjnYc",
+          "C9PmdK9YboZGDcxvAyOcYgR1n1f",
+          "TxzkduDbBoBUT3x2tNrcwm9ln2b"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建私网连接（阿里云）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "RBbudpXFyoed63xHlRnc6mhxn8B",
+        "block_type": 2,
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本小节主要介绍如何在您的阿里云 VPC 和您托管在阿里云上的 Zilliz Cloud 集群之间建立私网连接。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "J2rcdfsOPoxbGJxi5GDcylgAnGb",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "配置思路{#configuration-roadmap}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "Fz7fdiO46oZc10xLMencxZ1inee",
+        "block_type": 2,
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需启用访问 Zilliz Cloud 集群的私网连接，您需要：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FiMhdTCjPoaB3xxj83OcJRKPnng",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过阿里云控制台在您的 VPC 中创建一个终端节点，并为其选择安全组、可用区和交换机。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "YHzJdwkFvoyREExy53Ucm97inQh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "将上述信息提交给 Zilliz Cloud 注册私网连接。Zilliz Cloud 将根据提交的信息为您的集群分配一个域名前缀。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "FTLIdfERZocgWQxYzAhciQsAnab",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "前往阿里云控制台，使用该域名前缀创建一条私网解析记录。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "RJjodXO3woqkHxx9ruhcdO1Wnuc",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "前提条件{#before-you-start}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "LvEgdmqQVoUu3SxeguJcmWeLnec",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您已经注册了 Zilliz Cloud。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "WJ0ydh16EoGIOaxaLvRcs5w3nRd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您已经创建了 Zilliz Cloud 阿里云集群。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "WVBFdZl7tod8lexWMn2cbQEQnle",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您在上述 Zilliz Cloud 腾讯云集群所在云服务地域有一个 VPC。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "C4uYdXq5YonbvZxcBBzcUQ8Mnih",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "配置步骤{#procedures}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "FHsIdAfMLogQr0xdgMQcsTpinpb",
+        "block_type": 2,
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本节将按照配置思路详细介绍如何为您的 Zilliz Cloud 阿里云集群创建私网连接。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QBVJdCR1Foa9sfxTooocGJjCn1a",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "登记私网连接参数{#set-private-link-parameters}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "TkXJdnngcou0rGxTbvichsyQnog",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "登录Zilliz Cloud，并在左侧导航栏顶部的下拉菜单中选择合适的项目。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "BiDSd0RMXodvvCxu92vcdYUmnPd",
+        "block_type": 13,
+        "children": [
+          "GPdEdV7UhooRHqxkYQBciCX9n7d"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在项目左侧导航栏中选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "安全",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " > ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "私网连接",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，并单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建私网连接",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "GPdEdV7UhooRHqxkYQBciCX9n7d",
+        "block_type": 2,
+        "parent_id": "BiDSd0RMXodvvCxu92vcdYUmnPd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您还可以在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "集群详情",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页面中的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "连接信息",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "区域中单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建私网连接",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FwARd1e5qobrzkxo59gcjeugnIb",
+        "block_type": 13,
+        "children": [
+          "KVb6daAcIorZiLxB54rcdcH3nme",
+          "AJZndA4WroNKbJxDgLwcPBPLndg"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在弹出的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建私网连接",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "对话框中，填写",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "云服务提供商",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "云服务地域",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "主帐号 ID",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "KVb6daAcIorZiLxB54rcdcH3nme",
+        "block_type": 31,
+        "children": [
+          "BOugd6GA1oBMhnxBE5VcatgtnHh",
+          "Jx6XdHv2Do6M4uxrN7xcfPHMnnc",
+          "Rvibdu1RNoMo14xeVlrcU9dDnQg",
+          "NSfsdz193oeovJxbL9NcYjl9nVg",
+          "MRQYdGlGEozaSPxlL3icblZGnnf",
+          "EltPdjTb4ozdoIxY4i6ciZeSnfe",
+          "ZuqHdYEfmoD6pnxsSDRcUg8rnyg",
+          "SzvndBVeCoQVdKxVXWPcPDNsnh4"
+        ],
+        "parent_id": "FwARd1e5qobrzkxo59gcjeugnIb",
+        "table": {
+          "cells": [
+            "BOugd6GA1oBMhnxBE5VcatgtnHh",
+            "Jx6XdHv2Do6M4uxrN7xcfPHMnnc",
+            "Rvibdu1RNoMo14xeVlrcU9dDnQg",
+            "NSfsdz193oeovJxbL9NcYjl9nVg",
+            "MRQYdGlGEozaSPxlL3icblZGnnf",
+            "EltPdjTb4ozdoIxY4i6ciZeSnfe",
+            "ZuqHdYEfmoD6pnxsSDRcUg8rnyg",
+            "SzvndBVeCoQVdKxVXWPcPDNsnh4"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              131,
+              482
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 4
+          }
+        }
+      },
+      {
+        "block_id": "BOugd6GA1oBMhnxBE5VcatgtnHh",
+        "block_type": 32,
+        "children": [
+          "UL5cdLNwhoiygXxrkwtcnxoqnTr"
+        ],
+        "parent_id": "KVb6daAcIorZiLxB54rcdcH3nme",
+        "table_cell": {}
+      },
+      {
+        "block_id": "UL5cdLNwhoiygXxrkwtcnxoqnTr",
+        "block_type": 2,
+        "parent_id": "BOugd6GA1oBMhnxBE5VcatgtnHh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "参数名称",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Jx6XdHv2Do6M4uxrN7xcfPHMnnc",
+        "block_type": 32,
+        "children": [
+          "LDgcdNnSIoStbXxFTafcgD0jn7g"
+        ],
+        "parent_id": "KVb6daAcIorZiLxB54rcdcH3nme",
+        "table_cell": {}
+      },
+      {
+        "block_id": "LDgcdNnSIoStbXxFTafcgD0jn7g",
+        "block_type": 2,
+        "parent_id": "Jx6XdHv2Do6M4uxrN7xcfPHMnnc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "参数描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Rvibdu1RNoMo14xeVlrcU9dDnQg",
+        "block_type": 32,
+        "children": [
+          "SfiCdXbUdoYl92xaVC7clSYpnQy"
+        ],
+        "parent_id": "KVb6daAcIorZiLxB54rcdcH3nme",
+        "table_cell": {}
+      },
+      {
+        "block_id": "SfiCdXbUdoYl92xaVC7clSYpnQy",
+        "block_type": 2,
+        "parent_id": "Rvibdu1RNoMo14xeVlrcU9dDnQg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "云服务提供商",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NSfsdz193oeovJxbL9NcYjl9nVg",
+        "block_type": 32,
+        "children": [
+          "UVcVdTfTroEkblxp8qCcrRyDnTf",
+          "JVmkdgb2DovapjxxX8ecJyULnfh"
+        ],
+        "parent_id": "KVb6daAcIorZiLxB54rcdcH3nme",
+        "table_cell": {}
+      },
+      {
+        "block_id": "UVcVdTfTroEkblxp8qCcrRyDnTf",
+        "block_type": 2,
+        "parent_id": "NSfsdz193oeovJxbL9NcYjl9nVg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "与私网连接访问目标集群所在网络保持一致。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JVmkdgb2DovapjxxX8ecJyULnfh",
+        "block_type": 2,
+        "parent_id": "NSfsdz193oeovJxbL9NcYjl9nVg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "集群详情",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页面中的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "集群信息",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "区域中，可查看当前集群的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "地域",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "及详情。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MRQYdGlGEozaSPxlL3icblZGnnf",
+        "block_type": 32,
+        "children": [
+          "FA9Qdx8SeoOx1NxgRcRccaMxnng"
+        ],
+        "parent_id": "KVb6daAcIorZiLxB54rcdcH3nme",
+        "table_cell": {}
+      },
+      {
+        "block_id": "FA9Qdx8SeoOx1NxgRcRccaMxnng",
+        "block_type": 2,
+        "parent_id": "MRQYdGlGEozaSPxlL3icblZGnnf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "云服务地域",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "EltPdjTb4ozdoIxY4i6ciZeSnfe",
+        "block_type": 32,
+        "children": [
+          "YfEwdSNpAoaDCvxs1sqcXqhzngl"
+        ],
+        "parent_id": "KVb6daAcIorZiLxB54rcdcH3nme",
+        "table_cell": {}
+      },
+      {
+        "block_id": "YfEwdSNpAoaDCvxs1sqcXqhzngl",
+        "block_type": 2,
+        "parent_id": "EltPdjTb4ozdoIxY4i6ciZeSnfe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "与私网连接访问目标集群所在网络保持一致。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZuqHdYEfmoD6pnxsSDRcUg8rnyg",
+        "block_type": 32,
+        "children": [
+          "LMagdwgmkowGC6x8c1xcz9rfnNf"
+        ],
+        "parent_id": "KVb6daAcIorZiLxB54rcdcH3nme",
+        "table_cell": {}
+      },
+      {
+        "block_id": "LMagdwgmkowGC6x8c1xcz9rfnNf",
+        "block_type": 2,
+        "parent_id": "ZuqHdYEfmoD6pnxsSDRcUg8rnyg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "主帐号 ID",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SzvndBVeCoQVdKxVXWPcPDNsnh4",
+        "block_type": 32,
+        "children": [
+          "C3cWddooUouujJx1wsvckTiFnhe",
+          "QCWPd5rR3ogJ5gxvYAxcIAXonjd",
+          "UW8ldliD8oRoRqx50E8cI5tEn0c"
+        ],
+        "parent_id": "KVb6daAcIorZiLxB54rcdcH3nme",
+        "table_cell": {}
+      },
+      {
+        "block_id": "C3cWddooUouujJx1wsvckTiFnhe",
+        "block_type": 2,
+        "parent_id": "SzvndBVeCoQVdKxVXWPcPDNsnh4",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "填写您的阿里云主帐号 ID，并单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "添加",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "提交验证。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QCWPd5rR3ogJ5gxvYAxcIAXonjd",
+        "block_type": 2,
+        "parent_id": "SzvndBVeCoQVdKxVXWPcPDNsnh4",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "请使用阿里云主帐号登录阿里云。登录后，鼠标悬停右上角头像区域，可查看当前登录的主帐号及其 ID。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UW8ldliD8oRoRqx50E8cI5tEn0c",
+        "block_type": 2,
+        "parent_id": "SzvndBVeCoQVdKxVXWPcPDNsnh4",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "验证通过后，在创建终端节点时才能够查看到 Zilliz Cloud 的终端节点服务。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AJZndA4WroNKbJxDgLwcPBPLndg",
+        "block_type": 19,
+        "callout": {
+          "background_color": 2,
+          "border_color": 2,
+          "emoji_id": "blue_book"
+        },
+        "children": [
+          "G4HrdXpVtotaLzxHPPPcPb7qnsf",
+          "IJekdHvLYo3WLcxIJewcU4kOndb",
+          "BRMpdHCPhopmvMxKVQ3ciiRFnFf"
+        ],
+        "parent_id": "FwARd1e5qobrzkxo59gcjeugnIb"
+      },
+      {
+        "block_id": "G4HrdXpVtotaLzxHPPPcPb7qnsf",
+        "block_type": 2,
+        "parent_id": "AJZndA4WroNKbJxDgLwcPBPLndg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "提示",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false,
+            "indentation_level": "NoIndent"
+          }
+        }
+      },
+      {
+        "block_id": "IJekdHvLYo3WLcxIJewcU4kOndb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在填写完阿里云",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "主帐号 ID",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 后，务必单击右侧的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "添加",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "XdObdJLSzoMdNtxj58KcmYZ1ndy"
+        ],
+        "parent_id": "AJZndA4WroNKbJxDgLwcPBPLndg"
+      },
+      {
+        "block_id": "XdObdJLSzoMdNtxj58KcmYZ1ndy",
+        "block_type": 2,
+        "parent_id": "IJekdHvLYo3WLcxIJewcU4kOndb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "验证通过后，在创建终端节点时才能够在可用服务列表中查看到 Zilliz Cloud 的终端节点服务。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BRMpdHCPhopmvMxKVQ3ciiRFnFf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "操作尚未完成！请勿单击对话框中的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "E34fdsFFGo4na0xxSStcK4ORnFd"
+        ],
+        "parent_id": "AJZndA4WroNKbJxDgLwcPBPLndg"
+      },
+      {
+        "block_id": "E34fdsFFGo4na0xxSStcK4ORnFd",
+        "block_type": 2,
+        "parent_id": "BRMpdHCPhopmvMxKVQ3ciiRFnFf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您需要前往阿里云控制台，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建终端节点",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fdocx%2FHXd6d0M3foNlKKxkYIvcD1sMn5b%23VP8TdwnO3oH2s8x1QbscIY7fnUf"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。然后，在对话框中填写成功创建的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "终端节点实例 ID ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "后，才可以单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IELhdrbrGoyos6xyjrAc0UGRnFw",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建终端节点{#create-endpoint}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "KrLJdI4hCoXaE9xdhfrcw7gyn43",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "登录阿里云，前往",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "专有网络",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fvpc.console.aliyun.com%2Fendpoint%2Fcn-hangzhou%2Fendpoints"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " > ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fvpc.console.aliyun.com%2Fendpoint%2Fcn-hangzhou%2Fendpoints"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "终端节点",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fvpc.console.aliyun.com%2Fendpoint%2Fcn-hangzhou%2Fendpoints"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "CwgadInu8ol2TMxWdgBckOEonhd",
+        "block_type": 13,
+        "children": [
+          "QZ7PdjpdBoyC5txV08scTsMRned"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "接口终端节点",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页签中单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建终端节点",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "QZ7PdjpdBoyC5txV08scTsMRned",
+        "block_type": 2,
+        "parent_id": "CwgadInu8ol2TMxWdgBckOEonhd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果尚未开通私网连接服务。请先单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "开通私网连接服务",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "后，再执行本操作。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "V52DdmAA5oCx7DxMc5VcoEWXnCe",
+        "block_type": 13,
+        "children": [
+          "S9z6dSibDoRWUGx9H5Lc30ngnFh"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建终端节点",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页面，填写如下内容。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "block_type": 31,
+        "children": [
+          "HL1cdZucKo4euExjyPgcCZb9nje",
+          "Rc6ud6gCNoQxIaxcjXScKraQnAb",
+          "F5TVdGuVaof9rPxsdOrcxp4qnmh",
+          "JcVKd4LQdov3rTxn1kOcFMG2nAc",
+          "CUqVdPFgIoEHmfxWEpbcJNK8nwb",
+          "BtVedKMl6ofAUGx7rrucWxgbn3b",
+          "AaFCdc3JxoNk2TxJg5Ycbgvwnuc",
+          "C0f9dZEmxoQu0lxOtNncgtQVndb",
+          "ZYg0dUjnUoU99lxcI9rcPRyunwf",
+          "V8U9dLguaoLaXYxc3fWcrwDbnTf",
+          "IOP4dyccWo1xvBxADcbcdf7gnBb",
+          "VNUTdYtLmoKMSkxUhO4cREnEnae",
+          "XIfddbS00o1hNWx1bHGc0pYrnrd",
+          "H8oLdfoFXoIkW5xlN6ccTpYTnQh",
+          "U9ZPdKRHVoLohQxvcgxcJeeonRe",
+          "IBLedyuXZonOjBxF96cckXPRnPe"
+        ],
+        "parent_id": "V52DdmAA5oCx7DxMc5VcoEWXnCe",
+        "table": {
+          "cells": [
+            "HL1cdZucKo4euExjyPgcCZb9nje",
+            "Rc6ud6gCNoQxIaxcjXScKraQnAb",
+            "F5TVdGuVaof9rPxsdOrcxp4qnmh",
+            "JcVKd4LQdov3rTxn1kOcFMG2nAc",
+            "CUqVdPFgIoEHmfxWEpbcJNK8nwb",
+            "BtVedKMl6ofAUGx7rrucWxgbn3b",
+            "AaFCdc3JxoNk2TxJg5Ycbgvwnuc",
+            "C0f9dZEmxoQu0lxOtNncgtQVndb",
+            "ZYg0dUjnUoU99lxcI9rcPRyunwf",
+            "V8U9dLguaoLaXYxc3fWcrwDbnTf",
+            "IOP4dyccWo1xvBxADcbcdf7gnBb",
+            "VNUTdYtLmoKMSkxUhO4cREnEnae",
+            "XIfddbS00o1hNWx1bHGc0pYrnrd",
+            "H8oLdfoFXoIkW5xlN6ccTpYTnQh",
+            "U9ZPdKRHVoLohQxvcgxcJeeonRe",
+            "IBLedyuXZonOjBxF96cckXPRnPe"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              164,
+              449
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 8
+          }
+        }
+      },
+      {
+        "block_id": "HL1cdZucKo4euExjyPgcCZb9nje",
+        "block_type": 32,
+        "children": [
+          "D2kvdcwuoo1QhgxNGeCciyHMnng"
+        ],
+        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "D2kvdcwuoo1QhgxNGeCciyHMnng",
+        "block_type": 2,
+        "parent_id": "HL1cdZucKo4euExjyPgcCZb9nje",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "参数名称",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Rc6ud6gCNoQxIaxcjXScKraQnAb",
+        "block_type": 32,
+        "children": [
+          "XvjPdmYnpodI1Ixos5GckdO8nue"
+        ],
+        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "XvjPdmYnpodI1Ixos5GckdO8nue",
+        "block_type": 2,
+        "parent_id": "Rc6ud6gCNoQxIaxcjXScKraQnAb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "参数描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "F5TVdGuVaof9rPxsdOrcxp4qnmh",
+        "block_type": 32,
+        "children": [
+          "Nc9wdRuX1oFgkwx1pWucL8yHnFg"
+        ],
+        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Nc9wdRuX1oFgkwx1pWucL8yHnFg",
+        "block_type": 2,
+        "parent_id": "F5TVdGuVaof9rPxsdOrcxp4qnmh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "所属地域",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JcVKd4LQdov3rTxn1kOcFMG2nAc",
+        "block_type": 32,
+        "children": [
+          "ZNOldVQqLoGmInxMvhHc7bACnlc"
+        ],
+        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ZNOldVQqLoGmInxMvhHc7bACnlc",
+        "block_type": 2,
+        "parent_id": "JcVKd4LQdov3rTxn1kOcFMG2nAc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "填写私网连接目标集群所在地域。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CUqVdPFgIoEHmfxWEpbcJNK8nwb",
+        "block_type": 32,
+        "children": [
+          "JFc5db4r0oJ1CCxhKGHcQs5in9c"
+        ],
+        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "JFc5db4r0oJ1CCxhKGHcQs5in9c",
+        "block_type": 2,
+        "parent_id": "CUqVdPFgIoEHmfxWEpbcJNK8nwb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "节点名称",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BtVedKMl6ofAUGx7rrucWxgbn3b",
+        "block_type": 32,
+        "children": [
+          "BTSHdKkqyoSpfDxL1vJcXVs3nEg"
+        ],
+        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "BTSHdKkqyoSpfDxL1vJcXVs3nEg",
+        "block_type": 2,
+        "parent_id": "BtVedKMl6ofAUGx7rrucWxgbn3b",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为该节点命名。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AaFCdc3JxoNk2TxJg5Ycbgvwnuc",
+        "block_type": 32,
+        "children": [
+          "XhMidadpKo9VFZxcY6QcJu0hnFf"
+        ],
+        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "XhMidadpKo9VFZxcY6QcJu0hnFf",
+        "block_type": 2,
+        "parent_id": "AaFCdc3JxoNk2TxJg5Ycbgvwnuc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "终端节点类型",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "C0f9dZEmxoQu0lxOtNncgtQVndb",
+        "block_type": 32,
+        "children": [
+          "XpIndNBNnohVmZxPBKJcLk2JnBg"
+        ],
+        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "XpIndNBNnohVmZxPBKJcLk2JnBg",
+        "block_type": 2,
+        "parent_id": "C0f9dZEmxoQu0lxOtNncgtQVndb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "接口终端节点",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZYg0dUjnUoU99lxcI9rcPRyunwf",
+        "block_type": 32,
+        "children": [
+          "Dc8udxOzhockixxlsoEcllxon1b"
+        ],
+        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Dc8udxOzhockixxlsoEcllxon1b",
+        "block_type": 2,
+        "parent_id": "ZYg0dUjnUoU99lxcI9rcPRyunwf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "终端节点服务",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "V8U9dLguaoLaXYxc3fWcrwDbnTf",
+        "block_type": 32,
+        "children": [
+          "Ev0Rd2tSzo409WxspxQcq25UnVb",
+          "QU0CdfCtWonj4KxbzSBcGUjmnAh"
+        ],
+        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Ev0Rd2tSzo409WxspxQcq25UnVb",
+        "block_type": 2,
+        "parent_id": "V8U9dLguaoLaXYxc3fWcrwDbnTf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "可用服务",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QU0CdfCtWonj4KxbzSBcGUjmnAh",
+        "block_type": 2,
+        "parent_id": "V8U9dLguaoLaXYxc3fWcrwDbnTf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您在上一步中添加的阿里云主帐号通过验证后，可用服务列表中将展示该主帐号对应的 Zilliz Cloud 服务。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IOP4dyccWo1xvBxADcbcdf7gnBb",
+        "block_type": 32,
+        "children": [
+          "Pqnqdjh9AosDfrxs8aYclH8bndc"
+        ],
+        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Pqnqdjh9AosDfrxs8aYclH8bndc",
+        "block_type": 2,
+        "parent_id": "IOP4dyccWo1xvBxADcbcdf7gnBb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "专有网络",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VNUTdYtLmoKMSkxUhO4cREnEnae",
+        "block_type": 32,
+        "children": [
+          "D73NdzTvIoWwOfxtwfFc1x4Jngh"
+        ],
+        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "D73NdzTvIoWwOfxtwfFc1x4Jngh",
+        "block_type": 2,
+        "parent_id": "VNUTdYtLmoKMSkxUhO4cREnEnae",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择需要使用私网连接访问 Zilliz Cloud 集群的服务所在 VPC。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XIfddbS00o1hNWx1bHGc0pYrnrd",
+        "block_type": 32,
+        "children": [
+          "CDqddms2AoTyMgxX5gtcad6Pnog"
+        ],
+        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "CDqddms2AoTyMgxX5gtcad6Pnog",
+        "block_type": 2,
+        "parent_id": "XIfddbS00o1hNWx1bHGc0pYrnrd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "安全组",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "H8oLdfoFXoIkW5xlN6ccTpYTnQh",
+        "block_type": 32,
+        "children": [
+          "S36qdguYWotTYJx6BNlcEWy3neb",
+          "OViUdWlXAojVjyxfrOAc4aekngc",
+          "AGRKda4r5oRXJjxVbK3chwxcn3c",
+          "WBKcdtm5HoOanxxrLdmc2nCGnRc"
+        ],
+        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "S36qdguYWotTYJx6BNlcEWy3neb",
+        "block_type": 2,
+        "parent_id": "H8oLdfoFXoIkW5xlN6ccTpYTnQh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择应用于该终端节点的安全组规则。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OViUdWlXAojVjyxfrOAc4aekngc",
+        "block_type": 2,
+        "parent_id": "H8oLdfoFXoIkW5xlN6ccTpYTnQh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如第一次使用，建议新建安全组，规划如下：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AGRKda4r5oRXJjxVbK3chwxcn3c",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "网络",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "CWJNd1eIAogIAAxDzvtcIIKtn8f"
+        ],
+        "parent_id": "H8oLdfoFXoIkW5xlN6ccTpYTnQh"
+      },
+      {
+        "block_id": "CWJNd1eIAogIAAxDzvtcIIKtn8f",
+        "block_type": 2,
+        "parent_id": "AGRKda4r5oRXJjxVbK3chwxcn3c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择需要使用私网连接访问 Zilliz Cloud 集群的服务所在 VPC。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WBKcdtm5HoOanxxrLdmc2nCGnRc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "访问规则",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "OxAJde7t1oG2QTxtaovcHQFVnOb"
+        ],
+        "parent_id": "H8oLdfoFXoIkW5xlN6ccTpYTnQh"
+      },
+      {
+        "block_id": "OxAJde7t1oG2QTxtaovcHQFVnOb",
+        "block_type": 2,
+        "parent_id": "WBKcdtm5HoOanxxrLdmc2nCGnRc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "添加一条",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "协议类型",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "TCP",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "端口范围",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "为 Zilliz Cloud 集群暴露的端口，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "授权对象",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "0.0.0.0/0 ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "的访问规则。建议添加一条 ICMP 规则用于网络连通性排查。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "U9ZPdKRHVoLohQxvcgxcJeeonRe",
+        "block_type": 32,
+        "children": [
+          "Z9F0dlsj9ohYXpxBY2McJyxOnxe",
+          "UKlkdB82yosI4BxgKWScoNPvnUI"
+        ],
+        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Z9F0dlsj9ohYXpxBY2McJyxOnxe",
+        "block_type": 2,
+        "parent_id": "U9ZPdKRHVoLohQxvcgxcJeeonRe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "可用区与交换机",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UKlkdB82yosI4BxgKWScoNPvnUI",
+        "block_type": 2,
+        "parent_id": "U9ZPdKRHVoLohQxvcgxcJeeonRe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IBLedyuXZonOjBxF96cckXPRnPe",
+        "block_type": 32,
+        "children": [
+          "Y98ydn9wWobmqMxhRb2c8QSNnsc",
+          "OflqdmIlgorINwxdk2WcgPkSnyh",
+          "IQhedABILoqAXbxawOAcA2uQnSd",
+          "Q1JGdyd4VoiPgLxMmfqcOyQDnsb",
+          "SMF2dSqrHoSj9Tx2pzScgp9cnYf",
+          "I95wdvi6Go2ukwxmynycako5nSf",
+          "QT4tdwXakoZjMmxsqWfc4wn5nLf",
+          "OeyZd6lJDoqO9WxmxtAc4fqInff",
+          "GVfCdLfGLoDJYTxFkAaciXCindg",
+          "GqmodSi4So4SNvxF5tGcoWwpn4d",
+          "SLqBd89ieoHMUNxpze6cyiREnPf",
+          "IEgSdMZe2o28Znx8SWkchU4TnEh",
+          "EtMNd2lZQoq8MHx8tSIc0qYFnGg",
+          "L7J6dy6RCogkk2xDQtHcA6WznXf",
+          "AKisd8W6SoIBsRxNB8scKa3NnMf"
+        ],
+        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Y98ydn9wWobmqMxhRb2c8QSNnsc",
+        "block_type": 2,
+        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择 Zilliz Cloud 集群所在可用区并创建默认交换机。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OflqdmIlgorINwxdk2WcgPkSnyh",
+        "block_type": 2,
+        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "目前，Zilliz Cloud 集群可选可用区如下：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IQhedABILoqAXbxawOAcA2uQnSd",
+        "block_type": 2,
+        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "杭州",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Q1JGdyd4VoiPgLxMmfqcOyQDnsb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "杭州 可用区 H",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe"
+      },
+      {
+        "block_id": "SMF2dSqrHoSj9Tx2pzScgp9cnYf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "杭州 可用区 J",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe"
+      },
+      {
+        "block_id": "I95wdvi6Go2ukwxmynycako5nSf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "杭州 可用区 K",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe"
+      },
+      {
+        "block_id": "QT4tdwXakoZjMmxsqWfc4wn5nLf",
+        "block_type": 2,
+        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "北京",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OeyZd6lJDoqO9WxmxtAc4fqInff",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "北京 可用区 G",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe"
+      },
+      {
+        "block_id": "GVfCdLfGLoDJYTxFkAaciXCindg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "北京 可用区 H",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe"
+      },
+      {
+        "block_id": "GqmodSi4So4SNvxF5tGcoWwpn4d",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "北京 可用区 I",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe"
+      },
+      {
+        "block_id": "SLqBd89ieoHMUNxpze6cyiREnPf",
+        "block_type": 2,
+        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "深圳",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IEgSdMZe2o28Znx8SWkchU4TnEh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "深圳 可用区 D",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe"
+      },
+      {
+        "block_id": "EtMNd2lZQoq8MHx8tSIc0qYFnGg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "深圳 可用区 E",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe"
+      },
+      {
+        "block_id": "L7J6dy6RCogkk2xDQtHcA6WznXf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "深圳 可用区 F",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe"
+      },
+      {
+        "block_id": "AKisd8W6SoIBsRxNB8scKa3NnMf",
+        "block_type": 2,
+        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "交换机配置无特殊要求，保持默认即可。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DfdzdzcLAoe3WMxyLI8c99uvnfb",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "填写完所有信息后，单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "确认创建",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "SM3ZdFUXzobrTlxsk24cYkVwnMc",
+        "block_type": 13,
+        "children": [
+          "WdAJdJhA2oz0ztxScSZcdTGmnTe"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "确认终端节点创建成功后，复制创建好的实例 ID 备用。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "WdAJdJhA2oz0ztxScSZcdTGmnTe",
+        "block_type": 2,
+        "parent_id": "SM3ZdFUXzobrTlxsk24cYkVwnMc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "此时，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "可用区与网卡",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页签中显示的可用区",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "状态",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "等待连接",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "服务状态",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "异常",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BO7jdHxXuonnBox0MY2cypi9nld",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建私网连接{#create-private-link}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "CyEtdBbmpoT1zGxA8XqcfCqBntc",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "返回 Zilliz Cloud，将复制好的终端节点实例 ID 填入",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建私网连接",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "对话框中的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "终端节点实例 ID ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "字段中。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "IAtVd9Od2oUoDUxwYJLcKHGpnac",
+        "block_type": 13,
+        "children": [
+          "MYFYd1pGuoQ3foxGUwtcnTkonfe"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "后，Zilliz Cloud 将开始创建私网连接。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "MYFYd1pGuoQ3foxGUwtcnTkonfe",
+        "block_type": 2,
+        "parent_id": "IAtVd9Od2oUoDUxwYJLcKHGpnac",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建私网连接耗时较长，请耐心等待。创建完成后，可在私网连接页面查看 Zilliz Cloud 分配的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Endpoint 服务名称",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Endpoint 服务状态",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "私网连接",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "前缀。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AdiudZ16loNNADxmIrOcKUvzn3b",
+        "block_type": 13,
+        "children": [
+          "DFpLdMyMgo3Dj1xZHJHcRgy7nkg"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "返回阿里云控制台，检查已创建的终端节点实例，并复制可用区的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " IP 地址",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "备用。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "DFpLdMyMgo3Dj1xZHJHcRgy7nkg",
+        "block_type": 2,
+        "parent_id": "AdiudZ16loNNADxmIrOcKUvzn3b",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "此时，终端节点实例的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "可用区与网卡",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页签中显示的可用区",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "状态",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "变更为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "已连接",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "服务状态",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "变更为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "正常",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "BPrCdLYVaoHqdZx1MnucblU1nQg",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "添加私域解析记录{#add-private-zone-record}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "PbSBdWl0ZowZ6ixbRwYcKTuAnTf",
+        "block_type": 13,
+        "children": [
+          "WCkFdNlxvoA6wHxwYl9cWzdfnxh"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "返回阿里云控制台，前往",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "私域解析",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fdns.console.aliyun.com%2F%23%2FprivateZone%2Flist"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "WCkFdNlxvoA6wHxwYl9cWzdfnxh",
+        "block_type": 2,
+        "parent_id": "PbSBdWl0ZowZ6ixbRwYcKTuAnTf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "首次打开该页面时，需要单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "立即开通",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "启用私域解析服务。开通完成后，刷新页面可进入私域解析记录列表。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "K6PXdfkmAo3GdqxS7EYcSVIKneh",
+        "block_type": 13,
+        "children": [
+          "KouPdJlwao4lrnxcJ9Tcqo2VnNh",
+          "MpjJd4pyaoJe20xdlGDcdOAdnLb",
+          "A269dSaLUoM8OUxb9f2cLWHbn2c"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "添加 Zone",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，在弹出的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "添加 PrivateZone ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "对话框中填写 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Zone名称",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，并勾选",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "子域名递归解析代理",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "确定",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "后，列表中出现一条新记录。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "KouPdJlwao4lrnxcJ9Tcqo2VnNh",
+        "block_type": 2,
+        "parent_id": "K6PXdfkmAo3GdqxS7EYcSVIKneh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "阿里云上 Zilliz Cloud 集群所属 Zone 名称应与您的终端节点所在区域保持一致。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false,
+            "indentation_level": "NoIndent"
+          }
+        }
+      },
+      {
+        "block_id": "MpjJd4pyaoJe20xdlGDcdOAdnLb",
+        "block_type": 31,
+        "children": [
+          "HI1JdC2Ozofws2xGyshcFWqrnbb",
+          "AQV4dcwcsofBXExtNNLcTrRQnFe",
+          "IBD5dTJSyoE2KbxCCsOcj77qnnf",
+          "W5p2d0G8kodSq0xQa5mcTUokncC",
+          "Kfokdi4NqowTshxe2escmDcHnhg",
+          "SX6Ud75yioy544xADhFc4IHbnE0",
+          "UXwBdqApLoqT5jxzJvjcUjqUnHf",
+          "MVpud7eVVoETD0xieeBcIuGcnBg"
+        ],
+        "parent_id": "K6PXdfkmAo3GdqxS7EYcSVIKneh",
+        "table": {
+          "cells": [
+            "HI1JdC2Ozofws2xGyshcFWqrnbb",
+            "AQV4dcwcsofBXExtNNLcTrRQnFe",
+            "IBD5dTJSyoE2KbxCCsOcj77qnnf",
+            "W5p2d0G8kodSq0xQa5mcTUokncC",
+            "Kfokdi4NqowTshxe2escmDcHnhg",
+            "SX6Ud75yioy544xADhFc4IHbnE0",
+            "UXwBdqApLoqT5jxzJvjcUjqUnHf",
+            "MVpud7eVVoETD0xieeBcIuGcnBg"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              156,
+              513
+            ],
+            "header_row": true,
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 4
+          }
+        }
+      },
+      {
+        "block_id": "HI1JdC2Ozofws2xGyshcFWqrnbb",
+        "block_type": 32,
+        "children": [
+          "C9fLdh6lkoQdLqxBml8cFiXInOf"
+        ],
+        "parent_id": "MpjJd4pyaoJe20xdlGDcdOAdnLb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "C9fLdh6lkoQdLqxBml8cFiXInOf",
+        "block_type": 2,
+        "parent_id": "HI1JdC2Ozofws2xGyshcFWqrnbb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "终端节点所在区域",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AQV4dcwcsofBXExtNNLcTrRQnFe",
+        "block_type": 32,
+        "children": [
+          "Nw2gdNb4Uo6Bwgxpz5McyUaynvb"
+        ],
+        "parent_id": "MpjJd4pyaoJe20xdlGDcdOAdnLb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Nw2gdNb4Uo6Bwgxpz5McyUaynvb",
+        "block_type": 2,
+        "parent_id": "AQV4dcwcsofBXExtNNLcTrRQnFe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zone 名称",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IBD5dTJSyoE2KbxCCsOcj77qnnf",
+        "block_type": 32,
+        "children": [
+          "FDL9dtbYeoQUjWx4lxKczZ88nme"
+        ],
+        "parent_id": "MpjJd4pyaoJe20xdlGDcdOAdnLb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "FDL9dtbYeoQUjWx4lxKczZ88nme",
+        "block_type": 2,
+        "parent_id": "IBD5dTJSyoE2KbxCCsOcj77qnnf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "杭州",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "W5p2d0G8kodSq0xQa5mcTUokncC",
+        "block_type": 32,
+        "children": [
+          "SKiZd9WNlogKVmxn5bhce7IQnXd"
+        ],
+        "parent_id": "MpjJd4pyaoJe20xdlGDcdOAdnLb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "SKiZd9WNlogKVmxn5bhce7IQnXd",
+        "block_type": 2,
+        "parent_id": "W5p2d0G8kodSq0xQa5mcTUokncC",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "inxx-xxxxxxxxxxxx.ali-cn-hangzhou.vectordb.zilliz.com.cn",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Kfokdi4NqowTshxe2escmDcHnhg",
+        "block_type": 32,
+        "children": [
+          "IBxhdc4Qno0QOyxc30jc0w5inYg"
+        ],
+        "parent_id": "MpjJd4pyaoJe20xdlGDcdOAdnLb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "IBxhdc4Qno0QOyxc30jc0w5inYg",
+        "block_type": 2,
+        "parent_id": "Kfokdi4NqowTshxe2escmDcHnhg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "北京",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SX6Ud75yioy544xADhFc4IHbnE0",
+        "block_type": 32,
+        "children": [
+          "JstMdT1o9oTv94x7sSVcKzMNn7e"
+        ],
+        "parent_id": "MpjJd4pyaoJe20xdlGDcdOAdnLb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "JstMdT1o9oTv94x7sSVcKzMNn7e",
+        "block_type": 2,
+        "parent_id": "SX6Ud75yioy544xADhFc4IHbnE0",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "inxx-xxxxxxxxxxxx.ali-cn-beijing.vectordb.zilliz.com.cn",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UXwBdqApLoqT5jxzJvjcUjqUnHf",
+        "block_type": 32,
+        "children": [
+          "QjHkd0ADmoQLBJx89z7cN7cXnSc"
+        ],
+        "parent_id": "MpjJd4pyaoJe20xdlGDcdOAdnLb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QjHkd0ADmoQLBJx89z7cN7cXnSc",
+        "block_type": 2,
+        "parent_id": "UXwBdqApLoqT5jxzJvjcUjqUnHf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "深圳",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MVpud7eVVoETD0xieeBcIuGcnBg",
+        "block_type": 32,
+        "children": [
+          "Ued8dWQwjoSNisxQU0DccGK2nic"
+        ],
+        "parent_id": "MpjJd4pyaoJe20xdlGDcdOAdnLb",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Ued8dWQwjoSNisxQU0DccGK2nic",
+        "block_type": 2,
+        "parent_id": "MVpud7eVVoETD0xieeBcIuGcnBg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "inxx-xxxxxxxxxxxx.ali-cn-shenzhen.vectordb.zilliz.com.cn",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "A269dSaLUoM8OUxb9f2cLWHbn2c",
+        "block_type": 2,
+        "parent_id": "K6PXdfkmAo3GdqxS7EYcSVIKneh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zone 名称中的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "inxx-xxxxxxxxxxxx",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "为您的Zilliz Cloud 阿里云集群 ID。您可参考",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "Zilliz Cloud 控制台",
+                "token": "JBXmw3fcviPIiakfkRxchfLknCb",
+                "url": "https://zilliverse.feishu.cn/wiki/JBXmw3fcviPIiakfkRxchfLknCb"
+              }
+            },
+            {
+              "text_run": {
+                "content": "查询集群 ID。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "U77sdMqArorEMmxsOGfc7jUKnQf",
+        "block_type": 13,
+        "children": [
+          "E27vdxsPAoY4ljxYgQPcuDSXnqd",
+          "OLhcdOaAooKZ0Qx6tTAc1RXcnWg",
+          "O6uFdv98roRp6QxtLmzcyRb1nWg"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在该记录的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "操作",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "栏中单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "解析设置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "E27vdxsPAoY4ljxYgQPcuDSXnqd",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "解析设置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页签中单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "添加记录",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "U77sdMqArorEMmxsOGfc7jUKnQf"
+      },
+      {
+        "block_id": "OLhcdOaAooKZ0Qx6tTAc1RXcnWg",
+        "block_type": 13,
+        "children": [
+          "H3fWdEETNoWbWwx4DfhcYVb8nRe"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在弹出的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "添加记录",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "对话框中输入如下内容。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "U77sdMqArorEMmxsOGfc7jUKnQf"
+      },
+      {
+        "block_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "block_type": 31,
+        "children": [
+          "EqMXdmbz4oTdSGx14MAcka3Vnxe",
+          "Qmewd6HmNoG7YAxiLGQc3YEXnkc",
+          "GmWFdu2VDoFe1Wx00YichuIOn0g",
+          "NhetdqUT5oGmfjx6V86cOxVonjc",
+          "J3OmdgqTCoBNSExqxATcKVcfned",
+          "IAg0dnKmQonu2Exoyl1c8dDVnrb",
+          "AuWBd0SGbohxMpxAmGpcP0OonLb",
+          "Vr2SdBE1GoHyD3xIQuRc6NlqnMb",
+          "Qj2vdaRGsodfq6xnDSXcV3bmnFg",
+          "OxaUdWXNmo9wBNxR1qicO1KYnre"
+        ],
+        "parent_id": "OLhcdOaAooKZ0Qx6tTAc1RXcnWg",
+        "table": {
+          "cells": [
+            "EqMXdmbz4oTdSGx14MAcka3Vnxe",
+            "Qmewd6HmNoG7YAxiLGQc3YEXnkc",
+            "GmWFdu2VDoFe1Wx00YichuIOn0g",
+            "NhetdqUT5oGmfjx6V86cOxVonjc",
+            "J3OmdgqTCoBNSExqxATcKVcfned",
+            "IAg0dnKmQonu2Exoyl1c8dDVnrb",
+            "AuWBd0SGbohxMpxAmGpcP0OonLb",
+            "Vr2SdBE1GoHyD3xIQuRc6NlqnMb",
+            "Qj2vdaRGsodfq6xnDSXcV3bmnFg",
+            "OxaUdWXNmo9wBNxR1qicO1KYnre"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              141,
+              447
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 5
+          }
+        }
+      },
+      {
+        "block_id": "EqMXdmbz4oTdSGx14MAcka3Vnxe",
+        "block_type": 32,
+        "children": [
+          "SDCudtk3ooA86ixjQaocH63knbb"
+        ],
+        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "SDCudtk3ooA86ixjQaocH63knbb",
+        "block_type": 2,
+        "parent_id": "EqMXdmbz4oTdSGx14MAcka3Vnxe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "参数名称",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Qmewd6HmNoG7YAxiLGQc3YEXnkc",
+        "block_type": 32,
+        "children": [
+          "LxZudUATlowVR3xAK9TcZagonXB"
+        ],
+        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "LxZudUATlowVR3xAK9TcZagonXB",
+        "block_type": 2,
+        "parent_id": "Qmewd6HmNoG7YAxiLGQc3YEXnkc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "参数描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "GmWFdu2VDoFe1Wx00YichuIOn0g",
+        "block_type": 32,
+        "children": [
+          "RsnDdBm55oG20FxNWAgcj6S5nwh"
+        ],
+        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RsnDdBm55oG20FxNWAgcj6S5nwh",
+        "block_type": 2,
+        "parent_id": "GmWFdu2VDoFe1Wx00YichuIOn0g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "记录类型",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NhetdqUT5oGmfjx6V86cOxVonjc",
+        "block_type": 32,
+        "children": [
+          "JowCdfqApo0bzyx5dQicd3aQnlg"
+        ],
+        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "JowCdfqApo0bzyx5dQicd3aQnlg",
+        "block_type": 2,
+        "parent_id": "NhetdqUT5oGmfjx6V86cOxVonjc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择将域名指向一个 IPV4 地址的 A 记录。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "J3OmdgqTCoBNSExqxATcKVcfned",
+        "block_type": 32,
+        "children": [
+          "XZ3Sd6kMsoKomtxU1H3cP3nAn9g"
+        ],
+        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "XZ3Sd6kMsoKomtxU1H3cP3nAn9g",
+        "block_type": 2,
+        "parent_id": "J3OmdgqTCoBNSExqxATcKVcfned",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "主机记录",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IAg0dnKmQonu2Exoyl1c8dDVnrb",
+        "block_type": 32,
+        "children": [
+          "ZOe9dyF1toAgWGxxXH5caEVunzf"
+        ],
+        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ZOe9dyF1toAgWGxxXH5caEVunzf",
+        "block_type": 2,
+        "parent_id": "IAg0dnKmQonu2Exoyl1c8dDVnrb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "请填写 Zilliz Cloud 提供的的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "私网连接",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "前缀。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AuWBd0SGbohxMpxAmGpcP0OonLb",
+        "block_type": 32,
+        "children": [
+          "XQhbdYojso356hxK1YIcZOLvn1Y"
+        ],
+        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "XQhbdYojso356hxK1YIcZOLvn1Y",
+        "block_type": 2,
+        "parent_id": "AuWBd0SGbohxMpxAmGpcP0OonLb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "记录值",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Vr2SdBE1GoHyD3xIQuRc6NlqnMb",
+        "block_type": 32,
+        "children": [
+          "NRnYdiVnOo8NezxXZLrcXmNenlc"
+        ],
+        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "NRnYdiVnOo8NezxXZLrcXmNenlc",
+        "block_type": 2,
+        "parent_id": "Vr2SdBE1GoHyD3xIQuRc6NlqnMb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "请填写终端节点实例详情中可用区的 IP 地址。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Qj2vdaRGsodfq6xnDSXcV3bmnFg",
+        "block_type": 32,
+        "children": [
+          "GhVodWX4louRVixASexc01NYnNc"
+        ],
+        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "GhVodWX4louRVixASexc01NYnNc",
+        "block_type": 2,
+        "parent_id": "Qj2vdaRGsodfq6xnDSXcV3bmnFg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "TTL值",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OxaUdWXNmo9wBNxR1qicO1KYnre",
+        "block_type": 32,
+        "children": [
+          "J16NdRS56oUeLwxkjSlcDnbon5c"
+        ],
+        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "table_cell": {}
+      },
+      {
+        "block_id": "J16NdRS56oUeLwxkjSlcDnbon5c",
+        "block_type": 2,
+        "parent_id": "OxaUdWXNmo9wBNxR1qicO1KYnre",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "保持默认即可。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "O6uFdv98roRp6QxtLmzcyRb1nWg",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "确定",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，保存设置。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "U77sdMqArorEMmxsOGfc7jUKnQf"
+      },
+      {
+        "block_id": "NCh7dpXiboQPi4xoHF7cVuEDnLd",
+        "block_type": 13,
+        "children": [
+          "MrNqdOg9Qo8XVtx63NzcZtaRnsb",
+          "AUvtdEi8GoEdl6xVZPScwAO3nIe"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "返回",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "私域解析",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fdns.console.aliyun.com%2F%23%2FprivateZone%2Flist"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页面，在当前 Zone 记录的操作栏中单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "关联VPC",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "MrNqdOg9Qo8XVtx63NzcZtaRnsb",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在右侧滑出的关联 VPC 对话框中选择需要使用私网连接访问 Zilliz Cloud 集群的服务所在 VPC。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "NCh7dpXiboQPi4xoHF7cVuEDnLd"
+      },
+      {
+        "block_id": "AUvtdEi8GoEdl6xVZPScwAO3nIe",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "单击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "确定",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，保存设置。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "NCh7dpXiboQPi4xoHF7cVuEDnLd"
+      },
+      {
+        "block_id": "RoOXd6j5SohqBcxuxb6cbdrjnYc",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "返回",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "私域解析",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fdns.console.aliyun.com%2F%23%2FprivateZone%2Flist"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页面。此时，当前 Zone 记录的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "关联VPC状态",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "已变更为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "已关联",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "C9PmdK9YboZGDcxvAyOcYgR1n1f",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "后续操作{#next-steps}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "TxzkduDbBoBUT3x2tNrcwm9ln2b",
+        "block_type": 2,
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在私网连接创建完成后，可按照集群详情页面右上角的连接指南使用私网连接进行连通性验证。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 166
+  }
+}

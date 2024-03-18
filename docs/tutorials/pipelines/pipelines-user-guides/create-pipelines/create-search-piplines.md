@@ -56,6 +56,14 @@ import Admonition from '@theme/Admonition';
 
     1. 选择**目标集群**和**目标 Collection**。目标集群必须为部署在阿里云（杭州）的活跃集群。目标 Collection 必须为创建 Ingestion pipeline 时自动创建的 Collection，否则创建的 Search Pipeline 将不兼容。
 
+    1. （可选） 如需对输出结果根据相关性进行重新排序、提高搜索结果质量，请开启 [Reranker](./reranker)。请注意，开启 Reranker 会增加使用成本和搜索延时。默认情况下，Reranker 功能关闭。开启后，您可以选择 Reranker 模型。目前仅支持 **zilliz/bge-reranker-base **模型。
+
+        |  **Reranker 模型**          |  **描述**                                                             |
+        | ------------------------- | ------------------------------------------------------------------- |
+        |  zilliz/bge-reranker-base |  智源研究院（BAAI）发布的开源重新排序（Reranker）模型。该模型采用交叉编码器架构，并托管于 Zilliz Cloud 上。 |
+
+        ![add-function-to-search-pipeline-cn](/img/add-function-to-search-pipeline-cn.png)
+
     1. 点击**添加**。
 
 1. 点击**创建 Search Pipeline**。
@@ -86,7 +94,8 @@ curl --request POST \
                 "action": "SEARCH_DOC_CHUNK",
                 "inputField": "query_text",
                 "clusterId": "${CLUSTER_ID}",
-                "collectionName": "my_new_collection"
+                "collectionName": "my_new_collection",
+                "reranker": "zilliz/bge-reranker-base"
             }
         ]
     }
@@ -102,6 +111,8 @@ curl --request POST \
 
 - `name`: 创建的 Pipeline 名称。Pipeline 名称应该在 3-64 个字符内，且只可包含数字、字母和下划线。
 
+- `description`（可选）：创建的 Pipeline 描述。
+
 - `type`: 创建的 Pipeline 类型。目前，可创建的 Pipeline 类型包括 `INGESTION`、 `SEARCH` 和 `DELETION`。
 
 - `functions`: Pipeline 中添加的 Function。**1 个 Search Pipeline 中仅可添加 1 个 Function。** 
@@ -115,6 +126,8 @@ curl --request POST \
     - `clusterId`: 创建 Pipeline 所属的集群 ID。目前，仅支持部署在阿里云（杭州）的集群。了解[如何获取集群 ID](https://support.zilliz.com.cn/hc/zh-cn/articles/23088888943515-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E9%9B%86%E7%BE%A4-ID-%E5%92%8C-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%9C%B0%E5%9F%9F-ID)。
 
     - `collectionName`: 创建 Pipeline 所属的 Collection 名称。
+
+    - `reranker`（可选）: 使用 [Reranker](./reranker) 对输出结果进行重新排序，提高搜索结果质量。目前，仅支持 `zilliz/bge-reranker-base` 作为 Reranker 模型。
 
 如果请求返回以下类似内容，则表示 Search Pipeline 创建成功：
 
@@ -134,7 +147,8 @@ curl --request POST \
         "inputField": "query_text",
         "clusterId": "in03-***************",
         "collectionName": "my_new_collection",
-        "embedding": "zilliz/bge-base-en-v1.5"
+        "embedding": "zilliz/bge-base-en-v1.5",
+        "reranker": "zilliz/bge-reranker-base"
       }
     ],
     "totalTokenUsage": 0

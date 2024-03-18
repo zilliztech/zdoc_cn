@@ -1,23 +1,21 @@
 ---
-slug: /setup-a-private-link
+slug: /setup-a-private-link-alicloud
 beta: FALSE
 notebook: FALSE
-token: JLHPwhdssifn2dkR5lDcA4SWnVg
-sidebar_position: 2
+token: OZ5Ywbjm0idqAqkOdZrcQU3Wncb
+sidebar_position: 1
 ---
 
 import Admonition from '@theme/Admonition';
 
 
-# 创建私网连接
+# 创建私网连接（阿里云）
 
-Zilliz Cloud 允许您通过私网连接（PrivateLink）访问您的集群。如果您不希望通过公众互联网访问您位于 Zilliz Cloud 上的集群， 可以按照本章的步骤为您的集群创建私网连接。
+本小节主要介绍如何在您的阿里云 VPC 和您托管在阿里云上的 Zilliz Cloud 集群之间建立私网连接。
 
-## 配置思路{#configuration-principle}
+## 配置思路{#configuration-roadmap}
 
-![private_link_cn](/img/private_link_cn.png)
-
-如上图所示，私网连接建立在您的应用所在 VPC 与 您的 Zilliz Cloud 集群所在VPC 之间。 Zilliz Cloud 集群提供的私网连接支持为多个可用区的应用提供服务。如需启用访问 Zilliz Cloud 集群的私网连接，您需要：
+如需启用访问 Zilliz Cloud 集群的私网连接，您需要：
 
 - 通过阿里云控制台在您的 VPC 中创建一个终端节点，并为其选择安全组、可用区和交换机。
 
@@ -29,11 +27,13 @@ Zilliz Cloud 允许您通过私网连接（PrivateLink）访问您的集群。�
 
 - 您已经注册了 Zilliz Cloud。
 
-- 您已经创建了集群。
+- 您已经创建了 Zilliz Cloud 阿里云集群。
+
+- 您在上述 Zilliz Cloud 腾讯云集群所在云服务地域有一个 VPC。
 
 ## 配置步骤{#procedures}
 
-本节将按照配置思路详细介绍如何为您的 Zilliz Cloud 集群创建私网连接。
+本节将按照配置思路详细介绍如何为您的 Zilliz Cloud 阿里云集群创建私网连接。
 
 ### 登记私网连接参数{#set-private-link-parameters}
 
@@ -60,7 +60,7 @@ Zilliz Cloud 允许您通过私网连接（PrivateLink）访问您的集群。�
     <ul>
     <li>操作尚未完成！请勿单击对话框中的<strong>创建</strong>。</li>
     </ul>
-    <p>您需要前往阿里云控制台，<a href="./setup-a-private-link#create-endpoint">创建终端节点</a>。然后，在对话框中填写成功创建的**终端节点实例 ID **后，才可以单击<strong>创建</strong>。</p>
+    <p>您需要前往阿里云控制台，<a href="./setup-a-private-link">创建终端节点</a>。然后，在对话框中填写成功创建的**终端节点实例 ID **后，才可以单击<strong>创建</strong>。</p>
 
     </Admonition>
 
@@ -110,7 +110,15 @@ Zilliz Cloud 允许您通过私网连接（PrivateLink）访问您的集群。�
 
 1. 单击**添加 Zone**，在弹出的**添加 PrivateZone **对话框中填写 **Zone名称**，并勾选**子域名递归解析代理**。单击**确定**后，列表中出现一条新记录。
 
-    当前阿里云上 Zilliz Cloud 集群所属 Zone 名称为 **ali-cn-hangzhou.vectordb.zilliz.com.cn**。
+    阿里云上 Zilliz Cloud 集群所属 Zone 名称应与您的终端节点所在区域保持一致。
+
+    |  终端节点所在区域 |  Zone 名称                                                    |
+    | --------- | ----------------------------------------------------------- |
+    |  杭州       |  `inxx-xxxxxxxxxxxx.ali-cn-hangzhou.vectordb.zilliz.com.cn` |
+    |  北京       |  `inxx-xxxxxxxxxxxx.ali-cn-beijing.vectordb.zilliz.com.cn`  |
+    |  深圳       |  `inxx-xxxxxxxxxxxx.ali-cn-shenzhen.vectordb.zilliz.com.cn` |
+
+    Zone 名称中的`inxx-xxxxxxxxxxxx`为您的Zilliz Cloud 阿里云集群 ID。您可参考[Zilliz Cloud 控制台](./on-zilliz-cloud-console)查询集群 ID。
 
 1. 在该记录的**操作**栏中单击**解析设置**。
 

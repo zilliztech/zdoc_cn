@@ -5,7 +5,7 @@
   "node_token": "UvarwFhiJimKxfkduyVcTOqTndb",
   "node_type": "origin",
   "obj_create_time": "1708397946",
-  "obj_edit_time": "1708599580",
+  "obj_edit_time": "1710496591",
   "obj_token": "JjdQddq8KoELE8xYOO0cdXb8nPe",
   "obj_type": "docx",
   "origin_node_token": "UvarwFhiJimKxfkduyVcTOqTndb",
@@ -43,6 +43,7 @@
           "NSewddmKIopGhmxeNLWcXUMbn7b",
           "CP3KdN2RKoY4fIxLGBQcQ7ytnQe",
           "Uy1CdHzaAoqq2jxtgDBcM3hlnbN",
+          "LHUTdNnKrohh58xeAkdcfyaInff",
           "HiuJd897QofsCXxFgktcncpYnRf",
           "APGPd0cWro0fhHxiqXXcPTcYn4e",
           "CZ7mdja5eoMXktxu8ZeclNCNnph",
@@ -844,6 +845,7 @@
           "XWMSdvQy9oowrKxOLSQcZipUnHe",
           "MR03dICdcowTPHxmvXpcyxtmnpd",
           "YqfMdAEnZoMFy0xUkI8cxtAgnIb",
+          "V3tDd4azAoNZVyxhoyTc2EwcnKc",
           "T3mudPji5o76AuxBbD7c5KyHnQf"
         ],
         "ordered": {
@@ -1114,6 +1116,278 @@
         "parent_id": "F0JRdAlvwoJ7G6xU0oDcCVimnxh"
       },
       {
+        "block_id": "V3tDd4azAoNZVyxhoyTc2EwcnKc",
+        "block_type": 13,
+        "children": [
+          "Fk8YdfxuloWBzdxk6k9c2qkvnPf",
+          "VOpkdrTYOooYqdxtcA9cwDqkn4d"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "（可选） 如需对输出结果根据相关性进行重新排序、提高搜索结果质量，请开启 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Reranker",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FW81AwLbUmieD4pklJTackrpCnUe"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。请注意，开启 Reranker 会增加使用成本和搜索延时。默认情况下，Reranker 功能关闭。开启后，您可以选择 Reranker 模型。目前仅支持 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "zilliz/bge-reranker-base ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "模型。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "F0JRdAlvwoJ7G6xU0oDcCVimnxh"
+      },
+      {
+        "block_id": "Fk8YdfxuloWBzdxk6k9c2qkvnPf",
+        "block_type": 31,
+        "children": [
+          "W4nmdpZSJoIf45xBxKgcnKzontb",
+          "VQMbd0LaVoYYCnxMB17cPHDfnDr",
+          "PH28d9oX2oDZskx7iJ5cRIvHnLg",
+          "DVPYdPIIsogUU7x50FLcAJpknBd"
+        ],
+        "parent_id": "V3tDd4azAoNZVyxhoyTc2EwcnKc",
+        "table": {
+          "cells": [
+            "W4nmdpZSJoIf45xBxKgcnKzontb",
+            "VQMbd0LaVoYYCnxMB17cPHDfnDr",
+            "PH28d9oX2oDZskx7iJ5cRIvHnLg",
+            "DVPYdPIIsogUU7x50FLcAJpknBd"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              214,
+              260
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 2
+          }
+        }
+      },
+      {
+        "block_id": "W4nmdpZSJoIf45xBxKgcnKzontb",
+        "block_type": 32,
+        "children": [
+          "TyArdsB7poHLDux71NUcIWo6nee"
+        ],
+        "parent_id": "Fk8YdfxuloWBzdxk6k9c2qkvnPf",
+        "table_cell": {}
+      },
+      {
+        "block_id": "TyArdsB7poHLDux71NUcIWo6nee",
+        "block_type": 2,
+        "parent_id": "W4nmdpZSJoIf45xBxKgcnKzontb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Reranker 模型",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VQMbd0LaVoYYCnxMB17cPHDfnDr",
+        "block_type": 32,
+        "children": [
+          "RCXRdEHSmouArEx4uM8cdM8fnyx"
+        ],
+        "parent_id": "Fk8YdfxuloWBzdxk6k9c2qkvnPf",
+        "table_cell": {}
+      },
+      {
+        "block_id": "RCXRdEHSmouArEx4uM8cdM8fnyx",
+        "block_type": 2,
+        "parent_id": "VQMbd0LaVoYYCnxMB17cPHDfnDr",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PH28d9oX2oDZskx7iJ5cRIvHnLg",
+        "block_type": 32,
+        "children": [
+          "SJmFdlOehorH1rxygH3cLRgbn2d"
+        ],
+        "parent_id": "Fk8YdfxuloWBzdxk6k9c2qkvnPf",
+        "table_cell": {}
+      },
+      {
+        "block_id": "SJmFdlOehorH1rxygH3cLRgbn2d",
+        "block_type": 2,
+        "parent_id": "PH28d9oX2oDZskx7iJ5cRIvHnLg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "zilliz/bge-reranker-base",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DVPYdPIIsogUU7x50FLcAJpknBd",
+        "block_type": 32,
+        "children": [
+          "O9WPd7sXzoyAfDxY4JZcJuMHnCd"
+        ],
+        "parent_id": "Fk8YdfxuloWBzdxk6k9c2qkvnPf",
+        "table_cell": {}
+      },
+      {
+        "block_id": "O9WPd7sXzoyAfDxY4JZcJuMHnCd",
+        "block_type": 2,
+        "parent_id": "DVPYdPIIsogUU7x50FLcAJpknBd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "智源研究院（BAAI）发布的开源重新排序（Reranker）模型。该模型采用交叉编码器架构，并托管于 Zilliz Cloud 上。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VOpkdrTYOooYqdxtcA9cwDqkn4d",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D41368-1488%26mode%3Ddesign%26t%3DXRE6rArb8U5A5LPN-4"
+          }
+        },
+        "parent_id": "V3tDd4azAoNZVyxhoyTc2EwcnKc"
+      },
+      {
         "block_id": "T3mudPji5o76AuxBbD7c5KyHnQf",
         "block_type": 13,
         "ordered": {
@@ -1376,7 +1650,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "curl --request POST \\\n    --header \"Content-Type: application/json\" \\\n    --header \"Authorization: Bearer ${YOUR_API_KEY}\" \\\n    --url \"https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines\" \\\n    -d '{\n        \"projectId\": \"proj-xxxx\",       \n        \"name\": \"my_text_search_pipeline\",\n        \"description\": \"A pipeline that receives text and search for semantically similar doc chunks\",\n        \"type\": \"SEARCH\",\n        \"functions\": [\n            {\n                \"name\": \"search_chunk_text_and_title\",\n                \"action\": \"SEARCH_DOC_CHUNK\",\n                \"inputField\": \"query_text\",\n                \"clusterId\": \"${CLUSTER_ID}\",\n                \"collectionName\": \"my_new_collection\"\n            }\n        ]\n",
+                "content": "curl --request POST \\\n    --header \"Content-Type: application/json\" \\\n    --header \"Authorization: Bearer ${YOUR_API_KEY}\" \\\n    --url \"https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines\" \\\n    -d '{\n        \"projectId\": \"proj-xxxx\",       \n        \"name\": \"my_text_search_pipeline\",\n        \"description\": \"A pipeline that receives text and search for semantically similar doc chunks\",\n        \"type\": \"SEARCH\",\n        \"functions\": [\n            {\n                \"name\": \"search_chunk_text_and_title\",\n                \"action\": \"SEARCH_DOC_CHUNK\",\n                \"inputField\": \"query_text\",\n                \"clusterId\": \"${CLUSTER_ID}\",\n                \"collectionName\": \"my_new_collection\",\n                \"reranker\": \"zilliz/bge-reranker-base\"\n            }\n        ]\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1615,8 +1889,7 @@
           ],
           "style": {
             "align": 1,
-            "folded": false,
-            "indentation_level": "NoIndent"
+            "folded": false
           }
         },
         "parent_id": "JjdQddq8KoELE8xYOO0cdXb8nPe"
@@ -1641,6 +1914,43 @@
             {
               "text_run": {
                 "content": ": 创建的 Pipeline 名称。Pipeline 名称应该在 3-64 个字符内，且只可包含数字、字母和下划线。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "JjdQddq8KoELE8xYOO0cdXb8nPe"
+      },
+      {
+        "block_id": "LHUTdNnKrohh58xeAkdcfyaInff",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "description",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "（可选）：创建的 Pipeline 描述。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1831,7 +2141,8 @@
           "JzUIdL89loIVeqxBvWucOk5mnlc",
           "ItSKdg4xHo3ai5x8PWpccVVPnPo",
           "V7gydsOi8oyhGZxBd2qcYxFsn1c",
-          "WjgXd2ohUozfarxozaAc1VuWnDf"
+          "WjgXd2ohUozfarxozaAc1VuWnDf",
+          "FGEZdf89PoFjgtxF33PcK45knDd"
         ],
         "parent_id": "JjdQddq8KoELE8xYOO0cdXb8nPe"
       },
@@ -2099,6 +2410,94 @@
         "parent_id": "APGPd0cWro0fhHxiqXXcPTcYn4e"
       },
       {
+        "block_id": "FGEZdf89PoFjgtxF33PcK45knDd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "reranker",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "（可选）: 使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Reranker",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FW81AwLbUmieD4pklJTackrpCnUe"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 对输出结果进行重新排序，提高搜索结果质量。目前，仅支持 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "zilliz/bge-reranker-base",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 作为 Reranker 模型。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "APGPd0cWro0fhHxiqXXcPTcYn4e"
+      },
+      {
         "block_id": "CZ7mdja5eoMXktxu8ZeclNCNnph",
         "block_type": 2,
         "parent_id": "JjdQddq8KoELE8xYOO0cdXb8nPe",
@@ -2130,7 +2529,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "{\n  \"code\": 200,\n  \"data\": {\n    \"pipelineId\": \"pipe-84e6d9dba930e035150972\",\n    \"name\": \"my_text_search_pipeline\",\n    \"type\": \"SEARCH\",\n    \"description\": \"A pipeline that receives text and search for semantically similar doc chunks\",\n    \"status\": \"SERVING\",\n    \"functions\": [\n      {\n        \"action\": \"SEARCH_DOC_CHUNK\",\n        \"name\": \"search_chunk_text_and_title\",\n        \"inputField\": \"query_text\",\n        \"clusterId\": \"in03-***************\",\n        \"collectionName\": \"my_new_collection\",\n        \"embedding\": \"zilliz/bge-base-en-v1.5\"\n      }\n    ],\n    \"totalTokenUsage\": 0\n  }\n",
+                "content": "{\n  \"code\": 200,\n  \"data\": {\n    \"pipelineId\": \"pipe-84e6d9dba930e035150972\",\n    \"name\": \"my_text_search_pipeline\",\n    \"type\": \"SEARCH\",\n    \"description\": \"A pipeline that receives text and search for semantically similar doc chunks\",\n    \"status\": \"SERVING\",\n    \"functions\": [\n      {\n        \"action\": \"SEARCH_DOC_CHUNK\",\n        \"name\": \"search_chunk_text_and_title\",\n        \"inputField\": \"query_text\",\n        \"clusterId\": \"in03-***************\",\n        \"collectionName\": \"my_new_collection\",\n        \"embedding\": \"zilliz/bge-base-en-v1.5\",\n        \"reranker\": \"zilliz/bge-reranker-base\"\n      }\n    ],\n    \"totalTokenUsage\": 0\n  }\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2298,6 +2697,6 @@
         "parent_id": "JjdQddq8KoELE8xYOO0cdXb8nPe"
       }
     ],
-    "counts": 64
+    "counts": 77
   }
 }
