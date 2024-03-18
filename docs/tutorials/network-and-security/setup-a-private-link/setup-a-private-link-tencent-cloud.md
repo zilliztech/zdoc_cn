@@ -37,7 +37,7 @@ import Admonition from '@theme/Admonition';
 
 本节将按照配置思路详细介绍如何为您的 Zilliz Cloud 腾讯云集群创建私网连接。
 
-### 获取主帐号 ID
+### 获取主帐号 ID{#obtain-main-account}
 
 为您的 Zilliz Cloud 腾讯云集群创建私网连接，需要提供您的腾讯云主帐号 ID。您可以登录腾讯云控制台，前往[帐号信息](https://console.cloud.tencent.com/developer)页面获取。
 
@@ -52,7 +52,7 @@ import Admonition from '@theme/Admonition';
 
 复制或记录主帐号 ID 备用。
 
-### 获取 Zilliz Cloud VPC 信息
+### 获取 Zilliz Cloud VPC 信息{#obtain-zilliz-cloud-vpc}
 
 前往您的 Zilliz Cloud 腾讯云集群管理页面。
 
@@ -71,7 +71,7 @@ import Admonition from '@theme/Admonition';
 
     </Admonition>
 
-### 创建终端节点实例
+### 创建终端节点实例{#obtain-vpc-endpoint}
 
 前往腾讯云[终端节点](https://console.cloud.tencent.com/vpc/vpce)管理界面，
 
@@ -97,7 +97,7 @@ import Admonition from '@theme/Admonition';
 
     ![RHZcbNCTtoNwh7xCnhycf9HAnZc](/img/RHZcbNCTtoNwh7xCnhycf9HAnZc.png)
 
-### 在 Zilliz Cloud 上接受连接请求
+### 在 Zilliz Cloud 上接受连接请求{#accept-connection-request}
 
 返回 Zilliz Cloud 控制台，将已创建的终端节点实例 ID 填入**创建私网连接**对话框中，并单击**创建**。
 
@@ -111,9 +111,9 @@ import Admonition from '@theme/Admonition';
 
 - 该终端节点的 **IP 地址**（示例值为 **10.0.0.5**）
 
-- 您的 Zilliz Cloud 腾讯云集群私网连接地址 （示例值为 **in01-xxxxxxxxxxx-privatelink**）。
+- 您的 Zilliz Cloud 腾讯云集群私网连接地址 （示例值为 **in01-xxxxxxxxxxx-privatelink.tc-ap-xxxxxxx**）。
 
-### 配置私有域解析
+### 配置私有域解析{#configure-private-zone}
 
 前往腾讯云[私有域解析](https://console.cloud.tencent.com/privatedns)管理页面。
 
@@ -129,26 +129,26 @@ import Admonition from '@theme/Admonition';
 
     ![J25YbPFCYo8j5gxwk98cbjv0nkc](/img/J25YbPFCYo8j5gxwk98cbjv0nkc.png)
 
-    |  参数名称   |  参数说明                                                                                                                           |
-    | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
-    |  域名     |  Zilliz Cloud 腾讯云集群域名。<br/> 请输入您的 Zilliz Cloud 腾讯云集群所在云服务地域的私有域地址。<br/> - `tc-ap-nanjing.cloud-uat.zilliz.cn`(南京)<br/> |
-    |  关联 VPC |  选择关联上述私有域名的 VPC。<br/> 请选择待接入 Zilliz Cloud 腾讯云集群的业务资源所在 VPC。并将其移动到**已选择**列表框中。                                               |
+    |  参数名称   |  参数说明                                                                                                            |
+    | ------- | ---------------------------------------------------------------------------------------------------------------- |
+    |  域名     |  Zilliz Cloud 腾讯云集群域名。<br/> 请输入您的 Zilliz Cloud 腾讯云集群所在云服务地域的私有域地址。<br/> - `vectordb.zilliz.com.cn`<br/> |
+    |  关联 VPC |  选择关联上述私有域名的 VPC。<br/> 请选择待接入 Zilliz Cloud 腾讯云集群的业务资源所在 VPC。并将其移动到**已选择**列表框中。                                |
 
     其它参数保持默认即可。
 
 1. 单击**确定**，即可查看已创建的私有域记录。
 
-    ![SWqlbdHYUoYgEGxwNeWc2dJ8nKf](/img/SWqlbdHYUoYgEGxwNeWc2dJ8nKf.png)
+    ![Ra2qbpeWkobP68x478Eck05sneb](/img/Ra2qbpeWkobP68x478Eck05sneb.png)
 
 1. 单击刚才创建的私有域记录**操作**列中的**解析**，并在解析记录列表中添加解析记录。
 
-    ![GaSsbRvhJooUcKxOCQqc8WHEnQf](/img/GaSsbRvhJooUcKxOCQqc8WHEnQf.png)
+    ![La7mb1hzno9Ky3x665JcfHNTnBf](/img/La7mb1hzno9Ky3x665JcfHNTnBf.png)
 
-    |  参数名称 |  参数说明                                                                                                               |
-    | ----- | ------------------------------------------------------------------------------------------------------------------- |
-    |  主机记录 |  您的 Zilliz Cloud 腾讯云集群的私网连接域名前缀。<br/> 如果您的集群 ID 为 **in01-xxxxxxxxxxx**，则该域名前缀为 **in01-xxxxxxxxxxx-privatelink**。 |
-    |  记录类型 |  当前解析记录的类型。<br/> 请选择创建 A 记录。                                                                                     |
-    |  记录值  |  上述域名前缀完成解析后的 IP 地址。<br/> 请输入终端节点实例的 IP 地址。                                                                      |
+    |  参数名称 |  参数说明                                                                                                                                                                                                                                 |
+    | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    |  主机记录 |  您的 Zilliz Cloud 腾讯云集群的私网连接域名前缀。<br/> 如果您的集群 ID 为 **in01-xxxxxxxxxxx**，云地域 ID 为 **tc-ap-xxxxxxx**，则该域名前缀为 **in01-xxxxxxxxxxx-privatelink.tc-ap-xxxxxxx**。例如：<br/> - **in01-xxxxxxxxxxx-privatelink.tc-ap-nanjing **(南京)<br/> |
+    |  记录类型 |  当前解析记录的类型。<br/> 请选择创建 A 记录。                                                                                                                                                                                                       |
+    |  记录值  |  上述域名前缀完成解析后的 IP 地址。<br/> 请输入终端节点实例的 IP 地址。                                                                                                                                                                                        |
 
     其它参数保持默认即可。添加完成后，单击**保存**。
 

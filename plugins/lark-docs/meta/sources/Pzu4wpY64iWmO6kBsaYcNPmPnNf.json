@@ -5,7 +5,7 @@
   "node_token": "Pzu4wpY64iWmO6kBsaYcNPmPnNf",
   "node_type": "origin",
   "obj_create_time": "1709522289",
-  "obj_edit_time": "1709550538",
+  "obj_edit_time": "1710747079",
   "obj_token": "RRoPdDTl2opVyvxSqRQcwWQXnPi",
   "obj_type": "docx",
   "origin_node_token": "Pzu4wpY64iWmO6kBsaYcNPmPnNf",
@@ -476,7 +476,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "获取主帐号 ID",
+                "content": "获取主帐号 ID{#obtain-main-account}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -799,7 +799,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "获取 Zilliz Cloud VPC 信息",
+                "content": "获取 Zilliz Cloud VPC 信息{#obtain-zilliz-cloud-vpc}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1198,7 +1198,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "创建终端节点实例",
+                "content": "创建终端节点实例{#obtain-vpc-endpoint}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2497,7 +2497,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "在 Zilliz Cloud 上接受连接请求",
+                "content": "在 Zilliz Cloud 上接受连接请求{#accept-connection-request}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2827,7 +2827,7 @@
             },
             {
               "text_run": {
-                "content": "in01-xxxxxxxxxxx-privatelink",
+                "content": "in01-xxxxxxxxxxx-privatelink.tc-ap-xxxxxxx",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -2864,7 +2864,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "配置私有域解析",
+                "content": "配置私有域解析{#configure-private-zone}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3329,22 +3329,10 @@
           "elements": [
             {
               "text_run": {
-                "content": "tc-ap-nanjing.cloud-uat.zilliz.cn",
+                "content": "vectordb.zilliz.com.cn",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": true,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "(南京)",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
                   "italic": false,
                   "strikethrough": false,
                   "underline": false
@@ -3506,7 +3494,7 @@
         "block_id": "NIkfdmnjMoBHucx8qacceUh5nkh",
         "block_type": 13,
         "children": [
-          "JyHLd9b99oyLfdxWmUkczohBn30"
+          "MIlzdcw8moY9P0xG4HPc4aq2nyh"
         ],
         "ordered": {
           "elements": [
@@ -3555,13 +3543,13 @@
         "parent_id": "RRoPdDTl2opVyvxSqRQcwWQXnPi"
       },
       {
-        "block_id": "JyHLd9b99oyLfdxWmUkczohBn30",
+        "block_id": "MIlzdcw8moY9P0xG4HPc4aq2nyh",
         "block_type": 27,
         "image": {
           "align": 2,
-          "height": 321,
-          "token": "SWqlbdHYUoYgEGxwNeWc2dJ8nKf",
-          "width": 1456
+          "height": 536,
+          "token": "Ra2qbpeWkobP68x478Eck05sneb",
+          "width": 1262
         },
         "parent_id": "NIkfdmnjMoBHucx8qacceUh5nkh"
       },
@@ -3569,7 +3557,7 @@
         "block_id": "WSt8d5vrMo82EzxWmZmckA7VnAe",
         "block_type": 13,
         "children": [
-          "FtEydnC5lolOApx6OiFcvNDsndh",
+          "HDY2dhKQWoAFQqxkdrycFF2Wn81",
           "SOnHdnf9eorAF9xZz0jcpZxZnSN",
           "E5XSd9gTbobZuvxLAFBclVGUnhb",
           "ZW3wdrVi3oN74Xx8rQ9cZCBWnUd",
@@ -3647,13 +3635,13 @@
         "parent_id": "RRoPdDTl2opVyvxSqRQcwWQXnPi"
       },
       {
-        "block_id": "FtEydnC5lolOApx6OiFcvNDsndh",
+        "block_id": "HDY2dhKQWoAFQqxkdrycFF2Wn81",
         "block_type": 27,
         "image": {
           "align": 2,
-          "height": 407,
-          "token": "GaSsbRvhJooUcKxOCQqc8WHEnQf",
-          "width": 1456
+          "height": 477,
+          "token": "La7mb1hzno9Ky3x665JcfHNTnBf",
+          "width": 1262
         },
         "parent_id": "WSt8d5vrMo82EzxWmZmckA7VnAe"
       },
@@ -3834,7 +3822,8 @@
         "block_type": 32,
         "children": [
           "WvJjdgyjXojnD9xvj53chfdgnJj",
-          "M1pRdOMA5otMcyxpcapcVuxin0b"
+          "M1pRdOMA5otMcyxpcapcVuxin0b",
+          "Jzz0dVTMio355YxOFOIcq4O9nzg"
         ],
         "parent_id": "SOnHdnf9eorAF9xZz0jcpZxZnSN",
         "table_cell": {}
@@ -3896,6 +3885,30 @@
             },
             {
               "text_run": {
+                "content": "，云地域 ID 为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "tc-ap-xxxxxxx",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
                 "content": "，则该域名前缀为 ",
                 "text_element_style": {
                   "bold": false,
@@ -3908,7 +3921,7 @@
             },
             {
               "text_run": {
-                "content": "in01-xxxxxxxxxxx-privatelink",
+                "content": "in01-xxxxxxxxxxx-privatelink.tc-ap-xxxxxxx",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -3920,7 +3933,7 @@
             },
             {
               "text_run": {
-                "content": "。",
+                "content": "。例如：",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3936,6 +3949,43 @@
             "folded": false
           }
         }
+      },
+      {
+        "block_id": "Jzz0dVTMio355YxOFOIcq4O9nzg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "in01-xxxxxxxxxxx-privatelink.tc-ap-nanjing ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "(南京)",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AwCUdN4NQoI1Xtx5bf9cTlGznqf"
       },
       {
         "block_id": "UjzfdiRSkonyljxpyKdcz4e4nRe",
@@ -4275,6 +4325,6 @@
         }
       }
     ],
-    "counts": 139
+    "counts": 140
   }
 }
