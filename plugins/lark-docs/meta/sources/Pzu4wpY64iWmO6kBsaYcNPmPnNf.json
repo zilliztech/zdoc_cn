@@ -5,7 +5,7 @@
   "node_token": "Pzu4wpY64iWmO6kBsaYcNPmPnNf",
   "node_type": "origin",
   "obj_create_time": "1709522289",
-  "obj_edit_time": "1710747079",
+  "obj_edit_time": "1710747425",
   "obj_token": "RRoPdDTl2opVyvxSqRQcwWQXnPi",
   "obj_type": "docx",
   "origin_node_token": "Pzu4wpY64iWmO6kBsaYcNPmPnNf",
@@ -3957,7 +3957,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "in01-xxxxxxxxxxx-privatelink.tc-ap-nanjing ",
+                "content": "in01-xxxxxxxxxxx-privatelink.tc-ap-beijing ",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -3969,7 +3969,7 @@
             },
             {
               "text_run": {
-                "content": "(南京)",
+                "content": "(北京)",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
