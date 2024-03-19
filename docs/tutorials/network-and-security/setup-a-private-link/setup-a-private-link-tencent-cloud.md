@@ -138,7 +138,7 @@ import Admonition from '@theme/Admonition';
 
 1. 单击**确定**，即可查看已创建的私有域记录。
 
-    ![Ra2qbpeWkobP68x478Eck05sneb](/img/Ra2qbpeWkobP68x478Eck05sneb.png)
+    ![YgCPbOhy4ov5pFx2PLCcDhqln1f](/img/YgCPbOhy4ov5pFx2PLCcDhqln1f.png)
 
 1. 单击刚才创建的私有域记录**操作**列中的**解析**，并在解析记录列表中添加解析记录。
 
