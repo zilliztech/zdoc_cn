@@ -62,7 +62,7 @@ import Admonition from '@theme/Admonition';
 
 1. 复制 **Zilliz Cloud 腾讯云帐号 ID (UIN)** 和 **Zilliz 终端节点服务 ID**。
 
-    ![KI92b9ydtoEkELxhk1gcDVQ9nsc](/img/KI92b9ydtoEkELxhk1gcDVQ9nsc.png)
+    ![GGrZbPdvLoojPHxvt2jcicHqndg](/img/GGrZbPdvLoojPHxvt2jcicHqndg.png)
 
     <Admonition type="info" icon="📘" title="说明">
 
@@ -75,13 +75,13 @@ import Admonition from '@theme/Admonition';
 
 前往腾讯云[终端节点](https://console.cloud.tencent.com/vpc/vpce)管理界面，
 
-1. 将左上角的云服务地域修改为您的 Zilliz Cloud 腾讯云集群所在地域（示例值为**南京**）。
+1. 将左上角的云服务地域修改为您的 Zilliz Cloud 腾讯云集群所在地域（示例值为**北京**）。
 
-1. 并在其右侧的下拉选项框中选择需要访问您的 Zilliz Cloud 腾讯云集群的业务资源所在 VPC（示例值为 **zilliz (10.0.0.0/16)**）。
+1. 并在其右侧的下拉选项框中选择需要访问您的 Zilliz Cloud 腾讯云集群的业务资源所在 VPC（示例值为 **Default-VPC (172.21.0.0/16)**）。
 
 1. 单击**新建**，在弹出的**新建终端节点**中填写必要的信息。
 
-    ![BZfqb95ytogXYNxsvk5cuPA3nlg](/img/BZfqb95ytogXYNxsvk5cuPA3nlg.png)
+    ![A8W1bDGpxo7fyMxiEdPcrRxjnKg](/img/A8W1bDGpxo7fyMxiEdPcrRxjnKg.png)
 
     |  参数名称   |  参数说明                                                                                                          |
     | ------- | -------------------------------------------------------------------------------------------------------------- |
@@ -101,15 +101,15 @@ import Admonition from '@theme/Admonition';
 
 返回 Zilliz Cloud 控制台，将已创建的终端节点实例 ID 填入**创建私网连接**对话框中，并单击**创建**。
 
-![IhusbW7bIo7UTMxSCWfcF87RnGg](/img/IhusbW7bIo7UTMxSCWfcF87RnGg.png)
+![L4uvbca4Kooy5gxqDojclRecnBe](/img/L4uvbca4Kooy5gxqDojclRecnBe.png)
 
 稍等片刻，腾讯云控制台[终端节点](https://console.cloud.tencent.com/vpc/vpce)终端管理界面中终端节点的状态将由**待接受**变为**可用**。
 
-![XuhcbZ4IZoDDDNxLJCQcRZrZnjd](/img/XuhcbZ4IZoDDDNxLJCQcRZrZnjd.png)
+![Zv2FbvP6PoRsCTxXhWjccyGXnSd](/img/Zv2FbvP6PoRsCTxXhWjccyGXnSd.png)
 
 此时，您需要复制或记录
 
-- 该终端节点的 **IP 地址**（示例值为 **10.0.0.5**）
+- 该终端节点的 **IP 地址**（示例值为 **172.21.0.4**）
 
 - 您的 Zilliz Cloud 腾讯云集群私网连接地址 （示例值为 **in01-xxxxxxxxxxx-privatelink.tc-ap-xxxxxxx**）。
 
@@ -138,11 +138,11 @@ import Admonition from '@theme/Admonition';
 
 1. 单击**确定**，即可查看已创建的私有域记录。
 
-    ![YgCPbOhy4ov5pFx2PLCcDhqln1f](/img/YgCPbOhy4ov5pFx2PLCcDhqln1f.png)
+    ![IQepbWHV6o7BKixCms0cEQQ3n0O](/img/IQepbWHV6o7BKixCms0cEQQ3n0O.png)
 
 1. 单击刚才创建的私有域记录**操作**列中的**解析**，并在解析记录列表中添加解析记录。
 
-    ![La7mb1hzno9Ky3x665JcfHNTnBf](/img/La7mb1hzno9Ky3x665JcfHNTnBf.png)
+    ![B4uJbhlDOogfjrxkNjdcaT1fnZC](/img/B4uJbhlDOogfjrxkNjdcaT1fnZC.png)
 
     |  参数名称 |  参数说明                                                                                                                                                                                                                                                                                                |
     | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
