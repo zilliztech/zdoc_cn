@@ -5,7 +5,7 @@
   "node_token": "Pzu4wpY64iWmO6kBsaYcNPmPnNf",
   "node_type": "origin",
   "obj_create_time": "1709522289",
-  "obj_edit_time": "1710814716",
+  "obj_edit_time": "1710932056",
   "obj_token": "RRoPdDTl2opVyvxSqRQcwWQXnPi",
   "obj_type": "docx",
   "origin_node_token": "Pzu4wpY64iWmO6kBsaYcNPmPnNf",
@@ -3823,7 +3823,8 @@
         "children": [
           "WvJjdgyjXojnD9xvj53chfdgnJj",
           "M1pRdOMA5otMcyxpcapcVuxin0b",
-          "Jzz0dVTMio355YxOFOIcq4O9nzg"
+          "Jzz0dVTMio355YxOFOIcq4O9nzg",
+          "AGetdZBV2oI5GFxW34KcdAjznUf"
         ],
         "parent_id": "SOnHdnf9eorAF9xZz0jcpZxZnSN",
         "table_cell": {}
@@ -3970,6 +3971,43 @@
             {
               "text_run": {
                 "content": "(北京)",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "AwCUdN4NQoI1Xtx5bf9cTlGznqf"
+      },
+      {
+        "block_id": "AGetdZBV2oI5GFxW34KcdAjznUf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "in01-xxxxxxxxxxx-privatelink.tc-ap-shanghai ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "(上海)",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4325,6 +4363,6 @@
         }
       }
     ],
-    "counts": 140
+    "counts": 141
   }
 }

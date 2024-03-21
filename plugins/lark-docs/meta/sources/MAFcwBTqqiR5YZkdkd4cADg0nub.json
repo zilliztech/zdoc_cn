@@ -5,7 +5,7 @@
   "node_token": "MAFcwBTqqiR5YZkdkd4cADg0nub",
   "node_type": "origin",
   "obj_create_time": "1687140289",
-  "obj_edit_time": "1706594185",
+  "obj_edit_time": "1710998792",
   "obj_token": "OBowdXEYGod06gxEDe1cMjMwnNf",
   "obj_type": "docx",
   "origin_node_token": "MAFcwBTqqiR5YZkdkd4cADg0nub",
@@ -857,7 +857,10 @@
         "block_id": "EgfedE1ZZoudtTxTiLtcXXVunLg",
         "block_type": 32,
         "children": [
-          "G9ezdS0MQotmKlx9IwJcoKVYnvg"
+          "G9ezdS0MQotmKlx9IwJcoKVYnvg",
+          "X0BcdDkaqolDVDxhSkycirfYnVT",
+          "KhAadmv59owusCxf2Hlc2UnGnZI",
+          "Go8xdy3NAoTB2Rxbv64cBQYqnIh"
         ],
         "parent_id": "LydTdR9Czoa3O0xZ2LScnBP7nJg",
         "table_cell": {}
@@ -870,7 +873,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "集群部署的云服务提供商和地域。目前，Zilliz Cloud 支持阿里云华东1（杭州）",
+                "content": "集群部署的云服务提供商和地域。目前，Zilliz Cloud 支持以下云服务提供商和地域：",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -879,10 +882,22 @@
                   "underline": false
                 }
               }
-            },
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "X0BcdDkaqolDVDxhSkycirfYnVT",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
             {
               "text_run": {
-                "content": "，",
+                "content": "阿里云",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -891,7 +906,50 @@
                   "underline": false
                 }
               }
-            },
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "PeMCd9vKQoyzKexC4Oncyt55nZc",
+          "HuZIdewoUoh6X3xtWolc8Dp4nrh",
+          "PWN1dMCyZooMHWxq8ficdF0vnDc"
+        ],
+        "parent_id": "EgfedE1ZZoudtTxTiLtcXXVunLg"
+      },
+      {
+        "block_id": "PeMCd9vKQoyzKexC4Oncyt55nZc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "华东1（杭州）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "X0BcdDkaqolDVDxhSkycirfYnVT"
+      },
+      {
+        "block_id": "HuZIdewoUoh6X3xtWolc8Dp4nrh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
             {
               "text_run": {
                 "content": "华北2（北京）",
@@ -903,10 +961,23 @@
                   "underline": false
                 }
               }
-            },
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "X0BcdDkaqolDVDxhSkycirfYnVT"
+      },
+      {
+        "block_id": "PWN1dMCyZooMHWxq8ficdF0vnDc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
             {
               "text_run": {
-                "content": "和华南1（深圳）",
+                "content": "华南1（深圳）",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -915,10 +986,103 @@
                   "underline": false
                 }
               }
-            },
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "X0BcdDkaqolDVDxhSkycirfYnVT"
+      },
+      {
+        "block_id": "KhAadmv59owusCxf2Hlc2UnGnZI",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
             {
               "text_run": {
-                "content": "。更多详情，请见",
+                "content": "腾讯云",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "E6ygdVhfdoPdLZxbW1gcaAtmnMg",
+          "YOoDdnHOKojNRjxVQiXcGuRLnNh"
+        ],
+        "parent_id": "EgfedE1ZZoudtTxTiLtcXXVunLg"
+      },
+      {
+        "block_id": "E6ygdVhfdoPdLZxbW1gcaAtmnMg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "华北地区（北京）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KhAadmv59owusCxf2Hlc2UnGnZI"
+      },
+      {
+        "block_id": "YOoDdnHOKojNRjxVQiXcGuRLnNh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "华东地区（上海）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KhAadmv59owusCxf2Hlc2UnGnZI"
+      },
+      {
+        "block_id": "Go8xdy3NAoTB2Rxbv64cBQYqnIh",
+        "block_type": 2,
+        "parent_id": "EgfedE1ZZoudtTxTiLtcXXVunLg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "更多详情，请见",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2406,6 +2570,9 @@
         "block_type": 32,
         "children": [
           "Asnhdn5UPoqwAWxw0cWc8dWXnHc",
+          "VCC5djtGCoXKyPxBYcHcebeCnUf",
+          "ZSsId0n6mo4jwSx06ksc2TKnn7e",
+          "GDcldaDjRo9n5gxEww4ccspbnSc",
           "WPwMdtZ9fomyIRxrjxYc9yyGn1b"
         ],
         "parent_id": "JsRydSH1PouIRexc5AScVfqAnFh",
@@ -2419,7 +2586,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "集群所处地理位置及提供连接服务的云服务提供商。",
+                "content": "集群部署的云服务提供商和地域。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2437,6 +2604,215 @@
         }
       },
       {
+        "block_id": "VCC5djtGCoXKyPxBYcHcebeCnUf",
+        "block_type": 2,
+        "parent_id": "OlIWdf30ooesvuxdsn5cbm9Nn6g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "目前，Zilliz Cloud 支持以下云服务提供商和地域：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ZSsId0n6mo4jwSx06ksc2TKnn7e",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "阿里云",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "A0TsdrHfQojSKBxrD74cbuIXnNg",
+          "C3Qtd7CDAooCZsxiVsdcfz5wnff",
+          "TYkjdp06BoijABxjwr0cDuMxnPb"
+        ],
+        "parent_id": "OlIWdf30ooesvuxdsn5cbm9Nn6g"
+      },
+      {
+        "block_id": "A0TsdrHfQojSKBxrD74cbuIXnNg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "华东1（杭州）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZSsId0n6mo4jwSx06ksc2TKnn7e"
+      },
+      {
+        "block_id": "C3Qtd7CDAooCZsxiVsdcfz5wnff",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "华北2（北京）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZSsId0n6mo4jwSx06ksc2TKnn7e"
+      },
+      {
+        "block_id": "TYkjdp06BoijABxjwr0cDuMxnPb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "华南1（深圳）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZSsId0n6mo4jwSx06ksc2TKnn7e"
+      },
+      {
+        "block_id": "GDcldaDjRo9n5gxEww4ccspbnSc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "腾讯云",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "SFGGdYzvdoWjl2xkBa6cs9Krncd",
+          "QJCedn3iToekBJxMQVbc2YgCn0g"
+        ],
+        "parent_id": "OlIWdf30ooesvuxdsn5cbm9Nn6g"
+      },
+      {
+        "block_id": "SFGGdYzvdoWjl2xkBa6cs9Krncd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "华北地区（北京）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GDcldaDjRo9n5gxEww4ccspbnSc"
+      },
+      {
+        "block_id": "QJCedn3iToekBJxMQVbc2YgCn0g",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "华东地区（上海）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "GDcldaDjRo9n5gxEww4ccspbnSc"
+      },
+      {
         "block_id": "WPwMdtZ9fomyIRxrjxYc9yyGn1b",
         "block_type": 2,
         "parent_id": "OlIWdf30ooesvuxdsn5cbm9Nn6g",
@@ -2444,7 +2820,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "当前可供选择的云服务提供商为",
+                "content": "更多详情，请见",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2455,87 +2831,18 @@
               }
             },
             {
-              "text_run": {
-                "content": "阿里云",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "，可选地址为",
+              "mention_doc": {
+                "obj_type": 16,
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
                   "italic": false,
                   "strikethrough": false,
                   "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "华东1（杭州）",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "，",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "华北2（北京）",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "和",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "华南1（深圳）",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
+                },
+                "title": "云服务提供商和地域",
+                "token": "BErdww1kOirndzkHrKoc2ibynlb",
+                "url": "https://zilliverse.feishu.cn/wiki/BErdww1kOirndzkHrKoc2ibynlb"
               }
             },
             {
@@ -3289,6 +3596,6 @@
         }
       }
     ],
-    "counts": 98
+    "counts": 114
   }
 }

@@ -5,7 +5,7 @@
   "node_token": "Jxqfwnd80i8ibIkRhEKcnkK6nzd",
   "node_type": "origin",
   "obj_create_time": "1687160535",
-  "obj_edit_time": "1704968256",
+  "obj_edit_time": "1710931634",
   "obj_token": "Chted68OWoHPUAxKu0Jcy9QFnPh",
   "obj_type": "docx",
   "origin_node_token": "Jxqfwnd80i8ibIkRhEKcnkK6nzd",
@@ -41,6 +41,8 @@
           "NuSddY7M5oJcVgxUPCdcXOU7nAe",
           "ZNiZdB4z4oCCcyxb4rycvy80nRd",
           "GFAodiz0roYItuxCps8cL0axnBg",
+          "FvoOdRFcooW1Exxfsi7ct24cnSg",
+          "LFFZdpPYPosVCbxQNthcVqygnPh",
           "IBDfdJqrBohT09xKXCac16Gcnfh",
           "MkTDdbniLoKbMhxyp2ZcmxBqnve",
           "Jl34dB770o9B1YxxIqPcWOEUn6g",
@@ -635,7 +637,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "目前，Zilliz Cloud 仅支持阿里云，部署地域支持华东1（杭州）",
+                "content": "目前，Zilliz Cloud 支持阿里云",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和腾讯云",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -659,7 +673,7 @@
             },
             {
               "text_run": {
-                "content": "华北2（北京）",
+                "content": "可",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -671,7 +685,7 @@
             },
             {
               "text_run": {
-                "content": "，华南1（深圳）",
+                "content": "部署地域",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -683,7 +697,293 @@
             },
             {
               "text_run": {
-                "content": "。",
+                "content": "如下：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FvoOdRFcooW1Exxfsi7ct24cnSg",
+        "block_type": 31,
+        "children": [
+          "X9jQdzhTIoT1JUxb4lJcZO4knGc",
+          "OAkldnDFoowkBmxeWEIc8IpenAe",
+          "HyLgdmOd9oEzICxg0lLcYVK1nRc",
+          "TNnYdmNz5ozFFkxtMzfcIKbvnfh",
+          "J6tKd47ZioiGd8xgMIycxXeEnpb",
+          "AWJId6I6Foz9v1xRCmAcrCTFnkN"
+        ],
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh",
+        "table": {
+          "cells": [
+            "X9jQdzhTIoT1JUxb4lJcZO4knGc",
+            "OAkldnDFoowkBmxeWEIc8IpenAe",
+            "HyLgdmOd9oEzICxg0lLcYVK1nRc",
+            "TNnYdmNz5ozFFkxtMzfcIKbvnfh",
+            "J6tKd47ZioiGd8xgMIycxXeEnpb",
+            "AWJId6I6Foz9v1xRCmAcrCTFnkN"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              171,
+              342
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 3
+          }
+        }
+      },
+      {
+        "block_id": "X9jQdzhTIoT1JUxb4lJcZO4knGc",
+        "block_type": 32,
+        "children": [
+          "NYEfdgtJMoEN4rx9eJOcEWKTnLb"
+        ],
+        "parent_id": "FvoOdRFcooW1Exxfsi7ct24cnSg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "NYEfdgtJMoEN4rx9eJOcEWKTnLb",
+        "block_type": 2,
+        "parent_id": "X9jQdzhTIoT1JUxb4lJcZO4knGc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "云服务提供商",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OAkldnDFoowkBmxeWEIc8IpenAe",
+        "block_type": 32,
+        "children": [
+          "TmY6d2mKZoqMuhxN7qTcZtoent2"
+        ],
+        "parent_id": "FvoOdRFcooW1Exxfsi7ct24cnSg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "TmY6d2mKZoqMuhxN7qTcZtoent2",
+        "block_type": 2,
+        "parent_id": "OAkldnDFoowkBmxeWEIc8IpenAe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "地域",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HyLgdmOd9oEzICxg0lLcYVK1nRc",
+        "block_type": 32,
+        "children": [
+          "LlGRdVQlWo2M2KxTPgMcH8sEnhd"
+        ],
+        "parent_id": "FvoOdRFcooW1Exxfsi7ct24cnSg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "LlGRdVQlWo2M2KxTPgMcH8sEnhd",
+        "block_type": 2,
+        "parent_id": "HyLgdmOd9oEzICxg0lLcYVK1nRc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "阿里云",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TNnYdmNz5ozFFkxtMzfcIKbvnfh",
+        "block_type": 32,
+        "children": [
+          "PhYJd0n4QoMlA3xf7wTccTPun3I"
+        ],
+        "parent_id": "FvoOdRFcooW1Exxfsi7ct24cnSg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "PhYJd0n4QoMlA3xf7wTccTPun3I",
+        "block_type": 2,
+        "parent_id": "TNnYdmNz5ozFFkxtMzfcIKbvnfh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "华东1（杭州）、华北2（北京）、华南1（深圳）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "J6tKd47ZioiGd8xgMIycxXeEnpb",
+        "block_type": 32,
+        "children": [
+          "Eovxd671NofnOhxLqD6cX65tnRb"
+        ],
+        "parent_id": "FvoOdRFcooW1Exxfsi7ct24cnSg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "Eovxd671NofnOhxLqD6cX65tnRb",
+        "block_type": 2,
+        "parent_id": "J6tKd47ZioiGd8xgMIycxXeEnpb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "腾讯云",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AWJId6I6Foz9v1xRCmAcrCTFnkN",
+        "block_type": 32,
+        "children": [
+          "EO7MdjU4rosElwxJOJRchbisnkg"
+        ],
+        "parent_id": "FvoOdRFcooW1Exxfsi7ct24cnSg",
+        "table_cell": {}
+      },
+      {
+        "block_id": "EO7MdjU4rosElwxJOJRchbisnkg",
+        "block_type": 2,
+        "parent_id": "AWJId6I6Foz9v1xRCmAcrCTFnkN",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "华北地区（北京）、华东地区（上海）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LFFZdpPYPosVCbxQNthcVqygnPh",
+        "block_type": 2,
+        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1078,6 +1378,6 @@
         }
       }
     ],
-    "counts": 32
+    "counts": 46
   }
 }
