@@ -15,7 +15,7 @@ Zilliz Cloud 集群由全托管 Milvus 实例及相关计算资源构成。您�
 
 ## 集群{#cluster}
 
-在 Zilliz Cloud 上创建集群时，您需要选择集群 CU 类型。CU 类型有 3 种选项：性能型、容量型和经济型。不同 CU 类型的区别，请阅读[选择合适的 CU 类型](./cu-types-explained)。
+在 Zilliz Cloud 上创建集群时，您需要选择集群 CU 类型。CU 类型有 2 种选项：性能型和容量型。不同 CU 类型的区别，请阅读[选择合适的 CU 类型](./cu-types-explained)。
 
 确定 CU 类型后，您还需要选择 CU 大小。CU 大小决定了集群可容纳的 Collection 数量。在 Dedicated 集群中，每个计算单元（CU）可最多容纳 64 个 Collection，并且每个集群中的 Collection 总数不能超过 4096。有关限制的更多信息，请阅读[使用限制](./limits)。
 

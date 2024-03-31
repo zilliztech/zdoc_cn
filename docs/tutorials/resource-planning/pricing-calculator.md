@@ -43,8 +43,6 @@ import Admonition from '@theme/Admonition';
 
 - 容量型：适合大数据量，存储容量是性能优化 CU 的五倍。
 
-- 经济型：容量与容量优化 CU 相似，但更具成本效益，性能略有降低。
-
 有关更多信息，请参见[选择合适的 CU 类型](./cu-types-explained)。
 
 ### 云服务提供商和地域{#cloud-provider}

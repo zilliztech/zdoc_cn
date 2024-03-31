@@ -5,7 +5,7 @@
   "node_token": "YUETwzDssiTUs9kCSn4cgUYLnrd",
   "node_type": "origin",
   "obj_create_time": "1687246517",
-  "obj_edit_time": "1702884578",
+  "obj_edit_time": "1711684138",
   "obj_token": "EzdJdsafQowylSxuVCCc1Tv3nad",
   "obj_type": "docx",
   "origin_node_token": "YUETwzDssiTUs9kCSn4cgUYLnrd",
@@ -71,7 +71,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "为满足用户不同需求，Zilliz Cloud 提供 3 种类型的集群 CU——性能型、容量型和经济型。但是，为不同类型 CU 集群中的 Collection 创建索引时，通常需要根据所选择的 CU 类型调整索引参数。为了方便您创建索引，免去调节参数的麻烦，Zilliz Cloud 使用 ",
+                "content": "为满足用户不同需求，Zilliz Cloud 提供 2 种类型的集群 CU——性能型和容量型。但是，为不同类型 CU 集群中的 Collection 创建索引时，通常需要根据所选择的 CU 类型调整索引参数。为了方便您创建索引，免去调节参数的麻烦，Zilliz Cloud 使用 ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

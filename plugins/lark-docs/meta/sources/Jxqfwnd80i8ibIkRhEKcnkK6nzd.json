@@ -5,7 +5,7 @@
   "node_token": "Jxqfwnd80i8ibIkRhEKcnkK6nzd",
   "node_type": "origin",
   "obj_create_time": "1687160535",
-  "obj_edit_time": "1710931634",
+  "obj_edit_time": "1711684286",
   "obj_token": "Chted68OWoHPUAxKu0Jcy9QFnPh",
   "obj_type": "docx",
   "origin_node_token": "Jxqfwnd80i8ibIkRhEKcnkK6nzd",
@@ -37,7 +37,6 @@
           "MxmTdglxQoCgWLxE9L0cEqwCnJd",
           "ZM6QdwIbWolOlPxic7Dcln0FnHb",
           "EfOzdtwmjoGiCQxvqdVc71Yinzh",
-          "EQ9zdG55Ho52M9xLuBVcNS9cnuc",
           "NuSddY7M5oJcVgxUPCdcXOU7nAe",
           "ZNiZdB4z4oCCcyxb4rycvy80nRd",
           "GFAodiz0roYItuxCps8cL0axnBg",
@@ -510,31 +509,6 @@
             {
               "text_run": {
                 "content": "容量型：适合大数据量，存储容量是性能优化 CU 的五倍。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "Chted68OWoHPUAxKu0Jcy9QFnPh"
-      },
-      {
-        "block_id": "EQ9zdG55Ho52M9xLuBVcNS9cnuc",
-        "block_type": 12,
-        "bullet": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "经济型：容量与容量优化 CU 相似，但更具成本效益，性能略有降低。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1378,6 +1352,6 @@
         }
       }
     ],
-    "counts": 46
+    "counts": 45
   }
 }

@@ -5,7 +5,7 @@
   "node_token": "UTRZwxLf3ikwvbkXrKjcWAwOnmg",
   "node_type": "origin",
   "obj_create_time": "1691137853",
-  "obj_edit_time": "1701833396",
+  "obj_edit_time": "1711684375",
   "obj_token": "MUoedR3G4olCJqxg1OncPiKYnSh",
   "obj_type": "docx",
   "origin_node_token": "UTRZwxLf3ikwvbkXrKjcWAwOnmg",
@@ -1242,9 +1242,6 @@
           "K8qGdwHffoUoMmxjTcnc0h5mnRF",
           "Mr4CdPbwGoK9oBx6BRccOnlDnSc",
           "ObsedsG9EofZ6VxqTDUcHzZ6nNf",
-          "LOhJdhvUZoZYEExkfdicoQjrn1e",
-          "NXVcdkDAVo9dqJxbZyic0iiCnyb",
-          "LXfHdeh8johTbpxOPUmc1GqMnOP",
           "NKWcdMf1AoD6luxxE4xceF5Znih",
           "JPHmdBkIYocm4RxPeXVcDPGjnAh",
           "MY6ndZxMXor7pUxVXDTcbSMWnrc",
@@ -1264,9 +1261,6 @@
             "K8qGdwHffoUoMmxjTcnc0h5mnRF",
             "Mr4CdPbwGoK9oBx6BRccOnlDnSc",
             "ObsedsG9EofZ6VxqTDUcHzZ6nNf",
-            "LOhJdhvUZoZYEExkfdicoQjrn1e",
-            "NXVcdkDAVo9dqJxbZyic0iiCnyb",
-            "LXfHdeh8johTbpxOPUmc1GqMnOP",
             "NKWcdMf1AoD6luxxE4xceF5Znih",
             "JPHmdBkIYocm4RxPeXVcDPGjnAh",
             "MY6ndZxMXor7pUxVXDTcbSMWnrc",
@@ -1347,21 +1341,9 @@
               {
                 "col_span": 1,
                 "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
               }
             ],
-            "row_size": 6
+            "row_size": 5
           }
         }
       },
@@ -1451,108 +1433,6 @@
             {
               "text_run": {
                 "content": "阿里云市场 Unit 数量",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "LOhJdhvUZoZYEExkfdicoQjrn1e",
-        "block_type": 32,
-        "children": [
-          "Uevzd6SO2oPz7RxtLTNclbcQnXd"
-        ],
-        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
-        "table_cell": {}
-      },
-      {
-        "block_id": "Uevzd6SO2oPz7RxtLTNclbcQnXd",
-        "block_type": 2,
-        "parent_id": "LOhJdhvUZoZYEExkfdicoQjrn1e",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "1 CU 经济型每小时计算量",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "NXVcdkDAVo9dqJxbZyic0iiCnyb",
-        "block_type": 32,
-        "children": [
-          "UITddf7hSo7H71xRX6gcsqEDncg"
-        ],
-        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
-        "table_cell": {}
-      },
-      {
-        "block_id": "UITddf7hSo7H71xRX6gcsqEDncg",
-        "block_type": 2,
-        "parent_id": "NXVcdkDAVo9dqJxbZyic0iiCnyb",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "¥0.85 / Unit",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "LXfHdeh8johTbpxOPUmc1GqMnOP",
-        "block_type": 32,
-        "children": [
-          "BOsIdsOZaoi3XcxBvKLcB0Xcnoc"
-        ],
-        "parent_id": "SoG3dqpWMoxe20xa7ercL1HMnFd",
-        "table_cell": {}
-      },
-      {
-        "block_id": "BOsIdsOZaoi3XcxBvKLcB0Xcnoc",
-        "block_type": 2,
-        "parent_id": "LXfHdeh8johTbpxOPUmc1GqMnOP",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "850",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1985,7 +1865,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "例如，在 Zilliz Cloud 企业版中创建大小为 1 CU 的性能型 CU，你需要支付 850 个单位的价格，也就是 ¥0.85 每小时。 ",
+                "content": "例如，在 Zilliz Cloud 企业版中创建大小为 1 CU 的性能型 CU，你需要支付 1250 个单位的价格，也就是 ¥1.25 每小时。 ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2350,6 +2230,6 @@
         "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
       }
     ],
-    "counts": 85
+    "counts": 79
   }
 }

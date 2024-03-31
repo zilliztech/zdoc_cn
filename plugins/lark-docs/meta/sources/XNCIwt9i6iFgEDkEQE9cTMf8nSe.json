@@ -5,7 +5,7 @@
   "node_token": "XNCIwt9i6iFgEDkEQE9cTMf8nSe",
   "node_type": "origin",
   "obj_create_time": "1687159091",
-  "obj_edit_time": "1704355219",
+  "obj_edit_time": "1711684231",
   "obj_token": "ZN0Ad2rPLolLEgx8qGGcgBNLnqg",
   "obj_type": "docx",
   "origin_node_token": "XNCIwt9i6iFgEDkEQE9cTMf8nSe",
@@ -3839,7 +3839,79 @@
           "elements": [
             {
               "text_run": {
-                "content": "企业版支持阿里云部署，提供 3 种不同类型的 CU——性能型、容量型和经济型 CU。企业版还提供多 AZ 高可用、私网连接（Private Link）、数据自动备份、专家技术支持等功能特性。企业版还提供 ",
+                "content": "企业版支持阿里云部署，提供 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "2",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 种不同类型的 CU——性能型",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "容量型",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "CU。企业版还提供多 AZ 高可用、私网连接（Private Link）、数据自动备份、专家技术支持等功能特性。企业版还提供 ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

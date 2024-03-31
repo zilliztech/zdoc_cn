@@ -5,7 +5,7 @@
   "node_token": "SxBKwEZyAiWvibkGNhLc8CjvnSg",
   "node_type": "origin",
   "obj_create_time": "1687246533",
-  "obj_edit_time": "1708415629",
+  "obj_edit_time": "1711684177",
   "obj_token": "FQM1ddL5noYH3Cx313lcjGPHnIe",
   "obj_type": "docx",
   "origin_node_token": "SxBKwEZyAiWvibkGNhLc8CjvnSg",
@@ -150,7 +150,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "在 Zilliz Cloud 上创建集群时，您需要选择集群 CU 类型。CU 类型有 3 种选项：性能型、容量型和经济型。不同 CU 类型的区别，请阅读",
+                "content": "在 Zilliz Cloud 上创建集群时，您需要选择集群 CU 类型。CU 类型有 2 种选项：性能型和容量型。不同 CU 类型的区别，请阅读",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
