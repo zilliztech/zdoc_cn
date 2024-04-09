@@ -5,7 +5,7 @@
   "node_token": "PosvwF0iKig6eZkMDcNcmhtVn8d",
   "node_type": "origin",
   "obj_create_time": "1708398015",
-  "obj_edit_time": "1708426708",
+  "obj_edit_time": "1712128161",
   "obj_token": "Zam8dljoEouVt7x2MTdcrYXCnwi",
   "obj_type": "docx",
   "origin_node_token": "PosvwF0iKig6eZkMDcNcmhtVn8d",
@@ -23,7 +23,8 @@
         "children": [
           "QxuqdOb44oD4WMxkkW0cV4EtnIf",
           "Gc44dUVDEoYKbHx5csEc3AsHnme",
-          "V9NmdDbeEoOYUlxonVYcZTRRnlh",
+          "TiKad0qGCoSqr8xR5FicoBGunUs",
+          "O0tYdKNXgojb4xxAd3acjoqlnfb",
           "Gzx0drmbtoGqwYxTVDvcmcbanjd",
           "QbbadOzWPoWX3zxvijhcnjE4nAh",
           "RaWZdSE87o49zvxrcNGcS733nS4",
@@ -32,6 +33,7 @@
           "FKCjdEnajonblVxojNPcH3LOn7g",
           "Z5ZYdWm9ZoNKIIxXkIecaYuznCf",
           "W7mYdEHU8oI8zNxOSLMcfujBnyc",
+          "QlUYdYdzyoh6ZgxVdpmcNlnknwb",
           "JGKHd43YCocncBx09OgcXtgnnvZ",
           "TsY9dlELZoTulNx7nisckdIvnlc",
           "ONzrdYxgbo1h6TxITw4cQYAfnrf",
@@ -113,16 +115,13 @@
         "parent_id": "Zam8dljoEouVt7x2MTdcrYXCnwi"
       },
       {
-        "block_id": "V9NmdDbeEoOYUlxonVYcZTRRnlh",
+        "block_id": "TiKad0qGCoSqr8xR5FicoBGunUs",
         "block_type": 13,
-        "children": [
-          "O0tYdKNXgojb4xxAd3acjoqlnfb"
-        ],
         "ordered": {
           "elements": [
             {
               "text_run": {
-                "content": "点击 Search Pipeline 右侧的 \"▶︎\" 按钮。 或者您可以点击",
+                "content": "点击 Search Pipeline 右侧的 \"▶︎\" 按钮。 或者您可以点击 ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -134,7 +133,7 @@
             },
             {
               "text_run": {
-                "content": "运行 Pipeline ",
+                "content": "Playground",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -146,7 +145,7 @@
             },
             {
               "text_run": {
-                "content": "选项卡。",
+                "content": " 选项卡。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -173,7 +172,7 @@
             "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D39137-2713%26mode%3Ddesign%26t%3D7dWbcd2RIFNsohUV-4"
           }
         },
-        "parent_id": "V9NmdDbeEoOYUlxonVYcZTRRnlh"
+        "parent_id": "Zam8dljoEouVt7x2MTdcrYXCnwi"
       },
       {
         "block_id": "Gzx0drmbtoGqwYxTVDvcmcbanjd",
@@ -306,54 +305,6 @@
             },
             {
               "text_run": {
-                "content": "。该 Pipeline 的 ",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "pipelineId",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": true,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": " 是 ",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "pipe-26a18a66ffc8c0edfdb874",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": true,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
                 "content": "。查询文本为“How many collections can a cluster with more than 8 CUs hold?”（1 个 8 CU 以上的集群最多可创建多少个 Collection）。",
                 "text_element_style": {
                   "bold": false,
@@ -378,7 +329,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "curl --request POST \\\n    --header \"Content-Type: application/json\" \\\n    --header \"Authorization: Bearer ${YOUR_CLUSTER_TOKEN}\" \\\n    --url \"https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/pipe-26a18a66ffc8c0edfdb874/run\" \\\n    -d '{\n      \"data\": {\n        \"query_text\": \"How many collections can a cluster with more than 8 CUs hold?\"\n      },\n      \"params\":{\n          \"limit\": 1,\n          \"offset\": 0,\n          \"outputFields\": [ \"chunk_text\", \"chunk_id\", \"doc_name\" ],\n          \"filter\": \"chunk_id >= 0\", \n      }\n    }'\n",
+                "content": "curl --request POST \\\n    --header \"Content-Type: application/json\" \\\n    --header \"Authorization: Bearer ${YOUR_CLUSTER_TOKEN}\" \\\n    --url \"https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/${YOUR_PIPELINE_ID}/run\" \\\n    -d '{\n      \"data\": {\n        \"query_text\": \"How many collections can a cluster with more than 8 CUs hold?\"\n      },\n      \"params\":{\n          \"limit\": 1,\n          \"offset\": 0,\n          \"outputFields\": [ \"chunk_text\", \"chunk_id\", \"doc_name\" ],\n          \"filter\": \"chunk_id >= 0\", \n      }\n    }'\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -391,7 +342,7 @@
           ],
           "style": {
             "language": 7,
-            "wrap": true
+            "wrap": false
           }
         },
         "parent_id": "Zam8dljoEouVt7x2MTdcrYXCnwi"
@@ -529,6 +480,43 @@
             {
               "text_run": {
                 "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Zam8dljoEouVt7x2MTdcrYXCnwi"
+      },
+      {
+        "block_id": "QlUYdYdzyoh6ZgxVdpmcNlnknwb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "YOUR_PIPELINE_ID",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：需要运行的 Pipeline 的 ID。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -860,6 +848,78 @@
                   "underline": false
                 }
               }
+            },
+            {
+              "text_run": {
+                "content": "id",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "distance",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "chunk_text",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "为默认输出字段。 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
             }
           ],
           "style": {
@@ -1105,6 +1165,6 @@
         "parent_id": "Zam8dljoEouVt7x2MTdcrYXCnwi"
       }
     ],
-    "counts": 25
+    "counts": 26
   }
 }

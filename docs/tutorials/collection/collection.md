@@ -2,6 +2,7 @@
 slug: /collection
 beta: FALSE
 notebook: FALSE
+type: origin
 token: Yd32wNk7uiNEw3kd1dAcSV05nAb
 sidebar_position: 4
 ---

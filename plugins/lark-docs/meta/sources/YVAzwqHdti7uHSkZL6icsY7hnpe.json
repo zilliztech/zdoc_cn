@@ -5,7 +5,7 @@
   "node_token": "YVAzwqHdti7uHSkZL6icsY7hnpe",
   "node_type": "origin",
   "obj_create_time": "1687158830",
-  "obj_edit_time": "1708589397",
+  "obj_edit_time": "1712570877",
   "obj_token": "A558dloqnoQ4v2x7o7VcKFKVn6d",
   "obj_type": "docx",
   "origin_node_token": "YVAzwqHdti7uHSkZL6icsY7hnpe",
@@ -62,8 +62,8 @@
           "AcQqdHdQ1oJMGrxbE17cv4kcnJb",
           "XT9YdnID6o844UxFqhRc0scInJK",
           "LabzdA2CZolCp8xgjvhc0RiLneb",
-          "DOoCdHWLaozDKXxjHVNc62mmnDe",
           "W2kIdEO22oI1wxx2ZZUcMWcMnnd",
+          "ATN4dBj9JoRJmaxk65VcPnbLnSb",
           "NFIwdM5Q2o38exxxrcKcpZzMnbq",
           "VilYd76RCoDrFuxb5GQcwTs6nmh",
           "Xh7qdKPp9oytYOxmUptcN92GnRb",
@@ -138,16 +138,14 @@
           "Udb3dgboDolQvFxfxiAcyx7jnpf",
           "ZhLvdIaCio1tXwxVtF0cmjsWnff",
           "DtY5dVxbjoxNkjxu86Ic3UlanPc",
-          "LAFwdBkzcoSMyxxzZTkcjOI8n0e",
-          "NJOcdXfXuoq1jfx7wKCcyJQ3nyf",
-          "MAggdnNPWoxiTAxXP7FcTdjonhb",
+          "ALOBd1ltpoUlQ9xb52icxFi9n2g",
+          "Jwh1ddHwXoYw6UxMXNzc38DonDf",
           "LKoidUNa9ojTr7xTgq0cqf1rnAg",
           "Jy7Ud0I4Io81R6xaHohchHm4n0b",
           "EbuNdgB7ToJY4sxuWhwcHyuonZg",
           "YO5jd9R0Po7k2ox6MMGcWZNfn2d",
           "QKuVdvcORoELMmx6GMWciuyCnge",
           "W0tEdLKfkoHEoUxWuLTcuJxqnBh",
-          "Wpevd2G4ZonQjHx29DmcZ42In0b",
           "I4QjdmTxZogvAExNNN2cC8PWnKb",
           "GmAgdULaEoxGkqxVhujcQdsIn5b",
           "QSKGdRcn7ormPaxBLwPcIq3cnkg",
@@ -1939,31 +1937,6 @@
         }
       },
       {
-        "block_id": "DOoCdHWLaozDKXxjHVNc62mmnDe",
-        "block_type": 2,
-        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "本文列举了在使用 Zilliz Cloud Collection 时可能遇到的常见问题及对应解决方法。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
         "block_id": "W2kIdEO22oI1wxx2ZZUcMWcMnnd",
         "block_type": 4,
         "heading2": {
@@ -1987,6 +1960,31 @@
           }
         },
         "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d"
+      },
+      {
+        "block_id": "ATN4dBj9JoRJmaxk65VcPnbLnSb",
+        "block_type": 2,
+        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "本文列举了在使用 Zilliz Cloud Collection 时可能遇到的常见问题及对应解决方法。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
       },
       {
         "block_id": "NFIwdM5Q2o38exxxrcKcpZzMnbq",
@@ -5046,7 +5044,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "性能型 CU、容量型 CU 和经济型 CU 之间有什么区别？{#whats-the-difference-between-performance-optimized-cu-capacity-optimized-cu-and-cost-optimized-cu}",
+                "content": "性能型 CU和容量型 CU 之间有什么区别？{#whats-the-difference-between-performance-optimized-cu-capacity-optimized-cu-and-cost-optimized-cu}",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -5145,7 +5143,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "经济型 CU 可支持的数据规模与容量型 CU 一致，但价格更低，适用于追求高性价比或预算敏感的场景。",
+                "content": "",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -5188,14 +5186,14 @@
         }
       },
       {
-        "block_id": "LAFwdBkzcoSMyxxzZTkcjOI8n0e",
+        "block_id": "ALOBd1ltpoUlQ9xb52icxFi9n2g",
         "block_type": 2,
         "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "单个性能型 CU 可容纳约 500 万个 128 维向量或 100 万个 768 维向量。",
+                "content": "单个性能型 CU 可容纳约 800 万个 128 维向量或 200 万个 768 维向量。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -5213,7 +5211,7 @@
         }
       },
       {
-        "block_id": "NJOcdXfXuoq1jfx7wKCcyJQ3nyf",
+        "block_id": "Jwh1ddHwXoYw6UxMXNzc38DonDf",
         "block_type": 2,
         "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
         "text": {
@@ -5221,31 +5219,6 @@
             {
               "text_run": {
                 "content": "单个容量型 CU 可容纳约 2500 万个 128 维向量或 500 万个 768 维向量。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "MAggdnNPWoxiTAxXP7FcTdjonhb",
-        "block_type": 2,
-        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "单个经济型 CU 可容纳约 2500 万个 128 维向量或 500 万个768 维向量。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -5429,59 +5402,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "预算有限的情况下，如何在使用 Zilliz Cloud 服务时节省成本？{#how-can-i-save-costs-on-using-zilliz-cloud-if-i-have-a-limited-budget}",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "Wpevd2G4ZonQjHx29DmcZ42In0b",
-        "block_type": 2,
-        "parent_id": "A558dloqnoQ4v2x7o7VcKFKVn6d",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "如果您的预算有限，我们推荐使用经济型 CU。该类型的 CU 容量与容量型 CU 相同，但价格更低。更多详情，请阅读",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "mention_doc": {
-                "obj_type": 16,
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                },
-                "title": "选择合适的 CU 类型",
-                "token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
-                "url": "https://zilliverse.feishu.cn/wiki/DP6Fw8vkzi7pD7kAMB3cjunYn6g"
-              }
-            },
-            {
-              "text_run": {
-                "content": " 。",
+                "content": "",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -7562,6 +7483,6 @@
         }
       }
     ],
-    "counts": 211
+    "counts": 209
   }
 }

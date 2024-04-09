@@ -2,6 +2,7 @@
 slug: /delete-snapshot
 beta: FALSE
 notebook: FALSE
+type: origin
 token: FW37wt3qEiKvZzkzBducXgHZnIe
 sidebar_position: 5
 ---

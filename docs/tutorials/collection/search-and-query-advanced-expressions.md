@@ -1,7 +1,8 @@
 ---
 slug: /search-and-query-advanced-expressions
 beta: FALSE
-notebook: 10_search_query_advanced_ops.ipynb
+notebook: FALSE
+type: origin
 token: Ty6NwFqHAiXiXIkZl5RcFuK4nUh
 sidebar_position: 10
 ---

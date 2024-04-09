@@ -5,7 +5,7 @@
   "node_token": "E7X4wc69bibTo4kFfNic5hBVnhb",
   "node_type": "origin",
   "obj_create_time": "1693794593",
-  "obj_edit_time": "1706594264",
+  "obj_edit_time": "1711683753",
   "obj_token": "VoSLd0qrLo68DdxJJr6cfs6knRb",
   "obj_type": "docx",
   "origin_node_token": "E7X4wc69bibTo4kFfNic5hBVnhb",
@@ -1043,7 +1043,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "Zilliz Cloud 集群中的向量数据存储在对象存储（如阿里云 OSS）中。对象存储已启用服务端加密，且不同租户的数据通过命名空间实现数据隔离。此外，Zilliz Cloud 利用 ",
+                "content": "Zilliz Cloud 集群中的向量数据存储在对象存储（如阿里云 OSS）中。对象存储已启用服务端加密，且不同租户的数据通过存储桶实现数据隔离。此外，Zilliz Cloud 利用 ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

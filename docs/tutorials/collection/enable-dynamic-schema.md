@@ -1,7 +1,8 @@
 ---
 slug: /enable-dynamic-schema
 beta: FALSE
-notebook: 02_enable_dynamic_schema.ipynb
+notebook: FALSE
+type: origin
 token: EpHowtn3miepTyk2pNlcLwDonyD
 sidebar_position: 11
 ---

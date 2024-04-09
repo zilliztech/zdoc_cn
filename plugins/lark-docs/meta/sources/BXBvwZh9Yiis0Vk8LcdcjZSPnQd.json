@@ -5,7 +5,7 @@
   "node_token": "BXBvwZh9Yiis0Vk8LcdcjZSPnQd",
   "node_type": "origin",
   "obj_create_time": "1694688023",
-  "obj_edit_time": "1703062694",
+  "obj_edit_time": "1710215824",
   "obj_token": "RCjpdUbjwoaHKTxS8W0cxs6enqg",
   "obj_type": "docx",
   "origin_node_token": "BXBvwZh9Yiis0Vk8LcdcjZSPnQd",
@@ -53,6 +53,8 @@
           "Xs6Nd4HQyo5LI0xWsUEcIb6Bn8e",
           "BKwkd7WSIo8JiwxhM1ic4yQLntg",
           "QScZdOlOFoMg3lxcWrDcUn83nEb",
+          "RWjVd2cvTofS5yxlpUKcljxUnAf",
+          "ZWdidqQGIoWMYUxY8bucWUiKn7d",
           "LwjzdMJBNoMBuexuhD5cCVrBnyd",
           "SW0Qdz941oIb3px84w9cBzW7nth",
           "XYjRdsPgMoQIbVxUivtcT40fngd",
@@ -1484,6 +1486,42 @@
             },
             {
               "text_run": {
+                "content": "：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RWjVd2cvTofS5yxlpUKcljxUnAf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "阿里云：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
                 "content": "获取单个或多个文件的 URL",
                 "text_element_style": {
                   "bold": false,
@@ -1541,7 +1579,87 @@
             "align": 1,
             "folded": false
           }
-        }
+        },
+        "parent_id": "RCjpdUbjwoaHKTxS8W0cxs6enqg"
+      },
+      {
+        "block_id": "ZWdidqQGIoWMYUxY8bucWUiKn7d",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "腾讯云：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "导出对象 URL",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.tencentcloud.com%2Fzh%2Fdocument%2Fproduct%2F436%2F42391"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "临时密钥生成及使用指引",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fcloud.tencent.com%2Fdocument%2Fproduct%2F436%2F14048"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "RCjpdUbjwoaHKTxS8W0cxs6enqg"
       },
       {
         "block_id": "LwjzdMJBNoMBuexuhD5cCVrBnyd",
@@ -1749,6 +1867,6 @@
         "parent_id": "RCjpdUbjwoaHKTxS8W0cxs6enqg"
       }
     ],
-    "counts": 43
+    "counts": 45
   }
 }

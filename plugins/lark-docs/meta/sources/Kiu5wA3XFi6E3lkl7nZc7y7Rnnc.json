@@ -5,7 +5,7 @@
   "node_token": "Kiu5wA3XFi6E3lkl7nZc7y7Rnnc",
   "node_type": "origin",
   "obj_create_time": "1708397959",
-  "obj_edit_time": "1708426187",
+  "obj_edit_time": "1712126885",
   "obj_token": "CnOxd6C1goDKd0xToNXcJiHAnnf",
   "obj_type": "docx",
   "origin_node_token": "Kiu5wA3XFi6E3lkl7nZc7y7Rnnc",
@@ -27,7 +27,7 @@
           "RnQadA26lotKmmxhx9BcCxNsnDf",
           "Dgx0dNOewosNUQxQC9dcOgwknUb",
           "LIOydBtd3oPQsYxEPXkcIh5Inmb",
-          "Mse1dL3MzogzThxwQgqcqjS9nfc",
+          "MAxfdGd5tosU6TxQJ8rc8SnenRh",
           "YqezdAFiNo2Lf9xn7bBcftGknxb",
           "CqQPdBvbGot2gpx916Dcdpkjnre",
           "LALrdKi0xoT5iUxnjbGcVX8Mnyf",
@@ -351,7 +351,7 @@
         "parent_id": "CnOxd6C1goDKd0xToNXcJiHAnnf"
       },
       {
-        "block_id": "Mse1dL3MzogzThxwQgqcqjS9nfc",
+        "block_id": "MAxfdGd5tosU6TxQJ8rc8SnenRh",
         "block_type": 13,
         "ordered": {
           "elements": [
@@ -369,7 +369,7 @@
             },
             {
               "text_run": {
-                "content": "Pipelines。",
+                "content": "Pipelines",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -381,7 +381,7 @@
             },
             {
               "text_run": {
-                "content": " 点击",
+                "content": "。 选中",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -393,7 +393,55 @@
             },
             {
               "text_run": {
-                "content": " + Pipeline",
+                "content": "概览",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "标签页，并切换到 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Pipelines",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。点击 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "+ Pipeline",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -446,7 +494,7 @@
             },
             {
               "text_run": {
-                "content": "+ Pipeline ",
+                "content": "+ Pipeline",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -458,7 +506,7 @@
             },
             {
               "text_run": {
-                "content": "按钮。 ",
+                "content": " 按钮。 ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1359,8 +1407,7 @@
           ],
           "style": {
             "align": 1,
-            "folded": false,
-            "indentation_level": "NoIndent"
+            "folded": false
           }
         },
         "parent_id": "CnOxd6C1goDKd0xToNXcJiHAnnf"
@@ -1567,7 +1614,7 @@
             },
             {
               "text_run": {
-                "content": ": Pipeline 中添加的 Function。 ",
+                "content": ": Pipeline 中添加的 Function。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

@@ -2,6 +2,7 @@
 slug: /manage-cluster-credentials-sdk
 beta: FALSE
 notebook: FALSE
+type: origin
 token: UfjxwrE20iPn6okfStpcSDtpnxf
 sidebar_position: 2
 ---

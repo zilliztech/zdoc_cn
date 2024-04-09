@@ -2,6 +2,7 @@
 slug: /resource-planning
 beta: FALSE
 notebook: FALSE
+type: origin
 token: EruqwJUYliwbOgkLjsAcqRwYn0b
 sidebar_position: 8
 ---

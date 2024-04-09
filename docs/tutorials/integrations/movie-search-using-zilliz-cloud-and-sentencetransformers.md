@@ -1,7 +1,8 @@
 ---
 slug: /movie-search-using-zilliz-cloud-and-sentencetransformers
 beta: FALSE
-notebook: 86_integrations_sentencetransformers.ipynb
+notebook: FALSE
+type: origin
 token: QdD7w2k6ii7mKFkTJ2tcNhYznAf
 sidebar_position: 7
 ---
@@ -17,7 +18,7 @@ import Admonition from '@theme/Admonition';
 
 ## 准备工作{#before-you-start}
 
-在本示例中，我们将使用 **pymilvus** 连接 Zilliz Cloud，使用 **sentencetransformers** 来生成向量，并使用 **gdown** 来下载示例数据集。
+在本示例中，我们将使用 __pymilvus__ 连接 Zilliz Cloud，使用 __sentencetransformers__ 来生成向量，并使用 __gdown__ 来下载示例数据集。
 
 ```python
 pip install pymilvus sentence-transformers gdown
@@ -25,7 +26,7 @@ pip install pymilvus sentence-transformers gdown
 
 ## 准备数据{#prepare-data}
 
-首先，我们要使用 **gdown** 从公共 Google Drive 中下载数据集压缩包，然后使用 Python 自带的 **zipfile** 对该压缩包进行解压缩。
+首先，我们要使用 __gdown__ 从公共 Google Drive 中下载数据集压缩包，然后使用 Python 自带的 __zipfile__ 对该压缩包进行解压缩。
 
 ```python
 import gdown

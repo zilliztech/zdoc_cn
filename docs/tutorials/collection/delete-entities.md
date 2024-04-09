@@ -1,7 +1,8 @@
 ---
 slug: /delete-entities
 beta: FALSE
-notebook: 00_quick_start.ipynb,01_use_customized_schema.ipynb
+notebook: FALSE
+type: origin
 token: R8EPw5l7Ei1tEKkdH6qc54UNn1d
 sidebar_position: 5
 ---

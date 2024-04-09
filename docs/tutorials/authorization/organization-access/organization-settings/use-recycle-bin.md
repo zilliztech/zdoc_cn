@@ -2,6 +2,7 @@
 slug: /use-recycle-bin
 beta: FALSE
 notebook: FALSE
+type: origin
 token: XVQcw6qgxiC31ikfk06cOo1jnch
 sidebar_position: 6
 ---
@@ -15,7 +16,7 @@ import Admonition from '@theme/Admonition';
 
 ## 前提条件{#prerequisites}
 
-如需还原回收站中集群，请先添加[支付方式](https://docs.zilliz.com.cn/docs/payment-billing)。
+如需还原回收站中集群，请先添加[支付方式](/docs/payment-billing)。
 
 ## 恢复回收站中集群{#restore-a-dropped-cluster-in-the-recycle-bin}
 
@@ -23,7 +24,7 @@ import Admonition from '@theme/Admonition';
 
 1. 通过左侧导航栏或顶部导航栏中的垃圾箱图标进入回收站。
 
-1. 在需要恢复的集群的操作栏中选择**恢复集群**。
+1. 在需要恢复的集群的操作栏中选择__恢复集群__。
 
 1. 配置需要恢复的集群。
 
@@ -33,7 +34,7 @@ import Admonition from '@theme/Admonition';
 
     1. 您可以重命名集群，重新选择集群 CU 大小，并重置集群连接密码。
 
-1. 点击**恢复**。Zilliz Cloud 将开始根据您在上一步骤中的配置创建新集群，并将你的数据恢复到集群中。
+1. 点击__恢复__。Zilliz Cloud 将开始根据您在上一步骤中的配置创建新集群，并将你的数据恢复到集群中。
 
 <Admonition type="info" icon="📘" title="说明">
 

@@ -2,6 +2,7 @@
 slug: /run-pipelines
 beta: FALSE
 notebook: FALSE
+type: origin
 token: DU8QwV6kdiv4LXkqPKqcOvoPnNE
 sidebar_position: 4
 ---

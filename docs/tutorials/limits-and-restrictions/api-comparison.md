@@ -2,6 +2,7 @@
 slug: /api-comparison
 beta: FALSE
 notebook: FALSE
+type: origin
 token: KOD2wN5jDimhSOk1GshcUbn2nJe
 sidebar_position: 2
 ---
@@ -17,7 +18,7 @@ import Admonition from '@theme/Admonition';
 
 ## 特定场景权限{#scenario-specific-privileges}
 
-|             |  **API**                       |  **GUI 操作** |  **企业版**     |
+|             |  __API__                       |  __GUI 操作__ |  __企业版__     |
 | ----------- | ------------------------------ | ----------- | ------------ |
 |  别名         |  alterAlias()                  |  ✘          |  ✔︎          |
 |             |  createAlias()                 |  ✘          |  ✔︎          |

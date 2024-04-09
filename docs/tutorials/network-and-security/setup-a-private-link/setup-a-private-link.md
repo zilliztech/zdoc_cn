@@ -2,6 +2,7 @@
 slug: /setup-a-private-link
 beta: FALSE
 notebook: FALSE
+type: origin
 token: JLHPwhdssifn2dkR5lDcA4SWnVg
 sidebar_position: 2
 ---

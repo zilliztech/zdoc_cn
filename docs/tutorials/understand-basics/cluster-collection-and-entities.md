@@ -2,6 +2,7 @@
 slug: /cluster-collection-and-entities
 beta: FALSE
 notebook: FALSE
+type: origin
 token: SxBKwEZyAiWvibkGNhLc8CjvnSg
 sidebar_position: 2
 ---
@@ -33,7 +34,7 @@ Collection 是一张二维数据表，包含固定列数和可变行数。Collec
 
 通常我们会根据属性（如大小、重量、位置等）描述对象。对象属性类似于 Collection 中的字段。
 
-Collection 中，主键是最特殊的字段，每个主键字段的值唯一且不重复。每 1 个主键都可以对应 Collection 中的 1 条 Entity 记录。如上图所示， 示例 Collection 中的 **id** 字段是主键。第 1 个 ID **0** 对应标题为《The Mortality Rate of Coronavirus is Not Important》的文章。Collection 中的任何其他文章的 ID 都不会为 **0**。
+Collection 中，主键是最特殊的字段，每个主键字段的值唯一且不重复。每 1 个主键都可以对应 Collection 中的 1 条 Entity 记录。如上图所示， 示例 Collection 中的 __id__ 字段是主键。第 1 个 ID __0__ 对应标题为《The Mortality Rate of Coronavirus is Not Important》的文章。Collection 中的任何其他文章的 ID 都不会为 __0__。
 
 ### Schema{#schema}
 
@@ -69,7 +70,7 @@ Zilliz Cloud 提供 3 种 CU 类型。不同 CU 类型适用于不同的场景�
 
 ### 索引{#index}
 
-与 Milvus 实例不同，Zilliz Cloud 集群仅支持 **AUTOINDEX** 索引。该索引类型针对 Zilliz Cloud 提供的 3 种 CU 进行了优化。更多详情，请阅读 [AUTOINDEX](./autoindex-explained) 。
+与 Milvus 实例不同，Zilliz Cloud 集群仅支持 __AUTOINDEX__ 索引。该索引类型针对 Zilliz Cloud 提供的 3 种 CU 进行了优化。更多详情，请阅读 [AUTOINDEX](./autoindex-explained) 。
 
 ## Partition{#partitions}
 
@@ -83,6 +84,6 @@ Partition 是从 Collection 中划分而来。Zilliz Cloud 支持将物理存储
 
 Collection 中的 Entity 是指共享相同字段集的数据记录，如图书馆中的图书或基因组中的基因。存储在每个字段中的数据共同形成 1 个 Entity。
 
-输入查询向量、选择相似性类型和过滤条件（可选）后，您可以对 Collection 中的 Entity 进行向量搜索。例如，如果您使用关键字 “Interesting Python demo” 进行搜索，Zilliz Cloud 会返回所有标题语义相似的的文章。在此过程中，搜索实际是在向量字段 **title_vector** 上执行的。更多向量搜索详情，请阅读[向量搜索和查询](./search-query-and-get) 。
+输入查询向量、选择相似性类型和过滤条件（可选）后，您可以对 Collection 中的 Entity 进行向量搜索。例如，如果您使用关键字 “Interesting Python demo” 进行搜索，Zilliz Cloud 会返回所有标题语义相似的的文章。在此过程中，搜索实际是在向量字段 __title_vector__ 上执行的。更多向量搜索详情，请阅读[向量搜索和查询](./search-query-and-get) 。
 
 您可以向 Collection 中添加任意数量的 Entity。但是，随着 Entity 数量和维度增加，Entity占用的内存大小也会增加，影响 Collection 的搜索性能。请参考 Zilliz Cloud [数据模型](./schema-explained) 以合理规划您的 Collection。

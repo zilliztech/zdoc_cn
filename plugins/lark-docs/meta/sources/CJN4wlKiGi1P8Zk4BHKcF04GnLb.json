@@ -5,7 +5,7 @@
   "node_token": "CJN4wlKiGi1P8Zk4BHKcF04GnLb",
   "node_type": "origin",
   "obj_create_time": "1693363853",
-  "obj_edit_time": "1700714675",
+  "obj_edit_time": "1711936442",
   "obj_token": "KmyydLAxsoYlKzxMYM8cSNMrnnd",
   "obj_type": "docx",
   "origin_node_token": "CJN4wlKiGi1P8Zk4BHKcF04GnLb",
@@ -865,36 +865,6 @@
             {
               "text_run": {
                 "content": "容量型",
-                "text_element_style": {
-                  "bold": true,
-                  "comment_ids": [
-                    "7280433317953044483"
-                  ],
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "或",
-                "text_element_style": {
-                  "bold": false,
-                  "comment_ids": [
-                    "7280433317953044483"
-                  ],
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "经济型",
                 "text_element_style": {
                   "bold": true,
                   "comment_ids": [

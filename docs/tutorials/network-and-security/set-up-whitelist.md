@@ -2,6 +2,7 @@
 slug: /set-up-whitelist
 beta: FALSE
 notebook: FALSE
+type: origin
 token: RwEzw2l4siJB5Ake7FOcVU4knre
 sidebar_position: 1
 ---
@@ -31,18 +32,18 @@ import Admonition from '@theme/Admonition';
 
 1. 点击进入需要设置白名单的组织和项目。
 
-1. 在左侧导航栏中，点击 **安全** > **+ IP 地址**。
+1. 在左侧导航栏中，点击 __安全__ > __+ IP 地址__。
 
-1. 在弹出的对话框中，输入 **IP地址（CIDR）和描述**。
+1. 在弹出的对话框中，输入 __IP地址（CIDR）和描述__。
 
 1. 字段描述如下表所示。
 
-    |  **字段**     |  **描述**                                                              |
+    |  __字段__     |  __描述__                                                              |
     | ----------- | -------------------------------------------------------------------- |
     |  IP地址（CIDR） |  您要添加到白名单中的 IP 地址或无类别域间路由（CIDR）。您可最多添加 20 个 CIDR。示例值：192.168.1.1/20。 |
     |  描述         |  白名单 IP 地址或 CIDR 的描述。                                                |
 
-1. 点击 **添加** 完成操作。
+1. 点击 __添加__ 完成操作。
 
 <Admonition type="info" icon="📘" title="说明">
 

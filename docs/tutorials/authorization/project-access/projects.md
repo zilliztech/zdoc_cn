@@ -2,6 +2,7 @@
 slug: /projects
 beta: FALSE
 notebook: FALSE
+type: origin
 token: Sw1Kwj0oViAYuAkoUIZcvhsJnBd
 sidebar_position: 1
 ---

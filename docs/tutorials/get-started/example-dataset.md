@@ -2,6 +2,7 @@
 slug: /example-dataset
 beta: FALSE
 notebook: FALSE
+type: origin
 token: ZoXbwP8hJivPw2ktsLrckw0Snif
 sidebar_position: 5
 ---

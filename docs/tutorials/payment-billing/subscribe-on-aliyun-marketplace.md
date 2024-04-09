@@ -2,6 +2,7 @@
 slug: /subscribe-on-aliyun-marketplace
 beta: FALSE
 notebook: FALSE
+type: origin
 token: UTRZwxLf3ikwvbkXrKjcWAwOnmg
 sidebar_position: 1
 ---
@@ -21,7 +22,7 @@ Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云�
 
 1. 关于 Zilliz Cloud 帐号：
 
-    1. 如果您已注册 Zilliz Cloud，并计划通过阿里云云市场缴纳您名下组织产生的费用。您可以在**“帐单概览”**页面或**“创建集群”**页面找到前往阿里云云市场的入口。
+    1. 如果您已注册 Zilliz Cloud，并计划通过阿里云云市场缴纳您名下组织产生的费用。您可以在__“帐单概览”__页面或__“创建集群”__页面找到前往阿里云云市场的入口。
 
     1. 如果您尚未注册 Zilliz Cloud，并计划通过阿里云云市场缴纳您名下组织产生的费用。您可以直接前往[阿里云云市场](https://market.aliyun.com/products/56024006/cmgj00063418.html)。
 
@@ -65,7 +66,7 @@ Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云�
 
     ![N4Lkbn8bgoKOVixW0x9c19lIn6e](/img/N4Lkbn8bgoKOVixW0x9c19lIn6e.png)
 
-    此时，您可以前往**“帐单概览”**页面。如果“云市场扣费渠道”区域右下角出现“查看阿里云帐单”链接，恭喜您成功开通阿里云云市场扣费渠道。
+    此时，您可以前往__“帐单概览”__页面。如果“云市场扣费渠道”区域右下角出现“查看阿里云帐单”链接，恭喜您成功开通阿里云云市场扣费渠道。
 
     ![HsZ9bVAnEo5dOpxVSaBcezaknjd](/img/HsZ9bVAnEo5dOpxVSaBcezaknjd.png)
 
@@ -73,11 +74,11 @@ Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云�
 
 1. 前往阿里云[云市场控制台](https://market.console.aliyun.com/)。
 
-1. 点击左侧导航栏中**已购买的服务**。
+1. 点击左侧导航栏中__已购买的服务__。
 
-1. 在商品中找到 Zilliz Cloud，并点击**关闭**。
+1. 在商品中找到 Zilliz Cloud，并点击__关闭__。
 
-1. 阅读弹窗内容并点击**确认关闭**。
+1. 阅读弹窗内容并点击__确认关闭__。
 
 1. 关闭后，Zilliz Cloud 将从已购买服务列表中消失。
 

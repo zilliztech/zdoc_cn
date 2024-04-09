@@ -2,6 +2,7 @@
 slug: /ann-search-explained
 beta: FALSE
 notebook: FALSE
+type: origin
 token: E4Ggw2FU3iXekOklaytcDy47nRg
 sidebar_position: 4
 ---

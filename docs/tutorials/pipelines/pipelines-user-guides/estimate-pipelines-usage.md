@@ -2,6 +2,7 @@
 slug: /estimate-pipelines-usage
 beta: FALSE
 notebook: FALSE
+type: origin
 token: TNwlw4PRxiFoewkSQzhcU06BnyA
 sidebar_position: 5
 ---
@@ -63,13 +64,13 @@ Token 是自然语言处理（NLP）中的一个特殊概念。它可以被看�
 
         </Admonition>
 
-1. 点击**计算**。
+1. 点击__计算__。
 
     ![estimate-piplines-usage-cn](/img/estimate-piplines-usage-cn.png)
 
 1. 查看文件 Token 数量估算结果。
 
-1. 点击**重置**重新上传其他本地文件。
+1. 点击__重置__重新上传其他本地文件。
 
 ## 相关文档{#related-topics}
 

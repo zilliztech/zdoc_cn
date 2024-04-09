@@ -2,6 +2,7 @@
 slug: /authentication
 beta: FALSE
 notebook: FALSE
+type: origin
 token: ZdQxwDlFbiPLCNkXISXcyqtBn3r
 sidebar_position: 10
 ---

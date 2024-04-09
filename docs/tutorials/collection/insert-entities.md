@@ -1,7 +1,8 @@
 ---
 slug: /insert-entities
 beta: FALSE
-notebook: 00_quick_start.ipynb,01_use_customized_schema.ipynb
+notebook: FALSE
+type: origin
 token: Am0bwdNmliIZ9OkUB2DcdkOBnAe
 sidebar_position: 3
 ---

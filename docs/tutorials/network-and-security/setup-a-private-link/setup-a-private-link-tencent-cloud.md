@@ -2,6 +2,7 @@
 slug: /setup-a-private-link-tencent-cloud
 beta: FALSE
 notebook: FALSE
+type: origin
 token: Pzu4wpY64iWmO6kBsaYcNPmPnNf
 sidebar_position: 2
 ---
@@ -56,13 +57,19 @@ import Admonition from '@theme/Admonition';
 
 前往您的 Zilliz Cloud 腾讯云集群管理页面。
 
-1. 在**连接信息**区域，单击 **+ 私网连接**。
+1. 在__连接信息__区域，单击 __+ 私网连接__。
 
-1. 在弹出的**创建私网连接**对话框的**主帐号 ID**中，填入上述复制或记录的腾讯云主帐号 ID，并单击**添加**。
+    ![zh-ali-create-private-link](/img/zh-ali-create-private-link.png)
 
-1. 复制 **Zilliz Cloud 腾讯云帐号 ID (UIN)** 和 **Zilliz 终端节点服务 ID**。
+1. 在弹出的__创建私网连接__对话框的__主帐号 ID__中，填入上述复制或记录的腾讯云主帐号 ID。
 
     ![GGrZbPdvLoojPHxvt2jcicHqndg](/img/GGrZbPdvLoojPHxvt2jcicHqndg.png)
+
+1. 单击__添加__完成主帐号 ID 验证。
+
+    ![zh-ali-main-account-id-verified](/img/zh-ali-main-account-id-verified.png)
+
+1. 复制 __Zilliz Cloud 腾讯云帐号 ID (UIN)__ 和 __Zilliz 终端节点服务 ID__。
 
     <Admonition type="info" icon="📘" title="说明">
 
@@ -75,11 +82,11 @@ import Admonition from '@theme/Admonition';
 
 前往腾讯云[终端节点](https://console.cloud.tencent.com/vpc/vpce)管理界面，
 
-1. 将左上角的云服务地域修改为您的 Zilliz Cloud 腾讯云集群所在地域（示例值为**北京**）。
+1. 将左上角的云服务地域修改为您的 Zilliz Cloud 腾讯云集群所在地域（示例值为__北京__）。
 
-1. 并在其右侧的下拉选项框中选择需要访问您的 Zilliz Cloud 腾讯云集群的业务资源所在 VPC（示例值为 **Default-VPC (172.21.0.0/16)**）。
+1. 并在其右侧的下拉选项框中选择需要访问您的 Zilliz Cloud 腾讯云集群的业务资源所在 VPC（示例值为 __Default-VPC (172.21.0.0/16)__）。
 
-1. 单击**新建**，在弹出的**新建终端节点**中填写必要的信息。
+1. 单击__新建__，在弹出的__新建终端节点__中填写必要的信息。
 
     ![A8W1bDGpxo7fyMxiEdPcrRxjnKg](/img/A8W1bDGpxo7fyMxiEdPcrRxjnKg.png)
 
@@ -89,29 +96,29 @@ import Admonition from '@theme/Admonition';
     |  所在地域   |  终端节点所在云服务地域。                                                                                                  |
     |  所属网络   |  需要通过当前终端节点访问您的 Zilliz Cloud 腾讯云集群的业务资源所在 VPC。                                                                 |
     |  所属子网   |  已选择的 VPC 中的子网。                                                                                                |
-    |  IP 地址  |  终端节点的 IP 地址。<br/> 可根据需要选择 **自动分配** 或 **手动填写**。                                                             |
-    |  服务类型   |  通过当前终端节点连接的服务类型。<br/> 请选择 **私有服务**。                                                                        |
-    |  对端帐号类型 |  Zilliz Cloud 帐户相关信息。<br/> 请选择 **其它账户**，并填写之前复制或记录的 **Zilliz Cloud 腾讯云帐号 ID (UIN)** 和 **Zilliz 终端节点服务 ID。** |
+    |  IP 地址  |  终端节点的 IP 地址。<br/> 可根据需要选择 __自动分配__ 或 __手动填写__。                                                             |
+    |  服务类型   |  通过当前终端节点连接的服务类型。<br/> 请选择 __私有服务__。                                                                        |
+    |  对端帐号类型 |  Zilliz Cloud 帐户相关信息。<br/> 请选择 __其它账户__，并填写之前复制或记录的 __Zilliz Cloud 腾讯云帐号 ID (UIN)__ 和 __Zilliz 终端节点服务 ID。__ |
 
-1. 单击**验证**并**确定**后，返回[终端节点](https://console.cloud.tencent.com/vpc/vpce)管理界面。复制 **ID/名称**列中的终端节点实例 ID。
+1. 单击__验证__并__确定__后，返回[终端节点](https://console.cloud.tencent.com/vpc/vpce)管理界面。复制 __ID/名称__列中的终端节点实例 ID。
 
-    ![RHZcbNCTtoNwh7xCnhycf9HAnZc](/img/RHZcbNCTtoNwh7xCnhycf9HAnZc.png)
+    ![BnUnbZeoYohkeRxUNfzcIrutnJf](/img/BnUnbZeoYohkeRxUNfzcIrutnJf.png)
 
 ### 在 Zilliz Cloud 上接受连接请求{#accept-connection-request}
 
-返回 Zilliz Cloud 控制台，将已创建的终端节点实例 ID 填入**创建私网连接**对话框中，并单击**创建**。
+返回 Zilliz Cloud 控制台，将已创建的终端节点实例 ID 填入__创建私网连接__对话框中，并单击__创建__。
 
-![L4uvbca4Kooy5gxqDojclRecnBe](/img/L4uvbca4Kooy5gxqDojclRecnBe.png)
+![create_private_link_tencent](/img/create_private_link_tencent.png)
 
-稍等片刻，腾讯云控制台[终端节点](https://console.cloud.tencent.com/vpc/vpce)终端管理界面中终端节点的状态将由**待接受**变为**可用**。
+稍等片刻，腾讯云控制台[终端节点](https://console.cloud.tencent.com/vpc/vpce)终端管理界面中终端节点的状态将由__待接受__变为__可用__。
 
 ![Zv2FbvP6PoRsCTxXhWjccyGXnSd](/img/Zv2FbvP6PoRsCTxXhWjccyGXnSd.png)
 
 此时，您需要复制或记录
 
-- 该终端节点的 **IP 地址**（示例值为 **172.21.0.4**）
+- 该终端节点的 __IP 地址__（示例值为 __172.21.0.4__）
 
-- 您的 Zilliz Cloud 腾讯云集群私网连接地址 （示例值为 **in01-xxxxxxxxxxx-privatelink.tc-ap-xxxxxxx**）。
+- 您的 Zilliz Cloud 腾讯云集群私网连接地址 （示例值为 __in01-xxxxxxxxxxx-privatelink.tc-ap-xxxxxxx__）。
 
 ### 配置私有域解析{#configure-private-zone}
 
@@ -121,7 +128,7 @@ import Admonition from '@theme/Admonition';
 
     ![UX11bvnEJo9P6wxFHdicnVCIn6d](/img/UX11bvnEJo9P6wxFHdicnVCIn6d.png)
 
-1. 进入**私有域列表**，单击**新建私有域**。
+1. 进入__私有域列表__，单击__新建私有域__。
 
     ![O7iPbju0RoHKtnxHHjKcCarLnIh](/img/O7iPbju0RoHKtnxHHjKcCarLnIh.png)
 
@@ -132,27 +139,27 @@ import Admonition from '@theme/Admonition';
     |  参数名称   |  参数说明                                                                                                            |
     | ------- | ---------------------------------------------------------------------------------------------------------------- |
     |  域名     |  Zilliz Cloud 腾讯云集群域名。<br/> 请输入您的 Zilliz Cloud 腾讯云集群所在云服务地域的私有域地址。<br/> - `vectordb.zilliz.com.cn`<br/> |
-    |  关联 VPC |  选择关联上述私有域名的 VPC。<br/> 请选择待接入 Zilliz Cloud 腾讯云集群的业务资源所在 VPC。并将其移动到**已选择**列表框中。                                |
+    |  关联 VPC |  选择关联上述私有域名的 VPC。<br/> 请选择待接入 Zilliz Cloud 腾讯云集群的业务资源所在 VPC。并将其移动到__已选择__列表框中。                                |
 
     其它参数保持默认即可。
 
-1. 单击**确定**，即可查看已创建的私有域记录。
+1. 单击__确定__，即可查看已创建的私有域记录。
 
     ![IQepbWHV6o7BKixCms0cEQQ3n0O](/img/IQepbWHV6o7BKixCms0cEQQ3n0O.png)
 
-1. 单击刚才创建的私有域记录**操作**列中的**解析**，并在解析记录列表中添加解析记录。
+1. 单击刚才创建的私有域记录__操作__列中的__解析__，并在解析记录列表中添加解析记录。
 
     ![B4uJbhlDOogfjrxkNjdcaT1fnZC](/img/B4uJbhlDOogfjrxkNjdcaT1fnZC.png)
 
     |  参数名称 |  参数说明                                                                                                                                                                                                                                                                                                |
     | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    |  主机记录 |  您的 Zilliz Cloud 腾讯云集群的私网连接域名前缀。<br/> 如果您的集群 ID 为 **in01-xxxxxxxxxxx**，云地域 ID 为 **tc-ap-xxxxxxx**，则该域名前缀为 **in01-xxxxxxxxxxx-privatelink.tc-ap-xxxxxxx**。例如：<br/> - **in01-xxxxxxxxxxx-privatelink.tc-ap-beijing **(北京)<br/> - **in01-xxxxxxxxxxx-privatelink.tc-ap-shanghai **(上海)<br/> |
+    |  主机记录 |  您的 Zilliz Cloud 腾讯云集群的私网连接域名前缀。<br/> 如果您的集群 ID 为 __in01-xxxxxxxxxxx__，云地域 ID 为 __tc-ap-xxxxxxx__，则该域名前缀为 __in01-xxxxxxxxxxx-privatelink.tc-ap-xxxxxxx__。例如：<br/> - __in01-xxxxxxxxxxx-privatelink.tc-ap-beijing __(北京)<br/> - __in01-xxxxxxxxxxx-privatelink.tc-ap-shanghai __(上海)<br/> |
     |  记录类型 |  当前解析记录的类型。<br/> 请选择创建 A 记录。                                                                                                                                                                                                                                                                      |
     |  记录值  |  上述域名前缀完成解析后的 IP 地址。<br/> 请输入终端节点实例的 IP 地址。                                                                                                                                                                                                                                                       |
 
-    其它参数保持默认即可。添加完成后，单击**保存**。
+    其它参数保持默认即可。添加完成后，单击__保存__。
 
-    ## 后续操作{#next-steps}
+## 后续操作{#next-steps}
 
-    在私网连接创建完成后，可按照集群详情页面右上角的连接指南使用私网连接进行连通性验证。
+在私网连接创建完成后，可按照集群详情页面右上角的连接指南使用私网连接进行连通性验证。
 

@@ -1,0 +1,1050 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1712128945",
+  "node_token": "ImJNwwoWkiEMOUk5FrAcnVLRnTe",
+  "node_type": "origin",
+  "obj_create_time": "1712128945",
+  "obj_edit_time": "1712133530",
+  "obj_token": "ZWnrddYi0ootRKx447Zci6bNniC",
+  "obj_type": "docx",
+  "origin_node_token": "ImJNwwoWkiEMOUk5FrAcnVLRnTe",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "JScMwve0PiplHNkKqVYcKkzGnFs",
+  "space_id": "7167193056431783939",
+  "title": "管理 Connector",
+  "slug": "manage-connectors",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "ZWnrddYi0ootRKx447Zci6bNniC",
+        "block_type": 1,
+        "children": [
+          "P9gpdJFrtoEStcxslhKcKOWFnwF",
+          "NmX6dmYwoorxhox72kyc1Lqcngd",
+          "RO7Ud2JXWo8OBlxbwT4c1AqpnEc",
+          "Mtm1d1txporiGjxPeLacwUtrnPg",
+          "Uh4qdE0fWoVUfHxLNfkc2IGEnea",
+          "J2HndNaHroODFMxMVkQcYofmn9g",
+          "QzKadqWrwowPtMxB36Scze47n8g",
+          "UyyYdgo1woVNiwxSyfkcgkvDnrf",
+          "SrcWdpTUZoEOpax0cFJce007nub",
+          "OFQ6d0Mjho5LBxxU3ZNcEMWBnBf",
+          "HzfrdKlu0o1LcMxWormci21JnFg",
+          "NijedA8XdojefrxLWZoctmFpnzf",
+          "WWMRdvhEzomgCsxqxtQcsESpng9",
+          "O62Vdtsdmo4CxHxh5hfcnLPOn0g",
+          "FGhjdKED4osU85xzHx5cFNLjnYc",
+          "Q80PdMJ3PoYfknxE91mcuEqnnLe",
+          "TLGHdJRcCozmmjxO95UcRTz3nId",
+          "VVGAd7AjIozkiNxBYn3cX9wlnwe",
+          "QagRdnBmaoKnuuxU6t8chmKwnJc",
+          "WQjvdonr6oQYnvxxomfcq9XSn9d",
+          "CoNsdiUbpoPcjaxqSbfcJrGNnHg",
+          "X9mhdcaikoo18cx2yFhctf0wnme",
+          "TBuldT46LoY4D0xmf30crnrAnug",
+          "NzxAdSTq5oRGjgxH3URcrwmYnEc",
+          "KdyqdhQL4ozjZ1xHUlwctDJwnAh"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "管理 Connector",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "P9gpdJFrtoEStcxslhKcKOWFnwF",
+        "block_type": 2,
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以通过 Zilliz Cloud Web 控制台高效管理 Connector。本文介绍如何管理 Connector。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NmX6dmYwoorxhox72kyc1Lqcngd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "开启或关闭 Connector{#enable-or-disable-a-connector}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC"
+      },
+      {
+        "block_id": "RO7Ud2JXWo8OBlxbwT4c1AqpnEc",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "找到目标 Connector。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC"
+      },
+      {
+        "block_id": "Mtm1d1txporiGjxPeLacwUtrnPg",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "操作栏",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "下的“",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "...",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "”。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC"
+      },
+      {
+        "block_id": "Uh4qdE0fWoVUfHxLNfkc2IGEnea",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "开启",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "或",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "关闭",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " Connector。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC"
+      },
+      {
+        "block_id": "J2HndNaHroODFMxMVkQcYofmn9g",
+        "block_type": 34,
+        "children": [
+          "Q6n9dIG5lo3MChxDYLHca4oMnYt",
+          "WAUmdfuHLoF0Btxm9xdcmRSenFg"
+        ],
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC",
+        "quote_container": {}
+      },
+      {
+        "block_id": "Q6n9dIG5lo3MChxDYLHca4oMnYt",
+        "block_type": 2,
+        "parent_id": "J2HndNaHroODFMxMVkQcYofmn9g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WAUmdfuHLoF0Btxm9xdcmRSenFg",
+        "block_type": 2,
+        "parent_id": "J2HndNaHroODFMxMVkQcYofmn9g",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "开启 Connector 前，请确保已为其添加目标 Pipelines。更多详情，请参见",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建 Connector",
+                "token": "UsfSw8xJOiXm5PkWASWcVo7Knff",
+                "url": "https://zilliverse.feishu.cn/wiki/UsfSw8xJOiXm5PkWASWcVo7Knff"
+              }
+            },
+            {
+              "text_run": {
+                "content": " 中的步骤 3。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QzKadqWrwowPtMxB36Scze47n8g",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D44211-7136%26mode%3Ddesign%26t%3D1GUhReNArXciViv7-4"
+          }
+        },
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC"
+      },
+      {
+        "block_id": "UyyYdgo1woVNiwxSyfkcgkvDnrf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "手动触发扫描{#trigger-a-manual-scan}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC"
+      },
+      {
+        "block_id": "SrcWdpTUZoEOpax0cFJce007nub",
+        "block_type": 2,
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如未开启自动扫描功能，您可以按需手动触发扫描。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OFQ6d0Mjho5LBxxU3ZNcEMWBnBf",
+        "block_type": 2,
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "找到目标 Connector，点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "操作栏",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "中的“",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "...",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "”，随后点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "扫描",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HzfrdKlu0o1LcMxWormci21JnFg",
+        "block_type": 34,
+        "children": [
+          "Naevd5oCJoc4UrxF9loce7VBn0d",
+          "SJP9dTQT3oK58txOjfdcm8ocnmd"
+        ],
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC",
+        "quote_container": {}
+      },
+      {
+        "block_id": "Naevd5oCJoc4UrxF9loce7VBn0d",
+        "block_type": 2,
+        "parent_id": "HzfrdKlu0o1LcMxWormci21JnFg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "SJP9dTQT3oK58txOjfdcm8ocnmd",
+        "block_type": 2,
+        "parent_id": "HzfrdKlu0o1LcMxWormci21JnFg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "手动扫描前，请确保已开启 Connector。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "NijedA8XdojefrxLWZoctmFpnzf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "编辑 Connector{#configure-a-connector}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC"
+      },
+      {
+        "block_id": "WWMRdvhEzomgCsxqxtQcsESpng9",
+        "block_type": 2,
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "创建 Connector 后，您可以编辑 Connector 配置。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "O62Vdtsdmo4CxHxh5hfcnLPOn0g",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "修改对象存储服务密钥：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "NpX5dq2XFoRzc2xUlCJcZTyrnoh"
+        ],
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC"
+      },
+      {
+        "block_id": "NpX5dq2XFoRzc2xUlCJcZTyrnoh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "阿里云对象存储 AccessKey ID 和 AccessKey Secret",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "O62Vdtsdmo4CxHxh5hfcnLPOn0g"
+      },
+      {
+        "block_id": "FGhjdKED4osU85xzHx5cFNLjnYc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "自动扫描频率。更多详情，请参考",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "创建 Connector",
+                "token": "UsfSw8xJOiXm5PkWASWcVo7Knff",
+                "url": "https://zilliverse.feishu.cn/wiki/UsfSw8xJOiXm5PkWASWcVo7Knff"
+              }
+            },
+            {
+              "text_run": {
+                "content": " 中的步骤 4。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC"
+      },
+      {
+        "block_id": "Q80PdMJ3PoYfknxE91mcuEqnnLe",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D44211-7372%26mode%3Ddesign%26t%3D1GUhReNArXciViv7-4"
+          }
+        },
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC"
+      },
+      {
+        "block_id": "TLGHdJRcCozmmjxO95UcRTz3nId",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "删除 Connector{#drop-a-connector}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC"
+      },
+      {
+        "block_id": "VVGAd7AjIozkiNxBYn3cX9wlnwe",
+        "block_type": 2,
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以删除不再使用的 Connector。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QagRdnBmaoKnuuxU6t8chmKwnJc",
+        "block_type": 34,
+        "children": [
+          "Ef4Id7PC2ouBItxyOdOcYlaBnvh",
+          "CPNcdkaIdoWORRxJXa3cDjumn1g"
+        ],
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC",
+        "quote_container": {}
+      },
+      {
+        "block_id": "Ef4Id7PC2ouBItxyOdOcYlaBnvh",
+        "block_type": 2,
+        "parent_id": "QagRdnBmaoKnuuxU6t8chmKwnJc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CPNcdkaIdoWORRxJXa3cDjumn1g",
+        "block_type": 2,
+        "parent_id": "QagRdnBmaoKnuuxU6t8chmKwnJc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "删除 Connector 前，请先关闭 Connector。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WQjvdonr6oQYnvxxomfcq9XSn9d",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D44211-7397%26mode%3Ddesign%26t%3D1GUhReNArXciViv7-4"
+          }
+        },
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC"
+      },
+      {
+        "block_id": "CoNsdiUbpoPcjaxqSbfcJrGNnHg",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看 Connector 日志{#view-connector-logs}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC"
+      },
+      {
+        "block_id": "X9mhdcaikoo18cx2yFhctf0wnme",
+        "block_type": 2,
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您可以通过查看 Connector 日志来监控 Connector 活动并排除故障。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TBuldT46LoY4D0xmf30crnrAnug",
+        "block_type": 13,
+        "children": [
+          "YYkYduoi7oJxbOxEaWPcGQ8LnYd"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过 Connectors 事件页面查看日志。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC"
+      },
+      {
+        "block_id": "YYkYduoi7oJxbOxEaWPcGQ8LnYd",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D44233-7503%26mode%3Ddesign%26t%3D1GUhReNArXciViv7-4"
+          }
+        },
+        "parent_id": "TBuldT46LoY4D0xmf30crnrAnug"
+      },
+      {
+        "block_id": "NzxAdSTq5oRGjgxH3URcrwmYnEc",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果 Connector 状态显示为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "异常",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，则代表 Connector 运行出错。点击状态旁的 “？”查看详细报错信息。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC"
+      },
+      {
+        "block_id": "KdyqdhQL4ozjZ1xHUlwctDJwnAh",
+        "block_type": 2,
+        "parent_id": "ZWnrddYi0ootRKx447Zci6bNniC",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      }
+    ],
+    "counts": 34
+  }
+}

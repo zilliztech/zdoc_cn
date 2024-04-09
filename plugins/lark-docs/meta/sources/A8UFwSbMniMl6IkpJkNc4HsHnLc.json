@@ -5,7 +5,7 @@
   "node_token": "A8UFwSbMniMl6IkpJkNc4HsHnLc",
   "node_type": "origin",
   "obj_create_time": "1708415283",
-  "obj_edit_time": "1708669093",
+  "obj_edit_time": "1712571076",
   "obj_token": "GeIyd0MSeoMReVxNVvRchaWHnWe",
   "obj_type": "docx",
   "origin_node_token": "A8UFwSbMniMl6IkpJkNc4HsHnLc",
@@ -55,11 +55,6 @@
           "doxcnMrG9uFKHK3rtEJmoYhQePf",
           "doxcniql9kzZrG9VsQg63Kmioze",
           "DJqldFA8qo87VFxj4dEcOZpynDh",
-          "doxcnpEtKMGqPj7DUJKhumqa54c",
-          "doxcn6faahrTWzwzz9rQyxf8sbb",
-          "doxcnmGo16G82gBk2OtcSO22jjc",
-          "SVtZdyKj5oY4z6xcykkcteXEnNh",
-          "FEk7dSpM5ovEYexsNfdcIHvynSh",
           "doxcnlf44f6OEx0MCHqi7PNX7cg",
           "doxcnei1KsFQO4IoFPM9nsVJlQf",
           "PcCNd5L2noWLfExoQpTcNfYtnuh",
@@ -1555,6 +1550,18 @@
           "elements": [
             {
               "text_run": {
+                "content": "在自助操作时，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
                 "content": "单个集群最多使用 32 个 CU，所有集群最多使用 128 个 CU。",
                 "text_element_style": {
                   "bold": false,
@@ -1580,7 +1587,31 @@
           "elements": [
             {
               "text_run": {
-                "content": "如需创建超过 32 个 CU 规格的集群，请",
+                "content": "如需创建超过 32 个 CU 规格的集群",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "或需要的总 CU 数量超过 128 CU 时",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，请",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3961,7 +3992,31 @@
           "elements": [
             {
               "text_run": {
-                "content": "每 CU：<= 64",
+                "content": "每 CU：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\\",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "<= 64",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3986,7 +4041,31 @@
           "elements": [
             {
               "text_run": {
-                "content": "每集群：<= 4096",
+                "content": "每集群：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\\",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "<= 4096",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4238,6 +4317,18 @@
           "elements": [
             {
               "text_run": {
+                "content": "\\",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
                 "content": "<= 4,096",
                 "text_element_style": {
                   "bold": false,
@@ -4306,7 +4397,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "Min(512 x CU 数, 65536)",
+                "content": "\\<= 512 x CU 数",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4452,7 +4543,55 @@
           "elements": [
             {
               "text_run": {
-                "content": "假设一个集群含有 50 个 Collection。前 20 个 Collection 中，每个 Collection 含有在 2 个Partition 和 4 个 Shard，剩下的 30 个 Collection 分别含有在 1 个 Partition 和 12 个 Shard。因此，可以按照以下方式计算集群的",
+                "content": "假设一个集群含有 50 个 Collection。前 20 个 Collection 中，每个 Collection 含有在 2",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "0",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 个Partition，剩下的 30 个 Collection 分别含有在 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "100",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 个 Partition。因此，可以按照以下方式计算集群的",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4501,7 +4640,67 @@
           "elements": [
             {
               "text_run": {
-                "content": "20 (collections) x 2 (partitions) x 4 (shards) + 30 (collections) x 1 (partitions) x 12 (shards) = 160 + 360 = 520",
+                "content": "20 (collections) x 2",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "0",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " (partitions) + 30 (collections) x 1",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "00",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " (partitions) = 160 + 360 = ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "700",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -4526,7 +4725,31 @@
           "elements": [
             {
               "text_run": {
-                "content": "基于以上等式，Zilliz Cloud 将该集群的已使用容量设定为 520。",
+                "content": "基于以上等式，Zilliz Cloud 将该集群的已使用容量设定为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "700",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4609,7 +4832,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "Min(512 x CU 数, 65536)",
+                "content": "\\<= ",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "512 x CU 数",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -4659,7 +4894,31 @@
           "elements": [
             {
               "text_run": {
-                "content": "在一个 2 CU 的集群中，最多可创建 128 个 Collection，通用容量为 1024。",
+                "content": "在一个 2 CU 的集群中，最多可创建 128 个 Collection，通用容量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "最大",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "为 1024。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4684,7 +4943,31 @@
           "elements": [
             {
               "text_run": {
-                "content": "在一个 12 CU 的集群中，最多可创建 768 个 Collection，通用容量为 6144。",
+                "content": "在一个 12 CU 的集群中，最多可创建 768 个 Collection，通用容量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "最大",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "为 6144。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4709,7 +4992,31 @@
           "elements": [
             {
               "text_run": {
-                "content": "在一个 32 CU 的集群中，最多可创建 4096 个 Collection，通用容量为 65536。",
+                "content": "在一个 32 CU 的集群中，最多可创建 4096 个 Collection，通用容量",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "最大",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "为 65536。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -5112,406 +5419,6 @@
             {
               "text_run": {
                 "content": " 部分的说明。此外，每个集群创建 Partition 的速率限制为每秒 1 个 Partition。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "doxcnpEtKMGqPj7DUJKhumqa54c",
-        "block_type": 5,
-        "heading3": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "Shard",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "{#shards}",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "GeIyd0MSeoMReVxNVvRchaWHnWe"
-      },
-      {
-        "block_id": "doxcn6faahrTWzwzz9rQyxf8sbb",
-        "block_type": 2,
-        "parent_id": "GeIyd0MSeoMReVxNVvRchaWHnWe",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "创建 Collection 时，您可以为 Collection 创建最多 8 个 Shard。如果未指定，Collection 默认具有一个 Shard。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "doxcnmGo16G82gBk2OtcSO22jjc",
-        "block_type": 31,
-        "children": [
-          "doxcnVlLlVHCl6HKUfaApW7f1Rb",
-          "doxcns3QQ2HQkGI9CBxomJieOXU",
-          "doxcn2JxxzkSP2lLGQ51B8SQ8le",
-          "doxcneoH0FyIuzjJ7GrEHRB7vre",
-          "doxcnkct1JSQmZoBWp3TGlOz8df",
-          "doxcnApF1QBkNu2fm2rl57rIOCf"
-        ],
-        "parent_id": "GeIyd0MSeoMReVxNVvRchaWHnWe",
-        "table": {
-          "cells": [
-            "doxcnVlLlVHCl6HKUfaApW7f1Rb",
-            "doxcns3QQ2HQkGI9CBxomJieOXU",
-            "doxcn2JxxzkSP2lLGQ51B8SQ8le",
-            "doxcneoH0FyIuzjJ7GrEHRB7vre",
-            "doxcnkct1JSQmZoBWp3TGlOz8df",
-            "doxcnApF1QBkNu2fm2rl57rIOCf"
-          ],
-          "property": {
-            "column_size": 2,
-            "column_width": [
-              216,
-              190
-            ],
-            "merge_info": [
-              {
-                "col_span": 1,
-                "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
-              }
-            ],
-            "row_size": 3
-          }
-        }
-      },
-      {
-        "block_id": "doxcnVlLlVHCl6HKUfaApW7f1Rb",
-        "block_type": 32,
-        "children": [
-          "doxcnjpJhwF2KgYiV7tm0jW6l9e"
-        ],
-        "parent_id": "doxcnmGo16G82gBk2OtcSO22jjc",
-        "table_cell": {}
-      },
-      {
-        "block_id": "doxcnjpJhwF2KgYiV7tm0jW6l9e",
-        "block_type": 2,
-        "parent_id": "doxcnVlLlVHCl6HKUfaApW7f1Rb",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "CU 数量",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "doxcns3QQ2HQkGI9CBxomJieOXU",
-        "block_type": 32,
-        "children": [
-          "doxcndtquh4q4idKHzBbWugYYAf"
-        ],
-        "parent_id": "doxcnmGo16G82gBk2OtcSO22jjc",
-        "table_cell": {}
-      },
-      {
-        "block_id": "doxcndtquh4q4idKHzBbWugYYAf",
-        "block_type": 2,
-        "parent_id": "doxcns3QQ2HQkGI9CBxomJieOXU",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "最大 Shard 数量",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "doxcn2JxxzkSP2lLGQ51B8SQ8le",
-        "block_type": 32,
-        "children": [
-          "doxcnBBHX9s43wENWMc0qcZIipg"
-        ],
-        "parent_id": "doxcnmGo16G82gBk2OtcSO22jjc",
-        "table_cell": {}
-      },
-      {
-        "block_id": "doxcnBBHX9s43wENWMc0qcZIipg",
-        "block_type": 2,
-        "parent_id": "doxcn2JxxzkSP2lLGQ51B8SQ8le",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": " 1-8 CU",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "doxcneoH0FyIuzjJ7GrEHRB7vre",
-        "block_type": 32,
-        "children": [
-          "doxcnsqVpGVt6g8hKZKshcPWnWb"
-        ],
-        "parent_id": "doxcnmGo16G82gBk2OtcSO22jjc",
-        "table_cell": {}
-      },
-      {
-        "block_id": "doxcnsqVpGVt6g8hKZKshcPWnWb",
-        "block_type": 2,
-        "parent_id": "doxcneoH0FyIuzjJ7GrEHRB7vre",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "2",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "doxcnkct1JSQmZoBWp3TGlOz8df",
-        "block_type": 32,
-        "children": [
-          "doxcnpW1D9YPMJBhaX6sJMl1bLc"
-        ],
-        "parent_id": "doxcnmGo16G82gBk2OtcSO22jjc",
-        "table_cell": {}
-      },
-      {
-        "block_id": "doxcnpW1D9YPMJBhaX6sJMl1bLc",
-        "block_type": 2,
-        "parent_id": "doxcnkct1JSQmZoBWp3TGlOz8df",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "12 CU 及以上",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "doxcnApF1QBkNu2fm2rl57rIOCf",
-        "block_type": 32,
-        "children": [
-          "doxcn3AZiBHQTRFfUM5K6iqKAeg"
-        ],
-        "parent_id": "doxcnmGo16G82gBk2OtcSO22jjc",
-        "table_cell": {}
-      },
-      {
-        "block_id": "doxcn3AZiBHQTRFfUM5K6iqKAeg",
-        "block_type": 2,
-        "parent_id": "doxcnApF1QBkNu2fm2rl57rIOCf",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "8",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "SVtZdyKj5oY4z6xcykkcteXEnNh",
-        "block_type": 2,
-        "parent_id": "GeIyd0MSeoMReVxNVvRchaWHnWe",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "建议在创建 Collection 时保持 Shard 数量的默认设置，特别是对于使用不超过 24 个 CU 的集群。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "FEk7dSpM5ovEYexsNfdcIHvynSh",
-        "block_type": 2,
-        "parent_id": "GeIyd0MSeoMReVxNVvRchaWHnWe",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "在计算已使用容量和通用容量时，请参考 ",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "Collection",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "link": {
-                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FA8UFwSbMniMl6IkpJkNc4HsHnLc%23doxcnNz5vbx9dGaMHrWQ79orBYg"
-                  },
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": " 部分的说明。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -6153,19 +6060,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "插入",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "{#insert}",
+                "content": "Insert{#insert}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -7373,19 +7268,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "索引",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "{#index}",
+                "content": "Index{#index}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -8057,7 +7940,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "写入",
+                "content": "Flush",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -8095,7 +7978,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "每个集群的写入请求速率限制为每秒 1 个请求。",
+                "content": "每个集群的 Flush 请求速率限制为每秒 1 个请求。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -8159,7 +8042,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "不建议您手动执行写入操作。Zilliz Cloud 会自动优雅地处理数据写入操作。",
+                "content": "不建议您手动执行 Flush 操作。Zilliz Cloud 会自动优雅地处理数据 Flush 操作。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -8183,19 +8066,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "加载",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "{#load}",
+                "content": "Load{#load}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -8309,19 +8180,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "搜索",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "{#search}",
+                "content": "Search{#search}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -8469,19 +8328,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "查询",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "{#query}",
+                "content": "Query{#query}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -8580,7 +8427,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "删除 Entity",
+                "content": "Delete",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " Entity",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -8670,7 +8529,22 @@
           "elements": [
             {
               "text_run": {
-                "content": "删除 Collection",
+                "content": "Drop",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7337615665932763139"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " Collection",
                 "text_element_style": {
                   "bold": false,
                   "comment_ids": [
@@ -9569,6 +9443,6 @@
         }
       }
     ],
-    "counts": 408
+    "counts": 391
   }
 }

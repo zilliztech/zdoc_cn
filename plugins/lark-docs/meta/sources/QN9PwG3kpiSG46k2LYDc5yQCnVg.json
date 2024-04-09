@@ -5,7 +5,7 @@
   "node_token": "QN9PwG3kpiSG46k2LYDc5yQCnVg",
   "node_type": "origin",
   "obj_create_time": "1708397930",
-  "obj_edit_time": "1708426180",
+  "obj_edit_time": "1712126722",
   "obj_token": "C9wadcF3WoowGtxOCXfcORtvnrf",
   "obj_type": "docx",
   "origin_node_token": "QN9PwG3kpiSG46k2LYDc5yQCnVg",
@@ -14,7 +14,7 @@
   "parent_node_token": "R8KJwdSVIiaM6VkQN8kcqd5en6c",
   "space_id": "7167193056431783939",
   "title": "创建 Ingestion Pipelines",
-  "slug": "create-ingestion-piplines",
+  "slug": "create-ingestion-pipelines",
   "blocks": {
     "items": [
       {
@@ -34,6 +34,7 @@
           "Jka5d5YCCoI1E5xzsOecXp07nbh",
           "BhVfdC7HaokhNbxR7bVcgnJTnuf",
           "M8Xed9KN8oalKZx1HkVcvr77nIf",
+          "L5J8dXl8moq3Ruxo9b5cjcmrnje",
           "L4uDdtI7BoWQmWx9I2ucLTT1nQg",
           "QuPcdEn7GoDLv4xHS0JcIGK6nMf",
           "P0mPdVTkgoao6TxoWo8cKGbznPg",
@@ -456,7 +457,7 @@
             },
             {
               "text_run": {
-                "content": "Pipelines。",
+                "content": "Pipelines",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -468,7 +469,55 @@
             },
             {
               "text_run": {
-                "content": " 点击",
+                "content": "。 选中",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "概览",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "标签页，并切换到 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Pipelines",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。点击",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -544,7 +593,7 @@
             },
             {
               "text_run": {
-                "content": "+ Pipeline ",
+                "content": "+ Pipeline",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -556,7 +605,7 @@
             },
             {
               "text_run": {
-                "content": "按钮。 ",
+                "content": " 按钮。 ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1179,7 +1228,7 @@
             },
             {
               "text_run": {
-                "content": "INDEX_DOC ",
+                "content": "INDEX_DOC",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -1191,7 +1240,7 @@
             },
             {
               "text_run": {
-                "content": "Function",
+                "content": " Function",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1319,18 +1368,6 @@
         "parent_id": "C4xNdvFnhoSJYRx2RxXcpGASn3d",
         "text": {
           "elements": [
-            {
-              "text_run": {
-                "content": " ",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
             {
               "text_run": {
                 "content": "INDEX_DOC",
@@ -1776,15 +1813,16 @@
         "block_id": "CYoYdFS3zo2mwfxeV35csr3snuh",
         "block_type": 13,
         "children": [
-          "WZYjdRi2Oo6VfTxNr2pcuwPvnXe",
-          "TunVdwlpiodhE5xj6vzc0obpnub",
+          "P7qVdWNgCoe3fwxJgREcBICYnxn",
+          "XZIBdgq5mo66xkxsr03cKGwVnDf",
+          "IhqCdI3HEo50YFxs5fLcvOE9ncU",
           "M7RndIg2YorvRaxPdeHc2aplnAd"
         ],
         "ordered": {
           "elements": [
             {
               "text_run": {
-                "content": "(可选) 自定义切片大小。该 Function 将每个文档分割成更小的切片。默认情况下，每个切片包含不超过500 个 Token，但您可以根据自己的切片策略调整切片大小。此外，对于 Markdown 或 HTML 文件，该Function 会首先按标题划分文档，然后根据指定的切片大小进一步按较大的部分划分。",
+                "content": "(可选) 自定义切片策略。您可以按需启用此功能。该 Function 将每个文档分割成更小的切片。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1803,14 +1841,302 @@
         "parent_id": "C4xNdvFnhoSJYRx2RxXcpGASn3d"
       },
       {
-        "block_id": "WZYjdRi2Oo6VfTxNr2pcuwPvnXe",
-        "block_type": 2,
+        "block_id": "P7qVdWNgCoe3fwxJgREcBICYnxn",
+        "block_type": 34,
+        "children": [
+          "HragdRa9Yo1ZZIxzly0clOX5nch",
+          "AL3ddh0A9or0HDxgbXrcRFbRndd"
+        ],
         "parent_id": "CYoYdFS3zo2mwfxeV35csr3snuh",
+        "quote_container": {}
+      },
+      {
+        "block_id": "HragdRa9Yo1ZZIxzly0clOX5nch",
+        "block_type": 2,
+        "parent_id": "P7qVdWNgCoe3fwxJgREcBICYnxn",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "下表罗列了 Embedding 模型与其可选切片大小范围。",
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AL3ddh0A9or0HDxgbXrcRFbRndd",
+        "block_type": 2,
+        "parent_id": "P7qVdWNgCoe3fwxJgREcBICYnxn",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "对于 Markdown 或 HTML 文件，该Function 会首先按标题划分文档，然后根据指定的切片大小进一步按较大的部分划分。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "XZIBdgq5mo66xkxsr03cKGwVnDf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择或自定义 Splitter。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "Oq6ndsWl1o3Y7cxQvLscyscfnHg",
+          "LXjndeyV7oTk4lx8Ln4cLqnhn5A"
+        ],
+        "parent_id": "CYoYdFS3zo2mwfxeV35csr3snuh"
+      },
+      {
+        "block_id": "Oq6ndsWl1o3Y7cxQvLscyscfnHg",
+        "block_type": 2,
+        "parent_id": "XZIBdgq5mo66xkxsr03cKGwVnDf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Splitter 用于分割文本。选择或自定义 Splitter 后，Ingestion Pipeline 会根据定义的字符按顺序将文本分割成小片段。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LXjndeyV7oTk4lx8Ln4cLqnhn5A",
+        "block_type": 2,
+        "parent_id": "XZIBdgq5mo66xkxsr03cKGwVnDf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "默认情况下，Zilliz Cloud Pipeline 使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\"\\n\\n\", \"\\n\", \" \", \"\"",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 作为分隔符。您也可以选择",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "按句子",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "（使用 [\".\", \"\"] 作为分隔符）、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "按段落",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "（使用 [\"\\n\\n\", \"\"] 作为分隔符）、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "按行",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "（使用  [\"\\n\", \"\"] 作为分隔符）切分文本或",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "自定义",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "文本分隔符。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IhqCdI3HEo50YFxs5fLcvOE9ncU",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "输入切片大小。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "R5L7dVmEOoI6pPxO0TIcV4QKn1d",
+          "TunVdwlpiodhE5xj6vzc0obpnub"
+        ],
+        "parent_id": "CYoYdFS3zo2mwfxeV35csr3snuh"
+      },
+      {
+        "block_id": "R5L7dVmEOoI6pPxO0TIcV4QKn1d",
+        "block_type": 2,
+        "parent_id": "IhqCdI3HEo50YFxs5fLcvOE9ncU",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "默认情况下，每个切片包含不超过500 个 Token，但您可以根据自己的切片策略调整切片大小。下表罗列了 Embedding 模型与其可选切片大小范围。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1838,7 +2164,7 @@
           "DLy9dVgNAoFBnzxn5GfcMKhDnsb",
           "EOwSdRXhMobVptxaGGAc87nVnAd"
         ],
-        "parent_id": "CYoYdFS3zo2mwfxeV35csr3snuh",
+        "parent_id": "IhqCdI3HEo50YFxs5fLcvOE9ncU",
         "table": {
           "cells": [
             "VEYLdAKWnoJKtzxTQj7ciizgnHb",
@@ -2276,7 +2602,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "配置输入字段名称和数据类型。支持的数据字段类型包括",
+                "content": "配置输入字段名称和数据类型。支持的数据字段类型包括 ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2288,7 +2614,175 @@
             },
             {
               "text_run": {
-                "content": " Bool、Int8、Int16、Int32、Int64、Float,、Double 和 VarChar",
+                "content": "Bool",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Int8",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Int16",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Int32",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Int64",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Float",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Double",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "VarChar",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -2411,7 +2905,31 @@
             },
             {
               "text_run": {
-                "content": " 时，字符串最大长度为 100 个字符，且只可包含数字、字母。",
+                "content": " 时，字符串最大长度为 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "100",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 个字符，且只可包含数字、字母。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2448,7 +2966,7 @@
             },
             {
               "text_run": {
-                "content": "Int16 ",
+                "content": "Int16",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -2460,7 +2978,7 @@
             },
             {
               "text_run": {
-                "content": "的数据类型。存储时间时，我们推荐使用 ",
+                "content": " 的数据类型。存储时间时，我们推荐使用 ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2472,7 +2990,7 @@
             },
             {
               "text_run": {
-                "content": "Int32 ",
+                "content": "Int32",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -2484,7 +3002,7 @@
             },
             {
               "text_run": {
-                "content": "的数据类型。",
+                "content": " 的数据类型。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2558,7 +3076,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "点击 ",
+                "content": "点击",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2686,6 +3204,93 @@
           }
         },
         "parent_id": "M8Xed9KN8oalKZx1HkVcvr77nIf"
+      },
+      {
+        "block_id": "L5J8dXl8moq3Ruxo9b5cjcmrnje",
+        "block_type": 34,
+        "children": [
+          "CkcedEVqsoQKWtxznxqco8bMnmc",
+          "WRRAdHG36o8uRcxbBqoce16AnNd"
+        ],
+        "parent_id": "C9wadcF3WoowGtxOCXfcORtvnrf",
+        "quote_container": {}
+      },
+      {
+        "block_id": "CkcedEVqsoQKWtxznxqco8bMnmc",
+        "block_type": 2,
+        "parent_id": "L5J8dXl8moq3Ruxo9b5cjcmrnje",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "WRRAdHG36o8uRcxbBqoce16AnNd",
+        "block_type": 2,
+        "parent_id": "L5J8dXl8moq3Ruxo9b5cjcmrnje",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "自动创建的 Search Pipeline 默认关闭 Reranker 功能，如需使用 Reranker，请手动",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建一个新的 Search Pipeline",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FUvarwFhiJimKxfkduyVcTOqTndb"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
       },
       {
         "block_id": "L4uDdtI7BoWQmWx9I2ucLTT1nQg",
@@ -2816,7 +3421,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "curl --request POST \\\n    --header \"Content-Type: application/json\" \\\n    --header \"Authorization: Bearer ${YOUR_API_KEY}\" \\\n    --url \"https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines\" \\\n    -d '{\n        \"projectId\": \"proj-xxxx\"，\n        \"name\": \"my_doc_ingestion_pipeline\",\n        \"description\": \"A pipeline that splits a text file into chunks and generates embeddings. It also stores the publish_year with each chunk.\",\n        \"type\": \"INGESTION\",  \n        \"functions\": [\n            { \n                \"name\": \"index_my_doc\",\n                \"action\": \"INDEX_DOC\", \n                \"inputField\": \"doc_url\", \n                \"language\": \"ENGLISH\",\n                \"chunkSize\": 500,\n                \"embedding\": \"zilliz/bge-base-en-v1.5\"\n            },\n            {\n                \"name\": \"keep_doc_info\",\n                \"action\": \"PRESERVE\", \n                \"inputField\": \"publish_year\", \n                \"outputField\": \"publish_year\",\n                \"fieldType\": \"Int16\" \n            }\n        ],\n        \"clusterId\": \"${CLUSTER_ID}\",\n        \"newCollectionName\": \"my_new_collection\"\n",
+                "content": "curl --request POST \\\n    --header \"Content-Type: application/json\" \\\n    --header \"Authorization: Bearer ${YOUR_API_KEY}\" \\\n    --url \"https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines\" \\\n    -d '{\n        \"projectId\": \"proj-xxxx\"，\n        \"name\": \"my_doc_ingestion_pipeline\",\n        \"description\": \"A pipeline that splits a text file into chunks and generates embeddings. It also stores the publish_year with each chunk.\",\n        \"type\": \"INGESTION\",  \n        \"functions\": [\n            { \n                \"name\": \"index_my_doc\",\n                \"action\": \"INDEX_DOC\", \n                \"inputField\": \"doc_url\", \n                \"language\": \"ENGLISH\",\n                \"chunkSize\": 500,\n                \"embedding\": \"zilliz/bge-base-en-v1.5\",\n                \"splitBy\": [\"\\n\\n\", \"\\n\", \" \", \"\"]\n            },\n            {\n                \"name\": \"keep_doc_info\",\n                \"action\": \"PRESERVE\", \n                \"inputField\": \"publish_year\", \n                \"outputField\": \"publish_year\",\n                \"fieldType\": \"Int16\" \n            }\n        ],\n        \"clusterId\": \"${CLUSTER_ID}\",\n        \"newCollectionName\": \"my_new_collection\"\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3055,8 +3660,7 @@
           ],
           "style": {
             "align": 1,
-            "folded": false,
-            "indentation_level": "NoIndent"
+            "folded": false
           }
         },
         "parent_id": "C9wadcF3WoowGtxOCXfcORtvnrf"
@@ -3275,7 +3879,7 @@
             },
             {
               "text_run": {
-                "content": "INDEX_DOC ",
+                "content": "INDEX_DOC",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -3287,7 +3891,7 @@
             },
             {
               "text_run": {
-                "content": "Function",
+                "content": " Function",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3357,6 +3961,7 @@
           "Pv0vdD39CobyylxOtZpcfjM4ndd",
           "FSihdpPNdo1G7GxiS88ctSYVnch",
           "AvbVdE2IcoxnrbxB79Hc8fSFnJb",
+          "AJxWdsmx3oxDBwx4zqZcejhsnfd",
           "NVHIdfiPxoSqH5xxUchcwWEan1e",
           "O5WDdNb32o8PzQxue72cfhmKnGd",
           "U0iFdFluhosjdrx3BtZcjSUdnFf",
@@ -4223,6 +4828,103 @@
         }
       },
       {
+        "block_id": "AJxWdsmx3oxDBwx4zqZcejhsnfd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "splitBy",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " (可选): Splitter 用于分割文本。选择或自定义 Splitter 后，Ingestion Pipeline 会根据定义的字符按顺序将文本分割成小片段。默认情况下，Zilliz Cloud Pipeline 使用 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\"\\n\\n\", \"\\n\", \" \", \"\"",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 作为分隔符。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "(仅 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": true,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "INDEX_DOC",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": true,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " Function 中包含此参数。）",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": true,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ALszdTdYQo83lsxfEJ1cH7rfnvf"
+      },
+      {
         "block_id": "NVHIdfiPxoSqH5xxUchcwWEan1e",
         "block_type": 12,
         "bullet": {
@@ -5054,7 +5756,7 @@
             },
             {
               "text_run": {
-                "content": "Int16 ",
+                "content": "Int16",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -5066,7 +5768,7 @@
             },
             {
               "text_run": {
-                "content": "的数据类型。存储时间时，我们推荐使用 ",
+                "content": " 的数据类型。存储时间时，我们推荐使用 ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -5078,7 +5780,7 @@
             },
             {
               "text_run": {
-                "content": "Int32 ",
+                "content": "Int32",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -5090,7 +5792,7 @@
             },
             {
               "text_run": {
-                "content": "的数据类型。",
+                "content": " 的数据类型。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -5163,7 +5865,31 @@
             },
             {
               "text_run": {
-                "content": "不得超过 4,000。",
+                "content": "不得超过 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "4,000",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -5350,7 +6076,7 @@
             },
             {
               "text_run": {
-                "content": "\"pipe-6ca5dd1b4672659d3c3487\",\n    \"name\": \"my_doc_ingestion_pipeline\",\n    \"type\": \"INGESTION\",\n    \"description\": \"A pipeline that splits a text file into chunks and generates embeddings. It also stores the publish_year with each chunk.\",\n    \"status\": \"SERVING\",\n    \"totalTokenUsage\": 0,\n    \"functions\": [\n      {\n        \"action\": \"INDEX_DOC\",\n        \"name\": \"index_my_doc\",\n        \"inputField\": \"doc_url\",\n        \"language\": \"ENGLISH\",\n        \"chunkSize\": 500,\n        \"embedding\": \"zilliz/bge-base-en-v1.5\"\n      },\n      {\n        \"action\": \"PRESERVE\",\n        \"name\": \"keep_doc_info\",\n        \"inputField\": \"publish_year\",\n        \"outputField\": \"publish_year\",\n        \"fieldType\": \"Int16\"\n      }\n    ],\n    \"clusterId\": \"in03-***************\",\n    \"newCollectionName\": \"my_new_collection\"\n  }\n",
+                "content": "\"pipe-6ca5dd1b4672659d3c3487\",\n    \"name\": \"my_doc_ingestion_pipeline\",\n    \"type\": \"INGESTION\",\n    \"description\": \"A pipeline that splits a text file into chunks and generates embeddings. It also stores the publish_year with each chunk.\",\n    \"status\": \"SERVING\",\n    \"totalTokenUsage\": 0,\n    \"functions\": [\n      {\n        \"action\": \"INDEX_DOC\",\n        \"name\": \"index_my_doc\",\n        \"inputField\": \"doc_url\",\n        \"language\": \"ENGLISH\",\n        \"chunkSize\": 500,\n        \"embedding\": \"zilliz/bge-base-en-v1.5\",\n        \"splitBy\": [\"\\n\\n\", \"\\n\", \" \", \"\"]\n      },\n      {\n        \"action\": \"PRESERVE\",\n        \"name\": \"keep_doc_info\",\n        \"inputField\": \"publish_year\",\n        \"outputField\": \"publish_year\",\n        \"fieldType\": \"Int16\"\n      }\n    ],\n    \"clusterId\": \"in03-***************\",\n    \"newCollectionName\": \"my_new_collection\"\n  }\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -6086,6 +6812,6 @@
         }
       }
     ],
-    "counts": 171
+    "counts": 182
   }
 }

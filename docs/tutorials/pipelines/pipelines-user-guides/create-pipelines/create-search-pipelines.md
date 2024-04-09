@@ -1,7 +1,8 @@
 ---
-slug: /create-search-piplines
+slug: /create-search-pipelines
 beta: FALSE
 notebook: FALSE
+type: origin
 token: UvarwFhiJimKxfkduyVcTOqTndb
 sidebar_position: 2
 ---
@@ -19,7 +20,7 @@ import Admonition from '@theme/Admonition';
 
 <ul>
 <li><p>目前 Zilliz Cloud 仅支持在阿里云（杭州）的集群中创建 Pipelines。</p></li>
-<li><p>在创建 Search Pipeline 前，需要先<a href="./create-ingestion-piplines">创建 Ingestion Pipeline</a>。</p></li>
+<li><p>在创建 Search Pipeline 前，需要先<a href="./create-ingestion-pipelines">创建 Ingestion Pipeline</a>。</p></li>
 <li><p>同一项目下，您可最多创建 10 个同一类型的 Pipelines。</p></li>
 </ul>
 
@@ -29,44 +30,44 @@ import Admonition from '@theme/Admonition';
 
 1. 打开项目。
 
-1. 点击左侧导航栏中的 **Pipelines。** 点击** + Pipeline**。
+1. 点击左侧导航栏中的 __Pipelines__。 选中__概览__标签页，并切换到 __Pipelines__。点击 __+ Pipeline__。
 
-1. 选择需要创建的 Pipeline 类型。点击 Search Pipeline 一栏中的 **+ Pipeline **按钮。 
+1. 选择需要创建的 Pipeline 类型。点击 Search Pipeline 一栏中的 __+ Pipeline__ 按钮。 
 
     ![create-search-pipeline-cn](/img/create-search-pipeline-cn.png)
 
 1. 配置 Search Pipeline。
 
-    |  **参数**      |  **说明**                                          |
+    |  __参数__      |  __说明__                                          |
     | ------------ | ------------------------------------------------ |
     |  Pipeline 名称 |  新创建的 Ingestion Pipeline 的名称。名称中只可包含小写字母、数字和下划线。 |
     |  描述 (可选)     |  对新创建的 Ingestion Pipeline 的描述。                   |
 
     ![configure-search-pipeline-cn](/img/configure-search-pipeline-cn.png)
 
-1. 添加 Function。1 个 Search pipeline 中只可添加 1 个 **SEARCH_DOC_CHUNK **Function。
+1. 添加 Function。1 个 Search pipeline 中只可添加 1 个 __SEARCH_DOC_CHUNK__ Function。
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>为了方便您使用，Web 控制台界面上的输入字段名称默认设置为 <code>query_text</code> 且不可修改。如需修改输入字段名称，请通过 Restful API <a href="./create-search-piplines#via-restful-api">创建 Search Pipelines</a>。</p>
+    <p>为了方便您使用，Web 控制台界面上的输入字段名称默认设置为 <code>query_text</code> 且不可修改。如需修改输入字段名称，请通过 Restful API <a href="./create-search-pipelines#via-restful-api">创建 Search Pipelines</a>。</p>
 
     </Admonition>
 
     1. 输入函数名称。
 
-    1. 选择**目标集群**和**目标 Collection**。目标集群必须为部署在阿里云（杭州）的活跃集群。目标 Collection 必须为创建 Ingestion pipeline 时自动创建的 Collection，否则创建的 Search Pipeline 将不兼容。
+    1. 选择__目标集群__和__目标 Collection__。目标集群必须为部署在阿里云（杭州）的活跃集群。目标 Collection 必须为创建 Ingestion pipeline 时自动创建的 Collection，否则创建的 Search Pipeline 将不兼容。
 
-    1. （可选） 如需对输出结果根据相关性进行重新排序、提高搜索结果质量，请开启 [Reranker](./reranker)。请注意，开启 Reranker 会增加使用成本和搜索延时。默认情况下，Reranker 功能关闭。开启后，您可以选择 Reranker 模型。目前仅支持 **zilliz/bge-reranker-base **模型。
+    1. （可选） 如需对输出结果根据相关性进行重新排序、提高搜索结果质量，请开启 [Reranker](./reranker)。请注意，开启 Reranker 会增加使用成本和搜索延时。默认情况下，Reranker 功能关闭。开启后，您可以选择 Reranker 模型。目前仅支持 __zilliz/bge-reranker-base__ 模型。
 
-        |  **Reranker 模型**          |  **描述**                                                             |
+        |  __Reranker 模型__          |  __描述__                                                             |
         | ------------------------- | ------------------------------------------------------------------- |
         |  zilliz/bge-reranker-base |  智源研究院（BAAI）发布的开源重新排序（Reranker）模型。该模型采用交叉编码器架构，并托管于 Zilliz Cloud 上。 |
 
         ![add-function-to-search-pipeline-cn](/img/add-function-to-search-pipeline-cn.png)
 
-    1. 点击**添加**。
+    1. 点击__添加__。
 
-1. 点击**创建 Search Pipeline**。
+1. 点击__创建 Search Pipeline__。
 
 ## 通过 RESTful API{#via-restful-api}
 
@@ -76,7 +77,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-以下示例代码创建了 1 个名称为 `my_text_search_pipeline` 的 Search Pipeline，并添加了 1 个 **SEARCH_DOC_CHUNK** Function。
+以下示例代码创建了 1 个名称为 `my_text_search_pipeline` 的 Search Pipeline，并添加了 1 个 __SEARCH_DOC_CHUNK__ Function。
 
 ```bash
 curl --request POST \
@@ -115,7 +116,7 @@ curl --request POST \
 
 - `type`: 创建的 Pipeline 类型。目前，可创建的 Pipeline 类型包括 `INGESTION`、 `SEARCH` 和 `DELETION`。
 
-- `functions`: Pipeline 中添加的 Function。**1 个 Search Pipeline 中仅可添加 1 个 Function。** 
+- `functions`: Pipeline 中添加的 Function。__1 个 Search Pipeline 中仅可添加 1 个 Function。__ 
 
     - `name`: Function 名称。Function 名称应该在 3-64 个字符内，且只可包含数字、字母和下划线。
 

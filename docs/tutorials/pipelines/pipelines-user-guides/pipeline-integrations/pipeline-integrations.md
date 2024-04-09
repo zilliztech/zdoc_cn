@@ -2,6 +2,7 @@
 slug: /pipeline-integrations
 beta: FALSE
 notebook: FALSE
+type: origin
 token: HOL1wcSsYi6tzXkbQsccMTQhn9e
 sidebar_position: 6
 ---

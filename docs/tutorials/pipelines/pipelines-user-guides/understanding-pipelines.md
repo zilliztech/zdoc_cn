@@ -2,6 +2,7 @@
 slug: /understanding-pipelines
 beta: FALSE
 notebook: FALSE
+type: origin
 token: WfbLwEnVviFQnzk4VFWcmC76ndd
 sidebar_position: 1
 ---
@@ -77,9 +78,9 @@ Deletion pipeline 从 Collection 中删除指定文档的所有文档块。1 个
 
 ## 相关文档{#related-topics}
 
-- [创建 Ingestion Pipelines](./create-ingestion-piplines)
+- [创建 Ingestion Pipelines](./create-ingestion-pipelines)
 
-- [创建 Search Pipelines](./create-search-piplines)
+- [创建 Search Pipelines](./create-search-pipelines)
 
 - [创建 Deletion Pipelines](./create-deletion-pipelines)
 

@@ -2,6 +2,7 @@
 slug: /run-search-pipelines
 beta: FALSE
 notebook: FALSE
+type: origin
 token: PosvwF0iKig6eZkMDcNcmhtVn8d
 sidebar_position: 2
 ---
@@ -15,23 +16,23 @@ import Admonition from '@theme/Admonition';
 
 ## 通过 Web 控制台{#via-web-console} 
 
-1. 点击 Search Pipeline 右侧的 "▶︎" 按钮。 或者您可以点击**运行 Pipeline **选项卡。
+1. 点击 Search Pipeline 右侧的 "▶︎" 按钮。 或者您可以点击 __Playground__ 选项卡。
 
-    ![run-pipeline-cn](/img/run-pipeline-cn.png)
+![run-pipeline-cn](/img/run-pipeline-cn.png)
 
-1. 配置参数，点击**运行**。
+1. 配置参数，点击__运行__。
 
 1. 查看运行结果。
 
 ## 通过 RESTful API{#via-restful-api}
 
-以下示例代码用于运行 Search pipeline `my_text_search_pipeline`。该 Pipeline 的 `pipelineId` 是 `pipe-26a18a66ffc8c0edfdb874`。查询文本为“How many collections can a cluster with more than 8 CUs hold?”（1 个 8 CU 以上的集群最多可创建多少个 Collection）。
+以下示例代码用于运行 Search pipeline `my_text_search_pipeline`。查询文本为“How many collections can a cluster with more than 8 CUs hold?”（1 个 8 CU 以上的集群最多可创建多少个 Collection）。
 
 ```bash
 curl --request POST \
     --header "Content-Type: application/json" \
     --header "Authorization: Bearer ${YOUR_CLUSTER_TOKEN}" \
-    --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/pipe-26a18a66ffc8c0edfdb874/run" \
+    --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/${YOUR_PIPELINE_ID}/run" \
     -d '{
       "data": {
         "query_text": "How many collections can a cluster with more than 8 CUs hold?"
@@ -52,17 +53,19 @@ curl --request POST \
 
 - `cloud-region`: 集群的云服务地域。目前仅支持 `ali-cn-hangzhou`。
 
+- `YOUR_PIPELINE_ID`：需要运行的 Pipeline 的 ID。
+
 - 查询输入字段: 字段名称应该与添加添加 SEARCH_DOC_CHUNK Function 时的保持一致。该字段值为您想要查询的问题。
 
 - `params`: 搜索相关参数。
 
-    - `limit`: 返回的 Entity 数量。该参数值为 1-100 之间的整数。`limit` 和 `offset` 参数值总和应小于 **1024。**
+    - `limit`: 返回的 Entity 数量。该参数值为 1-100 之间的整数。`limit` 和 `offset` 参数值总和应小于 __1024。__
 
-    - `offset`: 在搜索结果中跳过的 Entity 数量。最大值为 **1024**。`limit` 和 `offset` 参数值总和应小于 **1024。**
+    - `offset`: 在搜索结果中跳过的 Entity 数量。最大值为 __1024__。`limit` 和 `offset` 参数值总和应小于 __1024。__
 
-    - `outputFields`: 在搜索结果中一同返回的输出字段。
+    - `outputFields`: 在搜索结果中一同返回的输出字段。`id`、`distance` 和 `chunk_text`为默认输出字段。
 
-    - `filter`: 搜索是的[过滤](https://docs.zilliz.com.cn/docs/search-query-and-get#search-with-filters)条件。
+    - `filter`: 搜索是的[过滤](/docs/search-query-and-get#search-with-filters)条件。
 
 请求返回以下类似内容：
 

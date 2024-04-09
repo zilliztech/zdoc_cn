@@ -2,6 +2,7 @@
 slug: /pipelines-user-guides
 beta: FALSE
 notebook: FALSE
+type: origin
 token: GM95woK16ifEPYkPdbcc8J7ZnuU
 sidebar_position: 1
 ---

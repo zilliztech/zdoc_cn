@@ -5,7 +5,7 @@
   "node_token": "UvarwFhiJimKxfkduyVcTOqTndb",
   "node_type": "origin",
   "obj_create_time": "1708397946",
-  "obj_edit_time": "1710496591",
+  "obj_edit_time": "1712126802",
   "obj_token": "JjdQddq8KoELE8xYOO0cdXb8nPe",
   "obj_type": "docx",
   "origin_node_token": "UvarwFhiJimKxfkduyVcTOqTndb",
@@ -14,7 +14,7 @@
   "parent_node_token": "R8KJwdSVIiaM6VkQN8kcqd5en6c",
   "space_id": "7167193056431783939",
   "title": "创建 Search Pipelines",
-  "slug": "create-search-piplines",
+  "slug": "create-search-pipelines",
   "blocks": {
     "items": [
       {
@@ -29,7 +29,7 @@
           "DMI1dOudSow2u1xkMtIcGMnjnef",
           "Q6IRdD1FmoGCAlxiECAcHBmrnRg",
           "Glb4ddVlUoYj1kxEvgzcCKuEnvf",
-          "KxWld0Tk7oBQxnxAP9ecqbDZnWe",
+          "GoOSdic6zoQVyUx2IItcszROn9e",
           "Td9vdrNAxomqn3xPpF2cMpJ9nph",
           "X3YCdPzCLohXvOx0qIDcYowXnxg",
           "F0JRdAlvwoJ7G6xU0oDcCVimnxh",
@@ -402,7 +402,7 @@
         "parent_id": "JjdQddq8KoELE8xYOO0cdXb8nPe"
       },
       {
-        "block_id": "KxWld0Tk7oBQxnxAP9ecqbDZnWe",
+        "block_id": "GoOSdic6zoQVyUx2IItcszROn9e",
         "block_type": 13,
         "ordered": {
           "elements": [
@@ -420,7 +420,7 @@
             },
             {
               "text_run": {
-                "content": "Pipelines。",
+                "content": "Pipelines",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -432,7 +432,7 @@
             },
             {
               "text_run": {
-                "content": " 点击",
+                "content": "。 选中",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -444,7 +444,55 @@
             },
             {
               "text_run": {
-                "content": " + Pipeline",
+                "content": "概览",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "标签页，并切换到 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Pipelines",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。点击 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "+ Pipeline",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -496,7 +544,7 @@
             },
             {
               "text_run": {
-                "content": "+ Pipeline ",
+                "content": "+ Pipeline",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -508,7 +556,7 @@
             },
             {
               "text_run": {
-                "content": "按钮。 ",
+                "content": " 按钮。 ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -864,7 +912,7 @@
             },
             {
               "text_run": {
-                "content": "SEARCH_DOC_CHUNK ",
+                "content": "SEARCH_DOC_CHUNK",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -876,7 +924,7 @@
             },
             {
               "text_run": {
-                "content": "Function。",
+                "content": " Function。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1165,7 +1213,7 @@
             },
             {
               "text_run": {
-                "content": "zilliz/bge-reranker-base ",
+                "content": "zilliz/bge-reranker-base",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -1177,7 +1225,7 @@
             },
             {
               "text_run": {
-                "content": "模型。",
+                "content": " 模型。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

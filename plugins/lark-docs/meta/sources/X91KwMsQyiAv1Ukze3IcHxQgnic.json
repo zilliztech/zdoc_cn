@@ -5,7 +5,7 @@
   "node_token": "X91KwMsQyiAv1Ukze3IcHxQgnic",
   "node_type": "origin",
   "obj_create_time": "1692687102",
-  "obj_edit_time": "1705926450",
+  "obj_edit_time": "1712645080",
   "obj_token": "K8sKd1VSxoNYcOxk37gcECzenZf",
   "obj_type": "docx",
   "origin_node_token": "X91KwMsQyiAv1Ukze3IcHxQgnic",
@@ -820,13 +820,13 @@
             },
             {
               "text_run": {
-                "content": "用户和角色",
+                "content": "用户角色",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
                   "italic": false,
                   "link": {
-                    "url": "https%3A%2F%2Fdocs.zilliz.com.cn%2Fdocs%2Fusers-roles"
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FSXwewQ8p6i2qf8kd2YaccqKDnng"
                   },
                   "strikethrough": false,
                   "underline": false

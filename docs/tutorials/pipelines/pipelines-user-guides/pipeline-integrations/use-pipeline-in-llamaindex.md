@@ -2,6 +2,7 @@
 slug: /use-pipeline-in-llamaindex
 beta: FALSE
 notebook: FALSE
+type: origin
 token: LTs4wVOhbiJirSkdBn2cblmin4g
 sidebar_position: 1
 ---
@@ -87,11 +88,11 @@ zcp_index.insert_doc_url(
 
 使用 `ZillizCloudPipelineIndex`进行语义搜索时，您可以通过指定一些参数将其用作查询引擎 `as_query_engine()`：
 
-- **search_top_k**：要检索的文本节点/块数量。默认为 `DEFAULT_SIMILARITY_TOP_K` (2)。
+- __search_top_k__：要检索的文本节点/块数量。默认为 `DEFAULT_SIMILARITY_TOP_K` (2)。
 
-- **filters**：元数据过滤器。默认为 None。
+- __filters__：元数据过滤器。默认为 None。
 
-- **output_metadata**：要与检索到的文本节点一起返回的元数据字段的名称列表。默认为 `[]`。
+- __output_metadata__：要与检索到的文本节点一起返回的元数据字段的名称列表。默认为 `[]`。
 
 ```python
 from llama_index.vector_stores.types import ExactMatchFilter, MetadataFilters
@@ -141,11 +142,11 @@ print(response.response)
 
 您可以在不进行数据摄取的情况下获取托管索引。要开始使用 Zilliz Cloud Pipelines，您需要提供管道 ID 或相关联的集合名称：
 
-- **Pipeline IDs**
+- __Pipeline IDs__
 
     1 个包含 INGESTION、 SEARCH 和 DELETION Pipelines ID 的字典（dictionary）。例如：`{"INGESTION": "pipe-xx1", "SEARCH": "pipe-xx2", "DELETION": “pipe-xx3”}`
 
-- **Collection name**
+- __Collection name__
 
     集合名称默认为 `zcp_llamalection`。如果没有提供 Pipeline ID，索引将尝试获取与相关联的集合名称相同的 Pipeline
 
@@ -165,11 +166,11 @@ advanced_zcp_index = ZillizCloudPipelineIndex(
 
 ### 定制化 Pipelines{#advanced-use-cases}
 
-如果没有提供或找到 Pipelines，那么您可以使用以下**可选**参数手动创建和自定义 Pipelines：
+如果没有提供或找到 Pipelines，那么您可以使用以下__可选__参数手动创建和自定义 Pipelines：
 
-- **metadata_schema**: 带有字段名称作为键（key），数据类型作为值的元数据架构字典。例如：`{"user_id": "VarChar"}`
+- __metadata_schema__: 带有字段名称作为键（key），数据类型作为值的元数据架构字典。例如：`{"user_id": "VarChar"}`
 
-- **chunkSize**: 使用 Token 作为单位的块大小整数。如果没有指定块大小，那么 Zilliz Cloud Pipeline 将使用内置默认块大小（500 Tokens）来分割文档。
+- __chunkSize__: 使用 Token 作为单位的块大小整数。如果没有指定块大小，那么 Zilliz Cloud Pipeline 将使用内置默认块大小（500 Tokens）来分割文档。
 
 更多其他可用参数，请参阅 Zilliz Cloud Pipelines。
 

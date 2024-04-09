@@ -2,13 +2,14 @@
 slug: /faq-collection
 beta: null
 notebook: null
+type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 3
 ---
 
 # FAQ：Collection
 
-**1 个集群中最多可创建多少个 Collection？{#how-many-collections-are-allowed-in-a-single-cluster}**
+本文列举了在使用 Zilliz Cloud Collection 时可能遇到的常见问题及对应解决方法。
 
 ## 目录
 
@@ -24,7 +25,9 @@ sidebar_position: 3
 ## 问答
 
 
-### 1 个集群中最多可创建多少个 Collection？{#how-many-collections-are-allowed-in-a-single-cluster}
+
+
+### 1 个集群中最多可创建多少个 Collection？ \{#how-many-collections-are-allowed-in-a-single-cluster}
 
 集群可创建的 Collection 数量受集群的 CU 数量影响：
 
@@ -41,7 +44,7 @@ sidebar_position: 3
 
 1. 使用 [Partition Key](./use-partition-key) 创建 Partition。
 
-### 如何确认我的 Collection 是否开启了动态 Schema？{#how-can-i-know-if-dynamic-schema-is-enabled-for-my-collection}
+### 如何确认我的 Collection 是否开启了动态 Schema？ \{#how-can-i-know-if-dynamic-schema-is-enabled-for-my-collection}
 
 您可以前往 Zilliz Cloud 界面查看 Collection 是否开启动态 Schema。操作步骤为：
 
@@ -55,11 +58,11 @@ sidebar_position: 3
 
 ![faq_dynamic_schema_enable](/img/faq_dynamic_schema_enable.png)
 
-### 如果创建 Collection 时未开启动态 Schema，Collection 创建成功后是否还能开启动态 Schema？{#if-dynamic-schema-was-disabled-when-the-collection-was-created-can-i-enable-it-later}
+### 如果创建 Collection 时未开启动态 Schema，Collection 创建成功后是否还能开启动态 Schema？ \{#if-dynamic-schema-was-disabled-when-the-collection-was-created-can-i-enable-it-later}
 
 不能。在创建 Collection 时一旦确认开启或者关闭动态 Schema，Collection 创建成功后不可以修改动态 Schema 状态。更多详情，请阅读 [开启动态 Schema](./enable-dynamic-schema)
 
-### Zilliz Cloud 支持哪些相似度类型？{#what-are-the-indexing-metric-types-supported-by-zilliz-cloud}
+### Zilliz Cloud 支持哪些相似度类型？ \{#what-are-the-indexing-metric-types-supported-by-zilliz-cloud}
 
 Zilliz Cloud支持 2 种相似度类型。
 
@@ -67,15 +70,15 @@ Zilliz Cloud支持 2 种相似度类型。
 
 1. 内积（Inner Product / IP）将两条向量相乘。计算结果为正数，两个向量越相似。
 
-### Collection 加载为何失败，如何解决？{#why-do-i-fail-to-load-collections-what-can-i-do}
+### Collection 加载为何失败，如何解决？ \{#why-do-i-fail-to-load-collections-what-can-i-do}
 
 Collection 加载失败由集群内存不足引起。我们建议您扩展集群 CU 大小。
 
-### Collection 加载请求的并发是多少？如何增加并发请求的数量？{#what-is-the-concurrency-for-collection-loading-requests-how-can-i-increase-the-number-of-concurrent-requests}
+### Collection 加载请求的并发是多少？如何增加并发请求的数量？ \{#what-is-the-concurrency-for-collection-loading-requests-how-can-i-increase-the-number-of-concurrent-requests}
 
 当前，Zilliz Cloud 加载 Collection 请求的速率限制为每秒 1 个。该建议数值仅针对 1 CU 的集群。如需增加并发请求的数量，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 
-### 如何为创建的 Collection 设置存留时间（TTL）属性？{#how-to-set-the-ttl-time-to-live-property-of-a-created-collection}
+### 如何为创建的 Collection 设置存留时间（TTL）属性？ \{#how-to-set-the-ttl-time-to-live-property-of-a-created-collection}
 
 您可以使用我们的PyMilvus SDK通过提供参数collection.ttl.seconds的值来设置集合的TTL。
 
@@ -85,6 +88,6 @@ Collection 加载失败由集群内存不足引起。我们建议您扩展集群
 collection.set_properties(properties={"collection.ttl.seconds": 1800})
 ```
 
-### 1 个 Collection 中最多可以添加多少个字段？{#is-there-any-limit-to-the-number-of-fields-i-can-add-in-a-collection}
+### 1 个 Collection 中最多可以添加多少个字段？ \{#is-there-any-limit-to-the-number-of-fields-i-can-add-in-a-collection}
 
 1 个 Collection 中最多可以添加 64 个字段。

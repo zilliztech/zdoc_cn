@@ -88,7 +88,8 @@
       "owner": "ou_e55a208a81fc721928685fc3df9cb678",
       "parent_node_token": "DaoawdnS1iEOT8kFGW0cAc8qntc",
       "space_id": "7167193056431783939",
-      "title": "查看系统设置"
+      "title": "查看系统设置",
+      "slug": "view-activities"
     },
     {
       "creator": "ou_fbc044d19930afd389d5c369466c38b1",

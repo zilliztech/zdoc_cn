@@ -5,7 +5,7 @@
   "node_token": "Pzu4wpY64iWmO6kBsaYcNPmPnNf",
   "node_type": "origin",
   "obj_create_time": "1709522289",
-  "obj_edit_time": "1711001153",
+  "obj_edit_time": "1712644897",
   "obj_token": "RRoPdDTl2opVyvxSqRQcwWQXnPi",
   "obj_type": "docx",
   "origin_node_token": "Pzu4wpY64iWmO6kBsaYcNPmPnNf",
@@ -42,6 +42,7 @@
           "AVg2dk35vodZ3HxlnaFcY93gnMe",
           "LKkgduZClomIjpxYsjTcKI91nug",
           "OCBUdCnYLow6wWxJbKLcb9MRnSc",
+          "Cvmxdk5oFoBtnXxJVQacOnPRnPe",
           "Jd1TdxlwuoiOI4xMEeRcLTSkn9e",
           "OPntdGwlloWi5jxue7TcLHGWnIc",
           "FnACdvUCdoRYxTxt1qZcP5JfnKd",
@@ -51,7 +52,7 @@
           "W5vddz1CIoNWACx5veQcyxGSncf",
           "MMDzd2UMUopMFLxUm8xcy3ZNnjS",
           "OcnadJQvSoBvoPx9a0lcr5hvn6d",
-          "ZHH7db9fBo89GpxLS9pcPpEZnfh",
+          "HM4ldQWhOo3sjgx3gXCcDTClnEg",
           "KjvhdI3YEoPzIlxLUMecbJYsnJh",
           "QqredSL3eo7GbRxA8BrcE06Ynbd",
           "IPnbdB9EpoEAB3x5yeZcH7rOnFf",
@@ -64,6 +65,8 @@
           "Baswdyv0dopVbJxeVGJcC7pznpe",
           "NIkfdmnjMoBHucx8qacceUh5nkh",
           "WSt8d5vrMo82EzxWmZmckA7VnAe",
+          "QWG6dum8vowMLRxVUeGcaYYwnid",
+          "ZWdTdBj7hodtr5xrAOccvogNngh",
           "KNRkdAmMTou5gyxkfaocElU0nwd"
         ],
         "page": {
@@ -845,6 +848,9 @@
       {
         "block_id": "LKkgduZClomIjpxYsjTcKI91nug",
         "block_type": 13,
+        "children": [
+          "ELHldTawIoIrEUxWkVFc4z3fn0c"
+        ],
         "ordered": {
           "elements": [
             {
@@ -916,8 +922,22 @@
         "parent_id": "RRoPdDTl2opVyvxSqRQcwWQXnPi"
       },
       {
+        "block_id": "ELHldTawIoIrEUxWkVFc4z3fn0c",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43390-1368%26mode%3Ddesign%26t%3DuIznTKLMN5wde6N5-4"
+          }
+        },
+        "parent_id": "LKkgduZClomIjpxYsjTcKI91nug"
+      },
+      {
         "block_id": "OCBUdCnYLow6wWxJbKLcb9MRnSc",
         "block_type": 13,
+        "children": [
+          "WdujdgIFqofSXJx2zFqcGel1nOb"
+        ],
         "ordered": {
           "elements": [
             {
@@ -970,7 +990,46 @@
             },
             {
               "text_run": {
-                "content": "中，填入上述复制或记录的腾讯云主帐号 ID，并单击",
+                "content": "中，填入上述复制或记录的腾讯云主帐号 ID。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "RRoPdDTl2opVyvxSqRQcwWQXnPi"
+      },
+      {
+        "block_id": "WdujdgIFqofSXJx2zFqcGel1nOb",
+        "block_type": 27,
+        "image": {
+          "align": 2,
+          "height": 786,
+          "token": "GGrZbPdvLoojPHxvt2jcicHqndg",
+          "width": 1262
+        },
+        "parent_id": "OCBUdCnYLow6wWxJbKLcb9MRnSc"
+      },
+      {
+        "block_id": "Cvmxdk5oFoBtnXxJVQacOnPRnPe",
+        "block_type": 13,
+        "children": [
+          "RJfmdohisoysI7xq3DtcrzLBnmd"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "单击",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -994,7 +1053,7 @@
             },
             {
               "text_run": {
-                "content": "。",
+                "content": "完成主帐号 ID 验证。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1013,10 +1072,20 @@
         "parent_id": "RRoPdDTl2opVyvxSqRQcwWQXnPi"
       },
       {
+        "block_id": "RJfmdohisoysI7xq3DtcrzLBnmd",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43402-1415%26mode%3Ddesign%26t%3DuIznTKLMN5wde6N5-4"
+          }
+        },
+        "parent_id": "Cvmxdk5oFoBtnXxJVQacOnPRnPe"
+      },
+      {
         "block_id": "Jd1TdxlwuoiOI4xMEeRcLTSkn9e",
         "block_type": 13,
         "children": [
-          "WdujdgIFqofSXJx2zFqcGel1nOb",
           "VNvOdh4mgoLRu5xd8MzcXSWEnue"
         ],
         "ordered": {
@@ -1088,17 +1157,6 @@
           }
         },
         "parent_id": "RRoPdDTl2opVyvxSqRQcwWQXnPi"
-      },
-      {
-        "block_id": "WdujdgIFqofSXJx2zFqcGel1nOb",
-        "block_type": 27,
-        "image": {
-          "align": 2,
-          "height": 786,
-          "token": "GGrZbPdvLoojPHxvt2jcicHqndg",
-          "width": 1262
-        },
-        "parent_id": "Jd1TdxlwuoiOI4xMEeRcLTSkn9e"
       },
       {
         "block_id": "VNvOdh4mgoLRu5xd8MzcXSWEnue",
@@ -2356,7 +2414,7 @@
         "block_id": "W5vddz1CIoNWACx5veQcyxGSncf",
         "block_type": 13,
         "children": [
-          "GPHBdGe5RolKDjxjPdKckLKznbg"
+          "W7OddihtJoMvKAxRkBPcbqN2n4b"
         ],
         "ordered": {
           "elements": [
@@ -2480,13 +2538,13 @@
         "parent_id": "RRoPdDTl2opVyvxSqRQcwWQXnPi"
       },
       {
-        "block_id": "GPHBdGe5RolKDjxjPdKckLKznbg",
+        "block_id": "W7OddihtJoMvKAxRkBPcbqN2n4b",
         "block_type": 27,
         "image": {
           "align": 2,
-          "height": 675,
-          "token": "RHZcbNCTtoNwh7xCnhycf9HAnZc",
-          "width": 1363
+          "height": 1444,
+          "token": "BnUnbZeoYohkeRxUNfzcIrutnJf",
+          "width": 2524
         },
         "parent_id": "W5vddz1CIoNWACx5veQcyxGSncf"
       },
@@ -2589,13 +2647,13 @@
         }
       },
       {
-        "block_id": "ZHH7db9fBo89GpxLS9pcPpEZnfh",
-        "block_type": 27,
-        "image": {
-          "align": 2,
-          "height": 786,
-          "token": "L4uvbca4Kooy5gxqDojclRecnBe",
-          "width": 1262
+        "block_id": "HM4ldQWhOo3sjgx3gXCcDTClnEg",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D44626-1490%26mode%3Ddesign%26t%3DCrgwIoKkhJtutmB4-4"
+          }
         },
         "parent_id": "RRoPdDTl2opVyvxSqRQcwWQXnPi"
       },
@@ -3559,10 +3617,7 @@
         "children": [
           "PM9CdhbFhoVU0kxhNwdc57fanJf",
           "SOnHdnf9eorAF9xZz0jcpZxZnSN",
-          "E5XSd9gTbobZuvxLAFBclVGUnhb",
-          "ZW3wdrVi3oN74Xx8rQ9cZCBWnUd",
-          "ZWdTdBj7hodtr5xrAOccvogNngh",
-          "UWY0dtlBuoaJHJxipBxcYymonOt"
+          "E5XSd9gTbobZuvxLAFBclVGUnhb"
         ],
         "ordered": {
           "elements": [
@@ -4263,7 +4318,7 @@
         }
       },
       {
-        "block_id": "ZW3wdrVi3oN74Xx8rQ9cZCBWnUd",
+        "block_id": "QWG6dum8vowMLRxVUeGcaYYwnid",
         "block_type": 4,
         "heading2": {
           "elements": [
@@ -4285,12 +4340,15 @@
             "folded": false
           }
         },
-        "parent_id": "WSt8d5vrMo82EzxWmZmckA7VnAe"
+        "parent_id": "RRoPdDTl2opVyvxSqRQcwWQXnPi"
       },
       {
         "block_id": "ZWdTdBj7hodtr5xrAOccvogNngh",
         "block_type": 2,
-        "parent_id": "WSt8d5vrMo82EzxWmZmckA7VnAe",
+        "children": [
+          "UWY0dtlBuoaJHJxipBxcYymonOt"
+        ],
+        "parent_id": "RRoPdDTl2opVyvxSqRQcwWQXnPi",
         "text": {
           "elements": [
             {
@@ -4315,7 +4373,7 @@
       {
         "block_id": "UWY0dtlBuoaJHJxipBxcYymonOt",
         "block_type": 2,
-        "parent_id": "WSt8d5vrMo82EzxWmZmckA7VnAe",
+        "parent_id": "ZWdTdBj7hodtr5xrAOccvogNngh",
         "text": {
           "elements": [
             {
@@ -4363,6 +4421,6 @@
         }
       }
     ],
-    "counts": 141
+    "counts": 144
   }
 }

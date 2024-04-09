@@ -2,6 +2,7 @@
 slug: /install-sdks
 beta: FALSE
 notebook: FALSE
+type: origin
 token: Jo4bwNi6zi4zlHkN2bWcewFYnDc
 sidebar_position: 4
 ---
@@ -61,14 +62,14 @@ python -m pip list | grep pymilvus
 </Admonition>
 
 ```bash
-*# Installing a specific version for beta clusters*
+# Installing a specific version for beta clusters
 npm install @zilliz/milvus2-sdk-node@2.3.5
-*# Alternatively,*
+# Alternatively,
 yarn add @zilliz/milvus2-sdk-node@2.3.5
 
-*# Installing a specific version for common clusters*
+# Installing a specific version for common clusters
 npm install @zilliz/milvus2-sdk-node@2.2.24
-*# Alternatively,*
+# Alternatively,
 yarn add @zilliz/milvus2-sdk-node@2.2.24
 
 # Upgrade to the latest version
@@ -101,14 +102,14 @@ import { MilvusClient } from "@zilliz/milvus2-sdk-node"
     只需将以下依赖项添加到 `pom.xml`：
 
     ```xml
-    *<!-- Use this for beta clusters -->*
+    <!-- Use this for beta clusters -->
     <dependency>
          <groupId>io.milvus</groupId>
          <artifactId>milvus-sdk-java</artifactId>
          <version>2.3.3</version>
      </dependency>
      
-     *<!-- Use this for common clusters -->*
+     <!-- Use this for common clusters -->
      <dependency>
          <groupId>io.milvus</groupId>
          <artifactId>milvus-sdk-java</artifactId>
@@ -121,10 +122,10 @@ import { MilvusClient } from "@zilliz/milvus2-sdk-node"
     在 Shell 中执行以下命令：
 
     ```bash
-    *# Use this for beta clusters*
+    # Use this for beta clusters
     compile 'io.milvus:milvus-sdk-java:2.3.3'
     
-    *# Use this for common clusters*
+    # Use this for common clusters
     compile 'io.milvus:milvus-sdk-java:2.2.15'
     ```
 
@@ -133,10 +134,10 @@ import { MilvusClient } from "@zilliz/milvus2-sdk-node"
 您可以通过 `go get` 安装 Go SDK。您可以在 [GitHub](https://github.com/milvus-io/milvus-sdk-go) 找到相关源代码。
 
 ```bash
-*# Run the following for beta clusters*
+# Run the following for beta clusters
 go get -u github.com/milvus-io/milvus-sdk-go/v2@v2.3.3
 
-*# Run the following for common clusters*
+# Run the following for common clusters
 go get -u github.com/milvus-io/milvus-sdk-go/v2@v2.2.8
 ```
 

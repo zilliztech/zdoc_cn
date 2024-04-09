@@ -5,7 +5,7 @@
   "node_token": "W81AwLbUmieD4pklJTackrpCnUe",
   "node_type": "origin",
   "obj_create_time": "1710496395",
-  "obj_edit_time": "1710741295",
+  "obj_edit_time": "1712557067",
   "obj_token": "PHFndCn2Eob1tlxX9XzcKnuCnOg",
   "obj_type": "docx",
   "origin_node_token": "W81AwLbUmieD4pklJTackrpCnUe",
@@ -21,7 +21,7 @@
         "block_id": "PHFndCn2Eob1tlxX9XzcKnuCnOg",
         "block_type": 1,
         "children": [
-          "BDcAdgmO9oMWZ3xfgRzcxtnonWe",
+          "UofQd8kMEoUkavxuzlncK8XtnLd",
           "LzwXdlrlcoTEjWxbUxNcVCkGnrc",
           "GCGYdNj75oZXc5xYRzYcsN9ZnGf",
           "H3CAdgZJWofN9Tx7Mp2cKeB6ndC",
@@ -58,7 +58,7 @@
         "parent_id": ""
       },
       {
-        "block_id": "BDcAdgmO9oMWZ3xfgRzcxtnonWe",
+        "block_id": "UofQd8kMEoUkavxuzlncK8XtnLd",
         "block_type": 2,
         "parent_id": "PHFndCn2Eob1tlxX9XzcKnuCnOg",
         "text": {
@@ -85,13 +85,31 @@
       {
         "block_id": "LzwXdlrlcoTEjWxbUxNcVCkGnrc",
         "block_type": 4,
+        "comment_ids": [
+          "7347583649024966659"
+        ],
         "heading2": {
           "elements": [
             {
               "text_run": {
-                "content": "Reranker 是什么？",
+                "content": "Reranker 是什么",
                 "text_element_style": {
                   "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "？{#what-is-reranker}",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7347583649024966659"
+                  ],
                   "inline_code": false,
                   "italic": false,
                   "strikethrough": false,
@@ -150,7 +168,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "Reranker 模型在 RAG 中的作用",
+                "content": "Reranker 模型在 RAG 中的作用{#using-reranker-in-rag-application}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -236,7 +254,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "什么情况下应该使用 Reranker？",
+                "content": "什么情况下应该使用 Reranker？{#when-to-use-reranker}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

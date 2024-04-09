@@ -2,6 +2,7 @@
 slug: /data-security
 beta: FALSE
 notebook: FALSE
+type: origin
 token: E7X4wc69bibTo4kFfNic5hBVnhb
 sidebar_position: 7
 ---
@@ -49,7 +50,7 @@ Zilliz Cloud 使用 OAuth2 协议实现身份验证。当访问集群时，Zilli
 
 为了公网访问的安全性，Zilliz Cloud 使用 HTTPS 协议，并提供白名单功能来实现 IP 地址过滤。
 
-如果要限制可访问集群的 IP 地址范围，可以将指定的 CIDR 块添加到集群的白名单中。如果要完全禁止公网访问，您可以将 **127.0.0.1/32** 添加到集群的白名单中。
+如果要限制可访问集群的 IP 地址范围，可以将指定的 CIDR 块添加到集群的白名单中。如果要完全禁止公网访问，您可以将 __127.0.0.1/32__ 添加到集群的白名单中。
 
 有关详细信息，请参见[设置白名单](./set-up-whitelist)。
 
@@ -63,7 +64,7 @@ Zilliz Cloud 使用 OAuth2 协议实现身份验证。当访问集群时，Zilli
 
 针对正在运行的集群，Zilliz Cloud 会采取各种措施来保障数据的安全存储和传输。
 
-Zilliz Cloud 集群中的向量数据存储在对象存储（如阿里云 OSS）中。对象存储已启用服务端加密，且不同租户的数据通过命名空间实现数据隔离。此外，Zilliz Cloud 利用 [JumpServer](https://zh.wikipedia.org/wiki/%E8%B7%B3%E6%9D%BF%E6%9C%BA) 记录所有集群访问相关的操作，例如登录、查询和修改等。收集的审计日志可用于跟踪和调查潜在的安全事故或数据泄漏风险。
+Zilliz Cloud 集群中的向量数据存储在对象存储（如阿里云 OSS）中。对象存储已启用服务端加密，且不同租户的数据通过存储桶实现数据隔离。此外，Zilliz Cloud 利用 [JumpServer](https://zh.wikipedia.org/wiki/%E8%B7%B3%E6%9D%BF%E6%9C%BA) 记录所有集群访问相关的操作，例如登录、查询和修改等。收集的审计日志可用于跟踪和调查潜在的安全事故或数据泄漏风险。
 
 ## 备份和恢复{#backup-and-restoration}
 
@@ -71,7 +72,7 @@ Zilliz Cloud 集群中的向量数据存储在对象存储（如阿里云 OSS）
 
 Zilliz Cloud 平台提供回收站功能，回收站中的数据最长保留期为 30 天，允许您在此期间恢复意外删除的数据。此外，您可以创建自动备份，以确保意外发生时可以进行数据恢复。
 
-有关详细信息，请参见[备份与恢复](https://docs.zilliz.com.cn/docs/backup-and-restore)。
+有关详细信息，请参见[备份与恢复](/docs/backup-and-restore)。
 
 ## 总结{#summary}
 

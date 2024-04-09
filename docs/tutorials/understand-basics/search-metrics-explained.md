@@ -2,6 +2,7 @@
 slug: /search-metrics-explained
 beta: FALSE
 notebook: FALSE
+type: origin
 token: Tpi2wvNHLiHaJmk4Y8BcwG84neh
 sidebar_position: 5
 ---
@@ -13,7 +14,7 @@ import Admonition from '@theme/Admonition';
 
 在度量向量相似性时，相似性指标发挥着关键作用。选择恰当的度量指标可以极大地提升分类与聚类的效果。
 
-目前，Zilliz Cloud 提供三种主流的相似性指标：**欧氏距离（L2）**、**内积（IP）**和**余弦相似度（COSINE）**。
+目前，Zilliz Cloud 提供三种主流的相似性指标：__欧氏距离（L2）__、__内积（IP）__和__余弦相似度（COSINE）__。
 
 ## 欧氏距离（L2）{#euclidean-distance-l2}
 
@@ -23,7 +24,7 @@ import Admonition from '@theme/Admonition';
 
 ![HhIdbxRd7oGoDrxCGh6cBIX9ncf](/img/HhIdbxRd7oGoDrxCGh6cBIX9ncf.png)
 
-其中，**a = (a<sub>0</sub>, a<sub>1</sub>,..., a<sub>n-1</sub>)** 和 **b = (b<sub>0</sub>, b<sub>1</sub>,..., b<sub>n-1</sub>)** 表示 *n* 维欧氏空间中的两个点。
+其中，__a = (a<sub>0</sub>, a<sub>1</sub>,..., a<sub>n-1</sub>)__ 和 __b = (b<sub>0</sub>, b<sub>1</sub>,..., b<sub>n-1</sub>)__ 表示 _n_ 维欧氏空间中的两个点。
 
 L2 是最普遍的距离度量方法，在处理连续性数据时尤为有效。
 
@@ -59,13 +60,13 @@ L2 是最普遍的距离度量方法，在处理连续性数据时尤为有效�
 
 余弦相似度是通过计算两组向量之间的夹角余弦来衡量它们的相似度。可以把这两组向量想象为从同一起点（如 [0,0,...]）出发，但朝向不同的线段。
 
-计算两组向量 **A = (a<sub>0</sub>, a<sub>1</sub>,..., a<sub>n-1</sub>)** 和 **B = (b<sub>0</sub>, b<sub>1</sub>,..., b<sub>n-1</sub>)** 之间的余弦相似度，可使用以下公式：
+计算两组向量 __A = (a<sub>0</sub>, a<sub>1</sub>,..., a<sub>n-1</sub>)__ 和 __B = (b<sub>0</sub>, b<sub>1</sub>,..., b<sub>n-1</sub>)__ 之间的余弦相似度，可使用以下公式：
 
 ![M6C6b2W8toduLSxfV6ac3ZcDnQh](/img/M6C6b2W8toduLSxfV6ac3ZcDnQh.png)
 
-余弦相似度的值总是介于 **[-1, 1]** 之间。比如，两个向量的夹角越接近 **0 **度，余弦相似度越接近 **1**；两个向量的夹角为 **90** 度时，其相似度为 **0**；两个向量的夹角越接近 **180** 度，两个向量相似度越接近 **-1**。余弦值越大，表示两向量之间的夹角越小，意味着它们越相似。
+余弦相似度的值总是介于 __[-1, 1]__ 之间。比如，两个向量的夹角越接近 __0 __度，余弦相似度越接近 __1__；两个向量的夹角为 __90__ 度时，其相似度为 __0__；两个向量的夹角越接近 __180__ 度，两个向量相似度越接近 __-1__。余弦值越大，表示两向量之间的夹角越小，意味着它们越相似。
 
-通过 **1** 减去两向量间的余弦相似度，可以得到它们之间的余弦距离。
+通过 __1__ 减去两向量间的余弦相似度，可以得到它们之间的余弦距离。
 
 <Admonition type="info" icon="📘" title="说明">
 

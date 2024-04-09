@@ -2,6 +2,7 @@
 slug: /release-notes-230
 beta: FALSE
 notebook: FALSE
+type: origin
 token: BuuSwsbhEiIHDJkB9YSc63xAnrh
 sidebar_position: 3
 ---
@@ -11,13 +12,13 @@ import Admonition from '@theme/Admonition';
 
 # 版本说明书（2023/11/23）
 
-**发布日期：2023年11月23日**
+__发布日期：2023年11月23日__
 
 我们很高兴地宣布 Zilliz Cloud 2.3.0 的发布。此版本引入了一系列创新 Beta 特性和功能改进：
 
 ## Milvus 兼容性
 
-此次发布兼容 **Milvus 2.2.x** 以及 **Milvus 2.3.x (Beta)**。
+此次发布兼容 __Milvus 2.2.x__ 以及 __Milvus 2.3.x (Beta)__。
 
 ## 创新 Beta 特性{#innovative-beta-features}
 

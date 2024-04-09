@@ -1,7 +1,8 @@
 ---
 slug: /manage-index
 beta: FALSE
-notebook: 01_use_customized_schema.ipynb
+notebook: FALSE
+type: origin
 token: C3t5w4g0qiNJakk9eEKcIK1InJh
 sidebar_position: 2
 ---

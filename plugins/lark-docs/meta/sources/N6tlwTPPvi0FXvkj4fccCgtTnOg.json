@@ -5,7 +5,7 @@
   "node_token": "N6tlwTPPvi0FXvkj4fccCgtTnOg",
   "node_type": "origin",
   "obj_create_time": "1693559277",
-  "obj_edit_time": "1706151116",
+  "obj_edit_time": "1710211238",
   "obj_token": "VfhBdjfjyoXnS8xBunHchlVvnhd",
   "obj_type": "docx",
   "origin_node_token": "N6tlwTPPvi0FXvkj4fccCgtTnOg",
@@ -32,7 +32,6 @@
           "K2YddRklNoc5JlxdyGbcYJTXnUb",
           "Y2Xbd2DneofgXJx21P8cuboTnuf",
           "W1K7dFxQCo6gxjxp6DpcpRcKn8b",
-          "K66ddDVMOoCou1xPRo7cwioWnXb",
           "Rh4rdrHmeo71zRxr8xdcrszGneh",
           "B08vdp9VcoJ6QjxPMOwco2pmnPg",
           "VZ3qdaJ1ao0ZGCxeTI5c7gjanMU",
@@ -641,37 +640,6 @@
           }
         },
         "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd"
-      },
-      {
-        "block_id": "K66ddDVMOoCou1xPRo7cwioWnXb",
-        "block_type": 2,
-        "comment_ids": [
-          "7309327234727149571"
-        ],
-        "parent_id": "VfhBdjfjyoXnS8xBunHchlVvnhd",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "【Insert screenshot here】",
-                "text_element_style": {
-                  "bold": false,
-                  "comment_ids": [
-                    "7309327234727149571"
-                  ],
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
       },
       {
         "block_id": "Rh4rdrHmeo71zRxr8xdcrszGneh",
@@ -1572,6 +1540,6 @@
         }
       }
     ],
-    "counts": 32
+    "counts": 31
   }
 }

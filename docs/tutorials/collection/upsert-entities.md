@@ -1,7 +1,8 @@
 ---
 slug: /upsert-entities
 beta: FALSE
-notebook: 08_upsert_entities.ipynb
+notebook: FALSE
+type: origin
 token: FdqOwWn9siVmS2kHLjpczaTlnlc
 sidebar_position: 4
 ---

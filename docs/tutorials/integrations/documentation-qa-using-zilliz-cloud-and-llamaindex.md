@@ -1,7 +1,8 @@
 ---
 slug: /documentation-qa-using-zilliz-cloud-and-llamaindex
 beta: FALSE
-notebook: 85_integrations_llamaindex.ipynb
+notebook: FALSE
+type: origin
 token: BSKawjPvqiNAcgkGGIbct8L6nOd
 sidebar_position: 6
 ---
@@ -23,7 +24,7 @@ import Admonition from '@theme/Admonition';
 
 ## 准备工作{#before-you-start}
 
-在本例中，我们将使用 **pymilvus** 来连接 Zilliz Cloud，使用 **llama-index** 来处理数据及流水线相关的工作。同时，您还需要获取一个 OpenAI 的 API 密钥来生成向量。
+在本例中，我们将使用 __pymilvus__ 来连接 Zilliz Cloud，使用 __llama-index__ 来处理数据及流水线相关的工作。同时，您还需要获取一个 OpenAI 的 API 密钥来生成向量。
 
 ```shell
 pip install pymilvus llama-index
@@ -31,7 +32,7 @@ pip install pymilvus llama-index
 
 ## 准备数据{#prepare-data}
 
-我们将使用 **git **来拉取 Milvus 的官方文档站。文档站中大部分的文档都是 markdown 格式的。
+我们将使用 __git __来拉取 Milvus 的官方文档站。文档站中大部分的文档都是 markdown 格式的。
 
 ```shell
 git clone https://github.com/milvus-io/milvus-docs

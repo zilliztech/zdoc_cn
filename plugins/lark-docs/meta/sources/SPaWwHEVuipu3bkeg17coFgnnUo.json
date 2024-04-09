@@ -4521,7 +4521,6 @@
             }
           ],
           "style": {
-            "indentation_level": "NoIndent",
             "language": 30,
             "wrap": false
           }
@@ -4559,7 +4558,6 @@
             }
           ],
           "style": {
-            "indentation_level": "NoIndent",
             "language": 29,
             "wrap": false
           }

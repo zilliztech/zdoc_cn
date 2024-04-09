@@ -2,6 +2,7 @@
 slug: /organization-settings
 beta: FALSE
 notebook: FALSE
+type: origin
 token: DaoawdnS1iEOT8kFGW0cAc8qntc
 sidebar_position: 3
 ---

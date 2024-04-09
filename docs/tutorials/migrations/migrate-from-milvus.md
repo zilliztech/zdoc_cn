@@ -2,6 +2,7 @@
 slug: /migrate-from-milvus
 beta: FALSE
 notebook: FALSE
+type: origin
 token: YBlmwO9ajiU4tYklnjmc6fJPn8e
 sidebar_position: 1
 ---
@@ -136,17 +137,17 @@ backup
 
 迁移数据准备就绪后，就可以将数据上传到 Zilliz Cloud。
 
-如果您已将迁移数据上传到个人 OSS 存储中，请选择**从 OSS 导入文件夹**，然后填写文件夹路径和身份验证凭据。
+如果您已将迁移数据上传到个人 OSS 存储中，请选择__从 OSS 导入文件夹__，然后填写文件夹路径和身份验证凭据。
 
-如果要将本地文件夹上传到 Zilliz Cloud，请选择**导入本地文件夹**，然后将文件夹拖到指定区域上传。注意，上传文件夹的最大尺寸为 1 GB。
+如果要将本地文件夹上传到 Zilliz Cloud，请选择__导入本地文件夹__，然后将文件夹拖到指定区域上传。注意，上传文件夹的最大尺寸为 1 GB。
 
 ![migrate_from_milvus_1x](/img/migrate_from_milvus_1x.png)
 
 ## 结果验证{#verify-the-migration-results}
 
-如果迁移任务的状态从 **迁移中** 变更为 **成功**，则代表迁移成功。
+如果迁移任务的状态从 __迁移中__ 变更为 __成功__，则代表迁移成功。
 
-Zilliz Cloud 仅支持 [AUTOINDEX](./autoindex-explained)。**AUTOINDEX** 是一种优化的索引算法，Zilliz Cloud 将使用此算法为您迁移的 Collection 自动创建索引。
+Zilliz Cloud 仅支持 [AUTOINDEX](./autoindex-explained)。__AUTOINDEX__ 是一种优化的索引算法，Zilliz Cloud 将使用此算法为您迁移的 Collection 自动创建索引。
 
 Collection 加载后，您可以自行连接和管理 Collection。
 

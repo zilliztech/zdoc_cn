@@ -2,6 +2,7 @@
 slug: /pricing-calculator
 beta: FALSE
 notebook: FALSE
+type: origin
 token: Jxqfwnd80i8ibIkRhEKcnkK6nzd
 sidebar_position: 4
 ---
@@ -49,7 +50,7 @@ import Admonition from '@theme/Admonition';
 
 目前，Zilliz Cloud 支持阿里云和腾讯云，可部署地域如下：
 
-|  **云服务提供商** |  **地域**                  |
+|  __云服务提供商__ |  __地域__                  |
 | ----------- | ------------------------ |
 |  阿里云        |  华东1（杭州）、华北2（北京）、华南1（深圳） |
 |  腾讯云        |  华北地区（北京）、华东地区（上海）       |
@@ -58,7 +59,7 @@ import Admonition from '@theme/Admonition';
 
 ### Zilliz Cloud 版本{#pricing-plan}
 
-- **企业版**：适合大型企业或组织，是构建向量数据平台首选方案，提供高可用、数据安全、专家技术支持。
+- __企业版__：适合大型企业或组织，是构建向量数据平台首选方案，提供高可用、数据安全、专家技术支持。
 
 有关更多信息，请参见[Zilliz Cloud 版本类型](./select-zilliz-cloud-service-plans)。
 

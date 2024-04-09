@@ -5,7 +5,7 @@
   "node_token": "OZ5Ywbjm0idqAqkOdZrcQU3Wncb",
   "node_type": "origin",
   "obj_create_time": "1709522267",
-  "obj_edit_time": "1709803936",
+  "obj_edit_time": "1712634219",
   "obj_token": "ZtkednSR3ol86bx1URNcta9MnDb",
   "obj_type": "docx",
   "origin_node_token": "OZ5Ywbjm0idqAqkOdZrcQU3Wncb",
@@ -28,33 +28,60 @@
           "YHzJdwkFvoyREExy53Ucm97inQh",
           "FTLIdfERZocgWQxYzAhciQsAnab",
           "RJjodXO3woqkHxx9ruhcdO1Wnuc",
-          "LvEgdmqQVoUu3SxeguJcmWeLnec",
           "WJ0ydh16EoGIOaxaLvRcs5w3nRd",
           "WVBFdZl7tod8lexWMn2cbQEQnle",
           "C4uYdXq5YonbvZxcBBzcUQ8Mnih",
           "FHsIdAfMLogQr0xdgMQcsTpinpb",
-          "QBVJdCR1Foa9sfxTooocGJjCn1a",
+          "QTEOd0QpAomi17x4YsYcTM5qnwg",
           "TkXJdnngcou0rGxTbvichsyQnog",
           "BiDSd0RMXodvvCxu92vcdYUmnPd",
+          "PwO2d5AG2o9bpdxka7CctI7Hnmd",
+          "GPdEdV7UhooRHqxkYQBciCX9n7d",
+          "URGQdPFaDoKsKmxJadJc3lrAnth",
           "FwARd1e5qobrzkxo59gcjeugnIb",
-          "IELhdrbrGoyos6xyjrAc0UGRnFw",
-          "KrLJdI4hCoXaE9xdhfrcw7gyn43",
-          "CwgadInu8ol2TMxWdgBckOEonhd",
-          "V52DdmAA5oCx7DxMc5VcoEWXnCe",
-          "DfdzdzcLAoe3WMxyLI8c99uvnfb",
-          "SM3ZdFUXzobrTlxsk24cYkVwnMc",
-          "BO7jdHxXuonnBox0MY2cypi9nld",
-          "CyEtdBbmpoT1zGxA8XqcfCqBntc",
-          "IAtVd9Od2oUoDUxwYJLcKHGpnac",
-          "AdiudZ16loNNADxmIrOcKUvzn3b",
-          "BPrCdLYVaoHqdZx1MnucblU1nQg",
-          "PbSBdWl0ZowZ6ixbRwYcKTuAnTf",
-          "K6PXdfkmAo3GdqxS7EYcSVIKneh",
-          "U77sdMqArorEMmxsOGfc7jUKnQf",
-          "NCh7dpXiboQPi4xoHF7cVuEDnLd",
-          "RoOXd6j5SohqBcxuxb6cbdrjnYc",
-          "C9PmdK9YboZGDcxvAyOcYgR1n1f",
-          "TxzkduDbBoBUT3x2tNrcwm9ln2b"
+          "BxUWdWZiboHXAPx4QmIcCNFlnBh",
+          "JnjGd1voXo4Q7XxEWe5cghdWnlh",
+          "ONyvdoUV6oH0YLx1vbZc6fUrn8d",
+          "Go3ndYKlsoov0uxaSVLcr9ZBnTf",
+          "GejudYWqJoo37XxTanVcXOoHnQh",
+          "XqGCdpFipo8x3RxDddzcReQ4nie",
+          "WPCtdBynLoirvMxQLrTcwVranXg",
+          "PsandzFbZoCuEjxjNQ5ch3EEnlg",
+          "KVb6daAcIorZiLxB54rcdcH3nme",
+          "P2P7dNi56oS0nFx2HG7citminrf",
+          "OKyDdvDp3oGs04xhOdncbpsJnid",
+          "Sf8LdFY3SohAUlxKiGkcfqtGn5f",
+          "OgQqdwqcHoMo1Uxm8Vbcd2gvnXp",
+          "I4Tjd1vAzoFPxKxriRucx1conBf",
+          "ADrgdAmdAo6DiNxKS0eckrftn9d",
+          "KgnMd6Zh6oLTlDxgUCwc83H1nZd",
+          "Zq0Tdqv55o7h15xBaaqcLtJDnbc",
+          "TFhwdGQ7zoLnvLxmVeGcNvbUnWb",
+          "PwfWdNsuJouClbxrjgXcj9BInEe",
+          "NUhtdwhI9oNjpgxZxk1cnYLEnmg",
+          "YNWkdOdAAoJRlexXiykc6TU8ndf",
+          "FwHidHaN6o7n4xxLHnwcv3JJnVg",
+          "XKIddy6DUoF1YTxN3cbc4bNDn1f",
+          "KDOidrYEUo4H5Nxo1dhcPw7unJc",
+          "AssddnAvyoNSACxIJ0UcMFDdnee",
+          "SnX6dxIrGoprAhxbuXccbkdvnHh",
+          "PvZXdOBsaosPJKxC8LsclrNgncd",
+          "ChT9dhlO8os9QzxMyhnc50Zgnjc",
+          "E0ISd0z3jofNEMxbc4QcGEuInGd",
+          "DN0CdDOsmoyqCIxWuIBccRDcncc",
+          "MlF6dV5ewo0mATxKEmPcpk8mn4f",
+          "MZp4d9DqRowwNhxAeaUcZtsXn5b",
+          "NqtpdLgtcoUrlcxy6LycszxBnGd",
+          "NnGwdweRbocMVtxhgXNc2jGRn3d",
+          "S8TMdaEFQoc2CDxc8Z6cxd1Znbb",
+          "JRkbdFRN1obKo0x2M47cMEVpnUh",
+          "WU4id3kCaoNXYdxySZZcTEgGnhd",
+          "V2Axd9F31oeKvMxUvpOcnZ23nIh",
+          "M74ZdED8Uo9bgLxsTIVcY0wAnJb",
+          "FtZ2dLbGCo2uOlxquUncxA8Zn1f",
+          "KPFJdjj70oOcmBxlVsRczHb6nMd",
+          "WYAIdOsXtoDa9ixy30sc2O70nKd",
+          "AFUid5gNxoViC8xEjw2cb4Ssn3c"
         ],
         "page": {
           "elements": [
@@ -253,13 +280,13 @@
         "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "LvEgdmqQVoUu3SxeguJcmWeLnec",
+        "block_id": "WJ0ydh16EoGIOaxaLvRcs5w3nRd",
         "block_type": 12,
         "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "您已经注册了 Zilliz Cloud。",
+                "content": "您已经",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -268,23 +295,22 @@
                   "underline": false
                 }
               }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
-      },
-      {
-        "block_id": "WJ0ydh16EoGIOaxaLvRcs5w3nRd",
-        "block_type": 12,
-        "bullet": {
-          "elements": [
+            },
             {
               "text_run": {
-                "content": "您已经创建了 Zilliz Cloud 阿里云集群。",
+                "content": "注册 Zilliz Cloud 并",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建了 Zilliz Cloud 阿里云集群。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -378,13 +404,13 @@
         }
       },
       {
-        "block_id": "QBVJdCR1Foa9sfxTooocGJjCn1a",
+        "block_id": "QTEOd0QpAomi17x4YsYcTM5qnwg",
         "block_type": 5,
         "heading3": {
           "elements": [
             {
               "text_run": {
-                "content": "登记私网连接参数{#set-private-link-parameters}",
+                "content": "进入 Zilliz Cloud 私网连接页面 {#enter-private-link-tab-on-zilliz-cloud}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -404,8 +430,9 @@
       },
       {
         "block_id": "TkXJdnngcou0rGxTbvichsyQnog",
-        "block_type": 13,
-        "ordered": {
+        "block_type": 2,
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb",
+        "text": {
           "elements": [
             {
               "text_run": {
@@ -424,16 +451,13 @@
             "align": 1,
             "folded": false
           }
-        },
-        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+        }
       },
       {
         "block_id": "BiDSd0RMXodvvCxu92vcdYUmnPd",
-        "block_type": 13,
-        "children": [
-          "GPdEdV7UhooRHqxkYQBciCX9n7d"
-        ],
-        "ordered": {
+        "block_type": 2,
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb",
+        "text": {
           "elements": [
             {
               "text_run": {
@@ -524,13 +548,23 @@
             "align": 1,
             "folded": false
           }
+        }
+      },
+      {
+        "block_id": "PwO2d5AG2o9bpdxka7CctI7Hnmd",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43390-1368%26mode%3Ddesign%26t%3DuIznTKLMN5wde6N5-4"
+          }
         },
         "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
         "block_id": "GPdEdV7UhooRHqxkYQBciCX9n7d",
         "block_type": 2,
-        "parent_id": "BiDSd0RMXodvvCxu92vcdYUmnPd",
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb",
         "text": {
           "elements": [
             {
@@ -625,13 +659,21 @@
         }
       },
       {
+        "block_id": "URGQdPFaDoKsKmxJadJc3lrAnth",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43390-1380%26mode%3Ddesign%26t%3DuIznTKLMN5wde6N5-4"
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
         "block_id": "FwARd1e5qobrzkxo59gcjeugnIb",
-        "block_type": 13,
-        "children": [
-          "KVb6daAcIorZiLxB54rcdcH3nme",
-          "AJZndA4WroNKbJxDgLwcPBPLndg"
-        ],
-        "ordered": {
+        "block_type": 2,
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb",
+        "text": {
           "elements": [
             {
               "text_run": {
@@ -659,7 +701,19 @@
             },
             {
               "text_run": {
-                "content": "对话框中，填写",
+                "content": "对话框中，",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "您需要选择",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -683,7 +737,7 @@
             },
             {
               "text_run": {
-                "content": "、",
+                "content": "和",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -707,7 +761,7 @@
             },
             {
               "text_run": {
-                "content": "、",
+                "content": "，并提供",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -746,8 +800,203 @@
             "align": 1,
             "folded": false
           }
+        }
+      },
+      {
+        "block_id": "BxUWdWZiboHXAPx4QmIcCNFlnBh",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43390-1389%26mode%3Ddesign%26t%3DuIznTKLMN5wde6N5-4"
+          }
         },
         "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "JnjGd1voXo4Q7XxEWe5cghdWnlh",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "获取阿里云主帐号 ID{#obtain-aliyun-account-id}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "ONyvdoUV6oH0YLx1vbZc6fUrn8d",
+        "block_type": 2,
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "登录阿里云控制台查找主帐号 ID。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Go3ndYKlsoov0uxaSVLcr9ZBnTf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您的阿里云帐号为主帐号，可登录阿里云控制台获取主帐号 ID。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "GejudYWqJoo37XxTanVcXOoHnQh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如果您的阿里云帐号不是主帐号，请复制您所在组织的主帐号 ID。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "XqGCdpFipo8x3RxDddzcReQ4nie",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43390-1399%26mode%3Ddesign%26t%3DuIznTKLMN5wde6N5-4"
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "WPCtdBynLoirvMxQLrTcwVranXg",
+        "block_type": 5,
+        "heading3": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "设置私网连接参数 {#set-private-link-parameters}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "PsandzFbZoCuEjxjNQ5ch3EEnlg",
+        "block_type": 2,
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "返回 Zilliz Cloud 界面，在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建私网连接",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "弹窗中，提供以下信息：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
       },
       {
         "block_id": "KVb6daAcIorZiLxB54rcdcH3nme",
@@ -762,7 +1011,7 @@
           "ZuqHdYEfmoD6pnxsSDRcUg8rnyg",
           "SzvndBVeCoQVdKxVXWPcPDNsnh4"
         ],
-        "parent_id": "FwARd1e5qobrzkxo59gcjeugnIb",
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb",
         "table": {
           "cells": [
             "BOugd6GA1oBMhnxBE5VcatgtnHh",
@@ -778,7 +1027,7 @@
             "column_size": 2,
             "column_width": [
               131,
-              482
+              664
             ],
             "merge_info": [
               {
@@ -1158,9 +1407,7 @@
         "block_id": "SzvndBVeCoQVdKxVXWPcPDNsnh4",
         "block_type": 32,
         "children": [
-          "C3cWddooUouujJx1wsvckTiFnhe",
-          "QCWPd5rR3ogJ5gxvYAxcIAXonjd",
-          "UW8ldliD8oRoRqx50E8cI5tEn0c"
+          "C3cWddooUouujJx1wsvckTiFnhe"
         ],
         "parent_id": "KVb6daAcIorZiLxB54rcdcH3nme",
         "table_cell": {}
@@ -1173,7 +1420,31 @@
           "elements": [
             {
               "text_run": {
-                "content": "填写您的阿里云主帐号 ID，并单击",
+                "content": "填写您",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "在步骤 3 中获取的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "阿里云主帐号 ID，并单击",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1215,57 +1486,7 @@
         }
       },
       {
-        "block_id": "QCWPd5rR3ogJ5gxvYAxcIAXonjd",
-        "block_type": 2,
-        "parent_id": "SzvndBVeCoQVdKxVXWPcPDNsnh4",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "请使用阿里云主帐号登录阿里云。登录后，鼠标悬停右上角头像区域，可查看当前登录的主帐号及其 ID。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "UW8ldliD8oRoRqx50E8cI5tEn0c",
-        "block_type": 2,
-        "parent_id": "SzvndBVeCoQVdKxVXWPcPDNsnh4",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "验证通过后，在创建终端节点时才能够查看到 Zilliz Cloud 的终端节点服务。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "AJZndA4WroNKbJxDgLwcPBPLndg",
+        "block_id": "P2P7dNi56oS0nFx2HG7citminrf",
         "block_type": 19,
         "callout": {
           "background_color": 2,
@@ -1273,16 +1494,16 @@
           "emoji_id": "blue_book"
         },
         "children": [
-          "G4HrdXpVtotaLzxHPPPcPb7qnsf",
-          "IJekdHvLYo3WLcxIJewcU4kOndb",
-          "BRMpdHCPhopmvMxKVQ3ciiRFnFf"
+          "J0uhdzt4FonOYrx2xHBcrXiWn7e",
+          "Iv5udoMhIoSm4HxUbx7cdOstnId",
+          "V1nOdYUpUo7Ax7xssUQcPsuknbX"
         ],
-        "parent_id": "FwARd1e5qobrzkxo59gcjeugnIb"
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "G4HrdXpVtotaLzxHPPPcPb7qnsf",
+        "block_id": "J0uhdzt4FonOYrx2xHBcrXiWn7e",
         "block_type": 2,
-        "parent_id": "AJZndA4WroNKbJxDgLwcPBPLndg",
+        "parent_id": "P2P7dNi56oS0nFx2HG7citminrf",
         "text": {
           "elements": [
             {
@@ -1306,13 +1527,13 @@
         }
       },
       {
-        "block_id": "IJekdHvLYo3WLcxIJewcU4kOndb",
+        "block_id": "Iv5udoMhIoSm4HxUbx7cdOstnId",
         "block_type": 12,
         "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "在填写完阿里云",
+                "content": "请确保主账号 ID ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1324,19 +1545,7 @@
             },
             {
               "text_run": {
-                "content": "主帐号 ID",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": " 后，务必单击右侧的",
+                "content": "验证通过",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1348,9 +1557,9 @@
             },
             {
               "text_run": {
-                "content": "添加",
+                "content": "，如下图所示。否则，",
                 "text_element_style": {
-                  "bold": true,
+                  "bold": false,
                   "inline_code": false,
                   "italic": false,
                   "strikethrough": false,
@@ -1360,7 +1569,31 @@
             },
             {
               "text_run": {
-                "content": "。",
+                "content": "在创建终端节点时",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，您将无法",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "查看到 Zilliz Cloud 的终端节点服务。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1376,68 +1609,16 @@
             "folded": false
           }
         },
-        "children": [
-          "XdObdJLSzoMdNtxj58KcmYZ1ndy"
-        ],
-        "parent_id": "AJZndA4WroNKbJxDgLwcPBPLndg"
+        "parent_id": "P2P7dNi56oS0nFx2HG7citminrf"
       },
       {
-        "block_id": "XdObdJLSzoMdNtxj58KcmYZ1ndy",
-        "block_type": 2,
-        "parent_id": "IJekdHvLYo3WLcxIJewcU4kOndb",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "验证通过后，在创建终端节点时才能够在可用服务列表中查看到 Zilliz Cloud 的终端节点服务。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "BRMpdHCPhopmvMxKVQ3ciiRFnFf",
+        "block_id": "V1nOdYUpUo7Ax7xssUQcPsuknbX",
         "block_type": 12,
         "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "操作尚未完成！请勿单击对话框中的",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "创建",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "。",
+                "content": "主账号 ID 验证通过后，请不要关闭 Zilliz Cloud 窗口。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1453,119 +1634,27 @@
             "folded": false
           }
         },
-        "children": [
-          "E34fdsFFGo4na0xxSStcK4ORnFd"
-        ],
-        "parent_id": "AJZndA4WroNKbJxDgLwcPBPLndg"
+        "parent_id": "P2P7dNi56oS0nFx2HG7citminrf"
       },
       {
-        "block_id": "E34fdsFFGo4na0xxSStcK4ORnFd",
-        "block_type": 2,
-        "parent_id": "BRMpdHCPhopmvMxKVQ3ciiRFnFf",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "您需要前往阿里云控制台，",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "创建终端节点",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "link": {
-                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fdocx%2FHXd6d0M3foNlKKxkYIvcD1sMn5b%23VP8TdwnO3oH2s8x1QbscIY7fnUf"
-                  },
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "。然后，在对话框中填写成功创建的",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "终端节点实例 ID ",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "后，才可以单击",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "创建",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
+        "block_id": "OKyDdvDp3oGs04xhOdncbpsJnid",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43402-1415%26mode%3Ddesign%26t%3DuIznTKLMN5wde6N5-4"
           }
-        }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "IELhdrbrGoyos6xyjrAc0UGRnFw",
+        "block_id": "Sf8LdFY3SohAUlxKiGkcfqtGn5f",
         "block_type": 5,
         "heading3": {
           "elements": [
             {
               "text_run": {
-                "content": "创建终端节点{#create-endpoint}",
+                "content": "创建终端节点实例{#create-endpoint}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1584,13 +1673,13 @@
         "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "KrLJdI4hCoXaE9xdhfrcw7gyn43",
+        "block_id": "OgQqdwqcHoMo1Uxm8Vbcd2gvnXp",
         "block_type": 13,
         "ordered": {
           "elements": [
             {
               "text_run": {
-                "content": "登录阿里云，前往",
+                "content": "进入",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1602,43 +1691,13 @@
             },
             {
               "text_run": {
-                "content": "专有网络",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "link": {
-                    "url": "https%3A%2F%2Fvpc.console.aliyun.com%2Fendpoint%2Fcn-hangzhou%2Fendpoints"
-                  },
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": " > ",
+                "content": "阿里云终端节点控制台",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
                   "italic": false,
                   "link": {
-                    "url": "https%3A%2F%2Fvpc.console.aliyun.com%2Fendpoint%2Fcn-hangzhou%2Fendpoints"
-                  },
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "终端节点",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "link": {
-                    "url": "https%3A%2F%2Fvpc.console.aliyun.com%2Fendpoint%2Fcn-hangzhou%2Fendpoints"
+                    "url": "https%3A%2F%2Fvpc.console.aliyun.com%2Fendpoint"
                   },
                   "strikethrough": false,
                   "underline": false
@@ -1649,7 +1708,7 @@
               "text_run": {
                 "content": "。",
                 "text_element_style": {
-                  "bold": true,
+                  "bold": false,
                   "inline_code": false,
                   "italic": false,
                   "strikethrough": false,
@@ -1666,64 +1725,16 @@
         "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "CwgadInu8ol2TMxWdgBckOEonhd",
+        "block_id": "I4Tjd1vAzoFPxKxriRucx1conBf",
         "block_type": 13,
         "children": [
-          "QZ7PdjpdBoyC5txV08scTsMRned"
+          "GTaMdyh77oxVYRxYqN6cWk1gnLd"
         ],
         "ordered": {
           "elements": [
             {
               "text_run": {
-                "content": "在",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "接口终端节点",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "页签中单击",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "创建终端节点",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "。",
+                "content": "根据步骤 1 中提供的地域，选择相同的地域。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1742,65 +1753,28 @@
         "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "QZ7PdjpdBoyC5txV08scTsMRned",
-        "block_type": 2,
-        "parent_id": "CwgadInu8ol2TMxWdgBckOEonhd",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "如果尚未开通私网连接服务。请先单击",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "开通私网连接服务",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "后，再执行本操作。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
+        "block_id": "GTaMdyh77oxVYRxYqN6cWk1gnLd",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43402-1430%26mode%3Ddesign%26t%3DuIznTKLMN5wde6N5-4"
           }
-        }
+        },
+        "parent_id": "I4Tjd1vAzoFPxKxriRucx1conBf"
       },
       {
-        "block_id": "V52DdmAA5oCx7DxMc5VcoEWXnCe",
+        "block_id": "ADrgdAmdAo6DiNxKS0eckrftn9d",
         "block_type": 13,
         "children": [
-          "S9z6dSibDoRWUGx9H5Lc30ngnFh"
+          "GoeudGyI2ow7FzxXRpscuHpWnHe",
+          "Vu5HdfQTCoPrVpxlTPlc9iofnDd"
         ],
         "ordered": {
           "elements": [
             {
               "text_run": {
-                "content": "在",
+                "content": "进入",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1812,7 +1786,7 @@
             },
             {
               "text_run": {
-                "content": "创建终端节点",
+                "content": "创建终端节点界面",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -1824,7 +1798,7 @@
             },
             {
               "text_run": {
-                "content": "页面，填写如下内容。",
+                "content": "，填写表格。以下为参数解释。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1843,51 +1817,35 @@
         "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "block_id": "GoeudGyI2ow7FzxXRpscuHpWnHe",
         "block_type": 31,
         "children": [
-          "HL1cdZucKo4euExjyPgcCZb9nje",
-          "Rc6ud6gCNoQxIaxcjXScKraQnAb",
-          "F5TVdGuVaof9rPxsdOrcxp4qnmh",
-          "JcVKd4LQdov3rTxn1kOcFMG2nAc",
-          "CUqVdPFgIoEHmfxWEpbcJNK8nwb",
-          "BtVedKMl6ofAUGx7rrucWxgbn3b",
-          "AaFCdc3JxoNk2TxJg5Ycbgvwnuc",
-          "C0f9dZEmxoQu0lxOtNncgtQVndb",
-          "ZYg0dUjnUoU99lxcI9rcPRyunwf",
-          "V8U9dLguaoLaXYxc3fWcrwDbnTf",
-          "IOP4dyccWo1xvBxADcbcdf7gnBb",
-          "VNUTdYtLmoKMSkxUhO4cREnEnae",
-          "XIfddbS00o1hNWx1bHGc0pYrnrd",
-          "H8oLdfoFXoIkW5xlN6ccTpYTnQh",
-          "U9ZPdKRHVoLohQxvcgxcJeeonRe",
-          "IBLedyuXZonOjBxF96cckXPRnPe"
+          "E2RGdDcunoI62Oxq6kicuQSunCg",
+          "IeEgdjt8XotBNwxVGSgcaiubn4d",
+          "T6Vzd5z7PoDISBxWcaBcqUwVnZc",
+          "ZWXsdJHMVoKfbGxYzOCcHEDDn3e",
+          "S1u1dw8P3ow131xNhs9cSxStnsb",
+          "YpCRdQJLeoof5ZxuKE9csZBwnCd",
+          "BOPlddKTYoEQ5txLqRvcAJpwnFf",
+          "JC5RdGSWxoE4sGxxlYdcV94rnId"
         ],
-        "parent_id": "V52DdmAA5oCx7DxMc5VcoEWXnCe",
+        "parent_id": "ADrgdAmdAo6DiNxKS0eckrftn9d",
         "table": {
           "cells": [
-            "HL1cdZucKo4euExjyPgcCZb9nje",
-            "Rc6ud6gCNoQxIaxcjXScKraQnAb",
-            "F5TVdGuVaof9rPxsdOrcxp4qnmh",
-            "JcVKd4LQdov3rTxn1kOcFMG2nAc",
-            "CUqVdPFgIoEHmfxWEpbcJNK8nwb",
-            "BtVedKMl6ofAUGx7rrucWxgbn3b",
-            "AaFCdc3JxoNk2TxJg5Ycbgvwnuc",
-            "C0f9dZEmxoQu0lxOtNncgtQVndb",
-            "ZYg0dUjnUoU99lxcI9rcPRyunwf",
-            "V8U9dLguaoLaXYxc3fWcrwDbnTf",
-            "IOP4dyccWo1xvBxADcbcdf7gnBb",
-            "VNUTdYtLmoKMSkxUhO4cREnEnae",
-            "XIfddbS00o1hNWx1bHGc0pYrnrd",
-            "H8oLdfoFXoIkW5xlN6ccTpYTnQh",
-            "U9ZPdKRHVoLohQxvcgxcJeeonRe",
-            "IBLedyuXZonOjBxF96cckXPRnPe"
+            "E2RGdDcunoI62Oxq6kicuQSunCg",
+            "IeEgdjt8XotBNwxVGSgcaiubn4d",
+            "T6Vzd5z7PoDISBxWcaBcqUwVnZc",
+            "ZWXsdJHMVoKfbGxYzOCcHEDDn3e",
+            "S1u1dw8P3ow131xNhs9cSxStnsb",
+            "YpCRdQJLeoof5ZxuKE9csZBwnCd",
+            "BOPlddKTYoEQ5txLqRvcAJpwnFf",
+            "JC5RdGSWxoE4sGxxlYdcV94rnId"
           ],
           "property": {
             "column_size": 2,
             "column_width": [
               164,
-              449
+              631
             ],
             "merge_info": [
               {
@@ -1921,62 +1879,30 @@
               {
                 "col_span": 1,
                 "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
               }
             ],
-            "row_size": 8
+            "row_size": 4
           }
         }
       },
       {
-        "block_id": "HL1cdZucKo4euExjyPgcCZb9nje",
+        "block_id": "E2RGdDcunoI62Oxq6kicuQSunCg",
         "block_type": 32,
         "children": [
-          "D2kvdcwuoo1QhgxNGeCciyHMnng"
+          "BIa7dUMJ3okj5xxBo11cDDeinFd"
         ],
-        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "parent_id": "GoeudGyI2ow7FzxXRpscuHpWnHe",
         "table_cell": {}
       },
       {
-        "block_id": "D2kvdcwuoo1QhgxNGeCciyHMnng",
+        "block_id": "BIa7dUMJ3okj5xxBo11cDDeinFd",
         "block_type": 2,
-        "parent_id": "HL1cdZucKo4euExjyPgcCZb9nje",
+        "parent_id": "E2RGdDcunoI62Oxq6kicuQSunCg",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "参数名称",
+                "content": "参数",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -1994,23 +1920,23 @@
         }
       },
       {
-        "block_id": "Rc6ud6gCNoQxIaxcjXScKraQnAb",
+        "block_id": "IeEgdjt8XotBNwxVGSgcaiubn4d",
         "block_type": 32,
         "children": [
-          "XvjPdmYnpodI1Ixos5GckdO8nue"
+          "G2h7dItVioTxHKxfiGuckfgnnih"
         ],
-        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "parent_id": "GoeudGyI2ow7FzxXRpscuHpWnHe",
         "table_cell": {}
       },
       {
-        "block_id": "XvjPdmYnpodI1Ixos5GckdO8nue",
+        "block_id": "G2h7dItVioTxHKxfiGuckfgnnih",
         "block_type": 2,
-        "parent_id": "Rc6ud6gCNoQxIaxcjXScKraQnAb",
+        "parent_id": "IeEgdjt8XotBNwxVGSgcaiubn4d",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "参数描述",
+                "content": "描述",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -2028,86 +1954,18 @@
         }
       },
       {
-        "block_id": "F5TVdGuVaof9rPxsdOrcxp4qnmh",
+        "block_id": "T6Vzd5z7PoDISBxWcaBcqUwVnZc",
         "block_type": 32,
         "children": [
-          "Nc9wdRuX1oFgkwx1pWucL8yHnFg"
+          "MuL5dsho4ouymkxKVOrca8mbnvb"
         ],
-        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "parent_id": "GoeudGyI2ow7FzxXRpscuHpWnHe",
         "table_cell": {}
       },
       {
-        "block_id": "Nc9wdRuX1oFgkwx1pWucL8yHnFg",
+        "block_id": "MuL5dsho4ouymkxKVOrca8mbnvb",
         "block_type": 2,
-        "parent_id": "F5TVdGuVaof9rPxsdOrcxp4qnmh",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "所属地域",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "JcVKd4LQdov3rTxn1kOcFMG2nAc",
-        "block_type": 32,
-        "children": [
-          "ZNOldVQqLoGmInxMvhHc7bACnlc"
-        ],
-        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
-        "table_cell": {}
-      },
-      {
-        "block_id": "ZNOldVQqLoGmInxMvhHc7bACnlc",
-        "block_type": 2,
-        "parent_id": "JcVKd4LQdov3rTxn1kOcFMG2nAc",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "填写私网连接目标集群所在地域。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "CUqVdPFgIoEHmfxWEpbcJNK8nwb",
-        "block_type": 32,
-        "children": [
-          "JFc5db4r0oJ1CCxhKGHcQs5in9c"
-        ],
-        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
-        "table_cell": {}
-      },
-      {
-        "block_id": "JFc5db4r0oJ1CCxhKGHcQs5in9c",
-        "block_type": 2,
-        "parent_id": "CUqVdPFgIoEHmfxWEpbcJNK8nwb",
+        "parent_id": "T6Vzd5z7PoDISBxWcaBcqUwVnZc",
         "text": {
           "elements": [
             {
@@ -2130,18 +1988,18 @@
         }
       },
       {
-        "block_id": "BtVedKMl6ofAUGx7rrucWxgbn3b",
+        "block_id": "ZWXsdJHMVoKfbGxYzOCcHEDDn3e",
         "block_type": 32,
         "children": [
-          "BTSHdKkqyoSpfDxL1vJcXVs3nEg"
+          "ZWnsd36ISoGeIZxoL39cY5z2nig"
         ],
-        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "parent_id": "GoeudGyI2ow7FzxXRpscuHpWnHe",
         "table_cell": {}
       },
       {
-        "block_id": "BTSHdKkqyoSpfDxL1vJcXVs3nEg",
+        "block_id": "ZWnsd36ISoGeIZxoL39cY5z2nig",
         "block_type": 2,
-        "parent_id": "BtVedKMl6ofAUGx7rrucWxgbn3b",
+        "parent_id": "ZWXsdJHMVoKfbGxYzOCcHEDDn3e",
         "text": {
           "elements": [
             {
@@ -2164,18 +2022,18 @@
         }
       },
       {
-        "block_id": "AaFCdc3JxoNk2TxJg5Ycbgvwnuc",
+        "block_id": "S1u1dw8P3ow131xNhs9cSxStnsb",
         "block_type": 32,
         "children": [
-          "XhMidadpKo9VFZxcY6QcJu0hnFf"
+          "HPcHdRpe3oOwnvxHBKFcRe8Hnqg"
         ],
-        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "parent_id": "GoeudGyI2ow7FzxXRpscuHpWnHe",
         "table_cell": {}
       },
       {
-        "block_id": "XhMidadpKo9VFZxcY6QcJu0hnFf",
+        "block_id": "HPcHdRpe3oOwnvxHBKFcRe8Hnqg",
         "block_type": 2,
-        "parent_id": "AaFCdc3JxoNk2TxJg5Ycbgvwnuc",
+        "parent_id": "S1u1dw8P3ow131xNhs9cSxStnsb",
         "text": {
           "elements": [
             {
@@ -2198,18 +2056,18 @@
         }
       },
       {
-        "block_id": "C0f9dZEmxoQu0lxOtNncgtQVndb",
+        "block_id": "YpCRdQJLeoof5ZxuKE9csZBwnCd",
         "block_type": 32,
         "children": [
-          "XpIndNBNnohVmZxPBKJcLk2JnBg"
+          "JvSKdD3S9oQcPqx455BcbjuhnBh"
         ],
-        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "parent_id": "GoeudGyI2ow7FzxXRpscuHpWnHe",
         "table_cell": {}
       },
       {
-        "block_id": "XpIndNBNnohVmZxPBKJcLk2JnBg",
+        "block_id": "JvSKdD3S9oQcPqx455BcbjuhnBh",
         "block_type": 2,
-        "parent_id": "C0f9dZEmxoQu0lxOtNncgtQVndb",
+        "parent_id": "YpCRdQJLeoof5ZxuKE9csZBwnCd",
         "text": {
           "elements": [
             {
@@ -2256,18 +2114,18 @@
         }
       },
       {
-        "block_id": "ZYg0dUjnUoU99lxcI9rcPRyunwf",
+        "block_id": "BOPlddKTYoEQ5txLqRvcAJpwnFf",
         "block_type": 32,
         "children": [
-          "Dc8udxOzhockixxlsoEcllxon1b"
+          "In9fdV33GohVQBxwkS5cXwZ9nIZ"
         ],
-        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "parent_id": "GoeudGyI2ow7FzxXRpscuHpWnHe",
         "table_cell": {}
       },
       {
-        "block_id": "Dc8udxOzhockixxlsoEcllxon1b",
+        "block_id": "In9fdV33GohVQBxwkS5cXwZ9nIZ",
         "block_type": 2,
-        "parent_id": "ZYg0dUjnUoU99lxcI9rcPRyunwf",
+        "parent_id": "BOPlddKTYoEQ5txLqRvcAJpwnFf",
         "text": {
           "elements": [
             {
@@ -2290,19 +2148,19 @@
         }
       },
       {
-        "block_id": "V8U9dLguaoLaXYxc3fWcrwDbnTf",
+        "block_id": "JC5RdGSWxoE4sGxxlYdcV94rnId",
         "block_type": 32,
         "children": [
-          "Ev0Rd2tSzo409WxspxQcq25UnVb",
-          "QU0CdfCtWonj4KxbzSBcGUjmnAh"
+          "Hr3kdpDgqoIlRlxRZTqcowl5nRh",
+          "GgfvdVN8DoOOytxXmuCcsFhmn3f"
         ],
-        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "parent_id": "GoeudGyI2ow7FzxXRpscuHpWnHe",
         "table_cell": {}
       },
       {
-        "block_id": "Ev0Rd2tSzo409WxspxQcq25UnVb",
+        "block_id": "Hr3kdpDgqoIlRlxRZTqcowl5nRh",
         "block_type": 2,
-        "parent_id": "V8U9dLguaoLaXYxc3fWcrwDbnTf",
+        "parent_id": "JC5RdGSWxoE4sGxxlYdcV94rnId",
         "text": {
           "elements": [
             {
@@ -2319,7 +2177,7 @@
             },
             {
               "text_run": {
-                "content": "可用服务",
+                "content": "选择可用服务",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -2349,9 +2207,9 @@
         }
       },
       {
-        "block_id": "QU0CdfCtWonj4KxbzSBcGUjmnAh",
+        "block_id": "GgfvdVN8DoOOytxXmuCcsFhmn3f",
         "block_type": 2,
-        "parent_id": "V8U9dLguaoLaXYxc3fWcrwDbnTf",
+        "parent_id": "JC5RdGSWxoE4sGxxlYdcV94rnId",
         "text": {
           "elements": [
             {
@@ -2374,18 +2232,190 @@
         }
       },
       {
-        "block_id": "IOP4dyccWo1xvBxADcbcdf7gnBb",
+        "block_id": "Vu5HdfQTCoPrVpxlTPlc9iofnDd",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43402-1446%26mode%3Ddesign%26t%3DuIznTKLMN5wde6N5-4"
+          }
+        },
+        "parent_id": "ADrgdAmdAo6DiNxKS0eckrftn9d"
+      },
+      {
+        "block_id": "KgnMd6Zh6oLTlDxgUCwc83H1nZd",
+        "block_type": 13,
+        "children": [
+          "Ax6YdwTp9o1YEgxLuljcDEWEneh",
+          "TBYFdY3PwoGQYvxM1lxcEx4pned",
+          "JINDdV4fnoLK34xrgQBcXbCLnPc",
+          "NGczd4H8soSy4FxJ2Docl4gvnoO",
+          "CnY7dNIvhoRFXhxXDincv6NfnbP"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "继续填写表格，配置",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "专有网络",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "安全组",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "、",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "可用区与交换机",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。以下为参数解释。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "Ax6YdwTp9o1YEgxLuljcDEWEneh",
+        "block_type": 31,
+        "children": [
+          "SN5cdwz6Nos3sUx1JCUcwD7inQb",
+          "Hs6ndWsmIoC9HaxTGPacOkinnhh",
+          "Lb5odsMlBo0TkpxBo7UcWl6DnAe",
+          "VyL3dorDQoBqPwxbzXDcSh0hnse",
+          "WWhzd3uA2oVmINx4dPzcaf33nfc",
+          "O3H2dyFNooG2uhxGgLQcK6ckn6c"
+        ],
+        "parent_id": "KgnMd6Zh6oLTlDxgUCwc83H1nZd",
+        "table": {
+          "cells": [
+            "SN5cdwz6Nos3sUx1JCUcwD7inQb",
+            "Hs6ndWsmIoC9HaxTGPacOkinnhh",
+            "Lb5odsMlBo0TkpxBo7UcWl6DnAe",
+            "VyL3dorDQoBqPwxbzXDcSh0hnse",
+            "WWhzd3uA2oVmINx4dPzcaf33nfc",
+            "O3H2dyFNooG2uhxGgLQcK6ckn6c"
+          ],
+          "property": {
+            "column_size": 2,
+            "column_width": [
+              164,
+              631
+            ],
+            "merge_info": [
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              },
+              {
+                "col_span": 1,
+                "row_span": 1
+              }
+            ],
+            "row_size": 3
+          }
+        }
+      },
+      {
+        "block_id": "SN5cdwz6Nos3sUx1JCUcwD7inQb",
         "block_type": 32,
         "children": [
-          "Pqnqdjh9AosDfrxs8aYclH8bndc"
+          "HMFwdGX5Pol3MsxuNk4cmSfCn8e"
         ],
-        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "parent_id": "Ax6YdwTp9o1YEgxLuljcDEWEneh",
         "table_cell": {}
       },
       {
-        "block_id": "Pqnqdjh9AosDfrxs8aYclH8bndc",
+        "block_id": "HMFwdGX5Pol3MsxuNk4cmSfCn8e",
         "block_type": 2,
-        "parent_id": "IOP4dyccWo1xvBxADcbcdf7gnBb",
+        "parent_id": "SN5cdwz6Nos3sUx1JCUcwD7inQb",
         "text": {
           "elements": [
             {
@@ -2408,18 +2438,18 @@
         }
       },
       {
-        "block_id": "VNUTdYtLmoKMSkxUhO4cREnEnae",
+        "block_id": "Hs6ndWsmIoC9HaxTGPacOkinnhh",
         "block_type": 32,
         "children": [
-          "D73NdzTvIoWwOfxtwfFc1x4Jngh"
+          "NzsFd5dnzoCd63xsjOCcdvKWnSE"
         ],
-        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "parent_id": "Ax6YdwTp9o1YEgxLuljcDEWEneh",
         "table_cell": {}
       },
       {
-        "block_id": "D73NdzTvIoWwOfxtwfFc1x4Jngh",
+        "block_id": "NzsFd5dnzoCd63xsjOCcdvKWnSE",
         "block_type": 2,
-        "parent_id": "VNUTdYtLmoKMSkxUhO4cREnEnae",
+        "parent_id": "Hs6ndWsmIoC9HaxTGPacOkinnhh",
         "text": {
           "elements": [
             {
@@ -2442,18 +2472,18 @@
         }
       },
       {
-        "block_id": "XIfddbS00o1hNWx1bHGc0pYrnrd",
+        "block_id": "Lb5odsMlBo0TkpxBo7UcWl6DnAe",
         "block_type": 32,
         "children": [
-          "CDqddms2AoTyMgxX5gtcad6Pnog"
+          "WmlKdqg1Pov0hLxIHNqcnbaBnee"
         ],
-        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "parent_id": "Ax6YdwTp9o1YEgxLuljcDEWEneh",
         "table_cell": {}
       },
       {
-        "block_id": "CDqddms2AoTyMgxX5gtcad6Pnog",
+        "block_id": "WmlKdqg1Pov0hLxIHNqcnbaBnee",
         "block_type": 2,
-        "parent_id": "XIfddbS00o1hNWx1bHGc0pYrnrd",
+        "parent_id": "Lb5odsMlBo0TkpxBo7UcWl6DnAe",
         "text": {
           "elements": [
             {
@@ -2476,26 +2506,25 @@
         }
       },
       {
-        "block_id": "H8oLdfoFXoIkW5xlN6ccTpYTnQh",
+        "block_id": "VyL3dorDQoBqPwxbzXDcSh0hnse",
         "block_type": 32,
         "children": [
-          "S36qdguYWotTYJx6BNlcEWy3neb",
-          "OViUdWlXAojVjyxfrOAc4aekngc",
-          "AGRKda4r5oRXJjxVbK3chwxcn3c",
-          "WBKcdtm5HoOanxxrLdmc2nCGnRc"
+          "Rm8FdDISaokDV5xbo6LcwvtqnNf",
+          "NzhgdNer3o6l4AxPt9ncJa2qnBb",
+          "IiN0dK4qzo0lzNxGHOMcfq4enRd"
         ],
-        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "parent_id": "Ax6YdwTp9o1YEgxLuljcDEWEneh",
         "table_cell": {}
       },
       {
-        "block_id": "S36qdguYWotTYJx6BNlcEWy3neb",
+        "block_id": "Rm8FdDISaokDV5xbo6LcwvtqnNf",
         "block_type": 2,
-        "parent_id": "H8oLdfoFXoIkW5xlN6ccTpYTnQh",
+        "parent_id": "VyL3dorDQoBqPwxbzXDcSh0hnse",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "选择应用于该终端节点的安全组规则。",
+                "content": "选择应用于该终端节点的安全组规则。如第一次使用，建议新建安全组，规划如下：",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2513,32 +2542,7 @@
         }
       },
       {
-        "block_id": "OViUdWlXAojVjyxfrOAc4aekngc",
-        "block_type": 2,
-        "parent_id": "H8oLdfoFXoIkW5xlN6ccTpYTnQh",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "如第一次使用，建议新建安全组，规划如下：",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "AGRKda4r5oRXJjxVbK3chwxcn3c",
+        "block_id": "NzhgdNer3o6l4AxPt9ncJa2qnBb",
         "block_type": 12,
         "bullet": {
           "elements": [
@@ -2561,14 +2565,14 @@
           }
         },
         "children": [
-          "CWJNd1eIAogIAAxDzvtcIIKtn8f"
+          "GKVcdVJIAoSMfGxl3dQcd25Wn7b"
         ],
-        "parent_id": "H8oLdfoFXoIkW5xlN6ccTpYTnQh"
+        "parent_id": "VyL3dorDQoBqPwxbzXDcSh0hnse"
       },
       {
-        "block_id": "CWJNd1eIAogIAAxDzvtcIIKtn8f",
+        "block_id": "GKVcdVJIAoSMfGxl3dQcd25Wn7b",
         "block_type": 2,
-        "parent_id": "AGRKda4r5oRXJjxVbK3chwxcn3c",
+        "parent_id": "NzhgdNer3o6l4AxPt9ncJa2qnBb",
         "text": {
           "elements": [
             {
@@ -2591,7 +2595,7 @@
         }
       },
       {
-        "block_id": "WBKcdtm5HoOanxxrLdmc2nCGnRc",
+        "block_id": "IiN0dK4qzo0lzNxGHOMcfq4enRd",
         "block_type": 12,
         "bullet": {
           "elements": [
@@ -2614,14 +2618,14 @@
           }
         },
         "children": [
-          "OxAJde7t1oG2QTxtaovcHQFVnOb"
+          "QD66dutXBo52rjxr33jch8pAnZe"
         ],
-        "parent_id": "H8oLdfoFXoIkW5xlN6ccTpYTnQh"
+        "parent_id": "VyL3dorDQoBqPwxbzXDcSh0hnse"
       },
       {
-        "block_id": "OxAJde7t1oG2QTxtaovcHQFVnOb",
+        "block_id": "QD66dutXBo52rjxr33jch8pAnZe",
         "block_type": 2,
-        "parent_id": "WBKcdtm5HoOanxxrLdmc2nCGnRc",
+        "parent_id": "IiN0dK4qzo0lzNxGHOMcfq4enRd",
         "text": {
           "elements": [
             {
@@ -2764,19 +2768,19 @@
         }
       },
       {
-        "block_id": "U9ZPdKRHVoLohQxvcgxcJeeonRe",
+        "block_id": "WWhzd3uA2oVmINx4dPzcaf33nfc",
         "block_type": 32,
         "children": [
-          "Z9F0dlsj9ohYXpxBY2McJyxOnxe",
-          "UKlkdB82yosI4BxgKWScoNPvnUI"
+          "RBGFdh63joEWqMxVniLcVDSGnGc",
+          "JgI2dZtLmoibJmxCQ6Jcm6epn8d"
         ],
-        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "parent_id": "Ax6YdwTp9o1YEgxLuljcDEWEneh",
         "table_cell": {}
       },
       {
-        "block_id": "Z9F0dlsj9ohYXpxBY2McJyxOnxe",
+        "block_id": "RBGFdh63joEWqMxVniLcVDSGnGc",
         "block_type": 2,
-        "parent_id": "U9ZPdKRHVoLohQxvcgxcJeeonRe",
+        "parent_id": "WWhzd3uA2oVmINx4dPzcaf33nfc",
         "text": {
           "elements": [
             {
@@ -2799,9 +2803,9 @@
         }
       },
       {
-        "block_id": "UKlkdB82yosI4BxgKWScoNPvnUI",
+        "block_id": "JgI2dZtLmoibJmxCQ6Jcm6epn8d",
         "block_type": 2,
-        "parent_id": "U9ZPdKRHVoLohQxvcgxcJeeonRe",
+        "parent_id": "WWhzd3uA2oVmINx4dPzcaf33nfc",
         "text": {
           "elements": [
             {
@@ -2824,32 +2828,32 @@
         }
       },
       {
-        "block_id": "IBLedyuXZonOjBxF96cckXPRnPe",
+        "block_id": "O3H2dyFNooG2uhxGgLQcK6ckn6c",
         "block_type": 32,
         "children": [
-          "Y98ydn9wWobmqMxhRb2c8QSNnsc",
-          "OflqdmIlgorINwxdk2WcgPkSnyh",
-          "IQhedABILoqAXbxawOAcA2uQnSd",
-          "Q1JGdyd4VoiPgLxMmfqcOyQDnsb",
-          "SMF2dSqrHoSj9Tx2pzScgp9cnYf",
-          "I95wdvi6Go2ukwxmynycako5nSf",
-          "QT4tdwXakoZjMmxsqWfc4wn5nLf",
-          "OeyZd6lJDoqO9WxmxtAc4fqInff",
-          "GVfCdLfGLoDJYTxFkAaciXCindg",
-          "GqmodSi4So4SNvxF5tGcoWwpn4d",
-          "SLqBd89ieoHMUNxpze6cyiREnPf",
-          "IEgSdMZe2o28Znx8SWkchU4TnEh",
-          "EtMNd2lZQoq8MHx8tSIc0qYFnGg",
-          "L7J6dy6RCogkk2xDQtHcA6WznXf",
-          "AKisd8W6SoIBsRxNB8scKa3NnMf"
+          "FcbNdo0d6ovRkZxMIWDcb7gEn3e",
+          "LYQkdcAIWoPAqSx7vxsc0ExLnNh",
+          "GuhsdnECGotuqTxuE3icfQRGnbe",
+          "S9w2dvqDOocBPzxnnh2chQMFnNe",
+          "MugydnHamoYRGJxQ7MscvXAxn5e",
+          "HoR7dRpoRoIjyZxzjCIc3d2Jnch",
+          "IDd6dhpVBoMNEuxvmrEc1JAjnub",
+          "BMYgdRjbUoXWrQxKeyOcw5gNnug",
+          "FXxpd8oHoo00dSxiyykcYLbhnEb",
+          "DIQodfFtyobIkYxzwzyc4IoFndh",
+          "N8FndRB0UoOrkNxFlZdcihUenNe",
+          "PVEMdEdLgo0PGtxEOZjcXtTgngf",
+          "VCG2dgYWloAwiNxclzRc0xNTndb",
+          "VODcd2307osBqOxv6PpcnQ28nxQ",
+          "KMMmd52OHoyTUGx6jCzcNfwlnAc"
         ],
-        "parent_id": "S9z6dSibDoRWUGx9H5Lc30ngnFh",
+        "parent_id": "Ax6YdwTp9o1YEgxLuljcDEWEneh",
         "table_cell": {}
       },
       {
-        "block_id": "Y98ydn9wWobmqMxhRb2c8QSNnsc",
+        "block_id": "FcbNdo0d6ovRkZxMIWDcb7gEn3e",
         "block_type": 2,
-        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe",
+        "parent_id": "O3H2dyFNooG2uhxGgLQcK6ckn6c",
         "text": {
           "elements": [
             {
@@ -2872,9 +2876,9 @@
         }
       },
       {
-        "block_id": "OflqdmIlgorINwxdk2WcgPkSnyh",
+        "block_id": "LYQkdcAIWoPAqSx7vxsc0ExLnNh",
         "block_type": 2,
-        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe",
+        "parent_id": "O3H2dyFNooG2uhxGgLQcK6ckn6c",
         "text": {
           "elements": [
             {
@@ -2897,9 +2901,9 @@
         }
       },
       {
-        "block_id": "IQhedABILoqAXbxawOAcA2uQnSd",
+        "block_id": "GuhsdnECGotuqTxuE3icfQRGnbe",
         "block_type": 2,
-        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe",
+        "parent_id": "O3H2dyFNooG2uhxGgLQcK6ckn6c",
         "text": {
           "elements": [
             {
@@ -2922,7 +2926,7 @@
         }
       },
       {
-        "block_id": "Q1JGdyd4VoiPgLxMmfqcOyQDnsb",
+        "block_id": "S9w2dvqDOocBPzxnnh2chQMFnNe",
         "block_type": 12,
         "bullet": {
           "elements": [
@@ -2944,10 +2948,10 @@
             "folded": false
           }
         },
-        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe"
+        "parent_id": "O3H2dyFNooG2uhxGgLQcK6ckn6c"
       },
       {
-        "block_id": "SMF2dSqrHoSj9Tx2pzScgp9cnYf",
+        "block_id": "MugydnHamoYRGJxQ7MscvXAxn5e",
         "block_type": 12,
         "bullet": {
           "elements": [
@@ -2969,10 +2973,10 @@
             "folded": false
           }
         },
-        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe"
+        "parent_id": "O3H2dyFNooG2uhxGgLQcK6ckn6c"
       },
       {
-        "block_id": "I95wdvi6Go2ukwxmynycako5nSf",
+        "block_id": "HoR7dRpoRoIjyZxzjCIc3d2Jnch",
         "block_type": 12,
         "bullet": {
           "elements": [
@@ -2994,12 +2998,12 @@
             "folded": false
           }
         },
-        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe"
+        "parent_id": "O3H2dyFNooG2uhxGgLQcK6ckn6c"
       },
       {
-        "block_id": "QT4tdwXakoZjMmxsqWfc4wn5nLf",
+        "block_id": "IDd6dhpVBoMNEuxvmrEc1JAjnub",
         "block_type": 2,
-        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe",
+        "parent_id": "O3H2dyFNooG2uhxGgLQcK6ckn6c",
         "text": {
           "elements": [
             {
@@ -3022,7 +3026,7 @@
         }
       },
       {
-        "block_id": "OeyZd6lJDoqO9WxmxtAc4fqInff",
+        "block_id": "BMYgdRjbUoXWrQxKeyOcw5gNnug",
         "block_type": 12,
         "bullet": {
           "elements": [
@@ -3044,10 +3048,10 @@
             "folded": false
           }
         },
-        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe"
+        "parent_id": "O3H2dyFNooG2uhxGgLQcK6ckn6c"
       },
       {
-        "block_id": "GVfCdLfGLoDJYTxFkAaciXCindg",
+        "block_id": "FXxpd8oHoo00dSxiyykcYLbhnEb",
         "block_type": 12,
         "bullet": {
           "elements": [
@@ -3069,10 +3073,10 @@
             "folded": false
           }
         },
-        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe"
+        "parent_id": "O3H2dyFNooG2uhxGgLQcK6ckn6c"
       },
       {
-        "block_id": "GqmodSi4So4SNvxF5tGcoWwpn4d",
+        "block_id": "DIQodfFtyobIkYxzwzyc4IoFndh",
         "block_type": 12,
         "bullet": {
           "elements": [
@@ -3094,12 +3098,12 @@
             "folded": false
           }
         },
-        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe"
+        "parent_id": "O3H2dyFNooG2uhxGgLQcK6ckn6c"
       },
       {
-        "block_id": "SLqBd89ieoHMUNxpze6cyiREnPf",
+        "block_id": "N8FndRB0UoOrkNxFlZdcihUenNe",
         "block_type": 2,
-        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe",
+        "parent_id": "O3H2dyFNooG2uhxGgLQcK6ckn6c",
         "text": {
           "elements": [
             {
@@ -3122,7 +3126,7 @@
         }
       },
       {
-        "block_id": "IEgSdMZe2o28Znx8SWkchU4TnEh",
+        "block_id": "PVEMdEdLgo0PGtxEOZjcXtTgngf",
         "block_type": 12,
         "bullet": {
           "elements": [
@@ -3144,10 +3148,10 @@
             "folded": false
           }
         },
-        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe"
+        "parent_id": "O3H2dyFNooG2uhxGgLQcK6ckn6c"
       },
       {
-        "block_id": "EtMNd2lZQoq8MHx8tSIc0qYFnGg",
+        "block_id": "VCG2dgYWloAwiNxclzRc0xNTndb",
         "block_type": 12,
         "bullet": {
           "elements": [
@@ -3169,10 +3173,10 @@
             "folded": false
           }
         },
-        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe"
+        "parent_id": "O3H2dyFNooG2uhxGgLQcK6ckn6c"
       },
       {
-        "block_id": "L7J6dy6RCogkk2xDQtHcA6WznXf",
+        "block_id": "VODcd2307osBqOxv6PpcnQ28nxQ",
         "block_type": 12,
         "bullet": {
           "elements": [
@@ -3194,12 +3198,12 @@
             "folded": false
           }
         },
-        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe"
+        "parent_id": "O3H2dyFNooG2uhxGgLQcK6ckn6c"
       },
       {
-        "block_id": "AKisd8W6SoIBsRxNB8scKa3NnMf",
+        "block_id": "KMMmd52OHoyTUGx6jCzcNfwlnAc",
         "block_type": 2,
-        "parent_id": "IBLedyuXZonOjBxF96cckXPRnPe",
+        "parent_id": "O3H2dyFNooG2uhxGgLQcK6ckn6c",
         "text": {
           "elements": [
             {
@@ -3222,13 +3226,54 @@
         }
       },
       {
-        "block_id": "DfdzdzcLAoe3WMxyLI8c99uvnfb",
-        "block_type": 13,
-        "ordered": {
+        "block_id": "TBYFdY3PwoGQYvxM1lxcEx4pned",
+        "block_type": 19,
+        "callout": {
+          "background_color": 2,
+          "border_color": 2,
+          "emoji_id": "blue_book"
+        },
+        "children": [
+          "Ph1OdZZPcoLhX6xDIhjcNql3nEf",
+          "Kv1odBoDVolxAIxIXrscOsZznFg"
+        ],
+        "parent_id": "KgnMd6Zh6oLTlDxgUCwc83H1nZd"
+      },
+      {
+        "block_id": "Ph1OdZZPcoLhX6xDIhjcNql3nEf",
+        "block_type": 2,
+        "parent_id": "TBYFdY3PwoGQYvxM1lxcEx4pned",
+        "text": {
           "elements": [
             {
               "text_run": {
-                "content": "填写完所有信息后，单击",
+                "content": "提示",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false,
+            "indentation_level": "NoIndent"
+          }
+        }
+      },
+      {
+        "block_id": "Kv1odBoDVolxAIxIXrscOsZznFg",
+        "block_type": 2,
+        "parent_id": "TBYFdY3PwoGQYvxM1lxcEx4pned",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为了可用性，我们建议选 2 个以上",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3240,7 +3285,7 @@
             },
             {
               "text_run": {
-                "content": "确认创建",
+                "content": "可用区与交换机。",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -3252,7 +3297,7 @@
             },
             {
               "text_run": {
-                "content": "。",
+                "content": "但注意，阿里云会针对每个可用区额外收费，因此您需要考虑成本。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3267,20 +3312,68 @@
             "align": 1,
             "folded": false
           }
-        },
-        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+        }
       },
       {
-        "block_id": "SM3ZdFUXzobrTlxsk24cYkVwnMc",
+        "block_id": "JINDdV4fnoLK34xrgQBcXbCLnPc",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43402-1465%26mode%3Ddesign%26t%3DuIznTKLMN5wde6N5-4"
+          }
+        },
+        "parent_id": "KgnMd6Zh6oLTlDxgUCwc83H1nZd"
+      },
+      {
+        "block_id": "NGczd4H8soSy4FxJ2Docl4gvnoO",
+        "block_type": 2,
+        "parent_id": "KgnMd6Zh6oLTlDxgUCwc83H1nZd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "安全组详情如下图所示：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "CnY7dNIvhoRFXhxXDincv6NfnbP",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43402-1482%26mode%3Ddesign%26t%3DuIznTKLMN5wde6N5-4"
+          }
+        },
+        "parent_id": "KgnMd6Zh6oLTlDxgUCwc83H1nZd"
+      },
+      {
+        "block_id": "Zq0Tdqv55o7h15xBaaqcLtJDnbc",
         "block_type": 13,
         "children": [
-          "WdAJdJhA2oz0ztxScSZcdTGmnTe"
+          "IW43d8QFloT9f2xn7gxcy12InKb",
+          "AmxHdSbLIoFfb3x3lfccH1GWnjW",
+          "SLyJdBgtfoHGbhxe3yVcxaoqnne"
         ],
         "ordered": {
           "elements": [
             {
               "text_run": {
-                "content": "确认终端节点创建成功后，复制创建好的实例 ID 备用。",
+                "content": "表格填写完成后，点击创建。创建成功后的界面如下图所示。请务必保存以下信息以备后续使用：",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3299,26 +3392,13 @@
         "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "WdAJdJhA2oz0ztxScSZcdTGmnTe",
-        "block_type": 2,
-        "parent_id": "SM3ZdFUXzobrTlxsk24cYkVwnMc",
-        "text": {
+        "block_id": "IW43d8QFloT9f2xn7gxcy12InKb",
+        "block_type": 12,
+        "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "此时，",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "可用区与网卡",
+                "content": "终端及节点实例ID",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -3327,10 +3407,62 @@
                   "underline": false
                 }
               }
-            },
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Zq0Tdqv55o7h15xBaaqcLtJDnbc"
+      },
+      {
+        "block_id": "AmxHdSbLIoFfb3x3lfccH1GWnjW",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
             {
               "text_run": {
-                "content": "页签中显示的可用区",
+                "content": "默认服务域名",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Zq0Tdqv55o7h15xBaaqcLtJDnbc"
+      },
+      {
+        "block_id": "SLyJdBgtfoHGbhxe3yVcxaoqnne",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43402-1490%26mode%3Ddesign%26t%3DpCSXLVi4M3Y872Bx-4"
+          }
+        },
+        "parent_id": "Zq0Tdqv55o7h15xBaaqcLtJDnbc"
+      },
+      {
+        "block_id": "TFhwdGQ7zoLnvLxmVeGcNvbUnWb",
+        "block_type": 13,
+        "children": [
+          "UKCJdyqdfohH4vxzR4UcoU0unpZ"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "等待终端节点",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3354,7 +3486,7 @@
             },
             {
               "text_run": {
-                "content": "为",
+                "content": "变为",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3366,55 +3498,7 @@
             },
             {
               "text_run": {
-                "content": "等待连接",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "，",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "服务状态",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "为",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "异常",
+                "content": "可用",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -3441,10 +3525,124 @@
             "align": 1,
             "folded": false
           }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "UKCJdyqdfohH4vxzR4UcoU0unpZ",
+        "block_type": 19,
+        "callout": {
+          "background_color": 2,
+          "border_color": 2,
+          "emoji_id": "blue_book"
+        },
+        "children": [
+          "UYEgdqCj3ozpt1xzYhmcXuXTnUg",
+          "APtgdnhI2oXzwUxIXQ5ccG3dn8d"
+        ],
+        "parent_id": "TFhwdGQ7zoLnvLxmVeGcNvbUnWb"
+      },
+      {
+        "block_id": "UYEgdqCj3ozpt1xzYhmcXuXTnUg",
+        "block_type": 2,
+        "parent_id": "UKCJdyqdfohH4vxzR4UcoU0unpZ",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "提示",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false,
+            "indentation_level": "NoIndent"
+          }
         }
       },
       {
-        "block_id": "BO7jdHxXuonnBox0MY2cypi9nld",
+        "block_id": "APtgdnhI2oXzwUxIXQ5ccG3dn8d",
+        "block_type": 2,
+        "parent_id": "UKCJdyqdfohH4vxzR4UcoU0unpZ",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "终端节点",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "连接状态",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "此时是",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "已断开",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。需要等待下一步连接。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PwfWdNsuJouClbxrjgXcj9BInEe",
         "block_type": 5,
         "heading3": {
           "elements": [
@@ -3469,13 +3667,14 @@
         "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "CyEtdBbmpoT1zGxA8XqcfCqBntc",
-        "block_type": 13,
-        "ordered": {
+        "block_id": "NUhtdwhI9oNjpgxZxk1cnYLEnmg",
+        "block_type": 2,
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb",
+        "text": {
           "elements": [
             {
               "text_run": {
-                "content": "返回 Zilliz Cloud，将复制好的终端节点实例 ID 填入",
+                "content": "返回 Zilliz Cloud 界面。在创建私网连接",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3487,7 +3686,31 @@
             },
             {
               "text_run": {
-                "content": "创建私网连接",
+                "content": "单",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "弹窗中输入上一步中保存的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "终端及节点实例ID",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -3499,59 +3722,7 @@
             },
             {
               "text_run": {
-                "content": "对话框中的",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "终端节点实例 ID ",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "字段中。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
-      },
-      {
-        "block_id": "IAtVd9Od2oUoDUxwYJLcKHGpnac",
-        "block_type": 13,
-        "children": [
-          "MYFYd1pGuoQ3foxGUwtcnTkonfe"
-        ],
-        "ordered": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "单击",
+                "content": "。点击",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3564,301 +3735,6 @@
             {
               "text_run": {
                 "content": "创建",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "后，Zilliz Cloud 将开始创建私网连接。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
-      },
-      {
-        "block_id": "MYFYd1pGuoQ3foxGUwtcnTkonfe",
-        "block_type": 2,
-        "parent_id": "IAtVd9Od2oUoDUxwYJLcKHGpnac",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "创建私网连接耗时较长，请耐心等待。创建完成后，可在私网连接页面查看 Zilliz Cloud 分配的 ",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "Endpoint 服务名称",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "、 ",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "Endpoint 服务状态",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "和",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "私网连接",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "前缀。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "AdiudZ16loNNADxmIrOcKUvzn3b",
-        "block_type": 13,
-        "children": [
-          "DFpLdMyMgo3Dj1xZHJHcRgy7nkg"
-        ],
-        "ordered": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "返回阿里云控制台，检查已创建的终端节点实例，并复制可用区的",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": " IP 地址",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "备用。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
-      },
-      {
-        "block_id": "DFpLdMyMgo3Dj1xZHJHcRgy7nkg",
-        "block_type": 2,
-        "parent_id": "AdiudZ16loNNADxmIrOcKUvzn3b",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "此时，终端节点实例的",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "可用区与网卡",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "页签中显示的可用区",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "状态",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "变更为",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "已连接",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "，",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "服务状态",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "变更为",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "正常",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -3888,13 +3764,172 @@
         }
       },
       {
-        "block_id": "BPrCdLYVaoHqdZx1MnucblU1nQg",
+        "block_id": "YNWkdOdAAoJRlexXiykc6TU8ndf",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43457-1506%26mode%3Ddesign%26t%3DpCSXLVi4M3Y872Bx-4"
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "FwHidHaN6o7n4xxLHnwcv3JJnVg",
+        "block_type": 2,
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "此时 Zilliz Cloud 界面会出现如下提示：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false,
+            "indentation_level": "NoIndent"
+          }
+        }
+      },
+      {
+        "block_id": "XKIddy6DUoF1YTxN3cbc4bNDn1f",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43457-1527%26mode%3Ddesign%26t%3DpCSXLVi4M3Y872Bx-4"
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "KDOidrYEUo4H5Nxo1dhcPw7unJc",
+        "block_type": 2,
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "待私网连接创建成功后，Zilliz Cloud 界面如下：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false,
+            "indentation_level": "NoIndent"
+          }
+        }
+      },
+      {
+        "block_id": "AssddnAvyoNSACxIJ0UcMFDdnee",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43457-1539%26mode%3Ddesign%26t%3DpCSXLVi4M3Y872Bx-4"
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "SnX6dxIrGoprAhxbuXccbkdvnHh",
+        "block_type": 2,
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "此时，切换至阿里云界面。可以观察到终端节点的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "连接状态",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "变为",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "已连接",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false,
+            "indentation_level": "NoIndent"
+          }
+        }
+      },
+      {
+        "block_id": "PvZXdOBsaosPJKxC8LsclrNgncd",
         "block_type": 5,
         "heading3": {
           "elements": [
             {
               "text_run": {
-                "content": "添加私域解析记录{#add-private-zone-record}",
+                "content": "创建并设置私域解析{#add-private-zone-record}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3913,16 +3948,16 @@
         "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "PbSBdWl0ZowZ6ixbRwYcKTuAnTf",
+        "block_id": "ChT9dhlO8os9QzxMyhnc50Zgnjc",
         "block_type": 13,
         "children": [
-          "WCkFdNlxvoA6wHxwYl9cWzdfnxh"
+          "AaHXdGo5foTJxLxItR3cP4Utn1l"
         ],
         "ordered": {
           "elements": [
             {
               "text_run": {
-                "content": "返回阿里云控制台，前往",
+                "content": "进入阿里云控制台",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3934,9 +3969,9 @@
             },
             {
               "text_run": {
-                "content": "私域解析",
+                "content": "内网 DNS 解析（PrivateZone）",
                 "text_element_style": {
-                  "bold": true,
+                  "bold": false,
                   "inline_code": false,
                   "italic": false,
                   "link": {
@@ -3968,67 +4003,27 @@
         "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "WCkFdNlxvoA6wHxwYl9cWzdfnxh",
-        "block_type": 2,
-        "parent_id": "PbSBdWl0ZowZ6ixbRwYcKTuAnTf",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "首次打开该页面时，需要单击",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "立即开通",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "启用私域解析服务。开通完成后，刷新页面可进入私域解析记录列表。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
+        "block_id": "AaHXdGo5foTJxLxItR3cP4Utn1l",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43457-1574%26mode%3Ddesign%26t%3DpCSXLVi4M3Y872Bx-4"
           }
-        }
+        },
+        "parent_id": "ChT9dhlO8os9QzxMyhnc50Zgnjc"
       },
       {
-        "block_id": "K6PXdfkmAo3GdqxS7EYcSVIKneh",
+        "block_id": "E0ISd0z3jofNEMxbc4QcGEuInGd",
         "block_type": 13,
         "children": [
-          "KouPdJlwao4lrnxcJ9Tcqo2VnNh",
-          "MpjJd4pyaoJe20xdlGDcdOAdnLb",
-          "A269dSaLUoM8OUxb9f2cLWHbn2c"
+          "PA3Hdub6Wojqo0xSf0dcW5RGnMp"
         ],
         "ordered": {
           "elements": [
             {
               "text_run": {
-                "content": "单击",
+                "content": "选择",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4040,7 +4035,7 @@
             },
             {
               "text_run": {
-                "content": "添加 Zone",
+                "content": "管理配置模式",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -4052,103 +4047,7 @@
             },
             {
               "text_run": {
-                "content": "，在弹出的",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "添加 PrivateZone ",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "对话框中填写 ",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "Zone名称",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "，并勾选",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "子域名递归解析代理",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "。单击",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "确定",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "后，列表中出现一条新记录。",
+                "content": "。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4167,14 +4066,51 @@
         "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "KouPdJlwao4lrnxcJ9Tcqo2VnNh",
-        "block_type": 2,
-        "parent_id": "K6PXdfkmAo3GdqxS7EYcSVIKneh",
-        "text": {
+        "block_id": "PA3Hdub6Wojqo0xSf0dcW5RGnMp",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43457-1585%26mode%3Ddesign%26t%3DpCSXLVi4M3Y872Bx-4"
+          }
+        },
+        "parent_id": "E0ISd0z3jofNEMxbc4QcGEuInGd"
+      },
+      {
+        "block_id": "DN0CdDOsmoyqCIxWuIBccRDcncc",
+        "block_type": 13,
+        "children": [
+          "FGhFdnIP5oVTXdxaneVcMXuAnxc"
+        ],
+        "ordered": {
           "elements": [
             {
               "text_run": {
-                "content": "阿里云上 Zilliz Cloud 集群所属 Zone 名称应与您的终端节点所在区域保持一致。",
+                "content": "在页面下方，点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "添加域名",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4187,43 +4123,102 @@
           ],
           "style": {
             "align": 1,
-            "folded": false,
-            "indentation_level": "NoIndent"
+            "folded": false
           }
-        }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "MpjJd4pyaoJe20xdlGDcdOAdnLb",
+        "block_id": "FGhFdnIP5oVTXdxaneVcMXuAnxc",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43457-1607%26mode%3Ddesign%26t%3DpCSXLVi4M3Y872Bx-4"
+          }
+        },
+        "parent_id": "DN0CdDOsmoyqCIxWuIBccRDcncc"
+      },
+      {
+        "block_id": "MlF6dV5ewo0mATxKEmPcpk8mn4f",
+        "block_type": 13,
+        "children": [
+          "TVdqdDS5Tot5TyxVvfTc4eKRnYc",
+          "R3aQdy0AwoaCs7xbHqEcgV99nsg"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "填写",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "添加内置权威域名",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "表格。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "TVdqdDS5Tot5TyxVvfTc4eKRnYc",
         "block_type": 31,
         "children": [
-          "HI1JdC2Ozofws2xGyshcFWqrnbb",
-          "AQV4dcwcsofBXExtNNLcTrRQnFe",
-          "IBD5dTJSyoE2KbxCCsOcj77qnnf",
-          "W5p2d0G8kodSq0xQa5mcTUokncC",
-          "Kfokdi4NqowTshxe2escmDcHnhg",
-          "SX6Ud75yioy544xADhFc4IHbnE0",
-          "UXwBdqApLoqT5jxzJvjcUjqUnHf",
-          "MVpud7eVVoETD0xieeBcIuGcnBg"
+          "SJ2Zdner4osInfxa2yic6d09nqf",
+          "IM2cdy29Lo7qr2x6tfucvZs1nwb",
+          "RojmdeypaoiVZ9xBIdEcnPsInOc",
+          "Zxm2dPdGHoM1DqxoHRQcdWUynah",
+          "M4DCdD2JnosS5yxWqfocymXan1f",
+          "VFeLdw8vGo4g4UxW1NJc90oDnnf"
         ],
-        "parent_id": "K6PXdfkmAo3GdqxS7EYcSVIKneh",
+        "parent_id": "MlF6dV5ewo0mATxKEmPcpk8mn4f",
         "table": {
           "cells": [
-            "HI1JdC2Ozofws2xGyshcFWqrnbb",
-            "AQV4dcwcsofBXExtNNLcTrRQnFe",
-            "IBD5dTJSyoE2KbxCCsOcj77qnnf",
-            "W5p2d0G8kodSq0xQa5mcTUokncC",
-            "Kfokdi4NqowTshxe2escmDcHnhg",
-            "SX6Ud75yioy544xADhFc4IHbnE0",
-            "UXwBdqApLoqT5jxzJvjcUjqUnHf",
-            "MVpud7eVVoETD0xieeBcIuGcnBg"
+            "SJ2Zdner4osInfxa2yic6d09nqf",
+            "IM2cdy29Lo7qr2x6tfucvZs1nwb",
+            "RojmdeypaoiVZ9xBIdEcnPsInOc",
+            "Zxm2dPdGHoM1DqxoHRQcdWUynah",
+            "M4DCdD2JnosS5yxWqfocymXan1f",
+            "VFeLdw8vGo4g4UxW1NJc90oDnnf"
           ],
           "property": {
             "column_size": 2,
             "column_width": [
-              156,
-              513
+              180,
+              515
             ],
-            "header_row": true,
             "merge_info": [
               {
                 "col_span": 1,
@@ -4248,38 +4243,98 @@
               {
                 "col_span": 1,
                 "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
               }
             ],
-            "row_size": 4
+            "row_size": 3
           }
         }
       },
       {
-        "block_id": "HI1JdC2Ozofws2xGyshcFWqrnbb",
+        "block_id": "SJ2Zdner4osInfxa2yic6d09nqf",
         "block_type": 32,
         "children": [
-          "C9fLdh6lkoQdLqxBml8cFiXInOf"
+          "BTBEdTveLo2j6xx2RMAcP65PnPf"
         ],
-        "parent_id": "MpjJd4pyaoJe20xdlGDcdOAdnLb",
+        "parent_id": "TVdqdDS5Tot5TyxVvfTc4eKRnYc",
         "table_cell": {}
       },
       {
-        "block_id": "C9fLdh6lkoQdLqxBml8cFiXInOf",
+        "block_id": "BTBEdTveLo2j6xx2RMAcP65PnPf",
         "block_type": 2,
-        "parent_id": "HI1JdC2Ozofws2xGyshcFWqrnbb",
+        "parent_id": "SJ2Zdner4osInfxa2yic6d09nqf",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "终端节点所在区域",
+                "content": "参数",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "IM2cdy29Lo7qr2x6tfucvZs1nwb",
+        "block_type": 32,
+        "children": [
+          "QtFxdJO6to0UePxk54fcltIRn6b"
+        ],
+        "parent_id": "TVdqdDS5Tot5TyxVvfTc4eKRnYc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "QtFxdJO6to0UePxk54fcltIRn6b",
+        "block_type": 2,
+        "parent_id": "IM2cdy29Lo7qr2x6tfucvZs1nwb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "描述",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RojmdeypaoiVZ9xBIdEcnPsInOc",
+        "block_type": 32,
+        "children": [
+          "ZPPCdqxPEokMXqxINPrckUaInHL"
+        ],
+        "parent_id": "TVdqdDS5Tot5TyxVvfTc4eKRnYc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "ZPPCdqxPEokMXqxINPrckUaInHL",
+        "block_type": 2,
+        "parent_id": "RojmdeypaoiVZ9xBIdEcnPsInOc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "内置权威域名（Zone）",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4297,23 +4352,27 @@
         }
       },
       {
-        "block_id": "AQV4dcwcsofBXExtNNLcTrRQnFe",
+        "block_id": "Zxm2dPdGHoM1DqxoHRQcdWUynah",
         "block_type": 32,
         "children": [
-          "Nw2gdNb4Uo6Bwgxpz5McyUaynvb"
+          "XVdHdeajLoxxRzxNp2Xc8de0nJf",
+          "Q4nQd2LCcoOYEwxN9yicLQ2SnLH",
+          "GX6xdHbA2oEs6WxYiXKcJRT0nab",
+          "STKLdUH19oLkmVxuNK6cN4X5nwb",
+          "RaCHdJORMoRtGUxSlajc4pxcn97"
         ],
-        "parent_id": "MpjJd4pyaoJe20xdlGDcdOAdnLb",
+        "parent_id": "TVdqdDS5Tot5TyxVvfTc4eKRnYc",
         "table_cell": {}
       },
       {
-        "block_id": "Nw2gdNb4Uo6Bwgxpz5McyUaynvb",
+        "block_id": "XVdHdeajLoxxRzxNp2Xc8de0nJf",
         "block_type": 2,
-        "parent_id": "AQV4dcwcsofBXExtNNLcTrRQnFe",
+        "parent_id": "Zxm2dPdGHoM1DqxoHRQcdWUynah",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "Zone 名称",
+                "content": "请根据您的集群地域和集群 ID修改内置权威域名。以下为终端节点所在区域对应的 Zone 名称：",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4331,23 +4390,13 @@
         }
       },
       {
-        "block_id": "IBD5dTJSyoE2KbxCCsOcj77qnnf",
-        "block_type": 32,
-        "children": [
-          "FDL9dtbYeoQUjWx4lxKczZ88nme"
-        ],
-        "parent_id": "MpjJd4pyaoJe20xdlGDcdOAdnLb",
-        "table_cell": {}
-      },
-      {
-        "block_id": "FDL9dtbYeoQUjWx4lxKczZ88nme",
-        "block_type": 2,
-        "parent_id": "IBD5dTJSyoE2KbxCCsOcj77qnnf",
-        "text": {
+        "block_id": "Q4nQd2LCcoOYEwxN9yicLQ2SnLH",
+        "block_type": 12,
+        "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "杭州",
+                "content": "杭州：",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4356,29 +4405,7 @@
                   "underline": false
                 }
               }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "W5p2d0G8kodSq0xQa5mcTUokncC",
-        "block_type": 32,
-        "children": [
-          "SKiZd9WNlogKVmxn5bhce7IQnXd"
-        ],
-        "parent_id": "MpjJd4pyaoJe20xdlGDcdOAdnLb",
-        "table_cell": {}
-      },
-      {
-        "block_id": "SKiZd9WNlogKVmxn5bhce7IQnXd",
-        "block_type": 2,
-        "parent_id": "W5p2d0G8kodSq0xQa5mcTUokncC",
-        "text": {
-          "elements": [
+            },
             {
               "text_run": {
                 "content": "inxx-xxxxxxxxxxxx.ali-cn-hangzhou.vectordb.zilliz.com.cn",
@@ -4396,26 +4423,17 @@
             "align": 1,
             "folded": false
           }
-        }
+        },
+        "parent_id": "Zxm2dPdGHoM1DqxoHRQcdWUynah"
       },
       {
-        "block_id": "Kfokdi4NqowTshxe2escmDcHnhg",
-        "block_type": 32,
-        "children": [
-          "IBxhdc4Qno0QOyxc30jc0w5inYg"
-        ],
-        "parent_id": "MpjJd4pyaoJe20xdlGDcdOAdnLb",
-        "table_cell": {}
-      },
-      {
-        "block_id": "IBxhdc4Qno0QOyxc30jc0w5inYg",
-        "block_type": 2,
-        "parent_id": "Kfokdi4NqowTshxe2escmDcHnhg",
-        "text": {
+        "block_id": "GX6xdHbA2oEs6WxYiXKcJRT0nab",
+        "block_type": 12,
+        "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "北京",
+                "content": "北京：",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4424,29 +4442,7 @@
                   "underline": false
                 }
               }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "SX6Ud75yioy544xADhFc4IHbnE0",
-        "block_type": 32,
-        "children": [
-          "JstMdT1o9oTv94x7sSVcKzMNn7e"
-        ],
-        "parent_id": "MpjJd4pyaoJe20xdlGDcdOAdnLb",
-        "table_cell": {}
-      },
-      {
-        "block_id": "JstMdT1o9oTv94x7sSVcKzMNn7e",
-        "block_type": 2,
-        "parent_id": "SX6Ud75yioy544xADhFc4IHbnE0",
-        "text": {
-          "elements": [
+            },
             {
               "text_run": {
                 "content": "inxx-xxxxxxxxxxxx.ali-cn-beijing.vectordb.zilliz.com.cn",
@@ -4464,26 +4460,17 @@
             "align": 1,
             "folded": false
           }
-        }
+        },
+        "parent_id": "Zxm2dPdGHoM1DqxoHRQcdWUynah"
       },
       {
-        "block_id": "UXwBdqApLoqT5jxzJvjcUjqUnHf",
-        "block_type": 32,
-        "children": [
-          "QjHkd0ADmoQLBJx89z7cN7cXnSc"
-        ],
-        "parent_id": "MpjJd4pyaoJe20xdlGDcdOAdnLb",
-        "table_cell": {}
-      },
-      {
-        "block_id": "QjHkd0ADmoQLBJx89z7cN7cXnSc",
-        "block_type": 2,
-        "parent_id": "UXwBdqApLoqT5jxzJvjcUjqUnHf",
-        "text": {
+        "block_id": "STKLdUH19oLkmVxuNK6cN4X5nwb",
+        "block_type": 12,
+        "bullet": {
           "elements": [
             {
               "text_run": {
-                "content": "深圳",
+                "content": "深圳：",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4492,29 +4479,7 @@
                   "underline": false
                 }
               }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "MVpud7eVVoETD0xieeBcIuGcnBg",
-        "block_type": 32,
-        "children": [
-          "Ued8dWQwjoSNisxQU0DccGK2nic"
-        ],
-        "parent_id": "MpjJd4pyaoJe20xdlGDcdOAdnLb",
-        "table_cell": {}
-      },
-      {
-        "block_id": "Ued8dWQwjoSNisxQU0DccGK2nic",
-        "block_type": 2,
-        "parent_id": "MVpud7eVVoETD0xieeBcIuGcnBg",
-        "text": {
-          "elements": [
+            },
             {
               "text_run": {
                 "content": "inxx-xxxxxxxxxxxx.ali-cn-shenzhen.vectordb.zilliz.com.cn",
@@ -4532,12 +4497,13 @@
             "align": 1,
             "folded": false
           }
-        }
+        },
+        "parent_id": "Zxm2dPdGHoM1DqxoHRQcdWUynah"
       },
       {
-        "block_id": "A269dSaLUoM8OUxb9f2cLWHbn2c",
+        "block_id": "RaCHdJORMoRtGUxSlajc4pxcn97",
         "block_type": 2,
-        "parent_id": "K6PXdfkmAo3GdqxS7EYcSVIKneh",
+        "parent_id": "Zxm2dPdGHoM1DqxoHRQcdWUynah",
         "text": {
           "elements": [
             {
@@ -4611,18 +4577,251 @@
         }
       },
       {
-        "block_id": "U77sdMqArorEMmxsOGfc7jUKnQf",
+        "block_id": "M4DCdD2JnosS5yxWqfocymXan1f",
+        "block_type": 32,
+        "children": [
+          "XbB9drGxBoT5PmxbTWbcZlZEn6c"
+        ],
+        "parent_id": "TVdqdDS5Tot5TyxVvfTc4eKRnYc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "XbB9drGxBoT5PmxbTWbcZlZEn6c",
+        "block_type": 2,
+        "parent_id": "M4DCdD2JnosS5yxWqfocymXan1f",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "子域名递归解析代理",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VFeLdw8vGo4g4UxW1NJc90oDnnf",
+        "block_type": 32,
+        "children": [
+          "UkHIdqzp2o1d9pxVNiRcrQaBnzd"
+        ],
+        "parent_id": "TVdqdDS5Tot5TyxVvfTc4eKRnYc",
+        "table_cell": {}
+      },
+      {
+        "block_id": "UkHIdqzp2o1d9pxVNiRcrQaBnzd",
+        "block_type": 2,
+        "parent_id": "VFeLdw8vGo4g4UxW1NJc90oDnnf",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "为防止无法访问公共域名，我们建议您开启此项。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "R3aQdy0AwoaCs7xbHqEcgV99nsg",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43457-1614%26mode%3Ddesign%26t%3D22P1KQjh95iz8Jw9-4"
+          }
+        },
+        "parent_id": "MlF6dV5ewo0mATxKEmPcpk8mn4f"
+      },
+      {
+        "block_id": "MZp4d9DqRowwNhxAeaUcZtsXn5b",
         "block_type": 13,
         "children": [
-          "E27vdxsPAoY4ljxYgQPcuDSXnqd",
-          "OLhcdOaAooKZ0Qx6tTAc1RXcnWg",
-          "O6uFdv98roRp6QxtLmzcyRb1nWg"
+          "JyYKdYoLPoLT1oxANDJcI52Cn0f"
         ],
         "ordered": {
           "elements": [
             {
               "text_run": {
-                "content": "在该记录的",
+                "content": "设置私域解析的生效范围。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "JyYKdYoLPoLT1oxANDJcI52Cn0f",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43498-1370%26mode%3Ddesign%26t%3D22P1KQjh95iz8Jw9-4"
+          }
+        },
+        "parent_id": "MZp4d9DqRowwNhxAeaUcZtsXn5b"
+      },
+      {
+        "block_id": "NqtpdLgtcoUrlcxy6LycszxBnGd",
+        "block_type": 13,
+        "children": [
+          "F25Zdsbl7oNRunxVwagcAb27n2d"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "选择需要使用私网连接的 VPC。点击确定。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "F25Zdsbl7oNRunxVwagcAb27n2d",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43498-1377%26mode%3Ddesign%26t%3D22P1KQjh95iz8Jw9-4"
+          }
+        },
+        "parent_id": "NqtpdLgtcoUrlcxy6LycszxBnGd"
+      },
+      {
+        "block_id": "NnGwdweRbocMVtxhgXNc2jGRn3d",
+        "block_type": 13,
+        "children": [
+          "Ine8dqCqvoLFemxjJ9Vcw8XAnSf"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在风险提示弹窗中，点击继续执行操作。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "Ine8dqCqvoLFemxjJ9Vcw8XAnSf",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43498-1386%26mode%3Ddesign%26t%3D22P1KQjh95iz8Jw9-4"
+          }
+        },
+        "parent_id": "NnGwdweRbocMVtxhgXNc2jGRn3d"
+      },
+      {
+        "block_id": "S8TMdaEFQoc2CDxc8Z6cxd1Znbb",
+        "block_type": 13,
+        "children": [
+          "JUGRdFuxqoKnumx9ac0cdqwlnih"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "设置成功后，界面如下所示：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
+      },
+      {
+        "block_id": "JUGRdFuxqoKnumx9ac0cdqwlnih",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43498-1393%26mode%3Ddesign%26t%3D22P1KQjh95iz8Jw9-4"
+          }
+        },
+        "parent_id": "S8TMdaEFQoc2CDxc8Z6cxd1Znbb"
+      },
+      {
+        "block_id": "JRkbdFRN1obKo0x2M47cMEVpnUh",
+        "block_type": 13,
+        "children": [
+          "NDgGdHebXoRL5AxQcrRcgHd6n4g"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "添加解析。在添加域名标签下，定位对应的内置权威域名，点击右侧操作栏中的",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4634,31 +4833,7 @@
             },
             {
               "text_run": {
-                "content": "操作",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "栏中单击",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "解析设置",
+                "content": "解析记录",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -4689,37 +4864,27 @@
         "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "E27vdxsPAoY4ljxYgQPcuDSXnqd",
+        "block_id": "NDgGdHebXoRL5AxQcrRcgHd6n4g",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43498-1397%26mode%3Ddesign%26t%3D22P1KQjh95iz8Jw9-4"
+          }
+        },
+        "parent_id": "JRkbdFRN1obKo0x2M47cMEVpnUh"
+      },
+      {
+        "block_id": "WU4id3kCaoNXYdxySZZcTEgGnhd",
         "block_type": 13,
+        "children": [
+          "E40CdoW28ogATcx6rzmcm97Bnae"
+        ],
         "ordered": {
           "elements": [
             {
               "text_run": {
-                "content": "在",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "解析设置",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "页签中单击",
+                "content": "点击",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4759,19 +4924,30 @@
             "folded": false
           }
         },
-        "parent_id": "U77sdMqArorEMmxsOGfc7jUKnQf"
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "OLhcdOaAooKZ0Qx6tTAc1RXcnWg",
+        "block_id": "E40CdoW28ogATcx6rzmcm97Bnae",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43498-1402%26mode%3Ddesign%26t%3D22P1KQjh95iz8Jw9-4"
+          }
+        },
+        "parent_id": "WU4id3kCaoNXYdxySZZcTEgGnhd"
+      },
+      {
+        "block_id": "V2Axd9F31oeKvMxUvpOcnZ23nIh",
         "block_type": 13,
         "children": [
-          "H3fWdEETNoWbWwx4DfhcYVb8nRe"
+          "Bm6Jd8q6qozir6xbYVwc0OHvnAc"
         ],
         "ordered": {
           "elements": [
             {
               "text_run": {
-                "content": "在弹出的",
+                "content": "填写表格并点击",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4783,7 +4959,7 @@
             },
             {
               "text_run": {
-                "content": "添加记录",
+                "content": "确定",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -4795,7 +4971,7 @@
             },
             {
               "text_run": {
-                "content": "对话框中输入如下内容。",
+                "content": "。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4811,42 +4987,38 @@
             "folded": false
           }
         },
-        "parent_id": "U77sdMqArorEMmxsOGfc7jUKnQf"
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "block_id": "Bm6Jd8q6qozir6xbYVwc0OHvnAc",
         "block_type": 31,
         "children": [
-          "EqMXdmbz4oTdSGx14MAcka3Vnxe",
-          "Qmewd6HmNoG7YAxiLGQc3YEXnkc",
-          "GmWFdu2VDoFe1Wx00YichuIOn0g",
-          "NhetdqUT5oGmfjx6V86cOxVonjc",
-          "J3OmdgqTCoBNSExqxATcKVcfned",
-          "IAg0dnKmQonu2Exoyl1c8dDVnrb",
-          "AuWBd0SGbohxMpxAmGpcP0OonLb",
-          "Vr2SdBE1GoHyD3xIQuRc6NlqnMb",
-          "Qj2vdaRGsodfq6xnDSXcV3bmnFg",
-          "OxaUdWXNmo9wBNxR1qicO1KYnre"
+          "PREBdbsYGoPxsRxwCnlcuLAqnXc",
+          "RepmdltxnoWEzSxYL4HcpoYonIe",
+          "JbOKdGacgobhC2xIArNcXZPPn0d",
+          "HOKfdrFqZoma9Fx5Vf0cB4QMnsg",
+          "OPHvdR9fDoEDqaxexBsciwq5nWg",
+          "PqZNdHguVoNDMFxdTgtcrhicnkg",
+          "AwGtdIsDso1lLbxkX6Fco2Kgnzd",
+          "XWGqdg1rIoaPHPxUEkgcxWF7n1c"
         ],
-        "parent_id": "OLhcdOaAooKZ0Qx6tTAc1RXcnWg",
+        "parent_id": "V2Axd9F31oeKvMxUvpOcnZ23nIh",
         "table": {
           "cells": [
-            "EqMXdmbz4oTdSGx14MAcka3Vnxe",
-            "Qmewd6HmNoG7YAxiLGQc3YEXnkc",
-            "GmWFdu2VDoFe1Wx00YichuIOn0g",
-            "NhetdqUT5oGmfjx6V86cOxVonjc",
-            "J3OmdgqTCoBNSExqxATcKVcfned",
-            "IAg0dnKmQonu2Exoyl1c8dDVnrb",
-            "AuWBd0SGbohxMpxAmGpcP0OonLb",
-            "Vr2SdBE1GoHyD3xIQuRc6NlqnMb",
-            "Qj2vdaRGsodfq6xnDSXcV3bmnFg",
-            "OxaUdWXNmo9wBNxR1qicO1KYnre"
+            "PREBdbsYGoPxsRxwCnlcuLAqnXc",
+            "RepmdltxnoWEzSxYL4HcpoYonIe",
+            "JbOKdGacgobhC2xIArNcXZPPn0d",
+            "HOKfdrFqZoma9Fx5Vf0cB4QMnsg",
+            "OPHvdR9fDoEDqaxexBsciwq5nWg",
+            "PqZNdHguVoNDMFxdTgtcrhicnkg",
+            "AwGtdIsDso1lLbxkX6Fco2Kgnzd",
+            "XWGqdg1rIoaPHPxUEkgcxWF7n1c"
           ],
           "property": {
             "column_size": 2,
             "column_width": [
-              141,
-              447
+              165,
+              213
             ],
             "merge_info": [
               {
@@ -4880,38 +5052,30 @@
               {
                 "col_span": 1,
                 "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
-              },
-              {
-                "col_span": 1,
-                "row_span": 1
               }
             ],
-            "row_size": 5
+            "row_size": 4
           }
         }
       },
       {
-        "block_id": "EqMXdmbz4oTdSGx14MAcka3Vnxe",
+        "block_id": "PREBdbsYGoPxsRxwCnlcuLAqnXc",
         "block_type": 32,
         "children": [
-          "SDCudtk3ooA86ixjQaocH63knbb"
+          "YHqtdB2TXoHxElxSZ1bc7XqjnRf"
         ],
-        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "parent_id": "Bm6Jd8q6qozir6xbYVwc0OHvnAc",
         "table_cell": {}
       },
       {
-        "block_id": "SDCudtk3ooA86ixjQaocH63knbb",
+        "block_id": "YHqtdB2TXoHxElxSZ1bc7XqjnRf",
         "block_type": 2,
-        "parent_id": "EqMXdmbz4oTdSGx14MAcka3Vnxe",
+        "parent_id": "PREBdbsYGoPxsRxwCnlcuLAqnXc",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "参数名称",
+                "content": "参数",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -4929,23 +5093,23 @@
         }
       },
       {
-        "block_id": "Qmewd6HmNoG7YAxiLGQc3YEXnkc",
+        "block_id": "RepmdltxnoWEzSxYL4HcpoYonIe",
         "block_type": 32,
         "children": [
-          "LxZudUATlowVR3xAK9TcZagonXB"
+          "Xbard40kDoLe75xO1MjcbXFAnBb"
         ],
-        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "parent_id": "Bm6Jd8q6qozir6xbYVwc0OHvnAc",
         "table_cell": {}
       },
       {
-        "block_id": "LxZudUATlowVR3xAK9TcZagonXB",
+        "block_id": "Xbard40kDoLe75xO1MjcbXFAnBb",
         "block_type": 2,
-        "parent_id": "Qmewd6HmNoG7YAxiLGQc3YEXnkc",
+        "parent_id": "RepmdltxnoWEzSxYL4HcpoYonIe",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "参数描述",
+                "content": "描述",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -4963,25 +5127,25 @@
         }
       },
       {
-        "block_id": "GmWFdu2VDoFe1Wx00YichuIOn0g",
+        "block_id": "JbOKdGacgobhC2xIArNcXZPPn0d",
         "block_type": 32,
         "children": [
-          "RsnDdBm55oG20FxNWAgcj6S5nwh"
+          "EoeFdWj94oTLFvxTjTIcUEnGnHf"
         ],
-        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "parent_id": "Bm6Jd8q6qozir6xbYVwc0OHvnAc",
         "table_cell": {}
       },
       {
-        "block_id": "RsnDdBm55oG20FxNWAgcj6S5nwh",
+        "block_id": "EoeFdWj94oTLFvxTjTIcUEnGnHf",
         "block_type": 2,
-        "parent_id": "GmWFdu2VDoFe1Wx00YichuIOn0g",
+        "parent_id": "JbOKdGacgobhC2xIArNcXZPPn0d",
         "text": {
           "elements": [
             {
               "text_run": {
                 "content": "记录类型",
                 "text_element_style": {
-                  "bold": true,
+                  "bold": false,
                   "inline_code": false,
                   "italic": false,
                   "strikethrough": false,
@@ -4997,23 +5161,47 @@
         }
       },
       {
-        "block_id": "NhetdqUT5oGmfjx6V86cOxVonjc",
+        "block_id": "HOKfdrFqZoma9Fx5Vf0cB4QMnsg",
         "block_type": 32,
         "children": [
-          "JowCdfqApo0bzyx5dQicd3aQnlg"
+          "CdwtdIg9voxBd2xzOLgcKoPinvc"
         ],
-        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "parent_id": "Bm6Jd8q6qozir6xbYVwc0OHvnAc",
         "table_cell": {}
       },
       {
-        "block_id": "JowCdfqApo0bzyx5dQicd3aQnlg",
+        "block_id": "CdwtdIg9voxBd2xzOLgcKoPinvc",
         "block_type": 2,
-        "parent_id": "NhetdqUT5oGmfjx6V86cOxVonjc",
+        "parent_id": "HOKfdrFqZoma9Fx5Vf0cB4QMnsg",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "选择将域名指向一个 IPV4 地址的 A 记录。",
+                "content": "请选择 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "CNAME",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -5031,25 +5219,25 @@
         }
       },
       {
-        "block_id": "J3OmdgqTCoBNSExqxATcKVcfned",
+        "block_id": "OPHvdR9fDoEDqaxexBsciwq5nWg",
         "block_type": 32,
         "children": [
-          "XZ3Sd6kMsoKomtxU1H3cP3nAn9g"
+          "B7F5df92zoUkfoxumMlc10X9nHD"
         ],
-        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "parent_id": "Bm6Jd8q6qozir6xbYVwc0OHvnAc",
         "table_cell": {}
       },
       {
-        "block_id": "XZ3Sd6kMsoKomtxU1H3cP3nAn9g",
+        "block_id": "B7F5df92zoUkfoxumMlc10X9nHD",
         "block_type": 2,
-        "parent_id": "J3OmdgqTCoBNSExqxATcKVcfned",
+        "parent_id": "OPHvdR9fDoEDqaxexBsciwq5nWg",
         "text": {
           "elements": [
             {
               "text_run": {
                 "content": "主机记录",
                 "text_element_style": {
-                  "bold": true,
+                  "bold": false,
                   "inline_code": false,
                   "italic": false,
                   "strikethrough": false,
@@ -5065,47 +5253,23 @@
         }
       },
       {
-        "block_id": "IAg0dnKmQonu2Exoyl1c8dDVnrb",
+        "block_id": "PqZNdHguVoNDMFxdTgtcrhicnkg",
         "block_type": 32,
         "children": [
-          "ZOe9dyF1toAgWGxxXH5caEVunzf"
+          "I8RadL5HloF3jNx3ZF2cBUjMnge"
         ],
-        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "parent_id": "Bm6Jd8q6qozir6xbYVwc0OHvnAc",
         "table_cell": {}
       },
       {
-        "block_id": "ZOe9dyF1toAgWGxxXH5caEVunzf",
+        "block_id": "I8RadL5HloF3jNx3ZF2cBUjMnge",
         "block_type": 2,
-        "parent_id": "IAg0dnKmQonu2Exoyl1c8dDVnrb",
+        "parent_id": "PqZNdHguVoNDMFxdTgtcrhicnkg",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "请填写 Zilliz Cloud 提供的的",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "私网连接",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "前缀。",
+                "content": "请替换为你的集群 ID。 你可在集群详情页获取集群 ID。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -5123,25 +5287,25 @@
         }
       },
       {
-        "block_id": "AuWBd0SGbohxMpxAmGpcP0OonLb",
+        "block_id": "AwGtdIsDso1lLbxkX6Fco2Kgnzd",
         "block_type": 32,
         "children": [
-          "XQhbdYojso356hxK1YIcZOLvn1Y"
+          "RYAjdK1jSoaKfFxJOsDcFNRwnxg"
         ],
-        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "parent_id": "Bm6Jd8q6qozir6xbYVwc0OHvnAc",
         "table_cell": {}
       },
       {
-        "block_id": "XQhbdYojso356hxK1YIcZOLvn1Y",
+        "block_id": "RYAjdK1jSoaKfFxJOsDcFNRwnxg",
         "block_type": 2,
-        "parent_id": "AuWBd0SGbohxMpxAmGpcP0OonLb",
+        "parent_id": "AwGtdIsDso1lLbxkX6Fco2Kgnzd",
         "text": {
           "elements": [
             {
               "text_run": {
                 "content": "记录值",
                 "text_element_style": {
-                  "bold": true,
+                  "bold": false,
                   "inline_code": false,
                   "italic": false,
                   "strikethrough": false,
@@ -5157,23 +5321,47 @@
         }
       },
       {
-        "block_id": "Vr2SdBE1GoHyD3xIQuRc6NlqnMb",
+        "block_id": "XWGqdg1rIoaPHPxUEkgcxWF7n1c",
         "block_type": 32,
         "children": [
-          "NRnYdiVnOo8NezxXZLrcXmNenlc"
+          "M8gUdhRhSoXDwdx2WafcR3j8nhe"
         ],
-        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
+        "parent_id": "Bm6Jd8q6qozir6xbYVwc0OHvnAc",
         "table_cell": {}
       },
       {
-        "block_id": "NRnYdiVnOo8NezxXZLrcXmNenlc",
+        "block_id": "M8gUdhRhSoXDwdx2WafcR3j8nhe",
         "block_type": 2,
-        "parent_id": "Vr2SdBE1GoHyD3xIQuRc6NlqnMb",
+        "parent_id": "XWGqdg1rIoaPHPxUEkgcxWF7n1c",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "请填写终端节点实例详情中可用区的 IP 地址。",
+                "content": "请填写在步骤5.e. 中获取的",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "默认服务域名",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -5191,81 +5379,51 @@
         }
       },
       {
-        "block_id": "Qj2vdaRGsodfq6xnDSXcV3bmnFg",
-        "block_type": 32,
-        "children": [
-          "GhVodWX4louRVixASexc01NYnNc"
-        ],
-        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
-        "table_cell": {}
-      },
-      {
-        "block_id": "GhVodWX4louRVixASexc01NYnNc",
-        "block_type": 2,
-        "parent_id": "Qj2vdaRGsodfq6xnDSXcV3bmnFg",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "TTL值",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
+        "block_id": "M74ZdED8Uo9bgLxsTIVcY0wAnJb",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43498-1410%26mode%3Ddesign%26t%3D22P1KQjh95iz8Jw9-4"
           }
-        }
+        },
+        "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "OxaUdWXNmo9wBNxR1qicO1KYnre",
-        "block_type": 32,
-        "children": [
-          "J16NdRS56oUeLwxkjSlcDnbon5c"
-        ],
-        "parent_id": "H3fWdEETNoWbWwx4DfhcYVb8nRe",
-        "table_cell": {}
-      },
-      {
-        "block_id": "J16NdRS56oUeLwxkjSlcDnbon5c",
-        "block_type": 2,
-        "parent_id": "OxaUdWXNmo9wBNxR1qicO1KYnre",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "保持默认即可。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "O6uFdv98roRp6QxtLmzcyRb1nWg",
+        "block_id": "FtZ2dLbGCo2uOlxquUncxA8Zn1f",
         "block_type": 13,
+        "children": [
+          "D7qNd2PThoQ1O4xcNn8cn5ahnAl"
+        ],
         "ordered": {
           "elements": [
             {
               "text_run": {
-                "content": "单击",
+                "content": "在",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "解析变更确认",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页面中，点击",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -5278,86 +5436,6 @@
             {
               "text_run": {
                 "content": "确定",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "，保存设置。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "U77sdMqArorEMmxsOGfc7jUKnQf"
-      },
-      {
-        "block_id": "NCh7dpXiboQPi4xoHF7cVuEDnLd",
-        "block_type": 13,
-        "children": [
-          "MrNqdOg9Qo8XVtx63NzcZtaRnsb",
-          "AUvtdEi8GoEdl6xVZPScwAO3nIe"
-        ],
-        "ordered": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "返回",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "私域解析",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "link": {
-                    "url": "https%3A%2F%2Fdns.console.aliyun.com%2F%23%2FprivateZone%2Flist"
-                  },
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "页面，在当前 Zone 记录的操作栏中单击",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "关联VPC",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -5388,162 +5466,27 @@
         "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "MrNqdOg9Qo8XVtx63NzcZtaRnsb",
-        "block_type": 13,
-        "ordered": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "在右侧滑出的关联 VPC 对话框中选择需要使用私网连接访问 Zilliz Cloud 集群的服务所在 VPC。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
+        "block_id": "D7qNd2PThoQ1O4xcNn8cn5ahnAl",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43498-1419%26mode%3Ddesign%26t%3D22P1KQjh95iz8Jw9-4"
           }
         },
-        "parent_id": "NCh7dpXiboQPi4xoHF7cVuEDnLd"
+        "parent_id": "FtZ2dLbGCo2uOlxquUncxA8Zn1f"
       },
       {
-        "block_id": "AUvtdEi8GoEdl6xVZPScwAO3nIe",
+        "block_id": "KPFJdjj70oOcmBxlVsRczHb6nMd",
         "block_type": 13,
+        "children": [
+          "GHyzdE3YaoStiuxSKOVcQODrn5f"
+        ],
         "ordered": {
           "elements": [
             {
               "text_run": {
-                "content": "单击",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "确定",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "，保存设置。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "NCh7dpXiboQPi4xoHF7cVuEDnLd"
-      },
-      {
-        "block_id": "RoOXd6j5SohqBcxuxb6cbdrjnYc",
-        "block_type": 13,
-        "ordered": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "返回",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "私域解析",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "link": {
-                    "url": "https%3A%2F%2Fdns.console.aliyun.com%2F%23%2FprivateZone%2Flist"
-                  },
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "页面。此时，当前 Zone 记录的",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "关联VPC状态",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "已变更为",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "已关联",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "。",
+                "content": "至此，内网 DNS 解析（PrivateZone）创建成功，界面如下所示：",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -5562,13 +5505,24 @@
         "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "C9PmdK9YboZGDcxvAyOcYgR1n1f",
-        "block_type": 4,
-        "heading2": {
+        "block_id": "GHyzdE3YaoStiuxSKOVcQODrn5f",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D43498-1434%26mode%3Ddesign%26t%3D22P1KQjh95iz8Jw9-4"
+          }
+        },
+        "parent_id": "KPFJdjj70oOcmBxlVsRczHb6nMd"
+      },
+      {
+        "block_id": "WYAIdOsXtoDa9ixy30sc2O70nKd",
+        "block_type": 5,
+        "heading3": {
           "elements": [
             {
               "text_run": {
-                "content": "后续操作{#next-steps}",
+                "content": "您已成功创建私网连接{#create-private-link-successful}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -5587,14 +5541,14 @@
         "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb"
       },
       {
-        "block_id": "TxzkduDbBoBUT3x2tNrcwm9ln2b",
+        "block_id": "AFUid5gNxoViC8xEjw2cb4Ssn3c",
         "block_type": 2,
         "parent_id": "ZtkednSR3ol86bx1URNcta9MnDb",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "在私网连接创建完成后，可按照集群详情页面右上角的连接指南使用私网连接进行连通性验证。",
+                "content": "",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -5612,6 +5566,6 @@
         }
       }
     ],
-    "counts": 166
+    "counts": 192
   }
 }

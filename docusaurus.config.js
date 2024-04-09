@@ -1,9 +1,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Zilliz Cloud 开发指南',
@@ -73,19 +70,22 @@ const config = {
     ],
     ['./plugins/lark-docs',
     {
-      root: 'XyeFwdx6kiK9A6kq3yIcLNdEnDd',
-      base: 'MQI8b662gabapmsTl7ZcnTExnSc',
-      docSourceDir: './plugins/lark-docs/meta/sources',
-      targets: [
-        ['saas', {
-          outputDir: 'docs/tutorials',
-          imageDir: 'static/img',
-        }],
-        ['paas', {
-          outputDir: 'versioned_docs/version-byoc/tutorials',
-          imageDir: 'static/byoc',
-        }]
-      ]
+      guides: {
+        root: 'XyeFwdx6kiK9A6kq3yIcLNdEnDd',
+        base: 'MQI8b662gabapmsTl7ZcnTExnSc',
+        sourceType: 'wiki',
+        docSourceDir: './plugins/lark-docs/meta/sources',
+        targets: {
+          saas: {
+            outputDir: 'docs/tutorials',
+            imageDir: 'static/img',
+          },
+          paas: {
+            outputDir: 'versioned_docs/version-byoc/tutorials',
+            imageDir: 'static/byoc',
+          }
+        }
+      }
     }],
     './plugins/apifox-docs',
     './plugins/link-checks'
@@ -231,9 +231,7 @@ const config = {
         copyright: `LF AI、LF AI & Data、Milvus，以及相关的开源项目名称为 Linux Foundation 所有商标 <br/>版权所有 ©${new Date().getFullYear()} 上海赜睿信息科技有限公司保留所有权利。<br/>ICP 备案: 沪ICP备2023014543号<br/><a class="setting-cookie-btn" >Cookie 设置</a>`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-        additionalLanguages: ['java', 'go'],
+        additionalLanguages: ['java', 'go']
       },
       colorMode: {
         disableSwitch: true,
@@ -243,16 +241,23 @@ const config = {
       },
     }),
   themes: [
-    [ '@easyops-cn/docusaurus-search-local', {
-      id: 'saas',
-      hashed: true,
-      indexBlog: false,
-      language: ['en', 'zh'],
-      docsDir: ['docs', 'reference'],
-      docsRouteBasePath: 'docs',
-      highlightSearchTermsOnTargetPage: true,
-    }],
     'docusaurus-theme-frontmatter',
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        language: ['en', 'zh'],
+      }
+    ]
+  ],
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel:'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0'
+      }
+    }
   ],
   scripts: [
     {

@@ -2,6 +2,7 @@
 slug: /create-deletion-pipelines
 beta: FALSE
 notebook: FALSE
+type: origin
 token: Kiu5wA3XFi6E3lkl7nZc7y7Rnnc
 sidebar_position: 3
 ---
@@ -17,7 +18,7 @@ import Admonition from '@theme/Admonition';
 
 <ul>
 <li><p>目前 Zilliz Cloud 仅支持在阿里云（杭州）的集群中创建 Pipelines。</p></li>
-<li><p>在创建 Search Pipeline 前，需要先<a href="./create-ingestion-piplines">创建 Ingestion Pipeline</a>。</p></li>
+<li><p>在创建 Search Pipeline 前，需要先<a href="./create-ingestion-pipelines">创建 Ingestion Pipeline</a>。</p></li>
 <li><p>同一项目下，您可最多创建 10 个同一类型的 Pipelines。</p></li>
 </ul>
 
@@ -27,34 +28,34 @@ import Admonition from '@theme/Admonition';
 
 1. 打开项目。
 
-1. 点击左侧导航栏中的 **Pipelines。** 点击** + Pipeline**。
+1. 点击左侧导航栏中的 __Pipelines__。 选中__概览__标签页，并切换到 __Pipelines__。点击 __+ Pipeline__。
 
-1. 选择需要创建的 Pipeline 类型。点击 Deletion Pipeline 一栏中的 **+ Pipeline **按钮。 
+1. 选择需要创建的 Pipeline 类型。点击 Deletion Pipeline 一栏中的 __+ Pipeline__ 按钮。 
 
     ![create-deletion-pipeline-cn](/img/create-deletion-pipeline-cn.png)
 
 1. 配置 Deletion Pipeline。
 
-    |  **参数**      |  **说明**                                          |
+    |  __参数__      |  __说明__                                          |
     | ------------ | ------------------------------------------------ |
     |  Pipeline 名称 |  新创建的 Ingestion Pipeline 的名称。名称中只可包含小写字母、数字和下划线。 |
     |  描述 (可选)     |  对新创建的 Ingestion Pipeline 的描述。                   |
 
     ![configure-deletion-pipeline-cn](/img/configure-deletion-pipeline-cn.png)
 
-1. 添加 Function。1 个 Search pipeline 中只可添加 1 个 **PURGE_DOC_INDEX** Function。
+1. 添加 Function。1 个 Search pipeline 中只可添加 1 个 __PURGE_DOC_INDEX__ Function。
 
     1. 输入函数名称。
 
     1. 输入字段名称固定为 doc_name。
 
-    1. 点击**添加**。
+    1. 点击__添加__。
 
-1. 点击**创建 Deletion Pipeline**。
+1. 点击__创建 Deletion Pipeline__。
 
 ## 通过 RESTful API{#via-restful-api}
 
-以下示例代码创建了 1 个名称为 `my_doc_deletion_pipeline` 的 Deletion Pipeline，并添加了 1 个 **PURGE_DOC_INDEX** Function。
+以下示例代码创建了 1 个名称为 `my_doc_deletion_pipeline` 的 Deletion Pipeline，并添加了 1 个 __PURGE_DOC_INDEX__ Function。
 
 ```bash
 curl --request POST \
@@ -93,7 +94,7 @@ curl --request POST \
 
 - `type`: 创建的 Pipeline 类型。目前，可创建的 Pipeline 类型包括 `INGESTION`、 `SEARCH` 和 `DELETION`。
 
-- `functions`: Pipeline 中添加的 Function。 **1 个 Deletion Pipeline 中仅可添加 1 个 Function。**
+- `functions`: Pipeline 中添加的 Function。__1 个 Deletion Pipeline 中仅可添加 1 个 Function。__
 
     - `name`: Function 名称。Function 名称应该在 3-64 个字符内，且只可包含数字、字母和下划线。
 

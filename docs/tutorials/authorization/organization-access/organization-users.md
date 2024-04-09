@@ -2,6 +2,7 @@
 slug: /organization-users
 beta: FALSE
 notebook: FALSE
+type: origin
 token: WGqBwcKmViC7xJkEfPcchOVKnsd
 sidebar_position: 2
 ---
@@ -21,7 +22,7 @@ import Admonition from '@theme/Admonition';
 
 作为组织管理员，您可以将受邀用户设定为组织管理员或普通组织成员。如果您是普通组织成员，受邀用户则只能被设定为普通组织成员。
 
-在**邀请用户**页面，输入您希望邀请的用户的电子邮箱地址。他们将收到邀请邮件，并需要在 48 小时内接受邀请以加入组织。在邀请被接受之前，您可以随时撤销或重新发送该邀请。
+在__邀请用户__页面，输入您希望邀请的用户的电子邮箱地址。他们将收到邀请邮件，并需要在 48 小时内接受邀请以加入组织。在邀请被接受之前，您可以随时撤销或重新发送该邀请。
 
 <Admonition type="info" icon="📘" title="说明">
 

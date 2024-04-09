@@ -2,6 +2,7 @@
 slug: /other-differences
 beta: FALSE
 notebook: FALSE
+type: origin
 token: LCqjwnEPWi2YPkkdHOwc5eQXnPd
 sidebar_position: 3
 ---
@@ -23,7 +24,7 @@ Zilliz Cloud 几乎完全兼容 Milvus 的所有数据类型，包括 JSON。但
 
 ## 索引类型{#index-type}
 
-Zilliz Cloud 提供 **AUTOINDEX** 作为索引类型，免去在 Milvus 中进行索引选型时的复杂性。有关更多信息，请参见 [AUTOINDEX](./autoindex-explained)。
+Zilliz Cloud 提供 __AUTOINDEX__ 作为索引类型，免去在 Milvus 中进行索引选型时的复杂性。有关更多信息，请参见 [AUTOINDEX](./autoindex-explained)。
 
 ## Zilliz Cloud 控制台{#web-console}
 

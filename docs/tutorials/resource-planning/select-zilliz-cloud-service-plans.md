@@ -2,6 +2,7 @@
 slug: /select-zilliz-cloud-service-plans
 beta: FALSE
 notebook: FALSE
+type: origin
 token: XNCIwt9i6iFgEDkEQE9cTMf8nSe
 sidebar_position: 1
 ---

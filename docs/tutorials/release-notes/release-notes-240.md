@@ -2,6 +2,7 @@
 slug: /release-notes-240
 beta: FALSE
 notebook: FALSE
+type: origin
 token: GKNPwvWhZi7D6mkag72cIDWqnbf
 sidebar_position: 2
 ---
@@ -11,13 +12,13 @@ import Admonition from '@theme/Admonition';
 
 # 版本说明书（2023/12/20）
 
-**发布日期：2023 年 12 月 20 日**
+__发布日期：2023 年 12 月 20 日__
 
 我们很高兴地宣布 Zilliz Cloud 2.4.0 的发布。此版本引入了一系列增强和功能更新。主要包括
 
 ## Milvus 兼容性
 
-此次发布兼容 **Milvus 2.2.x** 以及 **Milvus 2.3.x (Beta)**。
+此次发布兼容 __Milvus 2.2.x__ 以及 __Milvus 2.3.x (Beta)__。
 
 ## Partition SDK{#partition-sdk}
 
@@ -27,7 +28,7 @@ import Admonition from '@theme/Admonition';
 
 ## 集群管理接口{#cluster-management-apis}
 
-此次发布，我们为集群管理推出了一系列新的 RESTful 接口，包括[创建](https://docs.zilliz.com.cn/reference/create-cluster)、[修改](https://docs.zilliz.com.cn/reference/modify-cluster)和[删除](https://docs.zilliz.com.cn/reference/drop-cluster)集群的接口以及用于[查看您的组织中所有项目详情](https://docs.zilliz.com.cn/reference/list-projects)的接口。
+此次发布，我们为集群管理推出了一系列新的 RESTful 接口，包括[创建](/reference/create-cluster)、[修改](/reference/modify-cluster)和[删除](/reference/drop-cluster)集群的接口以及用于[查看您的组织中所有项目详情](/reference/list-projects)的接口。
 
 ## 其它增强{#other-enhancements}
 

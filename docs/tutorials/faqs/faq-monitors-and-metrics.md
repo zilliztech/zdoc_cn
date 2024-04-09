@@ -2,6 +2,7 @@
 slug: /faq-monitors-and-metrics
 beta: null
 notebook: null
+type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 10
 ---
@@ -20,7 +21,7 @@ sidebar_position: 10
 
 
 
-### 集群内容达到上限后，无法插入数据。如何解决这个问题？{#what-can-i-do-if-my-cluster-memory-quota-has-been-exhausted-and-i-cannot-insert-data-as-a-result}
+### 集群内容达到上限后，无法插入数据。如何解决这个问题？ \{#what-can-i-do-if-my-cluster-memory-quota-has-been-exhausted-and-i-cannot-insert-data-as-a-result}
 
 请尝试以下 2 种方法：
 
@@ -28,6 +29,6 @@ sidebar_position: 10
 
 1. 释放一些已加载但不常用的 Collection。这能够帮助您节省内存用量。
 
-### 为什么删除 Collection 后，内存用量依旧保持不变？{#why-doesnt-the-memory-consumption-decrease-even-if-i-dropped-a-collection}
+### 为什么删除 Collection 后，内存用量依旧保持不变？ \{#why-doesnt-the-memory-consumption-decrease-even-if-i-dropped-a-collection}
 
 删除的 Collection 数据将于 24 小时后被彻底清理。如果内存用量在 24 小时后仍未下降，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。

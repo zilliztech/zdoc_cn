@@ -2,6 +2,7 @@
 slug: /manage-pipelines
 beta: FALSE
 notebook: FALSE
+type: origin
 token: BCCjwd2xFivKqUkQrDXcbv0dn5f
 sidebar_position: 3
 ---
@@ -17,15 +18,19 @@ import Admonition from '@theme/Admonition';
 
 ### 通过 Web 控制台查看 Pipelines{#on-web-ui}
 
-点击左侧导航栏中的 **Pipelines**。选中 **Pipelines** 选项卡。您可以查看所有已创建的 Pipelines 及其详情、用量等。
+点击左侧导航栏中的 __Pipelines__。选中 __Pipelines__ 选项卡。您可以查看所有已创建的 Pipelines 及其详情、用量等。
 
 ![view-pipelines-on-web-ui-cn](/img/view-pipelines-on-web-ui-cn.png)
+
+您还可以查看所有 Pipelines 相关事件。
+
+![view-pipelines-activities-on-web-ui-cn](/img/view-pipelines-activities-on-web-ui-cn.png)
 
 ### 通过 RESTful API 查看 Pipelines{#via-restful-api}
 
 调用以下 API 查看所有 Pipelines 或查看某一特定 Pipeline 详情。
 
-- **查看所有 Pipelines**
+- __查看所有 Pipelines__
 
     根据以下示例并指定项目 ID `projectId`。了解[如何获取项目 ID](https://support.zilliz.com.cn/hc/zh-cn/articles/23085669594011-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E9%A1%B9%E7%9B%AE-ID)。
 
@@ -106,15 +111,15 @@ import Admonition from '@theme/Admonition';
     }
     ```
 
-- **查看特定 Pipeline 详情**
+- __查看特定 Pipeline 详情__
 
-    根据以下示例查看某一 Pipeline 详情。如下示例中使用的 `pipelineId` 为 `pipe-6ca5dd1b4672659d3c3487`。在调用 API 时，请确保将该字段的值替换为您的实际值。
+    根据以下示例查看某一 Pipeline 详情。
 
     ```bash
     curl --request GET \
         --header "Content-Type: application/json" \
         --header "Authorization: Bearer ${YOUR_API_KEY}" \
-        --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/pipe-6ca5dd1b4672659d3c3487"
+        --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/${YOUR_PIPELINE_ID}"
     ```
 
     如果请求返回以下类似内容，则表示操作成功：
@@ -167,19 +172,19 @@ import Admonition from '@theme/Admonition';
 
 ### 通过 Web 控制台删除 Pipelines{#on-web-ui}
 
-如需删除不再使用的 Pipeline，请点击操作栏中的**“...”**按钮并选择**删除**。
+如需删除不再使用的 Pipeline，请点击操作栏中的__“...”__按钮并选择__删除__。
 
 ![delete-pipeline-cn](/img/delete-pipeline-cn.png)
 
 ### 通过 RESTful API 删除 Pipelines{#via-restful-api}
 
-根据以下示例删除 Pipelines。如下示例中使用的 `pipelineId` 为 `pipe-6ca5dd1b4672659d3c3487`。在调用 API 时，请确保将该字段的值替换为您的实际值。
+根据以下示例删除 Pipelines。
 
 ```bash
 curl --request GET \
     --header "Content-Type: application/json" \
     --header "Authorization: Bearer ${YOUR_CLUSTER_TOKEN}" \
-    --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/pipe-6ca5dd1b4672659d3c3487"
+    --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/${YOUR_PIPELINE_ID}"
 ```
 
 如果请求返回以下类似内容，则表示操作成功：

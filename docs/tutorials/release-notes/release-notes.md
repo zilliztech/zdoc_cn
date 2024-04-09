@@ -1,7 +1,8 @@
 ---
 slug: /release-notes
 beta: FALSE
-notebook: undefined
+notebook: FALSE
+type: origin
 token: QxcnwBks8izBAQkjP8Ycl1cEnQh
 sidebar_position: 18
 ---

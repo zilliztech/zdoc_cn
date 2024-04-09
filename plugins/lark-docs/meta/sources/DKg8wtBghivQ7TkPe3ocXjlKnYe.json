@@ -5,7 +5,7 @@
   "node_token": "DKg8wtBghivQ7TkPe3ocXjlKnYe",
   "node_type": "origin",
   "obj_create_time": "1708398026",
-  "obj_edit_time": "1708426700",
+  "obj_edit_time": "1712128263",
   "obj_token": "YnTWdbZ8qoAhGexJpQjcU2RUntd",
   "obj_type": "docx",
   "origin_node_token": "DKg8wtBghivQ7TkPe3ocXjlKnYe",
@@ -32,6 +32,7 @@
           "Z0Jtd46YXo9bhsxwc07cEFE2nPc",
           "Tt71do0dCoZIR0x6SPJcPm8enSd",
           "O0Bhd5GwQo9RAwxXPbtcUVZznvd",
+          "Lk5adS6DNoY8ddxWrmIcw5m4nn0",
           "MdnhdehONoBbPuxnTEGcOEf3ndb",
           "HmaFdXwdFohyRox5ZXOc9aZbnDh",
           "YD1md0Gm2oC1aLxffD3cx00ynde",
@@ -121,7 +122,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "点击 Deletion Pipeline 右侧的 \"▶︎\" 按钮。 或者您可以点击",
+                "content": "点击 Deletion Pipeline 右侧的 \"▶︎\" 按钮。或者您可以点击 ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -133,7 +134,7 @@
             },
             {
               "text_run": {
-                "content": "运行 Pipeline ",
+                "content": "Playground",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -145,7 +146,7 @@
             },
             {
               "text_run": {
-                "content": "选项卡。",
+                "content": " 选项卡。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -329,54 +330,6 @@
             },
             {
               "text_run": {
-                "content": "。该 Pipeline 的 ",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "pipelineId",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": true,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": " 是 ",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "pipe-7227d0729d73e63002ed46",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": true,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
                 "content": "。",
                 "text_element_style": {
                   "bold": false,
@@ -401,7 +354,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "curl --request POST \\\n    --header \"Content-Type: application/json\" \\\n    --header \"Authorization: Bearer ${YOUR_CLUSTER_TOKEN}\" \\\n    --url \"https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/pipe-7227d0729d73e63002ed46/run\" \\\n    -d '{\n        \"data\": {\n            \"doc_name\": \"zilliz_concept_doc.md\",\n        }\n",
+                "content": "curl --request POST \\\n    --header \"Content-Type: application/json\" \\\n    --header \"Authorization: Bearer ${YOUR_CLUSTER_TOKEN}\" \\\n    --url \"https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/${YOUR_PIPELINE_ID}/run\" \\\n    -d '{\n        \"data\": {\n            \"doc_name\": \"zilliz_concept_doc.md\",\n        }\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -426,7 +379,7 @@
           ],
           "style": {
             "language": 7,
-            "wrap": true
+            "wrap": false
           }
         },
         "parent_id": "YnTWdbZ8qoAhGexJpQjcU2RUntd"
@@ -564,6 +517,43 @@
             {
               "text_run": {
                 "content": "。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "YnTWdbZ8qoAhGexJpQjcU2RUntd"
+      },
+      {
+        "block_id": "Lk5adS6DNoY8ddxWrmIcw5m4nn0",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "YOUR_PIPELINE_ID",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：需要运行的 Pipeline 的 ID。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -814,6 +804,6 @@
         "parent_id": "YnTWdbZ8qoAhGexJpQjcU2RUntd"
       }
     ],
-    "counts": 20
+    "counts": 21
   }
 }

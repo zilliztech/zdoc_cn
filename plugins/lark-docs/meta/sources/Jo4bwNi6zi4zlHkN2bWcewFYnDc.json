@@ -5,7 +5,7 @@
   "node_token": "Jo4bwNi6zi4zlHkN2bWcewFYnDc",
   "node_type": "origin",
   "obj_create_time": "1687140321",
-  "obj_edit_time": "1702884460",
+  "obj_edit_time": "1712628893",
   "obj_token": "JmFnds3Sjokg5cxHSK1cbu4InSc",
   "obj_type": "docx",
   "origin_node_token": "Jo4bwNi6zi4zlHkN2bWcewFYnDc",
@@ -1032,91 +1032,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "# Installing a specific version for beta clusters",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": true,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "\nnpm install @zilliz/milvus2-sdk-node@2.3.5\n",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "# Alternatively,",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": true,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "\nyarn add @zilliz/milvus2-sdk-node@2.3.5\n\n",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "# Installing a specific version for common clusters",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": true,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "\nnpm install @zilliz/milvus2-sdk-node@2.2.24\n",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "# Alternatively,",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": true,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "\nyarn add @zilliz/milvus2-sdk-node@2.2.24\n\n# Upgrade to the latest version\nnpm update @zilliz/milvus2-sdk-node\n# Alternatively,\nyarn upgrade @zilliz/milvus2-sdk-node\n\n# Verify installation\nnpm list | grep @zilliz/milvus2-sdk-node\n# or\n",
+                "content": "# Installing a specific version for beta clusters\nnpm install @zilliz/milvus2-sdk-node@2.3.5\n# Alternatively,\nyarn add @zilliz/milvus2-sdk-node@2.3.5\n\n# Installing a specific version for common clusters\nnpm install @zilliz/milvus2-sdk-node@2.2.24\n# Alternatively,\nyarn add @zilliz/milvus2-sdk-node@2.2.24\n\n# Upgrade to the latest version\nnpm update @zilliz/milvus2-sdk-node\n# Alternatively,\nyarn upgrade @zilliz/milvus2-sdk-node\n\n# Verify installation\nnpm list | grep @zilliz/milvus2-sdk-node\n# or\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1502,55 +1418,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "<!-- Use this for beta clusters -->",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": true,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "\n<dependency>\n     <groupId>io.milvus</groupId>\n     <artifactId>milvus-sdk-java</artifactId>\n     <version>2.3.3</version>\n </dependency>\n \n",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": " ",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "<!-- Use this for common clusters -->",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": true,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "\n <dependency>\n     <groupId>io.milvus</groupId>\n     <artifactId>milvus-sdk-java</artifactId>\n     <version>2.2.15</version>\n",
+                "content": "<!-- Use this for beta clusters -->\n<dependency>\n     <groupId>io.milvus</groupId>\n     <artifactId>milvus-sdk-java</artifactId>\n     <version>2.3.3</version>\n </dependency>\n \n <!-- Use this for common clusters -->\n <dependency>\n     <groupId>io.milvus</groupId>\n     <artifactId>milvus-sdk-java</artifactId>\n     <version>2.2.15</version>\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1641,43 +1509,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "# Use this for beta clusters",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": true,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "\ncompile 'io.milvus:milvus-sdk-java:2.3.3'\n\n",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "# Use this for common clusters",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": true,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "\n",
+                "content": "# Use this for beta clusters\ncompile 'io.milvus:milvus-sdk-java:2.3.3'\n\n# Use this for common clusters\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1863,43 +1695,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "# Run the following for beta clusters",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": true,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "\ngo get -u github.com/milvus-io/milvus-sdk-go/v2@v2.3.3\n\n",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "# Run the following for common clusters",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": true,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "\n",
+                "content": "# Run the following for beta clusters\ngo get -u github.com/milvus-io/milvus-sdk-go/v2@v2.3.3\n\n# Run the following for common clusters\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

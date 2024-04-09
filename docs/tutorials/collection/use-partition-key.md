@@ -1,7 +1,8 @@
 ---
 slug: /use-partition-key
 beta: FALSE
-notebook: 03_use_partition_key.ipynb
+notebook: FALSE
+type: origin
 token: DrXpwhU8pixYi9kqzSBcs5TgnFd
 sidebar_position: 12
 ---

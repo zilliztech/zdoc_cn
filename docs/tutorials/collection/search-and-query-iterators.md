@@ -1,7 +1,8 @@
 ---
 slug: /search-and-query-iterators
 beta: FALSE
-notebook: 09_search_query_iterators.ipynb
+notebook: FALSE
+type: origin
 token: GPXpwOFduiAAwskVE5lcaUYznpe
 sidebar_position: 9
 ---

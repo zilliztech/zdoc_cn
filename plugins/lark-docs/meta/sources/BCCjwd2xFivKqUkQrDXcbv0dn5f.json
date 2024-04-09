@@ -5,13 +5,13 @@
   "node_token": "BCCjwd2xFivKqUkQrDXcbv0dn5f",
   "node_type": "origin",
   "obj_create_time": "1708397983",
-  "obj_edit_time": "1708671993",
+  "obj_edit_time": "1712127786",
   "obj_token": "QC79dHokloVVakxVT85cutwInZc",
   "obj_type": "docx",
   "origin_node_token": "BCCjwd2xFivKqUkQrDXcbv0dn5f",
   "origin_space_id": "7167193056431783939",
   "owner": "ou_fbc044d19930afd389d5c369466c38b1",
-  "parent_node_token": "MJeiwGDSniNQ7BkAFGCczemxnDg",
+  "parent_node_token": "GM95woK16ifEPYkPdbcc8J7ZnuU",
   "space_id": "7167193056431783939",
   "title": "管理 Pipelines",
   "slug": "manage-pipelines",
@@ -26,6 +26,8 @@
           "ZCrZdoUQhoZXGjxgVtrcBoq2n1b",
           "S3HsdHZrkobzIDxqU2jc8RnInEf",
           "Ixo0di74zosLrOxqmVDc9k8hnte",
+          "Qq8JdD4q6ooPesxcBMWcmfpZn5f",
+          "Jg5od17tKogCyexfgbmcpDyqnde",
           "YGUidjwu1okevUxE253cKGk4nVc",
           "MPCXdJlhUoS9EHx81llcWZQ3nof",
           "JhUKdguXzoxLOxxy9NzcjnS8nsp",
@@ -248,6 +250,42 @@
           "component": {
             "iframe_type": 8,
             "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D39083-2542%26mode%3Ddesign%26t%3D7dWbcd2RIFNsohUV-4"
+          }
+        },
+        "parent_id": "QC79dHokloVVakxVT85cutwInZc"
+      },
+      {
+        "block_id": "Qq8JdD4q6ooPesxcBMWcmfpZn5f",
+        "block_type": 2,
+        "parent_id": "QC79dHokloVVakxVT85cutwInZc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "您还可以查看所有 Pipelines 相关事件。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Jg5od17tKogCyexfgbmcpDyqnde",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D44134-3987%26mode%3Ddesign%26t%3D1GUhReNArXciViv7-4"
           }
         },
         "parent_id": "QC79dHokloVVakxVT85cutwInZc"
@@ -667,55 +705,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "根据以下示例查看某一 Pipeline 详情。如下示例中使用的 ",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "pipelineId",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": true,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": " 为 ",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "pipe-6ca5dd1b4672659d3c3487",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": true,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "。在调用 API 时，请确保将该字段的值替换为您的实际值。",
+                "content": "根据以下示例查看某一 Pipeline 详情。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -751,7 +741,7 @@
             },
             {
               "text_run": {
-                "content": "    --url \"https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/pipe-6ca5dd1b4672659d3c3487\"",
+                "content": "    --url \"https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/${YOUR_PIPELINE_ID}\"",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1181,55 +1171,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "根据以下示例删除 Pipelines。如下示例中使用的 ",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "pipelineId",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": true,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": " 为 ",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "pipe-6ca5dd1b4672659d3c3487",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": true,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "。在调用 API 时，请确保将该字段的值替换为您的实际值。",
+                "content": "根据以下示例删除 Pipelines。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1265,7 +1207,7 @@
             },
             {
               "text_run": {
-                "content": "    --url \"https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/pipe-6ca5dd1b4672659d3c3487\"",
+                "content": "    --url \"https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/${YOUR_PIPELINE_ID}\"",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1559,6 +1501,6 @@
         "parent_id": "QC79dHokloVVakxVT85cutwInZc"
       }
     ],
-    "counts": 38
+    "counts": 40
   }
 }

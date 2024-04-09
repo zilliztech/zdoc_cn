@@ -5,7 +5,7 @@
   "node_token": "BSKawjPvqiNAcgkGGIbct8L6nOd",
   "node_type": "origin",
   "obj_create_time": "1687680874",
-  "obj_edit_time": "1702889236",
+  "obj_edit_time": "1709047816",
   "obj_token": "PDrFdpvz0oMAecxwpKCcIDoenab",
   "obj_type": "docx",
   "origin_node_token": "BSKawjPvqiNAcgkGGIbct8L6nOd",
@@ -744,7 +744,6 @@
             }
           ],
           "style": {
-            "indentation_level": "NoIndent",
             "language": 49,
             "wrap": false
           }

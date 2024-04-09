@@ -1,7 +1,8 @@
 ---
 slug: /javascript-object-notation-json
 beta: FALSE
-notebook: 04_use_json_field.ipynb
+notebook: FALSE
+type: origin
 token: UXBjwVpKmirzg9kgWgmcLixwnIe
 sidebar_position: 13
 ---

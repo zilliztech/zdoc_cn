@@ -2,6 +2,7 @@
 slug: /setup-a-private-link-alicloud
 beta: FALSE
 notebook: FALSE
+type: origin
 token: OZ5Ywbjm0idqAqkOdZrcQU3Wncb
 sidebar_position: 1
 ---
@@ -25,9 +26,7 @@ import Admonition from '@theme/Admonition';
 
 ## 前提条件{#before-you-start}
 
-- 您已经注册了 Zilliz Cloud。
-
-- 您已经创建了 Zilliz Cloud 阿里云集群。
+- 您已经注册 Zilliz Cloud 并创建了 Zilliz Cloud 阿里云集群。
 
 - 您在上述 Zilliz Cloud 腾讯云集群所在云服务地域有一个 VPC。
 
@@ -35,114 +34,186 @@ import Admonition from '@theme/Admonition';
 
 本节将按照配置思路详细介绍如何为您的 Zilliz Cloud 阿里云集群创建私网连接。
 
-### 登记私网连接参数{#set-private-link-parameters}
+### 进入 Zilliz Cloud 私网连接页面 {#enter-private-link-tab-on-zilliz-cloud}
 
-1. 登录Zilliz Cloud，并在左侧导航栏顶部的下拉菜单中选择合适的项目。
+登录Zilliz Cloud，并在左侧导航栏顶部的下拉菜单中选择合适的项目。
 
-1. 在项目左侧导航栏中选择**安全** > **私网连接**，并单击**创建私网连接**。
+在项目左侧导航栏中选择__安全__ > __私网连接__，并单击__创建私网连接__。
 
-    您还可以在**集群详情**页面中的**连接信息**区域中单击**创建私网连接**。
+![zh-ali-create-private-link](/img/zh-ali-create-private-link.png)
 
-1. 在弹出的**创建私网连接**对话框中，填写**云服务提供商**、**云服务地域**、**主帐号 ID**。
+您还可以在__集群详情__页面中的__连接信息__区域中单击__创建私网连接__。
 
-    |  **参数名称**   |  **参数描述**                                                                                                                                 |
-    | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-    |  **云服务提供商** |  与私网连接访问目标集群所在网络保持一致。<br/> 在**集群详情**页面中的**集群信息**区域中，可查看当前集群的**地域**及详情。                                                                 |
-    |  **云服务地域**  |  与私网连接访问目标集群所在网络保持一致。                                                                                                                     |
-    |  **主帐号 ID** |  填写您的阿里云主帐号 ID，并单击**添加**提交验证。<br/> 请使用阿里云主帐号登录阿里云。登录后，鼠标悬停右上角头像区域，可查看当前登录的主帐号及其 ID。<br/> 验证通过后，在创建终端节点时才能够查看到 Zilliz Cloud 的终端节点服务。 |
+![zh-ali-create-private-link-from-cluster-detail](/img/zh-ali-create-private-link-from-cluster-detail.png)
 
-    <Admonition type="info" icon="📘" title="说明">
+在弹出的__创建私网连接__对话框中，您需要选择__云服务提供商__和__云服务地域__，并提供__主帐号 ID__。
 
-    <ul>
-    <li>在填写完阿里云<strong>主帐号 ID</strong> 后，务必单击右侧的<strong>添加</strong>。</li>
-    </ul>
-    <p>验证通过后，在创建终端节点时才能够在可用服务列表中查看到 Zilliz Cloud 的终端节点服务。</p>
-    <ul>
-    <li>操作尚未完成！请勿单击对话框中的<strong>创建</strong>。</li>
-    </ul>
-    <p>您需要前往阿里云控制台，<a href="./setup-a-private-link">创建终端节点</a>。然后，在对话框中填写成功创建的**终端节点实例 ID **后，才可以单击<strong>创建</strong>。</p>
+![zh-ali-create-private-link-window](/img/zh-ali-create-private-link-window.png)
+
+### 获取阿里云主帐号 ID{#obtain-aliyun-account-id}
+
+登录阿里云控制台查找主帐号 ID。
+
+- 如果您的阿里云帐号为主帐号，可登录阿里云控制台获取主帐号 ID。
+
+- 如果您的阿里云帐号不是主帐号，请复制您所在组织的主帐号 ID。
+
+![zh-ali-main-account-id](/img/zh-ali-main-account-id.png)
+
+### 设置私网连接参数 {#set-private-link-parameters}
+
+返回 Zilliz Cloud 界面，在__创建私网连接__弹窗中，提供以下信息：
+
+|  __参数名称__   |  __参数描述__                                                                 |
+| ----------- | ------------------------------------------------------------------------- |
+|  __云服务提供商__ |  与私网连接访问目标集群所在网络保持一致。<br/> 在__集群详情__页面中的__集群信息__区域中，可查看当前集群的__地域__及详情。 |
+|  __云服务地域__  |  与私网连接访问目标集群所在网络保持一致。                                                     |
+|  __主帐号 ID__ |  填写您在步骤 3 中获取的阿里云主帐号 ID，并单击__添加__提交验证。                                    |
+
+<Admonition type="info" icon="📘" title="提示">
+
+<ul>
+<li><p>请确保主账号 ID 验证通过，如下图所示。否则，在创建终端节点时，您将无法查看到 Zilliz Cloud 的终端节点服务。</p></li>
+<li><p>主账号 ID 验证通过后，请不要关闭 Zilliz Cloud 窗口。</p></li>
+</ul>
+
+</Admonition>
+
+![zh-ali-main-account-id-verified](/img/zh-ali-main-account-id-verified.png)
+
+### 创建终端节点实例{#create-endpoint}
+
+1. 进入[阿里云终端节点控制台](https://vpc.console.aliyun.com/endpoint)。
+
+1. 根据步骤 1 中提供的地域，选择相同的地域。
+
+    ![zh-ali-region](/img/zh-ali-region.png)
+
+1. 进入__创建终端节点界面__，填写表格。以下为参数解释。
+
+    |  __参数__     |  __描述__                                                                          |
+    | ----------- | -------------------------------------------------------------------------------- |
+    |  __节点名称__   |  为该节点命名。                                                                         |
+    |  __终端节点类型__ |  选择__接口终端节点__。                                                                   |
+    |  __终端节点服务__ |  选择__选择可用服务__。<br/> 如果您在上一步中添加的阿里云主帐号通过验证后，可用服务列表中将展示该主帐号对应的 Zilliz Cloud 服务。 |
+
+    ![zh-ali-create-endpoint](/img/zh-ali-create-endpoint.png)
+
+1. 继续填写表格，配置__专有网络__、__安全组__、__可用区与交换机__。以下为参数解释。
+
+    |  __专有网络__             |  选择需要使用私网连接访问 Zilliz Cloud 集群的服务所在 VPC。                                                                                                                                                                                                                                                                                 |
+    | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    |  __安全组__              |  选择应用于该终端节点的安全组规则。如第一次使用，建议新建安全组，规划如下：<br/> - __网络__<br/>     选择需要使用私网连接访问 Zilliz Cloud 集群的服务所在 VPC。<br/> - __访问规则__<br/>     添加一条__协议类型__为 __TCP__，__端口范围__为 Zilliz Cloud 集群暴露的端口，__授权对象__为 __0.0.0.0/0 __的访问规则。建议添加一条 ICMP 规则用于网络连通性排查。                                                                   |
+    |  __可用区与交换机__<br/>  |  选择 Zilliz Cloud 集群所在可用区并创建默认交换机。<br/> 目前，Zilliz Cloud 集群可选可用区如下：<br/> __杭州__<br/> - 杭州 可用区 H<br/> - 杭州 可用区 J<br/> - 杭州 可用区 K<br/> __北京__<br/> - 北京 可用区 G<br/> - 北京 可用区 H<br/> - 北京 可用区 I<br/> __深圳__<br/> - 深圳 可用区 D<br/> - 深圳 可用区 E<br/> - 深圳 可用区 F<br/> 交换机配置无特殊要求，保持默认即可。 |
+
+    <Admonition type="info" icon="📘" title="提示">
+
+    <p>为了可用性，我们建议选 2 个以上<strong>可用区与交换机。</strong>但注意，阿里云会针对每个可用区额外收费，因此您需要考虑成本。</p>
 
     </Admonition>
 
-### 创建终端节点{#create-endpoint}
+    ![zh-ali-create-endpoint](/img/zh-ali-create-endpoint.png)
 
-1. 登录阿里云，前往[**专有网络**](https://vpc.console.aliyun.com/endpoint/cn-hangzhou/endpoints)[ > ](https://vpc.console.aliyun.com/endpoint/cn-hangzhou/endpoints)[**终端节点](https://vpc.console.aliyun.com/endpoint/cn-hangzhou/endpoints)。**
+    安全组详情如下图所示：
 
-1. 在**接口终端节点**页签中单击**创建终端节点**。
+    ![zh-ali-safety-group](/img/zh-ali-safety-group.png)
 
-    如果尚未开通私网连接服务。请先单击**开通私网连接服务**后，再执行本操作。
+1. 表格填写完成后，点击创建。创建成功后的界面如下图所示。请务必保存以下信息以备后续使用：
 
-1. 在**创建终端节点**页面，填写如下内容。
+    - __终端及节点实例ID__
 
-    |  **参数名称**             |  **参数描述**                                                                                                                                                                                                                                                                                                               |
-    | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    |  **所属地域**             |  填写私网连接目标集群所在地域。                                                                                                                                                                                                                                                                                                        |
-    |  **节点名称**             |  为该节点命名。                                                                                                                                                                                                                                                                                                                |
-    |  **终端节点类型**           |  选择**接口终端节点**。                                                                                                                                                                                                                                                                                                          |
-    |  **终端节点服务**           |  选择**可用服务**。<br/> 如果您在上一步中添加的阿里云主帐号通过验证后，可用服务列表中将展示该主帐号对应的 Zilliz Cloud 服务。                                                                                                                                                                                                                                          |
-    |  **专有网络**             |  选择需要使用私网连接访问 Zilliz Cloud 集群的服务所在 VPC。                                                                                                                                                                                                                                                                                 |
-    |  **安全组**              |  选择应用于该终端节点的安全组规则。<br/> 如第一次使用，建议新建安全组，规划如下：<br/> - **网络**<br/>     选择需要使用私网连接访问 Zilliz Cloud 集群的服务所在 VPC。<br/> - **访问规则**<br/>     添加一条**协议类型**为 **TCP**，**端口范围**为 Zilliz Cloud 集群暴露的端口，**授权对象**为 **0.0.0.0/0 **的访问规则。建议添加一条 ICMP 规则用于网络连通性排查。                                                          |
-    |  **可用区与交换机**<br/>  |  选择 Zilliz Cloud 集群所在可用区并创建默认交换机。<br/> 目前，Zilliz Cloud 集群可选可用区如下：<br/> **杭州**<br/> - 杭州 可用区 H<br/> - 杭州 可用区 J<br/> - 杭州 可用区 K<br/> **北京**<br/> - 北京 可用区 G<br/> - 北京 可用区 H<br/> - 北京 可用区 I<br/> **深圳**<br/> - 深圳 可用区 D<br/> - 深圳 可用区 E<br/> - 深圳 可用区 F<br/> 交换机配置无特殊要求，保持默认即可。 |
+    - __默认服务域名__
 
-1. 填写完所有信息后，单击**确认创建**。
+    ![zh-ali-safety-group](/img/zh-ali-safety-group.png)
 
-1. 确认终端节点创建成功后，复制创建好的实例 ID 备用。
+1. 等待终端节点__状态__变为__可用__。
 
-    此时，**可用区与网卡**页签中显示的可用区**状态**为**等待连接**，**服务状态**为**异常**。
+    <Admonition type="info" icon="📘" title="提示">
+
+    <p>终端节点<strong>连接状态</strong>此时是<strong>已断开</strong>。需要等待下一步连接。</p>
+
+    </Admonition>
 
 ### 创建私网连接{#create-private-link}
 
-1. 返回 Zilliz Cloud，将复制好的终端节点实例 ID 填入**创建私网连接**对话框中的**终端节点实例 ID **字段中。
+返回 Zilliz Cloud 界面。在创建私网连接单弹窗中输入上一步中保存的__终端及节点实例ID__。点击__创建__。
 
-1. 单击**创建**后，Zilliz Cloud 将开始创建私网连接。
+![zh-ali-enter-endpoint-id](/img/zh-ali-enter-endpoint-id.png)
 
-    创建私网连接耗时较长，请耐心等待。创建完成后，可在私网连接页面查看 Zilliz Cloud 分配的 **Endpoint 服务名称**、 **Endpoint 服务状态**和**私网连接**前缀。
+此时 Zilliz Cloud 界面会出现如下提示：
 
-1. 返回阿里云控制台，检查已创建的终端节点实例，并复制可用区的** IP 地址**备用。
+![zh-ali-pending](/img/zh-ali-pending.png)
 
-    此时，终端节点实例的**可用区与网卡**页签中显示的可用区**状态**变更为**已连接**，**服务状态**变更为**正常**。
+待私网连接创建成功后，Zilliz Cloud 界面如下：
 
-### 添加私域解析记录{#add-private-zone-record}
+![zh-ali-private-link-created](/img/zh-ali-private-link-created.png)
 
-1. 返回阿里云控制台，前往[**私域解析**](https://dns.console.aliyun.com/#/privateZone/list)。
+此时，切换至阿里云界面。可以观察到终端节点的__连接状态__变为__已连接__。
 
-    首次打开该页面时，需要单击**立即开通**启用私域解析服务。开通完成后，刷新页面可进入私域解析记录列表。
+### 创建并设置私域解析{#add-private-zone-record}
 
-1. 单击**添加 Zone**，在弹出的**添加 PrivateZone **对话框中填写 **Zone名称**，并勾选**子域名递归解析代理**。单击**确定**后，列表中出现一条新记录。
+1. 进入阿里云控制台[内网 DNS 解析（PrivateZone）](https://dns.console.aliyun.com/#/privateZone/list)。
 
-    阿里云上 Zilliz Cloud 集群所属 Zone 名称应与您的终端节点所在区域保持一致。
+    ![zh-ali-private-zone](/img/zh-ali-private-zone.png)
 
-    |  终端节点所在区域 |  Zone 名称                                                    |
-    | --------- | ----------------------------------------------------------- |
-    |  杭州       |  `inxx-xxxxxxxxxxxx.ali-cn-hangzhou.vectordb.zilliz.com.cn` |
-    |  北京       |  `inxx-xxxxxxxxxxxx.ali-cn-beijing.vectordb.zilliz.com.cn`  |
-    |  深圳       |  `inxx-xxxxxxxxxxxx.ali-cn-shenzhen.vectordb.zilliz.com.cn` |
+1. 选择__管理配置模式__。
 
-    Zone 名称中的`inxx-xxxxxxxxxxxx`为您的Zilliz Cloud 阿里云集群 ID。您可参考[Zilliz Cloud 控制台](./on-zilliz-cloud-console)查询集群 ID。
+    ![zh-ali-enter-endpoint-id](/img/zh-ali-enter-endpoint-id.png)
 
-1. 在该记录的**操作**栏中单击**解析设置**。
+1. 在页面下方，点击__添加域名__。
 
-    1. 在**解析设置**页签中单击**添加记录**。
+    ![zh-ali-add-zone](/img/zh-ali-add-zone.png)
 
-    1. 在弹出的**添加记录**对话框中输入如下内容。
+1. 填写__添加内置权威域名__表格。
 
-        |  **参数名称** |  **参数描述**                         |
-        | --------- | --------------------------------- |
-        |  **记录类型** |  选择将域名指向一个 IPV4 地址的 A 记录。         |
-        |  **主机记录** |  请填写 Zilliz Cloud 提供的的**私网连接**前缀。 |
-        |  **记录值**  |  请填写终端节点实例详情中可用区的 IP 地址。          |
-        |  **TTL值** |  保持默认即可。                          |
+    |  __参数__       |  __描述__                                                                                                                                                                                                                                                                                                                                                                                        |
+    | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    |  内置权威域名（Zone） |  请根据您的集群地域和集群 ID修改内置权威域名。以下为终端节点所在区域对应的 Zone 名称：<br/> - 杭州：`inxx-xxxxxxxxxxxx.ali-cn-hangzhou.vectordb.zilliz.com.cn`<br/> - 北京：`inxx-xxxxxxxxxxxx.ali-cn-beijing.vectordb.zilliz.com.cn`<br/> - 深圳：`inxx-xxxxxxxxxxxx.ali-cn-shenzhen.vectordb.zilliz.com.cn`<br/> Zone 名称中的`inxx-xxxxxxxxxxxx`为您的Zilliz Cloud 阿里云集群 ID。您可参考[Zilliz Cloud 控制台](./on-zilliz-cloud-console)查询集群 ID。 |
+    |  子域名递归解析代理    |  为防止无法访问公共域名，我们建议您开启此项。                                                                                                                                                                                                                                                                                                                                                                        |
 
-    1. 单击**确定**，保存设置。
+    ![zh-ali-add-zone-form](/img/zh-ali-add-zone-form.png)
 
-1. 返回[**私域解析**](https://dns.console.aliyun.com/#/privateZone/list)页面，在当前 Zone 记录的操作栏中单击**关联VPC**。
+1. 设置私域解析的生效范围。
 
-    1. 在右侧滑出的关联 VPC 对话框中选择需要使用私网连接访问 Zilliz Cloud 集群的服务所在 VPC。
+    ![zh-ali-select-effect-range](/img/zh-ali-select-effect-range.png)
 
-    1. 单击**确定**，保存设置。
+1. 选择需要使用私网连接的 VPC。点击确定。
 
-1. 返回[**私域解析**](https://dns.console.aliyun.com/#/privateZone/list)页面。此时，当前 Zone 记录的**关联VPC状态**已变更为**已关联**。
+    ![zh-ali-select-vpc](/img/zh-ali-select-vpc.png)
 
-## 后续操作{#next-steps}
+1. 在风险提示弹窗中，点击继续执行操作。
 
-在私网连接创建完成后，可按照集群详情页面右上角的连接指南使用私网连接进行连通性验证。
+    ![zh-ali-continue-operation](/img/zh-ali-continue-operation.png)
+
+1. 设置成功后，界面如下所示：
+
+    ![zh-ali-zone-added](/img/zh-ali-zone-added.png)
+
+1. 添加解析。在添加域名标签下，定位对应的内置权威域名，点击右侧操作栏中的__解析记录__。
+
+    ![zh-ali-add-dns](/img/zh-ali-add-dns.png)
+
+1. 点击__添加记录__。
+
+    ![zh-ali-add-record](/img/zh-ali-add-record.png)
+
+1. 填写表格并点击__确定__。
+
+    |  __参数__ |  __描述__                        |
+    | ------- | ------------------------------ |
+    |  记录类型   |  请选择 __CNAME__。                |
+    |  主机记录   |  请替换为你的集群 ID。 你可在集群详情页获取集群 ID。 |
+    |  记录值    |  请填写在步骤5.e. 中获取的__默认服务域名__。    |
+
+![zh-ali-add-record-form](/img/zh-ali-add-record-form.png)
+
+1. 在__解析变更确认__页面中，点击__确定__。
+
+    ![zh-ali-dns-change-confirm](/img/zh-ali-dns-change-confirm.png)
+
+1. 至此，内网 DNS 解析（PrivateZone）创建成功，界面如下所示：
+
+    ![zh-ali-dns-successful](/img/zh-ali-dns-successful.png)
+
+### 您已成功创建私网连接{#create-private-link-successful}
+

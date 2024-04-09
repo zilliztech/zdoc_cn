@@ -2,6 +2,7 @@
 slug: /release-notes-221
 beta: FALSE
 notebook: FALSE
+type: origin
 token: Ra4qwdd7kicpt6k9Y2tc3OJ5niX
 sidebar_position: 4
 ---
@@ -11,13 +12,13 @@ import Admonition from '@theme/Admonition';
 
 # 版本说明书（2023/10/17）
 
-**发布日期：2023年10月17日**
+__发布日期：2023年10月17日__
 
 我们很高兴地宣布Zilliz Cloud 2.2.1的发布。此版本引入了一系列增强和功能：
 
 ## Milvus 兼容性
 
-此次发布兼容 **Milvus 2.2.x**。
+此次发布兼容 __Milvus 2.2.x__。
 
 ## 集群增强：引入新 CU ，提升灵活性{#cluster-enhancements-increased-flexibility-with-a-new-cu-size-option}
 

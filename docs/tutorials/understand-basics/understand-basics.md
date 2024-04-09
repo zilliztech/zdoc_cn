@@ -2,6 +2,7 @@
 slug: /understand-basics
 beta: FALSE
 notebook: FALSE
+type: origin
 token: WJJvw84crikA8Xk4P4IcJJvSnKd
 sidebar_position: 2
 ---

@@ -1,7 +1,8 @@
 ---
 slug: /drop-collection
 beta: FALSE
-notebook: 00_quick_start.ipynb,01_use_customized_schema.ipynb
+notebook: FALSE
+type: origin
 token: FrMbwwoTwiqJO4kofPkcndsAnoh
 sidebar_position: 14
 ---

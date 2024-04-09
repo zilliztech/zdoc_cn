@@ -2,6 +2,7 @@
 slug: /limits
 beta: FALSE
 notebook: FALSE
+type: origin
 token: A8UFwSbMniMl6IkpJkNc4HsHnLc
 sidebar_position: 1
 ---
@@ -17,7 +18,7 @@ import Admonition from '@theme/Admonition';
 
 下表展示了单个用户可加入的最大组织和项目数。
 
-|  **内容** |  **最大数量**   |  **描述**                                 |
+|  __内容__ |  __最大数量__   |  __描述__                                 |
 | ------- | ----------- | --------------------------------------- |
 |  组织     |  1<br/>  |  每个用户只能创建 1 个组织。<br/>                |
 |  组织成员   |  100        |  每个组织最多可以容纳 100 个成员。每个用户可以属于多个组织。       |
@@ -28,19 +29,19 @@ import Admonition from '@theme/Admonition';
 
 集群和 CU 数量的限制取决于您的支付方式和订阅计划。下表展示了企业版集群相关限制。
 
-- **未绑定有效支付方式**
+- __未绑定有效支付方式__
 
-    |  **类型** |  **最大数量** |  **描述**                  |
+    |  __类型__ |  __最大数量__ |  __描述__                  |
     | ------- | --------- | ------------------------ |
     |  企业版集群  |  1        |  未绑定有效支付方式，最多可创建一个企业版集群。 |
 
-- **已绑定有效支付方式**
+- __已绑定有效支付方式__
 
-    |  类型    |  **最大数量** |  **描述**                              |
-    | ------ | --------- | ------------------------------------ |
-    |  企业版集群 |  128 CUs  |  单个集群最多使用 32 个 CU，所有集群最多使用 128 个 CU。 |
+    |  类型    |  __最大数量__ |  __描述__                                     |
+    | ------ | --------- | ------------------------------------------- |
+    |  企业版集群 |  128 CUs  |  在自助操作时，单个集群最多使用 32 个 CU，所有集群最多使用 128 个 CU。 |
 
-如需创建超过 32 个 CU 规格的集群，请[联系我们](https://zilliz.com.cn/contact-sales?firstname=xushuang&lastname=hu&company=Zilliz&name=Zilliz&email=xushuang.hu@zilliz.com&fullname=hu%20xushuang&phone=--&country=)。
+如需创建超过 32 个 CU 规格的集群或需要的总 CU 数量超过 128 CU 时，请[联系我们](https://zilliz.com.cn/contact-sales?firstname=xushuang&lastname=hu&company=Zilliz&name=Zilliz&email=xushuang.hu@zilliz.com&fullname=hu%20xushuang&phone=--&country=)。
 
 ## Pipeline{#pipelines}
 
@@ -48,7 +49,7 @@ import Admonition from '@theme/Admonition';
 
 下表展示了项目中不同类型的 Pipeline 的相关限制。
 
-|  **Pipeline 类型**    |  **最大数量（每个项目）** |
+|  __Pipeline 类型__    |  __最大数量（每个项目）__ |
 | ------------------- | --------------- |
 |  Ingestion Pipeline |  10             |
 |  Deletion Pipeline  |  10             |
@@ -58,21 +59,21 @@ import Admonition from '@theme/Admonition';
 
 下表展示了每个 Embedding 模型可自定义的切片大小范围。
 
-|  **Embedding 模型**         |  **切片大小范围 (Tokens）** |
+|  __Embedding 模型__         |  __切片大小范围 (Tokens）__ |
 | ------------------------- | -------------------- |
 |  zilliz/bge-base-en-v1.5  |  20-500              |
 |  zilliz/bge-base-zh-v1.5  |  20-500              |
 
 下表展示了 Ingestion Pipeline 的 PRESERVE Function 生成的元数据字段限制。
 
-|               |  **最大数量** |
+|               |  __最大数量__ |
 | ------------- | --------- |
 |  元数据字段        |  5        |
 |  字符串类型字段的最大长度 |  4,000    |
 
 下表展示了每次运行 Ingestion Pipeline 时切片数量限制。
 
-|  **Embedding 模型**         |  **每次运行 Ingestion 的最大切片数量** |
+|  __Embedding 模型__         |  __每次运行 Ingestion 的最大切片数量__ |
 | ------------------------- | --------------------------- |
 |  zilliz/bge-base-en-v1.5  |  3,500                      |
 |  zilliz/bge-base-zh-v1.5  |  3,500                      |
@@ -81,7 +82,7 @@ import Admonition from '@theme/Admonition';
 
 下表展示了各模型的 Token 用量限制。
 
-|  **Pipeline 类型**    |  **Embedding 模型**                                   |  **最大 Token 用量** |
+|  __Pipeline 类型__    |  __Embedding 模型__                                   |  __最大 Token 用量__ |
 | ------------------- | --------------------------------------------------- | ---------------- |
 |  Ingestion Pipeline |  zilliz/bge-base-en-v1.5 & zilliz/bge-base-zh-v1.5  |  100,000,000     |
 |  Search Pipeline    |  zilliz/bge-base-en-v1.5 & zilliz/bge-base-zh-v1.5  |  20,000,000      |
@@ -95,16 +96,16 @@ import Admonition from '@theme/Admonition';
 
 ## Collection{#collections}
 
-|  **类型**         |  **最大数量**                       |  **描述**                                                                 |
-| --------------- | ------------------------------- | ----------------------------------------------------------------------- |
-|  企业版集群<br/>  |  每 CU：<= 64<br/> 每集群：<= 4096 |  在企业版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。 |
+|  __类型__         |  __最大数量__                         |  __描述__                                                                 |
+| --------------- | --------------------------------- | ----------------------------------------------------------------------- |
+|  企业版集群<br/>  |  每 CU：\<= 64<br/> 每集群：\<= 4096 |  在企业版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。 |
 
 除了对集群中 Collection 数量的限制外，Zilliz Cloud 还有容量资源相关的限制。具体见下表。
 
-|  **CU 数量** |  **容量**                 |
-| ---------- | ----------------------- |
-|  1-8 CU    |  <= 4,096               |
-|  12 CU 及以上 |  Min(512 x CU 数, 65536) |
+|  __CU 数量__ |  __容量__         |
+| ---------- | --------------- |
+|  1-8 CU    |  \<= 4,096      |
+|  12 CU 及以上 |  \<= 512 x CU 数 |
 
 已使用的容量应该小于可用的通用容量。
 
@@ -114,18 +115,18 @@ import Admonition from '@theme/Admonition';
 <ul>
 <li><strong>计算集群的已使用容量</strong></li>
 </ul>
-<p>假设一个集群含有 50 个 Collection。前 20 个 Collection 中，每个 Collection 含有在 2 个Partition 和 4 个 Shard，剩下的 30 个 Collection 分别含有在 1 个 Partition 和 12 个 Shard。因此，可以按照以下方式计算集群的<strong>已使用容量</strong>：</p>
-<p><strong>20 (collections) x 2 (partitions) x 4 (shards) + 30 (collections) x 1 (partitions) x 12 (shards) = 160 + 360 = 520</strong></p>
-<p>基于以上等式，Zilliz Cloud 将该集群的已使用容量设定为 520。</p>
+<p>假设一个集群含有 50 个 Collection。前 20 个 Collection 中，每个 Collection 含有在 20 个Partition，剩下的 30 个 Collection 分别含有在 100 个 Partition。因此，可以按照以下方式计算集群的<strong>已使用容量</strong>：</p>
+<p><strong>20 (collections) x 20 (partitions) + 30 (collections) x 100 (partitions) = 160 + 360 = 700</strong></p>
+<p>基于以上等式，Zilliz Cloud 将该集群的已使用容量设定为 700。</p>
 <ul>
 <li><strong>计算集群的通用容量</strong></li>
 </ul>
 <p>可以使用以下公式计算集群的通用容量：</p>
-<p><strong>Min(512 x CU 数, 65536)</strong></p>
+<p><strong>\<= 512 x CU 数</strong></p>
 <p>例如：</p>
-<p>在一个 2 CU 的集群中，最多可创建 128 个 Collection，通用容量为 1024。</p>
-<p>在一个 12 CU 的集群中，最多可创建 768 个 Collection，通用容量为 6144。</p>
-<p>在一个 32 CU 的集群中，最多可创建 4096 个 Collection，通用容量为 65536。</p>
+<p>在一个 2 CU 的集群中，最多可创建 128 个 Collection，通用容量最大为 1024。</p>
+<p>在一个 12 CU 的集群中，最多可创建 768 个 Collection，通用容量最大为 6144。</p>
+<p>在一个 32 CU 的集群中，最多可创建 4096 个 Collection，通用容量最大为 65536。</p>
 
 </Admonition>
 
@@ -133,28 +134,15 @@ import Admonition from '@theme/Admonition';
 
 ### Partition{#partitions}
 
-|  **类型**         |  **最大数量（每个 Collection）** |  描述                                               |
+|  __类型__         |  __最大数量（每个 Collection）__ |  描述                                               |
 | --------------- | ------------------------ | ------------------------------------------------- |
 |  企业版集群<br/>  |  4096                    |  在企业版集群中，您可以为每个 Collection 创建最多 4096 个 Partition。 |
 
 在计算已使用容量和通用容量时，请参考 [Collection](./limits#collections) 部分的说明。此外，每个集群创建 Partition 的速率限制为每秒 1 个 Partition。
 
-### Shard{#shards}
-
-创建 Collection 时，您可以为 Collection 创建最多 8 个 Shard。如果未指定，Collection 默认具有一个 Shard。
-
-|  **CU 数量** |  **最大 Shard 数量** |
-| ---------- | ---------------- |
-|   1-8 CU   |  2               |
-|  12 CU 及以上 |  8               |
-
-建议在创建 Collection 时保持 Shard 数量的默认设置，特别是对于使用不超过 24 个 CU 的集群。
-
-在计算已使用容量和通用容量时，请参考 [Collection](./limits#collections) 部分的说明。
-
 ### 字段{#fields}
 
-|  **内容**              |  **最大数量** |  **描述**          |
+|  __内容__              |  __最大数量__ |  __描述__          |
 | -------------------- | --------- | ---------------- |
 |  所有字段（每个 Collection） |  64       |  N/A             |
 |  向量字段（每个 Collection） |  1        |  即将支持多向量功能，敬请期待。 |
@@ -173,7 +161,7 @@ import Admonition from '@theme/Admonition';
 
 下文将介绍 Zilliz Cloud 集群中常见数据操作的速率限制。
 
-### 插入{#insert}
+### Insert{#insert}
 
 每个插入请求/响应的大小不应超过 64 MB。
 
@@ -188,7 +176,7 @@ import Admonition from '@theme/Admonition';
 
 在插入数据时，请确保包含所有在 Schema 中已定义的字段。如果 Collection 启用了 AutoID，则排除主键。
 
-为了使插入的数据能够立即被检索到，建议将搜索或查询请求中的一致性级别更改为 **Strong**。详细信息，请参阅[一致性水平](./consistency-level)。
+为了使插入的数据能够立即被检索到，建议将搜索或查询请求中的一致性级别更改为 __Strong__。详细信息，请参阅[一致性水平](./consistency-level)。
 
 ### Upsert{#upsert}
 
@@ -205,30 +193,30 @@ import Admonition from '@theme/Admonition';
 
 在 Upsert 数据时，请确保包含所有在 Schema 中已定义的字段。
 
-为了使 Upsert 的数据能够立即被检索到，建议将搜索或查询请求中的一致性级别更改为 **Strong**。详细信息，请参阅[一致性水平](./consistency-level)。
+为了使 Upsert 的数据能够立即被检索到，建议将搜索或查询请求中的一致性级别更改为 __Strong__。详细信息，请参阅[一致性水平](./consistency-level)。
 
-### 索引{#index}
+### Index{#index}
 
 不同字段类型对应不同类型的索引。以下表格列出了可索引的字段类型及其对应的索引类型。
 
-|  **字段类型**      |  **索引类型**  |  **度量类型**         |
+|  __字段类型__      |  __索引类型__  |  __度量类型__         |
 | -------------- | ---------- | ----------------- |
 |  向量字段          |  AUTOINDEX |  L2, IP, 和 COSINE |
 |  VarChar 字段    |  TRIE      |  N/A              |
 |  Int8/16/32/64 |  STL_SORT  |  N/A              |
 |  Float32/64    |  STL_SORT  |  N/A              |
 
-### 写入{#flush}
+### Flush{#flush}
 
-每个集群的写入请求速率限制为每秒 1 个请求。
+每个集群的 Flush 请求速率限制为每秒 1 个请求。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>不建议您手动执行写入操作。Zilliz Cloud 会自动优雅地处理数据写入操作。</p>
+<p>不建议您手动执行 Flush 操作。Zilliz Cloud 会自动优雅地处理数据 Flush 操作。</p>
 
 </Admonition>
 
-### 加载{#load}
+### Load{#load}
 
 每个集群的加载请求速率限制为每秒 1 个请求。
 
@@ -238,27 +226,27 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-### 搜索{#search}
+### Search{#search}
 
 每个搜索请求/响应的大小不应超过 64 MB。
 
-每个搜索请求携带的查询向量（**nq**）不超过 16384 个。
+每个搜索请求携带的查询向量（__nq__）不超过 16384 个。
 
-每个搜索响应返回的 Entity 数量（**topK**）不超过 16384 个。
+每个搜索响应返回的 Entity 数量（__topK__）不超过 16384 个。
 
-### 查询{#query}
+### Query{#query}
 
 每个查询请求/响应的大小不应超过 64 MB。
 
-每个查询响应返回的 Entity 数量（**topK**）不超过 16384 个。
+每个查询响应返回的 Entity 数量（__topK__）不超过 16384 个。
 
-### 删除 Entity{#delete}
+### Delete Entity{#delete}
 
 每个删除请求/响应的大小不应超过 64 MB。
 
 每个集群的删除请求速率限制为每秒 0.5 MB。
 
-### 删除 Collection{#drop}
+### Drop Collection{#drop}
 
 每个集群的删除请求速率限制为每秒 1 个请求。
 

@@ -2,6 +2,7 @@
 slug: /cloud-providers-and-regions
 beta: FALSE
 notebook: FALSE
+type: origin
 token: BErdww1kOirndzkHrKoc2ibynlb
 sidebar_position: 3
 ---
@@ -17,7 +18,7 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 支持在阿里云以下地域部署集群。
 
-|  **阿里云地域名称** |  **Dedicated 集群（企业版）** |
+|  __阿里云地域名称__ |  __Dedicated 集群（企业版）__ |
 | ------------ | ---------------------- |
 |  华东1（杭州）     |  ☑️                    |
 |  华北2（北京）     |  ☑️                    |
@@ -27,7 +28,7 @@ Zilliz Cloud 支持在阿里云以下地域部署集群。
 
 Zilliz Cloud 支持在腾讯云以下地域部署集群。
 
-|  **腾讯地域名称** |  **Dedicated 集群（企业版）** |
+|  __腾讯地域名称__ |  __Dedicated 集群（企业版）__ |
 | ----------- | ---------------------- |
 |  华北地区（北京）   |  ☑️                    |
 |  华东地区（上海）   |  ☑️                    |

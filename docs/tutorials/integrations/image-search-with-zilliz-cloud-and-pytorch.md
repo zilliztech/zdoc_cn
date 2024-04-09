@@ -1,7 +1,8 @@
 ---
 slug: /image-search-with-zilliz-cloud-and-pytorch
 beta: FALSE
-notebook: 84_integrations_pytorch.ipynb
+notebook: FALSE
+type: origin
 token: FpeXw3b5piUAG7kUCgucgI1unFh
 sidebar_position: 5
 ---
@@ -19,7 +20,7 @@ import Admonition from '@theme/Admonition';
 
 ## 准备工作{#before-you-start}
 
-本页中的脚本需要使用 **pymilvus** 连接 Zilliz Cloud，使用 **torch** 运行 Embedding 模型，使用 **torchvision** 调用模型并对图片进行预处理，使用 **gdown** 下载示例数据集，使用 tqdm 在命令行中显示进度条。我们可以运行如下命令安装这些依赖。
+本页中的脚本需要使用 __pymilvus__ 连接 Zilliz Cloud，使用 __torch__ 运行 Embedding 模型，使用 __torchvision__ 调用模型并对图片进行预处理，使用 __gdown__ 下载示例数据集，使用 tqdm 在命令行中显示进度条。我们可以运行如下命令安装这些依赖。
 
 ```shell
 pip install pymilvus torch gdown torchvision tqdm
@@ -27,7 +28,7 @@ pip install pymilvus torch gdown torchvision tqdm
 
 ## 准备数据{#prepare-data}
 
-首先，我们需要使用 **gdown** 从公共 Google Drive 中获取压缩文件，并使用 Python 自带的 **zipfile** 包将其解压。
+首先，我们需要使用 __gdown__ 从公共 Google Drive 中获取压缩文件，并使用 Python 自带的 __zipfile__ 包将其解压。
 
 ```python
 import gdown
@@ -102,7 +103,7 @@ TOKEN = 'YOUR_CLUSTER_TOKEN'
     
     fields = [
         FieldSchema(name='id', dtype=DataType.INT64, is_primary=True, auto_id=True),
-        FieldSchema(name='filepath', dtype=DataType.VARCHAR, max_length=200),  *# VARCHARS need a maximum length, so for this example they are set to 200 characters*
+        FieldSchema(name='filepath', dtype=DataType.VARCHAR, max_length=200),  _# VARCHARS need a maximum length, so for this example they are set to 200 characters_
         FieldSchema(name='image_embedding', dtype=DataType.FLOAT_VECTOR, dim=DIMENSION)
     ]
     
@@ -135,7 +136,7 @@ TOKEN = 'YOUR_CLUSTER_TOKEN'
 
 ## 插入数据{#insert-data}
 
-在本示例中，我们将使用 **torch** 包中的 ResNet50 模型。为了获取指定图片的向量表示，我们将移除模型的最后一个分类层。这样一来，经过模型获取的向量维度均为2048。下列代码块中，我们使用了 torch 包中所有模型均会使用相同的预处理方法。
+在本示例中，我们将使用 __torch__ 包中的 ResNet50 模型。为了获取指定图片的向量表示，我们将移除模型的最后一个分类层。这样一来，经过模型获取的向量维度均为2048。下列代码块中，我们使用了 torch 包中所有模型均会使用相同的预处理方法。
 
 在下列步骤中，我们将会：
 

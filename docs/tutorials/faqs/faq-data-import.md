@@ -2,6 +2,7 @@
 slug: /faq-data-import
 beta: null
 notebook: null
+type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 4
 ---
@@ -20,11 +21,11 @@ sidebar_position: 4
 
 
 
-### 能否向 Zilliz Cloud 集群批量导入数据？{#can-i-bulk-insert-data-into-the-zilliz-cloud-vector-databases}
+### 能否向 Zilliz Cloud 集群批量导入数据？ \{#can-i-bulk-insert-data-into-the-zilliz-cloud-vector-databases}
 
 目前，您只能使用 Zilliz Cloud 界面批量导入数据。更多详情，请参阅[通过 Web 控制台导入](./import-data-on-web-ui)、[通过 RESTful API 导入](./import-data-via-restful-api)和[通过 SDK 导入](./import-data-via-sdks)。
 
-### 在使用 Node.js SDK 导入数据或查询时，遇到 `ECONNRESET`错误该怎么办？{#what-can-i-do-if-i-receive-econnreset-errors-when-importing-data-to-or-querying-zilliz-cloud-clusters-with-nodejs-sdk}
+### 在使用 Node.js SDK 导入数据或查询时，遇到 `ECONNRESET`错误该怎么办？ \{#what-can-i-do-if-i-receive-econnreset-errors-when-importing-data-to-or-querying-zilliz-cloud-clusters-with-nodejs-sdk}
 
 请执行以下步骤，解决`ECONNRESET`错误问题：
 

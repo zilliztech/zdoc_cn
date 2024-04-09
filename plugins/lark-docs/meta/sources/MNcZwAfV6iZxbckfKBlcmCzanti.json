@@ -5,7 +5,7 @@
   "node_token": "MNcZwAfV6iZxbckfKBlcmCzanti",
   "node_type": "origin",
   "obj_create_time": "1687140353",
-  "obj_edit_time": "1708424996",
+  "obj_edit_time": "1712570396",
   "obj_token": "Gm2ydAPIZoLMazxn2YYcHCADnWe",
   "obj_type": "docx",
   "origin_node_token": "MNcZwAfV6iZxbckfKBlcmCzanti",
@@ -1337,7 +1337,31 @@
           "elements": [
             {
               "text_run": {
-                "content": "每 CU：<= 64",
+                "content": "每 CU：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\\",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "<= 64",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1362,7 +1386,31 @@
           "elements": [
             {
               "text_run": {
-                "content": "每集群：<= 4096",
+                "content": "每集群：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "\\",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "<= 4096",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
