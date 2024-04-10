@@ -31,7 +31,7 @@ function EditThisPage() {
     <BrowserOnly>
     {() => {
       const hostname = window.location.hostname;
-      if (hostname.includes('cloud-uat') || hostname.includes('localhost')) {
+      if (hostname.includes('zdocs-cn') || hostname.includes('localhost')) {
         return (<div id="edit-this-page" style={{marginTop: '3rem', marginBottom: '3rem', fontSize: '0.8rem'}}>
           <div style={{ marginBottom: '0.25rem' }}>
             <i style={{ display: 'inline-block', minHeight: '2rem', marginRight: '0.5rem' }}>
