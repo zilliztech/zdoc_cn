@@ -20,7 +20,7 @@ import Admonition from '@theme/Admonition';
 
 当您登录到 Zilliz Cloud 控制台后，会进入组织列表页面。在这里，您可以查看已加入的组织。
 
-要快速查看您加入的所有组织，点击左上角的__所有组织__。
+要快速查看您加入的所有组织，点击左上角的**所有组织**。
 
 ![zh-view-organizations](/img/zh-view-organizations.png)
 
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 
     ![zh-rename-organization](/img/zh-rename-organization.png)
 
-- 进入一个组织，在__系统设置__页面编辑组织名称。
+- 进入一个组织，在**系统设置**页面编辑组织名称。
 
 ![edit-organization-name-zh](/img/edit-organization-name-zh.png)
 
@@ -56,7 +56,7 @@ import Admonition from '@theme/Admonition';
 
     ![zh-leave-organization](/img/zh-leave-organization.png)
 
-- 进入一个组织，在__组织用户__页面离开组织。
+- 进入一个组织，在**组织用户**页面离开组织。
 
 ![leave-organization-zh](/img/leave-organization-zh.png)
 

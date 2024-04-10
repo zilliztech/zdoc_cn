@@ -22,17 +22,17 @@ import Admonition from '@theme/Admonition';
 
 您需要仔细分析您的数据，并根据分析结果设计目标 Collection 的 Schema。
 
-以上图中的 JSON 数据为例，源数据中包含两条记录，每条数据包含 6 个字段。而目标 Collection 的 Schema 中选择性地包含了其中的四个字段，分别是 __id__、__vector__、__scalar_1 __和 __scalar_2__。
+以上图中的 JSON 数据为例，源数据中包含两条记录，每条数据包含 6 个字段。而目标 Collection 的 Schema 中选择性地包含了其中的四个字段，分别是 **id**、**vector**、**scalar_1 **和 **scalar_2**。
 
 在设计 Schema 时，还有两个问题需要注意：
 
-- __是否启用 AutoID__
+- **是否启用 AutoID**
 
-    字段 __id__ 为 Collection 的主键。如果需要主键随数据插入自动增长，可以选择启用 AutoID。在这种情况下，源数据中不需要包含 __id __字段。
+    字段 **id** 为 Collection 的主键。如果需要主键随数据插入自动增长，可以选择启用 AutoID。在这种情况下，源数据中不需要包含 **id **字段。
 
-- __是否启用动态字段__
+- **是否启用动态字段**
 
-    在启用了动态字段后，目标 Collection 也可以存储 Schema 中未定义的字段。Zilliz Cloud 预留了一个名为 __$meta__ 的 JSON 字段用来以键值对的方式存放这些未定义字段。在上图中，__dynamic_field_1__ 和 __dynamic_field_2__ 字段及这些字段对应的值将会以键值对的方式存放在 __$meta__ 字段中。
+    在启用了动态字段后，目标 Collection 也可以存储 Schema 中未定义的字段。Zilliz Cloud 预留了一个名为 **$meta** 的 JSON 字段用来以键值对的方式存放这些未定义字段。在上图中，**dynamic_field_1** 和 **dynamic_field_2** 字段及这些字段对应的值将会以键值对的方式存放在 **$meta** 字段中。
 
 我们可以按上图所示的数据，创建目标 Collection 的 Schema。
 
@@ -57,13 +57,13 @@ Zilliz Cloud 支持导入 JSON、Parquet 和 NumPy 数据。如果您的数据�
 
 ### JSON{#json-file}
 
-一个合法的 JSON 文件有一个名为 __rows__ 的根字段，其对应的值为一个字典列表。该列表中，每个字典均对应一个匹配目标 Collection Schema 的 Entity 记录。
+一个合法的 JSON 文件有一个名为 **rows** 的根字段，其对应的值为一个字典列表。该列表中，每个字典均对应一个匹配目标 Collection Schema 的 Entity 记录。
 
-|  __项目__                   |  __描述__                                       |
+|  **项目**                   |  **描述**                                       |
 | ------------------------- | --------------------------------------------- |
-|  __多文件导入（单批次）__           |  支持                                           |
-|  __最大文件大小（单批次）__<br/>  |  - 总大小： 100 GB<br/> - 单文件大小： 10 GB<br/> |
-|  __数据文件存放位置__             |  本地或远程                                        |
+|  **多文件导入（单批次）**           |  支持                                           |
+|  **最大文件大小（单批次）**<br/>  |  - 总大小： 100 GB<br/> - 单文件大小： 10 GB<br/> |
+|  **数据文件存放位置**             |  本地或远程                                        |
 
 ![json_data_structure_zh](/img/json_data_structure_zh.png)
 
@@ -81,11 +81,11 @@ Zilliz Cloud 支持导入 JSON、Parquet 和 NumPy 数据。如果您的数据�
 
 ### Parquet{#parquet-file}
 
-|  __项目__                   |  __描述__                                       |
+|  **项目**                   |  **描述**                                       |
 | ------------------------- | --------------------------------------------- |
-|  __多文件导入（单批次）__           |  支持                                           |
-|  __最大文件大小（单批次）__<br/>  |  - 总大小： 100 GB<br/> - 单文件大小： 10 GB<br/> |
-|  __数据文件存放位置__             |  仅远程                                          |
+|  **多文件导入（单批次）**           |  支持                                           |
+|  **最大文件大小（单批次）**<br/>  |  - 总大小： 100 GB<br/> - 单文件大小： 10 GB<br/> |
+|  **数据文件存放位置**             |  仅远程                                          |
 
 建议您使用 BulkWriter 来将您的原始数据转换成 Parquet 文件。您也可以[单击此处](https://assets.zilliz.com/prepared_parquet_data.parquet)下载样例数据进行参考。
 
@@ -99,13 +99,13 @@ Zilliz Cloud 支持导入 JSON、Parquet 和 NumPy 数据。如果您的数据�
 
 一组合法的 NumPy 文件应该和目标 Collection 的 Schema 中定义的列同名，文件中存放的数据应符合列定义。
 
-|  __项目__                   |  __描述__                                               |
+|  **项目**                   |  **描述**                                               |
 | ------------------------- | ----------------------------------------------------- |
-|  __多文件导入（单批次）__           |  支持                                                   |
-|  __读取子目录下的文件（仅一层）__       |  支持                                                   |
-|  __子目录下最大文件数量（仅一层）__      |  100                                                  |
-|  __最大文件大小（单批次）__<br/>  |  - 总大小： 100 GB<br/> - 每个一层子目录下的文件大小： 10 GB<br/> |
-|  __数据文件存放位置__             |  仅远程                                                  |
+|  **多文件导入（单批次）**           |  支持                                                   |
+|  **读取子目录下的文件（仅一层）**       |  支持                                                   |
+|  **子目录下最大文件数量（仅一层）**      |  100                                                  |
+|  **最大文件大小（单批次）**<br/>  |  - 总大小： 100 GB<br/> - 每个一层子目录下的文件大小： 10 GB<br/> |
+|  **数据文件存放位置**             |  仅远程                                                  |
 
 ![numpy_file_structure_zh](/img/numpy_file_structure_zh.png)
 
@@ -127,7 +127,7 @@ Zilliz Cloud 支持通过 Zilliz Cloud 控制台，RESTful API 以及 SDK 批量
 
 ### 从本地导入{#from-local-folders}
 
-Zilliz Cloud 支持在 Zilliz Cloud 控制台中从本地导入满足上述要求的 JSON 文件。如下图所示，您可以拖放准备好的数据文件到 __Import Data__ 对话框或单击 __upload a file __并选择该文件，然后单击 __Import__ 将文件中的数据导入到目标 Collection 中。
+Zilliz Cloud 支持在 Zilliz Cloud 控制台中从本地导入满足上述要求的 JSON 文件。如下图所示，您可以拖放准备好的数据文件到 **Import Data** 对话框或单击 **upload a file **并选择该文件，然后单击 **Import** 将文件中的数据导入到目标 Collection 中。
 
 ![data-import-on-console_zh](/img/data-import-on-console_zh.png)
 
@@ -145,17 +145,17 @@ Zilliz Cloud 还支持通过 Zilliz Cloud 控制台或使用 RESTful API / SDK �
 
 - 对象访问 URI
 
-    |  __地域__               |  __URI__                                            |  __地域 ID__         |
+    |  **地域**               |  **URI**                                            |  **地域 ID**         |
     | --------------------- | --------------------------------------------------- | ------------------ |
-    |  __华东1（杭州）__<br/>  |  `https://bucket-name.oss-cn-hangzhou.aliyuncs.com` |  `oss-cn-hangzhou` |
-    |  __华北2（北京）__          |  `https://bucket-name.oss-cn-beijing.aliyuncs.com`  |  `oss-cn-beijing`  |
-    |  __华南1（深圳）__          |  `https://bucket-name.oss-cn-shenzhen.aliyuncs.com` |  `oss-cn-shenzhen` |
+    |  **华东1（杭州）**<br/>  |  `https://bucket-name.oss-cn-hangzhou.aliyuncs.com` |  `oss-cn-hangzhou` |
+    |  **华北2（北京）**          |  `https://bucket-name.oss-cn-beijing.aliyuncs.com`  |  `oss-cn-beijing`  |
+    |  **华南1（深圳）**          |  `https://bucket-name.oss-cn-shenzhen.aliyuncs.com` |  `oss-cn-shenzhen` |
 
 - 示例
 
-    |  __文件类型__    |  __路径示例__                                                                                                                                                 |
+    |  **文件类型**    |  **路径示例**                                                                                                                                                 |
     | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    |  __JSON__    |  `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder`<br/> `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/data.json`          |
-    |  __NumPy__   |  `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/numpy-folder`<br/> `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/numpy-folder/*.npy`            |
-    |  __Parquet__ |  `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder`<br/> `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder/data.parquet` |
+    |  **JSON**    |  `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder`<br/> `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/data.json`          |
+    |  **NumPy**   |  `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/numpy-folder`<br/> `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/numpy-folder/*.npy`            |
+    |  **Parquet** |  `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder`<br/> `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder/data.parquet` |
 

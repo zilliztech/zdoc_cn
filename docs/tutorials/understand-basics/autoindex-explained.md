@@ -12,9 +12,9 @@ import Admonition from '@theme/Admonition';
 
 # AUTOINDEX
 
-为满足用户不同需求，Zilliz Cloud 提供 2 种类型的集群 CU——性能型和容量型。但是，为不同类型 CU 集群中的 Collection 创建索引时，通常需要根据所选择的 CU 类型调整索引参数。为了方便您创建索引，免去调节参数的麻烦，Zilliz Cloud 使用 __AUTOINDEX__ 的索引类型。
+为满足用户不同需求，Zilliz Cloud 提供 2 种类型的集群 CU——性能型和容量型。但是，为不同类型 CU 集群中的 Collection 创建索引时，通常需要根据所选择的 CU 类型调整索引参数。为了方便您创建索引，免去调节参数的麻烦，Zilliz Cloud 使用 **AUTOINDEX** 的索引类型。
 
-__AUTOINDEX__ 是Zilliz Cloud 独有的索引类型，可以帮助您获取最佳搜索性能。当您在 Zilliz Cloud 上为 Collection 中的向量字段创建索引时，会自动应用 __AUTOINDEX__ 索引。
+**AUTOINDEX** 是Zilliz Cloud 独有的索引类型，可以帮助您获取最佳搜索性能。当您在 Zilliz Cloud 上为 Collection 中的向量字段创建索引时，会自动应用 **AUTOINDEX** 索引。
 
 ## 特性与收益{#features-and-benefits}
 
@@ -91,4 +91,4 @@ search_params = {
 
 ## 总结{#conclusion}
 
-希望您能通过阅读本教程，了解什么是 __AUTOINDEX__，以及如何使用 __AUTOINDEX__ 简化在 Zilliz Cloud 上创建索引和搜索向量的流程。选择 __AUTOINDEX__ 后，您无需根据集群 CU 类型考虑选择何种索引类型。Zilliz Cloud 为自动为您选择最优的搜索和索引配置，帮助您节省时间和精力。如对 __AUTOINDEX__ 有任何疑问，欢迎通过 [support@zilliz.com](mailto:support@zilliz.com) 联系我们。
+希望您能通过阅读本教程，了解什么是 **AUTOINDEX**，以及如何使用 **AUTOINDEX** 简化在 Zilliz Cloud 上创建索引和搜索向量的流程。选择 **AUTOINDEX** 后，您无需根据集群 CU 类型考虑选择何种索引类型。Zilliz Cloud 为自动为您选择最优的搜索和索引配置，帮助您节省时间和精力。如对 **AUTOINDEX** 有任何疑问，欢迎通过 [support@zilliz.com](mailto:support@zilliz.com) 联系我们。

@@ -16,11 +16,11 @@ import Admonition from '@theme/Admonition';
 
 ## 通过 Web 控制台{#via-web-console} 
 
-1. 点击 Search Pipeline 右侧的 "▶︎" 按钮。 或者您可以点击 __Playground__ 选项卡。
+1. 点击 Search Pipeline 右侧的 "▶︎" 按钮。 或者您可以点击 **Playground** 选项卡。
 
 ![run-pipeline-cn](/img/run-pipeline-cn.png)
 
-1. 配置参数，点击__运行__。
+1. 配置参数，点击**运行**。
 
 1. 查看运行结果。
 
@@ -59,9 +59,9 @@ curl --request POST \
 
 - `params`: 搜索相关参数。
 
-    - `limit`: 返回的 Entity 数量。该参数值为 1-100 之间的整数。`limit` 和 `offset` 参数值总和应小于 __1024。__
+    - `limit`: 返回的 Entity 数量。该参数值为 1-100 之间的整数。`limit` 和 `offset` 参数值总和应小于 **1024。**
 
-    - `offset`: 在搜索结果中跳过的 Entity 数量。最大值为 __1024__。`limit` 和 `offset` 参数值总和应小于 __1024。__
+    - `offset`: 在搜索结果中跳过的 Entity 数量。最大值为 **1024**。`limit` 和 `offset` 参数值总和应小于 **1024。**
 
     - `outputFields`: 在搜索结果中一同返回的输出字段。`id`、`distance` 和 `chunk_text`为默认输出字段。
 

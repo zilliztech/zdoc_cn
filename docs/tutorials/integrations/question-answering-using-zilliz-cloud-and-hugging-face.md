@@ -16,7 +16,7 @@ import Admonition from '@theme/Admonition';
 
 ## 准备工作{#before-you-start}
 
-本示例中的脚本需要安装 __pymilvus__，__transformers__ 和 __datasets__。其中，__transformers__ 和 __datasets__ 是 HuggingFace 提供的用于创建流水线的开发包，__pymilvus__ 是 Zilliz Cloud的 Python 客户端，如果你的系统中没有安装这些依赖，可以使用如下命令完成安装。
+本示例中的脚本需要安装 **pymilvus**，**transformers** 和 **datasets**。其中，**transformers** 和 **datasets** 是 HuggingFace 提供的用于创建流水线的开发包，**pymilvus** 是 Zilliz Cloud的 Python 客户端，如果你的系统中没有安装这些依赖，可以使用如下命令完成安装。
 
 ```shell
 pip install transformers datasets pymilvus torch
@@ -37,25 +37,25 @@ import time
 在这里，我们定义了一些示例中将要使用的主要参数。你需要根据实际情况和参数旁的注释填写或替换成相应的内容。
 
 ```python
-__# 1. Set the name of a dataset available on HuggingFace.__
+**# 1. Set the name of a dataset available on HuggingFace.**
 DATASET = 'squad' 
 
-__# 2. Set parameters for the generation of a subset of the dataset.__
+**# 2. Set parameters for the generation of a subset of the dataset.**
 MODEL = 'bert-base-cased'
 TOKENIZATION_BATCH_SIZE = 1000
 INFERENCE_BATCH_SIZE = 64
 INSERT_RATIO = 0.01
 
-__# 3. Set up the name of the collection to be created.__
+**# 3. Set up the name of the collection to be created.**
 COLLECTION_NAME = 'huggingface_db'
 
-__# 4. Set up the dimension of the embeddings.__
+**# 4. Set up the dimension of the embeddings.**
 DIMENSION = 768
 
-__# 5. Set the number of records to return.__
+**# 5. Set the number of records to return.**
 LIMIT = 100
 
-__# 6. Set up the connection parameters for your Zilliz Cloud cluster.__
+**# 6. Set up the connection parameters for your Zilliz Cloud cluster.**
 URI = 'YOUR_CLUSTER_ENDPOINT'
 TOKEN = 'YOUR_CLUSTER_TOKEN'
 ```

@@ -12,13 +12,13 @@ import Admonition from '@theme/Admonition';
 
 # 版本说明书（2024/02/27）
 
-__发布日期：2024 年 02 月 27 日__
+**发布日期：2024 年 02 月 27 日**
 
 我们很高兴地宣布 Zilliz Cloud 发布新的版本。此版本引入了一系列增强和功能更新。主要包括
 
 ## Milvus 兼容性{#milvus-compatibility}
 
-此次发布兼容 __Milvus 2.3.x__。
+此次发布兼容 **Milvus 2.3.x**。
 
 ## Pipelines{#pipelines}
 
@@ -26,11 +26,11 @@ __发布日期：2024 年 02 月 27 日__
 
 Zilliz Cloud Pipelines 分为如下三种类型：
 
-- __Ingestion pipeline__ 是处理非结构化数据的主力军，它将非结构化数据转换为可搜索的矢量嵌入，并将其输入 Zilliz 矢量数据库进行存储和检索。
+- **Ingestion pipeline** 是处理非结构化数据的主力军，它将非结构化数据转换为可搜索的矢量嵌入，并将其输入 Zilliz 矢量数据库进行存储和检索。
 
-- __Search pipelines__ 可将查询字符串转换为向量嵌入，并将其发送到 Zilliz 云，以检索前 K 个最相似的向量，从而促进语义搜索。
+- **Search pipelines** 可将查询字符串转换为向量嵌入，并将其发送到 Zilliz 云，以检索前 K 个最相似的向量，从而促进语义搜索。
 
-- __Deletion Pipeline__ 允许您从 Zilliz 云收藏中删除指定文档中的所有块，让您完全控制自己的数据，并释放 Zilliz 收藏的存储容量。
+- **Deletion Pipeline** 允许您从 Zilliz 云收藏中删除指定文档中的所有块，让您完全控制自己的数据，并释放 Zilliz 收藏的存储容量。
 
 要了解更多信息，请参阅[本文档](./pipelines)。
 

@@ -26,6 +26,6 @@ sidebar_position: 12
 
 1. 连接 Zilliz Cloud 集群时，请确保使用正确的用户名和密码。
 
-1. 如忘记密码，请点击想要连接的集群并切换至 __Users__ 选项卡。点击 __+ User__ 以创建新用户和密码。
+1. 如忘记密码，请点击想要连接的集群并切换至 **Users** 选项卡。点击 **+ User** 以创建新用户和密码。
 
     ![add-cluster-user-cn](/img/add-cluster-user-cn.png)

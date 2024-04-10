@@ -17,7 +17,7 @@ import TabItem from '@theme/TabItem';
 
 ## 概述{#overview}
 
-Zilliz Cloud 采用 ANN 算法来处理向量搜索请求，支持搜索并返回与指定查询向量最相似的前 _K_ 个 Entity。为优化性能和吞吐，Zilliz Cloud 支持批量搜索，即同时指定多个查询向量并行搜索。您可以定义布尔表达式来缩小 ANN 搜索的范围。
+Zilliz Cloud 采用 ANN 算法来处理向量搜索请求，支持搜索并返回与指定查询向量最相似的前 *K* 个 Entity。为优化性能和吞吐，Zilliz Cloud 支持批量搜索，即同时指定多个查询向量并行搜索。您可以定义布尔表达式来缩小 ANN 搜索的范围。
 
 ## 开始前{#before-you-start}
 
@@ -31,7 +31,7 @@ Zilliz Cloud 采用 ANN 算法来处理向量搜索请求，支持搜索并返�
 
 ### 单向量搜索{#single-vector-search}
 
-单向量搜索是指搜索并返回与指定的某个查询向量最相似的前 _K_ 个Entity。
+单向量搜索是指搜索并返回与指定的某个查询向量最相似的前 *K* 个Entity。
 
 以下是单向量搜索的示例代码：
 
@@ -1952,7 +1952,7 @@ func main() {
     </TabItem>
     </Tabs>
 
-- 搜索由 __Towards Data Science__ 发布的文章：
+- 搜索由 **Towards Data Science** 发布的文章：
 
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"Bash","value":"bash"}]}>
     <TabItem value='python'>
@@ -2372,7 +2372,7 @@ func main() {
     </TabItem>
     </Tabs>
 
-- 搜索不是由 __Towards Data Science__ 和 __Personal Growth__ 发布的文章：
+- 搜索不是由 **Towards Data Science** 和 **Personal Growth** 发布的文章：
 
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"Bash","value":"bash"}]}>
     <TabItem value='python'>
@@ -2778,7 +2778,7 @@ func main() {
     </TabItem>
     </Tabs>
 
-- 搜索标题以 __Top__ 开头的文章：
+- 搜索标题以 **Top** 开头的文章：
 
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"Bash","value":"bash"}]}>
     <TabItem value='python'>
@@ -3166,7 +3166,7 @@ func main() {
     </TabItem>
     </Tabs>
 
-- 搜索由 __Towards Data Science__ 发布的文章，且文章拥有超过 1500 个回应（`responses`）和 15 个点赞（`claps`）或阅读时间在 10 到 15 分钟内：
+- 搜索由 **Towards Data Science** 发布的文章，且文章拥有超过 1500 个回应（`responses`）和 15 个点赞（`claps`）或阅读时间在 10 到 15 分钟内：
 
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"Bash","value":"bash"}]}>
     <TabItem value='python'>

@@ -94,20 +94,20 @@ print(res)
 ```python
 from pymilvus import connections, FieldSchema, CollectionSchema, DataType, Collection, utility
 
-CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT" _# Set your cluster endpoint_
-TOKEN="YOUR_CLUSTER_TOKEN" _# Set your token_
-COLLECTION_NAME="medium_articles_2020" _# Set your collection name_
-DATASET_PATH="../medium_articles_2020_dpr.json" _# Set your dataset path_
+CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT" *# Set your cluster endpoint*
+TOKEN="YOUR_CLUSTER_TOKEN" *# Set your token*
+COLLECTION_NAME="medium_articles_2020" *# Set your collection name*
+DATASET_PATH="../medium_articles_2020_dpr.json" *# Set your dataset path*
 
 connections.connect(
   alias='default', 
-  _#  Public endpoint obtained from Zilliz Cloud_
+  *#  Public endpoint obtained from Zilliz Cloud*
   uri=CLUSTER_ENDPOINT,
-  _# API key or a colon-separated cluster username and password_
+  *# API key or a colon-separated cluster username and password*
   token=TOKEN, 
 )
 
-_# 1. Define fields_
+*# 1. Define fields*
 fields = [
     FieldSchema(name="id", dtype=DataType.INT64, is_primary=True),
     FieldSchema(name="title", dtype=DataType.VARCHAR, max_length=512),   
@@ -119,14 +119,14 @@ fields = [
     FieldSchema(name="responses", dtype=DataType.INT64)
 ]
 
-_# 2. Build the schema_
+*# 2. Build the schema*
 schema = CollectionSchema(
     fields,
     description="Schema of Medium articles",
     enable_dynamic_field=False
 )
 
-_# 3. Create collection_
+*# 3. Create collection*
 collection = Collection(
     name=COLLECTION_NAME, 
     description="Medium articles published between Jan and August in 2020 in prominent publications",
@@ -322,7 +322,7 @@ Zilliz Cloud 目前支持以下类型的数据：
 
 ## 使用限制{#limits}
 
-|  __类型__         |  __最大数量__                         |  __描述__                                                                 |
+|  **类型**         |  **最大数量**                         |  **描述**                                                                 |
 | --------------- | --------------------------------- | ----------------------------------------------------------------------- |
 |  企业版集群<br/>  |  每 CU：\<= 64<br/> 每集群：\<= 4096 |  在企业版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。 |
 

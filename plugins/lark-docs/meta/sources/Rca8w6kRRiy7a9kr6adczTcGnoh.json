@@ -5,7 +5,7 @@
   "node_token": "Rca8w6kRRiy7a9kr6adczTcGnoh",
   "node_type": "origin",
   "obj_create_time": "1705889155",
-  "obj_edit_time": "1708662338",
+  "obj_edit_time": "1712721029",
   "obj_token": "E8s7dU4GHomf2zx6t24cxdbqnld",
   "obj_type": "docx",
   "origin_node_token": "Rca8w6kRRiy7a9kr6adczTcGnoh",
@@ -1877,7 +1877,8 @@
         "block_id": "FkwvdbPfkoUikAxl2WhcwiI6nwO",
         "block_type": 32,
         "children": [
-          "HSOndYlXYoXiyVxQAaScKoSpn5c"
+          "HSOndYlXYoXiyVxQAaScKoSpn5c",
+          "FCLjdcwqcoR4pnxnSn9caBgAnTg"
         ],
         "parent_id": "Wr2rdj7u6oIQQWx3xTsckBwonIh",
         "table_cell": {}
@@ -1890,7 +1891,56 @@
           "elements": [
             {
               "text_run": {
-                "content": "每秒 Search 和 Query 请求数。Query 请求没有 VPS，因为 Query 过程不涉及到向量。",
+                "content": "QPS",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：每秒读取请求（search 和 query）的数量。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FCLjdcwqcoR4pnxnSn9caBgAnTg",
+        "block_type": 2,
+        "parent_id": "FkwvdbPfkoUikAxl2WhcwiI6nwO",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "VPS",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：每秒向量读取请求的数量。VPS 不适用于 query 请求，因为 query 操作不涉及向量。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2040,20 +2090,70 @@
         "block_id": "XPItdmKFQoj6NixjdNicnsTgnpe",
         "block_type": 32,
         "children": [
-          "I59UdJUDNoFb7UxNuSYc8ijgnCf"
+          "Y2pjdOx7oopSzQxFA7Dc9XoXnch",
+          "Y4eFdnpAAofRPXxndAHcuzQuncf"
         ],
         "parent_id": "Wr2rdj7u6oIQQWx3xTsckBwonIh",
         "table_cell": {}
       },
       {
-        "block_id": "I59UdJUDNoFb7UxNuSYc8ijgnCf",
+        "block_id": "Y2pjdOx7oopSzQxFA7Dc9XoXnch",
         "block_type": 2,
         "parent_id": "XPItdmKFQoj6NixjdNicnsTgnpe",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "每秒 Insert 和 Upsert 类型请求数。",
+                "content": "QPS",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：每秒写入请求（insert、bulk insert、upsert 和 delete）的数量。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Y4eFdnpAAofRPXxndAHcuzQuncf",
+        "block_type": 2,
+        "parent_id": "XPItdmKFQoj6NixjdNicnsTgnpe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "VPS",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "：每秒向量写入请求（insert、bulk insert、upsert 和 delete）的数量。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2488,7 +2588,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "超时读请求数占比。",
+                "content": "超时读请求（search 和 query）在每秒所有读请求中所占的百分比。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -2639,7 +2739,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "超时写请求数占比。",
+                "content": "超时写请求（insert、bulk insert、upsert 和 delete）在每秒所有写请求中所占的百分比。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -8923,6 +9023,6 @@
         "parent_id": "E8s7dU4GHomf2zx6t24cxdbqnld"
       }
     ],
-    "counts": 401
+    "counts": 403
   }
 }

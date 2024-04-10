@@ -17,7 +17,7 @@ import TabItem from '@theme/TabItem';
 
 - 如何定义 Schema 及创建导入任务的目标 Collection
 
-- 如何使用 __BulkWriter__ 准备源数据并将其写入远程对象存储桶
+- 如何使用 **BulkWriter** 准备源数据并将其写入远程对象存储桶
 
 - 如果调用批量导入 API 将准备好的源数据导入目标 Collection
 
@@ -33,7 +33,7 @@ import TabItem from '@theme/TabItem';
 
 ### 安装依赖{#install-dependencies}
 
-在终端中运行以下命令安装 __pymilvus__ 和 __minio__ 或将它们升级到最新的版本。
+在终端中运行以下命令安装 **pymilvus** 和 **minio** 或将它们升级到最新的版本。
 
 ```shell
 python3 -m pip install --upgrade pymilvus minio
@@ -82,7 +82,7 @@ curl https://assets.zilliz.com/doc-assets/medium_articles_partial_a13e0f2a.csv \
 
 下表详细描述了该数据集的结构及第一行数据各列的取值。
 
-|  __字段名称__     |  __字段类型__     |  __字段属性__        |  __样例取值__                                          |
+|  **字段名称**     |  **字段类型**     |  **字段属性**        |  **样例取值**                                          |
 | ------------- | ------------- | ---------------- | -------------------------------------------------- |
 |  id           |  INT64        |  N/A             |  0                                                 |
 |  title_vector |  FLOAT_VECTOR |  Dimension: 768  |  [0.041732933, 0.013779674, -0.027564144, -0.01... |
@@ -128,11 +128,11 @@ schema.add_field(field_name="link", datatype=DataType.VARCHAR, max_length=512)
 
 - `auto_id=False`
 
-    该参数默认值为 __False__，表示主键不会随数据插入自动增长。将其设置为 __True__ 可阻止 __BulkWriter__ 在生成的文件中包含主键。
+    该参数默认值为 **False**，表示主键不会随数据插入自动增长。将其设置为 **True** 可阻止 **BulkWriter** 在生成的文件中包含主键。
 
 - `enable_dynamic_field=True`
 
-    该参数默认为 __False__，表示 Schema 中未定义的字段将会被忽略。将其设置为 __True__ 将允许 __BulkWriter __将未在 Schema 中定义的字段以键值对的形式存储到一个名为__ $meta__ 的预留 JSON 字段中。
+    该参数默认为 **False**，表示 Schema 中未定义的字段将会被忽略。将其设置为 **True** 将允许 **BulkWriter **将未在 Schema 中定义的字段以键值对的形式存储到一个名为** $meta** 的预留 JSON 字段中。
 
 在创建 Schema 后，就可以继续创建目标 Collection 了。
 
@@ -169,11 +169,11 @@ client.create_collection(
 
 ## 准备源数据{#prepare-source-data}
 
-__BulkWriter__ 会将您提供的数据转换成 JSON、Parquet 或 NumPy 文件。在下面的示例中，我们将创建一个 __RemoteBulkWriter__ 并使用该 __RemoteBulkWriter__ 将您的数据转换成上述格式。
+**BulkWriter** 会将您提供的数据转换成 JSON、Parquet 或 NumPy 文件。在下面的示例中，我们将创建一个 **RemoteBulkWriter** 并使用该 **RemoteBulkWriter** 将您的数据转换成上述格式。
 
 ### 创建 RemoteBulkWriter{#create-remotebulkwriter}
 
-当 Schema 准备好后，就可以使用该 Schema 创建 __RemoteBulkWriter__ 了。由于 __RemoteBulkWriter__ 需要访问您的远程对象存储桶。因此，您需要先设置好连接远程对象存储桶的 __ConnectParam__ 对象并在创建 __RemoteBulkWriter__ 时引用该参数。
+当 Schema 准备好后，就可以使用该 Schema 创建 **RemoteBulkWriter** 了。由于 **RemoteBulkWriter** 需要访问您的远程对象存储桶。因此，您需要先设置好连接远程对象存储桶的 **ConnectParam** 对象并在创建 **RemoteBulkWriter** 时引用该参数。
 
 <Tabs groupId="python" defaultValue='python' values={[{"label":"AWS S3/GCS","value":"python"},{"label":"Microsoft Azure","value":"python_1"}]}>
 <TabItem value='python'>
@@ -233,7 +233,7 @@ conn = RemoteBulkWriter.AzureConnectParam(
 
 </Admonition>
 
-然后，在创建 __RemoteBulkWriter__ 时需要引用上述 __ConnectParam__ 对象。
+然后，在创建 **RemoteBulkWriter** 时需要引用上述 **ConnectParam** 对象。
 
 ```python
 writer = RemoteBulkWriter(
@@ -256,25 +256,25 @@ writer = RemoteBulkWriter(
 
     此参数决定了生成文件在远程对象存储桶中的输出路径。
 
-    将其设置为 `"/"` 会使 __RemoteBulkWriter__ 将生成的文件放入远程对象存储桶的根目录下。若需放入其它路径，请使用相对于桶根目录的相对路径。
+    将其设置为 `"/"` 会使 **RemoteBulkWriter** 将生成的文件放入远程对象存储桶的根目录下。若需放入其它路径，请使用相对于桶根目录的相对路径。
 
 - `file_type=BulkFileType.PARQUET`
 
     此参数决定了生成文件的文件类型。可选值如下：
 
-    - __BulkFileType.JSON_RB__
+    - **BulkFileType.JSON_RB**
 
-    - __BulkFileType.PARQUET__
+    - **BulkFileType.PARQUET**
 
-    - __BulkFileType.NPY__
+    - **BulkFileType.NPY**
 
 - `segment_size=512*1024*1024`
 
-    此参数决定了 __BulkWriter __如何对原始数据进行分段。该参数默认值为 512 MB (512 * 1024 * 1024)。如果您的数据集包含数据量较大时，可以考虑使用该参数对数据进行合理分段。
+    此参数决定了 **BulkWriter **如何对原始数据进行分段。该参数默认值为 512 MB (512 * 1024 * 1024)。如果您的数据集包含数据量较大时，可以考虑使用该参数对数据进行合理分段。
 
 ### 使用 Writer{#use-the-writer}
 
-__Writer__ 对象有两个方法：一个是将原始数据以行的形式添加到缓存中，另一个则是将缓存中的数据写入到远程对象存储桶中。
+**Writer** 对象有两个方法：一个是将原始数据以行的形式添加到缓存中，另一个则是将缓存中的数据写入到远程对象存储桶中。
 
 您可以参考如下代码将原始数据以行的形式添加到缓存中。
 
@@ -289,11 +289,11 @@ for i in range(len(df)):
     writer.append_row(row)
 ```
 
-如上述代码所示，__accept_row()__ 方法接收一个字典。该字典以键值对的形式表示一条数据。
+如上述代码所示，**accept_row()** 方法接收一个字典。该字典以键值对的形式表示一条数据。
 
 需要注意的是，该字典需要包含所有在 Schema 中定义了的字段。如果 Schema 中还开启了动态字段，该字典还允许携带 Schema 中未定义的字段。具体内容，可参考[使用 BulkWriter](./use-bulkwriter)。
 
-您还需要调用 __commit()__ 方法才能将缓存中的数据写入到远程对象存储桶中。
+您还需要调用 **commit()** 方法才能将缓存中的数据写入到远程对象存储桶中。
 
 ```python
 writer.commit()
@@ -309,7 +309,7 @@ print(writer.data_path)
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>__BulkWriter __生成一个 UUID，并使用该 UUID 在指定的输入路径下创建一个子路径，然后将生成的文件放在创建的子路径下。</p>
+<p>**BulkWriter **生成一个 UUID，并使用该 UUID 在指定的输入路径下创建一个子路径，然后将生成的文件放在创建的子路径下。</p>
 
 </Admonition>
 
@@ -398,7 +398,7 @@ while res.json()["data"]["readyPercentage"] < 1:
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>上述代码中，参数 __url __为 Zilliz Cloud RESTful API 的服务器路径，其取值须与目标 Collection 所在云地域保持一致。</p>
+<p>上述代码中，参数 **url **为 Zilliz Cloud RESTful API 的服务器路径，其取值须与目标 Collection 所在云地域保持一致。</p>
 
 </Admonition>
 
@@ -443,11 +443,11 @@ print(res.json())
 
 - 在导入数据前，请确保 Zilliz Cloud 集群和 BulkWriter 的输出路径所在对象存储桶由同一家云服务提供商托管。
 
-- 在使用 __BulkWriter__ 时，请注意：
+- 在使用 **BulkWriter** 时，请注意：
 
-    - 在 __append_row()__ 中，务必确保参数字典中包含所有 Schema 中定义的字段。如果 Schema 还允许动态字段，您还可以在该字典中包含未在 Schema 中定义的字段。
+    - 在 **append_row()** 中，务必确保参数字典中包含所有 Schema 中定义的字段。如果 Schema 还允许动态字段，您还可以在该字典中包含未在 Schema 中定义的字段。
 
-    - 在将所有数据添加到缓存中后，还需要调用 __commit()__ 方法才能将转换好的数据上传到指定的远程对象存储桶中。
+    - 在将所有数据添加到缓存中后，还需要调用 **commit()** 方法才能将转换好的数据上传到指定的远程对象存储桶中。
 
-- 在使用 __bulk_import()__ 函数时，您需要将桶名称、桶中文件或目录的外部访问域名，以及 Writer 返回的路径拼接在一起合成一个合法的 __object_url__。
+- 在使用 **bulk_import()** 函数时，您需要将桶名称、桶中文件或目录的外部访问域名，以及 Writer 返回的路径拼接在一起合成一个合法的 **object_url**。
 

@@ -176,7 +176,7 @@ curl --location --request POST "${PUBLIC_ENDPOINT}/v1/vector/collections/create"
 
 ## 查看 Collection{#view-collections}
 
-您可以通过调用 __DescribeCollection__ API 来查看 Collection 信息。__DescribeCollection__ 返回指定 Collection 详情。
+您可以通过调用 **DescribeCollection** API 来查看 Collection 信息。**DescribeCollection** 返回指定 Collection 详情。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Bash","value":"bash"}]}>
 <TabItem value='python'>
@@ -368,7 +368,7 @@ curl --request GET \
 
 ## 插入数据{#insert-data}
 
-在集群中，使用上述方式创建的 Collection 包含 2 个必填字段，__id__（主键）和 __vector__（embedding 向量）。Zilliz Cloud 默认为该 Collection 启用动态 Schema。 这意味着，无需修改现有 Schema，您便可将包含未预先定义的字段的 Entity 插入到 Collection 中。
+在集群中，使用上述方式创建的 Collection 包含 2 个必填字段，**id**（主键）和 **vector**（embedding 向量）。Zilliz Cloud 默认为该 Collection 启用动态 Schema。 这意味着，无需修改现有 Schema，您便可将包含未预先定义的字段的 Entity 插入到 Collection 中。
 
 以下示例中，我们使用的数据集包含了 2020 年 1 月至 8 月在 [Medium.com](http://medium.com/) 上发布的 5,000 余篇文章。您可以点击[此处](https://s3.us-west-2.amazonaws.com/publicdataset.zillizcloud.com/medium_articles_2020_dpr/medium_articles_2020_dpr.json)下载数据集。更多示例数据集详情，请参见 [Kaggle 介绍页面](https://www.kaggle.com/datasets/shiyu22chen/cleaned-medium-articles-dataset)。
 
@@ -843,7 +843,7 @@ curl --request GET \
 
 ### 向量搜索（ANN 搜索）{#perform-an-ann-search}
 
-示例数据集中的 __vector__ 字段包含了由每篇文章标题转化而来的向量。以下示例展示如何对向量数据进行 ANN 搜索，从而找到与查询标题含义最相似的文章标题。
+示例数据集中的 **vector** 字段包含了由每篇文章标题转化而来的向量。以下示例展示如何对向量数据进行 ANN 搜索，从而找到与查询标题含义最相似的文章标题。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Bash","value":"bash"}]}>
 <TabItem value='python'>
@@ -1424,9 +1424,9 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 标量查询__{#perform-a-query}__
+### 标量查询{#perform-a-query}
 
-除 __vector__ 字段以外，数据集中的所有字段均为标量字段。您可以对标量字段设置过滤条件，从而筛选所需数据。以下示例展示如何进行向量查询。
+除 **vector** 字段以外，数据集中的所有字段均为标量字段。您可以对标量字段设置过滤条件，从而筛选所需数据。以下示例展示如何进行向量查询。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Bash","value":"bash"}]}>
 <TabItem value='python'>
@@ -1603,7 +1603,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 根据 ID 获取 Entity__{#get-entities-by-ids}__
+### 根据 ID 获取 Entity{#get-entities-by-ids}
 
 您可以根据 Entity ID 获取特定 Entity。以下示例展示如何根据 ID 获取 Entity。
 

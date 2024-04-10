@@ -38,9 +38,9 @@ Pipelines 可以将非结构化数据转化为高质量的 Embedding 向量，�
 
 针对文本文档，Ingestion 和 Search Pipeline 提供多样化的 Embedding 模型选择。
 
-- __zilliz/bge-base-en-v1.5__（针对英语文档）：智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。
+- **zilliz/bge-base-en-v1.5**（针对英语文档）：智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。
 
-- __zilliz/bge-base-zh-v1.5__（针对中文文档）：智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。
+- **zilliz/bge-base-zh-v1.5**（针对中文文档）：智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。
 
 ### Zilliz Cloud Pipelines 如何收费？ \{#how-is-zilliz-cloud-pipelines-charged}
 

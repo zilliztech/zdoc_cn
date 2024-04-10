@@ -18,7 +18,7 @@ import Admonition from '@theme/Admonition';
 
 ### 通过 Web 控制台查看 Pipelines{#on-web-ui}
 
-点击左侧导航栏中的 __Pipelines__。选中 __Pipelines__ 选项卡。您可以查看所有已创建的 Pipelines 及其详情、用量等。
+点击左侧导航栏中的 **Pipelines**。选中 **Pipelines** 选项卡。您可以查看所有已创建的 Pipelines 及其详情、用量等。
 
 ![view-pipelines-on-web-ui-cn](/img/view-pipelines-on-web-ui-cn.png)
 
@@ -30,7 +30,7 @@ import Admonition from '@theme/Admonition';
 
 调用以下 API 查看所有 Pipelines 或查看某一特定 Pipeline 详情。
 
-- __查看所有 Pipelines__
+- **查看所有 Pipelines**
 
     根据以下示例并指定项目 ID `projectId`。了解[如何获取项目 ID](https://support.zilliz.com.cn/hc/zh-cn/articles/23085669594011-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E9%A1%B9%E7%9B%AE-ID)。
 
@@ -111,7 +111,7 @@ import Admonition from '@theme/Admonition';
     }
     ```
 
-- __查看特定 Pipeline 详情__
+- **查看特定 Pipeline 详情**
 
     根据以下示例查看某一 Pipeline 详情。
 
@@ -172,7 +172,7 @@ import Admonition from '@theme/Admonition';
 
 ### 通过 Web 控制台删除 Pipelines{#on-web-ui}
 
-如需删除不再使用的 Pipeline，请点击操作栏中的__“...”__按钮并选择__删除__。
+如需删除不再使用的 Pipeline，请点击操作栏中的**“...”**按钮并选择**删除**。
 
 ![delete-pipeline-cn](/img/delete-pipeline-cn.png)
 

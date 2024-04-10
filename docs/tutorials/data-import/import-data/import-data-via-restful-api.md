@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 
 - 如果数据类型为 NumPy，则可以选择一次上传多个文件，或将这些文件组织成一个文件夹，批量上传至 Zilliz Cloud 集群。请注意，每个子文件夹的大小不能超过 10 GB，父文件夹的大小不超过 100 GB。
 
-- 当组织多个文件的文件夹时，请确保文件夹中所有文件的数据类型均一致，并且文件夹含有不超过两个子目录。如果目标文件夹同时包含 JSON 和 NumPy 数据，或超过两个子目录，则在导入数据时会出现错误。如果文件夹同时包含 NumPy 文件和其他不支持的数据类型，则会忽略不支持的文件类型，仅导入 NumPy 文件。例如，您可以指定类似于 __/dataset1/__ 或 __/dataset2/sub/__ 的有效路径。
+- 当组织多个文件的文件夹时，请确保文件夹中所有文件的数据类型均一致，并且文件夹含有不超过两个子目录。如果目标文件夹同时包含 JSON 和 NumPy 数据，或超过两个子目录，则在导入数据时会出现错误。如果文件夹同时包含 NumPy 文件和其他不支持的数据类型，则会忽略不支持的文件类型，仅导入 NumPy 文件。例如，您可以指定类似于 **/dataset1/** 或 **/dataset2/sub/** 的有效路径。
 
 要将示例数据集转换为多个 NumPy 文件，请使用以下代码：
 
@@ -88,7 +88,7 @@ curl --request POST \
      }'
 ```
 
-在上述代码中，`${CLOUD_REGION_ID}` 代表您集群所在的云地域的 ID，`${TOKEN}` 是用于授权 API 请求的集群 API 密钥，`${CLUSTER_ID}` 是您的集群的 ID。在调用 API 时，请确保将这些占位符替换为您的实际值。您可以从集群的公共访问端点获取 `CLOUD_REGION_ID` 和 `CLUSTER_ID`。例如，在公共访问端点 __https://in03-3bf3c31f4248e22.api.gcp-us-west1.zillizcloud.com__ 中，`CLOUD_REGION_ID` 是 __gcp-us-west1__，`CLUSTER_ID` 是 __in03-3bf3c31f4248e22__。有关更多信息，请参见[管理集群](./manage-cluster)。
+在上述代码中，`${CLOUD_REGION_ID}` 代表您集群所在的云地域的 ID，`${TOKEN}` 是用于授权 API 请求的集群 API 密钥，`${CLUSTER_ID}` 是您的集群的 ID。在调用 API 时，请确保将这些占位符替换为您的实际值。您可以从集群的公共访问端点获取 `CLOUD_REGION_ID` 和 `CLUSTER_ID`。例如，在公共访问端点 **https://in03-3bf3c31f4248e22.api.gcp-us-west1.zillizcloud.com** 中，`CLOUD_REGION_ID` 是 **gcp-us-west1**，`CLUSTER_ID` 是 **in03-3bf3c31f4248e22**。有关更多信息，请参见[管理集群](./manage-cluster)。
 
 提交请求后，将返回任务 ID。您可以通过任务 ID 查询数据导入进度。示例代码如下：
 

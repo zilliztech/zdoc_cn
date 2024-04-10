@@ -18,7 +18,7 @@ import Admonition from '@theme/Admonition';
 
 ## 特定场景权限{#scenario-specific-privileges}
 
-|             |  __API__                       |  __GUI 操作__ |  __企业版__     |
+|             |  **API**                       |  **GUI 操作** |  **企业版**     |
 | ----------- | ------------------------------ | ----------- | ------------ |
 |  别名         |  alterAlias()                  |  ✘          |  ✔︎          |
 |             |  createAlias()                 |  ✘          |  ✔︎          |

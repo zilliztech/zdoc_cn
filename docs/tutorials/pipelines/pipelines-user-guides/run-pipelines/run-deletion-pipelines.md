@@ -16,11 +16,11 @@ import Admonition from '@theme/Admonition';
 
 ## 通过 Web 控制台{#via-web-console} 
 
-1. 点击 Deletion Pipeline 右侧的 "▶︎" 按钮。或者您可以点击 __Playground__ 选项卡。
+1. 点击 Deletion Pipeline 右侧的 "▶︎" 按钮。或者您可以点击 **Playground** 选项卡。
 
     ![run-pipeline-cn](/img/run-pipeline-cn.png)
 
-1. 在 `doc_name` 字段中输入需要删除的文档名称。点击__运行__。
+1. 在 `doc_name` 字段中输入需要删除的文档名称。点击**运行**。
 
 1. 查看运行结果。
 

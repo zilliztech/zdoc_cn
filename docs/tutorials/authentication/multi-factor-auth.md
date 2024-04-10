@@ -20,15 +20,15 @@ import Admonition from '@theme/Admonition';
 
 1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com.cn/login)。
 
-1. 点击界面右上角的人像符号。点击__账号设置__
+1. 点击界面右上角的人像符号。点击**账号设置**
 
 1. 打开多重身份验证旁的开关，出现弹窗“开启 MFA”。
 
-1. 输入您的账号密码，并点击__开启。__
+1. 输入您的账号密码，并点击**开启。**
 
     ![enable_mfa](/img/enable_mfa.png)
 
-1. 请前往您的账号邮箱接收验证码，在“验证身份”弹窗的输入框中输入验证码并点击__确认__。
+1. 请前往您的账号邮箱接收验证码，在“验证身份”弹窗的输入框中输入验证码并点击**确认**。
 
     <Admonition type="info" icon="📘" title="说明">
 
@@ -38,7 +38,7 @@ import Admonition from '@theme/Admonition';
 
 1. MFA 开启成功后，页面将自动跳转至登录页。
 
-1. 请在登录页输入您的账号邮箱和密码，并点击__登录__按钮。
+1. 请在登录页输入您的账号邮箱和密码，并点击**登录**按钮。
 
 1. 请前往您的账号邮箱接收验证码，并在多重身份验证窗口的输入框中输入验证码。
 
@@ -52,13 +52,13 @@ import Admonition from '@theme/Admonition';
 
 1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com.cn/login)。
 
-1. 点击界面右上角的人像符号。点击__账号设置__
+1. 点击界面右上角的人像符号。点击**账号设置**
 
-1. 关闭多重身份验证旁的开关，出现弹窗“关闭 MFA”。点击__关闭__按钮以确认关闭 MFA。
+1. 关闭多重身份验证旁的开关，出现弹窗“关闭 MFA”。点击**关闭**按钮以确认关闭 MFA。
 
     ![disable_mfa](/img/disable_mfa.png)
 
-1. 请前往您的账号邮箱接收验证码，在“关闭 MFA”弹窗的输入框中输入验证码并点击__关闭__。
+1. 请前往您的账号邮箱接收验证码，在“关闭 MFA”弹窗的输入框中输入验证码并点击**关闭**。
 
     <Admonition type="info" icon="📘" title="说明">
 

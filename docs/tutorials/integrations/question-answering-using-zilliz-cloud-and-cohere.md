@@ -16,7 +16,7 @@ import Admonition from '@theme/Admonition';
 
 ## 准备工作{#before-you-start}
 
-本示例中的脚本需要安装 __pymilvus__，__cohere__，__pandas__，__numpy__ 和 __tqdm__。其中，__pymilvus__ 是 Zilliz Cloud的 Python 客户端，如果你的系统中没有安装它们，可以使用如下命令完成安装。
+本示例中的脚本需要安装 **pymilvus**，**cohere**，**pandas**，**numpy** 和 **tqdm**。其中，**pymilvus** 是 Zilliz Cloud的 Python 客户端，如果你的系统中没有安装它们，可以使用如下命令完成安装。
 
 ```shell
 pip install pymilvus cohere pandas numpy tqdm openai tiktoken
@@ -38,27 +38,27 @@ import time, os, json
 在这里，我们定义了一些示例中将要使用的主要参数。你需要根据实际情况和参数旁的注释填写或替换成相应的内容。
 
 ```python
-__# 1. Set the The SQuAD dataset url.__
+**# 1. Set the The SQuAD dataset url.**
 FILE = 'https://rajpurkar.github.io/SQuAD-explorer/dataset/train-v2.0.json' 
 
-__# 2. Set up the name of the collection to be created.__
+**# 2. Set up the name of the collection to be created.**
 COLLECTION_NAME = 'question_answering_db'
 
-__# 3. Set up the dimension of the embeddings.__
+**# 3. Set up the dimension of the embeddings.**
 DIMENSION = 768
 
-__# 4. Set the number of entities to create and the number of entities to insert at a time.__
+**# 4. Set the number of entities to create and the number of entities to insert at a time.**
 COUNT = 5000
 BATCH_SIZE = 96
 
-__# 5. Set up the cohere api key__
+**# 5. Set up the cohere api key**
 COHERE_API_KEY = "YOUR_COHERE_API_KEY"
 
-__# 6. Set up the connection parameters for your Zilliz Cloud cluster.__
+**# 6. Set up the connection parameters for your Zilliz Cloud cluster.**
 URI = 'YOUR_CLUSTER_ENDPOINT'
 
-__# 7. Set up the token for your Zilliz Cloud cluster.__
-__# You can either use an API key or a set of cluster username and password joined by a colon.__
+**# 7. Set up the token for your Zilliz Cloud cluster.**
+**# You can either use an API key or a set of cluster username and password joined by a colon.**
 TOKEN = 'YOUR_CLUSTER_TOKEN'
 ```
 
@@ -66,7 +66,7 @@ TOKEN = 'YOUR_CLUSTER_TOKEN'
 
 ## 准备数据{#prepare-dataset}
 
-在本例中，我们将使用SQuAD数据集做为回答问题的信源。数据集的原始格式为JSON，我们会使用__pandas__加载该数据集。
+在本例中，我们将使用SQuAD数据集做为回答问题的信源。数据集的原始格式为JSON，我们会使用**pandas**加载该数据集。
 
 ```python
 # Download the dataset

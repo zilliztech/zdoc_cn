@@ -26,9 +26,9 @@ import Admonition from '@theme/Admonition';
 
 在与 Elasticsearch 集群交互之前，首先需要连接到集群。根据 Elasticsearch 集群的部署模式，Zilliz Cloud 提供以下连接方法：
 
-- __使用 Cloud ID 连接__：适用于在 Elastic Cloud 上运行的 Elasticsearch 集群。选择此连接方式，您需要指定 Elasticsearch 集群的 Cloud ID 和 API 密钥。
+- **使用 Cloud ID 连接**：适用于在 Elastic Cloud 上运行的 Elasticsearch 集群。选择此连接方式，您需要指定 Elasticsearch 集群的 Cloud ID 和 API 密钥。
 
-- __使用 URL 连接__：适用于在本地部署的 Elasticsearch 集群。选择此连接方式，您需要指定集群的URL 以及集群用户名和密码。
+- **使用 URL 连接**：适用于在本地部署的 Elasticsearch 集群。选择此连接方式，您需要指定集群的URL 以及集群用户名和密码。
 
 有关如何获取集群的连接信息，请参阅[连接集群](https://www.elastic.co/guide/en/cloud-enterprise/current/ece-connect.html#ece-connect)和[获取 API 密钥信息](https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-get-api-key.html)。
 
@@ -40,13 +40,13 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
 
 ![zh_migrate_index](/img/zh_migrate_index.png)
 
-默认情况下，该 Collection 的名称遵循命名约定 __Collection_n__，其中 _n _表示一个数字值，用于区分它与 Zilliz Cloud 上的其他 Collection。
+默认情况下，该 Collection 的名称遵循命名约定 **Collection_n**，其中 *n *表示一个数字值，用于区分它与 Zilliz Cloud 上的其他 Collection。
 
 对于每次迁移，您只能选择源索引中的一个 `dense_vector` 字段和一个或多个其他字段。选择待迁移的字段时，请注意以下事项：
 
-- Elasticsearch 索引中的向量字段 `dense_vector` 映射到 Zilliz Cloud 的 Collection 中为 `FloatVector` 字段。您可以为 `FloatVector` 字段选择合适的度量类型。可选值为__欧氏距离（Euclidean/L2）__和__内积（Inner Product/IP）__。
+- Elasticsearch 索引中的向量字段 `dense_vector` 映射到 Zilliz Cloud 的 Collection 中为 `FloatVector` 字段。您可以为 `FloatVector` 字段选择合适的度量类型。可选值为**欧氏距离（Euclidean/L2）**和**内积（Inner Product/IP）**。
 
-- 向量数据的维度由源索引中的向量字段维度决定。如果您集群的 CU 类型是__容量型__，请确保您选择要迁移的 `dense_vector` 字段的维度不小于 32。否则，将会发生错误，数据无法迁移。有关更多信息，请参见[选择合适的 CU 类型](./cu-types-explained)。
+- 向量数据的维度由源索引中的向量字段维度决定。如果您集群的 CU 类型是**容量型**，请确保您选择要迁移的 `dense_vector` 字段的维度不小于 32。否则，将会发生错误，数据无法迁移。有关更多信息，请参见[选择合适的 CU 类型](./cu-types-explained)。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -54,13 +54,13 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
 
 </Admonition>
 
-在__主键__字段，选择一个字段作为 Collection 的主键。您可以选择 Elasticsearch  元数据字段 `_id` 或源索引中的其他字段作为主键。如果选择 `_id` 字段，请将其数据类型设置为 __Int64__ 或 __VarChar__。
+在**主键**字段，选择一个字段作为 Collection 的主键。您可以选择 Elasticsearch  元数据字段 `_id` 或源索引中的其他字段作为主键。如果选择 `_id` 字段，请将其数据类型设置为 **Int64** 或 **VarChar**。
 
-在__动态 Schema __字段，选择是否为 Collection 启用动态 Schema。有关更多信息，请参见[开启动态 Schema](./enable-dynamic-schema)。
+在**动态 Schema **字段，选择是否为 Collection 启用动态 Schema。有关更多信息，请参见[开启动态 Schema](./enable-dynamic-schema)。
 
 ## 结果验证{#verify-the-migration-results}
 
-如果迁移任务的状态从__迁移中__变更为__成功__，则代表迁移成功。
+如果迁移任务的状态从**迁移中**变更为**成功**，则代表迁移成功。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -76,9 +76,9 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
 
 |  Elasticsearch 字段 |  Zilliz Cloud 字段 |  描述                                                                      |
 | ----------------- | ---------------- | ------------------------------------------------------------------------ |
-|  dense_vector     |  FloatVector     |  向量维度与源索引中的向量字段维度相同。您可以在 __L2__ 和 __IP__ 之间指定一个度量类型。                     |
-|  keyword          |  VarChar         |  通过 __Max Length __指定最大数据长度，有效值为 1 到 65535 之间。如果任何字符串超过了最大长度限制，迁移过程将会报错。 |
-|  text             |  VarChar         |  通过 __Max Length __指定最大数据长度，有效值为 1 到 65535 之间。如果任何字符串超过了最大长度限制，迁移过程将会报错。 |
+|  dense_vector     |  FloatVector     |  向量维度与源索引中的向量字段维度相同。您可以在 **L2** 和 **IP** 之间指定一个度量类型。                     |
+|  keyword          |  VarChar         |  通过 **Max Length **指定最大数据长度，有效值为 1 到 65535 之间。如果任何字符串超过了最大长度限制，迁移过程将会报错。 |
+|  text             |  VarChar         |  通过 **Max Length **指定最大数据长度，有效值为 1 到 65535 之间。如果任何字符串超过了最大长度限制，迁移过程将会报错。 |
 |  long             |  Int64           |  -                                                                       |
 |  integer          |  Int32           |  -                                                                       |
 |  double           |  Double          |  -                                                                       |

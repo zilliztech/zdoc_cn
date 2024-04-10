@@ -18,19 +18,19 @@ import Admonition from '@theme/Admonition';
 
 在 Zilliz Cloud 集群中，不同 Collection 的 Schema 可能不同。正确定义数据模型以表示数据集的结构十分重要。定义数据模型时，您需要考虑以下几个方面：
 
-- __Entity__
+- **Entity**
 
     Collection 中的 Entity 类似于传统数据库表格中的行。Entity 的每个属性对应传统数据库表格中的列。向 Collection 插入数据前，请先观察 Entity 之间共享的属性。
 
     例如， 您可以将书可以作为 Collection 中的 Entity，书的属性可以包括标题、作者、ISBN 和语言。
 
-- __数据类型__
+- **数据类型**
 
     Entity 的每个属性都有自己的数据类型。设置合适的数据类型以定义属性。
 
-    例如，标题的数据类型应为__可变长度字符串（VarChar）__。
+    例如，标题的数据类型应为**可变长度字符串（VarChar）**。
 
-- __Entity 属性值限制__
+- **Entity 属性值限制**
 
     不同的数据类型可能带有不同的限制。例如，向量字段对向量维数有限制、VarChar字段对字符的最大长度有限制。
 
@@ -38,9 +38,9 @@ import Admonition from '@theme/Admonition';
 
 ### 动态数据列{#dynamic-data-fields}
 
-1 个 Collection 可拥有 1 个主键字段和 1 个向量字段。您可以在待插入数据中包含动态数据列，无需手动定义数据集中的 Entity 属性。简单来说，在创建 Collection 时输入 Collection 名称和向量维数，Zilliz Cloud 会自动根据后续插入的数据推断哪些数据将以键值对的形式存入名为 __$meta__ 的保留字段中。
+1 个 Collection 可拥有 1 个主键字段和 1 个向量字段。您可以在待插入数据中包含动态数据列，无需手动定义数据集中的 Entity 属性。简单来说，在创建 Collection 时输入 Collection 名称和向量维数，Zilliz Cloud 会自动根据后续插入的数据推断哪些数据将以键值对的形式存入名为 **$meta** 的保留字段中。
 
-以下示例代码片段创建了 1 个名为 __medium_articles__ 的 Collection，且为该 Collection 开启了动态数据列。
+以下示例代码片段创建了 1 个名为 **medium_articles** 的 Collection，且为该 Collection 开启了动态数据列。
 
 ```python
 # Connect using a MilvusClient object
@@ -63,7 +63,7 @@ client.create_collection(
 )
 ```
 
-当您将 Entity 插入 Collection 时，Zilliz Cloud 将自动解析数据并将 Schema 中未定义的字段（也就是除了__ id__ 和 __vector__ 字段以外的其它字段）以键值对的形式存入一个名为 __$meta__ 的保留字段。
+当您将 Entity 插入 Collection 时，Zilliz Cloud 将自动解析数据并将 Schema 中未定义的字段（也就是除了** id** 和 **vector** 字段以外的其它字段）以键值对的形式存入一个名为 **$meta** 的保留字段。
 
 ```python
 client.insert(

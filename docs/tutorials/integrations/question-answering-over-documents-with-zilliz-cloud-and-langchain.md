@@ -16,7 +16,7 @@ import Admonition from '@theme/Admonition';
 
 ## 准备工作{#before-you-start}
 
-运行本页中的脚本需要 __pymilvus__ 和 __langchain__。另外，我们还需要使用 OpenAI 的 Embedding API 来获取指定文本的向量表示并将其存入向量数据库中，所以还需要安装 openai 和 tiktoken。如果你的系统中还没有安装这些依赖，可以运行如下命令。
+运行本页中的脚本需要 **pymilvus** 和 **langchain**。另外，我们还需要使用 OpenAI 的 Embedding API 来获取指定文本的向量表示并将其存入向量数据库中，所以还需要安装 openai 和 tiktoken。如果你的系统中还没有安装这些依赖，可以运行如下命令。
 
 ```shell
 python -m pip install --upgrade pymilvus langchain openai tiktoken
@@ -169,8 +169,8 @@ print(rag_chain.invoke("Explain IVF_FLAT in Milvus."))
 返回的结果包含了中间步骤（ `intermediate_steps` ）和输出文本 ( `output_text` )两个部分。前者用于表明在搜索过程中参考的文档，后者则是对用户提问的回答。
 
 ```shell
-__# Output__
-__#__
-__# content='IVF_FLAT is an index mechanism in Milvus that divides a vector space into clusters. It compares the distances between a target vector and the centers of all clusters to find the nearest clusters. Then, it compares the distances between the target vector and the vectors in the selected clusters to find the nearest vectors. IVF_FLAT demonstrates performance advantages when the number of vectors exceeds the value of nlist. Thanks for asking!'__
+**# Output**
+**#**
+**# content='IVF_FLAT is an index mechanism in Milvus that divides a vector space into clusters. It compares the distances between a target vector and the centers of all clusters to find the nearest clusters. Then, it compares the distances between the target vector and the vectors in the selected clusters to find the nearest vectors. IVF_FLAT demonstrates performance advantages when the number of vectors exceeds the value of nlist. Thanks for asking!'**
 ```
 

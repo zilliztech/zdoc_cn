@@ -37,7 +37,7 @@ import TabItem from '@theme/TabItem';
 
 1. 加载 Collection 与插入数据：首先确保您的 Collection 已加载，并且数据已插入至 Collection。
 
-1. 设置范围过滤：定义 `radius` 和 `range_filter` 参数，以控制搜索精准度。Zilliz Cloud 支持使用 __L2__（欧几里得距离）和 __IP__（内积）作为距离测量的度量类型。`radius` 和 `range_filter` 的设置将受到选用的距离测量度量类型的影响。
+1. 设置范围过滤：定义 `radius` 和 `range_filter` 参数，以控制搜索精准度。Zilliz Cloud 支持使用 **L2**（欧几里得距离）和 **IP**（内积）作为距离测量的度量类型。`radius` 和 `range_filter` 的设置将受到选用的距离测量度量类型的影响。
 
 1. 执行搜索：根据步骤 2 设置的参数进行范围搜索。您将得到的向量结果会位于指定的范围内，符合您选择的距离度量标准。
 
@@ -347,11 +347,11 @@ try {
 
 - `range_filter`：可选参数，进一步细化搜索范围，限定在特定的相似性区间内。
 
-`radius` 和 `range_filter` 参数均为 __FLOAT__ 类型，它们在保证搜索准确性与效率之间起着平衡作用。
+`radius` 和 `range_filter` 参数均为 **FLOAT** 类型，它们在保证搜索准确性与效率之间起着平衡作用。
 
 ### 距离度量的影响{#distance-metrics-influence}
 
-- __L2__ 距离：筛选出距离小于 `radius` 的向量，因为较短的 __L2__ 距离代表更高的相似性。若想排除结果中最接近的向量，可将 `range_filter` 设定为低于 `radius` 的值。
+- **L2** 距离：筛选出距离小于 `radius` 的向量，因为较短的 **L2** 距离代表更高的相似性。若想排除结果中最接近的向量，可将 `range_filter` 设定为低于 `radius` 的值。
 
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"}]}>
     <TabItem value='python'>
@@ -391,7 +391,7 @@ try {
     </TabItem>
     </Tabs>
 
-- __IP__ 距离：筛选出距离大于 `radius` 的向量，因为更大的 __IP__ 距离意味着更高的相似性。在此情况下，应将 `range_filter` 设定为高于 `radius` 的值，以排除最相似的向量。
+- **IP** 距离：筛选出距离大于 `radius` 的向量，因为更大的 **IP** 距离意味着更高的相似性。在此情况下，应将 `range_filter` 设定为高于 `radius` 的值，以排除最相似的向量。
 
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"}]}>
     <TabItem value='python'>
@@ -767,8 +767,8 @@ System.out.println(results);
 
 |  度量类型   |  配置                                      |
 | ------- | ---------------------------------------- |
-|  __L2__ |  `range_filter` \<= distance \< `radius` |
-|  __IP__ |  `radius` \< distance \<= `range_filter` |
+|  **L2** |  `range_filter` \<= distance \< `radius` |
+|  **IP** |  `radius` \< distance \<= `range_filter` |
 
 ## 相关文档{#related-topics}
 

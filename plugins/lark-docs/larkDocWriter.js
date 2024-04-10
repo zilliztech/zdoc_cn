@@ -351,9 +351,9 @@ class larkDocWriter {
                 let links = []
 
                 sub_page = sub_page.map(line => {
-                    if (line.startsWith('__')) {
+                    if (line.startsWith('**')) {
                         console.log(line)
-                        let qtext = line.split('{#')[0].split('__')[1]
+                        let qtext = line.split('{#')[0].split('**')[1]
                         let qslug = line.split('{#')[1].split('}')[0]
                         line = `### ${qtext} \\{#${qslug}}`
                         links.push(`- [${qtext}](#${qslug})`)
@@ -1012,11 +1012,11 @@ class larkDocWriter {
                 content = this.__style_markdown(element, elements, 'inline_code', '`');
             } else {                
                 if (style['bold']) {
-                    content = this.__style_markdown(element, elements, 'bold', '__');
+                    content = this.__style_markdown(element, elements, 'bold', '**');
                 }
 
                 if (style['italic']) {
-                    content = this.__style_markdown(element, elements, 'italic', '_');
+                    content = this.__style_markdown(element, elements, 'italic', '*');
                 }
 
                 if (style['strikethrough']) {

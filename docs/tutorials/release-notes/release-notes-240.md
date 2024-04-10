@@ -12,13 +12,13 @@ import Admonition from '@theme/Admonition';
 
 # 版本说明书（2023/12/20）
 
-__发布日期：2023 年 12 月 20 日__
+**发布日期：2023 年 12 月 20 日**
 
 我们很高兴地宣布 Zilliz Cloud 2.4.0 的发布。此版本引入了一系列增强和功能更新。主要包括
 
 ## Milvus 兼容性
 
-此次发布兼容 __Milvus 2.2.x__ 以及 __Milvus 2.3.x (Beta)__。
+此次发布兼容 **Milvus 2.2.x** 以及 **Milvus 2.3.x (Beta)**。
 
 ## Partition SDK{#partition-sdk}
 

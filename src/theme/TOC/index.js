@@ -1,15 +1,20 @@
 import React from 'react';
-import {ThemeClassNames} from '@docusaurus/theme-common';
+import clsx from 'clsx';
+import TOCItems from '@theme/TOCItems';
 import {useDoc} from '@docusaurus/theme-common/internal';
+import FeedbackBox from '../../components/FeedbackBox'
 import BrowserOnly from '@docusaurus/BrowserOnly';
-import TOC from '@theme/TOC';
+import styles from './styles.module.css';
+// Using a custom className
+// This prevents TOCInline/TOCCollapsible getting highlighted by mistake
+const LINK_CLASS_NAME = 'table-of-contents__link toc-highlight';
+const LINK_ACTIVE_CLASS_NAME = 'table-of-contents__link--active';
 
 function EditThisPage() {
-
   const {frontMatter, metadata} = useDoc();
   const source = metadata.source.replace('\@site\/', '')
 
-  var editUrl = `https://github.com/zilliztech/zdoc/blob/master/` + source
+  var editUrl = `https://github.com/zilliztech/zdoc_cn/blob/master/` + source
 
   if (Object.keys(frontMatter).includes('type') && Object.keys(frontMatter).includes('token')) {
     switch (frontMatter.type) {
@@ -23,7 +28,7 @@ function EditThisPage() {
         editUrl = 'https://zilliverse.feishu.cn/wiki/' + frontMatter.token
         break;
       default:
-        editUrl = `https://github.com/zilliztech/zdoc/blob/master/` + source
+        editUrl = `https://github.com/zilliztech/zdoc_cn/blob/master/` + source
     }
   }
 
@@ -31,14 +36,14 @@ function EditThisPage() {
     <BrowserOnly>
     {() => {
       const hostname = window.location.hostname;
-      if (hostname.includes('zdocs-cn') || hostname.includes('localhost')) {
-        return (<div id="edit-this-page" style={{marginTop: '3rem', marginBottom: '3rem', fontSize: '0.8rem'}}>
+      if (hostname.includes('zdoc') || hostname.includes('localhost')) {
+        return (<div id="edit-this-page" style={{padding: '1rem 0', fontSize: '0.8rem'}}>
           <div style={{ marginBottom: '0.25rem' }}>
             <i style={{ display: 'inline-block', minHeight: '2rem', marginRight: '0.5rem' }}>
               <span className="material-symbols-outlined">edit</span>
             </i>
             <span style={{ display: 'inline-block', minHeight: '2rem', verticalAlign: 'top', fontWeight: 'bold' }}>
-              <a href={editUrl} target="_blank" rel="noopener noreferrer">EDIT THIS PAGE</a>
+              <a href={editUrl} target="_blank" rel="noopener noreferrer">编辑此页</a>
             </span>
           </div> 
           <div style={{ marginBottom: '0.25rem' }}>
@@ -46,7 +51,7 @@ function EditThisPage() {
               <span className="material-symbols-outlined">bug_report</span>
             </i>
             <span style={{ display: 'inline-block', minHeight: '2rem', verticalAlign: 'top', fontWeight: 'bold' }}>
-              <a href="https://zilliz.atlassian.net/jira/software/projects/CD/boards/59" target="_blank" rel="noopener noreferrer">REPORT A BUG</a>
+              <a href="https://zilliz.atlassian.net/jira/software/projects/CD/boards/59" target="_blank" rel="noopener noreferrer">发现 BUG</a>
             </span>
           </div>   
           <div style={{ marginBottom: '0.25rem' }}>
@@ -54,7 +59,7 @@ function EditThisPage() {
               <span className="material-symbols-outlined">lightbulb</span>
             </i>
             <span style={{ display: 'inline-block', minHeight: '2rem', verticalAlign: 'top', fontWeight: 'bold' }}>
-              <a href="https://zilliz.atlassian.net/jira/software/projects/CD/boards/59" target="_blank" rel="noopener noreferrer">REQUEST A CHANGE</a>
+              <a href="https://zilliz.atlassian.net/jira/software/projects/CD/boards/59" target="_blank" rel="noopener noreferrer">我有需求</a>
             </span>
           </div>   
         </div>)
@@ -66,22 +71,16 @@ function EditThisPage() {
   )
 }
 
-export default function DocItemTOCDesktop() {
-  const {toc, frontMatter} = useDoc();
-  if (toc[0].value !== '在此页面') {
-    toc.splice(0,0, {value: '在此页面', id: '', level: 2})
-  }
-
+export default function TOC({className, ...props}) {
   return (
-    <>
+    <div className={clsx(styles.tableOfContents, 'thin-scrollbar', className)}>
       <EditThisPage />
-      <TOC
-        toc={toc}
-        minHeadingLevel={frontMatter.toc_min_heading_level}
-        maxHeadingLevel={frontMatter.toc_max_heading_level}
-        className={ThemeClassNames.docs.docTocDesktop}
+      <TOCItems
+        {...props}
+        linkClassName={LINK_CLASS_NAME}
+        linkActiveClassName={LINK_ACTIVE_CLASS_NAME}
       />
-    </>
-
+      <FeedbackBox />
+    </div>
   );
 }

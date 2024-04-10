@@ -31,11 +31,11 @@ import Admonition from '@theme/Admonition';
 
 1. 打开项目。
 
-1. 点击左侧导航栏中的 __Pipelines__。 选中__概览__标签页，并切换到 __Pipelines__。点击__ + Pipeline__。
+1. 点击左侧导航栏中的 **Pipelines**。 选中**概览**标签页，并切换到 **Pipelines**。点击** + Pipeline**。
 
     ![create-pipeline-cn](/img/create-pipeline-cn.png)
 
-1. 选择需要创建的 Pipeline 类型。点击 Ingestion Pipeline 一栏中的 __+ Pipeline__ 按钮。 
+1. 选择需要创建的 Pipeline 类型。点击 Ingestion Pipeline 一栏中的 **+ Pipeline** 按钮。 
 
     <Admonition type="info" icon="📘" title="说明">
 
@@ -47,7 +47,7 @@ import Admonition from '@theme/Admonition';
 
 1. 配置 Ingestion Pipeline。
 
-    |  __参数__        |  __说明__                                          |
+    |  **参数**        |  **说明**                                          |
     | -------------- | ------------------------------------------------ |
     |  目标集群<br/>  |  自动创建 Collection 所属的集群。目前仅支持部署在阿里云（杭州）的集群。       |
     |  Collection 名称 |  自动创建的 Collection 的名称。                           |
@@ -56,20 +56,20 @@ import Admonition from '@theme/Admonition';
 
     ![configure-ingestion-pipeline-cn](/img/configure-ingestion-pipeline-cn.png)
 
-1. 添加 Function。1 个 Ingestion pipeline 中只可添加 1 个 __INDEX_DOC__ Function 和至多 5 个 __PRESERVE__ Function。
+1. 添加 Function。1 个 Ingestion pipeline 中只可添加 1 个 **INDEX_DOC** Function 和至多 5 个 **PRESERVE** Function。
 
-    - 添加 __INDEX_DOC__ Function。
+    - 添加 **INDEX_DOC** Function。
 
-        __INDEX_DOC__ Function将文档切分为多个文档块，将文档块转换为 Embedding 向量并存储在 Collection 中。
+        **INDEX_DOC** Function将文档切分为多个文档块，将文档块转换为 Embedding 向量并存储在 Collection 中。
 
         1. 输入 Function 名称。
 
-        1. 选择用于生成向量的 Embedding 模型。根据所选的文档语言，您可以选择不同的 Embedding 模型。目前 Zilliz Cloud Pipelines 共提供两种 Embedding 模型：英语——__zilliz/bge-base-en-v1.5__，中文——__zilliz/bge-base-zh-v1.5__。
+        1. 选择用于生成向量的 Embedding 模型。根据所选的文档语言，您可以选择不同的 Embedding 模型。目前 Zilliz Cloud Pipelines 共提供两种 Embedding 模型：英语——**zilliz/bge-base-en-v1.5**，中文——**zilliz/bge-base-zh-v1.5**。
 
-            |  __Embedding 模型 __        |  __说明__                                                                                           |
+            |  **Embedding 模型 **        |  **说明**                                                                                           |
             | ------------------------- | ------------------------------------------------------------------------------------------------- |
-            |  zilliz/bge-base-en-v1.5  |  智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。该模型为__英语__语言的默认模型。 |
-            |  zilliz/bge-base-zh-v1.5  |  智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。该模型为__中文__语言的默认模型。 |
+            |  zilliz/bge-base-en-v1.5  |  智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。该模型为**英语**语言的默认模型。 |
+            |  zilliz/bge-base-zh-v1.5  |  智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。该模型为**中文**语言的默认模型。 |
 
         1. (可选) 自定义切片策略。您可以按需启用此功能。该 Function 将每个文档分割成更小的切片。
 
@@ -83,28 +83,28 @@ import Admonition from '@theme/Admonition';
 
                 Splitter 用于分割文本。选择或自定义 Splitter 后，Ingestion Pipeline 会根据定义的字符按顺序将文本分割成小片段。
 
-                默认情况下，Zilliz Cloud Pipeline 使用 __"\n\n", "\n", " ", ""__ 作为分隔符。您也可以选择__按句子__（使用 [".", ""] 作为分隔符）、__按段落__（使用 ["\n\n", ""] 作为分隔符）、__按行__（使用  ["\n", ""] 作为分隔符）切分文本或__自定义__文本分隔符。
+                默认情况下，Zilliz Cloud Pipeline 使用 **"\n\n", "\n", " ", ""** 作为分隔符。您也可以选择**按句子**（使用 [".", ""] 作为分隔符）、**按段落**（使用 ["\n\n", ""] 作为分隔符）、**按行**（使用  ["\n", ""] 作为分隔符）切分文本或**自定义**文本分隔符。
 
             - 输入切片大小。
 
                 默认情况下，每个切片包含不超过500 个 Token，但您可以根据自己的切片策略调整切片大小。下表罗列了 Embedding 模型与其可选切片大小范围。
 
-                |  模型                      |  __切片大小范围 (Tokens)__ |
+                |  模型                      |  **切片大小范围 (Tokens)** |
                 | ------------------------ | -------------------- |
                 |  zilliz/bge-base-en-v1.5 |  20-500 Tokens       |
                 |  zilliz/bge-base-zh-v1.5 |  20-500 Tokens       |
 
             ![customize-chunk-size-cn](/img/customize-chunk-size-cn.png)
 
-        1. 点击__添加__。
+        1. 点击**添加**。
 
-    - 添加 __PRESERVE__ Function。
+    - 添加 **PRESERVE** Function。
 
-        __PRESERVE__ Function 在 Collection 中添加标量字段，用于保留文档元数据。
+        **PRESERVE** Function 在 Collection 中添加标量字段，用于保留文档元数据。
 
         1. 输入 Function 名称。
 
-        1. 配置输入字段名称和数据类型。支持的数据字段类型包括 __Bool__、__Int8__、__Int16__、__Int32__、__Int64__、__Float__、__Double__ 和 __VarChar__。
+        1. 配置输入字段名称和数据类型。支持的数据字段类型包括 **Bool**、**Int8**、**Int16**、**Int32**、**Int64**、**Float**、**Double** 和 **VarChar**。
 
             <Admonition type="info" icon="📘" title="说明">
 
@@ -116,9 +116,9 @@ import Admonition from '@theme/Admonition';
 
             </Admonition>
 
-        1. 点击__添加__。
+        1. 点击**添加**。
 
-1. 点击__创建 Ingestion Pipeline__。
+1. 点击**创建 Ingestion Pipeline**。
 
 1. 继续创建 Search pipeline 和 Deletion pipeline。创建的 Search 和 Deletion Pipeline 可适应配套刚才创建的Ingestion Pipeline。
 
@@ -132,7 +132,7 @@ import Admonition from '@theme/Admonition';
 
 ## 通过 RESTful API{#via-restful-api}
 
-以下示例代码创建了 1 个名称为 `my_doc_ingestion_pipeline` 的 Ingestion Pipeline，并添加了 1 个 __INDEX_DOC__ Function 和 1 个 __PRESERVE__ Function。
+以下示例代码创建了 1 个名称为 `my_doc_ingestion_pipeline` 的 Ingestion Pipeline，并添加了 1 个 **INDEX_DOC** Function 和 1 个 **PRESERVE** Function。
 
 ```bash
 curl --request POST \
@@ -181,7 +181,7 @@ curl --request POST \
 
 - `type`: 创建的 Pipeline 类型。目前，可创建的 Pipeline 类型包括 `INGESTION`、 `SEARCH` 和 `DELETION`。
 
-- `functions`: Pipeline 中添加的 Function。1 个 Ingestion pipeline 中只可添加 1 个 __INDEX_DOC__ Function 和至多 5 个 __PRESERVE__ Function。
+- `functions`: Pipeline 中添加的 Function。1 个 Ingestion pipeline 中只可添加 1 个 **INDEX_DOC** Function 和至多 5 个 **PRESERVE** Function。
 
     - `name`: Function 名称。Function 名称应该在 3-64 个字符内，且只可包含数字、字母和下划线。
 
@@ -189,29 +189,29 @@ curl --request POST \
 
     - `inputField`: 输入字段名称。对于 `INDEX_DOC` Function，该字段的值应该为 `doc_url`。对于 `PRESERVE` Function，您可以自定义该字段的值，但应该与`outputField` 的值保持一致。
 
-    - `language`: 文档语言。可选择的语言包括 `ENGLISH`（英语） 和 `CHINESE`（中文。_(仅 `INDEX_DOC` Function 中包含此参数。）_
+    - `language`: 文档语言。可选择的语言包括 `ENGLISH`（英语） 和 `CHINESE`（中文。*(仅 `INDEX_DOC` Function 中包含此参数。）*
 
-    - `embedding` (可选): 用于生成文本向量的 Embedding 模型。默认情况下，__英语__文档使用 __zilliz/bge-base-en-v1.5__ 模型，__中文__文档使用 __zilliz/bge-base-zh-v1.5__ 模型。 _(仅 `INDEX_DOC` Function 中包含此参数。）_
+    - `embedding` (可选): 用于生成文本向量的 Embedding 模型。默认情况下，**英语**文档使用 **zilliz/bge-base-en-v1.5** 模型，**中文**文档使用 **zilliz/bge-base-zh-v1.5** 模型。 *(仅 `INDEX_DOC` Function 中包含此参数。）*
 
-        |  __Embedding 模型 __        |  __说明__                                                                                           |
+        |  **Embedding 模型 **        |  **说明**                                                                                           |
         | ------------------------- | ------------------------------------------------------------------------------------------------- |
-        |  zilliz/bge-base-en-v1.5  |  智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。该模型为__英语__语言的默认模型。 |
-        |  zilliz/bge-base-zh-v1.5  |  智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。该模型为__中文__语言的默认模型。 |
+        |  zilliz/bge-base-en-v1.5  |  智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。该模型为**英语**语言的默认模型。 |
+        |  zilliz/bge-base-zh-v1.5  |  智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。该模型为**中文**语言的默认模型。 |
 
-    - `splitBy` (可选): Splitter 用于分割文本。选择或自定义 Splitter 后，Ingestion Pipeline 会根据定义的字符按顺序将文本分割成小片段。默认情况下，Zilliz Cloud Pipeline 使用 `"\n\n", "\n", " ", ""` 作为分隔符。_(仅 `INDEX_DOC` Function 中包含此参数。）_
+    - `splitBy` (可选): Splitter 用于分割文本。选择或自定义 Splitter 后，Ingestion Pipeline 会根据定义的字符按顺序将文本分割成小片段。默认情况下，Zilliz Cloud Pipeline 使用 `"\n\n", "\n", " ", ""` 作为分隔符。*(仅 `INDEX_DOC` Function 中包含此参数。）*
 
-    - `chunkSize` (可选): `INDEX_DOC` Function 将每个文档分割成更小的切片。默认情况下，每个切片包含不超过500 个 Token，但您可以根据自己的切片策略调整切片大小。此外，对于 Markdown 或 HTML 文件，该Function 会首先按标题划分文档，然后根据指定的切片大小进一步按较大的部分划分。_(仅 `INDEX_DOC` Function 中包含此参数。）_
+    - `chunkSize` (可选): `INDEX_DOC` Function 将每个文档分割成更小的切片。默认情况下，每个切片包含不超过500 个 Token，但您可以根据自己的切片策略调整切片大小。此外，对于 Markdown 或 HTML 文件，该Function 会首先按标题划分文档，然后根据指定的切片大小进一步按较大的部分划分。*(仅 `INDEX_DOC` Function 中包含此参数。）*
 
         下表罗列了 Embedding 模型与其可选切片大小范围。
 
-        |  模型                      |  __切片大小范围 (Tokens)__ |
+        |  模型                      |  **切片大小范围 (Tokens)** |
         | ------------------------ | -------------------- |
         |  zilliz/bge-base-en-v1.5 |  20-500 Tokens       |
         |  zilliz/bge-base-zh-v1.5 |  20-500 Tokens       |
 
-    - `outputField`: 输出字段名称。该字段将的值将用于构成 Collection Schema。 `outputField` 字段值应该与 `inputField` 字段值保持一致。 _(仅 `PRESERVE` Function 中包含此参数。）_
+    - `outputField`: 输出字段名称。该字段将的值将用于构成 Collection Schema。 `outputField` 字段值应该与 `inputField` 字段值保持一致。 *(仅 `PRESERVE` Function 中包含此参数。）*
 
-    - `fieldType`: 输入和输出字段的字段类型。可选的值包括：`Bool`、`Int8`、`Int16`、`Int32`、`Int64`、`Float`、`Double` 和 `VarChar`。 _(仅 `PRESERVE` Function 中包含此参数。）_
+    - `fieldType`: 输入和输出字段的字段类型。可选的值包括：`Bool`、`Int8`、`Int16`、`Int32`、`Int64`、`Float`、`Double` 和 `VarChar`。 *(仅 `PRESERVE` Function 中包含此参数。）*
 
         <Admonition type="info" icon="📘" title="说明">
 
@@ -264,7 +264,7 @@ curl --request POST \
 
 Ingestion Pipeline 创建成功后，Zilliz Cloud 将自动创建名称为 `my_new_collection` 的新 Collection。
 
-该 Collection 中包含 6 个字段：1 个自动生成的 ID 字段、4 个 __INDEX_DOC__ function 的输出字段和 1 个 __PRESERVE__ function 的输出字段。Collection Schema 如下所示：
+该 Collection 中包含 6 个字段：1 个自动生成的 ID 字段、4 个 **INDEX_DOC** function 的输出字段和 1 个 **PRESERVE** function 的输出字段。Collection Schema 如下所示：
 
 |  id<br/> (数据类型: Int64) |  doc_name<br/> (数据类型: VarChar) |  chunk_id<br/> (数据类型: Int64) |  chunk_text<br/> (数据类型: VarChar) |  embedding<br/> (数据类型: FLOAT_VECTOR) |  publish_year<br/> (数据类型: Int16) |
 | ------------------------- | --------------------------------- | ------------------------------- | ----------------------------------- | --------------------------------------- | ----------------------------------- |

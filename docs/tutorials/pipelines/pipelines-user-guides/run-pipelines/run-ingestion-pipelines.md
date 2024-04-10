@@ -16,7 +16,7 @@ import Admonition from '@theme/Admonition';
 
 ## 通过 Web 控制台{#via-web-console} 
 
-1. 点击 Ingestion Pipeline 右侧的 "▶︎" 按钮。 或者您可以点击 __Playground__ 选项卡。
+1. 点击 Ingestion Pipeline 右侧的 "▶︎" 按钮。 或者您可以点击 **Playground** 选项卡。
 
     ![run-pipeline-cn](/img/run-pipeline-cn.png)
 
@@ -24,7 +24,7 @@ import Admonition from '@theme/Admonition';
 
     - 导入对象存储中的文件。在 `doc_url` 字段中输入阿里云[签名 URL](https://help.aliyun.com/zh/oss/user-guide/authorize-third-party-users-to-download-objects?spm=a2c4g.11186623.0.0.e2d634eet2N34s#section-fnd-m6v-bff)。
 
-    - 上传本地文件。点击__添加附件__。 在对话框中上传本地文件。文件大小不得超过 10 MB。支持文档文件类型包括 `.txt`、`.pdf`、`.md`、`.html`、`.epub`、`.csv`、`.doc`、`.docx`、`.xls`、`.xlsx`、`.ppt`、`.pptx`。如 Ingestion Pipeline 中添加了 PRESERVE function，您还需要额外配置 `data` 字段。
+    - 上传本地文件。点击**添加附件**。 在对话框中上传本地文件。文件大小不得超过 10 MB。支持文档文件类型包括 `.txt`、`.pdf`、`.md`、`.html`、`.epub`、`.csv`、`.doc`、`.docx`、`.xls`、`.xlsx`、`.ppt`、`.pptx`。如 Ingestion Pipeline 中添加了 PRESERVE function，您还需要额外配置 `data` 字段。
 
 1. 查看运行结果。
 

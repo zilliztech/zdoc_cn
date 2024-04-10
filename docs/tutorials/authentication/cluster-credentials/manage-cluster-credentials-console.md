@@ -46,7 +46,7 @@ import Admonition from '@theme/Admonition';
 
 ## 重置用户密码{#reset-the-password-of-a-cluster-user}
 
-要重置集群用户的密码，请前往集群详情页面，并点击__用户__选项卡。
+要重置集群用户的密码，请前往集群详情页面，并点击**用户**选项卡。
 
 <Admonition type="info" icon="📘" title="说明">
 
