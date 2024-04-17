@@ -106,7 +106,7 @@ curl --location --request POST "https://controller.api.${CLOUD_REGION}.zillizclo
 |------------------|-------------------------------------------------------------------------------------------|
 | `start`  | **string**<br/>度量报告期的起始日期和时间，以 ISO 8601 时间戳格式（UTC）表示。未设置 `period` 参数时，请包含此参数。|
 | `end`  | **string**<br/>度量报告期的结束日期和时间，以 ISO 8601 时间戳格式（UTC）表示。未设置 `period` 参数时，请包含此参数。|
-| `period`  | **string**<br/>The duration over which Milvus reports the metrics, expressed in ISO 8601 duration format in UTC. Include this parameter when both `start` and `end` parameters are not set.度量报告期的持续时间，以 ISO 8601 时间戳格式（UTC）表示。未设置 `start` 和 `end` 参数时，请包含此参数。|
+| `period`  | **string**<br/>度量报告期的持续时间，以 ISO 8601 时间戳格式（UTC）表示。未设置 `start` 和 `end` 参数时，请包含此参数。|
 | `granularity`  | **string**（必选）<br/>报告度量的最小时间间隔，以 ISO 8601 时间戳格式（UTC）表示。最小粒度为 PT30S。|
 | `metricQueries`  | **array**（必选）<br/>一个 MetricQuery 对象列表。|
 
