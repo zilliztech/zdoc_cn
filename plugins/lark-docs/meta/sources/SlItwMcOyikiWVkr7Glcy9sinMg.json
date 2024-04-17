@@ -152,7 +152,7 @@
       "node_token": "T9z1wL5y9iDgV5kMAx1cAZfxn0b",
       "node_type": "origin",
       "obj_create_time": "1712713168",
-      "obj_edit_time": "1712720619",
+      "obj_edit_time": "1712832342",
       "obj_token": "PpjhdoB9wo9rLoxkUNXckhB9nic",
       "obj_type": "docx",
       "origin_node_token": "T9z1wL5y9iDgV5kMAx1cAZfxn0b",
@@ -160,7 +160,8 @@
       "owner": "ou_e55a208a81fc721928685fc3df9cb678",
       "parent_node_token": "SlItwMcOyikiWVkr7Glcy9sinMg",
       "space_id": "7167193056431783939",
-      "title": "管理告警渠道"
+      "title": "管理告警渠道",
+      "slug": "manage-notification-channels"
     },
     {
       "creator": "ou_e55a208a81fc721928685fc3df9cb678",
