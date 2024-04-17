@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 修改指定集群的配置。当前，仅支持修改集群使用的 CU 大小。
 
-<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/{clusterId}/modify" />
+<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/{CLUSTER_ID}/modify" />
 
 ---
 
@@ -56,7 +56,7 @@ curl --request POST \
 
     | 参数名称        | 参数说明                                                                             |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `clusterId`  | **string**（必选）<br/>受当前操作影响的集群 ID。|
+    | `CLUSTER_ID`  | **string**（必选）<br/>受当前操作影响的集群 ID。|
 
 ### 请求体
 

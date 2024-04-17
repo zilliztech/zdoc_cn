@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 删除一个集群。当前操作会将该指定集群移动到回收站。回收站中的集群将在 30 天后被彻底删除。
 
-<RestHeader method="delete" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/{clusterId}/drop" />
+<RestHeader method="delete" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/{CLUSTER_ID}/drop" />
 
 ---
 
@@ -53,7 +53,7 @@ curl --request DELETE \
 
     | 参数名称        | 参数说明                                                                             |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `clusterId`  | **string**（必选）<br/>受当前操作影响的集群 ID。|
+    | `CLUSTER_ID`  | **string**（必选）<br/>受当前操作影响的集群 ID。|
 
 ### 请求体
 

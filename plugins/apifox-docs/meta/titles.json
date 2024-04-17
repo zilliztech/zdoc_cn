@@ -26,5 +26,6 @@
     "删除 Pipeline": "drop-pipeline",
     "创建 Pipeline": "create-pipeline",
     "查看 Pipeline 列表": "list-pipelines",
-    "执行 Pipeline": "run-pipeline"
+    "执行 Pipeline": "run-pipeline",
+    "查看集群指标": "query-metrics"
 }

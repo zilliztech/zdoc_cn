@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 挂起集群。本操作会中断集群运行，不会影响集群数据完整性。
 
-<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/{clusterId}/suspend" />
+<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/{CLUSTER_ID}/suspend" />
 
 ---
 
@@ -53,7 +53,7 @@ curl --request POST \
 
     | 参数名称        | 参数说明                                                                             |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `clusterId`  | **string**（必选）<br/>目标集群 ID。|
+    | `CLUSTER_ID`  | **string**（必选）<br/>目标集群 ID。|
 
 ### 请求体
 

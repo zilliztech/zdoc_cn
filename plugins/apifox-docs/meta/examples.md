@@ -339,8 +339,6 @@ curl --request GET \
 - 拥有相应权限的 [API 密钥](/docs/manage-api-keys)。
 - 目标集群的用户名和密码，中间用冒号分隔。例如，`username:p@ssw0rd`。
 
-当前，RESTful API 不支持 JSON 和 Array 类型的字段。
-
 :::
 
 ```shell
@@ -491,8 +489,6 @@ curl --request GET \
 - 拥有相应权限的 [API 密钥](/docs/manage-api-keys)。
 - 目标集群的用户名和密码，中间用冒号分隔。例如，`username:p@ssw0rd`。
 
-当前，RESTful API 不支持 JSON 和 Array 类型的字段。
-
 :::
 
 - 向名为 `medium_articles` 的 Collection 中插入一个 Entity。
@@ -543,8 +539,6 @@ curl --request POST \
 
 - 拥有相应权限的 [API 密钥](/docs/manage-api-keys)。
 - 目标集群的用户名和密码，中间用冒号分隔。例如，`username:p@ssw0rd`。
-
-当前，RESTful API 不支持 JSON 和 Array 类型的字段。
 
 :::
 
@@ -597,8 +591,6 @@ curl --request POST \
 - 拥有相应权限的 [API 密钥](/docs/manage-api-keys)。
 - 目标集群的用户名和密码，中间用冒号分隔。例如，`username:p@ssw0rd`。
 
-当前，RESTful API 不支持 JSON 和 Array 类型的字段。
-
 :::
 
 - 基于指定的向量进行相似性搜索。
@@ -642,8 +634,6 @@ curl --request POST \
 - 拥有相应权限的 [API 密钥](/docs/manage-api-keys)。
 - 目标集群的用户名和密码，中间用冒号分隔。例如，`username:p@ssw0rd`。
 
-当前，RESTful API 不支持 JSON 和 Array 类型的字段。
-
 :::
 
 ```shell
@@ -669,8 +659,6 @@ curl --request POST \
 
 - 拥有相应权限的 [API 密钥](/docs/manage-api-keys)。
 - 目标集群的用户名和密码，中间用冒号分隔。例如，`username:p@ssw0rd`。
-
-当前，RESTful API 不支持 JSON 和 Array 类型的字段。
 
 :::
 
@@ -743,8 +731,6 @@ curl --request POST \
 - 拥有相应权限的 [API 密钥](/docs/manage-api-keys)。
 - 目标集群的用户名和密码，中间用冒号分隔。例如，`username:p@ssw0rd`。
 
-当前，RESTful API 不支持 JSON 和 Array 类型的字段。
-
 :::
 
 - 删除一个 ID 为整数的 Entity.
@@ -809,8 +795,6 @@ curl --request POST \
 
 您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
 
-当前，RESTful API 不支持 JSON 和 Array 类型的字段。
-
 :::
 
 从指定的对象存储桶中的文件导入数据。该对象存储桶须与目标集群处于同一公有云网络。
@@ -836,8 +820,6 @@ curl --request POST \
 
 您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
 
-当前，RESTful API 不支持 JSON 和 Array 类型的字段。
-
 :::
 
 ```shell
@@ -854,8 +836,6 @@ curl --request GET \
 
 您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
 
-当前，RESTful API 不支持 JSON 和 Array 类型的字段。
-
 :::
 
 ```shell
@@ -871,8 +851,6 @@ curl --request GET \
 :::info 说明
 
 您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
-
-当前，RESTful API 不支持 JSON 和 Array 类型的字段。
 
 :::
 
@@ -1044,8 +1022,6 @@ curl --request GET \
 
 您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
 
-当前，RESTful API 不支持 JSON 和 Array 类型的字段。
-
 :::
 
 ```shell
@@ -1096,8 +1072,6 @@ curl --request GET \
 
 您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
 
-当前，RESTful API 不支持 JSON 和 Array 类型的字段。
-
 :::
 
 ```shell
@@ -1145,8 +1119,6 @@ curl --request GET \
 :::info 说明
 
 您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
-
-当前，RESTful API 不支持 JSON 和 Array 类型的字段。
 
 :::
 
@@ -1230,8 +1202,6 @@ curl --request GET \
 :::info 说明
 
 您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
-
-当前，RESTful API 不支持 JSON 和 Array 类型的字段。
 
 :::
 
@@ -1327,3 +1297,62 @@ curl --request GET \
         }
     }
     ```
+
+## 查看集群指标
+
+:::info 说明
+
+您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
+
+:::
+
+```shell
+export CLOUD_REGION="gcp-us-west1"
+export API_KEY=""
+
+curl --location --request POST "https://controller.api.${CLOUD_REGION}.zillizcloud.com/v1/clusters/inxx-xxxxxxxxxxxxxxx/metrics/query" \
+--header "Authorization: Bearer ${API_KEY}" \
+--data-raw '{
+    "start": "",
+    "end": "",
+    "period": "PT99H",
+    "granularity": "PT5H",
+    "metricQueries": [
+        {
+            "name": "CU_CAPACITY",
+            "stat": "AVG"
+        }
+    ]
+}'
+```
+
+成功响应示例：
+
+```json
+{
+  "code": 200,
+  "data": {
+    "results": [
+      {
+        "name": "CU_CAPACITY",
+        "stat": "AVG",
+        "unit": "percent",
+        "values": [
+          {
+            "timestamp": "2024-03-28T04:58:06Z",
+            "value": null
+          },
+          {
+            "timestamp": "2024-03-28T09:58:06Z",
+            "value": null
+          },
+          {
+            "timestamp": "2024-03-28T14:58:06Z",
+            "value": null
+          }
+        ]
+      }
+    ]
+  }
+}
+```

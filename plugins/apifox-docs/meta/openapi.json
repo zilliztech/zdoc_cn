@@ -548,7 +548,7 @@
         ]
       }
     },
-    "/v1/clusters/{clusterId}": {
+    "/v1/clusters/{CLUSTER_ID}": {
       "get": {
         "summary": "Describe Cluster",
         "x-apifox-folder": "Cluster Operations",
@@ -560,7 +560,7 @@
         ],
         "parameters": [
           {
-            "name": "clusterId",
+            "name": "CLUSTER_ID",
             "in": "path",
             "description": "The ID of a cluster to which this operation applies.",
             "required": true,
@@ -756,7 +756,7 @@
         ]
       }
     },
-    "/v1/clusters/{clusterId}/drop": {
+    "/v1/clusters/{CLUSTER_ID}/drop": {
       "delete": {
         "summary": "Drop Cluster",
         "x-apifox-folder": "Cluster Operations",
@@ -768,7 +768,7 @@
         ],
         "parameters": [
           {
-            "name": "clusterId",
+            "name": "CLUSTER_ID",
             "in": "path",
             "description": "The ID of a cluster to which this operation applies.",
             "required": true,
@@ -828,7 +828,7 @@
         ]
       }
     },
-    "/v1/clusters/{clusterId}/modify": {
+    "/v1/clusters/{CLUSTER_ID}/modify": {
       "post": {
         "summary": "Modify Cluster",
         "x-apifox-folder": "Cluster Operations",
@@ -840,7 +840,7 @@
         ],
         "parameters": [
           {
-            "name": "clusterId",
+            "name": "CLUSTER_ID",
             "in": "path",
             "description": "The ID of a cluster to which this operation applies.",
             "required": true,
@@ -922,7 +922,7 @@
         ]
       }
     },
-    "/v1/clusters/{clusterId}/resume": {
+    "/v1/clusters/{CLUSTER_ID}/resume": {
       "post": {
         "summary": "Resume Cluster",
         "x-apifox-folder": "Cluster Operations",
@@ -934,7 +934,7 @@
         ],
         "parameters": [
           {
-            "name": "clusterId",
+            "name": "CLUSTER_ID",
             "in": "path",
             "description": "The ID of a cluster to which this operation applies.",
             "required": true,
@@ -994,7 +994,7 @@
         ]
       }
     },
-    "/v1/clusters/{clusterId}/suspend": {
+    "/v1/clusters/{CLUSTER_ID}/suspend": {
       "post": {
         "summary": "Suspend Cluster",
         "x-apifox-folder": "Cluster Operations",
@@ -1006,7 +1006,7 @@
         ],
         "parameters": [
           {
-            "name": "clusterId",
+            "name": "CLUSTER_ID",
             "in": "path",
             "description": "The ID of a cluster to which this operation applies.",
             "required": true,
@@ -2849,7 +2849,7 @@
             }
           },
           {
-            "name": "clusterId",
+            "name": "CLUSTER_ID",
             "in": "query",
             "description": "The ID of a cluster to which this operation applies.",
             "required": true,
@@ -3012,7 +3012,7 @@
         ],
         "parameters": [
           {
-            "name": "clusterId",
+            "name": "CLUSTER_ID",
             "in": "query",
             "description": "The ID of a specific cluster on Zilliz Cloud.",
             "required": true,
@@ -5706,6 +5706,285 @@
             "bearer": []
           }
         ]
+      }
+    },
+    "/v1/clusters/{CLUSTER_ID}/metrics/query": {
+      "post": {
+        "summary": "Query Metrics",
+        "x-apifox-folder": "Cluster Operations",
+        "x-apifox-status": "developing",
+        "deprecated": false,
+        "description": "View metric statistics.\n\n```shell\nexport CLOUD_REGION=\"gcp-us-west1\"\nexport API_KEY=\"\"\n\ncurl --location --request POST \"https://controller.api.${CLOUD_REGION}.zillizcloud.com/v1/clusters/inxx-xxxxxxxxxxxxxxx/metrics/query\" \\\n--header \"Authorization: Bearer ${API_KEY}\" \\\n--data-raw '{\n    \"start\": \"\",\n    \"end\": \"\",\n    \"period\": \"PT99H\",\n    \"granularity\": \"PT5H\",\n    \"metricQueries\": [\n        {\n            \"name\": \"CU_CAPACITY\",\n            \"stat\": \"AVG\"\n        }\n    ]\n}'\n```\nPossible response is similar to the following.\n```json\n{\n  \"code\": 200,\n  \"data\": {\n    \"results\": [\n      {\n        \"name\": \"CU_CAPACITY\",\n        \"stat\": \"AVG\",\n        \"unit\": \"percent\",\n        \"values\": [\n          {\n            \"timestamp\": \"2024-03-28T04:58:06Z\",\n            \"value\": null\n          },\n          {\n            \"timestamp\": \"2024-03-28T09:58:06Z\",\n            \"value\": null\n          },\n          {\n            \"timestamp\": \"2024-03-28T14:58:06Z\",\n            \"value\": null\n          }\n        ]\n      }\n    ]\n  }\n}\n```",
+        "tags": [
+          "Cluster Operations"
+        ],
+        "parameters": [
+          {
+            "name": "CLUSTER_ID",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "start": {
+                    "type": "string",
+                    "description": "The starting date and time for the metric reporting period, expressed in ISO 8601 timestamp format in UTC. Include this parameter when the `period` parameter is not set."
+                  },
+                  "end": {
+                    "type": "string",
+                    "description": "The ending date and time for the metric reporting period, expressed in ISO 8601 timestamp format in UTC. Include this parameter when the `period` parameter is not set."
+                  },
+                  "period": {
+                    "type": "string",
+                    "description": "The duration over which Milvus reports the metrics, expressed in ISO 8601 duration format in UTC. Include this parameter when both `start` and `end` parameters are not set."
+                  },
+                  "granularity": {
+                    "type": "string",
+                    "description": "The time interval at which Milvus reports the metrics, expressed in ISO 8601 duration format in UTC. The minimum granularity is PT30S."
+                  },
+                  "metricQueries": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "description": "The name of the metric to query. Valid values include **CU_COMPUTATION**, **CU_CAPACITY**, **STORAGE_USE**, **REQ_INSERT_COUNT**, **REQ_BULK_INSERT_COUNT**, **REQ_UPSERT_COUNT**, **REQ_DELETE_COUNT**, **REQ_SEARCH_COUNT**, **REQ_QUERY_COUNT**, **VECTOR_REQ_INSERT_COUNT**, **VECTOR_REQ_UPSERT_COUNT**, **VECTOR_REQ_SEARCH_COUNT**, **REQ_INSERT_LATENCY**, **REQ_BULK_INSERT_LATENCY**, **REQ_UPSERT_LATENCY**, **REQ_DELETE_LATENCY**, **REQ_SEARCH_LATENCY**, **REQ_QUERY_LATENCY**, **REQ_SUCCESS_RATE**, **REQ_FAIL_RATE**, **REQ_FAIL_RATE_INSERT**, **REQ_FAIL_RATE_BULK_INSERT**, **REQ_FAIL_RATE_UPSERT**, **REQ_FAIL_RATE_DELETE**, **REQ_FAIL_RATE_SEARCH**, **REQ_FAIL_RATE_QUERY**, **ENTITIES_LOADED**, **ENTITIES_INSERT_RATE**, **COLLECTIONS_COUNT**, **ENTITIES_COUNT**."
+                        },
+                        "stat": {
+                          "type": "string",
+                          "description": "The statistical method to apply to the metric. Valid values include **AVG** (average) and **P99** (99th percentile) for latency metrics. **AVG** is available for all other metrics."
+                        }
+                      },
+                      "x-apifox-orders": [
+                        "name",
+                        "stat"
+                      ],
+                      "required": [
+                        "name",
+                        "stat"
+                      ],
+                      "x-apifox-ignore-properties": []
+                    },
+                    "description": "An array of MetricQuery objects."
+                  }
+                },
+                "required": [
+                  "granularity",
+                  "metricQueries"
+                ],
+                "x-apifox-orders": [
+                  "start",
+                  "end",
+                  "period",
+                  "granularity",
+                  "metricQueries"
+                ],
+                "x-apifox-ignore-properties": []
+              },
+              "example": {
+                "start": "",
+                "end": "",
+                "period": "PT99H",
+                "granularity": "PT5H",
+                "metricQueries": [
+                  {
+                    "name": "CU_CAPACITY",
+                    "stat": "AVG"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "results": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "name": {
+                                "type": "string",
+                                "description": "The name of the metric."
+                              },
+                              "stat": {
+                                "type": "string",
+                                "description": "The statistical function applied to the metric."
+                              },
+                              "unit": {
+                                "type": "string",
+                                "description": "The unit of measurement for the metric (e.g., percent)."
+                              },
+                              "values": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "timestamp": {
+                                      "type": "string",
+                                      "description": "The timestamp for the data point in ISO 8601 format."
+                                    },
+                                    "value": {
+                                      "type": "string",
+                                      "description": "The value of the metric at the given timestamp.",
+                                      "nullable": true
+                                    }
+                                  },
+                                  "x-apifox-orders": [
+                                    "timestamp",
+                                    "value"
+                                  ],
+                                  "x-apifox-ignore-properties": []
+                                },
+                                "description": "An array of data points."
+                              }
+                            },
+                            "x-apifox-orders": [
+                              "name",
+                              "stat",
+                              "unit",
+                              "values"
+                            ],
+                            "x-apifox-ignore-properties": []
+                          },
+                          "description": "An array of result objects."
+                        }
+                      },
+                      "x-apifox-orders": [
+                        "results"
+                      ],
+                      "description": "The container for the response data.",
+                      "x-apifox-ignore-properties": []
+                    }
+                  },
+                  "x-apifox-orders": [
+                    "01HSWR4H6W0RSHHZPSECXQND27"
+                  ],
+                  "x-apifox-refs": {
+                    "01HSWR4H6W0RSHHZPSECXQND27": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "integer"
+                        },
+                        "data": {
+                          "type": "object",
+                          "properties": {
+                            "results": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "name": {
+                                    "type": "string",
+                                    "description": "The name of the metric."
+                                  },
+                                  "stat": {
+                                    "type": "string",
+                                    "description": "The statistical function applied to the metric."
+                                  },
+                                  "unit": {
+                                    "type": "string",
+                                    "description": "The unit of measurement for the metric (e.g., percent)."
+                                  },
+                                  "values": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "timestamp": {
+                                          "type": "string",
+                                          "description": "The timestamp for the data point in ISO 8601 format."
+                                        },
+                                        "value": {
+                                          "type": "string",
+                                          "description": "The value of the metric at the given timestamp.",
+                                          "nullable": true
+                                        }
+                                      },
+                                      "x-apifox-orders": [
+                                        "timestamp",
+                                        "value"
+                                      ],
+                                      "x-apifox-ignore-properties": []
+                                    },
+                                    "description": "An array of data points."
+                                  }
+                                },
+                                "x-apifox-orders": [
+                                  "name",
+                                  "stat",
+                                  "unit",
+                                  "values"
+                                ],
+                                "x-apifox-ignore-properties": []
+                              },
+                              "description": "An array of result objects."
+                            }
+                          },
+                          "x-apifox-orders": [
+                            "results"
+                          ],
+                          "description": "The container for the response data.",
+                          "x-apifox-ignore-properties": []
+                        }
+                      },
+                      "required": [
+                        "code",
+                        "data"
+                      ],
+                      "x-apifox-orders": [
+                        "code",
+                        "data"
+                      ],
+                      "x-apifox-folder": "Schemas",
+                      "x-apifox-ignore-properties": []
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "data"
+                  ],
+                  "x-apifox-ignore-properties": [
+                    "code",
+                    "data"
+                  ]
+                },
+                "examples": {
+                  "1": {
+                    "summary": "成功示例",
+                    "value": "{\n     \"results\": [\n         {\n             \"name\": \"CU_COMPUTATION\",\n             \"unit\": \"percent\",\n             \"stat\": \"AVERAGE\",\n             \"data\": [\n                 {\n                     \"timestamp\": 00000000,\n                     \"value\": 50.43\n                 },\n                 ...\n             ]\n         },\n         {\n             \"name\": \"REQ_QUERY_LATENCY\",\n             \"unit\": \"milliseconds\",\n             \"stat\": \"AVERAGE\",\n             \"data\": [\n                 {\n                     \"timestamp\": 00000000,\n                     \"value\": 23.18\n                 },\n                 ...\n             ]\n         },\n         {\n             \"name\": \"REQ_QUERY_LATENCY\",\n             \"unit\": \"milliseconds\",\n             \"stat\": \"P99\",\n             \"data\": [\n                 {\n                     \"timestamp\": 00000000,\n                     \"value\": 50.96\n                 },\n                 ...\n             ]\n         }\n     ]\n  }"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/3737803/apis/api-160990102-run",
+        "security": []
       }
     }
   },

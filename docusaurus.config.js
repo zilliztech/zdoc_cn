@@ -236,7 +236,7 @@ const config = {
         copyright: `LF AI、LF AI & Data、Milvus，以及相关的开源项目名称为 Linux Foundation 所有商标 <br/>版权所有 ©${new Date().getFullYear()} 上海赜睿信息科技有限公司保留所有权利。<br/>ICP 备案: 沪ICP备2023014543号<br/><a class="setting-cookie-btn" >Cookie 设置</a>`,
       },
       prism: {
-        additionalLanguages: ['java', 'go']
+        additionalLanguages: ['java', 'go', 'bash', 'json', ]
       },
       colorMode: {
         disableSwitch: true,

@@ -20,8 +20,6 @@ import RestHeader from '@site/src/components/RestHeader';
 
 您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
 
-当前，RESTful API 不支持 JSON 和 Array 类型的字段。
-
 :::
 
 ```shell
@@ -41,7 +39,7 @@ curl --request GET \
 
     | 参数名称          | 参数说明                                                                               |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `clusterId`  | **string**（必选）<br/>Zilliz Cloud 集群 ID。|
+    | `CLUSTER_ID`  | **string**（必选）<br/>Zilliz Cloud 集群 ID。|
     | `pageSize`  | **string**<br/>每次返回的导入任务数量。|
     | `currentPage`  | **string**<br/>当前页码。|
 

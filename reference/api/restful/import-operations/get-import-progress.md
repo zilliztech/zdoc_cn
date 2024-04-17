@@ -20,8 +20,6 @@ import RestHeader from '@site/src/components/RestHeader';
 
 您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
 
-当前，RESTful API 不支持 JSON 和 Array 类型的字段。
-
 :::
 
 ```shell
@@ -42,7 +40,7 @@ curl --request GET \
     | 参数名称          | 参数说明                                                                               |
     |------------------|-------------------------------------------------------------------------------------------|
     | `jobId`  | **string**（必选）<br/>指定的导入任务 ID。|
-    | `clusterId`  | **string**（必选）<br/>应用当前操作的集群 ID。|
+    | `CLUSTER_ID`  | **string**（必选）<br/>应用当前操作的集群 ID。|
 
 - 无路径参数。
 

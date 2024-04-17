@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 查看当前云地域中的所有项目。
 
-<RestHeader method="get" endpoint="https://${CLUSTER_ENDPOINT}/v1/projects" />
+<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/projects" />
 
 ---
 

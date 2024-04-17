@@ -23,8 +23,6 @@ import RestHeader from '@site/src/components/RestHeader';
 - 拥有相应权限的 [API 密钥](/docs/manage-api-keys)。
 - 目标集群的用户名和密码，中间用冒号分隔。例如，`username:p@ssw0rd`。
 
-当前，RESTful API 不支持 JSON 和 Array 类型的字段。
-
 :::
 
 - 向名为 `medium_articles` 的 Collection 中 Upsert 一个 Entity。

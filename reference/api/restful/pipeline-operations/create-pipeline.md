@@ -20,8 +20,6 @@ import RestHeader from '@site/src/components/RestHeader';
 
 您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
 
-当前，RESTful API 不支持 JSON 和 Array 类型的字段。
-
 :::
 
 - 创建 Ingestion Pipeline.
