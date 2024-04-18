@@ -5,7 +5,7 @@
   "node_token": "SVnkw5IkNiOfALkijr1cw91vn3L",
   "node_type": "origin",
   "obj_create_time": "1693539107",
-  "obj_edit_time": "1705888395",
+  "obj_edit_time": "1713341541",
   "obj_token": "ArBTdYKdIobUhGxY885cGQmHnbh",
   "obj_type": "docx",
   "origin_node_token": "SVnkw5IkNiOfALkijr1cw91vn3L",
@@ -26,8 +26,11 @@
           "Noh6dJTXxoJhwfxWx1zc2319nnf",
           "WtyDd17Ayoqy5Cx9y5pcgvGGnAh",
           "Hq9udJp4no52BXxT4EJcdyEUn8c",
+          "L3q0djnXSouAe4xjGRoc5BwRn98",
+          "O1GPdSw9fovKzqxD2SMcfopBnbf",
           "EWhNdrFDkoMSinx7GhVcHKqdnaf",
-          "TktHd6ZvUoavhMxRcHCcSyRdnVc",
+          "BvjddKG4lovWgoxyck8cs2AGnV8",
+          "JayhdE3BuouSc5xR2nactMYYnYg",
           "Nskxd9zARoATTwxC5mhcbmBNnJe",
           "FAdidaOh6oLgB9xaeelcklkAnUb",
           "AbBGdGCVAoMTlJxXrA5cXmo0nde",
@@ -86,7 +89,31 @@
           "elements": [
             {
               "text_run": {
-                "content": "在 Zilliz Cloud 注册账户后，您可对账户信息进行管理。您可以编辑账号信息以及删除账号。",
+                "content": "在 Zilliz Cloud 注册账户后，您可对账户信息进行管理。您可以编辑账号",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "设置",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "以及删除账号。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -208,7 +235,7 @@
             },
             {
               "text_run": {
-                "content": "账号管理",
+                "content": "账号",
                 "text_element_style": {
                   "bold": true,
                   "inline_code": false,
@@ -220,7 +247,55 @@
             },
             {
               "text_run": {
-                "content": "旁点击铅笔图标以编辑账号信息，包括：",
+                "content": "设置",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "弹窗中",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "编辑",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "或修改",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "账号信息，包括：",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -245,7 +320,165 @@
           "elements": [
             {
               "text_run": {
-                "content": "姓和名",
+                "content": "邮箱地址",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "YaQSdn0n0ohlEWxpB6mcX5btn67",
+          "Tj00d1vxeoHerWxnNnjcD1nNn2d"
+        ],
+        "parent_id": "ArBTdYKdIobUhGxY885cGQmHnbh"
+      },
+      {
+        "block_id": "YaQSdn0n0ohlEWxpB6mcX5btn67",
+        "block_type": 2,
+        "parent_id": "Hq9udJp4no52BXxT4EJcdyEUn8c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "修改邮箱地址后，您需要使用新的邮箱地址重新登录 Zilliz Cloud。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Tj00d1vxeoHerWxnNnjcD1nNn2d",
+        "block_type": 2,
+        "parent_id": "Hq9udJp4no52BXxT4EJcdyEUn8c",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "邮箱地址修改不影响原有的账单信息和告警接收人。如有将账单和告警接收人同步更新，请前往",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "账单",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FNhbHwPiL2i4KWskrcO4cDrSNnzh%23BQJvd19KfoFpz8xtxCCc1BvmnAf"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "告警",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FWpDVwYaHMizLWuklBJlcypTzn2d"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "页面手动更新。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "L3q0djnXSouAe4xjGRoc5BwRn98",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "手机号码",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "ArBTdYKdIobUhGxY885cGQmHnbh"
+      },
+      {
+        "block_id": "O1GPdSw9fovKzqxD2SMcfopBnbf",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "账号密码",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -270,7 +503,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "公司名称",
+                "content": "个人信息",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -289,76 +522,25 @@
         "parent_id": "ArBTdYKdIobUhGxY885cGQmHnbh"
       },
       {
-        "block_id": "TktHd6ZvUoavhMxRcHCcSyRdnVc",
-        "block_type": 34,
-        "children": [
-          "MH0kdqm0xo3Rt8xwPCTcftz4nJh",
-          "UxUsdL5LUovKRCxOX5Tc2eWOnTc"
-        ],
-        "parent_id": "ArBTdYKdIobUhGxY885cGQmHnbh",
-        "quote_container": {}
-      },
-      {
-        "block_id": "MH0kdqm0xo3Rt8xwPCTcftz4nJh",
-        "block_type": 2,
-        "parent_id": "TktHd6ZvUoavhMxRcHCcSyRdnVc",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "📘 说明",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
+        "block_id": "BvjddKG4lovWgoxyck8cs2AGnV8",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D45290-1495%26mode%3Ddesign%26t%3DC51oQO5CwK8CMlxg-4"
           }
-        }
+        },
+        "parent_id": "ArBTdYKdIobUhGxY885cGQmHnbh"
       },
       {
-        "block_id": "UxUsdL5LUovKRCxOX5Tc2eWOnTc",
+        "block_id": "JayhdE3BuouSc5xR2nactMYYnYg",
         "block_type": 2,
-        "parent_id": "TktHd6ZvUoavhMxRcHCcSyRdnVc",
+        "parent_id": "ArBTdYKdIobUhGxY885cGQmHnbh",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "账户邮箱无法直接修改。若需更改邮箱，请参考我们在",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "常见问题",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "link": {
-                    "url": "https%3A%2F%2Fdocs.zilliz.com.cn%2Fdocs%2Ffaq-account"
-                  },
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "中的相关指南。",
+                "content": "",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1004,6 +1186,6 @@
         "parent_id": "ArBTdYKdIobUhGxY885cGQmHnbh"
       }
     ],
-    "counts": 28
+    "counts": 31
   }
 }

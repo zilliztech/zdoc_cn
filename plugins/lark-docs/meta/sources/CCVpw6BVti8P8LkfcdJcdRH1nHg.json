@@ -5,7 +5,7 @@
   "node_token": "CCVpw6BVti8P8LkfcdJcdRH1nHg",
   "node_type": "origin",
   "obj_create_time": "1687157534",
-  "obj_edit_time": "1705888324",
+  "obj_edit_time": "1713340559",
   "obj_token": "D58cdXxK0oaP24xOIaZclOd3n8f",
   "obj_type": "docx",
   "origin_node_token": "CCVpw6BVti8P8LkfcdJcdRH1nHg",
@@ -25,11 +25,11 @@
           "KhJ6dwLtRosd4DxfGHScrDPrnUO",
           "JFbYdqWjboj4fZxYDMwcW4FynXe",
           "GZgFdArGWoZxuSx73NzcVMhvnNc",
-          "AtK0dirnroCwGqxblVEcHzeKnXc",
           "X41cdpjr4oxOqExR57tcnRqWnag",
-          "VB08dOTV3oMtOwx7j4Oc4T2xnke",
           "Qp05dLsFDopT8pxkaQzcL82knnf",
           "MmAWdF3RYoL4zAxry1mcvJfRnUh",
+          "C3xQd6Za6oAPOdxjizBcVUNNnhe",
+          "OFErdxzBCoMJ6VxjlgvceEdRnQg",
           "Xb3Cdqg0soPrGdx6UKAcIHWFnnd",
           "CWdId1jDHoVEpHxU5IRckp2dn0b",
           "Dt1FdQZlioVQ8MxaHgdchuwDn0d",
@@ -202,32 +202,6 @@
         "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f"
       },
       {
-        "block_id": "AtK0dirnroCwGqxblVEcHzeKnXc",
-        "block_type": 2,
-        "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false,
-            "indentation_level": "OneLevelIndent"
-          }
-        }
-      },
-      {
         "block_id": "X41cdpjr4oxOqExR57tcnRqWnag",
         "block_type": 4,
         "heading2": {
@@ -251,31 +225,6 @@
           }
         },
         "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f"
-      },
-      {
-        "block_id": "VB08dOTV3oMtOwx7j4Oc4T2xnke",
-        "block_type": 2,
-        "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "目前，您仅能够通过企业邮箱注册 Zilliz Cloud 账号。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
       },
       {
         "block_id": "Qp05dLsFDopT8pxkaQzcL82knnf",
@@ -357,6 +306,84 @@
         }
       },
       {
+        "block_id": "C3xQd6Za6oAPOdxjizBcVUNNnhe",
+        "block_type": 13,
+        "children": [
+          "KqO0dhnX5owGSyxSZajc6uZJnme"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "输入手机号码。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f"
+      },
+      {
+        "block_id": "KqO0dhnX5owGSyxSZajc6uZJnme",
+        "block_type": 2,
+        "parent_id": "C3xQd6Za6oAPOdxjizBcVUNNnhe",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "每个手机号码仅能注册 1 个 Zilliz Cloud 账号。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "OFErdxzBCoMJ6VxjlgvceEdRnQg",
+        "block_type": 13,
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "点击获取验证码，并输入手机短信中接收到的验证码。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f"
+      },
+      {
         "block_id": "Xb3Cdqg0soPrGdx6UKAcIHWFnnd",
         "block_type": 13,
         "comment_ids": [
@@ -381,7 +408,6 @@
               "text_run": {
                 "content": "使用条款",
                 "text_element_style": {
-                  "background_color": 3,
                   "bold": false,
                   "comment_ids": [
                     "7249940473108840451"
@@ -412,7 +438,6 @@
               "text_run": {
                 "content": "隐私政策",
                 "text_element_style": {
-                  "background_color": 3,
                   "bold": false,
                   "comment_ids": [
                     "7249940622295908355"
@@ -483,7 +508,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "验证码将发送到您填写的企业邮箱中。",
+                "content": "邮箱验证码将发送到您填写的企业邮箱中。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -708,6 +733,6 @@
         "parent_id": "D58cdXxK0oaP24xOIaZclOd3n8f"
       }
     ],
-    "counts": 21
+    "counts": 22
   }
 }

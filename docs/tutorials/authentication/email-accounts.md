@@ -12,23 +12,27 @@ import Admonition from '@theme/Admonition';
 
 # 邮箱账号
 
-在 Zilliz Cloud 注册账户后，您可对账户信息进行管理。您可以编辑账号信息以及删除账号。
+在 Zilliz Cloud 注册账户后，您可对账户信息进行管理。您可以编辑账号设置以及删除账号。
 
 ## 编辑账号信息{#modify-your-account-information}
 
 1. 点击界面右上角人像图标，并选择**账号设置**。
 
-1. 在**账号管理**旁点击铅笔图标以编辑账号信息，包括：
+1. 在**账号设置**弹窗中编辑或修改账号信息，包括：
 
-- 姓和名
+- 邮箱地址
 
-- 公司名称
+    修改邮箱地址后，您需要使用新的邮箱地址重新登录 Zilliz Cloud。
 
-<Admonition type="info" icon="📘" title="说明">
+    邮箱地址修改不影响原有的账单信息和告警接收人。如有将账单和告警接收人同步更新，请前往[账单](./view-invoice)和[告警](./manage-organization-alerts)页面手动更新。
 
-<p>账户邮箱无法直接修改。若需更改邮箱，请参考我们在<a href="/docs/faq-account">常见问题</a>中的相关指南。</p>
+- 手机号码
 
-</Admonition>
+- 账号密码
+
+- 个人信息
+
+![edit-account-settings](/img/edit-account-settings.png)
 
 ## 删除账号{#delete-your-account}
 

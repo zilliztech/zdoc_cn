@@ -1,5 +1,5 @@
 ---
-slug: /manage-cluster-credentials-sdk
+slug: /cluster-credentials-sdk
 beta: FALSE
 notebook: FALSE
 type: origin
@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 
 # 通过 SDK 管理身份凭证
 
-除了在 [Web 控制台](./manage-cluster-credentials-console)上进行身份凭证管理，Zilliz Cloud 还支持通过 SDK 来管理。这种功能扩展极大地提高了灵活性，并比仅使用 Web 控制台提供了更多的自定义选项。
+除了在 [Web 控制台](./cluster-credentials-console)上进行身份凭证管理，Zilliz Cloud 还支持通过 SDK 来管理。这种功能扩展极大地提高了灵活性，并比仅使用 Web 控制台提供了更多的自定义选项。
 
 在 Zilliz Cloud 后端，存在以下三种内置角色选项：
 

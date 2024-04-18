@@ -1,5 +1,5 @@
 ---
-slug: /manage-cluster-credentials-console
+slug: /cluster-credentials-console
 beta: FALSE
 notebook: FALSE
 type: origin

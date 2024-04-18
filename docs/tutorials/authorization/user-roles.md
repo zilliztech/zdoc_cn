@@ -54,7 +54,7 @@ import Admonition from '@theme/Admonition';
 
 - 只读权限（Read-Only）：仅可查看大部分集群资源，不具备创建、修改或删除的权限。
 
-有关管理不同角色的集群用户的更多信息，请参考[管理身份凭证](./manage-cluster-credentials-console)。
+有关管理不同角色的集群用户的更多信息，请参考[管理身份凭证](./cluster-credentials-console)。
 
 <Admonition type="info" icon="📘" title="说明">
 

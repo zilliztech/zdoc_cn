@@ -145,7 +145,7 @@ import Admonition from '@theme/Admonition';
 
 - [连接集群](./connect-to-cluster)
 
-- [管理身份凭证](./manage-cluster-credentials-console)
+- [管理身份凭证](./cluster-credentials-console)
 
 - [设置白名单](./set-up-whitelist)
 

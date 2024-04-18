@@ -5,7 +5,7 @@
   "node_token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
   "node_type": "origin",
   "obj_create_time": "1688959925",
-  "obj_edit_time": "1711684264",
+  "obj_edit_time": "1713358703",
   "obj_token": "Glc5dJHBLoiXyux5Rjdc8D06nUg",
   "obj_type": "docx",
   "origin_node_token": "DP6Fw8vkzi7pD7kAMB3cjunYn6g",
@@ -1247,7 +1247,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "800 万",
+                "content": "750",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 万",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1349,19 +1361,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "6",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "00",
+                "content": "450",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1499,7 +1499,19 @@
           "elements": [
             {
               "text_run": {
-                "content": "300 万",
+                "content": "225",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 万",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1613,19 +1625,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "2",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "00",
+                "content": "150",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1763,19 +1763,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "1",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "50",
+                "content": "112.5",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3533,7 +3521,55 @@
             },
             {
               "text_run": {
-                "content": "：单个性能型 CU 能处理 200 万个 768 维向量。为容纳全部 800 万向量，您需配置至少 4 个此类 CU。",
+                "content": "：单个性能型 CU 能处理 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "150",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 万个 768 维向量。为容纳全部 800 万向量，您需配置至少 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "6",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 个此类 CU。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -3618,7 +3654,31 @@
             },
             {
               "text_run": {
-                "content": "综上所述，针对这一应用场景，选择性能型 CU 是最合适的。建议配置 3 套副本，每套包含 4 个 CU，以确保应用运行的完美性能。",
+                "content": "综上所述，针对这一应用场景，选择性能型 CU 是最合适的。建议配置 3 套副本，每套包含 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "6",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 个 CU，以确保应用运行的完美性能。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

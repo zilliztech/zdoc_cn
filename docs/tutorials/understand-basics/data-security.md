@@ -36,7 +36,7 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 使用 OAuth2 协议实现身份验证。当访问集群时，Zilliz Cloud 要求用户提供身份凭证（或令牌）以证明用户身份。身份认证通过后，用户才能访问或操作集群资源。身份凭证通常由用户名和密码对或 API 密钥组成。
 
-有关详细信息，请参见[通过 Web UI 管理身份凭证](./manage-cluster-credentials-console)和[API 密钥](./manage-api-keys)。
+有关详细信息，请参见[通过 Web UI 管理身份凭证](./cluster-credentials-console)和[API 密钥](./manage-api-keys)。
 
 ### 访问控制{#access-control}
 

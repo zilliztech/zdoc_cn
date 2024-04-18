@@ -10,11 +10,25 @@ sidebar_position: 3
 import Admonition from '@theme/Admonition';
 
 
-# 查看账单与支付方式
+# 查看账单信息与支付方式
 
 首次注册 Zilliz Cloud 的用户即可获赠 ¥300 免费额度，享受 30 天免费试用。试用到期或免费额度使用完毕后，您需要添加支付方式并付清您的账单以继续使用 Zilliz Cloud 服务。
 
 如果您选择现金充值的支付方式，您可以在 Zilliz Cloud 界面查看账单。如果您选择开通阿里云云市场扣费渠道，请前往[阿里云云市场](https://market.aliyun.com/products/56024006/cmgj00063418.html?)查看您的所有账单。如果您同时选择了现金充值及开通阿里云云市场扣费渠道 2 种支付方式，Zilliz Cloud 界面仅展示免费额度扣费和现金余额扣费的账单，通过阿里云云市场扣费的部分账单，您仍需前往阿里云市场查看。
+
+## 查看账单信息{#view-billing-information}
+
+如需查看账单信息，请点击账单页内**账单概览**选项卡。账单信息模块包含以下信息：
+
+- 账单接收人姓名
+
+- 公司名称
+
+- 账单接收人邮箱地址
+
+如需修改账单信息，请点击**编辑**按钮。
+
+![zh-view-billing-receiver](/img/zh-view-billing-receiver.png)
 
 ## 查看 Zilliz Cloud 账单{#view-bills}
 

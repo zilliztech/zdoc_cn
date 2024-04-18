@@ -38,7 +38,7 @@ import Admonition from '@theme/Admonition';
 
 - 访问控制
 
-    通过 [API 密钥](./manage-api-keys)或[用户名密码身份验证](./manage-cluster-credentials-console)安全地访问专用集群和无服务器实例。
+    通过 [API 密钥](./manage-api-keys)或[用户名密码身份验证](./cluster-credentials-console)安全地访问专用集群和无服务器实例。
 
 - 返回原始向量
 

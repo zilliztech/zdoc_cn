@@ -5,7 +5,7 @@
   "node_token": "NhbHwPiL2i4KWskrcO4cDrSNnzh",
   "node_type": "origin",
   "obj_create_time": "1687233264",
-  "obj_edit_time": "1700705208",
+  "obj_edit_time": "1713341688",
   "obj_token": "EHvmdnkZpo211ExKVeNcjaeUnHb",
   "obj_type": "docx",
   "origin_node_token": "NhbHwPiL2i4KWskrcO4cDrSNnzh",
@@ -13,7 +13,7 @@
   "owner": "ou_fbc044d19930afd389d5c369466c38b1",
   "parent_node_token": "Uj7IwJpneijPROkAZN7cJRLInrc",
   "space_id": "7167193056431783939",
-  "title": "查看账单与支付方式",
+  "title": "查看账单信息与支付方式",
   "slug": "view-invoice",
   "blocks": {
     "items": [
@@ -24,6 +24,13 @@
           "EonhdnwTeoGuWwxCZbecg7oonlc",
           "X4nadEktSoo4KLx1KlNcsCbGnGe",
           "YI8idxBkEouyNrxuy80cQ4jLnQf",
+          "BQJvd19KfoFpz8xtxCCc1BvmnAf",
+          "M7MOdDmDho9ecVxnweLcemOJnXd",
+          "FOjodVY9no12EPxqJiKcDxqhnrg",
+          "YEAudBLQ6oreYuxMkVIcjQwQnWb",
+          "CGsNdWkN8oClokxG9FxccTnXnPh",
+          "ZyfPd0ZRpotaQwxUKKscLYrjn7e",
+          "FjcIdCnlxoKftGxhhRCcolEVnGf",
           "Pglcdzw9no9jg2xVicKcv9nMnFx",
           "IeJTduEEPo0m72xdBA0cHnhpnWd",
           "FGZDdzMxro7zOgxVLnGcn1DbnLf",
@@ -44,7 +51,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "查看账单与支付方式",
+                "content": "查看账单信息与支付方式",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -162,6 +169,215 @@
             "folded": false
           }
         }
+      },
+      {
+        "block_id": "BQJvd19KfoFpz8xtxCCc1BvmnAf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "查看账单信息{#view-billing-information}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "EHvmdnkZpo211ExKVeNcjaeUnHb"
+      },
+      {
+        "block_id": "M7MOdDmDho9ecVxnweLcemOJnXd",
+        "block_type": 2,
+        "parent_id": "EHvmdnkZpo211ExKVeNcjaeUnHb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需查看账单信息，请点击账单页内",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "账单概览",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "选项卡。账单信息模块包含以下信息：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FOjodVY9no12EPxqJiKcDxqhnrg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "账单接收人姓名",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "EHvmdnkZpo211ExKVeNcjaeUnHb"
+      },
+      {
+        "block_id": "YEAudBLQ6oreYuxMkVIcjQwQnWb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "公司名称",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "EHvmdnkZpo211ExKVeNcjaeUnHb"
+      },
+      {
+        "block_id": "CGsNdWkN8oClokxG9FxccTnXnPh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "账单接收人邮箱地址",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "EHvmdnkZpo211ExKVeNcjaeUnHb"
+      },
+      {
+        "block_id": "ZyfPd0ZRpotaQwxUKKscLYrjn7e",
+        "block_type": 2,
+        "parent_id": "EHvmdnkZpo211ExKVeNcjaeUnHb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如需修改账单信息，请点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "编辑",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "按钮。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FjcIdCnlxoKftGxhhRCcolEVnGf",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D45290-1498%26mode%3Ddesign%26t%3DC51oQO5CwK8CMlxg-4"
+          }
+        },
+        "parent_id": "EHvmdnkZpo211ExKVeNcjaeUnHb"
       },
       {
         "block_id": "Pglcdzw9no9jg2xVicKcv9nMnFx",
@@ -1320,6 +1536,6 @@
         "parent_id": "EHvmdnkZpo211ExKVeNcjaeUnHb"
       }
     ],
-    "counts": 39
+    "counts": 46
   }
 }
