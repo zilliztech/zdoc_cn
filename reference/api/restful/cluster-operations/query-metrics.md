@@ -23,10 +23,7 @@ import RestHeader from '@site/src/components/RestHeader';
 :::
 
 ```shell
-export CLOUD_REGION="gcp-us-west1"
-export API_KEY=""
-
-curl --location --request POST "https://controller.api.${CLOUD_REGION}.zillizcloud.com/v1/clusters/inxx-xxxxxxxxxxxxxxx/metrics/query" \
+curl --location --request POST "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/inxx-xxxxxxxxxxxxxxx/metrics/query" \
 --header "Authorization: Bearer ${API_KEY}" \
 --data-raw '{
     "start": "",

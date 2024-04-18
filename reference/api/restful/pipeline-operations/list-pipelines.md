@@ -26,7 +26,7 @@ import RestHeader from '@site/src/components/RestHeader';
 curl --request GET \
     --header "Content-Type: application/json" \
     --header "Authorization: Bearer ${API_KEY}" \
-    --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines?projectId=proj-**********************"
+    --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines?projectId=proj-**********************"
 ```
 
 成功响应示例：
