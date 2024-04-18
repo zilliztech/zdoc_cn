@@ -1,5 +1,6 @@
 ---
 slug: /data-import-zero-to-hero
+sidebar_label: 用户指南
 beta: FALSE
 notebook: FALSE
 type: origin
@@ -33,19 +34,50 @@ import TabItem from '@theme/TabItem';
 
 ### 安装依赖{#install-dependencies}
 
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+
+<TabItem value='python'>
+
 在终端中运行以下命令安装 **pymilvus** 和 **minio** 或将它们升级到最新的版本。
 
 ```shell
 python3 -m pip install --upgrade pymilvus minio
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
+- 如您使用 Apache Maven 管理项目, 在项目的 **pom.xml** 文件中添加如下内容：
+
+```java
+<dependency>
+  <groupId>io.milvus</groupId>
+  <artifactId>milvus-sdk-java</artifactId>
+  <version>2.3.5</version>
+</dependency>
+```
+
+- 如您使用 Gradle/Grails 管理项目, 执行如下命令：
+
+```shell
+compile 'io.milvus:milvus-sdk-java:2.3.5'
+```
+
+</TabItem>
+
+</Tabs>
+
 ### 配置远程对象存储桶{#configure-your-remote-storage-bucket}
 
-- 在您的阿里云控制台上创建一个对象存储桶。请确保该存储桶所属云地域与上述 Zilliz Cloud 集群的云地域一致。
+- 在您的阿里云或腾讯云控制台上创建一个对象存储桶。
 
-- 记录下访问该对象存储桶的 Access Key、Secret Key 以及 桶名称。您可以在阿里云控制台中找到这些信息。
+- 记录下访问该对象存储桶的 Access Key、Secret Key 以及桶名称。您可以在阿里云控制台中找到这些信息。
 
 为了更好地利用本教程中的示例代码，建议您使用收集到的信息设置如下变量：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+<TabItem value='python'>
 
 ```python
 # Zilliz Cloud 集群配置
@@ -62,6 +94,29 @@ YOUR_ACCESS_KEY=""
 YOUR_SECRET_KEY=""
 YOUR_BUCKET_NAME="" 
 ```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// Configs for Zilliz Cloud cluster
+String CLUSTER_ENDPOINT = "";
+String TOKEN = "";
+String API_KEY = "";
+String CLUSTER_ID = "";
+String CLOUD_REGION = "";
+String CLOUD_API_ENDPOINT = String.format("controller.api.%s.cloud.zilliz.com.cn", CLOUD_REGION);
+String COLLECTION_NAME = "";
+
+// Configs for remote bucket
+String ACCESS_KEY = "";
+String SECRET_KEY = "";
+String BUCKET_NAME = "";
+```
+
+</TabItem>
+</Tabs>
 
 ## 下载示例数据{#download-example-dataset}
 
@@ -101,6 +156,10 @@ curl https://assets.zilliz.com/doc-assets/medium_articles_partial_a13e0f2a.csv \
 
 为了更好地演示 Collection 的能力，我们在目标 Collection 的 Schema 中包含了前 4 个字段，并将后 4 个字段做为动态字段使用。
 
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+
+<TabItem value='python'>
+
 ```python
 from pymilvus import MilvusClient, DataType
 
@@ -134,7 +193,66 @@ schema.add_field(field_name="link", datatype=DataType.VARCHAR, max_length=512)
 
     该参数默认为 **False**，表示 Schema 中未定义的字段将会被忽略。将其设置为 **True** 将允许 **BulkWriter **将未在 Schema 中定义的字段以键值对的形式存储到一个名为** $meta** 的预留 JSON 字段中。
 
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+import io.milvus.param.collection.CollectionSchemaParam;
+import io.milvus.param.collection.FieldType;
+import io.milvus.grpc.DataType;
+
+// Define schema for the target collection
+FieldType id = FieldType.newBuilder()
+        .withName("id")
+        .withDataType(DataType.Int64)
+        .withPrimaryKey(true)
+        .withAutoID(false)
+        .build();
+
+FieldType titleVector = FieldType.newBuilder()
+        .withName("title_vector")
+        .withDataType(DataType.FloatVector)
+        .withDimension(768)
+        .build();
+
+FieldType title = FieldType.newBuilder()
+        .withName("title")
+        .withDataType(DataType.VarChar)
+        .withMaxLength(512)
+        .build();
+
+FieldType link = FieldType.newBuilder()
+        .withName("link")
+        .withDataType(DataType.VarChar)
+        .withMaxLength(512)
+        .build();
+
+CollectionSchemaParam schema = CollectionSchemaParam.newBuilder()
+        .withEnableDynamicField(true)
+        .addFieldType(id)
+        .addFieldType(titleVector)
+        .addFieldType(title)
+        .addFieldType(link)
+        .build();
+```
+
+上述代码中的字段解释如下： 
+
+- 名为 `id` 的字段为主键，其 `withAutoID` 设置为 `false`，表明在导入数据时，待插入数据中应该包含主键。
+
+- 名为 `title_vector` 的字段为向量字段，其 `withDimension` 设置为 768，表明待插入数据各条记录中该字段的值需为一个 768 维的向量。
+
+- Schema 定义中的 `withEnableDynamicField` 设置为 `true`，表明您可以在待插入数据中包含 Schema 中未定义的字段。
+
+</TabItem>
+
+</Tabs>
+
 在创建 Schema 后，就可以继续创建目标 Collection 了。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+<TabItem value='python'>
 
 ```python
 from pymilvus import MilvusClient
@@ -167,6 +285,53 @@ client.create_collection(
 )
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+import io.milvus.client.MilvusServiceClient;
+import io.milvus.param.ConnectParam;
+import io.milvus.param.IndexType;
+import io.milvus.param.MetricType;
+import io.milvus.param.collection.CreateCollectionParam;
+import io.milvus.param.collection.LoadCollectionParam;
+import io.milvus.param.index.CreateIndexParam;
+
+// Create a collection with the given schema
+ConnectParam connectParam = ConnectParam.newBuilder()
+        .withUri(CLUSTER_ENDPOINT)
+        .withToken(TOKEN)
+        .build();
+
+MilvusServiceClient milvusClient = new MilvusServiceClient(connectParam);
+
+CreateCollectionParam collectionParam = CreateCollectionParam.newBuilder()
+        .withCollectionName(COLLECTION_NAME)
+        .withSchema(schema)
+        .build();
+
+milvusClient.createCollection(collectionParam);
+
+CreateIndexParam indexParam = CreateIndexParam.newBuilder()
+        .withCollectionName(COLLECTION_NAME)
+        .withFieldName("title_vector")
+        .withIndexType(IndexType.AUTOINDEX)
+        .withMetricType(MetricType.IP)
+        .build();
+
+milvusClient.createIndex(indexParam);
+
+LoadCollectionParam loadCollectionParam = LoadCollectionParam.newBuilder()
+        .withCollectionName(COLLECTION_NAME)
+        .build();
+
+milvusClient.loadCollection(loadCollectionParam);
+```
+
+</TabItem>
+</Tabs>
+
 ## 准备源数据{#prepare-source-data}
 
 **BulkWriter** 会将您提供的数据转换成 JSON、Parquet 或 NumPy 文件。在下面的示例中，我们将创建一个 **RemoteBulkWriter** 并使用该 **RemoteBulkWriter** 将您的数据转换成上述格式。
@@ -175,11 +340,10 @@ client.create_collection(
 
 当 Schema 准备好后，就可以使用该 Schema 创建 **RemoteBulkWriter** 了。由于 **RemoteBulkWriter** 需要访问您的远程对象存储桶。因此，您需要先设置好连接远程对象存储桶的 **ConnectParam** 对象并在创建 **RemoteBulkWriter** 时引用该参数。
 
-<Tabs groupId="python" defaultValue='python' values={[{"label":"AWS S3/GCS","value":"python"},{"label":"Microsoft Azure","value":"python_1"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
 <TabItem value='python'>
 
 ```python
-
 from pymilvus import RemoteBulkWriter, BulkFileType
 
 # 三方服务常量
@@ -189,38 +353,31 @@ YOUR_BUCKET_NAME = "YOUR_BUCKET_NAME"
 
 # 远程存储桶连接参数
 conn = RemoteBulkWriter.S3ConnectParam(
-    endpoint="storage.googleapis.com", # Use "s3.amazonaws.com" for AWS S3
+    endpoint="oss-cn-hangzhou.aliyuncs.com", 
+    # 腾讯云请使用 "cos.ap-beijing-1.myqcloud.com"
     access_key=ACCESS_KEY,
     secret_key=SECRET_KEY,
-    bucket_name=BUCKET_NAME, # Use a bucket hosted in the same cloud as the target cluster
+    bucket_name=BUCKET_NAME,
     secure=True
 )
-
 ```
 
 </TabItem>
-<TabItem value='python_1'>
 
-```python
-# 三方服务常量
-AZURE_CONNECT_STRING = ""
+<TabItem value='java'>
 
-conn = RemoteBulkWriter.AzureConnectParam(
-    conn_str=AZURE_CONNECT_STRING,
-    container_name=BUCKET_NAME
-)
+```java
+import io.milvus.bulkwriter.connect.S3ConnectParam;
+import io.milvus.bulkwriter.connect.StorageConnectParam;
 
-# 或
-
-# 三方服务常量
-AZURE_ACCOUNT_URL = ""
-AZURE_CREDENTIAL = ""
-
-conn = RemoteBulkWriter.AzureConnectParam(
-    account_url=AZURE_ACCOUNT_URL,
-    credential=AZURE_CREDENTIAL,
-    container_name=BUCKET_NAME
-)
+// 创建一个 RemoteBulkWriter.
+StorageConnectParam storageConnectParam = S3ConnectParam.newBuilder()
+        .withEndpoint("oss-cn-hangzhou.aliyuncs.com") 
+        // 腾讯云请使用 "cos.ap-beijing-1.myqcloud.com"
+        .withBucketName(BUCKET_NAME)
+        .withAccessKey(ACCESS_KEY)
+        .withSecretKey(SECRET_KEY)
+        .build();
 ```
 
 </TabItem>
@@ -230,10 +387,15 @@ conn = RemoteBulkWriter.AzureConnectParam(
 
 <p>参数 <strong>endpoint</strong> 决定了生成文件的输出路径。请务必确保您的目标 Collection 所在地域与您的远程对象存储桶所在地域一致。</p>
 <p>关于阿里云下 OSS Region 和 Endpoint 对照关系，可<a href="https://help.aliyun.com/zh/oss/user-guide/regions-and-endpoints">参考此文</a>。</p>
+<p>关于腾讯云下 OSS Region 和 Endpoint 对照关系，可<a href="https://cloud.tencent.com/document/product/436/6224">参考此文</a>。</p>
 
 </Admonition>
 
 然后，在创建 **RemoteBulkWriter** 时需要引用上述 **ConnectParam** 对象。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+
+<TabItem value='python'>
 
 ```python
 writer = RemoteBulkWriter(
@@ -272,11 +434,58 @@ writer = RemoteBulkWriter(
 
     此参数决定了 **BulkWriter **如何对原始数据进行分段。该参数默认值为 512 MB (512 * 1024 * 1024)。如果您的数据集包含数据量较大时，可以考虑使用该参数对数据进行合理分段。
 
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+import io.milvus.bulkwriter.RemoteBulkWriter;
+import io.milvus.bulkwriter.RemoteBulkWriterParam;
+import io.milvus.bulkwriter.common.clientenum.BulkFileType;
+
+RemoteBulkWriterParam remoteBulkWriterParam = RemoteBulkWriterParam.newBuilder()
+        .withCollectionSchema(schema)
+        .withRemotePath("/")
+        .withChunkSize(512 * 1024 * 1024)
+        .withConnectParam(storageConnectParam)
+        .withFileType(BulkFileType.PARQUET)
+        .build();
+        
+@SuppressWarnings("resource")
+RemoteBulkWriter remoteBulkWriter = new RemoteBulkWriter(remoteBulkWriterParam);
+
+// Possible file types:
+// - BulkFileType.PARQUET
+```
+
+上述代码将生成 JSON 格式的文件并将其上传到指定桶的根目录下。
+
+- `withRemotePath("/")`
+
+    此参数决定了生成文件在远程对象存储桶中的输出路径。
+
+    将其设置为 `"/"` 会使 **RemoteBulkWriter** 将生成的文件放入远程对象存储桶的根目录下。若需放入其它路径，请使用相对于桶根目录的相对路径。
+
+- `withFileType(BulkFileType.PARQUET)`
+
+    此参数决定了生成文件的文件类型。当前 **PARQUET** 为唯一支持的格式。
+
+- `withChunkSize(512*1024*1024)`
+
+    此参数决定了 **BulkWriter **如何对原始数据进行分段。该参数默认值为 512 MB (512 * 1024 * 1024)。如果您的数据集包含数据量较大时，可以考虑使用该方法对数据进行合理分段。
+
+</TabItem>
+
+</Tabs>
+
 ### 使用 Writer{#use-the-writer}
 
 **Writer** 对象有两个方法：一个是将原始数据以行的形式添加到缓存中，另一个则是将缓存中的数据写入到远程对象存储桶中。
 
 您可以参考如下代码将原始数据以行的形式添加到缓存中。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+<TabItem value='python'>
 
 ```python
 import pandas as pd
@@ -289,23 +498,140 @@ for i in range(len(df)):
     writer.append_row(row)
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
+<Tabs groupId="java" defaultValue='java' values={[{"label":"Main","value":"java"},{"label":"CsvDataObject","value":"java_1"}]}>
+<TabItem value='java'>
+
+```java
+
+import com.fasterxml.jackson.dataformat.csv.CsvMapper;
+import com.fasterxml.jackson.dataformat.csv.CsvSchema;
+import com.alibaba.fastjson.JSONObject;
+
+import java.util.Iterator;
+
+CsvMapper csvMapper = new CsvMapper();
+File csvFile = new File("medium_articles_partial.csv");
+
+CsvSchema csvSchema = CsvSchema.builder().setUseHeader(true).build();
+Iterator<CsvDataObject> iterator = csvMapper
+        .readerFor(CsvDataObject.class)
+        .with(csvSchema)
+        .readValues(csvFile);
+        
+while (iterator.hasNext()) {
+    CsvDataObject data = iterator.next();
+    JSONObject row = new JSONObject();
+
+    row.put("id", data.getId());
+    row.put("title_vector", data.toFloatArray());
+    row.put("title", data.getTitle());
+    row.put("link", data.getLink());
+
+    remoteBulkWriter.appendRow(row);
+}
+        
+```
+
+</TabItem>
+<TabItem value='java_1'>
+
+```java
+// This object should match your data structure (a.k.a schema)
+
+import com.google.gson.Gson;
+
+private static class CsvDataObject {
+    @JsonProperty
+    private long id;
+    @JsonProperty
+    private String title_vector;
+    @JsonProperty
+    private String title;
+    @JsonProperty
+    private String link;
+
+    public long getId() {
+        return id;
+    }
+
+    @SuppressWarnings("unused")
+    public String getTitleVector() {
+        return title_vector;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public List<Float> toFloatArray() {
+        return new Gson().fromJson(title_vector, new TypeToken<List<Float>>(){}.getType());
+    }
+} 
+```
+
+</TabItem>
+</Tabs>
+</TabItem>
+</Tabs>
+
 如上述代码所示，**accept_row()** 方法接收一个字典。该字典以键值对的形式表示一条数据。
 
 需要注意的是，该字典需要包含所有在 Schema 中定义了的字段。如果 Schema 中还开启了动态字段，该字典还允许携带 Schema 中未定义的字段。具体内容，可参考[使用 BulkWriter](./use-bulkwriter)。
 
 您还需要调用 **commit()** 方法才能将缓存中的数据写入到远程对象存储桶中。
 
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+<TabItem value='python'>
+
 ```python
 writer.commit()
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+remoteBulkWriter.commit(false);
+```
+
+</TabItem>
+</Tabs>
+
 至此，BulkWriter 将原始数据按您的要求转换成 Zilliz Cloud 可识别的格式并将其存放到指定的远程对象存储桶中。您可以运行如下指令查看输入路径。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+<TabItem value='python'>
 
 ```python
 print(writer.data_path)
 
 # /5868ba87-743e-4d9e-8fa6-e07b39229425
 ```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+import java.util.List;
+
+List<List<String>> batchFiles = remoteBulkWriter.getBatchFiles();
+System.out.println(batchFiles);
+
+// [["/5868ba87-743e-4d9e-8fa6-e07b39229425/1.parquet"]]
+```
+
+</TabItem>
+</Tabs>
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -317,11 +643,14 @@ print(writer.data_path)
 
 ## 导入源数据{#import-prepared-data}
 
-在此步骤之前，请再次确认源数据和您的 Zilliz Cloud 集群均托管在阿里云上。
+在此步骤之前，请再次确认您准备的数据已经正确上传到您的存储桶中。
 
 ### 创建批量导入任务{#start-importing}
 
 您可以使用 bulk_import() 函数导入准备好的源数据。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+<TabItem value='python'>
 
 ```python
 from pymilvus import bulk_import
@@ -349,16 +678,51 @@ print(res.json())
 # {'code': 200, 'data': {'jobId': '0f7fe853-d93e-4681-99f2-4719c63585cc'}}
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+import io.milvus.bulkwriter.response.BulkImportResponse;
+
+// Insert the data into the collection
+String prefix = batchFiles.get(0).get(0).split("/")[0];
+String OBJECT_URL = String.format("https://storage.googleapis.com/%s/%s", BUCKET_NAME, prefix);
+
+BulkImportResponse bulkImportResponse = CloudImport.bulkImport(
+    CLUSTER_ENDPOINT,
+    API_KEY,
+    CLUSTER_ID,
+    COLLECTION_NAME,
+    OBJECT_URL,
+    ACCESS_KEY,
+    SECRET_KEY
+);
+
+// Get import job ID
+String jobId = bulkImportResponse.getJobId();
+
+System.out.println(jobId);
+
+// 0f7fe853-d93e-4681-99f2-4719c63585cc
+```
+
+</TabItem>
+</Tabs>
+
 <Admonition type="info" icon="📘" title="Notes">
 
 <p>参数 <strong>object_url</strong> 需为远程对象存储桶中一个合法的文件或目录。在上述代码中，我们使用了 <strong>format()</strong> 方法将桶名称和 Writer 返回的路径拼接成一个合法的目录路径。</p>
-<p>如需了解更多信息，可参考 <a href="https://help.aliyun.com/zh/oss/user-guide/oss-domain-names">OSS 访问域名使用规则</a>。</p>
+<p>如需了解更多信息，可参考 <a href="https://help.aliyun.com/zh/oss/user-guide/oss-domain-names">OSS 访问域名使用规则</a> （阿里云）或<a href="https://cloud.tencent.com/document/product/436/6224">地域和访问域名</a>（腾讯云）。</p>
 
 </Admonition>
 
 ### 检查任务进度{#check-task-progress}
 
 如下代码每 5 秒钟检查一次任务进度，并打印进度信息。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+<TabItem value='python'>
 
 ```python
 import time
@@ -396,6 +760,41 @@ while res.json()["data"]["readyPercentage"] < 1:
 # 1      -- 导入完成
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+while (true) {
+    System.out.println("Wait 5 second to check bulkInsert job state...");
+    TimeUnit.SECONDS.sleep(5);
+
+    GetImportProgressResponse getImportProgressResponse = CloudImport.getImportProgress(
+        CLUSTER_ENDPOINT,
+        API_KEY,
+        CLUSTER_ID,
+        jobId
+    );
+
+    if (getImportProgressResponse.getReadyPercentage().intValue() == 1) {
+        System.err.printf("The job %s completed%n", jobId);
+        break;
+    } else if (StringUtils.isNotEmpty(getImportProgressResponse.getErrorMessage())) {
+        System.err.printf("The job %s failed, reason: %s%n", jobId, getImportProgressResponse.getErrorMessage());
+        break;
+    } else {
+        System.err.printf("The job %s is running, progress:%s%n", jobId, getImportProgressResponse.getReadyPercentage());
+    }
+}
+
+// The job 0f7fe853-d93e-4681-99f2-4719c63585cc is running, progress: 0.01
+// The job 0f7fe853-d93e-4681-99f2-4719c63585cc is running, progress: 0.5
+// The job 0f7fe853-d93e-4681-99f2-4719c63585cc completed.
+```
+
+</TabItem>
+</Tabs>
+
 <Admonition type="info" icon="📘" title="说明">
 
 <p>上述代码中，参数 **url **为 Zilliz Cloud RESTful API 的服务器路径，其取值须与目标 Collection 所在云地域保持一致。</p>
@@ -403,6 +802,9 @@ while res.json()["data"]["readyPercentage"] < 1:
 </Admonition>
 
 您还可以列出所有批量导入任务。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+<TabItem value='python'>
 
 ```python
 from pymilvus import list_import_jobs
@@ -434,6 +836,25 @@ print(res.json())
 #    }
 # }
 ```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+ListImportJobsResponse listImportJobsResponse = CloudImport.listImportJobs(
+    CLUSTER_ENDPOINT,
+    API_KEY,
+    CLUSTER_ID,
+    10,
+    1
+);
+
+System.out.println(listImportJobsResponse);
+```
+
+</TabItem>
+</Tabs>
 
 ## 小结{#recaps}
 

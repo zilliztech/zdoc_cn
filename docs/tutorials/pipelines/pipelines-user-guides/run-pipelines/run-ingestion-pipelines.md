@@ -34,9 +34,9 @@ import Admonition from '@theme/Admonition';
 
 ### 通过对象存储服务上传文件{#run-ingestion-pipeline-with-a-file-in-an-object-storage}
 
-1. 在运行前，先将文档上传至[阿里云对象存储](https://help.aliyun.com/zh/oss/?spm=a2c4g.11186623.0.0.811c26e4LNfowb)。支持文档文件类型包括 `.txt`、 `.pdf`、`.md`、`.html`、`.epub`、`.csv`、`.doc`、`.docx`、`.xls`、`.xlsx`、`.ppt`、`.pptx`。
+1. 在运行前，先将文档上传至对象存储服务（例如：[阿里云对象存储](https://help.aliyun.com/zh/oss/?spm=a2c4g.11186623.0.0.811c26e4LNfowb)）。支持文档文件类型包括 `.txt`、 `.pdf`、`.md`、`.html`、`.epub`、`.csv`、`.doc`、`.docx`、`.xls`、`.xlsx`、`.ppt`、`.pptx`。
 
-1. 文档成功上传至阿里云 OSS 后，获取[签名 URL](https://www.alibabacloud.com/help/zh/oss/user-guide/authorize-third-party-users-to-download-objects?spm=a2c63.p38356.0.0.590c2cb74gHqev#section-fnd-m6v-bff)。
+1. 文档成功上传至 OSS 后，获取[预签名 URL](https://www.alibabacloud.com/help/zh/oss/user-guide/authorize-third-party-users-to-download-objects?spm=a2c63.p38356.0.0.590c2cb74gHqev#section-fnd-m6v-bff)。
 
 1. 以下示例代码用于运行 Ingestion pipeline `my_doc_ingestion_pipeline`。该 Pipeline 的 `pipelineId` 是 `pipe-6ca5dd1b4672659d3c3487`。`publish_year` 是需要保留的元数据字段。
 

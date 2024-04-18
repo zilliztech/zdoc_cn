@@ -5,7 +5,7 @@
   "node_token": "Xv4awWJZpiKoJjkPTlic98Mindc",
   "node_type": "origin",
   "obj_create_time": "1694934142",
-  "obj_edit_time": "1708656842",
+  "obj_edit_time": "1713427835",
   "obj_token": "PtPjd3WfSozYoExHaRtcGhxEnUc",
   "obj_type": "docx",
   "origin_node_token": "Xv4awWJZpiKoJjkPTlic98Mindc",
@@ -25,24 +25,39 @@
           "LEN4d1g0go7Np3xIN7ecxdBRnbd",
           "InjwdtoLxo91b5x3tRpcncjVnNE",
           "WC6ZdkUMUom26vxCLGKcLufgnxU",
-          "HS36d2PSsoW9IDxXi3FcTyaenhc",
+          "Fgogdwuuvo6NFfx8s1NcIspvn8g",
+          "QmsXdwB3koFmoFx3BxRc09c4nnb",
+          "TtWfdFQKMol8ZsxLJwPc6CDunFg",
+          "JV9DdJTfeo6wMIxZifBcfsM0ndg",
+          "AbvAdhvSkoyDXBxHd18ccH5ynbb",
+          "PZijdBqrlojjRvxYSHVcW7ornTd",
+          "UP95d48KCobe08xzQMCcb5lMnag",
+          "IPavdPijToI5yPxOKSVcnIE0nUe",
+          "XXagd2N33ovPmMxQ0qBc4vJ3nWU",
+          "JV1AddpDGoDSElxvHoKcEzMvn0b",
+          "Q7rZd4lV6oUUj3xvU0FcndXFn6g",
           "QGy8diaccohQwLxOxq6cOh7vnXb",
           "M9sBdUP8boInm7xsDractlJTn6f",
           "Nz8YdJSrmoqGrTxAx1ZclVL0noS",
+          "UpxbdHKQDonb7Jx2CzCcvVwAn4e",
           "H0zDdP7uso25vWx4vnWcrY4vnfD",
           "YWgMdwaA3oFs5pxMDMPcwUzkn4b",
           "SZgrdTiL4ohSS1xrzvGcojbgn7e",
           "Y6U0dxPvEoOXOvx14U9cxD0xnSd",
           "HVpIdKN1coMwj3xi453cWbKXnid",
+          "Da5vdGbaToNCAuxA3jmc3Cccnxc",
           "GgR5d95wOokKZqxN7wwcIG7Inth",
           "KC8od7eG9oqYhPxSSk8cJRHqnxb",
           "DWeudbIFiogBTux4heFcdVSun5d",
+          "O26Rd36kpoidjIxWbxHcCEk6nVf",
           "CS06dURetoVV63x9LBHc1v4Snnc",
           "NBWAdf3vRolb4WxO6Scc62jPncc",
           "PQ5KdVj53oY86ZxHDK1cChk1nGe",
+          "OsCRdAt38oGi8jx3oO6ckzb0nSe",
           "DELXdUrmFowpbLx514Hcwi68nUf",
           "U1CkdiyGrokYfKxhqk0ckjYXn4c",
           "QVTcdt7i5oPG7xxhIoUcmg0hnSh",
+          "Kn6udyalZo9jH7xfvGxcLxInnxg",
           "C8sxdRjBIougXlxnr4qcSb0Fnuc",
           "WuvKdyP3Lo6Xl6xDGAYcfkjHn3E",
           "UrEddisjzowL0Mx3MfdcrxsgnId",
@@ -287,7 +302,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "在命令行中运行如下命令安装 pymilvus 和 minio 或将它们升级到最新版本。",
+                "content": "<Tabs groupId=\"code\" defaultValue='python' values={[{\"label\":\"Python\",\"value\":\"python\"},{\"label\":\"Java\",\"value\":\"java\"}]}>",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -305,7 +320,105 @@
         }
       },
       {
-        "block_id": "HS36d2PSsoW9IDxXi3FcTyaenhc",
+        "block_id": "Fgogdwuuvo6NFfx8s1NcIspvn8g",
+        "block_type": 2,
+        "parent_id": "PtPjd3WfSozYoExHaRtcGhxEnUc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<TabItem value='python'>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "QmsXdwB3koFmoFx3BxRc09c4nnb",
+        "block_type": 2,
+        "parent_id": "PtPjd3WfSozYoExHaRtcGhxEnUc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在终端中运行以下命令安装 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "pymilvus",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "minio",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 或将它们升级到最新的版本。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "TtWfdFQKMol8ZsxLJwPc6CDunFg",
         "block_type": 14,
         "code": {
           "elements": [
@@ -328,6 +441,242 @@
           }
         },
         "parent_id": "PtPjd3WfSozYoExHaRtcGhxEnUc"
+      },
+      {
+        "block_id": "JV9DdJTfeo6wMIxZifBcfsM0ndg",
+        "block_type": 2,
+        "parent_id": "PtPjd3WfSozYoExHaRtcGhxEnUc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</TabItem>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "AbvAdhvSkoyDXBxHd18ccH5ynbb",
+        "block_type": 2,
+        "parent_id": "PtPjd3WfSozYoExHaRtcGhxEnUc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<TabItem value='java'>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PZijdBqrlojjRvxYSHVcW7ornTd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如您使用 Apache Maven 管理项目, 在项目的 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "pom.xml",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 文件中添加如下内容：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PtPjd3WfSozYoExHaRtcGhxEnUc"
+      },
+      {
+        "block_id": "UP95d48KCobe08xzQMCcb5lMnag",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "<dependency>\n  <groupId>io.milvus</groupId>\n  <artifactId>milvus-sdk-java</artifactId>\n  <version>2.3.5</version>\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "</dependency>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 29,
+            "wrap": false
+          }
+        },
+        "parent_id": "PtPjd3WfSozYoExHaRtcGhxEnUc"
+      },
+      {
+        "block_id": "IPavdPijToI5yPxOKSVcnIE0nUe",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如您使用 Gradle/Grails 管理项目, 执行如下命令：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "PtPjd3WfSozYoExHaRtcGhxEnUc"
+      },
+      {
+        "block_id": "XXagd2N33ovPmMxQ0qBc4vJ3nWU",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "compile 'io.milvus:milvus-sdk-java:2.3.5'",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 60,
+            "wrap": false
+          }
+        },
+        "parent_id": "PtPjd3WfSozYoExHaRtcGhxEnUc"
+      },
+      {
+        "block_id": "JV1AddpDGoDSElxvHoKcEzMvn0b",
+        "block_type": 2,
+        "parent_id": "PtPjd3WfSozYoExHaRtcGhxEnUc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</TabItem>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Q7rZd4lV6oUUj3xvU0FcndXFn6g",
+        "block_type": 2,
+        "parent_id": "PtPjd3WfSozYoExHaRtcGhxEnUc",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "</Tabs>",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
       },
       {
         "block_id": "QGy8diaccohQwLxOxq6cOh7vnXb",
@@ -449,7 +798,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "from minio import Minio\n\n# Third-party constants\nYOUR_ACCESS_KEY = \"YOUR_ACCESS_KEY\"\nYOUR_SECRET_KEY = \"YOUR_SECRET_KEY\"\nYOUR_BUCKET_NAME = \"YOUR_BUCKET_NAME\"\nYOUR_REMOTE_PATH = \"YOUR_REMOTE_PATH\"\n\nclient = Minio(\n    endpoint=\"storage.googleapis.com\", # use 's3.amazonaws.com' for AWS S3\n    access_key=YOUR_ACCESS_KEY,\n    secret_key=YOUR_SECRET_KEY,\n    secure=True\n)\n\nobjects = client.list_objects(\n    bucket_name=YOUR_BUCKET_NAME,\n    prefix=YOUR_REMOTE_PATH,\n    recursive=True\n)\n\nprint([obj.object_name for obj in objects])\n\n# Output\n#\n# [\n#     \"folder/1/claps.npy\",\n#     \"folder/1/id.npy\",\n#     \"folder/1/link.npy\",\n#     \"folder/1/publication.npy\",\n#     \"folder/1/reading_time.npy\",\n#     \"folder/1/responses.npy\",\n#     \"folder/1/title.npy\",\n#     \"folder/1/vector.npy\"\n# ]\n",
+                "content": "from minio import Minio\n\n# Third-party constants\nYOUR_ACCESS_KEY = \"YOUR_ACCESS_KEY\"\nYOUR_SECRET_KEY = \"YOUR_SECRET_KEY\"\nYOUR_BUCKET_NAME = \"YOUR_BUCKET_NAME\"\nYOUR_REMOTE_PATH = \"YOUR_REMOTE_PATH\"\n\nclient = Minio(\n    endpoint=\"oss-cn-hangzhou.aliyuncs.com\", \n    # 腾讯云请使用 \"cos.ap-beijing-1.myqcloud.com\"\n    access_key=YOUR_ACCESS_KEY,\n    secret_key=YOUR_SECRET_KEY,\n    secure=True\n)\n\nobjects = client.list_objects(\n    bucket_name=YOUR_BUCKET_NAME,\n    prefix=YOUR_REMOTE_PATH,\n    recursive=True\n)\n\nprint([obj.object_name for obj in objects])\n\n# Output\n#\n# [\n#     \"folder/1/claps.npy\",\n#     \"folder/1/id.npy\",\n#     \"folder/1/link.npy\",\n#     \"folder/1/publication.npy\",\n#     \"folder/1/reading_time.npy\",\n#     \"folder/1/responses.npy\",\n#     \"folder/1/title.npy\",\n#     \"folder/1/vector.npy\"\n# ]\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -462,6 +811,43 @@
           ],
           "style": {
             "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "PtPjd3WfSozYoExHaRtcGhxEnUc"
+      },
+      {
+        "block_id": "UpxbdHKQDonb7Jx2CzCcvVwAn4e",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "import io.minio.MinioClient;\nimport io.minio.Result;\nimport io.minio.messages.Item;\n\nimport java.util.Iterator;\n\n// Third-party constants\nString ACCESS_KEY = \"YOUR_ACCESS_KEY\";\nString SECRET_KEY = \"YOUR_SECRET_KEY\";\nString BUCKET_NAME = \"YOUR_BUCKET_NAME\";\nString REMOTE_PATH = \"YOUR_REMOTE_PATH\";\n\nMinioClient minioClient = MinioClient.builder()\n        .withEndpoint(\"oss-cn-hangzhou.aliyuncs.com\") \n        // 腾讯云请使用 \"cos.ap-beijing-1.myqcloud.com\"\n        .credentials(ACCESS_KEY, SECRET_KEY)\n        .build();\n        \nIterable<Result<Item>> results = minioClient.listObjects(\n    ListObjectsArgs.builder().bucket(BUCKET_NAME).prefix(REMOTE_PATH).build();\n);\n\nwhile (results.hasNext()) {\n    Result<Item> result = results.next();\n    System.out.println(result.get().objectName());\n}\n\n// Output\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "// [[1.parquet]]",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 29,
             "wrap": false
           }
         },
@@ -683,6 +1069,43 @@
         "parent_id": "PtPjd3WfSozYoExHaRtcGhxEnUc"
       },
       {
+        "block_id": "Da5vdGbaToNCAuxA3jmc3Cccnxc",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "import io.milvus.param.collection.CollectionSchemaParam;\nimport io.milvus.param.collection.FieldType;\nimport io.milvus.grpc.DataType;\nimport io.milvus.client.MilvusServiceClient;\nimport io.milvus.param.ConnectParam;\nimport io.milvus.param.IndexType;\nimport io.milvus.param.MetricType;\nimport io.milvus.param.collection.CreateCollectionParam;\nimport io.milvus.param.collection.LoadCollectionParam;\nimport io.milvus.param.index.CreateIndexParam;\n\n// Configs for Zilliz Cloud cluster\nString CLUSTER_ENDPOINT = \"\";\nString TOKEN = \"\";\nString API_KEY = \"\";\nString CLUSTER_ID = \"\";\nString CLOUD_REGION = \"\";\nString COLLECTION_NAME = \"\";\n\n// Third-party constants \nString OBJECT_URL = \"\"\n\n// Define schema for the target collection\nFieldType id = FieldType.newBuilder()\n        .withName(\"id\")\n        .withDataType(DataType.Int64)\n        .withPrimaryKey(true)\n        .withAutoID(false)\n        .build();\n\nFieldType titleVector = FieldType.newBuilder()\n        .withName(\"vector\")\n        .withDataType(DataType.FloatVector)\n        .withDimension(768)\n        .build();\n\nFieldType title = FieldType.newBuilder()\n        .withName(\"title\")\n        .withDataType(DataType.VarChar)\n        .withMaxLength(512)\n        .build();\n\nFieldType link = FieldType.newBuilder()\n        .withName(\"link\")\n        .withDataType(DataType.VarChar)\n        .withMaxLength(512)\n        .build();\n        \nFieldType readingTime = FieldType.newBuilder()\n        .withName(\"reading_time\")\n        .withDataType(DataType.Int64)\n        .build();\n        \nFieldType publication = FieldType.newBuilder()\n        .withName(\"publication\")\n        .withDataType(DataType.VarChar)\n        .withMaxLength(512)\n        .build();\n\nFieldType claps = FieldType.newBuilder()\n        .withName(\"claps\")\n        .withDataType(DataType.Int64)\n        .build();     \n        \nFieldType responses = FieldType.newBuilder()\n        .withName(\"responses\")\n        .withDataType(DataType.Int64)\n        .build();      \n        \n\nCollectionSchemaParam schema = CollectionSchemaParam.newBuilder()\n        .withEnableDynamicField(false)\n        .addFieldType(id)\n        .addFieldType(titleVector)\n        .addFieldType(title)\n        .addFieldType(link)\n        .addFieldType(readingTime)\n        .addFieldType(publication)\n        .addFieldType(claps)\n        .addFieldType(responses)\n        .build();\n        \n// Create a collection with the given schema\nConnectParam connectParam = ConnectParam.newBuilder()\n        .withUri(CLUSTER_ENDPOINT)\n        .withToken(TOKEN)\n        .build();\n\nMilvusServiceClient milvusClient = new MilvusServiceClient(connectParam);\n\nCreateCollectionParam collectionParam = CreateCollectionParam.newBuilder()\n        .withCollectionName(COLLECTION_NAME)\n        .withSchema(schema)\n        .build();\n\nmilvusClient.createCollection(collectionParam);\n\nCreateIndexParam indexParam = CreateIndexParam.newBuilder()\n        .withCollectionName(COLLECTION_NAME)\n        .withFieldName(\"title_vector\")\n        .withIndexType(IndexType.AUTOINDEX)\n        .withMetricType(MetricType.L2)\n        .build();\n\nmilvusClient.createIndex(indexParam);\n\nLoadCollectionParam loadCollectionParam = LoadCollectionParam.newBuilder()\n        .withCollectionName(COLLECTION_NAME)\n        .build();\n\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "milvusClient.loadCollection(loadCollectionParam);",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 29,
+            "wrap": false
+          }
+        },
+        "parent_id": "PtPjd3WfSozYoExHaRtcGhxEnUc"
+      },
+      {
         "block_id": "GgR5d95wOokKZqxN7wwcIG7Inth",
         "block_type": 4,
         "heading2": {
@@ -770,6 +1193,43 @@
         "parent_id": "PtPjd3WfSozYoExHaRtcGhxEnUc"
       },
       {
+        "block_id": "O26Rd36kpoidjIxWbxHcCEk6nVf",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "import io.milvus.bulkwriter.response.BulkImportResponse;\n\nBulkImportResponse bulkImportResponse = CloudImport.bulkImport(\n    CLUSTER_ENDPOINT,\n    API_KEY,\n    CLUSTER_ID,\n    COLLECTION_NAME,\n    OBJECT_URL,\n    ACCESS_KEY,\n    SECRET_KEY\n);\n\n// Get import job ID\nString jobId = bulkImportResponse.getJobId();\n\nSystem.out.println(jobId);\n\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "// 0f7fe853-d93e-4681-99f2-4719c63585cc",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 29,
+            "wrap": false
+          }
+        },
+        "parent_id": "PtPjd3WfSozYoExHaRtcGhxEnUc"
+      },
+      {
         "block_id": "CS06dURetoVV63x9LBHc1v4Snnc",
         "block_type": 5,
         "heading3": {
@@ -851,6 +1311,43 @@
           ],
           "style": {
             "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "PtPjd3WfSozYoExHaRtcGhxEnUc"
+      },
+      {
+        "block_id": "OsCRdAt38oGi8jx3oO6ckzb0nSe",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "while (true) {\n    System.out.println(\"Wait 5 second to check bulkInsert job state...\");\n    TimeUnit.SECONDS.sleep(5);\n\n    GetImportProgressResponse getImportProgressResponse = CloudImport.getImportProgress(\n        CLUSTER_ENDPOINT,\n        API_KEY,\n        CLUSTER_ID,\n        jobId\n    );\n\n    if (getImportProgressResponse.getReadyPercentage().intValue() == 1) {\n        System.err.printf(\"The job %s completed%n\", jobId);\n        break;\n    } else if (StringUtils.isNotEmpty(getImportProgressResponse.getErrorMessage())) {\n        System.err.printf(\"The job %s failed, reason: %s%n\", jobId, getImportProgressResponse.getErrorMessage());\n        break;\n    } else {\n        System.err.printf(\"The job %s is running, progress:%s%n\", jobId, getImportProgressResponse.getReadyPercentage());\n    }\n}\n\n// The job 0f7fe853-d93e-4681-99f2-4719c63585cc is running, progress: 0.01\n// The job 0f7fe853-d93e-4681-99f2-4719c63585cc is running, progress: 0.5\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "// The job 0f7fe853-d93e-4681-99f2-4719c63585cc completed.",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 29,
             "wrap": false
           }
         },
@@ -962,6 +1459,43 @@
           ],
           "style": {
             "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "PtPjd3WfSozYoExHaRtcGhxEnUc"
+      },
+      {
+        "block_id": "Kn6udyalZo9jH7xfvGxcLxInnxg",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "ListImportJobsResponse listImportJobsResponse = CloudImport.listImportJobs(\n    CLUSTER_ENDPOINT,\n    API_KEY,\n    CLUSTER_ID,\n    10,\n    1\n);\n\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "System.out.println(listImportJobsResponse);",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 29,
             "wrap": false
           }
         },
@@ -1125,6 +1659,6 @@
         "parent_id": "PtPjd3WfSozYoExHaRtcGhxEnUc"
       }
     ],
-    "counts": 29
+    "counts": 44
   }
 }

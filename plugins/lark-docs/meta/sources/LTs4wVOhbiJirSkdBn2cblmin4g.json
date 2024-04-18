@@ -5,7 +5,7 @@
   "node_token": "LTs4wVOhbiJirSkdBn2cblmin4g",
   "node_type": "origin",
   "obj_create_time": "1708398104",
-  "obj_edit_time": "1708672153",
+  "obj_edit_time": "1713425077",
   "obj_token": "HkR5dA5OIogUa8xbeKFceGJfn3g",
   "obj_type": "docx",
   "origin_node_token": "LTs4wVOhbiJirSkdBn2cblmin4g",
@@ -519,7 +519,61 @@
           "elements": [
             {
               "text_run": {
-                "content": "Zilliz Cloud Pipelines 支持来自 AWS S3 和 Google Cloud Storage 的文件。您可以从对象存储生成预签名 URL，并使用 ",
+                "content": "Zilliz Cloud Pipelines 支持来自",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "阿里云 OSS",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fwww.alibabacloud.com%2Fhelp%2Fzh%2Foss%2Fuser-guide%2Fauthorize-third-party-users-to-download-objects%3Fspm%3Da2c63.p38356.0.0.590c2cb74gHqev%23section-fnd-m6v-bff"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "腾讯云 COS",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fcloud.tencent.com%2Fdocument%2Fproduct%2F436%2F68284"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " 对象存储的文件。您可以从对象存储生成预签名 URL并使用 ",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -567,7 +621,7 @@
             },
             {
               "text_run": {
-                "content": " 来上传文件。它可以自动索引文档并将文档块作为向量存储在 Zilliz Cloud 上。",
+                "content": " 上传文件。它可以自动索引文档并将文档块作为向量存储在 Zilliz Cloud 上。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

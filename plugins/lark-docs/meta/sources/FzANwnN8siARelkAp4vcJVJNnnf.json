@@ -5,7 +5,7 @@
   "node_token": "FzANwnN8siARelkAp4vcJVJNnnf",
   "node_type": "origin",
   "obj_create_time": "1694688045",
-  "obj_edit_time": "1701324796",
+  "obj_edit_time": "1713427187",
   "obj_token": "Y9vad8dvPozCe4xuCv5c85tHnyg",
   "obj_type": "docx",
   "origin_node_token": "FzANwnN8siARelkAp4vcJVJNnnf",
@@ -1028,7 +1028,43 @@
           "elements": [
             {
               "text_run": {
-                "content": "curl --request POST \\\n     --url \"<https://controller.api.$>{CLOUD_REGION_ID}.zillizcloud.com/v1/vector/collections/import\" \\\\\n     --header \"Authorization: Bearer ${TOKEN}\" \\\n     --header \"accept: application/json\" \\\n     --header \"content-type: application/json\" \\\n     -d '{\n       \"clusterId\": \"${CLUSTER_ID}\",\n       \"collectionName\": \"medium_articles\",\n       \"objectUrl\": \"gs://publicdataset-zillizcloud-com/medium_articles_2020.json\"\n       \"accessKey\": \"your-access-key\"\n       \"secretKey\": \"your-secret-key\"\n",
+                "content": "curl --request POST \\\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "     --url \"<https://controller.api.$>{CLOUD_REGION_ID}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".cloud.zilliz.com.cn",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "/v1/vector/collections/import\" \\\\\n     --header \"Authorization: Bearer ${TOKEN}\" \\\n     --header \"accept: application/json\" \\\n     --header \"content-type: application/json\" \\\n     -d '{\n       \"clusterId\": \"${CLUSTER_ID}\",\n       \"collectionName\": \"medium_articles\",\n       \"objectUrl\": \"gs://publicdataset-zillizcloud-com/medium_articles_2020.json\"\n       \"accessKey\": \"your-access-key\"\n       \"secretKey\": \"your-secret-key\"\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1406,7 +1442,43 @@
           "elements": [
             {
               "text_run": {
-                "content": "curl --request GET \\\n     --url \"<https://controller.api.$>{CLOUD_REGION_ID}.zillizcloud.com/v1/vector/collections/import/get?jobId=${JOBID}&clusterId=${CLUSTERID}\" \\\\\n     --header \"Authorization: Bearer ${TOKEN}\" \\\n     --header \"accept: application/json\" \\\n",
+                "content": "curl --request GET \\\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "     --url \"<https://controller.api.$>{CLOUD_REGION_ID}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": ".cloud.zilliz.com.cn",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "/v1/vector/collections/import/get?jobId=${JOBID}&clusterId=${CLUSTERID}\" \\\\\n     --header \"Authorization: Bearer ${TOKEN}\" \\\n     --header \"accept: application/json\" \\\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

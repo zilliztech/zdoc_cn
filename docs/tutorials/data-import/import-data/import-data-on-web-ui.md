@@ -1,5 +1,6 @@
 ---
 slug: /import-data-on-web-ui
+sidebar_label: 控制台
 beta: FALSE
 notebook: FALSE
 type: origin

@@ -46,7 +46,7 @@ import Admonition from '@theme/Admonition';
 
 ## 为文档创建索引{#index-documents}
 
-Zilliz Cloud Pipelines 支持来自 AWS S3 和 Google Cloud Storage 的文件。您可以从对象存储生成预签名 URL，并使用 `from_document_url()` 或 `insert_doc_url()` 来上传文件。它可以自动索引文档并将文档块作为向量存储在 Zilliz Cloud 上。
+Zilliz Cloud Pipelines 支持来自[阿里云 OSS](https://www.alibabacloud.com/help/zh/oss/user-guide/authorize-third-party-users-to-download-objects?spm=a2c63.p38356.0.0.590c2cb74gHqev#section-fnd-m6v-bff) 和[腾讯云 COS](https://cloud.tencent.com/document/product/436/68284) 对象存储的文件。您可以从对象存储生成预签名 URL并使用 `from_document_url()` 或 `insert_doc_url()` 上传文件。它可以自动索引文档并将文档块作为向量存储在 Zilliz Cloud 上。
 
 ```python
 from llama_index.indices import ZillizCloudPipelineIndex

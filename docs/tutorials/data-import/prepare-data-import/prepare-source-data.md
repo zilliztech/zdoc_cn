@@ -8,7 +8,8 @@ sidebar_position: 1
 ---
 
 import Admonition from '@theme/Admonition';
-
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # 准备导入数据
 
@@ -36,6 +37,9 @@ import Admonition from '@theme/Admonition';
 
 我们可以按上图所示的数据，创建目标 Collection 的 Schema。
 
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+<TabItem value='python'>
+
 ```python
 from pymilvus import MilvusClient, DataType
 
@@ -50,6 +54,52 @@ schema.add_field(field_name="vector", datatype=DataType.FLOAT_VECTOR, dim=768)
 schema.add_field(field_name="scalar_1", datatype=DataType.VARCHAR, max_length=512)
 schema.add_field(field_name="scalar_2", datatype=DataType.INT64)
 ```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+import io.milvus.param.collection.CollectionSchemaParam;
+import io.milvus.param.collection.FieldType;
+import io.milvus.grpc.DataType;
+
+// Define schema for the target collection
+FieldType id = FieldType.newBuilder()
+        .withName("id")
+        .withDataType(DataType.Int64)
+        .withPrimaryKey(true)
+        .withAutoID(false)
+        .build();
+
+FieldType vector = FieldType.newBuilder()
+        .withName("vector")
+        .withDataType(DataType.FloatVector)
+        .withDimension(768)
+        .build();
+
+FieldType scalar1 = FieldType.newBuilder()
+        .withName("scalar_1")
+        .withDataType(DataType.VarChar)
+        .withMaxLength(512)
+        .build();
+
+FieldType scalar2 = FieldType.newBuilder()
+        .withName("scalar_2")
+        .withDataType(DataType.Int64)
+        .build();
+
+CollectionSchemaParam schema = CollectionSchemaParam.newBuilder()
+        .withEnableDynamicField(true)
+        .addFieldType(id)
+        .addFieldType(vector)
+        .addFieldType(scalar1)
+        .addFieldType(scalar2)
+        .build();
+```
+
+</TabItem>
+</Tabs>
 
 ## 源数据格式相关要求{#source-data-requirements}
 
@@ -143,6 +193,10 @@ Zilliz Cloud 还支持通过 Zilliz Cloud 控制台或使用 RESTful API / SDK �
 
 ![data-import-on-console-remote_zh](/img/data-import-on-console-remote_zh.png)
 
+<Tabs defaultValue="ali" values={[{"label":"ALI OSS","value":"ali"},{"label":"tencent","value":"Tencent COS"}]}>
+
+<TabItem value="ali">
+
 - 对象访问 URI
 
     |  **地域**               |  **URI**                                            |  **地域 ID**         |
@@ -159,3 +213,25 @@ Zilliz Cloud 还支持通过 Zilliz Cloud 控制台或使用 RESTful API / SDK �
     |  **NumPy**   |  `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/numpy-folder`<br/> `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/numpy-folder/*.npy`            |
     |  **Parquet** |  `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder`<br/> `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder/data.parquet` |
 
+</TabItem>
+
+<TabItem value="tencent">
+
+- 对象访问 URI
+
+    |  **地域**          |  **URI**                                                   |  **地域 ID**     |
+    | ---------------- | ---------------------------------------------------------- | -------------- |
+    |  **北京**<br/>  |  `https://<BucketName-APPID>.cos.ap-beijing.myqcloud.com`  |  `ap-beijing`  |
+    |  **上海**          |  `https://<BucketName-APPID>.cos.ap-shanghai.myqcloud.com` |  `ap-shanghai` |
+
+- 示例
+
+    |  **文件类型**    |  **路径示例**                                                                                                                                                             |
+    | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    |  **JSON**    |  `https://<BucketName-APPID>.cos.ap-beijing.myqcloud.com/json-folder`<br/> `https://<BucketName-APPID>.cos.ap-beijing.myqcloud.com/json-folder/data.json`          |
+    |  **NumPy**   |  `https://<BucketName-APPID>.cos.ap-beijing.myqcloud.com/numpy-folder`<br/> `https://<BucketName-APPID>.cos.ap-beijing.myqcloud.com/numpy-folder/*.npy`            |
+    |  **Parquet** |  `https://<BucketName-APPID>.cos.ap-beijing.myqcloud.com/parquet-folder`<br/> `https://<BucketName-APPID>.cos.ap-beijing.myqcloud.com/parquet-folder/data.parquet` |
+
+</TabItem>
+
+</Tabs>

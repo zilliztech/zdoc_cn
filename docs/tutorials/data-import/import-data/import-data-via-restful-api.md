@@ -1,5 +1,6 @@
 ---
 slug: /import-data-via-restful-api
+sidebar_label: RESTful API
 beta: FALSE
 notebook: FALSE
 type: origin
@@ -75,7 +76,7 @@ with open('path/to/medium_articles_2020_dpr.json') as f:
 
 ```bash
 curl --request POST \
-     --url "<https://controller.api.$>{CLOUD_REGION_ID}.zillizcloud.com/v1/vector/collections/import" \\
+     --url "<https://controller.api.$>{CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import" \\
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
@@ -94,7 +95,7 @@ curl --request POST \
 
 ```bash
 curl --request GET \
-     --url "<https://controller.api.$>{CLOUD_REGION_ID}.zillizcloud.com/v1/vector/collections/import/get?jobId=${JOBID}&clusterId=${CLUSTERID}" \\
+     --url "<https://controller.api.$>{CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import/get?jobId=${JOBID}&clusterId=${CLUSTERID}" \\
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \

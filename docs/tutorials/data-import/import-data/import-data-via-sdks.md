@@ -1,5 +1,6 @@
 ---
 slug: /import-data-via-sdks
+sidebar_label: SDK
 beta: FALSE
 notebook: FALSE
 type: origin
@@ -8,7 +9,8 @@ sidebar_position: 3
 ---
 
 import Admonition from '@theme/Admonition';
-
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # 通过 SDK 导入
 
@@ -18,15 +20,46 @@ import Admonition from '@theme/Admonition';
 
 ## 安装依赖{#install-denpendencies}
 
-在命令行中运行如下命令安装 pymilvus 和 minio 或将它们升级到最新版本。
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+
+<TabItem value='python'>
+
+在终端中运行以下命令安装 **pymilvus** 和 **minio** 或将它们升级到最新的版本。
 
 ```shell
 python3 -m pip install --upgrade pymilvus minio
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
+- 如您使用 Apache Maven 管理项目, 在项目的 **pom.xml** 文件中添加如下内容：
+
+```java
+<dependency>
+  <groupId>io.milvus</groupId>
+  <artifactId>milvus-sdk-java</artifactId>
+  <version>2.3.5</version>
+</dependency>
+```
+
+- 如您使用 Gradle/Grails 管理项目, 执行如下命令：
+
+```shell
+compile 'io.milvus:milvus-sdk-java:2.3.5'
+```
+
+</TabItem>
+
+</Tabs>
+
 ### 检查已准备数据{#check-prepared-data}
 
 在您[使用 BulkWriter](./use-bulkwriter) 完成数据准备工作后，你会获得一个路径，指向准备好的数据文件。您可以使用如下代码来检查这些数据文件。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+<TabItem value='python'>
 
 ```python
 from minio import Minio
@@ -38,7 +71,8 @@ YOUR_BUCKET_NAME = "YOUR_BUCKET_NAME"
 YOUR_REMOTE_PATH = "YOUR_REMOTE_PATH"
 
 client = Minio(
-    endpoint="storage.googleapis.com", # use 's3.amazonaws.com' for AWS S3
+    endpoint="oss-cn-hangzhou.aliyuncs.com", 
+    # 腾讯云请使用 "cos.ap-beijing-1.myqcloud.com"
     access_key=YOUR_ACCESS_KEY,
     secret_key=YOUR_SECRET_KEY,
     secure=True
@@ -67,6 +101,45 @@ print([obj.object_name for obj in objects])
 
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+import io.minio.MinioClient;
+import io.minio.Result;
+import io.minio.messages.Item;
+
+import java.util.Iterator;
+
+// Third-party constants
+String ACCESS_KEY = "YOUR_ACCESS_KEY";
+String SECRET_KEY = "YOUR_SECRET_KEY";
+String BUCKET_NAME = "YOUR_BUCKET_NAME";
+String REMOTE_PATH = "YOUR_REMOTE_PATH";
+
+MinioClient minioClient = MinioClient.builder()
+        .withEndpoint("oss-cn-hangzhou.aliyuncs.com") 
+        // 腾讯云请使用 "cos.ap-beijing-1.myqcloud.com"
+        .credentials(ACCESS_KEY, SECRET_KEY)
+        .build();
+        
+Iterable<Result<Item>> results = minioClient.listObjects(
+    ListObjectsArgs.builder().bucket(BUCKET_NAME).prefix(REMOTE_PATH).build();
+);
+
+while (results.hasNext()) {
+    Result<Item> result = results.next();
+    System.out.println(result.get().objectName());
+}
+
+// Output
+// [[1.parquet]]
+```
+
+</TabItem>
+</Tabs>
+
 ### 创建 Collection 并导入数据{#create-collection-and-import-data}
 
 准备好数据文件后，您需要先连接到 Zilliz Cloud 集群，根据数据集的格式创建相应的 Collection，并从存储桶中导入数据文件。
@@ -78,6 +151,9 @@ print([obj.object_name for obj in objects])
 <p>由于 Zilliz Cloud 目前不支持跨云数据传输，您的 Zilliz Cloud 集群和数据集需位于同一公共云平台上。</p>
 
 </Admonition>
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+<TabItem value='python'>
 
 ```python
 from pymilvus import MilvusClient, DataType
@@ -131,9 +207,132 @@ client.create_collection(
 )# }
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+import io.milvus.param.collection.CollectionSchemaParam;
+import io.milvus.param.collection.FieldType;
+import io.milvus.grpc.DataType;
+import io.milvus.client.MilvusServiceClient;
+import io.milvus.param.ConnectParam;
+import io.milvus.param.IndexType;
+import io.milvus.param.MetricType;
+import io.milvus.param.collection.CreateCollectionParam;
+import io.milvus.param.collection.LoadCollectionParam;
+import io.milvus.param.index.CreateIndexParam;
+
+// Configs for Zilliz Cloud cluster
+String CLUSTER_ENDPOINT = "";
+String TOKEN = "";
+String API_KEY = "";
+String CLUSTER_ID = "";
+String CLOUD_REGION = "";
+String COLLECTION_NAME = "";
+
+// Third-party constants 
+String OBJECT_URL = ""
+
+// Define schema for the target collection
+FieldType id = FieldType.newBuilder()
+        .withName("id")
+        .withDataType(DataType.Int64)
+        .withPrimaryKey(true)
+        .withAutoID(false)
+        .build();
+
+FieldType titleVector = FieldType.newBuilder()
+        .withName("vector")
+        .withDataType(DataType.FloatVector)
+        .withDimension(768)
+        .build();
+
+FieldType title = FieldType.newBuilder()
+        .withName("title")
+        .withDataType(DataType.VarChar)
+        .withMaxLength(512)
+        .build();
+
+FieldType link = FieldType.newBuilder()
+        .withName("link")
+        .withDataType(DataType.VarChar)
+        .withMaxLength(512)
+        .build();
+        
+FieldType readingTime = FieldType.newBuilder()
+        .withName("reading_time")
+        .withDataType(DataType.Int64)
+        .build();
+        
+FieldType publication = FieldType.newBuilder()
+        .withName("publication")
+        .withDataType(DataType.VarChar)
+        .withMaxLength(512)
+        .build();
+
+FieldType claps = FieldType.newBuilder()
+        .withName("claps")
+        .withDataType(DataType.Int64)
+        .build();     
+        
+FieldType responses = FieldType.newBuilder()
+        .withName("responses")
+        .withDataType(DataType.Int64)
+        .build();
+
+CollectionSchemaParam schema = CollectionSchemaParam.newBuilder()
+        .withEnableDynamicField(false)
+        .addFieldType(id)
+        .addFieldType(titleVector)
+        .addFieldType(title)
+        .addFieldType(link)
+        .addFieldType(readingTime)
+        .addFieldType(publication)
+        .addFieldType(claps)
+        .addFieldType(responses)
+        .build();
+        
+// Create a collection with the given schema
+ConnectParam connectParam = ConnectParam.newBuilder()
+        .withUri(CLUSTER_ENDPOINT)
+        .withToken(TOKEN)
+        .build();
+
+MilvusServiceClient milvusClient = new MilvusServiceClient(connectParam);
+
+CreateCollectionParam collectionParam = CreateCollectionParam.newBuilder()
+        .withCollectionName(COLLECTION_NAME)
+        .withSchema(schema)
+        .build();
+
+milvusClient.createCollection(collectionParam);
+
+CreateIndexParam indexParam = CreateIndexParam.newBuilder()
+        .withCollectionName(COLLECTION_NAME)
+        .withFieldName("title_vector")
+        .withIndexType(IndexType.AUTOINDEX)
+        .withMetricType(MetricType.L2)
+        .build();
+
+milvusClient.createIndex(indexParam);
+
+LoadCollectionParam loadCollectionParam = LoadCollectionParam.newBuilder()
+        .withCollectionName(COLLECTION_NAME)
+        .build();
+
+milvusClient.loadCollection(loadCollectionParam);
+```
+
+</TabItem>
+</Tabs>
+
 ## 导入数据{#import-data}
 
 在待导入数据和 Collection 都准备就绪后，可以使用如下脚本将数据导入 Collection。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+<TabItem value='python'>
 
 ```python
 from pymilvus import bulk_import
@@ -162,9 +361,40 @@ print(res.json())
 # }
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+import io.milvus.bulkwriter.response.BulkImportResponse;
+
+BulkImportResponse bulkImportResponse = CloudImport.bulkImport(
+    CLUSTER_ENDPOINT,
+    API_KEY,
+    CLUSTER_ID,
+    COLLECTION_NAME,
+    OBJECT_URL,
+    ACCESS_KEY,
+    SECRET_KEY
+);
+
+// Get import job ID
+String jobId = bulkImportResponse.getJobId();
+
+System.out.println(jobId);
+
+// 0f7fe853-d93e-4681-99f2-4719c63585cc
+```
+
+</TabItem>
+</Tabs>
+
 ### 查看批量导入进度{#check-import-progress}
 
 可通过以下代码查看批量导入进度：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+<TabItem value='python'>
 
 ```python
 from pymilvus import get_import_progress
@@ -216,9 +446,47 @@ print(res.json())
 # }
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+while (true) {
+    System.out.println("Wait 5 second to check bulkInsert job state...");
+    TimeUnit.SECONDS.sleep(5);
+
+    GetImportProgressResponse getImportProgressResponse = CloudImport.getImportProgress(
+        CLUSTER_ENDPOINT,
+        API_KEY,
+        CLUSTER_ID,
+        jobId
+    );
+
+    if (getImportProgressResponse.getReadyPercentage().intValue() == 1) {
+        System.err.printf("The job %s completed%n", jobId);
+        break;
+    } else if (StringUtils.isNotEmpty(getImportProgressResponse.getErrorMessage())) {
+        System.err.printf("The job %s failed, reason: %s%n", jobId, getImportProgressResponse.getErrorMessage());
+        break;
+    } else {
+        System.err.printf("The job %s is running, progress:%s%n", jobId, getImportProgressResponse.getReadyPercentage());
+    }
+}
+
+// The job 0f7fe853-d93e-4681-99f2-4719c63585cc is running, progress: 0.01
+// The job 0f7fe853-d93e-4681-99f2-4719c63585cc is running, progress: 0.5
+// The job 0f7fe853-d93e-4681-99f2-4719c63585cc completed.
+```
+
+</TabItem>
+</Tabs>
+
 ### 列出所有批量导入任务{#list-all-import-jobs}
 
 您还可以调用 ListImportJobs API 来了解其它批量导入任务的运行情况：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+<TabItem value='python'>
 
 ```python
 from pymilvus import list_import_jobs
@@ -258,6 +526,25 @@ print(res.json())
 #     }
 # }
 ```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+ListImportJobsResponse listImportJobsResponse = CloudImport.listImportJobs(
+    CLUSTER_ENDPOINT,
+    API_KEY,
+    CLUSTER_ID,
+    10,
+    1
+);
+
+System.out.println(listImportJobsResponse);
+```
+
+</TabItem>
+</Tabs>
 
 ## 推荐阅读{#related-topics}
 
