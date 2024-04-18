@@ -4,7 +4,7 @@ beta: FALSE
 notebook: FALSE
 type: origin
 token: GKNPwvWhZi7D6mkag72cIDWqnbf
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 import Admonition from '@theme/Admonition';
@@ -12,9 +12,7 @@ import Admonition from '@theme/Admonition';
 
 # 版本说明书（2023/12/20）
 
-**发布日期：2023 年 12 月 20 日**
-
-我们很高兴地宣布 Zilliz Cloud 2.4.0 的发布。此版本引入了一系列增强和功能更新。主要包括
+我们很高兴地宣布 Zilliz Cloud 2.4.0 的发布。此版本引入了一系列增强和功能更新。主要包括 Partition SDK、集群管理接口以及其它方面的功能性增强。
 
 ## Milvus 兼容性
 

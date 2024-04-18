@@ -5,7 +5,7 @@
   "node_token": "GKNPwvWhZi7D6mkag72cIDWqnbf",
   "node_type": "origin",
   "obj_create_time": "1703060695",
-  "obj_edit_time": "1705926579",
+  "obj_edit_time": "1713430471",
   "obj_token": "MMj9dUixqocVfcxHcmvcS7xFnMd",
   "obj_type": "docx",
   "origin_node_token": "GKNPwvWhZi7D6mkag72cIDWqnbf",
@@ -21,7 +21,6 @@
         "block_id": "MMj9dUixqocVfcxHcmvcS7xFnMd",
         "block_type": 1,
         "children": [
-          "PE8nds1CnoNQAgxLU0LcSkwbnbf",
           "O5qedBGegorMFbxoyBOc6wDCnxh",
           "W7yRdkLJWoRX34xjUmRcbccwnoe",
           "Jcdpd9JkZoFwpTxQ34Pc1otlnPs",
@@ -56,31 +55,6 @@
         "parent_id": ""
       },
       {
-        "block_id": "PE8nds1CnoNQAgxLU0LcSkwbnbf",
-        "block_type": 2,
-        "parent_id": "MMj9dUixqocVfcxHcmvcS7xFnMd",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "发布日期：2023 年 12 月 20 日",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
         "block_id": "O5qedBGegorMFbxoyBOc6wDCnxh",
         "block_type": 2,
         "parent_id": "MMj9dUixqocVfcxHcmvcS7xFnMd",
@@ -88,7 +62,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "我们很高兴地宣布 Zilliz Cloud 2.4.0 的发布。此版本引入了一系列增强和功能更新。主要包括",
+                "content": "我们很高兴地宣布 Zilliz Cloud 2.4.0 的发布。此版本引入了一系列增强和功能更新。主要包括 Partition SDK、集群管理接口以及其它方面的功能性增强。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -614,6 +588,6 @@
         "parent_id": "MMj9dUixqocVfcxHcmvcS7xFnMd"
       }
     ],
-    "counts": 13
+    "counts": 12
   }
 }

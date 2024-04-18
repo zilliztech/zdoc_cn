@@ -5,7 +5,7 @@
   "node_token": "X91KwMsQyiAv1Ukze3IcHxQgnic",
   "node_type": "origin",
   "obj_create_time": "1692687102",
-  "obj_edit_time": "1712645080",
+  "obj_edit_time": "1713430390",
   "obj_token": "K8sKd1VSxoNYcOxk37gcECzenZf",
   "obj_type": "docx",
   "origin_node_token": "X91KwMsQyiAv1Ukze3IcHxQgnic",
@@ -21,7 +21,6 @@
         "block_id": "K8sKd1VSxoNYcOxk37gcECzenZf",
         "block_type": 1,
         "children": [
-          "TG9FdJ2CZoE25txOj4ycaL2Vn4e",
           "CwMddVHcOo1wN1x2eyNcXuNfn6d",
           "CJ7ndXXu3o9Zpgxw0TxcjrnQnje",
           "LCccdyiS7otF4XxQTGJc8VXhnUg",
@@ -68,31 +67,6 @@
           }
         },
         "parent_id": ""
-      },
-      {
-        "block_id": "TG9FdJ2CZoE25txOj4ycaL2Vn4e",
-        "block_type": 2,
-        "parent_id": "K8sKd1VSxoNYcOxk37gcECzenZf",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "发布日期：2023年6月14日",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
       },
       {
         "block_id": "CwMddVHcOo1wN1x2eyNcXuNfn6d",
@@ -1155,6 +1129,6 @@
         }
       }
     ],
-    "counts": 27
+    "counts": 26
   }
 }

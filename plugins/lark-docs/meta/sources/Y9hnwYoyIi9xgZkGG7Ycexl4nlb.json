@@ -1,60 +1,53 @@
 {
   "creator": "ou_8554528ee6e965bad56710acde1c7847",
   "has_child": false,
-  "node_create_time": "1709044471",
-  "node_token": "FR9Ww6TbRifhQFk1TV0c3a4tnfg",
+  "node_create_time": "1713430278",
+  "node_token": "Y9hnwYoyIi9xgZkGG7Ycexl4nlb",
   "node_type": "origin",
-  "obj_create_time": "1709044471",
-  "obj_edit_time": "1713430440",
-  "obj_token": "ZvGadXaAvoOrGPxTfTZc6Hjznrg",
+  "obj_create_time": "1713430278",
+  "obj_edit_time": "1713432407",
+  "obj_token": "KEaMdNogBoGn9ZxVtBBcp6CVnhd",
   "obj_type": "docx",
-  "origin_node_token": "FR9Ww6TbRifhQFk1TV0c3a4tnfg",
+  "origin_node_token": "Y9hnwYoyIi9xgZkGG7Ycexl4nlb",
   "origin_space_id": "7167193056431783939",
   "owner": "ou_8554528ee6e965bad56710acde1c7847",
   "parent_node_token": "QxcnwBks8izBAQkjP8Ycl1cEnQh",
   "space_id": "7167193056431783939",
-  "title": "版本说明书（2024/02/27）",
-  "slug": "release-notes-260",
+  "title": "版本说明书（2024/04/18）",
+  "slug": "release-notes-270",
   "blocks": {
     "items": [
       {
-        "block_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg",
+        "block_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd",
         "block_type": 1,
         "children": [
-          "T6QydjyPYonv5Yx6UFAcKLfYnsf",
-          "Rp0idqwDboaczMxDo6WcOwkLnZf",
-          "J6NNdrKH0ouT09xT1YScRVfXncf",
-          "P0tJd1IlzozT9LxsvIIcjN63nrd",
-          "XSoLdOMeHoXBjQx4gj5c8K1Snbh",
-          "Yrdfdlgp6oMX20x0keMcDLzCnOk",
-          "TSLTd1hHuoZ329x9iNgcXAQ2n5d",
-          "DRt9d0zLqon2COx6YN4cg02Gnxb",
-          "CowddhSbTov96RxVmgacG44en5d",
-          "GKdYdGCeVo3eiFxi5UucOqyCnae",
-          "IsBMdEv0noY9wBx2yB7cmwb5nxg",
-          "BdnQdtfCjodfZcxoP1PcZ7w4nYe",
-          "DwWhdrdy4oTfEdxxOmtcTFK8nag",
-          "Dd6tducqPoSmcexOEaScglSSn7d",
-          "SCUQdv1cXo5eTvxh2uLc8SUsnPe",
-          "Ivahdd41FokaLbxi9nncpA1gnmd",
-          "TlHRdaDipoOVe9xu5ShcVxQsnCh",
-          "KO3gdJ7VqoY7QFxRrnwc858InEb",
-          "WtVKdQjbwo0sFixEemtcaCihnKN",
-          "O2IHdeRkhoamcaxLPKKcaJjxnig",
-          "SLzcd1u2XoMGMjxkWSmcySA5nQc",
-          "DKIndafZnophUWxS7xjcPAUDn3c",
-          "LSUPdxmhZo2KMuxmw8ic6Ytnn3f",
-          "DKzsddvw0oMYNFxQuQxcQYT5nkg",
-          "ERJMdHmbSoejwjxldlZchldznRc",
-          "SOkddIaLho6HT4xaYIacnFzInWb",
-          "Pd5ddjC78oYNMDxvh8ec3rOnnDc",
-          "NEAVdCkNJoNuZbxlQM6chfEYn9c"
+          "AKoPd0CYAoysj3xJiLbcC2vXnFh",
+          "BkuDd4p2NoUf3KxmYXlcX8Ovnqd",
+          "K3fKdnFrooXdzmxyyXyc8vbbn5V",
+          "VGNEdbOniod61NxEaOwcFMVRnUf",
+          "MoO7dCg1toxCE2xDkg1co9rFn7d",
+          "T959dwsRaoKmfPxTh9Jctgyonlg",
+          "Ce6zd1kE9obQJfxRn8rcJmzHn5h",
+          "OFyMdCMIQoiEUHx0JEac9GL5nWg",
+          "Zwuqdrwo4oQQOPxXzDacA3PVnoc",
+          "Sgu3deaJWoAZurxpCbbczPcgnAf",
+          "Ux9KdS01hoMm2kxa5g1cjtHvngf",
+          "N89JdFzXCoqiizxVXNFc7t1Gnjg",
+          "TNYVdNPFNol3ikxZuz1cqIBsnSg",
+          "RIAYdYj9doFOn2x6q4tcPMsInBg",
+          "VT1Id4HSLo3tm8x2EMecQ8zAnih",
+          "PSxFd2RH2oOGEPxiDP5cnedOnIh",
+          "J4yjdkqzOogRYdxNByfc8EOAnAb",
+          "Vp0VdbWShoWyohxFHY7cggnXnnb",
+          "Lu1ed2is5oE0HwxwK8qci6bXnqb",
+          "UMPrdNuF3onOQfx0i6FcRgrAnLb",
+          "QanMdhK2oo9koxxGwRdc3834nEb"
         ],
         "page": {
           "elements": [
             {
               "text_run": {
-                "content": "版本说明书（2024/02/27）",
+                "content": "版本说明书（2024/04/18）",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -72,14 +65,14 @@
         "parent_id": ""
       },
       {
-        "block_id": "T6QydjyPYonv5Yx6UFAcKLfYnsf",
+        "block_id": "AKoPd0CYAoysj3xJiLbcC2vXnFh",
         "block_type": 2,
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg",
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "我们很高兴地宣布 Zilliz Cloud 发布新的版本。此版本引入了一系列增强和功能更新。主要涉及 Pipelines、数据导入、API 密钥以及指标和告警方面的功能性更新。",
+                "content": "此次发布引入了诸多新工具和功能增加。主要包括：针对使用 Pipelines 从对象存储中采集数据的新 Connectors、提升搜索相关性的 Rerankers、针对系统静态分析的新指标监控 API、以及跨云数据导入功能。这些功能扩大了数据采集范围、提高了搜索精度和运维洞察能力，让云上向量数据度的管理更加便捷。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -97,7 +90,7 @@
         }
       },
       {
-        "block_id": "Rp0idqwDboaczMxDo6WcOwkLnZf",
+        "block_id": "BkuDd4p2NoUf3KxmYXlcX8Ovnqd",
         "block_type": 4,
         "heading2": {
           "elements": [
@@ -119,41 +112,17 @@
             "folded": false
           }
         },
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg"
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd"
       },
       {
-        "block_id": "J6NNdrKH0ouT09xT1YScRVfXncf",
+        "block_id": "K3fKdnFrooXdzmxyyXyc8vbbn5V",
         "block_type": 2,
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg",
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "此次发布兼容 ",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "Milvus 2.3.x",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "。",
+                "content": "此次发布兼容 Milvus 2.3.x。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -171,13 +140,13 @@
         }
       },
       {
-        "block_id": "P0tJd1IlzozT9LxsvIIcjN63nrd",
+        "block_id": "VGNEdbOniod61NxEaOwcFMVRnUf",
         "block_type": 4,
         "heading2": {
           "elements": [
             {
               "text_run": {
-                "content": "Pipelines{#pipelines}",
+                "content": "Connectors{#connectors}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -193,178 +162,17 @@
             "folded": false
           }
         },
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg"
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd"
       },
       {
-        "block_id": "XSoLdOMeHoXBjQx4gj5c8K1Snbh",
+        "block_id": "MoO7dCg1toxCE2xDkg1co9rFn7d",
         "block_type": 2,
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg",
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "今天，我们非常高兴地向大家介绍 Zilliz Cloud 的新特性 Zilliz Cloud Pipelines。Pipelines旨在将非结构化数据无缝转换为矢量嵌入，并将其传入 Zilliz Cloud 进行存储和检索，从而释放非结构化数据的潜力。该解决方案通过整合嵌入、摄取、存储和检索等流程，简化了数据工作流程，为开发人员提供了一个受欢迎的解决方案。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "Yrdfdlgp6oMX20x0keMcDLzCnOk",
-        "block_type": 2,
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "Zilliz Cloud Pipelines 分为如下三种类型：",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "TSLTd1hHuoZ329x9iNgcXAQ2n5d",
-        "block_type": 12,
-        "bullet": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "Ingestion pipeline",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": " 是处理非结构化数据的主力军，它将非结构化数据转换为可搜索的矢量嵌入，并将其输入 Zilliz 矢量数据库进行存储和检索。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg"
-      },
-      {
-        "block_id": "DRt9d0zLqon2COx6YN4cg02Gnxb",
-        "block_type": 12,
-        "bullet": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "Search pipelines",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": " 可将查询字符串转换为向量嵌入，并将其发送到 Zilliz 云，以检索前 K 个最相似的向量，从而促进语义搜索。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg"
-      },
-      {
-        "block_id": "CowddhSbTov96RxVmgacG44en5d",
-        "block_type": 12,
-        "bullet": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "Deletion Pipeline",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": " 允许您从 Zilliz 云收藏中删除指定文档中的所有块，让您完全控制自己的数据，并释放 Zilliz 收藏的存储容量。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg"
-      },
-      {
-        "block_id": "GKdYdGCeVo3eiFxi5UucOqyCnae",
-        "block_type": 2,
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "要了解更多信息，请参阅",
+                "content": "作为 Zilliz Cloud Pipelines 内建能力之一，Connectors 用于从包括对象存储、Kafka （即将发布）等多个数据源向 Zilliz Cloud 导入数据。以对象存储 Connector 为例，该 Connector 可以监控指定的对象存储桶，自动同步桶中的 PDF 或 HTML 文件到 Zilliz Cloud Ingestion Pipeline 中，简化了非结构化文件到向量表示的转化过程，从而能够更快地将其加载到 Zilliz Cloud 向量数据库中，实现对新增数据的检索。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -376,13 +184,28 @@
             },
             {
               "text_run": {
-                "content": "本文档",
+                "content": "点此",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
                   "italic": false,
                   "link": {
-                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FMJeiwGDSniNQ7BkAFGCczemxnDg"
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FJScMwve0PiplHNkKqVYcKkzGnFs"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "了解更多",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FJScMwve0PiplHNkKqVYcKkzGnFs"
                   },
                   "strikethrough": false,
                   "underline": false
@@ -409,13 +232,13 @@
         }
       },
       {
-        "block_id": "IsBMdEv0noY9wBx2yB7cmwb5nxg",
+        "block_id": "T959dwsRaoKmfPxTh9Jctgyonlg",
         "block_type": 4,
         "heading2": {
           "elements": [
             {
               "text_run": {
-                "content": "数据导入{#data-import}",
+                "content": "Rerankers{#rerankers}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -431,42 +254,17 @@
             "folded": false
           }
         },
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg"
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd"
       },
       {
-        "block_id": "BdnQdtfCjodfZcxoP1PcZ7w4nYe",
+        "block_id": "Ce6zd1kE9obQJfxRn8rcJmzHn5h",
         "block_type": 2,
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg",
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "我们很高兴地宣布数据导入功能支持 Parquet 数据格式。为了增强用户体验，我们引入了 PyMilvus writer 实用程序，这是一款功能强大的工具，旨在帮助我们的用户轻松创建 JSON 或 Parquet 格式的文件，以实现无缝数据导入。在此深入了解详情并探索新的可能性。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "DwWhdrdy4oTfEdxxOmtcTFK8nag",
-        "block_type": 2,
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "要了解更多信息，请参阅",
+                "content": "Zilliz Cloud Pipelines 已经集成了 Rerankers，为需要提升搜索结果相似性水平的用户提供了可选能力增强。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -478,13 +276,13 @@
             },
             {
               "text_run": {
-                "content": "本文档",
+                "content": "点此了解更多",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
                   "italic": false,
                   "link": {
-                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FFXGWwcjyViaQm8kvJgScITzBnr3"
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FW81AwLbUmieD4pklJTackrpCnUe"
                   },
                   "strikethrough": false,
                   "underline": false
@@ -511,13 +309,88 @@
         }
       },
       {
-        "block_id": "Dd6tducqPoSmcexOEaScglSSn7d",
+        "block_id": "OFyMdCMIQoiEUHx0JEac9GL5nWg",
+        "block_type": 2,
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "在此次发布中，我们提供如下 Reranker 选项：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Zwuqdrwo4oQQOPxXzDacA3PVnoc",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "zilliz/bge-reranker-base",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd"
+      },
+      {
+        "block_id": "Sgu3deaJWoAZurxpCbbczPcgnAf",
+        "block_type": 2,
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Ux9KdS01hoMm2kxa5g1cjtHvngf",
         "block_type": 4,
         "heading2": {
           "elements": [
             {
               "text_run": {
-                "content": "API 密钥{#api-keys}",
+                "content": "指标监控 API{#query-metrics-api}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -533,167 +406,17 @@
             "folded": false
           }
         },
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg"
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd"
       },
       {
-        "block_id": "SCUQdv1cXo5eTvxh2uLc8SUsnPe",
+        "block_id": "N89JdFzXCoqiizxVXNFc7t1Gnjg",
         "block_type": 2,
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg",
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "在此版本中，Zilliz Cloud 引入了 API Key 的统一设计。每个用户只需使用一个统一的 API 密钥，即可访问 Zilliz Cloud 平台和多个集群。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "Ivahdd41FokaLbxi9nncpA1gnmd",
-        "block_type": 2,
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "Zilliz Cloud 的权限设计遵循 RBAC（基于角色的访问控制）原则，分为两层：操作层和数据层。在操作层，角色管理集群、项目、用户和计费等资源的操作权限。在数据层，角色侧重于控制添加、删除、修改和查询数据的功能。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "TlHRdaDipoOVe9xu5ShcVxQsnCh",
-        "block_type": 2,
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "在操作层中，Zilliz Cloud 支持四种角色，其中组织所有者、项目所有者和项目成员是三种常用角色：",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
-        "block_id": "KO3gdJ7VqoY7QFxRrnwc858InEb",
-        "block_type": 12,
-        "bullet": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "组织所有者：拥有组织的全部管理权限，包括组织设置、管理支付方式和计费、API 密钥、组织中的所有项目以及相关资源。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg"
-      },
-      {
-        "block_id": "WtVKdQjbwo0sFixEemtcaCihnKN",
-        "block_type": 12,
-        "bullet": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "项目所有者：拥有项目的全部管理权限，包括项目设置、项目中的所有群集、API 密钥和其他相关资源。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg"
-      },
-      {
-        "block_id": "O2IHdeRkhoamcaxLPKKcaJjxnig",
-        "block_type": 12,
-        "bullet": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "项目成员：拥有对项目内所有群集的读写权限，可以查看群集详细信息，并管理集合和索引。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg"
-      },
-      {
-        "block_id": "SLzcd1u2XoMGMjxkWSmcySA5nQc",
-        "block_type": 2,
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "在数据层中，Zilliz Cloud 提供三种内置角色： 管理员、只读和读写，以控制数据的管理、写入和读取权限。Zilliz Cloud 允许用户创建自定义角色。这些自定义角色可定义特定集合、分区或操作的权限，确保在使用 Zilliz Cloud 时遵循最小数据权限原则。请",
+                "content": "在此次发布的众多特性中，Zilliz Cloud 还提供了一个用于监控集群各项指标的 API，并提供了一个多达 30 余项内容的指标矩阵，方便您实现对系统性能及效率进行全方位的监控。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -705,13 +428,13 @@
             },
             {
               "text_run": {
-                "content": "参阅文档",
+                "content": "点此了解更多",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
                   "italic": false,
                   "link": {
-                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FUGzNwB4TmiqTozkJvarceRdenif"
+                    "url": "https%3A%2F%2Fdocs.zilliz.com.cn%2Freference%2Fquery-metrics"
                   },
                   "strikethrough": false,
                   "underline": false
@@ -720,7 +443,7 @@
             },
             {
               "text_run": {
-                "content": "了解详情。",
+                "content": "。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -738,13 +461,250 @@
         }
       },
       {
-        "block_id": "DKIndafZnophUWxS7xjcPAUDn3c",
+        "block_id": "TNYVdNPFNol3ikxZuz1cqIBsnSg",
+        "block_type": 2,
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "主要监控指标包括：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "RIAYdYj9doFOn2x6q4tcPMsInBg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "资源使用相关指标",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "Qb9OdGebjot4GUxlZmncBF8AnEg"
+        ],
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd"
+      },
+      {
+        "block_id": "Qb9OdGebjot4GUxlZmncBF8AnEg",
+        "block_type": 2,
+        "parent_id": "RIAYdYj9doFOn2x6q4tcPMsInBg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "深入了解 Compute Unit (CU) 资源使用情况，可分别跟踪计算资源和存储资源的使用情况。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "VT1Id4HSLo3tm8x2EMecQ8zAnih",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "数据检索与插入性能相关指标",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "TxdtdvJiqoVmYSxFigHc3a5Unpl"
+        ],
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd"
+      },
+      {
+        "block_id": "TxdtdvJiqoVmYSxFigHc3a5Unpl",
+        "block_type": 2,
+        "parent_id": "VT1Id4HSLo3tm8x2EMecQ8zAnih",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "了解数据检索和数据插入性能时延及流量相关数据，从而有针对性地提升相关操作性能。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "PSxFd2RH2oOGEPxiDP5cnedOnIh",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "请求失败率",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "MnsUdtBunoZu9UxWbBaccuW5nTb"
+        ],
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd"
+      },
+      {
+        "block_id": "MnsUdtBunoZu9UxWbBaccuW5nTb",
+        "block_type": 2,
+        "parent_id": "PSxFd2RH2oOGEPxiDP5cnedOnIh",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "监控请求失败率，快速定位和解决可能存在的问题，保证上层应用和性能和稳定性。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "J4yjdkqzOogRYdxNByfc8EOAnAb",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Collection 及 Entity 相关统计指标",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "EJBadMKwtoKbGyxW23ecWsE4nFI"
+        ],
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd"
+      },
+      {
+        "block_id": "EJBadMKwtoKbGyxW23ecWsE4nFI",
+        "block_type": 2,
+        "parent_id": "J4yjdkqzOogRYdxNByfc8EOAnAb",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "详细了解 Collection 和 Entity 相关统计，提升数据管理水平。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "Vp0VdbWShoWyohxFHY7cggnXnnb",
         "block_type": 4,
         "heading2": {
           "elements": [
             {
               "text_run": {
-                "content": "指标和告警{#metrics-and-alerts}",
+                "content": "跨云数据导入和数据迁移{#cross-cloud-data-import-and-migration}",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -760,17 +720,71 @@
             "folded": false
           }
         },
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg"
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd"
       },
       {
-        "block_id": "LSUPdxmhZo2KMuxmw8ic6Ytnn3f",
+        "block_id": "Lu1ed2is5oE0HwxwK8qci6bXnqb",
         "block_type": 2,
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg",
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "在此版本中，我们对指标和告警系统进行了重构。在新版本中，您可以监控一系列全面的指标：",
+                "content": "Zilliz Cloud 用户可以方便的从他们的阿里云 OSS 或腾讯云 COS 向 Zilliz Cloud 上任何数据库导入数据了。详细情况，可参考",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "数据导入",
+                "token": "ZORTw6MRwiMJ23kSwcRcOIxmnkc",
+                "url": "https://zilliverse.feishu.cn/wiki/ZORTw6MRwiMJ23kSwcRcOIxmnkc"
+              }
+            },
+            {
+              "text_run": {
+                "content": "和",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "mention_doc": {
+                "obj_type": 16,
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                },
+                "title": "数据迁移",
+                "token": "PU8HwyM6Kiv0C4krF58cTNOVnSe",
+                "url": "https://zilliverse.feishu.cn/wiki/PU8HwyM6Kiv0C4krF58cTNOVnSe"
+              }
+            },
+            {
+              "text_run": {
+                "content": "。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -788,116 +802,14 @@
         }
       },
       {
-        "block_id": "DKzsddvw0oMYNFxQuQxcQYT5nkg",
-        "block_type": 12,
-        "bullet": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "资源使用指标： 这包括 CU（计算单元）计算资源利用率、CU 容量利用率（满载）和总体存储使用情况的详细视图。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg"
-      },
-      {
-        "block_id": "ERJMdHmbSoejwjxldlZchldznRc",
-        "block_type": 12,
-        "bullet": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "性能指标： 跟踪关键性能指标，如搜索/查询吞吐量和延迟、数据插入效率（吞吐量和延迟）以及请求失败率。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg"
-      },
-      {
-        "block_id": "SOkddIaLho6HT4xaYIacnFzInWb",
-        "block_type": 12,
-        "bullet": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "数据指标： 深入了解集合数量、实体总数、用于搜索的加载实体数量以及索引实体数量。",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        },
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg"
-      },
-      {
-        "block_id": "Pd5ddjC78oYNMDxvh8ec3rOnnDc",
+        "block_id": "UMPrdNuF3onOQfx0i6FcRgrAnLb",
         "block_type": 2,
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg",
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd",
         "text": {
           "elements": [
             {
               "text_run": {
-                "content": "此外，我们的增强型警报系统允许您为上述所有指标设置自定义警报规则。这意味着，您可以针对每秒查询率（QPS）超过 1000 或 CU 满载率超过 70% 等情况创建警报，确保您随时了解系统的健康状况和性能并采取主动行动。请",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "参阅文档",
-                "text_element_style": {
-                  "bold": false,
-                  "inline_code": false,
-                  "italic": false,
-                  "link": {
-                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FSlItwMcOyikiWVkr7Glcy9sinMg"
-                  },
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "了解详情。",
+                "content": "",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -915,9 +827,9 @@
         }
       },
       {
-        "block_id": "NEAVdCkNJoNuZbxlQM6chfEYn9c",
+        "block_id": "QanMdhK2oo9koxxGwRdc3834nEb",
         "block_type": 2,
-        "parent_id": "ZvGadXaAvoOrGPxTfTZc6Hjznrg",
+        "parent_id": "KEaMdNogBoGn9ZxVtBBcp6CVnhd",
         "text": {
           "elements": [
             {
@@ -940,6 +852,6 @@
         }
       }
     ],
-    "counts": 29
+    "counts": 26
   }
 }

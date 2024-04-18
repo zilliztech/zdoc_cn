@@ -5,7 +5,7 @@
   "node_token": "DsIxwJXnJiM2k7klUY0cr5dunBh",
   "node_type": "origin",
   "obj_create_time": "1692687190",
-  "obj_edit_time": "1705926463",
+  "obj_edit_time": "1713430571",
   "obj_token": "IUmxdt83UozzK9xyENac8MtpnNh",
   "obj_type": "docx",
   "origin_node_token": "DsIxwJXnJiM2k7klUY0cr5dunBh",
@@ -21,7 +21,6 @@
         "block_id": "IUmxdt83UozzK9xyENac8MtpnNh",
         "block_type": 1,
         "children": [
-          "GDDfdKh35ooF1OxzihdcfDesnKd",
           "IGhJdSwAUoxmR3xjDr0cvnfknHf",
           "QpaLdjjBZopEh7x49QOc7kPtntd",
           "H3t4dIrRKowtnXxRxTRcdiv5nNc",
@@ -53,31 +52,6 @@
         "parent_id": ""
       },
       {
-        "block_id": "GDDfdKh35ooF1OxzihdcfDesnKd",
-        "block_type": 2,
-        "parent_id": "IUmxdt83UozzK9xyENac8MtpnNh",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "发布日期：2023年8月21日",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
         "block_id": "IGhJdSwAUoxmR3xjDr0cvnfknHf",
         "block_type": 2,
         "parent_id": "IUmxdt83UozzK9xyENac8MtpnNh",
@@ -85,7 +59,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "我们很高兴地宣布Zilliz Cloud 2.1.0的发布。此版本引入了一系列增强和功能：",
+                "content": "我们很高兴地宣布Zilliz Cloud 2.1.0的发布。此版本引入了一系列增强和功能，包括 RESTful API 接口和阿里云云市场。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -404,6 +378,6 @@
         }
       }
     ],
-    "counts": 10
+    "counts": 9
   }
 }

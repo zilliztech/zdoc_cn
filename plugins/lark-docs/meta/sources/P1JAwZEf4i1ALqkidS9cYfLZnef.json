@@ -5,7 +5,7 @@
   "node_token": "P1JAwZEf4i1ALqkidS9cYfLZnef",
   "node_type": "origin",
   "obj_create_time": "1695087982",
-  "obj_edit_time": "1705926485",
+  "obj_edit_time": "1713430552",
   "obj_token": "RBnpd3fY4o4EG8xKnuecEIewnLb",
   "obj_type": "docx",
   "origin_node_token": "P1JAwZEf4i1ALqkidS9cYfLZnef",
@@ -21,7 +21,6 @@
         "block_id": "RBnpd3fY4o4EG8xKnuecEIewnLb",
         "block_type": 1,
         "children": [
-          "W5BQdeBrUoks0WxE8TRcpuy6nhh",
           "QDrodm6broo20bxLNAfcNzwHn9d",
           "TZrDdbBguo9FAexR0e7cDQXPnSd",
           "Z4uad6fTooJ64mxokKEciyRgnkg",
@@ -64,31 +63,6 @@
         "parent_id": ""
       },
       {
-        "block_id": "W5BQdeBrUoks0WxE8TRcpuy6nhh",
-        "block_type": 2,
-        "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "发布日期：2023年9月19日",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
         "block_id": "QDrodm6broo20bxLNAfcNzwHn9d",
         "block_type": 2,
         "parent_id": "RBnpd3fY4o4EG8xKnuecEIewnLb",
@@ -96,7 +70,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "我们很高兴地宣布Zilliz Cloud 2.2.0的发布。此版本引入了一系列增强和功能：",
+                "content": "我们很高兴地宣布Zilliz Cloud 2.2.0的发布。此版本引入了一系列增强和功能，包括集群间数据迁移、从 ElasticSearch 迁移数据，全新的问题单系统和数据导入能力的全面增强。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -752,6 +726,6 @@
         }
       }
     ],
-    "counts": 23
+    "counts": 22
   }
 }

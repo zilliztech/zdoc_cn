@@ -4,7 +4,7 @@ beta: FALSE
 notebook: FALSE
 type: origin
 token: Ra4qwdd7kicpt6k9Y2tc3OJ5niX
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 import Admonition from '@theme/Admonition';
@@ -12,9 +12,7 @@ import Admonition from '@theme/Admonition';
 
 # 版本说明书（2023/10/17）
 
-**发布日期：2023年10月17日**
-
-我们很高兴地宣布Zilliz Cloud 2.2.1的发布。此版本引入了一系列增强和功能：
+我们很高兴地宣布Zilliz Cloud 2.2.1的发布。此版本引入了一系列增强和新功能，包括一个新的 CU 类型及现金充值功能。
 
 ## Milvus 兼容性
 

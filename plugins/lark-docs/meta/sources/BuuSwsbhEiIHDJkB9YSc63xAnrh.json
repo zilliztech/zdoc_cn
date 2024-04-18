@@ -5,7 +5,7 @@
   "node_token": "BuuSwsbhEiIHDJkB9YSc63xAnrh",
   "node_type": "origin",
   "obj_create_time": "1700646241",
-  "obj_edit_time": "1705926566",
+  "obj_edit_time": "1713430480",
   "obj_token": "DkQNddkKuoiGK0xxdd0cqxJLnIc",
   "obj_type": "docx",
   "origin_node_token": "BuuSwsbhEiIHDJkB9YSc63xAnrh",
@@ -21,7 +21,6 @@
         "block_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc",
         "block_type": 1,
         "children": [
-          "PVcPdq7AjogN1jxeucJcHDuXnqb",
           "JVu8dQYWeoKwdextQbTc0yn1npf",
           "B5fUdzLbzo4l4RxWlgVciH0Gn8e",
           "BJysdmXKLoolhnxMbRgcxDy6nmd",
@@ -78,55 +77,6 @@
         "parent_id": ""
       },
       {
-        "block_id": "PVcPdq7AjogN1jxeucJcHDuXnqb",
-        "block_type": 2,
-        "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc",
-        "text": {
-          "elements": [
-            {
-              "text_run": {
-                "content": "发布日期：2023年11月",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "23",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            },
-            {
-              "text_run": {
-                "content": "日",
-                "text_element_style": {
-                  "bold": true,
-                  "inline_code": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false
-                }
-              }
-            }
-          ],
-          "style": {
-            "align": 1,
-            "folded": false
-          }
-        }
-      },
-      {
         "block_id": "JVu8dQYWeoKwdextQbTc0yn1npf",
         "block_type": 2,
         "parent_id": "DkQNddkKuoiGK0xxdd0cqxJLnIc",
@@ -134,7 +84,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "我们很高兴地宣布 Zilliz Cloud 2.3.0 的发布。此版本引入了一系列创新 Beta 特性和功能改进：",
+                "content": "我们很高兴地宣布 Zilliz Cloud 2.3.0 的发布。此版本引入了一系列创新 Beta 特性和功能改进。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -1546,6 +1496,6 @@
         }
       }
     ],
-    "counts": 35
+    "counts": 34
   }
 }
