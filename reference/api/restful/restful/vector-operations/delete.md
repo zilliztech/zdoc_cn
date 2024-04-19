@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /delete
+slug: /restful/delete
 title: 删除 Entity
 ---
 

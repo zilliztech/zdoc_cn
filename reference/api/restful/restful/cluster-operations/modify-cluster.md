@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /modify-cluster
+slug: /restful/modify-cluster
 title: 修改集群配置
 ---
 

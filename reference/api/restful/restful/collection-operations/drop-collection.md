@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /drop-collection
+slug: /restful/drop-collection
 title: 删除 Collection
 ---
 

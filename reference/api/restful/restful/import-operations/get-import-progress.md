@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /get-import-progress
+slug: /restful/get-import-progress
 title: 查看导入进度
 ---
 

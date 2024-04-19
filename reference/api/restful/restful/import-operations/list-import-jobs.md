@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /list-import-jobs
+slug: /restful/list-import-jobs
 title: 查看数据导入任务
 ---
 

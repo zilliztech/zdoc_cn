@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /drop-pipeline
+slug: /restful/drop-pipeline
 title: 删除 Pipeline
 ---
 

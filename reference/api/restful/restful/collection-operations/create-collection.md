@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /create-collection
+slug: /restful/create-collection
 title: 创建 Collection
 ---
 

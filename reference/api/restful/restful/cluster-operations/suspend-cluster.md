@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /suspend-cluster
+slug: /restful/suspend-cluster
 title: 挂起集群
 ---
 

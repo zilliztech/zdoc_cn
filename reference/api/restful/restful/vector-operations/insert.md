@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /insert
+slug: /restful/insert
 title: 插入 Entity
 ---
 

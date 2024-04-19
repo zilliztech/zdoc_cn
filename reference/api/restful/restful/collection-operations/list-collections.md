@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /list-collections
+slug: /restful/list-collections
 title: 查看 Collection
 ---
 

@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /list-cloud-regions
+slug: /restful/list-cloud-regions
 title: 查看云服务区域
 ---
 

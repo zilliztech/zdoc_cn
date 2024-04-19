@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /drop-cluster
+slug: /restful/drop-cluster
 title: 删除集群
 ---
 

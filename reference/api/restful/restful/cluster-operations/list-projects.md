@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /list-projects
+slug: /restful/list-projects
 title: 查看项目列表
 ---
 

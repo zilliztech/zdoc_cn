@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /import
+slug: /restful/import
 title: 导入
 ---
 

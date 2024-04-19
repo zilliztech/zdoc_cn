@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /describe-cluster
+slug: /restful/describe-cluster
 title: 查看集群详情
 ---
 

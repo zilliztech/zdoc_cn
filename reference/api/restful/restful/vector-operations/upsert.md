@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /upsert
+slug: /restful/upsert
 title: Upsert Entity
 ---
 

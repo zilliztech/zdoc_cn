@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /list-cloud-providers
+slug: /restful/list-cloud-providers
 title: 查看云服务提供商
 ---
 

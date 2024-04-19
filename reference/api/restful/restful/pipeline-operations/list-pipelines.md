@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /list-pipelines
+slug: /restful/list-pipelines
 title: 查看 Pipeline 列表
 ---
 

@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /get
+slug: /restful/get
 title: 按 ID 查询
 ---
 

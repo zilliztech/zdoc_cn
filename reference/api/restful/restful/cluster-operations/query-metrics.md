@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /query-metrics
+slug: /restful/query-metrics
 title: 查看集群指标
 ---
 

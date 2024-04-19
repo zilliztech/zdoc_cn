@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /run-pipeline
+slug: /restful/run-pipeline
 title: 执行 Pipeline
 ---
 

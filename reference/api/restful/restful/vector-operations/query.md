@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /query
+slug: /restful/query
 title: 按条件查询
 ---
 

@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /resume-cluster
+slug: /restful/resume-cluster
 title: 恢复集群
 ---
 

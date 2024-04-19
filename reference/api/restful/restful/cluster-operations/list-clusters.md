@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /list-clusters
+slug: /restful/list-clusters
 title: 查看集群
 ---
 

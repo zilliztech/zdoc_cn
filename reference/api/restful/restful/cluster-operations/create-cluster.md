@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /create-cluster
+slug: /restful/create-cluster
 title: 创建集群
 ---
 

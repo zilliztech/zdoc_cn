@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /search
+slug: /restful/search
 title: 搜索
 ---
 

@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: restfulSidebar
 sidebar_position: 0
-slug: /create-pipeline
+slug: /restful/create-pipeline
 title: 创建 Pipeline
 ---
 
