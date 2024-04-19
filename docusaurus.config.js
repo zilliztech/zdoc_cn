@@ -74,7 +74,7 @@ const config = {
         root: 'XyeFwdx6kiK9A6kq3yIcLNdEnDd',
         base: 'MQI8b662gabapmsTl7ZcnTExnSc',
         sourceType: 'wiki',
-        docSourceDir: './plugins/lark-docs/meta/sources',
+        docSourceDir: './plugins/lark-docs/meta/sources/guides',
         targets: {
           saas: {
             outputDir: 'docs/tutorials',
@@ -85,7 +85,24 @@ const config = {
             imageDir: 'static/byoc',
           }
         }
-      }
+      },
+      python: {
+        root: 'PTJzfzI0ulKGjwdUsxQcFxfJn6b',
+        base: 'D1VabelmAansLwsNTvLc2Wxxn1g',
+        sourceType: 'drive',
+        version: 'v2.3.x',
+        docSourceDir: './plugins/lark-docs/meta/sources/python/v2.3.x',
+        targets: {
+          milvus: {
+            outputDir: 'milvus/reference/python/docs',
+            imageDir: 'milvus/reference/python/images'
+          },
+          zilliz: {
+            outputDir: 'reference/api/python/python',
+            imageDir: 'static/img',
+          }
+        }
+      },
     }],
     './plugins/apifox-docs',
     './plugins/link-checks'
@@ -132,10 +149,31 @@ const config = {
           //   className: 'header-link',
           // },
           {
-            href: '/reference',
-            label: 'API 参考',
+            type: 'dropdown',
+            label: '参考文档',
             position: 'left',
-            className: 'header-link',
+            items: [
+              {
+                label: 'RESTful API',
+                to: '/reference/restful',
+              },
+              {
+                label: 'Python SDK',
+                to: '/reference/python',
+              },
+              {
+                label: 'Java SDK',
+                to: '/reference/java',
+              },
+              {
+                label: 'Go SDK',
+                to: '/reference/go',
+              },
+              {
+                label: 'Node.js SDK',
+                to: '/reference/nodejs',
+              }
+            ]
           },
           {
             href: 'https://zilliz.com.cn/pricing',
@@ -192,8 +230,24 @@ const config = {
                 to: '/docs/quick-start',
               },
               {
-                label: 'API 参考',
-                to: '/reference',
+                label: 'RESTful API',
+                to: '/reference/restful',
+              },
+              {
+                label: 'Python SDK',
+                to: '/reference/python',
+              },
+              {
+                label: 'Java SDK',
+                to: '/reference/java',
+              },
+              {
+                label: 'Go SDK',
+                to: '/reference/go',
+              },
+              {
+                label: 'Node.js SDK',
+                to: '/reference/nodejs',
               },
             ],
           },

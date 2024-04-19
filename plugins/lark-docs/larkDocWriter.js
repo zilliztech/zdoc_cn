@@ -416,7 +416,7 @@ class larkDocWriter {
         const result = this.records.filter(record => {
             const record_slug = record["fields"]["Slug"] instanceof Array ? record["fields"]["Slug"][0].text : record["fields"]["Slug"]
             if (record["fields"]["Docs"] && record["fields"]["Docs"]["text"] === title && record_slug == slug && record["fields"]["Targets"] &&
-                record["fields"]["Progress"] && (record["fields"]["Progress"] === "初稿" || record["fields"]["Progress"] === "发布")) {
+                record["fields"]["Progress"] && (record["fields"]["Progress"] === "初稿" || record["fields"]["Progress"] === "发布" || record["fields"]["Progress"] === "Draft" || record["fields"]["Progress"] === "Published")) {
 
                 const targets = record["fields"]["Targets"].map(item => item.trim().toLowerCase())
 
@@ -1064,17 +1064,21 @@ class larkDocWriter {
         if (!content.match(/^\s+$/)) {
             // single element
             if ((!prev || (prev && !prev['text_run']['text_element_style'][style_name])) && style[style_name] && (!next || (next && !next['text_run']['text_element_style'][style_name]))) {
-                content = `${decorator}${content}${decorator}`;
+                let prefix_spaces = content.match(/^\s*/)[0];
+                let suffix_spaces = content.match(/\s*$/)[0];
+                content = `${prefix_spaces}${decorator}${content.trim()}${decorator}${suffix_spaces}`;
             }
 
             // first element
             if ((!prev || (prev && !prev['text_run']['text_element_style'][style_name])) && style[style_name] && next && next['text_run']['text_element_style'][style_name]) {
-                content = `${decorator}${content}`;
+                let prefix_spaces = content.match(/^\s*/)[0];
+                content = `${prefix_spaces}${decorator}${content.trimStart()}`;
             }
 
             // last element
             if (prev && prev['text_run']['text_element_style'][style_name] && style[style_name] && (!next || (next && !next['text_run']['text_element_style'][style_name]))) {
-                content = `${content}${decorator}`;
+                let suffix_spaces = content.match(/\s*$/)[0];
+                content = `${content.trimEnd()}${decorator}${suffix_spaces}`;
             }
 
             // middle element

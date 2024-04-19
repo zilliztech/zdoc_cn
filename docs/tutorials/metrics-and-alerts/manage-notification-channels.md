@@ -46,7 +46,7 @@ Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件�
 
 1. 要修改现有的告警配置，找到目标告警，从右侧的**操作**列中选择**编辑**。如果要创建新的告警配置，点击页面右上角的 **+ 告警**按钮。
 
-    <Admonition type="info" icon="说明" title="undefined">
+    <Admonition type="info" icon="📘" title="说明">
 
     <p>对于组织告警，您只能编辑现有的告警配置，无法创建新的配置。如需更多信息，请参阅<a href="./manage-organization-alerts">管理组织告警</a>。</p>
 
@@ -62,7 +62,7 @@ Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件�
 
 1. 在企业微信群中，创建群机器人。具体操作步骤，请参阅[群机器人添加入口](https://open.work.weixin.qq.com/help2/pc/14931?person_id=1&searchData=#%E4%BA%8C%E3%80%81%E7%BE%A4%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%B7%BB%E5%8A%A0%E5%85%A5%E5%8F%A3)。
 
-    <Admonition type="info" icon="说明" title="undefined">
+    <Admonition type="info" icon="📘" title="说明">
 
     <p>由于企业微信的设置，导致部分群可能无法添加群机器人，详情请参阅<a href="https://open.work.weixin.qq.com/help2/pc/14931?person_id=1&searchData=#%E5%9B%9B%E3%80%81%E6%B7%BB%E5%8A%A0/%E5%88%9B%E5%BB%BA%E7%BE%A4%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%9D%A1%E4%BB%B6">添加/创建群机器人条件</a>。</p>
 
@@ -76,7 +76,7 @@ Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件�
 
     1. 要修改现有的告警配置，找到目标告警，从右侧的**操作**列中选择**编辑**。如果要创建新的告警配置，点击页面右上角的 **+ 告警**按钮。
 
-        <Admonition type="info" icon="说明" title="undefined">
+        <Admonition type="info" icon="📘" title="说明">
 
         <p>对于组织告警，您只能编辑现有的告警配置，无法创建新的配置。如需更多信息，请参阅<a href="./manage-organization-alerts">管理组织告警</a>。</p>
 
@@ -96,7 +96,7 @@ Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件�
 
 1. 要修改现有的告警配置，找到目标告警，从右侧的**操作**列中选择**编辑**。如果要创建新的告警配置，点击页面右上角的 **+ 告警**按钮。
 
-    <Admonition type="info" icon="说明" title="undefined">
+    <Admonition type="info" icon="📘" title="说明">
 
     <p>对于组织告警，您只能编辑现有的告警配置，无法创建新的配置。如需更多信息，请参阅<a href="./manage-organization-alerts">管理组织告警</a>。</p>
 
@@ -112,6 +112,17 @@ Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件�
 
 1. 在钉钉群中，创建自定义机器人。具体操作步骤，请参阅[自定义机器人接入](https://open.dingtalk.com/document/robots/custom-robot-access)。
 
+    <Admonition type="info" icon="📘" title="说明">
+
+    <p>在配置机器人信息时，需为自定义机器人的<strong>安全设置</strong>添加<strong>自定义关键字</strong>：</p>
+    <ul>
+    <li><p><strong>测试</strong>：用于接收连通性测试的告警通知</p></li>
+    <li><p><strong>告警</strong>：用于接收正式的告警通知</p></li>
+    </ul>
+    <p>有关如何配置自定义关键字，请参阅<a href="https://open.dingtalk.com/document/robots/custom-robot-access">自定义关键字</a>。</p>
+
+    </Admonition>
+
 1. 查看已创建的机器人信息，获取对应机器人的 webhook URL。具体操作步骤，请参阅[获取自定义机器人 Webhook 地址](https://open.dingtalk.com/document/orgapp/obtain-the-webhook-address-of-a-custom-robot)。
 
 1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/signup)，配置钉钉告警渠道。
@@ -120,7 +131,7 @@ Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件�
 
     1. 要修改现有的告警配置，找到目标告警，从右侧的**操作**列中选择**编辑**。如果要创建新的告警配置，点击页面右上角的 **+ 告警**按钮。
 
-        <Admonition type="info" icon="说明" title="undefined">
+        <Admonition type="info" icon="📘" title="说明">
 
         <p>对于组织告警，您只能编辑现有的告警配置，无法创建新的配置。如需更多信息，请参阅<a href="./manage-organization-alerts">管理组织告警</a>。</p>
 
@@ -144,7 +155,7 @@ Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件�
 
     1. 要修改现有的告警配置，找到目标告警，从右侧的**操作**列中选择**编辑**。如果要创建新的告警配置，点击页面右上角的 **+ 告警**按钮。
 
-        <Admonition type="info" icon="说明" title="undefined">
+        <Admonition type="info" icon="📘" title="说明">
 
         <p>对于组织告警，您只能编辑现有的告警配置，无法创建新的配置。如需更多信息，请参阅<a href="./manage-organization-alerts">管理组织告警</a>。</p>
 
@@ -168,7 +179,7 @@ Zilliz Cloud 提供的 **Webhook** 选项允许您设置自定义的通知渠道
 
     1. 要修改现有的告警配置，找到目标告警，从右侧的**操作**列中选择**编辑**。如果要创建新的告警配置，点击页面右上角的 **+ 告警**按钮。
 
-        <Admonition type="info" icon="说明" title="undefined">
+        <Admonition type="info" icon="📘" title="说明">
 
         <p>对于组织告警，您只能编辑现有的告警配置，无法创建新的配置。如需更多信息，请参阅<a href="./manage-organization-alerts">管理组织告警</a>。</p>
 

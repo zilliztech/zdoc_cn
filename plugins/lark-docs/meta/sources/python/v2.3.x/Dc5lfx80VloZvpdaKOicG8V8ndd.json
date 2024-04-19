@@ -1,0 +1,33 @@
+{
+  "created_time": "1713253573",
+  "modified_time": "1713253733",
+  "name": "Cohere",
+  "owner_id": "ou_e55a208a81fc721928685fc3df9cb678",
+  "parent_token": "Ph7xfldrplFoihdiSAkciCuenyh",
+  "token": "Dc5lfx80VloZvpdaKOicG8V8ndd",
+  "type": "folder",
+  "url": "https://zilliverse.feishu.cn/drive/folder/Dc5lfx80VloZvpdaKOicG8V8ndd",
+  "slug": "Rerankers-Cohere",
+  "children": [
+    {
+      "created_time": "1713253732",
+      "modified_time": "1713257041",
+      "name": "CohereRerankFunction",
+      "owner_id": "ou_e55a208a81fc721928685fc3df9cb678",
+      "parent_token": "Dc5lfx80VloZvpdaKOicG8V8ndd",
+      "token": "GAWOdft83oZPvHxtxzZcjrQunGg",
+      "type": "docx",
+      "url": "https://zilliverse.feishu.cn/docx/GAWOdft83oZPvHxtxzZcjrQunGg"
+    },
+    {
+      "created_time": "1713253712",
+      "modified_time": "1713260529",
+      "name": "__call__()",
+      "owner_id": "ou_e55a208a81fc721928685fc3df9cb678",
+      "parent_token": "Dc5lfx80VloZvpdaKOicG8V8ndd",
+      "token": "M7pWdbu8foKkJAxY3uBcMfHrnrh",
+      "type": "docx",
+      "url": "https://zilliverse.feishu.cn/docx/M7pWdbu8foKkJAxY3uBcMfHrnrh"
+    }
+  ]
+}

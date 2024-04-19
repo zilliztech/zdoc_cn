@@ -1,0 +1,472 @@
+{
+  "creator": "ou_fbc044d19930afd389d5c369466c38b1",
+  "has_child": false,
+  "node_create_time": "1712128922",
+  "node_token": "CuOUwg2tyijZoFkO3ItcLaiMnac",
+  "node_type": "origin",
+  "obj_create_time": "1712128922",
+  "obj_edit_time": "1712747925",
+  "obj_token": "Z16GdyaGxoNvC2x4MJkcptXdn2e",
+  "obj_type": "docx",
+  "origin_node_token": "CuOUwg2tyijZoFkO3ItcLaiMnac",
+  "origin_space_id": "7167193056431783939",
+  "owner": "ou_fbc044d19930afd389d5c369466c38b1",
+  "parent_node_token": "JScMwve0PiplHNkKqVYcKkzGnFs",
+  "space_id": "7167193056431783939",
+  "title": "了解 Connector",
+  "slug": "understanding-connectors",
+  "blocks": {
+    "items": [
+      {
+        "block_id": "Z16GdyaGxoNvC2x4MJkcptXdn2e",
+        "block_type": 1,
+        "children": [
+          "WZrtdIBrHorDFCxRmUXc8Rdwnmb",
+          "LM1AdWNs1oLsGyxaLa7ctCs8nsf",
+          "IHJYdghPfo2wngxZOyGcRJPznxg",
+          "JYxAdtyJUo9ZBJxXjIoc6X7Mnqg",
+          "HNFYdb9vKov2SuxnPfocAVDmnAd",
+          "TNxldKwyBo4WP3xCEMTcDZJ5nAg",
+          "DAskd64SGoeaQKxQ5Zmc6DIbnvd",
+          "ISafd1sMZoibauxEGUocuedzneC",
+          "JFM7dXrThodH4YxDMTAcV76HnsF",
+          "HVYLd1iOvoO7O3xcHv3caYJonwg",
+          "AnU3dAyboonpgqxa9UkcS4KQnxf",
+          "FXHfdqZvvouzO5xjSSgcqBewnLe"
+        ],
+        "page": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "了解 Connector",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1
+          }
+        },
+        "parent_id": ""
+      },
+      {
+        "block_id": "WZrtdIBrHorDFCxRmUXc8Rdwnmb",
+        "block_type": 2,
+        "parent_id": "Z16GdyaGxoNvC2x4MJkcptXdn2e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Connector 可以轻松将各种数据源连接到向量数据库。本文将介绍什么是 Connector、Connector 的作用以及如何使用 Connector。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "LM1AdWNs1oLsGyxaLa7ctCs8nsf",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Connector 是什么？{#what-is-a-connector}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Z16GdyaGxoNvC2x4MJkcptXdn2e"
+      },
+      {
+        "block_id": "IHJYdghPfo2wngxZOyGcRJPznxg",
+        "block_type": 2,
+        "parent_id": "Z16GdyaGxoNvC2x4MJkcptXdn2e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Connector 用于将数据从各种数据源（包括对象存储、Kafka 等）导入到 Zilliz Cloud。以对象存储 Connector 为例，它可以监控对象存储桶中的目录，并将 PDF、HTML 等文件同步到 ",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "Zilliz Cloud Pipelines",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FWfbLwEnVviFQnzk4VFWcmC76ndd"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "，以便后续将文件转换为向量并存储在向量数据库中用于搜索。通过 Ingestion 和 Deletion Pipelines，Zilliz Cloud 能够实时同步数据，并根据对象存储中添加或删除的文件即使更新向量数据库 Collection 中的数据。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JYxAdtyJUo9ZBJxXjIoc6X7Mnqg",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D44233-7524%26mode%3Ddesign%26t%3D1GUhReNArXciViv7-4"
+          }
+        },
+        "parent_id": "Z16GdyaGxoNvC2x4MJkcptXdn2e"
+      },
+      {
+        "block_id": "HNFYdb9vKov2SuxnPfocAVDmnAd",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Connector 的作用 {#why-use-a-connector}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Z16GdyaGxoNvC2x4MJkcptXdn2e"
+      },
+      {
+        "block_id": "TNxldKwyBo4WP3xCEMTcDZJ5nAg",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "实时数据导入",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "NN2kdyDWYoJTbXxG0r1cJWmhnpc"
+        ],
+        "parent_id": "Z16GdyaGxoNvC2x4MJkcptXdn2e"
+      },
+      {
+        "block_id": "NN2kdyDWYoJTbXxG0r1cJWmhnpc",
+        "block_type": 2,
+        "parent_id": "TNxldKwyBo4WP3xCEMTcDZJ5nAg",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "轻松实时导入数据并创建索引。确保最新内容立即可用于所有搜索查询。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "DAskd64SGoeaQKxQ5Zmc6DIbnvd",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "灵活可扩展，可适应各种场景",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "LiHedzhBYo6RdGxG0PKctwgSnvf"
+        ],
+        "parent_id": "Z16GdyaGxoNvC2x4MJkcptXdn2e"
+      },
+      {
+        "block_id": "LiHedzhBYo6RdGxG0PKctwgSnvf",
+        "block_type": 2,
+        "parent_id": "DAskd64SGoeaQKxQ5Zmc6DIbnvd",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "轻松扩展您的数据 ingestion pipeline，免去繁琐的运维。Connector 可适应和无缝处理不断变化的流量负载，确保能够丝滑扩展。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "ISafd1sMZoibauxEGUocuedzneC",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "与数据源保持同步的搜索索引",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "BOnJdiZ8xo3arAxbh2QcqtFlnOg"
+        ],
+        "parent_id": "Z16GdyaGxoNvC2x4MJkcptXdn2e"
+      },
+      {
+        "block_id": "BOnJdiZ8xo3arAxbh2QcqtFlnOg",
+        "block_type": 2,
+        "parent_id": "ISafd1sMZoibauxEGUocuedzneC",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "自动同步文档更新（添加和删除），实时更新搜索索引。此外，即将支持所有常见类型的数据源。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "JFM7dXrThodH4YxDMTAcV76HnsF",
+        "block_type": 12,
+        "bullet": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "观测数据流",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "children": [
+          "AJw4degEkoOV1lxRNapcPPaRnZa"
+        ],
+        "parent_id": "Z16GdyaGxoNvC2x4MJkcptXdn2e"
+      },
+      {
+        "block_id": "AJw4degEkoOV1lxRNapcPPaRnZa",
+        "block_type": 2,
+        "parent_id": "JFM7dXrThodH4YxDMTAcV76HnsF",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过详细的日志获取数据流的洞察，确保透明度并检测可能出现的任何异常。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "HVYLd1iOvoO7O3xcHv3caYJonwg",
+        "block_type": 4,
+        "heading2": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "如何使用 Connector？{#how-does-the-connector-work}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        },
+        "parent_id": "Z16GdyaGxoNvC2x4MJkcptXdn2e"
+      },
+      {
+        "block_id": "AnU3dAyboonpgqxa9UkcS4KQnxf",
+        "block_type": 2,
+        "parent_id": "Z16GdyaGxoNvC2x4MJkcptXdn2e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Zilliz Cloud Connector 提供灵活的选项，支持轻松自定义自动扫描频率。设置自动扫描后，Zilliz Cloud Connector 将定期扫描您的数据源，并定期将数据导入到您的向量数据库中。以下截图展示了配置自动扫描的过程。",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "FXHfdqZvvouzO5xjSSgcqBewnLe",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D44312-7801%26mode%3Ddesign%26t%3D1GUhReNArXciViv7-4"
+          }
+        },
+        "parent_id": "Z16GdyaGxoNvC2x4MJkcptXdn2e"
+      }
+    ],
+    "counts": 17
+  }
+}
