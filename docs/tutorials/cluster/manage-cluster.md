@@ -134,7 +134,7 @@ import Admonition from '@theme/Admonition';
 
 要恢复挂起中的集群，请单击**操作**并从下拉列表中选择**恢复**。在**恢复集群**对话框中确认此操作后，集群的状态将从**挂起中**变为**恢复运行中**，然后再变为**运行中**。此时将根据集群 CU 大小和集群类型产生费用。
 
-此外，您还可以通过 RESTful API 挂起或恢复集群。有关更多接口信息，请参阅 [Suspend Cluster](/reference/suspend-cluster) 和 [Resume Cluster](/reference/resume-cluster)。
+此外，您还可以通过 RESTful API 挂起或恢复集群。有关更多接口信息，请参阅 [Suspend Cluster](/reference/restful/suspend-cluster) 和 [Resume Cluster](/reference/restful/resume-cluster)。
 
 #### 删除集群{#delete-cluster}
 

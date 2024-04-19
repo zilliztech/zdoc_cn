@@ -249,3 +249,9 @@ li.theme-doc-sidebar-item-category-level-2 a.menu__link.menu__link--sublist {
 div.footer__bottom.text--center {
   display: none;
 }
+
+a.menu__link {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+} 
