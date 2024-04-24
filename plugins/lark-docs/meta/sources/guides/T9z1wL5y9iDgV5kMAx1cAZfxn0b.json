@@ -5,7 +5,7 @@
   "node_token": "T9z1wL5y9iDgV5kMAx1cAZfxn0b",
   "node_type": "origin",
   "obj_create_time": "1712713168",
-  "obj_edit_time": "1713495978",
+  "obj_edit_time": "1713952130",
   "obj_token": "PpjhdoB9wo9rLoxkUNXckhB9nic",
   "obj_type": "docx",
   "origin_node_token": "T9z1wL5y9iDgV5kMAx1cAZfxn0b",
@@ -68,9 +68,12 @@
           "NbdmdxGEPoRDVcx2aoMcrKxAnNb",
           "Ibd2ddPQFo60YnxYJlgccGWRnsb",
           "FUuHd04gQo6f4ix5QiNcUOifnwe",
+          "Kyqid7OFOohEfcx3dztcPRA8nZf",
+          "UOYWd3jLToKebZxYaT9cOMg8nzf",
           "KMgxdLXulowlwrxvOeRcdGXXnwo",
           "KkPqdRU0CoZNImx2gEtcklVTnyb",
-          "Gwpsdx59ToJq95x8LQ5coDTMnJO"
+          "QkNbdrGe8o1wgEx4t87cVb2TnUm",
+          "ACswdUArXoCF3txFJEzcFcuQnwN"
         ],
         "page": {
           "elements": [
@@ -4271,6 +4274,68 @@
         }
       },
       {
+        "block_id": "Kyqid7OFOohEfcx3dztcPRA8nZf",
+        "block_type": 2,
+        "parent_id": "PpjhdoB9wo9rLoxkUNXckhB9nic",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "示例 webhook 告警通知：",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "UOYWd3jLToKebZxYaT9cOMg8nzf",
+        "block_type": 14,
+        "code": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "{\n  \"orgId\": \"org-lgedmeaxmbofeolgsrwhru\",\n  \"projectId\": \"proj-e8b1b136b0e7462ee6ed4b\",\n  \"summary\": \"您的 Zilliz Cloud 集群 resume-deployment 于 2024-04-16 11:59:00 (UTC) 发生 紧急 级别的告警。Search 延时（平均） 在 5 分钟内超过 1 ms。请检查系统。\",\n  \"level\": \"CRITICAL\",\n  \"timestamp\": \"2024-04-16T11:59:00Z\"\n",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "}",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "language": 49,
+            "wrap": false
+          }
+        },
+        "parent_id": "PpjhdoB9wo9rLoxkUNXckhB9nic"
+      },
+      {
         "block_id": "KMgxdLXulowlwrxvOeRcdGXXnwo",
         "block_type": 4,
         "heading2": {
@@ -4303,7 +4368,31 @@
           "elements": [
             {
               "text_run": {
-                "content": "在设置完告警渠道后，可击发送测试消息的图标来验证其是否正确配置。",
+                "content": "在设置完告警渠道后，可点击",
+                "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "发送测试消息",
+                "text_element_style": {
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "图标来验证配置是否有效。",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,
@@ -4321,7 +4410,18 @@
         }
       },
       {
-        "block_id": "Gwpsdx59ToJq95x8LQ5coDTMnJO",
+        "block_id": "QkNbdrGe8o1wgEx4t87cVb2TnUm",
+        "block_type": 26,
+        "iframe": {
+          "component": {
+            "iframe_type": 8,
+            "url": "https%3A%2F%2Fwww.figma.com%2Ffile%2FRb9z8tsmYYdqdultiKx7kT%2FZilliz-Diagrams%3Ftype%3Ddesign%26node-id%3D45612-1489%26mode%3Ddesign%26t%3DA0Zt6bBpEVFjL6lU-4"
+          }
+        },
+        "parent_id": "PpjhdoB9wo9rLoxkUNXckhB9nic"
+      },
+      {
+        "block_id": "ACswdUArXoCF3txFJEzcFcuQnwN",
         "block_type": 2,
         "parent_id": "PpjhdoB9wo9rLoxkUNXckhB9nic",
         "text": {
@@ -4346,6 +4446,6 @@
         }
       }
     ],
-    "counts": 94
+    "counts": 97
   }
 }

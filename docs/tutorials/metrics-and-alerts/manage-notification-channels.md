@@ -191,7 +191,21 @@ Zilliz Cloud 提供的 **Webhook** 选项允许您设置自定义的通知渠道
 
 有关更多告警配置信息，请参阅[管理组织告警](./manage-organization-alerts)或[管理项目告警](./manage-project-alerts)。
 
+示例 webhook 告警通知：
+
+```python
+{
+  "orgId": "org-lgedmeaxmbofeolgsrwhru",
+  "projectId": "proj-e8b1b136b0e7462ee6ed4b",
+  "summary": "您的 Zilliz Cloud 集群 resume-deployment 于 2024-04-16 11:59:00 (UTC) 发生 紧急 级别的告警。Search 延时（平均） 在 5 分钟内超过 1 ms。请检查系统。",
+  "level": "CRITICAL",
+  "timestamp": "2024-04-16T11:59:00Z"
+}
+```
+
 ## 测试连通性{#test-connectivity}
 
-在设置完告警渠道后，可击发送测试消息的图标来验证其是否正确配置。
+在设置完告警渠道后，可点击**发送测试消息**图标来验证配置是否有效。
+
+![zh-test-connectivity](/img/zh-test-connectivity.png)
 
