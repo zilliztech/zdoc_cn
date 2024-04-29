@@ -5,7 +5,7 @@
   "node_token": "UTRZwxLf3ikwvbkXrKjcWAwOnmg",
   "node_type": "origin",
   "obj_create_time": "1691137853",
-  "obj_edit_time": "1711684375",
+  "obj_edit_time": "1714357851",
   "obj_token": "MUoedR3G4olCJqxg1OncPiKYnSh",
   "obj_type": "docx",
   "origin_node_token": "UTRZwxLf3ikwvbkXrKjcWAwOnmg",
@@ -22,6 +22,7 @@
         "block_type": 1,
         "children": [
           "V0EqdqTE3ovEWDxUp0YcPhqlnTI",
+          "X4vBdfK5moUE2Px6wlPcLnhQn1e",
           "XrVydoMnlo5xMsx1J9RcYOuonEb",
           "UKKDdqSxjostf7x01nBcmSZlnad",
           "C7XsdkfoPo7Y9vxCjmxcete0nhc",
@@ -88,6 +89,136 @@
               "text_run": {
                 "content": "Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云市场上订阅 Zilliz Cloud。",
                 "text_element_style": {
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "X4vBdfK5moUE2Px6wlPcLnhQn1e",
+        "block_type": 34,
+        "children": [
+          "VNMDdKg2mo8lXhxyidDcjRrgnAg",
+          "MZzBdPUYJoj60jxARBVcj92qnZg"
+        ],
+        "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh",
+        "quote_container": {}
+      },
+      {
+        "block_id": "VNMDdKg2mo8lXhxyidDcjRrgnAg",
+        "block_type": 2,
+        "parent_id": "X4vBdfK5moUE2Px6wlPcLnhQn1e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "📘 说明",
+                "text_element_style": {
+                  "background_color": 3,
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false
+          }
+        }
+      },
+      {
+        "block_id": "MZzBdPUYJoj60jxARBVcj92qnZg",
+        "block_type": 2,
+        "parent_id": "X4vBdfK5moUE2Px6wlPcLnhQn1e",
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "通过阿里云市场订阅后，您可以",
+                "text_element_style": {
+                  "background_color": 3,
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "创建",
+                "text_element_style": {
+                  "background_color": 3,
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "link": {
+                    "url": "https%3A%2F%2Fzilliverse.feishu.cn%2Fwiki%2FMAFcwBTqqiR5YZkdkd4cADg0nub"
+                  },
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "阿里云",
+                "text_element_style": {
+                  "background_color": 3,
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "和",
+                "text_element_style": {
+                  "background_color": 3,
+                  "bold": false,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "腾讯云",
+                "text_element_style": {
+                  "background_color": 3,
+                  "bold": true,
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": "实例。阿里云云市场仅为支付和订阅方式，不影响集群创建时的云服务提供商。",
+                "text_element_style": {
+                  "background_color": 3,
                   "bold": false,
                   "inline_code": false,
                   "italic": false,
@@ -2230,6 +2361,6 @@
         "parent_id": "MUoedR3G4olCJqxg1OncPiKYnSh"
       }
     ],
-    "counts": 79
+    "counts": 82
   }
 }

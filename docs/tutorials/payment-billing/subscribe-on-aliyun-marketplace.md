@@ -14,6 +14,12 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云市场上订阅 Zilliz Cloud。
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>通过阿里云市场订阅后，您可以<a href="./create-cluster">创建</a><strong>阿里云</strong>和<strong>腾讯云</strong>实例。阿里云云市场仅为支付和订阅方式，不影响集群创建时的云服务提供商。</p>
+
+</Admonition>
+
 ![alibabacloud_procedure](/img/alibabacloud_procedure.png)
 
 ## 准备工作{#before-you-start}
