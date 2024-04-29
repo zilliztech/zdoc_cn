@@ -5,7 +5,7 @@
   "node_token": "HAXiw8277i0mBXk8L1Gcrei7nle",
   "node_type": "origin",
   "obj_create_time": "1708398001",
-  "obj_edit_time": "1713427011",
+  "obj_edit_time": "1714356883",
   "obj_token": "D1iddHsGAoYzG5xXInpcvUWMnfc",
   "obj_type": "docx",
   "origin_node_token": "HAXiw8277i0mBXk8L1Gcrei7nle",
@@ -1796,7 +1796,7 @@
           "elements": [
             {
               "text_run": {
-                "content": "curl --request POST \\\n     --header \"Content-Type: multipart/form-data\" \\\n     --header 'Accept: multipart/form-data' \\\n     --header \"Authorization: Bearer ${YOUR_CLUSTER_TOKEN}\" \\\n     --url \"https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/${YOUR_PIPELINE_ID}/run_ingestion_with_file\" \\\n     --form 'data={\"year\": 2023}' \\\n",
+                "content": "curl --request POST \\\n     --header \"Content-Type: multipart/form-data\" \\\n     --header \"Authorization: Bearer ${YOUR_CLUSTER_TOKEN}\" \\\n     --url \"https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/${YOUR_PIPELINE_ID}/run_ingestion_with_file\" \\\n     --form 'data={\"year\": 2023}' \\\n",
                 "text_element_style": {
                   "bold": false,
                   "inline_code": false,

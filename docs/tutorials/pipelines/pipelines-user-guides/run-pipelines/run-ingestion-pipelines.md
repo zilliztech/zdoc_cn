@@ -92,7 +92,6 @@ curl --request POST \
 ```python
 curl --request POST \
      --header "Content-Type: multipart/form-data" \
-     --header 'Accept: multipart/form-data' \
      --header "Authorization: Bearer ${YOUR_CLUSTER_TOKEN}" \
      --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/${YOUR_PIPELINE_ID}/run_ingestion_with_file" \
      --form 'data={"year": 2023}' \
