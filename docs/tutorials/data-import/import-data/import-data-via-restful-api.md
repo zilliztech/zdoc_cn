@@ -6,6 +6,7 @@ notebook: FALSE
 type: origin
 token: FzANwnN8siARelkAp4vcJVJNnnf
 sidebar_position: 2
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -23,7 +24,7 @@ import Admonition from '@theme/Admonition';
 
 - 已下载示例数据集。详情请参见[示例数据集](./example-dataset)。
 
-- 已创建 Collection，且该 Collection 的 Schema 与示例数据集相匹配。已为该 Collection 创建索引，并已加载 Collection。详情请参见[创建 Collection](./create-collection)。
+- 已创建 Collection，且该 Collection 的 Schema 与示例数据集相匹配。已为该 Collection 创建索引，并已加载 Collection。详情请参见[创建 Collection](./undefined)。
 
 ## 准备数据文件{#prepare-data-files}
 
@@ -76,7 +77,7 @@ with open('path/to/medium_articles_2020_dpr.json') as f:
 
 ```bash
 curl --request POST \
-     --url "<https://controller.api.$>{CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import" \\
+     --url "<https://controller.api.$>{CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \
@@ -95,7 +96,7 @@ curl --request POST \
 
 ```bash
 curl --request GET \
-     --url "<https://controller.api.$>{CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import/get?jobId=${JOBID}&clusterId=${CLUSTERID}" \\
+     --url "<https://controller.api.$>{CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import/get?jobId=${JOBID}&clusterId=${CLUSTERID}" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \

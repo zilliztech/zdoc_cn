@@ -6,6 +6,7 @@ notebook: FALSE
 type: origin
 token: FXGWwcjyViaQm8kvJgScITzBnr3
 sidebar_position: 1
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -137,16 +138,62 @@ curl https://assets.zilliz.com/doc-assets/medium_articles_partial_a13e0f2a.csv \
 
 下表详细描述了该数据集的结构及第一行数据各列的取值。
 
-|  **字段名称**     |  **字段类型**     |  **字段属性**        |  **样例取值**                                          |
-| ------------- | ------------- | ---------------- | -------------------------------------------------- |
-|  id           |  INT64        |  N/A             |  0                                                 |
-|  title_vector |  FLOAT_VECTOR |  Dimension: 768  |  [0.041732933, 0.013779674, -0.027564144, -0.01... |
-|  title        |  VARCHAR      |  Max length: 512 |  The Reported Mortality Rate of Coronavirus Is ... |
-|  link         |  VARCHAR      |  Max length: 512 |  https://medium.com/swlh/the-reported-mortality... |
-|  reading_time |  INT64        |  N/A             |  13                                                |
-|  publication  |  VARCHAR      |  Max length: 512 |  The Startup                                       |
-|  claps        |  INT64        |  N/A             |  1100                                              |
-|  responses    |  INT64        |  N/A             |  18                                                |
+<table>
+   <tr>
+     <th><strong>字段名称</strong></th>
+     <th><strong>字段类型</strong></th>
+     <th><strong>字段属性</strong></th>
+     <th><strong>样例取值</strong></th>
+   </tr>
+   <tr>
+     <td>id</td>
+     <td>INT64</td>
+     <td>N/A</td>
+     <td>0</td>
+   </tr>
+   <tr>
+     <td>title_vector</td>
+     <td>FLOAT_VECTOR</td>
+     <td>Dimension: 768</td>
+     <td>[0.041732933, 0.013779674, -0.027564144, -0.01…</td>
+   </tr>
+   <tr>
+     <td>title</td>
+     <td>VARCHAR</td>
+     <td>Max length: 512</td>
+     <td>The Reported Mortality Rate of Coronavirus Is …</td>
+   </tr>
+   <tr>
+     <td>link</td>
+     <td>VARCHAR</td>
+     <td>Max length: 512</td>
+     <td>https://medium.com/swlh/the-reported-mortality…</td>
+   </tr>
+   <tr>
+     <td>reading_time</td>
+     <td>INT64</td>
+     <td>N/A</td>
+     <td>13</td>
+   </tr>
+   <tr>
+     <td>publication</td>
+     <td>VARCHAR</td>
+     <td>Max length: 512</td>
+     <td>The Startup</td>
+   </tr>
+   <tr>
+     <td>claps</td>
+     <td>INT64</td>
+     <td>N/A</td>
+     <td>1100</td>
+   </tr>
+   <tr>
+     <td>responses</td>
+     <td>INT64</td>
+     <td>N/A</td>
+     <td>18</td>
+   </tr>
+</table>
 
 示例数据集包含了 5,000 篇在 medium.com 发布的文章。关于该数据集更多信息，可参考[此 Kaggle 页面](https://www.kaggle.com/datasets/shiyu22chen/cleaned-medium-articles-dataset)。
 
@@ -191,7 +238,7 @@ schema.add_field(field_name="link", datatype=DataType.VARCHAR, max_length=512)
 
 - `enable_dynamic_field=True`
 
-    该参数默认为 **False**，表示 Schema 中未定义的字段将会被忽略。将其设置为 **True** 将允许 **BulkWriter **将未在 Schema 中定义的字段以键值对的形式存储到一个名为** $meta** 的预留 JSON 字段中。
+    该参数默认为 **False**，表示 Schema 中未定义的字段将会被忽略。将其设置为 **True** 将允许 **BulkWriter** 将未在 Schema 中定义的字段以键值对的形式存储到一个名为 **$meta** 的预留 JSON 字段中。
 
 </TabItem>
 
@@ -432,7 +479,7 @@ writer = RemoteBulkWriter(
 
 - `segment_size=512*1024*1024`
 
-    此参数决定了 **BulkWriter **如何对原始数据进行分段。该参数默认值为 512 MB (512 * 1024 * 1024)。如果您的数据集包含数据量较大时，可以考虑使用该参数对数据进行合理分段。
+    此参数决定了 **BulkWriter** 如何对原始数据进行分段。该参数默认值为 512 MB (512 * 1024 * 1024)。如果您的数据集包含数据量较大时，可以考虑使用该参数对数据进行合理分段。
 
 </TabItem>
 
@@ -472,7 +519,7 @@ RemoteBulkWriter remoteBulkWriter = new RemoteBulkWriter(remoteBulkWriterParam);
 
 - `withChunkSize(512*1024*1024)`
 
-    此参数决定了 **BulkWriter **如何对原始数据进行分段。该参数默认值为 512 MB (512 * 1024 * 1024)。如果您的数据集包含数据量较大时，可以考虑使用该方法对数据进行合理分段。
+    此参数决定了 **BulkWriter** 如何对原始数据进行分段。该参数默认值为 512 MB (512 * 1024 * 1024)。如果您的数据集包含数据量较大时，可以考虑使用该方法对数据进行合理分段。
 
 </TabItem>
 
@@ -635,7 +682,7 @@ System.out.println(batchFiles);
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>**BulkWriter **生成一个 UUID，并使用该 UUID 在指定的输入路径下创建一个子路径，然后将生成的文件放在创建的子路径下。</p>
+<p><strong>BulkWriter</strong> 生成一个 UUID，并使用该 UUID 在指定的输入路径下创建一个子路径，然后将生成的文件放在创建的子路径下。</p>
 
 </Admonition>
 
@@ -797,7 +844,7 @@ while (true) {
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>上述代码中，参数 **url **为 Zilliz Cloud RESTful API 的服务器路径，其取值须与目标 Collection 所在云地域保持一致。</p>
+<p>上述代码中，参数 <strong>url</strong> 为 Zilliz Cloud RESTful API 的服务器路径，其取值须与目标 Collection 所在云地域保持一致。</p>
 
 </Admonition>
 

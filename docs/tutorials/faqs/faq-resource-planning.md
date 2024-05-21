@@ -1,10 +1,11 @@
 ---
 slug: /faq-resource-planning
-beta: null
-notebook: null
+beta: FALSE
+notebook: FALSE
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 7
+
 ---
 
 # FAQ：资源规划
@@ -43,7 +44,7 @@ sidebar_position: 7
 
 ### 我的数据需要使用多少 CU？ \{#how-many-cus-do-i-need-for-a-given-collection}
 
-单个性能型 CU 可容纳约 800 万个 128 维向量或 200 万个 768 维向量。
+单个性能型 CU 可容纳约 750 万个 128 维向量或 150 万个 768 维向量。
 
 单个容量型 CU 可容纳约 2500 万个 128 维向量或 500 万个 768 维向量。
 

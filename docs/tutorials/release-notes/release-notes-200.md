@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: X91KwMsQyiAv1Ukze3IcHxQgnic
 sidebar_position: 8
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -56,11 +57,11 @@ Zilliz Cloud 的 Partition Key 特性允许您在创建 Collection 时指定一�
 Zilliz Cloud 提供的动态 Schema 特性将极大地提升 Zilliz Cloud 集群在应对复杂业务场景时的灵活性。现在，用户可以在无需预先定义Schema的情况下，动态地向 Collection 中插入各种类型的字段。
 对于高级用户而言，Zilliz Cloud 允许您在一个 Collection 中同时使用动态和静态字段。您可以在设计 Schema 时将静态字段作为必选字段，并通过动态 Schema 机制引入一些可选字段，从而优化索引、提升查询性能，并保持 Schema 的灵活性。
 
-想了解更多关于动态 Schema 的内容，请阅读[开启动态 Schema](./enable-dynamic-schema)。
+想了解更多关于动态 Schema 的内容，请阅读[开启动态 Schema](./enable-dynamic-field)。
 
 ## JSON 数据类型{#json-type-support}
 
 JSON 是一种在数据管理中经常使用的重要的数据交换格式，因此，我们在 Zilliz Cloud 集群中引入了对 JSON 的支持。现在，您可以在您的 Zilliz Cloud 集群中轻松地存储和管理您的 JSON 数据。
 相信 Zilliz Cloud 集群提供的相似近邻搜索功能结合灵活的JSON数据格式，将为您带来全新的搜索体验。
 
-想了解关于 JSON 数据类型的更多内容，请阅读[JSON](./javascript-object-notation-json)。
+想了解关于 JSON 数据类型的更多内容，请阅读[JSON](./use-json-fields)。

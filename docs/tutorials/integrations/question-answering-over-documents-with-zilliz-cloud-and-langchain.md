@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: Msbqwd1izicbFlkT56scmGlWnbb
 sidebar_position: 4
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -169,8 +170,8 @@ print(rag_chain.invoke("Explain IVF_FLAT in Milvus."))
 返回的结果包含了中间步骤（ `intermediate_steps` ）和输出文本 ( `output_text` )两个部分。前者用于表明在搜索过程中参考的文档，后者则是对用户提问的回答。
 
 ```shell
-**# Output**
-**#**
-**# content='IVF_FLAT is an index mechanism in Milvus that divides a vector space into clusters. It compares the distances between a target vector and the centers of all clusters to find the nearest clusters. Then, it compares the distances between the target vector and the vectors in the selected clusters to find the nearest vectors. IVF_FLAT demonstrates performance advantages when the number of vectors exceeds the value of nlist. Thanks for asking!'**
+# Output
+#
+# content='IVF_FLAT is an index mechanism in Milvus that divides a vector space into clusters. It compares the distances between a target vector and the centers of all clusters to find the nearest clusters. Then, it compares the distances between the target vector and the vectors in the selected clusters to find the nearest vectors. IVF_FLAT demonstrates performance advantages when the number of vectors exceeds the value of nlist. Thanks for asking!'
 ```
 

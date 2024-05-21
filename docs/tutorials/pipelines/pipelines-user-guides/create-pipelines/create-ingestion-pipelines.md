@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: QN9PwG3kpiSG46k2LYDc5yQCnVg
 sidebar_position: 1
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -31,7 +32,7 @@ import Admonition from '@theme/Admonition';
 
 1. 打开项目。
 
-1. 点击左侧导航栏中的 **Pipelines**。 选中**概览**标签页，并切换到 **Pipelines**。点击** + Pipeline**。
+1. 点击左侧导航栏中的 **Pipelines**。 选中**概览**标签页，并切换到 **Pipelines**。点击 **+ Pipeline**。
 
     ![create-pipeline-cn](/img/create-pipeline-cn.png)
 
@@ -47,12 +48,28 @@ import Admonition from '@theme/Admonition';
 
 1. 配置 Ingestion Pipeline。
 
-    |  **参数**        |  **说明**                                          |
-    | -------------- | ------------------------------------------------ |
-    |  目标集群<br/>  |  自动创建 Collection 所属的集群。目前仅支持部署在阿里云（杭州）的集群。       |
-    |  Collection 名称 |  自动创建的 Collection 的名称。                           |
-    |  Pipeline 名称   |  新创建的 Ingestion Pipeline 的名称。名称中只可包含小写字母、数字和下划线。 |
-    |  描述 (可选)       |  对新创建的 Ingestion Pipeline 的描述。                   |
+    <table>
+       <tr>
+         <th><strong>参数</strong></th>
+         <th><strong>说明</strong></th>
+       </tr>
+       <tr>
+         <td>目标集群<br/></td>
+         <td>自动创建 Collection 所属的集群。目前仅支持部署在阿里云（杭州）的集群。</td>
+       </tr>
+       <tr>
+         <td>Collection 名称</td>
+         <td>自动创建的 Collection 的名称。</td>
+       </tr>
+       <tr>
+         <td>Pipeline 名称</td>
+         <td>新创建的 Ingestion Pipeline 的名称。名称中只可包含小写字母、数字和下划线。</td>
+       </tr>
+       <tr>
+         <td>描述 (可选)</td>
+         <td>对新创建的 Ingestion Pipeline 的描述。</td>
+       </tr>
+    </table>
 
     ![configure-ingestion-pipeline-cn](/img/configure-ingestion-pipeline-cn.png)
 
@@ -66,10 +83,20 @@ import Admonition from '@theme/Admonition';
 
         1. 选择用于生成向量的 Embedding 模型。根据所选的文档语言，您可以选择不同的 Embedding 模型。目前 Zilliz Cloud Pipelines 共提供两种 Embedding 模型：英语——**zilliz/bge-base-en-v1.5**，中文——**zilliz/bge-base-zh-v1.5**。
 
-            |  **Embedding 模型 **        |  **说明**                                                                                           |
-            | ------------------------- | ------------------------------------------------------------------------------------------------- |
-            |  zilliz/bge-base-en-v1.5  |  智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。该模型为**英语**语言的默认模型。 |
-            |  zilliz/bge-base-zh-v1.5  |  智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。该模型为**中文**语言的默认模型。 |
+            <table>
+               <tr>
+                 <th><strong>Embedding 模型</strong></th>
+                 <th><strong>说明</strong></th>
+               </tr>
+               <tr>
+                 <td>zilliz/bge-base-en-v1.5</td>
+                 <td>智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。该模型为<strong>英语</strong>语言的默认模型。</td>
+               </tr>
+               <tr>
+                 <td>zilliz/bge-base-zh-v1.5</td>
+                 <td>智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。该模型为<strong>中文</strong>语言的默认模型。</td>
+               </tr>
+            </table>
 
         1. (可选) 自定义切片策略。您可以按需启用此功能。该 Function 将每个文档分割成更小的切片。
 
@@ -89,10 +116,20 @@ import Admonition from '@theme/Admonition';
 
                 默认情况下，每个切片包含不超过500 个 Token，但您可以根据自己的切片策略调整切片大小。下表罗列了 Embedding 模型与其可选切片大小范围。
 
-                |  模型                      |  **切片大小范围 (Tokens)** |
-                | ------------------------ | -------------------- |
-                |  zilliz/bge-base-en-v1.5 |  20-500 Tokens       |
-                |  zilliz/bge-base-zh-v1.5 |  20-500 Tokens       |
+                <table>
+                   <tr>
+                     <th>模型</th>
+                     <th><strong>切片大小范围 (Tokens)</strong></th>
+                   </tr>
+                   <tr>
+                     <td>zilliz/bge-base-en-v1.5</td>
+                     <td>20-500 Tokens</td>
+                   </tr>
+                   <tr>
+                     <td>zilliz/bge-base-zh-v1.5</td>
+                     <td>20-500 Tokens</td>
+                   </tr>
+                </table>
 
             ![customize-chunk-size-cn](/img/customize-chunk-size-cn.png)
 
@@ -193,10 +230,20 @@ curl --request POST \
 
     - `embedding` (可选): 用于生成文本向量的 Embedding 模型。默认情况下，**英语**文档使用 **zilliz/bge-base-en-v1.5** 模型，**中文**文档使用 **zilliz/bge-base-zh-v1.5** 模型。 *(仅 `INDEX_DOC` Function 中包含此参数。）*
 
-        |  **Embedding 模型 **        |  **说明**                                                                                           |
-        | ------------------------- | ------------------------------------------------------------------------------------------------- |
-        |  zilliz/bge-base-en-v1.5  |  智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。该模型为**英语**语言的默认模型。 |
-        |  zilliz/bge-base-zh-v1.5  |  智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。该模型为**中文**语言的默认模型。 |
+        <table>
+           <tr>
+             <th><strong>Embedding 模型</strong></th>
+             <th><strong>说明</strong></th>
+           </tr>
+           <tr>
+             <td>zilliz/bge-base-en-v1.5</td>
+             <td>智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。该模型为<strong>英语</strong>语言的默认模型。</td>
+           </tr>
+           <tr>
+             <td>zilliz/bge-base-zh-v1.5</td>
+             <td>智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。该模型为<strong>中文</strong>语言的默认模型。</td>
+           </tr>
+        </table>
 
     - `splitBy` (可选): Splitter 用于分割文本。选择或自定义 Splitter 后，Ingestion Pipeline 会根据定义的字符按顺序将文本分割成小片段。默认情况下，Zilliz Cloud Pipeline 使用 `"\n\n", "\n", " ", ""` 作为分隔符。*(仅 `INDEX_DOC` Function 中包含此参数。）*
 
@@ -204,10 +251,20 @@ curl --request POST \
 
         下表罗列了 Embedding 模型与其可选切片大小范围。
 
-        |  模型                      |  **切片大小范围 (Tokens)** |
-        | ------------------------ | -------------------- |
-        |  zilliz/bge-base-en-v1.5 |  20-500 Tokens       |
-        |  zilliz/bge-base-zh-v1.5 |  20-500 Tokens       |
+        <table>
+           <tr>
+             <th>模型</th>
+             <th><strong>切片大小范围 (Tokens)</strong></th>
+           </tr>
+           <tr>
+             <td>zilliz/bge-base-en-v1.5</td>
+             <td>20-500 Tokens</td>
+           </tr>
+           <tr>
+             <td>zilliz/bge-base-zh-v1.5</td>
+             <td>20-500 Tokens</td>
+           </tr>
+        </table>
 
     - `outputField`: 输出字段名称。该字段将的值将用于构成 Collection Schema。 `outputField` 字段值应该与 `inputField` 字段值保持一致。 *(仅 `PRESERVE` Function 中包含此参数。）*
 
@@ -266,8 +323,16 @@ Ingestion Pipeline 创建成功后，Zilliz Cloud 将自动创建名称为 `my_n
 
 该 Collection 中包含 6 个字段：1 个自动生成的 ID 字段、4 个 **INDEX_DOC** function 的输出字段和 1 个 **PRESERVE** function 的输出字段。Collection Schema 如下所示：
 
-|  id<br/> (数据类型: Int64) |  doc_name<br/> (数据类型: VarChar) |  chunk_id<br/> (数据类型: Int64) |  chunk_text<br/> (数据类型: VarChar) |  embedding<br/> (数据类型: FLOAT_VECTOR) |  publish_year<br/> (数据类型: Int16) |
-| ------------------------- | --------------------------------- | ------------------------------- | ----------------------------------- | --------------------------------------- | ----------------------------------- |
+<table>
+   <tr>
+     <th>id<br/> (数据类型: Int64)</th>
+     <th>doc_name<br/> (数据类型: VarChar)</th>
+     <th>chunk_id<br/> (数据类型: Int64)</th>
+     <th>chunk_text<br/> (数据类型: VarChar)</th>
+     <th>embedding<br/> (数据类型: FLOAT_VECTOR)</th>
+     <th>publish_year<br/> (数据类型: Int16)</th>
+   </tr>
+</table>
 
 ## 相关文档{#related-topics}
 

@@ -4,7 +4,8 @@ beta: FALSE
 notebook: FALSE
 type: origin
 token: DrXpwhU8pixYi9kqzSBcs5TgnFd
-sidebar_position: 12
+sidebar_position: 17
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -15,56 +16,95 @@ import TabItem from '@theme/TabItem';
 
 本节将帮助您了解如何使用 Partition Key 加速在 Collection 中的数据检索。
 
-Partition Key 允许 Zilliz Cloud 根据数据的指定键值将数据存入不同的 Partition 中。这样您就可以根据指定键值为数据分组，从而在根据键值过滤时避免扫描完全无关的 Partition。相比传统的过滤查询方式，启用该特性后可以极大地提升查询性能。
+## 概述{#overview}
 
-## 准备工作{#before-you-start}
+当您在 Collection中指定某个字段为 Partition Key 后，Zilliz Cloud 会根据待插入数据中该字段的取值将数据存放到不同的 Partition 中。因为具有相同键值的 Entity 就会被放到相同的 Partition 中，Zilliz Cloud 在执行过滤操作时，会根据 Partition Key 确定需要扫描的 Partition，从而避免扫描那些与本次查询完全无关的 Partition。 相比传统的过滤查询方式，启用该特性后可以极大地提升查询性能。
 
-在创建 Collection 之前，确保
+该特性通常用于多租场景。关于多租策略的相关讨论，可以参考 [Multi-tenancy](https://milvus.io/docs/multi_tenancy.md)。
 
-- 已经根据您的数据完成了 Schema 的设计。如需了解更多，可阅读[数据模型](./schema-explained)。
+## 启用 Partition Key{#enable-partition-key}
 
-- 已经创建了一个集群。如需了解更多，可阅读[创建集群](./create-cluster)。
+如下代码演示了如何设置某个字段为 Partition Key。
 
-- 已下载示例数据集。详情请参见[示例数据集](./example-dataset)。
-
-## 创建启用 Partition Key 的 Collection{#create-collection-with-partition-key-enabled}
-
-为了演示 Partition Key 的使用，我们将继续使用包含了 5,000 篇文章的示例数据集。其中，`publication` 将作为 Partition Key。
-
-示例代码中将创建的 Collection 的 Schema 与[示例数据集](./example-dataset)中定义的类似。差异就在作为 Partition Key 使用的 `publication` 字段。
-
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Go","value":"go"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
 <TabItem value='python'>
 
 ```python
-import json, time
-from pymilvus import connections, FieldSchema, CollectionSchema, DataType, Collection, utility
+import random, time
+from pymilvus import connections, MilvusClient, DataType
 
-CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT" # Set your cluster endpoint
-TOKEN="YOUR_CLUSTER_TOKEN" # Set your token
-COLLECTION_NAME="medium_articles_2020" # Set your collection name
-DATASET_PATH="{}/../medium_articles_2020_dpr.json".format(os.path.dirname(__file__)) # Set your dataset path
+CLUSTER_ENDPOINT = "YOUR_CLUSTER_ENDPOINT"
+TOKEN = "YOUR_CLUSTER_TOKEN"
 
-connections.connect(
-  alias='default', 
-  #  Public endpoint obtained from Zilliz Cloud
-  uri=CLUSTER_ENDPOINT,
-  # API key or a colon-separated cluster username and password
-  token=TOKEN, 
+# 1. Set up a Milvus client
+client = MilvusClient(
+    uri=CLUSTER_ENDPOINT,
+    token=TOKEN 
 )
 
-# 1. Define fields
-fields = [
-    FieldSchema(name="id", dtype=DataType.INT64, is_primary=True),
-    FieldSchema(name="title", dtype=DataType.VARCHAR, max_length=512),   
-    FieldSchema(name="title_vector", dtype=DataType.FLOAT_VECTOR, dim=768),
-    FieldSchema(name="link", dtype=DataType.VARCHAR, max_length=512),
-    FieldSchema(name="reading_time", dtype=DataType.INT64),
-    # The field "publication" acts as the partition key.
-    FieldSchema(name="publication", dtype=DataType.VARCHAR, max_length=512, is_partition_key=True),
-    FieldSchema(name="claps", dtype=DataType.INT64),
-    FieldSchema(name="responses", dtype=DataType.INT64)
-]
+# 2. Create a collection
+schema = MilvusClient.create_schema(
+    auto_id=False,
+    enable_dynamic_field=True,
+    # highlight-next-line
+    partition_key_field="color",
+
+)
+
+schema.add_field(field_name="id", datatype=DataType.INT64, is_primary=True)
+schema.add_field(field_name="vector", datatype=DataType.FLOAT_VECTOR, dim=5)
+schema.add_field(field_name="color", datatype=DataType.VARCHAR, max_length=512)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.common.DataType;
+import io.milvus.v2.common.IndexParam;
+import io.milvus.v2.service.collection.request.AddFieldReq;
+import io.milvus.v2.service.collection.request.CreateCollectionReq;
+
+String CLUSTER_ENDPOINT = "YOUR_CLUSTER_ENDPOINT";
+String TOKEN = "YOUR_CLUSTER_TOKEN";
+
+// 1. Connect to Milvus server
+ConnectConfig connectConfig = ConnectConfig.builder()
+    .uri(CLUSTER_ENDPOINT)
+    .token(TOKEN)
+    .build();
+
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Create a collection in customized setup mode
+
+// 2.1 Create schema
+CreateCollectionReq.CollectionSchema schema = client.createSchema();
+
+// 2.2 Add fields to schema
+schema.addField(AddFieldReq.builder()
+    .fieldName("id")
+    .dataType(DataType.Int64)
+    .isPrimaryKey(true)
+    .autoID(false)
+    .build());
+
+schema.addField(AddFieldReq.builder()
+    .fieldName("vector")
+    .dataType(DataType.FloatVector)
+    .dimension(5)
+    .build());
+    
+schema.addField(AddFieldReq.builder()
+    .fieldName("color")
+    .dataType(DataType.VarChar)
+    .maxLength(512)
+    // highlight-next-line
+    .isPartitionKey(true)
+    .build());
 ```
 
 </TabItem>
@@ -72,391 +112,66 @@ fields = [
 <TabItem value='javascript'>
 
 ```javascript
-const fs = require("fs")
 const { MilvusClient, DataType, sleep } = require("@zilliz/milvus2-sdk-node")
 
 const address = "YOUR_CLUSTER_ENDPOINT"
 const token = "YOUR_CLUSTER_TOKEN"
-const collectionName = "medium_articles_2020"
-const data_file = `./medium_articles_2020_dpr.json`
 
 async function main() {
-    // Connect to the cluster
-    const client = new MilvusClient({address, token})
-    
-    // 2. Define fields
-    fields = [
-        {
-            name: "id",
-            data_type: DataType.Int64,
-            is_primary_key: true,
-            auto_id: true
-        },
-        {
-            name: "title",
-            data_type: DataType.VarChar,
-            max_length: 512
-        },
-        {
-            name: "title_vector",
-            data_type: DataType.FloatVector,
-            dim: 768
-        },
-        {
-            name: "link",
-            data_type: DataType.VarChar,
-            max_length: 512
-        },
-        {
-            name: "reading_time",
-            data_type: DataType.Int64
-        },
-        {
-            name: "publication",
-            data_type: DataType.VarChar,
-            max_length: 512,
-            // The field "publication" acts as the primary key
-            is_partition_key: true
-        },
-        {
-            name: "claps",
-            data_type: DataType.Int64
-        },
-        {
-            name: "responses",
-            data_type: DataType.Int64
-        }
-    ]
-```
+// 1. Set up a Milvus Client
+client = new MilvusClient({address, token}); 
 
-</TabItem>
-
-<TabItem value='java'>
-
-```java
-// You should include the following in the main function
-
-String clusterEndpoint = "YOUR_CLUSTER_ENDPOINT";
-String token = "YOUR_CLUSTER_TOKEN";
-String collectionName = "medium_articles";
-String data_file = System.getProperty("user.dir") + "/medium_articles_2020_dpr.json";
-
-// 1. Connect to Zilliz Cloud cluster
-ConnectParam connectParam = ConnectParam.newBuilder()
-    .withUri(clusterEndpoint)
-    .withToken(token)
-    .build();
-
-MilvusServiceClient client = new MilvusServiceClient(connectParam);
-
-System.out.println("Connected to Zilliz Cloud!");
-
-// Output:
-// Connected to Zilliz Cloud!
-
-// 2. Define fields
-
-FieldType id = FieldType.newBuilder()
-    .withName("id")
-    .withDataType(DataType.Int64)
-    .withPrimaryKey(true)
-    .withAutoID(true)
-    .build();
-
-FieldType title = FieldType.newBuilder()
-    .withName("title")
-    .withDataType(DataType.VarChar)
-    .withMaxLength(512)
-    .build();
-
-FieldType title_vector = FieldType.newBuilder()
-    .withName("title_vector")
-    .withDataType(DataType.FloatVector)
-    .withDimension(768)
-    .build();
-
-FieldType link = FieldType.newBuilder()
-    .withName("link")
-    .withDataType(DataType.VarChar)
-    .withMaxLength(512)
-    .build();
-
-FieldType reading_time = FieldType.newBuilder()
-    .withName("reading_time")
-    .withDataType(DataType.Int64)
-    .build();
-
-FieldType publication = FieldType.newBuilder()
-    .withName("publication")
-    .withDataType(DataType.VarChar)
-    .withMaxLength(512)
-    // This field is set as the partition key.
-    .withPartitionKey(true)
-    .build();
-
-FieldType claps = FieldType.newBuilder()
-    .withName("claps")
-    .withDataType(DataType.Int64)
-    .build();
-
-FieldType responses = FieldType.newBuilder()
-    .withName("responses")
-    .withDataType(DataType.Int64)
-    .build();
-```
-
-</TabItem>
-
-<TabItem value='go'>
-
-```go
-// You should include the following in the main function
-
-CLUSTER_ENDPOINT := "YOUR_CLUSTER_ENDPOINT"
-TOKEN := "YOUR_CLUSTER_TOKEN"
-COLLNAME := "medium_articles_2020"
-DATA_FILE := "../../medium_articles_2020_dpr.json"
-
-// 1. Connect to cluster
-connParams := client.Config{
-    Address: CLUSTER_ENDPOINT,
-    APIKey:  TOKEN,
-}
-
-conn, err := client.NewClient(context.Background(), connParams)
-
-if err != nil {
-    log.Fatal("Failed to connect to Zilliz Cloud:", err.Error())
-}
-
-// 2. Create collection
-
-// Define fields
-id := entity.NewField().
-    WithName("id").
-    WithDataType(entity.FieldTypeInt64).
-    WithIsPrimaryKey(true)
-
-title := entity.NewField().
-    WithName("title").
-    WithDataType(entity.FieldTypeVarChar).
-    WithMaxLength(512)
-
-title_vector := entity.NewField().
-    WithName("title_vector").
-    WithDataType(entity.FieldTypeFloatVector).
-    WithDim(768)
-
-link := entity.NewField().
-    WithName("link").
-    WithDataType(entity.FieldTypeVarChar).
-    WithMaxLength(512)
-
-reading_time := entity.NewField().
-    WithName("reading_time").
-    WithDataType(entity.FieldTypeInt64)
-
-// The following field is set as the partition key.
-publication := entity.NewField().
-    WithName("publication").
-    WithDataType(entity.FieldTypeVarChar).
-    WithMaxLength(512).
-    WithIsPartitionKey(true)
-
-claps := entity.NewField().
-    WithName("claps").
-    WithDataType(entity.FieldTypeInt64)
-
-responses := entity.NewField().
-    WithName("responses").
-    WithDataType(entity.FieldTypeInt64)
-```
-
-</TabItem>
-</Tabs>
-
-在完成字段定义之后，创建 Collection 的 Schema。
-
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Go","value":"go"}]}>
-<TabItem value='python'>
-
-```python
-# 2. Build the schema
-schema = CollectionSchema(
-    fields,
-    description="Schema of Medium articles",
-    # As an alternative, you can set the partition key by its name in the collection schema
-    # partition_key_field="publication"
-)
-```
-
-</TabItem>
-
-<TabItem value='javascript'>
-
-```javascript
-// 3. Build the requst for creating a collection
-
-// You should include the following in the async function declaration.
-
-const collection_name = "medium_articles";
-
-const req = {
-    collection_name: collectionName,
-    fields: fields,
-}
-```
-
-</TabItem>
-
-<TabItem value='java'>
-
-```java
-// 3. Build the schema
-
-// You should include the following in the main function
-
-CreateCollectionParam createCollectionParam = CreateCollectionParam.newBuilder()
-    .withCollectionName(collectionName)
-    .addFieldType(id)
-    .addFieldType(title)
-    .addFieldType(title_vector)
-    .addFieldType(link)
-    .addFieldType(reading_time)
-    .addFieldType(publication)
-    .addFieldType(claps)
-    .addFieldType(responses)
-    .build();
-```
-
-</TabItem>
-
-<TabItem value='go'>
-
-```go
-// Define schema
-schema := &entity.Schema{
-    CollectionName: COLLNAME,
-    AutoID:         true,
-    Fields: []*entity.Field{
-        id,
-        title,
-        title_vector,
-        link,
-        reading_time,
-        publication,
-        claps,
-        responses,
+// 2. Create a collection
+// 2.1 Define fields
+const fields = [
+    {
+        name: "id",
+        data_type: DataType.Int64,
+        is_primary_key: true,
+        auto_id: false
     },
-}
+    {
+        name: "vector",
+        data_type: DataType.FloatVector,
+        dim: 5
+    },
+    {
+        name: "color",
+        data_type: DataType.VarChar,
+        max_length: 512,
+        // highlight-next-line
+        is_partition_key: true
+    }
+]
 ```
 
 </TabItem>
 </Tabs>
 
-最后，使用上述 Schema 创建 Collection。
+在完成字段定义之后，还需要设置 Index 参数。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Go","value":"go"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
 <TabItem value='python'>
 
 ```python
-# 3. Create collection
-collection = Collection(
-    name=COLLECTION_NAME, 
-    description="Medium articles published between Jan and August in 2020 in prominent publications",
-    schema=schema
+index_params = MilvusClient.prepare_index_params()
+
+index_params.add_index(
+    field_name="id",
+    index_type="STL_SORT"
 )
 
-print("Collection created successfully")
-
-# Output
-#
-# Collection created successfully
-
-# 4. Index collection
-# 'index_type' defines the index algorithm to be used.
-#    AUTOINDEX is the only option.
-#
-# 'metric_type' defines the way to measure the distance 
-#    between vectors. Possible values are L2, IP, and Cosine,
-#    and defaults to Cosine.
-index_params = {
-    "index_type": "AUTOINDEX",
-    "metric_type": "L2",
-    "params": {}
-}
-
-# To name the index, do as follows:
-collection.create_index(
-  field_name="title_vector", 
-  index_params=index_params,
-  index_name='title_vector_index'
+index_params.add_index(
+    field_name="color",
+    index_type="Trie"
 )
 
-# 5. Load collection
-collection.load()
-
-# Get loading progress
-progress = utility.loading_progress(COLLECTION_NAME)
-
-print(progress)
-
-# Output
-#
-# {
-#     "loading_progress": "100%"
-# }
-```
-
-</TabItem>
-
-<TabItem value='javascript'>
-
-```javascript
-// 3. Create collection
-
-res = await client.createCollection({
-    collection_name: collectionName,
-    fields: fields,
-    // As an alternative, you can set the partition key by its name when creating a collection.
-    // partition_key_field: "publication"
-})
-
-console.log(res)
-
-// Output
-// 
-// { error_code: 'Success', reason: '', code: 0 }
-// 
-
-// 4. Create index
-res = await client.createIndex({
-    collection_name: collectionName,
-    field_name: "title_vector",
-    index_type: "IVF_FLAT",
-    metric_type: "L2",
-    params: {
-        nlist: 16384
-    }
-})
-
-console.log(res)
-
-// Output
-// 
-// { error_code: 'Success', reason: '', code: 0 }
-// 
-
-res = await client.loadCollection({
-    collection_name: collectionName
-})
-
-console.log(res)  
-
-// Output
-// 
-// { error_code: 'Success', reason: '', code: 0 }
-// 
+index_params.add_index(
+    field_name="vector",
+    index_type="IVF_FLAT",
+    metric_type="L2",
+    params={"nlist": 1024}
+)
 ```
 
 </TabItem>
@@ -464,265 +179,220 @@ console.log(res)
 <TabItem value='java'>
 
 ```java
-// 3. Create collection
-R<RpcStatus> collection = client.createCollection(createCollectionParam);
-
-if (collection.getException() != null) {
-    System.err.println("Failed to create collection: " + collection.getException().getMessage());
-    return;
-}
-
-System.out.println("Collection created!");
-
-// Output:
-// Collection created!
-
-// 4. Create index
-CreateIndexParam createIndexParam = CreateIndexParam.newBuilder()
-    .withCollectionName(collectionName)
-    .withFieldName("title_vector")
-    .withIndexName("title_vector_index")
-    .withIndexType(IndexType.AUTOINDEX)
-    .withMetricType(MetricType.L2)
+// 2.3 Prepare index parameters
+IndexParam indexParamForVectorField = IndexParam.builder()
+    .fieldName("vector")
+    .indexType(IndexParam.IndexType.IVF_FLAT)
+    .metricType(IndexParam.MetricType.IP)
+    .extraParams(Map.of("nlist", 1024))
     .build();
 
-R<RpcStatus> res = client.createIndex(createIndexParam);
-
-if (res.getException() != null) {
-System.err.println("Failed to create index: " + res.getException().getMessage());
-return;
-}
-
-System.out.println("Index created!");
-
-// Output:
-// Index created!
+List<IndexParam> indexParams = new ArrayList<>();
+indexParams.add(indexParamForVectorField);
 ```
 
 </TabItem>
 
-<TabItem value='go'>
+<TabItem value='javascript'>
 
-```go
-// Create collection
-
-err = conn.CreateCollection(context.Background(), schema, 2)
-
-if err != nil {
-    log.Fatal("Failed to create collection:", err.Error())
-}
-
-// Create index for cluster
-index, err := entity.NewIndexAUTOINDEX(entity.MetricType("L2"))
-
-if err != nil {
-    log.Fatal("Failed to prepare the index:", err.Error())
-}
-
-fmt.Println(index.Name())
-
-// Output: 
-//
-// AUTOINDEX
-
-err = conn.CreateIndex(context.Background(), COLLNAME, "title_vector", index, false)
-
-if err != nil {
-    log.Fatal("Failed to create the index:", err.Error())
-}
-
-// Load collection
-loadCollErr := conn.LoadCollection(context.Background(), COLLNAME, false)
-
-if loadCollErr != nil {
-    log.Fatal("Failed to load collection:", loadCollErr.Error())
-}
-
-// Get load progress
-progress, err := conn.GetLoadingProgress(context.Background(), COLLNAME, nil)
-
-if err != nil {
-    log.Fatal("Failed to get loading progress:", err.Error())
-}
-
-fmt.Println("Loading progress:", progress)
-
-// Output: 
-//
-// Loading progress: 100
+```javascript
+// 2.2 Prepare index parameters
+const index_params = [{
+    field_name: "color",
+    index_type: "Trie"
+},{
+    field_name: "id",
+    index_type: "STL_SORT"
+},{
+    field_name: "vector",
+    index_type: "IVF_FLAT",
+    metric_type: "IP",
+    params: { nlist: 1024}
+}]
 ```
 
 </TabItem>
 </Tabs>
 
-## 基于 Partition Key 的 ANN 搜索{#conduct-ann-search-using-partition-key}
+最后，使用如下代码创建 Collection。
 
-在为创建的 Collection 建立索引，加载索引文件至内存并将示例数据集中的数据插入 Collection 后，就可以进行基于 Partition Key 的近似最近邻（ANN）搜索了。相关操作，可参考[向量搜索和查询](./search-query-and-get)中的具体内容。
-
-在创建搜索请求时，须在请求中包含如下过滤表达式，并将`<partition_key>`替换为实际担任 Partition Key 的字段名称：
-
-- `expr='<partition_key>=="xxx"'`
-
-- `expr='<partition_key> in ["xxx", "xxx"]'`
-
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Go","value":"go"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
 <TabItem value='python'>
 
 ```python
-# 8. Search data
-# Metric type should be the same as
-# that defined in the index parameters 
-# used to create the index.
-search_params = {
-    "metric_type": "L2"
-}
+client.create_collection(
+    collection_name="test_collection",
+    schema=schema,
+    index_params=index_params
+)
+```
 
-results = collection.search(
-    data=[rows[0]['title_vector']],
-    anns_field="title_vector",
-    param=search_params,
-    # When conducting searches and queries, include the partition key in the bolean expression
-    expr="claps > 30 and reading_time < 10 and publication in ['Towards Data Science', 'Personal Growth']",
-    output_fields=["title", "link"],
-    limit=5
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// 2.4 Create a collection with schema and index parameters
+CreateCollectionReq customizedSetupReq = CreateCollectionReq.builder()
+    .collectionName("test_collection")
+    .collectionSchema(schema)
+    .indexParams(indexParams)          
+    .build();
+
+client.createCollection(customizedSetupReq);
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// 2.3 Create a collection with fields and index parameters
+res = await client.createCollection({
+    collection_name: "test_collection",
+    fields: fields, 
+    index_params: index_params,
+})
+
+console.log(res.error_code)
+
+// Output
+// 
+// Success
+// 
+```
+
+</TabItem>
+</Tabs>
+
+## 查看 Partitions{#list-partitions}
+
+当 Collection 中某个字段被指定为 Partition Key 后 Zilliz Cloud 会在该 Collection 中创建指定数量的 Partition 并对它们进行管理。因此，您不能再在该 Collection 中创建其它的 Partition，也不能删除 Zilliz Cloud 管理的 Partition。
+
+当您创建了一个拥有 Partition Key 的 Collection 后，可以参考如下代码查看随该 Collection 一起创建的 Partition。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
+<TabItem value='python'>
+
+```python
+# 2.1. List all partitions in the collection
+partition_names = client.list_partitions(
+    collection_name="test_collection"
 )
 
-# Get all returned IDs
-# results[0] indicates the result 
-# of the first query vector in the 'data' list
-ids = results[0].ids
-
-print(ids)
-
-# Output
-#
-# [5641, 938, 842, 70, 3954]
-
-# Get the distance from 
-# all returned vectors to the query vector.
-distances = results[0].distances
-
-print(distances)
-
-# Output
-#
-# [0.37674015760421753, 0.436093807220459, 0.49443870782852173, 0.4948430061340332, 0.5028785467147827]
-
-# Get the values of the output fields
-# specified in the search request
-entities = [ x.entity.to_dict()["entity"] for x in results[0]]
-
-print(entities)
+print(partition_names)
 
 # Output
 #
 # [
-#     {
-#         "title": "Why The Coronavirus Mortality Rate is Misleading",
-#         "link": "https://towardsdatascience.com/why-the-coronavirus-mortality-rate-is-misleading-cc63f571b6a6"
-#     },
-#     {
-#         "title": "Mortality Rate As an Indicator of an Epidemic Outbreak",
-#         "link": "https://towardsdatascience.com/mortality-rate-as-an-indicator-of-an-epidemic-outbreak-704592f3bb39"
-#     },
-#     {
-#         "title": "Choosing the right performance metrics can save lives against Coronavirus",
-#         "link": "https://towardsdatascience.com/choosing-the-right-performance-metrics-can-save-lives-against-coronavirus-2f27492f6638"
-#     },
-#     {
-#         "title": "How bad will the Coronavirus Outbreak get? \u2014 Predicting the outbreak figures",
-#         "link": "https://towardsdatascience.com/how-bad-will-the-coronavirus-outbreak-get-predicting-the-outbreak-figures-f0b8e8b61991"
-#     },
-#     {
-#         "title": "How similar is COVID-19 to previously discovered Coronaviruses",
-#         "link": "https://towardsdatascience.com/how-similar-is-covid-19-to-previously-discovered-coronaviruses-c3d9f25840f7"
-#     }
+#     "_default_0",
+#     "_default_1",
+#     "_default_2",
+#     "_default_3",
+#     "_default_4",
+#     "_default_5",
+#     "_default_6",
+#     "_default_7",
+#     "_default_8",
+#     "_default_9",
+#     "(54 more items hidden)"
 # ]
 ```
 
 </TabItem>
 
+<TabItem value='java'>
+
+```java
+// 2.5 List all partitions in the collection
+List<String> partitionNames = client.listPartitions(ListPartitionsReq.builder()
+    .collectionName("test_collection")
+    .build());
+
+System.out.println(partitionNames);
+
+// Output:
+// [
+//     "_default_0",
+//     "_default_1",
+//     "_default_2",
+//     "_default_3",
+//     "_default_4",
+//     "_default_5",
+//     "_default_6",
+//     "_default_7",
+//     "_default_8",
+//     "_default_9",
+//     "(54 elements are hidden)"
+// ]
+```
+
+</TabItem>
+
 <TabItem value='javascript'>
 
 ```javascript
-// 6. Conduct an ANN search
-
-res = await client.search({
-    collection_name: collectionName,
-    vector: rows[0].title_vector,
-    limit: 3,
-    filter: "claps > 30 and reading_time < 10 and publication in ['Towards Data Science', 'Personal Growth']",
-    output_fields: ["title", "link"]
-});
-
-console.log(res);
-
-// Output
-// 
-// {
-//   status: { error_code: 'Success', reason: '', code: 0 },
-//   results: [
-//     {
-//       score: 0.37674015760421753,
-//       id: '5641',
-//       title: 'Why The Coronavirus Mortality Rate is Misleading',
-//       link: 'https://towardsdatascience.com/why-the-coronavirus-mortality-rate-is-misleading-cc63f571b6a6'
-//     },
-//     {
-//       score: 0.436093807220459,
-//       id: '938',
-//       title: 'Mortality Rate As an Indicator of an Epidemic Outbreak',
-//       link: 'https://towardsdatascience.com/mortality-rate-as-an-indicator-of-an-epidemic-outbreak-704592f3bb39'
-//     },
-//     {
-//       score: 0.49443864822387695,
-//       id: '842',
-//       title: 'Choosing the right performance metrics can save lives against Coronavirus',
-//       link: 'https://towardsdatascience.com/choosing-the-right-performance-metrics-can-save-lives-against-coronavirus-2f27492f6638'
-//     }
-//   ]
-// }
-// 
-
-// 7. Get collection info
-
-res = await client.describeCollection({
-    collection_name: collectionName
+// 2.1 List partitions
+res = await client.listPartitions({
+    collection_name: "test_collection",
 })
 
-console.log(res);
+console.log(res.partition_names)
 
 // Output
 // 
-// {
-//   virtual_channel_names: [ 'by-dev-rootcoord-dml_11_445311585782775508v0' ],
-//   physical_channel_names: [ 'by-dev-rootcoord-dml_11' ],
-//   aliases: [],
-//   start_positions: [],
-//   properties: [],
-//   status: { error_code: 'Success', reason: '', code: 0 },
-//   schema: {
-//     fields: [
-//       [Object], [Object],
-//       [Object], [Object],
-//       [Object], [Object],
-//       [Object], [Object]
-//     ],
-//     name: 'medium_articles_2020',
-//     description: '',
-//     autoID: false,
-//     enable_dynamic_field: false
-//   },
-//   collectionID: '445311585782775508',
-//   created_timestamp: '445316810423664644',
-//   created_utc_timestamp: '1698748819060',
-//   shards_num: 1,
-//   consistency_level: 'Bounded',
-//   collection_name: 'medium_articles_2020',
-//   db_name: 'default',
-//   num_partitions: '64'
-// }
+// [
+//   '_default_0',  '_default_1',  '_default_2',  '_default_3',
+//   '_default_4',  '_default_5',  '_default_6',  '_default_7',
+//   '_default_8',  '_default_9',  '_default_10', '_default_11',
+//   '_default_12', '_default_13', '_default_14', '_default_15',
+//   '_default_16', '_default_17', '_default_18', '_default_19',
+//   '_default_20', '_default_21', '_default_22', '_default_23',
+//   '_default_24', '_default_25', '_default_26', '_default_27',
+//   '_default_28', '_default_29', '_default_30', '_default_31',
+//   '_default_32', '_default_33', '_default_34', '_default_35',
+//   '_default_36', '_default_37', '_default_38', '_default_39',
+//   '_default_40', '_default_41', '_default_42', '_default_43',
+//   '_default_44', '_default_45', '_default_46', '_default_47',
+//   '_default_48', '_default_49', '_default_50', '_default_51',
+//   '_default_52', '_default_53', '_default_54', '_default_55',
+//   '_default_56', '_default_57', '_default_58', '_default_59',
+//   '_default_60', '_default_61', '_default_62', '_default_63'
+// ]
 // 
+```
+
+</TabItem>
+</Tabs>
+
+## 插入数据
+
+在准备好 Collection 后，参考如下代码向该 Collection 插入数据。
+
+### 准备数据
+
+如下代码演示了如何生成与 Collection 的 Schema 相符的随机数据。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
+<TabItem value='python'>
+
+```python
+# 3. Insert randomly generated vectors 
+colors = ["green", "blue", "yellow", "red", "black", "white", "purple", "pink", "orange", "brown", "grey"]
+data = []
+
+for i in range(1000):
+    current_color = random.choice(colors)
+    current_tag = random.randint(1000, 9999)
+    data.append({
+        "id": i,
+        "vector": [ random.uniform(-1, 1) for _ in range(5) ],
+        "color": current_color,
+        "tag": current_tag,
+        "color_tag": f"\{current_color}_{str(current_tag)}"
+    })
+
+print(data[0])
 ```
 
 </TabItem>
@@ -730,189 +400,274 @@ console.log(res);
 <TabItem value='java'>
 
 ```java
-// 7. Search vectors
+// 3. Insert randomly generated vectors
+List<String> colors = Arrays.asList("green", "blue", "yellow", "red", "black", "white", "purple", "pink", "orange", "brown", "grey");
+List<JSONObject> data = new ArrayList<>();
 
-List<List<Float>> queryVectors = new ArrayList<>();
-List<Float> queryVector1 = rows.get(0).getJSONArray("title_vector").toJavaList(Float.class);
-queryVectors.add(queryVector1);
+for (int i=0; i<1000; i++) {
+    Random rand = new Random();
+    String current_color = colors.get(rand.nextInt(colors.size()-1));
+    int current_tag = rand.nextInt(8999) + 1000;
+    JSONObject row = new JSONObject();
+    row.put("id", Long.valueOf(i));
+    row.put("vector", Arrays.asList(rand.nextFloat(), rand.nextFloat(), rand.nextFloat(), rand.nextFloat(), rand.nextFloat()));
+    row.put("color", current_color);
+    row.put("tag", current_tag);
+    row.put("color_tag", current_color + "_" + String.valueOf(rand.nextInt(8999) + 1000));
+    data.add(row);
+}
 
-List<String> outputFields = new ArrayList<>();
-outputFields.add("title");
-outputFields.add("link");
-
-// Search vectors in a collection
-
-SearchParam searchParam = SearchParam.newBuilder()
-    .withCollectionName(collectionName)
-    .withVectorFieldName("title_vector")
-    .withVectors(queryVectors)
-    .withTopK(5)   
-    .withMetricType(MetricType.L2)  
-    .withParams("{\"nprobe\":10,\"offset\":2, \"limit\":3}")
-    .withConsistencyLevel(ConsistencyLevelEnum.BOUNDED)
-    .withOutFields(outputFields)
-    .withExpr("(publication == \"Towards Data Science\") and ((claps > 1500 and responses > 15) or (10 < reading_time < 15))")
-    .build();
-
-R<SearchResults> response = client.search(searchParam);
-
-SearchResultsWrapper wrapper = new SearchResultsWrapper(response.getData().getResults());
-
-List<List<JSONObject>> results = new ArrayList<>();
-
-for (int i = 0; i < queryVectors.size(); ++i) {
-    List<SearchResultsWrapper.IDScore> scores = wrapper.getIDScore(i);
-    List<JSONObject> entities = new ArrayList<>();
-    for (int j = 0; j < scores.size(); ++j) {
-        SearchResultsWrapper.IDScore score = scores.get(j);
-        JSONObject entity = new JSONObject(1, true);
-        entity.put("id", score.getLongID());
-        entity.put("distance", score.getScore());
-        entity.put("title", scores.get(j).get("title"));
-        entity.put("link", scores.get(j).get("link"));
-        entities.add(entity);
-    }
-    
-    results.add(entities);
-} 
-
-System.out.println(results);
-
-// Output:
-// [[
-//     {
-//         "distance": 0.85477614,
-//         "link": "https://towardsdatascience.com/finding-optimal-nba-physiques-using-data-visualization-with-python-6ce27ac5b68f",
-//         "id": 445297206350548235,
-//         "title": "Finding optimal NBA physiques using data visualization with Python"
-//     },
-//     {
-//         "distance": 0.8702322,
-//         "link": "https://towardsdatascience.com/understanding-nlp-how-ai-understands-our-languages-77601002cffc",
-//         "id": 445297206350548216,
-//         "title": "Understanding Natural Language Processing: how AI understands our languages"
-//     },
-//     {
-//         "distance": 0.9109591,
-//         "link": "https://towardsdatascience.com/rage-quitting-cancer-research-5e79cb04801",
-//         "id": 445297206350548215,
-//         "title": "Rage Quitting Cancer Research"
-//     },
-//     {
-//         "distance": 0.9840777,
-//         "link": "https://towardsdatascience.com/data-cleaning-in-python-the-ultimate-guide-2020-c63b88bf0a0d",
-//         "id": 445297206350548209,
-//         "title": "Data Cleaning in Python: the Ultimate Guide (2020)"
-//     },
-//     {
-//         "distance": 1.091625,
-//         "link": "https://towardsdatascience.com/top-10-in-demand-programming-languages-to-learn-in-2020-4462eb7d8d3e",
-//         "id": 445297206350548205,
-//         "title": "Top 10 In-Demand programming languages to learn in 2020"
-//     }
-// ]]
+System.out.println(JSONObject.toJSON(data.get(0)));   
 ```
 
 </TabItem>
 
-<TabItem value='go'>
+<TabItem value='javascript'>
 
-```go
-// Search
+```javascript
+// 3. Insert randomly generated vectors 
+const colors = ["green", "blue", "yellow", "red", "black", "white", "purple", "pink", "orange", "brown", "grey"]
+var data = []
 
-fmt.Println("Start searching ...")
-
-// Output: 
-//
-// Start searching ...
-
-vectors := []entity.Vector{}
-
-for _, row := range data.Rows[:1] {
-    vector := make(entity.FloatVector, 0, 768)
-    vector = append(vector, row.TitleVector...)
-    vectors = append(vectors, vector)
+for (let i = 0; i < 1000; i++) {
+    const current_color = colors[Math.floor(Math.random() * colors.length)]
+    const current_tag = Math.floor(Math.random() * 8999 + 1000)
+    data.push({
+        id: i,
+        vector: [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()],
+        color: current_color,
+        tag: current_tag,
+        color_tag: `${current_color}_${current_tag}`
+    })
 }
 
-sp, _ := entity.NewIndexAUTOINDEXSearchParam(1)
+console.log(data[0])
+```
 
-limit := client.WithLimit(10)
-offset := client.WithOffset(0)
-topK := 5
-outputFields := []string{"title", "claps", "publication", "responses", "reading_time"}
-expr := "(publication == \"Towards Data Science\") and ((claps > 1500 and responses > 15) or (10 < reading_time < 15))"
+</TabItem>
+</Tabs>
 
-res, err := conn.Search(
-    context.Background(),    // context
-    COLLNAME,                // collectionName
-    []string{},              // partitionNames
-    expr,                    // expr
-    outputFields,            // outputFields
-    vectors,                 // vectors
-    "title_vector",          // vectorField
-    entity.MetricType("L2"), // metricType
-    topK,                    // topK
-    sp,                      // sp
-    limit,                   // opts
-    offset,                  // opts
+您可以通过查看随机生成的数据列表中的第一条数据来确认数据结构是否与 Collection 的 Schema 相符。
+
+```json
+{
+    id: 0,
+    vector: [
+        0.1275656405044483,
+        0.47417858592773277,
+        0.13858264437643286,
+        0.2390904907020377,
+        0.8447862593689635
+    ],
+    color: 'blue',
+    tag: 2064,
+    color_tag: 'blue_2064'
+}
+```
+
+### 插入数据
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
+<TabItem value='python'>
+
+```python
+res = client.insert(
+    collection_name="test_collection",
+    data=data
 )
 
-if err != nil {
-    log.Fatal("Failed to insert rows:", err.Error())
-}
+print(res)
 
-fmt.Println(resultsToJSON(res))
+# Output
+#
+# {
+#     "insert_count": 1000,
+#     "ids": [
+#         0,
+#         1,
+#         2,
+#         3,
+#         4,
+#         5,
+#         6,
+#         7,
+#         8,
+#         9,
+#         "(990 more items hidden)"
+#     ]
+# }
+```
 
-// Output: 
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// 3.1 Insert data into the collection
+InsertReq insertReq = InsertReq.builder()
+    .collectionName("test_collection")
+    .data(data)
+    .build();
+
+InsertResp insertResp = client.insert(insertReq);
+
+System.out.println(JSONObject.toJSON(insertResp));
+
+// Output:
+// {"insertCnt": 1000}
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+res = await client.insert({
+    collection_name: "test_collection",
+    data: data,
+})
+
+console.log(res.insert_cnt)
+
+// Output
+// 
+// 1000
+// 
+```
+
+</TabItem>
+</Tabs>
+
+## 使用 Partition Key{#use-partition-key}
+
+在为上述 Collection 创建索引并插入数据后，我们就可以使用 Partition Key 对相似性搜索的结果进行过滤了。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>在相似性搜索中使用 Partition Key 时，您需要在过滤条件中包含如下表达式：</p>
+<ul>
+<li><p><code>filter='&lt;partition_key&gt;=="xxxx"'</code></p></li>
+<li><p><code>filter='&lt;partition_key&gt; in ["xxx", "xxx"]'</code></p></li>
+</ul>
+<p>请务必用您的 Collection 中充当 Partition Key 的字段名称替换上述表达式中的<code>&lt;partition_key&gt;</code>。</p>
+
+</Admonition>
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
+<TabItem value='python'>
+
+```python
+# 4. Search with partition key
+query_vectors = [[0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]]
+
+res = client.search(
+    collection_name="test_collection",
+    data=query_vectors,
+    filter="color == 'green'",
+    search_params={"metric_type": "L2", "params": {"nprobe": 10}},
+    output_fields=["id", "color_tag"],
+    limit=3
+)
+
+print(res)
+
+# Output
+#
+# [
+#     [
+#         {
+#             "id": 970,
+#             "distance": 0.5770174264907837,
+#             "entity": {
+#                 "id": 970,
+#                 "color_tag": "green_9828"
+#             }
+#         },
+#         {
+#             "id": 115,
+#             "distance": 0.6898155808448792,
+#             "entity": {
+#                 "id": 115,
+#                 "color_tag": "green_4073"
+#             }
+#         },
+#         {
+#             "id": 899,
+#             "distance": 0.7028976678848267,
+#             "entity": {
+#                 "id": 899,
+#                 "color_tag": "green_9897"
+#             }
+#         }
+#     ]
+# ]
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// 4. Search with partition key
+List<List<Float>> query_vectors = Arrays.asList(Arrays.asList(0.3580376395471989f, -0.6023495712049978f, 0.18414012509913835f, -0.26286205330961354f, 0.9029438446296592f));
+
+SearchReq searchReq = SearchReq.builder()
+    .collectionName("test_collection")
+    .data(query_vectors)
+    .filter("color == \"green\"")
+    .topK(3)
+    .build();
+
+SearchResp searchResp = client.search(searchReq);
+
+System.out.println(JSONObject.toJSON(searchResp));   
+
+// Output:
+// {"searchResults": [[
+//     {
+//         "distance": 1.0586997,
+//         "id": 414,
+//         "entity": {}
+//     },
+//     {
+//         "distance": 0.981384,
+//         "id": 293,
+//         "entity": {}
+//     },
+//     {
+//         "distance": 0.9548756,
+//         "id": 325,
+//         "entity": {}
+//     }
+// ]]}
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// 4. Search with partition key
+const query_vectors = [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]
+
+res = await client.search({
+    collection_name: "test_collection",
+    data: query_vectors,
+    filter: "color == 'green'",
+    output_fields: ["color_tag"],
+    limit: 3
+})
+
+console.log(res.results)
+
+// Output
+// 
 // [
-//  {
-//      "counts": 5,
-//      "distances": [
-//          0.37674016,
-//          0.45862228,
-//          0.5037479,
-//          0.52556163,
-//          0.58774835
-//      ],
-//      "rows": [
-//          {
-//              "claps": 2900,
-//              "publication": "Towards Data Science",
-//              "reading_time": 9,
-//              "responses": 47,
-//              "title": "Why The Coronavirus Mortality Rate is Misleading"
-//          },
-//          {
-//              "claps": 15,
-//              "publication": "Towards Data Science",
-//              "reading_time": 12,
-//              "responses": 0,
-//              "title": "Heart Disease Risk Assessment Using Machine Learning"
-//          },
-//          {
-//              "claps": 161,
-//              "publication": "Towards Data Science",
-//              "reading_time": 13,
-//              "responses": 3,
-//              "title": "New Data Shows a Lower Covid-19 Fatality Rate"
-//          },
-//          {
-//              "claps": 20,
-//              "publication": "Towards Data Science",
-//              "reading_time": 11,
-//              "responses": 1,
-//              "title": "Common Pipenv Errors"
-//          },
-//          {
-//              "claps": 61,
-//              "publication": "Towards Data Science",
-//              "reading_time": 12,
-//              "responses": 0,
-//              "title": "Data quality impact on the dataset"
-//          }
-//      ]
-//  }
+//   { score: 2.402090549468994, id: '135', color_tag: 'green_2694' },
+//   { score: 2.3938629627227783, id: '326', color_tag: 'green_7104' },
+//   { score: 2.3235254287719727, id: '801', color_tag: 'green_3162' }
 // ]
+// 
 ```
 
 </TabItem>
@@ -920,15 +675,4 @@ fmt.Println(resultsToJSON(res))
 
 ## 典型使用场景{#typical-use-cases}
 
-该特性可在多租户场景中用于区分租户。
-
-具体来说，可以将每条记录中的某个字段确定为 Partition Key。当进行搜索或查询时，可以用该字段过滤查询结果，实现租户数据隔离的同时，避免在查询时扫描其它租户的 Partition。
-
-## 相关文档{#related-topics}
-
-- [创建 Collection](./create-collection)
-
-- [开启动态 Schema](./enable-dynamic-schema)
-
-- [使用 JSON 类型字段](./javascript-object-notation-json)
-
+您可以使用该特性获得更好的查询性能或满足多租户业务需求。具体来说，可以将每条记录中的某个字段确定为 Partition Key。当进行搜索或查询时，可以用该字段过滤查询结果，实现租户数据隔离的同时，避免在查询时扫描其它租户的 Partition。

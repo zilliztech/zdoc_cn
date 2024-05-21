@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: VRLOw9Mc7iPWnCkZs2YcoGwSnLh
 sidebar_position: 4
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -24,15 +25,40 @@ Zilliz Cloud 现已开通企业认证渠道。如需进行[现金充值](./advan
 
 1. 填写**申请企业认证**表单并点击**提交申请**。相关参数请见下表。请确保提供正确信息。
 
-    |  **参数**       |  **描述**                                       |
-    | ------------- | --------------------------------------------- |
-    |  **企业名称**     |  需要进行认证的企业名称。                                 |
-    |  **统一社会信用代码** |  统一社会信用代码由 18 位数字或大写字母组成。                     |
-    |  **营业执照**     |  图片格式为 .jpg 或 .png 文件且大小不得超过 5 MB。            |
-    |  **法人姓名**     |  企业法人的姓名。请确保与营业执照上的法定代表人姓名一致。                 |
-    |  **法人身份证照片**  |  法人身份证正反面照片。图片格式为 .jpg 或 .png 文件且大小不得超过 5 MB。 |
-    |  **注册地址**     |  企业注册地址。                                      |
-    |  **注册电话**     |  企业注册电话。                                      |
+    <table>
+       <tr>
+         <th><strong>参数</strong></th>
+         <th><strong>描述</strong></th>
+       </tr>
+       <tr>
+         <td><strong>企业名称</strong></td>
+         <td>需要进行认证的企业名称。</td>
+       </tr>
+       <tr>
+         <td><strong>统一社会信用代码</strong></td>
+         <td>统一社会信用代码由 18 位数字或大写字母组成。</td>
+       </tr>
+       <tr>
+         <td><strong>营业执照</strong></td>
+         <td>图片格式为 .jpg 或 .png 文件且大小不得超过 5 MB。</td>
+       </tr>
+       <tr>
+         <td><strong>法人姓名</strong></td>
+         <td>企业法人的姓名。请确保与营业执照上的法定代表人姓名一致。</td>
+       </tr>
+       <tr>
+         <td><strong>法人身份证照片</strong></td>
+         <td>法人身份证正反面照片。图片格式为 .jpg 或 .png 文件且大小不得超过 5 MB。</td>
+       </tr>
+       <tr>
+         <td><strong>注册地址</strong></td>
+         <td>企业注册地址。</td>
+       </tr>
+       <tr>
+         <td><strong>注册电话</strong></td>
+         <td>企业注册电话。</td>
+       </tr>
+    </table>
 
 1. 阅读**信息确认**弹窗中的内容，点击**我已阅读并同意**。
 

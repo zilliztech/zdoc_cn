@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: HU31wDHCCiN9qIknZ2fcLmconNh
 sidebar_position: 2
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -23,20 +24,19 @@ import TabItem from '@theme/TabItem';
 
 - 已创建集群。详情请参见[创建集群](./create-cluster)。
 
-- 已获取集群的用户名和密码。详情请参见[通过 Web UI 管理身份凭证](./cluster-credentials-console)。
-
 - 已安装合适版本的 Milvus SDK。详情请参见[安装 SDK](./install-sdks)。
 
-- 阅读本指南系列时，建议下载[代码示例](https://assets.zilliz.com/zdoc/zilliz_cloud_sdk_examples.zip)。
+<Admonition type="info" icon="📘" title="说明">
 
-## 操作步骤{#connect-to-a-cluster}
+<p>如果您更倾向于使用 RESTful API 而不是 SDK，需注意由于 HTTP 协议的单向通信模式，无法建立持续的连接。</p>
 
-您可以通过公网地址和创建集群时指定的用户名和密码连接到集群。
+</Admonition>
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"NodeJS","value":"javascript"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"Bash","value":"bash"}]}>
-<TabItem value='python'>
+## 连接到集群{#connect-to-a-cluster}
 
-<Tabs groupId="python" defaultValue='python' values={[{"label":"Starter API","value":"python"},{"label":"Advanced API","value":"python_1"}]}>
+集群启动后，通过集群公网地址和凭证连接到集群。此凭证可以是 [API 密钥](./manage-api-keys)或由用户名和密码组成的[集群凭证](./cluster-credentials)。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
 <TabItem value='python'>
 
 ```python
@@ -46,48 +46,11 @@ CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT" # Set your cluster endpoint
 TOKEN="YOUR_CLUSTER_TOKEN" # Set your token
 
 # Initialize a MilvusClient instance
-# Replace uri and API key with your own
+# Replace uri and token with your own
 client = MilvusClient(
     uri=CLUSTER_ENDPOINT, # Cluster endpoint obtained from the console
     token=TOKEN # API key or a colon-separated cluster username and password
 )
-
-```
-
-</TabItem>
-<TabItem value='python_1'>
-
-```python
-# Connect with a connections object
-from pymilvus import connections
-
-connections.connect(
-  alias='default', 
-  #  Public endpoint obtained from Zilliz Cloud
-  uri=CLUSTER_ENDPOINT,
-  # API key or a colon-separated cluster username and password
-  token=TOKEN, 
-)
-```
-
-</TabItem>
-</Tabs>
-</TabItem>
-
-<TabItem value='javascript'>
-
-```javascript
-const { MilvusClient } = require("@zilliz/milvus2-sdk-node")
-
-const address = "YOUR_CLUSTER_ENDPOINT"
-const token = "YOUR_CLUSTER_TOKEN"
-
-async function main () {
-
-    // Connect to the cluster
-    const client = new MilvusClient({address, token})
-    
-}
 ```
 
 </TabItem>
@@ -95,85 +58,35 @@ async function main () {
 <TabItem value='java'>
 
 ```java
-import io.milvus.client.MilvusServiceClient;
-import io.milvus.param.ConnectParam;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.client.ConnectConfig;
 
-public final class QuickStartDemo {
+String CLUSTER_ENDPOINT = "YOUR_CLUSTER_ENDPOINT";
+String TOKEN = "YOUR_CLUSTER_TOKEN";
 
-    public static void main(String[] args) {
-        String clusterEndpoint = "YOUR_CLUSTER_ENDPOINT";
-        String token = "YOUR_CLUSTER_TOKEN";
+// 1. Connect to Milvus server
+ConnectConfig connectConfig = ConnectConfig.builder()
+    .uri(CLUSTER_ENDPOINT)
+    .token(TOKEN)
+    .build();
 
-        // 1. Connect to Zilliz Cloud
-
-        ConnectParam connectParam = ConnectParam.newBuilder()
-            .withUri(clusterEndpoint)
-            .withToken(token)
-            .build();   
-            
-        MilvusServiceClient client = new MilvusServiceClient(connectParam);
-
-        System.out.println("Connected to Zilliz Cloud!");
-
-        // Output:
-        // Connected to Zilliz Cloud!
-        
-    }
-    
- }
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
 ```
 
 </TabItem>
 
-<TabItem value='go'>
+<TabItem value='javascript'>
 
-```go
-import "github.com/milvus-io/milvus-sdk-go/v2/client"
+```javascript
+const { MilvusClient, DataType, sleep } = require("@zilliz/milvus2-sdk-node")
 
-func main() {
-    CLUSTER_ENDPOINT := "YOUR_CLUSTER_ENDPOINT"
-    TOKEN := "YOUR_CLUSTER_TOKEN"
-    COLLNAME := "medium_articles_2020"
+const address = "YOUR_CLUSTER_ENDPOINT"
+const token = "YOUR_CLUSTER_TOKEN"
 
-    // 1. Connect to cluster
-
-    connParams := client.Config{
-        Address: CLUSTER_ENDPOINT,
-        APIKey:  TOKEN,
-    }
-
-    conn, err := client.NewClient(context.Background(), connParams)
-
-    if err != nil {
-        log.Fatal("Failed to connect to Zilliz Cloud:", err.Error())
-    }
-}
-```
-
-</TabItem>
-
-<TabItem value='bash'>
-
-```bash
-# token="username:password" or token="your-api-key"
-curl --request GET \\
-    --url "${PUBLIC_ENDPOINT}/v1/vector/collections" \\
-    --header "Authorization: Bearer ${TOKEN}" \\
-    --header 'accept: application/json' \\
-    --header 'content-type: application/json'
+// 1. Connect to the cluster
+const client = new MilvusClient({address, token})
 ```
 
 </TabItem>
 </Tabs>
-
-## 相关文档{#related-topics}
-
-- [创建 Collection](./create-collection)
-
-- [插入 Entity](./insert-entities)
-
-- [向量搜索和查询](./search-query-and-get)
-
-- [删除 Collection](./drop-collection)
-

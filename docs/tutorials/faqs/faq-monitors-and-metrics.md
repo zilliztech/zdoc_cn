@@ -1,10 +1,11 @@
 ---
 slug: /faq-monitors-and-metrics
-beta: null
-notebook: null
+beta: FALSE
+notebook: FALSE
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 10
+
 ---
 
 # FAQ：监控与指标

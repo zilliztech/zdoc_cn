@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: Jo4bwNi6zi4zlHkN2bWcewFYnDc
 sidebar_position: 4
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -145,9 +146,9 @@ go get -u github.com/milvus-io/milvus-sdk-go/v2@v2.2.8
 
 - [创建集群](./create-cluster)
 
-- [创建 Collection](./create-collection)
+- [创建 Collection](./undefined)
 
-- [插入 Entity](./insert-entities)
+- [插入 Entity](./undefined)
 
-- [向量搜索和查询](./search-query-and-get)
+- [向量搜索和查询](./undefined)
 

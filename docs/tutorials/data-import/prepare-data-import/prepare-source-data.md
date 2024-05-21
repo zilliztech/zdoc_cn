@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: GLk6wr8jviPyzHk7DjRc56YsnNf
 sidebar_position: 1
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -23,13 +24,13 @@ import TabItem from '@theme/TabItem';
 
 您需要仔细分析您的数据，并根据分析结果设计目标 Collection 的 Schema。
 
-以上图中的 JSON 数据为例，源数据中包含两条记录，每条数据包含 6 个字段。而目标 Collection 的 Schema 中选择性地包含了其中的四个字段，分别是 **id**、**vector**、**scalar_1 **和 **scalar_2**。
+以上图中的 JSON 数据为例，源数据中包含两条记录，每条数据包含 6 个字段。而目标 Collection 的 Schema 中选择性地包含了其中的四个字段，分别是 **id**、**vector**、**scalar_1** 和 **scalar_2**。
 
 在设计 Schema 时，还有两个问题需要注意：
 
 - **是否启用 AutoID**
 
-    字段 **id** 为 Collection 的主键。如果需要主键随数据插入自动增长，可以选择启用 AutoID。在这种情况下，源数据中不需要包含 **id **字段。
+    字段 **id** 为 Collection 的主键。如果需要主键随数据插入自动增长，可以选择启用 AutoID。在这种情况下，源数据中不需要包含 **id** 字段。
 
 - **是否启用动态字段**
 
@@ -109,11 +110,24 @@ Zilliz Cloud 支持导入 JSON、Parquet 和 NumPy 数据。如果您的数据�
 
 一个合法的 JSON 文件有一个名为 **rows** 的根字段，其对应的值为一个字典列表。该列表中，每个字典均对应一个匹配目标 Collection Schema 的 Entity 记录。
 
-|  **项目**                   |  **描述**                                       |
-| ------------------------- | --------------------------------------------- |
-|  **多文件导入（单批次）**           |  支持                                           |
-|  **最大文件大小（单批次）**<br/>  |  - 总大小： 100 GB<br/> - 单文件大小： 10 GB<br/> |
-|  **数据文件存放位置**             |  本地或远程                                        |
+<table>
+   <tr>
+     <th><strong>项目</strong></th>
+     <th><strong>描述</strong></th>
+   </tr>
+   <tr>
+     <td><strong>多文件导入（单批次）</strong></td>
+     <td>支持</td>
+   </tr>
+   <tr>
+     <td><strong>最大文件大小（单批次）</strong><br/></td>
+     <td></td>
+   </tr>
+   <tr>
+     <td><strong>数据文件存放位置</strong></td>
+     <td>本地或远程</td>
+   </tr>
+</table>
 
 ![json_data_structure_zh](/img/json_data_structure_zh.png)
 
@@ -131,11 +145,24 @@ Zilliz Cloud 支持导入 JSON、Parquet 和 NumPy 数据。如果您的数据�
 
 ### Parquet{#parquet-file}
 
-|  **项目**                   |  **描述**                                       |
-| ------------------------- | --------------------------------------------- |
-|  **多文件导入（单批次）**           |  支持                                           |
-|  **最大文件大小（单批次）**<br/>  |  - 总大小： 100 GB<br/> - 单文件大小： 10 GB<br/> |
-|  **数据文件存放位置**             |  仅远程                                          |
+<table>
+   <tr>
+     <th><strong>项目</strong></th>
+     <th><strong>描述</strong></th>
+   </tr>
+   <tr>
+     <td><strong>多文件导入（单批次）</strong></td>
+     <td>支持</td>
+   </tr>
+   <tr>
+     <td><strong>最大文件大小（单批次）</strong><br/></td>
+     <td></td>
+   </tr>
+   <tr>
+     <td><strong>数据文件存放位置</strong></td>
+     <td>仅远程</td>
+   </tr>
+</table>
 
 建议您使用 BulkWriter 来将您的原始数据转换成 Parquet 文件。您也可以[单击此处](https://assets.zilliz.com/prepared_parquet_data.parquet)下载样例数据进行参考。
 
@@ -149,13 +176,32 @@ Zilliz Cloud 支持导入 JSON、Parquet 和 NumPy 数据。如果您的数据�
 
 一组合法的 NumPy 文件应该和目标 Collection 的 Schema 中定义的列同名，文件中存放的数据应符合列定义。
 
-|  **项目**                   |  **描述**                                               |
-| ------------------------- | ----------------------------------------------------- |
-|  **多文件导入（单批次）**           |  支持                                                   |
-|  **读取子目录下的文件（仅一层）**       |  支持                                                   |
-|  **子目录下最大文件数量（仅一层）**      |  100                                                  |
-|  **最大文件大小（单批次）**<br/>  |  - 总大小： 100 GB<br/> - 每个一层子目录下的文件大小： 10 GB<br/> |
-|  **数据文件存放位置**             |  仅远程                                                  |
+<table>
+   <tr>
+     <th><strong>项目</strong></th>
+     <th><strong>描述</strong></th>
+   </tr>
+   <tr>
+     <td><strong>多文件导入（单批次）</strong></td>
+     <td>支持</td>
+   </tr>
+   <tr>
+     <td><strong>读取子目录下的文件（仅一层）</strong></td>
+     <td>支持</td>
+   </tr>
+   <tr>
+     <td><strong>子目录下最大文件数量（仅一层）</strong></td>
+     <td>100</td>
+   </tr>
+   <tr>
+     <td><strong>最大文件大小（单批次）</strong><br/></td>
+     <td></td>
+   </tr>
+   <tr>
+     <td><strong>数据文件存放位置</strong></td>
+     <td>仅远程</td>
+   </tr>
+</table>
 
 ![numpy_file_structure_zh](/img/numpy_file_structure_zh.png)
 
@@ -177,7 +223,7 @@ Zilliz Cloud 支持通过 Zilliz Cloud 控制台，RESTful API 以及 SDK 批量
 
 ### 从本地导入{#from-local-folders}
 
-Zilliz Cloud 支持在 Zilliz Cloud 控制台中从本地导入满足上述要求的 JSON 文件。如下图所示，您可以拖放准备好的数据文件到 **Import Data** 对话框或单击 **upload a file **并选择该文件，然后单击 **Import** 将文件中的数据导入到目标 Collection 中。
+Zilliz Cloud 支持在 Zilliz Cloud 控制台中从本地导入满足上述要求的 JSON 文件。如下图所示，您可以拖放准备好的数据文件到 **Import Data** 对话框或单击 **upload a file** 并选择该文件，然后单击 **Import** 将文件中的数据导入到目标 Collection 中。
 
 ![data-import-on-console_zh](/img/data-import-on-console_zh.png)
 
@@ -193,25 +239,55 @@ Zilliz Cloud 还支持通过 Zilliz Cloud 控制台或使用 RESTful API / SDK �
 
 ![data-import-on-console-remote_zh](/img/data-import-on-console-remote_zh.png)
 
-<Tabs defaultValue="ali" values={[{"label":"ALI OSS","value":"ali"},{"label":"tencent","value":"Tencent COS"}]}>
+<Tabs defaultValue="ali" values={[{"label":"ALI OSS","value":"ali"},{"label":"Tencent COS","value":"tecent"}]}>
 
 <TabItem value="ali">
 
 - 对象访问 URI
 
-    |  **地域**               |  **URI**                                            |  **地域 ID**         |
-    | --------------------- | --------------------------------------------------- | ------------------ |
-    |  **华东1（杭州）**<br/>  |  `https://bucket-name.oss-cn-hangzhou.aliyuncs.com` |  `oss-cn-hangzhou` |
-    |  **华北2（北京）**          |  `https://bucket-name.oss-cn-beijing.aliyuncs.com`  |  `oss-cn-beijing`  |
-    |  **华南1（深圳）**          |  `https://bucket-name.oss-cn-shenzhen.aliyuncs.com` |  `oss-cn-shenzhen` |
+    <table>
+       <tr>
+         <th><strong>地域</strong></th>
+         <th><strong>URI</strong></th>
+         <th><strong>地域 ID</strong></th>
+       </tr>
+       <tr>
+         <td><strong>华东1（杭州）</strong><br/></td>
+         <td><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com</code></td>
+         <td><code>oss-cn-hangzhou</code></td>
+       </tr>
+       <tr>
+         <td><strong>华北2（北京）</strong></td>
+         <td><code>https://bucket-name.oss-cn-beijing.aliyuncs.com</code></td>
+         <td><code>oss-cn-beijing</code></td>
+       </tr>
+       <tr>
+         <td><strong>华南1（深圳）</strong></td>
+         <td><code>https://bucket-name.oss-cn-shenzhen.aliyuncs.com</code></td>
+         <td><code>oss-cn-shenzhen</code></td>
+       </tr>
+    </table>
 
 - 示例
 
-    |  **文件类型**    |  **路径示例**                                                                                                                                                 |
-    | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    |  **JSON**    |  `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder`<br/> `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/data.json`          |
-    |  **NumPy**   |  `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/numpy-folder`<br/> `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/numpy-folder/*.npy`            |
-    |  **Parquet** |  `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder`<br/> `https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder/data.parquet` |
+    <table>
+       <tr>
+         <th><strong>文件类型</strong></th>
+         <th><strong>路径示例</strong></th>
+       </tr>
+       <tr>
+         <td><strong>JSON</strong></td>
+         <td><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder</code><br/> <code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/data.json</code></td>
+       </tr>
+       <tr>
+         <td><strong>NumPy</strong></td>
+         <td><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/numpy-folder</code><br/> <code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/numpy-folder/*.npy</code></td>
+       </tr>
+       <tr>
+         <td><strong>Parquet</strong></td>
+         <td><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder</code><br/> <code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder/data.parquet</code></td>
+       </tr>
+    </table>
 
 </TabItem>
 
@@ -219,18 +295,44 @@ Zilliz Cloud 还支持通过 Zilliz Cloud 控制台或使用 RESTful API / SDK �
 
 - 对象访问 URI
 
-    |  **地域**          |  **URI**                                                   |  **地域 ID**     |
-    | ---------------- | ---------------------------------------------------------- | -------------- |
-    |  **北京**<br/>  |  `https://<BucketName-APPID>.cos.ap-beijing.myqcloud.com`  |  `ap-beijing`  |
-    |  **上海**          |  `https://<BucketName-APPID>.cos.ap-shanghai.myqcloud.com` |  `ap-shanghai` |
+    <table>
+       <tr>
+         <th><strong>地域</strong></th>
+         <th><strong>URI</strong></th>
+         <th><strong>地域 ID</strong></th>
+       </tr>
+       <tr>
+         <td><strong>北京</strong><br/></td>
+         <td><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com</code></td>
+         <td><code>ap-beijing</code></td>
+       </tr>
+       <tr>
+         <td><strong>上海</strong></td>
+         <td><code>https://&lt;BucketName-APPID&gt;.cos.ap-shanghai.myqcloud.com</code></td>
+         <td><code>ap-shanghai</code></td>
+       </tr>
+    </table>
 
 - 示例
 
-    |  **文件类型**    |  **路径示例**                                                                                                                                                             |
-    | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    |  **JSON**    |  `https://<BucketName-APPID>.cos.ap-beijing.myqcloud.com/json-folder`<br/> `https://<BucketName-APPID>.cos.ap-beijing.myqcloud.com/json-folder/data.json`          |
-    |  **NumPy**   |  `https://<BucketName-APPID>.cos.ap-beijing.myqcloud.com/numpy-folder`<br/> `https://<BucketName-APPID>.cos.ap-beijing.myqcloud.com/numpy-folder/*.npy`            |
-    |  **Parquet** |  `https://<BucketName-APPID>.cos.ap-beijing.myqcloud.com/parquet-folder`<br/> `https://<BucketName-APPID>.cos.ap-beijing.myqcloud.com/parquet-folder/data.parquet` |
+    <table>
+       <tr>
+         <th><strong>文件类型</strong></th>
+         <th><strong>路径示例</strong></th>
+       </tr>
+       <tr>
+         <td><strong>JSON</strong></td>
+         <td><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder</code><br/> <code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder/data.json</code></td>
+       </tr>
+       <tr>
+         <td><strong>NumPy</strong></td>
+         <td><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/numpy-folder</code><br/> <code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/numpy-folder/*.npy</code></td>
+       </tr>
+       <tr>
+         <td><strong>Parquet</strong></td>
+         <td><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/parquet-folder</code><br/> <code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/parquet-folder/data.parquet</code></td>
+       </tr>
+    </table>
 
 </TabItem>
 

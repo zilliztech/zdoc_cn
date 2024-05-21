@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: BSKawjPvqiNAcgkGGIbct8L6nOd
 sidebar_position: 6
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -32,7 +33,7 @@ pip install pymilvus llama-index
 
 ## 准备数据{#prepare-data}
 
-我们将使用 **git **来拉取 Milvus 的官方文档站。文档站中大部分的文档都是 markdown 格式的。
+我们将使用 **git** 来拉取 Milvus 的官方文档站。文档站中大部分的文档都是 markdown 格式的。
 
 ```shell
 git clone https://github.com/milvus-io/milvus-docs

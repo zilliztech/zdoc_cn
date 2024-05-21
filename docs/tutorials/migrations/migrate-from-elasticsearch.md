@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: CJN4wlKiGi1P8Zk4BHKcF04GnLb
 sidebar_position: 2
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -40,7 +41,7 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
 
 ![zh_migrate_index](/img/zh_migrate_index.png)
 
-默认情况下，该 Collection 的名称遵循命名约定 **Collection_n**，其中 *n *表示一个数字值，用于区分它与 Zilliz Cloud 上的其他 Collection。
+默认情况下，该 Collection 的名称遵循命名约定 **Collection_n**，其中 *n* 表示一个数字值，用于区分它与 Zilliz Cloud 上的其他 Collection。
 
 对于每次迁移，您只能选择源索引中的一个 `dense_vector` 字段和一个或多个其他字段。选择待迁移的字段时，请注意以下事项：
 
@@ -56,7 +57,7 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
 
 在**主键**字段，选择一个字段作为 Collection 的主键。您可以选择 Elasticsearch  元数据字段 `_id` 或源索引中的其他字段作为主键。如果选择 `_id` 字段，请将其数据类型设置为 **Int64** 或 **VarChar**。
 
-在**动态 Schema **字段，选择是否为 Collection 启用动态 Schema。有关更多信息，请参见[开启动态 Schema](./enable-dynamic-schema)。
+在**动态 Schema** 字段，选择是否为 Collection 启用动态 Schema。有关更多信息，请参见[开启动态 Schema](./enable-dynamic-field)。
 
 ## 结果验证{#verify-the-migration-results}
 
@@ -74,22 +75,59 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
 
 下表详细说明了 Elasticsearch 索引中的字段如何映射到 Zilliz Cloud 的 Collection 中。
 
-|  Elasticsearch 字段 |  Zilliz Cloud 字段 |  描述                                                                      |
-| ----------------- | ---------------- | ------------------------------------------------------------------------ |
-|  dense_vector     |  FloatVector     |  向量维度与源索引中的向量字段维度相同。您可以在 **L2** 和 **IP** 之间指定一个度量类型。                     |
-|  keyword          |  VarChar         |  通过 **Max Length **指定最大数据长度，有效值为 1 到 65535 之间。如果任何字符串超过了最大长度限制，迁移过程将会报错。 |
-|  text             |  VarChar         |  通过 **Max Length **指定最大数据长度，有效值为 1 到 65535 之间。如果任何字符串超过了最大长度限制，迁移过程将会报错。 |
-|  long             |  Int64           |  -                                                                       |
-|  integer          |  Int32           |  -                                                                       |
-|  double           |  Double          |  -                                                                       |
-|  float            |  Float           |  -                                                                       |
-|  boolean          |  Bool            |  -                                                                       |
+<table>
+   <tr>
+     <th>Elasticsearch 字段</th>
+     <th>Zilliz Cloud 字段</th>
+     <th>描述</th>
+   </tr>
+   <tr>
+     <td>dense_vector</td>
+     <td>FloatVector</td>
+     <td>向量维度与源索引中的向量字段维度相同。您可以在 <strong>L2</strong> 和 <strong>IP</strong> 之间指定一个度量类型。</td>
+   </tr>
+   <tr>
+     <td>keyword</td>
+     <td>VarChar</td>
+     <td>通过 <strong>Max Length</strong> 指定最大数据长度，有效值为 1 到 65535 之间。如果任何字符串超过了最大长度限制，迁移过程将会报错。</td>
+   </tr>
+   <tr>
+     <td>text</td>
+     <td>VarChar</td>
+     <td>通过 <strong>Max Length</strong> 指定最大数据长度，有效值为 1 到 65535 之间。如果任何字符串超过了最大长度限制，迁移过程将会报错。</td>
+   </tr>
+   <tr>
+     <td>long</td>
+     <td>Int64</td>
+     <td>-</td>
+   </tr>
+   <tr>
+     <td>integer</td>
+     <td>Int32</td>
+     <td>-</td>
+   </tr>
+   <tr>
+     <td>double</td>
+     <td>Double</td>
+     <td>-</td>
+   </tr>
+   <tr>
+     <td>float</td>
+     <td>Float</td>
+     <td>-</td>
+   </tr>
+   <tr>
+     <td>boolean</td>
+     <td>Bool</td>
+     <td>-</td>
+   </tr>
+</table>
 
 ## 相关文档{#related-topics}
 
-- [向量搜索和查询](./search-query-and-get)
+- [向量搜索和查询](./undefined)
 
-- [插入 Entity](./insert-entities)
+- [插入 Entity](./undefined)
 
 - [AUTOINDEX](./autoindex-explained)
 

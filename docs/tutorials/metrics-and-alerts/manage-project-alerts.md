@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: EUS8w4x9Ii0BmhkJBfQcsoFln5c
 sidebar_position: 4
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -24,14 +25,43 @@ Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关�
 
 如需了解集群资源使用超过阈值时建议执行的操作，请参阅[集群指标](./metrics-alerts-reference#cluster-metrics)。
 
-|  告警项                    |  单位  |  默认告警条件                                                                                                    |
-| ----------------------- | ---- | ---------------------------------------------------------------------------------------------------------- |
-|  CU 计算资源<br/>        |  %   |  - **警告**：CU 计算资源用量大于 70% 且持续时间超过 10 分钟时触发告警。<br/> - **紧急**：CU 计算资源用量大于 90% 且持续时间超过 10 分钟时触发告警。<br/> |
-|  CU 加载容量                |  %   |  - **警告：**CU 加载容量大于 70% 且持续时间超过 10 分钟时触发告警。<br/> - **紧急：**CU 加载容量大于 90% 且持续时间超过 10 分钟时触发告警。<br/>     |
-|  Search（QPS）            |  QPS |  Search 类型请求数大于 50 QPS 且持续时间超过 10 分钟时触发**警告**告警。                                                           |
-|  Query（QPS）             |  QPS |  Query 类型请求数大于 50 QPS 且持续时间超过 10 分钟时触发**警告**告警。                                                            |
-|  Search 延时（P99）         |  ms  |  Search 类型 P99 请求延时大于 1000 ms 且持续时间超过 10 分钟时触发**警告**告警。                                                    |
-|  Query 延时（P99）<br/>  |  ms  |  Query 类型 P99 请求延时大于 1000 ms 且持续时间超过 10 分钟时触发**警告**告警。                                                     |
+<table>
+   <tr>
+     <th>告警项</th>
+     <th>单位</th>
+     <th>默认告警条件</th>
+   </tr>
+   <tr>
+     <td>CU 计算资源<br/></td>
+     <td>%</td>
+     <td></td>
+   </tr>
+   <tr>
+     <td>CU 加载容量</td>
+     <td>%</td>
+     <td></td>
+   </tr>
+   <tr>
+     <td>Search（QPS）</td>
+     <td>QPS</td>
+     <td>Search 类型请求数大于 50 QPS 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</td>
+   </tr>
+   <tr>
+     <td>Query（QPS）</td>
+     <td>QPS</td>
+     <td>Query 类型请求数大于 50 QPS 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</td>
+   </tr>
+   <tr>
+     <td>Search 延时（P99）</td>
+     <td>ms</td>
+     <td>Search 类型 P99 请求延时大于 1000 ms 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</td>
+   </tr>
+   <tr>
+     <td>Query 延时（P99）<br/></td>
+     <td>ms</td>
+     <td>Query 类型 P99 请求延时大于 1000 ms 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</td>
+   </tr>
+</table>
 
 **权限**：
 

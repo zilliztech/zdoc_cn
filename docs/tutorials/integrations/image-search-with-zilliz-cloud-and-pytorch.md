@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: FpeXw3b5piUAG7kUCgucgI1unFh
 sidebar_position: 5
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -103,7 +104,7 @@ TOKEN = 'YOUR_CLUSTER_TOKEN'
     
     fields = [
         FieldSchema(name='id', dtype=DataType.INT64, is_primary=True, auto_id=True),
-        FieldSchema(name='filepath', dtype=DataType.VARCHAR, max_length=200),  *# VARCHARS need a maximum length, so for this example they are set to 200 characters*
+        FieldSchema(name='filepath', dtype=DataType.VARCHAR, max_length=200),  # VARCHARS need a maximum length, so for this example they are set to 200 characters
         FieldSchema(name='image_embedding', dtype=DataType.FLOAT_VECTOR, dim=DIMENSION)
     ]
     

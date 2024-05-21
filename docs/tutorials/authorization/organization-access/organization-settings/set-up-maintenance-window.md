@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: Ah5HwOryHilTp4klJ6VcR4eJnvd
 sidebar_position: 4
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -28,11 +29,11 @@ Zilliz Cloud 允许用户为集群设置运维窗口，以减少运维对工作�
 
 ## 查看运维窗口{#view-current-window-hours}
 
-要查看当前运维窗口，请从左侧导航栏中选择**系统设置**，并在**系统维护时间**区域的**偏好时间 (UTC) **下找到当前应用的运维窗口。
+要查看当前运维窗口，请从左侧导航栏中选择**系统设置**，并在**系统维护时间**区域的**偏好时间 (UTC)** 下找到当前应用的运维窗口。
 
 ## 编辑运维窗口{#edit-current-window-hours}
 
-要更改系统运维窗口，请单击**编辑**以打开**维护时间设置**对话框，并从**时间段 (UTC) **下拉列表中选择合适的运维窗口。
+要更改系统运维窗口，请单击**编辑**以打开**维护时间设置**对话框，并从**时间段 (UTC)** 下拉列表中选择合适的运维窗口。
 
 ## 相关文档{#related-topics}
 

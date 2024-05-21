@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: WllVwhQakiUVLXkMm7ocRk5xnxh
 sidebar_position: 2
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -44,11 +45,24 @@ Zilliz Cloud **事件**页面记录了[组织](./resource-hierarchy#understand-o
 
     如需根据事件类型筛选，请点击事件类型下拉框并选择您想要查看的事件类型。Zilliz Cloud 中有 3 种事件类型：**信息**、**警告**和**错误**。
 
-    |  **事件类型** |  **描述**                                                                        |
-    | --------- | ------------------------------------------------------------------------------ |
-    |  信息       |  集群、权限、账单等相关信息。<br/> 例如：集群 in01-xxxxxxxxxxxxxxx 已创建。                        |
-    |  警告       |  资源状态更新等需要留意的信息。<br/> 例如：集群 in01-xxxxxxxxxxxxxxx 已删除。                       |
-    |  错误       |  账单支付失败或系统出错等需要立刻注意或采取行动的信息。<br/> 例如：账单 invo-xxxxxxxxxxxxxxxxxxxxxxxx 支付失败。 |
+    <table>
+       <tr>
+         <th><strong>事件类型</strong></th>
+         <th><strong>描述</strong></th>
+       </tr>
+       <tr>
+         <td>信息</td>
+         <td>集群、权限、账单等相关信息。<br/> 例如：集群 in01-xxxxxxxxxxxxxxx 已创建。</td>
+       </tr>
+       <tr>
+         <td>警告</td>
+         <td>资源状态更新等需要留意的信息。<br/> 例如：集群 in01-xxxxxxxxxxxxxxx 已删除。</td>
+       </tr>
+       <tr>
+         <td>错误</td>
+         <td>账单支付失败或系统出错等需要立刻注意或采取行动的信息。<br/> 例如：账单 invo-xxxxxxxxxxxxxxxxxxxxxxxx 支付失败。</td>
+       </tr>
+    </table>
 
     ![filter-by-activity-type-cn](/img/filter-by-activity-type-cn.png)
 

@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: KOD2wN5jDimhSOk1GshcUbn2nJe
 sidebar_position: 2
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -18,69 +19,390 @@ import Admonition from '@theme/Admonition';
 
 ## 特定场景权限{#scenario-specific-privileges}
 
-|             |  **API**                       |  **GUI 操作** |  **企业版**     |
-| ----------- | ------------------------------ | ----------- | ------------ |
-|  别名         |  alterAlias()                  |  ✘          |  ✔︎          |
-|             |  createAlias()                 |  ✘          |  ✔︎          |
-|             |  dropAlias()                   |  ✘          |  ✔︎          |
-|             |  describeAlias()               |  ✘          |  ✔︎          |
-|             |  listAliases()                 |  ✘          |  ✔︎          |
-|  认证         |  createCredential()            |  ✔︎         |  ✔︎          |
-|             |  deleteCredential()            |  ✔︎         |  ✔︎          |
-|             |  listCredUsers()               |  ✔︎         |  ✔︎          |
-|             |  updateCredential()            |  ✔︎         |  ✔︎          |
-|  批量插入       |  bulkInsert()                  |  ✔︎         |  ✘           |
-|             |  getBulkInsertState()          |  ✔︎         |  ✔︎          |
-|             |  listBulkInsertTasks()         |  ✔︎         |  ✔︎          |
-|  Collection |  getCollectionStatistics()     |  ✘          |  ✔︎          |
-|             |  createCollection()            |  ✔︎         |  ✔︎          |
-|             |  describeCollection()          |  ✔︎         |  ✔︎          |
-|             |  dropCollection()              |  ✔︎         |  ✔︎          |
-|             |  alterCollection()             |  ✘          |  ✔︎          |
-|             |  getLoadingProgress()          |  ✔︎         |  ✔︎          |
-|             |  getPersistentSgementInfo()    |  ✘          |  ✘           |
-|             |  getQuerySegmentInfo()         |  ✘          |  ✘           |
-|             |  getReplicas()                 |  ✘          |  ✘           |
-|             |  insert()                      |  ✘          |  ✔︎          |
-|             |  loadCollection()              |  ✔︎         |  ✔︎          |
-|             |  releaseCollection()           |  ✔︎         |  ✔︎          |
-|             |  showCollections()             |  ✔︎         |  ✔︎          |
-|             |  getLoadState()                |  ✔︎         |  ✔︎          |
-|             |  renameCollection()            |  ✔︎         |  ✔︎          |
-|             |  upsert()                      |  ✘          |  ✔︎          |
-|  数据库        |  ListDatabases                 |  ✘          |  ✘           |
-|             |  DropDatabase                  |  ✘          |  ✘           |
-|             |  CreateDatabase                |  ✘          |  ✘           |
-|  索引         |  createIndex()                 |  ✔︎         |  ✔︎          |
-|             |  describeIndex()               |  ✔︎         |  ✔︎          |
-|             |  dropIndex()                   |  ✔︎         |  ✔︎          |
-|             |  getIndexBuildProgress()       |  ✔︎         |  ✔︎          |
-|             |  getIndexState()               |  ✔︎         |  ✔︎          |
-|  管理         |  getCompactionState()          |  ✘          |  ✔︎          |
-|             |  getCompactionStateWithPlan()  |  ✘          |  ✔︎          |
-|             |  getFlushState()               |  ✘          |  ✔︎          |
-|             |  getMetrics()                  |  ✘          |  ✘           |
-|             |  loadBalance()                 |  ✘          |  ✘           |
-|             |  manualCompact()               |  ✘          |  ✔︎          |
-|  分区         |  createPartition()             |  ✘          |  ✔︎          |
-|             |  dropPartition()               |  ✘          |  ✔︎          |
-|             |  getPartitionStatistics()      |  ✘          |  ✔︎          |
-|             |  hasPartiotion()               |  ✘          |  ✔︎          |
-|             |  loadPartitions()              |  ✘          |  ✔︎          |
-|             |  releasePartitions()           |  ✘          |  ✔︎          |
-|             |  showPartitions()              |  ✘          |  ✔︎          |
-|  搜索 & 查询    |  search()                      |  ✔︎         |  ✔︎          |
-|             |  query()                       |  ✘          |  ✔︎          |
-|  访问控制（RBAC） |  addUserToRole()               |  ✔︎         |  ✔︎<br/>  |
-|             |  createRole()                  |  ✘          |  ✘           |
-|             |  dropRole()                    |  ✘          |  ✘           |
-|             |  grantRolePrivilege()          |  ✘          |  ✘           |
-|             |  removeUserFromRole()          |  ✔︎         |  ✔︎          |
-|             |  revokeRolePrivilege()         |  ✘          |  ✘           |
-|             |  selectGrantForRole()          |  ✘          |  ✔︎          |
-|             |  selectGrantForRoleAndObject() |  ✘          |  ✔︎          |
-|             |  selectRole()                  |  ✘          |  ✔︎          |
-|             |  selectUser()                  |  ✘          |  ✔︎          |
-|  系统         |  getVersion()                  |  ✔︎         |  ✔︎          |
-|             |  checkHealth()                 |  ✘          |  ✔︎          |
+<table>
+   <tr>
+     <th></th>
+     <th><strong>API</strong></th>
+     <th><strong>GUI 操作</strong></th>
+     <th><strong>企业版</strong></th>
+   </tr>
+   <tr>
+     <td>别名</td>
+     <td>alterAlias()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>createAlias()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>dropAlias()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>describeAlias()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>listAliases()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td>认证</td>
+     <td>createCredential()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>deleteCredential()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>listCredUsers()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>updateCredential()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td>批量插入</td>
+     <td>bulkInsert()</td>
+     <td>✔︎</td>
+     <td>✘</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>getBulkInsertState()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>listBulkInsertTasks()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td>Collection</td>
+     <td>getCollectionStatistics()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>createCollection()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>describeCollection()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>dropCollection()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>alterCollection()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>getLoadingProgress()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>getPersistentSgementInfo()</td>
+     <td>✘</td>
+     <td>✘</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>getQuerySegmentInfo()</td>
+     <td>✘</td>
+     <td>✘</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>getReplicas()</td>
+     <td>✘</td>
+     <td>✘</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>insert()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>loadCollection()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>releaseCollection()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>showCollections()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>getLoadState()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>renameCollection()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>upsert()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td>数据库</td>
+     <td>ListDatabases</td>
+     <td>✘</td>
+     <td>✘</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>DropDatabase</td>
+     <td>✘</td>
+     <td>✘</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>CreateDatabase</td>
+     <td>✘</td>
+     <td>✘</td>
+   </tr>
+   <tr>
+     <td>索引</td>
+     <td>createIndex()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>describeIndex()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>dropIndex()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>getIndexBuildProgress()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>getIndexState()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td>管理</td>
+     <td>getCompactionState()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>getCompactionStateWithPlan()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>getFlushState()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>getMetrics()</td>
+     <td>✘</td>
+     <td>✘</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>loadBalance()</td>
+     <td>✘</td>
+     <td>✘</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>manualCompact()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td>分区</td>
+     <td>createPartition()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>dropPartition()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>getPartitionStatistics()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>hasPartiotion()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>loadPartitions()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>releasePartitions()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>showPartitions()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td>搜索 &amp; 查询</td>
+     <td>search()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>query()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td>访问控制（RBAC）</td>
+     <td>addUserToRole()</td>
+     <td>✔︎</td>
+     <td>✔︎<br/></td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>createRole()</td>
+     <td>✘</td>
+     <td>✘</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>dropRole()</td>
+     <td>✘</td>
+     <td>✘</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>grantRolePrivilege()</td>
+     <td>✘</td>
+     <td>✘</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>removeUserFromRole()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>revokeRolePrivilege()</td>
+     <td>✘</td>
+     <td>✘</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>selectGrantForRole()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>selectGrantForRoleAndObject()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>selectRole()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>selectUser()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td>系统</td>
+     <td>getVersion()</td>
+     <td>✔︎</td>
+     <td>✔︎</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>checkHealth()</td>
+     <td>✘</td>
+     <td>✔︎</td>
+   </tr>
+</table>
 

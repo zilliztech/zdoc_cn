@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: Jxqfwnd80i8ibIkRhEKcnkK6nzd
 sidebar_position: 4
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -50,10 +51,20 @@ import Admonition from '@theme/Admonition';
 
 目前，Zilliz Cloud 支持阿里云和腾讯云，可部署地域如下：
 
-|  **云服务提供商** |  **地域**                  |
-| ----------- | ------------------------ |
-|  阿里云        |  华东1（杭州）、华北2（北京）、华南1（深圳） |
-|  腾讯云        |  华北地区（北京）、华东地区（上海）       |
+<table>
+   <tr>
+     <th><strong>云服务提供商</strong></th>
+     <th><strong>地域</strong></th>
+   </tr>
+   <tr>
+     <td>阿里云</td>
+     <td>华东1（杭州）、华北2（北京）、华南1（深圳）</td>
+   </tr>
+   <tr>
+     <td>腾讯云</td>
+     <td>华北地区（北京）、华东地区（上海）</td>
+   </tr>
+</table>
 
 有关更多信息，请参见[云服务提供商和地域](./cloud-providers-and-regions)。
 

@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: Kiu5wA3XFi6E3lkl7nZc7y7Rnnc
 sidebar_position: 3
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -36,10 +37,20 @@ import Admonition from '@theme/Admonition';
 
 1. 配置 Deletion Pipeline。
 
-    |  **参数**      |  **说明**                                          |
-    | ------------ | ------------------------------------------------ |
-    |  Pipeline 名称 |  新创建的 Ingestion Pipeline 的名称。名称中只可包含小写字母、数字和下划线。 |
-    |  描述 (可选)     |  对新创建的 Ingestion Pipeline 的描述。                   |
+    <table>
+       <tr>
+         <th><strong>参数</strong></th>
+         <th><strong>说明</strong></th>
+       </tr>
+       <tr>
+         <td>Pipeline 名称</td>
+         <td>新创建的 Ingestion Pipeline 的名称。名称中只可包含小写字母、数字和下划线。</td>
+       </tr>
+       <tr>
+         <td>描述 (可选)</td>
+         <td>对新创建的 Ingestion Pipeline 的描述。</td>
+       </tr>
+    </table>
 
     ![configure-deletion-pipeline-cn](/img/configure-deletion-pipeline-cn.png)
 

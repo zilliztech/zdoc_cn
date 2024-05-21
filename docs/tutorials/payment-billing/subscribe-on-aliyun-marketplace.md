@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: UTRZwxLf3ikwvbkXrKjcWAwOnmg
 sidebar_position: 1
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -94,12 +95,33 @@ Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云�
 
 ### 企业版{#enterprise}
 
-|  Zilliz Cloud 用量 |  价格            |  阿里云市场 Unit 数量 |
-| ---------------- | -------------- | -------------- |
-|  1 CU 容量型每小时计算量  |  ¥1.25  / Unit |  1250          |
-|  1 CU 性能型每小时计算量  |  ¥1.25  / Unit |  1250          |
-|  每月 1 GB 存储量     |  ¥0.5 / Unit   |  500           |
-|   1 GB 备份量       |  ¥0.5 / Unit   |  500           |
+<table>
+   <tr>
+     <th>Zilliz Cloud 用量</th>
+     <th>价格</th>
+     <th>阿里云市场 Unit 数量</th>
+   </tr>
+   <tr>
+     <td>1 CU 容量型每小时计算量</td>
+     <td>¥1.25  / Unit</td>
+     <td>1250</td>
+   </tr>
+   <tr>
+     <td>1 CU 性能型每小时计算量</td>
+     <td>¥1.25  / Unit</td>
+     <td>1250</td>
+   </tr>
+   <tr>
+     <td>每月 1 GB 存储量</td>
+     <td>¥0.5 / Unit</td>
+     <td>500</td>
+   </tr>
+   <tr>
+     <td>1 GB 备份量</td>
+     <td>¥0.5 / Unit</td>
+     <td>500</td>
+   </tr>
+</table>
 
 例如，在 Zilliz Cloud 企业版中创建大小为 1 CU 的性能型 CU，你需要支付 1250 个单位的价格，也就是 ¥1.25 每小时。 
 

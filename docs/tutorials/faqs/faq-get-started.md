@@ -1,10 +1,11 @@
 ---
 slug: /faq-get-started
-beta: null
-notebook: null
+beta: FALSE
+notebook: FALSE
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 1
+
 ---
 
 # FAQ：快速入门

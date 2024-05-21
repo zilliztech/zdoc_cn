@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: ZgcQw57PxiKaeSkuQmCchK8snP0
 sidebar_position: 3
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -63,7 +64,7 @@ client.create_collection(
 )
 ```
 
-当您将 Entity 插入 Collection 时，Zilliz Cloud 将自动解析数据并将 Schema 中未定义的字段（也就是除了** id** 和 **vector** 字段以外的其它字段）以键值对的形式存入一个名为 **$meta** 的保留字段。
+当您将 Entity 插入 Collection 时，Zilliz Cloud 将自动解析数据并将 Schema 中未定义的字段（也就是除了 **id** 和 **vector** 字段以外的其它字段）以键值对的形式存入一个名为 **$meta** 的保留字段。
 
 ```python
 client.insert(
@@ -142,11 +143,11 @@ Zilliz Cloud 支持以下数据类型：
 
 - 可变长度字符串（VARCHAR）
 
-- [JSON](./javascript-object-notation-json)
+- [JSON](./use-json-fields)
 
 ## 文档推荐{#whats-next}
 
-- [开启动态 Schema](./enable-dynamic-schema)
+- [开启动态 Schema](./enable-dynamic-field)
 
-- [JSON](./javascript-object-notation-json) 
+- [JSON](./use-json-fields) 
 

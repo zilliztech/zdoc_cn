@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: UGzNwB4TmiqTozkJvarceRdenif
 sidebar_position: 2
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -40,20 +41,86 @@ import Admonition from '@theme/Admonition';
 
 在 Zilliz Cloud 中，用户在组织内的角色决定了其管理 API 密钥的权限范围，具体如下：
 
-|                       |  组织管理员  |  项目管理员  |  项目成员   |
-| --------------------- | ------- | ------- | ------- |
-|  **个人密钥**             |         |         |         |
-|  创建                   |  系统自动分配 |  系统自动分配 |  系统自动分配 |
-|  查看自身的 API 密钥         |  ✔️     |  ✔️     |  ✔️     |
-|  查看其他成员的 API 密钥名称 [1] |  ✔️     |  ✔️     |  ✘      |
-|  重置 API 密钥 [2]        |  ✔️     |  ✔️     |  ✔️     |
-|  **自定义密钥**            |         |         |         |
-|  创建                   |  ✔️     |  ✔️ [3] |  ✘      |
-|  查看                   |  ✔️     |  ✔️ [4] |  ✘      |
-|  移除 API 密钥权限          |  ✔️     |  ✔️ [4] |  ✘      |
-|  编辑 API 密钥名称          |  ✔️     |  ✘      |  ✘      |
-|  重置 API 密钥            |  ✔️     |  ✘      |  ✘      |
-|  删除 API 密钥            |  ✔️     |  ✘      |  ✘      |
+<table>
+   <tr>
+     <th></th>
+     <th>组织管理员</th>
+     <th>项目管理员</th>
+     <th>项目成员</th>
+   </tr>
+   <tr>
+     <td><strong>个人密钥</strong></td>
+     <td></td>
+     <td></td>
+     <td></td>
+   </tr>
+   <tr>
+     <td>创建</td>
+     <td>系统自动分配</td>
+     <td>系统自动分配</td>
+     <td>系统自动分配</td>
+   </tr>
+   <tr>
+     <td>查看自身的 API 密钥</td>
+     <td>✔️</td>
+     <td>✔️</td>
+     <td>✔️</td>
+   </tr>
+   <tr>
+     <td>查看其他成员的 API 密钥名称 [1]</td>
+     <td>✔️</td>
+     <td>✔️</td>
+     <td>✘</td>
+   </tr>
+   <tr>
+     <td>重置 API 密钥 [2]</td>
+     <td>✔️</td>
+     <td>✔️</td>
+     <td>✔️</td>
+   </tr>
+   <tr>
+     <td><strong>自定义密钥</strong></td>
+     <td></td>
+     <td></td>
+     <td></td>
+   </tr>
+   <tr>
+     <td>创建</td>
+     <td>✔️</td>
+     <td>✔️ [3]</td>
+     <td>✘</td>
+   </tr>
+   <tr>
+     <td>查看</td>
+     <td>✔️</td>
+     <td>✔️ [4]</td>
+     <td>✘</td>
+   </tr>
+   <tr>
+     <td>移除 API 密钥权限</td>
+     <td>✔️</td>
+     <td>✔️ [4]</td>
+     <td>✘</td>
+   </tr>
+   <tr>
+     <td>编辑 API 密钥名称</td>
+     <td>✔️</td>
+     <td>✘</td>
+     <td>✘</td>
+   </tr>
+   <tr>
+     <td>重置 API 密钥</td>
+     <td>✔️</td>
+     <td>✘</td>
+     <td>✘</td>
+   </tr>
+   <tr>
+     <td>删除 API 密钥</td>
+     <td>✔️</td>
+     <td>✘</td>
+     <td>✘</td>
+   </tr>
+</table>
 
 备注：
 

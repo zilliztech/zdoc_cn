@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: N7KvwFAe8i7XWZk5aEGchRsynJA
 sidebar_position: 3
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -38,27 +39,27 @@ import time, os, json
 在这里，我们定义了一些示例中将要使用的主要参数。你需要根据实际情况和参数旁的注释填写或替换成相应的内容。
 
 ```python
-**# 1. Set the The SQuAD dataset url.**
+# 1. Set the The SQuAD dataset url.
 FILE = 'https://rajpurkar.github.io/SQuAD-explorer/dataset/train-v2.0.json' 
 
-**# 2. Set up the name of the collection to be created.**
+# 2. Set up the name of the collection to be created.
 COLLECTION_NAME = 'question_answering_db'
 
-**# 3. Set up the dimension of the embeddings.**
+# 3. Set up the dimension of the embeddings.
 DIMENSION = 768
 
-**# 4. Set the number of entities to create and the number of entities to insert at a time.**
+# 4. Set the number of entities to create and the number of entities to insert at a time.
 COUNT = 5000
 BATCH_SIZE = 96
 
-**# 5. Set up the cohere api key**
+# 5. Set up the cohere api key
 COHERE_API_KEY = "YOUR_COHERE_API_KEY"
 
-**# 6. Set up the connection parameters for your Zilliz Cloud cluster.**
+# 6. Set up the connection parameters for your Zilliz Cloud cluster.
 URI = 'YOUR_CLUSTER_ENDPOINT'
 
-**# 7. Set up the token for your Zilliz Cloud cluster.**
-**# You can either use an API key or a set of cluster username and password joined by a colon.**
+# 7. Set up the token for your Zilliz Cloud cluster.
+# You can either use an API key or a set of cluster username and password joined by a colon.
 TOKEN = 'YOUR_CLUSTER_TOKEN'
 ```
 

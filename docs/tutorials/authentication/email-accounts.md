@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: SVnkw5IkNiOfALkijr1cw91vn3L
 sidebar_position: 1
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -24,7 +25,7 @@ import Admonition from '@theme/Admonition';
 
     修改邮箱地址后，您需要使用新的邮箱地址重新登录 Zilliz Cloud。
 
-    邮箱地址修改不影响原有的账单信息和告警接收人。如有将账单和告警接收人同步更新，请前往[账单](./view-invoice)和[告警](./manage-organization-alerts)页面手动更新。
+    邮箱地址修改不影响原有的账单信息和告警接收人。如有将账单和告警接收人同步更新，请前往[账单](./view-invoice#view-billing-information)和[告警](./manage-organization-alerts)页面手动更新。
 
 - 手机号码
 
@@ -38,7 +39,7 @@ import Admonition from '@theme/Admonition';
 
 ### 前提条件{#before-you-start}
 
-- 如果您是项目唯一的项目管理员且项目含有集群，请先[删除项目集群](./manage-cluster#delete-cluster)。
+- 如果您是项目唯一的项目管理员且项目含有集群，请先[删除项目集群](./manage-cluster)。
 
 - 如果您是组织唯一的组织管理员，请先[删除组织](./delete-your-organization)。
 

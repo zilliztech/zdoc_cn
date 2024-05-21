@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: RwEzw2l4siJB5Ake7FOcVU4knre
 sidebar_position: 1
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -38,10 +39,20 @@ import Admonition from '@theme/Admonition';
 
 1. 字段描述如下表所示。
 
-    |  **字段**     |  **描述**                                                              |
-    | ----------- | -------------------------------------------------------------------- |
-    |  IP地址（CIDR） |  您要添加到白名单中的 IP 地址或无类别域间路由（CIDR）。您可最多添加 20 个 CIDR。示例值：192.168.1.1/20。 |
-    |  描述         |  白名单 IP 地址或 CIDR 的描述。                                                |
+    <table>
+       <tr>
+         <th><strong>字段</strong></th>
+         <th><strong>描述</strong></th>
+       </tr>
+       <tr>
+         <td>IP地址（CIDR）</td>
+         <td>您要添加到白名单中的 IP 地址或无类别域间路由（CIDR）。您可最多添加 20 个 CIDR。示例值：192.168.1.1/20。</td>
+       </tr>
+       <tr>
+         <td>描述</td>
+         <td>白名单 IP 地址或 CIDR 的描述。</td>
+       </tr>
+    </table>
 
 1. 点击 **添加** 完成操作。
 

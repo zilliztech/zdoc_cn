@@ -11,3 +11,7 @@ node_modules
 build
 .docusaurus
 broken_links.txt
+test.js
+404s.csv
+redirects.txt
+*.json

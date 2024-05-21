@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: MkZjwrXIpicJ5xkYwu6cMK8inVb
 sidebar_position: 5
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -18,7 +19,7 @@ import Admonition from '@theme/Admonition';
 
 开始前，请先确保：
 
-- 当前组织下的[集群已全部删除](./manage-cluster#delete-cluster)。
+- 当前组织下的[集群已全部删除](./manage-cluster)。
 
 - 当前组织中的[账单](./view-invoice)已全部付清。
 

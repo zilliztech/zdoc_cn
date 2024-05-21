@@ -6,6 +6,7 @@ notebook: FALSE
 type: origin
 token: BXBvwZh9Yiis0Vk8LcdcjZSPnQd
 sidebar_position: 1
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -23,7 +24,7 @@ import Admonition from '@theme/Admonition';
 
 - 已下载示例数据集。详情请参见[示例数据集](./example-dataset)。
 
-- 已创建 Collection，且该 Collection 的 Schema 与示例数据集相匹配。已为该 Collection 创建索引，并已加载 Collection。详情请参见[创建 Collection](./create-collection)。
+- 已创建 Collection，且该 Collection 的 Schema 与示例数据集相匹配。已为该 Collection 创建索引，并已加载 Collection。详情请参见[创建 Collection](./undefined)。
 
 ## 准备数据文件{#prepare-data-files}
 

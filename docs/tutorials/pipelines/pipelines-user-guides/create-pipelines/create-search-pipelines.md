@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: UvarwFhiJimKxfkduyVcTOqTndb
 sidebar_position: 2
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -38,10 +39,20 @@ import Admonition from '@theme/Admonition';
 
 1. 配置 Search Pipeline。
 
-    |  **参数**      |  **说明**                                          |
-    | ------------ | ------------------------------------------------ |
-    |  Pipeline 名称 |  新创建的 Ingestion Pipeline 的名称。名称中只可包含小写字母、数字和下划线。 |
-    |  描述 (可选)     |  对新创建的 Ingestion Pipeline 的描述。                   |
+    <table>
+       <tr>
+         <th><strong>参数</strong></th>
+         <th><strong>说明</strong></th>
+       </tr>
+       <tr>
+         <td>Pipeline 名称</td>
+         <td>新创建的 Ingestion Pipeline 的名称。名称中只可包含小写字母、数字和下划线。</td>
+       </tr>
+       <tr>
+         <td>描述 (可选)</td>
+         <td>对新创建的 Ingestion Pipeline 的描述。</td>
+       </tr>
+    </table>
 
     ![configure-search-pipeline-cn](/img/configure-search-pipeline-cn.png)
 
@@ -59,9 +70,16 @@ import Admonition from '@theme/Admonition';
 
     1. （可选） 如需对输出结果根据相关性进行重新排序、提高搜索结果质量，请开启 [Reranker](./reranker)。请注意，开启 Reranker 会增加使用成本和搜索延时。默认情况下，Reranker 功能关闭。开启后，您可以选择 Reranker 模型。目前仅支持 **zilliz/bge-reranker-base** 模型。
 
-        |  **Reranker 模型**          |  **描述**                                                             |
-        | ------------------------- | ------------------------------------------------------------------- |
-        |  zilliz/bge-reranker-base |  智源研究院（BAAI）发布的开源重新排序（Reranker）模型。该模型采用交叉编码器架构，并托管于 Zilliz Cloud 上。 |
+        <table>
+           <tr>
+             <th><strong>Reranker 模型</strong></th>
+             <th><strong>描述</strong></th>
+           </tr>
+           <tr>
+             <td>zilliz/bge-reranker-base</td>
+             <td>智源研究院（BAAI）发布的开源重新排序（Reranker）模型。该模型采用交叉编码器架构，并托管于 Zilliz Cloud 上。</td>
+           </tr>
+        </table>
 
         ![add-function-to-search-pipeline-cn](/img/add-function-to-search-pipeline-cn.png)
 

@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: DP6Fw8vkzi7pD7kAMB3cjunYn6g
 sidebar_position: 2
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -18,10 +19,26 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 提供以下 CU 类型：性能型 CU、容量型 CU。
 
-|  CU 类型 |  时延 |  吞吐能力 |  存储容量 |
-| ------ | --- | ----- | ----- |
-|  性能型   |  低  |  高    |  低    |
-|  容量型   |  中  |  中    |  高    |
+<table>
+   <tr>
+     <th>CU 类型</th>
+     <th>时延</th>
+     <th>吞吐能力</th>
+     <th>存储容量</th>
+   </tr>
+   <tr>
+     <td>性能型</td>
+     <td>低</td>
+     <td>高</td>
+     <td>低</td>
+   </tr>
+   <tr>
+     <td>容量型</td>
+     <td>中</td>
+     <td>中</td>
+     <td>高</td>
+   </tr>
+</table>
 
 ### 性能型 CU{#performance-optimized-cu}
 
@@ -43,13 +60,38 @@ Zilliz Cloud 提供以下 CU 类型：性能型 CU、容量型 CU。
 
 以下表格根据向量维度和总向量数，展示了各种 CU 类型的处理容量。
 
-|  向量维度 |  性能型 CU（每单元最大向量数） |  容量型 CU（每单元最大向量数） |
-| ----- | ----------------- | ----------------- |
-|  128  |  750 万            |  2500 万           |
-|  256  |  450 万            |  1500 万           |
-|  512  |  225 万            |  750 万            |
-|  768  |  150 万            |  500 万            |
-|  1024 |  112.5 万          |  375 万            |
+<table>
+   <tr>
+     <th>向量维度</th>
+     <th>性能型 CU（每单元最大向量数）</th>
+     <th>容量型 CU（每单元最大向量数）</th>
+   </tr>
+   <tr>
+     <td>128</td>
+     <td>750 万</td>
+     <td>2500 万</td>
+   </tr>
+   <tr>
+     <td>256</td>
+     <td>450 万</td>
+     <td>1500 万</td>
+   </tr>
+   <tr>
+     <td>512</td>
+     <td>225 万</td>
+     <td>750 万</td>
+   </tr>
+   <tr>
+     <td>768</td>
+     <td>150 万</td>
+     <td>500 万</td>
+   </tr>
+   <tr>
+     <td>1024</td>
+     <td>112.5 万</td>
+     <td>375 万</td>
+   </tr>
+</table>
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -63,21 +105,63 @@ Zilliz Cloud 提供以下 CU 类型：性能型 CU、容量型 CU。
 
 下表显示了每种 CU 类型在 QPS 方面的测试结果。
 
-|  top_k 值 |  性能型 CU 的 QPS（768 维度，100万向量） |  容量型 CU 的 QPS（768 维度，500 万向量） |
-| -------- | ---------------------------- | ----------------------------- |
-|  10      |  520                         |  100                          |
-|  100     |  440                         |  80                           |
-|  250     |  270                         |  60                           |
-|  1000    |  150                         |  40                           |
+<table>
+   <tr>
+     <th>top_k 值</th>
+     <th>性能型 CU 的 QPS（768 维度，100万向量）</th>
+     <th>容量型 CU 的 QPS（768 维度，500 万向量）</th>
+   </tr>
+   <tr>
+     <td>10</td>
+     <td>520</td>
+     <td>100</td>
+   </tr>
+   <tr>
+     <td>100</td>
+     <td>440</td>
+     <td>80</td>
+   </tr>
+   <tr>
+     <td>250</td>
+     <td>270</td>
+     <td>60</td>
+   </tr>
+   <tr>
+     <td>1000</td>
+     <td>150</td>
+     <td>40</td>
+   </tr>
+</table>
 
 下表显示了每种 CU 类型在时延方面的测试结果。
 
-|  top_k<br/>  |  性能型 CU 的时延（768 维度，100万向量） |  容量型 CU 的时延（768 维度，500 万向量） |
-| --------------- | -------------------------- | --------------------------- |
-|  10             |  < 10 ms                   |  < 50 ms                    |
-|  100            |  < 10 ms                   |  < 50 ms                    |
-|  250            |  < 10 ms                   |  < 50 ms                    |
-|  1000           |  10 - 20 ms                |  50 - 100 ms                |
+<table>
+   <tr>
+     <th>top_k<br/></th>
+     <th>性能型 CU 的时延（768 维度，100万向量）</th>
+     <th>容量型 CU 的时延（768 维度，500 万向量）</th>
+   </tr>
+   <tr>
+     <td>10</td>
+     <td>&lt; 10 ms</td>
+     <td>&lt; 50 ms</td>
+   </tr>
+   <tr>
+     <td>100</td>
+     <td>&lt; 10 ms</td>
+     <td>&lt; 50 ms</td>
+   </tr>
+   <tr>
+     <td>250</td>
+     <td>&lt; 10 ms</td>
+     <td>&lt; 50 ms</td>
+   </tr>
+   <tr>
+     <td>1000</td>
+     <td>10 - 20 ms</td>
+     <td>50 - 100 ms</td>
+   </tr>
+</table>
 
 ## 场景分析{#scenario-breakdown}
 

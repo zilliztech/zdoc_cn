@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: B9IdwtZhLi0tB8kb6czce8KXnvb
 sidebar_position: 2
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -19,7 +20,7 @@ import TabItem from '@theme/TabItem';
 
 **BulkWriter** 用于将原始数据转换成可以批量导入到目标 Collection 的格式，并在 Zilliz Cloud 控制台、Milvus SDK 的 **BulkInsert** 接口，以及 RESTful API 的 Import 接口中使用。目前，有如下两种 **BulkWriter**。
 
-- **LocalBulkWriter **读取指定数据集并将其转换为适用的格式。
+- **LocalBulkWriter** 读取指定数据集并将其转换为适用的格式。
 
 - **RemoteBulkWriter** 完成 **LocalBulkWriter** 的所有工作，并将转换后的文件上传到指定的远程对象存储桶中。
 
@@ -47,14 +48,14 @@ python3 -m pip install --upgrade pymilvus
 <dependency>
   <groupId>io.milvus</groupId>
   <artifactId>milvus-sdk-java</artifactId>
-  <version>2.3.5</version>
+  <version>2.4.0</version>
 </dependency>
 ```
 
 - 如您使用 Gradle/Grails 管理项目, 执行如下命令：
 
 ```shell
-compile 'io.milvus:milvus-sdk-java:2.3.5'
+compile 'io.milvus:milvus-sdk-java:2.4.0'
 ```
 
 </TabItem>
@@ -85,6 +86,8 @@ schema.add_field(field_name="id", datatype=DataType.INT64, is_primary=True)
 schema.add_field(field_name="vector", datatype=DataType.FLOAT_VECTOR, dim=768)
 schema.add_field(field_name="scalar_1", datatype=DataType.VARCHAR, max_length=512)
 schema.add_field(field_name="scalar_2", datatype=DataType.INT64)
+
+schema.verify()
 ```
 
 </TabItem>
@@ -146,11 +149,13 @@ PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建
     <TabItem value='python'>
 
     ```python
-    from pymilvus import LocalBulkWriter, BulkFileType
+    from pymilvus.bulk_writer import LocalBulkWriter, BulkFileType
+    # 如果您的集群和 Milvus 2.4.2 及之后版本兼容
+    # 需使用 `from pymilvus import LocalBulkWriter, BulkFileType` 
     
     writer = LocalBulkWriter(
         schema=schema,
-        local_path='./tmp',
+        local_path='.',
         segment_size=512 * 1024 * 1024, # default value
         file_type=BulkFileType.NPY
     )
@@ -186,7 +191,7 @@ PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建
     
     LocalBulkWriterParam bulkWriterParam = LocalBulkWriterParam.newBuilder()
             .withCollectionSchema(collectionSchema)
-            .withLocalPath("./tmp")
+            .withLocalPath(".")
             .withFileType(BulkFileType.PARQUET)
             .withChunkSize(512 * 1024 * 1024) // 默认值
             .build();
@@ -223,6 +228,8 @@ PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建
 
     ```python
     from pymilvus import RemoteBulkWriter, BulkFileType
+    # 如果您的集群和 Milvus 2.4.2 及之后版本兼容
+    # 需使用 `from pymilvus import LocalBulkWriter, BulkFileType` 
     
     # 三方服务常量
     YOUR_ACCESS_KEY = "YOUR_ACCESS_KEY"
@@ -328,7 +335,7 @@ for i in range(10000):
         "id": i, 
         "vector":[random.uniform(-1, 1) for _ in range(768)]
         "scalar_1": generate_random_str(random.randint(1, 20)),
-        "scalar_2": random.randint(100),
+        "scalar_2": random.randint(0, 100),
     })
     
 writer.commit()
@@ -426,9 +433,9 @@ for i in range(10000):
         "id": i, 
         "vector":[random.uniform(-1, 1) for _ in range(768)],
         "scalar_1": generate_random_string(),
-        "scalar_2": random.randint(100),
+        "scalar_2": random.randint(0, 100),
         "dynamic_field_1": random.choice([True, False]),
-        "dynamic_field_2": random.randint(100)
+        "dynamic_field_2": random.randint(0, 100)
     })
     
 writer.commit()
@@ -525,7 +532,7 @@ System.out.println(batchFiles);
 </TabItem>
 </Tabs>
 
-**BulkWriter **生成一个 UUID，并使用该 UUID 在指定的输入路径下创建一个子路径，然后将生成的文件放在创建的子路径下。您也可以[单击此处](https://assets.zilliz.com/bulk_writer.zip)下载根据上述部署生成的示例数据文件。
+**BulkWriter** 生成一个 UUID，并使用该 UUID 在指定的输入路径下创建一个子路径，然后将生成的文件放在创建的子路径下。您也可以[单击此处](https://assets.zilliz.com/bulk_writer.zip)下载根据上述部署生成的示例数据文件。
 
 生成的数据目录结构如下所示：
 
@@ -554,10 +561,23 @@ System.out.println(batchFiles);
 
     则对应的导入文件路径如下：
 
-    |  **文件类型**    |  合法的文件导入路径                                                                                                                                                                                                                        |
-    | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    |  **JSON**    |  - `https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/`<br/> - `https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.json`<br/>    |
-    |  **Parquet** |  - `https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/`<br/> - `https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.parquet`<br/> |
-    |  **NumPy**   |  - `https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/`<br/> - `https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/*.npy`<br/>     |
+    <table>
+       <tr>
+         <th><strong>文件类型</strong></th>
+         <th>合法的文件导入路径</th>
+       </tr>
+       <tr>
+         <td><strong>JSON</strong></td>
+         <td></td>
+       </tr>
+       <tr>
+         <td><strong>Parquet</strong></td>
+         <td></td>
+       </tr>
+       <tr>
+         <td><strong>NumPy</strong></td>
+         <td></td>
+       </tr>
+    </table>
 
     

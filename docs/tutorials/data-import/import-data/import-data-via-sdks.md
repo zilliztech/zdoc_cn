@@ -6,6 +6,7 @@ notebook: FALSE
 type: origin
 token: Xv4awWJZpiKoJjkPTlic98Mindc
 sidebar_position: 3
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -40,14 +41,14 @@ python3 -m pip install --upgrade pymilvus minio
 <dependency>
   <groupId>io.milvus</groupId>
   <artifactId>milvus-sdk-java</artifactId>
-  <version>2.3.5</version>
+  <version>2.4.0</version>
 </dependency>
 ```
 
 - 如您使用 Gradle/Grails 管理项目, 执行如下命令：
 
 ```shell
-compile 'io.milvus:milvus-sdk-java:2.3.5'
+compile 'io.milvus:milvus-sdk-java:2.4.0'
 ```
 
 </TabItem>
@@ -190,6 +191,8 @@ schema.add_field(field_name="reading_time", datatype=DataType.INT64)
 schema.add_field(field_name="publication", datatype=DataType.VARCHAR, max_length=512)
 schema.add_field(field_name="claps", datatype=DataType.INT64)
 schema.add_field(field_name="responses", datatype=DataType.INT64)
+
+schema.verify()
 
 # prepare index parameters
 index_params = MilvusClient.prepare_index_params()

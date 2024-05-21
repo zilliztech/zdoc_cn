@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: SxBKwEZyAiWvibkGNhLc8CjvnSg
 sidebar_position: 2
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -58,7 +59,7 @@ Zilliz Cloud 支持以下数据类型：
 
 - 可变长度字符串（VARCHAR）
 
-- [JSON](./javascript-object-notation-json)
+- [JSON](./use-json-fields)
 
 Zilliz Cloud 提供 3 种 CU 类型。不同 CU 类型适用于不同的场景，搜索性能也有所不同。
 
@@ -78,12 +79,12 @@ Partition 是从 Collection 中划分而来。Zilliz Cloud 支持将物理存储
 
 通过将 Entity 分别存入不同的 Partition，Zilliz Cloud 实现了对 Entity 的隔离与分组。在按 Partition 进行检索时，由于无须关注 Collection 中其它 Partition 的数据，检索效率得到了较大的提升。
 
-关于 Partition 的更多内容，可以查看[使用 Partition](./use-partitions)。
+关于 Partition 的更多内容，可以查看[使用 Partition](./undefined)。
 
 ## Entity{#entities}
 
 Collection 中的 Entity 是指共享相同字段集的数据记录，如图书馆中的图书或基因组中的基因。存储在每个字段中的数据共同形成 1 个 Entity。
 
-输入查询向量、选择相似性类型和过滤条件（可选）后，您可以对 Collection 中的 Entity 进行向量搜索。例如，如果您使用关键字 “Interesting Python demo” 进行搜索，Zilliz Cloud 会返回所有标题语义相似的的文章。在此过程中，搜索实际是在向量字段 **title_vector** 上执行的。更多向量搜索详情，请阅读[向量搜索和查询](./search-query-and-get) 。
+输入查询向量、选择相似性类型和过滤条件（可选）后，您可以对 Collection 中的 Entity 进行向量搜索。例如，如果您使用关键字 “Interesting Python demo” 进行搜索，Zilliz Cloud 会返回所有标题语义相似的的文章。在此过程中，搜索实际是在向量字段 **title_vector** 上执行的。更多向量搜索详情，请阅读[向量搜索和查询](./undefined) 。
 
 您可以向 Collection 中添加任意数量的 Entity。但是，随着 Entity 数量和维度增加，Entity占用的内存大小也会增加，影响 Collection 的搜索性能。请参考 Zilliz Cloud [数据模型](./schema-explained) 以合理规划您的 Collection。

@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: LTs4wVOhbiJirSkdBn2cblmin4g
 sidebar_position: 1
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -52,7 +53,7 @@ Zilliz Cloud Pipelines 支持来自[阿里云 OSS](https://www.alibabacloud.com/
 from llama_index.indices import ZillizCloudPipelineIndex
 
 zcp_index = ZillizCloudPipelineIndex.from_document_url(
-    # a public or pre-signed url of a file stored on AWS S3 or Google Cloud Storage
+    # a public or pre-signed url of a file stored on cloud object storage
     url="https://publicdataset.zillizcloud.com/milvus_doc.md",
     project_id=ZILLIZ_PROJECT_ID,
     cluster_id=ZILLIZ_CLUSTER_ID,

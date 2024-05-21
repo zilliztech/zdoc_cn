@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: A8UFwSbMniMl6IkpJkNc4HsHnLc
 sidebar_position: 1
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -18,12 +19,33 @@ import Admonition from '@theme/Admonition';
 
 下表展示了单个用户可加入的最大组织和项目数。
 
-|  **内容** |  **最大数量**   |  **描述**                                 |
-| ------- | ----------- | --------------------------------------- |
-|  组织     |  1<br/>  |  每个用户只能创建 1 个组织。<br/>                |
-|  组织成员   |  100        |  每个组织最多可以容纳 100 个成员。每个用户可以属于多个组织。       |
-|  项目     |  10         |  每个用户可以创建 10 个项目。                       |
-|  项目成员   |  100        |  每个项目最多可以容纳 100 个成员。每个用户可以加入同一组织内的多个项目。 |
+<table>
+   <tr>
+     <th><strong>内容</strong></th>
+     <th><strong>最大数量</strong></th>
+     <th><strong>描述</strong></th>
+   </tr>
+   <tr>
+     <td>组织</td>
+     <td>1<br/></td>
+     <td>每个用户只能创建 1 个组织。<br/></td>
+   </tr>
+   <tr>
+     <td>组织成员</td>
+     <td>100</td>
+     <td>每个组织最多可以容纳 100 个成员。每个用户可以属于多个组织。</td>
+   </tr>
+   <tr>
+     <td>项目</td>
+     <td>10</td>
+     <td>每个用户可以创建 10 个项目。</td>
+   </tr>
+   <tr>
+     <td>项目成员</td>
+     <td>100</td>
+     <td>每个项目最多可以容纳 100 个成员。每个用户可以加入同一组织内的多个项目。</td>
+   </tr>
+</table>
 
 ## 集群和 CU{#clusters-and-cus}
 
@@ -31,15 +53,33 @@ import Admonition from '@theme/Admonition';
 
 - **未绑定有效支付方式**
 
-    |  **类型** |  **最大数量** |  **描述**                  |
-    | ------- | --------- | ------------------------ |
-    |  企业版集群  |  1        |  未绑定有效支付方式，最多可创建一个企业版集群。 |
+    <table>
+       <tr>
+         <th><strong>类型</strong></th>
+         <th><strong>最大数量</strong></th>
+         <th><strong>描述</strong></th>
+       </tr>
+       <tr>
+         <td>企业版集群</td>
+         <td>1</td>
+         <td>未绑定有效支付方式，最多可创建一个企业版集群。</td>
+       </tr>
+    </table>
 
 - **已绑定有效支付方式**
 
-    |  类型    |  **最大数量** |  **描述**                                     |
-    | ------ | --------- | ------------------------------------------- |
-    |  企业版集群 |  128 CUs  |  在自助操作时，单个集群最多使用 32 个 CU，所有集群最多使用 128 个 CU。 |
+    <table>
+       <tr>
+         <th>类型</th>
+         <th><strong>最大数量</strong></th>
+         <th><strong>描述</strong></th>
+       </tr>
+       <tr>
+         <td>企业版集群</td>
+         <td>128 CUs</td>
+         <td>在自助操作时，单个集群最多使用 32 个 CU，所有集群最多使用 128 个 CU。</td>
+       </tr>
+    </table>
 
 如需创建超过 32 个 CU 规格的集群或需要的总 CU 数量超过 128 CU 时，请[联系我们](https://zilliz.com.cn/contact-sales?firstname=xushuang&lastname=hu&company=Zilliz&name=Zilliz&email=xushuang.hu@zilliz.com&fullname=hu%20xushuang&phone=--&country=)。
 
@@ -49,44 +89,104 @@ import Admonition from '@theme/Admonition';
 
 下表展示了项目中不同类型的 Pipeline 的相关限制。
 
-|  **Pipeline 类型**    |  **最大数量（每个项目）** |
-| ------------------- | --------------- |
-|  Ingestion Pipeline |  10             |
-|  Deletion Pipeline  |  10             |
-|  Search Pipeline    |  10             |
+<table>
+   <tr>
+     <th><strong>Pipeline 类型</strong></th>
+     <th><strong>最大数量（每个项目）</strong></th>
+   </tr>
+   <tr>
+     <td>Ingestion Pipeline</td>
+     <td>10</td>
+   </tr>
+   <tr>
+     <td>Deletion Pipeline</td>
+     <td>10</td>
+   </tr>
+   <tr>
+     <td>Search Pipeline</td>
+     <td>10</td>
+   </tr>
+</table>
 
 ### Ingestion{#ingestion}
 
 下表展示了每个 Embedding 模型可自定义的切片大小范围。
 
-|  **Embedding 模型**         |  **切片大小范围 (Tokens）** |
-| ------------------------- | -------------------- |
-|  zilliz/bge-base-en-v1.5  |  20-500              |
-|  zilliz/bge-base-zh-v1.5  |  20-500              |
+<table>
+   <tr>
+     <th><strong>Embedding 模型</strong></th>
+     <th><strong>切片大小范围 (Tokens）</strong></th>
+   </tr>
+   <tr>
+     <td>zilliz/bge-base-en-v1.5</td>
+     <td>20-500</td>
+   </tr>
+   <tr>
+     <td>zilliz/bge-base-zh-v1.5</td>
+     <td>20-500</td>
+   </tr>
+</table>
 
 下表展示了 Ingestion Pipeline 的 PRESERVE Function 生成的元数据字段限制。
 
-|               |  **最大数量** |
-| ------------- | --------- |
-|  元数据字段        |  5        |
-|  字符串类型字段的最大长度 |  4,000    |
+<table>
+   <tr>
+     <th></th>
+     <th><strong>最大数量</strong></th>
+   </tr>
+   <tr>
+     <td>元数据字段</td>
+     <td>5</td>
+   </tr>
+   <tr>
+     <td>字符串类型字段的最大长度</td>
+     <td>4,000</td>
+   </tr>
+</table>
 
 下表展示了每次运行 Ingestion Pipeline 时切片数量限制。
 
-|  **Embedding 模型**         |  **每次运行 Ingestion 的最大切片数量** |
-| ------------------------- | --------------------------- |
-|  zilliz/bge-base-en-v1.5  |  3,500                      |
-|  zilliz/bge-base-zh-v1.5  |  3,500                      |
+<table>
+   <tr>
+     <th><strong>Embedding 模型</strong></th>
+     <th><strong>每次运行 Ingestion 的最大切片数量</strong></th>
+   </tr>
+   <tr>
+     <td>zilliz/bge-base-en-v1.5</td>
+     <td>3,500</td>
+   </tr>
+   <tr>
+     <td>zilliz/bge-base-zh-v1.5</td>
+     <td>3,500</td>
+   </tr>
+</table>
 
 ### Token 用量{#token-usage}
 
 下表展示了各模型的 Token 用量限制。
 
-|  **Pipeline 类型**    |  **Embedding 模型**                                   |  **最大 Token 用量** |
-| ------------------- | --------------------------------------------------- | ---------------- |
-|  Ingestion Pipeline |  zilliz/bge-base-en-v1.5 & zilliz/bge-base-zh-v1.5  |  100,000,000     |
-|  Search Pipeline    |  zilliz/bge-base-en-v1.5 & zilliz/bge-base-zh-v1.5  |  20,000,000      |
-|  1 个组织中的所有 Pipeline |  zilliz/bge-base-en-v1.5 & zilliz/bge-base-zh-v1.5  |  200,000,000     |
+<table>
+   <tr>
+     <th><strong>Pipeline 类型</strong></th>
+     <th><strong>Embedding 模型</strong></th>
+     <th><strong>最大 Token 用量</strong></th>
+   </tr>
+   <tr>
+     <td>Ingestion Pipeline</td>
+     <td>zilliz/bge-base-en-v1.5 &amp; zilliz/bge-base-zh-v1.5</td>
+     <td>100,000,000</td>
+   </tr>
+   <tr>
+     <td>Search Pipeline</td>
+     <td>zilliz/bge-base-en-v1.5 &amp; zilliz/bge-base-zh-v1.5</td>
+     <td>20,000,000</td>
+   </tr>
+   <tr>
+     <td>1 个组织中的所有 Pipeline</td>
+     <td>zilliz/bge-base-en-v1.5 &amp; zilliz/bge-base-zh-v1.5</td>
+     <td>200,000,000</td>
+   </tr>
+</table>
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -96,16 +196,35 @@ import Admonition from '@theme/Admonition';
 
 ## Collection{#collections}
 
-|  **类型**         |  **最大数量**                         |  **描述**                                                                 |
-| --------------- | --------------------------------- | ----------------------------------------------------------------------- |
-|  企业版集群<br/>  |  每 CU：\<= 64<br/> 每集群：\<= 4096 |  在企业版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。 |
+<table>
+   <tr>
+     <th><strong>类型</strong></th>
+     <th><strong>最大数量</strong></th>
+     <th><strong>描述</strong></th>
+   </tr>
+   <tr>
+     <td>企业版集群<br/></td>
+     <td>每 CU：\<= 64<br/> 每集群：\&lt;= 4096</td>
+     <td>在企业版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</td>
+   </tr>
+</table>
 
 除了对集群中 Collection 数量的限制外，Zilliz Cloud 还有容量资源相关的限制。具体见下表。
 
-|  **CU 数量** |  **容量**         |
-| ---------- | --------------- |
-|  1-8 CU    |  \<= 4,096      |
-|  12 CU 及以上 |  \<= 512 x CU 数 |
+<table>
+   <tr>
+     <th><strong>CU 数量</strong></th>
+     <th><strong>容量</strong></th>
+   </tr>
+   <tr>
+     <td>1-8 CU</td>
+     <td>\&lt;= 4,096</td>
+   </tr>
+   <tr>
+     <td>12 CU 及以上</td>
+     <td>\&lt;= 512 x CU 数</td>
+   </tr>
+</table>
 
 已使用的容量应该小于可用的通用容量。
 
@@ -134,18 +253,40 @@ import Admonition from '@theme/Admonition';
 
 ### Partition{#partitions}
 
-|  **类型**         |  **最大数量（每个 Collection）** |  描述                                               |
-| --------------- | ------------------------ | ------------------------------------------------- |
-|  企业版集群<br/>  |  4096                    |  在企业版集群中，您可以为每个 Collection 创建最多 4096 个 Partition。 |
+<table>
+   <tr>
+     <th><strong>类型</strong></th>
+     <th><strong>最大数量（每个 Collection）</strong></th>
+     <th>描述</th>
+   </tr>
+   <tr>
+     <td>企业版集群<br/></td>
+     <td>4096</td>
+     <td>在企业版集群中，您可以为每个 Collection 创建最多 4096 个 Partition。</td>
+   </tr>
+</table>
 
 在计算已使用容量和通用容量时，请参考 [Collection](./limits#collections) 部分的说明。此外，每个集群创建 Partition 的速率限制为每秒 1 个 Partition。
 
 ### 字段{#fields}
 
-|  **内容**              |  **最大数量** |  **描述**          |
-| -------------------- | --------- | ---------------- |
-|  所有字段（每个 Collection） |  64       |  N/A             |
-|  向量字段（每个 Collection） |  1        |  即将支持多向量功能，敬请期待。 |
+<table>
+   <tr>
+     <th><strong>内容</strong></th>
+     <th><strong>最大数量</strong></th>
+     <th><strong>描述</strong></th>
+   </tr>
+   <tr>
+     <td>所有字段（每个 Collection）</td>
+     <td>64</td>
+     <td>N/A</td>
+   </tr>
+   <tr>
+     <td>向量字段（每个 Collection）</td>
+     <td>1</td>
+     <td>即将支持多向量功能，敬请期待。</td>
+   </tr>
+</table>
 
 关于字段的其他限制：
 
@@ -167,12 +308,28 @@ import Admonition from '@theme/Admonition';
 
 速率限制根据集群类型和 CU 数量而有所不同。以下表格列出了插入操作的速率限制。
 
-|                  |  Insert rate limits |
-| ---------------- | ------------------- |
-|  企业版集群（1-2 CU）   |  4 MB/s             |
-|  企业版集群（4-8 CU）   |  6 MB/s             |
-|  企业版集群（12-20 CU） |  8 MB/s             |
-|  企业版集群（>= 24 CU） |  12 MB/s            |
+<table>
+   <tr>
+     <th></th>
+     <th>Insert rate limits</th>
+   </tr>
+   <tr>
+     <td>企业版集群（1-2 CU）</td>
+     <td>4 MB/s</td>
+   </tr>
+   <tr>
+     <td>企业版集群（4-8 CU）</td>
+     <td>6 MB/s</td>
+   </tr>
+   <tr>
+     <td>企业版集群（12-20 CU）</td>
+     <td>8 MB/s</td>
+   </tr>
+   <tr>
+     <td>企业版集群（&gt;= 24 CU）</td>
+     <td>12 MB/s</td>
+   </tr>
+</table>
 
 在插入数据时，请确保包含所有在 Schema 中已定义的字段。如果 Collection 启用了 AutoID，则排除主键。
 
@@ -184,12 +341,28 @@ import Admonition from '@theme/Admonition';
 
 速率限制根据集群类型和 CU 数量而有所不同。以下表格列出了 Upsert 操作的速率限制。
 
-|                  |  Insert rate limits |
-| ---------------- | ------------------- |
-|  企业版集群（1-2 CU）   |  4 MB/s             |
-|  企业版集群（4-8 CU）   |  6 MB/s             |
-|  企业版集群（12-20 CU） |  8 MB/s             |
-|  企业版集群（>= 24 CU） |  12 MB/s            |
+<table>
+   <tr>
+     <th></th>
+     <th>Insert rate limits</th>
+   </tr>
+   <tr>
+     <td>企业版集群（1-2 CU）</td>
+     <td>4 MB/s</td>
+   </tr>
+   <tr>
+     <td>企业版集群（4-8 CU）</td>
+     <td>6 MB/s</td>
+   </tr>
+   <tr>
+     <td>企业版集群（12-20 CU）</td>
+     <td>8 MB/s</td>
+   </tr>
+   <tr>
+     <td>企业版集群（&gt;= 24 CU）</td>
+     <td>12 MB/s</td>
+   </tr>
+</table>
 
 在 Upsert 数据时，请确保包含所有在 Schema 中已定义的字段。
 
@@ -199,12 +372,33 @@ import Admonition from '@theme/Admonition';
 
 不同字段类型对应不同类型的索引。以下表格列出了可索引的字段类型及其对应的索引类型。
 
-|  **字段类型**      |  **索引类型**  |  **度量类型**         |
-| -------------- | ---------- | ----------------- |
-|  向量字段          |  AUTOINDEX |  L2, IP, 和 COSINE |
-|  VarChar 字段    |  TRIE      |  N/A              |
-|  Int8/16/32/64 |  STL_SORT  |  N/A              |
-|  Float32/64    |  STL_SORT  |  N/A              |
+<table>
+   <tr>
+     <th><strong>字段类型</strong></th>
+     <th><strong>索引类型</strong></th>
+     <th><strong>度量类型</strong></th>
+   </tr>
+   <tr>
+     <td>向量字段</td>
+     <td>AUTOINDEX</td>
+     <td>L2, IP, 和 COSINE</td>
+   </tr>
+   <tr>
+     <td>VarChar 字段</td>
+     <td>TRIE</td>
+     <td>N/A</td>
+   </tr>
+   <tr>
+     <td>Int8/16/32/64</td>
+     <td>STL_SORT</td>
+     <td>N/A</td>
+   </tr>
+   <tr>
+     <td>Float32/64</td>
+     <td>STL_SORT</td>
+     <td>N/A</td>
+   </tr>
+</table>
 
 ### Flush{#flush}
 
@@ -256,11 +450,28 @@ import Admonition from '@theme/Admonition';
 
 ## 数据导入（控制台）{#data-import-on-console}
 
-|  文件类型           |  本地导入 |  对象存储导入                               |
-| --------------- | ----- | ------------------------------------- |
-|  JSON           |  1 GB |  1 GB                                 |
-|  Numpy<br/>  |  暂不支持 |  文件夹的最大大小为 100 GB，每个子文件夹的最大大小为 15 GB。 |
-|  Parquet        |  暂不支持 |  10 GB                                |
+<table>
+   <tr>
+     <th>文件类型</th>
+     <th>本地导入</th>
+     <th>对象存储导入</th>
+   </tr>
+   <tr>
+     <td>JSON</td>
+     <td>1 GB</td>
+     <td>1 GB</td>
+   </tr>
+   <tr>
+     <td>Numpy<br/></td>
+     <td>暂不支持</td>
+     <td>文件夹的最大大小为 100 GB，每个子文件夹的最大大小为 15 GB。</td>
+   </tr>
+   <tr>
+     <td>Parquet</td>
+     <td>暂不支持</td>
+     <td>10 GB</td>
+   </tr>
+</table>
 
 请参阅[准备导入数据](./prepare-source-data)了解更多。
 

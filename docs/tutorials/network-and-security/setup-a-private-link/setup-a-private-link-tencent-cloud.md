@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: Pzu4wpY64iWmO6kBsaYcNPmPnNf
 sidebar_position: 2
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -90,15 +91,40 @@ import Admonition from '@theme/Admonition';
 
     ![A8W1bDGpxo7fyMxiEdPcrRxjnKg](/img/A8W1bDGpxo7fyMxiEdPcrRxjnKg.png)
 
-    |  参数名称   |  参数说明                                                                                                          |
-    | ------- | -------------------------------------------------------------------------------------------------------------- |
-    |  名称     |  终端节点名称。<br/> 可根据需要自定义。                                                                                     |
-    |  所在地域   |  终端节点所在云服务地域。                                                                                                  |
-    |  所属网络   |  需要通过当前终端节点访问您的 Zilliz Cloud 腾讯云集群的业务资源所在 VPC。                                                                 |
-    |  所属子网   |  已选择的 VPC 中的子网。                                                                                                |
-    |  IP 地址  |  终端节点的 IP 地址。<br/> 可根据需要选择 **自动分配** 或 **手动填写**。                                                             |
-    |  服务类型   |  通过当前终端节点连接的服务类型。<br/> 请选择 **私有服务**。                                                                        |
-    |  对端帐号类型 |  Zilliz Cloud 帐户相关信息。<br/> 请选择 **其它账户**，并填写之前复制或记录的 **Zilliz Cloud 腾讯云帐号 ID (UIN)** 和 **Zilliz 终端节点服务 ID。** |
+    <table>
+       <tr>
+         <th>参数名称</th>
+         <th>参数说明</th>
+       </tr>
+       <tr>
+         <td>名称</td>
+         <td>终端节点名称。<br/> 可根据需要自定义。</td>
+       </tr>
+       <tr>
+         <td>所在地域</td>
+         <td>终端节点所在云服务地域。</td>
+       </tr>
+       <tr>
+         <td>所属网络</td>
+         <td>需要通过当前终端节点访问您的 Zilliz Cloud 腾讯云集群的业务资源所在 VPC。</td>
+       </tr>
+       <tr>
+         <td>所属子网</td>
+         <td>已选择的 VPC 中的子网。</td>
+       </tr>
+       <tr>
+         <td>IP 地址</td>
+         <td>终端节点的 IP 地址。<br/> 可根据需要选择 <strong>自动分配</strong> 或 <strong>手动填写</strong>。</td>
+       </tr>
+       <tr>
+         <td>服务类型</td>
+         <td>通过当前终端节点连接的服务类型。<br/> 请选择 <strong>私有服务</strong>。</td>
+       </tr>
+       <tr>
+         <td>对端帐号类型</td>
+         <td>Zilliz Cloud 帐户相关信息。<br/> 请选择 <strong>其它账户</strong>，并填写之前复制或记录的 <strong>Zilliz Cloud 腾讯云帐号 ID (UIN)</strong> 和 <strong>Zilliz 终端节点服务 ID。</strong></td>
+       </tr>
+    </table>
 
 1. 单击**验证**并**确定**后，返回[终端节点](https://console.cloud.tencent.com/vpc/vpce)管理界面。复制 **ID/名称**列中的终端节点实例 ID。
 
@@ -136,10 +162,20 @@ import Admonition from '@theme/Admonition';
 
     ![J25YbPFCYo8j5gxwk98cbjv0nkc](/img/J25YbPFCYo8j5gxwk98cbjv0nkc.png)
 
-    |  参数名称   |  参数说明                                                                                                            |
-    | ------- | ---------------------------------------------------------------------------------------------------------------- |
-    |  域名     |  Zilliz Cloud 腾讯云集群域名。<br/> 请输入您的 Zilliz Cloud 腾讯云集群所在云服务地域的私有域地址。<br/> - `vectordb.zilliz.com.cn`<br/> |
-    |  关联 VPC |  选择关联上述私有域名的 VPC。<br/> 请选择待接入 Zilliz Cloud 腾讯云集群的业务资源所在 VPC。并将其移动到**已选择**列表框中。                                |
+    <table>
+       <tr>
+         <th>参数名称</th>
+         <th>参数说明</th>
+       </tr>
+       <tr>
+         <td>域名</td>
+         <td>Zilliz Cloud 腾讯云集群域名。<br/> 请输入您的 Zilliz Cloud 腾讯云集群所在云服务地域的私有域地址。<br/> - <code>vectordb.zilliz.com.cn</code><br/></td>
+       </tr>
+       <tr>
+         <td>关联 VPC</td>
+         <td>选择关联上述私有域名的 VPC。<br/> 请选择待接入 Zilliz Cloud 腾讯云集群的业务资源所在 VPC。并将其移动到<strong>已选择</strong>列表框中。</td>
+       </tr>
+    </table>
 
     其它参数保持默认即可。
 
@@ -151,11 +187,24 @@ import Admonition from '@theme/Admonition';
 
     ![B4uJbhlDOogfjrxkNjdcaT1fnZC](/img/B4uJbhlDOogfjrxkNjdcaT1fnZC.png)
 
-    |  参数名称 |  参数说明                                                                                                                                                                                                                                                                                                |
-    | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    |  主机记录 |  您的 Zilliz Cloud 腾讯云集群的私网连接域名前缀。<br/> 如果您的集群 ID 为 **in01-xxxxxxxxxxx**，云地域 ID 为 **tc-ap-xxxxxxx**，则该域名前缀为 **in01-xxxxxxxxxxx-privatelink.tc-ap-xxxxxxx**。例如：<br/> - **in01-xxxxxxxxxxx-privatelink.tc-ap-beijing **(北京)<br/> - **in01-xxxxxxxxxxx-privatelink.tc-ap-shanghai **(上海)<br/> |
-    |  记录类型 |  当前解析记录的类型。<br/> 请选择创建 A 记录。                                                                                                                                                                                                                                                                      |
-    |  记录值  |  上述域名前缀完成解析后的 IP 地址。<br/> 请输入终端节点实例的 IP 地址。                                                                                                                                                                                                                                                       |
+    <table>
+       <tr>
+         <th>参数名称</th>
+         <th>参数说明</th>
+       </tr>
+       <tr>
+         <td>主机记录</td>
+         <td>您的 Zilliz Cloud 腾讯云集群的私网连接域名前缀。<br/> 如果您的集群 ID 为 <strong>in01-xxxxxxxxxxx</strong>，云地域 ID 为 <strong>tc-ap-xxxxxxx</strong>，则该域名前缀为 <strong>in01-xxxxxxxxxxx-privatelink.tc-ap-xxxxxxx</strong>。例如：<br/> - <strong>in01-xxxxxxxxxxx-privatelink.tc-ap-beijing</strong> (北京)<br/> - <strong>in01-xxxxxxxxxxx-privatelink.tc-ap-shanghai</strong> (上海)<br/></td>
+       </tr>
+       <tr>
+         <td>记录类型</td>
+         <td>当前解析记录的类型。<br/> 请选择创建 A 记录。</td>
+       </tr>
+       <tr>
+         <td>记录值</td>
+         <td>上述域名前缀完成解析后的 IP 地址。<br/> 请输入终端节点实例的 IP 地址。</td>
+       </tr>
+    </table>
 
     其它参数保持默认即可。添加完成后，单击**保存**。
 

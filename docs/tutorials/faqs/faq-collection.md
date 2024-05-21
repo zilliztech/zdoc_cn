@@ -1,10 +1,11 @@
 ---
 slug: /faq-collection
-beta: null
-notebook: null
+beta: FALSE
+notebook: FALSE
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 3
+
 ---
 
 # FAQ：Collection
@@ -31,16 +32,26 @@ sidebar_position: 3
 
 集群可创建的 Collection 数量受集群的 CU 数量影响：
 
-|            |  最大 Collection 数 |
-| ---------- | ---------------- |
-|  小于等于 8 CU |  32              |
-|  大于 8 CU   |  256             |
+<table>
+   <tr>
+     <th></th>
+     <th>最大 Collection 数</th>
+   </tr>
+   <tr>
+     <td>小于等于 8 CU</td>
+     <td>32</td>
+   </tr>
+   <tr>
+     <td>大于 8 CU</td>
+     <td>256</td>
+   </tr>
+</table>
 
 如达到集群可创建 Collection 数量上限，请尝试以下方法：
 
-1. 为集群[扩容](./manage-cluster#scale-up-cluster)。
+1. 为集群[扩容](./manage-cluster)。
 
-1. [删除](./drop-collection)未使用的 Collection。
+1. [删除](./undefined)未使用的 Collection。
 
 1. 使用 [Partition Key](./use-partition-key) 创建 Partition。
 
@@ -54,13 +65,13 @@ sidebar_position: 3
 
 1. 在页面右上角查看动态 Schema 是否已开启。
 
-更多详情，请阅读 [开启动态 Schema](./enable-dynamic-schema)。
+更多详情，请阅读 [开启动态 Schema](./enable-dynamic-field)。
 
 ![faq_dynamic_schema_enable](/img/faq_dynamic_schema_enable.png)
 
 ### 如果创建 Collection 时未开启动态 Schema，Collection 创建成功后是否还能开启动态 Schema？ \{#if-dynamic-schema-was-disabled-when-the-collection-was-created-can-i-enable-it-later}
 
-不能。在创建 Collection 时一旦确认开启或者关闭动态 Schema，Collection 创建成功后不可以修改动态 Schema 状态。更多详情，请阅读 [开启动态 Schema](./enable-dynamic-schema)
+不能。在创建 Collection 时一旦确认开启或者关闭动态 Schema，Collection 创建成功后不可以修改动态 Schema 状态。更多详情，请阅读 [开启动态 Schema](./enable-dynamic-field)
 
 ### Zilliz Cloud 支持哪些相似度类型？ \{#what-are-the-indexing-metric-types-supported-by-zilliz-cloud}
 

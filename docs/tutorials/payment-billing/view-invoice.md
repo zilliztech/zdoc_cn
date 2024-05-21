@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: NhbHwPiL2i4KWskrcO4cDrSNnzh
 sidebar_position: 3
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -34,12 +35,28 @@ import Admonition from '@theme/Admonition';
 
 如需查看所有历史账单，请点击账单页内的**历史账单**选项卡。账单状态分为**未出账**、**已结清**、**已逾期**、**免费** 4 种状态。各个账单状态的含义如下表所示：
 
-|  **状态**  |  **含义**                     |
-| -------- | --------------------------- |
-|  **未出账** |  未结算，累账中                    |
-|  **已结清** |  已支付，不欠费                    |
-|  **已逾期** |  已出账，存在欠费                   |
-|  **免费**  |  全部账单金额都使用免费额度抵扣，无需其他支付方式扣款 |
+<table>
+   <tr>
+     <th><strong>状态</strong></th>
+     <th><strong>含义</strong></th>
+   </tr>
+   <tr>
+     <td><strong>未出账</strong></td>
+     <td>未结算，累账中</td>
+   </tr>
+   <tr>
+     <td><strong>已结清</strong></td>
+     <td>已支付，不欠费</td>
+   </tr>
+   <tr>
+     <td><strong>已逾期</strong></td>
+     <td>已出账，存在欠费</td>
+   </tr>
+   <tr>
+     <td><strong>免费</strong></td>
+     <td>全部账单金额都使用免费额度抵扣，无需其他支付方式扣款</td>
+   </tr>
+</table>
 
 ![billing-overview-cn](/img/billing-overview-cn.png)
 

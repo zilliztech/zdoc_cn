@@ -1,10 +1,11 @@
 ---
 slug: /faq-data-import
-beta: null
-notebook: null
+beta: FALSE
+notebook: FALSE
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 4
+
 ---
 
 # FAQ：数据导入

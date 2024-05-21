@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: DsIxwJXnJiM2k7klUY0cr5dunBh
 sidebar_position: 7
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -20,7 +21,7 @@ import Admonition from '@theme/Admonition';
 
 ### RESTful API{#restful-api-enhancements}
 
-为了方便用户操作，我们开放了RESTful API接口。用户可以通过调用这些接口来操作 Zilliz Cloud 上的集群、Collection 及存放在 Collection 中的向量数据。欲了解更多，请前往 [API 参考](/reference/restful/cloud-meta)。
+为了方便用户操作，我们开放了RESTful API接口。用户可以通过调用这些接口来操作 Zilliz Cloud 上的集群、Collection 及存放在 Collection 中的向量数据。欲了解更多，请前往 [API 参考](/reference/restful)。
 
 ### 阿里云云市场{#aliyun-marketplace}
 

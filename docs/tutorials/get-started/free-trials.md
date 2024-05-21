@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: WWlIwejMNiAEmmkce5fcZu4UnMd
 sidebar_position: 3
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -30,9 +31,9 @@ Zilliz Cloud 当前提供企业版和专有部署两种订阅版本。首次注�
 
 - [连接集群](./connect-to-cluster)
 
-- [删除 Collection](./drop-collection)
+- [删除 Collection](./undefined)
 
-- [插入 Entity](./insert-entities)
+- [插入 Entity](./undefined)
 
-- [向量搜索和查询](./search-query-and-get) 
+- [向量搜索和查询](./undefined) 
 

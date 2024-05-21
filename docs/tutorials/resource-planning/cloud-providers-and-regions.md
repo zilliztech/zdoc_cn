@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: BErdww1kOirndzkHrKoc2ibynlb
 sidebar_position: 3
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -18,18 +19,41 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 支持在阿里云以下地域部署集群。
 
-|  **阿里云地域名称** |  **Dedicated 集群（企业版）** |
-| ------------ | ---------------------- |
-|  华东1（杭州）     |  ☑️                    |
-|  华北2（北京）     |  ☑️                    |
-|  华南1（深圳）     |  ☑️                    |
+<table>
+   <tr>
+     <th><strong>阿里云地域名称</strong></th>
+     <th><strong>Dedicated 集群（企业版）</strong></th>
+   </tr>
+   <tr>
+     <td>华东1（杭州）</td>
+     <td>☑️</td>
+   </tr>
+   <tr>
+     <td>华北2（北京）</td>
+     <td>☑️</td>
+   </tr>
+   <tr>
+     <td>华南1（深圳）</td>
+     <td>☑️</td>
+   </tr>
+</table>
 
 ## 腾讯云{#tencent-cloud}
 
 Zilliz Cloud 支持在腾讯云以下地域部署集群。
 
-|  **腾讯地域名称** |  **Dedicated 集群（企业版）** |
-| ----------- | ---------------------- |
-|  华北地区（北京）   |  ☑️                    |
-|  华东地区（上海）   |  ☑️                    |
+<table>
+   <tr>
+     <th><strong>腾讯地域名称</strong></th>
+     <th><strong>Dedicated 集群（企业版）</strong></th>
+   </tr>
+   <tr>
+     <td>华北地区（北京）</td>
+     <td>☑️</td>
+   </tr>
+   <tr>
+     <td>华东地区（上海）</td>
+     <td>☑️</td>
+   </tr>
+</table>
 

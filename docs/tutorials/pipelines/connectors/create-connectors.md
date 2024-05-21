@@ -5,6 +5,7 @@ notebook: FALSE
 type: origin
 token: UsfSw8xJOiXm5PkWASWcVo7Knff
 sidebar_position: 2
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -16,7 +17,7 @@ import Admonition from '@theme/Admonition';
 
 ## 前提条件{#prerequisites}
 
-- 请确保您已[创建 Collection](./create-collection)。
+- 请确保您已[创建 Collection](./undefined)。
 
 - 请确保您创建的 Collection 已具备配套的 [Ingestion](./create-ingestion-pipelines) 和 [Deletion](./create-deletion-pipelines) Pipelines。
 
@@ -30,18 +31,41 @@ import Admonition from '@theme/Admonition';
 
     1. 设置 Connector 基本信息。
 
-        |  **参数**       |  **描述**              |
-        | ------------- | -------------------- |
-        |  Connector 名称 |  待创建的 Connector 的名称。 |
-        |  描述 (可选)      |  Connector 描述信息。     |
+        <table>
+           <tr>
+             <th><strong>参数</strong></th>
+             <th><strong>描述</strong></th>
+           </tr>
+           <tr>
+             <td>Connector 名称</td>
+             <td>待创建的 Connector 的名称。</td>
+           </tr>
+           <tr>
+             <td>描述 (可选)</td>
+             <td>Connector 描述信息。</td>
+           </tr>
+        </table>
 
     1. 设置数据源信息。
 
-        |  **参数**         |  **描述**                                                                                                                                                                                                           |
-        | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        |  对象存储服务         |  选择对象存储服务。当前，您仅可以选择：<br/> - 阿里云 OSS<br/>                                                                                                                                                                    |
-        |  URL            |  输入数据源 URL。请确保 URL 指向文件夹而非具体某一文件。<br/> 了解如何[获取 URL](https://help.aliyun.com/zh/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects?spm=a2c4g.11186623.0.0.3eecc1f8IO4FkA)。 |
-        |  对象存储服务访问凭证(可选) |  AccessKey ID 和 AccessKey Secret。<br/> 了解如何[获取AccessKey ID 和 AccessKey Secret](https://www.alibabacloud.com/help/zh/ram/user-guide/create-an-accesskey-pair?spm=a2c63.p38356.0.0.29bf52672SsfrM)。              |
+        <table>
+           <tr>
+             <th><strong>参数</strong></th>
+             <th><strong>描述</strong></th>
+           </tr>
+           <tr>
+             <td>对象存储服务</td>
+             <td>选择对象存储服务。当前，您仅可以选择：<br/> - 阿里云 OSS<br/></td>
+           </tr>
+           <tr>
+             <td>URL</td>
+             <td>输入数据源 URL。请确保 URL 指向文件夹而非具体某一文件。<br/> 了解如何<a href="https://help.aliyun.com/zh/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects?spm=a2c4g.11186623.0.0.3eecc1f8IO4FkA">获取 URL</a>。</td>
+           </tr>
+           <tr>
+             <td>对象存储服务访问凭证(可选)</td>
+             <td>AccessKey ID 和 AccessKey Secret。<br/> 了解如何<a href="https://www.alibabacloud.com/help/zh/ram/user-guide/create-an-accesskey-pair?spm=a2c63.p38356.0.0.29bf52672SsfrM">获取AccessKey ID 和 AccessKey Secret</a>。</td>
+           </tr>
+        </table>
 
         点击**连接并进入下一步**。
 
@@ -71,10 +95,20 @@ import Admonition from '@theme/Admonition';
 
     - 如开启自动扫描，Zilliz Cloud 会定期扫描数据源中的数据，并通过设置的 Ingestion 和 Deletion Pipeline 自动同步（添加或删除）数据。开启后，您需要设置自动扫描频率和运行时间。
 
-        |  **参数** |  **描述**                                                                        |
-        | ------- | ------------------------------------------------------------------------------ |
-        |  扫描频率   |   设置自动扫描频率。<br/> - 每天：可选择 1～7 之间的任意整数。<br/> - 每小时：可选择 1、6、12、18。<br/> |
-        |  下次运行时间 |  设置运行时间。时区与[系统时区](./manage-timezone)保持一致。                                      |
+        <table>
+           <tr>
+             <th><strong>参数</strong></th>
+             <th><strong>描述</strong></th>
+           </tr>
+           <tr>
+             <td>扫描频率</td>
+             <td>设置自动扫描频率。<br/> - 每天：可选择 1～7 之间的任意整数。<br/> - 每小时：可选择 1、6、12、18。<br/></td>
+           </tr>
+           <tr>
+             <td>下次运行时间</td>
+             <td>设置运行时间。时区与<a href="./manage-timezone">系统时区</a>保持一致。</td>
+           </tr>
+        </table>
 
         ![enable-auto-scan-cn](/img/enable-auto-scan-cn.png)
 

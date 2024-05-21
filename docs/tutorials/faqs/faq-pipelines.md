@@ -1,10 +1,11 @@
 ---
 slug: /faq-pipelines
-beta: null
-notebook: null
+beta: FALSE
+notebook: FALSE
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 5
+
 ---
 
 # FAQ：Pipelines
@@ -55,6 +56,6 @@ Pipelines 可以将非结构化数据转化为高质量的 Embedding 向量，�
 目前 Ingestion Pipeline 支持本地文件和存储在[阿里云对象存储 OSS ](https://www.alibabacloud.com/zh/product/object-storage-service)中的数据。后续会支持更广泛的数据来源。
 
 ### Pipelines 支持哪些文档文件类型？ \{#what-document-file-formats-are-supported-by-pipelines}
-Pipelines 支持一下文件类型的文档：`.txt`、`.pdf`、`.md`、`.html`、`.epub`、`.csv`、`.doc`、`.docx`、`.xls`、`.xlsx`、`.ppt` 和` .pptx`。
+Pipelines 支持一下文件类型的文档：`.txt`、`.pdf`、`.md`、`.html`、`.epub`、`.csv`、`.doc`、`.docx`、`.xls`、`.xlsx`、`.ppt` 和 `.pptx`。
 
 [运行 Ingestion Pipelines](./run-ingestion-pipelines) 时，您可以上传本地文件或使用阿里云对象存储 OSS 签名 URL。
