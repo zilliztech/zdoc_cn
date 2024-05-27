@@ -14,12 +14,11 @@ class larkDocScraper {
         this.base = base_app_id
         this.target_type = target_type
         this.doc_source_dir = doc_source_dir
-        this.processed_sheets = []
     }
 
     async fetch(recursive=false, page_token=null) {
         if (!page_token) {
-            page_token = this.root
+            page_token = this.root      
         }
 
         const fetcher = new tokenFetcher()
@@ -40,7 +39,6 @@ class larkDocScraper {
             if (jres.code == 0) {
                 this.docs = jres.data.node
                 await this.__fetch_wiki_children(this.docs, recursive)
-                await this.__fetch_blocks(this.docs)
             }
         }
 
@@ -455,12 +453,9 @@ class larkDocScraper {
                             const token = item.sheet.token.split('_')[0]
                             const title = item.sheet.token.split('_')[1]
 
-                            if (!this.processed_sheets.includes(item.sheet.token)) {
-                                item.sheet.meta = await this.__fetch_sheet_meta(token, title)
-                                item.sheet.values = await this.__fetch_sheet_values(token, title)
-                                console.log(`Fetched sheet ${item.sheet.token}`)
-                                this.processed_sheets.push(item.sheet.token)
-                            }
+                            item.sheet.meta = await this.__fetch_sheet_meta(token, title)
+                            item.sheet.values = await this.__fetch_sheet_values(token, title)
+                            console.log(`Fetched sheet ${item.sheet.token}`)
                         }
                     }
                 }
