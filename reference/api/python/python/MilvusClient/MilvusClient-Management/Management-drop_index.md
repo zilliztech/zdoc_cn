@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/Management-drop_index
-beta: false
-notebook: false
+slug: /python/python/Management-drop_index
+beta: FALSE
+notebook: FALSE
 type: docx
 token: NPnQdZCJ7oF002xTntecdI2ini8
 sidebar_position: 4
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

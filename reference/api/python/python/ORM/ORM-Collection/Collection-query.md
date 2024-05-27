@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/Collection-query
-beta: false
-notebook: false
+slug: /python/python/Collection-query
+beta: FALSE
+notebook: FALSE
 type: docx
 token: JzcYdBQ5zoU4KpxPqUHcPLQonKd
 sidebar_position: 22
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

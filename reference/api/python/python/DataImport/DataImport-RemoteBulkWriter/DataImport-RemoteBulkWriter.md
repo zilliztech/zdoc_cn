@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/DataImport-RemoteBulkWriter
+slug: /python/python/DataImport-RemoteBulkWriter
 beta: false
 notebook: false
 type: folder
 token: Yhy1fHTMnlLKvydKzsIcnfPdnmb
 sidebar_position: 4
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -43,7 +45,7 @@ writer = RemoteBulkWriter(
 
 **PARAMETERS:**
 
-- **schema** ([*CollectionSchema*](./ORM-CollectionSchema)) -
+- **schema** (*[CollectionSchema](./ORM-CollectionSchema)*) -
 
     **[REQUIRED]**
 
@@ -55,7 +57,7 @@ writer = RemoteBulkWriter(
 
     The path to the directory that is to hold the rewritten data.
 
-- **connect_param** ([*ConnectParam*](./RemoteBulkWriter-S3ConnectParam)) -
+- **connect_param** (*[ConnectParam](./RemoteBulkWriter-S3ConnectParam)*) -
 
     The parameters used to connect to a remote bucket.
 

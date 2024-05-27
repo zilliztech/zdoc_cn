@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 19
 slug: /restful/list-collections
 title: 查看 Collection
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 列出集群中已创建的 Collection。
 
-<RestHeader method="get" endpoint="https://${CLUSTER_ENDPOINT}/v1/vector/collections" />
+<RestHeader method="get" endpoint="https://{cluster-endpoint}/v1/vector/collections" />
 
 ---
 
@@ -97,7 +97,9 @@ curl --request GET \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`  | **array**<br/>表示响应中携带的 string 数组. |
+| __code__ | integer  <br/>  |
+| __data__ | array<br/> |
+| __data[]__ | string  <br/>  |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

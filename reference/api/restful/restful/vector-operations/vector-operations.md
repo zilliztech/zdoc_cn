@@ -3,6 +3,7 @@ slug: /restful/vector-operations
 beta: FALSE
 notebook: FALSE
 sidebar_position: 5
+displayed_sidebar: restfulSidebar
 ---
 
 import Admonition from '@theme/Admonition';

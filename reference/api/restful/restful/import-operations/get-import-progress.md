@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 12
 slug: /restful/get-import-progress
 title: 查看导入进度
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 获取指定导入任务的进度。
 
-<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import/get" />
+<RestHeader method="get" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/vector/collections/import/get" />
 
 ---
 
@@ -40,7 +40,7 @@ curl --request GET \
     | 参数名称          | 参数说明                                                                               |
     |------------------|-------------------------------------------------------------------------------------------|
     | `jobId`  | **string**（必选）<br/>指定的导入任务 ID。|
-    | `CLUSTER_ID`  | **string**（必选）<br/>应用当前操作的集群 ID。|
+    | `clusterId`  | **string**（必选）<br/>应用当前操作的集群 ID。|
 
 - 无路径参数。
 
@@ -96,20 +96,22 @@ curl --request GET \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`    | **object**<br/>表示响应中携带的数据对象。 |
-| `data.fileName`   | **string**<br/>对象存储中数据文件对象的路径。 |
-| `data.fileSize`   | **integer(int64)**<br/>数据文件对象的大小。 |
-| `data.readyPercentage`   | **number(float)**<br/>导入进度的百分比指示器。 |
-| `data.completeTime`   | **string**<br/>导入任务完成的预计持续时间（以秒为单位）。 |
-| `data.errorMessage`   | **string**<br/>导入失败的原因说明。 |
-| `data.collectionName`   | **string**<br/>导入任务对应的目标 Collection 名称。 |
-| `data.jobId`   | **string**<br/>导入任务的 ID。 |
-| `data.details`   | **array**<br/>导入任务详情。 |
-| `data.details[].fileName`   | **string**<br/>正在导入的文件路径。 |
-| `data.details[].fileSize`   | **integer(int64)**<br/>正在导入的文件大小。 |
-| `data.details[].readyPercentage`   | **number(float)**<br/>当前文件的导入进度。 |
-| `data.details[].completeTime`   | **string**<br/>当前文件完成导入的时间。值为 `null` 时表示文件正在导入。 |
-| `data.details[].errorMessage`   | **string**<br/>对于导入失败的提示信息。值为 `null` 时表示无错误发生。 |
+| __code__ | integer  <br/>  |
+| __data__ | object<br/> |
+| __data.fileName__ | string  <br/>对象存储中数据文件对象的路径。  |
+| __data.fileSize__ | integer (int64) <br/>数据文件对象的大小。  |
+| __data.readyPercentage__ | number (float) <br/>导入进度的百分比指示器。  |
+| __data.completeTime__ | string  <br/>导入任务完成的预计持续时间（以秒为单位）。  |
+| __data.errorMessage__ | string  <br/>导入失败的原因说明。  |
+| __data.collectionName__ | string  <br/>导入任务对应的目标 Collection 名称。  |
+| __data.jobId__ | string  <br/>导入任务的 ID。  |
+| __data[].details__ | array<br/>导入任务详情。 |
+| __data[].details[]__ | object<br/> |
+| __data[].details[].fileName__ | string  <br/>正在导入的文件路径。  |
+| __data[].details[].fileSize__ | integer (int64) <br/>正在导入的文件大小。  |
+| __data[].details[].readyPercentage__ | number (float) <br/>当前文件的导入进度。  |
+| __data[].details[].completeTime__ | string  <br/>当前文件完成导入的时间。值为 `null` 时表示文件正在导入。  |
+| __data[].details[].errorMessage__ | string  <br/>对于导入失败的提示信息。值为 `null` 时表示无错误发生。  |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

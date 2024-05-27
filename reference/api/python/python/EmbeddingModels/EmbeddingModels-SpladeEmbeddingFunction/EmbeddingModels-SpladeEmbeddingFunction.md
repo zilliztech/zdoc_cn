@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/EmbeddingModels-SpladeEmbeddingFunction
+slug: /python/python/EmbeddingModels-SpladeEmbeddingFunction
 beta: false
 notebook: false
 type: folder
 token: KhHLfDpyyl4rEKdPnQjcjd8cnOf
-sidebar_position: 5
+sidebar_position: 7
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

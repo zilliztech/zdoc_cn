@@ -20,12 +20,16 @@ curl --request GET \
 
 ```shell
 {
-    code: 200,
-    data: [
-     {
-        "cloudId": "ali",
-        "description": "alibaba cloud"
-     }
+    "code": 200,
+    "data": [
+        {
+            "cloudId": "ali",
+            "description": "alibaba cloud"
+        },
+        {
+            "cloudId": "tc",
+            "description": "tencent cloud"
+        }
     ]
 }
 ```
@@ -55,9 +59,9 @@ curl --request GET \
     "code": 200,
     "data": [
         {
-            "cloudId": "gcp",
-            "domain": "*.api.gcp-us-west1.cloud-uat3.zilliz.com",
-            "regionId": "gcp-us-west1"
+            "cloudId": "ali",
+            "domain": "*.*.api.ali-cn-hangzhou.cloud.zilliz.com.cn",
+            "regionId": "ali-cn-hangzhou"
         }
     ]
 }
@@ -85,11 +89,12 @@ curl --request GET \
 {
     "code": 200,
     "data": [
-       {
-          "instanceCount": 1,
-          "projectId": "proj-********************",
-          "projectName": "test"
-       }
+        {
+            "createTimeMilli": 1687859137000,
+            "instanceCount": 1,
+            "projectId": "proj-**********************",
+            "projectName": "Default Project"
+        }
     ]
 }
 ```
@@ -216,19 +221,21 @@ curl --request GET \
 {
     "code": 200,
     "data": {
-        "clusterId": "string",
-        "clusterName": "string",
-        "description": "string",
-        "regionId": "string",
-        "clusterType": "string",
-        "cuSize": "string",
-        "status": "string",
-        "connectAddress": "string",
-        "privateLinkAddress": "string",
-        "createTime": "string",
-        "storageSize": "string",
-        "snapshotNumber": "string",
-        "createProgress": "string"
+        "clusterId": "in05-***************",
+        "clusterName": "Serverless-01",
+        "description": "",
+        "regionId": "ali-cn-hangzhou",
+        "clusterType": "",
+        "plan": "Serverless",
+        "cuSize": 0,
+        "status": "RUNNING",
+        "connectAddress": "https://in05-***************.*.api.ali-cn-hangzhou.cloud.zilliz.com.cn",
+        "privateLinkAddress": "",
+        "createTime": "2024-05-27T10:36:09Z",
+        "storageSize": 0,
+        "snapshotNumber": 0,
+        "createProgress": 100,
+        "projectId": "proj-**********************"
     }
 }
 ```

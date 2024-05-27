@@ -1,21 +1,23 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/SentenceTransformerEmbeddingFunction-__call__
-beta: false
-notebook: false
+slug: /python/python/SentenceTransformerEmbeddingFunction-__call__
+beta: FALSE
+notebook: FALSE
 type: docx
 token: ZWLCdBWwOo4OSVxfnNRcDrv5nhe
 sidebar_position: 4
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';
 
 
-# __call__()
+# \_\_call\_\_()
 
 This operation in [SentenceTransformerEmbeddingFunction](./EmbeddingModels-SentenceTransformerEmbeddingFunction) takes a list of text strings and directly encodes them into vector embeddings.
 
-To prevent potential errors when directly using the **__call()__** method, avoid using **query_instruction** or **doc_instruction** for SentenceTransformerEmbeddingFunction initialization. For more information, refer to [SentenceTransformerEmbeddingFunction](./EmbeddingModels-SentenceTransformerEmbeddingFunction).
+To prevent potential errors when directly using the **\_\_call()\_\_** method, avoid using **query_instruction** or **doc_instruction** for SentenceTransformerEmbeddingFunction initialization. For more information, refer to [SentenceTransformerEmbeddingFunction](./EmbeddingModels-SentenceTransformerEmbeddingFunction).
 
 ## Request syntax
 

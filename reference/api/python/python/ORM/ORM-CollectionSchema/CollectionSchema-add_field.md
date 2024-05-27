@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/CollectionSchema-add_field
-beta: false
-notebook: false
+slug: /python/python/CollectionSchema-add_field
+beta: FALSE
+notebook: FALSE
 type: docx
 token: TG3Rd9aM5offvFxKy2CcKXn9nWc
 sidebar_position: 1
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -32,7 +34,7 @@ add_field(
 
     The name of the field.
 
-- **datatype** ([*DataType*](./Collections-DataType)) - 
+- **datatype** (*[DataType](./Collections-DataType)*) - 
 
     **[REQUIRED]**
 
@@ -58,13 +60,13 @@ add_field(
 
         - **DataType.DOUBLE**,
 
-        - **DataType.BINARY_VECTOR,**
+        - **DataType.BINARY_VECTOR**,
 
-        - **DataType.FLOAT_VECTOR,**
+        - **DataType.FLOAT_VECTOR**,
 
-        - **DataType.FLOAT16_VECTOR,**
+        - **DataType.FLOAT16_VECTOR**,
 
-        - **DataType.BFLOAT16_VECTOR,
+        - **DataType.BFLOAT16_VECTOR**,
 
         - **DataType.VARCHAR**,
 
@@ -125,7 +127,7 @@ add_field(
 
 **RETURN TYPE:**
 
-[*CollectionSchema*](./ORM-CollectionSchema)
+*[CollectionSchema](./ORM-CollectionSchema)*
 
 **RETURNS:**
 

@@ -1,7 +1,7 @@
 ---
-displayed_sidebar: referenceSidebar
-sidebar_position: 0
-slug: /{{page_slug}}
+displayed_sidebar: restfulSidebar
+sidebar_position: {{sidebar_position}}
+slug: /restful/{{page_slug}}
 title: {{page_title}}
 ---
 
@@ -64,23 +64,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-{%- for k, v in req_body['properties'] %}
-{%- if v['type'] not in ['array', 'object'] %}
-| `{{k}}`  | **{{v['type']}}{%if 'format' in v %}({{v['format']}}){%- endif %}** {%- if k in req_body['required'] -%}（必选）{%- endif -%}<br/>{{v['description']}}{%- if v['default'] -%}<br/>默认值为 **{{v['default']}}**.{%- endif -%}{%- if v['minimum'] and v['maximum'] -%}<br/>参数取值在 **{{v['minimum']}}** 和 **{{v['maximum']}}** 之间.{%- endif -%}{%- if v['minimum'] and not v['maximum'] -%}<br/>最小值为 **{{v['minimum']}}**.{%- endif -%}{%- if v['maximum'] and not v['minimum'] -%}<br/>最大值为 **{{v['maximum']}}**.{%- endif -%} |
-{%- elif v['type'] == 'object' %}
-| `{{k}}`  | **{{v['type']}}{%if 'format' in v %}({{v['format']}}){%- endif %}** {%- if k in req_body['required'] -%}（必选）{%- endif -%}<br/>{{v['description']}}{%- if v['default'] -%}<br/>默认值为 **{{v['default']}}**.{%- endif -%}{%- if v['minimum'] and v['maximum'] -%}<br/>参数取值在 **{{v['minimum']}}** 和 **{{v['maximum']}}** 之间.{%- endif -%}{%- if v['minimum'] and not v['maximum'] -%}<br/>最小值为 **{{v['minimum']}}**.{%- endif -%}{%- if v['maximum'] and not v['minimum'] -%}<br/>最大值为 **{{v['maximum']}}**.{%- endif -%} |
-{%- for ko, vo in v['properties'] %}
-| `{{k}}.{{ko}}`  | **{{vo['type']}}{%if 'format' in vo %}({{vo['format']}}){%- endif %}**<br/>{{vo['description']}}{%- if vo['default'] -%}<br/>默认值为 **{{vo['default']}}**.{%- endif -%}{%- if vo['minimum'] and vo['maximum'] -%}<br/>参数取值在 **{{vo['minimum']}}** 和 **{{vo['maximum']}}** 之间.{%- endif -%}{%- if vo['minimum'] and not vo['maximum'] -%}<br/>最小值为 **{{vo['minimum']}}**.{%- endif -%}{%- if vo['maximum'] and not vo['minimum'] -%}<br/>最大值为 **{{vo['maximum']}}**.{%- endif -%} |
-{%- endfor %}
-{%- elif v['type'] == 'array' %}
-| `{{k}}`  | **{{v['type']}}{%if 'format' in v['items'] %} ({{v['items']['type']}} \[{{v['items']['format']}}\]){%- endif %}** {%- if k in req_body['required'] -%}（必选）{%- endif -%}<br/>{{v['description']}}{%- if v['default'] -%}<br/>默认值为 **{{v['default']}}**.{%- endif -%}{%- if v['minimum'] and v['maximum'] -%}<br/>参数取值在 **{{v['minimum']}}** 和 **{{v['maximum']}}** 之间.{%- endif -%}{%- if v['minimum'] and not v['maximum'] -%}<br/>最小值为 **{{v['minimum']}}**.{%- endif -%}{%- if v['maximum'] and not v['minimum'] -%}<br/>最大值为 **{{v['maximum']}}**.{%- endif -%} |
-{%- if v['items'] == 'object' %}
-{%- for ka, va in v['items']['properties'] %}
-| `{{k}}[].{{ka}}`  | **{{va['type']}}{%if 'format' in va %}({{va['format']}}){%- endif %}**<br/>{{va['description']}}{%- if va['default'] -%}<br/>默认值为 **{{va['default']}}**.{%- endif -%}{%- if va['minimum'] and va['maximum'] -%}<br/>参数取值在 **{{va['minimum']}}** 和 **{{va['maximum']}}** 之间.{%- endif -%}{%- if va['minimum'] and not va['maximum'] -%}<br/>最小值为 **{{va['minimum']}}**.{%- endif -%}{%- if va['maximum'] and not va['minimum'] -%}<br/>最大值为 **{{va['maximum']}}**.{%- endif -%} |
-{%- endfor %}
-{%- endif %}
-{%- endif %}
-{%- endfor %}
+{{ req_body | prepare_entries }}
 
 
 {%- endfor %}
@@ -118,43 +102,7 @@ import RestHeader from '@site/src/components/RestHeader';
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-{%- if 'properties' in res_body['properties']['data'] %}
-| `data`    | **object**<br/>表示响应中携带的数据对象。 |
-{%- for k, v in res_body['properties']['data']['properties'] %}
-{%- if v['type'] not in ['array', 'object'] or 'properties' not in v['items'] %}
-| `data.{{k}}`   | **{{v['type']}}{%if 'format' in v %}({{v['format']}}){%- endif %}**<br/>{{v['description']}} |
-{%- elif v['type'] == 'array' and 'properties' in v['items'] %}
-| `data.{{k}}`   | **{{v['type']}}{%if 'format' in v %}({{v['format']}}){%- endif %}**<br/>{{v['description']}} |
-{%- for ka, va in v['items']['properties'] %}
-| `data.{{k}}[].{{ka}}`   | **{{va['type']}}{%if 'format' in va %}({{va['format']}}){%- endif %}**<br/>{{va['description']}} |
-{%- endfor %}
-{%- elif v['type'] == 'object' %}
-| `data.{{k}}`   | **{{v['type']}}{%if 'format' in v %}({{v['format']}}){%- endif %}**<br/>{{v['description']}} |
-{%- for ko, vo in v['properties'] %}
-| `data.{{k}}.{{ko}}`   | **{{vo['type']}}{%if 'format' in vo %}({{vo['format']}}){%- endif %}**<br/>{{vo['description']}} |
-{%- endfor %}
-{%- endif %}
-{%- endfor %}
-{%- elif 'items' in res_body['properties']['data'] %}
-| `data`  | **array**<br/>表示响应中携带的 {{res_body['properties']['data']['items']['type']}} 数组. |
-{%- if res_body['properties']['data']['items']['type'] == 'object' %}
-{%- for k, v in res_body['properties']['data']['items']['properties'] %}
-{%- if v['type'] not in ['array', 'object'] or 'properties' not in v['items'] %}
-| `data.{{k}}`   | **{{v['type']}}{%if 'format' in v %}({{v['format']}}){%- endif %}**<br/>{{v['description']}} |
-{%- elif v['type'] == 'array' and 'properties' in v['items'] %}
-| `data.{{k}}`   | **{{v['type']}}{%if 'format' in v %}({{v['format']}}){%- endif %}**<br/>{{v['description']}} |
-{%- for ka, va in v['items']['properties'] %}
-| `data.{{k}}[].{{ka}}`   | **{{va['type']}}{%if 'format' in va %}({{va['format']}}){%- endif %}**<br/>{{va['description']}} |
-{%- endfor %}
-{%- elif v['type'] == 'object' %}
-| `data.{{k}}`   | **{{v['type']}}{%if 'format' in v %}({{v['format']}}){%- endif %}**<br/>{{v['description']}} |
-{%- for ko, vo in v['properties'] %}
-| `data.{{k}}.{{ko}}`   | **{{vo['type']}}{%if 'format' in vo %}({{vo['format']}}){%- endif %}**<br/>{{vo['description']}} |
-{%- endfor %}
-{%- endif %}
-{%- endfor %}
-{%- endif%}
-{%- endif %}
+{{ res_body | prepare_entries }}
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

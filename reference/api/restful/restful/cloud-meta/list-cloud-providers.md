@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 列出 Zilliz Cloud 上所有可用的云服务提供商。
 
-<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clouds" />
+<RestHeader method="get" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/clouds" />
 
 ---
 
@@ -34,12 +34,16 @@ curl --request GET \
 
 ```shell
 {
-    code: 200,
-    data: [
-     {
-        "cloudId": "ali",
-        "description": "alibaba cloud"
-     }
+    "code": 200,
+    "data": [
+        {
+            "cloudId": "ali",
+            "description": "alibaba cloud"
+        },
+        {
+            "cloudId": "tc",
+            "description": "tencent cloud"
+        }
     ]
 }
 ```
@@ -93,9 +97,11 @@ curl --request GET \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`  | **array**<br/>表示响应中携带的 object 数组. |
-| `data.cloudId`   | **string**<br/>云服务提供商的 ID。 |
-| `data.description`   | **string**<br/>云服务提供商的描述信息。 |
+| __code__ | integer  <br/>  |
+| __data__ | array<br/> |
+| __data[]__ | object<br/> |
+| __data[].cloudId__ | string  <br/>云服务提供商的 ID。  |
+| __data[].description__ | string  <br/>云服务提供商的描述信息。  |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

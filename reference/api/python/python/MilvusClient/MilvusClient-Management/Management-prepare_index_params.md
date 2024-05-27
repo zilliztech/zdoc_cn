@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/Management-prepare_index_params
-beta: false
-notebook: false
+slug: /python/python/Management-prepare_index_params
+beta: FALSE
+notebook: FALSE
 type: docx
 token: CAzpdAw3wo4ZqrxhjTLcEGBBn1S
 sidebar_position: 8
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -48,7 +50,7 @@ An **IndexParams** contains a list of **IndexParam** objects.
     │       └── add_index()
     ```
 
-    It offers the [**add_index()**](./Management-add_index) method to add indexes to the list.
+    It offers the **[add_index()](./Management-add_index)** method to add indexes to the list.
 
 **EXCEPTIONS:**
 

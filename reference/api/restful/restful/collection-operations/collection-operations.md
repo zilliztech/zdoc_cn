@@ -3,6 +3,7 @@ slug: /restful/collection-operations
 beta: FALSE
 notebook: FALSE
 sidebar_position: 4
+displayed_sidebar: restfulSidebar
 ---
 
 import Admonition from '@theme/Admonition';

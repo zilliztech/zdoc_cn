@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 24
 slug: /restful/insert
 title: 插入 Entity
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 在 Collection 中插入一个或多条 Entity。一次最多插入 100 条数据。如需插入大量数据，请使用 [Bulk Insert API](https://docs.zilliz.com.cn/docs/data-import)。
 
-<RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v1/vector/insert" />
+<RestHeader method="post" endpoint="https://{cluster-endpoint}/v1/vector/insert" />
 
 ---
 
@@ -86,9 +86,9 @@ curl --request POST \
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
-| `collectionName`  | **string**（必选）<br/>待插入 Entity 的 Collection 名称。|
-| `data`  | **object**（必选）<br/>Entity 对象。Entity 的键应该和 Collection 的 Schema 相匹配。|
+| __dbName__ | string  <br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。  |
+| __collectionName__ | string  <br/>待插入 Entity 的 Collection 名称。  |
+| __data__ | object<br/>Entity 对象。Entity 的键应该和 Collection 的 Schema 相匹配。 |
 
 ```json
 {
@@ -103,10 +103,11 @@ curl --request POST \
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
-| `collectionName`  | **string**（必选）<br/>待插入 Entity 的 Collection 名称。|
-| `partitionName`  | **string**<br/>当前操作的目标 Partition。可选参数，默认值为**default**。|
-| `data`  | **array**（必选）<br/>以数组来表示的多个 Entity 对象。Entity 的键应该和 Collection 的 Schema 相匹配。|
+| __dbName__ | string  <br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。  |
+| __collectionName__ | string  <br/>待插入 Entity 的 Collection 名称。  |
+| __partitionName__ | string  <br/>当前操作的目标 Partition。可选参数，默认值为**default**。  |
+| __data__ | array<br/>以数组来表示的多个 Entity 对象。Entity 的键应该和 Collection 的 Schema 相匹配。 |
+| __data[]__ | object<br/> |
 
 ## 响应
 
@@ -144,9 +145,11 @@ curl --request POST \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`    | **object**<br/>表示响应中携带的数据对象。 |
-| `data.insertCount`   | **integer**<br/>插入的 Entity 数量。 |
-| `data.insertIds`   | **array**<br/>以数组来表示的插入的 Entity ID。 |
+| __code__ | integer  <br/>  |
+| __data__ | object<br/> |
+| __data.insertCount__ | integer  <br/>插入的 Entity 数量。  |
+| __data[].insertIds__ | array<br/>以数组来表示的插入的 Entity ID。 |
+| __data[].insertIds[]__ | string  <br/>  |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

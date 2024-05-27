@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/utility-hybridts_to_unixtime
-beta: false
-notebook: false
+slug: /python/python/utility-hybridts_to_unixtime
+beta: FALSE
+notebook: FALSE
 type: docx
 token: HbMMdqtQGoQqwixsyrjcTTh0nu5
 sidebar_position: 20
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

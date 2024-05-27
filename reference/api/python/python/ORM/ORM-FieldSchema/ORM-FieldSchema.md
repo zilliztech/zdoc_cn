@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/ORM-FieldSchema
+slug: /python/python/ORM-FieldSchema
 beta: false
 notebook: false
 type: folder
 token: RV1nfeylFlUftwd2w4Wc40TYn6d
 sidebar_position: 5
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -39,7 +41,7 @@ FieldSchema(
 
     Name of the field.
 
-- **dtype** ([*DataType*](./Collections-DataType)) -
+- **dtype** (*[DataType](./Collections-DataType)*) -
 
     **[REQUIRED]**
 

@@ -3,6 +3,7 @@ slug: /restful/pipeline-operations
 beta: FALSE
 notebook: FALSE
 sidebar_position: 3
+displayed_sidebar: restfulSidebar
 ---
 
 import Admonition from '@theme/Admonition';

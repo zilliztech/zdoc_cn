@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 20
 slug: /restful/create-collection
 title: 创建 Collection
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 在集群中创建 Collection。
 
-<RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v1/vector/collections/create" />
+<RestHeader method="post" endpoint="https://{cluster-endpoint}/v1/vector/collections/create" />
 
 ---
 
@@ -75,13 +75,13 @@ curl --request POST \
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| `dbName`  | **string**<br/>待创建的 Collection 所属数据库名称。|
-| `collectionName`  | **string**（必选）<br/>待创建的 Collection 名称。 <zilliz>此参数仅适用于 Dedicated 集群。</zilliz>|
-| `dimension`  | **integer**（必选）<br/>指定 Collection 的向量维度。<br/>参数取值在 **1** 和 **32768** 之间.|
-| `metricType`  | **string**<br/>指定 Collection 的距离度量类型。<br/>默认值为 **L2**.|
-| `primaryField`  | **string**<br/>主键字段。<br/>默认值为 **id**.|
-| `vectorField`  | **string**<br/>向量字段。<br/>默认值为 **vector**.|
-| `description`  | **string**<br/>Collection 描述信息。|
+| __dbName__ | string  <br/>待创建的 Collection 所属数据库名称。  |
+| __collectionName__ | string  <br/>待创建的 Collection 名称。 <zilliz>此参数仅适用于 Dedicated 集群。</zilliz>  |
+| __dimension__ | integer  <br/>指定 Collection 的向量维度。<br/>The value ranges from 1 to 32768.  |
+| __metricType__ | string  <br/>指定 Collection 的距离度量类型。<br/>The value defaults to L2  |
+| __primaryField__ | string  <br/>主键字段。<br/>The value defaults to id  |
+| __vectorField__ | string  <br/>向量字段。<br/>The value defaults to vector  |
+| __description__ | string  <br/>Collection 描述信息。  |
 
 ## 响应
 
@@ -114,7 +114,8 @@ curl --request POST \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`    | **object**<br/>表示响应中携带的数据对象。 |
+| __code__ | integer  <br/>  |
+| __data__ | object<br/> |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

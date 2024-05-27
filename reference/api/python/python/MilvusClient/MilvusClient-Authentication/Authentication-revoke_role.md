@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/Authentication-revoke_role
-beta: false
-notebook: false
+slug: /python/python/Authentication-revoke_role
+beta: FALSE
+notebook: FALSE
 type: docx
 token: JJOId59ePoMLefxz1ChcBZ6inOh
 sidebar_position: 12
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/utility-list_bulk_insert_tasks
-beta: false
-notebook: false
+slug: /python/python/utility-list_bulk_insert_tasks
+beta: FALSE
+notebook: FALSE
 type: docx
 token: T1CGdXeVkoG2yAxkualc1jVonRb
 sidebar_position: 23
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

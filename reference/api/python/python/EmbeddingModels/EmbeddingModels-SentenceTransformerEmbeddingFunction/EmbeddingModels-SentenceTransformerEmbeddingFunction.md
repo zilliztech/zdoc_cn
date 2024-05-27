@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/EmbeddingModels-SentenceTransformerEmbeddingFunction
+slug: /python/python/EmbeddingModels-SentenceTransformerEmbeddingFunction
 beta: false
 notebook: false
 type: folder
 token: FRtcfXVZ7lXohcdc0Q6cbKEJn1c
-sidebar_position: 4
+sidebar_position: 6
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 17
 slug: /restful/list-pipelines
 title: 查看 Pipeline 列表
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 列出指定项目中的所有 Pipeline。
 
-<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/pipelines" />
+<RestHeader method="get" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines" />
 
 ---
 
@@ -102,11 +102,7 @@ curl --request GET \
 
 ### 参数
 
-- 查询参数
-
-    | 参数名称          | 参数说明                                                                               |
-    |------------------|-------------------------------------------------------------------------------------------|
-    | `projectId`  | **integer**（必选）<br/>当前操作的目标项目 ID。|
+- 无查询参数。
 
 - 无路径参数。
 
@@ -147,7 +143,9 @@ curl --request GET \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`  | **array**<br/>表示响应中携带的  数组. |
+| __code__ | string  <br/>  |
+| __data__ | array<br/> |
+| __data[]__ | object<br/> |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

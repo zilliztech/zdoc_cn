@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/utility-mkts_from_hybridts
-beta: false
-notebook: false
+slug: /python/python/utility-mkts_from_hybridts
+beta: FALSE
+notebook: FALSE
 type: docx
 token: GRarduHPSoFY3Yx9EWRcdcTfn1g
 sidebar_position: 35
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

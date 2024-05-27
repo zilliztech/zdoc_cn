@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 26
 slug: /restful/search
 title: 搜索
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 在 Collection 的向量列上执行相似性搜索。
 
-<RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v1/vector/search" />
+<RestHeader method="post" endpoint="https://{cluster-endpoint}/v1/vector/search" />
 
 ---
 
@@ -72,18 +72,12 @@ curl --request POST \
 {
     "dbName": "string",
     "collectionName": "string",
-    "partitionNames": [
-        {}
-    ],
+    "partitionNames": [],
     "filter": "string",
     "limit": "integer",
     "offset": "integer",
-    "outputFields": [
-        {}
-    ],
-    "vector": [
-        {}
-    ],
+    "outputFields": [],
+    "vector": [],
     "params": {
         "radius": "number",
         "range_filter": "number"
@@ -93,17 +87,20 @@ curl --request POST \
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
-| `collectionName`  | **string**（必选）<br/>目标 Collection 名称。|
-| `partitionNames`  | **array**<br/>当前操作的目标 Partition。可选参数，默认值为**default**。|
-| `filter`  | **string**<br/>用于搜索的过滤条件。|
-| `limit`  | **integer**<br/>要返回的最大 Entity 数。<br/>本参数值和 `offset` 参数值的和不能大于 **1024**。<br/>默认值为 **100**.<br/>参数取值在 **1** 和 **100** 之间.|
-| `offset`  | **integer**<br/>表示从第几个 Entity 开始返回搜索结果。<br/>本参数值和 `limit` 参数值的和不能大于 **1024**。<br/>最大值为 **1024**.|
-| `outputFields`  | **array**<br/>返回字段，以数组形式表示。|
-| `vector`  | **array (number \[float32\])**（必选）<br/>浮点类型的查询向量。|
-| `params`  | **object**<br/>查询参数|
-| `params.radius`  | **number(float64)**<br/>最不相似近邻在向量空间中所处方位角度。通过指定该参数来指定检索范围。|
-| `params.range_filter`  | **number(float64)**<br/>和`radius`参数一同使用来过滤出落指定查询向量在指定范围内的近邻。|
+| __dbName__ | string  <br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。  |
+| __collectionName__ | string  <br/>目标 Collection 名称。  |
+| __partitionNames__ | array<br/>当前操作的目标 Partition。可选参数，默认值为**default**。 |
+| __partitionNames[]__ | string  <br/>partitionName  |
+| __filter__ | string  <br/>用于搜索的过滤条件。  |
+| __limit__ | integer  <br/>要返回的最大 Entity 数。<br/>本参数值和 `offset` 参数值的和不能大于 **1024**。<br/>The value defaults to 100<br/>The value ranges from 1 to 100.  |
+| __offset__ | integer  <br/>表示从第几个 Entity 开始返回搜索结果。<br/>本参数值和 `limit` 参数值的和不能大于 **1024**。<br/>The value is less than or equal to 1024.  |
+| __outputFields__ | array<br/>返回字段，以数组形式表示。 |
+| __outputFields[]__ | string  <br/><br/>The value defaults to id, distance  |
+| __vector__ | array<br/>浮点类型的查询向量。 |
+| __vector[]__ | number (float32) <br/>  |
+| __params__ | object<br/>查询参数 |
+| __params.radius__ | number (float64) <br/>最不相似近邻在向量空间中所处方位角度。通过指定该参数来指定检索范围。  |
+| __params.range_filter__ | number (float64) <br/>和`radius`参数一同使用来过滤出落指定查询向量在指定范围内的近邻。  |
 
 ## 响应
 
@@ -138,7 +135,9 @@ curl --request POST \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`  | **array**<br/>表示响应中携带的 object 数组. |
+| __code__ | integer  <br/>  |
+| __data__ | array<br/> |
+| __data[]__ | object<br/> |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

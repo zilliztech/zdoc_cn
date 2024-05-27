@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/DataImport-LocalBulkWriter
+slug: /python/python/DataImport-LocalBulkWriter
 beta: false
 notebook: false
 type: folder
 token: SzykfW0E7lSK4sdsvhOcAhkan0b
 sidebar_position: 3
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -42,7 +44,7 @@ writer = LocalBulkWriter(
 
 **PARAMETERS:**
 
-- **schema** ([*CollectionSchema*](./ORM-CollectionSchema)) -
+- **schema** (*[CollectionSchema](./ORM-CollectionSchema)*) -
 
     **[REQUIRED]**
 
@@ -76,7 +78,7 @@ writer = LocalBulkWriter(
 
     </Admonition>
 
-- **file_type** ([*BulkFileType*](./DataImport-BulkFileType)) -
+- **file_type** (*[BulkFileType](./DataImport-BulkFileType)*) -
 
     The type of the output file.
 

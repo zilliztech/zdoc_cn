@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/Collections-create_collection
-beta: false
-notebook: false
+slug: /python/python/Collections-create_collection
+beta: FALSE
+notebook: FALSE
 type: docx
 token: TziHdCu4VoURrfxAMsUcsRhQnub
 sidebar_position: 3
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -57,7 +59,7 @@ create_collection(
 
     This parameter is designed for the quick setup of a collection and will ignored if the **schema** is not **None** and a field in the schema has its **is_primary** set to **True**.
 
-- **id_type** ([*DataType*](./Collections-DataType)) -
+- **id_type** (*[DataType](./Collections-DataType)*) -
 
     The data type of the primary field in this collection.
 

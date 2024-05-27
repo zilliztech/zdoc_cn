@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/EmbeddingModels-OpenAIEmbeddingFunction
+slug: /python/python/EmbeddingModels-OpenAIEmbeddingFunction
 beta: false
 notebook: false
 type: folder
 token: E4slfDkKPlWEmXdq36GcPtAKnMg
-sidebar_position: 3
+sidebar_position: 5
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -61,8 +63,8 @@ OpenAIEmbeddingFunction(
 from pymilvus import model
 
 openai_ef = model.dense.OpenAIEmbeddingFunction(
-    model_name='text-embedding-3-large', *# Specify the model name*
-    dimensions=512 *# Set the embedding dimensionality according to MRL feature.*
+    model_name='text-embedding-3-large', # Specify the model name
+    dimensions=512 # Set the embedding dimensionality according to MRL feature.
 )
 ```
 

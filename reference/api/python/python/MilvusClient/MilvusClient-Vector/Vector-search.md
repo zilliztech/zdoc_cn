@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/Vector-search
-beta: false
-notebook: false
+slug: /python/python/Vector-search
+beta: FALSE
+notebook: FALSE
 type: docx
 token: D74JdcitKobd7cxNdDdcGAz6nuf
 sidebar_position: 5
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -98,6 +100,12 @@ search(
         - **group_by_field** (*str*)
 
             Groups search results by a specified field to ensure diversity and avoid returning multiple results from the same group.
+
+        - **level** (*int*)
+
+            Zilliz Cloud uses a unified parameter to simplify search parameter tuning instead of leaving you to work with a bunch of search parameters specific to various index algorithms.
+
+            The value defaults to **1**, and ranges from **1** to **5**. Increasing the value results in a higher recall rate with degraded search performance.
 
     For details on other applicable search parameters, read [AUTOINDEX Explained](https://docs.zilliz.com/docs/autoindex-explained) to get more.
 

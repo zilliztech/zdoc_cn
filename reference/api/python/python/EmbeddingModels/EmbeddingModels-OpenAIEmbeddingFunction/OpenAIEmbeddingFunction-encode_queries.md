@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/OpenAIEmbeddingFunction-encode_queries
-beta: false
-notebook: false
+slug: /python/python/OpenAIEmbeddingFunction-encode_queries
+beta: FALSE
+notebook: FALSE
 type: docx
 token: Sf9UdzL3rolQNAxDm8Ecga3snhg
 sidebar_position: 2
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -49,8 +51,8 @@ A list where each element is a NumPy array.
 from pymilvus import model
 
 openai_ef = model.dense.OpenAIEmbeddingFunction(
-    model_name='text-embedding-3-large', *# Specify the model name*
-    dimensions=512 *# Set the embedding dimensionality according to MRL feature.*
+    model_name='text-embedding-3-large', # Specify the model name
+    dimensions=512 # Set the embedding dimensionality according to MRL feature.
 )
 
 queries = ["When was artificial intelligence founded", 

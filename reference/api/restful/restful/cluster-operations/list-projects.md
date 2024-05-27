@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 10
 slug: /restful/list-projects
 title: 查看项目列表
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 查看当前云地域中的所有项目。
 
-<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/projects" />
+<RestHeader method="get" endpoint="https://{cluster-endpoint}/v1/projects" />
 
 ---
 
@@ -36,11 +36,12 @@ curl --request GET \
 {
     "code": 200,
     "data": [
-       {
-          "instanceCount": 1,
-          "projectId": "proj-********************",
-          "projectName": "test"
-       }
+        {
+            "createTimeMilli": 1687859137000,
+            "instanceCount": 1,
+            "projectId": "proj-**********************",
+            "projectName": "Default Project"
+        }
     ]
 }
 ```
@@ -95,10 +96,12 @@ curl --request GET \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`  | **array**<br/>表示响应中携带的 object 数组. |
-| `data.instanceCount`   | **integer**<br/>当前项目中的集群数量。 |
-| `data.projectId`   | **string**<br/>当前项目 ID。 |
-| `data.projectName`   | **string**<br/>当前项目名称。 |
+| __code__ | integer  <br/>  |
+| __data__ | array<br/> |
+| __data[]__ | object<br/> |
+| __data[].instanceCount__ | integer  <br/>当前项目中的集群数量。  |
+| __data[].projectId__ | string  <br/>当前项目 ID。  |
+| __data[].projectName__ | string  <br/>当前项目名称。  |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

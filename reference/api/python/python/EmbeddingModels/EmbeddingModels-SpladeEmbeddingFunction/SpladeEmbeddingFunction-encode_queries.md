@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/SpladeEmbeddingFunction-encode_queries
-beta: false
-notebook: false
+slug: /python/python/SpladeEmbeddingFunction-encode_queries
+beta: FALSE
+notebook: FALSE
 type: docx
 token: S9zPdiLkpokjfkxfZ68cWIFynnd
 sidebar_position: 2
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

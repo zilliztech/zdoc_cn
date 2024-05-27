@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/Authentication-create_user
-beta: false
-notebook: false
+slug: /python/python/Authentication-create_user
+beta: FALSE
+notebook: FALSE
 type: docx
 token: BDupd28JqoNY9HxVOTfcv86enRe
 sidebar_position: 2
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

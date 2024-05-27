@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/ORM-Role
+slug: /python/python/ORM-Role
 beta: false
 notebook: false
 type: folder
 token: O8YAfe5P0lZ0TZdUOqNcDHEunCe
 sidebar_position: 7
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

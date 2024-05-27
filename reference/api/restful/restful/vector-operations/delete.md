@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 23
 slug: /restful/delete
 title: 删除 Entity
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 从 Collection 中删除一个或多条数据。
 
-<RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v1/vector/delete" />
+<RestHeader method="post" endpoint="https://{cluster-endpoint}/v1/vector/delete" />
 
 ---
 
@@ -102,25 +102,24 @@ curl --request POST \
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
-| `collectionName`  | **string**（必选）<br/>目标 Collection 名称。|
-| `id`  | **string**（必选）<br/>目标 Entity ID。|
+| __dbName__ | string  <br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。  |
+| __collectionName__ | string  <br/>目标 Collection 名称。  |
+| __id__ | string  <br/>目标 Entity ID。  |
 
 ```json
 {
     "dbName": "string",
     "collectionName": "string",
-    "id": [
-        {}
-    ]
+    "id": []
 }
 ```
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
-| `collectionName`  | **string**（必选）<br/>目标 Collection 名称。|
-| `id`  | **array**（必选）<br/>一组 Entity ID。|
+| __dbName__ | string  <br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。  |
+| __collectionName__ | string  <br/>目标 Collection 名称。  |
+| __id__ | array<br/>一组 Entity ID。 |
+| __id[]__ | string  <br/>  |
 
 ```json
 {
@@ -132,25 +131,24 @@ curl --request POST \
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
-| `collectionName`  | **string**（必选）<br/>目标 Collection 名称。|
-| `id`  | **integer**（必选）<br/>目标 Entity ID。|
+| __dbName__ | string  <br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。  |
+| __collectionName__ | string  <br/>目标 Collection 名称。  |
+| __id__ | integer  <br/>目标 Entity ID。  |
 
 ```json
 {
     "dbName": "string",
     "collectionName": "string",
-    "id": [
-        {}
-    ]
+    "id": []
 }
 ```
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
-| `collectionName`  | **string**（必选）<br/>目标 Collection 名称。|
-| `id`  | **array**（必选）<br/>一组 Entity ID。|
+| __dbName__ | string  <br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。  |
+| __collectionName__ | string  <br/>目标 Collection 名称。  |
+| __id__ | array<br/>一组 Entity ID。 |
+| __id[]__ | integer  <br/>  |
 
 ## 响应
 
@@ -183,7 +181,8 @@ curl --request POST \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`    | **object**<br/>表示响应中携带的数据对象。 |
+| __code__ | integer  <br/>  |
+| __data__ | object<br/> |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 2
 slug: /restful/list-clusters
 title: 查看集群
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 列出指定云区域中的所有集群。
 
-<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters" />
+<RestHeader method="get" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/clusters" />
 
 ---
 
@@ -55,7 +55,6 @@ curl --request GET \
     |------------------|-------------------------------------------------------------------------------------------|
     | `pageSize`  | **integer**<br/>每页返回的记录数。|
     | `current`  | **integer**<br/>当前页码。|
-    | `projectId`  | **string**<br/>当前集群所属项目 ID。|
 
 - 无路径参数。
 
@@ -80,7 +79,6 @@ curl --request GET \
         "pageSize": "integer",
         "clusters": [
             {
-                "projectId": "string",
                 "clusterId": "string",
                 "clusterName": "string",
                 "description": "string",
@@ -113,22 +111,23 @@ curl --request GET \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`    | **object**<br/>表示响应中携带的数据对象。 |
-| `data.count`   | **integer**<br/>返回的集群总数。 |
-| `data.currentPage`   | **integer**<br/>当前页码。 |
-| `data.pageSize`   | **integer**<br/>结果中每页显示的集群数。 |
-| `data.clusters`   | **array**<br/>集群信息，以数组形式返回。 |
-| `data.clusters[].projectId`   | **string**<br/>当前集群所属的项目 ID。 |
-| `data.clusters[].clusterId`   | **string**<br/>集群 ID。 |
-| `data.clusters[].clusterName`   | **string**<br/>集群名称。 |
-| `data.clusters[].description`   | **string**<br/>（可选）集群描述信息。 |
-| `data.clusters[].regionId`   | **string**<br/>集群所在的地域 ID。 |
-| `data.clusters[].clusterType`   | **string**<br/>集群使用的 CU 类型。有效值：**性能型**、 **容量型**和**经济型**。 |
-| `data.clusters[].cuSize`   | **integer**<br/>集群使用的 CU 大小。 |
-| `data.clusters[].status`   | **string**<br/>集群当前状态。有效值：**创建中**、**运行中**、**挂起中**和**恢复中**。 |
-| `data.clusters[].connectAddress`   | **string**<br/>集群的公共 Endpoint。您可以通过此地址从公网连接到集群。 |
-| `data.clusters[].privateLinkAddress`   | **string**<br/>集群的私有 Endpoint。您可以为集群设置私有链接，允许同一云区域中的 VPS 访问集群。 |
-| `data.clusters[].createTime`   | **string**<br/>集群创建时间 |
+| __code__ | integer  <br/>  |
+| __data__ | object<br/> |
+| __data.count__ | integer  <br/>返回的集群总数。  |
+| __data.currentPage__ | integer  <br/>当前页码。  |
+| __data.pageSize__ | integer  <br/>结果中每页显示的集群数。  |
+| __data[].clusters__ | array<br/>集群信息，以数组形式返回。 |
+| __data[].clusters[]__ | object<br/> |
+| __data[].clusters[].clusterId__ | string  <br/>集群 ID。  |
+| __data[].clusters[].clusterName__ | string  <br/>集群名称。  |
+| __data[].clusters[].description__ | string  <br/>（可选）集群描述信息。  |
+| __data[].clusters[].regionId__ | string  <br/>集群所在的地域 ID。  |
+| __data[].clusters[].clusterType__ | string  <br/>集群使用的 CU 类型。有效值：**性能型**、 **容量型**和**经济型**。  |
+| __data[].clusters[].cuSize__ | integer  <br/>集群使用的 CU 大小。  |
+| __data[].clusters[].status__ | string  <br/>集群当前状态。有效值：**创建中**、**运行中**、**挂起中**和**恢复中**。  |
+| __data[].clusters[].connectAddress__ | string  <br/>集群的公共 Endpoint。您可以通过此地址从公网连接到集群。  |
+| __data[].clusters[].privateLinkAddress__ | string  <br/>集群的私有 Endpoint。您可以为集群设置私有链接，允许同一云区域中的 VPS 访问集群。  |
+| __data[].clusters[].createTime__ | string  <br/>集群创建时间  |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

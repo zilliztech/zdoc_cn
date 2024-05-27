@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/BulkImport-bulk_import
-beta: false
-notebook: false
+slug: /python/python/BulkImport-bulk_import
+beta: FALSE
+notebook: FALSE
 type: docx
 token: S9dyd4UwhoqOPux411KcbafDnde
 sidebar_position: 1
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -144,14 +146,14 @@ res = bulk_import(
 
 print(res.json())
 
-*# Output*
-*#*
-*# {*
-*#     "code": 200,*
-*#     "data": {*
-*#         "jobId": "9d0bc230-6b99-4739-a872-0b91cfe2515a"*
-*#     }*
-*# }*
+# Output
+#
+# {
+#     "code": 200,
+#     "data": {
+#         "jobId": "9d0bc230-6b99-4739-a872-0b91cfe2515a"
+#     }
+# }
 ```
 
 For details, refer to [Import Data (SDK)](https://docs.zilliz.com/docs/import-data-via-sdks) in our user guides.

@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/EmbeddingModels-BM25EmbeddingFunction
+slug: /python/python/EmbeddingModels-BM25EmbeddingFunction
 beta: false
 notebook: false
 type: folder
 token: LzlXfa9Tflwxi0dGbOWc7HvTnNf
 sidebar_position: 2
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -63,11 +65,11 @@ BM25EmbeddingFunction(
 ## Examples
 
 ```python
-**from** pymilvus.model.sparse.bm25.tokenizers **import** build_default_analyzer
-**from** pymilvus.model.sparse **import** BM25EmbeddingFunction
+from pymilvus.model.sparse.bm25.tokenizers import build_default_analyzer
+from pymilvus.model.sparse import BM25EmbeddingFunction
 
-*# there are some built-in analyzers for several languages, now we use 'en' for English.*
-analyzer **=** build_default_analyzer(language**=**"en")
+# there are some built-in analyzers for several languages, now we use 'en' for English.
+analyzer = build_default_analyzer(language="en")
 
 corpus = [
     "Artificial intelligence was founded as an academic discipline in 1956.",
@@ -75,7 +77,7 @@ corpus = [
     "Born in Maida Vale, London, Turing was raised in southern England.",
 ]
 
-bm25_ef **=** BM25EmbeddingFunction(analyzer)
+bm25_ef = BM25EmbeddingFunction(analyzer)
 ```
 
 

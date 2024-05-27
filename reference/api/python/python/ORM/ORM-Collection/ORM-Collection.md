@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/ORM-Collection
+slug: /python/python/ORM-Collection
 beta: false
 notebook: false
 type: folder
 token: ZGbAfWoUjl0Z3xdgyItc8wYXngf
 sidebar_position: 1
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -39,7 +41,7 @@ Collection(
 
     The name of the collection to create.
 
-- **schema** ([*CollectionSchema*](./ORM-CollectionSchema)) - 
+- **schema** (*[CollectionSchema](./ORM-CollectionSchema)*) - 
 
     The schema used to create the collection. 
 

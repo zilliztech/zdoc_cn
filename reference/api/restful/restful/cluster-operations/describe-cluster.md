@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 4
 slug: /restful/describe-cluster
 title: 查看集群详情
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 描述集群的详细信息。
 
-<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/{CLUSTER_ID}" />
+<RestHeader method="get" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/clusters/{CLUSTER_ID}" />
 
 ---
 
@@ -36,19 +36,21 @@ curl --request GET \
 {
     "code": 200,
     "data": {
-        "clusterId": "string",
-        "clusterName": "string",
-        "description": "string",
-        "regionId": "string",
-        "clusterType": "string",
-        "cuSize": "string",
-        "status": "string",
-        "connectAddress": "string",
-        "privateLinkAddress": "string",
-        "createTime": "string",
-        "storageSize": "string",
-        "snapshotNumber": "string",
-        "createProgress": "string"
+        "clusterId": "in05-***************",
+        "clusterName": "Serverless-01",
+        "description": "",
+        "regionId": "ali-cn-hangzhou",
+        "clusterType": "",
+        "plan": "Serverless",
+        "cuSize": 0,
+        "status": "RUNNING",
+        "connectAddress": "https://in05-***************.*.api.ali-cn-hangzhou.cloud.zilliz.com.cn",
+        "privateLinkAddress": "",
+        "createTime": "2024-05-27T10:36:09Z",
+        "storageSize": 0,
+        "snapshotNumber": 0,
+        "createProgress": 100,
+        "projectId": "proj-**********************"
     }
 }
 ```
@@ -82,7 +84,6 @@ curl --request GET \
 {
     "code": "integer",
     "data": {
-        "projectId": "string",
         "clusterId": "string",
         "clusterName": "string",
         "description": "string",
@@ -116,21 +117,21 @@ curl --request GET \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`    | **object**<br/>表示响应中携带的数据对象。 |
-| `data.projectId`   | **string**<br/>当前集群所属的项目 ID。 |
-| `data.clusterId`   | **string**<br/>集群 ID。 |
-| `data.clusterName`   | **string**<br/>集群名称。 |
-| `data.description`   | **string**<br/>（可选）集群描述信息。 |
-| `data.regionId`   | **string**<br/>集群所在的地域 ID。 |
-| `data.clusterType`   | **string**<br/>集群使用的 CU 类型。 |
-| `data.cuSize`   | **integer**<br/>集群使用的 CU 大小。 |
-| `data.status`   | **string**<br/>集群当前状态。有效值：**创建中**、**运行中**、**挂起中**和**恢复中**。 |
-| `data.connectAddress`   | **string**<br/>集群的公共 Endpoint。您可以通过此地址从公网连接到集群。 |
-| `data.privateLinkAddress`   | **string**<br/>集群的私有 Endpoint。您可以为集群设置私有链接，允许同一云区域中的 VPS 访问您的集群。 |
-| `data.createTime`   | **string**<br/>集群创建时间。 |
-| `data.storageSize`   | **integer(sint64)**<br/>集群的存储容量。 |
-| `data.snapshotNumber`   | **integer**<br/>集群的快照数量。 |
-| `data.createProgress`   | **integer**<br/>集群创建进程。 |
+| __code__ | integer  <br/>  |
+| __data__ | object<br/> |
+| __data.clusterId__ | string  <br/>集群 ID。  |
+| __data.clusterName__ | string  <br/>集群名称。  |
+| __data.description__ | string  <br/>（可选）集群描述信息。  |
+| __data.regionId__ | string  <br/>集群所在的地域 ID。  |
+| __data.clusterType__ | string  <br/>集群使用的 CU 类型。  |
+| __data.cuSize__ | integer  <br/>集群使用的 CU 大小。  |
+| __data.status__ | string  <br/>集群当前状态。有效值：**创建中**、**运行中**、**挂起中**和**恢复中**。  |
+| __data.connectAddress__ | string  <br/>集群的公共 Endpoint。您可以通过此地址从公网连接到集群。  |
+| __data.privateLinkAddress__ | string  <br/>集群的私有 Endpoint。您可以为集群设置私有链接，允许同一云区域中的 VPS 访问您的集群。  |
+| __data.createTime__ | string  <br/>集群创建时间。  |
+| __data.storageSize__ | integer (sint64) <br/>集群的存储容量。  |
+| __data.snapshotNumber__ | integer  <br/>集群的快照数量。  |
+| __data.createProgress__ | integer  <br/>集群创建进程。  |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/LocalBulkWriter-commit
-beta: false
-notebook: false
+slug: /python/python/LocalBulkWriter-commit
+beta: FALSE
+notebook: FALSE
 type: docx
 token: EtBDdoGaFo3bOExKxCHcKgpenib
 sidebar_position: 2
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

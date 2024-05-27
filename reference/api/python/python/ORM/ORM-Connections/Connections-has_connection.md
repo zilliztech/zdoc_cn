@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/Connections-has_connection
-beta: false
-notebook: false
+slug: /python/python/Connections-has_connection
+beta: FALSE
+notebook: FALSE
 type: docx
 token: XeZwdeK64oGD8rx9DA3ciqNinnh
 sidebar_position: 6
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/BM25EmbeddingFunction-fit
-beta: false
-notebook: false
+slug: /python/python/BM25EmbeddingFunction-fit
+beta: FALSE
+notebook: FALSE
 type: docx
 token: Gj5bdBIMToImOvxXHIlcqFxjnTf
 sidebar_position: 4
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

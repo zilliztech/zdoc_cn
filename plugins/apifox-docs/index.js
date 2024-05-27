@@ -11,7 +11,7 @@ module.exports = function (context, options) {
                 .command('fetch-apifox-docs')
                 .option('-s, --specifications <specifications>', 'Specifications of the API')
                 .option('-l, --lang <lang>', 'Language of the API Reference', 'en-US')
-                .option('-o, --output_path <target_path>', 'Target path of the API Reference', 'reference/api/restful')
+                .option('-o, --output_path <target_path>', 'Target path of the API Reference', 'reference/api/restful/restful')
                 .option('-i, --strings <strings>', 'Localization strings')
                 .option('-g, --generate', 'Generate localization strings')
                 .action((opts) => {

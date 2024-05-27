@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 14
 slug: /restful/describe-pipeline
 title: 查看 Pipeline 详情
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 通过 Pipeline ID 获取详情。
 
-<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/pipelines/{PIPELINE_ID}" />
+<RestHeader method="get" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/{PIPELINE_ID}" />
 
 ---
 
@@ -91,7 +91,52 @@ curl --request GET \
 
 ```json
 {
-    "code": "integer"
+    "code": "integer",
+    "data": {
+        "oneOf": [
+            {
+                "pipelineId": "integer",
+                "name": "string",
+                "type": "string",
+                "description": "string",
+                "status": "string",
+                "clusterID": "string",
+                "collectionName": "string"
+            },
+            {
+                "pipelineId": "integer",
+                "name": "string",
+                "type": "string",
+                "description": "string",
+                "status": "string",
+                "functions": [
+                    {
+                        "name": "string",
+                        "action": "string",
+                        "inputField": "string",
+                        "clusterID": "string",
+                        "collectionName": "string"
+                    }
+                ]
+            },
+            {
+                "pipelineId": "integer",
+                "name": "string",
+                "type": "string",
+                "description": "string",
+                "status": "string",
+                "functions": [
+                    {
+                        "name": "string",
+                        "action": "string",
+                        "inputField": "string"
+                    }
+                ],
+                "clusterID": "string",
+                "collectionName": "string"
+            }
+        ]
+    }
 }
 ```
 
@@ -111,6 +156,8 @@ curl --request GET \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
+| __code__ | integer  <br/>  |
+| __data__ | object | object | object<br/> |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

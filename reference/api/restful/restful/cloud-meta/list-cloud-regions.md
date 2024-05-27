@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 1
 slug: /restful/list-cloud-regions
 title: 查看云服务区域
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 列出指定云服务提供商的所有可用云区域。
 
-<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/regions" />
+<RestHeader method="get" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/regions" />
 
 ---
 
@@ -39,8 +39,8 @@ curl --request GET \
     "code": 200,
     "data": [
         {
-            "apiBaseUrl": "https://api.ali-cn-hangzhou.cloud.zilliz.com.cn",
             "cloudId": "ali",
+            "domain": "*.*.api.ali-cn-hangzhou.cloud.zilliz.com.cn",
             "regionId": "ali-cn-hangzhou"
         }
     ]
@@ -79,7 +79,7 @@ curl --request GET \
         {
             "cloudId": "string",
             "regionId": "string",
-            "apiBaseUrl": "string"
+            "domain": "string"
         }
     ]
 }
@@ -101,10 +101,12 @@ curl --request GET \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`  | **array**<br/>表示响应中携带的 object 数组. |
-| `data.cloudId`   | **string**<br/>云服务提供商的 ID。 |
-| `data.regionId`   | **string**<br/>可用云区域的 ID。 |
-| `data.apiBaseUrl`   | **string**<br/>公共 API Endpoint 的 Base URL。 |
+| __code__ | integer  <br/>  |
+| __data__ | array<br/> |
+| __data[]__ | object<br/> |
+| __data[].cloudId__ | string  <br/>云服务提供商的 ID。  |
+| __data[].regionId__ | string  <br/>可用云区域的 ID。  |
+| __data[].domain__ | string  <br/>Zilliz Cloud Open API 端点域名。  |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

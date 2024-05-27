@@ -1,12 +1,16 @@
 ---
-displayed_sidebar: nodejsSidebar
-sidebar_position: 0
-slug: /nodejs/client
+slug: /node/Client
+beta: false
+notebook: false
+type: folder
+token: YIWifhm0HlwT5ldC40fc8tAOnXd
+sidebar_position: 2
+displayed_sidebar: nodeSidebar
 ---
 
 # Client
 
-如下是 Zilliz Cloud Node.js SDK 的 Client 部分的 API 文档。
+Classes and methods for you to manage the MilvusClient instances.
 
 import DocCardList from '@theme/DocCardList';
 

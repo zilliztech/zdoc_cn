@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 8
 slug: /restful/suspend-cluster
 title: 挂起集群
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 挂起集群。本操作会中断集群运行，不会影响集群数据完整性。
 
-<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/{CLUSTER_ID}/suspend" />
+<RestHeader method="post" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/clusters/{CLUSTER_ID}/suspend" />
 
 ---
 
@@ -93,9 +93,10 @@ curl --request POST \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`    | **object**<br/>表示响应中携带的数据对象。 |
-| `data.clusterId`   | **string**<br/>集群 ID。 |
-| `data.prompt`   | **string**<br/>操作成功的回显信息。 |
+| __code__ | integer  <br/>  |
+| __data__ | object<br/> |
+| __data.clusterId__ | string  <br/>集群 ID。  |
+| __data.prompt__ | string  <br/>操作成功的回显信息。  |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

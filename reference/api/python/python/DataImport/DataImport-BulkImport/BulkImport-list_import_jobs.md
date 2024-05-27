@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/BulkImport-list_import_jobs
-beta: false
-notebook: false
+slug: /python/python/BulkImport-list_import_jobs
+beta: FALSE
+notebook: FALSE
 type: docx
 token: P0vxdEVBPoTNKLxkKIzcznlYnNc
 sidebar_position: 3
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

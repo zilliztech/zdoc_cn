@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/ORM-Partition
+slug: /python/python/ORM-Partition
 beta: false
 notebook: false
 type: folder
 token: Ed0CftM6Mlb5e4dUYApc9syJnDb
 sidebar_position: 6
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

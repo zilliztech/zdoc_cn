@@ -1,21 +1,23 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/OpenAIEmbeddingFunction-__call__
-beta: false
-notebook: false
+slug: /python/python/OpenAIEmbeddingFunction-__call__
+beta: FALSE
+notebook: FALSE
 type: docx
 token: FieTdj7WDoVbBVxp5xjcqO02nrh
 sidebar_position: 4
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';
 
 
-# __call__()
+# \_\_call\_\_()
 
 This operation in [OpenAIEmbeddingFunction](./EmbeddingModels-OpenAIEmbeddingFunction) takes a list of text strings and directly encodes them into vector embeddings.
 
-The **__call__()** method of OpenAIEmbeddingFunction shares the same functionality as [encode_documents()](./OpenAIEmbeddingFunction-encode_documents) and [encode_queries()](./OpenAIEmbeddingFunction-encode_queries).
+The **\_\_call\_\_()** method of OpenAIEmbeddingFunction shares the same functionality as [encode_documents()](./OpenAIEmbeddingFunction-encode_documents) and [encode_queries()](./OpenAIEmbeddingFunction-encode_queries).
 
 ## Request syntax
 
@@ -55,8 +57,8 @@ A list where each element is a NumPy array.
 from pymilvus import model
 
 openai_ef = model.dense.OpenAIEmbeddingFunction(
-    model_name='text-embedding-3-large', *# Specify the model name*
-    dimensions=512 *# Set the embedding dimensionality according to MRL feature.*
+    model_name='text-embedding-3-large', # Specify the model name
+    dimensions=512 # Set the embedding dimensionality according to MRL feature.
 )
 
 docs = [

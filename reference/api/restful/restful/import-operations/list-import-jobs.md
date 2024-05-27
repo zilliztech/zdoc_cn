@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 13
 slug: /restful/list-import-jobs
 title: 查看数据导入任务
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 列出指定集群上的数据导入任务。
 
-<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import/list" />
+<RestHeader method="get" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/vector/collections/import/list" />
 
 ---
 
@@ -39,7 +39,7 @@ curl --request GET \
 
     | 参数名称          | 参数说明                                                                               |
     |------------------|-------------------------------------------------------------------------------------------|
-    | `CLUSTER_ID`  | **string**（必选）<br/>Zilliz Cloud 集群 ID。|
+    | `clusterId`  | **string**（必选）<br/>Zilliz Cloud 集群 ID。|
     | `pageSize`  | **string**<br/>每次返回的导入任务数量。|
     | `currentPage`  | **string**<br/>当前页码。|
 
@@ -91,14 +91,16 @@ curl --request GET \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`    | **object**<br/>表示响应中携带的数据对象。 |
-| `data.count`   | **string**<br/>当前响应中包含的导入任务数量。 |
-| `data.currentPage`   | **string**<br/>当前页码。 |
-| `data.pageSize`   | **string**<br/>每次返回的最大记录数量。 |
-| `data.records`   | **array**<br/> |
-| `data.records[].collectionName`   | **string**<br/>当前导入任务对应的目标 Collection 名称。 |
-| `data.records[].jobId`   | **string**<br/>当前导入任务的 ID。 |
-| `data.records[].state`   | **string**<br/>当前导入任务的状态。可能的取值有： <b>ImportRunning</b>、<b>ImportCompleted</b> 和 <b>ImportFailed</b>. |
+| __code__ | string  <br/>  |
+| __data__ | object<br/> |
+| __data.count__ | string  <br/>当前响应中包含的导入任务数量。  |
+| __data.currentPage__ | string  <br/>当前页码。  |
+| __data.pageSize__ | string  <br/>每次返回的最大记录数量。  |
+| __data[].records__ | array<br/> |
+| __data[].records[]__ | object<br/> |
+| __data[].records[].collectionName__ | string  <br/>当前导入任务对应的目标 Collection 名称。  |
+| __data[].records[].jobId__ | string  <br/>当前导入任务的 ID。  |
+| __data[].records[].state__ | string  <br/>当前导入任务的状态。可能的取值有： <b>ImportRunning</b>、<b>ImportCompleted</b> 和 <b>ImportFailed</b>.  |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

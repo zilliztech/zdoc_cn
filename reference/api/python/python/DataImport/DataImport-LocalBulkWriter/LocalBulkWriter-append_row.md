@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/LocalBulkWriter-append_row
-beta: false
-notebook: false
+slug: /python/python/LocalBulkWriter-append_row
+beta: FALSE
+notebook: FALSE
 type: docx
 token: WCxIdVwCpoIaMUxbabWcSRCkn2g
 sidebar_position: 1
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

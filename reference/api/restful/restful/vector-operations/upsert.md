@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 25
 slug: /restful/upsert
 title: Upsert Entity
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 插入和更新 Collection 中的记录。
 
-<RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v1/vector/upsert" />
+<RestHeader method="post" endpoint="https://{cluster-endpoint}/v1/vector/upsert" />
 
 ---
 
@@ -86,9 +86,9 @@ curl --request POST \
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
-| `collectionName`  | **string**（必选）<br/>插入操作的目标 Collection。|
-| `data`  | **object**（必选）<br/>一个 Entity 对象。注意，每个键值对中的键必须严格对应 Collection 的 Schema。|
+| __dbName__ | string  <br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。  |
+| __collectionName__ | string  <br/>插入操作的目标 Collection。  |
+| __data__ | object<br/>一个 Entity 对象。注意，每个键值对中的键必须严格对应 Collection 的 Schema。 |
 
 ```json
 {
@@ -103,10 +103,11 @@ curl --request POST \
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
-| `collectionName`  | **string**（必选）<br/>插入操作的目标 Collection。|
-| `partitionName`  | **string**<br/>当前操作的目标 Partition。可选参数，默认值为**default**。|
-| `data`  | **array**（必选）<br/>一个以 Entity 对象为成员的列表。注意，对象里每个键值对中的键必须严格对应 Collection 的 Schema。|
+| __dbName__ | string  <br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。  |
+| __collectionName__ | string  <br/>插入操作的目标 Collection。  |
+| __partitionName__ | string  <br/>当前操作的目标 Partition。可选参数，默认值为**default**。  |
+| __data__ | array<br/>一个以 Entity 对象为成员的列表。注意，对象里每个键值对中的键必须严格对应 Collection 的 Schema。 |
+| __data[]__ | object<br/> |
 
 ## 响应
 
@@ -144,9 +145,11 @@ curl --request POST \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`    | **object**<br/>表示响应中携带的数据对象。 |
-| `data.upsertCount`   | **integer**<br/>已经插入或更新的记录数量。 |
-| `data.upsertIds`   | **array**<br/>已经插入或更新的记录 ID 列表。 |
+| __code__ | integer  <br/>  |
+| __data__ | object<br/> |
+| __data.upsertCount__ | integer  <br/>已经插入或更新的记录数量。  |
+| __data[].upsertIds__ | array<br/>已经插入或更新的记录 ID 列表。 |
+| __data[].upsertIds[]__ | string  <br/>  |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

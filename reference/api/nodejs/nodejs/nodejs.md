@@ -1,5 +1,5 @@
 ---
-displayed_sidebar: nodejsSidebar
+displayed_sidebar: nodeSidebar
 sidebar_position: 4
 slug: /nodejs
 ---

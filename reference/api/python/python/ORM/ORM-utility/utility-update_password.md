@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/utility-update_password
-beta: false
-notebook: false
+slug: /python/python/utility-update_password
+beta: FALSE
+notebook: FALSE
 type: docx
 token: SGjed7w9toewDlxmXHKc7BFancf
 sidebar_position: 41
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

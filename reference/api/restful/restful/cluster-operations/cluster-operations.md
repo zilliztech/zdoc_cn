@@ -3,6 +3,7 @@ slug: /restful/cluster-operations
 beta: FALSE
 notebook: FALSE
 sidebar_position: 1
+displayed_sidebar: restfulSidebar
 ---
 
 import Admonition from '@theme/Admonition';

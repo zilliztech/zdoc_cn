@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/Partitions-load_partitions
-beta: false
-notebook: false
+slug: /python/python/Partitions-load_partitions
+beta: FALSE
+notebook: FALSE
 type: docx
 token: DdQ1dBNagoBa08xhEiucxZrHnzc
 sidebar_position: 6
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

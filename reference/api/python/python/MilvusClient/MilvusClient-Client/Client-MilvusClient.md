@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/Client-MilvusClient
-beta: false
-notebook: false
+slug: /python/python/Client-MilvusClient
+beta: FALSE
+notebook: FALSE
 type: docx
 token: TUrSdmskuoGdFRxFT75c6xhinzc
 sidebar_position: 2
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -104,8 +106,4 @@ client = MilvusClient(
 </ul>
 
 </Admonition>
-
-## Class members
-
-Refer to [MilvusClient](./MilvusClient) for a categorized list of class members.
 

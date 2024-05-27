@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/FieldSchema-construct_from_dict
-beta: false
-notebook: false
+slug: /python/python/FieldSchema-construct_from_dict
+beta: FALSE
+notebook: FALSE
 type: docx
 token: DCLUdOpVjohl8HxPUx1cGjokngf
 sidebar_position: 1
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

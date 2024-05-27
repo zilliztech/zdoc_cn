@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 5
 slug: /restful/drop-cluster
 title: 删除集群
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 删除一个集群。当前操作会将该指定集群移动到回收站。回收站中的集群将在 30 天后被彻底删除。
 
-<RestHeader method="delete" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/{CLUSTER_ID}/drop" />
+<RestHeader method="delete" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/clusters/{CLUSTER_ID}/drop" />
 
 ---
 
@@ -93,9 +93,10 @@ curl --request DELETE \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`    | **object**<br/>表示响应中携带的数据对象。 |
-| `data.clusterId`   | **string**<br/>已删除的集群 ID。 |
-| `data.prompt`   | **string**<br/>描述集群删除成功的提示信息。 |
+| __code__ | integer  <br/>  |
+| __data__ | object<br/> |
+| __data.clusterId__ | string  <br/>已删除的集群 ID。  |
+| __data.prompt__ | string  <br/>描述集群删除成功的提示信息。  |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

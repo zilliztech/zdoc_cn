@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/Collections-create_schema
-beta: false
-notebook: false
+slug: /python/python/Collections-create_schema
+beta: FALSE
+notebook: FALSE
 type: docx
 token: RxU7dBjGlop0e1xZShYcZ4qCnnh
 sidebar_position: 4
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -68,11 +70,11 @@ MilvusClient.create_schema(**kwargs) -> CollectionSchema
 
 **RETURN TYPE:**
 
-[*CollectionSchema*](./ORM-CollectionSchema)
+*[CollectionSchema](./ORM-CollectionSchema)*
 
 **RETURNS:**
 
-A [**CollectionSchema**](./ORM-CollectionSchema) object.
+A **[CollectionSchema](./ORM-CollectionSchema)** object.
 
 **EXCEPTIONS:**
 

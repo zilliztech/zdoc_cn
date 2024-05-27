@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/Partition-delete
-beta: false
-notebook: false
+slug: /python/python/Partition-delete
+beta: FALSE
+notebook: FALSE
 type: docx
 token: V9BidASNqoWYrmxo11ecuN99neg
 sidebar_position: 1
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

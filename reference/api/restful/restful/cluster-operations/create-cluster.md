@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 3
 slug: /restful/create-cluster
 title: 创建集群
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 创建一个新集群
 
-<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/create" />
+<RestHeader method="post" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/clusters/create" />
 
 ---
 
@@ -88,11 +88,11 @@ curl --request POST \
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| `plan`  | **string**（必选）<br/>Zilliz Cloud 服务订阅计划。当前可选为**Enterprise** (企业版)。|
-| `clusterName`  | **string**（必选）<br/>待创建集群名称。名称长度不得走过 32 个半角字符。|
-| `cuSize`  | **integer**（必选）<br/>待创建集群使用的 CU 大小。取值范围在 1 至 256 之间的正整数。|
-| `cuType`  | **string**（必选）<br/>待创建集群使用的 CU 类型。当前可选为 **Performance-optimized** (性能型) 和 **Capacity-optimized** (容量型)。默认取值为 **Performance-optimized** (性能型)。<br/>默认值为 **Performance-optimized**.|
-| `projectId`  | **string**（必选）<br/>待创建集群所属项目 ID。|
+| __plan__ | string  <br/>Zilliz Cloud 服务订阅计划。当前可选为**Enterprise** (企业版)。  |
+| __clusterName__ | string  <br/>待创建集群名称。名称长度不得走过 32 个半角字符。  |
+| __cuSize__ | integer  <br/>待创建集群使用的 CU 大小。取值范围在 1 至 256 之间的正整数。  |
+| __cuType__ | string  <br/>待创建集群使用的 CU 类型。当前可选为 **Performance-optimized** (性能型), **Capacity-optimized** (容量型), **Cost-optimized** (经济型)。默认取值为 **Performance-optimized** (性能型)。<br/>The value defaults to Performance-optimized  |
+| __projectId__ | string  <br/>待创建集群所属项目 ID。  |
 
 ## 响应
 
@@ -130,11 +130,12 @@ curl --request POST \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`    | **object**<br/>表示响应中携带的数据对象。 |
-| `data.clusterId`   | **string**<br/>受当前操作影响的集群 ID。 |
-| `data.username`   | **string**<br/>自动生成的集群用户名。 |
-| `data.password`   | **string**<br/>自动生成的集群用户密码。仅展示一次，请务必妥善保管。 |
-| `data.prompt`   | **string**<br/>描述集群创建成功的提示信息。 |
+| __code__ | integer  <br/>  |
+| __data__ | object<br/> |
+| __data.clusterId__ | string  <br/>受当前操作影响的集群 ID。  |
+| __data.username__ | string  <br/>自动生成的集群用户名。  |
+| __data.password__ | string  <br/>自动生成的集群用户密码。仅展示一次，请务必妥善保管。  |
+| __data.prompt__ | string  <br/>描述集群创建成功的提示信息。  |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/RemoteBulkWriter-append_row
-beta: false
-notebook: false
+slug: /python/python/RemoteBulkWriter-append_row
+beta: FALSE
+notebook: FALSE
 type: docx
 token: F1MFdP8VvoMu17x4Vg9cH6ztnqb
 sidebar_position: 1
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

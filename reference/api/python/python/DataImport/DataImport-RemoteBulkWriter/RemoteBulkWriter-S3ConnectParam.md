@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/RemoteBulkWriter-S3ConnectParam
-beta: false
-notebook: false
+slug: /python/python/RemoteBulkWriter-S3ConnectParam
+beta: FALSE
+notebook: FALSE
 type: docx
 token: CSpOd0XgWoVAhzx5xbVcpCVfnPg
 sidebar_position: 5
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -60,10 +62,20 @@ connect_param = S3ConnectParam(
 
     The value can be the URL of a MinIO service or that of any AWS S3 compatible public service.
 
-    |  **Service Name** |  **Endpoint**           |
-    | ----------------- | ----------------------- |
-    |  **AWS S3**       |  s3.amazonaws.com       |
-    |  **GCS**          |  storage.googleapis.com |
+    <table>
+       <tr>
+         <th><strong>Service Name</strong></th>
+         <th><strong>Endpoint</strong></th>
+       </tr>
+       <tr>
+         <td><strong>AWS S3</strong></td>
+         <td>s3.amazonaws.com</td>
+       </tr>
+       <tr>
+         <td><strong>GCS</strong></td>
+         <td>storage.googleapis.com</td>
+       </tr>
+    </table>
 
 - **access_key** (*str*)
 

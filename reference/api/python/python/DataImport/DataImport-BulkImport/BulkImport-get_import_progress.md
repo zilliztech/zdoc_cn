@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/BulkImport-get_import_progress
-beta: false
-notebook: false
+slug: /python/python/BulkImport-get_import_progress
+beta: FALSE
+notebook: FALSE
 type: docx
 token: MkWNdU1tvoqlBRxI05Rcu09cnEc
 sidebar_position: 2
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';
@@ -181,14 +183,14 @@ res = bulk_import(
 
 print(res.json())
 
-*# Output*
-*#*
-*# {*
-*#     "code": 200,*
-*#     "data": {*
-*#         "jobId": "9d0bc230-6b99-4739-a872-0b91cfe2515a"*
-*#     }*
-*# }*
+# Output
+#
+# {
+#     "code": 200,
+#     "data": {
+#         "jobId": "9d0bc230-6b99-4739-a872-0b91cfe2515a"
+#     }
+# }
 
 job_id = res.json()['data']['jobId']
 res = get_import_progress(
@@ -198,29 +200,29 @@ res = get_import_progress(
     cluster_id=CLUSTER_ID
 )
 
-*# Output*
-*#*
-*# {*
-*#     "code": 200,*
-*#     "data": {*
-*#         "collectionName": "medium_articles",*
-*#         "fileName": "folder/1/",*
-*#         "fileSize": 26571700,*
-*#         "readyPercentage": 1,*
-*#         "completeTime": "2023-10-28T06:51:49Z",*
-*#         "errorMessage": null,*
-*#         "jobId": "9d0bc230-6b99-4739-a872-0b91cfe2515a",*
-*#         "details": [*
-*#             {*
-*#                 "fileName": "folder/1/",*
-*#                 "fileSize": 26571700,*
-*#                 "readyPercentage": 1,*
-*#                 "completeTime": "2023-10-28T06:51:49Z",*
-*#                 "errorMessage": null*
-*#             }*
-*#         ]*
-*#     }*
-*# }*
+# Output
+#
+# {
+#     "code": 200,
+#     "data": {
+#         "collectionName": "medium_articles",
+#         "fileName": "folder/1/",
+#         "fileSize": 26571700,
+#         "readyPercentage": 1,
+#         "completeTime": "2023-10-28T06:51:49Z",
+#         "errorMessage": null,
+#         "jobId": "9d0bc230-6b99-4739-a872-0b91cfe2515a",
+#         "details": [
+#             {
+#                 "fileName": "folder/1/",
+#                 "fileSize": 26571700,
+#                 "readyPercentage": 1,
+#                 "completeTime": "2023-10-28T06:51:49Z",
+#                 "errorMessage": null
+#             }
+#         ]
+#     }
+# }
 ```
 
 For details, refer to [Import Data (SDK)](https://docs.zilliz.com/docs/import-data-via-sdks) in our user guides.

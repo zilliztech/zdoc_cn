@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 28
 slug: /restful/get
 title: 按 ID 查询
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 在 Collection 按指定 ID 返回对应的 Entity。根据实际情况不同，指定的 ID 可能为一个字符串、一个整数、一个字符串列表或一个整数列表等多种形式。具体可参见下方示例中罗列的四种情况。
 
-<RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v1/vector/get" />
+<RestHeader method="post" endpoint="https://{cluster-endpoint}/v1/vector/get" />
 
 ---
 
@@ -100,81 +100,74 @@ curl --request POST \
 {
     "dbName": "string",
     "collectionName": "string",
-    "partitionNames": [
-        {}
-    ],
-    "outputFields": [
-        {}
-    ],
+    "partitionNames": [],
+    "outputFields": [],
     "id": "string"
 }
 ```
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
-| `collectionName`  | **string**（必选）<br/>目标 Collection 名称。|
-| `partitionNames`  | **array**<br/>当前操作的目标 Partition。可选参数，默认值为**default**。|
-| `outputFields`  | **array**<br/>返回字段，以数组形式表示。|
-| `id`  | **string**（必选）<br/>待查询的 Entity ID。|
+| __dbName__ | string  <br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。  |
+| __collectionName__ | string  <br/>目标 Collection 名称。  |
+| __partitionNames__ | array<br/>当前操作的目标 Partition。可选参数，默认值为**default**。 |
+| __partitionNames[]__ | string  <br/>partitionName  |
+| __outputFields__ | array<br/>返回字段，以数组形式表示。 |
+| __outputFields[]__ | string  <br/>  |
+| __id__ | string  <br/>待查询的 Entity ID。  |
 
 ```json
 {
     "dbName": "string",
     "collectionName": "string",
-    "outputFields": [
-        {}
-    ],
-    "id": [
-        {}
-    ]
+    "outputFields": [],
+    "id": []
 }
 ```
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
-| `collectionName`  | **string**（必选）<br/>目标 Collection 名称。|
-| `outputFields`  | **array**<br/>目标集群名称。|
-| `id`  | **array**（必选）<br/>一组待查询的 Entity ID。|
+| __dbName__ | string  <br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。  |
+| __collectionName__ | string  <br/>目标 Collection 名称。  |
+| __outputFields__ | array<br/>目标集群名称。 |
+| __outputFields[]__ | string  <br/>  |
+| __id__ | array<br/>一组待查询的 Entity ID。 |
+| __id[]__ | string  <br/>每个 ID 都代表一个 Entity。  |
 
 ```json
 {
     "dbName": "string",
     "collectionName": "string",
-    "outputFields": [
-        {}
-    ],
+    "outputFields": [],
     "id": "integer"
 }
 ```
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
-| `collectionName`  | **string**（必选）<br/>目标 Collection 名称。|
-| `outputFields`  | **array**<br/>返回字段，以数组形式表示。|
-| `id`  | **integer**（必选）<br/>待查询的 Entity ID。|
+| __dbName__ | string  <br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。  |
+| __collectionName__ | string  <br/>目标 Collection 名称。  |
+| __outputFields__ | array<br/>返回字段，以数组形式表示。 |
+| __outputFields[]__ | string  <br/>  |
+| __id__ | integer  <br/>待查询的 Entity ID。  |
 
 ```json
 {
     "dbName": "string",
     "collectionName": "string",
-    "outputFields": [
-        {}
-    ],
-    "id": [
-        {}
-    ]
+    "outputFields": [],
+    "id": []
 }
 ```
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| `dbName`  | **string**<br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。|
-| `collectionName`  | **string**（必选）<br/>目标 Collection 名称。|
-| `outputFields`  | **array**<br/>返回字段，以数组形式表示。|
-| `id`  | **array**（必选）<br/>一组待查询的 Entity ID。|
+| __dbName__ | string  <br/>当前操作的 Collection 所属的数据库名称。可选参数，默认值为**defalut**。  |
+| __collectionName__ | string  <br/>目标 Collection 名称。  |
+| __outputFields__ | array<br/>返回字段，以数组形式表示。 |
+| __outputFields[]__ | string  <br/>  |
+| __id__ | array<br/>一组待查询的 Entity ID。 |
+| __id[]__ | integer  <br/>  |
 
 ## 响应
 
@@ -209,7 +202,9 @@ curl --request POST \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`  | **array**<br/>表示响应中携带的 object 数组. |
+| __code__ | integer  <br/>  |
+| __data__ | array<br/> |
+| __data[]__ | object<br/> |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

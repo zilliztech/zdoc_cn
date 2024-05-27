@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 11
 slug: /restful/import
 title: 导入
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 从指定的对象存储桶中的文件导入数据。该对象存储桶须与目标集群处于同一公有云网络。
 
-<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import" />
+<RestHeader method="post" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/vector/collections/import" />
 
 ---
 
@@ -63,12 +63,12 @@ curl --request POST \
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| `clusterId`  | **string**（必选）<br/>目标集群 ID。|
-| `collectionName`  | **string**（必选）<br/>目标 Collection 名称。|
-| `partitionName`  | **string**<br/>受当前操作影响的 Partition 名称。|
-| `objectUrl`  | **string**（必选）<br/>用于存储待导入数据的对象的 URL。|
-| `accessKey`  | **string**<br/>用于访问指定对象的访问密钥（AK）。|
-| `secretKey`  | **string**<br/>用于访问指定对象的访问密钥（SK）。|
+| __clusterId__ | string  <br/>目标集群 ID。  |
+| __collectionName__ | string  <br/>目标 Collection 名称。  |
+| __partitionName__ | string  <br/>受当前操作影响的 Partition 名称。  |
+| __objectUrl__ | string  <br/>用于存储待导入数据的对象的 URL。  |
+| __accessKey__ | string  <br/>用于访问指定对象的访问密钥（AK）。  |
+| __secretKey__ | string  <br/>用于访问指定对象的访问密钥（SK）。  |
 
 ## 响应
 
@@ -103,15 +103,16 @@ curl --request POST \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`    | **object**<br/>表示响应中携带的数据对象。 |
-| `data.jobId`   | **string**<br/>已提交的导入任务 ID。 |
+| __code__ | integer  <br/>  |
+| __data__ | object<br/> |
+| __data.jobId__ | string  <br/>已提交的导入任务 ID。  |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单
 
 | 错误码 | 错误消息 |
 | ---- | ------------- |
-| 10003 | Invalid s3 ObjectUrl. [xxx] |
+| 10003 | Invalid s3 ObjectUrl. xxx |
 | 40003 | Action not available given the current status of the cluster. |
 | 40021 | The cluster ID does not exist. |
 | 40022 | No access to this cluster. Please request access from your admin. |
@@ -120,13 +121,13 @@ curl --request POST \
 | 47035 | The specified object size exceeds limit. |
 | 47036 | The number of objects not equal to the number of collection fields. |
 | 47039 | The specified cluster do not support multiple imports at the same time. |
-| 47053 | Failed to checkFiles \{xxx}. |
-| 47055 | The current cluster is currently importing data (xxx). To ensure more stable service of your Milvus cluster |
+| 47053 | Failed to checkFiles xxx. |
+| 47055 | The current cluster is currently importing data xxx. To ensure more stable service of your Milvus cluster |
 | 80020 | Cluster not exist or you don't have permission. |
 | 80020 | Cluster not exist or you don't have permission. |
 | 80020 | Cluster not exist or you don't have permission. |
-| 83001 | Failed to getObjectMeta \{xxx}. |
-| 83001 | Failed to getObjectMeta \{xxx}. |
+| 83001 | Failed to getObjectMeta xxx. |
+| 83001 | Failed to getObjectMeta xxx. |
 | 83004 | Importing files across clouds is not currently supported |
 | 90011 | Invalid CollectionName. Reason: Name contains only alphanumeric letters and underscores |
 | 90011 | Invalid CollectionName. Reason: Name contains only alphanumeric letters and underscores |

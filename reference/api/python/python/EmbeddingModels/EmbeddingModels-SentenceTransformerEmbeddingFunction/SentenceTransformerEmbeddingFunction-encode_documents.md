@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/SentenceTransformerEmbeddingFunction-encode_documents
-beta: false
-notebook: false
+slug: /python/python/SentenceTransformerEmbeddingFunction-encode_documents
+beta: FALSE
+notebook: FALSE
 type: docx
 token: MOPzdeyjzoO8DlxAlL0clX00nBc
 sidebar_position: 1
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

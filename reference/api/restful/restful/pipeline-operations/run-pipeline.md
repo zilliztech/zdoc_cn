@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 18
 slug: /restful/run-pipeline
 title: 执行 Pipeline
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 执行一个指定的 Pipeline。
 
-<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/pipeline/{PIPELINE_ID}/run" />
+<RestHeader method="post" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipeline/{PIPELINE_ID}/run" />
 
 ---
 
@@ -131,11 +131,57 @@ import RestHeader from '@site/src/components/RestHeader';
 ### 请求体
 
 ```json
-
+{
+    "data": {
+        "doc_url": "string",
+        "\\<scalar_field_name>": "string"
+    }
+}
 ```
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
+| __data__ | object<br/>Ingestion 参数 |
+| __data.doc_url__ | string  <br/>一个尚未过期的预签名 [GCS](https://cloud.google.com/storage/docs/access-control/signed-urls) 或 [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html) URL。如果您在创建 Pipeline 时自定义了输入参数名称，请使用自定义的输入参数名称。支持的文件类型包括：`.txt`、`.pdf`、`.md`、`.html`、`.epub`、`.csv`、`.doc`、`.docx`、`.xls`、`.xlsx`、`.ppt` 以及 `.pptx`。  |
+| __data.\<scalar_field_name>__ | string  <br/>  |
+
+```json
+{
+    "data": {
+        "query_text": "string"
+    },
+    "params": {
+        "limit": "integer",
+        "offset": "integer",
+        "outputFields": [],
+        "filter": "string"
+    }
+}
+```
+
+| 参数名称        | 参数描述                                                                               |
+|------------------|-------------------------------------------------------------------------------------------|
+| __data__ | object<br/>查询数据 |
+| __data.query_text__ | string  <br/>查询文本。 Zilliz Cloud 会将其转换为向量后在目标 Collection 中进行查询。  |
+| __params__ | object<br/>数据查询参数 |
+| __params.limit__ | integer  <br/>需要返回的记录数量。  |
+| __params.offset__ | integer  <br/>在返回的记录中需要忽略的记录数量。  |
+| __params[].outputFields__ | array<br/>每个匹配的搜索结果需要包含的输出字段列表。 |
+| __params[].outputFields[]__ | string  <br/>一个合法的输出字段。需与创建Pipeline时通过 `PRESERVE` 函数添加的字段名称一致。  |
+| __params.filter__ | string  <br/>一个合法的条件表达式，用于在向量查询结果中进行标量过滤。  |
+
+```json
+{
+    "data": {
+        "doc_name": "string"
+    }
+}
+```
+
+| 参数名称        | 参数描述                                                                               |
+|------------------|-------------------------------------------------------------------------------------------|
+| __data__ | object<br/>文档删除请求的载荷。 |
+| __data.doc_name__ | string  <br/>需要删除的文档名称。当前支持根据文档名称删除文档，该文档的所有分段均会被删除。  |
 
 ## 响应
 
@@ -150,8 +196,7 @@ import RestHeader from '@site/src/components/RestHeader';
     "code": "integer",
     "data": {
         "num_chunks": "integer",
-        "doc_name": "string",
-        "token_usage": "integer"
+        "doc_name": "string"
     }
 }
 ```
@@ -172,10 +217,10 @@ import RestHeader from '@site/src/components/RestHeader';
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`    | **object**<br/>表示响应中携带的数据对象。 |
-| `data.num_chunks`   | **integer**<br/>生成的文档分段数量。 |
-| `data.doc_name`   | **string**<br/>被分段的文档名称及扩展名。 |
-| `data.token_usage`   | **integer**<br/>当前操作消费的标识符数量。 |
+| __code__ | integer  <br/>  |
+| __data__ | object<br/>响应载荷。 |
+| __data.num_chunks__ | integer  <br/>生成的文档分段数量。  |
+| __data.doc_name__ | string  <br/>被分段的文档名称及扩展名。  |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

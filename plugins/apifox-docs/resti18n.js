@@ -11,7 +11,7 @@ class restI18n {
     }
 
     async localize(specifications, strings) {
-        await this.__iterate_object(specifications["paths"], '["paths"]', strings)
+        this.__iterate_object(specifications["paths"], '["paths"]', strings)
 
         return strings.concat(this.result).join('\n')
     }

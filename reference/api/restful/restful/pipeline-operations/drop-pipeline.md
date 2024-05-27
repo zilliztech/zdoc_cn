@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 15
 slug: /restful/drop-pipeline
 title: 删除 Pipeline
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 删除一个指定的 Pipeline
 
-<RestHeader method="delete" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/pipelines/{PIPELINE_ID}" />
+<RestHeader method="delete" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/{PIPELINE_ID}" />
 
 ---
 
@@ -96,7 +96,6 @@ curl --request GET \
         "type": "string",
         "description": "string",
         "status": "string",
-        "totalTokenUsage": "integer",
         "clusterID": "string",
         "collectionName": "string"
     }
@@ -119,16 +118,16 @@ curl --request GET \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`    | **object**<br/>表示响应中携带的数据对象。 |
-| `data.pipelineId`   | **integer**<br/>Pipeline ID。 |
-| `data.name`   | **string**<br/>Pipeline 名称。 |
-| `data.type`   | **string**<br/>Pipeline 类型。对于一个 Ingestion Pipeline 而言，其值应该为 `INGESTION`。 |
-| `data.description`   | **string**<br/>Pipeline 描述。 |
-| `data.status`   | **string**<br/>Pipeline 当前状态。仅当其值为 `SERVING` 时 Pipeline 处于工作状态。 |
-| `data.totalTokenUsage`   | **integer**<br/>当前操作消费的标识符数量。 |
-| `data.functions`   | ****<br/>Pipeline 中的函数。一个 Ingestion Pipeline 仅能包含一个 `INDEX_DOC` 函数。 |
-| `data.clusterID`   | **string**<br/>应用当前 Pipeline 的目标集群。 |
-| `data.collectionName`   | **string**<br/>在目标集群中应用当前 Pipeline 的目标 Collection。 |
+| __code__ | integer  <br/>  |
+| __data__ | object<br/> |
+| __data.pipelineId__ | integer  <br/>Pipeline ID。  |
+| __data.name__ | string  <br/>Pipeline 名称。  |
+| __data.type__ | string  <br/>Pipeline 类型。对于一个 Ingestion Pipeline 而言，其值应该为 `INGESTION`。  |
+| __data.description__ | string  <br/>Pipeline 描述。  |
+| __data.status__ | string  <br/>Pipeline 当前状态。仅当其值为 `SERVING` 时 Pipeline 处于工作状态。  |
+| __functions__ | object | object<br/>Pipeline 中的函数。一个 Ingestion Pipeline 仅能包含一个 `INDEX_DOC` 函数。 |
+| __data.clusterID__ | string  <br/>应用当前 Pipeline 的目标集群。  |
+| __data.collectionName__ | string  <br/>在目标集群中应用当前 Pipeline 的目标 Collection。  |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

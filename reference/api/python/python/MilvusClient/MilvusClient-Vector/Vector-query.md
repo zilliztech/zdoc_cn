@@ -1,11 +1,13 @@
 ---
 displayed_sidbar: pythonSidebar
-slug: /python/Vector-query
-beta: false
-notebook: false
+slug: /python/python/Vector-query
+beta: FALSE
+notebook: FALSE
 type: docx
 token: LkmSddW2NolgitxLhy9cx22Dnpe
 sidebar_position: 4
+displayed_sidebar: pythonSidebar
+
 ---
 
 import Admonition from '@theme/Admonition';

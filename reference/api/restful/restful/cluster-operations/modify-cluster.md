@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 6
 slug: /restful/modify-cluster
 title: 修改集群配置
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 修改指定集群的配置。当前，仅支持修改集群使用的 CU 大小。
 
-<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/{CLUSTER_ID}/modify" />
+<RestHeader method="post" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/clusters/{CLUSTER_ID}/modify" />
 
 ---
 
@@ -68,7 +68,7 @@ curl --request POST \
 
 | 参数名称        | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| `cuSize`  | **integer**（必选）<br/>当前操作成功后，集群使用的 CU 大小。|
+| __cuSize__ | integer  <br/>当前操作成功后，集群使用的 CU 大小。  |
 
 ## 响应
 
@@ -104,9 +104,10 @@ curl --request POST \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`    | **object**<br/>表示响应中携带的数据对象。 |
-| `data.clusterId`   | **string**<br/>受当前操作影响的集群 ID。 |
-| `data.prompt`   | **string**<br/>描述集群修改成功的提示信息。 |
+| __code__ | integer  <br/>  |
+| __data__ | object<br/> |
+| __data.clusterId__ | string  <br/>受当前操作影响的集群 ID。  |
+| __data.prompt__ | string  <br/>描述集群修改成功的提示信息。  |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单

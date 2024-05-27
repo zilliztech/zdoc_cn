@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 0
+sidebar_position: 21
 slug: /restful/describe-collection
 title: 查看 Collection 详情
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 描述 Collection 的详细信息。
 
-<RestHeader method="get" endpoint="https://${CLUSTER_ENDPOINT}/v1/vector/collections/describe" />
+<RestHeader method="get" endpoint="https://{cluster-endpoint}/v1/vector/collections/describe" />
 
 ---
 
@@ -135,22 +135,25 @@ curl --request GET \
 | 属性名称  | 属性描述                                                                                                                               |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-| `data`    | **object**<br/>表示响应中携带的数据对象。 |
-| `data.collectionName`   | **string**<br/>Collection 名称。 |
-| `data.description`   | **string**<br/>（可选）Collection 描述信息。 |
-| `data.fields`   | **array**<br/>字段数组。 |
-| `data.fields[].autoId`   | **boolean**<br/>是否为主键启用自动 ID。 |
-| `data.fields[].description`   | **string**<br/>（可选）字段描述。 |
-| `data.fields[].name`   | **string**<br/>字段名称。 |
-| `data.fields[].primaryKey`   | **boolean**<br/>是否为主键。 |
-| `data.fields[].type`   | **string**<br/>该字段的数据类型。 |
-| `data.indexes`   | **array**<br/>索引数组。 |
-| `data.indexes[].fieldName`   | **string**<br/>索引字段名称。 |
-| `data.indexes[].indexName`   | **string**<br/>生成的索引文件名称。 |
-| `data.indexes[].metricType`   | **string**<br/>索引类型。 |
-| `data.load`   | **string**<br/>Collection 的加载状态。有效值：**未加载**、**加载中**和**已加载**。 |
-| `data.shardsNum`   | **integer**<br/>Collection 的分片数量。 |
-| `data.enableDynamicField`   | **boolean**<br/>Collection 是否启用了动态 Schema。 |
+| __code__ | integer  <br/>  |
+| __data__ | object<br/> |
+| __data.collectionName__ | string  <br/>Collection 名称。  |
+| __data.description__ | string  <br/>（可选）Collection 描述信息。  |
+| __data[].fields__ | array<br/>字段数组。 |
+| __data[].fields[]__ | object<br/> |
+| __data[].fields[].autoId__ | boolean  <br/>是否为主键启用自动 ID。  |
+| __data[].fields[].description__ | string  <br/>（可选）字段描述。  |
+| __data[].fields[].name__ | string  <br/>字段名称。  |
+| __data[].fields[].primaryKey__ | boolean  <br/>是否为主键。  |
+| __data[].fields[].type__ | string  <br/>该字段的数据类型。  |
+| __data[].indexes__ | array<br/>索引数组。 |
+| __data[].indexes[]__ | object<br/> |
+| __data[].indexes[].fieldName__ | string  <br/>索引字段名称。  |
+| __data[].indexes[].indexName__ | string  <br/>生成的索引文件名称。  |
+| __data[].indexes[].metricType__ | string  <br/>索引类型。  |
+| __data.load__ | string  <br/>Collection 的加载状态。有效值：**未加载**、**加载中**和**已加载**。  |
+| __data.shardsNum__ | integer  <br/>Collection 的分片数量。  |
+| __data.enableDynamicField__ | boolean  <br/>Collection 是否启用了动态 Schema。  |
 | `message`  | **string**<br/>具体描述请求错误的原因。 |
 
 ## 错误码清单
