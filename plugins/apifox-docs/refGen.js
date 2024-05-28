@@ -459,11 +459,11 @@ class refGen {
   }
 
   __delete_examples(body) {
-    for (const prop in body.properties) {
-      if (body.properties[prop].example) {
-        delete body.properties[prop].example
-      }
-      if (body.properties[prop].properties) {
+    if (body && body.hasOwnProperty('properties')) {
+      for (const prop in body.properties) {
+        if (body.properties[prop].hasOwnProperty('examples')) {
+          delete body.properties[prop].examples
+        }
         this.__delete_examples(body.properties[prop])
       }
     }

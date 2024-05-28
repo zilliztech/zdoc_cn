@@ -4803,9 +4803,6 @@
                                             "properties": {
                                                 "insertCount": {
                                                     "type": "integer",
-                                                    "examples": [
-                                                        4
-                                                    ],
                                                     "description": "插入的 Entity 数量。"
                                                 },
                                                 "insertIds": {
@@ -4813,13 +4810,6 @@
                                                     "items": {
                                                         "type": "string"
                                                     },
-                                                    "examples": [
-                                                        [
-                                                            "['id1'",
-                                                            " 'id2'",
-                                                            " 'id3']"
-                                                        ]
-                                                    ],
                                                     "description": "以数组来表示的插入的 Entity ID。"
                                                 }
                                             },
@@ -4994,9 +4984,6 @@
                                             "properties": {
                                                 "upsertCount": {
                                                     "type": "integer",
-                                                    "examples": [
-                                                        4
-                                                    ],
                                                     "description": "已经插入或更新的记录数量。"
                                                 },
                                                 "upsertIds": {
@@ -5004,13 +4991,6 @@
                                                     "items": {
                                                         "type": "string"
                                                     },
-                                                    "examples": [
-                                                        [
-                                                            "['id1'",
-                                                            " 'id2'",
-                                                            " 'id3']"
-                                                        ]
-                                                    ],
                                                     "description": "已经插入或更新的记录 ID 列表。"
                                                 }
                                             },
