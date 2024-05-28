@@ -970,7 +970,7 @@ class larkDocWriter {
         });
         const cell_texts = await Promise.all(cell_blocks.map(async (cell) => {
             let blocks = cell.map(block => this.__retrieve_block_by_id(block));
-            return (await this.__markdown(blocks, 1)).replace(/\n/g, '<br>');
+            return (await this.__markdown(blocks, 0));
         }));
 
         const row_size = table['property']['row_size'];
@@ -1001,9 +1001,9 @@ class larkDocWriter {
                     const colspan = merge.col_span > 1 ? ` colspan="${merge.col_span}"` : "";
                     const rowspan = merge.row_span > 1 ? ` rowspan="${merge.row_span}"` : "";
                     if (i === 0) {
-                        html += ` ${' '.repeat(indent)}    <th${colspan}${rowspan}>${converter.makeHtml(cell_texts[cell_idx].trim())}</th>\n`;
+                        html += ` ${' '.repeat(indent)}    <th${colspan}${rowspan}>${converter.makeHtml(cell_texts[cell_idx].trim()).replace(/\n/g, '')}</th>\n`;
                     } else {
-                        html += ` ${' '.repeat(indent)}    <td${colspan}${rowspan}>${converter.makeHtml(cell_texts[cell_idx].trim())}</td>\n`;
+                        html += ` ${' '.repeat(indent)}    <td${colspan}${rowspan}>${converter.makeHtml(cell_texts[cell_idx].trim()).replace(/\n/g, '')}</td>\n`;
                     }
                 }
             }
@@ -1046,9 +1046,9 @@ class larkDocWriter {
                 }
                 
                 if (ridx === 0) {
-                    result += `${' '.repeat(indent) + '    '.repeat(2)}<th${colspan ? " " + colspan : ""}${rowspan ? " " + rowspan : ""}>${converter.makeHtml(cell.trim())}</th>\n`
+                    result += `${' '.repeat(indent) + '    '.repeat(2)}<th${colspan ? " " + colspan : ""}${rowspan ? " " + rowspan : ""}>${converter.makeHtml(cell.trim()).replace(/\n/g, '')}</th>\n`
                 } else {
-                    result += `${' '.repeat(indent) + '    '.repeat(2)}<td${colspan ? " " + colspan : ""}${rowspan ? " " + rowspan : ""}>${converter.makeHtml(cell.trim())}</td>\n`
+                    result += `${' '.repeat(indent) + '    '.repeat(2)}<td${colspan ? " " + colspan : ""}${rowspan ? " " + rowspan : ""}>${converter.makeHtml(cell.trim()).replace(/\n/g, '')}</td>\n`
                 }
             })
             result += ' '.repeat(indent) + '    ' + "</tr>" + "\n"
