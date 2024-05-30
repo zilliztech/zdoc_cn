@@ -84,6 +84,12 @@ module.exports = function (context, options) {
                         console.log('Broken links:')
                         console.log(brokenLinks)
                     }
+
+                    fs.writeFileSync("report.json", JSON.stringify({
+                        "added": added,
+                        "deleted": deleted,
+                        "brokenLinks": brokenLinks
+                    }), { encoding: 'utf8'})
                  })
         }
     }
