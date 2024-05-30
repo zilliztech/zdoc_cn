@@ -34,6 +34,10 @@ module.exports = function (context, options) {
                     const remote = await listUrls(context.siteConfig.url + context.siteConfig.baseUrl)
                     const local = await listUrls('build/sitemap.xml')
 
+                    const redirects = [... fs.readFileSync('default.conf', { encoding: 'utf8' }).matchAll(/= (.*) \{/g)].map(match => `${context.siteConfig.url}${match[1]}`)
+
+                    console.log(redirects)
+
                     const deleted =remote.filter(url =>!local.includes(url))
                     const added = local.filter(url =>!remote.includes(url))
 
@@ -87,7 +91,7 @@ module.exports = function (context, options) {
 
                     fs.writeFileSync("plugins/link-checks/meta/report.json", JSON.stringify({
                         "added": added,
-                        "deleted": deleted,
+                        "deleted": deleted.filter(url => !redirects.includes(url)),
                         "brokenLinks": brokenLinks
                     }, null, 2), { encoding: 'utf8'})
                  })
