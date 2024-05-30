@@ -89,7 +89,7 @@ module.exports = function (context, options) {
                         "added": added,
                         "deleted": deleted,
                         "brokenLinks": brokenLinks
-                    }), { encoding: 'utf8'})
+                    }, null, 2), { encoding: 'utf8'})
                  })
         }
     }
