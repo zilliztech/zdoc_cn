@@ -27,39 +27,39 @@ Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关�
 
 <table>
    <tr>
-     <th>告警项</th>
-     <th>单位</th>
-     <th>默认告警条件</th>
+     <th><p>告警项</p></th>
+     <th><p>单位</p></th>
+     <th><p>默认告警条件</p></th>
    </tr>
    <tr>
-     <td>CU 计算资源<br/></td>
-     <td>%</td>
-     <td></td>
+     <td><p>CU 计算资源</p></td>
+     <td><p>%</p></td>
+     <td><p><strong>警告</strong>：CU 计算资源用量大于 70% 且持续时间超过 10 分钟时触发告警。</p><p><strong>紧急</strong>：CU 计算资源用量大于 90% 且持续时间超过 10 分钟时触发告警。</p></td>
    </tr>
    <tr>
-     <td>CU 加载容量</td>
-     <td>%</td>
-     <td></td>
+     <td><p>CU 加载容量</p></td>
+     <td><p>%</p></td>
+     <td><p><strong>警告</strong>：CU 加载容量大于 70% 且持续时间超过 10 分钟时触发告警。</p><p><strong>紧急</strong>：CU 加载容量大于 90% 且持续时间超过 10 分钟时触发告警。</p></td>
    </tr>
    <tr>
-     <td>Search（QPS）</td>
-     <td>QPS</td>
-     <td>Search 类型请求数大于 50 QPS 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</td>
+     <td><p>Search（QPS）</p></td>
+     <td><p>QPS</p></td>
+     <td><p>Search 类型请求数大于 50 QPS 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</p></td>
    </tr>
    <tr>
-     <td>Query（QPS）</td>
-     <td>QPS</td>
-     <td>Query 类型请求数大于 50 QPS 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</td>
+     <td><p>Query（QPS）</p></td>
+     <td><p>QPS</p></td>
+     <td><p>Query 类型请求数大于 50 QPS 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</p></td>
    </tr>
    <tr>
-     <td>Search 延时（P99）</td>
-     <td>ms</td>
-     <td>Search 类型 P99 请求延时大于 1000 ms 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</td>
+     <td><p>Search 延时（P99）</p></td>
+     <td><p>ms</p></td>
+     <td><p>Search 类型 P99 请求延时大于 1000 ms 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</p></td>
    </tr>
    <tr>
-     <td>Query 延时（P99）<br/></td>
-     <td>ms</td>
-     <td>Query 类型 P99 请求延时大于 1000 ms 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</td>
+     <td><p>Query 延时（P99）</p></td>
+     <td><p>ms</p></td>
+     <td><p>Query 类型 P99 请求延时大于 1000 ms 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</p></td>
    </tr>
 </table>
 
@@ -83,7 +83,7 @@ Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关�
 
 - **状态**：显示告警是否处于**开启**状态。
 
-- **触发条件**：触发告警的条件。
+- **触发条件**：触发告警的条件。对于每个项目级别的告警项，触发条件包括必须满足的阈值和持续时间。触发条件可以使用为以下任一运算符：>、>=、\<、\<=、=。阈值可以是数值，如 Search 延时、Query QPS、Search QPS、CU 加载容量或 CU 计算资源等指标的数值。持续时间是指指标超过阈值的持续时长，最短可设置为 1 分钟，最长为 30 分钟。
 
 - **告警等级**：分为**警告**或**紧急**。
 

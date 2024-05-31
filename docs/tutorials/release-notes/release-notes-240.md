@@ -4,7 +4,7 @@ beta: FALSE
 notebook: FALSE
 type: origin
 token: GKNPwvWhZi7D6mkag72cIDWqnbf
-sidebar_position: 3
+sidebar_position: 4
 
 ---
 
@@ -21,7 +21,7 @@ import Admonition from '@theme/Admonition';
 
 ## Partition SDK{#partition-sdk}
 
-您可以使用 SDK 在 Zilliz Cloud 集群中的 Collection 里创建和管理 Partition。具体内容，可参阅 [使用 Partition](./undefined)。
+您可以使用 SDK 在 Zilliz Cloud 集群中的 Collection 里创建和管理 Partition。具体内容，可参阅 [管理 Partition](./manage-partitions)。
 
 值得注意的是，当您[在您的 Collection 中指定某字段为 Partition Key](./use-partition-key) 后，Zilliz Cloud 将接管该 Collection 中的所有 Partition。此时，你无法在该 Collection 中使用 Partition 相关接口。
 

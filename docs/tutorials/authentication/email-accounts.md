@@ -15,27 +15,47 @@ import Admonition from '@theme/Admonition';
 
 在 Zilliz Cloud 注册账户后，您可对账户信息进行管理。您可以编辑账号设置以及删除账号。
 
-## 编辑账号信息{#modify-your-account-information}
+## 编辑账号个人信息{#modify-your-account-information}
 
 1. 点击界面右上角人像图标，并选择**账号设置**。
 
-1. 在**账号设置**弹窗中编辑或修改账号信息，包括：
+1. 您可以编辑以下个人信息：
 
-- 邮箱地址
+    - 姓名
 
-    修改邮箱地址后，您需要使用新的邮箱地址重新登录 Zilliz Cloud。
-
-    邮箱地址修改不影响原有的账单信息和告警接收人。如有将账单和告警接收人同步更新，请前往[账单](./view-invoice#view-billing-information)和[告警](./manage-organization-alerts)页面手动更新。
-
-- 手机号码
-
-- 账号密码
-
-- 个人信息
+    - 公司
 
 ![edit-account-settings](/img/edit-account-settings.png)
 
-## 删除账号{#delete-your-account}
+## 修改账号邮箱地址{#update-account-email-address}
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>修改账号邮箱地址不会影响账单信息和告警接收人。如有需要请自行进行手动更新。</p>
+
+</Admonition>
+
+## 修改手机号码{#update-mobile-phone-number}
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>修改完成后，旧手机号可用于注册新账号。</p>
+
+</Admonition>
+
+## 更改密码{#change-account-password}
+
+## 开启或关闭 MFA{#enable-and-disable-mfa}
+
+更多详情，请见[管理 MFA](./multi-factor-auth)。
+
+## 关闭账号{#delete-your-account}
+
+<Admonition type="caution" icon="🚧" title="警告">
+
+<p>账号关闭后 30 天内，您将无法登录或注册 Zilliz Cloud。如需重开账号，请<a href="https://support.zilliz.com.cn/hc/zh-cn/signin">提交工单</a>。账号关闭账号 30 天后，所有账号数据将被清空。</p>
+
+</Admonition>
 
 ### 前提条件{#before-you-start}
 

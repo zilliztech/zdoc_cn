@@ -13,25 +13,74 @@ import Admonition from '@theme/Admonition';
 
 # Zilliz Cloud 版本类型
 
-在配置集群前，您需要先选择版本。Zilliz Cloud 各版本提供不同的服务体验、计费模型，且性能及可扩展性也都有所不同 。目前， Zilliz Cloud 共有 2 个版本可供选择，以满足多样的用户需求。
+在配置集群前，您需要先选择版本。Zilliz Cloud 各版本提供不同的服务体验、计费模型，且性能及可扩展性也都有所不同 。目前， Zilliz Cloud 共有 3 个版本可供选择，以满足多样的用户需求。
 
-- 企业版
+- Serverless 版
 
-- 专有部署
+- Dedicated 版
 
-2 个不同的版本为不同的用户需求及使用场景设计，您可以根据自己的需求灵活选择。
+- BYOC
 
-## 企业版{#enterprise-plan}
+3 个不同的版本为不同的用户需求及使用场景设计，您可以根据自己的需求灵活选择。
 
-企业版支持阿里云部署，提供 2 种不同类型的 CU——性能型和容量型 CU。企业版还提供多 AZ 高可用、私网连接（Private Link）、数据自动备份、专家技术支持等功能特性。企业版还提供 SLA，保证每月 99.9% 正常运行时间。适合个人开发者、小规模团队、或大型企业或组织，是构建向量数据平台首选方案，提供高可用、数据安全、专家技术支持。
+## 选择版本类型{#select-a-cluster-plan}
 
-## 专有部署{#self-host}
+Zilliz Cloud 提供三种版本。
 
-专有部署包含所有企业版特性，支持在您自己的虚拟私有云（VPC）上部署全托管的向量数据库服务。适用于高度注重数据隐私和合规的场景。通常，我们推荐需要 128 CU 以上的用户选择专有部署。更多详情，请[联系销售](https://zilliz.com.cn/contact-sales)。
-
-更多 Zilliz Cloud 版本详情，请访问[定价页面](https://zilliz.com.cn/pricing)或[联系销售](https://zilliz.com.cn/contact-sales)。
-
-## 文档推荐{#related-topics}
-
-- [注册账号](./register-with-zilliz-cloud) 
+<table>
+   <tr>
+     <th><p>功能特性</p></th>
+     <th><p>Serverless 版</p></th>
+     <th><p>Dedicated 版</p></th>
+     <th><p>Bring Your Own Cloud (BYOC)</p></th>
+   </tr>
+   <tr>
+     <td><p><strong>适用场景</strong></p></td>
+     <td><p>适用于查询量不固定的 Serverless 应用，无需进行复杂配置即可自动根据业务调整计算资源。</p></td>
+     <td><p>适用于生产环境，提供企业级数据安全与合规、监控指标、技术支持 SLA 等，支持高级配置。</p></td>
+     <td><p>适用于高度注重数据隐私和合规的场景。</p></td>
+   </tr>
+   <tr>
+     <td><p><strong>定价</strong></p></td>
+     <td><p>详见 <a href="https://zilliz.com.cn/pricing">Zilliz 定价</a></p></td>
+     <td><p>详见 <a href="https://zilliz.com.cn/pricing">Zilliz 定价</a></p></td>
+     <td><p><a href="https://zilliz.com.cn/contact-sales">联系销售</a></p></td>
+   </tr>
+   <tr>
+     <td><p><strong>云服务提供上和地域</strong></p></td>
+     <td><ul><li>阿里云：华东1（杭州）</li></ul></td>
+     <td><ul><li><p>阿里云：华东1（杭州）、华北2（北京）</p></li><li><p>腾讯云：华北地区（北京）、华东地区（上海）</p></li></ul></td>
+     <td><ul><li><p>阿里云</p></li><li><p>百度智能云</p></li><li><p>金山云</p></li><li><p>腾讯云</p></li></ul></td>
+   </tr>
+   <tr>
+     <td><p><strong>CU 规格</strong></p></td>
+     <td><p>弹性伸缩</p></td>
+     <td><p>最多 256 CU (支持 CU 大小包括: 1, 2, 4, 6, 8, 12, 16, 20, 24, 28, 32,…,64, 72, 80, 88,…, 256</p><p>当 CU 规格大于 8 时，CU 增加梯度为 4 CU。</p><p>当 CU 规格 大于 64 时， CU 增加梯度为 8 CU。)</p></td>
+     <td><p>可根据用户需求定制</p></td>
+   </tr>
+   <tr>
+     <td><p><strong>最多可创建 Collection 数量</strong></p></td>
+     <td><p>10</p></td>
+     <td><p>根据 CU 大小决定</p></td>
+     <td><p>根据 CU 大小决定</p></td>
+   </tr>
+   <tr>
+     <td><p><strong>私网连接</strong></p></td>
+     <td><p>不可用</p></td>
+     <td><p>可用</p></td>
+     <td><p>可用</p></td>
+   </tr>
+   <tr>
+     <td><p><strong>备份</strong></p></td>
+     <td><p>不可用</p></td>
+     <td><p>可用</p></td>
+     <td><p>可用</p></td>
+   </tr>
+   <tr>
+     <td><p><strong>迁移</strong></p></td>
+     <td><p>可用</p></td>
+     <td><p>可用</p></td>
+     <td><p>可用</p></td>
+   </tr>
+</table>
 

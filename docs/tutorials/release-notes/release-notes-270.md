@@ -4,7 +4,7 @@ beta: FALSE
 notebook: FALSE
 type: origin
 token: Y9hnwYoyIi9xgZkGG7Ycexl4nlb
-sidebar_position: 1
+sidebar_position: 2
 
 ---
 
@@ -21,7 +21,7 @@ import Admonition from '@theme/Admonition';
 
 ## Connectors{#connectors}
 
-作为 Zilliz Cloud Pipelines 内建能力之一，Connectors 用于从包括对象存储、Kafka （即将发布）等多个数据源向 Zilliz Cloud 导入数据。以对象存储 Connector 为例，该 Connector 可以监控指定的对象存储桶，自动同步桶中的 PDF 或 HTML 文件到 Zilliz Cloud Ingestion Pipeline 中，简化了非结构化文件到向量表示的转化过程，从而能够更快地将其加载到 Zilliz Cloud 向量数据库中，实现对新增数据的检索。[点此](./connectors)[了解更多](./connectors)。
+作为 Zilliz Cloud Pipelines 内建能力之一，Connectors 用于从包括对象存储、Kafka （即将发布）等多个数据源向 Zilliz Cloud 导入数据。以对象存储 Connector 为例，该 Connector 可以监控指定的对象存储桶，自动同步桶中的 PDF 或 HTML 文件到 Zilliz Cloud Ingestion Pipeline 中，简化了非结构化文件到向量表示的转化过程，从而能够更快地将其加载到 Zilliz Cloud 向量数据库中，实现对新增数据的检索。如需了解更多，可参阅[连接数据源](./connectors)。
 
 ## Rerankers{#rerankers}
 

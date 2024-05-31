@@ -35,7 +35,7 @@ RAG pipeline 一般分为两个阶段。首先是召回阶段，负责检索与�
 
 相比之下，Rerank 阶段有时不是十分必要。然而，对质量标准有严格要求的应用程序而言，可以选择集成一个 Reranker 模型以增强搜索质量，尽管这会增加计算开销并导致更长的搜索延迟。使用 Reranker 模型通常会使搜索查询的延迟增加 100 毫秒至几秒，具体取决于 topK 的大小。在粗排召回结果包含不正确或不相关文档的情况下，使用 Reranker 可以有效地将它们过滤掉，从而提高最终得到的LLM答案的质量。
 
-根据您所搭建的应用，您可以选择是否在 [Search pipeline](./create-search-pipelines) 中启用 Reranker。
+根据您所搭建的应用，您可以选择是否在 Search pipeline 中启用 Reranker。
 
 ![add-function-to-search-pipeline-cn](/img/add-function-to-search-pipeline-cn.png)
 

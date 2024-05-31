@@ -146,9 +146,9 @@ go get -u github.com/milvus-io/milvus-sdk-go/v2@v2.2.8
 
 - [创建集群](./create-cluster)
 
-- [创建 Collection](./undefined)
+- [管理 Collection](./manage-collections)
 
-- [插入 Entity](./undefined)
+- [Insert, Upsert 和 Delete](./insert-update-delete)
 
-- [向量搜索和查询](./undefined)
+- [Search, Query 和 Get](./search-query-get)
 

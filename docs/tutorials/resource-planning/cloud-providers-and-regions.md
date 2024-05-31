@@ -21,20 +21,24 @@ Zilliz Cloud 支持在阿里云以下地域部署集群。
 
 <table>
    <tr>
-     <th><strong>阿里云地域名称</strong></th>
-     <th><strong>Dedicated 集群（企业版）</strong></th>
+     <th><p><strong>阿里云地域名称</strong></p></th>
+     <th><p><strong>Serverless 版</strong></p></th>
+     <th><p><strong>Dedicated 版</strong></p></th>
    </tr>
    <tr>
-     <td>华东1（杭州）</td>
-     <td>☑️</td>
+     <td><p>华东1（杭州）</p></td>
+     <td><p>☑️</p></td>
+     <td><p>☑️</p></td>
    </tr>
    <tr>
-     <td>华北2（北京）</td>
-     <td>☑️</td>
+     <td><p>华北2（北京）</p></td>
+     <td><p>✖️</p></td>
+     <td><p>☑️</p></td>
    </tr>
    <tr>
-     <td>华南1（深圳）</td>
-     <td>☑️</td>
+     <td><p>华南1（深圳）</p></td>
+     <td><p>✖️</p></td>
+     <td><p>☑️</p></td>
    </tr>
 </table>
 
@@ -44,16 +48,19 @@ Zilliz Cloud 支持在腾讯云以下地域部署集群。
 
 <table>
    <tr>
-     <th><strong>腾讯地域名称</strong></th>
-     <th><strong>Dedicated 集群（企业版）</strong></th>
+     <th><p><strong>阿里云地域名称</strong></p></th>
+     <th><p><strong>Serverless 版</strong></p></th>
+     <th><p><strong>Dedicated 版</strong></p></th>
    </tr>
    <tr>
-     <td>华北地区（北京）</td>
-     <td>☑️</td>
+     <td><p>华北地区（北京）</p></td>
+     <td><p>✖️</p></td>
+     <td><p>☑️</p></td>
    </tr>
    <tr>
-     <td>华东地区（上海）</td>
-     <td>☑️</td>
+     <td><p>华东地区（上海）</p></td>
+     <td><p>✖️</p></td>
+     <td><p>☑️</p></td>
    </tr>
 </table>
 

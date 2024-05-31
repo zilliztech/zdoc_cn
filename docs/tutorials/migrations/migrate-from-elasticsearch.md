@@ -77,57 +77,57 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
 
 <table>
    <tr>
-     <th>Elasticsearch 字段</th>
-     <th>Zilliz Cloud 字段</th>
-     <th>描述</th>
+     <th><p>Elasticsearch 字段</p></th>
+     <th><p>Zilliz Cloud 字段</p></th>
+     <th><p>描述</p></th>
    </tr>
    <tr>
-     <td>dense_vector</td>
-     <td>FloatVector</td>
-     <td>向量维度与源索引中的向量字段维度相同。您可以在 <strong>L2</strong> 和 <strong>IP</strong> 之间指定一个度量类型。</td>
+     <td><p>dense_vector</p></td>
+     <td><p>FloatVector</p></td>
+     <td><p>向量维度与源索引中的向量字段维度相同。您可以在 <strong>L2</strong> 和 <strong>IP</strong> 之间指定一个度量类型。</p></td>
    </tr>
    <tr>
-     <td>keyword</td>
-     <td>VarChar</td>
-     <td>通过 <strong>Max Length</strong> 指定最大数据长度，有效值为 1 到 65535 之间。如果任何字符串超过了最大长度限制，迁移过程将会报错。</td>
+     <td><p>keyword</p></td>
+     <td><p>VarChar</p></td>
+     <td><p>通过 <strong>Max Length</strong> 指定最大数据长度，有效值为 1 到 65535 之间。如果任何字符串超过了最大长度限制，迁移过程将会报错。</p></td>
    </tr>
    <tr>
-     <td>text</td>
-     <td>VarChar</td>
-     <td>通过 <strong>Max Length</strong> 指定最大数据长度，有效值为 1 到 65535 之间。如果任何字符串超过了最大长度限制，迁移过程将会报错。</td>
+     <td><p>text</p></td>
+     <td><p>VarChar</p></td>
+     <td><p>通过 <strong>Max Length</strong> 指定最大数据长度，有效值为 1 到 65535 之间。如果任何字符串超过了最大长度限制，迁移过程将会报错。</p></td>
    </tr>
    <tr>
-     <td>long</td>
-     <td>Int64</td>
-     <td>-</td>
+     <td><p>long</p></td>
+     <td><p>Int64</p></td>
+     <td><p>-</p></td>
    </tr>
    <tr>
-     <td>integer</td>
-     <td>Int32</td>
-     <td>-</td>
+     <td><p>integer</p></td>
+     <td><p>Int32</p></td>
+     <td><p>-</p></td>
    </tr>
    <tr>
-     <td>double</td>
-     <td>Double</td>
-     <td>-</td>
+     <td><p>double</p></td>
+     <td><p>Double</p></td>
+     <td><p>-</p></td>
    </tr>
    <tr>
-     <td>float</td>
-     <td>Float</td>
-     <td>-</td>
+     <td><p>float</p></td>
+     <td><p>Float</p></td>
+     <td><p>-</p></td>
    </tr>
    <tr>
-     <td>boolean</td>
-     <td>Bool</td>
-     <td>-</td>
+     <td><p>boolean</p></td>
+     <td><p>Bool</p></td>
+     <td><p>-</p></td>
    </tr>
 </table>
 
 ## 相关文档{#related-topics}
 
-- [向量搜索和查询](./undefined)
+- [Search, Query 和 Get](./search-query-get)
 
-- [插入 Entity](./undefined)
+- [Insert, Upsert 和 Delete](./insert-update-delete)
 
 - [AUTOINDEX](./autoindex-explained)
 

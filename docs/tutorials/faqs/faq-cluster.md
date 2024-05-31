@@ -16,7 +16,6 @@ sidebar_position: 2
 
 - [集群创建完成后，是否能够修改集群 CU 类型？](#can-i-change-the-cu-type-after-my-dedicated-cluster-is-created)
 - [如何为集群缩容？](#how-can-i-scale-down-my-cluster-cu-size)
-- [Zilliz Cloud 如何处理不活跃集群？](#what-happens-to-my-inactive-clusters)
 - [为什么会连接超时以及如何处理连接超时报错？](#how-can-i-deal-with-a-connection-timeout-error-when-i-attempt-to-connect-to-zilliz-cloud)
 - [为什么无法连接集群?](#why-cant-i-connect-to-the-cluster-after-the-cluster-is-created)
 - [如何解决使用 Node.js SDK 无法连接 Zilliz Cloud 的问题?](#what-can-i-do-if-i-cannot-connect-to-zilliz-cloud-with-nodejs-sdk)
@@ -38,10 +37,6 @@ sidebar_position: 2
 ### 如何为集群缩容？ \{#how-can-i-scale-down-my-cluster-cu-size}
 
 如果您需要缩小集群 CU 大小，请先创建一个新集群，并在创建时选择您需要的 CU 大小。随后，将原集群中的数据[迁移](./migrate-between-clusters#procedure)至新集群中。如在迁移过程中遇到任何问题，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
-
-### Zilliz Cloud 如何处理不活跃集群？ \{#what-happens-to-my-inactive-clusters}
-
-Zilliz Cloud 会自动挂起 7 天内不活跃集群，并发送邮件通知。您可随时按需恢复集群。
 
 ### 为什么会连接超时以及如何处理连接超时报错？ \{#how-can-i-deal-with-a-connection-timeout-error-when-i-attempt-to-connect-to-zilliz-cloud}
 

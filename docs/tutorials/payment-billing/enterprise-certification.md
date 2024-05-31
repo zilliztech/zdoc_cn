@@ -4,7 +4,7 @@ beta: FALSE
 notebook: FALSE
 type: origin
 token: VRLOw9Mc7iPWnCkZs2YcoGwSnLh
-sidebar_position: 4
+sidebar_position: 5
 
 ---
 
@@ -27,36 +27,36 @@ Zilliz Cloud 现已开通企业认证渠道。如需进行[现金充值](./advan
 
     <table>
        <tr>
-         <th><strong>参数</strong></th>
-         <th><strong>描述</strong></th>
+         <th><p><strong>参数</strong></p></th>
+         <th><p><strong>描述</strong></p></th>
        </tr>
        <tr>
-         <td><strong>企业名称</strong></td>
-         <td>需要进行认证的企业名称。</td>
+         <td><p><strong>企业名称</strong></p></td>
+         <td><p>需要进行认证的企业名称。</p></td>
        </tr>
        <tr>
-         <td><strong>统一社会信用代码</strong></td>
-         <td>统一社会信用代码由 18 位数字或大写字母组成。</td>
+         <td><p><strong>统一社会信用代码</strong></p></td>
+         <td><p>统一社会信用代码由 18 位数字或大写字母组成。</p></td>
        </tr>
        <tr>
-         <td><strong>营业执照</strong></td>
-         <td>图片格式为 .jpg 或 .png 文件且大小不得超过 5 MB。</td>
+         <td><p><strong>营业执照</strong></p></td>
+         <td><p>图片格式为 .jpg 或 .png 文件且大小不得超过 5 MB。</p></td>
        </tr>
        <tr>
-         <td><strong>法人姓名</strong></td>
-         <td>企业法人的姓名。请确保与营业执照上的法定代表人姓名一致。</td>
+         <td><p><strong>法人姓名</strong></p></td>
+         <td><p>企业法人的姓名。请确保与营业执照上的法定代表人姓名一致。</p></td>
        </tr>
        <tr>
-         <td><strong>法人身份证照片</strong></td>
-         <td>法人身份证正反面照片。图片格式为 .jpg 或 .png 文件且大小不得超过 5 MB。</td>
+         <td><p><strong>法人身份证照片</strong></p></td>
+         <td><p>法人身份证正反面照片。图片格式为 .jpg 或 .png 文件且大小不得超过 5 MB。</p></td>
        </tr>
        <tr>
-         <td><strong>注册地址</strong></td>
-         <td>企业注册地址。</td>
+         <td><p><strong>注册地址</strong></p></td>
+         <td><p>企业注册地址。</p></td>
        </tr>
        <tr>
-         <td><strong>注册电话</strong></td>
-         <td>企业注册电话。</td>
+         <td><p><strong>注册电话</strong></p></td>
+         <td><p>企业注册电话。</p></td>
        </tr>
     </table>
 

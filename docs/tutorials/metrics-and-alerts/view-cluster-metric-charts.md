@@ -35,6 +35,10 @@ Zilliz Cloud 的性能指标图表展示了包括资源使用、Query 请求速�
 
     - 过去 1 小时
 
+    - 过去 6 小时
+
+    - 过去 12 小时
+
     - 过去 1 天
 
     - 过去 1 周
@@ -77,17 +81,27 @@ Zilliz Cloud 提供了多种指标图表，用于从不同角度监控集群性�
 
 要查看性能指标图表，请在**指标**选项卡上找到**性能**部分。这些图表提供了集群性能的快照，包括每秒 Query 请求数（QPS）、每秒向量 Search 操作数（VPS）、请求延时（Latency）和请求失败率。
 
-- **读请求 QPS/VPS**：每秒 Search 和 Query 类型请求数。Query 请求没有 VPS，因为 Query 过程不涉及到向量。
+- **读请求 QPS/VPS**
 
-- **写请求 QPS/VPS**：每秒数据插入（insert）和 Upsert 类型请求数。
+    - **QPS**：每秒读取请求（search 和 query）的数量。
 
-- **读请求延时（Latency）**：从发起读请求（Search 和 Query 请求）到返回结果的耗时的平均值或 P99 值。
+    - **VPS**：每秒向量读取请求（search）的数量。VPS 不适用于 query 请求，因为 query 操作不涉及向量。
 
-- **写请求延时（Latency）**：从发起写请求（数据 Insert 和 Upsert 请求）到返回结果的耗时的平均值或 P99 值。
+- **写请求 QPS/VPS**
 
-- **读请求失败率**：超时读请求数占比。
+    - **QPS**：每秒写入请求（insert、bulk insert、upsert 和 delete）的数量。
 
-- **写请求失败率**：超时写请求数占比。
+    - **VPS**：每秒向量写入请求（insert、upsert 和 delete）的数量。
+
+- **读请求延时（Latency）**：客户端向服务器发起读请求（search 和 query）到客户端收到响应之间的时间差。在右侧扩展的下拉菜单中选择**平均值**或 **P99** 将显示对应的平均延时或 P99 延时。
+
+- **写请求延时（Latency）**：客户端向服务器发起写请求（insert、upsert 和 delete）到客户端收到响应之间的时间差。在右侧扩展的下拉菜单中选择**平均值**或 **P99** 将显示对应的平均延时或 P99 延时。
+
+- **读请求失败率**：超时读请求（search 和 query）在每秒所有读请求中所占的百分比。
+
+- **写请求失败率**：超时写请求（insert、bulk insert、upsert 和 delete）在每秒所有写请求中所占的百分比。
+
+- **慢查询数量**：统计慢查询数量，包括 search 和 query 请求数。默认情况下，查询延时超过 5 秒的查询被视为慢查询。该指标仅对 BYOC 集群和 Dedicated 集群可见。有关更多集群类型信息，请参阅[Zilliz Cloud 版本类型](./select-zilliz-cloud-service-plans)。
 
 ![zh-view_metric_charts_performance](/img/zh-view_metric_charts_performance.png)
 
@@ -97,9 +111,9 @@ Zilliz Cloud 提供了多种指标图表，用于从不同角度监控集群性�
 
 - **Collection 数量**：集群中已创建的 Collection 总数。
 
-- **Entity 数量**：集群中已插入的 Entity 总数。
+- **Entity 数量**：集群中已插入的 Entity 总数。在右侧扩展的下拉菜单中选择指定的 collection，将显示该 collection 中已插入的 entity 数量。
 
-- **已加载 Entity 数量**：集群中已加载的 Entity 总数。
+- **已加载 Entity 数量**：集群中已加载的 Entity 总数。在右侧扩展的下拉菜单中选择指定的 collection，将显示该 collection 中已加载的 entity 数量。该指标仅对 BYOC 集群和企业版集群可见。有关更多集群类型信息，请参阅[Zilliz Cloud 版本类型](./select-zilliz-cloud-service-plans)。
 
 ![zh-view_metric_charts_entity](/img/zh-view_metric_charts_entity.png)
 

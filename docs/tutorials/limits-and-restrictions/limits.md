@@ -21,48 +21,48 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><strong>内容</strong></th>
-     <th><strong>最大数量</strong></th>
-     <th><strong>描述</strong></th>
+     <th><p><strong>内容</strong></p></th>
+     <th><p><strong>最大数量</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td>组织</td>
-     <td>1<br/></td>
-     <td>每个用户只能创建 1 个组织。<br/></td>
+     <td><p>组织</p></td>
+     <td><p>1</p></td>
+     <td><p>每个用户只能创建 1 个组织。</p></td>
    </tr>
    <tr>
-     <td>组织成员</td>
-     <td>100</td>
-     <td>每个组织最多可以容纳 100 个成员。每个用户可以属于多个组织。</td>
+     <td><p>组织成员</p></td>
+     <td><p>100</p></td>
+     <td><p>每个组织最多可以容纳 100 个成员。每个用户可以属于多个组织。</p></td>
    </tr>
    <tr>
-     <td>项目</td>
-     <td>10</td>
-     <td>每个用户可以创建 10 个项目。</td>
+     <td><p>项目</p></td>
+     <td><p>10</p></td>
+     <td><p>每个用户可以创建 10 个项目。</p></td>
    </tr>
    <tr>
-     <td>项目成员</td>
-     <td>100</td>
-     <td>每个项目最多可以容纳 100 个成员。每个用户可以加入同一组织内的多个项目。</td>
+     <td><p>项目成员</p></td>
+     <td><p>100</p></td>
+     <td><p>每个项目最多可以容纳 100 个成员。每个用户可以加入同一组织内的多个项目。</p></td>
    </tr>
 </table>
 
 ## 集群和 CU{#clusters-and-cus}
 
-集群和 CU 数量的限制取决于您的支付方式和订阅计划。下表展示了企业版集群相关限制。
+集群和 CU 数量的限制取决于您的支付方式和订阅计划。下表展示了 Dedicated 版集群相关限制。
 
 - **未绑定有效支付方式**
 
     <table>
        <tr>
-         <th><strong>类型</strong></th>
-         <th><strong>最大数量</strong></th>
-         <th><strong>描述</strong></th>
+         <th><p><strong>类型</strong></p></th>
+         <th><p><strong>最大数量</strong></p></th>
+         <th><p><strong>描述</strong></p></th>
        </tr>
        <tr>
-         <td>企业版集群</td>
-         <td>1</td>
-         <td>未绑定有效支付方式，最多可创建一个企业版集群。</td>
+         <td><p>Dedicated 版集群</p></td>
+         <td><p>1</p></td>
+         <td><p>未绑定有效支付方式，最多可创建一个Dedicated 版集群。</p></td>
        </tr>
     </table>
 
@@ -70,18 +70,18 @@ import Admonition from '@theme/Admonition';
 
     <table>
        <tr>
-         <th>类型</th>
-         <th><strong>最大数量</strong></th>
-         <th><strong>描述</strong></th>
+         <th><p>类型</p></th>
+         <th><p><strong>最大数量</strong></p></th>
+         <th><p><strong>描述</strong></p></th>
        </tr>
        <tr>
-         <td>企业版集群</td>
-         <td>128 CUs</td>
-         <td>在自助操作时，单个集群最多使用 32 个 CU，所有集群最多使用 128 个 CU。</td>
+         <td><p>Dedicated 版集群</p></td>
+         <td><p>256 CUs</p></td>
+         <td><p>在自助操作时，单个集群最多使用 256 个 CU。</p></td>
        </tr>
     </table>
 
-如需创建超过 32 个 CU 规格的集群或需要的总 CU 数量超过 128 CU 时，请[联系我们](https://zilliz.com.cn/contact-sales?firstname=xushuang&lastname=hu&company=Zilliz&name=Zilliz&email=xushuang.hu@zilliz.com&fullname=hu%20xushuang&phone=--&country=)。
+如需创建超过 256 个 CU 规格的集群，请[联系我们](https://zilliz.com.cn/contact-sales?firstname=xushuang&lastname=hu&company=Zilliz&name=Zilliz&email=xushuang.hu@zilliz.com&fullname=hu%20xushuang&phone=--&country=)。
 
 ## Pipeline{#pipelines}
 
@@ -91,20 +91,20 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><strong>Pipeline 类型</strong></th>
-     <th><strong>最大数量（每个项目）</strong></th>
+     <th><p><strong>Pipeline 类型</strong></p></th>
+     <th><p><strong>最大数量（每个项目）</strong></p></th>
    </tr>
    <tr>
-     <td>Ingestion Pipeline</td>
-     <td>10</td>
+     <td><p>Ingestion Pipeline</p></td>
+     <td><p>10</p></td>
    </tr>
    <tr>
-     <td>Deletion Pipeline</td>
-     <td>10</td>
+     <td><p>Deletion Pipeline</p></td>
+     <td><p>10</p></td>
    </tr>
    <tr>
-     <td>Search Pipeline</td>
-     <td>10</td>
+     <td><p>Search Pipeline</p></td>
+     <td><p>10</p></td>
    </tr>
 </table>
 
@@ -114,16 +114,16 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><strong>Embedding 模型</strong></th>
-     <th><strong>切片大小范围 (Tokens）</strong></th>
+     <th><p><strong>Embedding 模型</strong></p></th>
+     <th><p><strong>切片大小范围 (Tokens）</strong></p></th>
    </tr>
    <tr>
-     <td>zilliz/bge-base-en-v1.5</td>
-     <td>20-500</td>
+     <td><p>zilliz/bge-base-en-v1.5</p></td>
+     <td><p>20-500</p></td>
    </tr>
    <tr>
-     <td>zilliz/bge-base-zh-v1.5</td>
-     <td>20-500</td>
+     <td><p>zilliz/bge-base-zh-v1.5</p></td>
+     <td><p>20-500</p></td>
    </tr>
 </table>
 
@@ -132,15 +132,15 @@ import Admonition from '@theme/Admonition';
 <table>
    <tr>
      <th></th>
-     <th><strong>最大数量</strong></th>
+     <th><p><strong>最大数量</strong></p></th>
    </tr>
    <tr>
-     <td>元数据字段</td>
-     <td>5</td>
+     <td><p>元数据字段</p></td>
+     <td><p>5</p></td>
    </tr>
    <tr>
-     <td>字符串类型字段的最大长度</td>
-     <td>4,000</td>
+     <td><p>字符串类型字段的最大长度</p></td>
+     <td><p>4,000</p></td>
    </tr>
 </table>
 
@@ -148,16 +148,16 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><strong>Embedding 模型</strong></th>
-     <th><strong>每次运行 Ingestion 的最大切片数量</strong></th>
+     <th><p><strong>Embedding 模型</strong></p></th>
+     <th><p><strong>每次运行 Ingestion 的最大切片数量</strong></p></th>
    </tr>
    <tr>
-     <td>zilliz/bge-base-en-v1.5</td>
-     <td>3,500</td>
+     <td><p>zilliz/bge-base-en-v1.5</p></td>
+     <td><p>3,500</p></td>
    </tr>
    <tr>
-     <td>zilliz/bge-base-zh-v1.5</td>
-     <td>3,500</td>
+     <td><p>zilliz/bge-base-zh-v1.5</p></td>
+     <td><p>3,500</p></td>
    </tr>
 </table>
 
@@ -167,24 +167,24 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><strong>Pipeline 类型</strong></th>
-     <th><strong>Embedding 模型</strong></th>
-     <th><strong>最大 Token 用量</strong></th>
+     <th><p><strong>Pipeline 类型</strong></p></th>
+     <th><p><strong>Embedding 模型</strong></p></th>
+     <th><p><strong>最大 Token 用量</strong></p></th>
    </tr>
    <tr>
-     <td>Ingestion Pipeline</td>
-     <td>zilliz/bge-base-en-v1.5 &amp; zilliz/bge-base-zh-v1.5</td>
-     <td>100,000,000</td>
+     <td><p>Ingestion Pipeline</p></td>
+     <td><p>zilliz/bge-base-en-v1.5 &amp; zilliz/bge-base-zh-v1.5</p></td>
+     <td><p>100,000,000</p></td>
    </tr>
    <tr>
-     <td>Search Pipeline</td>
-     <td>zilliz/bge-base-en-v1.5 &amp; zilliz/bge-base-zh-v1.5</td>
-     <td>20,000,000</td>
+     <td><p>Search Pipeline</p></td>
+     <td><p>zilliz/bge-base-en-v1.5 &amp; zilliz/bge-base-zh-v1.5</p></td>
+     <td><p>20,000,000</p></td>
    </tr>
    <tr>
-     <td>1 个组织中的所有 Pipeline</td>
-     <td>zilliz/bge-base-en-v1.5 &amp; zilliz/bge-base-zh-v1.5</td>
-     <td>200,000,000</td>
+     <td><p>1 个组织中的所有 Pipeline</p></td>
+     <td><p>zilliz/bge-base-en-v1.5 &amp; zilliz/bge-base-zh-v1.5</p></td>
+     <td><p>200,000,000</p></td>
    </tr>
 </table>
 
@@ -198,14 +198,14 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><strong>类型</strong></th>
-     <th><strong>最大数量</strong></th>
-     <th><strong>描述</strong></th>
+     <th><p><strong>类型</strong></p></th>
+     <th><p><strong>最大数量</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td>企业版集群<br/></td>
-     <td>每 CU：\<= 64<br/> 每集群：\&lt;= 4096</td>
-     <td>在企业版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</td>
+     <td><p>Dedicated 版集群</p></td>
+     <td><p>每 CU：\&lt;= 64</p><p>每集群：\&lt;= 4096</p></td>
+     <td><p>在 Dedicated 版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</p></td>
    </tr>
 </table>
 
@@ -213,16 +213,16 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><strong>CU 数量</strong></th>
-     <th><strong>容量</strong></th>
+     <th><p><strong>CU 数量</strong></p></th>
+     <th><p><strong>容量</strong></p></th>
    </tr>
    <tr>
-     <td>1-8 CU</td>
-     <td>\&lt;= 4,096</td>
+     <td><p>1-8 CU</p></td>
+     <td><p>\&lt;= 4,096</p></td>
    </tr>
    <tr>
-     <td>12 CU 及以上</td>
-     <td>\&lt;= 512 x CU 数</td>
+     <td><p>12 CU 及以上</p></td>
+     <td><p>\&lt;= 512 x CU 数</p></td>
    </tr>
 </table>
 
@@ -255,14 +255,14 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><strong>类型</strong></th>
-     <th><strong>最大数量（每个 Collection）</strong></th>
-     <th>描述</th>
+     <th><p><strong>类型</strong></p></th>
+     <th><p><strong>最大数量（每个 Collection）</strong></p></th>
+     <th><p>描述</p></th>
    </tr>
    <tr>
-     <td>企业版集群<br/></td>
-     <td>4096</td>
-     <td>在企业版集群中，您可以为每个 Collection 创建最多 4096 个 Partition。</td>
+     <td><p>Dedicated 版集群</p></td>
+     <td><p>4096</p></td>
+     <td><p>在 Dedicated 版集群中，您可以为每个 Collection 创建最多 4096 个 Partition。</p></td>
    </tr>
 </table>
 
@@ -272,19 +272,19 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><strong>内容</strong></th>
-     <th><strong>最大数量</strong></th>
-     <th><strong>描述</strong></th>
+     <th><p><strong>内容</strong></p></th>
+     <th><p><strong>最大数量</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td>所有字段（每个 Collection）</td>
-     <td>64</td>
-     <td>N/A</td>
+     <td><p>所有字段（每个 Collection）</p></td>
+     <td><p>64</p></td>
+     <td><p>N/A</p></td>
    </tr>
    <tr>
-     <td>向量字段（每个 Collection）</td>
-     <td>1</td>
-     <td>即将支持多向量功能，敬请期待。</td>
+     <td><p>向量字段（每个 Collection）</p></td>
+     <td><p>1</p></td>
+     <td><p>即将支持多向量功能，敬请期待。</p></td>
    </tr>
 </table>
 
@@ -311,23 +311,23 @@ import Admonition from '@theme/Admonition';
 <table>
    <tr>
      <th></th>
-     <th>Insert rate limits</th>
+     <th><p>Insert rate limits</p></th>
    </tr>
    <tr>
-     <td>企业版集群（1-2 CU）</td>
-     <td>4 MB/s</td>
+     <td><p>Dedicated 版集群（1-2 CU）</p></td>
+     <td><p>4 MB/s</p></td>
    </tr>
    <tr>
-     <td>企业版集群（4-8 CU）</td>
-     <td>6 MB/s</td>
+     <td><p>Dedicated 版集群（4-8 CU）</p></td>
+     <td><p>6 MB/s</p></td>
    </tr>
    <tr>
-     <td>企业版集群（12-20 CU）</td>
-     <td>8 MB/s</td>
+     <td><p>Dedicated 版集群（12-20 CU）</p></td>
+     <td><p>8 MB/s</p></td>
    </tr>
    <tr>
-     <td>企业版集群（&gt;= 24 CU）</td>
-     <td>12 MB/s</td>
+     <td><p>Dedicated 版集群（&gt;= 24 CU）</p></td>
+     <td><p>12 MB/s</p></td>
    </tr>
 </table>
 
@@ -344,23 +344,23 @@ import Admonition from '@theme/Admonition';
 <table>
    <tr>
      <th></th>
-     <th>Insert rate limits</th>
+     <th><p>Insert rate limits</p></th>
    </tr>
    <tr>
-     <td>企业版集群（1-2 CU）</td>
-     <td>4 MB/s</td>
+     <td><p>Dedicated 版集群（1-2 CU）</p></td>
+     <td><p>4 MB/s</p></td>
    </tr>
    <tr>
-     <td>企业版集群（4-8 CU）</td>
-     <td>6 MB/s</td>
+     <td><p>Dedicated 版集群（4-8 CU）</p></td>
+     <td><p>6 MB/s</p></td>
    </tr>
    <tr>
-     <td>企业版集群（12-20 CU）</td>
-     <td>8 MB/s</td>
+     <td><p>Dedicated 版集群（12-20 CU）</p></td>
+     <td><p>8 MB/s</p></td>
    </tr>
    <tr>
-     <td>企业版集群（&gt;= 24 CU）</td>
-     <td>12 MB/s</td>
+     <td><p>Dedicated 版集群（&gt;= 24 CU）</p></td>
+     <td><p>12 MB/s</p></td>
    </tr>
 </table>
 
@@ -374,29 +374,29 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><strong>字段类型</strong></th>
-     <th><strong>索引类型</strong></th>
-     <th><strong>度量类型</strong></th>
+     <th><p><strong>字段类型</strong></p></th>
+     <th><p><strong>索引类型</strong></p></th>
+     <th><p><strong>度量类型</strong></p></th>
    </tr>
    <tr>
-     <td>向量字段</td>
-     <td>AUTOINDEX</td>
-     <td>L2, IP, 和 COSINE</td>
+     <td><p>向量字段</p></td>
+     <td><p>AUTOINDEX</p></td>
+     <td><p>L2, IP, 和 COSINE</p></td>
    </tr>
    <tr>
-     <td>VarChar 字段</td>
-     <td>TRIE</td>
-     <td>N/A</td>
+     <td><p>VarChar 字段</p></td>
+     <td><p>TRIE</p></td>
+     <td><p>N/A</p></td>
    </tr>
    <tr>
-     <td>Int8/16/32/64</td>
-     <td>STL_SORT</td>
-     <td>N/A</td>
+     <td><p>Int8/16/32/64</p></td>
+     <td><p>STL_SORT</p></td>
+     <td><p>N/A</p></td>
    </tr>
    <tr>
-     <td>Float32/64</td>
-     <td>STL_SORT</td>
-     <td>N/A</td>
+     <td><p>Float32/64</p></td>
+     <td><p>STL_SORT</p></td>
+     <td><p>N/A</p></td>
    </tr>
 </table>
 
@@ -444,6 +444,10 @@ import Admonition from '@theme/Admonition';
 
 每个集群的删除请求速率限制为每秒 1 个请求。
 
+### Data Import{#data-import}
+
+单 Collection 支撑最多 10 个正在运行或待运行的数据导入任务。
+
 ## CU 容量{#cu-capacity}
 
 请参阅[选择合适的 CU 类型](./cu-types-explained)了解更多。
@@ -452,24 +456,24 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th>文件类型</th>
-     <th>本地导入</th>
-     <th>对象存储导入</th>
+     <th><p>文件类型</p></th>
+     <th><p>本地导入</p></th>
+     <th><p>对象存储导入</p></th>
    </tr>
    <tr>
-     <td>JSON</td>
-     <td>1 GB</td>
-     <td>1 GB</td>
+     <td><p>JSON</p></td>
+     <td><p>1 GB</p></td>
+     <td><p>1 GB</p></td>
    </tr>
    <tr>
-     <td>Numpy<br/></td>
-     <td>暂不支持</td>
-     <td>文件夹的最大大小为 100 GB，每个子文件夹的最大大小为 15 GB。</td>
+     <td><p>Numpy</p></td>
+     <td><p>暂不支持</p></td>
+     <td><p>文件夹的最大大小为 100 GB，每个子文件夹的最大大小为 15 GB。</p></td>
    </tr>
    <tr>
-     <td>Parquet</td>
-     <td>暂不支持</td>
-     <td>10 GB</td>
+     <td><p>Parquet</p></td>
+     <td><p>暂不支持</p></td>
+     <td><p>10 GB</p></td>
    </tr>
 </table>
 

@@ -53,16 +53,16 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><strong>云服务提供商</strong></th>
-     <th><strong>地域</strong></th>
+     <th><p><strong>云服务提供商</strong></p></th>
+     <th><p><strong>地域</strong></p></th>
    </tr>
    <tr>
-     <td>阿里云</td>
-     <td>华东1（杭州）、华北2（北京）、华南1（深圳）</td>
+     <td><p>阿里云</p></td>
+     <td><p>华东1（杭州）、华北2（北京）、华南1（深圳）</p></td>
    </tr>
    <tr>
-     <td>腾讯云</td>
-     <td>华北地区（北京）、华东地区（上海）</td>
+     <td><p>腾讯云</p></td>
+     <td><p>华北地区（北京）、华东地区（上海）</p></td>
    </tr>
 </table>
 

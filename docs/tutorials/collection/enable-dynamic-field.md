@@ -563,7 +563,7 @@ output_fields='$meta["$key"]'
 
 ## 相关文档{#related-topics}
 
-- [创建 Collection](./undefined)
+- [管理 Collection](./manage-collections)
 
 - [使用 Partition Key](./use-partition-key)
 

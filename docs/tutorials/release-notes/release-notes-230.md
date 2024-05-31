@@ -4,7 +4,7 @@ beta: FALSE
 notebook: FALSE
 type: origin
 token: BuuSwsbhEiIHDJkB9YSc63xAnrh
-sidebar_position: 4
+sidebar_position: 5
 
 ---
 
@@ -25,11 +25,11 @@ import Admonition from '@theme/Admonition';
 
 - 范围搜索
 
-    用[范围搜索](./undefined)重新定义你的查询，让你为搜索设置半径。与传统的 ANN 搜索不同，范围搜索确保包括指定半径内的所有向量，提供更全面的视图。
+    用 [Range Search](./single-vector-search) 重新定义你的查询，让你为搜索设置半径。与传统的 ANN 搜索不同，范围搜索确保包括指定半径内的所有向量，提供更全面的视图。
 
 - Upsert
 
-    通过 [Upsert](./undefined)（“更新”和“插入”的融合）轻松管理动态数据集。享受频繁变化的数据集更高的效率。
+    通过 [Upsert](./insert-update-delete#upsert-entities)（“更新”和“插入”的融合）轻松管理动态数据集。享受频繁变化的数据集更高的效率。
 
 - 余弦度量类型
 
@@ -41,15 +41,15 @@ import Admonition from '@theme/Admonition';
 
 - 返回原始向量
 
-    在[搜索参数](./undefined)中指定向量字段，以将其作为搜索结果的一部分接收。
+    在 [Search 参数](./single-vector-search#search-parameters)中指定向量字段，以将其作为搜索结果的一部分接收。
 
 - JSON_CONTAINS 过滤器
 
-    使用 [JSON_CONTAINS 运算符](./undefined#search-and-query-with-jsoncontains)进一步细化搜索，允许你基于 JSON 字段值指定过滤条件。
+    使用 [JSON_CONTAINS 运算符](./use-json-fields#reference-on-json-filters)进一步细化搜索，允许你基于 JSON 字段值指定过滤条件。
 
 - Entity 计数
 
-    快速概览加载的[集合中的 Entity 总数](./undefined#use-count)，以更好地管理数据。
+    快速概览加载的[集合中的 Entity 总数](./get-and-scalar-query#advanced-operators)，以更好地管理数据。
 
 ## 功能改进{#enhancements}
 

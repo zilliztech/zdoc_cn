@@ -149,7 +149,7 @@ while (results.hasNext()) {
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>由于 Zilliz Cloud 目前不支持跨云数据传输，您的 Zilliz Cloud 集群和数据集需位于同一公共云平台上。</p>
+<p>为了成功导入数据，请确保目标 Collection 中的正在运行或待运行的导入任务不超过 10 个。</p>
 
 </Admonition>
 
@@ -166,7 +166,7 @@ CLUSTER_ENDPOINT = "YOUR_CLUSTER_ENDPOINT"
 CLUSTER_TOKEN = "YOUR_CLUSTER_TOKEN"
 COLLECTION_NAME = "medium_articles"
 API_KEY = "YOUR_CLUSTER_TOKEN"
-CLUSTER_ID = "YOUR_CLUSTER_ID"
+CLUSTER_ID = "YOUR_CLUSTER_ID" # Zilliz Cloud 集群 ID，如 "in01-xxxxxxxxxxxxxxx"
 
 ## Third-party constants
 YOUR_OBJECT_URL = "YOUR_OBJECT_URL"
@@ -230,7 +230,7 @@ import io.milvus.param.index.CreateIndexParam;
 String CLUSTER_ENDPOINT = "";
 String TOKEN = "";
 String API_KEY = "";
-String CLUSTER_ID = "";
+String CLUSTER_ID = ""; // Zilliz Cloud 集群 ID，如 "in01-xxxxxxxxxxxxxxx"
 String CLOUD_REGION = "";
 String COLLECTION_NAME = "";
 
@@ -343,12 +343,12 @@ from pymilvus import bulk_import
 # Bulk-import your data from the prepared data files
 
 res = bulk_import(
-    url=f"controller.api.{CLOUD_REGION}.zillizcloud.com",
+    url=f"controller.api.{CLOUD_REGION}.cloud.zilliz.com.cn",
     api_key=API_KEY,
     object_url=OBJECT_URL,
     access_key=ACCESS_KEY,
     secret_key=SECRET_KEY,
-    cluster_id=CLUSTER_ID,
+    cluster_id=CLUSTER_ID, # Zilliz Cloud 集群 ID，如 "in01-xxxxxxxxxxxxxxx"
     collection_name=COLLECTION_NAME
 )
 
@@ -374,7 +374,7 @@ import io.milvus.bulkwriter.response.BulkImportResponse;
 BulkImportResponse bulkImportResponse = CloudImport.bulkImport(
     CLUSTER_ENDPOINT,
     API_KEY,
-    CLUSTER_ID,
+    CLUSTER_ID, // Zilliz Cloud 集群 ID，如 "in01-xxxxxxxxxxxxxxx"
     COLLECTION_NAME,
     OBJECT_URL,
     ACCESS_KEY,
@@ -404,10 +404,10 @@ from pymilvus import get_import_progress
 
 job_id = res.json()['data']['jobId']
 res = get_import_progress(
-    url=f"controller.api.{CLOUD_REGION}.zillizcloud.com",
+    url=f"controller.api.{CLOUD_REGION}.cloud.zilliz.com.cn",
     api_key=API_KEY,
     job_id=job_id,
-    cluster_id=CLUSTER_ID
+    cluster_id=CLUSTER_ID # Zilliz Cloud 集群 ID，如 "in01-xxxxxxxxxxxxxxx"
 )
 
 # check the bulk-import progress
@@ -461,7 +461,7 @@ while (true) {
     GetImportProgressResponse getImportProgressResponse = CloudImport.getImportProgress(
         CLUSTER_ENDPOINT,
         API_KEY,
-        CLUSTER_ID,
+        CLUSTER_ID, // Zilliz Cloud 集群 ID，如 "in01-xxxxxxxxxxxxxxx"
         jobId
     );
 
@@ -497,9 +497,9 @@ from pymilvus import list_import_jobs
 # list bulk-import jobs
 
 res = list_import_jobs(
-    url=f"controller.api.{CLOUD_REGION}.zillizcloud.com",
+    url=f"controller.api.{CLOUD_REGION}.cloud.zilliz.com.cn",
     api_key=API_KEY,
-    cluster_id=CLUSTER_ID,
+    cluster_id=CLUSTER_ID, # Zilliz Cloud 集群 ID，如 "in01-xxxxxxxxxxxxxxx"
     page_size=10,
     current_page=1,
 )

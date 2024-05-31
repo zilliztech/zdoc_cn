@@ -22,9 +22,7 @@ import Admonition from '@theme/Admonition';
 
 - 已创建集群。详情请参见[创建集群](./create-cluster)。
 
-- 已下载示例数据集。详情请参见[示例数据集](./example-dataset)。
-
-- 已创建 Collection，且该 Collection 的 Schema 与示例数据集相匹配。已为该 Collection 创建索引，并已加载 Collection。详情请参见[创建 Collection](./undefined)。
+- 已创建 Collection，且该 Collection 的 Schema 与示例数据集相匹配。已为该 Collection 创建索引，并已加载 Collection。详情请参见[管理 Collection](./manage-collections)。
 
 ## 准备数据文件{#prepare-data-files}
 
@@ -33,8 +31,6 @@ Zilliz Cloud 支持从单个本地文件或一个或多个远程文件导入数�
 ### 准备单个本地 JSON 文件{#local-json-file}
 
 本地导入仅支持 JSON 格式的数据文件，并且每次导入只支持上传单个文件。文件大小不能超过 1 GB。
-
-本指南所使用的[示例数据集](./example-dataset)是基于行的 JSON 文件，您可以直接从本地导入至 Zilliz Cloud 集群。
 
 在实际应用场景中，您可能需要一次导入多个或更大的数据文件。在这种情况下，我们建议准备远程文件。
 

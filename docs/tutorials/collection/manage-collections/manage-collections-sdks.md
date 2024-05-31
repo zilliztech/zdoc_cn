@@ -21,7 +21,7 @@ import TabItem from '@theme/TabItem';
 
 ## 概述{#overview}
 
-，您通过 Collection 来存储 Embedding 向量。同一个 Collection 中的所有 Embedding 向量维度相同，且使用同样的相似性类型来计算向量距离和相似性。 
+您通过 Collection 来存储 Embedding 向量。同一个 Collection 中的所有 Embedding 向量维度相同，且使用同样的相似性类型来计算向量距离和相似性。 
 
  Collection 支持动态列（即支持插入未在 Schema 中预先定义的字段数据） 和自动生成的主键列。 
 
@@ -35,13 +35,13 @@ import TabItem from '@theme/TabItem';
 
 - **快速创建**
 
-    您只需要设置 Collection 名称和向量维度即可快速完成 Collection 创建。更多详情，请参考[快速创建](./manage-collections-sdks#quick-setup}**)。
+    您只需要设置 Collection 名称和向量维度即可快速完成 Collection 创建。更多详情，请参考[快速创建](./manage-collections-sdks#quick-setup)。
 
 - **定制化创建**
 
     您可以自定义 **Schema** 和**索引参数**。更多详情，请参考[定制化创建](./manage-collections-sdks#customized-setup)。
 
-### **快速创建{#quick-setup}**
+### 快速创建{#quick-setup}
 
  提供快速创建 Collection 的方式。您只需定义以下三个参数：
 

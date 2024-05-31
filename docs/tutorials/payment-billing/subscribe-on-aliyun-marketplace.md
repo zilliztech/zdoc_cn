@@ -4,20 +4,20 @@ beta: FALSE
 notebook: FALSE
 type: origin
 token: UTRZwxLf3ikwvbkXrKjcWAwOnmg
-sidebar_position: 1
+sidebar_position: 2
 
 ---
 
 import Admonition from '@theme/Admonition';
 
 
-# 订阅阿里云市场
+# 订阅阿里云云市场
 
-Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云市场上订阅 Zilliz Cloud。
+Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里云云市场上订阅 Zilliz Cloud。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>通过阿里云市场订阅后，您可以<a href="./create-cluster">创建</a><strong>阿里云</strong>和<strong>腾讯云</strong>实例。阿里云云市场仅为支付和订阅方式，不影响集群创建时的云服务提供商。</p>
+<p>通过阿里云云市场订阅后，您可以<a href="./create-cluster">创建</a><strong>阿里云</strong>和<strong>腾讯云</strong>实例。阿里云云市场仅为支付和订阅方式，不影响集群创建时的云服务提供商。</p>
 
 </Admonition>
 
@@ -25,7 +25,7 @@ Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云�
 
 ## 准备工作{#before-you-start}
 
-1. 您已注册并登录您的阿里云帐号。
+1. 您已注册并登录您的阿里云帐号。如需使用阿里云自账号购买 Zilliz Cloud 服务，请参考[购买商品](https://help.aliyun.com/zh/marketplace/user-guide/purchase-a-product?spm=a2c4g.11186623.0.i1)。
 
 1. 关于 Zilliz Cloud 帐号：
 
@@ -91,39 +91,17 @@ Zilliz Cloud 现已登录阿里云市场。本章主要介绍如何在阿里云�
 
 ![unsubscribe-alibaba-marketplace-cn](/img/unsubscribe-alibaba-marketplace-cn.png)
 
+## 重新订阅或解冻后重新开通阿里云云市场{#resubscribe}
+
+如您在取消订阅后需要重新订阅，请参考[上述操作步骤](./subscribe-on-aliyun-marketplace#procedures)重新开通阿里云云市场扣费渠道。
+
+如果您的阿里云云市场余额不足，阿里云云市场将自动关闭 Zilliz Cloud 服务。此时，您的 Zilliz Cloud 账单界面中将不会显示开通阿里云云市场扣费渠道。Zilliz Cloud 将冻结您的组织。如需继续使用，请先在阿里云云市场充值，充值完成后，请[重新开通阿里云云市场扣费渠道](./subscribe-on-aliyun-marketplace#procedures)。
+
 ## Zilliz Cloud 定价{#zilliz-cloud-pricing}
 
-### 企业版{#enterprise}
+更多详情，请参考 [Zilliz Cloud 定价](https://zilliz.com.cn/pricing)。
 
-<table>
-   <tr>
-     <th>Zilliz Cloud 用量</th>
-     <th>价格</th>
-     <th>阿里云市场 Unit 数量</th>
-   </tr>
-   <tr>
-     <td>1 CU 容量型每小时计算量</td>
-     <td>¥1.25  / Unit</td>
-     <td>1250</td>
-   </tr>
-   <tr>
-     <td>1 CU 性能型每小时计算量</td>
-     <td>¥1.25  / Unit</td>
-     <td>1250</td>
-   </tr>
-   <tr>
-     <td>每月 1 GB 存储量</td>
-     <td>¥0.5 / Unit</td>
-     <td>500</td>
-   </tr>
-   <tr>
-     <td>1 GB 备份量</td>
-     <td>¥0.5 / Unit</td>
-     <td>500</td>
-   </tr>
-</table>
-
-例如，在 Zilliz Cloud 企业版中创建大小为 1 CU 的性能型 CU，你需要支付 1250 个单位的价格，也就是 ¥1.25 每小时。 
+例如，在 Zilliz Cloud 企业版中创建大小为 1 CU 的性能型 CU，您需要支付 1250 个单位的价格，也就是 ¥1.25 每小时。 
 
 如需使用 Zilliz Cloud 专有部署版，请[联系销售](https://zilliz.com.cn/contact-sales)。
 
