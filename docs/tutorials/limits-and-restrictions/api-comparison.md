@@ -22,387 +22,387 @@ import Admonition from '@theme/Admonition';
 <table>
    <tr>
      <th></th>
-     <th><strong>API</strong></th>
-     <th><strong>GUI 操作</strong></th>
-     <th><strong>企业版</strong></th>
+     <th><p><strong>API</strong></p></th>
+     <th><p><strong>GUI 操作</strong></p></th>
+     <th><p><strong>企业版</strong></p></th>
    </tr>
    <tr>
-     <td>别名</td>
-     <td>alterAlias()</td>
-     <td>✘</td>
-     <td>✔︎</td>
-   </tr>
-   <tr>
-     <td></td>
-     <td>createAlias()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>别名</p></td>
+     <td><p>alterAlias()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>dropAlias()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>createAlias()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>describeAlias()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>dropAlias()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>listAliases()</td>
-     <td>✘</td>
-     <td>✔︎</td>
-   </tr>
-   <tr>
-     <td>认证</td>
-     <td>createCredential()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>describeAlias()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>deleteCredential()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>listAliases()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
+   </tr>
+   <tr>
+     <td><p>认证</p></td>
+     <td><p>createCredential()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>listCredUsers()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>deleteCredential()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>updateCredential()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
-   </tr>
-   <tr>
-     <td>批量插入</td>
-     <td>bulkInsert()</td>
-     <td>✔︎</td>
-     <td>✘</td>
+     <td><p>listCredUsers()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>getBulkInsertState()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>updateCredential()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
+   </tr>
+   <tr>
+     <td><p>批量插入</p></td>
+     <td><p>bulkInsert()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✘</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>listBulkInsertTasks()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
-   </tr>
-   <tr>
-     <td>Collection</td>
-     <td>getCollectionStatistics()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>getBulkInsertState()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>createCollection()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>listBulkInsertTasks()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
+   </tr>
+   <tr>
+     <td><p>Collection</p></td>
+     <td><p>getCollectionStatistics()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>describeCollection()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>createCollection()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>dropCollection()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>describeCollection()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>alterCollection()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>dropCollection()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>getLoadingProgress()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>alterCollection()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>getPersistentSgementInfo()</td>
-     <td>✘</td>
-     <td>✘</td>
+     <td><p>getLoadingProgress()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>getQuerySegmentInfo()</td>
-     <td>✘</td>
-     <td>✘</td>
+     <td><p>getPersistentSgementInfo()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✘</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>getReplicas()</td>
-     <td>✘</td>
-     <td>✘</td>
+     <td><p>getQuerySegmentInfo()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✘</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>insert()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>getReplicas()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✘</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>loadCollection()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>insert()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>releaseCollection()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>loadCollection()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>showCollections()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>releaseCollection()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>getLoadState()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>showCollections()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>renameCollection()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>getLoadState()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>upsert()</td>
-     <td>✘</td>
-     <td>✔︎</td>
-   </tr>
-   <tr>
-     <td>数据库</td>
-     <td>ListDatabases</td>
-     <td>✘</td>
-     <td>✘</td>
+     <td><p>renameCollection()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>DropDatabase</td>
-     <td>✘</td>
-     <td>✘</td>
+     <td><p>upsert()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
+   </tr>
+   <tr>
+     <td><p>数据库</p></td>
+     <td><p>ListDatabases</p></td>
+     <td><p>✘</p></td>
+     <td><p>✘</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>CreateDatabase</td>
-     <td>✘</td>
-     <td>✘</td>
-   </tr>
-   <tr>
-     <td>索引</td>
-     <td>createIndex()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>DropDatabase</p></td>
+     <td><p>✘</p></td>
+     <td><p>✘</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>describeIndex()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>CreateDatabase</p></td>
+     <td><p>✘</p></td>
+     <td><p>✘</p></td>
+   </tr>
+   <tr>
+     <td><p>索引</p></td>
+     <td><p>createIndex()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>dropIndex()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>describeIndex()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>getIndexBuildProgress()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>dropIndex()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>getIndexState()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
-   </tr>
-   <tr>
-     <td>管理</td>
-     <td>getCompactionState()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>getIndexBuildProgress()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>getCompactionStateWithPlan()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>getIndexState()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
+   </tr>
+   <tr>
+     <td><p>管理</p></td>
+     <td><p>getCompactionState()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>getFlushState()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>getCompactionStateWithPlan()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>getMetrics()</td>
-     <td>✘</td>
-     <td>✘</td>
+     <td><p>getFlushState()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>loadBalance()</td>
-     <td>✘</td>
-     <td>✘</td>
+     <td><p>getMetrics()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✘</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>manualCompact()</td>
-     <td>✘</td>
-     <td>✔︎</td>
-   </tr>
-   <tr>
-     <td>分区</td>
-     <td>createPartition()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>loadBalance()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✘</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>dropPartition()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>manualCompact()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
+   </tr>
+   <tr>
+     <td><p>分区</p></td>
+     <td><p>createPartition()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>getPartitionStatistics()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>dropPartition()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>hasPartiotion()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>getPartitionStatistics()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>loadPartitions()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>hasPartiotion()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>releasePartitions()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>loadPartitions()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>showPartitions()</td>
-     <td>✘</td>
-     <td>✔︎</td>
-   </tr>
-   <tr>
-     <td>搜索 &amp; 查询</td>
-     <td>search()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>releasePartitions()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>query()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>showPartitions()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
-     <td>访问控制（RBAC）</td>
-     <td>addUserToRole()</td>
-     <td>✔︎</td>
-     <td>✔︎<br/></td>
-   </tr>
-   <tr>
-     <td></td>
-     <td>createRole()</td>
-     <td>✘</td>
-     <td>✘</td>
+     <td><p>搜索 &amp; 查询</p></td>
+     <td><p>search()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>dropRole()</td>
-     <td>✘</td>
-     <td>✘</td>
+     <td><p>query()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
+   </tr>
+   <tr>
+     <td><p>访问控制（RBAC）</p></td>
+     <td><p>addUserToRole()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>grantRolePrivilege()</td>
-     <td>✘</td>
-     <td>✘</td>
+     <td><p>createRole()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✘</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>removeUserFromRole()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>dropRole()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✘</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>revokeRolePrivilege()</td>
-     <td>✘</td>
-     <td>✘</td>
+     <td><p>grantRolePrivilege()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✘</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>selectGrantForRole()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>removeUserFromRole()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>selectGrantForRoleAndObject()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>revokeRolePrivilege()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✘</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>selectRole()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>selectGrantForRole()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>selectUser()</td>
-     <td>✘</td>
-     <td>✔︎</td>
-   </tr>
-   <tr>
-     <td>系统</td>
-     <td>getVersion()</td>
-     <td>✔︎</td>
-     <td>✔︎</td>
+     <td><p>selectGrantForRoleAndObject()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
    <tr>
      <td></td>
-     <td>checkHealth()</td>
-     <td>✘</td>
-     <td>✔︎</td>
+     <td><p>selectRole()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
+   </tr>
+   <tr>
+     <td></td>
+     <td><p>selectUser()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
+   </tr>
+   <tr>
+     <td><p>系统</p></td>
+     <td><p>getVersion()</p></td>
+     <td><p>✔︎</p></td>
+     <td><p>✔︎</p></td>
+   </tr>
+   <tr>
+     <td></td>
+     <td><p>checkHealth()</p></td>
+     <td><p>✘</p></td>
+     <td><p>✔︎</p></td>
    </tr>
 </table>
 

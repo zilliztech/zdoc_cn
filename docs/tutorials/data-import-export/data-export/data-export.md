@@ -1,9 +1,9 @@
 ---
-slug: /connectors
+slug: /data-export
 beta: FALSE
 notebook: FALSE
 type: origin
-token: JScMwve0PiplHNkKqVYcKkzGnFs
+token: EPd8w1Ze7irYgQkU76HcryE4njd
 sidebar_position: 2
 
 ---
@@ -11,11 +11,9 @@ sidebar_position: 2
 import Admonition from '@theme/Admonition';
 
 
-# Connector
+# 数据导出
 
-全面的操作指南帮助您上手使用 Connector。
-
-
+本章介绍数据导出的相关操作步骤。
 
 import DocCardList from '@theme/DocCardList';
 

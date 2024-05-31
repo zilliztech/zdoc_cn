@@ -21,22 +21,22 @@ Zilliz Cloud 提供以下 CU 类型：性能型 CU、容量型 CU。
 
 <table>
    <tr>
-     <th>CU 类型</th>
-     <th>时延</th>
-     <th>吞吐能力</th>
-     <th>存储容量</th>
+     <th><p>CU 类型</p></th>
+     <th><p>时延</p></th>
+     <th><p>吞吐能力</p></th>
+     <th><p>存储容量</p></th>
    </tr>
    <tr>
-     <td>性能型</td>
-     <td>低</td>
-     <td>高</td>
-     <td>低</td>
+     <td><p>性能型</p></td>
+     <td><p>低</p></td>
+     <td><p>高</p></td>
+     <td><p>低</p></td>
    </tr>
    <tr>
-     <td>容量型</td>
-     <td>中</td>
-     <td>中</td>
-     <td>高</td>
+     <td><p>容量型</p></td>
+     <td><p>中</p></td>
+     <td><p>中</p></td>
+     <td><p>高</p></td>
    </tr>
 </table>
 
@@ -62,34 +62,34 @@ Zilliz Cloud 提供以下 CU 类型：性能型 CU、容量型 CU。
 
 <table>
    <tr>
-     <th>向量维度</th>
-     <th>性能型 CU（每单元最大向量数）</th>
-     <th>容量型 CU（每单元最大向量数）</th>
+     <th><p>向量维度</p></th>
+     <th><p>性能型 CU（每单元最大向量数）</p></th>
+     <th><p>容量型 CU（每单元最大向量数）</p></th>
    </tr>
    <tr>
-     <td>128</td>
-     <td>750 万</td>
-     <td>2500 万</td>
+     <td><p>128</p></td>
+     <td><p>750 万</p></td>
+     <td><p>2500 万</p></td>
    </tr>
    <tr>
-     <td>256</td>
-     <td>450 万</td>
-     <td>1500 万</td>
+     <td><p>256</p></td>
+     <td><p>450 万</p></td>
+     <td><p>1500 万</p></td>
    </tr>
    <tr>
-     <td>512</td>
-     <td>225 万</td>
-     <td>750 万</td>
+     <td><p>512</p></td>
+     <td><p>225 万</p></td>
+     <td><p>750 万</p></td>
    </tr>
    <tr>
-     <td>768</td>
-     <td>150 万</td>
-     <td>500 万</td>
+     <td><p>768</p></td>
+     <td><p>150 万</p></td>
+     <td><p>500 万</p></td>
    </tr>
    <tr>
-     <td>1024</td>
-     <td>112.5 万</td>
-     <td>375 万</td>
+     <td><p>1024</p></td>
+     <td><p>112.5 万</p></td>
+     <td><p>375 万</p></td>
    </tr>
 </table>
 
@@ -107,29 +107,29 @@ Zilliz Cloud 提供以下 CU 类型：性能型 CU、容量型 CU。
 
 <table>
    <tr>
-     <th>top_k 值</th>
-     <th>性能型 CU 的 QPS（768 维度，100万向量）</th>
-     <th>容量型 CU 的 QPS（768 维度，500 万向量）</th>
+     <th><p>top_k 值</p></th>
+     <th><p>性能型 CU 的 QPS（768 维度，100万向量）</p></th>
+     <th><p>容量型 CU 的 QPS（768 维度，500 万向量）</p></th>
    </tr>
    <tr>
-     <td>10</td>
-     <td>520</td>
-     <td>100</td>
+     <td><p>10</p></td>
+     <td><p>520</p></td>
+     <td><p>100</p></td>
    </tr>
    <tr>
-     <td>100</td>
-     <td>440</td>
-     <td>80</td>
+     <td><p>100</p></td>
+     <td><p>440</p></td>
+     <td><p>80</p></td>
    </tr>
    <tr>
-     <td>250</td>
-     <td>270</td>
-     <td>60</td>
+     <td><p>250</p></td>
+     <td><p>270</p></td>
+     <td><p>60</p></td>
    </tr>
    <tr>
-     <td>1000</td>
-     <td>150</td>
-     <td>40</td>
+     <td><p>1000</p></td>
+     <td><p>150</p></td>
+     <td><p>40</p></td>
    </tr>
 </table>
 
@@ -137,29 +137,29 @@ Zilliz Cloud 提供以下 CU 类型：性能型 CU、容量型 CU。
 
 <table>
    <tr>
-     <th>top_k<br/></th>
-     <th>性能型 CU 的时延（768 维度，100万向量）</th>
-     <th>容量型 CU 的时延（768 维度，500 万向量）</th>
+     <th><p>top_k</p></th>
+     <th><p>性能型 CU 的时延（768 维度，100万向量）</p></th>
+     <th><p>容量型 CU 的时延（768 维度，500 万向量）</p></th>
    </tr>
    <tr>
-     <td>10</td>
-     <td>&lt; 10 ms</td>
-     <td>&lt; 50 ms</td>
+     <td><p>10</p></td>
+     <td><p>&lt; 10 ms</p></td>
+     <td><p>&lt; 50 ms</p></td>
    </tr>
    <tr>
-     <td>100</td>
-     <td>&lt; 10 ms</td>
-     <td>&lt; 50 ms</td>
+     <td><p>100</p></td>
+     <td><p>&lt; 10 ms</p></td>
+     <td><p>&lt; 50 ms</p></td>
    </tr>
    <tr>
-     <td>250</td>
-     <td>&lt; 10 ms</td>
-     <td>&lt; 50 ms</td>
+     <td><p>250</p></td>
+     <td><p>&lt; 10 ms</p></td>
+     <td><p>&lt; 50 ms</p></td>
    </tr>
    <tr>
-     <td>1000</td>
-     <td>10 - 20 ms</td>
-     <td>50 - 100 ms</td>
+     <td><p>1000</p></td>
+     <td><p>10 - 20 ms</p></td>
+     <td><p>50 - 100 ms</p></td>
    </tr>
 </table>
 

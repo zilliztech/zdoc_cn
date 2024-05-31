@@ -1717,7 +1717,7 @@ console.log(JSON.stringify(res.results, null, 4))
     </TabItem>
     </Tabs>
 
-## 使用 JSON 字段作为过滤条件
+## 使用 JSON 字段作为过滤条件{#reference-on-json-filters}
 
 在使用 JSON 字段时，你可以使用 JSON 字段本身或其包含的任意键值对进行标量过滤。
 
@@ -1741,64 +1741,64 @@ console.log(JSON.stringify(res.results, null, 4))
 
 <table>
    <tr>
-     <th>操作符</th>
-     <th>示例</th>
-     <th>备注</th>
+     <th><p>操作符</p></th>
+     <th><p>示例</p></th>
+     <th><p>备注</p></th>
    </tr>
    <tr>
-     <td><code>&lt;</code></td>
-     <td><code>"A &lt; 3"</code></td>
-     <td><code>A</code>  必须存在</td>
+     <td><p><code>&lt;</code></p></td>
+     <td><p><code>"A &lt; 3"</code></p></td>
+     <td><p><code>A</code>  必须存在</p></td>
    </tr>
    <tr>
-     <td><code>&gt;</code></td>
-     <td><code>"A &gt; 1"</code></td>
-     <td><code>A</code>  必须存在</td>
+     <td><p><code>&gt;</code></p></td>
+     <td><p><code>"A &gt; 1"</code></p></td>
+     <td><p><code>A</code>  必须存在</p></td>
    </tr>
    <tr>
-     <td><code>==</code><br/></td>
-     <td><code>"A == 1"</code>  或 <code>"A == 'abc'"</code></td>
-     <td><code>A</code>  必须存在</td>
+     <td><p><code>==</code></p></td>
+     <td><p><code>"A == 1"</code>  或 <code>"A == 'abc'"</code></p></td>
+     <td><p><code>A</code>  必须存在</p></td>
    </tr>
    <tr>
-     <td><code>!=</code></td>
-     <td><code>"A != 1"</code> 或 <code>"A != 'abc'"</code></td>
-     <td><code>A</code>  可以不存在</td>
+     <td><p><code>!=</code></p></td>
+     <td><p><code>"A != 1"</code> 或 <code>"A != 'abc'"</code></p></td>
+     <td><p><code>A</code>  可以不存在</p></td>
    </tr>
    <tr>
-     <td><code>&lt;=</code></td>
-     <td><code>"A &lt;= 5"</code></td>
-     <td><code>A</code>  必须存在</td>
+     <td><p><code>&lt;=</code></p></td>
+     <td><p><code>"A &lt;= 5"</code></p></td>
+     <td><p><code>A</code>  必须存在</p></td>
    </tr>
    <tr>
-     <td><code>&gt;=</code></td>
-     <td><code>"A &gt;= 1"</code></td>
-     <td><code>A</code>  必须存在</td>
+     <td><p><code>&gt;=</code></p></td>
+     <td><p><code>"A &gt;= 1"</code></p></td>
+     <td><p><code>A</code>  必须存在</p></td>
    </tr>
    <tr>
-     <td><code>not</code></td>
-     <td><code>"not A == 1"</code> 或 <code>"not A != 'abc'"</code></td>
-     <td><code>A</code>  可以不存在</td>
+     <td><p><code>not</code></p></td>
+     <td><p><code>"not A == 1"</code> 或 <code>"not A != 'abc'"</code></p></td>
+     <td><p><code>A</code>  可以不存在</p></td>
    </tr>
    <tr>
-     <td><code>in</code></td>
-     <td><code>"A in [1, 2, 3]"</code> 或 <code>"A in ['a', 'b', 'c']"</code></td>
-     <td><code>A</code>  必须存在</td>
+     <td><p><code>in</code></p></td>
+     <td><p><code>"A in [1, 2, 3]"</code> 或 <code>"A in ['a', 'b', 'c']"</code></p></td>
+     <td><p><code>A</code>  必须存在</p></td>
    </tr>
    <tr>
-     <td><code>add</code> (<code>&amp;&amp;</code>)</td>
-     <td><code>"A &gt; 1 &amp;&amp; A &lt; 3"</code></td>
-     <td><code>A</code>  是否必须存在取决于运算符两侧表达式的要求</td>
+     <td><p><code>add</code> (<code>&amp;&amp;</code>)</p></td>
+     <td><p><code>"A &gt; 1 &amp;&amp; A &lt; 3"</code></p></td>
+     <td><p><code>A</code>  是否必须存在取决于运算符两侧表达式的要求</p></td>
    </tr>
    <tr>
-     <td><code>or</code> (<code>||</code>)</td>
-     <td><code>"A &gt; 1 \|\| A &lt; 3"</code></td>
-     <td><code>A</code>  是否必须存在取决于运算符两侧表达式的要求</td>
+     <td><p><code>or</code> (<code>||</code>)</p></td>
+     <td><p><code>"A &gt; 1 \|\| A &lt; 3"</code></p></td>
+     <td><p><code>A</code>  是否必须存在取决于运算符两侧表达式的要求</p></td>
    </tr>
    <tr>
-     <td><code>exist</code></td>
-     <td><code>"exist A"</code></td>
-     <td><code>A</code>  必须存在</td>
+     <td><p><code>exist</code></p></td>
+     <td><p><code>"exist A"</code></p></td>
+     <td><p><code>A</code>  必须存在</p></td>
    </tr>
 </table>
 
@@ -1849,7 +1849,7 @@ console.log(JSON.stringify(res.results, null, 4))
 
 ## 相关文档{#related-topics}
 
-- [创建 Collection](./undefined)
+- [管理 Collection](./manage-collections)
 
 - [开启动态 Schema](./enable-dynamic-field)
 

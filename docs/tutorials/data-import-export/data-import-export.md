@@ -1,9 +1,9 @@
 ---
-slug: /data-import
+slug: /data-import-export
 beta: FALSE
 notebook: FALSE
 type: origin
-token: ZORTw6MRwiMJ23kSwcRcOIxmnkc
+token: Z8V4wt5WmiE9CDkRatocpcnLnme
 sidebar_position: 5
 
 ---
@@ -11,9 +11,9 @@ sidebar_position: 5
 import Admonition from '@theme/Admonition';
 
 
-# 数据导入
+# 导入导出
 
-Zilliz Cloud 数据导入教程，从入门到精通。
+本章介绍 Zilliz Cloud 数据导入导出操作的相关步骤。
 
 import DocCardList from '@theme/DocCardList';
 

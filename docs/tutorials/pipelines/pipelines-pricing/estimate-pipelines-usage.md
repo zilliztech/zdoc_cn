@@ -4,7 +4,7 @@ beta: FALSE
 notebook: FALSE
 type: origin
 token: TNwlw4PRxiFoewkSQzhcU06BnyA
-sidebar_position: 5
+sidebar_position: 2
 
 ---
 
@@ -17,7 +17,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>工具使用字节对编码（BPE）分词器，用量估算结果可能会根据不同的处理策略有 30% 的浮动。估算结果仅供参考。实际用量，请参考 <a href="./manage-pipelines#on-web-ui">Pipelines 列表</a>。</p>
+<p>工具使用字节对编码（BPE）分词器，用量估算结果可能会根据不同的处理策略有 30% 的浮动。估算结果仅供参考。实际用量，请参考 <a href="./pipelines-text-data#manage-pipeline">Pipelines 列表</a>。</p>
 
 </Admonition>
 
@@ -33,11 +33,11 @@ Token 是自然语言处理（NLP）中的一个特殊概念。它可以被看�
 
 ## Pipelines 如何处理 Token？{#how-is-the-token-processed-by-pipelines}
 
-[Ingestion Pipeline](./understanding-pipelines#ingestion-pipelines) 通过将文件解析为 Token，然后将 Token 序列拆分并转化为向量，从而完成处理文档。
+Ingestion Pipeline 通过将文件解析为 Token，然后将 Token 序列拆分并转化为向量，从而完成处理文档。
 
-[Search Pipeline](./understanding-pipelines#search-pipelines) 通过将 Token 序列转化为向量来处理查询。通过将 Token 传入深度学习模型（称为 Embedding 模型），文本的“本质含义”被转换为向量表示，这可以被存储并由向量数据库检索。借助这一过程，Pipelines 能够帮助 API 用户理解不同单词及其在句子或文本中的上下文的含义和语义。
+Search Pipeline 通过将 Token 序列转化为向量来处理查询。通过将 Token 传入深度学习模型（称为 Embedding 模型），文本的“本质含义”被转换为向量表示，这可以被存储并由向量数据库检索。借助这一过程，Pipelines 能够帮助 API 用户理解不同单词及其在句子或文本中的上下文的含义和语义。
 
-[Deletion Pipeline](./understanding-pipelines#deletion-pipelines) 通常不涉及将文本作为 Token 处理。
+Deletion Pipeline 通常不涉及将文本作为 Token 处理。
 
 ## 估算 Pipeline 用量{#estimate-pipelines-usage}
 
@@ -75,7 +75,7 @@ Token 是自然语言处理（NLP）中的一个特殊概念。它可以被看�
 
 ## 相关文档{#related-topics}
 
-- [运行 Pipelines](./run-pipelines)
+- [摄取、搜索和删除数据](./pipelines-ingest-search-delete-data)
 
 - [使用限制](./limits#pipelines)
 

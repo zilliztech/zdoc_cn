@@ -563,20 +563,20 @@ System.out.println(batchFiles);
 
     <table>
        <tr>
-         <th><strong>文件类型</strong></th>
-         <th>合法的文件导入路径</th>
+         <th><p><strong>文件类型</strong></p></th>
+         <th><p>合法的文件导入路径</p></th>
        </tr>
        <tr>
-         <td><strong>JSON</strong></td>
-         <td></td>
+         <td><p><strong>JSON</strong></p></td>
+         <td><ul><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></p></li><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.json</code></p></li></ul></td>
        </tr>
        <tr>
-         <td><strong>Parquet</strong></td>
-         <td></td>
+         <td><p><strong>Parquet</strong></p></td>
+         <td><ul><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></p></li><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.parquet</code></p></li></ul></td>
        </tr>
        <tr>
-         <td><strong>NumPy</strong></td>
-         <td></td>
+         <td><p><strong>NumPy</strong></p></td>
+         <td><ul><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></p></li><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/*.npy</code></p></li></ul></td>
        </tr>
     </table>
 

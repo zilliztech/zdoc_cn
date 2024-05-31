@@ -22,7 +22,7 @@ Zilliz Cloud 提供 3 种创建 Collection 的方式以满足不同需求。
 
 - **[使用您自己的数据](./manage-collections-console#create-your-own-collection)**: 适合需要自定义 Collection 配置的用户。您可以根据自己的数据集或需求自定义 Collection Schema 和索引参数。
 
-- **[使用示例数据集](./manage-collections-console#create-sample-collection)**: 适合 Zilliz Cloud 新手用户。Zilliz Cloud 提供[示例数据集](./example-dataset)，并为您根据示例数据集自动定义 Schema。您无需额外修改 Collection 配置即可一键创建 Collection。
+- **[使用示例数据集](./manage-collections-console#create-sample-collection)**: 适合 Zilliz Cloud 新手用户。Zilliz Cloud 提供示例数据集，并为您根据示例数据集自动定义 Schema。您无需额外修改 Collection 配置即可一键创建 Collection。
 
 - **[复制现有 Collection](./manage-collections-console#copy-collection)**: 适合需要快速复制现有 Collection 的用户。
 
@@ -101,14 +101,14 @@ Collection 数量限制根据集群 CU 数量有所不同。
 <table>
    <tr>
      <th></th>
-     <th>Collection 数量上限</th>
+     <th><p>Collection 数量上限</p></th>
    </tr>
    <tr>
-     <td>8 CU 及以下</td>
-     <td><strong>32</strong></td>
+     <td><p>8 CU 及以下</p></td>
+     <td><p><strong>32</strong></p></td>
    </tr>
    <tr>
-     <td>大于 8 CU</td>
-     <td><strong>256</strong></td>
+     <td><p>大于 8 CU</p></td>
+     <td><p><strong>256</strong></p></td>
    </tr>
 </table>

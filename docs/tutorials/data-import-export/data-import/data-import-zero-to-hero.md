@@ -85,7 +85,7 @@ compile 'io.milvus:milvus-sdk-java:2.3.5'
 CLUSTER_ENDPOINT=""
 API_KEY=""
 TOKEN=""
-CLUSTER_ID=""
+CLUSTER_ID="" # Zilliz Cloud 集群 ID，如 "in01-xxxxxxxxxxxxxxx"
 CLOUD_REGION=""
 CLOUD_API_ENDPOINT="controller.api.{0}.cloud.zilliz.com.cn".format(CLOUD_REGION)
 COLLECTION_NAME=""
@@ -105,7 +105,7 @@ YOUR_BUCKET_NAME=""
 String CLUSTER_ENDPOINT = "";
 String TOKEN = "";
 String API_KEY = "";
-String CLUSTER_ID = "";
+String CLUSTER_ID = ""; // Zilliz Cloud 集群 ID，如 "in01-xxxxxxxxxxxxxxx"
 String CLOUD_REGION = "";
 String CLOUD_API_ENDPOINT = String.format("controller.api.%s.cloud.zilliz.com.cn", CLOUD_REGION);
 String COLLECTION_NAME = "";
@@ -140,58 +140,58 @@ curl https://assets.zilliz.com/doc-assets/medium_articles_partial_a13e0f2a.csv \
 
 <table>
    <tr>
-     <th><strong>字段名称</strong></th>
-     <th><strong>字段类型</strong></th>
-     <th><strong>字段属性</strong></th>
-     <th><strong>样例取值</strong></th>
+     <th><p><strong>字段名称</strong></p></th>
+     <th><p><strong>字段类型</strong></p></th>
+     <th><p><strong>字段属性</strong></p></th>
+     <th><p><strong>样例取值</strong></p></th>
    </tr>
    <tr>
-     <td>id</td>
-     <td>INT64</td>
-     <td>N/A</td>
-     <td>0</td>
+     <td><p>id</p></td>
+     <td><p>INT64</p></td>
+     <td><p>N/A</p></td>
+     <td><p>0</p></td>
    </tr>
    <tr>
-     <td>title_vector</td>
-     <td>FLOAT_VECTOR</td>
-     <td>Dimension: 768</td>
-     <td>[0.041732933, 0.013779674, -0.027564144, -0.01…</td>
+     <td><p>title_vector</p></td>
+     <td><p>FLOAT_VECTOR</p></td>
+     <td><p>Dimension: 768</p></td>
+     <td><p>[0.041732933, 0.013779674, -0.027564144, -0.01…</p></td>
    </tr>
    <tr>
-     <td>title</td>
-     <td>VARCHAR</td>
-     <td>Max length: 512</td>
-     <td>The Reported Mortality Rate of Coronavirus Is …</td>
+     <td><p>title</p></td>
+     <td><p>VARCHAR</p></td>
+     <td><p>Max length: 512</p></td>
+     <td><p>The Reported Mortality Rate of Coronavirus Is …</p></td>
    </tr>
    <tr>
-     <td>link</td>
-     <td>VARCHAR</td>
-     <td>Max length: 512</td>
-     <td>https://medium.com/swlh/the-reported-mortality…</td>
+     <td><p>link</p></td>
+     <td><p>VARCHAR</p></td>
+     <td><p>Max length: 512</p></td>
+     <td><p>https://medium.com/swlh/the-reported-mortality…</p></td>
    </tr>
    <tr>
-     <td>reading_time</td>
-     <td>INT64</td>
-     <td>N/A</td>
-     <td>13</td>
+     <td><p>reading_time</p></td>
+     <td><p>INT64</p></td>
+     <td><p>N/A</p></td>
+     <td><p>13</p></td>
    </tr>
    <tr>
-     <td>publication</td>
-     <td>VARCHAR</td>
-     <td>Max length: 512</td>
-     <td>The Startup</td>
+     <td><p>publication</p></td>
+     <td><p>VARCHAR</p></td>
+     <td><p>Max length: 512</p></td>
+     <td><p>The Startup</p></td>
    </tr>
    <tr>
-     <td>claps</td>
-     <td>INT64</td>
-     <td>N/A</td>
-     <td>1100</td>
+     <td><p>claps</p></td>
+     <td><p>INT64</p></td>
+     <td><p>N/A</p></td>
+     <td><p>1100</p></td>
    </tr>
    <tr>
-     <td>responses</td>
-     <td>INT64</td>
-     <td>N/A</td>
-     <td>18</td>
+     <td><p>responses</p></td>
+     <td><p>INT64</p></td>
+     <td><p>N/A</p></td>
+     <td><p>18</p></td>
    </tr>
 </table>
 
@@ -391,7 +391,9 @@ milvusClient.loadCollection(loadCollectionParam);
 <TabItem value='python'>
 
 ```python
-from pymilvus import RemoteBulkWriter, BulkFileType
+from pymilvus.bulk_import import RemoteBulkWriter, BulkFileType
+# 如您使用的 pymilvus 版本低于 2.4.2
+# 使用 from pymilvus import RemoteBulkWriter, BulkFileType
 
 # 三方服务常量
 YOUR_ACCESS_KEY = "YOUR_ACCESS_KEY"
@@ -711,7 +713,7 @@ res = bulk_import(
     # highlight-next-line
     url=CLOUD_API_ENDPOINT,
     api_key=API_KEY,
-    cluster_id=CLUSTER_ID,
+    cluster_id=CLUSTER_ID, # Zilliz Cloud 集群 ID，如 in01-xxxxxxxxxxxxxxx
     collection_name=COLLECTION_NAME,
     # 远程对象存储桶访问参数
     object_url=object_url,
@@ -739,7 +741,7 @@ String OBJECT_URL = String.format("https://storage.googleapis.com/%s/%s", BUCKET
 BulkImportResponse bulkImportResponse = CloudImport.bulkImport(
     CLUSTER_ENDPOINT,
     API_KEY,
-    CLUSTER_ID,
+    CLUSTER_ID, // Zilliz Cloud 集群 ID，如 in01-xxxxxxxxxxxxxxx
     COLLECTION_NAME,
     OBJECT_URL,
     ACCESS_KEY,
@@ -782,7 +784,7 @@ res = get_import_progress(
     url=CLOUD_API_ENDPOINT,
     api_key=API_KEY,
     job_id=job_id,
-    cluster_id=CLUSTER_ID
+    cluster_id=CLUSTER_ID # Zilliz Cloud 集群 ID，如 in01-xxxxxxxxxxxxxxx
 )
 
 print(res.json()["data"]["readyPercentage"])
@@ -819,7 +821,7 @@ while (true) {
     GetImportProgressResponse getImportProgressResponse = CloudImport.getImportProgress(
         CLUSTER_ENDPOINT,
         API_KEY,
-        CLUSTER_ID,
+        CLUSTER_ID, // Zilliz Cloud 集群 ID，如 in01-xxxxxxxxxxxxxxx
         jobId
     );
 
@@ -860,7 +862,7 @@ res = list_import_jobs(
     # highlight-next-line
     url=CLOUD_API_ENDPOINT,
     api_key=API_KEY,
-    cluster_id=CLUSTER_ID,
+    cluster_id=CLUSTER_ID, # Zilliz Cloud 集群 ID，如 in01-xxxxxxxxxxxxxxx
     page_size=10,
     current_page=1,
 )
@@ -892,7 +894,7 @@ print(res.json())
 ListImportJobsResponse listImportJobsResponse = CloudImport.listImportJobs(
     CLUSTER_ENDPOINT,
     API_KEY,
-    CLUSTER_ID,
+    CLUSTER_ID, // Zilliz Cloud 集群 ID，如 in01-xxxxxxxxxxxxxxx
     10,
     1
 );

@@ -29,11 +29,11 @@ AUTOINDEX 可以在如下场景中提供较高性能：
 
 - 实现动态量化策略，减少距离计算开销。
 
-## 同样成本，更高收益{#cost-efficiency}
+### 同样成本，更高收益{#cost-efficiency}
 
 根据用户对存储容量和检索性能的不同需求，AUTOINDEX 支持纯内存检索、磁盘混合检索及内存映射检索等多种检索模式。在纯内存检索模式下，AUTOINDEX 使用动态量化技术显著降低内存使用。在磁盘混合检索模式下，AUTOINDEX 动态缓存数据，并使用算法减少 I/O 操作，从而保持高性能。
 
-## 自动调优{#autonomous-tuning}
+### 自动调优{#autonomous-tuning}
 
 近似最近邻（ANN）算法要求在召回率和性能之间做出取舍。查询参数的设置对检索结果影响巨大。如果检索参数确定召回范围过小，可能会导致极低的召回率，达不到业务要求。反之而言，如果检索参数确定的召回范围过大，查询性能则会极速降低。
 
@@ -45,7 +45,7 @@ AUTOINDEX 可以在如下场景中提供较高性能：
 
 在 Zilliz Cloud 上为向量字段创建索引十分简单。您只需将索引类型设置为 `AUTOINDEX`，然后选择相似度类型即可。Zilliz Cloud 将自动为您选择最合适配置。因此，您只需要考虑相似度类型，选择如何测量向量间距离。
 
-在 Milvus 和 Zilliz Cloud 上创建索引和向量搜索时的参数设置区别如下所示：
+在 Milvus 和 Zilliz Cloud 上创建索引时的参数设置区别如下所示：
 
 ```python
 # For index-building
@@ -68,15 +68,18 @@ index_params = {
     "index_type": "AUTOINDEX", 
     # This is the only parameter you should think about.
     "metric_type": "L2",
-    # Leave this empty for AUTOINDEX to work 
-    "params": {} 
+    "params": {
+        "nlist": 1024
+    }
 }
+```
 
+在 Milvus 和 Zilliz Cloud 上进行检索时的参数设置区别如下所示：
+
+```python
 # For searches
 # On Milvus
 search_params = {
-    # Set this to the metric type used to build the index
-    "metric_type": "L2", 
     # Applicable tuning parameters vary with the index type
     "params": {
         "nprobe": 10
@@ -85,10 +88,20 @@ search_params = {
 
 # On Zilliz Cloud
 search_params = {
-    # The value remains the same as the metric type specified during index building.
-    "metric_type": "L2" 
+    # highlight-next-line
+    "params": { 
+        "level": 1 # The default value applies when left unspecified
+    }
 }
 ```
+
+### 关于检索精度控制参数`level`{#about-the-level-parameter}
+
+检索调优要求根据不同的索引类型调整不同的参数。以  HNSW  为例，对基于该索引的检索调优，需要调整 `ef` 参数，而对基于 IVF 类型的索引，需要调整的参数则是 `nprobe`。为了更好的在召回率和检索效率之间找到平衡，需要不断尝试对这些参数进行调整。
+
+Zilliz Cloud 使用一个统一的检索精度控制参数 `level`，简化了检索参数调优的过程。
+
+该参数默认值为`1`，最大值为`5`。随着参数值的增加，召回率会得到提高，相对应的，检索性能会有所下降。通常情况下，默认的检索精度可以支撑 90% 左右的召回率，基本满足大多数场景需求。如需更高的如回率，可以尝试调升该参数。
 
 ## 总结{#conclusion}
 

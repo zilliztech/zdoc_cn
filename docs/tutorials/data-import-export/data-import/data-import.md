@@ -1,9 +1,9 @@
 ---
-slug: /pipelines-user-guides
+slug: /data-import
 beta: FALSE
 notebook: FALSE
 type: origin
-token: GM95woK16ifEPYkPdbcc8J7ZnuU
+token: ZORTw6MRwiMJ23kSwcRcOIxmnkc
 sidebar_position: 1
 
 ---
@@ -11,9 +11,9 @@ sidebar_position: 1
 import Admonition from '@theme/Admonition';
 
 
-# 操作指南
+# 数据导入
 
-全面的操作指南帮助您上手使用 Zilliz Cloud Pipelines。
+Zilliz Cloud 数据导入教程，从入门到精通。
 
 import DocCardList from '@theme/DocCardList';
 

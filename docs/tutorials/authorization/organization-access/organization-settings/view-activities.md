@@ -47,20 +47,20 @@ Zilliz Cloud **事件**页面记录了[组织](./resource-hierarchy#understand-o
 
     <table>
        <tr>
-         <th><strong>事件类型</strong></th>
-         <th><strong>描述</strong></th>
+         <th><p><strong>事件类型</strong></p></th>
+         <th><p><strong>描述</strong></p></th>
        </tr>
        <tr>
-         <td>信息</td>
-         <td>集群、权限、账单等相关信息。<br/> 例如：集群 in01-xxxxxxxxxxxxxxx 已创建。</td>
+         <td><p>信息</p></td>
+         <td><p>集群、权限、账单等相关信息。</p><p>例如：集群 in01-xxxxxxxxxxxxxxx 已创建。</p></td>
        </tr>
        <tr>
-         <td>警告</td>
-         <td>资源状态更新等需要留意的信息。<br/> 例如：集群 in01-xxxxxxxxxxxxxxx 已删除。</td>
+         <td><p>警告</p></td>
+         <td><p>资源状态更新等需要留意的信息。</p><p>例如：集群 in01-xxxxxxxxxxxxxxx 已删除。</p></td>
        </tr>
        <tr>
-         <td>错误</td>
-         <td>账单支付失败或系统出错等需要立刻注意或采取行动的信息。<br/> 例如：账单 invo-xxxxxxxxxxxxxxxxxxxxxxxx 支付失败。</td>
+         <td><p>错误</p></td>
+         <td><p>账单支付失败或系统出错等需要立刻注意或采取行动的信息。</p><p>例如：账单 invo-xxxxxxxxxxxxxxxxxxxxxxxx 支付失败。</p></td>
        </tr>
     </table>
 

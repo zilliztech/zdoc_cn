@@ -25,7 +25,7 @@ import Admonition from '@theme/Admonition';
 
 在**操作**下拉列表中，选择**删除**可删除集群及其相关数据。只有当您在**删除集群**对话框中确认删除操作后，Zilliz Cloud 才会该删除集群。
 
-除了通过 web 控制台，您还可以通过 API 删除集群。有关更多信息，请参阅[删除集群](/reference/drop-cluster)。
+除了通过 web 控制台，您还可以通过 API 删除集群。有关更多信息，请参阅[删除集群](/reference/restful/drop-cluster)。
 
 ## Dedicated 集群{#dedicated-cluster}
 
@@ -97,7 +97,7 @@ import Admonition from '@theme/Admonition';
 
 - 扩容集群
 
-    在**集群信息**区域，单击**大小**右侧的**扩容**，以打开**扩容集群**对话框。您可以为集群增加计算和存储资源。在对话框中，您最多可将集群资源扩展到 24 个 CU。如果您需要更大的 CU，请联系我们。
+    在**集群信息**区域，单击**大小**右侧的**扩容**，以打开**扩容集群**对话框。您可以为集群增加计算和存储资源。在对话框中，您最多可将集群资源扩展到 32 个 CU。如果您需要更大的 CU，请联系我们。
 
     有关 CU 类型以及如何选择合适的 CU，请参阅[选择合适的 CU 类型](./cu-types-explained)。
 
@@ -133,24 +133,24 @@ import Admonition from '@theme/Admonition';
 
     <table>
        <tr>
-         <th>云厂商</th>
-         <th>存储费用</th>
+         <th><p>云厂商</p></th>
+         <th><p>存储费用</p></th>
        </tr>
        <tr>
-         <td>阿里云</td>
-         <td>¥0.5 / GB / 月</td>
+         <td><p>阿里云</p></td>
+         <td><p>¥0.5 / GB / 月</p></td>
        </tr>
     </table>
 
     要恢复挂起中的集群，请单击**操作**并从下拉列表中选择**恢复**。在**恢复集群**对话框中确认此操作后，集群的状态将从**挂起中**变为**恢复运行中**，然后再变为**运行中**。此时将根据集群 CU 大小和集群类型产生费用。
 
-    此外，您还可以通过 RESTful API 挂起或恢复集群。有关更多接口信息，请参阅 [Suspend Cluster](/reference/suspend-cluster) 和 [Resume Cluster](/reference/resume-cluster)。
+    此外，您还可以通过 RESTful API 挂起或恢复集群。有关更多接口信息，请参阅 [Suspend Cluster](/reference/restful/suspend-cluster) 和 [Resume Cluster](/reference/restful/resume-cluster)。
 
 - 删除集群
 
     在**操作**下拉列表中，选择**删除**可删除集群及其相关数据。只有当您在**删除集群**对话框中确认删除操作后，Zilliz Cloud 才会该删除集群。
 
-    此外，您还可以通过 API 来删除集群。有关更多信息，请参阅[删除集群](/reference/drop-cluster)。
+    此外，您还可以通过 API 来删除集群。有关更多信息，请参阅[删除集群](/reference/restful/drop-cluster)。
 
 ## 相关文档{#related-docs}
 

@@ -1611,52 +1611,52 @@ console.log(res.data)
 
 <table>
    <tr>
-     <th><strong>运算符</strong></th>
-     <th><strong>描述</strong></th>
+     <th><p><strong>运算符</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><strong>add (&&)</strong></td>
-     <td>当两个操作数都为真时返回真</td>
+     <td><p><strong>add (&&)</strong></p></td>
+     <td><p>当两个操作数都为真时返回真</p></td>
    </tr>
    <tr>
-     <td><strong>or (||)</strong></td>
-     <td>当任一操作数为真时返回真</td>
+     <td><p><strong>or (||)</strong></p></td>
+     <td><p>当任一操作数为真时返回真</p></td>
    </tr>
    <tr>
-     <td><strong>+, -, *, /</strong></td>
-     <td>加法、减法、乘法和除法</td>
+     <td><p><strong>+, -, *, /</strong></p></td>
+     <td><p>加法、减法、乘法和除法</p></td>
    </tr>
    <tr>
-     <td></td>
-     <td>幂运算</td>
+     <td><hr /></td>
+     <td><p>幂运算</p></td>
    </tr>
    <tr>
-     <td><strong>%</strong></td>
-     <td>取模</td>
+     <td><p><strong>%</strong></p></td>
+     <td><p>取模</p></td>
    </tr>
    <tr>
-     <td><strong>\<, ></strong></td>
-     <td>小于、大于</td>
+     <td><p><strong>\<, ></strong></p></td>
+     <td><p>小于、大于</p></td>
    </tr>
    <tr>
-     <td><strong>==, !=</strong></td>
-     <td>等于、不等于</td>
+     <td><p><strong>==, !=</strong></p></td>
+     <td><p>等于、不等于</p></td>
    </tr>
    <tr>
-     <td><strong>\<=, >=</strong></td>
-     <td>小于或等于、大于或等于</td>
+     <td><p><strong>\<=, >=</strong></p></td>
+     <td><p>小于或等于、大于或等于</p></td>
    </tr>
    <tr>
-     <td><strong>not</strong></td>
-     <td>反转给定条件的结果</td>
+     <td><p><strong>not</strong></p></td>
+     <td><p>反转给定条件的结果</p></td>
    </tr>
    <tr>
-     <td><strong>like</strong></td>
-     <td>使用通配符运算符比较相似值。<br/> 例如，使用 <code>like "prefix%"</code> 匹配以 <code>"prefix"</code> 开头的字符串。</td>
+     <td><p><strong>like</strong></p></td>
+     <td><p>使用通配符运算符比较相似值。</p><p>例如，使用 <code>like "prefix%"</code> 匹配以 <code>"prefix"</code> 开头的字符串。</p></td>
    </tr>
    <tr>
-     <td><strong>in</strong></td>
-     <td>测试表达式是否匹配值列表中的任何值。</td>
+     <td><p><strong>in</strong></p></td>
+     <td><p>测试表达式是否匹配值列表中的任何值。</p></td>
    </tr>
 </table>
 

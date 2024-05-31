@@ -1063,7 +1063,7 @@ console.log(res.results)
 
 输出为一个列表，包括两个各含三个字典的子列表，每个字典展示返回 entity 的 ID 和距离。
 
-### Filtered search{#filtered-searches}
+### Filtered search{#filtered-search}
 
 - **Schema 中已定义的字段**
 

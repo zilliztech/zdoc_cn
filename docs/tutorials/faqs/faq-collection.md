@@ -35,15 +35,15 @@ sidebar_position: 3
 <table>
    <tr>
      <th></th>
-     <th>最大 Collection 数</th>
+     <th><p>最大 Collection 数</p></th>
    </tr>
    <tr>
-     <td>小于等于 8 CU</td>
-     <td>32</td>
+     <td><p>小于等于 8 CU</p></td>
+     <td><p>32</p></td>
    </tr>
    <tr>
-     <td>大于 8 CU</td>
-     <td>256</td>
+     <td><p>大于 8 CU</p></td>
+     <td><p>256</p></td>
    </tr>
 </table>
 
@@ -51,7 +51,7 @@ sidebar_position: 3
 
 1. 为集群[扩容](./manage-cluster)。
 
-1. [删除](./undefined)未使用的 Collection。
+1. [删除](./manage-collections)未使用的 Collection。
 
 1. 使用 [Partition Key](./use-partition-key) 创建 Partition。
 

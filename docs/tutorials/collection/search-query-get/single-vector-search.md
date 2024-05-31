@@ -1788,19 +1788,19 @@ console.log(res.results)
 
 <table>
    <tr>
-     <th><strong>度量类型</strong></th>
-     <th><strong>特点</strong></th>
-     <th><strong>Range search</strong></th>
+     <th><p><strong>度量类型</strong></p></th>
+     <th><p><strong>特点</strong></p></th>
+     <th><p><strong>Range search</strong></p></th>
    </tr>
    <tr>
-     <td><code>L2</code></td>
-     <td>较小的 L2 距离表示更高的相似性。</td>
-     <td>要排除结果中最近的向量，请确保：<br/> <code>range_filter</code> \&lt;= distance \&lt; <code>radius</code></td>
+     <td><p><code>L2</code></p></td>
+     <td><p>较小的 L2 距离表示更高的相似性。</p></td>
+     <td><p>要排除结果中最近的向量，请确保：</p><p><code>range_filter</code> \&lt;= distance \&lt; <code>radius</code></p></td>
    </tr>
    <tr>
-     <td><code>IP</code></td>
-     <td>较大的 IP 距离表示更高的相似性。</td>
-     <td>要排除结果中最近的向量，请确保：<br/> <code>radius</code> \&lt; distance \&lt;= <code>range_filter</code></td>
+     <td><p><code>IP</code></p></td>
+     <td><p>较大的 IP 距离表示更高的相似性。</p></td>
+     <td><p>要排除结果中最近的向量，请确保：</p><p><code>radius</code> \&lt; distance \&lt;= <code>range_filter</code></p></td>
    </tr>
 </table>
 
@@ -1826,28 +1826,28 @@ search_parameters = {
 
 <table>
    <tr>
-     <th><strong>参数</strong></th>
-     <th><strong>描述</strong></th>
+     <th><p><strong>参数</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><code>metric_type</code></td>
-     <td>度量向量 embedding 间相似度的方法。<br/> 可选值为 <code>IP</code>、<code>L2</code>、<code>COSINE</code>。默认按已加载（load）的索引文件设定。</td>
+     <td><p><code>metric_type</code></p></td>
+     <td><p>度量向量 embedding 间相似度的方法。</p><p>可选值为 <code>IP</code>、<code>L2</code>、<code>COSINE</code>。默认按已加载（load）的索引文件设定。</p></td>
    </tr>
    <tr>
-     <td><code>params.nprobe</code></td>
-     <td>搜索时查询的单位数。<br/> 取值范围为 [1, nlist<sub>[1]</sub>]。</td>
+     <td><p><code>params.nprobe</code></p></td>
+     <td><p>搜索时查询的单位数。</p><p>取值范围为 [1, nlist<sub>[1]</sub>]。</p></td>
    </tr>
    <tr>
-     <td><code>params.level</code></td>
-     <td>Search 的精度等级。<br/> 可选值为 <code>1</code>、<code>2</code>、<code>3</code>，默认为 <code>1</code>。较高的值能提高精确度，但会降低性能。</td>
+     <td><p><code>params.level</code></p></td>
+     <td><p>Search 的精度等级。</p><p>可选值为 <code>1</code>、<code>2</code>、<code>3</code>，默认为 <code>1</code>。较高的值能提高精确度，但会降低性能。</p></td>
    </tr>
    <tr>
-     <td><code>params.radius</code></td>
-     <td>查询向量与候选向量间的最小相似度。<br/> 取值范围为 [1, nlist<sub>[1]</sub>]。</td>
+     <td><p><code>params.radius</code></p></td>
+     <td><p>查询向量与候选向量间的最小相似度。</p><p>取值范围为 [1, nlist<sub>[1]</sub>]。</p></td>
    </tr>
    <tr>
-     <td><code>params.range_filter</code><br/></td>
-     <td>相似度范围，可细化搜索范围，只包括在此范围内的向量。<br/> 取值范围为 [top-K<sub>[2]</sub>, ∞]。</td>
+     <td><p><code>params.range_filter</code></p></td>
+     <td><p>相似度范围，可细化搜索范围，只包括在此范围内的向量。</p><p>取值范围为 [top-K<sub>[2]</sub>, ∞]。</p></td>
    </tr>
 </table>
 

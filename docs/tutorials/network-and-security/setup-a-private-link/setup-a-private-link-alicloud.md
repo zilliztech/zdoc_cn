@@ -67,20 +67,20 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><strong>参数名称</strong></th>
-     <th><strong>参数描述</strong></th>
+     <th><p><strong>参数名称</strong></p></th>
+     <th><p><strong>参数描述</strong></p></th>
    </tr>
    <tr>
-     <td><strong>云服务提供商</strong></td>
-     <td>与私网连接访问目标集群所在网络保持一致。<br/> 在<strong>集群详情</strong>页面中的<strong>集群信息</strong>区域中，可查看当前集群的<strong>地域</strong>及详情。</td>
+     <td><p><strong>云服务提供商</strong></p></td>
+     <td><p>与私网连接访问目标集群所在网络保持一致。</p><p>在<strong>集群详情</strong>页面中的<strong>集群信息</strong>区域中，可查看当前集群的<strong>地域</strong>及详情。</p></td>
    </tr>
    <tr>
-     <td><strong>云服务地域</strong></td>
-     <td>与私网连接访问目标集群所在网络保持一致。</td>
+     <td><p><strong>云服务地域</strong></p></td>
+     <td><p>与私网连接访问目标集群所在网络保持一致。</p></td>
    </tr>
    <tr>
-     <td><strong>主帐号 ID</strong></td>
-     <td>填写您在步骤 3 中获取的阿里云主帐号 ID，并单击<strong>添加</strong>提交验证。</td>
+     <td><p><strong>主帐号 ID</strong></p></td>
+     <td><p>填写您在步骤 3 中获取的阿里云主帐号 ID，并单击<strong>添加</strong>提交验证。</p></td>
    </tr>
 </table>
 
@@ -107,20 +107,20 @@ import Admonition from '@theme/Admonition';
 
     <table>
        <tr>
-         <th><strong>参数</strong></th>
-         <th><strong>描述</strong></th>
+         <th><p><strong>参数</strong></p></th>
+         <th><p><strong>描述</strong></p></th>
        </tr>
        <tr>
-         <td><strong>节点名称</strong></td>
-         <td>为该节点命名。</td>
+         <td><p><strong>节点名称</strong></p></td>
+         <td><p>为该节点命名。</p></td>
        </tr>
        <tr>
-         <td><strong>终端节点类型</strong></td>
-         <td>选择<strong>接口终端节点</strong>。</td>
+         <td><p><strong>终端节点类型</strong></p></td>
+         <td><p>选择<strong>接口终端节点</strong>。</p></td>
        </tr>
        <tr>
-         <td><strong>终端节点服务</strong></td>
-         <td>选择<strong>选择可用服务</strong>。<br/> 如果您在上一步中添加的阿里云主帐号通过验证后，可用服务列表中将展示该主帐号对应的 Zilliz Cloud 服务。</td>
+         <td><p><strong>终端节点服务</strong></p></td>
+         <td><p>选择<strong>选择可用服务</strong>。</p><p>如果您在上一步中添加的阿里云主帐号通过验证后，可用服务列表中将展示该主帐号对应的 Zilliz Cloud 服务。</p></td>
        </tr>
     </table>
 
@@ -130,16 +130,16 @@ import Admonition from '@theme/Admonition';
 
     <table>
        <tr>
-         <th><strong>专有网络</strong></th>
-         <th>选择需要使用私网连接访问 Zilliz Cloud 集群的服务所在 VPC。</th>
+         <th><p><strong>专有网络</strong></p></th>
+         <th><p>选择需要使用私网连接访问 Zilliz Cloud 集群的服务所在 VPC。</p></th>
        </tr>
        <tr>
-         <td><strong>安全组</strong></td>
-         <td>选择应用于该终端节点的安全组规则。如第一次使用，建议新建安全组，规划如下：<br/> - <strong>网络</strong><br/>     选择需要使用私网连接访问 Zilliz Cloud 集群的服务所在 VPC。<br/> - <strong>访问规则</strong><br/>     添加一条<strong>协议类型</strong>为 <strong>TCP</strong>，<strong>端口范围</strong>为 Zilliz Cloud 集群暴露的端口，<strong>授权对象</strong>为 <strong>0.0.0.0/0</strong> 的访问规则。建议添加一条 ICMP 规则用于网络连通性排查。</td>
+         <td><p><strong>安全组</strong></p></td>
+         <td><p>选择应用于该终端节点的安全组规则。如第一次使用，建议新建安全组，规划如下：</p><ul><li><p><strong>网络</strong></p><p>选择需要使用私网连接访问 Zilliz Cloud 集群的服务所在 VPC。</p></li><li><p><strong>访问规则</strong></p><p>添加一条<strong>协议类型</strong>为 <strong>TCP</strong>，<strong>端口范围</strong>为 Zilliz Cloud 集群暴露的端口，<strong>授权对象</strong>为 <strong>0.0.0.0/0</strong> 的访问规则。建议添加一条 ICMP 规则用于网络连通性排查。</p></li></ul></td>
        </tr>
        <tr>
-         <td><strong>可用区与交换机</strong><br/></td>
-         <td>选择 Zilliz Cloud 集群所在可用区并创建默认交换机。<br/> 目前，Zilliz Cloud 集群可选可用区如下：<br/> <strong>杭州</strong><br/> - 杭州 可用区 H<br/> - 杭州 可用区 J<br/> - 杭州 可用区 K<br/> <strong>北京</strong><br/> - 北京 可用区 G<br/> - 北京 可用区 H<br/> - 北京 可用区 I<br/> <strong>深圳</strong><br/> - 深圳 可用区 D<br/> - 深圳 可用区 E<br/> - 深圳 可用区 F<br/> 交换机配置无特殊要求，保持默认即可。</td>
+         <td><p><strong>可用区与交换机</strong></p></td>
+         <td><p>选择 Zilliz Cloud 集群所在可用区并创建默认交换机。</p><p>目前，Zilliz Cloud 集群可选可用区如下：</p><p><strong>杭州</strong></p><ul><li><p>杭州 可用区 H</p></li><li><p>杭州 可用区 J</p></li><li><p>杭州 可用区 K</p></li></ul><p><strong>北京</strong></p><ul><li><p>北京 可用区 G</p></li><li><p>北京 可用区 H</p></li><li><p>北京 可用区 I</p></li></ul><p><strong>深圳</strong></p><ul><li><p>深圳 可用区 D</p></li><li><p>深圳 可用区 E</p></li><li><p>深圳 可用区 F</p></li></ul><p>交换机配置无特殊要求，保持默认即可。</p></td>
        </tr>
     </table>
 
@@ -205,16 +205,16 @@ import Admonition from '@theme/Admonition';
 
     <table>
        <tr>
-         <th><strong>参数</strong></th>
-         <th><strong>描述</strong></th>
+         <th><p><strong>参数</strong></p></th>
+         <th><p><strong>描述</strong></p></th>
        </tr>
        <tr>
-         <td>内置权威域名（Zone）</td>
-         <td>请根据您的集群地域和集群 ID修改内置权威域名。以下为终端节点所在区域对应的 Zone 名称：<br/> - 杭州：<code>inxx-xxxxxxxxxxxx.ali-cn-hangzhou.vectordb.zilliz.com.cn</code><br/> - 北京：<code>inxx-xxxxxxxxxxxx.ali-cn-beijing.vectordb.zilliz.com.cn</code><br/> - 深圳：<code>inxx-xxxxxxxxxxxx.ali-cn-shenzhen.vectordb.zilliz.com.cn</code><br/> Zone 名称中的<code>inxx-xxxxxxxxxxxx</code>为您的Zilliz Cloud 阿里云集群 ID。您可参考<a href="./on-zilliz-cloud-console">Zilliz Cloud 控制台</a>查询集群 ID。</td>
+         <td><p>内置权威域名（Zone）</p></td>
+         <td><p>请根据您的集群地域和集群 ID修改内置权威域名。以下为终端节点所在区域对应的 Zone 名称：</p><ul><li><p>杭州：<code>inxx-xxxxxxxxxxxx.ali-cn-hangzhou.vectordb.zilliz.com.cn</code></p></li><li><p>北京：<code>inxx-xxxxxxxxxxxx.ali-cn-beijing.vectordb.zilliz.com.cn</code></p></li><li><p>深圳：<code>inxx-xxxxxxxxxxxx.ali-cn-shenzhen.vectordb.zilliz.com.cn</code></p></li></ul><p>Zone 名称中的<code>inxx-xxxxxxxxxxxx</code>为您的Zilliz Cloud 阿里云集群 ID。您可参考<a href="./on-zilliz-cloud-console">Zilliz Cloud 控制台</a>查询集群 ID。</p></td>
        </tr>
        <tr>
-         <td>子域名递归解析代理</td>
-         <td>为防止无法访问公共域名，我们建议您开启此项。</td>
+         <td><p>子域名递归解析代理</p></td>
+         <td><p>为防止无法访问公共域名，我们建议您开启此项。</p></td>
        </tr>
     </table>
 
@@ -248,20 +248,20 @@ import Admonition from '@theme/Admonition';
 
     <table>
        <tr>
-         <th><strong>参数</strong></th>
-         <th><strong>描述</strong></th>
+         <th><p><strong>参数</strong></p></th>
+         <th><p><strong>描述</strong></p></th>
        </tr>
        <tr>
-         <td>记录类型</td>
-         <td>请选择 <strong>CNAME</strong>。</td>
+         <td><p>记录类型</p></td>
+         <td><p>请选择 <strong>CNAME</strong>。</p></td>
        </tr>
        <tr>
-         <td>主机记录</td>
-         <td>请替换为你的集群 ID。 你可在集群详情页获取集群 ID。</td>
+         <td><p>主机记录</p></td>
+         <td><p>请替换为你的集群 ID。 你可在集群详情页获取集群 ID。</p></td>
        </tr>
        <tr>
-         <td>记录值</td>
-         <td>请填写在步骤5.e. 中获取的<strong>默认服务域名</strong>。</td>
+         <td><p>记录值</p></td>
+         <td><p>请填写在步骤5.e. 中获取的<strong>默认服务域名</strong>。</p></td>
        </tr>
     </table>
 

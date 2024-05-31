@@ -41,16 +41,16 @@ import Admonition from '@theme/Admonition';
 
     <table>
        <tr>
-         <th><strong>字段</strong></th>
-         <th><strong>描述</strong></th>
+         <th><p><strong>字段</strong></p></th>
+         <th><p><strong>描述</strong></p></th>
        </tr>
        <tr>
-         <td>IP地址（CIDR）</td>
-         <td>您要添加到白名单中的 IP 地址或无类别域间路由（CIDR）。您可最多添加 20 个 CIDR。示例值：192.168.1.1/20。</td>
+         <td><p>IP地址（CIDR）</p></td>
+         <td><p>您要添加到白名单中的 IP 地址或无类别域间路由（CIDR）。您可最多添加 20 个 CIDR。示例值：192.168.1.1/20。</p></td>
        </tr>
        <tr>
-         <td>描述</td>
-         <td>白名单 IP 地址或 CIDR 的描述。</td>
+         <td><p>描述</p></td>
+         <td><p>白名单 IP 地址或 CIDR 的描述。</p></td>
        </tr>
     </table>
 
