@@ -14,9 +14,68 @@ import TabItem from '@theme/TabItem';
 
 # 快速开始
 
-## 连接 {#connect-to-zilliz-cloud-cluster}
+本指南介绍如何快速创建 Zilliz Cloud 集群并进行 CRUD 操作。
 
-获取集群凭证或 API 密钥后，您可以通过以下示例代码连接到 。
+## 安装 SDK{#install-an-sdk}
+
+Zilliz Cloud 兼容各类型的 Milvus SDK 和 [RESTful API](/reference/cloud-meta)。您可以直接调用 RESTful API 或安装以下任意 SDK：
+
+- [Python SDK](./install-sdks#install-pymilvus-python-sdk)
+
+- [Java SDK](./install-sdks#install-java-sdk)
+
+- [Go SDK](./install-sdks#install-go-sdk)
+
+- [Node.js SDK](./install-sdks#install-nodejs-sdk)
+
+本文中的示例代码将使用 Python SDK。
+
+## 创建集群{#create-a-cluster}
+
+您可以通过 RESTful API 或 Zilliz Cloud 控制台创建集群。
+
+以下代码示例展示如何通过 RESTful API 创建集群。
+
+```bash
+curl --request POST \
+    --url "https://controller.api.${CLOUD_REGION}.zillizcloud.com/v1/clusters/create" \
+    --header "Authorization: Bearer ${API_KEY}" \
+    --header "accept: application/json" \
+    --header "content-type: application/json" \
+    --data-raw "\{
+        \"plan\": \"Standard\",
+        \"clusterName\": \"cluster-standard\",
+        \"cuSize\": 1,
+        \"cuType\": \"Performance-optimized\",
+        \"projectId\": \"${PROJECT_ID}\"
+    }"
+    
+# {
+#   "code": 200,
+#   "data": {
+#       "clusterId": "in01-XXXXXXXXXXXXXXX",
+#       "username": "db_admin",
+#       "password": "XXXXXXXXXXXXXXXX",
+#       "prompt": "Submission successful, Cluster is being created, You can use the DescribeCluster interface to obtain the creation progress and the status of the Cluster. When the Cluster status is RUNNING, you can access your vector database using the SDK with the admin account and the initialization password you provided."
+#   }
+# }
+```
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>在创建 Dedicated 集群之前，请先添加支付方式。</p>
+
+</Admonition>
+
+要获取云区域、API 密钥和项目 ID，请参阅[Zilliz Cloud 控制台](./on-zilliz-cloud-console)。有关如何创建集群，请参阅[创建集群](./create-cluster)。
+
+集群启动后，系统将提示您一次性下载[集群凭证](./cluster-credentials)，请将凭证保存在安全位置，以便后续连接集群时使用。
+
+另外，您也可以[创建 API 密钥](./manage-api-keys)，用以连接集群，无需使用集群凭证。
+
+## 连接 Zilliz Cloud 集群{#connect-to-zilliz-cloud-cluster}
+
+获取集群凭证或 API 密钥后，您可以通过以下示例代码连接到集群。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
 <TabItem value='python'>
@@ -79,7 +138,7 @@ const client = new MilvusClient({address, token})
 
 ## 创建 collection{#create-a-collection}
 
-在 ， 您需要将向量数据存储到 collection 中。同一个 collection 中的向量数据具有相同的维度和相似度测量指标。您可以通过以下几种方式创建 collection。
+在 Zilliz Cloud， 您需要将向量数据存储到 collection 中。同一个 collection 中的向量数据具有相同的维度和相似度测量指标。您可以通过以下几种方式创建 collection。
 
 ### 快速创建{#quick-setup}
 
@@ -136,7 +195,7 @@ curl --request POST \
     --header "Authorization: Bearer ${API_KEY}" \
     --header "accept: application/json" \
     --header "content-type: application/json" \
-    --data-raw "\{   
+    --data-raw "{   
         \"collectionName\": \"${COLLECTION_NAME}\",
         \"dimension\": 32
     }"
@@ -543,7 +602,7 @@ curl -s --request POST \
 
 ### 增加数据量{#insert-more-data}
 
-如果您希望仅基于已插入的 10 个 entity 进行 search 或 query，则可以跳过此步骤。为帮助您更深入了解或 的搜索性能，可使用以下代码片段向 collection 中随机添加更多 entity。
+如果您希望仅基于已插入的 10 个 entity 进行 search 或 query，则可以跳过此步骤。为帮助您更深入了解 Zilliz Cloud 集群或 的搜索性能，可使用以下代码片段向 collection 中随机添加更多 entity。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>

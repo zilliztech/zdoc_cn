@@ -17,7 +17,7 @@ import Admonition from '@theme/Admonition';
 
 ## 前提条件{#before-you-start}
 
-打开注册页面 https://cloud.zilliz.com.cn/signup。
+打开注册页面 [https://cloud.zilliz.com.cn/signup](https://cloud.zilliz.com.cn/signup)。
 
 ![register_account](/img/register_account.png)
 

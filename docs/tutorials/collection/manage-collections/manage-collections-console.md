@@ -36,7 +36,7 @@ Zilliz Cloud 提供 3 种创建 Collection 的方式以满足不同需求。
 
     - **主键字段:** Collection 中的每个 Entity 有一个独一无二且不会重复的主键。仅数据类型为 **Int64** 或 **VarCha** 的字段才可作为主键列。如已开启 **Auto ID**，Zilliz Cloud 将自动生成主键列。
 
-    - **向量字段**: 填写向量维度。默认索引类型为 **AUTOINDEX**。您可选择**余弦距离（Cosine）、欧氏距离（Euclidean/L2）**或**内积（Inner Product/IP)** 作为相似度类型。更多详情，请参考[相似性度量](./search-metrics-explained) 和 [AUTOINDEX](./autoindex-explained)。
+    - **向量字段**: 填写向量维度。向量维度值须大于1。默认索引类型为 **AUTOINDEX**。您可选择**余弦距离（Cosine）、欧氏距离（Euclidean/L2）**或**内积（Inner Product/IP)** 作为相似度类型。更多详情，请参考[相似性度量](./search-metrics-explained) 和 [AUTOINDEX](./autoindex-explained)。
 
     - **其他字段:** 点击 **+ 新增字段**以添加更多标量字段。更多详情，请参考 [Schema](./schema-explained)。
 
