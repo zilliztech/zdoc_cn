@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 创建一个 Serverless 集群。
 
-<RestHeader method="post" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/clusters/createServerless" />
+<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/clusters/createServerless" />
 
 ---
 

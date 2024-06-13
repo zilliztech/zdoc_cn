@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 列出 Zilliz Cloud 上所有可用的云服务提供商。
 
-<RestHeader method="get" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/clouds" />
+<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/clouds" />
 
 ---
 
@@ -24,7 +24,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ```shell
 curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clouds" \
+     --url "https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/clouds" \
      --header "Authorization: Bearer ${API_KEY}" \
      --header "accept: application/json" \
      --header "content-type: application/json"

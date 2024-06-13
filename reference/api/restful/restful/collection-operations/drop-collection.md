@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 删除 Collection。本操作会清除 Collection 数据，请谨慎执行此操作。
 
-<RestHeader method="post" endpoint="https://{cluster-endpoint}/v1/vector/collections/drop" />
+<RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v1/vector/collections/drop" />
 
 ---
 

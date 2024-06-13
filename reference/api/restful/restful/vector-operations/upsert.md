@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 插入和更新 Collection 中的记录。
 
-<RestHeader method="post" endpoint="https://{cluster-endpoint}/v1/vector/upsert" />
+<RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v1/vector/upsert" />
 
 ---
 

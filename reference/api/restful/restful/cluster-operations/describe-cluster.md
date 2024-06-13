@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 描述集群的详细信息。
 
-<RestHeader method="get" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/clusters/{CLUSTER_ID}" />
+<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/clusters/${CLUSTER_ID}" />
 
 ---
 
@@ -24,7 +24,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ```shell
 curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>" \
+     --url "https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json"

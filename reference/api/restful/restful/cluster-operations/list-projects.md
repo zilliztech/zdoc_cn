@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 查看当前云地域中的所有项目。
 
-<RestHeader method="get" endpoint="https://{cluster-endpoint}/v1/projects" />
+<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/projects" />
 
 ---
 
@@ -24,7 +24,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ```shell
 curl --request GET \
-    --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/projects" \
+    --url "https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/projects" \
     --header "Authorization: Bearer ${API_KEY}" \
     --header "accept: application/json" \
     --header "content-type: application/json"

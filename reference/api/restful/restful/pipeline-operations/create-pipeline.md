@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 创建一个 Pipeline
 
-<RestHeader method="post" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines" />
+<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/pipelines" />
 
 ---
 
@@ -28,7 +28,7 @@ import RestHeader from '@site/src/components/RestHeader';
     curl --request POST \
         --header "Content-Type: application/json" \
         --header "Authorization: Bearer ${API_KEY}" \
-        --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines" \
+        --url "https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/pipelines" \
         -d '{
             "projectId": "proj-**********************",
             "name": "my_doc_ingestion_pipeline",
@@ -95,7 +95,7 @@ import RestHeader from '@site/src/components/RestHeader';
     curl --request POST \
         --header "Content-Type: application/json" \
         --header "Authorization: Bearer ${API_KEY}" \
-        --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines" \
+        --url "https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/pipelines" \
         -d '{
             "name": "my_text_search_pipeline",
             "description": "A pipeline that receives text and search for semantically similar doc chunks",
@@ -142,7 +142,7 @@ import RestHeader from '@site/src/components/RestHeader';
     curl --request POST \
         --header "Content-Type: application/json" \
         --header "Authorization: Bearer ${API_KEY}" \
-        --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines" \
+        --url "https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/pipelines" \
         -d '{
             "name": "my_doc_deletion_pipeline",
             "description": "A pipeline that deletes all info associated with a doc",
