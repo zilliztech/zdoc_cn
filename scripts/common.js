@@ -1,6 +1,7 @@
 const redirectRegex = /location\s+[=~]\s+(.+?)\s+{[^}]*return\s+301\s+(.+?);/gm;
 const locationRegex = /location\s*(=|~)/;
 const nginxConfigPath = 'default.conf';
+const IGNORE_SLUG = "\\s*(.*)/gm;";
 
 const getNginxRedirects = fileContents => {
   const redirects = [];
@@ -14,37 +15,53 @@ const getNginxRedirects = fileContents => {
       operator: locationRegex.exec(match[0])[1],
     });
   }
-  const redirectsJson = JSON.stringify(redirects, null, 2);
-  // console.log(redirectsJson);
   return redirects;
 };
 
-const validateChangedFiles = (filesString, redirects) => {
-  const changedFiles = filesString
-    .trim()
-    .split('\n')
-    .filter(item => item.endsWith('.md') && !item.includes('README.md'))
-    .map(item => `/${item}`);
-  console.log('\x1b[36m%s\x1b[0m', `changed markdown files: `, changedFiles);
-  const unMatchedRedirects = [];
-  changedFiles.forEach(changedFile => {
-    const matchedRedirect = redirects.some(redirect => {
-      if (redirect.operator === '=') {
-        return changedFile === redirect.from;
-      }
-      return changedFile.match(redirect.from);
-    });
+const getAddedSlugs = (logString) => {
+	const regex = /\+slug:\s*(.*)/gm;
+	let match;
+	let results = [];
+	while ((match = regex.exec(logString)) !== null) {
+		results.push(match[1]);
+	}
+	return results.filter((item) => item !== IGNORE_SLUG);
+};
 
-    if (!matchedRedirect) {
-      unMatchedRedirects.push(changedFile);
-    }
-  });
-  console.log('\x1b[33m%s\x1b[0m', `unMatchedRedirects: `, unMatchedRedirects);
-  if (unMatchedRedirects.length > 0) {
-    throw new Error(
-      `Some redirects are not matched with the changed files: ${unMatchedRedirects}`
-    );
-  }
+const getDeletedSlugs = (logString) => {
+	const addedSlugs = getAddedSlugs(logString);
+	const regex = /-slug:\s*(.*)/gm;
+	let match;
+	let results = [];
+	while ((match = regex.exec(logString)) !== null) {
+		results.push(match[1]);
+	}
+	return results.filter(
+		(item) => item !== IGNORE_SLUG && !addedSlugs.includes(item)
+	);
+};
+
+const validateChangedFiles = (changedSlugs, redirects) => {
+	console.log("\x1b[36m%s\x1b[0m", `changed slugs: `, changedSlugs);
+	const unMatchedRedirects = [];
+	changedSlugs.forEach((slug) => {
+		const matchedRedirect = redirects.some((redirect) => {
+			if (redirect.operator === "=") {
+				return slug === redirect.from;
+			}
+			return slug.match(redirect.from);
+		});
+
+		if (!matchedRedirect) {
+			unMatchedRedirects.push(slug);
+		}
+	});
+	console.log("\x1b[33m%s\x1b[0m", `unMatchedRedirects: `, unMatchedRedirects);
+	if (unMatchedRedirects.length > 0) {
+		throw new Error(
+			`Some redirects are not matched with the changed files: ${unMatchedRedirects}`
+		);
+	}
 };
 
 module.exports = {
@@ -53,4 +70,5 @@ module.exports = {
   nginxConfigPath,
   getNginxRedirects,
   validateChangedFiles,
+  getDeletedSlugs,
 };
