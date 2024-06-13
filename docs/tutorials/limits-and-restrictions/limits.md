@@ -204,7 +204,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>Dedicated 版集群</p></td>
-     <td><p>每 CU：\&lt;= 64</p><p>每集群：\&lt;= 4096</p></td>
+     <td><p>每 CU：&lt;= 64</p><p>每集群：&lt;= 4096</p></td>
      <td><p>在 Dedicated 版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</p></td>
    </tr>
 </table>
@@ -218,11 +218,11 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>1-8 CU</p></td>
-     <td><p>\&lt;= 4,096</p></td>
+     <td><p>&lt;= 4,096</p></td>
    </tr>
    <tr>
      <td><p>12 CU 及以上</p></td>
-     <td><p>\&lt;= 512 x CU 数</p></td>
+     <td><p>&lt;= 512 x CU 数</p></td>
    </tr>
 </table>
 
@@ -234,8 +234,8 @@ import Admonition from '@theme/Admonition';
 <ul>
 <li><strong>计算集群的已使用容量</strong></li>
 </ul>
-<p>假设一个集群含有 50 个 Collection。前 20 个 Collection 中，每个 Collection 含有在 20 个Partition，剩下的 30 个 Collection 分别含有在 100 个 Partition。因此，可以按照以下方式计算集群的<strong>已使用容量</strong>：</p>
-<p><strong>20 (collections) x 20 (partitions) + 30 (collections) x 100 (partitions) = 160 + 360 = 700</strong></p>
+<p>假设一个集群含有 50 个 Collection。前 20 个 Collection 中，每个 Collection 含有 20 个Partition，剩下的 30 个 Collection 分别含有 100 个 Partition。因此，可以按照以下方式计算集群的<strong>已使用容量</strong>：</p>
+<p><strong>20 (collections) x 20 (partitions) + 30 (collections) x 100 (partitions) = 400 + 300 = 700</strong></p>
 <p>基于以上等式，Zilliz Cloud 将该集群的已使用容量设定为 700。</p>
 <ul>
 <li><strong>计算集群的通用容量</strong></li>
