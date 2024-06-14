@@ -54,7 +54,7 @@ from llama_index.indices import ZillizCloudPipelineIndex
 
 zcp_index = ZillizCloudPipelineIndex.from_document_url(
     # a public or pre-signed url of a file stored on cloud object storage
-    url="https://publicdataset.zillizcloud.com/milvus_doc.md",
+    url="https://publicdataset.cloud.zilliz.com.cn/milvus_doc.md",
     project_id=ZILLIZ_PROJECT_ID,
     cluster_id=ZILLIZ_CLUSTER_ID,
     token=ZILLIZ_TOKEN,
@@ -65,7 +65,7 @@ zcp_index = ZillizCloudPipelineIndex.from_document_url(
 
 # Insert more docs, eg. a Milvus v2.2 document
 zcp_index.insert_doc_url(
-    url="https://publicdataset.zillizcloud.com/milvus_doc_22.md",
+    url="https://publicdataset.cloud.zilliz.com.cn/milvus_doc_22.md",
     metadata={"version": "2.2"},
 )
 
@@ -198,7 +198,7 @@ advanced_zcp_index.create_pipelines(
 
 ```python
 advanced_zcp_index.insert_doc_url(
-    url="https://publicdataset.zillizcloud.com/milvus_doc.md",
+    url="https://publicdataset.cloud.zilliz.com.cn/milvus_doc.md",
     metadata={"user_id": "user_001"},
 )
 

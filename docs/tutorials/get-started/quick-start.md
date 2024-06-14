@@ -38,7 +38,7 @@ Zilliz Cloud 兼容各类型的 Milvus SDK 和 [RESTful API](/reference/cloud-me
 
 ```bash
 curl --request POST \
-    --url "https://controller.api.${CLOUD_REGION}.zillizcloud.com/v1/clusters/create" \
+    --url "https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/clusters/create" \
     --header "Authorization: Bearer ${API_KEY}" \
     --header "accept: application/json" \
     --header "content-type: application/json" \

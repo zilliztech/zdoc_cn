@@ -60,7 +60,7 @@ import io.milvus.v2.service.rbac.request.CreateUserReq
 
 // 1. Set up a client
 ConnectConfig connectConfig = ConnectConfig.builder()
-        .uri("https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com:19530")
+        .uri("https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.cloud.zilliz.com.cn:19530")
         .token("user:password")
         .build();
         

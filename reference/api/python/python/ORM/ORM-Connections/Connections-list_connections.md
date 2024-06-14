@@ -45,7 +45,7 @@ None
 from pymilvus import connections
 
 connections.connect(
-    uri='https://in01-**************.aws-us-west-2.vectordb-uat3.zillizcloud.com:19531',
+    uri='https://in01-**************.aws-us-west-2.vectordb-uat3.cloud.zilliz.com.cn:19531',
     token='admin:zilliz@123'
 )
 connections.list_connections()
