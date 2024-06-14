@@ -330,7 +330,7 @@ milvusClient.loadCollection(loadCollectionParam);
 </TabItem>
 </Tabs>
 
-在上述代码中，`CLOUD_REGION` 代表您集群所在的云地域的 ID，`TOKEN` 是用于授权 API 请求的集群用户名和密码，`CLUSTER_ID` 是您的集群的 ID。在调用 API 时，请确保将这些占位符替换为您的实际值。您可以从集群的公共访问端点获取 `CLOUD_REGION` 和 `CLUSTER_ID`。例如，在公共访问端点 **https://in03-3bf3c31f4248e22.api.ali-hangzhou.cloud.zilliz.com.cn** 中，`CLOUD_REGION_ID` 是 **gcp-us-west1**，`CLUSTER_ID` 是 **in03-3bf3c31f4248e22**。有关更多信息，请参见[Zilliz Cloud 控制台](./on-zilliz-cloud-console)。
+在上述代码中，`CLOUD_REGION` 代表您集群所在的云地域的 ID，`TOKEN` 是用于授权 API 请求的集群用户名和密码，`CLUSTER_ID` 是您的集群的 ID。在调用 API 时，请确保将这些占位符替换为您的实际值。您可以从集群的公共访问端点获取 `CLOUD_REGION` 和 `CLUSTER_ID`。例如，在公共访问端点 **https://in03-3bf3c31f4248e22.api.ali-cn-hangzhou.cloud.zilliz.com.cn** 中，`CLOUD_REGION_ID` 是 **ali-cn-hangzhou**，`CLUSTER_ID` 是 **in03-3bf3c31f4248e22**。有关更多信息，请参见[Zilliz Cloud 控制台](./on-zilliz-cloud-console)。
 
 ## 导入数据{#import-data}
 
