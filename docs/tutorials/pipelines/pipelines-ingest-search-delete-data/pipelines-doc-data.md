@@ -388,7 +388,6 @@ Ingestion Pipeline 创建成功后，Zilliz Cloud 将进行重名检查。如果
 ```python
 curl --request POST \
      --header "Content-Type: multipart/form-data" \
-     --header 'Accept: multipart/form-data' \
      --header "Authorization: Bearer ${YOUR_CLUSTER_TOKEN}" \
      --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/${YOUR_PIPELINE_ID}/run_ingestion_with_file" \
      --form 'data={"year": 2023}' \
