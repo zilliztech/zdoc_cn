@@ -234,8 +234,8 @@ import Admonition from '@theme/Admonition';
 <ul>
 <li><strong>计算集群的已使用容量</strong></li>
 </ul>
-<p>假设一个集群含有 50 个 Collection。前 20 个 Collection 中，每个 Collection 含有 20 个Partition，剩下的 30 个 Collection 分别含有 100 个 Partition。因此，可以按照以下方式计算集群的<strong>已使用容量</strong>：</p>
-<p><strong>20 (collections) x 20 (partitions) + 30 (collections) x 100 (partitions) = 400 + 300 = 700</strong></p>
+<p>假设一个集群含有 50 个 Collection。前 20 个 Collection 中，每个 Collection 含有 20 个Partition，剩下的 30 个 Collection 分别含有 10 个 Partition。因此，可以按照以下方式计算集群的<strong>已使用容量</strong>：</p>
+<p><strong>20 (collections) x 20 (partitions) + 30 (collections) x 10 (partitions) = 400 + 300 = 700</strong></p>
 <p>基于以上等式，Zilliz Cloud 将该集群的已使用容量设定为 700。</p>
 <ul>
 <li><strong>计算集群的通用容量</strong></li>
