@@ -29,7 +29,7 @@ import Admonition from '@theme/Admonition';
 
 - 您已经注册 Zilliz Cloud 并创建了 Zilliz Cloud 阿里云集群。
 
-- 您在上述 Zilliz Cloud 腾讯云集群所在云服务地域有一个 VPC。
+- 您在上述 Zilliz Cloud 阿里云集群所在云服务地域有一个 VPC。
 
 ## 配置步骤{#procedures}
 
