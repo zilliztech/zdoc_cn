@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 通过 Pipeline ID 获取详情。
 
-<RestHeader method="get" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/{PIPELINE_ID}" />
+<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/pipelines/${PIPELINE_ID}" />
 
 ---
 
@@ -26,7 +26,7 @@ import RestHeader from '@site/src/components/RestHeader';
 curl --request GET \
     --header "Content-Type: application/json" \
     --header "Authorization: Bearer ${API_KEY}" \
-    --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/pipe-**********************"
+    --url "https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/pipelines/pipe-**********************"
 ```
 
 成功响应示例：

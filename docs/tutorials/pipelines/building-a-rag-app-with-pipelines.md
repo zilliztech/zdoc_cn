@@ -95,7 +95,7 @@ headers = {
     "Authorization": f"Bearer {API_KEY}"
 }
 
-create_pipeline_url = f"https://controller.api.{CLOUD_REGION}.zillizcloud.com/v1/pipelines"
+create_pipeline_url = f"https://controller.api.{CLOUD_REGION}.cloud.zilliz.com.cn/v1/pipelines"
 
 collection_name = 'my_text_collection'
 embedding_service = "zilliz/bge-base-en-v1.5"
@@ -176,7 +176,7 @@ search_pipe_id = response.json()["data"]["pipelineId"]
 本教程中，我们将以博客文章《[What Milvus version to start with](https://milvus.io/blog/what-milvus-version-to-start-with.md)》为例。现在，我们需要摄取这篇博客文章的内容。
 
 ```bash
-run_pipeline_url = f"https://controller.api.{CLOUD_REGION}.zillizcloud.com/v1/pipelines/{ingestion_pipe_id}/run"
+run_pipeline_url = f"https://controller.api.{CLOUD_REGION}.cloud.zilliz.com.cn/v1/pipelines/{ingestion_pipe_id}/run"
 
 milvus_lite_data = {
     "data":
@@ -227,7 +227,7 @@ for data in [milvus_lite_data, milvus_standalone_data, milvus_cluster_data]:
 import pprint
 
 def retrieval_with_pipeline(question, search_pipe_id, top_k=2, verbose=False):
-    run_pipeline_url = f"https://controller.api.{CLOUD_REGION}.zillizcloud.com/v1/pipelines/{search_pipe_id}/run"
+    run_pipeline_url = f"https://controller.api.{CLOUD_REGION}.cloud.zilliz.com.cn/v1/pipelines/{search_pipe_id}/run"
 
     data = {
         "data": {

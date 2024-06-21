@@ -36,7 +36,7 @@ new MilvusClient(config: ClientConfig)
     The address of the Zilliz Cloud cluster. For example:
 
     ```plaintext
-    https://inxx-xxxxxxxxxxxxxxxxx.aws-us-west-2.vectordb-uat3.zillizcloud.com:19540
+    https://inxx-xxxxxxxxxxxxxxxxx.aws-us-west-2.vectordb-uat3.cloud.zilliz.com.cn:19540
     ```
 
     For details on finding information on the Zilliz Cloud console, refer to [On Zilliz Cloud Console](https://docs.zilliz.com/docs/on-zilliz-cloud-console).
@@ -50,7 +50,7 @@ new MilvusClient(config: ClientConfig)
         The cluster endpoint. For example:
 
         ```plaintext
-        https://inxx-xxxxxxxxxxxxxxxxx.aws-us-west-2.vectordb-uat3.zillizcloud.com:19540
+        https://inxx-xxxxxxxxxxxxxxxxx.aws-us-west-2.vectordb-uat3.cloud.zilliz.com.cn:19540
         ```
 
         For details on finding information on the Zilliz Cloud console, refer to [On Zilliz Cloud Console](https://docs.zilliz.com/docs/on-zilliz-cloud-console).

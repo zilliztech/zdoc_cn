@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 查看指定集群的指标统计数据。
 
-<RestHeader method="post" endpoint="https://{cluster-endpoint}/v1/clusters/{CLUSTER_ID}/metrics/query" />
+<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/clusters/${CLUSTER_ID}/metrics/query" />
 
 ---
 

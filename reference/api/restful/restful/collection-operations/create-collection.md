@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 在集群中创建 Collection。
 
-<RestHeader method="post" endpoint="https://{cluster-endpoint}/v1/vector/collections/create" />
+<RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v1/vector/collections/create" />
 
 ---
 

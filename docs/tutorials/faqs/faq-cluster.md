@@ -62,7 +62,7 @@ sidebar_position: 2
 
 1. 确认已在白名单中设置 IP 地址。
 
-1. 运行 `telnet in01-(uuid).(region).vectordb.zillizcloud.com 19530` 测试端口是否可以连接。
+1. 运行 `telnet in01-(uuid).(region).vectordb.cloud.zilliz.com.cn 19530` 测试端口是否可以连接。
 
 如执行上述步骤后，仍无法连接集群，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 

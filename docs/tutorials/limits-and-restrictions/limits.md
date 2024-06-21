@@ -209,33 +209,20 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-除了对集群中 Collection 数量的限制外，Zilliz Cloud 还有容量资源相关的限制。具体见下表。
+除了对集群中 Collection 数量的限制外，Zilliz Cloud 还有容量资源相关的限制。具体来说，Zilliz Cloud 会根据集群使用的 CU 大小来计算集群的通用容量，集群当前已使用容量须小于或等于其通用容量。
 
-<table>
-   <tr>
-     <th><p><strong>CU 数量</strong></p></th>
-     <th><p><strong>容量</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>1-8 CU</p></td>
-     <td><p>&lt;= 4,096</p></td>
-   </tr>
-   <tr>
-     <td><p>12 CU 及以上</p></td>
-     <td><p>&lt;= 512 x CU 数</p></td>
-   </tr>
-</table>
-
-已使用的容量应该小于可用的通用容量。
+```java
+集群通用容量 = 512 x CU 大小
+```
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>下文介绍了 Zilliz Cloud 如何计算集群的已使用容量和通用容量。</p>
+<p>为了便于理解，下文演示了 Zilliz Cloud 如何计算集群的已使用容量和通用容量。</p>
 <ul>
 <li><strong>计算集群的已使用容量</strong></li>
 </ul>
-<p>假设一个集群含有 50 个 Collection。前 20 个 Collection 中，每个 Collection 含有 20 个Partition，剩下的 30 个 Collection 分别含有 100 个 Partition。因此，可以按照以下方式计算集群的<strong>已使用容量</strong>：</p>
-<p><strong>20 (collections) x 20 (partitions) + 30 (collections) x 100 (partitions) = 400 + 300 = 700</strong></p>
+<p>假设一个集群含有 50 个 Collection。前 20 个 Collection 中，每个 Collection 含有 20 个Partition，剩下的 30 个 Collection 分别含有 10 个 Partition。因此，可以按照以下方式计算集群的<strong>已使用容量</strong>：</p>
+<p><strong>20 (collections) x 20 (partitions) + 30 (collections) x 10 (partitions) = 400 + 300 = 700</strong></p>
 <p>基于以上等式，Zilliz Cloud 将该集群的已使用容量设定为 700。</p>
 <ul>
 <li><strong>计算集群的通用容量</strong></li>
@@ -243,7 +230,7 @@ import Admonition from '@theme/Admonition';
 <p>可以使用以下公式计算集群的通用容量：</p>
 <p><strong>\<= 512 x CU 数</strong></p>
 <p>例如：</p>
-<p>在一个 2 CU 的集群中，最多可创建 128 个 Collection，通用容量最大为 1024。</p>
+<p>在一个 2 CU 的集群中，最多可创建 128 个 Collection，通用容量最大为 4096。</p>
 <p>在一个 12 CU 的集群中，最多可创建 768 个 Collection，通用容量最大为 6144。</p>
 <p>在一个 32 CU 的集群中，最多可创建 4096 个 Collection，通用容量最大为 65536。</p>
 

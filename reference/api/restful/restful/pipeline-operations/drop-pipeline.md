@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 删除一个指定的 Pipeline
 
-<RestHeader method="delete" endpoint="https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/{PIPELINE_ID}" />
+<RestHeader method="delete" endpoint="https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/pipelines/${PIPELINE_ID}" />
 
 ---
 
@@ -26,7 +26,7 @@ import RestHeader from '@site/src/components/RestHeader';
 curl --request GET \
     --header "Content-Type: application/json" \
     --header "Authorization: Bearer ${API_KEY}" \
-    --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/pipe-**********************"
+    --url "https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/pipelines/pipe-**********************"
 ```
 
 成功响应示例：

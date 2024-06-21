@@ -330,6 +330,8 @@ milvusClient.loadCollection(loadCollectionParam);
 </TabItem>
 </Tabs>
 
+在上述代码中，`CLOUD_REGION` 代表您集群所在的云地域的 ID，`TOKEN` 是用于授权 API 请求的集群用户名和密码，`CLUSTER_ID` 是您的集群的 ID。在调用 API 时，请确保将这些占位符替换为您的实际值。您可以从集群的公共访问端点获取 `CLOUD_REGION` 和 `CLUSTER_ID`。例如，在公共访问端点 **https://in03-3bf3c31f4248e22.api.ali-cn-hangzhou.cloud.zilliz.com.cn** 中，`CLOUD_REGION_ID` 是 **ali-cn-hangzhou**，`CLUSTER_ID` 是 **in03-3bf3c31f4248e22**。有关更多信息，请参见[Zilliz Cloud 控制台](./on-zilliz-cloud-console)。
+
 ## 导入数据{#import-data}
 
 在待导入数据和 Collection 都准备就绪后，可以使用如下脚本将数据导入 Collection。
@@ -416,7 +418,7 @@ while res.json()["data"]["readyPercentage"] < 1:
     time.sleep(5)
 
     res = get_import_progress(
-        url=f"controller.api.{CLOUD_REGION}.zillizcloud.com",
+        url=f"controller.api.{CLOUD_REGION}.cloud.zilliz.com.cn",
         api_key=API_KEY,
         job_id=job_id,
         cluster_id=CLUSTER_ID

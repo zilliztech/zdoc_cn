@@ -142,7 +142,7 @@ import TabItem from '@theme/TabItem';
 curl --request POST \
     --header "Content-Type: application/json" \
     --header "Authorization: Bearer ${YOUR_API_KEY}" \
-    --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines" \
+    --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines" \
     -d '{
         "name": "my_image_ingestion_pipeline",
         "clusterId": "${CLUSTER_ID}",
@@ -297,7 +297,7 @@ Ingestion Pipeline 创建成功后，Zilliz Cloud 将进行重名检查。如果
 curl --request POST \
     --header "Content-Type: application/json" \
     --header "Authorization: Bearer ${YOUR_CLUSTER_TOKEN}" \
-    --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/${YOUR_PIPELINE_ID}/run" \
+    --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}/run" \
     -d '{
         "data": {
             "image_url": "xxx",
@@ -393,7 +393,7 @@ curl --request POST \
 curl --request POST \
     --header "Content-Type: application/json" \
     --header "Authorization: Bearer ${YOUR_API_KEY}" \
-    --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines" \
+    --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines" \
     -d '{
         "projectId": "proj-xxxx",       
         "name": "my_image_search_pipeline",
@@ -493,7 +493,7 @@ curl --request POST \
 curl --request POST \
     --header "Content-Type: application/json" \
     --header "Authorization: Bearer ${YOUR_CLUSTER_TOKEN}" \
-    --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/${YOUR_PIPELINE_ID}/run" \
+    --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}/run" \
     -d '{
       "data": {
         "query_image_url": "https://unsplash.com/photos/an-orange-and-white-cat-laying-on-top-of-a-table-hAbwQ1elxvI"
@@ -605,7 +605,7 @@ curl --request POST \
 curl --request POST \
     --header "Content-Type: application/json" \
     --header "Authorization: Bearer ${YOUR_API_KEY}" \
-    --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines" \
+    --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines" \
     -d '{
         "projectId": "proj-xxxx",
         "name": "my_image_deletion_pipeline",
@@ -698,7 +698,7 @@ curl --request POST \
 curl --request POST \
     --header "Content-Type: application/json" \
     --header "Authorization: Bearer ${YOUR_CLUSTER_TOKEN}" \
-    --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/${YOUR_PIPELINE_ID}/run" \
+    --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}/run" \
     -d '{
         "data": {
             "image_id": "my-img-123456"
@@ -761,7 +761,7 @@ curl --request POST \
     curl --request GET \
         --header "Content-Type: application/json" \
         --header "Authorization: Bearer ${YOUR_API_KEY}" \
-        --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines?projectId=proj-xxxx"
+        --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines?projectId=proj-xxxx"
     ```
 
     如果请求返回以下类似内容，则表示操作成功：
@@ -839,7 +839,7 @@ curl --request POST \
     curl --request GET \
         --header "Content-Type: application/json" \
         --header "Authorization: Bearer ${YOUR_API_KEY}" \
-        --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/${YOUR_PIPELINE_ID}"
+        --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}"
     ```
 
     如果请求返回以下类似内容，则表示操作成功：
@@ -911,7 +911,7 @@ curl --request POST \
 curl --request GET \
     --header "Content-Type: application/json" \
     --header "Authorization: Bearer ${YOUR_CLUSTER_TOKEN}" \
-    --url "https://controller.api.{cloud-region}.zillizcloud.com/v1/pipelines/${YOUR_PIPELINE_ID}"
+    --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}"
 ```
 
 如果请求返回以下类似内容，则表示操作成功：

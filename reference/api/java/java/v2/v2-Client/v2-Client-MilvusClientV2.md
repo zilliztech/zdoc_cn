@@ -56,7 +56,7 @@ ConnectConfig.builder()
     The URI of the Zilliz Cloud cluster. For example:
 
     ```plaintext
-    https://inxx-xxxxxxxxxxxxxxxxx.aws-us-west-2.vectordb-uat3.zillizcloud.com:19540
+    https://inxx-xxxxxxxxxxxxxxxxx.aws-us-west-2.vectordb-uat3.cloud.zilliz.com.cn:19540
     ```
 
     To find needed information on the Zilliz Cloud console, refer to [On Zilliz Cloud Console](https://docs.zilliz.com/docs/on-zilliz-cloud-console).
@@ -154,7 +154,7 @@ import io.milvus.v2.client.ConnectConfig
 import io.milvus.v2.client.MilvusClientV2
 
 ConnectConfig connectConfig = ConnectConfig.builder()
-        .uri("https://in01-******.aws-us-west-2.vectordb.zillizcloud.com:19531")
+        .uri("https://in01-******.aws-us-west-2.vectordb.cloud.zilliz.com.cn:19531")
         .token("user:password") // replace this with your token
         .build();
         
