@@ -1,5 +1,5 @@
 ## base
-FROM node:lts as base
+FROM harbor-us-vdc.zilliz.cc/infra/node:18 as base
 ENV APP_ID=${APP_ID} 
 ENV APP_SECRET=${APP_SECRET} 
 ENV SPACE_ID=${SPACE_ID} 
@@ -25,7 +25,7 @@ COPY --from=development --chown=node:node /home/node/app/node_modules /home/node
 RUN yarn build
 
 ## deploy
-FROM nginx:stable-alpine as deploy
+FROM harbor-us-vdc.zilliz.cc/infra/nginx:stable-alpine as deploy
 ENV INSTALL_PATH /usr/share/nginx/html
 WORKDIR $INSTALL_PATH
 COPY ./default.conf /etc/nginx/conf.d
