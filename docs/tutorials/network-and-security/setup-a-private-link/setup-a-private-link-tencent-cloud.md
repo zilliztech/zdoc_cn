@@ -11,7 +11,7 @@ sidebar_position: 2
 import Admonition from '@theme/Admonition';
 
 
-# 创建私网连接（腾讯云）
+# 创建腾讯云私网连接（Private Link）
 
 本小节主要介绍如何在您的腾讯云 VPC 和您托管在腾讯云上的 Zilliz Cloud 集群之间建立私网连接。
 

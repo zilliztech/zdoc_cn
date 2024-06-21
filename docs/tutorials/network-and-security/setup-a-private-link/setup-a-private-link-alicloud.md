@@ -11,7 +11,7 @@ sidebar_position: 1
 import Admonition from '@theme/Admonition';
 
 
-# 创建私网连接（阿里云）
+# 创建阿里云私网连接（Private Link）
 
 本小节主要介绍如何在您的阿里云 VPC 和您托管在阿里云上的 Zilliz Cloud 集群之间建立私网连接。
 
@@ -157,7 +157,7 @@ import Admonition from '@theme/Admonition';
 
 1. 表格填写完成后，点击创建。创建成功后的界面如下图所示。请务必保存以下信息以备后续使用：
 
-    - **终端及节点实例ID**
+    - **终端节点实例ID**
 
     - **默认服务域名**
 
@@ -173,7 +173,7 @@ import Admonition from '@theme/Admonition';
 
 ### 创建私网连接{#create-private-link}
 
-返回 Zilliz Cloud 界面。在创建私网连接单弹窗中输入上一步中保存的**终端及节点实例ID**。点击**创建**。
+返回 Zilliz Cloud 界面。在创建私网连接单弹窗中输入上一步中保存的**终端节点实例ID**。点击**创建**。
 
 ![zh-ali-enter-endpoint-id](/img/zh-ali-enter-endpoint-id.png)
 
@@ -210,7 +210,7 @@ import Admonition from '@theme/Admonition';
        </tr>
        <tr>
          <td><p>内置权威域名（Zone）</p></td>
-         <td><p>请根据您的集群地域和集群 ID修改内置权威域名。以下为终端节点所在区域对应的 Zone 名称：</p><ul><li><p>杭州：<code>inxx-xxxxxxxxxxxx.ali-cn-hangzhou.vectordb.zilliz.com.cn</code></p></li><li><p>北京：<code>inxx-xxxxxxxxxxxx.ali-cn-beijing.vectordb.zilliz.com.cn</code></p></li><li><p>深圳：<code>inxx-xxxxxxxxxxxx.ali-cn-shenzhen.vectordb.zilliz.com.cn</code></p></li></ul><p>Zone 名称中的<code>inxx-xxxxxxxxxxxx</code>为您的Zilliz Cloud 阿里云集群 ID。您可参考<a href="./on-zilliz-cloud-console">Zilliz Cloud 控制台</a>查询集群 ID。</p></td>
+         <td><p>请根据您的集群地域修改内置权威域名。以下为终端节点所在区域对应的 Zone 名称：</p><ul><li><p>杭州：<code>ali-cn-hangzhou.vectordb.zilliz.com.cn</code></p></li><li><p>北京：<code>ali-cn-beijing.vectordb.zilliz.com.cn</code></p></li><li><p>深圳：<code>ali-cn-shenzhen.vectordb.zilliz.com.cn</code></p></li></ul></td>
        </tr>
        <tr>
          <td><p>子域名递归解析代理</p></td>
@@ -257,7 +257,7 @@ import Admonition from '@theme/Admonition';
        </tr>
        <tr>
          <td><p>主机记录</p></td>
-         <td><p>请替换为你的集群 ID。 你可在集群详情页获取集群 ID。</p></td>
+         <td><p>请替换为你的集群 ID-privatelink。 你可在集群详情页获取集群 ID。</p></td>
        </tr>
        <tr>
          <td><p>记录值</p></td>
