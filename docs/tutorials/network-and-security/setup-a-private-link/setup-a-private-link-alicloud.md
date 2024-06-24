@@ -161,7 +161,7 @@ import Admonition from '@theme/Admonition';
 
     - **默认服务域名**
 
-    ![zh-ali-safety-group](/img/zh-ali-safety-group.png)
+    ![zh-ali-endpoint-details](/img/zh-ali-endpoint-details.png)
 
 1. 等待终端节点**状态**变为**可用**。
 
