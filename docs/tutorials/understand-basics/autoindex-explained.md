@@ -39,6 +39,12 @@ AUTOINDEX 可以在如下场景中提供较高性能：
 
 选择合适的查询参数需要掌握相关领域的知识，对用户来说，学习曲线过高。为了降低用户的学习曲线，AUTOINDEX 实现了一套智能算法，通过在建立索引时分析用户数据的分布情况，使用机器学习模型自动选择检索参数，实现召回率和检索性能间的平衡。这样一来，用户就无需手动设置检索参数了。
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>在将您的 Milvus 代码迁移到云上后，无须手动修改代码中使用的索引类型。Zilliz Cloud 会在创建索引时使用 AUTOINDEX。 </p>
+
+</Admonition>
+
 ## 创建索引和向量搜索{#index-building-and-search-settings}
 
 创建索引是指将 Collection 中的 Entity 按照特定顺序进行排序，以提高搜索效率。
