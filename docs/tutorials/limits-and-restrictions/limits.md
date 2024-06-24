@@ -210,7 +210,7 @@ import Admonition from '@theme/Admonition';
 <p>可以使用以下公式计算集群的通用容量：</p>
 <p><strong>\<= 512 x CU 数</strong></p>
 <p>例如：</p>
-<p>在一个 2 CU 的集群中，最多可创建 128 个 Collection，通用容量最大为 1,028。</p>
+<p>在一个 2 CU 的集群中，最多可创建 128 个 Collection，通用容量最大为 1,024。</p>
 <p>在一个 12 CU 的集群中，最多可创建 768 个 Collection，通用容量最大为 6144。</p>
 <p>在一个 32 CU 的集群中，最多可创建 4096 个 Collection，通用容量最大为 16,384。</p>
 
