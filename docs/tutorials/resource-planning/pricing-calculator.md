@@ -62,7 +62,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>腾讯云</p></td>
-     <td><p>华北地区（北京）、华东地区（上海）</p></td>
+     <td><p>华北地区（北京）、华东地区（上海）、美国东部（弗吉尼亚）</p></td>
    </tr>
 </table>
 

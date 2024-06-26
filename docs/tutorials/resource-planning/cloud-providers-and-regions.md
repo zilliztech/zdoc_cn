@@ -62,5 +62,10 @@ Zilliz Cloud 支持在腾讯云以下地域部署集群。
      <td><p>✖️</p></td>
      <td><p>☑️</p></td>
    </tr>
+   <tr>
+     <td><p>美国东部（弗吉尼亚）</p></td>
+     <td><p>✖️</p></td>
+     <td><p>☑️</p></td>
+   </tr>
 </table>
 
