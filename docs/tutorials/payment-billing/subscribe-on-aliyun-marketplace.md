@@ -105,6 +105,18 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 
 如需使用 Zilliz Cloud 专有部署版，请[联系销售](https://zilliz.com.cn/contact-sales)。
 
+## 常见问题{#troubleshooting}
+
+**在绑定阿里云云市场订阅和 Zilliz Cloud 组织时，显示无可绑定的组织该怎么办？**
+
+导致无可绑定的组织的因素有以下几种：
+
+1. 组织名称旁出现“无权限”的标签：无组织的绑定权限，请联系组织管理员。
+
+1. 组织名称旁出现“已绑定”标签：组织已绑定阿里云云市场订阅，请先为组织[取消原有的阿里云云市场订阅](./subscribe-on-aliyun-marketplace#unsubscribe-alibaba-marketplace)再重新绑定新的订阅。
+
+1. 组织列表中无组织：请[提交工单](https://support.zilliz.com.cn/)。
+
 ## 后续操作{#next-steps}
 
 - 您可以前往 [Zilliz Cloud 文档站](https://docs.zilliz.com.cn)查看产品使用指南。
