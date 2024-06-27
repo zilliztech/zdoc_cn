@@ -257,7 +257,7 @@ AnnSearchParam req1 = AnnSearchParam.newBuilder()
         .withVectorFieldName(FLOAT_VECTOR_FIELD)
         .withFloatVectors(floatVectors)
         .withMetricType(MetricType.IP)
-        .withParams("\{\"nprobe\": 32}")
+        .withParams("{\"nprobe\": 32}")
         .withTopK(10)
         .build();
 

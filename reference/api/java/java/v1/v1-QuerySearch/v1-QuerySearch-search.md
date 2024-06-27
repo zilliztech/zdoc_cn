@@ -244,7 +244,7 @@ SearchParam param = SearchParam.newBuilder()
         .withFloatVectors(targetVectors)
         .withVectorFieldName("field1")
         .withConsistencyLevel(ConsistencyLevelEnum.EVENTUALLY)
-        .withParams("\{\"nprobe\":10,\"offset\":2, \"limit\":3}")
+        .withParams("{\"nprobe\":10,\"offset\":2, \"limit\":3}")
         .build();
 R<SearchResults> response = client.search(param)
 if (response.getStatus() != R.Status.Success.getCode()) {
