@@ -357,6 +357,34 @@ const config = {
       hotjar: {
         applicationId: 3711906,
       },
+      inkeepConfig: {
+        stylesheetUrls: ["/css/inkeep-overrides.css"],
+        baseSettings: {
+          apiKey: process.env.INKEEP_API_KEY,
+          integrationId: process.env.INKEEP_INTEGRATION_ID,
+          organizationId: process.env.INKEEP_ORGANIZATION_ID,
+          primaryBrandColor: "#175fff",
+          organizationDisplayName: "Zilliz",
+        },
+        aiChatSettings: {
+            chatSubjectName: "Zilliz Cloud",
+            botAvatarSrcUrl: "/img/zilliz-star.svg",
+            getHelpCallToActions: [
+              {
+                type: "OPEN_LINK",
+                icon: { builtIn: "FaEnvelope" },
+                name: "联系我们",
+                url: "https://support.zilliz.com.cn/hc/zh-cn"
+              }
+            ],
+            quickQuestions: [
+              "Zilliz Cloud 是什么？",
+              "如何连接 Zilliz Cloud 集群？",
+              "AUTOINDEX 是什么？",
+              "Zilliz Cloud 和 Milvus 有什么关系？"
+            ]
+        }
+      }
     }),
   themes: [
     'docusaurus-theme-frontmatter',
@@ -366,7 +394,8 @@ const config = {
         hashed: true,
         language: ['en', 'zh'],
       }
-    ]
+    ],
+    '@inkeep/docusaurus/chatButton'
   ],
   headTags: [
     {
