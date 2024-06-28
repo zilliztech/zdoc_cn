@@ -373,16 +373,21 @@ const config = {
             getHelpCallToActions: [
               {
                 type: "OPEN_LINK",
-                icon: { builtIn: "FaEnvelope" },
-                name: "联系我们",
+                icon: { builtIn: "IoHelpBuoyOutline" },
+                name: "支持中心",
                 url: "https://support.zilliz.com.cn/hc/zh-cn"
+              },
+              {
+                type: "OPEN_LINK",
+                icon: { builtIn: "IoChatbubblesOutline" },
+                name: "联系销售",
+                url: "https://zilliz.com.cn/contact-sales"
               }
             ],
             quickQuestions: [
               "Zilliz Cloud 是什么？",
-              "如何连接 Zilliz Cloud 集群？",
-              "AUTOINDEX 是什么？",
-              "Zilliz Cloud 和 Milvus 有什么关系？"
+              "如何连接 Zilliz Cloud 集群",
+              "Zilliz Cloud 和 Milvus 相比有什么差异？"
             ]
         }
       }
