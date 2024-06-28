@@ -24,21 +24,22 @@ partitionNames := []string{}
 ids := []int64{1, 3, 5}
 
 outputFields := []string{"name", "age", "height"}
+
 result, err := client.QueryByPks(
     ctx,
     collectionName,
     partitionNames,
-    entity.NewColumnInt64("book_id", ids),
-    outputFields,
+    ids,
+    outputFields
 )
 if err != nil {
     log.Fatal("failed to retrieve data records:", err)
 }
 
-for i := 0; i < result.GetColumn("book_id").Len(); i++ {
-    name, _ := result.GetColumn("name").GetAsString(i)
-    age, _ := result.GetColumn("age").Get(i)
-    height, _ := result.GetColumn("height").Get(i)
+for i := 0; i < result.RowCount(); i++ {
+    name, _ := result.GetString(i, "name")
+    age, _ := result.GetInt32(i, "age")
+    height, _ := result.GetFloat(i, "height")
     log.Printf("Record %d: Name=%s, Age=%d, Height=%f", i, name, age, height)
 }
 ```
