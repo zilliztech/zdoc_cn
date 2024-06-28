@@ -368,6 +368,7 @@ const config = {
         },
         aiChatSettings: {
             chatSubjectName: "Zilliz Cloud",
+            introMessage: `我是文档 AI 助手，可以获取所有包括文档在内的与 Zilliz Cloud 开发相关的资料。 \n\n 有什么可以帮您？`,
             botAvatarSrcUrl: "/img/zilliz-star.svg",
             getHelpCallToActions: [
               {
@@ -395,7 +396,8 @@ const config = {
         language: ['en', 'zh'],
       }
     ],
-    '@inkeep/docusaurus/chatButton'
+    '@inkeep/docusaurus/chatButton',
+    '@inkeep/docusaurus/searchBar'
   ],
   headTags: [
     {
