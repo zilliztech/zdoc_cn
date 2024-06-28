@@ -88,11 +88,7 @@ curl https://assets.zilliz.com/medium_articles_2020_dpr_a13e0377ae.json \
 
 - [连接集群](./connect-to-cluster)
 
-- [创建 Collection](./undefined)
+- [数据导入](./data-import)
 
-- [删除 Collection](./undefined)
-
-- [插入 Entity](./undefined)
-
-- [向量搜索和查询](./undefined)
+- [管理 Collection](./manage-collections)
 

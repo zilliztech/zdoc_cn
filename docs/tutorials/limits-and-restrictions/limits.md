@@ -448,7 +448,7 @@ import Admonition from '@theme/Admonition';
 
 ## 数据备份（控制台）{#backup-on-console}
 
-Zilliz Cloud 提供免费的备份存储服务，快照可保存长达30天。
+Zilliz Cloud 备份快照可保存长达30天。更多备份费用详情，请参考 [了解费用](./understand-cost#backup-costs)。
 
 ## 数据恢复（控制台）{#restore-on-console}
 
