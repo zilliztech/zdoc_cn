@@ -1,3 +1,5 @@
+require('dotenv/config');
+
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
@@ -66,7 +68,7 @@ const config = {
     [
       'docusaurus-gtm-plugin',
       {
-        id: 'GTM-MBBF2KR',
+        id: 'GTM-MBBL6Z9Q',
       },
     ],
     ['./plugins/lark-docs',
@@ -364,11 +366,12 @@ const config = {
           integrationId: process.env.INKEEP_INTEGRATION_ID,
           organizationId: process.env.INKEEP_ORGANIZATION_ID,
           primaryBrandColor: "#175fff",
-          organizationDisplayName: "Zilliz",
+          organizationDisplayName: "Zilliz Cloud",
         },
         aiChatSettings: {
+            placeholder: "Zilliz Cloud 是什么？",
             chatSubjectName: "Zilliz Cloud",
-            introMessage: `我是文档 AI 助手，可以获取所有包括文档在内的与 Zilliz Cloud 开发相关的资料。 \n\n 有什么可以帮您？`,
+            introMessage: `我是文档 AI 助手，可以获取包括文档在内的所有与 Zilliz Cloud 开发相关的资料。 \n\n 有什么可以帮您？`,
             botAvatarSrcUrl: "/img/zilliz-star.svg",
             getHelpCallToActions: [
               {
@@ -412,15 +415,7 @@ const config = {
         href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0'
       }
     }
-  ],
-  scripts: [
-    {
-      src: '/js/cookieconsent.js',
-      async: true,
-    },
-    '/js/zilliz.js',
-  ],
-  stylesheets: ['/css/cookieconsent.css'],
+  ]
 };
 
 module.exports = config;
