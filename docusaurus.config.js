@@ -66,7 +66,7 @@ const config = {
     [
       'docusaurus-gtm-plugin',
       {
-        id: 'GTM-MBBF2KR',
+        id: 'GTM-MBBL6Z9Q',
       },
     ],
     ['./plugins/lark-docs',
