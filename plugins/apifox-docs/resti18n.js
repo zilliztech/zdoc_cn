@@ -42,7 +42,7 @@ class restI18n {
             } else if (!this.__is_translated(`${path}["${key}"]`, strings)) {
                 if (['summary', 'description'].indexOf(key) > -1) {
                     // const dst = await this.t.translate(d[key])
-                    this.result.push(`${path}["${key}"]="${d[key]}"`)
+                    this.result.push(`${path}["${key}"]="${JSON.stringify(d[key]).slice(1,-1).replace('"', '\\"')}"`)
                 }
             }
         }

@@ -1,0 +1,18 @@
+---
+slug: /restful/role-operations-v2
+beta: FALSE
+notebook: FALSE
+sidebar_position: 10
+displayed_sidebar: restfulSidebar
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# Role (V2)
+
+本系列 API 提供了管理 Zilliz Cloud 集群角色的相关接口。
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

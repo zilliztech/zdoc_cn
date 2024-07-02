@@ -8,6 +8,7 @@ class refGen {
     this.options = options
     this.options.parents = []
     this.resti18n = new RestI18n()
+    this.suspicious_strings = []
 
 
     for ( const x of Object.keys(this.options.specifications.tags)) {
@@ -33,6 +34,8 @@ class refGen {
     env.addFilter('list_error', this.list_error)
     env.addFilter('get_example', this.get_example)
     env.addFilter('prepare_entries', this.prepare_entries)
+    env.addFilter('split_excerpt', this.split_excerpt)
+    env.addFilter('split_example', this.split_example)
 
     const template = env.getTemplate("reference.md")
     var idx = 0
@@ -43,18 +46,20 @@ class refGen {
         const query_params = []
         const path_params = []
         const req_bodies = []
+        const res_bodies = []
         const sidebar_position = idx; idx++;
-        let res_body;
         let res_desc;
 
         const page_title = specifications.paths[page_url][method].summary
         const page_excerpt = specifications.paths[page_url][method].description
         const page_parent = parents.filter(x => x === specifications.paths[page_url][method].tags[0])[0].split(' ').join('-').replace(/\(|\)/g, '').toLowerCase()
-        const page_slug = this.get_slug(page_title)
+        const version = page_parent.includes('v2') ? 'v2' : 'v1'
+        const upper_folder = page_parent.startsWith('cloud') || page_parent.startsWith('cluster') || page_parent.startsWith('import') || page_parent.startsWith('pipeline') ? 'control-plane' : 'data-plane'
+        const page_slug = (this.get_slug(page_title)) + (version === 'v2' ? '-v2' : '')
         const page_method = method.toLowerCase()
         const host = lang === 'zh-CN' ? 'cloud.zilliz.com.cn' : 'zillizcloud.com'
-        const condition = (page_slug.includes('cloud') || page_slug.includes('cluster') || page_slug.includes('import') || page_slug.includes('pipeline'))
-        const server = condition ? `https://controller.api.{cloud-region}.${host}` : "https://{cluster-endpoint}"
+        const condition = (page_slug.includes('cloud') || page_slug.includes('cluster') || page_slug.includes('import') || page_slug.includes('pipeline')) || page_slug.includes('project') || page_slug.includes('metrics')
+        const server = condition ? `https://controller.api.\${CLOUD_REGION}.${host}` : "https://\${CLUSTER_ENDPOINT}"
 
         if (specifications.paths[page_url][method].parameters) {
           for (const param of specifications.paths[page_url][method].parameters) {
@@ -87,9 +92,11 @@ class refGen {
           res_desc = specifications.paths[page_url][method].responses['200'].description
           const schema = specifications.paths[page_url][method].responses['200'].content["application/json"].schema
           if (schema.oneOf) {
-            res_body = schema.oneOf.filter(x => x.properties.data)[0]
+            for (const res_body of schema.oneOf.filter(x => x.properties.data)) {
+              res_bodies.push(res_body)
+            }
           } else {
-            res_body = schema
+            res_bodies.push(schema)
           }
         }
 
@@ -105,13 +112,19 @@ class refGen {
           path_params,
           req_bodies,
           res_desc,
-          res_body,
+          res_bodies,
           sidebar_position
         }).replaceAll(/<br>/g, '<br/>')
         
-        fs.writeFileSync(`${this.options.target_path}/${page_parent}/${page_slug}.md`, t)
+        fs.writeFileSync(`${this.options.target_path}/${upper_folder}/${version}/${page_parent}/${page_slug}.md`, t)
       }
     }
+
+    if (this.suspicious_strings.length > 0) {
+      fs.writeFileSync('plugins/apifox-docs/meta/suspicious_strings.properties', this.suspicious_strings.join('\n'))
+    }
+
+    fs.readdirSync(this.options.target_path, { recursive: true }).filter(x => x.includes("undefined")).forEach(x => fs.rmSync(this.options.target_path + '/' + x))
   }  
 
   make_groups() {
@@ -125,7 +138,9 @@ class refGen {
 
     for (const group of Object.keys(specifications.tags)) {
       const slug = specifications.tags[group].name.split(' ').join('-').replace(/\(|\)/g, '').toLowerCase()
-      const group_name = specifications.tags[group].name.split(' ')[0]
+      const version = slug.includes('v2') ? 'v2' : 'v1'
+      const upper_folder = slug.startsWith('cloud') || slug.startsWith('cluster') || slug.startsWith('import') || slug.startsWith('pipeline') ? 'control-plane' : 'data-plane'
+      const group_name = specifications.tags[group].name.split(' ')[0] + (version === 'v2' ? ' (V2)' : ' (V1)')
       const descriptions = JSON.parse(fs.readFileSync('plugins/apifox-docs/meta/descriptions.json', 'utf-8'))
       const description = descriptions.filter(x => x.name === slug)[0].description
       const position = specifications.tags.map(x => x.name).indexOf(specifications.tags[group].name)
@@ -136,10 +151,32 @@ class refGen {
         description
       })
 
-      const folder_path = `${target_path}/${slug}`
+      const folder_path = `${target_path}/${upper_folder}/${version}/${slug}`
 
       if (!fs.existsSync(folder_path)) {
-        fs.mkdirSync(folder_path)
+        fs.mkdirSync(folder_path, { recursive: true })
+      }
+
+      if (!fs.existsSync(`${target_path}/${upper_folder}/${upper_folder}.md`)) {
+        const title = upper_folder.startsWith('control') ? 'Control Plane' : 'Data Plane'
+        const pos = upper_folder.startsWith('control') ? 1 : 2
+        const desc = upper_folder.startsWith('control') ? 'APIs for managing Zilliz Cloud clusters and resources' : 'APIs for managing data stored in Zilliz Cloud clusters'
+
+        fs.writeFileSync(`${target_path}/${upper_folder}/${upper_folder}.md`, template.render({
+          group_name: title,
+          position: pos,
+          slug: upper_folder,
+          description: desc
+        }))
+      }
+
+      if (!fs.existsSync(`${target_path}/${upper_folder}/${version}/${version}.md`)) {
+        fs.writeFileSync(`${target_path}/${upper_folder}/${version}/${version}.md`, template.render({
+          group_name: version === 'v2' ? 'V2' : 'V1',
+          position: version === 'v2' ? 1 : 2,
+          slug: `${upper_folder}-${version}`,
+          description: ''
+        }))
       }
 
       fs.writeFileSync(`${folder_path}/${slug}.md`, t)
@@ -157,6 +194,8 @@ class refGen {
         x = iterate_array(obj.items)
       } else if (obj.hasOwnProperty('oneOf')) {
         x = iterate_oneOf(obj.oneOf)
+      } else if (obj.hasOwnProperty('anyOf')) {
+        x = iterate_oneOf(obj.anyOf)
       } else {
         x = obj.type
       }
@@ -267,7 +306,7 @@ class refGen {
       const titles = JSON.parse(fs.readFileSync(`plugins/apifox-docs/meta/titles.json`, 'utf-8'))
       return titles[page_title]
     } else {
-      return page_title.split(' ').join('-').toLowerCase()
+      return page_title.split(' ').join('-').replace(/\(|\)/g, '').toLowerCase()
     }
   }
 
@@ -280,7 +319,13 @@ class refGen {
 
     if (lang == 'zh-CN') {
       const concatenated_strings = (await this.resti18n.localize(specifications, strings)).split('\n')
-      concatenated_strings.forEach(item => eval(`specifications${item}`))
+      concatenated_strings.forEach(item => { 
+        try {
+          eval(`specifications${item}`) 
+        } catch (e) {
+          this.suspicious_strings.push(item)
+        }
+      })
     }    
 
     for (const url in specifications.paths) {
@@ -324,13 +369,35 @@ class refGen {
             this.__delete_examples(schema)
           }
         }
+
+        if (url.includes('v1')) {
+          const parameters = specifications.paths[url][method].parameters
+          this.__delete_parameters(parameters, ['dbName', 'partitionName', 'partitionNames'])
+
+          if (specifications.paths[url][method].requestBody) {
+            const schema = specifications.paths[url][method].requestBody.content["application/json"].schema
+            if (schema.oneOf) {
+              for (const req_body of schema.oneOf) {
+                this.__delete_parameters(req_body.properties, ['dbName', 'partitionName', 'partitionNames'])
+              }
+            } else if (schema.anyOf) {
+              schema.oneOf = schema.anyOf
+              delete schema.anyOf
+              for (const req_body of schema.oneOf) {
+                this.__delete_parameters(req_body.properties, ['dbName', 'partitionName', 'partitionNames'])
+              }
+            } else {
+              this.__delete_parameters(schema.properties, ['dbName', 'partitionName', 'partitionNames'])
+            }
+          }
+        }
       }
     }
 
     return specifications
   }
 
-  prepare_entries(req_body) {
+  prepare_entries(body) {
     var entries = []
 
     var process_plain = function(field, name, parent_name, parent_type) {
@@ -359,7 +426,7 @@ class refGen {
         value_range = `<br/>The value is less than or equal to ${field.maximum}.`
       }
 
-      entries.push(`| __${field_name}__ | ${field.type} ${format} ${required}<br/>${description}${default_value}${value_range}  |`)
+      entries.push(`| __${field_name.replace('.[', '[')}__ | __${field.type}__ ${format} ${required}<br/>${description}${default_value}${value_range}  |`)
     }
 
     var process_object = function(field, name, parent_name, parent_type) {
@@ -375,7 +442,7 @@ class refGen {
         field_name = name
       }
 
-      entries.push(`| __${field_name}__ | object<br/>${description} |`)
+      entries.push(`| __${field_name.replace('.[', '[')}__ | __object__<br/>${description} |`)
 
       for (const prop in field.properties) {
         if (field.properties[prop].type == 'object') {
@@ -403,7 +470,7 @@ class refGen {
         field_name = name
       }
 
-      entries.push(`| __${field_name}__ | array<br/>${description} |`)
+      entries.push(`| __${field_name.replace('.[', '[')}__ | __array__<br/>${description} |`)
       
 
       if (field.items.type == 'object') {
@@ -440,22 +507,87 @@ class refGen {
         possible_types = field.oneOf ? field.oneOf.map(x => x.type) : [field.type]
       }
 
-      entries.push(`| __${field_name}__ | ${possible_types.join(' | ')}<br/>${description} |`)
+      entries.push(`| __${field_name.replace('.[', '[')}__ | ${possible_types.map(t => `__${t}__`).join(' \\\| ')}<br/>${description} |`)
+
+      if (field.anyOf) {
+        field.anyOf.forEach((item, index) => {
+          if (item.type == 'object') {
+            process_object(item, `[opt_${index+1}]`, field_name, 'object')
+          } else if (item.type == 'array') {
+            process_array(item, `[opt_${index+1}]`, field_name, 'array')
+          } else {
+            process_plain(item, `[opt_${index+1}]`, field_name, 'object')
+          }
+        })
+      }      
+
+      if (field.oneOf) {
+        field.oneOf.forEach((item, index) => {
+          if (item.type == 'object') {
+            process_object(item, `[opt_${index+1}]`, field_name, 'object')
+          } else if (item.type == 'array') {
+            process_array(item, `[opt_${index+1}]`, field_name, 'array')
+          } else {
+            process_plain(item, `[opt_${index+1}]`, field_name, 'object')
+          }
+        })
+      }      
     }
 
-    for (const prop in req_body.properties) {
-      if (req_body.properties[prop].type == 'object') {
-        process_object(req_body.properties[prop], prop, '')
-      } else if (req_body.properties[prop].type == 'array') {
-        process_array(req_body.properties[prop], prop, '')
-      } else if (req_body.properties[prop].anyOf || req_body.properties[prop].oneOf) {
-        process_composite(req_body.properties[prop], prop, '')
-      } else {
-        process_plain(req_body.properties[prop], prop, '')
+    if (body.properties) {
+      delete body.properties.code;
+      for (const prop in body.properties) {
+        if (body.properties[prop].type == 'object') {
+          process_object(body.properties[prop], prop, '')
+        } else if (body.properties[prop].type == 'array') {
+          process_array(body.properties[prop], prop, '')
+        } else if (body.properties[prop].anyOf || body.properties[prop].oneOf) {
+          process_composite(body.properties[prop], prop, '')
+        } else {
+          process_plain(body.properties[prop], prop, '')
+        }
+      }
+    }
+
+    if (body instanceof Array) {
+      for (const item of body) {
+        if (item.properties) {
+          delete item.properties.code;
+          for (const prop in item.properties) {
+            if (item.properties[prop].type == 'object') {
+              process_object(item.properties[prop], prop, '')
+            } else if (item.properties[prop].type == 'array') {
+              process_array(item.properties[prop], prop, '')
+            } else if (item.properties[prop].anyOf || item.properties[prop].oneOf) {
+              process_composite(item.properties[prop], prop, '')
+            } else {
+              process_plain(item.properties[prop], prop, '')
+            }
+          }
+        }
       }
     }
 
     return entries.join('\n')
+  }
+
+  split_excerpt(text) {
+    var result = text
+    if (text.includes("## 示例")) {
+      result = text.split("## 示例")[0]
+    }
+
+    return result.trim()
+  }
+
+  split_example(text) {
+    var result = ''
+
+    if (text.includes("## 示例")) {
+      result = text.split("## 示例")[1].trim()
+    }
+
+    return result
   }
 
   __delete_examples(body) {
@@ -467,6 +599,22 @@ class refGen {
         this.__delete_examples(body.properties[prop])
       }
     }
+  }
+
+  __delete_parameters(parameters, names) {
+    if (parameters instanceof Array) {
+      for (const param of parameters) {
+        if (names.includes(param.name)) {
+          parameters.splice(parameters.indexOf(param), 1)
+        }
+      }
+    }
+
+    Object.keys(parameters).forEach(key => {
+      if (names.includes(key)) {
+        delete parameters[key]
+      }
+    })
   }
 }
 

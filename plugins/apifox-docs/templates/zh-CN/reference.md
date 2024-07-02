@@ -7,7 +7,7 @@ title: {{page_title}}
 
 import RestHeader from '@site/src/components/RestHeader';
 
-{{page_excerpt}}
+{{page_excerpt | split_excerpt}}
 
 <RestHeader method="{{page_method}}" endpoint="{{server}}{{page_url}}" />
 
@@ -15,7 +15,15 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## 示例
 
+{% if page_excerpt | split_example === '' %}
+
 {{ page_title | get_example }}
+
+{% else %}
+
+{{ page_excerpt | split_example }}
+
+{% endif %}
 
 ## 请求
 
@@ -53,24 +61,44 @@ import RestHeader from '@site/src/components/RestHeader';
 
 {%- endif %}
 
+{% if header_params | length > 0 -%}
+
+- 请求头参数
+
+    | Parameter        | Description                                                                               |
+    |------------------|-------------------------------------------------------------------------------------------|
+    {%- for param in header_params %}
+    | __{{param['name']}}__  | **{{param['schema']['type']}}** {%- if param['required'] -%}(required){%- endif -%}<br>{{param['description']}}{%- if param['default'] -%}<br>The value defaults to **{{param['default']}}**.{%- endif -%}{%- if param['minimum'] and param['maximum'] -%}<br>The value ranges from **{{param['minimum']}}** to **{{param['maximum']}}**.{%- endif -%}{%- if param['minimum'] and not param['maximum'] -%}<br>The minimum value is **{{param['minimum']}}**.{%- endif -%}{%- if param['maximum'] and not param['minimum'] -%}<br>The maximum value is **{{param['maximum']}}**.{%- endif -%} |
+    {%- endfor %}
+
+{%- else -%}
+
+- 无请求头参数
+
+{%- endif %}
+
 ### 请求体
 
 {%- if req_bodies | length > 0 -%}
 {%- for req_body in req_bodies %}
 
+{%- if req_bodies | length > 1 %}
+
+#### 选项 {{loop.index}}: {{req_body['description']}}
+{%- endif %}
+
 ```json
 {{req_body | req_format }}
 ```
 
-| 参数名称        | 参数描述                                                                               |
+| 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
 {{ req_body | prepare_entries }}
-
 
 {%- endfor %}
 {%- else %}
 
-无请求体。
+No request body required
 
 {%- endif %}
 
@@ -80,13 +108,27 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ### 响应体
 
-- 处理请求成功后返回
+{%- if res_bodies | length > 0 -%}
+{%- for res_body in res_bodies %}
+
+{%- if res_bodies | length > 1 %}
+
+#### 选项 {{loop.index}}: {{res_body['description']}}
+{%- endif %}
 
 ```json
 {{res_body | res_format }}
 ```
 
-- 处理请求失败后返回
+| 属性名称 | 属性描述                                                                                                                                    |
+|----------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| __code__ | **integer**<br>表示当前操作是否成功。<br><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+{{ res_body | prepare_entries }}
+
+{%- endfor %}
+{%- endif %}
+
+### 错误响应
 
 ```json
 {
@@ -95,18 +137,7 @@ import RestHeader from '@site/src/components/RestHeader';
 }
 ```
 
-### 属性
-
-下表罗列了响应包含的所有属性。
-
-| 属性名称  | 属性描述                                                                                                                               |
-|----------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| `code`   | **integer**<br/>表示请求是否成功。<br/><ul><li>`200`：请求成功。</li><li>其它：存在错误。</li></ul> |
-{{ res_body | prepare_entries }}
-| `message`  | **string**<br/>具体描述请求错误的原因。 |
-
-## 错误码清单
-
-| 错误码 | 错误消息 |
-| ---- | ------------- |
-{{ page_slug | list_error }}
+| 属性名称    | 属性描述                                                                                                                                    |
+|-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| __code__    | **integer**<br>表示当前操作是否成功。<br><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __message__ | **string**<br>表示错误信息。                                                                        |

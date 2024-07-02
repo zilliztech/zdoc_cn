@@ -21,6 +21,34 @@
     },
     {
         "name": "vector-operations",
-        "description": "本系列 API 用于在 Zilliz Cloud 上进行向量检索。"
+        "description": "本系列 API 提供了向量检索操作相关接口。"
+    },
+    {
+        "name": "collection-operations-v2",
+        "description": "本系列 API 提供了用于管理 Collection 的相关接口。"
+    },
+    {
+        "name": "vector-operations-v2",
+        "description": "本系列 API 提供了向量检索操作相关接口。"
+    },
+    {
+        "name": "partition-operations-v2",
+        "description": "本系列 API 提供了管理 Partition 的相关接口。"
+    },
+    {
+        "name": "user-operations-v2",
+        "description": "本系列 API 提供了管理 Zilliz Cloud 集群用户的相关接口。"
+    },
+    {
+        "name": "role-operations-v2",
+        "description": "本系列 API 提供了管理 Zilliz Cloud 集群角色的相关接口。"
+    },
+    {
+        "name": "index-operations-v2",
+        "description": "本系列 API 提供了管理 Collection 索引的相关接口。"
+    },
+    {
+        "name": "alias-operations-v2",
+        "description": "本系列 API 提供了管理 Collection 别名的相关接口。"
     }
 ]

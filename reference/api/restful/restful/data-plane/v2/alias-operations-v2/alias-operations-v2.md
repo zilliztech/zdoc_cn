@@ -1,0 +1,18 @@
+---
+slug: /restful/alias-operations-v2
+beta: FALSE
+notebook: FALSE
+sidebar_position: 12
+displayed_sidebar: restfulSidebar
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# Alias (V2)
+
+本系列 API 提供了管理 Collection 别名的相关接口。
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

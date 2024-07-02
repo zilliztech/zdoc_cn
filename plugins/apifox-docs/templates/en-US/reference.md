@@ -1,13 +1,13 @@
 ---
-displayed_sidebar: referenceSidebar
+displayed_sidebar: restfulSidebar
 sidebar_position: {{sidebar_position}}
-slug: /{{page_slug}}
+slug: /restful/{{page_slug}}
 title: {{page_title}}
 ---
 
 import RestHeader from '@site/src/components/RestHeader';
 
-{{page_excerpt}}
+{{page_excerpt | split_excerpt}}
 
 <RestHeader method="{{page_method}}" endpoint="{{server}}{{page_url}}" />
 
@@ -15,7 +15,15 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ## Example
 
+{% if page_excerpt | split_example === '' %}
+
 {{ page_title | get_example }}
+
+{% else %}
+
+{{ page_excerpt | split_example }}
+
+{% endif %}
 
 ## Request
 
@@ -28,7 +36,7 @@ import RestHeader from '@site/src/components/RestHeader';
     | Parameter        | Description                                                                               |
     |------------------|-------------------------------------------------------------------------------------------|
     {%- for param in query_params %}
-    | `{{param['name']}}`  | **{{param['schema']['type']}}** {%- if param['required'] -%}(required){%- endif -%}<br>{{param['description']}}{%- if param['default'] -%}<br>The value defaults to **{{param['default']}}**.{%- endif -%}{%- if param['minimum'] and param['maximum'] -%}<br>The value ranges from **{{param['minimum']}}** to **{{param['maximum']}}**.{%- endif -%}{%- if param['minimum'] and not param['maximum'] -%}<br>The minimum value is **{{param['minimum']}}**.{%- endif -%}{%- if param['maximum'] and not param['minimum'] -%}<br>The maximum value is **{{param['maximum']}}**.{%- endif -%} |
+    | __{{param['name']}}__  | **{{param['schema']['type']}}** {%- if param['required'] -%}(required){%- endif -%}<br>{{param['description']}}{%- if param['default'] -%}<br>The value defaults to **{{param['default']}}**.{%- endif -%}{%- if param['minimum'] and param['maximum'] -%}<br>The value ranges from **{{param['minimum']}}** to **{{param['maximum']}}**.{%- endif -%}{%- if param['minimum'] and not param['maximum'] -%}<br>The minimum value is **{{param['minimum']}}**.{%- endif -%}{%- if param['maximum'] and not param['minimum'] -%}<br>The maximum value is **{{param['maximum']}}**.{%- endif -%} |
     {%- endfor %}
 
 {%- else -%}
@@ -44,7 +52,7 @@ import RestHeader from '@site/src/components/RestHeader';
     | Parameter        | Description                                                                               |
     |------------------|-------------------------------------------------------------------------------------------|
     {%- for param in path_params %}
-    | `{{param['name']}}`  | **{{param['schema']['type']}}** {%- if param['required'] -%}(required){%- endif -%}<br>{{param['description']}}{%- if param['default'] -%}<br>The value defaults to **{{param['default']}}**.{%- endif -%}{%- if param['minimum'] and param['maximum'] -%}<br>The value ranges from **{{param['minimum']}}** to **{{param['maximum']}}**.{%- endif -%}{%- if param['minimum'] and not param['maximum'] -%}<br>The minimum value is **{{param['minimum']}}**.{%- endif -%}{%- if param['maximum'] and not param['minimum'] -%}<br>The maximum value is **{{param['maximum']}}**.{%- endif -%} |
+    | __{{param['name']}}__  | **{{param['schema']['type']}}** {%- if param['required'] -%}(required){%- endif -%}<br>{{param['description']}}{%- if param['default'] -%}<br>The value defaults to **{{param['default']}}**.{%- endif -%}{%- if param['minimum'] and param['maximum'] -%}<br>The value ranges from **{{param['minimum']}}** to **{{param['maximum']}}**.{%- endif -%}{%- if param['minimum'] and not param['maximum'] -%}<br>The minimum value is **{{param['minimum']}}**.{%- endif -%}{%- if param['maximum'] and not param['minimum'] -%}<br>The maximum value is **{{param['maximum']}}**.{%- endif -%} |
     {%- endfor %}
 
 {%- else -%}
@@ -53,10 +61,31 @@ import RestHeader from '@site/src/components/RestHeader';
 
 {%- endif %}
 
+{% if header_params | length > 0 -%}
+
+- Header parameters
+
+    | Parameter        | Description                                                                               |
+    |------------------|-------------------------------------------------------------------------------------------|
+    {%- for param in header_params %}
+    | __{{param['name']}}__  | **{{param['schema']['type']}}** {%- if param['required'] -%}(required){%- endif -%}<br>{{param['description']}}{%- if param['default'] -%}<br>The value defaults to **{{param['default']}}**.{%- endif -%}{%- if param['minimum'] and param['maximum'] -%}<br>The value ranges from **{{param['minimum']}}** to **{{param['maximum']}}**.{%- endif -%}{%- if param['minimum'] and not param['maximum'] -%}<br>The minimum value is **{{param['minimum']}}**.{%- endif -%}{%- if param['maximum'] and not param['minimum'] -%}<br>The maximum value is **{{param['maximum']}}**.{%- endif -%} |
+    {%- endfor %}
+
+{%- else -%}
+
+- No header parameters required
+
+{%- endif %}
+
 ### Request Body
 
 {%- if req_bodies | length > 0 -%}
 {%- for req_body in req_bodies %}
+
+{%- if req_bodies | length > 1 %}
+
+#### Option {{loop.index}}: {{req_body['description']}}
+{%- endif %}
 
 ```json
 {{req_body | req_format }}
@@ -64,24 +93,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 | Parameter        | Description                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-{%- for k, v in req_body['properties'] %}
-{%- if v['type'] not in ['array', 'object'] %}
-| `{{k}}`  | **{{v['type']}}{%if 'format' in v %}({{v['format']}}){%- endif %}** {%- if k in req_body['required'] -%}(required){%- endif -%}<br>{{v['description']}}{%- if v['default'] -%}<br>The value defaults to **{{v['default']}}**.{%- endif -%}{%- if v['minimum'] and v['maximum'] -%}<br>The value ranges from **{{v['minimum']}}** to **{{v['maximum']}}**.{%- endif -%}{%- if v['minimum'] and not v['maximum'] -%}<br>The minimum value is **{{v['minimum']}}**.{%- endif -%}{%- if v['maximum'] and not v['minimum'] -%}<br>The maximum value is **{{v['maximum']}}**.{%- endif -%} |
-{%- elif v['type'] == 'object' %}
-| `{{k}}`  | **{{v['type']}}{%if 'format' in v %}({{v['format']}}){%- endif %}** {%- if k in req_body['required'] -%}(required){%- endif -%}<br>{{v['description']}}{%- if v['default'] -%}<br>The value defaults to **{{v['default']}}**.{%- endif -%}{%- if v['minimum'] and v['maximum'] -%}<br>The value ranges from **{{v['minimum']}}** to **{{v['maximum']}}**.{%- endif -%}{%- if v['minimum'] and not v['maximum'] -%}<br>The minimum value is **{{v['minimum']}}**.{%- endif -%}{%- if v['maximum'] and not v['minimum'] -%}<br>The maximum value is **{{v['maximum']}}**.{%- endif -%} |
-{%- for ko, vo in v['properties'] %}
-| `{{k}}.{{ko}}`  | **{{vo['type']}}{%if 'format' in vo %}({{vo['format']}}){%- endif %}**<br>{{vo['description']}}{%- if vo['default'] -%}<br>The value defaults to **{{vo['default']}}**.{%- endif -%}{%- if vo['minimum'] and vo['maximum'] -%}<br>The value ranges from **{{vo['minimum']}}** to **{{vo['maximum']}}**.{%- endif -%}{%- if vo['minimum'] and not vo['maximum'] -%}<br>The minimum value is **{{vo['minimum']}}**.{%- endif -%}{%- if vo['maximum'] and not vo['minimum'] -%}<br>The maximum value is **{{vo['maximum']}}**.{%- endif -%} |
-{%- endfor %}
-{%- elif v['type'] == 'array' %}
-| `{{k}}`  | **{{v['type']}}{%if 'format' in v['items'] %} ({{v['items']['type']}} \[{{v['items']['format']}}\]){%- endif %}** {%- if k in req_body['required'] -%}(required){%- endif -%}<br>{{v['description']}}{%- if v['default'] -%}<br>The value defaults to **{{v['default']}}**.{%- endif -%}{%- if v['minimum'] and v['maximum'] -%}<br>The value ranges from **{{v['minimum']}}** to **{{v['maximum']}}**.{%- endif -%}{%- if v['minimum'] and not v['maximum'] -%}<br>The minimum value is **{{v['minimum']}}**.{%- endif -%}{%- if v['maximum'] and not v['minimum'] -%}<br>The maximum value is **{{v['maximum']}}**.{%- endif -%} |
-{%- if v['items'] == 'object' %}
-{%- for ka, va in v['items']['properties'] %}
-| `{{k}}[].{{ka}}`  | **{{va['type']}}{%if 'format' in va %}({{va['format']}}){%- endif %}**<br>{{va['description']}}{%- if va['default'] -%}<br>The value defaults to **{{va['default']}}**.{%- endif -%}{%- if va['minimum'] and va['maximum'] -%}<br>The value ranges from **{{va['minimum']}}** to **{{va['maximum']}}**.{%- endif -%}{%- if va['minimum'] and not va['maximum'] -%}<br>The minimum value is **{{va['minimum']}}**.{%- endif -%}{%- if va['maximum'] and not va['minimum'] -%}<br>The maximum value is **{{va['maximum']}}**.{%- endif -%} |
-{%- endfor %}
-{%- endif %}
-{%- endif %}
-{%- endfor %}
-
+{{ req_body | prepare_entries }}
 
 {%- endfor %}
 {%- else %}
@@ -94,15 +106,29 @@ No request body required
 
 {{ res_desc }}
 
-### Response Bodies
+### Response Body
 
-- Response body if we process your request successfully
+{%- if res_bodies | length > 0 -%}
+{%- for res_body in res_bodies %}
+
+{%- if res_bodies | length > 1 %}
+
+#### Option {{loop.index}}: {{res_body['description']}}
+{%- endif %}
 
 ```json
 {{res_body | res_format }}
 ```
 
-- Response body if we failed to process your request
+| Property | Description                                                                                                                                 |
+|----------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| __code__   | **integer**<br>Indicates whether the request succeeds.<br><ul><li>`200`: The request succeeds.</li><li>Others: Some error occurs.</li></ul> |
+{{ res_body | prepare_entries }}
+
+{%- endfor %}
+{%- endif %}
+
+### Error Response
 
 ```json
 {
@@ -111,77 +137,7 @@ No request body required
 }
 ```
 
-### Properties
-
-The properties in the returned response are listed in the following table.
-
 | Property | Description                                                                                                                                 |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| `code`   | **integer**<br>Indicates whether the request succeeds.<br><ul><li>`200`: The request succeeds.</li><li>Others: Some error occurs.</li></ul> |
-{%- if 'properties' in res_body['properties']['data'] %}
-| `data`    | **object**<br>A data object. |
-{%- for k, v in res_body['properties']['data']['properties'] %}
-{%- if v['type'] not in ['array', 'object'] or 'properties' not in v['items'] %}
-| `data.{{k}}`   | **{{v['type']}}{%if 'format' in v %}({{v['format']}}){%- endif %}**<br>{{v['description']}} |
-{%- elif v['type'] == 'array' and 'properties' in v['items'] %}
-| `data.{{k}}`   | **{{v['type']}}{%if 'format' in v %}({{v['format']}}){%- endif %}**<br>{{v['description']}} |
-{%- for ka, va in v['items']['properties'] %}
-| `data.{{k}}[].{{ka}}`   | **{{va['type']}}{%if 'format' in va %}({{va['format']}}){%- endif %}**<br>{{va['description']}} |
-{%- endfor %}
-{%- elif v['type'] == 'object' %}
-| `data.{{k}}`   | **{{v['type']}}{%if 'format' in v %}({{v['format']}}){%- endif %}**<br>{{v['description']}} |
-{%- for ko, vo in v['properties'] %}
-| `data.{{k}}.{{ko}}`   | **{{vo['type']}}{%if 'format' in vo %}({{vo['format']}}){%- endif %}**<br>{{vo['description']}} |
-{%- endfor %}
-{%- endif %}
-{%- endfor %}
-{%- elif 'items' in res_body['properties']['data'] %}
-| `data`  | **array**<br>A data array of {{res_body['properties']['data']['items']['type']}}s. |
-{%- if res_body['properties']['data']['items']['type'] == 'object' %}
-{%- for k, v in res_body['properties']['data']['items']['properties'] %}
-{%- if v['type'] not in ['array', 'object'] or 'properties' not in v['items'] %}
-| `data.{{k}}`   | **{{v['type']}}{%if 'format' in v %}({{v['format']}}){%- endif %}**<br>{{v['description']}} |
-{%- elif v['type'] == 'array' and 'properties' in v['items'] %}
-| `data.{{k}}`   | **{{v['type']}}{%if 'format' in v %}({{v['format']}}){%- endif %}**<br>{{v['description']}} |
-{%- for ka, va in v['items']['properties'] %}
-| `data.{{k}}[].{{ka}}`   | **{{va['type']}}{%if 'format' in va %}({{va['format']}}){%- endif %}**<br>{{va['description']}} |
-{%- endfor %}
-{%- elif v['type'] == 'object' %}
-| `data.{{k}}`   | **{{v['type']}}{%if 'format' in v %}({{v['format']}}){%- endif %}**<br>{{v['description']}} |
-{%- for ko, vo in v['properties'] %}
-| `data.{{k}}.{{ko}}`   | **{{vo['type']}}{%if 'format' in vo %}({{vo['format']}}){%- endif %}**<br>{{vo['description']}} |
-{%- endfor %}
-{%- endif %}
-{%- endfor %}
-{%- endif %}
-{%- elif 'oneOf' in res_body['properties']['data'] %}
-| `data`  | **oneOf**<br>A set of multiple possible values. |
-{%- for item in res_body['properties']['data']['oneOf'] %}
-| **[Option {{loop.index}}]** | |
-{%- if 'properties' in item %}
-{%- for k, v in item['properties'] %}
-{%- if v['type'] not in ['array', 'object'] or 'properties' not in v['items'] %}
-| `data.{{k}}`   | **{{v['type']}}{%if 'format' in v %}({{v['format']}}){%- endif %}**<br>{{v['description']}} |
-{%- elif v['type'] == 'array' and 'properties' in v['items'] %}
-| `data.{{k}}`   | **{{v['type']}}{%if 'format' in v %}({{v['format']}}){%- endif %}**<br>{{v['description']}} |
-{%- for ka, va in v['items']['properties'] %}
-| `data.{{k}}[].{{ka}}`   | **{{va['type']}}{%if 'format' in va %}({{va['format']}}){%- endif %}**<br>{{va['description']}} |
-{%- endfor %}
-{%- elif v['type'] == 'object' %}
-| `data.{{k}}`   | **{{v['type']}}{%if 'format' in v %}({{v['format']}}){%- endif %}**<br>{{v['description']}} |
-{%- for ko, vo in v['properties'] %}
-| `data.{{k}}.{{ko}}`   | **{{vo['type']}}{%if 'format' in vo %}({{vo['format']}}){%- endif %}**<br>{{vo['description']}} |
-{%- endfor %}
-{%- endif %}
-{%- endfor %}
-{%- elif 'item' in item %}
-{%- endif %}
-{%- endfor %}
-{%- endif %}
-| `message`  | **string**<br>Indicates the possible reason for the reported error. |
-
-## Possible Errors
-
-| Code | Error Message |
-| ---- | ------------- |
-{{ page_title | list_error }}
+| __code__   | **integer**<br>Indicates whether the request succeeds.<br><ul><li>`200`: The request succeeds.</li><li>Others: Some error occurs.</li></ul> |
+| __message__  | **string**<br>Indicates the possible reason for the reported error. |
