@@ -6,13 +6,13 @@ slug: /restful
 
 # RESTful API 参考
 
-Zilliz Cloud 提供了 RESTful API，以便您可以操作您的集群、集合以及存储在其中的数据。在深入了解之前，有几件事情值得注意：
+Zilliz Cloud 提供了 RESTful API，以便您可以操作您的集群、Collection 以及存储在其中的数据。在深入了解之前，有几件事情值得注意：
 
 ## Control Plane 和 Data Plane
 
 Zilliz Cloud 使用 Control Plane 来集中管理集群和相关资源，而 Data Plane 则负责特定集合中的数据存储和处理。
 
-Control Plane 提供了 **Cloud Meta**、**集群操作**、**导入操作** 和 **流水线操作** 的 API。Data Plane 提供了 **集合操作** 和 **向量操作** 的 API。
+Control Plane 提供了 **Cloud**、**Cluster**、**Import** 和 **Pipeline** 的相关 API 接口。Data Plane 提供了 **Collection** 和 **Vector** 的相关 API 接口。
 
 - 使用 Control Plane API 时，您需要使用 **有效的 API 密钥** 来验证您的请求。
 
@@ -49,7 +49,7 @@ Control Plane 提供了 **Cloud Meta**、**集群操作**、**导入操作** 和
 
 ## API 版本控制
 
-对于所有与 Milvus 2.4 及以上版本兼容的 Zilliz Cloud **集群**，您应该使用 **v2** 进行所有数据平面的操作。
+对于所有与 Milvus 2.4 及以上版本兼容的 Zilliz Cloud **集群**，您应该使用 **v2** 接口进行所有数据平面的操作。
 
 有关详细信息，请参考以下参考页面：
 
