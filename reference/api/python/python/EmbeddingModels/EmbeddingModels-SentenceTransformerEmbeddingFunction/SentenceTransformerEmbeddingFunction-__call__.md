@@ -1,8 +1,8 @@
 ---
 displayed_sidbar: pythonSidebar
 slug: /python/python/SentenceTransformerEmbeddingFunction-__call__
-beta: FALSE
-notebook: FALSE
+beta: false
+notebook: false
 type: docx
 token: ZWLCdBWwOo4OSVxfnNRcDrv5nhe
 sidebar_position: 4

@@ -1,8 +1,8 @@
 ---
 displayed_sidbar: pythonSidebar
 slug: /python/python/Vector-query
-beta: FALSE
-notebook: FALSE
+beta: false
+notebook: false
 type: docx
 token: LkmSddW2NolgitxLhy9cx22Dnpe
 sidebar_position: 4
@@ -25,6 +25,7 @@ query(
     filter: str,
     output_fields: Optional[List[str]] = None,
     timeout: Optional[float] = None,
+    partition_names: Optional[List[str]] = None,
     **kwargs,
 ) -> List[dict]
 ```
@@ -63,6 +64,12 @@ query(
 - **timeout** (*float* | *None*) -
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
+
+- **partition_names** (*list[str]* | *None*) -
+
+    A list of partition names.
+
+    The value defaults to **None**. If specified, only the specified partitions are involved in queries.
 
 - **kwargs** -
 
@@ -151,7 +158,7 @@ from pymilvus import MilvusClient
 
 # 1. Set up a milvus client
 client = MilvusClient(
-    uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.cloud.zilliz.com.cn:19530",
+    uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com:19530",
     token="user:password"
 )
 

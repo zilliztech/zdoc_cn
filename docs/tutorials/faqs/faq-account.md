@@ -28,7 +28,7 @@ sidebar_position: 11
 
 ### 如何修改账号电子邮箱？ \{#how-can-i-change-my-account-email-address}
 
-当前，Zilliz Cloud 不支持修改账号电子邮箱。
+如需修改账号邮箱，请参考[邮箱账号](./email-accounts#update-account-email-address)。
 
 ### 如何删除账号？ \{#how-to-delete-my-account}
 

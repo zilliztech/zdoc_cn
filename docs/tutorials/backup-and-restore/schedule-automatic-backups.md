@@ -27,6 +27,12 @@ Zilliz Cloud 允许您为集群创建自动备份，确保意外发生时可以�
 
 ![create-snapshot-schedule](/img/create-snapshot-schedule.png)
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>更多备份费用详情，请参考 <a href="./understand-cost#backup-costs">了解费用</a>。</p>
+
+</Admonition>
+
 ## 调整备份计划{#adjust-snapshot-schedule-settings}
 
 您可以为集群调整备份计划。默认情况下自动备份处于关闭状态。由于存储快照需要成本，您可以自行决定何时以及如何创建快照。

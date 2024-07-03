@@ -1,11 +1,11 @@
 ---
 displayed_sidbar: nodeSidebar
 slug: /node/node/Authentication-revokeRole
-beta: FALSE
-notebook: FALSE
+beta: false
+notebook: false
 type: docx
 token: W7XJdZDHnoFECDxCYoMcrZqrnnd
-sidebar_position: 12
+sidebar_position: 14
 displayed_sidebar: nodeSidebar
 
 ---

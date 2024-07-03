@@ -1,8 +1,8 @@
 ---
 displayed_sidbar: javaSidebar
 slug: /java/java/v2-Vector-delete
-beta: FALSE
-notebook: FALSE
+beta: false
+notebook: false
 type: docx
 token: DgKidEKLXodqn3xsg0hclkcRntd
 sidebar_position: 1

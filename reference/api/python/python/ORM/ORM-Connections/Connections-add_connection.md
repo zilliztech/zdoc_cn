@@ -1,8 +1,8 @@
 ---
 displayed_sidbar: pythonSidebar
 slug: /python/python/Connections-add_connection
-beta: FALSE
-notebook: FALSE
+beta: false
+notebook: false
 type: docx
 token: C37ldNLbFog6ThxA23ScMldnnmb
 sidebar_position: 1
@@ -41,7 +41,7 @@ add_connection(
 
     - **uri** (*string*) -
 
-        The URI of the Zilliz Cloud cluster. For example: **https://in01-*****************.aws-us-west-2.vectordb-uat3.cloud.zilliz.com.cn:19540**.
+        The URI of the Zilliz Cloud cluster. For example: **https://in01-*****************.aws-us-west-2.vectordb-uat3.zillizcloud.com:19540**.
 
     - **host** (*string*) -
 
@@ -116,9 +116,9 @@ None
 ```python
 from pymilvus import connections
 
-SERVERLESS_ENDPOINT = "https://in03-************.api.gcp-us-west1.cloud.zilliz.com.cn"
+SERVERLESS_ENDPOINT = "https://in03-************.api.gcp-us-west1.zillizcloud.com"
 SERVERLESS_TOKEN = "db_admin:************"
-DEDICATED_ENDPOINT = "https://in03-************.api.gcp-us-west1.cloud.zilliz.com.cn:19541"
+DEDICATED_ENDPOINT = "https://in03-************.api.gcp-us-west1.zillizcloud.com:19541"
 DEDICATED_USER = "db_admin"
 DEDICATED_PASS = "*****************"
 

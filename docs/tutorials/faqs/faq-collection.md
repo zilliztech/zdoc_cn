@@ -30,22 +30,27 @@ sidebar_position: 3
 
 ### 1 个集群中最多可创建多少个 Collection？ \{#how-many-collections-are-allowed-in-a-single-cluster}
 
-集群可创建的 Collection 数量受集群的 CU 数量影响：
+集群可创建的 Collection 数量受集群的类型和 CU 数量影响：
 
 <table>
    <tr>
-     <th></th>
-     <th><p>最大 Collection 数</p></th>
+     <th><p><strong>类型</strong></p></th>
+     <th><p><strong>最大数量</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><p>小于等于 8 CU</p></td>
-     <td><p>32</p></td>
+     <td><p>Dedicated 版集群</p></td>
+     <td><p>每 CU：&lt;= 64</p><p>每集群：&lt;= 4096</p></td>
+     <td><p>在 Dedicated 版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</p></td>
    </tr>
    <tr>
-     <td><p>大于 8 CU</p></td>
-     <td><p>256</p></td>
+     <td><p>Serverless 版集群</p></td>
+     <td><p>10</p></td>
+     <td><p>在 Serverless 版集群中，最多可创建 10 个 Collection。</p></td>
    </tr>
 </table>
+
+更多详情，请参加[使用限制](./limits#collections)。
 
 如达到集群可创建 Collection 数量上限，请尝试以下方法：
 
@@ -75,11 +80,19 @@ sidebar_position: 3
 
 ### Zilliz Cloud 支持哪些相似度类型？ \{#what-are-the-indexing-metric-types-supported-by-zilliz-cloud}
 
-Zilliz Cloud支持 2 种相似度类型。
+Zilliz Cloud支持以下几种相似度类型。
 
 1. 欧氏距离（Euclidean / L2）计算两条向量间的欧式距离。计算结果越小，两个向量越相似。
 
 1. 内积（Inner Product / IP）将两条向量相乘。计算结果为正数，两个向量越相似。
+
+1. 余弦距离（Cosine）计算计算两个向量之间的余弦夹角大小。计算结果在 [-1, 1] 的区间内，结果越大，向量越相似。
+
+1. **[Beta]** 杰卡德距离（Jaccard）衡量 2 个集合差异性的指标，是 Jaccard 相似系数（similarity coefficient）的补集，被定义为 1 减去 Jaccard 相似系数。
+
+1. **[Beta]** 汉明距离（Hamming）测量两个字符串对应位置的不同字符的个数。
+
+更多详情，请参考[相似度类型](./search-metrics-explained)。
 
 ### Collection 加载为何失败，如何解决？ \{#why-do-i-fail-to-load-collections-what-can-i-do}
 

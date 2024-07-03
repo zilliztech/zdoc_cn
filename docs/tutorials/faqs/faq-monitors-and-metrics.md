@@ -14,7 +14,7 @@ sidebar_position: 10
 
 ## 目录
 
-- [集群内容达到上限后，无法插入数据。如何解决这个问题？](#what-can-i-do-if-my-cluster-memory-quota-has-been-exhausted-and-i-cannot-insert-data-as-a-result)
+- [集群容量达到上限后，无法插入数据。如何解决这个问题？](#what-can-i-do-if-my-cluster-memory-quota-has-been-exhausted-and-i-cannot-insert-data-as-a-result)
 - [为什么删除 Collection 后，内存用量依旧保持不变？](#why-doesnt-the-memory-consumption-decrease-even-if-i-dropped-a-collection)
 
 ## 问答
@@ -22,11 +22,11 @@ sidebar_position: 10
 
 
 
-### 集群内容达到上限后，无法插入数据。如何解决这个问题？ \{#what-can-i-do-if-my-cluster-memory-quota-has-been-exhausted-and-i-cannot-insert-data-as-a-result}
+### 集群容量达到上限后，无法插入数据。如何解决这个问题？ \{#what-can-i-do-if-my-cluster-memory-quota-has-been-exhausted-and-i-cannot-insert-data-as-a-result}
 
 请尝试以下 2 种方法：
 
-1. 为您的集群扩容，选择更大的 CU 大小。集群 CU 大小越大，集群可以处理的数据越多。
+1. 为您的集群[扩容](./manage-cluster#manage-and-configure-clusters)，选择更大的 CU 大小。集群 CU 大小越大，集群可以处理的数据越多。
 
 1. 释放一些已加载但不常用的 Collection。这能够帮助您节省内存用量。
 

@@ -15,17 +15,21 @@ import TabItem from '@theme/TabItem';
 
 # 管理 Collection (SDK)
 
-本指南将介绍如何通过各种语言的 SDK 创建和管理 Collection。操作更简单直观，但使用 SDK 可提供更多灵活性。
+本指南将介绍如何通过各种语言的 SDK 创建和管理 Collection。Zilliz Cloud Web 控制台操作更简单直观，但使用 SDK 可提供更多灵活性。
 
 ## 前提条件{#before-you-start}
 
+- 您已[创建集群](./create-cluster)。
+
+- 您已[安装 SDK](./install-sdks)。
+
 ## 概述{#overview}
 
-您通过 Collection 来存储 Embedding 向量。同一个 Collection 中的所有 Embedding 向量维度相同，且使用同样的相似性类型来计算向量距离和相似性。 
+在 Zilliz Cloud 中您通过 Collection 来存储 Embedding 向量。同一个 Collection 中的所有 Embedding 向量维度相同，且使用同样的相似性类型来计算向量距离和相似性。 
 
- Collection 支持动态列（即支持插入未在 Schema 中预先定义的字段数据） 和自动生成的主键列。 
+Zilliz Cloud Collection 支持动态列（即支持插入未在 Schema 中预先定义的字段数据） 和自动生成的主键列。 
 
-为了满足不同的用户需求， 提供两种创建 Collection 的方式——快速创建 Collection 和自定义 Collection Schema 和索引参数。
+为了满足不同的用户需求，Zilliz Cloud 提供两种创建 Collection 的方式——快速创建 Collection 和自定义 Collection Schema 和索引参数。
 
 此外，您还可以通过 SDK 查看、加载、释放、删除 Collection。
 
@@ -43,7 +47,7 @@ import TabItem from '@theme/TabItem';
 
 ### 快速创建{#quick-setup}
 
- 提供快速创建 Collection 的方式。您只需定义以下三个参数：
+Zilliz Cloud 提供快速创建 Collection 的方式。您只需定义以下三个参数：
 
 - 创建的 Collection 的名称
 
@@ -258,7 +262,7 @@ const fields = [
 
 #### 步骤 2: 设置索引参数
 
-索引参数规定了 如何组织 Collection 中的数据。您可以通过调整 `metric_type` 和 `index_type` 这两个参数来选择合适的相似度类型和索引类型。在  中，我们使用推荐使用 `AUTOINDEX` 作为`index_type`。对于向量字段，您可以按需灵活选择 `COSINE`、 `L2`、 `IP` 作为 `metric_type`。更多关于索引类型详情，请参考 [AUTOINDEX](./autoindex-explained)。
+索引参数规定了Zilliz Cloud 如何组织 Collection 中的数据。您可以通过调整 `metric_type` 和 `index_type` 这两个参数来选择合适的相似度类型和索引类型。在 Zilliz Cloud 中，我们使用推荐使用 `AUTOINDEX` 作为`index_type`。对于向量字段，您可以按需灵活选择 `COSINE`、 `L2`、 `IP` 作为 `metric_type`。更多关于索引类型详情，请参考 [AUTOINDEX](./autoindex-explained)。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
 <TabItem value='python'>
@@ -581,6 +585,108 @@ const index_params = [{
     </TabItem>
     </Tabs>
 
+### 使用多向量字段 <sup>(Beta)</sup>{#with-multiple-vector-fields}
+
+创建包含多个向量字段的 colletion 的过程与[定制化创建](./manage-collections-sdks#customized-setup)相似。要创建包含多个向量字段（最多 4 个）的 collection，您需要定义 collection 中所有向量字段的配置。Collection 中的每个向量字段都有自己的名称和用于衡量数据相似度的度量类型。有关向量数据类型和度量的更多信息，请参见[相似性度量](./search-metrics-explained)和 [Schema](./schema-explained)。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>此功能目前仅适用于已升级到 Beta 版的 Zilliz Cloud 集群。</p>
+
+</Admonition>
+
+以下示例代码展示了如何创建包含两个向量字段（`text_vector` 和 `image_vector`）的 collection。
+
+```python
+# Create a collection with multiple vector fields
+
+schema = client.create_schema(
+    auto_id=False,
+    enable_dynamic_field=True,
+)
+
+# Add primary key field to schema
+schema.add_field(field_name="my_id", datatype=DataType.INT64, is_primary=True)
+
+# Add vector field 1 to schema
+# The dim value should be an integer greater than 1.
+# Binary vector dimensions must be a multiple of 8
+schema.add_field(field_name="text_vector", datatype=DataType.BINARY_VECTOR, dim=8)
+
+# Add vector field 2 to schema
+# The dim value should be an integer greater than 1.
+schema.add_field(field_name="image_vector", datatype=DataType.FLOAT_VECTOR, dim=128)
+
+# Output:
+# {'auto_id': False, 'description': '', 'fields': [{'name': 'my_id', 'description': '', 'type': <DataType.INT64: 5>, 'is_primary': True, 'auto_id': False}, {'name': 'text_vector', 'description': '', 'type': <DataType.BINARY_VECTOR: 100>, 'params': {'dim': 8}}, {'name': 'image_vector', 'description': '', 'type': <DataType.FLOAT_VECTOR: 101>, 'params': {'dim': 128}}], 'enable_dynamic_field': True}
+```
+
+在上述示例代码中，
+
+- `create_schema` 方法用于为 collection 定义新的 schema，`auto_id` 设置为 `False`，并启用动态字段。
+
+- 向 schema 中添加了一个类型为 `INT64` 的主键字段 `my_id`。
+
+- 添加了两个向量字段：`text_vector`（维度为 8 的二进制向量）和 `image_vector`（维度为 128 的浮点向量）。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>对于 <code>BINARY_VECTOR</code> 类型的向量字段，</p>
+<ul>
+<li><p>维度值（<code>dim</code>）必须是 8 的倍数；</p></li>
+<li><p>可用的度量类型为 <code>HAMMING</code> 和 <code>JACCARD</code>。</p></li>
+</ul>
+
+</Admonition>
+
+定义 schema 后，您可以分别为每个向量字段创建索引。以下示例代码演示了如何为向量字段 `text_vector` 和 `image_vector` 添加索引。
+
+```python
+# Prepare index parameters
+
+index_params = client.prepare_index_params()
+
+index_params.add_index(
+    field_name="text_vector", 
+    # In Zilliz Cloud, the index type should always be `AUTOINDEX`.
+    index_type="AUTOINDEX", 
+    # For vector of the `BINARY_VECTOR` type, use `HAMMING` or `JACCARD` as the metric type.
+    metric_type="HAMMING", 
+    params={ "nlist": 128 }
+)
+
+index_params.add_index(
+    field_name="image_vector", 
+    index_type="AUTOINDEX",
+    metric_type="IP",
+    params={ "nlist": 128 }
+)
+
+client.create_collection(
+    collection_name="demo_multiple_vector_fields",
+    schema=schema,
+    index_params=index_params
+)
+```
+
+在上述示例代码中，
+
+- `prepare_index_params` 方法用于准备索引参数。
+
+- 为两个向量字段添加索引：`text_vector` 使用 `HAMMING` 作为度量类型，`image_vector` 使用 `IP`（内积）。
+
+- `create_collection` 方法创建具有指定 schema 和索引的 collection。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>对于 <code>BINARY_VECTOR</code> 类型的向量字段，</p>
+<ul>
+<li><p>维度值（<code>dim</code>）必须是 8 的倍数；</p></li>
+<li><p>可用的度量类型为 <code>HAMMING</code> 和 <code>JACCARD</code>。</p></li>
+</ul>
+
+</Admonition>
+
 ## 查看 Collection{#view-collections}
 
 您可以通过以下命令查看现有 Collection 详情。
@@ -802,7 +908,7 @@ System.out.println(listCollectionsRes.getCollectionNames());
 
 ## 加载和释放 Collection{#load-and-release-collection}
 
-Collection 加载过程中， 会将 Collection 的索引文件加载到内存中。反之，在 Collection 释放过程中，  会将 Collection 索引文件从内存中释放。在执行搜索前，请确保 Collection 处于已加载的状态。
+Collection 加载过程中，Zilliz Cloud 会将 Collection 的索引文件加载到内存中。反之，在 Collection 释放过程中， Zilliz Cloud 会将 Collection 索引文件从内存中释放。在执行搜索前，请确保 Collection 处于已加载的状态。
 
 ### 加载 Collection{#load-a-collection}
 
@@ -1493,4 +1599,8 @@ console.log(res.error_code)
 
 </TabItem>
 </Tabs>
+
+## Collection 限制{#collection-limits}
+
+有关更多关于 collection 限制相关信息，请参阅[使用限制](./limits#collections)。
 

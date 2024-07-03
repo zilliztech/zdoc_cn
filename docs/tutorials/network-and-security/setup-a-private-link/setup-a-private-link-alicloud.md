@@ -15,6 +15,12 @@ import Admonition from '@theme/Admonition';
 
 本小节主要介绍如何在您的阿里云 VPC 和您托管在阿里云上的 Zilliz Cloud 集群之间建立私网连接。
 
+<Admonition type="info" icon="📘" title="提示">
+
+<p>Zilliz Cloud 不会针对私网连接收费，但您的云服务提供商可能会<a href="https://help.aliyun.com/zh/privatelink/product-overview/billing-description">收取一定费用</a>。</p>
+
+</Admonition>
+
 ## 配置思路{#configuration-roadmap}
 
 如需启用访问 Zilliz Cloud 集群的私网连接，您需要：
@@ -161,7 +167,7 @@ import Admonition from '@theme/Admonition';
 
     - **默认服务域名**
 
-    ![zh-ali-safety-group](/img/zh-ali-safety-group.png)
+    ![zh-ali-endpoint-details](/img/zh-ali-endpoint-details.png)
 
 1. 等待终端节点**状态**变为**可用**。
 

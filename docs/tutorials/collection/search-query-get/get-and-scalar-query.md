@@ -118,7 +118,7 @@ for i in range(1000):
         "vector": [ random.uniform(-1, 1) for _ in range(5) ],
         "color": current_color,
         "tag": current_tag,
-        "color_tag": f"\{current_color}_{str(current_tag)}"
+        "color_tag": f"{current_color}_{str(current_tag)}"
     })
 
 print(data[0])
@@ -1615,7 +1615,7 @@ console.log(res.data)
      <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><p><strong>add (&&)</strong></p></td>
+     <td><p><strong>and (&&)</strong></p></td>
      <td><p>当两个操作数都为真时返回真</p></td>
    </tr>
    <tr>
@@ -1627,7 +1627,7 @@ console.log(res.data)
      <td><p>加法、减法、乘法和除法</p></td>
    </tr>
    <tr>
-     <td><hr /></td>
+     <td><p><strong>**</strong></p></td>
      <td><p>幂运算</p></td>
    </tr>
    <tr>

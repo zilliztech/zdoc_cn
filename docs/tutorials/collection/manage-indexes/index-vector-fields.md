@@ -22,6 +22,8 @@ import TabItem from '@theme/TabItem';
 
 我们建议您为向量字段和常用于过滤的标量字段创建索引。
 
+如果您的 collection 包含了多个向量字段，您可以为各向量字段分别创建索引。有关更多信息，请参阅[使用多向量字段](./manage-collections-sdks#with-multiple-vector-fields)。
+
 ## 准备工作{#preparations}
 
 [管理 Collection (SDK)](./manage-collections-sdks)中已经说明了 会在以下几种情况下，随 Collection 自动创建索引并加载到内存中：

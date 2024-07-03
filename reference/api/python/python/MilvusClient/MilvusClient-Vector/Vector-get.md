@@ -1,8 +1,8 @@
 ---
 displayed_sidbar: pythonSidebar
 slug: /python/python/Vector-get
-beta: FALSE
-notebook: FALSE
+beta: false
+notebook: false
 type: docx
 token: TEUDde2xbo0JT7xtVvtcF53Nnub
 sidebar_position: 2
@@ -25,6 +25,7 @@ get(
     ids: Union[list, str, int],
     output_fields: Optional[List[str]] = None,
     timeout: Optional[float] = None,
+    partition_names: Optional[List[str]] = None,
     **kwargs,
 ) -> List[dict]
 ```
@@ -55,6 +56,12 @@ get(
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
+- **partition_names** (*list[str]* | *None*) -
+
+    A list of partition names.
+
+    The value defaults to **None**. If specified, only the specified partitions are involved in queries.
+
 **RETURN TYPE:**
 
 *list[dict]*
@@ -80,7 +87,7 @@ from pymilvus import MilvusClient
 
 # 1. Set up a milvus client
 client = MilvusClient(
-    uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.cloud.zilliz.com.cn:19530",
+    uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com:19530",
     token="user:password"
 )
 

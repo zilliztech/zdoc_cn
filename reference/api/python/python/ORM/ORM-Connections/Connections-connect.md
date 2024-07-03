@@ -1,8 +1,8 @@
 ---
 displayed_sidbar: pythonSidebar
 slug: /python/python/Connections-connect
-beta: FALSE
-notebook: FALSE
+beta: false
+notebook: false
 type: docx
 token: KzCXdTVVSoOmkbxuFjsccDlXnff
 sidebar_position: 2
@@ -85,7 +85,7 @@ connect(
 
     - **uri** (*string*) -
 
-        The URI of the Zilliz Cloud cluster. For example: **https://in01-*****************.aws-us-west-2.vectordb-uat3.cloud.zilliz.com.cn:19540**.
+        The URI of the Zilliz Cloud cluster. For example: **https://in01-*****************.aws-us-west-2.vectordb-uat3.zillizcloud.com:19540**.
 
     - **host** (*string*) -
 

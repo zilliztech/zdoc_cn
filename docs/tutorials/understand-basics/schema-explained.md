@@ -125,25 +125,53 @@ collection = Collection(
 
 ## 数据类型{#data-types}
 
-Zilliz Cloud 支持以下数据类型：
+Zilliz Cloud 支持以下字段数据类型。不同字段类型支持的数据类型有所不同。
 
-- 布尔值（BOOLEAN）
+- 主键字段
 
-- 双精度浮点数（DOUBLE）
+    - 64 位有符号整（INT64）
 
-- 单精度浮点数（FLOAT）
+    - 可变长度字符串（VARCHAR）
 
-- 浮点向量（FLOAT_VECTOR）
+- 标量字段
 
-- 8 位有符号整数（INT8）
+    - 64 位有符号整（INT64）
 
-- 32 位有符号整（INT32）
+    - 可变长度字符串（VARCHAR）
 
-- 64 位有符号整（INT64）
+    - 8 位有符号整数（INT8）
 
-- 可变长度字符串（VARCHAR）
+    - 16 位有符号整数（INT16）
 
-- [JSON](./use-json-fields)
+    - 32 位有符号整（INT32）
+
+    - 单精度浮点数（FLOAT）
+
+    - 双精度浮点数（DOUBLE）
+
+    - 布尔值（BOOLEAN）
+
+    - [JSON](./use-json-fields)
+
+    - [ARRAY](./use-array-fields)
+
+- 向量字段
+
+    - FLOAT_VECTOR：存储 32 位浮点数，常用于科学计算和机器学习中表示实数。
+
+    - FLOAT16_VECTOR <sup>(Beta)</sup>：存储 16 位半精度浮点数，用于深度学习和 GPU 计算中提高内存和带宽效率。
+
+    - BFLOAT16_VECTOR <sup>(Beta)</sup>：存储 16 位浮点数，具有与 Float32 相同的指数范围，但精度较低，常用于深度学习中减少内存和计算需求，同时不显著影响准确性。
+
+    - SPARSE_FLOAT_VECTOR <sup>(Beta)</sup>：存储非零元素及其对应索引的列表，用于表示稀疏向量。使用 SPARSE_FLOAT_VECTOR 时，不需要指定维度。
+
+    - BINARY_VECTOR <sup>(Beta)</sup>：以 0 和 1 的序列存储二进制数据，用于图像处理和信息检索中的紧凑特征表示。使用 BINARY_VECTOR 时，维度必须是 8 的倍数，范围从 8 到 32,768 * 8。
+
+    <Admonition type="info" icon="📘" title="说明">
+
+    <p>目前，向量字段类型 FLOAT16_VECTOR、BFLOAT16_VECTOR、SPARSE_FLOAT_VECTOR 和 BINARY_VECTOR 仅适用于已升级到 Beta 版本的 Zilliz Cloud 集群。</p>
+
+    </Admonition>
 
 ## 文档推荐{#whats-next}
 

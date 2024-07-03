@@ -168,9 +168,8 @@ index_params.add_index(
 
 index_params.add_index(
     field_name="vector",
-    index_type="IVF_FLAT",
-    metric_type="L2",
-    params={"nlist": 1024}
+    index_type="AUTOINDEX",
+    metric_type="L2"
 )
 ```
 
@@ -182,9 +181,8 @@ index_params.add_index(
 // 2.3 Prepare index parameters
 IndexParam indexParamForVectorField = IndexParam.builder()
     .fieldName("vector")
-    .indexType(IndexParam.IndexType.IVF_FLAT)
+    .indexType(IndexParam.IndexType.AUTOINDEX)
     .metricType(IndexParam.MetricType.IP)
-    .extraParams(Map.of("nlist", 1024))
     .build();
 
 List<IndexParam> indexParams = new ArrayList<>();
@@ -205,9 +203,8 @@ const index_params = [{
     index_type: "STL_SORT"
 },{
     field_name: "vector",
-    index_type: "IVF_FLAT",
-    metric_type: "IP",
-    params: { nlist: 1024}
+    index_type: "AUTOINDEX",
+    metric_type: "IP"
 }]
 ```
 
@@ -389,7 +386,7 @@ for i in range(1000):
         "vector": [ random.uniform(-1, 1) for _ in range(5) ],
         "color": current_color,
         "tag": current_tag,
-        "color_tag": f"\{current_color}_{str(current_tag)}"
+        "color_tag": f"{current_color}_{str(current_tag)}"
     })
 
 print(data[0])

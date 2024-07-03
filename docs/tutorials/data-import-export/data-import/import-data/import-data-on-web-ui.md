@@ -73,7 +73,10 @@ with open('path/to/medium_articles_2020_dpr.json') as f:
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>为了成功导入数据，请确保您使用的对象存储桶与您的集群位于相同的云中。</p>
+<ul>
+<li><p>在同一个 Collection 下，导入任务队列中最多可以同时包含 10 条运行中或等待中的任务。</p></li>
+<li><p>Zilliz Cloud 界面支持上传本地 JSON 文件的最大大小为 1 GB。 如需上传更大的文件，我们推荐<a href="./import-data-on-web-ui#remote-files-from-an-object-storage-bucket">通过对象存储桶进行导入</a>。如果您在导入数据过程中遇到任何问题，请<a href="https://support.zilliz.com.cn/hc/zh-cn">提交工单</a>。</p></li>
+</ul>
 
 </Admonition>
 

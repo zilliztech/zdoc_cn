@@ -43,6 +43,36 @@ Zilliz Cloud 当前提供 Serverless、Dedicated 和 BYOC 三种订阅版本。�
 
 - **定价**：[联系销售](https://zilliz.com.cn/contact-sales)
 
+## 不同版本的免费试用对比{#free-trial-comparison}
+
+<table>
+   <tr>
+     <th></th>
+     <th><p>Serverless 版</p></th>
+     <th><p>Dedicated 版</p></th>
+   </tr>
+   <tr>
+     <td><p>集群类型</p></td>
+     <td><p>Serverless</p></td>
+     <td><p>Dedicated</p></td>
+   </tr>
+   <tr>
+     <td><p>试用有效期</p></td>
+     <td><p>限时免费</p></td>
+     <td><p>30 天</p></td>
+   </tr>
+   <tr>
+     <td><p>可创建 Collection 数量上限</p></td>
+     <td><p>10</p></td>
+     <td><p>可根据您的需求灵活创建 Collection。更多详情，请参考<a href="./limits#collections">使用限制</a>。</p></td>
+   </tr>
+   <tr>
+     <td><p>CU 计算资源大小</p></td>
+     <td><p>共享资源</p></td>
+     <td><p>专有资源，可根据您的需求灵活选择 CU 大小。</p></td>
+   </tr>
+</table>
+
 如需了解如何创建集群，请阅读[创建集群](./create-cluster)。
 
 ## 文档推荐{#related-topics}

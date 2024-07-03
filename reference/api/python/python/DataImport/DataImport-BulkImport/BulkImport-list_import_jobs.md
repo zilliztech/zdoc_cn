@@ -1,8 +1,8 @@
 ---
 displayed_sidbar: pythonSidebar
 slug: /python/python/BulkImport-list_import_jobs
-beta: FALSE
-notebook: FALSE
+beta: false
+notebook: false
 type: docx
 token: P0vxdEVBPoTNKLxkKIzcznlYnNc
 sidebar_position: 3
@@ -41,7 +41,7 @@ list_import_jobs(
     For example, the endpoint URL should be in the following format:
 
     ```python
-    controller.api.${cloud-region}.cloud.zilliz.com.cn[:${port-number}] 
+    controller.api.${cloud-region}.zillizcloud.com[:${port-number}] 
     ```
 
     Replace `cloud-region` with the ID of the region that accommodates your cluster. You can get the cloud region ID from the endpoint URL of your cluster.
@@ -156,7 +156,7 @@ None
 from pymilvus import list_import_jobs
 
 res = list_import_jobs(
-    url=f"controller.api.{CLOUD_REGION}.cloud.zilliz.com.cn",
+    url=f"controller.api.{CLOUD_REGION}.zillizcloud.com",
     api_key=API_KEY,
     cluster_id=CLUSTER_ID,
     page_size=10,

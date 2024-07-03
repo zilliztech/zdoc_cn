@@ -1,8 +1,8 @@
 ---
 displayed_sidbar: pythonSidebar
 slug: /python/python/Vector-delete
-beta: FALSE
-notebook: FALSE
+beta: false
+notebook: false
 type: docx
 token: DWLXdSCYnoPT4ExktRKceEqLnAd
 sidebar_position: 1
@@ -25,6 +25,7 @@ delete(
     ids: Optional[Union[list, str, int]] = None,
     timeout: Optional[float] = None,
     filter: Optional[str] = "",
+    partition_name: Optional[str] = "",
     **kwargs,
 ) -> dict
 ```
@@ -58,6 +59,12 @@ delete(
     The value defaults to an empty string, indicating that no condition applies. Setting both **ids** and **filter** results in a **ParamError** exception.
 
     You can set this parameter to an empty string to skip scalar filtering. To build a scalar filtering condition, refer to [Boolean Expression Rules](https://milvus.io/docs/boolean.md). 
+
+- **partition_name** (*str* | *""*) -
+
+    The name of the partition to delete entities from.
+
+    The value defaults to an empty string. If specified, entities will be deleted from the specified partition.
 
 **RETURN TYPE:**
 
@@ -94,7 +101,7 @@ from pymilvus import MilvusClient
 
 # 1. Set up a milvus client
 client = MilvusClient(
-    uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.cloud.zilliz.com.cn:19530",
+    uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com:19530",
     token="user:password"
 )
 

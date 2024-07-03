@@ -80,4 +80,4 @@ sidebar_position: 2
 
 ### 集群挂起后，是否还会收取费用？ \{#will-i-be-charged-if-i-suspend-my-cluster}
 
-集群挂起后，我们仅收取存储费用，不会收取计算费用。更多详情，请阅读 [Zilliz Cloud 定价](https://zilliz.com.cn/pricing)。FAQ：Collection
+集群挂起后，我们仅收取存储费用，不会收取计算费用。更多详情，请阅读 [Zilliz Cloud 定价](https://zilliz.com.cn/pricing)。

@@ -1,8 +1,8 @@
 ---
 displayed_sidbar: pythonSidebar
 slug: /python/python/CrossEncoderRerankFunction-__call__
-beta: FALSE
-notebook: FALSE
+beta: false
+notebook: false
 type: docx
 token: Vy5GdSeTdoNbSqxCdsOcSmQPnvf
 sidebar_position: 2

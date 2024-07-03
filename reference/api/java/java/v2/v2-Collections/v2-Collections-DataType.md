@@ -1,8 +1,8 @@
 ---
 displayed_sidbar: javaSidebar
 slug: /java/java/v2-Collections-DataType
-beta: FALSE
-notebook: FALSE
+beta: false
+notebook: false
 type: docx
 token: P85rdatjZosvEfxCq7TcFRy0nBe
 sidebar_position: 7

@@ -47,9 +47,9 @@ Zilliz Cloud 提供三种版本。
      <td><p><a href="https://zilliz.com.cn/contact-sales">联系销售</a></p></td>
    </tr>
    <tr>
-     <td><p><strong>云服务提供上和地域</strong></p></td>
+     <td><p><strong>云服务提供商和地域</strong></p></td>
      <td><ul><li>阿里云：华东1（杭州）</li></ul></td>
-     <td><ul><li><p>阿里云：华东1（杭州）、华北2（北京）</p></li><li><p>腾讯云：华北地区（北京）、华东地区（上海）</p></li></ul></td>
+     <td><ul><li><p>阿里云：华东1（杭州）、华北2（北京）</p></li><li><p>腾讯云：华北地区（北京）、华东地区（上海）、美国东部（弗吉尼亚）</p></li></ul></td>
      <td><ul><li><p>阿里云</p></li><li><p>百度智能云</p></li><li><p>金山云</p></li><li><p>腾讯云</p></li></ul></td>
    </tr>
    <tr>

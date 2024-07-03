@@ -35,6 +35,18 @@ Zilliz Cloud 控制台中的**指标**页签展示了各类集群指标图表。
      <td></td>
    </tr>
    <tr>
+     <td><p>Read vCUs</p></td>
+     <td><p>%</p></td>
+     <td><p>Search 和 Query 操作消耗的 vCU 用量。</p><p>该指标仅适用于 Serverless 集群。</p></td>
+     <td><p>-</p></td>
+   </tr>
+   <tr>
+     <td><p>Write vCUs</p></td>
+     <td><p>%</p></td>
+     <td><p>Insert、Delete 和 Upsert 操作消耗的 vCU 用量。</p><p>该指标仅适用于 Serverless 集群。</p></td>
+     <td><p>-</p></td>
+   </tr>
+   <tr>
      <td><p>CU 计算资源</p></td>
      <td><p>%</p></td>
      <td><p>相对于 CU 总计算能力的已使用计算能力的度量。</p></td>
@@ -85,13 +97,13 @@ Zilliz Cloud 控制台中的**指标**页签展示了各类集群指标图表。
    <tr>
      <td><p>读请求失败率</p></td>
      <td><p>%</p></td>
-     <td><p>超时读请求（search 和 query）在每秒所有读请求中所占的百分比。</p></td>
+     <td><p>失败读请求（search 和 query）在每秒所有读请求中所占的百分比。</p></td>
      <td><p><a href="./manage-project-alerts">配置告警</a>以监控读请求失败率。</p></td>
    </tr>
    <tr>
      <td><p>写请求失败率</p></td>
      <td><p>%</p></td>
-     <td><p>超时写请求（insert、bulk insert、upsert 和 delete）在每秒所有写请求中所占的百分比。</p></td>
+     <td><p>失败写请求（insert、bulk insert、upsert 和 delete）在每秒所有写请求中所占的百分比。</p></td>
      <td><p><a href="./manage-project-alerts">配置告警</a>以监控写请求失败率。</p></td>
    </tr>
    <tr>

@@ -26,6 +26,8 @@ import TabItem from '@theme/TabItem';
 
 - [Range search](./single-vector-search#range-search)：查找距离查询向量一定范围内的向量。
 
+- [Grouping search](./single-vector-search#grouping-search)：使用 `group_by_field` 参数，按特定字段对搜索结果进行分组，确保结果多样性。
+
 ## 开始前{#preparations}
 
 以下示例代码用于连接到 Zilliz Cloud 集群，快速创建 collection 和两个 partition，并向其插入数据。
@@ -57,7 +59,7 @@ for i in range(1000):
         "id": i,
         "vector": [ random.uniform(-1, 1) for _ in range(5) ],
         "color": current_color,
-        "color_tag": f"\{current_color}_{str(random.randint(1000, 9999))}"
+        "color_tag": f"{current_color}_{str(random.randint(1000, 9999))}"
     })
 
 res = client.insert(
@@ -1455,6 +1457,28 @@ console.log(res.results)
 
 通过定义标量过滤条件，filtered search 可以精确调整向量搜索的结果。要了解更多关于过滤表达式的详细信息，请参阅[标量过滤规则](https://milvus.io/docs/boolean.md)和[Get 和 Scalar Query](./get-and-scalar-query)。
 
+### 使用 `like` 操作符{#single-vector-search#use-the-like-operator}
+
+`like` 操作符通过前缀、中缀和后缀匹配，显著提升了搜索特定字符串的灵活性与效率：
+
+- **前缀匹配**：若需查找以特定前缀开头的字符串，使用语法 `'like "prefix%"'`。
+
+- **中缀匹配**：若需查找含特定字符序列的字符串，使用语法 `'like "%infix%"'`。
+
+- **后缀匹配**：若需查找以特定后缀结尾的字符串，使用语法 `'like "%suffix"'`。
+
+对于单字符匹配，下划线 (`_`) 作为单个字符的占位符，例如 `'like "y_llow"'`，可匹配到 `"yellow"`。
+
+### 匹配包含特殊字符的字符串{#special-characters-in-search-strings}
+
+在匹配本身包含下划线 (`_`) 或百分号（`%`）这类特殊字符的字符串时，由于它们通常在搜索模式中担当通配符的角色（ `_` 代表匹配任意单个字符，`%` 代表匹配任意字符序列），因此需要对这些字符进行转义，确保它们被视作字面字符处理。使用反斜杠（`\`）来转义特殊字符，并需要转义反斜杠本身。例如：
+
+- 若要搜索字面下划线（`\`），应使用  `\_`。
+
+- 要搜索字面百分号（`%`），应使用 `\%`。
+
+因此，如果需要搜索文本 `"_version_"`，过滤表达式应使用 `'like "\_version\_"'`，确保下划线被视为搜索词的一部分，而非通配符，从而准确匹配目标字符串。
+
 如果要筛选以 `red` 开头的 `color`，可以使用 `'like "red%"'` 表达式。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
@@ -1610,6 +1634,119 @@ console.log(res.results)
   { score: 2.4889798164367676, id: '1458', color_tag: 'red_6891' },
   { score: 2.42964243888855, id: '724', color_tag: 'black_9885' },
   { score: 2.4004223346710205, id: '854', color_tag: 'black_5990' }
+]
+```
+
+</TabItem>
+</Tabs>
+
+若要筛选 `color` 字段值包含 `ll` 特定字符序列的字符串，可以参考如下示例：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
+<TabItem value='python'>
+
+```python
+# Infix match on color field
+query_vector = [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]
+
+res = client.search(
+    collection_name="quick_setup", # Replace with the actual name of your collection
+    data=[query_vector],
+    limit=5, # Max. number of search results to return
+    search_params={"metric_type": "IP", "params": {"level": 1}}, # Search parameters
+    output_fields=["color_tag"], # Output fields to return
+    filter='color like "%ll%"' # Filter on color field, infix match on "ll"
+)
+
+result = json.dumps(res, indent=4)
+print(result)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// 8. Filtered search
+query_vectors = Arrays.asList(Arrays.asList(0.3580376395471989f, -0.6023495712049978f, 0.18414012509913835f, -0.26286205330961354f, 0.9029438446296592f));
+
+searchReq = SearchReq.builder()
+    .collectionName("quick_setup")
+    .data(query_vectors)
+    .outputFields(Arrays.asList("color_tag"))
+    .filter("color like \"%ll%\"")
+    .topK(5)
+    .build();
+
+searchResp = client.search(searchReq);
+
+System.out.println(JSONObject.toJSON(searchResp));
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// 8. Filtered search
+// 8.1 Filter with "like" operator and prefix wildcard
+query_vector = [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]
+
+res = await client.search({
+    collection_name: "quick_setup",
+    data: [query_vector],
+    limit: 5,
+    filters: "color_tag like \"%ll%\"",
+    output_fields: ["color_tag"]
+})
+
+console.log(res.results)
+```
+
+</TabItem>
+</Tabs>
+
+示例返回结果如下：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
+<TabItem value='python'>
+
+```python
+[
+    [
+        {
+            "id": 5,
+            "distance": 0.7972343564033508,
+            "entity": {
+                "color": "yellow_4222"
+            }
+        }
+    ]
+]
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+{"searchResults": [
+    [
+        {
+            "score": 1.1869997,
+            "fields": {"color_tag": "yellow_4222"}
+        }
+    ]
+]}
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+[
+  { score: 2.5080761909484863, id: '1201', color_tag: 'yellow_4222' }
 ]
 ```
 
@@ -1795,14 +1932,117 @@ console.log(res.results)
    <tr>
      <td><p><code>L2</code></p></td>
      <td><p>较小的 L2 距离表示更高的相似性。</p></td>
-     <td><p>要排除结果中最近的向量，请确保：</p><p><code>range_filter</code> \&lt;= distance \&lt; <code>radius</code></p></td>
+     <td><p>要排除结果中最近的向量，请确保：</p><p><code>range_filter</code> &lt;= distance &lt; <code>radius</code></p></td>
    </tr>
    <tr>
      <td><p><code>IP</code></p></td>
      <td><p>较大的 IP 距离表示更高的相似性。</p></td>
-     <td><p>要排除结果中最近的向量，请确保：</p><p><code>radius</code> \&lt; distance \&lt;= <code>range_filter</code></p></td>
+     <td><p>要排除结果中最近的向量，请确保：</p><p><code>radius</code> &lt; distance &lt;= <code>range_filter</code></p></td>
+   </tr>
+   <tr>
+     <td><p><code>COSINE</code></p></td>
+     <td><p>较大的 cosine 值表示更高的相似性。</p></td>
+     <td><p>要排除结果中最近的向量，请确保：</p><p><code>radius</code> &lt; distance &lt;= <code>range_filter</code></p></td>
+   </tr>
+   <tr>
+     <td><p><code>JACCARD</code> <sup>(Beta)</sup></p></td>
+     <td><p>较小的 Jaccard 距离表示更高的相似性。</p></td>
+     <td><p>要排除结果中最近的向量，请确保：</p><p><code>range_filter</code> &lt;= distance &lt; <code>radius</code></p></td>
+   </tr>
+   <tr>
+     <td><p><code>HAMMING</code> <sup>(Beta)</sup></p></td>
+     <td><p>较小的 Hamming 距离表示更高的相似性。</p></td>
+     <td><p>要排除结果中最近的向量，请确保：</p><p><code>range_filter</code> &lt;= distance &lt; <code>radius</code></p></td>
    </tr>
 </table>
+
+## Grouping search<sup>(Beta)</sup>{#grouping-search}
+
+在 Zilliz Cloud 中，通过特定字段的 grouping search 能够避免结果中同一字段项的重复出现，从而获取更加多样化的结果。
+
+假设有一个包含多个文档的 collection，每个文档都被切分成若干段落，每段落由一个向量 embedding 表示，并属于某一文档。为了寻找相关文档而不是相似段落，您可以在 `search()` 操作中使用 `group_by_field` 参数，按文档 ID 对结果进行分组。这样有助于返回最相关且独立的文档，而不是同一文档的不同段落。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>此功能目前仅适用于已升级到 Beta 版的 Zilliz Cloud 集群。</p>
+
+</Admonition>
+
+以下是一个按照指定字段执行 grouping search 的代码示例：
+
+```python
+# Load data into collection
+client.load_collection("group_search") # Collection name
+
+# Group search results
+res = client.search(
+    collection_name="group_search", # Collection name
+    data=[[0.14529211512077012, 0.9147257273453546, 0.7965055218724449, 0.7009258593102812, 0.5605206522382088]], # Query vector
+    search_params={
+    "metric_type": "L2",
+    "params": {"nprobe": 10},
+    }, # Search parameters
+    limit=10, # Max. number of search results to return
+    group_by_field="doc_id", # Group results by document ID
+    output_fields=["doc_id", "passage_id"]
+)
+
+# Retrieve the values in the `doc_id` column
+doc_ids = [result['entity']['doc_id'] for result in res[0]]
+
+print(doc_ids)
+```
+
+示例返回结果如下：
+
+```python
+[5, 10, 1, 7, 9, 6, 3, 4, 8, 2]
+```
+
+在所给输出中，可以看到返回的 entity 中没有重复的 `doc_id` 值。
+
+为了进行比较，我们注释掉 `group_by_field` 参数，然后执行一次常规搜索：
+
+```python
+# Load data into collection
+client.load_collection("group_search") # Collection name
+
+# Search without `group_by_field`
+res = client.search(
+    collection_name="group_search", # Collection name
+    data=query_passage_vector, # Replace with your query vector
+    search_params={
+    "metric_type": "L2",
+    "params": {"nprobe": 10},
+    }, # Search parameters
+    limit=10, # Max. number of search results to return
+    # group_by_field="doc_id", # Group results by document ID
+    output_fields=["doc_id", "passage_id"]
+)
+
+# Retrieve the values in the `doc_id` column
+doc_ids = [result['entity']['doc_id'] for result in res[0]]
+
+print(doc_ids)
+```
+
+示例返回结果如下：
+
+```python
+[1, 10, 3, 10, 1, 9, 4, 4, 8, 6]
+```
+
+在以上的输出中，可以看到返回的 entity 存在重复 `doc_id` 值。
+
+**使用限制**：
+
+- **向量**：当前，grouping search 不支持 **BINARY_VECTOR** 类型的向量字段。关于数据类型的更多信息，请参阅 [Supported data types](https://milvus.io/docs/schema.md#Supported-data-types)。
+
+- **字段**：当前，grouping search 仅支持单列。`group_by_field` 配置中不能指定多个字段名称。此外，grouping search 不支持 **JSON**、**FLOAT**、**DOUBLE**、**ARRAY** 或向量字段的数据类型。
+
+- **性能**：Grouping search 的查询性能随查询向量数增加而降低。例如，在配备 2 CPU 核和 8 GB 内存的集群中，grouping search 的执行时间会随着输入查询向量数的增加而增长。
+
+- **功能性**：Grouping search 不支持 [range search](./single-vector-search#range-search)、[使用 iterators](./with-iterators) 或 [hybrid search](./hybrid-search)。
 
 ## Search 参数{#search-parameters}
 

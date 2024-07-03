@@ -1,8 +1,8 @@
 ---
 displayed_sidbar: pythonSidebar
 slug: /python/python/BulkImport-get_import_progress
-beta: FALSE
-notebook: FALSE
+beta: false
+notebook: false
 type: docx
 token: MkWNdU1tvoqlBRxI05Rcu09cnEc
 sidebar_position: 2
@@ -39,7 +39,7 @@ pymilvus.get_import_progress(
     For example, the endpoint URL should be in the following format:
 
     ```python
-    controller.api.${cloud-region}.cloud.zilliz.com.cn[:${port-number}] 
+    controller.api.${cloud-region}.zillizcloud.com[:${port-number}] 
     ```
 
     Replace `cloud-region` with the ID of the region that accommodates your cluster. You can get the cloud region ID from the endpoint URL of your cluster.
@@ -172,7 +172,7 @@ CLUSTER_ID = ""      # ID of the Zilliz Cloud target cluster
 COLLECTION_NAME = "" # Name of the target collection in the specified Zilliz Cloud cluster
 
 res = bulk_import(
-    url=f"controller.api.{CLOUD_REGION}.cloud.zilliz.com.cn",
+    url=f"controller.api.{CLOUD_REGION}.zillizcloud.com",
     api_key=API_KEY,
     object_url=OBJECT_URL,
     access_key=ACCESS_KEY,
@@ -194,7 +194,7 @@ print(res.json())
 
 job_id = res.json()['data']['jobId']
 res = get_import_progress(
-    url=f"controller.api.{CLOUD_REGION}.cloud.zilliz.com.cn",
+    url=f"controller.api.{CLOUD_REGION}.zillizcloud.com",
     api_key=API_KEY,
     job_id=job_id,
     cluster_id=CLUSTER_ID

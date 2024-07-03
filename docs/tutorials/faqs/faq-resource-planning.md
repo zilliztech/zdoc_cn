@@ -32,7 +32,7 @@ sidebar_position: 7
 
 ### 如何查看订阅的 Zilliz Cloud 版本？ \{#how-can-i-know-which-plan-i-am-on}
 
-如需查看版本，请先选择项目，再选择集群。在**集群详情**下，您可以查看订阅的版本。
+如需查看版本，请先选择项目，再选择集群。在**集群信息**下，您可以查看订阅的版本。
 
 ![faq_plan_detail](/img/faq_plan_detail.png)
 

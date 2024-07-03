@@ -1,11 +1,11 @@
 ---
 displayed_sidbar: nodeSidebar
 slug: /node/node/Authentication-updatePassword
-beta: FALSE
-notebook: FALSE
+beta: false
+notebook: false
 type: docx
 token: BCGKdCttdotF32xUJTec8UFlndg
-sidebar_position: 13
+sidebar_position: 15
 displayed_sidebar: nodeSidebar
 
 ---

@@ -1,8 +1,8 @@
 ---
 displayed_sidbar: javaSidebar
 slug: /java/java/v2-Authentication-createUser
-beta: FALSE
-notebook: FALSE
+beta: false
+notebook: false
 type: docx
 token: BYksdftJSon0EMxNYn2c2FCpncd
 sidebar_position: 2
@@ -60,7 +60,7 @@ import io.milvus.v2.service.rbac.request.CreateUserReq
 
 // 1. Set up a client
 ConnectConfig connectConfig = ConnectConfig.builder()
-        .uri("https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.cloud.zilliz.com.cn:19530")
+        .uri("https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com:19530")
         .token("user:password")
         .build();
         

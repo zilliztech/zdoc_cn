@@ -85,7 +85,7 @@ Zilliz Cloud 提供多种集群版本以满足不同的业务需求。请先查�
        </tr>
        <tr>
          <td><p><strong>云服务提供商和地域</strong></p></td>
-         <td><p>集群部署的云服务提供商和地域。</p><p>目前，Zilliz Cloud 支持以下云服务提供商和地域：</p><ul><li><p>阿里云</p><ul><li><p>华东1（杭州）</p></li><li><p>华北2（北京）</p></li><li><p>华南1（深圳）</p></li></ul></li><li><p>腾讯云</p><ul><li><p>华北地区（北京）</p></li><li><p>华东地区（上海）</p></li></ul></li></ul><p>更多详情，请见<a href="./cloud-providers-and-regions">云服务提供商和地域</a>。</p></td>
+         <td><p>集群部署的云服务提供商和地域。</p><p>目前，Zilliz Cloud 支持以下云服务提供商和地域：</p><ul><li><p>阿里云</p><ul><li><p>华东1（杭州）</p></li><li><p>华北2（北京）</p></li><li><p>华南1（深圳）</p></li></ul></li><li><p>腾讯云</p><ul><li><p>华北地区（北京）</p></li><li><p>华东地区（上海）</p></li><li><p>美国东部（弗吉尼亚）</p></li></ul></li></ul><p>更多详情，请见<a href="./cloud-providers-and-regions">云服务提供商和地域</a>。</p></td>
        </tr>
        <tr>
          <td><p><strong>CU 类型和大小</strong></p></td>

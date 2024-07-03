@@ -17,7 +17,7 @@ sidebar_position: 1
 - [是否提供 Zilliz Cloud 与其他竞品间的性能对比？](#is-there-any-performance-comparison-between-zilliz-cloud-and-other-vector-search-solutions)
 - [免费试用结束后，我的数据是否会被删除？](#what-happens-after-the-free-trial)
 - [如何获取技术支持？](#how-can-i-get-further-technical-support)
-- [Zilliz Cloud 搜索延迟是多少？](#what-is-the-search-latency-of-zilliz-cloud)
+- [Zilliz Cloud 搜索延时是多少？](#what-is-the-search-latency-of-zilliz-cloud)
 - [Zilliz Cloud 支持哪些索引类型？](#which-type-of-index-is-supported-by-zilliz-cloud)
 
 ## 问答
@@ -31,13 +31,13 @@ sidebar_position: 1
 
 ### 免费试用结束后，我的数据是否会被删除？ \{#what-happens-after-the-free-trial}
 
-免费试用结束后，Zilliz Cloud 将自动备份您的数据并移至回收站，集群将被删除。回收站中的数据可免费保留30天。您可以开通阿里云市场扣费渠道或[联系我们](https://zilliz.com.cn/contact-sales)以继续使用 Zilliz Cloud。
+免费试用结束后，Zilliz Cloud 将自动备份您的数据并移至回收站，集群将被删除。回收站中的数据可免费保留30天。您可以[添加支付方式](./payment-billing)或[联系我们](https://support.zilliz.com.cn/)以继续使用 Zilliz Cloud。
 
 ### 如何获取技术支持？ \{#how-can-i-get-further-technical-support}
 
-如需技术支持，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。您将在 24 小时内收到回复。
+如需技术支持，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 
-### Zilliz Cloud 搜索延迟是多少？ \{#what-is-the-search-latency-of-zilliz-cloud}
+### Zilliz Cloud 搜索延时是多少？ \{#what-is-the-search-latency-of-zilliz-cloud}
 
 通常，具有 500 万 768 维向量的容量型集群，其搜索延迟约为 100 毫秒。相同数据量和维数的性能型集群，搜索延迟约为 20 毫秒。但请注意，实际搜索延迟可能因您的工作负载和部署环境而有所不同。
 

@@ -1,8 +1,8 @@
 ---
 displayed_sidbar: javaSidebar
 slug: /java/java/v2-Management-describeIndex
-beta: FALSE
-notebook: FALSE
+beta: false
+notebook: false
 type: docx
 token: MGX2dDWoooZ982x3pcNcbFzcnXb
 sidebar_position: 2

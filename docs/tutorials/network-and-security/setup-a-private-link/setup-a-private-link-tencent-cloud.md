@@ -15,6 +15,12 @@ import Admonition from '@theme/Admonition';
 
 本小节主要介绍如何在您的腾讯云 VPC 和您托管在腾讯云上的 Zilliz Cloud 集群之间建立私网连接。
 
+<Admonition type="info" icon="📘" title="提示">
+
+<p>Zilliz Cloud 不会针对私网连接收费，但您的云服务提供商可能会<a href="https://buy.cloud.tencent.com/price/vpc/overview">收取一定费用</a>。</p>
+
+</Admonition>
+
 ## 配置思路{#configuration-roadmap}
 
 如需启用访问 Zilliz Cloud 集群的私网连接，您需要：
@@ -194,7 +200,7 @@ import Admonition from '@theme/Admonition';
        </tr>
        <tr>
          <td><p>主机记录</p></td>
-         <td><p>您的 Zilliz Cloud 腾讯云集群的私网连接域名前缀。</p><p>如果您的集群 ID 为 <strong>in01-xxxxxxxxxxx</strong>，云地域 ID 为 <strong>tc-ap-xxxxxxx</strong>，则该域名前缀为 <strong>in01-xxxxxxxxxxx-privatelink.tc-ap-xxxxxxx</strong>。例如：</p><ul><li><p><strong>in01-xxxxxxxxxxx-privatelink.tc-ap-beijing</strong> (北京)</p></li><li><p><strong>in01-xxxxxxxxxxx-privatelink.tc-ap-shanghai</strong> (上海)</p></li></ul></td>
+         <td><p>您的 Zilliz Cloud 腾讯云集群的私网连接域名前缀。</p><p>如果您的集群 ID 为 <strong>in01-xxxxxxxxxxx</strong>，云地域 ID 为 <strong>tc-ap-xxxxxxx</strong>，则该域名前缀为 <strong>in01-xxxxxxxxxxx-privatelink.tc-ap-xxxxxxx</strong>。例如：</p><ul><li><p><strong>in01-xxxxxxxxxxx-privatelink.tc-ap-beijing</strong> (北京)</p></li><li><p><strong>in01-xxxxxxxxxxx-privatelink.tc-ap-shanghai</strong> (上海)</p></li><li><p><strong>in01-xxxxxxxxxxx-privatelink.tc-na-ashburn</strong> (弗吉尼亚)</p></li></ul></td>
        </tr>
        <tr>
          <td><p>记录类型</p></td>

@@ -23,6 +23,12 @@ import Admonition from '@theme/Admonition';
 
 ## 集群详情{#cluster-details}
 
+### Serverless 集群详情{#serverless-cluster-details}
+
+![serverless_cluster_zh](/img/serverless_cluster_zh.png)
+
+### Dedicated 集群详情{#dedicated-cluster-details}
+
 ![dedicated_cluster_zh](/img/dedicated_cluster_zh.png)
 
 ## API 密钥{#api-keys}
@@ -35,5 +41,4 @@ import Admonition from '@theme/Admonition';
 
 ## Pipeline IDs{#pipeline-ids}
 
-![view-pipelines-on-web-ui-cn](/img/view-pipelines-on-web-ui-cn.png)
-
+![pipelines_ids_zh_cn](/img/pipelines_ids_zh_cn.png)

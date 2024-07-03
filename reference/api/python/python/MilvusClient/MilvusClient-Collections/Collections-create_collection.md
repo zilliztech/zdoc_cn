@@ -1,8 +1,8 @@
 ---
 displayed_sidbar: pythonSidebar
 slug: /python/python/Collections-create_collection
-beta: FALSE
-notebook: FALSE
+beta: false
+notebook: false
 type: docx
 token: TziHdCu4VoURrfxAMsUcsRhQnub
 sidebar_position: 3
@@ -47,7 +47,7 @@ create_collection(
 
     The dimension of the collection field to hold vector embeddings.
 
-    The value is usually determined by the model you use to generate vector embeddings.
+    The value is usually determined by the model you use to generate vector embeddings and should be an integer greater than 1.
 
     This parameter is designed for the quick setup of a collection and will be ignored if **schema** is not **None** and a field in the schema has its **dim** set to a positive integer.
 
@@ -200,7 +200,7 @@ None
 from pymilvus import MilvusClient
 
 client = MilvusClient(
-    uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.cloud.zilliz.com.cn:19530",
+    uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com:19530",
     token="user:password"
 )
 ```

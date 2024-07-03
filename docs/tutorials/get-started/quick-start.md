@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 
 ## 安装 SDK{#install-an-sdk}
 
-Zilliz Cloud 兼容各类型的 Milvus SDK 和 [RESTful API](/reference/cloud-meta)。您可以直接调用 RESTful API 或安装以下任意 SDK：
+Zilliz Cloud 兼容各类型的 Milvus SDK 和 [RESTful API](/reference/restful)。您可以直接调用 RESTful API 或安装以下任意 SDK：
 
 - [Python SDK](./install-sdks#install-pymilvus-python-sdk)
 
@@ -42,7 +42,7 @@ curl --request POST \
     --header "Authorization: Bearer ${API_KEY}" \
     --header "accept: application/json" \
     --header "content-type: application/json" \
-    --data-raw "\{
+    --data-raw "{
         \"plan\": \"Standard\",
         \"clusterName\": \"cluster-standard\",
         \"cuSize\": 1,

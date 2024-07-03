@@ -11,11 +11,62 @@ sidebar_position: 5
 import Admonition from '@theme/Admonition';
 
 
-# 相似性度量
+# 相似度类型
 
-在度量向量相似性时，相似性指标发挥着关键作用。选择恰当的度量指标可以极大地提升分类与聚类的效果。
+在度量向量相似性时，相似度类型发挥着关键作用。选择恰当的相似度类型可以极大地提升分类与聚类的效果。
 
-目前，Zilliz Cloud 提供三种主流的相似性指标：**欧氏距离（L2）**、**内积（IP）**和**余弦相似度（COSINE）**。
+目前，Zilliz Cloud 支持以下相似度类型：欧氏距离（**L2**）、内积（**IP**）、余弦相似度（**COSINE**）、**JACCARD** <sup>(Beta)</sup> 和 **HAMMING** <sup>(Beta)</sup>。
+
+下表总结了不同字段类型与其对应的相似度类型的映射关系。
+
+<table>
+   <tr>
+     <th><p>字段类型</p></th>
+     <th><p>维度范围</p></th>
+     <th><p>支持的相似度类型</p></th>
+     <th><p>默认相似度类型</p></th>
+   </tr>
+   <tr>
+     <td><p>FLOAT_VECTOR</p></td>
+     <td><p>2-32,768</p></td>
+     <td><p>Cosine, L2, IP</p></td>
+     <td><p>Cosine</p></td>
+   </tr>
+   <tr>
+     <td><p>FLOAT16_VECTOR <sup>(Beta)</sup></p></td>
+     <td><p>2-32,768</p></td>
+     <td><p>Cosine, L2, IP</p></td>
+     <td><p>Cosine</p></td>
+   </tr>
+   <tr>
+     <td><p>BFLOAT16_VECTOR <sup>(Beta)</sup></p></td>
+     <td><p>2-32,768</p></td>
+     <td><p>Cosine, L2, IP</p></td>
+     <td><p>Cosine</p></td>
+   </tr>
+   <tr>
+     <td><p>SPARSE_FLOAT_VECTOR <sup>(Beta)</sup></p></td>
+     <td><p>无需指定维度</p></td>
+     <td><p>IP</p></td>
+     <td><p>IP</p></td>
+   </tr>
+   <tr>
+     <td><p>BINARY_VECTOR <sup>(Beta)</sup></p></td>
+     <td><p>8-32,768*8</p></td>
+     <td><p>HAMMING <sup>(Beta)</sup>, JACCARD <sup>(Beta)</sup></p></td>
+     <td><p>HAMMING <sup>(Beta)</sup></p></td>
+   </tr>
+</table>
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>对于 <code>BINARY_VECTOR</code> 类型的向量字段：</p>
+<ul>
+<li><p>维度值（<code>dim</code>）必须为 8 的倍数；</p></li>
+<li><p>可选的相似度类型为 <code>HAMMING</code> 和 <code>JACCARD</code>。</p></li>
+</ul>
+
+</Admonition>
 
 ## 欧氏距离（L2）{#euclidean-distance-l2}
 
@@ -71,7 +122,34 @@ L2 是最普遍的距离度量方法，在处理连续性数据时尤为有效�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>该指标目前还在测试阶段。升级您的集群至 Beta 版即可体验 COSINE 相似度指标。</p>
+<p>该相似度类型目前还在测试阶段。升级您的集群至 Beta 版即可体验 COSINE 相似度类型。</p>
 
 </Admonition>
 
+## JACCARD 距离 <sup>(Beta)</sup>{#jaccard}
+
+JACCARD 相似系数用于衡量两个样本集之间的相似度，其定义是两个集合交集的元素数量除以它们并集的元素数量。该系数仅适用于有限样本集。
+
+![Yc4KbRewXouzhUxSdwicsp8knMb](/img/Yc4KbRewXouzhUxSdwicsp8knMb.png)
+
+JACCARD 距离用于衡量数据集之间的不相似度，其计算方法是 1 减去 JACCARD 相似系数。对于二进制变量，JACCARD 距离等同于 Tanimoto 系数。
+
+![FiGFbY7lqoBdAax3kl7cNNWLnxh](/img/FiGFbY7lqoBdAax3kl7cNNWLnxh.png)
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>该相似度类型目前仅适用于已升级到 Beta 版的 Zilliz Cloud 集群。</p>
+
+</Admonition>
+
+## HAMMING 距离 <sup>(Beta)</sup>{#hamming}
+
+HAMMING 距离用于测量二进制数据字符串。两个等长字符串之间的距离是它们在不同比特位上的数量。
+
+例如，假设有两个字符串，1101 1001 和 1001 1101。 11011001 ⊕ 10011101 = 01000100。由于其中有两个 1，因此 HAMMING 距离 d (11011001, 10011101) = 2。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>该相似度类型目前仅适用于已升级到 Beta 版的 Zilliz Cloud 集群。</p>
+
+</Admonition>

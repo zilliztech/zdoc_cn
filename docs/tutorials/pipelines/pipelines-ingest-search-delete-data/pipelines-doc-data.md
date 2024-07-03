@@ -165,9 +165,9 @@ curl --request POST \
                 "fieldType": "Int16" 
             }
         ],
-        "clusterId": "${CLUSTER_ID}",
+        "clusterId": "inxx-xxxxxxxxxxxxxxx",
         "newCollectionName": "my_collection"
-    }
+    }'
 ```
 
 以下为参数说明：
@@ -260,7 +260,6 @@ curl --request POST \
     "type": "INGESTION",
     "description": "A pipeline that splits a doc file into chunks and generates embeddings. It also stores the publish_year with each chunk.",
     "status": "SERVING",
-    "totalTokenUsage": 0,
     "functions": [
       {
         "action": "INDEX_DOC",
@@ -339,7 +338,7 @@ Ingestion Pipeline 创建成功后，Zilliz Cloud 将进行重名检查。如果
     ```bash
     curl --request POST \
         --header "Content-Type: application/json" \
-        --header "Authorization: Bearer ${YOUR_CLUSTER_TOKEN}" \
+        --header "Authorization: Bearer ${YOUR_API_KEY}" \
         --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}/run" \
         -d '{
             "data": {
@@ -351,7 +350,7 @@ Ingestion Pipeline 创建成功后，Zilliz Cloud 将进行重名检查。如果
 
     以下为参数说明：
 
-    - `YOUR_CLUSTER_TOKEN`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
+    - `YOUR_API_KEY`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
 
     - `cloud-region`: 集群的云服务地域。目前仅支持 `ali-cn-hangzhou`。
 
@@ -368,11 +367,11 @@ Ingestion Pipeline 创建成功后，Zilliz Cloud 将进行重名检查。如果
       "code": 200,
       "data": {
         "doc_name": "zilliz_concept_doc.md",
-        "token_usage": 200,
-        "num_chunks": 123
+        "usage": {
+          "embedding": 1241
+        },
+        "num_chunks": 3
       }
-    }
-    
     ```
 
 <Admonition type="info" icon="📘" title="说明">
@@ -388,7 +387,8 @@ Ingestion Pipeline 创建成功后，Zilliz Cloud 将进行重名检查。如果
 ```python
 curl --request POST \
      --header "Content-Type: multipart/form-data" \
-     --header "Authorization: Bearer ${YOUR_CLUSTER_TOKEN}" \
+     --header 'Accept: multipart/form-data' \
+     --header "Authorization: Bearer ${YOUR_API_KEY}" \
      --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}/run_ingestion_with_file" \
      --form 'data={"year": 2023}' \
      --form 'file=@path/to/local/file.ext'
@@ -396,7 +396,7 @@ curl --request POST \
 
 以下为参数说明：
 
-- `YOUR_CLUSTER_TOKEN`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
+- `YOUR_API_KEY`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
 
 - `cloud-region`: 集群的云服务地域。目前仅支持 `ali-cn-hangzhou`。
 
@@ -413,11 +413,11 @@ curl --request POST \
   "code": 200,
   "data": {
     "doc_name": "zilliz_concept_doc.md",
-    "token_usage": 200,
-    "num_chunks": 123
+    "usage": {
+      "embedding": 1241
+    },
+    "num_chunks": 3
   }
-}
-
 ```
 
 </TabItem>
@@ -433,8 +433,6 @@ curl --request POST \
 <Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"cURL","value":"Bash"}]}>
 
 <TabItem value="Cloud Console">
-
-1.
 
 1. 打开项目。
 
@@ -508,13 +506,13 @@ curl --request POST \
             {
                 "name": "search_chunk_text_and_title",
                 "action": "SEARCH_DOC_CHUNK",
-                "clusterId": "${CLUSTER_ID}",
+                "clusterId": "inxx-xxxxxxxxxxxxxxx",
                 "collectionName": "my_collection",
                 "embedding": "zilliz/bge-base-en-v1.5",
                 "reranker": "zilliz/bge-reranker-base"
             }
         ]
-    }
+    }'
 ```
 
 以下为参数说明：
@@ -556,7 +554,7 @@ curl --request POST \
     "type": "SEARCH",
     "description": "A pipeline that receives text and search for semantically similar doc chunks",
     "status": "SERVING",
-    "functions": [
+    "functions": 
       {
         "action": "SEARCH_DOC_CHUNK",
         "name": "search_chunk_text_and_title",
@@ -566,8 +564,6 @@ curl --request POST \
         "embedding": "zilliz/bge-base-en-v1.5",
         "reranker": "zilliz/bge-reranker-base"
       }
-    ],
-    "totalTokenUsage": 0
   }
 }
 ```
@@ -599,7 +595,7 @@ curl --request POST \
 ```bash
 curl --request POST \
     --header "Content-Type: application/json" \
-    --header "Authorization: Bearer ${YOUR_CLUSTER_TOKEN}" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}/run" \
     -d '{
       "data": {
@@ -617,7 +613,7 @@ curl --request POST \
 
 以下为参数说明：
 
-- `YOUR_CLUSTER_TOKEN`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
+- `YOUR_API_KEY`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
 
 - `cloud-region`: 集群的云服务地域。目前仅支持 `ali-cn-hangzhou`。
 
@@ -641,14 +637,31 @@ curl --request POST \
   "data": {
     "result": [
       {
-        "id": "445951244000281783",
-        "distance": 0.7270776033401489,
-        "chunk_text": "After determining the CU type, you must also specify its size. Note that the\nnumber of collections a cluster can hold varies based on its CU size. A\ncluster with less than 8 CUs can hold no more than 32 collections, while a\ncluster with more than 8 CUs can hold as many as 256 collections.\n\nAll collections in a cluster share the CUs associated with the cluster. To\nsave CUs, you can unload some collections. When a collection is unloaded, its\ndata is moved to disk storage and its CUs are freed up for use by other\ncollections. You can load the collection back into memory when you need to\nquery it. Keep in mind that loading a collection requires some time, so you\nshould only do so when necessary.\n\n## Collection\n\nA collection collects data in a two-dimensional table with a fixed number of\ncolumns and a variable number of rows. In the table, each column corresponds\nto a field, and each row represents an entity.\n\nThe following figure shows a sample collection that comprises six entities and\neight fields.\n\n### Fields\n\nIn most cases, people describe an object in terms of its attributes, including\nsize, weight, position, etc. These attributes of the object are similar to the\nfields in a collection.\n\nAmong all the fields in a collection, the primary key is one of the most\nspecial, because the values stored in this field are unique throughout the\nentire collection. Each primary key maps to a different record in the\ncollection.",
-        "chunk_id": 123,
+        "id": 450524927755105957,
+        "distance": 0.99967360496521,
+        "chunk_id": 0,
         "doc_name": "zilliz_concept_doc.md",
+        "chunk_text": "# Cluster, Collection & Entities\nA Zilliz Cloud cluster is a managed Milvus instance associated with certain computing resources. You can create collections in the cluster and insert entities into them. In comparison to a relational database, a collection in a cluster is similar to a table in the database, and an entity in a collection is similar to a record in the table.\\n\\n# Cluster, Collection & Entities\n## Cluster\nWhen creating a cluster on Zilliz Cloud, you must specify the type of CU associated with the cluster. There are three types of CUs available: performance-optimized, capacity-optimized, and cost-optimized. You can learn how to choose among these types in [Select the Right CU](https://zilliverse.feishu.cn/wiki/UgqvwKh2QiKE1kkYNLJcaHt0nkg).  \nAfter determining the CU type, you must also specify its size. Note that the number of collections a cluster can hold varies based on its CU size. A cluster with less than 8 CUs can hold no more than 32 collections, while a cluster with more than 8 CUs can hold as many as 256 collections.  \nAll collections in a cluster share the CUs associated with the cluster. To save CUs, you can unload some collections. When a collection is unloaded, its data is moved to disk storage and its CUs are freed up for use by other collections. You can load the collection back into memory when you need to query it. Keep in mind that loading a collection requires some time, so you should only do so when necessary.\\n\\n# Cluster, Collection & Entities\n## Collection\nA collection collects data in a two-dimensional table with a fixed number of columns and a variable number of rows. In the table, each column corresponds to a field, and each row represents an entity.  \nThe following figure shows a sample collection that comprises six entities and eight fields."
+      },
+      {
+        "id": 450524927755105959,
+        "distance": 0.07810573279857635,
+        "chunk_id": 2,
+        "doc_name": "zilliz_concept_doc.md",
+        "chunk_text": "# Cluster, Collection & Entities\n## Collection\n### Index\nUnlike Milvus instances, Zilliz Cloud clusters only support the **AUTOINDEX** algorithm for indexing. This algorithm is optimized for the three types of computing units (CUs) supported by Zilliz Cloud. For more information, see [AUTOINDEX Explained](https://zilliverse.feishu.cn/wiki/EA2twSf5oiERMDkriKScU9GInc4).\\n\\n# Cluster, Collection & Entities\n## Entities\nEntities in a collection are data records sharing the same set of fields, like a book in a library or a gene in a genome. As to an entity, the data stored in each field forms the entity.  \nBy specifying a query vector, search metrics, and optional filtering conditions, you can conduct vector searches among the entities in a collection. For example, if you search with the keyword \"Interesting Python demo\", any article whose title implies such semantic meaning will be returned as a relevant result. During this process, the search is actually conducted on the vector field **title_vector** to retrieve the top K nearest results. For details on vector searches, see [Search and Query](https://zilliverse.feishu.cn/wiki/YfMEwLHzeisARCk4VZ3cVhJmnjd).  \nYou can add as many entities to a collection as you want. However, the size that an entity takes grows along with the increase of the dimensions of the vectors in the entity, reversely affecting the performance of searches within the collection. Therefore, plan your collection wisely on Zilliz Cloud by referring to [Schema Explained](https://zilliverse.feishu.cn/wiki/TqMFwNyDbiY9qekBfPNcbpuvnib)."
+      },
+      {
+        "id": 450524927755105958,
+        "distance": 0.046239592134952545,
+        "chunk_id": 1,
+        "doc_name": "zilliz_concept_doc.md",
+        "chunk_text": "# Cluster, Collection & Entities\n## Collection\n### Fields\nIn most cases, people describe an object in terms of its attributes, including size, weight, position, etc. These attributes of the object are similar to the fields in a collection.  \nAmong all the fields in a collection, the primary key is one of the most special, because the values stored in this field are unique throughout the entire collection. Each primary key maps to a different record in the collection.  \nIn the collection shown in Figure 1, the **id** field is the primary key. The first ID **0** maps to the article titled *The Mortality Rate of Coronavirus is Not Important*, and will not be used in any other records in this collection.\\n\\n# Cluster, Collection & Entities\n## Collection\n### Schema\nFields have their own properties, such as data types and related constraints for storing data in the field, like vector dimensions and distance metrics. By defining fields and their order, you will get a skeletal data structure termed schema, which shapes a collection in a way that resembles constructing the structure of a data table.  \nFor your reference, Zilliz Cloud supports the following field data types:  \n- Boolean value (BOOLEAN)\n- 8-byte floating-point (DOUBLE)\n- 4-byte floating-point (FLOAT)\n- Float vector (FLOAT_VECTOR)\n- 8-bit integer (INT8)\n- 32-bit integer (INT32)\n- 64-bit integer (INT64)\n- Variable character (VARCHAR)\n- [JSON](https://zilliverse.feishu.cn/wiki/H04VwNGoaimjcLkxoH4cs5TQnNd)  \nZilliz Cloud provides three types of CUs, each of which have its own application scenarios, and they are also the factor that impacts search performance.  \n> 📘 Notes\n>\n> **FLOAT_VECTOR** is the only data type that supports vector embeddings in Zilliz Cloud clusters."
       }
     ],
-    "token_usage": 200
+    "usage": {
+      "embedding": 24,
+      "rerank": 1437
+    }
   }
 }
 ```
@@ -660,6 +673,8 @@ curl --request POST \
 ## 删除文档数据{#delete-doc-data}
 
 如需删除数据，请先创建并运行 Deletion Pipeline。
+
+### 创建文档 Deletion Pipeline{#create-doc-deletion-pipeline}
 
 <Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"cURL","value":"Bash"}]}>
 
@@ -725,7 +740,7 @@ curl --request POST \
             }
         ],
     
-        "clusterId": "${CLUSTER_ID}",
+        "clusterId": "inxx-xxxxxxxxxxxxxxx",
         "collectionName": "my_collection"
     }'
 ```
@@ -803,7 +818,7 @@ curl --request POST \
 ```bash
 curl --request POST \
     --header "Content-Type: application/json" \
-    --header "Authorization: Bearer ${YOUR_CLUSTER_TOKEN}" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}/run" \
     -d '{
         "data": {
@@ -814,7 +829,7 @@ curl --request POST \
 
 以下为参数说明：
 
-- `YOUR_CLUSTER_TOKEN`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
+- `YOUR_API_KEY`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
 
 - `cloud-region`: 集群的云服务地域。目前仅支持 `ali-cn-hangzhou`。
 
@@ -882,7 +897,6 @@ curl --request POST \
           "type": "INGESTION",
           "description": "A pipeline that splits a doc file into chunks and generates embeddings. It also stores the publish_year with each chunk.",
           "status": "SERVING",
-          "totalTokenUsage": 0,
           "functions": [
             {
               "action": "INDEX_DOC",
@@ -962,7 +976,6 @@ curl --request POST \
         "type": "INGESTION",
         "description": "A pipeline that splits a doc file into chunks and generates embeddings. It also stores the publish_year with each chunk.",
         "status": "SERVING",
-        "totalTokenUsage": 0,
         "functions": [
           {
             "action": "INDEX_DOC",
@@ -1021,7 +1034,7 @@ curl --request POST \
 ```bash
 curl --request GET \
     --header "Content-Type: application/json" \
-    --header "Authorization: Bearer ${YOUR_CLUSTER_TOKEN}" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}"
 ```
 
@@ -1036,7 +1049,6 @@ curl --request GET \
     "type": "INGESTION",
     "description": "A pipeline that splits a doc file into chunks and generates embeddings. It also stores the publish_year with each chunk.",
     "status": "SERVING",
-    "totalTokenUsage": 0,
     "functions": [
       {
         "action": "INDEX_DOC",

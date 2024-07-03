@@ -77,7 +77,7 @@ import TabItem from '@theme/TabItem';
 
     1. 选择 **INDEX_IMAGE** Function。该 Function 可以将 URL 中的图像转换为 Embedding 向量。
 
-    1. 选择用于生成向量的 Embedding 模型。目前 Zilliz Cloud Pipelines 共提供两种 Embedding 模型：**zilliz/vit-base-patch16-224** 和 **zilliz/clip-vit-base-patch16**。
+    1. 选择用于生成向量的 Embedding 模型。目前 Zilliz Cloud Pipelines 共提供两种 Embedding 模型：**zilliz/vit-base-patch16-224** 和 **zilliz/clip-vit-base-patch32**。
 
         <table>
            <tr>
@@ -89,7 +89,7 @@ import TabItem from '@theme/TabItem';
              <td><p>Google 开源的 Vision Transformer (ViT) encoder 模型（类似于 BERT），在大量图像数据上进行预训练，可用于将图像的内容语义转化为向量空间中的 Embedding 向量。该模型托管于 Zilliz Cloud 之上，可大幅降低延时。</p></td>
            </tr>
            <tr>
-             <td><p>zilliz/clip-vit-base-patch16</p></td>
+             <td><p>zilliz/clip-vit-base-patch32</p></td>
              <td><p>OpenAI 发布的多模态模型。视觉模型和文本模型共同将图像和文本转换为同一向量空间中的 Embedding 向量，实现数据和文案信息两种模态信息的语义搜索。该模型托管于 Zilliz Cloud 之上，可大幅降低延时。</p></td>
            </tr>
         </table>
@@ -145,7 +145,7 @@ curl --request POST \
     --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines" \
     -d '{
         "name": "my_image_ingestion_pipeline",
-        "clusterId": "${CLUSTER_ID}",
+        "clusterId": "inxx-xxxxxxxxxxxxxxx",
         "projectId": "proj-xxxx"，
         "collectionName": "my_collection",
         "description": "A pipeline that converts an image into vector embeddings and store in efficient index for search.",
@@ -164,7 +164,7 @@ curl --request POST \
                 "fieldType": "VarChar" 
             }
         ]   
-    }
+    }'
 ```
 
 以下为参数说明：
@@ -205,7 +205,7 @@ curl --request POST \
              <td><p>Google 开源的 Vision Transformer (ViT) encoder 模型（类似于 BERT），在大量图像数据上进行预训练，可用于将图像的内容语义转化为向量空间中的 Embedding 向量。该模型托管于 Zilliz Cloud 之上，可大幅降低延时。</p></td>
            </tr>
            <tr>
-             <td><p>zilliz/clip-vit-base-patch16</p></td>
+             <td><p>zilliz/clip-vit-base-patch32</p></td>
              <td><p>OpenAI 发布的多模态模型。视觉模型和文本模型共同将图像和文本转换为同一向量空间中的 Embedding 向量，实现数据和文案信息两种模态信息的语义搜索。该模型托管于 Zilliz Cloud 之上，可大幅降低延时。</p></td>
            </tr>
         </table>
@@ -291,39 +291,44 @@ Ingestion Pipeline 创建成功后，Zilliz Cloud 将进行重名检查。如果
 
 <TabItem value="Bash">
 
-以下示例代码用于运行 Ingestion pipeline `my_image_ingestion_pipeline`。`image_title` 是需要保留的元数据字段。
+以下示例代码用于运行 Ingestion pipeline `my_image_ingestion_pipeline`。
 
 ```python
 curl --request POST \
     --header "Content-Type: application/json" \
-    --header "Authorization: Bearer ${YOUR_CLUSTER_TOKEN}" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}/run" \
     -d '{
         "data": {
-            "image_url": "xxx",
             "image_id": "my-img-123456",
+            "image_url": "xxx",
             "image_title": "A cute yellow cat"
         }
-    }
+    }'
 ```
 
 以下为参数说明：
 
-- `YOUR_CLUSTER_TOKEN`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
+- `YOUR_API_KEY`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
 
 - `cloud-region`: 集群的云服务地域。目前仅支持 `ali-cn-hangzhou`。
 
 - `image_id`: 存储在 OSS 中的图像 ID。
 
-- `source` : 存储在 OSS 中的图像 URL。URL 包含中文时，请勿使用编码后的 URL。您可以使用 UTF-8 编码的 URL。请确保 URL 有效期大于 1 小时。
+- `image_url` : 存储在 OSS 中的图像 URL。URL 包含中文时，请勿使用编码后的 URL。您可以使用 UTF-8 编码的 URL。请确保 URL 有效期大于 1 小时。
+
+- `image_title`：需要保留的元数据字段。
 
 请求返回以下类似内容：
 
 ```bash
 {
   "code": 200,
-    "data": {
-        "num_entities": 1
+  "data": {
+    "num_entities": 1,
+    "usage": {
+      "embedding": 1
+    }
   }
 }
 ```
@@ -341,8 +346,6 @@ curl --request POST \
 <Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"cURL","value":"Bash"}]}>
 
 <TabItem value="Cloud Console">
-
-1.
 
 1. 打开项目。
 
@@ -404,11 +407,11 @@ curl --request POST \
                 "name": "search_image_by_image",
                 "action": "SEARCH_IMAGE_BY_IMAGE",
                 "embedding": "zilliz/vit-base-patch16-224",
-                "clusterId": "${CLUSTER_ID}",
+                "clusterId": "inxx-xxxxxxxxxxxxxxx",
                 "collectionName": "my_collection"
             }
         ]
-    }
+    }'
 ```
 
 以下为参数说明：
@@ -450,7 +453,7 @@ curl --request POST \
     "type": "SEARCH",
     "description": "A pipeline that searches image by image.",
     "status": "SERVING",
-    "functions": [
+    "functions": 
       {
         "action": "SEARCH_IMAGE_BY_IMAGE",
         "name": "search_image_by_image",
@@ -459,8 +462,6 @@ curl --request POST \
         "collectionName": "my_collection",
         "embedding": "zilliz/vit-base-patch16-224"
       }
-    ],
-    "totalTokenUsage": 0
   }
 }
 ```
@@ -487,16 +488,16 @@ curl --request POST \
 
 <TabItem value="Bash">
 
-以下示例代码用于运行 Search pipeline `my_image_search_pipeline`。查询图像 URL 为来源于 [Unsplash](https://unsplash.com/photos/an-orange-and-white-cat-laying-on-top-of-a-table-hAbwQ1elxvI) 的猫咪照片。
+以下示例代码用于运行 Search pipeline `my_image_search_pipeline`。
 
 ```bash
 curl --request POST \
     --header "Content-Type: application/json" \
-    --header "Authorization: Bearer ${YOUR_CLUSTER_TOKEN}" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}/run" \
     -d '{
       "data": {
-        "query_image_url": "https://unsplash.com/photos/an-orange-and-white-cat-laying-on-top-of-a-table-hAbwQ1elxvI"
+        "query_image_url": "xxx"
       },
       "params":{
           "limit": 1,
@@ -504,12 +505,12 @@ curl --request POST \
           "outputFields": ["image_id", "image_title"],
           "filter": "id >= 0", 
       }
-    }
+    }'
 ```
 
 以下为参数说明：
 
-- `YOUR_CLUSTER_TOKEN`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
+- `YOUR_API_KEY`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
 
 - `cloud-region`: 集群的云服务地域。目前仅支持 `ali-cn-hangzhou`。
 
@@ -529,18 +530,20 @@ curl --request POST \
 
 ```bash
 {
-    "code": 200,
-    "data": [{
-            "image_id": 101,
-            "distance": 0.4,
-            "image_title": "test image 1"
-            }, 
-            {
-            "image_id": 103,
-            "distance": 0.2,
-            "image_title": "test image 3"  
-            }
-            ]
+  "code": 200,
+  "data": {
+    "result": [
+      {
+        "id": "my-img-123456",
+        "distance": 0.40448662638664246,
+        "image_id": "my-img-123456",
+        "image_title": "A cute yellow cat"
+      }
+    ],
+    "usage": {
+      "embedding": 1
+    }
+  }
 }
 ```
 
@@ -617,9 +620,9 @@ curl --request POST \
                 "action": "PURGE_IMAGE_INDEX"
             }
         ], 
-        "clusterId": "${CLUSTER_ID}",
+        "clusterId": "inxx-xxxxxxxxxxxxxxx",
         "collectionName": "my_collection"
-    }
+    }'
 ```
 
 以下为参数说明：
@@ -697,18 +700,18 @@ curl --request POST \
 ```bash
 curl --request POST \
     --header "Content-Type: application/json" \
-    --header "Authorization: Bearer ${YOUR_CLUSTER_TOKEN}" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}/run" \
     -d '{
         "data": {
             "image_id": "my-img-123456"
         }
-    }
+    }'
 ```
 
 以下为参数说明：
 
-- `YOUR_CLUSTER_TOKEN`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
+- `YOUR_API_KEY`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
 
 - `cloud-region`: 集群的云服务地域。目前仅支持 `ali-cn-hangzhou`。
 
@@ -910,7 +913,7 @@ curl --request POST \
 ```bash
 curl --request GET \
     --header "Content-Type: application/json" \
-    --header "Authorization: Bearer ${YOUR_CLUSTER_TOKEN}" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
     --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}"
 ```
 
@@ -925,7 +928,6 @@ curl --request GET \
     "type": "INGESTION",
     "description": "A pipeline that splits a text file into chunks and generates embeddings. It also stores the publish_year with each chunk.",
     "status": "SERVING",
-    "totalTokenUsage": 0,
     "functions": [
       {
         "action": "INDEX_DOC",

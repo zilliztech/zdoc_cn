@@ -161,38 +161,18 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-### Token 用量{#token-usage}
-
-下表展示了各模型的 Token 用量限制。
+### Pipelines 用量{#pipelines-usage}
 
 <table>
    <tr>
-     <th><p><strong>Pipeline 类型</strong></p></th>
-     <th><p><strong>Embedding 模型</strong></p></th>
-     <th><p><strong>最大 Token 用量</strong></p></th>
+     <th></th>
+     <th><p>用量上限</p></th>
    </tr>
    <tr>
-     <td><p>Ingestion Pipeline</p></td>
-     <td><p>zilliz/bge-base-en-v1.5 &amp; zilliz/bge-base-zh-v1.5</p></td>
-     <td><p>100,000,000</p></td>
-   </tr>
-   <tr>
-     <td><p>Search Pipeline</p></td>
-     <td><p>zilliz/bge-base-en-v1.5 &amp; zilliz/bge-base-zh-v1.5</p></td>
-     <td><p>20,000,000</p></td>
-   </tr>
-   <tr>
-     <td><p>1 个组织中的所有 Pipeline</p></td>
-     <td><p>zilliz/bge-base-en-v1.5 &amp; zilliz/bge-base-zh-v1.5</p></td>
-     <td><p>200,000,000</p></td>
+     <td><p>每个组织</p></td>
+     <td><p>¥100/月</p></td>
    </tr>
 </table>
-
-<Admonition type="info" icon="📘" title="说明">
-
-<p>已删除 Pipeline 的用量仍然计算在组织中所有 Pipeline 的用量中。</p>
-
-</Admonition>
 
 ## Collection{#collections}
 
@@ -206,6 +186,11 @@ import Admonition from '@theme/Admonition';
      <td><p>Dedicated 版集群</p></td>
      <td><p>每 CU：&lt;= 64</p><p>每集群：&lt;= 4096</p></td>
      <td><p>在 Dedicated 版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</p></td>
+   </tr>
+   <tr>
+     <td><p>Serverless 版集群</p></td>
+     <td><p>10</p></td>
+     <td><p>在 Serverless 版集群中，最多可创建 10 个 Collection。</p></td>
    </tr>
 </table>
 
@@ -230,9 +215,9 @@ import Admonition from '@theme/Admonition';
 <p>可以使用以下公式计算集群的通用容量：</p>
 <p><strong>\<= 512 x CU 数</strong></p>
 <p>例如：</p>
-<p>在一个 2 CU 的集群中，最多可创建 128 个 Collection，通用容量最大为 4096。</p>
+<p>在一个 2 CU 的集群中，最多可创建 128 个 Collection，通用容量最大为 1,024。</p>
 <p>在一个 12 CU 的集群中，最多可创建 768 个 Collection，通用容量最大为 6144。</p>
-<p>在一个 32 CU 的集群中，最多可创建 4096 个 Collection，通用容量最大为 65536。</p>
+<p>在一个 32 CU 的集群中，最多可创建 4096 个 Collection，通用容量最大为 16,384。</p>
 
 </Admonition>
 
@@ -468,7 +453,7 @@ import Admonition from '@theme/Admonition';
 
 ## 数据备份（控制台）{#backup-on-console}
 
-Zilliz Cloud 提供免费的备份存储服务，快照可保存长达30天。
+Zilliz Cloud 备份快照可保存长达30天。更多备份费用详情，请参考 [了解费用](./understand-cost#backup-costs)。
 
 ## 数据恢复（控制台）{#restore-on-console}
 

@@ -1,8 +1,8 @@
 ---
 displayed_sidbar: pythonSidebar
 slug: /python/python/BulkImport-bulk_import
-beta: FALSE
-notebook: FALSE
+beta: false
+notebook: false
 type: docx
 token: S9dyd4UwhoqOPux411KcbafDnde
 sidebar_position: 1
@@ -43,7 +43,7 @@ bulk_import(
     For example, the endpoint URL should be in the following format:
 
     ```python
-    controller.api.${cloud-region}.cloud.zilliz.com.cn[:${port-number}] 
+    controller.api.${cloud-region}.zillizcloud.com[:${port-number}] 
     ```
 
     Replace `cloud-region` with the ID of the region that accommodates your cluster. You can get the cloud region ID from the endpoint URL of your cluster.
@@ -135,7 +135,7 @@ CLUSTER_ID = ""      # ID of the Zilliz Cloud target cluster
 COLLECTION_NAME = "" # Name of the target collection in the specified Zilliz Cloud cluster
 
 res = bulk_import(
-    url=f"controller.api.{CLOUD_REGION}.cloud.zilliz.com.cn",
+    url=f"controller.api.{CLOUD_REGION}.zillizcloud.com",
     api_key=API_KEY,
     object_url=OBJECT_URL,
     access_key=ACCESS_KEY,

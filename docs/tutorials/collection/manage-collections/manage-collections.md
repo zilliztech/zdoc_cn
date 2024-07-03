@@ -25,7 +25,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>企业版集群</p></td>
-     <td><p>每 CU：\&lt;= 64</p><p>每集群：\&lt;= 4096</p></td>
+     <td><p>每 CU：&lt;= 64</p><p>每集群：&lt;= 4096</p></td>
      <td><p>在企业版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</p></td>
    </tr>
 </table>
@@ -39,7 +39,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>1-8 CU</p></td>
-     <td><p>\&lt;= 4,096</p></td>
+     <td><p>&lt;= 4,096</p></td>
    </tr>
    <tr>
      <td><p>12 CU 及以上</p></td>

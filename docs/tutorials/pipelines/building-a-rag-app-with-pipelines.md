@@ -33,7 +33,7 @@ Ingestion pipeline 能够将非结构化数据转化为可搜索的 Embedding �
 
 ### Search pipeline{#search-pipelines}
 
-Search pipeline 将查询语句（字符串）转换为 Embedding 向量，并在向量数据库中进行向量相似性搜索，从而获取Top-k 相似向量、对应的文档块和文档元数据。您可以使用 Search pipeline 实现语义搜索。1 个 Search pipeline 中仅可添加 1 种 Function。
+Search pipeline 将查询转化为 Embedding 向量，并在向量数据库中进行向量相似性搜索，从而获取Top-k 相似向量和对应元数据。您可以使用 Search pipeline 实现语义搜索。1 个 Search pipeline 中仅可添加 1 种 Function。
 
 ### Deletion pipeline{#deletion-pipelines}
 
@@ -41,7 +41,7 @@ Deletion pipeline 从 Collection 中删除指定文档的所有文档块。1 个
 
 ## 示例：使用 Pipelines 搭建 RAG 应用{#example-building-a-rag-application-with-pipelines}
 
-This [tutorial](https://github.com/milvus-io/bootcamp/blob/master/bootcamp/RAG/zilliz_pipeline_rag.ipynb) will demonstrate how to use Zilliz Cloud Pipelines to build a simple yet scalable [Retrieval Augmented Generation (RAG)](https://zilliz.com/use-cases/llm-retrieval-augmented-generation) application in Python. By providing a unified set of APIs, Zilliz Cloud Pipelines simplify the process of building an RAG application. You can skip the hassle of DevOps and accomplish everything with a simple API call. The figure below illustrates the main components of a basic RAG application.
+本[教程](https://github.com/milvus-io/bootcamp/blob/master/bootcamp/RAG/zilliz_pipeline_rag.ipynb)将展示如何使用 Zilliz Cloud Pipelines 轻松搭建可扩展的 [RAG](https://zilliz.com.cn/use-cases/llm-retrieval-augmented-generation) 应用。本教程中使用的编程语言为 Python。下图展示了 RAG 应用的基础组件。
 
 ![rag-application](/img/rag-application.png)
 
@@ -332,7 +332,7 @@ class Chatbot:
                  "content":
                      f"We have provided context information below. \n"
                      f"---------------------\n"
-                     f"\{context_str}"
+                     f"{context_str}"
                      f"\n---------------------\n"
                      f"Given this information, please answer the question: {query}"
                  }

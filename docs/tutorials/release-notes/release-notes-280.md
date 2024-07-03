@@ -4,7 +4,7 @@ beta: FALSE
 notebook: FALSE
 type: origin
 token: Nj7Hw23HBiVgc6kpfehc6r6bnIg
-sidebar_position: 1
+sidebar_position: 2
 
 ---
 
@@ -31,13 +31,13 @@ Serverless 集群当前处于 Beta 阶段，您可以在 **阿里云华东1（�
 
 - 文本 Pipeline
 
-    用户当前可以创建用于摄取、检索和删除文本内容的 Pipeline 来处理您的文本内容，包括对纯文本内容建立索引以及进行语义检索。该功能为 RAG 和文本召回类应用提供了极大的灵活性。关于更多详情，可参考[文本数据](./pipelines-text-data)和[文档数据](./pipelines-doc-data)。
+    在以文档为操作对象的文档 Pipeline 基础之上，用户还可以创建用于摄取、检索和删除文本内容的 Pipeline 来处理诸如产品描述或文档分块等以字符串形式提供的文本内容。该功能为 RAG 和文本召回类应用提供了极大的灵活性。关于更多详情，可参考[文本数据](./pipelines-text-data)和[文档数据](./pipelines-doc-data)。
 
 - 图片 Pipeline
 
-    用户当前还可创建用于摄取、检索和删除图片内容的 Pipeline 来处理您的图片文件，包括为您的图片文件建立倒排索引和以图片 URL 为输入进行图片检索。关于更多详情，可参考[图像数据](./pipelines-image-data)。
+    此次发布新增的图片 Pipeline 解锁了图片检索能力，可以根据用户提供的图片 URL 生成图片的向量表示，为实现以图搜图类应用提供了便利。关于更多详情，可参考[图像数据](./pipelines-image-data)。
 
-- Pipeline 还提供一组 RESTful API，允许用户在创建 Pipeline 时使用 Schema 匹配的既有 Collection。关于更多详情，可参考 [Pipeline 参考文档](/reference/restful/pipeline-operations)。
+- 此次发布后，Pipeline 功能支持利用既有 Collection 了。在调用创建 Pipeline 的 RESTful API 请求中，用户可以指定 Schema 与 Pipeline 业务逻辑相匹配的既有 Collection。也就是说，如果用户在发出的 Pipeline 创建请求中指定了一个 PRESREVE Function，用于在名为 **public_date** 的字段中存放相应的元数据，则目标 Collection 的 Schema 中也需要包含该字段。关于更多详情，可查看 [Pipeline 参考文档](/reference/restful/pipeline-operations)。
 
 ## 其它增强{#other-enhancements}
 

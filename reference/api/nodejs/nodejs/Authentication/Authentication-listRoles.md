@@ -1,11 +1,11 @@
 ---
 displayed_sidbar: nodeSidebar
 slug: /node/node/Authentication-listRoles
-beta: FALSE
-notebook: FALSE
+beta: false
+notebook: false
 type: docx
 token: GIeMdvjlMoLwGrxUOu3cFw7bnWc
-sidebar_position: 9
+sidebar_position: 11
 displayed_sidebar: nodeSidebar
 
 ---
