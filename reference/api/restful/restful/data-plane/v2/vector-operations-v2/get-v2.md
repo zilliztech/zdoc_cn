@@ -7,7 +7,7 @@ title: 获取
 
 import RestHeader from '@site/src/components/RestHeader';
 
-此操作通过它们的ID获取特定的 Entity 。
+此操作通过它们的ID获取特定的 Entity。
 
 <RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v2/vectordb/entities/get" />
 

@@ -228,7 +228,7 @@ import RestHeader from '@site/src/components/RestHeader';
 | __name__ | __string__  <br/>要创建的 Pipeline 的名称。  |
 | __type__ | __string__  <br/>要创建的 Pipeline 的类型。对于 Ingestion Pipeline，值应该是 `INGESTION`。  |
 | __description__ | __string__  <br/>要创建的 Pipeline 的描述。  |
-| __functions__ | __array__<br/>在创建 Pipeline 中要执行的操作。对于Ingestion Pipeline，您只能添加一个文档索引函数和多个保留函数。 |
+| __functions__ | __array__<br/>在创建 Pipeline 中要执行的操作。对于Ingestion Pipeline，您只能添加一个文档索引函数和多个 `PRESERVE` 函数。 |
 | __functions[]__ | __object__ \| __object__ \| __object__ \| __object__<br/> |
 | __functions[][opt_1]__ | __object__<br/> |
 | __functions[][opt_1].name__ | __string__  <br/>要创建的函数的名称。  |
@@ -250,7 +250,7 @@ import RestHeader from '@site/src/components/RestHeader';
 | __functions[][opt_4]__ | __object__<br/> |
 | __functions[][opt_4].name__ | __string__  <br/>要创建的函数的名称。  |
 | __functions[][opt_4].action__ | __string__  <br/>要创建的函数类型。对于Ingestion Pipeline，可能的值是 `INDEX_DOC` 和 `PRESERVE`。  |
-| __functions[][opt_4].inputField__ | __string__  <br/>根据需要命名字段。在Ingestion Pipeline的保留函数中，Zilliz Cloud 使用该值作为 Collection 中字段的名称。  |
+| __functions[][opt_4].inputField__ | __string__  <br/>根据需要命名字段。在Ingestion Pipeline的 `PRESERVE` 函数中，Zilliz Cloud 使用该值作为 Collection 中字段的名称。  |
 | __functions[][opt_4].outputField__ | __string__  <br/>输出字段的名称。该值应与 `input_field` 相同。  |
 | __functions[][opt_4].fieldType__ | __string__  <br/>在目标 Collection 中要创建的字段的数据类型。可能的值包括 `BOOL`, `INT8`, `INT16`, `INT32`, `INT64`, `FLOAT`, `DOUBLE` 和 `VARCHAR`。  |
 | __clusterId__ | __string__  <br/>目标集群的 ID。您可以在 Zilliz Cloud 控制台的集群详情中找到它。  |
@@ -419,7 +419,7 @@ import RestHeader from '@site/src/components/RestHeader';
 | __functions[opt_4]__ | __object__<br/> |
 | __functions[opt_4].name__ | __string__  <br/>要创建的函数的名称。  |
 | __functions[opt_4].action__ | __string__  <br/>要创建的函数类型。对于 Ingestion Pipeline，可能的值是 `INDEX_DOC` 和 `PRESERVE`。  |
-| __functions[opt_4].inputField__ | __string__  <br/>根据您的需求命名字段。在 Ingestion Pipeline 的保留函数中，Zilliz Cloud 使用该值作为 Collection 中字段的名称。  |
+| __functions[opt_4].inputField__ | __string__  <br/>根据您的需求命名字段。在 Ingestion Pipeline 的 `PRESERVE` 函数中，Zilliz Cloud 使用该值作为 Collection 中字段的名称。  |
 | __functions[opt_4].outputField__ | __string__  <br/>输出字段的名称。该值应与 `input_field` 相同。  |
 | __functions[opt_4].fieldType__ | __string__  <br/>要在目标 Collection 中创建的字段的数据类型。可能的值包括 `BOOL`, `INT8`, `INT16`, `INT32`, `INT64`, `FLOAT`, `DOUBLE` 和 `VARCHAR`。  |
 | __data.clusterID__ | __string__  <br/>Pipeline 所应用的目标集群。  |

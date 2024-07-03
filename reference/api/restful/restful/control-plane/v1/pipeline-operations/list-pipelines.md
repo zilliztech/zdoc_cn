@@ -161,7 +161,7 @@ No request body required
 | __data[][opt_1][].functions[].[opt_4]__ | __object__<br/> |
 | __data[][opt_1][].functions[].[opt_4].name__ | __string__  <br/>要创建的函数的名称。  |
 | __data[][opt_1][].functions[].[opt_4].action__ | __string__  <br/>要创建的函数类型。对于 Ingestion Pipeline，可能的值是 `INDEX_DOC` 和 `PRESERVE`。  |
-| __data[][opt_1][].functions[].[opt_4].inputField__ | __string__  <br/>根据您需求命名字段。在 Ingestion Pipeline 的保留函数中，Zilliz Cloud 使用该值作为 Collection 中要创建的字段名称。  |
+| __data[][opt_1][].functions[].[opt_4].inputField__ | __string__  <br/>根据您需求命名字段。在 Ingestion Pipeline 的 `PRESERVE` 函数中，Zilliz Cloud 使用该值作为 Collection 中要创建的字段名称。  |
 | __data[][opt_1][].functions[].[opt_4].outputField__ | __string__  <br/>输出字段的名称。该值应与 `input_field` 相同。  |
 | __data[][opt_1][].functions[].[opt_4].fieldType__ | __string__  <br/>要在目标 Collection 中创建的字段的数据类型。可能的值包括 `BOOL`, `INT8`, `INT16`, `INT32`, `INT64`, `FLOAT`, `DOUBLE` 和 `VARCHAR`。  |
 | __data[][opt_1].clusterID__ | __string__  <br/>应用当前 Pipeline 的目标集群。  |

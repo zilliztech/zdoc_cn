@@ -77,10 +77,7 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/indexes/
             "fieldName": "string",
             "indexName": "string",
             "params": {
-                "index_type": "string",
-                "M": "integer",
-                "efConstruction": "integer",
-                "nlist": "integer"
+                "index_type": "string"
             }
         }
     ]
@@ -98,9 +95,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/indexes/
 | __indexParams[].indexName__ | __string__  <br/>要创建的索引的名称，该值默认为目标字段名称。  |
 | __indexParams[].params__ | __object__<br/>索引类型及相关信息。详细信息，请参阅 [向量索引](https://milvus.io/docs/index.md)。 |
 | __indexParams[].params.index_type__ | __string__  <br/>要创建的索引类型  |
-| __indexParams[].params.M__ | __integer__  <br/>节点的最大度数，仅当 index_type 设置为 __HNSW__ 时适用。  |
-| __indexParams[].params.efConstruction__ | __integer__  <br/>搜索范围。仅当 **index_type** 设置为 **HNSW** 时适用  |
-| __indexParams[].params.nlist__ | __integer__  <br/>聚簇单元的数量。适用于 IVF 相关的索引类型。  |
 
 ## 响应
 

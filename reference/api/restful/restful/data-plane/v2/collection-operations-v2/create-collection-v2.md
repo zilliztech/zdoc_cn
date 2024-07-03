@@ -215,10 +215,7 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/collecti
             "fieldName": "string",
             "indexName": "string",
             "params": {
-                "index_type": "string",
-                "M": "integer",
-                "efConstruction": "integer",
-                "nlist": "integer"
+                "index_type": "string"
             }
         }
     ],
@@ -264,9 +261,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/collecti
 | __indexParams[].indexName__ | __string__  <br/>要创建的索引的名称，该值默认为目标字段名称。  |
 | __indexParams[].params__ | __object__<br/>索引类型及相关设置。详细信息，请参阅[向量索引](https://milvus.io/docs/index.md)。 |
 | __indexParams[].params.index_type__ | __string__  <br/>要创建的索引类型  |
-| __indexParams[].params.M__ | __integer__  <br/>节点的最大度数，仅当index_type设置为__HNSW__时适用。  |
-| __indexParams[].params.efConstruction__ | __integer__  <br/>搜索范围。仅当index_type设置为HNSW时适用。  |
-| __indexParams[].params.nlist__ | __integer__  <br/>聚簇单元的数量。适用于IVF相关索引类型。  |
 | __params__ | __object__<br/>Collection 的额外参数。 |
 | __params.max_length__ | __integer__  <br/>VarChar 字段中的最大字符数。当当前字段类型为 VarChar 时，此参数是必填的。  |
 | __params.enableDynamicField__ | __boolean__  <br/>是否启用保留的动态字段。如果设置为 true，非模式定义的字段将作为键值对保存在保留的动态字段中。  |

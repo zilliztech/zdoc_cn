@@ -7,7 +7,7 @@ title: 删除
 
 import RestHeader from '@site/src/components/RestHeader';
 
-此操作通过它们的ID或使用布尔表达式来删除 Entity 。
+此操作通过它们的ID或使用布尔表达式来删除 Entity。
 
 <RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v2/vectordb/entities/delete" />
 

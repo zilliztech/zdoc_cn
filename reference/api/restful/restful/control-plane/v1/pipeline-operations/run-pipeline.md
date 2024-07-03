@@ -155,7 +155,7 @@ import RestHeader from '@site/src/components/RestHeader';
 | __data[opt_1].\{YOUR_PRESERVED_FIELD}__ | __string__  <br/>The metadata field to preserve. The input field name should be consistent with what you defined when creating the Ingestion pipeline and adding the PRESERVE function. The value of this field should also follow the predefined field type.  |
 | __data[opt_2]__ | __object__<br/> |
 | __data[opt_2].text_list__ | __string__  <br/>要摄取的文本或文本列表。  |
-| __data[opt_2].source__ | __string__  <br/>要保留的元数据字段。输入字段名称应与创建 Ingestion Pipeline 并添加保留函数时所定义的名称一致。该字段的值也应遵循预定义的字段类型。  |
+| __data[opt_2].source__ | __string__  <br/>要保留的元数据字段。输入字段名称应与创建 Ingestion Pipeline 并添加 `PRESERVE` 函数时所定义的名称一致。该字段的值也应遵循预定义的字段类型。  |
 | __data[opt_3]__ | __object__<br/> |
 | __data[opt_3].image_url__ | __string__  <br/>存储在对象存储上的图像的URL。您应该使用未编码或UTF-8编码的URL。确保URL至少在一个小时内有效。  |
 | __data[opt_3].image_id__ | __string__  <br/>存储在对象存储上的图像的ID。  |
@@ -187,7 +187,7 @@ import RestHeader from '@site/src/components/RestHeader';
 | __params.limit__ | __integer__  <br/>要返回的记录总数。  |
 | __params.offset__ | __integer__  <br/>在搜索结果中要跳过的记录总数。  |
 | __params[].outputFields__ | __array__<br/>搜索结果中每个匹配项要输出的字段列表。 |
-| __params[].outputFields[]__ | __string__  <br/>一个有效的输出字段，应该是在保留函数中定义的字段。  |
+| __params[].outputFields[]__ | __string__  <br/>一个有效的输出字段，应该是在 `PRESERVE` 函数中定义的字段。  |
 | __params.filter__ | __string__  <br/>Zilliz Cloud 在实际搜索前用于过滤记录的布尔表达式。  |
 
 #### 选项 3: 

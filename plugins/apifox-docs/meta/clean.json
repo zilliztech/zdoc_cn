@@ -2525,7 +2525,7 @@
                                                                                 "type": "string",
                                                                                 "description": "一个输入字段。"
                                                                             },
-                                                                            "description": "根据您的需要命名字段。在摄取管道的`INDEX_TEXT`函数中，将其用于用户提供的文本。"
+                                                                            "description": "根据您的需要命名字段。在 Ingestion Pipeline 的`INDEX_TEXT`函数中，将其用于用户提供的文本。"
                                                                         },
                                                                         "langauge": {
                                                                             "type": "string",
@@ -2555,14 +2555,18 @@
                                                                 },
                                                                 {
                                                                     "type": "object",
+                                                                    "properties": {}
+                                                                },
+                                                                {
+                                                                    "type": "object",
                                                                     "properties": {
                                                                         "name": {
                                                                             "type": "string",
-                                                                            "description": "函数名称"
+                                                                            "description": "要创建的函数的名称。"
                                                                         },
                                                                         "action": {
                                                                             "type": "string",
-                                                                            "description": "函数类型。对于一个 Ingestion Pipeline 而言，可选参数值为 `INDEX_DOC` 和 `PRESERVE`。"
+                                                                            "description": "要创建的函数的类型。对于 Ingestion Pipeline，可能的值为`INDEX_DOC`和`PRESERVE`。 "
                                                                         },
                                                                         "inputFields": {
                                                                             "type": "array",
@@ -2570,11 +2574,11 @@
                                                                                 "type": "string",
                                                                                 "description": "一个输入字段。"
                                                                             },
-                                                                            "description": "根据您的需要命名字段。在摄取管道的`INDEX_IMAGE`函数中：`image_url`代表 GCS 或 AWS S3 存储桶中的预签名图像 URL，`image_id`代表图像 ID。"
+                                                                            "description": "根据您的需求命名字段。在 Ingestion Pipeline 的 `INDEX_IMAGE` 函数中：`image_url` 代表 GCS 或 AWS S3 存储桶中的预签名图像 URL，`image_id` 代表图像 ID。"
                                                                         },
                                                                         "embedding": {
                                                                             "type": "string",
-                                                                            "description": "正在使用的嵌入模型的名称。"
+                                                                            "description": "使用的嵌入模型的名称。"
                                                                         }
                                                                     },
                                                                     "x-apifox-orders": [
@@ -2601,19 +2605,19 @@
                                                                         },
                                                                         "action": {
                                                                             "type": "string",
-                                                                            "description": "要创建的函数的类型。对于摄取管道，可能的值为`INDEX_DOC`和`PRESERVE`。 "
+                                                                            "description": "要创建的函数类型。对于 Ingestion Pipeline，可能的值是 `INDEX_DOC` 和 `PRESERVE`。"
                                                                         },
                                                                         "inputField": {
                                                                             "type": "string",
-                                                                            "description": "根据您的需要命名字段。在摄取管道的保留函数中，Zilliz Cloud 将该值用作要创建的集合中的字段名称。"
+                                                                            "description": "根据您的需求命名字段。在 Ingestion Pipeline 的 `PRSERVE` 函数中，Zilliz Cloud 使用该值作为集合中的字段名称。"
                                                                         },
                                                                         "outputField": {
                                                                             "type": "string",
-                                                                            "description": "输出字段的名称。该值应与`input_field`相同。"
+                                                                            "description": "输出字段的名称。该值应与 `input_field` 相同。"
                                                                         },
                                                                         "fieldType": {
                                                                             "type": "string",
-                                                                            "description": "要在目标集合中创建的字段的数据类型。可能的值为`BOOL`、`INT8`、`INT16`、`INT32`、`INT64`、`FLOAT`、`DOUBLE`和`VARCHAR`。"
+                                                                            "description": "要在目标集合中创建的字段的数据类型。可能的值包括 `BOOL`, `INT8`, `INT16`, `INT32`, `INT64`, `FLOAT`, `DOUBLE` 和 `VARCHAR`。"
                                                                         }
                                                                     },
                                                                     "x-apifox-orders": [
@@ -2698,7 +2702,7 @@
                                                         },
                                                         "type": {
                                                             "type": "string",
-                                                            "description": "管道的类型。对于搜索管道，该值应为`SEARCH`。"
+                                                            "description": "Pipeline 的类型。对于搜索 Pipeline，该值应为`SEARCH`。"
                                                         },
                                                         "description": {
                                                             "type": "string",
@@ -2735,7 +2739,7 @@
                                                                     },
                                                                     "reranker": {
                                                                         "type": "string",
-                                                                        "description": "如果您需要重新排序或对一组候选输出进行排名以提高搜索结果的质量，请将此参数设置为重新排序模型。此参数仅适用于文本和文档数据的管道。目前，仅`zilliz/bge-reranker-base`可用作参数值。"
+                                                                        "description": "如果您需要重新排序或对一组候选输出进行排名以提高搜索结果的质量，请将此参数设置为重新排序模型。此参数仅适用于文本和文档数据的 Pipeline。目前，仅`zilliz/bge-reranker-base`可用作参数值。"
                                                                     }
                                                                 },
                                                                 "x-apifox-orders": [
@@ -2756,7 +2760,7 @@
                                                                 ],
                                                                 "x-apifox-ignore-properties": []
                                                             },
-                                                            "description": "管道中的函数。对于搜索管道，其每个成员函数针对不同的集合。"
+                                                            "description": "Pipeline 中的函数。对于搜索 Pipeline，其每个成员函数针对不同的集合。"
                                                         }
                                                     },
                                                     "x-apifox-orders": [
@@ -2808,7 +2812,7 @@
                                                         },
                                                         "type": {
                                                             "type": "string",
-                                                            "description": "管道的类型。对于删除管道，该值应为`DELETION`。"
+                                                            "description": " Pipeline的类型。对于 Deletion Pipeline，该值应为`DELETION`。"
                                                         },
                                                         "description": {
                                                             "type": "string",
@@ -2829,7 +2833,7 @@
                                                                     },
                                                                     "action": {
                                                                         "type": "string",
-                                                                        "description": "函数的类型。对于删除管道，其成员函数应为`PURGE_BY_EXPRESSION`、`PURGE_DOC_INDEX`和`PURGE_IMAGE_BY_ID`。"
+                                                                        "description": "函数的类型。对于 Deletion Pipeline，其成员函数应为`PURGE_BY_EXPRESSION`、`PURGE_DOC_INDEX`和`PURGE_IMAGE_BY_ID`。"
                                                                     },
                                                                     "inputField": {
                                                                         "type": "string",
@@ -3065,7 +3069,7 @@
                                                                 },
                                                                 "inputField": {
                                                                     "type": "string",
-                                                                    "description": "根据需要命名字段。在Ingestion Pipeline的保留函数中，Zilliz Cloud 使用该值作为 Collection 中字段的名称。"
+                                                                    "description": "根据需要命名字段。在Ingestion Pipeline的 `PRESERVE` 函数中，Zilliz Cloud 使用该值作为 Collection 中字段的名称。"
                                                                 },
                                                                 "outputField": {
                                                                     "type": "string",
@@ -3095,7 +3099,7 @@
                                                         }
                                                     ]
                                                 },
-                                                "description": "在创建 Pipeline 中要执行的操作。对于Ingestion Pipeline，您只能添加一个文档索引函数和多个保留函数。"
+                                                "description": "在创建 Pipeline 中要执行的操作。对于Ingestion Pipeline，您只能添加一个文档索引函数和多个 `PRESERVE` 函数。"
                                             },
                                             "clusterId": {
                                                 "type": "string",
@@ -3485,7 +3489,7 @@
                                                                         },
                                                                         "inputField": {
                                                                             "type": "string",
-                                                                            "description": "根据您的需求命名字段。在 Ingestion Pipeline 的保留函数中，Zilliz Cloud 使用该值作为 Collection 中字段的名称。"
+                                                                            "description": "根据您的需求命名字段。在 Ingestion Pipeline 的 `PRESERVE` 函数中，Zilliz Cloud 使用该值作为 Collection 中字段的名称。"
                                                                         },
                                                                         "outputField": {
                                                                             "type": "string",
@@ -3935,7 +3939,7 @@
                                                                                 },
                                                                                 "inputField": {
                                                                                     "type": "string",
-                                                                                    "description": "根据您需求命名字段。在 Ingestion Pipeline 的保留函数中，Zilliz Cloud 使用该值作为 Collection 中要创建的字段名称。"
+                                                                                    "description": "根据您需求命名字段。在 Ingestion Pipeline 的 `PRESERVE` 函数中，Zilliz Cloud 使用该值作为 Collection 中要创建的字段名称。"
                                                                                 },
                                                                                 "outputField": {
                                                                                     "type": "string",
@@ -4105,7 +4109,7 @@
                                                             },
                                                             "source": {
                                                                 "type": "string",
-                                                                "description": "要保留的元数据字段。输入字段名称应与创建 Ingestion Pipeline 并添加保留函数时所定义的名称一致。该字段的值也应遵循预定义的字段类型。"
+                                                                "description": "要保留的元数据字段。输入字段名称应与创建 Ingestion Pipeline 并添加 `PRESERVE` 函数时所定义的名称一致。该字段的值也应遵循预定义的字段类型。"
                                                             }
                                                         },
                                                         "required": [
@@ -4192,7 +4196,7 @@
                                                         "type": "array",
                                                         "items": {
                                                             "type": "string",
-                                                            "description": "一个有效的输出字段，应该是在保留函数中定义的字段。"
+                                                            "description": "一个有效的输出字段，应该是在 `PRESERVE` 函数中定义的字段。"
                                                         },
                                                         "description": "搜索结果中每个匹配项要输出的字段列表。"
                                                     },
@@ -6295,7 +6299,7 @@
                 "x-apifox-folder": "Vector Operations (V2)",
                 "x-apifox-status": "testing",
                 "deprecated": false,
-                "description": "此操作通过它们的ID或使用布尔表达式来删除 Entity 。\n\n## 示例\n\n```shell\nexport CLUSTER_ENDPOINT=\"https://inxx-xxxxxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com\"\nexport  TOKEN=\"user:password\"\n\ncurl --location --request POST \"https://${CLUSTER_ENDPOINT}/v2/vectordb/entities/delete\" \\\n--header \"Authorization: Bearer ${TOKEN}\" \\\n--header \"Content-Type: application/json\" \\\n--data-raw '{\n    \"collectionName\": \"quick_setup\",\n    \"filter\": \"id in [0,1]\"\n}'\n```\n\n可能的响应类似于以下内容。\n```json\n{\n    \"code\": 0,\n    \"data\": {}\n}\n```",
+                "description": "此操作通过它们的ID或使用布尔表达式来删除 Entity。\n\n## 示例\n\n```shell\nexport CLUSTER_ENDPOINT=\"https://inxx-xxxxxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com\"\nexport  TOKEN=\"user:password\"\n\ncurl --location --request POST \"https://${CLUSTER_ENDPOINT}/v2/vectordb/entities/delete\" \\\n--header \"Authorization: Bearer ${TOKEN}\" \\\n--header \"Content-Type: application/json\" \\\n--data-raw '{\n    \"collectionName\": \"quick_setup\",\n    \"filter\": \"id in [0,1]\"\n}'\n```\n\n可能的响应类似于以下内容。\n```json\n{\n    \"code\": 0,\n    \"data\": {}\n}\n```",
                 "tags": [
                     "Vector Operations (V2)"
                 ],
@@ -6408,7 +6412,7 @@
                 "x-apifox-folder": "Vector Operations (V2)",
                 "x-apifox-status": "testing",
                 "deprecated": false,
-                "description": "此操作将数据插入到特定 Collection 中。\n\n> 注意\n> 一次最多可以插入100个 Entity 。要插入大量数据，请使用[批量插入API](https://docs.zilliz.com/docs/data-import)。\n\n## 示例\n\n```shell\nexport CLUSTER_ENDPOINT=\"https://inxx-xxxxxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com\"\nexport  TOKEN=\"user:password\"\n\ncurl --location --request POST \"https://${CLUSTER_ENDPOINT}/v2/vectordb/entities/insert\" \\\n--header \"Authorization: Bearer ${TOKEN}\" \\\n--header \"Content-Type: application/json\" \\\n--data-raw '{\n    \"data\": [\n        //  Entity 数据列表\n    ],\n    \"collectionName\": \"quick_setup\"\n}'\n```\n\n可能的响应类似于以下内容：\n```json\n{\n    \"code\": 0,\n    \"data\": {\n        \"insertCount\": 10,\n        \"insertIds\": [\n            0,\n            1,\n            2,\n            3,\n            4,\n            5,\n            6,\n            7,\n            8,\n            9\n        ]\n    }\n}\n```",
+                "description": "此操作将数据插入到特定 Collection 中。\n\n> 注意\n> 一次最多可以插入100个 Entity。要插入大量数据，请使用[批量插入API](https://docs.zilliz.com/docs/data-import)。\n\n## 示例\n\n```shell\nexport CLUSTER_ENDPOINT=\"https://inxx-xxxxxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com\"\nexport  TOKEN=\"user:password\"\n\ncurl --location --request POST \"https://${CLUSTER_ENDPOINT}/v2/vectordb/entities/insert\" \\\n--header \"Authorization: Bearer ${TOKEN}\" \\\n--header \"Content-Type: application/json\" \\\n--data-raw '{\n    \"data\": [\n        //  Entity 数据列表\n    ],\n    \"collectionName\": \"quick_setup\"\n}'\n```\n\n可能的响应类似于以下内容：\n```json\n{\n    \"code\": 0,\n    \"data\": {\n        \"insertCount\": 10,\n        \"insertIds\": [\n            0,\n            1,\n            2,\n            3,\n            4,\n            5,\n            6,\n            7,\n            8,\n            9\n        ]\n    }\n}\n```",
                 "tags": [
                     "Vector Operations (V2)"
                 ],
@@ -7359,7 +7363,7 @@
                 "x-apifox-folder": "Vector Operations (V2)",
                 "x-apifox-status": "testing",
                 "deprecated": false,
-                "description": "此操作通过它们的ID获取特定的 Entity 。\n\n## 示例\n\n```shell\nexport CLUSTER_ENDPOINT=\"https://inxx-xxxxxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com\"\nexport  TOKEN=\"user:password\"\n\ncurl --location --request POST \"https://${CLUSTER_ENDPOINT}/v2/vectordb/entities/get\" \\\n--header \"Authorization: Bearer ${TOKEN}\" \\\n--header \"Content-Type: application/json\" \\\n--data-raw '{\n    \"collectionName\": \"quick_setup\",\n    \"id\": [\n        1,3,5\n    ],\n    \"outputFields\": [\n        \"color\"\n    ]\n}'\n```\n可能的响应类似于以下内容。\n```json\n{\n    \"code\": 0,\n    \"data\": [\n        {\n            \"color\": \"red_7025\",\n            \"id\": 1\n        },\n        {\n            \"color\": \"pink_9298\",\n            \"id\": 3\n        },\n        {\n            \"color\": \"yellow_4222\",\n            \"id\": 5\n        }\n    ]\n}\n```",
+                "description": "此操作通过它们的ID获取特定的 Entity。\n\n## 示例\n\n```shell\nexport CLUSTER_ENDPOINT=\"https://inxx-xxxxxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com\"\nexport  TOKEN=\"user:password\"\n\ncurl --location --request POST \"https://${CLUSTER_ENDPOINT}/v2/vectordb/entities/get\" \\\n--header \"Authorization: Bearer ${TOKEN}\" \\\n--header \"Content-Type: application/json\" \\\n--data-raw '{\n    \"collectionName\": \"quick_setup\",\n    \"id\": [\n        1,3,5\n    ],\n    \"outputFields\": [\n        \"color\"\n    ]\n}'\n```\n可能的响应类似于以下内容。\n```json\n{\n    \"code\": 0,\n    \"data\": [\n        {\n            \"color\": \"red_7025\",\n            \"id\": 1\n        },\n        {\n            \"color\": \"pink_9298\",\n            \"id\": 3\n        },\n        {\n            \"color\": \"yellow_4222\",\n            \"id\": 5\n        }\n    ]\n}\n```",
                 "tags": [
                     "Vector Operations (V2)"
                 ],
@@ -8953,7 +8957,7 @@
                                         "value": {
                                             "code": 200,
                                             "data": [
-                                                "admin",
+                                                "db_admin",
                                                 "public"
                                             ]
                                         }
@@ -9602,18 +9606,6 @@
                                                         "index_type": {
                                                             "type": "string",
                                                             "description": "要创建的索引类型"
-                                                        },
-                                                        "M": {
-                                                            "type": "integer",
-                                                            "description": "节点的最大度数，仅当 index_type 设置为 __HNSW__ 时适用。"
-                                                        },
-                                                        "efConstruction": {
-                                                            "type": "integer",
-                                                            "description": "搜索范围。仅当 **index_type** 设置为 **HNSW** 时适用"
-                                                        },
-                                                        "nlist": {
-                                                            "type": "integer",
-                                                            "description": "聚簇单元的数量。适用于 IVF 相关的索引类型。"
                                                         }
                                                     },
                                                     "x-apifox-orders": [
@@ -10037,7 +10029,7 @@
                                                     "fieldName": "my_vector",
                                                     "indexName": "my_vector_index",
                                                     "indexState": "Finished",
-                                                    "indexType": "IVF_FLAT",
+                                                    "indexType": "AUTOINDEX",
                                                     "indexedRows": 0,
                                                     "metricType": "L2",
                                                     "pendingRows": 0,
@@ -10825,18 +10817,6 @@
                                                         "index_type": {
                                                             "type": "string",
                                                             "description": "要创建的索引类型"
-                                                        },
-                                                        "M": {
-                                                            "type": "integer",
-                                                            "description": "节点的最大度数，仅当index_type设置为__HNSW__时适用。"
-                                                        },
-                                                        "efConstruction": {
-                                                            "type": "integer",
-                                                            "description": "搜索范围。仅当index_type设置为HNSW时适用。"
-                                                        },
-                                                        "nlist": {
-                                                            "type": "integer",
-                                                            "description": "聚簇单元的数量。适用于IVF相关索引类型。"
                                                         }
                                                     },
                                                     "x-apifox-orders": [
@@ -13234,10 +13214,8 @@
         "/v2/vectordb/entities/hybrid_search": {
             "post": {
                 "summary": "混合搜索",
-                "x-apifox-folder": "Vector Operations (V2)",
-                "x-apifox-status": "released",
                 "deprecated": false,
-                "description": "## 示例\n\n```shell\nexport CLUSTER_ENDPOINT=\"https://inxx-xxxxxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com\"\nexport TOKEN=\"user:password\"\n\ncurl --location --request POST \"https://${CLUSTER_ENDPOINT}/v2/vectordb/entities/search\" \\\n--header \"Authorization: Bearer ${TOKEN}\" \\\n--header \"Content-Type: application/json\" \\\n--data-raw '{\n \"collectionName\": \"quick_setup\",\n \"data\": [\n [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]\n ],\n \"annsField\": \"vector\",\n \"limit\": 3,\n \"outputFields\": [\n \"color\"\n ]\n}'\n```\n可能的响应类似于以下内容。\n```json\n{\n \"code\": 0,\n \"data\": [\n {\n \"color\": \"pink_8682\",\n \"distance\": 1,\n \"id\": 0\n },\n {\n \"color\": \"red_7025\",\n \"distance\": 0.6290165,\n \"id\": 1\n },\n {\n \"color\": \"red_4794\",\n \"distance\": 0.5975797,\n \"id\": 4\n }\n ]\n}\n```",
+                "description": "此操作演示如何执行一个混合搜索。\n\n## 示例\n\n```shell\nexport CLUSTER_ENDPOINT=\"https://inxx-xxxxxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com\"\nexport TOKEN=\"user:password\"\n\ncurl --location --request POST \"https://${CLUSTER_ENDPOINT}/v2/vectordb/entities/hybrid_search\" \\\n--header \"Authorization: Bearer ${TOKEN}\" \\\n--header \"Content-Type: application/json\" \\\n--data-raw '{\n    \"collectionName\": \"test_collection_2024_06_21_14_32_54_951152jqKAxWVu\",\n    \"search\": [\n        {\n            \"data\": [\n                [\n                    0.673437956701697,\n                    0.739243747672878\n                ]\n            ],\n            \"annsField\": \"float_vector_1\",\n            \"limit\": 10,\n            \"outputFields\": [\n                \"*\"\n            ]\n        },\n        {\n            \"data\": [\n                [\n                    0.075384179256879,\n                    0.9971545645073111\n                ]\n            ],\n            \"annsField\": \"float_vector_2\",\n            \"limit\": 10,\n            \"outputFields\": [\n                \"*\"\n            ]\n        }\n    ],\n    \"rerank\": {\n        \"strategy\": \"rrf\",\n        \"params\": {\n            \"k\": 10\n        }\n    },\n    \"limit\": 3,\n    \"outputFields\": [\n        \"user_id\",\n        \"word_count\",\n        \"book_describe\"\n    ]\n}'\n```\n可能的响应如下：\n```json\n{\n    \"code\": 0,\n    \"cost\": 0,\n    \"data\": [\n        {\n            \"book_describe\": \"book_105\",\n            \"distance\": 0.09090909,\n            \"id\": 450519760774180816,\n            \"user_id\": 5,\n            \"word_count\": 105\n        },\n        {\n            \"book_describe\": \"book_246\",\n            \"distance\": 0.09090909,\n            \"id\": 450519760774180957,\n            \"user_id\": 46,\n            \"word_count\": 246\n        },\n        {\n            \"book_describe\": \"book_367\",\n            \"distance\": 0.08333333600000001,\n            \"id\": 450519760774181078,\n            \"user_id\": 67,\n            \"word_count\": 367\n        }\n    ]\n}\n```",
                 "tags": [
                     "Vector Operations (V2)"
                 ],
@@ -13289,7 +13267,6 @@
                                         "items": {
                                             "description": "此操作特定的参数设置。",
                                             "type": "object",
-                                            "x-apifox-refs": {},
                                             "properties": {
                                                 "data": {
                                                     "type": "array",
@@ -13301,13 +13278,16 @@
                                                     "description": "向量嵌入的列表。<include target=\"milvus\">Milvus</include><include target=\"zilliz\">Zilliz Cloud</include> 搜索与指定的最相似的向量嵌入。"
                                                 },
                                                 "annsField": {
-                                                    "type": "string"
+                                                    "type": "string",
+                                                    "description": "向量字段的名称。"
                                                 },
                                                 "filter": {
-                                                    "type": "string"
+                                                    "type": "string",
+                                                    "description": "布尔表达式过滤器。"
                                                 },
                                                 "groupingField": {
-                                                    "type": "string"
+                                                    "type": "string",
+                                                    "description": "作为聚合条件的字段名称。"
                                                 },
                                                 "metricType": {
                                                     "type": "string",
@@ -13317,23 +13297,19 @@
                                                         "IP",
                                                         "COSINE"
                                                     ],
-                                                    "x-apifox": {
-                                                        "enumDescriptions": {
-                                                            "L2": "Euclidean distance",
-                                                            "IP": "Inner product",
-                                                            "COSINE": "Cosine similarity"
-                                                        }
-                                                    },
                                                     "default": "COSINE"
                                                 },
                                                 "limit": {
-                                                    "type": "integer"
+                                                    "type": "integer",
+                                                    "description": "要返回的 Entity 数量。"
                                                 },
                                                 "offset": {
-                                                    "type": "integer"
+                                                    "type": "integer",
+                                                    "description": "在返回的实体中要跳过的 Entity 数量。"
                                                 },
                                                 "ignoreGrowing": {
-                                                    "type": "boolean"
+                                                    "type": "boolean",
+                                                    "description": "是否忽略在增长段中发现的 Entity。"
                                                 },
                                                 "params": {
                                                     "description": "额外的搜索参数。",
@@ -13347,26 +13323,9 @@
                                                             "type": "integer",
                                                             "description": "将搜索细化到特定相似度范围内的向量。当将 metric_type 设置为 IP 或 COSINE 时，确保此值大于 radius 的值。否则，此值应小于 radius 的值。"
                                                         }
-                                                    },
-                                                    "x-apifox-orders": [
-                                                        "radius",
-                                                        "range_filter"
-                                                    ],
-                                                    "x-apifox-ignore-properties": [],
-                                                    "x-apifox-folder": ""
+                                                    }
                                                 }
                                             },
-                                            "x-apifox-orders": [
-                                                "data",
-                                                "annsField",
-                                                "filter",
-                                                "groupingField",
-                                                "metricType",
-                                                "limit",
-                                                "offset",
-                                                "ignoreGrowing",
-                                                "params"
-                                            ],
                                             "required": [
                                                 "data",
                                                 "annsField",
@@ -13375,13 +13334,39 @@
                                                 "limit",
                                                 "offset",
                                                 "ignoreGrowing"
-                                            ],
-                                            "x-apifox-ignore-properties": [],
-                                            "x-apifox-folder": ""
-                                        }
+                                            ]
+                                        },
+                                        "description": "搜索参数。"
                                     },
                                     "rerank": {
-                                        "type": "string"
+                                        "type": "object",
+                                        "properties": {
+                                            "strategy": {
+                                                "type": "string",
+                                                "description": "重新排序策略 (Reranking Strategy) 的名称。",
+                                                "enum": [
+                                                    "rrf",
+                                                    "ws"
+                                                ]
+                                            },
+                                            "params": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "k": {
+                                                        "type": "integer",
+                                                        "description": "RRF 算法中的可调常数。这只在策略设置为 `rrf` 时适用。"
+                                                    }
+                                                },
+                                                "description": "与指定策略相关的一组参数。",
+                                                "required": [
+                                                    "k"
+                                                ]
+                                            }
+                                        },
+                                        "description": "重新排序策略 (Reranking Strategy)。",
+                                        "required": [
+                                            "params"
+                                        ]
                                     },
                                     "limit": {
                                         "type": "integer",
@@ -13396,22 +13381,10 @@
                                         "description": "与搜索结果一起返回的字段数组。"
                                     }
                                 },
-                                "x-apifox-refs": {},
-                                "x-apifox-orders": [
-                                    "dbName",
-                                    "collectionName",
-                                    "partitionNames",
-                                    "search",
-                                    "rerank",
-                                    "limit",
-                                    "outputFields"
-                                ],
                                 "required": [
                                     "collectionName",
-                                    "search",
-                                    "rerank"
-                                ],
-                                "x-apifox-ignore-properties": []
+                                    "search"
+                                ]
                             },
                             "example": ""
                         }
@@ -13432,18 +13405,10 @@
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
-                                                "properties": {},
-                                                "x-apifox-orders": [],
-                                                "x-apifox-ignore-properties": []
+                                                "properties": {}
                                             }
                                         }
-                                    },
-                                    "x-apifox-refs": {},
-                                    "x-apifox-orders": [
-                                        "code",
-                                        "data"
-                                    ],
-                                    "x-apifox-ignore-properties": []
+                                    }
                                 },
                                 "examples": {
                                     "1": {
@@ -13474,7 +13439,6 @@
                         }
                     }
                 },
-                "x-run-in-apifox": "https://apifox.com/web/project/3737803/apis/api-169078852-run",
                 "security": []
             }
         }
@@ -14308,18 +14272,6 @@
                             "index_type": {
                                 "type": "string",
                                 "description": "The type of the index to create"
-                            },
-                            "M": {
-                                "type": "integer",
-                                "description": "The maximum degree of the node and applies only when index_type is set to __HNSW__."
-                            },
-                            "efConstruction": {
-                                "type": "integer",
-                                "description": "The search scope. This applies only when **index_type** is set to **HNSW**"
-                            },
-                            "nlist": {
-                                "type": "integer",
-                                "description": "The number of cluster units. This applies to IVF-related index types."
                             }
                         },
                         "x-apifox-orders": [
@@ -14355,18 +14307,6 @@
                     "index_type": {
                         "type": "string",
                         "description": "The type of the index to create"
-                    },
-                    "M": {
-                        "type": "integer",
-                        "description": "The maximum degree of the node and applies only when index_type is set to __HNSW__."
-                    },
-                    "efConstruction": {
-                        "type": "integer",
-                        "description": "The search scope. This applies only when **index_type** is set to **HNSW**"
-                    },
-                    "nlist": {
-                        "type": "integer",
-                        "description": "The number of cluster units. This applies to IVF-related index types."
                     }
                 },
                 "x-apifox-orders": [

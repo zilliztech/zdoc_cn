@@ -10,7 +10,7 @@ import RestHeader from '@site/src/components/RestHeader';
 此操作将数据插入到特定 Collection 中。
 
 > 注意
-> 一次最多可以插入100个 Entity 。要插入大量数据，请使用[批量插入API](https://docs.zilliz.com/docs/data-import)。
+> 一次最多可以插入100个 Entity。要插入大量数据，请使用[批量插入API](https://docs.zilliz.com/docs/data-import)。
 
 <RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v2/vectordb/entities/insert" />
 
