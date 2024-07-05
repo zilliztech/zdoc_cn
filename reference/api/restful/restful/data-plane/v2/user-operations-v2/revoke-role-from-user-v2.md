@@ -9,12 +9,17 @@ import RestHeader from '@site/src/components/RestHeader';
 
 此操作撤销授予当前角色的权限。
 
-> 注意
-> 要完成此操作，您需要在您的 Milvus 实例上启用身份验证。有关详细信息，请参阅[用户访问认证](https://milvus.io/docs/authenticate.md)。
-
 <RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v2/vectordb/users/revoke_role" />
 
 ---
+
+import Admonition from '@theme/Admonition';
+
+<Admonition type="info" icon="📘" title="说明">
+
+本 API 尚未正式发布，仅供参考。
+
+</Admonition>
 
 ## 示例
 

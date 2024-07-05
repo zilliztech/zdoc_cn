@@ -16,6 +16,14 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ---
 
+import Admonition from '@theme/Admonition';
+
+<Admonition type="info" icon="📘" title="说明">
+
+本 API 尚未正式发布，仅供参考。
+
+</Admonition>
+
 ## 示例
 
 

@@ -13,6 +13,12 @@ import Admonition from '@theme/Admonition';
 
 本系列 API 提供了管理 Zilliz Cloud 集群角色的相关接口。
 
+<Admonition type="info" icon="📘" title="说明">
+
+本页列出的所有 API 均未正式发布，仅供参考。
+
+</Admonition>
+
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />

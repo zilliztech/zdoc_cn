@@ -9,6 +9,22 @@ import RestHeader from '@site/src/components/RestHeader';
 
 此操作删除现有用户。
 
+<RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v2/vectordb/users/drop" />
+
+---
+
+import Admonition from '@theme/Admonition';
+
+<Admonition type="info" icon="📘" title="说明">
+
+本 API 尚未正式发布，仅供参考。
+
+</Admonition>
+
+## 示例
+
+
+
 ```shell
 export CLUSTER_ENDPOINT="https://inxx-xxxxxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com"
 export  TOKEN="user:password"
@@ -27,16 +43,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/users/dr
     "data": {}
 }
 ```
-
-<RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v2/vectordb/users/drop" />
-
----
-
-## 示例
-
-
-
-# RESTful API Examples
 
 
 

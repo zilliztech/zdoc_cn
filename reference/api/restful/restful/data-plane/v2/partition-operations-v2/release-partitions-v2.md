@@ -13,12 +13,40 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ---
 
+import Admonition from '@theme/Admonition';
+
+<Admonition type="info" icon="📘" title="说明">
+
+本 API 尚未正式发布，仅供参考。
+
+</Admonition>
+
 ## 示例
 
 
 
-# RESTful API Examples
+```shell
+export CLUSTER_ENDPOINT="https://inxx-xxxxxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com"
+export TOKEN="user:password"
 
+curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/partitions/release" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+--data-raw '{
+    "partitionNames": [
+        "_default",
+        "january"
+    ],
+    "collectionName": "quick_setup"
+}'
+```
+Possible response is similar to the following
+```json
+{
+    "code": 0,
+    "data": {}
+}
+```
 
 
 

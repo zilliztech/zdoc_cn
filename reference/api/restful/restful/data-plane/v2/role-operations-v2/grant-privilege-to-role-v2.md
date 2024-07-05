@@ -9,13 +9,17 @@ import RestHeader from '@site/src/components/RestHeader';
 
 此操作给当前角色授予权限。
 
-> 注意
-> - 要完成此操作，您需要在您的 Milvus 实例上启用认证。详细信息，请参阅 [验证用户访问](https://milvus.io/docs/authenticate.md)。
->  - 要了解更多关于权限和角色对象的信息，请参阅 [用户与角色](https://milvus.io/docs/users_and_roles.md)
-
 <RestHeader method="post" endpoint="https://${CLUSTER_ENDPOINT}/v2/vectordb/roles/grant_privilege" />
 
 ---
+
+import Admonition from '@theme/Admonition';
+
+<Admonition type="info" icon="📘" title="说明">
+
+本 API 尚未正式发布，仅供参考。
+
+</Admonition>
 
 ## 示例
 
