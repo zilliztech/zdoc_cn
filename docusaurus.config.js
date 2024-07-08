@@ -404,8 +404,7 @@ const config = {
         language: ['en', 'zh'],
       }
     ],
-    '@inkeep/docusaurus/chatButton',
-    '@inkeep/docusaurus/searchBar'
+    '@inkeep/docusaurus/chatButton'
   ],
   headTags: [
     {
