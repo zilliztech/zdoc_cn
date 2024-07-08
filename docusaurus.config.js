@@ -401,11 +401,14 @@ const config = {
       '@easyops-cn/docusaurus-search-local',
       {
         hashed: true,
+        indexBlog: false,
         language: ['en', 'zh'],
+        docsDir: ['docs', 'reference'],
+        docsRouteBasePath: ['docs', 'reference'],
+        highlightSearchTermsOnTargetPage: true,
       }
     ],
-    '@inkeep/docusaurus/chatButton',
-    '@inkeep/docusaurus/searchBar'
+    '@inkeep/docusaurus/chatButton'
   ],
   headTags: [
     {
