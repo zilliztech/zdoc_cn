@@ -367,6 +367,62 @@ const config = {
           organizationId: process.env.INKEEP_ORGANIZATION_ID,
           primaryBrandColor: "#175fff",
           organizationDisplayName: "Zilliz Cloud",
+          customCardSettings: [
+            {
+              filters: {
+                UrlMatch: {
+                  ruleType: 'PartialUrl',
+                  partialUrl: 'docs.zilliz.com.cn/docs',
+                },
+              },
+              searchTabLabel: '指南',
+            },
+            {
+              filters: {
+                UrlMatch: {
+                  ruleType: 'PartialUrl',
+                  partialUrl: 'docs.zilliz.com.cn/reference',
+                },
+              },
+              searchTabLabel: '参考',
+            },
+            {
+              filters: {
+                UrlMatch: {
+                  ruleType: 'PartialUrl',
+                  partialUrl: 'support.zilliz.com/hc/en-us',
+                },
+              },
+              searchTabLabel: '支持',
+            },
+            {
+              filters: {
+                UrlMatch: {
+                  ruleType: 'PartialUrl',
+                  partialUrl: 'zilliz.com.cn/learn',
+                },
+              },
+              searchTabLabel: '学习',
+            },
+            {
+              filters: {
+                UrlMatch: {
+                  ruleType: 'PartialUrl',
+                  partialUrl: 'zilliz.com.cn/customers',
+                },
+              },
+              searchTabLabel: '案例',
+            },
+            {
+              filters: {
+                UrlMatch: {
+                  ruleType: 'PartialUrl',
+                  partialUrl: 'zilliz.com.cn/event',
+                },
+              },
+              searchTabLabel: '活动',
+            },
+          ],
         },
         aiChatSettings: {
             placeholder: "Zilliz Cloud 是什么？",
@@ -392,6 +448,12 @@ const config = {
               "如何连接 Zilliz Cloud 集群",
               "Zilliz Cloud 和 Milvus 相比有什么差异？"
             ]
+        },
+        searchSettings: {
+          tabSettings: {
+            isAllTabEnabled: false,
+            rootBreadcrumbsToUseAsTabs: ['指南', '参考', '支持', '学习', '案例', '活动'],
+          }
         }
       }
     }),
