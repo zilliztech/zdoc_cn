@@ -5,6 +5,13 @@ notebook: FALSE
 type: origin
 token: Jxqfwnd80i8ibIkRhEKcnkK6nzd
 sidebar_position: 4
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 价格
+  - 计算器
 
 ---
 
@@ -39,44 +46,47 @@ import Admonition from '@theme/Admonition';
 
 ## 定价变量{#pricing-variables}
 
+### Zilliz Cloud 版本{#pricing-plan}
+
+- **Serverless 版**：适用于查询量不固定或不频繁的 Serverless 应用，无需进行复杂配置即可自动根据业务调整计算资源。
+
+- **Dedicated 版**：适用于生产环境，提供企业级数据安全与合规、监控指标、技术支持 SLA 等，支持高级配置。
+
+更多详情，请参见[Zilliz Cloud 版本类型](./select-zilliz-cloud-service-plans)。
+
 ### CU 类型{#cu-type}
 
 - 性能型：适用于性能关键场景，具有高吞吐量和低延迟。
 
 - 容量型：适合大数据量，存储容量是性能优化 CU 的五倍。
 
-有关更多信息，请参见[选择合适的 CU 类型](./cu-types-explained)。
+更多详情，请参见[选择合适的 CU 类型](./cu-types-explained)。
 
-### 云服务提供商和地域{#cloud-provider}
+### 云服务提供商{#cloud-provider}
 
-目前，Zilliz Cloud 支持阿里云和腾讯云，可部署地域如下：
+- 阿里云
 
-<table>
-   <tr>
-     <th><p><strong>云服务提供商</strong></p></th>
-     <th><p><strong>地域</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>阿里云</p></td>
-     <td><p>华东1（杭州）、华北2（北京）、华南1（深圳）</p></td>
-   </tr>
-   <tr>
-     <td><p>腾讯云</p></td>
-     <td><p>华北地区（北京）、华东地区（上海）、美国东部（弗吉尼亚）</p></td>
-   </tr>
-</table>
+- 腾讯云
 
-有关更多信息，请参见[云服务提供商和地域](./cloud-providers-and-regions)。
+更多详情，请参见[云服务提供商和地域](./cloud-providers-and-regions)。
 
-### Zilliz Cloud 版本{#pricing-plan}
+### 云服务地域{#cloud-region}
 
-- **企业版**：适合大型企业或组织，是构建向量数据平台首选方案，提供高可用、数据安全、专家技术支持。
+Zilliz Cloud 支持多个云服务地域以满足不同的需求。
 
-有关更多信息，请参见[Zilliz Cloud 版本类型](./select-zilliz-cloud-service-plans)。
+更多详情，请参见[云服务提供商和地域](./cloud-providers-and-regions)。
 
-## 注意事项{#considerations}
+## 计价单位{#pricing-unit}
 
-如需了解专有部署定价，请[联系销售](https://zilliz.com.cn/contact-sales)。
+Serverless 版集群根据 vCU 用量进行计费。vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、upsert、delete）所消耗资源的基本单位。Zilliz Cloud 将写入或读取的数据量（单位：GB）转换为 vCU。  
+
+Dedicated 版集群根据 CU 用量进行计费。CU 是指用于提供向量检索、分析服务的一组硬件资源。可以将 CU 视为一个物理查询节点。
+
+### 注意事项{#considerations}
+
+对于 Dedicated 版本，当 CU 规格小于 8 时，CU 增加梯度为 2 CU。换言之，CU 规格将按照 1、2、4、6、8 的序列递增。当 CU 规格大于 8 时，CU 增加梯度为 4 CU。CU 规格梯度为：8、12、16、20、24、28、32、...。 
+
+计算器可预估的最大集群 CU 规格为 256。如果您的需求超过这个限制，请[联系](https://zilliz.com/contact-sales)我们获取定价明细。
 
 ## 文档推荐{#related-topics}
 
