@@ -5,6 +5,12 @@ notebook: FALSE
 type: origin
 token: GLk6wr8jviPyzHk7DjRc56YsnNf
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 导入数据
 
 ---
 
@@ -312,11 +318,19 @@ Zilliz Cloud 还支持通过 Zilliz Cloud 控制台或使用 RESTful API / SDK �
          <td><p><code>ap-shanghai</code></p></td>
        </tr>
        <tr>
-         <td><p>弗吉尼亚</p></td>
+         <td><p><strong>弗吉尼亚</strong></p></td>
          <td><p><code>https://&lt;BucketName-APPID&gt;.cos.na-ashburn.myqcloud.com</code></p></td>
          <td><p><code>na-ashburn</code></p></td>
        </tr>
     </table>
+
+- 所需权限
+
+    - `cos:GetBucket`
+
+    - `cos:GetObject`
+
+    - `cos:HeadObject`
 
 - 示例
 

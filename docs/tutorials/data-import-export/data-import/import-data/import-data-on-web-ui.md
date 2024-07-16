@@ -6,6 +6,13 @@ notebook: FALSE
 type: origin
 token: BXBvwZh9Yiis0Vk8LcdcjZSPnQd
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 导入
+  - 控制台
 
 ---
 
@@ -96,7 +103,7 @@ with open('path/to/medium_articles_2020_dpr.json') as f:
 
 - 阿里云：[获取单个或多个文件的 URL](https://help.aliyun.com/zh/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects?spm=a2c4g.11186623.0.i18) 和[创建 Access Key](https://help.aliyun.com/document_detail/53045.html?spm=a2c4g.53045.0.0.718a7f80sYRRJB)。
 
-- 腾讯云：[导出对象 URL](https://www.tencentcloud.com/zh/document/product/436/42391) 和[临时密钥生成及使用指引](https://cloud.tencent.com/document/product/436/14048)。
+- 腾讯云：[导出对象 URL](https://www.tencentcloud.com/zh/document/product/436/42391) 和[临时密钥生成及使用指引](https://cloud.tencent.com/document/product/598/37140)。
 
 ![zh_import_data_from_object_storage](/img/zh_import_data_from_object_storage.png)
 
@@ -105,6 +112,10 @@ with open('path/to/medium_articles_2020_dpr.json') as f:
 单击**导入**后，后台开始导入数据，您可以实时查看导入进度。导入完成后，您将收到以下信息。此时，您可以查看导入详情或开始探索已导入的数据。
 
 ![zh_data_import_complete](/img/zh_data_import_complete.png)
+
+## 支持的导入路径{#supported-object-paths}
+
+关于导入路径需遵循的格式要求，可查看[源数据路径拼接相关要求](./prepare-source-data#tips-on-import-paths)。
 
 ## 推荐阅读{#related-topics}
 
