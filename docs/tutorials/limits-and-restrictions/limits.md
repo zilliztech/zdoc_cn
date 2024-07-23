@@ -5,6 +5,12 @@ notebook: FALSE
 type: origin
 token: A8UFwSbMniMl6IkpJkNc4HsHnLc
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 使用限制
 
 ---
 
@@ -96,15 +102,15 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>Ingestion Pipeline</p></td>
-     <td><p>10</p></td>
+     <td><p>100</p></td>
    </tr>
    <tr>
      <td><p>Deletion Pipeline</p></td>
-     <td><p>10</p></td>
+     <td><p>100</p></td>
    </tr>
    <tr>
      <td><p>Search Pipeline</p></td>
-     <td><p>10</p></td>
+     <td><p>100</p></td>
    </tr>
 </table>
 
@@ -136,7 +142,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>元数据字段</p></td>
-     <td><p>5</p></td>
+     <td><p>50</p></td>
    </tr>
    <tr>
      <td><p>字符串类型字段的最大长度</p></td>
@@ -170,7 +176,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>每个组织</p></td>
-     <td><p>¥100/月</p></td>
+     <td><p>¥140/月</p></td>
    </tr>
 </table>
 
@@ -232,9 +238,14 @@ import Admonition from '@theme/Admonition';
      <th><p>描述</p></th>
    </tr>
    <tr>
+     <td><p>Serverless 版集群</p></td>
+     <td><p>1,024</p></td>
+     <td><p>在 Serverless 版集群中，您可以为每个 Collection 创建最多 1,024 个 Partition。</p></td>
+   </tr>
+   <tr>
      <td><p>Dedicated 版集群</p></td>
-     <td><p>4096</p></td>
-     <td><p>在 Dedicated 版集群中，您可以为每个 Collection 创建最多 4096 个 Partition。</p></td>
+     <td><p>4,096</p></td>
+     <td><p>在 Dedicated 版集群中，您可以为每个 Collection 创建最多 4,096 个 Partition。</p></td>
    </tr>
 </table>
 
@@ -284,6 +295,10 @@ import Admonition from '@theme/Admonition';
    <tr>
      <th></th>
      <th><p>Insert rate limits</p></th>
+   </tr>
+   <tr>
+     <td><p>Serverless 版集群</p></td>
+     <td><p>10 MB/s</p></td>
    </tr>
    <tr>
      <td><p>Dedicated 版集群（1-2 CU）</p></td>
