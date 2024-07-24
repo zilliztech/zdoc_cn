@@ -39,7 +39,15 @@ jobs:
       run: |
         npx docusaurus report-to-lark -m "🔥 所有文档已成功获取！开始构建文档站点..."
         npm run build
+      env:
+        APP_ID: ${{ secrets.APP_ID }}
+        APP_SECRET: ${{ secrets.APP_SECRET }}
+        FEISHU_HOST: ${{ vars.FEISHU_HOST }}
     - name: check links
+      env:
+        APP_ID: ${{ secrets.APP_ID }}
+        APP_SECRET: ${{ secrets.APP_SECRET }}
+        FEISHU_HOST: ${{ vars.FEISHU_HOST }}
       run: |
         npx docusaurus report-to-lark -m "🔥 文档站点构建成功！开始检查链接..."
         npx docusaurus link-checks

@@ -34,10 +34,18 @@ jobs:
         SPACE_ID: ${{ secrets.SPACE_ID }}
         FIGMA_API_KEY: ${{ secrets.FIGMA_API_KEY }}
     - name: build docsite
+      env:
+        APP_ID: ${{ secrets.APP_ID }}
+        APP_SECRET: ${{ secrets.APP_SECRET }}
+        FEISHU_HOST: ${{ vars.FEISHU_HOST }}
       run: |
         npx docusaurus report-to-lark -m "🔥 已获取所有文档！开始构建文档站点……"
         npm run build
     - name: check links
+      env:
+        APP_ID: ${{ secrets.APP_ID }}
+        APP_SECRET: ${{ secrets.APP_SECRET }}
+        FEISHU_HOST: ${{ vars.FEISHU_HOST }}
       run: |
         npx docusaurus report-to-lark -m "🔥 文档站点构建成功！开始检查链接……"
         npx docusaurus link-checks
