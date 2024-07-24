@@ -17,6 +17,7 @@ jobs:
     - name: fetch docs
       run: |
         yarn
+        npx docusaurus report-to-lark -m "🔥 开始构建中文文档..."
         npx docusaurus fetch-lark-docs -man guides -tar saas
         npx docusaurus fetch-lark-docs -man guides -tar saas -post
         npx docusaurus fetch-lark-docs -man python -tar zilliz
@@ -36,9 +37,11 @@ jobs:
         FIGMA_API_KEY: ${{ secrets.FIGMA_API_KEY }}
     - name: build docsite
       run: |
+        npx docusaurus report-to-lark -m "🔥 所有文档已成功获取！开始构建文档站点..."
         npm run build
     - name: check links
       run: |
+        npx docusaurus report-to-lark -m "🔥 文档站点构建成功！开始检查链接..."
         npx docusaurus link-checks
     - name: commit to dev
       uses: stefanzweifel/git-auto-commit-action@v5
@@ -46,4 +49,38 @@ jobs:
         branch: dev
         create_branch: true
         push_options: --force
+  failure:
+    needs: fetch
+    runs-on: ubuntu-latest
+    if: failure()
+    steps:
+    - name: set up Environment
+      uses: actions/setup-node@v4.0.1
+    - name: checkout repo
+      uses: actions/checkout@v4
+    - name: report failure
+      run : |
+        yarn
+        npx docusaurus report-to-lark -m "🔥 构建失败！请检查日志。"
+      env:
+        APP_ID: ${{ secrets.APP_ID }}
+        APP_SECRET: ${{ secrets.APP_SECRET }}
+        FEISHU_HOST: ${{ vars.FEISHU_HOST }}
+  success:
+    needs: fetch
+    runs-on: ubuntu-latest
+    if: success()
+    steps:
+    - name: set up Environment
+      uses: actions/setup-node@v4.0.1
+    - name: checkout repo
+      uses: actions/checkout@v4
+    - name: report success
+      run : |
+        yarn
+        npx docusaurus report-to-lark -m "🔥 构建成功！可以前往 Jenkins 进行正式构建！"
+      env:
+        APP_ID: ${{ secrets.APP_ID }}
+        APP_SECRET: ${{ secrets.APP_SECRET }}
+        FEISHU_HOST: ${{ vars.FEISHU_HOST }}  
       
