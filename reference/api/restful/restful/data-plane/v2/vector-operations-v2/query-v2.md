@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 31
+sidebar_position: 63
 slug: /restful/query-v2
 title: 查询
 ---
@@ -76,7 +76,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/entities
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string",
     "filter": "string",
     "outputFields": [],
@@ -86,7 +85,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/entities
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>数据库的名称。  |
 | __collectionName__ | __string__  <br/>此操作适用的 Collection 的名称。  |
 | __filter__ | __string__  <br/>用于查找搜索匹配项的过滤器。  |
 | __outputFields__ | __array__<br/>与搜索结果一起返回的字段数组。 |

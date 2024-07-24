@@ -50,5 +50,17 @@
     {
         "name": "alias-operations-v2",
         "description": "本系列 API 提供了管理 Collection 别名的相关接口。"
+    },
+    {
+        "name": "cloud-meta-v2",
+        "description": "本系列 API 提供了查看云服务提供商和云地域的相关接口。"
+    },
+    {
+        "name": "cluster-operations-v2",
+        "description": "本系列 API 提供了管理托管在指定云服务上的 Zilliz Cloud 集群。"
+    },
+    {
+        "name": "import-operations-v2",
+        "description": "本系列 API 提供了大规模数据导入的相关接口"
     }
 ]

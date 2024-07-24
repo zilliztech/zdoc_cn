@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 13
+sidebar_position: 17
 slug: /restful/list-import-jobs
 title: 查看数据导入任务
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 列出指定集群上的数据导入任务。
 
-<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/vector/collections/import/list" />
+<RestHeader method="get" endpoint="https://controller.${CLOUD_REGION}.vectordb.cloud.zilliz.com.cn:19530/v1/vector/collections/import/list" />
 
 ---
 

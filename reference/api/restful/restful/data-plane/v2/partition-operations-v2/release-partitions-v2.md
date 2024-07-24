@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 58
+sidebar_position: 56
 slug: /restful/release-partitions-v2
 title: 释放 Partition
 ---
@@ -41,7 +41,6 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string",
     "partitionNames": []
 }
@@ -49,7 +48,6 @@ import RestHeader from '@site/src/components/RestHeader';
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>Collection 所属数据库的名称。设置为不存在的数据库会导致错误。  |
 | __collectionName__ | __string__  <br/>目标 Collection 的名称。设置为不存在的 Collection 会导致错误。  |
 | __partitionNames__ | __array__<br/>目标 Partition 的名称列表。 |
 | __partitionNames[]__ | __string__  <br/>  |

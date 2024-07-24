@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 执行一个指定的 Pipeline。
 
-<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/pipeline/{PIPELINE_ID}/run" />
+<RestHeader method="post" endpoint="https://controller.${CLOUD_REGION}.vectordb.cloud.zilliz.com.cn:19530/v1/pipeline/{PIPELINE_ID}/run" />
 
 ---
 
@@ -305,7 +305,8 @@ import RestHeader from '@site/src/components/RestHeader';
             ]
         },
         "usage": {
-            "embedding": "integer"
+            "embedding": "integer",
+            "rerank": "integer"
         }
     }
 }
@@ -336,6 +337,7 @@ import RestHeader from '@site/src/components/RestHeader';
 | __results[][opt_3][].image_title__ | __string__  <br/>搜索到的图像的标题。  |
 | __data.usage__ | __object__<br/>Token使用统计。 |
 | __data.usage.embedding__ | __integer__  <br/>嵌入中使用的token数量。  |
+| __data.usage.rerank__ | __integer__  <br/>Number of tokens used for reranking.  |
 
 #### 选项 3: 
 

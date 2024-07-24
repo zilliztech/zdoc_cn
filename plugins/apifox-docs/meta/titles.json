@@ -28,7 +28,7 @@
     "创建 Pipeline": "create-pipeline",
     "查看 Pipeline 列表": "list-pipelines",
     "执行 Pipeline": "run-pipeline",
-    "查看集群指标": "query-metrics",
+    "查看指标": "query-metrics",
     "删除": "delete",
     "插入": "insert",
     "查询": "query",
@@ -69,5 +69,11 @@
     "修改 Alias": "alter-alias",
     "删除 Alias": "drop-alias",
     "创建 Alias": "create-alias",
-    "混合搜索": "hybrid-search"
+    "混合搜索": "hybrid-search",
+    "创建导入任务": "create-import-jobs",
+    "查看导入任务列表": "list-import-jobs",
+    "查看导入任务进度": "get-import-job-progress",
+    "创建 Dedicated 集群": "create-dedicated-cluster",
+    "创建 Free 集群": "create-free-cluster",
+    "查看集群指标": "query-cluster-metrics"
 }

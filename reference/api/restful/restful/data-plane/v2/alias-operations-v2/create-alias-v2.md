@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 73
+sidebar_position: 70
 slug: /restful/create-alias-v2
 title: 创建 Alias
 ---
@@ -58,7 +58,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/aliases/
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string",
     "aliasName": "string"
 }
@@ -66,7 +65,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/aliases/
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>Collection 所属的数据库的名称。  |
 | __collectionName__ | __string__  <br/>要重新分配 Alias 的目标 Collection 的名称。  |
 | __aliasName__ | __string__  <br/>Collection 的 Alias。  |
 

@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 48
+sidebar_position: 31
 slug: /restful/describe-role-v2
 title: 查看角色详情
 ---

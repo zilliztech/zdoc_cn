@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 62
+sidebar_position: 87
 slug: /restful/revoke-role-from-user-v2
 title: 从用户撤销角色
 ---

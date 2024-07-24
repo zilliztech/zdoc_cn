@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 54
+sidebar_position: 22
 slug: /restful/describe-index-v2
 title: 查看索引详情
 ---
@@ -71,7 +71,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/indexes/
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string",
     "indexName": "string"
 }
@@ -79,7 +78,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/indexes/
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>Collection 所属的数据库名称。  |
 | __collectionName__ | __string__  <br/>索引所属的 Collection 名称。  |
 | __indexName__ | __string__  <br/>要描述的索引的名称。  |
 

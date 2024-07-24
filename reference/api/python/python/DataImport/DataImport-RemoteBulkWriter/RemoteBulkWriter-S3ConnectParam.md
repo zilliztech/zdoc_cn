@@ -64,16 +64,16 @@ connect_param = S3ConnectParam(
 
     <table>
        <tr>
-         <th><p><strong>Service Name</strong></p></th>
-         <th><p><strong>Endpoint</strong></p></th>
+      <th><p><strong>Service Name</strong></p></th>
+      <th><p><strong>Endpoint</strong></p></th>
        </tr>
        <tr>
-         <td><p><strong>AWS S3</strong></p></td>
-         <td><p>s3.amazonaws.com</p></td>
+      <td><p><strong>AWS S3</strong></p></td>
+      <td><p>s3.amazonaws.com</p></td>
        </tr>
        <tr>
-         <td><p><strong>GCS</strong></p></td>
-         <td><p>storage.googleapis.com</p></td>
+      <td><p><strong>GCS</strong></p></td>
+      <td><p>storage.googleapis.com</p></td>
        </tr>
     </table>
 

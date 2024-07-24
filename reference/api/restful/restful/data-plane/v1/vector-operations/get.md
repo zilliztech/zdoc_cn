@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 28
+sidebar_position: 76
 slug: /restful/get
 title: 按 ID 查询
 ---

@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 46
+sidebar_position: 65
 slug: /restful/grant-role-to-user-v2
 title: 给用户分配角色
 ---

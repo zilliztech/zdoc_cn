@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 57
+sidebar_position: 52
 slug: /restful/load-partitions-v2
 title: 加载 Partition
 ---
@@ -62,7 +62,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/partitio
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string",
     "partitionNames": []
 }
@@ -70,7 +69,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/partitio
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>Collection 所属数据库的名称。设置为不存在的数据库会导致错误。  |
 | __collectionName__ | __string__  <br/>目标 Collection 的名称。设置为不存在的 Collection 会导致错误。  |
 | __partitionNames__ | __array__<br/>目标 Partition 的名称列表。 |
 | __partitionNames[]__ | __string__  <br/>  |

@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 17
+sidebar_position: 13
 slug: /restful/list-pipelines
 title: 查看 Pipeline 列表
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 列出指定项目中的所有 Pipeline。
 
-<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/pipelines" />
+<RestHeader method="get" endpoint="https://controller.${CLOUD_REGION}.vectordb.cloud.zilliz.com.cn:19530/v1/pipelines" />
 
 ---
 
@@ -106,7 +106,11 @@ curl --request GET \
 
 ### 参数
 
-- 无查询参数。
+- 查询参数
+
+    | 参数名称          | 参数说明                                                                               |
+    |------------------|-------------------------------------------------------------------------------------------|
+    | `projectId`  | **string**<br/>The ID of the project to which this pipeline belongs.|
 
 - 无路径参数。
 
@@ -152,6 +156,13 @@ No request body required
 | __data[][opt_1][].functions[].[opt_1].langauge__ | __string__  <br/>您的文档使用的语言。可能的值是 `english` 或 `chinese`。该参数仅适用于 Ingestion Pipeline。  |
 | __data[][opt_1][].functions[].[opt_1].embedding__ | __string__  <br/>使用的嵌入模型的名称。  |
 | __data[][opt_1][].functions[].[opt_2]__ | __object__<br/> |
+| __data[][opt_1][].functions[].[opt_2].name__ | __string__  <br/>Name of the function to create.  |
+| __data[][opt_1][].functions[].[opt_2].action__ | __string__  <br/>Type of the function to create. For an ingestion pipeline,  possible values are `INDEX_DOC` and `PRESERVE`.  |
+| __data[][opt_1][].functions[].[opt_2].inputField__ | __string__  <br/>Name the field according to your needs. In an `INDEX_DOC` function of an ingestion pipeline, use it for pre-signed document URLs in GCS or AWS S3 buckets.  |
+| __data[][opt_1][].functions[].[opt_2].langauge__ | __string__  <br/>Language that your document is in. Possible values are `english` or `chinese`. The parameter applies only to ingestion pipelines.  |
+| __data[][opt_1][].functions[].[opt_2].chunkSize__ | __integer__  <br/>The maximum size of a splitted document segment.  |
+| __data[][opt_1][].functions[].[opt_2].embedding__ | __string__  <br/>Name of the embedding model in use.  |
+| __data[][opt_1][].functions[].[opt_2].splitBy__ | __string__  <br/>The splitters that Zilliz Cloud uses to split the specified docs.  |
 | __data[][opt_1][].functions[].[opt_3]__ | __object__<br/> |
 | __data[][opt_1][].functions[].[opt_3].name__ | __string__  <br/>要创建的函数的名称。  |
 | __data[][opt_1][].functions[].[opt_3].action__ | __string__  <br/>要创建的函数类型。对于 Ingestion Pipeline，可能的值是 `INDEX_DOC` 和 `PRESERVE`。  |

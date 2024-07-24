@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 60
+sidebar_position: 62
 slug: /restful/has-partition-v2
 title: 查看 Partition 是否存在
 ---
@@ -61,7 +61,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/partitio
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string",
     "partitionName": "string"
 }
@@ -69,7 +68,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/partitio
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>一个现有数据库的名称。该值默认为 __default__。  |
 | __collectionName__ | __string__  <br/>现有 Collection 的名称。  |
 | __partitionName__ | __string__  <br/>要测试的 Partition 的名称。  |
 

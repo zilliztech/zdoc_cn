@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 41
+sidebar_position: 27
 slug: /restful/create-user-v2
 title: 创建用户
 ---

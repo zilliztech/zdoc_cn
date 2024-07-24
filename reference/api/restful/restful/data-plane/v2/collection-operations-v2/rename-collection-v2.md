@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 33
+sidebar_position: 80
 slug: /restful/rename-collection-v2
 title: 重命名 Collection
 ---
@@ -60,19 +60,14 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/collecti
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string",
-    "newDbName": "string",
     "newCollectionName": "string"
 }
 ```
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>Collection 所属的数据库名称。<br/>将其设置为一个不存在的数据库将导致错误。  |
 | __collectionName__ | __string__  <br/>目标 Collection 的名称。<br/>将其设置为一个不存在的 Collection 将导致错误。  |
-| __newDbName__ | __string__  <br/>此操作后 Collection 所属的数据库名称。<br/>该值默认为**default**。将其设置为一个数据库而不是 Collection 在此操作前所属的数据库将移动该 Collection 到指定的数据库。
-将其设置为一个不存在的数据库将导致错误。  |
 | __newCollectionName__ | __string__  <br/>此操作后目标 Collection 的名称。<br/>将其设置为**old_collection_name**的值将导致错误。  |
 
 ## 响应

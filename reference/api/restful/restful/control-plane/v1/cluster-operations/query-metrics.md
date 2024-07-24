@@ -1,15 +1,15 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 74
+sidebar_position: 20
 slug: /restful/query-metrics
-title: 查看集群指标
+title: 查看指标
 ---
 
 import RestHeader from '@site/src/components/RestHeader';
 
 查看指标统计信息。
 
-<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/clusters/CLUSTER_ID/metrics/query" />
+<RestHeader method="post" endpoint="https://controller.${CLOUD_REGION}.vectordb.cloud.zilliz.com.cn:19530/v1/clusters/CLUSTER_ID/metrics/query" />
 
 ---
 
@@ -76,7 +76,11 @@ curl --location --request POST "https://controller.api.${CLOUD_REGION}.zillizclo
 
 - 无路径参数。
 
-- 无请求头参数
+- 请求头参数
+
+    | Parameter        | Description                                                                               |
+    |------------------|-------------------------------------------------------------------------------------------|
+    | __Authorization__  | **string**(required)<br/>|
 
 ### 请求体
 

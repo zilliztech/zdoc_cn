@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 8
+sidebar_position: 64
 slug: /restful/suspend-cluster
 title: 挂起集群
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 挂起集群。本操作会中断集群运行，不会影响集群数据完整性。
 
-<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/clusters/{CLUSTER_ID}/suspend" />
+<RestHeader method="post" endpoint="https://controller.${CLOUD_REGION}.vectordb.cloud.zilliz.com.cn:19530/v1/clusters/{CLUSTER_ID}/suspend" />
 
 ---
 

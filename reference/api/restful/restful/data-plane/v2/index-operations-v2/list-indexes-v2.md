@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 65
+sidebar_position: 46
 slug: /restful/list-indexes-v2
 title: 查看索引
 ---
@@ -60,14 +60,12 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/indexes/
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string"
 }
 ```
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>Collection 所属数据库的名称。  |
 | __collectionName__ | __string__  <br/>一个现有 Collection 的名称。将其设置为不存在的 Collection 会导致错误。  |
 
 ## 响应

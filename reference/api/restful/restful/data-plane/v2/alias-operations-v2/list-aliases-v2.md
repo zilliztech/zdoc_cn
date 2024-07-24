@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 69
+sidebar_position: 25
 slug: /restful/list-aliases-v2
 title: 查看 Alias
 ---
@@ -61,14 +61,12 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/aliases/
 ### 请求体
 
 ```json
-{
-    "dbName": "string"
-}
+{}
 ```
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>现有的数据库的名称。其值默认为 __default__。  |
+
 
 ## 响应
 

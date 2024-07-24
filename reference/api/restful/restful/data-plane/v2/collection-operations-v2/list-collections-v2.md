@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 66
+sidebar_position: 9
 slug: /restful/list-collections-v2
 title: 查看 Collection
 ---
@@ -63,14 +63,12 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/collecti
 ### 请求体
 
 ```json
-{
-    "dbName": "string"
-}
+{}
 ```
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>一个现有数据库的名称。  |
+
 
 ## 响应
 

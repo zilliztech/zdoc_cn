@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 29
+sidebar_position: 8
 slug: /restful/delete-v2
 title: 删除
 ---
@@ -60,7 +60,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/entities
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string",
     "filter": "string",
     "partitionName": "string"
@@ -69,7 +68,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/entities
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>目标数据库的名称。  |
 | __collectionName__ | __string__  <br/>现有 Collection 的名称。  |
 | __filter__ | __string__  <br/>用于筛选匹配 Entity 的标量过滤条件。   该值默认为空字符串，表示不应用任何条件。同时设置**id**和**filter**会导致错误。<br/>您可以将此参数设置为空字符串以跳过标量过滤。构建标量过滤条件时，请参阅[布尔表达式规则](https://milvus.io/docs/boolean.md)。  |
 | __partitionName__ | __string__  <br/>当前 Collection 中的一个 Partition 的名称。<br/>如果指定，数据将从指定的 Partition 中删除。  |

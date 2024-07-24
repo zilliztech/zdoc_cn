@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 6
+sidebar_position: 53
 slug: /restful/modify-cluster
 title: 修改集群配置
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 修改指定集群的配置。当前，仅支持修改集群使用的 CU 大小。
 
-<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/clusters/{CLUSTER_ID}/modify" />
+<RestHeader method="post" endpoint="https://controller.${CLOUD_REGION}.vectordb.cloud.zilliz.com.cn:19530/v1/clusters/{CLUSTER_ID}/modify" />
 
 ---
 

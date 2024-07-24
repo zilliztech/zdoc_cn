@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 53
+sidebar_position: 33
 slug: /restful/drop-index-v2
 title: 删除索引
 ---
@@ -59,7 +59,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/indexes/
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string",
     "indexName": "string"
 }
@@ -67,7 +66,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/indexes/
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>Collection 所属的数据库名称。<br/>设置为不存在的数据库将导致错误。  |
 | __collectionName__ | __string__  <br/>目标 Collection 的名称。<br/>设置为不存在的 Collection 将导致错误。  |
 | __indexName__ | __string__  <br/>目标索引的名称。  |
 

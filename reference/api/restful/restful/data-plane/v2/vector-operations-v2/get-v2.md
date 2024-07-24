@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 36
+sidebar_position: 74
 slug: /restful/get-v2
 title: 获取
 ---
@@ -77,7 +77,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/entities
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string",
     "outputFields": [],
     "partitionNames": []
@@ -86,7 +85,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/entities
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>数据库的名称。  |
 | __collectionName__ | __string__  <br/>此操作适用的 Collection 的名称。  |
 | __id__ | __integer__ \| __string__ \| __array__ \| __array__<br/>特定的 Entity ID或 Entity ID列表。 |
 | __id[opt_1]__ | __integer__  <br/>  |

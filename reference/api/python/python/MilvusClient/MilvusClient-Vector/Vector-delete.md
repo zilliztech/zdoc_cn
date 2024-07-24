@@ -60,6 +60,12 @@ delete(
 
     You can set this parameter to an empty string to skip scalar filtering. To build a scalar filtering condition, refer to [Boolean Expression Rules](https://milvus.io/docs/boolean.md). 
 
+    <Admonition type="info" icon="📘" title="Notes">
+
+    <p>When using filter expressions to delete entities, ensure the collection has been loaded. Otherwise, Zilliz Cloud will return an error.</p>
+
+    </Admonition>
+
 - **partition_name** (*str* | *""*) -
 
     The name of the partition to delete entities from.

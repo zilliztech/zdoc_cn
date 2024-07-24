@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 37
+sidebar_position: 71
 slug: /restful/search-v2
 title: 搜索
 ---
@@ -82,7 +82,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/entities
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string",
     "data": [],
     "annsField": "string",
@@ -104,7 +103,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/entities
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>数据库的名称。  |
 | __collectionName__ | __string__  <br/>此操作适用的 Collection 的名称。  |
 | __data__ | __array__<br/>向量嵌入的列表。<br/><include target="milvus">Milvus</include><include target="zilliz">Zilliz Cloud</include> 搜索与指定向量嵌入最相似的向量嵌入。 |
 | __data[]__ | __number__ (float32) <br/>向量嵌入  |
@@ -118,7 +116,7 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/entities
 | __outputFields__ | __array__<br/>与搜索结果一起返回的字段数组。 |
 | __outputFields[]__ | __string__  <br/>字段名称  |
 | __searchParams__ | __object__<br/>特定于此操作的参数设置。 |
-| __searchParams.metricType__ | __string__  <br/>适用于当前搜索的度量类型名称。该值应与目标 Collection 的度量类型相同。<br/>The value defaults to COSINE  |
+| __searchParams.metricType__ | __string__  <br/>适用于当前搜索的度量类型名称。该值应与目标 Collection 的度量类型相同。<br/>The value defaults to COSINE<br/>Possible values: "**L2**", "**IP**", "**COSINE**"  |
 | __searchParams.params__ | __object__<br/>额外的搜索参数。 |
 | __searchParams.params.radius__ | __integer__  <br/>确定最相似度的阈值。当将 metric_type 设置为 L2 时，确保此值大于 range_filter 的值。否则，此值应低于 range_filter 的值。  |
 | __searchParams.params.range_filter__ | __integer__  <br/>将搜索细化到特定相似度范围内的向量。当将 metric_type 设置为 IP 或 COSINE 时，确保此值大于 radius 的值。否则，此值应低于 radius 的值。  |

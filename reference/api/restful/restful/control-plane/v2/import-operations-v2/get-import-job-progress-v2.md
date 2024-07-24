@@ -1,0 +1,173 @@
+---
+displayed_sidebar: restfulSidebar
+sidebar_position: 39
+slug: /restful/get-import-job-progress-v2
+title: 查看导入任务进度
+---
+
+import RestHeader from '@site/src/components/RestHeader';
+
+Retrieves the progress of a specified import job.
+
+import Admonition from '@theme/Admonition';
+
+<Admonition type="info" icon="📘" title="Notes">
+    
+You can use either of the following ways to authorize:
+<ul>
+<li> An API Key with appropriate permissions.</li>
+<li>A colon-joined username and password of the target cluster. For example, `username:passowrd`.</li>
+</ul>
+    
+</Admonition>
+## Example
+
+```shell
+export API_KEY=""
+
+curl --location --request POST "https://api.cloud.zilliz.com/v2/vectordb/jobs/import/getProgress" \
+--header "Authorization: Bearer ${API_KEY}" \
+--header "Content-Type: application/json" \
+--data-raw '{
+    "clusterId": "inxx-xxxxxxxxxxxxxxx",
+    "jobId": 44870776388440916
+}'
+```
+Possible response is similar to the following.
+```json
+{
+    "code": 0,
+    "data": {
+        "jobId": "448761313698322011",
+        "collectionName": "medium_articles",
+        "fileName":"medium_articles_2020_dpr.json",
+        "fileSize": 3279917,
+        "state": "Completed",
+        "progress": 100,
+        "completeTime": "2024-04-01T06:17:55Z",
+        "reason":"",
+        "totalRows": 100000,
+        "details": [
+            {
+                "fileName": "medium_articles_2020_dpr.json",
+                "fileSize": 3279917,
+                "state": "Completed",
+                "progress": 100,
+                "completeTime": "2024-04-01T06:17:53Z",
+                "reason":""
+            }
+        ]
+    }
+}
+```
+
+<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/vectordb/jobs/import/getProgress" />
+
+---
+
+## 示例
+
+
+
+# RESTful API Examples
+
+
+
+
+## 请求
+
+### 参数
+
+- 无查询参数。
+
+- 无路径参数。
+
+- 请求头参数
+
+    | Parameter        | Description                                                                               |
+    |------------------|-------------------------------------------------------------------------------------------|
+    | __Authorization__  | **string**(required)<br/>The authorization token. You should always use an API key with appropriate permissions.|
+    | __Accept__  | **string**<br/>Use `application/json`.|
+
+### 请求体
+
+```json
+{
+    "jobId": "string",
+    "clusterId": "string"
+}
+```
+
+| 参数名称          | 参数描述                                                                               |
+|------------------|-------------------------------------------------------------------------------------------|
+| __jobId__ | __string__  <br/>The ID of the import job in concern  |
+| __clusterId__ | __string__  <br/>The ID of a cluster to which this operation applies.  |
+
+## 响应
+
+Returns the progress of a specified import job.
+
+### 响应体
+
+```json
+{
+    "code": "string",
+    "data": {
+        "jobId": "string",
+        "collectionName": "string",
+        "fileName": "string",
+        "fileSize": "integer",
+        "state": "string",
+        "progress": "integer",
+        "completeTime": "string",
+        "reason": "string",
+        "totalRows": "integer",
+        "details": [
+            {
+                "fileName": "string",
+                "fileSize": "integer",
+                "state": "string",
+                "progress": "integer",
+                "completeTime": "string",
+                "reason": "string"
+            }
+        ]
+    }
+}
+```
+
+| 属性名称 | 属性描述                                                                                                                                    |
+|----------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __data__ | __object__<br/>Response payload. |
+| __data.jobId__ | __string__  <br/>ID of an import job.  |
+| __data.collectionName__ | __string__  <br/>Target collection name of the import job.  |
+| __data.fileName__ | __string__  <br/>Path of the data file object in the object storage.  |
+| __data.fileSize__ | __integer__  <br/>Size of the data file object.  |
+| __data.state__ | __string__  <br/>State of this import job. Possible values are Pending, Importing, Completed, and Failed.  |
+| __data.progress__ | __integer__  <br/>Progress in percentage of the current import job.  |
+| __data.completeTime__ | __string__  <br/>Timestamp indicating when the import job is complete.  |
+| __data.reason__ | __string__  <br/>Reason for the failure to import data.  |
+| __data.totalRows__ | __integer__  <br/>Number of rows in the specified collection.  |
+| __data[].details__ | __array__<br/>Statistics on data import oriented to data files. |
+| __data[].details[]__ | __object__<br/> |
+| __data[].details[].fileName__ | __string__  <br/>The name of a data file.  |
+| __data[].details[].fileSize__ | __integer__  <br/>The size of the data file.  |
+| __data[].details[].state__ | __string__  <br/>The processing state of the data file. Possible values are Pending, Importing, Completed, and Failed.  |
+| __data[].details[].progress__ | __integer__  <br/>The progress in percentage.  |
+| __data[].details[].completeTime__ | __string__  <br/>The timestamp at which the file is processed.  |
+| __data[].details[].reason__ | __string__  <br/>The reason for the failure to import data.  |
+
+### 错误响应
+
+```json
+{
+    "code": integer,
+    "message": string
+}
+```
+
+| 属性名称    | 属性描述                                                                                                                                    |
+|-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __message__ | **string**<br/>表示错误信息。                                                                        |

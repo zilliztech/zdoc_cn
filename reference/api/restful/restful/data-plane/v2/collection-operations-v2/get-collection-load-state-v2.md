@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 64
+sidebar_position: 86
 slug: /restful/get-collection-load-state-v2
 title: 获取 Collection 加载状态
 ---
@@ -57,7 +57,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/collecti
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string",
     "partitionNames": "string"
 }
@@ -65,7 +64,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/collecti
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>Collection 所属的数据库的名称。  |
 | __collectionName__ | __string__  <br/>Collection 的名称。  |
 | __partitionNames__ | __string__  <br/>Partition 名称的列表。如果指定了任何 Partition 名称，释放其中任何 Partition 都会导致返回 NotLoad 状态。  |
 

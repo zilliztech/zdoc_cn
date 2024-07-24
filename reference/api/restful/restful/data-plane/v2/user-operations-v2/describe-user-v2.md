@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 44
+sidebar_position: 40
 slug: /restful/describe-user-v2
 title: 查看用户详情
 ---

@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 52
+sidebar_position: 16
 slug: /restful/create-index-v2
 title: 创建索引
 ---
@@ -69,7 +69,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/indexes/
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string",
     "indexParams": [
         {
@@ -77,7 +76,10 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/indexes/
             "fieldName": "string",
             "indexName": "string",
             "params": {
-                "index_type": "string"
+                "index_type": "string",
+                "M": "integer",
+                "efConstruction": "integer",
+                "nlist": "integer"
             }
         }
     ]
@@ -86,15 +88,17 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/indexes/
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>Collection 所属的数据库名称。<br/>设置为不存在的数据库将导致错误。  |
 | __collectionName__ | __string__  <br/>目标 Collection 的名称。<br/>设置为不存在的 Collection 将导致错误。  |
 | __indexParams__ | __array__<br/>应用于索引构建过程的参数。 |
 | __indexParams[]__ | __object__<br/> |
-| __indexParams[].metricType__ | __string__  <br/>用于构建索引的相似性度量类型。<br/>The value defaults to COSINE  |
+| __indexParams[].metricType__ | __string__  <br/>用于构建索引的相似性度量类型。<br/>The value defaults to COSINE<br/>Possible values: "**L2**", "**IP**", "**COSINE**"  |
 | __indexParams[].fieldName__ | __string__  <br/>要创建索引的目标字段名称。  |
 | __indexParams[].indexName__ | __string__  <br/>要创建的索引的名称，该值默认为目标字段名称。  |
 | __indexParams[].params__ | __object__<br/>索引类型及相关信息。详细信息，请参阅 [向量索引](https://milvus.io/docs/index.md)。 |
 | __indexParams[].params.index_type__ | __string__  <br/>要创建的索引类型  |
+| __indexParams[].params.M__ | __integer__  <br/>节点的最大度数，仅当 index_type 设置为 __HNSW__ 时适用。  |
+| __indexParams[].params.efConstruction__ | __integer__  <br/>搜索范围。仅当 **index_type** 设置为 **HNSW** 时适用  |
+| __indexParams[].params.nlist__ | __integer__  <br/>聚簇单元的数量。适用于 IVF 相关的索引类型。  |
 
 ## 响应
 

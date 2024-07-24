@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 56
+sidebar_position: 84
 slug: /restful/release-collection-v2
 title: 释放 Collection
 ---
@@ -57,14 +57,12 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/collecti
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string"
 }
 ```
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>Collection 所属的数据库名称。<br/>设置为不存在的数据库将导致 **MilvusException**。  |
 | __collectionName__ | __string__  <br/>目标 Collection 的名称。<br/>设置为不存在的 Collection 将导致 **MilvusException**。  |
 
 ## 响应

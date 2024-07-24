@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 75
+sidebar_position: 72
 slug: /restful/hybrid-search-v2
 title: 混合搜索
 ---
@@ -121,7 +121,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/entities
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string",
     "partitionNames": [],
     "search": [
@@ -153,7 +152,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/entities
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>数据库的名称。  |
 | __collectionName__ | __string__  <br/>此操作应用的 Collection 的名称。  |
 | __partitionNames__ | __array__<br/>此操作应用的 Partition 的名称。 |
 | __partitionNames[]__ | __string__  <br/>Partition 名称  |
@@ -164,7 +162,7 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/entities
 | __search[].annsField__ | __string__  <br/>向量字段的名称。  |
 | __search[].filter__ | __string__  <br/>布尔表达式过滤器。  |
 | __search[].groupingField__ | __string__  <br/>作为聚合条件的字段名称。  |
-| __search[].metricType__ | __string__  <br/>适用于当前搜索的度量类型的名称。该值应与目标 Collection 的度量类型相同。<br/>The value defaults to COSINE  |
+| __search[].metricType__ | __string__  <br/>适用于当前搜索的度量类型的名称。该值应与目标 Collection 的度量类型相同。<br/>The value defaults to COSINE<br/>Possible values: "**L2**", "**IP**", "**COSINE**"  |
 | __search[].limit__ | __integer__  <br/>要返回的 Entity 数量。  |
 | __search[].offset__ | __integer__  <br/>在返回的实体中要跳过的 Entity 数量。  |
 | __search[].ignoreGrowing__ | __boolean__  <br/>是否忽略在增长段中发现的 Entity。  |
@@ -172,7 +170,7 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/entities
 | __search[].params.radius__ | __integer__  <br/>确定最小相似度的阈值。当将 metric_type 设置为 L2 时，确保此值大于 range_filter 的值。否则，此值应小于 range_filter 的值。  |
 | __search[].params.range_filter__ | __integer__  <br/>将搜索细化到特定相似度范围内的向量。当将 metric_type 设置为 IP 或 COSINE 时，确保此值大于 radius 的值。否则，此值应小于 radius 的值。  |
 | __rerank__ | __object__<br/>重新排序策略 (Reranking Strategy)。 |
-| __rerank.strategy__ | __string__  <br/>重新排序策略 (Reranking Strategy) 的名称。  |
+| __rerank.strategy__ | __string__  <br/>重新排序策略 (Reranking Strategy) 的名称。<br/>Possible values: "**rrf**", "**ws**"  |
 | __rerank.params__ | __object__<br/>与指定策略相关的一组参数。 |
 | __rerank.params.k__ | __integer__  <br/>RRF 算法中的可调常数。这只在策略设置为 `rrf` 时适用。  |
 | __limit__ | __integer__  <br/>要返回的 Entity 总数。<br/>您可以将此参数与 param 中的 offset 结合使用以启用分页。

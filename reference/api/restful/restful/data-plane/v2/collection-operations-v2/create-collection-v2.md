@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 59
+sidebar_position: 29
 slug: /restful/create-collection-v2
 title: 创建 Collection
 ---
@@ -183,7 +183,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/collecti
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string",
     "dimension": "integer",
     "metricType": "string",
@@ -215,7 +214,10 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/collecti
             "fieldName": "string",
             "indexName": "string",
             "params": {
-                "index_type": "string"
+                "index_type": "string",
+                "M": "integer",
+                "efConstruction": "integer",
+                "nlist": "integer"
             }
         }
     ],
@@ -232,10 +234,9 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/collecti
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>数据库的名称。<zilliz>此参数仅适用于专属集群。</zilliz>  |
 | __collectionName__ | __string__  <br/>要创建的 Collection 的名称。  |
 | __dimension__ | __integer__  <br/>向量值应具有的维度数。<br/>如果此字段的**dtype**设置为**DataType.FLOAT_VECTOR**，则此参数是必需的。  |
-| __metricType__ | __string__  <br/>应用于此操作的度量类型。<br/>可能的值是**L2**, **IP**, 和 **COSINE**。<br/>The value defaults to COSINE  |
+| __metricType__ | __string__  <br/>应用于此操作的度量类型。<br/>可能的值是**L2**, **IP**, 和 **COSINE**。<br/>The value defaults to COSINE<br/>Possible values: "**L2**", "**IP**", "**COSINE**"  |
 | __idType__ | __string__  <br/>主字段的数据类型。此参数设计用于 Collection 的快速设置，如果定义了__schema__，则会忽略此参数。  |
 | __autoID__ | __string__  <br/>主字段是否自动递增。此参数设计用于 Collection 的快速设置，如果定义了__schema__，则会忽略此参数。<br/>The value defaults to false  |
 | __primaryFieldName__ | __string__  <br/>主字段的名称。此参数设计用于 Collection 的快速设置，如果定义了__schema__，则会忽略此参数。  |
@@ -256,11 +257,14 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/collecti
 | __schema[].fields[].elementTypeParams.max_capacity__ | __integer__  <br/>数组字段值的可选参数，确定当前数组字段中元素的最大数量。  |
 | __indexParams__ | __array__<br/>应用于索引构建过程的参数。 |
 | __indexParams[]__ | __object__<br/> |
-| __indexParams[].metricType__ | __string__  <br/>用于构建索引的相似性度量类型。<br/>The value defaults to COSINE  |
+| __indexParams[].metricType__ | __string__  <br/>用于构建索引的相似性度量类型。<br/>The value defaults to COSINE<br/>Possible values: "**L2**", "**IP**", "**COSINE**"  |
 | __indexParams[].fieldName__ | __string__  <br/>要创建索引的目标字段的名称。  |
 | __indexParams[].indexName__ | __string__  <br/>要创建的索引的名称，该值默认为目标字段名称。  |
 | __indexParams[].params__ | __object__<br/>索引类型及相关设置。详细信息，请参阅[向量索引](https://milvus.io/docs/index.md)。 |
 | __indexParams[].params.index_type__ | __string__  <br/>要创建的索引类型  |
+| __indexParams[].params.M__ | __integer__  <br/>节点的最大度数，仅当index_type设置为__HNSW__时适用。  |
+| __indexParams[].params.efConstruction__ | __integer__  <br/>搜索范围。仅当index_type设置为HNSW时适用。  |
+| __indexParams[].params.nlist__ | __integer__  <br/>聚簇单元的数量。适用于IVF相关索引类型。  |
 | __params__ | __object__<br/>Collection 的额外参数。 |
 | __params.max_length__ | __integer__  <br/>VarChar 字段中的最大字符数。当当前字段类型为 VarChar 时，此参数是必填的。  |
 | __params.enableDynamicField__ | __boolean__  <br/>是否启用保留的动态字段。如果设置为 true，非模式定义的字段将作为键值对保存在保留的动态字段中。  |

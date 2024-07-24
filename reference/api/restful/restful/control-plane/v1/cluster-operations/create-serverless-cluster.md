@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 9
+sidebar_position: 68
 slug: /restful/create-serverless-cluster
 title: 创建 Serverless 集群
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 创建一个 Serverless 集群。
 
-<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/clusters/createServerless" />
+<RestHeader method="post" endpoint="https://controller.${CLOUD_REGION}.vectordb.cloud.zilliz.com.cn:19530/v1/clusters/createServerless" />
 
 ---
 
@@ -94,7 +94,7 @@ Success response:
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __plan__ | __string__  <br/>待创建集群所属订阅计划。可选值有 `free` 和 `serverless`。  |
+| __plan__ | __string__  <br/>待创建集群所属订阅计划。可选值有 `free` 和 `serverless`。<br/>Possible values: "**Free**", "**Serverless**"  |
 | __clusterName__ | __string__  <br/>待创建集群名称，长度不超过 32 个字符。  |
 | __projectId__ | __string__  <br/>待创建集群所属项目 ID。  |
 

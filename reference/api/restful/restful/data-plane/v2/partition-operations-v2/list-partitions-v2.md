@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 38
+sidebar_position: 19
 slug: /restful/list-partitions-v2
 title: 查看 Partition
 ---
@@ -60,14 +60,12 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/partitio
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string"
 }
 ```
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>目标数据库的名称。  |
 | __collectionName__ | __string__  <br/>Partition 所属的目标 Collection 的名称。  |
 
 ## 响应

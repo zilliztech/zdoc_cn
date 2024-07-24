@@ -51,7 +51,7 @@ class refGen {
         let res_desc;
 
         const page_title = specifications.paths[page_url][method].summary
-        const page_excerpt = specifications.paths[page_url][method].description
+        const page_excerpt = this.__filter_content(specifications.paths[page_url][method].description, 'zilliz')
         const page_parent = parents.filter(x => x === specifications.paths[page_url][method].tags[0])[0].split(' ').join('-').replace(/\(|\)/g, '').toLowerCase()
         const version = page_parent.includes('v2') ? 'v2' : 'v1'
         const upper_folder = page_parent.startsWith('cloud') || page_parent.startsWith('cluster') || page_parent.startsWith('import') || page_parent.startsWith('pipeline') ? 'control-plane' : 'data-plane'
@@ -59,7 +59,7 @@ class refGen {
         const page_method = method.toLowerCase()
         const host = lang === 'zh-CN' ? 'cloud.zilliz.com.cn' : 'zillizcloud.com'
         const condition = (page_slug.includes('cloud') || page_slug.includes('cluster') || page_slug.includes('import') || page_slug.includes('pipeline')) || page_slug.includes('project') || page_slug.includes('metrics')
-        const server = condition ? `https://controller.api.\${CLOUD_REGION}.${host}` : "https://\${CLUSTER_ENDPOINT}"
+        const server = condition && page_slug.includes('v2') ? 'https://api.cloud.zilliz.com' : condition ? `https://controller.\${CLOUD_REGION}.vectordb.${host}:19530` : "https://\${CLUSTER_ENDPOINT}"
 
         if (specifications.paths[page_url][method].parameters) {
           for (const param of specifications.paths[page_url][method].parameters) {
@@ -115,8 +115,10 @@ class refGen {
           res_bodies,
           sidebar_position
         }).replaceAll(/<br>/g, '<br/>')
-        
+
+        console.log(page_title)
         fs.writeFileSync(`${this.options.target_path}/${upper_folder}/${version}/${page_parent}/${page_slug}.md`, t)
+        console.log(`Generated ${page_slug}.md`)
       }
     }
 
@@ -300,7 +302,6 @@ class refGen {
   }
 
   get_slug(page_title) {
-    console.log(page_title)
     const { lang } = this.options
     if (lang == 'zh-CN') {
       const titles = JSON.parse(fs.readFileSync(`plugins/apifox-docs/meta/titles.json`, 'utf-8'))
@@ -391,6 +392,28 @@ class refGen {
             }
           }
         }
+
+        if (url.includes('v2')) {
+          const parameters = specifications.paths[url][method].parameters
+          this.__delete_parameters(parameters, ['dbName'])
+
+          if (specifications.paths[url][method].requestBody) {
+            const schema = specifications.paths[url][method].requestBody.content["application/json"].schema
+            if (schema.oneOf) {
+              for (const req_body of schema.oneOf) {
+                this.__delete_parameters(req_body.properties, ['dbName'])
+              }
+            } else if (schema.anyOf) {
+              schema.oneOf = schema.anyOf
+              delete schema.anyOf
+              for (const req_body of schema.oneOf) {
+                this.__delete_parameters(req_body.properties, ['dbName'])
+              }
+            } else {
+              this.__delete_parameters(schema.properties, ['dbName'])
+            }
+          }
+        }        
       }
     }
 
@@ -404,9 +427,10 @@ class refGen {
       var format = field.format ? `(${field.format})` : ''
       var required = field.required ? '__REQUIRED__' : ''
       var default_value = field.default ? `<br/>The value defaults to ${field.default}` : ''
-      var description = field.description ? field.description.replace('\n', '<br/>').trim() : ''
+      var description = __filter_content(field.description ? field.description : '', 'zilliz').replace('\n', '<br/>').trim()
       var value_range = ""
       var field_name = ""
+      var enumValues = ""
 
       if (parent_type == 'array' && name != '') {
         field_name = `${parent_name}[].${name}`
@@ -426,11 +450,15 @@ class refGen {
         value_range = `<br/>The value is less than or equal to ${field.maximum}.`
       }
 
-      entries.push(`| __${field_name.replace('.[', '[')}__ | __${field.type}__ ${format} ${required}<br/>${description}${default_value}${value_range}  |`)
+      if (field.enum) {
+        enumValues = `<br/>Possible values: ${field.enum.map(x => `"**${x}**"`).join(', ')}`
+      }
+
+      entries.push(`| __${field_name.replace('.[', '[')}__ | __${field.type}__ ${format} ${required}<br/>${description}${default_value}${value_range}${enumValues}  |`)
     }
 
     var process_object = function(field, name, parent_name, parent_type) {
-      var description = field.description ? field.description.replace('\n', '<br/>').trim() : ''
+      var description = __filter_content(field.description ? field.description : '', 'zilliz').replace('\n', '<br/>').trim()
       var field_name = ""
       if (parent_type == 'array' && name != '') {
         field_name = `${parent_name}[].${name}`
@@ -485,7 +513,7 @@ class refGen {
     }
 
     var process_composite = function(field, name, parent_name, parent_type) {
-      var description = field.description ? field.description.replace('\n', '<br/>').trim() : ''
+      var description = __filter_content(field.description ? field.description : '', 'zilliz').replace('\n', '<br/>').trim()
       var field_name = ""
       var possible_types = []
 
@@ -532,6 +560,74 @@ class refGen {
           }
         })
       }      
+    }
+
+    var __filter_content = function (markdown, targets) {
+      const matches = __match_filter_tags(markdown)
+
+      if (matches.length > 0) {
+          var preText = markdown.slice(0, matches[0].startIndex)
+          var matchText = markdown.slice(matches[0].startIndex, matches[0].endIndex)
+          var postText = markdown.slice(matches[0].endIndex)
+          var isTargetValid = targets.split('.').includes(matches[0].target.trim())
+          var startTagLength = `<${matches[0].tag} target="${matches[0].target}">`.length
+          var endTagLength = `</${matches[0].tag}>`.length
+
+          if (matches[0].tag == 'include' && isTargetValid || matches[0].tag == 'exclude' && !isTargetValid) {
+              matchText = matchText.slice(startTagLength, -endTagLength)
+          }
+
+          if (matches[0].tag == 'include' && !isTargetValid || matches[0].tag == 'exclude' &&  isTargetValid) {
+              matchText = ""
+          }
+
+          markdown = __filter_content(preText + matchText + postText, targets)
+      }
+
+      return markdown.replace(/(\s*\n){3,}/g, '\n\n')
+          .replace(/<br>/g, '<br/>')
+          .replace(/(<br\/>){2,}/, "<br/>")
+          .replace("<br\/></p>", "</p>")
+          .replace(/\n\s*<tr>\n(\s*<td.*><p><\/p><\/td>\n)*\s*<\/tr>/g, '');
+    }
+
+    var __match_filter_tags = function (markdown) {
+        const startTagRegex = /<(include|exclude) target="(.+?)"/gm
+        const endTagRegex = /<\/(include|exclude)>/gm
+        const matches = [... markdown.matchAll(startTagRegex)]
+        var returns = []
+
+        matches.forEach(match => {
+            var tag = match[1]
+            var rest = markdown.slice(match.index)
+
+            var closeTagRegex = new RegExp(`</${tag}>`, 'gm')
+            var closeTagMatch = [... rest.matchAll(closeTagRegex)]
+
+            var startIndex = match.index
+            var endIndex = 0
+
+            for (let i = 0; i < closeTagMatch.length; i++) {
+                var t = markdown.slice(startIndex, startIndex+closeTagMatch[i].index+closeTagMatch[i][0].length)
+
+                var startCount = t.match(startTagRegex) ? t.match(startTagRegex).length : 0
+                var endCount = t.match(endTagRegex) ? t.match(endTagRegex).length : 0
+
+                if (startCount === endCount) {
+                    endIndex = startIndex + closeTagMatch[i].index + closeTagMatch[i][0].length
+                    break
+                }
+            }
+
+            returns.push({
+                tag: tag,
+                target: match[2],
+                startIndex: startIndex,
+                endIndex: endIndex
+            })           
+        })
+
+        return returns
     }
 
     if (body.properties) {
@@ -615,6 +711,74 @@ class refGen {
         delete parameters[key]
       }
     })
+  }
+
+  __filter_content (markdown, targets) {
+    const matches = this.__match_filter_tags(markdown)
+
+    if (matches.length > 0) {
+        var preText = markdown.slice(0, matches[0].startIndex)
+        var matchText = markdown.slice(matches[0].startIndex, matches[0].endIndex)
+        var postText = markdown.slice(matches[0].endIndex)
+        var isTargetValid = targets.split('.').includes(matches[0].target.trim())
+        var startTagLength = `<${matches[0].tag} target="${matches[0].target}">`.length
+        var endTagLength = `</${matches[0].tag}>`.length
+
+        if (matches[0].tag == 'include' && isTargetValid || matches[0].tag == 'exclude' && !isTargetValid) {
+            matchText = matchText.slice(startTagLength, -endTagLength)
+        }
+
+        if (matches[0].tag == 'include' && !isTargetValid || matches[0].tag == 'exclude' &&  isTargetValid) {
+            matchText = ""
+        }
+
+        markdown = this.__filter_content(preText + matchText + postText, targets)
+    }
+
+    return markdown.replace(/(\s*\n){3,}/g, '\n\n')
+        .replace(/<br>/g, '<br/>')
+        .replace(/(<br\/>){2,}/, "<br/>")
+        .replace("<br\/></p>", "</p>")
+        .replace(/\n\s*<tr>\n(\s*<td.*><p><\/p><\/td>\n)*\s*<\/tr>/g, '');
+  }
+
+  __match_filter_tags(markdown) {
+      const startTagRegex = /<(include|exclude) target="(.+?)"/gm
+      const endTagRegex = /<\/(include|exclude)>/gm
+      const matches = [... markdown.matchAll(startTagRegex)]
+      var returns = []
+
+      matches.forEach(match => {
+          var tag = match[1]
+          var rest = markdown.slice(match.index)
+
+          var closeTagRegex = new RegExp(`</${tag}>`, 'gm')
+          var closeTagMatch = [... rest.matchAll(closeTagRegex)]
+
+          var startIndex = match.index
+          var endIndex = 0
+
+          for (let i = 0; i < closeTagMatch.length; i++) {
+              var t = markdown.slice(startIndex, startIndex+closeTagMatch[i].index+closeTagMatch[i][0].length)
+
+              var startCount = t.match(startTagRegex) ? t.match(startTagRegex).length : 0
+              var endCount = t.match(endTagRegex) ? t.match(endTagRegex).length : 0
+
+              if (startCount === endCount) {
+                  endIndex = startIndex + closeTagMatch[i].index + closeTagMatch[i][0].length
+                  break
+              }
+          }
+
+          returns.push({
+              tag: tag,
+              target: match[2],
+              startIndex: startIndex,
+              endIndex: endIndex
+          })           
+      })
+
+      return returns
   }
 }
 

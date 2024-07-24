@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 70
+sidebar_position: 37
 slug: /restful/describe-alias-v2
 title: 查看 Alias 详情
 ---
@@ -61,14 +61,12 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/aliases/
 
 ```json
 {
-    "dbName": "string",
     "aliasName": "string"
 }
 ```
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>Collection 所属的数据库的名称。  |
 | __aliasName__ | __string__  <br/>要列出其详细信息的 Alias 的名称。  |
 
 ## 响应
@@ -81,7 +79,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/aliases/
 {
     "code": "integer",
     "data": {
-        "dbName": "string",
         "collectionName": "string",
         "aliasName": "string"
     }
@@ -92,7 +89,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/aliases/
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __data__ | __object__<br/> |
-| __data.dbName__ | __string__  <br/>Collection 所属数据库的名称。  |
 | __data.collectionName__ | __string__  <br/>Alias 所属的 Collection 的名称。  |
 | __data.aliasName__ | __string__  <br/>Alias 的名称。  |
 

@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 16
+sidebar_position: 12
 slug: /restful/create-pipeline
 title: 创建 Pipeline
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 创建一个 Pipeline
 
-<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/pipelines" />
+<RestHeader method="post" endpoint="https://controller.${CLOUD_REGION}.vectordb.cloud.zilliz.com.cn:19530/v1/pipelines" />
 
 ---
 
@@ -440,7 +440,9 @@ import RestHeader from '@site/src/components/RestHeader';
             {
                 "name": "string",
                 "action": "string",
-                "inputField": "string",
+                "inputFields": [
+                    {}
+                ],
                 "clusterID": "string",
                 "collectionName": "string",
                 "reranker": "string"
@@ -463,7 +465,8 @@ import RestHeader from '@site/src/components/RestHeader';
 | __data[].functions[]__ | __object__<br/> |
 | __data[].functions[].name__ | __string__  <br/>函数的名称。  |
 | __data[].functions[].action__ | __string__  <br/>函数的类型。对于搜索函数，值应该是 `SEARCH_DOC_CHUNKS`, `SEARCH_TEXT` 和 `SEARCH_IMAGE_BY_IMAGE`。  |
-| __data[].functions[].inputField__ | __string__  <br/>输入字段的名称。对于 `SEARCH_DOC_CHUNKS` 函数，值应该是您的查询文本。  |
+| __data[].functions[][].inputFields__ | __array__<br/>Name of the input fields. |
+| __data[].functions[][].inputFields[]__ | __string__  <br/>For a `SEARCH_DOC_CHUNKS` or a `SEARCH_IMAGE_BY_TEXT` function, you should include `query_text` as the value.  |
 | __data[].functions[].clusterID__ | __string__  <br/>此函数的目标集群。  |
 | __data[].functions[].collectionName__ | __string__  <br/>此函数的目标 Collection。  |
 | __data[].functions[].reranker__ | __string__  <br/>如果您需要重新排序或对一组候选输出进行排名以提高搜索结果的质量，请将此参数设置为重新排序模型。此参数仅适用于文本和文档数据的 Pipeline。目前，只有 `zilliz/bge-reranker-base` 可作为参数值。  |

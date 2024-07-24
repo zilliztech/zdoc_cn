@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 3
+sidebar_position: 30
 slug: /restful/create-cluster
 title: 创建集群
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 创建一个新集群
 
-<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/clusters/create" />
+<RestHeader method="post" endpoint="https://controller.${CLOUD_REGION}.vectordb.cloud.zilliz.com.cn:19530/v1/clusters/create" />
 
 ---
 
@@ -98,10 +98,10 @@ curl --request POST \
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __plan__ | __string__  <br/>Zilliz Cloud 服务订阅计划。当前可选为**Enterprise** (企业版)。  |
+| __plan__ | __string__  <br/>Zilliz Cloud 服务订阅计划。当前可选为**Enterprise** (企业版)。<br/>Possible values: "**Standard**", "**Enterprise**"  |
 | __clusterName__ | __string__  <br/>待创建集群名称。名称长度不得走过 32 个半角字符。  |
 | __cuSize__ | __integer__  <br/>待创建集群使用的 CU 大小。取值范围在 1 至 256 之间的正整数。  |
-| __cuType__ | __string__  <br/>待创建集群使用的 CU 类型。当前可选为 **Performance-optimized** (性能型), **Capacity-optimized** (容量型), **Cost-optimized** (经济型)。默认取值为 **Performance-optimized** (性能型)。<br/>The value defaults to Performance-optimized  |
+| __cuType__ | __string__  <br/>待创建集群使用的 CU 类型。当前可选为 **Performance-optimized** (性能型), **Capacity-optimized** (容量型), **Cost-optimized** (经济型)。默认取值为 **Performance-optimized** (性能型)。<br/>The value defaults to Performance-optimized<br/>Possible values: "**Performance-optimized**", "**Capacity-optimized**"  |
 | __projectId__ | __string__  <br/>待创建集群所属项目 ID。  |
 
 ## 响应

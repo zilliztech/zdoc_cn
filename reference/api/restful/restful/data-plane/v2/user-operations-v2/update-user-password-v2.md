@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 42
+sidebar_position: 58
 slug: /restful/update-user-password-v2
 title: 更新用户密码
 ---

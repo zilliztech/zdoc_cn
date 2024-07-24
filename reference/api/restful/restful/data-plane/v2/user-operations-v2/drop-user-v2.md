@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 43
+sidebar_position: 54
 slug: /restful/drop-user-v2
 title: 删除用户
 ---

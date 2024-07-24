@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 72
+sidebar_position: 60
 slug: /restful/drop-alias-v2
 title: 删除 Alias
 ---
@@ -57,7 +57,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/aliases/
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string",
     "aliasName": "string"
 }
@@ -65,7 +64,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/aliases/
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>Collection 所属的数据库的名称。  |
 | __collectionName__ | __string__  <br/>Alias 所分配到的 Collection 的名称。  |
 | __aliasName__ | __string__  <br/>要删除的 Alias。<br/>删除 Alias 时，您不需要提供 Collection 名称，因为一个 Alias 只能恰好分配给一个 Collection。因此，服务器知道指定的 Alias 属于哪个 Collection。  |
 

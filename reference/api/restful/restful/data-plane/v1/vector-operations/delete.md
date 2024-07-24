@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 23
+sidebar_position: 7
 slug: /restful/delete
 title: 删除 Entity
 ---

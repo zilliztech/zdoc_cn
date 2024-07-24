@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 15
+sidebar_position: 5
 slug: /restful/drop-pipeline
 title: 删除 Pipeline
 ---
@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 删除一个指定的 Pipeline
 
-<RestHeader method="delete" endpoint="https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/pipelines/{PIPELINE_ID}" />
+<RestHeader method="delete" endpoint="https://controller.${CLOUD_REGION}.vectordb.cloud.zilliz.com.cn:19530/v1/pipelines/{PIPELINE_ID}" />
 
 ---
 
@@ -113,7 +113,15 @@ No request body required
                     "langauge": "string",
                     "embedding": "string"
                 },
-                {},
+                {
+                    "name": "string",
+                    "action": "string",
+                    "inputField": "string",
+                    "langauge": "string",
+                    "chunkSize": "integer",
+                    "embedding": "string",
+                    "splitBy": "string"
+                },
                 {
                     "name": "string",
                     "action": "string",
@@ -155,6 +163,13 @@ No request body required
 | __functions[opt_1].langauge__ | __string__  <br/>待采集文档语种。当前可选值为 `ENGLISH`（英文）或 `CHINESE` （中文）。  |
 | __functions[opt_1].embedding__ | __string__  <br/>正在使用的嵌入模型的名称。  |
 | __functions[opt_2]__ | __object__<br/> |
+| __functions[opt_2].name__ | __string__  <br/>函数名称  |
+| __functions[opt_2].action__ | __string__  <br/>函数类型。对于一个 Ingestion Pipeline 而言，可选参数值为 `INDEX_DOC` 和 `PRESERVE`。  |
+| __functions[opt_2].inputField__ | __string__  <br/>输入字段名称。对于 `PRESERVE` 函数而言，该字段用于命名 Pipeline 目标 Collection 中的一个标量字段。  |
+| __functions[opt_2].langauge__ | __string__  <br/>Language that your document is in. Possible values are `english` or `chinese`. The parameter applies only to ingestion pipelines.  |
+| __functions[opt_2].chunkSize__ | __integer__  <br/>The maximum size of a splitted document segment.  |
+| __functions[opt_2].embedding__ | __string__  <br/>正在使用的嵌入模型的名称。  |
+| __functions[opt_2].splitBy__ | __string__  <br/>The splitters that Zilliz Cloud uses to split the specified docs.  |
 | __functions[opt_3]__ | __object__<br/> |
 | __functions[opt_3].name__ | __string__  <br/>要创建的函数的名称。  |
 | __functions[opt_3].action__ | __string__  <br/>要创建的函数的类型。对于 Ingestion Pipeline，可能的值为`INDEX_DOC`和`PRESERVE`。  |
@@ -185,7 +200,9 @@ No request body required
             {
                 "name": "string",
                 "action": "string",
-                "inputField": "string",
+                "inputFields": [
+                    {}
+                ],
                 "clusterID": "string",
                 "collectionName": "string",
                 "reranker": "string"
@@ -208,7 +225,8 @@ No request body required
 | __data[].functions[]__ | __object__<br/> |
 | __data[].functions[].name__ | __string__  <br/>函数名称  |
 | __data[].functions[].action__ | __string__  <br/>函数的类型。对于搜索函数，该值应为`SEARCH_DOC_CHUNKS`、`SEARCH_TEXT`和`SEARCH_IMAGE_BY_IMAGE`。  |
-| __data[].functions[].inputField__ | __string__  <br/>输入字段名称。对于一个 Search Pipeline 而言，其值应该为查询文本。  |
+| __data[].functions[][].inputFields__ | __array__<br/>Name of the input fields. |
+| __data[].functions[][].inputFields[]__ | __string__  <br/>For a `SEARCH_DOC_CHUNKS` or a `SEARCH_IMAGE_BY_TEXT` function, you should include `query_text` as the value.  |
 | __data[].functions[].clusterID__ | __string__  <br/>此函数的目标集群。  |
 | __data[].functions[].collectionName__ | __string__  <br/>当前函数在目标集群中指向的 Collection。  |
 | __data[].functions[].reranker__ | __string__  <br/>如果您需要重新排序或对一组候选输出进行排名以提高搜索结果的质量，请将此参数设置为重新排序模型。此参数仅适用于文本和文档数据的 Pipeline。目前，仅`zilliz/bge-reranker-base`可用作参数值。  |

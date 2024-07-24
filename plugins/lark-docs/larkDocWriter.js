@@ -684,6 +684,8 @@ class larkDocWriter {
 
     async __heading(heading, level) {
         let content = await this.__text_elements(heading['elements'])
+        content = this.__clean_headings(content)
+
         if (content.length > 0) {
             content = this.__filter_content(content, this.targets)
 
@@ -691,6 +693,15 @@ class larkDocWriter {
         } else {
             return '';
         }
+    }
+
+    __clean_headings(content) {
+        // remove html tags
+        content = content.replace(/<\/?[^>]+(>|$)/g, "")
+        // remove trailing and leading spaces
+        content = content.trim()
+
+        return content
     }
 
     async __bullet(block, indent) {
@@ -1000,10 +1011,11 @@ class larkDocWriter {
                 if (merge) {
                     const colspan = merge.col_span > 1 ? ` colspan="${merge.col_span}"` : "";
                     const rowspan = merge.row_span > 1 ? ` rowspan="${merge.row_span}"` : "";
+                    const cell_text = cell_texts[cell_idx].trim().replace(/<br>/g, '\n');
                     if (i === 0) {
-                        html += ` ${' '.repeat(indent)}    <th${colspan}${rowspan}>${converter.makeHtml(cell_texts[cell_idx].trim()).replace(/\n/g, '')}</th>\n`;
+                        html += ` ${' '.repeat(indent)} <th${colspan}${rowspan}>${converter.makeHtml(cell_text).replace(/\n/g, '')}</th>\n`;
                     } else {
-                        html += ` ${' '.repeat(indent)}    <td${colspan}${rowspan}>${converter.makeHtml(cell_texts[cell_idx].trim()).replace(/\n/g, '')}</td>\n`;
+                        html += ` ${' '.repeat(indent)} <td${colspan}${rowspan}>${converter.makeHtml(cell_text).replace(/\n/g, '')}</td>\n`;
                     }
                 }
             }
@@ -1044,11 +1056,13 @@ class larkDocWriter {
                 if (typeof cell === 'number') {
                     cell = cell.toString()
                 }
+
+                cell = cell.trim().replace(/<br>/g, '\n');
                 
                 if (ridx === 0) {
-                    result += `${' '.repeat(indent) + '    '.repeat(2)}<th${colspan ? " " + colspan : ""}${rowspan ? " " + rowspan : ""}>${converter.makeHtml(cell.trim()).replace(/\n/g, '')}</th>\n`
+                    result += `${' '.repeat(indent) + ' '.repeat(2)}<th${colspan ? " " + colspan : ""}${rowspan ? " " + rowspan : ""}>${converter.makeHtml(cell).replace(/\n/g, '')}</th>\n`
                 } else {
-                    result += `${' '.repeat(indent) + '    '.repeat(2)}<td${colspan ? " " + colspan : ""}${rowspan ? " " + rowspan : ""}>${converter.makeHtml(cell.trim()).replace(/\n/g, '')}</td>\n`
+                    result += `${' '.repeat(indent) + ' '.repeat(2)}<td${colspan ? " " + colspan : ""}${rowspan ? " " + rowspan : ""}>${converter.makeHtml(cell).replace(/\n/g, '')}</td>\n`
                 }
             })
             result += ' '.repeat(indent) + '    ' + "</tr>" + "\n"
@@ -1206,9 +1220,10 @@ class larkDocWriter {
                     if (headerBlock) {
                         const blockType = this.block_types[headerBlock['block_type'] - 1];
                         if (parseInt(blockType.slice(-1)) <= 9) {
-                            const title = await this.__text_elements(headerBlock[blockType]['elements']);
-                            console.log(title)
-                            const slug = title.split('{#')[1].replace(/}$/, '')
+                            var content = await this.__text_elements(headerBlock[blockType]['elements']);
+                            content = this.__filter_content(content, this.targets)
+                            content = this.__clean_headings(content)
+                            const slug = slugify(content, {strict: true, lower: true});
                             newUrl += `#${slug}`;
                         }
                     }

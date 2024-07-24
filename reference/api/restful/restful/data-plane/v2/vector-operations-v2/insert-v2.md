@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 30
+sidebar_position: 24
 slug: /restful/insert-v2
 title: 插入
 ---
@@ -79,7 +79,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/entities
 
 ```json
 {
-    "dbName": "string",
     "collectionName": "string",
     "partitionName": "string"
 }
@@ -87,7 +86,6 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/entities
 
 | 参数名称          | 参数描述                                                                               |
 |------------------|-------------------------------------------------------------------------------------------|
-| __dbName__ | __string__  <br/>目标数据库的名称。  |
 | __collectionName__ | __string__  <br/>现有 Collection 的名称。  |
 | __data__ | __object__ \| __array__<br/>要插入到当前 Collection 中的数据。<br/>要插入的数据应该是与当前 Collection 的模式匹配的字典，或此类字典的列表。 |
 | __data[opt_1]__ | __object__<br/>一个 Entity |
