@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 85
+sidebar_position: 84
 slug: /restful/query-cluster-metrics-v2
 title: 查看集群指标
 ---
@@ -9,7 +9,13 @@ import RestHeader from '@site/src/components/RestHeader';
 
 Query the metrics of a specific cluster.
 
-## Example
+<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/clusters/{clusterId}/metrics/query" />
+
+---
+
+## 示例
+
+
 
 import Admonition from '@theme/Admonition';
 
@@ -23,7 +29,7 @@ import Admonition from '@theme/Admonition';
 export API_KEY=""
 
 curl --request POST \
-     --url https://api.cloud.zilliz.com/v2/clusters/inxx-xxxxxxxxxxxxxxx/metrics/query \
+     --url https://api.cloud.zilliz.com.cn/v2/clusters/inxx-xxxxxxxxxxxxxxx/metrics/query \
      --header 'Authorization: Bearer ${API_KEY}' \
      --header 'accept: application/json' \
      --header 'content-type: application/json' \
@@ -72,72 +78,6 @@ Possible response is similar to the following.
          }
       ]
    }
-}
-```
-
-<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/clusters/{clusterId}/metrics/query" />
-
----
-
-## 示例
-
-
-
-
-:::info 说明
-
-您可以使用拥有相应权限的 [API 密钥](/docs/manage-api-keys)完成鉴权。
-
-:::
-
-```shell
-export CLOUD_REGION="gcp-us-west1"
-export API_KEY=""
-
-curl --location --request POST "https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/clusters/inxx-xxxxxxxxxxxxxxx/metrics/query" \
---header "Authorization: Bearer ${API_KEY}" \
---data-raw '{
-    "start": "",
-    "end": "",
-    "period": "PT99H",
-    "granularity": "PT5H",
-    "metricQueries": [
-        {
-            "name": "CU_CAPACITY",
-            "stat": "AVG"
-        }
-    ]
-}'
-```
-
-成功响应示例：
-
-```json
-{
-  "code": 200,
-  "data": {
-    "results": [
-      {
-        "name": "CU_CAPACITY",
-        "stat": "AVG",
-        "unit": "percent",
-        "values": [
-          {
-            "timestamp": "2024-03-28T04:58:06Z",
-            "value": null
-          },
-          {
-            "timestamp": "2024-03-28T09:58:06Z",
-            "value": null
-          },
-          {
-            "timestamp": "2024-03-28T14:58:06Z",
-            "value": null
-          }
-        ]
-      }
-    ]
-  }
 }
 ```
 
@@ -214,7 +154,7 @@ Return the collected statistics on the specified metric in detail.
 
 | 属性名称 | 属性描述                                                                                                                                    |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __data__ | __object__<br/>Response payload. |
 | __data[].results__ | __array__<br/>List of collected statistics on the specified metric. |
 | __data[].results[]__ | __object__<br/>A set of collected statistics. |
@@ -237,5 +177,5 @@ Return the collected statistics on the specified metric in detail.
 
 | 属性名称    | 属性描述                                                                                                                                    |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __message__ | **string**<br/>表示错误信息。                                                                        |

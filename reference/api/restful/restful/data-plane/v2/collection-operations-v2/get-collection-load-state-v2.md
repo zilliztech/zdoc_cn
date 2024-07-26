@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 86
+sidebar_position: 85
 slug: /restful/get-collection-load-state-v2
 title: 获取 Collection 加载状态
 ---
@@ -85,7 +85,7 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/collecti
 
 | 属性名称 | 属性描述                                                                                                                                    |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __data__ | __object__<br/> |
 | __data.loadState__ | __string__  <br/>一个指示指定 Collection 加载状态的对象。  |
 | __data.loadProgress__ | __integer__  <br/>一个整数，指示指定 Collection 加载进度的百分比。  |
@@ -101,5 +101,5 @@ curl --location --request POST "https://${CLUSTER_ENDPOINT}/v2/vectordb/collecti
 
 | 属性名称    | 属性描述                                                                                                                                    |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __message__ | **string**<br/>表示错误信息。                                                                        |

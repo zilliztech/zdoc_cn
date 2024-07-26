@@ -387,7 +387,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 | 属性名称 | 属性描述                                                                                                                                    |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __data__ | __object__<br/> |
 | __data.pipelineId__ | __integer__  <br/>Pipeline 的ID。  |
 | __data.name__ | __string__  <br/>Pipeline 的名称。  |
@@ -454,7 +454,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 | 属性名称 | 属性描述                                                                                                                                    |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __data__ | __object__<br/> |
 | __data.pipelineId__ | __integer__  <br/>Pipeline 的ID。  |
 | __data.name__ | __string__  <br/>Pipeline 的名称。  |
@@ -497,7 +497,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 | 属性名称 | 属性描述                                                                                                                                    |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __data__ | __object__<br/> |
 | __data.pipelineId__ | __integer__  <br/>Pipeline 的ID。  |
 | __data.name__ | __string__  <br/>Pipeline 的名称。  |
@@ -523,5 +523,5 @@ import RestHeader from '@site/src/components/RestHeader';
 
 | 属性名称    | 属性描述                                                                                                                                    |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __message__ | **string**<br/>表示错误信息。                                                                        |

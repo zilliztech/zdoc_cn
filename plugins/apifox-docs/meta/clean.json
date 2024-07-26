@@ -374,7 +374,7 @@
             "post": {
                 "summary": "创建导入任务",
                 "deprecated": false,
-                "description": "Imports data from files stored in a specified object storage bucket. To learn how to prepare your data files, read [Prepare Data Import](/docs/prepare-source-data).\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\n\ncurl --location --request POST \"https://api.cloud.zilliz.com/v2/vectordb/jobs/import/create\" \\\n--header \"Authorization: Bearer ${API_KEY}\" \\\n--header \"Content-Type: application/json\" \\\n--data-raw '{\n    \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n    \"collectionName\": \"medium_articles\",\n    \"partitionName\":\"\",\n    \"objectUrl\": \"https://s3.us-west-2.amazonaws.com/publicdataset.zillizcloud.com/medium_articles_2020_dpr/medium_articles_2020_dpr.json\",\n    \"accessKey\": \"\",\n    \"secretKey\": \"\"\n}'\n```\n\nPossible response is similar to the following\n\n```json\n{\n    \"code\": 0,\n    \"data\": {\n        \"jobId\": \"448707763884413158\"\n    }\n}\n```",
+                "description": "Imports data from files stored in a specified object storage bucket. To learn how to prepare your data files, read [Prepare Data Import](/docs/prepare-source-data).\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\n\ncurl --location --request POST \"https://api.cloud.zilliz.com.cn/v2/vectordb/jobs/import/create\" \\\n--header \"Authorization: Bearer ${API_KEY}\" \\\n--header \"Content-Type: application/json\" \\\n--data-raw '{\n    \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n    \"collectionName\": \"medium_articles\",\n    \"partitionName\":\"\",\n    \"objectUrl\": \"https://s3.us-west-2.amazonaws.com/publicdataset.zillizcloud.com/medium_articles_2020_dpr/medium_articles_2020_dpr.json\",\n    \"accessKey\": \"\",\n    \"secretKey\": \"\"\n}'\n```\n\nPossible response is similar to the following\n\n```json\n{\n    \"code\": 0,\n    \"data\": {\n        \"jobId\": \"448707763884413158\"\n    }\n}\n```",
                 "tags": [
                     "Import Operations (V2)"
                 ],
@@ -4130,7 +4130,7 @@
             "get": {
                 "summary": "查看云服务提供商",
                 "deprecated": false,
-                "description": "Lists all cloud providers available on Zilliz Cloud.\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\n\ncurl --request GET \\\n    --url \"https://api.cloud.zilliz.com/v2/clouds\" \\\n    --header \"Authorization: Bearer ${API_KEY}\"   \\\n    --header \"accept: application/json\"\n```\n\nPossible response is similar to the following\n\n```json\n{\n    \"code\": 0,\n    \"data\": [\n        {\n            \"cloudId\": \"aws\",\n            \"description\": \"Amazon Web Services\"\n        },\n        {\n            \"cloudId\": \"gcp\",\n            \"description\": \"Google Cloud Platform\"\n        },\n        {\n            \"cloudId\": \"azure\",\n            \"description\": \"Microsoft Azure\"\n        }\n    ]\n}\n```",
+                "description": "Lists all cloud providers available on Zilliz Cloud.\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\n\ncurl --request GET \\\n    --url \"https://api.cloud.zilliz.com.cn/v2/clouds\" \\\n    --header \"Authorization: Bearer ${API_KEY}\"   \\\n    --header \"accept: application/json\"\n```\n\nPossible response is similar to the following\n\n```json\n{\n    \"code\": 0,\n    \"data\": [\n        {\n            \"cloudId\": \"ali\",\n            \"description\": \"Alibaba Cloud\"\n        },\n        {\n            \"cloudId\": \"tc\",\n            \"description\": \"Tencent Cloud\"\n        }\n    ]\n}\n```",
                 "tags": [
                     "Cloud Meta (V2)"
                 ],
@@ -4419,7 +4419,7 @@
             "get": {
                 "summary": "查看集群",
                 "deprecated": false,
-                "description": "List all clusters scoped to API Key.\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n## Example\n\n```shell\nexport API_KEY=\"\"\n\ncurl --request GET \\\n    --url \"https://api.cloud.zilliz.com/v2/clusters\" \\\n    --header \"Authorization: Bearer ${API_KEY}\"   \\\n    --header \"accept: application/json\"\n```\n\nPossible response is similar to the following\n```json\n{\n  \"code\": 0,\n  \"data\": {\n    \"count\": 1,\n    \"currentPage\": 1,\n    \"pageSize\": 10,\n    \"clusters\": [\n      {\n        \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n        \"clusterName\": \"dedicated-3\",\n        \"description\": \"\",\n        \"regionId\": \"aws-us-west-2\",\n        \"plan\": \"Standard\",\n        \"cuType\": \"Performance-optimized\",\n        \"cuSize\": 1,\n        \"status\": \"RUNNING\",\n        \"connectAddress\": \"https://inxx-xxxxxxxxxxxxxxx.aws-us-west-2.vectordb.zillizcloud.com:19530\",\n        \"privateLinkAddress\": \"\",\n        \"createTime\": \"2024-06-30T16:49:50Z\",\n        \"projectId\": \"proj-xxxxxxxxxxxxxxxxxxxxxx\"\n      }\n    ]\n  }\n}\n```",
+                "description": "List all clusters scoped to API Key.\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n## Example\n\n```shell\nexport API_KEY=\"\"\n\ncurl --request GET \\\n    --url \"https://api.cloud.zilliz.com.cn/v2/clusters\" \\\n    --header \"Authorization: Bearer ${API_KEY}\"   \\\n    --header \"accept: application/json\"\n```\n\nPossible response is similar to the following\n```json\n{\n  \"code\": 0,\n  \"data\": {\n    \"count\": 1,\n    \"currentPage\": 1,\n    \"pageSize\": 10,\n    \"clusters\": [\n      {\n        \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n        \"clusterName\": \"dedicated-3\",\n        \"description\": \"\",\n        \"regionId\": \"ali-cn-hangzhou\",\n        \"plan\": \"Standard\",\n        \"cuType\": \"Performance-optimized\",\n        \"cuSize\": 1,\n        \"status\": \"RUNNING\",\n        \"connectAddress\": \"https://inxx-xxxxxxxxxxxxxxx.ali-cn-hangzhou.vectordb.zillizcloud.com:19530\",\n        \"privateLinkAddress\": \"\",\n        \"createTime\": \"2024-06-30T16:49:50Z\",\n        \"projectId\": \"proj-xxxxxxxxxxxxxxxxxxxxxx\"\n      }\n    ]\n  }\n}\n```",
                 "tags": [
                     "Cluster Operations (V2)"
                 ],
@@ -4672,7 +4672,7 @@
             "get": {
                 "summary": "查看项目列表",
                 "deprecated": false,
-                "description": "List all projects scoped to API-Key.\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\n\ncurl --request GET \\\n    --url \"https://api.cloud.zilliz.com/v2/projects\" \\\n    --header \"Authorization: Bearer ${API_KEY}\"   \\\n    --header \"accept: application/json\"\n```\n\nPossible response is similar to the following\n\n```json\n{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"projectName\": \"Default Project\",\n            \"projectId\": \"proj-xxxxxxxxxxxxxxxxxxxxxxx\",\n            \"instanceCount\": 2,\n            \"createTime\": \"2023-08-16T07:34:06Z\"\n        }\n    ]\n}\n```\n\n",
+                "description": "List all projects scoped to API-Key.\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\n\ncurl --request GET \\\n    --url \"https://api.cloud.zilliz.com.cn/v2/projects\" \\\n    --header \"Authorization: Bearer ${API_KEY}\"   \\\n    --header \"accept: application/json\"\n```\n\nPossible response is similar to the following\n\n```json\n{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"projectName\": \"Default Project\",\n            \"projectId\": \"proj-xxxxxxxxxxxxxxxxxxxxxxx\",\n            \"instanceCount\": 2,\n            \"createTime\": \"2023-08-16T07:34:06Z\"\n        }\n    ]\n}\n```\n\n",
                 "tags": [
                     "Cluster Operations (V2)"
                 ],
@@ -5286,7 +5286,7 @@
             "post": {
                 "summary": "查看导入任务列表",
                 "deprecated": false,
-                "description": "This operation lists all import jobs of a specific cluster.\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \nYou can use either of the following ways to authorize:\n<ul>\n<li> An API Key with appropriate permissions.</li>\n<li>A colon-joined username and password of the target cluster. For example, `username:passowrd`.</li>\n</ul>\n    \n</Admonition>\n```shell\nexport API_KEY=\"\"\n\ncurl --location --request POST \"https://api.cloud.zilliz.com/v2/vectordb/jobs/import/list\" \\\n--header \"Authorization: Bearer ${API_KEY}\" \\\n--header \"Content-Type: application/json\" \\\n--data-raw '{\n    \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n    \"currentPage\":1,\n    \"pageSize\":10,\n}'\n```\nPossible response is similart to the following.\n```json\n{\n    \"code\": 0,\n    \"data\": {\n        \"count\":1000,\n        \"currentPage\":1,\n        \"pageSize\":10,\n        \"records\": [\n            {\n                \"collectionName\": \"quick_setup\",\n                \"jobId\": \"448761313698322011\",\n                \"state\": \"Importing\"\n            }\n        ]\n    }\n}\n```",
+                "description": "This operation lists all import jobs of a specific cluster.\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \nYou can use either of the following ways to authorize:\n<ul>\n<li> An API Key with appropriate permissions.</li>\n<li>A colon-joined username and password of the target cluster. For example, `username:passowrd`.</li>\n</ul>\n    \n</Admonition>\n```shell\nexport API_KEY=\"\"\n\ncurl --location --request POST \"https://api.cloud.zilliz.com.cn/v2/vectordb/jobs/import/list\" \\\n--header \"Authorization: Bearer ${API_KEY}\" \\\n--header \"Content-Type: application/json\" \\\n--data-raw '{\n    \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n    \"currentPage\":1,\n    \"pageSize\":10,\n}'\n```\nPossible response is similart to the following.\n```json\n{\n    \"code\": 0,\n    \"data\": {\n        \"count\":1000,\n        \"currentPage\":1,\n        \"pageSize\":10,\n        \"records\": [\n            {\n                \"collectionName\": \"quick_setup\",\n                \"jobId\": \"448761313698322011\",\n                \"state\": \"Importing\"\n            }\n        ]\n    }\n}\n```",
                 "tags": [
                     "Import Operations (V2)"
                 ],
@@ -5949,7 +5949,7 @@
             "get": {
                 "summary": "查看集群详情",
                 "deprecated": false,
-                "description": "Describe a cluster in detail.\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n## Example\n\n```shell\nexport API_KEY=\"\"\n\ncurl --request GET \\\n    --url \"https://api.cloud.zilliz.com/v2/clusters/inxx-xxxxxxxxxxxxxxx\" \\\n    --header \"Authorization: Bearer ${API_KEY}\"   \\\n    --header \"accept: application/json\"\n```\n\nPossible response is similar to the following.\n\n```json\n{\n  \"code\":0,\n  \"data\": {\n    \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n    \"clusterName\": \"Dedicated-01\",\n    \"projectId\": \"proj-xxxxxxxxxxxxxxxxxxxxxx\",\n    \"description\": \"\",\n    \"regionId\": \"aws-us-west-2\",\n    \"cuType\": \"Performance-optimized\",\n    \"plan\": \"Standard\",\n    \"status\": \"RUNNING\",\n    \"connectAddress\": \"https://inxx-xxxxxxxxxxxxxxx.aws-us-west-2.vectordb.zillizcloud.com:19530\",\n    \"privateLinkAddress\": \"\",\n    \"createTime\": \"2024-06-30T16:34:09Z\",\n    \"cuSize\": 2,\n    \"storageSize\": 0,\n    \"snapshotNumber\": 0,\n    \"createProgress\": 100\n  }\n}\n```",
+                "description": "Describe a cluster in detail.\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n## Example\n\n```shell\nexport API_KEY=\"\"\n\ncurl --request GET \\\n    --url \"https://api.cloud.zilliz.com.cn/v2/clusters/inxx-xxxxxxxxxxxxxxx\" \\\n    --header \"Authorization: Bearer ${API_KEY}\"   \\\n    --header \"accept: application/json\"\n```\n\nPossible response is similar to the following.\n\n```json\n{\n  \"code\":0,\n  \"data\": {\n    \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n    \"clusterName\": \"Dedicated-01\",\n    \"projectId\": \"proj-xxxxxxxxxxxxxxxxxxxxxx\",\n    \"description\": \"\",\n    \"regionId\": \"ali-cn-hangzhou\",\n    \"cuType\": \"Performance-optimized\",\n    \"plan\": \"Standard\",\n    \"status\": \"RUNNING\",\n    \"connectAddress\": \"https://inxx-xxxxxxxxxxxxxxx.ali-cn-hangzhou.vectordb.zillizcloud.com:19530\",\n    \"privateLinkAddress\": \"\",\n    \"createTime\": \"2024-06-30T16:34:09Z\",\n    \"cuSize\": 2,\n    \"storageSize\": 0,\n    \"snapshotNumber\": 0,\n    \"createProgress\": 100\n  }\n}\n```",
                 "tags": [
                     "Cluster Operations (V2)"
                 ],
@@ -6105,7 +6105,7 @@
             "post": {
                 "summary": "查看导入任务进度",
                 "deprecated": false,
-                "description": "Retrieves the progress of a specified import job.\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \nYou can use either of the following ways to authorize:\n<ul>\n<li> An API Key with appropriate permissions.</li>\n<li>A colon-joined username and password of the target cluster. For example, `username:passowrd`.</li>\n</ul>\n    \n</Admonition>\n## Example\n\n```shell\nexport API_KEY=\"\"\n\ncurl --location --request POST \"https://api.cloud.zilliz.com/v2/vectordb/jobs/import/getProgress\" \\\n--header \"Authorization: Bearer ${API_KEY}\" \\\n--header \"Content-Type: application/json\" \\\n--data-raw '{\n    \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n    \"jobId\": 44870776388440916\n}'\n```\nPossible response is similar to the following.\n```json\n{\n    \"code\": 0,\n    \"data\": {\n        \"jobId\": \"448761313698322011\",\n        \"collectionName\": \"medium_articles\",\n        \"fileName\":\"medium_articles_2020_dpr.json\",\n        \"fileSize\": 3279917,\n        \"state\": \"Completed\",\n        \"progress\": 100,\n        \"completeTime\": \"2024-04-01T06:17:55Z\",\n        \"reason\":\"\",\n        \"totalRows\": 100000,\n        \"details\": [\n            {\n                \"fileName\": \"medium_articles_2020_dpr.json\",\n                \"fileSize\": 3279917,\n                \"state\": \"Completed\",\n                \"progress\": 100,\n                \"completeTime\": \"2024-04-01T06:17:53Z\",\n                \"reason\":\"\"\n            }\n        ]\n    }\n}\n```",
+                "description": "Retrieves the progress of a specified import job.\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \nYou can use either of the following ways to authorize:\n<ul>\n<li> An API Key with appropriate permissions.</li>\n<li>A colon-joined username and password of the target cluster. For example, `username:passowrd`.</li>\n</ul>\n    \n</Admonition>\n## Example\n\n```shell\nexport API_KEY=\"\"\n\ncurl --location --request POST \"https://api.cloud.zilliz.com.cn/v2/vectordb/jobs/import/getProgress\" \\\n--header \"Authorization: Bearer ${API_KEY}\" \\\n--header \"Content-Type: application/json\" \\\n--data-raw '{\n    \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n    \"jobId\": 44870776388440916\n}'\n```\nPossible response is similar to the following.\n```json\n{\n    \"code\": 0,\n    \"data\": {\n        \"jobId\": \"448761313698322011\",\n        \"collectionName\": \"medium_articles\",\n        \"fileName\":\"medium_articles_2020_dpr.json\",\n        \"fileSize\": 3279917,\n        \"state\": \"Completed\",\n        \"progress\": 100,\n        \"completeTime\": \"2024-04-01T06:17:55Z\",\n        \"reason\":\"\",\n        \"totalRows\": 100000,\n        \"details\": [\n            {\n                \"fileName\": \"medium_articles_2020_dpr.json\",\n                \"fileSize\": 3279917,\n                \"state\": \"Completed\",\n                \"progress\": 100,\n                \"completeTime\": \"2024-04-01T06:17:53Z\",\n                \"reason\":\"\"\n            }\n        ]\n    }\n}\n```",
                 "tags": [
                     "Import Operations (V2)"
                 ],
@@ -6369,7 +6369,7 @@
             "get": {
                 "summary": "查看云服务区域",
                 "deprecated": false,
-                "description": "Lists all available cloud regions. You may list only the applicable regions of a specific cloud provider.\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\nexport CLOUD_ID=\"\"\n\n# List all available cloud regions.\ncurl --request GET \\\n    --url \"https://api.cloud.zilliz.com/v2/regions\" \\\n    --header \"Authorization: Bearer ${API_KEY}\"   \\\n    --header \"accept: application/json\"\n\n# List all available cloud regions of a specific provider.\ncurl -i --request GET \\\n    --url \"https://api.cloud.zilliz.com/v2/regions?cloudId=${CLOUD_ID}\" \\\n    --header \"Authorization: Bearer ${API_KEY}\"   \\\n    --header \"accept: application/json\"\n```\n\nPossible response is similar to the following\n\n```json\n{\n    \"code\": 0,\n    \"data\": [\n        {\n            \"cloudId\": \"aws\",\n            \"regionId\": \"aws-us-west-2\",\n            \"domain\": \"api.cloud.zilliz.com\"\n        },\n        {\n            \"cloudId\": \"gcp\",\n            \"regionId\": \"gcp-us-west1\",\n            \"domain\": \"api.cloud.zilliz.com\"\n        },\n        {\n            \"cloudId\": \"azure\",\n            \"regionId\": \"az-westus3\",\n            \"domain\": \"api.cloud.zilliz.com\"\n        }\n    ]\n}\n```",
+                "description": "Lists all available cloud regions. You may list only the applicable regions of a specific cloud provider.\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\nexport CLOUD_ID=\"\"\n\n# List all available cloud regions.\ncurl --request GET \\\n    --url \"https://api.cloud.zilliz.com.cn/v2/regions\" \\\n    --header \"Authorization: Bearer ${API_KEY}\"   \\\n    --header \"accept: application/json\"\n\n# List all available cloud regions of a specific provider.\ncurl -i --request GET \\\n    --url \"https://api.cloud.zilliz.com.cn/v2/regions?cloudId=${CLOUD_ID}\" \\\n    --header \"Authorization: Bearer ${API_KEY}\"   \\\n    --header \"accept: application/json\"\n```\n\nPossible response is similar to the following\n\n```json\n{\n    \"code\": 0,\n    \"data\": [\n        {\n            \"cloudId\": \"ali\",\n            \"regionId\": \"ali-cn-hangzhou\",\n            \"domain\": \"api.cloud.zilliz.com.cn\"\n        },\n        {\n            \"cloudId\": \"tc\",\n            \"regionId\": \"tc-ap-beijing\",\n            \"domain\": \"api.cloud.zilliz.com.cn\"\n        }\n    ]\n}\n```",
                 "tags": [
                     "Cloud Meta (V2)"
                 ],
@@ -7393,7 +7393,7 @@
             "post": {
                 "summary": "创建 Dedicated 集群",
                 "deprecated": false,
-                "description": "Create dedicated cluster.\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\nexport REGION_ID=\"\"\n\ncurl --request POST \\\n     --url https://api.cloud.zilliz.com/v2/clusters/createDedicated \\\n     --header 'Authorization: Bearer ${API_KEY}' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --data-raw '{\n        \"clusterName\": \"Cluster-05\",\n        \"projectId\": \"proj-xxxxxxxxxxxxxxxxxxxxxx\",\n        \"regionId\": \"${REGION_ID}\",\n        \"plan\": \"Standard\",\n        \"cuType\": \"Performance-optimized\",\n        \"cuSize\": 1\n      }'\n```\n\nPossible response is similar to the following\n```json\n{\n  code: 0,\n  data: {\n     \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n     \"username\":\"db_admin\",\n     \"password\":\"****************\",\n     \"prompt\": \"Successfully submitted, cluster is being created. You can access data about the creation progress and status of your cluster by DescribeCluster API. Once the cluster status is RUNNING, you may access your vector database using the SDK with the admin account and the initial password you specified.\"\n  }\n}\n```",
+                "description": "Create dedicated cluster.\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\nexport REGION_ID=\"\"\n\ncurl --request POST \\\n     --url https://api.cloud.zilliz.com.cn/v2/clusters/createDedicated \\\n     --header 'Authorization: Bearer ${API_KEY}' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --data-raw '{\n        \"clusterName\": \"Cluster-05\",\n        \"projectId\": \"proj-xxxxxxxxxxxxxxxxxxxxxx\",\n        \"regionId\": \"${REGION_ID}\",\n        \"plan\": \"Standard\",\n        \"cuType\": \"Performance-optimized\",\n        \"cuSize\": 1\n      }'\n```\n\nPossible response is similar to the following\n```json\n{\n  code: 0,\n  data: {\n     \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n     \"username\":\"db_admin\",\n     \"password\":\"****************\",\n     \"prompt\": \"Successfully submitted, cluster is being created. You can access data about the creation progress and status of your cluster by DescribeCluster API. Once the cluster status is RUNNING, you may access your vector database using the SDK with the admin account and the initial password you specified.\"\n  }\n}\n```",
                 "tags": [
                     "Cluster Operations (V2)"
                 ],
@@ -8359,7 +8359,7 @@
             "post": {
                 "summary": "创建 Serverless 集群",
                 "deprecated": false,
-                "description": "Create serverless cluster.\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\nexport REGION_ID=\"\"\n\ncurl --request POST \\\n     --url https://api.cloud.zilliz.com/v2/clusters/createServerless \\\n     --header 'Authorization: Bearer ${API_KEY}' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --data-raw '{\n        \"clusterName\": \"Serverless-05\",\n        \"projectId\": \"proj-xxxxxxxxxxxxxxxxxxxxxxx\",\n        \"regionId\": \"${REGION_ID}\"\n      }'\n```\n\nPossible response is similar to the following\n```json\n{\n  code: 0,\n  data: {\n     \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n     \"username\":\"db_xxxxxxxx\",\n     \"password\":\"***********\",\n     \"prompt\": \"Successfully submitted, cluster is being created. You can access data about the creation progress and status of your cluster by DescribeCluster API. Once the cluster status is RUNNING, you may access your vector database using the SDK with the admin account and the initial password you specified.\"\n  }\n}\n```",
+                "description": "Create serverless cluster.\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\nexport REGION_ID=\"\"\n\ncurl --request POST \\\n     --url https://api.cloud.zilliz.com.cn/v2/clusters/createServerless \\\n     --header 'Authorization: Bearer ${API_KEY}' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --data-raw '{\n        \"clusterName\": \"Serverless-05\",\n        \"projectId\": \"proj-xxxxxxxxxxxxxxxxxxxxxxx\",\n        \"regionId\": \"${REGION_ID}\"\n      }'\n```\n\nPossible response is similar to the following\n```json\n{\n  code: 0,\n  data: {\n     \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n     \"username\":\"db_xxxxxxxx\",\n     \"password\":\"***********\",\n     \"prompt\": \"Successfully submitted, cluster is being created. You can access data about the creation progress and status of your cluster by DescribeCluster API. Once the cluster status is RUNNING, you may access your vector database using the SDK with the admin account and the initial password you specified.\"\n  }\n}\n```",
                 "tags": [
                     "Cluster Operations (V2)"
                 ],
@@ -9169,124 +9169,6 @@
                                                 }
                                             }
                                         }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": []
-            }
-        },
-        "/v2/clusters/createFree": {
-            "post": {
-                "summary": "创建 Free 集群",
-                "deprecated": false,
-                "description": "Create free cluster.\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n\n```shell\nexport API_KEY=\"\"\nexport REGION_ID=\"\"\n\ncurl --request POST \\\n     --url https://api.cloud.zilliz.com/v2/clusters/createFree \\\n     --header 'Authorization: Bearer ${API_KEY}' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --data-raw '{\n        \"clusterName\": \"Free-01\",\n        \"projectId\": \"proj-xxxxxxxxxxxxxxxxxxxxxx\",\n        \"regionId\": \"${REGION_ID}\"\n      }'\n```\n\nPossible response is similar to the following\n```json\n{\n  code: 0,\n  data: {\n     \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n     \"username\":\"db_xxxxxxxx\",\n     \"password\":\"*************\",\n     \"prompt\": \"Successfully submitted, cluster is being created. You can access data about the creation progress and status of your cluster by DescribeCluster API. Once the cluster status is RUNNING, you may access your vector database using the SDK with the admin account and the initial password you specified.\"\n  }\n}\n```",
-                "tags": [
-                    "Cluster Operations (V2)"
-                ],
-                "parameters": [
-                    {
-                        "name": "Authorization",
-                        "in": "header",
-                        "description": "The authorization token. You should always use an API key with appropriate permissions.",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "Accept",
-                        "in": "header",
-                        "description": "Use `application/json`.",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "Content-Type",
-                        "in": "header",
-                        "description": "Use `application/json`.",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object",
-                                "properties": {
-                                    "clusterName": {
-                                        "type": "string",
-                                        "description": "Name of the cluster to create."
-                                    },
-                                    "projectId": {
-                                        "type": "string",
-                                        "description": "ID of the project to which the cluster belongs."
-                                    },
-                                    "regionId": {
-                                        "type": "string",
-                                        "description": "ID of the cloud region hosting the cluster."
-                                    }
-                                },
-                                "required": [
-                                    "clusterName",
-                                    "projectId",
-                                    "regionId"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "200": {
-                        "description": "Returns the details of the created cluster.",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                        "code": {
-                                            "type": "integer",
-                                            "description": "Response code."
-                                        },
-                                        "data": {
-                                            "type": "object",
-                                            "properties": {
-                                                "clusterId": {
-                                                    "type": "string",
-                                                    "description": "ID of the cluster created."
-                                                },
-                                                "username": {
-                                                    "type": "string",
-                                                    "description": "Name of the cluster administration user."
-                                                },
-                                                "password": {
-                                                    "type": "string",
-                                                    "description": "Password of the cluster administration user."
-                                                },
-                                                "prompt": {
-                                                    "type": "string",
-                                                    "description": "Prompt messages returned."
-                                                }
-                                            },
-                                            "required": [
-                                                "clusterId",
-                                                "username",
-                                                "password",
-                                                "prompt"
-                                            ],
-                                            "description": "Response payload."
-                                        }
-                                    },
-                                    "required": [
-                                        "code",
-                                        "data"
                                     ]
                                 }
                             }
@@ -10235,7 +10117,7 @@
             "delete": {
                 "summary": "删除集群",
                 "deprecated": false,
-                "description": "Drop Cluster.\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\n\ncurl --request DELETE \\\n     --url https://api.cloud.zilliz.com/v2/clusters/inxx-xxxxxxxxxxxxxxx/drop \\\n     --header 'Authorization: Bearer ${API_KEY}' \\\n     --header 'accept: application/json'\n```\n\nPossible response is similar to the following.\n\n```json\n{\n  \"code\": 0,\n  \"data\" {\n     \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n     \"prompt\": \"The cluster has been deleted. If you consider this action to be an error, you have the option to restore the deleted cluster from the recycle bin within a 30-day period. Kindly note, this recovery feature does not apply to free clusters.\"\n  }\n}\n```",
+                "description": "Drop Cluster.\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\n\ncurl --request DELETE \\\n     --url https://api.cloud.zilliz.com.cn/v2/clusters/inxx-xxxxxxxxxxxxxxx/drop \\\n     --header 'Authorization: Bearer ${API_KEY}' \\\n     --header 'accept: application/json'\n```\n\nPossible response is similar to the following.\n\n```json\n{\n  \"code\": 0,\n  \"data\" {\n     \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n     \"prompt\": \"The cluster has been deleted. If you consider this action to be an error, you have the option to restore the deleted cluster from the recycle bin within a 30-day period. Kindly note, this recovery feature does not apply to free clusters.\"\n  }\n}\n```",
                 "tags": [
                     "Cluster Operations (V2)"
                 ],
@@ -10434,7 +10316,7 @@
             "post": {
                 "summary": "挂起集群",
                 "deprecated": false,
-                "description": "Suspend a dedicated cluster. \n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\n\ncurl --request POST \\\n     --url https://api.cloud.zilliz.com/v2/clusters/inxx-xxxxxxxxxxxxxxx/suspend \\\n     --header 'Authorization: Bearer ${API_KEY}' \\\n     --header 'accept: application/json'\n```\n\nPossible response is similar to the following\n```json\n{\n  \"code\": 0,\n  \"data\" {\n     \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n     \"prompt\": \"Successfully Submitted. The cluster will not incur any computing costs when suspended. You will only be billed for the storage costs during this time.\"\n  }\n}\n```\n",
+                "description": "Suspend a dedicated cluster. \n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\n\ncurl --request POST \\\n     --url https://api.cloud.zilliz.com.cn/v2/clusters/inxx-xxxxxxxxxxxxxxx/suspend \\\n     --header 'Authorization: Bearer ${API_KEY}' \\\n     --header 'accept: application/json'\n```\n\nPossible response is similar to the following\n```json\n{\n  \"code\": 0,\n  \"data\" {\n     \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n     \"prompt\": \"Successfully Submitted. The cluster will not incur any computing costs when suspended. You will only be billed for the storage costs during this time.\"\n  }\n}\n```\n",
                 "tags": [
                     "Cluster Operations (V2)"
                 ],
@@ -10606,7 +10488,7 @@
             "post": {
                 "summary": "恢复集群",
                 "deprecated": false,
-                "description": "Resume a dedicated cluster.\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\n\ncurl --request GET \\\n    --url \"https://api.cloud.zilliz.com/v2/clusters/inxx-xxxxxxxxxxxxxxx/resume\" \\\n    --header \"Authorization: Bearer ${API_KEY}\"   \\\n    --header \"accept: application/json\"\n```\n\nPossible response is similar to the following\n```json\n{\n  \"code\": 0,\n  \"data\" {\n     \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n     \"prompt\": \"Successfully Submitted. Cluster is being resumed, which is expected to takes several minutes. You can access data about the creation progress and status of your cluster by DescribeCluster API. Once the cluster status is RUNNING, you may access your vector database using the SDK.\"\n  }\n}\n```",
+                "description": "Resume a dedicated cluster.\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\n\ncurl --request GET \\\n    --url \"https://api.cloud.zilliz.com.cn/v2/clusters/inxx-xxxxxxxxxxxxxxx/resume\" \\\n    --header \"Authorization: Bearer ${API_KEY}\"   \\\n    --header \"accept: application/json\"\n```\n\nPossible response is similar to the following\n```json\n{\n  \"code\": 0,\n  \"data\" {\n     \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n     \"prompt\": \"Successfully Submitted. Cluster is being resumed, which is expected to takes several minutes. You can access data about the creation progress and status of your cluster by DescribeCluster API. Once the cluster status is RUNNING, you may access your vector database using the SDK.\"\n  }\n}\n```",
                 "tags": [
                     "Cluster Operations (V2)"
                 ],
@@ -10773,7 +10655,7 @@
             "post": {
                 "summary": "修改集群配置",
                 "deprecated": false,
-                "description": "Modiy a dedicated cluster. Currently support upgrading dedicated clusters CU size. \n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\n\ncurl --request POST \\\n     --url https://api.cloud.zilliz.com/v2/clusters/inxx-xxxxxxxxxxxxxxx/modify \\\n     --header 'Authorization: Bearer ${API_KEY}' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --data-raw '{\n        \"cuSize\": 2\n      }'\n```\n\nPossible response is similar to the following\n```json\n{\n  \"code\": 0,\n  \"data\" {\n     \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n     \"prompt\": \"Successfully submitted. Cluster is being upgraded, which is expected to take several minutes. You can access data about the creation progress and status of your cluster by DescribeCluster API. Once the cluster status is RUNNING, you may access your vector database using the SDK.\"\n  }\n}\n```",
+                "description": "Modiy a dedicated cluster. Currently support upgrading dedicated clusters CU size. \n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\n\ncurl --request POST \\\n     --url https://api.cloud.zilliz.com.cn/v2/clusters/inxx-xxxxxxxxxxxxxxx/modify \\\n     --header 'Authorization: Bearer ${API_KEY}' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --data-raw '{\n        \"cuSize\": 2\n      }'\n```\n\nPossible response is similar to the following\n```json\n{\n  \"code\": 0,\n  \"data\" {\n     \"clusterId\": \"inxx-xxxxxxxxxxxxxxx\",\n     \"prompt\": \"Successfully submitted. Cluster is being upgraded, which is expected to take several minutes. You can access data about the creation progress and status of your cluster by DescribeCluster API. Once the cluster status is RUNNING, you may access your vector database using the SDK.\"\n  }\n}\n```",
                 "tags": [
                     "Cluster Operations (V2)"
                 ],
@@ -10964,7 +10846,7 @@
             "post": {
                 "summary": "查看集群指标",
                 "deprecated": false,
-                "description": "Query the metrics of a specific cluster.\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\n\ncurl --request POST \\\n     --url https://api.cloud.zilliz.com/v2/clusters/inxx-xxxxxxxxxxxxxxx/metrics/query \\\n     --header 'Authorization: Bearer ${API_KEY}' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --data-raw '{\n       \"start\": \"2024-06-30T16:09:53Z\",\n       \"end\": \"2024-07-01T16:09:53Z\",\n       \"granularity\": \"PT6H\",\n       \"metricQueries\": [\n           {\n               \"name\": \"CU_COMPUTATION\",\n               \"stat\": \"AVG\"    \n           }\n       ]\n    }'\n```\n\nPossible response is similar to the following.\n\n```json\n{\n   \"code\": 0,\n   \"data\":{\n      \"results\":[\n         {\n            \"name\":\"CU_COMPUTATION\",\n            \"stat\":\"AVG\",\n            \"unit\":\"percent\",\n            \"values\":[\n               {\n                  \"timestamp\":\"2024-06-30T16:09:53Z\",\n                  \"value\":null\n               },\n               {\n                  \"timestamp\":\"2024-06-30T22:09:53Z\",\n                  \"value\":\"1.00\"\n               },\n               {\n                  \"timestamp\":\"2024-07-01T04:09:53Z\",\n                  \"value\":\"1.00\"\n               },\n               {\n                  \"timestamp\":\"2024-07-01T10:09:53Z\",\n                  \"value\":\"1.00\"\n               }\n            ]\n         }\n      ]\n   }\n}\n```",
+                "description": "Query the metrics of a specific cluster.\n\n## Example\n\nimport Admonition from '@theme/Admonition';\n\n<Admonition type=\"info\" icon=\"📘\" title=\"Notes\">\n    \n<p>This API requires an <a href=\"/docs/manage_api_keys\">API key</a> as the authentication token.</p>\n    \n</Admonition>\n\n```shell\nexport API_KEY=\"\"\n\ncurl --request POST \\\n     --url https://api.cloud.zilliz.com.cn/v2/clusters/inxx-xxxxxxxxxxxxxxx/metrics/query \\\n     --header 'Authorization: Bearer ${API_KEY}' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --data-raw '{\n       \"start\": \"2024-06-30T16:09:53Z\",\n       \"end\": \"2024-07-01T16:09:53Z\",\n       \"granularity\": \"PT6H\",\n       \"metricQueries\": [\n           {\n               \"name\": \"CU_COMPUTATION\",\n               \"stat\": \"AVG\"    \n           }\n       ]\n    }'\n```\n\nPossible response is similar to the following.\n\n```json\n{\n   \"code\": 0,\n   \"data\":{\n      \"results\":[\n         {\n            \"name\":\"CU_COMPUTATION\",\n            \"stat\":\"AVG\",\n            \"unit\":\"percent\",\n            \"values\":[\n               {\n                  \"timestamp\":\"2024-06-30T16:09:53Z\",\n                  \"value\":null\n               },\n               {\n                  \"timestamp\":\"2024-06-30T22:09:53Z\",\n                  \"value\":\"1.00\"\n               },\n               {\n                  \"timestamp\":\"2024-07-01T04:09:53Z\",\n                  \"value\":\"1.00\"\n               },\n               {\n                  \"timestamp\":\"2024-07-01T10:09:53Z\",\n                  \"value\":\"1.00\"\n               }\n            ]\n         }\n      ]\n   }\n}\n```",
                 "tags": [
                     "Cluster Operations (V2)"
                 ],

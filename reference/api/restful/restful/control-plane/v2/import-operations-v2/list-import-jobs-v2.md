@@ -9,7 +9,13 @@ import RestHeader from '@site/src/components/RestHeader';
 
 This operation lists all import jobs of a specific cluster.
 
-## Example
+<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/vectordb/jobs/import/list" />
+
+---
+
+## 示例
+
+
 
 import Admonition from '@theme/Admonition';
 
@@ -25,7 +31,7 @@ You can use either of the following ways to authorize:
 ```shell
 export API_KEY=""
 
-curl --location --request POST "https://api.cloud.zilliz.com/v2/vectordb/jobs/import/list" \
+curl --location --request POST "https://api.cloud.zilliz.com.cn/v2/vectordb/jobs/import/list" \
 --header "Authorization: Bearer ${API_KEY}" \
 --header "Content-Type: application/json" \
 --data-raw '{
@@ -52,17 +58,6 @@ Possible response is similart to the following.
     }
 }
 ```
-
-<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/vectordb/jobs/import/list" />
-
----
-
-## 示例
-
-
-
-# RESTful API Examples
-
 
 
 
@@ -123,7 +118,7 @@ Returns the list of import jobs of a specific cluster.
 
 | 属性名称 | 属性描述                                                                                                                                    |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __data__ | __object__<br/>Response payload. |
 | __data.count__ | __integer__  <br/>Total number of records listed in this response.  |
 | __data.currentPage__ | __integer__  <br/>Current page number for your reference.  |
@@ -145,5 +140,5 @@ Returns the list of import jobs of a specific cluster.
 
 | 属性名称    | 属性描述                                                                                                                                    |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __message__ | **string**<br/>表示错误信息。                                                                        |

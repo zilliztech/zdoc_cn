@@ -9,7 +9,13 @@ import RestHeader from '@site/src/components/RestHeader';
 
 Lists all available cloud regions. You may list only the applicable regions of a specific cloud provider.
 
-## Example
+<RestHeader method="get" endpoint="https://api.cloud.zilliz.com/v2/regions" />
+
+---
+
+## 示例
+
+
 
 import Admonition from '@theme/Admonition';
 
@@ -25,13 +31,13 @@ export CLOUD_ID=""
 
 # List all available cloud regions.
 curl --request GET \
-    --url "https://api.cloud.zilliz.com/v2/regions" \
+    --url "https://api.cloud.zilliz.com.cn/v2/regions" \
     --header "Authorization: Bearer ${API_KEY}"   \
     --header "accept: application/json"
 
 # List all available cloud regions of a specific provider.
 curl -i --request GET \
-    --url "https://api.cloud.zilliz.com/v2/regions?cloudId=${CLOUD_ID}" \
+    --url "https://api.cloud.zilliz.com.cn/v2/regions?cloudId=${CLOUD_ID}" \
     --header "Authorization: Bearer ${API_KEY}"   \
     --header "accept: application/json"
 ```
@@ -43,64 +49,18 @@ Possible response is similar to the following
     "code": 0,
     "data": [
         {
-            "cloudId": "aws",
-            "regionId": "aws-us-west-2",
-            "domain": "api.cloud.zilliz.com"
-        },
-        {
-            "cloudId": "gcp",
-            "regionId": "gcp-us-west1",
-            "domain": "api.cloud.zilliz.com"
-        },
-        {
-            "cloudId": "azure",
-            "regionId": "az-westus3",
-            "domain": "api.cloud.zilliz.com"
-        }
-    ]
-}
-```
-
-<RestHeader method="get" endpoint="https://api.cloud.zilliz.com/v2/regions" />
-
----
-
-## 示例
-
-
-
-
-:::info 说明
-
-- 此 API 要求您拥有 [API 密钥](/docs/manage-api-keys) 作为认证令牌。
-
-:::
-
-```shell
-curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/regions?cloudId=ali" \
-     --header "Authorization: Bearer ${API_KEY}" \
-     --header "accept: application/json" \
-     --header "content-type: application/json"
-```
-
-您可以使用 `ListClouds` 接口获取 `cloudId`。
-
-成功响应示例：
-
-```shell
-{
-    "code": 200,
-    "data": [
-        {
             "cloudId": "ali",
-            "domain": "*.*.api.ali-cn-hangzhou.cloud.zilliz.com.cn",
-            "regionId": "ali-cn-hangzhou"
+            "regionId": "ali-cn-hangzhou",
+            "domain": "api.cloud.zilliz.com.cn"
+        },
+        {
+            "cloudId": "tc",
+            "regionId": "tc-ap-beijing",
+            "domain": "api.cloud.zilliz.com.cn"
         }
     ]
 }
 ```
-
 
 
 
@@ -148,7 +108,7 @@ Return a list of cloud regions in detail.
 
 | 属性名称 | 属性描述                                                                                                                                    |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __data__ | __array__<br/>Response payload. |
 | __data[]__ | __object__<br/>List of applicable cloud regions. |
 | __data[].cloudId__ | __string__  <br/>ID of the cloud provider that provides the region.  |
@@ -166,5 +126,5 @@ Return a list of cloud regions in detail.
 
 | 属性名称    | 属性描述                                                                                                                                    |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __message__ | **string**<br/>表示错误信息。                                                                        |

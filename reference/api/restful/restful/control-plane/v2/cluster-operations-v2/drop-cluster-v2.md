@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 77
+sidebar_position: 76
 slug: /restful/drop-cluster-v2
 title: 删除集群
 ---
@@ -9,7 +9,13 @@ import RestHeader from '@site/src/components/RestHeader';
 
 Drop Cluster.
 
-## Example
+<RestHeader method="delete" endpoint="https://api.cloud.zilliz.com/v2/clusters/{clusterId}/drop" />
+
+---
+
+## 示例
+
+
 
 import Admonition from '@theme/Admonition';
 
@@ -23,7 +29,7 @@ import Admonition from '@theme/Admonition';
 export API_KEY=""
 
 curl --request DELETE \
-     --url https://api.cloud.zilliz.com/v2/clusters/inxx-xxxxxxxxxxxxxxx/drop \
+     --url https://api.cloud.zilliz.com.cn/v2/clusters/inxx-xxxxxxxxxxxxxxx/drop \
      --header 'Authorization: Bearer ${API_KEY}' \
      --header 'accept: application/json'
 ```
@@ -39,42 +45,6 @@ Possible response is similar to the following.
   }
 }
 ```
-
-<RestHeader method="delete" endpoint="https://api.cloud.zilliz.com/v2/clusters/{clusterId}/drop" />
-
----
-
-## 示例
-
-
-
-
-:::info 说明
-
-- 此 API 要求您拥有 [API 密钥](/docs/manage-api-keys) 作为认证令牌。
-
-:::
-
-```shell
-curl --request DELETE \
-    --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/${clusterId}/drop" \
-    --header "Authorization: Bearer ${API_KEY}" \
-    --header "accept: application/json" \
-    --header "content-type: application/json"
-```
-
-成功响应示例：
-
-```shell
-{
-    "code": 200,
-    "data": {
-       "clusterId": "in01-***************",
-       "prompt": "The Cluster has been deleted. If you believe this was a mistake, you can restore the Cluster from the recycle bin within 30 days (this not include serverless)."
-    }
-}
-```
-
 
 
 
@@ -119,7 +89,7 @@ Returns the ID of the dropped cluster.
 
 | 属性名称 | 属性描述                                                                                                                                    |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __data__ | __object__<br/>Response payload. |
 | __data.clusterId__ | __string__  <br/>ID of the cluster that has been dropped.  |
 | __data.prompt__ | __string__  <br/>Prompt message returned.  |
@@ -135,5 +105,5 @@ Returns the ID of the dropped cluster.
 
 | 属性名称    | 属性描述                                                                                                                                    |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __message__ | **string**<br/>表示错误信息。                                                                        |

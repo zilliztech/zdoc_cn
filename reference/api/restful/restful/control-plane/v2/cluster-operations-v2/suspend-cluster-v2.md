@@ -1,15 +1,21 @@
 ---
 displayed_sidebar: restfulSidebar
-sidebar_position: 79
+sidebar_position: 78
 slug: /restful/suspend-cluster-v2
 title: 挂起集群
 ---
 
 import RestHeader from '@site/src/components/RestHeader';
 
-Suspend a dedicated cluster. 
+Suspend a dedicated cluster.
 
-## Example
+<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/clusters/{clusterId}/suspend" />
+
+---
+
+## 示例
+
+
 
 import Admonition from '@theme/Admonition';
 
@@ -23,7 +29,7 @@ import Admonition from '@theme/Admonition';
 export API_KEY=""
 
 curl --request POST \
-     --url https://api.cloud.zilliz.com/v2/clusters/inxx-xxxxxxxxxxxxxxx/suspend \
+     --url https://api.cloud.zilliz.com.cn/v2/clusters/inxx-xxxxxxxxxxxxxxx/suspend \
      --header 'Authorization: Bearer ${API_KEY}' \
      --header 'accept: application/json'
 ```
@@ -38,42 +44,6 @@ Possible response is similar to the following
   }
 }
 ```
-
-<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/clusters/{clusterId}/suspend" />
-
----
-
-## 示例
-
-
-
-
-:::info 说明
-
-- 此 API 要求您拥有 [API 密钥](/docs/manage-api-keys) 作为认证令牌。
-
-:::
-
-```shell
-curl --request POST \ 
-     --url "https://controller.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/<Cluster-ID>/suspend" \
-     --header "Authorization: Bearer ${TOKEN}" \
-     --header "accept: application/json" \
-     --header "content-type: application/json"
-```
-
-成功响应示例：
-
-```shell
-{
-  code: 200,
-  data: {
-     "clusterId": "cluster01",
-     "prompt": "Submission successful. Your vector database computing cost is free until you Resume the Cluster, and only storage costs will be charged."
-  }
-}
-```
-
 
 
 
@@ -118,7 +88,7 @@ Returns the ID of the suspended cluster.
 
 | 属性名称 | 属性描述                                                                                                                                    |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __data__ | __object__<br/>Response payload. |
 | __data.clusterId__ | __string__  <br/>ID of the cluster that has been suspended.  |
 | __data.prompt__ | __string__  <br/>Prompt message returned.  |
@@ -134,5 +104,5 @@ Returns the ID of the suspended cluster.
 
 | 属性名称    | 属性描述                                                                                                                                    |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __message__ | **string**<br/>表示错误信息。                                                                        |

@@ -9,7 +9,13 @@ import RestHeader from '@site/src/components/RestHeader';
 
 Create dedicated cluster.
 
-## Example
+<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/clusters/createDedicated" />
+
+---
+
+## 示例
+
+
 
 import Admonition from '@theme/Admonition';
 
@@ -24,7 +30,7 @@ export API_KEY=""
 export REGION_ID=""
 
 curl --request POST \
-     --url https://api.cloud.zilliz.com/v2/clusters/createDedicated \
+     --url https://api.cloud.zilliz.com.cn/v2/clusters/createDedicated \
      --header 'Authorization: Bearer ${API_KEY}' \
      --header 'accept: application/json' \
      --header 'content-type: application/json' \
@@ -50,17 +56,6 @@ Possible response is similar to the following
   }
 }
 ```
-
-<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/clusters/createDedicated" />
-
----
-
-## 示例
-
-
-
-# RESTful API Examples
-
 
 
 
@@ -122,7 +117,7 @@ Returns the details of the created cluster.
 
 | 属性名称 | 属性描述                                                                                                                                    |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __data__ | __object__<br/>Response payload. |
 | __data.clusterId__ | __string__  <br/>ID of the cluster created.  |
 | __data.username__ | __string__  <br/>Name of the cluster administration user named `db_admin`.  |
@@ -140,5 +135,5 @@ Returns the details of the created cluster.
 
 | 属性名称    | 属性描述                                                                                                                                    |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __message__ | **string**<br/>表示错误信息。                                                                        |

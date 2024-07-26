@@ -669,6 +669,10 @@ class refGen {
 
   split_excerpt(text) {
     var result = text
+    if (text.includes("## Example")) {
+      result = text.split("## Example")[0]
+    }
+
     if (text.includes("## 示例")) {
       result = text.split("## 示例")[0]
     }
@@ -678,6 +682,10 @@ class refGen {
 
   split_example(text) {
     var result = ''
+
+    if (text.includes("## Example")) {
+      result = text.split("## Example")[1].trim()
+    }
 
     if (text.includes("## 示例")) {
       result = text.split("## 示例")[1].trim()

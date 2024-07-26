@@ -9,7 +9,13 @@ import RestHeader from '@site/src/components/RestHeader';
 
 Create serverless cluster.
 
-## Example
+<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/clusters/createServerless" />
+
+---
+
+## 示例
+
+
 
 import Admonition from '@theme/Admonition';
 
@@ -24,7 +30,7 @@ export API_KEY=""
 export REGION_ID=""
 
 curl --request POST \
-     --url https://api.cloud.zilliz.com/v2/clusters/createServerless \
+     --url https://api.cloud.zilliz.com.cn/v2/clusters/createServerless \
      --header 'Authorization: Bearer ${API_KEY}' \
      --header 'accept: application/json' \
      --header 'content-type: application/json' \
@@ -47,63 +53,6 @@ Possible response is similar to the following
   }
 }
 ```
-
-<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/clusters/createServerless" />
-
----
-
-## 示例
-
-
-
-
-:::info 说明
-
-- 此 API 要求您拥有 [API 密钥](/docs/manage-api-keys) 作为认证令牌。
-- 此 API 要求提供目标项目 ID。
-
-:::
-
-```shell
-curl --request POST \
-    --url "https://controller.api.${CLOUD_REGION}.zillizcloud.com/v1/clusters/createServerless" \
-    --header "Authorization: Bearer ${API_KEY}" \
-    --header "accept: application/json" \
-    --header "content-type: application/json" \
-    --data-raw '{
-    "plan": "Free",    
-    "clusterName": "cluster-starter",
-    "projectId": "proj-*********************"
-    }'
-```
-
-Success response:
-
-```shell
-{
-    "code": 200,
-    "data": {
-       "clusterId": "in03-******************",
-       "username": "db_admin",
-       "password": "******************",
-       "prompt": "Submission successful, Cluster is being created, You can use the DescribeCluster interface to obtain the creation progress and the status of the Cluster. When the Cluster status is RUNNING, you can access your vector database using the SDK with the admin account and the initialization password you provided."
-    }
-}
-```
-
-:::info 如何获取项目 ID？
-
-您可以通过以下方式获取项目 ID：
-
-- 通过 Zilliz Cloud 控制台查看：
-
-    1. 在控制台导航栏中，选择 **项目** 菜单。
-    2. 找到目标项目，并复制其 **项目 ID** 列中的值。
-
-- 通过调用[查看项目列表](./list-projects)查看。
-
-:::
-
 
 
 
@@ -159,7 +108,7 @@ Returns the details of the created cluster.
 
 | 属性名称 | 属性描述                                                                                                                                    |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __data__ | __object__<br/>Response payload. |
 | __data.clusterId__ | __string__  <br/>ID of the cluster created.  |
 | __data.username__ | __string__  <br/>Name of the cluster administration user.  |
@@ -177,5 +126,5 @@ Returns the details of the created cluster.
 
 | 属性名称    | 属性描述                                                                                                                                    |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __message__ | **string**<br/>表示错误信息。                                                                        |

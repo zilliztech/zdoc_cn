@@ -9,7 +9,13 @@ import RestHeader from '@site/src/components/RestHeader';
 
 Lists all cloud providers available on Zilliz Cloud.
 
-## Example
+<RestHeader method="get" endpoint="https://api.cloud.zilliz.com/v2/clouds" />
+
+---
+
+## 示例
+
+
 
 import Admonition from '@theme/Admonition';
 
@@ -23,7 +29,7 @@ import Admonition from '@theme/Admonition';
 export API_KEY=""
 
 curl --request GET \
-    --url "https://api.cloud.zilliz.com/v2/clouds" \
+    --url "https://api.cloud.zilliz.com.cn/v2/clouds" \
     --header "Authorization: Bearer ${API_KEY}"   \
     --header "accept: application/json"
 ```
@@ -35,62 +41,16 @@ Possible response is similar to the following
     "code": 0,
     "data": [
         {
-            "cloudId": "aws",
-            "description": "Amazon Web Services"
-        },
-        {
-            "cloudId": "gcp",
-            "description": "Google Cloud Platform"
-        },
-        {
-            "cloudId": "azure",
-            "description": "Microsoft Azure"
-        }
-    ]
-}
-```
-
-<RestHeader method="get" endpoint="https://api.cloud.zilliz.com/v2/clouds" />
-
----
-
-## 示例
-
-
-
-
-:::info 说明
-
-- 此 API 要求您拥有 [API 密钥](/docs/manage-api-keys) 作为认证令牌。
-
-:::
-
-```shell
-curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clouds" \
-     --header "Authorization: Bearer ${API_KEY}" \
-     --header "accept: application/json" \
-     --header "content-type: application/json"
-```
-
-成功响应示例：
-
-```shell
-{
-    "code": 200,
-    "data": [
-        {
             "cloudId": "ali",
-            "description": "alibaba cloud"
+            "description": "Alibaba Cloud"
         },
         {
             "cloudId": "tc",
-            "description": "tencent cloud"
+            "description": "Tencent Cloud"
         }
     ]
 }
 ```
-
 
 
 
@@ -133,7 +93,7 @@ Returns a list of cloud providers in detail.
 
 | 属性名称 | 属性描述                                                                                                                                    |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__ | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __data__ | __array__<br/>Response payload. |
 | __data[]__ | __object__<br/>List of applicable cloud providers. |
 | __data[].cloudId__ | __string__  <br/>ID of a cloud provider.  |
@@ -150,5 +110,5 @@ Returns a list of cloud providers in detail.
 
 | 属性名称    | 属性描述                                                                                                                                    |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`200`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
+| __code__    | **integer**<br/>表示当前操作是否成功。<br/><ul><li>`0`: 当前操作成功返回。</li><li>其它: 发生错误。</li></ul> |
 | __message__ | **string**<br/>表示错误信息。                                                                        |
