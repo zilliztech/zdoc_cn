@@ -5,6 +5,13 @@ notebook: FALSE
 type: origin
 token: SVnkw5IkNiOfALkijr1cw91vn3L
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 邮箱
+  - 账号
 
 ---
 
@@ -89,5 +96,5 @@ import Admonition from '@theme/Admonition';
 
 - [删除组织](./delete-your-organization)
 
-- [查看事件](./view-activities) 
+- [查看事件](./view-activities_1) 
 

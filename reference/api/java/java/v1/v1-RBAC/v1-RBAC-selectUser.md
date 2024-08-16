@@ -33,24 +33,24 @@ Methods of `SelectUserParam.Builder`:
 
 <table>
     <tr>
-        <th><p>Method</p></th>
-        <th><p>Description</p></th>
-        <th><p>Parameters</p></th>
+  <th><p>Method</p></th>
+  <th><p>Description</p></th>
+  <th><p>Parameters</p></th>
     </tr>
     <tr>
-        <td><p>withUsername(String username)</p></td>
-        <td><p>Sets the username. Username cannot be empty or null.</p></td>
-        <td><p>username: The user name.</p></td>
+  <td><p>withUsername(String username)</p></td>
+  <td><p>Sets the username. Username cannot be empty or null.</p></td>
+  <td><p>username: The user name.</p></td>
     </tr>
     <tr>
-        <td><p>withIncludeRoleInfo(boolean includeRoleInfo)</p></td>
-        <td><p>Sets the includeRoleInfo. Default value is false.</p></td>
-        <td><p>includeRoleInfo: The include role info or not.</p></td>
+  <td><p>withIncludeRoleInfo(boolean includeRoleInfo)</p></td>
+  <td><p>Sets the includeRoleInfo. Default value is false.</p></td>
+  <td><p>includeRoleInfo: The include role info or not.</p></td>
     </tr>
     <tr>
-        <td><p>build()</p></td>
-        <td><p>Construct a SelectUserParam object.</p></td>
-        <td><p>N/A</p></td>
+  <td><p>build()</p></td>
+  <td><p>Construct a SelectUserParam object.</p></td>
+  <td><p>N/A</p></td>
     </tr>
 </table>
 

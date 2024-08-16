@@ -5,6 +5,12 @@ notebook: FALSE
 type: origin
 token: YBlmwO9ajiU4tYklnjmc6fJPn8e
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 数据迁移
 
 ---
 
@@ -142,11 +148,13 @@ backup
 
 如果要将本地文件夹上传到 Zilliz Cloud，请选择**导入本地文件夹**，然后将文件夹拖到指定区域上传。注意，上传文件夹的最大尺寸为 1 GB。
 
-![migrate_from_milvus_1x](/img/migrate_from_milvus_1x.png)
+![migration_procedure_cn](/img/migration_procedure_cn.png)
 
 ## 结果验证{#verify-the-migration-results}
 
-如果迁移任务的状态从 **迁移中** 变更为 **成功**，则代表迁移成功。
+生成迁移任务后，您可前往[任务中心](./job-center)查看任务状态和进度。如果迁移任务的状态从**进行中**变更为**成功**，则代表迁移成功。
+
+![view_migration_progress_cn](/img/view_migration_progress_cn.png)
 
 Zilliz Cloud 仅支持 [AUTOINDEX](./autoindex-explained)。**AUTOINDEX** 是一种优化的索引算法，Zilliz Cloud 将使用此算法为您迁移的 Collection 自动创建索引。
 

@@ -6,6 +6,13 @@ notebook: FALSE
 type: origin
 token: FXGWwcjyViaQm8kvJgScITzBnr3
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 数据导入
+  - 指南
 
 ---
 
@@ -140,58 +147,58 @@ curl https://assets.zilliz.com/doc-assets/medium_articles_partial_a13e0f2a.csv \
 
 <table>
    <tr>
-     <th><p><strong>字段名称</strong></p></th>
-     <th><p><strong>字段类型</strong></p></th>
-     <th><p><strong>字段属性</strong></p></th>
-     <th><p><strong>样例取值</strong></p></th>
+  <th><p><strong>字段名称</strong></p></th>
+  <th><p><strong>字段类型</strong></p></th>
+  <th><p><strong>字段属性</strong></p></th>
+  <th><p><strong>样例取值</strong></p></th>
    </tr>
    <tr>
-     <td><p>id</p></td>
-     <td><p>INT64</p></td>
-     <td><p>N/A</p></td>
-     <td><p>0</p></td>
+  <td><p>id</p></td>
+  <td><p>INT64</p></td>
+  <td><p>N/A</p></td>
+  <td><p>0</p></td>
    </tr>
    <tr>
-     <td><p>title_vector</p></td>
-     <td><p>FLOAT_VECTOR</p></td>
-     <td><p>Dimension: 768</p></td>
-     <td><p>[0.041732933, 0.013779674, -0.027564144, -0.01…</p></td>
+  <td><p>title_vector</p></td>
+  <td><p>FLOAT_VECTOR</p></td>
+  <td><p>Dimension: 768</p></td>
+  <td><p>[0.041732933, 0.013779674, -0.027564144, -0.01…</p></td>
    </tr>
    <tr>
-     <td><p>title</p></td>
-     <td><p>VARCHAR</p></td>
-     <td><p>Max length: 512</p></td>
-     <td><p>The Reported Mortality Rate of Coronavirus Is …</p></td>
+  <td><p>title</p></td>
+  <td><p>VARCHAR</p></td>
+  <td><p>Max length: 512</p></td>
+  <td><p>The Reported Mortality Rate of Coronavirus Is …</p></td>
    </tr>
    <tr>
-     <td><p>link</p></td>
-     <td><p>VARCHAR</p></td>
-     <td><p>Max length: 512</p></td>
-     <td><p>https://medium.com/swlh/the-reported-mortality…</p></td>
+  <td><p>link</p></td>
+  <td><p>VARCHAR</p></td>
+  <td><p>Max length: 512</p></td>
+  <td><p>https://medium.com/swlh/the-reported-mortality…</p></td>
    </tr>
    <tr>
-     <td><p>reading_time</p></td>
-     <td><p>INT64</p></td>
-     <td><p>N/A</p></td>
-     <td><p>13</p></td>
+  <td><p>reading_time</p></td>
+  <td><p>INT64</p></td>
+  <td><p>N/A</p></td>
+  <td><p>13</p></td>
    </tr>
    <tr>
-     <td><p>publication</p></td>
-     <td><p>VARCHAR</p></td>
-     <td><p>Max length: 512</p></td>
-     <td><p>The Startup</p></td>
+  <td><p>publication</p></td>
+  <td><p>VARCHAR</p></td>
+  <td><p>Max length: 512</p></td>
+  <td><p>The Startup</p></td>
    </tr>
    <tr>
-     <td><p>claps</p></td>
-     <td><p>INT64</p></td>
-     <td><p>N/A</p></td>
-     <td><p>1100</p></td>
+  <td><p>claps</p></td>
+  <td><p>INT64</p></td>
+  <td><p>N/A</p></td>
+  <td><p>1100</p></td>
    </tr>
    <tr>
-     <td><p>responses</p></td>
-     <td><p>INT64</p></td>
-     <td><p>N/A</p></td>
-     <td><p>18</p></td>
+  <td><p>responses</p></td>
+  <td><p>INT64</p></td>
+  <td><p>N/A</p></td>
+  <td><p>18</p></td>
    </tr>
 </table>
 

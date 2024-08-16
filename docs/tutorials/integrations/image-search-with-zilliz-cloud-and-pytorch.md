@@ -5,6 +5,13 @@ notebook: FALSE
 type: origin
 token: FpeXw3b5piUAG7kUCgucgI1unFh
 sidebar_position: 5
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 相似性
+  - pytorch
 
 ---
 

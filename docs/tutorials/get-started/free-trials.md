@@ -5,6 +5,13 @@ notebook: FALSE
 type: origin
 token: WWlIwejMNiAEmmkce5fcZu4UnMd
 sidebar_position: 3
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 免费
+  - 试用
 
 ---
 
@@ -13,7 +20,7 @@ import Admonition from '@theme/Admonition';
 
 # 免费试用
 
-Zilliz Cloud 当前提供 Serverless、Dedicated 和 BYOC 三种订阅版本。首次注册 Zilliz Cloud 时，您将获赠 ¥300 免费额度，有效期为 30 天，可用于试用 Zilliz Cloud Serverless 和 Dedicated 版本。
+Zilliz Cloud 当前提供 Serverless、Dedicated 和 BYOC 三种订阅版本。首次注册 Zilliz Cloud 时，您将获赠 ¥300 免费额度，自注册之日起 30 天内有效，可用于试用 Zilliz Cloud Serverless 和 Dedicated 版本。
 
 ## Serverless 版{#serverless-plan}
 
@@ -47,29 +54,29 @@ Zilliz Cloud 当前提供 Serverless、Dedicated 和 BYOC 三种订阅版本。�
 
 <table>
    <tr>
-     <th></th>
-     <th><p>Serverless 版</p></th>
-     <th><p>Dedicated 版</p></th>
+  <th></th>
+  <th><p>Serverless 版</p></th>
+  <th><p>Dedicated 版</p></th>
    </tr>
    <tr>
-     <td><p>集群类型</p></td>
-     <td><p>Serverless</p></td>
-     <td><p>Dedicated</p></td>
+  <td><p>集群类型</p></td>
+  <td><p>Serverless</p></td>
+  <td><p>Dedicated</p></td>
    </tr>
    <tr>
-     <td><p>试用有效期</p></td>
-     <td><p>限时免费</p></td>
-     <td><p>30 天</p></td>
+  <td><p>试用有效期</p></td>
+  <td><p>限时免费至 2024 年 9 月 15 日</p></td>
+  <td><p>自注册之日起 30 天内有效</p></td>
    </tr>
    <tr>
-     <td><p>可创建 Collection 数量上限</p></td>
-     <td><p>10</p></td>
-     <td><p>可根据您的需求灵活创建 Collection。更多详情，请参考<a href="./limits#collections">使用限制</a>。</p></td>
+  <td><p>可创建 Collection 数量上限</p></td>
+  <td><p>10</p></td>
+  <td><p>可根据您的需求灵活创建 Collection。更多详情，请参考<a href="./limits#collections">使用限制</a>。</p></td>
    </tr>
    <tr>
-     <td><p>CU 计算资源大小</p></td>
-     <td><p>共享资源</p></td>
-     <td><p>专有资源，可根据您的需求灵活选择 CU 大小。</p></td>
+  <td><p>CU 计算资源大小</p></td>
+  <td><p>共享资源</p></td>
+  <td><p>专有资源，可根据您的需求灵活选择 CU 大小。</p></td>
    </tr>
 </table>
 

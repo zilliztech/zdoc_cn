@@ -33,19 +33,24 @@ Methods of `SelectGrantForRoleParam.Builder`:
 
 <table>
     <tr>
-        <th><p>Method</p></th>
-        <th><p>Description</p></th>
-        <th><p>Parameters</p></th>
+  <th><p>Method</p></th>
+  <th><p>Description</p></th>
+  <th><p>Parameters</p></th>
     </tr>
     <tr>
-        <td><p>withRoleName(String roleName)</p></td>
-        <td><p>Sets the roleName. RoleName cannot be empty or null.</p></td>
-        <td><p>roleName: The role name used to create the privilege.</p></td>
+  <td><p>withRoleName(String roleName)</p></td>
+  <td><p>Sets the roleName. RoleName cannot be empty or null.</p></td>
+  <td><p>roleName: The role name used to create the privilege.</p></td>
     </tr>
     <tr>
-        <td><p>build()</p></td>
-        <td><p>Construct a SelectGrantForRoleParam object.</p></td>
-        <td><p>N/A</p></td>
+  <td><p>withDatabaseName(String databaseName)</p></td>
+  <td><p>Sets the database name. database name can be null for default database.</p></td>
+  <td><p>databaseName: The database name.</p></td>
+    </tr>
+    <tr>
+  <td><p>build()</p></td>
+  <td><p>Construct a SelectGrantForRoleParam object.</p></td>
+  <td><p>N/A</p></td>
     </tr>
 </table>
 

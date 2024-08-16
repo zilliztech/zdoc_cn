@@ -43,11 +43,13 @@ Pipelines 可以将非结构化数据转化为高质量的 Embedding 向量，�
 
 - **zilliz/bge-base-zh-v1.5**（针对中文文档）：智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。
 
-针对图像，Ingestion 和 Search Pipeline 提供 2 种 Embedding 模型选择。
+针对图像数据，Ingestion 和 Search Pipeline 提供以下Embedding 模型选择。
 
 - **zilliz/vit-base-patch16-224**：Google 开源的 Vision Transformer (ViT) encoder 模型（类似于 BERT），在大量图像数据上进行预训练，可用于将图像的内容语义转化为向量空间中的 Embedding 向量。该模型托管于 Zilliz Cloud 之上，可大幅降低延时。
 
 - **zilliz/clip-vit-base-patch32**：OpenAI 发布的多模态模型。视觉模型和文本模型共同将图像和文本转换为同一向量空间中的 Embedding 向量，实现数据和文案信息两种模态信息的语义搜索。该模型托管于 Zilliz Cloud 之上，可大幅降低延时。
+
+- **zilliz/clip-vit-base-patch32-multilingual-v1**：OpenAI 发布的 CLIP-ViT-B32 模型的多语言版本。与 CLIP-ViT-B32 的视觉模型配套使用时，可处理 50 多种语言的文本。该模型托管于 Zilliz Cloud 之上，可大幅降低延时。
 
 ### Zilliz Cloud Pipelines 如何收费？ \{#how-is-zilliz-cloud-pipelines-charged}
 

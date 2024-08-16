@@ -5,6 +5,12 @@ notebook: FALSE
 type: origin
 token: JBXmw3fcviPIiakfkRxchfLknCb
 sidebar_position: 6
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 控制台
 
 ---
 
@@ -17,9 +23,13 @@ import Admonition from '@theme/Admonition';
 
 ## 概览{#overview}
 
-当您在 Zilliz Cloud 上创建了一个集群后，您就能看到如下操作界面。
+当您在 Zilliz Cloud 上创建了一个 Dedicated 集群后，您就能看到如下操作界面。
 
 ![console_overview_zh](/img/console_overview_zh.png)
+
+当您在 Zilliz Cloud 上创建了一个 Serverless 集群后，您就能看到如下操作界面。
+
+![console_overview_zh_serverless](/img/console_overview_zh_serverless.png)
 
 ## 集群详情{#cluster-details}
 

@@ -33,39 +33,39 @@ Methods of `GetIdsParam.Builder`:
 
 <table>
     <tr>
-        <th><p>Method</p></th>
-        <th><p>Description</p></th>
-        <th><p>Parameters</p></th>
+  <th><p>Method</p></th>
+  <th><p>Description</p></th>
+  <th><p>Parameters</p></th>
     </tr>
     <tr>
-        <td><p>withCollectionName(String collectionName)</p></td>
-        <td><p>Sets the target collection name. Collection name cannot be empty or null.</p></td>
-        <td><p>collectionName: The name of the collection to insert data into.</p></td>
+  <td><p>withCollectionName(String collectionName)</p></td>
+  <td><p>Sets the target collection name. Collection name cannot be empty or null.</p></td>
+  <td><p>collectionName: The name of the collection to insert data into.</p></td>
     </tr>
     <tr>
-        <td><p>withPrimaryIds(List\<T> primaryIds)</p></td>
-        <td><p>Specifies id fields. ID cannot be empty or null.<br/>Note only support the value of primary key.</p></td>
-        <td><p>primaryIds: a list of primary field key objects.</p></td>
+  <td><p>withPrimaryIds(List\<T> primaryIds)</p></td>
+  <td><p>Specifies id fields. ID cannot be empty or null.<br/>Note only support the value of primary key.</p></td>
+  <td><p>primaryIds: a list of primary field key objects.</p></td>
     </tr>
     <tr>
-        <td><p>addPrimaryId(T primaryId)</p></td>
-        <td><p>Specifies primaryField id. PrimaryId cannot be empty or null.<br/>Note only support the value of primary key.</p></td>
-        <td><p>primaryId: The id of primary field key.</p></td>
+  <td><p>addPrimaryId(T primaryId)</p></td>
+  <td><p>Specifies primaryField id. PrimaryId cannot be empty or null.<br/>Note only support the value of primary key.</p></td>
+  <td><p>primaryId: The id of primary field key.</p></td>
     </tr>
     <tr>
-        <td><p>withOutputFields(List\<String> outputFields)</p></td>
-        <td><p>Specifies output fields (Optional).</p></td>
-        <td><p>outputFields: A list of output field you need.</p></td>
+  <td><p>withOutputFields(List\<String> outputFields)</p></td>
+  <td><p>Specifies output fields (Optional).</p></td>
+  <td><p>outputFields: A list of output field you need.</p></td>
     </tr>
     <tr>
-        <td><p>withConsistencyLevel(ConsistencyLevelEnum consistencyLevel)</p></td>
-        <td><p>Consistency level used in the get. If no level is specified, will use default consistency. Please refer to ConsistencyLevelEnum in Misc.</p></td>
-        <td><p>consistencyLevel: The consistency level used in the get.</p></td>
+  <td><p>withConsistencyLevel(ConsistencyLevelEnum consistencyLevel)</p></td>
+  <td><p>Consistency level used in the get. If no level is specified, will use default consistency. Please refer to ConsistencyLevelEnum in Misc.</p></td>
+  <td><p>consistencyLevel: The consistency level used in the get.</p></td>
     </tr>
     <tr>
-        <td><p>build()</p></td>
-        <td><p>Constructs an GetIdsParam object.</p></td>
-        <td><p>N/A</p></td>
+  <td><p>build()</p></td>
+  <td><p>Constructs an GetIdsParam object.</p></td>
+  <td><p>N/A</p></td>
     </tr>
 </table>
 

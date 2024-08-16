@@ -33,29 +33,34 @@ Methods of `ReleasePartitionsParam.Builder`:
 
 <table>
     <tr>
-        <th><p>Method</p></th>
-        <th><p>Description</p></th>
-        <th><p>Parameters</p></th>
+  <th><p>Method</p></th>
+  <th><p>Description</p></th>
+  <th><p>Parameters</p></th>
     </tr>
     <tr>
-        <td><p>withCollectionName(String collectionName)</p></td>
-        <td><p>Set the collection name. Collection name cannot be empty or null.</p></td>
-        <td><p>collectionName: The target collection name.</p></td>
+  <td><p>withCollectionName(String collectionName)</p></td>
+  <td><p>Set the collection name. Collection name cannot be empty or null.</p></td>
+  <td><p>collectionName: The target collection name.</p></td>
     </tr>
     <tr>
-        <td><p>withPartitionNames(List\<String> partitionNames)</p></td>
-        <td><p>Set the partition names list. Partition names list cannot be null or empty.</p></td>
-        <td><p>partitionNames: The name list of partitions to be released.</p></td>
+  <td><p>withDatabaseName(String databaseName)</p></td>
+  <td><p>Sets the database name. database name can be null for default database.</p></td>
+  <td><p>databaseName: The database name.</p></td>
     </tr>
     <tr>
-        <td><p>addPartitionName(String partitionName)</p></td>
-        <td><p>Add a partition by name. Partition name cannot be empty or null.</p></td>
-        <td><p>partitionName: A target partition name.</p></td>
+  <td><p>withPartitionNames(List\<String> partitionNames)</p></td>
+  <td><p>Set the partition names list. Partition names list cannot be null or empty.</p></td>
+  <td><p>partitionNames: The name list of partitions to be released.</p></td>
     </tr>
     <tr>
-        <td><p>build()</p></td>
-        <td><p>Construct a ReleasePartitionsParam object.</p></td>
-        <td><p>N/A</p></td>
+  <td><p>addPartitionName(String partitionName)</p></td>
+  <td><p>Add a partition by name. Partition name cannot be empty or null.</p></td>
+  <td><p>partitionName: A target partition name.</p></td>
+    </tr>
+    <tr>
+  <td><p>build()</p></td>
+  <td><p>Construct a ReleasePartitionsParam object.</p></td>
+  <td><p>N/A</p></td>
     </tr>
 </table>
 

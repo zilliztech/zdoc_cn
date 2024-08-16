@@ -33,14 +33,14 @@ Methods of `ListCollectionsParam.Builder`:
 
 <table>
     <tr>
-        <th><p>Method</p></th>
-        <th><p>Description</p></th>
-        <th><p>Parameters</p></th>
+  <th><p>Method</p></th>
+  <th><p>Description</p></th>
+  <th><p>Parameters</p></th>
     </tr>
     <tr>
-        <td><p>build()</p></td>
-        <td><p>Constructs a ListCollectionsParam object</p></td>
-        <td><p>N/A</p></td>
+  <td><p>build()</p></td>
+  <td><p>Constructs a ListCollectionsParam object</p></td>
+  <td><p>N/A</p></td>
     </tr>
 </table>
 

@@ -5,6 +5,12 @@ notebook: FALSE
 type: origin
 token: D9bww8M3WigQEekiljdcYKJCnqc
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 费用
 
 ---
 
@@ -12,6 +18,24 @@ import Admonition from '@theme/Admonition';
 
 
 # 了解费用
+
+## Dedicated 集群{#dedicated-clusters}
+
+与 Serverless 集群不同，Dedicated 集群提供了高级配置选项。
+
+Zilliz Cloud 使用 CU 来衡量 Dedicated 集群消耗的资源。此外，Zilliz Cloud 还将针对数据存储收取费用。
+
+### CU 费用{#cu-costs}
+
+CU 是用于并行处理数据的基本资源单位。Zilliz Cloud 提供两种类型的 CU，每种类型包含不同的 CPU、内存和存储资源组合。更多详情，请参考[选择合适的 CU 类型](./cu-types-explained)。
+
+Zilliz Cloud 根据您订阅的版本、CU 规格以及集群运行时间来计算 CU 成本。
+
+### 存储费用{#storage}
+
+Dedicated 集群存储原始数据，包括标量和向量字段，以及索引文件。这些索引文件用于优化搜索性能。Dedicated 集群的数据存储定价与 Serverless 集群不同。
+
+更多详情，请参考[定价方案](https://zilliz.com.cn/pricing)。
 
 ## Serverless 集群{#serverless-clusters}
 
@@ -33,20 +57,20 @@ Serverless 集群可按需付费。轻便的方案可以满足追去高弹性的
 
 <table>
    <tr>
-     <th><p><strong>操作</strong></p></th>
-     <th><p><strong>vCU 用量</strong></p></th>
+  <th><p><strong>操作</strong></p></th>
+  <th><p><strong>vCU 用量</strong></p></th>
    </tr>
    <tr>
-     <td><p>Insert</p></td>
-     <td><p>基于插入的数据大小计算 vCU 用量</p></td>
+  <td><p>Insert</p></td>
+  <td><p>基于插入的数据大小计算 vCU 用量</p></td>
    </tr>
    <tr>
-     <td><p>Upsert</p></td>
-     <td><p>基于更新的数据大小和 Entity 数量计算 vCU 用量</p></td>
+  <td><p>Upsert</p></td>
+  <td><p>基于更新的数据大小和 Entity 数量计算 vCU 用量</p></td>
    </tr>
    <tr>
-     <td><p>Delete</p></td>
-     <td><p>基于删除的 Entity 数量计算 vCU 用量</p></td>
+  <td><p>Delete</p></td>
+  <td><p>基于删除的 Entity 数量计算 vCU 用量</p></td>
    </tr>
 </table>
 
@@ -58,43 +82,31 @@ Serverless 集群存储原始数据，包括标量和向量字段，以及索引
 
 更多详情，请参考[定价方案](https://zilliz.com.cn/pricing)。
 
-## Dedicated 集群{#dedicated-clusters}
-
-与 Serverless 集群不同，Dedicated 集群提供了高级配置选项。
-
-Zilliz Cloud 使用 CU 来衡量 Dedicated 集群消耗的资源。此外，Zilliz Cloud 还将针对数据存储收取费用。
-
-### CU 费用{#cu-costs}
-
-CU 是用于并行处理数据的基本资源单位。Zilliz Cloud 提供两种类型的 CU，每种类型包含不同的 CPU、内存和存储资源组合。更多详情，请参考[选择合适的 CU 类型](./cu-types-explained)。
-
-Zilliz Cloud 根据您订阅的版本、CU 规格以及集群运行时间来计算 CU 成本。
-
-### 存储费用{#storage}
-
-Dedicated 集群存储原始数据，包括标量和向量字段，以及索引文件。这些索引文件用于优化搜索性能。Dedicated 集群的数据存储定价与 Serverless 集群不同。
-
-更多详情，请参考[定价方案](https://zilliz.com.cn/pricing)。
-
 ## 增值服务{#value-added-services}
 
 Zilliz Cloud 还提供更多增值服务，如数据备份和迁移。
 
 ### 备份费用{#backup-costs}
 
-为 Zilliz Cloud 集群创建的每份快照都会产生一次性的费用。
+使用 Zilliz Cloud 备份仅需按量付费。Zilliz Cloud 将以 GB-月为单位，对备份进行计费。GB-月是一种基于备份保留时间计算备份所使用的存储用量的计量单位。1 GB-月代表备份大小为 1 GB，且占据存储 1 个月。
 
-以阿里云集群为例，创建一个 20 GB 的快照将产生的一次性备份费用为 ¥0.50 × 20 = ¥10.00。
+以阿里云集群为例，创建一个 20 GB 的备份，并保存 45 天将产生的费用为 ¥0.50 × 20 × 1.5 = ¥15.00。
 
-目前，Zilliz Cloud 支持免费保存快照 30 天。在此之后，快照将被自动删除。恢复快照不会产生任何费用。
+恢复备份不会产生任何费用。
+
+更多详情，请参阅 [Zilliz Cloud 定价](https://zilliz.com.cn/pricing)。
 
 ### 迁移费用{#migration-costs}
 
-Zilliz Cloud 允许您将外部来源的数据迁移至 Zilliz Cloud 或在 Zilliz Cloud 集群之间迁移数据。
+Zilliz Cloud 允许您将各种外部来源的数据迁移至 Zilliz Cloud 或在 Zilliz Cloud 集群之间迁移数据。
 
-在集群间的迁移将根据迁移的数据量收取费用。如果迁移来源和迁移目标集群部署在不同的云服务提供商和地域，Zilliz Cloud 将额外收取费用。
+Zilliz Cloud 仅针对集群间迁移收费。在集群间的迁移将根据迁移的数据量收取费用。如果迁移来源和迁移目标集群部署在不同的云服务提供商和地域，Zilliz Cloud 将额外收取费用。
+
+以 Zilliz Cloud 两个阿里云集群间的迁移为例，如果两个集群间迁移的数据量大小为 20 GB，则迁移费用为 ¥0.50 × 20 = ¥10.00。
 
 将数据从 Milvus、ElasticSearch 迁移至 Zilliz Cloud 不会产生任何费用。
+
+更多详情，请参阅 [Zilliz Cloud 定价](https://zilliz.com.cn/pricing)。
 
 ### Pipelines 费用{#pipelines-costs}
 

@@ -5,6 +5,12 @@ notebook: FALSE
 type: origin
 token: ZoXbwP8hJivPw2ktsLrckw0Snif
 sidebar_position: 5
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 数据集
 
 ---
 
@@ -38,49 +44,49 @@ curl https://assets.zilliz.com/medium_articles_2020_dpr_a13e0377ae.json \
 
 <table>
    <tr>
-     <th><p>字段名</p></th>
-     <th><p>类型</p></th>
-     <th><p>属性</p></th>
+  <th><p>字段名</p></th>
+  <th><p>类型</p></th>
+  <th><p>属性</p></th>
    </tr>
    <tr>
-     <td><p><code>id</code></p></td>
-     <td><p>INT64</p></td>
-     <td><p>N/A</p></td>
+  <td><p><code>id</code></p></td>
+  <td><p>INT64</p></td>
+  <td><p>N/A</p></td>
    </tr>
    <tr>
-     <td><p><code>title_vector</code></p></td>
-     <td><p>FLOAT_VECTOR</p></td>
-     <td><p>维度：768</p></td>
+  <td><p><code>title_vector</code></p></td>
+  <td><p>FLOAT_VECTOR</p></td>
+  <td><p>维度：768</p></td>
    </tr>
    <tr>
-     <td><p><code>title</code></p></td>
-     <td><p>VARCHAR</p></td>
-     <td><p>最大长度：512</p></td>
+  <td><p><code>title</code></p></td>
+  <td><p>VARCHAR</p></td>
+  <td><p>最大长度：512</p></td>
    </tr>
    <tr>
-     <td><p><code>link</code></p></td>
-     <td><p>VARCHAR</p></td>
-     <td><p>最大长度：512</p></td>
+  <td><p><code>link</code></p></td>
+  <td><p>VARCHAR</p></td>
+  <td><p>最大长度：512</p></td>
    </tr>
    <tr>
-     <td><p><code>reading_time</code></p></td>
-     <td><p>INT64</p></td>
-     <td><p>N/A</p></td>
+  <td><p><code>reading_time</code></p></td>
+  <td><p>INT64</p></td>
+  <td><p>N/A</p></td>
    </tr>
    <tr>
-     <td><p><code>publication</code></p></td>
-     <td><p>VARCHAR</p></td>
-     <td><p>最大长度：512</p></td>
+  <td><p><code>publication</code></p></td>
+  <td><p>VARCHAR</p></td>
+  <td><p>最大长度：512</p></td>
    </tr>
    <tr>
-     <td><p><code>claps</code></p></td>
-     <td><p>INT64</p></td>
-     <td><p>N/A</p></td>
+  <td><p><code>claps</code></p></td>
+  <td><p>INT64</p></td>
+  <td><p>N/A</p></td>
    </tr>
    <tr>
-     <td><p><code>responses</code></p></td>
-     <td><p>INT64</p></td>
-     <td><p>N/A</p></td>
+  <td><p><code>responses</code></p></td>
+  <td><p>INT64</p></td>
+  <td><p>N/A</p></td>
    </tr>
 </table>
 

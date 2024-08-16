@@ -33,19 +33,24 @@ Methods of `DropAliasParam.Builder`:
 
 <table>
     <tr>
-        <th><p>Method</p></th>
-        <th><p>Description</p></th>
-        <th><p>Parameters</p></th>
+  <th><p>Method</p></th>
+  <th><p>Description</p></th>
+  <th><p>Parameters</p></th>
     </tr>
     <tr>
-        <td><p>withAlias(String alias)</p></td>
-        <td><p>Sets the collection alias. <br/>The alias cannot be empty or null.</p></td>
-        <td><p>alias: The alias to drop.</p></td>
+  <td><p>withAlias(String alias)</p></td>
+  <td><p>Sets the collection alias. <br/>The alias cannot be empty or null.</p></td>
+  <td><p>alias: The alias to drop.</p></td>
     </tr>
     <tr>
-        <td><p>build()</p></td>
-        <td><p>Constructs a CreateAliasParam object.</p></td>
-        <td><p>N/A</p></td>
+  <td><p>withDatabaseName(String databaseName)</p></td>
+  <td><p>Sets the database name. database name can be null for default database.</p></td>
+  <td><p>databaseName: The database name.</p></td>
+    </tr>
+    <tr>
+  <td><p>build()</p></td>
+  <td><p>Constructs a CreateAliasParam object.</p></td>
+  <td><p>N/A</p></td>
     </tr>
 </table>
 

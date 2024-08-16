@@ -5,6 +5,13 @@ notebook: FALSE
 type: origin
 token: Uj7IwJpneijPROkAZN7cJRLInrc
 sidebar_position: 15
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 支付方式
+  - 账单
 
 ---
 

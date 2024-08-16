@@ -5,6 +5,14 @@ notebook: FALSE
 type: origin
 token: JAh8wlpmhiQv0lkafAxcooqQnxd
 sidebar_position: 3
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - pipeline
+  - 数据源
+  - 连接
 
 ---
 
@@ -67,16 +75,16 @@ Zilliz Cloud 支持在创建过程中灵活配置 Connector。创建后， Conne
 
         <table>
            <tr>
-             <th><p><strong>参数</strong></p></th>
-             <th><p><strong>描述</strong></p></th>
+          <th><p><strong>参数</strong></p></th>
+          <th><p><strong>描述</strong></p></th>
            </tr>
            <tr>
-             <td><p>Connector 名称</p></td>
-             <td><p>待创建的 Connector 的名称。</p></td>
+          <td><p>Connector 名称</p></td>
+          <td><p>待创建的 Connector 的名称。</p></td>
            </tr>
            <tr>
-             <td><p>描述 (可选)</p></td>
-             <td><p>Connector 描述信息。</p></td>
+          <td><p>描述 (可选)</p></td>
+          <td><p>Connector 描述信息。</p></td>
            </tr>
         </table>
 
@@ -84,20 +92,20 @@ Zilliz Cloud 支持在创建过程中灵活配置 Connector。创建后， Conne
 
         <table>
            <tr>
-             <th><p><strong>参数</strong></p></th>
-             <th><p><strong>描述</strong></p></th>
+          <th><p><strong>参数</strong></p></th>
+          <th><p><strong>描述</strong></p></th>
            </tr>
            <tr>
-             <td><p>对象存储服务</p></td>
-             <td><p>选择对象存储服务。当前，您仅可以选择：</p><ul><li>阿里云 OSS</li></ul></td>
+          <td><p>对象存储服务</p></td>
+          <td><p>选择对象存储服务。当前，您仅可以选择：</p><ul><li>阿里云 OSS</li></ul></td>
            </tr>
            <tr>
-             <td><p>URL</p></td>
-             <td><p>输入数据源 URL。请确保 URL 指向文件夹而非具体某一文件。</p><p>了解如何<a href="https://help.aliyun.com/zh/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects?spm=a2c4g.11186623.0.0.3eecc1f8IO4FkA">获取 URL</a>。</p></td>
+          <td><p>URL</p></td>
+          <td><p>输入数据源 URL。请确保 URL 指向文件夹而非具体某一文件。此外，不可输入根目录 URL。</p><p>了解如何<a href="https://help.aliyun.com/zh/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects?spm=a2c4g.11186623.0.0.3eecc1f8IO4FkA">获取 URL</a>。</p></td>
            </tr>
            <tr>
-             <td><p>对象存储服务访问凭证(可选)</p></td>
-             <td><p>AccessKey ID 和 AccessKey Secret。</p><p>了解如何<a href="https://www.alibabacloud.com/help/zh/ram/user-guide/create-an-accesskey-pair?spm=a2c63.p38356.0.0.29bf52672SsfrM">获取AccessKey ID 和 AccessKey Secret</a>。</p></td>
+          <td><p>对象存储服务访问凭证(可选)</p></td>
+          <td><p>AccessKey ID 和 AccessKey Secret。</p><p>了解如何<a href="https://www.alibabacloud.com/help/zh/ram/user-guide/create-an-accesskey-pair?spm=a2c63.p38356.0.0.29bf52672SsfrM">获取AccessKey ID 和 AccessKey Secret</a>。</p></td>
            </tr>
         </table>
 
@@ -131,16 +139,16 @@ Zilliz Cloud 支持在创建过程中灵活配置 Connector。创建后， Conne
 
         <table>
            <tr>
-             <th><p><strong>参数</strong></p></th>
-             <th><p><strong>描述</strong></p></th>
+          <th><p><strong>参数</strong></p></th>
+          <th><p><strong>描述</strong></p></th>
            </tr>
            <tr>
-             <td><p>扫描频率</p></td>
-             <td><p>设置自动扫描频率。</p><ul><li><p>每天：可选择 1～7 之间的任意整数。</p></li><li><p>每小时：可选择 1、6、12、18。</p></li></ul></td>
+          <td><p>扫描频率</p></td>
+          <td><p>设置自动扫描频率。</p><ul><li><p>每天：可选择 1～7 之间的任意整数。</p></li><li><p>每小时：可选择 1、6、12、18。</p></li></ul></td>
            </tr>
            <tr>
-             <td><p>下次运行时间</p></td>
-             <td><p>设置运行时间。时区与<a href="./manage-timezone">系统时区</a>保持一致。</p></td>
+          <td><p>下次运行时间</p></td>
+          <td><p>设置运行时间。时区与<a href="./manage-timezone">系统时区</a>保持一致。</p></td>
            </tr>
         </table>
 
@@ -214,3 +222,6 @@ Zilliz Cloud 支持在创建过程中灵活配置 Connector。创建后， Conne
 
 1. 如果 Connector 状态显示为`异常`，则代表 Connector 运行出错。点击状态旁的 “？”查看详细报错信息。
 
+### 查看 Pipeline 关联的所有 Connectors{#view-related-connectors-in-a-pipeline}
+
+如需查看某一 Pipeline 下关联的所有 Connectors，请参阅[查看 Pipeline 详情](./pipelines-text-data#view-pipeline)。

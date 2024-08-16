@@ -5,6 +5,12 @@ notebook: FALSE
 type: origin
 token: UXBjwVpKmirzg9kgWgmcLixwnIe
 sidebar_position: 18
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - json 字段
 
 ---
 
@@ -1741,64 +1747,64 @@ console.log(JSON.stringify(res.results, null, 4))
 
 <table>
    <tr>
-     <th><p>操作符</p></th>
-     <th><p>示例</p></th>
-     <th><p>备注</p></th>
+  <th><p>操作符</p></th>
+  <th><p>示例</p></th>
+  <th><p>备注</p></th>
    </tr>
    <tr>
-     <td><p><code>&lt;</code></p></td>
-     <td><p><code>"A &lt; 3"</code></p></td>
-     <td><p><code>A</code>  必须存在</p></td>
+  <td><p><code>&lt;</code></p></td>
+  <td><p><code>"A &lt; 3"</code></p></td>
+  <td><p><code>A</code>  必须存在</p></td>
    </tr>
    <tr>
-     <td><p><code>&gt;</code></p></td>
-     <td><p><code>"A &gt; 1"</code></p></td>
-     <td><p><code>A</code>  必须存在</p></td>
+  <td><p><code>&gt;</code></p></td>
+  <td><p><code>"A &gt; 1"</code></p></td>
+  <td><p><code>A</code>  必须存在</p></td>
    </tr>
    <tr>
-     <td><p><code>==</code></p></td>
-     <td><p><code>"A == 1"</code>  或 <code>"A == 'abc'"</code></p></td>
-     <td><p><code>A</code>  必须存在</p></td>
+  <td><p><code>==</code></p></td>
+  <td><p><code>"A == 1"</code>  或 <code>"A == 'abc'"</code></p></td>
+  <td><p><code>A</code>  必须存在</p></td>
    </tr>
    <tr>
-     <td><p><code>!=</code></p></td>
-     <td><p><code>"A != 1"</code> 或 <code>"A != 'abc'"</code></p></td>
-     <td><p><code>A</code>  可以不存在</p></td>
+  <td><p><code>!=</code></p></td>
+  <td><p><code>"A != 1"</code> 或 <code>"A != 'abc'"</code></p></td>
+  <td><p><code>A</code>  可以不存在</p></td>
    </tr>
    <tr>
-     <td><p><code>&lt;=</code></p></td>
-     <td><p><code>"A &lt;= 5"</code></p></td>
-     <td><p><code>A</code>  必须存在</p></td>
+  <td><p><code>&lt;=</code></p></td>
+  <td><p><code>"A &lt;= 5"</code></p></td>
+  <td><p><code>A</code>  必须存在</p></td>
    </tr>
    <tr>
-     <td><p><code>&gt;=</code></p></td>
-     <td><p><code>"A &gt;= 1"</code></p></td>
-     <td><p><code>A</code>  必须存在</p></td>
+  <td><p><code>&gt;=</code></p></td>
+  <td><p><code>"A &gt;= 1"</code></p></td>
+  <td><p><code>A</code>  必须存在</p></td>
    </tr>
    <tr>
-     <td><p><code>not</code></p></td>
-     <td><p><code>"not A == 1"</code> 或 <code>"not A != 'abc'"</code></p></td>
-     <td><p><code>A</code>  可以不存在</p></td>
+  <td><p><code>not</code></p></td>
+  <td><p><code>"not A == 1"</code> 或 <code>"not A != 'abc'"</code></p></td>
+  <td><p><code>A</code>  可以不存在</p></td>
    </tr>
    <tr>
-     <td><p><code>in</code></p></td>
-     <td><p><code>"A in [1, 2, 3]"</code> 或 <code>"A in ['a', 'b', 'c']"</code></p></td>
-     <td><p><code>A</code>  必须存在</p></td>
+  <td><p><code>in</code></p></td>
+  <td><p><code>"A in [1, 2, 3]"</code> 或 <code>"A in ['a', 'b', 'c']"</code></p></td>
+  <td><p><code>A</code>  必须存在</p></td>
    </tr>
    <tr>
-     <td><p><code>add</code> (<code>&amp;&amp;</code>)</p></td>
-     <td><p><code>"A &gt; 1 &amp;&amp; A &lt; 3"</code></p></td>
-     <td><p><code>A</code>  是否必须存在取决于运算符两侧表达式的要求</p></td>
+  <td><p><code>add</code> (<code>&amp;&amp;</code>)</p></td>
+  <td><p><code>"A &gt; 1 &amp;&amp; A &lt; 3"</code></p></td>
+  <td><p><code>A</code>  是否必须存在取决于运算符两侧表达式的要求</p></td>
    </tr>
    <tr>
-     <td><p><code>or</code> (<code>||</code>)</p></td>
-     <td><p><code>"A &gt; 1 \|\| A &lt; 3"</code></p></td>
-     <td><p><code>A</code>  是否必须存在取决于运算符两侧表达式的要求</p></td>
+  <td><p><code>or</code> (<code>||</code>)</p></td>
+  <td><p><code>"A &gt; 1 \|\| A &lt; 3"</code></p></td>
+  <td><p><code>A</code>  是否必须存在取决于运算符两侧表达式的要求</p></td>
    </tr>
    <tr>
-     <td><p><code>exist</code></p></td>
-     <td><p><code>"exist A"</code></p></td>
-     <td><p><code>A</code>  必须存在</p></td>
+  <td><p><code>exist</code></p></td>
+  <td><p><code>"exist A"</code></p></td>
+  <td><p><code>A</code>  必须存在</p></td>
    </tr>
 </table>
 

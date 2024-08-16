@@ -33,24 +33,29 @@ Methods of `HasPartitionParam.Builder`:
 
 <table>
     <tr>
-        <th><p>Method</p></th>
-        <th><p>Description</p></th>
-        <th><p>Parameters</p></th>
+  <th><p>Method</p></th>
+  <th><p>Description</p></th>
+  <th><p>Parameters</p></th>
     </tr>
     <tr>
-        <td><p>withCollectionName(String collectionName)</p></td>
-        <td><p>Set the collection name. Collection name cannot be empty or null.</p></td>
-        <td><p>collectionName: The target collection name.</p></td>
+  <td><p>withCollectionName(String collectionName)</p></td>
+  <td><p>Set the collection name. Collection name cannot be empty or null.</p></td>
+  <td><p>collectionName: The target collection name.</p></td>
     </tr>
     <tr>
-        <td><p>withPartitionName(String partitionName)</p></td>
-        <td><p>Set the partition name. Partition name cannot be empty or null.</p></td>
-        <td><p>partitionName: The target partition name.</p></td>
+  <td><p>withDatabaseName(String databaseName)</p></td>
+  <td><p>Sets the database name. database name can be null for default database.</p></td>
+  <td><p>databaseName: The database name.</p></td>
     </tr>
     <tr>
-        <td><p>build()</p></td>
-        <td><p>Construct a HasPartitionParam object.</p></td>
-        <td><p>N/A</p></td>
+  <td><p>withPartitionName(String partitionName)</p></td>
+  <td><p>Set the partition name. Partition name cannot be empty or null.</p></td>
+  <td><p>partitionName: The target partition name.</p></td>
+    </tr>
+    <tr>
+  <td><p>build()</p></td>
+  <td><p>Construct a HasPartitionParam object.</p></td>
+  <td><p>N/A</p></td>
     </tr>
 </table>
 

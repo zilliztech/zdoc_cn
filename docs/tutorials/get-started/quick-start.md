@@ -5,6 +5,12 @@ notebook: FALSE
 type: origin
 token: M4cQwZQ0QiqBy6kzZftc0fQPn1f
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 快速开始
 
 ---
 
@@ -73,7 +79,7 @@ curl --request POST \
 
 另外，您也可以[创建 API 密钥](./manage-api-keys)，用以连接集群，无需使用集群凭证。
 
-## 连接 Zilliz Cloud 集群{#connect-to-zilliz-cloud-cluster}
+## 连接 Zilliz Cloud 集群Milvus{#connect-to-zilliz-cloud-cluster}
 
 获取集群凭证或 API 密钥后，您可以通过以下示例代码连接到集群。
 

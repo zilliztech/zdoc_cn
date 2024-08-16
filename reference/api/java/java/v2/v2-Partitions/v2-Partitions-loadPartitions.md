@@ -15,6 +15,8 @@ import Admonition from '@theme/Admonition';
 
 # loadPartitions()
 
+This operation releases the partitions in a specified collection from memory.
+
 ```java
 public void loadPartitions(LoadPartitionsReq request)
 ```

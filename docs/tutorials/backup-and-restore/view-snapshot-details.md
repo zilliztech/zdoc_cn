@@ -5,33 +5,31 @@ notebook: FALSE
 type: origin
 token: PS8EwUahQiNPTikPIMbcBxvGnKS
 sidebar_position: 3
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 备份
+  - 快照
+  - 查看
 
 ---
 
 import Admonition from '@theme/Admonition';
 
 
-# 查看备份快照
+# 查看备份文件
 
-本文介绍如何查看已创建的快照信息。您可以手动或自动创建快照。
+本文介绍如何查看手动或自动创建的备份文件。
 
-## 快照状态{#snapshot-status}
+## 查看所有备份文件{#view-all-backup-files}
 
-根据不同场景，快照可能会处于如下状态：
+![view_all_backup_files_cn](/img/view_all_backup_files_cn.png)
 
-- **创建中**
+## 查看备份文件详情{##view-backup-file-details}
 
-    如果快照处于此状态，则无法创建其他快照。但您可以单击**操作**列中的更多按钮，然后选择**取消**来终止创建过程。
-
-- **成功**
-
-    如果快照处于此状态，您可以单击**操作**列中的更多按钮来完成以下任意操作：
-
-如果您的快照状态处于其他状态，可能是出现了错误。如果该错误持续存在，请立即与我们联系。
-
-## 查看快照详情{#view-snapshot-details}
-
-![view_snapshot](/img/view_snapshot.png)
+![view_backup_files_details_cn](/img/view_backup_files_details_cn.png)
 
 ## 相关文档{#related-topics}
 

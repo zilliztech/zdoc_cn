@@ -5,6 +5,12 @@ notebook: FALSE
 type: origin
 token: Tpi2wvNHLiHaJmk4Y8BcwG84neh
 sidebar_position: 5
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 相似度
 
 ---
 
@@ -21,40 +27,40 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><p>字段类型</p></th>
-     <th><p>维度范围</p></th>
-     <th><p>支持的相似度类型</p></th>
-     <th><p>默认相似度类型</p></th>
+  <th><p>字段类型</p></th>
+  <th><p>维度范围</p></th>
+  <th><p>支持的相似度类型</p></th>
+  <th><p>默认相似度类型</p></th>
    </tr>
    <tr>
-     <td><p>FLOAT_VECTOR</p></td>
-     <td><p>2-32,768</p></td>
-     <td><p>Cosine, L2, IP</p></td>
-     <td><p>Cosine</p></td>
+  <td><p>FLOAT_VECTOR</p></td>
+  <td><p>2-32,768</p></td>
+  <td><p>Cosine, L2, IP</p></td>
+  <td><p>Cosine</p></td>
    </tr>
    <tr>
-     <td><p>FLOAT16_VECTOR <sup>(Beta)</sup></p></td>
-     <td><p>2-32,768</p></td>
-     <td><p>Cosine, L2, IP</p></td>
-     <td><p>Cosine</p></td>
+  <td><p>FLOAT16_VECTOR <sup>(Beta)</sup></p></td>
+  <td><p>2-32,768</p></td>
+  <td><p>Cosine, L2, IP</p></td>
+  <td><p>Cosine</p></td>
    </tr>
    <tr>
-     <td><p>BFLOAT16_VECTOR <sup>(Beta)</sup></p></td>
-     <td><p>2-32,768</p></td>
-     <td><p>Cosine, L2, IP</p></td>
-     <td><p>Cosine</p></td>
+  <td><p>BFLOAT16_VECTOR <sup>(Beta)</sup></p></td>
+  <td><p>2-32,768</p></td>
+  <td><p>Cosine, L2, IP</p></td>
+  <td><p>Cosine</p></td>
    </tr>
    <tr>
-     <td><p>SPARSE_FLOAT_VECTOR <sup>(Beta)</sup></p></td>
-     <td><p>无需指定维度</p></td>
-     <td><p>IP</p></td>
-     <td><p>IP</p></td>
+  <td><p>SPARSE_FLOAT_VECTOR <sup>(Beta)</sup></p></td>
+  <td><p>无需指定维度</p></td>
+  <td><p>IP</p></td>
+  <td><p>IP</p></td>
    </tr>
    <tr>
-     <td><p>BINARY_VECTOR <sup>(Beta)</sup></p></td>
-     <td><p>8-32,768*8</p></td>
-     <td><p>HAMMING <sup>(Beta)</sup>, JACCARD <sup>(Beta)</sup></p></td>
-     <td><p>HAMMING <sup>(Beta)</sup></p></td>
+  <td><p>BINARY_VECTOR <sup>(Beta)</sup></p></td>
+  <td><p>8-32,768*8</p></td>
+  <td><p>HAMMING <sup>(Beta)</sup>, JACCARD <sup>(Beta)</sup></p></td>
+  <td><p>HAMMING <sup>(Beta)</sup></p></td>
    </tr>
 </table>
 
@@ -126,7 +132,7 @@ L2 是最普遍的距离度量方法，在处理连续性数据时尤为有效�
 
 </Admonition>
 
-## JACCARD 距离 <sup>(Beta)</sup>{#jaccard}
+## JACCARD 距离 (Beta){#jaccard}
 
 JACCARD 相似系数用于衡量两个样本集之间的相似度，其定义是两个集合交集的元素数量除以它们并集的元素数量。该系数仅适用于有限样本集。
 
@@ -142,7 +148,7 @@ JACCARD 距离用于衡量数据集之间的不相似度，其计算方法是 1 
 
 </Admonition>
 
-## HAMMING 距离 <sup>(Beta)</sup>{#hamming}
+## HAMMING 距离 (Beta){#hamming}
 
 HAMMING 距离用于测量二进制数据字符串。两个等长字符串之间的距离是它们在不同比特位上的数量。
 

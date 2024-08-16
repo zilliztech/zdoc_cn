@@ -5,6 +5,13 @@ notebook: FALSE
 type: origin
 token: Sw1Kwj0oViAYuAkoUIZcvhsJnBd
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 项目
+  - 管理
 
 ---
 

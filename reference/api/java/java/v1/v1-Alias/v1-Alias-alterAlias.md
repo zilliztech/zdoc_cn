@@ -33,24 +33,29 @@ Methods of `AlterAliasParam.Builder`:
 
 <table>
     <tr>
-        <th><p>Method</p></th>
-        <th><p>Description</p></th>
-        <th><p>Parameters</p></th>
+  <th><p>Method</p></th>
+  <th><p>Description</p></th>
+  <th><p>Parameters</p></th>
     </tr>
     <tr>
-        <td><p><br/>withCollectionName(String collectionName)</p></td>
-        <td><p>Sets the target collection name. Collection name cannot be empty or null.</p></td>
-        <td><p>collectionName: The name of the target collection to alter the alias to.</p></td>
+  <td><p><br/>withCollectionName(String collectionName)</p></td>
+  <td><p>Sets the target collection name. Collection name cannot be empty or null.</p></td>
+  <td><p>collectionName: The name of the target collection to alter the alias to.</p></td>
     </tr>
     <tr>
-        <td><p>withAlias(String alias)</p></td>
-        <td><p>Sets the collection alias to alter. Collection alias cannot be empty or null.</p></td>
-        <td><p>alias: The alias to alter.</p></td>
+  <td><p>withDatabaseName(String databaseName)</p></td>
+  <td><p>Sets the database name. database name can be null for default database.</p></td>
+  <td><p>databaseName: The database name.</p></td>
     </tr>
     <tr>
-        <td><p>build()</p></td>
-        <td><p>Constructs a CreateAliasParam object.</p></td>
-        <td></td>
+  <td><p>withAlias(String alias)</p></td>
+  <td><p>Sets the collection alias to alter. Collection alias cannot be empty or null.</p></td>
+  <td><p>alias: The alias to alter.</p></td>
+    </tr>
+    <tr>
+  <td><p>build()</p></td>
+  <td><p>Constructs a CreateAliasParam object.</p></td>
+  <td></td>
     </tr>
 </table>
 

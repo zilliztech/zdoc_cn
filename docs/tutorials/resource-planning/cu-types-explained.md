@@ -5,6 +5,12 @@ notebook: FALSE
 type: origin
 token: DP6Fw8vkzi7pD7kAMB3cjunYn6g
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - cu 类型
 
 ---
 
@@ -21,22 +27,22 @@ Zilliz Cloud 提供以下 CU 类型：性能型 CU、容量型 CU。
 
 <table>
    <tr>
-     <th><p>CU 类型</p></th>
-     <th><p>时延</p></th>
-     <th><p>吞吐能力</p></th>
-     <th><p>存储容量</p></th>
+  <th><p>CU 类型</p></th>
+  <th><p>时延</p></th>
+  <th><p>吞吐能力</p></th>
+  <th><p>存储容量</p></th>
    </tr>
    <tr>
-     <td><p>性能型</p></td>
-     <td><p>低</p></td>
-     <td><p>高</p></td>
-     <td><p>低</p></td>
+  <td><p>性能型</p></td>
+  <td><p>低</p></td>
+  <td><p>高</p></td>
+  <td><p>低</p></td>
    </tr>
    <tr>
-     <td><p>容量型</p></td>
-     <td><p>中</p></td>
-     <td><p>中</p></td>
-     <td><p>高</p></td>
+  <td><p>容量型</p></td>
+  <td><p>中</p></td>
+  <td><p>中</p></td>
+  <td><p>高</p></td>
    </tr>
 </table>
 
@@ -62,34 +68,34 @@ Zilliz Cloud 提供以下 CU 类型：性能型 CU、容量型 CU。
 
 <table>
    <tr>
-     <th><p>向量维度</p></th>
-     <th><p>性能型 CU（每单元最大向量数）</p></th>
-     <th><p>容量型 CU（每单元最大向量数）</p></th>
+  <th><p>向量维度</p></th>
+  <th><p>性能型 CU（每单元最大向量数）</p></th>
+  <th><p>容量型 CU（每单元最大向量数）</p></th>
    </tr>
    <tr>
-     <td><p>128</p></td>
-     <td><p>750 万</p></td>
-     <td><p>2500 万</p></td>
+  <td><p>128</p></td>
+  <td><p>750 万</p></td>
+  <td><p>2500 万</p></td>
    </tr>
    <tr>
-     <td><p>256</p></td>
-     <td><p>450 万</p></td>
-     <td><p>1500 万</p></td>
+  <td><p>256</p></td>
+  <td><p>450 万</p></td>
+  <td><p>1500 万</p></td>
    </tr>
    <tr>
-     <td><p>512</p></td>
-     <td><p>225 万</p></td>
-     <td><p>750 万</p></td>
+  <td><p>512</p></td>
+  <td><p>225 万</p></td>
+  <td><p>750 万</p></td>
    </tr>
    <tr>
-     <td><p>768</p></td>
-     <td><p>150 万</p></td>
-     <td><p>500 万</p></td>
+  <td><p>768</p></td>
+  <td><p>150 万</p></td>
+  <td><p>500 万</p></td>
    </tr>
    <tr>
-     <td><p>1024</p></td>
-     <td><p>112.5 万</p></td>
-     <td><p>375 万</p></td>
+  <td><p>1024</p></td>
+  <td><p>112.5 万</p></td>
+  <td><p>375 万</p></td>
    </tr>
 </table>
 
@@ -107,29 +113,29 @@ Zilliz Cloud 提供以下 CU 类型：性能型 CU、容量型 CU。
 
 <table>
    <tr>
-     <th><p>top_k 值</p></th>
-     <th><p>性能型 CU 的 QPS（768 维度，100万向量）</p></th>
-     <th><p>容量型 CU 的 QPS（768 维度，500 万向量）</p></th>
+  <th><p>top_k 值</p></th>
+  <th><p>性能型 CU 的 QPS（768 维度，100万向量）</p></th>
+  <th><p>容量型 CU 的 QPS（768 维度，500 万向量）</p></th>
    </tr>
    <tr>
-     <td><p>10</p></td>
-     <td><p>520</p></td>
-     <td><p>100</p></td>
+  <td><p>10</p></td>
+  <td><p>520</p></td>
+  <td><p>100</p></td>
    </tr>
    <tr>
-     <td><p>100</p></td>
-     <td><p>440</p></td>
-     <td><p>80</p></td>
+  <td><p>100</p></td>
+  <td><p>440</p></td>
+  <td><p>80</p></td>
    </tr>
    <tr>
-     <td><p>250</p></td>
-     <td><p>270</p></td>
-     <td><p>60</p></td>
+  <td><p>250</p></td>
+  <td><p>270</p></td>
+  <td><p>60</p></td>
    </tr>
    <tr>
-     <td><p>1000</p></td>
-     <td><p>150</p></td>
-     <td><p>40</p></td>
+  <td><p>1000</p></td>
+  <td><p>150</p></td>
+  <td><p>40</p></td>
    </tr>
 </table>
 
@@ -137,29 +143,29 @@ Zilliz Cloud 提供以下 CU 类型：性能型 CU、容量型 CU。
 
 <table>
    <tr>
-     <th><p>top_k</p></th>
-     <th><p>性能型 CU 的时延（768 维度，100万向量）</p></th>
-     <th><p>容量型 CU 的时延（768 维度，500 万向量）</p></th>
+  <th><p>top_k</p></th>
+  <th><p>性能型 CU 的时延（768 维度，100万向量）</p></th>
+  <th><p>容量型 CU 的时延（768 维度，500 万向量）</p></th>
    </tr>
    <tr>
-     <td><p>10</p></td>
-     <td><p>&lt; 10 ms</p></td>
-     <td><p>&lt; 50 ms</p></td>
+  <td><p>10</p></td>
+  <td><p>&lt; 10 ms</p></td>
+  <td><p>&lt; 50 ms</p></td>
    </tr>
    <tr>
-     <td><p>100</p></td>
-     <td><p>&lt; 10 ms</p></td>
-     <td><p>&lt; 50 ms</p></td>
+  <td><p>100</p></td>
+  <td><p>&lt; 10 ms</p></td>
+  <td><p>&lt; 50 ms</p></td>
    </tr>
    <tr>
-     <td><p>250</p></td>
-     <td><p>&lt; 10 ms</p></td>
-     <td><p>&lt; 50 ms</p></td>
+  <td><p>250</p></td>
+  <td><p>&lt; 10 ms</p></td>
+  <td><p>&lt; 50 ms</p></td>
    </tr>
    <tr>
-     <td><p>1000</p></td>
-     <td><p>10 - 20 ms</p></td>
-     <td><p>50 - 100 ms</p></td>
+  <td><p>1000</p></td>
+  <td><p>10 - 20 ms</p></td>
+  <td><p>50 - 100 ms</p></td>
    </tr>
 </table>
 

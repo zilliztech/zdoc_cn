@@ -33,24 +33,34 @@ Methods of `DescribeIndexParam.Builder`:
 
 <table>
     <tr>
-        <th><p>Method</p></th>
-        <th><p>Description</p></th>
-        <th><p>Parameters</p></th>
+  <th><p>Method</p></th>
+  <th><p>Description</p></th>
+  <th><p>Parameters</p></th>
     </tr>
     <tr>
-        <td><p>withCollectionName(collectionName)</p></td>
-        <td><p>Set the collection name. Collection name cannot be empty or null.</p></td>
-        <td><p>collectionName: The target collection name.</p></td>
+  <td><p>withCollectionName(collectionName)</p></td>
+  <td><p>Set the collection name. Collection name cannot be empty or null.</p></td>
+  <td><p>collectionName: The target collection name.</p></td>
     </tr>
     <tr>
-        <td><p>withIndexName(String indexName)</p></td>
-        <td><p>Set the target index name. If no index name is specified, the default index name is empty string which means let the server determine it.</p></td>
-        <td><p>indexName: The name of the index.</p></td>
+  <td><p>withDatabaseName(String databaseName)</p></td>
+  <td><p>Sets the database name. database name can be null for default database.</p></td>
+  <td><p>databaseName: The database name.</p></td>
     </tr>
     <tr>
-        <td><p>build()</p></td>
-        <td><p>Construct a DescribeIndexParam object.</p></td>
-        <td><p>N/A</p></td>
+  <td><p>withIndexName(String indexName)</p></td>
+  <td><p>Set the target index name. If no index name is specified, the default index name is empty string which means let the server determine it.</p></td>
+  <td><p>indexName: The name of the index.</p></td>
+    </tr>
+    <tr>
+  <td><p>withFieldName(String fieldName)</p></td>
+  <td><p>Sets the target field name. Field name can be empty or null.<br/>If no field name is specified, then return all this collection indexes.</p></td>
+  <td><p>fieldName: The field name.</p></td>
+    </tr>
+    <tr>
+  <td><p>build()</p></td>
+  <td><p>Construct a DescribeIndexParam object.</p></td>
+  <td><p>N/A</p></td>
     </tr>
 </table>
 
@@ -81,22 +91,22 @@ Methods of `DescIndexResponseWrapper`:
 
 <table>
    <tr>
-     <th><p><strong>Method</strong></p></th>
-     <th><p><strong>Description</strong></p></th>
-     <th><p><strong>Parameters</strong></p></th>
-     <th><p><strong>Returns</strong></p></th>
+  <th><p><strong>Method</strong></p></th>
+  <th><p><strong>Description</strong></p></th>
+  <th><p><strong>Parameters</strong></p></th>
+  <th><p><strong>Returns</strong></p></th>
    </tr>
    <tr>
-     <td><p>getIndexDescriptions()</p></td>
-     <td><p>Get a list of all index descriptions. (Currently only return one index information)</p></td>
-     <td><p>N/A</p></td>
-     <td><p>List\<IndexDesc></p></td>
+  <td><p>getIndexDescriptions()</p></td>
+  <td><p>Get a list of all index descriptions. (Currently only return one index information)</p></td>
+  <td><p>N/A</p></td>
+  <td><p>List\<IndexDesc></p></td>
    </tr>
    <tr>
-     <td><p>getIndexDescByFieldName(String fieldName)</p></td>
-     <td><p>Get index description by field name. Return null if the field doesn't exist.</p></td>
-     <td><p>fieldName: A field name</p></td>
-     <td><p>IndexDesc</p></td>
+  <td><p>getIndexDescByFieldName(String fieldName)</p></td>
+  <td><p>Get index description by field name. Return null if the field doesn't exist.</p></td>
+  <td><p>fieldName: A field name</p></td>
+  <td><p>IndexDesc</p></td>
    </tr>
 </table>
 
@@ -108,24 +118,24 @@ Methods of `DescIndexResponseWrapper.IndexDesc`
 
 <table>
    <tr>
-     <th><p><strong>Method</strong></p></th>
-     <th><p><strong>Description</strong></p></th>
-     <th><p><strong>Returns</strong></p></th>
+  <th><p><strong>Method</strong></p></th>
+  <th><p><strong>Description</strong></p></th>
+  <th><p><strong>Returns</strong></p></th>
    </tr>
    <tr>
-     <td><p>getIndexType()</p></td>
-     <td><p>Get index type.</p></td>
-     <td><p>IndexType</p></td>
+  <td><p>getIndexType()</p></td>
+  <td><p>Get index type.</p></td>
+  <td><p>IndexType</p></td>
    </tr>
    <tr>
-     <td><p>getMetricType()</p></td>
-     <td><p>Get metric type.</p></td>
-     <td><p>MetricType</p></td>
+  <td><p>getMetricType()</p></td>
+  <td><p>Get metric type.</p></td>
+  <td><p>MetricType</p></td>
    </tr>
    <tr>
-     <td><p>getExtraParam()</p></td>
-     <td><p>Get index parameters in JSON format.</p></td>
-     <td><p>String</p></td>
+  <td><p>getExtraParam()</p></td>
+  <td><p>Get index parameters in JSON format.</p></td>
+  <td><p>String</p></td>
    </tr>
 </table>
 

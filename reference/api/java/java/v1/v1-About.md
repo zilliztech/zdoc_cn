@@ -20,32 +20,32 @@ Milvus Java SDK is an open-source project and its source code is hosted on [GitH
 
 <table>
     <tr>
-        <th><p>Milvus version</p></th>
-        <th><p>Recommended SDK version</p></th>
+  <th><p>Milvus version</p></th>
+  <th><p>Recommended SDK version</p></th>
     </tr>
     <tr>
-        <td><p>2.0.2</p></td>
-        <td><p>2.0.4</p></td>
+  <td><p>2.0.2</p></td>
+  <td><p>2.0.4</p></td>
     </tr>
     <tr>
-        <td><p>2.1</p></td>
-        <td><p>2.1.0-beta4</p></td>
+  <td><p>2.1</p></td>
+  <td><p>2.1.0-beta4</p></td>
     </tr>
     <tr>
-        <td><p>2.2.0 ~ 2.2.8</p></td>
-        <td><p>2.2.5</p></td>
+  <td><p>2.2.0 ~ 2.2.8</p></td>
+  <td><p>2.2.5</p></td>
     </tr>
     <tr>
-        <td><p>2.2.9 ~ 2.2.14</p></td>
-        <td><p>2.2.13</p></td>
+  <td><p>2.2.9 ~ 2.2.14</p></td>
+  <td><p>2.2.13</p></td>
     </tr>
     <tr>
-        <td><p>2.3.x</p></td>
-        <td><p>2.3.6</p></td>
+  <td><p>2.3.x</p></td>
+  <td><p>2.3.9</p></td>
     </tr>
     <tr>
-        <td><p>2.4.x</p></td>
-        <td><p>2.4.1</p></td>
+  <td><p>2.4.x</p></td>
+  <td><p>2.4.3</p></td>
     </tr>
 </table>
 
@@ -59,20 +59,20 @@ You can use **[Apache Maven](https://maven.apache.org/install.html)** or **[Grad
  <dependency>
      <groupId>io.milvus</groupId>
      <artifactId>milvus-sdk-java</artifactId>
-     <version>2.4.1</version>
+     <version>2.4.3</version>
  </dependency>
 ```
 
 - Gradle/Groovy
 
 ```plaintext
-implementation 'io.milvus:milvus-sdk-java:2.4.1'
+implementation 'io.milvus:milvus-sdk-java:2.4.3'
 ```
 
 - Gradle/Kotlin
 
 ```sql
-implementation("io.milvus:milvus-sdk-java:2.4.1")
+implementation("io.milvus:milvus-sdk-java:2.4.3")
 ```
 
 ## **Contributing**

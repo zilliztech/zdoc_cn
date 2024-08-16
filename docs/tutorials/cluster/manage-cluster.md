@@ -5,6 +5,12 @@ notebook: FALSE
 type: origin
 token: IRirwe30tilo1qkJlR7ca2MUnvn
 sidebar_position: 3
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 管理
 
 ---
 
@@ -139,29 +145,72 @@ Dedicated 集群创建完成后，您可以在控制台看到如下信息：
 
 ### 管理和设置集群{#manage-and-configure-clusters}
 
-- **扩容集群**
+- **集群扩缩容**
 
-    在**集群信息**区域，单击**大小**右侧的**扩容**，以打开**扩容集群**对话框。您可以为集群增加计算和存储资源。在对话框中，您最多可将集群资源扩展到 256 个 CU。如果您需要更大的 CU，请联系我们。
+    集群扩缩是指调整 CU 规格，以满足不断变化的计算与存储需求。在 CPU 或内存使用率增大时，您可以通过增加 CU 规格来提高集群性能。同样，您也可以在业务需求较低的时候减少 CU 规格以节省开支。
 
-    有关 CU 类型以及如何选择合适的 CU，请参阅[选择合适的 CU 类型](./cu-types-explained)。
+    您可以通过以下几种方式进行集群扩缩容：
 
-    此外，您还可以通过 API 来扩容集群。有关更多信息，请参阅[修改集群配置](/reference/restful/modify-cluster)。
+    - **通过 Zilliz Cloud 控制台进行集群扩缩容**
 
-    <Admonition type="caution" icon="🚧" title="警告">
+        - **集群扩容**
 
-    <p>扩容集群可能会导致几分钟的停机时间。请谨慎操作。</p>
+            在 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/signup)中，找到**集群信息**区域，单击**规格**右侧的**扩缩容**。在对话框中，您可以增加 CU 规格，但无法调整 CU 类型和云服务地域。您最多可将集群资源扩展到 256 个 CU。如果您需要更大的 CU 规格，请[联系我们](https://support.zilliz.com.cn)。
 
-    </Admonition>
+            <Admonition type="caution" icon="🚧" title="警告">
 
-- **缩容集群**
+            <p>集群扩缩容过程中，服务可能会有短暂抖动。请谨慎操作。</p>
 
-    如果您需要缩小集群 CU 大小，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
+            </Admonition>
 
-    <Admonition type="info" icon="📘" title="说明">
+            集群扩容所需时间取决于集群中的数据量大小。
 
-    <p>为集群缩容前，请先使用 <a href="https://zilliz.com.cn/pricing#calculator">CU 计算器</a>估算您的数据需要使用的最小 CU 大小。否则，过小的 CU 将无法存储您的数据，最终导致数据迁移任务失败。</p>
+        - **集群缩容**
 
-    </Admonition>
+            在 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/signup)中，找到**集群信息**区域，单击**规格**右侧的**扩缩容**。在对话框中，您可以减少 CU 规格，但无法调整 CU 类型和云服务地域。 点击**扩缩容**按钮后，Zilliz Cloud 会自动检查您的数据量和 Collection 数量。只有同时满足以下两个条件时才能成功触发缩容：
+
+            - 当前数据量 < 缩容后 [CU 加载容量](./metrics-alerts-reference#cluster-metrics)的 80%。
+
+            - 当前 Collection 数量 < 缩容后 CU 中可创建的 [Collection 数量上限](./limits#collections)。
+
+            <Admonition type="caution" icon="🚧" title="警告">
+
+            <p>集群扩缩容过程中，服务可能会有短暂抖动。请谨慎操作。</p>
+
+            </Admonition>
+
+            集群扩容所需时间取决于集群中的数据量大小。
+
+    - **通过 API 进行集群扩缩容**
+
+        您还可以通过 API 请求来进行集群扩缩容。更多信息，请参阅[修改集群配置](/reference/restful/modify-cluster)。
+
+    - **【内测版】弹性伸缩**
+
+        <Admonition type="info" icon="📘" title="说明">
+
+        <p>弹性伸缩功能目前正在内测中，如需使用此功能，请<a href="https://zilliz.com.cn/contact-sales">联系我们</a>。</p>
+        <p>仅 Dedicated 集群可使用此功能。</p>
+
+        </Admonition>
+
+        弹性伸缩适用于业务变化较快，且不希望集群规格导致用户写入受限的场景。弹性伸缩可以帮您免去运维压力，减少因集群规格导致的对业务的影响。
+
+        您可以设置集群自动扩缩时的最大 CU 规格。目前，Zilliz Cloud 暂不支持自动缩容。
+
+        启用此功能后，您可以在集群成功创建时设置弹性伸缩参数。
+
+        ![configure_autoscaling_cn](/img/configure_autoscaling_cn.png)
+
+        弹性伸缩主要基于**[CU 加载容量](./metrics-alerts-reference#cluster-metrics)**指标进行自动扩容。目前，阈值默认设置为 70% 且不可修改。Zilliz Cloud 会每隔 1 分钟检查 CU 加载容量指标。如果在过去 2 分钟内，每个指标采集点的值均超过 70% ，Zilliz Cloud 会自动进行扩容。自动扩容的步长，请参考[价格计算器](./pricing-calculator#considerations)。
+
+        两次自动扩容之间有 10 分钟的冷却期。完成自动扩容所需时间取决于集群中的数据量。
+
+        <Admonition type="caution" icon="🚧" title="警告">
+
+        <p>自动扩容过程中，集群 CU 加载容量仍可达到 100%。到达时，会触发禁写。自动扩容过程中，集群服务可能会有分钟级短暂抖动。但自动扩容期间，如果 CU 加载容量未触达 100%，您仍可正常读取数据。</p>
+
+        </Admonition>
 
 - **挂起 / 恢复集群**
 
@@ -171,16 +220,16 @@ Dedicated 集群创建完成后，您可以在控制台看到如下信息：
 
     <table>
        <tr>
-         <th><p>云厂商</p></th>
-         <th><p>存储费用</p></th>
+      <th><p>云厂商</p></th>
+      <th><p>存储费用</p></th>
        </tr>
        <tr>
-         <td><p>阿里云</p></td>
-         <td><p>¥0.5/GB/月</p></td>
+      <td><p>阿里云</p></td>
+      <td><p>¥0.5/GB/月</p></td>
        </tr>
        <tr>
-         <td><p>腾讯云</p></td>
-         <td><p>¥0.5/GB/月</p></td>
+      <td><p>腾讯云</p></td>
+      <td><p>¥0.5/GB/月</p></td>
        </tr>
     </table>
 

@@ -37,24 +37,29 @@ Methods of `GetCollectionStatisticsParam.Builder`:
 
 <table>
     <tr>
-        <th><p>Method</p></th>
-        <th><p>Description</p></th>
-        <th><p>Parameters</p></th>
+  <th><p>Method</p></th>
+  <th><p>Description</p></th>
+  <th><p>Parameters</p></th>
     </tr>
     <tr>
-        <td><p>withCollectionName(String collectionName)</p></td>
-        <td><p>Sets the collection name. Collection name cannot be empty or null.</p></td>
-        <td><p>collectionName: The name of the collection whose statistical information needs to be checked.</p></td>
+  <td><p>withCollectionName(String collectionName)</p></td>
+  <td><p>Sets the collection name. Collection name cannot be empty or null.</p></td>
+  <td><p>collectionName: The name of the collection whose statistical information needs to be checked.</p></td>
     </tr>
     <tr>
-        <td><p>withFlush(Boolean flush)</p></td>
-        <td><p>Requests a flush action before retrieving collection statistics. The default value is False.</p></td>
-        <td><p>flush: Set the value to true to perform a flush action.</p></td>
+  <td><p>withDatabaseName(String databaseName)</p></td>
+  <td><p>Sets the database name. database name can be null for default database.</p></td>
+  <td><p>databaseName: The database name.</p></td>
     </tr>
     <tr>
-        <td><p>build()</p></td>
-        <td><p>Constructs a GetCollectionStatisticsParam object.</p></td>
-        <td><p>N/A</p></td>
+  <td><p>withFlush(Boolean flush)</p></td>
+  <td><p>Requests a flush action before retrieving collection statistics. The default value is False.</p></td>
+  <td><p>flush: Set the value to true to perform a flush action.</p></td>
+    </tr>
+    <tr>
+  <td><p>build()</p></td>
+  <td><p>Constructs a GetCollectionStatisticsParam object.</p></td>
+  <td><p>N/A</p></td>
     </tr>
 </table>
 
@@ -85,16 +90,16 @@ Methods of `GetCollStatResponseWrapper`:
 
 <table>
    <tr>
-     <th><p><strong>Method</strong></p></th>
-     <th><p><strong>Description</strong></p></th>
-     <th><p><strong>Parameters</strong></p></th>
-     <th><p><strong>Returns</strong></p></th>
+  <th><p><strong>Method</strong></p></th>
+  <th><p><strong>Description</strong></p></th>
+  <th><p><strong>Parameters</strong></p></th>
+  <th><p><strong>Returns</strong></p></th>
    </tr>
    <tr>
-     <td><p>getRowCount()</p></td>
-     <td><p>Gets the row count of a collection. Note that due to technical reasons, the deleted entities are not counted in the row count.</p></td>
-     <td><p>N/A</p></td>
-     <td><p>long</p></td>
+  <td><p>getRowCount()</p></td>
+  <td><p>Gets the row count of a collection. Note that due to technical reasons, the deleted entities are not counted in the row count.</p></td>
+  <td><p>N/A</p></td>
+  <td><p>long</p></td>
    </tr>
 </table>
 

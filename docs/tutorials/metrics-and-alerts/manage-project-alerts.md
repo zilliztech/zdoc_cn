@@ -5,6 +5,13 @@ notebook: FALSE
 type: origin
 token: EUS8w4x9Ii0BmhkJBfQcsoFln5c
 sidebar_position: 4
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 项目
+  - 告警
 
 ---
 
@@ -27,39 +34,39 @@ Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关�
 
 <table>
    <tr>
-     <th><p>告警项</p></th>
-     <th><p>单位</p></th>
-     <th><p>默认告警条件</p></th>
+  <th><p>告警项</p></th>
+  <th><p>单位</p></th>
+  <th><p>默认告警条件</p></th>
    </tr>
    <tr>
-     <td><p>CU 计算资源</p></td>
-     <td><p>%</p></td>
-     <td><p><strong>警告</strong>：CU 计算资源用量大于 70% 且持续时间超过 10 分钟时触发告警。</p><p><strong>紧急</strong>：CU 计算资源用量大于 90% 且持续时间超过 10 分钟时触发告警。</p></td>
+  <td><p>CU 计算资源</p></td>
+  <td><p>%</p></td>
+  <td><p><strong>警告</strong>：CU 计算资源用量大于 70% 且持续时间超过 10 分钟时触发告警。</p><p><strong>紧急</strong>：CU 计算资源用量大于 90% 且持续时间超过 10 分钟时触发告警。</p></td>
    </tr>
    <tr>
-     <td><p>CU 加载容量</p></td>
-     <td><p>%</p></td>
-     <td><p><strong>警告</strong>：CU 加载容量大于 70% 且持续时间超过 10 分钟时触发告警。</p><p><strong>紧急</strong>：CU 加载容量大于 90% 且持续时间超过 10 分钟时触发告警。</p></td>
+  <td><p>CU 加载容量</p></td>
+  <td><p>%</p></td>
+  <td><p><strong>警告</strong>：CU 加载容量大于 70% 且持续时间超过 10 分钟时触发告警。</p><p><strong>紧急</strong>：CU 加载容量大于 90% 且持续时间超过 10 分钟时触发告警。</p></td>
    </tr>
    <tr>
-     <td><p>Search（QPS）</p></td>
-     <td><p>QPS</p></td>
-     <td><p>Search 类型请求数大于 50 QPS 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</p></td>
+  <td><p>Search（QPS）</p></td>
+  <td><p>QPS</p></td>
+  <td><p>Search 类型请求数大于 50 QPS 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</p></td>
    </tr>
    <tr>
-     <td><p>Query（QPS）</p></td>
-     <td><p>QPS</p></td>
-     <td><p>Query 类型请求数大于 50 QPS 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</p></td>
+  <td><p>Query（QPS）</p></td>
+  <td><p>QPS</p></td>
+  <td><p>Query 类型请求数大于 50 QPS 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</p></td>
    </tr>
    <tr>
-     <td><p>Search 延时（P99）</p></td>
-     <td><p>ms</p></td>
-     <td><p>Search 类型 P99 请求延时大于 1000 ms 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</p></td>
+  <td><p>Search 延时（P99）</p></td>
+  <td><p>ms</p></td>
+  <td><p>Search 类型 P99 请求延时大于 1000 ms 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</p></td>
    </tr>
    <tr>
-     <td><p>Query 延时（P99）</p></td>
-     <td><p>ms</p></td>
-     <td><p>Query 类型 P99 请求延时大于 1000 ms 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</p></td>
+  <td><p>Query 延时（P99）</p></td>
+  <td><p>ms</p></td>
+  <td><p>Query 类型 P99 请求延时大于 1000 ms 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</p></td>
    </tr>
 </table>
 
@@ -129,7 +136,7 @@ Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关�
 
 您可以删除不需要的项目告警。
 
-<Admonition type="info" icon="说明" title="undefined">
+<Admonition type="caution" icon="🚧" title="警告">
 
 <p>告警删除后，您无法再接收到任何告警通知。</p>
 

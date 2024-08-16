@@ -37,29 +37,29 @@ Methods of `UpdateCredentialParam.Builder`:
 
 <table>
     <tr>
-        <th><p>withUsername(String username)</p></th>
-        <th><p>Sets the username. Username cannot be empty or null.</p></th>
-        <th><p>username: The user name.</p></th>
+  <th><p>withUsername(String username)</p></th>
+  <th><p>Sets the username. Username cannot be empty or null.</p></th>
+  <th><p>username: The user name.</p></th>
     </tr>
     <tr>
-        <td><p>withUsername(String username)</p></td>
-        <td><p>Sets the username. Username cannot be empty or null.</p></td>
-        <td><p>username: The user name.</p></td>
+  <td><p>withUsername(String username)</p></td>
+  <td><p>Sets the username. Username cannot be empty or null.</p></td>
+  <td><p>username: The user name.</p></td>
     </tr>
     <tr>
-        <td><p>withOldPassword(String password)</p></td>
-        <td><p>Sets the old password. Old password cannot be empty or null.</p></td>
-        <td><p>password: The old password.</p></td>
+  <td><p>withOldPassword(String password)</p></td>
+  <td><p>Sets the old password. Old password cannot be empty or null.</p></td>
+  <td><p>password: The old password.</p></td>
     </tr>
     <tr>
-        <td><p>withNewPassword(String password)</p></td>
-        <td><p>Sets the new password. New password cannot be empty or null.</p></td>
-        <td><p>password: The new password.</p></td>
+  <td><p>withNewPassword(String password)</p></td>
+  <td><p>Sets the new password. New password cannot be empty or null.</p></td>
+  <td><p>password: The new password.</p></td>
     </tr>
     <tr>
-        <td><p>build()</p></td>
-        <td><p>Constructs a UpdateCredentialParam object.</p></td>
-        <td><p>N/A</p></td>
+  <td><p>build()</p></td>
+  <td><p>Constructs a UpdateCredentialParam object.</p></td>
+  <td><p>N/A</p></td>
     </tr>
 </table>
 

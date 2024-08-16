@@ -5,6 +5,12 @@ notebook: FALSE
 type: origin
 token: GLk6wr8jviPyzHk7DjRc56YsnNf
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 导入数据
 
 ---
 
@@ -112,20 +118,20 @@ Zilliz Cloud 支持导入 JSON、Parquet 和 NumPy 数据。如果您的数据�
 
 <table>
    <tr>
-     <th><p><strong>项目</strong></p></th>
-     <th><p><strong>描述</strong></p></th>
+  <th><p><strong>项目</strong></p></th>
+  <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><p><strong>多文件导入（单批次）</strong></p></td>
-     <td><p>支持</p></td>
+  <td><p><strong>多文件导入（单批次）</strong></p></td>
+  <td><p>支持</p></td>
    </tr>
    <tr>
-     <td><p><strong>最大文件大小（单批次）</strong></p></td>
-     <td><ul><li><p>总大小： 100 GB</p></li><li><p>单文件大小： 10 GB</p></li></ul></td>
+  <td><p><strong>最大文件大小（单批次）</strong></p></td>
+  <td><ul><li><p>总大小： 100 GB</p></li><li><p>单文件大小： 10 GB</p></li></ul></td>
    </tr>
    <tr>
-     <td><p><strong>数据文件存放位置</strong></p></td>
-     <td><p>本地或远程</p></td>
+  <td><p><strong>数据文件存放位置</strong></p></td>
+  <td><p>本地或远程</p></td>
    </tr>
 </table>
 
@@ -147,20 +153,20 @@ Zilliz Cloud 支持导入 JSON、Parquet 和 NumPy 数据。如果您的数据�
 
 <table>
    <tr>
-     <th><p><strong>项目</strong></p></th>
-     <th><p><strong>描述</strong></p></th>
+  <th><p><strong>项目</strong></p></th>
+  <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><p><strong>多文件导入（单批次）</strong></p></td>
-     <td><p>支持</p></td>
+  <td><p><strong>多文件导入（单批次）</strong></p></td>
+  <td><p>支持</p></td>
    </tr>
    <tr>
-     <td><p><strong>最大文件大小（单批次）</strong></p></td>
-     <td><ul><li><p>总大小： 100 GB</p></li><li><p>单文件大小： 10 GB</p></li></ul></td>
+  <td><p><strong>最大文件大小（单批次）</strong></p></td>
+  <td><ul><li><p>总大小： 100 GB</p></li><li><p>单文件大小： 10 GB</p></li></ul></td>
    </tr>
    <tr>
-     <td><p><strong>数据文件存放位置</strong></p></td>
-     <td><p>仅远程</p></td>
+  <td><p><strong>数据文件存放位置</strong></p></td>
+  <td><p>仅远程</p></td>
    </tr>
 </table>
 
@@ -178,28 +184,28 @@ Zilliz Cloud 支持导入 JSON、Parquet 和 NumPy 数据。如果您的数据�
 
 <table>
    <tr>
-     <th><p><strong>项目</strong></p></th>
-     <th><p><strong>描述</strong></p></th>
+  <th><p><strong>项目</strong></p></th>
+  <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><p><strong>多文件导入（单批次）</strong></p></td>
-     <td><p>支持</p></td>
+  <td><p><strong>多文件导入（单批次）</strong></p></td>
+  <td><p>支持</p></td>
    </tr>
    <tr>
-     <td><p><strong>读取子目录下的文件（仅一层）</strong></p></td>
-     <td><p>支持</p></td>
+  <td><p><strong>读取子目录下的文件（仅一层）</strong></p></td>
+  <td><p>支持</p></td>
    </tr>
    <tr>
-     <td><p><strong>子目录下最大文件数量（仅一层）</strong></p></td>
-     <td><p>100</p></td>
+  <td><p><strong>子目录下最大文件数量（仅一层）</strong></p></td>
+  <td><p>100</p></td>
    </tr>
    <tr>
-     <td><p><strong>最大文件大小（单批次）</strong></p></td>
-     <td><ul><li><p>总大小： 100 GB</p></li><li><p>每个一层子目录下的文件大小： 10 GB</p></li></ul></td>
+  <td><p><strong>最大文件大小（单批次）</strong></p></td>
+  <td><ul><li><p>总大小： 100 GB</p></li><li><p>每个一层子目录下的文件大小： 10 GB</p></li></ul></td>
    </tr>
    <tr>
-     <td><p><strong>数据文件存放位置</strong></p></td>
-     <td><p>仅远程</p></td>
+  <td><p><strong>数据文件存放位置</strong></p></td>
+  <td><p>仅远程</p></td>
    </tr>
 </table>
 
@@ -247,24 +253,24 @@ Zilliz Cloud 还支持通过 Zilliz Cloud 控制台或使用 RESTful API / SDK �
 
     <table>
        <tr>
-         <th><p><strong>地域</strong></p></th>
-         <th><p><strong>URI</strong></p></th>
-         <th><p><strong>地域 ID</strong></p></th>
+      <th><p><strong>地域</strong></p></th>
+      <th><p><strong>URI</strong></p></th>
+      <th><p><strong>地域 ID</strong></p></th>
        </tr>
        <tr>
-         <td><p><strong>华东1（杭州）</strong></p></td>
-         <td><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com</code></p></td>
-         <td><p><code>oss-cn-hangzhou</code></p></td>
+      <td><p><strong>华东1（杭州）</strong></p></td>
+      <td><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com</code></p></td>
+      <td><p><code>oss-cn-hangzhou</code></p></td>
        </tr>
        <tr>
-         <td><p><strong>华北2（北京）</strong></p></td>
-         <td><p><code>https://bucket-name.oss-cn-beijing.aliyuncs.com</code></p></td>
-         <td><p><code>oss-cn-beijing</code></p></td>
+      <td><p><strong>华北2（北京）</strong></p></td>
+      <td><p><code>https://bucket-name.oss-cn-beijing.aliyuncs.com</code></p></td>
+      <td><p><code>oss-cn-beijing</code></p></td>
        </tr>
        <tr>
-         <td><p><strong>华南1（深圳）</strong></p></td>
-         <td><p><code>https://bucket-name.oss-cn-shenzhen.aliyuncs.com</code></p></td>
-         <td><p><code>oss-cn-shenzhen</code></p></td>
+      <td><p><strong>华南1（深圳）</strong></p></td>
+      <td><p><code>https://bucket-name.oss-cn-shenzhen.aliyuncs.com</code></p></td>
+      <td><p><code>oss-cn-shenzhen</code></p></td>
        </tr>
     </table>
 
@@ -272,20 +278,20 @@ Zilliz Cloud 还支持通过 Zilliz Cloud 控制台或使用 RESTful API / SDK �
 
     <table>
        <tr>
-         <th><p><strong>文件类型</strong></p></th>
-         <th><p><strong>路径示例</strong></p></th>
+      <th><p><strong>文件类型</strong></p></th>
+      <th><p><strong>路径示例</strong></p></th>
        </tr>
        <tr>
-         <td><p><strong>JSON</strong></p></td>
-         <td><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder</code></p><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/data.json</code></p></td>
+      <td><p><strong>JSON</strong></p></td>
+      <td><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder</code></p><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/data.json</code></p></td>
        </tr>
        <tr>
-         <td><p><strong>NumPy</strong></p></td>
-         <td><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/numpy-folder</code></p><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/numpy-folder/*.npy</code></p></td>
+      <td><p><strong>NumPy</strong></p></td>
+      <td><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/numpy-folder</code></p><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/numpy-folder/*.npy</code></p></td>
        </tr>
        <tr>
-         <td><p><strong>Parquet</strong></p></td>
-         <td><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder</code></p><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder/data.parquet</code></p></td>
+      <td><p><strong>Parquet</strong></p></td>
+      <td><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder</code></p><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder/data.parquet</code></p></td>
        </tr>
     </table>
 
@@ -297,45 +303,53 @@ Zilliz Cloud 还支持通过 Zilliz Cloud 控制台或使用 RESTful API / SDK �
 
     <table>
        <tr>
-         <th><p><strong>地域</strong></p></th>
-         <th><p><strong>URI</strong></p></th>
-         <th><p><strong>地域 ID</strong></p></th>
+      <th><p><strong>地域</strong></p></th>
+      <th><p><strong>URI</strong></p></th>
+      <th><p><strong>地域 ID</strong></p></th>
        </tr>
        <tr>
-         <td><p><strong>北京</strong></p></td>
-         <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com</code></p></td>
-         <td><p><code>ap-beijing</code></p></td>
+      <td><p><strong>北京</strong></p></td>
+      <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com</code></p></td>
+      <td><p><code>ap-beijing</code></p></td>
        </tr>
        <tr>
-         <td><p><strong>上海</strong></p></td>
-         <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-shanghai.myqcloud.com</code></p></td>
-         <td><p><code>ap-shanghai</code></p></td>
+      <td><p><strong>上海</strong></p></td>
+      <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-shanghai.myqcloud.com</code></p></td>
+      <td><p><code>ap-shanghai</code></p></td>
        </tr>
        <tr>
-         <td><p>弗吉尼亚</p></td>
-         <td><p><code>https://&lt;BucketName-APPID&gt;.cos.na-ashburn.myqcloud.com</code></p></td>
-         <td><p><code>na-ashburn</code></p></td>
+      <td><p><strong>弗吉尼亚</strong></p></td>
+      <td><p><code>https://&lt;BucketName-APPID&gt;.cos.na-ashburn.myqcloud.com</code></p></td>
+      <td><p><code>na-ashburn</code></p></td>
        </tr>
     </table>
+
+- 所需权限
+
+    - `cos:GetBucket`
+
+    - `cos:GetObject`
+
+    - `cos:HeadObject`
 
 - 示例
 
     <table>
        <tr>
-         <th><p><strong>文件类型</strong></p></th>
-         <th><p><strong>路径示例</strong></p></th>
+      <th><p><strong>文件类型</strong></p></th>
+      <th><p><strong>路径示例</strong></p></th>
        </tr>
        <tr>
-         <td><p><strong>JSON</strong></p></td>
-         <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder</code></p><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder/data.json</code></p></td>
+      <td><p><strong>JSON</strong></p></td>
+      <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder</code></p><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder/data.json</code></p></td>
        </tr>
        <tr>
-         <td><p><strong>NumPy</strong></p></td>
-         <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/numpy-folder</code></p><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/numpy-folder/*.npy</code></p></td>
+      <td><p><strong>NumPy</strong></p></td>
+      <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/numpy-folder</code></p><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/numpy-folder/*.npy</code></p></td>
        </tr>
        <tr>
-         <td><p><strong>Parquet</strong></p></td>
-         <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/parquet-folder</code></p><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/parquet-folder/data.parquet</code></p></td>
+      <td><p><strong>Parquet</strong></p></td>
+      <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/parquet-folder</code></p><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/parquet-folder/data.parquet</code></p></td>
        </tr>
     </table>
 

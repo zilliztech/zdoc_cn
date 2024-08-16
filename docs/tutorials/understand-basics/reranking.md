@@ -5,6 +5,12 @@ notebook: FALSE
 type: origin
 token: TzePwbkScic5e9kCF0FcljQEngc
 sidebar_position: 8
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - reranking
 
 ---
 

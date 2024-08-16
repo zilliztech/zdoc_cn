@@ -5,6 +5,13 @@ notebook: FALSE
 type: origin
 token: QdD7w2k6ii7mKFkTJ2tcNhYznAf
 sidebar_position: 7
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 相似性
+  - sentence transformers
 
 ---
 

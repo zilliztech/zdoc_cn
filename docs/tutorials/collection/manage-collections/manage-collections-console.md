@@ -6,6 +6,13 @@ notebook: FALSE
 type: origin
 token: Cy4swPPaeiZgbmkN4wUc9wAdnwd
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - collection
+  - 控制台
 
 ---
 
@@ -24,7 +31,7 @@ Zilliz Cloud 提供 3 种创建 Collection 的方式以满足不同需求。
 
 - **[使用示例数据集](./manage-collections-console#create-sample-collection)**: 适合 Zilliz Cloud 新手用户。Zilliz Cloud 提供示例数据集，并为您根据示例数据集自动定义 Schema。您无需额外修改 Collection 配置即可一键创建 Collection。
 
-- **[复制现有 Collection](./manage-collections-console#copy-collection)**: 适合需要快速复制现有 Collection 的用户。
+- **[复制现有 Collection](./manage-collections-console#copy-collection)**: 适合需要在当前集群中快速复制现有 Collection 的用户。
 
 ### 方法 1: 使用您自己的数据{#create-your-own-collection}
 
@@ -74,11 +81,21 @@ Zilliz Cloud 提供 3 种创建 Collection 的方式以满足不同需求。
 
 ### 方法 3：复制现有 Collection{#copy-collection}
 
-该操作将复制现有 Collection 的 Schema 和索引。
+1. 在**操作**下拉菜单中选择**复制 Collection。**
 
-在**操作**下拉菜单中选择**复制 Collection**，设置新 Collection 名称和描述，点击**创建**。
+1. 设置新 Collection 名称和描述并选择复制范围。您仅可以在当前集群中复制 Collection。复制范围可以选择仅复制 Collection Schema 或同时复制 Collection Schema 和数据。
 
-![cn-copy-collection](/img/cn-copy-collection.png)
+1. 点击**复制**。
+
+    ![cn-copy-collection](/img/cn-copy-collection.png)
+
+1. Zilliz Cloud 将生成一条复制 Collection 任务。您可前往[任务中心](./job-center)查看任务状态和进度。如果迁移任务的状态从**进行中**变更为**成功**，则代表复制 Collection 成功。
+
+    <Admonition type="info" icon="📘" title="说明">
+
+    <p>仅当您选择复制 Collection Schema 及数据时，会生成复制任务。如果您选择了仅复制 Collection Schema，Zilliz Cloud 将立刻在当前集群中创建一个相同 Schema 的 Collection，而不会生成任务。</p>
+
+    </Admonition>
 
 ## 查看 Collections{#view-collections}
 

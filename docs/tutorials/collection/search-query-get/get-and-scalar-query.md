@@ -5,6 +5,13 @@ notebook: FALSE
 type: origin
 token: TOQ7wYcWsiLDCmk24frcH1WhnKe
 sidebar_position: 3
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - get
+  - scalar query
 
 ---
 
@@ -1611,52 +1618,52 @@ console.log(res.data)
 
 <table>
    <tr>
-     <th><p><strong>运算符</strong></p></th>
-     <th><p><strong>描述</strong></p></th>
+  <th><p><strong>运算符</strong></p></th>
+  <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><p><strong>and (&&)</strong></p></td>
-     <td><p>当两个操作数都为真时返回真</p></td>
+  <td><p><strong>and (&&)</strong></p></td>
+  <td><p>当两个操作数都为真时返回真</p></td>
    </tr>
    <tr>
-     <td><p><strong>or (||)</strong></p></td>
-     <td><p>当任一操作数为真时返回真</p></td>
+  <td><p><strong>or (||)</strong></p></td>
+  <td><p>当任一操作数为真时返回真</p></td>
    </tr>
    <tr>
-     <td><p><strong>+, -, *, /</strong></p></td>
-     <td><p>加法、减法、乘法和除法</p></td>
+  <td><p><strong>+, -, *, /</strong></p></td>
+  <td><p>加法、减法、乘法和除法</p></td>
    </tr>
    <tr>
-     <td><p><strong>**</strong></p></td>
-     <td><p>幂运算</p></td>
+  <td><p><strong>**</strong></p></td>
+  <td><p>幂运算</p></td>
    </tr>
    <tr>
-     <td><p><strong>%</strong></p></td>
-     <td><p>取模</p></td>
+  <td><p><strong>%</strong></p></td>
+  <td><p>取模</p></td>
    </tr>
    <tr>
-     <td><p><strong>\<, ></strong></p></td>
-     <td><p>小于、大于</p></td>
+  <td><p><strong>\<, ></strong></p></td>
+  <td><p>小于、大于</p></td>
    </tr>
    <tr>
-     <td><p><strong>==, !=</strong></p></td>
-     <td><p>等于、不等于</p></td>
+  <td><p><strong>==, !=</strong></p></td>
+  <td><p>等于、不等于</p></td>
    </tr>
    <tr>
-     <td><p><strong>\<=, >=</strong></p></td>
-     <td><p>小于或等于、大于或等于</p></td>
+  <td><p><strong>\<=, >=</strong></p></td>
+  <td><p>小于或等于、大于或等于</p></td>
    </tr>
    <tr>
-     <td><p><strong>not</strong></p></td>
-     <td><p>反转给定条件的结果</p></td>
+  <td><p><strong>not</strong></p></td>
+  <td><p>反转给定条件的结果</p></td>
    </tr>
    <tr>
-     <td><p><strong>like</strong></p></td>
-     <td><p>使用通配符运算符比较相似值。</p><p>例如，使用 <code>like "prefix%"</code> 匹配以 <code>"prefix"</code> 开头的字符串。</p></td>
+  <td><p><strong>like</strong></p></td>
+  <td><p>使用通配符运算符比较相似值。</p><p>例如，使用 <code>like "prefix%"</code> 匹配以 <code>"prefix"</code> 开头的字符串。</p></td>
    </tr>
    <tr>
-     <td><p><strong>in</strong></p></td>
-     <td><p>测试表达式是否匹配值列表中的任何值。</p></td>
+  <td><p><strong>in</strong></p></td>
+  <td><p>测试表达式是否匹配值列表中的任何值。</p></td>
    </tr>
 </table>
 

@@ -33,24 +33,24 @@ Methods of `CreateCredentialParam.Builder`:
 
 <table>
     <tr>
-        <th><p>Method</p></th>
-        <th><p>Description</p></th>
-        <th><p>Parameters</p></th>
+  <th><p>Method</p></th>
+  <th><p>Description</p></th>
+  <th><p>Parameters</p></th>
     </tr>
     <tr>
-        <td><p>withUsername(String username)</p></td>
-        <td><p>Sets the username. Username cannot be empty or null.</p></td>
-        <td><p>username: The user name used to create the credential.</p></td>
+  <td><p>withUsername(String username)</p></td>
+  <td><p>Sets the username. Username cannot be empty or null.</p></td>
+  <td><p>username: The user name used to create the credential.</p></td>
     </tr>
     <tr>
-        <td><p>withPassword(String password)</p></td>
-        <td><p>Sets the password. Password cannot be empty or null.</p></td>
-        <td><p>password: The corresponding password to create the credential.</p></td>
+  <td><p>withPassword(String password)</p></td>
+  <td><p>Sets the password. Password cannot be empty or null.</p></td>
+  <td><p>password: The corresponding password to create the credential.</p></td>
     </tr>
     <tr>
-        <td><p>build()</p></td>
-        <td><p>Constructs a CreateCredentialParam object.</p></td>
-        <td><p>N/A</p></td>
+  <td><p>build()</p></td>
+  <td><p>Constructs a CreateCredentialParam object.</p></td>
+  <td><p>N/A</p></td>
     </tr>
 </table>
 

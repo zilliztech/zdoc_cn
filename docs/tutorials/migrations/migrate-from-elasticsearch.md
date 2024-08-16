@@ -5,6 +5,13 @@ notebook: FALSE
 type: origin
 token: CJN4wlKiGi1P8Zk4BHKcF04GnLb
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 迁移
+  - elasticsearch
 
 ---
 
@@ -61,7 +68,7 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
 
 ## 结果验证{#verify-the-migration-results}
 
-如果迁移任务的状态从**迁移中**变更为**成功**，则代表迁移成功。
+生成迁移任务后，您可前往[任务中心](./job-center)查看任务状态和进度。如果迁移任务的状态从**进行中**变更为**成功**，则代表迁移成功。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -69,7 +76,7 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
 
 </Admonition>
 
-![zh_verify_collection_es](/img/zh_verify_collection_es.png)
+![view_migration_progress_cn](/img/view_migration_progress_cn.png)
 
 ## 字段映射{#field-mapping-reference}
 
@@ -77,49 +84,49 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
 
 <table>
    <tr>
-     <th><p>Elasticsearch 字段</p></th>
-     <th><p>Zilliz Cloud 字段</p></th>
-     <th><p>描述</p></th>
+  <th><p>Elasticsearch 字段</p></th>
+  <th><p>Zilliz Cloud 字段</p></th>
+  <th><p>描述</p></th>
    </tr>
    <tr>
-     <td><p>dense_vector</p></td>
-     <td><p>FloatVector</p></td>
-     <td><p>向量维度与源索引中的向量字段维度相同。您可以在 <strong>L2</strong> 和 <strong>IP</strong> 之间指定一个度量类型。</p></td>
+  <td><p>dense_vector</p></td>
+  <td><p>FloatVector</p></td>
+  <td><p>向量维度与源索引中的向量字段维度相同。您可以在 <strong>L2</strong> 和 <strong>IP</strong> 之间指定一个度量类型。</p></td>
    </tr>
    <tr>
-     <td><p>keyword</p></td>
-     <td><p>VarChar</p></td>
-     <td><p>通过 <strong>Max Length</strong> 指定最大数据长度，有效值为 1 到 65535 之间。如果任何字符串超过了最大长度限制，迁移过程将会报错。</p></td>
+  <td><p>keyword</p></td>
+  <td><p>VarChar</p></td>
+  <td><p>通过 <strong>Max Length</strong> 指定最大数据长度，有效值为 1 到 65535 之间。如果任何字符串超过了最大长度限制，迁移过程将会报错。</p></td>
    </tr>
    <tr>
-     <td><p>text</p></td>
-     <td><p>VarChar</p></td>
-     <td><p>通过 <strong>Max Length</strong> 指定最大数据长度，有效值为 1 到 65535 之间。如果任何字符串超过了最大长度限制，迁移过程将会报错。</p></td>
+  <td><p>text</p></td>
+  <td><p>VarChar</p></td>
+  <td><p>通过 <strong>Max Length</strong> 指定最大数据长度，有效值为 1 到 65535 之间。如果任何字符串超过了最大长度限制，迁移过程将会报错。</p></td>
    </tr>
    <tr>
-     <td><p>long</p></td>
-     <td><p>Int64</p></td>
-     <td><p>-</p></td>
+  <td><p>long</p></td>
+  <td><p>Int64</p></td>
+  <td><p>-</p></td>
    </tr>
    <tr>
-     <td><p>integer</p></td>
-     <td><p>Int32</p></td>
-     <td><p>-</p></td>
+  <td><p>integer</p></td>
+  <td><p>Int32</p></td>
+  <td><p>-</p></td>
    </tr>
    <tr>
-     <td><p>double</p></td>
-     <td><p>Double</p></td>
-     <td><p>-</p></td>
+  <td><p>double</p></td>
+  <td><p>Double</p></td>
+  <td><p>-</p></td>
    </tr>
    <tr>
-     <td><p>float</p></td>
-     <td><p>Float</p></td>
-     <td><p>-</p></td>
+  <td><p>float</p></td>
+  <td><p>Float</p></td>
+  <td><p>-</p></td>
    </tr>
    <tr>
-     <td><p>boolean</p></td>
-     <td><p>Bool</p></td>
-     <td><p>-</p></td>
+  <td><p>boolean</p></td>
+  <td><p>Bool</p></td>
+  <td><p>-</p></td>
    </tr>
 </table>
 

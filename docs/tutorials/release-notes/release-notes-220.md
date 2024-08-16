@@ -4,7 +4,13 @@ beta: FALSE
 notebook: FALSE
 type: origin
 token: P1JAwZEf4i1ALqkidS9cYfLZnef
-sidebar_position: 8
+sidebar_position: 9
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 版本说明书
 
 ---
 

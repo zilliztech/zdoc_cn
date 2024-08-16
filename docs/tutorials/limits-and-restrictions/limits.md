@@ -5,6 +5,12 @@ notebook: FALSE
 type: origin
 token: A8UFwSbMniMl6IkpJkNc4HsHnLc
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 使用限制
 
 ---
 
@@ -21,29 +27,29 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><p><strong>内容</strong></p></th>
-     <th><p><strong>最大数量</strong></p></th>
-     <th><p><strong>描述</strong></p></th>
+  <th><p><strong>内容</strong></p></th>
+  <th><p><strong>最大数量</strong></p></th>
+  <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><p>组织</p></td>
-     <td><p>1</p></td>
-     <td><p>每个用户只能创建 1 个组织。</p></td>
+  <td><p>组织</p></td>
+  <td><p>1</p></td>
+  <td><p>每个用户只能创建 1 个组织。</p></td>
    </tr>
    <tr>
-     <td><p>组织成员</p></td>
-     <td><p>100</p></td>
-     <td><p>每个组织最多可以容纳 100 个成员。每个用户可以属于多个组织。</p></td>
+  <td><p>组织成员</p></td>
+  <td><p>100</p></td>
+  <td><p>每个组织最多可以容纳 100 个成员。每个用户可以属于多个组织。</p></td>
    </tr>
    <tr>
-     <td><p>项目</p></td>
-     <td><p>10</p></td>
-     <td><p>每个用户可以创建 10 个项目。</p></td>
+  <td><p>项目</p></td>
+  <td><p>10</p></td>
+  <td><p>每个用户可以创建 10 个项目。</p></td>
    </tr>
    <tr>
-     <td><p>项目成员</p></td>
-     <td><p>100</p></td>
-     <td><p>每个项目最多可以容纳 100 个成员。每个用户可以加入同一组织内的多个项目。</p></td>
+  <td><p>项目成员</p></td>
+  <td><p>100</p></td>
+  <td><p>每个项目最多可以容纳 100 个成员。每个用户可以加入同一组织内的多个项目。</p></td>
    </tr>
 </table>
 
@@ -55,14 +61,14 @@ import Admonition from '@theme/Admonition';
 
     <table>
        <tr>
-         <th><p><strong>类型</strong></p></th>
-         <th><p><strong>最大数量</strong></p></th>
-         <th><p><strong>描述</strong></p></th>
+      <th><p><strong>类型</strong></p></th>
+      <th><p><strong>最大数量</strong></p></th>
+      <th><p><strong>描述</strong></p></th>
        </tr>
        <tr>
-         <td><p>Dedicated 版集群</p></td>
-         <td><p>1</p></td>
-         <td><p>未绑定有效支付方式，最多可创建一个Dedicated 版集群。</p></td>
+      <td><p>Dedicated 版集群</p></td>
+      <td><p>1</p></td>
+      <td><p>未绑定有效支付方式，最多可创建一个Dedicated 版集群。</p></td>
        </tr>
     </table>
 
@@ -70,14 +76,14 @@ import Admonition from '@theme/Admonition';
 
     <table>
        <tr>
-         <th><p>类型</p></th>
-         <th><p><strong>最大数量</strong></p></th>
-         <th><p><strong>描述</strong></p></th>
+      <th><p>类型</p></th>
+      <th><p><strong>最大数量</strong></p></th>
+      <th><p><strong>描述</strong></p></th>
        </tr>
        <tr>
-         <td><p>Dedicated 版集群</p></td>
-         <td><p>256 CUs</p></td>
-         <td><p>在自助操作时，单个集群最多使用 256 个 CU。</p></td>
+      <td><p>Dedicated 版集群</p></td>
+      <td><p>256 CUs</p></td>
+      <td><p>在自助操作时，单个集群最多使用 256 个 CU。</p></td>
        </tr>
     </table>
 
@@ -91,20 +97,20 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><p><strong>Pipeline 类型</strong></p></th>
-     <th><p><strong>最大数量（每个项目）</strong></p></th>
+  <th><p><strong>Pipeline 类型</strong></p></th>
+  <th><p><strong>最大数量（每个项目）</strong></p></th>
    </tr>
    <tr>
-     <td><p>Ingestion Pipeline</p></td>
-     <td><p>10</p></td>
+  <td><p>Ingestion Pipeline</p></td>
+  <td><p>100</p></td>
    </tr>
    <tr>
-     <td><p>Deletion Pipeline</p></td>
-     <td><p>10</p></td>
+  <td><p>Deletion Pipeline</p></td>
+  <td><p>100</p></td>
    </tr>
    <tr>
-     <td><p>Search Pipeline</p></td>
-     <td><p>10</p></td>
+  <td><p>Search Pipeline</p></td>
+  <td><p>100</p></td>
    </tr>
 </table>
 
@@ -114,16 +120,16 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><p><strong>Embedding 模型</strong></p></th>
-     <th><p><strong>切片大小范围 (Tokens）</strong></p></th>
+  <th><p><strong>Embedding 模型</strong></p></th>
+  <th><p><strong>切片大小范围 (Tokens）</strong></p></th>
    </tr>
    <tr>
-     <td><p>zilliz/bge-base-en-v1.5</p></td>
-     <td><p>20-500</p></td>
+  <td><p>zilliz/bge-base-en-v1.5</p></td>
+  <td><p>20-500</p></td>
    </tr>
    <tr>
-     <td><p>zilliz/bge-base-zh-v1.5</p></td>
-     <td><p>20-500</p></td>
+  <td><p>zilliz/bge-base-zh-v1.5</p></td>
+  <td><p>20-500</p></td>
    </tr>
 </table>
 
@@ -131,16 +137,16 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th></th>
-     <th><p><strong>最大数量</strong></p></th>
+  <th></th>
+  <th><p><strong>最大数量</strong></p></th>
    </tr>
    <tr>
-     <td><p>元数据字段</p></td>
-     <td><p>5</p></td>
+  <td><p>元数据字段</p></td>
+  <td><p>50</p></td>
    </tr>
    <tr>
-     <td><p>字符串类型字段的最大长度</p></td>
-     <td><p>4,000</p></td>
+  <td><p>字符串类型字段的最大长度</p></td>
+  <td><p>4,000</p></td>
    </tr>
 </table>
 
@@ -148,16 +154,16 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><p><strong>Embedding 模型</strong></p></th>
-     <th><p><strong>每次运行 Ingestion 的最大切片数量</strong></p></th>
+  <th><p><strong>Embedding 模型</strong></p></th>
+  <th><p><strong>每次运行 Ingestion 的最大切片数量</strong></p></th>
    </tr>
    <tr>
-     <td><p>zilliz/bge-base-en-v1.5</p></td>
-     <td><p>3,500</p></td>
+  <td><p>zilliz/bge-base-en-v1.5</p></td>
+  <td><p>3,500</p></td>
    </tr>
    <tr>
-     <td><p>zilliz/bge-base-zh-v1.5</p></td>
-     <td><p>3,500</p></td>
+  <td><p>zilliz/bge-base-zh-v1.5</p></td>
+  <td><p>3,500</p></td>
    </tr>
 </table>
 
@@ -165,12 +171,12 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th></th>
-     <th><p>用量上限</p></th>
+  <th></th>
+  <th><p>用量上限</p></th>
    </tr>
    <tr>
-     <td><p>每个组织</p></td>
-     <td><p>¥100/月</p></td>
+  <td><p>每个组织</p></td>
+  <td><p>¥140/月</p></td>
    </tr>
 </table>
 
@@ -178,19 +184,19 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><p><strong>类型</strong></p></th>
-     <th><p><strong>最大数量</strong></p></th>
-     <th><p><strong>描述</strong></p></th>
+  <th><p><strong>类型</strong></p></th>
+  <th><p><strong>最大数量</strong></p></th>
+  <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群</p></td>
-     <td><p>每 CU：&lt;= 64</p><p>每集群：&lt;= 4096</p></td>
-     <td><p>在 Dedicated 版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</p></td>
+  <td><p>Dedicated 版集群</p></td>
+  <td><p>每 CU：&lt;= 64</p><p>每集群：&lt;= 4096</p></td>
+  <td><p>在 Dedicated 版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</p></td>
    </tr>
    <tr>
-     <td><p>Serverless 版集群</p></td>
-     <td><p>10</p></td>
-     <td><p>在 Serverless 版集群中，最多可创建 10 个 Collection。</p></td>
+  <td><p>Serverless 版集群</p></td>
+  <td><p>10</p></td>
+  <td><p>在 Serverless 版集群中，最多可创建 10 个 Collection。</p></td>
    </tr>
 </table>
 
@@ -227,14 +233,19 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><p><strong>类型</strong></p></th>
-     <th><p><strong>最大数量（每个 Collection）</strong></p></th>
-     <th><p>描述</p></th>
+  <th><p><strong>类型</strong></p></th>
+  <th><p><strong>最大数量（每个 Collection）</strong></p></th>
+  <th><p>描述</p></th>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群</p></td>
-     <td><p>4096</p></td>
-     <td><p>在 Dedicated 版集群中，您可以为每个 Collection 创建最多 4096 个 Partition。</p></td>
+  <td><p>Serverless 版集群</p></td>
+  <td><p>1,024</p></td>
+  <td><p>在 Serverless 版集群中，您可以为每个 Collection 创建最多 1,024 个 Partition。</p></td>
+   </tr>
+   <tr>
+  <td><p>Dedicated 版集群</p></td>
+  <td><p>4,096</p></td>
+  <td><p>在 Dedicated 版集群中，您可以为每个 Collection 创建最多 4,096 个 Partition。</p></td>
    </tr>
 </table>
 
@@ -244,19 +255,19 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><p><strong>内容</strong></p></th>
-     <th><p><strong>最大数量</strong></p></th>
-     <th><p><strong>描述</strong></p></th>
+  <th><p><strong>内容</strong></p></th>
+  <th><p><strong>最大数量</strong></p></th>
+  <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><p>所有字段（每个 Collection）</p></td>
-     <td><p>64</p></td>
-     <td><p>N/A</p></td>
+  <td><p>所有字段（每个 Collection）</p></td>
+  <td><p>64</p></td>
+  <td><p>N/A</p></td>
    </tr>
    <tr>
-     <td><p>向量字段（每个 Collection）</p></td>
-     <td><p>1</p></td>
-     <td><p>即将支持多向量功能，敬请期待。</p></td>
+  <td><p>向量字段（每个 Collection）</p></td>
+  <td><p>1</p></td>
+  <td><p>即将支持多向量功能，敬请期待。</p></td>
    </tr>
 </table>
 
@@ -282,24 +293,28 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th></th>
-     <th><p>Insert rate limits</p></th>
+  <th></th>
+  <th><p>Insert rate limits</p></th>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群（1-2 CU）</p></td>
-     <td><p>4 MB/s</p></td>
+  <td><p>Serverless 版集群</p></td>
+  <td><p>10 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群（4-8 CU）</p></td>
-     <td><p>6 MB/s</p></td>
+  <td><p>Dedicated 版集群（1-2 CU）</p></td>
+  <td><p>4 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群（12-20 CU）</p></td>
-     <td><p>8 MB/s</p></td>
+  <td><p>Dedicated 版集群（4-8 CU）</p></td>
+  <td><p>6 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群（&gt;= 24 CU）</p></td>
-     <td><p>12 MB/s</p></td>
+  <td><p>Dedicated 版集群（12-20 CU）</p></td>
+  <td><p>8 MB/s</p></td>
+   </tr>
+   <tr>
+  <td><p>Dedicated 版集群（&gt;= 24 CU）</p></td>
+  <td><p>12 MB/s</p></td>
    </tr>
 </table>
 
@@ -315,24 +330,24 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th></th>
-     <th><p>Insert rate limits</p></th>
+  <th></th>
+  <th><p>Insert rate limits</p></th>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群（1-2 CU）</p></td>
-     <td><p>4 MB/s</p></td>
+  <td><p>Dedicated 版集群（1-2 CU）</p></td>
+  <td><p>4 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群（4-8 CU）</p></td>
-     <td><p>6 MB/s</p></td>
+  <td><p>Dedicated 版集群（4-8 CU）</p></td>
+  <td><p>6 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群（12-20 CU）</p></td>
-     <td><p>8 MB/s</p></td>
+  <td><p>Dedicated 版集群（12-20 CU）</p></td>
+  <td><p>8 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群（&gt;= 24 CU）</p></td>
-     <td><p>12 MB/s</p></td>
+  <td><p>Dedicated 版集群（&gt;= 24 CU）</p></td>
+  <td><p>12 MB/s</p></td>
    </tr>
 </table>
 
@@ -346,35 +361,39 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><p><strong>字段类型</strong></p></th>
-     <th><p><strong>索引类型</strong></p></th>
-     <th><p><strong>度量类型</strong></p></th>
+  <th><p><strong>字段类型</strong></p></th>
+  <th><p><strong>索引类型</strong></p></th>
+  <th><p><strong>度量类型</strong></p></th>
    </tr>
    <tr>
-     <td><p>向量字段</p></td>
-     <td><p>AUTOINDEX</p></td>
-     <td><p>L2, IP, 和 COSINE</p></td>
+  <td><p>向量字段</p></td>
+  <td><p>AUTOINDEX</p></td>
+  <td><p>L2, IP, 和 COSINE</p></td>
    </tr>
    <tr>
-     <td><p>VarChar 字段</p></td>
-     <td><p>TRIE</p></td>
-     <td><p>N/A</p></td>
+  <td><p>VarChar 字段</p></td>
+  <td><p>TRIE</p></td>
+  <td><p>N/A</p></td>
    </tr>
    <tr>
-     <td><p>Int8/16/32/64</p></td>
-     <td><p>STL_SORT</p></td>
-     <td><p>N/A</p></td>
+  <td><p>Int8/16/32/64</p></td>
+  <td><p>STL_SORT</p></td>
+  <td><p>N/A</p></td>
    </tr>
    <tr>
-     <td><p>Float32/64</p></td>
-     <td><p>STL_SORT</p></td>
-     <td><p>N/A</p></td>
+  <td><p>Float32/64</p></td>
+  <td><p>STL_SORT</p></td>
+  <td><p>N/A</p></td>
    </tr>
 </table>
 
 ### Flush{#flush}
 
-每个集群的 Flush 请求速率限制为每秒 1 个请求。
+每个集群的 Flush 请求速率限制为每秒 0.1 个请求，该限制具体适用于以下集群类型：
+
+- 兼容 Milvus 2.4.x 或更高版本的 Serverless 集群；
+
+- 升级到 Beta 版本的 Dedicated 集群，该集群类型兼容 Milvus 2.4.x 或更高版本。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -428,24 +447,24 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><p>文件类型</p></th>
-     <th><p>本地导入</p></th>
-     <th><p>对象存储导入</p></th>
+  <th><p>文件类型</p></th>
+  <th><p>本地导入</p></th>
+  <th><p>对象存储导入</p></th>
    </tr>
    <tr>
-     <td><p>JSON</p></td>
-     <td><p>1 GB</p></td>
-     <td><p>1 GB</p></td>
+  <td><p>JSON</p></td>
+  <td><p>1 GB</p></td>
+  <td><p>1 GB</p></td>
    </tr>
    <tr>
-     <td><p>Numpy</p></td>
-     <td><p>暂不支持</p></td>
-     <td><p>文件夹的最大大小为 100 GB，每个子文件夹的最大大小为 15 GB。</p></td>
+  <td><p>Numpy</p></td>
+  <td><p>暂不支持</p></td>
+  <td><p>文件夹的最大大小为 100 GB，每个子文件夹的最大大小为 15 GB。</p></td>
    </tr>
    <tr>
-     <td><p>Parquet</p></td>
-     <td><p>暂不支持</p></td>
-     <td><p>10 GB</p></td>
+  <td><p>Parquet</p></td>
+  <td><p>暂不支持</p></td>
+  <td><p>10 GB</p></td>
    </tr>
 </table>
 
@@ -453,7 +472,7 @@ import Admonition from '@theme/Admonition';
 
 ## 数据备份（控制台）{#backup-on-console}
 
-Zilliz Cloud 备份快照可保存长达30天。更多备份费用详情，请参考 [了解费用](./understand-cost#backup-costs)。
+Zilliz Cloud 备份快照可保存长达 30 天。更多备份费用详情，请参考 [了解费用](./understand-cost#backup-costs)。
 
 ## 数据恢复（控制台）{#restore-on-console}
 

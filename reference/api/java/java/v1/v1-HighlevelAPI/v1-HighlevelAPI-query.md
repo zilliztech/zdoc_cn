@@ -33,44 +33,44 @@ Methods of `QuerySimpleParam.Builder`:
 
 <table>
     <tr>
-        <th><p>Method</p></th>
-        <th><p>Description</p></th>
-        <th><p>Parameters</p></th>
+  <th><p>Method</p></th>
+  <th><p>Description</p></th>
+  <th><p>Parameters</p></th>
     </tr>
     <tr>
-        <td><p>withCollectionName(collectionName)</p></td>
-        <td><p>Set the collection name. Collection name cannot be empty or null.</p></td>
-        <td><p>collectionName: The target collection name.</p></td>
+  <td><p>withCollectionName(collectionName)</p></td>
+  <td><p>Set the collection name. Collection name cannot be empty or null.</p></td>
+  <td><p>collectionName: The target collection name.</p></td>
     </tr>
     <tr>
-        <td><p>withOutputFields(List\<String> outputFields)</p></td>
-        <td><p>Specifies output scalar fields (Optional).<br/>If output fields are specified, the QueryResults returned by query() will contains the values of these fields.</p></td>
-        <td><p><br/>outputFields: The name list of fields to be outputed.</p></td>
+  <td><p>withOutputFields(List\<String> outputFields)</p></td>
+  <td><p>Specifies output scalar fields (Optional).<br/>If output fields are specified, the QueryResults returned by query() will contains the values of these fields.</p></td>
+  <td><p><br/>outputFields: The name list of fields to be outputed.</p></td>
     </tr>
     <tr>
-        <td><p>withFilter(String filter)</p></td>
-        <td><p>Set the expression to query entities. For more information please refer to <a href="https://milvus.io/docs/v2.1.x/boolean.md">this doc</a>.</p></td>
-        <td><p>filter: The expression to query.</p></td>
+  <td><p>withFilter(String filter)</p></td>
+  <td><p>Set the expression to query entities. For more information please refer to <a href="https://milvus.io/docs/v2.1.x/boolean.md">this doc</a>.</p></td>
+  <td><p>filter: The expression to query.</p></td>
     </tr>
     <tr>
-        <td><p>withOffset(Long offset)</p></td>
-        <td><p>Specify a position, the returned entities before this position will be ignored. Only take effect when the 'limit' value is specified.Default value is 0, start from begin.</p></td>
-        <td><p>offset: A value to define the position.</p></td>
+  <td><p>withOffset(Long offset)</p></td>
+  <td><p>Specify a position, the returned entities before this position will be ignored. Only take effect when the 'limit' value is specified.Default value is 0, start from begin.</p></td>
+  <td><p>offset: A value to define the position.</p></td>
     </tr>
     <tr>
-        <td><p>withLimit(Long limit)</p></td>
-        <td><p>Specify a value to control the returned number of entities. Must be a positive value.Default value is 0, will return without limit.</p></td>
-        <td><p>limit: A value to define the limit of returned entities.</p></td>
+  <td><p>withLimit(Long limit)</p></td>
+  <td><p>Specify a value to control the returned number of entities. Must be a positive value.Default value is 0, will return without limit.</p></td>
+  <td><p>limit: A value to define the limit of returned entities.</p></td>
     </tr>
     <tr>
-        <td><p>withConsistencyLevel(ConsistencyLevelEnum consistencyLevel)</p></td>
-        <td><p>Consistency level used in the query. If no level is specified, will use default consistency. Please refer to ConsistencyLevelEnum in Misc.</p></td>
-        <td><p>consistencyLevel: The consistency level used in the query.</p></td>
+  <td><p>withConsistencyLevel(ConsistencyLevelEnum consistencyLevel)</p></td>
+  <td><p>Consistency level used in the query. If no level is specified, will use default consistency. Please refer to ConsistencyLevelEnum in Misc.</p></td>
+  <td><p>consistencyLevel: The consistency level used in the query.</p></td>
     </tr>
     <tr>
-        <td><p>build()</p></td>
-        <td><p>Construct a QuerySimpleParam object.</p></td>
-        <td><p>N/A</p></td>
+  <td><p>build()</p></td>
+  <td><p>Construct a QuerySimpleParam object.</p></td>
+  <td><p>N/A</p></td>
     </tr>
 </table>
 

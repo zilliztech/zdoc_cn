@@ -33,19 +33,24 @@ Methods of `DescribeCollectionParam.Builder`:
 
 <table>
     <tr>
-        <th><p>Method</p></th>
-        <th><p>Description</p></th>
-        <th><p>Parameters</p></th>
+  <th><p>Method</p></th>
+  <th><p>Description</p></th>
+  <th><p>Parameters</p></th>
     </tr>
     <tr>
-        <td><p>withCollectionName(String collectionName)</p></td>
-        <td><p>Sets the collection name. Collection name cannot be empty or null.</p></td>
-        <td><p>collectionName: The name of the collection to release.</p></td>
+  <td><p>withCollectionName(String collectionName)</p></td>
+  <td><p>Sets the collection name. Collection name cannot be empty or null.</p></td>
+  <td><p>collectionName: The name of the collection to release.</p></td>
     </tr>
     <tr>
-        <td><p>build()</p></td>
-        <td><p>Constructs a ReleaseCollectionParam object.</p></td>
-        <td><p>N/A</p></td>
+  <td><p>withDatabaseName(String databaseName)</p></td>
+  <td><p>Sets the database name. database name can be null for default database.</p></td>
+  <td><p>databaseName: The database name.</p></td>
+    </tr>
+    <tr>
+  <td><p>build()</p></td>
+  <td><p>Constructs a ReleaseCollectionParam object.</p></td>
+  <td><p>N/A</p></td>
     </tr>
 </table>
 
@@ -76,70 +81,70 @@ Methods of `DescCollResponseWrapper`:
 
 <table>
    <tr>
-     <th><p><strong>Method</strong></p></th>
-     <th><p><strong>Description</strong></p></th>
-     <th><p><strong>Parameters</strong></p></th>
-     <th><p><strong>Returns</strong></p></th>
+  <th><p><strong>Method</strong></p></th>
+  <th><p><strong>Description</strong></p></th>
+  <th><p><strong>Parameters</strong></p></th>
+  <th><p><strong>Returns</strong></p></th>
    </tr>
    <tr>
-     <td><p>getCollectionName()</p></td>
-     <td><p>Get the name of the collection.</p></td>
-     <td><p>N/A</p></td>
-     <td><p>String</p></td>
+  <td><p>getCollectionName()</p></td>
+  <td><p>Get the name of the collection.</p></td>
+  <td><p>N/A</p></td>
+  <td><p>String</p></td>
    </tr>
    <tr>
-     <td><p>getCollectionDescription()</p></td>
-     <td><p>Get the description of the collection.</p></td>
-     <td><p>N/A</p></td>
-     <td><p>String</p></td>
+  <td><p>getCollectionDescription()</p></td>
+  <td><p>Get the description of the collection.</p></td>
+  <td><p>N/A</p></td>
+  <td><p>String</p></td>
    </tr>
    <tr>
-     <td><p>getCollectionID()</p></td>
-     <td><p>Get the internal ID of the collection.</p></td>
-     <td><p>N/A</p></td>
-     <td><p>long</p></td>
+  <td><p>getCollectionID()</p></td>
+  <td><p>Get the internal ID of the collection.</p></td>
+  <td><p>N/A</p></td>
+  <td><p>long</p></td>
    </tr>
    <tr>
-     <td><p>getShardNumber()</p></td>
-     <td><p>Get the shard number of the collection.</p></td>
-     <td><p>N/A</p></td>
-     <td><p>int</p></td>
+  <td><p>getShardNumber()</p></td>
+  <td><p>Get the shard number of the collection.</p></td>
+  <td><p>N/A</p></td>
+  <td><p>int</p></td>
    </tr>
    <tr>
-     <td><p>getCreatedUtcTimestamp()</p></td>
-     <td><p>Get UTC timestamp when the collection is created.</p></td>
-     <td><p>N/A</p></td>
-     <td><p>long</p></td>
+  <td><p>getCreatedUtcTimestamp()</p></td>
+  <td><p>Get UTC timestamp when the collection is created.</p></td>
+  <td><p>N/A</p></td>
+  <td><p>long</p></td>
    </tr>
    <tr>
-     <td><p>getAliases()</p></td>
-     <td><p>Get aliases of the collection.</p></td>
-     <td><p>N/A</p></td>
-     <td><p>List\<String></p></td>
+  <td><p>getAliases()</p></td>
+  <td><p>Get aliases of the collection.</p></td>
+  <td><p>N/A</p></td>
+  <td><p>List\<String></p></td>
    </tr>
    <tr>
-     <td><p>getFields()</p></td>
-     <td><p>Get the schema of the collection's fields.</p></td>
-     <td><p>N/A</p></td>
-     <td><p>List\<FieldType></p></td>
+  <td><p>getFields()</p></td>
+  <td><p>Get the schema of the collection's fields.</p></td>
+  <td><p>N/A</p></td>
+  <td><p>List\<FieldType></p></td>
    </tr>
    <tr>
-     <td><p>getFieldByName(String fieldName)</p></td>
-     <td><p>Get the schema of a field by name.Return null if the field doesn't exist.</p></td>
-     <td><p>fieldName: The name of a field</p></td>
-     <td><p>FieldType</p></td>
+  <td><p>getFieldByName(String fieldName)</p></td>
+  <td><p>Get the schema of a field by name.Return null if the field doesn't exist.</p></td>
+  <td><p>fieldName: The name of a field</p></td>
+  <td><p>FieldType</p></td>
    </tr>
    <tr>
-     <td><p>isDynamicFieldEnabled()</p></td>
-     <td><p>Get whether the collection dynamic field is enabled</p></td>
-     <td><p>N/A</p></td>
-     <td><p>boolean</p></td>
+  <td><p>isDynamicFieldEnabled()</p></td>
+  <td><p>Get whether the collection dynamic field is enabled</p></td>
+  <td><p>N/A</p></td>
+  <td><p>boolean</p></td>
    </tr>
    <tr>
-     <td><p>getPartitionKeyField()</p></td>
-     <td><p>Get the partition key field.Return null if the partition key field doesn't exist.</p></td>
-     <td><p>N/A</p></td>
-     <td><p>FieldType</p></td>
+  <td><p>getPartitionKeyField()</p></td>
+  <td><p>Get the partition key field.Return null if the partition key field doesn't exist.</p></td>
+  <td><p>N/A</p></td>
+  <td><p>FieldType</p></td>
    </tr>
 </table>
 

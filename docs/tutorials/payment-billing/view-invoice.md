@@ -4,7 +4,14 @@ beta: FALSE
 notebook: FALSE
 type: origin
 token: NhbHwPiL2i4KWskrcO4cDrSNnzh
-sidebar_position: 4
+sidebar_position: 5
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 账单
+  - 支付方式
 
 ---
 
@@ -37,24 +44,24 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><p><strong>状态</strong></p></th>
-     <th><p><strong>含义</strong></p></th>
+  <th><p><strong>状态</strong></p></th>
+  <th><p><strong>含义</strong></p></th>
    </tr>
    <tr>
-     <td><p><strong>未出账</strong></p></td>
-     <td><p>未结算，累账中</p></td>
+  <td><p><strong>未出账</strong></p></td>
+  <td><p>未结算，累账中</p></td>
    </tr>
    <tr>
-     <td><p><strong>已结清</strong></p></td>
-     <td><p>已支付，不欠费</p></td>
+  <td><p><strong>已结清</strong></p></td>
+  <td><p>已支付，不欠费</p></td>
    </tr>
    <tr>
-     <td><p><strong>已逾期</strong></p></td>
-     <td><p>已出账，存在欠费</p></td>
+  <td><p><strong>已逾期</strong></p></td>
+  <td><p>已出账，存在欠费</p></td>
    </tr>
    <tr>
-     <td><p><strong>免费</strong></p></td>
-     <td><p>全部账单金额都使用免费额度抵扣，无需其他支付方式扣款</p></td>
+  <td><p><strong>免费</strong></p></td>
+  <td><p>全部账单金额都使用免费额度抵扣，无需其他支付方式扣款</p></td>
    </tr>
 </table>
 

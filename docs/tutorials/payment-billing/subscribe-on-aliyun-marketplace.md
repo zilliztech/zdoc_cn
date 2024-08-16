@@ -5,6 +5,13 @@ notebook: FALSE
 type: origin
 token: UTRZwxLf3ikwvbkXrKjcWAwOnmg
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 阿里云
+  - 云市场
 
 ---
 
@@ -17,7 +24,7 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>通过阿里云云市场订阅后，您可以<a href="./create-cluster">创建</a><strong>阿里云</strong>和<strong>腾讯云</strong>实例。阿里云云市场仅为支付和订阅方式，不影响集群创建时的云服务提供商。</p>
+<p>通过阿里云云市场订阅后，您可以<a href="./create-cluster">创建</a><strong>阿里云、腾讯云和亚马逊云科技</strong>实例。阿里云云市场仅为支付和订阅方式，不影响集群创建时的云服务提供商。</p>
 
 </Admonition>
 
@@ -107,15 +114,31 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 
 ## 常见问题{#troubleshooting}
 
-**在绑定阿里云云市场订阅和 Zilliz Cloud 组织时，显示无可绑定的组织该怎么办？**
+**在绑定云市场订阅和 Zilliz Cloud 组织过程中遇到问题该怎么办？**
 
-导致无可绑定的组织的因素有以下几种：
+在绑定过程中，您可能会遇到如下问题：
 
-1. 组织名称旁出现“无权限”的标签：无组织的绑定权限，请联系组织管理员。
+1. **权限不足** (界面提示：权限不足)
 
-1. 组织名称旁出现“已绑定”标签：组织已绑定阿里云云市场订阅，请先为组织[取消原有的阿里云云市场订阅](./subscribe-on-aliyun-marketplace#unsubscribe-alibaba-marketplace)再重新绑定新的订阅。
+    您的角色必须为组织管理员才可将云市场订阅绑定至 Zilliz Cloud 组织。如果您是组织成员，您不具备操作权限，请联系组织管理员。
 
-1. 组织列表中无组织：请[提交工单](https://support.zilliz.com.cn/)。
+1. **所有组织都已绑定云市场订阅**（界面提示：已绑定云市场订阅）
+
+    1. 如需更新组织已绑定的云市场订阅，请先[解绑](./subscribe-on-aliyun-marketplace#unsubscribe-alibaba-marketplace)订阅，再重新绑定新的云市场订阅。
+
+    1. 如果您需要多个组织，每个分别绑定不同的云市场订阅，您可以：
+
+        1. [注册](./register-with-zilliz-cloud)一个新的 Zilliz Cloud 账号并创建一个新组织。然后将您已有账号[邀请](./organization-users#invite-a-user-to-join-your-organization)进入新组织，并授予组织管理员的权限。这样一来，您将隶属于多个组织，并且可以为每个组织绑定不同的云市场订阅。
+
+        1. [提交工单](http://support.zilliz.com.cn)，联系我们为您创建新组织。当前，Zilliz Cloud 暂不支持手动创建新组织。
+
+1. **组织列表中无组织**
+
+    如果您曾关闭过账号或退出所有组织，您的组织列表中会没有组织。这种情况下，您可以：
+
+    1. 等待其他用户向您[发送组织邀请](./organization-users#invite-a-user-to-join-your-organization)，并将您设置为组织管理员。
+
+    1. [提交工单](http://support.zilliz.com.cn)，联系我们为您创建一个新组织。
 
 ## 后续操作{#next-steps}
 

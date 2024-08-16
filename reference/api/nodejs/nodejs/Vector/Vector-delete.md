@@ -26,7 +26,7 @@ delete(data): Promise<MutationResult>
 
 This method has the following alternatives.
 
-### With DeleteByIdsReq 
+### With DeleteByIdsReq
 
 ```javascript
 milvusClient.delete({

@@ -33,24 +33,34 @@ Methods of `RenameCollectionParam.Builder`:
 
 <table>
     <tr>
-        <th><p>Method</p></th>
-        <th><p>Description</p></th>
-        <th><p>Parameters</p></th>
+  <th><p>Method</p></th>
+  <th><p>Description</p></th>
+  <th><p>Parameters</p></th>
     </tr>
     <tr>
-        <td><p>withOldCollectionName(String oldCollectionName)</p></td>
-        <td><p>Sets the old collection name. Old collection name cannot be empty or null.</p></td>
-        <td><p>oldCollectionName: The old name of the collection to rename.</p></td>
+  <td><p>withOldCollectionName(String oldCollectionName)</p></td>
+  <td><p>Sets the old collection name. Old collection name cannot be empty or null.</p></td>
+  <td><p>oldCollectionName: The old name of the collection to rename.</p></td>
     </tr>
     <tr>
-        <td><p>withNewCollectionName(String newCollectionName)</p></td>
-        <td><p>Sets the new collection name. New collection name cannot be empty or null.</p></td>
-        <td><p>newCollectionName: The new name of the collection to rename.</p></td>
+  <td><p>withNewCollectionName(String newCollectionName)</p></td>
+  <td><p>Sets the new collection name. New collection name cannot be empty or null.</p></td>
+  <td><p>newCollectionName: The new name of the collection to rename.</p></td>
     </tr>
     <tr>
-        <td><p>build()</p></td>
-        <td><p>Constructs a RenameCollectionParam object.</p></td>
-        <td><p>N/A</p></td>
+  <td><p>withOldDatabaseName(String databaseName)</p></td>
+  <td><p>Sets the database name of the old collection. database name can be null for default database.</p></td>
+  <td><p>databaseName: The database name.</p></td>
+    </tr>
+    <tr>
+  <td><p>withNewDatabaseName(String databaseName)</p></td>
+  <td><p>Sets the database name of the new collection. database name can be null for default database.</p></td>
+  <td><p>databaseName: The database name.</p></td>
+    </tr>
+    <tr>
+  <td><p>build()</p></td>
+  <td><p>Constructs a RenameCollectionParam object.</p></td>
+  <td><p>N/A</p></td>
     </tr>
 </table>
 

@@ -4,7 +4,13 @@ beta: FALSE
 notebook: FALSE
 type: origin
 token: JTuUwoHUyiqJU6kuu30cN9ibnkh
-sidebar_position: 6
+sidebar_position: 7
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 发票
 
 ---
 
@@ -39,16 +45,16 @@ import Admonition from '@theme/Admonition';
 
         <table>
            <tr>
-             <th><p><strong>参数</strong></p></th>
-             <th><p><strong>描述</strong></p></th>
+          <th><p><strong>参数</strong></p></th>
+          <th><p><strong>描述</strong></p></th>
            </tr>
            <tr>
-             <td><p><strong>发票备注（可选）</strong></p></td>
-             <td><p>发票备注不得超过 50 个字符。</p></td>
+          <td><p><strong>发票备注（可选）</strong></p></td>
+          <td><p>发票备注不得超过 50 个字符。</p></td>
            </tr>
            <tr>
-             <td><p><strong>发票接收邮箱</strong></p></td>
-             <td><p>用于接收开票结果和发票的邮箱地址。最多可输入 3 个邮箱地址。</p></td>
+          <td><p><strong>发票接收邮箱</strong></p></td>
+          <td><p>用于接收开票结果和发票的邮箱地址。最多可输入 3 个邮箱地址。</p></td>
            </tr>
         </table>
 
@@ -56,24 +62,24 @@ import Admonition from '@theme/Admonition';
 
         <table>
            <tr>
-             <th><p><strong>参数</strong></p></th>
-             <th><p><strong>描述</strong></p></th>
+          <th><p><strong>参数</strong></p></th>
+          <th><p><strong>描述</strong></p></th>
            </tr>
            <tr>
-             <td><p><strong>开户银行</strong></p></td>
-             <td><p>你开立待登记银行帐户的银行名称</p></td>
+          <td><p><strong>开户银行</strong></p></td>
+          <td><p>你开立待登记银行帐户的银行名称</p></td>
            </tr>
            <tr>
-             <td><p><strong>银行帐户</strong></p></td>
-             <td><p>待登记的银行帐户号码</p></td>
+          <td><p><strong>银行帐户</strong></p></td>
+          <td><p>待登记的银行帐户号码</p></td>
            </tr>
            <tr>
-             <td><p><strong>发票备注（可选）</strong></p></td>
-             <td><p>发票备注不得超过 50 个字符。</p></td>
+          <td><p><strong>发票备注（可选）</strong></p></td>
+          <td><p>发票备注不得超过 50 个字符。</p></td>
            </tr>
            <tr>
-             <td><p><strong>发票接收邮箱</strong></p></td>
-             <td><p>用于接收开票结果和发票的邮箱地址。最多可输入 3 个邮箱地址。</p></td>
+          <td><p><strong>发票接收邮箱</strong></p></td>
+          <td><p>用于接收开票结果和发票的邮箱地址。最多可输入 3 个邮箱地址。</p></td>
            </tr>
         </table>
 

@@ -6,6 +6,13 @@ notebook: FALSE
 type: origin
 token: FoTwwqBYdi5fmlkUkMfcFF2gnNc
 sidebar_position: 3
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - collection
+  - sdk
 
 ---
 
@@ -585,7 +592,7 @@ const index_params = [{
     </TabItem>
     </Tabs>
 
-### 使用多向量字段 <sup>(Beta)</sup>{#with-multiple-vector-fields}
+### 使用多向量字段 (Beta){#with-multiple-vector-fields}
 
 创建包含多个向量字段的 colletion 的过程与[定制化创建](./manage-collections-sdks#customized-setup)相似。要创建包含多个向量字段（最多 4 个）的 collection，您需要定义 collection 中所有向量字段的配置。Collection 中的每个向量字段都有自己的名称和用于衡量数据相似度的度量类型。有关向量数据类型和度量的更多信息，请参见[相似性度量](./search-metrics-explained)和 [Schema](./schema-explained)。
 

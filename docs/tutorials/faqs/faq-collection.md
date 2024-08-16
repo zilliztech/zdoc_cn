@@ -34,19 +34,19 @@ sidebar_position: 3
 
 <table>
    <tr>
-     <th><p><strong>类型</strong></p></th>
-     <th><p><strong>最大数量</strong></p></th>
-     <th><p><strong>描述</strong></p></th>
+  <th><p><strong>类型</strong></p></th>
+  <th><p><strong>最大数量</strong></p></th>
+  <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群</p></td>
-     <td><p>每 CU：&lt;= 64</p><p>每集群：&lt;= 4096</p></td>
-     <td><p>在 Dedicated 版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</p></td>
+  <td><p>Dedicated 版集群</p></td>
+  <td><p>每 CU：&lt;= 64</p><p>每集群：&lt;= 4096</p></td>
+  <td><p>在 Dedicated 版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</p></td>
    </tr>
    <tr>
-     <td><p>Serverless 版集群</p></td>
-     <td><p>10</p></td>
-     <td><p>在 Serverless 版集群中，最多可创建 10 个 Collection。</p></td>
+  <td><p>Serverless 版集群</p></td>
+  <td><p>10</p></td>
+  <td><p>在 Serverless 版集群中，最多可创建 10 个 Collection。</p></td>
    </tr>
 </table>
 

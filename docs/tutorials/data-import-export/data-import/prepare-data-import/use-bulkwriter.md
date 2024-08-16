@@ -5,6 +5,12 @@ notebook: FALSE
 type: origin
 token: B9IdwtZhLi0tB8kb6czce8KXnvb
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - bulkwriter
 
 ---
 
@@ -563,20 +569,20 @@ System.out.println(batchFiles);
 
     <table>
        <tr>
-         <th><p><strong>文件类型</strong></p></th>
-         <th><p>合法的文件导入路径</p></th>
+      <th><p><strong>文件类型</strong></p></th>
+      <th><p>合法的文件导入路径</p></th>
        </tr>
        <tr>
-         <td><p><strong>JSON</strong></p></td>
-         <td><ul><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></p></li><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.json</code></p></li></ul></td>
+      <td><p><strong>JSON</strong></p></td>
+      <td><ul><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></p></li><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.json</code></p></li></ul></td>
        </tr>
        <tr>
-         <td><p><strong>Parquet</strong></p></td>
-         <td><ul><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></p></li><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.parquet</code></p></li></ul></td>
+      <td><p><strong>Parquet</strong></p></td>
+      <td><ul><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></p></li><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.parquet</code></p></li></ul></td>
        </tr>
        <tr>
-         <td><p><strong>NumPy</strong></p></td>
-         <td><ul><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></p></li><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/*.npy</code></p></li></ul></td>
+      <td><p><strong>NumPy</strong></p></td>
+      <td><ul><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></p></li><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/*.npy</code></p></li></ul></td>
        </tr>
     </table>
 

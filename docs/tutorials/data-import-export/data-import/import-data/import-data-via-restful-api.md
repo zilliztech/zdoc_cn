@@ -6,6 +6,13 @@ notebook: FALSE
 type: origin
 token: FzANwnN8siARelkAp4vcJVJNnnf
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 导入
+  - restful
 
 ---
 

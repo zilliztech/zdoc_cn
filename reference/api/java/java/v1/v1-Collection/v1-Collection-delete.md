@@ -33,29 +33,34 @@ Methods of `DeleteParam.Builder`:
 
 <table>
     <tr>
-        <th><p>Method</p></th>
-        <th><p>Description</p></th>
-        <th><p>Parameters</p></th>
+  <th><p>Method</p></th>
+  <th><p>Description</p></th>
+  <th><p>Parameters</p></th>
     </tr>
     <tr>
-        <td><p>withCollectionName(String collectionName)</p></td>
-        <td><p>Sets the collection name. Collection name cannot be empty or null.</p></td>
-        <td><p>collectionName: The name of the collection to delete the entity or entities from.</p></td>
+  <td><p>withCollectionName(String collectionName)</p></td>
+  <td><p>Sets the collection name. Collection name cannot be empty or null.</p></td>
+  <td><p>collectionName: The name of the collection to delete the entity or entities from.</p></td>
     </tr>
     <tr>
-        <td><p>withPartitionName(String partitionName)</p></td>
-        <td><p>Sets the target partition name (Optional).</p></td>
-        <td><p>partitionName: The name of the partition to delete the entity or entities from.</p></td>
+  <td><p>withDatabaseName(String databaseName)</p></td>
+  <td><p>Sets the database name. database name can be null for default database.</p></td>
+  <td><p>databaseName: The database name.</p></td>
     </tr>
     <tr>
-        <td><p>withExpr(String expr)</p></td>
-        <td><p>Sets the expression filtering to pick out the entities to be deleted.</p></td>
-        <td><p>expr: The expression used for filtering.</p></td>
+  <td><p>withPartitionName(String partitionName)</p></td>
+  <td><p>Sets the target partition name (Optional).</p></td>
+  <td><p>partitionName: The name of the partition to delete the entity or entities from.</p></td>
     </tr>
     <tr>
-        <td><p>build()</p></td>
-        <td><p>Constructs a DeleteParam object.</p></td>
-        <td><p>N/A</p></td>
+  <td><p>withExpr(String expr)</p></td>
+  <td><p>Sets the expression filtering to pick out the entities to be deleted.</p></td>
+  <td><p>expr: The expression used for filtering.</p></td>
+    </tr>
+    <tr>
+  <td><p>build()</p></td>
+  <td><p>Constructs a DeleteParam object.</p></td>
+  <td><p>N/A</p></td>
     </tr>
 </table>
 

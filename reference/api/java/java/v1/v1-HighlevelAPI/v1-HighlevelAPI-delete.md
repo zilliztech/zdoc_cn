@@ -33,34 +33,34 @@ Methods of `DeleteIdsParam.Builder`:
 
 <table>
     <tr>
-        <th><p>Method</p></th>
-        <th><p>Description</p></th>
-        <th><p>Parameters</p></th>
+  <th><p>Method</p></th>
+  <th><p>Description</p></th>
+  <th><p>Parameters</p></th>
     </tr>
     <tr>
-        <td><p>withCollectionName(String collectionName)</p></td>
-        <td><p>Sets the target collection name. Collection name cannot be empty or null.</p></td>
-        <td><p>collectionName: The name of the collection to insert data into.</p></td>
+  <td><p>withCollectionName(String collectionName)</p></td>
+  <td><p>Sets the target collection name. Collection name cannot be empty or null.</p></td>
+  <td><p>collectionName: The name of the collection to insert data into.</p></td>
     </tr>
     <tr>
-        <td><p>withPartitionName(tring partitionName)</p></td>
-        <td><p>Sets the partition name (Optional).</p></td>
-        <td><p>partitionName: The target partition name.</p></td>
+  <td><p>withPartitionName(tring partitionName)</p></td>
+  <td><p>Sets the partition name (Optional).</p></td>
+  <td><p>partitionName: The target partition name.</p></td>
     </tr>
     <tr>
-        <td><p>withPrimaryIds(List\<T> primaryIds)</p></td>
-        <td><p>Specifies primaryField ids. PrimaryIds cannot be empty or null.<br/>Note only support the value of primary key.</p></td>
-        <td><p>primaryIds: A list of primary field id.</p></td>
+  <td><p>withPrimaryIds(List\<T> primaryIds)</p></td>
+  <td><p>Specifies primaryField ids. PrimaryIds cannot be empty or null.<br/>Note only support the value of primary key.</p></td>
+  <td><p>primaryIds: A list of primary field id.</p></td>
     </tr>
     <tr>
-        <td><p>addPrimaryId(T primaryId)</p></td>
-        <td><p>Specifies primaryField id. PrimaryId cannot be empty or null.<br/>Note only support the value of primary key.</p></td>
-        <td><p>primaryId: The id of primary field key.</p></td>
+  <td><p>addPrimaryId(T primaryId)</p></td>
+  <td><p>Specifies primaryField id. PrimaryId cannot be empty or null.<br/>Note only support the value of primary key.</p></td>
+  <td><p>primaryId: The id of primary field key.</p></td>
     </tr>
     <tr>
-        <td><p>build()</p></td>
-        <td><p>Constructs an DeleteIdsParam object.</p></td>
-        <td><p>N/A</p></td>
+  <td><p>build()</p></td>
+  <td><p>Constructs an DeleteIdsParam object.</p></td>
+  <td><p>N/A</p></td>
     </tr>
 </table>
 

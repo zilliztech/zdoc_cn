@@ -25,34 +25,34 @@ Methods of MilvusClient for connection:
 
 <table>
    <tr>
-     <th><p><strong>Method</strong></p></th>
-     <th><p><strong>Description</strong></p></th>
-     <th><p><strong>Parameters</strong></p></th>
-     <th><p><strong>Returns</strong></p></th>
+  <th><p><strong>Method</strong></p></th>
+  <th><p><strong>Description</strong></p></th>
+  <th><p><strong>Parameters</strong></p></th>
+  <th><p><strong>Returns</strong></p></th>
    </tr>
    <tr>
-     <td><p>withTimeout(long timeout, TimeUnit timeoutUnit)</p></td>
-     <td><p>Timeout setting for RPC call.</p></td>
-     <td><p>timeout: The timeout period when invoking a method.</p><p>timeoutUnit: The unit for timeout.</p></td>
-     <td><p>MilvusClient</p></td>
+  <td><p>withTimeout(long timeout, TimeUnit timeoutUnit)</p></td>
+  <td><p>Timeout setting for RPC call.</p></td>
+  <td><p>timeout: The timeout period when invoking a method.</p><p>timeoutUnit: The unit for timeout.</p></td>
+  <td><p>MilvusClient</p></td>
    </tr>
    <tr>
-     <td><p>withRetry(RetryParam retryParam)</p></td>
-     <td><p>Sets the parameters for retry.</p></td>
-     <td><p>retryParam: Parameter for retry on failure.</p></td>
-     <td><p>MilvusClient</p></td>
+  <td><p>withRetry(RetryParam retryParam)</p></td>
+  <td><p>Sets the parameters for retry.</p></td>
+  <td><p>retryParam: Parameter for retry on failure.</p></td>
+  <td><p>MilvusClient</p></td>
    </tr>
    <tr>
-     <td><p>close(long maxWaitSeconds)</p></td>
-     <td><p>Disconnects from a Milvus server with a configurable timeout value. Call this method before the application terminates.This method throws an <code>InterruptedException</code> exception if it is interrupted.</p></td>
-     <td><p>maxWaitSeconds: The timeout period to wait for the RPC channel to close.</p></td>
-     <td><p>N/A</p></td>
+  <td><p>close(long maxWaitSeconds)</p></td>
+  <td><p>Disconnects from a Milvus server with a configurable timeout value. Call this method before the application terminates.This method throws an <code>InterruptedException</code> exception if it is interrupted.</p></td>
+  <td><p>maxWaitSeconds: The timeout period to wait for the RPC channel to close.</p></td>
+  <td><p>N/A</p></td>
    </tr>
    <tr>
-     <td><p>setLogLevel(LogLevel level)</p></td>
-     <td><p>Set log level in runtime.Note: this method cannot change the log level configured by log4j configurations. It only hides some logs inside the MilvusClient class.</p></td>
-     <td><p>level: A log level</p></td>
-     <td><p>N/A</p></td>
+  <td><p>setLogLevel(LogLevel level)</p></td>
+  <td><p>Set log level in runtime.Note: this method cannot change the log level configured by log4j configurations. It only hides some logs inside the MilvusClient class.</p></td>
+  <td><p>level: A log level</p></td>
+  <td><p>N/A</p></td>
    </tr>
 </table>
 
@@ -69,79 +69,104 @@ Methods of `ConnectParam.Builder`:
 
 <table>
     <tr>
-        <th><p>Method</p></th>
-        <th><p>Description</p></th>
-        <th><p>Patameters</p></th>
+  <th><p>Method</p></th>
+  <th><p>Description</p></th>
+  <th><p>Patameters</p></th>
     </tr>
     <tr>
-        <td><p>withHost(String host)</p></td>
-        <td><p>Sets the host name or address.</p></td>
-        <td><p>host: The name or address of the host.</p></td>
+  <td><p>withHost(String host)</p></td>
+  <td><p>Sets the host name or address.</p></td>
+  <td><p>host: The name or address of the host.</p></td>
     </tr>
     <tr>
-        <td><p>withPort(int port)</p></td>
-        <td><p>Sets the connection port. <br/>The value must be greater than zero and less than 65536.</p></td>
-        <td><p>port: The connection port.</p></td>
+  <td><p>withPort(int port)</p></td>
+  <td><p>Sets the connection port. <br/>The value must be greater than zero and less than 65536.</p></td>
+  <td><p>port: The connection port.</p></td>
     </tr>
     <tr>
-        <td><p>withConnectTimeout(long connectTimeout, TimeUnit timeUnit)</p></td>
-        <td><p>Sets the connection timeout value of client channel. The timeout value must be greater than zero. The default value is 10 seconds.</p></td>
-        <td><p>connectTimeout: The connection timeout period.<br/>timeUnit: The unit of timeout.</p></td>
+  <td><p>withUri(String uri)</p></td>
+  <td><p>Sets the uri of remote service.</p></td>
+  <td><p>uri: The uri of remote service.</p></td>
     </tr>
     <tr>
-        <td><p>withKeepAliveTime(long keepAliveTime, TimeUnit timeUnit)</p></td>
-        <td><p>Sets the keep-alive time value of the client channel. The time value must be greater than zero. The default value is 55 seconds.</p></td>
-        <td><p>keepAliveTime: The keep-alive time period.<br/>timeUnit: The unit of time.</p></td>
+  <td><p>withToken(String token)</p></td>
+  <td><p>Sets the token of remote service.</p></td>
+  <td><p>token: serving as the key for identification and authentication purposes.</p></td>
     </tr>
     <tr>
-        <td><p>withKeepAliveTimeout(long keepAliveTimeout, TimeUnit timeUnit)</p></td>
-        <td><p>Sets the keep-alive timeout value of client channel. The timeout value must be greater than zero. The default value is 20 seconds.</p></td>
-        <td><p>keepAliveTimeout: The keep-alive timeout value.<br/>timeUnit: The unit of timeout.</p></td>
+  <td><p>withDatabaseName(String databaseName)</p></td>
+  <td><p>Sets the database name. database name can be null for default database.</p></td>
+  <td><p>databaseName: The database name.</p></td>
     </tr>
     <tr>
-        <td><p>keepAliveWithoutCalls(boolean enable)</p></td>
-        <td><p>Enables the keep-alive function for the client channel. The default value is false.</p></td>
-        <td><p>enable: Boolean value to indicate if the keep-alive function is enabled. The keep-alive function is enabled if the value is set to true.</p></td>
+  <td><p>withConnectTimeout(long connectTimeout, TimeUnit timeUnit)</p></td>
+  <td><p>Sets the connection timeout value of client channel. The timeout value must be greater than zero. The default value is 10 seconds.</p></td>
+  <td><p>connectTimeout: The connection timeout period.<br/>timeUnit: The unit of timeout.</p></td>
     </tr>
     <tr>
-        <td><p>secure(boolean enable)<br/>withSecure(boolean enable)</p></td>
-        <td><p>Enables security for the client channel.</p></td>
-        <td><p>enable: Security is enabled if the value is set to true.</p></td>
+  <td><p>withKeepAliveTime(long keepAliveTime, TimeUnit timeUnit)</p></td>
+  <td><p>Sets the keep-alive time value of the client channel. The time value must be greater than zero. The default value is 55 seconds.</p></td>
+  <td><p>keepAliveTime: The keep-alive time period.<br/>timeUnit: The unit of time.</p></td>
     </tr>
     <tr>
-        <td><p>withIdleTimeout(long idleTimeout, TimeUnit timeUnit)</p></td>
-        <td><p>Sets the value of idle timeout of the client channel. The timeout value must be greater than zero. The default value is 24 hours.</p></td>
-        <td><p>idleTimeout: The idle timeout period of the client channel.<br/>timeUnit: The unit of timeout.</p></td>
+  <td><p>withKeepAliveTimeout(long keepAliveTimeout, TimeUnit timeUnit)</p></td>
+  <td><p>Sets the keep-alive timeout value of client channel. The timeout value must be greater than zero. The default value is 20 seconds.</p></td>
+  <td><p>keepAliveTimeout: The keep-alive timeout value.<br/>timeUnit: The unit of timeout.</p></td>
     </tr>
     <tr>
-        <td><p>withAuthorization(String username, String password)</p></td>
-        <td><p>Sets the username and password for this connection.</p></td>
-        <td><p>username: The username of the current user.<br/>password: The password corresponding to the username.</p></td>
+  <td><p>keepAliveWithoutCalls(boolean enable)</p></td>
+  <td><p>Enables the keep-alive function for the client channel. The default value is false.</p></td>
+  <td><p>enable: Boolean value to indicate if the keep-alive function is enabled. The keep-alive function is enabled if the value is set to true.</p></td>
     </tr>
     <tr>
-        <td><p>withClientKeyPath(String clientKeyPath)</p></td>
-        <td><p>Set the client.key path for tls two-way authentication, only takes effect when "secure" is True.</p></td>
-        <td><p>clientKeyPath: The local path of client.key</p></td>
+  <td><p>secure(boolean enable)<br/>withSecure(boolean enable)</p></td>
+  <td><p>Enables security for the client channel.</p></td>
+  <td><p>enable: Security is enabled if the value is set to true.</p></td>
     </tr>
     <tr>
-        <td><p>withClientPemPath(String clientPemPath)</p></td>
-        <td><p>Set the client.pem path for tls two-way authentication, only takes effect when "secure" is True.</p></td>
-        <td><p>clientPemPath: The local path of client.pem</p></td>
+  <td><p>withIdleTimeout(long idleTimeout, TimeUnit timeUnit)</p></td>
+  <td><p>Sets the value of idle timeout of the client channel. The timeout value must be greater than zero. The default value is 24 hours.</p></td>
+  <td><p>idleTimeout: The idle timeout period of the client channel.<br/>timeUnit: The unit of timeout.</p></td>
     </tr>
     <tr>
-        <td><p>withCaPemPath(String caPemPath)</p></td>
-        <td><p>Set the ca.pem path for tls two-way authentication, only takes effect when "secure" is True.</p></td>
-        <td><p>caPemPath: The local path of ca.pem</p></td>
+  <td><p>withRpcDeadline(long deadline, TimeUnit timeUnit)</p></td>
+  <td><p>Set a deadline for how long you are willing to wait for a reply from the server.<br/>With a deadline setting, the client will wait when encounter fast RPC fail caused by network fluctuations.<br/>The deadline value must be larger than or equal to zero. Default value is 0, deadline is disabled.</p></td>
+  <td><p>deadline: deadline value<br/>timeUnit: deadline unit</p></td>
     </tr>
     <tr>
-        <td><p>withServerPemPath(String serverPemPath)</p></td>
-        <td><p>Set the server.pem path for tls one-way authentication, only takes effect when "secure" is True.</p></td>
-        <td><p>serverPemPath: The local path of server.pem</p></td>
+  <td><p>withAuthorization(String username, String password)</p></td>
+  <td><p>Sets the username and password for this connection.</p></td>
+  <td><p>username: The username of the current user.<br/>password: The password corresponding to the username.</p></td>
     </tr>
     <tr>
-        <td><p>build()</p></td>
-        <td><p>Constructs a ConnectParam object.</p></td>
-        <td><p>N/A</p></td>
+  <td><p>withClientKeyPath(String clientKeyPath)</p></td>
+  <td><p>Set the client.key path for tls two-way authentication, only takes effect when "secure" is True.</p></td>
+  <td><p>clientKeyPath: The local path of client.key</p></td>
+    </tr>
+    <tr>
+  <td><p>withClientPemPath(String clientPemPath)</p></td>
+  <td><p>Set the client.pem path for tls two-way authentication, only takes effect when "secure" is True.</p></td>
+  <td><p>clientPemPath: The local path of client.pem</p></td>
+    </tr>
+    <tr>
+  <td><p>withCaPemPath(String caPemPath)</p></td>
+  <td><p>Set the ca.pem path for tls two-way authentication, only takes effect when "secure" is True.</p></td>
+  <td><p>caPemPath: The local path of ca.pem</p></td>
+    </tr>
+    <tr>
+  <td><p>withServerPemPath(String serverPemPath)</p></td>
+  <td><p>Set the server.pem path for tls one-way authentication, only takes effect when "secure" is True.</p></td>
+  <td><p>serverPemPath: The local path of server.pem</p></td>
+    </tr>
+    <tr>
+  <td><p>withServerName(String serverName)</p></td>
+  <td><p>Set target name override for SSL host name checking, only takes effect when "secure" is True.<br/>Note: this value is passed to grpc.ssl<em>target</em>name_override</p></td>
+  <td><p>serverName: The override name for SSL host.</p></td>
+    </tr>
+    <tr>
+  <td><p>build()</p></td>
+  <td><p>Constructs a ConnectParam object.</p></td>
+  <td><p>N/A</p></td>
     </tr>
 </table>
 
@@ -162,39 +187,39 @@ Methods of `RetryParam.Builder`:
 
 <table>
     <tr>
-        <th><p>Method</p></th>
-        <th><p>Description</p></th>
-        <th><p>Patameters</p></th>
+  <th><p>Method</p></th>
+  <th><p>Description</p></th>
+  <th><p>Patameters</p></th>
     </tr>
     <tr>
-        <td><p>withMaxRetryTimes(int maxRetryTimes)</p></td>
-        <td><p>Sets the max retry times on failure.Default value is 75.</p></td>
-        <td><p>maxRetryTimes: The maxinum times to retry.</p></td>
+  <td><p>withMaxRetryTimes(int maxRetryTimes)</p></td>
+  <td><p>Sets the max retry times on failure.Default value is 75.</p></td>
+  <td><p>maxRetryTimes: The maxinum times to retry.</p></td>
     </tr>
     <tr>
-        <td><p>withInitialBackOffMs(long initialBackOffMs)</p></td>
-        <td><p>Sets the first time interval between two retries, units: millisecond. Default value is 10ms.</p></td>
-        <td><p>initialBackOffMs: Retry initial interval value in milliseconds.</p></td>
+  <td><p>withInitialBackOffMs(long initialBackOffMs)</p></td>
+  <td><p>Sets the first time interval between two retries, units: millisecond. Default value is 10ms.</p></td>
+  <td><p>initialBackOffMs: Retry initial interval value in milliseconds.</p></td>
     </tr>
     <tr>
-        <td><p>withMaxBackOffMs(long maxBackOffMs)</p></td>
-        <td><p>Sets the maximum time interval between two retries, units: millisecond. Default value is 3000ms.</p></td>
-        <td><p>maxBackOffMs: Retry maximum interval value in milliseconds.</p></td>
+  <td><p>withMaxBackOffMs(long maxBackOffMs)</p></td>
+  <td><p>Sets the maximum time interval between two retries, units: millisecond. Default value is 3000ms.</p></td>
+  <td><p>maxBackOffMs: Retry maximum interval value in milliseconds.</p></td>
     </tr>
     <tr>
-        <td><p>withBackOffMultiplier(int backOffMultiplier)</p></td>
-        <td><p>Sets multiplier to increase time interval after each retry. Default value is 3.</p></td>
-        <td><p>backOffMultiplier: The multiplier to increase time interval after each retry.</p></td>
+  <td><p>withBackOffMultiplier(int backOffMultiplier)</p></td>
+  <td><p>Sets multiplier to increase time interval after each retry. Default value is 3.</p></td>
+  <td><p>backOffMultiplier: The multiplier to increase time interval after each retry.</p></td>
     </tr>
     <tr>
-        <td><p>withRetryOnRateLimie(boolean retryOnRateLimie)</p></td>
-        <td><p>Sets whether to retry when the returned error is rate limit. Default value is true.</p></td>
-        <td><p>retryOnRateLimit: Whether to retry when the returned error is rate limit.</p></td>
+  <td><p>withRetryOnRateLimie(boolean retryOnRateLimie)</p></td>
+  <td><p>Sets whether to retry when the returned error is rate limit. Default value is true.</p></td>
+  <td><p>retryOnRateLimit: Whether to retry when the returned error is rate limit.</p></td>
     </tr>
     <tr>
-        <td><p>build()</p></td>
-        <td><p>Constructs a RetryParam object.</p></td>
-        <td><p>N/A</p></td>
+  <td><p>build()</p></td>
+  <td><p>Constructs a RetryParam object.</p></td>
+  <td><p>N/A</p></td>
     </tr>
 </table>
 
@@ -244,5 +269,173 @@ ShowCollectionsParam param = ShowCollectionsParam.newBuilder().build()
 R<ShowCollectionsResponse> response = client.withTimeout(2, TimeUnit.SECONDS).showCollections(param);
 
 client.close(1);
+```
+
+## MilvusClientV1Pool
+
+A MilvusClientV1Pool instance is a connection pool for MilvusClient objects. The number of MilvusClient objects automatically increases or decreases to avoid frequent opening and closing connections, improving your application's performance.
+
+Methods of MilvusClient for connection:
+
+<table>
+   <tr>
+  <th><p><strong>Method</strong></p></th>
+  <th><p><strong>Description</strong></p></th>
+  <th><p><strong>Parameters</strong></p></th>
+  <th><p><strong>Returns</strong></p></th>
+   </tr>
+   <tr>
+  <td><p>getClient(String key)</p></td>
+  <td><p>Get a client object that is idle from the pool.Once the caller holds the client, it will be marked as an active state and cannot be fetched by other callers.If the number of clients hits the MaxTotalPerKey value, this method will be blocked for MaxBlockWaitDuration.If no idle client is available after MaxBlockWaitDuration, this method will return a null object to the caller.</p></td>
+  <td><p>key: the key of a group where the client belongs</p></td>
+  <td><p>MilvusClient</p></td>
+   </tr>
+   <tr>
+  <td><p>returnClient(String key, MilvusClient grpcClient)</p></td>
+  <td><p>Return a client object. Once a client is returned, it becomes idle state and waits for the next caller.The caller should ensure the client is returned. Otherwise, the client will keep in active state and cannot be used by the next caller.Throw exceptions if the key doesn't exist or the client does not belong to this key group.</p></td>
+  <td><p>key: the key of a group where the client belongsgrpcClient: the client object to return</p></td>
+  <td><p>void</p></td>
+   </tr>
+   <tr>
+  <td><p>getIdleClientNumber(String key)</p></td>
+  <td><p>Return the number of idle clients of a key group.</p></td>
+  <td><p>key: the key of a group</p></td>
+  <td><p>int</p></td>
+   </tr>
+   <tr>
+  <td><p>getActiveClientNumber(String key)</p></td>
+  <td><p>Return the number of active clients of a key group.</p></td>
+  <td><p>key: the key of a group</p></td>
+  <td><p>int</p></td>
+   </tr>
+   <tr>
+  <td><p>getTotalIdleClientNumber()</p></td>
+  <td><p>Return the number of idle clients of all key groups.</p></td>
+  <td></td>
+  <td><p>int</p></td>
+   </tr>
+   <tr>
+  <td><p>getTotalActiveClientNumber()</p></td>
+  <td><p>Return the number of active clients of all key groups</p></td>
+  <td></td>
+  <td><p>int</p></td>
+   </tr>
+   <tr>
+  <td><p>clear(String key)</p></td>
+  <td><p>Release/disconnect idle clients of a key group.</p></td>
+  <td><p>key: the key of a group</p></td>
+  <td><p>void</p></td>
+   </tr>
+   <tr>
+  <td><p>clear()</p></td>
+  <td><p>Release/disconnect idle clients of all key groups.</p></td>
+  <td></td>
+  <td><p>void</p></td>
+   </tr>
+   <tr>
+  <td><p>close()</p></td>
+  <td><p>Release/disconnect all clients of all key groups, and close the pool.</p></td>
+  <td></td>
+  <td><p>void</p></td>
+   </tr>
+</table>
+
+#### PoolConfig
+
+Use the PoolConfig.PoolConfigBuilder to construct a PoolConfig.
+
+```java
+import io.milvus.pool.PoolConfig;
+PoolConfig.PoolConfigBuilder builder = PoolConfig.builder();
+```
+
+Methods of PoolConfig.PoolConfigBuilder:
+
+<table>
+    <tr>
+  <th><p>Method</p></th>
+  <th><p>Description</p></th>
+  <th><p>Patameters</p></th>
+    </tr>
+    <tr>
+  <td><p>maxIdlePerKey(int maxIdlePerKey)</p></td>
+  <td><p>The maximum number of idle clients for each key. If the number of idle clients exceeds this number, some clients will be automatically closed. The default value is 5.</p></td>
+  <td><p>maxIdlePerKey: The maximum number of idle clients .</p></td>
+    </tr>
+    <tr>
+  <td><p>minIdlePerKey(int minIdlePerKey)</p></td>
+  <td><p>The minimize number of idle clients for each key. The default value is 0.</p></td>
+  <td><p>minIdlePerKey: The minimize number of idle clients.</p></td>
+    </tr>
+    <tr>
+  <td><p>maxTotalPerKey(int maxTotalPerKey)</p></td>
+  <td><p>The maximum number of clients for each key, including idle clients and active clients. The default value is 10.</p></td>
+  <td><p>maxTotalPerKey: The maximum number of clients</p></td>
+    </tr>
+    <tr>
+  <td><p>maxTotal(int maxTotal)</p></td>
+  <td><p>The maximum number of clients in total, including idle clients and active clients. The default value is 50.</p></td>
+  <td><p>maxTotal: The maximum number of clients.</p></td>
+    </tr>
+    <tr>
+  <td><p>blockWhenExhausted(boolean blockWhenExhausted)</p></td>
+  <td><p>Block the getClient() method for a duration when the maximum number of clients is hit and all the clients are active. If this flag is false, the getClient() will instantly throw an exception if the maximum number of clients is hit and all the clients are active. The default value is true.</p></td>
+  <td><p>blockWhenExhausted: Set to true for blocking getClient() when the pool is full.</p></td>
+    </tr>
+    <tr>
+  <td><p>maxBlockWaitDuration(Duration maxBlockWaitDuration)</p></td>
+  <td><p>Max block duration when the maximum number of clients is hit and all the clients are active. The default value is 3 seconds.</p></td>
+  <td><p>maxBlockWaitDuration: Duration of blocking getClient().</p></td>
+    </tr>
+    <tr>
+  <td><p>evictionPollingInterval(Duration evictionPollingInterval)</p></td>
+  <td><p>Trigger an eviction action to evict expired idle clients for each duration. The default value is 60 seconds.</p></td>
+  <td><p>evictionPollingInterval: Interval to trigger eviction action.</p></td>
+    </tr>
+    <tr>
+  <td><p>minEvictableIdleDuration(Duration minEvictableIdleDuration)</p></td>
+  <td><p>An idle client expires after this duration and can be evicted.</p></td>
+  <td><p>minEvictableIdleDuration: Duration to evict idle client.</p></td>
+    </tr>
+    <tr>
+  <td><p>testOnBorrow(boolean testOnBorrow)</p></td>
+  <td><p>If this flag is set to true, the pool will check if the grpc connection of a client is terminated or closed each time the getClient() is called.</p></td>
+  <td><p>testOnBorrow: Set to true to check connection when getClient() is called.</p></td>
+    </tr>
+    <tr>
+  <td><p>testOnReturn(boolean testOnReturn)</p></td>
+  <td><p>If this flag is set to true, the pool will check if the grpc connection of a client is terminated or closed each time the returnClient() is called.</p></td>
+  <td><p>testOnReturn: Set to true to check connection when returnClient() is called.</p></td>
+    </tr>
+</table>
+
+#### Example
+
+```java
+import io.milvus.param.ConnectParam
+import io.milvus.pool.PoolConfig
+import io.milvus.pool.MilvusClientV1Pool
+import io.milvus.client.MilvusClient
+
+ConnectParam connectConfig = ConnectParam.newBuilder()
+        .withHost("localhost")
+        .withPort(19530)
+        .build();
+PoolConfig poolConfig = PoolConfig.builder()
+        .maxIdlePerKey(10) // max idle clients per key
+        .maxTotalPerKey(20) // max total(idle + active) clients per key
+        .maxTotal(100) // max total clients for all keys
+        .maxBlockWaitDuration(Duration.ofSeconds(5L)) // getClient() will wait 5 seconds if no idle client available
+        .minEvictableIdleDuration(Duration.ofSeconds(10L)) // if number of idle clients is larger than maxIdlePerKey, redundant idle clients will be evicted after 10 seconds
+        .build();
+MilvusClientV1Pool pool;
+
+MilvusClient client = pool.getClient("client_name");
+try {
+    // use the client to do something
+} catch (Exception e) {
+} finally {
+    pool.returnClient("client_name", client); // make sure the client is returned after use
+}
 ```
 

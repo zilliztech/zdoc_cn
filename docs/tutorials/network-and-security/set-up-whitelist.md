@@ -5,6 +5,12 @@ notebook: FALSE
 type: origin
 token: RwEzw2l4siJB5Ake7FOcVU4knre
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 白名单
 
 ---
 
@@ -41,16 +47,16 @@ import Admonition from '@theme/Admonition';
 
     <table>
        <tr>
-         <th><p><strong>字段</strong></p></th>
-         <th><p><strong>描述</strong></p></th>
+      <th><p><strong>字段</strong></p></th>
+      <th><p><strong>描述</strong></p></th>
        </tr>
        <tr>
-         <td><p>IP地址（CIDR）</p></td>
-         <td><p>您要添加到白名单中的 IP 地址或无类别域间路由（CIDR）。您可最多添加 20 个 CIDR。示例值：192.168.1.1/20。</p></td>
+      <td><p>IP地址（CIDR）</p></td>
+      <td><p>您要添加到白名单中的 IP 地址或无类别域间路由（CIDR）。您可最多添加 20 个 CIDR。示例值：192.168.1.1/20。</p></td>
        </tr>
        <tr>
-         <td><p>描述</p></td>
-         <td><p>白名单 IP 地址或 CIDR 的描述。</p></td>
+      <td><p>描述</p></td>
+      <td><p>白名单 IP 地址或 CIDR 的描述。</p></td>
        </tr>
     </table>
 

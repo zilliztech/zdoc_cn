@@ -5,6 +5,12 @@ notebook: FALSE
 type: origin
 token: UGzNwB4TmiqTozkJvarceRdenif
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - api 密钥
 
 ---
 
@@ -43,82 +49,82 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th></th>
-     <th><p>组织管理员</p></th>
-     <th><p>项目管理员</p></th>
-     <th><p>项目成员</p></th>
+  <th></th>
+  <th><p>组织管理员</p></th>
+  <th><p>项目管理员</p></th>
+  <th><p>项目成员</p></th>
    </tr>
    <tr>
-     <td><p><strong>个人密钥</strong></p></td>
-     <td></td>
-     <td></td>
-     <td></td>
+  <td><p><strong>个人密钥</strong></p></td>
+  <td></td>
+  <td></td>
+  <td></td>
    </tr>
    <tr>
-     <td><p>创建</p></td>
-     <td><p>系统自动分配</p></td>
-     <td><p>系统自动分配</p></td>
-     <td><p>系统自动分配</p></td>
+  <td><p>创建</p></td>
+  <td><p>系统自动分配</p></td>
+  <td><p>系统自动分配</p></td>
+  <td><p>系统自动分配</p></td>
    </tr>
    <tr>
-     <td><p>查看自身的 API 密钥</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
+  <td><p>查看自身的 API 密钥</p></td>
+  <td><p>✔️</p></td>
+  <td><p>✔️</p></td>
+  <td><p>✔️</p></td>
    </tr>
    <tr>
-     <td><p>查看其他成员的 API 密钥名称 [1]</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✘</p></td>
+  <td><p>查看其他成员的 API 密钥名称 [1]</p></td>
+  <td><p>✔️</p></td>
+  <td><p>✔️</p></td>
+  <td><p>✘</p></td>
    </tr>
    <tr>
-     <td><p>重置 API 密钥 [2]</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
+  <td><p>重置 API 密钥 [2]</p></td>
+  <td><p>✔️</p></td>
+  <td><p>✔️</p></td>
+  <td><p>✔️</p></td>
    </tr>
    <tr>
-     <td><p><strong>自定义密钥</strong></p></td>
-     <td></td>
-     <td></td>
-     <td></td>
+  <td><p><strong>自定义密钥</strong></p></td>
+  <td></td>
+  <td></td>
+  <td></td>
    </tr>
    <tr>
-     <td><p>创建</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️ [3]</p></td>
-     <td><p>✘</p></td>
+  <td><p>创建</p></td>
+  <td><p>✔️</p></td>
+  <td><p>✔️ [3]</p></td>
+  <td><p>✘</p></td>
    </tr>
    <tr>
-     <td><p>查看</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️ [4]</p></td>
-     <td><p>✘</p></td>
+  <td><p>查看</p></td>
+  <td><p>✔️</p></td>
+  <td><p>✔️ [4]</p></td>
+  <td><p>✘</p></td>
    </tr>
    <tr>
-     <td><p>移除 API 密钥权限</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️ [4]</p></td>
-     <td><p>✘</p></td>
+  <td><p>移除 API 密钥权限</p></td>
+  <td><p>✔️</p></td>
+  <td><p>✔️ [4]</p></td>
+  <td><p>✘</p></td>
    </tr>
    <tr>
-     <td><p>编辑 API 密钥名称</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✘</p></td>
-     <td><p>✘</p></td>
+  <td><p>编辑 API 密钥名称</p></td>
+  <td><p>✔️</p></td>
+  <td><p>✘</p></td>
+  <td><p>✘</p></td>
    </tr>
    <tr>
-     <td><p>重置 API 密钥</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✘</p></td>
-     <td><p>✘</p></td>
+  <td><p>重置 API 密钥</p></td>
+  <td><p>✔️</p></td>
+  <td><p>✘</p></td>
+  <td><p>✘</p></td>
    </tr>
    <tr>
-     <td><p>删除 API 密钥</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✘</p></td>
-     <td><p>✘</p></td>
+  <td><p>删除 API 密钥</p></td>
+  <td><p>✔️</p></td>
+  <td><p>✘</p></td>
+  <td><p>✘</p></td>
    </tr>
 </table>
 
