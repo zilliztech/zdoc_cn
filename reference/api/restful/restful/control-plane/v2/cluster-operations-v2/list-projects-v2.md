@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 List all projects scoped to API-Key.
 
-<RestHeader method="get" endpoint="https://api.cloud.zilliz.com/v2/projects" />
+<RestHeader method="get" endpoint="https://api.cloud.zilliz.com.cn/v2/projects" />
 
 ---
 

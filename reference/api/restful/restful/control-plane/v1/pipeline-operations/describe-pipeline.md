@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 通过 Pipeline ID 获取详情。
 
-<RestHeader method="get" endpoint="https://controller.${CLOUD_REGION}.vectordb.cloud.zilliz.com.cn:19530/v1/pipelines/{PIPELINE_ID}" />
+<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION}.zilliz.com.cn/v1/pipelines/{PIPELINE_ID}" />
 
 ---
 

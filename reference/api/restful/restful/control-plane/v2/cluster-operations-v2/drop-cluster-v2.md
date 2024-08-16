@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 Drop Cluster.
 
-<RestHeader method="delete" endpoint="https://api.cloud.zilliz.com/v2/clusters/{clusterId}/drop" />
+<RestHeader method="delete" endpoint="https://api.cloud.zilliz.com.cn/v2/clusters/{clusterId}/drop" />
 
 ---
 

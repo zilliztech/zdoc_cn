@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 Modiy a dedicated cluster. Currently support upgrading dedicated clusters CU size.
 
-<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/clusters/{clusterId}/modify" />
+<RestHeader method="post" endpoint="https://api.cloud.zilliz.com.cn/v2/clusters/{clusterId}/modify" />
 
 ---
 

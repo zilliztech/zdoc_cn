@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 Resume a dedicated cluster.
 
-<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/clusters/{clusterId}/resume" />
+<RestHeader method="post" endpoint="https://api.cloud.zilliz.com.cn/v2/clusters/{clusterId}/resume" />
 
 ---
 

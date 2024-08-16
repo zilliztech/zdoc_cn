@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 创建一个 Serverless 集群。
 
-<RestHeader method="post" endpoint="https://controller.${CLOUD_REGION}.vectordb.cloud.zilliz.com.cn:19530/v1/clusters/createServerless" />
+<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION}.zilliz.com.cn/v1/clusters/createServerless" />
 
 ---
 
@@ -27,7 +27,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ```shell
 curl --request POST \
-    --url "https://controller.api.${CLOUD_REGION}.zillizcloud.com/v1/clusters/createServerless" \
+    --url "https://controller.api.${CLOUD_REGION}.zilliz.com.cn/v1/clusters/createServerless" \
     --header "Authorization: Bearer ${API_KEY}" \
     --header "accept: application/json" \
     --header "content-type: application/json" \

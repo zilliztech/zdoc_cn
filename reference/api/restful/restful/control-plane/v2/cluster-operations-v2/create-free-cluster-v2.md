@@ -48,7 +48,7 @@ Possible response is similar to the following
 }
 ```
 
-<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/clusters/createFree" />
+<RestHeader method="post" endpoint="https://api.cloud.zilliz.com.cn/v2/clusters/createFree" />
 
 ---
 

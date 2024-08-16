@@ -21,7 +21,7 @@ You can use either of the following ways to authorize:
     
 </Admonition>
 
-<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/vectordb/jobs/import/getProgress" />
+<RestHeader method="post" endpoint="https://api.cloud.zilliz.com.cn/v2/vectordb/jobs/import/getProgress" />
 
 ---
 

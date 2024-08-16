@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 获取指定导入任务的进度。
 
-<RestHeader method="get" endpoint="https://controller.${CLOUD_REGION}.vectordb.cloud.zilliz.com.cn:19530/v1/vector/collections/import/get" />
+<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION}.zilliz.com.cn/v1/vector/collections/import/get" />
 
 ---
 
@@ -26,7 +26,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ```shell
 curl --request GET \
-     --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import/get?jobId=${JOBID}&clusterId=${CLUSTERID}" \
+     --url "https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/vector/collections/import/get?jobId=${JOBID}&clusterId=${CLUSTERID}" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "accept: application/json" \
      --header "content-type: application/json" \

@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 执行一个指定的 Pipeline。
 
-<RestHeader method="post" endpoint="https://controller.${CLOUD_REGION}.vectordb.cloud.zilliz.com.cn:19530/v1/pipeline/{PIPELINE_ID}/run" />
+<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION}.zilliz.com.cn/v1/pipeline/{PIPELINE_ID}/run" />
 
 ---
 

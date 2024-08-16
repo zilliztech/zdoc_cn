@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 删除一个指定的 Pipeline
 
-<RestHeader method="delete" endpoint="https://controller.${CLOUD_REGION}.vectordb.cloud.zilliz.com.cn:19530/v1/pipelines/{PIPELINE_ID}" />
+<RestHeader method="delete" endpoint="https://controller.api.${CLOUD_REGION}.zilliz.com.cn/v1/pipelines/{PIPELINE_ID}" />
 
 ---
 

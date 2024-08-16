@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 Suspend a dedicated cluster.
 
-<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/clusters/{clusterId}/suspend" />
+<RestHeader method="post" endpoint="https://api.cloud.zilliz.com.cn/v2/clusters/{clusterId}/suspend" />
 
 ---
 

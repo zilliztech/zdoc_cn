@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 列出指定项目中的所有 Pipeline。
 
-<RestHeader method="get" endpoint="https://controller.${CLOUD_REGION}.vectordb.cloud.zilliz.com.cn:19530/v1/pipelines" />
+<RestHeader method="get" endpoint="https://controller.api.${CLOUD_REGION}.zilliz.com.cn/v1/pipelines" />
 
 ---
 

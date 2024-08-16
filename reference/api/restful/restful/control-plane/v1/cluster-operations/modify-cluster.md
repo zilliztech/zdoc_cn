@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 修改指定集群的配置。当前，仅支持修改集群使用的 CU 大小。
 
-<RestHeader method="post" endpoint="https://controller.${CLOUD_REGION}.vectordb.cloud.zilliz.com.cn:19530/v1/clusters/{CLUSTER_ID}/modify" />
+<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION}.zilliz.com.cn/v1/clusters/{CLUSTER_ID}/modify" />
 
 ---
 
@@ -26,7 +26,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 ```shell
 curl --request POST \
-    --url "https://controller.api.${CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/clusters/${clusterId}/modify" \
+    --url "https://controller.api.${CLOUD_REGION}.cloud.zilliz.com.cn/v1/clusters/${clusterId}/modify" \
     --header "Authorization: Bearer ${API_KEY}" \
     --header "accept: application/json" \
     --header "content-type: application/json" \

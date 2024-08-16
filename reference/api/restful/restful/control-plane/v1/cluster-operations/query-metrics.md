@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 查看指标统计信息。
 
-<RestHeader method="post" endpoint="https://controller.${CLOUD_REGION}.vectordb.cloud.zilliz.com.cn:19530/v1/clusters/CLUSTER_ID/metrics/query" />
+<RestHeader method="post" endpoint="https://controller.api.${CLOUD_REGION}.zilliz.com.cn/v1/clusters/CLUSTER_ID/metrics/query" />
 
 ---
 
@@ -21,7 +21,7 @@ import RestHeader from '@site/src/components/RestHeader';
 export CLOUD_REGION="gcp-us-west1"
 export API_KEY=""
 
-curl --location --request POST "https://controller.api.${CLOUD_REGION}.zillizcloud.com/v1/clusters/inxx-xxxxxxxxxxxxxxx/metrics/query" \
+curl --location --request POST "https://controller.api.${CLOUD_REGION}.zilliz.com.cn/v1/clusters/inxx-xxxxxxxxxxxxxxx/metrics/query" \
 --header "Authorization: Bearer ${API_KEY}" \
 --data-raw '{
  "start": "",

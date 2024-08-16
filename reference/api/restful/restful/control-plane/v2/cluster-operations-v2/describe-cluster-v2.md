@@ -17,7 +17,7 @@ import Admonition from '@theme/Admonition';
     
 </Admonition>
 
-<RestHeader method="get" endpoint="https://api.cloud.zilliz.com/v2/clusters/{clusterId}" />
+<RestHeader method="get" endpoint="https://api.cloud.zilliz.com.cn/v2/clusters/{clusterId}" />
 
 ---
 
@@ -48,7 +48,7 @@ Possible response is similar to the following.
     "cuType": "Performance-optimized",
     "plan": "Standard",
     "status": "RUNNING",
-    "connectAddress": "https://inxx-xxxxxxxxxxxxxxx.ali-cn-hangzhou.vectordb.zillizcloud.com:19530",
+    "connectAddress": "https://inxx-xxxxxxxxxxxxxxx.ali-cn-hangzhou.vectordb.zilliz.com.cn:19530",
     "privateLinkAddress": "",
     "createTime": "2024-06-30T16:34:09Z",
     "cuSize": 2,

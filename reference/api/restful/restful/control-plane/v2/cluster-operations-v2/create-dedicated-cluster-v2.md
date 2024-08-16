@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 Create dedicated cluster.
 
-<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/clusters/createDedicated" />
+<RestHeader method="post" endpoint="https://api.cloud.zilliz.com.cn/v2/clusters/createDedicated" />
 
 ---
 

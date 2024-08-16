@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 Imports data from files stored in a specified object storage bucket. To learn how to prepare your data files, read [Prepare Data Import](/docs/prepare-source-data).
 
-<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/vectordb/jobs/import/create" />
+<RestHeader method="post" endpoint="https://api.cloud.zilliz.com.cn/v2/vectordb/jobs/import/create" />
 
 ---
 
@@ -35,7 +35,7 @@ curl --location --request POST "https://api.cloud.zilliz.com.cn/v2/vectordb/jobs
     "clusterId": "inxx-xxxxxxxxxxxxxxx",
     "collectionName": "medium_articles",
     "partitionName":"",
-    "objectUrl": "https://s3.us-west-2.amazonaws.com/publicdataset.zillizcloud.com/medium_articles_2020_dpr/medium_articles_2020_dpr.json",
+    "objectUrl": "https://s3.us-west-2.amazonaws.com/publicdataset.zilliz.com.cn/medium_articles_2020_dpr/medium_articles_2020_dpr.json",
     "accessKey": "",
     "secretKey": ""
 }'

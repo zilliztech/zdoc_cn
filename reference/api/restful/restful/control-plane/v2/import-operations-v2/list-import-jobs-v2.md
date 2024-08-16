@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 This operation lists all import jobs of a specific cluster.
 
-<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/vectordb/jobs/import/list" />
+<RestHeader method="post" endpoint="https://api.cloud.zilliz.com.cn/v2/vectordb/jobs/import/list" />
 
 ---
 

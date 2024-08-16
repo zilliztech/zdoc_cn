@@ -9,7 +9,7 @@ import RestHeader from '@site/src/components/RestHeader';
 
 Query the metrics of a specific cluster.
 
-<RestHeader method="post" endpoint="https://api.cloud.zilliz.com/v2/clusters/{clusterId}/metrics/query" />
+<RestHeader method="post" endpoint="https://api.cloud.zilliz.com.cn/v2/clusters/{clusterId}/metrics/query" />
 
 ---
 
