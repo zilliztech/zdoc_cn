@@ -163,6 +163,24 @@ const config = {
             imageDir: 'static/img',
           }
         }
+      },
+      go: {
+        root: 'V0SCw3U3siZBynkKhUCcRRAin69',
+        base: 'WA8rbgtu8aq3wtsBm02cepOznPJ',
+        sourceType: 'wiki',
+        version: 'v2.4.x',
+        displayedSidebar: 'goSidebar',
+        docSourceDir: './plugins/lark-docs/meta/sources/go/v2.4.x',
+        targets: {
+          milvus: {
+            outputDir: 'milvus/reference/go/docs/v1',
+            imageDir: 'milvus/reference/go/images'
+          },
+          zilliz: {
+            outputDir: 'reference/api/go/go/v1',
+            imageDir: 'static/img',
+          }
+        }
       }
     }],
     './plugins/apifox-docs',

@@ -1,5 +1,6 @@
 const larkTokenFetcher = require('./larkTokenFetcher.js')
 const Downloader = require('./larkImageDownloader.js')
+const slugify = require('slugify')
 const fs = require('node:fs')
 const { URL } = require('node:url')
 const fetch = require('node-fetch')
@@ -1223,7 +1224,7 @@ class larkDocWriter {
                             var content = await this.__text_elements(headerBlock[blockType]['elements']);
                             content = this.__filter_content(content, this.targets)
                             content = this.__clean_headings(content)
-                            const slug = content.split('{#')[1].replace(/}$/, '')
+                            const slug = content.includes('{#') ? content.split('{#')[1].replace(/}$/, '') : slugify(content, {strict: true, lower: true});
                             newUrl += `#${slug}`;
                         }
                     }
