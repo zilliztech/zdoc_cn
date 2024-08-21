@@ -187,35 +187,42 @@ const config = {
         logo: {
           alt: 'Zilliz Logo',
           src: 'img/logo.svg',
-          href: '/docs/quick-start'
+          href: 'https://zilliz.com.cn/'
         },
         items: [
           {
-            type: 'search',
+            href: '/search',
             position: 'right',
+            className: 'header-search-link',
           },
-          // {
-          //   type: 'docSidebar',
-          //   sidebarId: 'tutorialSidebar',
-          //   position: 'left',
-          //   label: '文档',
-          // },
-          // {to: '/api', label: 'API 参考', position: 'left'},
+          {
+            href: 'https://support.zilliz.com/hc/zh-cn/',
+            icon: '/img/icons/support.svg',
+            label: '技术支持',
+            position: 'right',
+            className: 'header-link',
+          },
+          {
+            href: 'https://cloud.zilliz.com.cn/login',
+            label: '登录',
+            position: 'right',
+            className: 'header-link',
+          },
+          {
+            href: 'https://cloud.zilliz.com.cn/signup',
+            label: '免费注册',
+            position: 'right',
+            className: 'header-btn',
+          },
           {
             href: '/docs/quick-start',
             label: "开发指南",
             position: 'left',
             className: 'header-link',
           },
-          // {
-          //   href: '/docs/byoc',
-          //   label: "BYOC Docs",
-          //   position: 'left',
-          //   className: 'header-link',
-          // },
           {
             type: 'dropdown',
-            label: '参考文档',
+            label: 'API & SDK',
             position: 'left',
             items: [
               {
@@ -239,12 +246,6 @@ const config = {
                 to: '/reference/nodejs',
               }
             ]
-          },
-          {
-            href: 'https://zilliz.com.cn/pricing',
-            label: '定价',
-            position: 'left',
-            className: 'header-link',
           },
           {
             type: 'dropdown',
@@ -271,10 +272,16 @@ const config = {
           },
           {
             href: 'https://zilliz.com.cn/use-cases',
-            label: '场景解决方案',
+            label: '场景用例',
             position: 'left',
             className: 'header-link',
           },
+          {
+            href: 'https://zilliz.com.cn/pricing',
+            label: '定价',
+            position: 'left',
+            className: 'header-link',
+          }
         ],
       },
       footer: {
