@@ -4,9 +4,11 @@ sidebar_position: 3
 slug: /go
 ---
 
-# Go SDK 参考
+import Admonition from '@theme/Admonition';
 
-如下是 Zilliz Cloud 的 Go SDK 参考文档。
+# Go SDK Reference
+
+Welcome to the Go SDK Reference!
 
 import DocCardList from '@theme/DocCardList';
 
