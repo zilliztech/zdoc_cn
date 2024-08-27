@@ -188,7 +188,7 @@ module.exports = function (context, options) {
                                 const labels = meta['labels']
                                 const keywords = meta['keywords']
                                 const parent = Object.keys(source).includes('parent_node_token') ? source.parent_node_token : source.parent_token
-                                const sidebarPos = 0
+                                var sidebarPos = 0
 
                                 try {
                                     const parent_source = JSON.parse(fs.readFileSync(docSourceDir + '/' + parent + '.json', 'utf8'))

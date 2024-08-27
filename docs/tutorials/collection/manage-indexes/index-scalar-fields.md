@@ -36,11 +36,16 @@ Milvus 能够根据标量字段类型推理索引类型。如需使用自动索�
 
 ```python
 # Auto indexing
+CLUSTER_ENDPOINT = "YOUR_CLUSTER_ENDPOINT"
+TOKEN = "YOUR_CLUSTER_TOKEN"
+
+# 1. Set up a Milvus client
 client = MilvusClient(
-    uri="http://localhost:19530"
+    uri=CLUSTER_ENDPOINT,
+    token=TOKEN 
 )
 
-index_params = client.create_index_params() # Prepare an empty IndexParams object, without having to specify any index parameters
+index_params = client.prepare_index_params() # Prepare an empty IndexParams object, without having to specify any index parameters
 
 index_params.add_index(
     field_name="scalar_1", # Name of the scalar field to be indexed
