@@ -307,6 +307,7 @@
 									"1": {
 										"summary": "success",
 										"x-target-response": "OPTION 1",
+										"x-target-lang": "en-US",
 										"value": {
 											"code": 200,
 											"data": [
@@ -12643,6 +12644,7 @@
 									"1": {
 										"summary": "success",
 										"x-target-response": "OPTION 1",
+										"x-target-lang": "en-US",
 										"value": {
 											"code": 0,
 											"data": [

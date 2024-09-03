@@ -236,7 +236,7 @@ const Enums = ({ enums, defaultValue, lang, target }) => {
 }
 
 const Tab = ({ name, id, content, lang, target, selected, setSelected }) => {
-    const value = (content.label ? content.label : `${i18n[lang]["tab.option"]} ${id}`).toUpperCase()
+    const value = (content.label ? content.label : `OPTION ${id}`).toUpperCase()
     const label = (content?.['x-tab-label'] ? content['x-tab-label'] : value).toUpperCase()
 
     return (
@@ -263,7 +263,7 @@ const Tab = ({ name, id, content, lang, target, selected, setSelected }) => {
 const AnyOf = ({ name, description, arr, required, lang, target, onValueChange }) => {
     const r = getRandomString(5)
 
-    const defaultValue = (arr[0].label ? arr[0].label : `${i18n[lang]["tab.option"]} 1`).toUpperCase()
+    const defaultValue = (arr[0].label ? arr[0].label : `OPTION 1`).toUpperCase()
     const [ selected, setSelected ] = useState(defaultValue)
 
     const setSelectedOption = (value) => {
@@ -304,7 +304,7 @@ const AnyOf = ({ name, description, arr, required, lang, target, onValueChange }
 const OneOf = ({ name, description, arr, required, lang, target, onValueChange }) => {
     const r = getRandomString(5)
 
-    const defaultValue = (arr[0].label ? arr[0].label : `${i18n[lang]["tab.option"]} 1`).toUpperCase()
+    const defaultValue = (arr[0].label ? arr[0].label : `OPTION 1`).toUpperCase()
     const [ selected, setSelected ] = useState(defaultValue)
 
     const setSelectedOption = (value) => {
@@ -362,6 +362,8 @@ const ExampleResponses = ({ examples, lang, target, selectedResponse }) => {
 
         return condition
     })
+
+    console.log( selectedResponse, validKeys)
 
     const defaultValue = (examples[validKeys[0]].summary).toUpperCase()
     const availableLabels = validKeys.map(key => examples[key].summary.toUpperCase())
