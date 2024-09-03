@@ -37,8 +37,8 @@ class refGen {
         
         const sidebar_position = idx; idx++;
 
-        const page_title = lang === "zh-CN" ? specification["x-i18n"][lang].summary : specification.summary
-        const page_excerpt = this.__filter_content(lang === "zh-CN" ? specification["x-i18n"][lang].description : specification.description, target)
+        const page_title = lang === "zh-CN" && specification["x-i18n"]?.[lang] ? specification["x-i18n"][lang].summary : specification.summary
+        const page_excerpt = this.__filter_content(lang === "zh-CN" && specification["x-i18n"]?.[lang] ? specification["x-i18n"][lang].description : specification.description, target)
         const page_parent = parents.filter(x => x === specification.tags[0])[0].replace("&", "and").split(' ').join('-').replace(/\(|\)/g, '').toLowerCase()
         const version = page_parent.includes('v2') ? 'v2' : 'v1'
         const upper_folder = page_parent.startsWith('cloud') || page_parent.startsWith('cluster') || page_parent.startsWith('import') || page_parent.startsWith('pipeline') || page_parent.includes('backup') || page_parent.includes('restore') ? 'control-plane' : 'data-plane'

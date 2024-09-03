@@ -167,7 +167,7 @@
 				"description": "Lists all cloud providers available on Zilliz Cloud.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "查看云服务商列表",
+						"summary": "查看云服务提供商",
 						"description": "本接口可列出所有可用的云服务商相关信息。"
 					}
 				},
@@ -795,7 +795,7 @@
 				"description": "Imports data from files stored in a specified object storage bucket.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "批量导入数据",
+						"summary": "导入",
 						"description": "从指定对象存储桶中导入数据。"
 					}
 				},
@@ -3908,7 +3908,7 @@
 				"description": "Deletes one or more entities from a collection.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "删除",
+						"summary": "删除 Entity",
 						"description": "从 Collection 中删除一个或多个 Entity。"
 					}
 				},
@@ -4147,7 +4147,7 @@
 				"description": "This operation deletes entities by their IDs or with a boolean expression.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "删除",
+						"summary": "删除 Entity",
 						"description": "根据 ID 或布尔表达式删除 Entity。"
 					}
 				},
@@ -4576,7 +4576,7 @@
 				"description": "Lists all available cloud regions of a specific cloud provider.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "查看云区域列表",
+						"summary": "查看云服务区域",
 						"description": "列出指定云提供商的可用云区域。"
 					}
 				},
@@ -4794,8 +4794,8 @@
 				"description": "Retrieves the progress of a specified import task.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "获取导入进度",
-						"description": "获取指定导入任务的进度。"
+						"summary": "查看导入进度",
+						"description": "查看指定导入任务的进度。"
 					}
 				},
 				"tags": [
@@ -9426,7 +9426,7 @@
 				"description": "Inserts one or more entities into a collection. You can add a maximum of 100 entities at a time. To insert large volumn of data, you are advised to use the bulk-insert API. For details, refer to [Data Import](/docs/data-import).",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "插入",
+						"summary": "插入 Entity",
 						"description": "将一个或多个实体插入到 Collection 中。一次最多可以插入 100 个实体。若要插入大量数据，建议使用批量插入 API，具体可参考[数据导入](/docs/data-import)。"
 					}
 				},
@@ -10036,7 +10036,7 @@
 				"description": "List all import jobs specific to a cluster.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "查看导入任务",
+						"summary": "查看导入任务列表",
 						"description": "列出指定集群的导入任务。"
 					}
 				},
@@ -11616,7 +11616,7 @@
 				"description": "Queries the metrics of a cluster.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "查询集群指标",
+						"summary": "查看集群指标",
 						"description": "本接口查询指定集群的指标统计信息。"
 					}
 				},
@@ -12515,8 +12515,8 @@
 				"description": "Lists all cloud providers available on Zilliz Cloud.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "查看云服务商列表",
-						"description": "本接口可列出所有可用的云服务商相关信息。"
+						"summary": "查看云服务提供商",
+						"description": "本接口可列出所有可用的云服务提供商的相关信息。"
 					}
 				},
 				"tags": [
@@ -13075,8 +13075,8 @@
 				"description": "This operation inserts data into a specific collection. ",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "插入数据",
-						"description": "本接口向指定 Collection 中插入数据。"
+						"summary": "插入 Entity",
+						"description": "本接口向指定 Collection 中插入 Entity。"
 					}
 				},
 				"tags": [
@@ -13474,7 +13474,7 @@
 				"description": "This operation lists all existing collection aliases in the specified <include target=\"milvus\">database</include><include target=\"zilliz\">Zilliz Cloud cluster</include>.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "查看 Collection 别名",
+						"summary": "查看 Alias 列表",
 						"description": "本接口可列出指定<include target=\"milvus\">数据库</include><include target=\"zilliz\"> Zilliz Cloud 集群</include>中的所有 Collection 别名。"
 					}
 				},
@@ -15193,8 +15193,8 @@
 				"description": "Creates a new cluster.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "创建 Dedicated 集群",
-						"description": "创建一个 dedicated 集群。"
+						"summary": "创建集群",
+						"description": "创建一个 Dedicated 集群。"
 					}
 				},
 				"tags": [
@@ -16707,7 +16707,7 @@
 				"description": "Describes a cluster in detail.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "查看 Cluster 详情",
+						"summary": "查看集群详情",
 						"description": "本接口可查看指定 Cluster 的详细信息。"
 					}
 				},
@@ -17033,12 +17033,12 @@
 		},
 		"/v2/vectordb/entities/upsert": {
 			"post": {
-				"summary": "Upsert",
+				"summary": "Upsert Entity",
 				"deprecated": false,
 				"description": "This operation inserts new records into the database or updates existing ones.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "插入或更新",
+						"summary": "Upsert Entity",
 						"description": "本接口用于向指定 Collection 中插入或更新数据。"
 					}
 				},
@@ -17393,7 +17393,7 @@
 				"description": "This operation describes the details of a specific alias.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "查看 Collection 别名详情",
+						"summary": "查看 Alias 详情",
 						"description": "本接口可列出指定 Collection 别名的详细信息。"
 					}
 				},
@@ -17996,7 +17996,7 @@
 				"description": "Retrieves the progress of a specified import job.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "获取导入任务进度",
+						"summary": "查看导入任务进度",
 						"description": "本接口可获取指定导入任务的进度信息。"
 					}
 				},
@@ -18593,7 +18593,7 @@
 				"description": "Lists all available cloud regions. You may list only the applicable regions of a specific cloud provider.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "查看云区域列表",
+						"summary": "查看云服务区域",
 						"description": "本接口列出所有可用的云区域，也可以只列出特定云提供商的适用区域。"
 					}
 				},
@@ -19046,12 +19046,12 @@
 		},
 		"/v1/vector/upsert": {
 			"post": {
-				"summary": "Upsert",
+				"summary": "Upsert Entity",
 				"deprecated": false,
 				"description": "Upserts one or more entities into a collection.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "插入或更新",
+						"summary": "Upsert Entity",
 						"description": "本接口可在指定 Collection 中插入或更新一条或多条记录。"
 					}
 				},
@@ -21158,7 +21158,7 @@
 				"description": "This operation reassigns the alias of one collection to another.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "修改别名",
+						"summary": "修改 Alias",
 						"description": "本接口将已分配给某 Collection 的别名重新分配给另一个 Collection。"
 					}
 				},
@@ -21837,7 +21837,7 @@
 				"description": "This operation loads the data of the current partition into memory.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "加载 Partitions",
+						"summary": "加载 Partition",
 						"description": "本接口将指定 Partition 中的数据加载到内存。"
 					}
 				},
@@ -24797,7 +24797,7 @@
 				"description": "This operation checks whether a partition exists.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "检查 Partition 是否存在",
+						"summary": "查看 Partition 是否存在",
 						"description": "本接口可检查指定的 Partition 是否存在。"
 					}
 				},
@@ -25837,7 +25837,7 @@
 				"description": "This operations gets the number of entities in a partition.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "查看 Partition 统计",
+						"summary": "查看 Partition 统计信息",
 						"description": "本接口可以查看指定 Partition 中存放的 Entity 数量。"
 					}
 				},
@@ -26051,7 +26051,7 @@
 				"description": "This operation checks whether a collection exists.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "检查 Collection 是否存在",
+						"summary": "查看 Collection 是否存在",
 						"description": "本接口可检查指定的 Collection 是否存在。"
 					}
 				},
@@ -26727,7 +26727,7 @@
 				"description": "This operation creates an alias for an existing collection. A collection can have multiple aliases, while an alias can be associated with only one collection.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "创建 Collection 别名",
+						"summary": "创建 Alias",
 						"description": "本接口可以为指定 Collection 创建别名。一个 Collection 可以有多个别名，而一个别名只能对应一个 Collection。"
 					}
 				},
@@ -27538,7 +27538,7 @@
 				"description": "This operation searches for entities based on vector similarity and scalar filtering and reranks the results using a specified strategy.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "混合搜索",
+						"summary": "Hybrid Search",
 						"description": "本接口基于向量相似度和标量过滤条件，搜索实体并使用指定策略重新排序结果。"
 					}
 				},
@@ -28035,7 +28035,7 @@
 				"description": "Lists existing projects.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "查看项目",
+						"summary": "查看项目列表",
 						"description": "本接口用于查看当前用户所属的所有项目。"
 					}
 				},
@@ -28972,7 +28972,7 @@
 			"delete": {
 				"summary": "Drop Cluster",
 				"deprecated": false,
-				"description": "Drop Cluster.",
+				"description": "Drop the specified cluster.",
 				"x-i18n": {
 					"zh-CN": {
 						"summary": "删除集群",
@@ -29356,7 +29356,7 @@
 				"description": "Suspend a dedicated cluster. ",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "暂停集群",
+						"summary": "挂起集群",
 						"description": "本接口可以暂停指定集群。"
 					}
 				},
@@ -30870,7 +30870,7 @@
 				"description": "This operation returns the load status of a specific collection.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "获取 Collection 加载状态",
+						"summary": "查看 Collection 加载状态",
 						"description": "本接口可以获取指定 Collection 的加载状态。"
 					}
 				},
@@ -31096,6 +31096,12 @@
 				"summary": "Migrate to New Dedicated Cluster",
 				"deprecated": false,
 				"description": "Create a dedicated cluster and migrate data from the source cluster to the new cluster.",
+				"x-i18n": {
+					"zh-CN": {
+						"summary": "迁移数据至新集群",
+						"description": "本接口可创建一个新的 Dedicated 集群，并将源集群的数据迁移到新创建的集群。"
+					}
+				},
 				"tags": [
 					"Cloud Migration (V2)"
 				],
@@ -31314,6 +31320,12 @@
 				"summary": "List Backups",
 				"deprecated": false,
 				"description": "List all AVAILABLE or CREATING backups. Note that this API only applies to dedicated clusters.",
+				"x-i18n": {
+					"zh-CN": {
+						"summary": "查看备份列表",
+						"description": "本接口可查看所有处于 AVAILABLE 或 CREATING 状态的备份记录。仅适用于 Dedicated 集群。"
+					}
+				},
 				"tags": [
 					"Backup & Restore (V2)"
 				],
@@ -31597,7 +31609,13 @@
 			"get": {
 				"summary": "Describe Job",
 				"deprecated": false,
-				"description": "",
+				"description": "List the information about the specified control-plane job in detail",
+				"x-i18n": {
+					"zh-CN": {
+						"summary": "查看任务详情",
+						"description": "本接口可查看指定控制面任务详情。"
+					}
+				},
 				"tags": [
 					"Cloud Job (V2)"
 				],
@@ -31755,6 +31773,12 @@
 				"summary": "Migrate to Existing Cluster",
 				"deprecated": false,
 				"description": "Migrate data from a cluster to another.",
+				"x-i18n": {
+					"zh-CN": {
+						"summary": "迁移数据至现有集群",
+						"description": "本接口可将数据从一个集群迁移至另一个集群。"
+					}
+				},
 				"tags": [
 					"Cloud Migration (V2)"
 				],
@@ -31958,6 +31982,12 @@
 				"summary": "Describe Backup",
 				"deprecated": false,
 				"description": "List the information about the specified backup in detail. Note that this API only applies to dedicated clusters.",
+				"x-i18n": {
+					"zh-CN": {
+						"summary": "查看备份详情",
+						"description": "本接口查看指定备份记录的详细信息。仅适用于 Dedicated 集群。"
+					}
+				},
 				"tags": [
 					"Backup & Restore (V2)"
 				],
@@ -32197,6 +32227,12 @@
 				"summary": "Delete Backup",
 				"deprecated": false,
 				"description": "Delete the specified backup of a cluster. Note that this API only applies to dedicated clusters.",
+				"x-i18n": {
+					"zh-CN": {
+						"summary": "删除备份",
+						"description": "本接口删除指定备份记录。仅适用于 Dedicated 集群。"
+					}
+				},
 				"tags": [
 					"Backup & Restore (V2)"
 				],
@@ -32336,6 +32372,12 @@
 				"summary": "Create backup",
 				"deprecated": false,
 				"description": "Back up the specified cluster or collection. Note that this API only applies to dedicated clusters.",
+				"x-i18n": {
+					"zh-CN": {
+						"summary": "创建备份",
+						"description": "本接口可为指定集群或 Collection 创建备份。仅适用于 Dedicated 集群。"
+					}
+				},
 				"tags": [
 					"Backup & Restore (V2)"
 				],
@@ -32516,6 +32558,12 @@
 				"summary": "Get Backup Policy",
 				"deprecated": false,
 				"description": "List the backup policy of the specified cluster in detail. Note that this API only applies to dedicated clusters.",
+				"x-i18n": {
+					"zh-CN": {
+						"summary": "获取备份策略",
+						"description": "本接口可获取指定集群的自动备份策略。仅适用于 Dedicated 集群。"
+					}
+				},
 				"tags": [
 					"Backup & Restore (V2)"
 				],
@@ -32667,6 +32715,12 @@
 				"summary": "Set Backup Policy",
 				"deprecated": false,
 				"description": "Set up the backup policy for the specified cluster so that Zilliz Cloud automatically backs up your cluster at the specified interval. Note that this API only applies to dedicated clusters.",
+				"x-i18n": {
+					"zh-CN": {
+						"summary": "创建备份策略",
+						"description": "本接口可为指定集群创建自动备份策略。仅适用于 Dedicated 集群。"
+					}
+				},
 				"tags": [
 					"Backup & Restore (V2)"
 				],
@@ -32849,6 +32903,12 @@
 				"summary": "Restore Cluster Backup",
 				"deprecated": false,
 				"description": "Restore cluster backup to a new dedicated cluster of the same CU type in the same cloud region. Note that this API only applies to dedicated clusters.",
+				"x-i18n": {
+					"zh-CN": {
+						"summary": "恢复集群备份",
+						"description": "本接口可将指定备份记录恢复到同一云区域内相同 CU 类型的新集群中。仅适用于 Dedicated 集群。"
+					}
+				},
 				"tags": [
 					"Backup & Restore (V2)"
 				],
@@ -33043,6 +33103,12 @@
 				"summary": "Restore Collection Backup",
 				"deprecated": false,
 				"description": "Restore collection backup to an existing cluster. Note that this API only applies to dedicated clusters.",
+				"x-i18n": {
+					"zh-CN": {
+						"summary": "恢复 Collection 备份",
+						"description": "本接口可将指定 Collection 备份恢复到已存在的任一集群。仅适用于 Dedicated 集群。"
+					}
+				},
 				"tags": [
 					"Backup & Restore (V2)"
 				],

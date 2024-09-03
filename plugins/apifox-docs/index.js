@@ -12,7 +12,6 @@ module.exports = function (context, options) {
                 .option('-s, --specifications <specifications>', 'Specifications of the API')
                 .option('-l, --lang <lang>', 'Language of the API Reference', 'en-US')
                 .option('-o, --output_path <target_path>', 'Target path of the API Reference', 'reference/api/restful/restful')
-                .option('-i, --strings <strings>', 'Localization strings for Chinese docs')
                 .option('-t, --target <string>', 'Publication target of the API Reference', 'zilliz')
                 .action((opts) => {
                     let lang = opts.lang
@@ -30,14 +29,14 @@ module.exports = function (context, options) {
                         specifications = JSON.parse(fs.readFileSync(opts.specifications, 'utf-8'))
                     }
 
-                    if (opts.lang === 'zh-CN' && opts.strings === undefined) {
-                        console.log('Please provide the localization strings for Chinese docs')
-                        return
-                    } 
+                    // if (opts.lang === 'zh-CN' && opts.strings === undefined) {
+                    //     console.log('Please provide the localization strings for Chinese docs')
+                    //     return
+                    // } 
 
-                    if (opts.lang === 'zh-CN') {
-                        strings = fs.readFileSync(opts.strings, 'utf-8').split('\n')
-                    }
+                    // if (opts.lang === 'zh-CN') {
+                    //     strings = fs.readFileSync(opts.strings, 'utf-8').split('\n')
+                    // }
 
                     const refGen = new RefGen({
                         specifications,
@@ -47,7 +46,7 @@ module.exports = function (context, options) {
                         strings,
                     })
 
-                    folders = fs.readdirSync(target_path).filter(f => fs.statSync(target_path + '/' + f).isDirectory())
+                    const folders = fs.readdirSync(target_path).filter(f => fs.statSync(target_path + '/' + f).isDirectory())
                     for (let folder of folders) {
                         fs.rmSync(target_path + '/' + folder, { recursive: true, force: true })
                     }
