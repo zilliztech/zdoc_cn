@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "CohereEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-CohereEmbeddingFunction
+sidebar_label: "CohereEmbeddingFunction"
 beta: false
 notebook: false
+description: "CohereEmbeddingFunction is a class in pymilvus that handles encoding text into embeddings using Cohere embedding models to support embedding retrieval in Milvus. | Python"
 type: docx
 token: JzDLdkv3QoCY8OxKpBjc5zsmnId
 sidebar_position: 1

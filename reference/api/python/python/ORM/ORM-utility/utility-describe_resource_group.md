@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "describe_resource_group() | Python | ORM"
 slug: /python/python/utility-describe_resource_group
+sidebar_label: "describe_resource_group()"
 beta: false
 notebook: false
+description: "This operation describes the details of a specific resource group. | Python | ORM"
 type: docx
 token: HScCdxLNJotPCcxb4AZcxsNJn9c
 sidebar_position: 7

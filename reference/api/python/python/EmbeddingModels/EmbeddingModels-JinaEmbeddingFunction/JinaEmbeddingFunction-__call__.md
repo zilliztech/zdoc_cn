@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "\_\_call\_\_() | Python"
 slug: /python/python/JinaEmbeddingFunction-__call__
+sidebar_label: "__call__()"
 beta: false
 notebook: false
+description: "This operation in JinaEmbeddingFunction takes a list of text strings and directly encodes them into vector embeddings. | Python"
 type: docx
 token: Yf9GddNheoKrFCxcUeYc7NHjnVb
 sidebar_position: 4

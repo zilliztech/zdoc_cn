@@ -6,6 +6,7 @@ const { URL } = require('node:url')
 const fetch = require('node-fetch')
 const cheerio = require('cheerio')
 const showdown = require('showdown')
+const Jimp = require("jimp");
 const _ = require('lodash')
 
 class larkDocWriter {
@@ -60,7 +61,9 @@ class larkDocWriter {
             "okr_key_result",
             "okr_progress",
             "add_ons",
-            "jira_issue"
+            "jira_issue",
+            "wiki_catelog",
+            "board"
         ]
         this.code_langs = [
             null,
@@ -142,10 +145,9 @@ class larkDocWriter {
         ]
         this.tokenFetcher = new larkTokenFetcher()
         this.downloader = new Downloader({}, imageDir)
-        this.not_found_source = []
     }
 
-    __fetch_doc_source (type, value, slug) {
+    __fetch_doc_source (type, value, slug="") {
         const file = fs.readdirSync(this.docSourceDir).filter(file => {
             const page = JSON.parse(fs.readFileSync(`${this.docSourceDir}/${file}`, {encoding: 'utf-8', flag: 'r'}))
             
@@ -297,6 +299,8 @@ class larkDocWriter {
                 return this.__retrieve_block_by_id(child)
             })
             await this.__write_page({
+                title: page_title,
+                suffix: this.__title_suffix(path),
                 slug: page_slug,
                 beta: page_beta,
                 notebook: notebook,
@@ -311,9 +315,54 @@ class larkDocWriter {
         }
     }
 
+    __title_suffix(path) {
+        var suffix = 'Cloud'
+        
+        if (path.includes('byoc')) {
+            suffix = 'BYOC'
+        } else if (path.includes('go/v1')) {
+            suffix = 'Go | v1'
+        } else if (path.includes('go/v2')) {
+            suffix = 'Go | v2'
+        } else if (path.includes('go')) {
+            suffix = 'Go'
+        } else if (path.includes('python/MilvusClient')) {
+            suffix = 'Python | MilvusClient'
+        } else if (path.includes('python/ORM')) {
+            suffix = 'Python | ORM'
+        } else if (path.includes('python')) {
+            suffix = 'Python'
+        } else if (path.includes('java/v1')) {
+            suffix = 'Java | v1'
+        } else if (path.includes('java/v2')) {
+            suffix = 'Java | v2'
+        } else if (path.includes('java')) {
+            suffix = 'Java'
+        } else if (path.includes('nodejs')) {
+            suffix = 'Node.js'
+        } else if (path.includes('restful/control-plane/v1')) {
+            suffix = 'RESTful | Control Plane | v1'
+        } else if (path.includes('restful/control-plane/v2')) {
+            suffix = 'RESTful | Control Plane | v2'
+        } else if (path.includes('restful/control-plane')) {
+            suffix = 'RESTful | Control Plane'
+        } else if (path.includes('restful/data-plane/v1')) {
+            suffix = 'RESTful | Data Plane | v1'
+        } else if (path.includes('restful/data-plane/v2')) {
+            suffix = 'RESTful | Data Plane | v2'
+        } else if (path.includes('restful/data-plane')) {
+            suffix = 'RESTful | Data Plane'
+        } else if (path.includes('restful')) {
+            suffix = 'RESTful'
+        }
+
+        return suffix
+    }
+
     async write_faqs (path) {
         const source = this.__fetch_doc_source('title', '常见问题')
         const blocks = source.blocks.items
+        const suffix = path.includes('byoc') ? 'BYOC' : 'CLOUD'
 
         if (blocks) {
             this.page_blocks = blocks
@@ -346,7 +395,7 @@ class larkDocWriter {
             // Write FAQs root page
             let title = '常见问题'
             let slug = 'faqs'
-            let front_matter = this.__front_matters(slug, null, null, source.node_type, source.node_token, 999, "", "", this.displayedSidebar)
+            let front_matter = this.__front_matters('FAQs', suffix, slug, null, null, source.node_type, source.node_token, 999, "", "", this.displayedSidebar, "Frequently asked questions")
             const markdown = `${front_matter}\n\n# ${title}` + "\n\nimport DocCardList from '@theme/DocCardList';\n\n<DocCardList />"
             fs.writeFileSync(`${path}/${slug}.md`, markdown)
 
@@ -354,7 +403,7 @@ class larkDocWriter {
                 let title = sub_page[0].split('{/')[0].split('## ')[1]
                 let short_description = sub_page.filter(line => line.length > 0)[1]
                 let slug = /{\/([\w-]+)}/.exec(sub_page[0])[1]
-                let front_matter = this.__front_matters(slug, null, null, source.node_type, source.node_token, index+1, "", "", this.displayedSidebar)
+                let front_matter = this.__front_matters(title, suffix, slug, null, null, source.node_type, source.node_token, index+1, "", "", this.displayedSidebar)
                 let links = []
 
                 sub_page = sub_page.map(line => {
@@ -406,6 +455,7 @@ class larkDocWriter {
 
         const result = this.records.filter(record => {
             const record_slug = record["fields"]["Slug"] instanceof Array ? record["fields"]["Slug"][0].text : record["fields"]["Slug"]
+
             if (record["fields"]["Docs"] && record["fields"]["Docs"]["text"] === title && record_slug == slug && record["fields"]["Targets"] &&
                 record["fields"]["Progress"] && (record["fields"]["Progress"] === "初稿" || record["fields"]["Progress"] === "发布" || record["fields"]["Progress"] === "Draft" || record["fields"]["Progress"] === "Published")) {
 
@@ -458,7 +508,11 @@ class larkDocWriter {
             markdown = this.__filter_content(preText + matchText + postText, targets)
         }
 
-        return markdown.replace(/(\s*\n){3,}/g, '\n\n').replace(/(<br\/>){2,}/, "<br/>").replace(/<br>/g, '<br/>');
+        return markdown.replace(/(\s*\n){3,}/g, '\n\n')
+            .replace(/<br>/g, '<br/>')
+            .replace(/(<br\/>){2,}/, "<br/>")
+            .replace("<br\/></p>", "</p>")
+            .replace(/\n\s*<tr>\n(\s*<td.*><p><\/p><\/td>\n)*\s*<\/tr>/g, '');
     }
 
     __match_filter_tags(markdown) {
@@ -500,8 +554,19 @@ class larkDocWriter {
         return returns
     }
 
-    async __write_page({slug, beta, notebook, path, type, token, sidebar_position, sidebar_label, keywords, doc_card_list}) {
-        let front_matter = this.__front_matters(slug, beta, notebook, type, token, sidebar_position, sidebar_label, keywords, this.displayedSidebar)
+    __extract_description(markdown) {
+        const content = markdown.split('\n')
+        const title = content.filter(line => line.startsWith('# '))
+        var description = "(placeholder)"
+
+        if (title.length > 0) {
+            description = content[content.indexOf(title[0])+2] ? content[content.indexOf(title[0])+2].trim() : "(placeholder)"
+        }
+
+        return description
+    }
+
+    async __write_page({title, suffix, slug, beta, notebook, path, type, token, sidebar_position, sidebar_label, keywords, doc_card_list}) {
         let markdown = await this.__markdown()
         markdown = this.__filter_content(markdown, this.targets)
         markdown = markdown.replace(/(\s*\n){3,}/g, '\n\n').replace(/(<br\/>){2,}/, "<br/>").replace(/<br>/g, '<br/>');
@@ -509,11 +574,15 @@ class larkDocWriter {
         markdown = markdown.replace(/\s*<tr>\n(\s*<td>(<br\/>)*<\/td>\n)*\s*<\/tr>/g, '')
         markdown = this.__mdx_patches(markdown)
 
+        const description = this.__extract_description(markdown)
+
+        let front_matter = this.__front_matters(title, suffix, slug, beta, notebook, type, token, sidebar_position, sidebar_label, keywords, this.displayedSidebar, description)
+
         let tabs = markdown.split('\n').filter(line => {
             return line.trim().startsWith("<Tab")
         }).length
 
-        let imports = await this.__imports(tabs > 0)
+        let imports = this.__imports(tabs > 0)
 
         if (doc_card_list) {
             markdown += "\n\nimport DocCardList from '@theme/DocCardList';\n\n<DocCardList />"
@@ -532,11 +601,7 @@ class larkDocWriter {
         }
     }
 
-    __front_matters (slug, beta, notebook, type, token, sidebar_position=undefined, sidebar_label="", keywords="", displayed_sidebar=this.displayedSidebar) {
-        if (sidebar_label !== "") {
-            sidebar_label = `sidebar_label: ${sidebar_label}\n`
-        }
-
+    __front_matters (title, suffix, slug, beta, notebook, type, token, sidebar_position=undefined, sidebar_label="", keywords="", displayed_sidebar=this.displayedSidebar, description="") {
         if (keywords !== "") {
             keywords = "keywords: \n  - " + keywords.split(',').map(item => item.trim()).join('\n  - ') + '\n'
         }
@@ -548,11 +613,17 @@ class larkDocWriter {
             displayed_sidebar = `displayed_sidebar: ${displayed_sidebar}\n`
         }
 
+        if (description) {
+            description = description.trim().replace('\n', '|').replace(/\[(.*)\]\(.*\)/g, '$1').replace(':', '').replace(/\*+|_+/g, '')
+        }
+
         let front_matter = '---\n' + 
+        `title: "${title} | ${suffix}"` + '\n' +
         `slug: /${slug}` + '\n' +
-        sidebar_label +
+        `sidebar_label: "${sidebar_label !== "" ? sidebar_label : title}"` + '\n' +
         `beta: ${beta ? beta : 'FALSE'}` + '\n' +
         `notebook: ${notebook ? notebook : 'FALSE'}` + '\n' +
+        `description: "${description} | ${suffix}"` + '\n' +
         `type: ${type}` + '\n' +
         `token: ${token}` + '\n' +
         `sidebar_position: ${sidebar_position}` + '\n' +
@@ -618,6 +689,8 @@ class larkDocWriter {
                 markdown.push(await this.__sheet(block['sheet'], indent));
             } else if (this.block_types[block['block_type']-1] === 'callout') {
                 markdown.push(await this.__callout(block, indent));
+            } else if (this.block_types[block['block_type']-1] === 'board') {
+                markdown.push(await this.__board(block['board'], indent));
             } else if (block['block_type'] === 999 && block['children']) {
                 const children = block['children'].map(child => {
                     return this.__retrieve_block_by_id(child)
@@ -628,7 +701,12 @@ class larkDocWriter {
             }
         }
     
-        return markdown.join('\n\n').replace(/(\s*\n){3,}/g, '\n\n').replace(/(<br>){2,}/g, '<br>').replace(/<br>/g, '<br/>');
+        return markdown.join('\n\n')
+            .replace(/(\s*\n){3,}/g, '\n\n')
+            .replace(/<br>/g, '<br/>')
+            .replace(/(<br\/>){2,}/g, '<br>')
+            .replace("<br\/></p>", "</p>")
+            .replace(/\n\s*<tr>\n(\s*<td.*><p><\/p><\/td>\n)*\s*<\/tr>/g, '');
     }
 
     __mdx_patches(content) {
@@ -667,12 +745,12 @@ class larkDocWriter {
         
             acorns.forEach((acorn, i) => {
                 const c = acorn[0].match(/</g).length - 1
-                const a = acorn[0].replace(/</g, '\\<').replace('"{', '"\\{')
+                const a = acorn[0].replace(/</g, '\\<').replace('"{', '"\\{');
                 content = content.slice(0, acorn.index + i) + a + content.slice(acorn.index + i + acorn[0].length + c)
             })
         }
         
-        return content.replace(/\\\\/g, '\\')
+        return content.replace(/\\\\/g, '\\');
     }
 
     async __page(page) {
@@ -686,7 +764,7 @@ class larkDocWriter {
     async __heading(heading, level) {
         let content = await this.__text_elements(heading['elements'])
         content = this.__clean_headings(content)
-
+        
         if (content.length > 0) {
             content = this.__filter_content(content, this.targets)
 
@@ -950,6 +1028,29 @@ class larkDocWriter {
         return `![${image.token}](/${root}/${image["token"]}.png)`;
     }
 
+    async __board(board, indent) {
+        if (this.skip_image_download) {
+            const root = this.imageDir.replace(/^static\//g, '')
+            return `![${board.token}](/${root}/${board["token"]}.png)`;
+        }
+
+        const result = await this.downloader.__downloadBoardPreview(board.token)
+        const root = this.imageDir.replace(/^static\//g, '')
+        const writeStream = fs.createWriteStream(`${this.downloader.target_path}/${board["token"]}.png`);
+        result.body.pipe(writeStream);
+        writeStream.on('finish', () => {
+            Jimp.read(`${this.downloader.target_path}/${board["token"]}.png`, (err, image) => {
+                if (err) throw err;
+                
+                image.autocrop().quality(100).write(`${this.downloader.target_path}/${board["token"]}.png`, (err) => {
+                    if (err) throw err;
+                    console.log('Image cropped and saved.');
+                });
+            });
+        });
+        return `![${board.token}](/${root}/${board["token"]}.png)`;
+    }
+
     async __iframe(iframe) {
         if (iframe['component']['iframe_type'] !== 8) {
             return '';
@@ -975,14 +1076,14 @@ class larkDocWriter {
     }
 
     async __table(table, indent) {
-        const converter = new showdown.Converter()
+        const converter = new showdown.Converter({ underline: true })
         const cells = table['cells'];
         const cell_blocks = cells.map(cell => {
             return this.__retrieve_block_by_id(cell).children
         });
         const cell_texts = await Promise.all(cell_blocks.map(async (cell) => {
             let blocks = cell.map(block => this.__retrieve_block_by_id(block));
-            return (await this.__markdown(blocks, 0));
+            return (await this.__markdown(blocks, 1)).replace(/\n/g, '<br>');
         }));
 
         const row_size = table['property']['row_size'];
@@ -1014,9 +1115,9 @@ class larkDocWriter {
                     const rowspan = merge.row_span > 1 ? ` rowspan="${merge.row_span}"` : "";
                     const cell_text = cell_texts[cell_idx].trim().replace(/<br>/g, '\n');
                     if (i === 0) {
-                        html += ` ${' '.repeat(indent)} <th${colspan}${rowspan}>${converter.makeHtml(cell_text).replace(/\n/g, '')}</th>\n`;
+                        html += ` ${' '.repeat(indent)}    <th${colspan}${rowspan}>${converter.makeHtml(cell_text).replace(/\n/g, '')}</th>\n`;
                     } else {
-                        html += ` ${' '.repeat(indent)} <td${colspan}${rowspan}>${converter.makeHtml(cell_text).replace(/\n/g, '')}</td>\n`;
+                        html += ` ${' '.repeat(indent)}    <td${colspan}${rowspan}>${converter.makeHtml(cell_text).replace(/\n/g, '')}</td>\n`;
                     }
                 }
             }
@@ -1028,7 +1129,7 @@ class larkDocWriter {
     }
 
     async __sheet(sheet, indent) {
-        const converter = new showdown.Converter()
+        const converter = new showdown.Converter({ underline: true })
         const merges = sheet.meta.data.sheet.merges;
         const values = sheet.values.data.valueRange.values;
         var result = ' '.repeat(indent) + "<table>" + "\n";
@@ -1059,11 +1160,11 @@ class larkDocWriter {
                 }
 
                 cell = cell.trim().replace(/<br>/g, '\n');
-                
+
                 if (ridx === 0) {
-                    result += `${' '.repeat(indent) + ' '.repeat(2)}<th${colspan ? " " + colspan : ""}${rowspan ? " " + rowspan : ""}>${converter.makeHtml(cell).replace(/\n/g, '')}</th>\n`
+                    result += `${' '.repeat(indent) + '    '.repeat(2)}<th${colspan ? " " + colspan : ""}${rowspan ? " " + rowspan : ""}>${converter.makeHtml(cell).replace(/\n/g, '')}</th>\n`
                 } else {
-                    result += `${' '.repeat(indent) + ' '.repeat(2)}<td${colspan ? " " + colspan : ""}${rowspan ? " " + rowspan : ""}>${converter.makeHtml(cell).replace(/\n/g, '')}</td>\n`
+                    result += `${' '.repeat(indent) + '    '.repeat(2)}<td${colspan ? " " + colspan : ""}${rowspan ? " " + rowspan : ""}>${converter.makeHtml(cell).replace(/\n/g, '')}</td>\n`
                 }
             })
             result += ' '.repeat(indent) + '    ' + "</tr>" + "\n"
@@ -1071,7 +1172,7 @@ class larkDocWriter {
 
         result += ' '.repeat(indent) + "</table>" + "\n";
 
-        return result;
+        return result.replace('"{', '"\\{');
     }    
 
     __sheet_cell(cell) {

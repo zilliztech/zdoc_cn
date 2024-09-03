@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "JinaEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-JinaEmbeddingFunction
+sidebar_label: "JinaEmbeddingFunction"
 beta: false
 notebook: false
+description: "JinaEmbeddingFunction is a class in pymilvus that handles encoding text into embeddings using Jina AI embedding models to support embedding retrieval in Milvus. | Python"
 type: docx
 token: U7NJd5eKAo0c1TxYZndcgPj2nlc
 sidebar_position: 3

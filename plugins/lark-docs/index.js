@@ -188,8 +188,7 @@ module.exports = function (context, options) {
                                 const labels = meta['labels']
                                 const keywords = meta['keywords']
                                 const parent = Object.keys(source).includes('parent_node_token') ? source.parent_node_token : source.parent_token
-                                const sidebarPos = 0
-
+                                var sidebarPos = 0
                                 try {
                                     const parent_source = JSON.parse(fs.readFileSync(docSourceDir + '/' + parent + '.json', 'utf8'))
                                     parent_source.children.map((child, index) => {
@@ -210,7 +209,7 @@ module.exports = function (context, options) {
                                             }).filter(index => index !== undefined)[0]
                                         }
                                     })
-                                }                                
+                                }
                                 
                                 const req = {
                                     path: file_path.split('/').slice(0, -1).join('/'),
@@ -261,7 +260,6 @@ module.exports = function (context, options) {
                         if (opts.pubTarget === "milvus") {
                             utils.postprocess_for_milvus(outputDir, docSourceDir)
                         }
-    
                     }
                 })
         }

@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "RemoteBulkWriter | Python"
 slug: /python/python/DataImport-RemoteBulkWriter
+sidebar_label: "RemoteBulkWriter"
 beta: false
 notebook: false
+description: "A RemoteBulkWriter instance writes your raw data in a format that Zilliz Cloud understands into an AWS-S3-compatible bucket. | Python"
 type: docx
 token: G77zdbzpPo4pOaxTDcccgRNfnVc
 sidebar_position: 4

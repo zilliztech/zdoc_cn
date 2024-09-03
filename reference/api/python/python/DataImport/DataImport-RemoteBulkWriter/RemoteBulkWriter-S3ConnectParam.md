@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "S3ConnectParam | Python"
 slug: /python/python/RemoteBulkWriter-S3ConnectParam
+sidebar_label: "S3ConnectParam"
 beta: false
 notebook: false
+description: "An S3ConnectParam instance sets connection parameters for a RemoteBulkWriter instance. | Python"
 type: docx
 token: CSpOd0XgWoVAhzx5xbVcpCVfnPg
 sidebar_position: 5
@@ -64,16 +67,16 @@ connect_param = S3ConnectParam(
 
     <table>
        <tr>
-      <th><p><strong>Service Name</strong></p></th>
-      <th><p><strong>Endpoint</strong></p></th>
+         <th><p><strong>Service Name</strong></p></th>
+         <th><p><strong>Endpoint</strong></p></th>
        </tr>
        <tr>
-      <td><p><strong>AWS S3</strong></p></td>
-      <td><p>s3.amazonaws.com</p></td>
+         <td><p><strong>AWS S3</strong></p></td>
+         <td><p>s3.amazonaws.com</p></td>
        </tr>
        <tr>
-      <td><p><strong>GCS</strong></p></td>
-      <td><p>storage.googleapis.com</p></td>
+         <td><p><strong>GCS</strong></p></td>
+         <td><p>storage.googleapis.com</p></td>
        </tr>
     </table>
 

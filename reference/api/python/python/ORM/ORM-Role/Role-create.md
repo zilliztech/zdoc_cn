@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "create() | Python | ORM"
 slug: /python/python/Role-create
+sidebar_label: "create()"
 beta: false
 notebook: false
+description: "This operation creates the current role. | Python | ORM"
 type: docx
 token: G3h4d3jx6oXFHBxFZlyc9jLKnTO
 sidebar_position: 2

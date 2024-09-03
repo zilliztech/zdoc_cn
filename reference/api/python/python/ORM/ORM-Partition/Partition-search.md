@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "search() | Python | ORM"
 slug: /python/python/Partition-search
+sidebar_label: "search()"
 beta: false
 notebook: false
+description: "This operation conducts a vector similarity search with an optional scalar filtering expression. | Python | ORM"
 type: docx
 token: XW72dhBuNoqNWhxUQLtcfa6Fnwd
 sidebar_position: 10
@@ -206,7 +209,7 @@ param = {
     }
 }
 
-# Create a search iterator
+# Create a search request
 res = partition.search(
     data=[[0.1,0.2,-0.3,-0.4,0.5]],
     anns_field="vector",

@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "load() | Python | ORM"
 slug: /python/python/Partition-load
+sidebar_label: "load()"
 beta: false
 notebook: false
+description: "This operation loads the data of the current partition into memory. | Python | ORM"
 type: docx
 token: TWxddf6iboyM15xK4Kzc8ASknRb
 sidebar_position: 6
@@ -41,21 +44,6 @@ load(
 - **timeout** (*float* | *None*)  
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
-
-- **kwargs** - 
-
-    - **_resource_groups** (*list*) -
-
-        A specific set of resource groups into which the current collection is to be loaded.
-
-        If left unspecified, the default resource group applies.
-
-        <Admonition type="info" icon="📘" title="What is a resource group?">
-
-        <p>A resource group can hold several or all of the query nodes in a Zilliz Cloud cluster.</p>
-        <p>Setting this parameter for this operation makes Zilliz Cloud loads the current collection to the query nodes in the specified resource groups.</p>
-
-        </Admonition>
 
 **RETURN TYPE:**
 

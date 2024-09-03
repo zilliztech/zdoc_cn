@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "Collection | Python | ORM"
 slug: /python/python/ORM-Collection
+sidebar_label: "Collection"
 beta: false
 notebook: false
+description: "A Collection instance represents a Milvus collection. | Python | ORM"
 type: docx
 token: OSehdj15Ao3AUvxOIJucXzU8nWW
 sidebar_position: 1

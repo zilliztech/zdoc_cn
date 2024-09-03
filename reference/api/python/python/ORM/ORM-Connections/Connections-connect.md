@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "connect() | Python | ORM"
 slug: /python/python/Connections-connect
+sidebar_label: "connect()"
 beta: false
 notebook: false
+description: "This operation establishes a connection to a Zilliz Cloud cluster using the provided alias, address, and authentication parameters. | Python | ORM"
 type: docx
 token: KzCXdTVVSoOmkbxuFjsccDlXnff
 sidebar_position: 2

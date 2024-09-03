@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "DataType | Python | MilvusClient"
 slug: /python/python/Collections-DataType
+sidebar_label: "DataType"
 beta: false
 notebook: false
+description: "This is an enumeration that provides the following constants. | Python | MilvusClient"
 type: docx
 token: JiN3dU8zwoPdgBxxpw6c0JkUnze
 sidebar_position: 5

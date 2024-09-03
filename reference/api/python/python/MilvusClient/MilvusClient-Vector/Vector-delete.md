@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "delete() | Python | MilvusClient"
 slug: /python/python/Vector-delete
+sidebar_label: "delete()"
 beta: false
 notebook: false
+description: "This operation deletes entities by their IDs or with a boolean expression. | Python | MilvusClient"
 type: docx
 token: DWLXdSCYnoPT4ExktRKceEqLnAd
 sidebar_position: 1

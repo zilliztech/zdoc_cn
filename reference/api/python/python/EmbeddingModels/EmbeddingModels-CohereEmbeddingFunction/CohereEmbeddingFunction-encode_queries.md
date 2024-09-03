@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "encode_queries() | Python"
 slug: /python/python/CohereEmbeddingFunction-encode_queries
+sidebar_label: "encode_queries()"
 beta: false
 notebook: false
+description: "This operation takes in a list of query strings and encodes each query into a vector embedding. | Python"
 type: docx
 token: BqtYdPHHPoNhyKxhSnEcVOKenFb
 sidebar_position: 3

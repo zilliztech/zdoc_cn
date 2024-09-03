@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "FieldSchema | Python | ORM"
 slug: /python/python/ORM-FieldSchema
+sidebar_label: "FieldSchema"
 beta: false
 notebook: false
+description: "A FieldSchema instance defines the data type and related attributes of a specific field in a collection. | Python | ORM"
 type: docx
 token: EVKhdy0vwoSLSux2RW2c660unjh
 sidebar_position: 2

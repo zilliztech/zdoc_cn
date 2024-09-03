@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "BM25EmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-BM25EmbeddingFunction
+sidebar_label: "BM25EmbeddingFunction"
 beta: false
 notebook: false
+description: "BM25EmbeddingFunction is a class in pymilvus that handles encoding text into embeddings using the BM25 model to support embedding retrieval in Milvus. | Python"
 type: docx
 token: SOSedRXpcoGr0sx8RF1caGdjnyb
 sidebar_position: 1

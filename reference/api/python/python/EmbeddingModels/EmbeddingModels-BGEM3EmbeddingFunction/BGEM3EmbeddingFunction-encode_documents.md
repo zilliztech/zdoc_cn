@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "encode_documents() | Python"
 slug: /python/python/BGEM3EmbeddingFunction-encode_documents
+sidebar_label: "encode_documents()"
 beta: false
 notebook: false
+description: "This operation takes in documents and encodes them into vector embeddings. | Python"
 type: docx
 token: Q0rYdTPkEoRZgUx99LCcfMDUnvh
 sidebar_position: 2

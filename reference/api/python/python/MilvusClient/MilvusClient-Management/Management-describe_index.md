@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "describe_index() | Python | MilvusClient"
 slug: /python/python/Management-describe_index
+sidebar_label: "describe_index()"
 beta: false
 notebook: false
+description: "This operation describes a specific index. | Python | MilvusClient"
 type: docx
 token: WhsHdyIgyoFlsQxNJt9cFCTxnDe
 sidebar_position: 3

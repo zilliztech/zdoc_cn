@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "encode_documents() | Python"
 slug: /python/python/JinaEmbeddingFunction-encode_documents
+sidebar_label: "encode_documents()"
 beta: false
 notebook: false
+description: "This operation takes in documents and encodes them into vector embeddings. | Python"
 type: docx
 token: ZMs1dJJOGobyBjxRo7icXtE8nPe
 sidebar_position: 1

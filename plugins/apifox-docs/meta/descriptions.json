@@ -61,6 +61,18 @@
     },
     {
         "name": "import-operations-v2",
-        "description": "本系列 API 提供了大规模数据导入的相关接口"
+        "description": "本系列 API 提供了大规模数据导入的相关接口。"
+    },
+    {
+        "name": "cloud-migration-v2",
+        "description": "本系列 API 提供了向 Zilliz Cloud 集群迁移数据的相关接口。"
+    },
+    {
+        "name": "cloud-job-v2",
+        "description": "本系列 API 提供了获取 Zilliz Cloud 上控制面任务执行情况的相关接口。"
+    },
+    {
+        "name": "backup-and-restore-v2",
+        "description": "本系列 API 提供了在 Zilliz Cloud 上备份和恢复数据的相关接口。"
     }
 ]

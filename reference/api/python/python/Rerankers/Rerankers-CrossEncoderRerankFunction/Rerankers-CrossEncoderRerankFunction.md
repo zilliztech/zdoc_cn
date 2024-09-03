@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "CrossEncoderRerankFunction | Python"
 slug: /python/python/Rerankers-CrossEncoderRerankFunction
+sidebar_label: "CrossEncoderRerankFunction"
 beta: false
 notebook: false
+description: "CrossEncoderRerankFunction is a class in milvusmodel that takes a query and document as input and directly returns a similarity score instead of embeddings. This functionality uses the underlying Cross-Encoder reranking model. | Python"
 type: docx
 token: HVGNdMYOvojQoXxvDmEcnHYanMh
 sidebar_position: 1

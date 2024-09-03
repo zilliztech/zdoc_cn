@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "create_index() | Python | MilvusClient"
 slug: /python/python/Management-create_index
+sidebar_label: "create_index()"
 beta: false
 notebook: false
+description: "This operation creates an index for a specific collection. | Python | MilvusClient"
 type: docx
 token: B3n3db0idoia02xXxJfcONK8nRh
 sidebar_position: 2
@@ -45,6 +48,16 @@ create_index(
 - **timeout** (*float* | *None*) -
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
+
+- **kwargs** -
+
+    - **sync** (*bool*)
+
+        Controls how the index is built in relation to the client’s request. Valid values:
+
+        - `True` (default): The client waits until the index is fully built before it returns. This means you will not get a response until the process is complete.
+
+        - `False`: The client returns immediately after the request is received and the index is being built in the background. To find out if index creation has been completed, use the `describe_index()` method.
 
 **RETURN TYPE:**
 

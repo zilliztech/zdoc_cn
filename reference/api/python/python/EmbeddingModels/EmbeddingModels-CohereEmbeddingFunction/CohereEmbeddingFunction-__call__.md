@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "\_\_call()\_\_ | Python"
 slug: /python/python/CohereEmbeddingFunction-__call__
+sidebar_label: "__call__()"
 beta: false
 notebook: false
+description: "This operation in CohereEmbeddingFunction takes a list of text strings and directly encodes them into vector embeddings. | Python"
 type: docx
 token: P2n8d2wQtoK8YqxnccocmNwRnKb
 sidebar_position: 4

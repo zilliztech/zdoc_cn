@@ -45,9 +45,16 @@ class larkDriveWriter extends larkDocWriter {
                                 page_beta: 'false',
                                 notebook: 'false',
                                 sidebar_position: index+1,
+                                sidebar_label: meta['labels'],
                                 doc_card_list: false
                             })
-                        }   
+
+                            // if (source.slug === "SentenceTransformerEmbeddingFunction-encode_documents") {
+                            //     console.log(current_path)
+    
+                            //     throw new Error("SentenceTransformerEmbeddingFunction-encode_documents is not supported yet")
+                            // }
+                        }                           
                     }
 
                     if (source.children) {
@@ -73,11 +80,12 @@ class larkDriveWriter extends larkDocWriter {
                                 page_token: token,
                                 page_description: description,
                                 sidebar_position: index+1,
+                                sidebar_label: meta['labels'],
                                 doc_card_list: true
                             })
 
                             await this.write_docs(node_path.join(path, slug), token)
-                        }
+                        }                     
                     }
                 }    
             })
@@ -95,6 +103,7 @@ class larkDriveWriter extends larkDocWriter {
             notebook,
             page_description,
             sidebar_position,
+            sidebar_label,
             doc_card_list
         } = options
 
@@ -111,14 +120,18 @@ class larkDriveWriter extends larkDocWriter {
                     page = this.page_blocks.filter(block => block.block_type == 1)[0] 
                 } else {
                     const slug = `${this.displayedSidebar.replace('Sidebar', '')}/${page_slug}`
+                    const labels = sidebar_label ? sidebar_label : page_title
 
                     var markdown = '---\n' +
+                        'title: ' + `"${page_title} | ${this.__title_suffix(current_path)}"` + '\n' +
                         'slug: /' + slug + '\n' +
                         'beta: ' + page_beta + '\n' +
                         'notebook: ' + notebook + '\n' +
+                        'description: ' + `"${page_description.replace('\n', '|').replace(/\[(.*)\]\(.*\)/g, '$1').replace(':', '').replace('**', '')} | ${this.__title_suffix(current_path)}"`  + '\n' +
                         'type: ' + page_type + '\n' +
                         'token: ' + page_token + '\n' +
                         'sidebar_position: ' + sidebar_position + '\n' +
+                        'sidebar_label: ' + `"${labels}"` + '\n' +
                         'displayed_sidebar: ' + this.displayedSidebar + '\n' +
                         '---\n\n' +
                         '# ' + page_title + '\n\n' +
@@ -141,12 +154,15 @@ class larkDriveWriter extends larkDocWriter {
                 const slug = `${this.displayedSidebar.replace('Sidebar', '')}/${page_slug}`
 
                 var {front_matter, imports, markdown} = await this.__write_page({
+                    title: page_title,
+                    suffix: this.__title_suffix(current_path),
                     slug: slug,
                     beta: page_beta,
                     notebook: notebook,
                     type: page_type,
                     token: page_token,
                     sidebar_position: sidebar_position,
+                    sidebar_label: sidebar_label,
                     doc_card_list: doc_card_list,
                 })
 

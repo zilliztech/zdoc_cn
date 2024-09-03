@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "VoyageRerankFunction | Python"
 slug: /python/python/Rerankers-VoyageRerankFunction
+sidebar_label: "VoyageRerankFunction"
 beta: false
 notebook: false
+description: "VoyageRerankFunction is a class in milvusmodel that takes a query and document as input and directly returns a similarity score instead of embeddings. This functionality uses the underlying Voyage reranking model. | Python"
 type: docx
 token: Smobd2lIho2yQPxtRhLcLcKznCf
 sidebar_position: 1

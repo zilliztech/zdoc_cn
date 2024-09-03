@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "load_partitions() | Python | MilvusClient"
 slug: /python/python/Partitions-load_partitions
+sidebar_label: "load_partitions()"
 beta: false
 notebook: false
+description: "This operation loads a specific set of partitions in a specified collection into memory. | Python | MilvusClient"
 type: docx
 token: DdQ1dBNagoBa08xhEiucxZrHnzc
 sidebar_position: 6

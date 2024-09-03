@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "OpenAIEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-OpenAIEmbeddingFunction
+sidebar_label: "OpenAIEmbeddingFunction"
 beta: false
 notebook: false
+description: "OpenAIEmbeddingFunction is a class in pymilvus that handles encoding text into embeddings using OpenAI models to support embedding retrieval in Milvus. | Python"
 type: docx
 token: QPcodlsnAoSMvIxEFmlcMNPbntd
 sidebar_position: 3

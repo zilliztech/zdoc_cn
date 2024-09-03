@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "create_role() | Python | MilvusClient"
 slug: /python/python/Authentication-create_role
+sidebar_label: "create_role()"
 beta: false
 notebook: false
+description: "This operation creates a custom role. | Python | MilvusClient"
 type: docx
 token: OUz3drncZo1Er8xyITZcYz66nWE
 sidebar_position: 1

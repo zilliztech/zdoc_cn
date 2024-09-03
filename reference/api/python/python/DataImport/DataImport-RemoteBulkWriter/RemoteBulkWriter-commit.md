@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "commit() | Python"
 slug: /python/python/RemoteBulkWriter-commit
+sidebar_label: "commit()"
 beta: false
 notebook: false
+description: "This operation commits the appended data. | Python"
 type: docx
 token: VccVd4MTgoPzCixDVtgcEoKWnPf
 sidebar_position: 3

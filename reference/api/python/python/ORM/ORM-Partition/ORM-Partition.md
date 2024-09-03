@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "Partition | Python | ORM"
 slug: /python/python/ORM-Partition
+sidebar_label: "Partition"
 beta: false
 notebook: false
+description: "A Partition instance represents a partition within a collection. | Python | ORM"
 type: docx
 token: X9scdVMmxoBTuUxlKhecJXEunHd
 sidebar_position: 7

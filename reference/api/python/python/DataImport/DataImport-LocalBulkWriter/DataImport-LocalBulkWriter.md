@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "LocalBulkWriter | Python"
 slug: /python/python/DataImport-LocalBulkWriter
+sidebar_label: "LocalBulkWriter"
 beta: false
 notebook: false
+description: "A LocalBulkWriter instance rewrites your raw data locally in a format that Zilliz Cloud understands. | Python"
 type: docx
 token: Tn2jd8OH1oMukFxJDsgcOSxCnrg
 sidebar_position: 3

@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "create_collection() | Python | MilvusClient"
 slug: /python/python/Collections-create_collection
+sidebar_label: "create_collection()"
 beta: false
 notebook: false
+description: "This operation supports creating a collection in two distinct ways quick setup or custom setup. | Python | MilvusClient"
 type: docx
 token: TziHdCu4VoURrfxAMsUcsRhQnub
 sidebar_position: 3
@@ -87,7 +90,7 @@ create_collection(
 
     Whether the primary field automatically increments upon data insertions into this collection.
 
-    The value defaults to **False**. Setting this to **True** makes the primary field automatically increment. 
+    The value defaults to **False**. Setting this to **True** makes the primary field automatically increment. In this case, the primary field should not be included in the data to insert to avoid errors. The auto-generated IDs have a fixed length and cannot be altered.
 
     This parameter is designed for the quick setup of a collection and will be ignored if **schema** is not **None**.
 

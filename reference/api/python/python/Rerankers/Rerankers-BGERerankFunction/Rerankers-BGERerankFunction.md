@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "BGERerankFunction | Python"
 slug: /python/python/Rerankers-BGERerankFunction
+sidebar_label: "BGERerankFunction"
 beta: false
 notebook: false
+description: "BGERerankFunction is a class in milvusmodel that takes a query and document as input and directly returns a similarity score instead of embeddings. This functionality uses the underlying BGE reranking model. | Python"
 type: docx
 token: GxAZd9O9gozzhExhMHWcMnXPngh
 sidebar_position: 1

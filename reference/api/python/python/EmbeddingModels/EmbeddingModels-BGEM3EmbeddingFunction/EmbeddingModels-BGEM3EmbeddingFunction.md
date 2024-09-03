@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "BGEM3EmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-BGEM3EmbeddingFunction
+sidebar_label: "BGEM3EmbeddingFunction"
 beta: false
 notebook: false
+description: "BGEM3EmbeddingFunction is a class in pymilvus that handles encoding text into embeddings using the BGE M3 model to support embedding retrieval in Milvus. | Python"
 type: docx
 token: XYSVdCqCDoJ9Y5xqKEAceYkpnnh
 sidebar_position: 1

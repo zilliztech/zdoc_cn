@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "Connections | Python | ORM"
 slug: /python/python/ORM-Connections
+sidebar_label: "Connections"
 beta: false
 notebook: false
+description: "A Connections instance represents a pool of connections to your Zilliz Cloud clusters. | Python | ORM"
 type: docx
 token: A96udk9seoF5x5xywQZcLasanIe
 sidebar_position: 3

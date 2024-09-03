@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "VoyageEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-VoyageEmbeddingFunction
+sidebar_label: "VoyageEmbeddingFunction"
 beta: false
 notebook: false
+description: "VoyageEmbeddingFunction is a class in pymilvus that handles encoding text into embeddings using Voyage models to support embedding retrieval in Milvus. | Python"
 type: docx
 token: HEyLd2lxzo3bl4xqVBOco8vWn1c
 sidebar_position: 3

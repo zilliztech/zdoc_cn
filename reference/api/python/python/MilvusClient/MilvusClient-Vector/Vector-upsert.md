@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "upsert() | Python | MilvusClient"
 slug: /python/python/Vector-upsert
+sidebar_label: "upsert()"
 beta: false
 notebook: false
+description: "This operation inserts or updates data in a specific collection. | Python | MilvusClient"
 type: docx
 token: WRYFdoDe8ofrlDxxTxQcdoJjnAh
 sidebar_position: 6

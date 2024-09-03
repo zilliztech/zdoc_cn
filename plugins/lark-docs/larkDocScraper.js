@@ -15,11 +15,13 @@ class larkDocScraper {
         this.base = base_app_id
         this.target_type = target_type
         this.doc_source_dir = doc_source_dir
+
+        // fs.rmSync(this.doc_source_dir, { recursive: true, force: true })
     }
 
-    async fetch(recursive=false, page_token=null) {
+    async fetch(recursive=false, page_token=null) { 
         if (!page_token) {
-            page_token = this.root      
+            page_token = this.root
         }
 
         const fetcher = new tokenFetcher()
@@ -138,7 +140,7 @@ class larkDocScraper {
 
         this.records = records
 
-        fs.writeFileSync(`records.json`, JSON.stringify(this.records, null, 2))
+        // fs.writeFileSync(`records.json`, JSON.stringify(this.records, null, 2))
 
         const slugs = {}
         if (records.length > 0) {
@@ -150,7 +152,7 @@ class larkDocScraper {
                 }
             }
         }
-
+        
         const slugs_arr = this.__uniquify(Object.values(slugs).map(s => s.slug instanceof Array ? s.slug[0][s.slug[0].type] : s.slug))
         const slug_keys = Object.keys(slugs)
 
@@ -161,10 +163,10 @@ class larkDocScraper {
                 slugs[s].slug = slugs_arr[i]
             }
         })
-        
+
         this.slugs = slugs
 
-        fs.writeFileSync(`slugs.json`, JSON.stringify(this.slugs, null, 2))
+        // fs.writeFileSync(`slugs.json`, JSON.stringify(this.slugs, null, 2))
     }
 
     __uniquify(arr) {
@@ -208,7 +210,6 @@ class larkDocScraper {
 
         return slug
     }
-
 
     async __split_one_pager(node) {
         if (!this.records) {
@@ -504,7 +505,6 @@ class larkDocScraper {
             }
         }
     }
-
 
     async __fetch_sheet_meta(sheetToken, sheetTitle) {
         const sheetMetaUrl = `${FEISHU_HOST}/open-apis/sheets/v3/spreadsheets/${sheetToken}/sheets/${sheetTitle}`

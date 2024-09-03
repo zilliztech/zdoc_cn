@@ -12,48 +12,48 @@ module.exports = function (context, options) {
                 .option('-s, --specifications <specifications>', 'Specifications of the API')
                 .option('-l, --lang <lang>', 'Language of the API Reference', 'en-US')
                 .option('-o, --output_path <target_path>', 'Target path of the API Reference', 'reference/api/restful/restful')
-                .option('-i, --strings <strings>', 'Localization strings')
-                .option('-g, --generate', 'Generate localization strings')
+                .option('-i, --strings <strings>', 'Localization strings for Chinese docs')
+                .option('-t, --target <string>', 'Publication target of the API Reference', 'zilliz')
                 .action((opts) => {
                     let lang = opts.lang
+                    let target = opts.target
                     let target_path = opts.output_path
-                    let specifications = opts.specifications;
-                    let strings = opts.strings;
+                    let specifications;
+                    let strings;
 
-                    if (opts.generate && opts.specifications && opts.strings) {
-                        const resti18n = new RestI18N(
-                            specifications,
-                            strings,
-                        )
-                        resti18n.generate_strings()
+                    console.log('Fetching docs from Apifox...')
+
+                    if (opts.specifications === undefined) {
+                        console.log('Please provide specifications')
                         return
                     } else {
-                        if (opts.specifications === undefined) {
-                            console.log('Please provide specifications')
-                            return
-                        } else {
-                            specifications = JSON.parse(fs.readFileSync(opts.specifications, 'utf-8'))
-                        }
-    
-                        if (opts.lang === 'zh-CN' && opts.strings === undefined) {
-                            console.log('Please provide the localization strings')
-                            return
-                        } 
-    
-                        if (opts.lang === 'zh-CN') {
-                            strings = fs.readFileSync(opts.strings, 'utf-8').split('\n')
-                        }
-    
-                        const refGen = new RefGen({
-                            specifications,
-                            lang,
-                            target_path,
-                            strings,
-                        })
-    
-                        refGen.make_groups()
-                        refGen.write_refs()
+                        specifications = JSON.parse(fs.readFileSync(opts.specifications, 'utf-8'))
                     }
+
+                    if (opts.lang === 'zh-CN' && opts.strings === undefined) {
+                        console.log('Please provide the localization strings for Chinese docs')
+                        return
+                    } 
+
+                    if (opts.lang === 'zh-CN') {
+                        strings = fs.readFileSync(opts.strings, 'utf-8').split('\n')
+                    }
+
+                    const refGen = new RefGen({
+                        specifications,
+                        lang,
+                        target,
+                        target_path,
+                        strings,
+                    })
+
+                    folders = fs.readdirSync(target_path).filter(f => fs.statSync(target_path + '/' + f).isDirectory())
+                    for (let folder of folders) {
+                        fs.rmSync(target_path + '/' + folder, { recursive: true, force: true })
+                    }
+
+                    refGen.make_groups()
+                    refGen.write_refs()
                 })
             }
         }

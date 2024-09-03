@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "CollectionSchema | Python | ORM"
 slug: /python/python/ORM-CollectionSchema
+sidebar_label: "CollectionSchema"
 beta: false
 notebook: false
+description: "A CollectionSchema instance represents the schema of a collection. A schema sketches the structure of a collection. | Python | ORM"
 type: docx
 token: WToudUwm4oVXeKxLg3jcj3IAnjh
 sidebar_position: 2

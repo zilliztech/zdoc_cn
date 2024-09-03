@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "SentenceTransformerEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-SentenceTransformerEmbeddingFunction
+sidebar_label: "SentenceTransformerEmbeddingFunction"
 beta: false
 notebook: false
+description: "SentenceTransformerEmbeddingFunction is a class in pymilvus that handles encoding text into embeddings using Sentence Transformer models to support embedding retrieval in Milvus. | Python"
 type: docx
 token: JOFedA4h8otTjHxsYQ7cnjsunHd
 sidebar_position: 3

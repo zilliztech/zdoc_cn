@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "\_\_call\_\_() | Python"
 slug: /python/python/BGEM3EmbeddingFunction-__call__
+sidebar_label: "__call__()"
 beta: false
 notebook: false
+description: "This operation in BGEM3EmbeddingFunction takes a list of text strings and directly encodes them into vector embeddings. | Python"
 type: docx
 token: K7qWdSwtNo976VxcvopczGLjnLf
 sidebar_position: 4

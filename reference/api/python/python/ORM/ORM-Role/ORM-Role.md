@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "Role | Python | ORM"
 slug: /python/python/ORM-Role
+sidebar_label: "Role"
 beta: false
 notebook: false
+description: "A Role instance represents a role with specific privileges to access your . | Python | ORM"
 type: docx
 token: LZL1d0kckouPXNxJLCmcwbCTnkG
 sidebar_position: 11

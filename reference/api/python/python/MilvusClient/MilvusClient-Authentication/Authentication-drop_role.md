@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: pythonSidebar
+title: "drop_role() | Python | MilvusClient"
 slug: /python/python/Authentication-drop_role
+sidebar_label: "drop_role()"
 beta: false
 notebook: false
+description: "This operation drops a custom role. | Python | MilvusClient"
 type: docx
 token: Vmxpd3MttodOE3x3V11cVTeunDh
 sidebar_position: 5
