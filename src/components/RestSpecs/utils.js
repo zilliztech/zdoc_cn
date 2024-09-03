@@ -62,40 +62,43 @@ export const textFilter =  (text, targets) => {
 }
 
 const matchFilterTags = (text) => {
-    const startTagRegex = /<(include|exclude) target="(.+?)"/gm
-    const endTagRegex = /<\/(include|exclude)>/gm
-    const matches = [... text.matchAll(startTagRegex)]
     var returns = []
-
-    matches.forEach(match => {
-        var tag = match[1]
-        var rest = text.slice(match.index)
-        
-        var closeTagRegex = new RegExp(`</${tag}>`, 'gm')
-        var closeTagMatch = [... rest.matchAll(closeTagRegex)]
-        
-        var startIndex = match.index
-        var endIndex = 0
-        
-        for (let i = 0; i < closeTagMatch.length; i++) {
-            var t = text.slice(startIndex, startIndex+closeTagMatch[i].index+closeTagMatch[i][0].length)
-        
-            var startCount = t.match(startTagRegex) ? t.match(startTagRegex).length : 0
-            var endCount = t.match(endTagRegex) ? t.match(endTagRegex).length : 0
+    if (text) {
+        const startTagRegex = /<(include|exclude) target="(.+?)"/gm
+        const endTagRegex = /<\/(include|exclude)>/gm
+        const matches = [... text.matchAll(startTagRegex)]
     
-            if (startCount === endCount) {
-                endIndex = startIndex + closeTagMatch[i].index + closeTagMatch[i][0].length
-                break
-            }
-        }
+    
+        matches.forEach(match => {
+            var tag = match[1]
+            var rest = text.slice(match.index)
+            
+            var closeTagRegex = new RegExp(`</${tag}>`, 'gm')
+            var closeTagMatch = [... rest.matchAll(closeTagRegex)]
+            
+            var startIndex = match.index
+            var endIndex = 0
+            
+            for (let i = 0; i < closeTagMatch.length; i++) {
+                var t = text.slice(startIndex, startIndex+closeTagMatch[i].index+closeTagMatch[i][0].length)
+            
+                var startCount = t.match(startTagRegex) ? t.match(startTagRegex).length : 0
+                var endCount = t.match(endTagRegex) ? t.match(endTagRegex).length : 0
         
-        returns.push({
-            tag: tag,
-            target: match[2],
-            startIndex: startIndex,
-            endIndex: endIndex
-        })           
-    })
+                if (startCount === endCount) {
+                    endIndex = startIndex + closeTagMatch[i].index + closeTagMatch[i][0].length
+                    break
+                }
+            }
+            
+            returns.push({
+                tag: tag,
+                target: match[2],
+                startIndex: startIndex,
+                endIndex: endIndex
+            })           
+        })
+    }
 
     return returns
 }

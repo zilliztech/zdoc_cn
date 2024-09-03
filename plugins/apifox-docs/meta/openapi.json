@@ -18903,9 +18903,7 @@
 										"description": "The name of the target collection.\nSetting this to a non-existing collection results in an error.",
 										"x-i18n": {
 											"zh-CN": {
-												"description": {
-													"description": "目标 Collection 的名称。设置为不存在的 Collection 将导致错误。"
-												}
+												"description": "目标 Collection 的名称。设置为不存在的 Collection 将导致错误。"
 											}
 										}
 									},
