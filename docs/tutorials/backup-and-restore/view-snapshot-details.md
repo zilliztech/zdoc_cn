@@ -27,7 +27,7 @@ import Admonition from '@theme/Admonition';
 
 ![view_all_backup_files_cn](/img/view_all_backup_files_cn.png)
 
-## 查看备份文件详情{##view-backup-file-details}
+## 查看备份文件详情{#view-backup-file-details}
 
 ![view_backup_files_details_cn](/img/view_backup_files_details_cn.png)
 

@@ -96,5 +96,5 @@ import Admonition from '@theme/Admonition';
 
 - [删除组织](./delete-your-organization)
 
-- [查看事件](./view-activities_1) 
+- [查看事件](./view-activities) 
 

@@ -107,6 +107,8 @@ with open('path/to/medium_articles_2020_dpr.json') as f:
 
 - 腾讯云：[导出对象 URL](https://www.tencentcloud.com/zh/document/product/436/42391) 和[临时密钥生成及使用指引](https://cloud.tencent.com/document/product/598/37140)。
 
+- 亚马逊云科技：[使用预签名 URL 共享对象](https://docs.amazonaws.cn/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html)和[使用长期凭证进行身份验证](https://docs.amazonaws.cn/sdkref/latest/guide/access-iam-users.html)。
+
 ![zh_import_data_from_object_storage](/img/zh_import_data_from_object_storage.png)
 
 ## 结果验证{#verify-the-result}
