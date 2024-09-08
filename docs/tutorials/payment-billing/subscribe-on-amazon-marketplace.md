@@ -4,7 +4,7 @@ beta: FALSE
 notebook: FALSE
 type: origin
 token: LNxnwCaoeiwvxVkQqCTcWmMFn5g
-sidebar_position: 2
+sidebar_position: 0
 keywords: 
   - 向量数据库
   - zilliz
@@ -24,7 +24,7 @@ Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>通过亚马逊云科技 Marketplace 订阅后，您可以<a href="./create-cluster">创建</a><strong>阿里云、腾讯云和亚马逊云科技</strong>实例。亚马逊云科技 Marketplace 仅为支付和订阅方式，不影响集群创建时的云服务提供商。</p>
+<p>订阅后，您可以通过亚马逊云科技 Marketplace 支付亚马逊云科技集群的用量。如果您在 Zilliz Cloud 使用了多云实例，也可通过亚马逊云科技 Marketplace 统一支付。</p>
 
 </Admonition>
 

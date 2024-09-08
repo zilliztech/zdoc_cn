@@ -367,7 +367,7 @@ Zilliz Cloud 还支持通过 Zilliz Cloud 控制台或使用 RESTful API / SDK �
        </tr>
        <tr>
       <td><p><strong>宁夏</strong></p></td>
-      <td><p><code>s3://bucket-name/object-name</code></p><p><code>https://bucket-name.s3.northwest-1.amazonaws.com.cn/object-name</code></p><p><code>https://s3.northwest-1.amazonaws.com.cn/bucket-name/object-name</code></p></td>
+      <td><p><code>https://bucket-name.s3.northwest-1.amazonaws.com.cn/object-name</code></p><p><code>https://s3.northwest-1.amazonaws.com.cn/bucket-name/object-name</code></p><p><code>s3://bucket-name/object-name</code></p></td>
       <td><p><code>northwest-1</code></p></td>
        </tr>
     </table>
