@@ -606,7 +606,7 @@ class larkDocWriter {
             keywords = "keywords: \n  - " + keywords.split(',').map(item => item.trim()).join('\n  - ') + '\n'
         }
 
-        if (displayed_sidebar === 'default') {
+        if (displayed_sidebar === 'default' || displayed_sidebar === 'onPremiseSidebar') {
             displayed_sidebar = ''
         } else {
             slug = `${displayed_sidebar.replace('Sidebar', '').trim()}/${slug}`

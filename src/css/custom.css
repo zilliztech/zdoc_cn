@@ -110,6 +110,8 @@ section.row > article.col--6 {
 
 section.row > article > a.padding--lg {
   padding: 0 1rem !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 section.row > article > a > h2 span.tooltip {

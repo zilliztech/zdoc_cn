@@ -66,6 +66,23 @@ const config = {
       },
     ],
     [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'onpremise',
+        path: 'onpremise',
+        breadcrumbs: false,
+        routeBasePath: 'on-premise',
+        sidebarPath: require.resolve('./sidebarsOnPremise.js'),
+        lastVersion: 'current',
+        versions: {
+          current: {
+            "label": "v2.4.x",
+            "path": "v2.4.x",
+          }
+        }
+      }
+    ],
+    [
       'docusaurus-gtm-plugin',
       {
         id: 'GTM-MBBL6Z9Q',
@@ -85,8 +102,21 @@ const config = {
             imageDir: 'static/img',
           },
           paas: {
-            outputDir: 'versioned_docs/version-byoc/tutorials',
+            outputDir: 'onpremise/docs/vdb',
             imageDir: 'static/byoc',
+          }
+        }
+      },
+      onpremise: {
+        root: 'PXwawNqh0i40H4krMYlc6qgZnKe',
+        base: 'V7t6bcQWiaDL99sgUkwcEIJ0nUb',
+        sourceType: 'wiki',
+        displayedSidebar: 'onPremiseSidebar',
+        docSourceDir: './plugins/lark-docs/meta/sources/onpremise',
+        targets: {
+          paas: {
+            outputDir: 'onpremise/docs/ops',
+            imageDir: 'static/img'
           }
         }
       },
@@ -214,6 +244,13 @@ const config = {
             className: 'header-search-link',
           },
           {
+            type: 'docsVersionDropdown',
+            position: 'right',
+            dropdownItemsAfter: [{to: '/versions', label: '所有版本'}],
+            dropdownActiveClassDisabled: true,            
+            docsPluginId: 'onpremise',
+          },
+          {
             href: 'https://support.zilliz.com/hc/zh-cn/',
             icon: '/img/icons/support.svg',
             label: '技术支持',
@@ -237,6 +274,12 @@ const config = {
             label: "开发指南",
             position: 'left',
             className: 'header-link',
+          },
+          {
+            href: '/on-premise/v2.4.x/on-premise-overview',
+            label: "私有化部署",
+            position: 'left',
+            className: 'header-link'
           },
           {
             type: 'dropdown',

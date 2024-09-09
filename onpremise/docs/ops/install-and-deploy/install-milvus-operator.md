@@ -1,0 +1,105 @@
+---
+title: "安装 Milvus Operator | Cloud"
+slug: /install-milvus-operator
+sidebar_label: "安装 Milvus Operator"
+beta: FALSE
+notebook: FALSE
+description: "Milvus Operator 是一种可帮助您在目标 Kubernetes 集群上部署和管理包括所有 Milvus 组件和相关依赖项的 Milvus 服务栈的解决方案。本节将介绍如何安装 Milvus Operator。 | Cloud"
+type: origin
+token: Ksb3wZc3diThypk79NQc8FfznMg
+sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - 私有部署
+  - milvus
+  - 大模型向量数据库
+  - 部署运维手册
+  - milvus operator
+
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# 安装 Milvus Operator
+
+Milvus Operator 是一种可帮助您在目标 Kubernetes 集群上部署和管理包括所有 Milvus 组件和相关依赖项的 Milvus 服务栈的解决方案。本节将介绍如何安装 Milvus Operator。
+
+## 前提条件{#prerequisites}
+
+在安装 Milvus Operator 前，请确认
+
+- Kubernetes 集群中已部署的 StorageClass 支持创建以 ReadWriteOnce 模式访问的 PersistentVolume (PV)。
+
+- Kubernetes 集群中已部署的 StorageClass 允许磁盘扩容，即 StorageClass 的allowVolumeExpansion 已设置为 true。
+
+## 安装 Milvus Operator{#install-milvus-operator}
+
+可按如下方式获取 Zilliz 提供的 Milvus Operator 声明文件，并安装 Milvus Operator。
+
+1. 获取 Milvus Operator 声明文件。
+
+    ```shell
+    $ wget milvus-operator-no-webhook-v1.0.6.yaml
+    ```
+
+1. 安装 Milvus Operator。
+
+    ```shell
+    $ kubectl apply -f milvus-operator-no-webhook-v1.0.6.yaml
+    ```
+
+    <Admonition type="info" icon="📘" title="Notes">
+
+    <p>如果执行上述命令后提示没有权限，您可以参考如下声明文件向 Kubernetes 管理员申请更高权限，或由管理员代为安装。</p>
+    <ul>
+    <li>clusterrole.yaml</li>
+    </ul>
+
+    </Admonition>
+
+## 安装后验证{#verification-afterwards}
+
+您可按照如下方式验证 Milvus Operator 是否安装成功。
+
+```shell
+$ kubectl get pods -n milvus-operator
+
+NAME                               READY   STATUS    RESTARTS   AGE
+milvus-operator-5fd77b87dc-msrk4   1/1     Running   0          46s
+```
+
+当 Milvus Operator pod 的 **STATUS** 为 **Running**，且 **READY** 为 **1/1** 时，说明 Milvus Operator 安装成功。
+
+## 后续步骤{#follow-ups}
+
+在 Milvus Operator 安装成功后，即可[部署 Milvus 集群](./deploy-milvus-cluster)。
+
+## 常见问题{#faqs}
+
+1. Milvus Operator pod 的 **STATUS** 为 **Pending**，如何解决？
+
+    当 Milvus Operator pod 的 **STATUS** 为 **Pending** 时，表明 Kubernetes 集群当前无法调度资源安装 Milvus Operator。您需要查看当前集群是否有足够资源可供调度，或者咨询 Kubernetes 集群管理员。此时，可能需要为当前部署添加特定的资源调度规则。
+
+1. Milvus Operator pod 的 **STATUS** 为 **ImagePullBackoff** 或 **ImagePullError**，如何解决？
+
+    当 Milvus Operator pod 的 **STATUS** 为 **ImagePullBackoff** 或 **ImagePullError** 时，表明 Kubernetes 集群当前无法获取指定镜像。请检查并修改镜像仓库配置。
+
+1. Milvus Operator pod 的 **STATUS** 为 **Error** 或 **CarchLoopBackoff**，如何解决？
+
+    当 Milvus Operator pod 的 **STATUS** 为 **Error** 或 **CarchLoopBackoff** 时，表明程序运行异常或内存不足。请立即向 Zilliz 报告此异常，并申请 Zilliz 支持团队介入排查。在申请 Zilliz 支持团队介入前，请准备如下信息：
+
+    - 获取 Milvus Operator pod 的运行日志。
+
+        ```shell
+        $ kubectl logs milvus-operator-5fd77b87dc-msrk4
+        ```
+
+    - 获取 Milvus Operator pod 的详情。
+
+        ```shell
+        kubectl -n milvus-operator describe milvus-operator-5fd77b87dc-msrk4
+        ```
+
+    在执行上述命令时，请替换 `milvus-operator-5fd77b87dc-msrk4` 为您的 Milvus Operator pod 名称。
+
