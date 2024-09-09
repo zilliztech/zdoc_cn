@@ -363,8 +363,6 @@ const ExampleResponses = ({ examples, lang, target, selectedResponse }) => {
         return condition
     })
 
-    console.log( selectedResponse, validKeys)
-
     const defaultValue = (examples[validKeys[0]].summary).toUpperCase()
     const availableLabels = validKeys.map(key => examples[key].summary.toUpperCase())
     const [ selected, setSelected ] = useState(defaultValue)
