@@ -10,13 +10,14 @@ const Jimp = require("jimp");
 const _ = require('lodash')
 
 class larkDocWriter {
-    constructor(root_token, base_token, displayedSidebar, docSourceDir='plugins/lark-docs/meta/sources', imageDir='static/img', targets='zilliz.saas', skip_image_download=false) {
+    constructor(root_token, base_token, displayedSidebar, robots, docSourceDir='plugins/lark-docs/meta/sources', imageDir='static/img', targets='zilliz.saas', skip_image_download=false) {
         this.root_token = root_token
         this.base_token = base_token
         this.displayedSidebar = displayedSidebar
         this.docSourceDir = docSourceDir
         this.page_blocks = []
         this.blocks = []
+        this.robots = robots
         this.targets = targets
         this.skip_image_download = skip_image_download
         this.imageDir = imageDir
@@ -354,6 +355,8 @@ class larkDocWriter {
             suffix = 'RESTful | Data Plane'
         } else if (path.includes('restful')) {
             suffix = 'RESTful'
+        } else if (path.includes('onpremise')) {
+            suffix = 'On-Premise'
         }
 
         return suffix
@@ -602,6 +605,8 @@ class larkDocWriter {
     }
 
     __front_matters (title, suffix, slug, beta, notebook, type, token, sidebar_position=undefined, sidebar_label="", keywords="", displayed_sidebar=this.displayedSidebar, description="") {
+        var meta = ''
+        
         if (keywords !== "") {
             keywords = "keywords: \n  - " + keywords.split(',').map(item => item.trim()).join('\n  - ') + '\n'
         }
@@ -617,6 +622,12 @@ class larkDocWriter {
             description = description.trim().replace('\n', '|').replace(/\[(.*)\]\(.*\)/g, '$1').replace(':', '').replace(/\*+|_+/g, '')
         }
 
+        if (this.robots === 'noindex') {
+            meta = '\n\n<head>\n' +
+            '  <meta name="robots" content="noindex" />\n' +
+            '</head>\n'
+        }
+
         let front_matter = '---\n' + 
         `title: "${title} | ${suffix}"` + '\n' +
         `slug: /${slug}` + '\n' +
@@ -629,7 +640,7 @@ class larkDocWriter {
         `sidebar_position: ${sidebar_position}` + '\n' +
         keywords +
         displayed_sidebar + '\n' +
-        '---'
+        '---' + meta
 
         return front_matter
     }

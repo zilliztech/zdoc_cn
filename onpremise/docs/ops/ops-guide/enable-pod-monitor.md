@@ -1,10 +1,10 @@
 ---
-title: "配置监控告警 | Cloud"
+title: "配置监控告警 | On-Premise"
 slug: /enable-pod-monitor
 sidebar_label: "配置监控告警"
 beta: FALSE
 notebook: FALSE
-description: "在部署 Milvus 集群时，可以对 Milvus 集群、Pulsar 和 etcd 等组件开启指标采集能力。本章介绍了如何为 Milvus 集群和 Pulsar、etcd 等三方组件配置指标采集能力，介绍各组件相关核心指标，并提供适用于各组件的 Grafana 模板，以便更好的了解 Milvus 集群的运行情况。 | Cloud"
+description: "在部署 Milvus 集群时，可以对 Milvus 集群、Pulsar 和 etcd 等组件开启指标采集能力。本章介绍了如何为 Milvus 集群和 Pulsar、etcd 等三方组件配置指标采集能力，介绍各组件相关核心指标，并提供适用于各组件的 Grafana 模板，以便更好的了解 Milvus 集群的运行情况。 | On-Premise"
 type: origin
 token: IpeGwMrzdiB0WxkymsgcYHRKnLb
 sidebar_position: 5
@@ -17,6 +17,11 @@ keywords:
   - 监控告警
 
 ---
+
+<head>
+  <meta name="robots" content="noindex" />
+</head>
+
 
 import Admonition from '@theme/Admonition';
 

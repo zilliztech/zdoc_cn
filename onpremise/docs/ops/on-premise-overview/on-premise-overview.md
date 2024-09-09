@@ -1,10 +1,10 @@
 ---
-title: "概述 | Cloud"
+title: "概述 | On-Premise"
 slug: /on-premise-overview
 sidebar_label: "概述"
 beta: FALSE
 notebook: FALSE
-description: "本运维手册为在私有环境部署和运维 Milvus 提供指导，对系统的运行环境、安装部署、监控告警、故障运维等方法进行介绍，确保系统的稳定性和高效运行。 | Cloud"
+description: "本运维手册为在私有环境部署和运维 Milvus 提供指导，对系统的运行环境、安装部署、监控告警、故障运维等方法进行介绍，确保系统的稳定性和高效运行。 | On-Premise"
 type: origin
 token: Juraw2S3DiibERk6RJkch0FQnsd
 sidebar_position: 1
@@ -17,6 +17,11 @@ keywords:
   - 概述
 
 ---
+
+<head>
+  <meta name="robots" content="noindex" />
+</head>
+
 
 import Admonition from '@theme/Admonition';
 

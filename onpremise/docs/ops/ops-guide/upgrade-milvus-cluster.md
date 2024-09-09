@@ -1,10 +1,10 @@
 ---
-title: "升级 Milvus 集群 | Cloud"
+title: "升级 Milvus 集群 | On-Premise"
 slug: /upgrade-milvus-cluster
 sidebar_label: "升级 Milvus 集群"
 beta: FALSE
 notebook: FALSE
-description: "Milvus 集群支持通过 Kubernetes 的滚动更新能力对各组件进行滚动升级，从而在不停机的情况下，将 Milvus 集群更新到指定版本。本章将介绍如何进行升级前检查、执行升级和查看升级进度等操作的具体步骤。 | Cloud"
+description: "Milvus 集群支持通过 Kubernetes 的滚动更新能力对各组件进行滚动升级，从而在不停机的情况下，将 Milvus 集群更新到指定版本。本章将介绍如何进行升级前检查、执行升级和查看升级进度等操作的具体步骤。 | On-Premise"
 type: origin
 token: Mv9kwLJBNiXJpqkzDu6cw2MInAb
 sidebar_position: 2
@@ -17,6 +17,11 @@ keywords:
   - 升级 Milvus 集群
 
 ---
+
+<head>
+  <meta name="robots" content="noindex" />
+</head>
+
 
 import Admonition from '@theme/Admonition';
 

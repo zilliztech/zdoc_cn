@@ -1,10 +1,10 @@
 ---
-title: "安装 Milvus Operator | Cloud"
+title: "安装 Milvus Operator | On-Premise"
 slug: /install-milvus-operator
 sidebar_label: "安装 Milvus Operator"
 beta: FALSE
 notebook: FALSE
-description: "Milvus Operator 是一种可帮助您在目标 Kubernetes 集群上部署和管理包括所有 Milvus 组件和相关依赖项的 Milvus 服务栈的解决方案。本节将介绍如何安装 Milvus Operator。 | Cloud"
+description: "Milvus Operator 是一种可帮助您在目标 Kubernetes 集群上部署和管理包括所有 Milvus 组件和相关依赖项的 Milvus 服务栈的解决方案。本节将介绍如何安装 Milvus Operator。 | On-Premise"
 type: origin
 token: Ksb3wZc3diThypk79NQc8FfznMg
 sidebar_position: 1
@@ -17,6 +17,11 @@ keywords:
   - milvus operator
 
 ---
+
+<head>
+  <meta name="robots" content="noindex" />
+</head>
+
 
 import Admonition from '@theme/Admonition';
 

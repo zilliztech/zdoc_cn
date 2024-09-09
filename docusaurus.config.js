@@ -112,6 +112,7 @@ const config = {
         base: 'V7t6bcQWiaDL99sgUkwcEIJ0nUb',
         sourceType: 'wiki',
         displayedSidebar: 'onPremiseSidebar',
+        robots: 'noindex',
         docSourceDir: './plugins/lark-docs/meta/sources/onpremise',
         targets: {
           paas: {

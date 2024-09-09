@@ -1,10 +1,10 @@
 ---
-title: "环境需求 | Cloud"
+title: "环境需求 | On-Premise"
 slug: /requirements
 sidebar_label: "环境需求"
 beta: FALSE
 notebook: FALSE
-description: "为确保 Milvus 的运行环境稳定，在安装部署前需要按照确认运行环境满足如下软硬件要求。 | Cloud"
+description: "为确保 Milvus 的运行环境稳定，在安装部署前需要按照确认运行环境满足如下软硬件要求。 | On-Premise"
 type: origin
 token: JexBwOSVxiYpa3k5ww4cmbw3nOb
 sidebar_position: 1
@@ -17,6 +17,11 @@ keywords:
   - 环境要求
 
 ---
+
+<head>
+  <meta name="robots" content="noindex" />
+</head>
+
 
 import Admonition from '@theme/Admonition';
 

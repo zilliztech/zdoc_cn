@@ -1,10 +1,10 @@
 ---
-title: "变更 Milvus 集群配置 | Cloud"
+title: "变更 Milvus 集群配置 | On-Premise"
 slug: /modify-milvus-configs
 sidebar_label: "变更 Milvus 集群配置"
 beta: FALSE
 notebook: FALSE
-description: "Milvus 集群支持在运行过程中对其配置及集群依赖的三方件配置进行变更。本章主要介绍如何变更 Milvus 集群配置和 Milvus 集群依赖的三方件配置。 | Cloud"
+description: "Milvus 集群支持在运行过程中对其配置及集群依赖的三方件配置进行变更。本章主要介绍如何变更 Milvus 集群配置和 Milvus 集群依赖的三方件配置。 | On-Premise"
 type: origin
 token: GcwEwsKfxiDY2jk3hjfcBMaAnld
 sidebar_position: 3
@@ -17,6 +17,11 @@ keywords:
   - 变更集群配置
 
 ---
+
+<head>
+  <meta name="robots" content="noindex" />
+</head>
+
 
 import Admonition from '@theme/Admonition';
 

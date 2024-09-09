@@ -41,7 +41,7 @@ module.exports = function (context, options) {
                         throw new Error(`Please provide a valid manual tag... \nAvailable manual tags: \n- ${manuals.join('\n- ')}`)
                     }
 
-                    const { root, base, sourceType, displayedSidebar, docSourceDir, targets } = manual
+                    const { root, base, sourceType, displayedSidebar, robots, docSourceDir, targets } = manual
 
                     // Intialize scraper and writer
                     const scraper = new docScraper(root, base, sourceType, docSourceDir)
@@ -78,8 +78,8 @@ module.exports = function (context, options) {
                         }
 
                         const writer = sourceType === 'wiki' || sourceType === 'onePager' ? 
-                            new docWriter(root, base, displayedSidebar, docSourceDir, imageDir, opts.pubTarget, opts.skipImageDown) : 
-                            new driveWriter(root, base, displayedSidebar, docSourceDir, imageDir, opts.pubTarget, opts.skipImageDown, opts.manual)
+                            new docWriter(root, base, displayedSidebar, robots, docSourceDir, imageDir, opts.pubTarget, opts.skipImageDown) : 
+                            new driveWriter(root, base, displayedSidebar, robots, docSourceDir, imageDir, opts.pubTarget, opts.skipImageDown, opts.manual)
 
                         // Add necessary imports to category pages
                         if (opts.postProcess) {

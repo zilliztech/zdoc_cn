@@ -1,10 +1,10 @@
 ---
-title: "获取镜像 | Cloud"
+title: "获取镜像 | On-Premise"
 slug: /obtain-images
 sidebar_label: "获取镜像"
 beta: FALSE
 notebook: FALSE
-description: "Milvus 私有化部署镜像由 Zilliz 提供。您可通过用户名/密码鉴权的方式从 Zilliz 的 Harbor 镜像仓库拉取对应版本镜像。在获取 Milvus 私有化部署镜像后，您可将获取到的镜像导入到本地镜像仓库环境进行安全扫描及部署。 | Cloud"
+description: "Milvus 私有化部署镜像由 Zilliz 提供。您可通过用户名/密码鉴权的方式从 Zilliz 的 Harbor 镜像仓库拉取对应版本镜像。在获取 Milvus 私有化部署镜像后，您可将获取到的镜像导入到本地镜像仓库环境进行安全扫描及部署。 | On-Premise"
 type: origin
 token: Vt09w1q6EiQA7hkwTFgcwQFtndh
 sidebar_position: 2
@@ -17,6 +17,11 @@ keywords:
   - 私有部署镜像
 
 ---
+
+<head>
+  <meta name="robots" content="noindex" />
+</head>
+
 
 import Admonition from '@theme/Admonition';
 

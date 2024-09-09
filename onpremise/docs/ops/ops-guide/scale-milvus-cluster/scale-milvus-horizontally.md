@@ -1,10 +1,10 @@
 ---
-title: "Milvus 集群横向扩缩容 | Cloud"
+title: "Milvus 集群横向扩缩容 | On-Premise"
 slug: /scale-milvus-horizontally
 sidebar_label: "横向扩缩容"
 beta: FALSE
 notebook: FALSE
-description: "横向扩缩容是指通过增加和减少 Milvus 集群各组件的副本数量对 Milvus 集群进行扩缩容。本节主要介绍如何对 Milvus 集群进行横向扩缩容。 | Cloud"
+description: "横向扩缩容是指通过增加和减少 Milvus 集群各组件的副本数量对 Milvus 集群进行扩缩容。本节主要介绍如何对 Milvus 集群进行横向扩缩容。 | On-Premise"
 type: origin
 token: VhFgwywnJiGGnKk8X68cjChPn0d
 sidebar_position: 1
@@ -17,6 +17,11 @@ keywords:
   - 概述
 
 ---
+
+<head>
+  <meta name="robots" content="noindex" />
+</head>
+
 
 import Admonition from '@theme/Admonition';
 

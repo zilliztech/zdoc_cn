@@ -1,10 +1,10 @@
 ---
-title: "部署 Milvus 集群 | Cloud"
+title: "部署 Milvus 集群 | On-Premise"
 slug: /deploy-milvus-cluster
 sidebar_label: "部署 Milvus 集群"
 beta: FALSE
 notebook: FALSE
-description: "本节将介绍在完成 Milvus Operator 安装后如何部署 Milvus 集群，包括如何规划 Milvus 集群资源、准备 Milvus 集群部署声明文件以及如何部署 Milvus 集群。 | Cloud"
+description: "本节将介绍在完成 Milvus Operator 安装后如何部署 Milvus 集群，包括如何规划 Milvus 集群资源、准备 Milvus 集群部署声明文件以及如何部署 Milvus 集群。 | On-Premise"
 type: origin
 token: J71GwWQZpijwEDkcD3ycczZOnXg
 sidebar_position: 2
@@ -17,6 +17,11 @@ keywords:
   - 部署 milvus 集群
 
 ---
+
+<head>
+  <meta name="robots" content="noindex" />
+</head>
+
 
 import Admonition from '@theme/Admonition';
 
