@@ -76,8 +76,8 @@ const config = {
         lastVersion: 'current',
         versions: {
           current: {
-            "label": "v2.4.x",
-            "path": "v2.4.x",
+            "label": "v2.4.11",
+            "path": "v2.4.11",
           }
         }
       }
@@ -275,12 +275,6 @@ const config = {
             label: "开发指南",
             position: 'left',
             className: 'header-link',
-          },
-          {
-            href: '/on-premise/v2.4.x/on-premise-overview',
-            label: "私有化部署",
-            position: 'left',
-            className: 'header-link'
           },
           {
             type: 'dropdown',
