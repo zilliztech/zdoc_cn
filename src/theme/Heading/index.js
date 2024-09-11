@@ -27,7 +27,7 @@ const BetaTagComponent = (children, tag) => (
                 borderRadius: '100px',
                 backgroundColor: tag === 'PUBLIC' ? '#175fff' : '#7F47FF',
               }}>
-              { `${tag.toUpperCase().slice(0,1)}${tag.toUpperCase().slice(1).toLowerCase()} Preview` }
+              { `${tag === 'PUBLIC' ? '公测版' : '内测版'}` }
           </span>        
         </div>    
 
