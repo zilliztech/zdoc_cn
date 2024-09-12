@@ -1395,6 +1395,10 @@ class larkDocWriter {
         if (url.startsWith('https://docs.zilliz.com.cn/')) {
             url = url.replace('https://docs.zilliz.com.cn/', '/');
         }
+
+        if (url.startsWith('https://docs.zilliz.com/')) {
+            url = url.replace('https://docs.zilliz.com/', '/');
+        }
             
         return url;
     }
