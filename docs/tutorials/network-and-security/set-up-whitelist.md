@@ -1,10 +1,19 @@
 ---
+title: "设置白名单 | Cloud"
 slug: /set-up-whitelist
+sidebar_label: "设置白名单"
 beta: FALSE
 notebook: FALSE
+description: "在 Zilliz Cloud 中，白名单是针对项目的安全设置，适用于项目下的所有集群。设置白名单后，仅白名单中的 IP 地址可以访问您项目下的所有集群。白名单能够有效降低受到恶意攻击的风险 | Cloud"
 type: origin
 token: RwEzw2l4siJB5Ake7FOcVU4knre
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 白名单
 
 ---
 

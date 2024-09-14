@@ -1,10 +1,19 @@
 ---
+title: "一致性水平 | Cloud"
 slug: /consistency-level
+sidebar_label: "一致性水平"
 beta: FALSE
 notebook: FALSE
+description: "在分布式数据库中，一致性水平确保在读写操作期间，每个节点或副本都能获取到相同的数据。Zilliz Cloud 提供 3 种一致性级别：Strong、Bounded 和 Eventually。Zilliz Cloud 默认采用的一致性水平为 Bounded。 | Cloud"
 type: origin
 token: IBY6wlhm5iLJsEkZWaGc0356nYi
 sidebar_position: 6
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 一致性
 
 ---
 

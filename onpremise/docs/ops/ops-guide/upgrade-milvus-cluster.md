@@ -38,11 +38,14 @@ Milvus 集群支持通过 [Kubernetes 的滚动更新](https://kubernetes.io/zh-
 
     执行 `kubectl get milvus` 命令，并查看命令返回情况。
 
-    ```shell
-    $ kubectl get milvus
+    ```bash
+    # add-command-prompt
+    kubectl get milvus
     
+    # output-start
     NAME         MODE      STATUS    UPDATED   AGE
     my-release   cluster   Healthy   True      14m
+    # output-end
     ```
 
     正常情况下，Milvus 集群的 **STATUS** 应为 **Healthy**，同时 **UPDATED** 应为 **True**。如果 Milvus 集群状态不正常，可参考[常见问题](./deploy-milvus-cluster#faqs)。
@@ -51,8 +54,9 @@ Milvus 集群支持通过 [Kubernetes 的滚动更新](https://kubernetes.io/zh-
 
     执行如下命令查看当前 Milvus 集群使用的镜像版本，并确保滚动升级功能已开启。
 
-    ```shell
-    $ kubectl get milvus -o\
+    ```bash
+    # add-command-prompt
+    kubectl get milvus -o\
       custom-columns='name:.metadata.name,image:.spec.components.image,\
       rollingUpdate:.spec.components.enableRollingUpdate'
     ```
@@ -60,21 +64,24 @@ Milvus 集群支持通过 [Kubernetes 的滚动更新](https://kubernetes.io/zh-
     命令返回如下：
 
     ```shell
-    name            image                       rollingUpdate
-    my-release      milvusdb/milvus:v2.4.9      true
+    name            image                                 rollingUpdate
+    my-release      userns/milvus-enterprise:v2.4.11      true
     ```
 
-    可以看到当前使用的镜像版本为 Milvus v2.4.9，并且已经开启了滚动升级功能。
+    可以看到当前使用的镜像版本为 v2.4.11，并且已经开启了滚动升级功能。
 
 ## 执行升级{#upgrade-milvus-cluster}
 
-如下示例假设升级目标为 **milvusdb/milvus:v2.4.10**。您可以执行如下命令开始将 Milvus 集群升级到目标镜像。
+如下示例假设升级目标为 **userns/milvus-enterprise:v2.4.11**。您可以执行如下命令开始将 Milvus 集群升级到目标镜像。
 
-```shell
-$ export INST="my-release"
-$ export IMAGE="milvusdb/milvus:v2.4.10"
+```bash
+# add-command-prompt
+export INST="my-release"
+# add-command-prompt
+export IMAGE="userns/milvus-enterprise:v2.4.11"
 
-$ kubectl patch milvus $INST --type='json' \
+# add-command-prompt
+kubectl patch milvus $INST --type='json' \
       -p='[{"op": "replace", \
       "path": "/spec/components/image", \
       "value":"'$IMAGE'"}]'
@@ -82,8 +89,9 @@ $ kubectl patch milvus $INST --type='json' \
 
 在上述命令执行完成后，可以执行如下命令检查升级指令是否下发成功。
 
-```shell
-$ kubectl get milvus -o\
+```bash
+# add-command-prompt
+kubectl get milvus -o\
       custom-columns='name:.metadata.name,image:.spec.components.image,\
       rollingUpdate:.spec.components.enableRollingUpdate'
 ```
@@ -91,8 +99,8 @@ $ kubectl get milvus -o\
 命令返回应和如下类似：
 
 ```shell
-name            image                       rollingUpdate
-my-release      milvusdb/milvus:v2.4.10     true
+name            image                                rollingUpdate
+my-release      userns/milvus-enterprise:v2.4.11     true
 ```
 
 ## 查看升级进度{#check-upgrade-progress}
@@ -100,7 +108,8 @@ my-release      milvusdb/milvus:v2.4.10     true
 您可通过如下命令查看Milvus 集群的详细升级进度。
 
 ```bash
-$ kubectl get milvus -o custom-columns="\
+# add-command-prompt
+kubectl get milvus -o custom-columns="\
     name:.metadata.name,\
     updated:.status.conditions[4].status,\
     message:.status.conditions[4].message"

@@ -1,7 +1,10 @@
 ---
+title: "FAQ：支付方式与账单 | CLOUD"
 slug: /faq-payment-and-billing
+sidebar_label: "FAQ：支付方式与账单"
 beta: FALSE
 notebook: FALSE
+description: " | CLOUD"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 13

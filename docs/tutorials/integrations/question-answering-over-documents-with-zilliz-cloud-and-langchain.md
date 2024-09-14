@@ -1,10 +1,20 @@
 ---
+title: "与 LangChain 集成搭建智能文档问答系统 | Cloud"
 slug: /question-answering-over-documents-with-zilliz-cloud-and-langchain
+sidebar_label: "与 LangChain 集成搭建智能文档问答系统"
 beta: FALSE
 notebook: FALSE
+description: "本文将演示如何使用 Zilliz Cloud 和 LangChain 搭建基于大语言模型（LLM）的问答系统。在本例中，我们将使用一个 1 CU 的 Cluster，还将使用 OpenAI 的 Embedding API 来获取指定文本的向量表示。现在就让我们开始吧。 | Cloud"
 type: origin
 token: Msbqwd1izicbFlkT56scmGlWnbb
 sidebar_position: 4
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 相似性
+  - langchain
 
 ---
 

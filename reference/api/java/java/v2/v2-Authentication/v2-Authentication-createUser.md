@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "createUser() | Java | v2"
 slug: /java/java/v2-Authentication-createUser
+sidebar_label: "createUser()"
 beta: false
 notebook: false
+description: "This operation creates a user. | Java | v2"
 type: docx
 token: BYksdftJSon0EMxNYn2c2FCpncd
 sidebar_position: 2

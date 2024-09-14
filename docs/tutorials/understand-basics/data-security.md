@@ -1,10 +1,19 @@
 ---
+title: "数据安全 | Cloud"
 slug: /data-security
+sidebar_label: "数据安全"
 beta: FALSE
 notebook: FALSE
+description: "数据安全是所有云平台的重中之重，Zilliz Cloud 也不例外。为了保障数据安全，Zilliz Cloud 在各个方面都提供了强大的措施，包括认证、访问控制、网络隔离、数据加密以及备份和恢复等。 | Cloud"
 type: origin
 token: E7X4wc69bibTo4kFfNic5hBVnhb
 sidebar_position: 7
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 数据安全
 
 ---
 

@@ -1,10 +1,19 @@
 ---
+title: "使用回收站 | Cloud"
 slug: /use-recycle-bin
+sidebar_label: "使用回收站"
 beta: FALSE
 notebook: FALSE
+description: "为进一步保护您的数据，任何删除的集群都会在回收站种保留 30 天。这样一来不论是因为操作失误还是试用到期或欠费导致集群删除，您都可以在 30 天内安全恢复集群数据。 | Cloud"
 type: origin
 token: XVQcw6qgxiC31ikfk06cOo1jnch
 sidebar_position: 6
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 回收站
 
 ---
 

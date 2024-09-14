@@ -1,11 +1,20 @@
 ---
+title: "通过 Web 控制台导入 | Cloud"
 slug: /import-data-on-web-ui
-sidebar_label: 控制台
+sidebar_label: "控制台"
 beta: FALSE
 notebook: FALSE
+description: "本文介绍如何通过 Zilliz Cloud Web 控制台将数据导入现有 Collection 中。 | Cloud"
 type: origin
 token: BXBvwZh9Yiis0Vk8LcdcjZSPnQd
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 导入
+  - 控制台
 
 ---
 
@@ -21,6 +30,8 @@ import Admonition from '@theme/Admonition';
 请确保已完成以下步骤：
 
 - 已创建集群。详情请参见[创建集群](./create-cluster)。
+
+- 已按照格式[准备](./prepare-source-data)需要导入的数据。更多详情，请参阅[用户指南：数据导入从入门到精通](./data-import-zero-to-hero)。
 
 - 已创建 Collection，且该 Collection 的 Schema 与示例数据集相匹配。已为该 Collection 创建索引，并已加载 Collection。详情请参见[管理 Collection](./manage-collections)。
 
@@ -94,17 +105,23 @@ with open('path/to/medium_articles_2020_dpr.json') as f:
 
 有关如何获取文件 URL 和访问密钥，请参见：
 
-- 阿里云：[获取单个或多个文件的 URL](https://help.aliyun.com/zh/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects?spm=a2c4g.11186623.0.i18) 和[创建 Access Key](https://help.aliyun.com/document_detail/53045.html?spm=a2c4g.53045.0.0.718a7f80sYRRJB)。
+- 阿里云：[获取单个或多个文件的 URL](https://help.aliyun.com/zh/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects?spm=a2c4g.11186623.0.i18) 和[创建 Access Key](https://help.aliyun.com/zh/ram/user-guide/create-an-accesskey-pair)。
 
-- 腾讯云：[导出对象 URL](https://www.tencentcloud.com/zh/document/product/436/42391) 和[临时密钥生成及使用指引](https://cloud.tencent.com/document/product/436/14048)。
+- 腾讯云：[导出对象 URL](https://www.tencentcloud.com/zh/document/product/436/42391) 和[临时密钥生成及使用指引](https://cloud.tencent.com/document/product/598/40488)。
+
+- 亚马逊云科技：[使用预签名 URL 共享对象](https://docs.amazonaws.cn/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html)和[使用长期凭证进行身份验证](https://docs.amazonaws.cn/sdkref/latest/guide/access-iam-users.html)。
+
+根据您的数据安全需求，您也可以使用 [Session Token](/docs/faq-data-import#can-i-use-session-tokens-when-importing-data-from-an-object-storage-service)。
 
 ![zh_import_data_from_object_storage](/img/zh_import_data_from_object_storage.png)
 
 ## 结果验证{#verify-the-result}
 
-单击**导入**后，后台开始导入数据，您可以实时查看导入进度。导入完成后，您将收到以下信息。此时，您可以查看导入详情或开始探索已导入的数据。
+单击**导入**后，Zilliz Cloud 会生成一条导入任务。您可以前往[任务中心](./job-center)查看导入进度及任务详情。
 
-![zh_data_import_complete](/img/zh_data_import_complete.png)
+## 支持的导入路径{#supported-object-paths}
+
+关于导入路径需遵循的格式要求，可查看[源数据路径拼接相关要求](./prepare-source-data#tips-on-import-paths)。
 
 ## 推荐阅读{#related-topics}
 

@@ -1,10 +1,20 @@
 ---
+title: "与 Cohere 集成搭建智能问答系统 | Cloud"
 slug: /question-answering-using-zilliz-cloud-and-cohere
+sidebar_label: "与 Cohere 集成搭建智能问答系统"
 beta: FALSE
 notebook: FALSE
+description: "本文将演示如何使用 Zilliz Cloud 和 Cohere 搭建基于 SQuAD 数据集 的问答系统。其中，Zilliz Cloud 负责提供向量数据库，Cohere 负责提供获取指定文字向量表示的接口。 | Cloud"
 type: origin
 token: N7KvwFAe8i7XWZk5aEGchRsynJA
 sidebar_position: 3
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 相似性
+  - cohere
 
 ---
 

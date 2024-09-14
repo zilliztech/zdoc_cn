@@ -1,10 +1,20 @@
 ---
+title: "与 OpenAI 集成搭建相似性搜索系统 | Cloud"
 slug: /similarity-search-with-zilliz-cloud-and-openai
+sidebar_label: "与 OpenAI 集成搭建相似性搜索系统"
 beta: FALSE
 notebook: FALSE
+description: "本文将讨论如何使用 OpenAI 的 Embedding API 与 Zilliz Cloud 搭建相似性搜索系统。 | Cloud"
 type: origin
 token: PMHbwHT0HiOnvDk8sUocOy34nPw
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 相似性
+  - openai
 
 ---
 

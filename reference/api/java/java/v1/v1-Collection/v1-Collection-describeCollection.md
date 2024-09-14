@@ -1,7 +1,10 @@
 ---
+title: "describeCollection() | Java | v1"
 slug: /java/v1-Collection-describeCollection
+sidebar_label: "describeCollection()"
 beta: FALSE
 notebook: FALSE
+description: "A MilvusClient interface. This method shows the details of a collection, e.g. name, schema. | Java | v1"
 type: origin
 token: D0cfwvTqMiyhSrkCUv4c1a2Fnjd#L4XLdP8yyoKRuNxBM7ScYodznke
 sidebar_position: 5
@@ -41,6 +44,11 @@ Methods of `DescribeCollectionParam.Builder`:
         <td><p>withCollectionName(String collectionName)</p></td>
         <td><p>Sets the collection name. Collection name cannot be empty or null.</p></td>
         <td><p>collectionName: The name of the collection to release.</p></td>
+    </tr>
+    <tr>
+        <td><p>withDatabaseName(String databaseName)</p></td>
+        <td><p>Sets the database name. database name can be null for default database.</p></td>
+        <td><p>databaseName: The database name.</p></td>
     </tr>
     <tr>
         <td><p>build()</p></td>

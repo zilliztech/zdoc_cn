@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "getLoadState() | Java | v2"
 slug: /java/java/v2-Management-getLoadState
+sidebar_label: "getLoadState()"
 beta: false
 notebook: false
+description: "This operation displays whether a specified collection or partition is loaded or not. | Java | v2"
 type: docx
 token: AzwPdR4pSoSSUAx5vsEc14x3nGf
 sidebar_position: 4

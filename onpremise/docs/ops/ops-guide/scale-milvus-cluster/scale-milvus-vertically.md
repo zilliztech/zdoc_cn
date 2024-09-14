@@ -36,10 +36,12 @@ import Admonition from '@theme/Admonition';
 
 1. 确认 Milvus 集群当前各组件的资源规格。
 
-    ```shell
-    $ export COMPONENT="mixCoord"
+    ```bash
+    # add-command-prompt
+    export COMPONENT="mixCoord"
     
-    $ kubectl get milvus my-release -o \
+    # add-command-prompt
+    kubectl get milvus my-release -o \
        custom-columns="cpuRequests:spec.components.$COMPONENT.resources.requests.cpu\
        ,cpuLimits:spec.components.$COMPONENT.resources.limits.cpu\
        ,memoryRequests:spec.components.$COMPONENT.resources.requests.memory\
@@ -57,12 +59,16 @@ import Admonition from '@theme/Admonition';
 
     如下示例以 MixCoord 为例，将分配给该组件的 **vCPU** 个数由 **4** 个调整为 **8** 个，**内存**由 **8 GiB** 调整为 **16 GiB**。
 
-    ```shell
-    $ export COMPONENT="mixCoord"
-    $ export CPU="8"
-    $ export MEMORY="16Gi"
+    ```bash
+    # add-command-prompt
+    export COMPONENT="mixCoord"
+    # add-command-prompt
+    export CPU="8"
+    # add-command-prompt
+    export MEMORY="16Gi"
     
-    $ kubectl patch milvus my-release --type='json' \
+    # add-command-prompt
+    kubectl patch milvus my-release --type='json' \
        -p='[{"op": "replace", \
        "path": "/spec/components/'$COMPONENT'/resources/requests/cpu", \
        "value": '$CPU'},\
@@ -80,10 +86,12 @@ import Admonition from '@theme/Admonition';
 
     执行上述命令后，可以通过如下命令查看扩容的目标数量。
 
-    ```shell
-    $ export COMPONENT="mixCoord"
+    ```bash
+    # add-command-prompt
+    export COMPONENT="mixCoord"
     
-    $ kubectl get milvus my-release -o \
+    # add-command-prompt
+    kubectl get milvus my-release -o \
        custom-columns="cpuRequests:spec.components.$COMPONENT.resources.requests.cpu\
        ,cpuLimits:spec.components.$COMPONENT.resources.limits.cpu\
        ,memoryRequests:spec.components.$COMPONENT.resources.requests.memory\
@@ -107,9 +115,11 @@ import Admonition from '@theme/Admonition';
 
     执行如下命令可查看 Milvus 集群组件更新时使用的 Deployment。
 
-    ```shell
-    $ export COMPONENT="mixCoord"
-    $ kubectl get deploy |grep  "NAME\|$COMPONENT"
+    ```bash
+    # add-command-prompt
+    export COMPONENT="mixCoord"
+    # add-command-prompt
+    kubectl get deploy |grep  "NAME\|$COMPONENT"
     ```
 
     我们会看到类似如下的输出。
@@ -130,8 +140,9 @@ import Admonition from '@theme/Admonition';
 
     需要注意的是，QueryNode 的纵向扩容是轮流在两个 Deployment 中完成更新的。所以在查看 Deployment 时，可能会看到下面的状态。
 
-    ```shell
-    $ kubectl get deploy |grep  "NAME\|querynode"
+    ```bash
+    # add-command-prompt
+    kubectl get deploy |grep  "NAME\|querynode"
     
     NAME                            READY   UP-TO-DATE   AVAILABLE   AGE
     my-release-milvus-querynode-0   6/6     6            6           5h20m

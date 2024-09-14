@@ -1,10 +1,20 @@
 ---
+title: "项目管理 | Cloud"
 slug: /projects
+sidebar_label: "项目管理"
 beta: FALSE
 notebook: FALSE
+description: "本文介绍如何管理项目。 | Cloud"
 type: origin
 token: Sw1Kwj0oViAYuAkoUIZcvhsJnBd
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 项目
+  - 管理
 
 ---
 

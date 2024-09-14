@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "IndexParam | Java | v2"
 slug: /java/java/v2-Management-IndexParam
+sidebar_label: "IndexParam"
 beta: false
 notebook: false
+description: "This operation prepares index parameters to build indexes for a specific collection. | Java | v2"
 type: docx
 token: J0hLdJ68foCRu5xWsWacORuAnLg
 sidebar_position: 5
@@ -45,7 +48,7 @@ IndexParam.builder()
 
 - `indexType(IndexParam.IndexType indexType)`
 
-    The name of the algorithm used to arrange data in the specific field. On Zilliz Cloud, the index type is always **AUTOINDEX**. For details, refer to [AUTOINDEX Explained](https://docs.zilliz.com/docs/autoindex-explained).
+    The name of the algorithm used to arrange data in the specific field. On Zilliz Cloud, the index type is always **AUTOINDEX**. For details, refer to [AUTOINDEX Explained](/docs/autoindex-explained).
 
 - `metricType(IndexParam.MetricType metricType)`
 

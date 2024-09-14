@@ -1,10 +1,19 @@
 ---
+title: "使用 BulkWriter | Cloud"
 slug: /use-bulkwriter
+sidebar_label: "使用 BulkWriter"
 beta: FALSE
 notebook: FALSE
+description: "如果您的数据格式不满足准备导入数据中列出的各项要求，您可以使用 PyMivus 和 Milvus Java SDK 自带的 BulkWriter 对您的数据进行转换。 | Cloud"
 type: origin
 token: B9IdwtZhLi0tB8kb6czce8KXnvb
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - bulkwriter
 
 ---
 

@@ -1,10 +1,19 @@
 ---
+title: "相似度类型 | Cloud"
 slug: /search-metrics-explained
+sidebar_label: "相似度类型"
 beta: FALSE
 notebook: FALSE
+description: "在度量向量相似性时，相似度类型发挥着关键作用。选择恰当的相似度类型可以极大地提升分类与聚类的效果。 | Cloud"
 type: origin
 token: Tpi2wvNHLiHaJmk4Y8BcwG84neh
 sidebar_position: 5
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 相似度
 
 ---
 
@@ -126,7 +135,7 @@ L2 是最普遍的距离度量方法，在处理连续性数据时尤为有效�
 
 </Admonition>
 
-## JACCARD 距离 <sup>(Beta)</sup>{#jaccard}
+## JACCARD 距离 (Beta){#jaccard}
 
 JACCARD 相似系数用于衡量两个样本集之间的相似度，其定义是两个集合交集的元素数量除以它们并集的元素数量。该系数仅适用于有限样本集。
 
@@ -142,7 +151,7 @@ JACCARD 距离用于衡量数据集之间的不相似度，其计算方法是 1 
 
 </Admonition>
 
-## HAMMING 距离 <sup>(Beta)</sup>{#hamming}
+## HAMMING 距离 (Beta){#hamming}
 
 HAMMING 距离用于测量二进制数据字符串。两个等长字符串之间的距离是它们在不同比特位上的数量。
 

@@ -1,10 +1,20 @@
 ---
-slug: /migrate-from-milvus
+title: "通过备份文件从 Milvus 迁移至 Zilliz Cloud | Cloud"
+slug: /via-backup-files
+sidebar_label: "通过备份文件迁移"
 beta: FALSE
 notebook: FALSE
+description: "Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案，适合希望使用 Milvus 向量数据库但不想自己管理基础设施的用户。为了实现顺利的数据迁移，您可以通过以下方式将数据从 Milvus 迁移到 Zilliz Cloud：通过 Milvus 服务器地址连接到源数据库或直接上传备份文件。 | Cloud"
 type: origin
 token: YBlmwO9ajiU4tYklnjmc6fJPn8e
-sidebar_position: 1
+sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 数据迁移
+  - 备份文件
 
 ---
 
@@ -12,11 +22,21 @@ import Admonition from '@theme/Admonition';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 从 Milvus 迁移至 Zilliz Cloud
+# 通过备份文件从 Milvus 迁移至 Zilliz Cloud
 
-Zilliz Cloud 提供了先进的数据基础架构，可帮助您优化向量搜索并轻松实现 AI 应用。如果您是 Milvus 用户，可以将数据迁移到 Zilliz Cloud。
+Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案，适合希望使用 Milvus 向量数据库但不想自己管理基础设施的用户。为了实现顺利的数据迁移，您可以通过以下方式将数据从 Milvus 迁移到 Zilliz Cloud：通过 Milvus 服务器地址连接到源数据库或直接上传备份文件。
 
-本文档介绍如何准备迁移数据、执行迁移和验证迁移结果。
+本文介绍如何通过备份文件从 Milvus 进行数据迁移。有关如何通过 Endpoint 迁移信息，请参阅[通过 Endpoint 从 Milvus 迁移至 Zilliz Cloud](./via-endpoint)。
+
+## 开始前{#before-you-start}
+
+- 您已根据迁移方法做好必要的迁移准备：
+
+    - 从本地文件：提前准备本地备份文件。有关如何准备备份文件的信息，请参阅[准备迁移数据](./via-backup-files#prepare-migration-data)。
+
+    - 从对象存储：Milvus 对象存储的公共 URL 和访问凭据。您可以选择长期或临时凭据。
+
+- 您需要拥有组织管理员或项目管理员的角色。如果您没有相应的权限，请联系您的 Zilliz Cloud 管理员。
 
 ## 准备迁移数据{#prepare-migration-data}
 
@@ -136,29 +156,51 @@ backup
 
 ## 将数据迁移到 Zilliz Cloud{#migrate-data-to-zilliz-cloud}
 
-迁移数据准备就绪后，就可以将数据上传到 Zilliz Cloud。
+1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)。
 
-如果您已将迁移数据上传到个人 OSS 存储中，请选择**从 OSS 导入文件夹**，然后填写文件夹路径和身份验证凭据。
+1. 进入目标项目，选择**数据迁移** > **从 Milvus 迁移** > **通过备份文件**。
 
-如果要将本地文件夹上传到 Zilliz Cloud，请选择**导入本地文件夹**，然后将文件夹拖到指定区域上传。注意，上传文件夹的最大尺寸为 1 GB。
+1. 在**从 Milvus 迁移数据**页面上，
 
-![migrate_from_milvus_1x](/img/migrate_from_milvus_1x.png)
+    - 如果您的数据在本地文件中：
 
-## 结果验证{#verify-the-migration-results}
+        - 选择**本地文件**，上传包含您数据的文件夹，并选择目标集群。
 
-如果迁移任务的状态从 **迁移中** 变更为 **成功**，则代表迁移成功。
+    - 如果您的数据在对象存储中：
+
+        - 选择**对象存储**，选择服务（例如 S3、Azure Blob、GCP），输入您数据的对象 URL 或 S3 URI，提供必要的凭据，并选择目标集群。
+
+        - 通过指定适当的凭据类型提供必要的凭据：
+
+            - **长期**：使用此选项以持久访问资源，无需频繁重新认证。
+
+            - **Session**：选择此选项以获取有效期有限的临时凭据，适合在特定用户会话期间进行短期访问。
+
+1. 单击**迁移**。
+
+![zh_migrate_from_milvus_via_backup_file](/img/zh_migrate_from_milvus_via_backup_file.png)
+
+## 查看迁移进度{#monitor-the-migration-process}
+
+生成迁移任务后，您可前往[任务中心](/docs/job-center)查看任务状态和进度。如果迁移任务的状态从**进行中**变更为**成功**，则代表迁移成功。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>迁移完成后，请验证目标集群中的 collection 和 entity 数量是否与数据源一致。如果发现不一致，请删除缺失 entity 的 collection 并重新进行迁移。</p>
+
+</Admonition>
+
+![view_migration_progress_cn](/img/view_migration_progress_cn.png)
 
 Zilliz Cloud 仅支持 [AUTOINDEX](./autoindex-explained)。**AUTOINDEX** 是一种优化的索引算法，Zilliz Cloud 将使用此算法为您迁移的 Collection 自动创建索引。
 
 Collection 加载后，您可以自行连接和管理 Collection。
 
-## 相关文档{#related-topics}
+## 取消迁移任务{#cancel-migration-job}
 
-- [AUTOINDEX](./autoindex-explained)
+如果迁移过程遇到任何问题，您可以采取以下步骤进行故障排除并恢复迁移：
 
-- [选择合适的 CU 类型](./cu-types-explained)
+1. 在**任务中心**页面，取消失败的迁移任务。
 
-- [API 异同](./api-comparison)
-
-- [其他异同](./other-differences)
+1. 在**操作**列点击**查看详情**以访问日志信息。
 

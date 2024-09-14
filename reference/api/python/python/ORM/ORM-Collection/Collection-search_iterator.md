@@ -77,7 +77,7 @@ search_iterator(
 
             Refines the search to vectors within a specific similarity range. When setting `metric_type` to `IP` or `COSINE`, ensure that this value is greater than that of **radius**. Otherwise, this value should be lower than that of **radius**.
 
-    For details on other applicable search parameters, read [AUTOINDEX Explained](https://docs.zilliz.com/docs/autoindex-explained) to get more.
+    For details on other applicable search parameters, read [AUTOINDEX Explained](/docs/autoindex-explained) to get more.
 
 - **batch_size** (*int*) -
 

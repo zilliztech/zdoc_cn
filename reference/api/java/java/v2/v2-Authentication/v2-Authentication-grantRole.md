@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "grantRole() | Java | v2"
 slug: /java/java/v2-Authentication-grantRole
+sidebar_label: "grantRole()"
 beta: false
 notebook: false
+description: "This operation grants a role to a user. | Java | v2"
 type: docx
 token: LKqbduwnVol3IAx053Pcp5rKnog
 sidebar_position: 8

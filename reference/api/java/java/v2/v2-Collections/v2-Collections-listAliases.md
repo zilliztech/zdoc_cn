@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "listAliases() | Java | v2"
 slug: /java/java/v2-Collections-listAliases
+sidebar_label: "listAliases()"
 beta: false
 notebook: false
+description: "This operation lists all existing aliases for a specific collection. | Java | v2"
 type: docx
 token: DCZ5dAc1joTkAHx81epc8Z3Rnde
 sidebar_position: 15

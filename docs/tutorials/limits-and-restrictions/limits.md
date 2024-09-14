@@ -1,10 +1,19 @@
 ---
+title: "使用限制 | Cloud"
 slug: /limits
+sidebar_label: "使用限制"
 beta: FALSE
 notebook: FALSE
+description: "本文介绍了 Zilliz Cloud 平台和集群的使用限制信息。如需了解更多限制信息，可向我们提交请求。 | Cloud"
 type: origin
 token: A8UFwSbMniMl6IkpJkNc4HsHnLc
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 使用限制
 
 ---
 
@@ -60,6 +69,16 @@ import Admonition from '@theme/Admonition';
          <th><p><strong>描述</strong></p></th>
        </tr>
        <tr>
+         <td><p>Free 版集群</p></td>
+         <td><p>1</p></td>
+         <td><p>不论是否绑定有效支付方式，最多只可创建一个Free 版集群。</p></td>
+       </tr>
+       <tr>
+         <td><p>Serverless 版集群</p></td>
+         <td><p>1</p></td>
+         <td><p>未绑定有效支付方式，最多可创建一个Serverless 版集群。</p></td>
+       </tr>
+       <tr>
          <td><p>Dedicated 版集群</p></td>
          <td><p>1</p></td>
          <td><p>未绑定有效支付方式，最多可创建一个Dedicated 版集群。</p></td>
@@ -71,13 +90,23 @@ import Admonition from '@theme/Admonition';
     <table>
        <tr>
          <th><p>类型</p></th>
-         <th><p><strong>最大数量</strong></p></th>
+         <th><p><strong>限制</strong></p></th>
          <th><p><strong>描述</strong></p></th>
        </tr>
        <tr>
+         <td><p>Free 版集群</p></td>
+         <td><p>1</p></td>
+         <td><p>不论是否绑定有效支付方式，最多只可创建一个Free 版集群。</p></td>
+       </tr>
+       <tr>
+         <td><p>Serverless 版集群</p></td>
+         <td><p>无</p></td>
+         <td></td>
+       </tr>
+       <tr>
          <td><p>Dedicated 版集群</p></td>
-         <td><p>256 CUs</p></td>
-         <td><p>在自助操作时，单个集群最多使用 256 个 CU。</p></td>
+         <td><p>CU 规格 * Replica 数量 &lt;=256</p></td>
+         <td><p>在自助操作时，单个集群最多使用 256 个 CU。如果创建了 Replica，CU 规格与 Replica 数量的乘积不得超过 256。</p></td>
        </tr>
     </table>
 
@@ -96,15 +125,15 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>Ingestion Pipeline</p></td>
-     <td><p>10</p></td>
+     <td><p>100</p></td>
    </tr>
    <tr>
      <td><p>Deletion Pipeline</p></td>
-     <td><p>10</p></td>
+     <td><p>100</p></td>
    </tr>
    <tr>
      <td><p>Search Pipeline</p></td>
-     <td><p>10</p></td>
+     <td><p>100</p></td>
    </tr>
 </table>
 
@@ -136,7 +165,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>元数据字段</p></td>
-     <td><p>5</p></td>
+     <td><p>50</p></td>
    </tr>
    <tr>
      <td><p>字符串类型字段的最大长度</p></td>
@@ -170,7 +199,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>每个组织</p></td>
-     <td><p>¥100/月</p></td>
+     <td><p>¥140/月</p></td>
    </tr>
 </table>
 
@@ -183,14 +212,19 @@ import Admonition from '@theme/Admonition';
      <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群</p></td>
-     <td><p>每 CU：&lt;= 64</p><p>每集群：&lt;= 4096</p></td>
-     <td><p>在 Dedicated 版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</p></td>
+     <td><p>Free 版集群</p></td>
+     <td><p>5</p></td>
+     <td><p>在 Free 版集群中，最多可创建 5 个 Collection。</p></td>
    </tr>
    <tr>
      <td><p>Serverless 版集群</p></td>
-     <td><p>10</p></td>
-     <td><p>在 Serverless 版集群中，最多可创建 10 个 Collection。</p></td>
+     <td><p>100</p></td>
+     <td><p>在 Serverless 版集群中，最多可创建 100 个 Collection。</p></td>
+   </tr>
+   <tr>
+     <td><p>Dedicated 版集群</p></td>
+     <td><p>每 CU：&lt;= 64</p><p>每集群：&lt;= 4096</p></td>
+     <td><p>在 Dedicated 版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</p></td>
    </tr>
 </table>
 
@@ -215,9 +249,9 @@ import Admonition from '@theme/Admonition';
 <p>可以使用以下公式计算集群的通用容量：</p>
 <p><strong>\<= 512 x CU 数</strong></p>
 <p>例如：</p>
-<p>在一个 2 CU 的集群中，最多可创建 128 个 Collection，通用容量最大为 1,024。</p>
-<p>在一个 12 CU 的集群中，最多可创建 768 个 Collection，通用容量最大为 6144。</p>
-<p>在一个 32 CU 的集群中，最多可创建 4096 个 Collection，通用容量最大为 16,384。</p>
+<p>在一个 2 CU 的 Dedicated 集群中，最多可创建 128 个 Collection，通用容量最大为 1,024。</p>
+<p>在一个 12 CU 的 Dedicated 集群中，最多可创建 768 个 Collection，通用容量最大为 6144。</p>
+<p>在一个 32 CU 的 Dedicated 集群中，最多可创建 4096 个 Collection，通用容量最大为 16,384。</p>
 
 </Admonition>
 
@@ -232,9 +266,19 @@ import Admonition from '@theme/Admonition';
      <th><p>描述</p></th>
    </tr>
    <tr>
+     <td><p>Free 版集群</p></td>
+     <td><p>1,024</p></td>
+     <td><p>在 Free 版集群中，您可以为每个 Collection 创建最多 1,024 个 Partition。</p></td>
+   </tr>
+   <tr>
+     <td><p>Serverless 版集群</p></td>
+     <td><p>1,024</p></td>
+     <td><p>在 Serverless 版集群中，您可以为每个 Collection 创建最多 1,024 个 Partition。</p></td>
+   </tr>
+   <tr>
      <td><p>Dedicated 版集群</p></td>
-     <td><p>4096</p></td>
-     <td><p>在 Dedicated 版集群中，您可以为每个 Collection 创建最多 4096 个 Partition。</p></td>
+     <td><p>4,096</p></td>
+     <td><p>在 Dedicated 版集群中，您可以为每个 Collection 创建最多 4,096 个 Partition。</p></td>
    </tr>
 </table>
 
@@ -284,6 +328,10 @@ import Admonition from '@theme/Admonition';
    <tr>
      <th></th>
      <th><p>Insert rate limits</p></th>
+   </tr>
+   <tr>
+     <td><p>Serverless 版集群</p></td>
+     <td><p>10 MB/s</p></td>
    </tr>
    <tr>
      <td><p>Dedicated 版集群（1-2 CU）</p></td>
@@ -374,7 +422,11 @@ import Admonition from '@theme/Admonition';
 
 ### Flush{#flush}
 
-每个集群的 Flush 请求速率限制为每秒 1 个请求。
+每个集群的 Flush 请求速率限制为每秒 0.1 个请求，该限制具体适用于以下集群类型：
+
+- 兼容 Milvus 2.4.x 或更高版本的 Serverless 集群；
+
+- 升级到 Beta 版本的 Dedicated 集群，该集群类型兼容 Milvus 2.4.x 或更高版本。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -396,9 +448,17 @@ import Admonition from '@theme/Admonition';
 
 每个搜索请求/响应的大小不应超过 64 MB。
 
-每个搜索请求携带的查询向量（**nq**）不超过 16384 个。
+根据集群版本，每个搜索请求携带的查询向量（**nq**）上限有所不同：
 
-每个搜索响应返回的 Entity 数量（**topK**）不超过 16384 个。
+- Free 和 Serverless 集群：**nq** 不超过 10
+
+- Dedicated 集群：**nq** 不超过 16384
+
+根据集群版本，每个搜索响应返回的 Entity 数量（**topK**）上限有所不同：
+
+- Free 和 Serverless 集群：**topK** 不超过 1024
+
+- Dedicated 集群：**topK** 不超过 16384
 
 ### Query{#query}
 
@@ -453,7 +513,7 @@ import Admonition from '@theme/Admonition';
 
 ## 数据备份（控制台）{#backup-on-console}
 
-Zilliz Cloud 备份快照可保存长达30天。更多备份费用详情，请参考 [了解费用](./understand-cost#backup-costs)。
+Zilliz Cloud 备份快照可保存长达 30 天。更多备份费用详情，请参考 [了解费用](./understand-cost#backup-costs)。
 
 ## 数据恢复（控制台）{#restore-on-console}
 

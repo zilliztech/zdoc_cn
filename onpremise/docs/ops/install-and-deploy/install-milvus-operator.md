@@ -40,38 +40,292 @@ Milvus Operator 是一种可帮助您在目标 Kubernetes 集群上部署和管�
 
 ## 安装 Milvus Operator{#install-milvus-operator}
 
-可按如下方式获取 Zilliz 提供的 Milvus Operator 声明文件，并安装 Milvus Operator。
+可按如下方式安装 Milvus Operator
 
-1. 获取 Milvus Operator 声明文件。
+```bash
+# add-command-prompt
+export version=v1.0.8
 
-    ```shell
-    $ wget milvus-operator-no-webhook-v1.0.6.yaml
-    ```
+# add-command-prompt
+kubectl apply -f https://github.com/zilliztech/milvus-operator/releases/download/${version}/deployment-no-webhook.yaml
+```
 
-1. 安装 Milvus Operator。
+<Admonition type="info" icon="📘" title="Notes">
 
-    ```shell
-    $ kubectl apply -f milvus-operator-no-webhook-v1.0.6.yaml
-    ```
+<p>如果执行上述命令后提示没有权限，您可以参考如下声明文件向 Kubernetes 管理员申请更高权限，或由管理员代为安装。</p>
 
-    <Admonition type="info" icon="📘" title="Notes">
+</Admonition>
 
-    <p>如果执行上述命令后提示没有权限，您可以参考如下声明文件向 Kubernetes 管理员申请更高权限，或由管理员代为安装。</p>
-    <ul>
-    <li>clusterrole.yaml</li>
-    </ul>
+在安装过程中涉及使用的权限如下：
 
-    </Admonition>
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: 'milvus-operator-manager-role'
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - '*'
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apiextensions.k8s.io
+  resources:
+  - customresourcedefinitions
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - apps
+  resources:
+  - '*'
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - batch
+  resources:
+  - jobs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - extensions
+  resources:
+  - deployments
+  - pods
+  - secrets
+  - services
+  - statefulsets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - extensions
+  resources:
+  - ingresses
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - milvus.io
+  resources:
+  - milvusclusters
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - milvus.io
+  resources:
+  - milvusclusters/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - milvus.io
+  resources:
+  - milvusclusters/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - milvus.io
+  resources:
+  - milvuses
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - milvus.io
+  resources:
+  - milvuses/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - milvus.io
+  resources:
+  - milvuses/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - milvus.io
+  resources:
+  - milvusupgrades
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - milvus.io
+  resources:
+  - milvusupgrades/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - milvus.io
+  resources:
+  - milvusupgrades/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - monitoring.coreos.com
+  resources:
+  - podmonitors
+  - servicemonitors
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - networking.k8s.io
+  resources:
+  - ingresses
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - policy
+  resources:
+  - poddisruptionbudgets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - policy
+  resources:
+  - podsecuritypolicies
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - rbac.authorization.k8s.io
+  resources:
+  - clusterrolebindings
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - rbac.authorization.k8s.io
+  resources:
+  - clusterroles
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - rbac.authorization.k8s.io
+  resources:
+  - rolebindings
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - rbac.authorization.k8s.io
+  resources:
+  - roles
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+
+```
 
 ## 安装后验证{#verification-afterwards}
 
 您可按照如下方式验证 Milvus Operator 是否安装成功。
 
-```shell
-$ kubectl get pods -n milvus-operator
+```bash
+# add-command-prompt
+kubectl get pods -n milvus-operator
 
+# output-start
 NAME                               READY   STATUS    RESTARTS   AGE
 milvus-operator-5fd77b87dc-msrk4   1/1     Running   0          46s
+# output-end
 ```
 
 当 Milvus Operator pod 的 **STATUS** 为 **Running**，且 **READY** 为 **1/1** 时，说明 Milvus Operator 安装成功。
@@ -96,13 +350,15 @@ milvus-operator-5fd77b87dc-msrk4   1/1     Running   0          46s
 
     - 获取 Milvus Operator pod 的运行日志。
 
-        ```shell
-        $ kubectl logs milvus-operator-5fd77b87dc-msrk4
+        ```bash
+        # add-command-prompt
+        kubectl logs milvus-operator-5fd77b87dc-msrk4
         ```
 
     - 获取 Milvus Operator pod 的详情。
 
-        ```shell
+        ```bash
+        # add-command-prompt
         kubectl -n milvus-operator describe milvus-operator-5fd77b87dc-msrk4
         ```
 

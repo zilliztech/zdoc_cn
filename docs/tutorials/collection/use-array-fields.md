@@ -1,10 +1,19 @@
 ---
+title: "使用 Array 类型字段 | Cloud"
 slug: /use-array-fields
+sidebar_label: "使用 Array 类型字段"
 beta: FALSE
 notebook: FALSE
+description: "本节将帮助您了解如何使用 Array 类型的字段，包括插入数组，使用简单和高级操作符在数组字段中进行标量过滤等。 | Cloud"
 type: origin
 token: AOIown5u9iLVhCkzF0acjABNnvc
 sidebar_position: 19
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - array 字段
 
 ---
 

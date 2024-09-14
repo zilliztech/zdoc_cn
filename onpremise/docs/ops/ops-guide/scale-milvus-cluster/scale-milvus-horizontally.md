@@ -42,8 +42,9 @@ import Admonition from '@theme/Admonition';
 
 1. 确认 Milvus 集群当前各组件的副本数量。
 
-    ```shell
-    $ kubectl get milvus my-release -o custom-columns="\
+    ```bash
+    # add-command-prompt
+    kubectl get milvus my-release -o custom-columns="\
       mixCoord:status.componentsDeployStatus.mixcoord.status.replicas\
       ,queryNode:status.componentsDeployStatus.querynode.status.replicas\
       ,dataNode:status.componentsDeployStatus.datanode.status.replicas\
@@ -62,11 +63,14 @@ import Admonition from '@theme/Admonition';
 
     如下示例以负责查询的 QueryNode 为例，将其由当前的 **4** 个扩容到 **6** 个。
 
-    ```shell
-    $ export COMPONENT="queryNode"
-    $ export REPLICAS="6"
+    ```bash
+    # add-command-prompt
+    export COMPONENT="queryNode"
+    # add-command-prompt
+    export REPLICAS="6"
     
-    $ kubectl patch milvus my-release --type='json' \
+    # add-command-prompt
+    kubectl patch milvus my-release --type='json' \
       -p='[{"op": "replace", \
       "path": "/spec/components/'$COMPONENT'/replicas", \
       "value": '$REPLICAS'}]'
@@ -76,8 +80,9 @@ import Admonition from '@theme/Admonition';
 
     执行上述命令后，可以通过如下命令查看扩容的目标数量。
 
-    ```shell
-    $ kubectl get milvus my-release -o \
+    ```bash
+    # add-command-prompt
+    kubectl get milvus my-release -o \
       custom-columns="mixCoordTarget:spec.components.mixCoord.replicas\
       ,queryNodeTarget:spec.components.queryNode.replicas\
       ,dataNodeTarget:spec.components.dataNode.replicas\
@@ -102,8 +107,9 @@ import Admonition from '@theme/Admonition';
 
     可以重复执行如下命令查看目前实际启动的 QueryNode 副本数量。
 
-    ```shell
-    $ kubectl get milvus my-release -o custom-columns="\
+    ```bash
+    # add-command-prompt
+    kubectl get milvus my-release -o custom-columns="\
       mixCoord:status.componentsDeployStatus.mixcoord.status.replicas\
       ,queryNode:status.componentsDeployStatus.querynode.status.replicas\
       ,dataNode:status.componentsDeployStatus.datanode.status.replicas\
@@ -120,8 +126,9 @@ import Admonition from '@theme/Admonition';
 
     另外，你也可以通过查看相关组件 pod 数量的方式确认扩缩容结果。
 
-    ```shell
-    $ kubectl get pods |grep -v etcd |grep -v pulsar
+    ```bash
+    # add-command-prompt
+    kubectl get pods |grep -v etcd |grep -v pulsar
     ```
 
     在当前示例中，如果扩容成功后，可以在命令回显中看到 6 个 QueryNode pod。

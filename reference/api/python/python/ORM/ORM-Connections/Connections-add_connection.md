@@ -96,7 +96,7 @@ add_connection(
 <li>A pair of username and password to access the cluster, joined by a colon (<strong>:</strong>).</li>
 </ul>
 <p>You can use the cluster credentials specified when the cluster has been created on the Zilliz Cloud console, or those of any existing cluster users.</p>
-<p>For details, refer to <a href="https://docs.zilliz.com/docs/on-zilliz-cloud-console">On Zilliz Cloud Console</a> for more information.</p>
+<p>For details, refer to <a href="/docs/on-zilliz-cloud-console">On Zilliz Cloud Console</a> for more information.</p>
 
 </Admonition>
 

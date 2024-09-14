@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "getField() | Java | v2"
 slug: /java/java/v2-CollectionSchema-getField
+sidebar_label: "getField()"
 beta: false
 notebook: false
+description: "This operation gets the details of a specific field, including schema information. | Java | v2"
 type: docx
 token: XK6yd5oUMoCq4Px7wAIclfdxnCd
 sidebar_position: 3

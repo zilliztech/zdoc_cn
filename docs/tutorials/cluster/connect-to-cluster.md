@@ -1,10 +1,19 @@
 ---
+title: "连接集群 | Cloud"
 slug: /connect-to-cluster
+sidebar_label: "连接集群"
 beta: FALSE
 notebook: FALSE
+description: "本文介绍如何连接到 Zilliz Cloud 集群。 | Cloud"
 type: origin
 token: HU31wDHCCiN9qIknZ2fcLmconNh
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 连接
 
 ---
 

@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "describeCollection() | Java | v2"
 slug: /java/java/v2-Collections-describeCollection
+sidebar_label: "describeCollection()"
 beta: false
 notebook: false
+description: "This operation lists detailed information about a specific collection. | Java | v2"
 type: docx
 token: DTbJdZHWMourJqxOn4rcMWrmn1f
 sidebar_position: 9

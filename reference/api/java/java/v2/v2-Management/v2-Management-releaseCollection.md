@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "releaseCollection() | Java | v2"
 slug: /java/java/v2-Management-releaseCollection
+sidebar_label: "releaseCollection()"
 beta: false
 notebook: false
+description: "This operation releases the data of a specific collection from memory. | Java | v2"
 type: docx
 token: PsSrdeIqnoUt3qxlGNXcTAQbnLh
 sidebar_position: 9

@@ -4,7 +4,7 @@ slug: /license-usage
 sidebar_label: "License 管理"
 beta: FALSE
 notebook: FALSE
-description: "Milvus 私有化部署镜像使用 Zilliz 自主开发的 Cardinal 内核，集成了 License 校验逻辑。启动时，需要您导入由 Zilliz 生成的 License 配置信息进行授权，否则 Milvus 实例将无法启动。 | On-Premise"
+description: "Milvus 商业版镜像使用 Zilliz 自主开发的 Cardinal 内核，集成了 License 校验逻辑。启动时，需要您导入由 Zilliz 生成的 License 配置信息进行授权，否则 Milvus 实例将无法启动。 | On-Premise"
 type: origin
 token: R7guwJ0T0i0gRrkh5CZc5kDPnCh
 sidebar_position: 3
@@ -28,13 +28,11 @@ import Admonition from '@theme/Admonition';
 
 # License 管理
 
-Milvus 私有化部署镜像使用 Zilliz 自主开发的 Cardinal 内核，集成了 License 校验逻辑。启动时，需要您导入由 Zilliz 生成的 License 配置信息进行授权，否则 Milvus 实例将无法启动。
+Milvus 商业版镜像使用 Zilliz 自主开发的 Cardinal 内核，集成了 License 校验逻辑。启动时，需要您导入由 Zilliz 生成的 License 配置信息进行授权，否则 Milvus 实例将无法启动。
 
 ## 配置 License 信息{#configure-license-info}
 
 您可以在部署前准备 Milvus 集群部署声明文件时写入 License 信息，也可以在 Milvus 集群部署完成后写入 License 信息。
-
-### 部署前写入 License 信息{#configure-license-info-before-deployment}
 
 在收到 Zilliz 生成的 License 信息后，将其填入 Milvus 集群部署声明文件中的 `spec.components.env` 字段内。
 
@@ -49,9 +47,7 @@ spec:
 
 检查 Milvus 集群部署声明文件无误后，可[应用该声明文件](./deploy-milvus-cluster#apply-milvus-manifest)。具体操作及声明文件各参数含义，可参考[部署 Milvus 集群](./deploy-milvus-cluster)。
 
-### 部署后写入 License 信息{#configure-license-info-after-deployment}
-
-## 检查 License 信息{#check-license-info}
+### 检查 License 信息{#check-license-info}
 
 当正确导入 License 配置后，启动 Milvus 镜像部署流程时会提示 `Success check license` 信息。
 

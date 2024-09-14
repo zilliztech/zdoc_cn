@@ -1,10 +1,20 @@
 ---
+title: "设置运维窗口 | Cloud"
 slug: /set-up-maintenance-window
+sidebar_label: "设置运维窗口"
 beta: FALSE
 notebook: FALSE
+description: "Zilliz Cloud 允许用户为集群设置运维窗口，以减少运维对工作负载的影响，增加可预测性。 | Cloud"
 type: origin
 token: Ah5HwOryHilTp4klJ6VcR4eJnvd
 sidebar_position: 4
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 运维
+  - 窗口
 
 ---
 

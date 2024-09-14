@@ -110,7 +110,7 @@ search(
 
             The value defaults to **1**, and ranges from **1** to **5**. Increasing the value results in a higher recall rate with degraded search performance.
 
-    For details on other applicable search parameters, read [AUTOINDEX Explained](https://docs.zilliz.com/docs/autoindex-explained) to get more.
+    For details on other applicable search parameters, read [AUTOINDEX Explained](/docs/autoindex-explained) to get more.
 
 - **timeout** (*float* | *None*) -
 

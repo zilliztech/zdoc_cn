@@ -1,7 +1,10 @@
 ---
+title: "loadCollection() | Java | v1"
 slug: /java/v1-Collection-loadCollection
+sidebar_label: "loadCollection()"
 beta: FALSE
 notebook: FALSE
+description: "A MilvusClient interface. This method loads the specified collection and all the data within to memory for search or query. | Java | v1"
 type: origin
 token: D0cfwvTqMiyhSrkCUv4c1a2Fnjd#VaWKdMVPjoIqa0xssy5chMh8nte
 sidebar_position: 3
@@ -43,18 +46,23 @@ Methods of `LoadCollectionParam.Builder`:
         <td><p>collectionName: The name of the collection to load.</p></td>
     </tr>
     <tr>
+        <td><p>withDatabaseName(String databaseName)</p></td>
+        <td><p>Sets the database name. database name can be null for default database.</p></td>
+        <td><p>databaseName: The database name.</p></td>
+    </tr>
+    <tr>
         <td><p>withSyncLoad(Boolean syncLoad)</p></td>
         <td><p>Enables sync mode when loading a collection. With sync mode enabled, the client keeps waiting until all segments of the collection are successfully loaded. If sync mode is disabled, the client returns instantly after <code>loadCollection()</code> is called.<br/>Sync mode is enabled by default.</p></td>
         <td><p>syncLoad:A boolean value to indicate if sync mode is enabled. If the value is set to <code>True</code>, this means sync mode is enabled.</p></td>
     </tr>
     <tr>
         <td><p>withSyncLoadWaitingInterval(Long milliseconds)</p></td>
-        <td><p>Sets the waiting interval for sync mode. In sync mode, the client checks the collection load status at intervals. The value must be greater than zero, and cannot be greater than Constant.MAX<em>WAITING</em>LOADING_INTERVAL. The default value is 500 milliseconds</p></td>
+        <td><p>Sets the waiting interval for sync mode. In sync mode, the client checks the collection load status at intervals. The value must be greater than zero, and cannot be greater than Constant.MAX_WAITING_LOADING_INTERVAL. The default value is 500 milliseconds</p></td>
         <td><p>milliseconds: The time interval in milliseconds for checking the data load status.</p></td>
     </tr>
     <tr>
         <td><p>withSyncLoadWaitingTimeout(Long seconds)</p></td>
-        <td><p>Sets the timeout period for sync mode. The value must be greater than zero and cannot be greater than Constant.MAX<em>WAITING</em>LOADING_TIMEOUT. The default value is 60 seconds.</p></td>
+        <td><p>Sets the timeout period for sync mode. The value must be greater than zero and cannot be greater than Constant.MAX_WAITING_LOADING_TIMEOUT. The default value is 60 seconds.</p></td>
         <td><p>seconds: A during of time in seconds to wait till timeout.</p></td>
     </tr>
     <tr>

@@ -1,10 +1,20 @@
 ---
+title: "了解定价与账单 | Cloud"
 slug: /understand-pipelines-billing
+sidebar_label: "了解定价与账单"
 beta: FALSE
 notebook: FALSE
+description: "Zilliz Cloud Pipelines 采用按量计费的定价模型。 您仅需根据 Ingestion 和 Search Pipeline 的模型用量付费。 | Cloud"
 type: origin
 token: Q2YawM0ZCiLhOpkYTczcwKUJnBh
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 定价
+  - 账单
 
 ---
 
@@ -17,15 +27,9 @@ Zilliz Cloud Pipelines 采用按量计费的[定价](https://zilliz.com.cn/prici
 
 ## Pipelines 定价{#pipelines-pricing}
 
-<Admonition type="info" icon="📘" title="说明">
-
-<p>Zilliz Cloud Pipelines 目前限时免费。</p>
-
-</Admonition>
-
 如需了解使用每种 Embedding 和 Reranker 模型的具体费用，请参考[定价方案](https://zilliz.com.cn/pricing)。
 
-目前，Zilliz Cloud Pipelines 提供免费 Quota。但同时，Zillz Cloud Pipelines 对每个组织的用量做出了限制。每个组织每月可使用 ¥100 的 Pipelines 用量。如需提高额度，请[联系销售](https://zilliz.com.cn/contact-sales)或[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
+目前，Zilliz Cloud Pipelines 提供免费 Quota。但同时，Zilliz Cloud Pipelines 对每个组织的用量做出了[限制](./limits#pipelines-usage)。每个组织每月可使用 ¥140 的 Pipelines 用量。如需提高额度，请[联系销售](https://zilliz.com.cn/contact-sales)或[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 
 ## 查看账单{#view-costs}
 

@@ -1,10 +1,19 @@
 ---
+title: "使用 Binary Vector | Cloud"
 slug: /use-binary-vector
-beta: TRUE
+sidebar_label: "使用 Binary Vector"
+beta: FALSE
 notebook: FALSE
+description: "Binary vector 是一种数据表示方式，其中每个元素都是 0 或 1。它们在大数据集中的相似性搜索等场景中非常有用，因为二进制特性使得可以使用 Hamming 或 Jaccard 距离等度量高效计算相似性。本指南将演示如何在 Zilliz Cloud 中使用 binary vector。 | Cloud"
 type: origin
 token: YBNcwFDmNi0m0gkhdhsceA8HnTg
 sidebar_position: 21
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - binary vector
 
 ---
 

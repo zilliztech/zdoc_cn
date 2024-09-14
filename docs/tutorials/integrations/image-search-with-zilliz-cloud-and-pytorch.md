@@ -1,10 +1,20 @@
 ---
+title: "与 PyTorch 集成搭建图片搜索系统 | Cloud"
 slug: /image-search-with-zilliz-cloud-and-pytorch
+sidebar_label: "与 PyTorch 集成搭建图片搜索系统"
 beta: FALSE
 notebook: FALSE
+description: "在本文中，我们将演示如何使用 Zilliz Cloud 搭建一个简单的图片搜索系统。该系统使用的数据集是 Kaggle 上提供的印象派大师分类器数据集（ Impressionist-Classifier Dataset ）。在本示例中，我们将该数据库重新托管到了一个公共的 Google Drive 中。 | Cloud"
 type: origin
 token: FpeXw3b5piUAG7kUCgucgI1unFh
 sidebar_position: 5
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 相似性
+  - pytorch
 
 ---
 

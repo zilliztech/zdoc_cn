@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "DataType | Java | v2"
 slug: /java/java/v2-Collections-DataType
+sidebar_label: "DataType"
 beta: false
 notebook: false
+description: "This is an enumeration that provides the following constants. | Java | v2"
 type: docx
 token: P85rdatjZosvEfxCq7TcFRy0nBe
 sidebar_position: 7
@@ -50,10 +53,6 @@ This is an enumeration that provides the following constants.
 - Double(11)
 
     Sets the data type to **Double**.
-
-- String(20)
-
-    Sets the data type to **String**.
 
 - VarChar(21)
 

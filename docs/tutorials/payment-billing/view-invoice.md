@@ -1,10 +1,20 @@
 ---
+title: "查看账单信息与支付方式 | Cloud"
 slug: /view-invoice
+sidebar_label: "查看账单信息与支付方式"
 beta: FALSE
 notebook: FALSE
+description: "首次注册 Zilliz Cloud 的用户即可获赠 ¥300 免费额度，享受 30 天免费试用。试用到期或免费额度使用完毕后，您需要添加支付方式并付清您的账单以继续使用 Zilliz Cloud 服务。 | Cloud"
 type: origin
 token: NhbHwPiL2i4KWskrcO4cDrSNnzh
-sidebar_position: 4
+sidebar_position: 5
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 账单
+  - 支付方式
 
 ---
 

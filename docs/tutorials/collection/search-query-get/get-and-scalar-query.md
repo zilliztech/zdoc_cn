@@ -1,10 +1,20 @@
 ---
+title: "Get 和 Scalar Query | Cloud"
 slug: /get-and-scalar-query
+sidebar_label: "Get 和 Scalar Query"
 beta: FALSE
 notebook: FALSE
+description: "本指南介绍如何通过 ID 获取（get） entity 并执行标量查询（scalar query）。Scalar query 是指可以根据指定的过滤条件筛选匹配的 entity。 | Cloud"
 type: origin
 token: TOQ7wYcWsiLDCmk24frcH1WhnKe
 sidebar_position: 3
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - get
+  - scalar query
 
 ---
 

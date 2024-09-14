@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "MetricType | Java | v2"
 slug: /java/java/v2-Management-MetricType
+sidebar_label: "MetricType"
 beta: false
 notebook: false
+description: "This is an enumeration that provides the following constants. | Java | v2"
 type: docx
 token: GhWSdM6P7onZ5Nx6sqLclXO0nAg
 sidebar_position: 8

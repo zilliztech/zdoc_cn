@@ -1,10 +1,20 @@
 ---
+title: "文本数据 | Cloud"
 slug: /pipelines-text-data
+sidebar_label: "文本数据"
 beta: FALSE
 notebook: FALSE
+description: "您可以通过 Web 控制台或 RESTful API 创建、运行和管理 Pipelines。Web 控制台操作更简单直观，但 RESTful API 可提供更多灵活性。 | Cloud"
 type: origin
 token: KZOywFvfbir4DbkRwZIcMsY6nHe
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - pipeline
+  - 文本
 
 ---
 
@@ -22,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
 - 请确保您创建部署在阿里云（杭州）的集群。
 
-- 同一项目下，您可最多创建 10 个同一类型的 Pipelines。更多详情，请参考[使用限制](./limits#pipelines)。
+- 同一项目下，您可最多创建 100 个同一类型的 Pipelines。更多详情，请参考[使用限制](./limits#number-of-pipelines)。
 
 ## 摄取文本数据{#ingest-text-data}
 
@@ -85,7 +95,7 @@ import TabItem from '@theme/TabItem';
              <th><p><strong>说明</strong></p></th>
            </tr>
            <tr>
-             <td><p>zilliz/bge-base-en-v1.5</p></td>
+             <td><p>zilliz/bge-base-en-v1.5 </p></td>
              <td><p>智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。</p></td>
            </tr>
            <tr>
@@ -232,32 +242,42 @@ curl --request POST \
 {
   "code": 200,
   "data": {
-    "pipelineId": "pipe-xxxx",
+    "pipelineId": "pipe-xxx",
     "name": "my_text_ingestion_pipeline",
     "type": "INGESTION",
-    "clusterId": "in03-***************",
-    "collectionName": "my_collection"
+    "createTimestamp": 1721187300000,
     "description": "A pipeline that generates text embeddings and stores additional fields.",
     "status": "SERVING",
+    "totalUsage": {
+      "embedding": 0
+    },
     "functions": [
       {
-        "action": "INDEX_TEXT",
         "name": "index_my_text",
+        "action": "INDEX_TEXT",
         "inputFields": ["text_list"],
         "language": "ENGLISH",
         "embedding": "zilliz/bge-base-en-v1.5"
       },
       {
-        "action": "PRESERVE",
         "name": "keep_text_info",
+        "action": "PRESERVE",
         "inputField": "source",
         "outputField": "source",
         "fieldType": "VarChar"
       }
-    ]
+    ],
+    "clusterId": "inxx-xxxx",
+    "collectionName": "my_collection"
   }
 }
 ```
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>总用量 <code>totalUsage</code> 非实时更新，数据统计可能会有几小时延迟。</p>
+
+</Admonition>
 
 Ingestion Pipeline 创建成功后，Zilliz Cloud 将进行重名检查。如果集群中没有该名称的 Collection，将自动创建名称为 `my_collection` 的新 Collection。如果已存在同名的 Collection，Zilliz Cloud Pipelines 会继续检查该已有 Collection 的 Schema 是否与 Pipeline 中定义的一致。
 
@@ -453,7 +473,7 @@ curl --request POST \
 
     - `name`: Function 名称。Function 名称应该在 3-64 个字符内，且只可包含数字、字母和下划线。
 
-    - `action`: Function 类型。支持的类型包括：`SEARCH_DOC_CHUNK`、`SEARCH_TEXT`、`SEARCH_IMAGE_BY_IMAGE`。
+    - `action`: Function 类型。支持的类型包括：`SEARCH_DOC_CHUNK`、`SEARCH_TEXT`、`SEARCH_IMAGE_BY_IMAGE`、`SEARCH_IMAGE_BY_TEXT`。
 
     - `inputField`: 输入字段名称。您可以自由配置该字段的值。但是在运行 Pipeline 时，您需要使用现在定义的输入字段名称。
 
@@ -474,21 +494,35 @@ curl --request POST \
     "pipelineId": "pipe-xxxx",
     "name": "my_text_search_pipeline",
     "type": "SEARCH",
+    "createTimestamp": 1721187655000,
     "description": "A pipeline that receives text and search for semantically similar texts",
     "status": "SERVING",
-    "functions": 
+    "totalUsage": {
+      "embedding": 0,
+      "rerank": 0
+    },
+    "functions": [
       {
-        "action": "SEARCH_TEXT",
         "name": "search_text",
-        "inputFields": "query_text",
-        "clusterId": "in03-***************",
+        "action": "SEARCH_TEXT",
+        "inputFields": [
+          "query_text"
+        ],
+        "clusterId": "inxx-xxxx",
         "collectionName": "my_collection",
-        "embedding": "zilliz/bge-base-en-v1.5",
-        "reranker": "zilliz/bge-reranker-base"
+        "reranker": "zilliz/bge-reranker-base",
+        "embedding": "zilliz/bge-base-en-v1.5"
       }
+    ]
   }
 }
 ```
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>总用量非实时更新，数据统计可能会有几小时延迟。</p>
+
+</Admonition>
 
 </TabItem>
 
@@ -542,7 +576,7 @@ curl --request POST \
 
 - `params`: 搜索相关参数。
 
-    - `limit`: 返回的 Entity 数量。该参数值为 1-100 之间的整数。`limit` 和 `offset` 参数值总和应小于 **1024。**
+    - `limit`: 返回的 Entity 数量。该参数值为 1-500 之间的整数。`limit` 和 `offset` 参数值总和应小于 **1024。**
 
     - `offset`: 在搜索结果中跳过的 Entity 数量。最大值为 **1024**。`limit` 和 `offset` 参数值总和应小于 **1024。**
 
@@ -682,6 +716,7 @@ curl --request POST \
     "pipelineId": "pipe-xxxx",
     "name": "my_text_deletion_pipeline",
     "type": "DELETION",
+    "createTimestamp": 1721187655000,
     "description": "A pipeline that deletes entities by expression",
     "status": "SERVING",
     "functions": [
@@ -766,9 +801,19 @@ curl --request POST \
 
 <TabItem value="Cloud Console">
 
-点击左侧导航栏中的 **Pipelines**。选中 **Pipelines** 选项卡。您可以查看所有已创建的 Pipelines 及其详情、用量等。
+点击左侧导航栏中的 **Pipelines**。选中 **Pipelines** 选项卡。您可以查看所有已创建的 Pipelines。
 
 ![view-pipelines-on-web-ui-cn](/img/view-pipelines-on-web-ui-cn.png)
+
+点击特定 Pipeline 名称，还可以查看其详情，包括基本信息、总用量、Functions、关联的 Connectors 等。
+
+![view-pipeline-details-cn](/img/view-pipeline-details-cn.png)
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>总用量非实时更新，数据统计可能会有几小时延迟。</p>
+
+</Admonition>
 
 您还可以查看所有 Pipelines 相关事件。
 
@@ -801,10 +846,14 @@ curl --request POST \
           "pipelineId": "pipe-xxxx",
           "name": "my_text_ingestion_pipeline",
           "type": "INGESTION",
+          "createTimestamp": 1721187655000,
           "clusterId": "in03-***************",
           "collectionName": "my_collection"
           "description": "A pipeline that generates text embeddings and stores additional fields.",
           "status": "SERVING",
+          "totalUsage": {
+            "embedding": 0
+            },
           "functions": [
             {
               "action": "INDEX_TEXT",
@@ -826,8 +875,13 @@ curl --request POST \
           "pipelineId": "pipe-xxxx",
           "name": "my_text_search_pipeline",
           "type": "SEARCH",
+          "createTimestamp": 1721187655000,
           "description": "A pipeline that receives text and search for semantically similar texts",
           "status": "SERVING",
+          "totalUsage": {
+            "embedding": 0,
+            "rerank": 0
+            },
           "functions": 
             {
               "action": "SEARCH_TEXT",
@@ -843,6 +897,7 @@ curl --request POST \
           "pipelineId": "pipe-xxxx",
           "name": "my_text_deletion_pipeline",
           "type": "DELETION",
+          "createTimestamp": 1721187655000,
           "description": "A pipeline that deletes entities by expression",
           "status": "SERVING",
           "functions": 
@@ -857,6 +912,12 @@ curl --request POST \
       ]
     }
     ```
+
+    <Admonition type="info" icon="📘" title="说明">
+
+    <p>总用量 <code>totalUsage</code> 非实时更新，数据统计可能会有几小时延迟。</p>
+
+    </Admonition>
 
 - **查看特定 Pipeline 详情**
 
@@ -875,32 +936,42 @@ curl --request POST \
     {
       "code": 200,
       "data": {
-        "pipelineId": "pipe-xxxx",
+        "pipelineId": "pipe-xxx",
         "name": "my_text_ingestion_pipeline",
         "type": "INGESTION",
-        "clusterId": "in03-***************",
-        "collectionName": "my_collection"
+        "createTimestamp": 1721187300000,
         "description": "A pipeline that generates text embeddings and stores additional fields.",
         "status": "SERVING",
+        "totalUsage": {
+          "embedding": 0
+        },
         "functions": [
           {
-            "action": "INDEX_TEXT",
             "name": "index_my_text",
+            "action": "INDEX_TEXT",
             "inputFields": ["text_list"],
             "language": "ENGLISH",
             "embedding": "zilliz/bge-base-en-v1.5"
           },
           {
-            "action": "PRESERVE",
             "name": "keep_text_info",
+            "action": "PRESERVE",
             "inputField": "source",
             "outputField": "source",
             "fieldType": "VarChar"
           }
-        ]
+        ],
+        "clusterId": "inxx-xxxx",
+        "collectionName": "my_collection"
       }
     }
     ```
+
+    <Admonition type="info" icon="📘" title="说明">
+
+    <p>总用量 <code>totalUsage</code> 非实时更新，数据统计可能会有几小时延迟。</p>
+
+    </Admonition>
 
 </TabItem>
 
@@ -947,32 +1018,42 @@ curl --request GET \
 {
   "code": 200,
   "data": {
-    "pipelineId": "pipe-xxxx",
+    "pipelineId": "pipe-xxx",
     "name": "my_text_ingestion_pipeline",
     "type": "INGESTION",
-    "clusterId": "in03-***************",
-    "collectionName": "my_collection"
+    "createTimestamp": 1721187300000,
     "description": "A pipeline that generates text embeddings and stores additional fields.",
     "status": "SERVING",
+    "totalUsage": {
+      "embedding": 0
+    },
     "functions": [
       {
-        "action": "INDEX_TEXT",
         "name": "index_my_text",
+        "action": "INDEX_TEXT",
         "inputFields": ["text_list"],
         "language": "ENGLISH",
         "embedding": "zilliz/bge-base-en-v1.5"
       },
       {
-        "action": "PRESERVE",
         "name": "keep_text_info",
+        "action": "PRESERVE",
         "inputField": "source",
         "outputField": "source",
         "fieldType": "VarChar"
       }
-    ]
+    ],
+    "clusterId": "inxx-xxxx",
+    "collectionName": "my_collection"
   }
 }
 ```
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>总用量 <code>totalUsage</code> 非实时更新，数据统计可能会有几小时延迟。</p>
+
+</Admonition>
 
 </TabItem>
 

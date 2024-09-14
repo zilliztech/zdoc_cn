@@ -1,7 +1,10 @@
 ---
+title: "FAQ：集群 | CLOUD"
 slug: /faq-cluster
+sidebar_label: "FAQ：集群"
 beta: FALSE
 notebook: FALSE
+description: " | CLOUD"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 2
@@ -36,7 +39,7 @@ sidebar_position: 2
 
 ### 如何为集群缩容？ \{#how-can-i-scale-down-my-cluster-cu-size}
 
-如果您需要缩小集群 CU 大小，请先创建一个新集群，并在创建时选择您需要的 CU 大小。随后，将原集群中的数据[迁移](./migrate-between-clusters#procedure)至新集群中。如在迁移过程中遇到任何问题，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
+如果您需要缩小集群 CU 大小，请先创建一个新集群，并在创建时选择您需要的 CU 大小。随后，将原集群中的数据[迁移](./migrate-between-clusters)至新集群中。如在迁移过程中遇到任何问题，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 
 ### 为什么会连接超时以及如何处理连接超时报错？ \{#how-can-i-deal-with-a-connection-timeout-error-when-i-attempt-to-connect-to-zilliz-cloud}
 

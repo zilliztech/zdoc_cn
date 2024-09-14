@@ -1,7 +1,10 @@
 ---
+title: "FAQ：数据迁移 | CLOUD"
 slug: /faq-migration
+sidebar_label: "FAQ：数据迁移"
 beta: FALSE
 notebook: FALSE
+description: " | CLOUD"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 6

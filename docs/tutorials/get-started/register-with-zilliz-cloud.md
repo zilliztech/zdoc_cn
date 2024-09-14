@@ -1,10 +1,20 @@
 ---
+title: "注册账号 | Cloud"
 slug: /register-with-zilliz-cloud
+sidebar_label: "注册账号"
 beta: FALSE
 notebook: FALSE
+description: "本教程将介绍如何创建 Zilliz Cloud 账号。 | Cloud"
 type: origin
 token: CCVpw6BVti8P8LkfcdJcdRH1nHg
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 注册
+  - 账号
 
 ---
 
@@ -23,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 ## 注册账号{#registration-options}
 
-1. 在“企业邮箱”字段中输入您的企业邮箱地址。
+1. 在“邮箱”字段中输入您的邮箱地址。
 
 1. 在“密码”字段中输入密码。
 
@@ -39,7 +49,7 @@ import Admonition from '@theme/Admonition';
 
 1. 点击”注册“按钮。
 
-    邮箱验证码将发送到您填写的企业邮箱中。
+    邮箱验证码将发送到您填写的邮箱中。
 
 1. 在提示对话框中输入验证码，并点击“验证”。
 

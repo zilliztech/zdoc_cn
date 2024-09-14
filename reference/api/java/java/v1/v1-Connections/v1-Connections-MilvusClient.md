@@ -1,7 +1,10 @@
 ---
+title: "MilvusClient | Java | v1"
 slug: /java/v1-Connections-MilvusClient
+sidebar_label: "MilvusClient"
 beta: FALSE
 notebook: FALSE
+description: "MilvusClient is an abstract interface of the Milvus client. MilvusServiceClient class is the implementation. | Java | v1"
 type: origin
 token: D0cfwvTqMiyhSrkCUv4c1a2Fnjd#MJ3dd20ldo0ZUfxQV7mcDy1on7c
 sidebar_position: 1
@@ -84,6 +87,21 @@ Methods of `ConnectParam.Builder`:
         <td><p>port: The connection port.</p></td>
     </tr>
     <tr>
+        <td><p>withUri(String uri)</p></td>
+        <td><p>Sets the uri of remote service.</p></td>
+        <td><p>uri: The uri of remote service.</p></td>
+    </tr>
+    <tr>
+        <td><p>withToken(String token)</p></td>
+        <td><p>Sets the token of remote service.</p></td>
+        <td><p>token: serving as the key for identification and authentication purposes.</p></td>
+    </tr>
+    <tr>
+        <td><p>withDatabaseName(String databaseName)</p></td>
+        <td><p>Sets the database name. database name can be null for default database.</p></td>
+        <td><p>databaseName: The database name.</p></td>
+    </tr>
+    <tr>
         <td><p>withConnectTimeout(long connectTimeout, TimeUnit timeUnit)</p></td>
         <td><p>Sets the connection timeout value of client channel. The timeout value must be greater than zero. The default value is 10 seconds.</p></td>
         <td><p>connectTimeout: The connection timeout period.<br/>timeUnit: The unit of timeout.</p></td>
@@ -114,6 +132,11 @@ Methods of `ConnectParam.Builder`:
         <td><p>idleTimeout: The idle timeout period of the client channel.<br/>timeUnit: The unit of timeout.</p></td>
     </tr>
     <tr>
+        <td><p>withRpcDeadline(long deadline, TimeUnit timeUnit)</p></td>
+        <td><p>Set a deadline for how long you are willing to wait for a reply from the server.<br/>With a deadline setting, the client will wait when encounter fast RPC fail caused by network fluctuations.<br/>The deadline value must be larger than or equal to zero. Default value is 0, deadline is disabled.</p></td>
+        <td><p>deadline: deadline value<br/>timeUnit: deadline unit</p></td>
+    </tr>
+    <tr>
         <td><p>withAuthorization(String username, String password)</p></td>
         <td><p>Sets the username and password for this connection.</p></td>
         <td><p>username: The username of the current user.<br/>password: The password corresponding to the username.</p></td>
@@ -137,6 +160,11 @@ Methods of `ConnectParam.Builder`:
         <td><p>withServerPemPath(String serverPemPath)</p></td>
         <td><p>Set the server.pem path for tls one-way authentication, only takes effect when "secure" is True.</p></td>
         <td><p>serverPemPath: The local path of server.pem</p></td>
+    </tr>
+    <tr>
+        <td><p>withServerName(String serverName)</p></td>
+        <td><p>Set target name override for SSL host name checking, only takes effect when "secure" is True.<br/>Note: this value is passed to grpc.ssl_target_name_override</p></td>
+        <td><p>serverName: The override name for SSL host.</p></td>
     </tr>
     <tr>
         <td><p>build()</p></td>
@@ -245,4 +273,3 @@ R<ShowCollectionsResponse> response = client.withTimeout(2, TimeUnit.SECONDS).sh
 
 client.close(1);
 ```
-

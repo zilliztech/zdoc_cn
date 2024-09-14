@@ -93,8 +93,9 @@ Milvus 集群的正常运行依赖多个三方组件，包括 Pulsar、etcd 等�
 
 1. 应用修改后的 Milvus 集群部署声明文件。
 
-    ```shell
-    $ kubectl apply -f milvus-new-version.yaml
+    ```bash
+    # add-command-prompt
+    kubectl apply -f milvus-new-version.yaml
     ```
 
 ## etcd 扩容{#scale-etcd}
@@ -129,8 +130,9 @@ Milvus 集群的正常运行依赖多个三方组件，包括 Pulsar、etcd 等�
 
 1. 应用修改后的 Milvus 集群部署声明文件。
 
-    ```shell
-    $ kubectl apply -f milvus-new-version.yaml
+    ```bash
+    # add-command-prompt
+    kubectl apply -f milvus-new-version.yaml
     ```
 
 ## 磁盘扩容{#scale-storage}
@@ -162,8 +164,9 @@ Milvus 集群的正常运行依赖多个三方组件，包括 Pulsar、etcd 等�
 
 1. 应用修改后的 Milvus 集群部署声明文件。
 
-    ```shell
-    $ kubectl apply -f milvus-new-version.yaml
+    ```bash
+    # add-command-prompt
+    kubectl apply -f milvus-new-version.yaml
     ```
 
     

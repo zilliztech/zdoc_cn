@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "createIndex() | Java | v2"
 slug: /java/java/v2-Management-createIndex
+sidebar_label: "createIndex()"
 beta: false
 notebook: false
+description: "This operation creates an index for a specific collection. | Java | v2"
 type: docx
 token: LZQ9dbJxQoUhATxciEacmuF4nvh
 sidebar_position: 1

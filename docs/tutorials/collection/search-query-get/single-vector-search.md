@@ -1,10 +1,20 @@
 ---
+title: "Single-Vector Search | Cloud"
 slug: /single-vector-search
+sidebar_label: "Single-Vector Search"
 beta: FALSE
 notebook: FALSE
+description: "数据插入后，接下来是发起 `search` 请求，寻找与查询向量相似的向量。Single-vector search 通过比较查询向量与 collection 中的其他向量，找出与之最相似的 entity，返回 entity ID 及相互间的距离。Single-vector search 也支持返回向量数据和元数据。 | Cloud"
 type: origin
 token: YZH0wx8TAinCZbkAHAScDK2tnae
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - single-vector
+  - search
 
 ---
 
@@ -1956,7 +1966,7 @@ console.log(res.results)
    </tr>
 </table>
 
-## Grouping search<sup>(Beta)</sup>{#grouping-search}
+## Grouping search(Beta){#grouping-search}
 
 在 Zilliz Cloud 中，通过特定字段的 grouping search 能够避免结果中同一字段项的重复出现，从而获取更加多样化的结果。
 

@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "dropCollection() | Java | v2"
 slug: /java/java/v2-Collections-dropCollection
+sidebar_label: "dropCollection()"
 beta: false
 notebook: false
+description: "This operation drops a collection. | Java | v2"
 type: docx
 token: KMYzdRhVjo5OqOxlB9acFeMgnOh
 sidebar_position: 11

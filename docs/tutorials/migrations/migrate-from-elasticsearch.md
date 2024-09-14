@@ -1,10 +1,20 @@
 ---
+title: "从 Elasticsearch 迁移至 Zilliz Cloud | Cloud"
 slug: /migrate-from-elasticsearch
+sidebar_label: "从 Elasticsearch 迁移"
 beta: FALSE
 notebook: FALSE
+description: "Elasticsearch 是一个高度可扩展的搜索和分析引擎。通过利用 Zilliz Cloud 的迁移能力，您可以无缝地将数据从 Elasticsearch 实例迁移到 Zilliz Cloud 集群。 | Cloud"
 type: origin
 token: CJN4wlKiGi1P8Zk4BHKcF04GnLb
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 迁移
+  - elasticsearch
 
 ---
 
@@ -13,63 +23,79 @@ import Admonition from '@theme/Admonition';
 
 # 从 Elasticsearch 迁移至 Zilliz Cloud
 
-如今，大多数企业的基础环境都以数据为驱动。在这种背景下，如何高效、无缝地在不同平台之间迁移数据以利用先进的数据分析能力变得至关重要。本文介绍了如何将 Elasticsearch 中的数据迁移到 Zilliz Cloud，以帮助您充分释放数据的潜力，实现可扩展性、高性能和易用性。
+Elasticsearch 是一个高度可扩展的搜索和分析引擎。通过利用 Zilliz Cloud 的迁移能力，您可以无缝地将数据从 Elasticsearch 实例迁移到 Zilliz Cloud 集群。
+
+迁移过程涉及与现有的 Elasticsearch 源建立连接，并将其数据索引复制到 Zilliz Cloud 中相应的目标 collection，保留原始数据的结构和性能，同时启用高级向量搜索功能。
+
+## 使用限制{#limits}
+
+- 目前，您可以迁移以下 Elasticsearch 数据类型：**dense_vector**, **text**, **string**, **keyword**, **ip**, **date**, **timestamp**, **long**, **integer**, **short**, **byte**, **double**, **float**, **boolean**, **object**, **arrays**。如果您的表中存在不支持的数据类型字段，可以选择不迁移这些字段或[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。有关 Elasticsearch 数据类型如何映射到 Zilliz Cloud 的详细信息，请参阅[字段映射](./migrate-from-elasticsearch#field-mapping-reference)。
+
+- 每次迁移仅允许从每个源索引中选择一个向量字段。
+
+- 每次迁移仅支持选择单个源集群。如果您在多个源集群中有数据，可以创建多个迁移任务。
 
 ## 开始前{#before-you-start}
-
-请确保已完成以下步骤：
 
 - 您的 Elasticsearch 集群运行在 7.x 及以上版本。详情请参阅[安装 Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)。
 
 - 您已创建 Zilliz Cloud 集群。详情请参阅[创建集群](./create-cluster)。
 
-## 连接到 Elasticsearch 集群{#connect-to-your-elasticsearch-cluster}
+## 从 Elasticsearch 迁移至 Zilliz Cloud{#migrate-from-elasticsearch-to-zilliz-cloud}
 
-在与 Elasticsearch 集群交互之前，首先需要连接到集群。根据 Elasticsearch 集群的部署模式，Zilliz Cloud 提供以下连接方法：
+您可以将源数据迁移到任何版本类型的 Zilliz Cloud 集群，只要其计算单元（CU）大小能够满足源数据的存储需求。
 
-- **使用 Cloud ID 连接**：适用于在 Elastic Cloud 上运行的 Elasticsearch 集群。选择此连接方式，您需要指定 Elasticsearch 集群的 Cloud ID 和 API 密钥。
+1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)。
 
-- **使用 URL 连接**：适用于在本地部署的 Elasticsearch 集群。选择此连接方式，您需要指定集群的URL 以及集群用户名和密码。
+1. 进入目标项目，选择**数据迁移** > **从 Elasticsearch 迁移**。
 
-有关如何获取集群的连接信息，请参阅[连接集群](https://www.elastic.co/guide/en/cloud-enterprise/current/ece-connect.html#ece-connect)和[获取 API 密钥信息](https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-get-api-key.html)。
+1. 在**连接至数据源**步骤中，选择**通过 Endpoint** 或**通过 Cloud ID** 作为与源 Elasticsearch 集群交互的连接方法。然后，单击**下一步**。
 
-![zh_connect_to_es](/img/zh_connect_to_es.png)
+    <Admonition type="info" icon="📘" title="说明">
 
-## 将数据从 Elasticsearch 索引迁移至 Zilliz Cloud Collection{#transition-from-elasticsearch-index-to-zilliz-cloud-collection}
+    <p>有关如何获取集群的连接信息，请参阅<a href="https://www.elastic.co/guide/en/cloud-enterprise/current/ece-connect.html#ece-connect">连接集群</a>和<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-get-api-key.html">获取 API 密钥信息</a>。</p>
 
-Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Elasticsearch 中的索引数据迁移到 Zilliz Cloud 的 Collection，首先需要连接到 Elasticsearch 集群，然后从页面左侧选择源索引和待迁移字段。选择完成后，待迁移字段将显示在页面右侧的目标 Collection 中。具体请参见下图。
+    </Admonition>
 
-![zh_migrate_index](/img/zh_migrate_index.png)
+1. 在**选择迁移来源和目标**步骤中，配置源 Elasticsearch 集群和目标 Zilliz Cloud 集群的设置。然后，单击**下一步**。
 
-默认情况下，该 Collection 的名称遵循命名约定 **Collection_n**，其中 *n* 表示一个数字值，用于区分它与 Zilliz Cloud 上的其他 Collection。
+    <Admonition type="info" icon="📘" title="说明">
 
-对于每次迁移，您只能选择源索引中的一个 `dense_vector` 字段和一个或多个其他字段。选择待迁移的字段时，请注意以下事项：
+    <p>您选择从 Elasticsearch 迁移的每个源索引必须包含一个向量字段。</p>
 
-- Elasticsearch 索引中的向量字段 `dense_vector` 映射到 Zilliz Cloud 的 Collection 中为 `FloatVector` 字段。您可以为 `FloatVector` 字段选择合适的度量类型。可选值为**欧氏距离（Euclidean/L2）**和**内积（Inner Product/IP）**。
+    </Admonition>
 
-- 向量数据的维度由源索引中的向量字段维度决定。如果您集群的 CU 类型是**容量型**，请确保您选择要迁移的 `dense_vector` 字段的维度不小于 32。否则，将会发生错误，数据无法迁移。有关更多信息，请参见[选择合适的 CU 类型](./cu-types-explained)。
+1. 在**配置 Schema** 步骤中：
+
+    1. 验证 Elasticsearch 数据与 Zilliz Cloud 数据类型之间的映射。Zilliz Cloud 默认映射数据，您可以查看相关映射并进行必要的调整。目前，您可以重命名字段，但不支持更改字段数据类型。
+
+    1. （可选）在**高级设置**中配置**动态列**和 **Partition Key**。更多信息请参考[开启动态字段](./enable-dynamic-field)和[使用 Partition Key](./use-partition-key)。
+
+    1. （可选）在**基础信息**中自定义目标 collection 名称和描述。collection 名称在每个集群中必须唯一。如果目标 collection 名称与现有 collection 重复，需要重命名目标 collection。
+
+1. 点击**迁移**。
+
+![zh_migrate_from_es](/img/zh_migrate_from_es.png)
+
+## 查看迁移进度{#monitor-the-migration-process}
+
+生成迁移任务后，您可前往[任务中心](/docs/job-center)查看任务状态和进度。如果迁移任务的状态从**进行中**变更为**成功**，则代表迁移成功。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>有关更多字段映射信息，请参阅<a href="./migrate-from-elasticsearch#field-mapping-reference">字段映射</a>。</p>
+<p>迁移完成后，请验证目标集群中的 collection 和 entity 数量是否与数据源一致。如果发现不一致，请删除缺失 entity 的 collection 并重新进行迁移。</p>
 
 </Admonition>
 
-在**主键**字段，选择一个字段作为 Collection 的主键。您可以选择 Elasticsearch  元数据字段 `_id` 或源索引中的其他字段作为主键。如果选择 `_id` 字段，请将其数据类型设置为 **Int64** 或 **VarChar**。
+![view_migration_progress_cn](/img/view_migration_progress_cn.png)
 
-在**动态 Schema** 字段，选择是否为 Collection 启用动态 Schema。有关更多信息，请参见[开启动态 Schema](./enable-dynamic-field)。
+## 取消迁移任务{#cancel-migration-job}
 
-## 结果验证{#verify-the-migration-results}
+如果迁移过程遇到任何问题，您可以采取以下步骤进行故障排除并恢复迁移：
 
-如果迁移任务的状态从**迁移中**变更为**成功**，则代表迁移成功。
+1. 在**任务中心**页面，取消失败的迁移任务。
 
-<Admonition type="info" icon="📘" title="说明">
-
-<p>在迁移过程中，您可以同时向 Elasticsearch 中的源索引插入数据，但最新插入的数据不会实时同步迁移至 Zilliz Cloud。</p>
-
-</Admonition>
-
-![zh_verify_collection_es](/img/zh_verify_collection_es.png)
+1. 在**操作**列点击**查看详情**以访问日志信息。
 
 ## 字段映射{#field-mapping-reference}
 
@@ -77,8 +103,8 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
 
 <table>
    <tr>
-     <th><p>Elasticsearch 字段</p></th>
-     <th><p>Zilliz Cloud 字段</p></th>
+     <th><p><strong>Elasticsearch 字段类型</strong></p></th>
+     <th><p><strong>Zilliz Cloud 字段类型</strong></p></th>
      <th><p>描述</p></th>
    </tr>
    <tr>
@@ -87,12 +113,7 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
      <td><p>向量维度与源索引中的向量字段维度相同。您可以在 <strong>L2</strong> 和 <strong>IP</strong> 之间指定一个度量类型。</p></td>
    </tr>
    <tr>
-     <td><p>keyword</p></td>
-     <td><p>VarChar</p></td>
-     <td><p>通过 <strong>Max Length</strong> 指定最大数据长度，有效值为 1 到 65535 之间。如果任何字符串超过了最大长度限制，迁移过程将会报错。</p></td>
-   </tr>
-   <tr>
-     <td><p>text</p></td>
+     <td><p>text, string, keyword, ip, date, timestamp</p></td>
      <td><p>VarChar</p></td>
      <td><p>通过 <strong>Max Length</strong> 指定最大数据长度，有效值为 1 到 65535 之间。如果任何字符串超过了最大长度限制，迁移过程将会报错。</p></td>
    </tr>
@@ -104,6 +125,16 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
    <tr>
      <td><p>integer</p></td>
      <td><p>Int32</p></td>
+     <td><p>-</p></td>
+   </tr>
+   <tr>
+     <td><p>short</p></td>
+     <td><p>int16</p></td>
+     <td><p>-</p></td>
+   </tr>
+   <tr>
+     <td><p>byte</p></td>
+     <td><p>int8</p></td>
      <td><p>-</p></td>
    </tr>
    <tr>
@@ -121,15 +152,15 @@ Zilliz Cloud 中的 Collection 类似于 Elasticsearch 中的索引。要将 Ela
      <td><p>Bool</p></td>
      <td><p>-</p></td>
    </tr>
+   <tr>
+     <td><p>object</p></td>
+     <td><p>JSON</p></td>
+     <td><p>-</p></td>
+   </tr>
+   <tr>
+     <td><p>arrays</p></td>
+     <td><p>Array</p></td>
+     <td><p>-</p></td>
+   </tr>
 </table>
-
-## 相关文档{#related-topics}
-
-- [Search, Query 和 Get](./search-query-get)
-
-- [Insert, Upsert 和 Delete](./insert-update-delete)
-
-- [AUTOINDEX](./autoindex-explained)
-
-- [选择合适的 CU 类型](./cu-types-explained) 
 

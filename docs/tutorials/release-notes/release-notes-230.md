@@ -1,10 +1,19 @@
 ---
+title: "版本说明书（2023/11/23） | Cloud"
 slug: /release-notes-230
+sidebar_label: "版本说明书（2023/11/23）"
 beta: FALSE
 notebook: FALSE
+description: "我们很高兴地宣布 Zilliz Cloud 2.3.0 的发布。此版本引入了一系列创新 Beta 特性和功能改进。 | Cloud"
 type: origin
 token: BuuSwsbhEiIHDJkB9YSc63xAnrh
-sidebar_position: 6
+sidebar_position: 8
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 版本说明书
 
 ---
 

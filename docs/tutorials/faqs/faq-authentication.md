@@ -1,7 +1,10 @@
 ---
+title: "FAQ：鉴权 | CLOUD"
 slug: /faq-authentication
+sidebar_label: "FAQ：鉴权"
 beta: FALSE
 notebook: FALSE
+description: " | CLOUD"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 12

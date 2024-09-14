@@ -1,11 +1,20 @@
 ---
+title: "用户指南：数据导入从入门到精通 | Cloud"
 slug: /data-import-zero-to-hero
-sidebar_label: 用户指南
+sidebar_label: "用户指南"
 beta: FALSE
 notebook: FALSE
+description: "本小节为一个快速引导教程，旨在帮助您在 Zilliz Cloud 上快速开始包含数据准备、建立 Collection 到开始导入数据等子任务在内的全流程数据导入任务。通过本节，你将掌握： | Cloud"
 type: origin
 token: FXGWwcjyViaQm8kvJgScITzBnr3
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 数据导入
+  - 指南
 
 ---
 

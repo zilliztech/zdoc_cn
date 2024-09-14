@@ -1,10 +1,20 @@
 ---
+title: "管理告警渠道 | Cloud"
 slug: /manage-notification-channels
+sidebar_label: "管理告警渠道"
 beta: FALSE
 notebook: FALSE
+description: "Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件。通常情况下，告警通知会发送到您指定的电子邮件地址。此外，您也可以通过自定义 webhook 通知渠道，实现更加无缝和事件驱动的告警通知。本指南将介绍如何管理告警渠道。 | Cloud"
 type: origin
 token: T9z1wL5y9iDgV5kMAx1cAZfxn0b
 sidebar_position: 5
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 告警
+  - 渠道
 
 ---
 

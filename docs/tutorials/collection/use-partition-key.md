@@ -1,675 +1,123 @@
 ---
+title: "使用 Partition Key | Cloud"
 slug: /use-partition-key
-beta: FALSE
+sidebar_label: "使用 Partition Key"
+beta: PUBLIC
 notebook: FALSE
+description: "本指南将指导您使用 Partition Key 来加快从 Collection 中检索数据的速度。 | Cloud"
 type: origin
 token: DrXpwhU8pixYi9kqzSBcs5TgnFd
 sidebar_position: 17
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - partition key
 
 ---
 
 import Admonition from '@theme/Admonition';
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+
 
 # 使用 Partition Key
 
-本节将帮助您了解如何使用 Partition Key 加速在 Collection 中的数据检索。
+本指南将指导您使用 Partition Key 来加快从 Collection 中检索数据的速度。
 
-## 概述{#overview}
+## Partition Key{#partition-key}
 
-当您在 Collection中指定某个字段为 Partition Key 后，Zilliz Cloud 会根据待插入数据中该字段的取值将数据存放到不同的 Partition 中。因为具有相同键值的 Entity 就会被放到相同的 Partition 中，Zilliz Cloud 在执行过滤操作时，会根据 Partition Key 确定需要扫描的 Partition，从而避免扫描那些与本次查询完全无关的 Partition。 相比传统的过滤查询方式，启用该特性后可以极大地提升查询性能。
+您可以将 Collection 的特定字段设置为 Partition Key。这样，Zilliz Cloud 将根据此字段中各自值的哈希值，将传入r Entity 分配到不同的 Partition 中。
 
-该特性通常用于多租场景。关于多租策略的相关讨论，可以参考 [Multi-tenancy](https://milvus.io/docs/multi_tenancy.md)。
-
-## 启用 Partition Key{#enable-partition-key}
-
-如下代码演示了如何设置某个字段为 Partition Key。
-
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
-<TabItem value='python'>
+您可以在 Collection Schema 中设置 Partition Key 的名称。
 
 ```python
-import random, time
-from pymilvus import connections, MilvusClient, DataType
-
-CLUSTER_ENDPOINT = "YOUR_CLUSTER_ENDPOINT"
-TOKEN = "YOUR_CLUSTER_TOKEN"
-
-# 1. Set up a Milvus client
-client = MilvusClient(
-    uri=CLUSTER_ENDPOINT,
-    token=TOKEN 
-)
-
-# 2. Create a collection
 schema = MilvusClient.create_schema(
     auto_id=False,
     enable_dynamic_field=True,
-    # highlight-next-line
-    partition_key_field="color",
-
+    # highlight-start
+    partition_key_field="id", # An existing scalar field
+    num_partitions=16 # Number of partitions. Defaults to 16.
+    # highlight-end
 )
-
-schema.add_field(field_name="id", datatype=DataType.INT64, is_primary=True)
-schema.add_field(field_name="vector", datatype=DataType.FLOAT_VECTOR, dim=5)
-schema.add_field(field_name="color", datatype=DataType.VARCHAR, max_length=512)
 ```
 
-</TabItem>
-
-<TabItem value='java'>
-
-```java
-import io.milvus.v2.client.ConnectConfig;
-import io.milvus.v2.client.MilvusClientV2;
-import io.milvus.v2.common.DataType;
-import io.milvus.v2.common.IndexParam;
-import io.milvus.v2.service.collection.request.AddFieldReq;
-import io.milvus.v2.service.collection.request.CreateCollectionReq;
-
-String CLUSTER_ENDPOINT = "YOUR_CLUSTER_ENDPOINT";
-String TOKEN = "YOUR_CLUSTER_TOKEN";
-
-// 1. Connect to Milvus server
-ConnectConfig connectConfig = ConnectConfig.builder()
-    .uri(CLUSTER_ENDPOINT)
-    .token(TOKEN)
-    .build();
-
-MilvusClientV2 client = new MilvusClientV2(connectConfig);
-
-// 2. Create a collection in customized setup mode
-
-// 2.1 Create schema
-CreateCollectionReq.CollectionSchema schema = client.createSchema();
-
-// 2.2 Add fields to schema
-schema.addField(AddFieldReq.builder()
-    .fieldName("id")
-    .dataType(DataType.Int64)
-    .isPrimaryKey(true)
-    .autoID(false)
-    .build());
-
-schema.addField(AddFieldReq.builder()
-    .fieldName("vector")
-    .dataType(DataType.FloatVector)
-    .dimension(5)
-    .build());
-    
-schema.addField(AddFieldReq.builder()
-    .fieldName("color")
-    .dataType(DataType.VarChar)
-    .maxLength(512)
-    // highlight-next-line
-    .isPartitionKey(true)
-    .build());
-```
-
-</TabItem>
-
-<TabItem value='javascript'>
-
-```javascript
-const { MilvusClient, DataType, sleep } = require("@zilliz/milvus2-sdk-node")
-
-const address = "YOUR_CLUSTER_ENDPOINT"
-const token = "YOUR_CLUSTER_TOKEN"
-
-async function main() {
-// 1. Set up a Milvus Client
-client = new MilvusClient({address, token}); 
-
-// 2. Create a collection
-// 2.1 Define fields
-const fields = [
-    {
-        name: "id",
-        data_type: DataType.Int64,
-        is_primary_key: true,
-        auto_id: false
-    },
-    {
-        name: "vector",
-        data_type: DataType.FloatVector,
-        dim: 5
-    },
-    {
-        name: "color",
-        data_type: DataType.VarChar,
-        max_length: 512,
-        // highlight-next-line
-        is_partition_key: true
-    }
-]
-```
-
-</TabItem>
-</Tabs>
-
-在完成字段定义之后，还需要设置 Index 参数。
-
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
-<TabItem value='python'>
+也可以在向 Schema 中添加字段时设置 Partition Key。
 
 ```python
-index_params = MilvusClient.prepare_index_params()
-
-index_params.add_index(
+schema.add_field(
     field_name="id",
-    index_type="STL_SORT"
-)
-
-index_params.add_index(
-    field_name="color",
-    index_type="Trie"
-)
-
-index_params.add_index(
-    field_name="vector",
-    index_type="AUTOINDEX",
-    metric_type="L2"
+    datatype=DataType.VARCHAR,
+    max_length=512,
+    # highlight-next-line
+    is_partition_key=True
 )
 ```
 
-</TabItem>
+在使用上述 Schema 创建了一个 Collection、为向量字段建立索引并加载了 Collection 后，就可以使用包含 Partition Key的过滤条件进行搜索。这样，Zilliz Cloud 就会将搜索范围缩小到只包含与过滤条件中的 Partition Key 值相匹配的 Entity 所在 Partition，从而避免扫描不相关的 Partition，提高搜索性能。
 
-<TabItem value='java'>
+![MttsbAuxIoyxVbxO1EEc7WeAnnc](/img/MttsbAuxIoyxVbxO1EEc7WeAnnc.png)
 
-```java
-// 2.3 Prepare index parameters
-IndexParam indexParamForVectorField = IndexParam.builder()
-    .fieldName("vector")
-    .indexType(IndexParam.IndexType.AUTOINDEX)
-    .metricType(IndexParam.MetricType.IP)
-    .build();
-
-List<IndexParam> indexParams = new ArrayList<>();
-indexParams.add(indexParamForVectorField);
-```
-
-</TabItem>
-
-<TabItem value='javascript'>
-
-```javascript
-// 2.2 Prepare index parameters
-const index_params = [{
-    field_name: "color",
-    index_type: "Trie"
-},{
-    field_name: "id",
-    index_type: "STL_SORT"
-},{
-    field_name: "vector",
-    index_type: "AUTOINDEX",
-    metric_type: "IP"
-}]
-```
-
-</TabItem>
-</Tabs>
-
-最后，使用如下代码创建 Collection。
-
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
-<TabItem value='python'>
+您可以在过滤条件中包含一个或多个 Partition Key，如下所示：
 
 ```python
-client.create_collection(
-    collection_name="test_collection",
-    schema=schema,
-    index_params=index_params
-)
+# Filter based on a single partition key value
+filter='partition_key == "x" && <other conditions>'
+
+# Filter based on multiple partition key values
+filter='partition_key in ["x", "y", "z"] && <other conditions>'
 ```
 
-</TabItem>
-
-<TabItem value='java'>
-
-```java
-// 2.4 Create a collection with schema and index parameters
-CreateCollectionReq customizedSetupReq = CreateCollectionReq.builder()
-    .collectionName("test_collection")
-    .collectionSchema(schema)
-    .indexParams(indexParams)          
-    .build();
-
-client.createCollection(customizedSetupReq);
-```
-
-</TabItem>
-
-<TabItem value='javascript'>
-
-```javascript
-// 2.3 Create a collection with fields and index parameters
-res = await client.createCollection({
-    collection_name: "test_collection",
-    fields: fields, 
-    index_params: index_params,
-})
-
-console.log(res.error_code)
-
-// Output
-// 
-// Success
-// 
-```
-
-</TabItem>
-</Tabs>
-
-## 查看 Partitions{#list-partitions}
-
-当 Collection 中某个字段被指定为 Partition Key 后 Zilliz Cloud 会在该 Collection 中创建指定数量的 Partition 并对它们进行管理。因此，您不能再在该 Collection 中创建其它的 Partition，也不能删除 Zilliz Cloud 管理的 Partition。
-
-当您创建了一个拥有 Partition Key 的 Collection 后，可以参考如下代码查看随该 Collection 一起创建的 Partition。
-
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
-<TabItem value='python'>
-
-```python
-# 2.1. List all partitions in the collection
-partition_names = client.list_partitions(
-    collection_name="test_collection"
-)
-
-print(partition_names)
-
-# Output
-#
-# [
-#     "_default_0",
-#     "_default_1",
-#     "_default_2",
-#     "_default_3",
-#     "_default_4",
-#     "_default_5",
-#     "_default_6",
-#     "_default_7",
-#     "_default_8",
-#     "_default_9",
-#     "(54 more items hidden)"
-# ]
-```
-
-</TabItem>
-
-<TabItem value='java'>
-
-```java
-// 2.5 List all partitions in the collection
-List<String> partitionNames = client.listPartitions(ListPartitionsReq.builder()
-    .collectionName("test_collection")
-    .build());
-
-System.out.println(partitionNames);
-
-// Output:
-// [
-//     "_default_0",
-//     "_default_1",
-//     "_default_2",
-//     "_default_3",
-//     "_default_4",
-//     "_default_5",
-//     "_default_6",
-//     "_default_7",
-//     "_default_8",
-//     "_default_9",
-//     "(54 elements are hidden)"
-// ]
-```
-
-</TabItem>
-
-<TabItem value='javascript'>
-
-```javascript
-// 2.1 List partitions
-res = await client.listPartitions({
-    collection_name: "test_collection",
-})
-
-console.log(res.partition_names)
-
-// Output
-// 
-// [
-//   '_default_0',  '_default_1',  '_default_2',  '_default_3',
-//   '_default_4',  '_default_5',  '_default_6',  '_default_7',
-//   '_default_8',  '_default_9',  '_default_10', '_default_11',
-//   '_default_12', '_default_13', '_default_14', '_default_15',
-//   '_default_16', '_default_17', '_default_18', '_default_19',
-//   '_default_20', '_default_21', '_default_22', '_default_23',
-//   '_default_24', '_default_25', '_default_26', '_default_27',
-//   '_default_28', '_default_29', '_default_30', '_default_31',
-//   '_default_32', '_default_33', '_default_34', '_default_35',
-//   '_default_36', '_default_37', '_default_38', '_default_39',
-//   '_default_40', '_default_41', '_default_42', '_default_43',
-//   '_default_44', '_default_45', '_default_46', '_default_47',
-//   '_default_48', '_default_49', '_default_50', '_default_51',
-//   '_default_52', '_default_53', '_default_54', '_default_55',
-//   '_default_56', '_default_57', '_default_58', '_default_59',
-//   '_default_60', '_default_61', '_default_62', '_default_63'
-// ]
-// 
-```
-
-</TabItem>
-</Tabs>
-
-## 插入数据
-
-在准备好 Collection 后，参考如下代码向该 Collection 插入数据。
-
-### 准备数据
-
-如下代码演示了如何生成与 Collection 的 Schema 相符的随机数据。
-
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
-<TabItem value='python'>
-
-```python
-# 3. Insert randomly generated vectors 
-colors = ["green", "blue", "yellow", "red", "black", "white", "purple", "pink", "orange", "brown", "grey"]
-data = []
-
-for i in range(1000):
-    current_color = random.choice(colors)
-    current_tag = random.randint(1000, 9999)
-    data.append({
-        "id": i,
-        "vector": [ random.uniform(-1, 1) for _ in range(5) ],
-        "color": current_color,
-        "tag": current_tag,
-        "color_tag": f"{current_color}_{str(current_tag)}"
-    })
-
-print(data[0])
-```
-
-</TabItem>
-
-<TabItem value='java'>
-
-```java
-// 3. Insert randomly generated vectors
-List<String> colors = Arrays.asList("green", "blue", "yellow", "red", "black", "white", "purple", "pink", "orange", "brown", "grey");
-List<JSONObject> data = new ArrayList<>();
-
-for (int i=0; i<1000; i++) {
-    Random rand = new Random();
-    String current_color = colors.get(rand.nextInt(colors.size()-1));
-    int current_tag = rand.nextInt(8999) + 1000;
-    JSONObject row = new JSONObject();
-    row.put("id", Long.valueOf(i));
-    row.put("vector", Arrays.asList(rand.nextFloat(), rand.nextFloat(), rand.nextFloat(), rand.nextFloat(), rand.nextFloat()));
-    row.put("color", current_color);
-    row.put("tag", current_tag);
-    row.put("color_tag", current_color + "_" + String.valueOf(rand.nextInt(8999) + 1000));
-    data.add(row);
-}
-
-System.out.println(JSONObject.toJSON(data.get(0)));   
-```
-
-</TabItem>
-
-<TabItem value='javascript'>
-
-```javascript
-// 3. Insert randomly generated vectors 
-const colors = ["green", "blue", "yellow", "red", "black", "white", "purple", "pink", "orange", "brown", "grey"]
-var data = []
-
-for (let i = 0; i < 1000; i++) {
-    const current_color = colors[Math.floor(Math.random() * colors.length)]
-    const current_tag = Math.floor(Math.random() * 8999 + 1000)
-    data.push({
-        id: i,
-        vector: [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()],
-        color: current_color,
-        tag: current_tag,
-        color_tag: `${current_color}_${current_tag}`
-    })
-}
-
-console.log(data[0])
-```
-
-</TabItem>
-</Tabs>
-
-您可以通过查看随机生成的数据列表中的第一条数据来确认数据结构是否与 Collection 的 Schema 相符。
-
-```json
-{
-    id: 0,
-    vector: [
-        0.1275656405044483,
-        0.47417858592773277,
-        0.13858264437643286,
-        0.2390904907020377,
-        0.8447862593689635
-    ],
-    color: 'blue',
-    tag: 2064,
-    color_tag: 'blue_2064'
-}
-```
-
-### 插入数据
-
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
-<TabItem value='python'>
-
-```python
-res = client.insert(
-    collection_name="test_collection",
-    data=data
-)
-
-print(res)
-
-# Output
-#
-# {
-#     "insert_count": 1000,
-#     "ids": [
-#         0,
-#         1,
-#         2,
-#         3,
-#         4,
-#         5,
-#         6,
-#         7,
-#         8,
-#         9,
-#         "(990 more items hidden)"
-#     ]
-# }
-```
-
-</TabItem>
-
-<TabItem value='java'>
-
-```java
-// 3.1 Insert data into the collection
-InsertReq insertReq = InsertReq.builder()
-    .collectionName("test_collection")
-    .data(data)
-    .build();
-
-InsertResp insertResp = client.insert(insertReq);
-
-System.out.println(JSONObject.toJSON(insertResp));
-
-// Output:
-// {"insertCnt": 1000}
-```
-
-</TabItem>
-
-<TabItem value='javascript'>
-
-```javascript
-res = await client.insert({
-    collection_name: "test_collection",
-    data: data,
-})
-
-console.log(res.insert_cnt)
-
-// Output
-// 
-// 1000
-// 
-```
-
-</TabItem>
-</Tabs>
-
-## 使用 Partition Key{#use-partition-key}
-
-在为上述 Collection 创建索引并插入数据后，我们就可以使用 Partition Key 对相似性搜索的结果进行过滤了。
+## Partition-key Isolation{#partition-key-isolation}
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在相似性搜索中使用 Partition Key 时，您需要在过滤条件中包含如下表达式：</p>
-<ul>
-<li><p><code>filter='&lt;partition_key&gt;=="xxxx"'</code></p></li>
-<li><p><code>filter='&lt;partition_key&gt; in ["xxx", "xxx"]'</code></p></li>
-</ul>
-<p>请务必用您的 Collection 中充当 Partition Key 的字段名称替换上述表达式中的<code>&lt;partition_key&gt;</code>。</p>
+<p>目前，Partition-key Isolation 功能处于公测阶段，仅适用于性能性 Dedicated 集群。如果您有兴趣使用该功能，请<a href="https://support.zilliz.com/hc/en-us">联系我们</a>。</p>
 
 </Admonition>
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
-<TabItem value='python'>
+如果您使用的过滤条件只涉及 Partition Key，可以考虑启用 Partition-key Isolation 功能，从而进一步缩小搜索范围，提升搜索效率。具体来说，可以使用以下方法之一启用该功能。
 
 ```python
-# 4. Search with partition key
-query_vectors = [[0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]]
-
-res = client.search(
+# Add properties while creating the collection
+client.create_collection(
     collection_name="test_collection",
-    data=query_vectors,
-    filter="color == 'green'",
-    search_params={"metric_type": "L2", "params": {"nprobe": 10}},
-    output_fields=["id", "color_tag"],
-    limit=3
+    schema=schema,
+    index_params=index_params,
+    # highlight-next-line
+    properties={"partitionkey.isolation": "true"}
 )
 
-print(res)
-
-# Output
-#
-# [
-#     [
-#         {
-#             "id": 970,
-#             "distance": 0.5770174264907837,
-#             "entity": {
-#                 "id": 970,
-#                 "color_tag": "green_9828"
-#             }
-#         },
-#         {
-#             "id": 115,
-#             "distance": 0.6898155808448792,
-#             "entity": {
-#                 "id": 115,
-#                 "color_tag": "green_4073"
-#             }
-#         },
-#         {
-#             "id": 899,
-#             "distance": 0.7028976678848267,
-#             "entity": {
-#                 "id": 899,
-#                 "color_tag": "green_9897"
-#             }
-#         }
-#     ]
-# ]
+# Or modify the collection with the ORM set_properties API
+# highlight-next-line
+collection.set_properties({"partitionkey.isolation": "true"})
 ```
 
-</TabItem>
+在上述创建或修改的 Collection 中启用此功能并在向量字段上创建索引后，Zilliz Cloud 将为每一组具有唯一 Partition Key 值的实体在向量字段上生成索引文件。
 
-<TabItem value='java'>
+当收到带有涉及 Partition Key 的过滤条件的搜索请求时，Zilliz Cloud 会进一步将搜索范围缩小到包含过滤条件中指定的 Partition Key值的 Entity。
 
-```java
-// 4. Search with partition key
-List<List<Float>> query_vectors = Arrays.asList(Arrays.asList(0.3580376395471989f, -0.6023495712049978f, 0.18414012509913835f, -0.26286205330961354f, 0.9029438446296592f));
+![ZnXxbljNUolBQLx1miwcCkYMn3f](/img/ZnXxbljNUolBQLx1miwcCkYMn3f.png)
 
-SearchReq searchReq = SearchReq.builder()
-    .collectionName("test_collection")
-    .data(query_vectors)
-    .filter("color == \"green\"")
-    .topK(3)
-    .build();
+需要注意的是，在 Collection 中启用 Partition-key Isolation 后，过滤条件中只能包含一个 Partition Key 值。
 
-SearchResp searchResp = client.search(searchReq);
+如果要使用 Partition Key 实现多租户能力，建议同时启用 Partition-key Isolation，原因如下：
 
-System.out.println(JSONObject.toJSON(searchResp));   
+- 缩短索引和加载时间
 
-// Output:
-// {"searchResults": [[
-//     {
-//         "distance": 1.0586997,
-//         "id": 414,
-//         "entity": {}
-//     },
-//     {
-//         "distance": 0.981384,
-//         "id": 293,
-//         "entity": {}
-//     },
-//     {
-//         "distance": 0.9548756,
-//         "id": 325,
-//         "entity": {}
-//     }
-// ]]}
-```
+    使用 Partition-key Isolation，Zilliz Cloud 可创建和加载多个小索引文件，而不是一个大索引文件，从而缩短时间。
 
-</TabItem>
+- 减少搜索延迟
 
-<TabItem value='javascript'>
+    通过 Partition-key Isolation，Zilliz Cloud 可进一步将搜索范围缩小到某些实体，从而减少搜索延迟。
 
-```javascript
-// 4. Search with partition key
-const query_vectors = [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]
+- 减少内存使用量
 
-res = await client.search({
-    collection_name: "test_collection",
-    data: query_vectors,
-    filter: "color == 'green'",
-    output_fields: ["color_tag"],
-    limit: 3
-})
+    由于索引文件较小，因此内存使用量减少。
 
-console.log(res.results)
+<Admonition type="info" icon="📘" title="说明">
 
-// Output
-// 
-// [
-//   { score: 2.402090549468994, id: '135', color_tag: 'green_2694' },
-//   { score: 2.3938629627227783, id: '326', color_tag: 'green_7104' },
-//   { score: 2.3235254287719727, id: '801', color_tag: 'green_3162' }
-// ]
-// 
-```
+<p>如果 Collection 中唯一的 Partition Key 值的数量少于 Partition 的数量，上述优势可能不太明显。</p>
 
-</TabItem>
-</Tabs>
+</Admonition>
 
-## 典型使用场景{#typical-use-cases}
-
-您可以使用该特性获得更好的查询性能或满足多租户业务需求。具体来说，可以将每条记录中的某个字段确定为 Partition Key。当进行搜索或查询时，可以用该字段过滤查询结果，实现租户数据隔离的同时，避免在查询时扫描其它租户的 Partition。
+有关所有可能的多租户策略，请参阅[多租户](https://milvus.io/docs/multi_tenancy.md)。

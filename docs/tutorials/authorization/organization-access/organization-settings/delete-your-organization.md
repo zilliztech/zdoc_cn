@@ -1,10 +1,20 @@
 ---
+title: "删除组织 | Cloud"
 slug: /delete-your-organization
+sidebar_label: "删除组织"
 beta: FALSE
 notebook: FALSE
+description: "本教程介绍如何删除 Zilliz Cloud 组织。组织删除后，其数据将被清空且无法恢复。 | Cloud"
 type: origin
 token: MkZjwrXIpicJ5xkYwu6cMK8inVb
 sidebar_position: 5
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 组织
+  - 删除
 
 ---
 
@@ -19,7 +29,7 @@ import Admonition from '@theme/Admonition';
 
 开始前，请先确保：
 
-- 当前组织下的[集群已全部删除](./manage-cluster)。
+- 当前组织下的[集群已全部删除](./manage-cluster#drop-cluster)。
 
 - 当前组织中的[账单](./view-invoice)已全部付清。
 

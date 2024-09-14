@@ -1,10 +1,21 @@
 ---
+title: "连接数据源 | Cloud"
 slug: /connectors
+sidebar_label: "连接数据源"
 beta: FALSE
 notebook: FALSE
+description: "Connector 可以轻松将各种数据源连接到向量数据库。本文将介绍什么是 Connector、Connector 的作用以及如何创建和管理 Connector。 | Cloud"
 type: origin
 token: JAh8wlpmhiQv0lkafAxcooqQnxd
 sidebar_position: 3
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - pipeline
+  - 数据源
+  - 连接
 
 ---
 
@@ -93,7 +104,7 @@ Zilliz Cloud 支持在创建过程中灵活配置 Connector。创建后， Conne
            </tr>
            <tr>
              <td><p>URL</p></td>
-             <td><p>输入数据源 URL。请确保 URL 指向文件夹而非具体某一文件。</p><p>了解如何<a href="https://help.aliyun.com/zh/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects?spm=a2c4g.11186623.0.0.3eecc1f8IO4FkA">获取 URL</a>。</p></td>
+             <td><p>输入数据源 URL。请确保 URL 指向文件夹而非具体某一文件。此外，不可输入根目录 URL。</p><p>了解如何<a href="https://help.aliyun.com/zh/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects?spm=a2c4g.11186623.0.0.3eecc1f8IO4FkA">获取 URL</a>。</p></td>
            </tr>
            <tr>
              <td><p>对象存储服务访问凭证(可选)</p></td>
@@ -214,3 +225,6 @@ Zilliz Cloud 支持在创建过程中灵活配置 Connector。创建后， Conne
 
 1. 如果 Connector 状态显示为`异常`，则代表 Connector 运行出错。点击状态旁的 “？”查看详细报错信息。
 
+### 查看 Pipeline 关联的所有 Connectors{#view-related-connectors-in-a-pipeline}
+
+如需查看某一 Pipeline 下关联的所有 Connectors，请参阅[查看 Pipeline 详情](./pipelines-text-data#view-pipeline)。

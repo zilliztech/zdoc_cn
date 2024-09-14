@@ -1,10 +1,19 @@
 ---
+title: "选择合适的 CU 类型 | Cloud"
 slug: /cu-types-explained
+sidebar_label: "选择合适的 CU 类型"
 beta: FALSE
 notebook: FALSE
+description: "在 Zilliz Cloud 中，为集群选择合适的计算单元（CU）是一个关键步骤。CU 提供了并行数据处理的基础计算资源，不同类型的 CU 结合了各异的 CPU、内存和存储配置。 | Cloud"
 type: origin
 token: DP6Fw8vkzi7pD7kAMB3cjunYn6g
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - cu 类型
 
 ---
 

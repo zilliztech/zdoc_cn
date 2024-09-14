@@ -1,10 +1,19 @@
 ---
+title: "ANN 搜索 | Cloud"
 slug: /ann-search-explained
+sidebar_label: "ANN 搜索"
 beta: FALSE
 notebook: FALSE
+description: "通过 k-最近邻（kNN）搜索可以找到一个查询向量的 k 个最近向量。kNN 算法将查询向量与向量空间中的每个向量进行比较，直到出现 k 个完全匹配的结果。尽管 kNN 搜索可以确保准确性，但十分耗时。尤其是数据量大，向量维度高时，耗时更久。 | Cloud"
 type: origin
 token: E4Ggw2FU3iXekOklaytcDy47nRg
 sidebar_position: 4
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - ann search
 
 ---
 

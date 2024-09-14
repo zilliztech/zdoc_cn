@@ -1,10 +1,19 @@
 ---
+title: "现金充值 | Cloud"
 slug: /advance-pay
+sidebar_label: "现金充值"
 beta: FALSE
 notebook: FALSE
+description: "免费试用到期后，您需要添加支付方式方可继续使用 Zilliz Cloud。Zilliz Cloud 支持多种支付方式，包括现金充值和订阅](./subscribe-on-aliyun-marketplace)[阿里云市场](./subscribe-on-aliyun-marketplace)。本章主要介绍如何通过线下转账的方式进行现金充值。如需开具发票，请参考[开具发票 。 | Cloud"
 type: origin
 token: JZqrwH8V8i6a3jktSQgcyXAEnAg
-sidebar_position: 3
+sidebar_position: 4
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 现金充值
 
 ---
 
@@ -27,12 +36,14 @@ import Admonition from '@theme/Admonition';
 
 1. 您可在**现金余额**部分查看余额并点击**充值记录**查看所有历史充值记录的详情。
 
-<Admonition type="info" icon="📘" title="说明">
+    ![bank-transfer-information](/img/bank-transfer-information.png)
 
-<p>如果您的组织账号中还有剩余免费额度，已进行过线下转账充值，并同时开通阿里云云市场扣费渠道，则扣费顺序为：免费额度&gt;现金余额&gt;阿里云市场。</p>
-<p>例如，当您有一份账单需要支付时，我们会先扣除您的免费额度。如果剩余免费额度不足以抵扣全部账单金额，我们会扣除所有剩余免费额度，剩余账单金额部分将扣除您的现金余额。如扣除免费额度和现金余额后，依旧不足以抵扣全部账单金额，我们将通过您绑定的阿里云云市场账号进行扣费。</p>
+    <Admonition type="info" icon="📘" title="说明">
 
-</Admonition>
+    <p>如果您的组织账号中还有剩余免费额度，已进行过线下转账充值，并同时开通阿里云云市场扣费渠道，则扣费顺序为：免费额度&gt;现金余额&gt;阿里云市场。</p>
+    <p>例如，当您有一份账单需要支付时，我们会先扣除您的免费额度。如果剩余免费额度不足以抵扣全部账单金额，我们会扣除所有剩余免费额度，剩余账单金额部分将扣除您的现金余额。如扣除免费额度和现金余额后，依旧不足以抵扣全部账单金额，我们将通过您绑定的阿里云云市场账号进行扣费。</p>
+
+    </Admonition>
 
 1. 现金余额监控默认关闭，如果需要打开现金余额监控，请参阅[管理组织告警](./manage-organization-alerts)。
 

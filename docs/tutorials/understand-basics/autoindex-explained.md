@@ -1,10 +1,19 @@
 ---
+title: "AUTOINDEX | Cloud"
 slug: /autoindex-explained
+sidebar_label: "AUTOINDEX"
 beta: FALSE
 notebook: FALSE
+description: "为满足用户不同需求，Zilliz Cloud 提供 2 种类型的集群 CU——性能型和容量型。但是，为不同类型 CU 集群中的 Collection 创建索引时，通常需要根据所选择的 CU 类型调整索引参数。为了方便您创建索引，免去调节参数的麻烦，Zilliz Cloud 使用 AUTOINDEX 的索引类型。 | Cloud"
 type: origin
 token: YUETwzDssiTUs9kCSn4cgUYLnrd
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - autoindex
 
 ---
 

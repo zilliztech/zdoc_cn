@@ -1,7 +1,10 @@
 ---
+title: "insert() | Java | v1"
 slug: /java/v1-Collection-insert
+sidebar_label: "insert()"
 beta: FALSE
 notebook: FALSE
+description: "A MilvusClient interface. This method inserts entities into a specified collection. | Java | v1"
 type: origin
 token: D0cfwvTqMiyhSrkCUv4c1a2Fnjd#LSztdn2VAohrv3xksJocdjdynXd
 sidebar_position: 11
@@ -43,6 +46,11 @@ Methods of `InsertParam.Builder`:
         <td><p>collectionName: The name of the collection to insert data into.</p></td>
     </tr>
     <tr>
+        <td><p>withDatabaseName(String databaseName)</p></td>
+        <td><p>Sets the database name. database name can be null for default database.</p></td>
+        <td><p>databaseName: The database name.</p></td>
+    </tr>
+    <tr>
         <td><p>withPartitionName(String partitionName)</p></td>
         <td><p>Sets the target partition name(optional).</p></td>
         <td><p>partitionName: The name of the partition to insert data into.</p></td>
@@ -53,9 +61,9 @@ Methods of `InsertParam.Builder`:
         <td><p>fields: A list of Field objects, each representing a field.</p></td>
     </tr>
     <tr>
-        <td><p>withRows(List\<JSONObject> rows)</p></td>
+        <td><p>withRows(List\<gson.JsonObject> rows)</p></td>
         <td><p>Sets the row-based data to be inserted. The row list cannot be empty.<br/>Note that if the withFields() is called, the rows by withRows() will be ignored.</p></td>
-        <td><p>rows: A list of JSONObject objects, each representing a row in key-value format.<br/>- Requires List\<Boolean> if the data type is Bool.<br/>- Requires List\<Long> if the data type is Int64.<br/>- Requires List\<Integer> or List\<Short> if the data type is Int8/Int16/Int32.<br/>- Value is List\<Float> if the data type is Float.<br/>- Value is List\<Double> if the data type is Double.<br/>- Value is List\<String> if the data type is Varchar.<br/>- Value is List\<List\<?>gt; if the data type is Array, the inner List type must be equal to the element type of the Array field.<br/>- Value is List\<List\<Float>gt;, if the data type is FloatVector.<br/>- Value is List\<ByteBuffer>, if the data type is BinaryVector/Float16Vector/BFloat16Vector.<br/>- Value is List\<SortedMap\<Long, Float>gt; if the data type is SparseFloatVector.</p></td>
+        <td><p>rows: A list of gson.JsonObject objects, each representing a row in key-value format.<br/>For each field:<br/>- If dataType is Bool/Int8/Int16/Int32/Int64/Float/Double/Varchar, use JsonObject.addProperty(key, value) to input;<br/>- If dataType is FloatVector, use JsonObject.add(key, gson.toJsonTree(List[Float]) to input;<br/>- If dataType is BinaryVector/Float16Vector/BFloat16Vector, use JsonObject.add(key, gson.toJsonTree(byte[])) to input;<br/>- If dataType is SparseFloatVector, use JsonObject.add(key, gson.toJsonTree(SortedMap[Long, Float])) to input;<br/>- If dataType is Array, use JsonObject.add(key, gson.toJsonTree(List of Boolean/Integer/Short/Long/Float/Double/String)) to input;<br/>- If dataType is JSON, use JsonObject.add(key, JsonElement) to input;<br/>Note:<br/>1. For scalar numeric values, value will be cut according to the type of the field.<br/>For example:<br/>  An Int8 field named "XX", you set the value to be 128 by JsonObject.addProperty("XX", 128), the value 128 is cut to -128.<br/>  An Int64 field named "XX", you set the value to be 3.9 by JsonObject.addProperty("XX", 3.9), the value 3.9 is cut to 3.<br/>2. String value can be parsed to numeric/boolean type if the value is valid.<br/>For example:<br/>  A Bool field named "XX", you set the value to be "TRUE" by JsonObject.addProperty("XX", "TRUE"), the string "TRUE" is parsed as true.<br/>  A Float field named "XX", you set the value to be "3.5" by JsonObject.addProperty("XX", "3.5", the string "3.5" is parsed as 3.5.</p></td>
     </tr>
     <tr>
         <td><p>build()</p></td>
@@ -63,6 +71,12 @@ Methods of `InsertParam.Builder`:
         <td><p>N/A</p></td>
     </tr>
 </table>
+
+<Admonition type="info" icon="📘" title="Notes">
+
+<p>In Java SDK versions v2.4.1 or earlier versions, the input is a <code>fastjson.JSONObject</code>. But <code>fastjson</code> is not recommended to use now because of its unsafe deserialization vulnerability. Therefore, replace <code>fastjson</code> with <code>gson</code> if you use the Java SDK of v2.4.2 or later releases.</p>
+
+</Admonition>
 
 The `InsertParam.Builder.build()` can throw the following exceptions:
 
@@ -147,27 +161,48 @@ Methods of `MutationResultWrapper`:
 import io.milvus.param.*;
 import io.milvus.response.MutationResultWrapper;
 import io.milvus.grpc.MutationResult;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 
 int rowCount = 10000;
+List<List<Float>> vectors = generateFloatVectors(rowCount);
+
+// insert data by columns
 List<Long> ids = new ArrayList<>();
 for (long i = 0L; i < rowCount; ++i) {
     ids.add(i);
 }
-List<List<Float>> vectors = generateFloatVectors(rowCount);
 
 List<InsertParam.Field> fields = new ArrayList<>();
 fields.add(new InsertParam.Field("id", ids));
-fields.add(new InsertParam.Field("vec", vectors));
+fields.add(new InsertParam.Field("vector", vectors));
 
-InsertParam param = InsertParam.newBuilder()
+R<MutationResult> response = client.insert(InsertParam.newBuilder()
         .withCollectionName(COLLECTION_NAME)
         .withFields(fields)
-        .build();
-R<MutationResult> response = client.insert(param);
+        .build());
 if (response.getStatus() != R.Status.Success.getCode()) {
     System.out.println(response.getMessage());
 }
 
 MutationResultWrapper wrapper = new MutationResultWrapper(response.getData());
 System.out.println(wrapper.getInsertCount() + " rows inserted");
+
+// insert data by rows
+Gson gson = new Gson();
+List<JsonObject> rows = new ArrayList<>();
+for (int i = 1; i <= rowCount; ++i) {
+    JsonObject row = new JsonObject();
+    row.addProperty("id", (long)i);
+    row.add("vector", gson.toJsonTree(vectors.get(i)));
+    rows.add(row);
+}
+
+response = client.insert(InsertParam.newBuilder()
+        .withCollectionName(COLLECTION_NAME)
+        .withRows(rows)
+        .build());
+if (response.getStatus() != R.Status.Success.getCode()) {
+    System.out.println(response.getMessage());
+}
 ```

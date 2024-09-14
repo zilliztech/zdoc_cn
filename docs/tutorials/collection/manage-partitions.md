@@ -1,10 +1,19 @@
 ---
+title: "管理 Partition | Cloud"
 slug: /manage-partitions
+sidebar_label: "管理 Partition"
 beta: FALSE
 notebook: FALSE
+description: "本教程将介绍如何在 Collection 中创建和管理 Partition。 | Cloud"
 type: origin
 token: Sk3Zw36yEiL2oUkiA5xcin7InSd
 sidebar_position: 13
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - partition
 
 ---
 
@@ -26,8 +35,8 @@ Collection 创建时会自动创建一个名称为 **_default** 的 Partition。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p> 还提供 <strong>Partition key</strong> 的功能。 开启 Partition key 功能后，具有相同键值的 Entity 就会被放到相同的 Partition 中。该特性通常用于多租场景，可有效提升搜索性能。更多详情，请参考<a href="./use-partition-key">使用 Partition Key</a>。</p>
-<p>如果您的 Collection 开启了 <strong>Partition key</strong> 功能， 会自动为您管理 Partition。</p>
+<p>还提供 <strong>Partition key</strong> 的功能。 开启 Partition key 功能后，具有相同键值的 Entity 就会被放到相同的 Partition 中。该特性通常用于多租场景，可有效提升搜索性能。更多详情，请参考<a href="./use-partition-key">使用 Partition Key</a>。</p>
+<p>如果您的 Collection 开启了 <strong>Partition key</strong> 功能，会自动为您管理 Partition。</p>
 
 </Admonition>
 
@@ -175,7 +184,7 @@ console.log(res.partition_names)
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果您在 Collection 中开启了 Partition key， 会自动在该 Collection 中创建至少 <strong>64</strong> 个 Partition。这种情况下，指令返回结果可能和上述代码示例不同。</p>
+<p>如果您在 Collection 中开启了 Partition key，会自动在该 Collection 中创建至少 <strong>64</strong> 个 Partition。这种情况下，指令返回结果可能和上述代码示例不同。</p>
 <p>更多详情，请参考<a href="./use-partition-key">使用 Partition Key</a>。</p>
 
 </Admonition>
@@ -280,7 +289,7 @@ console.log(res.partition_names)
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果您在 Collection 中开启了 Partition key， 会自动为您管理该 Collection 中的 Partition。因此，您在创建 Partition 过程中可能会收到报错提示。</p>
+<p>如果您在 Collection 中开启了 Partition key，会自动为您管理该 Collection 中的 Partition。因此，您在创建 Partition 过程中可能会收到报错提示。</p>
 <p>更多详情，请参考<a href="./use-partition-key">使用 Partition Key</a>。</p>
 
 </Admonition>
@@ -385,11 +394,11 @@ console.log(res.value)
 
 上述代码用于检查 Collection 中是否存在 `partitionA` 和 `partitionC`。
 
-## 加载和释放 Partition{#load-and-release-partitions}
+## Load 和 Release Partition{#load-and-release-partitions}
 
 您可以按需加载和释放指定的 Partition。Partition 加载后可用于搜索和查询。
 
-### 查看加载状态{#get-load-status}
+### 查看 Load 状态{#get-load-status}
 
 通过以下命令查看 Collection 及 Partition 加载状态。
 
@@ -594,7 +603,7 @@ console.log(res.state)
 
     Collection 中只要有 1 个 Partition 在加载中，Collection就会被标记为`Loading`。
 
-### 加载 Partition{#load-partitions}
+### Load Partition{#load-partitions}
 
 如需加载 Collection 中的所有 Partition，您可以直接使用 `load_collection()` 命令。如只需加载 Collection 中某个 Partition，请调用以下命令。
 
@@ -777,7 +786,7 @@ console.log(res)
 </TabItem>
 </Tabs>
 
-### 释放 Partition{#release-partitions}
+### Release Partition{#release-partitions}
 
 如需释放 Collection 中的所有 Partition，您可以直接使用 `release_collection` 命令。如只需释放 Collection 中某个 Partition，请调用以下命令。
 
