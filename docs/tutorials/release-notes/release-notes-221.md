@@ -1,10 +1,19 @@
 ---
+title: "版本说明书（2023/10/17） | Cloud"
 slug: /release-notes-221
+sidebar_label: "版本说明书（2023/10/17）"
 beta: FALSE
 notebook: FALSE
+description: "我们很高兴地宣布Zilliz Cloud 2.2.1的发布。此版本引入了一系列增强和新功能，包括一个新的 CU 类型及现金充值功能。 | Cloud"
 type: origin
 token: Ra4qwdd7kicpt6k9Y2tc3OJ5niX
-sidebar_position: 7
+sidebar_position: 9
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 版本说明书
 
 ---
 

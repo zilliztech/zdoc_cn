@@ -1,10 +1,20 @@
 ---
+title: "创建 Vector Index | Cloud"
 slug: /index-vector-fields
+sidebar_label: "创建 Vector Index"
 beta: FALSE
 notebook: FALSE
+description: "本教程将介绍如何为 Collection 中的向量字段创建向量索引（Vector Index）并管理索引。 | Cloud"
 type: origin
 token: F33Ewd7beirE3nk6SIucXmXFnye
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - index
+  - 向量
 
 ---
 

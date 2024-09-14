@@ -75,7 +75,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>Kubernetes 集群中的主机数量应为奇数。</p>
+<p>推荐 Kubernetes 集群中的主机数量为奇数。</p>
 
 </Admonition>
 
@@ -85,54 +85,81 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th rowspan="2"><p>组件</p></th>
-     <th colspan="3"><p>vCPU</p></th>
-     <th rowspan="2"><p>Memory</p></th>
-   </tr>
-   <tr>
-     <td><p>平时运行建议数量</p></td>
-     <td><p>数据导入时建议数量<sup>[1]</sup></p></td>
-     <td><p>小计</p></td>
+     <th><p>组件</p></th>
+     <th><p>CPU</p></th>
+     <th><p>Memory</p></th>
+     <th><p>平时运行</p><p>建议数量</p></th>
+     <th><p>数据导入（只写入，无查询）时</p><p>建议数量</p></th>
    </tr>
    <tr>
      <td><p>queryNode</p></td>
+     <td><p>9</p></td>
+     <td><p>40Gi</p></td>
      <td><p>3</p></td>
      <td><p>0</p></td>
-     <td><p>9</p></td>
-     <td><p>40 GiB</p></td>
    </tr>
    <tr>
      <td><p>dataNode</p></td>
+     <td><p>4</p></td>
+     <td><p>8Gi</p></td>
      <td><p>1</p></td>
      <td><p>2</p></td>
-     <td><p>4</p></td>
-     <td><p>8 GiB</p></td>
    </tr>
    <tr>
      <td><p>indexNode</p></td>
+     <td><p>4</p></td>
+     <td><p>8Gi</p></td>
      <td><p>1</p></td>
      <td><p>8</p></td>
-     <td><p>4</p></td>
-     <td><p>8 GiB</p></td>
    </tr>
    <tr>
      <td><p>mixCoord</p></td>
      <td><p>2</p></td>
+     <td><p>4Gi</p></td>
      <td><p>2</p></td>
      <td><p>2</p></td>
-     <td><p>4 GiB</p></td>
    </tr>
    <tr>
      <td><p>proxy</p></td>
      <td><p>2</p></td>
+     <td><p>8Gi</p></td>
      <td><p>2</p></td>
      <td><p>2</p></td>
-     <td><p>8 GiB</p></td>
    </tr>
    <tr>
-     <td><p>合计</p></td>
-     <td colspan="3"><p>21 vCPU</p></td>
-     <td><p>68 GiB</p></td>
+     <td><p>etcd</p></td>
+     <td><p>1</p></td>
+     <td><p>4Gi</p></td>
+     <td><p>3</p></td>
+     <td><p>3</p></td>
+   </tr>
+   <tr>
+     <td><p>pulsar-proxy</p></td>
+     <td><p>0.5</p></td>
+     <td><p>1Gi</p></td>
+     <td><p>2</p></td>
+     <td><p>2</p></td>
+   </tr>
+   <tr>
+     <td><p>pulsar-broker</p></td>
+     <td><p>0.5</p></td>
+     <td><p>2Gi</p></td>
+     <td><p>2</p></td>
+     <td><p>2</p></td>
+   </tr>
+   <tr>
+     <td><p>pulsar-bookie</p></td>
+     <td><p>0.5</p></td>
+     <td><p>2Gi</p></td>
+     <td><p>3</p></td>
+     <td><p>3</p></td>
+   </tr>
+   <tr>
+     <td><p>pulsar-zookeeper</p></td>
+     <td><p>0.2</p></td>
+     <td><p>256MB</p></td>
+     <td></td>
+     <td><p>3</p></td>
    </tr>
 </table>
 
@@ -264,6 +291,8 @@ spec:
         rootPath: /logs/$(POD_NAME) #日志目录
     common: # 通用配置
       storageType: remote # 存储类型，远程对象存储
+      security:
+        authorizationEnabled: true
     minio: # 对象存储参数
       bucketName: milvus-bucket # milvus存储数据的bucket
       rootPath: milvus/my-release # milvus存储文件在bucket中的目录
@@ -386,6 +415,7 @@ $ kubectl apply -f milvus-manifest.yaml
     1. 执行验证代码。
 
         ```shell
+        # 修改connections.connect这行代码，添加认证参数user="root",password="Milvus"
         $ python3 hello_milvus.py
         $ echo "error_code: $?"
         
@@ -412,7 +442,7 @@ $ kubectl apply -f milvus-manifest.yaml
             ,milvus:.status.conditions[3].reason"
         ```
 
-        如果返回的结果中包含如下内容，则表明 etcd 组件异常，需要进一步检查。
+        例如，下面的返回的结果，则表明 etcd 组件异常，需要进一步检查。
 
         ```shell
         etcd           objectStorage   pulsar           milvus
@@ -420,6 +450,28 @@ $ kubectl apply -f milvus-manifest.yaml
         ```
 
     1. 获取各依赖组件异常的具体原因。
+
+    ```shell
+    $ kubectl get milvus \
+       -o custom-columns="etcd:.status.conditions[0].message\
+        ,objectStorage:.status.conditions[1].message\
+        ,pulsar:.status.conditions[2].message\
+        ,milvus:.status.conditions[3].message"
+    ```
+
+    比如，返回的结果如下，表明 etcd 连接失败。此时，可申请 Zilliz 支持团队介入排查 etcd 异常原因。
+
+    ```shell
+    etcd
+    All etcd endpoints are unhealthy:[my-release-etcd.etcd.svc.cluster.local:2379:checkEtcd
+            with backoff failed: context deadline exceeded]
+    ```
+
+    再比如下面例子是资源不足，querynode调度失败:
+
+    再比如下面例子是querynode 内存耗尽导致被oom kill 而重启
+
+    1. 
 
         ```shell
         $ kubectl get milvus \
@@ -429,7 +481,7 @@ $ kubectl apply -f milvus-manifest.yaml
             ,milvus:.status.conditions[3].message"
         ```
 
-        如果返回的结果如下，表明 etcd 连接失败。此时，可申请 Zilliz 支持团队介入排查 etcd 异常原因。
+        比如，返回的结果如下，表明 etcd 连接失败。此时，可申请 Zilliz 支持团队介入排查 etcd 异常原因。
 
         ```shell
         etcd
@@ -437,25 +489,4 @@ $ kubectl apply -f milvus-manifest.yaml
                 with backoff failed: context deadline exceeded]
         ```
 
-    您还可以考虑检查 Milvus 集群各组件的运行状态。
-
-    - 如果 QueryNode 调度失败，可能的组件异常原因为：
-
-        ```shell
-        milvus
-        [querynode] not ready, detail: component[querynode]: pod[my-release-milvus-querynode-0-66f8c8b49f-tqrsx]:
-                status[PodScheduled:False]: reason[Unschedulable]: 0/60 nodes are available:
-                20 Insufficient cpu, 40 node(s) didn''t match Pod''s node affinity/selector.
-                preemption: 0/60 nodes are available: 20 No preemption victims found for incoming
-                pod, 40 Preemption is not helpful for scheduling..
-        ```
-
-    - 如果 QueryNode 因内存耗尽而重启，可能的组件异常原因为：
-
-        ```shell
-        milvus
-        [querynode] not ready, detail: component[querynode]: 
-          pod[in01-cd5d8b22e7b6ad5-milvus-standalone-6fb5dcb49d-vt84r]:
-            container[querynode]: restartCount[1] lastState[terminated] reason[OOMKilled]
-        ```
-
+          如您无法确定异常的原因，请将返回的结果发送给zilliz侧的技术支持。

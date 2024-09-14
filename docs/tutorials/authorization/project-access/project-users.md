@@ -1,10 +1,21 @@
 ---
+title: "项目成员管理 | Cloud"
 slug: /project-users
+sidebar_label: "项目成员管理"
 beta: FALSE
 notebook: FALSE
+description: "本文介绍如何管理项目成员。 | Cloud"
 type: origin
 token: ZrvMwmDltiSGqkknP97cvuH9npq
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 项目
+  - 管理
+  - 成员
 
 ---
 

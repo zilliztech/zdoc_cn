@@ -1,10 +1,21 @@
 ---
+title: "组织成员管理 | Cloud"
 slug: /organization-users
+sidebar_label: "组织成员管理"
 beta: FALSE
 notebook: FALSE
+description: "在 Zilliz Cloud 平台上，您可以邀请用户加入您的组织，并通过分配不同权限等级的角色来授予用户访问组织的权限。 | Cloud"
 type: origin
 token: WGqBwcKmViC7xJkEfPcchOVKnsd
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 组织
+  - 成员
+  - 管理
 
 ---
 

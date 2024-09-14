@@ -1,7 +1,10 @@
 ---
+title: "FAQ：快速入门 | CLOUD"
 slug: /faq-get-started
+sidebar_label: "FAQ：快速入门"
 beta: FALSE
 notebook: FALSE
+description: " | CLOUD"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 1
@@ -43,6 +46,6 @@ sidebar_position: 1
 
 ### Zilliz Cloud 支持哪些索引类型？ \{#which-type-of-index-is-supported-by-zilliz-cloud}
 
-目前，Zilliz Cloud 仅支持 AUTOINDEX。AUTOINDEX 可以增强搜索性能。对于具有 100 万 768维向量的性能型集群，QPS 可达到几百，延迟低于 100 毫秒。对于相同数据量的容量型集群，QPS 可达到50，延迟超过 200 毫秒。有关更多详细信息，请参见[AUTOINDEX](./autoindex-explained) 。
+目前，Zilliz Cloud 仅支持 AUTOINDEX。AUTOINDEX 是 Zilliz Cloud 自研索引，可增强搜索性能。对于具有 150 万 768维向量的性能型集群，QPS 可达到几百，延迟低于 100 毫秒。对于具有 500 万 768维向量的容量型集群，QPS 可达到50，延迟超过 200 毫秒。有关更多详细信息，请参见[AUTOINDEX](./autoindex-explained) 。
 
-如果您十分熟悉[此处](https://milvus.io/docs/index.md)罗列的索引类型并想要使用这些索引类型，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
+如果您需要使用特定[索引](https://milvus.io/docs/index.md)，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)，我们将协助评估您的应用场景并为您开启特定索引类型。

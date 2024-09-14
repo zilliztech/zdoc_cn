@@ -1,10 +1,20 @@
 ---
+title: "管理组织告警 | Cloud"
 slug: /manage-organization-alerts
+sidebar_label: "管理组织告警"
 beta: FALSE
 notebook: FALSE
+description: "Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关的组织告警，二是针对特定项目中集群性能的项目告警。更多详细信息，请参阅指标与告警快速参考。 | Cloud"
 type: origin
 token: WpDVwYaHMizLWuklBJlcypTzn2d
 sidebar_position: 3
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 组织
+  - 告警
 
 ---
 

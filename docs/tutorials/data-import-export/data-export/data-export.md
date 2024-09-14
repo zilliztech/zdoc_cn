@@ -1,10 +1,19 @@
 ---
+title: "数据导出 | Cloud"
 slug: /data-export
+sidebar_label: "数据导出"
 beta: FALSE
 notebook: FALSE
+description: "本章介绍数据导出的相关操作步骤。 | Cloud"
 type: origin
 token: EPd8w1Ze7irYgQkU76HcryE4njd
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 导出
 
 ---
 

@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "MilvusClientV2 | Java | v2"
 slug: /java/java/v2-Client-MilvusClientV2
+sidebar_label: "MilvusClientV2"
 beta: false
 notebook: false
+description: "A MilvusClientV2 instance represents a Java client that connects to a specific Zilliz Cloud cluster. | Java | v2"
 type: docx
 token: YmaYdEH00oj9DWx9N22cWfbonWb
 sidebar_position: 1
@@ -59,7 +62,7 @@ ConnectConfig.builder()
     https://inxx-xxxxxxxxxxxxxxxxx.aws-us-west-2.vectordb-uat3.zillizcloud.com:19540
     ```
 
-    To find needed information on the Zilliz Cloud console, refer to [On Zilliz Cloud Console](https://docs.zilliz.com/docs/on-zilliz-cloud-console).
+    To find needed information on the Zilliz Cloud console, refer to [On Zilliz Cloud Console](/docs/on-zilliz-cloud-console).
 
 - `token(String token)`
 
@@ -71,9 +74,9 @@ ConnectConfig.builder()
 
     A valid token should be either
 
-    - An [API key](https://docs.zilliz.com/docs/manage-api-keys) with sufficient permissions, or
+    - An [API key](/docs/manage-api-keys) with sufficient permissions, or
 
-    - A pair of [username and password ](https://docs.zilliz.com/docs/cluster-credentials-console)used to access the target cluster, joined by a colon (:). For example, you can set this to `username:p@ssw0rd`.
+    - A pair of [username and password ](/docs/cluster-credentials-console)used to access the target cluster, joined by a colon (:). For example, you can set this to `username:p@ssw0rd`.
 
 - `username(String userName)`
 
@@ -165,7 +168,7 @@ MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
 <ul>
 <li><p>Set <strong>uri</strong> to your cluster endpoint. The <strong>token</strong> parameter can be a Zilliz Cloud API key with sufficient permissions or the credentials of a cluster user in the format of <code>username:p@ssw0rd</code>.</p></li>
-<li><p>To find the above information, refer to <a href="https://docs.zilliz.com/docs/on-zilliz-cloud-console">On Zilliz Cloud Console</a>.</p></li>
+<li><p>To find the above information, refer to <a href="/docs/on-zilliz-cloud-console">On Zilliz Cloud Console</a>.</p></li>
 </ul>
 
 </Admonition>

@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "describeIndex() | Java | v2"
 slug: /java/java/v2-Management-describeIndex
+sidebar_label: "describeIndex()"
 beta: false
 notebook: false
+description: "This operation describes a specific index. | Java | v2"
 type: docx
 token: MGX2dDWoooZ982x3pcNcbFzcnXb
 sidebar_position: 2
@@ -68,7 +71,7 @@ A **DescribeIndexResp** object that contains the details of the specified index.
 
     The algorithm that is used to build the index. 
 
-    On Zilliz Cloud, the value is always **AUTOINDEX**. For details, refer to [AUTOINDEX Explained](https://docs.zilliz.com/docs/autoindex-explained).
+    On Zilliz Cloud, the value is always **AUTOINDEX**. For details, refer to [AUTOINDEX Explained](/docs/autoindex-explained).
 
 - **metricType** (*String*)
 

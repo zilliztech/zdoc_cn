@@ -1,10 +1,20 @@
 ---
+title: "邮箱账号 | Cloud"
 slug: /email-accounts
+sidebar_label: "邮箱账号"
 beta: FALSE
 notebook: FALSE
+description: "在 Zilliz Cloud 注册账户后，您可对账户信息进行管理。您可以编辑账号设置以及删除账号。 | Cloud"
 type: origin
 token: SVnkw5IkNiOfALkijr1cw91vn3L
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 邮箱
+  - 账号
 
 ---
 
@@ -59,7 +69,7 @@ import Admonition from '@theme/Admonition';
 
 ### 前提条件{#before-you-start}
 
-- 如果您是项目唯一的项目管理员且项目含有集群，请先[删除项目集群](./manage-cluster)。
+- 如果您是项目唯一的项目管理员且项目含有集群，请先[删除项目集群](./manage-cluster#drop-cluster)。
 
 - 如果您是组织唯一的组织管理员，请先[删除组织](./delete-your-organization)。
 
@@ -89,5 +99,5 @@ import Admonition from '@theme/Admonition';
 
 - [删除组织](./delete-your-organization)
 
-- [查看事件](./view-activities) 
+- [查看事件](./view-activities_1) 
 

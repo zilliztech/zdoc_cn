@@ -1,7 +1,10 @@
 ---
+title: "createIndex() | Java | v1"
 slug: /java/v1-Index-createIndex
+sidebar_label: "createIndex()"
 beta: FALSE
 notebook: FALSE
+description: "The MilvusClient interface. This method creates an index on a field in the specified collection. | Java | v1"
 type: origin
 token: D0cfwvTqMiyhSrkCUv4c1a2Fnjd#DITJd9ZMboinkqxpf9lcE6itnlh
 sidebar_position: 1
@@ -43,6 +46,11 @@ Methods of `CreateIndexParam.Builder`:
         <td><p>collectionName: The name of the target collection to create an index for.</p></td>
     </tr>
     <tr>
+        <td><p>withDatabaseName(String databaseName)</p></td>
+        <td><p>Sets the database name. database name can be null for default database.</p></td>
+        <td><p>databaseName: The database name.</p></td>
+    </tr>
+    <tr>
         <td><p>withFieldName(String fieldName)</p></td>
         <td><p>Set the target field name. Field name cannot be empty or null.</p></td>
         <td><p>fieldName: The target field name</p></td>
@@ -74,7 +82,7 @@ Methods of `CreateIndexParam.Builder`:
     </tr>
     <tr>
         <td><p>withSyncWaitingInterval(Long milliseconds)</p></td>
-        <td><p>Set the waiting interval in sync mode. With sync mode enabled, the client constantly checks index state by interval. Interval value must be greater than zero, and cannot be greater than Constant.MAX<em>WAITING</em>INDEX_INTERVAL. By default, interval value is 500 milliseconds.</p></td>
+        <td><p>Set the waiting interval in sync mode. With sync mode enabled, the client constantly checks index state by interval. Interval value must be greater than zero, and cannot be greater than Constant.MAX_WAITING_INDEX_INTERVAL. By default, interval value is 500 milliseconds.</p></td>
         <td><p><br/>milliseconds: Sync mode interval value(unit: millisecond)</p></td>
     </tr>
     <tr>

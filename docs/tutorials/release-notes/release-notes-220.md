@@ -1,10 +1,19 @@
 ---
+title: "版本说明书（2023/09/19） | Cloud"
 slug: /release-notes-220
+sidebar_label: "版本说明书（2023/09/19）"
 beta: FALSE
 notebook: FALSE
+description: "我们很高兴地宣布Zilliz Cloud 2.2.0的发布。此版本引入了一系列增强和功能，包括集群间数据迁移、从 ElasticSearch 迁移数据，全新的问题单系统和数据导入能力的全面增强。 | Cloud"
 type: origin
 token: P1JAwZEf4i1ALqkidS9cYfLZnef
-sidebar_position: 8
+sidebar_position: 10
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 版本说明书
 
 ---
 

@@ -1,10 +1,20 @@
 ---
+title: "组织管理 | Cloud"
 slug: /organizations
+sidebar_label: "组织管理"
 beta: FALSE
 notebook: FALSE
+description: "在 Zilliz Cloud 平台上，每个组织下可以包含多个项目。注册 Zilliz Cloud 后，您会自动成为您所创建组织的管理员。您无法创建新的组织，但可以通过邀请加入其他已存在的组织。 | Cloud"
 type: origin
 token: I9ktwIylxiDTKik4ckUctIOvnjm
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 组织
+  - 管理
 
 ---
 

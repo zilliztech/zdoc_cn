@@ -1,19 +1,31 @@
 ---
+title: "创建腾讯云私有连接（Private Link） | Cloud"
 slug: /setup-a-private-link-tencent-cloud
+sidebar_label: "创建腾讯云私有连接（Private Link）"
 beta: FALSE
 notebook: FALSE
+description: "本小节主要介绍如何在您的腾讯云 VPC 和您托管在腾讯云上的 Zilliz Cloud 集群之间建立私网连接。 | Cloud"
 type: origin
 token: Pzu4wpY64iWmO6kBsaYcNPmPnNf
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 私网
+  - 腾讯云
 
 ---
 
 import Admonition from '@theme/Admonition';
 
 
-# 创建腾讯云私网连接（Private Link）
+# 创建腾讯云私有连接（Private Link）
 
 本小节主要介绍如何在您的腾讯云 VPC 和您托管在腾讯云上的 Zilliz Cloud 集群之间建立私网连接。
+
+此功能仅适用于 Dedicated 集群。
 
 <Admonition type="info" icon="📘" title="提示">
 
@@ -214,7 +226,32 @@ import Admonition from '@theme/Admonition';
 
     其它参数保持默认即可。添加完成后，单击**保存**。
 
-## 后续操作{#next-steps}
+### 后续操作{#next-steps}
 
 在私网连接创建完成后，可按照集群详情页面右上角的连接指南使用私网连接进行连通性验证。
+
+## 管理集群公网访问{#manage-internet-access-to-your-clusters}
+
+完成配置私网连接后，您可以选择关闭和限制集群的公网访问能力（Public Endpoint）。关闭后，您只可以使用私网连接访问该集群。
+
+如需关闭公共 Endpoint，请按以下步骤操作：
+
+1. 前往目标集群的**集群详情**页面。
+
+1. 找到**连接信息**部分。
+
+1. 点击集群公共 Endpoint 旁边的**设置图标**。
+
+1. 阅读弹窗信息，然后点击**关闭**。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<ul>
+<li><p>私网连接仅影响<a href="/reference/restful/data-plane">数据面（Data Plane）</a>的操作。<a href="/reference/restful/control-plane">控制面（Control Plane）</a>的操作仍然可以通过公网进行。</p></li>
+<li><p>重新启用公共 Endpoint 后，请您耐心等待。本地 DNS 缓存过期后公网访问才可生效。</p></li>
+</ul>
+
+</Admonition>
+
+![disable_public_endpoint_cn](/img/disable_public_endpoint_cn.png)
 

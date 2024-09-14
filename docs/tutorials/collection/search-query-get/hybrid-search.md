@@ -1,10 +1,19 @@
 ---
+title: "Hybrid Search | Cloud"
 slug: /hybrid-search
-beta: TRUE
+sidebar_label: "Hybrid Search"
+beta: FALSE
 notebook: FALSE
+description: "在 Zilliz Cloud 中，我们引入了多向量支持与 hybrid search 框架，支持在单一 collection 内整合多个向量字段。不同的向量字段能够承载不同维度或类型的 embedding 模型，或描述同一 entity 的多模态数据，极大地提升了信息的丰富性和多样性。多向量和 hybrid search 功能在综合搜索场景中尤为突出，例如，它能够基于图片、声音、指纹等多种属性，在向量库中精准定位到最相似的个体，为用户提供更全面、更精准的搜索体验。 | Cloud"
 type: origin
 token: Jd0iwlti6iNIEck1u0acOw8xnip
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - hybrid search
 
 ---
 

@@ -1,10 +1,19 @@
 ---
+title: "Reranking | Cloud"
 slug: /reranking
-beta: TRUE
+sidebar_label: "Reranking"
+beta: FALSE
 notebook: FALSE
+description: "Zilliz Cloud 通过 hybridsearch() API，实现了 hybrid search 功能，结合了复杂的 reranking 策略，以优化多个 `AnnSearchRequest` 对象的搜索结果。本文将详细介绍 reranking 机制，阐述其重要性以及在 Milvus 中实施不同 reranking 策略的方法。 | Cloud"
 type: origin
 token: TzePwbkScic5e9kCF0FcljQEngc
 sidebar_position: 8
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - reranking
 
 ---
 

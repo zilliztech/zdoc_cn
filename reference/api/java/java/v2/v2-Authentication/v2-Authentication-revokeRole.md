@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "revokeRole() | Java | v2"
 slug: /java/java/v2-Authentication-revokeRole
+sidebar_label: "revokeRole()"
 beta: false
 notebook: false
+description: "This operation revokes the role assigned to a user. | Java | v2"
 type: docx
 token: I3TpdzCiroOEgfxElmhcJvBfn2d
 sidebar_position: 12

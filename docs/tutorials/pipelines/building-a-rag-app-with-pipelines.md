@@ -1,10 +1,21 @@
 ---
+title: "使用 Pipelines 搭建 RAG 应用 | Cloud"
 slug: /building-a-rag-app-with-pipelines
+sidebar_label: "使用 Pipelines 搭建 RAG 应用"
 beta: FALSE
 notebook: FALSE
+description: "Zilliz Cloud Pipelines 可以将文档、文本片段和图像等非结构化数据转换成可搜索的向量并存储在 Collection 中。本文将介绍 Zilliz Cloud Pipelines 的三种主要类型并提供示例代码，展示如何使用 Pipelines 搭建 RAG 应用。 | Cloud"
 type: origin
 token: QXATw7TzSiW32Ok7ihRcXYOInKd
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - pipeline
+  - rag
+  - 应用
 
 ---
 
@@ -362,7 +373,7 @@ chatbot = Chatbot(search_pipe_id)
 
 现在，我们已经成功搭建了 1 个 RAG 问答机器人。
 
-#### 向问答机器人提问{#ask-the-chatbot-a-question} 
+#### 向问答机器人提问{#ask-the-chatbot-a-question}
 
 向问答机器人提问：“如果数据量较小，应该在 Jupyter Notebook 中使用哪个版本的 Milvus？”
 
@@ -398,7 +409,7 @@ If you are working with a small scale of data in a Jupyter notebook, you may wan
 
 通过答案不难发现，如果不使用 RAG 能力，问答机器人旧会产生[幻觉](https://zilliz.com.cn/glossary/ai-%E5%B9%BB%E8%A7%89)。
 
-### 总结{#conclusion} 
+### 总结{#conclusion}
 
 我们在本教程示例中成功搭建了一个 RAG 问答机器人。我们通过使用 Pipelines 为问答机器人注入了领域知识（domain knowledge），最终生成了准确的回答。
 

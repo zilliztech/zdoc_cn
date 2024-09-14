@@ -1,10 +1,19 @@
 ---
+title: "开具发票 | Cloud"
 slug: /invoice
+sidebar_label: "开具发票"
 beta: FALSE
 notebook: FALSE
+description: "在 Zilliz Cloud 进行现金充值或开通阿里云云市场扣费渠道后，您可以申请开具发票。具体开票方式根据您的支付方式有所不同。如果您的支付方式为现金充值，您可以直接通过 Zilliz Cloud 界面开具发票。如果您开通了阿里云云市场扣费渠道，请通过阿里云云市场申请开票。 | Cloud"
 type: origin
 token: JTuUwoHUyiqJU6kuu30cN9ibnkh
-sidebar_position: 6
+sidebar_position: 7
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 发票
 
 ---
 

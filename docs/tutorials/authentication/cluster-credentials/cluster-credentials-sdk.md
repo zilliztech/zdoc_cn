@@ -1,10 +1,20 @@
 ---
+title: "通过 SDK 管理身份凭证 | Cloud"
 slug: /cluster-credentials-sdk
+sidebar_label: "通过 SDK 管理身份凭证"
 beta: FALSE
 notebook: FALSE
+description: "除了在 Web 控制台上进行身份凭证管理，Zilliz Cloud 还支持通过 SDK 来管理。这种功能扩展极大地提高了灵活性，并比仅使用 Web 控制台提供了更多的自定义选项。 | Cloud"
 type: origin
 token: UfjxwrE20iPn6okfStpcSDtpnxf
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 凭证
+  - sdk
 
 ---
 

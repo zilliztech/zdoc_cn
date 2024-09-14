@@ -1,10 +1,20 @@
 ---
+title: "API 异同 | Cloud"
 slug: /api-comparison
+sidebar_label: "API 异同"
 beta: FALSE
 notebook: FALSE
+description: "为了提供更好的用户体验，Zilliz Cloud 的运行方式与 Milvus 略有不同。本文将介绍 Zilliz Cloud 和 Milvus 在 API 操作方面的差异。 | Cloud"
 type: origin
 token: KOD2wN5jDimhSOk1GshcUbn2nJe
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - api
+  - 异同
 
 ---
 

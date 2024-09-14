@@ -40,35 +40,272 @@ Milvus Operator 是一种可帮助您在目标 Kubernetes 集群上部署和管�
 
 ## 安装 Milvus Operator{#install-milvus-operator}
 
-可按如下方式获取 Zilliz 提供的 Milvus Operator 声明文件，并安装 Milvus Operator。
+可按如下方式安装 Milvus Operator
 
-1. 获取 Milvus Operator 声明文件。
+需要权限：
 
-    ```shell
-    $ wget milvus-operator-no-webhook-v1.0.6.yaml
-    ```
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: 'milvus-operator-manager-role'
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - '*'
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apiextensions.k8s.io
+  resources:
+  - customresourcedefinitions
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - apps
+  resources:
+  - '*'
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - batch
+  resources:
+  - jobs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - extensions
+  resources:
+  - deployments
+  - pods
+  - secrets
+  - services
+  - statefulsets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - extensions
+  resources:
+  - ingresses
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - milvus.io
+  resources:
+  - milvusclusters
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - milvus.io
+  resources:
+  - milvusclusters/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - milvus.io
+  resources:
+  - milvusclusters/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - milvus.io
+  resources:
+  - milvuses
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - milvus.io
+  resources:
+  - milvuses/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - milvus.io
+  resources:
+  - milvuses/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - milvus.io
+  resources:
+  - milvusupgrades
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - milvus.io
+  resources:
+  - milvusupgrades/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - milvus.io
+  resources:
+  - milvusupgrades/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - monitoring.coreos.com
+  resources:
+  - podmonitors
+  - servicemonitors
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - networking.k8s.io
+  resources:
+  - ingresses
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - policy
+  resources:
+  - poddisruptionbudgets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - policy
+  resources:
+  - podsecuritypolicies
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - rbac.authorization.k8s.io
+  resources:
+  - clusterrolebindings
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - rbac.authorization.k8s.io
+  resources:
+  - clusterroles
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - rbac.authorization.k8s.io
+  resources:
+  - rolebindings
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - rbac.authorization.k8s.io
+  resources:
+  - roles
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
 
-1. 安装 Milvus Operator。
-
-    ```shell
-    $ kubectl apply -f milvus-operator-no-webhook-v1.0.6.yaml
-    ```
-
-    <Admonition type="info" icon="📘" title="Notes">
-
-    <p>如果执行上述命令后提示没有权限，您可以参考如下声明文件向 Kubernetes 管理员申请更高权限，或由管理员代为安装。</p>
-    <ul>
-    <li>clusterrole.yaml</li>
-    </ul>
-
-    </Admonition>
+```
 
 ## 安装后验证{#verification-afterwards}
 
 您可按照如下方式验证 Milvus Operator 是否安装成功。
 
 ```shell
-$ kubectl get pods -n milvus-operator
+kubectl get pods -n milvus-operator
 
 NAME                               READY   STATUS    RESTARTS   AGE
 milvus-operator-5fd77b87dc-msrk4   1/1     Running   0          46s
@@ -97,7 +334,7 @@ milvus-operator-5fd77b87dc-msrk4   1/1     Running   0          46s
     - 获取 Milvus Operator pod 的运行日志。
 
         ```shell
-        $ kubectl logs milvus-operator-5fd77b87dc-msrk4
+        kubectl logs milvus-operator-5fd77b87dc-msrk4
         ```
 
     - 获取 Milvus Operator pod 的详情。

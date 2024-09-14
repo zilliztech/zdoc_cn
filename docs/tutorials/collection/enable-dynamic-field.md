@@ -1,10 +1,19 @@
 ---
+title: "开启动态字段 | Cloud"
 slug: /enable-dynamic-field
+sidebar_label: "开启动态字段"
 beta: FALSE
 notebook: FALSE
+description: "本小节将介绍如何使用 Collection 中预留的动态字段灵活存取数据。 | Cloud"
 type: origin
 token: EpHowtn3miepTyk2pNlcLwDonyD
 sidebar_position: 16
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 动态字段
 
 ---
 

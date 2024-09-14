@@ -1,7 +1,10 @@
 ---
+title: "search() | Java | v1"
 slug: /java/v1-HighlevelAPI-search
+sidebar_label: "search()"
 beta: FALSE
 notebook: FALSE
+description: "The MilvusClient interface. This method conducts an approximate nearest neighbor (ANN) search on a vector field and pairs up with a Boolean expression to conduct filtering on scalar fields before searching. | Java | v1"
 type: origin
 token: D0cfwvTqMiyhSrkCUv4c1a2Fnjd#J7mOdolPjo1iByxIFZ3cjqYwntg
 sidebar_position: 7

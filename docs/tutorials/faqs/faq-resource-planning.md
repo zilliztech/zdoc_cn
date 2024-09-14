@@ -1,7 +1,10 @@
 ---
+title: "FAQ：资源规划 | CLOUD"
 slug: /faq-resource-planning
+sidebar_label: "FAQ：资源规划"
 beta: FALSE
 notebook: FALSE
+description: " | CLOUD"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 7

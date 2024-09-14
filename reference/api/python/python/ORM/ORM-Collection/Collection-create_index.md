@@ -50,19 +50,19 @@ create_index(
 
         The algorithm used to build the index.
 
-        You should always use **AUTOINDEX** as the index type. Read [AUTOINDEX Explained](https://docs.zilliz.com/docs/autoindex-explained) to get more.
+        You should always use **AUTOINDEX** as the index type. Read [AUTOINDEX Explained](/docs/autoindex-explained) to get more.
 
     - **metric_type** (*string*) - 
 
         The similarity metric type used to build the index.
 
-        Possible values are **L2**, **IP**, and **COSINE**. Read [Similarity Metrics Explained](https://docs.zilliz.com/docs/search-metrics-explained) to get more.
+        Possible values are **L2**, **IP**, and **COSINE**. Read [Similarity Metrics Explained](/docs/search-metrics-explained) to get more.
 
     - **params** (*dict*) -
 
         Index-building parameters corresponding to the selected index type.
 
-        For details on applicable index-building parameters, refer to [AUTOINDEX Explained](https://docs.zilliz.com/docs/autoindex-explained).
+        For details on applicable index-building parameters, refer to [AUTOINDEX Explained](/docs/autoindex-explained).
 
 - **timeout** (*float* | *None*)  
 

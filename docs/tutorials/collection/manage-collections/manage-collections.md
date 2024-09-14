@@ -1,10 +1,20 @@
 ---
+title: "管理 Collection | Cloud"
 slug: /manage-collections
+sidebar_label: "管理 Collection"
 beta: FALSE
 notebook: FALSE
+description: "本指南将介绍如何通过 Zilliz Web 控制台或 SDK 管理使用 Collection。 | Cloud"
 type: origin
 token: AtXWwXqsZiEzLvkmOJ3cua7nnic
 sidebar_position: 11
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - collection
+  - 管理
 
 ---
 
@@ -24,7 +34,17 @@ import Admonition from '@theme/Admonition';
      <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><p>企业版集群</p></td>
+     <td><p>Free</p></td>
+     <td><p>5</p></td>
+     <td><p>您最多可创建 5 个 Collection。</p></td>
+   </tr>
+   <tr>
+     <td><p>Serverless</p></td>
+     <td><p>100</p></td>
+     <td><p>您最多可创建 100 个 Collection。</p></td>
+   </tr>
+   <tr>
+     <td><p>Dedicated</p></td>
      <td><p>每 CU：&lt;= 64</p><p>每集群：&lt;= 4096</p></td>
      <td><p>在企业版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</p></td>
    </tr>

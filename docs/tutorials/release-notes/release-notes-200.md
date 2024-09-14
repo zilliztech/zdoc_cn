@@ -1,10 +1,19 @@
 ---
+title: "版本说明书（2023/06/14） | Cloud"
 slug: /release-notes-200
+sidebar_label: "版本说明书（2023/06/14）"
 beta: FALSE
 notebook: FALSE
+description: "Zilliz Cloud 2.0.0 的发布为向量数据库管理设立了新的标准。它大大增强了初学者的用户体验，提供了更实惠和灵活的定价选项，实现了无缝的团队协作，并提供了灵活的模式管理。这次更新的主要特性包括多样化的订阅方案、全新的 CU 类型、组织和协作支持、RBAC 支持、动态 Schema 和 JSON 类型支持。今天就试试这个改变游戏规则的更新吧! | Cloud"
 type: origin
 token: X91KwMsQyiAv1Ukze3IcHxQgnic
-sidebar_position: 10
+sidebar_position: 12
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 版本说明书
 
 ---
 

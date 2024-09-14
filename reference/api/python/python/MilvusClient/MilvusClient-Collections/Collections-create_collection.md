@@ -82,7 +82,7 @@ create_collection(
 
     The algorithm used for this collection to measure similarities between vector embeddings.
 
-    The value defaults to **COSINE**. Possible values are **L2**, **IP**, and **COSINE**. For details on these metric types, refer to [Similarity Metrics Explained](https://docs.zilliz.com/docs/search-metrics-explained).
+    The value defaults to **COSINE**. Possible values are **L2**, **IP**, and **COSINE**. For details on these metric types, refer to [Similarity Metrics Explained](/docs/search-metrics-explained).
 
     This parameter is designed for the quick setup of a collection and will be ignored if **schema** is not **None**.
 
@@ -145,7 +145,7 @@ create_collection(
 
         <p>To facilitate partition-oriented multi-tenancy, you can set a field as the partition key field so that Zilliz Cloud hashes the field values and distributes entities among the specified number of partitions accordingly.</p>
         <p>When retrieving entities, ensure that the partition key field is used in the boolean expression to filter out entities of a specific field value.</p>
-        <p>For details, refer to <a href="https://docs.zilliz.com/docs/use-partition-key">Use Partition Key</a> and <a href="https://milvus.io/docs/multi_tenancy.md">Multi-tenancy</a>.</p>
+        <p>For details, refer to <a href="/docs/use-partition-key">Use Partition Key</a> and <a href="https://milvus.io/docs/multi_tenancy.md">Multi-tenancy</a>.</p>
 
         </Admonition>
 

@@ -1,11 +1,20 @@
 ---
+title: "通过 SDK 导入 | Cloud"
 slug: /import-data-via-sdks
-sidebar_label: SDK
+sidebar_label: "SDK"
 beta: FALSE
 notebook: FALSE
+description: "本节将帮助你了解如何使用 SDK 的 BulkWriter 和 BulkImport API 向 Collection 中导入数据。 | Cloud"
 type: origin
 token: Xv4awWJZpiKoJjkPTlic98Mindc
 sidebar_position: 3
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 导入
+  - sdk
 
 ---
 

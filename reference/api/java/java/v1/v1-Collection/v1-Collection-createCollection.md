@@ -1,7 +1,10 @@
 ---
+title: "createCollection() | Java | v1"
 slug: /java/v1-Collection-createCollection
+sidebar_label: "createCollection()"
 beta: FALSE
 notebook: FALSE
+description: "A MilvusClient interface. This method creates a collection with the specified schema. | Java | v1"
 type: origin
 token: D0cfwvTqMiyhSrkCUv4c1a2Fnjd#BP2HdEqGKoCZgYx39WOcGbCvn5g
 sidebar_position: 1
@@ -43,6 +46,11 @@ Methods of `CreateCollectionParam.Builder`:
         <td><p>collectionName: The name of the collection to create.</p></td>
     </tr>
     <tr>
+        <td><p>withDatabaseName(String databaseName)</p></td>
+        <td><p>Sets the database name. database name can be null for default database.</p></td>
+        <td><p>databaseName: The database name.</p></td>
+    </tr>
+    <tr>
         <td><p>withShardsNum(int shardsNum)</p></td>
         <td><p>Sets the shards number. The number must be greater or equal to zero.<br/>The default value is 0, which means letting the server decide the value. The server set this value to 1 if user didn't specify it.</p></td>
         <td><p>shardsNum: The number of shards to split the inserted data into. Multiple shards are processed by multiple nodes in Milvus.</p></td>
@@ -63,6 +71,11 @@ Methods of `CreateCollectionParam.Builder`:
         <td><p>fieldType: The schema of a field to add in the collection.</p></td>
     </tr>
     <tr>
+        <td><p>withSchema(CollectionSchemaParam schema)</p></td>
+        <td><p>Sets the collection schema. It is recommended to use this method instead of withFieldTypes()</p></td>
+        <td><p>schema: The collection schema</p></td>
+    </tr>
+    <tr>
         <td><p>withConsistencyLevel(ConsistencyLevelEnum consistencyLevel)</p></td>
         <td><p>Sets the consistency level. The default value is ConsistencyLevelEnum.BOUNDED</p></td>
         <td><p>consistencyLevel: the consistency level of this collection</p></td>
@@ -71,6 +84,21 @@ Methods of `CreateCollectionParam.Builder`:
         <td><p>withPartitionsNum(int partitionsNum)</p></td>
         <td><p>Sets the partitions number if there is partition key field. The number must be greater than zero.<br/>The default value is 64(defined in server side). The upper limit is 4096(defined in server side).<br/>Not allow to set this value if none of field is partition key. Only one partition key field is allowed in a collection.</p></td>
         <td><p>partitionsNum: Defines the number of partition if there is a partition key field in the collection.</p></td>
+    </tr>
+    <tr>
+        <td><p>withReplicaNumber(int replicaNumber)</p></td>
+        <td><p>Sets the replica number in collection level, then if load collection doesn't have replica number, it will use this replica number.</p></td>
+        <td><p>replicaNumber: Sets the default replica number for this collection.</p></td>
+    </tr>
+    <tr>
+        <td><p>withResourceGroups(List\<String> resourceGroups)</p></td>
+        <td><p>Sets the resource groups in collection level, then if load collection doesn't have resource groups, it will use this resource groups.</p></td>
+        <td><p>resourceGroups: resource group names</p></td>
+    </tr>
+    <tr>
+        <td><p>withProperty(String key, String value)</p></td>
+        <td><p>Basic method to set a key-value property.<br/>You can use this method to set ttl or mmap for this collection. The withReplicaNumber() and withResourceGroups() actually call this method to pass properties.</p></td>
+        <td><p>key: A property key. <br/>Options:<br/>- Constant.TTL_SECONDS<br/>- Constant.MMAP_ENABLED<br/>- Constant.COLLECTION_REPLICA_NUMBER<br/>- Constant.COLLECTION_RESOURCE_GROUPS<br/>value: Property value.</p></td>
     </tr>
     <tr>
         <td><p>build()</p></td>
@@ -159,6 +187,45 @@ Methods of `FieldType.Builder`:
    <tr>
      <td><p>build()</p></td>
      <td><p>Create a FieldType object.</p></td>
+     <td><p>N/A</p></td>
+   </tr>
+</table>
+
+#### CollectionSchemaParam
+
+A tool class to represent a collection's schema. Use `CollectionSchemaParam.Builder` to build a `CollectionSchemaParam` object.
+
+```java
+import io.milvus.param.collection.CollectionSchemaParam;
+CollectionSchemaParam.Builder builder = CollectionSchemaParam.newBuilder();
+```
+
+Methods of `CollectionSchemaParam.Builder`:
+
+<table>
+   <tr>
+     <th><p><strong>Method</strong></p></th>
+     <th><p><strong>Description</strong></p></th>
+     <th><p><strong>Parameters</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>withEnableDynamicField(boolean enableDynamicField)</p></td>
+     <td><p>Sets the collection if enableDynamicField.</p></td>
+     <td><p>enableDynamicField: enableDynamicField of the collection</p></td>
+   </tr>
+   <tr>
+     <td><p>withFieldTypes(List\<FieldType> fieldTypes)</p></td>
+     <td><p>Sets the fieldTypes of the schema. The fieldTypes cannot be empty or null.</p></td>
+     <td><p>fieldTypes: A list of FieldType to defines the fields.</p></td>
+   </tr>
+   <tr>
+     <td><p>addFieldType( FieldType fieldType)</p></td>
+     <td><p>Adds a field schema.</p></td>
+     <td><p>fieldType: A field schema.</p></td>
+   </tr>
+   <tr>
+     <td><p>build()</p></td>
+     <td><p>Create a CollectionSchemaParam object.</p></td>
      <td><p>N/A</p></td>
    </tr>
 </table>

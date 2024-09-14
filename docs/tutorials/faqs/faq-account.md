@@ -1,7 +1,10 @@
 ---
+title: "FAQ：账户 | CLOUD"
 slug: /faq-account
+sidebar_label: "FAQ：账户"
 beta: FALSE
 notebook: FALSE
+description: " | CLOUD"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 11

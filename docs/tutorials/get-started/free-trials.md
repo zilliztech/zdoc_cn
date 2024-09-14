@@ -1,79 +1,95 @@
 ---
+title: "免费试用 Zilliz Cloud | Cloud"
 slug: /free-trials
+sidebar_label: "免费试用 Zilliz Cloud"
 beta: FALSE
 notebook: FALSE
+description: "为帮助您测试 Zilliz Cloud 向量数据库特性和评估使用成本，Zilliz Cloud 提供 Free 版本和免费试用。您仅需注册账号即可，无需绑定支付方式。 | Cloud"
 type: origin
 token: WWlIwejMNiAEmmkce5fcZu4UnMd
 sidebar_position: 3
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 免费
+  - 试用
 
 ---
 
 import Admonition from '@theme/Admonition';
 
 
-# 免费试用
+# 免费试用 Zilliz Cloud
 
-Zilliz Cloud 当前提供 Serverless、Dedicated 和 BYOC 三种订阅版本。首次注册 Zilliz Cloud 时，您将获赠 ¥300 免费额度，有效期为 30 天，可用于试用 Zilliz Cloud Serverless 和 Dedicated 版本。
+为帮助您测试 Zilliz Cloud 向量数据库特性和评估使用成本，Zilliz Cloud 提供 **Free 版本**和**免费试用**。您仅需[注册账号](./register-with-zilliz-cloud)即可，无需绑定支付方式。
 
-## Serverless 版{#serverless-plan}
+## Free 版本{#free-plan}
 
-适用于查询量不固定的 Serverless 应用，无需进行复杂配置即可自动根据业务调整计算资源。
+Zilliz Cloud 提供 Free 版本，允许您免费使用 Serverless 集群的功能。Free 版本提供：
 
-- **特性**：弹性扩缩，无需复杂配置。
+- 5 GB 存储（可容纳 100 万个 768 维向量）
 
-- **云服务提供商**：阿里云。
+- 每月 250 万免费 vCU 额度
 
-- **定价**：详见 [Zilliz Cloud 定价](https://zilliz.com.cn/pricing)
+- 5 个 Collection
 
-## Dedicated 版{#enterprise-plan}
+如需更多资源或尝试高级功能，请免费试用 Serverless 或 Dedicated 版本。
 
-适用于生产环境，提供企业级数据安全与合规、监控指标、技术支持 SLA 等，支持高级配置。
+## 免费试用{#use-free-trial}
 
-- **特性**：高级功能。提供全天候技术支持。
+您可以免费试用 Zilliz Cloud 以下两个[版本](./select-zilliz-cloud-service-plans)：Serverless 和 Dedicated。
 
-- **云服务提供商**：阿里云、腾讯云。
+### 免费试用说明{#use-free-trial}
 
-- **定价**：详见 [Zilliz Cloud 定价](https://zilliz.com.cn/pricing)
+首次注册 Zilliz Cloud 账号时，您的组织将获赠 **¥300** 免费额度，有效期为 **30 天**，可用于试用 Serverless 和 Dedicated 版本集群。免费额度使用完毕或过期时即视为免费试用结束。
 
-## BYOC 版{#byoc}
+免费试用结束后，您的组织将被冻结。在此期间，组织中的 Serverless 和 Dedicated 集群将被移至[回收站](./use-recycle-bin)，您将无法使用 Dedicated 和 Serverless 集群特有的高级功能（如备份恢复、告警等）。
 
-适用于高度注重数据隐私和合规的场景，支持在您自己的 VPC 上部署全托管的向量集群服务。
+如需解冻组织，请[添加支付方式](./payment-billing)。在此之后，您可以从回收站中恢复数据。如果在组织冻结 30 天后仍未添加支付方式，您的 Serverless 和 Dedicated 集群将被永久删除，但您的组织仍被保留。
 
-- **特性**：支持在多个云平台部署。保证企业级数据安全。
+### 获取免费额度{#earn-credits}
 
-- **定价**：[联系销售](https://zilliz.com.cn/contact-sales)
+注册 Zilliz Cloud 账号后您即可获得 ¥300 免费额度。如果您绑定了云市场支付方式，免费额度有效期可延长至 **1 年**。
 
-## 不同版本的免费试用对比{#free-trial-comparison}
+如需更多免费额度或延长试用期，请[联系销售](https://zilliz.com.cn/contact-sales)。
 
-<table>
-   <tr>
-     <th></th>
-     <th><p>Serverless 版</p></th>
-     <th><p>Dedicated 版</p></th>
-   </tr>
-   <tr>
-     <td><p>集群类型</p></td>
-     <td><p>Serverless</p></td>
-     <td><p>Dedicated</p></td>
-   </tr>
-   <tr>
-     <td><p>试用有效期</p></td>
-     <td><p>限时免费</p></td>
-     <td><p>30 天</p></td>
-   </tr>
-   <tr>
-     <td><p>可创建 Collection 数量上限</p></td>
-     <td><p>10</p></td>
-     <td><p>可根据您的需求灵活创建 Collection。更多详情，请参考<a href="./limits#collections">使用限制</a>。</p></td>
-   </tr>
-   <tr>
-     <td><p>CU 计算资源大小</p></td>
-     <td><p>共享资源</p></td>
-     <td><p>专有资源，可根据您的需求灵活选择 CU 大小。</p></td>
-   </tr>
-</table>
+### 查看免费额度余额{#view-credit-balance}
 
-如需了解如何创建集群，请阅读[创建集群](./create-cluster)。
+您可以通过左侧导航栏底部的卡片，快速查看免费额度余额及有效期。
+
+或者，您也可以前往**账单概览**页，通过**免费额度**卡片，查看免费额度余额。
+
+![view-credit-balance-cn](/img/view-credit-balance-cn.png)
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>为节省免费额度，我们建议您手动挂起未使用的集群。</p>
+
+</Admonition>
+
+### 免费试用相关邮件提醒{#free-trial-notifications}
+
+在免费试用期间，Zilliz Cloud 会向组织管理员发送以下邮件通知，提醒您免费试用的情况。
+
+- 您已试用 60% 的免费额度。
+
+- 免费额度有效期不足 3 天。
+
+- 免费试用到期后未添加支付方式，导致组织被冻结
+
+- 即将在免费到期结束后将 Serverless 和 Dedicated 集群移至回收站。
+
+- 免费试用到期，Serverless 和 Dedicated 集群已被移至回收站。
+
+- 所有免费额度已使用完毕。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>如果您在免费试用到期前添加支付方式，您将不再收到免费试用相关的邮件提醒。</p>
+
+</Admonition>
 
 ## 文档推荐{#related-topics}
 

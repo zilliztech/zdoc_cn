@@ -1,7 +1,10 @@
 ---
+title: "search() | Java | v1"
 slug: /java/v1-QuerySearch-search
+sidebar_label: "search()"
 beta: FALSE
 notebook: FALSE
+description: "The MilvusClient interface. This method conducts an approximate nearest neighbor (ANN) search on a vector field and pairs up with a Boolean expression to conduct filtering on scalar fields before searching. | Java | v1"
 type: origin
 token: D0cfwvTqMiyhSrkCUv4c1a2Fnjd#WggndVzAGoDW80xfaq3cY5MMnzd
 sidebar_position: 3
@@ -41,6 +44,11 @@ Methods of `SearchParam.Builder`:
         <td><p>withCollectionName(collectionName)</p></td>
         <td><p>Set the collection name. Collection name cannot be empty or null.</p></td>
         <td><p>collectionName: The target collection name.</p></td>
+    </tr>
+    <tr>
+        <td><p>withDatabaseName(String databaseName)</p></td>
+        <td><p>Sets the database name. database name can be null for default database.</p></td>
+        <td><p>databaseName: The database name.</p></td>
     </tr>
     <tr>
         <td><p>withConsistencyLevel(ConsistencyLevelEnum consistencyLevel)</p></td>
@@ -94,27 +102,27 @@ Methods of `SearchParam.Builder`:
     </tr>
     <tr>
         <td><p>withFloatVectors(List\<List\<Float>gt; vectors)</p></td>
-        <td><p>Set the target vectors to search FloatVector field. Up to 16384 vectors allowed.<br/><br/>Note: this method will reset the target vectors of SearchParam. To input vectors, call it only once.</p></td>
+        <td><p>Set the target vectors to search FloatVector field. Up to 16384 vectors allowed.<br/>Note: this method will reset the target vectors of SearchParam. To input vectors, call it only once.</p></td>
         <td><p>vectors: The target vectors</p></td>
     </tr>
     <tr>
         <td><p>withBinaryVectors(List\<ByteBuffer> vectors)</p></td>
-        <td><p>Set the target vectors to search BinaryVector field. Up to 16384 vectors allowed.<br/><br/>Note: this method will reset the target vectors of SearchParam. To input vectors, call it only once.</p></td>
+        <td><p>Set the target vectors to search BinaryVector field. Up to 16384 vectors allowed.<br/>Note: this method will reset the target vectors of SearchParam. To input vectors, call it only once.</p></td>
         <td><p>vectors: The target vectors</p></td>
     </tr>
     <tr>
         <td><p>withFloat16Vectors(List\<ByteBuffer> vectors)</p></td>
-        <td><p>Set the target vectors to search Float16Vector field. Up to 16384 vectors allowed.<br/><br/>Note: this method will reset the target vectors of SearchParam. To input vectors, call it only once.</p></td>
+        <td><p>Set the target vectors to search Float16Vector field. Up to 16384 vectors allowed.<br/>Note: this method will reset the target vectors of SearchParam. To input vectors, call it only once.</p></td>
         <td><p>vectors: The target vectors</p></td>
     </tr>
     <tr>
         <td><p>withBFloat16Vectors(List\<List\<Float>gt; vectors)</p></td>
-        <td><p>Set the target vectors to search BFloat16Vector field. Up to 16384 vectors allowed.<br/><br/>Note: this method will reset the target vectors of SearchParam. To input vectors, call it only once.</p></td>
+        <td><p>Set the target vectors to search BFloat16Vector field. Up to 16384 vectors allowed.<br/>Note: this method will reset the target vectors of SearchParam. To input vectors, call it only once.</p></td>
         <td><p>vectors: The target vectors</p></td>
     </tr>
     <tr>
         <td><p>withSparseFloatVectors(List\<SortedMap\<Long, Float>gt; vectors)</p></td>
-        <td><p>Set the target vectors to search SparseFloatVector field. Up to 16384 vectors allowed.<br/><br/>Note: this method will reset the target vectors of SearchParam. To input vectors, call it only once.</p></td>
+        <td><p>Set the target vectors to search SparseFloatVector field. Up to 16384 vectors allowed.<br/>Note: this method will reset the target vectors of SearchParam. To input vectors, call it only once.</p></td>
         <td><p>vectors: The target vectors</p></td>
     </tr>
     <tr>
@@ -124,7 +132,7 @@ Methods of `SearchParam.Builder`:
     </tr>
     <tr>
         <td><p>withParams(String params)</p></td>
-        <td><p>Specifies the parameters of search in JSON format. The followings are valid keys of param:<br/>1. special parameters for index, such as "nprobe", "ef", "search<em>k"<br/>2. metric type with key "metric</em>type" and a string value such as "L2", "IP".<br/>3. offset for pagination with key "offset" and an integer value</p></td>
+        <td><p>Specifies the parameters of search in JSON format. The followings are valid keys of param:<br/>1. special parameters for index, such as "nprobe", "ef", "search_k"<br/>2. metric type with key "metric_type" and a string value such as "L2", "IP".<br/>3. offset for pagination with key "offset" and an integer value</p></td>
         <td><p>params: A JSON format string for extra parameters.</p></td>
     </tr>
     <tr>

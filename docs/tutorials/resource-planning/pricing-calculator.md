@@ -1,7 +1,10 @@
 ---
+title: "价格计算器 | Cloud"
 slug: /pricing-calculator
+sidebar_label: "价格计算器"
 beta: FALSE
 notebook: FALSE
+description: "Zilliz Cloud 价格计算器可以帮助您了解 Zilliz Cloud 定价策略，自助估算价格，挑选最适合的解决方案。本指南将介绍如何使用该计算器，以获得精准的成本估算。 | Cloud"
 type: origin
 token: Jxqfwnd80i8ibIkRhEKcnkK6nzd
 sidebar_position: 4

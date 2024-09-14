@@ -1,10 +1,20 @@
 ---
+title: "与 HuggingFace 集成搭建问答系统 | Cloud"
 slug: /question-answering-using-zilliz-cloud-and-hugging-face
+sidebar_label: "与 HuggingFace 集成搭建问答系统"
 beta: FALSE
 notebook: FALSE
+description: "本文将演示如何使用 Zilliz Cloud 和 HuggingFace 搭建问答系统。其中，Zilliz Cloud 负责提供向量数据库，HuggingFace 负责提供获取指定文字向量表示的接口。 | Cloud"
 type: origin
 token: MVYEwIkZCiZd3CkRWFmc9EH2nSf
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 相似性
+  - huggingface
 
 ---
 

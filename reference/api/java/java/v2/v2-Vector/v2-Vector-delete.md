@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "delete() | Java | v2"
 slug: /java/java/v2-Vector-delete
+sidebar_label: "delete()"
 beta: false
 notebook: false
+description: "This operation deletes entities by their IDs or with a boolean expression. | Java | v2"
 type: docx
 token: DgKidEKLXodqn3xsg0hclkcRntd
 sidebar_position: 1

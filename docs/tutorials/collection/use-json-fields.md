@@ -1,10 +1,19 @@
 ---
+title: "使用 JSON 类型字段 | Cloud"
 slug: /use-json-fields
+sidebar_label: "使用 JSON 类型字段"
 beta: FALSE
 notebook: FALSE
+description: "JSON 全称为 JavaScript Object Notation，是一种轻量级且易于使用的文本数据格式。本节将帮助您了解如何使用 JSON 类型的字段，包括插入 JSON 值，使用简单和高级操作符在 JSON 字段中进行标量过滤等。 | Cloud"
 type: origin
 token: UXBjwVpKmirzg9kgWgmcLixwnIe
 sidebar_position: 18
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - json 字段
 
 ---
 

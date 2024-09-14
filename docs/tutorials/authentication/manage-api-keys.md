@@ -1,10 +1,19 @@
 ---
+title: "API 密钥 | Cloud"
 slug: /manage-api-keys
+sidebar_label: "API 密钥"
 beta: FALSE
 notebook: FALSE
+description: "在 Zilliz Cloud 平台，您可以在组织下分配和管理 API 密钥。这些密钥是用于对指定项目和资源进行访问所必需的认证令牌，可用于对 RESTful API 或 SDK 调用进行鉴权。 | Cloud"
 type: origin
 token: UGzNwB4TmiqTozkJvarceRdenif
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - api 密钥
 
 ---
 
@@ -46,16 +55,19 @@ import Admonition from '@theme/Admonition';
      <th></th>
      <th><p>组织管理员</p></th>
      <th><p>项目管理员</p></th>
-     <th><p>项目成员</p></th>
+     <th><p>项目编辑者</p></th>
+     <th><p>项目查看者</p></th>
    </tr>
    <tr>
      <td><p><strong>个人密钥</strong></p></td>
      <td></td>
      <td></td>
      <td></td>
+     <td></td>
    </tr>
    <tr>
      <td><p>创建</p></td>
+     <td><p>系统自动分配</p></td>
      <td><p>系统自动分配</p></td>
      <td><p>系统自动分配</p></td>
      <td><p>系统自动分配</p></td>
@@ -65,15 +77,18 @@ import Admonition from '@theme/Admonition';
      <td><p>✔️</p></td>
      <td><p>✔️</p></td>
      <td><p>✔️</p></td>
+     <td><p>✔️</p></td>
    </tr>
    <tr>
      <td><p>查看其他成员的 API 密钥名称 [1]</p></td>
      <td><p>✔️</p></td>
      <td><p>✔️</p></td>
      <td><p>✘</p></td>
+     <td><p>✘</p></td>
    </tr>
    <tr>
      <td><p>重置 API 密钥 [2]</p></td>
+     <td><p>✔️</p></td>
      <td><p>✔️</p></td>
      <td><p>✔️</p></td>
      <td><p>✔️</p></td>
@@ -83,11 +98,13 @@ import Admonition from '@theme/Admonition';
      <td></td>
      <td></td>
      <td></td>
+     <td></td>
    </tr>
    <tr>
      <td><p>创建</p></td>
      <td><p>✔️</p></td>
      <td><p>✔️ [3]</p></td>
+     <td><p>✘</p></td>
      <td><p>✘</p></td>
    </tr>
    <tr>
@@ -95,16 +112,19 @@ import Admonition from '@theme/Admonition';
      <td><p>✔️</p></td>
      <td><p>✔️ [4]</p></td>
      <td><p>✘</p></td>
+     <td><p>✘</p></td>
    </tr>
    <tr>
      <td><p>移除 API 密钥权限</p></td>
      <td><p>✔️</p></td>
      <td><p>✔️ [4]</p></td>
      <td><p>✘</p></td>
+     <td><p>✘</p></td>
    </tr>
    <tr>
      <td><p>编辑 API 密钥名称</p></td>
      <td><p>✔️</p></td>
+     <td><p>✘</p></td>
      <td><p>✘</p></td>
      <td><p>✘</p></td>
    </tr>
@@ -113,10 +133,12 @@ import Admonition from '@theme/Admonition';
      <td><p>✔️</p></td>
      <td><p>✘</p></td>
      <td><p>✘</p></td>
+     <td><p>✘</p></td>
    </tr>
    <tr>
      <td><p>删除 API 密钥</p></td>
      <td><p>✔️</p></td>
+     <td><p>✘</p></td>
      <td><p>✘</p></td>
      <td><p>✘</p></td>
    </tr>

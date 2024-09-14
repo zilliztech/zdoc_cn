@@ -1,10 +1,20 @@
 ---
+title: "估算 Pipelines 用量 | Cloud"
 slug: /estimate-pipelines-usage
+sidebar_label: "估算 Pipelines 用量"
 beta: FALSE
 notebook: FALSE
+description: "运行 Pipelines 的成本以 Token 数作为度量单位。类似于使用 Token 作为基本单位的大型语言模型（LLM），Pipeline 通过将文本转化为向量并解析为一系列 Token 来处理文档和搜索查询。您可以使用我们的用量估算工具来计算文件或文本字符串的 Token 数量。 | Cloud"
 type: origin
 token: TNwlw4PRxiFoewkSQzhcU06BnyA
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - pipeline
+  - 用量
 
 ---
 

@@ -1,10 +1,19 @@
 ---
+title: "设置时区 | Cloud"
 slug: /manage-timezone
+sidebar_label: "设置时区"
 beta: FALSE
 notebook: FALSE
+description: "默认情况下，系统时区的设置会与首次登录地保持一致，并会应用 Zilliz Cloud 中显示的所有时间字符串。 | Cloud"
 type: origin
 token: AAAmwoQdJid8FOkN3Z8cu8jAnNg
 sidebar_position: 3
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 时区
 
 ---
 

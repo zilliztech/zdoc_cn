@@ -1,10 +1,20 @@
 ---
+title: "与 SentenceTransformers 集成搭建电影搜索系统 | Cloud"
 slug: /movie-search-using-zilliz-cloud-and-sentencetransformers
+sidebar_label: "与 SentenceTransformers 集成搭建电影搜索系统"
 beta: FALSE
 notebook: FALSE
+description: "本文将演示使用 Zilliz Cloud 和 SentenceTransformers 对一篇 Wikipedia 文章进行搜索。示例中用到的数据集为 Wikipedia-Movie-Plots Dataset，你可以在 Kaggle 上找到该数据集。我们将该数据集重新托管到了一个公共的 Google Drive。 | Cloud"
 type: origin
 token: QdD7w2k6ii7mKFkTJ2tcNhYznAf
 sidebar_position: 7
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 相似性
+  - sentence transformers
 
 ---
 

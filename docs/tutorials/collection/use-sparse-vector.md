@@ -1,10 +1,20 @@
 ---
+title: "使用 Sparse Vector | Cloud"
 slug: /use-sparse-vector
-beta: TRUE
+sidebar_label: "使用 Sparse Vector"
+beta: FALSE
 notebook: FALSE
+description: "稀疏向量 (sparse vector) 使用向量 embedding 来表示单词或短语，其中大部分元素为零，只有少数非零元素表示特定特征的存在。像 SPLADEv2 这样的 sparse vector 模型在域外知识搜索、关键词感知和可解释性方面优于 dense vector 模型。Sparse vector 在信息检索、自然语言处理和推荐系统中尤其有用，通过结合用于召回的 sparse vector 和用于排名的大语言模型，可以显著提高检索结果。 | Cloud"
 type: origin
 token: Ry6jwMpU8iCJdLkj4bQcHEhInpd
 sidebar_position: 20
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - sparse vector
+  - 稀疏向量
 
 ---
 
@@ -232,7 +242,7 @@ for hits in search_res:
 
 ## 执行标量查询（scalar query）{#perform-scalar-queries}
 
-除了 ANN 搜索之外，Zilliz Cloud 还支持对 sparse vector 进行标量查询。标量查询允许您根据与 sparse vector 相关的标量值检索文档。有关参数的更多信息，请参见 [query()](https://docs.zilliz.com/reference/python/python/Vector-query)。
+除了 ANN 搜索之外，Zilliz Cloud 还支持对 sparse vector 进行标量查询。标量查询允许您根据与 sparse vector 相关的标量值检索文档。有关参数的更多信息，请参见 [query()](/reference/python/python/Vector-query)。
 
 过滤 `scalar_field` 大于 0.999 的 entity：
 

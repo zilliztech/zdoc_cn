@@ -1,7 +1,10 @@
 ---
+title: "FAQ：AI 模型集成 | CLOUD"
 slug: /faq-integrations
+sidebar_label: "FAQ：AI 模型集成"
 beta: FALSE
 notebook: FALSE
+description: " | CLOUD"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 14

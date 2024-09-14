@@ -1,10 +1,20 @@
 ---
+title: "资源概览 | Cloud"
 slug: /resource-hierarchy
+sidebar_label: "资源概览"
 beta: FALSE
 notebook: FALSE
+description: "Zilliz Cloud 通过以下层面实现访问控制： | Cloud"
 type: origin
 token: WYzywSL2ViDcZGk9vgqcq9XOned
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 资源
+  - 概览
 
 ---
 

@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: nodeSidebar
+title: "hasCollection() | Node.js"
 slug: /node/node/Collections-hasCollection
+sidebar_label: "hasCollection()"
 beta: false
 notebook: false
+description: "This operation checks whether a specific collection exists. | Node.js"
 type: docx
 token: FhbbdNrlNouBXJxHIdKctXVKnmf
 sidebar_position: 10

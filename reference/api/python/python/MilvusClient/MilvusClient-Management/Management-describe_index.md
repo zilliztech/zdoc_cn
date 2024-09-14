@@ -81,7 +81,7 @@ A dictionary that contains the details of the specified index.
 
     The algorithm that is used to build the index. 
 
-    On Zilliz Cloud, the value is always **AUTOINDEX**. For details, refer to [AUTOINDEX Explained](https://docs.zilliz.com/docs/autoindex-explained).
+    On Zilliz Cloud, the value is always **AUTOINDEX**. For details, refer to [AUTOINDEX Explained](/docs/autoindex-explained).
 
 - **metric_type** (*str*) -
 

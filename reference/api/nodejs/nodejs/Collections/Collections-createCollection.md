@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: nodeSidebar
+title: "createCollection() | Node.js"
 slug: /node/node/Collections-createCollection
+sidebar_label: "createCollection()"
 beta: false
 notebook: false
+description: "This operation creates a collection either with default or customized settings. | Node.js"
 type: docx
 token: AudsdfQ5hoDyKKxXSowcb3S6nfb
 sidebar_position: 3
@@ -61,7 +64,11 @@ milvusClient.createCollection({
 
 - **auto_id** (*boolean*) - 
 
-    Whether the primary field automatically increments along with data insertions.
+    Whether the primary field automatically increments upon data insertions into this collection.
+
+    The value defaults to **False**. Setting this to **True** makes the primary field automatically increment. In this case, the primary field should not be included in the data to insert to avoid errors. The auto-generated IDs have a fixed length and cannot be altered.
+
+    This parameter is designed for the quick setup of a collection and will be ignored if **schema** is not **None**.
 
 - **consistency_level** (*number* | *string*)
 

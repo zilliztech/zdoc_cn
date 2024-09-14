@@ -1,10 +1,19 @@
 ---
+title: "Schema | Cloud"
 slug: /schema-explained
+sidebar_label: "Schema"
 beta: FALSE
 notebook: FALSE
+description: "定义 Schema 是指为数据库中数据创建一个清晰有序的数据结构。Schema 可以揭示和解列数据之间的关系。因此，定义 Schema 是为了了解数据集中的所有数据，展示数据间联系，从而用最有效的方式表示数据关系。 | Cloud"
 type: origin
 token: ZgcQw57PxiKaeSkuQmCchK8snP0
 sidebar_position: 3
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - schema
 
 ---
 
@@ -159,23 +168,11 @@ Zilliz Cloud 支持以下字段数据类型。不同字段类型支持的数据�
 
     - FLOAT_VECTOR：存储 32 位浮点数，常用于科学计算和机器学习中表示实数。
 
-    - FLOAT16_VECTOR <sup>(Beta)</sup>：存储 16 位半精度浮点数，用于深度学习和 GPU 计算中提高内存和带宽效率。
+    - FLOAT16_VECTOR：存储 16 位半精度浮点数，用于深度学习和 GPU 计算中提高内存和带宽效率。
 
-    - BFLOAT16_VECTOR <sup>(Beta)</sup>：存储 16 位浮点数，具有与 Float32 相同的指数范围，但精度较低，常用于深度学习中减少内存和计算需求，同时不显著影响准确性。
+    - BFLOAT16_VECTOR：存储 16 位浮点数，具有与 Float32 相同的指数范围，但精度较低，常用于深度学习中减少内存和计算需求，同时不显著影响准确性。
 
-    - SPARSE_FLOAT_VECTOR <sup>(Beta)</sup>：存储非零元素及其对应索引的列表，用于表示稀疏向量。使用 SPARSE_FLOAT_VECTOR 时，不需要指定维度。
+    - SPARSE_FLOAT_VECTOR：存储非零元素及其对应索引的列表，用于表示稀疏向量。使用 SPARSE_FLOAT_VECTOR 时，不需要指定维度。
 
-    - BINARY_VECTOR <sup>(Beta)</sup>：以 0 和 1 的序列存储二进制数据，用于图像处理和信息检索中的紧凑特征表示。使用 BINARY_VECTOR 时，维度必须是 8 的倍数，范围从 8 到 32,768 * 8。
-
-    <Admonition type="info" icon="📘" title="说明">
-
-    <p>目前，向量字段类型 FLOAT16_VECTOR、BFLOAT16_VECTOR、SPARSE_FLOAT_VECTOR 和 BINARY_VECTOR 仅适用于已升级到 Beta 版本的 Zilliz Cloud 集群。</p>
-
-    </Admonition>
-
-## 文档推荐{#whats-next}
-
-- [开启动态 Schema](./enable-dynamic-field)
-
-- [JSON](./use-json-fields) 
+    - BINARY_VECTOR：以 0 和 1 的序列存储二进制数据，用于图像处理和信息检索中的紧凑特征表示。使用 BINARY_VECTOR 时，维度必须是 8 的倍数，范围从 8 到 32,768 * 8。
 

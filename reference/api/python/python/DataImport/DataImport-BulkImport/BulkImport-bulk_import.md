@@ -18,7 +18,7 @@ import Admonition from '@theme/Admonition';
 
 # bulk_import()
 
-This operation imports the prepared data files to Zilliz Cloud. To learn how to prepare your data files, read [Prepare Data Import](https://docs.zilliz.com/docs/prepare-data-import).
+This operation imports the prepared data files to Zilliz Cloud. To learn how to prepare your data files, read [Prepare Data Import](/docs/prepare-data-import).
 
 ## Request syntax
 
@@ -159,7 +159,7 @@ print(res.json())
 # }
 ```
 
-For details, refer to [Import Data (SDK)](https://docs.zilliz.com/docs/import-data-via-sdks) in our user guides.
+For details, refer to [Import Data (SDK)](/docs/import-data-via-sdks) in our user guides.
 
 ## Related methods
 

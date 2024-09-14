@@ -1,10 +1,19 @@
 ---
+title: "管理 Index | Cloud"
 slug: /manage-indexes
+sidebar_label: "管理 Index"
 beta: FALSE
 notebook: FALSE
+description: "本教程将介绍如何通过 SDK 管理向量和标量索引。 | Cloud"
 type: origin
 token: VSiYw5CHMixHpIklpvgcTWMhngd
 sidebar_position: 12
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - index
 
 ---
 

@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "createCollection() | Java | v2"
 slug: /java/java/v2-Collections-createCollection
+sidebar_label: "createCollection()"
 beta: false
 notebook: false
+description: "This operation creates a collection either with default or customized settings. | Java | v2"
 type: docx
 token: QdrtdDRZdo9lCgxQjUHcRCfYnuf
 sidebar_position: 5
@@ -93,7 +96,7 @@ createCollection(CreateCollectionReq.builder()
 
     The algorithm used for this collection to measure similarities between vector embeddings.
 
-    The value defaults to **IP**. Possible values are **L2**, **IP**, and **COSINE**. For details on these metric types, refer to [Similarity Metrics Explained](https://docs.zilliz.com/docs/search-metrics-explained).
+    The value defaults to **IP**. Possible values are **L2**, **IP**, and **COSINE**. For details on these metric types, refer to [Similarity Metrics Explained](/docs/search-metrics-explained).
 
 - `autoID(boolean autoID)`
 

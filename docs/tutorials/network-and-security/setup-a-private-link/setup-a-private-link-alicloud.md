@@ -1,10 +1,20 @@
 ---
+title: "创建阿里云私网连接（Private Link） | Cloud"
 slug: /setup-a-private-link-alicloud
+sidebar_label: "创建阿里云私网连接（Private Link）"
 beta: FALSE
 notebook: FALSE
+description: "本小节主要介绍如何在您的阿里云 VPC 和您托管在阿里云上的 Zilliz Cloud 集群之间建立私网连接。 | Cloud"
 type: origin
 token: OZ5Ywbjm0idqAqkOdZrcQU3Wncb
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 私网
+  - 阿里云
 
 ---
 
@@ -14,6 +24,8 @@ import Admonition from '@theme/Admonition';
 # 创建阿里云私网连接（Private Link）
 
 本小节主要介绍如何在您的阿里云 VPC 和您托管在阿里云上的 Zilliz Cloud 集群之间建立私网连接。
+
+此功能仅适用于 Dedicated 集群。
 
 <Admonition type="info" icon="📘" title="提示">
 
@@ -145,7 +157,7 @@ import Admonition from '@theme/Admonition';
        </tr>
        <tr>
          <td><p><strong>可用区与交换机</strong></p></td>
-         <td><p>选择 Zilliz Cloud 集群所在可用区并创建默认交换机。</p><p>目前，Zilliz Cloud 集群可选可用区如下：</p><p><strong>杭州</strong></p><ul><li><p>杭州 可用区 H</p></li><li><p>杭州 可用区 J</p></li><li><p>杭州 可用区 K</p></li></ul><p><strong>北京</strong></p><ul><li><p>北京 可用区 G</p></li><li><p>北京 可用区 H</p></li><li><p>北京 可用区 I</p></li></ul><p><strong>深圳</strong></p><ul><li><p>深圳 可用区 D</p></li><li><p>深圳 可用区 E</p></li><li><p>深圳 可用区 F</p></li></ul><p>交换机配置无特殊要求，保持默认即可。</p></td>
+         <td><p>选择 Zilliz Cloud 集群所在可用区并创建默认交换机。</p><p>目前，Zilliz Cloud 集群可选可用区如下：</p><p><strong>杭州</strong></p><ul><li><p>杭州 可用区 H</p></li><li><p>杭州 可用区 J</p></li><li><p>杭州 可用区 K</p><p><strong>北京</strong></p></li><li><p>北京 可用区 G</p></li><li><p>北京 可用区 H</p></li><li><p>北京 可用区 I</p><p><strong>深圳</strong></p></li><li><p>深圳 可用区 D</p></li><li><p>深圳 可用区 E</p></li><li><p>深圳 可用区 F</p><p>交换机配置无特殊要求，保持默认即可。</p></li></ul></td>
        </tr>
     </table>
 
@@ -282,4 +294,29 @@ import Admonition from '@theme/Admonition';
     ![zh-ali-dns-successful](/img/zh-ali-dns-successful.png)
 
 ### 您已成功创建私网连接{#create-private-link-successful}
+
+## 管理集群公网访问{#manage-internet-access-to-your-clusters}
+
+完成配置私网连接后，您可以选择关闭和限制集群的公网访问能力（Public Endpoint）。关闭后，您只可以使用私网连接访问该集群。
+
+如需关闭公共 Endpoint，请按以下步骤操作：
+
+1. 前往目标集群的**集群详情**页面。
+
+1. 找到**连接信息**部分。
+
+1. 点击集群公共 Endpoint 旁边的**设置图标**。
+
+1. 阅读弹窗信息，然后点击**关闭**。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<ul>
+<li><p>私网连接仅影响<a href="/reference/restful/data-plane">数据面（Data Plane）</a>的操作。<a href="/reference/restful/control-plane">控制面（Control Plane）</a>的操作仍然可以通过公网进行。</p></li>
+<li><p>重新启用公共 Endpoint 后，请您耐心等待。本地 DNS 缓存过期后公网访问才可生效。</p></li>
+</ul>
+
+</Admonition>
+
+![disable_public_endpoint_cn](/img/disable_public_endpoint_cn.png)
 

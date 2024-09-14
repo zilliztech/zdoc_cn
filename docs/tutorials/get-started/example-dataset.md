@@ -1,10 +1,19 @@
 ---
+title: "示例数据集 | Cloud"
 slug: /example-dataset
+sidebar_label: "示例数据集"
 beta: FALSE
 notebook: FALSE
+description: "本指南系列中的操作示例都是基于同一个示例数据集。该数据集包含了从 2020 年 1 月至 2020 年 8 月期间在各知名出版物上发表的 5000 多篇 Medium 文章的详细信息。 | Cloud"
 type: origin
 token: ZoXbwP8hJivPw2ktsLrckw0Snif
 sidebar_position: 5
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 数据集
 
 ---
 

@@ -1,10 +1,20 @@
 ---
+title: "使用 Iterators | Cloud"
 slug: /with-iterators
+sidebar_label: "使用 Iterators"
 beta: FALSE
 notebook: FALSE
+description: "Zilliz Cloud 支持在 search 和 query 操作时使用 iterator，这适用于包含大量 entity 的 search 或 query 结果。使用 iterator 可以帮助您进行分页浏览。 | Cloud"
 type: origin
 token: Yu8BwnVbmi6NQ2k3Of1cw8tMnSg
 sidebar_position: 4
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - iterators
+  - 迭代器
 
 ---
 

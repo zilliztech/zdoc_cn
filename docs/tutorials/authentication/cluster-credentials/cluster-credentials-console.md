@@ -1,10 +1,20 @@
 ---
+title: "通过 Web UI 管理身份凭证 | Cloud"
 slug: /cluster-credentials-console
+sidebar_label: "通过 Web UI 管理身份凭证"
 beta: FALSE
 notebook: FALSE
+description: "在 Zilliz Cloud 中，身份凭证由一对用户名和密码组成，用于认证及授权您对集群的交互请求。 | Cloud"
 type: origin
 token: VNWiwtYwGi9m0Okhj3Zce8wAnte
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 凭证
+  - ui
 
 ---
 

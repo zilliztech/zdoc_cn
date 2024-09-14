@@ -1,11 +1,20 @@
 ---
+title: "管理 Collection (SDK) | Cloud"
 slug: /manage-collections-sdks
-sidebar_label: SDK
+sidebar_label: "SDK"
 beta: FALSE
 notebook: FALSE
+description: "本指南将介绍如何通过各种语言的 SDK 创建和管理 Collection。Zilliz Cloud Web 控制台操作更简单直观，但使用 SDK 可提供更多灵活性。 | Cloud"
 type: origin
 token: FoTwwqBYdi5fmlkUkMfcFF2gnNc
 sidebar_position: 3
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - collection
+  - sdk
 
 ---
 
@@ -585,7 +594,7 @@ const index_params = [{
     </TabItem>
     </Tabs>
 
-### 使用多向量字段 <sup>(Beta)</sup>{#with-multiple-vector-fields}
+### 使用多向量字段 (Beta){#with-multiple-vector-fields}
 
 创建包含多个向量字段的 colletion 的过程与[定制化创建](./manage-collections-sdks#customized-setup)相似。要创建包含多个向量字段（最多 4 个）的 collection，您需要定义 collection 中所有向量字段的配置。Collection 中的每个向量字段都有自己的名称和用于衡量数据相似度的度量类型。有关向量数据类型和度量的更多信息，请参见[相似性度量](./search-metrics-explained)和 [Schema](./schema-explained)。
 
@@ -1602,5 +1611,45 @@ console.log(res.error_code)
 
 ## Collection 限制{#collection-limits}
 
-有关更多关于 collection 限制相关信息，请参阅[使用限制](./limits#collections)。
+<table>
+   <tr>
+     <th><p><strong>集群类型</strong></p></th>
+     <th><p><strong>Collection 最大数量</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>Free</p></td>
+     <td><p>5</p></td>
+     <td><p>您最多可创建 5 个 Collection。</p></td>
+   </tr>
+   <tr>
+     <td><p>Serverless</p></td>
+     <td><p>100</p></td>
+     <td><p>您最多可创建 100 个 Collection。</p></td>
+   </tr>
+   <tr>
+     <td><p>Dedicated</p></td>
+     <td><p>每 CU：&lt;= 64</p><p>每集群：&lt;= 4096</p></td>
+     <td><p>在企业版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</p></td>
+   </tr>
+</table>
+
+除了对集群中 Collection 数量的限制外，Zilliz Cloud 还有容量资源相关的限制。具体见下表。
+
+<table>
+   <tr>
+     <th><p><strong>CU 数量</strong></p></th>
+     <th><p><strong>容量</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>1-8 CU</p></td>
+     <td><p>&lt;= 4,096</p></td>
+   </tr>
+   <tr>
+     <td><p>12 CU 及以上</p></td>
+     <td><p>Min(512 x CU 数, 65536)</p></td>
+   </tr>
+</table>
+
+如需了解如何计算集群的已使用容量和通用容量，请查看[使用限制](/docs/limits#collections)。
 

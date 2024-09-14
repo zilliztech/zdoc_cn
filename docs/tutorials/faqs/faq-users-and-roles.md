@@ -1,7 +1,10 @@
 ---
+title: "FAQ：用户和角色 | CLOUD"
 slug: /faq-users-and-roles
+sidebar_label: "FAQ：用户和角色"
 beta: FALSE
 notebook: FALSE
+description: " | CLOUD"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 9

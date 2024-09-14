@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "query() | Java | v2"
 slug: /java/java/v2-Vector-query
+sidebar_label: "query()"
 beta: false
 notebook: false
+description: "This operation conducts a scalar filtering with a specified boolean expression. | Java | v2"
 type: docx
 token: WxDjdYxSaoin88xQ7z7cL2rrnDg
 sidebar_position: 4
@@ -95,17 +98,17 @@ query(QueryReq.builder()
 
 **RETURN TYPE:**
 
-*List\<QueryResult\>*
+*QueryResp*
 
 **RETURNS:**
 
-A list of *QueryResult* objects representing specific query results with the specified output fields
+A **QueryResp object representing specific query results with the specified output fields
 
 **PARAMETERS:**
 
-- **entity** (*Map\<String,Object\>*)
+- queryResults(List\<QueryResp.QueryResult\>)
 
-    A map that contains key-value pairs of field names and their values.
+A list of QueryResult objects with each QueryResult representing a queried entity.
 
 <Admonition type="info" icon="📘" title="Notes">
 
@@ -128,6 +131,8 @@ QueryReq queryReq = QueryReq.builder()
         .filter("id < 10")
         .build();
 QueryResp queryResp = client.query(queryReq);
-// QueryResp(queryResults=[QueryResp.QueryResult(entity={vector=[0.54480153, 0.8220552], id=0}), QueryResp.QueryResult(entity={vector=[0.75052005, 0.7581255], id=1}), QueryResp.QueryResult(entity={vector=[0.56026894, 0.23027527], id=2}), QueryResp.QueryResult(entity={vector=[0.38339353, 0.56710696], id=3}), QueryResp.QueryResult(entity={vector=[0.7986327, 0.54763454], id=4}), QueryResp.QueryResult(entity={vector=[0.5766768, 0.12176812], id=5})])
+for (QueryResp.QueryResult result : queryResp.getGetResults()) {
+    System.out.println(result.getEntity());
+}
 
 ```

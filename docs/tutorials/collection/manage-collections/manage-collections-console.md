@@ -1,11 +1,20 @@
 ---
+title: "管理 Collection (控制台) | Cloud"
 slug: /manage-collections-console
-sidebar_label: 控制台
+sidebar_label: "控制台"
 beta: FALSE
 notebook: FALSE
+description: "本教程将介绍如何通过 Zilliz Cloud 控制台创建和管理 Collection。您也可以通过 SDK 管理 Collection。 | Cloud"
 type: origin
 token: Cy4swPPaeiZgbmkN4wUc9wAdnwd
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - collection
+  - 控制台
 
 ---
 
@@ -24,7 +33,7 @@ Zilliz Cloud 提供 3 种创建 Collection 的方式以满足不同需求。
 
 - **[使用示例数据集](./manage-collections-console#create-sample-collection)**: 适合 Zilliz Cloud 新手用户。Zilliz Cloud 提供示例数据集，并为您根据示例数据集自动定义 Schema。您无需额外修改 Collection 配置即可一键创建 Collection。
 
-- **[复制现有 Collection](./manage-collections-console#copy-collection)**: 适合需要快速复制现有 Collection 的用户。
+- **[复制现有 Collection](./manage-collections-console#copy-collection)**: 适合需要在当前集群中快速复制现有 Collection 的用户。
 
 ### 方法 1: 使用您自己的数据{#create-your-own-collection}
 
@@ -74,11 +83,21 @@ Zilliz Cloud 提供 3 种创建 Collection 的方式以满足不同需求。
 
 ### 方法 3：复制现有 Collection{#copy-collection}
 
-该操作将复制现有 Collection 的 Schema 和索引。
+1. 在**操作**下拉菜单中选择**复制 Collection。**
 
-在**操作**下拉菜单中选择**复制 Collection**，设置新 Collection 名称和描述，点击**创建**。
+1. 设置新 Collection 名称和描述并选择复制范围。您仅可以在当前集群中复制 Collection。复制范围可以选择仅复制 Collection Schema 或同时复制 Collection Schema 和数据。
 
-![cn-copy-collection](/img/cn-copy-collection.png)
+1. 点击**复制**。
+
+    ![cn-copy-collection](/img/cn-copy-collection.png)
+
+1. Zilliz Cloud 将生成一条复制 Collection 任务。您可前往[任务中心](./job-center)查看任务状态和进度。如果迁移任务的状态从**进行中**变更为**成功**，则代表复制 Collection 成功。
+
+    <Admonition type="info" icon="📘" title="说明">
+
+    <p>仅当您选择复制 Collection Schema 及数据时，会生成复制任务。如果您选择了仅复制 Collection Schema，Zilliz Cloud 将立刻在当前集群中创建一个相同 Schema 的 Collection，而不会生成任务。</p>
+
+    </Admonition>
 
 ## 查看 Collections{#view-collections}
 
@@ -106,4 +125,44 @@ Zilliz Cloud 提供 3 种创建 Collection 的方式以满足不同需求。
 
 ## Collection 限制{#collection-limits}
 
-有关更多关于 collection 限制相关信息，请参阅[使用限制](./limits#collections)。
+<table>
+   <tr>
+     <th><p><strong>集群类型</strong></p></th>
+     <th><p><strong>Collection 最大数量</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>Free</p></td>
+     <td><p>5</p></td>
+     <td><p>您最多可创建 5 个 Collection。</p></td>
+   </tr>
+   <tr>
+     <td><p>Serverless</p></td>
+     <td><p>100</p></td>
+     <td><p>您最多可创建 100 个 Collection。</p></td>
+   </tr>
+   <tr>
+     <td><p>Dedicated</p></td>
+     <td><p>每 CU：&lt;= 64</p><p>每集群：&lt;= 4096</p></td>
+     <td><p>在企业版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</p></td>
+   </tr>
+</table>
+
+除了对集群中 Collection 数量的限制外，Zilliz Cloud 还有容量资源相关的限制。具体见下表。
+
+<table>
+   <tr>
+     <th><p><strong>CU 数量</strong></p></th>
+     <th><p><strong>容量</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>1-8 CU</p></td>
+     <td><p>&lt;= 4,096</p></td>
+   </tr>
+   <tr>
+     <td><p>12 CU 及以上</p></td>
+     <td><p>Min(512 x CU 数, 65536)</p></td>
+   </tr>
+</table>
+
+如需了解如何计算集群的已使用容量和通用容量，请查看[使用限制](/docs/limits#collections)。

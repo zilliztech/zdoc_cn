@@ -1,10 +1,21 @@
 ---
+title: "Insert, Upsert 和 Delete | Cloud"
 slug: /insert-update-delete
+sidebar_label: "Insert, Upsert 和 Delete"
 beta: FALSE
 notebook: FALSE
+description: "本教程将介绍如何在 Collection 中进行数据操作，包括 insert（插入）、upsert（更新插入） 和 delete（删除）entities。 | Cloud"
 type: origin
 token: TksbwTh7IiQPtskBKlzclwf0neb
 sidebar_position: 14
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - insert
+  - upsert
+  - delete
 
 ---
 

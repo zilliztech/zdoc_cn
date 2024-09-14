@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "updatePassword() | Java | v2"
 slug: /java/java/v2-Authentication-updatePassword
+sidebar_label: "updatePassword()"
 beta: false
 notebook: false
+description: "This operation updates the password of a specific user. | Java | v2"
 type: docx
 token: Fw4DdZmCxov8EBxnJlZceWton1e
 sidebar_position: 13

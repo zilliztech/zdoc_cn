@@ -1,10 +1,20 @@
 ---
+title: "创建 Scalar Index | Cloud"
 slug: /index-scalar-fields
+sidebar_label: "创建 Scalar Index"
 beta: FALSE
 notebook: FALSE
+description: "支持通过标量索引（Scalar index）加速非向量字段的元数据过滤。Scalar index 类似传统数据库中的索引。 | Cloud"
 type: origin
 token: AHv5wa2FiiWoyGkTIsHcfIcyngg
 sidebar_position: 2
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - index
+  - 标量
 
 ---
 
@@ -29,11 +39,16 @@ Milvus 能够根据标量字段类型推理索引类型。如需使用自动索�
 
 ```python
 # Auto indexing
+CLUSTER_ENDPOINT = "YOUR_CLUSTER_ENDPOINT"
+TOKEN = "YOUR_CLUSTER_TOKEN"
+
+# 1. Set up a Milvus client
 client = MilvusClient(
-    uri="http://localhost:19530"
+    uri=CLUSTER_ENDPOINT,
+    token=TOKEN 
 )
 
-index_params = client.create_index_params() # Prepare an empty IndexParams object, without having to specify any index parameters
+index_params = client.prepare_index_params() # Prepare an empty IndexParams object, without having to specify any index parameters
 
 index_params.add_index(
     field_name="scalar_1", # Name of the scalar field to be indexed

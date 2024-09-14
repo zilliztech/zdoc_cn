@@ -1,10 +1,19 @@
 ---
+title: "其他异同 | Cloud"
 slug: /other-differences
+sidebar_label: "其他异同"
 beta: FALSE
 notebook: FALSE
+description: "本文将介绍 Zilliz Cloud 和 Milvus 在数据类型、索引类型等方面的差异。 | Cloud"
 type: origin
 token: LCqjwnEPWi2YPkkdHOwc5eQXnPd
 sidebar_position: 3
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 异同
 
 ---
 

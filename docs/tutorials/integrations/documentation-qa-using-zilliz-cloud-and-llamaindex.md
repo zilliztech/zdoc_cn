@@ -1,10 +1,20 @@
 ---
+title: "与 LlamaIndex 集成搭建文档问答系统 | Cloud"
 slug: /documentation-qa-using-zilliz-cloud-and-llamaindex
+sidebar_label: "与 LlamaIndex 集成搭建文档问答系统"
 beta: FALSE
 notebook: FALSE
+description: "本文将演示如何与集成 LlamaIndex 从指定源获取信息。 | Cloud"
 type: origin
 token: BSKawjPvqiNAcgkGGIbct8L6nOd
 sidebar_position: 6
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 相似性
+  - llamaindex
 
 ---
 
@@ -25,10 +35,10 @@ import Admonition from '@theme/Admonition';
 
 ## 准备工作{#before-you-start}
 
-在本例中，我们将使用 **pymilvus** 来连接 Zilliz Cloud，使用 **llama-index** 来处理数据及流水线相关的工作。同时，您还需要获取一个 OpenAI 的 API 密钥来生成向量。
+在本例中，我们将使用 **pymilvus** 来连接 Zilliz Cloud，使用 **LlamaIndex** 来处理数据及流水线相关的工作。同时，您还需要获取一个 OpenAI 的 API 密钥来生成向量。
 
 ```shell
-pip install pymilvus llama-index
+pip install pymilvus llamaindex
 ```
 
 ## 准备数据{#prepare-data}

@@ -1,10 +1,19 @@
 ---
+title: "准备导入数据 | Cloud"
 slug: /prepare-source-data
+sidebar_label: "准备导入数据"
 beta: FALSE
 notebook: FALSE
+description: "本节将介绍在 Zilliz Cloud 上进行批量数据导入前需要完成的准备工作以及待导入数据需要满足的相关要求。 | Cloud"
 type: origin
 token: GLk6wr8jviPyzHk7DjRc56YsnNf
 sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - 导入数据
 
 ---
 
@@ -239,7 +248,7 @@ Zilliz Cloud 还支持通过 Zilliz Cloud 控制台或使用 RESTful API / SDK �
 
 ![data-import-on-console-remote_zh](/img/data-import-on-console-remote_zh.png)
 
-<Tabs defaultValue="ali" values={[{"label":"ALI OSS","value":"ali"},{"label":"Tencent COS","value":"tecent"}]}>
+<Tabs defaultValue="ali" values={[{"label":"阿里云 OSS","value":"ali"},{"label":"腾讯云 COS","value":"tecent"},{"label":"亚马逊云科技 S3","value":"amazon"}]}>
 
 <TabItem value="ali">
 
@@ -312,11 +321,19 @@ Zilliz Cloud 还支持通过 Zilliz Cloud 控制台或使用 RESTful API / SDK �
          <td><p><code>ap-shanghai</code></p></td>
        </tr>
        <tr>
-         <td><p>弗吉尼亚</p></td>
+         <td><p><strong>弗吉尼亚</strong></p></td>
          <td><p><code>https://&lt;BucketName-APPID&gt;.cos.na-ashburn.myqcloud.com</code></p></td>
          <td><p><code>na-ashburn</code></p></td>
        </tr>
     </table>
+
+- 所需权限
+
+    - `cos:GetBucket`
+
+    - `cos:GetObject`
+
+    - `cos:HeadObject`
 
 - 示例
 
@@ -336,6 +353,46 @@ Zilliz Cloud 还支持通过 Zilliz Cloud 控制台或使用 RESTful API / SDK �
        <tr>
          <td><p><strong>Parquet</strong></p></td>
          <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/parquet-folder</code></p><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/parquet-folder/data.parquet</code></p></td>
+       </tr>
+    </table>
+
+</TabItem>
+
+<TabItem value="amazon">
+
+- 对象访问 URI
+
+    <table>
+       <tr>
+         <th><p><strong>地域</strong></p></th>
+         <th><p><strong>URI</strong></p></th>
+         <th><p><strong>地域 ID</strong></p></th>
+       </tr>
+       <tr>
+         <td><p><strong>宁夏</strong></p></td>
+         <td><p><code>https://bucket-name.s3.northwest-1.amazonaws.com.cn/object-name</code></p><p><code>https://s3.northwest-1.amazonaws.com.cn/bucket-name/object-name</code></p><p><code>s3://bucket-name/object-name</code></p></td>
+         <td><p><code>northwest-1</code></p></td>
+       </tr>
+    </table>
+
+- 示例
+
+    <table>
+       <tr>
+         <th><p><strong>文件类型</strong></p></th>
+         <th><p><strong>路径示例</strong></p></th>
+       </tr>
+       <tr>
+         <td><p><strong>JSON</strong></p></td>
+         <td><p><code>https://bucket-name.s3.northwest-1.amazonaws.com.cn/json-folder</code></p><p><code>https://bucket-name.s3.northwest-1.amazonaws.com.cn/json-folder/data.json</code></p></td>
+       </tr>
+       <tr>
+         <td><p><strong>NumPy</strong></p></td>
+         <td><p><code>https://bucket-name.s3.northwest-1.amazonaws.com.cn/numpy-folder</code></p><p><code>https://bucket-name.s3.northwest-1.amazonaws.com.cn/numpy-folder/*.npy</code></p></td>
+       </tr>
+       <tr>
+         <td><p><strong>Parquet</strong></p></td>
+         <td><p><code>https://bucket-name.s3.northwest-1.amazonaws.com.cn/parquet-folder</code></p><p><code>https://bucket-name.s3.northwest-1.amazonaws.com.cn/parquet-folder/data.parquet</code></p></td>
        </tr>
     </table>
 

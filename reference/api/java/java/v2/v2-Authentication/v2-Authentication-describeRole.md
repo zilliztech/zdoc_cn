@@ -1,8 +1,11 @@
 ---
 displayed_sidbar: javaSidebar
+title: "describeRole() | Java | v2"
 slug: /java/java/v2-Authentication-describeRole
+sidebar_label: "describeRole()"
 beta: false
 notebook: false
+description: "This operation describes a specific role. | Java | v2"
 type: docx
 token: NVKMdnlOeoz770xHlt0cDHtgnym
 sidebar_position: 3
