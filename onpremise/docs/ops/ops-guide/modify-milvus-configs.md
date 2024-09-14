@@ -97,25 +97,29 @@ Milvus 集群的所有配置都在 `spec.config` 字段中。完整配置可参�
 
     执行如下命令应用修改后的配置。
 
-    ```shell
-    $ kubectl apply -f milvus-config-change.yaml
+    ```bash
+    # add-command-prompt
+    kubectl apply -f milvus-config-change.yaml
     ```
 
 1. 重启变更的组件让变更生效。
 
     本例变更了 Proxy 组件的配置，因此需要执行如下命令重启 Proxy 组件让配置生效。
 
-    ```shell
-    $ kubectl rollout restart deployment my-release-milvus-proxy 
+    ```bash
+    # add-command-prompt
+    kubectl rollout restart deployment my-release-milvus-proxy 
     ```
 
 1. 查看变更进度。
 
     在应用了所有变更后，可列出所有 Deployment，观察变更执行情况。
 
-    ```shell
-    $ kubectl get deployments.apps
+    ```bash
+    # add-command-prompt
+    kubectl get deployments.apps
     
+    # output-start
     NAME                                      READY   UP-TO-DATE   AVAILABLE   AGE
     my-release-milvus-datanode      0/0     0            0           83m
     my-release-milvus-indexnode     0/0     0            0           83m
@@ -124,12 +128,14 @@ Milvus 集群的所有配置都在 `spec.config` 字段中。完整配置可参�
     my-release-milvus-querynode-0   0/0     0            0           83m
     my-release-milvus-querynode-1   0/0     0            0           83m
     my-release-milvus-standalone    1/1     1            1           91m
+    # output-end
     ```
 
     也可以列出相关组件的 Pod，观察其运行状态。
 
-    ```shell
-    $ kubectl get pod | grep proxy
+    ```bash
+    # add-command-prompt
+    kubectl get pod | grep proxy
     
     NAME                                      READY   STATUS      RESTARTS       AGE
     my-release-milvus-proxy-576cfb65c5-jmpvb  1/1     Running     0              30m

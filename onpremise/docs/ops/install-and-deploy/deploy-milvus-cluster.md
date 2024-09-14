@@ -348,8 +348,9 @@ stringData:
 
 在准备好 Milvus 集群部署声明文件后，执行如下命令开始部署 Milvus 集群。
 
-```shell
-$ kubectl apply -f milvus-manifest.yaml
+```bash
+# add-command-prompt
+kubectl apply -f milvus-manifest.yaml
 ```
 
 <Admonition type="info" icon="📘" title="说明">
@@ -362,24 +363,33 @@ $ kubectl apply -f milvus-manifest.yaml
 
 1. 在部署完成后，可执行如下命令检查 Milvus 集群的部署状态。
 
-    ```shell
-    $ kubectl get milvus
+    ```bash
+    # add-command-prompt
+    kubectl get milvus
     
+    # output-start
     NAME         MODE      STATUS    UPDATED   AGE
     my-release   cluster   Healthy   True      14m
+    # output-end
     ```
 
     正常情况下，Milvus 集群的 **STATUS** 应为 **Healthy**，同时 **UPDATED** 应为 **True**。如果 Milvus 集群状态不正常，可参考[常见问题](./deploy-milvus-cluster#faqs)。
 
 1. 创建端口转发（port-foward）到 Milvus 集群上验证 Milvus 集群是否正常启动。
 
-    ```shell
-    $ export NAMESPACE="default"
-    $ export NAME="my-release"
-    $ kubectl -n $NAMESPACE port-forward service/$NAME-milvus 19530:19530 &
+    ```bash
+    # add-command-prompt
+    export NAMESPACE="default"
+    # add-command-prompt
+    export NAME="my-release"
     
+    # add-command-prompt
+    kubectl -n $NAMESPACE port-forward service/$NAME-milvus 19530:19530 &
+    
+    # output-start
     Forwarding from 127.0.0.1:19530 -> 19530
     Forwarding from [::1]:19530 -> 19530
+    # output-end
     ```
 
     <Admonition type="info" icon="📘" title="Notes">
@@ -390,9 +400,11 @@ $ kubectl apply -f milvus-manifest.yaml
 
 1. 使用 RESTful 接口访问 Milvus 集群。
 
-    ```shell
-    $ curl -X POST localhost:19530/v2/vectordb/collections/list
+    ```bash
+    # add-command-prompt
+    curl -X POST localhost:19530/v2/vectordb/collections/list
     
+    # output-next-line
     { "code": 0, "data": [] }
     ```
 
@@ -402,23 +414,29 @@ $ kubectl apply -f milvus-manifest.yaml
 
         如下命令中使用 `2.4.6` 作为示例，请将其替换成 [PyMilvus 最新的版本号](https://github.com/milvus-io/pymilvus/releases)。
 
-        ```shell
-        $ python3 -m pip install pymilvus==2.4.6
+        ```bash
+        # add-command-prompt
+        python3 -m pip install pymilvus==2.4.6
         ```
 
     1. 下载验证代码。
 
-        ```shell
-        $ wget https://raw.githubusercontent.com/milvus-io/pymilvus/master/examples/hello_milvus.py
+        ```bash
+        # add-command-prompt
+        wget https://raw.githubusercontent.com/milvus-io/pymilvus/master/examples/hello_milvus.py
         ```
 
     1. 执行验证代码。
 
-        ```shell
+        ```bash
         # 修改connections.connect这行代码，添加认证参数user="root",password="Milvus"
-        $ python3 hello_milvus.py
-        $ echo "error_code: $?"
         
+        # add-command-prompt
+        python3 hello_milvus.py
+        # add-command-prompt
+        echo "error_code: $?"
+        
+        # ouptut-next-line
         error_code: 0
         ```
 
@@ -434,8 +452,9 @@ $ kubectl apply -f milvus-manifest.yaml
 
     1. 获取 Milvus 集群各依赖组件的状态。
 
-        ```shell
-        $ kubectl get milvus \
+        ```bash
+        # add-command-prompt
+        kubectl get milvus \
            -o custom-columns="etcd:.status.conditions[0].reason\
             ,objectStorage:.status.conditions[1].reason\
             ,pulsar:.status.conditions[2].reason\
@@ -444,37 +463,18 @@ $ kubectl apply -f milvus-manifest.yaml
 
         例如，下面的返回的结果，则表明 etcd 组件异常，需要进一步检查。
 
-        ```shell
+        ```bash
+        # output-start
         etcd           objectStorage   pulsar           milvus
         EtcdNotReady   StorageReady    MsgStreamReady   MilvusComponentNotHealthy
+        # output-end
         ```
 
     1. 获取各依赖组件异常的具体原因。
 
-    ```shell
-    $ kubectl get milvus \
-       -o custom-columns="etcd:.status.conditions[0].message\
-        ,objectStorage:.status.conditions[1].message\
-        ,pulsar:.status.conditions[2].message\
-        ,milvus:.status.conditions[3].message"
-    ```
-
-    比如，返回的结果如下，表明 etcd 连接失败。此时，可申请 Zilliz 支持团队介入排查 etcd 异常原因。
-
-    ```shell
-    etcd
-    All etcd endpoints are unhealthy:[my-release-etcd.etcd.svc.cluster.local:2379:checkEtcd
-            with backoff failed: context deadline exceeded]
-    ```
-
-    再比如下面例子是资源不足，querynode调度失败:
-
-    再比如下面例子是querynode 内存耗尽导致被oom kill 而重启
-
-    1. 
-
-        ```shell
-        $ kubectl get milvus \
+        ```bash
+        # add-command-prompt
+        kubectl get milvus \
            -o custom-columns="etcd:.status.conditions[0].message\
             ,objectStorage:.status.conditions[1].message\
             ,pulsar:.status.conditions[2].message\
@@ -483,10 +483,14 @@ $ kubectl apply -f milvus-manifest.yaml
 
         比如，返回的结果如下，表明 etcd 连接失败。此时，可申请 Zilliz 支持团队介入排查 etcd 异常原因。
 
-        ```shell
+        ```bash
         etcd
         All etcd endpoints are unhealthy:[my-release-etcd.etcd.svc.cluster.local:2379:checkEtcd
                 with backoff failed: context deadline exceeded]
         ```
+
+    再比如下面例子是资源不足，querynode调度失败:
+
+    再比如下面例子是querynode 内存耗尽导致被oom kill 而重启
 
           如您无法确定异常的原因，请将返回的结果发送给zilliz侧的技术支持。

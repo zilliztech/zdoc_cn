@@ -42,23 +42,31 @@ Milvus 私有化部署镜像由 Zilliz 提供。您可通过用户名/密码鉴�
 
 1. 使用 Zilliz 提供的用户名和密码登录 Zillliz Harbor 镜像仓库。
 
-    ```shell
-    $ docker login harbor.zilliz.com
+    ```bash
+    # add-command-output
+    docker login harbor.zilliz.com
+    
+    # output-start
     Username: username
     Password: ******
     Login Succeeded
+    # output-end
     ```
 
 1. 获取 Milvus 镜像到本地环境。
 
-    在如下命令中使用的镜像 Tag 为 `2.4.10-a1d39326`。在执行本步骤前，请向 Zilliz 确认待获取的镜像 Tag，用于替换如下命令中的镜像 Tag。
+    在如下命令中使用的镜像 Tag 为 `v2.4.11`。在执行本步骤前，请向 Zilliz 确认待获取的镜像 Tag，用于替换如下命令中的镜像 Tag。
 
-    ```shell
-    $ docker pull harbor.zilliz.com/userns/milvus:2.4.10-a1d39326
+    ```bash
+    # add-command-output
+    docker pull harbor.zilliz.com/userns/milvus-enterprise:v2.4.11
+    
+    # output-start
     2.4.10-a1d39326: Pulling from userns/milvus
     b49b96595fd4: Pull complete 
     Digest: sha256:f607d0d9c649cd1ef65b37c63f17f986eda3ff3a5d76fd556f83d0c58c759d42
-    Status: Downloaded newer image for harbor.zilliz.com/userns/milvus:2.4.10-a1d39326
-    harbor.zilliz.com/userns/milvus:2.4.10-a1d39326
+    Status: Downloaded newer image for harbor.zilliz.com/userns/milvus-enterprise:v2.4.11
+    harbor.zilliz.com/userns/milvus-enterprise:v2.4.11
+    #output-end
     ```
 

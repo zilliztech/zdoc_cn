@@ -421,6 +421,17 @@ const config = {
       prism: {
         additionalLanguages: ['java', 'go', 'bash', 'json' ],
         theme: prismThemes.github,
+        magicComments: [
+          {
+            className: 'command-prompt',
+            line: "add-command-prompt"
+          },
+          {
+            className: "command-output",
+            line: "output-next-line",
+            block: {start: "output-start", end: "output-end"}
+          }
+        ]
       },
       colorMode: {
         disableSwitch: true,

@@ -288,3 +288,11 @@ a.menu__link {
 .hidden-sidebar-item {
   display: none !important;
 }
+
+.command-prompt::before {
+  content: "$ "
+}
+
+.command-output {
+  color: rgb(153, 153, 136) !important;
+}

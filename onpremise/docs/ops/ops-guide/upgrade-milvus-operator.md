@@ -36,7 +36,8 @@ Milvus Operator 是一种可帮助您在目标 Kubernetes 集群上部署和管�
 
 1. 检查您的 Kubernetes 集群中安装的 Milvus Operator 状态，是否正常running。
 
-    ```shell
+    ```bash
+    # add-command-prompt
     kubectl -n milvus-operator get pods
     
     NAME                              READY   STATUS      RESTARTS       AGE
@@ -45,14 +46,17 @@ Milvus Operator 是一种可帮助您在目标 Kubernetes 集群上部署和管�
 
 1. 确定要升级的版本，进行升级，以升级到v1.0.8为例。
 
-    ```shell
-    version=v1.0.8
+    ```bash
+    # add-command-prompt
+    export version=v1.0.8
+    # add-command-prompt
     kubectl apply -f https://github.com/zilliztech/milvus-operator/releases/download/${version}/deployment-no-webhook.yaml
     ```
 
 1. 观察集群内 pod 的情况。
 
-    ```shell
+    ```bash
+    # add-command-prompt
     kubectl -n milvus-operator get pods
     ```
 

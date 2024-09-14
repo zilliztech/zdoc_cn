@@ -43,7 +43,10 @@ Milvus Operator 是一种可帮助您在目标 Kubernetes 集群上部署和管�
 可按如下方式安装 Milvus Operator
 
 ```bash
-version=v1.0.8
+# add-command-prompt
+export version=v1.0.8
+
+# add-command-prompt
 kubectl apply -f https://github.com/zilliztech/milvus-operator/releases/download/${version}/deployment-no-webhook.yaml
 ```
 
@@ -315,11 +318,14 @@ rules:
 
 您可按照如下方式验证 Milvus Operator 是否安装成功。
 
-```shell
+```bash
+# add-command-prompt
 kubectl get pods -n milvus-operator
 
+# output-start
 NAME                               READY   STATUS    RESTARTS   AGE
 milvus-operator-5fd77b87dc-msrk4   1/1     Running   0          46s
+# output-end
 ```
 
 当 Milvus Operator pod 的 **STATUS** 为 **Running**，且 **READY** 为 **1/1** 时，说明 Milvus Operator 安装成功。
@@ -344,13 +350,15 @@ milvus-operator-5fd77b87dc-msrk4   1/1     Running   0          46s
 
     - 获取 Milvus Operator pod 的运行日志。
 
-        ```shell
+        ```bash
+        # add-command-prompt
         kubectl logs milvus-operator-5fd77b87dc-msrk4
         ```
 
     - 获取 Milvus Operator pod 的详情。
 
-        ```shell
+        ```bash
+        # add-command-prompt
         kubectl -n milvus-operator describe milvus-operator-5fd77b87dc-msrk4
         ```
 
