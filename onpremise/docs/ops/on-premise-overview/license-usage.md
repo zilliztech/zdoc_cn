@@ -4,7 +4,7 @@ slug: /license-usage
 sidebar_label: "License 管理"
 beta: FALSE
 notebook: FALSE
-description: "Milvus 私有化部署镜像使用 Zilliz 自主开发的 Cardinal 内核，集成了 License 校验逻辑。启动时，需要您导入由 Zilliz 生成的 License 配置信息进行授权，否则 Milvus 实例将无法启动。 | On-Premise"
+description: "Milvus 商业版镜像使用 Zilliz 自主开发的 Cardinal 内核，集成了 License 校验逻辑。启动时，需要您导入由 Zilliz 生成的 License 配置信息进行授权，否则 Milvus 实例将无法启动。 | On-Premise"
 type: origin
 token: R7guwJ0T0i0gRrkh5CZc5kDPnCh
 sidebar_position: 3
@@ -28,7 +28,7 @@ import Admonition from '@theme/Admonition';
 
 # License 管理
 
-Milvus 私有化部署镜像使用 Zilliz 自主开发的 Cardinal 内核，集成了 License 校验逻辑。启动时，需要您导入由 Zilliz 生成的 License 配置信息进行授权，否则 Milvus 实例将无法启动。
+Milvus 商业版镜像使用 Zilliz 自主开发的 Cardinal 内核，集成了 License 校验逻辑。启动时，需要您导入由 Zilliz 生成的 License 配置信息进行授权，否则 Milvus 实例将无法启动。
 
 ## 配置 License 信息{#configure-license-info}
 

@@ -4,7 +4,7 @@ slug: /obtain-images
 sidebar_label: "获取镜像"
 beta: FALSE
 notebook: FALSE
-description: "Milvus 私有化部署镜像由 Zilliz 提供。您可通过用户名/密码鉴权的方式从 Zilliz 的 Harbor 镜像仓库拉取对应版本镜像。在获取 Milvus 私有化部署镜像后，您可将获取到的镜像导入到本地镜像仓库环境进行安全扫描及部署。 | On-Premise"
+description: "Milvus 商业版镜像由 Zilliz 提供。您可通过用户名/密码鉴权的方式从 Zilliz 的 Harbor 镜像仓库拉取对应版本镜像。在获取 Milvus 商业版镜像后，您可将获取到的镜像导入到本地镜像仓库环境进行安全扫描及部署。 | On-Premise"
 type: origin
 token: Vt09w1q6EiQA7hkwTFgcwQFtndh
 sidebar_position: 2
@@ -28,7 +28,7 @@ import Admonition from '@theme/Admonition';
 
 # 获取镜像
 
-Milvus 私有化部署镜像由 Zilliz 提供。您可通过用户名/密码鉴权的方式从 Zilliz 的 Harbor 镜像仓库拉取对应版本镜像。在获取 Milvus 私有化部署镜像后，您可将获取到的镜像导入到本地镜像仓库环境进行安全扫描及部署。
+Milvus 商业版镜像由 Zilliz 提供。您可通过用户名/密码鉴权的方式从 Zilliz 的 Harbor 镜像仓库拉取对应版本镜像。在获取 Milvus 商业版镜像后，您可将获取到的镜像导入到本地镜像仓库环境进行安全扫描及部署。
 
 ## 前提条件{#prerequisites}
 
@@ -38,7 +38,7 @@ Milvus 私有化部署镜像由 Zilliz 提供。您可通过用户名/密码鉴�
 
 ## 获取镜像{#obtain-image}
 
-您可按如下步骤获取 Milvus 私有化部署镜像。
+您可按如下步骤获取 Milvus 商业版镜像。
 
 1. 使用 Zilliz 提供的用户名和密码登录 Zillliz Harbor 镜像仓库。
 

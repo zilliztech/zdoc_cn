@@ -64,21 +64,21 @@ Milvus 集群支持通过 [Kubernetes 的滚动更新](https://kubernetes.io/zh-
     命令返回如下：
 
     ```shell
-    name            image                       rollingUpdate
-    my-release      milvusdb/milvus:v2.4.9      true
+    name            image                                 rollingUpdate
+    my-release      userns/milvus-enterprise:v2.4.11      true
     ```
 
-    可以看到当前使用的镜像版本为 Milvus v2.4.9，并且已经开启了滚动升级功能。
+    可以看到当前使用的镜像版本为 v2.4.11，并且已经开启了滚动升级功能。
 
 ## 执行升级{#upgrade-milvus-cluster}
 
-如下示例假设升级目标为 **milvusdb/milvus:v2.4.10**。您可以执行如下命令开始将 Milvus 集群升级到目标镜像。
+如下示例假设升级目标为 **userns/milvus-enterprise:v2.4.11**。您可以执行如下命令开始将 Milvus 集群升级到目标镜像。
 
 ```bash
 # add-command-prompt
 export INST="my-release"
 # add-command-prompt
-export IMAGE="milvusdb/milvus:v2.4.10"
+export IMAGE="userns/milvus-enterprise:v2.4.11"
 
 # add-command-prompt
 kubectl patch milvus $INST --type='json' \
@@ -99,8 +99,8 @@ kubectl get milvus -o\
 命令返回应和如下类似：
 
 ```shell
-name            image                       rollingUpdate
-my-release      milvusdb/milvus:v2.4.10     true
+name            image                                rollingUpdate
+my-release      userns/milvus-enterprise:v2.4.11     true
 ```
 
 ## 查看升级进度{#check-upgrade-progress}

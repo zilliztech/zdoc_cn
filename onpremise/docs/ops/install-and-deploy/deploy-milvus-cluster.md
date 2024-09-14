@@ -184,7 +184,7 @@ spec:
   mode: cluster
   components: 
     # milvus镜像，修改成自己的镜像地址
-    image: milvusdb/milvus:v2.4.10
+    image: userns/milvus-enterprise:v2.4.11
     # 是否开启滚动升级功能
     enableRollingUpdate: true
     # 以父子进程方式启动，支持优雅退出
