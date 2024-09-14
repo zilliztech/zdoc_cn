@@ -42,7 +42,18 @@ Milvus Operator 是一种可帮助您在目标 Kubernetes 集群上部署和管�
 
 可按如下方式安装 Milvus Operator
 
-需要权限：
+```bash
+version=v1.0.8
+kubectl apply -f https://github.com/zilliztech/milvus-operator/releases/download/${version}/deployment-no-webhook.yaml
+```
+
+<Admonition type="info" icon="📘" title="Notes">
+
+<p>如果执行上述命令后提示没有权限，您可以参考如下声明文件向 Kubernetes 管理员申请更高权限，或由管理员代为安装。</p>
+
+</Admonition>
+
+在安装过程中涉及使用的权限如下：
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
