@@ -58,7 +58,7 @@ import Admonition from '@theme/Admonition';
 ```bash
 # replace url and token with your own
 curl --request POST \
-     --url "https://api.cloud.zilliz.com/v2/vectordb/jobs/import/create" \
+     --url "https://api.cloud.zilliz.com.cn/v2/vectordb/jobs/import/create" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "Accept: application/json" \
      --header "Content-Type: application/json" \
@@ -78,7 +78,7 @@ curl --request POST \
 
 ```bash
 curl --request GET \
-     --url "https://api.cloud.zilliz.com/v2/vectordb/jobs/import/getProgress" \
+     --url "https://api.cloud.zilliz.com.cn/v2/vectordb/jobs/import/getProgress" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "Accept: application/json" \
      --header "Content-Type: application/json" \
