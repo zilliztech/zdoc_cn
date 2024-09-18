@@ -1,0 +1,5543 @@
+[
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Nj7Hw23HBiVgc6kpfehc6r6bnIg",
+        "text": "版本说明书（2024/05/30）"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 版本说明书",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "262",
+      "Slug": "release-notes-280",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24qc6hjyag"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "188",
+          "text_arr": [
+            "188"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recue9Qit4B8ny",
+    "record_id": "recue9Qit4B8ny"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Y9hnwYoyIi9xgZkGG7Ycexl4nlb",
+        "text": "版本说明书（2024/04/18）"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 版本说明书",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "240",
+      "Slug": "release-notes-270",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24qc6hjyag"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "188",
+          "text_arr": [
+            "188"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recuahPXL8eJv5",
+    "record_id": "recuahPXL8eJv5"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/FR9Ww6TbRifhQFk1TV0c3a4tnfg",
+        "text": "版本说明书（2024/02/27）"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 版本说明书",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "208",
+      "Slug": "release-notes-260",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24qc6hjyag"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "188",
+          "text_arr": [
+            "188"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu5uXmw2jZBz",
+    "record_id": "recu5uXmw2jZBz"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/GKNPwvWhZi7D6mkag72cIDWqnbf",
+        "text": "版本说明书（2023/12/20）"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 版本说明书",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "150",
+      "Slug": "release-notes-240",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24qc6hjyag"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "188",
+          "text_arr": [
+            "188"
+          ],
+          "type": "text"
+        }
+      ],
+      "责任翻译": [
+        {
+          "email": "wenjia.tu@zilliz.com",
+          "en_name": "涂文家 (Anthony Tu)",
+          "id": "ou_8554528ee6e965bad56710acde1c7847",
+          "name": "涂文家"
+        }
+      ]
+    },
+    "id": "recZiokyVf",
+    "record_id": "recZiokyVf"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/BuuSwsbhEiIHDJkB9YSc63xAnrh",
+        "text": "版本说明书（2023/11/23）"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 版本说明书",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "136",
+      "Slug": "release-notes-230",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24qc6hjyag"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "188",
+          "text_arr": [
+            "188"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recR6M1TnJ",
+    "record_id": "recR6M1TnJ"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Ra4qwdd7kicpt6k9Y2tc3OJ5niX",
+        "text": "版本说明书（2023/10/17）"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 版本说明书",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "120",
+      "Slug": "release-notes-221",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24qc6hjyag"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "188",
+          "text_arr": [
+            "188"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "翻译+修改",
+      "责任翻译": [
+        {
+          "email": "wenjia.tu@zilliz.com",
+          "en_name": "涂文家 (Anthony Tu)",
+          "id": "ou_8554528ee6e965bad56710acde1c7847",
+          "name": "涂文家"
+        }
+      ]
+    },
+    "id": "recwMsHwwz",
+    "record_id": "recwMsHwwz"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/P1JAwZEf4i1ALqkidS9cYfLZnef",
+        "text": "版本说明书（2023/09/19）"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 版本说明书",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "123",
+      "Slug": "release-notes-220",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24qc6hjyag"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "188",
+          "text_arr": [
+            "188"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "新开发",
+      "责任翻译": [
+        {
+          "email": "wenjia.tu@zilliz.com",
+          "en_name": "涂文家 (Anthony Tu)",
+          "id": "ou_8554528ee6e965bad56710acde1c7847",
+          "name": "涂文家"
+        }
+      ]
+    },
+    "id": "recjI2sxtC",
+    "record_id": "recjI2sxtC"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/DsIxwJXnJiM2k7klUY0cr5dunBh",
+        "text": "版本说明书（2023/08/21）"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 版本说明书",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "106",
+      "Slug": "release-notes-210",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24qc6hjyag"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "188",
+          "text_arr": [
+            "188"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "翻译+修改",
+      "责任翻译": [
+        {
+          "email": "wenjia.tu@zilliz.com",
+          "en_name": "涂文家 (Anthony Tu)",
+          "id": "ou_8554528ee6e965bad56710acde1c7847",
+          "name": "涂文家"
+        }
+      ]
+    },
+    "id": "rec3lelDhv",
+    "record_id": "rec3lelDhv"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/X91KwMsQyiAv1Ukze3IcHxQgnic",
+        "text": "版本说明书（2023/06/14）"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 版本说明书",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "100",
+      "Slug": "release-notes-200",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24qc6hjyag"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "188",
+          "text_arr": [
+            "188"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "翻译+修改",
+      "责任翻译": [
+        {
+          "email": "wenjia.tu@zilliz.com",
+          "en_name": "涂文家 (Anthony Tu)",
+          "id": "ou_8554528ee6e965bad56710acde1c7847",
+          "name": "涂文家"
+        }
+      ]
+    },
+    "id": "rec1UOUrFP",
+    "record_id": "rec1UOUrFP"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/XP0BwhWFFiazrikwL94cJIsSnYb",
+        "text": "版本说明书（2024/07/05）"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 版本说明书",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "266",
+      "Slug": "release-notes-290",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24qc6hjyag"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "188",
+          "text_arr": [
+            "188"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recuhkxAklQLlY",
+    "record_id": "recuhkxAklQLlY"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/KOD2wN5jDimhSOk1GshcUbn2nJe",
+        "text": "API 异同"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, api, 异同",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "73",
+      "Slug": "api-comparison",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24pXhKJtlJ"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "187",
+          "text_arr": [
+            "187"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "recw0D10ql",
+    "record_id": "recw0D10ql"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/LCqjwnEPWi2YPkkdHOwc5eQXnPd",
+        "text": "其他异同"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 异同",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "74",
+      "Slug": "other-differences",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24pXhKJtlJ"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "187",
+          "text_arr": [
+            "187"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "recsOTHO76",
+    "record_id": "recsOTHO76"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/A8UFwSbMniMl6IkpJkNc4HsHnLc",
+        "text": "使用限制"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 使用限制",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "193",
+      "Slug": "limits",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24pXhKJtlJ"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "187",
+          "text_arr": [
+            "187"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu50iMVLiW0p",
+    "record_id": "recu50iMVLiW0p"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/PMHbwHT0HiOnvDk8sUocOy34nPw",
+        "text": "与 OpenAI 集成搭建相似性搜索系统"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 相似性, openai",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "9",
+      "Slug": "similarity-search-with-zilliz-cloud-and-openai",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24pB9GQZ2F"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "186",
+          "text_arr": [
+            "186"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "wenjia.tu@zilliz.com",
+          "en_name": "涂文家 (Anthony Tu)",
+          "id": "ou_8554528ee6e965bad56710acde1c7847",
+          "name": "涂文家"
+        }
+      ]
+    },
+    "id": "recngczg6t",
+    "record_id": "recngczg6t"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/N7KvwFAe8i7XWZk5aEGchRsynJA",
+        "text": "与 Cohere 集成搭建智能问答系统"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 相似性, cohere",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "65",
+      "Slug": "question-answering-using-zilliz-cloud-and-cohere",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24pB9GQZ2F"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "186",
+          "text_arr": [
+            "186"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "wenjia.tu@zilliz.com",
+          "en_name": "涂文家 (Anthony Tu)",
+          "id": "ou_8554528ee6e965bad56710acde1c7847",
+          "name": "涂文家"
+        }
+      ]
+    },
+    "id": "recQ7RCBt0",
+    "record_id": "recQ7RCBt0"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/MVYEwIkZCiZd3CkRWFmc9EH2nSf",
+        "text": "与 HuggingFace 集成搭建问答系统"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 相似性, huggingface",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "66",
+      "Slug": "question-answering-using-zilliz-cloud-and-hugging-face",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24pB9GQZ2F"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "186",
+          "text_arr": [
+            "186"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "wenjia.tu@zilliz.com",
+          "en_name": "涂文家 (Anthony Tu)",
+          "id": "ou_8554528ee6e965bad56710acde1c7847",
+          "name": "涂文家"
+        }
+      ]
+    },
+    "id": "recxgjzwJQ",
+    "record_id": "recxgjzwJQ"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Msbqwd1izicbFlkT56scmGlWnbb",
+        "text": "与 LangChain 集成搭建智能文档问答系统"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 相似性, langchain",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "10",
+      "Slug": "question-answering-over-documents-with-zilliz-cloud-and-langchain",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24pB9GQZ2F"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "186",
+          "text_arr": [
+            "186"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "wenjia.tu@zilliz.com",
+          "en_name": "涂文家 (Anthony Tu)",
+          "id": "ou_8554528ee6e965bad56710acde1c7847",
+          "name": "涂文家"
+        }
+      ]
+    },
+    "id": "recINagecU",
+    "record_id": "recINagecU"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/FpeXw3b5piUAG7kUCgucgI1unFh",
+        "text": "与 PyTorch 集成搭建图片搜索系统"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 相似性, pytorch",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "68",
+      "Slug": "image-search-with-zilliz-cloud-and-pytorch",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24pB9GQZ2F"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "186",
+          "text_arr": [
+            "186"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "wenjia.tu@zilliz.com",
+          "en_name": "涂文家 (Anthony Tu)",
+          "id": "ou_8554528ee6e965bad56710acde1c7847",
+          "name": "涂文家"
+        }
+      ]
+    },
+    "id": "recUe8Ici4",
+    "record_id": "recUe8Ici4"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/BSKawjPvqiNAcgkGGIbct8L6nOd",
+        "text": "与 LlamaIndex 集成搭建文档问答系统"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 相似性, llamaindex",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "69",
+      "Slug": "documentation-qa-using-zilliz-cloud-and-llamaindex",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24pB9GQZ2F"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "186",
+          "text_arr": [
+            "186"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "wenjia.tu@zilliz.com",
+          "en_name": "涂文家 (Anthony Tu)",
+          "id": "ou_8554528ee6e965bad56710acde1c7847",
+          "name": "涂文家"
+        }
+      ]
+    },
+    "id": "recvbKX1s3",
+    "record_id": "recvbKX1s3"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/QdD7w2k6ii7mKFkTJ2tcNhYznAf",
+        "text": "与 SentenceTransformers 集成搭建电影搜索系统"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 相似性, sentence transformers",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "70",
+      "Slug": "movie-search-using-zilliz-cloud-and-sentencetransformers",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24pB9GQZ2F"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "186",
+          "text_arr": [
+            "186"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "wenjia.tu@zilliz.com",
+          "en_name": "涂文家 (Anthony Tu)",
+          "id": "ou_8554528ee6e965bad56710acde1c7847",
+          "name": "涂文家"
+        }
+      ]
+    },
+    "id": "rec36H7MUY",
+    "record_id": "rec36H7MUY"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/D9bww8M3WigQEekiljdcYKJCnqc",
+        "text": "了解费用"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 费用",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "260",
+      "Slug": "understand-cost",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24nNA5CDFT"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "165",
+          "text_arr": [
+            "165"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recudAoPNNVuaU",
+    "record_id": "recudAoPNNVuaU"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/UTRZwxLf3ikwvbkXrKjcWAwOnmg",
+        "text": "订阅阿里云云市场"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 阿里云, 云市场",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "103",
+      "Slug": "subscribe-on-aliyun-marketplace",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24nNA5CDFT"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "165",
+          "text_arr": [
+            "165"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "新开发",
+      "责任翻译": [
+        {
+          "email": "wenjia.tu@zilliz.com",
+          "en_name": "涂文家 (Anthony Tu)",
+          "id": "ou_8554528ee6e965bad56710acde1c7847",
+          "name": "涂文家"
+        }
+      ]
+    },
+    "id": "recGwU3zDU",
+    "record_id": "recGwU3zDU"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/LNxnwCaoeiwvxVkQqCTcWmMFn5g",
+        "text": "订阅亚马逊云科技 Marketplace"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 阿里云, 云市场",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "270",
+      "Slug": "subscribe-on-amazon-marketplace",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24nNA5CDFT"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "165",
+          "text_arr": [
+            "165"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "reculomfyxheg6",
+    "record_id": "reculomfyxheg6"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/JZqrwH8V8i6a3jktSQgcyXAEnAg",
+        "text": "现金充值"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 现金充值",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "110",
+      "Slug": "advance-pay",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24nNA5CDFT"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "165",
+          "text_arr": [
+            "165"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "新开发",
+      "责任翻译": [
+        {
+          "email": "yiyun.ni@zilliz.com",
+          "en_name": "倪逸云 (Angela Ni)",
+          "id": "ou_fbc044d19930afd389d5c369466c38b1",
+          "name": "倪逸云"
+        }
+      ]
+    },
+    "id": "recvelKHc3",
+    "record_id": "recvelKHc3"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/NhbHwPiL2i4KWskrcO4cDrSNnzh",
+        "text": "查看账单信息与支付方式"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 账单, 支付方式",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "77",
+      "Slug": "view-invoice",
+      "Targets": [
+        "SaaS"
+      ],
+      "注意事项": "完全不适用",
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24nNA5CDFT"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "165",
+          "text_arr": [
+            "165"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "重写/弃用",
+      "责任翻译": [
+        {
+          "email": "yiyun.ni@zilliz.com",
+          "en_name": "倪逸云 (Angela Ni)",
+          "id": "ou_fbc044d19930afd389d5c369466c38b1",
+          "name": "倪逸云"
+        }
+      ]
+    },
+    "id": "reccCdvslq",
+    "record_id": "reccCdvslq"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/VRLOw9Mc7iPWnCkZs2YcoGwSnLh",
+        "text": "企业认证"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 企业认证",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "117",
+      "Slug": "enterprise-certification",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24nNA5CDFT"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "165",
+          "text_arr": [
+            "165"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "新开发",
+      "责任翻译": [
+        {
+          "email": "yiyun.ni@zilliz.com",
+          "en_name": "倪逸云 (Angela Ni)",
+          "id": "ou_fbc044d19930afd389d5c369466c38b1",
+          "name": "倪逸云"
+        }
+      ]
+    },
+    "id": "recpAgiL45",
+    "record_id": "recpAgiL45"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/JTuUwoHUyiqJU6kuu30cN9ibnkh",
+        "text": "开具发票"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 发票",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "127",
+      "Slug": "invoice",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24nNA5CDFT"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "165",
+          "text_arr": [
+            "165"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "rec771N5et",
+    "record_id": "rec771N5et"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/RwEzw2l4siJB5Ake7FOcVU4knre",
+        "text": "设置白名单"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 白名单",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "95",
+      "Slug": "set-up-whitelist",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24nFbfchRO"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "164",
+          "text_arr": [
+            "164"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "yiyun.ni@zilliz.com",
+          "en_name": "倪逸云 (Angela Ni)",
+          "id": "ou_fbc044d19930afd389d5c369466c38b1",
+          "name": "倪逸云"
+        }
+      ]
+    },
+    "id": "rect59cbPj",
+    "record_id": "rect59cbPj"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/JLHPwhdssifn2dkR5lDcA4SWnVg",
+        "text": "创建私网连接"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 私网, 连接",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "96",
+      "Slug": "setup-a-private-link",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24nFbfchRO"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "164",
+          "text_arr": [
+            "164"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "重写/弃用",
+      "责任翻译": [
+        {
+          "email": "wenjia.tu@zilliz.com",
+          "en_name": "涂文家 (Anthony Tu)",
+          "id": "ou_8554528ee6e965bad56710acde1c7847",
+          "name": "涂文家"
+        }
+      ]
+    },
+    "id": "recayzEPCL",
+    "record_id": "recayzEPCL"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/OZ5Ywbjm0idqAqkOdZrcQU3Wncb",
+        "text": "创建阿里云私网连接（Private Link）"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 私网, 阿里云",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "209",
+      "Slug": "setup-a-private-link-alicloud",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recayzEPCL"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "96",
+          "text_arr": [
+            "96"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu61QM0EaFwk",
+    "record_id": "recu61QM0EaFwk"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Pzu4wpY64iWmO6kBsaYcNPmPnNf",
+        "text": "创建腾讯云私有连接（Private Link）"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 私网, 腾讯云",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "210",
+      "Slug": "setup-a-private-link-tencent-cloud",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recayzEPCL"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "96",
+          "text_arr": [
+            "96"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu61QMrMj1lk",
+    "record_id": "recu61QMrMj1lk"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/GFFswc3z1iQtjQkpmyScL00dnSx",
+        "text": "创建备份"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 备份, 快照",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "14",
+      "Slug": "create-snapshot",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "注意事项": "调整备份价格相关",
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24n2kjLaTM"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "160",
+          "text_arr": [
+            "160"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "翻译+修改",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "recbx31gjG",
+    "record_id": "recbx31gjG"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/TXyTwrfxCiStfek4hc7c2nKwnJc",
+        "text": "创建自动备份"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 备份, 自动",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "89",
+      "Slug": "schedule-automatic-backups",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24n2kjLaTM"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "160",
+          "text_arr": [
+            "160"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "recxrCjCz9",
+    "record_id": "recxrCjCz9"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/PS8EwUahQiNPTikPIMbcBxvGnKS",
+        "text": "查看备份文件"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 备份, 快照, 查看",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "90",
+      "Slug": "view-snapshot-details",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24n2kjLaTM"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "160",
+          "text_arr": [
+            "160"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "recRpDJVAv",
+    "record_id": "recRpDJVAv"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/NtkswF6UEi3kB0k8XSEcOKkhnld",
+        "text": "恢复备份"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 备份, 恢复",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "91",
+      "Slug": "restore-from-snapshot",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24n2kjLaTM"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "160",
+          "text_arr": [
+            "160"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "recuwUcIOz",
+    "record_id": "recuwUcIOz"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/FW37wt3qEiKvZzkzBducXgHZnIe",
+        "text": "删除备份文件"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 备份, 快照, 删除",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "92",
+      "Slug": "delete-snapshot",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24n2kjLaTM"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "160",
+          "text_arr": [
+            "160"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "recj0jp5JL",
+    "record_id": "recj0jp5JL"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/XNCIwt9i6iFgEDkEQE9cTMf8nSe",
+        "text": "Zilliz Cloud 版本对比"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 版本",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "6",
+      "Slug": "select-zilliz-cloud-service-plans",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24mO2dxScG"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "159",
+          "text_arr": [
+            "159"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "翻译+修改",
+      "责任翻译": [
+        {
+          "email": "yiyun.ni@zilliz.com",
+          "en_name": "倪逸云 (Angela Ni)",
+          "id": "ou_fbc044d19930afd389d5c369466c38b1",
+          "name": "倪逸云"
+        }
+      ]
+    },
+    "id": "rec7QVdTzR",
+    "record_id": "rec7QVdTzR"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/DP6Fw8vkzi7pD7kAMB3cjunYn6g",
+        "text": "选择合适的 CU 类型"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, cu 类型",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "102",
+      "Slug": "cu-types-explained",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24mO2dxScG"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "159",
+          "text_arr": [
+            "159"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "翻译+修改",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "recFGgLhaN",
+    "record_id": "recFGgLhaN"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/BErdww1kOirndzkHrKoc2ibynlb",
+        "text": "云服务提供商和地域"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 提供商, 地域",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "58",
+      "Slug": "cloud-providers-and-regions",
+      "Targets": [
+        "SaaS"
+      ],
+      "注意事项": "现有内容为AWS、GCP相关，完全不适用",
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24mO2dxScG"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "159",
+          "text_arr": [
+            "159"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "重写/弃用",
+      "责任翻译": [
+        {
+          "email": "yiyun.ni@zilliz.com",
+          "en_name": "倪逸云 (Angela Ni)",
+          "id": "ou_fbc044d19930afd389d5c369466c38b1",
+          "name": "倪逸云"
+        }
+      ]
+    },
+    "id": "recztfb1jI",
+    "record_id": "recztfb1jI"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Jxqfwnd80i8ibIkRhEKcnkK6nzd",
+        "text": "价格计算器"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 价格, 计算器",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "59",
+      "Slug": "pricing-calculator",
+      "Targets": [
+        "SaaS"
+      ],
+      "注意事项": "修改cloud provider部分",
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24mO2dxScG"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "159",
+          "text_arr": [
+            "159"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "翻译+修改",
+      "责任翻译": [
+        {
+          "email": "yiyun.ni@zilliz.com",
+          "en_name": "倪逸云 (Angela Ni)",
+          "id": "ou_fbc044d19930afd389d5c369466c38b1",
+          "name": "倪逸云"
+        }
+      ]
+    },
+    "id": "recUTFSoii",
+    "record_id": "recUTFSoii"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Eao0wFMCxiFiiikrZgScLW3LnZe",
+        "text": "从 Milvus 迁移至 Zilliz Cloud"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 数据迁移",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "18",
+      "Slug": "migrate-from-milvus",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24mzNnQ3XO"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "158",
+          "text_arr": [
+            "158"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "recdTTuae7",
+    "record_id": "recdTTuae7"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/CJN4wlKiGi1P8Zk4BHKcF04GnLb",
+        "text": "从 Elasticsearch 迁移至 Zilliz Cloud"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 迁移, elasticsearch",
+      "Labels": "从 Elasticsearch 迁移",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "107",
+      "Slug": "migrate-from-elasticsearch",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24mzNnQ3XO"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "158",
+          "text_arr": [
+            "158"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "recFzIMPOT",
+    "record_id": "recFzIMPOT"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/QrBFw5sXmiaaYRk1YpectbZpnzg",
+        "text": "从 pgvector 迁移至 Zilliz Cloud"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 迁移, pgvector",
+      "Labels": "从 pgvector 迁移",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "273",
+      "Slug": "migrate-from-pgvector",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24mzNnQ3XO"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "158",
+          "text_arr": [
+            "158"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recunsCqCrQx7n",
+    "record_id": "recunsCqCrQx7n"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/N6tlwTPPvi0FXvkj4fccCgtTnOg",
+        "text": "Zilliz Cloud 跨集群迁移"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 迁移, 集群",
+      "Labels": "跨集群迁移",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "113",
+      "Slug": "migrate-between-clusters",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24mzNnQ3XO"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "158",
+          "text_arr": [
+            "158"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "yiyun.ni@zilliz.com",
+          "en_name": "倪逸云 (Angela Ni)",
+          "id": "ou_fbc044d19930afd389d5c369466c38b1",
+          "name": "倪逸云"
+        }
+      ]
+    },
+    "id": "recf9b0r8j",
+    "record_id": "recf9b0r8j"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/FXGWwcjyViaQm8kvJgScITzBnr3",
+        "text": "用户指南：数据导入从入门到精通"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 数据导入, 指南",
+      "Labels": "用户指南",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "157",
+      "Slug": "data-import-zero-to-hero",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24lLvGiCsf"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "155",
+          "text_arr": [
+            "155"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24mlUrRKho",
+    "record_id": "recu24mlUrRKho"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/BKs7wBx3KiIvy0kxpE1cVxKNnQp",
+        "text": "准备工作"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 准备工作",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "116",
+      "Slug": "prepare-data-import",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24lLvGiCsf"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "155",
+          "text_arr": [
+            "155"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "wenjia.tu@zilliz.com",
+          "en_name": "涂文家 (Anthony Tu)",
+          "id": "ou_8554528ee6e965bad56710acde1c7847",
+          "name": "涂文家"
+        }
+      ]
+    },
+    "id": "recbc7ldhH",
+    "record_id": "recbc7ldhH"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/GLk6wr8jviPyzHk7DjRc56YsnNf",
+        "text": "准备导入数据"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 导入数据",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "190",
+      "Slug": "prepare-source-data",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recbc7ldhH"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "116",
+          "text_arr": [
+            "116"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu25LDcCaWfC",
+    "record_id": "recu25LDcCaWfC"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/B9IdwtZhLi0tB8kb6czce8KXnvb",
+        "text": "使用 BulkWriter"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, bulkwriter",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "191",
+      "Slug": "use-bulkwriter",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recbc7ldhH"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "116",
+          "text_arr": [
+            "116"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu25LFqJHIeh",
+    "record_id": "recu25LFqJHIeh"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/I6NPw1WoniB9JJknoibcemv3n03",
+        "text": "导入数据"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 导入",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "156",
+      "Slug": "import-data",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24lLvGiCsf"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "155",
+          "text_arr": [
+            "155"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24m1Jr7rA0",
+    "record_id": "recu24m1Jr7rA0"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/BXBvwZh9Yiis0Vk8LcdcjZSPnQd",
+        "text": "通过 Web 控制台导入"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 导入, 控制台",
+      "Labels": "控制台",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "114",
+      "Slug": "import-data-on-web-ui",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24m1Jr7rA0"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "156",
+          "text_arr": [
+            "156"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "reci2Pcohv",
+    "record_id": "reci2Pcohv"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/FzANwnN8siARelkAp4vcJVJNnnf",
+        "text": "通过 RESTful API 导入"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 导入, restful",
+      "Labels": "RESTful API",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "115",
+      "Slug": "import-data-via-restful-api",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24m1Jr7rA0"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "156",
+          "text_arr": [
+            "156"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "recn96aPBg",
+    "record_id": "recn96aPBg"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Xv4awWJZpiKoJjkPTlic98Mindc",
+        "text": "通过 SDK 导入"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 导入, sdk",
+      "Labels": "SDK",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "119",
+      "Slug": "import-data-via-sdks",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24m1Jr7rA0"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "156",
+          "text_arr": [
+            "156"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "wenjia.tu@zilliz.com",
+          "en_name": "涂文家 (Anthony Tu)",
+          "id": "ou_8554528ee6e965bad56710acde1c7847",
+          "name": "涂文家"
+        }
+      ]
+    },
+    "id": "rechhBJfQW",
+    "record_id": "rechhBJfQW"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/MAFcwBTqqiR5YZkdkd4cADg0nub",
+        "text": "创建集群"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 创建",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "4",
+      "Slug": "create-cluster",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "注意事项": "调整支付方式相关",
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24kH9mMeDE"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "153",
+          "text_arr": [
+            "153"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "翻译+修改",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "recvppQVLV",
+    "record_id": "recvppQVLV"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/HU31wDHCCiN9qIknZ2fcLmconNh",
+        "text": "连接集群"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 连接",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "47",
+      "Slug": "connect-to-cluster",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24kH9mMeDE"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "153",
+          "text_arr": [
+            "153"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "recu50E6yM",
+    "record_id": "recu50E6yM"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/IRirwe30tilo1qkJlR7ca2MUnvn",
+        "text": "管理集群"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 管理",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "105",
+      "Slug": "manage-cluster",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24kH9mMeDE"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "153",
+          "text_arr": [
+            "153"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "翻译+修改",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "rechTXPxQO",
+    "record_id": "rechTXPxQO"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/YUETwzDssiTUs9kCSn4cgUYLnrd",
+        "text": "AUTOINDEX"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, autoindex",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "5",
+      "Slug": "autoindex-explained",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ko6ikKNt"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "152",
+          "text_arr": [
+            "152"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "yiyun.ni@zilliz.com",
+          "en_name": "倪逸云 (Angela Ni)",
+          "id": "ou_fbc044d19930afd389d5c369466c38b1",
+          "name": "倪逸云"
+        }
+      ]
+    },
+    "id": "reco4XuBfT",
+    "record_id": "reco4XuBfT"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/SxBKwEZyAiWvibkGNhLc8CjvnSg",
+        "text": "集群、Collection 及 Entity"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 集群, collection",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "53",
+      "Slug": "cluster-collection-and-entities",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ko6ikKNt"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "152",
+          "text_arr": [
+            "152"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "yiyun.ni@zilliz.com",
+          "en_name": "倪逸云 (Angela Ni)",
+          "id": "ou_fbc044d19930afd389d5c369466c38b1",
+          "name": "倪逸云"
+        }
+      ]
+    },
+    "id": "rec8LqmX9T",
+    "record_id": "rec8LqmX9T"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/ZgcQw57PxiKaeSkuQmCchK8snP0",
+        "text": "Schema"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, schema",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "56",
+      "Slug": "schema-explained",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ko6ikKNt"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "152",
+          "text_arr": [
+            "152"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "yiyun.ni@zilliz.com",
+          "en_name": "倪逸云 (Angela Ni)",
+          "id": "ou_fbc044d19930afd389d5c369466c38b1",
+          "name": "倪逸云"
+        }
+      ]
+    },
+    "id": "reck8Es13Q",
+    "record_id": "reck8Es13Q"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/E4Ggw2FU3iXekOklaytcDy47nRg",
+        "text": "ANN 搜索"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, ann search",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "54",
+      "Slug": "ann-search-explained",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ko6ikKNt"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "152",
+          "text_arr": [
+            "152"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "yiyun.ni@zilliz.com",
+          "en_name": "倪逸云 (Angela Ni)",
+          "id": "ou_fbc044d19930afd389d5c369466c38b1",
+          "name": "倪逸云"
+        }
+      ]
+    },
+    "id": "recScwwYwn",
+    "record_id": "recScwwYwn"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/E7X4wc69bibTo4kFfNic5hBVnhb",
+        "text": "数据安全"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 数据安全",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "109",
+      "Slug": "data-security",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ko6ikKNt"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "152",
+          "text_arr": [
+            "152"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "recX1NYeWI",
+    "record_id": "recX1NYeWI"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Tpi2wvNHLiHaJmk4Y8BcwG84neh",
+        "text": "相似度类型"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 相似度",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "128",
+      "Slug": "search-metrics-explained",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ko6ikKNt"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "152",
+          "text_arr": [
+            "152"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "reclfmO4Ku",
+    "record_id": "reclfmO4Ku"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/IBY6wlhm5iLJsEkZWaGc0356nYi",
+        "text": "一致性水平"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 一致性",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "129",
+      "Slug": "consistency-level",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ko6ikKNt"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "152",
+          "text_arr": [
+            "152"
+          ],
+          "type": "text"
+        }
+      ],
+      "责任翻译": [
+        {
+          "email": "yiyun.ni@zilliz.com",
+          "en_name": "倪逸云 (Angela Ni)",
+          "id": "ou_fbc044d19930afd389d5c369466c38b1",
+          "name": "倪逸云"
+        }
+      ]
+    },
+    "id": "recqrVdHwi",
+    "record_id": "recqrVdHwi"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/E7X4wc69bibTo4kFfNic5hBVnhb",
+        "text": "数据安全"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 数据安全",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "218",
+      "Slug": "data-security",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ko6ikKNt"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "152",
+          "text_arr": [
+            "152"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu9kw3BtMAUO",
+    "record_id": "recu9kw3BtMAUO"
+  },
+  {
+    "fields": {
+      "Beta": "TRUE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/TzePwbkScic5e9kCF0FcljQEngc",
+        "text": "Reranking"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, reranking",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "265",
+      "Slug": "reranking",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ko6ikKNt"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "152",
+          "text_arr": [
+            "152"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recuhkvUmowO3B",
+    "record_id": "recuhkvUmowO3B"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/CCVpw6BVti8P8LkfcdJcdRH1nHg",
+        "text": "注册账号"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 注册, 账号",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "3",
+      "Slug": "register-with-zilliz-cloud",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "注意事项": "删除 GitHub、Google注册登录",
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24jRkPF4dO"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "151",
+          "text_arr": [
+            "151"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "重写/弃用",
+      "责任翻译": [
+        {
+          "email": "yiyun.ni@zilliz.com",
+          "en_name": "倪逸云 (Angela Ni)",
+          "id": "ou_fbc044d19930afd389d5c369466c38b1",
+          "name": "倪逸云"
+        }
+      ]
+    },
+    "id": "recvBhclDp",
+    "record_id": "recvBhclDp"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/M4cQwZQ0QiqBy6kzZftc0fQPn1f",
+        "text": "快速开始"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 快速开始",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "1",
+      "Slug": "quick-start",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "注意事项": "检查文档链接",
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24jRkPF4dO"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "151",
+          "text_arr": [
+            "151"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "yiyun.ni@zilliz.com",
+          "en_name": "倪逸云 (Angela Ni)",
+          "id": "ou_fbc044d19930afd389d5c369466c38b1",
+          "name": "倪逸云"
+        }
+      ]
+    },
+    "id": "rec5Uh4lgM",
+    "record_id": "rec5Uh4lgM"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/WWlIwejMNiAEmmkce5fcZu4UnMd",
+        "text": "免费试用 Zilliz Cloud"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 免费, 试用",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "2",
+      "Slug": "free-trials",
+      "Targets": [
+        "SaaS"
+      ],
+      "注意事项": "调整 Credit 策略、调整版本",
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24jRkPF4dO"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "151",
+          "text_arr": [
+            "151"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "重写/弃用",
+      "责任翻译": [
+        {
+          "email": "yiyun.ni@zilliz.com",
+          "en_name": "倪逸云 (Angela Ni)",
+          "id": "ou_fbc044d19930afd389d5c369466c38b1",
+          "name": "倪逸云"
+        }
+      ]
+    },
+    "id": "recIIzeDZB",
+    "record_id": "recIIzeDZB"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Jo4bwNi6zi4zlHkN2bWcewFYnDc",
+        "text": "安装 SDK"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, sdk",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "45",
+      "Slug": "install-sdks",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24jRkPF4dO"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "151",
+          "text_arr": [
+            "151"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "recR35n7SO",
+    "record_id": "recR35n7SO"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/ZoXbwP8hJivPw2ktsLrckw0Snif",
+        "text": "示例数据集"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 数据集",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "46",
+      "Slug": "example-dataset",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24jRkPF4dO"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "151",
+          "text_arr": [
+            "151"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "recAbzUEmL",
+    "record_id": "recAbzUEmL"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/JBXmw3fcviPIiakfkRxchfLknCb",
+        "text": "Zilliz Cloud 控制台"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 控制台",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "189",
+      "Slug": "on-zilliz-cloud-console",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24jRkPF4dO"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "151",
+          "text_arr": [
+            "151"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu25Lkevjw2A",
+    "record_id": "recu25Lkevjw2A"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/F8qDwqK7di4rl3kloZ7cNaUTnse",
+        "text": "从这里开始"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 开始",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "151",
+      "Slug": "get-started",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text_arr": [],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24jRkPF4dO",
+    "record_id": "recu24jRkPF4dO"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/WJJvw84crikA8Xk4P4IcJJvSnKd",
+        "text": "了解 Zilliz Cloud"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, cloud",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "152",
+      "Slug": "understand-basics",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text_arr": [],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24ko6ikKNt",
+    "record_id": "recu24ko6ikKNt"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/H4Jlw1x88iCj9Pk2LUxcChVtnzb",
+        "text": "集群"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 集群",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "153",
+      "Slug": "cluster",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text_arr": [],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24kH9mMeDE",
+    "record_id": "recu24kH9mMeDE"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Yd32wNk7uiNEw3kd1dAcSV05nAb",
+        "text": "Collection"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, collection",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "154",
+      "Slug": "collection",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text_arr": [],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24kVbPXjaw",
+    "record_id": "recu24kVbPXjaw"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/AtXWwXqsZiEzLvkmOJ3cua7nnic",
+        "text": "管理 Collection"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, collection, 管理",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "220",
+      "Slug": "manage-collections",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24kVbPXjaw"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "154",
+          "text_arr": [
+            "154"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recua612U3FfPR",
+    "record_id": "recua612U3FfPR"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Cy4swPPaeiZgbmkN4wUc9wAdnwd",
+        "text": "管理 Collection (控制台)"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, collection, 控制台",
+      "Labels": "控制台",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "229",
+      "Slug": "manage-collections-console",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recua612U3FfPR"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "220",
+          "text_arr": [
+            "220"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recua61jTGdybn",
+    "record_id": "recua61jTGdybn"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/FoTwwqBYdi5fmlkUkMfcFF2gnNc",
+        "text": "管理 Collection (SDK)"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, collection, sdk",
+      "Labels": "SDK",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "231",
+      "Slug": "manage-collections-sdks",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recua612U3FfPR"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "220",
+          "text_arr": [
+            "220"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recua61mvzehr8",
+    "record_id": "recua61mvzehr8"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/VSiYw5CHMixHpIklpvgcTWMhngd",
+        "text": "管理 Index"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, index",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "221",
+      "Slug": "manage-indexes",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24kVbPXjaw"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "154",
+          "text_arr": [
+            "154"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recua6163rY4pg",
+    "record_id": "recua6163rY4pg"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/F33Ewd7beirE3nk6SIucXmXFnye",
+        "text": "创建 Vector Index"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, index, 向量",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "232",
+      "Slug": "index-vector-fields",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recua6163rY4pg"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "221",
+          "text_arr": [
+            "221"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recua61nXenxPM",
+    "record_id": "recua61nXenxPM"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/AHv5wa2FiiWoyGkTIsHcfIcyngg",
+        "text": "创建 Scalar Index"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, index, 标量",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "233",
+      "Slug": "index-scalar-fields",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recua6163rY4pg"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "221",
+          "text_arr": [
+            "221"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recua61p9MWTiC",
+    "record_id": "recua61p9MWTiC"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Sk3Zw36yEiL2oUkiA5xcin7InSd",
+        "text": "管理 Partition"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, partition",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "222",
+      "Slug": "manage-partitions",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24kVbPXjaw"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "154",
+          "text_arr": [
+            "154"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recua6184kKt0J",
+    "record_id": "recua6184kKt0J"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/TksbwTh7IiQPtskBKlzclwf0neb",
+        "text": "Insert, Upsert 和 Delete"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, insert, upsert, delete",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "223",
+      "Slug": "insert-update-delete",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24kVbPXjaw"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "154",
+          "text_arr": [
+            "154"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recua619RLjIyq",
+    "record_id": "recua619RLjIyq"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/GXxtwe26zi63kbkGkj8cWCGFnZd",
+        "text": "Search, Query 和 Get"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, search, query, get",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "224",
+      "Slug": "search-query-get",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24kVbPXjaw"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "154",
+          "text_arr": [
+            "154"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recua61bfW0U7l",
+    "record_id": "recua61bfW0U7l"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/YZH0wx8TAinCZbkAHAScDK2tnae",
+        "text": "Single-Vector Search"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, single-vector, search",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "234",
+      "Slug": "single-vector-search",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recua61bfW0U7l"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "224",
+          "text_arr": [
+            "224"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recua61r0i9BQ6",
+    "record_id": "recua61r0i9BQ6"
+  },
+  {
+    "fields": {
+      "Beta": "TRUE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Jd0iwlti6iNIEck1u0acOw8xnip",
+        "text": "Hybrid Search"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, hybrid search",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "235",
+      "Slug": "hybrid-search",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recua61bfW0U7l"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "224",
+          "text_arr": [
+            "224"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recua61sidiBBb",
+    "record_id": "recua61sidiBBb"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/TOQ7wYcWsiLDCmk24frcH1WhnKe",
+        "text": "Get 和 Scalar Query"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, get, scalar query",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "236",
+      "Slug": "get-and-scalar-query",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recua61bfW0U7l"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "224",
+          "text_arr": [
+            "224"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recua61tVaIcuD",
+    "record_id": "recua61tVaIcuD"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Yu8BwnVbmi6NQ2k3Of1cw8tMnSg",
+        "text": "使用 Iterators"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, iterators, 迭代器",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "237",
+      "Slug": "with-iterators",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recua61bfW0U7l"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "224",
+          "text_arr": [
+            "224"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recua61va6NzJ5",
+    "record_id": "recua61va6NzJ5"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/EpHowtn3miepTyk2pNlcLwDonyD",
+        "text": "开启动态字段"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 动态字段",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "225",
+      "Slug": "enable-dynamic-field",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24kVbPXjaw"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "154",
+          "text_arr": [
+            "154"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recua61cVJGyjf",
+    "record_id": "recua61cVJGyjf"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/DrXpwhU8pixYi9kqzSBcs5TgnFd",
+        "text": "使用 Partition Key"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, partition key",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "226",
+      "Slug": "use-partition-key",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24kVbPXjaw"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "154",
+          "text_arr": [
+            "154"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recua61ebaSN9X",
+    "record_id": "recua61ebaSN9X"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/UXBjwVpKmirzg9kgWgmcLixwnIe",
+        "text": "使用 JSON 类型字段"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, json 字段",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "227",
+      "Slug": "use-json-fields",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24kVbPXjaw"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "154",
+          "text_arr": [
+            "154"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recua61fspxxhv",
+    "record_id": "recua61fspxxhv"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/AOIown5u9iLVhCkzF0acjABNnvc",
+        "text": "使用 Array 类型字段"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, array 字段",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "228",
+      "Slug": "use-array-fields",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24kVbPXjaw"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "154",
+          "text_arr": [
+            "154"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recua61hsrfZ1v",
+    "record_id": "recua61hsrfZ1v"
+  },
+  {
+    "fields": {
+      "Beta": "TRUE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Ry6jwMpU8iCJdLkj4bQcHEhInpd",
+        "text": "使用 Sparse Vector"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, sparse vector, 稀疏向量",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "263",
+      "Slug": "use-sparse-vector",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24kVbPXjaw"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "154",
+          "text_arr": [
+            "154"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recuheNv6pmBvh",
+    "record_id": "recuheNv6pmBvh"
+  },
+  {
+    "fields": {
+      "Beta": "TRUE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/YBNcwFDmNi0m0gkhdhsceA8HnTg",
+        "text": "使用 Binary Vector"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, binary vector",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "264",
+      "Slug": "use-binary-vector",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24kVbPXjaw"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "154",
+          "text_arr": [
+            "154"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recuheNNqd15jg",
+    "record_id": "recuheNNqd15jg"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/ZORTw6MRwiMJ23kSwcRcOIxmnkc",
+        "text": "数据导入"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 数据导入",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "155",
+      "Slug": "data-import",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recudoJqgGndQ9"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "241",
+          "text_arr": [
+            "241"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24lLvGiCsf",
+    "record_id": "recu24lLvGiCsf"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/EPd8w1Ze7irYgQkU76HcryE4njd",
+        "text": "数据导出"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 导出",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "242",
+      "Slug": "data-export",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recudoJqgGndQ9"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "241",
+          "text_arr": [
+            "241"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recudoJIKf2ksb",
+    "record_id": "recudoJIKf2ksb"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Dv5dwe19oimjQ8kuGCxctHO8nBb",
+        "text": "使用 Iterator 导出数据"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 导出, iterator",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "243",
+      "Slug": "export-data-iterators",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recudoJIKf2ksb"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "242",
+          "text_arr": [
+            "242"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recudoJOuslUqd",
+    "record_id": "recudoJOuslUqd"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Z8V4wt5WmiE9CDkRatocpcnLnme",
+        "text": "导入导出"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 导入, 导出",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "241",
+      "Slug": "data-import-export",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text_arr": [],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recudoJqgGndQ9",
+    "record_id": "recudoJqgGndQ9"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/MJeiwGDSniNQ7BkAFGCczemxnDg",
+        "text": "Pipelines"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, pipeline",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "246",
+      "Slug": "pipelines",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text_arr": [],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recudp7Hn2jZv4",
+    "record_id": "recudp7Hn2jZv4"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/QXATw7TzSiW32Ok7ihRcXYOInKd",
+        "text": "使用 Pipelines 搭建 RAG 应用"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, pipeline, rag, 应用",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "247",
+      "Slug": "building-a-rag-app-with-pipelines",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recudp7Hn2jZv4"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "246",
+          "text_arr": [
+            "246"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recudp7L6KC7gK",
+    "record_id": "recudp7L6KC7gK"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/XJ4YwoRZvikqFOkOTvIcZnT3nto",
+        "text": "摄取、搜索和删除数据"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, pipeline, 摄取, 搜索, 删除",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "248",
+      "Slug": "pipelines-ingest-search-delete-data",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recudp7Hn2jZv4"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "246",
+          "text_arr": [
+            "246"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recudp7OxyQJBX",
+    "record_id": "recudp7OxyQJBX"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/JAh8wlpmhiQv0lkafAxcooqQnxd",
+        "text": "连接数据源"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, pipeline, 数据源, 连接",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "252",
+      "Slug": "connectors",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recudp7Hn2jZv4"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "246",
+          "text_arr": [
+            "246"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recudp7WM5vD9m",
+    "record_id": "recudp7WM5vD9m"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Ewmgwq34XiXueCkmjOicy9BJn5b",
+        "text": "Pipelines 定价"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, pipeline, 定价",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "253",
+      "Slug": "pipelines-pricing",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recudp7Hn2jZv4"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "246",
+          "text_arr": [
+            "246"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recudp7Z2SvrpX",
+    "record_id": "recudp7Z2SvrpX"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/MvdrwkVYxicAebkHAUzcKtuGnag",
+        "text": "相关概念"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, pipeline, 概念",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "256",
+      "Slug": "pipelines-concepts",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recudp7Hn2jZv4"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "246",
+          "text_arr": [
+            "246"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recudp8kQcGZhs",
+    "record_id": "recudp8kQcGZhs"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/HOL1wcSsYi6tzXkbQsccMTQhn9e",
+        "text": "Pipelines 第三方集成"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, pipeline, 集成",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "258",
+      "Slug": "pipeline-integrations",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recudp7Hn2jZv4"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "246",
+          "text_arr": [
+            "246"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recudp8ngJncJE",
+    "record_id": "recudp8ngJncJE"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/LTs4wVOhbiJirSkdBn2cblmin4g",
+        "text": "在 LlamaIndex 中使用 Pipelines"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, pipeline, llamaindex",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "259",
+      "Slug": "use-pipeline-in-llamaindex",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recudp8ngJncJE"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "258",
+          "text_arr": [
+            "258"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recudp8pxc8PLF",
+    "record_id": "recudp8pxc8PLF"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/W81AwLbUmieD4pklJTackrpCnUe",
+        "text": "Reranker"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, pipeline, reranker",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "257",
+      "Slug": "reranker",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recudp8kQcGZhs"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "256",
+          "text_arr": [
+            "256"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recudp8lrxy3WB",
+    "record_id": "recudp8lrxy3WB"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Q2YawM0ZCiLhOpkYTczcwKUJnBh",
+        "text": "了解定价与账单"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 定价, 账单",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "254",
+      "Slug": "understand-pipelines-billing",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recudp7Z2SvrpX"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "253",
+          "text_arr": [
+            "253"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recudp816b5P5A",
+    "record_id": "recudp816b5P5A"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/TNwlw4PRxiFoewkSQzhcU06BnyA",
+        "text": "估算 Pipelines 用量"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, pipeline, 用量",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "255",
+      "Slug": "estimate-pipelines-usage",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recudp7Z2SvrpX"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "253",
+          "text_arr": [
+            "253"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recudp832lU5zu",
+    "record_id": "recudp832lU5zu"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/KZOywFvfbir4DbkRwZIcMsY6nHe",
+        "text": "文本数据"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, pipeline, 文本",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "249",
+      "Slug": "pipelines-text-data",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recudp7OxyQJBX"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "248",
+          "text_arr": [
+            "248"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recudp7Ps6CVA7",
+    "record_id": "recudp7Ps6CVA7"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Nfcswlzoyi5xckklF37csr0QnJh",
+        "text": "文档数据"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, pipeline, 文档",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "250",
+      "Slug": "pipelines-doc-data",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recudp7OxyQJBX"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "248",
+          "text_arr": [
+            "248"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recudp7Rz409JT",
+    "record_id": "recudp7Rz409JT"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/DrzYwLGpqiIeL6km4jlcPVp0n9b",
+        "text": "图像数据"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, pipeline, 图像",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "251",
+      "Slug": "pipelines-image-data",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recudp7OxyQJBX"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "248",
+          "text_arr": [
+            "248"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recudp7UuC6EbT",
+    "record_id": "recudp7UuC6EbT"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/PU8HwyM6Kiv0C4krF58cTNOVnSe",
+        "text": "数据迁移"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 迁移",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "158",
+      "Slug": "migrations",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text_arr": [],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24mzNnQ3XO",
+    "record_id": "recu24mzNnQ3XO"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/EruqwJUYliwbOgkLjsAcqRwYn0b",
+        "text": "资源规划指南"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 资源规划",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "159",
+      "Slug": "resource-planning",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text_arr": [],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24mO2dxScG",
+    "record_id": "recu24mO2dxScG"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/SbePwiLrZi2hZqk5NpRcmramnEN",
+        "text": "备份与恢复"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 备份, 恢复",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "160",
+      "Slug": "backup-and-restore",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text_arr": [],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24n2kjLaTM",
+    "record_id": "recu24n2kjLaTM"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/ZdQxwDlFbiPLCNkXISXcyqtBn3r",
+        "text": "用户鉴权"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 鉴权, 用户",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "161",
+      "Slug": "authentication",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text_arr": [],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24ndmpsqWe",
+    "record_id": "recu24ndmpsqWe"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/SVnkw5IkNiOfALkijr1cw91vn3L",
+        "text": "邮箱账号"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 邮箱, 账号",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "180",
+      "Slug": "email-accounts",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ndmpsqWe"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "161",
+          "text_arr": [
+            "161"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24p9JSSqLM",
+    "record_id": "recu24p9JSSqLM"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/UGzNwB4TmiqTozkJvarceRdenif",
+        "text": "API 密钥"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, api 密钥",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "181",
+      "Slug": "manage-api-keys",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ndmpsqWe"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "161",
+          "text_arr": [
+            "161"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24pciwFml6",
+    "record_id": "recu24pciwFml6"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/FGluwzZltiZo8LkJyWVcD8qdnxc",
+        "text": "集群身份凭证"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 集群, 凭证",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "182",
+      "Slug": "cluster-credentials",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ndmpsqWe"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "161",
+          "text_arr": [
+            "161"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24pdRQbcOp",
+    "record_id": "recu24pdRQbcOp"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/VNWiwtYwGi9m0Okhj3Zce8wAnte",
+        "text": "通过 Web UI 管理身份凭证"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 凭证, ui",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "184",
+      "Slug": "cluster-credentials-console",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24pdRQbcOp"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "182",
+          "text_arr": [
+            "182"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24phqBHx8S",
+    "record_id": "recu24phqBHx8S"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/UfjxwrE20iPn6okfStpcSDtpnxf",
+        "text": "通过 SDK 管理身份凭证"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 凭证, sdk",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "185",
+      "Slug": "cluster-credentials-sdk",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24pdRQbcOp"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "182",
+          "text_arr": [
+            "182"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24pn7086LQ",
+    "record_id": "recu24pn7086LQ"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/EWAWwESijisVHFkoAEbcfhvPnZb",
+        "text": "管理 MFA"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, mfa",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "183",
+      "Slug": "multi-factor-auth",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ndmpsqWe"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "161",
+          "text_arr": [
+            "161"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24pfA7pUhE",
+    "record_id": "recu24pfA7pUhE"
+  },
+  {
+    "fields": {
+      "Beta": "TRUE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/BRygwmdMOiyW0Ckd439cJwR6nHf",
+        "text": "使用 Okta 配置 SSO"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 单点登录, sso",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "261",
+      "Slug": "single-sign-on",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ndmpsqWe"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "161",
+          "text_arr": [
+            "161"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recue9neSMM6kH",
+    "record_id": "recue9neSMM6kH"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/HaV5wsgX8ifrA2kyH4LchfhEnbf",
+        "text": "用户授权"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 授权, 用户",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "162",
+      "Slug": "authorization",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text_arr": [],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24nlM3dzy1",
+    "record_id": "recu24nlM3dzy1"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/SXwewQ8p6i2qf8kd2YaccqKDnng",
+        "text": "用户角色"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 角色",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "166",
+      "Slug": "user-roles",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24nlM3dzy1"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "162",
+          "text_arr": [
+            "162"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24oiQ9i4OC",
+    "record_id": "recu24oiQ9i4OC"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/WYzywSL2ViDcZGk9vgqcq9XOned",
+        "text": "资源概览"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 资源, 概览",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "167",
+      "Slug": "resource-hierarchy",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24nlM3dzy1"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "162",
+          "text_arr": [
+            "162"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24oljMRKzG",
+    "record_id": "recu24oljMRKzG"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/HrzawWSDXiK5ZUkb9zhcojOenpi",
+        "text": "组织权限"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 组织, 权限",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "168",
+      "Slug": "organization-access",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24nlM3dzy1"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "162",
+          "text_arr": [
+            "162"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24ommVZ7Um",
+    "record_id": "recu24ommVZ7Um"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/I9ktwIylxiDTKik4ckUctIOvnjm",
+        "text": "组织管理"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 组织, 管理",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "170",
+      "Slug": "organizations",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ommVZ7Um"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "168",
+          "text_arr": [
+            "168"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24osUGwHpA",
+    "record_id": "recu24osUGwHpA"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/WGqBwcKmViC7xJkEfPcchOVKnsd",
+        "text": "组织成员管理"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 组织, 成员, 管理",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "171",
+      "Slug": "organization-users",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ommVZ7Um"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "168",
+          "text_arr": [
+            "168"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24ouXDfwgo",
+    "record_id": "recu24ouXDfwgo"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/DaoawdnS1iEOT8kFGW0cAc8qntc",
+        "text": "组织设置"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 组织, 设置",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "172",
+      "Slug": "organization-settings",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ommVZ7Um"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "168",
+          "text_arr": [
+            "168"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24ox57M2vD",
+    "record_id": "recu24ox57M2vD"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/B5nRw42QlikYTVkIkpDcC22mnOd",
+        "text": "查看系统设置"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 系统, 设置",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "175",
+      "Slug": "view-activities",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ox57M2vD"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "172",
+          "text_arr": [
+            "172"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24oSnPLjIL",
+    "record_id": "recu24oSnPLjIL"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/AAAmwoQdJid8FOkN3Z8cu8jAnNg",
+        "text": "设置时区"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 时区",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "17",
+      "Slug": "manage-timezone",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ox57M2vD"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "172",
+          "text_arr": [
+            "172"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "recyxkRixk",
+    "record_id": "recyxkRixk"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Ah5HwOryHilTp4klJ6VcR4eJnvd",
+        "text": "设置运维窗口"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 运维, 窗口",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "75",
+      "Slug": "set-up-maintenance-window",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ox57M2vD"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "172",
+          "text_arr": [
+            "172"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "leryn.li@zilliz.com",
+          "en_name": "李鋆 (Leryn Li)",
+          "id": "ou_e55a208a81fc721928685fc3df9cb678",
+          "name": "李鋆"
+        }
+      ]
+    },
+    "id": "recZMH1qcY",
+    "record_id": "recZMH1qcY"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/MkZjwrXIpicJ5xkYwu6cMK8inVb",
+        "text": "删除组织"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 组织, 删除",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "88",
+      "Slug": "delete-your-organization",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ox57M2vD"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "172",
+          "text_arr": [
+            "172"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译",
+      "责任翻译": [
+        {
+          "email": "yiyun.ni@zilliz.com",
+          "en_name": "倪逸云 (Angela Ni)",
+          "id": "ou_fbc044d19930afd389d5c369466c38b1",
+          "name": "倪逸云"
+        }
+      ]
+    },
+    "id": "recj8hgnPV",
+    "record_id": "recj8hgnPV"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/XVQcw6qgxiC31ikfk06cOo1jnch",
+        "text": "使用回收站"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 回收站",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "125",
+      "Slug": "use-recycle-bin",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ox57M2vD"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "172",
+          "text_arr": [
+            "172"
+          ],
+          "type": "text"
+        }
+      ],
+      "调整方案": "直接翻译"
+    },
+    "id": "recCupgrPR",
+    "record_id": "recCupgrPR"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/WllVwhQakiUVLXkMm7ocRk5xnxh",
+        "text": "查看事件"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 事件, 查看",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "219",
+      "Slug": "view-activities",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24ox57M2vD"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "172",
+          "text_arr": [
+            "172"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu9kyfv696lY",
+    "record_id": "recu9kyfv696lY"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/NBcmwUP0cigvtjk9EAWc4HwnnDg",
+        "text": "项目权限"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 权限, 项目",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "169",
+      "Slug": "project-access",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24nlM3dzy1"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "162",
+          "text_arr": [
+            "162"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24op8eXkYN",
+    "record_id": "recu24op8eXkYN"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Sw1Kwj0oViAYuAkoUIZcvhsJnBd",
+        "text": "项目管理"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 项目, 管理",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "173",
+      "Slug": "projects",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24op8eXkYN"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "169",
+          "text_arr": [
+            "169"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24oIQf8PgB",
+    "record_id": "recu24oIQf8PgB"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/ZrvMwmDltiSGqkknP97cvuH9npq",
+        "text": "项目成员管理"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 项目, 管理, 成员",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "174",
+      "Slug": "project-users",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24op8eXkYN"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "169",
+          "text_arr": [
+            "169"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24oLJbHqfR",
+    "record_id": "recu24oLJbHqfR"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/SlItwMcOyikiWVkr7Glcy9sinMg",
+        "text": "指标与告警"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 指标, 告警",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "163",
+      "Slug": "metrics-and-alerts",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text_arr": [],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24nA2blG8Y",
+    "record_id": "recu24nA2blG8Y"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/S3BswPJ4NiKl9okZDoycMvbunMb",
+        "text": "查看集群性能指标"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 集群, 性能, 指标",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "176",
+      "Slug": "view-cluster-metric-charts",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24nA2blG8Y"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "163",
+          "text_arr": [
+            "163"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24oYYrPn0b",
+    "record_id": "recu24oYYrPn0b"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/WpDVwYaHMizLWuklBJlcypTzn2d",
+        "text": "管理组织告警"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 组织, 告警",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "177",
+      "Slug": "manage-organization-alerts",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24nA2blG8Y"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "163",
+          "text_arr": [
+            "163"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24p0nJgwEM",
+    "record_id": "recu24p0nJgwEM"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/EUS8w4x9Ii0BmhkJBfQcsoFln5c",
+        "text": "管理项目告警"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 项目, 告警",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "178",
+      "Slug": "manage-project-alerts",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24nA2blG8Y"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "163",
+          "text_arr": [
+            "163"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24p1mR9w5K",
+    "record_id": "recu24p1mR9w5K"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Rca8w6kRRiy7a9kr6adczTcGnoh",
+        "text": "指标与告警快速参考"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 指标, 告警, 参考",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "179",
+      "Slug": "metrics-alerts-reference",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24nA2blG8Y"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "163",
+          "text_arr": [
+            "163"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24p3FwWxa9",
+    "record_id": "recu24p3FwWxa9"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/T9z1wL5y9iDgV5kMAx1cAZfxn0b",
+        "text": "管理告警渠道"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 告警, 渠道",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "238",
+      "Slug": "manage-notification-channels",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24nA2blG8Y"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "163",
+          "text_arr": [
+            "163"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recuabh6qWDZBx",
+    "record_id": "recuabh6qWDZBx"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/VCp1wTKc8io1kGkHknEcHX25nLb",
+        "text": "网络与安全"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 网络, 安全",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "164",
+      "Slug": "network-and-security",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text_arr": [],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24nFbfchRO",
+    "record_id": "recu24nFbfchRO"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Uj7IwJpneijPROkAZN7cJRLInrc",
+        "text": "支付方式与账单"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 支付方式, 账单",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "165",
+      "Slug": "payment-billing",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text_arr": [],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24nNA5CDFT",
+    "record_id": "recu24nNA5CDFT"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/B11mwdhmYiGFsck0eCYcU5wnngX",
+        "text": "第三方集成"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 集成",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "186",
+      "Slug": "integrations",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text_arr": [],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24pB9GQZ2F",
+    "record_id": "recu24pB9GQZ2F"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/Y3PXwA1Y0i5pZokIw8NcWCzPnxh",
+        "text": "约束与限制"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 约束, 限制",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "187",
+      "Slug": "limits-and-restrictions",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text_arr": [],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24pXhKJtlJ",
+    "record_id": "recu24pXhKJtlJ"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/YVAzwqHdti7uHSkZL6icsY7hnpe",
+        "text": "常见问题"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 常见问题",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "98",
+      "Slug": "faqs",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text_arr": [],
+          "type": "text"
+        }
+      ],
+      "调整方案": "翻译+修改",
+      "责任翻译": [
+        {
+          "email": "yiyun.ni@zilliz.com",
+          "en_name": "倪逸云 (Angela Ni)",
+          "id": "ou_fbc044d19930afd389d5c369466c38b1",
+          "name": "倪逸云"
+        }
+      ]
+    },
+    "id": "recEWdoxhj",
+    "record_id": "recEWdoxhj"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/QxcnwBks8izBAQkjP8Ycl1cEnQh",
+        "text": "版本说明书"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 版本说明书",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "188",
+      "Slug": "release-notes",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text_arr": [],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recu24qc6hjyag",
+    "record_id": "recu24qc6hjyag"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/S2tAwNfvTiRoq9kXtp9cONd6n3e",
+        "text": "项目任务管理"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 项目, 管理, 成员",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "267",
+      "Slug": "job-center",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24op8eXkYN"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "169",
+          "text_arr": [
+            "169"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recuiS1r8z8dgW",
+    "record_id": "recuiS1r8z8dgW"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/MgXbwjdzeiJRpnkF562cE6cVnCf",
+        "text": "版本说明书（2024/07/30）"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 版本说明书",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "268",
+      "Slug": "release-notes-291",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24qc6hjyag"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "188",
+          "text_arr": [
+            "188"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recujJpOI9OHLu",
+    "record_id": "recujJpOI9OHLu"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/EAJywEPq2iGDmNkEDDxcJDYPnsg",
+        "text": "创建亚马逊云科技 PrivateLink"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 私网, 腾讯云",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "269",
+      "Slug": "setup-a-private-link-amazon-cloud",
+      "Targets": [
+        "SaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recayzEPCL"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "96",
+          "text_arr": [
+            "96"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "reculolU9bIVqD",
+    "record_id": "reculolU9bIVqD"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/PtmRwn9bQi6WAKkurfXcEXKKn9b",
+        "text": "通过 Endpoint 从 Milvus 迁移至 Zilliz Cloud"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 数据迁移, endpoint",
+      "Labels": "通过 Endpoint 迁移",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "271",
+      "Slug": "via-endpoint",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recdTTuae7"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "18",
+          "text_arr": [
+            "18"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recunsBw2XWNT1",
+    "record_id": "recunsBw2XWNT1"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/YBlmwO9ajiU4tYklnjmc6fJPn8e",
+        "text": "通过备份文件从 Milvus 迁移至 Zilliz Cloud"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 数据迁移, 备份文件",
+      "Labels": "通过备份文件迁移",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "272",
+      "Slug": "via-backup-files",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recdTTuae7"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "18",
+          "text_arr": [
+            "18"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recunsByuT9GTs",
+    "record_id": "recunsByuT9GTs"
+  },
+  {
+    "fields": {
+      "Beta": "FALSE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/MeCPwj8n0i2x1BksjOHc3OKRn55",
+        "text": "集群扩缩容"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 管理",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "274",
+      "Slug": "scale-cluster",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24kH9mMeDE"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "153",
+          "text_arr": [
+            "153"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recunu0CWhbKy3",
+    "record_id": "recunu0CWhbKy3"
+  },
+  {
+    "fields": {
+      "Beta": "TRUE",
+      "Docs": {
+        "link": "https://zilliverse.feishu.cn/wiki/A8MYw6Wj2ilF2akZeKYcwJGSnSY",
+        "text": "管理 Replica"
+      },
+      "Keywords": "向量数据库, zilliz, milvus, 大模型向量数据库, 管理",
+      "Notebook": "FALSE",
+      "Progress": "初稿",
+      "Seq. ID": "275",
+      "Slug": "manage-replica",
+      "Targets": [
+        "SaaS",
+        "PaaS"
+      ],
+      "父记录": [
+        {
+          "record_ids": [
+            "recu24kH9mMeDE"
+          ],
+          "table_id": "tblBQUNRqMsD9aWN",
+          "text": "153",
+          "text_arr": [
+            "153"
+          ],
+          "type": "text"
+        }
+      ]
+    },
+    "id": "recunu0Nf3Ksie",
+    "record_id": "recunu0Nf3Ksie"
+  }
+]
