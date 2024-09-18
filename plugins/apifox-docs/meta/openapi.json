@@ -17045,12 +17045,12 @@
 		},
 		"/v2/vectordb/entities/upsert": {
 			"post": {
-				"summary": "Upsert Entity",
+				"summary": "Upsert",
 				"deprecated": false,
 				"description": "This operation inserts new records into the database or updates existing ones.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "Upsert Entity",
+						"summary": "Upsert",
 						"description": "本接口用于向指定 Collection 中插入或更新数据。"
 					}
 				},
@@ -19056,12 +19056,12 @@
 		},
 		"/v1/vector/upsert": {
 			"post": {
-				"summary": "Upsert Entity",
+				"summary": "Upsert",
 				"deprecated": false,
 				"description": "Upserts one or more entities into a collection.",
 				"x-i18n": {
 					"zh-CN": {
-						"summary": "Upsert Entity",
+						"summary": "Upsert",
 						"description": "本接口可在指定 Collection 中插入或更新一条或多条记录。"
 					}
 				},
