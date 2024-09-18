@@ -31,7 +31,7 @@ import Admonition from '@theme/Admonition';
 
 ## 文档推荐{#related-topics}
 
-- [查看事件](./view-activities_1)
+- [查看事件](./view-activities)
 
 - [设置时区](./manage-timezone)
 

@@ -56,18 +56,20 @@ import Admonition from '@theme/Admonition';
 一旦获取到文件路径和存储桶凭证，按以下方式调用 API：
 
 ```bash
+# replace url and token with your own
 curl --request POST \
-     --url "<https://controller.api.$>{CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import" \
+     --url "https://api.cloud.zilliz.com/v2/vectordb/jobs/import/create" \
      --header "Authorization: Bearer ${TOKEN}" \
-     --header "accept: application/json" \
-     --header "content-type: application/json" \
+     --header "Accept: application/json" \
+     --header "Content-Type: application/json" \
      -d '{
-       "clusterId": "${CLUSTER_ID}",
-       "collectionName": "medium_articles",
-       "objectUrl": "gs://publicdataset-zillizcloud-com/medium_articles_2020.json"
-       "accessKey": "your-access-key"
-       "secretKey": "your-secret-key"
-     }'
+        "clusterId": "inxx-xxxxxxxxxxxxxxx",
+        "collectionName": "medium_articles",
+        "partitionName": "",
+        "objectUrl": "https://s3.us-west-2.amazonaws.com/publicdataset.zillizcloud.com/medium_articles_2020_dpr/medium_articles_2020_dpr.json",
+        "accessKey": "",
+        "secretKey": ""
+    }'
 ```
 
 在上述代码中，`${CLOUD_REGION_ID}` 代表您集群所在的云地域的 ID，`${TOKEN}` 是用于授权 API 请求的集群 API 密钥，`${CLUSTER_ID}` 是您的集群的 ID。在调用 API 时，请确保将这些占位符替换为您的实际值。您可以从集群的公共访问端点获取 `CLOUD_REGION_ID` 和 `CLUSTER_ID`。例如，在公共访问端点 **https://in03-3bf3c31f4248e22.api.ali-cn-hangzhou.cloud.zilliz.com.cn** 中，`CLOUD_REGION_ID` 是 **ali-cn-hangzhou**，`CLUSTER_ID` 是 **in03-3bf3c31f4248e22**。有关更多信息，请参见[Zilliz Cloud 控制台](./on-zilliz-cloud-console)。
@@ -76,10 +78,14 @@ curl --request POST \
 
 ```bash
 curl --request GET \
-     --url "<https://controller.api.$>{CLOUD_REGION_ID}.cloud.zilliz.com.cn/v1/vector/collections/import/get?jobId=${JOBID}&clusterId=${CLUSTERID}" \
+     --url "https://api.cloud.zilliz.com/v2/vectordb/jobs/import/getProgress" \
      --header "Authorization: Bearer ${TOKEN}" \
-     --header "accept: application/json" \
-     --header "content-type: application/json" \
+     --header "Accept: application/json" \
+     --header "Content-Type: application/json" \
+     -d '{
+        "clusterId": "inxx-xxxxxxxxxxxxxxx",
+        "jobId": "job-xxxxxxxxxxxxxxxxxxxxx"
+    }'
 ```
 
 有关更多信息，请参见[导入](/reference/restful/import)和[查看导入进度](/reference/restful/get-import-progress)。
@@ -90,9 +96,9 @@ curl --request GET \
 
 ```bash
 {
-    "code": 200,
+    "code": 0,
     "data": {
-        "jobId": "string"
+        "jobID": "job-xxxxxxxxxxxxxxxxxxxxx"
     }
 }
 ```
