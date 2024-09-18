@@ -36,12 +36,12 @@
     },
     {
         "path": "upsert",
-        "name": "Upsert.mdx",
+        "name": "Upsert",
         "match": "endsWith"
     },
     {
         "path": "query",
-        "name": "Query.mdx",
+        "name": "Query",
         "match": "endsWith"
     },
     {
