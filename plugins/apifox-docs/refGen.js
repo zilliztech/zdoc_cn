@@ -50,7 +50,7 @@ class refGen {
         const version = page_parent.includes('v2') ? 'v2' : 'v1'
         var slug_suffix = version === 'v2' ? '-v2' : ''
         if (target === 'milvus') {
-          slug_suffix = version === 'v2' ? ' (v2)' : ' (v1)'
+          slug_suffix = ''
         }
         var upper_folder = page_parent.startsWith('cloud') || page_parent.startsWith('cluster') || page_parent.startsWith('import') || page_parent.startsWith('pipeline') || page_parent.includes('backup') || page_parent.includes('restore') ? 'control-plane' : 'data-plane'
 
@@ -70,7 +70,9 @@ class refGen {
           page_url,
           page_method,
           specs,
-          sidebar_position
+          sidebar_position,
+          target,
+          lang,
         }).replaceAll(/<br>/g, '<br/>')
         
         fs.writeFileSync(`${this.options.target_path}/${version}/${upper_folder}/${page_parent}/${page_slug}.mdx`, t)
