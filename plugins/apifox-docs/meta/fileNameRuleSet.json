@@ -25,6 +25,11 @@
         "match": "endsWith"
     },
     {
+        "path": "hybrid-search",
+        "name": "Hybrid Search",
+        "match": "contains"
+    },
+    {
         "path": "search",
         "name": "Search",
         "match": "endsWith"
@@ -38,11 +43,6 @@
         "path": "query",
         "name": "Query.mdx",
         "match": "endsWith"
-    },
-    {
-        "path": "hybrid-search",
-        "name": "Hybrid Search",
-        "match": "contains"
     },
     {
         "path": "-aliases",
