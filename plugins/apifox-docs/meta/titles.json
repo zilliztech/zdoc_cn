@@ -17,7 +17,7 @@
     "获取 Entity": "get",
     "插入 Entity": "insert",
     "删除 Entity": "delete",
-    "Upsert Entity": "upsert",
+    "Upsert": "upsert",
     "创建 Serverless 集群": "create-serverless-cluster",
     "创建集群": "create-cluster",
     "修改集群配置": "modify-cluster",

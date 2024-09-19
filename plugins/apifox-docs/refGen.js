@@ -47,13 +47,14 @@ class refGen {
             page_parent = name
           }
         }
+        
         const version = page_parent.includes('v2') ? 'v2' : 'v1'
         var slug_suffix = version === 'v2' ? '-v2' : ''
         if (target === 'milvus') {
           slug_suffix = ''
         }
-        var upper_folder = page_parent.startsWith('cloud') || page_parent.startsWith('cluster') || page_parent.startsWith('import') || page_parent.startsWith('pipeline') || page_parent.includes('backup') || page_parent.includes('restore') ? 'control-plane' : 'data-plane'
 
+        var upper_folder = page_parent.startsWith('cloud') || page_parent.startsWith('cluster') || page_parent.startsWith('import') || page_parent.startsWith('pipeline') || page_parent.includes('backup') || page_parent.includes('restore') ? 'control-plane' : 'data-plane'
         if (target === 'milvus') {
           upper_folder = page_parent.startsWith('cloud') || page_parent.startsWith('cluster') || page_parent.startsWith('pipeline') || page_parent.includes('backup') || page_parent.includes('restore') ? 'control-plane' : 'data-plane'
         }
