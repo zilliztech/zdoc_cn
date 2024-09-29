@@ -12888,7 +12888,10 @@
 									},
 									"token": {
 										"type": "string",
-										"description": "A temporary token for you to access the object storage service. The token name and the way to obtain it may vary with cloud providers. For details, refer to [the FAQ](/docs/faq-data-import#can-i-use-session-tokens-when-importing-data-from-an-object-storage-service)."
+										"description": "A temporary token for you to access the object storage service. The token name and the way to obtain it may vary with cloud providers. For details, refer to [the FAQ](/docs/faq-data-import#can-i-use-session-tokens-when-importing-data-from-an-object-storage-service).",
+										"x-include-target": [
+											"zilliz"
+										]
 									}
 								},
 								"required": [
