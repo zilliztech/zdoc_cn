@@ -21,7 +21,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: '部署运维手册',
-            description: '本手册关注 Milvus 私有化镜像的部署和日常运维等操作，包括 Milvus 集群安装、升级、配置变更、扩缩容和监控告警配置等章节。',
+            description: '本手册关注 Milvus 商业版镜像的部署和日常运维等操作，包括 Milvus 集群安装、升级、配置变更、扩缩容和监控告警配置等章节。',
             slug: '/deployment-and-operations',
             keywords: ['部署', '运维', '私有化镜像', 'Milvus']
           },
