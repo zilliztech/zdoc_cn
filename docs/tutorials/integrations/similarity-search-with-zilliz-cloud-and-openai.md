@@ -158,7 +158,7 @@ def search(text):
     res = collection.search(
         data=[embed(text)],
         anns_field='embedding',
-        param={"metric_type": "L2", "params": {"nprobe": 10}},
+        param={"metric_type": "L2"},
         output_fields=['title'],
         limit=5,
     )

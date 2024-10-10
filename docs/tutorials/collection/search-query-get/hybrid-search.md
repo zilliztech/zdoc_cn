@@ -124,8 +124,7 @@ search_param_1 = {
     "data": query_filmVector, # Query vector
     "anns_field": "filmVector", # Vector field name
     "param": {
-        "metric_type": "L2", # This parameter value must be identical to the one used in the collection schema
-        "params": {"nprobe": 10}
+        "metric_type": "L2" # This parameter value must be identical to the one used in the collection schema
     },
     "limit": 2 # Number of search results to return in this AnnSearchRequest
 }
@@ -137,8 +136,7 @@ search_param_2 = {
     "data": query_posterVector, # Query vector
     "anns_field": "posterVector", # Vector field name
     "param": {
-        "metric_type": "L2", # This parameter value must be identical to the one used in the collection schema
-        "params": {"nprobe": 10}
+        "metric_type": "L2" # This parameter value must be identical to the one used in the collection schema
     },
     "limit": 2 # Number of search results to return in this AnnSearchRequest
 }

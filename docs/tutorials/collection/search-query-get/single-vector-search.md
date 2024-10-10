@@ -447,7 +447,7 @@ res = client.search(
     collection_name="quick_setup",
     data=[query_vector],
     limit=3, # The number of results to return
-    search_params={"metric_type": "IP", "params": {"nprobe": 10}}
+    search_params={"metric_type": "IP"}
 )
 
 print(res)
@@ -606,7 +606,7 @@ res = client.search(
     collection_name="quick_setup",
     data=query_vectors, 
     limit=2,
-    search_params={"metric_type": "IP", "params": {"nprobe": 10}}
+    search_params={"metric_type": "IP"}
 )
 
 print(res) # Two sets of results are to return
@@ -801,7 +801,7 @@ res = client.search(
     collection_name="quick_setup",
     data=[query_vector],
     limit=5,
-    search_params={"metric_type": "IP", "params": {"nprobe": 10}},
+    search_params={"metric_type": "IP"},
     partition_names=["red"]
 )
 
@@ -1056,7 +1056,7 @@ res = client.search(
     collection_name="quick_setup",
     data=[query_vector],
     limit=5,
-    search_params={"metric_type": "IP", "params": {"nprobe": 10}},
+    search_params={"metric_type": "IP"},
     partition_names=["blue"]
 )
 
@@ -1316,7 +1316,7 @@ res = client.search(
     collection_name="quick_setup",
     data=[query_vector],
     limit=5,
-    search_params={"metric_type": "IP", "params": {"nprobe": 10}},
+    search_params={"metric_type": "IP"},
     output_fields=["color"]
 )
 
@@ -1503,7 +1503,7 @@ res = client.search(
     collection_name="quick_setup",
     data=[query_vector],
     limit=5,
-    search_params={"metric_type": "IP", "params": {"nprobe": 10}},
+    search_params={"metric_type": "IP"},
     filter='color_tag like "red%"',
     output_fields=["color_tag"]
 )
@@ -1988,10 +1988,7 @@ client.load_collection("group_search") # Collection name
 res = client.search(
     collection_name="group_search", # Collection name
     data=[[0.14529211512077012, 0.9147257273453546, 0.7965055218724449, 0.7009258593102812, 0.5605206522382088]], # Query vector
-    search_params={
-    "metric_type": "L2",
-    "params": {"nprobe": 10},
-    }, # Search parameters
+    search_params={"metric_type": "L2"}, # Search parameters
     limit=10, # Max. number of search results to return
     group_by_field="doc_id", # Group results by document ID
     output_fields=["doc_id", "passage_id"]
@@ -2021,10 +2018,7 @@ client.load_collection("group_search") # Collection name
 res = client.search(
     collection_name="group_search", # Collection name
     data=query_passage_vector, # Replace with your query vector
-    search_params={
-    "metric_type": "L2",
-    "params": {"nprobe": 10},
-    }, # Search parameters
+    search_params={"metric_type": "L2"}, # Search parameters
     limit=10, # Max. number of search results to return
     # group_by_field="doc_id", # Group results by document ID
     output_fields=["doc_id", "passage_id"]
@@ -2064,7 +2058,6 @@ print(doc_ids)
 search_parameters = {
     'metric_type': 'L2',
     'params': {
-        'nprobe': 10,
         'level': 1，
         'radius': 1.0
         'range_filter': 0.8
@@ -2082,10 +2075,6 @@ search_parameters = {
    <tr>
      <td><p><code>metric_type</code></p></td>
      <td><p>度量向量 embedding 间相似度的方法。</p><p>可选值为 <code>IP</code>、<code>L2</code>、<code>COSINE</code>。默认按已加载（load）的索引文件设定。</p></td>
-   </tr>
-   <tr>
-     <td><p><code>params.nprobe</code></p></td>
-     <td><p>搜索时查询的单位数。</p><p>取值范围为 [1, nlist<sub>[1]</sub>]。</p></td>
    </tr>
    <tr>
      <td><p><code>params.level</code></p></td>
