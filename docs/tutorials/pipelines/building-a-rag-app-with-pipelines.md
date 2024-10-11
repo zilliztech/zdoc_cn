@@ -250,7 +250,8 @@ def retrieval_with_pipeline(question, search_pipe_id, top_k=2, verbose=False):
             "outputFields": [
                 "text",
                 "title"
-            ],
+            ],,
+            "filter": 'title == "Milvus Lite"'
         }
     }
     response = requests.post(run_pipeline_url, headers=headers, json=data)
@@ -263,6 +264,8 @@ def retrieval_with_pipeline(question, search_pipe_id, top_k=2, verbose=False):
 question = 'Which Milvus should I choose if I want to use in the jupyter notebook with a small scale of data?'
 retrieval_with_pipeline(question, search_pipe_id, top_k=2, verbose=True)
 ```
+
+在 `params` 中，我们指定返回 top K 个结果，并过滤出文章标题为 “Milvus Lite” 的结果。输出结果需要包含 `text` 和 `title` 字段。如需详细了解运行 Search Pipeline 时的参数，请参考[这里](/docs/pipelines-text-data#run-text-search-pipeline)。
 
 以下为输出结果。
 
