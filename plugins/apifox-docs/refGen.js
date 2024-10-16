@@ -189,6 +189,8 @@ class refGen {
       }
     }
 
+    console.log(page_slug)
+
     return page_slug
   }
 
