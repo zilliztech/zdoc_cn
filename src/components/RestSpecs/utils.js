@@ -66,7 +66,8 @@ const matchFilterTags = (text) => {
     if (text) {
         const startTagRegex = /<(include|exclude) target="(.+?)"/gm
         const endTagRegex = /<\/(include|exclude)>/gm
-        const matches = [... text.matchAll(startTagRegex)]
+        var matches = []
+        if (text.matchAll(startTagRegex)) matches = [... text.matchAll(startTagRegex)]
     
     
         matches.forEach(match => {
