@@ -77,6 +77,41 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
+下表展示了使用不同的相似度类型，其度量值的特点及取值范围。
+
+<table>
+   <tr>
+     <th><p><strong>相似度类型</strong></p></th>
+     <th><p><strong>特点</strong></p></th>
+     <th><p>取值范围</p></th>
+   </tr>
+   <tr>
+     <td><p><code>L2</code></p></td>
+     <td><p>较小的 L2 距离表示更高的相似性。</p></td>
+     <td><p>[0, ∞)</p></td>
+   </tr>
+   <tr>
+     <td><p><code>IP</code></p></td>
+     <td><p>较大的 IP 距离表示更高的相似性。</p></td>
+     <td><p>[-1, 1]</p></td>
+   </tr>
+   <tr>
+     <td><p><code>COSINE</code></p></td>
+     <td><p>较大的 cosine 值表示更高的相似性。</p></td>
+     <td><p>[-1, 1]</p></td>
+   </tr>
+   <tr>
+     <td><p><code>JACCARD</code></p></td>
+     <td><p>较小的 Jaccard 距离表示更高的相似性。</p></td>
+     <td><p>[0, 1]</p></td>
+   </tr>
+   <tr>
+     <td><p><code>HAMMING</code></p></td>
+     <td><p>较小的 Hamming 距离表示更高的相似性。</p></td>
+     <td><p>[0, dim(vector)]</p></td>
+   </tr>
+</table>
+
 ## 欧氏距离（L2）{#euclidean-distance-l2}
 
 欧氏距离主要是用来计算连接两点的线段的实际长度。

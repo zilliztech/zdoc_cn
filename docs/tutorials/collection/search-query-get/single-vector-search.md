@@ -1942,27 +1942,27 @@ console.log(res.results)
    <tr>
      <td><p><code>L2</code></p></td>
      <td><p>较小的 L2 距离表示更高的相似性。</p></td>
-     <td><p>要排除结果中最近的向量，请确保：</p><p><code>range_filter</code> &lt;= distance &lt; <code>radius</code></p></td>
+     <td><p>要排除结果中最近的向量，请确保：</p><p><code>0</code> &lt;= <code>range_filter</code> &lt;= distance &lt; <code>radius</code> &lt; <code>∞</code></p></td>
    </tr>
    <tr>
      <td><p><code>IP</code></p></td>
      <td><p>较大的 IP 距离表示更高的相似性。</p></td>
-     <td><p>要排除结果中最近的向量，请确保：</p><p><code>radius</code> &lt; distance &lt;= <code>range_filter</code></p></td>
+     <td><p>要排除结果中最近的向量，请确保：</p><p><code>-1</code> &lt;= <code>radius</code> &lt; distance &lt;= <code>range_filter</code> &lt;= <code>1</code></p></td>
    </tr>
    <tr>
      <td><p><code>COSINE</code></p></td>
      <td><p>较大的 cosine 值表示更高的相似性。</p></td>
-     <td><p>要排除结果中最近的向量，请确保：</p><p><code>radius</code> &lt; distance &lt;= <code>range_filter</code></p></td>
+     <td><p>要排除结果中最近的向量，请确保：</p><p><code>-1</code> &lt;= <code>radius</code> &lt; distance &lt;= <code>range_filter</code> &lt;= <code>1</code></p></td>
    </tr>
    <tr>
      <td><p><code>JACCARD</code> <sup>(Beta)</sup></p></td>
      <td><p>较小的 Jaccard 距离表示更高的相似性。</p></td>
-     <td><p>要排除结果中最近的向量，请确保：</p><p><code>range_filter</code> &lt;= distance &lt; <code>radius</code></p></td>
+     <td><p>要排除结果中最近的向量，请确保：</p><p><code>0</code> &lt;= <code>range_filter</code> &lt;= distance &lt; <code>radius</code> &lt;= <code>1</code></p></td>
    </tr>
    <tr>
      <td><p><code>HAMMING</code> <sup>(Beta)</sup></p></td>
      <td><p>较小的 Hamming 距离表示更高的相似性。</p></td>
-     <td><p>要排除结果中最近的向量，请确保：</p><p><code>range_filter</code> &lt;= distance &lt; <code>radius</code></p></td>
+     <td><p>要排除结果中最近的向量，请确保：</p><p><code>0</code> &lt;= <code>range_filter</code> &lt;= distance &lt; <code>radius</code> &lt; <code>dim(vector)</code></p></td>
    </tr>
 </table>
 
@@ -2082,11 +2082,11 @@ search_parameters = {
    </tr>
    <tr>
      <td><p><code>params.radius</code></p></td>
-     <td><p>查询向量与候选向量间的最小相似度。</p><p>取值范围为 [1, nlist<sub>[1]</sub>]。</p></td>
+     <td><p>查询向量与候选向量间的最小相似度。</p><p>其取值范围与当前使用的相似度类型有关。如果您使用了 L2 相似度类型，其取值范围为 [0, ∞)；如果您选择使用 COSINE 相似度类型，其取值范围为 [-1,1]。关于各相似度类型的取值范围可以参考<a href="./search-metrics-explained">相似度类型</a>。</p></td>
    </tr>
    <tr>
      <td><p><code>params.range_filter</code></p></td>
-     <td><p>相似度范围，可细化搜索范围，只包括在此范围内的向量。</p><p>取值范围为 [top-K<sub>[2]</sub>, ∞]。</p></td>
+     <td><p>相似度范围，可细化搜索范围，只包括在此范围内的向量。</p><p>其取值范围与当前使用的相似度类型有关。如果您使用了 L2 相似度类型，其取值范围为 [0, ∞)；如果您选择使用 COSINE 相似度类型，其取值范围为 [-1,1]。关于各相似度类型的取值范围可以参考<a href="./search-metrics-explained">相似度类型</a>。</p></td>
    </tr>
 </table>
 
