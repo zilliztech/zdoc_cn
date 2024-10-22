@@ -85,7 +85,7 @@ import Admonition from '@theme/Admonition';
        </tr>
        <tr>
          <td><p><code>static_configs.targets</code></p></td>
-         <td><p>Prometheus 将要抓取的静态目标，设置为 <code>api.cloud.zilliz.com</code>， 即 Zilliz Cloud RESTful API 的主机地址。</p></td>
+         <td><p>Prometheus 将要抓取的静态目标， 即 Zilliz Cloud RESTful API 的主机地址。设置为 <code>api.cloud.zilliz.com.cn</code>。</p></td>
        </tr>
     </table>
 

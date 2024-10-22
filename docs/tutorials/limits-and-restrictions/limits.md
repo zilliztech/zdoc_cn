@@ -299,7 +299,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>向量字段（每个 Collection）</p></td>
-     <td><p>1</p></td>
+     <td><p>4</p></td>
      <td><p>即将支持多向量功能，敬请期待。</p></td>
    </tr>
 </table>

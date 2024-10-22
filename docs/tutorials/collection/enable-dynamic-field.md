@@ -74,9 +74,8 @@ index_params.add_index(
 
 index_params.add_index(
     field_name="vector",
-    index_type="IVF_FLAT",
-    metric_type="L2",
-    params={"nlist": 1024}
+    index_type="AUTOINDEX",
+    metric_type="L2"
 )
 
 client.create_collection(
@@ -210,7 +209,7 @@ const index_params = [{
     index_type: "STL_SORT"
 },{
     field_name: "vector",
-    index_type: "IVF_FLAT",
+    index_type: "AUTOINDEX",
     metric_type: "IP",
     params: { nlist: 1024}
 }]
@@ -439,7 +438,7 @@ res = client.search(
     collection_name="test_collection",
     data=query_vectors,
     filter="color in [\"red\", \"green\"]",
-    search_params={"metric_type": "L2", "params": {"nprobe": 10}},
+    search_params={"metric_type": "L2"},
     limit=3
 )
 

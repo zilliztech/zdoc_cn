@@ -110,6 +110,12 @@ search(
 
             The value defaults to **1**, and ranges from **1** to **5**. Increasing the value results in a higher recall rate with degraded search performance.
 
+        - **page_retain_order** (*bool*) -
+
+            Whether to retain the order of the search result when `offset` is provided. 
+
+            This parameter applies only when you also set `radius`.
+
     For details on other applicable search parameters, read [AUTOINDEX Explained](/docs/autoindex-explained) to get more.
 
 - **timeout** (*float* | *None*) -
@@ -137,10 +143,6 @@ search(
         The number of decimal places that Zilliz Cloud rounds the calculated distances to.
 
         The value defaults to **-1**, indicating that Zilliz Cloud skips rounding the calculated distances and returns the raw value.
-
-    - **page_retain_order** (*bool*) -
-
-        Whether to retain the order of the search result when `offset` is provided.
 
 **RETURN TYPE:**
 
