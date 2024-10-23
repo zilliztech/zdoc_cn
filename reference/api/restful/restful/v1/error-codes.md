@@ -8,7 +8,7 @@ sidebar_position: 2
 
 # 错误码
 
-您可在本页查找 Zilliz Cloud API 的错误码，以便更好地理解 API 调用过程中可能遇到的问题。
+您可在本页查找 Zilliz Cloud RESTful API (v1) 的错误码，以便更好地理解接口调用过程中可能遇到的问题。
 
 
 **80000**

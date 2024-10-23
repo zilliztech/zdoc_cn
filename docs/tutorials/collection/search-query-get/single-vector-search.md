@@ -447,7 +447,7 @@ res = client.search(
     collection_name="quick_setup",
     data=[query_vector],
     limit=3, # The number of results to return
-    search_params={"metric_type": "IP", "params": {"nprobe": 10}}
+    search_params={"metric_type": "IP"}
 )
 
 print(res)
@@ -606,7 +606,7 @@ res = client.search(
     collection_name="quick_setup",
     data=query_vectors, 
     limit=2,
-    search_params={"metric_type": "IP", "params": {"nprobe": 10}}
+    search_params={"metric_type": "IP"}
 )
 
 print(res) # Two sets of results are to return
@@ -801,7 +801,7 @@ res = client.search(
     collection_name="quick_setup",
     data=[query_vector],
     limit=5,
-    search_params={"metric_type": "IP", "params": {"nprobe": 10}},
+    search_params={"metric_type": "IP"},
     partition_names=["red"]
 )
 
@@ -1056,7 +1056,7 @@ res = client.search(
     collection_name="quick_setup",
     data=[query_vector],
     limit=5,
-    search_params={"metric_type": "IP", "params": {"nprobe": 10}},
+    search_params={"metric_type": "IP"},
     partition_names=["blue"]
 )
 
@@ -1316,7 +1316,7 @@ res = client.search(
     collection_name="quick_setup",
     data=[query_vector],
     limit=5,
-    search_params={"metric_type": "IP", "params": {"nprobe": 10}},
+    search_params={"metric_type": "IP"},
     output_fields=["color"]
 )
 
@@ -1503,7 +1503,7 @@ res = client.search(
     collection_name="quick_setup",
     data=[query_vector],
     limit=5,
-    search_params={"metric_type": "IP", "params": {"nprobe": 10}},
+    search_params={"metric_type": "IP"},
     filter='color_tag like "red%"',
     output_fields=["color_tag"]
 )
@@ -1942,27 +1942,27 @@ console.log(res.results)
    <tr>
      <td><p><code>L2</code></p></td>
      <td><p>较小的 L2 距离表示更高的相似性。</p></td>
-     <td><p>要排除结果中最近的向量，请确保：</p><p><code>range_filter</code> &lt;= distance &lt; <code>radius</code></p></td>
+     <td><p>要排除结果中最近的向量，请确保：</p><p><code>0</code> &lt;= <code>range_filter</code> &lt;= distance &lt; <code>radius</code> &lt; <code>∞</code></p></td>
    </tr>
    <tr>
      <td><p><code>IP</code></p></td>
      <td><p>较大的 IP 距离表示更高的相似性。</p></td>
-     <td><p>要排除结果中最近的向量，请确保：</p><p><code>radius</code> &lt; distance &lt;= <code>range_filter</code></p></td>
+     <td><p>要排除结果中最近的向量，请确保：</p><p><code>-1</code> &lt;= <code>radius</code> &lt; distance &lt;= <code>range_filter</code> &lt;= <code>1</code></p></td>
    </tr>
    <tr>
      <td><p><code>COSINE</code></p></td>
      <td><p>较大的 cosine 值表示更高的相似性。</p></td>
-     <td><p>要排除结果中最近的向量，请确保：</p><p><code>radius</code> &lt; distance &lt;= <code>range_filter</code></p></td>
+     <td><p>要排除结果中最近的向量，请确保：</p><p><code>-1</code> &lt;= <code>radius</code> &lt; distance &lt;= <code>range_filter</code> &lt;= <code>1</code></p></td>
    </tr>
    <tr>
      <td><p><code>JACCARD</code> <sup>(Beta)</sup></p></td>
      <td><p>较小的 Jaccard 距离表示更高的相似性。</p></td>
-     <td><p>要排除结果中最近的向量，请确保：</p><p><code>range_filter</code> &lt;= distance &lt; <code>radius</code></p></td>
+     <td><p>要排除结果中最近的向量，请确保：</p><p><code>0</code> &lt;= <code>range_filter</code> &lt;= distance &lt; <code>radius</code> &lt;= <code>1</code></p></td>
    </tr>
    <tr>
      <td><p><code>HAMMING</code> <sup>(Beta)</sup></p></td>
      <td><p>较小的 Hamming 距离表示更高的相似性。</p></td>
-     <td><p>要排除结果中最近的向量，请确保：</p><p><code>range_filter</code> &lt;= distance &lt; <code>radius</code></p></td>
+     <td><p>要排除结果中最近的向量，请确保：</p><p><code>0</code> &lt;= <code>range_filter</code> &lt;= distance &lt; <code>radius</code> &lt; <code>dim(vector)</code></p></td>
    </tr>
 </table>
 
@@ -1988,10 +1988,7 @@ client.load_collection("group_search") # Collection name
 res = client.search(
     collection_name="group_search", # Collection name
     data=[[0.14529211512077012, 0.9147257273453546, 0.7965055218724449, 0.7009258593102812, 0.5605206522382088]], # Query vector
-    search_params={
-    "metric_type": "L2",
-    "params": {"nprobe": 10},
-    }, # Search parameters
+    search_params={"metric_type": "L2"}, # Search parameters
     limit=10, # Max. number of search results to return
     group_by_field="doc_id", # Group results by document ID
     output_fields=["doc_id", "passage_id"]
@@ -2021,10 +2018,7 @@ client.load_collection("group_search") # Collection name
 res = client.search(
     collection_name="group_search", # Collection name
     data=query_passage_vector, # Replace with your query vector
-    search_params={
-    "metric_type": "L2",
-    "params": {"nprobe": 10},
-    }, # Search parameters
+    search_params={"metric_type": "L2"}, # Search parameters
     limit=10, # Max. number of search results to return
     # group_by_field="doc_id", # Group results by document ID
     output_fields=["doc_id", "passage_id"]
@@ -2064,7 +2058,6 @@ print(doc_ids)
 search_parameters = {
     'metric_type': 'L2',
     'params': {
-        'nprobe': 10,
         'level': 1，
         'radius': 1.0
         'range_filter': 0.8
@@ -2084,20 +2077,16 @@ search_parameters = {
      <td><p>度量向量 embedding 间相似度的方法。</p><p>可选值为 <code>IP</code>、<code>L2</code>、<code>COSINE</code>。默认按已加载（load）的索引文件设定。</p></td>
    </tr>
    <tr>
-     <td><p><code>params.nprobe</code></p></td>
-     <td><p>搜索时查询的单位数。</p><p>取值范围为 [1, nlist<sub>[1]</sub>]。</p></td>
-   </tr>
-   <tr>
      <td><p><code>params.level</code></p></td>
      <td><p>Search 的精度等级。</p><p>可选值为 <code>1</code>、<code>2</code>、<code>3</code>，默认为 <code>1</code>。较高的值能提高精确度，但会降低性能。</p></td>
    </tr>
    <tr>
      <td><p><code>params.radius</code></p></td>
-     <td><p>查询向量与候选向量间的最小相似度。</p><p>取值范围为 [1, nlist<sub>[1]</sub>]。</p></td>
+     <td><p>查询向量与候选向量间的最小相似度。</p><p>其取值范围与当前使用的相似度类型有关。如果您使用了 L2 相似度类型，其取值范围为 [0, ∞)；如果您选择使用 COSINE 相似度类型，其取值范围为 [-1,1]。关于各相似度类型的取值范围可以参考<a href="./search-metrics-explained">相似度类型</a>。</p></td>
    </tr>
    <tr>
      <td><p><code>params.range_filter</code></p></td>
-     <td><p>相似度范围，可细化搜索范围，只包括在此范围内的向量。</p><p>取值范围为 [top-K<sub>[2]</sub>, ∞]。</p></td>
+     <td><p>相似度范围，可细化搜索范围，只包括在此范围内的向量。</p><p>其取值范围与当前使用的相似度类型有关。如果您使用了 L2 相似度类型，其取值范围为 [0, ∞)；如果您选择使用 COSINE 相似度类型，其取值范围为 [-1,1]。关于各相似度类型的取值范围可以参考<a href="./search-metrics-explained">相似度类型</a>。</p></td>
    </tr>
 </table>
 

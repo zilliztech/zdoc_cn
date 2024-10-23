@@ -225,9 +225,8 @@ index_params.add_index(
 
 index_params.add_index(
     field_name="vector",
-    index_type="IVF_FLAT",
-    metric_type="L2",
-    params={"nlist": 1024}
+    index_type="AUTOINDEX",
+    metric_type="L2"
 )
 
 client.create_collection(
@@ -369,7 +368,7 @@ const fields = [
 // 2.2 Prepare index parameters
 const index_params = [{
     field_name: "vector",
-    index_type: "IVF_FLAT",
+    index_type: "AUTOINDEX",
     metric_type: "IP",
     params: { nlist: 1024}
 }]
@@ -533,10 +532,7 @@ res = client.search(
     data=query_vectors,
     # highlight-next-line
     filter='color["label"] in ["red"]',
-    search_params={
-        "metric_type": "L2",
-        "params": {"nprobe": 16}
-    },
+    search_params={"metric_type": "L2"},
     output_fields=["id", "color"],
     limit=3
 )

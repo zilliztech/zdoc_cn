@@ -2,7 +2,7 @@
 title: "管理 Replica | Cloud"
 slug: /manage-replica
 sidebar_label: "管理 Replica"
-beta: PUBLIC
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和资源的拷贝。使用 Replica 可以提升查询吞吐量和系统稳定性。 | Cloud"
 type: origin
