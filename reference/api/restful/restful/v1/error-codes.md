@@ -6,7 +6,7 @@ notebook: FALSE
 sidebar_position: 2
 ---
 
-# 错误码
+# 错误码 (v1)
 
 您可在本页查找 Zilliz Cloud RESTful API (v1) 的错误码，以便更好地理解接口调用过程中可能遇到的问题。
 
