@@ -26,7 +26,7 @@ import Admonition from '@theme/Admonition';
 
 ## Partition Key{#partition-key}
 
-您可以将 Collection 的特定字段设置为 Partition Key。这样，Zilliz Cloud 将根据此字段中各自值的哈希值，将传入r Entity 分配到不同的 Partition 中。
+您可以将 Collection 的特定字段设置为 Partition Key。这样，Zilliz Cloud 将根据此字段中各自值的哈希值，将传入的 Entity 分配到不同的 Partition 中。
 
 您可以在 Collection Schema 中设置 Partition Key 的名称。
 
@@ -71,7 +71,7 @@ filter='partition_key in ["x", "y", "z"] && <other conditions>'
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>目前，Partition-key Isolation 功能处于公测阶段，仅适用于性能性 Dedicated 集群。如果您有兴趣使用该功能，请<a href="https://support.zilliz.com/hc/en-us">联系我们</a>。</p>
+<p>目前，Partition-key Isolation 功能处于公测阶段，仅适用于性能型 Dedicated 集群。如果您有兴趣使用该功能，请<a href="https://support.zilliz.com/hc/en-us">联系我们</a>。</p>
 
 </Admonition>
 
@@ -121,3 +121,4 @@ collection.set_properties({"partitionkey.isolation": "true"})
 </Admonition>
 
 有关所有可能的多租户策略，请参阅[多租户](https://milvus.io/docs/multi_tenancy.md)。
+
