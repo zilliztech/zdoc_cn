@@ -7,7 +7,7 @@ notebook: FALSE
 description: "此次发布引入了诸多新工具和功能增加。主要包括：针对使用 Pipelines 从对象存储中采集数据的新 Connectors、提升搜索相关性的 Rerankers、针对系统静态分析的新指标监控 API、以及跨云数据导入功能。这些功能扩大了数据采集范围、提高了搜索精度和运维洞察能力，让云上向量数据度的管理更加便捷。 | Cloud"
 type: origin
 token: Y9hnwYoyIi9xgZkGG7Ycexl4nlb
-sidebar_position: 5
+sidebar_position: 2
 keywords: 
   - 向量数据库
   - zilliz
@@ -65,4 +65,8 @@ Zilliz Cloud Pipelines 已经集成了 Rerankers，为需要提升搜索结果�
 ## 跨云数据导入和数据迁移{#cross-cloud-data-import-and-migration}
 
 Zilliz Cloud 用户可以方便的从他们的阿里云 OSS 或腾讯云 COS 向 Zilliz Cloud 上任何数据库导入数据了。详细情况，可参考[数据导入](./data-import)和[数据迁移](./migrations)。
+
+## EOS 通告：经济型 CU 下线{#end-of-service-announcement-cost-optimized-cu}
+
+本次发布后，为了保证我们能够集中资源为您提供更好服务，经济型 CU 不再提供服务。
 
