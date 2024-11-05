@@ -16,7 +16,8 @@ export const getBaseUrl = (endpoint, lang, pubTarget) => {
     }
 
     if (condition && endpoint.includes('v2')) {
-        server = "https://api.cloud.zilliz.com.cn"
+        server = "https://api.cloud.zilliz.com.cn";
+        children = `export BASE_URL="${server}"`
     }
 
     if (!condition) {
