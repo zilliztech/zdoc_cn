@@ -17,11 +17,11 @@ Control Plane 提供了 **Cloud**、**Cluster**、**Import** 和 **Pipeline** �
     以下是一个列出所有可用云提供商的示例。
 
     ```shell
-    export CLOUD_REGION="gcp-us-west1"
+    export CLOUD_REGION="ali-cn-hangzhou"
     export API_KEY="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
     curl --request GET \
-        --url "https://api.cloud.zilliz.com/v2/clouds" \
+        --url "https://api.cloud.zilliz.com.cn/v2/clouds" \
         --header "Authorization: Bearer ${API_KEY}" \
         --header "accept: application/json" \
         --header "content-type: application/json"
