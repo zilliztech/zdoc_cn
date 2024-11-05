@@ -66,3 +66,7 @@ Zilliz Cloud Pipelines 已经集成了 Rerankers，为需要提升搜索结果�
 
 Zilliz Cloud 用户可以方便的从他们的阿里云 OSS 或腾讯云 COS 向 Zilliz Cloud 上任何数据库导入数据了。详细情况，可参考[数据导入](./data-import)和[数据迁移](./migrations)。
 
+## EOS 通告：经济型 CU 下线{#end-of-service-announcement-cost-optimized-cu}
+
+本次发布后，为了保证我们能够集中资源为您提供更好服务，经济型 CU 不再提供服务。
+

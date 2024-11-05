@@ -277,8 +277,8 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>Dedicated 版集群</p></td>
-     <td><p>4,096</p></td>
-     <td><p>在 Dedicated 版集群中，您可以为每个 Collection 创建最多 4,096 个 Partition。</p></td>
+     <td><p>1,024</p></td>
+     <td><p>在 Dedicated 版集群中，您可以为每个 Collection 创建最多 1,024 个 Partition。</p></td>
    </tr>
 </table>
 

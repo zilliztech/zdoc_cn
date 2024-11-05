@@ -15,6 +15,11 @@ export const getBaseUrl = (endpoint, lang, pubTarget) => {
         prompt = i18n[lang]["admonition.cloud.region"]
     }
 
+    if (condition && endpoint.includes('v2')) {
+        server = "https://api.cloud.zilliz.com.cn";
+        children = `export BASE_URL="${server}"`
+    }
+
     if (!condition) {
         server = "https://${CLUSTER_ENDPOINT}"
         children = `export CLUSTER_ENDPOINT=""`
