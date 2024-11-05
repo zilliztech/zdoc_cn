@@ -20,7 +20,7 @@ The versioning is implemented using the URL path versioning scheme, where the ve
 For example, the V2 version of the API endpoint for listing all the available clouds can be accessed using the following URL:
 
 ```
-https://api.cloud.zilliz.com/v2/clouds
+https://api.cloud.zilliz.com.cn/v2/clouds
 ```
 
 And the V2 version of the API endpoint for creating a new collection can be accessed using the following URL:
