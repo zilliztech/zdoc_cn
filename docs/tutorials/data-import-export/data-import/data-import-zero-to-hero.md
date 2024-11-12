@@ -96,7 +96,7 @@ API_KEY=""
 TOKEN=""
 CLUSTER_ID="" # Zilliz Cloud 集群 ID，如 "in01-xxxxxxxxxxxxxxx"
 CLOUD_REGION=""
-CLOUD_API_ENDPOINT="controller.api.{0}.cloud.zilliz.com.cn".format(CLOUD_REGION)
+CLOUD_API_ENDPOINT="api.cloud.zilliz.com.cn"
 COLLECTION_NAME=""
 
 # 远程对象存储桶访问参数
@@ -116,7 +116,7 @@ String TOKEN = "";
 String API_KEY = "";
 String CLUSTER_ID = ""; // Zilliz Cloud 集群 ID，如 "in01-xxxxxxxxxxxxxxx"
 String CLOUD_REGION = "";
-String CLOUD_API_ENDPOINT = String.format("controller.api.%s.cloud.zilliz.com.cn", CLOUD_REGION);
+String CLOUD_API_ENDPOINT = "api.cloud.zilliz.com.cn";
 String COLLECTION_NAME = "";
 
 // Configs for remote bucket
