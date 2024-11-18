@@ -336,6 +336,10 @@ const config = {
               {
                 label: "活动",
                 href: "https://zilliz.com.cn/event"
+              },
+              {
+                label: "三方集成 Notebooks",
+                href: "https://zilliz.com/learn/milvus-notebooks"
               }
             ],
           },
