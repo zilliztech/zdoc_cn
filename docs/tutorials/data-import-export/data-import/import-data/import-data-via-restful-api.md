@@ -66,7 +66,7 @@ curl --request POST \
         "clusterId": "inxx-xxxxxxxxxxxxxxx",
         "collectionName": "medium_articles",
         "partitionName": "",
-        "objectUrl": "https://s3.us-west-2.amazonaws.com/publicdataset.zillizcloud.com/medium_articles_2020_dpr/medium_articles_2020_dpr.json",
+        "objectUrl": "https://bucket-name.oss-cn-hangzhou.aliyuncs.com/publicdataset.zillizcloud.com/medium_articles_2020_dpr/medium_articles_2020_dpr.json",
         "accessKey": "",
         "secretKey": ""
     }'
@@ -98,7 +98,7 @@ curl --request GET \
 {
     "code": 0,
     "data": {
-        "jobID": "job-xxxxxxxxxxxxxxxxxxxxx"
+        "jobId": "job-xxxxxxxxxxxxxxxxxxxxx"
     }
 }
 ```
