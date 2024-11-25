@@ -91,7 +91,7 @@ compile 'io.milvus:milvus-sdk-java:2.4.8'
 
 ```python
 ## The value of the URL is fixed.
-CLOUD_API_ENDPOINT = "https://api.cloud.zilliz.com"
+CLOUD_API_ENDPOINT = "https://api.cloud.zilliz.com.cn"
 API_KEY=""
 
 # Configs for Zilliz Cloud cluster
