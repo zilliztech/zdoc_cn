@@ -104,6 +104,8 @@ import TabItem from '@theme/TabItem';
            </tr>
         </table>
 
+        ![add-index-doc-function-cn](/img/add-index-doc-function-cn.png)
+
     1. 点击**添加**。
 
 1. (可选) 添加 **PRESERVE** Function。**PRESERVE** Function 在 Collection 中添加标量字段，用于保留文档元数据。
@@ -130,11 +132,15 @@ import TabItem from '@theme/TabItem';
 
         </Admonition>
 
+        ![add-preserve-function-cn](/img/add-preserve-function-cn.png)
+
     1. 点击**添加**。
 
 1. 点击**创建 Ingestion Pipeline**。
 
 1. 继续创建 Search pipeline 和 Deletion pipeline。创建的 Search 和 Deletion Pipeline 可适应配套刚才创建的Ingestion Pipeline。
+
+    ![auto-create-doc-search-and-delete-pipelines-cn](/img/auto-create-doc-search-and-delete-pipelines-cn.png)
 
     <Admonition type="info" icon="📘" title="说明">
 
@@ -501,6 +507,8 @@ curl --request POST \
              <td><p>智源研究院（BAAI）发布的开源重新排序（Reranker）模型。该模型采用交叉编码器架构，并托管于 Zilliz Cloud 上。</p></td>
            </tr>
         </table>
+
+        ![add-search-doc-function-cn](/img/add-search-doc-function-cn.png)
 
     1. 点击**添加**。
 
@@ -874,240 +882,6 @@ curl --request POST \
   "code": 200,
   "data": {
     "num_deleted_chunks": 567
-  }
-}
-```
-
-</TabItem>
-
-</Tabs>
-
-以下操作可用于管理此前创建的 Pipeline。
-
-### 查看 Pipeline{#view-pipeline}
-
-<Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"cURL","value":"Bash"}]}>
-
-<TabItem value="Cloud Console">
-
-点击左侧导航栏中的 **Pipelines**。选中 **Pipelines** 选项卡。您可以查看所有已创建的 Pipelines。 
-
-![view-pipelines-on-web-ui-cn](/img/view-pipelines-on-web-ui-cn.png)
-
-点击特定 Pipeline 名称，还可以查看其详情，包括基本信息、总用量、Functions、关联的 Connectors 等。
-
-![view-pipeline-details-cn](/img/view-pipeline-details-cn.png)
-
-<Admonition type="info" icon="📘" title="说明">
-
-<p>总用量非实时更新，数据统计可能会有几小时延迟。</p>
-
-</Admonition>
-
-您还可以查看所有 Pipelines 相关事件。
-
-![view-pipelines-activities-on-web-ui-cn](/img/view-pipelines-activities-on-web-ui-cn.png)
-
-</TabItem>
-
-<TabItem value="Bash">
-
-调用以下 API 查看所有 Pipelines 或查看某一特定 Pipeline 详情。
-
-- **查看所有 Pipelines**
-
-    根据以下示例并指定项目 ID `projectId`。了解[如何获取项目 ID](https://support.zilliz.com.cn/hc/zh-cn/articles/23085669594011-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E9%A1%B9%E7%9B%AE-ID)。
-
-    ```bash
-    curl --request GET \
-        --header "Content-Type: application/json" \
-        --header "Authorization: Bearer ${YOUR_API_KEY}" \
-        --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines?projectId=proj-xxxx"
-    ```
-
-    如果请求返回以下类似内容，则表示操作成功：
-
-    ```bash
-    {
-      "code": 200,
-      "data": [
-        {
-          "pipelineId": "pipe-xxxx",
-          "name": "my_doc_ingestion_pipeline",
-          "type": "INGESTION",
-          "description": "A pipeline that splits a doc file into chunks and generates embeddings. It also stores the publish_year with each chunk.",
-          "status": "SERVING",
-          "functions": [
-            {
-              "action": "INDEX_DOC",
-              "name": "index_my_doc",
-              "inputField": "doc_url",
-              "language": "ENGLISH",
-              "chunkSize": 500,
-              "embedding": "zilliz/bge-base-en-v1.5"
-            },
-            {
-              "action": "PRESERVE",
-              "name": "keep_doc_info",
-              "inputField": "publish_year",
-              "outputField": "publish_year",
-              "fieldType": "Int16"
-            }
-          ],
-          "clusterId": "in03-***************",
-          "collectionName": "my_collection"
-        },
-        {
-          "pipelineId": "pipe-xxxx",
-          "name": "my_text_search_pipeline",
-          "type": "SEARCH",
-          "description": "A pipeline that receives text and search for semantically similar doc chunks",
-          "status": "SERVING",
-          "functions": [
-            {
-              "action": "SEARCH_DOC_CHUNK",
-              "name": "search_chunk_text_and_title",
-              "inputField": "query_text",
-              "clusterId": "in03-***************",
-              "collectionName": "my_collection",
-              "embedding": "zilliz/bge-base-en-v1.5"
-            }
-          ]
-        },
-        {
-          "pipelineId": "pipe-xxxx",
-          "name": "my_doc_deletion_pipeline",
-          "type": "DELETION",
-          "description": "A pipeline that deletes all info associated with a doc",
-          "status": "SERVING",
-          "functions": [
-            {
-              "action": "PURGE_DOC_INDEX",
-              "name": "purge_chunks_by_doc_name",
-              "inputField": "doc_name"
-            }
-          ],
-          "clusterId": "in03-***************",
-          "collectionName": "my_collection"
-        }
-      ]
-    }
-    ```
-
-- **查看特定 Pipeline 详情**
-
-    根据以下示例查看某一 Pipeline 详情。
-
-    ```bash
-    curl --request GET \
-        --header "Content-Type: application/json" \
-        --header "Authorization: Bearer ${YOUR_API_KEY}" \
-        --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}"
-    ```
-
-    如果请求返回以下类似内容，则表示操作成功：
-
-    ```bash
-    {
-      "code": 200,
-      "data": {
-        "pipelineId": "pipe-xxxx",
-        "name": "my_doc_ingestion_pipeline",
-        "type": "INGESTION",
-        "description": "A pipeline that splits a doc file into chunks and generates embeddings. It also stores the publish_year with each chunk.",
-        "status": "SERVING",
-        "functions": [
-          {
-            "action": "INDEX_DOC",
-            "name": "index_my_doc",
-            "inputField": "doc_url",
-            "language": "ENGLISH",
-            "chunkSize": 500,
-            "embedding": "zilliz/bge-base-en-v1.5"
-          },
-          {
-            "action": "PRESERVE",
-            "name": "keep_doc_info",
-            "inputField": "publish_year",
-            "outputField": "publish_year",
-            "fieldType": "Int16"
-          }
-        ],
-        "clusterId": "in03-***************",
-        "collectionName": "my_collection"
-      }
-    }
-    ```
-
-</TabItem>
-
-</Tabs>
-
-### 删除 Pipeline{#delete-pipeline}
-
-您可以删除不再需要使用的 Pipelines。该操作仅删除 Pipeline，不会影响自动创建的 Collection。
-
-<Admonition type="caution" icon="🚧" title="警告">
-
-<ul>
-<li><p>该操作仅删除 Pipeline，不会影响自动创建的 Collection。</p></li>
-<li><p>Pipeline 一旦删除后不可恢复，请谨慎操作。</p></li>
-<li><p>删除 Ingestion pipeline 时不会影响其相关联的 Collection。您的数据十分安全。</p></li>
-</ul>
-
-</Admonition>
-
-<Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"cURL","value":"Bash"}]}>
-
-<TabItem value="Cloud Console">
-
-如需删除不再使用的 Pipeline，请点击操作栏中的**“...”**按钮并选择**删除**。
-
-![delete-pipeline-cn](/img/delete-pipeline-cn.png)
-
-</TabItem>
-
-<TabItem value="Bash">
-
-根据以下示例删除 Pipelines。
-
-```bash
-curl --request GET \
-    --header "Content-Type: application/json" \
-    --header "Authorization: Bearer ${YOUR_API_KEY}" \
-    --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}"
-```
-
-如果请求返回以下类似内容，则表示操作成功：
-
-```bash
-{
-  "code": 200,
-  "data": {
-    "pipelineId": "pipe-6ca5dd1b4672659d3c3487",
-    "name": "my_doc_ingestion_pipeline",
-    "type": "INGESTION",
-    "description": "A pipeline that splits a doc file into chunks and generates embeddings. It also stores the publish_year with each chunk.",
-    "status": "SERVING",
-    "functions": [
-      {
-        "action": "INDEX_DOC",
-        "name": "index_my_doc",
-        "inputField": "doc_url",
-        "language": "ENGLISH",
-        "chunkSize": 500,
-        "embedding": "zilliz/bge-base-en-v1.5"
-      },
-      {
-        "action": "PRESERVE",
-        "name": "keep_doc_info",
-        "inputField": "publish_year",
-        "outputField": "publish_year",
-        "fieldType": "Int16"
-      }
-    ],
-    "clusterId": "in03-***************",
-    "collectionName": "my_collection"
   }
 }
 ```

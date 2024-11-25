@@ -31,20 +31,6 @@ Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件�
 
 ## 配置告警渠道{#set-up-notification-channels}
 
-目前，Zilliz Cloud 提供以下告警渠道的支持：
-
-- [邮件](./manage-notification-channels#email)：通过指定用户的电子邮件地址接收告警通知。
-
-- [企业微信](./manage-notification-channels#wecom)：通过企业微信接收告警通知。
-
-- [短信](./manage-notification-channels#sms)：通过指定手机号码接收告警通知。
-
-- [钉钉](./manage-notification-channels#dingtalk)：通过钉钉接收告警通知。
-
-- [飞书](./manage-notification-channels#lark)：通过飞书群组接收告警通知。
-
-- [自定义 webhook](./manage-notification-channels#webhook)：通过配置自定义的 webhook 通知渠道，实现更灵活的告警通知方式。
-
 您可以在 Zilliz Cloud 控制台的**编辑告警**或**新建告警**对话框中访问告警渠道管理页面。
 
 ![zh-manage-alert-channel](/img/zh-manage-alert-channel.png)

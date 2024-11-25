@@ -156,9 +156,11 @@ backup
 
 ## 将数据迁移到 Zilliz Cloud{#migrate-data-to-zilliz-cloud}
 
+![zh_migrate_from_milvus_via_backup_file](/img/zh_migrate_from_milvus_via_backup_file.png)
+
 1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)。
 
-1. 进入目标项目，选择**数据迁移** > **从 Milvus 迁移** > **通过备份文件**。
+1. 进入目标项目，选择**数据迁移** > **Milvus** > **通过备份文件**。
 
 1. 在**从 Milvus 迁移数据**页面上，
 
@@ -177,8 +179,6 @@ backup
             - **Session**：选择此选项以获取有效期有限的临时凭据，适合在特定用户会话期间进行短期访问。
 
 1. 单击**迁移**。
-
-![zh_migrate_from_milvus_via_backup_file](/img/zh_migrate_from_milvus_via_backup_file.png)
 
 ## 查看迁移进度{#monitor-the-migration-process}
 

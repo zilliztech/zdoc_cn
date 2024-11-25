@@ -109,8 +109,6 @@ Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关�
 
 </Admonition>
 
-![zh-edit-organization-alert](/img/zh-edit-organization-alert.png)
-
 ## 开启或关闭组织告警{#turn-on-or-off-an-organization-alert}
 
 要快速开启或关闭一个告警，在**操作**栏中选择**开启**或**关闭**。
@@ -121,13 +119,9 @@ Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关�
 
 </Admonition>
 
-![zh-turn-on-or-off-organization-alert](/img/zh-turn-on-or-off-organization-alert.png)
-
 ## 查看告警历史{#view-alert-history}
 
 在**告警历史**页签，查看已触发的告警历史列表。您可以根据告警项、告警等级和告警时间范围筛选满足条件的告警。
-
-![zh-view_alert_history](/img/zh-view_alert_history.png)
 
 ## 文档推荐{#related-topics}
 

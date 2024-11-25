@@ -31,13 +31,15 @@ import Admonition from '@theme/Admonition';
 
 当您登录到 Zilliz Cloud 控制台后，会进入组织列表页面。在这里，您可以查看已加入的组织。
 
-要快速查看您加入的所有组织，点击左上角的**所有组织**。
-
 ![zh-view-organizations](/img/zh-view-organizations.png)
+
+要快速查看您加入的所有组织，点击顶部导航栏中的组织名，然后选择**查看所有组织**。
+
+![zh-view-all-organizations](/img/zh-view-all-organizations.png)
 
 ## 编辑组织名称{#edit-organization-name}
 
-要编辑组织名称，您必须是[组织管理员](./resource-hierarchy#organization-roles)。
+要编辑组织名称，您必须是[组织管理员](./resource-hierarchy)。
 
 您可以通过以下任一种方式编辑组织名称：
 

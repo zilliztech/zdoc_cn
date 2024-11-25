@@ -28,7 +28,7 @@ import Admonition from '@theme/Admonition';
 
 ## 邀请用户加入项目{#invite-a-user-to-join-a-project}
 
-要邀请用户加入项目，您必须是[组织管理员](./resource-hierarchy#organization-roles)或[项目管理员](./resource-hierarchy#project-roles)。
+要邀请用户加入项目，您必须是[组织管理员](./resource-hierarchy)或[项目管理员](./resource-hierarchy)。
 
 输入您希望邀请的用户的电子邮箱地址。他们将通过电子邮件收到邀请，并必须在 48 小时内接受邀请以加入项目。在邀请被接受之前，您可以随时撤销或重新发送该邀请。
 
@@ -43,7 +43,7 @@ import Admonition from '@theme/Admonition';
 ## 撤销或重发邀请{#revoke-or-resend-an-invitation}
 
 当您邀请现有组织成员加入同一组织内的项目时，他们会自动获得对项目的访问权限，无需接收单独的邀请。但如果您邀请用户加入他们还未加入的组织的项目，他们将会收到加入该组织的邀请，并会获得项目内指定项目的访问权限。
-要撤销或重发邀请，你必须是[组织管理员](./resource-hierarchy#organization-roles)或[项目管理员](./resource-hierarchy#project-roles)。
+要撤销或重发邀请，你必须是[组织管理员](./resource-hierarchy)或[项目管理员](./resource-hierarchy)。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -57,7 +57,7 @@ import Admonition from '@theme/Admonition';
 
 当用户接受邀请后，他们将成为项目成员。之后，您可以根据需求编辑他们的角色或从项目中移出他们。
 
-要编辑成员角色或移出项目成员，你必须是[组织管理员](./resource-hierarchy#organization-roles)或[项目管理员](./resource-hierarchy#project-roles)。
+要编辑成员角色或移出项目成员，你必须是[组织管理员](./resource-hierarchy)或[项目管理员](./resource-hierarchy)。
 
 ![edit-user-role-or-remove-project-user-zh](/img/edit-user-role-or-remove-project-user-zh.png)
 

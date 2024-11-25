@@ -80,9 +80,13 @@ import Admonition from '@theme/Admonition';
 
     ![zh-ali-create-private-link](/img/zh-ali-create-private-link.png)
 
+    您也可以在**集群详情**页面找到创建私网连接的入口。
+
+    ![zh-tc-create-private-link-from-cluster-detail](/img/zh-tc-create-private-link-from-cluster-detail.png)
+
 1. 在弹出的**创建私网连接**对话框的**主帐号 ID**中，填入上述复制或记录的腾讯云主帐号 ID。
 
-    ![GGrZbPdvLoojPHxvt2jcicHqndg](/img/GGrZbPdvLoojPHxvt2jcicHqndg.png)
+    ![Ot05bTAgBoDYYIx8EgLcRyLDnfe](/img/Ot05bTAgBoDYYIx8EgLcRyLDnfe.png)
 
 1. 单击**添加**完成主帐号 ID 验证。
 

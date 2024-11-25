@@ -43,7 +43,7 @@ import Admonition from '@theme/Admonition';
 
 ## 添加集群用户{#add-a-cluster-user}
 
-要添加集群用户，您必须是[组织管理员](./resource-hierarchy#organization-roles)或[项目管理员](./resource-hierarchy#project-roles)。
+要添加集群用户，您必须是[组织管理员](./resource-hierarchy)或[项目管理员](./resource-hierarchy)。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -69,7 +69,7 @@ import Admonition from '@theme/Admonition';
 
 ## 删除集群用户{#drop-a-cluster-user}
 
-要删除集群用户，您必须是[组织管理员](./resource-hierarchy#organization-roles)或[项目管理员](./resource-hierarchy#project-roles)。
+要删除集群用户，您必须是[组织管理员](./resource-hierarchy)或[项目管理员](./resource-hierarchy)。
 
 <Admonition type="info" icon="📘" title="说明">
 

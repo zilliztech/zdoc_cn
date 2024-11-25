@@ -4,7 +4,7 @@ slug: /use-recycle-bin
 sidebar_label: "使用回收站"
 beta: FALSE
 notebook: FALSE
-description: "为进一步保护您的数据，任何删除的集群都会在回收站种保留 30 天。这样一来不论是因为操作失误还是试用到期或欠费导致集群删除，您都可以在 30 天内安全恢复集群数据。 | Cloud"
+description: "为进一步保护您的数据，删除的 Serverless 和 Dedicated 集群都会在回收站中保留 30 天。这样一来不论是因为操作失误还是试用到期或欠费导致集群删除，您都可以在 30 天内安全恢复集群数据。 | Cloud"
 type: origin
 token: XVQcw6qgxiC31ikfk06cOo1jnch
 sidebar_position: 6
@@ -22,7 +22,7 @@ import Admonition from '@theme/Admonition';
 
 # 使用回收站
 
-为进一步保护您的数据，任何删除的集群都会在回收站种保留 30 天。这样一来不论是因为操作失误还是试用到期或欠费导致集群删除，您都可以在 30 天内安全恢复集群数据。
+为进一步保护您的数据，删除的 Serverless 和 Dedicated 集群都会在回收站中保留 30 天。这样一来不论是因为操作失误还是试用到期或欠费导致集群删除，您都可以在 30 天内安全恢复集群数据。
 
 ## 前提条件{#prerequisites}
 
@@ -51,6 +51,8 @@ import Admonition from '@theme/Admonition';
 <p>集群恢复过程中，其状态将从<strong>创建中</strong>变为<strong>恢复中</strong>，最后变为<strong>运行中</strong>。集群状态变为<strong>运行中</strong>即代表所有被删除的数据已恢复。</p>
 
 </Admonition>
+
+![recycle-bin-cn](/img/recycle-bin-cn.png)
 
 ## 文档推荐{#related-topics}
 

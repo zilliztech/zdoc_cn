@@ -105,5 +105,3 @@ Zilliz Cloud 提供了一个直观的任务中心页面，将同一项目下的�
 
 如果您在查看失败原因后对需要导入的数据文件进行相应调整，您可以重试导入任务。
 
-![retry_failed_job_cn](/img/retry_failed_job_cn.png)
-

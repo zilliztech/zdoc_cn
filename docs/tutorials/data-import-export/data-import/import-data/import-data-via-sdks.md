@@ -354,7 +354,7 @@ from pymilvus import bulk_import
 # Bulk-import your data from the prepared data files
 
 res = bulk_import(
-    url=f"controller.api.{CLOUD_REGION}.cloud.zilliz.com.cn",
+    url="api.cloud.zilliz.com.cn",
     api_key=API_KEY,
     object_url=OBJECT_URL,
     access_key=ACCESS_KEY,
@@ -415,7 +415,7 @@ from pymilvus import get_import_progress
 
 job_id = res.json()['data']['jobId']
 res = get_import_progress(
-    url=f"controller.api.{CLOUD_REGION}.cloud.zilliz.com.cn",
+    url="api.cloud.zilliz.com.cn",
     api_key=API_KEY,
     job_id=job_id,
     cluster_id=CLUSTER_ID # Zilliz Cloud 集群 ID，如 "in01-xxxxxxxxxxxxxxx"
@@ -427,7 +427,7 @@ while res.json()["data"]["readyPercentage"] < 1:
     time.sleep(5)
 
     res = get_import_progress(
-        url=f"controller.api.{CLOUD_REGION}.cloud.zilliz.com.cn",
+        url=f"api.cloud.zilliz.com.cn",
         api_key=API_KEY,
         job_id=job_id,
         cluster_id=CLUSTER_ID
@@ -508,7 +508,7 @@ from pymilvus import list_import_jobs
 # list bulk-import jobs
 
 res = list_import_jobs(
-    url=f"controller.api.{CLOUD_REGION}.cloud.zilliz.com.cn",
+    url="api.cloud.zilliz.com.cn",
     api_key=API_KEY,
     cluster_id=CLUSTER_ID, # Zilliz Cloud 集群 ID，如 "in01-xxxxxxxxxxxxxxx"
     page_size=10,

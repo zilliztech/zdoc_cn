@@ -32,7 +32,7 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>此功能仅适用于 Dedicated 集群且目前正在公测中。</p>
+<p>此功能仅适用于 Dedicated 集群。</p>
 
 </Admonition>
 

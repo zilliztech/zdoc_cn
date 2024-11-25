@@ -39,6 +39,8 @@ import Admonition from '@theme/Admonition';
 
 ## 修改账号邮箱地址{#update-account-email-address}
 
+![update_email_address_cn](/img/update_email_address_cn.png)
+
 <Admonition type="info" icon="📘" title="说明">
 
 <p>修改账号邮箱地址不会影响账单信息和告警接收人。如有需要请自行进行手动更新。</p>
@@ -47,6 +49,8 @@ import Admonition from '@theme/Admonition';
 
 ## 修改手机号码{#update-mobile-phone-number}
 
+![update_mobile_phone_number_cn](/img/update_mobile_phone_number_cn.png)
+
 <Admonition type="info" icon="📘" title="说明">
 
 <p>修改完成后，旧手机号可用于注册新账号。</p>
@@ -54,6 +58,8 @@ import Admonition from '@theme/Admonition';
 </Admonition>
 
 ## 更改密码{#change-account-password}
+
+![change_password_cn](/img/change_password_cn.png)
 
 ## 开启或关闭 MFA{#enable-and-disable-mfa}
 
