@@ -42,7 +42,7 @@ Compaction 过程中会暂时创建新的 Segment，因此会导致 CU 加载容
 
 请尝试以下 2 种方法：
 
-1. 为您的集群[扩容](./manage-cluster#suspend-and-resume-cluster)，选择更大的 CU 大小。集群 CU 大小越大，集群可以处理的数据越多。
+1. 为您的集群[扩容](./manage-cluster#manage-and-configure-clusters)，选择更大的 CU 大小。集群 CU 大小越大，集群可以处理的数据越多。
 
 1. 释放一些已加载但不常用的 Collection。这能够帮助您节省内存用量。
 

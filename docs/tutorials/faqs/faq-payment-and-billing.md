@@ -17,7 +17,7 @@ sidebar_position: 13
 
 ## 目录
 
-- [赠送的 ¥ 300 免费额度是否会过期？](#will-my-300-yuan-credits-expire-how-can-i-extend-the-expiration-of-the-free-credits)
+- [赠送的 ¥ 300 优惠券是否会过期？](#will-my-300-yuan-credits-expire-how-can-i-extend-the-expiration-of-the-free-credits)
 - [数据被移至回收站后是否收费？](#is-data-in-the-recycle-bin-charged)
 - [Zilliz Cloud 组织冻结欠费后，为什么我在阿里云云市场充值了，Zilliz Cloud 组织仍未解冻？](#why-is-my-organization-still-frozen-even-if-i-recharge-my-aliyun-marketplace)
 
@@ -26,9 +26,9 @@ sidebar_position: 13
 
 
 
-### 赠送的 ¥ 300 免费额度是否会过期？ \{#will-my-300-yuan-credits-expire-how-can-i-extend-the-expiration-of-the-free-credits}
+### 赠送的 ¥ 300 优惠券是否会过期？ \{#will-my-300-yuan-credits-expire-how-can-i-extend-the-expiration-of-the-free-credits}
 
-在首次注册后，您可获赠¥ 300 免费额度，有效期 30 天。
+在首次注册后，您可获赠¥ 300 优惠券，有效期 30 天。
 
 ### 数据被移至回收站后是否收费？ \{#is-data-in-the-recycle-bin-charged}
 
