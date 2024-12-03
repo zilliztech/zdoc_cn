@@ -66,9 +66,11 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-## 集群和 CU{#clusters-and-cus}
+## 集群、CU 和 vCU{#clusters-cus-and-vcus}
 
-集群和 CU 数量的限制取决于您的支付方式和订阅版本。
+### 集群{#clusters}
+
+集群数量的限制取决于您的支付方式和订阅版本。
 
 - **未绑定有效支付方式**
 
@@ -95,7 +97,7 @@ import Admonition from '@theme/Admonition';
     <table>
        <tr>
          <th><p><strong>类型</strong></p></th>
-         <th><p><strong>限制</strong></p></th>
+         <th><p><strong>最大数量</strong></p></th>
          <th><p><strong>描述</strong></p></th>
        </tr>
        <tr>
@@ -106,16 +108,60 @@ import Admonition from '@theme/Admonition';
        <tr>
          <td><p>Serverless 版集群</p></td>
          <td><p>无</p></td>
-         <td></td>
+         <td><p>无</p></td>
        </tr>
        <tr>
          <td><p>Dedicated 版集群</p></td>
-         <td><p>CU 规格 * Replica 数量 &lt;=256</p></td>
-         <td><p>在自助操作时，单个集群最多使用 256 个 CU。如果创建了 Replica，CU 规格与 Replica 数量的乘积不得超过 256。</p></td>
+         <td><p>CU 规格总和 &lt; 320</p></td>
+         <td><p>每个组织中的 Dedicated 集群数量上线取决于集群的 CU 规格。组织中所有集群的 CU 规格总和不得超过 320 CU。</p></td>
        </tr>
     </table>
 
+### CU{#cus}
+
+计算单元（CU）是指用于提供向量检索、分析服务的一组硬件资源。CU 提供了并行数据处理的基础计算资源，不同类型的 CU 结合了各异的 CPU、内存和存储配置。CU 的概念仅针对 Dedicated 集群。
+
+<table>
+   <tr>
+     <th><p><strong>类型</strong></p></th>
+     <th><p><strong>限制</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>Dedicated 版集群</p></td>
+     <td><p>CU 规格 * Replica 数量 &lt;=256</p></td>
+     <td><p>在自助操作时，单个集群最多使用 256 个 CU。如果创建了 Replica，CU 规格与 Replica 数量的乘积不得超过 256。</p></td>
+   </tr>
+</table>
+
 如需创建超过 256 个 CU 规格的集群，请[联系我们](https://zilliz.com.cn/contact-sales?firstname=xushuang&lastname=hu&company=Zilliz&name=Zilliz&email=xushuang.hu@zilliz.com&fullname=hu%20xushuang&phone=--&country=)。
+
+### vCU{#vcus}
+
+vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、upsert、delete）所消耗资源的基本单位。vCU 的概念仅针对 Free 和 Serverless 集群。
+
+<table>
+   <tr>
+     <th><p><strong>类型</strong></p></th>
+     <th><p><strong>限制</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>Free 版集群</p></td>
+     <td><p>每月 250 万 vCU</p></td>
+   </tr>
+   <tr>
+     <td><p>Serverless 版集群</p></td>
+     <td><p>无</p></td>
+   </tr>
+</table>
+
+## Database{#databases}
+
+- 仅 Dedicated 集群支持创建 Database。
+
+- 每个 Dedicated 集群中最多可创建 1024 个 Database。
+
+- 默认的 Default Database 不可删除。
 
 ## Replica{#replicas}
 
