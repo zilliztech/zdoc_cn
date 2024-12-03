@@ -230,7 +230,7 @@ for data in [milvus_lite_data, milvus_standalone_data, milvus_cluster_data]:
     print(response.json())
 ```
 
-现在我们已经成功将文本片段和对应标题、Embedding 向量摄取到向量数据库中了。您可以通过 [Zilliz Cloud web 控制台](https://cloud.zilliz.com.cn/)预览该 Collection （`my_text_collection`）下的数据。
+现在我们已经成功将文本片段和对应标题、Embedding 向量摄取到向量数据库中了。您可以通过 Zilliz Cloud web 控制台预览该 Collection （`my_text_collection`）下的数据。
 
 ### 搭建 RAG 应用{#build-a-rag-application}
 
