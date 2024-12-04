@@ -7,8 +7,8 @@ beta: false
 notebook: false
 description: "This operation conducts a scalar filtering with a specified boolean expression. | Java | v2"
 type: docx
-token: WxDjdYxSaoin88xQ7z7cL2rrnDg
-sidebar_position: 4
+token: Oy7PdvBJ7omRcKxvRvUcbWLcn1d
+sidebar_position: 5
 displayed_sidebar: javaSidebar
 
 ---
@@ -134,5 +134,4 @@ QueryResp queryResp = client.query(queryReq);
 for (QueryResp.QueryResult result : queryResp.getGetResults()) {
     System.out.println(result.getEntity());
 }
-
 ```

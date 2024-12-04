@@ -1,13 +1,13 @@
 ---
-title: "从 pgvector 迁移至 Zilliz Cloud | Cloud"
+title: "从 PostgreSQL 迁移至 Zilliz Cloud | Cloud"
 slug: /migrate-from-pgvector
-sidebar_label: "从 pgvector 迁移"
+sidebar_label: "从 PostgreSQL 迁移"
 beta: FALSE
 notebook: FALSE
 description: "PostgreSQL](https//www.postgresql.org/) 是一个功能强大且开源的对象关系数据库管理系统，以其卓越的可扩展性、数据完整性和高性能而受到广泛认可。通过使用 [pgvector 插件，PostgreSQL 增强了其存储和管理向量数据的能力。 | Cloud"
 type: origin
 token: QrBFw5sXmiaaYRk1YpectbZpnzg
-sidebar_position: 3
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz
@@ -21,15 +21,17 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# 从 pgvector 迁移至 Zilliz Cloud
+# 从 PostgreSQL 迁移至 Zilliz Cloud
 
 [PostgreSQL](https://www.postgresql.org/) 是一个功能强大且开源的对象关系数据库管理系统，以其卓越的可扩展性、数据完整性和高性能而受到广泛认可。通过使用 [pgvector](https://github.com/pgvector/pgvector) 插件，PostgreSQL 增强了其存储和管理向量数据的能力。
 
 如果您拥有安装了 [pgvector](https://github.com/pgvector/pgvector) 的 PostgreSQL 数据库，无论是本地部署还是云托管，均可将其无缝迁移至 Zilliz Cloud 集群。迁移过程包括与现有源数据库建立连接，并将数据从源表复制到 Zilliz Cloud 上相应的目标 collection。
 
-## 使用限制{#limits}
+## 注意事项{#considerations}
 
 - 当前支持迁移的 PostgreSQL 数据类型包括：**vector**, **text**/**varchar**/**date**/**time**/**json**, **bigint**, **integer**, **smallint**, **double precision**, **real**, **boolean**, **array**。如果您的表中存在不支持的数据类型字段，可以选择不迁移这些字段或[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。有关 PostgreSQL 数据类型如何映射到 Zilliz Cloud 的详细信息，请参阅[字段映射](./migrate-from-pgvector#field-mapping-reference)。
+
+- 为确保兼容性，目标 Collection 中的 Auto ID 将被禁用，且无法修改。
 
 - 每次迁移仅允许从每个源表中选择一个向量字段。
 
@@ -43,11 +45,13 @@ import Admonition from '@theme/Admonition';
 
 ## 从 PostgreSQL 迁移至 Zilliz Cloud{#migrate-from-postgresql-to-zilliz-cloud}
 
+![zh_migrate_from_pgvector](/img/zh_migrate_from_pgvector.png)
+
 您可以将源数据迁移到任何版本类型的 Zilliz Cloud 集群，只要其计算单元（CU）大小能够满足源数据的存储需求。
 
 1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)。
 
-1. 进入目标项目，选择**数据迁移** > **从 pgvector 迁移**。
+1. 进入目标项目，选择**数据迁移** > **PostgreSQL**。
 
 1. 在**连接至数据源**步骤中，填入源 PostgreSQL 数据库的 endpoint，提供与数据库关联的用户名和密码，然后点击**下一步**。
 
@@ -69,13 +73,11 @@ import Admonition from '@theme/Admonition';
 
     1. 验证 PostgreSQL 数据与 Zilliz Cloud 数据类型之间的映射。Zilliz Cloud 默认映射数据，您可以查看相关映射并进行必要的调整。目前，您可以重命名字段，但不支持更改字段数据类型。
 
-    1. （可选）在**高级设置**中配置**动态列**和 **Partition Key**。更多信息请参考[开启动态字段](./enable-dynamic-field)和[使用 Partition Key](./use-partition-key)。
+    1. 在**高级设置**中配置**动态列**和 **Partition Key**。更多信息请参考[开启动态字段](./enable-dynamic-field)和[使用 Partition Key](./use-partition-key)。
 
-    1. （可选）在**基础信息**中自定义目标 collection 名称和描述。collection 名称在每个集群中必须唯一。如果目标 collection 名称与现有 collection 重复，需要重命名目标 collection。
+    1. 在**目标 Collection 名称和描述**中，自定义目标 Collection 的名称和描述。Collection 名称在每个集群中必须唯一。如果名称与现有 Collection 重复，请重命名 Collection。
 
 1. 点击**迁移**。
-
-![zh_migrate_from_pgvector](/img/zh_migrate_from_pgvector.png)
 
 ## 查看迁移进度{#monitor-the-migration-process}
 

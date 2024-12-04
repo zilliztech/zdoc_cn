@@ -7,7 +7,7 @@ beta: false
 notebook: false
 description: "This operation checks whether a specific collection exists. | Java | v2"
 type: docx
-token: HOgkdNByyoAO4GxnLZjcpC8an8c
+token: Vs26d4WrYoJ3moxuLifcyP2enyh
 sidebar_position: 14
 displayed_sidebar: javaSidebar
 

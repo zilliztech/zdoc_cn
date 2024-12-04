@@ -37,28 +37,40 @@ import Admonition from '@theme/Admonition';
    <tr>
      <td><p>组织</p></td>
      <td><p>1</p></td>
-     <td><p>每个用户只能创建 1 个组织。</p></td>
-   </tr>
-   <tr>
-     <td><p>组织成员</p></td>
-     <td><p>100</p></td>
-     <td><p>每个组织最多可以容纳 100 个成员。每个用户可以属于多个组织。</p></td>
+     <td><p>Zilliz Cloud 账号注册成功后，系统会自动创建 1 个组织。如需更多组织，请<a href="https://support.zilliz.com.cn/hc/zh-cn">提交工单</a>。</p><p>1 名用户可以加入多个组织。</p></td>
    </tr>
    <tr>
      <td><p>项目</p></td>
-     <td><p>10</p></td>
-     <td><p>每个用户可以创建 10 个项目。</p></td>
+     <td><p>100</p></td>
+     <td><p>每个用户在每个组织中最多可以创建 100 个项目。</p></td>
    </tr>
    <tr>
-     <td><p>项目成员</p></td>
+     <td><p>组织及项目成员</p></td>
      <td><p>100</p></td>
-     <td><p>每个项目最多可以容纳 100 个成员。每个用户可以加入同一组织内的多个项目。</p></td>
+     <td><p>组织和项目成员数量总和不得超过 100 名。</p></td>
    </tr>
 </table>
 
-## 集群和 CU{#clusters-and-cus}
+## API 密钥{#api-keys}
 
-集群和 CU 数量的限制取决于您的支付方式和订阅计划。下表展示了 Dedicated 版集群相关限制。
+<table>
+   <tr>
+     <th><p><strong>内容</strong></p></th>
+     <th><p><strong>最大数量</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>API 密钥</p></td>
+     <td><p>100</p></td>
+     <td><p>每个组织中可创建最多 100 个自定义 API 密钥。</p></td>
+   </tr>
+</table>
+
+## 集群、CU 和 vCU{#clusters-cus-and-vcus}
+
+### 集群{#clusters}
+
+集群数量的限制取决于您的支付方式和订阅版本。
 
 - **未绑定有效支付方式**
 
@@ -71,17 +83,12 @@ import Admonition from '@theme/Admonition';
        <tr>
          <td><p>Free 版集群</p></td>
          <td><p>1</p></td>
-         <td><p>不论是否绑定有效支付方式，最多只可创建一个Free 版集群。</p></td>
+         <td><p>不论是否绑定有效支付方式，最多只可创建一个 Free 版集群。如需创建新的 Free 版集群，请先删除现有的 Free 集群。</p></td>
        </tr>
        <tr>
-         <td><p>Serverless 版集群</p></td>
+         <td><p>Serverless 版或 Dedicated 版集群</p></td>
          <td><p>1</p></td>
-         <td><p>未绑定有效支付方式，最多可创建一个Serverless 版集群。</p></td>
-       </tr>
-       <tr>
-         <td><p>Dedicated 版集群</p></td>
-         <td><p>1</p></td>
-         <td><p>未绑定有效支付方式，最多可创建一个Dedicated 版集群。</p></td>
+         <td><p>未绑定有效支付方式，最多可免费试用一个付费集群。如需更多付费集群，请添加支付方式。</p></td>
        </tr>
     </table>
 
@@ -89,28 +96,94 @@ import Admonition from '@theme/Admonition';
 
     <table>
        <tr>
-         <th><p>类型</p></th>
-         <th><p><strong>限制</strong></p></th>
+         <th><p><strong>类型</strong></p></th>
+         <th><p><strong>最大数量</strong></p></th>
          <th><p><strong>描述</strong></p></th>
        </tr>
        <tr>
          <td><p>Free 版集群</p></td>
          <td><p>1</p></td>
-         <td><p>不论是否绑定有效支付方式，最多只可创建一个Free 版集群。</p></td>
+         <td><p>不论是否绑定有效支付方式，最多只可创建一个 Free 版集群。如需创建新的 Free 版集群，请先删除现有的 Free 集群。</p></td>
        </tr>
        <tr>
          <td><p>Serverless 版集群</p></td>
          <td><p>无</p></td>
-         <td></td>
+         <td><p>无</p></td>
        </tr>
        <tr>
          <td><p>Dedicated 版集群</p></td>
-         <td><p>CU 规格 * Replica 数量 &lt;=256</p></td>
-         <td><p>在自助操作时，单个集群最多使用 256 个 CU。如果创建了 Replica，CU 规格与 Replica 数量的乘积不得超过 256。</p></td>
+         <td><p>CU 规格总和 &lt; 320</p></td>
+         <td><p>每个组织中的 Dedicated 集群数量上线取决于集群的 CU 规格。组织中所有集群的 CU 规格总和不得超过 320 CU。</p></td>
        </tr>
     </table>
 
+### CU{#cus}
+
+计算单元（CU）是指用于提供向量检索、分析服务的一组硬件资源。CU 提供了并行数据处理的基础计算资源，不同类型的 CU 结合了各异的 CPU、内存和存储配置。CU 的概念仅针对 Dedicated 集群。
+
+<table>
+   <tr>
+     <th><p><strong>类型</strong></p></th>
+     <th><p><strong>限制</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>Dedicated 版集群</p></td>
+     <td><p>CU 规格 * Replica 数量 &lt;=256</p></td>
+     <td><p>在自助操作时，单个集群最多使用 256 个 CU。如果创建了 Replica，CU 规格与 Replica 数量的乘积不得超过 256。</p></td>
+   </tr>
+</table>
+
 如需创建超过 256 个 CU 规格的集群，请[联系我们](https://zilliz.com.cn/contact-sales?firstname=xushuang&lastname=hu&company=Zilliz&name=Zilliz&email=xushuang.hu@zilliz.com&fullname=hu%20xushuang&phone=--&country=)。
+
+### vCU{#vcus}
+
+vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、upsert、delete）所消耗资源的基本单位。vCU 的概念仅针对 Free 和 Serverless 集群。
+
+<table>
+   <tr>
+     <th><p><strong>类型</strong></p></th>
+     <th><p><strong>限制</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>Free 版集群</p></td>
+     <td><p>每月 250 万 vCU</p></td>
+   </tr>
+   <tr>
+     <td><p>Serverless 版集群</p></td>
+     <td><p>无</p></td>
+   </tr>
+</table>
+
+## Database{#databases}
+
+- 仅 Dedicated 集群支持创建 Database。
+
+- 每个 Dedicated 集群中最多可创建 1024 个 Database。
+
+- 默认的 Default Database 不可删除。
+
+## Replica{#replicas}
+
+如需添加 Replica，集群规格需要为 **8 CU 或以上**。此外，Replica 功能还具有以下限制
+
+<table>
+   <tr>
+     <th><p><strong>内容</strong></p></th>
+     <th><p><strong>限制</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>Replica 数量</p></td>
+     <td><p>10</p></td>
+     <td><p>每个集群最多可添加 10 个 Replica。</p></td>
+   </tr>
+   <tr>
+     <td><p>Replica 数量 * CU 规格</p></td>
+     <td><p>&lt;= 256</p></td>
+     <td><p>CU 规格与 Replica 数量的乘积不得超过 256。</p></td>
+   </tr>
+</table>
 
 ## Pipeline{#pipelines}
 
@@ -195,7 +268,7 @@ import Admonition from '@theme/Admonition';
 <table>
    <tr>
      <th></th>
-     <th><p>用量上限</p></th>
+     <th><p><strong>用量上限</strong></p></th>
    </tr>
    <tr>
      <td><p>每个组织</p></td>
@@ -251,11 +324,22 @@ import Admonition from '@theme/Admonition';
 <p>例如：</p>
 <p>在一个 2 CU 的 Dedicated 集群中，最多可创建 128 个 Collection，通用容量最大为 1,024。</p>
 <p>在一个 12 CU 的 Dedicated 集群中，最多可创建 768 个 Collection，通用容量最大为 6144。</p>
-<p>在一个 32 CU 的 Dedicated 集群中，最多可创建 4096 个 Collection，通用容量最大为 16,384。</p>
+<p>在一个 32 CU 的 Dedicated 集群中，最多可创建 2,048 个 Collection，通用容量最大为 16,384。</p>
 
 </Admonition>
 
-此外，每个集群创建 Collection 的速率限制为每秒 1 个 Collection。
+此外，Zilliz Cloud 针对 Serverless 和 Dedicated 集群中的 Collection 操作（包括创建、加载、释放、删除）还具有速率限制。
+
+<table>
+   <tr>
+     <th></th>
+     <th><p><strong>Rate limits</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>Collection 操作（创建、加载、释放、删除）</p></td>
+     <td><p>每个集群 5 req/s。</p></td>
+   </tr>
+</table>
 
 ### Partition{#partitions}
 
@@ -263,7 +347,7 @@ import Admonition from '@theme/Admonition';
    <tr>
      <th><p><strong>类型</strong></p></th>
      <th><p><strong>最大数量（每个 Collection）</strong></p></th>
-     <th><p>描述</p></th>
+     <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
      <td><p>Free 版集群</p></td>
@@ -327,7 +411,11 @@ import Admonition from '@theme/Admonition';
 <table>
    <tr>
      <th></th>
-     <th><p>Insert rate limits</p></th>
+     <th><p><strong>Insert rate limits</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>Free 版集群</p></td>
+     <td><p>2 MB/s</p></td>
    </tr>
    <tr>
      <td><p>Serverless 版集群</p></td>
@@ -364,7 +452,15 @@ import Admonition from '@theme/Admonition';
 <table>
    <tr>
      <th></th>
-     <th><p>Insert rate limits</p></th>
+     <th><p><strong>Insert rate limits</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>Free 版集群</p></td>
+     <td><p>2 MB/s</p></td>
+   </tr>
+   <tr>
+     <td><p>Serverless 版集群</p></td>
+     <td><p>100 MB/s</p></td>
    </tr>
    <tr>
      <td><p>Dedicated 版集群（1-2 CU）</p></td>
@@ -436,7 +532,7 @@ import Admonition from '@theme/Admonition';
 
 ### Load{#load}
 
-每个集群的加载请求速率限制为每秒 1 个请求。
+每个集群的加载请求速率限制为每秒 **5** 个请求。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -446,45 +542,41 @@ import Admonition from '@theme/Admonition';
 
 ### Search{#search}
 
-每个搜索请求/响应的大小不应超过 64 MB。
+每个搜索请求/响应的大小不应超过 **64** MB。
 
 根据集群版本，每个搜索请求携带的查询向量（**nq**）上限有所不同：
 
-- Free 和 Serverless 集群：**nq** 不超过 10
+- Free 和 Serverless 集群：**nq** 不超过 **10**
 
-- Dedicated 集群：**nq** 不超过 16384
+- Dedicated 集群：**nq** 不超过 **16384**
 
 根据集群版本，每个搜索响应返回的 Entity 数量（**topK**）上限有所不同：
 
-- Free 和 Serverless 集群：**topK** 不超过 1024
+- Free 和 Serverless 集群：**topK** 不超过 **1024**
 
-- Dedicated 集群：**topK** 不超过 16384
+- Dedicated 集群：**topK** 不超过 **16384**
 
 ### Query{#query}
 
-每个查询请求/响应的大小不应超过 64 MB。
+每个查询请求/响应的大小不应超过 **64** MB。
 
-每个查询响应返回的 Entity 数量（**topK**）不超过 16384 个。
+每个查询响应返回的 Entity 数量（**topK**）不超过 **16384** 个。
 
 ### Delete Entity{#delete}
 
-每个删除请求/响应的大小不应超过 64 MB。
+每个删除请求/响应的大小不应超过 **64** MB。
 
-每个集群的删除请求速率限制为每秒 0.5 MB。
+每个集群的删除请求速率限制为每秒 **0.5** MB。
 
 ### Drop Collection{#drop}
 
-每个集群的删除请求速率限制为每秒 1 个请求。
+每个集群的删除请求速率限制为每秒 **5** 个请求。
 
 ### Data Import{#data-import}
 
-单 Collection 支撑最多 10 个正在运行或待运行的数据导入任务。
+单 Collection 支持最多 **10** 个正在运行或待运行的数据导入任务。
 
-## CU 容量{#cu-capacity}
-
-请参阅[选择合适的 CU 类型](./cu-types-explained)了解更多。
-
-## 数据导入（控制台）{#data-import-on-console}
+此外，Zilliz Cloud 还对导入的文件大小有以下限制。
 
 <table>
    <tr>
@@ -513,8 +605,26 @@ import Admonition from '@theme/Admonition';
 
 ## 数据备份（控制台）{#backup-on-console}
 
-Zilliz Cloud 备份快照可保存长达 30 天。更多备份费用详情，请参考 [了解费用](./understand-cost#backup-costs)。
+手动创建的备份会永久保留。
+
+自动创建的备份可最多保存 30 天。
 
 ## 数据恢复（控制台）{#restore-on-console}
 
 您可以从快照中恢复 Zilliz Cloud 集群。恢复的集群和原集群应属于同一地域，并使用相同的 CU 类型。
+
+## IP 白名单{#ip-access-list}
+
+<table>
+   <tr>
+     <th><p><strong>内容</strong></p></th>
+     <th><p><strong>最大数量</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>IP 地址 (CIDR)</p></td>
+     <td><p>20</p></td>
+     <td><p>IP 白名单中最多可添加 20 个 IP 地址。</p></td>
+   </tr>
+</table>
+

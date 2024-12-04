@@ -33,11 +33,13 @@ import Admonition from '@theme/Admonition';
 
 ## 创建项目{#create-a-project}
 
-要创建项目，您必须是[组织管理员](./resource-hierarchy#organization-roles)。
+要创建项目，您必须是[组织管理员](./resource-hierarchy)。
+
+每个组织中最多可创建 100 个项目。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>当您创建项目时，您也会成为该项目的<a href="./resource-hierarchy#project-roles">项目管理员</a>。</p>
+<p>当您创建项目时，您也会成为该项目的<a href="./resource-hierarchy">项目管理员</a>。</p>
 
 </Admonition>
 
@@ -45,7 +47,7 @@ import Admonition from '@theme/Admonition';
 
 ## 重命名项目{#rename-a-project}
 
-要重命名项目，您必须是[组织管理员](./resource-hierarchy#organization-roles)。
+要重命名项目，您必须是[组织管理员](./resource-hierarchy)。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -57,7 +59,7 @@ import Admonition from '@theme/Admonition';
 
 ## 删除项目{#delete-a-project}
 
-要创建项目，您必须是[组织管理员](./resource-hierarchy#organization-roles)。
+要创建项目，您必须是[组织管理员](./resource-hierarchy)。
 
 <Admonition type="info" icon="📘" title="说明">
 

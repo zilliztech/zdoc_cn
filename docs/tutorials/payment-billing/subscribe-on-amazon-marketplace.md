@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如何在亚马逊云科技 Marketplace上订阅 Zilliz Cloud。 | Cloud"
 type: origin
 token: LNxnwCaoeiwvxVkQqCTcWmMFn5g
-sidebar_position: 3
+sidebar_position: 5
 keywords: 
   - 向量数据库
   - zilliz
@@ -86,6 +86,26 @@ Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如�
     ![cancel-subscription-on-amazon-marketplace-cn-confirm](/img/cancel-subscription-on-amazon-marketplace-cn-confirm.png)
 
 1. 取消订阅后，Zilliz Cloud 将从您的订阅列表中消失。
+
+## 切换用于订阅的亚马逊云科技账号{#update-amazon-marketplace-subscription}
+
+如果您当前使用亚马逊云科技账号 A 在 Marketplace 订阅 Zilliz Cloud，但需要切换为使用亚马逊云科技账号 B 订阅，您可以：
+
+1. 使用亚马逊云科技账号 A 登录亚马逊云科技，并在亚马逊云科技 Marketplace 中[取消订阅](./subscribe-on-aliyun-marketplace#unsubscribe-alibaba-marketplace) Zilliz Cloud。
+
+1. 取消订阅成功后，登出亚马逊云科技账号 A，并使用亚马逊云科技账号 B 重新登录。
+
+1. 使用亚马逊云科技账号 B 在 Marketplace 中[订阅](./subscribe-on-aliyun-marketplace#procedures) Zilliz Cloud。
+
+订阅成功后，您可以前往 Zilliz Cloud 的账单页面，查看付款方式。点击亚马逊云科技 Marketplace 右侧的 ID 后可查看用于订阅的亚马逊云科技 Account ID，确认切换订阅账号是否成功。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>我们建议您在一小时内容完成上述订阅账号切换操作，以免影响您服务。如遇到任何问题，请<a href="https://support.zilliz.com.cn/hc/zh-cn">提交工单</a>。</p>
+
+</Admonition>
+
+![view-amazon-subscription-id-cn](/img/view-amazon-subscription-id-cn.png)
 
 ## 常见问题{#troubleshooting}
 

@@ -7,7 +7,7 @@ beta: false
 notebook: false
 description: "This operation releases the partitions in a specified collection from memory. | Java | v2"
 type: docx
-token: GrBmdR0LeoNkwJxwZmOcUAIrnIM
+token: VsyQdDkXnoloWYxfjXNchc0dnng
 sidebar_position: 6
 displayed_sidebar: javaSidebar
 

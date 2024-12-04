@@ -7,7 +7,7 @@ beta: false
 notebook: false
 description: "This operation reassigns the alias of one collection to another. | Java | v2"
 type: docx
-token: YH7CdwpjtoaAXWxtM0jcapUQnyc
+token: QasfdVW4voAzfwxfSc1civsHnVf
 sidebar_position: 1
 displayed_sidebar: javaSidebar
 

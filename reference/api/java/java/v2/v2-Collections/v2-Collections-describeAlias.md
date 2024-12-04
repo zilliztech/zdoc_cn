@@ -7,7 +7,7 @@ beta: false
 notebook: false
 description: "This operation displays the details of an alias. | Java | v2"
 type: docx
-token: UIkbdQl4ToHwesxlyRmc8RUFn3b
+token: B57cdiaEkotJQnxl7I9cJqotnPb
 sidebar_position: 8
 displayed_sidebar: javaSidebar
 

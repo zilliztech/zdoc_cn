@@ -7,7 +7,7 @@ beta: false
 notebook: false
 description: "This operation gets the details of a specific field, including schema information. | Java | v2"
 type: docx
-token: XK6yd5oUMoCq4Px7wAIclfdxnCd
+token: AXWod56QkoprlXxOXkwcPXfonHg
 sidebar_position: 3
 displayed_sidebar: javaSidebar
 

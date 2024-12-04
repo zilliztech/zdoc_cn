@@ -7,7 +7,7 @@ beta: false
 notebook: false
 description: "This operation grants a role to a user. | Java | v2"
 type: docx
-token: LKqbduwnVol3IAx053Pcp5rKnog
+token: JB90dbBNRoz1I2xZY5rcSmJ1nSb
 sidebar_position: 8
 displayed_sidebar: javaSidebar
 

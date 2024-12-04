@@ -7,7 +7,7 @@ beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Java | v2"
 type: docx
-token: P85rdatjZosvEfxCq7TcFRy0nBe
+token: QYPIdgWL7oDWrWxVUx0clo32nz4
 sidebar_position: 7
 displayed_sidebar: javaSidebar
 

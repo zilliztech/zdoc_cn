@@ -7,7 +7,7 @@ beta: false
 notebook: false
 description: "This operation prepares index parameters to build indexes for a specific collection. | Java | v2"
 type: docx
-token: J0hLdJ68foCRu5xWsWacORuAnLg
+token: QecOdXKyfo9JtMxkHZxcLNqknxh
 sidebar_position: 5
 displayed_sidebar: javaSidebar
 

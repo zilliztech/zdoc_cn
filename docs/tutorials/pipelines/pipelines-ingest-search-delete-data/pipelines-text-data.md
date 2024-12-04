@@ -50,7 +50,7 @@ import TabItem from '@theme/TabItem';
 
     ![create-pipeline-cn](/img/create-pipeline-cn.png)
 
-1. 选择需要创建的 Pipeline 类型。点击 Ingestion Pipeline 一栏中的 **+ Pipeline** 按钮。 
+1. 选择需要创建的 Pipeline 类型。点击 Ingestion Pipeline。 
 
     ![choose-pipeline-cn](/img/choose-pipeline-cn.png)
 
@@ -104,6 +104,8 @@ import TabItem from '@theme/TabItem';
            </tr>
         </table>
 
+        ![add-index-text-function-cn](/img/add-index-text-function-cn.png)
+
     1. 点击**添加**。
 
 1. (可选) 添加 **PRESERVE** Function。**PRESERVE** Function 在 Collection 中添加标量字段，用于保留文档元数据。
@@ -130,11 +132,15 @@ import TabItem from '@theme/TabItem';
 
         </Admonition>
 
+        ![add-preserve-function-cn](/img/add-preserve-function-cn.png)
+
     1. 点击**添加**。
 
 1. 点击**创建 Ingestion Pipeline**。
 
 1. 继续创建 Search pipeline 和 Deletion pipeline。创建的 Search 和 Deletion Pipeline 可适应配套刚才创建的Ingestion Pipeline。
+
+    ![auto-create-text-search-and-delete-pipelines-cn](/img/auto-create-text-search-and-delete-pipelines-cn.png)
 
     <Admonition type="info" icon="📘" title="说明">
 
@@ -421,6 +427,8 @@ curl --request POST \
              <td><p>智源研究院（BAAI）发布的开源重新排序（Reranker）模型。该模型采用交叉编码器架构，并托管于 Zilliz Cloud 上。</p></td>
            </tr>
         </table>
+
+        ![add-search-text-function-cn](/img/add-search-text-function-cn.png)
 
     1. 点击**添加**。
 

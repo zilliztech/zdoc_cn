@@ -7,7 +7,7 @@ beta: false
 notebook: false
 description: "This operation displays whether a specified collection or partition is loaded or not. | Java | v2"
 type: docx
-token: AzwPdR4pSoSSUAx5vsEc14x3nGf
+token: QcaFdMJE9oHX1Axe11rcqfiynEd
 sidebar_position: 4
 displayed_sidebar: javaSidebar
 

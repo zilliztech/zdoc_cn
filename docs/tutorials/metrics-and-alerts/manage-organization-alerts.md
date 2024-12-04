@@ -42,18 +42,18 @@ Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关�
      <th><p>默认告警条件</p></th>
    </tr>
    <tr>
-     <td><p>免费额度</p></td>
+     <td><p>优惠券</p></td>
      <td><p>￥</p></td>
-     <td><p>跟踪免费额度的余额，当额度低时提醒用户及时充值。</p></td>
+     <td><p>跟踪优惠券的余额，当额度低时提醒用户及时充值。</p></td>
      <td><p>充值以维持账户功能。</p></td>
-     <td><p>免费额度余额小于 ¥10 时触发<strong>警告</strong>告警。</p></td>
+     <td><p>优惠券余额小于 ¥10 时触发<strong>警告</strong>告警。</p></td>
    </tr>
    <tr>
-     <td><p>免费额度有效期</p></td>
+     <td><p>优惠券有效期</p></td>
      <td><p>天</p></td>
-     <td><p>监控免费额度的剩余有效期，鼓励用户使用或延期。</p></td>
+     <td><p>监控优惠券的剩余有效期，鼓励用户使用或延期。</p></td>
      <td><p>延长有效期或在额度过期前使用。</p></td>
-     <td><p>免费额度有效期小于 0 天时触发<strong>警告</strong>告警。</p></td>
+     <td><p>优惠券有效期小于 0 天时触发<strong>警告</strong>告警。</p></td>
    </tr>
    <tr>
      <td><p>现金余额</p></td>
@@ -109,8 +109,6 @@ Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关�
 
 </Admonition>
 
-![zh-edit-organization-alert](/img/zh-edit-organization-alert.png)
-
 ## 开启或关闭组织告警{#turn-on-or-off-an-organization-alert}
 
 要快速开启或关闭一个告警，在**操作**栏中选择**开启**或**关闭**。
@@ -121,13 +119,9 @@ Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关�
 
 </Admonition>
 
-![zh-turn-on-or-off-organization-alert](/img/zh-turn-on-or-off-organization-alert.png)
-
 ## 查看告警历史{#view-alert-history}
 
 在**告警历史**页签，查看已触发的告警历史列表。您可以根据告警项、告警等级和告警时间范围筛选满足条件的告警。
-
-![zh-view_alert_history](/img/zh-view_alert_history.png)
 
 ## 文档推荐{#related-topics}
 

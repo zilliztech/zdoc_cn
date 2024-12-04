@@ -52,7 +52,7 @@ Zilliz Cloud 允许您为集群创建自动备份，确保意外发生时可以�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>更多备份费用详情，请参考 <a href="./understand-cost#backup-costs">了解费用</a>。</p>
+<p>更多备份费用详情，请参考 <a href="./understand-cost">了解费用</a>。</p>
 
 </Admonition>
 

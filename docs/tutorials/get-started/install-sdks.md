@@ -49,7 +49,7 @@ PyMilvus 是 Milvus 的 Python SDK。您可以在 [GitHub](https://github.com/mi
 
 ```bash
 # Install specific PyMilvus version
-python -m pip install pymilvus==2.3.5
+python -m pip install pymilvus==2.4.9
 
 # Update PyMilvus to the newest version
 python -m pip install --upgrade pymilvus
@@ -70,9 +70,9 @@ python -m pip list | grep pymilvus
 
 ```bash
 # Installing a specific version for your clusters
-npm install @zilliz/milvus2-sdk-node@2.3.5
+npm install @zilliz/milvus2-sdk-node@2.4.9
 # Alternatively,
-yarn add @zilliz/milvus2-sdk-node@2.3.5
+yarn add @zilliz/milvus2-sdk-node@2.4.9
 
 # Verify installation
 npm list | grep @zilliz/milvus2-sdk-node
@@ -103,7 +103,7 @@ import { MilvusClient } from "@zilliz/milvus2-sdk-node"
     <dependency>
          <groupId>io.milvus</groupId>
          <artifactId>milvus-sdk-java</artifactId>
-         <version>2.3.6</version>
+         <version>2.4.8</version>
      </dependency>
     ```
 
@@ -113,7 +113,7 @@ import { MilvusClient } from "@zilliz/milvus2-sdk-node"
 
     ```bash
     # Use this for your clusters
-    compile 'io.milvus:milvus-sdk-java:2.3.6'
+    compile 'io.milvus:milvus-sdk-java:2.4.8'
     ```
 
 ## 安装 Go SDK{#install-go-sdk}
@@ -122,7 +122,7 @@ import { MilvusClient } from "@zilliz/milvus2-sdk-node"
 
 ```bash
 # Run the following for your clusters
-go get -u github.com/milvus-io/milvus-sdk-go/v2@v2.3.6
+go get -u github.com/milvus-io/milvus-sdk-go/v2@v2.4.2
 ```
 
 ## 相关文档{#related-docs}

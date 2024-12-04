@@ -26,6 +26,8 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud Pipelines 可以将文档、文本片段和图像等非结构化数据转换成可搜索的向量并存储在 [Collection](./cluster-collection-and-entities#collection) 中。本文将介绍 Zilliz Cloud Pipelines 的三种主要类型并提供示例代码，展示如何使用 Pipelines 搭建 RAG 应用。
 
+![pipeline-overview-cn](/img/pipeline-overview-cn.png)
+
 ## 了解 Pipelines{#understanding-pipelines}
 
 当今，语义搜索广泛运用于众多服务和应用中，包括搜索和查询语义上相匹配的文本快、相似的图片等。通常此类检索系统都会处理数据，将数据转化为 Embedding 向量。换言之，检索系统会将文本或图像以多维空间中的向量来表示。构建此类检索系统需要深厚的专业知识和工程技术。但是，使用 Zilliz Cloud Pipelines，您可以通过简单易用的界面构建检索系统。当前，Zilliz Cloud Pipelines 支持对文本文档进行语义搜索——这也是检索增强生成（RAG）应用的基石。后续 Zilliz Cloud Pipelines 将推出更多类型的 Pipelines，从而满足更多的语义搜索场景，例如图片搜索、视频搜索、多模态搜索等。
@@ -228,7 +230,7 @@ for data in [milvus_lite_data, milvus_standalone_data, milvus_cluster_data]:
     print(response.json())
 ```
 
-现在我们已经成功将文本片段和对应标题、Embedding 向量摄取到向量数据库中了。您可以通过 [Zilliz Cloud web 控制台](https://cloud.zilliz.com.cn/)预览该 Collection （`my_text_collection`）下的数据。
+现在我们已经成功将文本片段和对应标题、Embedding 向量摄取到向量数据库中了。您可以通过 Zilliz Cloud web 控制台预览该 Collection （`my_text_collection`）下的数据。
 
 ### 搭建 RAG 应用{#build-a-rag-application}
 

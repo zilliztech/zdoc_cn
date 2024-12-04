@@ -45,7 +45,7 @@ import TabItem from '@theme/TabItem';
 
     在启用了动态字段后，目标 Collection 也可以存储 Schema 中未定义的字段。Zilliz Cloud 预留了一个名为 **$meta** 的 JSON 字段用来以键值对的方式存放这些未定义字段。在上图中，**dynamic_field_1** 和 **dynamic_field_2** 字段及这些字段对应的值将会以键值对的方式存放在 **$meta** 字段中。
 
-我们可以按上图所示的数据，创建目标 Collection 的 Schema。
+如下代码展示了如何在定义 Schema 时使用所有可能的数据类型。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
 <TabItem value='python'>
@@ -59,10 +59,27 @@ schema = MilvusClient.create_schema(
     enable_dynamic_field=True
 )
 
-schema.add_field(field_name="id", datatype=DataType.INT64, is_primary=True)
-schema.add_field(field_name="vector", datatype=DataType.FLOAT_VECTOR, dim=768)
-schema.add_field(field_name="scalar_1", datatype=DataType.VARCHAR, max_length=512)
-schema.add_field(field_name="scalar_2", datatype=DataType.INT64)
+DIM = 512
+
+schema.add_field(field_name="id", datatype=DataType.INT64, is_primary=True),
+schema.add_field(field_name="bool", datatype=DataType.BOOL),
+schema.add_field(field_name="int8", datatype=DataType.INT8),
+schema.add_field(field_name="int16", datatype=DataType.INT16),
+schema.add_field(field_name="int32", datatype=DataType.INT32),
+schema.add_field(field_name="int64", datatype=DataType.INT64),
+schema.add_field(field_name="float", datatype=DataType.FLOAT),
+schema.add_field(field_name="double", datatype=DataType.DOUBLE),
+schema.add_field(field_name="varchar", datatype=DataType.VARCHAR, max_length=512),
+schema.add_field(field_name="json", datatype=DataType.JSON),
+schema.add_field(field_name="array_str", datatype=DataType.ARRAY, max_capacity=100, element_type=DataType.VARCHAR, max_length=128)
+schema.add_field(field_name="array_int", datatype=DataType.ARRAY, max_capacity=100, element_type=DataType.INT64)
+schema.add_field(field_name="float_vector", datatype=DataType.FLOAT_VECTOR, dim=DIM),
+schema.add_field(field_name="binary_vector", datatype=DataType.BINARY_VECTOR, dim=DIM),
+schema.add_field(field_name="float16_vector", datatype=DataType.FLOAT16_VECTOR, dim=DIM),
+# schema.add_field(field_name="bfloat16_vector", datatype=DataType.BFLOAT16_VECTOR, dim=DIM),
+schema.add_field(field_name="sparse_vector", datatype=DataType.SPARSE_FLOAT_VECTOR)
+
+schema.verify()
 ```
 
 </TabItem>
@@ -74,38 +91,88 @@ import io.milvus.param.collection.CollectionSchemaParam;
 import io.milvus.param.collection.FieldType;
 import io.milvus.grpc.DataType;
 
-// Define schema for the target collection
-FieldType id = FieldType.newBuilder()
-        .withName("id")
-        .withDataType(DataType.Int64)
-        .withPrimaryKey(true)
-        .withAutoID(false)
+private static CreateCollectionReq.CollectionSchema createSchema() {
+    CreateCollectionReq.CollectionSchema schema = CreateCollectionReq.CollectionSchema.builder()
+        .enableDynamicField(true)
         .build();
-
-FieldType vector = FieldType.newBuilder()
-        .withName("vector")
-        .withDataType(DataType.FloatVector)
-        .withDimension(768)
-        .build();
-
-FieldType scalar1 = FieldType.newBuilder()
-        .withName("scalar_1")
-        .withDataType(DataType.VarChar)
-        .withMaxLength(512)
-        .build();
-
-FieldType scalar2 = FieldType.newBuilder()
-        .withName("scalar_2")
-        .withDataType(DataType.Int64)
-        .build();
-
-CollectionSchemaParam schema = CollectionSchemaParam.newBuilder()
-        .withEnableDynamicField(true)
-        .addFieldType(id)
-        .addFieldType(vector)
-        .addFieldType(scalar1)
-        .addFieldType(scalar2)
-        .build();
+    schema.addField(AddFieldReq.builder()
+            .fieldName("id")
+            .dataType(io.milvus.v2.common.DataType.Int64)
+            .isPrimaryKey(Boolean.TRUE)
+            .autoID(false)
+            .build());
+    schema.addField(AddFieldReq.builder()
+            .fieldName("bool")
+            .dataType(DataType.Bool)
+            .build());
+    schema.addField(AddFieldReq.builder()
+            .fieldName("int8")
+            .dataType(DataType.Int8)
+            .build());
+    schema.addField(AddFieldReq.builder()
+            .fieldName("int16")
+            .dataType(DataType.Int16)
+            .build());
+    schema.addField(AddFieldReq.builder()
+            .fieldName("int32")
+            .dataType(DataType.Int32)
+            .build());
+    schema.addField(AddFieldReq.builder()
+            .fieldName("int64")
+            .dataType(DataType.Int64)
+            .build());
+    schema.addField(AddFieldReq.builder()
+            .fieldName("float")
+            .dataType(DataType.Float)
+            .build());
+    schema.addField(AddFieldReq.builder()
+            .fieldName("double")
+            .dataType(DataType.Double)
+            .build());
+    schema.addField(AddFieldReq.builder()
+            .fieldName("varchar")
+            .dataType(DataType.VarChar)
+            .maxLength(512)
+            .build());
+    schema.addField(AddFieldReq.builder()
+            .fieldName("json")
+            .dataType(io.milvus.v2.common.DataType.JSON)
+            .build());
+    schema.addField(AddFieldReq.builder()
+            .fieldName("array_int")
+            .dataType(io.milvus.v2.common.DataType.Array)
+            .maxCapacity(100)
+            .elementType(io.milvus.v2.common.DataType.Int64)
+            .build());
+    schema.addField(AddFieldReq.builder()
+            .fieldName("array_str")
+            .dataType(io.milvus.v2.common.DataType.Array)
+            .maxCapacity(100)
+            .elementType(io.milvus.v2.common.DataType.VarChar)
+            .maxLength(128)
+            .build());
+    schema.addField(AddFieldReq.builder()
+            .fieldName("float_vector")
+            .dataType(io.milvus.v2.common.DataType.FloatVector)
+            .dimension(DIM)
+            .build());
+    schema.addField(AddFieldReq.builder()
+            .fieldName("binary_vector")
+            .dataType(io.milvus.v2.common.DataType.BinaryVector)
+            .dimension(DIM)
+            .build());
+    schema.addField(AddFieldReq.builder()
+            .fieldName("float16_vector")
+            .dataType(io.milvus.v2.common.DataType.Float16Vector)
+            .dimension(DIM)
+            .build());
+    schema.addField(AddFieldReq.builder()
+            .fieldName("sparse_vector")
+            .dataType(io.milvus.v2.common.DataType.SparseFloatVector)
+            .build());
+    
+    return schema;
+}
 ```
 
 </TabItem>

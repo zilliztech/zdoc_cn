@@ -104,6 +104,8 @@ import TabItem from '@theme/TabItem';
            </tr>
         </table>
 
+        ![add-index-image-function-cn](/img/add-index-image-function-cn.png)
+
     1. 点击**添加**。
 
 1. (可选) 添加 **PRESERVE** Function。**PRESERVE** Function 在 Collection 中添加标量字段，用于保留文档元数据。
@@ -130,11 +132,15 @@ import TabItem from '@theme/TabItem';
 
         </Admonition>
 
+        ![add-preserve-function-cn](/img/add-preserve-function-cn.png)
+
     1. 点击**添加**。
 
 1. 点击**创建 Ingestion Pipeline**。
 
 1. 继续创建 Search pipeline 和 Deletion pipeline。创建的 Search 和 Deletion Pipeline 可适应配套刚才创建的Ingestion Pipeline。
+
+    ![auto-create-image-search-and-delete-pipelines-cn](/img/auto-create-image-search-and-delete-pipelines-cn.png)
 
     <Admonition type="info" icon="📘" title="说明">
 
@@ -408,6 +414,8 @@ Zilliz Cloud 支持两种搜索图像数据的方式：[以图搜图](./pipeline
 
     1. 点击**添加**。
 
+        ![add-search-image-function-cn](/img/add-search-image-function-cn.png)
+
 1. 点击**创建 Search Pipeline**。
 
 </TabItem>
@@ -635,6 +643,8 @@ curl --request POST \
     1. **Function 类型**选择 **SEARCH_IMAGE_BY_TEXT**。该 Function 可以将输入的查询文本转换为 Embedding 向量，并检索出与之最相关的 Top-K 个图像。选择 **SEARCH_IMAGE_BY_TEXT** Function 后，会自动应用 `zilliz/clip-vit-base-patch32-multilingual-v1` embedding 模型。
 
     1. 点击**添加**。
+
+        ![add-search-image-by-text-function-cn](/img/add-search-image-by-text-function-cn.png)
 
 1. 点击**创建 Search Pipeline**。
 

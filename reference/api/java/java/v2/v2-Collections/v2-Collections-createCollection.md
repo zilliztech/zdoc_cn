@@ -7,7 +7,7 @@ beta: false
 notebook: false
 description: "This operation creates a collection either with default or customized settings. | Java | v2"
 type: docx
-token: QdrtdDRZdo9lCgxQjUHcRCfYnuf
+token: LtCFdAg8FoxWmBxOInfcUSagnHb
 sidebar_position: 5
 displayed_sidebar: javaSidebar
 
@@ -103,6 +103,8 @@ createCollection(CreateCollectionReq.builder()
     Whether the primary field automatically increments upon data insertions into this collection.
 
     The value defaults to **False**. Setting this to **True** makes the primary field automatically increment. Skip this parameter if you need to set up a collection with a customized schema.
+
+    The auto-generated IDs have a fixed length and cannot be altered.
 
 - `enableDynamicField(boolean enableDynamicField)`
 

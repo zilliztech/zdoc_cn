@@ -5,7 +5,7 @@ beta: false
 notebook: false
 description: "Classes and methods for you to manage the MilvusClient instances. | Java | v2"
 type: folder
-token: GD2QfAetplDekjdxJDYcTIwAnIg
+token: YEBjfrOXWl8s00dDTvdcMiYDn0d
 sidebar_position: 2
 sidebar_label: "Client"
 displayed_sidebar: javaSidebar

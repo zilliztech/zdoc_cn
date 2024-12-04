@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里云云市场上订阅 Zilliz Cloud。 | Cloud"
 type: origin
 token: UTRZwxLf3ikwvbkXrKjcWAwOnmg
-sidebar_position: 2
+sidebar_position: 4
 keywords: 
   - 向量数据库
   - zilliz
@@ -100,6 +100,26 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 1. 关闭后，Zilliz Cloud 将从已购买服务列表中消失。
 
 ![unsubscribe-alibaba-marketplace-cn](/img/unsubscribe-alibaba-marketplace-cn.png)
+
+## 切换用于订阅的阿里云账号{#update-aliyun-marketplace-subscription}
+
+如果您当前使用阿里云账号 A 在云市场订阅 Zilliz Cloud，但需要切换为使用阿里云账号 B 订阅，您可以：
+
+1. 使用阿里云账号 A 登录阿里云，并在阿里云云市场中[取消订阅](./subscribe-on-aliyun-marketplace#unsubscribe-alibaba-marketplace) Zilliz Cloud。
+
+1. 取消订阅成功后，登出阿里云账号 A，并使用阿里云账号 B 重新登录。
+
+1. 使用阿里云账号 B 在云市场中[订阅](./subscribe-on-aliyun-marketplace#procedures) Zilliz Cloud。
+
+订阅成功后，您可以前往 Zilliz Cloud 的账单页面，查看付款方式。点击阿里云云市场右侧的 ID 后可查看用于订阅的阿里云账号 ID，确认切换订阅账号是否成功。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>我们建议您在一小时内容完成上述订阅账号切换操作，以免影响您服务。如遇到任何问题，请<a href="https://support.zilliz.com.cn/hc/zh-cn">提交工单</a>。</p>
+
+</Admonition>
+
+![view-aliyun-subscription-id-cn](/img/view-aliyun-subscription-id-cn.png)
 
 ## 重新订阅或解冻后重新开通阿里云云市场{#resubscribe}
 

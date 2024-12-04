@@ -7,7 +7,7 @@ beta: false
 notebook: false
 description: "This operation creates a partition in the target collection. | Java | v2"
 type: docx
-token: QNp6dzHNlofyPoxbysFcrfTunMh
+token: CadTdZ5YGocDymxaIOvcr08pnxd
 sidebar_position: 1
 displayed_sidebar: javaSidebar
 

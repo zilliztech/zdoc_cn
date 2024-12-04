@@ -7,7 +7,7 @@ beta: false
 notebook: false
 description: "This operation lists all existing aliases for a specific collection. | Java | v2"
 type: docx
-token: DCZ5dAc1joTkAHx81epc8Z3Rnde
+token: RvZDdxU1howmQ7x2V31c8eC7nJb
 sidebar_position: 15
 displayed_sidebar: javaSidebar
 

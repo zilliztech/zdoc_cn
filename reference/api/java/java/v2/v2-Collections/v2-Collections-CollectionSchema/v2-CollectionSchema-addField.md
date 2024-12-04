@@ -7,7 +7,7 @@ beta: false
 notebook: false
 description: "This operation adds a vector field to the schema of a collection. | Java | v2"
 type: docx
-token: ZqxddbCEzoxibpx4KqdcuTd8nLf
+token: ST5xdgZ9YoXYiJx7Ex6czstHnij
 sidebar_position: 1
 displayed_sidebar: javaSidebar
 

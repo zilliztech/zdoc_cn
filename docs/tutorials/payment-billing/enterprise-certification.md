@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz Cloud 现已开通企业认证渠道。如需进行现金充值，您需要先通过企业认证。本章主要介绍如何在 Zilliz Cloud 界面上申请企业认证。 | Cloud"
 type: origin
 token: VRLOw9Mc7iPWnCkZs2YcoGwSnLh
-sidebar_position: 6
+sidebar_position: 2
 keywords: 
   - 向量数据库
   - zilliz
@@ -76,6 +76,8 @@ Zilliz Cloud 现已开通企业认证渠道。如需进行[现金充值](./advan
 1. 企业认证成功后，您可以在组织**系统设置**的**企业认证**部分查看企业信息。
 
 ![enterprise-verified-cn](/img/enterprise-verified-cn.png)
+
+如果您在线下与我们签订了合同，请直接联系销售完成企业认证。
 
 ## 相关文档{#related-topics}
 

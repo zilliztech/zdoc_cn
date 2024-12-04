@@ -30,15 +30,15 @@ import Admonition from '@theme/Admonition';
 
 ## 邀请用户加入组织{#invite-a-user-to-join-your-organization}
 
-要邀请用户加入组织，您可以是[组织管理员](./resource-hierarchy#organization-roles)或[普通组织成员](./resource-hierarchy#organization-roles)。
+要邀请用户加入组织，您可以是[组织管理员](./user-roles#organization-roles)或[组织账单管理员](./user-roles#organization-roles)或[普通组织成员](./user-roles#organization-roles)。
 
-作为组织管理员，您可以将受邀用户设定为组织管理员或普通组织成员。如果您是普通组织成员，受邀用户则只能被设定为普通组织成员。
+作为组织管理员，您可以将受邀用户设定为组织管理员或普通组织成员。如果您是普通组织成员或组织账单管理员，受邀用户则只能被设定为普通组织成员。
 
 在**邀请用户**页面，输入您希望邀请的用户的电子邮箱地址。他们将收到邀请邮件，并需要在 48 小时内接受邀请以加入组织。在邀请被接受之前，您可以随时撤销或重新发送该邀请。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>您可以同时邀请一个或多个用户加入组织，但他们的角色需相同。每个组织最多可拥有 1000 名成员。</p>
+<p>您可以同时邀请一个或多个用户加入组织，但他们的角色需相同。每个组织最多可拥有 100 名成员。</p>
 
 </Admonition>
 
@@ -54,7 +54,7 @@ import Admonition from '@theme/Admonition';
 
 当用户接受邀请后，他们将成为组织成员。之后，您可以根据需求编辑他们的角色或从组织中移出他们。
 
-要编辑成员角色或移出组织成员，你必须是[组织管理员](./resource-hierarchy#organization-roles)。
+要编辑成员角色或移出组织成员，你必须是[组织管理员](./resource-hierarchy)。
 
 ![edit-user-role-or-remove-org-user-zh](/img/edit-user-role-or-remove-org-user-zh.png)
 

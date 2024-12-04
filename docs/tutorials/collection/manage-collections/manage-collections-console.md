@@ -111,6 +111,12 @@ Zilliz Cloud 提供 3 种创建 Collection 的方式以满足不同需求。
 
 ![cn-load-and-release-collection](/img/cn-load-and-release-collection.png)
 
+## 将 Collection 移动到其他 Database{#move-collection-to-another-database}
+
+您可以将 Collection 从一个 Database 移动到另一个 Database 中。
+
+![move-collection-to-another-database-cn](/img/move-collection-to-another-database-cn.png)
+
 ## 删除 Collection{#drop-collection}
 
 删除 Collection 会删除与其相关的所有信息，包括插入数据、元数据和索引。该操作可以有效帮助节省资源。
