@@ -411,7 +411,7 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
 <table>
    <tr>
      <th></th>
-     <th><p><strong>Insert rate limits</strong></p></th>
+     <th><p><strong>Insert 最大速率限制</strong></p></th>
    </tr>
    <tr>
      <td><p>Free 版集群</p></td>
@@ -422,20 +422,32 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
      <td><p>10 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群（1-2 CU）</p></td>
-     <td><p>4 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群（4-8 CU）</p></td>
-     <td><p>6 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群（12-20 CU）</p></td>
+     <td><p>Dedicated 版集群 1-2 CU</p></td>
      <td><p>8 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群（&gt;= 24 CU）</p></td>
+     <td><p>Dedicated 版集群 4-8 CU</p></td>
      <td><p>12 MB/s</p></td>
+   </tr>
+   <tr>
+     <td><p>Dedicated 版集群 12-20 CU</p></td>
+     <td><p>16 MB/s</p></td>
+   </tr>
+   <tr>
+     <td><p>Dedicated 版集群 [24 CU, 64 CU)</p></td>
+     <td><p>24 MB/s</p></td>
+   </tr>
+   <tr>
+     <td><p>Dedicated 版集群 [64CU, 128 CU)</p></td>
+     <td><p>36 MB/s</p></td>
+   </tr>
+   <tr>
+     <td><p>Dedicated 版集群 [128 CU, 256 CU)</p></td>
+     <td><p>48 MB/s</p></td>
+   </tr>
+   <tr>
+     <td><p>Dedicated 版集群 &gt;= 256 CU</p></td>
+     <td><p>64 MB/s</p></td>
    </tr>
 </table>
 
@@ -452,7 +464,7 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
 <table>
    <tr>
      <th></th>
-     <th><p><strong>Insert rate limits</strong></p></th>
+     <th><p>Upsert 最大速率限制</p></th>
    </tr>
    <tr>
      <td><p>Free 版集群</p></td>
@@ -460,23 +472,35 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
    </tr>
    <tr>
      <td><p>Serverless 版集群</p></td>
-     <td><p>100 MB/s</p></td>
+     <td><p>10 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群（1-2 CU）</p></td>
-     <td><p>4 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群（4-8 CU）</p></td>
-     <td><p>6 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群（12-20 CU）</p></td>
+     <td><p>Dedicated 版集群 1-2 CU</p></td>
      <td><p>8 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群（&gt;= 24 CU）</p></td>
+     <td><p>Dedicated 版集群 4-8 CU</p></td>
      <td><p>12 MB/s</p></td>
+   </tr>
+   <tr>
+     <td><p>Dedicated 版集群 12-20 CU</p></td>
+     <td><p>16 MB/s</p></td>
+   </tr>
+   <tr>
+     <td><p>Dedicated 版集群 [24 CU, 64 CU)</p></td>
+     <td><p>24 MB/s</p></td>
+   </tr>
+   <tr>
+     <td><p>Dedicated 版集群 [64CU, 128 CU)</p></td>
+     <td><p>36 MB/s</p></td>
+   </tr>
+   <tr>
+     <td><p>Dedicated 版集群 [128 CU, 256 CU)</p></td>
+     <td><p>48 MB/s</p></td>
+   </tr>
+   <tr>
+     <td><p>Dedicated 版集群 &gt;= 256 CU</p></td>
+     <td><p>64 MB/s</p></td>
    </tr>
 </table>
 
