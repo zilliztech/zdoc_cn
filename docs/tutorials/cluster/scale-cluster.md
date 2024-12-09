@@ -7,7 +7,7 @@ notebook: FALSE
 description: "随着数据增长，您可能会面临一些数据写入限制。例如，当数据量过大超出集群最大容量时，您虽然可以继续读区数据，但是数据写入操作（如插入数据、Upsert 等）将受到限制。 | Cloud"
 type: origin
 token: MeCPwj8n0i2x1BksjOHc3OKRn55
-sidebar_position: 3
+sidebar_position: 4
 keywords: 
   - 向量数据库
   - zilliz
