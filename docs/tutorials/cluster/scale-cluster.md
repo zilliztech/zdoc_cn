@@ -7,7 +7,7 @@ notebook: FALSE
 description: "随着数据增长，您可能会面临一些数据写入限制。例如，当数据量过大超出集群最大容量时，您虽然可以继续读区数据，但是数据写入操作（如插入数据、Upsert 等）将受到限制。 | Cloud"
 type: origin
 token: MeCPwj8n0i2x1BksjOHc3OKRn55
-sidebar_position: 4
+sidebar_position: 0
 keywords: 
   - 向量数据库
   - zilliz
@@ -74,12 +74,12 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 弹性伸缩(内测版){#auto-scaling-private-preview}
+## 弹性伸缩{#auto-scaling}
 
 <Admonition type="info" icon="📘" title="说明">
 
 <ul>
-<li><p>弹性伸缩功能仅适用于 Dedicated 集群且目前正在内测中，如需使用此功能，请<a href="https://zilliz.com.cn/contact-sales">联系我们</a>。</p></li>
+<li><p>弹性伸缩功能仅适用于 Dedicated 集群。</p></li>
 <li><p>Replica 数量超过 1 个集群不可使用弹性伸缩功能。</p></li>
 </ul>
 
