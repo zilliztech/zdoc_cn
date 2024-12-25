@@ -22,7 +22,6 @@ module.exports = function (context, options) {
                 .option('-skipI, --skipImageDown', 'Skip fetching images')
                 .option('-post, --postProcess', 'Post process file paths')
                 .action(async (opts) => {
-
                     const options = context.siteConfig.plugins.filter(plugin => plugin[0].includes('lark-docs'))[0][1]
                     process.env.REPO_BRANCH = fs.readFileSync('.git/HEAD', 'utf8').split(': ')[1].trim().split('/').slice(-1)[0]
                     const manuals = Object.keys(options)
@@ -54,7 +53,12 @@ module.exports = function (context, options) {
                         // Only pull source files from Feishu iteratively
                         if (opts.sourceOnly) {
                             // const scraper = new docScraper(root, base, sourceType, docSourceDir)
+                            fs.rmSync(docSourceDir, { recursive: true })
+                            fs.mkdirSync(docSourceDir, { recursive: true })
                             await scraper.fetch(true)
+                            if (fallbackSourceDir !== undefined) {
+                                utils.fetch_fallback_sources(docSourceDir, fallbackSourceDir)
+                            }
                         // Pull specific source file from Feishu
                         } else if (opts.docToken !== undefined) {
                             // const scraper = new docScraper(root, base, sourceType, docSourceDir)
@@ -94,7 +98,12 @@ module.exports = function (context, options) {
                             
                             if (!opts.skipSourceDown) {
                                 // const scraper = new docScraper(root, base, sourceType, docSourceDir)
+                                fs.rmSync(docSourceDir, { recursive: true })
+                                fs.mkdirSync(docSourceDir, { recursive: true })
                                 await scraper.fetch(true)
+                                if (fallbackSourceDir !== undefined) {
+                                    utils.fetch_fallback_sources(docSourceDir, fallbackSourceDir)
+                                }
                             }
                             
                             // const writer = new docWriter(root, docSourceDir, imageDir, opts.pubTarget, opts.skipImageDown)

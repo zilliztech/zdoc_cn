@@ -4,6 +4,7 @@ const slugify = require('slugify')
 const fs = require('node:fs')
 const { URL } = require('node:url')
 const fetch = require('node-fetch')
+const node_path = require('node:path')
 const cheerio = require('cheerio')
 const showdown = require('showdown')
 const Jimp = require("jimp");
@@ -593,6 +594,17 @@ class larkDocWriter {
 
         var file_path = `${path}/${slug}.md`
 
+        if (this.targets.split('.').includes('zilliz')) {
+            markdown = markdown.replace(/http:\/\/localhost:19530/g, 'YOUR_CLUSTER_ENDPOINT')
+            markdown = markdown.replace(/127.0.0.1:19530/g, 'YOUR_CLUSTER_ENDPOINT')
+            markdown = markdown.replace(/root:Milvus/g, 'YOUR_CLUSTER_TOKEN')
+        }
+
+        if (this.targets.split('.').includes('milvus')) {
+            markdown = markdown.replace(/YOUR_CLUSTER_ENDPOINT/g, 'http://localhost:19530')
+            markdown = markdown.replace(/YOUR_CLUSTER_TOKEN/g, 'root:Milvus')
+        }
+
         if (path) {
             fs.writeFileSync(file_path, front_matter + '\n\n' + imports + '\n\n' + markdown)
         } else {
@@ -1028,38 +1040,51 @@ class larkDocWriter {
     }  
     
     async __image(image) {
+        const root = this.imageDir.replace(/^static\//g, '')
+
         if (this.skip_image_download) {
-            const root = this.imageDir.replace(/^static\//g, '')
             return `![${image.token}](/${root}/${image["token"]}.png)`;
         }
 
-        const result = await this.downloader.__downloadImage(image.token)
-        const root = this.imageDir.replace(/^static\//g, '')
-        result.body.pipe(fs.createWriteStream(`${this.downloader.target_path}/${image["token"]}.png`));
+        try {
+            const result = await this.downloader.__downloadImage(image.token)
+            result.body.pipe(fs.createWriteStream(`${this.downloader.target_path}/${image["token"]}.png`));
+        } catch (error) {
+            console.log(error)
+            console.log("-------------- A retry is needed -----------------");
+            console.log("Sleeping for 5 seconds")
+            await new Promise(resolve => setTimeout(resolve, 5000));
+            this.__image(image)
+        }
+
         return `![${image.token}](/${root}/${image["token"]}.png)`;
     }
 
     async __board(board, indent) {
+        const root = this.imageDir.replace(/^static\//g, '')
+
         if (this.skip_image_download) {
-            const root = this.imageDir.replace(/^static\//g, '')
             return `![${board.token}](/${root}/${board["token"]}.png)`;
         }
 
         const result = await this.downloader.__downloadBoardPreview(board.token)
-        const root = this.imageDir.replace(/^static\//g, '')
         const writeStream = fs.createWriteStream(`${this.downloader.target_path}/${board["token"]}.png`);
         result.body.pipe(writeStream);
-        writeStream.on('finish', () => {
-            Jimp.read(`${this.downloader.target_path}/${board["token"]}.png`, (err, image) => {
-                if (err) throw err;
-                
+
+        writeStream.on('finish', async () => {
+            try {
+                const image = await Jimp.read(`${this.downloader.target_path}/${board["token"]}.png`);
                 this.__crop_image_border(image)
-                
-                image.write(`${this.downloader.target_path}/${board["token"]}.png`, (err) => {
-                    if (err) throw err;
-                });
-            });
+                image.write(`${this.downloader.target_path}/${board["token"]}.png`);
+            } catch (error) {
+                console.log(error)
+                console.log("-------------- A retry is needed -----------------");
+                console.log("Sleeping for 5 seconds")
+                await new Promise(resolve => setTimeout(resolve, 5000));
+                this.__board(board, indent)                             
+            }
         });
+
         return `![${board.token}](/${root}/${board["token"]}.png)`;
     }
 
@@ -1107,26 +1132,33 @@ class larkDocWriter {
     }
 
     async __iframe(iframe) {
+        const root = this.imageDir.replace(/^static\//g, '')
+
         if (iframe['component']['iframe_type'] !== 8) {
             return '';
         } else if (this.skip_image_download) {
             const url = new URL(decodeURIComponent(iframe.component.url))
-            const root = this.imageDir.replace(/^static\//g, '')
             const key = url.pathname.split('/')[2]
             const node = url.searchParams.get('node-id').split('-').join(":") 
-
             const caption = (await this.downloader.__fetchCaption(key, node)).nodes[node].document.name;
             return `![${caption}](/${root}/${caption}.png)`;
         } else {
-            const url = new URL(decodeURIComponent(iframe.component.url))
-            const root = this.imageDir.replace(/^static\//g, '')
-            const key = url.pathname.split('/')[2]
-            const node = url.searchParams.get('node-id').split('-').join(":") 
-
-            const caption = (await this.downloader.__fetchCaption(key, node)).nodes[node].document.name;
-            const result = await this.downloader.__downloadIframe(key, node);
-            result.body.pipe(fs.createWriteStream(`${this.downloader.target_path}/${caption}.png`));
-            return `![${caption}](/${root}/${caption}.png)`;
+            try {
+                const url = new URL(decodeURIComponent(iframe.component.url))
+                const key = url.pathname.split('/')[2]
+                const node = url.searchParams.get('node-id').split('-').join(":") 
+    
+                const caption = (await this.downloader.__fetchCaption(key, node)).nodes[node].document.name;
+                const result = await this.downloader.__downloadIframe(key, node);
+                result.body.pipe(fs.createWriteStream(`${this.downloader.target_path}/${caption}.png`));
+                return `![${caption}](/${root}/${caption}.png)`;
+            } catch (error) {
+                console.log(error)
+                console.log("-------------- A retry is needed -----------------");
+                console.log("Sleeping for 5 seconds")
+                await new Promise(resolve => setTimeout(resolve, 5000));
+                this.__iframe(iframe)
+            }
         }
     }
 
@@ -1185,7 +1217,7 @@ class larkDocWriter {
 
     async __sheet(sheet, indent) {
         const converter = new showdown.Converter({ underline: true })
-        const merges = sheet.meta.data.sheet.merges;
+        const merges = sheet.meta?.data.sheet.merges;
         const values = sheet.values.data.valueRange.values;
         var result = ' '.repeat(indent) + "<table>" + "\n";
 
@@ -1392,11 +1424,11 @@ class larkDocWriter {
             }
         }
 
-        if (url.startsWith('https://docs.zilliz.com.cn/')) {
+        if (url?.startsWith('https://docs.zilliz.com.cn/')) {
             url = url.replace('https://docs.zilliz.com.cn/', '/');
         }
 
-        if (url.startsWith('https://docs.zilliz.com/')) {
+        if (url?.startsWith('https://docs.zilliz.com/')) {
             url = url.replace('https://docs.zilliz.com/', '/');
         }
             
@@ -1452,6 +1484,12 @@ class larkDocWriter {
         }
 
         return sdks
+    }
+
+    keyword_picker() {
+        const keywords = fs.readFileSync(node_path.join('plugins', 'lark-docs', 'meta', 'keywords.txt'), 'utf8').trim().split('\n')
+        const seed = Math.floor(Math.random() * keywords.length)
+        return [keywords[seed], keywords[(seed+1)%keywords.length], keywords[(seed+2)%keywords.length], keywords[(seed+3)%keywords.length]]
     }
 }
 

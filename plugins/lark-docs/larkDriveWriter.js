@@ -46,6 +46,7 @@ class larkDriveWriter extends larkDocWriter {
                                 notebook: 'false',
                                 sidebar_position: index+1,
                                 sidebar_label: meta['labels'],
+                                keywords: this.keyword_picker().concat('zilliz', 'zilliz cloud', 'cloud', source.name, this.manual),
                                 doc_card_list: false
                             })
 
@@ -109,6 +110,7 @@ class larkDriveWriter extends larkDocWriter {
 
         let obj;
         var current_path = path
+        var keywords = this.keyword_picker().concat('zilliz', 'zilliz cloud', 'cloud', page_title, this.manual).join(',')
 
         if (page_token) {
             obj = this.__fetch_doc_source('token', page_token)
@@ -122,6 +124,8 @@ class larkDriveWriter extends larkDocWriter {
                     const slug = `${this.displayedSidebar.replace('Sidebar', '')}/${page_slug}`
                     const labels = sidebar_label ? sidebar_label : page_title
 
+                    console.log(keywords instanceof Array)
+
                     var markdown = '---\n' +
                         'title: ' + `"${page_title} | ${this.__title_suffix(current_path)}"` + '\n' +
                         'slug: /' + slug + '\n' +
@@ -132,6 +136,7 @@ class larkDriveWriter extends larkDocWriter {
                         'token: ' + page_token + '\n' +
                         'sidebar_position: ' + sidebar_position + '\n' +
                         'sidebar_label: ' + `"${labels}"` + '\n' +
+                        'keywords: \n  - ' + keywords.split(',').map(item => item.trim()).join('\n  - ') + '\n' +
                         'displayed_sidebar: ' + this.displayedSidebar + '\n' +
                         '---\n\n' +
                         '# ' + page_title + '\n\n' +
@@ -153,6 +158,7 @@ class larkDriveWriter extends larkDocWriter {
                 current_path = node_path.join(current_path, page_slug + '.md')
                 const slug = `${this.displayedSidebar.replace('Sidebar', '')}/${page_slug}`
 
+                console.log(keywords)
                 var {front_matter, imports, markdown} = await this.__write_page({
                     title: page_title,
                     suffix: this.__title_suffix(current_path),
@@ -163,6 +169,7 @@ class larkDriveWriter extends larkDocWriter {
                     token: page_token,
                     sidebar_position: sidebar_position,
                     sidebar_label: sidebar_label,
+                    keywords: keywords,
                     doc_card_list: doc_card_list,
                 })
 
