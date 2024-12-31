@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz Cloud 支持组织内或组织间的集群迁移。这一功能确保了资源管理和扩展的灵活性。若要将数据迁移到不同组织的集群时，您需要提供适当的身份验证凭据，例如目标组织的 API 密钥或包含用户名和密码的集群凭证。 | Cloud"
 type: origin
 token: N6tlwTPPvi0FXvkj4fccCgtTnOg
-sidebar_position: 1
+sidebar_position: 2
 keywords: 
   - 向量数据库
   - zilliz
@@ -28,8 +28,6 @@ Zilliz Cloud 支持组织内或组织间的集群迁移。这一功能确保了�
 ## 注意事项{#considerations}
 
 - 为了确保性能，Zilliz Cloud 不支持降级迁移。例如，您无法从 Dedicated 版集群迁移到 Serverless 版集群、从 Dedicated 版集群迁移到 Free 版集群，或从 Free 版集群迁移到 Free 版集群。
-
-- 每次迁移仅允许从每个源表中选择一个向量字段。
 
 ## 开始前{#before-you-start}
 
