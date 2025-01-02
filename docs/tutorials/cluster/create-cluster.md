@@ -70,7 +70,7 @@ Zilliz Cloud 提供多种集群版本以满足不同的业务需求。请先查�
        </tr>
     </table>
 
-    ![create-cluster-free-cn ](/img/create-cluster-free-cn .png)
+    ![create-cluster-free-cn](/img/create-cluster-free-cn.png)
 
 1. 点击**创建集群**。
 

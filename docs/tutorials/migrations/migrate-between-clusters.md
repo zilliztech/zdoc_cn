@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz Cloud 支持组织内或组织间的集群迁移。这一功能确保了资源管理和扩展的灵活性。若要将数据迁移到不同组织的集群时，您需要提供适当的身份验证凭据，例如目标组织的 API 密钥或包含用户名和密码的集群凭证。 | Cloud"
 type: origin
 token: N6tlwTPPvi0FXvkj4fccCgtTnOg
-sidebar_position: 2
+sidebar_position: 1
 keywords: 
   - 向量数据库
   - zilliz
