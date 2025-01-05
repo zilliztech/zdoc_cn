@@ -40,7 +40,7 @@ module.exports = function (context, options) {
                         throw new Error(`Please provide a valid manual tag... \nAvailable manual tags: \n- ${manuals.join('\n- ')}`)
                     }
 
-                    const { root, base, sourceType, displayedSidebar, robots, docSourceDir, targets } = manual
+                    const { root, base, sourceType, displayedSidebar, robots, docSourceDir, fallbackSourceDir, targets } = manual
 
                     // Intialize scraper and writer
                     const scraper = new docScraper(root, base, sourceType, docSourceDir)

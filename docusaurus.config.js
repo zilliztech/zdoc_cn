@@ -55,6 +55,55 @@ const config = {
           breadcrumbs: true,
           sidebarPath: require.resolve('./sidebarsTutorial.js'),
           routeBasePath: 'docs',
+          sidebarItemsGenerator: async function ({
+            defaultSidebarItemsGenerator, ...args
+          }) {
+            var sidebarItems = defaultSidebarItemsGenerator(args)
+            sidebarItems = sidebarItems.map(item => {
+              item.collapsible = false;
+              item.collapsed = false;
+
+              if (item.label === '从这里开始') {
+                item.items = item.items.map(subItem => {
+                  if (subItem.label === 'API & SDKs') {
+                    subItem.items.push(...[
+                      {
+                        type: 'link',
+                        label: 'Python SDK',
+                        href: '/reference/python'
+                      },
+                      {
+                        type: 'link',
+                        label: 'Java SDK',
+                        href: '/reference/java'
+                      },
+                      {
+                        type: 'link',
+                        label: 'Go SDK',
+                        href: '/reference/go'
+                      },
+                      {
+                        type: 'link',
+                        label: 'Node.js SDK',
+                        href: '/reference/nodejs'
+                      },
+                      {
+                        type: 'link',
+                        label: 'RESTful API',
+                        href: '/reference/restful'
+                      }
+                    ])
+                  }
+
+                  return subItem;
+                })
+              }
+
+              return item;
+            })
+
+            return sidebarItems;
+          }
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
@@ -110,13 +159,19 @@ const config = {
         displayedSidebar: 'default',
         docSourceDir: './plugins/lark-docs/meta/sources/guides',
         targets: {
-          saas: {
-            outputDir: 'docs/tutorials',
-            imageDir: 'static/img',
+          zilliz: {
+            saas: {
+              outputDir: 'docs/tutorials',
+              imageDir: 'static/img',
+            },
+            paas: {
+              outputDir: 'onpremise/docs/vdb',
+              imageDir: 'static/byoc',
+            }
           },
-          paas: {
-            outputDir: 'onpremise/docs/vdb',
-            imageDir: 'static/byoc',
+          milvus: {
+            outputDir: 'milvus/guides/docs',
+            imageDir: 'milvus/guides/images'
           }
         }
       },
