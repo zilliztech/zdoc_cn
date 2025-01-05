@@ -34,7 +34,9 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 手动扩缩容{#manual-scaling}
+## 按量计费集群扩缩容{#usage-based-cluster-scaling}
+
+### 手动扩缩容{#manual-scaling}
 
 您可以通过 Zilliz Cloud 控制台或者调用 API 命令来进行手动扩缩容。本文将介绍如何通过 Zilliz Cloud 控制台进行手动扩缩容。如需了解如何使用 RESTful API 进行扩缩容，请参考[修改集群配置](/reference/restful/modify-cluster)。
 
@@ -74,12 +76,12 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 弹性伸缩(内测版){#auto-scaling-private-preview}
+### 弹性伸缩{#auto-scaling}
 
 <Admonition type="info" icon="📘" title="说明">
 
 <ul>
-<li><p>弹性伸缩功能仅适用于 Dedicated 集群且目前正在内测中，如需使用此功能，请<a href="https://zilliz.com.cn/contact-sales">联系我们</a>。</p></li>
+<li><p>弹性伸缩功能仅适用于 Dedicated 集群。</p></li>
 <li><p>Replica 数量超过 1 个集群不可使用弹性伸缩功能。</p></li>
 </ul>
 
@@ -117,6 +119,54 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 提升 QPS{#increase-qps}
+### 提升 QPS{#increase-qps}
 
 如需提升 QPS 和系统可用性，请添加 Replica。更多详情，请参考[管理 Replica](./manage-replica)。
+
+## 包年包月集群扩容{#annual-subscription-cluster-scaling}
+
+包年包月集群仅支持手动扩容，不支持缩容及弹性伸缩。
+
+目前，您只能通过 Zilliz Cloud Web 控制台进行集群扩容，暂时不支持通过 RESTful API 进行操作。
+
+![VPQSwUkM7hVFtIbbahJcopfpngg](/img/VPQSwUkM7hVFtIbbahJcopfpngg.png)
+
+上图展示了为包年包月集群扩容的主要流程和步骤。以下为具体操作说明。
+
+### 步骤 1. 增加集群 CU 规格{#increase-cu-size}
+
+1. 登录 Zilliz Cloud。前往目标集群的**集群详情**页。点击**扩容**。
+
+    ![R6OzbPU4AocxT8x6pS8c7PLQn4f](/img/R6OzbPU4AocxT8x6pS8c7PLQn4f.png)
+
+1. 选择集群 CU 规格。目前仅支持选择比当前更大的 CU 规格。
+
+1. （可选）您可以选择是否在扩容的同时**延长集群有效期**。
+
+1. 检查订单金额，点击**扩容**。如需了解集群升配与续订的费用计算规则，请参考[变更配置费用说明](./notice-on-config-changes)。
+
+    ![REhmbwSt8omjSMxO3Aic16CZnIa](/img/REhmbwSt8omjSMxO3Aic16CZnIa.png)
+
+1. 阅读并同意【购买须知】。
+
+### 步骤 2. 支付订单{#pay-the-order}
+
+完成步骤 1 后，Zilliz Cloud 将生成一份类型为**升配**的**待支付**订单。请检查订单内容并及时完成支付。
+
+![DaCMbzcaPoWJ40xeEk7cJ3lhnAe](/img/DaCMbzcaPoWJ40xeEk7cJ3lhnAe.png)
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>如果您的组织现金余额不足，请先进行现金充值（对公转账）。详情请见<a href="./advance-pay">现金充值（对公转账）</a>。</p>
+<p>充值成功后，您可以前往<strong>费用中心>订单</strong>页支付订单。详情请见<a href="./manage-order">管理订单</a>。</p>
+<p>订单生成后 7 天内未完成支付，系统将自动取消订单。如仍需为包年包月集群扩容，请重新完成步骤 1 的操作并支付新订单。</p>
+
+</Admonition>
+
+### 步骤 3. 等待集群完成扩容{#wait-for-scaling-complete}
+
+订单支付成功后，Zilliz Cloud 会开始为您的包年包月集群进行扩容，您将看到以下界面。
+
+![IYNtbTEfdobMLlxjK91cTeyCn1d](/img/IYNtbTEfdobMLlxjK91cTeyCn1d.png)
+
+集群扩容的过程大约需要 10 分钟，请您耐心等待。当集群状态变为**运行中**时，代表包年包月集群扩容成功。

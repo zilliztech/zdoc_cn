@@ -81,7 +81,7 @@ Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关�
 
 - **接收告警通知**：如果被管理员指定，任何组织成员都可以接收告警通知。
 
-要了解用户角色的详细说明，请参阅[用户角色](./user-roles)。
+要了解用户角色的详细说明，请参阅[访问控制](./access-control)。
 
 ## 查看项目告警{#view-project-alerts}
 
@@ -121,8 +121,6 @@ Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关�
 
 </Admonition>
 
-![zh-edit-project-alert](/img/zh-edit-project-alert.png)
-
 ## 开启或关闭项目告警{#turn-on-or-off-a-project-alert}
 
 要快速开启或关闭一个告警，在**操作**栏中选择**开启**或**关闭**。
@@ -133,8 +131,6 @@ Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关�
 
 </Admonition>
 
-![zh-turn-on-or-off-project-alert](/img/zh-turn-on-or-off-project-alert.png)
-
 ## 删除项目告警{#delete-a-project-alert}
 
 您可以删除不需要的项目告警。
@@ -144,8 +140,6 @@ Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关�
 <p>告警删除后，您无法再接收到任何告警通知。</p>
 
 </Admonition>
-
-![zh-delete-project-alert](/img/zh-delete-project-alert.png)
 
 ## 查看告警历史{#view-alert-history}
 

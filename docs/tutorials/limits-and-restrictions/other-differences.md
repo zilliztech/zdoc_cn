@@ -30,7 +30,7 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 几乎完全兼容 Milvus 的所有数据类型，包括 JSON。但是，目前 BinaryVector 还不可用。
 
-有关 JSON 的更多信息，请参见 [JSON](./use-json-fields)。
+有关 JSON 的更多信息，请参见 [JSON 类型](./use-json-fields)。
 
 ## 索引类型{#index-type}
 

@@ -7,7 +7,7 @@ notebook: FALSE
 description: "本教程将介绍如何创建 Zilliz Cloud 账号。 | Cloud"
 type: origin
 token: CCVpw6BVti8P8LkfcdJcdRH1nHg
-sidebar_position: 1
+sidebar_position: 2
 keywords: 
   - 向量数据库
   - zilliz

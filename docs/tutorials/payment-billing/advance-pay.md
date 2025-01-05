@@ -1,13 +1,13 @@
 ---
-title: "现金充值 | Cloud"
+title: "现金充值（对公转账） | Cloud"
 slug: /advance-pay
-sidebar_label: "现金充值"
+sidebar_label: "现金充值（对公转账）"
 beta: FALSE
 notebook: FALSE
-description: "免费试用到期后，您需要添加支付方式方可继续使用 Zilliz Cloud。Zilliz Cloud 支持多种支付方式，包括现金充值和订阅](./subscribe-on-aliyun-marketplace)[阿里云市场](./subscribe-on-aliyun-marketplace)。本章主要介绍如何通过线下转账的方式进行现金充值。如需开具发票，请参考[开具发票 。 | Cloud"
+description: "对公转账是指通过银行汇款的方式将资金充值到您的 Zilliz Cloud 组织现金余额中，用于支付使用 Zilliz Cloud 产生的费用。目前，Zilliz Cloud 界面仅支持通过专属账号进行汇款。 | Cloud"
 type: origin
 token: JZqrwH8V8i6a3jktSQgcyXAEnAg
-sidebar_position: 4
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz
@@ -20,40 +20,76 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# 现金充值
+# 现金充值（对公转账）
 
-免费试用到期后，您需要添加支付方式方可继续使用 Zilliz Cloud。Zilliz Cloud 支持多种支付方式，包括现金充值和[订阅](./subscribe-on-aliyun-marketplace)[阿里云市场](./subscribe-on-aliyun-marketplace)。本章主要介绍如何通过线下转账的方式进行现金充值。如需开具发票，请参考[开具发票](./invoice) 。
+对公转账是指通过银行汇款的方式将资金充值到您的 Zilliz Cloud 组织现金余额中，用于支付使用 Zilliz Cloud 产生的费用。目前，Zilliz Cloud 界面仅支持通过**专属账号**进行汇款。
 
-## 现金充值（线下转账）{#add-funds}
+专属账号是指 Zilliz Cloud 为每个组织分配的专属汇款账号，在 Zilliz Cloud [发票](./invoice)信息显示的银行账号基础上增加了 9 位专属识别数字。当您使用专属账号进行汇款时，系统会通过 9 位专属识别数字实时将款项汇入 Zilliz Cloud 银行账户中，5-10 分钟后系统自动将汇款金额充值到对应的 Zilliz Cloud 组织现金余额中。
 
-如需进行现金充值，您需要先通过[企业认证](./enterprise-certification)。
+<Admonition type="info" icon="📘" title="说明">
 
-1. 点击左侧导航栏中的**账单**。在**现金余额**部分，点击**充值**按钮。
+<p>如需进行现金充值，您需要先通过<a href="./enterprise-certification">企业认证</a>。</p>
 
-    ![add-fund-cn](/img/add-fund-cn.png)
+</Admonition>
 
-1. 查看弹窗中的对公转账收款信息，并进行线下转账。转账成功后，您将收到 **Zilliz Cloud 充值成功**的邮件提醒。请注意：充值金额预计在转账后的 5～10 分钟后到账。
+## 对公转账流程{#procedures}
 
-1. 您可在**现金余额**部分查看余额并点击**充值记录**查看所有历史充值记录的详情。
+下图展示了在 Zilliz Cloud 通过专属账号进行对公转账的主要流程。
 
-    ![bank-transfer-information](/img/bank-transfer-information.png)
+![FLFswkIjJhwod6bsBAYcPMNankb](/img/FLFswkIjJhwod6bsBAYcPMNankb.png)
+
+## 操作步骤{#add-funds}
+
+1. **获取专属汇款账号：**
+
+    1. 检查界面右上角的组织是否为需要进行充值的组织。
+
+        <Admonition type="info" icon="📘" title="说明">
+
+        <p>每个 Zilliz Cloud 组织都对应一个专属汇款账号，不可用于其他 Zilliz Cloud 组织。请务必检查组织信息，确保获取对应的专属汇款账号。</p>
+
+        </Admonition>
+
+    1. 点击左侧导航栏中的**账单**并前往**账单概览**页。在**现金余额**部分，点击**充值**按钮。
+
+        ![add-fund-cn](/img/add-fund-cn.png)
+
+    1. 查看您的专属汇款账号。
+
+        ![bank-transfer-information](/img/bank-transfer-information.png)
+
+1. **线下汇款：**
+
+    准备好您的付款银行账号、Zilliz Cloud 专属汇款账号后，前往您付款银行账号对应的网银、手机银行客户端、银行 ATM 机或银行柜台等，将款项转账到 Zilliz Cloud 收款账号中。
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>如果您的组织账号中还有剩余免费额度，已进行过线下转账充值，并同时开通阿里云云市场扣费渠道，则扣费顺序为：免费额度&gt;现金余额&gt;阿里云市场。</p>
-    <p>例如，当您有一份账单需要支付时，我们会先扣除您的免费额度。如果剩余免费额度不足以抵扣全部账单金额，我们会扣除所有剩余免费额度，剩余账单金额部分将扣除您的现金余额。如扣除免费额度和现金余额后，依旧不足以抵扣全部账单金额，我们将通过您绑定的阿里云云市场账号进行扣费。</p>
+    <p>请务必在汇款前核对账号信息，以免发生错误。</p>
 
     </Admonition>
 
-1. 现金余额监控默认关闭，如果需要打开现金余额监控，请参阅[管理组织告警](./manage-organization-alerts)。
+1. **检查汇款是否充值到您的 Zilliz Cloud 组织账号中：**
 
-## 相关文档{#related-topics}
+    在您完成线下汇款后，汇款金额预计在 5～10 分钟后充值到您的 Zilliz Cloud 组织账号中，届时您将收到 **Zilliz Cloud 充值成功**的邮件提醒。您可在 Zilliz Cloud 账单概览页的**现金余额**部分查看余额并通过**充值记录**查看充值历史和详情。
 
-- [企业认证](./enterprise-certification)
+    如果您的汇款资金未到账，请通过 finance@zilliz.com 联系我们或[提交工单](http://support.zilliz.com.cn)。
 
-- [订阅阿里云市场](./subscribe-on-aliyun-marketplace)
+    ![add_fund_history](/img/add_fund_history.png)
 
-- [查看账单与支付方式](./view-invoice)
+## 常见问题
 
-- [开具发票](./invoice) 
+- **现金充值（对公转账）可以开发票吗？**
 
+    不可以。根据《中华人民共和国发票管理办法》、《中华人民共和国发票管理办法实施细则》，Zilliz Cloud 只能针对**您已消费**的账单开具发票。对公汇款是对组织的现金余额进行充值。充值预付的款项，由于没有消费，也没有对应的Zilliz Cloud 消费，因此无法申请开具发票。
+
+- **为什么无法进行现金充值？**
+
+    以下情况下可能您无法充值：
+
+    - 组织未完成企业认证。您需要完成组织企业认证后，才能进行现金充值。具体操作请参考[企业认证](./enterprise-certification)。
+
+    - 您的账号不具备操作权限。只有组织管理员和组织账单管理员可以进行现金充值。如果您的权限不足，请联系管理员进行充值。
+
+- **对公转账是否收取手续费？**
+
+    当您通过银行进行转账汇款时，Zilliz Cloud 侧不收取任何手续费，但银行侧可能会收取一定的手续费，请咨询您的汇款银行。

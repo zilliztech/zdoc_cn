@@ -7,7 +7,7 @@ notebook: FALSE
 description: "本指南介绍如何快速创建 Zilliz Cloud 集群并进行 CRUD 操作。 | Cloud"
 type: origin
 token: M4cQwZQ0QiqBy6kzZftc0fQPn1f
-sidebar_position: 2
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz
@@ -125,13 +125,11 @@ curl --request POST \
 
 </Admonition>
 
-要获取云区域、API 密钥和项目 ID，请参阅[Zilliz Cloud 控制台](./on-zilliz-cloud-console)。有关如何创建集群，请参阅[创建集群](./create-cluster)。
-
-集群启动后，系统将提示您一次性下载[集群凭证](./cluster-credentials)，请将凭证保存在安全位置，以便后续连接集群时使用。
+有关如何创建集群，请参阅[创建集群](./create-cluster-on-demand)。集群启动后，系统将提示您一次性下载[集群凭证](./cluster-credentials)，请将凭证保存在安全位置，以便后续连接集群时使用。
 
 另外，您也可以[创建 API 密钥](./manage-api-keys)，用以连接集群，无需使用集群凭证。
 
-## 连接 Zilliz Cloud 集群Milvus{#connect-to-zilliz-cloud-cluster}
+## 连接 Zilliz Cloud 集群{#connect-to-zilliz-cloud-cluster}
 
 获取集群凭证或 API 密钥后，您可以通过以下示例代码连接到集群。
 
@@ -466,7 +464,7 @@ curl --request POST \
 
         是否使用保留 JSON 字段 **$meta** 来存储在 schema 中未定义的字段和字段值。
 
-     有关更多信息，请参阅[Schema](./schema-explained)。
+     有关更多信息，请参阅[了解 Schema](./schema-explained)。
 
 - **索引参数**
 
@@ -480,7 +478,7 @@ curl --request POST \
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>通过上述代码创建的 collection 将自动加载（load）。如需管理非自动加载的 collection，请参阅<a href="./manage-collections-sdks">管理 Collection (SDK)</a>。</p>
+<p>通过上述代码创建的 collection 将自动加载（load）。如需管理非自动加载的 collection，请参阅<a href="./manage-collections-sdks">创建 Collection</a>。</p>
 <p>通过 RESTful API 创建的 collection 会自动完成加载（load）。</p>
 
 </Admonition>

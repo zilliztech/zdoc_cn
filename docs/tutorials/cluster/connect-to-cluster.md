@@ -31,7 +31,7 @@ import TabItem from '@theme/TabItem';
 
 - 已注册 Zilliz Cloud 账户。详情请参见[注册账号](./register-with-zilliz-cloud)。
 
-- 已创建集群。详情请参见[创建集群](./create-cluster)。
+- 已创建集群。详情请参见[创建集群](./create-cluster-on-demand)。
 
 - 已安装合适版本的 Milvus SDK。详情请参见[安装 SDK](./install-sdks)。
 

@@ -7,7 +7,7 @@ notebook: FALSE
 description: "为帮助您测试 Zilliz Cloud 向量数据库特性和评估使用成本，Zilliz Cloud 提供 Free 版本和免费试用。您仅需注册账号即可，无需绑定支付方式。 | Cloud"
 type: origin
 token: WWlIwejMNiAEmmkce5fcZu4UnMd
-sidebar_position: 3
+sidebar_position: 5
 keywords: 
   - 向量数据库
   - zilliz
@@ -43,29 +43,29 @@ Zilliz Cloud 提供 Free 版本，允许您免费使用 Serverless 集群的功�
 
 ### 免费试用说明{#use-free-trial}
 
-首次注册 Zilliz Cloud 账号时，您的组织将获赠 **¥300** 免费额度，有效期为 **30 天**，可用于试用 Serverless 和 Dedicated 版本集群。免费额度使用完毕或过期时即视为免费试用结束。
+首次注册 Zilliz Cloud 账号时，您的组织将获赠 **¥300** 优惠券，有效期为 **30 天**，可用于试用 Serverless 和 Dedicated 版本集群。优惠券使用完毕或过期时即视为免费试用结束。
 
 免费试用结束后，您的组织将被冻结。在此期间，组织中的 Serverless 和 Dedicated 集群将被移至[回收站](./use-recycle-bin)，您将无法使用 Dedicated 和 Serverless 集群特有的高级功能（如备份恢复、告警等）。
 
 如需解冻组织，请[添加支付方式](./payment-billing)。在此之后，您可以从回收站中恢复数据。如果在组织冻结 30 天后仍未添加支付方式，您的 Serverless 和 Dedicated 集群将被永久删除，但您的组织仍被保留。
 
-### 获取免费额度{#earn-credits}
+### 获取优惠券{#earn-credits}
 
-注册 Zilliz Cloud 账号后您即可获得 ¥300 免费额度。如果您绑定了云市场支付方式，免费额度有效期可延长至 **1 年**。
+注册 Zilliz Cloud 账号后您即可获得 ¥300 优惠券。如果您绑定了云市场支付方式，优惠券有效期可延长至 **1 年**。
 
-如需更多免费额度或延长试用期，请[联系销售](https://zilliz.com.cn/contact-sales)。
+如需更多优惠券或延长试用期，请[联系销售](https://zilliz.com.cn/contact-sales)。
 
-### 查看免费额度余额{#view-credit-balance}
+### 查看优惠券余额{#view-credit-balance}
 
-您可以通过左侧导航栏底部的卡片，快速查看免费额度余额及有效期。
+您可以通过左侧导航栏底部的卡片，快速查看优惠券余额及有效期。
 
-或者，您也可以前往**账单概览**页，通过**免费额度**卡片，查看免费额度余额。
+或者，您也可以前往**账单概览**页，通过**优惠券**卡片，查看优惠券余额。
 
 ![view-credit-balance-cn](/img/view-credit-balance-cn.png)
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>为节省免费额度，我们建议您手动挂起未使用的集群。</p>
+<p>为节省优惠券，我们建议您手动挂起未使用的集群。</p>
 
 </Admonition>
 
@@ -73,9 +73,9 @@ Zilliz Cloud 提供 Free 版本，允许您免费使用 Serverless 集群的功�
 
 在免费试用期间，Zilliz Cloud 会向组织管理员发送以下邮件通知，提醒您免费试用的情况。
 
-- 您已试用 60% 的免费额度。
+- 您已试用 60% 的优惠券。
 
-- 免费额度有效期不足 3 天。
+- 优惠券有效期不足 3 天。
 
 - 免费试用到期后未添加支付方式，导致组织被冻结
 
@@ -83,7 +83,7 @@ Zilliz Cloud 提供 Free 版本，允许您免费使用 Serverless 集群的功�
 
 - 免费试用到期，Serverless 和 Dedicated 集群已被移至回收站。
 
-- 所有免费额度已使用完毕。
+- 所有优惠券已使用完毕。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -95,9 +95,9 @@ Zilliz Cloud 提供 Free 版本，允许您免费使用 Serverless 集群的功�
 
 - [连接集群](./connect-to-cluster)
 
-- [管理 Collection](./manage-collections)
+- [创建 Collection](./manage-collections-sdks)
 
-- [Insert, Upsert 和 Delete](./insert-update-delete)
+- [插入与删除](./insert-update-delete)
 
-- [Search, Query 和 Get](./search-query-get)
+- [搜索与重排](./search-query-get)
 

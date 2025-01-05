@@ -30,7 +30,7 @@ Zilliz Cloud 允许您为集群创建自动备份，确保意外发生时可以�
 
 开始前，请确保：
 
-- 您是目标组织中的[组织管理员](./user-roles#organization-roles)或[项目管理员](./user-roles#project-roles)。
+- 您是目标组织中的[组织管理员](./organization-users)或[项目管理员](./project-users)。
 
 - 您的集群为 Dedicated 版本。
 
@@ -52,7 +52,7 @@ Zilliz Cloud 允许您为集群创建自动备份，确保意外发生时可以�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>更多备份费用详情，请参考 <a href="./understand-cost#backup-costs">了解费用</a>。</p>
+<p>更多备份费用详情，请参考 <a href="./understand-cost">了解费用</a>。</p>
 
 </Admonition>
 

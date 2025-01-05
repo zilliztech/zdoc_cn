@@ -70,7 +70,7 @@ Zilliz Cloud 支持在创建过程中灵活配置 Connector。创建后， Conne
 
 1. 选择项目。点击左侧导航栏中的 **Pipelines**。选中 **Connectors** 标签页。点击 **+ Connectors。**
 
-    ![create-connector-cn](/img/create-connector-cn.png)
+    undefined
 
 1. 连接数据源。
 
@@ -151,7 +151,7 @@ Zilliz Cloud 支持在创建过程中灵活配置 Connector。创建后， Conne
            </tr>
            <tr>
              <td><p>下次运行时间</p></td>
-             <td><p>设置运行时间。时区与<a href="./manage-timezone">系统时区</a>保持一致。</p></td>
+             <td><p>设置运行时间。时区与<a href="./organization-settings#manage-timezone">系统时区</a>保持一致。</p></td>
            </tr>
         </table>
 

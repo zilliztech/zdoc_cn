@@ -26,4 +26,4 @@ sidebar_position: 14
 
 ### Zilliz Cloud 是否支持集成 LangChain？ \{#does-zilliz-cloud-support-langchain}
 
-Zilliz Cloud 支持集成 LangChain。更多详情，请阅读[与 LangChain 集成搭建智能文档问答系统](./question-answering-over-documents-with-zilliz-cloud-and-langchain) 。
+Zilliz Cloud 支持集成 LangChain。更多详情，请参考 [Zilliz Notebook Gallery](https://zilliz.com/learn/milvus-notebooks)。

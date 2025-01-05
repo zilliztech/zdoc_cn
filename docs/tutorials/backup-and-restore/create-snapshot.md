@@ -32,14 +32,14 @@ Zilliz Cloud 将永久保存手动创建的备份。换言之，手动创建的�
 
 开始前，请确保：
 
-- 您是目标组织中的[组织管理员](./user-roles#organization-roles)或[项目管理员](./user-roles#project-roles)。
+- 您是目标组织中的[组织管理员](./organization-users)或[项目管理员](./project-users)。
 
 - 您的集群为 Dedicated 版本。
 
 <Admonition type="info" icon="📘" title="说明">
 
 <p>备份功能目前仅对 Dedicated 集群开放。如果您创建的是 Serverless 集群，请先<a href="./migrate-between-clusters">迁移</a>至 Dedicated 集群。</p>
-<p>创建备份会产生一定费用。具体详情，请参阅<a href="./understand-cost#backup-costs">了解费用</a>。</p>
+<p>创建备份会产生一定费用。具体详情，请参阅<a href="./understand-cost">了解费用</a>。</p>
 
 </Admonition>
 
@@ -118,7 +118,7 @@ Zilliz Cloud 将永久保存手动创建的备份。换言之，手动创建的�
 </TabItem>
 </Tabs>
 
-Zilliz Cloud 将生成一条备份任务。您可前往[任务中心](./job-center)查看任务状态和进度。如果任务状态从**进行中**变更为**成功**，则代表备份创建成功。
+Zilliz Cloud 将生成一条备份任务。您可前往[任务中心](./view-activities)查看任务状态和进度。如果任务状态从**进行中**变更为**成功**，则代表备份创建成功。
 
 <Admonition type="info" icon="📘" title="说明">
 

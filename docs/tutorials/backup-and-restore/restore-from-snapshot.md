@@ -26,11 +26,13 @@ import TabItem from '@theme/TabItem';
 
 本文介绍如何从备份中恢复 Zilliz Cloud 集群或 Collection。您只能使用状态为“创建完成”的备份文件进行集群或 Collection 恢复。
 
+包年包月集群暂不支持恢复备份，如有需求，请[联系我们](http://support.zilliz.com.cn)。
+
 ## 前提条件{#before-you-start}
 
 开始前，请确保：
 
-- 您是目标组织中的[组织管理员](./user-roles#organization-roles)或[项目管理员](./user-roles#project-roles)。
+- 您是目标组织中的[组织管理员](./organization-users)或[项目管理员](./project-users)。
 
 - 您的集群为 Dedicated 版本。
 
@@ -56,7 +58,7 @@ import TabItem from '@theme/TabItem';
 
 在单击**恢复**后，Zilliz Cloud 会使用指定的属性创建目标集群，然后将快照中的 Collection 还原到目标集群中。
 
-Zilliz Cloud 将生成一条恢复任务。您可前往[任务中心](./job-center)查看任务状态和进度。如果任务状态从**进行中**变更为**成功**，则代表集群恢复成功。
+Zilliz Cloud 将生成一条恢复任务。您可前往[任务中心](./view-activities)查看任务状态和进度。如果任务状态从**进行中**变更为**成功**，则代表集群恢复成功。
 
 </TabItem>
 <TabItem value="Bash">
@@ -115,7 +117,7 @@ curl --request POST \
 
 在单击**恢复**后，Zilliz Cloud 会使用指定的属性创建目标 Collection。
 
-Zilliz Cloud 将生成一条恢复任务。您可前往[任务中心](./job-center)查看任务状态和进度。如果任务状态从**进行中**变更为**成功**，则代表 Collection 恢复成功。
+Zilliz Cloud 将生成一条恢复任务。您可前往[任务中心](./view-activities)查看任务状态和进度。如果任务状态从**进行中**变更为**成功**，则代表 Collection 恢复成功。
 
 </TabItem>
 <TabItem value="Bash">

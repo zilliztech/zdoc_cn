@@ -64,9 +64,9 @@ sidebar_position: 3
 
 1. 为集群[扩容](./manage-cluster)。
 
-1. [删除](./manage-collections)未使用的 Collection。
+1. [删除](./drop-collection)未使用的 Collection。
 
-1. 使用 [Partition Key](./use-partition-key) 创建 Partition。
+1. [使用 Partition Key](./use-partition-key) 创建 Partition。
 
 ### 如何确认我的 Collection 是否开启了动态 Schema？ \{#how-can-i-know-if-dynamic-schema-is-enabled-for-my-collection}
 
@@ -78,13 +78,13 @@ sidebar_position: 3
 
 1. 在页面右上角查看动态 Schema 是否已开启。
 
-更多详情，请阅读 [开启动态 Schema](./enable-dynamic-field)。
+更多详情，请阅读 [Dynamic Field](./enable-dynamic-field)。
 
 ![faq_dynamic_schema_enable](/img/faq_dynamic_schema_enable.png)
 
 ### 如果创建 Collection 时未开启动态 Schema，Collection 创建成功后是否还能开启动态 Schema？ \{#if-dynamic-schema-was-disabled-when-the-collection-was-created-can-i-enable-it-later}
 
-不能。在创建 Collection 时一旦确认开启或者关闭动态 Schema，Collection 创建成功后不可以修改动态 Schema 状态。更多详情，请阅读 [开启动态 Schema](./enable-dynamic-field)
+不能。在创建 Collection 时一旦确认开启或者关闭动态 Schema，Collection 创建成功后不可以修改动态 Schema 状态。更多详情，请阅读 [Dynamic Field](./enable-dynamic-field)。
 
 ### Zilliz Cloud 支持哪些相似度类型？ \{#what-are-the-indexing-metric-types-supported-by-zilliz-cloud}
 

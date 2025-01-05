@@ -24,7 +24,9 @@ import Admonition from '@theme/Admonition';
 
 # 使用 Pipelines 搭建 RAG 应用
 
-Zilliz Cloud Pipelines 可以将文档、文本片段和图像等非结构化数据转换成可搜索的向量并存储在 [Collection](./cluster-collection-and-entities#collection) 中。本文将介绍 Zilliz Cloud Pipelines 的三种主要类型并提供示例代码，展示如何使用 Pipelines 搭建 RAG 应用。
+Zilliz Cloud Pipelines 可以将文档、文本片段和图像等非结构化数据转换成可搜索的向量并存储在 [Collection](./manage-collections) 中。本文将介绍 Zilliz Cloud Pipelines 的三种主要类型并提供示例代码，展示如何使用 Pipelines 搭建 RAG 应用。
+
+![pipeline-overview-cn](/img/pipeline-overview-cn.png)
 
 ## 了解 Pipelines{#understanding-pipelines}
 
@@ -58,21 +60,21 @@ Deletion pipeline 从 Collection 中删除指定文档的所有文档块。1 个
 
 ### 前提条件{#before-you-start}
 
-- 您已[创建](./create-cluster)部署在阿里云（杭州）的 Zilliz Cloud 集群。
+- 您已[创建](./create-cluster-on-demand)部署在阿里云（杭州）的 Zilliz Cloud 集群。
 
 ### 设置 Zilliz Cloud Pipelines{#set-up-zilliz-cloud-pipelines}
 
 #### 获取集群信息{#obtain-cluster-information}
 
-获取集群 ID、集群地域、API 密钥、项目 ID 等相关[信息](./on-zilliz-cloud-console)。
+获取集群 ID、集群地域、API 密钥、项目 ID 等相关信息。
 
 ```bash
 import os
 
 CLOUD_REGION = 'ali-cn-hangzhou'
-CLUSTER_ID = 'your CLUSTER_ID'
-API_KEY = 'your API_KEY'
-PROJECT_ID = 'your PROJECT_ID'
+CLUSTER_ID = 'YOUR-CLUSTER-ID'
+API_KEY = 'YOUR-API-KEY'
+PROJECT_ID = 'YOUR-PROJECT-ID'
 ```
 
 #### 创建 Ingestion Pipeline {#create-an-ingestion-pipeline}
@@ -228,7 +230,7 @@ for data in [milvus_lite_data, milvus_standalone_data, milvus_cluster_data]:
     print(response.json())
 ```
 
-现在我们已经成功将文本片段和对应标题、Embedding 向量摄取到向量数据库中了。您可以通过 [Zilliz Cloud web 控制台](https://cloud.zilliz.com.cn/)预览该 Collection （`my_text_collection`）下的数据。
+现在我们已经成功将文本片段和对应标题、Embedding 向量摄取到向量数据库中了。您可以通过 Zilliz Cloud web 控制台预览该 Collection （`my_text_collection`）下的数据。
 
 ### 搭建 RAG 应用{#build-a-rag-application}
 

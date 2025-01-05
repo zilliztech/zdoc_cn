@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Elasticsearch 是一个高度可扩展的搜索和分析引擎。通过利用 Zilliz Cloud 的迁移能力，您可以无缝地将数据从 Elasticsearch 实例迁移到 Zilliz Cloud 集群。 | Cloud"
 type: origin
 token: CJN4wlKiGi1P8Zk4BHKcF04GnLb
-sidebar_position: 2
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz
@@ -23,13 +23,15 @@ import Admonition from '@theme/Admonition';
 
 # 从 Elasticsearch 迁移至 Zilliz Cloud
 
-Elasticsearch 是一个高度可扩展的搜索和分析引擎。通过利用 Zilliz Cloud 的迁移能力，您可以无缝地将数据从 Elasticsearch 实例迁移到 Zilliz Cloud 集群。
+[Elasticsearch](https://www.elastic.co/elasticsearch) 是一个高度可扩展的搜索和分析引擎。通过利用 Zilliz Cloud 的迁移能力，您可以无缝地将数据从 Elasticsearch 实例迁移到 Zilliz Cloud 集群。
 
 迁移过程涉及与现有的 Elasticsearch 源建立连接，并将其数据索引复制到 Zilliz Cloud 中相应的目标 collection，保留原始数据的结构和性能，同时启用高级向量搜索功能。
 
-## 使用限制{#limits}
+## 注意事项{#considerations}
 
 - 目前，您可以迁移以下 Elasticsearch 数据类型：**dense_vector**, **text**, **string**, **keyword**, **ip**, **date**, **timestamp**, **long**, **integer**, **short**, **byte**, **double**, **float**, **boolean**, **object**, **arrays**。如果您的表中存在不支持的数据类型字段，可以选择不迁移这些字段或[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。有关 Elasticsearch 数据类型如何映射到 Zilliz Cloud 的详细信息，请参阅[字段映射](./migrate-from-elasticsearch#field-mapping-reference)。
+
+- 为确保兼容性，目标 Collection 中的 Auto ID 将被禁用，且无法修改。
 
 - 每次迁移仅允许从每个源索引中选择一个向量字段。
 
@@ -39,17 +41,21 @@ Elasticsearch 是一个高度可扩展的搜索和分析引擎。通过利用 Zi
 
 - 您的 Elasticsearch 集群运行在 7.x 及以上版本。详情请参阅[安装 Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)。
 
-- 您已创建 Zilliz Cloud 集群。详情请参阅[创建集群](./create-cluster)。
+- 如果您的网络环境配置了白名单列表，请确保将 Zilliz Cloud 的 IP 地址添加到其中。要了解更多信息，请参考 [Zilliz Cloud IP](./zilliz-cloud-ips)。
+
+- 已在 Zilliz Cloud 中获得组织管理员或项目管理员权限。如果您没有相关权限，请联系您的 Zilliz Cloud 管理员。
 
 ## 从 Elasticsearch 迁移至 Zilliz Cloud{#migrate-from-elasticsearch-to-zilliz-cloud}
+
+![zh_migrate_from_es](/img/zh_migrate_from_es.png)
 
 您可以将源数据迁移到任何版本类型的 Zilliz Cloud 集群，只要其计算单元（CU）大小能够满足源数据的存储需求。
 
 1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)。
 
-1. 进入目标项目，选择**数据迁移** > **从 Elasticsearch 迁移**。
+1. 进入目标项目，选择**数据迁移** > **Elasticsearch**。
 
-1. 在**连接至数据源**步骤中，选择**通过 Endpoint** 或**通过 Cloud ID** 作为与源 Elasticsearch 集群交互的连接方法。然后，单击**下一步**。
+1. 在**连接至数据源**步骤中，选择通过 Endpoint 或通过 Cloud ID 作为与源 Elasticsearch 集群交互的连接方法。然后，单击**下一步**。
 
     <Admonition type="info" icon="📘" title="说明">
 
@@ -69,17 +75,15 @@ Elasticsearch 是一个高度可扩展的搜索和分析引擎。通过利用 Zi
 
     1. 验证 Elasticsearch 数据与 Zilliz Cloud 数据类型之间的映射。Zilliz Cloud 默认映射数据，您可以查看相关映射并进行必要的调整。目前，您可以重命名字段，但不支持更改字段数据类型。
 
-    1. （可选）在**高级设置**中配置**动态列**和 **Partition Key**。更多信息请参考[开启动态字段](./enable-dynamic-field)和[使用 Partition Key](./use-partition-key)。
+    1. 在**高级设置**中配置**动态列**和 **Partition Key**。更多信息请参考 [Dynamic Field](./enable-dynamic-field) 和[使用 Partition Key](./use-partition-key)。
 
-    1. （可选）在**基础信息**中自定义目标 collection 名称和描述。collection 名称在每个集群中必须唯一。如果目标 collection 名称与现有 collection 重复，需要重命名目标 collection。
+    1. 在**目标 Collection 名称和描述**中，自定义目标 Collection 的名称和描述。Collection 名称在每个集群中必须唯一。如果名称与现有 Collection 重复，请重命名 Collection。
 
 1. 点击**迁移**。
 
-![zh_migrate_from_es](/img/zh_migrate_from_es.png)
-
 ## 查看迁移进度{#monitor-the-migration-process}
 
-生成迁移任务后，您可前往[任务中心](/docs/job-center)查看任务状态和进度。如果迁移任务的状态从**进行中**变更为**成功**，则代表迁移成功。
+生成迁移任务后，您可前往[任务中心](./view-activities)查看任务状态和进度。如果迁移任务的状态从**进行中**变更为**成功**，则代表迁移成功。
 
 <Admonition type="info" icon="📘" title="说明">
 

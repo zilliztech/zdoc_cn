@@ -50,7 +50,7 @@ import TabItem from '@theme/TabItem';
 
     ![create-pipeline-cn](/img/create-pipeline-cn.png)
 
-1. 选择需要创建的 Pipeline 类型。点击 Ingestion Pipeline 一栏中的 **+ Pipeline** 按钮。 
+1. 选择需要创建的 Pipeline 类型。点击 Ingestion Pipeline。 
 
     ![choose-pipeline-cn](/img/choose-pipeline-cn.png)
 
@@ -104,6 +104,8 @@ import TabItem from '@theme/TabItem';
            </tr>
         </table>
 
+        ![add-index-text-function-cn](/img/add-index-text-function-cn.png)
+
     1. 点击**添加**。
 
 1. (可选) 添加 **PRESERVE** Function。**PRESERVE** Function 在 Collection 中添加标量字段，用于保留文档元数据。
@@ -130,11 +132,15 @@ import TabItem from '@theme/TabItem';
 
         </Admonition>
 
+        ![add-preserve-function-cn](/img/add-preserve-function-cn.png)
+
     1. 点击**添加**。
 
 1. 点击**创建 Ingestion Pipeline**。
 
 1. 继续创建 Search pipeline 和 Deletion pipeline。创建的 Search 和 Deletion Pipeline 可适应配套刚才创建的Ingestion Pipeline。
+
+    ![auto-create-text-search-and-delete-pipelines-cn](/img/auto-create-text-search-and-delete-pipelines-cn.png)
 
     <Admonition type="info" icon="📘" title="说明">
 
@@ -422,6 +428,8 @@ curl --request POST \
            </tr>
         </table>
 
+        ![add-search-text-function-cn](/img/add-search-text-function-cn.png)
+
     1. 点击**添加**。
 
 1. 点击**创建 Search Pipeline**。
@@ -582,7 +590,7 @@ curl --request POST \
 
     - `outputFields`: 在搜索结果中一同返回的输出字段。`id`、`distance` 和 `chunk_text`为默认输出字段。
 
-    - `filter`: 搜索时的[过滤](./get-and-scalar-query#reference-on-scalar-filters)条件。
+    - `filter`: 搜索时的[过滤](./filtering)条件。
 
 请求返回以下类似内容：
 
@@ -774,7 +782,7 @@ curl --request POST \
 
 - `cloud-region`: 集群的云服务地域。目前仅支持 `ali-cn-hangzhou`。
 
-- `expression`: 布尔表达式，用于过滤出需要删除的所有 Entity。更多关于表达式详情，请参考[Get 和 Scalar Query](./get-and-scalar-query#reference-on-scalar-filters)。
+- `expression`: 布尔表达式，用于过滤出需要删除的所有 Entity。更多关于表达式详情，请参考[过滤表达式](./filtering)。
 
 请求返回以下类似内容：
 

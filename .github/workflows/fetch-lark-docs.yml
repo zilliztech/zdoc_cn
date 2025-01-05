@@ -18,8 +18,8 @@ jobs:
       run: |
         yarn
         npx docusaurus report-to-lark -m "🔥 开始构建中文文档..."
-        npx docusaurus fetch-lark-docs -man guides -tar saas
-        npx docusaurus fetch-lark-docs -man guides -tar saas -post
+        npx docusaurus fetch-lark-docs -man guides -tar zilliz.saas
+        npx docusaurus fetch-lark-docs -man guides -tar zilliz.saas -post
         npx docusaurus fetch-lark-docs -man python -tar zilliz
         npx docusaurus fetch-lark-docs -man python -tar zilliz -post
         npx docusaurus fetch-lark-docs -man javaV1 -tar zilliz

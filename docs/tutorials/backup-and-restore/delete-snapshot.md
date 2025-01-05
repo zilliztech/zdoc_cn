@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz Cloud 支持手动或自动创建备份。 | Cloud"
 type: origin
 token: FW37wt3qEiKvZzkzBducXgHZnIe
-sidebar_position: 5
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz
@@ -35,7 +35,7 @@ Zilliz Cloud 将永久保留手动创建的备份。即使删除集群，为该�
 
 请先确保：
 
-- 您是[组织管理员](./user-roles#organization-roles)或[项目管理员](./user-roles#project-roles)。
+- 您是[组织管理员](./organization-users)或[项目管理员](./project-users)。
 
 - 您的集群为 Dedicated 版集群。
 
