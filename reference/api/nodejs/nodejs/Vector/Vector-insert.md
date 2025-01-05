@@ -9,6 +9,16 @@ description: "This operation inserts data into a specific collection. | Node.js"
 type: docx
 token: WUZwdRNXIoS0tSxCrw6coaa2nzf
 sidebar_position: 3
+keywords: 
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - insert()
+  - node
 displayed_sidebar: nodeSidebar
 
 ---
@@ -28,6 +38,7 @@ insert(data): Promise<MutationResult>
 
 ```javascript
 milvusClient.insert({
+    db_name: string,
     collection_name: string,
     data?: RowData[],
     partition_name?: string,
@@ -36,6 +47,10 @@ milvusClient.insert({
 ```
 
 **PARAMETERS:**
+
+- **db_name** (*string*) -
+
+    The name of the database that holds the target collection.
 
 - **collection_name** (*string*) -
 

@@ -9,6 +9,16 @@ description: "This operation lists the privileges granted to the specified role.
 type: docx
 token: CJ9DdmU1ooquOnxcK5AciA3sn3g
 sidebar_position: 10
+keywords: 
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - listGrants()
+  - node
 displayed_sidebar: nodeSidebar
 
 ---

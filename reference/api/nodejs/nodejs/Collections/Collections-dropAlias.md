@@ -8,7 +8,17 @@ notebook: false
 description: "This operation drops a specified collection alias. | Node.js"
 type: docx
 token: FubcdxJ0LoyQiJxmUMjcZnbjnbc
-sidebar_position: 7
+sidebar_position: 8
+keywords: 
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - dropAlias()
+  - node
 displayed_sidebar: nodeSidebar
 
 ---
@@ -29,6 +39,8 @@ dropAlias(data): Promise<ResStatus>
 ```javascript
 milvusClient.dropAlias({
    alias: string,
+   db_name: string,
+   collection_name: string,
    timeout?: number
  })
 ```
@@ -42,6 +54,14 @@ milvusClient.dropAlias({
     The alias of a collection. 
 
     Before this operation, ensure that the alias exists. Otherwise, exceptions will occur.
+
+- **db_name** (*string*) -
+
+    The name of the database that holds the specified collection.
+
+- **collection_name** (*string*) -
+
+    The name of the collection that the alias binds to.
 
 - **timeout** (*number*)  
 

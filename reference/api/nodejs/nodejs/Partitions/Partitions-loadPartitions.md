@@ -9,6 +9,16 @@ description: "This operation loads a specific set of partitions in a specified c
 type: docx
 token: Pyh3dttWKoBqcBx8FGhcArhAnqg
 sidebar_position: 6
+keywords: 
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - loadPartitions()
+  - node
 displayed_sidebar: nodeSidebar
 
 ---
@@ -28,6 +38,7 @@ loadPartitions(data): Promise<ResStatus>
 
 ```javascript
 milvusClient.loadPartitions({
+    db_name: string,
     collection_name: string,
     partition_names: string[],
     replica_number?: number,
@@ -37,6 +48,10 @@ milvusClient.loadPartitions({
 ```
 
 **PARAMETERS:**
+
+- **db_name** (*string*) -
+
+    The name of the database that holds the target collection.
 
 - **collection_name** (*string*) -
 

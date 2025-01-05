@@ -9,6 +9,16 @@ description: "This operation displays whether a specified collection or partitio
 type: docx
 token: J17ZdPNwqo4nt3x5b8pc0H5Nnph
 sidebar_position: 4
+keywords: 
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - getLoadState()
+  - node
 displayed_sidebar: nodeSidebar
 
 ---
@@ -28,6 +38,7 @@ getLoadState(data): Promise<GetLoadStateResponse>
 
 ```javascript
 milvusClient.getLoadState({
+   db_name: string,
    collection_name: string,
    partition_names?: string[],
    timeout?: number
@@ -35,6 +46,10 @@ milvusClient.getLoadState({
 ```
 
 **PARAMETERS:**
+
+- **db_name** (*string*) -
+
+    The name of the database that holds the target collection.
 
 - **collection_name** (*string*) -
 

@@ -9,6 +9,16 @@ description: "This operation checks whether the specified partition exists in th
 type: docx
 token: TVWPdTw2WoPAJYxsbGMc7MX6nEf
 sidebar_position: 4
+keywords: 
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - open source vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - hasPartition()
+  - node
 displayed_sidebar: nodeSidebar
 
 ---
@@ -28,6 +38,7 @@ hasPartition(data): Promise<BoolResponse>
 
 ```javascript
 milvusClient.hasPartition({
+    db_name: string,
     collection_name: string,
     partition_name: string,
     timeout?: number
@@ -35,6 +46,10 @@ milvusClient.hasPartition({
 ```
 
 **PARAMETERS:**
+
+- **db_name** (*string*) -
+
+    The name of the database that holds the target collection.
 
 - **collection_name** (*string*) -
 

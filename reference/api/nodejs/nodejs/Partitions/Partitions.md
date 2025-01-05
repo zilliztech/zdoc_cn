@@ -8,6 +8,16 @@ type: folder
 token: JfB5fh16rl1R1qdNVgec1Kdongc
 sidebar_position: 6
 sidebar_label: "Partitions"
+keywords: 
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Partitions
+  - node
 displayed_sidebar: nodeSidebar
 ---
 

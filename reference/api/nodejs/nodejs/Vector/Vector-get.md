@@ -9,6 +9,16 @@ description: "This operation gets specific entities by their IDs. | Node.js"
 type: docx
 token: IbxXdvdZlonJk9xnlk2cZlIinCh
 sidebar_position: 2
+keywords: 
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get()
+  - node
 displayed_sidebar: nodeSidebar
 
 ---
@@ -28,6 +38,7 @@ get(data): Promise<QueryResults>
 
 ```javascript
 milvusClient.get({
+   db_name: string,
    collection_name: string,
    consistency_level?: ConsistencyLevelEnum,
    ids: string[] | number[],
@@ -40,6 +51,10 @@ milvusClient.get({
 ```
 
 **PARAMETERS:**
+
+- **db_name** (*string*) -
+
+    The name of the database that holds the target collection.
 
 - **collection_name** (*string*) -
 

@@ -1,23 +1,23 @@
 ---
 displayed_sidbar: nodeSidebar
-title: "releasePartitions() | Node.js"
-slug: /node/node/Partitions-releasePartitions
-sidebar_label: "releasePartitions()"
+title: "dropDatabase() | Node.js"
+slug: /node/node/Database-dropDatabase
+sidebar_label: "dropDatabase()"
 beta: false
 notebook: false
-description: "This operation releases the partitions in a specified collection from memory. | Node.js"
+description: "This operation drops a database. | Node.js"
 type: docx
-token: Sqoed1lkwo8umixJJO1cvKIxnZc
-sidebar_position: 7
+token: FIqudtw53o5TrPxk2VdceBQbnhg
+sidebar_position: 2
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - rag llm architecture
+  - private llms
+  - nn search
+  - llm eval
   - zilliz
   - zilliz cloud
   - cloud
-  - releasePartitions()
+  - dropDatabase()
   - node
 displayed_sidebar: nodeSidebar
 
@@ -26,50 +26,38 @@ displayed_sidebar: nodeSidebar
 import Admonition from '@theme/Admonition';
 
 
-# releasePartitions()
+# dropDatabase()
 
-This operation releases the partitions in a specified collection from memory.
+This operation drops a database.
 
 ```javascript
-releasePartitions(data): Promise<ResStatus>
+dropDatabase(data?): Promise<ResStatus>
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.releasePartitions({
+milvusClient.dropDatabase({
     db_name: string,
-    collection_name: string,
-    partition_names: string[],
     timeout?: number
- })
+})
 ```
 
 **PARAMETERS:**
 
 - **db_name** (*string*) -
 
-    The name of the database that holds the target collection.
+    The name of the database to create.
 
-- **collection_name** (*string*) -
+    There should be a database that has the specified name. Otherwise, exceptions will occur.
 
-    **[REQUIRED]**
-
-    The name of an existing collection.
-
-- **partition_names** (*string[]*) -
-
-    **[REQUIRED]**
-
-    A list of the names of the partitions to release.
-
-- **timeout** (*number*)  
+- **timeout** (*number*) -
 
     The timeout duration for this operation. 
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise |\<ResStatus>*
 
 This method returns a promise that resolves to a **ResStatus** object.
 
@@ -97,10 +85,8 @@ This method returns a promise that resolves to a **ResStatus** object.
 
 ## Example
 
-```java
-new milvusClient(MILUVS_ADDRESS).releasePartitions({
-    collection_name: 'my_collection',
-    partition_names: ['my_partition'],
- });
+```javascript
+const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const resStatus = await milvusClient.dropDatabase({ db_name: 'db_to_drop' });
 ```
 

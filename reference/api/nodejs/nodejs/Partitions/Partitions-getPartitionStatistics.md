@@ -9,6 +9,16 @@ description: "This operation displays the statistics collected on a specific par
 type: docx
 token: XDXid6aZ8oCHnVxxFpPcKAB9n0c
 sidebar_position: 3
+keywords: 
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - getPartitionStatistics()
+  - node
 displayed_sidebar: nodeSidebar
 
 ---
@@ -28,6 +38,7 @@ getPartitionStatistics(data): Promise<StatisticsResponse>
 
 ```javascript
 milvusClient.getPartitionStatistics({
+    db_name: string,
     collection_name: string,
     partition_name: string,
     timeout?: number
@@ -35,6 +46,10 @@ milvusClient.getPartitionStatistics({
 ```
 
 **PARAMETERS:**
+
+- **db_name** (*string*) -
+
+    The name of the database that holds the target collection.
 
 - **collection_name** (*string*) -
 

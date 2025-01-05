@@ -9,6 +9,16 @@ description: "This operation creates an index for a specific collection. | Node.
 type: docx
 token: WFRodQlfKoPHTUxbBYzcLug8nsd
 sidebar_position: 1
+keywords: 
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - createIndex()
+  - node
 displayed_sidebar: nodeSidebar
 
 ---
@@ -29,6 +39,7 @@ createIndex(data): Promise<ResStatus>
 ```javascript
 milvusClient.createIndex([
     {
+       db_name: string,
        collection_name: string,
        field_name: string,
        index_name?: string,
@@ -41,6 +52,10 @@ milvusClient.createIndex([
 ```
 
 **PARAMETERS:**
+
+- **db_name** (*string*) -
+
+    The name of the database that holds the target collection.
 
 - **collection_name** (*string*) -
 

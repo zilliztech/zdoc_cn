@@ -8,7 +8,17 @@ notebook: false
 description: "This operation lists the statistics collected on a specific collection. | Node.js"
 type: docx
 token: LQMGdRHjKogdeMxekCtcdBLqnNf
-sidebar_position: 9
+sidebar_position: 10
+keywords: 
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - getCollectionStatistics()
+  - node
 displayed_sidebar: nodeSidebar
 
 ---
@@ -28,12 +38,17 @@ getCollectionStatistics(data): Promise<StatisticsResponse>
 
 ```javascript
 milvusClient.getCollectionStatistics({ 
+    db_name: string,
     collection_name: string,
     timeout?: number 
 })
 ```
 
 **PARAMETERS:**
+
+- **db_name** (*string*) -
+
+    The name of the database that holds the target collection.
 
 - **collection_name** (*string*) -
 

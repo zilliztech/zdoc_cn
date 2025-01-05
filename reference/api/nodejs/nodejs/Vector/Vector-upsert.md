@@ -9,6 +9,16 @@ description: "This operation inserts or updates data in a specific collection. |
 type: docx
 token: MErAdudCloVawFxpxoWcgqZonLc
 sidebar_position: 6
+keywords: 
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - upsert()
+  - node
 displayed_sidebar: nodeSidebar
 
 ---
@@ -28,6 +38,7 @@ upsert(data): Promise<MutationResult>
 
 ```javascript
 milvusClient.upsert({
+   db_name: string,
    collection_name: string,
    data: RowData[],
    hash_keys: Number[],
@@ -37,6 +48,10 @@ milvusClient.upsert({
 ```
 
 **PARAMETERS:**
+
+- **db_name** (*string*) -
+
+    The name of the database that holds the target collection.
 
 - **collection_name** (*str*) -
 

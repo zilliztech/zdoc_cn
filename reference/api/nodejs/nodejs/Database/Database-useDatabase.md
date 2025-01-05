@@ -1,23 +1,23 @@
 ---
 displayed_sidbar: nodeSidebar
-title: "listAliases() | Node.js"
-slug: /node/node/Collections-listAliases
-sidebar_label: "listAliases()"
+title: "useDatabase() | Node.js"
+slug: /node/node/Database-useDatabase
+sidebar_label: "useDatabase()"
 beta: false
 notebook: false
-description: "This is a method template. | Node.js"
+description: "This operation sets the active database for the gRPC client. | Node.js"
 type: docx
-token: KeoKdlitaog6n1xpX8McIIIrnWb
-sidebar_position: 13
+token: SddwdNBoMo3RAfxgcgBc0Akwnih
+sidebar_position: 4
 keywords: 
-  - open source vector database
-  - Vector index
-  - vector database open source
-  - open source vector db
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
   - zilliz
   - zilliz cloud
   - cloud
-  - listAliases()
+  - useDatabase()
   - node
 displayed_sidebar: nodeSidebar
 
@@ -26,23 +26,19 @@ displayed_sidebar: nodeSidebar
 import Admonition from '@theme/Admonition';
 
 
-# listAliases()
+# useDatabase()
 
-This is a method template.
+This operation sets the active database for the gRPC client.
 
 ```javascript
-listAliases(data): Promise<ResStatus>
+useDatabase(data?): Promise<ResStatus>
 ```
 
 ## Request Syntax
 
-This method has the following alternatives.
-
 ```javascript
-listAliases({
+milvusClient.useDatabase({
     db_name: string
-    collection_name: string
-    timeout?: number
 })
 ```
 
@@ -50,21 +46,11 @@ listAliases({
 
 - **db_name** (*string*) -
 
-    The name of the database that holds the target collection.
+    The name of the database to create.
 
-- **collection_name** (*string*) -
+    There should be a database that has the specified name. Otherwise, exceptions will occur.
 
-    **[REQUIRED]**
-
-    The name of an existing collection.
-
-- **timeout** (*number*) -
-
-    The timeout duration for this operation. 
-
-    Setting this to **None** indicates that this operation timeouts when any response returns or error occurs.
-
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise |\<ResStatus>*
 
 This method returns a promise that resolves to a **ResStatus** object.
 
@@ -92,8 +78,7 @@ This method returns a promise that resolves to a **ResStatus** object.
 
 ## Example
 
-```java
+```javascript
 const milvusClient = new milvusClient(MILUVS_ADDRESS);
-const res = await milvusClient.listAliases({ collection_name: 'my_collection' });
+const resStatus = await milvusClient.useDatabase({ db_name: 'new_db' });
 ```
-

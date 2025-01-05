@@ -8,6 +8,16 @@ type: folder
 token: YIWifhm0HlwT5ldC40fc8tAOnXd
 sidebar_position: 2
 sidebar_label: "Client"
+keywords: 
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Client
+  - node
 displayed_sidebar: nodeSidebar
 ---
 

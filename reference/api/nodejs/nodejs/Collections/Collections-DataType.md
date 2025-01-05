@@ -8,7 +8,17 @@ notebook: false
 description: "This is an enumeration that provides the following constants. | Node.js"
 type: docx
 token: VUp6d9FvcoBV0AxYJmvcq9DAnUg
-sidebar_position: 4
+sidebar_position: 5
+keywords: 
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - RAG
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - DataType
+  - node
 displayed_sidebar: nodeSidebar
 
 ---

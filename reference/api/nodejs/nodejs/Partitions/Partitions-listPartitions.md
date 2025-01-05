@@ -9,6 +9,16 @@ description: "This operation lists the partitions in a specified collection. | N
 type: docx
 token: JNPwdFI1zoleD7x9LRIc0eqcnof
 sidebar_position: 5
+keywords: 
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - listPartitions()
+  - node
 displayed_sidebar: nodeSidebar
 
 ---
@@ -28,12 +38,17 @@ listPartitions(data): Promise<ShowPartitionsResponse>
 
 ```javascript
 milvusClient.listPartitions({
+    db_name: string,
     collection_name: string,
     timeout?: number
  })
 ```
 
 **PARAMETERS:**
+
+- **db_name** (*string*) -
+
+    The name of the database that holds the target collection.
 
 - **collection_name** (*string*) -
 

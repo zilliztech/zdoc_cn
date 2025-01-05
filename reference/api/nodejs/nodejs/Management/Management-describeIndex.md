@@ -9,6 +9,16 @@ description: "This operation describes a specific index. | Node.js"
 type: docx
 token: PePIdiq9po6cplxAoF6ca5C2ntb
 sidebar_position: 2
+keywords: 
+  - Embedding model
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describeIndex()
+  - node
 displayed_sidebar: nodeSidebar
 
 ---
@@ -28,6 +38,7 @@ describeIndex(data): Promise<DescribeIndexResponse>
 
 ```javascript
  milvusClient.describeIndex({ 
+     db_name: string,
      collection_name: string,
      field_name?: string,
      index_name?: string,
@@ -36,6 +47,10 @@ describeIndex(data): Promise<DescribeIndexResponse>
 ```
 
 **PARAMETERS:**
+
+- **db_name** (*string*) -
+
+    The name of the database that holds the target collection.
 
 - **collection_name** (*string*) -
 

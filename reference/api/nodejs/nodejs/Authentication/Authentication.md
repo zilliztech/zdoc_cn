@@ -8,6 +8,16 @@ type: folder
 token: H1JWfZh74lkVhgdfGiKcQfsinPg
 sidebar_position: 1
 sidebar_label: "Authentication"
+keywords: 
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Authentication
+  - node
 displayed_sidebar: nodeSidebar
 ---
 

@@ -9,6 +9,16 @@ description: "A MilvusClient instance represents a Node.js client that connects 
 type: docx
 token: SiL3ds1HPo2bOxx4iWwcxgg8nvd
 sidebar_position: 2
+keywords: 
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - MilvusClient
+  - node
 displayed_sidebar: nodeSidebar
 
 ---
@@ -42,8 +52,6 @@ new MilvusClient(config: ClientConfig)
     https://inxx-xxxxxxxxxxxxxxxxx.aws-us-west-2.vectordb-uat3.zillizcloud.com:19540
     ```
 
-    For details on finding information on the Zilliz Cloud console, refer to [On Zilliz Cloud Console](/docs/on-zilliz-cloud-console).
-
 - **configOrAddress** (*ClientConfig*)
 
     - **address** (*string*) -
@@ -55,8 +63,6 @@ new MilvusClient(config: ClientConfig)
         ```plaintext
         https://inxx-xxxxxxxxxxxxxxxxx.aws-us-west-2.vectordb-uat3.zillizcloud.com:19540
         ```
-
-        For details on finding information on the Zilliz Cloud console, refer to [On Zilliz Cloud Console](/docs/on-zilliz-cloud-console).
 
     - **_SKIPCONNECT__** (*boolean*) -
 
@@ -173,7 +179,7 @@ new MilvusClient(config: ClientConfig)
 <Admonition type="info" icon="📘" title="Notes">
 
 <ul>
-<li>Set <strong>configOrAddress</strong> to your cluster endpoint. To find this information, refer to <a href="/docs/on-zilliz-cloud-console">On Zilliz Cloud Console</a>.</li>
+<li>Set <strong>configOrAddress</strong> to your cluster endpoint. You can find the relevant information in Cluster details on the Zilliz Cloud console.</li>
 </ul>
 
 </Admonition>

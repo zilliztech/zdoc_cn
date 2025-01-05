@@ -8,7 +8,17 @@ notebook: false
 description: "This operation renames an existing collection. | Node.js"
 type: docx
 token: LSwVdMg4SorzZ5xSHHVcQeVDnfh
-sidebar_position: 14
+sidebar_position: 15
+keywords: 
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - renameCollection()
+  - node
 displayed_sidebar: nodeSidebar
 
 ---
@@ -28,6 +38,7 @@ renameCollection(data): Promise<ResStatus>
 
 ```javascript
 milvusClient.renameCollection({
+   db_name: string,
    collection_name: string,
    new_collection_name: string,
    timeout?: number
@@ -35,6 +46,10 @@ milvusClient.renameCollection({
 ```
 
 **PARAMETERS:**
+
+- **db_name** (*string*) -
+
+    The name of the database that holds the target collection.
 
 - **collection_name** (*string*) -
 

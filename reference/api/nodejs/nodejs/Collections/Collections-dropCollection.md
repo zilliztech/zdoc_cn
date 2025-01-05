@@ -8,7 +8,17 @@ notebook: false
 description: "This operation drops a collection. | Node.js"
 type: docx
 token: KLknda2VtocQSBx7PKVc6F9Nnug
-sidebar_position: 8
+sidebar_position: 9
+keywords: 
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - dropCollection()
+  - node
 displayed_sidebar: nodeSidebar
 
 ---
@@ -28,12 +38,17 @@ dropCollection(data): Promise<ResStatus>
 
 ```javascript
 milvusClient.dropCollection({ 
+    db_name: string,
     collection_name: string,
     timeout?: number
 })
 ```
 
 **PARAMETERS:**
+
+- **db_name** (*string*) -
+
+    The name of the database that holds the target collection.
 
 - **collection_name** (*string*) -
 

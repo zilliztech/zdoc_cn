@@ -9,6 +9,16 @@ description: "This operation releases the data of a specific collection from mem
 type: docx
 token: UxOXdeKF1oOIBuxTjPhcKBtPnRb
 sidebar_position: 7
+keywords: 
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - releaseCollection()
+  - node
 displayed_sidebar: nodeSidebar
 
 ---
@@ -28,12 +38,17 @@ releaseCollection(data): Promise<ResStatus>
 
 ```javascript
 milvusClient.releaseCollection({ 
+    db_name: string,
     collection_name: 'my_collection',
     timeout?: number 
 })
 ```
 
 **PARAMETERS:**
+
+- **db_name** (*string*) -
+
+    The name of the database that holds the target collection.
 
 - **collection_name** (*str*) -
 

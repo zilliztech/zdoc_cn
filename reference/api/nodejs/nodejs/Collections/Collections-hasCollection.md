@@ -8,7 +8,17 @@ notebook: false
 description: "This operation checks whether a specific collection exists. | Node.js"
 type: docx
 token: FhbbdNrlNouBXJxHIdKctXVKnmf
-sidebar_position: 10
+sidebar_position: 11
+keywords: 
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - hasCollection()
+  - node
 displayed_sidebar: nodeSidebar
 
 ---
@@ -28,12 +38,17 @@ hasCollection(data): Promise<BoolResponse>
 
 ```javascript
 milvusClient.hasCollection({ 
+    db_name: string,
     collection_name: string,
     timeout?: number
 })
 ```
 
 **PARAMETERS:**
+
+- **db_name** (*str*) -
+
+    The name of the database that holds the target collection.
 
 - **collection_name** (*str*) -
 

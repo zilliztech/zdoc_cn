@@ -9,6 +9,16 @@ description: "This operation conducts a vector similarity search with an optiona
 type: docx
 token: BIlNdgI2foFEaoxmn12cLO6Jndb
 sidebar_position: 5
+keywords: 
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - RAG
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - search()
+  - node
 displayed_sidebar: nodeSidebar
 
 ---
@@ -28,6 +38,7 @@ search(data): Promise<ResStatus>
 
 ```javascript
 milvusClient.search({
+   db_name: string,
    collection_name: string,
    partition_names?: string[], 
    data: number[] | number[][], 
@@ -43,6 +54,10 @@ milvusClient.search({
 ```
 
 **PARAMETERS:**
+
+- **db_name** (*string*) -
+
+    The name of the database that holds the target collection.
 
 - **collection_name** (*string*) -
 
@@ -91,6 +106,26 @@ milvusClient.search({
 - **params** (*KeyValueObj*) -
 
     The additional search parameters in key-value pairs.
+
+    - **radius** (*number*) -
+
+        Determines the threshold of least similarity. When setting `metric_type` to `L2`, ensure that this value is greater than that of **range_filter**. Otherwise, this value should be lower than that of **range_filter**. 
+
+    - **range_filter**  (*number*) -  
+
+        Refines the search to vectors within a specific similarity range. When setting `metric_type` to `IP` or `COSINE`, ensure that this value is greater than that of **radius**. Otherwise, this value should be lower than that of **radius**.
+
+    - **level** (*number*)
+
+        Zilliz Cloud uses a unified parameter to simplify search parameter tuning instead of leaving you to work with a bunch of search parameters specific to various index algorithms.
+
+        The value defaults to **1**, and ranges from **1** to **5**. Increasing the value results in a higher recall rate with degraded search performance.
+
+    - **page_retain_order** (*bool*) -
+
+        Whether to retain the order of the search result when `offset` is provided. 
+
+        This parameter applies only when you also set `radius`.
 
 - **output_fields** (*string[]*) -
 
