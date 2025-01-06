@@ -95,6 +95,28 @@ const config = {
                     ])
                   }
 
+                  if (item.label === '安全') {
+                    item.items = item.items.map(subItem => {
+                      if (subItem.label === '访问控制') {
+                        subItem.items.splice(1, 0, ...[
+                          {
+                            type: 'link',
+                            label: 'Manage Organization Roles',
+                            href: '/docs/organization-users#organization-roles'
+                          },
+                          {
+                            type: 'link',
+                            label: 'Manage Project Roles',
+                            href: '/docs/project-users#project-roles'
+                          },
+                        ])
+    
+                      }
+    
+                      return subItem;
+                    })
+                  }
+
                   return subItem;
                 })
               }
