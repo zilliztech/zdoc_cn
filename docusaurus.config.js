@@ -95,26 +95,26 @@ const config = {
                     ])
                   }
 
-                  if (item.label === '安全') {
-                    item.items = item.items.map(subItem => {
-                      if (subItem.label === '访问控制') {
-                        subItem.items.splice(1, 0, ...[
-                          {
-                            type: 'link',
-                            label: '管理组织角色',
-                            href: '/docs/organization-users#organization-roles'
-                          },
-                          {
-                            type: 'link',
-                            label: '管理项目角色',
-                            href: '/docs/project-users#project-roles'
-                          },
-                        ])
-    
-                      }
-    
-                      return subItem;
-                    })
+                  return subItem;
+                })
+              }
+
+              if (item.label === '安全') {
+                item.items = item.items.map(subItem => {
+                  if (subItem.label === '访问控制') {
+                    subItem.items.splice(1, 0, ...[
+                      {
+                        type: 'link',
+                        label: '管理组织角色',
+                        href: '/docs/organization-users#organization-roles'
+                      },
+                      {
+                        type: 'link',
+                        label: '管理项目角色',
+                        href: '/docs/project-users#project-roles'
+                      },
+                    ])
+
                   }
 
                   return subItem;
