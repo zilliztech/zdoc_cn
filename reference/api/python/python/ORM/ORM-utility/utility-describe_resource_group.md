@@ -9,6 +9,16 @@ description: "This operation describes the details of a specific resource group.
 type: docx
 token: HScCdxLNJotPCcxb4AZcxsNJn9c
 sidebar_position: 7
+keywords: 
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describe_resource_group()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation assigns a privilege to a role. | Python | MilvusCli
 type: docx
 token: W39Wdr7S6ohrtfxI8r7cyTeInlb
 sidebar_position: 7
+keywords: 
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - grant_privilege()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---
@@ -108,8 +118,8 @@ from pymilvus import MilvusClient
 
 # 1. Create a milvus client
 client = MilvusClient(
-    uri="http://localhost:19530",
-    token="root:Milvus"
+    uri="YOUR_CLUSTER_ENDPOINT",
+    token="YOUR_CLUSTER_TOKEN"
 )
 
 read_only_privileges = [

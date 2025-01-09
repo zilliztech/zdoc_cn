@@ -8,6 +8,16 @@ type: folder
 token: BvYKfbpMUlczBxdyBvEc5Gb3nfb
 sidebar_position: 8
 sidebar_label: "utility"
+keywords: 
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - utility
+  - python
 displayed_sidebar: pythonSidebar
 ---
 

@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation creates a partition in the target collection. | Java | v2"
 type: docx
-token: QNp6dzHNlofyPoxbysFcrfTunMh
+token: CadTdZ5YGocDymxaIOvcr08pnxd
 sidebar_position: 1
+keywords: 
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - createPartition()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation commits the appended data. | Python"
 type: docx
 token: EtBDdoGaFo3bOExKxCHcKgpenib
 sidebar_position: 2
+keywords: 
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - commit()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

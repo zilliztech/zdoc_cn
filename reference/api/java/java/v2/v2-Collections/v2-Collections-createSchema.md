@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation creates a collection schema. | Java | v2"
 type: docx
-token: RdfxdvgRfonSK8xlEgjc5PpVnDg
+token: V5KXdwdO0oqkhnxsKb9c3xaKn4c
 sidebar_position: 6
+keywords: 
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - createSchema()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

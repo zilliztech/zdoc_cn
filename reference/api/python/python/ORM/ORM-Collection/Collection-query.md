@@ -9,6 +9,16 @@ description: "This operation conducts a scalar filtering with a specified boolea
 type: docx
 token: JzcYdBQ5zoU4KpxPqUHcPLQonKd
 sidebar_position: 22
+keywords: 
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - query()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

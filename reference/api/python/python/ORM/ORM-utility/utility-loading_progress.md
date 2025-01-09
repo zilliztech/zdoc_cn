@@ -9,6 +9,16 @@ description: "This operation returns the load progress of a specific collection.
 type: docx
 token: HQiHd82orov0XvxAzLWcl5xRnzc
 sidebar_position: 31
+keywords: 
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - loading_progress()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

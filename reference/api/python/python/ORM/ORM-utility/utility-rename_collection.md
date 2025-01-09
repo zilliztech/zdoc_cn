@@ -9,6 +9,16 @@ description: "This operation renames an existing collection and optionally moves
 type: docx
 token: M0qRdF1cLokrxvxyrXScJ64FnEe
 sidebar_position: 37
+keywords: 
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - rename_collection()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

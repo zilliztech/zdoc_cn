@@ -5,9 +5,19 @@ beta: false
 notebook: false
 description: "Methods related to the manipulation of the partitions in a collection. | Java | v2"
 type: folder
-token: TXEsfWjuFl2cKPdDyrrcS7hFnwd
+token: YkL6fqkaNlgeWXdNaWLcltkZnRc
 sidebar_position: 6
 sidebar_label: "Partitions"
+keywords: 
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Partitions
+  - javaV2
 displayed_sidebar: javaSidebar
 ---
 

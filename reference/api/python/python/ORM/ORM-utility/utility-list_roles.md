@@ -9,6 +9,16 @@ description: "This operation lists the information about all existing roles. | P
 type: docx
 token: ClLXdDs64oixJBxlIrCcEB2dngb
 sidebar_position: 27
+keywords: 
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_roles()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

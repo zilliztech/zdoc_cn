@@ -9,6 +9,16 @@ description: "This operation blocks the current process until the specified inde
 type: docx
 token: MfR8dw5TioPvw3xvrstcgYixnUb
 sidebar_position: 43
+keywords: 
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - wait_for_index_building_complete()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

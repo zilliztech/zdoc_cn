@@ -10,10 +10,10 @@ type: docx
 token: BIlNdgI2foFEaoxmn12cLO6Jndb
 sidebar_position: 5
 keywords: 
-  - Image Search
-  - LLMs
-  - Machine Learning
-  - RAG
+  - Unstructured Data
+  - vector database
+  - IVF
+  - knn
   - zilliz
   - zilliz cloud
   - cloud

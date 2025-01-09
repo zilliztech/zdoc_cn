@@ -9,6 +9,16 @@ description: "This operation lists the information of all existing users. | Pyth
 type: docx
 token: MtF2dkZcso4XduxM194cUaiinqb
 sidebar_position: 30
+keywords: 
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_users()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

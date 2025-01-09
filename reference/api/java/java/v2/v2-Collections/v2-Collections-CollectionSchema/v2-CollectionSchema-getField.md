@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation gets the details of a specific field, including schema information. | Java | v2"
 type: docx
-token: XK6yd5oUMoCq4Px7wAIclfdxnCd
+token: AXWod56QkoprlXxOXkwcPXfonHg
 sidebar_position: 3
+keywords: 
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - getField()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation lists all indexes of a specific collection. | Pytho
 type: docx
 token: ZqmudJWyFonUKGxAxXncYrLZn2e
 sidebar_position: 6
+keywords: 
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_indexes()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

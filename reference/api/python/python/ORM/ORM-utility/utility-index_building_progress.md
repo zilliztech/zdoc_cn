@@ -9,6 +9,16 @@ description: "This operation returns the progress of the index-building process.
 type: docx
 token: OVfodiKa6o3qTGxadYicI975nhh
 sidebar_position: 21
+keywords: 
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - index_building_progress()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

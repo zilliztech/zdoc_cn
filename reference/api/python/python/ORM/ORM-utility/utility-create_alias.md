@@ -9,6 +9,16 @@ description: "This operation creates an alias for an existing collection. | Pyth
 type: docx
 token: DthMdlg8Lozw89xNz4TcBv1LnOe
 sidebar_position: 3
+keywords: 
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_alias()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

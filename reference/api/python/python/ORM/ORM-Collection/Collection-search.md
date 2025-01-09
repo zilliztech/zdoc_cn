@@ -9,6 +9,16 @@ description: "This operation conducts a vector similarity search with an optiona
 type: docx
 token: OaM5dkbPjohKhNxHvKNcfnYMnVb
 sidebar_position: 25
+keywords: 
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - search()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

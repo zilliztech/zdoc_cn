@@ -9,6 +9,16 @@ description: "This operation inserts new records into the database or updates ex
 type: docx
 token: MQMzddDnao5Zz0xmSRncZM2nn5b
 sidebar_position: 11
+keywords: 
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - upsert()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

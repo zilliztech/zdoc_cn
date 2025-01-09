@@ -9,6 +9,16 @@ description: "This operation releases the data of a specific collection from mem
 type: docx
 token: PRR7dRfi8o1s61xFRovccAdRnHe
 sidebar_position: 10
+keywords: 
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - release_collection()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

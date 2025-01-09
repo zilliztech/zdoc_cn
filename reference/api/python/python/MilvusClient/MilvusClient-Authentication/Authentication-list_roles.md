@@ -9,6 +9,16 @@ description: "This operation lists all custom roles. | Python | MilvusClient"
 type: docx
 token: MApVdDl17oU8OixzbMPcgceKnOh
 sidebar_position: 9
+keywords: 
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_roles()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

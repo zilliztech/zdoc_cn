@@ -9,10 +9,10 @@ token: GNR6fiDGqlnQ9BdWimJc9pnSnyl
 sidebar_position: 5
 sidebar_label: "Management"
 keywords: 
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
   - zilliz
   - zilliz cloud
   - cloud

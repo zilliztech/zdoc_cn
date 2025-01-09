@@ -9,6 +9,16 @@ description: "This operation disconnects the client from the specified connectio
 type: docx
 token: IpSBdcabbosobvxQkAEcv6CvnJd
 sidebar_position: 4
+keywords: 
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - disconnect()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

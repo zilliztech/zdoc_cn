@@ -9,6 +9,16 @@ description: "A Partition instance represents a partition within a collection. |
 type: docx
 token: X9scdVMmxoBTuUxlKhecJXEunHd
 sidebar_position: 7
+keywords: 
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - AI Hallucination
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Partition
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

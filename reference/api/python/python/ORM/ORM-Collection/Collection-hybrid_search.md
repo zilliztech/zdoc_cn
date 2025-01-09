@@ -9,6 +9,16 @@ description: "This operation performs multi-vector search on a collection and re
 type: docx
 token: Bzb6dwkckop6XfxVm2lclXG2nJg
 sidebar_position: 17
+keywords: 
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - hybrid_search()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "A MilvusClientV2Pool instance is a connection pool for MilvusClientV2 objects. The number of MilvusClientV2 objects automatically increases or decreases to avoid frequent opening and closing connections, improving your application's performance. | Java | v2"
 type: docx
-token: CMt5dMqS0oesSHxhKWNcgTRWnMc
+token: UrjHd9KZKo1Rlfxfj8AcmXNinlg
 sidebar_position: 2
+keywords: 
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - MilvusClientV2Pool
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

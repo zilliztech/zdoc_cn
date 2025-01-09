@@ -9,6 +9,16 @@ description: "This operation deletes entities by their IDs or with a boolean exp
 type: docx
 token: DWLXdSCYnoPT4ExktRKceEqLnAd
 sidebar_position: 1
+keywords: 
+  - nn search
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - delete()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

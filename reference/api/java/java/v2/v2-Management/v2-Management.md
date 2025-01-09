@@ -5,9 +5,19 @@ beta: false
 notebook: false
 description: "Methods for you to index, load, and release a collection. | Java | v2"
 type: folder
-token: UqeGfuMkilgT1HdhoyGc08FznEt
+token: PohgfmtiBlwuPRdcACmc9JDZnve
 sidebar_position: 5
 sidebar_label: "Management"
+keywords: 
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Management
+  - javaV2
 displayed_sidebar: javaSidebar
 ---
 

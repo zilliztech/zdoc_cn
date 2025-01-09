@@ -9,6 +9,16 @@ description: "JinaEmbeddingFunction is a class in pymilvus that handles encoding
 type: docx
 token: U7NJd5eKAo0c1TxYZndcgPj2nlc
 sidebar_position: 3
+keywords: 
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - JinaEmbeddingFunction
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

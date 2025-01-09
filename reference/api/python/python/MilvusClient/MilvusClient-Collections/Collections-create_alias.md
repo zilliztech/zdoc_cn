@@ -9,6 +9,16 @@ description: "This operation creates an alias for an existing collection. | Pyth
 type: docx
 token: Kqlodu0AWoefKvxczcxc1c36nlf
 sidebar_position: 2
+keywords: 
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_alias()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

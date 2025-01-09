@@ -9,6 +9,16 @@ description: "This operation prepares index parameters to build indexes for a sp
 type: docx
 token: CAzpdAw3wo4ZqrxhjTLcEGBBn1S
 sidebar_position: 8
+keywords: 
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - prepare_index_params()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

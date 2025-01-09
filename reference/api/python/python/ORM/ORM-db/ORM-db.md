@@ -8,6 +8,16 @@ type: folder
 token: E2Zlf8PdXlx097dT2sNchgqpnbF
 sidebar_position: 4
 sidebar_label: "db"
+keywords: 
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - db
+  - python
 displayed_sidebar: pythonSidebar
 ---
 

@@ -9,6 +9,16 @@ description: "This operation conducts a vector similarity search with an optiona
 type: docx
 token: XW72dhBuNoqNWhxUQLtcfa6Fnwd
 sidebar_position: 10
+keywords: 
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - search()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

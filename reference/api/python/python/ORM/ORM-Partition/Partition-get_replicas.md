@@ -9,6 +9,16 @@ description: "This operation gets information about the current loaded replica. 
 type: docx
 token: YKwldu59qosZBsxdRdSc0l9Hnoe
 sidebar_position: 4
+keywords: 
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_replicas()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

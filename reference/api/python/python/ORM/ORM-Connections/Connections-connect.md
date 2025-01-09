@@ -9,6 +9,16 @@ description: "This operation establishes a connection to a Zilliz Cloud cluster 
 type: docx
 token: KzCXdTVVSoOmkbxuFjsccDlXnff
 sidebar_position: 2
+keywords: 
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - connect()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---
@@ -27,7 +37,7 @@ connect(
     alias: str,
     user: str | "",
     password: str | "",
-    
+    db_name: str | "default",
     token: str | "",
     **kwargs
 )
@@ -61,6 +71,10 @@ connect(
     A valid password used to connect to the specified Zilliz Cloud cluster.
 
     This should be used along with **user**.
+
+- **db_name** (*string*) -
+
+    The name of the database to which the target Milvus instance belongs.
 
 - **token** (*string*) -
 
@@ -173,7 +187,7 @@ connections.connect(
 )
 
 # Use uri
-uri="http://localhost:19530"
+uri="YOUR_CLUSTER_ENDPOINT"
 connections.connect(uri=uri)
 
 # Use environment variable

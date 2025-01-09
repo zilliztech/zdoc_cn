@@ -9,6 +9,16 @@ description: "This operation creates a database using the provided database name
 type: docx
 token: G4Ftde3kxoHAJbxVNXncI7mpngb
 sidebar_position: 1
+keywords: 
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_database()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

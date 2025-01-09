@@ -9,6 +9,16 @@ description: "This operation drops a specified partition from the current collec
 type: docx
 token: EMI8dM8uooIAFPxVfffcoqRwnZf
 sidebar_position: 2
+keywords: 
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_partition()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

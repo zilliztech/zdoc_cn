@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation updates the password of a specific user. | Java | v2"
 type: docx
-token: Fw4DdZmCxov8EBxnJlZceWton1e
+token: GQH8dgqlPoRY1sxFhCRcLlgInNc
 sidebar_position: 13
+keywords: 
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - updatePassword()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

@@ -9,10 +9,10 @@ token: WLCxfLtfylemvudOJa7cDBXdnsh
 sidebar_position: 4
 sidebar_label: "Database"
 keywords: 
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
   - Zilliz
-  - milvus vector database
-  - milvus db
-  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud

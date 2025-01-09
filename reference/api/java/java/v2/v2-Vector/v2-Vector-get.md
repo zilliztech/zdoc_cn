@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation gets specific entities by their IDs. | Java | v2"
 type: docx
-token: XeXxd6ylAoSZ05xkXEqcS84XnIc
+token: UcacdecoZoAyxsxJzOGcTqWzn7d
 sidebar_position: 2
+keywords: 
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

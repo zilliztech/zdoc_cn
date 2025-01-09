@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation creates an alias for an existing collection. | Java | v2"
 type: docx
-token: VU1odD6KIoV6kWxTJHScVhDRnkb
+token: NMAOdxhL1oo0E7xcFqXcF6yPnBg
 sidebar_position: 4
+keywords: 
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - createAlias()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

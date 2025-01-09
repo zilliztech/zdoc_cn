@@ -9,6 +9,16 @@ description: "This operation loads a specific set of partitions in a specified c
 type: docx
 token: DdQ1dBNagoBa08xhEiucxZrHnzc
 sidebar_position: 6
+keywords: 
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - load_partitions()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

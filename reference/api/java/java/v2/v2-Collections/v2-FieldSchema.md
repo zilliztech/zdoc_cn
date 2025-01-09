@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "A FieldSchema instance defines the data type and related attributes of a specific field in a collection. | Java | v2"
 type: docx
-token: A467dTwvJoLJClxXEZ5ctRlNnYf
+token: WeXmdv8bioJ7AEx9sEtct6kgnUd
 sidebar_position: 12
+keywords: 
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - FieldSchema
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

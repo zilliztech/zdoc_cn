@@ -9,6 +9,16 @@ description: "This operation checks whether the specified partition exists in th
 type: docx
 token: QsOsda2lRoJP32xNSLWcbgMOnKI
 sidebar_position: 16
+keywords: 
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - has_partition()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation inserts or updates data in a specific collection. | Java | v2"
 type: docx
-token: DGdZdLvmPoKuutxEJfnc2ww2nMh
-sidebar_position: 8
+token: A0UBd45iyoGah2xaFjQc4bp6n2b
+sidebar_position: 9
+keywords: 
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - upsert()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---
@@ -47,7 +57,7 @@ upsert(UpsertReq.builder()
 
     <Admonition type="info" icon="📘" title="Notes">
 
-    <p>In Java SDK versions v2.3.7 or earlier versions, the input is a <code>fastjson.JSONObject</code>. But <code>fastjson</code> is not recommended to use now because of its unsafe deserialization vulnerability. Therefore, replace <code>fastjson</code> with <code>gson</code> if you use the Java SDK of v2.3.8 or later releases.</p>
+    <p>In Java SDK versions v2.4.1 or earlier versions, the input is a <code>fastjson.JSONObject</code>. But <code>fastjson</code> is not recommended to use now because of its unsafe deserialization vulnerability. Therefore, replace <code>fastjson</code> with <code>gson</code> if you use the Java SDK of v2.4.2 or later releases.</p>
 
     </Admonition>
 

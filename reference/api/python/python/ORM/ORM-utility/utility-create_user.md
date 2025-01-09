@@ -9,6 +9,16 @@ description: "This operation creates a new user with a corresponding password. |
 type: docx
 token: N44ndTSrgoEBx7xCID5cXRS7n1c
 sidebar_position: 5
+keywords: 
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_user()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

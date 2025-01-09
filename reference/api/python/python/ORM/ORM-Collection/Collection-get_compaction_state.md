@@ -9,6 +9,16 @@ description: "This operation gets the current compaction state. | Python | ORM"
 type: docx
 token: AXcMd0xiOovIX6xR4ZrcKA15nwh
 sidebar_position: 13
+keywords: 
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_compaction_state()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

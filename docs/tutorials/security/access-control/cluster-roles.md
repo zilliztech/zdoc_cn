@@ -97,7 +97,7 @@ Zilliz Cloud 提供 3 种内置的集群角色，每种内置角色都包含了�
 
 1. 前往目标集群的**角色**页签。点击 **+ 集群角色**。
 
-    ![add-cluster-role](/img/add-cluster-role.png)
+    ![add-cluster-role-cn](/img/add-cluster-role-cn.png)
 
 1. 输入角色名称。
 
@@ -121,7 +121,7 @@ Zilliz Cloud 提供 3 种内置的集群角色，每种内置角色都包含了�
 
     如需自行组合权限创建权限组，请[联系我们](http://support.zilliz.com.cn)。
 
-    ![add-cluster-role-form](/img/add-cluster-role-form.png)
+    ![add-cluster-role-form-cn](/img/add-cluster-role-form-cn.png)
 
 1. 点击**创建**。 每个集群中最多可创建 20 个自定义集群角色。
 
@@ -129,19 +129,19 @@ Zilliz Cloud 提供 3 种内置的集群角色，每种内置角色都包含了�
 
 自定义角色创建成功后，您可以将其分配给用户。前往**用户**页签，您可以在[创建集群用户](./cluster-users#create-a-cluster-user)和[修改集群用户角色](./cluster-users#edit-the-role-of-a-cluster-user)时为用户授予角色。
 
-![grant-role-to-user](/img/grant-role-to-user.png)
+![grant-role-to-user-cn](/img/grant-role-to-user-cn.png)
 
 ## 撤销授予用户的角色{#revoke-a-role-from-a-user}
 
 如果某个角色不再适用于某个集群用户，您可以撤销分配给集群用户的角色。前往**用户**页签，在目标用户的操作下拉菜单中点击[编辑角色](./cluster-users#edit-the-role-of-a-cluster-user)。在对话框中为用户选择一个新的角色。
 
-![revoke-role-from-user](/img/revoke-role-from-user.png)
+![revoke-role-from-user-cn](/img/revoke-role-from-user-cn.png)
 
 ## 编辑自定义集群角色{#edit-a-custom-cluster-role}
 
 您可以调整自定义角色的权限。权限调整的操作会影响所有被分配到该角色的用户。
 
-![edit-custom-role](/img/edit-custom-role.png)
+![edit-custom-role-cn](/img/edit-custom-role-cn.png)
 
 ## 删除自定义集群角色{#delete-a-custom-cluster-role}
 
@@ -149,5 +149,5 @@ Zilliz Cloud 提供 3 种内置的集群角色，每种内置角色都包含了�
 
 已分配给用户的自定义角色不可删除。如仍需继续删除，请先找到正在使用该自定义角色的集群用户，然后为这些用户分配其他角色，最终再删除该自定义角色。
 
-![delete-cluster-role](/img/delete-cluster-role.png)
+![delete-cluster-role-cn](/img/delete-cluster-role-cn.png)
 

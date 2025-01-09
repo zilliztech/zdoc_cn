@@ -9,6 +9,16 @@ description: "This operation lists detailed information about a specific collect
 type: docx
 token: MCkjdiRNKo2HCCxzHReclrgAnbg
 sidebar_position: 7
+keywords: 
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describe_collection()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

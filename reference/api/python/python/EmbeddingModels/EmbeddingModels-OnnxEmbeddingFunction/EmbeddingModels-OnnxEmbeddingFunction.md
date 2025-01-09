@@ -9,6 +9,16 @@ description: "OnnxEmbeddingFunction is a class in pymilvus that handles encoding
 type: docx
 token: MVLRdU9nPonUeExs7ogctwZ1n4c
 sidebar_position: 3
+keywords: 
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - OnnxEmbeddingFunction
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

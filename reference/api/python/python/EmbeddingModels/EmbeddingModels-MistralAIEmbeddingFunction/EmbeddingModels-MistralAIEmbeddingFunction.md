@@ -9,6 +9,16 @@ description: "MistralAIEmbeddingFunction is a class in pymilvus that handles enc
 type: docx
 token: CvxodXz8OoWXrlxD7OVcqqJLn8e
 sidebar_position: 3
+keywords: 
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - MistralAIEmbeddingFunction
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

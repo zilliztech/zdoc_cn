@@ -9,6 +9,16 @@ description: "BGERerankFunction is a class in milvusmodel that takes a query and
 type: docx
 token: GxAZd9O9gozzhExhMHWcMnXPngh
 sidebar_position: 1
+keywords: 
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - what is vector db
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - BGERerankFunction
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

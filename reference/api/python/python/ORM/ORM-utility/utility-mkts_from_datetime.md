@@ -9,6 +9,16 @@ description: "This operation makes a hybrid timestamp from a Python's datetime.d
 type: docx
 token: LCQTdebkConhUqxwnk7c3EbPnWh
 sidebar_position: 34
+keywords: 
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - mkts_from_datetime()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

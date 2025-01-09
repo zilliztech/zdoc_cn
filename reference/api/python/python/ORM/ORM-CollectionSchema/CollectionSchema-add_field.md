@@ -9,6 +9,16 @@ description: "This operation adds a field to the schema of a collection. | Pytho
 type: docx
 token: TG3Rd9aM5offvFxKy2CcKXn9nWc
 sidebar_position: 1
+keywords: 
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - add_field()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

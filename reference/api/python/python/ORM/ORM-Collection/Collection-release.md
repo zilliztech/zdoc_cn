@@ -9,6 +9,16 @@ description: "This operation releases the data of the current collection from me
 type: docx
 token: CBwkdDs7MoKkVKx0kJgcPUNxn6s
 sidebar_position: 24
+keywords: 
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - release()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

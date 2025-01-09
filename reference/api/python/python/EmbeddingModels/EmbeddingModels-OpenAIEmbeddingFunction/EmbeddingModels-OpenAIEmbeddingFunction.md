@@ -9,6 +9,16 @@ description: "OpenAIEmbeddingFunction is a class in pymilvus that handles encodi
 type: docx
 token: QPcodlsnAoSMvIxEFmlcMNPbntd
 sidebar_position: 3
+keywords: 
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - OpenAIEmbeddingFunction
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

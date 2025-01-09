@@ -9,6 +9,16 @@ description: "This operation returns a list of database names from the connected
 type: docx
 token: PV1PdliWZooAB8xAE5scZO2Nn6K
 sidebar_position: 3
+keywords: 
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_database()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

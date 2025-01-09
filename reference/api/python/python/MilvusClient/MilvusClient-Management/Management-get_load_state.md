@@ -9,6 +9,16 @@ description: "This operation displays whether a specified collection or partitio
 type: docx
 token: KEPYdKup1o3nHdxKbjvcQUzwnnd
 sidebar_position: 5
+keywords: 
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_load_state()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

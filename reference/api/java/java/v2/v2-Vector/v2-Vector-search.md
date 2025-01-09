@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation conducts a vector similarity search with an optional scalar filtering expression. | Java | v2"
 type: docx
-token: U2HYdGZBjoOlCJxt9D4csF1untT
-sidebar_position: 6
+token: RycIdCl3LoLMAMxNOEhcgMutnig
+sidebar_position: 7
+keywords: 
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - search()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---
@@ -34,15 +44,16 @@ search(SearchReq.builder()
     .topK(int topK)
     .filter(String filter)
     .outputFields(List<String> outputFields)
-    .data(List<BaseVector> data)
+    .data(List<Object> data)
     .offset(long offset)
     .limit(long limit)
     .roundDecimal(int roundDecimal)
-    .searchParams(String searchParams)
+    .searchParams(Map<String,Object> searchParams)
     .guaranteeTimestamp(long guaranteeTimestamp)
     .gracefulTime(long gracefulTime)
     .consistencyLevel(ConsistencyLevel consistencyLevel)
     .ignoreGrowing(boolean ignoreGrowing)
+    .groupByFieldName(String fieldName)
     .build()
 )
 ```
@@ -81,37 +92,11 @@ search(SearchReq.builder()
 
     The value defaults to **None**. If left unspecified, all fields are selected as the output fields.
 
-- `data(List<BaseVector> data)`
+- `data(List<Object> data)`
 
     A list of vector embeddings.
 
     Zilliz Cloud searches for the most similar vector embeddings to the specified ones.
-
-    BaseVector is a base class for abstract vector classes. The following classes are derived from BaseVector. Choose the correct class as input according to DataType of the vector field.
-
-    <Admonition type="info" icon="📘" title="Notes">
-
-    <p>In Java SDK v2.3.7 or earlier versions, this method is named <code>distance</code>. Since Java SDK v2.3.8, this method is renamed as <code>score</code>.</p>
-
-    </Admonition>
-
-    <table>
-       <tr>
-         <th><p><strong>Class Name</strong></p></th>
-         <th><p><strong>Constructors</strong></p></th>
-         <th><p><strong>Description</strong></p></th>
-       </tr>
-       <tr>
-         <td><p>FloatVec</p></td>
-         <td><p>FloatVec(List\<Float> data)FloatVec(float[] data)</p></td>
-         <td><p>For DataType.FloatVector type field.</p></td>
-       </tr>
-       <tr>
-         <td><p>BinaryVec</p></td>
-         <td><p>BinaryVec(ByteBuffer data)BinaryVec(byte[] data)</p></td>
-         <td><p>For DataType.BinaryVector type field.</p></td>
-       </tr>
-    </table>
 
 - `offset(long offset)`
 
@@ -195,7 +180,11 @@ search(SearchReq.builder()
 
 - `ignoreGrowing(boolean ignoreGrowing)`
 
-    Whether to ignore growing segments during similarity searches.
+Whether to ignore growing segments during similarity searches.
+
+- `groupByFieldName(String fieldName)`
+
+Sets the field name to do grouping for results.
 
 **RETURN TYPE:**
 

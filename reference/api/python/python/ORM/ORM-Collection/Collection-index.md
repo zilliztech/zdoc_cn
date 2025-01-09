@@ -9,6 +9,16 @@ description: "This operation gets the specified index of the current collection.
 type: docx
 token: RkQ8dnWDHo3DiDxiCVRcP1xPnob
 sidebar_position: 18
+keywords: 
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - index()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

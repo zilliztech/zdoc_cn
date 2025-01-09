@@ -9,6 +9,16 @@ description: "This operation drops a specified collection alias. | Python | Milv
 type: docx
 token: FpWXdmIuforYz9xUCsqclyCXnLe
 sidebar_position: 8
+keywords: 
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_alias()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

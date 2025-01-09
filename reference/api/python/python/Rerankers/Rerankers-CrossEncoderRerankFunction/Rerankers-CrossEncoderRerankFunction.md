@@ -9,6 +9,16 @@ description: "CrossEncoderRerankFunction is a class in milvusmodel that takes a 
 type: docx
 token: HVGNdMYOvojQoXxvDmEcnHYanMh
 sidebar_position: 1
+keywords: 
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - CrossEncoderRerankFunction
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

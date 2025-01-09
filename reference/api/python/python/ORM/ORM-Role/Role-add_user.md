@@ -9,6 +9,16 @@ description: "This operation adds an existing user to the current role. Once add
 type: docx
 token: W7GJdpYrYoYhSaxW6uzcVAZinYf
 sidebar_position: 1
+keywords: 
+  - Faiss
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - add_user()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation inserts data into the current collection. | Python 
 type: docx
 token: CbCodEGY9o6pKuxowNdctUppn7d
 sidebar_position: 19
+keywords: 
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
+  - nn search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - insert()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

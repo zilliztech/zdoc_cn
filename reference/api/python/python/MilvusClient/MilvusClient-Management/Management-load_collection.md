@@ -9,6 +9,16 @@ description: "This operation loads the data of a specific collection into memory
 type: docx
 token: FLmWdFP9Zo3JcixOEgucU8JMnLc
 sidebar_position: 7
+keywords: 
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - load_collection()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

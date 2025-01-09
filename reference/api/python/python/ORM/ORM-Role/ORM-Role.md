@@ -9,6 +9,16 @@ description: "A Role instance represents a role with specific privileges to acce
 type: docx
 token: LZL1d0kckouPXNxJLCmcwbCTnkG
 sidebar_position: 11
+keywords: 
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Role
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

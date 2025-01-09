@@ -9,6 +9,16 @@ description: "This operation appends records to the writer. | Python"
 type: docx
 token: F1MFdP8VvoMu17x4Vg9cH6ztnqb
 sidebar_position: 1
+keywords: 
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - append_row()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

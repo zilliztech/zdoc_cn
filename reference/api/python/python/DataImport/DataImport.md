@@ -8,6 +8,16 @@ type: folder
 token: KdfofBXCwlWnxOdG5cLcbbLgnLf
 sidebar_position: 1
 sidebar_label: "DataImport"
+keywords: 
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - DataImport
+  - python
 displayed_sidebar: pythonSidebar
 ---
 

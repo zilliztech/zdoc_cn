@@ -70,7 +70,7 @@ Zilliz Cloud 支持在创建过程中灵活配置 Connector。创建后， Conne
 
 1. 选择项目。点击左侧导航栏中的 **Pipelines**。选中 **Connectors** 标签页。点击 **+ Connectors。**
 
-    undefined
+    ![create-connector-cn](/img/create-connector-cn.png)
 
 1. 连接数据源。
 

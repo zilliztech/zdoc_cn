@@ -9,6 +9,16 @@ description: "This operation lists the statistics collected on a specific collec
 type: docx
 token: VVyNdx038oECxNxMQavc9vssnoh
 sidebar_position: 10
+keywords: 
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_collection_stats()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

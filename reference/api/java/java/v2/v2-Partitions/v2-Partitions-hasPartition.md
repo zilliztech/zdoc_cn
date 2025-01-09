@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation checks whether the specified partition exists in the specified collection. | Java | v2"
 type: docx
-token: E00Tdat7lom0LcxpaeicTEZvnig
+token: NS1xdv6f4oQlN4xqnOGc6ssWnTf
 sidebar_position: 3
+keywords: 
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - hasPartition()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation releases the data of the current partition from mem
 type: docx
 token: ZQ2RdE2AOoH9bfx4k3Sc3Ny0ngb
 sidebar_position: 9
+keywords: 
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - release()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

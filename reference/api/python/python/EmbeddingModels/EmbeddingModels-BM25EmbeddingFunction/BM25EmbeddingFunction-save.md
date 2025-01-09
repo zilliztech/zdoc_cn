@@ -9,6 +9,16 @@ description: "This operation saves the BM25 model parameters to a JSON file at t
 type: docx
 token: YScUdNEpmobwhbxbOQQcsc8Wnie
 sidebar_position: 6
+keywords: 
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - save()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

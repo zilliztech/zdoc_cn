@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation reassigns the alias of one collection to another. | Java | v2"
 type: docx
-token: YH7CdwpjtoaAXWxtM0jcapUQnyc
+token: QasfdVW4voAzfwxfSc1civsHnVf
 sidebar_position: 1
+keywords: 
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - alterAlias()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

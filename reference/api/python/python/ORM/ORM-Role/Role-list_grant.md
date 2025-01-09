@@ -9,6 +9,16 @@ description: "This operation lists the relationship between the current role and
 type: docx
 token: JXNXdQuwhoYmZQxSohNcdxtwnzh
 sidebar_position: 7
+keywords: 
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_grant()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

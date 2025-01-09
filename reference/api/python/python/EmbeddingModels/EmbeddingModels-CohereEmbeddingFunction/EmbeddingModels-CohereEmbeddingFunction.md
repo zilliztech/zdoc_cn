@@ -9,6 +9,16 @@ description: "CohereEmbeddingFunction is a class in pymilvus that handles encodi
 type: docx
 token: JzDLdkv3QoCY8OxKpBjc5zsmnId
 sidebar_position: 1
+keywords: 
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - CohereEmbeddingFunction
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

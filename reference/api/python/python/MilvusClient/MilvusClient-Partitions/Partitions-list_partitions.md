@@ -9,6 +9,16 @@ description: "This operation lists the partitions in a specified collection. | P
 type: docx
 token: Dxgqdvlk5o2VScxqmL1ctc1Inqb
 sidebar_position: 5
+keywords: 
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_partitions()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

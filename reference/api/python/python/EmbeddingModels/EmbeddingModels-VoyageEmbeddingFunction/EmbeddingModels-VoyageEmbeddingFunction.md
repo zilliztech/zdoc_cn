@@ -9,6 +9,16 @@ description: "VoyageEmbeddingFunction is a class in pymilvus that handles encodi
 type: docx
 token: HEyLd2lxzo3bl4xqVBOco8vWn1c
 sidebar_position: 3
+keywords: 
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - VoyageEmbeddingFunction
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

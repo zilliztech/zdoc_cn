@@ -9,6 +9,16 @@ description: "This operation returns the state of a specified bulk-insert task. 
 type: docx
 token: XzHhd3AdCo9DCsxawYycr69CnAb
 sidebar_position: 13
+keywords: 
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_bulk_insert_state()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

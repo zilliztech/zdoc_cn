@@ -9,6 +9,16 @@ description: "This operation lists all privileges granted to the current role. |
 type: docx
 token: YRoGdgQmWoIEaJx84ICcHTILnMe
 sidebar_position: 8
+keywords: 
+  - RAG
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_grants()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

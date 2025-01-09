@@ -9,6 +9,16 @@ description: "This operation creates a user. | Python | MilvusClient"
 type: docx
 token: BDupd28JqoNY9HxVOTfcv86enRe
 sidebar_position: 2
+keywords: 
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_user()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

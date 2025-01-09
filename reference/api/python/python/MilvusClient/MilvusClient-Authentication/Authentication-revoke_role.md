@@ -9,6 +9,16 @@ description: "This operation revokes the role assigned to a user. | Python | Mil
 type: docx
 token: JJOId59ePoMLefxz1ChcBZ6inOh
 sidebar_position: 12
+keywords: 
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - revoke_role()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

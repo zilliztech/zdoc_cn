@@ -9,6 +9,16 @@ description: "This operation deletes entities with a boolean expression. | Pytho
 type: docx
 token: TJMVdi4U2oBFnAxO95jctzVAnzg
 sidebar_position: 6
+keywords: 
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - delete()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation blocks the current process until the specified coll
 type: docx
 token: PLKXdUB1EoNX8gxKHruc9GcEnsg
 sidebar_position: 44
+keywords: 
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - wait_for_loading_complete()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

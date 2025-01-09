@@ -9,6 +9,16 @@ description: "This operation gets specific entities by their IDs. | Python | Mil
 type: docx
 token: TEUDde2xbo0JT7xtVvtcF53Nnub
 sidebar_position: 2
+keywords: 
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

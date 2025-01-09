@@ -9,6 +9,16 @@ description: "This operation compacts and merges small segments in the current c
 type: docx
 token: BHx6dnSmPoaqHAxKCvncbuk9nWb
 sidebar_position: 2
+keywords: 
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - compact()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

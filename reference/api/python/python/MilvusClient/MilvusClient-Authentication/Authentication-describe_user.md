@@ -9,6 +9,16 @@ description: "This operation describes a specific user. | Python | MilvusClient"
 type: docx
 token: Wz3HdtvPCoEquvxFY7PcDHxcnEe
 sidebar_position: 4
+keywords: 
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describe_user()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

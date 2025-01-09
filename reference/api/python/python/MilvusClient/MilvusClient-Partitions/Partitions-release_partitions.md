@@ -9,6 +9,16 @@ description: "This operation releases the partitions in a specified collection f
 type: docx
 token: VblKdUEU4o4t31xcFiicIGtjn9g
 sidebar_position: 7
+keywords: 
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - open source vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - release_partitions()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation gets the specified partition in the current collect
 type: docx
 token: SvCrdEJIdosGQYxQZhrc2OAXnpd
 sidebar_position: 21
+keywords: 
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - cosine distance
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - partition()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

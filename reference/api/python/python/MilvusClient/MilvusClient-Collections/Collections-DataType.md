@@ -9,6 +9,16 @@ description: "This is an enumeration that provides the following constants. | Py
 type: docx
 token: JiN3dU8zwoPdgBxxpw6c0JkUnze
 sidebar_position: 5
+keywords: 
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - DataType
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

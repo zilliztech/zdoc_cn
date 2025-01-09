@@ -9,6 +9,16 @@ description: "This operation checks if a connection with the given alias has alr
 type: docx
 token: XeZwdeK64oGD8rx9DA3ciqNinnh
 sidebar_position: 6
+keywords: 
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - has_connection()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

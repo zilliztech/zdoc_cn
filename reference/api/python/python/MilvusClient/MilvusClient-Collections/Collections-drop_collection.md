@@ -9,6 +9,16 @@ description: "This operation drops a collection. | Python | MilvusClient"
 type: docx
 token: QNB4d2q2ZorIApxpnzqczW2HnL7
 sidebar_position: 9
+keywords: 
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_collection()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

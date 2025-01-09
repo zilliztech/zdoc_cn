@@ -8,6 +8,16 @@ type: folder
 token: ZA7LfYxQHltI94dGs2Fc62AvnSh
 sidebar_position: 7
 sidebar_label: "Vector"
+keywords: 
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - IVF
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Vector
+  - python
 displayed_sidebar: pythonSidebar
 ---
 

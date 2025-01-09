@@ -9,6 +9,16 @@ description: "This operation describes a specific index. | Python | MilvusClient
 type: docx
 token: WhsHdyIgyoFlsQxNJt9cFCTxnDe
 sidebar_position: 3
+keywords: 
+  - Machine Learning
+  - RAG
+  - NLP
+  - Neural Network
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describe_index()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

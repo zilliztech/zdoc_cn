@@ -9,6 +9,16 @@ description: "This operation inserts or updates data in a specific collection. |
 type: docx
 token: WRYFdoDe8ofrlDxxTxQcdoJjnAh
 sidebar_position: 6
+keywords: 
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - upsert()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation deletes entities from a partition with a boolean ex
 type: docx
 token: V9BidASNqoWYrmxo11ecuN99neg
 sidebar_position: 1
+keywords: 
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - delete()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

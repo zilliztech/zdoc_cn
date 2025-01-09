@@ -9,6 +9,16 @@ description: "This operation grants a privilege to the current role. | Python | 
 type: docx
 token: BapSdVXjQoQXnbxnRYScCagAn1f
 sidebar_position: 5
+keywords: 
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - grant()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

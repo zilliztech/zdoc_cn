@@ -9,6 +9,16 @@ description: "This creates a named index for a target field, which can either be
 type: docx
 token: J76vdPHNgoyp2wxAiTcceIVJnOe
 sidebar_position: 4
+keywords: 
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - RAG
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_index()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

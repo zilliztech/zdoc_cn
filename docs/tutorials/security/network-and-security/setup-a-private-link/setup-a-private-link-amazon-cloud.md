@@ -57,7 +57,7 @@ import Admonition from '@theme/Admonition';
 
 您还可以在**集群详情**页面中的**连接信息**区域中单击**创建私网连接**。
 
-![zh-ali-create-private-link](/img/zh-ali-create-private-link.png)
+![zh-create-private-link](/img/zh-create-private-link.png)
 
 ### 选择云服务提供商和地域{#select-cloud-provider-and-region}
 
@@ -67,7 +67,7 @@ import Admonition from '@theme/Admonition';
 
 1. 复制 Zilliz Cloud 界面上展示的**服务名称**。
 
-    【screenshot】
+    ![zh-amazon-create-private-link-copy-service-name](/img/zh-amazon-create-private-link-copy-service-name.png)
 
 1. 前往亚马逊云科技 [VPC 控制面](https://console.amazonaws.cn/vpc/)板，在左侧菜单中，选择**终端节点**。点击右上角按钮，**创建终端节点**。
 
@@ -91,7 +91,7 @@ import Admonition from '@theme/Admonition';
 
 返回 Zilliz Cloud 界面，输入**终端节点 ID** 并点击创建。
 
-【screenshot】
+![zh-amazon-authorize-private-endpoint](/img/zh-amazon-authorize-private-endpoint.png)
 
 此时 Zilliz Cloud 界面会出现如下提示：
 

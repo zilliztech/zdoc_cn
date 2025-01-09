@@ -8,6 +8,16 @@ type: folder
 token: MGFYf4JacldYUEdxtJdcwczAntg
 sidebar_position: 2
 sidebar_label: "BulkImport"
+keywords: 
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - AI Hallucination
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - BulkImport
+  - python
 displayed_sidebar: pythonSidebar
 ---
 

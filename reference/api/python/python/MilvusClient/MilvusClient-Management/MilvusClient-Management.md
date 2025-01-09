@@ -8,6 +8,16 @@ type: folder
 token: IZKcfUEfClhhnWdFhk2co7krnAV
 sidebar_position: 5
 sidebar_label: "Management"
+keywords: 
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Management
+  - python
 displayed_sidebar: pythonSidebar
 ---
 

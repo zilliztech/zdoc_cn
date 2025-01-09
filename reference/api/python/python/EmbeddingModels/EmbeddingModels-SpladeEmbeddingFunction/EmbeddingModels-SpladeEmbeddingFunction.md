@@ -9,6 +9,16 @@ description: "SpladeEmbeddingFunction is a class in pymilvus that handles encodi
 type: docx
 token: UdeRd0YVhoDBeVxrQaBcoikVnAI
 sidebar_position: 3
+keywords: 
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - SpladeEmbeddingFunction
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

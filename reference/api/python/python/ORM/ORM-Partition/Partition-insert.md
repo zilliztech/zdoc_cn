@@ -9,6 +9,16 @@ description: "This operation inserts data into the current partition. | Python |
 type: docx
 token: QXDxdv36FoVgjcxDV1gcDwWXnsd
 sidebar_position: 5
+keywords: 
+  - what is semantic search
+  - Embedding model
+  - image similarity search
+  - Context Window
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - insert()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

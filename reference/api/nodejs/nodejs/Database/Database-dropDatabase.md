@@ -10,10 +10,10 @@ type: docx
 token: FIqudtw53o5TrPxk2VdceBQbnhg
 sidebar_position: 2
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - open source vector database
   - zilliz
   - zilliz cloud
   - cloud

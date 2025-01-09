@@ -9,6 +9,16 @@ description: "A LocalBulkWriter instance rewrites your raw data locally in a for
 type: docx
 token: Tn2jd8OH1oMukFxJDsgcOSxCnrg
 sidebar_position: 3
+keywords: 
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - LocalBulkWriter
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

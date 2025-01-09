@@ -9,6 +9,16 @@ description: "This operation removes the connection from the registry by the giv
 type: docx
 token: L4KSdOVTEotaiyxjTddcVRDhn3E
 sidebar_position: 8
+keywords: 
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - remove_connection()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

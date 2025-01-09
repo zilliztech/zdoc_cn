@@ -9,6 +9,16 @@ description: "This operation loads BM25 model parameters from a JSON file. | Pyt
 type: docx
 token: Vqw7d0U1qoVXozxrCMtcJGZ8nkh
 sidebar_position: 5
+keywords: 
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - load()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

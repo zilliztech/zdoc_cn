@@ -9,6 +9,16 @@ description: "This operation creates a collection schema. | Python | MilvusClien
 type: docx
 token: RxU7dBjGlop0e1xZShYcZ4qCnnh
 sidebar_position: 4
+keywords: 
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_schema()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

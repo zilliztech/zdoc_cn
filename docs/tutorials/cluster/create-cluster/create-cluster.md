@@ -56,7 +56,7 @@ Zilliz Cloud 针对 Dedicated 集群提供按量计费和包年包月两种计�
    </tr>
    <tr>
      <td><p><strong>定价（含折扣）</strong></p></td>
-     <td><p>¥4536/年起（¥378/月起）</p><p>详情请见<a href="https://zilliz.com.cn/pricing">定价</a>或<a href="https://zilliz.com.cn/contact-sales">联系销售</a>。</p></td>
+     <td><p>¥4599/年起</p><p>详情请见<a href="https://zilliz.com.cn/pricing">定价</a>或<a href="https://zilliz.com.cn/contact-sales">联系销售</a>。</p></td>
      <td><p>¥756/月起</p><p>详情请见<a href="https://zilliz.com.cn/pricing">定价</a>。</p></td>
    </tr>
    <tr>

@@ -9,6 +9,16 @@ description: "This operation drops an index from a specific collection. | Python
 type: docx
 token: NPnQdZCJ7oF002xTntecdI2ini8
 sidebar_position: 4
+keywords: 
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_index()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

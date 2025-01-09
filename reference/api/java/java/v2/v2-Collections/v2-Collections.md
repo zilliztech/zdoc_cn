@@ -5,9 +5,19 @@ beta: false
 notebook: false
 description: "Methods for you to manage collections. | Java | v2"
 type: folder
-token: KvSff5lOglJa2LdLSdBcJwPmnSd
+token: KzitfU6c4lFXdodYOQJcupB2nJe
 sidebar_position: 3
 sidebar_label: "Collections"
+keywords: 
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Collections
+  - javaV2
 displayed_sidebar: javaSidebar
 ---
 

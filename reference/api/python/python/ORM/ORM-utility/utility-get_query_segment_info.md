@@ -9,6 +9,16 @@ description: "This operation gets information about the sealed and growing segme
 type: docx
 token: CB9edh2ySoJyWhxBoLcchPj9nxg
 sidebar_position: 14
+keywords: 
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_query_segment_info()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

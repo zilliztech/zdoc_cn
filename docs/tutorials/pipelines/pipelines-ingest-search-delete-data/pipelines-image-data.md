@@ -1015,7 +1015,7 @@ curl --request POST \
 
 点击左侧导航栏中的 **Pipelines**。选中 **Pipelines** 选项卡。您可以查看所有已创建的 Pipelines 及其详情、用量等。
 
-undefined
+![view-pipelines-on-web-ui-cn](/img/view-pipelines-on-web-ui-cn.png)
 
 您还可以查看所有 Pipelines 相关事件。
 

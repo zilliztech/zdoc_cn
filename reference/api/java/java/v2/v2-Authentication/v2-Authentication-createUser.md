@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation creates a user. | Java | v2"
 type: docx
-token: BYksdftJSon0EMxNYn2c2FCpncd
+token: OTMXd9uNWoMwe4xvg70cg49Pnmh
 sidebar_position: 2
+keywords: 
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - createUser()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

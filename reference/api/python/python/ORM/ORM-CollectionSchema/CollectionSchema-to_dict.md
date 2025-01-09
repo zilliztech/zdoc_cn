@@ -9,6 +9,16 @@ description: "This operation converts a CollectionSchema object to a dictionary 
 type: docx
 token: GfTadfqhAo64XDxc643ci4Zwnwb
 sidebar_position: 4
+keywords: 
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - to_dict()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation checks whether the current collection has a built i
 type: docx
 token: WDk4dXY8IoV3SJxp9e7c3aq1nBh
 sidebar_position: 15
+keywords: 
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - has_index()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

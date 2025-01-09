@@ -8,6 +8,16 @@ type: folder
 token: ICGwfi8ZClVQLHdLn9Hc3oeFn1d
 sidebar_position: 3
 sidebar_label: "MilvusClient"
+keywords: 
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - MilvusClient
+  - python
 displayed_sidebar: pythonSidebar
 ---
 

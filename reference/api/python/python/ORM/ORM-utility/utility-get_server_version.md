@@ -9,6 +9,16 @@ description: "This operation checks the version of the Zilliz Cloud cluster. | P
 type: docx
 token: PoPkdkzSnofUihxzKLqcw7hYnrf
 sidebar_position: 16
+keywords: 
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_server_version()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

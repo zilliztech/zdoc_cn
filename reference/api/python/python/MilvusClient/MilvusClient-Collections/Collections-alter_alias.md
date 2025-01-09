@@ -9,6 +9,16 @@ description: "This operation reassigns the alias of one collection to another. |
 type: docx
 token: CBc3d1mrdoYqmDxe4Kcc9zxAnzh
 sidebar_position: 1
+keywords: 
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - alter_alias()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

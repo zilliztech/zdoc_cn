@@ -9,6 +9,16 @@ description: "This operation updates the password of a specific user. | Python |
 type: docx
 token: WGDod7Qehou4GWx4Co2cJ34VnKb
 sidebar_position: 13
+keywords: 
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - update_password()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation constructs a CollectionSchema object from a diction
 type: docx
 token: DYuUdc503o1TANxuGozcXhCmnRN
 sidebar_position: 3
+keywords: 
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - construct_from_dict()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

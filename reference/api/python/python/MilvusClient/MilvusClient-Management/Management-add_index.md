@@ -9,6 +9,16 @@ description: "This operation adds index parameters for a specific field in a col
 type: docx
 token: ZplAdphtooqHJkxo8GCcOFecngd
 sidebar_position: 1
+keywords: 
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - add_index()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

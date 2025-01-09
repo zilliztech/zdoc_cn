@@ -9,6 +9,16 @@ description: "This operation adds connections to multiple Zilliz Cloud clusters 
 type: docx
 token: C37ldNLbFog6ThxA23ScMldnnmb
 sidebar_position: 1
+keywords: 
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - add_connection()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation lists the information of a specific user. | Python 
 type: docx
 token: JeG6d5Sg2oPmXPxEhnyciq4snNd
 sidebar_position: 28
+keywords: 
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_user()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

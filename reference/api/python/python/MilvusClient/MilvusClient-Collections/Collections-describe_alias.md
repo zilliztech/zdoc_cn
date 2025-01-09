@@ -9,6 +9,16 @@ description: "This operation displays the details of an alias. | Python | Milvus
 type: docx
 token: HN7nddgueo3scIxmPXAcpjkFnDf
 sidebar_position: 6
+keywords: 
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describe_alias()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

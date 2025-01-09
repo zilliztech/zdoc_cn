@@ -9,6 +9,16 @@ description: "This operation returns a list of all connection names and handler 
 type: docx
 token: DyPldeRNXo4nMqxQeE0cMnd2nEf
 sidebar_position: 7
+keywords: 
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_connections()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

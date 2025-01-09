@@ -9,6 +9,16 @@ description: "This operation loads the unloaded data of a loaded collection into
 type: docx
 token: X3NXdtC2koiAxyxhcUBcv38Wnsh
 sidebar_position: 9
+keywords: 
+  - LLMs
+  - Machine Learning
+  - RAG
+  - NLP
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - refresh_load()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

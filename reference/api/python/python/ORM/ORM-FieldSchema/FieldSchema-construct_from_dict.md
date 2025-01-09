@@ -9,6 +9,16 @@ description: "This operation constructs a FieldSchema object from a dictionary r
 type: docx
 token: DCLUdOpVjohl8HxPUx1cGjokngf
 sidebar_position: 1
+keywords: 
+  - rag llm architecture
+  - private llms
+  - nn search
+  - llm eval
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - construct_from_dict()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

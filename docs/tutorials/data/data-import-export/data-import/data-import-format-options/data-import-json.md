@@ -4,7 +4,7 @@ slug: /data-import-json
 sidebar_label: "从 JSON 文件中导入"
 beta: FALSE
 notebook: FALSE
-description: "JSON is a lightweight, human-readable data format that machines can parse and generate easily. Language-independent, it follows conventions familiar to C-family language programmers, making it an ideal data interchange format. | Cloud"
+description: "JSON 文件是一个轻量化的，对人和机器都友好的数据格式。因为它的语言无关特性，并遵循类 C 语言程序员熟悉的规范，JSON 是一个非常理想的数据交换格式。 | Cloud"
 type: origin
 token: RYZAw68ioikyLpktFZFcyhKcn2f
 sidebar_position: 2
@@ -26,32 +26,32 @@ import Admonition from '@theme/Admonition';
 
 # 从 JSON 文件中导入
 
-[JSON](https://www.json.org/json-en.html) (JavaScript Object Notation) is a lightweight, human-readable data format that machines can parse and generate easily. Language-independent, it follows conventions familiar to C-family language programmers, making it an ideal data interchange format.
+[JSON](https://www.json.org/json-en.html) 文件是一个轻量化的，对人和机器都友好的数据格式。因为它的语言无关特性，并遵循类 C 语言程序员熟悉的规范，JSON 是一个非常理想的数据交换格式。
 
-You are advised to use [the BulkWriter tool](./use-bulkwriter) to prepare your raw data into JSON files. The following figure demonstrates how your raw data can be mapped into a JSON file.
+建议您[使用 BulkWriter](./use-bulkwriter) 工具将您的原始数据转换为 JSON 文件。下图演示了您的原始数据如何映射到 JSON 文件中。
 
 ![json_data_structure](/img/json_data_structure.png)
 
-<Admonition type="info" icon="📘" title="Notes">
+<Admonition type="info" icon="📘" title="说明">
 
 <ul>
-<li><strong>Whether to enable AutoID</strong></li>
+<li><strong>是否启用 AutoID</strong></li>
 </ul>
-<p>The <strong>id</strong> field serves as the primary field of the collection. To make the primary field automatically increment, you can enable <strong>AutoID</strong> in the schema. In this case, you should exclude the <strong>id</strong> field from each row in the source data.</p>
+<p>Collection 中的 id 字段作为主键区分 Entity。如果需要 Zilliz Cloud 为插入的数据自动生成主键，可以启用 AutoID。在这种情况下，批量导入数据时需要排队主键列。</p>
 <ul>
-<li><strong>Whether to enable dynamic fields</strong></li>
+<li><strong>是否启用 Dynamic Field</strong></li>
 </ul>
-<p>When the target collection enables dynamic fields, if you need to store fields that are not included in the pre-defined schema, you can specify the <strong>$meta</strong> column during the write operation and provide the corresponding key-value data.</p>
+<p>当目标 Collection 启用了 Dynamic Field 并且您希望导入 Schema 中未定义的字段时，您可以在导入数据中纳入一个名为 <strong>$meta</strong> 的字段，并将所有未在 Schema 中定义的字段以键值对的方式存放到 <strong>$meta</strong> 字段中。</p>
 <ul>
-<li><strong>Case-sensitive</strong></li>
+<li><strong>大小写</strong></li>
 </ul>
-<p>Dictionary keys and collection field names are case-sensitive. Ensure that the dictionary keys in your data exactly match the field names in the target collection. If there is a field named <strong>id</strong> in the target collection, each entity dictionary should have a key named <strong>id.</strong> Using <strong>ID</strong> or <strong>Id</strong> results in errors. </p>
+<p>字典键名和 Collection 的字段名是大小写敏感的。您需要确保待导入字典的键名和目标 Collection 的字段名是完全对应的。比如，目标 Collection 中有个字段名为 <strong>id</strong>，那么待导入字典的键名也应该为 <strong>id</strong>。使用 <strong>ID</strong> 或 <strong>Id</strong> 会导致报错。</p>
 
 </Admonition>
 
-## Directory structure
+## 目录结构{#directory-structure}
 
-If you prefer to prepare your data into JSON files, place all JSON files directly into the source data folder as shown in the tree diagram below.
+如果您希望将您的原始数据转换为 JSON 文件，请将所有 JSON 文件直接放到源文件夹内，如下方所示。
 
 ```plaintext
 ├── json-folder
@@ -59,31 +59,31 @@ If you prefer to prepare your data into JSON files, place all JSON files directl
 │       └── 2.json 
 ```
 
-## Import data
+## 导入数据{#import-data}
 
-Once your data is ready, you can use either of the following methods to import them into your Zilliz Cloud collection.
+在准备好待导入数据后，您可以使用如下任意一种方式将它们导入到您在 Zilliz Cloud 上创建的 Collection 中。
 
-- [Import files from multiple paths (recommended)](./data-import-json#import-files-from-multiple-paths-recommended)
+- [从多路径导入（推荐）](./data-import-json#import-files-from-multiple-paths-recommended)
 
-- [Import files from a folder](./data-import-json#import-files-from-a-folder)
+- [从源文件夹导入](./data-import-json#import-files-from-a-folder)
 
-- [Import a single file](./data-import-json#import-a-single-file)
+- [从单个文件导入](./data-import-json#import-a-single-file)
 
-<Admonition type="info" icon="📘" title="Notes">
+<Admonition type="info" icon="📘" title="说明">
 
-<p>If your files are relatively small, it is recommended to use the folder or multiple-path method to import them all at once. This approach allows for internal optimizations during the import process, which helps reduce resource consumption later.</p>
+<p>如果您的文件体积较小，建议您使用多路径或源文件夹的方式将所有文件一次性导入。Zilliz Cloud 针对这两种方式做了内部优化，可以降低后续资源消耗。</p>
 
 </Admonition>
 
-You can also import your data on the Zilliz Cloud console using Milvus SDKs. For details, refer to [通过 Web 控制台导入](./import-data-on-web-ui) and [通过 SDK 导入](./import-data-via-sdks).
+您也可以使用 Zilliz Cloud 控制台或使用 Milvus SDK。具体操作，可以参考 [通过 Web 控制台导入](./import-data-on-web-ui)以及[通过 SDK 导入](./import-data-via-sdks)。
 
-### Import files from multiple paths (Recommended)
+### 从多路径导入（推荐）{#import-files-from-multiple-paths-recommended}
 
-When importing files from multiple paths, include each JSON file path in a separate list, then group all the lists into a higher-level list as in the following code example.
+当您有多个文件需要同时导入时，可以使用这种方式。在导入时，需要将每个需要导入的 JSON 文件的路径包含在一个子列表中，并将这些子列表包含在一个外层列表中，如下方代码所示。
 
 ```bash
 curl --request POST \
-     --url "https://api.cloud.zilliz.com/v2/vectordb/jobs/import/create" \
+     --url "https://api.cloud.zilliz.com.cn/v2/vectordb/jobs/import/create" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "Accept: application/json" \
      --header "Content-Type: application/json" \
@@ -101,13 +101,13 @@ curl --request POST \
     }'
 ```
 
-### Import files from a folder
+### 从源文件夹导入{#import-files-from-a-folder}
 
-If the source folder contains only the JSON files to import, you can simply include the source folder in the request as follows:
+如果源文件夹中仅包含需要导入的所有 JSON 文件，您可以将这个源文件夹的路径放在一个子列表中，然后将这个子列表放在一个外层列表中，如下方代码所示。
 
 ```bash
 curl --request POST \
-     --url "https://api.cloud.zilliz.com/v2/vectordb/jobs/import/create" \
+     --url "https://api.cloud.zilliz.com.cn/v2/vectordb/jobs/import/create" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "Accept: application/json" \
      --header "Content-Type: application/json" \
@@ -123,13 +123,13 @@ curl --request POST \
     }'
 ```
 
-### Import a single file
+### 从单个文件导入{#import-a-single-file}
 
-If your prepared data file is a single JSON file, import it as demonstrated in the following code example.
+如果您希望单独导入一个 JSON 文件，可以将这个 JSON 文件的路径放在一个子列表中，然后将这个子列表放在一个外层列表中，如下方代码所示。
 
 ```bash
 curl --request POST \
-     --url "https://api.cloud.zilliz.com/v2/vectordb/jobs/import/create" \
+     --url "https://api.cloud.zilliz.com.cn/v2/vectordb/jobs/import/create" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "Accept: application/json" \
      --header "Content-Type: application/json" \
@@ -145,50 +145,52 @@ curl --request POST \
     }'
 ```
 
-## Storage paths
+## 存储路径{#storage-paths}
 
-Zilliz Cloud supports data import from your cloud storage. The table below lists the possible storage paths for your data files.
+Zilliz Cloud 支持从您的云存储中导入数据。下表罗列了 Zilliz Cloud 支持的数据文件路径格式。
 
 <table>
    <tr>
-     <th><p><strong>Cloud</strong></p></th>
-     <th><p><strong>Quick Examples</strong></p></th>
+     <th><p>云服务提供商</p></th>
+     <th><p>相关示例</p></th>
    </tr>
    <tr>
-     <td><p><strong>AWS S3</strong></p></td>
+     <td><p>阿里云 OSS</p></td>
+     <td><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/</code></p><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/data.json</code></p></td>
+   </tr>
+   <tr>
+     <td><p>腾讯云 COS</p></td>
+     <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder/</code></p><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder/data.json</code></p></td>
+   </tr>
+   <tr>
+     <td><p>亚马逊云科技 S3</p></td>
      <td><p><code>s3://bucket-name/json-folder/</code></p><p><code>s3://bucket-name/json-folder/data.json</code></p></td>
    </tr>
-   <tr>
-     <td><p><strong>Google Cloud Storage</strong></p></td>
-     <td><p><code>gs://bucket-name/json-folder/</code></p><p><code>gs://bucket-name/json-folder/data.json</code></p></td>
-   </tr>
-   <tr>
-     <td><p><strong>Azure Bolb</strong></p></td>
-     <td><p><code>https://myaccount.blob.core.windows.net/bucket-name/json-folder/</code></p><p><code>https://myaccount.blob.core.windows.net/bucket-name/json-folder/data.json</code></p></td>
-   </tr>
 </table>
 
-## Limits
+## 相关限制{#limits}
 
-There are some limits you need to observe when you import data in the JSON format from your cloud storage. Note that a valid JSON file has a root key named **rows**, the corresponding value of which is a list of dictionaries, each representing an entity that matches the schema of the target collection.
+Zilliz Cloud 针对导入 Parquet 格式的文件时设置了如下限制。
+
+需要注意的是，一个合法的 JSON 文件中有一个名为 **rows** 的根键，其值为一个字典列表，每个字典列表代表一个需要插入的 Entity 对象。
 
 <table>
    <tr>
-     <th><p><strong>Item</strong></p></th>
-     <th><p><strong>Description</strong></p></th>
+     <th><p>项目</p></th>
+     <th><p>描述</p></th>
    </tr>
    <tr>
-     <td><p><strong>Multiple files per import</strong></p></td>
-     <td><p>Yes</p></td>
+     <td><p><strong>支持多文件导入</strong></p></td>
+     <td><p>是</p></td>
    </tr>
    <tr>
-     <td><p><strong>Maximum file size per import</strong></p></td>
-     <td><p>Free cluster: 512 MB in total</p><p>Serverless and Dedicated cluster:</p><ul><li><p>Individual file size: 10 GB</p></li><li><p>Total file size: 100 GB</p></li></ul></td>
+     <td><p><strong>每次导入的文件体积限制</strong></p></td>
+     <td><p>Free 集群：最大 512 MB</p><p>Serverless 或 Dedicated 集群</p><ul><li><p>单个文件大小：最大 10 GB</p></li><li><p>总文件大小：最大 100 GB</p></li></ul></td>
    </tr>
    <tr>
-     <td><p><strong>Applicable data file locations</strong></p></td>
-     <td><p>Local and remote files</p></td>
+     <td><p><strong>文件存放位置</strong></p></td>
+     <td><p>仅远程</p></td>
    </tr>
 </table>
 
-You can use [the BulkWriter tool](./use-bulkwriter) to generate the source data file. [Click here to download the prepared sample data based on the schema in the above diagram](https://assets.zilliz.com/prepared_json_data.json).
+建议您[使用 BulkWriter](./use-bulkwriter) 工具将您的原始数据转换成 Parquet 文件。我们按照本文示意图中的 Schema 准备了一个示例数据供您参考。[单击此处](https://assets.zilliz.com/prepared_json_data.json)下载该示例文件。

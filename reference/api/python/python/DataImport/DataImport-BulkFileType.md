@@ -9,6 +9,16 @@ description: "This is an enumeration that provides the following constants. | Py
 type: docx
 token: CROadSmHNoV2CuxREnccTkaen0e
 sidebar_position: 1
+keywords: 
+  - nn search
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - BulkFileType
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

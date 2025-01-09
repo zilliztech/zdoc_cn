@@ -26,27 +26,27 @@ import Admonition from '@theme/Admonition';
 
 包年包月集群采用预付费的计费方式，即先付费后使用，按照订单的购买时长进行结算。包年包月集群一般适用于资源需求相对稳定的长期业务。购买包年包月集群可享受折扣，且购买时长越长，折扣越大。本文介绍如何在 Zilliz Cloud 创建和管理包年包月的 Dedicated 集群。如需了解包年包月集群使用过程中可能会额外产生的费用以及计费规则，请参考[了解账单](./view-invoice)。
 
-## 前提条件{#Prerequisites}
+## 前提条件{#prerequisites}
 
 - 您具备**组织管理员**或**项目管理员**权限。
 
 - 您的组织已完成[企业认证](./enterprise-certification)。
 
-## 创建包年包月集群
+## 创建包年包月集群{#create-annual-subscription-cluster}
 
 ![Oeusw9TnGhQfe0bLWcGcQoaZn5f](/img/Oeusw9TnGhQfe0bLWcGcQoaZn5f.png)
 
 上图展示了创建包年包月集群的主要流程和步骤。以下为具体操作说明。
 
-### 步骤 1. 配置包年包月集群
+### 步骤 1. 配置包年包月集群{#step-1-configure-annual-subscription-cluster}
 
 1. 登录 Zilliz Cloud。在合适的项目下点击 **+ 创建集群**。
 
-    ![KViKb8FAYoEzQHxJPyhcFAIBn5Z](/img/KViKb8FAYoEzQHxJPyhcFAIBn5Z.png)
+    ![create-annual-subscription-cluster-cn](/img/create-annual-subscription-cluster-cn.png)
 
 1. 选择 **Dedicated** 版本并配置集群。目前仅 Dedicated 集群支持包年包月的计费方式。
 
-    ![Wwe6bCy6doclTkxRVFlch0FtnBf](/img/Wwe6bCy6doclTkxRVFlch0FtnBf.png)
+    ![configure-annual-subscription-cluster-cn](/img/configure-annual-subscription-cluster-cn.png)
 
     <table>
        <tr>
@@ -81,15 +81,15 @@ import Admonition from '@theme/Admonition';
 
 1. 检查配置并点击**创建**。
 
-1. 阅读并同意【购买须知】。
+1. 阅读并同意 [Zilliz Cloud 服务条款](https://zilliz.com.cn/cloud-service-terms)。
 
-    ![BSO1bUpzMosxzGxXFTNcjF7NnGf](/img/BSO1bUpzMosxzGxXFTNcjF7NnGf.png)
+    ![agree-to-annnual-subscription-terms-cn](/img/agree-to-annnual-subscription-terms-cn.png)
 
-### 步骤 2. 支付订单
+### 步骤 2. 支付订单{#step-2-pay-order}
 
 完成步骤 1 后，Zilliz Cloud 将生成一份类型为**新购**的**待支付**订单。请检查订单内容并及时完成支付。
 
-![VgbdbtGxJoEzb4xOgNtcdD5xnCb](/img/VgbdbtGxJoEzb4xOgNtcdD5xnCb.png)
+![pay-annual-subscription-order-cn](/img/pay-annual-subscription-order-cn.png)
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -99,15 +99,15 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-### 步骤 3. 等待集群创建成功
+### 步骤 3. 等待集群创建成功{#step-3-wait-till-cluster-is-created}
 
 订单支付成功后，Zilliz Cloud 会开始自动为您创建包年包月集群，您将看到以下界面。请及时下载和安全保存集群用户名与密码。
 
-![SDccbRTG3o9ooQxAoujcUep8nBM](/img/SDccbRTG3o9ooQxAoujcUep8nBM.png)
+![annual-subscription-cluster-is-being-created-cn](/img/annual-subscription-cluster-is-being-created-cn.png)
 
 创建集群的过程大约需要 10 分钟，请您耐心等待。当集群状态变为**运行中**时，代表已成功创建包年包月集群。您可以继续[连接集群](./connect-to-cluster)或在集群中[创建 Collection](./manage-collections-sdks)。
 
-## 管理包年包月集群
+## 管理包年包月集群{#manage-annual-subscription-cluster}
 
 下表展示了您可以对包年包月集群进行的管理操作。
 
@@ -174,7 +174,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-## 常见问题
+## 常见问题{#faqs}
 
 - **为什么购买了预付费的包年包月集群，还有后付费账单产生？**
 

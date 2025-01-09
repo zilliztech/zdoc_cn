@@ -8,6 +8,16 @@ type: folder
 token: M0pgf1TX3lTotndwA7Vc3gJsnAd
 sidebar_position: 2
 sidebar_label: "Client"
+keywords: 
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
+  - Embedding model
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Client
+  - python
 displayed_sidebar: pythonSidebar
 ---
 

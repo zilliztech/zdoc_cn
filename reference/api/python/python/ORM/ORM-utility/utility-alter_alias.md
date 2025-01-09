@@ -9,6 +9,16 @@ description: "This operation reassigns the alias of one collection to another. |
 type: docx
 token: MfTsdrbGcoO9JqxjgPtcMZTvncc
 sidebar_position: 1
+keywords: 
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - alter_alias()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

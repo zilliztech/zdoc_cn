@@ -9,6 +9,16 @@ description: "This operation gets information about the current loaded replica. 
 type: docx
 token: BQKPdDd5xo8OPgxoXorcMxk0nVb
 sidebar_position: 14
+keywords: 
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_replicas()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -9,10 +9,10 @@ token: XhBJfuQ6slBh8Tdj7BEc4Mp6n4b
 sidebar_position: 7
 sidebar_label: "Vector"
 keywords: 
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
+  - vector database
+  - IVF
+  - knn
+  - Image Search
   - zilliz
   - zilliz cloud
   - cloud

@@ -9,6 +9,16 @@ description: "This operation creates a custom role. | Python | MilvusClient"
 type: docx
 token: OUz3drncZo1Er8xyITZcYz66nWE
 sidebar_position: 1
+keywords: 
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - what is vector db
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_role()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---
@@ -68,8 +78,8 @@ from pymilvus import MilvusClient
 
 # 1. Create a milvus client
 client = MilvusClient(
-    uri="http://localhost:19530",
-    token="root:Milvus"
+    uri="YOUR_CLUSTER_ENDPOINT",
+    token="YOUR_CLUSTER_TOKEN"
 )
 
 # 2. Create a role

@@ -9,6 +9,16 @@ description: "This operation drops a resource group. | Python | ORM"
 type: docx
 token: EofGdftYjoQ9E6x8mxLcpbG1nhc
 sidebar_position: 11
+keywords: 
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_resource_group()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

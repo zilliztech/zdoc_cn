@@ -9,6 +9,16 @@ description: "This operation lists the names of all existing users. | Python | O
 type: docx
 token: RXi3dgtNYogU0cxmTsgcdT72nsc
 sidebar_position: 29
+keywords: 
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_usernames()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

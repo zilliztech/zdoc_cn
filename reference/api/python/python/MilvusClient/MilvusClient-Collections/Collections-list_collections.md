@@ -9,6 +9,16 @@ description: "This operation lists all existing collections. | Python | MilvusCl
 type: docx
 token: BHyidrVcyoPwxexHLrnceOSAnRe
 sidebar_position: 14
+keywords: 
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_collections()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -57,13 +57,13 @@ import Admonition from '@theme/Admonition';
 
 登陆 Zilliz Cloud，选择合适的项目。在项目左侧导航栏中选择**网络 > 私网连接**，并单击**创建 Private Endpoint**。
 
-【screenshot】
+![zh-create-private-link](/img/zh-create-private-link.png)
 
 ### 选择云服务提供商和地域{#select-cloud-provider-and-region}
 
 在云服务提供商下拉菜单中选择阿里云。在地域下拉菜单中选择与您目标集群相同的地域。
 
-【Screenshot】
+![zh-ali-create-private-link](/img/zh-ali-create-private-link.png)
 
 ### 创建终端服务{#create-endpoint-service}
 
@@ -77,7 +77,7 @@ import Admonition from '@theme/Admonition';
 
 复制主账号 ID 后，返回 Zilliz Cloud 界面，在账号 ID 字段中黏贴主账号 ID。
 
-【Screenshot】
+![zh-ali-create-private-link-enter-account-id](/img/zh-ali-create-private-link-enter-account-id.png)
 
 ### 创建终端节点{#create-endpoint}
 
@@ -159,7 +159,7 @@ import Admonition from '@theme/Admonition';
 
 将您在阿里云界面上保存的**终端节点实例 ID** 输入到 Zilliz Cloud 界面的**终端节点 ID** 字段中。点击**创建**。
 
-【screenshot】
+![zh-ali-create-private-link-authorize-endpoint](/img/zh-ali-create-private-link-authorize-endpoint.png)
 
 此时 Zilliz Cloud 界面会出现如下提示：
 

@@ -9,6 +9,16 @@ description: "This operation moves a specific number of query nodes from the sou
 type: docx
 token: QHcpd1aJzo5aYbxJtMXc58een4f
 sidebar_position: 39
+keywords: 
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - transfer_node()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

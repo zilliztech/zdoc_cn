@@ -4,7 +4,7 @@ slug: /data-import-format-options
 sidebar_label: "支持的数据格式"
 beta: FALSE
 notebook: FALSE
-description: "Zilliz Cloud supports importing data in various formats, including Parquet (recommended), JSON, and NumPy files. In this section, you will find the procedures for importing data in these formats and the aspects you should pay attention to to. | Cloud"
+description: "Zilliz Cloud 支持导入多种格式的数据，包括 Parquet（推荐）、JSON 和 NumPy 等。在本小节中，您可以了解导入这些格式的数据文件的具体步骤及您需要了解的相关限制和要求。 | Cloud"
 type: origin
 token: UZDiwkiNtiBjFEkVvo3cgjNLnEb
 sidebar_position: 2
@@ -26,7 +26,7 @@ import Admonition from '@theme/Admonition';
 
 # 支持的数据格式
 
-Zilliz Cloud supports importing data in various formats, including Parquet (recommended), JSON, and NumPy files. In this section, you will find the procedures for importing data in these formats and the aspects you should pay attention to to.
+Zilliz Cloud 支持导入多种格式的数据，包括 Parquet（推荐）、JSON 和 NumPy 等。在本小节中，您可以了解导入这些格式的数据文件的具体步骤及您需要了解的相关限制和要求。
 
 import DocCardList from '@theme/DocCardList';
 

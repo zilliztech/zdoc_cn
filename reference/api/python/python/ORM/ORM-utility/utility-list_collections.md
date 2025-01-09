@@ -9,6 +9,16 @@ description: "This operation lists all collections in the database used in the c
 type: docx
 token: QgxEdfBMSodYo6xCg24cH3hInr4
 sidebar_position: 24
+keywords: 
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_collections()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

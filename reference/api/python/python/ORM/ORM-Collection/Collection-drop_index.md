@@ -9,6 +9,16 @@ description: "This operation deletes index from the current collection. | Python
 type: docx
 token: AtkDdtMAWodFzExARxnco5xLnsg
 sidebar_position: 9
+keywords: 
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_index()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

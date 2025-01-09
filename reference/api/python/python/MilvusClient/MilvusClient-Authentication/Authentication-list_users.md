@@ -9,6 +9,16 @@ description: "This operation lists the names of all existing users. | Python | M
 type: docx
 token: EZ2YdBHoDoRTlxx91tscffm1nSb
 sidebar_position: 10
+keywords: 
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_users()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

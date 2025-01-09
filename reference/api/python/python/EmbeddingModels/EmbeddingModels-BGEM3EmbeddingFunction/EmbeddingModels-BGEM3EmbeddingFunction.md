@@ -9,6 +9,16 @@ description: "BGEM3EmbeddingFunction is a class in pymilvus that handles encodin
 type: docx
 token: XYSVdCqCDoJ9Y5xqKEAceYkpnnh
 sidebar_position: 1
+keywords: 
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - BGEM3EmbeddingFunction
+  - python
 displayed_sidebar: pythonSidebar
 
 ---
