@@ -7,7 +7,7 @@ notebook: FALSE
 description: "在本次发布中，Zilliz Cloud 推出了预付费订阅计划，旨在帮助财务审批流程复杂的企业客户简化采购流程，确保业务顺畅运行；新创建的 Collection 根据订阅计划和集群类型采用不同的全局 mmap 策略，Dedicated 集群还支持针对特定列自定义原始数据和索引的 mmap 策略，提升搜索性能并扩展容量；Dedicated 集群现支持创建 Database，并在 Collection 级别实现基于角色的访问控制（RBAC），助力数据管理和多租户方案；此外，新增十级召回率调优和召回率估算功能，方便优化搜索参数，提升搜索精度与性能。 | Cloud"
 type: origin
 token: YLFKwQdzAiyVxckcvcecQ4DPnKf
-sidebar_position: 1
+sidebar_position: 0
 keywords: 
   - 向量数据库
   - zilliz
@@ -64,7 +64,7 @@ Zilliz Cloud 在 Search 操作中引入了一个新参数 `level`，增加了召
 
 - 高召回搜索（`level=[6, 10]`）：对于有高召回率要求（如 99% 或更高）的场景，您可以通过在 `6` 到 `10` 之间滑动该参数的取值来进行调优。对于性能不敏感场景，可以考虑将该值设置为 `10`。
 
-您可以根据实际需要灵活调整向量搜索行为，从而达成搜索精度和搜索性能之间的平衡。更多内容，可以参考[使用 ](./single-vector-search#use-level)`level`[ 参数](./single-vector-search#use-level)。
+您可以根据实际需要灵活调整向量搜索行为，从而达成搜索精度和搜索性能之间的平衡。更多内容，可以参考[使用 'level' 参数](./single-vector-search#use-level)。
 
 ## 估算召回率{#recall-rate-estimation}
 
