@@ -27,7 +27,7 @@ Zilliz Cloud 允许您通过私网连接（PrivateLink）访问您的集群。�
 
 ## 配置思路{#configuration-principle}
 
-![private_link_cn](/img/private_link_cn.png)
+![KnY9wUjpahtUHDbr9iDcbozrnqe](/img/KnY9wUjpahtUHDbr9iDcbozrnqe.png)
 
 如上图所示，私网连接建立在您的应用所在 VPC 与 您的 Zilliz Cloud 集群所在VPC 之间。 Zilliz Cloud 集群提供的私网连接支持为多个可用区的应用提供服务。
 
