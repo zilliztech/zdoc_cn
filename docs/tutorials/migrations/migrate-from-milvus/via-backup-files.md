@@ -19,8 +19,7 @@ keywords:
 ---
 
 import Admonition from '@theme/Admonition';
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+
 
 # 通过备份文件从 Milvus 迁移至 Zilliz Cloud
 
@@ -40,51 +39,7 @@ Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案�
 
 ## 准备迁移数据{#prepare-migration-data}
 
-<Tabs defaultValue="1x" values={[{"label":"From Milvus 1.x","value":"1x"},{"label":"From Milvus 2.x","value":"2x"}]}>
-
-<TabItem value="1x">
-
-Zilliz Cloud 支持从 Milvus 1.x（包括 0.9.x 及以上）和更高版本迁移数据。Milvus 向量数据库正持续发展，各版本间通常会存在重大变化。
-
-要从 Milvus 0.9.x 到 1.x 迁移数据，需要按如下准备数据：
-
-1. 下载 [milvus-migration](https://assets.zilliz.com/tools/milvus-migration)。推荐下载最新版本。
-
-1. 停止 Milvus 安装进程或至少停止在 Milvus 中执行的所有 DML 操作。
-
-1. 导出安装相关的元数据到 `meta.json`。
-
-    - 如果后端为 MySQL，执行以下命令：
-
-        ```bash
-        ./milvus-migration export -m "user:password@tcp(adderss)/milvus?charset=utf8mb4&parseTime=True&loc=Local" -o outputDir
-        ```
-
-    - 如果后端为 SQLite，执行以下命令：
-
-        ```bash
-        ./milvus-migration export -s /milvus/db/meta.sqlite -o outputDir
-        ```
-
-1. 复制 Milvus 安装目录下的 `tables` 文件夹，将 `meta.json` 和 `tables` 文件夹移动到一个空文件夹。
-
-    此步骤完成后，空文件夹的结构应如下所示：
-
-    ```plaintext
-    migration_data
-    ├── meta.json
-    └── tables
-    ```
-
-1. 将准备好的文件夹上传到 OSS 存储，或直接使用本地文件夹开始迁移。
-
-</TabItem>
-
-<TabItem value="2x">
-
-Zilliz Cloud 支持从 Milvus 2.x 和更高版本迁移数据。Milvus 向量数据库如今正在持续发展，各版本之间通常会存在重大变化。
-
-要从 Milvus 2.x 迁移数据，您需要按如下准备数据：
+Zilliz Cloud 支持从 Milvus 2.x 和更高版本迁移数据。要从 Milvus 2.x 迁移数据，请按如下准备数据：
 
 1. 下载 [milvus-backup](https://github.com/zilliztech/milvus-backup/releases)。推荐下载最新版本。
 
@@ -149,10 +104,6 @@ Zilliz Cloud 支持从 Milvus 2.x 和更高版本迁移数据。Milvus 向量数
 backup
 └── my_backup  <= 上传此文件夹
 ```
-
-</TabItem>
-
-</Tabs>
 
 ## 将数据迁移到 Zilliz Cloud{#migrate-data-to-zilliz-cloud}
 
