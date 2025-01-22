@@ -37,8 +37,8 @@ class refGen {
         
         const sidebar_position = idx; idx++;
 
-        const page_title = lang === "zh-CN" && specification["x-i18n"]?.[lang] ? specification["x-i18n"][lang].summary : specification.summary
-        const page_excerpt = this.__filter_content(lang === "zh-CN" && specification["x-i18n"]?.[lang] ? specification["x-i18n"][lang].description : specification.description, target)
+        const page_title = lang === "zh-CN" ? specification["x-i18n"][lang].summary : specification.summary
+        const page_excerpt = this.__filter_content(lang === "zh-CN" ? specification["x-i18n"][lang].description : specification.description, target)
         var page_parent = parents.filter(x => x === specification.tags[0])[0].replace("&", "and").split(' ').join('-').replace(/\(|\)/g, '').toLowerCase()
         if (target === 'milvus') {
           const descriptions = JSON.parse(fs.readFileSync('plugins/apifox-docs/meta/descriptions.json', 'utf-8'))
@@ -47,20 +47,17 @@ class refGen {
             page_parent = name
           }
         }
-        
         const version = page_parent.includes('v2') ? 'v2' : 'v1'
         var slug_suffix = version === 'v2' ? '-v2' : ''
         if (target === 'milvus') {
           slug_suffix = ''
         }
-
         var upper_folder = page_parent.startsWith('cloud') || page_parent.startsWith('cluster') || page_parent.startsWith('import') || page_parent.startsWith('pipeline') || page_parent.includes('backup') || page_parent.includes('restore') ? 'control-plane' : 'data-plane'
+
         if (target === 'milvus') {
           upper_folder = page_parent.startsWith('cloud') || page_parent.startsWith('cluster') || page_parent.startsWith('pipeline') || page_parent.includes('backup') || page_parent.includes('restore') ? 'control-plane' : 'data-plane'
         }
-
         var page_slug = (this.get_slug(page_title, target)) + slug_suffix
-
         const page_method = method.toLowerCase()
         const specs = JSON.stringify(specification)
 
@@ -91,6 +88,8 @@ class refGen {
     const template = env.getTemplate("group.mdx")
 
     for (const group of Object.keys(specifications.tags)) {
+      if (specifications.tags[group]['x-include-target'] && !(specifications.tags[group]['x-include-target']?.includes(target))) continue;
+
       const slug = specifications.tags[group].name.replace("&", "and").split(' ').join('-').replace(/\(|\)/g, '').toLowerCase()
       const version = slug.includes('v2') ? 'v2' : 'v1'
       var upper_folder = slug.startsWith('cloud') || slug.startsWith('cluster') || slug.startsWith('import') || slug.startsWith('pipeline') || slug.includes('backup') || slug.includes('restore') ? 'control-plane' : 'data-plane'
@@ -130,22 +129,22 @@ class refGen {
             description: ''
           }))
         }
-
+  
         if (!fs.existsSync(`${target_path}/${version}/${upper_folder}/${upper_folder}.mdx`)) {
           const title = upper_folder.startsWith('control') ? 'Control Plane' : 'Data Plane'
           const pos = upper_folder.startsWith('control') ? 1 : 2
           const desc = upper_folder.startsWith('control') ? 'This provide API endpoints for managing Zilliz Cloud clusters and resources.' : 'This provide API endpoints for managing data stored in Zilliz Cloud clusters.'
-
+  
           fs.writeFileSync(`${target_path}/${version}/${upper_folder}/${upper_folder}.mdx`, template.render({
             group_name: title,
             position: pos,
             slug: `${upper_folder}-${version}`,
             description: desc
           }))
-        }  
-
+        }      
+  
         fs.writeFileSync(`${folder_path}/${slug}.mdx`, t)
-      }    
+      }
     }
   }
 
@@ -188,8 +187,6 @@ class refGen {
         }
       }
     }
-
-    console.log(page_slug)
 
     return page_slug
   }

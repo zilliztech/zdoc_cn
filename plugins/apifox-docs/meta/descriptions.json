@@ -30,6 +30,13 @@
         }
     },
     {
+        "name": "database-operations-v2",
+        "description": "本系列 API 提供了用于管理 Database 的相关接口。",
+        "milvus": {
+            "name": "Database (v2)"
+        }
+    },
+    {
         "name": "collection-operations-v2",
         "description": "本系列 API 提供了用于管理 Collection 的相关接口。",
         "milvus": {
@@ -76,6 +83,13 @@
         "description": "本系列 API 提供了管理 Collection 别名的相关接口。",
         "milvus": {
             "name": "Alias (v2)"
+        }
+    },
+    {
+        "name": "resource-group-v2",
+        "description": "本系列 API 提供了用于管理资源组的相关接口。",
+        "milvus": {
+            "name": "Resource Group (v2)"
         }
     },
     {
