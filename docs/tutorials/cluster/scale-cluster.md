@@ -107,7 +107,7 @@ import Admonition from '@theme/Admonition';
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>我们不推荐奖 CU 加载容量阈值设置得过高（超过 90%）。这是因为当数据插入速率较高时，集群可能无法及时完成自动扩容，会导致禁写。</p>
+    <p>我们不推荐将 CU 加载容量阈值设置得过高（超过 90%）。这是因为当数据插入速率较高时，集群可能无法及时完成自动扩容，会导致禁写。</p>
 
     </Admonition>
 
