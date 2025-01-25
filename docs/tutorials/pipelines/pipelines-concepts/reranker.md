@@ -25,6 +25,12 @@ import Admonition from '@theme/Admonition';
 
 在信息检索（Information retrieval）任务中，Reranker 可以获取粗排召回，如向量近似最近邻搜索（Approximate Nearest Neighbor，ANN）的搜索结果与查询的相关性评分，对搜索结构进行重新排序。这能够帮助提高搜索结果的整体质量，从而使大语言模型（LLM）在 RAG 流程中优先考虑与查询最相关的文档。使用 Reranker 是提高 RAG 应用程序答案质量的有效方法。需要注意的是，Reranker 的运算成本较高，因此会增加查询延迟造成更高的花费。
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>Zilliz Cloud Pipelines 服务正处在逐步下线中，将于 2025 年第二季度末停止服务，被 “Data In, Data Out” 的新功能取代。该功能旨在简化 Milvus 和 Zilliz Cloud 中的向量化流程。自 2025 年 1 月 10 日起，Zilliz Cloud Pipelines 将不再接受新用户注册。现有用户可在每月 100 元人民币免费试用额度内继续使用服务直至下线日期。该服务不提供 SLA 支持。建议您使用模型提供商的Embedding API 或开源模型生成向量。</p>
+
+</Admonition>
+
 ## Reranker 是什么？{#what-is-reranker}
 
 ![what-is-a-reranker](/img/what-is-a-reranker.png)

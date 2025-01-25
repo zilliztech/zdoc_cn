@@ -26,6 +26,12 @@ import Admonition from '@theme/Admonition';
 
 Connector 可以轻松将各种数据源连接到向量数据库。本文将介绍什么是 Connector、Connector 的作用以及如何创建和管理 Connector。
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>Zilliz Cloud Pipelines 服务正处在逐步下线中，将于 2025 年第二季度末停止服务，被 “Data In, Data Out” 的新功能取代。该功能旨在简化 Milvus 和 Zilliz Cloud 中的向量化流程。自 2025 年 1 月 10 日起，Zilliz Cloud Pipelines 将不再接受新用户注册。现有用户可在每月 100 元人民币免费试用额度内继续使用服务直至下线日期。该服务不提供 SLA 支持。建议您使用模型提供商的Embedding API 或开源模型生成向量。</p>
+
+</Admonition>
+
 ## Connector 是什么？{#what-is-a-connector}
 
 Connector 用于将数据从各种数据源（包括对象存储、Kafka 等）导入到 Zilliz Cloud。以对象存储 Connector 为例，它可以监控对象存储桶中的目录，并将 PDF、HTML 等文件同步到 Zilliz Cloud Pipelines，以便后续将文件转换为向量并存储在向量数据库中用于搜索。通过 Ingestion 和 Deletion Pipelines，Zilliz Cloud 能够实时同步数据，并根据对象存储中添加或删除的文件即使更新向量数据库 Collection 中的数据。

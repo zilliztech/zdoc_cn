@@ -25,6 +25,12 @@ import Admonition from '@theme/Admonition';
 
 [Zilliz Cloud Pipelines](./pipelines) 是一个可扩展的 API 服务，用于检索。您可以将 Zilliz Cloud Pipelines 用作 [LLamaIndex](https://docs.llamaindex.ai/en/stable/examples/managed/zcpDemo.html) 中的托管索引。该服务可以将文档转换为 Embedding 向量，并将它们存储在 Zilliz Cloud 中，以实现高效的语义搜索。
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>Zilliz Cloud Pipelines 服务正处在逐步下线中，将于 2025 年第二季度末停止服务，被 “Data In, Data Out” 的新功能取代。该功能旨在简化 Milvus 和 Zilliz Cloud 中的向量化流程。自 2025 年 1 月 10 日起，Zilliz Cloud Pipelines 将不再接受新用户注册。现有用户可在每月 100 元人民币免费试用额度内继续使用服务直至下线日期。该服务不提供 SLA 支持。建议您使用模型提供商的Embedding API 或开源模型生成向量。</p>
+
+</Admonition>
+
 ## 前提条件{#before-you-start}
 
 开始前，请先：
