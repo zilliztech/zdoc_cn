@@ -8,7 +8,17 @@ notebook: false
 description: "This operation creates an alias for an existing collection. | Python | MilvusClient"
 type: docx
 token: Kqlodu0AWoefKvxczcxc1c36nlf
-sidebar_position: 2
+sidebar_position: 4
+keywords: 
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_alias()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation returns the state of a specified bulk-insert task. 
 type: docx
 token: XzHhd3AdCo9DCsxawYycr69CnAb
 sidebar_position: 13
+keywords: 
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_bulk_insert_state()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation revokes a privilege granted to the current role. | 
 type: docx
 token: UUJWdoEnjoXx69xahsScdMVSnzf
 sidebar_position: 10
+keywords: 
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - revoke()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

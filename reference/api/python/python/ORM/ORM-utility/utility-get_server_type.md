@@ -9,6 +9,16 @@ description: "This operation checks the type of the Zilliz Cloud cluster. | Pyth
 type: docx
 token: UOIddRBUXotHvyx4Yyocer0mnId
 sidebar_position: 15
+keywords: 
+  - knn
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_server_type()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

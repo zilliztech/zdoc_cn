@@ -9,6 +9,16 @@ description: "This operation in CohereEmbeddingFunction takes a list of text str
 type: docx
 token: P2n8d2wQtoK8YqxnccocmNwRnKb
 sidebar_position: 4
+keywords: 
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - \_\_call()\_\_
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

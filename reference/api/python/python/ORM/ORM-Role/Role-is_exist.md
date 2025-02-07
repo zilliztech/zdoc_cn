@@ -9,6 +9,16 @@ description: "This operation checks whether the current role exists. | Python | 
 type: docx
 token: F8WOdIoz4okn5OxMEymcXNuRnkb
 sidebar_position: 6
+keywords: 
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - is_exist()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

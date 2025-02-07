@@ -9,6 +9,16 @@ description: "An S3ConnectParam instance sets connection parameters for a Remote
 type: docx
 token: CSpOd0XgWoVAhzx5xbVcpCVfnPg
 sidebar_position: 5
+keywords: 
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - S3ConnectParam
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

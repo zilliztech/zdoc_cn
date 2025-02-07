@@ -9,6 +9,16 @@ description: "This is an enumeration that provides the following constants. | Py
 type: docx
 token: Arn1dIKgwoISFoxT7xVc3UrBnAf
 sidebar_position: 2
+keywords: 
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - BulkInsertState
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

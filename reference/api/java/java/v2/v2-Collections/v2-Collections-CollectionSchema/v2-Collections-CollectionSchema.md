@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "A CollectionSchema instance represents the schema of a collection. A schema sketches the structure of a collection. | Java | v2"
 type: docx
-token: QLCqdU36nolXYTxdJyqcW11qntc
+token: FxUxdWGz2oUh1ixyquZcAndBnAf
 sidebar_position: 2
+keywords: 
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - CollectionSchema
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

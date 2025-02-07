@@ -10,10 +10,10 @@ type: docx
 token: IgUndv7TCoRpWOxS5hkcXrypndd
 sidebar_position: 3
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud

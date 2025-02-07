@@ -9,6 +9,16 @@ description: "This operation gets information about the sealed and growing segme
 type: docx
 token: CB9edh2ySoJyWhxBoLcchPj9nxg
 sidebar_position: 14
+keywords: 
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_query_segment_info()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

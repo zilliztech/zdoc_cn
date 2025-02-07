@@ -8,7 +8,17 @@ notebook: false
 description: "This operation lists the names of all existing users. | Python | MilvusClient"
 type: docx
 token: EZ2YdBHoDoRTlxx91tscffm1nSb
-sidebar_position: 10
+sidebar_position: 15
+keywords: 
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_users()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

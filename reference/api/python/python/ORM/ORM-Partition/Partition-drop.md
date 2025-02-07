@@ -9,6 +9,16 @@ description: "This operation drops the current partition. | Python | ORM"
 type: docx
 token: D3sndK8DgoqDkUxaNGcctwcSnuE
 sidebar_position: 2
+keywords: 
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

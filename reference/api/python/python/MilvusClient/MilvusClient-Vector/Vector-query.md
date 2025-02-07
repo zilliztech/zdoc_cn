@@ -9,6 +9,16 @@ description: "This operation conducts a scalar filtering with a specified boolea
 type: docx
 token: LkmSddW2NolgitxLhy9cx22Dnpe
 sidebar_position: 4
+keywords: 
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - query()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

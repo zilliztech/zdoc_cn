@@ -9,6 +9,16 @@ description: "This operation removes the connection from the registry by the giv
 type: docx
 token: L4KSdOVTEotaiyxjTddcVRDhn3E
 sidebar_position: 8
+keywords: 
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
+  - Embedding model
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - remove_connection()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

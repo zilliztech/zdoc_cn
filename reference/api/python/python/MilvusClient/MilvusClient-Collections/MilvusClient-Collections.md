@@ -8,6 +8,16 @@ type: folder
 token: AzdefBpvklrrFOdFnA1cicgonLf
 sidebar_position: 3
 sidebar_label: "Collections"
+keywords: 
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Collections
+  - python
 displayed_sidebar: pythonSidebar
 ---
 

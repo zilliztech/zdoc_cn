@@ -9,6 +9,16 @@ description: "This operation in CrossEncoderRerankFunction takes in a query and 
 type: docx
 token: Vy5GdSeTdoNbSqxCdsOcSmQPnvf
 sidebar_position: 2
+keywords: 
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - \_\_call\_\_()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

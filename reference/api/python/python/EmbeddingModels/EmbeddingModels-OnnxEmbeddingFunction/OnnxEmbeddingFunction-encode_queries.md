@@ -9,6 +9,16 @@ description: "This operation takes in a list of query strings and encodes each q
 type: docx
 token: ZkWBdbMZkoBjT1xe4qDcTBOHnGx
 sidebar_position: 2
+keywords: 
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - encode_queries()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

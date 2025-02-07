@@ -9,6 +9,16 @@ description: "This operation adds connections to multiple Zilliz Cloud clusters 
 type: docx
 token: C37ldNLbFog6ThxA23ScMldnnmb
 sidebar_position: 1
+keywords: 
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - add_connection()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

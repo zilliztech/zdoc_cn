@@ -10,10 +10,10 @@ type: docx
 token: AudsdfQ5hoDyKKxXSowcb3S6nfb
 sidebar_position: 4
 keywords: 
-  - Vector embeddings
-  - Vector store
-  - open source vector database
-  - Vector index
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud

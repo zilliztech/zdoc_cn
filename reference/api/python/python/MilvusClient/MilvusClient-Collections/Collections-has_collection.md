@@ -8,7 +8,17 @@ notebook: false
 description: "This operation checks whether a specific collection exists. | Python | MilvusClient"
 type: docx
 token: SSQ6dFGdxouy7hxRwCOcatnEn0e
-sidebar_position: 11
+sidebar_position: 14
+keywords: 
+  - Unstructured Data
+  - vector database
+  - IVF
+  - knn
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - has_collection()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

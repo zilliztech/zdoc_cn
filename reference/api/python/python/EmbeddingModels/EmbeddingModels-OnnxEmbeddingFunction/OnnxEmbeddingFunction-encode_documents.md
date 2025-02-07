@@ -9,6 +9,16 @@ description: "This operation takes in documents and encodes them into vector emb
 type: docx
 token: XfxvdiIdOokuN1xiVBWct34Wnre
 sidebar_position: 1
+keywords: 
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - encode_documents()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

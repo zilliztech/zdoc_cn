@@ -9,6 +9,16 @@ description: "This operation loads the data of the current partition into memory
 type: docx
 token: TWxddf6iboyM15xK4Kzc8ASknRb
 sidebar_position: 6
+keywords: 
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - load()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

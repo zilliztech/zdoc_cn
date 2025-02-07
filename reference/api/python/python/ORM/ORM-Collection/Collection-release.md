@@ -9,6 +9,16 @@ description: "This operation releases the data of the current collection from me
 type: docx
 token: CBwkdDs7MoKkVKx0kJgcPUNxn6s
 sidebar_position: 24
+keywords: 
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - release()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

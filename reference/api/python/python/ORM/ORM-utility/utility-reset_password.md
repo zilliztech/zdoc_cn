@@ -9,6 +9,16 @@ description: "This operation resets the password for a specific user. | Python |
 type: docx
 token: K1Npdj5Ddod6UWxRN2ecf6K4nxf
 sidebar_position: 38
+keywords: 
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - reset_password()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

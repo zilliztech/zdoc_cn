@@ -9,6 +9,16 @@ description: "This operation lists the relationship between the current role and
 type: docx
 token: JXNXdQuwhoYmZQxSohNcdxtwnzh
 sidebar_position: 7
+keywords: 
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_grant()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

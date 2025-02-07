@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation describes a specific index. | Java | v2"
 type: docx
-token: MGX2dDWoooZ982x3pcNcbFzcnXb
+token: WUgedTmyZoW4clxSgHVcl1ZtnZl
 sidebar_position: 2
+keywords: 
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describeIndex()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

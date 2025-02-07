@@ -9,6 +9,16 @@ description: "This operation gets the specified index of the current collection.
 type: docx
 token: RkQ8dnWDHo3DiDxiCVRcP1xPnob
 sidebar_position: 18
+keywords: 
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - index()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

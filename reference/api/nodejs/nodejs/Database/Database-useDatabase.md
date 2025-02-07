@@ -10,10 +10,10 @@ type: docx
 token: SddwdNBoMo3RAfxgcgBc0Akwnih
 sidebar_position: 4
 keywords: 
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
-  - what is milvus
+  - rag llm architecture
+  - private llms
+  - nn search
+  - llm eval
   - zilliz
   - zilliz cloud
   - cloud

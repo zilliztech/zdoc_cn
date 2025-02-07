@@ -9,6 +9,16 @@ description: "A Role instance represents a role with specific privileges to acce
 type: docx
 token: LZL1d0kckouPXNxJLCmcwbCTnkG
 sidebar_position: 11
+keywords: 
+  - cosine distance
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Role
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

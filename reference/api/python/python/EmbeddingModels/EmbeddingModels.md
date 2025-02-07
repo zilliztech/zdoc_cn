@@ -8,6 +8,16 @@ type: folder
 token: G3Qvfzptcl9gcFdHholcBmgQnib
 sidebar_position: 2
 sidebar_label: "EmbeddingModels"
+keywords: 
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - EmbeddingModels
+  - python
 displayed_sidebar: pythonSidebar
 ---
 

@@ -9,6 +9,16 @@ description: "This operation returns a list of all connection names and handler 
 type: docx
 token: DyPldeRNXo4nMqxQeE0cMnd2nEf
 sidebar_position: 7
+keywords: 
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_connections()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

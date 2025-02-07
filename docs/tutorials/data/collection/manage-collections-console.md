@@ -114,7 +114,7 @@ Zilliz Cloud 提供 3 种创建 Collection 的方式以满足不同需求。
 
 1. 点击**复制**。
 
-    undefined
+    ![cn-copy-collection](/img/cn-copy-collection.png)
 
 1. Zilliz Cloud 将生成一条复制 Collection 任务。您可前往[任务中心](./view-activities)查看任务状态和进度。如果迁移任务的状态从**进行中**变更为**成功**，则代表复制 Collection 成功。
 

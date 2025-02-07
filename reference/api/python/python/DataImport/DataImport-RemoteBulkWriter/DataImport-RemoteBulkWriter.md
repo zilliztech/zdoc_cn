@@ -9,6 +9,16 @@ description: "A RemoteBulkWriter instance writes your raw data in a format that 
 type: docx
 token: G77zdbzpPo4pOaxTDcccgRNfnVc
 sidebar_position: 4
+keywords: 
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - RemoteBulkWriter
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

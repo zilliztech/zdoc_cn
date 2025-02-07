@@ -8,7 +8,17 @@ notebook: false
 description: "This operation displays the details of an alias. | Python | MilvusClient"
 type: docx
 token: HN7nddgueo3scIxmPXAcpjkFnDf
-sidebar_position: 6
+sidebar_position: 8
+keywords: 
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describe_alias()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

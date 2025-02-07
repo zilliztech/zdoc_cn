@@ -9,6 +9,16 @@ description: "This operation drops an existing role. The operation will succeed 
 type: docx
 token: KEzNdJPoDoHOjlx2FC8cNcHqngg
 sidebar_position: 3
+keywords: 
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

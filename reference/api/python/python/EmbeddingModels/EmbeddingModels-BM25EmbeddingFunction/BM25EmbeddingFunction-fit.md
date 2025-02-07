@@ -9,6 +9,16 @@ description: "This operation fits various statistics that are required to calcul
 type: docx
 token: Gj5bdBIMToImOvxXHIlcqFxjnTf
 sidebar_position: 4
+keywords: 
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - fit()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

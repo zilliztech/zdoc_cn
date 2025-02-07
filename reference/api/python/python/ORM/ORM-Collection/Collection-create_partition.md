@@ -9,6 +9,16 @@ description: "This operation creates a partition in the target collection. | Pyt
 type: docx
 token: Sh7HdgJOIoJipXx5AoNcicjMnyd
 sidebar_position: 5
+keywords: 
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_partition()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

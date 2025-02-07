@@ -5,9 +5,19 @@ beta: false
 notebook: false
 description: "Classes and methods for you to manage the MilvusClient instances. | Java | v2"
 type: folder
-token: GD2QfAetplDekjdxJDYcTIwAnIg
+token: YEBjfrOXWl8s00dDTvdcMiYDn0d
 sidebar_position: 2
 sidebar_label: "Client"
+keywords: 
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Client
+  - javaV2
 displayed_sidebar: javaSidebar
 ---
 

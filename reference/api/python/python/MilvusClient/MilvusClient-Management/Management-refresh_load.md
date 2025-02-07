@@ -8,7 +8,17 @@ notebook: false
 description: "This operation loads the unloaded data of a loaded collection into memory. | Python | MilvusClient"
 type: docx
 token: X3NXdtC2koiAxyxhcUBcv38Wnsh
-sidebar_position: 9
+sidebar_position: 12
+keywords: 
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - refresh_load()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

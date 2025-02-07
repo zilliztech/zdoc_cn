@@ -9,6 +9,16 @@ description: "This operation gets the current compaction plans. | Python | ORM"
 type: docx
 token: D6Q7dq4USotLS3xxMP0cFiGLnsf
 sidebar_position: 12
+keywords: 
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_compaction_plans()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

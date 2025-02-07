@@ -8,7 +8,17 @@ notebook: false
 description: "This operation lists all indexes of a specific collection. | Python | MilvusClient"
 type: docx
 token: ZqmudJWyFonUKGxAxXncYrLZn2e
-sidebar_position: 6
+sidebar_position: 9
+keywords: 
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_indexes()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

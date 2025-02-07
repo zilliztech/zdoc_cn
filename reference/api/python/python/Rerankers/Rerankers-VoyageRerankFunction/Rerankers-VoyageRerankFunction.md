@@ -9,6 +9,16 @@ description: "VoyageRerankFunction is a class in milvusmodel that takes a query 
 type: docx
 token: Smobd2lIho2yQPxtRhLcLcKznCf
 sidebar_position: 1
+keywords: 
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - VoyageRerankFunction
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

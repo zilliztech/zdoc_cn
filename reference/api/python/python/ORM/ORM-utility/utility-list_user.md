@@ -9,6 +9,16 @@ description: "This operation lists the information of a specific user. | Python 
 type: docx
 token: JeG6d5Sg2oPmXPxEhnyciq4snNd
 sidebar_position: 28
+keywords: 
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_user()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

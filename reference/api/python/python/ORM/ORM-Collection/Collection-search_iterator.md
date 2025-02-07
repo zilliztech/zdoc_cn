@@ -9,6 +9,16 @@ description: "This operation returns a Python iterator for you to iterate over t
 type: docx
 token: HrnndnWtKoPuenxvsXBchF1wnnh
 sidebar_position: 26
+keywords: 
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - search_iterator()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

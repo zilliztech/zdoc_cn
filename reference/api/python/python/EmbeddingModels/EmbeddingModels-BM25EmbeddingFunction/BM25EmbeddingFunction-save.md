@@ -9,6 +9,16 @@ description: "This operation saves the BM25 model parameters to a JSON file at t
 type: docx
 token: YScUdNEpmobwhbxbOQQcsc8Wnie
 sidebar_position: 6
+keywords: 
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - save()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

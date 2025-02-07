@@ -9,6 +9,16 @@ description: "This operation blocks the current session until the compaction req
 type: docx
 token: VFKIdx0tDoeAzSx4Ud6c3u5Snsf
 sidebar_position: 29
+keywords: 
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - wait_for_compaction_completed()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

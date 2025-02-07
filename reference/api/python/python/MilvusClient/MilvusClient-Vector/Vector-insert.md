@@ -9,6 +9,16 @@ description: "This operation inserts data into a specific collection. | Python |
 type: docx
 token: QI87dhVnioL9JLxnNKxcM8jWnkh
 sidebar_position: 3
+keywords: 
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - insert()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

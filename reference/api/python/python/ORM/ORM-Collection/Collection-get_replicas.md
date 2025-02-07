@@ -9,6 +9,16 @@ description: "This operation gets information about the current loaded replica. 
 type: docx
 token: BQKPdDd5xo8OPgxoXorcMxk0nVb
 sidebar_position: 14
+keywords: 
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_replicas()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation renames an existing collection. | Java | v2"
 type: docx
-token: A9XDdBOWEolZ8lxmvcwcNrRInke
+token: CtTvdQVMoo2ec5xbWTPcSzjNnQc
 sidebar_position: 16
+keywords: 
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - renameCollection()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

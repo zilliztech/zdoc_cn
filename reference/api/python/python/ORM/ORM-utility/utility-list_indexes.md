@@ -9,6 +9,16 @@ description: "This operation lists all indexes of a specific collection. | Pytho
 type: docx
 token: XLepdUCcTow6rpx5vxxcbLXZnyb
 sidebar_position: 25
+keywords: 
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_indexes()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

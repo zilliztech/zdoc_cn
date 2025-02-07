@@ -9,6 +9,16 @@ description: "This operation lists the information about all existing roles. | P
 type: docx
 token: ClLXdDs64oixJBxlIrCcEB2dngb
 sidebar_position: 27
+keywords: 
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_roles()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

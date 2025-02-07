@@ -9,6 +9,16 @@ description: "This operation checks whether the current collection has a built i
 type: docx
 token: WDk4dXY8IoV3SJxp9e7c3aq1nBh
 sidebar_position: 15
+keywords: 
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - has_index()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

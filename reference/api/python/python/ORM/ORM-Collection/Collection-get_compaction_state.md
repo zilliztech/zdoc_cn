@@ -9,6 +9,16 @@ description: "This operation gets the current compaction state. | Python | ORM"
 type: docx
 token: AXcMd0xiOovIX6xR4ZrcKA15nwh
 sidebar_position: 13
+keywords: 
+  - cosine distance
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_compaction_state()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

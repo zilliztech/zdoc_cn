@@ -9,6 +9,16 @@ description: "This operation creates the current role. | Python | ORM"
 type: docx
 token: G3h4d3jx6oXFHBxFZlyc9jLKnTO
 sidebar_position: 2
+keywords: 
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

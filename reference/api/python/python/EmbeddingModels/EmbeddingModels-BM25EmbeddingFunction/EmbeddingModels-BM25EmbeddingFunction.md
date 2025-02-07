@@ -9,6 +9,16 @@ description: "BM25EmbeddingFunction is a class in pymilvus that handles encoding
 type: docx
 token: SOSedRXpcoGr0sx8RF1caGdjnyb
 sidebar_position: 1
+keywords: 
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - BM25EmbeddingFunction
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

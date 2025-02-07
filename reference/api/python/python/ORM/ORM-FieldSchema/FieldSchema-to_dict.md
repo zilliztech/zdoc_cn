@@ -9,6 +9,16 @@ description: "This operation converts a FieldSchema object to a dictionary repre
 type: docx
 token: G1gsdGWwuoPOPrxJdABcfa76nUd
 sidebar_position: 3
+keywords: 
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - to_dict()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

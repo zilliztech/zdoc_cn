@@ -9,6 +9,16 @@ description: "This operation displays the statistics collected on a specific par
 type: docx
 token: Jjbsd2I8doQ9pBxBp57ckRdZnZd
 sidebar_position: 3
+keywords: 
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_partition_stats()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

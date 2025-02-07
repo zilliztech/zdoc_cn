@@ -9,6 +9,16 @@ description: "BGERerankFunction is a class in milvusmodel that takes a query and
 type: docx
 token: GxAZd9O9gozzhExhMHWcMnXPngh
 sidebar_position: 1
+keywords: 
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - BGERerankFunction
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

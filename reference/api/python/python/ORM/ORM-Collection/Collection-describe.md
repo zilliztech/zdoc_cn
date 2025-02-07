@@ -9,6 +9,16 @@ description: "This operation describes the current collection. | Python | ORM"
 type: docx
 token: EZwsd887JojFjLxbMByckhW0nxg
 sidebar_position: 7
+keywords: 
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describe()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

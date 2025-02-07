@@ -9,6 +9,16 @@ description: "This operation sets a database as the default for the current conn
 type: docx
 token: GXXTd7JIgoUKhzxiI6ncWtwjnVc
 sidebar_position: 4
+keywords: 
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - using_database()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

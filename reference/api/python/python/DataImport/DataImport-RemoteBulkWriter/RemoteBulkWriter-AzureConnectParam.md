@@ -9,6 +9,16 @@ description: "An AzureConnectParam instance sets connection parameters for a Rem
 type: docx
 token: C2YSddNqZoDNmNxWqqEcuzhKn4f
 sidebar_position: 2
+keywords: 
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - AzureConnectParam
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

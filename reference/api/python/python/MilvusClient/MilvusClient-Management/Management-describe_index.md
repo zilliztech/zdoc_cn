@@ -8,7 +8,17 @@ notebook: false
 description: "This operation describes a specific index. | Python | MilvusClient"
 type: docx
 token: WhsHdyIgyoFlsQxNJt9cFCTxnDe
-sidebar_position: 3
+sidebar_position: 4
+keywords: 
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - AI Hallucination
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describe_index()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation describes a specific user. | Java | v2"
 type: docx
-token: QCV6dOuKtoVyxDxPwXQczOclnxc
+token: YLQJdvVA8odibAx7mQscYwMVn8g
 sidebar_position: 4
+keywords: 
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describeUser()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

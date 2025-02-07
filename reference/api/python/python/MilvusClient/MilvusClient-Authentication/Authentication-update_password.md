@@ -8,7 +8,17 @@ notebook: false
 description: "This operation updates the password of a specific user. | Python | MilvusClient"
 type: docx
 token: WGDod7Qehou4GWx4Co2cJ34VnKb
-sidebar_position: 13
+sidebar_position: 20
+keywords: 
+  - Faiss
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - update_password()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

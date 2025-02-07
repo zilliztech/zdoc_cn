@@ -9,6 +9,16 @@ description: "This operation in MGTEEmbeddingFunction takes a list of text strin
 type: docx
 token: L4PUdEhrpoS1Q5xN3m2chVVEnWg
 sidebar_position: 4
+keywords: 
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - \_\_call\_\_()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

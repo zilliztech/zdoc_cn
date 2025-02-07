@@ -8,7 +8,17 @@ notebook: false
 description: "This operation creates a collection schema. | Python | MilvusClient"
 type: docx
 token: RxU7dBjGlop0e1xZShYcZ4qCnnh
-sidebar_position: 4
+sidebar_position: 6
+keywords: 
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_schema()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

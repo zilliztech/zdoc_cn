@@ -9,6 +9,16 @@ description: "This operation sets up a load-balancing group between two query no
 type: docx
 token: XYNMdg3Vpo3SE7xTRVqcJNvrn0d
 sidebar_position: 32
+keywords: 
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - load_balance()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

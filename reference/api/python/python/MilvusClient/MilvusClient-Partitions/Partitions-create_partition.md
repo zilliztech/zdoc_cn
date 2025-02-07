@@ -9,6 +9,16 @@ description: "This operation creates a partition in the target collection. | Pyt
 type: docx
 token: I6hvdlYUuoUaw3xWqSnce4Fin9g
 sidebar_position: 1
+keywords: 
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_partition()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

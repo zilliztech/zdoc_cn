@@ -9,6 +9,16 @@ description: "This operation deletes an existing user. | Python | ORM"
 type: docx
 token: E7zOdU2JpoqaU5xNYXvcAjgPnNh
 sidebar_position: 6
+keywords: 
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - delete_user()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

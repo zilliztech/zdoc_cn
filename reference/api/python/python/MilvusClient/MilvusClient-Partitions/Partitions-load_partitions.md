@@ -9,6 +9,16 @@ description: "This operation loads a specific set of partitions in a specified c
 type: docx
 token: DdQ1dBNagoBa08xhEiucxZrHnzc
 sidebar_position: 6
+keywords: 
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - IVF
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - load_partitions()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

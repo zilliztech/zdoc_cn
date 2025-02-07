@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation drops an index from a specific collection. | Java | v2"
 type: docx
-token: S8BXdtrunoTPiJxR8wScnzncnKh
+token: KdFEdP8ZToYvZ1xmmQgcE62unUf
 sidebar_position: 3
+keywords: 
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - dropIndex()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

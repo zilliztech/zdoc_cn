@@ -9,6 +9,16 @@ description: "This operation adds index parameters for a specific field in a col
 type: docx
 token: ZplAdphtooqHJkxo8GCcOFecngd
 sidebar_position: 1
+keywords: 
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - add_index()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

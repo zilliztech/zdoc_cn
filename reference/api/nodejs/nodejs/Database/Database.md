@@ -9,10 +9,10 @@ token: WLCxfLtfylemvudOJa7cDBXdnsh
 sidebar_position: 4
 sidebar_label: "Database"
 keywords: 
-  - Zilliz
-  - milvus vector database
-  - milvus db
-  - milvus vector db
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - vector database
   - zilliz
   - zilliz cloud
   - cloud

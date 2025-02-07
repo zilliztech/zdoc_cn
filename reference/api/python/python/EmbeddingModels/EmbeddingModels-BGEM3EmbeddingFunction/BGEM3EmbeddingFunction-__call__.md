@@ -9,6 +9,16 @@ description: "This operation in BGEM3EmbeddingFunction takes a list of text stri
 type: docx
 token: K7qWdSwtNo976VxcvopczGLjnLf
 sidebar_position: 4
+keywords: 
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - \_\_call\_\_()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

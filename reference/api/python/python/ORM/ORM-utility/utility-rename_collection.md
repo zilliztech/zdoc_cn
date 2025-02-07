@@ -9,6 +9,16 @@ description: "This operation renames an existing collection and optionally moves
 type: docx
 token: M0qRdF1cLokrxvxyrXScJ64FnEe
 sidebar_position: 37
+keywords: 
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - rename_collection()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

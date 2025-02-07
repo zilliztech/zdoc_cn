@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation lists all custom roles. | Java | v2"
 type: docx
-token: NTG8dR5ZBooKUSx4hgjcNQnUnXd
+token: XIIyd3bMzoAVx3xVsoLcnQ2pnKh
 sidebar_position: 9
+keywords: 
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - listRoles()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

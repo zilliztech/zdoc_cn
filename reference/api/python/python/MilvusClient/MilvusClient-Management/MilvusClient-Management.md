@@ -8,6 +8,16 @@ type: folder
 token: IZKcfUEfClhhnWdFhk2co7krnAV
 sidebar_position: 5
 sidebar_label: "Management"
+keywords: 
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Management
+  - python
 displayed_sidebar: pythonSidebar
 ---
 

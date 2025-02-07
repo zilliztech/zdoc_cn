@@ -9,6 +9,16 @@ description: "This operation removes a user from the current role. Once removed,
 type: docx
 token: SlmSdaD7rocMJsxThNHcOtEknVd
 sidebar_position: 9
+keywords: 
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - remove_user()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

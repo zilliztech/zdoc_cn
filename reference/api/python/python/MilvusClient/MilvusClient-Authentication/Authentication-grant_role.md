@@ -8,7 +8,17 @@ notebook: false
 description: "This operation grants a role to a user. | Python | MilvusClient"
 type: docx
 token: DsnpdZuDGo77TYxFuYvcDpOgnIf
-sidebar_position: 8
+sidebar_position: 12
+keywords: 
+  - what is semantic search
+  - Embedding model
+  - image similarity search
+  - Context Window
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - grant_role()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

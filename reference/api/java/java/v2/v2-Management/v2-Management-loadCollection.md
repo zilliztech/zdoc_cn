@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation loads the data of a specific collection into memory. | Java | v2"
 type: docx
-token: G9QJdgzrVoGLqwxxHo6cgzwfnEh
+token: XEWvdbuFHoLOo7xKrAJcqip6n5J
 sidebar_position: 7
+keywords: 
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - loadCollection()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

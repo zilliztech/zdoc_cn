@@ -9,6 +9,16 @@ description: "This operation returns the load progress of a specific collection.
 type: docx
 token: HQiHd82orov0XvxAzLWcl5xRnzc
 sidebar_position: 31
+keywords: 
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - loading_progress()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -8,7 +8,17 @@ notebook: false
 description: "This operation drops a specified collection alias. | Python | MilvusClient"
 type: docx
 token: FpWXdmIuforYz9xUCsqclyCXnLe
-sidebar_position: 8
+sidebar_position: 10
+keywords: 
+  - LLMs
+  - Machine Learning
+  - RAG
+  - NLP
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_alias()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

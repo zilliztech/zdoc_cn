@@ -9,6 +9,16 @@ description: "This operation bulk-inserts data from specified files. | Python | 
 type: docx
 token: BpqpdBWdyoxbmzx0GGCcQxksnBc
 sidebar_position: 8
+keywords: 
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - do_bulk_insert()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

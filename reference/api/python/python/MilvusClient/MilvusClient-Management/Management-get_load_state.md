@@ -8,7 +8,17 @@ notebook: false
 description: "This operation displays whether a specified collection or partition is loaded or not. | Python | MilvusClient"
 type: docx
 token: KEPYdKup1o3nHdxKbjvcQUzwnnd
-sidebar_position: 5
+sidebar_position: 8
+keywords: 
+  - Unstructured Data
+  - vector database
+  - IVF
+  - knn
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_load_state()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

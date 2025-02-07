@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation gets specific entities by their IDs. | Java | v2"
 type: docx
-token: XeXxd6ylAoSZ05xkXEqcS84XnIc
+token: UcacdecoZoAyxsxJzOGcTqWzn7d
 sidebar_position: 2
+keywords: 
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

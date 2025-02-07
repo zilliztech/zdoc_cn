@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation deletes entities by their IDs or with a boolean expression. | Java | v2"
 type: docx
-token: DgKidEKLXodqn3xsg0hclkcRntd
+token: NOX7dAR3zodEH3xinMecMjq5n4S
 sidebar_position: 1
+keywords: 
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - delete()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation returns a Python iterator for you to iterate over t
 type: docx
 token: LffbdiHhzoHe08xivF9ccmoen5d
 sidebar_position: 23
+keywords: 
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - query_iterator()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

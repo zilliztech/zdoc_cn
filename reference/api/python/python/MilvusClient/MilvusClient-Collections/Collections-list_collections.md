@@ -8,7 +8,17 @@ notebook: false
 description: "This operation lists all existing collections. | Python | MilvusClient"
 type: docx
 token: BHyidrVcyoPwxexHLrnceOSAnRe
-sidebar_position: 14
+sidebar_position: 17
+keywords: 
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_collections()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

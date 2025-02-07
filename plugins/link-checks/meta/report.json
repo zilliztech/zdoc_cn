@@ -1,13 +1,5 @@
 {
   "added": [],
   "deleted": [],
-  "brokenLinks": [
-    "https://support.zilliz.com.cn/hc/zh-cn",
-    "https://bucket-name.s3.northwest-1.amazonaws.com.cn/parquet-folder/data.parquet",
-    "https://bucket-name.oss-cn-shenzhen.aliyuncs.com",
-    "https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder/data.parquet",
-    "https://s3.northwest-1.amazonaws.com.cn/bucket-name/object-name",
-    "https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/*.npy",
-    "https://support.zilliz.com.cn/"
-  ]
+  "brokenLinks": []
 }

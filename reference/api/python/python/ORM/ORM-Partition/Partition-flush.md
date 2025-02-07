@@ -9,6 +9,16 @@ description: "This operation seals all segments in the partition. Any insertions
 type: docx
 token: VRGwdg75Ao7ZXQx7uANc9wzXnVb
 sidebar_position: 3
+keywords: 
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - flush()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

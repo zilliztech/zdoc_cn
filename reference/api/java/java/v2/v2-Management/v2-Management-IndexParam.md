@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation prepares index parameters to build indexes for a specific collection. | Java | v2"
 type: docx
-token: J0hLdJ68foCRu5xWsWacORuAnLg
+token: QecOdXKyfo9JtMxkHZxcLNqknxh
 sidebar_position: 5
+keywords: 
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - IndexParam
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

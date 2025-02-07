@@ -9,6 +9,16 @@ description: "This operation deletes entities by their IDs or with a boolean exp
 type: docx
 token: DWLXdSCYnoPT4ExktRKceEqLnAd
 sidebar_position: 1
+keywords: 
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - delete()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

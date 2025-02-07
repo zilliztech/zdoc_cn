@@ -8,7 +8,17 @@ notebook: false
 description: "This operation drops a user. | Python | MilvusClient"
 type: docx
 token: WtyZdeFKMoSv5exaYRxcPLCSndg
-sidebar_position: 6
+sidebar_position: 9
+keywords: 
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_user()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

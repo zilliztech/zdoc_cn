@@ -9,6 +9,16 @@ description: "This operation performs final validation checks on the CollectionS
 type: docx
 token: KSECdBDcUoIkL7xI4KOc29Ukn1g
 sidebar_position: 5
+keywords: 
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - verify()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

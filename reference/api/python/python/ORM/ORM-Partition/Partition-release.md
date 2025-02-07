@@ -9,6 +9,16 @@ description: "This operation releases the data of the current partition from mem
 type: docx
 token: ZQ2RdE2AOoH9bfx4k3Sc3Ny0ngb
 sidebar_position: 9
+keywords: 
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - release()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

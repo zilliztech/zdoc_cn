@@ -8,7 +8,17 @@ notebook: false
 description: "This operation renames an existing collection. | Python | MilvusClient"
 type: docx
 token: IeiIdJ71Pox2OjxMiOzczUTenud
-sidebar_position: 15
+sidebar_position: 18
+keywords: 
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - rename_collection()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

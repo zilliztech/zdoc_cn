@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation grants a role to a user. | Java | v2"
 type: docx
-token: LKqbduwnVol3IAx053Pcp5rKnog
+token: JB90dbBNRoz1I2xZY5rcSmJ1nSb
 sidebar_position: 8
+keywords: 
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - grantRole()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

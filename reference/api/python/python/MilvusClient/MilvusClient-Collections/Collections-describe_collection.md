@@ -8,7 +8,17 @@ notebook: false
 description: "This operation lists detailed information about a specific collection. | Python | MilvusClient"
 type: docx
 token: MCkjdiRNKo2HCCxzHReclrgAnbg
-sidebar_position: 7
+sidebar_position: 9
+keywords: 
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describe_collection()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation drops a resource group. | Python | ORM"
 type: docx
 token: EofGdftYjoQ9E6x8mxLcpbG1nhc
 sidebar_position: 11
+keywords: 
+  - Embedding model
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_resource_group()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

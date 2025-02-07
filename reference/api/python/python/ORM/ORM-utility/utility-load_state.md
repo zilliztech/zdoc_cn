@@ -9,6 +9,16 @@ description: "This operation returns the load status of a specific collection. |
 type: docx
 token: BJysdlj1MoksHZxNRxicHn9fnSh
 sidebar_position: 33
+keywords: 
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - load_state()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation gets the specified partition in the current collect
 type: docx
 token: SvCrdEJIdosGQYxQZhrc2OAXnpd
 sidebar_position: 21
+keywords: 
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
+  - Embedding model
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - partition()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

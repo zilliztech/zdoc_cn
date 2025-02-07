@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation releases the data of a specific collection from memory. | Java | v2"
 type: docx
-token: PsSrdeIqnoUt3qxlGNXcTAQbnLh
+token: BA9edMrWMosYWFxwTBAcl2WOnff
 sidebar_position: 9
+keywords: 
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - releaseCollection()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

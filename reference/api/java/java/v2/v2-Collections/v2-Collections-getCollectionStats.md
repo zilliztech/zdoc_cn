@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation lists the statistics collected on a specific collection. | Java | v2"
 type: docx
-token: IYRldvtMWokHDuxn7LhcGWtEnqh
+token: XgfcdpBWCof3pfxhUudcRZajnPc
 sidebar_position: 13
+keywords: 
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - getCollectionStats()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

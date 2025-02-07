@@ -9,10 +9,10 @@ token: WKkof79XQltPmgdgU18c2tLUnOd
 sidebar_position: 3
 sidebar_label: "Collections"
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud

@@ -9,6 +9,16 @@ description: "This operation inserts data into the current partition. | Python |
 type: docx
 token: QXDxdv36FoVgjcxDV1gcDwWXnsd
 sidebar_position: 5
+keywords: 
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - insert()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

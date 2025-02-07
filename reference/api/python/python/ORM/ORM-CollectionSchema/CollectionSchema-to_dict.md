@@ -9,6 +9,16 @@ description: "This operation converts a CollectionSchema object to a dictionary 
 type: docx
 token: GfTadfqhAo64XDxc643ci4Zwnwb
 sidebar_position: 4
+keywords: 
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - to_dict()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

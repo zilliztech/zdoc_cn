@@ -9,6 +9,16 @@ description: "VoyageEmbeddingFunction is a class in pymilvus that handles encodi
 type: docx
 token: HEyLd2lxzo3bl4xqVBOco8vWn1c
 sidebar_position: 3
+keywords: 
+  - RAG
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - VoyageEmbeddingFunction
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

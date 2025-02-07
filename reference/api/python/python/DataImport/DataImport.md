@@ -8,6 +8,16 @@ type: folder
 token: KdfofBXCwlWnxOdG5cLcbbLgnLf
 sidebar_position: 1
 sidebar_label: "DataImport"
+keywords: 
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - DataImport
+  - python
 displayed_sidebar: pythonSidebar
 ---
 

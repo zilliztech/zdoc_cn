@@ -9,6 +9,16 @@ description: "This operation compacts and merges small segments in the current c
 type: docx
 token: BHx6dnSmPoaqHAxKCvncbuk9nWb
 sidebar_position: 2
+keywords: 
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - compact()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

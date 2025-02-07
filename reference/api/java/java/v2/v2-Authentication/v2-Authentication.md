@@ -5,9 +5,19 @@ beta: false
 notebook: false
 description: "Methods related to implement role-based access control to your resources. | Java | v2"
 type: folder
-token: NX2nfYbWXlBEeyd1gQhcsnDGnQe
+token: U16KfBnGVlNp5edR7DycvFF1nfy
 sidebar_position: 1
 sidebar_label: "Authentication"
+keywords: 
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
+  - Embedding model
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Authentication
+  - javaV2
 displayed_sidebar: javaSidebar
 ---
 

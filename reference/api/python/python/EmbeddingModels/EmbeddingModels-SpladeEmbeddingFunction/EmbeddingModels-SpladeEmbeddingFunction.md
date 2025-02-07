@@ -9,6 +9,16 @@ description: "SpladeEmbeddingFunction is a class in pymilvus that handles encodi
 type: docx
 token: UdeRd0YVhoDBeVxrQaBcoikVnAI
 sidebar_position: 3
+keywords: 
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - SpladeEmbeddingFunction
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

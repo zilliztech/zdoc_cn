@@ -9,6 +9,16 @@ description: "This operation drops the current collection. | Python | ORM"
 type: docx
 token: L8UTdDNkPoeew0x6LoDcfHx4nof
 sidebar_position: 8
+keywords: 
+  - natural language processing
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

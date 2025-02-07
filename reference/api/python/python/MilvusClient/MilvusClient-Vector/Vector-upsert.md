@@ -8,7 +8,17 @@ notebook: false
 description: "This operation inserts or updates data in a specific collection. | Python | MilvusClient"
 type: docx
 token: WRYFdoDe8ofrlDxxTxQcdoJjnAh
-sidebar_position: 6
+sidebar_position: 8
+keywords: 
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - upsert()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

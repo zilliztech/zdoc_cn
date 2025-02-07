@@ -9,6 +9,16 @@ description: "This operation checks whether a collection exists. | Python | ORM"
 type: docx
 token: TWOxdwDYRo4CCHxDdZbc7IOznCg
 sidebar_position: 17
+keywords: 
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - has_collection()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

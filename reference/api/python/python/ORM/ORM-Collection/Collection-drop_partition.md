@@ -9,6 +9,16 @@ description: "This operation drops a specified partition from the current collec
 type: docx
 token: Aym2dpBuIo81mExCqyLcSWhunBe
 sidebar_position: 10
+keywords: 
+  - natural language processing
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_partition()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

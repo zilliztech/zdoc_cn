@@ -9,6 +9,16 @@ description: "This operation takes in a list of query strings and encodes each q
 type: docx
 token: Sf9UdzL3rolQNAxDm8Ecga3snhg
 sidebar_position: 2
+keywords: 
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - encode_queries()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

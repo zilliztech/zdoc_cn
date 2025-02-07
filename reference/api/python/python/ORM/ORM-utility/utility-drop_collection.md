@@ -9,6 +9,16 @@ description: "This operation drops a specific collection. | Python | ORM"
 type: docx
 token: FHcYdN4apoI5TIx0LxScISvtn0f
 sidebar_position: 10
+keywords: 
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_collection()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

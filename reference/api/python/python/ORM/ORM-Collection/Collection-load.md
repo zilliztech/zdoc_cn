@@ -9,6 +9,16 @@ description: "This operation loads the data of the current collection into memor
 type: docx
 token: HQDndiGwloWKIexgPCUcEZGenOh
 sidebar_position: 20
+keywords: 
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - load()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

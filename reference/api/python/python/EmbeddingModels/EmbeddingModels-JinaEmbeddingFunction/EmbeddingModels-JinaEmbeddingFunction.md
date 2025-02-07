@@ -9,6 +9,16 @@ description: "JinaEmbeddingFunction is a class in pymilvus that handles encoding
 type: docx
 token: U7NJd5eKAo0c1TxYZndcgPj2nlc
 sidebar_position: 3
+keywords: 
+  - what is semantic search
+  - Embedding model
+  - image similarity search
+  - Context Window
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - JinaEmbeddingFunction
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

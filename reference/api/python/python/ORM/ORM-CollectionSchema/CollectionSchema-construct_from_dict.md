@@ -9,6 +9,16 @@ description: "This operation constructs a CollectionSchema object from a diction
 type: docx
 token: DYuUdc503o1TANxuGozcXhCmnRN
 sidebar_position: 3
+keywords: 
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - construct_from_dict()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

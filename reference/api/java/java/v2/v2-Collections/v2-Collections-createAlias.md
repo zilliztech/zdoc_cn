@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation creates an alias for an existing collection. | Java | v2"
 type: docx
-token: VU1odD6KIoV6kWxTJHScVhDRnkb
+token: NMAOdxhL1oo0E7xcFqXcF6yPnBg
 sidebar_position: 4
+keywords: 
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - createAlias()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

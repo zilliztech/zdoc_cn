@@ -8,7 +8,17 @@ notebook: false
 description: "This operation lists the statistics collected on a specific collection. | Python | MilvusClient"
 type: docx
 token: VVyNdx038oECxNxMQavc9vssnoh
-sidebar_position: 10
+sidebar_position: 13
+keywords: 
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_collection_stats()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

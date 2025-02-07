@@ -9,6 +9,16 @@ description: "A Connections instance represents a pool of connections to your Zi
 type: docx
 token: A96udk9seoF5x5xywQZcLasanIe
 sidebar_position: 3
+keywords: 
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Connections
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

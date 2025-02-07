@@ -9,6 +9,16 @@ description: "CohereEmbeddingFunction is a class in pymilvus that handles encodi
 type: docx
 token: JzDLdkv3QoCY8OxKpBjc5zsmnId
 sidebar_position: 1
+keywords: 
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - CohereEmbeddingFunction
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

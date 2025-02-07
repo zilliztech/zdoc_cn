@@ -9,6 +9,16 @@ description: "This operation lists all users associated with the current role. |
 type: docx
 token: CCOhd671iog6rRxu8aOcaPncnLK
 sidebar_position: 4
+keywords: 
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_users()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

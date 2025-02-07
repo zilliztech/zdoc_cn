@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation updates the password of a specific user. | Java | v2"
 type: docx
-token: Fw4DdZmCxov8EBxnJlZceWton1e
+token: GQH8dgqlPoRY1sxFhCRcLlgInNc
 sidebar_position: 13
+keywords: 
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - updatePassword()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

@@ -8,7 +8,17 @@ notebook: false
 description: "This operation creates an index for a specific collection. | Python | MilvusClient"
 type: docx
 token: B3n3db0idoia02xXxJfcONK8nRh
-sidebar_position: 2
+sidebar_position: 3
+keywords: 
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_index()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

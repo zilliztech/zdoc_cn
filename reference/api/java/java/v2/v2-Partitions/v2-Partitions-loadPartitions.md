@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation releases the partitions in a specified collection from memory. | Java | v2"
 type: docx
-token: R8BCd0rePoAMjixwJo9ceziqnjf
+token: Jei2dpJMuoyOF5xTIuccfzcinOh
 sidebar_position: 5
+keywords: 
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - loadPartitions()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

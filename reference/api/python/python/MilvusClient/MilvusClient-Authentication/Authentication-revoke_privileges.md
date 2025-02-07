@@ -8,7 +8,17 @@ notebook: false
 description: "This operation revokes a privilege already assigned to a role. | Python | MilvusClient"
 type: docx
 token: UP2GdfHHzoIQ56x2JvScs0sAnzh
-sidebar_position: 11
+sidebar_position: 17
+keywords: 
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - revoke_privileges()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---
@@ -108,8 +118,8 @@ from pymilvus import MilvusClient
 
 # 1. Create a milvus client
 client = MilvusClient(
-    uri="http://localhost:19530",
-    token="root:Milvus"
+    uri="YOUR_CLUSTER_ENDPOINT",
+    token="YOUR_CLUSTER_TOKEN"
 )
 
 read_only_privileges = [

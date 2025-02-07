@@ -9,6 +9,16 @@ description: "This operation lists all bulk-insert tasks. | Python | ORM"
 type: docx
 token: T1CGdXeVkoG2yAxkualc1jVonRb
 sidebar_position: 23
+keywords: 
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_bulk_insert_tasks()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

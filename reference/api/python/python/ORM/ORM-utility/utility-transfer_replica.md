@@ -9,6 +9,16 @@ description: "This operation transfers a specific number of replicas between res
 type: docx
 token: SuePdciB0o4du5xtpIhcMVyYnPb
 sidebar_position: 40
+keywords: 
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - transfer_replica()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

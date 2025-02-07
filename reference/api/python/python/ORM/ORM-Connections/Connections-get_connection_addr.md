@@ -9,6 +9,16 @@ description: "This operation retrieves the configuration of the specified connec
 type: docx
 token: H2zBdRHVtovNQGxvb0xcwpSKnBd
 sidebar_position: 5
+keywords: 
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_connection_addr()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

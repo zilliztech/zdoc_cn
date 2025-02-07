@@ -8,6 +8,16 @@ type: folder
 token: NZa5fZusilxYZ5d3Q1Dc1l8BnOd
 sidebar_position: 4
 sidebar_label: "ORM"
+keywords: 
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - ORM
+  - python
 displayed_sidebar: pythonSidebar
 ---
 

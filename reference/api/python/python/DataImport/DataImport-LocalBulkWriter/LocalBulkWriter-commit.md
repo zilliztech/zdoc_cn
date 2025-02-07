@@ -9,6 +9,16 @@ description: "This operation commits the appended data. | Python"
 type: docx
 token: EtBDdoGaFo3bOExKxCHcKgpenib
 sidebar_position: 2
+keywords: 
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - commit()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

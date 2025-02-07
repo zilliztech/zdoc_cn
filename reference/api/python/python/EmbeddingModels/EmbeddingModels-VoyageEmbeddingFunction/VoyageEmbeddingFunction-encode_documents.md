@@ -9,6 +9,16 @@ description: "This operation takes in documents and encodes them into vector emb
 type: docx
 token: S9zrdw1etovCFKx0gcic6AiVn0e
 sidebar_position: 1
+keywords: 
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - encode_documents()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

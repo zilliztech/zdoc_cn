@@ -9,6 +9,16 @@ description: "A FieldSchema instance defines the data type and related attribute
 type: docx
 token: EVKhdy0vwoSLSux2RW2c660unjh
 sidebar_position: 2
+keywords: 
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - FieldSchema
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

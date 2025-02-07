@@ -9,6 +9,16 @@ description: "This operation conducts a query on the entity scalar field(s) with
 type: docx
 token: N97pdfkjlo9j61xrtL2cbB79nKe
 sidebar_position: 8
+keywords: 
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - query()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

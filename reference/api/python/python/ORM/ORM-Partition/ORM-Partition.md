@@ -9,6 +9,16 @@ description: "A Partition instance represents a partition within a collection. |
 type: docx
 token: X9scdVMmxoBTuUxlKhecJXEunHd
 sidebar_position: 7
+keywords: 
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Partition
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

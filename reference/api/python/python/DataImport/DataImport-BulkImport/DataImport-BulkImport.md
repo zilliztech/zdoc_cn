@@ -8,6 +8,16 @@ type: folder
 token: MGFYf4JacldYUEdxtJdcwczAntg
 sidebar_position: 2
 sidebar_label: "BulkImport"
+keywords: 
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - BulkImport
+  - python
 displayed_sidebar: pythonSidebar
 ---
 

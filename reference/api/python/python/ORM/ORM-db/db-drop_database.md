@@ -9,6 +9,16 @@ description: "This operation drops a database using the provided database name. 
 type: docx
 token: Y7pOdKR4MoqmvVxcS1TcjqUynMc
 sidebar_position: 2
+keywords: 
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_database()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

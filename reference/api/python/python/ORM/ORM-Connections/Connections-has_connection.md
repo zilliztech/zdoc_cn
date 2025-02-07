@@ -9,6 +9,16 @@ description: "This operation checks if a connection with the given alias has alr
 type: docx
 token: XeZwdeK64oGD8rx9DA3ciqNinnh
 sidebar_position: 6
+keywords: 
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - has_connection()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

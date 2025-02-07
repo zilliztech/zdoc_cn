@@ -8,6 +8,16 @@ type: folder
 token: E2Zlf8PdXlx097dT2sNchgqpnbF
 sidebar_position: 4
 sidebar_label: "db"
+keywords: 
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - db
+  - python
 displayed_sidebar: pythonSidebar
 ---
 

@@ -8,6 +8,16 @@ type: folder
 token: ICGwfi8ZClVQLHdLn9Hc3oeFn1d
 sidebar_position: 3
 sidebar_label: "MilvusClient"
+keywords: 
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - MilvusClient
+  - python
 displayed_sidebar: pythonSidebar
 ---
 

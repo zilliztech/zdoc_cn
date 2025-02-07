@@ -9,6 +9,16 @@ description: "This operation checks whether a partition exists. | Python | ORM"
 type: docx
 token: KsmadNcXRoElO2xJi5HcJO57nwb
 sidebar_position: 18
+keywords: 
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - has_partition()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

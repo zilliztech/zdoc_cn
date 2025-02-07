@@ -5,9 +5,19 @@ beta: false
 notebook: false
 description: "Methods for you to manage collections. | Java | v2"
 type: folder
-token: KvSff5lOglJa2LdLSdBcJwPmnSd
+token: KzitfU6c4lFXdodYOQJcupB2nJe
 sidebar_position: 3
 sidebar_label: "Collections"
+keywords: 
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - RAG
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Collections
+  - javaV2
 displayed_sidebar: javaSidebar
 ---
 

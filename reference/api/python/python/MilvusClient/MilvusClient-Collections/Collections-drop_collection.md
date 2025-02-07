@@ -8,7 +8,17 @@ notebook: false
 description: "This operation drops a collection. | Python | MilvusClient"
 type: docx
 token: QNB4d2q2ZorIApxpnzqczW2HnL7
-sidebar_position: 9
+sidebar_position: 11
+keywords: 
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_collection()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

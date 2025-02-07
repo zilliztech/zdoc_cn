@@ -8,7 +8,17 @@ notebook: false
 description: "This operation revokes the role assigned to a user. | Python | MilvusClient"
 type: docx
 token: JJOId59ePoMLefxz1ChcBZ6inOh
-sidebar_position: 12
+sidebar_position: 19
+keywords: 
+  - Faiss
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - revoke_role()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation creates a partition in the target collection. | Java | v2"
 type: docx
-token: QNp6dzHNlofyPoxbysFcrfTunMh
+token: CadTdZ5YGocDymxaIOvcr08pnxd
 sidebar_position: 1
+keywords: 
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - createPartition()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

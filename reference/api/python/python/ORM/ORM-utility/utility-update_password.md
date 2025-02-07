@@ -9,6 +9,16 @@ description: "This operation updates the password for a specific user. | Python 
 type: docx
 token: SGjed7w9toewDlxmXHKc7BFancf
 sidebar_position: 41
+keywords: 
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - update_password()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

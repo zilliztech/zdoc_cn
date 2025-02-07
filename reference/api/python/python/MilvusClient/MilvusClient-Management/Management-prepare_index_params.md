@@ -8,7 +8,17 @@ notebook: false
 description: "This operation prepares index parameters to build indexes for a specific collection. | Python | MilvusClient"
 type: docx
 token: CAzpdAw3wo4ZqrxhjTLcEGBBn1S
-sidebar_position: 8
+sidebar_position: 11
+keywords: 
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - prepare_index_params()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

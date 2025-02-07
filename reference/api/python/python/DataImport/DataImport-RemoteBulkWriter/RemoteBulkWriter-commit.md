@@ -9,6 +9,16 @@ description: "This operation commits the appended data. | Python"
 type: docx
 token: VccVd4MTgoPzCixDVtgcEoKWnPf
 sidebar_position: 3
+keywords: 
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - commit()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

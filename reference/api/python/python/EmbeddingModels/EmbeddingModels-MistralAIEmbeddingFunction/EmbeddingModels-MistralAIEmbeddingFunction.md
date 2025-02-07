@@ -9,6 +9,16 @@ description: "MistralAIEmbeddingFunction is a class in pymilvus that handles enc
 type: docx
 token: CvxodXz8OoWXrlxD7OVcqqJLn8e
 sidebar_position: 3
+keywords: 
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - MistralAIEmbeddingFunction
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

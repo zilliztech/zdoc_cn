@@ -9,6 +9,16 @@ description: "This operation inserts new records into the database or updates ex
 type: docx
 token: AQ1ydMXbOog5VJxITgUc4GFvnVe
 sidebar_position: 28
+keywords: 
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - upsert()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation moves a specific number of query nodes from the sou
 type: docx
 token: QHcpd1aJzo5aYbxJtMXc58een4f
 sidebar_position: 39
+keywords: 
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - transfer_node()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation lists all resource groups in the currently connecte
 type: docx
 token: FXTZd5FgNo9ta0xvjaIclEM1nPf
 sidebar_position: 26
+keywords: 
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_resource_groups()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---

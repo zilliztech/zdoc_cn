@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation creates an index for a specific collection. | Java | v2"
 type: docx
-token: LZQ9dbJxQoUhATxciEacmuF4nvh
+token: OCjUdfc6eo0VihxNUGmcqb7FnTh
 sidebar_position: 1
+keywords: 
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - createIndex()
+  - javaV2
 displayed_sidebar: javaSidebar
 
 ---

@@ -8,7 +8,17 @@ notebook: false
 description: "This operation releases the data of a specific collection from memory. | Python | MilvusClient"
 type: docx
 token: PRR7dRfi8o1s61xFRovccAdRnHe
-sidebar_position: 10
+sidebar_position: 13
+keywords: 
+  - what is semantic search
+  - Embedding model
+  - image similarity search
+  - Context Window
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - release_collection()
+  - python
 displayed_sidebar: pythonSidebar
 
 ---
