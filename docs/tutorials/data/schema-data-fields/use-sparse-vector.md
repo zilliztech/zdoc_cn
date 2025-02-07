@@ -29,7 +29,7 @@ import TabItem from '@theme/TabItem';
 
 稀疏向量（Sparse Vector）是信息检索和自然语言处理中的一种重要数据表示方法。虽然[稠密向量](./use-dense-vector)（Dense Vector）因其出色的语义理解能力而广受欢迎，但在需要精确匹配关键词或短语的应用中，稀疏向量往往能够提供更为准确的结果。
 
-## 概述
+## 概述{#overview}
 
 稀疏向量是一种高维向量的特殊表示方法，其大多数元素为零，只有少数维度上有非零值。这种特性使得稀疏向量在处理大规模、高维度但数据稀疏的场景中特别有效。常见的应用有:
 
@@ -55,7 +55,7 @@ import TabItem from '@theme/TabItem';
 
 </Admonition>
 
-## 在 Zilliz Cloud 中使用稀疏向量
+## 使用稀疏向量{#use-sparse-vectors}
 
 Zilliz Cloud 支持用以下任意格式表示稀疏向量：
 
@@ -103,7 +103,7 @@ Zilliz Cloud 支持用以下任意格式表示稀疏向量：
     sparse_vector = [[(1, 0.5), (100, 0.3), (500, 0.8), (1024, 0.2), (5000, 0.6)]]
     ```
 
-### 添加稀疏向量字段
+### 添加稀疏向量字段{#add-vector-field}
 
 要在 Zilliz Cloud 中使用稀疏向量，首先需要在创建 Collection 时定义用于存储稀疏向量的字段。这个过程包括：
 
@@ -220,7 +220,7 @@ export schema="{
 
 以上示例中，我们添加了一个名为 `sparse_vector` 的向量字段，用于存储稀疏向量。该字段的数据类型为 `SPARSE_FLOAT_VECTOR`。
 
-### 为稀疏向量创建索引
+### 为稀疏向量创建索引{#set-index-params-for-vector-field}
 
 为稀疏向量创建索引的过程和[稠密向量](./use-dense-vector)类似，但指定的索引类型（`index_type`），距离度量类型（`metric_type`），和索引参数（`params`）有所差别。
 
@@ -293,7 +293,7 @@ export indexParams='[
 
 - 对于稀疏向量，`metric_type` 只支持 `IP`。`IP` 表示内积（Inner Product），用于衡量两个稀疏向量之间的相似度。有关更多相似度信息，请参考[相似度类型](./search-metrics-explained)。
 
-### 创建 Collection
+### 创建 Collection{#create-collection}
 
 稀疏向量和索引定义完成后，我们便可以创建包含稀疏向量的 Collection。以下示例通过 `create_collection` 方法创建了一个名为 `my_sparse_collection` 的 Collection。
 
@@ -365,7 +365,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 插入稀疏向量
+### 插入稀疏向量{#insert-data}
 
 创建 Collection 后，您可以插入包含稀疏向量的数据。
 
@@ -460,7 +460,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 基于稀疏向量执行相似性搜索
+### 基于稀疏向量执行相似性搜索{#perform-similarity-search}
 
 要基于稀疏向量进行相似性搜索，您需要先准备查询向量和搜索参数。
 

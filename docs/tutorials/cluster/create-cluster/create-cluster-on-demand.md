@@ -33,7 +33,7 @@ Zilliz Cloud 提供多种集群版本以满足不同的业务需求。请先查�
 
 - 已注册 Zilliz Cloud 账户。有关更多信息，请参见[注册账号](./register-with-zilliz-cloud)。
 
-- 在目标组织或项目中，您具有集群创建权限。有关角色和权限的信息，请参见[访问控制](./access-control)。
+- 在目标组织或项目中，您具有集群创建权限。有关角色和权限的信息，请参见[管理组织用户](./organization-users#organization-roles) 和 [管理项目用户](./project-users#project-roles)。
 
 ## 创建 Free 集群{#set-up-a-free-cluster}
 

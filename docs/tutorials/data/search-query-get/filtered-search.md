@@ -7,7 +7,7 @@ notebook: FALSE
 description: "近似最近邻（ANN） Search 可以根据指定的非结构化数据（向量）找到与之相似的一批非结构化数据（向量），但是无法做到精确匹配。对于简单的精确匹配需求，可以使用过滤条件表达式基于部分标量字段进行文本过滤。本节将介绍如何在 ANN Search 中使用过滤条件表达式及相关注意事项。 | Cloud"
 type: origin
 token: RWKFw1KKWiwCyMk53zqcLx5WnRf
-sidebar_position: 2
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz

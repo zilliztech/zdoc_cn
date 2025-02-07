@@ -36,7 +36,7 @@ Zilliz Cloud 支持通过 Collection 的 Schema 定义数据模型。Collection 
 
 通过对数据模型的抽象，好的 Schema 设计对于语义搜索来说十分重要，因为它决定了搜索结果是否能帮助业务达成目标。还需要注意的是，插入 Collection 的每条数据都要符合 Schema 的定义，这极大的保证了数据的一致性和长期质量。从技术角色来说，好的 Schema 设计会让您的数据以更加符合预期的方式存放，为这些数据创建的索引结构也会更加干净，从而提升搜索的效率和性能。
 
-# 新闻搜索：一个例子
+## 新闻搜索：一个例子{#an-example-news-search}
 
 在本节中，我们会简单分析要打造一个新闻搜索应用需要做些什么。具体来说，我们需要创建了一个包含新闻文本、缩略图和其它元数据的语料库，并分析这些需要在搜索中使用的数据。假设您的需求是根据缩略图和内容概要来检索新闻，并在检索结果中包含诸如作者和发布时间等元数据，我们可以将这个需求分解成如下几个小需求：
 
@@ -91,11 +91,11 @@ Zilliz Cloud 支持通过 Collection 的 Schema 定义数据模型。Collection 
    </tr>
 </table>
 
-# 如何在 Milvus 中创建 Schema
+## 如何在 Milvus 中创建 Schema{#how-to-implement-the-example-schema}
 
-通过上面的分析，我们初步完成了 Schema 的设计。在本节中，我们将在 Milvus 中创建这个 Schema，并使用这个 Schema 创建一个 Collection。
+通过上面的分析，我们初步完成了 Schema 的设计。在本节中，我们将在 Zilliz Cloud 中创建这个 Schema，并使用这个 Schema 创建一个 Collection。
 
-## 创建 Schema
+### 创建 Schema{#create-schema}
 
 首先，我们创建一个 Milvus Client 实例，用于连接 Zilliz Cloud 集群 并管理 Collection 及其中存放的数据。
 
@@ -134,7 +134,7 @@ schema.add_field(field_name="summary_sparse_vector", datatype=DataType.SPARSE_FL
 
 在将所有字段添加到 Schema 对象中后，Schema 对象就和我们在之前的表格中的设计完全一致了。
 
-## 创建索引
+### 创建索引{#define-index}
 
 在 Schema 中定义了包括存储元数据和向量数据的各类字段后，下一步就是确定索引参数了。创建索引对于优化搜索和向量召回来说十分关键，因为它确保了查询操作的性能和效率。在接下来的步骤中，我们将定义为指定的向量字段和标量字段定义索引参数。
 
@@ -166,7 +166,7 @@ index_params.add_index(
 
 Zilliz Cloud 使用 AUTOINDEX 作为唯一的索引类型，但提供多种相似度类型。更多信息，可以参考 [AUTOINDEX](./autoindex-explained) and [相似度类型](./search-metrics-explained).。
 
-## 创建 Collection
+### 创建 Collection{#create-collection}
 
 在有了 Schema 和索引之后，我们就可以使用这些参数来创建 Collection。Zilliz Cloud 集群中的 Collection 就像关系型数据库中的表一样。
 
@@ -187,13 +187,13 @@ collection_desc = client.describe_collection(
 print(collection_desc)
 ```
 
-# 其它需要考虑的问题
+## 其它需要考虑的问题{#other-considerations}
 
-## 加载索引
+### 加载索引{#loading-index}
 
 在 Zilliz Cloud 集群 中创建 Collection 时，您可以选择在完成 Collection 创建时立即加载索引或者将加载操作放到批量导入数据之后。基本上你无须对此做出明确的选择。就像我们在上述代码中展示的那样，索引会在您插入数据时自动构建，从而让这些刚插入的数据也参与查询。但是，如果在插入大批量数据后不需要立即对它们进行查询，您也可以通过在创建 Collection 时省略索引参数的方式将索引创建放到插入所有数据后再来完成。这对于一个用于存放大量数据的 Collection 来说更有效率。当前，在执行任何搜索前，您需要使用 `load()` 方法将 Collection 的索引加载到内存。
 
-## 如何为多租户场景定义数据模型
+### 如何为多租户场景定义数据模型{#how-to-define-data-model-for-multi-tenancy}
 
 所谓多租户，通常是指使用一套软件或服务为多个独立的用户或组织提供相互独立的工作环境。这在云计算、软件及服务（SaaS）应用及数据库系统中比较常见。举例来说，云存储服务可能会使用多租户系统允许不同的企业在同一套下层基础设施之上各自存放和管理它们的数据。这种方式在保证数据安全和各租户隐私的前提下将资源利用率和使用效率都最大化了。
 

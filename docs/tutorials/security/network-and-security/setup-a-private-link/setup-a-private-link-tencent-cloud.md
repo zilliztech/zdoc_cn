@@ -59,13 +59,13 @@ import Admonition from '@theme/Admonition';
 
 登陆 Zilliz Cloud，选择合适的项目。在项目左侧导航栏中选择**网络 > 私网连接**，并单击**创建 Private Endpoint**。
 
-【screenshot】
+![zh-create-private-link](/img/zh-create-private-link.png)
 
 ### 选择云服务提供商和地域{#select-cloud-provider-and-region}
 
 在云服务提供商下拉菜单中选择腾讯云。在地域下拉菜单中选择与您目标集群相同的地域。
 
-【Screenshot】
+![zh-tencent-create-private-link](/img/zh-tencent-create-private-link.png)
 
 ### 创建终端服务{#create-endpoint-service}
 
@@ -139,7 +139,7 @@ import Admonition from '@theme/Admonition';
 
 返回 Zilliz Cloud 控制台，将已创建的腾讯云终端节点实例 ID 填入**终端节点 ID** 字段中，并单击**创建**。
 
-【Screenshot】
+![zh-ali-create-private-link-authorize-endpoint](/img/zh-ali-create-private-link-authorize-endpoint.png)
 
 此时会出现如下提示：
 

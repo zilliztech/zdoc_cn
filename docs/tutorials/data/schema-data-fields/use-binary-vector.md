@@ -31,7 +31,7 @@ Binary 向量是一种特殊的数据表示形式，通过将传统的高维浮�
 
 Binary 向量的应用场景非常广泛，尤其是在计算效率和存储优化至关重要的情况下。在大型 AI 系统中（如搜索引擎或推荐系统），实时处理海量数据是关键。通过减少向量的大小，Binary 向量能够在不显著牺牲准确性的情况下，帮助减少延迟和计算成本。此外，Binary 向量在资源受限的环境中也很有用，例如移动设备和嵌入式系统，这些场景中内存和处理能力有限。通过使用 Binary 向量，复杂的 AI 功能得以在这些限制条件下实现，同时保持较高的运行效率。
 
-## 概述
+## 概述{#overview}
 
 Binary 向量是一种将复杂对象（如图像、文本或音频）编码为固定长度二进制串的向量表示方法。在 Zilliz Cloud 中，Binary 向量通常表示为位数组或字节数组。例如，一个 8 维的 Binary 向量可以表示为 `[1, 0, 1, 1, 0, 0, 1, 0]`。
 
@@ -61,9 +61,9 @@ Binary 向量可以通过多种方法生成。在文本处理中，可以使用�
 
 </Admonition>
 
-## 在 Zilliz Cloud 中使用 Binary 向量
+## 使用 Binary 向量{#use-binary-vectors}
 
-### 添加 Binary 向量字段
+### 添加 Binary 向量字段{#add-vector-field}
 
 要在 Zilliz Cloud 中使用 Binary 向量，首先需要在[创建 Collection](./manage-collections-sdks) 时定义用于存储 Binary 向量的向量字段。这个过程包括：
 
@@ -173,7 +173,7 @@ export schema="{
 
 以上示例中，我们添加了一个名为 `binary_vector` 的向量字段，用于存储 Binary 向量。该字段的数据类型为 `BINARY_VECTOR`，向量维度为 `128`。
 
-### 为 Binary 向量创建索引
+### 为 Binary 向量创建索引{#set-index-params-for-vector-field}
 
 为了加速搜索，我们需要为 Binary 向量字段创建索引。索引可以显著提高大规模向量数据的检索效率。
 
@@ -245,7 +245,7 @@ export indexParams='[
 
 除了 `HAMMING` 相似度类型，Zilliz Cloud 还支持为 Binary 向量指定其他度量类型。具体请参考[相似度类型](./search-metrics-explained)。
 
-### 创建 Collection
+### 创建 Collection{#create-collection}
 
 Binary 向量和索引定义完成后，我们便可以创建包含 Binary 向量的 Collection。以下示例通过 `create_collection` 方法创建了一个名为 `my_binary_collection` 的 Collection。
 
@@ -317,7 +317,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 插入 Binary 向量
+### 插入 Binary 向量{#insert-data}
 
 创建 Collection 后，我们可以通过 `insert` 方法插入包含 Binary 向量的数据。注意，Binary 向量应当以 byte 数组形式提供，其中每个 byte 代表 8 个布尔值。
 
@@ -430,7 +430,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 基于 Binary 向量执行相似性搜索
+### 基于 Binary 向量执行相似性搜索{#perform-similarity-search}
 
 相似性搜索是 Zilliz Cloud 的核心功能之一，可以根据向量之间的距离快速找到与查询向量最相似的数据。要基于 Binary 向量进行相似性搜索，您需要准备查询向量和搜索参数，然后执行 `search` 方法。
 

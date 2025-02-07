@@ -19,7 +19,7 @@ sidebar_position: 7
 
 - [什么是计算单元（Compute Unit, CU）?](#what-is-a-compute-unit-cu)
 - [如何查看订阅的 Zilliz Cloud 版本？](#how-can-i-know-which-plan-i-am-on)
-- [性能型 CU和容量型 CU 之间有什么区别？](#whats-the-difference-between-performance-optimized-cu-capacity-optimized-cu-and-cost-optimized-cu)
+- [我应该选择哪种 CU 类型？](#which-type-of-cu-should-i-pick)
 - [我的数据需要使用多少 CU？](#how-many-cus-do-i-need-for-a-given-collection)
 - [如何避免未使用的集群产生费用？](#how-can-i-avoid-expenses-on-unused-clusters)
 - [如何估算使用 Zilliz Cloud 的成本？](#how-can-i-estimate-the-cost-of-using-zilliz-cloud)
@@ -39,19 +39,23 @@ sidebar_position: 7
 
 ![faq_plan_detail](/img/faq_plan_detail.png)
 
-### 性能型 CU和容量型 CU 之间有什么区别？ \{#whats-the-difference-between-performance-optimized-cu-capacity-optimized-cu-and-cost-optimized-cu}
+### 我应该选择哪种 CU 类型？ \{#which-type-of-cu-should-i-pick}
 
-性能型 CU 适用于需要低延迟和高吞吐量的向量相似性检索场景。 
+- 如果您的应用需要低延迟和高吞吐量，建议选择性能型 CU。
 
-容量型 CU 相比性能型 CU 能够存储多 5 倍的数据，适用于需要大量存储空间的场景。
+- 如果您需要存储大量数据，但对吞吐量和延迟的要求较低，建议选择容量型 CU。
+
+- 如果您需要存储海量数据且追求性价比、对延时要求较低，建议选择存储扩展型 CU。如需使用存储扩展型 CU，[请联系销售](https://zilliz.com.cn/contact-sales)。
 
 ### 我的数据需要使用多少 CU？ \{#how-many-cus-do-i-need-for-a-given-collection}
 
-单个性能型 CU 可容纳约 750 万个 128 维向量或 150 万个 768 维向量。
+- 性能型 CU： 以 768 维向量为基准估计，可支持 150 万个向量（不包含标量字段）。
 
-单个容量型 CU 可容纳约 2500 万个 128 维向量或 500 万个 768 维向量。
+- 容量型 CU： 以 768 维向量为基准估计，可支持 500 万个向量（不包含标量字段）。
 
-由于您的 Collection Schema 可能与上述指南中的不同，我们建议您根据实际数据测试不同的 CU 类型。
+- 存储扩展型 CU： 以 768 维向量为基准估计，可支持 2000 万个向量（不包含标量字段）。
+
+以上数据针对仅包含主键的向量数据。如果您的数据中含有其他标量字段，如 ID 或 label，可能需要使用更多 CU。我们建议进行测试以准确评估数据实际需要使用的 CU 规格。
 
 ### 如何避免未使用的集群产生费用？ \{#how-can-i-avoid-expenses-on-unused-clusters}
 

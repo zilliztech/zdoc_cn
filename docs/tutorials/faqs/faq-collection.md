@@ -96,9 +96,9 @@ Zilliz Cloud支持以下几种相似度类型。
 
 1. 余弦距离（Cosine）计算计算两个向量之间的余弦夹角大小。计算结果在 [-1, 1] 的区间内，结果越大，向量越相似。
 
-1. **[Beta]** 杰卡德距离（Jaccard）衡量 2 个集合差异性的指标，是 Jaccard 相似系数（similarity coefficient）的补集，被定义为 1 减去 Jaccard 相似系数。
+1. 杰卡德距离（Jaccard）衡量 2 个集合差异性的指标，是 Jaccard 相似系数（similarity coefficient）的补集，被定义为 1 减去 Jaccard 相似系数。
 
-1. **[Beta]** 汉明距离（Hamming）测量两个字符串对应位置的不同字符的个数。
+1. 汉明距离（Hamming）测量两个字符串对应位置的不同字符的个数。
 
 更多详情，请参考[相似度类型](./search-metrics-explained)。
 

@@ -107,7 +107,7 @@ import Admonition from '@theme/Admonition';
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>我们不推荐奖 CU 加载容量阈值设置得过高（超过 90%）。这是因为当数据插入速率较高时，集群可能无法及时完成自动扩容，会导致禁写。</p>
+    <p>我们不推荐将 CU 加载容量阈值设置得过高（超过 90%）。这是因为当数据插入速率较高时，集群可能无法及时完成自动扩容，会导致禁写。</p>
 
     </Admonition>
 
@@ -137,7 +137,7 @@ import Admonition from '@theme/Admonition';
 
 1. 登录 Zilliz Cloud。前往目标集群的**集群详情**页。点击**扩容**。
 
-    ![R6OzbPU4AocxT8x6pS8c7PLQn4f](/img/R6OzbPU4AocxT8x6pS8c7PLQn4f.png)
+    ![scale-annual-subscription-cluster-entrance-cn](/img/scale-annual-subscription-cluster-entrance-cn.png)
 
 1. 选择集群 CU 规格。目前仅支持选择比当前更大的 CU 规格。
 
@@ -145,15 +145,15 @@ import Admonition from '@theme/Admonition';
 
 1. 检查订单金额，点击**扩容**。如需了解集群升配与续订的费用计算规则，请参考[变更配置费用说明](./notice-on-config-changes)。
 
-    ![REhmbwSt8omjSMxO3Aic16CZnIa](/img/REhmbwSt8omjSMxO3Aic16CZnIa.png)
+    ![scale-annual-subscription-cluster-cn](/img/scale-annual-subscription-cluster-cn.png)
 
-1. 阅读并同意【购买须知】。
+1. 阅读并同意 [Zilliz Cloud 服务条款](https://zilliz.com.cn/cloud-service-terms)。
 
 ### 步骤 2. 支付订单{#pay-the-order}
 
 完成步骤 1 后，Zilliz Cloud 将生成一份类型为**升配**的**待支付**订单。请检查订单内容并及时完成支付。
 
-![DaCMbzcaPoWJ40xeEk7cJ3lhnAe](/img/DaCMbzcaPoWJ40xeEk7cJ3lhnAe.png)
+![pay-annual-subscription-scale-order-cn](/img/pay-annual-subscription-scale-order-cn.png)
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -167,6 +167,6 @@ import Admonition from '@theme/Admonition';
 
 订单支付成功后，Zilliz Cloud 会开始为您的包年包月集群进行扩容，您将看到以下界面。
 
-![IYNtbTEfdobMLlxjK91cTeyCn1d](/img/IYNtbTEfdobMLlxjK91cTeyCn1d.png)
+![annual-subscription-cluster-is-being-scaled-cn](/img/annual-subscription-cluster-is-being-scaled-cn.png)
 
 集群扩容的过程大约需要 10 分钟，请您耐心等待。当集群状态变为**运行中**时，代表包年包月集群扩容成功。

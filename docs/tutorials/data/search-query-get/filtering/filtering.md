@@ -7,7 +7,7 @@ notebook: FALSE
 description: "本章将介绍如何在标量字段上进行过滤以及支持的过滤操作符。 | Cloud"
 type: origin
 token: HTN4w3vUtid1mWkShjmcnYh9nZf
-sidebar_position: 7
+sidebar_position: 8
 keywords: 
   - 向量数据库
   - zilliz

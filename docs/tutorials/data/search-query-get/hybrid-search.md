@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Hybrid Search 是指同时进行多路搜索，对多路搜索的结果进行重排，最终返还单路结果的搜索方式。使用 Hybrid Search 能够提升搜索结果的准确性。 | Cloud"
 type: origin
 token: SU1DwjEeii0p2ik3odJcQ55Unbf
-sidebar_position: 5
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz

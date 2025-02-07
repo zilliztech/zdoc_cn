@@ -7,7 +7,7 @@ notebook: FALSE
 description: "在度量向量相似性时，相似度类型发挥着关键作用。选择恰当的相似度类型可以极大地提升分类与聚类的效果。 | Cloud"
 type: origin
 token: U7tHwmHPCikQxWkzoSzcr8Lunmf
-sidebar_position: 16
+sidebar_position: 17
 keywords: 
   - 向量数据库
   - zilliz

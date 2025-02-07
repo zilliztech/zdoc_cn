@@ -4,7 +4,7 @@ slug: /data-import-storage-options
 sidebar_label: "支持的对象存储"
 beta: FALSE
 notebook: FALSE
-description: "Before importing data, it's important to understand the supported cloud storage options and their corresponding URL formats. This ensures that your requests can be properly processed without undergoing validation errors. | Cloud"
+description: "在导入数据前，您需要了解 Zilliz Cloud 支持的存储方式及对应的 URL 格式，以确保 Zilliz Cloud 可以正确处理您的上传请求，避免验证失败。 | Cloud"
 type: origin
 token: HaxowqeGdi8uyakrLc9c6Lb0nEb
 sidebar_position: 1
@@ -27,32 +27,124 @@ import Admonition from '@theme/Admonition';
 
 # 支持的对象存储
 
-Before importing data, it's important to understand the supported cloud storage options and their corresponding URL formats. This ensures that your requests can be properly processed without undergoing validation errors.
+在导入数据前，您需要了解 Zilliz Cloud 支持的存储方式及对应的 URL 格式，以确保 Zilliz Cloud 可以正确处理您的上传请求，避免验证失败。
 
-## AWS Simple Storage Service (S3)
+## 阿里云 OSS{#aliyun-oss}
 
-- **Object access URIs**
+- **对象访问 URI**
 
     <table>
        <tr>
-         <th><p><strong>URI Style</strong></p></th>
-         <th><p><strong>URI Format</strong></p></th>
+         <th><p>地域</p></th>
+         <th><p><strong>URI</strong></p></th>
+         <th><p>地域 ID</p></th>
        </tr>
        <tr>
-         <td><p><strong>AWS Object URL, virtual-hosted–style</strong></p></td>
-         <td><p><code>https://bucket-name.s3.region-code.amazonaws.com/object-name</code></p></td>
+         <td><p>华东1（杭州）</p></td>
+         <td><p><code>https://bucket-name.cos.ap-beijing.myqcloud.com/object-name</code></p></td>
+         <td><p><code>oss-cn-hangzhou</code></p></td>
        </tr>
        <tr>
-         <td><p><strong>AWS Object URL, path-style</strong></p></td>
-         <td><p><code>https://s3.region-code.amazonaws.com/bucket-name/object-name</code></p></td>
+         <td><p>华北2（北京）</p></td>
+         <td><p><code>https://bucket-name.cos.ap-beijing.myqcloud.com/object-name</code></p></td>
+         <td><p><code>oss-cn-beijing</code></p></td>
        </tr>
        <tr>
-         <td><p><strong>AWS S3 URI</strong></p></td>
-         <td><p><code>s3://bucket-name/object-name</code></p></td>
+         <td><p>华南1（深圳）</p></td>
+         <td><p><code>https://bucket-name.cos.ap-beijing.myqcloud.com/object-name</code></p></td>
+         <td><p><code>oss-cn-shenzhen</code></p></td>
        </tr>
     </table>
 
-    For more details, see [Methods for accessing a bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-bucket-intro.html).
+    关于如何通过上述 URI 访问存储桶中的对象，可以参考 [OSS 访问域名使用规则](https://help.aliyun.com/zh/oss/user-guide/oss-domain-names)。
+
+- **Required permissions**
+
+    - `oss:GetObject`
+
+    - `oss:ListObjects`
+
+- **获取凭证**
+
+    基于您的数据安全要求，可以在数据导入时使用 Access Key 或 STS Token 临时凭证方案。
+
+    - 如果您希望使用长期 Access Key，强烈建议您创建专用于 API 访问的 RAM 用户，并为其创建 Access Key。具体步骤可以参考[创建阿里云 Access Key](https://help.aliyun.com/zh/ram/user-guide/create-an-accesskey-pair)。
+
+    - 如果您希望使用 STS Token 临时凭证方案，可以参考 [临时访问凭证](https://help.aliyun.com/zh/oss/developer-reference/use-temporary-access-credentials-provided-by-sts-to-access-oss)
+
+## 腾讯云 COS{#tencent-cloud-cos}
+
+- **对象访问 URI**
+
+<table>
+   <tr>
+     <th><p>地域</p></th>
+     <th><p><strong>URI</strong></p></th>
+     <th><p>地域 ID</p></th>
+   </tr>
+   <tr>
+     <td><p>北京</p></td>
+     <td><p><code>https://bucket-name.cos.ap-beijing.myqcloud.com/object-name</code></p></td>
+     <td><p>ap-beijing</p></td>
+   </tr>
+   <tr>
+     <td><p>上海</p></td>
+     <td><p><code>https://bucket-name.cos.ap-shanghai.myqcloud.com/object-name</code></p></td>
+     <td><p>ap-shanghai</p></td>
+   </tr>
+   <tr>
+     <td><p>弗吉尼亚</p></td>
+     <td><p><code>https://bucket-name.cos.na-ashburn.myqcloud.com/object-name</code></p></td>
+     <td><p>na-ashburn</p></td>
+   </tr>
+</table>
+
+- **Required permissions**
+
+    - `cos:GetBucket`
+
+    - `cos:GetObject`
+
+    - `cos:HeadObject`
+
+- **获取凭证**
+
+    基于您的数据安全要求，可以在数据导入时使用 Access Key 或 STS Token 临时凭证方案。
+
+    - 如果您希望使用长期 Access Key，强烈建议您创建专用于 API 访问的 RAM 用户，并为其创建 Access Key。具体步骤可以参考[创建密钥](https://cloud.tencent.com/document/product/598/40488)。
+
+    - 如果您希望使用 STS Token 临时凭证方案，可以参考 [创建临时密钥](https://cloud.tencent.com/document/product/436/14048)
+
+## 亚马逊云科技 S3{#amazon-cn-s3}
+
+- **对象访问 URI**
+
+<table>
+   <tr>
+     <th><p>地域</p></th>
+     <th><p><strong>URI Style</strong></p></th>
+     <th><p><strong>URI</strong></p></th>
+     <th><p>地域 ID</p></th>
+   </tr>
+   <tr>
+     <td><p>宁夏</p></td>
+     <td><p>virtual-hosted–style</p></td>
+     <td><p><code>https://bucket-name.s3.northwest-1.amazonaws.com.cn/object-name</code></p></td>
+     <td><p>northwest-1</p></td>
+   </tr>
+   <tr>
+     <td><p>宁夏</p></td>
+     <td><p>path-style</p></td>
+     <td><p><code>https://s3.northwest-1.amazonaws.com.cn/bucket-name/object-name</code></p></td>
+     <td><p>northwest-1</p></td>
+   </tr>
+   <tr>
+     <td><p>宁夏</p></td>
+     <td><p>S3 URI</p></td>
+     <td><p><code>s3://bucket-name/object-name</code></p></td>
+     <td><p>northwest-1</p></td>
+   </tr>
+</table>
 
 - **Required permissions**
 
@@ -62,71 +154,11 @@ Before importing data, it's important to understand the supported cloud storage 
 
     - `s3:GetBucketLocation`
 
-- **Credential acquisition**
+- **获取凭证**
 
-    Based on your data security requirements, you can use either long-term credentials or session tokens during data import:
+    基于您的数据安全要求，可以在数据导入时使用 Access Key 或 STS Token 临时凭证方案。
 
-    - If you prefer to authenticate with long-term credentials, read [Authenticate using long-term credentials](https://docs.aws.amazon.com/sdkref/latest/guide/access-iam-users.html) for details.
+    - 如果您希望使用长期 Access Key，强烈建议您创建专用于 API 访问的 RAM 用户，并为其创建 Access Key。具体步骤可以参考 [使用长期凭证](https://docs.amazonaws.cn/sdkref/latest/guide/access-iam-users.html)。
 
-    - If you prefer to authenticate with a session-token, refer to [this FAQ](/docs/faq-data-import#can-i-use-session-tokens-when-importing-data-from-an-object-storage-service).
-
-## Google Cloud Storage
-
-- **Object access URIs**
-
-    <table>
-       <tr>
-         <th><p><strong>URI Style</strong></p></th>
-         <th><p><strong>URI Format</strong></p></th>
-       </tr>
-       <tr>
-         <td><p><strong>GSC public URL</strong></p></td>
-         <td><p><code>https://storage.googleapis.com/bucket_name/object_name</code></p></td>
-       </tr>
-       <tr>
-         <td><p><strong>GSC gsutil URI</strong></p></td>
-         <td><p><code>gs://bucket_name/object_name</code></p></td>
-       </tr>
-    </table>
-
-    For more details, see [Share the object](https://cloud.google.com/storage/docs/discover-object-storage-console#share_the_object).
-
-- **Required permissions**
-
-    - `storage.objects.get`
-
-    - `storage.objects.list`
-
-- **Credential acquisition**
-
-    Based on your data security requirements, you can use either long-term credentials or session tokens during data import:
-
-    - If you prefer to authenticate with long-term credentials, read [Manage HMAC keys for service accounts](https://cloud.google.com/storage/docs/authentication/managing-hmackeys) for details.
-
-    - If you prefer to authenticate with a session-token, refer to [this FAQ](/docs/faq-data-import#can-i-use-session-tokens-when-importing-data-from-an-object-storage-service).
-
-## Azure Blob Storage
-
-- **Object access URIs**
-
-    <table>
-       <tr>
-         <th><p><strong>URI Style</strong></p></th>
-         <th><p><strong>URI Format</strong></p></th>
-       </tr>
-       <tr>
-         <td><p><strong>Azure storage blob URI</strong></p></td>
-         <td><p><code>https://myaccount.blob.core.windows.net/bucket-name/object_name</code></p></td>
-       </tr>
-    </table>
-
-    For more details, see [Resource URI Syntax](https://learn.microsoft.com/en-us/rest/api/storageservices/naming-and-referencing-containers--blobs--and-metadata#resource-uri-syntax).
-
-- **Credential acquisition**
-
-    Based on your data security requirements, you can use either long-term credentials or session tokens during data import:
-
-    - If you prefer to authenticate with long-term credentials, read [View account access keys](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys) for details
-
-    - If you prefer to authenticate with a session-token, refer to [this FAQ](/docs/faq-data-import#can-i-use-session-tokens-when-importing-data-from-an-object-storage-service).
+    - 如果您希望使用 STS Token 临时凭证方案，可以参考 [使用短期凭证](https://docs.amazonaws.cn/sdkref/latest/guide/access-temp-idc.html)
 

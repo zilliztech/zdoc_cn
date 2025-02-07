@@ -49,7 +49,7 @@ Zilliz Cloud 提供 Free 版本，允许您免费使用 Serverless 集群的功�
 
 如需解冻组织，请[添加支付方式](./payment-billing)。在此之后，您可以从回收站中恢复数据。如果在组织冻结 30 天后仍未添加支付方式，您的 Serverless 和 Dedicated 集群将被永久删除，但您的组织仍被保留。
 
-### 获取优惠券{#earn-credits}
+### 获取优惠券及延长优惠券有效期{#earn-credits-and-extend-credit-expiration}
 
 注册 Zilliz Cloud 账号后您即可获得 ¥300 优惠券。如果您绑定了云市场支付方式，优惠券有效期可延长至 **1 年**。
 

@@ -251,7 +251,7 @@ if err != nil {
    </tr>
    <tr>
      <td><p><code>collection.ttl.seconds</code></p></td>
-     <td><p>如果您需要 Zilliz Cloud 在 Collection 创建完成后的一段时间内自动销毁该 Collection。可以考虑为 Collection 设置 TTL。这样当 Collection 的生存时间超过指定时间（单位为秒）后，Zilliz Cloud 就会开始删除 Collection 中的数据。</p><p>由于删除操作是异步的，在数据完全删除前，您仍旧可以搜索到部分数据。</p></td>
+     <td><p>如果您需要 Zilliz Cloud 在 Collection 创建完成后的一段时间内自动删除该 Collection 中的所有数据。可以考虑为 Collection 设置 TTL。这样当 Collection 的生存时间超过指定时间（单位为秒）后，Zilliz Cloud 就会开始删除 Collection 中的数据。</p><p>由于删除操作是异步的，在数据完全删除前，您仍旧可以搜索到部分数据。</p></td>
    </tr>
    <tr>
      <td><p><code>mmap.enabled</code></p></td>

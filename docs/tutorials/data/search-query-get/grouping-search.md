@@ -7,7 +7,7 @@ notebook: FALSE
 description: "如果搜索结果中所有 Entity 在某个标量字段上的取值都相同时，搜索结果可能并不能真实反映与查询向量相似的所有向量在向量空间中的分布情况。为了提升召回结果的多样性，可以考虑使用 Grouping Search。本节将介绍如何使用 Grouping Search 以及与之相关的注意事项。 | Cloud"
 type: origin
 token: CjZpwlRVNilNytkbHdncperpnbf
-sidebar_position: 4
+sidebar_position: 5
 keywords: 
   - 向量数据库
   - zilliz

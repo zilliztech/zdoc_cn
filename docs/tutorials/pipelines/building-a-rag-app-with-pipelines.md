@@ -26,6 +26,12 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud Pipelines 可以将文档、文本片段和图像等非结构化数据转换成可搜索的向量并存储在 [Collection](./manage-collections) 中。本文将介绍 Zilliz Cloud Pipelines 的三种主要类型并提供示例代码，展示如何使用 Pipelines 搭建 RAG 应用。
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>Zilliz Cloud Pipelines 服务正处在逐步下线中，将于 2025 年第二季度末停止服务，被 “Data In, Data Out” 的新功能取代。该功能旨在简化 Milvus 和 Zilliz Cloud 中的向量化流程。自 2025 年 1 月 10 日起，Zilliz Cloud Pipelines 将不再接受新用户注册。现有用户可在每月 100 元人民币免费试用额度内继续使用服务直至下线日期。该服务不提供 SLA 支持。建议您使用模型提供商的Embedding API 或开源模型生成向量。</p>
+
+</Admonition>
+
 ![pipeline-overview-cn](/img/pipeline-overview-cn.png)
 
 ## 了解 Pipelines{#understanding-pipelines}

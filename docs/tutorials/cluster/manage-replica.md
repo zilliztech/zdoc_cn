@@ -60,7 +60,7 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 1. 登录 Zilliz Cloud。前往目标集群的**集群详情**页。点击 Replica 数量右侧的**增加**按钮。
 
-    ![BXQCbTcRiojzsnx9OMHccKGanCd](/img/BXQCbTcRiojzsnx9OMHccKGanCd.png)
+    ![increase-replica-for-annual-subscription-cluster-entrance-cn](/img/increase-replica-for-annual-subscription-cluster-entrance-cn.png)
 
 1. 选择集群 Replica 数量。目前仅支持选择比当前更大的 Replica 数量。
 
@@ -68,15 +68,15 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 1. 检查订单金额，点击**增加**。如需了解集群升配与续订的费用计算规则，请参考[变更配置费用说明](./notice-on-config-changes)。
 
-    ![BNVHbVZ3rot5rOxemgRcji7Wn9e](/img/BNVHbVZ3rot5rOxemgRcji7Wn9e.png)
+    ![increase-replica-for-annual-subscription-cluster-cn](/img/increase-replica-for-annual-subscription-cluster-cn.png)
 
-1. 阅读并同意【购买须知】。
+1. 阅读并同意 [Zilliz Cloud 服务条款](https://zilliz.com.cn/cloud-service-terms)。
 
 ### 步骤 2. 支付订单
 
 完成步骤 1 后，Zilliz Cloud 将生成一份类型为**升配**的**待支付**订单。请检查订单内容并及时完成支付。
 
-![WKq2bhcKso6ugHxyHmIcH3uHnfd](/img/WKq2bhcKso6ugHxyHmIcH3uHnfd.png)
+![pay-annual-subscription-scale-order-cn](/img/pay-annual-subscription-scale-order-cn.png)
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -90,6 +90,6 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 订单支付成功后，Zilliz Cloud 会开始为您的包年包月集群增加 Replica 数量，您将看到以下界面。
 
-![UtB5bq7ygobTS8x0TqucyapynGf](/img/UtB5bq7ygobTS8x0TqucyapynGf.png)
+![annual-subscription-cluster-is-being-scaled-cn](/img/annual-subscription-cluster-is-being-scaled-cn.png)
 
 集群升配的过程大约需要 10 分钟，请您耐心等待。当集群状态变为**运行中**时，代表包年包月集群 Replica 数量增加成功。

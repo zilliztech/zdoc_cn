@@ -36,7 +36,7 @@ import TabItem from '@theme/TabItem';
 
 标量数值类型在许多场景中非常有用。例如，在电商推荐中，可以用价格字段进行筛选；在用户画像分析中，可以用年龄段进行过滤。结合向量数据，标量数值类型数据能够帮助系统在提供相似性检索的同时，更精确地满足用户的个性化需求。
 
-## 支持的标量数值类型
+## 支持的标量数值类型{#supported-number-field-types}
 
 Zilliz Cloud clusters 支持多种标量数值类型，以满足不同的数据存储和查询需求：
 
@@ -75,7 +75,7 @@ Zilliz Cloud clusters 支持多种标量数值类型，以满足不同的数据�
    </tr>
 </table>
 
-## 添加标量数值字段
+## 添加标量数值字段{#add-number-field}
 
 要在 Zilliz Cloud clusters 中使用标量数值字段，需要在定义 Collection Schema 时定义相关字段，并将 `datatype` 设置为支持的数值类型，如 `BOOL`、`INT8`。有关支持的标量数值类型列表，请参考[数据类型](./use-number-field)。
 
@@ -220,7 +220,7 @@ export schema="{
 
 </Admonition>
 
-## 设置索引参数
+## 设置索引参数{#set-index-params}
 
 为标量数值字段设置索引参数是一个可选操作，可以显著提高查询效率。
 
@@ -353,7 +353,7 @@ export indexParams='[
 </TabItem>
 </Tabs>
 
-## 创建 Collection
+## 创建 Collection{#create-collection}
 
 定义好 Collection 的 Schema 和索引后，我们便可以创建包含标量字段的 Collection。
 
@@ -412,7 +412,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 插入数据
+## 插入数据{#insert-data}
 
 Collection 创建完成后，可以插入包含标量字段的数据。
 
@@ -504,7 +504,7 @@ curl --request POST \
 
 添加标量字段后，您可以在搜索（Search）和查询（Query）中利用这些字段进行过滤，从而实现更精确的搜索结果。
 
-### 过滤查询
+### 过滤查询{#search-and-query}
 
 添加标量字段后，您可以在 Query 中利用这些字段进行过滤。例如，您可以查询 `age` 在 30 到 40 之间的所有数据：
 
@@ -583,7 +583,7 @@ curl --request POST \
 
 此查询表达式将返回所有符合条件的数据，并输出其 `age` 和 `price` 字段。有关过滤查询的更多信息，请参考 [Query](./get-and-scalar-query) 和 [基本操作符](./basic-filtering-operators)。
 
-### 向量搜索与标量过滤结合
+### 向量搜索与标量过滤结合{#vector-search-with-number-filtering}
 
 除了基本的标量字段过滤，您还可以将向量相似度搜索与标量字段过滤结合使用。例如，以下代码展示了如何在向量搜索中添加标量字段的过滤条件：
 

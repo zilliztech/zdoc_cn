@@ -170,39 +170,7 @@ filter = 'name LIKE "%Pro%"'
 
 - `**`（幂）
 
-### 示例1：使用加（`+`）操作符{#example-1-using-addition}
-
-假设总价为基准价格（`base_price`）和税款（`tax`）的总和（`total`)，可以使用如下过滤条件表达式找出 `total` 字段值为 `base_price` 字段和 `tax` 字段总和的所有 Entity。
-
-```python
-filter = 'total == base_price + tax'
-```
-
-### 示例2：使用减（`-`）操作符{#example-2-using-subtraction}
-
-可以使用如下过滤表达式过滤出 `quantity` 字段的取值减去 `quantity_sold` 字段的取值的差大于 50 的所有 Entity。
-
-```python
-filter = 'quantity - quantity_sold > 50'
-```
-
-### 示例3：使用乘（`*`）操作符{#example-3-using-multiplication}
-
-可以使用如下过滤表达式过滤出 `price` 字段值和 `quantity` 字段值的乘积大于 1000 的所有 Entity。
-
-```python
-filter = 'price * quantity > 1000'
-```
-
-### 示例4：使用除（`/`）操作符{#example-4-using-division}
-
-可以使用如下过滤表达式过滤出 `total_price` 字段值和 `quantity` 字段值的商小于 50 的所有 Entity。
-
-```python
-filter = 'total_price / quantity < 50'
-```
-
-### 示例5：使用余（`%`）操作符{#example-5-using-modulus-percent}
+### 示例 1：使用余（`%`）操作符{#example-5-using-modulus-percent}
 
 可以使用如下过滤表达式找出 `id` 字段值为偶数的所有 Entity。
 
@@ -210,7 +178,7 @@ filter = 'total_price / quantity < 50'
 filter = 'id % 2 == 0'
 ```
 
-### 示例6：使用幂（`**`）操作符{#example-6-using-exponentiation}
+### 示例 2：使用幂（`**`）操作符{#example-6-using-exponentiation}
 
 可以使用如下过滤表达式找出所有 `price` 字段值的平方大于 1000 的所有 Entity。
 

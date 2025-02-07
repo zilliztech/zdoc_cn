@@ -26,27 +26,27 @@ import Admonition from '@theme/Admonition';
 
 包年包月集群采用预付费的计费方式，即先付费后使用，按照订单的购买时长进行结算。包年包月集群一般适用于资源需求相对稳定的长期业务。购买包年包月集群可享受折扣，且购买时长越长，折扣越大。本文介绍如何在 Zilliz Cloud 创建和管理包年包月的 Dedicated 集群。如需了解包年包月集群使用过程中可能会额外产生的费用以及计费规则，请参考[了解账单](./view-invoice)。
 
-## 前提条件{#Prerequisites}
+## 前提条件{#prerequisites}
 
 - 您具备**组织管理员**或**项目管理员**权限。
 
 - 您的组织已完成[企业认证](./enterprise-certification)。
 
-## 创建包年包月集群
+## 创建包年包月集群{#create-annual-subscription-cluster}
 
 ![Oeusw9TnGhQfe0bLWcGcQoaZn5f](/img/Oeusw9TnGhQfe0bLWcGcQoaZn5f.png)
 
 上图展示了创建包年包月集群的主要流程和步骤。以下为具体操作说明。
 
-### 步骤 1. 配置包年包月集群
+### 步骤 1. 配置包年包月集群{#step-1-configure-annual-subscription-cluster}
 
 1. 登录 Zilliz Cloud。在合适的项目下点击 **+ 创建集群**。
 
-    ![KViKb8FAYoEzQHxJPyhcFAIBn5Z](/img/KViKb8FAYoEzQHxJPyhcFAIBn5Z.png)
+    ![create-annual-subscription-cluster-cn](/img/create-annual-subscription-cluster-cn.png)
 
 1. 选择 **Dedicated** 版本并配置集群。目前仅 Dedicated 集群支持包年包月的计费方式。
 
-    ![Wwe6bCy6doclTkxRVFlch0FtnBf](/img/Wwe6bCy6doclTkxRVFlch0FtnBf.png)
+    ![configure-annual-subscription-cluster-cn](/img/configure-annual-subscription-cluster-cn.png)
 
     <table>
        <tr>
@@ -81,15 +81,15 @@ import Admonition from '@theme/Admonition';
 
 1. 检查配置并点击**创建**。
 
-1. 阅读并同意【购买须知】。
+1. 阅读并同意 [Zilliz Cloud 服务条款](https://zilliz.com.cn/cloud-service-terms)。
 
-    ![BSO1bUpzMosxzGxXFTNcjF7NnGf](/img/BSO1bUpzMosxzGxXFTNcjF7NnGf.png)
+    ![agree-to-annnual-subscription-terms-cn](/img/agree-to-annnual-subscription-terms-cn.png)
 
-### 步骤 2. 支付订单
+### 步骤 2. 支付订单{#step-2-pay-order}
 
 完成步骤 1 后，Zilliz Cloud 将生成一份类型为**新购**的**待支付**订单。请检查订单内容并及时完成支付。
 
-![VgbdbtGxJoEzb4xOgNtcdD5xnCb](/img/VgbdbtGxJoEzb4xOgNtcdD5xnCb.png)
+![pay-annual-subscription-order-cn](/img/pay-annual-subscription-order-cn.png)
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -99,15 +99,15 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-### 步骤 3. 等待集群创建成功
+### 步骤 3. 等待集群创建成功{#step-3-wait-till-cluster-is-created}
 
 订单支付成功后，Zilliz Cloud 会开始自动为您创建包年包月集群，您将看到以下界面。请及时下载和安全保存集群用户名与密码。
 
-![SDccbRTG3o9ooQxAoujcUep8nBM](/img/SDccbRTG3o9ooQxAoujcUep8nBM.png)
+![annual-subscription-cluster-is-being-created-cn](/img/annual-subscription-cluster-is-being-created-cn.png)
 
 创建集群的过程大约需要 10 分钟，请您耐心等待。当集群状态变为**运行中**时，代表已成功创建包年包月集群。您可以继续[连接集群](./connect-to-cluster)或在集群中[创建 Collection](./manage-collections-sdks)。
 
-## 管理包年包月集群
+## 管理包年包月集群{#manage-annual-subscription-cluster}
 
 下表展示了您可以对包年包月集群进行的管理操作。
 
@@ -174,9 +174,33 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-## 常见问题
+## 常见问题{#faqs}
+
+- **为什么我无法创建包年包月集群？**
+
+    如需创建包年包月集群，您需要确保：
+
+    - 您具备**组织管理员**或**项目管理员**权限。
+
+    - 您的组织已完成[企业认证](/docs/enterprise-certification)且组织中现金余额充足。详情请参考[企业认证](./enterprise-certification)和[现金充值（对公转账）](./advance-pay)
 
 - **为什么购买了预付费的包年包月集群，还有后付费账单产生？**
 
     包年包月集群有部分服务对应的计费项是按量付费的，例如存储、备份服务。例如，您购买了包年包月集群后，使用备份功能时仍将产生备份存储的按量付费账单。
+
+- **如何从从按量计费集群转换为包年包月集群？**
+
+    您可以通过迁移操作来完成转换。以下为具体操作步骤：
+
+    1. [创建新的包年包月集群](./create-cluster-pre-paid#create-annual-subscription-cluster)并支付订单。等待包年包月集群创建成功，状态转为运行中。
+
+    1. 通过 Zilliz Cloud [跨集群迁移](./migrate-between-clusters)，将按量计费集群中的数据迁移到新创建的包年包月集群中。
+
+        **建议您在按量计费集群停写时进行迁移操作，避免两个集群间数据不一致。**
+
+    1. 数据迁移完成后，验证包年包月集群的连通性和数据量。
+
+    1. 验证成功后，修改上层应用中的配置，切换至包年集群的连接 Endpoint。
+
+    1. 将原按量计费集群删除，释放资源。
 

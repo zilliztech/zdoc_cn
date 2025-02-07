@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz Cloud Hybrid Search 功能通过多路搜索单路召回实现更精准的搜索结果。多路搜索会返回多组结果，因此需要通过 Reranking 对多组搜索结果进行重新排序，最终合并成一组结果，实现单路召回。本节将介绍 Zilliz Cloud 中支持的 Reranking 策略并指导您挑选合适的 Reranking 策略。 | Cloud"
 type: origin
 token: COnowAdgTi2KA0kI6gncFG5rnbf
-sidebar_position: 18
+sidebar_position: 19
 keywords: 
   - 向量数据库
   - zilliz

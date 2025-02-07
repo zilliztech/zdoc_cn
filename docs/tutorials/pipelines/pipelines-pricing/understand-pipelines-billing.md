@@ -25,6 +25,12 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud Pipelines 采用按量计费的[定价](https://zilliz.com.cn/pricing)模型。 您仅需根据 Ingestion 和 Search Pipeline 的模型用量付费。
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>Zilliz Cloud Pipelines 服务正处在逐步下线中，将于 2025 年第二季度末停止服务，被 “Data In, Data Out” 的新功能取代。该功能旨在简化 Milvus 和 Zilliz Cloud 中的向量化流程。自 2025 年 1 月 10 日起，Zilliz Cloud Pipelines 将不再接受新用户注册。现有用户可在每月 100 元人民币免费试用额度内继续使用服务直至下线日期。该服务不提供 SLA 支持。建议您使用模型提供商的Embedding API 或开源模型生成向量。</p>
+
+</Admonition>
+
 ## Pipelines 定价{#pipelines-pricing}
 
 如需了解使用每种 Embedding 和 Reranker 模型的具体费用，请参考[定价方案](https://zilliz.com.cn/pricing)。

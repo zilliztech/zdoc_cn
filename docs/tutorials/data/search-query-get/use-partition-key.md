@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Partition Key 是一种基于 Partition 的搜索优化方案。通过指定某个标量字段为 Partition Key 并在搜索时指定基于 Partition Key 的过滤条件表达式将搜索范围缩小到若干 Partition 中，从而提高搜索效率。本文将介绍如何使用 Partition key 及相关注意事项。 | Cloud"
 type: origin
 token: QT2Vw3FvJiuwzBkeZvicRBlsnae
-sidebar_position: 12
+sidebar_position: 13
 keywords: 
   - 向量数据库
   - zilliz

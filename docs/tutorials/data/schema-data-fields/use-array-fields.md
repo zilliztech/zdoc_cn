@@ -43,7 +43,7 @@ Array 类型是一种用于存储多个相同数据类型值的字段类型。�
 
 在这个示例中，`tags` 和 `ratings` 都是 Array 字段。`tags` 字段是一个字符串数组，用于表示歌曲的风格标签，例如流行、摇滚和古典；`ratings` 字段是一个整数数组，用于表示用户对该歌曲的评分，从 1 到 5 分不等。这些 Array 字段能够灵活地存储多值数据，便于在查询和过滤过程中进行更详细的分析。
 
-## 添加 Array 字段
+## 添加 Array 字段{#add-array-field}
 
 要在 Zilliz Cloud clusters 中使用 Array 字段，需要在定义 Collection Schema 时定义相关字段类型。这个过程包括：
 
@@ -97,6 +97,7 @@ schema.addField(AddFieldReq.builder()
         .dataType(DataType.Array)
         .elementType(DataType.VarChar)
         .maxCapacity(10)
+        .maxLength(100)
         .build());
 
 schema.addField(AddFieldReq.builder()
@@ -131,7 +132,7 @@ const schema = [
     data_type: DataType.Array,
     element_type: DataType.VarChar,
     max_capacity: 10,
-    max_length: 65535
+    max_length: 100
   },
   {
     name: "rating",
@@ -218,7 +219,7 @@ export schema="{
 
 </Admonition>
 
-## 设置索引参数
+## 设置索引参数{#set-index-params}
 
 为 Array 字段设置索引参数是一个可选操作，可以显著提高查询效率。
 
@@ -345,7 +346,7 @@ export indexParams='[
 </TabItem>
 </Tabs>
 
-## 创建 Collection
+## 创建 Collection{#create-collection}
 
 使用定义好的 Schema 和索引参数来创建 Collection：
 
@@ -404,7 +405,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 插入数据
+## 插入数据{#insert-data}
 
 Collection 创建完成后，可以插入包含 Array 字段的数据。
 
@@ -537,11 +538,11 @@ curl --request POST \
 
 - `embedding` 是一个 3 维向量字段，用于向量相似性搜索。
 
-## 使用 Array 字段进行过滤搜索和查询
+## 使用 Array 字段进行过滤搜索和查询{#search-and-query}
 
 Array 字段允许在搜索过程中进行标量过滤，从而增强 Zilliz Cloud clusters 的向量搜索功能。您可以在向量相似性搜索的基础上，根据 Array 字段的属性执行查询。
 
-### 过滤查询
+### 过滤查询{#filter-queries}
 
 您可以基于 Array 字段的属性过滤数据，例如访问特定位置的元素或检查数组元素的值是否符合某个条件。
 
@@ -619,7 +620,7 @@ curl --request POST \
 
 在以上查询中，Zilliz Cloud clusters 会筛选出 `ratings` 数组中第一个元素小于 `4` 的记录，满足条件的记录将包含在查询结果中。
 
-### 向量搜索与 Array 过滤结合
+### 向量搜索与 Array 过滤结合{#vector-search-with-array-filtering}
 
 结合向量相似性与 Array 过滤，可以在找到语义上相似的数据的同时，确保这些数据满足特定的条件，从而使搜索结果更加精准和符合业务需求。
 
@@ -713,7 +714,7 @@ curl --request POST \
 
 此外，Zilliz Cloud clusters 支持一些高级的 Array 过滤操作符，如 `ARRAY_CONTAINS`、`ARRAY_CONTAINS_ALL`、`ARRAY_CONTAINS_ANY` 和 `ARRAY_LENGTH` 等，可以进一步提升查询能力。有关更多信息，请参考[ARRAY 操作符](./array-filtering-operators)。
 
-## 使用限制
+## 使用限制{#limits}
 
 - **数据类型**：数组字段中的所有元素必须是相同的数据类型，这个数据类型由 `element_type` 指定。
 

@@ -43,23 +43,48 @@ Zilliz Cloud 提供 3 种创建 Collection 的方式以满足不同需求。
 
 1. 在创建 Collection 页面，定义 Collection Schema。
 
-    - **Auto ID**：开启 Auto ID 后将自动生成主键列。因此导入数据时，您无需上传 ID 字段。
-
-    - **主键字段**：可用类型为 **Int64** 或 **VarChar**。当字段类型设置为 **VarChar** 时，需要为字段指定最大长度 **Max Length**。如果启用了 **Auto ID**，则无需配置主键字段。
-
-    - **向量字段**：collection 中的向量字段。对于已升级到 Beta 版本的 Zilliz Cloud 集群，可以向 collection 中添加一个或多个向量字段，每个 collection 最多可以有 4 个向量字段。使用多个向量字段时，可以为这些字段设置相同或不同的数据类型。例如，可以在同一个 collection 中组合使用 `FLOAT_VECTOR` 和 `BFLOAT16_VECTOR`  <sup>(Beta)</sup> 向量字段。有关向量字段类型的更多信息，请参考[相似度类型](./search-metrics-explained)和 [AUTOINDEX](./autoindex-explained)。
-
-        - **Dimension**：向量字段的维度值。维度值的要求因向量字段类型而异：
-
-            - `FLOAT_VECTOR`、`FLOAT16_VECTOR` 和 `BFLOAT16_VECTOR`：维度值必须是整数，范围为 2 到 32,768。
-
-            - `SPARSE_FLOAT_VECTOR`：不需要指定维度。
-
-            - `BINARY_VECTOR`：维度必须是 8 的倍数，范围为 8 到 32,768 * 8。
-
-        - **索引参数**：索引类型默认设置为 AUTOINDEX，支持的度量类型有 **Cosine**、**IP**、**L2**、**JACCARD** <sup>(Beta)</sup> 和 **HAMMING** <sup>(Beta)</sup>。详情请参见[相似度类型](./search-metrics-explained)和 [AUTOINDEX](./autoindex-explained)。
-
-    - **其他字段**：点击 **+ 新增字段**以添加更多标量字段。更多详情，请参考 [了解 Schema](./schema-explained)。
+    <table>
+       <tr>
+         <th><p>配置项</p></th>
+         <th><p>描述</p></th>
+       </tr>
+       <tr>
+         <td><p>字段名称</p></td>
+         <td><p>字段的名称。每个 Collection 都有唯一的主键和至少一个向量字段（最多4个）。</p><p>在默认设置中，Zilliz Cloud 保留了主字段（<code>primary_key</code>）和一个浮点向量（<code>vector</code>）。您可以根据需要自定义它们的设置。</p></td>
+       </tr>
+       <tr>
+         <td><p>字段类型</p></td>
+         <td><p>字段的数据类型。Zilliz Cloud 支持的字段主要分为以下几类：主键、向量字段和标量字段。不同字段的数据类型根据字段类型而异。</p><ul><li><p>主键: <code>INT64</code>, <code>VARCHAR</code></p></li><li><p>向量字段: <code>FLOAT_VECTOR</code>, <code>BINARY_VECTOR</code>, <code>FLOAT16_VECTOR</code>, <code>BFLOAT16_VECTOR</code>, <code>SPARSE_FLOAT_VECTOR</code>.</p></li><li><p>标量字段: <code>INT64</code>, <code>VARCHAR</code>, <code>INT8</code>, <code>INT16</code>, <code>INT32</code>, <code>FLOAT</code>, <code>DOUBLE</code>, <code>BOOL</code>, <code>JSON</code>, <code>ARRAY</code>.</p><p>详情请参见<a href="./schema-explained">了解 Schema</a>。</p></li></ul></td>
+       </tr>
+       <tr>
+         <td><p>索引</p></td>
+         <td><p>是否为字段建立索引以提高搜索性能。一旦启用，Zilliz Cloud 将为您的字段创建一个 AUTOINDEX。</p></td>
+       </tr>
+       <tr>
+         <td><p>相似度类型</p></td>
+         <td><p>用于测量向量之间相似性的度量类型。此参数仅可为向量字段配置。详情请参见<a href="./search-metrics-explained">相似度类型</a>。</p></td>
+       </tr>
+       <tr>
+         <td><p>默认值</p></td>
+         <td><p>是否为字段设置默认值。此参数仅可为标量字段配置（不包括主字段）。详情请参见 <a href="./nullable-and-default">Nullable 和默认值</a>。</p></td>
+       </tr>
+       <tr>
+         <td><p>支持 Null 值</p></td>
+         <td><p>是否允许字段为空值。此参数仅可为标量字段配置（不包括主字段）。详情请参见 <a href="./nullable-and-default">Nullable 和默认值</a>。</p></td>
+       </tr>
+       <tr>
+         <td><p>Mmap</p></td>
+         <td><p>是否启用 MMAP。此参数仅可为标量字段配置（不包括主字段）。详情请参见<a href="./use-mmap">使用 mmap</a>。</p></td>
+       </tr>
+       <tr>
+         <td><p>描述</p></td>
+         <td><p>可选。字段的描述信息。</p></td>
+       </tr>
+       <tr>
+         <td><p>Auto ID</p></td>
+         <td><p>是否为主字段启用自动 ID。一旦启用，Zilliz Cloud 会自动为主键生成唯一 ID，无需在数据插入过程中手动分配或管理它们。</p></td>
+       </tr>
+    </table>
 
 1. (可选) 在**高级设置**中，您可以选择开启动态列或 Partition key。
 
@@ -89,7 +114,7 @@ Zilliz Cloud 提供 3 种创建 Collection 的方式以满足不同需求。
 
 1. 点击**复制**。
 
-    ![cn-copy-collection](/img/cn-copy-collection.png)
+    undefined
 
 1. Zilliz Cloud 将生成一条复制 Collection 任务。您可前往[任务中心](./view-activities)查看任务状态和进度。如果迁移任务的状态从**进行中**变更为**成功**，则代表复制 Collection 成功。
 

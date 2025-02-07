@@ -38,7 +38,7 @@ JSON 字段适用于需要附加元数据来优化检索结果的应用。例如
 }
 ```
 
-## 添加 JSON 字段
+## 添加 JSON 字段{#add-json-field}
 
 要在 Zilliz Cloud clusters 中使用 JSON 字段，需要在定义 Collection Schema 时定义相关字段类型，将 `datatype` 设置为支持的 JSON 数据类型，即 `JSON`。
 
@@ -162,7 +162,7 @@ export schema="{
 
 以上示例中，我们添加了 JSON 字段 `metadata`，用于存储与向量数据相关的附加元数据，如产品类别、价格和品牌信息。
 
-## 创建 Collection
+## 创建 Collection{#create-collection}
 
 创建 Collection 时，必须为向量字段创建索引，以确保检索性能。在本例中，我们使用 `AUTOINDEX` 来简化索引设置。有关更多信息，请参考 [AUTOINDEX](./autoindex-explained)。
 
@@ -283,7 +283,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 插入数据
+## 插入数据{#insert-data}
 
 Collection 创建完成后，可以插入包含 JSON 字段的数据。
 
@@ -408,11 +408,11 @@ curl --request POST \
 
 - `embedding` 是一个 3 维向量字段，用于向量相似性搜索。
 
-## 使用 JSON 字段进行过滤搜索和查询
+## 使用 JSON 字段进行过滤搜索和查询{#search-and-query}
 
 JSON 字段允许在搜索过程中进行标量过滤，从而增强 Zilliz Cloud clusters 的向量搜索功能。您可以在向量相似性搜索的基础上，根据 JSON 属性执行查询。
 
-### 过滤查询
+### 过滤查询{#filter-queries}
 
 您可以基于 JSON 属性过滤数据，例如匹配特定值或检查某个数字是否在特定范围内。
 
@@ -490,7 +490,7 @@ curl --request POST \
 
 在以上查询中，Zilliz Cloud clusters 会筛选出 `metadata` 字段中类别为 `"electronics"` 且价格低于 150 的记录，满足条件的记录将包含在查询结果中。
 
-### 向量搜索与 JSON 过滤结合
+### 向量搜索与 JSON 过滤结合{#vector-search-with-json-filtering}
 
 结合向量相似性与 JSON 过滤，可以在找到语义上相似的数据的同时，确保这些数据满足业务的特定条件，从而使搜索结果更加精准和符合用户需求。
 
@@ -587,7 +587,7 @@ curl --request POST \
 
 此外，Zilliz Cloud clusters 支持一些高级的 JSON 过滤操作符，如 `JSON_CONTAINS`、`JSON_CONTAINS_ALL` 和 `JSON_CONTAINS_ANY` 等，可以进一步提升查询能力。有关更多信息，请参考[JSON 操作符](./json-filtering-operators)。
 
-## 使用限制
+## 使用限制{#limits}
 
 - **索引限制**：考虑到数据结构的复杂性，不支持为 JSON 字段创建索引。
 

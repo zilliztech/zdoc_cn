@@ -143,7 +143,7 @@ Zilliz Cloud 提供以下 CU 类型：性能型 CU、容量型 CU、存储扩展
 <table>
    <tr>
      <th><p>top_k 值</p></th>
-     <th><p>性能型 CU 的 QPS（768 维度，100万向量）</p></th>
+     <th><p>性能型 CU 的 QPS（768 维度，150万向量）</p></th>
      <th><p>容量型 CU 的 QPS（768 维度，500 万向量）</p></th>
    </tr>
    <tr>
@@ -173,7 +173,7 @@ Zilliz Cloud 提供以下 CU 类型：性能型 CU、容量型 CU、存储扩展
 <table>
    <tr>
      <th><p>top_k</p></th>
-     <th><p>性能型 CU 的时延（768 维度，100万向量）</p></th>
+     <th><p>性能型 CU 的时延（768 维度，150万向量）</p></th>
      <th><p>容量型 CU 的时延（768 维度，500 万向量）</p></th>
    </tr>
    <tr>
