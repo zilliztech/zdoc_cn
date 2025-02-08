@@ -4,7 +4,40 @@ import Heading from '@theme-original/Heading';
 import {useDoc} from '@docusaurus/plugin-content-docs/client';
 import styles from './styles.module.css';
 
-const BetaTagComponent = (children, tag) => (
+const BetaTag = (tag) => {
+  var tag_caption = "";
+  var tag_color = "";
+
+  switch (tag) {
+    case 'PUBLIC':
+      tag_caption = "公测版";
+      tag_color = "#175fff";
+      break;
+    case 'PRIVATE':
+      tag_caption = "内测版";
+      tag_color = "#7F47FF";
+      break;
+    case 'CONTACT SALES':
+      tag_caption = "联系销售";
+      tag_color = "#FF7F47";
+      break;
+    default:
+      tag_caption = "";
+      tag_color = "";
+      break;
+  }
+
+  return {
+    tag_caption,
+    tag_color
+  }
+}
+
+const BetaTagComponent = (children, tag) => {
+
+  const { tag_caption, tag_color } = BetaTag(tag);
+
+  return (
     <span style={{ 
         display: "inline-block",
         verticalAlign: 'center',
@@ -25,16 +58,15 @@ const BetaTagComponent = (children, tag) => (
                 marginBottom: '0.5rem',
                 padding: '2px 12px 2px 12px',
                 borderRadius: '100px',
-                backgroundColor: tag === 'PUBLIC' ? '#175fff' : '#7F47FF',
+                backgroundColor: tag_color,
               }}>
-              { `${tag === 'PUBLIC' ? '公测版' : '内测版'}` }
+              { tag_caption }
           </span>        
         </div>    
 
     </span>
-
-
-);
+  );
+}
 
 const OpenInButtonComponent = ({
   caption,
