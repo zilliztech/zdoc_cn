@@ -245,6 +245,8 @@ curl --request POST \
 
 在使用 Partition Key 进行搜索时， Search 请求中需要携带一个基于 Partition Key 的过滤条件表达式。在过滤条件表达式中，您既可以把搜索范围限定在某一个 Partition Key 值对应的 Partition 内，也可以将其限定在多个 Partition Key 值对应的 Partition 内。
 
+执行删除操作时，建议包含指定单个 Partition Key 的过滤条件表达式，以实现更高效的删除。这种方法将删除操作限制在特定分区，减少压缩期间的写放大，并为压缩和索引节省资源。
+
 如下代码演示了 Search 请求中需要携带的两种过滤条件表达式：一种是基于一个 Partition Key 值进行过滤，另一个是基于多个 Partition Key 值进行过滤。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
