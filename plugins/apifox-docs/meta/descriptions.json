@@ -118,5 +118,27 @@
     {
         "name": "backup-and-restore-v2",
         "description": "本系列 API 提供了在 Zilliz Cloud 上备份和恢复数据的相关接口。"
+    },
+    {
+        "name": "database-operations-v2",
+        "description": "本系列 API 提供了管理 Database 的相关接口。",
+        "milvus": {
+            "name": "Database (v2)"
+        }
+    },
+    {
+        "name": "resource-group-v2",
+        "description": "本系列 API 提供了用于管理资源组的相关接口。",
+        "milvus": {
+            "name": "Resource Group (v2)"
+        }
+    },
+    {
+        "name": "invoices-v2",
+        "description": "本系列 API 提供了获取 Zilliz Cloud 账单信息的相关接口。"
+    },
+    {
+        "name": "usage-v2",
+        "description": "本系列 API 提供了获取 Zilliz Cloud 集群使用情况的相关接口。"
     }
 ]
