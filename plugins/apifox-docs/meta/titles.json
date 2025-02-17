@@ -104,7 +104,7 @@
     "查看资源组详情": "describe-resource-group",
     "查看资源组列表": "list-resource-groups",
     "转移 Collection 副本": "transfer-collection-replica",
-    "查看发票详情": "describe-invoice-v2",
-    "查看发票列表": "list-invoices-v2",
-    "查询日用量": "query-daily-usage-v2"
+    "查看发票详情": "describe-invoice",
+    "查看发票列表": "list-invoices",
+    "查询日用量": "query-daily-usage"
 }
