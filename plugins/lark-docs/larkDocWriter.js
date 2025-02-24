@@ -480,7 +480,11 @@ class larkDocWriter {
                 notebook: result[0]["fields"]["Notebook"],
                 labels: result[0]["fields"]["Labels"],
                 keywords: result[0]["fields"]["Keywords"],
-                description: result[0]["fields"]["Description"]
+                description: result[0]["fields"]["Description"],
+                tag: result[0]["fields"]["Tag"],
+                addSince: result[0]["fields"]["Added Since"],
+                lastModified: result[0]["fields"]["Last Modified At"],
+                deprecateSince: result[0]["fields"]["Deprecate Since"],
             }
         } else {
             return {

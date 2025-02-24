@@ -8,18 +8,26 @@ const BetaTag = (tag) => {
   var tag_caption = "";
   var tag_color = "";
 
-  switch (tag) {
-    case 'PUBLIC':
+  switch (true) {
+    case tag ==='PUBLIC':
       tag_caption = "公测版";
       tag_color = "#175fff";
       break;
-    case 'PRIVATE':
+    case tag === 'PRIVATE':
       tag_caption = "内测版";
       tag_color = "#7F47FF";
       break;
-    case 'CONTACT SALES':
+    case tag === 'CONTACT SALES':
       tag_caption = "联系销售";
       tag_color = "#FF7F47";
+      break;
+    case tag === 'NEAR DEPRECATE':
+      tag_caption = "即将作废";
+      tag_color = "#FF7F47";    
+      break;
+    case tag?.startsWith('Milvus'):
+      tag_caption = 'Compatible with ' + tag;
+      tag_color = "rgb(0, 179, 255)"
       break;
     default:
       tag_caption = "";
@@ -33,7 +41,7 @@ const BetaTag = (tag) => {
   }
 }
 
-const BetaTagComponent = (children, tag) => {
+const BetaTagComponent = (children, tag, linkable, destination_url) => {
 
   const { tag_caption, tag_color } = BetaTag(tag);
 
@@ -49,7 +57,7 @@ const BetaTagComponent = (children, tag) => {
           lineHeight: '2rem',
           verticalAlign: 'top'
         }}>
-          <span
+          { !linkable && (<span
               style={{
                 fontSize: '1rem',
                 color: '#ffffff',
@@ -61,7 +69,23 @@ const BetaTagComponent = (children, tag) => {
                 backgroundColor: tag_color,
               }}>
               { tag_caption }
-          </span>        
+          </span> ) }
+          { linkable && (
+            <Link to={destination_url} style={{ textDecoration: 'none' }}>
+              <span
+                  style={{
+                    fontSize: '1rem',
+                    color: '#ffffff',
+                    fontWeight: 'normal',
+                    marginLeft: '0.5rem',
+                    marginBottom: '0.5rem',
+                    padding: '2px 12px 2px 12px',
+                    borderRadius: '100px',
+                    backgroundColor: tag_color,
+                  }}>
+                  { tag_caption }
+              </span>
+            </Link> )}       
         </div>    
 
     </span>
@@ -130,12 +154,29 @@ export default function HeadingWrapper(props) {
   try {
     const { frontMatter } = useDoc();
     const { beta, notebook, tags } = frontMatter;
+    var tag = metadata.title.endsWith('BYOC') ? 'BYOC' : beta;
 
     if (props.as === 'h1' && beta) {
+      const linkable = tag === 'CONTACT SALES' || tag === 'BYOC'
+      const destination_url = 'https://zilliz.com/contact-sales'      
+
       props = {
         as: "h1",
         id: props.id,
-        children: BetaTagComponent(props.children, beta)
+        children: tag ? BetaTagComponent(props.children, tag, linkable, destination_url) : props.children
+      }
+    }
+
+    if (props.as === 'h2') {
+      const { children } = props;
+      const [title, tag] = children.split('|') 
+      const linkable = tag?.trim() === 'CONTACT SALES'
+      const destination_url = 'https://zilliz.com/contact-sales'
+
+      props = {
+        as: "h2",
+        id: props.id,
+        children: tag ? BetaTagComponent(title.trim(), tag?.trim(), linkable, destination_url) : title.trim()
       }
     }
   
@@ -144,7 +185,7 @@ export default function HeadingWrapper(props) {
   
     return (
       <>
-        { tags.length > 0 && <span style={{ fontWeight: '400', color: 'rgb(18, 17, 66)'  }}>{tags[0]}</span> }
+        { tags?.length > 0 && <span style={{ fontWeight: '400', color: 'rgb(18, 17, 66)'  }}>{tags[0]}</span> }
         <Heading {...props} />
   
         {
