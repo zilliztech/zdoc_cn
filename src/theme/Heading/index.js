@@ -155,7 +155,6 @@ export default function HeadingWrapper(props) {
     const { frontMatter, metadata } = useDoc();
     const { beta, notebook, tags } = frontMatter;
     var tag = metadata.title.endsWith('BYOC') ? 'BYOC' : beta;
-    console.log(tag)
 
     if (props.as === 'h1' && beta) {
       const linkable = tag === 'CONTACT SALES' || tag === 'BYOC'
