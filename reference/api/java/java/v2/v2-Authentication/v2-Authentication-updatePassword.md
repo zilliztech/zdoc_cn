@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation updates the password of a specific user. | Java | v2"
 type: docx
-token: Fw4DdZmCxov8EBxnJlZceWton1e
+token: GQH8dgqlPoRY1sxFhCRcLlgInNc
 sidebar_position: 13
+keywords: 
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - updatePassword()
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---

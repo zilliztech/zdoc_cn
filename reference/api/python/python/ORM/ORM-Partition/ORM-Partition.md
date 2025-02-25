@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "Partition | Python | ORM"
 slug: /python/python/ORM-Partition
 sidebar_label: "Partition"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "A Partition instance represents a partition within a collection. | Python | ORM"
 type: docx
 token: X9scdVMmxoBTuUxlKhecJXEunHd
 sidebar_position: 7
+keywords: 
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Partition
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

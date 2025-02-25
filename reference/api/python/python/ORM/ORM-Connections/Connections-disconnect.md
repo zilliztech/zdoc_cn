@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "disconnect() | Python | ORM"
 slug: /python/python/Connections-disconnect
 sidebar_label: "disconnect()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation disconnects the client from the specified connection. | Python | ORM"
 type: docx
 token: IpSBdcabbosobvxQkAEcv6CvnJd
 sidebar_position: 4
+keywords: 
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - disconnect()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

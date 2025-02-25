@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "A MilvusClientV2 instance represents a Java client that connects to a specific Zilliz Cloud cluster. | Java | v2"
 type: docx
-token: YmaYdEH00oj9DWx9N22cWfbonWb
+token: Y4qvdMEeioKXShxxNmncvnJ2nJf
 sidebar_position: 1
+keywords: 
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - MilvusClientV2
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---
@@ -61,8 +71,6 @@ ConnectConfig.builder()
     ```plaintext
     https://inxx-xxxxxxxxxxxxxxxxx.aws-us-west-2.vectordb-uat3.zillizcloud.com:19540
     ```
-
-    To find needed information on the Zilliz Cloud console, refer to [On Zilliz Cloud Console](/docs/on-zilliz-cloud-console).
 
 - `token(String token)`
 
@@ -166,10 +174,7 @@ MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<ul>
-<li><p>Set <strong>uri</strong> to your cluster endpoint. The <strong>token</strong> parameter can be a Zilliz Cloud API key with sufficient permissions or the credentials of a cluster user in the format of <code>username:p@ssw0rd</code>.</p></li>
-<li><p>To find the above information, refer to <a href="/docs/on-zilliz-cloud-console">On Zilliz Cloud Console</a>.</p></li>
-</ul>
+<p>Set <strong>uri</strong> to your cluster endpoint. The <strong>token</strong> parameter can be a Zilliz Cloud API key with sufficient permissions or the credentials of a cluster user in the format of <code>username:p@ssw0rd</code>.</p>
 
 </Admonition>
 

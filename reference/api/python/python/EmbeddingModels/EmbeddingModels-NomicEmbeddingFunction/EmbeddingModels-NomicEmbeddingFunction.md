@@ -9,6 +9,16 @@ description: "NomicEmbeddingFunction is a class in pymilvus that handles encodin
 type: docx
 token: OOQvdXDqdoqKfmxEkTecfuVMnsb
 sidebar_position: 3
+keywords: 
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - NomicEmbeddingFunction
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

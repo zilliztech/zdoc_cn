@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "Connections | Python | ORM"
 slug: /python/python/ORM-Connections
 sidebar_label: "Connections"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "A Connections instance represents a pool of connections to your Zilliz Cloud clusters. | Python | ORM"
 type: docx
 token: A96udk9seoF5x5xywQZcLasanIe
 sidebar_position: 3
+keywords: 
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Connections
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

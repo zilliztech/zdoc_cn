@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "list_bulk_insert_tasks() | Python | ORM"
 slug: /python/python/utility-list_bulk_insert_tasks
 sidebar_label: "list_bulk_insert_tasks()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists all bulk-insert tasks. | Python | ORM"
 type: docx
 token: T1CGdXeVkoG2yAxkualc1jVonRb
 sidebar_position: 23
+keywords: 
+  - cosine distance
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_bulk_insert_tasks()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -8,7 +8,17 @@ notebook: false
 description: "This operation lists all existing collections. | Python | MilvusClient"
 type: docx
 token: BHyidrVcyoPwxexHLrnceOSAnRe
-sidebar_position: 14
+sidebar_position: 17
+keywords: 
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_collections()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

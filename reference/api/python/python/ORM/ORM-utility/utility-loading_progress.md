@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "loading_progress() | Python | ORM"
 slug: /python/python/utility-loading_progress
 sidebar_label: "loading_progress()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation returns the load progress of a specific collection. | Python | ORM"
 type: docx
 token: HQiHd82orov0XvxAzLWcl5xRnzc
 sidebar_position: 31
+keywords: 
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - loading_progress()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

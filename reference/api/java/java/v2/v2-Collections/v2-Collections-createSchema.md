@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation creates a collection schema. | Java | v2"
 type: docx
-token: RdfxdvgRfonSK8xlEgjc5PpVnDg
+token: V5KXdwdO0oqkhnxsKb9c3xaKn4c
 sidebar_position: 6
+keywords: 
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
+  - nn search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - createSchema()
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---

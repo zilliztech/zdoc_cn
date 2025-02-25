@@ -9,6 +9,16 @@ description: "This operation conducts a scalar filtering with a specified boolea
 type: docx
 token: LkmSddW2NolgitxLhy9cx22Dnpe
 sidebar_position: 4
+keywords: 
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - query()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

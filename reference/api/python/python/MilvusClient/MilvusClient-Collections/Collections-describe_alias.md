@@ -8,7 +8,17 @@ notebook: false
 description: "This operation displays the details of an alias. | Python | MilvusClient"
 type: docx
 token: HN7nddgueo3scIxmPXAcpjkFnDf
-sidebar_position: 6
+sidebar_position: 8
+keywords: 
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - what is vector db
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describe_alias()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

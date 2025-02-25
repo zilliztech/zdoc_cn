@@ -5,9 +5,19 @@ beta: false
 notebook: false
 description: "Methods for you to manage collections. | Java | v2"
 type: folder
-token: KvSff5lOglJa2LdLSdBcJwPmnSd
-sidebar_position: 3
+token: Sx9jfHZP8lqVhXd9UuMcERemnjd
+sidebar_position: 1
 sidebar_label: "Collections"
+keywords: 
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Collections
+  - javaV225
 displayed_sidebar: javaSidebar
 ---
 

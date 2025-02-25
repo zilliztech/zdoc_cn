@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "load_state() | Python | ORM"
 slug: /python/python/utility-load_state
 sidebar_label: "load_state()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation returns the load status of a specific collection. | Python | ORM"
 type: docx
 token: BJysdlj1MoksHZxNRxicHn9fnSh
 sidebar_position: 33
+keywords: 
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - load_state()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "reset_password() | Python | ORM"
 slug: /python/python/utility-reset_password
 sidebar_label: "reset_password()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation resets the password for a specific user. | Python | ORM"
 type: docx
 token: K1Npdj5Ddod6UWxRN2ecf6K4nxf
 sidebar_position: 38
+keywords: 
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - reset_password()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

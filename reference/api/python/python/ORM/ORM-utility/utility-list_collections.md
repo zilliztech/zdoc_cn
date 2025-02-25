@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "list_collections() | Python | ORM"
 slug: /python/python/utility-list_collections
 sidebar_label: "list_collections()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists all collections in the database used in the current connection. | Python | ORM"
 type: docx
 token: QgxEdfBMSodYo6xCg24cH3hInr4
 sidebar_position: 24
+keywords: 
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_collections()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

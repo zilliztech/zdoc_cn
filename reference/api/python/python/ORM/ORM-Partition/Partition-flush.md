@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "flush() | Python | ORM"
 slug: /python/python/Partition-flush
 sidebar_label: "flush()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation seals all segments in the partition. Any insertions after this operation will generate a new segment. | Python | ORM"
 type: docx
 token: VRGwdg75Ao7ZXQx7uANc9wzXnVb
 sidebar_position: 3
+keywords: 
+  - LLMs
+  - Machine Learning
+  - RAG
+  - NLP
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - flush()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

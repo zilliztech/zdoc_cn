@@ -9,6 +9,16 @@ description: "This operation closes the current Milvus client. | Python | Milvus
 type: docx
 token: CWZGd48FJoFHXYx40NMcTd2FnKc
 sidebar_position: 1
+keywords: 
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - close()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

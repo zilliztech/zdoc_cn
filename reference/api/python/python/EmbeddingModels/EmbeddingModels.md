@@ -6,8 +6,18 @@ notebook: false
 description: "Embedding models for you to embed unstrucctured data into vector embeddings. | Python"
 type: folder
 token: G3Qvfzptcl9gcFdHholcBmgQnib
-sidebar_position: 2
+sidebar_position: 4
 sidebar_label: "EmbeddingModels"
+keywords: 
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - EmbeddingModels
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 ---
 

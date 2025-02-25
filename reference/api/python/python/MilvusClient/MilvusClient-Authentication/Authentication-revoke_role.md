@@ -8,7 +8,17 @@ notebook: false
 description: "This operation revokes the role assigned to a user. | Python | MilvusClient"
 type: docx
 token: JJOId59ePoMLefxz1ChcBZ6inOh
-sidebar_position: 12
+sidebar_position: 19
+keywords: 
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - open source vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - revoke_role()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

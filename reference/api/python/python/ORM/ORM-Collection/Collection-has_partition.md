@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "has_partition() | Python | ORM"
 slug: /python/python/Collection-has_partition
 sidebar_label: "has_partition()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation checks whether the specified partition exists in the current collection. | Python | ORM"
 type: docx
 token: QsOsda2lRoJP32xNSLWcbgMOnKI
 sidebar_position: 16
+keywords: 
+  - LLMs
+  - Machine Learning
+  - RAG
+  - NLP
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - has_partition()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation in OnnxEmbeddingFunction takes a list of text strin
 type: docx
 token: PlzSdJTGnoFVH6xSlS6cYBHZnph
 sidebar_position: 4
+keywords: 
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - \_\_call\_\_()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

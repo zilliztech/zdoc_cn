@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "hybridts_to_unixtime() | Python | ORM"
 slug: /python/python/utility-hybridts_to_unixtime
 sidebar_label: "hybridts_to_unixtime()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation converts a hybrid timestamp to a UNIX epoch timestamp | Python | ORM"
 type: docx
 token: HbMMdqtQGoQqwixsyrjcTTh0nu5
 sidebar_position: 20
+keywords: 
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - hybridts_to_unixtime()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

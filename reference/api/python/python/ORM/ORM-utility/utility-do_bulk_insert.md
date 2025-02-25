@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "do_bulk_insert() | Python | ORM"
 slug: /python/python/utility-do_bulk_insert
 sidebar_label: "do_bulk_insert()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation bulk-inserts data from specified files. | Python | ORM"
 type: docx
 token: BpqpdBWdyoxbmzx0GGCcQxksnBc
 sidebar_position: 8
+keywords: 
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - do_bulk_insert()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

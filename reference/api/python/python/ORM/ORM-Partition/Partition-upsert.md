@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "upsert() | Python | ORM"
 slug: /python/python/Partition-upsert
 sidebar_label: "upsert()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation inserts new records into the database or updates existing ones. | Python | ORM"
 type: docx
 token: MQMzddDnao5Zz0xmSRncZM2nn5b
 sidebar_position: 11
+keywords: 
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - upsert()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

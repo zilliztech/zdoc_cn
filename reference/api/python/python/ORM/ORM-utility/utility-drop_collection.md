@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "drop_collection() | Python | ORM"
 slug: /python/python/utility-drop_collection
 sidebar_label: "drop_collection()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation drops a specific collection. | Python | ORM"
 type: docx
 token: FHcYdN4apoI5TIx0LxScISvtn0f
 sidebar_position: 10
+keywords: 
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_collection()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

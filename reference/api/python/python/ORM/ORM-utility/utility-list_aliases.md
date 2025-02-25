@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "list_aliases() | Python | ORM"
 slug: /python/python/utility-list_aliases
 sidebar_label: "list_aliases()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists all existing aliases for a specific collection. | Python | ORM"
 type: docx
 token: XBwxdP96Go8ITyx7UuNcL7EonPd
 sidebar_position: 22
+keywords: 
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_aliases()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

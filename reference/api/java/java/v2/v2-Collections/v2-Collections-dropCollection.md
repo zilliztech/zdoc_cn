@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation drops a collection. | Java | v2"
 type: docx
-token: KMYzdRhVjo5OqOxlB9acFeMgnOh
+token: PsAGd1CNqosvirxDJ5ncIHudnSg
 sidebar_position: 11
+keywords: 
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - cosine distance
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - dropCollection()
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---

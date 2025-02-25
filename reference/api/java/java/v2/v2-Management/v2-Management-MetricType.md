@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Java | v2"
 type: docx
-token: GhWSdM6P7onZ5Nx6sqLclXO0nAg
+token: KIYUdM0oVo0dQmxTgS2c8Mxxn4v
 sidebar_position: 8
+keywords: 
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - MetricType
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---

@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation drops a specified partition from the current collection. | Java | v2"
 type: docx
-token: NhxzdRsa7o7wEAxtrDocVCy2nCb
+token: JTdSdyToooA6Srx2HolcmTPunoe
 sidebar_position: 2
+keywords: 
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - dropPartition()
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---

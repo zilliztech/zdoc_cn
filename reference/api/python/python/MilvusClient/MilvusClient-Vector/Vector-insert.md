@@ -9,6 +9,16 @@ description: "This operation inserts data into a specific collection. | Python |
 type: docx
 token: QI87dhVnioL9JLxnNKxcM8jWnkh
 sidebar_position: 3
+keywords: 
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - insert()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

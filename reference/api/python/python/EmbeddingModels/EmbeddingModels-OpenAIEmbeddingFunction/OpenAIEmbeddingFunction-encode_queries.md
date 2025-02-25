@@ -9,6 +9,16 @@ description: "This operation takes in a list of query strings and encodes each q
 type: docx
 token: Sf9UdzL3rolQNAxDm8Ecga3snhg
 sidebar_position: 2
+keywords: 
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - encode_queries()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

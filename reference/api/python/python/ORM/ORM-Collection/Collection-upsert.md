@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "upsert() | Python | ORM"
 slug: /python/python/Collection-upsert
 sidebar_label: "upsert()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation inserts new records into the database or updates existing ones. | Python | ORM"
 type: docx
 token: AQ1ydMXbOog5VJxITgUc4GFvnVe
 sidebar_position: 28
+keywords: 
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - upsert()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

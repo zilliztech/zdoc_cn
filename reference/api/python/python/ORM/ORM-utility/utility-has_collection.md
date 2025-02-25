@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "has_collection() | Python | ORM"
 slug: /python/python/utility-has_collection
 sidebar_label: "has_collection()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation checks whether a collection exists. | Python | ORM"
 type: docx
 token: TWOxdwDYRo4CCHxDdZbc7IOznCg
 sidebar_position: 17
+keywords: 
+  - natural language processing
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - has_collection()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

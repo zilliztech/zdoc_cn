@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "list_users() | Python | ORM"
 slug: /python/python/utility-list_users
 sidebar_label: "list_users()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists the information of all existing users. | Python | ORM"
 type: docx
 token: MtF2dkZcso4XduxM194cUaiinqb
 sidebar_position: 30
+keywords: 
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_users()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "load_balance() | Python | ORM"
 slug: /python/python/utility-load_balance
 sidebar_label: "load_balance()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation sets up a load-balancing group between two query nodes for a specific collection. | Python | ORM"
 type: docx
 token: XYNMdg3Vpo3SE7xTRVqcJNvrn0d
 sidebar_position: 32
+keywords: 
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - load_balance()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "create_partition() | Python | ORM"
 slug: /python/python/Collection-create_partition
 sidebar_label: "create_partition()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation creates a partition in the target collection. | Python | ORM"
 type: docx
 token: Sh7HdgJOIoJipXx5AoNcicjMnyd
 sidebar_position: 5
+keywords: 
+  - natural language processing
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_partition()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

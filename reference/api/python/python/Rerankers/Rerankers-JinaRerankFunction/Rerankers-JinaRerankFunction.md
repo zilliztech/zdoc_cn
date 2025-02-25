@@ -9,6 +9,16 @@ description: "JinaRerankFunction is a class in milvusmodel that takes a query an
 type: docx
 token: E3opdXwZCoY8igxMjQ1cwsTbnzh
 sidebar_position: 1
+keywords: 
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - JinaRerankFunction
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

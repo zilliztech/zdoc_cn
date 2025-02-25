@@ -9,6 +9,16 @@ description: "This operation in NomicEmbeddingFunction takes a list of text stri
 type: docx
 token: Dsl1dDLBeoGixjxt2lpcFP5ynSA
 sidebar_position: 4
+keywords: 
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - \_\_call\_\_()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

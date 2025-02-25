@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "get_compaction_state() | Python | ORM"
 slug: /python/python/Collection-get_compaction_state
 sidebar_label: "get_compaction_state()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation gets the current compaction state. | Python | ORM"
 type: docx
 token: AXcMd0xiOovIX6xR4ZrcKA15nwh
 sidebar_position: 13
+keywords: 
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_compaction_state()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

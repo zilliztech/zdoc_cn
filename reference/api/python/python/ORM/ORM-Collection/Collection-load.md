@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "load() | Python | ORM"
 slug: /python/python/Collection-load
 sidebar_label: "load()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation loads the data of the current collection into memory. | Python | ORM"
 type: docx
 token: HQDndiGwloWKIexgPCUcEZGenOh
 sidebar_position: 20
+keywords: 
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
+  - nn search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - load()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "release() | Python | ORM"
 slug: /python/python/Partition-release
 sidebar_label: "release()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation releases the data of the current partition from memory. | Python | ORM"
 type: docx
 token: ZQ2RdE2AOoH9bfx4k3Sc3Ny0ngb
 sidebar_position: 9
+keywords: 
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - release()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

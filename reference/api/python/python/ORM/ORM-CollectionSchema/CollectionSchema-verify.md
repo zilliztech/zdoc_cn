@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "verify() | Python | ORM"
 slug: /python/python/CollectionSchema-verify
 sidebar_label: "verify()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation performs final validation checks on the CollectionSchema to detect any obvious problems. | Python | ORM"
 type: docx
 token: KSECdBDcUoIkL7xI4KOc29Ukn1g
 sidebar_position: 5
+keywords: 
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - verify()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

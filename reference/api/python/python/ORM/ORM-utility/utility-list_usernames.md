@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "list_usernames() | Python | ORM"
 slug: /python/python/utility-list_usernames
 sidebar_label: "list_usernames()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists the names of all existing users. | Python | ORM"
 type: docx
 token: RXi3dgtNYogU0cxmTsgcdT72nsc
 sidebar_position: 29
+keywords: 
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_usernames()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

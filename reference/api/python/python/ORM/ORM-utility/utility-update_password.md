@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "update_password() | Python | ORM"
 slug: /python/python/utility-update_password
 sidebar_label: "update_password()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation updates the password for a specific user. | Python | ORM"
 type: docx
 token: SGjed7w9toewDlxmXHKc7BFancf
 sidebar_position: 41
+keywords: 
+  - LLMs
+  - Machine Learning
+  - RAG
+  - NLP
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - update_password()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

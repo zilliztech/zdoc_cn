@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "get_replicas() | Python | ORM"
 slug: /python/python/Collection-get_replicas
 sidebar_label: "get_replicas()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation gets information about the current loaded replica. | Python | ORM"
 type: docx
 token: BQKPdDd5xo8OPgxoXorcMxk0nVb
 sidebar_position: 14
+keywords: 
+  - Audio search
+  - what is semantic search
+  - Embedding model
+  - image similarity search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_replicas()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

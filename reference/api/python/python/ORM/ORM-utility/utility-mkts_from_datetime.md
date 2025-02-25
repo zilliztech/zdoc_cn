@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "mkts_from_datetime() | Python | ORM"
 slug: /python/python/utility-mkts_from_datetime
 sidebar_label: "mkts_from_datetime()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation makes a hybrid timestamp from a Python's datetime.datetime object. | Python | ORM"
 type: docx
 token: LCQTdebkConhUqxwnk7c3EbPnWh
 sidebar_position: 34
+keywords: 
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - mkts_from_datetime()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

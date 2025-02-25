@@ -9,6 +9,16 @@ description: "This operation takes in documents and encodes them into vector emb
 type: docx
 token: FIyedc51So0onWxtPAjcHFkmnHe
 sidebar_position: 2
+keywords: 
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - encode_documents()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

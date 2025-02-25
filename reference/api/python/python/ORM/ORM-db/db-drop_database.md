@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "drop_database() | Python | ORM"
 slug: /python/python/db-drop_database
 sidebar_label: "drop_database()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation drops a database using the provided database name. | Python | ORM"
 type: docx
 token: Y7pOdKR4MoqmvVxcS1TcjqUynMc
 sidebar_position: 2
+keywords: 
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_database()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

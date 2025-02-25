@@ -9,6 +9,16 @@ description: "A MilvusClient instance represents a Python client that connects t
 type: docx
 token: TUrSdmskuoGdFRxFT75c6xhinzc
 sidebar_position: 2
+keywords: 
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - MilvusClient
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---
@@ -39,6 +49,7 @@ MilvusClient(
     uri: str,
     user: str,
     password: str,
+    db_name: str,
     token: str,
     timeout=None,
     **kwargs
@@ -55,8 +66,6 @@ MilvusClient(
     https://inxx-xxxxxxxxxxxxxxxxx.aws-us-west-2.vectordb-uat3.zillizcloud.com:19540
     ```
 
-    For details on finding information on the Zilliz Cloud console, refer to [On Zilliz Cloud Console](/docs/on-zilliz-cloud-console).
-
 - **user** (*string*) -
 
     A valid username used to connect to the specified Zilliz Cloud cluster.
@@ -68,6 +77,10 @@ MilvusClient(
     A valid password used to connect to the specified Zilliz Cloud cluster.
 
     This should be used along with **user**.
+
+- **db_name** (*string*) -
+
+    The name of the database to which the target Milvus instance belongs.
 
 - **token** (*string*) -
 
@@ -97,16 +110,14 @@ from pymilvus import MilvusClient
 # Authentication enabled with a cluster user
 client = MilvusClient(
     uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com:19530",
-    token="user:password", # replace this with your token
+    token="user:password", # replace this with your token,
+    db_name="default"
 )
 ```
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<ul>
-<li><p>Set <strong>uri</strong> to your cluster endpoint. The <strong>token</strong> parameter can be a Zilliz Cloud API key with sufficient permissions or the credentials of a cluster user in the format of <code>username:p@ssw0rd</code>.</p></li>
-<li><p>To find the above information, refer to <a href="/docs/on-zilliz-cloud-console">On Zilliz Cloud Console</a>.</p></li>
-</ul>
+<p>Set <strong>uri</strong> to your cluster endpoint. The <strong>token</strong> parameter can be a Zilliz Cloud API key with sufficient permissions or the credentials of a cluster user in the format of <code>username:p@ssw0rd</code>.</p>
 
 </Admonition>
 

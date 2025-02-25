@@ -9,6 +9,16 @@ description: "BGERerankFunction is a class in milvusmodel that takes a query and
 type: docx
 token: GxAZd9O9gozzhExhMHWcMnXPngh
 sidebar_position: 1
+keywords: 
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - BGERerankFunction
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

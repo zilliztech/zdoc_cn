@@ -9,6 +9,16 @@ description: "This operation takes in documents and encodes them into vector emb
 type: docx
 token: UrG5delwyok3RPx0UBlcdBQ5nZd
 sidebar_position: 1
+keywords: 
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - encode_documents()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

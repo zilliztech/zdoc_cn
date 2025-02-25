@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation renames an existing collection. | Java | v2"
 type: docx
-token: A9XDdBOWEolZ8lxmvcwcNrRInke
+token: CtTvdQVMoo2ec5xbWTPcSzjNnQc
 sidebar_position: 16
+keywords: 
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - renameCollection()
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---

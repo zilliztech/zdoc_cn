@@ -9,6 +9,16 @@ description: "This operation lists the partitions in a specified collection. | P
 type: docx
 token: Dxgqdvlk5o2VScxqmL1ctc1Inqb
 sidebar_position: 5
+keywords: 
+  - rag llm architecture
+  - private llms
+  - nn search
+  - llm eval
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_partitions()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

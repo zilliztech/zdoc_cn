@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "query() | Python | ORM"
 slug: /python/python/Partition-query
 sidebar_label: "query()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation conducts a query on the entity scalar field(s) with a boolean expression. | Python | ORM"
 type: docx
 token: N97pdfkjlo9j61xrtL2cbB79nKe
 sidebar_position: 8
+keywords: 
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - query()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

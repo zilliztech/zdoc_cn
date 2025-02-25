@@ -8,7 +8,17 @@ notebook: false
 description: "This operation lists detailed information about a specific collection. | Python | MilvusClient"
 type: docx
 token: MCkjdiRNKo2HCCxzHReclrgAnbg
-sidebar_position: 7
+sidebar_position: 9
+keywords: 
+  - natural language processing
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describe_collection()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

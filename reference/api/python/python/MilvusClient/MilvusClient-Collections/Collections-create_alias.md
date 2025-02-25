@@ -8,7 +8,17 @@ notebook: false
 description: "This operation creates an alias for an existing collection. | Python | MilvusClient"
 type: docx
 token: Kqlodu0AWoefKvxczcxc1c36nlf
-sidebar_position: 2
+sidebar_position: 4
+keywords: 
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_alias()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

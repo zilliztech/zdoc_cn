@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation drops a user. | Java | v2"
 type: docx
-token: TS6PdnezOou20RxtG64coUpVn2b
+token: RFv2dtZ1qoP9XQxJEGqcgLGUnhc
 sidebar_position: 6
+keywords: 
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - AI Hallucination
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - dropUser()
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---

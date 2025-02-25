@@ -9,6 +9,16 @@ description: "This operation deletes entities by their IDs or with a boolean exp
 type: docx
 token: DWLXdSCYnoPT4ExktRKceEqLnAd
 sidebar_position: 1
+keywords: 
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - delete()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

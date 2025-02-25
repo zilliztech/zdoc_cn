@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "revoke() | Python | ORM"
 slug: /python/python/Role-revoke
 sidebar_label: "revoke()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation revokes a privilege granted to the current role. | Python | ORM"
 type: docx
 token: UUJWdoEnjoXx69xahsScdMVSnzf
 sidebar_position: 10
+keywords: 
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - revoke()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

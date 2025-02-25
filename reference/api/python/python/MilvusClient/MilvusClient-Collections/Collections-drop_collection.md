@@ -8,7 +8,17 @@ notebook: false
 description: "This operation drops a collection. | Python | MilvusClient"
 type: docx
 token: QNB4d2q2ZorIApxpnzqczW2HnL7
-sidebar_position: 9
+sidebar_position: 11
+keywords: 
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_collection()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

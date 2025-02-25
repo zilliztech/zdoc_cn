@@ -8,7 +8,17 @@ notebook: false
 description: "This operation describes a specific role. | Python | MilvusClient"
 type: docx
 token: JJz3dFrE2oJP3AxySWYcJlf4nMh
-sidebar_position: 3
+sidebar_position: 5
+keywords: 
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describe_role()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

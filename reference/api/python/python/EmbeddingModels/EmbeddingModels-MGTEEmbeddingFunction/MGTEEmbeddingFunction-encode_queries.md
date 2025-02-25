@@ -9,6 +9,16 @@ description: "This operation takes in a list of query strings and encodes each q
 type: docx
 token: HEWIdid9BoFMyNxN8Bbc0P3nn6g
 sidebar_position: 2
+keywords: 
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - encode_queries()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

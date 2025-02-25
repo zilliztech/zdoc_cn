@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "get_replicas() | Python | ORM"
 slug: /python/python/Partition-get_replicas
 sidebar_label: "get_replicas()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation gets information about the current loaded replica. | Python | ORM"
 type: docx
 token: YKwldu59qosZBsxdRdSc0l9Hnoe
 sidebar_position: 4
+keywords: 
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_replicas()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

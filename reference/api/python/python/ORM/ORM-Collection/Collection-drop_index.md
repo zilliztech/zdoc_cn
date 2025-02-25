@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "drop_index() | Python | ORM"
 slug: /python/python/Collection-drop_index
 sidebar_label: "drop_index()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation deletes index from the current collection. | Python | ORM"
 type: docx
 token: AtkDdtMAWodFzExARxnco5xLnsg
 sidebar_position: 9
+keywords: 
+  - Unstructured Data
+  - vector database
+  - IVF
+  - knn
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_index()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

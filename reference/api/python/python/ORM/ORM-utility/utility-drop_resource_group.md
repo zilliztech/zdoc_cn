@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "drop_resource_group() | Python | ORM"
 slug: /python/python/utility-drop_resource_group
 sidebar_label: "drop_resource_group()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation drops a resource group. | Python | ORM"
 type: docx
 token: EofGdftYjoQ9E6x8mxLcpbG1nhc
 sidebar_position: 11
+keywords: 
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_resource_group()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

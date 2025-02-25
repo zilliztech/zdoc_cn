@@ -9,6 +9,16 @@ description: "This operation takes in a list of query strings and encodes each q
 type: docx
 token: LrvhdFR5Vo1ZnExohgicdi58njc
 sidebar_position: 2
+keywords: 
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - encode_queries()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

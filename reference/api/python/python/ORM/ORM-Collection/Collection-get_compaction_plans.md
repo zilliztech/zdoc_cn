@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "get_compaction_plans() | Python | ORM"
 slug: /python/python/Collection-get_compaction_plans
 sidebar_label: "get_compaction_plans()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation gets the current compaction plans. | Python | ORM"
 type: docx
 token: D6Q7dq4USotLS3xxMP0cFiGLnsf
 sidebar_position: 12
+keywords: 
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_compaction_plans()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

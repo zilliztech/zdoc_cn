@@ -9,6 +9,16 @@ description: "An AzureConnectParam instance sets connection parameters for a Rem
 type: docx
 token: C2YSddNqZoDNmNxWqqEcuzhKn4f
 sidebar_position: 2
+keywords: 
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - AzureConnectParam
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

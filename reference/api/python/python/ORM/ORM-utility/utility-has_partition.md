@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "has_partition() | Python | ORM"
 slug: /python/python/utility-has_partition
 sidebar_label: "has_partition()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation checks whether a partition exists. | Python | ORM"
 type: docx
 token: KsmadNcXRoElO2xJi5HcJO57nwb
 sidebar_position: 18
+keywords: 
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - has_partition()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

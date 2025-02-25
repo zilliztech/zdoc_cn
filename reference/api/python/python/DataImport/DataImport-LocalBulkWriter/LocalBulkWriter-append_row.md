@@ -9,6 +9,16 @@ description: "This operation appends records to the writer. | Python"
 type: docx
 token: WCxIdVwCpoIaMUxbabWcSRCkn2g
 sidebar_position: 1
+keywords: 
+  - knn
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - append_row()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

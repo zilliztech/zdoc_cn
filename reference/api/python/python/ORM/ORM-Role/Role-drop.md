@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "drop() | Python | ORM"
 slug: /python/python/Role-drop
 sidebar_label: "drop()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation drops an existing role. The operation will succeed if the specified role exists. Otherwise, this operation will fail. | Python | ORM"
 type: docx
 token: KEzNdJPoDoHOjlx2FC8cNcHqngg
 sidebar_position: 3
+keywords: 
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -5,19 +5,19 @@ beta: false
 notebook: false
 description: "Methods for you to manage database. | Node.js"
 type: folder
-token: WLCxfLtfylemvudOJa7cDBXdnsh
-sidebar_position: 4
+token: CEYUfuKoYlVIfod63clcDaS9nxc
+sidebar_position: 2
 sidebar_label: "Database"
 keywords: 
-  - Zilliz
-  - milvus vector database
-  - milvus db
-  - milvus vector db
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
   - zilliz
   - zilliz cloud
   - cloud
   - Database
-  - node
+  - nodejs25
 displayed_sidebar: nodeSidebar
 ---
 

@@ -9,6 +9,16 @@ description: "This operation takes in documents and encodes them into vector emb
 type: docx
 token: MOPzdeyjzoO8DlxAlL0clX00nBc
 sidebar_position: 1
+keywords: 
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - encode_documents()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

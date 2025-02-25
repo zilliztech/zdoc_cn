@@ -9,6 +9,16 @@ description: "This operation displays the statistics collected on a specific par
 type: docx
 token: Jjbsd2I8doQ9pBxBp57ckRdZnZd
 sidebar_position: 3
+keywords: 
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - AI Hallucination
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_partition_stats()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

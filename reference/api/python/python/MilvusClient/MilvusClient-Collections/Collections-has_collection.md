@@ -8,7 +8,17 @@ notebook: false
 description: "This operation checks whether a specific collection exists. | Python | MilvusClient"
 type: docx
 token: SSQ6dFGdxouy7hxRwCOcatnEn0e
-sidebar_position: 11
+sidebar_position: 14
+keywords: 
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - has_collection()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "query_iterator() | Python | ORM"
 slug: /python/python/Collection-query_iterator
 sidebar_label: "query_iterator()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation returns a Python iterator for you to iterate over the query results. It is useful especially when the query result contains a large volume of data. | Python | ORM"
 type: docx
 token: LffbdiHhzoHe08xivF9ccmoen5d
 sidebar_position: 23
+keywords: 
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - query_iterator()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

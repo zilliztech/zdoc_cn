@@ -9,6 +9,16 @@ description: "InstructorEmbeddingFunction is a class in pymilvus that handles en
 type: docx
 token: YmnmdEeHFoctZexccqNcr8xXn8c
 sidebar_position: 3
+keywords: 
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - InstructorEmbeddingFunction
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -8,6 +8,16 @@ type: folder
 token: Ph7xfldrplFoihdiSAkciCuenyh
 sidebar_position: 5
 sidebar_label: "Rerankers"
+keywords: 
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Rerankers
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 ---
 

@@ -8,7 +8,17 @@ notebook: false
 description: "This operation creates an index for a specific collection. | Python | MilvusClient"
 type: docx
 token: B3n3db0idoia02xXxJfcONK8nRh
-sidebar_position: 2
+sidebar_position: 3
+keywords: 
+  - nn search
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_index()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

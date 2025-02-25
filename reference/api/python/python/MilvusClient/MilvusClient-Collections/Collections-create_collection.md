@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation supports creating a collection in two distinct ways quick setup or custom setup. | Python | MilvusClient"
 type: docx
-token: TziHdCu4VoURrfxAMsUcsRhQnub
-sidebar_position: 3
+token: H7eOdq9hOo7so7xes5LchIVwnrb
+sidebar_position: 5
+keywords: 
+  - knn
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_collection()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---
@@ -176,6 +186,14 @@ create_collection(
         - **collection.ttl.seconds** (*int*)
 
             The time-to-live (TTL) of a collection in seconds.
+
+        - **mmap.enabled** (*bool*) -
+
+            Whether to enable mmap for the raw data and indexes of all fields in the collection.
+
+        - **partitionkey.isolation** (bool) -
+
+            Whether to enable partition key isolation. For details, refer to [Use Partition Key](/docs/use-partition-key).
 
 **RETURN TYPE:**
 

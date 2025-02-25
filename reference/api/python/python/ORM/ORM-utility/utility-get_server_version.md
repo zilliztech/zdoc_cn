@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "get_server_version() | Python | ORM"
 slug: /python/python/utility-get_server_version
 sidebar_label: "get_server_version()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation checks the version of the Zilliz Cloud cluster. | Python | ORM"
 type: docx
 token: PoPkdkzSnofUihxzKLqcw7hYnrf
 sidebar_position: 16
+keywords: 
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_server_version()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

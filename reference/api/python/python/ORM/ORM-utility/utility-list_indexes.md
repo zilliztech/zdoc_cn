@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "list_indexes() | Python | ORM"
 slug: /python/python/utility-list_indexes
 sidebar_label: "list_indexes()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists all indexes of a specific collection. | Python | ORM"
 type: docx
 token: XLepdUCcTow6rpx5vxxcbLXZnyb
 sidebar_position: 25
+keywords: 
+  - Faiss
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_indexes()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

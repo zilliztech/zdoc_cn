@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "drop() | Python | ORM"
 slug: /python/python/Partition-drop
 sidebar_label: "drop()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation drops the current partition. | Python | ORM"
 type: docx
 token: D3sndK8DgoqDkUxaNGcctwcSnuE
 sidebar_position: 2
+keywords: 
+  - RAG
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

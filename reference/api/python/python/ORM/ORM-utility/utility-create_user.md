@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "create_user() | Python | ORM"
 slug: /python/python/utility-create_user
 sidebar_label: "create_user()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation creates a new user with a corresponding password. | Python | ORM"
 type: docx
 token: N44ndTSrgoEBx7xCID5cXRS7n1c
 sidebar_position: 5
+keywords: 
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_user()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

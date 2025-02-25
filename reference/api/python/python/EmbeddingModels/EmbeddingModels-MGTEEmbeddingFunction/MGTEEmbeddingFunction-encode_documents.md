@@ -9,6 +9,16 @@ description: "This operation takes in documents and encodes them into vector emb
 type: docx
 token: GyrmdRjGZoOFKdxsYyCcvNG7npg
 sidebar_position: 1
+keywords: 
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - encode_documents()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

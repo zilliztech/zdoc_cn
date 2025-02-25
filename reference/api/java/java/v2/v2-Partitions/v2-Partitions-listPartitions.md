@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation lists the partitions in a specified collection. | Java | v2"
 type: docx
-token: M2l0dCikPouRErxA1bccCswpnKh
+token: RJcgdJpGDouomlxPTqZc5S8Lngc
 sidebar_position: 4
+keywords: 
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - listPartitions()
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---

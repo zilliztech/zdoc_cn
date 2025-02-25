@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation describes a specific index. | Java | v2"
 type: docx
-token: MGX2dDWoooZ982x3pcNcbFzcnXb
+token: WUgedTmyZoW4clxSgHVcl1ZtnZl
 sidebar_position: 2
+keywords: 
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describeIndex()
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---

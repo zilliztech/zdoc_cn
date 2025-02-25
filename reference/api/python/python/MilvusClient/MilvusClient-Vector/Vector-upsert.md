@@ -8,7 +8,17 @@ notebook: false
 description: "This operation inserts or updates data in a specific collection. | Python | MilvusClient"
 type: docx
 token: WRYFdoDe8ofrlDxxTxQcdoJjnAh
-sidebar_position: 6
+sidebar_position: 8
+keywords: 
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - upsert()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

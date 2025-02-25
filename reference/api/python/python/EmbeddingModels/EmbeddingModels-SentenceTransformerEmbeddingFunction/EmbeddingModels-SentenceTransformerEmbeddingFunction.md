@@ -9,6 +9,16 @@ description: "SentenceTransformerEmbeddingFunction is a class in pymilvus that h
 type: docx
 token: JOFedA4h8otTjHxsYQ7cnjsunHd
 sidebar_position: 3
+keywords: 
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - SentenceTransformerEmbeddingFunction
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

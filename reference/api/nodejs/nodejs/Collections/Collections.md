@@ -5,19 +5,19 @@ beta: false
 notebook: false
 description: "Methods for you to manage collections. | Node.js"
 type: folder
-token: WKkof79XQltPmgdgU18c2tLUnOd
-sidebar_position: 3
+token: SU7xfa1bal8yS0dioBmcCncYn5c
+sidebar_position: 1
 sidebar_label: "Collections"
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
   - zilliz
   - zilliz cloud
   - cloud
   - Collections
-  - node
+  - nodejs25
 displayed_sidebar: nodeSidebar
 ---
 

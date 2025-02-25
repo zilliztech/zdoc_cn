@@ -10,15 +10,15 @@ type: docx
 token: AJ96d6Aguos3FAxWMDxcjzqpnSg
 sidebar_position: 4
 keywords: 
-  - AI Hallucination
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
   - zilliz
   - zilliz cloud
   - cloud
   - query()
-  - node
+  - nodejs25
 displayed_sidebar: nodeSidebar
 
 ---

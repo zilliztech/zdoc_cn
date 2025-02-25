@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "drop_partition() | Python | ORM"
 slug: /python/python/Collection-drop_partition
 sidebar_label: "drop_partition()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation drops a specified partition from the current collection. | Python | ORM"
 type: docx
 token: Aym2dpBuIo81mExCqyLcSWhunBe
 sidebar_position: 10
+keywords: 
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_partition()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

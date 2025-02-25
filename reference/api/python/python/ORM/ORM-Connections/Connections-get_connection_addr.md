@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "get_connection_addr() | Python | ORM"
 slug: /python/python/Connections-get_connection_addr
 sidebar_label: "get_connection_addr()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation retrieves the configuration of the specified connection by alias. | Python | ORM"
 type: docx
 token: H2zBdRHVtovNQGxvb0xcwpSKnBd
 sidebar_position: 5
+keywords: 
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_connection_addr()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

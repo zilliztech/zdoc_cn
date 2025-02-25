@@ -8,7 +8,17 @@ notebook: false
 description: "This operation grants a role to a user. | Python | MilvusClient"
 type: docx
 token: DsnpdZuDGo77TYxFuYvcDpOgnIf
-sidebar_position: 8
+sidebar_position: 12
+keywords: 
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - grant_role()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

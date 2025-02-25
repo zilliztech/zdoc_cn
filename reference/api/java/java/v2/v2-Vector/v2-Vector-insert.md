@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation inserts data into a specific collection. | Java | v2"
 type: docx
-token: W0vxd7JhJo0trdx22VJcR2wgnud
-sidebar_position: 3
+token: P0XRd2Mgfo1uG6xk47icWRd4n6b
+sidebar_position: 4
+keywords: 
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - insert()
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---
@@ -51,7 +61,7 @@ insert(InsertReq.builder()
 
     <Admonition type="info" icon="📘" title="Notes">
 
-    <p>In Java SDK versions v2.3.7 or earlier versions, the input is a <code>fastjson.JSONObject</code>. But <code>fastjson</code> is not recommended to use now because of its unsafe deserialization vulnerability. Therefore, replace <code>fastjson</code> with <code>gson</code> if you use the Java SDK of v2.3.8 or later releases.</p>
+    <p>In Java SDK versions v2.4.1 or earlier versions, the input is a <code>fastjson.JSONObject</code>. But <code>fastjson</code> is not recommended to use now because of its unsafe deserialization vulnerability. Therefore, replace <code>fastjson</code> with <code>gson</code> if you use the Java SDK of v2.4.2 or later releases.</p>
 
     </Admonition>
 

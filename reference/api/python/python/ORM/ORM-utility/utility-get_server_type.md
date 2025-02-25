@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "get_server_type() | Python | ORM"
 slug: /python/python/utility-get_server_type
 sidebar_label: "get_server_type()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation checks the type of the Zilliz Cloud cluster. | Python | ORM"
 type: docx
 token: UOIddRBUXotHvyx4Yyocer0mnId
 sidebar_position: 15
+keywords: 
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_server_type()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

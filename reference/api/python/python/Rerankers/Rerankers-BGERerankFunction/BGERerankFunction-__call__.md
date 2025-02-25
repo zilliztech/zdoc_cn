@@ -9,6 +9,16 @@ description: "This operation in BGERerankFunction takes in a query and document 
 type: docx
 token: C2AbdIReZos7HwxiZXIcyW8nnm1
 sidebar_position: 2
+keywords: 
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - \_\_call\_\_()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

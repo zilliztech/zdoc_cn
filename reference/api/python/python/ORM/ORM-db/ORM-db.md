@@ -1,13 +1,23 @@
 ---
 title: "db | Python | ORM"
 slug: /python/ORM-db
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "Functions related to manipulating Milvus databases. | Python | ORM"
 type: folder
 token: E2Zlf8PdXlx097dT2sNchgqpnbF
 sidebar_position: 4
 sidebar_label: "db"
+keywords: 
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - db
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 ---
 

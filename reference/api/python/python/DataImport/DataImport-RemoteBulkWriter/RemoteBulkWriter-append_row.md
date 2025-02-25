@@ -9,6 +9,16 @@ description: "This operation appends records to the writer. | Python"
 type: docx
 token: F1MFdP8VvoMu17x4Vg9cH6ztnqb
 sidebar_position: 1
+keywords: 
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - append_row()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

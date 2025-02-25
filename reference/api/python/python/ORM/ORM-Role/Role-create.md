@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "create() | Python | ORM"
 slug: /python/python/Role-create
 sidebar_label: "create()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation creates the current role. | Python | ORM"
 type: docx
 token: G3h4d3jx6oXFHBxFZlyc9jLKnTO
 sidebar_position: 2
+keywords: 
+  - rag llm architecture
+  - private llms
+  - nn search
+  - llm eval
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "compact() | Python | ORM"
 slug: /python/python/Collection-compact
 sidebar_label: "compact()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation compacts and merges small segments in the current collection. | Python | ORM"
 type: docx
 token: BHx6dnSmPoaqHAxKCvncbuk9nWb
 sidebar_position: 2
+keywords: 
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - compact()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

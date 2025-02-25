@@ -9,6 +9,16 @@ description: "This operation in MistralAIEmbeddingFunction takes a list of text 
 type: docx
 token: Z23IddhHhom7AyxDMXecLORVnDh
 sidebar_position: 4
+keywords: 
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - \_\_call\_\_()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

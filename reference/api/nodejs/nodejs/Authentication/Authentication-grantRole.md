@@ -10,15 +10,15 @@ type: docx
 token: LPJsdEnvwo6apcxjhZgc3rpDnuc
 sidebar_position: 8
 keywords: 
-  - llm eval
   - Sparse vs Dense
   - Dense vector
   - Hierarchical Navigable Small Worlds
+  - Dense embedding
   - zilliz
   - zilliz cloud
   - cloud
   - grantRole()
-  - node
+  - nodejs25
 displayed_sidebar: nodeSidebar
 
 ---

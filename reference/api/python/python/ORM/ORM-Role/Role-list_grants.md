@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "list_grants() | Python | ORM"
 slug: /python/python/Role-list_grants
 sidebar_label: "list_grants()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists all privileges granted to the current role. | Python | ORM"
 type: docx
 token: YRoGdgQmWoIEaJx84ICcHTILnMe
 sidebar_position: 8
+keywords: 
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_grants()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

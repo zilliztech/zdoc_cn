@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "flush() | Python | ORM"
 slug: /python/python/Collection-flush
 sidebar_label: "flush()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation seals all segments in the collection. Any insertions after this operation will generate a new segment. | Python | ORM"
 type: docx
 token: VdiwdqQ9iofbkoxcc8Kcqk5gnhZ
 sidebar_position: 11
+keywords: 
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - flush()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -8,7 +8,17 @@ notebook: false
 description: "This operation releases the data of a specific collection from memory. | Python | MilvusClient"
 type: docx
 token: PRR7dRfi8o1s61xFRovccAdRnHe
-sidebar_position: 10
+sidebar_position: 13
+keywords: 
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - cosine distance
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - release_collection()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

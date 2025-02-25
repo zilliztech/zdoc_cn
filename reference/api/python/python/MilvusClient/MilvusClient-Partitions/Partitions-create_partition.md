@@ -9,6 +9,16 @@ description: "This operation creates a partition in the target collection. | Pyt
 type: docx
 token: I6hvdlYUuoUaw3xWqSnce4Fin9g
 sidebar_position: 1
+keywords: 
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_partition()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

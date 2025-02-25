@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "insert() | Python | ORM"
 slug: /python/python/Partition-insert
 sidebar_label: "insert()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation inserts data into the current partition. | Python | ORM"
 type: docx
 token: QXDxdv36FoVgjcxDV1gcDwWXnsd
 sidebar_position: 5
+keywords: 
+  - LLMs
+  - Machine Learning
+  - RAG
+  - NLP
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - insert()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

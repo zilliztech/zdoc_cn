@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "release() | Python | ORM"
 slug: /python/python/Collection-release
 sidebar_label: "release()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation releases the data of the current collection from memory. | Python | ORM"
 type: docx
 token: CBwkdDs7MoKkVKx0kJgcPUNxn6s
 sidebar_position: 24
+keywords: 
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - IVF
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - release()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

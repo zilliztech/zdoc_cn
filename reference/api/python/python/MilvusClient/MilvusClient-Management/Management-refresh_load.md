@@ -8,7 +8,17 @@ notebook: false
 description: "This operation loads the unloaded data of a loaded collection into memory. | Python | MilvusClient"
 type: docx
 token: X3NXdtC2koiAxyxhcUBcv38Wnsh
-sidebar_position: 9
+sidebar_position: 12
+keywords: 
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - refresh_load()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

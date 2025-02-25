@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "search() | Python | ORM"
 slug: /python/python/Partition-search
 sidebar_label: "search()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation conducts a vector similarity search with an optional scalar filtering expression. | Python | ORM"
 type: docx
 token: XW72dhBuNoqNWhxUQLtcfa6Fnwd
 sidebar_position: 10
+keywords: 
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - search()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -9,6 +9,16 @@ description: "This operation commits the appended data. | Python"
 type: docx
 token: EtBDdoGaFo3bOExKxCHcKgpenib
 sidebar_position: 2
+keywords: 
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - commit()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

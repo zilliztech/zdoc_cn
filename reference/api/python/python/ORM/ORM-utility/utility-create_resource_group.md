@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "create_resource_group() | Python | ORM"
 slug: /python/python/utility-create_resource_group
 sidebar_label: "create_resource_group()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation creates a new resource group. | Python | ORM"
 type: docx
 token: X5qsdhFQ5oOhkcxOprzcOZq4nMc
 sidebar_position: 4
+keywords: 
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_resource_group()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "delete() | Python | ORM"
 slug: /python/python/Collection-delete
 sidebar_label: "delete()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation deletes entities with a boolean expression. | Python | ORM"
 type: docx
 token: TJMVdi4U2oBFnAxO95jctzVAnzg
 sidebar_position: 6
+keywords: 
+  - natural language processing
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - delete()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

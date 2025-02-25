@@ -10,15 +10,15 @@ type: docx
 token: TjqHdZqO1oSwwYxuny2cchWzn6S
 sidebar_position: 7
 keywords: 
+  - Multimodal search
   - vector search algorithms
   - Question answering system
   - llm-as-a-judge
-  - hybrid vector search
   - zilliz
   - zilliz cloud
   - cloud
   - describeCollection()
-  - node
+  - nodejs25
 displayed_sidebar: nodeSidebar
 
 ---

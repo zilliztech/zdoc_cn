@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "remove_connection() | Python | ORM"
 slug: /python/python/Connections-remove_connection
 sidebar_label: "remove_connection()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation removes the connection from the registry by the given alias and disconnects if connected. | Python | ORM"
 type: docx
 token: L4KSdOVTEotaiyxjTddcVRDhn3E
 sidebar_position: 8
+keywords: 
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - AI Hallucination
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - remove_connection()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -8,7 +8,17 @@ notebook: false
 description: "This operation assigns a privilege to a role. | Python | MilvusClient"
 type: docx
 token: W39Wdr7S6ohrtfxI8r7cyTeInlb
-sidebar_position: 7
+sidebar_position: 10
+keywords: 
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - grant_privilege()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---
@@ -108,8 +118,8 @@ from pymilvus import MilvusClient
 
 # 1. Create a milvus client
 client = MilvusClient(
-    uri="http://localhost:19530",
-    token="root:Milvus"
+    uri="YOUR_CLUSTER_ENDPOINT",
+    token="YOUR_CLUSTER_TOKEN"
 )
 
 read_only_privileges = [

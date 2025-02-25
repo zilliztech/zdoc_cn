@@ -8,7 +8,17 @@ notebook: false
 description: "This operation describes a specific user. | Python | MilvusClient"
 type: docx
 token: Wz3HdtvPCoEquvxFY7PcDHxcnEe
-sidebar_position: 4
+sidebar_position: 6
+keywords: 
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describe_user()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

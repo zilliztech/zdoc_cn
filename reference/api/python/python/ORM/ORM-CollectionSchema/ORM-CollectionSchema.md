@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "CollectionSchema | Python | ORM"
 slug: /python/python/ORM-CollectionSchema
 sidebar_label: "CollectionSchema"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "A CollectionSchema instance represents the schema of a collection. A schema sketches the structure of a collection. | Python | ORM"
 type: docx
-token: WToudUwm4oVXeKxLg3jcj3IAnjh
+token: CmFKd9eG2oE6xmx9dIGcVPycnth
 sidebar_position: 2
+keywords: 
+  - natural language processing
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - CollectionSchema
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

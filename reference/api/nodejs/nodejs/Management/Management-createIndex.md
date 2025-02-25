@@ -7,18 +7,18 @@ beta: false
 notebook: false
 description: "This operation creates an index for a specific collection. | Node.js"
 type: docx
-token: WFRodQlfKoPHTUxbBYzcLug8nsd
+token: Nu0Id3wzGoJIFyxkC7IcmjAznNf
 sidebar_position: 1
 keywords: 
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
   - zilliz
   - zilliz cloud
   - cloud
   - createIndex()
-  - node
+  - nodejs25
 displayed_sidebar: nodeSidebar
 
 ---
@@ -39,7 +39,6 @@ createIndex(data): Promise<ResStatus>
 ```javascript
 milvusClient.createIndex([
     {
-       db_name: string,
        collection_name: string,
        field_name: string,
        index_name?: string,
@@ -52,10 +51,6 @@ milvusClient.createIndex([
 ```
 
 **PARAMETERS:**
-
-- **db_name** (*string*) -
-
-    The name of the database that holds the target collection.
 
 - **collection_name** (*string*) -
 
@@ -79,7 +74,9 @@ milvusClient.createIndex([
 
 - **metric_type** (*string*) -
 
-    The metric type used to measure vector distance.
+    The metric type used to measure vector distance. Possible values: `IP`, `L2`, `COSINE`, `HAMMING`, `JACCARD`
+
+    This is available only when the specified field is a vector field.
 
 - **params** (*string*) -
 

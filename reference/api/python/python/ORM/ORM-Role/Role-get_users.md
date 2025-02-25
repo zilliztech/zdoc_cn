@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "get_users() | Python | ORM"
 slug: /python/python/Role-get_users
 sidebar_label: "get_users()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists all users associated with the current role. | Python | ORM"
 type: docx
 token: CCOhd671iog6rRxu8aOcaPncnLK
 sidebar_position: 4
+keywords: 
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - get_users()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

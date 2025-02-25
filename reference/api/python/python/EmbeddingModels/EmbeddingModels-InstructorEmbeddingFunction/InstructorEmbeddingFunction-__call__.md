@@ -9,6 +9,16 @@ description: "This operation in InstructorEmbeddingFunction takes a list of text
 type: docx
 token: VmAIdW9J2oH6iWxDh2PcJYfRnne
 sidebar_position: 4
+keywords: 
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - \_\_call\_\_()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

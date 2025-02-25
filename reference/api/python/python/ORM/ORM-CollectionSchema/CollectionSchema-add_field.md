@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "add_field() | Python | ORM"
 slug: /python/python/CollectionSchema-add_field
 sidebar_label: "add_field()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation adds a field to the schema of a collection. | Python | ORM"
 type: docx
-token: TG3Rd9aM5offvFxKy2CcKXn9nWc
+token: H9IFdpWWUouzXOxKlx9cImP8nnd
 sidebar_position: 1
+keywords: 
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - add_field()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---
@@ -25,7 +35,8 @@ This operation adds a field to the schema of a collection.
 ```python
 add_field(
     field_name: str,
-    datatype: DataType
+    datatype: DataType,
+    **kwargs
 )
 ```
 

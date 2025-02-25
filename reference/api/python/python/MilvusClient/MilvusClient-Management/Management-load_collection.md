@@ -8,7 +8,17 @@ notebook: false
 description: "This operation loads the data of a specific collection into memory. | Python | MilvusClient"
 type: docx
 token: FLmWdFP9Zo3JcixOEgucU8JMnLc
-sidebar_position: 7
+sidebar_position: 10
+keywords: 
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - load_collection()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "rename_collection() | Python | ORM"
 slug: /python/python/utility-rename_collection
 sidebar_label: "rename_collection()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation renames an existing collection and optionally moves the collection to a new database. | Python | ORM"
 type: docx
 token: M0qRdF1cLokrxvxyrXScJ64FnEe
 sidebar_position: 37
+keywords: 
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - rename_collection()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

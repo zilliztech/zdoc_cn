@@ -9,6 +9,16 @@ description: "This operation drops a specified partition from the current collec
 type: docx
 token: EMI8dM8uooIAFPxVfffcoqRwnZf
 sidebar_position: 2
+keywords: 
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_partition()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "transfer_replica() | Python | ORM"
 slug: /python/python/utility-transfer_replica
 sidebar_label: "transfer_replica()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation transfers a specific number of replicas between resource groups. | Python | ORM"
 type: docx
 token: SuePdciB0o4du5xtpIhcMVyYnPb
 sidebar_position: 40
+keywords: 
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - transfer_replica()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

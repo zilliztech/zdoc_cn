@@ -9,6 +9,16 @@ description: "This operation takes in a list of query strings and encodes each q
 type: docx
 token: KBujdxXhko2zJjx4hFmcsHGhn4g
 sidebar_position: 2
+keywords: 
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - encode_queries()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

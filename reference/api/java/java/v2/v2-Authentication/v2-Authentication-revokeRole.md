@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation revokes the role assigned to a user. | Java | v2"
 type: docx
-token: I3TpdzCiroOEgfxElmhcJvBfn2d
+token: Znb7dcNoeobIkkxGLGfcpVfUnIX
 sidebar_position: 12
+keywords: 
+  - vector database
+  - IVF
+  - knn
+  - Image Search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - revokeRole()
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---

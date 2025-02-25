@@ -9,6 +9,16 @@ description: "MistralAIEmbeddingFunction is a class in pymilvus that handles enc
 type: docx
 token: CvxodXz8OoWXrlxD7OVcqqJLn8e
 sidebar_position: 3
+keywords: 
+  - nn search
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - MistralAIEmbeddingFunction
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

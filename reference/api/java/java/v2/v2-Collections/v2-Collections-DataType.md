@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Java | v2"
 type: docx
-token: P85rdatjZosvEfxCq7TcFRy0nBe
+token: QYPIdgWL7oDWrWxVUx0clo32nz4
 sidebar_position: 7
+keywords: 
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - DataType
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---

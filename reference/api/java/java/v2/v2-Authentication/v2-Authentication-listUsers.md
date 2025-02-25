@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation lists the names of all existing users. | Java | v2"
 type: docx
-token: I1SGdWLnKoikBDxTQ3scuA91nCg
+token: EfM3drSXlo4Yzyxq2GpcmvoHnTm
 sidebar_position: 10
+keywords: 
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - listUsers()
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---

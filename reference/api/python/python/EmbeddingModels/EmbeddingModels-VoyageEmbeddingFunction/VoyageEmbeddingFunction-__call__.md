@@ -9,6 +9,16 @@ description: "This operation in VoyageEmbeddingFunction takes a list of text str
 type: docx
 token: DQFbdMhfcodFuxxhYFeccDzEnkf
 sidebar_position: 4
+keywords: 
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - \_\_call\_\_()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "create_alias() | Python | ORM"
 slug: /python/python/utility-create_alias
 sidebar_label: "create_alias()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation creates an alias for an existing collection. | Python | ORM"
 type: docx
 token: DthMdlg8Lozw89xNz4TcBv1LnOe
 sidebar_position: 3
+keywords: 
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_alias()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

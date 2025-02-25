@@ -8,7 +8,17 @@ notebook: false
 description: "This is an enumeration that provides the following constants. | Python | MilvusClient"
 type: docx
 token: JiN3dU8zwoPdgBxxpw6c0JkUnze
-sidebar_position: 5
+sidebar_position: 7
+keywords: 
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - DataType
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

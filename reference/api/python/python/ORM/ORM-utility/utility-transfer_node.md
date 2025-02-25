@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "transfer_node() | Python | ORM"
 slug: /python/python/utility-transfer_node
 sidebar_label: "transfer_node()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation moves a specific number of query nodes from the source resource group to the target resource group. | Python | ORM"
 type: docx
 token: QHcpd1aJzo5aYbxJtMXc58een4f
 sidebar_position: 39
+keywords: 
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - open source vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - transfer_node()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

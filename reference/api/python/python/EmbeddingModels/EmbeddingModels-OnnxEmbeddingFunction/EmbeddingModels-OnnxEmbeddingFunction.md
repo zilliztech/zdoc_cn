@@ -9,6 +9,16 @@ description: "OnnxEmbeddingFunction is a class in pymilvus that handles encoding
 type: docx
 token: MVLRdU9nPonUeExs7ogctwZ1n4c
 sidebar_position: 3
+keywords: 
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - OnnxEmbeddingFunction
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

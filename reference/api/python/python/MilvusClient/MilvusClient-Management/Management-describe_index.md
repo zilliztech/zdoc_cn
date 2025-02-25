@@ -8,7 +8,17 @@ notebook: false
 description: "This operation describes a specific index. | Python | MilvusClient"
 type: docx
 token: WhsHdyIgyoFlsQxNJt9cFCTxnDe
-sidebar_position: 3
+sidebar_position: 4
+keywords: 
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describe_index()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

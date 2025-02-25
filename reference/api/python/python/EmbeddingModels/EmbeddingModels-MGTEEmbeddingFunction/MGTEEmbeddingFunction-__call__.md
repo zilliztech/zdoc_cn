@@ -9,6 +9,16 @@ description: "This operation in MGTEEmbeddingFunction takes a list of text strin
 type: docx
 token: L4PUdEhrpoS1Q5xN3m2chVVEnWg
 sidebar_position: 4
+keywords: 
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - RAG
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - \_\_call\_\_()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

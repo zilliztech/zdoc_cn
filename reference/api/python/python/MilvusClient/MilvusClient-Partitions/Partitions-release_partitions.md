@@ -9,6 +9,16 @@ description: "This operation releases the partitions in a specified collection f
 type: docx
 token: VblKdUEU4o4t31xcFiicIGtjn9g
 sidebar_position: 7
+keywords: 
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - release_partitions()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

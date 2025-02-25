@@ -5,9 +5,19 @@ beta: false
 notebook: false
 description: "Methods for you to index, load, and release a collection. | Java | v2"
 type: folder
-token: UqeGfuMkilgT1HdhoyGc08FznEt
-sidebar_position: 5
+token: MTBuf5wQ7lardCddEtCc4R2uncb
+sidebar_position: 2
 sidebar_label: "Management"
+keywords: 
+  - vector database example
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Management
+  - javaV225
 displayed_sidebar: javaSidebar
 ---
 

@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "using_database() | Python | ORM"
 slug: /python/python/db-using_database
 sidebar_label: "using_database()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation sets a database as the default for the current connection. | Python | ORM"
 type: docx
 token: GXXTd7JIgoUKhzxiI6ncWtwjnVc
 sidebar_position: 4
+keywords: 
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - using_database()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

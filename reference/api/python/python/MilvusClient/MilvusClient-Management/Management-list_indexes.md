@@ -8,7 +8,17 @@ notebook: false
 description: "This operation lists all indexes of a specific collection. | Python | MilvusClient"
 type: docx
 token: ZqmudJWyFonUKGxAxXncYrLZn2e
-sidebar_position: 6
+sidebar_position: 9
+keywords: 
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_indexes()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

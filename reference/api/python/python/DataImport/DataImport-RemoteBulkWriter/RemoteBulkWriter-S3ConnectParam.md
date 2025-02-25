@@ -9,6 +9,16 @@ description: "An S3ConnectParam instance sets connection parameters for a Remote
 type: docx
 token: CSpOd0XgWoVAhzx5xbVcpCVfnPg
 sidebar_position: 5
+keywords: 
+  - Machine Learning
+  - RAG
+  - NLP
+  - Neural Network
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - S3ConnectParam
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

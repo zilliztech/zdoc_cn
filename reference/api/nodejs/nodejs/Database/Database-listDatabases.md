@@ -7,18 +7,18 @@ beta: false
 notebook: false
 description: "This operation lists all existing databases. | Node.js"
 type: docx
-token: IgUndv7TCoRpWOxS5hkcXrypndd
+token: Kp9Dd2dIgoxyDixuqtqctPZXnFb
 sidebar_position: 3
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud
   - listDatabases()
-  - node
+  - nodejs25
 displayed_sidebar: nodeSidebar
 
 ---

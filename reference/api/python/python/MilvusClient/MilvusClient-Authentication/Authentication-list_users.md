@@ -8,7 +8,17 @@ notebook: false
 description: "This operation lists the names of all existing users. | Python | MilvusClient"
 type: docx
 token: EZ2YdBHoDoRTlxx91tscffm1nSb
-sidebar_position: 10
+sidebar_position: 15
+keywords: 
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_users()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

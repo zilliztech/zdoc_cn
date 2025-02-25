@@ -9,6 +9,16 @@ description: "This operation in VoyageRerankFunction takes in a query and docume
 type: docx
 token: N2aHdla1Uohk1HxGyPHcdG4lnnb
 sidebar_position: 2
+keywords: 
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - AI Hallucination
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - \_\_call\_\_()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

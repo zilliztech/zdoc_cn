@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "index() | Python | ORM"
 slug: /python/python/Collection-index
 sidebar_label: "index()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation gets the specified index of the current collection. | Python | ORM"
 type: docx
 token: RkQ8dnWDHo3DiDxiCVRcP1xPnob
 sidebar_position: 18
+keywords: 
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - index()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

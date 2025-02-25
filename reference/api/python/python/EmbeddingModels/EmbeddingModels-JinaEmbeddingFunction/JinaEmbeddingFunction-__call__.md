@@ -9,6 +9,16 @@ description: "This operation in JinaEmbeddingFunction takes a list of text strin
 type: docx
 token: Yf9GddNheoKrFCxcUeYc7NHjnVb
 sidebar_position: 4
+keywords: 
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - \_\_call\_\_()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

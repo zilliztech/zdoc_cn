@@ -9,6 +9,16 @@ description: "This operation takes in a list of query strings and encodes each q
 type: docx
 token: SptWdOyFqoGM5VxVS16cofqfnDg
 sidebar_position: 2
+keywords: 
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - encode_queries()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -8,7 +8,17 @@ notebook: false
 description: "This operation lists all custom roles. | Python | MilvusClient"
 type: docx
 token: MApVdDl17oU8OixzbMPcgceKnOh
-sidebar_position: 9
+sidebar_position: 14
+keywords: 
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_roles()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

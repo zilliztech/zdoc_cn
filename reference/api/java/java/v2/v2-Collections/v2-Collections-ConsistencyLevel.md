@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Java | v2"
 type: docx
-token: ZYqWdyQlEoZTtKxt2gVcKeLMnhf
+token: Q8IidbqKMopplgxSxaicS2o9nwc
 sidebar_position: 3
+keywords: 
+  - RAG
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - ConsistencyLevel
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---

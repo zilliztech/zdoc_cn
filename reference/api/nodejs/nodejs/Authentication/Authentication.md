@@ -6,18 +6,18 @@ notebook: false
 description: "Methods related to implement role-based access control to your resources. | Node.js"
 type: folder
 token: H1JWfZh74lkVhgdfGiKcQfsinPg
-sidebar_position: 1
+sidebar_position: 6
 sidebar_label: "Authentication"
 keywords: 
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
   - zilliz
   - zilliz cloud
   - cloud
   - Authentication
-  - node
+  - nodejs25
 displayed_sidebar: nodeSidebar
 ---
 

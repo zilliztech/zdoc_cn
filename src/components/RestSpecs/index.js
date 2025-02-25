@@ -260,7 +260,9 @@ const Tab = ({ name, id, content, lang, target, selected, setSelected }) => {
     )
 }
 
-const AnyOf = ({ name, description, arr, required, lang, target, onValueChange }) => {
+const AnyOf = (props) => {
+    const { name, arr, required, lang, target, onValueChange } = props
+    const description = lang === 'en-US' ? props.description : props["x-i18n"] ? props["x-i18n"][lang]['description'] : props.description
     const r = getRandomString(5)
 
     const defaultValue = (arr[0].label ? arr[0].label : `OPTION 1`).toUpperCase()
@@ -280,7 +282,7 @@ const AnyOf = ({ name, description, arr, required, lang, target, onValueChange }
                 <span className={styles.label}>anyOf</span>
                 { required && <span className={styles.required}>required</span> }
             </div>
-            <div className={styles.description} dangerouslySetInnerHTML={{__html: description ? textFilter(description, target) : `<i>${i18n[lang]["to.be.added.soon"]}</i>`}}></div>
+            <div className={styles.description} dangerouslySetInnerHTML={{__html: description ? description : `<i>${i18n[lang]["to.be.added.soon"]}</i>`}}></div>
         </div> }
         <div style={{ margin: (name && name !== 'responses' && name !== 'requestBody') ? '0 0 0 2rem' : '0' }}>
             <div className={styles.tabs} style={{ marginTop: '1rem' }}>
@@ -301,7 +303,9 @@ const AnyOf = ({ name, description, arr, required, lang, target, onValueChange }
     </>)
 }
 
-const OneOf = ({ name, description, arr, required, lang, target, onValueChange }) => {
+const OneOf = (props) => {
+    const { name, arr, required, lang, target, onValueChange } = props
+    const description = lang === 'en-US' ? props.description : props["x-i18n"] ? props["x-i18n"][lang]['description'] : props.description
     const r = getRandomString(5)
 
     const defaultValue = (arr[0].label ? arr[0].label : `OPTION 1`).toUpperCase()
@@ -321,7 +325,7 @@ const OneOf = ({ name, description, arr, required, lang, target, onValueChange }
                 <span className={styles.label}>oneOf</span>
                 { required && <span className={styles.required}>required</span> }
             </div>
-            <div className={styles.description} dangerouslySetInnerHTML={{__html: description ? textFilter(description, target) : `<i>${i18n[lang]["to.be.added.soon"]}</i>`}}></div>
+            <div className={styles.description} dangerouslySetInnerHTML={{__html: description ? description : `<i>${i18n[lang]["to.be.added.soon"]}</i>`}}></div>
         </div> }
         <div style={{ margin: (name && name !== 'responses' && name !== 'requestBody') ? '0 0 0 2rem' : '0' }}>
             <div className={styles.tabs} style={{ marginTop: '1rem' }}>
@@ -465,8 +469,7 @@ export default function RestSpecs(props) {
         tags, 
         parameters, 
         requestBody, 
-        responses,
-        description, 
+        responses, 
         deprecated,
     } = props.specs;
 
@@ -475,7 +478,7 @@ export default function RestSpecs(props) {
     const endpoint = props.endpoint.replaceAll('{', '${')
     const validParams = parameters ? parameters.filter(param => !param?.['x-include-target'] || param?.['x-include-target']?.includes(target)) : []
 
-    const short = textFilter(description, target)
+    const short = props.lang !== 'en-US' ? props.specs["x-i18n"][props.lang].description : props.specs.description
     const headerParams = validParams ? validParams.filter(param => param.in === 'header') : []
     const headersExample = headerParams.map(param => `--header "${param.name}: ${param.example}"`).join(' \\\n').replace(/{{/g, '${').replace(/}}/g, '}')
     const pathParams = validParams ? validParams.filter(param => param.in === 'path') : []

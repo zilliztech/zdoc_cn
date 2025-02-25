@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "drop_alias() | Python | ORM"
 slug: /python/python/utility-drop_alias
 sidebar_label: "drop_alias()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation drops a specified collection alias. | Python | ORM"
 type: docx
 token: V7BWdrC39oPAauxoWBzcaldwnVc
 sidebar_position: 9
+keywords: 
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_alias()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

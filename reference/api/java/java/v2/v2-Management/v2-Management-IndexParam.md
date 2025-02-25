@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation prepares index parameters to build indexes for a specific collection. | Java | v2"
 type: docx
-token: J0hLdJ68foCRu5xWsWacORuAnLg
+token: FUNwdQQqAon41YxMWiIcHIBmned
 sidebar_position: 5
+keywords: 
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - cosine distance
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - IndexParam
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---
@@ -52,7 +62,9 @@ IndexParam.builder()
 
 - `metricType(IndexParam.MetricType metricType)`
 
-    The distance metric to use for the index. Possible values are **L2**, **IP**, **COSINE**.
+    The algorithm that is used to measure similarity between vectors. Possible values: `IP`, `L2`, `COSINE`, `HAMMING`, `JACCARD`, `BM25` (used only for full text search). For more information, refer to [Metric Types](https://milvus.io/docs/metric.md).
+
+    This is available only when the specified field is a vector field.
 
 - `extraParams(Map<String, Object> extraParams)`
 

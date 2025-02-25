@@ -5,9 +5,19 @@ beta: false
 notebook: false
 description: "Methods related to CRUD operations within a collection. | Java | v2"
 type: folder
-token: HVVZfLAcOlz6bpdjY82cFmtNn2g
-sidebar_position: 7
+token: YBQDf0VrtlUZx3dVkdKckKT5ngh
+sidebar_position: 3
 sidebar_label: "Vector"
+keywords: 
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Vector
+  - javaV225
 displayed_sidebar: javaSidebar
 ---
 

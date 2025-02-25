@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "query() | Python | ORM"
 slug: /python/python/Collection-query
 sidebar_label: "query()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation conducts a scalar filtering with a specified boolean expression. | Python | ORM"
 type: docx
 token: JzcYdBQ5zoU4KpxPqUHcPLQonKd
 sidebar_position: 22
+keywords: 
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - query()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

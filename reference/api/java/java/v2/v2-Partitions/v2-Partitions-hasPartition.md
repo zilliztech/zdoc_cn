@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation checks whether the specified partition exists in the specified collection. | Java | v2"
 type: docx
-token: E00Tdat7lom0LcxpaeicTEZvnig
+token: NS1xdv6f4oQlN4xqnOGc6ssWnTf
 sidebar_position: 3
+keywords: 
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - hasPartition()
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---

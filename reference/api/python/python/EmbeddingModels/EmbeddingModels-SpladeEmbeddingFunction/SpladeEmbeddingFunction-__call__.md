@@ -9,6 +9,16 @@ description: "This operation in SpladeEmbeddingFunction takes a list of text str
 type: docx
 token: LJqud2x3AojxV4xKONocTe4YnFb
 sidebar_position: 4
+keywords: 
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - \_\_call\_\_()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

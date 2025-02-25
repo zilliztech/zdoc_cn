@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "remove_user() | Python | ORM"
 slug: /python/python/Role-remove_user
 sidebar_label: "remove_user()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation removes a user from the current role. Once removed, the user will lose the permissions allowed for the current role. | Python | ORM"
 type: docx
 token: SlmSdaD7rocMJsxThNHcOtEknVd
 sidebar_position: 9
+keywords: 
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - remove_user()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

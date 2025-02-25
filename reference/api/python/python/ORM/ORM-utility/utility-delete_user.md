@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "delete_user() | Python | ORM"
 slug: /python/python/utility-delete_user
 sidebar_label: "delete_user()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation deletes an existing user. | Python | ORM"
 type: docx
 token: E7zOdU2JpoqaU5xNYXvcAjgPnNh
 sidebar_position: 6
+keywords: 
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
+  - Embedding model
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - delete_user()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

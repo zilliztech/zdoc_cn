@@ -5,9 +5,19 @@ beta: false
 notebook: false
 description: "An easy-to-use alternative to the legacy PyMilvus SDK. | Python | MilvusClient"
 type: folder
-token: ICGwfi8ZClVQLHdLn9Hc3oeFn1d
-sidebar_position: 3
+token: YHQ9fF9IDlENsMd9RZucYalqnNg
+sidebar_position: 2
 sidebar_label: "MilvusClient"
+keywords: 
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - MilvusClient
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 ---
 

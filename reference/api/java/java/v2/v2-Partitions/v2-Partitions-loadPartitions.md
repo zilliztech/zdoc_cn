@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation releases the partitions in a specified collection from memory. | Java | v2"
 type: docx
-token: R8BCd0rePoAMjixwJo9ceziqnjf
+token: Jei2dpJMuoyOF5xTIuccfzcinOh
 sidebar_position: 5
+keywords: 
+  - Machine Learning
+  - RAG
+  - NLP
+  - Neural Network
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - loadPartitions()
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---

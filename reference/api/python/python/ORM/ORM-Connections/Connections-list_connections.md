@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "list_connections() | Python | ORM"
 slug: /python/python/Connections-list_connections
 sidebar_label: "list_connections()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation returns a list of all connection names and handler objects. | Python | ORM"
 type: docx
 token: DyPldeRNXo4nMqxQeE0cMnd2nEf
 sidebar_position: 7
+keywords: 
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
+  - nn search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_connections()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

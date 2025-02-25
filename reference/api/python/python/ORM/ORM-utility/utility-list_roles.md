@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "list_roles() | Python | ORM"
 slug: /python/python/utility-list_roles
 sidebar_label: "list_roles()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists the information about all existing roles. | Python | ORM"
 type: docx
 token: ClLXdDs64oixJBxlIrCcEB2dngb
 sidebar_position: 27
+keywords: 
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_roles()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

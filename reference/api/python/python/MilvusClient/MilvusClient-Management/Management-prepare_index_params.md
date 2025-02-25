@@ -8,7 +8,17 @@ notebook: false
 description: "This operation prepares index parameters to build indexes for a specific collection. | Python | MilvusClient"
 type: docx
 token: CAzpdAw3wo4ZqrxhjTLcEGBBn1S
-sidebar_position: 8
+sidebar_position: 11
+keywords: 
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - prepare_index_params()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

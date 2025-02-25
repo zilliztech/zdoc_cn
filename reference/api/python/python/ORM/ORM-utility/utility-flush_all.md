@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "flush_all() | Python | ORM"
 slug: /python/python/utility-flush_all
 sidebar_label: "flush_all()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation seals all segments. | Python | ORM"
 type: docx
 token: Uwsfd443boKKgyx2zZTcYDqKnCe
 sidebar_position: 12
+keywords: 
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - flush_all()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

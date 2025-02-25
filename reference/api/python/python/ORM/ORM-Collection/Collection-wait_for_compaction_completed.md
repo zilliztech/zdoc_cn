@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "wait_for_compaction_completed() | Python | ORM"
 slug: /python/python/Collection-wait_for_compaction_completed
 sidebar_label: "wait_for_compaction_completed()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation blocks the current session until the compaction request is completed. | Python | ORM"
 type: docx
 token: VFKIdx0tDoeAzSx4Ud6c3u5Snsf
 sidebar_position: 29
+keywords: 
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - wait_for_compaction_completed()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

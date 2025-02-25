@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "to_dict() | Python | ORM"
 slug: /python/python/CollectionSchema-to_dict
 sidebar_label: "to_dict()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation converts a CollectionSchema object to a dictionary representation. | Python | ORM"
 type: docx
 token: GfTadfqhAo64XDxc643ci4Zwnwb
 sidebar_position: 4
+keywords: 
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - to_dict()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

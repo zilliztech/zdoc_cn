@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation describes a specific role. | Java | v2"
 type: docx
-token: NVKMdnlOeoz770xHlt0cDHtgnym
+token: Fs7qdzeHZo305txlj45cgqoVnUf
 sidebar_position: 3
+keywords: 
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describeRole()
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---
@@ -79,8 +89,8 @@ import io.milvus.v2.service.rbac.request.DescribeUserReq
 
 // 1. Set up a client
 ConnectConfig connectConfig = ConnectConfig.builder()
-        .uri("http://localhost:19530")
-        .token("root:Milvus")
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
         .build();
         
 MilvusClientV2 client = new MilvusClientV2(connectConfig);

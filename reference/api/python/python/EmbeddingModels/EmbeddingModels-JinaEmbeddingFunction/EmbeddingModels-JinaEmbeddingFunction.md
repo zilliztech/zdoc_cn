@@ -9,6 +9,16 @@ description: "JinaEmbeddingFunction is a class in pymilvus that handles encoding
 type: docx
 token: U7NJd5eKAo0c1TxYZndcgPj2nlc
 sidebar_position: 3
+keywords: 
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - JinaEmbeddingFunction
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

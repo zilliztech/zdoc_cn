@@ -9,6 +9,16 @@ description: "SpladeEmbeddingFunction is a class in pymilvus that handles encodi
 type: docx
 token: UdeRd0YVhoDBeVxrQaBcoikVnAI
 sidebar_position: 3
+keywords: 
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - SpladeEmbeddingFunction
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

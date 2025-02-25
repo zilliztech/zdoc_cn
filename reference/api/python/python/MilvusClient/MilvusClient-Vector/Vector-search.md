@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation conducts a vector similarity search with an optional scalar filtering expression. | Python | MilvusClient"
 type: docx
-token: D74JdcitKobd7cxNdDdcGAz6nuf
-sidebar_position: 5
+token: T1npdvcRMoIjezxK021cPvfpn7c
+sidebar_position: 6
+keywords: 
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - search()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---
@@ -71,6 +81,8 @@ search(
     You can use this parameter in combination with **offset** in **param** to enable pagination.
 
     The sum of this value and **offset** in **param** should be less than 16,384. 
+
+    In a grouping search, however, `limit` specifies the maximum number of groups to return, rather than individual entities. Each group is formed based on the specified `group_by_field`.
 
 - **output_fields** (l*ist[str]*) -
 

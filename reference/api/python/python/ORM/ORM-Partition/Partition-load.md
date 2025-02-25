@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "load() | Python | ORM"
 slug: /python/python/Partition-load
 sidebar_label: "load()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation loads the data of the current partition into memory. | Python | ORM"
 type: docx
 token: TWxddf6iboyM15xK4Kzc8ASknRb
 sidebar_position: 6
+keywords: 
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - load()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

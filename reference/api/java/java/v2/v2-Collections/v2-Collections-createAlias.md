@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation creates an alias for an existing collection. | Java | v2"
 type: docx
-token: VU1odD6KIoV6kWxTJHScVhDRnkb
+token: NMAOdxhL1oo0E7xcFqXcF6yPnBg
 sidebar_position: 4
+keywords: 
+  - Embedding model
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - createAlias()
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---

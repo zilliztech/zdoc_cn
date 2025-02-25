@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation conducts a vector similarity search with an optional scalar filtering expression. | Java | v2"
 type: docx
-token: U2HYdGZBjoOlCJxt9D4csF1untT
-sidebar_position: 6
+token: W1mxdmaelo4co4x0ruwcTWQrn5b
+sidebar_position: 7
+keywords: 
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - search()
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---
@@ -43,6 +53,9 @@ search(SearchReq.builder()
     .gracefulTime(long gracefulTime)
     .consistencyLevel(ConsistencyLevel consistencyLevel)
     .ignoreGrowing(boolean ignoreGrowing)
+    .groupByFieldName(String fieldName)
+    .groupSize(Integer groupSize)
+    .strictGroupSize(Boolean strictGroupSize)
     .build()
 )
 ```
@@ -129,6 +142,8 @@ search(SearchReq.builder()
 
     The sum of this value and `offset` should be less than 16,384. 
 
+    In a grouping search, however, `limit` specifies the maximum number of groups to return, rather than individual entities. Each group is formed based on the specified `groupByFieldName`.
+
 - `roundDecimal(int roundDecimal)`
 
     The number of decimal places that Zilliz Cloud rounds the calculated distances to.
@@ -196,6 +211,10 @@ search(SearchReq.builder()
 - `ignoreGrowing(boolean ignoreGrowing)`
 
     Whether to ignore growing segments during similarity searches.
+
+- `groupByFieldName(String fieldName)`
+
+    Groups search results by a specified field to ensure diversity and avoid returning multiple results from the same group.
 
 **RETURN TYPE:**
 

@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "list_grant() | Python | ORM"
 slug: /python/python/Role-list_grant
 sidebar_label: "list_grant()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists the relationship between the current role and the specified object. | Python | ORM"
 type: docx
 token: JXNXdQuwhoYmZQxSohNcdxtwnzh
 sidebar_position: 7
+keywords: 
+  - vector database example
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_grant()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

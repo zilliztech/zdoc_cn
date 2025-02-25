@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "Collection | Python | ORM"
 slug: /python/python/ORM-Collection
 sidebar_label: "Collection"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "A Collection instance represents a Milvus collection. | Python | ORM"
 type: docx
 token: OSehdj15Ao3AUvxOIJucXzU8nWW
 sidebar_position: 1
+keywords: 
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - Collection
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

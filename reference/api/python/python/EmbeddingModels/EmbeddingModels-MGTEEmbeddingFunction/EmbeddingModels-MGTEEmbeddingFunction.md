@@ -9,6 +9,16 @@ description: "MGTEEmbeddingFunction is a class in pymilvus that handles encoding
 type: docx
 token: OF1mdh4tSo8ZQQxxVgEcdITRndb
 sidebar_position: 3
+keywords: 
+  - Audio search
+  - what is semantic search
+  - Embedding model
+  - image similarity search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - MGTEEmbeddingFunction
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

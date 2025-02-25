@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "BulkInsertState | Python | ORM"
 slug: /python/python/utility-BulkInsertState
 sidebar_label: "BulkInsertState"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This is an enumeration that provides the following constants. | Python | ORM"
 type: docx
 token: Arn1dIKgwoISFoxT7xVc3UrBnAf
 sidebar_position: 2
+keywords: 
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - BulkInsertState
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

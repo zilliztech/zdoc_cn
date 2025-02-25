@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "set_properties() | Python | ORM"
 slug: /python/python/Collection-set_properties
 sidebar_label: "set_properties()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation sets properties for the collection. | Python | ORM"
 type: docx
 token: ECmAdaYKboPTNlxqkLxcUEZ4nrh
 sidebar_position: 27
+keywords: 
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - set_properties()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation creates an index for a specific collection. | Java | v2"
 type: docx
-token: LZQ9dbJxQoUhATxciEacmuF4nvh
+token: OCjUdfc6eo0VihxNUGmcqb7FnTh
 sidebar_position: 1
+keywords: 
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - createIndex()
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---

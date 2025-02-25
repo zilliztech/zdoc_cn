@@ -8,7 +8,17 @@ notebook: false
 description: "This operation drops an index from a specific collection. | Python | MilvusClient"
 type: docx
 token: NPnQdZCJ7oF002xTntecdI2ini8
-sidebar_position: 4
+sidebar_position: 5
+keywords: 
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_index()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

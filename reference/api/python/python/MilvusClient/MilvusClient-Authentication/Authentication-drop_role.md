@@ -8,7 +8,17 @@ notebook: false
 description: "This operation drops a custom role. | Python | MilvusClient"
 type: docx
 token: Vmxpd3MttodOE3x3V11cVTeunDh
-sidebar_position: 5
+sidebar_position: 8
+keywords: 
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - drop_role()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---
@@ -68,8 +78,8 @@ from pymilvus import MilvusClient
 
 # 1. Create a milvus client
 client = MilvusClient(
-    uri="http://localhost:19530",
-    token="root:Milvus"
+    uri="YOUR_CLUSTER_ENDPOINT",
+    token="YOUR_CLUSTER_TOKEN"
 )
 
 # 2. Create a role
@@ -78,20 +88,3 @@ client.create_role(role_name="read_only")
 # 3. Drop a role
 client.drop_role(role_name="read_only")
 ```
-
-## Related methods
-
-- [create_role()](./Authentication-create_role)
-
-- [describe_role()](./Authentication-describe_role)
-
-- [grant_privilege()](./Authentication-grant_privilege)
-
-- [grant_role()](./Authentication-grant_role)
-
-- [list_roles()](./Authentication-list_roles)
-
-- [revoke_privileges()](./Authentication-revoke_privileges)
-
-- [revoke_role()](./Authentication-revoke_role)
-

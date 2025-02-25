@@ -3,12 +3,22 @@ displayed_sidbar: pythonSidebar
 title: "add_connection() | Python | ORM"
 slug: /python/python/Connections-add_connection
 sidebar_label: "add_connection()"
-beta: false
+beta: NEAR DEPRECATE
 notebook: false
 description: "This operation adds connections to multiple Zilliz Cloud clusters for different purposes in a batch. | Python | ORM"
 type: docx
 token: C37ldNLbFog6ThxA23ScMldnnmb
 sidebar_position: 1
+keywords: 
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - RAG
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - add_connection()
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -10,15 +10,15 @@ type: docx
 token: WUZwdRNXIoS0tSxCrw6coaa2nzf
 sidebar_position: 3
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
   - zilliz
   - zilliz cloud
   - cloud
   - insert()
-  - node
+  - nodejs25
 displayed_sidebar: nodeSidebar
 
 ---

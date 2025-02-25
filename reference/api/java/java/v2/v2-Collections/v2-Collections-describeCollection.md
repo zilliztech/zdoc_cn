@@ -7,8 +7,18 @@ beta: false
 notebook: false
 description: "This operation lists detailed information about a specific collection. | Java | v2"
 type: docx
-token: DTbJdZHWMourJqxOn4rcMWrmn1f
+token: Lc03dk5YVo8Ilvx4XINcv5KBn9e
 sidebar_position: 9
+keywords: 
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - describeCollection()
+  - javaV225
 displayed_sidebar: javaSidebar
 
 ---

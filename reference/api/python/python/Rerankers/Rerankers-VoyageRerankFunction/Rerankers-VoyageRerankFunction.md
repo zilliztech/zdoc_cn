@@ -9,6 +9,16 @@ description: "VoyageRerankFunction is a class in milvusmodel that takes a query 
 type: docx
 token: Smobd2lIho2yQPxtRhLcLcKznCf
 sidebar_position: 1
+keywords: 
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - VoyageRerankFunction
+  - pymilvus25
 displayed_sidebar: pythonSidebar
 
 ---

@@ -23,6 +23,9 @@ const Badge = ({ label }) => {
       case "DELETE":
           color = "#b91926";
           break;
+      case "DEPRECATED":
+          color = "#FF7F47";
+          break;
       default:
           color = "#000000";
   }  
