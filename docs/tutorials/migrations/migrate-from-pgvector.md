@@ -31,8 +31,6 @@ import Admonition from '@theme/Admonition';
 
 - 当前支持迁移的 PostgreSQL 数据类型包括：**vector**, **text**/**varchar**/**date**/**time**/**json**, **bigint**, **integer**, **smallint**, **double precision**, **real**, **boolean**, **array**。如果您的表中存在不支持的数据类型字段，可以选择不迁移这些字段或[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。有关 PostgreSQL 数据类型如何映射到 Zilliz Cloud 的详细信息，请参阅[字段映射](./migrate-from-pgvector#field-mapping-reference)。
 
-- 为确保兼容性，目标 Collection 中的 Auto ID 将被禁用，且无法修改。
-
 - 每次迁移仅允许从每个源表中选择一个向量字段。
 
 - 每次迁移仅支持选择单个源 PostgreSQL 数据库。如果您有多个源数据库中，可以创建多个迁移任务。
@@ -117,7 +115,7 @@ import Admonition from '@theme/Admonition';
      <td><p>向量维度与源索引中的向量字段维度相同。您可以在 <strong>L2</strong> 和 <strong>IP</strong> 之间指定一个度量类型。</p></td>
    </tr>
    <tr>
-     <td><p>text/varchar/date/time/json</p></td>
+     <td><p>text/varchar/date/time</p></td>
      <td><p>VarChar</p></td>
      <td><p>通过 <strong>Max Length</strong> 指定最大数据长度，有效值为 1 到 65535 之间。如果任何字符串超过了最大长度限制，迁移过程将会报错。</p></td>
    </tr>
@@ -154,6 +152,11 @@ import Admonition from '@theme/Admonition';
    <tr>
      <td><p>array</p></td>
      <td><p>array</p></td>
+     <td><p>-</p></td>
+   </tr>
+   <tr>
+     <td><p>json</p></td>
+     <td><p>JSON</p></td>
      <td><p>-</p></td>
    </tr>
 </table>

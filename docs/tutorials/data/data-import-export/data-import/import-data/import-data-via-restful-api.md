@@ -66,7 +66,7 @@ curl --request POST \
         "clusterId": "inxx-xxxxxxxxxxxxxxx",
         "collectionName": "medium_articles",
         "partitionName": "",
-        "objectUrl": "https://bucket-name.oss-cn-hangzhou.aliyuncs.com/publicdataset.zillizcloud.com/medium_articles_2020_dpr/medium_articles_2020_dpr.json",
+        "objectUrl": "https://assets.zilliz.com/docs/example-data-import.json",
         "accessKey": "",
         "secretKey": ""
     }'

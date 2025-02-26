@@ -9,10 +9,10 @@ token: YIWifhm0HlwT5ldC40fc8tAOnXd
 sidebar_position: 7
 sidebar_label: "Client"
 keywords: 
-  - milvus vector database
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
   - zilliz
   - zilliz cloud
   - cloud

@@ -104,7 +104,7 @@ import Admonition from '@theme/Admonition';
        </tr>
        <tr>
          <td><p><strong>终端节点服务</strong></p></td>
-         <td><p>选择<strong>选择可用服务</strong>。</p><p>如果您在上一步中添加的阿里云主帐号通过验证后，可用服务列表中将展示该主帐号对应的 Zilliz Cloud 服务。</p></td>
+         <td><p>选择<strong>选择可用服务</strong>。 如果您在上一步中添加的阿里云主帐号通过验证后，可用服务列表中将展示该主帐号对应的 Zilliz Cloud 服务。</p></td>
        </tr>
     </table>
 
@@ -123,7 +123,7 @@ import Admonition from '@theme/Admonition';
        </tr>
        <tr>
          <td><p><strong>可用区与交换机</strong></p></td>
-         <td><p>选择 Zilliz Cloud 集群所在可用区并创建默认交换机。</p><p>目前，Zilliz Cloud 集群可选可用区如下：</p><p><strong>杭州</strong></p><ul><li><p>杭州 可用区 H</p></li><li><p>杭州 可用区 J</p></li><li><p>杭州 可用区 K</p><p><strong>北京</strong></p></li><li><p>北京 可用区 G</p></li><li><p>北京 可用区 H</p></li><li><p>北京 可用区 I</p><p><strong>深圳</strong></p></li><li><p>深圳 可用区 D</p></li><li><p>深圳 可用区 E</p></li><li><p>深圳 可用区 F</p><p>交换机配置无特殊要求，保持默认即可。</p></li></ul></td>
+         <td><p>选择 Zilliz Cloud 集群所在可用区并创建默认交换机。 目前，Zilliz Cloud 集群可选可用区如下：</p><p><strong>杭州</strong></p><ul><li><p>杭州 可用区 H</p></li><li><p>杭州 可用区 J</p></li><li><p>杭州 可用区 K</p><p><strong>北京</strong></p></li><li><p>北京 可用区 G</p></li><li><p>北京 可用区 H</p></li><li><p>北京 可用区 I</p><p><strong>深圳</strong></p></li><li><p>深圳 可用区 D</p></li><li><p>深圳 可用区 E</p></li><li><p>深圳 可用区 F</p><p>交换机配置无特殊要求，保持默认即可。</p></li></ul></td>
        </tr>
     </table>
 

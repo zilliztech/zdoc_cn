@@ -9,10 +9,10 @@ token: YBQDf0VrtlUZx3dVkdKckKT5ngh
 sidebar_position: 3
 sidebar_label: "Vector"
 keywords: 
-  - what is milvus
-  - milvus database
-  - milvus lite
-  - milvus benchmark
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud

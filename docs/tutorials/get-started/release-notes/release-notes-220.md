@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 
 ## Zilliz Cloud 集群间的数据迁移{#data-migration-across-zilliz-cloud-clusters}
 
-此次发布，用户可以通过 Zilliz Cloud 的数据迁移能力，轻松完成集群间的数据整合与配置。具体内容，可[查阅此处](./migrate-between-clusters)。
+此次发布，用户可以通过 Zilliz Cloud 的数据迁移能力，轻松完成集群间的数据整合与配置。具体内容，可[查阅此处](./offline-migration)。
 
 - 轻松迁移：在多个 Zilliz Cloud 集群间实现数据的无缝迁移。
 

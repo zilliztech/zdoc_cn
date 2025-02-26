@@ -9,10 +9,10 @@ token: YkL6fqkaNlgeWXdNaWLcltkZnRc
 sidebar_position: 7
 sidebar_label: "Partitions"
 keywords: 
-  - Audio search
-  - what is semantic search
-  - Embedding model
-  - image similarity search
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
   - zilliz
   - zilliz cloud
   - cloud

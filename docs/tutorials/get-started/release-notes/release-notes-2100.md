@@ -100,7 +100,7 @@ Zilliz Cloud 现在提供全面的迁移服务，使用户能够轻松完成迁�
 
 - 从其他开源数据库迁移到 Zilliz Cloud，当前支持从 pgvector 和 Elasticsearch 迁移。迁移目标可以是免费实例、Serverless 实例或 Dedicated 集群。有关详情，请参阅[从 Elasticsearch 迁移至 Zilliz Cloud](./migrate-from-elasticsearch) 和[从 pgvector 迁移至 Zilliz Cloud](./migrate-from-pgvector)。
 
-- 在 Zilliz Cloud 各集群间迁移数据，支持组织内和跨组织数据迁移。有关详情，请参阅[Zilliz Cloud 跨集群迁移](./migrate-between-clusters)。
+- 在 Zilliz Cloud 各集群间迁移数据，支持组织内和跨组织数据迁移。有关详情，请参阅[Zilliz Cloud 跨集群迁移](./offline-migration)。
 
 ## 备份、恢复、迁移、任务管理 API 上线{#backup-restore-migration-jobs-restful-api}
 

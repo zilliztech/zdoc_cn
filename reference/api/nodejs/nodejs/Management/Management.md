@@ -9,10 +9,10 @@ token: Yo6ffPwKzlWzZndRXVocighbnfd
 sidebar_position: 3
 sidebar_label: "Management"
 keywords: 
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud

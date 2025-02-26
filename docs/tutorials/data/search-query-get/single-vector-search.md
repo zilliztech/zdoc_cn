@@ -53,6 +53,8 @@ ANN Search 依赖预先创建的索引。选择不同的索引算法会影响搜
 
 - [使用 Level 参数](./single-vector-search#use-level)
 
+- [查看召回率](./single-vector-search#get-recall-rate)
+
 - [使用 Async 和 Callback 参数](./single-vector-search)
 
 ## 单路查询{#single-vector-search}

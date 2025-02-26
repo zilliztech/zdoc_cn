@@ -7,7 +7,7 @@ notebook: FALSE
 description: "本教程将介绍如何通过 Zilliz Cloud 控制台创建和管理 Collection。您也可以通过 SDK 管理 Collection。 | Cloud"
 type: origin
 token: Cy4swPPaeiZgbmkN4wUc9wAdnwd
-sidebar_position: 10
+sidebar_position: 11
 keywords: 
   - 向量数据库
   - zilliz
@@ -35,7 +35,7 @@ Zilliz Cloud 提供 3 种创建 Collection 的方式以满足不同需求。
 
 - **[复制现有 Collection](./manage-collections-console#copy-collection)**: 适合需要在当前集群中快速复制现有 Collection 的用户。
 
-### 方法 1: 使用您自己的数据{#create-your-own-collection}
+### 方法 1：使用您自己的数据{#create-your-own-collection}
 
 如需使用您自己的数据创建 Collection，请遵循以下步骤：
 
@@ -50,7 +50,7 @@ Zilliz Cloud 提供 3 种创建 Collection 的方式以满足不同需求。
        </tr>
        <tr>
          <td><p>字段名称</p></td>
-         <td><p>字段的名称。每个 Collection 都有唯一的主键和至少一个向量字段（最多4个）。</p><p>在默认设置中，Zilliz Cloud 保留了主字段（<code>primary_key</code>）和一个浮点向量（<code>vector</code>）。您可以根据需要自定义它们的设置。</p></td>
+         <td><p>字段的名称。每个 Collection 都有唯一的主键和至少一个向量字段（最多4个）。 在默认设置中，Zilliz Cloud 保留了主字段（<code>primary_key</code>）和一个浮点向量（<code>vector</code>）。您可以根据需要自定义它们的设置。</p></td>
        </tr>
        <tr>
          <td><p>字段类型</p></td>
@@ -94,7 +94,7 @@ Zilliz Cloud 提供 3 种创建 Collection 的方式以满足不同需求。
 
 1. 点击**创建 Collection**。创建完成后，您可以在 Collection 中[插入数据](./insert-entities)。
 
-### 方法 2: 使用示例数据集{#create-sample-collection}
+### 方法 2：使用示例数据集{#create-sample-collection}
 
 打开目标集群，在 Collection 页签中点击**创建示例 Collection**。 检查示例 Collection 信息，点击**创建**。
 
@@ -114,7 +114,7 @@ Zilliz Cloud 提供 3 种创建 Collection 的方式以满足不同需求。
 
 1. 点击**复制**。
 
-    undefined
+    ![cn-copy-collection](/img/cn-copy-collection.png)
 
 1. Zilliz Cloud 将生成一条复制 Collection 任务。您可前往[任务中心](./view-activities)查看任务状态和进度。如果迁移任务的状态从**进行中**变更为**成功**，则代表复制 Collection 成功。
 
@@ -174,7 +174,7 @@ Zilliz Cloud 提供 3 种创建 Collection 的方式以满足不同需求。
    </tr>
    <tr>
      <td><p>Dedicated</p></td>
-     <td><p>每 CU：&lt;= 64</p><p>每集群：&lt;= 4096</p></td>
+     <td><p>每 CU：&lt;= 64 每集群：&lt;= 4096</p></td>
      <td><p>在企业版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</p></td>
    </tr>
 </table>

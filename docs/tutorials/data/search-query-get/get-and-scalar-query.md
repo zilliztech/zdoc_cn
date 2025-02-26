@@ -52,13 +52,13 @@ Collection 中可以存储多种类型的标量字段。您可以让 Milvus 基�
    </tr>
    <tr>
      <td><p>必选参数</p></td>
-     <td><ul><li><p>Collection 名称</p></li><li><p>主键值</p></li></ul></td>
-     <td><ul><li><p>Collection 名称</p></li><li><p>过滤条件表达式</p></li></ul></td>
+     <td><ul><li>Collection 名称</li><li>主键值</li></ul></td>
+     <td><ul><li>Collection 名称</li><li>过滤条件表达式</li></ul></td>
      <td><ul><li><p>Collection 名称</p></li><li><p>过滤条件表达式</p></li><li><p>单页返回 Entity 数量</p></li></ul></td>
    </tr>
    <tr>
      <td><p>可选参数</p></td>
-     <td><ul><li><p>Partition 名称</p></li><li><p>返回 Entity 携带字段名称</p></li></ul></td>
+     <td><ul><li>Partition 名称</li><li>返回 Entity 携带字段名称</li></ul></td>
      <td><ul><li><p>Partition 名称</p></li><li><p>返回 Entity 数量</p></li><li><p>返回 Entity 携带字段名称</p></li></ul></td>
      <td><ul><li><p>Partition 名称</p></li><li><p>返回 Entity 总数量</p></li><li><p>返回 Entity 携带字段名称</p></li></ul></td>
    </tr>

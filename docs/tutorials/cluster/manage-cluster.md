@@ -137,7 +137,7 @@ Serverless 集群创建完成后，您可以在控制台看到如下信息：
 
 ### 迁移至 Dedicated 集群{#migrate-to-dedicated-cluster}
 
-如需使用 Dedicated 集群的高级功能，请将 Serverless 集群迁移至 Dedicated 集群。更多详情，请参考[Zilliz Cloud 跨集群迁移](./migrate-between-clusters)。
+如需使用 Dedicated 集群的高级功能，请将 Serverless 集群迁移至 Dedicated 集群。更多详情，请参考[Zilliz Cloud 跨集群迁移](./offline-migration)。
 
 ### 用户与访问控制{#users-and-access-control}
 

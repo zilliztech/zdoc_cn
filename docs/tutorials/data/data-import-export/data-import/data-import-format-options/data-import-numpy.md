@@ -181,7 +181,7 @@ Zilliz Cloud 针对导入 Parquet 格式的文件时设置了如下限制。
    </tr>
    <tr>
      <td><p><strong>每次导入的文件体积限制</strong></p></td>
-     <td><p>Free 集群：最大 512 MB</p><p>Serverless 或 Dedicated 集群</p><ul><li><p>单个文件大小：最大 10 GB</p></li><li><p>总文件大小：最大 100 GB</p></li></ul></td>
+     <td><p>Free 集群：最大 512 MB Serverless 或 Dedicated 集群</p><ul><li><p>单个文件大小：最大 10 GB</p></li><li><p>总文件大小：最大 100 GB</p></li></ul></td>
    </tr>
    <tr>
      <td><p><strong>文件存放位置</strong></p></td>

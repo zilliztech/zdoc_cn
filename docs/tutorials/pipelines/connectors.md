@@ -110,11 +110,11 @@ Zilliz Cloud 支持在创建过程中灵活配置 Connector。创建后， Conne
            </tr>
            <tr>
              <td><p>URL</p></td>
-             <td><p>输入数据源 URL。请确保 URL 指向文件夹而非具体某一文件。此外，不可输入根目录 URL。</p><p>了解如何<a href="https://help.aliyun.com/zh/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects?spm=a2c4g.11186623.0.0.3eecc1f8IO4FkA">获取 URL</a>。</p></td>
+             <td><p>输入数据源 URL。请确保 URL 指向文件夹而非具体某一文件。此外，不可输入根目录 URL。 了解如何<a href="https://help.aliyun.com/zh/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects?spm=a2c4g.11186623.0.0.3eecc1f8IO4FkA">获取 URL</a>。</p></td>
            </tr>
            <tr>
              <td><p>对象存储服务访问凭证(可选)</p></td>
-             <td><p>AccessKey ID 和 AccessKey Secret。</p><p>了解如何<a href="https://www.alibabacloud.com/help/zh/ram/user-guide/create-an-accesskey-pair?spm=a2c63.p38356.0.0.29bf52672SsfrM">获取AccessKey ID 和 AccessKey Secret</a>。</p></td>
+             <td><p>AccessKey ID 和 AccessKey Secret。 了解如何<a href="https://www.alibabacloud.com/help/zh/ram/user-guide/create-an-accesskey-pair?spm=a2c63.p38356.0.0.29bf52672SsfrM">获取AccessKey ID 和 AccessKey Secret</a>。</p></td>
            </tr>
         </table>
 

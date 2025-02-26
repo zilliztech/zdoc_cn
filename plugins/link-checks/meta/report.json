@@ -1,13 +1,28 @@
 {
-  "added": [],
+  "added": [
+    "https://docs.zilliz.com.cn/docs/alter-collection-field",
+    "https://docs.zilliz.com.cn/docs/migrate-from-opensearch",
+    "https://docs.zilliz.com.cn/docs/offline-migration",
+    "https://docs.zilliz.com.cn/docs/set-collection-ttl",
+    "https://docs.zilliz.com.cn/docs/zero-downtime-migration",
+    "https://docs.zilliz.com.cn/reference/node/node/Database-alterDatabaseProperties",
+    "https://docs.zilliz.com.cn/reference/node/node/Database-dropDatabaseProperties",
+    "https://docs.zilliz.com.cn/reference/python/MilvusClient-Database",
+    "https://docs.zilliz.com.cn/reference/python/python/Database-alter_database_properties",
+    "https://docs.zilliz.com.cn/reference/python/python/Database-create_database",
+    "https://docs.zilliz.com.cn/reference/python/python/Database-describe_database",
+    "https://docs.zilliz.com.cn/reference/python/python/Database-drop_database",
+    "https://docs.zilliz.com.cn/reference/python/python/Database-drop_database_properties",
+    "https://docs.zilliz.com.cn/reference/python/python/Database-list_databases",
+    "https://docs.zilliz.com.cn/reference/python/python/Database-using_database",
+    "https://docs.zilliz.com.cn/reference/python/python/Management-alter_index_properties",
+    "https://docs.zilliz.com.cn/reference/python/python/Management-drop_index_properties",
+    "https://docs.zilliz.com.cn/reference/restful/describe-invoice-v2",
+    "https://docs.zilliz.com.cn/reference/restful/invoices-v2",
+    "https://docs.zilliz.com.cn/reference/restful/list-invoices-v2",
+    "https://docs.zilliz.com.cn/reference/restful/query-daily-usage-v2",
+    "https://docs.zilliz.com.cn/reference/restful/usage-v2"
+  ],
   "deleted": [],
-  "brokenLinks": [
-    "https://support.zilliz.com.cn/hc/zh-cn",
-    "https://bucket-name.s3.northwest-1.amazonaws.com.cn/parquet-folder/data.parquet",
-    "https://bucket-name.oss-cn-shenzhen.aliyuncs.com",
-    "https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder/data.parquet",
-    "https://s3.northwest-1.amazonaws.com.cn/bucket-name/object-name",
-    "https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/*.npy",
-    "https://support.zilliz.com.cn/"
-  ]
+  "brokenLinks": []
 }

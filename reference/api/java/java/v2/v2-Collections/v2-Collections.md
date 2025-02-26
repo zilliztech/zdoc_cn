@@ -9,10 +9,10 @@ token: Sx9jfHZP8lqVhXd9UuMcERemnjd
 sidebar_position: 1
 sidebar_label: "Collections"
 keywords: 
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
   - zilliz
   - zilliz cloud
   - cloud

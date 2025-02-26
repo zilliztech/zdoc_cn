@@ -9,10 +9,10 @@ token: U16KfBnGVlNp5edR7DycvFF1nfy
 sidebar_position: 4
 sidebar_label: "Authentication"
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - open source vector db
   - zilliz
   - zilliz cloud
   - cloud

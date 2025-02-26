@@ -141,11 +141,11 @@ Import 和 bulk insert 操作不产生写入费用。
    </tr>
    <tr>
      <td><p>Delete</p></td>
-     <td><p>删除 1 个 Entity = 1 vCU</p><p>删除 1 个不存在的 Entity 也会消耗 1 vCU。</p></td>
+     <td><p>删除 1 个 Entity = 1 vCU 删除 1 个不存在的 Entity 也会消耗 1 vCU。</p></td>
    </tr>
    <tr>
      <td><p>Upsert</p></td>
-     <td><p>根据更新的数据量和删除的 Entity 数量计算。</p><p>删除 1 个不存在的 Entity 也会消耗 1 vCU。</p></td>
+     <td><p>根据更新的数据量和删除的 Entity 数量计算。 删除 1 个不存在的 Entity 也会消耗 1 vCU。</p></td>
    </tr>
 </table>
 

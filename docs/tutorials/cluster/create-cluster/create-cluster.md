@@ -56,37 +56,37 @@ Zilliz Cloud 针对 Dedicated 集群提供按量计费和包年包月两种计�
    </tr>
    <tr>
      <td><p><strong>定价（含折扣）</strong></p></td>
-     <td><p>¥4599/年起</p><p>详情请见<a href="https://zilliz.com.cn/pricing">定价</a>或<a href="https://zilliz.com.cn/contact-sales">联系销售</a>。</p></td>
-     <td><p>¥756/月起</p><p>详情请见<a href="https://zilliz.com.cn/pricing">定价</a>。</p></td>
+     <td><p>¥4599/年起 详情请见<a href="https://zilliz.com.cn/pricing">定价</a>或<a href="https://zilliz.com.cn/contact-sales">联系销售</a>。</p></td>
+     <td><p>¥756/月起 详情请见<a href="https://zilliz.com.cn/pricing">定价</a>。</p></td>
    </tr>
    <tr>
      <td><p><strong>支付方式</strong></p></td>
-     <td><ul><li><p>暂不支持优惠券抵扣</p></li><li><p>仅支持现金余额支付</p></li></ul></td>
+     <td><ul><li>暂不支持优惠券抵扣</li><li>仅支持现金余额支付</li></ul></td>
      <td><ul><li><p>支持优惠券抵扣</p></li><li><p>支持现金余额支付</p></li><li><p>支持云市场订阅</p></li></ul></td>
    </tr>
    <tr>
      <td><p><strong>计费规则</strong></p></td>
-     <td><ul><li><p>CU 费用为包年包月费用，需一次性付清</p></li><li><p>存储、备份费用按量计费</p></li></ul></td>
+     <td><ul><li>CU 费用为包年包月费用，需一次性付清</li><li>存储、备份费用按量计费</li></ul></td>
      <td><p>CU、存储、备份、等费用均按量计费</p></td>
    </tr>
    <tr>
      <td><p><strong>创建方式</strong></p></td>
      <td><p>仅支持通过 Zilliz Cloud Web 控制台创建集群</p></td>
-     <td><ul><li><p>支持通过Zilliz Cloud Web 控制台创建集群</p></li><li><p>支持通过 RESTful API 创建集群</p></li></ul></td>
+     <td><ul><li>支持通过Zilliz Cloud Web 控制台创建集群</li><li>支持通过 RESTful API 创建集群</li></ul></td>
    </tr>
    <tr>
      <td><p><strong>变更配置</strong></p></td>
-     <td><ul><li><p>仅支持集群扩容</p></li><li><p>仅支持增加集群 Replica 数量</p></li></ul></td>
+     <td><ul><li>仅支持集群扩容</li><li>仅支持增加集群 Replica 数量</li></ul></td>
      <td><ul><li><p>支持集群扩容和缩容</p></li><li><p>支持增加或减少集群 Replica 数量</p></li><li><p>支持弹性伸缩</p></li></ul></td>
    </tr>
    <tr>
      <td><p><strong>变更计费方式</strong></p></td>
      <td><p>不支持</p></td>
-     <td><p>不支持</p><p>您可以先创建包年包月集群，随后将按量计费集群迁移到新创建的包年包月集群。详情请参考<a href="./migrate-between-clusters">Zilliz Cloud 跨集群迁移</a>。</p><p>迁移完成后，请将您应用中用于连接集群 Endpoint 变更为新集群的 Endpoint。</p></td>
+     <td><p>不支持 您可以先创建包年包月集群，随后将按量计费集群迁移到新创建的包年包月集群。详情请参考<a href="./offline-migration">Zilliz Cloud 跨集群迁移</a>。</p><p>迁移完成后，请将您应用中用于连接集群 Endpoint 变更为新集群的 Endpoint。</p></td>
    </tr>
    <tr>
      <td><p><strong>续订与退订管理</strong></p></td>
-     <td><ul><li><p>支持手动续订</p></li><li><p>不支持退订</p></li></ul></td>
+     <td><ul><li>支持手动续订</li><li>不支持退订</li></ul></td>
      <td><p>无需进行续订与退订管理</p></td>
    </tr>
 </table>

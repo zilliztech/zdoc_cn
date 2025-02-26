@@ -10,10 +10,10 @@ type: docx
 token: MBy3dDXFbo0buwxkh0IczwLInPf
 sidebar_position: 10
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
   - zilliz
   - zilliz cloud
   - cloud

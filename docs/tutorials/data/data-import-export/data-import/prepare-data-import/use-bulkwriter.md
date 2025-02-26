@@ -793,15 +793,15 @@ System.out.println(batchFiles);
        </tr>
        <tr>
          <td><p><strong>JSON</strong></p></td>
-         <td><ul><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></p></li><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.json</code></p></li></ul></td>
+         <td><ul><li><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></li><li><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.json</code></li></ul></td>
        </tr>
        <tr>
          <td><p><strong>Parquet</strong></p></td>
-         <td><ul><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></p></li><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.parquet</code></p></li></ul></td>
+         <td><ul><li><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></li><li><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.parquet</code></li></ul></td>
        </tr>
        <tr>
          <td><p><strong>NumPy</strong></p></td>
-         <td><ul><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></p></li><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/*.npy</code></p></li></ul></td>
+         <td><ul><li><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></li><li><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/*.npy</code></li></ul></td>
        </tr>
     </table>
 

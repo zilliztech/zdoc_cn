@@ -9,10 +9,10 @@ token: IguLfmHgXlJoojdRU8kcohXZnE1
 sidebar_position: 5
 sidebar_label: "Vector"
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
   - zilliz
   - zilliz cloud
   - cloud

@@ -19,7 +19,8 @@ keywords:
 ---
 
 import Admonition from '@theme/Admonition';
-
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # 了解账单
 
@@ -187,15 +188,150 @@ Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud �
 
 如果您具备组织管理员或账单管理员权限，您可以查看、确认、支付、下载账单。
 
-### 查看账单{#view-invoice}
+### 查看账单列表{#list-all-invoices}
+
+<Tabs groupId="cluster" defaultValue="console" values={[{"label":"Cloud 控制台","value":"console"},{"label":"cURL","value":"bash"}]}>
+
+<TabItem value="console">
 
 1. 点击左侧导航栏中的**账单**。
 
 1. 切换至**历史账单**页面。您可以查看当月账单和所有历史账单。
 
+![view-invoices-cn](/img/view-invoices-cn.png)
+
+</TabItem>
+
+<TabItem value="bash">
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>查看发票列表的 RESTful API 目前还处于公测阶段，如需使用请<a href="http://support.zilliz.com.cn">联系我们</a>。</p>
+
+</Admonition>
+
+以下为示例代码，请将示例中的 `{TOKEN}` 替换为您自己的Zilliz Cloud API 密钥。同时，请确保使用的 API 密钥具备[组织管理员或组织账单管理员的角色](./organization-users#organization-roles)。
+
+以下 `GET` 请求可用于查看您组织中的所有账单。
+
+```bash
+curl --request GET \
+--url "https://api.cloud.zilliz.com.cn/v2/invoices" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json"
+      
+# {
+#     "code": 0,
+#     "data": {
+#         "count": 1,
+#         "currentPage": 1,
+#         "pageSize": 10,
+#         "invoices": [
+#             {
+#                 "id": "inv-12312io23810o291",
+#                 "orgId": "org-xxxxxx",
+#                 "periodStart": "2024-01-01T00:00:00Z",
+#                 "periodEnd": "2024-02-01T00:00:00Z",
+#                 "invoiceDate": "2024-02-01T00:00:00Z",
+#                 "dueDate": "2024-02-01T00:00:00Z",
+#                 "currency": "RMB",
+#                 "status": "unpaid",
+#                 "usageAmount": 52400,
+#                 "creditsApplied": 12400,
+#                 "alreadyBilledAmount": 0,
+#                 "subtotal": 40000,
+#                 "tax": 5000,
+#                 "total": 45000,
+#                 "advancePayAmount": 0,
+#                 "amountDue": 45000
+#             }
+#         ]
+#     }
+# }
+```
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>API 返回的结果中，所有金额单位为分。</p>
+
+</Admonition>
+
+</TabItem>
+
+</Tabs>
+
+### 查看账单详情{#view-the-details-of-a-specific-invoice}
+
+<Tabs groupId="cluster" defaultValue="console" values={[{"label":"Cloud 控制台","value":"console"},{"label":"cURL","value":"bash"}]}>
+
+<TabItem value="console">
+
+1. 点击左侧导航栏中的**账单**。
+
+1. 切换至**历史账单**页面。
+
 1. 点击账单周期即可查看特定账单的详情。
 
-![view-invoices-cn](/img/view-invoices-cn.png)
+![view-invoice-detail-cn](/img/view-invoice-detail-cn.png)
+
+</TabItem>
+
+<TabItem value="bash">
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>查看发票详情的 RESTful API 目前还处于公测阶段，如需使用请<a href="http://support.zilliz.com.cn">联系我们</a>。</p>
+
+</Admonition>
+
+以下为示例代码，请将示例中的 `{TOKEN}` 替换为您自己的Zilliz Cloud API 密钥。同时，请确保使用的 API 密钥具备[组织管理员或组织账单管理员的角色](./organization-users#organization-roles)。
+
+以下 `GET` 请求可用于查看某一特定账单的详情。
+
+```bash
+curl --request GET \
+--url "https://api.cloud.zilliz.com.cn/v2/invoices/${INVOICE_ID}" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json"
+      
+# {
+#     "code": 0,
+#     "data": {
+#         "id": "inv-12312io23810o291",
+#         "orgId": "org-xxxxxx",
+#         "periodStart": "2024-01-01T00:00:00Z",
+#         "periodEnd": "2024-02-01T00:00:00Z",
+#         "invoiceDate": "2024-02-01T00:00:00Z",
+#         "dueDate": "2024-02-01T00:00:00Z",
+#         "currency": "USD",
+#         "status": "unpaid",
+#         "usageAmount": 52400,
+#         "creditsApplied": 12400,
+#         "alreadyBilledAmount": 0,
+#         "subtotal": 40000,
+#         "tax": 5000,
+#         "total": 45000,
+#         "advancePayAmount": 0,
+#         "amountDue": 45000
+#     }
+# }
+```
+
+以下为参数说明：
+
+- `{Token}`：用于验证 API 请求的鉴权信息。请使用您自己的 Zilliz Cloud API 密钥。
+
+- `{INVOICE_ID}`: 需要查看的目标账单的 ID。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>API 返回的结果中，所有金额单位为分。</p>
+
+</Admonition>
+
+</TabItem>
+
+</Tabs>
 
 ### 确认账单{#confirm-invoice}
 
@@ -223,87 +359,107 @@ Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud �
 
 #### **什么是月度账单？月度账单的起始时间是什么？**
 
-- **说明**：目前 Zilliz Cloud 费用为月结，所以以月为单位出具账单。账单周期一般为一个完整月，起始时间为上一个月的第一天 00:00:00（UTC），结束时间为上一个月最后一天的 23:59:59（UTC）。
+**说明：**目前 Zilliz Cloud 费用为月结，所以以月为单位出具账单。账单周期一般为一个完整月，起始时间为上一个月的第一天 00:00:00（UTC），结束时间为上一个月最后一天的 23:59:59（UTC）。
 
-- **示例**：Zilliz Cloud 会在 2024 年 9 月 1 日出具 8 月的月度账单，账单起始时间为 2024 年 8 月 1 日 00:00:00（UTC）至 2024 年 8 月 31 日 23:59:59（UTC）。
+**示例**：Zilliz Cloud 会在 2024 年 9 月 1 日出具 8 月的月度账单，账单起始时间为 2024 年 8 月 1 日 00:00:00（UTC）至 2024 年 8 月 31 日 23:59:59（UTC）。
 
 #### **Zilliz Cloud 账单金额的精度为多少？**
 
-- **说明：**Zilliz Cloud 产品价格精度为小数点后 8 位。因此在计费过程中会产生小数点后 8 位的费用。Zilliz Cloud 实际和客户结算过程中会将包含 8 位小数点的费用汇总，随后根据按日汇总后金额的第 3 位小数进行四舍五入。
+**说明：**Zilliz Cloud 产品价格精度为小数点后 8 位。因此在计费过程中会产生小数点后 8 位的费用。Zilliz Cloud 实际和客户结算过程中会将包含 8 位小数点的费用汇总，随后根据按日汇总后金额的第 3 位小数进行四舍五入。
 
-    在 Zilliz Cloud 界面的账单详情页，展示的金额精度均为 2 位小数（例如：¥60.00）。
+在 Zilliz Cloud 界面的账单详情页，展示的金额精度均为 2 位小数（例如：¥60.00）。
 
-    ![precision_invoice_cn](/img/precision_invoice_cn.png)
+通过 Zilliz Cloud 账单 API 接口[查看发票列表](/reference/restful/list-invoices-v2)和[查看发票详情](/reference/restful/describe-invoice-v2)获取的账单金额单位为分，需要四舍五入为两位小数。以下为[查看发票详情](/reference/restful/describe-invoice-v2)接口的返回示例：
 
-<include target = "indev">
+```bash
+{
+    "code": 0,
+    "data": {
+        "id": "inv-12312io23810o291",
+        "orgId": "org-xxxxxx",
+        "periodStart": "2024-01-01T00:00:00Z",
+        "periodEnd": "2024-02-01T00:00:00Z",
+        "invoiceDate": "2024-02-01T00:00:00Z",
+        "dueDate": "2024-02-01T00:00:00Z",
+        "currency": "RMB",
+        "status": "unpaid",
+        "usageAmount": 52400,
+        "creditsApplied": 12400,
+        "alreadyBilledAmount": 0,
+        "subtotal": 40000,
+        "tax": 5000,
+        "total": 45000,
+        "advancePayAmount": 0,
+        "amountDue": 45000
+    }
+}
+```
 
-- **示例：**假设您在对账时，先通过 Query Org Daily Usage API 接口获取了 2024 年 8 月 1 日至今（2024 年 8 月 3 日）的 3 条日用量信息。每条用量信息中的金额精度均为 8 位小数。
+如需对账，建议您使用[查询日用量](/reference/restful/query-daily-usage-v2)的 API 接口获取精度为 8 为小数的日用量明细。每日用量统计起始时间为当日的 0 点至次日的 0 点。例如 2024 年 8 月 1 日的日用量统计起始时间为 2024 年 8 月 1 日 00:00:00 至 2024 年 8 月 2 日 00:00:00。将每日用量的金额加总后，您将获取一个精度为 8 位的用量总金额，对该金额从第 3 位小数进行四舍五入后，您可以获得一个精度为 2 位小数的月用量总金额，该金额与界面上账单详情页展示的总用量金额一致。
 
-    - 8 月 1 日用量总金额 `total`：¥105.03331200
+**示例：**假设您在对账时，先通过[查询日用量](/reference/restful/query-daily-usage-v2)接口获取了 2024 年 8 月 1 日至今（2024 年 8 月 3 日）的 3 条日用量信息。每条用量信息中的金额精度均为 8 位小数。
 
-    - 8 月 2 日用量总金额 `total`：¥92.03000245
+- 8 月 1 日用量总金额 `total`：¥105.03331200
 
-    - 8 月 3 日用量总金额 `total`：¥114.25300000
+- 8 月 2 日用量总金额 `total`：¥92.03000245
 
-    将三个日用量总金额相加，总和为 ¥311.31631445，根据第 3 位小数四舍五入后为 ¥311.32。该数字应与界面账单详情中展示的用量总金额一致。
+- 8 月 3 日用量总金额 `total`：¥114.25300000
 
-</include>
+将三个日用量总金额相加，总和为 ¥311.31631445，根据第 3 位小数四舍五入后为 ¥311.32。该数字应与界面账单详情中展示的用量总金额一致。
+
+\</include>
 
 #### 为什么我无法查看账单？
 
-- **可能原因**：只有组织管理员或账单管理员有权查看账单。
+**可能原因**：只有组织管理员或账单管理员有权查看账单。
 
-- **解决方法**：确保您拥有相应的权限。如果您无法查看账单，请联系您的组织管理员或账单管理员。
+**解决方法**：确保您拥有相应的权限。如果您无法查看账单，请联系您的组织管理员或账单管理员。
 
 #### **如果账单支付失败怎么办？**
 
-- **可能原因**：您的现金余额或优惠券余额不足。
+**可能原因**：您的现金余额或优惠券余额不足。
 
-- **解决方案**：
-
-    - 如果支付失败，Zilliz Cloud 将通过电子邮件通知组织管理员和账单管理员。
-
-    - 您可以在 14天催款期内前往 Zilliz Cloud 账单页面重新支付。
+**解决方法**：如果支付失败，Zilliz Cloud 将通过电子邮件通知组织管理员和账单管理员。组织管理员或账单管理员可以在 14 天催款期内前往 Zilliz Cloud 账单页面重新支付。
 
 #### 如果未及时确认账单会发生什么？
 
-- **说明**：账单处长后，Zilliz Cloud 会向您发送确认账单的电子邮件，您需要前往 Zilliz Cloud 界面手动确认账单。如果您在 3 天内未确认账单，系统将自动帮您确认账单并进入开票流程。
+**说明**：账单处长后，Zilliz Cloud 会向您发送确认账单的电子邮件，您需要前往 Zilliz Cloud 界面手动确认账单。如果您在 3 天内未确认账单，系统将自动帮您确认账单并进入开票流程。
 
-- **提示**：请在账单出账的 3 日内，尽快确认您的账单。
+**提示**：请在账单出账的 3 日内，尽快确认您的账单。
 
 #### 什么是账期？
 
-- **说明**：是指您与 Zilliz 签约的合同信控条款中，约束您在消费后的应付账单，向 Zilliz 付款的账期约定规则。账期开始时间以开票成功时间为准。Zilliz 的账期范围是 0-X 个自然日。根据签署的条款，账期会有所不同。未签署信控条款的用户，账期默认为 0 天。
+**说明**：是指您与 Zilliz 签约的合同信控条款中，约束您在消费后的应付账单，向 Zilliz 付款的账期约定规则。账期开始时间以开票成功时间为准。Zilliz 的账期范围是 0-X 个自然日。根据签署的条款，账期会有所不同。未签署信控条款的用户，账期默认为 0 天。
 
 #### **什么是催款期？**
 
-- **说明**：催款期是一个为期 14 天窗口期。在此期间，您可以支付你的“**未支付**”账单。
+**说明**：催款期是一个为期 14 天窗口期。在此期间，您可以支付你的“**未支付**”账单。
 
-- **提示**：在此期间，您将每天收到电子邮件的催款提醒，且您的发票状态将持续显示“**未支付**”直到完成付款。
+**提示**：在此期间，您将每天收到电子邮件的催款提醒，且您的发票状态将持续显示“**未支付**”直到完成付款。
 
 #### 如果催款期后仍未支付账单会发生什么?
 
-- **说明**：如果您未在催款期结束时成功付款，您的组织将立刻被冻结，账单状态转为“**已逾期”**。在此期间，您仍可支付账单。冻结 1 天后仍未付款，组织集群将被自动移至回收站。
+**说明**：如果您未在催款期结束时成功付款，您的组织将立刻被冻结，账单状态转为“**已逾期”**。在此期间，您仍可支付账单。冻结 1 天后仍未付款，组织集群将被自动移至回收站。
 
-- **提示**：为了避免影响您的 Zilliz Cloud 服务，请在催款期结束前尽快完成支付。
+**提示**：为了避免影响您的 Zilliz Cloud 服务，请在催款期结束前尽快完成支付。
 
 #### **为什么 Serverless 集群中没有操作却仍然产生费用？**
 
-- **说明**：即使 Serverless 集群中无读写操作，您仍需支付集群存储费用。存储费用根据存储的数据大小和在 Zilliz Cloud 中保留的时间计算。
+**说明**：即使 Serverless 集群中无读写操作，您仍需支付集群存储费用。存储费用根据存储的数据大小和在 Zilliz Cloud 中保留的时间计算。
 
-- **解决方法**：为了降低成本，您可以删除未使用的数据。
+**解决方法**：为了降低成本，您可以删除未使用的数据。
 
 #### **收到组织被冻结的提醒邮件后该怎么办？**
 
-- **说明**：收到组织冻结的提醒邮件意味着您的账单已逾期，您在 Zilliz Cloud 的操作将受到限制。
+**说明**：收到组织冻结的提醒邮件意味着您的账单已逾期，您在 Zilliz Cloud 的操作将受到限制。
 
-- **解决方法**：在组织冻结后的一天内完成付款，解冻组织。注意：冻结 1 天后仍未付款，您的组织集群将被自动删除。
+**解决方法**：在组织冻结后的一天内完成付款，解冻组织。注意：冻结 1 天后仍未付款，您的组织集群将被自动删除。
 
 #### 账单逾期后，组织集群被自动删除该如何恢复？
 
-- **说明**：组织冻结 1 天后仍未付款，您的组织集群将被自动删除。
+**说明**：组织冻结 1 天后仍未付款，您的组织集群将被自动删除。
 
-- **解决方法**：支付您的“**已逾期**”账单。付款成功后，组织将解冻，您可以通过回收站恢复已删除的集群。
+**解决方法**：支付您的“**已逾期**”账单。付款成功后，组织将解冻，您可以通过回收站恢复已删除的集群。
 
-- **提示**：如果您在支付账单或恢复集群时遇到问题，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
+**提示**：如果您在支付账单或恢复集群时遇到问题，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 

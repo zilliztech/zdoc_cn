@@ -48,26 +48,26 @@ Zilliz Cloud 控制台中的**指标**页签展示了各类集群指标图表。
    <tr>
      <td><p>Read vCUs</p></td>
      <td><p>vCU</p></td>
-     <td><p>Search 和 Query 操作消耗的 vCU 用量。</p><p>该指标仅适用于 <strong>Free</strong> 或 <strong>Serverless</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
+     <td><p>Search 和 Query 操作消耗的 vCU 用量。 该指标仅适用于 <strong>Free</strong> 或 <strong>Serverless</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
      <td><p>-</p></td>
    </tr>
    <tr>
      <td><p>Write vCUs</p></td>
      <td><p>vCU</p></td>
-     <td><p>Insert、Delete 和 Upsert 操作消耗的 vCU 用量。</p><p>该指标仅适用于 <strong>Free</strong> 或 <strong>Serverless</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
+     <td><p>Insert、Delete 和 Upsert 操作消耗的 vCU 用量。 该指标仅适用于 <strong>Free</strong> 或 <strong>Serverless</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
      <td><p>-</p></td>
    </tr>
    <tr>
      <td><p>CU 计算资源</p></td>
      <td><p>%</p></td>
-     <td><p>相对于 CU 总计算能力的已使用计算能力的度量。</p><p>该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
-     <td><p><strong>70%-80%</strong>：检查服务状态并准备<a href="./manage-cluster">扩容</a>。 </p><p><strong>> 90%</strong>：立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p></td>
+     <td><p>相对于 CU 总计算能力的已使用计算能力的度量。 该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
+     <td><p><strong>70%-80%</strong>：检查服务状态并准备<a href="./manage-cluster">扩容</a>。  <strong>> 90%</strong>：立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p></td>
    </tr>
    <tr>
      <td><p>CU 加载容量</p></td>
      <td><p>%</p></td>
-     <td><p>相对于 CU 总容量的已使用容量的度量。</p><p>该指标仅适用于 <strong>Free</strong>, <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
-     <td><p><strong>70%-80%</strong>：检查服务状态并准备<a href="./manage-cluster">扩容</a>。 </p><p><strong>> 90%</strong>：立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p><p><strong>100%</strong>：当 CU 加载容量达到 100% 时，您将无法向集群写入数据。请立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p></td>
+     <td><p>相对于 CU 总容量的已使用容量的度量。 该指标仅适用于 <strong>Free</strong>, <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
+     <td><p><strong>70%-80%</strong>：检查服务状态并准备<a href="./manage-cluster">扩容</a>。  <strong>> 90%</strong>：立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p><p><strong>100%</strong>：当 CU 加载容量达到 100% 时，您将无法向集群写入数据。请立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p></td>
    </tr>
    <tr>
      <td><p>存储用量</p></td>
@@ -84,25 +84,25 @@ Zilliz Cloud 控制台中的**指标**页签展示了各类集群指标图表。
    <tr>
      <td><p>读请求 QPS/VPS</p></td>
      <td><p>QPS/VPS</p></td>
-     <td><p><strong>QPS</strong>：每秒读取请求（search 和 query）的数量。</p><p><strong>VPS</strong>：每秒向量读取请求（search）的数量。VPS 不适用于 query 请求，因为 query 操作不涉及向量。</p></td>
+     <td><p><strong>QPS</strong>：每秒读取请求（search 和 query）的数量。 <strong>VPS</strong>：每秒向量读取请求（search）的数量。VPS 不适用于 query 请求，因为 query 操作不涉及向量。</p></td>
      <td><p>有关系统性能监控，请参阅<a href="https://zilliz.com.cn/vector-database-benchmark-tool?database=ZillizCloud,Milvus,PgVector,ElasticCloud,Pinecone,QdrantCloud,WeaviateCloud&dataset=medium&filter=none,low,high">向量数据库性能测试工具</a>。</p></td>
    </tr>
    <tr>
      <td><p>写请求 QPS/VPS</p></td>
      <td><p>QPS/VPS</p></td>
-     <td><p><strong>QPS</strong>：每秒写入请求（insert、bulk insert、upsert 和 delete）的数量。</p><p><strong>VPS</strong>：每秒向量写入请求（insert、bulk insert、upsert 和 delete）的数量。</p></td>
+     <td><p><strong>QPS</strong>：每秒写入请求（insert、bulk insert、upsert 和 delete）的数量。 <strong>VPS</strong>：每秒向量写入请求（insert、bulk insert、upsert 和 delete）的数量。</p></td>
      <td><p>有关系统性能监控，请参阅<a href="https://zilliz.com.cn/vector-database-benchmark-tool?database=ZillizCloud,Milvus,PgVector,ElasticCloud,Pinecone,QdrantCloud,WeaviateCloud&dataset=medium&filter=none,low,high">向量数据库性能测试工具</a>。</p></td>
    </tr>
    <tr>
      <td><p>读请求延时（Latency）</p></td>
      <td><p>毫秒</p></td>
-     <td><p>客户端向服务器发起读请求（search 和 query）到客户端收到响应之间的时间差。</p><p>在右侧扩展的下拉菜单中选择<strong>平均值</strong>或 <strong>P99</strong> 将显示对应的平均延时或 P99 延时。</p></td>
+     <td><p>客户端向服务器发起读请求（search 和 query）到客户端收到响应之间的时间差。 在右侧扩展的下拉菜单中选择<strong>平均值</strong>或 <strong>P99</strong> 将显示对应的平均延时或 P99 延时。</p></td>
      <td><p>-</p></td>
    </tr>
    <tr>
      <td><p>写请求延时（Latency）</p></td>
      <td><p>毫秒</p></td>
-     <td><p>客户端向服务器发起写请求（insert、upsert 和 delete）到客户端收到响应之间的时间差。</p><p>在右侧扩展的下拉菜单中选择<strong>平均值</strong>或 <strong>P99</strong> 将显示对应的平均延时或 P99 延时。</p></td>
+     <td><p>客户端向服务器发起写请求（insert、upsert 和 delete）到客户端收到响应之间的时间差。 在右侧扩展的下拉菜单中选择<strong>平均值</strong>或 <strong>P99</strong> 将显示对应的平均延时或 P99 延时。</p></td>
      <td><p>-</p></td>
    </tr>
    <tr>
@@ -120,19 +120,19 @@ Zilliz Cloud 控制台中的**指标**页签展示了各类集群指标图表。
    <tr>
      <td><p>慢查询数量</p></td>
      <td><p>次/分钟</p></td>
-     <td><p>统计慢查询数量，包括 search 和 query 请求数。默认情况下，查询延时超过 5 秒的查询被视为慢查询。</p><p>该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
+     <td><p>统计慢查询数量，包括 search 和 query 请求数。默认情况下，查询延时超过 5 秒的查询被视为慢查询。 该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
      <td><p>通过适当调整集群配置，可以识别存在问题的查询并优化性能。</p></td>
    </tr>
    <tr>
      <td><p>集群写入性能使用率</p></td>
      <td><p>%</p></td>
-     <td><p>集群的 insert/upsert 操作存在相应的速率限制。当前写入速率与限制的比值即为集群的写入性能利用率。</p><p>该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
+     <td><p>集群的 insert/upsert 操作存在相应的速率限制。当前写入速率与限制的比值即为集群的写入性能利用率。 该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
      <td><p>如果该利用率过高（建议超过 80%），建议您降低写入速率。</p></td>
    </tr>
    <tr>
      <td><p>Flush 次数</p></td>
      <td><p>次/分钟</p></td>
-     <td><p>统计对集群操作的 flush 次数。</p><p>该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
+     <td><p>统计对集群操作的 flush 次数。 该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
      <td><p>过于频繁的 flush 操作会影响集群的整体性能。有关 flush 操作的相关限制，请参阅<a href="./limits#flush">使用限制</a>。</p></td>
    </tr>
    <tr>
@@ -150,19 +150,19 @@ Zilliz Cloud 控制台中的**指标**页签展示了各类集群指标图表。
    <tr>
      <td><p>Entity 数量</p></td>
      <td><p>个</p></td>
-     <td><p>集群中已插入的 Entity 总数。</p><p>在右侧扩展的下拉菜单中选择指定的 collection，将显示该 collection 中已插入的 entity 数量。</p></td>
+     <td><p>集群中已插入的 Entity 总数。 在右侧扩展的下拉菜单中选择指定的 collection，将显示该 collection 中已插入的 entity 数量。</p></td>
      <td><p>-</p></td>
    </tr>
    <tr>
      <td><p>已加载 Entity 数量</p></td>
      <td><p>个</p></td>
-     <td><p>集群中已加载的 Entity 数量。</p><p>在右侧扩展的下拉菜单中选择指定的 collection，将显示该 collection 中已加载的 entity 数量。</p><p>该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
+     <td><p>集群中已加载的 Entity 数量。 在右侧扩展的下拉菜单中选择指定的 collection，将显示该 collection 中已加载的 entity 数量。</p><p>该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
      <td><p>-</p></td>
    </tr>
    <tr>
      <td><p>未加载的 Collection 数量</p></td>
      <td><p>个</p></td>
-     <td><p>统计集群中未加载的 collection 数量。</p><p>该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
+     <td><p>统计集群中未加载的 collection 数量。 该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
      <td><p>可凭借该指标判断是否需要清理数据或继续加载 collection。</p></td>
    </tr>
 </table>
@@ -228,7 +228,7 @@ Zilliz Cloud 提供预定义的默认告警项，以帮助您快速识别关键�
    <tr>
      <td><p>CU 加载容量</p></td>
      <td><p>%</p></td>
-     <td><p><strong>警告</strong>：CU 加载容量大于 70% 且持续时间超过 10 分钟时触发告警。</p><p><strong>紧急</strong>：CU 加载容量大于 90% 且持续时间超过 10 分钟时触发告警。</p></td>
+     <td><p><strong>警告</strong>：CU 加载容量大于 70% 且持续时间超过 10 分钟时触发告警。 <strong>紧急</strong>：CU 加载容量大于 90% 且持续时间超过 10 分钟时触发告警。</p></td>
    </tr>
    <tr>
      <td><p>Query 延时（P99）</p></td>
@@ -253,7 +253,7 @@ Zilliz Cloud 提供预定义的默认告警项，以帮助您快速识别关键�
    <tr>
      <td><p>CU 计算资源</p></td>
      <td><p>%</p></td>
-     <td><p><strong>警告</strong>：CU 计算资源用量大于 70% 且持续时间超过 10 分钟时触发告警。</p><p><strong>紧急</strong>：CU 计算资源用量大于 90% 且持续时间超过 10 分钟时触发告警。</p></td>
+     <td><p><strong>警告</strong>：CU 计算资源用量大于 70% 且持续时间超过 10 分钟时触发告警。 <strong>紧急</strong>：CU 计算资源用量大于 90% 且持续时间超过 10 分钟时触发告警。</p></td>
    </tr>
 </table>
 
