@@ -2,7 +2,7 @@
 title: "使用 Pipelines 搭建 RAG 应用 | Cloud"
 slug: /building-a-rag-app-with-pipelines
 sidebar_label: "使用 Pipelines 搭建 RAG 应用"
-beta: FALSE
+beta: NEAR DEPRECATE
 notebook: FALSE
 description: "Zilliz Cloud Pipelines 可以将文档、文本片段和图像等非结构化数据转换成可搜索的向量并存储在 Collection 中。本文将介绍 Zilliz Cloud Pipelines 的三种主要类型并提供示例代码，展示如何使用 Pipelines 搭建 RAG 应用。 | Cloud"
 type: origin

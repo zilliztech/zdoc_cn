@@ -2,7 +2,7 @@
 title: "createCollection() | Java | v1"
 slug: /java/v1-Collection-createCollection
 sidebar_label: "createCollection()"
-beta: FALSE
+beta: NEAR DEPRECATE
 notebook: FALSE
 description: "A MilvusClient interface. This method creates a collection with the specified schema. | Java | v1"
 type: origin

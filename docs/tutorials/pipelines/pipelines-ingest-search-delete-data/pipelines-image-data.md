@@ -2,7 +2,7 @@
 title: "图像数据 | Cloud"
 slug: /pipelines-image-data
 sidebar_label: "图像数据"
-beta: FALSE
+beta: NEAR DEPRECATE
 notebook: FALSE
 description: "您可以通过 Web 控制台或 RESTful API 创建、运行和管理 Pipelines。Web 控制台操作更简单直观，但 RESTful API 可提供更多灵活性。 | Cloud"
 type: origin

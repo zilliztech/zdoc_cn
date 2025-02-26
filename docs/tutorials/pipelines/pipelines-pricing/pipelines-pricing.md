@@ -2,7 +2,7 @@
 title: "Pipelines 定价 | Cloud"
 slug: /pipelines-pricing
 sidebar_label: "Pipelines 定价"
-beta: FALSE
+beta: NEAR DEPRECATE
 notebook: FALSE
 description: "了解 Pipelines 定价详情并估算 Pipelines 用量。 | Cloud"
 type: origin

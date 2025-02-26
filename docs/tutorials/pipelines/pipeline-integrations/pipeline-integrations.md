@@ -2,7 +2,7 @@
 title: "Pipelines 第三方集成 | Cloud"
 slug: /pipeline-integrations
 sidebar_label: "Pipelines 第三方集成"
-beta: FALSE
+beta: NEAR DEPRECATE
 notebook: FALSE
 description: "仍然不知道如何将 Zilliz Cloud Pipelines 与开源和第三方服务集成吗？那就从下面这些指南开始吧。 | Cloud"
 type: origin

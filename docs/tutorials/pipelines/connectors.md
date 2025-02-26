@@ -2,7 +2,7 @@
 title: "连接数据源 | Cloud"
 slug: /connectors
 sidebar_label: "连接数据源"
-beta: FALSE
+beta: NEAR DEPRECATE
 notebook: FALSE
 description: "Connector 可以轻松将各种数据源连接到向量数据库。本文将介绍什么是 Connector、Connector 的作用以及如何创建和管理 Connector。 | Cloud"
 type: origin

@@ -2,7 +2,7 @@
 title: "RemoteBulkWriter | Java | v1"
 slug: /java/v1-BulkWriter-RemoteBulkWriter
 sidebar_label: "RemoteBulkWriter"
-beta: FALSE
+beta: NEAR DEPRECATE
 notebook: FALSE
 description: "A RemoteBulkWriter instance writes your raw data in a format that Milvus understands into an AWS-S3-compatible bucket. | Java | v1"
 type: origin

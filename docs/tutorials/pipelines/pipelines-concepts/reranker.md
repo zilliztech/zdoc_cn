@@ -2,7 +2,7 @@
 title: "Reranker | Cloud"
 slug: /reranker
 sidebar_label: "Reranker"
-beta: FALSE
+beta: NEAR DEPRECATE
 notebook: FALSE
 description: "在信息检索（Information retrieval）任务中，Reranker 可以获取粗排召回，如向量近似最近邻搜索（Approximate Nearest Neighbor，ANN）的搜索结果与查询的相关性评分，对搜索结构进行重新排序。这能够帮助提高搜索结果的整体质量，从而使大语言模型（LLM）在 RAG 流程中优先考虑与查询最相关的文档。使用 Reranker 是提高 RAG 应用程序答案质量的有效方法。需要注意的是，Reranker 的运算成本较高，因此会增加查询延迟造成更高的花费。 | Cloud"
 type: origin

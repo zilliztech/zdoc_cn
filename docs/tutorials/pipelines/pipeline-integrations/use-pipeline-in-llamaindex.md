@@ -2,7 +2,7 @@
 title: "在 LlamaIndex 中使用 Pipelines | Cloud"
 slug: /use-pipeline-in-llamaindex
 sidebar_label: "在 LlamaIndex 中使用 Pipelines"
-beta: FALSE
+beta: NEAR DEPRECATE
 notebook: FALSE
 description: "Zilliz Cloud Pipelines](./pipelines) 是一个可扩展的 API 服务，用于检索。您可以将 Zilliz Cloud Pipelines 用作 [LLamaIndex 中的托管索引。该服务可以将文档转换为 Embedding 向量，并将它们存储在 Zilliz Cloud 中，以实现高效的语义搜索。 | Cloud"
 type: origin

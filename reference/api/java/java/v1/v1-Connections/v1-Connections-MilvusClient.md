@@ -2,7 +2,7 @@
 title: "MilvusClient | Java | v1"
 slug: /java/v1-Connections-MilvusClient
 sidebar_label: "MilvusClient"
-beta: FALSE
+beta: NEAR DEPRECATE
 notebook: FALSE
 description: "MilvusClient is an abstract interface of the Milvus client. MilvusServiceClient class is the implementation. | Java | v1"
 type: origin

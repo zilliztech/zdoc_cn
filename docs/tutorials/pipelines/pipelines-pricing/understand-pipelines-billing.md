@@ -2,7 +2,7 @@
 title: "了解定价与账单 | Cloud"
 slug: /understand-pipelines-billing
 sidebar_label: "了解定价与账单"
-beta: FALSE
+beta: NEAR DEPRECATE
 notebook: FALSE
 description: "Zilliz Cloud Pipelines 采用按量计费的定价模型。 您仅需根据 Ingestion 和 Search Pipeline 的模型用量付费。 | Cloud"
 type: origin
