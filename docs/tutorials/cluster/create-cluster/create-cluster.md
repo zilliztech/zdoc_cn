@@ -82,7 +82,7 @@ Zilliz Cloud 针对 Dedicated 集群提供按量计费和包年包月两种计�
    <tr>
      <td><p><strong>变更计费方式</strong></p></td>
      <td><p>不支持</p></td>
-     <td><p>不支持 您可以先创建包年包月集群，随后将按量计费集群迁移到新创建的包年包月集群。详情请参考<a href="./offline-migration">Zilliz Cloud 跨集群迁移</a>。</p><p>迁移完成后，请将您应用中用于连接集群 Endpoint 变更为新集群的 Endpoint。</p></td>
+     <td><p>不支持 您可以先创建包年包月集群，随后将按量计费集群迁移到新创建的包年包月集群。详情请参考<a href="./migrate-between-cluster">Zilliz Cloud 跨集群迁移</a>。</p><p>迁移完成后，请将您应用中用于连接集群 Endpoint 变更为新集群的 Endpoint。</p></td>
    </tr>
    <tr>
      <td><p><strong>续订与退订管理</strong></p></td>

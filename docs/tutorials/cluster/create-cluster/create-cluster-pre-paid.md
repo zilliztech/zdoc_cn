@@ -194,7 +194,7 @@ import Admonition from '@theme/Admonition';
 
     1. [创建新的包年包月集群](./create-cluster-pre-paid#create-annual-subscription-cluster)并支付订单。等待包年包月集群创建成功，状态转为运行中。
 
-    1. 通过 Zilliz Cloud [跨集群迁移](./offline-migration)，将按量计费集群中的数据迁移到新创建的包年包月集群中。
+    1. 通过 Zilliz Cloud [跨集群迁移](./migrate-between-clusters)，将按量计费集群中的数据迁移到新创建的包年包月集群中。
 
         **建议您在按量计费集群停写时进行迁移操作，避免两个集群间数据不一致。**
 
