@@ -107,6 +107,6 @@
     "查看发票详情": "describe-invoice",
     "查看发票列表": "list-invoices",
     "查询日用量": "query-daily-usage",
-    "授予角色权限": "grant-privilege-to-role"
-
+    "授予角色权限": "grant-privilege-to-role",
+    "导出备份文件": "export-backup-files"
 }
