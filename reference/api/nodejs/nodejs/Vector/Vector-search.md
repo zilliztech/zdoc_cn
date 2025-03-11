@@ -8,12 +8,12 @@ notebook: false
 description: "This operation conducts a vector similarity search with an optional scalar filtering expression. | Node.js"
 type: docx
 token: VNATdAYSkojgVsx5MJKcPPmMnl7
-sidebar_position: 5
+sidebar_position: 7
 keywords: 
-  - Context Window
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
+  - vector database
+  - IVF
+  - knn
+  - Image Search
   - zilliz
   - zilliz cloud
   - cloud
@@ -80,6 +80,10 @@ milvusClient.search({
     The value defaults to an empty string, indicating that no condition applies.
 
     You can set this parameter to an empty string to skip scalar filtering. To build a scalar filtering condition, refer to [Boolean Expression Rules](https://milvus.io/docs/boolean.md). 
+
+- **exprValues** (*keyValueObj*) -
+
+    If you choose to use placeholders in `filter` as stated in [Filtering Templating](/docs/filtering-templating), then you can specify the actual values for these placeholders as key-value pairs as the value of this parameter.
 
 - **ignore_growing** (*boolean*) -
 
@@ -200,7 +204,11 @@ This method returns a promise that resolves to a **SearchResults** object.
 
 ## Example
 
-```java
-
+```plaintext
+const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const searchResults = await milvusClient.search({
+   collection_name: 'my_collection',
+   vector: [1, 2, 3, 4],
+});
 ```
 

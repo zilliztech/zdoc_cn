@@ -8,12 +8,12 @@ notebook: false
 description: "This operation inserts or updates data in a specific collection. | Node.js"
 type: docx
 token: MErAdudCloVawFxpxoWcgqZonLc
-sidebar_position: 6
+sidebar_position: 8
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - zilliz
   - zilliz cloud
   - cloud

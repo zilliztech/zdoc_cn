@@ -1,23 +1,23 @@
 ---
 displayed_sidbar: nodeSidebar
-title: "updatePassword() | Node.js"
-slug: /node/node/Authentication-updatePassword
-sidebar_label: "updatePassword()"
+title: "updateUser() | Node.js"
+slug: /node/node/Authentication-updateUser
+sidebar_label: "updateUser()"
 beta: false
 notebook: false
 description: "This operation updates the password of a specific user. | Node.js"
 type: docx
 token: BCGKdCttdotF32xUJTec8UFlndg
-sidebar_position: 15
+sidebar_position: 26
 keywords: 
-  - ANNS
-  - Vector search
-  - knn algorithm
-  - HNSW
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
   - zilliz
   - zilliz cloud
   - cloud
-  - updatePassword()
+  - updateUser()
   - nodejs25
 displayed_sidebar: nodeSidebar
 
@@ -26,12 +26,12 @@ displayed_sidebar: nodeSidebar
 import Admonition from '@theme/Admonition';
 
 
-# updatePassword()
+# updateUser()
 
 This operation updates the password of a specific user.
 
 ```javascript
-updatePassword(data): Promise<ResStatus>
+updateUser(data): Promise<ResStatus>
 ```
 
 ## Request Syntax

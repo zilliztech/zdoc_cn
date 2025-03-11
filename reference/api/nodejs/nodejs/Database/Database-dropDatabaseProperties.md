@@ -1,23 +1,23 @@
 ---
 displayed_sidbar: nodeSidebar
-title: "dropDatabaseProperties | Node.js"
+title: "dropDatabaseProperties() | Node.js"
 slug: /node/node/Database-dropDatabaseProperties
-sidebar_label: "dropDatabaseProperties"
+sidebar_label: "dropDatabaseProperties()"
 beta: false
 notebook: false
 description: "This operation drops the setting of the specified properties. | Node.js"
 type: docx
 token: GulFdOWMboEK9bxnzMSc8Uf8n8b
-sidebar_position: 7
+sidebar_position: 4
 keywords: 
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
   - zilliz
   - zilliz cloud
   - cloud
-  - dropDatabaseProperties
+  - dropDatabaseProperties()
   - nodejs25
 displayed_sidebar: nodeSidebar
 
@@ -26,7 +26,7 @@ displayed_sidebar: nodeSidebar
 import Admonition from '@theme/Admonition';
 
 
-# dropDatabaseProperties
+# dropDatabaseProperties()
 
 This operation drops the setting of the specified properties.
 

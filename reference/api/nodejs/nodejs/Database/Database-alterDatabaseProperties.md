@@ -8,12 +8,12 @@ notebook: false
 description: "This operation modifies the properties of the specified database. | Node.js"
 type: docx
 token: NNWed9Vd1o7vDkxY4pncM4wYnaf
-sidebar_position: 5
+sidebar_position: 7
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
   - zilliz
   - zilliz cloud
   - cloud

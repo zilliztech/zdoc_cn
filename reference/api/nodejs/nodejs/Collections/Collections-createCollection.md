@@ -8,12 +8,12 @@ notebook: false
 description: "This operation creates a collection either with default or customized settings. | Node.js"
 type: docx
 token: HPumdTuktozoJAxYrqQcRciSnsb
-sidebar_position: 4
+sidebar_position: 6
 keywords: 
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
   - zilliz
   - zilliz cloud
   - cloud

@@ -8,12 +8,12 @@ notebook: false
 description: "This operation lists all existing databases. | Node.js"
 type: docx
 token: Kp9Dd2dIgoxyDixuqtqctPZXnFb
-sidebar_position: 3
+sidebar_position: 5
 keywords: 
-  - Zilliz
-  - milvus vector database
-  - milvus db
-  - milvus vector db
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud

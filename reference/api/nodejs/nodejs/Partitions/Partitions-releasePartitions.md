@@ -8,12 +8,12 @@ notebook: false
 description: "This operation releases the partitions in a specified collection from memory. | Node.js"
 type: docx
 token: Sqoed1lkwo8umixJJO1cvKIxnZc
-sidebar_position: 7
+sidebar_position: 8
 keywords: 
+  - ANN Search
   - What are vector embeddings
   - vector database tutorial
   - how do vector databases work
-  - vector db comparison
   - zilliz
   - zilliz cloud
   - cloud

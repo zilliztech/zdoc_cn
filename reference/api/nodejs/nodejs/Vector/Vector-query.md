@@ -8,12 +8,12 @@ notebook: false
 description: "This operation conducts a scalar filtering with a specified boolean expression. | Node.js"
 type: docx
 token: AJ96d6Aguos3FAxWMDxcjzqpnSg
-sidebar_position: 4
+sidebar_position: 5
 keywords: 
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
   - Faiss vector database
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
   - zilliz
   - zilliz cloud
   - cloud

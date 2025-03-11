@@ -8,12 +8,12 @@ notebook: false
 description: "This operation sets the active database for the gRPC client. | Node.js"
 type: docx
 token: NDcldy9OLo62DLxw1a9cFSLsnYb
-sidebar_position: 4
+sidebar_position: 6
 keywords: 
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
   - zilliz
   - zilliz cloud
   - cloud

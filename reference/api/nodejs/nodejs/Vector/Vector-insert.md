@@ -8,12 +8,12 @@ notebook: false
 description: "This operation inserts data into a specific collection. | Node.js"
 type: docx
 token: WUZwdRNXIoS0tSxCrw6coaa2nzf
-sidebar_position: 3
+sidebar_position: 4
 keywords: 
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - vector database
   - zilliz
   - zilliz cloud
   - cloud

@@ -8,12 +8,12 @@ notebook: false
 description: "This operation drops a database. | Node.js"
 type: docx
 token: Ja99dnnaOoncwbx2zIPc4PjunXx
-sidebar_position: 2
+sidebar_position: 3
 keywords: 
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
   - zilliz
   - zilliz cloud
   - cloud

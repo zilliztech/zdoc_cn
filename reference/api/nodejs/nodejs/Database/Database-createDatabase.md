@@ -8,12 +8,12 @@ notebook: false
 description: "This operation creates a database. | Node.js"
 type: docx
 token: JmlKdBz7Io91Ffx9rpKce3vUnMc
-sidebar_position: 1
+sidebar_position: 2
 keywords: 
-  - Annoy vector search
-  - milvus
-  - Zilliz
-  - milvus vector database
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - knn algorithm
   - zilliz
   - zilliz cloud
   - cloud
