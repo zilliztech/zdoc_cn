@@ -123,7 +123,7 @@ import Admonition from '@theme/Admonition';
        </tr>
        <tr>
          <td><p><strong>可用区与交换机</strong></p></td>
-         <td><p>选择 Zilliz Cloud 集群所在可用区并创建默认交换机。 目前，Zilliz Cloud 集群可选可用区如下：</p><p><strong>杭州</strong></p><ul><li><p>杭州 可用区 H</p></li><li><p>杭州 可用区 J</p></li><li><p>杭州 可用区 K</p><p><strong>北京</strong></p></li><li><p>北京 可用区 G</p></li><li><p>北京 可用区 H</p></li><li><p>北京 可用区 I</p><p><strong>深圳</strong></p></li><li><p>深圳 可用区 D</p></li><li><p>深圳 可用区 E</p></li><li><p>深圳 可用区 F</p><p>交换机配置无特殊要求，保持默认即可。</p></li></ul></td>
+         <td><p>选择 Zilliz Cloud 集群所在可用区并创建默认交换机。 目前，Zilliz Cloud 集群可选可用区如下：</p><p><strong>华东1（杭州）</strong></p><ul><li><p>杭州 可用区 H</p></li><li><p>杭州 可用区 J</p></li><li><p>杭州 可用区 K</p><p><strong>华北2（北京）</strong></p></li><li><p>北京 可用区 G</p></li><li><p>北京 可用区 H</p></li><li><p>北京 可用区 I</p><p><strong>华南1（深圳）</strong></p></li><li><p>深圳 可用区 D</p></li><li><p>深圳 可用区 E</p></li><li><p>深圳 可用区 F</p><p><strong>美国（弗吉尼亚）</strong></p></li><li><p>弗吉尼亚 可用区A</p></li><li><p>弗吉尼亚 可用区B</p><p>交换机配置无特殊要求，保持默认即可。</p></li></ul></td>
        </tr>
     </table>
 
