@@ -1,6 +1,6 @@
 ---
 title: "设置白名单 | Cloud"
-slug: /set-up-whitelist
+slug: /setup-whitelist
 sidebar_label: "设置白名单"
 beta: FALSE
 notebook: FALSE
