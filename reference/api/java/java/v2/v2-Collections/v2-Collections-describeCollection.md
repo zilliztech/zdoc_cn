@@ -8,12 +8,12 @@ notebook: false
 description: "This operation lists detailed information about a specific collection. | Java | v2"
 type: docx
 token: Lc03dk5YVo8Ilvx4XINcv5KBn9e
-sidebar_position: 9
+sidebar_position: 12
 keywords: 
-  - sentence transformers
-  - Recommender systems
-  - information retrieval
-  - dimension reduction
+  - vector database example
+  - rag vector database
+  - what is vector db
+  - what are vector databases
   - zilliz
   - zilliz cloud
   - cloud

@@ -7,7 +7,7 @@ notebook: FALSE
 description: "了解 Zilliz Cloud 如何通过 RBAC 实现高效的访问控制以及如何在 Zilliz Cloud 中管理集群用户、角色和权限。 | Cloud"
 type: origin
 token: EoZvwmbpfiPqIdk0cxocyw9mnlX
-sidebar_position: 2
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz

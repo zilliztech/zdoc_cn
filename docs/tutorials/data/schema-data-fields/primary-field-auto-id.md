@@ -129,7 +129,7 @@ export schema="{
 
 ## 添加 VARCHAR 类型的主键{#use-varchar-primary-keys}
 
-在添加 VARCHAR 类型的主键时，除了将 `data_type` 的取值修改为 `DataType.VARCHAR` 之外，还需要增加设置该字段的最大宽度（max_length）。
+在添加 VARCHAR 类型的主键时，除了将 `datatype` 的取值修改为 `DataType.VARCHAR` 之外，还需要增加设置该字段的最大宽度（max_length）。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>

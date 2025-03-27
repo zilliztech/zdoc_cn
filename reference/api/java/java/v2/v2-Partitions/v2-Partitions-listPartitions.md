@@ -8,12 +8,12 @@ notebook: false
 description: "This operation lists the partitions in a specified collection. | Java | v2"
 type: docx
 token: RJcgdJpGDouomlxPTqZc5S8Lngc
-sidebar_position: 4
+sidebar_position: 5
 keywords: 
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
   - zilliz
   - zilliz cloud
   - cloud

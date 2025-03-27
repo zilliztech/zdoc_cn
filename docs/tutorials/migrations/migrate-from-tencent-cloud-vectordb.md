@@ -32,8 +32,6 @@ import Admonition from '@theme/Admonition';
 
 - 当您将数据从腾讯云 VectorDB 迁移到 Zilliz Cloud 时，向量字段会直接迁移，而腾讯云 VectorDB 的标量字段将以 JSON 格式存储在 Zilliz Cloud 的动态字段中。有关动态字段功能的详细信息，请参阅[Dynamic Field](./enable-dynamic-field)。
 
-- 为确保兼容性，目标 Collection 中的 Auto ID 将被禁用，且无法修改。
-
 - 每个迁移任务仅限于一个源腾讯云 VectorDB 实例。如果您在多个源集群中有数据，可以为每个集群设置单独的迁移任务。
 
 ## 开始前{#before-you-start}

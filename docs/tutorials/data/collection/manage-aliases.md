@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz Cloud 为 Collection 提供了 Alias 管理能力。本节介绍如何创建、查看、删除 Alias。 | Cloud"
 type: origin
 token: Cwr5wh4WPix6M6kH1BycMgS2nEh
-sidebar_position: 8
+sidebar_position: 9
 keywords: 
   - 向量数据库
   - zilliz

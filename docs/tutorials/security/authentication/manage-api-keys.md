@@ -4,7 +4,7 @@ slug: /manage-api-keys
 sidebar_label: "API 密钥"
 beta: FALSE
 notebook: FALSE
-description: "在 Zilliz Cloud 平台，您可以在组织下分配和管理 API 密钥。这些密钥是用于对指定项目和资源进行访问所必需的认证令牌，可用于对 RESTful API 或 SDK 调用进行鉴权。 | Cloud"
+description: "在用户或应用程序调用 API 或 SDK 访问 Zilliz Cloud 控制面和数据面资源时，需要使用API 密钥进行身份认证。API 密钥是一个由字母和数字组成的字符串。每个密钥有自己的属性，如名称和 ID。 | Cloud"
 type: origin
 token: UGzNwB4TmiqTozkJvarceRdenif
 sidebar_position: 2
@@ -22,221 +22,303 @@ import Admonition from '@theme/Admonition';
 
 # API 密钥
 
-在 Zilliz Cloud 平台，您可以在组织下分配和管理 API 密钥。这些密钥是用于对指定项目和资源进行访问所必需的认证令牌，可用于对 RESTful API 或 SDK 调用进行鉴权。
+在用户或应用程序调用 API 或 SDK 访问 Zilliz Cloud 控制面和数据面资源时，需要使用API 密钥进行身份认证。API 密钥是一个由字母和数字组成的字符串。每个密钥有自己的属性，如名称和 ID。
 
 ## API 密钥概述{#overview-of-api-keys}
 
 为应对不同需求场景，Zilliz Cloud 提供了两种主要的 API 密钥类型：
 
-- **个人密钥**：这类密钥与单独的用户账户关联，由 Zilliz Cloud 自动为每位组织用户生成，并继承相应用户角色的权限。若用户离开组织，其个人密钥也将随之自动删除。因此，不建议在需要长期维护的项目中使用个人密钥。
+- **个人 API 密钥**：每个用户注册 Zilliz Cloud 账号时会自动生成一个相关联的个人密钥。该密钥继承对应用户在所属组织和项目中的角色权限。如果账号用户离开组织，其关联的个人密钥将被自动删除。作为[组织管理员](./organization-users#organization-roles)或[项目管理员](./project-users#project-roles)，您可以在 Zilliz Cloud 控制台上看到两种类型的个人 API 密钥：
 
-- **自定义密钥**：这种密钥与特定的应用程序相关联，而不是与单个用户绑定。具有[管理员](./access-control-overview)身份的用户可创建并管理自定义密钥。每个组织中最多可创建 100 个自定义密钥。此类密钥更适用于开发场景，提供了稳定的长期 API 集成及自动化功能。
+    - **您的个人 API 密钥**：专属于您的个人密钥。您可以查看并复制此 API 密钥。
 
-<Admonition type="info" icon="📘" title="说明">
+    - **组员的个人 API 密钥**：组织或项目中其他成员所拥有的个人密钥列表。您只能查看这些密钥的名称和 ID，无法复制或查看密钥本身。
 
-<p>在 2024 年 1 月 29 日之前发布的版本中，并未对 API 密钥进行分类。如果您的 Zilliz Cloud 服务是从该日期前的版本升级而来，您之前版本的 API 密钥将被默认设置为自定义密钥，并继承原 API 密钥所拥有的项目级权限。</p>
+- **自定义密钥**：由**组织管理员**和**项目管理员**手动创建，供应用程序或没有注册 Zilliz Cloud 账号的外部用户使用。自定义密钥适用于需要长期访问 Zilliz Cloud 资源的场景，确保即使 API 密钥的创建人离开组织，应用和外部用户也可以不间断地访问 Zilliz Cloud 资源。
 
-</Admonition>
+以下图表展示了 API 密钥的角色和资源访问权限。
 
-### API 安全调用{#secure-api-calls-with-rbac}
+![YElywNKSghmTLabpy7ice4vdnFe](/img/YElywNKSghmTLabpy7ice4vdnFe.png)
 
-在 Zilliz Cloud 中，基于角色的访问控制（[RBAC](./access-control-overview)）在安全保障方面发挥着重要作用，并应用于 API 调用管理。通过为组织内的用户分配具备特定权限的角色，RBAC 能够实现对资源访问的精细管理。
-
-有关更多用户角色信息，请参见[访问控制概览](./access-control-overview)。
-
-![zh-api-key-access](/img/zh-api-key-access.png)
-
-### API 密钥管理{#api-key-management}
-
-在 Zilliz Cloud 中，用户在组织内的角色决定了其管理 API 密钥的权限范围，具体如下：
+下表展示了不同角色的用户所具备的 API 密钥权限范围。更多有关角色和权限信息，请参考[访问控制](./access-control)。
 
 <table>
    <tr>
-     <th></th>
-     <th><p>组织管理员</p></th>
-     <th><p>项目管理员</p></th>
-     <th><p>项目编辑者</p></th>
-     <th><p>项目查看者</p></th>
+     <th colspan="2"><p><strong>API 密钥角色</strong></p></th>
+     <th><p><strong>权限范围</strong></p></th>
    </tr>
    <tr>
-     <td><p><strong>个人密钥</strong></p></td>
-     <td></td>
-     <td></td>
-     <td></td>
-     <td></td>
+     <td colspan="2"><p>组织管理员</p></td>
+     <td><p>具备组织内所有资源（包括组织内所有项目和集群）的管理员权限。</p></td>
    </tr>
    <tr>
-     <td><p>创建</p></td>
-     <td><p>系统自动分配</p></td>
-     <td><p>系统自动分配</p></td>
-     <td><p>系统自动分配</p></td>
-     <td><p>系统自动分配</p></td>
+     <td colspan="2"><p>组织账单管理员</p></td>
+     <td><p>仅具备组织账单的管理员权限。无权限访问组织内的项目或集群。</p></td>
    </tr>
    <tr>
-     <td><p>查看自身的 API 密钥</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
+     <td rowspan="3"><p>组织成员</p></td>
+     <td><p>项目管理员</p></td>
+     <td><p>默认情况下，具备指定项目和项目下所有集群的管理员权限。</p></td>
    </tr>
    <tr>
-     <td><p>查看其他成员的 API 密钥名称 [1]</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✘</p></td>
-     <td><p>✘</p></td>
+     <td><p>项目编辑者（Read-Write）</p></td>
+     <td><p>默认情况下，具备指定项目和项目下所有集群的读写权限。</p></td>
    </tr>
    <tr>
-     <td><p>重置 API 密钥 [2]</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
-   </tr>
-   <tr>
-     <td><p><strong>自定义密钥</strong></p></td>
-     <td></td>
-     <td></td>
-     <td></td>
-     <td></td>
-   </tr>
-   <tr>
-     <td><p>创建</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️ [3]</p></td>
-     <td><p>✘</p></td>
-     <td><p>✘</p></td>
-   </tr>
-   <tr>
-     <td><p>查看</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️ [4]</p></td>
-     <td><p>✘</p></td>
-     <td><p>✘</p></td>
-   </tr>
-   <tr>
-     <td><p>移除 API 密钥权限</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️ [4]</p></td>
-     <td><p>✘</p></td>
-     <td><p>✘</p></td>
-   </tr>
-   <tr>
-     <td><p>编辑 API 密钥名称</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✘</p></td>
-     <td><p>✘</p></td>
-     <td><p>✘</p></td>
-   </tr>
-   <tr>
-     <td><p>重置 API 密钥</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✘</p></td>
-     <td><p>✘</p></td>
-     <td><p>✘</p></td>
-   </tr>
-   <tr>
-     <td><p>删除 API 密钥</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✘</p></td>
-     <td><p>✘</p></td>
-     <td><p>✘</p></td>
+     <td><p>项目查看者（Read-Only）</p></td>
+     <td><p>默认情况下，具备指定项目和项目下所有集群的只读权限。</p></td>
    </tr>
 </table>
 
-备注：
+## 使用限制{#limits-and-restrictions}
 
-[1] 拥有[管理员](./access-control-overview)身份的用户可以根据其权限范围查看其他成员的 API 密钥名称。组织管理员可查看整个组织内所有成员的 API 密钥名称，而项目管理员仅能查看自己权限范围内的密钥。项目成员只能查看自己的个人密钥。
+- 每个组织中可创建最多 100 个自定义 API 密钥。
 
-[2] 每个用户只能重置自己的个人密钥。
+- API 密钥的管理权限由用户的组织和项目角色决定。具体权限如下：
 
-[3] 项目管理员授予自定义 API 密钥的权限受到其自身权限范围的限制。
-
-[4] 项目管理员只能查看或管理其自身权限范围内的自定义 API 密钥。例如，用户 1 拥有项目 A 的权限。如果某个自定义 API 密钥（密钥 1）具有访问项目 A、B 和 C 的权限，由于该密钥的访问范围超出了用户 1 的权限，用户 1 无法访问密钥 1。
+    <table>
+       <tr>
+         <th rowspan="2"></th>
+         <th rowspan="2"><p>组织管理员</p></th>
+         <th rowspan="2"><p>组织账单管理员</p></th>
+         <th colspan="3"><p>组织成员</p></th>
+       </tr>
+       <tr>
+         <td><p><strong>项目管理员</strong></p></td>
+         <td><p><strong>项目编辑者（Read-Write）</strong></p></td>
+         <td><p><strong>项目查看者（Read-Only）</strong></p></td>
+       </tr>
+       <tr>
+         <td colspan="6"><p><strong>您的个人 API 密钥</strong></p></td>
+       </tr>
+       <tr>
+         <td><p>创建</p></td>
+         <td><p>系统自动创建</p></td>
+         <td><p>系统自动创建</p></td>
+         <td><p>系统自动创建</p></td>
+         <td><p>系统自动创建</p></td>
+         <td><p>系统自动创建</p></td>
+       </tr>
+       <tr>
+         <td><p>查看并复制</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✔️</p></td>
+       </tr>
+       <tr>
+         <td><p>编辑</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+       </tr>
+       <tr>
+         <td><p>重置</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✔️</p></td>
+       </tr>
+       <tr>
+         <td><p>删除</p></td>
+         <td><p>在用户离开组织时由系统自动删除</p></td>
+         <td><p>在用户离开组织时由系统自动删除</p></td>
+         <td><p>在用户离开组织时由系统自动删除</p></td>
+         <td><p>在用户离开组织时由系统自动删除</p></td>
+         <td><p>在用户离开组织时由系统自动删除</p></td>
+       </tr>
+       <tr>
+         <td colspan="6"><p><strong>组员的个人 API 密钥</strong></p></td>
+       </tr>
+       <tr>
+         <td><p>创建</p></td>
+         <td><p>系统自动创建</p></td>
+         <td><p>系统自动创建</p></td>
+         <td><p>系统自动创建</p></td>
+         <td><p>系统自动创建</p></td>
+         <td><p>系统自动创建</p></td>
+       </tr>
+       <tr>
+         <td><p>查看名称和 ID</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✘</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+       </tr>
+       <tr>
+         <td><p>复制</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+       </tr>
+       <tr>
+         <td><p>编辑</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+       </tr>
+       <tr>
+         <td><p>重置</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+       </tr>
+       <tr>
+         <td><p>删除</p></td>
+         <td><p>在用户离开组织时由系统自动删除</p></td>
+         <td><p>在用户离开组织时由系统自动删除</p></td>
+         <td><p>在用户离开组织时由系统自动删除</p></td>
+         <td><p>在用户离开组织时由系统自动删除</p></td>
+         <td><p>在用户离开组织时由系统自动删除</p></td>
+       </tr>
+       <tr>
+         <td colspan="6"><p><strong>自定义 API 密钥</strong></p></td>
+       </tr>
+       <tr>
+         <td><p>创建</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✘</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+       </tr>
+       <tr>
+         <td><p>查看并复制</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✘</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+       </tr>
+       <tr>
+         <td><p>编辑</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✘</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+       </tr>
+       <tr>
+         <td><p>重置</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✘</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+       </tr>
+       <tr>
+         <td><p>删除</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✘</p></td>
+         <td><p>✔️</p></td>
+         <td><p>✘</p></td>
+         <td><p>✘</p></td>
+       </tr>
+    </table>
 
 ## 创建 API 密钥{#create-an-api-key}
 
-在 Zilliz Cloud 中，除了系统为每位组织用户自动生成的个人密钥外，您还可以手动创建自定义密钥。对于需要长期维护的项目或应用程序开发，推荐使用自定义 API 密钥。
+在 Zilliz Cloud 中，除了系统为每位组织用户自动生成的个人密钥外，您还可以手动创建自定义密钥。仅**组织管理员**和**项目管理员**有权限创建自定义 API 密钥。
 
-每位组织管理员或项目管理员均有权限创建自定义 API 密钥。创建 API 密钥的关键是确定其访问范围，包括定义该密钥能访问的项目和集群。
+1. 前往组织 **API 密钥**页面。点击 **+ API 密钥**。
 
-- **API 密钥访问权限**：您可以通过指定用户角色或特定项目，来定义自定义 API 密钥的访问范围。为实现更精细化的访问控制，您还可以通过**选择可访问的集群**来设置可访问的白名单，以限制密钥可访问的集群范围。
+    ![create-api-key-cn](/img/create-api-key-cn.png)
 
-在 **API 密钥权限**设置中，您也可以添加 API 密钥的可访问项目。
+1. 输入 **API 密钥名称**并设置 **API 密钥权限**。
 
-<Admonition type="info" icon="📘" title="说明">
+    ![DFlEbMgAToXkGAxXDzhcYSOnn1b](/img/DFlEbMgAToXkGAxXDzhcYSOnn1b.png)
 
-<p>对于创建自定义 API 密钥的项目管理员而言，您所能授予 API 密钥的权限范围取决于您自身的权限范围。</p>
+    - **API 密钥名称**： 名称长度不可超过 64 个字符。
 
-</Admonition>
+    - **API 密钥权限**：您可以通过指定用户角色或特定项目，来定义自定义 API 密钥的访问范围。为实现更精细化的访问控制，您还可以通过**将访问权限限制到指定集群**来限制密钥可访问的集群范围。
 
-![zh-create-customized-api-key](/img/zh-create-customized-api-key.png)
+        <Admonition type="info" icon="📘" title="说明">
 
-之后，您便可以使用该自定义 API 密钥连接到集群。查看[连接集群](./connect-to-cluster)了解更多。
+        <p><a href="./project-users#project-roles">项目管理员</a>授予自定义 API 密钥的权限受到其自身权限范围的限制。</p>
+
+        </Admonition>
 
 ## 查看 API 密钥{#view-api-keys}
 
-在 Zilliz Cloud 中，只有组织管理员或项目管理员才有权查看已创建的 API 密钥。
+前往组织 **API 密钥**页面。根据您的[角色](./manage-api-keys#limits-and-restrictions)，您所看到的页面内容会所有不同。
 
-- **个人密钥**：组织[管理员](./organization-users)或项目管理员可以查看组织内为用户生成的 API 密钥名称。但是，他们无法获取个人 API 密钥的实际值，以此来保障用户隐私和安全性。
+- 如果您是**组织管理员**，您可以查看自己的个人 API 密钥、所有组员的个人 API 密钥和所有自定义 API 密钥。
 
-- **自定义密钥**：组织[管理员](./organization-users)有权查看组织内所有已创建的自定义 API 密钥。如果您是项目管理员，您只能查看自身管理权限范围内的 API 密钥。
+- 如果您是**项目管理员**，您可以查看自己的个人 API 密钥以及您权限范围内的组员个人密钥和自定义密钥。例如，如果*用户1*仅是*项目A*的项目管理员，而*密钥1*拥有*项目A、B*和*C*的管理员权限，那么由于其访问范围超出了*用户1*的权限，*密钥1*对*用户1*不可见。
 
-![zh-view-api-keys](/img/zh-view-api-keys.png)
+- 如果您是**组织账单管理员**、**项目编辑者（Read-Write）**或**项目查看者（Read-Only）**，您只能查看您自己的个人 API 密钥。
+
+下图展示了组织管理员所能看到的界面内容。
+
+![ZU7ibC75zoqlp3xBXXrckXbvnyK](/img/ZU7ibC75zoqlp3xBXXrckXbvnyK.png)
 
 ## 编辑 API 密钥{#edit-an-api-key}
 
-作为组织[管理员](./organization-users)或项目管理员，您可以编辑 API 密钥，包括更改密钥名称或修改访问权限。
+目前，您只能编辑自定义 API 密钥。个人 API 密钥无法编辑，因为它们与账户用户绑定。如需修改个人密钥的权限，请先调整用户的组织和项目角色。个人 API 密钥的权限将根据用户的新角色自动调整。
 
-- **更改自定义密钥名称**：只有组织管理员有权限更改自定义 API 密钥的名称。
+以下说明介绍了如何编辑自定义 API 密钥。
 
-- **修改访问权限**：作为组织管理员，您可以修改自定义 API 密钥的访问权限。如果您是项目管理员，您修改 API 密钥权限的能力将取决于您已有的权限范围。也就是说，作为项目管理员，您无法将权限提升到超出您当前访问权限的更高级别，以确保不会发生权限膨胀。
+1. 前往组织 **API 密钥**页面。点击目标自定义 API 密钥右侧**操作**栏中的 **...**，点击**编辑**。
 
-<Admonition type="info" icon="📘" title="说明">
+    ![edit-api-key-cn](/img/edit-api-key-cn.png)
 
-<p>暂不支持编辑个人密钥。只有自定义 API 密钥才可被编辑。</p>
+1. 编辑 **API 密钥名称**和 **API 密钥权限**。
 
-</Admonition>
+    ![FssIbnBdooFzS0xrsCUc1yGvneG](/img/FssIbnBdooFzS0xrsCUc1yGvneG.png)
 
-![zh-edit-api-key](/img/zh-edit-api-key.png)
+    - **API 密钥名称**： 名称长度不可超过 64 个字符。
+
+    - **API 密钥权限**：您可以通过指定用户角色或特定项目，来定义自定义 API 密钥的访问范围。为实现更精细化的访问控制，您还可以通过**限制集群访问权限**来限制密钥可访问的集群范围。
+
+        <Admonition type="info" icon="📘" title="说明">
+
+        <p><a href="./project-users#project-roles">项目管理员</a>授予自定义 API 密钥的权限受到其自身权限范围的限制。</p>
+
+        </Admonition>
 
 ## 重置 API 密钥{#reset-an-api-key}
 
-为保持访问控制的安全性和完整性，重置 API 密钥是至关重要的。根据密钥的类型，其处理方式也有所不同：
-
-- **个人密钥**：无论用户角色如何，组织中的每个用户都有权重置自己的个人 API 密钥，并且只能重置自己的密钥。这确保用户能够迅速应对任何安全问题或访问障碍，并通过重置生成新的密钥来维护安全、个性化的访问系统。
-
-- **自定义密钥**：只有组织[管理员](./organization-users)有权重置自定义 API 密钥。这种控制级别在管理广泛的组织级访问和安全方面至关重要。组织管理员可以通过重置这些密钥来解决安全问题或更新访问协议，以确保应用级别访问的完整性不受影响。
+如果您的个人 API 密钥或自定义 API 密钥不慎被泄露，请立即重置密钥。
 
 <Admonition type="caution" icon="🚧" title="警告">
 
-<p>此操作将重置并使当前 API 密钥失效。依赖此密钥的任何代码将停止运行，直至您用新密钥更新相关代码。</p>
+<p>重置后，当前的 API 密钥将会失效。任何使用当前密钥的应用程序代码将停止运行，请务必及时更新代码中的 API 密钥信息。</p>
 
 </Admonition>
 
-![zh-reset-api-key](/img/zh-reset-api-key.png)
+根据密钥的类型，操作流程有所不同：
+
+- **重置个人 API 密钥**：不论您是什么组织或项目角色，都可以重置您自己的个人 API 密钥。
+
+    ![reset-personal-api-keys-cn](/img/reset-personal-api-keys-cn.png)
+
+- **重置自定义 API 密钥**：仅**组织管理员**和**项目管理员**有权限重置自定义 API 密钥。
+
+    ![reset-customized-api-keys-cn](/img/reset-customized-api-keys-cn.png)
 
 ## 删除 API 密钥{#delete-an-api-key}
 
-当不再需要某个 API 密钥时，作为组织[管理员](./organization-users)，您可以将其删除。
+我们建议您及时删除不再使用的自定义 API 密钥。仅**组织管理员**和**项目管理员**有权限删除自定义 API 密钥。
 
-只有自定义 API 密钥可以被删除。个人密钥可以由用户本人重置，但无法删除。
+个人 API 密钥无法手动删除。但是，当 Zilliz Cloud 账号用户离开组织时，其关联的个人 API 密钥将被删除。
+
+下图展示了如何删除自定义 API 密钥。
 
 <Admonition type="caution" icon="🚧" title="警告">
 
-<p>删除 API 密钥时，请谨慎操作。这将立即撤销所有使用该密钥的资源的访问权限。</p>
+<p>该操作不可撤销。删除后， 任何使用该 API 密钥的应用将无法再访问 Zilliz Cloud 资源。</p>
 
 </Admonition>
 
-![zh-delete-api-key](/img/zh-delete-api-key.png)
-
-## 文档推荐{#related-topics}
-
-- [连接集群](./connect-to-cluster)
-
-- [管理身份凭证](./cluster-credentials-console)
-
-- [设置白名单](./set-up-whitelist)
-
-- [管理 MFA](./multi-factor-auth) 
-
+![delete-customized-api-keys-cn](/img/delete-customized-api-keys-cn.png)

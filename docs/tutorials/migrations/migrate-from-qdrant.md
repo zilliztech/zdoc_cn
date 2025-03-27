@@ -33,8 +33,6 @@ import Admonition from '@theme/Admonition';
 
 - 不支持迁移包含空值的 payload 数据。若有空值，请先移除相应字段。
 
-- 为确保兼容性，目标 Collection 中的 Auto ID 将被禁用，且无法修改。
-
 - 每个迁移任务仅限一个源 Qdrant 集群。如有多个源集群数据，可启用多个迁移任务。
 
 ## 开始前{#before-you-start}

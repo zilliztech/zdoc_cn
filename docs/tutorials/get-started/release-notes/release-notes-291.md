@@ -68,7 +68,7 @@ Zilliz Cloud 引入了自动缩放功能，该功能可根据需求动态调整�
 
 - 用户现在可以使用 RESTful API 和控制台在 Pipeline 详细信息中获取相关使用信息。这一增强功能有助于用户全面了解 Pipeline 的使用情况，以便更好地对相关资源进行监控和分析。有关详细信息，请参阅[估算 Pipelines 用量](./estimate-pipelines-usage)。
 
-- 增加了每个项目中每种 Pipeline 的最大数量限制。用户现在最多可以在单个项目中创建 100 个各种类型的 Pipeline。这一限制之前的最高上限是 10。这一变化使项目内的 Pipeline 管理更具灵活性和可扩展性。有关所有 Pipeline 限制的详细信息，请参阅 [Zilliz Cloud 对 Pipeline 的相关限制](./limits#pipelines)。
+- 增加了每个项目中每种 Pipeline 的最大数量限制。用户现在最多可以在单个项目中创建 100 个各种类型的 Pipeline。这一限制之前的最高上限是 10。这一变化使项目内的 Pipeline 管理更具灵活性和可扩展性。有关所有 Pipeline 限制的详细信息，请参阅 [Zilliz Cloud 对 Pipeline 的相关限制](./limits)。
 
 ### 功能增强{#enhancements}
 

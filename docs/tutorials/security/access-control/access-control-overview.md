@@ -37,7 +37,7 @@ Zilliz Cloud 将资源分布在控制面（Control Plane）和数据面（Data P
 
 - **控制面**：控制面包括组织、项目和集群管理。[账号用户](./email-accounts)被授予特定的组织和项目角色，并在与控制面资源交互时通过 [API 密钥](./manage-api-keys)进行身份验证。
 
-- **数据面**：数据面包括集群、Database 和 Collection，主要负责数据访问管理。[集群用户](./cluster-users)被授予集群角色，并在与数平面资源交互时使用 [API 密钥](./manage-api-keys)或[用户名-密码对](./cluster-credentials-console)进行身份验证。
+- **数据面**：数据面包括集群、Database 和 Collection，主要负责数据访问管理。[集群用户](./cluster-users)被授予集群角色，并在与数平面资源交互时使用 [API 密钥](./manage-api-keys)或[用户名-密码对](./cluster-credentials)进行身份验证。
 
 通常情况下，一个账号用户对应一个集群用户。然而，并非所有用户都需要同时访问控制面和数据面的资源。例如账单管理员这样的用户只需要控制面的访问权限，从而管理账单和支付方式，而不需要数据面的访问权限。此外，您还可以创建临时的集群用户并通过自定义 API 密钥授予其数据面资源的访问权限。这样一来，集群用户无需注册账号即可临时访问数据。有关管理自定义 API 密钥的详细信息，请参考 [API 密钥](./manage-api-keys)。
 

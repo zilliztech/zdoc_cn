@@ -654,4 +654,4 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-在这个例子中，我们首先定义了查询向量，并在搜索时添加了过滤条件 `varchar_field1 == "Product A"`，这样可以确保搜索结果不仅与查询向量相似，还符合指定的字符串匹配条件。有关更多信息，请参考 [Filtered Search](./filtered-search) 和 [基本操作符](./basic-filtering-operators)。
+在这个例子中，我们首先定义了查询向量，并在搜索时添加了过滤条件 `varchar_field1 == "Product A"`，这样可以确保搜索结果不仅与查询向量相似，还符合指定的字符串匹配条件。有关更多信息，请参考[过滤表达式](./filtering) 。

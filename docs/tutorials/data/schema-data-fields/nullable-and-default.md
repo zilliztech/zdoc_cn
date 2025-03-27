@@ -1046,7 +1046,7 @@ curl --request POST \
      <td><p>非 null</p></td>
      <td><p>None/null</p></td>
      <td><p>使用默认值</p></td>
-     <td><p>字段：<code>age</code></p><p>默认值：<code>18</code></p><p>输入：null</p><p>结果：实际存储 <code>18</code></p></td>
+     <td><p>字段：<code>age</code> 默认值：<code>18</code></p><p>输入：null</p><p>结果：实际存储 <code>18</code></p></td>
    </tr>
    <tr>
      <td><p>✅</p></td>
@@ -1054,7 +1054,7 @@ curl --request POST \
      <td><p>-</p></td>
      <td><p>None/null</p></td>
      <td><p>存储为 null</p></td>
-     <td><p>字段：<code>middle_name</code></p><p>默认值：-</p><p>输入：null</p><p>结果：实际存储 null</p></td>
+     <td><p>字段：<code>middle_name</code> 默认值：-</p><p>输入：null</p><p>结果：实际存储 null</p></td>
    </tr>
    <tr>
      <td><p>❌</p></td>
@@ -1062,7 +1062,7 @@ curl --request POST \
      <td><p>非 null</p></td>
      <td><p>None/null</p></td>
      <td><p>使用默认值</p></td>
-     <td><p>字段：<code>status</code></p><p>默认值：<code>"active"</code></p><p>输入：null</p><p>结果：实际存储 <code>"active"</code></p></td>
+     <td><p>字段：<code>status</code> 默认值：<code>"active"</code></p><p>输入：null</p><p>结果：实际存储 <code>"active"</code></p></td>
    </tr>
    <tr>
      <td><p>❌</p></td>
@@ -1070,7 +1070,7 @@ curl --request POST \
      <td><p>-</p></td>
      <td><p>None/null</p></td>
      <td><p>报错</p></td>
-     <td><p>字段：<code>email</code></p><p>默认值：-</p><p>输入：null</p><p>结果：操作被拒绝，系统报错</p></td>
+     <td><p>字段：<code>email</code> 默认值：-</p><p>输入：null</p><p>结果：操作被拒绝，系统报错</p></td>
    </tr>
    <tr>
      <td><p>❌</p></td>
@@ -1078,7 +1078,7 @@ curl --request POST \
      <td><p>null</p></td>
      <td><p>None/null</p></td>
      <td><p>报错</p></td>
-     <td><p>字段：<code>username</code></p><p>默认值：null</p><p>输入：null</p><p>结果：操作被拒绝，系统报错</p></td>
+     <td><p>字段：<code>username</code> 默认值：null</p><p>输入：null</p><p>结果：操作被拒绝，系统报错</p></td>
    </tr>
 </table>
 

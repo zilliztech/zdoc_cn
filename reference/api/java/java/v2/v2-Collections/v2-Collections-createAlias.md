@@ -8,12 +8,12 @@ notebook: false
 description: "This operation creates an alias for an existing collection. | Java | v2"
 type: docx
 token: NMAOdxhL1oo0E7xcFqXcF6yPnBg
-sidebar_position: 4
+sidebar_position: 6
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
   - zilliz
   - zilliz cloud
   - cloud

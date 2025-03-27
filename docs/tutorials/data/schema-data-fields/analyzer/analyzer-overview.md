@@ -409,7 +409,7 @@ export analyzerParams='{
 
 有关可用过滤器类型及其特定参数的列表，请参阅[过滤器](./analyzer-filters)。  
 
-### 示例使用{#example-use}
+## 使用示例{#example-use}
 
 在本示例中，我们定义了一个集合模式，其中包含一个用于嵌入向量的向量字段和两个用于文本处理功能的 VARCHAR 字段。每个 VARCHAR 字段都配置了自己的 Analyzer 设置，以处理不同的文本处理需求。
 

@@ -7,7 +7,7 @@ notebook: FALSE
 description: "在 Zilliz Cloud 中，Partition 是 Collection 的子集。每个 Partition 都与其所在的 Collection 具有相同的数据结构，但只包含该 Collection 的一部分数据。本节将介绍如何管理 Partition 及相关注意事项。 | Cloud"
 type: origin
 token: T944whOEaiDKWbkhJVUcLxmNnRg
-sidebar_position: 7
+sidebar_position: 8
 keywords: 
   - 向量数据库
   - zilliz

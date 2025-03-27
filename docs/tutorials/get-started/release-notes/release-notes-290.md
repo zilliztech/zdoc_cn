@@ -80,7 +80,7 @@ Milvus 2.4 为 RAG 应用和多模型检索场景提供了众多新功能。如�
 
 机器学习和神经网络经常使用半精度数据类型，如 Float16 和 BFloat16。虽然这些数据类型可以提高查询效率并减少内存使用，但它们以牺牲精度为代价。在这次发布中，Zilliz Cloud 现在支持向量字段使用这些数据类型。
 
-如需了解更多，可查阅[支持的数据类型](./schema-data-fields)并运行 [float16_example.py](https://github.com/milvus-io/pymilvus/blob/2.4/examples/float16_example.py) 及 [bfloat16_example.py](https://github.com/milvus-io/pymilvus/blob/2.4/examples/bfloat16_example.py) 中的示例代码。在运行示例代码前，须将代码中的连接信息指向您的 Zilliz Cloud 集群。
+如需了解更多，可查阅[支持的数据类型](./schema-data-fields)并运行 [float16_example.py](https://github.com/milvus-io/pymilvus/blob/2.4/examples/datatypes/float16_example.py) 及 [bfloat16_example.py](https://github.com/milvus-io/pymilvus/blob/2.4/examples/datatypes/bfloat16_example.py) 中的示例代码。在运行示例代码前，须将代码中的连接信息指向您的 Zilliz Cloud 集群。
 
 ## Pipelines{#pipelines}
 

@@ -31,8 +31,6 @@ import Admonition from '@theme/Admonition';
 
 - 目前，您可以迁移以下 Elasticsearch 数据类型：**dense_vector**, **text**, **string**, **keyword**, **ip**, **date**, **timestamp**, **long**, **integer**, **short**, **byte**, **double**, **float**, **boolean**, **object**, **arrays**。如果您的表中存在不支持的数据类型字段，可以选择不迁移这些字段或[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。有关 Elasticsearch 数据类型如何映射到 Zilliz Cloud 的详细信息，请参阅[字段映射](./migrate-from-elasticsearch#field-mapping-reference)。
 
-- 为确保兼容性，目标 Collection 中的 Auto ID 将被禁用，且无法修改。
-
 - 每次迁移仅允许从每个源索引中选择一个向量字段。
 
 - 每次迁移仅支持选择单个源集群。如果您在多个源集群中有数据，可以创建多个迁移任务。

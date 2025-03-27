@@ -1,6 +1,6 @@
 ---
 title: "设置白名单 | Cloud"
-slug: /set-up-whitelist
+slug: /setup-whitelist
 sidebar_label: "设置白名单"
 beta: FALSE
 notebook: FALSE
@@ -77,7 +77,7 @@ import Admonition from '@theme/Admonition';
 
 - [管理 API 密钥](./manage-api-keys)
 
-- [管理身份凭证](./cluster-credentials-console)
+- [管理身份凭证](./cluster-credentials)
 
 - [管理 MFA](./multi-factor-auth)
 

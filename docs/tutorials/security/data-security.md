@@ -7,7 +7,7 @@ notebook: FALSE
 description: "数据安全是所有云平台的重中之重，Zilliz Cloud 也不例外。为了保障数据安全，Zilliz Cloud 在各个方面都提供了强大的措施，包括认证、访问控制、网络隔离、数据加密以及备份和恢复等。 | Cloud"
 type: origin
 token: E7X4wc69bibTo4kFfNic5hBVnhb
-sidebar_position: 3
+sidebar_position: 1
 keywords: 
   - 向量数据库
   - zilliz
@@ -46,7 +46,7 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 使用 OAuth2 协议实现身份验证。当访问集群时，Zilliz Cloud 要求用户提供身份凭证（或令牌）以证明用户身份。身份认证通过后，用户才能访问或操作集群资源。身份凭证通常由用户名和密码对或 API 密钥组成。
 
-有关详细信息，请参见[通过 Web UI 管理身份凭证](./cluster-credentials-console)和[API 密钥](./manage-api-keys)。
+有关详细信息，请参见[通过 Web UI 管理身份凭证](./cluster-credentials)和[API 密钥](./manage-api-keys)。
 
 ### 访问控制{#access-control}
 
@@ -62,7 +62,7 @@ Zilliz Cloud 使用 OAuth2 协议实现身份验证。当访问集群时，Zilli
 
 如果要限制可访问集群的 IP 地址范围，可以将指定的 CIDR 块添加到集群的白名单中。如果要完全禁止公网访问，您可以将 **127.0.0.1/32** 添加到集群的白名单中。
 
-有关详细信息，请参见[设置白名单](./set-up-whitelist)。
+有关详细信息，请参见[设置白名单](./setup-whitelist)。
 
 ## 私网连接{#private-links}
 

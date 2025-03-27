@@ -1,13 +1,13 @@
 ---
-title: "了解费用 | Cloud"
+title: "预估费用 | Cloud"
 slug: /understand-cost
-sidebar_label: "了解费用"
+sidebar_label: "预估费用"
 beta: FALSE
 notebook: FALSE
 description: "本指南将指导您预估使用 Zilliz Cloud 的费用。如需获取精确的费用报价，推荐您通过免费试用进行实测。 | Cloud"
 type: origin
 token: D9bww8M3WigQEekiljdcYKJCnqc
-sidebar_position: 1
+sidebar_position: 4
 keywords: 
   - 向量数据库
   - zilliz
@@ -20,7 +20,7 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# 了解费用
+# 预估费用
 
 本指南将指导您预估使用 Zilliz Cloud 的费用。如需获取精确的费用报价，推荐您通过[免费试用](./free-trials)进行实测。 
 
@@ -141,11 +141,11 @@ Import 和 bulk insert 操作不产生写入费用。
    </tr>
    <tr>
      <td><p>Delete</p></td>
-     <td><p>删除 1 个 Entity = 1 vCU</p><p>删除 1 个不存在的 Entity 也会消耗 1 vCU。</p></td>
+     <td><p>删除 1 个 Entity = 1 vCU 删除 1 个不存在的 Entity 也会消耗 1 vCU。</p></td>
    </tr>
    <tr>
      <td><p>Upsert</p></td>
-     <td><p>根据更新的数据量和删除的 Entity 数量计算。</p><p>删除 1 个不存在的 Entity 也会消耗 1 vCU。</p></td>
+     <td><p>根据更新的数据量和删除的 Entity 数量计算。 删除 1 个不存在的 Entity 也会消耗 1 vCU。</p></td>
    </tr>
 </table>
 

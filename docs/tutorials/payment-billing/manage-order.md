@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz Cloud 控制台提供专门的订单页面，方便您统一集中管理订单。 | Cloud"
 type: origin
 token: FJU5wklQuiAJASkHAFlcQShDn9e
-sidebar_position: 7
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz

@@ -95,6 +95,14 @@ Free 集群创建完成后，您可以在控制台看到如下信息：
 
         ![upgrade-to-dedicated-cn](/img/upgrade-to-dedicated-cn.png)
 
+### 挂起 / 恢复集群{#suspend-and-resume-cluster}
+
+在 Zilliz Cloud 上，连续 7 天不活跃的 Free 集群将被自动挂起。在 Free 集群被挂起前后，您都将收到邮件提醒。
+
+要恢复挂起中的集群，请单击**操作**并从下拉列表中选择**恢复**。在**恢复集群**对话框中确认此操作后，集群的状态将从**挂起中**变为**恢复运行中**，然后再变为**运行中**。
+
+此外，您还可以通过 RESTful API 挂起或恢复集群。有关更多接口信息，请参阅[挂起集群](/reference/restful/suspend-cluster)和[恢复集群](/reference/restful/resume-cluster)。
+
 ### 删除集群{#drop-cluster}
 
 在**操作**下拉列表中，选择**删除**可删除集群及其相关数据。只有当您在**删除集群**对话框中确认删除操作后，Zilliz Cloud 才会该删除集群。
@@ -137,7 +145,7 @@ Serverless 集群创建完成后，您可以在控制台看到如下信息：
 
 ### 迁移至 Dedicated 集群{#migrate-to-dedicated-cluster}
 
-如需使用 Dedicated 集群的高级功能，请将 Serverless 集群迁移至 Dedicated 集群。更多详情，请参考[Zilliz Cloud 跨集群迁移](./migrate-between-clusters)。
+如需使用 Dedicated 集群的高级功能，请将 Serverless 集群迁移至 Dedicated 集群。更多详情，请参考[Zilliz Cloud 跨集群迁移](./offline-migration)。
 
 ### 用户与访问控制{#users-and-access-control}
 
@@ -199,7 +207,7 @@ Dedicated 集群创建完成后，您可以在控制台看到如下信息：
 
     在**用户**页签下，您可以添加用户、重置用户密码和删除用户。
 
-    有关更多信息，请参阅[通过 Web UI 管理身份凭证](./cluster-credentials-console)。
+    有关更多信息，请参阅[通过 Web UI 管理身份凭证](./cluster-credentials)。
 
     ![manage-users](/img/manage-users.png)
 
@@ -217,7 +225,7 @@ Dedicated 集群创建完成后，您可以在控制台看到如下信息：
 
     - 在添加任意一条非全零（0.0.0.0/0）的记录后，白名单生效。此时，Zilliz Cloud仅允许已添加网段中的IP地址访问当前项目中的集群。
 
-    关于白名单的更多配置，请参阅[设置白名单](./set-up-whitelist)。
+    关于白名单的更多配置，请参阅[设置白名单](./setup-whitelist)。
 
 ### 挂起 / 恢复集群{#suspend-and-resume-cluster}
 
@@ -266,11 +274,17 @@ Dedicated 集群创建完成后，您可以在控制台看到如下信息：
 
 此外，您还可以通过 API 来删除集群。有关更多信息，请参阅[删除集群](/reference/restful/drop-cluster)。
 
+### 升级集群兼容版本以试用公测版功能{#upgrade-cluster-for-preview-features}
+
+如需试用公测版新功能，请升级 Dedicated 集群的兼容 Milvus 版本。
+
+![upgrade-to-preview-version-cn](/img/upgrade-to-preview-version-cn.png)
+
 ## 相关文档{#related-docs}
 
 - [连接集群](./connect-to-cluster)
 
 - [选择合适的 CU 类型](./cu-types-explained)
 
-- [设置白名单](./set-up-whitelist)
+- [设置白名单](./setup-whitelist)
 

@@ -88,8 +88,8 @@ import Admonition from '@theme/Admonition';
      <th><p>组件</p></th>
      <th><p>CPU</p></th>
      <th><p>Memory</p></th>
-     <th><p>平时运行</p><p>建议数量</p></th>
-     <th><p>数据导入（只写入，无查询）时</p><p>建议数量</p></th>
+     <th><p>平时运行 建议数量</p></th>
+     <th><p>数据导入（只写入，无查询）时 建议数量</p></th>
    </tr>
    <tr>
      <td><p>queryNode</p></td>
@@ -489,8 +489,42 @@ kubectl apply -f milvus-manifest.yaml
                 with backoff failed: context deadline exceeded]
         ```
 
-    再比如下面例子是资源不足，querynode调度失败:
+        再比如下面例子是资源不足，querynode调度失败:
 
-    再比如下面例子是querynode 内存耗尽导致被oom kill 而重启
+        ```shell
+        milvus
+        [querynode] not ready, detail: component[querynode]: pod[my-release-milvus-querynode-0-66f8c8b49f-tqrsx]:
+                status[PodScheduled:False]: reason[Unschedulable]: 0/60 nodes are available:
+                20 Insufficient cpu, 40 node(s) didn''t match Pod''s node affinity/selector.
+                preemption: 0/60 nodes are available: 20 No preemption victims found for incoming
+                pod, 40 Preemption is not helpful for scheduling..
+        # ot
+        ```
+
+        再比如下面例子是querynode 内存耗尽导致被oom kill 而重启
+
+        ```shell
+        milvus
+        [querynode] not ready, detail: component[querynode]: 
+          pod[in01-cd5d8b22e7b6ad5-milvus-standalone-6fb5dcb49d-vt84r]:
+            container[querynode]: restartCount[1] lastState[terminated] reason[OOMKilled]
+        ```
+
+        ```bash
+        # add-command-prompt
+        kubectl get milvus \
+           -o custom-columns="etcd:.status.conditions[0].message\
+            ,objectStorage:.status.conditions[1].message\
+            ,pulsar:.status.conditions[2].message\
+            ,milvus:.status.conditions[3].message"
+        ```
+
+        比如，返回的结果如下，表明 etcd 连接失败。此时，可申请 Zilliz 支持团队介入排查 etcd 异常原因。
+
+        ```shell
+        etcd
+        All etcd endpoints are unhealthy:[my-release-etcd.etcd.svc.cluster.local:2379:checkEtcd
+                with backoff failed: context deadline exceeded]
+        ```
 
           如您无法确定异常的原因，请将返回的结果发送给zilliz侧的技术支持。

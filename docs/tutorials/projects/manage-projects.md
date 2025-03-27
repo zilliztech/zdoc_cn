@@ -58,7 +58,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>每个组织中都有一个默认项目，默认项目的名称暂不支持修改。</p>
+<p>每个组织中都有一个默认项目。</p>
 
 </Admonition>
 

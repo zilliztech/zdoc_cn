@@ -248,37 +248,10 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
    </tr>
    <tr>
      <td><p>Dedicated 版集群</p></td>
-     <td><p>每 CU：&lt;= 64 每集群：&lt;= 4096</p></td>
-     <td><p>在 Dedicated 版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</p></td>
+     <td><p>每 CU：&lt;= 256 每集群：&lt;= 16384</p></td>
+     <td><p>在 Dedicated 版集群中，每个计算单元（CU）可创建最多 256 个 Collection，并且集群中的 Collection 总数不能超过 16,384。</p></td>
    </tr>
 </table>
-
-除了对集群中 Collection 数量的限制外，Zilliz Cloud 还对 Partition 的数量有所限制。具体来说，Zilliz Cloud 会根据集群使用的 CU 大小来计算集群中可创建的 Partition 数量，集群当前已创建的 Partition 数量需要小于或等于其可创建的 Partition 数量。
-
-```java
-集群占可创建的 Partition 数量 = 512 x CU 大小
-```
-
-<Admonition type="info" icon="📘" title="说明">
-
-<p>为了便于理解，下文演示了 Zilliz Cloud 如何计算集群的已创建 Partition 数量和可创建 Partition 数量。</p>
-<ul>
-<li><strong>计算集群中已创建的 Paritition 数量</strong></li>
-</ul>
-<p>假设一个集群含有 50 个 Collection。前 20 个 Collection 中，每个 Collection 含有 20 个Partition，剩下的 30 个 Collection 分别含有 10 个 Partition。因此，可以按照以下方式计算集群中<strong>已创建的 Paritition 数量</strong>：</p>
-<p><strong>20 (collections) x 20 (partitions) + 30 (collections) x 10 (partitions) = 400 + 300 = 700</strong></p>
-<p>基于以上等式，Zilliz Cloud 将该集群中已创建的 Partition 数量设定为 700。</p>
-<ul>
-<li><strong>计算集群中可创建的 Partition 数量</strong></li>
-</ul>
-<p>可以使用以下公式计算集群<strong>中可创建的 Partition 数量</strong>：</p>
-<p><strong>\<= 512 x CU 数</strong></p>
-<p>例如：</p>
-<p>在一个 2 CU 的 Dedicated 集群中，最多可创建 <strong>128</strong> 个 Collection 或 <strong>1,024</strong> 个 Partition。</p>
-<p>在一个 12 CU 的 Dedicated 集群中，最多可创建 <strong>768</strong> 个 Collection 或 <strong>6,144</strong> 个 Partition。</p>
-<p>在一个 32 CU 的 Dedicated 集群中，最多可创建 <strong>2,048</strong> 个 Collection 或  <strong>16,384</strong> 个 Partition。</p>
-
-</Admonition>
 
 此外，Zilliz Cloud 针对 Serverless 和 Dedicated 集群中的 Collection 操作（包括创建、加载、释放、删除）还具有速率限制。
 

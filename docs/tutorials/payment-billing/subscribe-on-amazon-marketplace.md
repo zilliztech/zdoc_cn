@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如何在亚马逊云科技 Marketplace上订阅 Zilliz Cloud。 | Cloud"
 type: origin
 token: LNxnwCaoeiwvxVkQqCTcWmMFn5g
-sidebar_position: 5
+sidebar_position: 4
 keywords: 
   - 向量数据库
   - zilliz
@@ -109,15 +109,23 @@ Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如�
 
 ## 常见问题{#troubleshooting}
 
-**在绑定云市场订阅和 Zilliz Cloud 组织过程中遇到问题该怎么办？**
+**在绑定云市场订阅和 Zilliz Cloud 组织过程中遇到无可用组织或组织不可用的问题该怎么办？**
 
-在绑定过程中，您可能会遇到如下问题：
+造成无可用组织或组织不可用的原因可能如下：
 
-1. **权限不足** (界面提示：权限不足)
+1. **权限不足**
 
-    您的角色必须为组织管理员才可将云市场订阅绑定至 Zilliz Cloud 组织。如果您是组织成员，您不具备操作权限，请联系组织管理员。
+    组织旁将展示**“权限不足的”**标签，界面如下所示。
 
-1. **所有组织都已绑定云市场订阅**（界面提示：已绑定云市场订阅）
+    ![insufficient-permission-subscription-cn](/img/insufficient-permission-subscription-cn.png)
+
+    您的角色必须为**组织管理员**或**组织账单管理员**才可将云市场订阅绑定至 Zilliz Cloud 组织。如果您是组织成员，您不具备操作权限，请联系组织管理员。
+
+1. **所有组织都已绑定云市场订阅**
+
+    组织旁将展示**“已绑定云市场订阅”**标签，界面如下所示。
+
+    ![marketplace-already-linked-subscription-cn](/img/marketplace-already-linked-subscription-cn.png)
 
     1. 如需更新组织已绑定的云市场订阅，请先[解绑](./subscribe-on-aliyun-marketplace#unsubscribe-alibaba-marketplace)订阅，再重新绑定新的云市场订阅。
 
@@ -129,7 +137,13 @@ Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如�
 
 1. **组织列表中无组织**
 
-    如果您曾关闭过账号或退出所有组织，您的组织列表中会没有组织。这种情况下，您可以：
+    如果您曾关闭过账号或退出所有组织，您的组织列表中会没有组织，界面如下所示。
+
+    ![no-organization-during-subcription-cn](/img/no-organization-during-subcription-cn.png)
+
+    这种情况下，您可以：
+
+    1. 创建一个新组织。
 
     1. 等待其他用户向您[发送组织邀请](./project-users#invite-a-user-to-a-project)，并将您设置为组织管理员。
 
