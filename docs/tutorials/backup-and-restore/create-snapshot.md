@@ -38,7 +38,7 @@ Zilliz Cloud 将永久保存手动创建的备份。换言之，手动创建的�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>备份功能目前仅对 Dedicated 集群开放。如果您创建的是 Serverless 集群，请先<a href="./offline-migration">迁移</a>至 Dedicated 集群。</p>
+<p>备份功能目前仅对 Dedicated 集群开放。如果您创建的是 Serverless 集群，请先<a href="./migrate-between-clusters">迁移</a>至 Dedicated 集群。</p>
 <p>创建备份会产生一定费用。具体详情，请参阅<a href="./understand-cost">了解费用</a>。</p>
 
 </Admonition>

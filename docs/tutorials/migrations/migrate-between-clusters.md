@@ -1,13 +1,13 @@
 ---
-title: "离线迁移 | Cloud"
-slug: /offline-migration
-sidebar_label: "离线迁移"
+title: "集群间迁移 | Cloud"
+slug: /migrate-between-clusters
+sidebar_label: "集群间迁移"
 beta: FALSE
 notebook: FALSE
-description: "离线迁移允许您在计划的停机时间内，将现有集群数据从源集群迁移到目标集群。此方法支持在同一组织内或不同组织之间进行迁移，适用于可以接受短暂停机的场景，例如计划维护或小规模数据库迁移。如果您的迁移需要保持读写不中断，请参考零停机迁移。 | Cloud"
+description: "集群间迁移允许您在计划的停机时间内，将现有集群数据从源集群迁移到目标集群。此方法支持在同一组织内或不同组织之间进行迁移，适用于可以接受短暂停机的场景，例如计划维护或小规模数据库迁移。 | Cloud"
 type: origin
 token: N6tlwTPPvi0FXvkj4fccCgtTnOg
-sidebar_position: 1
+sidebar_position: 2
 keywords: 
   - 向量数据库
   - zilliz
@@ -22,49 +22,15 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# 离线迁移
+# 集群间迁移
 
-**离线迁移**允许您在计划的停机时间内，将现有集群数据从源集群迁移到目标集群。此方法支持在同一组织内或不同组织之间进行迁移，适用于可以接受短暂停机的场景，例如计划维护或小规模数据库迁移。如果您的迁移需要保持读写不中断，请参考[零停机迁移](./zero-downtime-migration)。
-
-## 注意事项{#considerations}
-
-下表展示了源集群和目标集群间的兼容性：
-
-<table>
-   <tr>
-     <th rowspan="2"><p><strong>源集群</strong></p></th>
-     <th colspan="3"><p><strong>目标集群</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>Free</p></td>
-     <td><p>Serverless</p></td>
-     <td><p>Dedicated</p></td>
-   </tr>
-   <tr>
-     <td><p>Free</p></td>
-     <td><p>不支持</p></td>
-     <td><p>请参考<a href="./manage-cluster#upgrade-plan">管理集群</a></p></td>
-     <td><p>请参考<a href="./manage-cluster#upgrade-plan">管理集群</a></p></td>
-   </tr>
-   <tr>
-     <td><p>Serverless</p></td>
-     <td><p>不支持</p></td>
-     <td><p>不支持</p></td>
-     <td><p>支持</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated</p></td>
-     <td><p>不支持</p></td>
-     <td><p>不支持</p></td>
-     <td><p>支持</p></td>
-   </tr>
-</table>
+**集群间迁移**允许您在计划的停机时间内，将现有集群数据从源集群迁移到目标集群。此方法支持在同一组织内或不同组织之间进行迁移，适用于可以接受短暂停机的场景，例如计划维护或小规模数据库迁移。
 
 ## 开始前{#before-you-start}
 
 - 源 Zilliz Cloud 集群必须能够通过公网访问。
 
-- 对于[组织间迁移](./offline-migration#migrate-data-across-organizations)，请确保您拥有目标 Zilliz Cloud 集群所需的连接信息，包括集群 Endpoint、API 密钥或集群的用户名和密码。
+- 对于[组织间迁移](./migrate-between-clusters#migrate-data-across-organizations)，请确保您拥有目标 Zilliz Cloud 集群所需的连接信息，包括集群 Endpoint、API 密钥或集群的用户名和密码。
 
 - 您需要拥有组织管理员或项目管理员的角色。如果您没有相应的权限，请联系您的 Zilliz Cloud 管理员。
 
@@ -143,4 +109,3 @@ import Admonition from '@theme/Admonition';
 1. 在**任务中心**页面，取消失败的迁移任务。
 
 1. 在**操作**列点击**查看详情**以访问日志信息。
-
