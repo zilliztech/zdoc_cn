@@ -22,7 +22,7 @@ import Admonition from '@theme/Admonition';
 
 # 版本说明书（2025/03/27）
 
-本次发布在 **PRIVATE PREVIEW** 中引入了数据平面审计日志功能。旨在通过提供在数据平面上执行的操作的详细日志来增强数据安全性。除了该功能外，Zilliz Cloud还修订了其优惠券策略。
+本次发布引入了数据平面审计日志功能。旨在通过提供在数据平面上执行的操作的详细日志来增强数据安全性。除了该功能外，Zilliz Cloud还修订了其优惠券策略。
 
 ## Milvus 兼容性{#milvus-compatibility}
 
