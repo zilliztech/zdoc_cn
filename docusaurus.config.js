@@ -316,7 +316,7 @@ const config = {
             imageDir: 'milvus/reference/python/images'
           },
           zilliz: {
-            outputDir: 'reference/api/java/java/v2',
+            outputDir: 'reference/api/python/python',
             imageDir: 'static/img',
           }
         }
