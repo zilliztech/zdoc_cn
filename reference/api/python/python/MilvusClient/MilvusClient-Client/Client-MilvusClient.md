@@ -10,10 +10,10 @@ type: docx
 token: TUrSdmskuoGdFRxFT75c6xhinzc
 sidebar_position: 2
 keywords: 
-  - what is milvus
-  - milvus database
-  - milvus lite
-  - milvus benchmark
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
   - zilliz
   - zilliz cloud
   - cloud
@@ -92,7 +92,7 @@ MilvusClient(
 
     A valid token should be either
 
-    - An [API](/docs/manage-api-keys) [key](/docs/manage-api-keys) with sufficient permissions, or
+    - An [API](/docs/manage-api-keys)[ key](/docs/manage-api-keys) with sufficient permissions, or
 
     - A pair of [username and password ](/docs/cluster-credentials)used to access the target cluster, joined by a colon (:). For example, you can set this to `username:p@ssw0rd`.
 

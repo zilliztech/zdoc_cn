@@ -1,7 +1,10 @@
 ---
+title: "Columns | Go | v1"
 slug: /go/v1-Collection-Columns
+sidebar_label: "Columns"
 beta: FALSE
 notebook: FALSE
+description: "The struct types on this page implement the method signatures of the `entity.Column` interface. | Go | v1"
 type: origin
 token: GftcwnSu7iOCbDk1wGTc9sE3nwb
 sidebar_position: 18
@@ -32,19 +35,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[]bool</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[]bool</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>ValueByIdx(idx int)</code></p></td>
-  <td><p><code>bool, error</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>ValueByIdx(idx int)</code></p></td>
+     <td><p><code>bool, error</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
 </table>
 
@@ -72,19 +75,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[][]bool</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[][]bool</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>ValueByIdx(idx int)</code></p></td>
-  <td><p><code>[]bool, error</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>ValueByIdx(idx int)</code></p></td>
+     <td><p><code>[]bool, error</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
 </table>
 
@@ -114,19 +117,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[]float64</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[]float64</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>ValueByIdx(idx int)</code></p></td>
-  <td><p><code>float64, error</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>ValueByIdx(idx int)</code></p></td>
+     <td><p><code>float64, error</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
 </table>
 
@@ -154,19 +157,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[][]float64</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[][]float64</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>ValueByIdx(idx int)</code></p></td>
-  <td><p><code>[]float64, error</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>ValueByIdx(idx int)</code></p></td>
+     <td><p><code>[]float64, error</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
 </table>
 
@@ -196,19 +199,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[]float32</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[]float32</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>ValueByIdx(idx int)</code></p></td>
-  <td><p><code>float32, error</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>ValueByIdx(idx int)</code></p></td>
+     <td><p><code>float32, error</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
 </table>
 
@@ -236,19 +239,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[][]float32</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[][]float32</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>ValueByIdx(idx int)</code></p></td>
-  <td><p><code>[]float32, error</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>ValueByIdx(idx int)</code></p></td>
+     <td><p><code>[]float32, error</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
 </table>
 
@@ -278,19 +281,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[]int8</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[]int8</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>ValueByIdx(idx int)</code></p></td>
-  <td><p><code>int8, error</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>ValueByIdx(idx int)</code></p></td>
+     <td><p><code>int8, error</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
 </table>
 
@@ -318,19 +321,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[][]int8</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[][]int8</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>ValueByIdx(idx int)</code></p></td>
-  <td><p><code>[]int8, error</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>ValueByIdx(idx int)</code></p></td>
+     <td><p><code>[]int8, error</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
 </table>
 
@@ -360,19 +363,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[]int16</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[]int16</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>ValueByIdx(idx int)</code></p></td>
-  <td><p><code>int16, error</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>ValueByIdx(idx int)</code></p></td>
+     <td><p><code>int16, error</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
 </table>
 
@@ -400,19 +403,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[][]int16</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[][]int16</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>ValueByIdx(idx int)</code></p></td>
-  <td><p><code>[]int16, error</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>ValueByIdx(idx int)</code></p></td>
+     <td><p><code>[]int16, error</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
 </table>
 
@@ -442,19 +445,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[]int32</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[]int32</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>ValueByIdx(idx int)</code></p></td>
-  <td><p><code>int32, error</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>ValueByIdx(idx int)</code></p></td>
+     <td><p><code>int32, error</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
 </table>
 
@@ -482,19 +485,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[][]int32</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[][]int32</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>ValueByIdx(idx int)</code></p></td>
-  <td><p><code>[]int32, error</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>ValueByIdx(idx int)</code></p></td>
+     <td><p><code>[]int32, error</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
 </table>
 
@@ -524,19 +527,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[]int64</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[]int64</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>ValueByIdx(idx int)</code></p></td>
-  <td><p><code>int64, error</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>ValueByIdx(idx int)</code></p></td>
+     <td><p><code>int64, error</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
 </table>
 
@@ -564,19 +567,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[][]int64</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[][]int64</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>ValueByIdx(idx int)</code></p></td>
-  <td><p><code>[]int64, error</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>ValueByIdx(idx int)</code></p></td>
+     <td><p><code>[]int64, error</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
 </table>
 
@@ -606,24 +609,24 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[][]byte</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[][]byte</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>ValueByIdx(idx int)</code></p></td>
-  <td><p><code>[]byte, error</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>ValueByIdx(idx int)</code></p></td>
+     <td><p><code>[]byte, error</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
    <tr>
-  <td><p><code>WithIsDynamic(isDynamic bool)</code></p></td>
-  <td><p><code>*entity.ColumnJSONBytes</code></p></td>
-  <td></td>
+     <td><p><code>WithIsDynamic(isDynamic bool)</code></p></td>
+     <td><p><code>*entity.ColumnJSONBytes</code></p></td>
+     <td></td>
    </tr>
 </table>
 
@@ -651,19 +654,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[]string</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[]string</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>ValueByIdx(idx int)</code></p></td>
-  <td><p><code>string, error</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>ValueByIdx(idx int)</code></p></td>
+     <td><p><code>string, error</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
 </table>
 
@@ -691,19 +694,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[][]string</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[][]string</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>ValueByIdx(idx int)</code></p></td>
-  <td><p><code>[]string, error</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>ValueByIdx(idx int)</code></p></td>
+     <td><p><code>[]string, error</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
 </table>
 
@@ -733,19 +736,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[][]byte</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[][]byte</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>Dim()</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p>Return the dimensionality of this vector field.</p></td>
+     <td><p><code>Dim()</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p>Return the dimensionality of this vector field.</p></td>
    </tr>
 </table>
 
@@ -775,19 +778,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[][]byte</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[][]byte</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>Dim()</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p>Return the dimensionality of this vector field.</p></td>
+     <td><p><code>Dim()</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p>Return the dimensionality of this vector field.</p></td>
    </tr>
 </table>
 
@@ -817,19 +820,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[][]byte</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[][]byte</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>Dim()</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p>Return the dimensionality of this vector field.</p></td>
+     <td><p><code>Dim()</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p>Return the dimensionality of this vector field.</p></td>
    </tr>
 </table>
 
@@ -859,19 +862,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[][]byte</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[][]byte</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>Dim()</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p>Return the dimensionality of this vector field.</p></td>
+     <td><p><code>Dim()</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p>Return the dimensionality of this vector field.</p></td>
    </tr>
 </table>
 
@@ -901,19 +904,19 @@ In addition to the methods defined in the `entity.Column` interface, this struct
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Data()</code></p></td>
-  <td><p><code>[]entity.SparseEmbedding</code></p></td>
-  <td><p>Return all data in the column.</p></td>
+     <td><p><code>Data()</code></p></td>
+     <td><p><code>[]entity.SparseEmbedding</code></p></td>
+     <td><p>Return all data in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>ValueByIdx(idx int)</code></p></td>
-  <td><p><code>entity.SparseEmbedding, error</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>ValueByIdx(idx int)</code></p></td>
+     <td><p><code>entity.SparseEmbedding, error</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
 </table>
 
@@ -943,34 +946,34 @@ type SparseEmbedding interface {
 
 <table>
    <tr>
-  <th><p>Method Signature</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method Signature</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Dim()</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p>Return the dimensionality of the sparse vector embedding.</p></td>
+     <td><p><code>Dim()</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p>Return the dimensionality of the sparse vector embedding.</p></td>
    </tr>
    <tr>
-  <td><p><code>Len()</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p>Return the number of rows in the column.</p></td>
+     <td><p><code>Len()</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p>Return the number of rows in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>Get(idx int)</code></p></td>
-  <td><p><code>pos unit32, value float32, ok bool</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>Get(idx int)</code></p></td>
+     <td><p><code>pos unit32, value float32, ok bool</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
    <tr>
-  <td><p><code>Serialize()</code></p></td>
-  <td><p><code>[]byte</code></p></td>
-  <td><p>Return the serialized sparse vector embedding.</p></td>
+     <td><p><code>Serialize()</code></p></td>
+     <td><p><code>[]byte</code></p></td>
+     <td><p>Return the serialized sparse vector embedding.</p></td>
    </tr>
    <tr>
-  <td><p><code>FieldType()</code></p></td>
-  <td><p><code>entity.FieldType</code></p></td>
-  <td><p>Return the field type of the sparse vector embedding.</p></td>
+     <td><p><code>FieldType()</code></p></td>
+     <td><p><code>entity.FieldType</code></p></td>
+     <td><p>Return the field type of the sparse vector embedding.</p></td>
    </tr>
 </table>
 

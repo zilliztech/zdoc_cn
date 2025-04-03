@@ -285,7 +285,7 @@ const config = {
           }
         }
       },
-      go: {
+      gov1: {
         root: 'V0SCw3U3siZBynkKhUCcRRAin69',
         base: 'WA8rbgtu8aq3wtsBm02cepOznPJ',
         sourceType: 'wiki',
@@ -303,6 +303,24 @@ const config = {
           }
         }
       },
+      gov2: {
+        root: 'LaQ1wPdnSiDXDLkMieEcrv95nRc',
+        base: 'RWi9b79oeaDNkBsCkAGcoc90nif',
+        sourceType: 'wiki',
+        version: 'v2.5.x',
+        displayedSidebar: 'goSidebar',
+        docSourceDir: './plugins/lark-docs/meta/sources/go/v2.5.x',
+        targets: {
+          milvus: {
+            outputDir: 'milvus/reference/go/docs/v2',
+            imageDir: 'milvus/reference/go/images'
+          },
+          zilliz: {
+            outputDir: 'reference/api/go/go/v2',
+            imageDir: 'static/img',
+          }
+        }
+      },
       pymilvus25: {
         root: 'Z1SFf89zYlGHXvdo6dxcR6gXntc',
         base: 'B8X9bJjJta2q4NskclYcxT7lngG',
@@ -316,7 +334,7 @@ const config = {
             imageDir: 'milvus/reference/python/images'
           },
           zilliz: {
-            outputDir: 'reference/api/java/java/v2',
+            outputDir: 'reference/api/python/python',
             imageDir: 'static/img',
           }
         }

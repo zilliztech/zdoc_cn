@@ -1,7 +1,10 @@
 ---
+title: "DeleteByPks() | Go | v1"
 slug: /go/v1-Collection-DeleteByPks
+sidebar_label: "DeleteByPks()"
 beta: FALSE
 notebook: FALSE
+description: "This method deletes the specified entities from a collection. | Go | v1"
 type: origin
 token: WRnTwJaC7ibUftk35onccdCMn6b
 sidebar_position: 12
@@ -24,29 +27,29 @@ func (c *GrpcClient) DeleteByPks(ctx context.Context, collName string, partition
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>ctx</code></p></td>
-  <td><p>Context for the current call to work.</p></td>
-  <td><p><code>context.Context</code></p></td>
+     <td><p><code>ctx</code></p></td>
+     <td><p>Context for the current call to work.</p></td>
+     <td><p><code>context.Context</code></p></td>
    </tr>
    <tr>
-  <td><p><code>collName</code></p></td>
-  <td><p>Name of the collection from which entities are deleted.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>collName</code></p></td>
+     <td><p>Name of the collection from which entities are deleted.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>partitionName</code></p></td>
-  <td><p>Name of the partition to update or insert data into.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>partitionName</code></p></td>
+     <td><p>Name of the partition to update or insert data into.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>ids</code></p></td>
-  <td><p>IDs of the entities to delete.</p></td>
-  <td><p><code>entity.Column</code></p></td>
+     <td><p><code>ids</code></p></td>
+     <td><p>IDs of the entities to delete.</p></td>
+     <td><p><code>entity.Column</code></p></td>
    </tr>
 </table>
 

@@ -5,14 +5,14 @@ beta: false
 notebook: false
 description: "Embedding models for you to embed unstrucctured data into vector embeddings. | Python"
 type: folder
-token: G3Qvfzptcl9gcFdHholcBmgQnib
-sidebar_position: 4
+token: A6atfZDQxl1INud6VYGcX54zngf
+sidebar_position: 2
 sidebar_label: "EmbeddingModels"
 keywords: 
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
   - zilliz
   - zilliz cloud
   - cloud

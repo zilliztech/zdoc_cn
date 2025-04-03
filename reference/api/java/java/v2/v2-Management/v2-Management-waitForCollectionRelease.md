@@ -10,10 +10,10 @@ type: docx
 token: HRicdDwU4oUDWEx6DrlcARGrn1c
 sidebar_position: 14
 keywords: 
-  - open source vector database
-  - Vector index
-  - vector database open source
-  - open source vector db
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud

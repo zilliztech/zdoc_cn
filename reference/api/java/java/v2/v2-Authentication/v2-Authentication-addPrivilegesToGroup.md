@@ -10,10 +10,10 @@ type: docx
 token: T9Jqd5JfdoW5Jxxwx1eckCOCn6c
 sidebar_position: 1
 keywords: 
-  - vector databases comparison
-  - Faiss
-  - Video search
-  - AI Hallucination
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
   - zilliz
   - zilliz cloud
   - cloud

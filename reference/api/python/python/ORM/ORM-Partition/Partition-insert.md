@@ -10,10 +10,10 @@ type: docx
 token: QXDxdv36FoVgjcxDV1gcDwWXnsd
 sidebar_position: 5
 keywords: 
+  - IVF
+  - knn
+  - Image Search
   - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
   - zilliz
   - zilliz cloud
   - cloud

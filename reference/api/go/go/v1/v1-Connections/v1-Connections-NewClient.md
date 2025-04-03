@@ -1,7 +1,10 @@
 ---
+title: "NewClient() | Go | v1"
 slug: /go/v1-Connections-NewClient
+sidebar_label: "NewClient()"
 beta: FALSE
 notebook: FALSE
+description: "This method creates a Milvus client that connects to a specific Milvus deployment. | Go | v1"
 type: origin
 token: PAGGwMYtHiub33knSlCcSAZ5nIc
 sidebar_position: 1
@@ -24,19 +27,19 @@ func NewClient(ctx context.Context, config Config) (Client, error)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>ctx</code></p></td>
-  <td><p>Context for the current call to work.</p></td>
-  <td><p><code>context.Context</code></p></td>
+     <td><p><code>ctx</code></p></td>
+     <td><p>Context for the current call to work.</p></td>
+     <td><p><code>context.Context</code></p></td>
    </tr>
    <tr>
-  <td><p><code>config</code></p></td>
-  <td><p>Client configurations.</p></td>
-  <td><p><code>client.Config</code></p></td>
+     <td><p><code>config</code></p></td>
+     <td><p>Client configurations.</p></td>
+     <td><p><code>client.Config</code></p></td>
    </tr>
 </table>
 

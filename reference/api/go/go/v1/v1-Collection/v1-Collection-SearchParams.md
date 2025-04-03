@@ -1,7 +1,10 @@
 ---
+title: "SearchParams | Go | v1"
 slug: /go/v1-Collection-SearchParams
+sidebar_label: "SearchParams"
 beta: FALSE
 notebook: FALSE
+description: "The types on this page implemented the method signatures of the entity.SearchParam interface. | Go | v1"
 type: origin
 token: WVfDwwJ5Cio5v6kP4R3c3unbnB4
 sidebar_position: 20
@@ -28,16 +31,16 @@ searchParams := entity.NewIndexAUTOINDEXSearchParam(level int)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
-  <th><p>Description</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>level</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[1, 5]</code></p></td>
-  <td><p>The precision level of the search.</p><p>Increasing the <code>level</code> parameter will result in a higher recall rate, but may also lead to degraded search performance. The value defaults to <code>1</code> and ranges from <code>1</code> to <code>5</code>. The default value results in a recall rate of 90%, which is typically sufficient for most use cases. However, if you require a higher recall rate, increase this value.</p></td>
+     <td><p><code>level</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[1, 5]</code></p></td>
+     <td><p>The precision level of the search. Increasing the <code>level</code> parameter will result in a higher recall rate, but may also lead to degraded search performance. The value defaults to <code>1</code> and ranges from <code>1</code> to <code>5</code>. The default value results in a recall rate of 90%, which is typically sufficient for most use cases. However, if you require a higher recall rate, increase this value.</p></td>
    </tr>
 </table>
 
@@ -53,18 +56,18 @@ searchParams := entity.NewIndexBinFlatSearchParam(nprobe int)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
-  <th><p>Description</p></th>
-  <th><p>Default</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
+     <th><p>Description</p></th>
+     <th><p>Default</p></th>
    </tr>
    <tr>
-  <td><p><code>nprobe</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[1, nlist]</code></p></td>
-  <td><p>Number of units to query</p></td>
-  <td><p><code>8</code></p></td>
+     <td><p><code>nprobe</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[1, nlist]</code></p></td>
+     <td><p>Number of units to query</p></td>
+     <td><p><code>8</code></p></td>
    </tr>
 </table>
 
@@ -80,16 +83,16 @@ searchParams := entity.NewIndexDISKANNSearchParam(search_list int)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
-  <th><p>Description</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>search_list</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[topk, int32_max]</code></p></td>
-  <td><p>Size of the candidate list, a larger size offers a higher recall rate with degraded performance.</p></td>
+     <td><p><code>search_list</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[topk, int32_max]</code></p></td>
+     <td><p>Size of the candidate list, a larger size offers a higher recall rate with degraded performance.</p></td>
    </tr>
 </table>
 
@@ -131,38 +134,38 @@ searchParams := entity.NewIndexGPUCagraSearchParam(
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Type</p></th>
-  <th><p>Description</p></th>
-  <th><p>Default</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Type</p></th>
+     <th><p>Description</p></th>
+     <th><p>Default</p></th>
    </tr>
    <tr>
-  <td><p><code>itopkSize</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p>Determines the size of intermediate results kept during the search. A larger value may improve recall at the expense of search performance. It should be at least equal to the final top-k (limit) value and is typically a power of 2 (e.g., 16, 32, 64, 128).</p></td>
-  <td><p>N/A</p></td>
+     <td><p><code>itopkSize</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p>Determines the size of intermediate results kept during the search. A larger value may improve recall at the expense of search performance. It should be at least equal to the final top-k (limit) value and is typically a power of 2 (e.g., 16, 32, 64, 128).</p></td>
+     <td><p>N/A</p></td>
    </tr>
    <tr>
-  <td><p><code>searchWidth</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p>Specifies the number of entry points into the CAGRA graph during the search. Increasing this value can enhance recall but may impact search performance（e.g. 1, 2, 4, 8, 16, 32).</p></td>
-  <td><p>N/A</p></td>
+     <td><p><code>searchWidth</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p>Specifies the number of entry points into the CAGRA graph during the search. Increasing this value can enhance recall but may impact search performance（e.g. 1, 2, 4, 8, 16, 32).</p></td>
+     <td><p>N/A</p></td>
    </tr>
    <tr>
-  <td><p><code>minIterations</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td rowspan="2"><p>Controls the search iteration process. By default, they are set to <code>0</code>, and CAGRA automatically determines the number of iterations based on <code>itopkSize</code> and <code>searchWidth</code>. Adjusting these values manually can help balance performance and accuracy.</p></td>
-  <td rowspan="2"><p><code>0</code></p></td>
+     <td><p><code>minIterations</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td rowspan="2"><p>Controls the search iteration process. By default, they are set to <code>0</code>, and CAGRA automatically determines the number of iterations based on <code>itopkSize</code> and <code>searchWidth</code>. Adjusting these values manually can help balance performance and accuracy.</p></td>
+     <td rowspan="2"><p><code>0</code></p></td>
    </tr>
    <tr>
-  <td><p><code>maxIterations</code></p></td>
-  <td><p><code>int</code></p></td>
+     <td><p><code>maxIterations</code></p></td>
+     <td><p><code>int</code></p></td>
    </tr>
    <tr>
-  <td><p><code>teamSize</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p>Specifies the number of CUDA threads used for calculating metric distance on the GPU. Common values are a power of 2 up to 32 (e.g. 2, 4, 8, 16, 32). It has a minor impact on search performance. The default value is <code>0</code>, where Milvus automatically selects the <code>teamSize</code> based on the vector dimension.</p></td>
-  <td><p><code>0</code></p></td>
+     <td><p><code>teamSize</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p>Specifies the number of CUDA threads used for calculating metric distance on the GPU. Common values are a power of 2 up to 32 (e.g. 2, 4, 8, 16, 32). It has a minor impact on search performance. The default value is <code>0</code>, where Milvus automatically selects the <code>teamSize</code> based on the vector dimension.</p></td>
+     <td><p><code>0</code></p></td>
    </tr>
 </table>
 
@@ -178,18 +181,18 @@ searchParams := entity.NewIndexGPUIvfFlatSearchParam(nprobe int)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
-  <th><p>Description</p></th>
-  <th><p>Default</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
+     <th><p>Description</p></th>
+     <th><p>Default</p></th>
    </tr>
    <tr>
-  <td><p><code>nprobe</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[1, 65535]</code></p></td>
-  <td><p>Number of cluster units</p></td>
-  <td><p><code>128</code></p></td>
+     <td><p><code>nprobe</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[1, 65535]</code></p></td>
+     <td><p>Number of cluster units</p></td>
+     <td><p><code>128</code></p></td>
    </tr>
 </table>
 
@@ -205,18 +208,18 @@ searchParams := entity.NewIndexGPUIvfPQSearchParam(nprobe int)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
-  <th><p>Description</p></th>
-  <th><p>Default</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
+     <th><p>Description</p></th>
+     <th><p>Default</p></th>
    </tr>
    <tr>
-  <td><p><code>nprobe</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[1, 65535]</code></p></td>
-  <td><p>Number of cluster units</p></td>
-  <td><p><code>128</code></p></td>
+     <td><p><code>nprobe</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[1, 65535]</code></p></td>
+     <td><p>Number of cluster units</p></td>
+     <td><p><code>128</code></p></td>
    </tr>
 </table>
 
@@ -232,16 +235,16 @@ searchParams := entity.NewIndexHNSWSearchParam(ef int)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
-  <th><p>Description</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>ef</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[top_k, int_max]</code></p></td>
-  <td><p>Parameter controlling query time/accuracy trade-off. Higher <code>ef</code> leads to more accurate but slower search.</p></td>
+     <td><p><code>ef</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[top_k, int_max]</code></p></td>
+     <td><p>Parameter controlling query time/accuracy trade-off. Higher <code>ef</code> leads to more accurate but slower search.</p></td>
    </tr>
 </table>
 
@@ -257,18 +260,18 @@ searchParams := entity.NewIndexIvfFlatSearchParam(nprobe int)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
-  <th><p>Description</p></th>
-  <th><p>Default</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
+     <th><p>Description</p></th>
+     <th><p>Default</p></th>
    </tr>
    <tr>
-  <td><p><code>nprobe</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[1, nlist]</code></p></td>
-  <td><p>Number of units to query</p></td>
-  <td><p><code>8</code></p></td>
+     <td><p><code>nprobe</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[1, nlist]</code></p></td>
+     <td><p>Number of units to query</p></td>
+     <td><p><code>8</code></p></td>
    </tr>
 </table>
 
@@ -284,18 +287,18 @@ searchParams := entity.NewIndexIvfPQSearchParam(nprobe int)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
-  <th><p>Description</p></th>
-  <th><p>Default</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
+     <th><p>Description</p></th>
+     <th><p>Default</p></th>
    </tr>
    <tr>
-  <td><p><code>nprobe</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[1, nlist]</code></p></td>
-  <td><p>Number of units to query</p></td>
-  <td><p><code>8</code></p></td>
+     <td><p><code>nprobe</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[1, nlist]</code></p></td>
+     <td><p>Number of units to query</p></td>
+     <td><p><code>8</code></p></td>
    </tr>
 </table>
 
@@ -311,18 +314,18 @@ searchParams := entity.NewIndexIvfSQ8SearchParam(nprobe int)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
-  <th><p>Description</p></th>
-  <th><p>Default</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
+     <th><p>Description</p></th>
+     <th><p>Default</p></th>
    </tr>
    <tr>
-  <td><p><code>nprobe</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[1, nlist]</code></p></td>
-  <td><p>Number of units to query</p></td>
-  <td><p><code>8</code></p></td>
+     <td><p><code>nprobe</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[1, nlist]</code></p></td>
+     <td><p>Number of units to query</p></td>
+     <td><p><code>8</code></p></td>
    </tr>
 </table>
 
@@ -338,22 +341,22 @@ searchParams := entity.NewIndexSCANNSearchParam(nprobe int, reorder_k int)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
-  <th><p>Description</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>nprobe</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[1, nlist]</code></p></td>
-  <td><p>Number of units to query</p></td>
+     <td><p><code>nprobe</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[1, nlist]</code></p></td>
+     <td><p>Number of units to query</p></td>
    </tr>
    <tr>
-  <td><p><code>reorder_k</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[ topK, ∞]</code></p></td>
-  <td><p>Number of candidate units to query</p></td>
+     <td><p><code>reorder_k</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[ topK, ∞]</code></p></td>
+     <td><p>Number of candidate units to query</p></td>
    </tr>
 </table>
 
@@ -369,16 +372,16 @@ searchParams := entity.NewIndexSparseInvertedSearchParam(dropRatio int)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
-  <th><p>Description</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>dropRatio</code></p></td>
-  <td><p><code>float64</code></p></td>
-  <td><p><code>[0, 1]</code></p></td>
-  <td><p>The proportion of small vector values that are excluded during the search process. This option allows fine-tuning of the search process by specifying the ratio of the smallest values in the query vector to ignore. It helps balance search precision and performance. The smaller the value set for <code>dropRaio</code>, the less these small values contribute to the final score. By ignoring some small values, search performance can be improved with minimal impact on accuracy.</p></td>
+     <td><p><code>dropRatio</code></p></td>
+     <td><p><code>float64</code></p></td>
+     <td><p><code>[0, 1]</code></p></td>
+     <td><p>The proportion of small vector values that are excluded during the search process. This option allows fine-tuning of the search process by specifying the ratio of the smallest values in the query vector to ignore. It helps balance search precision and performance. The smaller the value set for <code>dropRaio</code>, the less these small values contribute to the final score. By ignoring some small values, search performance can be improved with minimal impact on accuracy.</p></td>
    </tr>
 </table>
 
@@ -394,16 +397,16 @@ searchParams := entity.NewIndexSparseWANDSearchParam(dropRatio int)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
-  <th><p>Description</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>dropRatio</code></p></td>
-  <td><p><code>float64</code></p></td>
-  <td><p><code>[0, 1]</code></p></td>
-  <td><p>The proportion of small vector values that are excluded during the search process. This option allows fine-tuning of the search process by specifying the ratio of the smallest values in the query vector to ignore. It helps balance search precision and performance. The smaller the value set for <code>dropRaio</code>, the less these small values contribute to the final score. By ignoring some small values, search performance can be improved with minimal impact on accuracy.</p></td>
+     <td><p><code>dropRatio</code></p></td>
+     <td><p><code>float64</code></p></td>
+     <td><p><code>[0, 1]</code></p></td>
+     <td><p>The proportion of small vector values that are excluded during the search process. This option allows fine-tuning of the search process by specifying the ratio of the smallest values in the query vector to ignore. It helps balance search precision and performance. The smaller the value set for <code>dropRaio</code>, the less these small values contribute to the final score. By ignoring some small values, search performance can be improved with minimal impact on accuracy.</p></td>
    </tr>
 </table>
 

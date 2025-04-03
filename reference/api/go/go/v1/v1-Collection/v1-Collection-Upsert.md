@@ -1,7 +1,10 @@
 ---
+title: "Upsert() | Go | v1"
 slug: /go/v1-Collection-Upsert
+sidebar_label: "Upsert()"
 beta: FALSE
 notebook: FALSE
+description: "This method updates or inserts data into the specified collection. | Go | v1"
 type: origin
 token: PpkswaZGQiste5kKCvtcuHUVngd
 sidebar_position: 10
@@ -24,29 +27,29 @@ func (c *GrpcClient) Upsert(ctx context.Context, collName string, partitionName 
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>ctx</code></p></td>
-  <td><p>Context for the current call to work.</p></td>
-  <td><p><code>context.Context</code></p></td>
+     <td><p><code>ctx</code></p></td>
+     <td><p>Context for the current call to work.</p></td>
+     <td><p><code>context.Context</code></p></td>
    </tr>
    <tr>
-  <td><p><code>collName</code></p></td>
-  <td><p>Name of the collection to update or insert data into.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>collName</code></p></td>
+     <td><p>Name of the collection to update or insert data into.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>partitionName</code></p></td>
-  <td><p>Name of the partition to update or insert data into.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>partitionName</code></p></td>
+     <td><p>Name of the partition to update or insert data into.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>columns</code></p></td>
-  <td><p>Data to update or insert into the specified collection.</p><p>You should include the data for all the fields defined in the collection schema.</p></td>
-  <td><p><code>...entity.Column</code></p></td>
+     <td><p><code>columns</code></p></td>
+     <td><p>Data to update or insert into the specified collection. You should include the data for all the fields defined in the collection schema.</p></td>
+     <td><p><code>...entity.Column</code></p></td>
    </tr>
 </table>
 

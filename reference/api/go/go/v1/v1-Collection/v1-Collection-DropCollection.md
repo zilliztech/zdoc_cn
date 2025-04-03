@@ -1,7 +1,10 @@
 ---
+title: "DropCollection() | Go | v1"
 slug: /go/v1-Collection-DropCollection
+sidebar_label: "DropCollection()"
 beta: FALSE
 notebook: FALSE
+description: "This method drops the specified collection and the entities within. | Go | v1"
 type: origin
 token: Vzl1wYrCmiAF9IkHWatcCwdnnQ5
 sidebar_position: 4
@@ -24,19 +27,19 @@ func (c *GrpcClient) DropCollection(ctx context.Context, collName string) error
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>ctx</code></p></td>
-  <td><p>Context for the current call to work.</p></td>
-  <td><p><code>context.Context</code></p></td>
+     <td><p><code>ctx</code></p></td>
+     <td><p>Context for the current call to work.</p></td>
+     <td><p><code>context.Context</code></p></td>
    </tr>
    <tr>
-  <td><p><code>collName</code></p></td>
-  <td><p>Name of the collection to drop.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>collName</code></p></td>
+     <td><p>Name of the collection to drop.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
 </table>
 

@@ -1,7 +1,10 @@
 ---
+title: "DescribeCollection() | Go | v1"
 slug: /go/v1-Collection-DescribeCollection
+sidebar_label: "DescribeCollection()"
 beta: FALSE
 notebook: FALSE
+description: "This method returns the details of a specific collection. | Go | v1"
 type: origin
 token: XwE3wnyBiiarYEkHq6Ccem1xnhd
 sidebar_position: 3
@@ -24,19 +27,19 @@ func (c *GrpcClient) DescribeCollection(ctx context.Context, collName string) (*
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>ctx</code></p></td>
-  <td><p>Context for the current call to work.</p></td>
-  <td><p><code>context.Context</code></p></td>
+     <td><p><code>ctx</code></p></td>
+     <td><p>Context for the current call to work.</p></td>
+     <td><p><code>context.Context</code></p></td>
    </tr>
    <tr>
-  <td><p><code>collName</code></p></td>
-  <td><p>Name of the collection to describe.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>collName</code></p></td>
+     <td><p>Name of the collection to describe.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
 </table>
 

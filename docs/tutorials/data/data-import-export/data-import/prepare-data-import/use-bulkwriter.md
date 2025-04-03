@@ -317,14 +317,16 @@ PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建
     ACCESS_KEY="bucket-ak"
     SECRET_KEY="bucket-sk"
     BUCKET_NAME="a-bucket"
+    REGION_NAME="region-name"
     
     # Connections parameters to access the remote bucket
     conn = RemoteBulkWriter.S3ConnectParam(
-        endpoint="s3.amazonaws.com", # use 'storage.googleapis.com' for Google Cloud Storage
+        endpoint="s3.amazonaws.com",
         access_key=ACCESS_KEY,
         secret_key=SECRET_KEY,
         bucket_name=BUCKET_NAME,
-        secure=True
+        secure=True,
+        region=REGION_NAME
     )
     
     from pymilvus.bulk_writer import BulkFileType
@@ -353,13 +355,19 @@ PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建
     String ACCESS_KEY = "";
     String SECRET_KEY = "";
     String BUCKET_NAME = "";
+
+    // Enumeration can refer to CloudStorage
+    String CLOUD_NAME = "";
+    String REGION_NAME = "";
     
     // Create a remote bucket writer.
     StorageConnectParam storageConnectParam = S3ConnectParam.newBuilder()
-            .withEndpoint("storage.googleapis.com")
+            .withEndpoint("s3.amazonaws.com")
             .withBucketName(BUCKET_NAME)
             .withAccessKey(ACCESS_KEY)
             .withSecretKey(SECRET_KEY)
+            .withCloudName(CLOUD_NAME)
+            .withRegion(REGION_NAME)
             .build();
     
     ```

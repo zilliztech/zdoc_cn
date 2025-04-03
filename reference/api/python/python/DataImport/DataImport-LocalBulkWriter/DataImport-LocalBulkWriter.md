@@ -10,10 +10,10 @@ type: docx
 token: RcvXdmCVBog9M8xNyUFcwefnneh
 sidebar_position: 3
 keywords: 
+  - cheap vector database
   - Managed vector database
   - Pinecone vector database
   - Audio search
-  - what is semantic search
   - zilliz
   - zilliz cloud
   - cloud

@@ -10,10 +10,10 @@ type: docx
 token: LMsOdAVFQopadPx1N2UcOn0unCf
 sidebar_position: 15
 keywords: 
-  - Context Window
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
   - zilliz
   - zilliz cloud
   - cloud

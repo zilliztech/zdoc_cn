@@ -9,10 +9,10 @@ token: Sx9jfHZP8lqVhXd9UuMcERemnjd
 sidebar_position: 1
 sidebar_label: "Collections"
 keywords: 
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
   - zilliz
   - zilliz cloud
   - cloud

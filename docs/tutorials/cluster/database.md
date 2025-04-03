@@ -453,6 +453,66 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
+## 使用 Database{#use-database}
+
+您可以使用该操作在不断开连接的情况下切换当前使用的 Database。
+
+<Admonition type="info" icon="📘" title="Notes">
+
+<p>RESTful API 不支持该操作。</p>
+
+</Admonition>
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+client.use_database(
+    db_name="my_database_2"
+)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+client.useDatabase("my_database_2");
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+await milvusClient.useDatabase({
+  db_name: "my_database_2",
+});
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+err = cli.UseDatabase(ctx, milvusclient.NewUseDatabaseOption("my_database_2"))
+if err != nil {
+    // handle err
+}
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# RESTful API 不支持长连接，因此不支持当前操作。
+# 如需切换目标 Database，可尝试在需要调用的接口请求中携带目标 Database 名称。
+```
+
+</TabItem>
+</Tabs>
+
 ## 删除 Database{#drop-database}
 
 当某个 Database 不再需要时，您可以选择删除该 Database。需要注意的是：

@@ -1,7 +1,10 @@
 ---
+title: "Delete() | Go | v1"
 slug: /go/v1-Collection-Delete
+sidebar_label: "Delete()"
 beta: FALSE
 notebook: FALSE
+description: "This method deletes the entities that match the specified filtering conditions from a collection. | Go | v1"
 type: origin
 token: HDMUwDWqFiJPmukaXv3cpqaqn7c
 sidebar_position: 11
@@ -24,29 +27,29 @@ func (c *GrpcClient) Delete(ctx context.Context, collName string, partitionName 
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>ctx</code></p></td>
-  <td><p>Context for the current call to work.</p></td>
-  <td><p><code>context.Context</code></p></td>
+     <td><p><code>ctx</code></p></td>
+     <td><p>Context for the current call to work.</p></td>
+     <td><p><code>context.Context</code></p></td>
    </tr>
    <tr>
-  <td><p><code>collName</code></p></td>
-  <td><p>Name of the collection from which entities are deleted.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>collName</code></p></td>
+     <td><p>Name of the collection from which entities are deleted.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>partitionName</code></p></td>
-  <td><p>Name of the partition to update or insert data into.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>partitionName</code></p></td>
+     <td><p>Name of the partition to update or insert data into.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>expr</code></p></td>
-  <td><p>Boolean expression for metadata filtering.</p><p>For details, refer to <a href="https://milvus.io/docs/boolean.md">Scalar Filtering Rules</a>.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>expr</code></p></td>
+     <td><p>Boolean expression for metadata filtering. For details, refer to <a href="https://milvus.io/docs/boolean.md">Scalar Filtering Rules</a>.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
 </table>
 
