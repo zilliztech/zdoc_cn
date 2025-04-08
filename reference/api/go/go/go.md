@@ -6,9 +6,9 @@ slug: /go
 
 import Admonition from '@theme/Admonition';
 
-# Go SDK Reference
+# Go SDK 参考
 
-Welcome to the Go SDK Reference!
+欢迎使用 Go SDK 参考!
 
 import DocCardList from '@theme/DocCardList';
 

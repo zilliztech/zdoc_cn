@@ -1,7 +1,7 @@
 ---
 displayed_sidbar: restfulSidebar
 slug: /restful/error-codes
-beta: FALSE
+beta: NEAR DEPRECATE
 notebook: FALSE
 sidebar_position: 2
 ---
