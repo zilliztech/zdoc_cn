@@ -108,5 +108,6 @@
     "查看发票列表": "list-invoices",
     "查询日用量": "query-daily-usage",
     "授予角色权限": "grant-privilege-to-role",
-    "导出备份文件": "export-backup-files"
+    "导出备份文件": "export-backup-files",
+    "修改集群副本数量": "modify-cluster-replica"
 }
