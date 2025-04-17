@@ -29,8 +29,15 @@ export default function Cards({ children }) {
 
             if (isLink) {
                 let name = firstChild.props.children;
-                let href = firstChild.props.href;
                 let keyword = name.split(' ')[0].replace('.', '');
+
+                if (name.indexOf(' (') > 0) {
+                    keyword = name.match(/[a-zA-Z]+/g)[0]
+                    name = name.split(' (')[0];
+                }
+                
+                let href = firstChild.props.href;
+
  
                 return {
                     name,
