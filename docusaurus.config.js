@@ -60,8 +60,10 @@ const config = {
           }) {
             var sidebarItems = defaultSidebarItemsGenerator(args)
             sidebarItems = sidebarItems.map(item => {
-              item.collapsible = false;
-              item.collapsed = false;
+              if (item.type === 'category') {
+                item.collapsible = false;
+                item.collapsed = false;
+              }
 
               if (item.label === '从这里开始') {
                 item.items = item.items.map(subItem => {
