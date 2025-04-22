@@ -230,68 +230,29 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
 
 ## Collection{#collections}
 
-<table>
-   <tr>
-     <th><p><strong>类型</strong></p></th>
-     <th><p><strong>最大数量</strong></p></th>
-     <th><p><strong>描述</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>Free 版集群</p></td>
-     <td><p>5</p></td>
-     <td><p>在 Free 版集群中，最多可创建 5 个 Collection。</p></td>
-   </tr>
-   <tr>
-     <td><p>Serverless 版集群</p></td>
-     <td><p>100</p></td>
-     <td><p>在 Serverless 版集群中，最多可创建 100 个 Collection。</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群</p></td>
-     <td><p>每 CU：&lt;= 256 每集群：&lt;= 16384</p></td>
-     <td><p>在 Dedicated 版集群中，每个计算单元（CU）可创建最多 256 个 Collection，并且集群中的 Collection 总数不能超过 16,384。</p></td>
-   </tr>
-</table>
+### 兼容 Milvus v2.4.x 的集群{#clusters-compatible-with-milvus-v24x}
 
-此外，Zilliz Cloud 针对 Serverless 和 Dedicated 集群中的 Collection 操作（包括创建、加载、释放、删除）还具有速率限制。
+根据您的集群使用的 CU 数量的不同，每 CU 支持创建最多 256 个 Collection 或 1,024 个 Partition。每个 Collection 支持创建最多 1,024 个 Partition。 您可以参考如下公式计算您的集群中的 Collection 和 Partition 的数量上限。
 
-<table>
-   <tr>
-     <th></th>
-     <th><p><strong>Rate limits</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>Collection 操作（创建、加载、释放、删除）</p></td>
-     <td><p>每个集群 5 req/s。</p></td>
-   </tr>
-</table>
+![QJ1jwpa8YhQegqbrAYWcJEOUnWf](/img/QJ1jwpa8YhQegqbrAYWcJEOUnWf.png)
 
-### Partition{#partitions}
+- 集群中 Collection 的数量上限应该在 256 和集群的 CU 数量之积与 16,384 间取最小值。
 
-<table>
-   <tr>
-     <th><p><strong>类型</strong></p></th>
-     <th><p><strong>最大数量（每个 Collection）</strong></p></th>
-     <th><p><strong>描述</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>Free 版集群</p></td>
-     <td><p>1,024</p></td>
-     <td><p>在 Free 版集群中，您可以为每个 Collection 创建最多 1,024 个 Partition。</p></td>
-   </tr>
-   <tr>
-     <td><p>Serverless 版集群</p></td>
-     <td><p>1,024</p></td>
-     <td><p>在 Serverless 版集群中，您可以为每个 Collection 创建最多 1,024 个 Partition。</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群</p></td>
-     <td><p>1,024</p></td>
-     <td><p>在 Dedicated 版集群中，您可以为每个 Collection 创建最多 1,024 个 Partition。</p></td>
-   </tr>
-</table>
+- 集群中所有 Collection 中的 Partition 的总数量应该在 1,024 和集群的 CU 数量之和与 65,536 间取最小值
 
-在计算已创建和可创建 Partition 数量时，请参考 [Collection](./limits#collections) 部分的说明。此外，每个集群创建 Partition 的速率限制为每秒 1 个 Partition。
+- 上述条件需同时满足。
+
+### 兼容 Milvus v2.5.x 的集群{#clusters-compatible-with-milvus-v25x}
+
+根据您的集群使用的 CU 数量的不同，每 CU 支持创建最多 1,024 个 Collection 或 4,096 个 Partition。每个 Collection 支持创建最多 1,024 个 Partition。 您可以参考如下公式计算您的集群中的 Collection 和 Partition 的数量上限。
+
+![ITn3wC8InhchVGbcz4QciSXqnag](/img/ITn3wC8InhchVGbcz4QciSXqnag.png)
+
+- 集群中 Collection 的数量上限应该在 1,024 和集群的 CU 数量之积与 16,384 间取最小值。
+
+- 集群中所有 Collection 中的 Partition 的总数量应该在 4,096 和集群的 CU 数量之和与 65,536 间取最小值
+
+- 上述条件需同时满足。
 
 ### 字段{#fields}
 
@@ -322,6 +283,21 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
 ### 向量维度{#dimensions}
 
 向量字段的最大维度数为 32768。
+
+### 速率限制{#rate-limit}
+
+此外，Zilliz Cloud 针对 Serverless 和 Dedicated 集群中的 Collection 操作（包括创建、加载、释放、删除）还具有速率限制。
+
+<table>
+   <tr>
+     <th></th>
+     <th><p><strong>Rate limits</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>Collection 操作（创建、加载、释放、删除）</p></td>
+     <td><p>每个集群 5 req/s。</p></td>
+   </tr>
+</table>
 
 ## 数据操作{#operations}
 
