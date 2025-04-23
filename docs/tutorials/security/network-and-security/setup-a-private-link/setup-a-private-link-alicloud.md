@@ -204,7 +204,7 @@ import Admonition from '@theme/Admonition';
        </tr>
        <tr>
          <td><p>内置权威域名（Zone）</p></td>
-         <td><p>请根据您的集群地域修改内置权威域名。以下为终端节点所在区域对应的 Zone 名称：</p><ul><li><p>杭州：<code>ali-cn-hangzhou.vectordb.zilliz.com.cn</code></p></li><li><p>北京：<code>ali-cn-beijing.vectordb.zilliz.com.cn</code></p></li><li><p>深圳：<code>ali-cn-shenzhen.vectordb.zilliz.com.cn</code></p></li></ul></td>
+         <td><p>请根据您的集群地域修改内置权威域名。以下为终端节点所在区域对应的 Zone 名称：</p><ul><li><p>杭州：<code>ali-cn-hangzhou.vectordb.zilliz.com.cn</code></p></li><li><p>北京：<code>ali-cn-beijing.vectordb.zilliz.com.cn</code></p></li><li><p>深圳：<code>ali-cn-shenzhen.vectordb.zilliz.com.cn</code></p></li><li><p>上海：<code>ali-cn-shanghai.vectordb.zilliz.com.cn</code></p></li></ul></td>
        </tr>
        <tr>
          <td><p>子域名递归解析代理</p></td>
