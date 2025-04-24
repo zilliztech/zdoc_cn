@@ -2,7 +2,7 @@
 title: "在线迁移 | Cloud"
 slug: /zero-downtime-migration
 sidebar_label: "在线迁移"
-beta: PUBLIC
+beta: PRIVATE
 notebook: FALSE
 description: "在线迁移（Zero Downtime Migration）确保数据库服务在整个迁移过程中保持正常运行，提供不中断的数据库访问。迁移过程包括以下阶段： | Cloud"
 type: origin
