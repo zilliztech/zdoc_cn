@@ -25,8 +25,16 @@ const BetaTag = (tag) => {
       tag_caption = "即将作废";
       tag_color = "#FF7F47";    
       break;
+    case tag === 'All Plans':
+      tag_caption = "所有版本";
+      tag_color = "#FF7F47";
+      break;
+    case tag === 'Dedicated':
+      tag_caption = "仅 Dedicated";
+      tag_color = "#FF7F47";
+      break;
     case tag?.startsWith('Milvus'):
-      tag_caption = 'Compatible with ' + tag;
+      tag_caption = '兼容 ' + tag;
       tag_color = "rgb(0, 179, 255)"
       break;
     default:
