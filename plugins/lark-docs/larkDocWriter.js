@@ -612,30 +612,6 @@ class larkDocWriter {
             markdown = markdown.replace(/YOUR_CLUSTER_TOKEN/g, 'root:Milvus')
         }
 
-        if (slug === 'home') {
-            let description = this.__extract_description(markdown)
- 
-             // remove title
-             markdown = markdown.split('\n').filter(line => line !== `# ${title}`).join('\n');
- 
-             // remove description
-             markdown = markdown.split('\n').filter(line => line !== description).join('\n');
- 
-             // add imports
-             imports = [...imports.split('\n'), ...[
-                 "import Hero from '@site/src/components/Hero';",
-                 "import Bars from '@site/src/components/Bars';",
-                 "import Blocks from '@site/src/components/Blocks';",
-                 "import Cards from '@site/src/components/Cards';",
-                 "import Stories from '@site/src/components/Stories';",
-                 "import Banner from '@site/src/components/Banner';"
-             ]].join('\n');            
-        }
-
-        if (markdown.match(/\<Supademo/g)) {
-            imports = imports + "\n\nimport Supademo from '@site/src/components/Supademo';"
-        }
-
         if (path) {
             fs.writeFileSync(file_path, front_matter + '\n\n' + imports + '\n\n' + markdown)
         } else {
@@ -648,9 +624,7 @@ class larkDocWriter {
     }
 
     __front_matters (title, suffix, slug, beta, notebook, type, token, sidebar_position=undefined, sidebar_label="", keywords="", displayed_sidebar=this.displayedSidebar, description="") {
-        let meta = ''
-        let hide_title = '';
-        let hide_toc = '';
+        var meta = ''
         
         if (keywords !== "") {
             keywords = "keywords: \n  - " + keywords.split(',').map(item => item.trim()).join('\n  - ') + '\n'
@@ -673,11 +647,6 @@ class larkDocWriter {
             '</head>\n'
         }
 
-        if (slug === 'home') {
-            hide_title = "hide_title: true";
-            hide_toc = "hide_table_of_contents: true";
-        }
-
         let front_matter = '---\n' + 
         `title: "${title} | ${suffix}"` + '\n' +
         `slug: /${slug}` + '\n' +
@@ -690,8 +659,6 @@ class larkDocWriter {
         `sidebar_position: ${sidebar_position}` + '\n' +
         keywords +
         displayed_sidebar + '\n' +
-        `${hide_title ? hide_title  + '\n' : ''}` +
-        `${hide_toc ? hide_toc  + '\n' : ''}` +
         '---' + meta
 
         return front_matter
@@ -705,9 +672,9 @@ class larkDocWriter {
         if (block_types.match(/(code){2,}/g) || cond) {
             return ["import Admonition from '@theme/Admonition';", "import Tabs from '@theme/Tabs';",
             "import TabItem from '@theme/TabItem';"].join('\n')
+        } else {
+            return "import Admonition from '@theme/Admonition';" + "\n"
         }
-        
-        return "import Admonition from '@theme/Admonition';" + "\n"
     }
 
     async __markdown(blocks=null, indent=0) {
@@ -1328,6 +1295,48 @@ class larkDocWriter {
         return this.page_blocks.find(x => x['block_id'] === block_id);
     }
 
+    async __equation(element, elements, asis=false) {
+        let content = element['equation']['content'];
+        let style = element['equation']['text_element_style'];
+
+        let prev = elements[elements.indexOf(element) - 1] || null;
+        let prev_element_type = prev? prev['equation'] ? 'equation' : 'text_run' : null;
+        let next = elements[elements.indexOf(element) + 1] || null;
+        let next_element_type = next? next['equation'] ? 'equation' : 'text_run' : null;
+        let rip_off_line_breaks = false;
+
+        // separate single equation
+        if (!prev && !next) {
+            return `$$\n${content.trim()}\n$$\n`;
+        }
+
+        // inline single equation 
+        if ((!prev || prev_element_type === 'text_run') && (!next ||next_element_type === 'text_run')) {
+            return `$${content.trim()}$`;
+        }
+        
+
+
+        // // first element
+        // if ((!prev || prev_element_type === 'text_run') && next && next_element_type === 'equation') {
+        //     content = `$${content.trim()}`;
+
+        //     if (!(prev && prev['text_run']['content'].endsWith('\n'))) {
+        //         rip_off_line_breaks = true;
+        //     }
+        // }
+
+        // // middle element
+        // if (prev && prev_element_type === 'equation' && next && next_element_type === 'equation') {
+        //     content = content.trim();
+        // }
+
+        // // last element
+        // if (prev && prev_element_type === 'equation' && (!next || next_element_type === 'text_run')) {
+        //     if (rip_off_line_breaks) content = content.trim()
+        // }      
+    }
+
     async __text_run(element, elements, asis=false) {
         let content = element['text_run']['content'];
         let style = element['text_run']['text_element_style'];
@@ -1380,34 +1389,37 @@ class larkDocWriter {
     }
 
     __style_markdown(element, elements, style_name, decorator) {
-        let content = element['text_run']['content'];
-        let style = element['text_run']['text_element_style'];
+        let element_type = element['equation'] ? 'equation' : 'text_run';
+        let content = element[element_type]['content'];
+        let style = element[element_type]['text_element_style'];
 
         let prev = elements[elements.indexOf(element) - 1] || null;
+        let prev_element_type = prev? prev['equation'] ? 'equation' : 'text_run' : null;
         let next = elements[elements.indexOf(element) + 1] || null;
+        let next_element_type = next? next['equation'] ? 'equation' : 'text_run' : null;
 
         if (!content.match(/^\s+$/)) {
             // single element
-            if ((!prev || (prev && !prev['text_run']['text_element_style'][style_name])) && style[style_name] && (!next || (next && !next['text_run']['text_element_style'][style_name]))) {
+            if ((!prev || prev_element_type === 'equation' || (prev && !prev[prev_element_type]['text_element_style'][style_name])) && style[style_name] && (!next || next_element_type === 'equation' || (next && !next[next_element_type]['text_element_style'][style_name]))) {
                 let prefix_spaces = content.match(/^\s*/)[0];
                 let suffix_spaces = content.match(/\s*$/)[0];
                 content = `${prefix_spaces}${decorator}${content.trim()}${decorator}${suffix_spaces}`;
             }
 
             // first element
-            if ((!prev || (prev && !prev['text_run']['text_element_style'][style_name])) && style[style_name] && next && next['text_run']['text_element_style'][style_name]) {
+            if ((!prev || prev_element_type === 'equation' || (prev && !prev[prev_element_type]['text_element_style'][style_name])) && style[style_name] && next && next_element_type === 'text_run' && next[next_element_type]['text_element_style'][style_name]) {
                 let prefix_spaces = content.match(/^\s*/)[0];
                 content = `${prefix_spaces}${decorator}${content.trimStart()}`;
             }
 
             // last element
-            if (prev && prev['text_run']['text_element_style'][style_name] && style[style_name] && (!next || (next && !next['text_run']['text_element_style'][style_name]))) {
+            if (prev && prev_element_type === 'text_run' && prev[prev_element_type]['text_element_style'][style_name] && style[style_name] && (!next || next_element_type === 'equation' || (next && !next[next_element_type]['text_element_style'][style_name]))) {
                 let suffix_spaces = content.match(/\s*$/)[0];
                 content = `${content.trimEnd()}${decorator}${suffix_spaces}`;
             }
 
             // middle element
-            if (prev && prev['text_run']['text_element_style'][style_name] && style[style_name] && next && next['text_run']['text_element_style'][style_name]) {
+            if (prev && prev_element_type === 'text_run' && prev[prev_element_type]['text_element_style'][style_name] && style[style_name] && next && next_element_type === 'text_run' && next[next_element_type]['text_element_style'][style_name]) {
                 content = `${content}`;
             }
         }
@@ -1483,6 +1495,9 @@ class larkDocWriter {
             }
             if ('mention_doc' in element) {
                 paragraph += await this.__mention_doc(element);
+            }
+            if ('equation' in element) {
+                paragraph += await this.__equation(element, elements);
             }
         }
 
