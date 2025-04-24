@@ -612,6 +612,30 @@ class larkDocWriter {
             markdown = markdown.replace(/YOUR_CLUSTER_TOKEN/g, 'root:Milvus')
         }
 
+        if (slug === 'home') {
+            let description = this.__extract_description(markdown)
+ 
+             // remove title
+             markdown = markdown.split('\n').filter(line => line !== `# ${title}`).join('\n');
+ 
+             // remove description
+             markdown = markdown.split('\n').filter(line => line !== description).join('\n');
+ 
+             // add imports
+             imports = [...imports.split('\n'), ...[
+                 "import Hero from '@site/src/components/Hero';",
+                 "import Bars from '@site/src/components/Bars';",
+                 "import Blocks from '@site/src/components/Blocks';",
+                 "import Cards from '@site/src/components/Cards';",
+                 "import Stories from '@site/src/components/Stories';",
+                 "import Banner from '@site/src/components/Banner';"
+             ]].join('\n');            
+        }
+
+        if (markdown.match(/\<Supademo/g)) {
+            imports = imports + "\n\nimport Supademo from '@site/src/components/Supademo';"
+        }
+
         if (path) {
             fs.writeFileSync(file_path, front_matter + '\n\n' + imports + '\n\n' + markdown)
         } else {
@@ -624,7 +648,9 @@ class larkDocWriter {
     }
 
     __front_matters (title, suffix, slug, beta, notebook, type, token, sidebar_position=undefined, sidebar_label="", keywords="", displayed_sidebar=this.displayedSidebar, description="") {
-        var meta = ''
+        let meta = ''
+        let hide_title = '';
+        let hide_toc = '';
         
         if (keywords !== "") {
             keywords = "keywords: \n  - " + keywords.split(',').map(item => item.trim()).join('\n  - ') + '\n'
@@ -647,6 +673,11 @@ class larkDocWriter {
             '</head>\n'
         }
 
+        if (slug === 'home') {
+            hide_title = "hide_title: true";
+            hide_toc = "hide_table_of_contents: true";
+        }
+
         let front_matter = '---\n' + 
         `title: "${title} | ${suffix}"` + '\n' +
         `slug: /${slug}` + '\n' +
@@ -659,6 +690,8 @@ class larkDocWriter {
         `sidebar_position: ${sidebar_position}` + '\n' +
         keywords +
         displayed_sidebar + '\n' +
+        `${hide_title ? hide_title  + '\n' : ''}` +
+        `${hide_toc ? hide_toc  + '\n' : ''}` +
         '---' + meta
 
         return front_matter
@@ -672,9 +705,9 @@ class larkDocWriter {
         if (block_types.match(/(code){2,}/g) || cond) {
             return ["import Admonition from '@theme/Admonition';", "import Tabs from '@theme/Tabs';",
             "import TabItem from '@theme/TabItem';"].join('\n')
-        } else {
-            return "import Admonition from '@theme/Admonition';" + "\n"
         }
+        
+        return "import Admonition from '@theme/Admonition';" + "\n"
     }
 
     async __markdown(blocks=null, indent=0) {
