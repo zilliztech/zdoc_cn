@@ -730,7 +730,14 @@ class larkDocWriter {
             if (this.block_types[block['block_type']-1] === undefined) {
                 markdown.push('[Unsupported block type]');
             } else if (this.block_types[block['block_type']-1] === 'text') {
-                markdown.push(idt + await this.__text(block['text']));
+                let content = await this.__text(block['text']);
+                if (content.trim().indexOf('\n') > 0) {
+                    content = content.split('\n').map(line => idt + line).join('\n');
+                } else {
+                    content = idt + content;
+                }
+
+                markdown.push(content);
             } else if (this.block_types[block['block_type']-1].includes('heading')) {
                 const level = parseInt(this.block_types[block['block_type']-1].slice(-1));
                 markdown.push(idt + await this.__heading(block[`heading${level}`], level));

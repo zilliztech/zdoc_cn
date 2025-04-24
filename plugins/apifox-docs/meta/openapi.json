@@ -14861,15 +14861,6 @@
 							"schema": {
 								"type": "object",
 								"properties": {
-									"dbName": {
-										"type": "string",
-										"description": "The name of the database that to which the collection belongs .\nSetting this to a non-existing database results in an error.",
-										"x-i18n": {
-											"zh-CN": {
-												"description": "Collection 所属的数据库名称。设置为不存在的数据库将导致错误。"
-											}
-										}
-									},
 									"clusterId": {
 										"type": "string",
 										"description": "The ID of the cluster to which the collection belongs.\nSetting this to a non-existing cluster results in an error. You can get the cluster ID by calling the [`/v2/clusters`](/reference/restful/list-clusters-v2) endpoint, or copy the cluster ID from the [Zilliz Cloud console](/docs/on-zilliz-cloud-console).",
@@ -14882,6 +14873,15 @@
 										"x-include-target": [
 											"zilliz"
 										]
+									},
+									"dbName": {
+										"type": "string",
+										"description": "The name of the database that to which the collection belongs .\nSetting this to a non-existing database results in an error.",
+										"x-i18n": {
+											"zh-CN": {
+												"description": "Collection 所属的数据库名称。设置为不存在的数据库将导致错误。"
+											}
+										}
 									},
 									"collectionName": {
 										"type": "string",
@@ -14966,6 +14966,18 @@
 											"zilliz"
 										]
 									},
+									"objectUrls": {
+										"type": "array",
+										"description": "The URL of the object to import. This URL should be accessible to the S3-compatible object storage service, such as AWS S3, GCS, Azure blob storage.",
+										"x-i18n": {
+											"zh-CN": {
+												"description": "待导入数据的 URL。该 URL 应来自与诸如阿里云 OSS 或腾讯云 COS 等与 MinIO S3 兼容的对象存储服务。"
+											}
+										},
+										"x-include-target": [
+											"zilliz"
+										]
+									},
 									"accessKey": {
 										"type": "string",
 										"description": "The access key of the object storage service.",
@@ -15001,7 +15013,7 @@
 								"required": [
 									"clusterId",
 									"collectionName",
-									"objectUrl"
+									"objectUrls"
 								]
 							},
 							"examples": {
@@ -15034,9 +15046,10 @@
 									],
 									"value": {
 										"clusterId": "inxx-xxxxxxxxxxxxxxx",
+										"dbName": "",
 										"collectionName": "medium_articles",
 										"partitionName": "",
-										"objectUrl": "https://s3.us-west-2.amazonaws.com/publicdataset.zillizcloud.com/medium_articles_2020_dpr/medium_articles_2020_dpr.json",
+										"objectUrls": ["https://s3.us-west-2.amazonaws.com/publicdataset.zillizcloud.com/medium_articles_2020_dpr/medium_articles_2020_dpr.json"],
 										"accessKey": "",
 										"secretKey": ""
 									}
