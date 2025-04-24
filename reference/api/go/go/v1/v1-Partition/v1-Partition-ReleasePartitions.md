@@ -1,7 +1,10 @@
 ---
+title: "ReleasePartitions() | Go | v1"
 slug: /go/v1-Partition-ReleasePartitions
-beta: FALSE
+sidebar_label: "ReleasePartitions()"
+beta: NEAR DEPRECATE
 notebook: FALSE
+description: "This method releases the data of specific partitions from memory. | Go | v1"
 type: origin
 token: JKnXwBXNLifbP6kIdDxc3Z8FnLb
 sidebar_position: 5
@@ -24,24 +27,24 @@ func (c *GrpcClient) ReleasePartitions(ctx context.Context, collName string, par
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>ctx</code></p></td>
-  <td><p>Context for the current call to work.</p></td>
-  <td><p><code>context.Context</code></p></td>
+     <td><p><code>ctx</code></p></td>
+     <td><p>Context for the current call to work.</p></td>
+     <td><p><code>context.Context</code></p></td>
    </tr>
    <tr>
-  <td><p><code>collName</code></p></td>
-  <td><p>Name of a collection</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>collName</code></p></td>
+     <td><p>Name of a collection</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>partitionNames</code></p></td>
-  <td><p>Names of the partitions to release.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>partitionNames</code></p></td>
+     <td><p>Names of the partitions to release.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
 </table>
 

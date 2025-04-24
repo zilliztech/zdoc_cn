@@ -8,12 +8,12 @@ notebook: false
 description: "This operation drops an index from a specific collection. | Java | v2"
 type: docx
 token: KdFEdP8ZToYvZ1xmmQgcE62unUf
-sidebar_position: 3
+sidebar_position: 4
 keywords: 
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
   - zilliz
   - zilliz cloud
   - cloud

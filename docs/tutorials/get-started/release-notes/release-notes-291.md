@@ -7,7 +7,7 @@ notebook: FALSE
 description: "在本次更新中，Zilliz Cloud 开始支持 Milvus 的 RESTful API v2，提供了与开源版本一致的用户接口和扩展能力。新的文档聊天机器人也为能够更好地支持用户获取需要的信息。本次发布还引入了任务中心，可以为用户提供了一个直观的界面，用于管理和跟踪备份、还原、迁移、导入和 Collection 复制等任务的进度和状态。Dedicated 集群的自动缩放功能也开始提供私有预览，可根据设置的 CU 大小阈值动态调整集群可使用的资源。其他增强功能包括更多的集群监控指标、进一步优化的集群管理界面和用户电子邮件模板。 | Cloud"
 type: origin
 token: MgXbwjdzeiJRpnkF562cE6cVnCf
-sidebar_position: 5
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz
@@ -60,7 +60,7 @@ Zilliz Cloud 现在提供了一个直观的任务管理页面，集中展示当�
 
 Zilliz Cloud 引入了自动缩放功能，该功能可根据需求动态调整集群使用的 CU 大小。自动缩放主要由 CU（计算单元）大小阈值触发。Zilliz Cloud 监控集群的 CU 使用情况，如果连续两分钟超过 70%（默认阈值），系统就会自动启动扩容过程。用户可设置自动扩容的最大 CU 大小。目前，Zilliz Cloud 不支持向下自动缩放。
 
-自动扩容目前处于私有预览阶段，仅适用于 Dedicated（企业版）群集。要启用此功能，请联系我们。有关用法，请参阅[管理和设置集群](./manage-cluster#suspend-and-resume-cluster)。
+自动扩容目前处于私有预览阶段，仅适用于 Dedicated（企业版）群集。要启用此功能，请联系我们。有关用法，请参阅[管理和设置集群](./manage-cluster)。
 
 ### Pipelines{#pipelines}
 
@@ -68,7 +68,7 @@ Zilliz Cloud 引入了自动缩放功能，该功能可根据需求动态调整�
 
 - 用户现在可以使用 RESTful API 和控制台在 Pipeline 详细信息中获取相关使用信息。这一增强功能有助于用户全面了解 Pipeline 的使用情况，以便更好地对相关资源进行监控和分析。有关详细信息，请参阅[估算 Pipelines 用量](./estimate-pipelines-usage)。
 
-- 增加了每个项目中每种 Pipeline 的最大数量限制。用户现在最多可以在单个项目中创建 100 个各种类型的 Pipeline。这一限制之前的最高上限是 10。这一变化使项目内的 Pipeline 管理更具灵活性和可扩展性。有关所有 Pipeline 限制的详细信息，请参阅 [Zilliz Cloud 对 Pipeline 的相关限制](./limits#pipelines)。
+- 增加了每个项目中每种 Pipeline 的最大数量限制。用户现在最多可以在单个项目中创建 100 个各种类型的 Pipeline。这一限制之前的最高上限是 10。这一变化使项目内的 Pipeline 管理更具灵活性和可扩展性。有关所有 Pipeline 限制的详细信息，请参阅 [Zilliz Cloud 对 Pipeline 的相关限制](./limits)。
 
 ### 功能增强{#enhancements}
 

@@ -10,10 +10,10 @@ type: docx
 token: HTx1dgoAloCELUxWLGxc0GPlno6
 sidebar_position: 2
 keywords: 
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
   - what is milvus
-  - milvus database
-  - milvus lite
-  - milvus benchmark
   - zilliz
   - zilliz cloud
   - cloud

@@ -10,10 +10,10 @@ type: docx
 token: M4IqdsRCNotiM4xdOA0cWSnUngb
 sidebar_position: 8
 keywords: 
-  - how does milvus work
-  - Zilliz vector database
   - Zilliz database
   - Unstructured Data
+  - vector database
+  - IVF
   - zilliz
   - zilliz cloud
   - cloud
@@ -99,22 +99,22 @@ BaseVector is a base class for abstract vector classes. The following classes ar
    </tr>
    <tr>
      <td><p>FloatVec</p></td>
-     <td><p>FloatVec(List\<Float> data)FloatVec(float[] data)</p></td>
+     <td><p>FloatVec(List\<Float> data) FloatVec(float[] data)</p></td>
      <td><p>For DataType.FloatVector type field.</p></td>
    </tr>
    <tr>
      <td><p>BinaryVec</p></td>
-     <td><p>BinaryVec(ByteBuffer data)BinaryVec(byte[] data)</p></td>
+     <td><p>BinaryVec(ByteBuffer data) BinaryVec(byte[] data)</p></td>
      <td><p>For DataType.BinaryVector type field.</p></td>
    </tr>
    <tr>
      <td><p>Float16Vec</p></td>
-     <td><p>Float16Vec(ByteBuffer data)Float16Vec(byte[] data)Float16Vec(List\<Float> data)</p></td>
+     <td><p>Float16Vec(ByteBuffer data) Float16Vec(byte[] data) Float16Vec(List\<Float> data)</p></td>
      <td><p>For DataType.Float16Vector type field.</p></td>
    </tr>
    <tr>
      <td><p>BFloat16Vec</p></td>
-     <td><p>BFloat16Vec(ByteBuffer data)BFloat16Vec(byte[] data)BFloat16Vec(List\<Float> data)</p></td>
+     <td><p>BFloat16Vec(ByteBuffer data) BFloat16Vec(byte[] data) BFloat16Vec(List\<Float> data)</p></td>
      <td><p>For DataType.BFloat16Vector type field.</p></td>
    </tr>
    <tr>

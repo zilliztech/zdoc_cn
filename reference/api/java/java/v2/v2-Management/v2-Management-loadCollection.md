@@ -8,12 +8,12 @@ notebook: false
 description: "This operation loads the data of a specific collection into memory. | Java | v2"
 type: docx
 token: XEWvdbuFHoLOo7xKrAJcqip6n5J
-sidebar_position: 7
+sidebar_position: 10
 keywords: 
-  - vector database
-  - IVF
-  - knn
-  - Image Search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
   - zilliz
   - zilliz cloud
   - cloud

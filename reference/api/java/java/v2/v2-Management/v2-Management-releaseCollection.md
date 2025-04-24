@@ -8,12 +8,12 @@ notebook: false
 description: "This operation releases the data of a specific collection from memory. | Java | v2"
 type: docx
 token: BA9edMrWMosYWFxwTBAcl2WOnff
-sidebar_position: 9
+sidebar_position: 13
 keywords: 
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
   - zilliz
   - zilliz cloud
   - cloud

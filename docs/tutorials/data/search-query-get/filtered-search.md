@@ -33,6 +33,10 @@ import TabItem from '@theme/TabItem';
 
 ## 概述{#overview}
 
+在 Zilliz Cloud 中，Filtered Search 分为两种类型，即**标准 Filtered Search** 和 **迭代 Filtered Search**。这两种类型的区别在于何时进行标量过滤。
+
+### 标准 Filtered Search{#standard-filtering}
+
 如果 Collection 中既存放了非结构化数据的向量表示，也存放了这些非结构化数据的各类属性，您就可以使用这些属性字段构建过滤条件表达式，并将构建好的表达式包含在 ANN Search 请求中。Zilliz Cloud 在收到 Search 请求后，如果发现请求中携带了过滤条件表达式，就会按照过滤条件表达式中的条件找到所有与之匹配的 Entity，然后再根据请求中携带的查询向量在与过滤条件匹配的 Entity 中查找 topK 个与查询向量相似的 Entity。
 
 ![MiVRw4H1KhPxAVb6L5icIczTnCc](/img/MiVRw4H1KhPxAVb6L5icIczTnCc.png)
@@ -44,6 +48,18 @@ import TabItem from '@theme/TabItem';
 - 根据查询向量在匹配过滤条件表达式的所有 Entity 中进行 ANN Search。
 
 - 返回 topK 个 Entity。
+
+### 迭代 Filtered Search{#iterative-filtering}
+
+标准 Filtered Search 的标量过滤过程有效地将搜索限定在一个较小的范围。然而，过于复杂的过滤表达式可能会导致非常高的搜索延迟。在这种情况下，迭代 Filtered Search 可以作为一种替代方案，有助于减少标量过滤的工作量。
+
+![XSNPwbb6uhqnlqb9EXwcOybhnae](/img/XSNPwbb6uhqnlqb9EXwcOybhnae.png)
+
+如上图所示，一个迭代 Filtered Search 请求会将搜索过程分成多次迭代进行。在每次迭代中，会先进行向量搜索，然后再进行标量过滤，并去除掉本次迭代中不满足标量过滤条件的结果。当 topK 满足后，返回最终结果。
+
+这种方式显著地减少了标量过滤需要处理的 Entity 数量，使得其尤其适用于处理过滤条件较为复杂的场景。
+
+需要注意的是，迭代器每次只处理一个 Entity，并以串行的方式进行迭代。使用迭代 Filtered Search 可能会拉长请求处理时间或在需要处理的 Entity 较大时出现潜在的性能问题。
 
 ## 操作示例{#examples}
 
@@ -63,6 +79,8 @@ import TabItem from '@theme/TabItem';
     {"id": 9, "vector": [0.5718280481994695, 0.24070317428066512, -0.3737913482606834, -0.06726932177492717, -0.6980531615588608], "color": "purple_4976", "likes": 765}
 ]
 ```
+
+### 使用标准 Filtered Search{#search-with-standard-filtering}
 
 当使用如下示例代码在上述 Entity 中进行搜索时，我们需要在 Search 请求中添加过滤条件。为了方便检查搜索结果是否满足过滤条件，我们还在 Search 请求中指定了 Output Fields。
 
@@ -266,4 +284,188 @@ curl --request POST \
 ```
 
 关于在过滤条件表达式中可以使用的操作符，可以参考[过滤表达式概览](./filtering-overview)。
+
+### 使用迭代 Filtered Search{#search-with-iterative-filtering}
+
+要使用迭代 Filtered Search 进行过滤搜索，您可以执行以下操作：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+from pymilvus import MilvusClient
+
+client = MilvusClient(
+    uri="YOUR_CLUSTER_ENDPOINT",
+    token="YOUR_CLUSTER_TOKEN"
+)
+
+query_vector = [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]
+
+res = client.search(
+    collection_name="my_collection",
+    data=[query_vector],
+    limit=5,
+    # highlight-start
+    filter='color like "red%" and likes > 50',
+    output_fields=["color", "likes"],
+    search_params={
+        "hints": "iterative_filter"
+    }
+    # highlight-end
+)
+
+for hits in res:
+    print("TopK results:")
+    for hit in hits:
+        print(hit)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.vector.request.SearchReq;
+import io.milvus.v2.service.vector.request.data.FloatVec;
+import io.milvus.v2.service.vector.response.SearchResp;
+
+MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build());
+
+FloatVec queryVector = new FloatVec(new float[]{0.3580376395471989f, -0.6023495712049978f, 0.18414012509913835f, -0.26286205330961354f, 0.9029438446296592f});
+SearchReq searchReq = SearchReq.builder()
+        .collectionName("filtered_search_collection")
+        .data(Collections.singletonList(queryVector))
+        .topK(5)
+        .filter("color like \"red%\" and likes > 50")
+        .outputFields(Arrays.asList("color", "likes"))
+        .searchParams(new HashMap<>("hints", "iterative_filter"))
+        .build();
+
+SearchResp searchResp = client.search(searchReq);
+
+List<List<SearchResp.SearchResult>> searchResults = searchResp.getSearchResults();
+for (List<SearchResp.SearchResult> results : searchResults) {
+    System.out.println("TopK results:");
+    for (SearchResp.SearchResult result : results) {
+        System.out.println(result);
+    }
+}
+
+// Output
+// TopK results:
+// SearchResp.SearchResult(entity={color=red_4794, likes=122}, score=0.5975797, id=4)
+// SearchResp.SearchResult(entity={color=red_9392, likes=58}, score=-0.24996188, id=6)
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+import (
+    "context"
+    "log"
+
+    "github.com/milvus-io/milvus/client/v2"
+    "github.com/milvus-io/milvus/client/v2/entity"
+)
+
+func ExampleClient_Search_filter() {
+        ctx, cancel := context.WithCancel(context.Background())
+        defer cancel()
+
+        milvusAddr := "YOUR_CLUSTER_ENDPOINT"
+        token := "YOUR_CLUSTER_TOKEN"
+
+        cli, err := client.New(ctx, &client.ClientConfig{
+                Address: milvusAddr,
+                APIKey:  token,
+        })
+        if err != nil {
+                log.Fatal("failed to connect to milvus server: ", err.Error())
+        }
+
+        defer cli.Close(ctx)
+
+        queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
+
+        resultSets, err := cli.Search(ctx, client.NewSearchOption(
+                "filtered_search_collection", // collectionName
+                3,             // limit
+                []entity.Vector{entity.FloatVector(queryVector)},
+        ).WithFilter(`color like "red%" and likes > 50`).WithHints("iterative_filter").WithOutputFields("color", "likes"))
+        if err != nil {
+                log.Fatal("failed to perform basic ANN search collection: ", err.Error())
+        }
+
+        for _, resultSet := range resultSets {
+                log.Println("IDs: ", resultSet.IDs)
+                log.Println("Scores: ", resultSet.Scores)
+        }
+        // Output:
+        // IDs:
+        // Scores:
+}
+
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+import { MilvusClient, DataType } from "@zilliz/milvus2-sdk-node";
+
+const address = "YOUR_CLUSTER_ENDPOINT";
+const token = "YOUR_CLUSTER_TOKEN";
+const client = new MilvusClient({address, token});
+
+const query_vector = [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]
+
+const res = await client.search({
+    collection_name: "filtered_search_collection",
+    data: [query_vector],
+    limit: 5,
+    // highlight-start
+    filters: 'color like "red%" and likes > 50',
+    hints: "iterative_filter",
+    output_fields: ["color", "likes"]
+    // highlight-end
+})
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+export CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT"
+export TOKEN="YOUR_CLUSTER_TOKEN"
+
+curl --request POST \
+--url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+-d '{
+    "collectionName": "quick_setup",
+    "data": [
+        [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]
+    ],
+    "annsField": "vector",
+    "filter": "color like \"red%\" and likes > 50",
+    "searchParams": {"hints": "iterative_filter"},
+    "limit": 3,
+    "outputFields": ["color", "likes"]
+}'
+# {"code":0,"cost":0,"data":[]}
+```
+
+</TabItem>
+</Tabs>
 

@@ -6,13 +6,13 @@ notebook: false
 description: "An easy-to-use alternative to the legacy PyMilvus SDK. | Python | MilvusClient"
 type: folder
 token: YHQ9fF9IDlENsMd9RZucYalqnNg
-sidebar_position: 2
+sidebar_position: 3
 sidebar_label: "MilvusClient"
 keywords: 
+  - nlp search
   - hallucinations llm
   - Multimodal search
   - vector search algorithms
-  - Question answering system
   - zilliz
   - zilliz cloud
   - cloud

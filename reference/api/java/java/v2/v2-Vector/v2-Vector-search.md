@@ -10,10 +10,10 @@ type: docx
 token: W1mxdmaelo4co4x0ruwcTWQrn5b
 sidebar_position: 7
 keywords: 
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -116,12 +116,12 @@ search(SearchReq.builder()
        </tr>
        <tr>
          <td><p>FloatVec</p></td>
-         <td><p>FloatVec(List\<Float> data)FloatVec(float[] data)</p></td>
+         <td><p>FloatVec(List\<Float> data) FloatVec(float[] data)</p></td>
          <td><p>For DataType.FloatVector type field.</p></td>
        </tr>
        <tr>
          <td><p>BinaryVec</p></td>
-         <td><p>BinaryVec(ByteBuffer data)BinaryVec(byte[] data)</p></td>
+         <td><p>BinaryVec(ByteBuffer data) BinaryVec(byte[] data)</p></td>
          <td><p>For DataType.BinaryVector type field.</p></td>
        </tr>
     </table>

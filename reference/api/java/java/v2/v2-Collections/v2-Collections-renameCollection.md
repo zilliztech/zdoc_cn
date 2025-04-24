@@ -8,12 +8,12 @@ notebook: false
 description: "This operation renames an existing collection. | Java | v2"
 type: docx
 token: CtTvdQVMoo2ec5xbWTPcSzjNnQc
-sidebar_position: 16
+sidebar_position: 22
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
   - zilliz
   - zilliz cloud
   - cloud

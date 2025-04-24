@@ -8,12 +8,12 @@ notebook: false
 description: "This operation displays whether a specified collection or partition is loaded or not. | Java | v2"
 type: docx
 token: QcaFdMJE9oHX1Axe11rcqfiynEd
-sidebar_position: 4
+sidebar_position: 6
 keywords: 
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud

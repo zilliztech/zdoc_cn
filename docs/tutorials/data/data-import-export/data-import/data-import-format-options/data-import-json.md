@@ -156,15 +156,15 @@ Zilliz Cloud 支持从您的云存储中导入数据。下表罗列了 Zilliz Cl
    </tr>
    <tr>
      <td><p>阿里云 OSS</p></td>
-     <td><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/</code></p><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/data.json</code></p></td>
+     <td><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/</code> <code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/data.json</code></p></td>
    </tr>
    <tr>
      <td><p>腾讯云 COS</p></td>
-     <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder/</code></p><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder/data.json</code></p></td>
+     <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder/</code> <code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder/data.json</code></p></td>
    </tr>
    <tr>
      <td><p>亚马逊云科技 S3</p></td>
-     <td><p><code>s3://bucket-name/json-folder/</code></p><p><code>s3://bucket-name/json-folder/data.json</code></p></td>
+     <td><p><code>s3://bucket-name/json-folder/</code> <code>s3://bucket-name/json-folder/data.json</code></p></td>
    </tr>
 </table>
 
@@ -185,7 +185,7 @@ Zilliz Cloud 针对导入 Parquet 格式的文件时设置了如下限制。
    </tr>
    <tr>
      <td><p><strong>每次导入的文件体积限制</strong></p></td>
-     <td><p>Free 集群：最大 512 MB</p><p>Serverless 或 Dedicated 集群</p><ul><li><p>单个文件大小：最大 10 GB</p></li><li><p>总文件大小：最大 100 GB</p></li></ul></td>
+     <td><p>Free 集群：最大 512 MB Serverless 或 Dedicated 集群</p><ul><li><p>单个文件大小：最大 10 GB</p></li><li><p>总文件大小：最大 100 GB</p></li></ul></td>
    </tr>
    <tr>
      <td><p><strong>文件存放位置</strong></p></td>

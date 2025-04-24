@@ -64,15 +64,15 @@ Zilliz Cloud **事件**页面记录了[组织](./organizations)中发生的事�
        </tr>
        <tr>
          <td><p>信息</p></td>
-         <td><p>集群、权限、账单等相关信息。</p><p>例如：集群 in01-xxxxxxxxxxxxxxx 已创建。</p></td>
+         <td><p>集群、权限、账单等相关信息。 例如：集群 in01-xxxxxxxxxxxxxxx 已创建。</p></td>
        </tr>
        <tr>
          <td><p>警告</p></td>
-         <td><p>资源状态更新等需要留意的信息。</p><p>例如：集群 in01-xxxxxxxxxxxxxxx 已删除。</p></td>
+         <td><p>资源状态更新等需要留意的信息。 例如：集群 in01-xxxxxxxxxxxxxxx 已删除。</p></td>
        </tr>
        <tr>
          <td><p>错误</p></td>
-         <td><p>账单支付失败或系统出错等需要立刻注意或采取行动的信息。</p><p>例如：账单 invo-xxxxxxxxxxxxxxxxxxxxxxxx 支付失败。</p></td>
+         <td><p>账单支付失败或系统出错等需要立刻注意或采取行动的信息。 例如：账单 invo-xxxxxxxxxxxxxxxxxxxxxxxx 支付失败。</p></td>
        </tr>
     </table>
 

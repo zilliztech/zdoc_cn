@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
 通过索引文件中存储的元数据，Zilliz Cloud 能够以一种特殊的结构组织您的数据，从而加速数据搜索和查询的过程。
 
-Zilliz Cloud 通过 [AUTOINDEX](./autoindex-explained) 实现高效相似性搜索。Zilliz Cloud 提供以下计算向量距离的[相似度类型](./search-metrics-explained)：**余弦距离 (COSINE)**、**欧氏距离 (L2)** 、**内积 (IP)**、**JACCARD** <sup>(Beta)</sup> 和 **HAMMING** <sup>(Beta)</sup>。有关更多向量字段类型和度量指标信息，请参考[相似度类型](./search-metrics-explained)和 [了解 Schema](./schema-explained)。
+Zilliz Cloud 通过 [AUTOINDEX](./autoindex-explained) 实现高效相似性搜索。Zilliz Cloud 提供以下计算向量距离的[相似度类型](./search-metrics-explained)：**余弦距离 (COSINE)**、**欧氏距离 (L2)** 、**内积 (IP)**、**JACCARD** 和 **HAMMING**。有关更多向量字段类型和度量指标信息，请参考[相似度类型](./search-metrics-explained)和 [了解 Schema](./schema-explained)。
 
 我们建议您为向量字段和常用于过滤的标量字段创建索引。
 

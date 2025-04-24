@@ -81,7 +81,7 @@ import Admonition from '@theme/Admonition';
    <tr>
      <td><p>StorgeClass</p></td>
      <td><p>无</p></td>
-     <td><p>若基于 Milvus Opeartor 安装 etcd/Pulsar，则要求 Kubernetes 集群的 StorageClass 能够创建访问方式为 ReadWriteOnce 的 PersistentVolume (PV)。</p><p>建议开启 allowVolumeExpansion。</p></td>
+     <td><p>若基于 Milvus Opeartor 安装 etcd/Pulsar，则要求 Kubernetes 集群的 StorageClass 能够创建访问方式为 ReadWriteOnce 的 PersistentVolume (PV)。 建议开启 allowVolumeExpansion。</p></td>
    </tr>
    <tr>
      <td><p>LoadBalancer</p></td>
@@ -111,7 +111,7 @@ import Admonition from '@theme/Admonition';
    <tr>
      <td><p>Milvus Node 节点磁盘</p></td>
      <td><p>NVMe SSD 盘</p></td>
-     <td><p>建议挂载到kubelet使用的目录。</p><p>echo "KUBELET_EXTRA_ARGS=--root-dir=/data1/kubelet" &gt; /etc/sysconfig/kubelet</p><p>systemctl restart kubelet</p></td>
+     <td><p>建议挂载到kubelet使用的目录。 echo "KUBELET_EXTRA_ARGS=--root-dir=/data1/kubelet" &gt; /etc/sysconfig/kubelet</p><p>systemctl restart kubelet</p></td>
    </tr>
    <tr>
      <td><p>Milvus Operator 资源</p></td>

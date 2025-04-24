@@ -47,7 +47,7 @@ import Admonition from '@theme/Admonition';
 
 - 授予该用户内置角色或自定义角色。有关角色的详细信息，请参考[管理集群角色（控制台）](./cluster-roles)。
 
-- 为该用户设置[鉴权](./cluster-credentials-console)时使用的密码。
+- 为该用户设置[鉴权](./cluster-credentials)时使用的密码。
 
 ![add-cluster-user-cn](/img/add-cluster-user-cn.png)
 

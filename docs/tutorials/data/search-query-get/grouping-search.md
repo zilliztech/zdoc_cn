@@ -248,7 +248,7 @@ curl --request POST \
 
 在以上请求中，`limit=3` 表示系统将返回最多 3 个分组，每个分组中包含一条与查询向量最相似的 Entity。
 
-## 设置 Group Size {#set-group-size}
+## 设置 Group Size{#set-group-size}
 
 在默认情况下，Grouping Search 仅为每个分组返回一条 Entity。如果希望每个分组中返回多个结果，可以通过设置 `group_size` 和 `strict_group_size` 参数实现。
 

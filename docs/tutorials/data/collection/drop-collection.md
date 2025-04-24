@@ -7,7 +7,7 @@ notebook: FALSE
 description: "当 Collection 不再使用时，可以考虑删除 Collection。 | Cloud"
 type: origin
 token: OrvrwaSgFiNT5EkYZUvc8yWVnHQ
-sidebar_position: 9
+sidebar_position: 10
 keywords: 
   - 向量数据库
   - zilliz

@@ -8,12 +8,12 @@ notebook: false
 description: "This operation creates a collection either with default or customized settings. | Java | v2"
 type: docx
 token: LtCFdAg8FoxWmBxOInfcUSagnHb
-sidebar_position: 5
+sidebar_position: 7
 keywords: 
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
-  - Zilliz
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
   - zilliz
   - zilliz cloud
   - cloud
@@ -173,34 +173,34 @@ You can choose between a quick setup or a customized setup as follows:
 
     The quick setup collection has two fields: the primary and vector fields. It also allows the insertion of undefined fields and their values in key-value pairs in a dynamic field.
 
-```java
-// quickly create a collection
-CreateCollectionReq createCollectionReq = CreateCollectionReq.builder()
-        .collectionName(collectionName)
-        .dimension(dim)
-        .build();
-client.createCollection(createCollectionReq);
-
-```
+    ```java
+    // quickly create a collection
+    CreateCollectionReq createCollectionReq = CreateCollectionReq.builder()
+            .collectionName(collectionName)
+            .dimension(dim)
+            .build();
+    client.createCollection(createCollectionReq);
+    
+    ```
 
 - **Customized setup with index parameters**
 
     For a customized setup, create the schema and index parameters beforehand. 
 
-```java
-// create a collection with schema, when indexParams is specified, it will create index as well
-CreateCollectionReq.CollectionSchema collectionSchema = client.createSchema();
-collectionSchema.addField(AddFieldReq.builder().fieldName("id").dataType(DataType.Int64).isPrimaryKey(Boolean.TRUE).autoID(Boolean.FALSE).description("id").build());
-collectionSchema.addField(AddFieldReq.builder().fieldName("vector").dataType(DataType.FloatVector).dimension(dim).build());
-
-IndexParam indexParam = IndexParam.builder()
-        .fieldName("vector")
-        .metricType(IndexParam.MetricType.COSINE)
-        .build();
-CreateCollectionReq createCollectionReq = CreateCollectionReq.builder()
-        .collectionName(collectionName)
-        .collectionSchema(collectionSchema)
-        .indexParams(Collections.singletonList(indexParam))
-        .build();
-client.createCollection(createCollectionReq);
-```
+    ```java
+    // create a collection with schema, when indexParams is specified, it will create index as well
+    CreateCollectionReq.CollectionSchema collectionSchema = client.createSchema();
+    collectionSchema.addField(AddFieldReq.builder().fieldName("id").dataType(DataType.Int64).isPrimaryKey(Boolean.TRUE).autoID(Boolean.FALSE).description("id").build());
+    collectionSchema.addField(AddFieldReq.builder().fieldName("vector").dataType(DataType.FloatVector).dimension(dim).build());
+    
+    IndexParam indexParam = IndexParam.builder()
+            .fieldName("vector")
+            .metricType(IndexParam.MetricType.COSINE)
+            .build();
+    CreateCollectionReq createCollectionReq = CreateCollectionReq.builder()
+            .collectionName(collectionName)
+            .collectionSchema(collectionSchema)
+            .indexParams(Collections.singletonList(indexParam))
+            .build();
+    client.createCollection(createCollectionReq);
+    ```

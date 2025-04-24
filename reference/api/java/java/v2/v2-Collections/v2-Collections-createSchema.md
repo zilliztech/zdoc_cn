@@ -8,12 +8,12 @@ notebook: false
 description: "This operation creates a collection schema. | Java | v2"
 type: docx
 token: V5KXdwdO0oqkhnxsKb9c3xaKn4c
-sidebar_position: 6
+sidebar_position: 9
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
-  - nn search
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
   - zilliz
   - zilliz cloud
   - cloud

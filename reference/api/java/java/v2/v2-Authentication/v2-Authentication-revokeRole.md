@@ -8,12 +8,12 @@ notebook: false
 description: "This operation revokes the role assigned to a user. | Java | v2"
 type: docx
 token: Znb7dcNoeobIkkxGLGfcpVfUnIX
-sidebar_position: 12
+sidebar_position: 19
 keywords: 
-  - vector database
-  - IVF
-  - knn
-  - Image Search
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
   - zilliz
   - zilliz cloud
   - cloud

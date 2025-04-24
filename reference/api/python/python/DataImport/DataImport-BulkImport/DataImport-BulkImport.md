@@ -5,14 +5,14 @@ beta: false
 notebook: false
 description: "Functions related to bulk import data into Zilliz Cloud clusters. | Python"
 type: folder
-token: MGFYf4JacldYUEdxtJdcwczAntg
+token: I5i9f86n4lsy9IddsDocMOsfnXg
 sidebar_position: 2
 sidebar_label: "BulkImport"
 keywords: 
-  - vector database example
-  - rag vector database
-  - what is vector db
-  - what are vector databases
+  - Audio search
+  - what is semantic search
+  - Embedding model
+  - image similarity search
   - zilliz
   - zilliz cloud
   - cloud

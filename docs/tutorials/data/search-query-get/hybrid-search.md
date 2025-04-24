@@ -523,7 +523,9 @@ curl --request POST \
 
 ### 创建多个 AnnSearchRequest 实例{#step-3-create-multiple-annsearchrequest-instances}
 
-Hybrid Search 通过在 `hybrid_search()` 命令中的多个 `AnnSearchRequest` 来实现多路搜索。每个 `AnnSearchRequest` 代表一个针对特定向量字段的基本 ANN 搜索请求。进行 Hybrid Search 前需要创建与向量字段数量一致的 `AnnSearchRequest`。
+Hybrid Search 通过在 `hybrid_search()` 命令中的多个 `AnnSearchRequest` 来实现多路搜索。每个 `AnnSearchRequest` 代表一个针对特定向量字段的[基本 ANN 搜索](./single-vector-search)请求。进行 Hybrid Search 前需要创建与向量字段数量一致的 `AnnSearchRequest`。
+
+通过在 `AnnSearchRequest` 中设置 `expr` 参数，您可以为特定某一路搜索设置过滤条件。请参考[Filtered Search](./filtered-search)与[过滤表达式概览](./filtering-overview)。
 
 <Admonition type="info" icon="📘" title="说明">
 

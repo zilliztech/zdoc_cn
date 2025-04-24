@@ -10,10 +10,10 @@ type: docx
 token: L4KSdOVTEotaiyxjTddcVRDhn3E
 sidebar_position: 8
 keywords: 
-  - vector databases comparison
   - Faiss
   - Video search
   - AI Hallucination
+  - AI Agent
   - zilliz
   - zilliz cloud
   - cloud

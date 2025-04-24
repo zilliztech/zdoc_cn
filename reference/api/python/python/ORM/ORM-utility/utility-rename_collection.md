@@ -10,10 +10,10 @@ type: docx
 token: M0qRdF1cLokrxvxyrXScJ64FnEe
 sidebar_position: 37
 keywords: 
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
-  - vector database
+  - Machine Learning
+  - RAG
+  - NLP
+  - Neural Network
   - zilliz
   - zilliz cloud
   - cloud
@@ -53,7 +53,7 @@ rename_collection(
 - **old_collection_name** (*str*) -
 
     **[REQUIRED]**
-The original name of the target collection.
+    The original name of the target collection.
 
     Setting this to a non-existing collection results in a **MilvusException**.
 

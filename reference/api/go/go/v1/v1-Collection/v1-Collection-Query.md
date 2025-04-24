@@ -1,7 +1,10 @@
 ---
+title: "Query() | Go | v1"
 slug: /go/v1-Collection-Query
-beta: FALSE
+sidebar_label: "Query()"
+beta: NEAR DEPRECATE
 notebook: FALSE
+description: "This method conducts metadata filtering within a collection. | Go | v1"
 type: origin
 token: BurewP73YiZ8vtkhM6EcKLSvnzb
 sidebar_position: 14
@@ -22,39 +25,39 @@ func (c *GrpcClient) Query(ctx context.Context, collectionName string, partition
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>ctx</code></p></td>
-  <td><p>Context for the current call to work.</p></td>
-  <td><p><code>context.Context</code></p></td>
+     <td><p><code>ctx</code></p></td>
+     <td><p>Context for the current call to work.</p></td>
+     <td><p><code>context.Context</code></p></td>
    </tr>
    <tr>
-  <td><p><code>collectionName</code></p></td>
-  <td><p>Name of a collection.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>collectionName</code></p></td>
+     <td><p>Name of a collection.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>partitionNames</code></p></td>
-  <td><p>List of partition names. </p><p>If left empty, all partitions are involved in this operation. Otherwise, only the specified partitions are involved.</p></td>
-  <td><p><code>[]string</code></p></td>
+     <td><p><code>partitionNames</code></p></td>
+     <td><p>List of partition names.  If left empty, all partitions are involved in this operation. Otherwise, only the specified partitions are involved.</p></td>
+     <td><p><code>[]string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>expr</code></p></td>
-  <td><p>Boolean expression for metadata filtering.</p><p>For details, refer to <a href="https://milvus.io/docs/boolean.md">Scalar Filtering Rules</a>.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>expr</code></p></td>
+     <td><p>Boolean expression for metadata filtering. For details, refer to <a href="https://milvus.io/docs/boolean.md">Scalar Filtering Rules</a>.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>outputFields</code></p></td>
-  <td><p>List of field names to include in the return.</p></td>
-  <td><p><code>[]string</code></p></td>
+     <td><p><code>outputFields</code></p></td>
+     <td><p>List of field names to include in the return.</p></td>
+     <td><p><code>[]string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>opts</code></p></td>
-  <td><p>Extra query options.</p><p>You can add multiple <code>client.SearchQueryOptionFunc</code> instances.</p></td>
-  <td><p><code>...client.SearchQueryOptionFunc</code></p></td>
+     <td><p><code>opts</code></p></td>
+     <td><p>Extra query options. You can add multiple <code>client.SearchQueryOptionFunc</code> instances.</p></td>
+     <td><p><code>...client.SearchQueryOptionFunc</code></p></td>
    </tr>
 </table>
 
@@ -68,24 +71,24 @@ The `client.ResultSet` provides the following methods for you to manipulate the 
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>GetColumn(fieldName string)</code></p></td>
-  <td><p><code>entity.Column</code></p></td>
-  <td><p>Return the column with the provided name.</p></td>
+     <td><p><code>GetColumn(fieldName string)</code></p></td>
+     <td><p><code>entity.Column</code></p></td>
+     <td><p>Return the column with the provided name.</p></td>
    </tr>
    <tr>
-  <td><p><code>Len()</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p>Return the number of entities in the query result.</p></td>
+     <td><p><code>Len()</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p>Return the number of entities in the query result.</p></td>
    </tr>
    <tr>
-  <td><p><code>Slice(start, end int)</code></p></td>
-  <td><p><code>client.ResultSet</code></p></td>
-  <td><p>Return a slice of the query result.</p></td>
+     <td><p><code>Slice(start, end int)</code></p></td>
+     <td><p><code>client.ResultSet</code></p></td>
+     <td><p>Return a slice of the query result.</p></td>
    </tr>
 </table>
 

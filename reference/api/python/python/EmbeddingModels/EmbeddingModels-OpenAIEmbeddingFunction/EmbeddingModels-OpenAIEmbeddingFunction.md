@@ -10,10 +10,10 @@ type: docx
 token: QPcodlsnAoSMvIxEFmlcMNPbntd
 sidebar_position: 3
 keywords: 
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
+  - Audio search
+  - what is semantic search
+  - Embedding model
+  - image similarity search
   - zilliz
   - zilliz cloud
   - cloud
@@ -80,3 +80,4 @@ openai_ef = model.dense.OpenAIEmbeddingFunction(
     dimensions=512 # Set the embedding dimensionality according to MRL feature.
 )
 ```
+

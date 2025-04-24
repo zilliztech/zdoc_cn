@@ -8,12 +8,12 @@ notebook: false
 description: "This operation creates an index for a specific collection. | Java | v2"
 type: docx
 token: OCjUdfc6eo0VihxNUGmcqb7FnTh
-sidebar_position: 1
+sidebar_position: 2
 keywords: 
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
-  - vector database
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud

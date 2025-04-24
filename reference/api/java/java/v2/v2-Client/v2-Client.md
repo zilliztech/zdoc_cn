@@ -9,10 +9,10 @@ token: YEBjfrOXWl8s00dDTvdcMiYDn0d
 sidebar_position: 5
 sidebar_label: "Client"
 keywords: 
-  - rag vector database
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
   - zilliz
   - zilliz cloud
   - cloud

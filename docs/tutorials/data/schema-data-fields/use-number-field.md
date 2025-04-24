@@ -500,11 +500,11 @@ curl --request POST \
 
 如果您在定义 Schema 时设置了 `enable_dynamic_fields=True`，Zilliz Cloud clusters 允许您插入未提前定义的标量字段，但应注意这可能增加查询和管理的复杂性，影响性能。有关更多信息，请参考 [Dynamic Field](./enable-dynamic-field)。
 
-## 使用标量字段进行搜索和查询
+## 使用标量字段进行搜索和查询{#search-and-query}
 
 添加标量字段后，您可以在搜索（Search）和查询（Query）中利用这些字段进行过滤，从而实现更精确的搜索结果。
 
-### 过滤查询{#search-and-query}
+### 过滤查询{#filter-queries}
 
 添加标量字段后，您可以在 Query 中利用这些字段进行过滤。例如，您可以查询 `age` 在 30 到 40 之间的所有数据：
 

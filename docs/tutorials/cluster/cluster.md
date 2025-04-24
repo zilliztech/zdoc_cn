@@ -7,7 +7,7 @@ notebook: FALSE
 description: "关于在 Zilliz Cloud 上管理集群需要知道的内容。 | Cloud"
 type: origin
 token: H4Jlw1x88iCj9Pk2LUxcChVtnzb
-sidebar_position: 2
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz

@@ -7,7 +7,7 @@ notebook: FALSE
 description: "此页为 Zilliz Cloud 开发者中心的首页。 | Cloud"
 type: origin
 token: I5PAwH8MFi67Myky6EYcAxuVnNe
-sidebar_position: 0
+sidebar_position: 1
 keywords: 
   - 向量数据库
   - zilliz
@@ -138,7 +138,7 @@ Zilliz Cloud 提供如下版本供您订阅：
 
 <Blocks>
 
-# 使用您中意的编程语言
+# 使用您熟悉的编程语言
 
 - [Python](/reference/python)
 
@@ -152,4 +152,4 @@ Zilliz Cloud 提供如下版本供您订阅：
 
 </Blocks>
 
-<Banner bannerText="仍旧无法找您您需要的信息" bannerLinkText="试试 Ask AI" />
+<Banner bannerText="仍旧无法找您您需要的信息？" bannerLinkText="试试 Ask AI" />

@@ -10,10 +10,10 @@ type: docx
 token: LZL1d0kckouPXNxJLCmcwbCTnkG
 sidebar_position: 11
 keywords: 
+  - Audio search
+  - what is semantic search
+  - Embedding model
   - image similarity search
-  - Context Window
-  - Natural language search
-  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud

@@ -10,10 +10,10 @@ type: docx
 token: T1npdvcRMoIjezxK021cPvfpn7c
 sidebar_position: 6
 keywords: 
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
-  - knn algorithm
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
   - zilliz
   - zilliz cloud
   - cloud
@@ -32,8 +32,9 @@ This operation conducts a vector similarity search with an optional scalar filte
 
 ## Request syntax
 
-```python
+```plaintext
 search(
+    self,
     collection_name: str,
     data: Union[List[list], list],
     filter: str = "",
@@ -42,8 +43,9 @@ search(
     search_params: Optional[dict] = None,
     timeout: Optional[float] = None,
     partition_names: Optional[List[str]] = None,
+    anns_field: Optional[str] = None,
     **kwargs,
-) -> List[dict]
+) -> List[List[dict]]
 ```
 
 **PARAMETERS:**
@@ -70,9 +72,13 @@ search(
 
     A scalar filtering condition to filter matching entities. 
 
-    The value defaults to an empty string, indicating that no condition applies.
+    The value defaults to an empty string, indicating that no condition applies. 
 
     You can set this parameter to an empty string to skip scalar filtering. To build a scalar filtering condition, refer to [Boolean Expression Rules](https://milvus.io/docs/boolean.md). 
+
+- **filter_params** (*dict*) -
+
+    If you choose to use placeholders in `filter` as stated in [Filtering Templating](/docs/filtering-templating), then you can specify the actual values for these placeholders as key-value pairs as the value of this parameter.
 
 - **limit** (*int*) -
 

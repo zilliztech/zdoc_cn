@@ -2,7 +2,7 @@
 title: "Decompounder | Cloud"
 slug: /decompounder-filter
 sidebar_label: "Decompounder"
-beta: PUBLIC
+beta: FALSE
 notebook: FALSE
 description: "`decompounder` 过滤器根据指定的字典将复合词拆分为单个组成部分，从而更容易搜索复合术语的部分。该过滤器对于经常使用复合词的语言（如德语）特别有用。 | Cloud"
 type: origin
@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
 ## 配置{#configuration}
 
-`decompounder` 过滤器是 Zilliz Cloud 中的自定义过滤器，通过在过滤器配置中设置 `"type": "decompounder"` 来指定。
+`decompounder` 过滤器是 Zilliz Cloud 中的自定义过滤器，通过在过滤器配置中设置 `"type": "decompounder"` 并将`word_list`设置为您需要的值的方式来指定。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
 <TabItem value='python'>
@@ -82,7 +82,7 @@ analyzerParams.put("filter",
 
 `decompounder` 过滤器作用于分词器生成的词项，因此必须与分词器结合使用。有关 Zilliz Cloud 中可用的分词器列表，请参阅[分词器参考](./analyzer-tokenizers)。
 
-定义 `analyzer_params` 后，您可以在定义 Collection Schema 时将其应用于 VARCHAR 字段。这使得 Zilliz Cloud 能够使用指定的分析器处理该字段中的文本，以实现高效的分词和过滤。更多信息，请参阅 [Analyzer 概述](./analyzer-overview)。  
+定义 `analyzer_params` 后，您可以在定义 Collection Schema 时将其应用于 VARCHAR 字段。这使得 Zilliz Cloud 能够使用指定的分析器处理该字段中的文本，以实现高效的分词和过滤。更多信息，请参阅[使用示例](./analyzer-overview#example-use)。  
 
 ## 示例输出{#example-output}
 
@@ -94,7 +94,7 @@ analyzerParams.put("filter",
 "dampfschifffahrt brotbackautomat"
 ```
 
-**预期输出**：  
+**预期输出**（`word_list:["damf","schiff","fahrt","brot","backen","automat"]`）： 
 
 ```python
 ["dampf", "schiff", "fahrt", "brotbackautomat"]

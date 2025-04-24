@@ -10,10 +10,10 @@ type: docx
 token: RIS2dU8uXojudgxLbJWcG54CnOb
 sidebar_position: 22
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
   - zilliz
   - zilliz cloud
   - cloud

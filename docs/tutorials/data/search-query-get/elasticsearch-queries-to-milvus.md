@@ -58,7 +58,7 @@ import Admonition from '@theme/Admonition';
    <tr>
      <td><p>[Non-scoring match query](./elasticsearch-queries-to-milvus#non-scoring-match-query-equivalent-in-Zilliz Cloud)</p></td>
      <td><p>文本匹配</p></td>
-     <td><p>Zilliz Cloud 提供了一个不参与相似性得分的文本匹配能力。该能力与 Elasticsearch 的 match 子句能力相当。</p><p>注意，Elasticsearch 中所有的 match 子句均会产生相似性得分。因此，Elasticsearch 并不存在 Zilliz Cloud 中不输出相似性得分仅进行文本匹配的能力。</p></td>
+     <td><p>Zilliz Cloud 提供了一个不参与相似性得分的文本匹配能力。该能力与 Elasticsearch 的 match 子句能力相当。 注意，Elasticsearch 中所有的 match 子句均会产生相似性得分。因此，Elasticsearch 并不存在 Zilliz Cloud 中不输出相似性得分仅进行文本匹配的能力。</p></td>
    </tr>
    <tr>
      <td colspan="3"><p><strong>Term-level queries</strong></p></td>
@@ -427,7 +427,7 @@ res = client.query(
 
 ### Knn query{#knn-query}
 
-Elasticsearch 支持近似 kNN 查询和精确的暴力 kNN 查询。您可以根据相似度度量，来找到最近邻的向量 ，方法如下：
+Elasticsearch 支持近似 kNN 查询和精确的暴力 kNN 查询。您可以根据相似度度量，来找到最近邻的向量 $k$，方法如下：
 
 ```python
 resp = client.search(

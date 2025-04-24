@@ -10,10 +10,10 @@ type: docx
 token: TWOxdwDYRo4CCHxDdZbc7IOznCg
 sidebar_position: 17
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,7 +45,7 @@ has_collection(
 - **collection_name** (*str*) -
 
     **[REQUIRED]**
-The name of an existing collection.
+    The name of an existing collection.
 
 - **using** (*str*) - 
 

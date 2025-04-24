@@ -53,7 +53,7 @@ sidebar_position: 3
    </tr>
    <tr>
      <td><p>Dedicated 版集群</p></td>
-     <td><p>每 CU：&lt;= 64</p><p>每集群：&lt;= 4096</p></td>
+     <td><p>每 CU：&lt;= 64 每集群：&lt;= 4096</p></td>
      <td><p>在 Dedicated 版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</p></td>
    </tr>
 </table>

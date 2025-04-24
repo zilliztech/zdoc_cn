@@ -239,7 +239,7 @@ milvus_datacoord_channel_checkpoint_unix_seconds
    <tr>
      <td><p>影响数据写入安全，之后太多可能会丢失数据</p></td>
      <td><p>Y</p></td>
-     <td><p>当前时间减去metrics timestamp </p><p>3600</p></td>
+     <td><p>当前时间减去metrics timestamp  3600</p></td>
    </tr>
 </table>
 

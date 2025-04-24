@@ -8,12 +8,12 @@ notebook: false
 description: "This operation prepares index parameters to build indexes for a specific collection. | Java | v2"
 type: docx
 token: FUNwdQQqAon41YxMWiIcHIBmned
-sidebar_position: 5
+sidebar_position: 7
 keywords: 
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
-  - cosine distance
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud

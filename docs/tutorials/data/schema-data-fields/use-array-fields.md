@@ -4,7 +4,7 @@ slug: /use-array-fields
 sidebar_label: "Array 类型"
 beta: FALSE
 notebook: FALSE
-description: "Array 类型是一种用于存储多个相同数据类型值的字段类型。它提供了一种灵活的方式来存储包含多个元素的属性，这在需要保存一组相关数据的场景中非常有用。在 Zilliz Cloud clusters 中，您可以将 Array 字段与向量数据一起存储，从而实现更复杂的查询和过滤需求。 | Cloud"
+description: "Array 类型的字段用于存放相同数据类型的一组元素。如下示例展示了如何使用 Array 类型的字段存放数据。 | Cloud"
 type: origin
 token: LKIuw8JSfice0ek9PvTc2GxXnZz
 sidebar_position: 9
@@ -30,9 +30,7 @@ import TabItem from '@theme/TabItem';
 
 # Array 类型
 
-Array 类型是一种用于存储多个相同数据类型值的字段类型。它提供了一种灵活的方式来存储包含多个元素的属性，这在需要保存一组相关数据的场景中非常有用。在 Zilliz Cloud clusters 中，您可以将 Array 字段与向量数据一起存储，从而实现更复杂的查询和过滤需求。
-
-例如，在音乐推荐系统中，可以利用 Array 字段来存储歌曲的标签列表；在用户行为分析中，可以存储用户对歌曲的评分等。以下是典型的 Array 字段示例：
+Array 类型的字段用于存放相同数据类型的一组元素。如下示例展示了如何使用 Array 类型的字段存放数据。
 
 ```json
 {
@@ -41,7 +39,15 @@ Array 类型是一种用于存储多个相同数据类型值的字段类型。�
 }
 ```
 
-在这个示例中，`tags` 和 `ratings` 都是 Array 字段。`tags` 字段是一个字符串数组，用于表示歌曲的风格标签，例如流行、摇滚和古典；`ratings` 字段是一个整数数组，用于表示用户对该歌曲的评分，从 1 到 5 分不等。这些 Array 字段能够灵活地存储多值数据，便于在查询和过滤过程中进行更详细的分析。
+## 相关限制
+
+- **默认值与空值**：Array 字段不支持设置默认值。但是您可以将 `nullable` 设置为 `True` 来允许元素为空值。具体可参考[Nullable 和默认值](./nullable-and-default)。
+
+- **数据类型**：Array 字段内所有元素的数据类型必须相同。您可以通过设置 `element_type` 参数来指定元素的数据类型。如果您将 `element_type` 设置为 `VARCHAR`，您还需要为元素设置 `max_length` 参数来指定元素的最大长度。
+
+- **Array 容量**：Array 字段中元素的数量需要小于或等于创建该字段时通过 `max_capacity` 定义的最大容量。该值的取值范围为 **1** 至 **4096**。
+
+- **字符串处理**：当 Array 字段中的元素为字符串时，Milvus 会在搜索和查询时保持原样，不会进行转义操作。例如，`'a"b'`, `"a'b"`, `'a\'b'`, and `"a\"b"` 会原样存取，而 `'a'b'` and `"a"b"` 则会被当作非法字符串处理。
 
 ## 添加 Array 字段{#add-array-field}
 

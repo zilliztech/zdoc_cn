@@ -1,7 +1,10 @@
 ---
+title: "ShowPartitions() | Go | v1"
 slug: /go/v1-Partition-ShowPartitions
-beta: FALSE
+sidebar_label: "ShowPartitions()"
+beta: NEAR DEPRECATE
 notebook: FALSE
+description: "This method returns a list of partitions within a specific collection. | Go | v1"
 type: origin
 token: QpyXwRVQQixXZhkDzeHcxRbtnbb
 sidebar_position: 6
@@ -24,19 +27,19 @@ func (c *GrpcClient) ShowPartitions(ctx context.Context, collName string) ([]*en
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>ctx</code></p></td>
-  <td><p>Context for the current call to work.</p></td>
-  <td><p><code>context.Context</code></p></td>
+     <td><p><code>ctx</code></p></td>
+     <td><p>Context for the current call to work.</p></td>
+     <td><p><code>context.Context</code></p></td>
    </tr>
    <tr>
-  <td><p><code>collName</code></p></td>
-  <td><p>Name of a collection</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>collName</code></p></td>
+     <td><p>Name of a collection</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
 </table>
 

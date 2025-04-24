@@ -8,12 +8,12 @@ notebook: false
 description: "This operation lists all existing aliases for a specific collection. | Java | v2"
 type: docx
 token: RvZDdxU1howmQ7x2V31c8eC7nJb
-sidebar_position: 15
+sidebar_position: 20
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - knn
+  - Image Search
+  - LLMs
+  - Machine Learning
   - zilliz
   - zilliz cloud
   - cloud

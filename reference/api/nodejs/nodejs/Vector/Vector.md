@@ -9,10 +9,10 @@ token: IguLfmHgXlJoojdRU8kcohXZnE1
 sidebar_position: 5
 sidebar_label: "Vector"
 keywords: 
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
   - zilliz
   - zilliz cloud
   - cloud

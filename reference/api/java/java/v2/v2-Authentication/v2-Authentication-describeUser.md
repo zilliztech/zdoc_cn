@@ -8,12 +8,12 @@ notebook: false
 description: "This operation describes a specific user. | Java | v2"
 type: docx
 token: YLQJdvVA8odibAx7mQscYwMVn8g
-sidebar_position: 4
+sidebar_position: 6
 keywords: 
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
   - zilliz
   - zilliz cloud
   - cloud

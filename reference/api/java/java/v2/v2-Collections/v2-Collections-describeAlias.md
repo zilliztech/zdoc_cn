@@ -8,12 +8,12 @@ notebook: false
 description: "This operation displays the details of an alias. | Java | v2"
 type: docx
 token: B57cdiaEkotJQnxl7I9cJqotnPb
-sidebar_position: 8
+sidebar_position: 11
 keywords: 
-  - HNSW
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
   - zilliz
   - zilliz cloud
   - cloud

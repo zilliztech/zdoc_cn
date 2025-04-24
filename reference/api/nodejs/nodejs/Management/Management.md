@@ -9,10 +9,10 @@ token: Yo6ffPwKzlWzZndRXVocighbnfd
 sidebar_position: 3
 sidebar_label: "Management"
 keywords: 
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - zilliz
   - zilliz cloud
   - cloud

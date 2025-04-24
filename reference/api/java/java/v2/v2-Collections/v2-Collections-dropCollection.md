@@ -8,12 +8,12 @@ notebook: false
 description: "This operation drops a collection. | Java | v2"
 type: docx
 token: PsAGd1CNqosvirxDJ5ncIHudnSg
-sidebar_position: 11
+sidebar_position: 15
 keywords: 
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
-  - cosine distance
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
   - zilliz
   - zilliz cloud
   - cloud

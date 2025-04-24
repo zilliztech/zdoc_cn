@@ -445,7 +445,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-您也可以选择在完成 Collection 创建后再创建索引。在此情况下，Zilliz Cloud 不会在 Collection 创建完成后执行 Load 操作。如果需要在完成 Collection 创建后为其创建索引，可以参考[创建 Vector Index](./index-vector-fields)。
+您也可以选择在完成 Collection 创建后再创建索引。在此情况下，Zilliz Cloud 不会在 Collection 创建完成后执行 Load 操作。如果需要在完成 Collection 创建后为其创建索引，可以参考[AUTOINDEX](./autoindex-explained)。
 
 如下示例演示了如何在创建 Collection 时不携带索引参数。在 Collection 创建完成后检查其加载状态时，其状态应为未加载。
 
@@ -742,7 +742,7 @@ fmt.Println("collection created")
 
 ### 设置生存时间（TTL）{#set-collection-ttl}
 
-如果您需要 Zilliz Cloud 在 Collection 创建完成后的一段时间内自动销毁该 Collection。可以考虑为 Collection 设置 TTL。这样当 Collection 的生存时间超过指定时间（单位为秒）后，Zilliz Cloud 就会开始异步删除 Collection 中的数据，并销毁该 Collection。在数据完全删除前，您仍旧可以搜索到部分数据。
+如果您需要 Zilliz Cloud 在 Collection 创建完成后的一段时间内自动清空该 Collection。可以考虑为 Collection 设置 TTL。这样当 Collection 的生存时间超过指定时间（单位为秒）后，Zilliz Cloud 就会开始异步删除 Collection 中的数据。在数据完全删除前，您仍旧可以搜索到部分数据。
 
 如下示例代码将 Collection 的 TTL 设置为 1 天（86400 秒）。建议将 TTL 至少设置为几天时间。
 

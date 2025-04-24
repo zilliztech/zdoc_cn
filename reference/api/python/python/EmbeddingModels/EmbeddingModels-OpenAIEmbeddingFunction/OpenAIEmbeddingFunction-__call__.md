@@ -10,10 +10,10 @@ type: docx
 token: FieTdj7WDoVbBVxp5xjcqO02nrh
 sidebar_position: 4
 keywords: 
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -91,3 +91,4 @@ openai_ef(docs)
 #          3.80731490e-03,  4.72489968e-02,  2.11893879e-02,  9.96136945e-03,
 #         -5.77749610e-02,  9.73062310e-03,  4.63456511e-02, -4.32428494e-02])]
 ```
+

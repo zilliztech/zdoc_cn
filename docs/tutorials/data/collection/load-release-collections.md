@@ -7,7 +7,7 @@ notebook: FALSE
 description: "对 Collection 执行 Load 操作是在 Collection 中进行 Search 和 Query 的前提条件。本节主要介绍如何 Load 和 Release Collection。 | Cloud"
 type: origin
 token: G7jYwhWH4iVtGakm2BHcGuzIn3f
-sidebar_position: 6
+sidebar_position: 7
 keywords: 
   - 向量数据库
   - zilliz
@@ -320,7 +320,7 @@ if err != nil {
 
 如果在执行本操作后需要 Load 更多字段，请务必先对 Collection 执行 Release 操作，避免因索引结构发生变化而引发系统报错。
 
-## Release Collection
+## Release Collection{#release-collection}
 
 由于 Search 和 Query 操作会占用较多的内存资源。为了减少资源消耗，您可以对暂时不需要使用的 Collection 执行 Release 操作，将相关数据从内存中释放出来。
 

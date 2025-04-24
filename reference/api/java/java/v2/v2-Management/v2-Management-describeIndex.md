@@ -8,12 +8,12 @@ notebook: false
 description: "This operation describes a specific index. | Java | v2"
 type: docx
 token: WUgedTmyZoW4clxSgHVcl1ZtnZl
-sidebar_position: 2
+sidebar_position: 3
 keywords: 
-  - rag vector database
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud

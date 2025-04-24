@@ -7,7 +7,7 @@ notebook: FALSE
 description: "本章关注数据操作相关内容，包括 Collection、Schema 和数据类型、插入与删除、Index 操作、搜索与重排及导入导出。 | Cloud"
 type: origin
 token: JYBpw0VhRifdWukbA5ecVRHjnkl
-sidebar_position: 3
+sidebar_position: 4
 keywords: 
   - 向量数据库
   - zilliz

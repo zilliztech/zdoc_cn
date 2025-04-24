@@ -57,27 +57,27 @@ Range Search 是一种通过指定搜索结果的相似度得分范围的方式�
    <tr>
      <td><p><code>L2</code></p></td>
      <td><p>较小的 L2 距离表示更高的相似性。</p></td>
-     <td><p>要排除结果中最近的向量，请确保：</p><p><code>0</code> &lt;= <code>range_filter</code> &lt;= distance &lt; <code>radius</code> &lt; <code>∞</code></p></td>
+     <td><p>要排除结果中最近的向量，请确保： <code>0</code> &lt;= <code>range_filter</code> &lt;= distance &lt; <code>radius</code> &lt; <code>∞</code></p></td>
    </tr>
    <tr>
      <td><p><code>IP</code></p></td>
      <td><p>较大的 IP 距离表示更高的相似性。</p></td>
-     <td><p>要排除结果中最近的向量，请确保：</p><p><code>-1</code> &lt;= <code>radius</code> &lt; distance &lt;= <code>range_filter</code> &lt;= <code>1</code></p></td>
+     <td><p>要排除结果中最近的向量，请确保： <code>-1</code> &lt;= <code>radius</code> &lt; distance &lt;= <code>range_filter</code> &lt;= <code>1</code></p></td>
    </tr>
    <tr>
      <td><p><code>COSINE</code></p></td>
      <td><p>较大的 cosine 值表示更高的相似性。</p></td>
-     <td><p>要排除结果中最近的向量，请确保：</p><p><code>-1</code> &lt;= <code>radius</code> &lt; distance &lt;= <code>range_filter</code> &lt;= <code>1</code></p></td>
+     <td><p>要排除结果中最近的向量，请确保： <code>-1</code> &lt;= <code>radius</code> &lt; distance &lt;= <code>range_filter</code> &lt;= <code>1</code></p></td>
    </tr>
    <tr>
      <td><p><code>JACCARD</code></p></td>
      <td><p>较小的 Jaccard 距离表示更高的相似性。</p></td>
-     <td><p>要排除结果中最近的向量，请确保：</p><p><code>0</code> &lt;= <code>range_filter</code> &lt;= distance &lt; <code>radius</code> &lt;= <code>1</code></p></td>
+     <td><p>要排除结果中最近的向量，请确保： <code>0</code> &lt;= <code>range_filter</code> &lt;= distance &lt; <code>radius</code> &lt;= <code>1</code></p></td>
    </tr>
    <tr>
      <td><p><code>HAMMING</code></p></td>
      <td><p>较小的 Hamming 距离表示更高的相似性。</p></td>
-     <td><p>要排除结果中最近的向量，请确保：</p><p><code>0</code> &lt;= <code>range_filter</code> &lt;= distance &lt; <code>radius</code> &lt;= <code>dim(vector)</code></p></td>
+     <td><p>要排除结果中最近的向量，请确保： <code>0</code> &lt;= <code>range_filter</code> &lt;= distance &lt; <code>radius</code> &lt;= <code>dim(vector)</code></p></td>
    </tr>
 </table>
 

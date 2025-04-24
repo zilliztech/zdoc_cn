@@ -1,7 +1,10 @@
 ---
+title: "Insert() | Go | v1"
 slug: /go/v1-Collection-Insert
-beta: FALSE
+sidebar_label: "Insert()"
+beta: NEAR DEPRECATE
 notebook: FALSE
+description: "This method inserts entities organized in columns into the specified collection. | Go | v1"
 type: origin
 token: BxH9w4N0qiyuWRkGU4dcaNaRn7e
 sidebar_position: 8
@@ -24,29 +27,29 @@ func (c *GrpcClient) Insert(ctx context.Context, collName string, partitionName 
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>ctx</code></p></td>
-  <td><p>Context for the current call to work.</p></td>
-  <td><p><code>context.Context</code></p></td>
+     <td><p><code>ctx</code></p></td>
+     <td><p>Context for the current call to work.</p></td>
+     <td><p><code>context.Context</code></p></td>
    </tr>
    <tr>
-  <td><p><code>collName</code></p></td>
-  <td><p>Name of the collection to insert data into.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>collName</code></p></td>
+     <td><p>Name of the collection to insert data into.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>partitionName</code></p></td>
-  <td><p>Name of the partition to insert data into.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>partitionName</code></p></td>
+     <td><p>Name of the partition to insert data into.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>columns</code></p></td>
-  <td><p>Data to insert into the specified collection.</p><p>You should include the data for all the fields defined in the collection schema.</p></td>
-  <td><p><code>...entity.Column</code></p></td>
+     <td><p><code>columns</code></p></td>
+     <td><p>Data to insert into the specified collection. You should include the data for all the fields defined in the collection schema.</p></td>
+     <td><p><code>...entity.Column</code></p></td>
    </tr>
 </table>
 
@@ -71,59 +74,59 @@ type Column interface {
 
 <table>
    <tr>
-  <th><p>Method Signature</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method Signature</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Name()</code></p></td>
-  <td><p><code>string</code></p></td>
-  <td><p>Return the column name.</p></td>
+     <td><p><code>Name()</code></p></td>
+     <td><p><code>string</code></p></td>
+     <td><p>Return the column name.</p></td>
    </tr>
    <tr>
-  <td><p><code>Type()</code></p></td>
-  <td><p><code>entity.FieldType</code></p></td>
-  <td><p>Return the column data type.</p></td>
+     <td><p><code>Type()</code></p></td>
+     <td><p><code>entity.FieldType</code></p></td>
+     <td><p>Return the column data type.</p></td>
    </tr>
    <tr>
-  <td><p><code>Len()</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p>Return the number of rows in the column.</p></td>
+     <td><p><code>Len()</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p>Return the number of rows in the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>Slice(int, int)</code></p></td>
-  <td><p><code>entity.Column</code></p></td>
-  <td><p>Return a column that contains the specified rows from the column.</p></td>
+     <td><p><code>Slice(int, int)</code></p></td>
+     <td><p><code>entity.Column</code></p></td>
+     <td><p>Return a column that contains the specified rows from the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>AppendValue(interface{})</code></p></td>
-  <td><p><code>error</code></p></td>
-  <td><p>Append values to the column.</p></td>
+     <td><p><code>AppendValue(interface{})</code></p></td>
+     <td><p><code>error</code></p></td>
+     <td><p>Append values to the column.</p></td>
    </tr>
    <tr>
-  <td><p><code>Get(int)</code></p></td>
-  <td><p><code>interface{}, error</code></p></td>
-  <td><p>Return the value at the specified ID in the column or an error.</p></td>
+     <td><p><code>Get(int)</code></p></td>
+     <td><p><code>interface{}, error</code></p></td>
+     <td><p>Return the value at the specified ID in the column or an error.</p></td>
    </tr>
    <tr>
-  <td><p><code>GetAsInt64(int)</code></p></td>
-  <td><p><code>int64, error</code></p></td>
-  <td><p>Converts the value at the specified ID in the column to an Int64 number and returns the converted value or an error.</p></td>
+     <td><p><code>GetAsInt64(int)</code></p></td>
+     <td><p><code>int64, error</code></p></td>
+     <td><p>Converts the value at the specified ID in the column to an Int64 number and returns the converted value or an error.</p></td>
    </tr>
    <tr>
-  <td><p><code>GetAsString(int)</code></p></td>
-  <td><p><code>string, error</code></p></td>
-  <td><p>Converts the value at the specified ID in the column to a string and returns the converted value or an error.</p></td>
+     <td><p><code>GetAsString(int)</code></p></td>
+     <td><p><code>string, error</code></p></td>
+     <td><p>Converts the value at the specified ID in the column to a string and returns the converted value or an error.</p></td>
    </tr>
    <tr>
-  <td><p><code>GetAsDouble(int)</code></p></td>
-  <td><p><code>float64, error</code></p></td>
-  <td><p>Converts the value at the specified ID in the column to a Float64 number and returns the converted value or an error.</p></td>
+     <td><p><code>GetAsDouble(int)</code></p></td>
+     <td><p><code>float64, error</code></p></td>
+     <td><p>Converts the value at the specified ID in the column to a Float64 number and returns the converted value or an error.</p></td>
    </tr>
    <tr>
-  <td><p><code>GetAsBool(int)</code></p></td>
-  <td><p><code>bool, error</code></p></td>
-  <td><p>Converts the value at the specified ID in the column to a boolean and returns the converted value or an error.</p></td>
+     <td><p><code>GetAsBool(int)</code></p></td>
+     <td><p><code>bool, error</code></p></td>
+     <td><p>Converts the value at the specified ID in the column to a boolean and returns the converted value or an error.</p></td>
    </tr>
 </table>
 
