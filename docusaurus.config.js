@@ -504,9 +504,8 @@ const config = {
         },
         items: [
           {
-            href: '/search',
-            position: 'right',
-            className: 'header-search-link',
+            type: 'custom-searchbtn',
+            position: 'right'
           },
           {
             type: 'docsVersionDropdown',
@@ -791,9 +790,9 @@ const config = {
               }
             ],
             quickQuestions: [
-              "Zilliz Cloud 是什么？",
-              "如何连接 Zilliz Cloud 集群",
-              "Zilliz Cloud 和 Milvus 相比有什么差异？"
+              "我应该如何创建和连接到 Zilliz Cloud 集群？",
+              "我的数据集规模比较大，应该如何优化向量搜索性能？",
+              "Serverless 和 Dedicated 集群有什么区别？"
             ]
         },
         searchSettings: {

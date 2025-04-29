@@ -25,7 +25,7 @@ import Admonition from '@theme/Admonition';
 
 在企业级应用开发和部署过程中，合理的环境隔离与访问控制至关重要。Zilliz Cloud 通过**组织**、**项目**、**集群**的层级结构，提供灵活的环境隔离方案。本文将帮助您根据运营、安全和财务需求选择最合适的隔离策略。
 
-## 组织级别隔离{#organization-level-isolation }
+## 组织级别隔离{#organization-level-isolation}
 
 组织级隔离是最安全的选项。
 
