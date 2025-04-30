@@ -36,4 +36,20 @@
     font-size: 16px;
     line-height: 22px;
     font-weight: 600;
+    cursor: pointer;
+}
+
+.bannerLink:hover,
+.bannerLink:link {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.zillizStar {
+    display: inline-block;
+    background-image: url('/icons/zilliz-star.svg');
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;    
 }
