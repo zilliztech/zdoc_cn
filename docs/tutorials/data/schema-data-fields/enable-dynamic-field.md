@@ -296,18 +296,165 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
+### 为动态字段创建索引{#index-a-scalar-field-in-the-dynamic-field}
+
+当您启用动态字段后，插入的数据中所有未在 Schema 中字义的字段都会以键值对的形式存入动态字段。Zilliz Cloud clusters 支持为这些 Schema 中未定义的字段创建索引，只需要您在创建索引时指定这些字段的 JSON 路径。您需要：
+
+1. **在动态字段中选择需要创建索引的键名**。
+
+    比如，您可以选择为上述示例中的 `color` 键创建索引。
+
+1. **为所有在该键上的值指定强制转换类型**。
+
+    在创建索引时，Zilliz Cloud clusters 会解析动态字段，抽取指定键值，并将其强制转换为指定的数值类型。
+
+    - 支持的强制转换类型包括`bool`（或 `BOOL`）、`double`（或 `DOUBLE`）、以及 `varchar`（或 `VARCHAR`）。
+
+    - 索引中不会饮食解析或强制转换失败（例如，尝试将字段串转换成双精度数值）的所有 Entity。
+
+1. **使用** `json_path` **参数指定某个键所在路径。**
+
+    因为动态字段本质就是一个预留的 JSON 字段。您既可以使用 `color` 作为索引路径，也可以在有嵌套结构时，使用更深的索引路径（如：`my_json["field"]["subfield"]`）。
+
+1. **为指定路径创建 INVERTED 索引。**
+
+    当前，仅支持使用 INVERTED 索引为指定的 JSON 路径创建索引。
+
+关于参数或创建索引时的注意事项，可以参考[为 JSON 字段创建索引](./use-json-fields#index-a-json-field)。
+
+如下示例演示了如何为 `color` 这个未在 Schema 中定义的字段创建索引。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+# Prepare index parameters
+index_params = client.prepare_index_params()
+
+index_params.add_index(
+    field_name="color",               # Name of the "column" you see in queries (the dynamic key).
+    index_type="INVERTED",            # Currently only "INVERTED" is supported for indexing JSON fields.
+    index_name="color_index",         # Assign a name to this index.
+    params={
+        "json_path": "color",         # JSON path to the key you want to index.
+        "json_cast_type": "varchar"   # Type to which Milvus will cast the extracted values.
+    }
+)
+
+# Create the index
+client.create_index(
+    collection_name="my_collection",
+    index_params=index_params
+)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+import io.milvus.v2.common.IndexParam;
+
+List<IndexParam> indexes = new ArrayList<>();
+
+Map<String,Object> extraParams = new HashMap<>();
+extraParams.put("json_path", "color");
+extraParams.put("json_cast_type", "varchar");
+indexes.add(IndexParam.builder()
+        .fieldName("color")
+        .indexName("color_index")
+        .indexType(IndexParam.IndexType.INVERTED)
+        .extraParams(extraParams)
+        .build());
+
+client.createIndex(CreateIndexReq.builder()
+        .collectionName("my_collection")
+        .indexParams(indexes)
+        .build());
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+indexTask, err := client.CreateIndex(ctx, milvusclient.NewCreateIndexOption("my_collection", "color",
+    index.NewJSONPathIndex(index.Inverted, "varchar", "color")))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+
+err = indexTask.Await(ctx)
+if err != nil {
+    fmt.Println(err.Error())
+    // handler err
+}
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+const index_params = {
+    field_name: "color",               // Name of the "column" you see in queries (the dynamic key).
+    index_type: "INVERTED",            // Currently only "INVERTED" is supported for indexing JSON fields.
+    index_name: "color_index",         // Assign a name to this index.
+    params:{
+        "json_path": "color",          // JSON path to the key you want to index.
+        "json_cast_type": "varchar"   // Type to which Milvus will cast the extracted values.
+    }
+}
+
+// Create the index
+await client.create_index({
+    collection_name: "my_collection",
+    index_params: index_params
+});
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+curl --request POST \
+--url "${CLUSTER_ENDPOINT}/v2/vectordb/indexes/create" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+-d '{
+    "collectionName": "my_collection",
+    "indexParams": [
+        {
+            "fieldName": "color",
+            "indexName": "color_index",
+            "indexType": "INVERTED",
+            "params": {
+                "json_path": "color",
+                "json_cast_type": "varchar"
+            }
+        }
+    ]
+}'
+```
+
+</TabItem>
+</Tabs>
+
 ### 使用动态字段进行查询和搜索{#query-search-with-dynamic-field}
 
 Zilliz Cloud clusters 支持在查询和搜索时使用过滤条件表达式，并在查询和搜索的结果中指定需要包含的字段。如下示例将使用 Schema 中未定义的 `color` 字段为例演示如何使用动态字段进行查询和搜索。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
 query_vector = [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]
 
 res = client.search(
-    collection_name="my_dynamic_collection",
+    collection_name="my_collection",
     data=[query_vector],
     limit=5,
     # highlight-start
@@ -334,7 +481,7 @@ import io.milvus.v2.service.vector.response.SearchResp
 
 FloatVec queryVector = new FloatVec(new float[]{0.3580376395471989f, -0.6023495712049978f, 0.18414012509913835f, -0.26286205330961354f, 0.9029438446296592f});
 SearchResp resp = client.search(SearchReq.builder()
-        .collectionName("my_dynamic_collection")
+        .collectionName("my_collection")
         .annsField("vector")
         .data(Collections.singletonList(queryVector))
         .outputFields(Collections.singletonList("color"))
@@ -347,7 +494,11 @@ System.out.println(resp.getSearchResults());
 
 // Output
 //
-// [[SearchResp.SearchResult(entity={color=red_7025}, score=0.6290165, id=1), SearchResp.SearchResult(entity={color=red_4794}, score=0.5975797, id=4), SearchResp.SearchResult(entity={color=red_9392}, score=-0.24996188, id=6)]]
+// [[
+//    SearchResp.SearchResult(entity={color=red_7025}, score=0.6290165, id=1),
+//    SearchResp.SearchResult(entity={color=red_4794}, score=0.5975797, id=4), 
+//    SearchResp.SearchResult(entity={color=red_9392}, score=-0.24996188, id=6)
+//]]
 
 ```
 
@@ -358,7 +509,7 @@ System.out.println(resp.getSearchResults());
 ```javascript
 const query_vector = [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]
 
-res = await client.search({
+const res = await client.search({
     collection_name: "quick_setup",
     data: [query_vector],
     limit: 5,
@@ -366,7 +517,33 @@ res = await client.search({
     filters: "color like \"red%\"",
     output_fields: ["color"]
     // highlight-end
-})
+});
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
+
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
+    "my_collection", // collectionName
+    5,                       // limit
+    []entity.Vector{entity.FloatVector(queryVector)},
+).WithFilter("color like \"red%\"").
+    WithANNSField("vector").
+    WithOutputFields("color"))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+
+for _, resultSet := range resultSets {
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
+    fmt.Println("color: ", resultSet.GetColumn("color").FieldData().GetScalars())
+}
 ```
 
 </TabItem>
@@ -382,7 +559,7 @@ curl --request POST \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
 -d '{
-    "collectionName": "my_dynamic_collection",
+    "collectionName": "my_collection",
     "data": [
         [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]
     ],
@@ -402,21 +579,24 @@ curl --request POST \
 ```json
 [
     {
-        "id": 4, 
-        "distance": 0.3345786594834839,
+        "id": 1, 
+        "distance": 0.6290165,
         "entity": {
-            "vector": [0.4452349528804562, -0.8757026943054742, 0.8220779437047674, 0.46406290649483184, 0.30337481143159106], 
-            "color": "red_4794", 
-            "likes": 122
+            "color": "red_7025"
+        }
+    },
+    {
+        "id": 4, 
+        "distance": 0.5975797,
+        "entity": {
+            "color": "red_4794"
         }
     },
     {
         "id": 6, 
-        "distance": 0.6638239834383389，
+        "distance": -0.24996188，
         "entity": {
-            "vector": [0.8371977790571115, -0.015764369584852833, -0.31062937026679327, -0.562666951622192, -0.8984947637863987], 
-            "color": "red_9392", 
-            "likes": 58
+            "color": "red_9392"
         }
     },
 ]
