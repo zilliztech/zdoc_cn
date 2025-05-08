@@ -28,7 +28,7 @@ Mmap 允许在不将磁盘上的文件加载到内存的情况下通过内存访
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>该特性当前处于<strong>公测阶段</strong>。如果您在使用过程中遇到任何问题，可以联系<a href="https://zilliz.com.cn/contact-sales">Zilliz Cloud 支持</a>.</p>
+<p>在不同订阅计划的源集群和目标集群之间迁移或还原数据时，源 Collection 的 mmap 设置不会迁移到目标集群。请手动重新配置目标集群上的 mmap 设置。</p>
 
 </Admonition>
 
