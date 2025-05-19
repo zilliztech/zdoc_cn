@@ -10,10 +10,10 @@ type: docx
 token: K9E6dtYlJojtOCxTG0EcGBVnnKe
 sidebar_position: 22
 keywords: 
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - zilliz
   - zilliz cloud
   - cloud

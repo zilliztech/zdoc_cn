@@ -10,10 +10,10 @@ type: docx
 token: HRicdDwU4oUDWEx6DrlcARGrn1c
 sidebar_position: 14
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud
