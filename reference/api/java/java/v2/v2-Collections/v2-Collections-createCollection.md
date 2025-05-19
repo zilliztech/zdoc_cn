@@ -122,7 +122,7 @@ createCollection(CreateCollectionReq.builder()
 
     The value defaults to **True**, indicating that the meta field is used.
 
-    If you create a collection with a schema, configure this parameter using the **[createSchema](./v2-Collections-createSchema)** method.
+    If you create a collection with a schema, configure this parameter using the **[CreateSchema](./v2-Collections-CreateSchema)** method.
 
 - `numShards(int numShards)`
 
@@ -216,7 +216,7 @@ You can choose between a quick setup or a customized setup as follows:
     MilvusClientV2 client = new MilvusClientV2(connectConfig);
     
     // 2. Create a collection with schema, when indexParams is specified, it will create index as well
-    CreateCollectionReq.CollectionSchema collectionSchema = client.createSchema();
+    CreateCollectionReq.CollectionSchema collectionSchema = client.CreateSchema();
     collectionSchema.addField(AddFieldReq.builder().fieldName("id").dataType(DataType.Int64).isPrimaryKey(Boolean.TRUE).autoID(Boolean.FALSE).description("id").build());
     collectionSchema.addField(AddFieldReq.builder().fieldName("vector").dataType(DataType.FloatVector).dimension(dim).build());
     
