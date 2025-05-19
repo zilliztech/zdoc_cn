@@ -201,7 +201,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 从 Partition 中删除 Entity
+## 从 Partition 中删除 Entity{#delete-entities-from-partitions}
 
 您还可以从指定的 Partition 中删除 Entity。示例代码中假设 Collection 中存在一个名为 **partitionA** 的 Partition。
 

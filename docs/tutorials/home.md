@@ -7,7 +7,7 @@ notebook: FALSE
 description: "此页为 Zilliz Cloud 开发者中心的首页。 | Cloud"
 type: origin
 token: I5PAwH8MFi67Myky6EYcAxuVnNe
-sidebar_position: 0
+sidebar_position: 1
 keywords: 
   - 向量数据库
   - zilliz
@@ -44,11 +44,11 @@ Zilliz Cloud 提供完全托管的 Milvus 服务，简化您的向量检索应�
 
 Zilliz Cloud 提供如下版本供您订阅：
 
-- [Free](./free-trials)
+- [Free](./create-cluster-on-demand#set-up-a-free-cluster)
 
-- [Serverless](./select-zilliz-cloud-service-plans)
+- [Serverless](./create-cluster-on-demand#create-a-serverless-cluster)
 
-- [Dedicated](./select-zilliz-cloud-service-plans)
+- [Dedicated](./create-cluster-on-demand#create-a-dedicated-cluster)
 
 - [BYOC](https://zilliz.com.cn/contact-sales)
 
@@ -128,7 +128,7 @@ Zilliz Cloud 提供如下版本供您订阅：
 
 - [支付与账单 (Billing)](./payment-billing)
 
-    用多少，付多少。没有前置费用。
+    提供多样的计费模式：按量付费或包年包月。
 
 - [第三方集成 (Integrations)](https://zilliz.com/learn/milvus-notebooks)
 
@@ -138,7 +138,7 @@ Zilliz Cloud 提供如下版本供您订阅：
 
 <Blocks>
 
-# 使用您中意的编程语言
+# 使用您熟悉的编程语言
 
 - [Python](/reference/python)
 
@@ -152,4 +152,4 @@ Zilliz Cloud 提供如下版本供您订阅：
 
 </Blocks>
 
-<Banner bannerText="仍旧无法找您您需要的信息" bannerLinkText="试试 Ask AI" />
+<Banner bannerText="仍旧无法找到您需要的信息？" bannerLinkText="试试 Ask AI" />

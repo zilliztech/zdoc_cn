@@ -6,13 +6,13 @@ notebook: false
 description: "Methods related to CRUD operations within a collection. | Java | v2"
 type: folder
 token: YBQDf0VrtlUZx3dVkdKckKT5ngh
-sidebar_position: 3
+sidebar_position: 4
 sidebar_label: "Vector"
 keywords: 
-  - what is milvus
-  - milvus database
-  - milvus lite
-  - milvus benchmark
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud

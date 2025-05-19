@@ -8,12 +8,12 @@ notebook: false
 description: "This operation releases the partitions in a specified collection from memory. | Java | v2"
 type: docx
 token: VsyQdDkXnoloWYxfjXNchc0dnng
-sidebar_position: 6
+sidebar_position: 7
 keywords: 
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
   - zilliz
   - zilliz cloud
   - cloud
@@ -67,7 +67,19 @@ releasePartitions(ReleasePartitionsReq.builder()
 ## Example
 
 ```java
-// release partition in collection
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.partition.request.ReleasePartitionsReq;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Release partition in collection
 ReleasePartitionsReq releasePartitionsReq = ReleasePartitionsReq.builder()
         .collectionName("test_partition")
         .partitionNames(Collections.singletonList("test_partition"))

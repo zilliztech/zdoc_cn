@@ -8,12 +8,12 @@ notebook: false
 description: "This operation drops a user. | Java | v2"
 type: docx
 token: RFv2dtZ1qoP9XQxJEGqcgLGUnhc
-sidebar_position: 6
+sidebar_position: 9
 keywords: 
-  - vector databases comparison
-  - Faiss
-  - Video search
-  - AI Hallucination
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
@@ -62,6 +62,19 @@ dropUser(DropUserReq.builder()
 ## Example
 
 ```java
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.rbac.request.DropUserReq;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Drop a user
 DropUserReq dropUserReq = DropUserReq.builder()
         .userName("test")
         .build();

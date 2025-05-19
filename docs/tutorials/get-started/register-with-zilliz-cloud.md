@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 ## 注册账号{#registration-options}
 
-1. 在“邮箱”字段中输入您的邮箱地址。
+1. 在“企业邮箱”字段中输入您的邮箱地址。
 
 1. 在“密码”字段中输入密码。
 
@@ -47,17 +47,17 @@ import Admonition from '@theme/Admonition';
 
 1. 阅读并勾选“同意[使用条款](https://zilliz.com.cn/cloud-service-terms)和[隐私政策](https://zilliz.com.cn/cloud-user-policy)”。
 
-1. 点击”注册“按钮。
+1. 点击“注册”按钮。
 
     邮箱验证码将发送到您填写的邮箱中。
 
-1. 在提示对话框中输入验证码，并点击“验证”。
+1. 在提示对话框中输入邮箱验证码，并点击“验证”。
 
     如未收到验证码，请点击“重新发送验证码”。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在使用邮箱和密码首次登录后，请您完成问卷调查。我们希望了解您选择 Zilliz Cloud 的原因及数据规模，从而更有效地为您提供服务。</p>
+<p>在使用邮箱和密码首次登录后，请您完成问卷调查。我们希望了解您的数据规模及用例，从而更有效地为您提供服务。</p>
 
 </Admonition>
 

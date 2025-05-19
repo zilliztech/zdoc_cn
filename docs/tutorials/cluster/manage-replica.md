@@ -46,7 +46,40 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 在设置 Replica 时，需要注意 CU 规格 x Replica 数量不得超过 256。
 
+<Admonition type="caution" icon="🚧" title="警告">
+
+<p>减少 Replica 数量可能会短暂影响数据读取。请谨慎操作。</p>
+
+</Admonition>
+
+您可以选择通过控制台或编程的方式设置集群 Replica。
+
+### 在控制台中设置 Replica
+
+您可以按照如下图所示的方式设置 Replica。
+
 ![configure-replica-cn](/img/configure-replica-cn.png)
+
+### 使用 RESTful API 设置 Replica
+
+您可以使用 RESTful API 设置 Replica。
+
+`replica` 参数的取值应为 1 到 8 之间的整数。更多详情，请参考[修改集群 Replica](/reference/restful/modify-cluster-replica-v2)。
+
+```bash
+export BASE_URL="https://api.cloud.zilliz.com.cn"
+export CLUSTER_ID="YOUR_CLUSTER_ID"
+export TOKEN="YOUR_API_KEY"
+
+curl --request POST \
+     --url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/modifyReplica" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Accept: application/json" \
+     --header "Content-type: application/json" \
+     --data-raw '{
+        "replica": "2"
+      }'
+```
 
 ## 设置包年包月集群 Replica{#configure-replicas-for-annual-subsription-cluster}
 

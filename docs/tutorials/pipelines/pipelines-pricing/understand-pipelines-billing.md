@@ -35,7 +35,7 @@ Zilliz Cloud Pipelines 采用按量计费的[定价](https://zilliz.com.cn/prici
 
 如需了解使用每种 Embedding 和 Reranker 模型的具体费用，请参考[定价方案](https://zilliz.com.cn/pricing)。
 
-目前，Zilliz Cloud Pipelines 提供免费 Quota。但同时，Zilliz Cloud Pipelines 对每个组织的用量做出了[限制](./limits#pipelines-usage)。每个组织每月可使用 ¥140 的 Pipelines 用量。如需提高额度，请[联系销售](https://zilliz.com.cn/contact-sales)或[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
+目前，Zilliz Cloud Pipelines 提供免费 Quota。但同时，Zilliz Cloud Pipelines 对每个组织的用量做出了[限制](./limits)。每个组织每月可使用 ¥140 的 Pipelines 用量。如需提高额度，请[联系销售](https://zilliz.com.cn/contact-sales)或[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 
 ## 查看账单{#view-costs}
 

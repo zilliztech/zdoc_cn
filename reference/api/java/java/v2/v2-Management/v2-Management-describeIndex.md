@@ -8,12 +8,12 @@ notebook: false
 description: "This operation describes a specific index. | Java | v2"
 type: docx
 token: WUgedTmyZoW4clxSgHVcl1ZtnZl
-sidebar_position: 2
+sidebar_position: 3
 keywords: 
-  - rag vector database
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
@@ -102,12 +102,24 @@ A **DescribeIndexResp** object that contains the details of the specified index.
 ## Example
 
 ```java
-// describe the index for field "vector"
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.index.request.DescribeIndexReq;
+import io.milvus.v2.service.index.response.DescribeIndexResp;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Describe the index for the field "vector"
 DescribeIndexReq describeIndexReq = DescribeIndexReq.builder()
         .collectionName("test")
         .fieldName("vector")
         .build();
 DescribeIndexResp describeIndexResp = client.describeIndex(describeIndexReq);
-// DescribeIndexResp(indexName=test, indexType=AUTOINDEX, metricType=L2, fieldName=vector)
 ```
 

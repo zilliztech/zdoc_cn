@@ -2,7 +2,7 @@
 title: "召回调优 | Cloud"
 slug: /tune-recall-rate
 sidebar_label: "召回调优"
-beta: PUBLIC
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 引入了一个名为 `level` 的搜索参数，允许用户通过调整该参数来平衡召回率和搜索性能。同时，Zilliz Cloud 还允许用户设置 `enablerecallcalculation` 参数来决定是否在搜索结果中包含预估召回率信息。您可以配合使用这两个参数来对向量搜索结果进行调优。 | Cloud"
 type: origin

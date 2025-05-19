@@ -2,7 +2,7 @@
 title: "Standard | Cloud"
 slug: /standard-analyzer
 sidebar_label: "Standard"
-beta: PUBLIC
+beta: FALSE
 notebook: FALSE
 description: "Standard Analyzer 是 Zilliz Cloud 中的默认 Analyzer ，如果未指定 Analyzer ，它将自动应用于文本字段。它使用基于语法的分词，因此对大多数语言都有效。 | Cloud"
 type: origin
@@ -126,7 +126,7 @@ analyzerParams.put("stop_words", Collections.singletonList("of"));
 </TabItem>
 </Tabs>
 
-定义 `analyzer_params` 后，您可以在定义集合模式时将其应用于 VARCHAR 字段。这使得 Zilliz Cloud 能够使用指定的 Analyzer 处理该字段中的文本，以实现高效的分词和过滤。更多信息，请参阅[Analyzer 概述](./analyzer-overview)。  
+定义 `analyzer_params` 后，您可以在定义集合模式时将其应用于 VARCHAR 字段。这使得 Zilliz Cloud 能够使用指定的 Analyzer 处理该字段中的文本，以实现高效的分词和过滤。更多信息，请参阅[使用示例](./analyzer-overview#example-use)。  
 
 ## 示例输出{#example-output}
 

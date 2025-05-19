@@ -2,7 +2,7 @@
 title: "Chinese | Cloud"
 slug: /chinese-analyzer
 sidebar_label: "Chinese"
-beta: PUBLIC
+beta: FALSE
 notebook: FALSE
 description: "Chinese Analyzer 专门设计用于处理中文文本，提供有效的分段和分词。 | Cloud"
 type: origin

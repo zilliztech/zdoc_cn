@@ -1,7 +1,10 @@
 ---
+title: "ListCollections() | Go | v1"
 slug: /go/v1-Collection-ListCollections
-beta: FALSE
+sidebar_label: "ListCollections()"
+beta: NEAR DEPRECATE
 notebook: FALSE
+description: "This method lists collections within the connected database. | Go | v1"
 type: origin
 token: VPVWwUcMUi6qsOkQt8yc8Tswnob
 sidebar_position: 5
@@ -24,19 +27,19 @@ func (c *GrpcClient) ListCollections(ctx context.Context, opts ...ListCollection
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>ctx</code></p></td>
-  <td><p>Context for the current call to work.</p></td>
-  <td><p><code>context.Context</code></p></td>
+     <td><p><code>ctx</code></p></td>
+     <td><p>Context for the current call to work.</p></td>
+     <td><p><code>context.Context</code></p></td>
    </tr>
    <tr>
-  <td><p>opts</p></td>
-  <td><p>Extra settings for this request.</p></td>
-  <td><p><code>client.ListCollectionOption</code></p></td>
+     <td><p>opts</p></td>
+     <td><p>Extra settings for this request.</p></td>
+     <td><p><code>client.ListCollectionOption</code></p></td>
    </tr>
 </table>
 
@@ -46,12 +49,12 @@ You can add extra settings to the `ListCollections()` request using the followin
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>WithShowInMemory(value bool)</code></p></td>
-  <td><p>Whether to include the load status of the collections in the returned list.</p></td>
+     <td><p><code>WithShowInMemory(value bool)</code></p></td>
+     <td><p>Whether to include the load status of the collections in the returned list.</p></td>
    </tr>
 </table>
 

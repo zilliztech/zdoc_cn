@@ -37,6 +37,8 @@ Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案�
 
 - 您需要拥有组织管理员或项目管理员的角色。如果您没有相应的权限，请联系您的 Zilliz Cloud 管理员。
 
+- 确保目标集群的 CU 容量足以容纳源数据。要估算所需的 CU 规格，请使用[计算器](https://zilliz.com.cn/pricing#calculator)。
+
 ## 准备迁移数据{#prepare-migration-data}
 
 Zilliz Cloud 支持从 Milvus 2.x 和更高版本迁移数据。要从 Milvus 2.x 迁移数据，请按如下准备数据：

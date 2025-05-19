@@ -10,10 +10,10 @@ type: docx
 token: MApVdDl17oU8OixzbMPcgceKnOh
 sidebar_position: 14
 keywords: 
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
   - Dense embedding
   - Faiss vector database
-  - Chroma vector database
-  - nlp search
   - zilliz
   - zilliz cloud
   - cloud

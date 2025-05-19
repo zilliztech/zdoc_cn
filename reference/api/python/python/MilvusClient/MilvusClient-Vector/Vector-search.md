@@ -10,10 +10,10 @@ type: docx
 token: T1npdvcRMoIjezxK021cPvfpn7c
 sidebar_position: 6
 keywords: 
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
-  - knn algorithm
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - what is vector db
   - zilliz
   - zilliz cloud
   - cloud
@@ -32,8 +32,9 @@ This operation conducts a vector similarity search with an optional scalar filte
 
 ## Request syntax
 
-```python
+```plaintext
 search(
+    self,
     collection_name: str,
     data: Union[List[list], list],
     filter: str = "",
@@ -42,8 +43,9 @@ search(
     search_params: Optional[dict] = None,
     timeout: Optional[float] = None,
     partition_names: Optional[List[str]] = None,
+    anns_field: Optional[str] = None,
     **kwargs,
-) -> List[dict]
+) -> List[List[dict]]
 ```
 
 **PARAMETERS:**
@@ -70,9 +72,13 @@ search(
 
     A scalar filtering condition to filter matching entities. 
 
-    The value defaults to an empty string, indicating that no condition applies.
+    The value defaults to an empty string, indicating that no condition applies. 
 
     You can set this parameter to an empty string to skip scalar filtering. To build a scalar filtering condition, refer to [Boolean Expression Rules](https://milvus.io/docs/boolean.md). 
+
+- **filter_params** (*dict*) -
+
+    If you choose to use placeholders in `filter` as stated in [Filtering Templating](/docs/filtering-templating), then you can specify the actual values for these placeholders as key-value pairs as the value of this parameter.
 
 - **limit** (*int*) -
 
@@ -100,9 +106,35 @@ search(
 
         Possible values are **L2**, **IP**, and **COSINE**.
 
+    - **radius** (float) -
+
+        Determines the threshold of least similarity. When setting `metric_type` to `L2`, ensure that this value is greater than that of **range_filter**. Otherwise, this value should be lower than that of **range_filter**. 
+
+    - **range_filter**  (float) -  
+
+        Refines the search to vectors within a specific similarity range. When setting `metric_type` to `IP` or `COSINE`, ensure that this value is greater than that of **radius**. Otherwise, this value should be lower than that of **radius**.
+
+    - **level** (*int*)
+
+        Zilliz Cloud uses a unified parameter to simplify search parameter tuning instead of leaving you to work with a bunch of search parameters specific to various index algorithms.
+
+        The value defaults to **1**, and ranges from **1** to **5**. Increasing the value results in a higher recall rate with degraded search performance.
+
+    - **page_retain_order** (*bool*) -
+
+        Whether to retain the order of the search result when `offset` is provided. 
+
+        This parameter applies only when you also set `radius`.
+
     - **params** (dict) -
 
-        Additional parameters
+        Additional parameters.
+
+        <Admonition type="info" icon="📘" title="Notes">
+
+        <p>All additional parameters are moved to the upper <code>search_params</code>, and the <code>params</code> argument will be deprecated soon.</p>
+
+        </Admonition>
 
         - **radius** (float) -
 

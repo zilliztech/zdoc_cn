@@ -8,12 +8,12 @@ notebook: false
 description: "This operation checks whether a specific collection exists. | Java | v2"
 type: docx
 token: Vs26d4WrYoJ3moxuLifcyP2enyh
-sidebar_position: 14
+sidebar_position: 18
 keywords: 
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
-  - what is milvus
+  - Audio search
+  - what is semantic search
+  - Embedding model
+  - image similarity search
   - zilliz
   - zilliz cloud
   - cloud
@@ -66,7 +66,19 @@ A boolean value indicating whether the specified collection exists.
 ## Example
 
 ```java
-// check whether collection test exists
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.collection.request.HasCollectionReq;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Check whether the collection exists
 HasCollectionReq hasCollectionReq = HasCollectionReq.builder()
         .collectionName("test")
         .build();

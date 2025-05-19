@@ -10,10 +10,10 @@ type: docx
 token: HPumdTuktozoJAxYrqQcRciSnsb
 sidebar_position: 6
 keywords: 
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - open source vector db
   - zilliz
   - zilliz cloud
   - cloud

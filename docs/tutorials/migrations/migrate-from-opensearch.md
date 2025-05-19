@@ -25,85 +25,34 @@ import Admonition from '@theme/Admonition';
 
 [OpenSearch](https://opensearch.org/) 是一个分布式的搜索与分析引擎，支持多种应用场景，从在网站上实现搜索框，到用于分析安全数据进行威胁检测。本文将介绍如何将 OpenSearch 数据迁移到 Zilliz Cloud。
 
-## 注意事项{#considerations}
+迁移过程分为以下步骤：
 
-- Zilliz Cloud 支持迁移大多数 OpenSearch 数据类型。开始迁移前，请确认您的数据类型是否兼容。如果表中包含不受支持的数据类型字段，您可以选择不迁移这些字段或[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。完整的支持数据类型列表，请参考[字段映射](./migrate-from-opensearch)。
+1. **连接数据源**：输入您的 OpenSearch 集群 Endpoint 和用户名密码来建立连接。
 
-- 每次迁移仅支持选择单个源集群。如果您在多个源集群中有数据，可以创建多个迁移任务。
+1. **选择迁移源和目标集群**：
 
-## 开始前{#before-you-start}
+    - 选择一个或多个待迁移的源表。
 
-- 源 OpenSearch 集群可以从公网访问。
+    - 选择一个现有的 Zilliz Cloud 集群作为目标集群。
 
-- 如果您的网络环境配置了白名单列表，请确保将 Zilliz Cloud 的 IP 地址添加到其中。要了解更多信息，请参考 [Zilliz Cloud IP](./zilliz-cloud-ips)。
+1. **配置 Schema**：确保 OpenSearch 与 Zilliz Cloud 之间的字段类型正确映射。有关具体的数据映射规则，请参阅[映射规则](./migrate-from-opensearch#mapping-rules)。
 
-- 已在 Zilliz Cloud 中获得组织管理员或项目管理员权限。如果您没有相关权限，请联系您的 Zilliz Cloud 管理员。
+![VvN4wnpcMhpZj9b28r7ctMmZnpg](/img/VvN4wnpcMhpZj9b28r7ctMmZnpg.png)
 
-## 从 OpenSearch 迁移至 Zilliz Cloud{#migrate-from-opensearch-to-zilliz-cloud}
+## 映射规则{#mapping-rules}
 
-![zh-migrate_from_opensearch](/img/zh-migrate_from_opensearch.png)
-
-您可以将源数据迁移到任何版本类型的 Zilliz Cloud 集群，只要其计算单元（CU）大小能够满足源数据的存储需求。
-
-1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)。
-
-1. 进入目标项目，选择**数据迁移** > **OpenSearch**。
-
-1. 在**连接至数据源**步骤中，提供 OpenSearch 集群连接信息，包括 Cluster Endpoint（AWS OpenSearch: `https://<ID>.<region>.es.amazonaws.com`，OpenSearch 社区版: `https://<ip>:<port>`）、用户名和密码。然后，单击**下一步**。
-
-    <Admonition type="info" icon="📘" title="说明">
-
-    <p>有关如何获取集群的连接信息，请参阅 <a href="https://opensearch.org/docs/latest/getting-started/communicate/">Communicate with OpenSearch</a>。</p>
-
-    </Admonition>
-
-1. 在**选择迁移来源和目标**步骤中，配置源 OpenSearch 集群和目标 Zilliz Cloud 集群的设置。然后，单击**下一步**。
-
-    <Admonition type="info" icon="📘" title="说明">
-
-    <p>您选择从 OpenSearch 迁移的每个源索引必须包含一个向量字段。</p>
-
-    </Admonition>
-
-1. 在**配置 Schema** 步骤中：
-
-    1. 验证 OpenSearch 数据与 Zilliz Cloud 数据类型之间的映射。Zilliz Cloud 默认映射数据，您可以查看相关映射并进行必要的调整。目前，您可以重命名字段，但不支持更改字段数据类型。
-
-    1. 在**高级设置**中配置**动态列**和 **Partition Key**。更多信息请参考 [Dynamic Field](./enable-dynamic-field) 和[使用 Partition Key](./use-partition-key)。
-
-    1. 在**目标 Collection 名称和描述**中，自定义目标 Collection 的名称和描述。Collection 名称在每个集群中必须唯一。如果名称与现有 Collection 重复，请重命名 Collection。
-
-1. 点击**迁移**。
-
-## 查看迁移进度{#monitor-the-migration-process}
-
-生成迁移任务后，您可前往[任务中心](/docs/job-center)查看任务状态和进度。如果迁移任务的状态从**进行中**变更为**成功**，则代表迁移成功。
-
-<Admonition type="info" icon="📘" title="说明">
-
-<p>迁移完成后，请验证目标集群中的 collection 和 entity 数量是否与数据源一致。如果发现不一致，请删除缺失 entity 的 collection 并重新进行迁移。</p>
-
-</Admonition>
-
-![view_migration_progress_cn](/img/view_migration_progress_cn.png)
-
-## 取消迁移任务{#cancel-migration-job}
-
-如果迁移过程遇到任何问题，您可以采取以下步骤进行故障排除并恢复迁移：
-
-1. 在**任务中心**页面，取消失败的迁移任务。
-
-1. 在**操作**列点击**查看详情**以访问日志信息。
-
-## 字段映射{#field-mapping-reference}
-
-下表详细说明了 OpenSearch 索引中的字段如何映射到 Zilliz Cloud 的 Collection 中。
+下表总结了 OpenSearch 字段类型如何映射到 Zilliz Cloud 字段类型，并对各类型做了详细说明。
 
 <table>
    <tr>
-     <th><p><strong>OpenSearch Field Type</strong></p></th>
-     <th><p><strong>Zilliz Cloud Field Type</strong></p></th>
-     <th><p><strong>Description</strong></p></th>
+     <th><p><strong>OpenSearch 字段类型</strong></p></th>
+     <th><p><strong>Zilliz Cloud 字段类型</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>主键（<a href="https://opensearch.org/docs/latest/field-types/metadata-fields/id/">_id</a>）</p></td>
+     <td><p>主键</p></td>
+     <td><p>OpenSearch 的 ID 字段将自动映射为 Zilliz Cloud 的主键字段。</p></td>
    </tr>
    <tr>
      <td><p><a href="https://opensearch.org/docs/latest/field-types/supported-field-types/knn-vector/">k-NN vector</a></p></td>
@@ -118,7 +67,7 @@ import Admonition from '@theme/Admonition';
    <tr>
      <td><p><a href="https://opensearch.org/docs/latest/field-types/supported-field-types/binary/">Binary</a></p></td>
      <td><p><code>VARCHAR</code></p></td>
-     <td><p>Binary data is stored as a string on Zilliz Cloud.</p></td>
+     <td><p>Binary 数据在 Zilliz Cloud 中以字符串形式存储。</p></td>
    </tr>
    <tr>
      <td><p><a href="https://opensearch.org/docs/latest/field-types/supported-field-types/numeric/">Numeric</a></p></td>
@@ -162,12 +111,12 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p><code>unsigned_long</code></p></td>
-     <td><p>Not supported</p></td>
+     <td><p>不支持</p></td>
      <td><p>暂不支持映射该字段。</p></td>
    </tr>
    <tr>
      <td><p><code>scaled_float</code></p></td>
-     <td><p>Not supported</p></td>
+     <td><p>不支持</p></td>
      <td><p>暂不支持映射该字段。</p></td>
    </tr>
    <tr>
@@ -187,13 +136,33 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p><a href="https://opensearch.org/docs/latest/field-types/supported-field-types/range/">Range</a></p></td>
-     <td><p><code>VARCHAR</code></p></td>
-     <td><p>存储为字符串。</p></td>
+     <td><p><code>JSON</code></p></td>
+     <td><p>序列化为 JSON 格式。</p></td>
    </tr>
    <tr>
      <td><p><a href="https://opensearch.org/docs/latest/field-types/supported-field-types/object-fields/">Object</a></p></td>
-     <td><p><code>JSON</code></p></td>
+     <td></td>
+     <td></td>
+   </tr>
+   <tr>
+     <td><p><code>object</code></p></td>
+     <td><p>JSON</p></td>
      <td><p>序列化为 JSON 格式。</p></td>
+   </tr>
+   <tr>
+     <td><p><code>nested</code></p></td>
+     <td><p>JSON</p></td>
+     <td><p>序列化为 JSON 格式。</p></td>
+   </tr>
+   <tr>
+     <td><p><code>flat_object</code></p></td>
+     <td><p>JSON</p></td>
+     <td><p>序列化为 JSON 格式。</p></td>
+   </tr>
+   <tr>
+     <td><p><code>join</code></p></td>
+     <td><p>VARCHAR</p></td>
+     <td><p>存储为字符串。</p></td>
    </tr>
    <tr>
      <td><p><a href="https://opensearch.org/docs/latest/field-types/supported-field-types/string/">String</a></p></td>
@@ -217,12 +186,12 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p><code>token_count</code></p></td>
-     <td><p><code>VARCHAR</code></p></td>
-     <td><p>存储为字符串。</p></td>
+     <td><p><code>INT32</code></p></td>
+     <td><p>存储为 INT32。</p></td>
    </tr>
    <tr>
      <td><p><code>wildcard</code></p></td>
-     <td><p>Not supported</p></td>
+     <td><p>不支持</p></td>
      <td><p>暂不支持映射该字段。</p></td>
    </tr>
    <tr>
@@ -247,17 +216,121 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p><a href="https://opensearch.org/docs/latest/field-types/supported-field-types/derived/">Derived</a></p></td>
-     <td><p>Not supported</p></td>
+     <td><p>不支持</p></td>
      <td><p>暂不支持映射该字段。</p></td>
    </tr>
    <tr>
      <td><p><a href="https://opensearch.org/docs/latest/field-types/supported-field-types/star-tree/">Star-tree</a></p></td>
-     <td><p>Not supported</p></td>
+     <td><p>不支持</p></td>
+     <td><p>暂不支持映射该字段。</p></td>
+   </tr>
+   <tr>
+     <td><p><a href="https://docs.opensearch.org/docs/latest/field-types/supported-field-types/index/#arrays">Arrays</a></p></td>
+     <td><p>不支持</p></td>
+     <td><p>暂不支持映射该字段。</p></td>
+   </tr>
+   <tr>
+     <td><p><a href="https://docs.opensearch.org/docs/latest/field-types/supported-field-types/index/#multifields">Multifields</a></p></td>
+     <td><p>不支持</p></td>
      <td><p>暂不支持映射该字段。</p></td>
    </tr>
 </table>
 
-- 潜在的数据丢失或截断：在 VARCHAR 列中存储日期、范围、IP 地址或大文本内容等字段时，请考虑 Zilliz Cloud 上的长度限制或索引要求。
+## 开始前{#before-you-start}
 
-- 不支持的字段类型：对于不支持的 OpenSearch 类型，请在迁移到 Zilliz Cloud 之前进行转换或移除。
+- 源 OpenSearch 集群可以从公网访问。
+
+- 如果您的网络环境配置了白名单列表，请确保将 Zilliz Cloud 的 IP 地址添加到其中。要了解更多信息，请参考 [Zilliz Cloud IP](./zilliz-cloud-ips)。
+
+- 已在 Zilliz Cloud 中获得组织管理员或项目管理员权限。如果您没有相关权限，请联系您的 Zilliz Cloud 管理员。
+
+- 确保目标集群的 CU 容量足以容纳源数据。要估算所需的 CU 规格，请使用[计算器](https://zilliz.com.cn/pricing#calculator)。
+
+## 从 OpenSearch 迁移至 Zilliz Cloud{#migrate-from-opensearch-to-zilliz-cloud}
+
+1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)。
+
+1. 进入目标项目，选择**数据迁移** > **OpenSearch**。
+
+    ![N2JkbQ9ZFoKyEaxocz6cdLgQnGe](/img/N2JkbQ9ZFoKyEaxocz6cdLgQnGe.png)
+
+1. 在**连接至数据源**步骤中，提供 OpenSearch 集群连接信息，包括 Cluster Endpoint（AWS OpenSearch: `https://<ID>.<region>.es.amazonaws.com`，OpenSearch 社区版: `https://<ip>:<port>`）、用户名和密码。然后，单击**下一步**。
+
+    <Admonition type="info" icon="📘" title="说明">
+
+    <p>有关如何获取集群的连接信息，请参阅 <a href="https://opensearch.org/docs/latest/getting-started/communicate/">Communicate with OpenSearch</a>。</p>
+
+    </Admonition>
+
+1. 在**选择迁移来源和目标**步骤中，配置源 OpenSearch 集群和目标 Zilliz Cloud 集群的设置。然后，单击**下一步**。
+
+    <Admonition type="info" icon="📘" title="说明">
+
+    <p>您选择从 OpenSearch 迁移的每个源索引必须包含一个向量字段。</p>
+
+    </Admonition>
+
+1. 在**配置 Schema** 步骤中，设置 Zilliz Cloud 与 OpenSearch 之间的字段映射：
+
+    ![NDaVbnvSMosZxsxcpSRczIkjnLd](/img/NDaVbnvSMosZxsxcpSRczIkjnLd.png)
+
+    1. **确认字段映射：**
+
+        - Zilliz Cloud 会自动检测并显示您的 OpenSearch 字段及其对应的目标字段。有关字段映射的详细信息，请参阅[映射规则](./migrate-from-opensearch#mapping-rules)。
+
+        - 请确认各 OpenSearch 字段是否与相应的目标字段正确匹配。您可以根据需要重命名字段，但字段的数据类型不支持修改。
+
+    1. **处理标量字段：**
+
+        对于标量字段，请配置以下属性：
+
+        - **支持 Null 值：** 决定该字段是否可以包含 null 值，此功能默认启用。详情请参阅 [Nullable 和默认值](./nullable-and-default)。
+
+        - **默认值：** 为该字段指定一个默认值。详情请参阅 [Nullable 和默认值](./nullable-and-default)。
+
+        - **Partition key：** 可选择将 INT64 或 VARCHAR 字段指定为 Partition Key。注意：每个 Collection 仅支持一个 Partition Key，并且所选字段不能包含 null 值。详情请参阅[使用 Partition Key](./use-partition-key)。
+
+    1. **启动 Dynamic Field：**
+
+        - 默认情况下，Dynamic Field 处于启用状态，这允许您插入 Collection Schema 中未定义的任意标量字段。
+
+        - 如果禁用该功能，则需要在插入数据前显式定义每个 Entity 包含的所有字段。更多信息请参阅 [Dynamic Field](./enable-dynamic-field)。
+
+    1. **（可选）调整 Shard：**
+
+        - 点击**高级设置**以配置目标 Collection 的 Shard 数量。
+
+        - 对于大约 1 亿行数据来说，通常只需一个 Shard 即可。
+
+        - 如果您的数据集超过 10 亿行，请[联系我们](https://zilliz.com.cn/contact-sales)以获取最佳 Shard 配置方案。
+
+1. 点击**迁移**。
+
+## 查看迁移进度{#monitor-the-migration-process}
+
+生成迁移任务后，您可前往[任务中心](/docs/job-center)查看任务状态和进度。如果迁移任务的状态从**进行中**变更为**成功**，则代表迁移成功。
+
+![ONSXbpLgJoWuBpxEycQcEjk7nfe](/img/ONSXbpLgJoWuBpxEycQcEjk7nfe.png)
+
+## 迁移后{#post-migration}
+
+迁移任务完成后，请注意以下事项：
+
+- **索引创建**：在从外部数据源进行迁移时，系统不会自动为向量字段创建索引。您需要手动为每个向量字段创建索引。详细信息请参阅[创建 Vector Index](./index-vector-fields)。
+
+- **手动 Load Collection**：创建必要的向量索引后，请手动 Load Collection，使其可用于搜索和查询操作。详细信息请参阅 [Load 和 Release](./load-release-collections)。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>完成索引创建和 Load 后，请检查目标集群中的 Collection 数量及 Entity 数是否与数据源保持一致。如果发现不符，请删除 Collection 并重新进行迁移任务。</p>
+
+</Admonition>
+
+## 取消迁移任务{#cancel-migration-job}
+
+如果迁移过程遇到任何问题，您可以采取以下步骤进行故障排除并恢复迁移：
+
+1. 在**任务中心**页面，取消失败的迁移任务。
+
+1. 在**操作**列点击**查看详情**以访问日志信息。
 

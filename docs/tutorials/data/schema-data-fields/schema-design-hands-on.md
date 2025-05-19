@@ -7,7 +7,7 @@ notebook: FALSE
 description: "信息检索系统 （IRS），也被称为搜索引擎，是各类 AI 应用的核心依赖，被广泛应用于检索增强生成（RAG）、图像搜索、产品推荐等场景中。开发一套 IRS 的第一步就是数据模型设计，涉及业务需求分析、确定信息组织方式以及为数据建立索引使其能够按语义进行查询。 | Cloud"
 type: origin
 token: AhYhwruK6impy5klHLdcs5Bfndh
-sidebar_position: 13
+sidebar_position: 14
 keywords: 
   - 向量数据库
   - zilliz

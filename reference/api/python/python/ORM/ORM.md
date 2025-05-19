@@ -6,13 +6,13 @@ notebook: false
 description: "PyMilvus ORM modules, classes, and methods | Python | ORM"
 type: folder
 token: QYo4fSeVFlex8ZdeGZ4cAlmcnof
-sidebar_position: 3
+sidebar_position: 4
 sidebar_label: "ORM"
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - RAG
+  - NLP
+  - Neural Network
+  - Deep Learning
   - zilliz
   - zilliz cloud
   - cloud

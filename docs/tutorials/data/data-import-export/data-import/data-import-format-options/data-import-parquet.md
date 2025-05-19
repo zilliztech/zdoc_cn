@@ -30,7 +30,7 @@ import Admonition from '@theme/Admonition';
 
 建议您[使用 BulkWriter](./use-bulkwriter) 工具将您的原始数据转换为 Parquet 文件。下图演示了您的原始数据如何映射到 Parquet 文件中。
 
-![data_import-preparetion_en](/img/data_import-preparetion_en.png)
+![parquet_file_structure_zh](/img/parquet_file_structure_zh.png)
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -156,15 +156,15 @@ Zilliz Cloud 支持从您的云存储中导入数据。下表罗列了 Zilliz Cl
    </tr>
    <tr>
      <td><p>阿里云 OSS</p></td>
-     <td><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder/</code></p><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder/data.parquet</code></p></td>
+     <td><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder/</code> <code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder/data.parquet</code></p></td>
    </tr>
    <tr>
      <td><p>腾讯云 COS</p></td>
-     <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/parquet-folder/</code></p><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/parquet-folder/data.parquet</code></p></td>
+     <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/parquet-folder/</code> <code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/parquet-folder/data.parquet</code></p></td>
    </tr>
    <tr>
      <td><p>亚马逊云科技 S3</p></td>
-     <td><p><code>s3://bucket-name/parquet-folder/</code></p><p><code>s3://bucket-name/parquet-folder/data.parquet</code></p></td>
+     <td><p><code>s3://bucket-name/parquet-folder/</code> <code>s3://bucket-name/parquet-folder/data.parquet</code></p></td>
    </tr>
 </table>
 
@@ -183,7 +183,7 @@ Zilliz Cloud 针对导入 Parquet 格式的文件时设置了如下限制。
    </tr>
    <tr>
      <td><p><strong>每次导入的文件体积限制</strong></p></td>
-     <td><p>Free 集群：最大 512 MB</p><p>Serverless 或 Dedicated 集群</p><ul><li><p>单个文件大小：最大 10 GB</p></li><li><p>总文件大小：最大 100 GB</p></li></ul></td>
+     <td><p>Free 集群：最大 512 MB Serverless 或 Dedicated 集群</p><ul><li><p>单个文件大小：最大 10 GB</p></li><li><p>总文件大小：最大 100 GB</p></li></ul></td>
    </tr>
    <tr>
      <td><p><strong>文件存放位置</strong></p></td>

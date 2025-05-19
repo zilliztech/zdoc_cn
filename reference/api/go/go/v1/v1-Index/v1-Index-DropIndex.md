@@ -1,7 +1,10 @@
 ---
+title: "DropIndex() | Go | v1"
 slug: /go/v1-Index-DropIndex
-beta: FALSE
+sidebar_label: "DropIndex()"
+beta: NEAR DEPRECATE
 notebook: FALSE
+description: "This method drops a specific index from a field. | Go | v1"
 type: origin
 token: PPLEw1vdiiC4vIkG48bcqqInnae
 sidebar_position: 3
@@ -24,29 +27,29 @@ func (c *GrpcClient) DropIndex(ctx context.Context, collName string, fieldName s
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>ctx</code></p></td>
-  <td><p>Context for the current call to work.</p></td>
-  <td><p><code>context.Context</code></p></td>
+     <td><p><code>ctx</code></p></td>
+     <td><p>Context for the current call to work.</p></td>
+     <td><p><code>context.Context</code></p></td>
    </tr>
    <tr>
-  <td><p><code>collName</code></p></td>
-  <td><p>Name of a collection</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>collName</code></p></td>
+     <td><p>Name of a collection</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>fieldName</code></p></td>
-  <td><p>Name of the field to index.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>fieldName</code></p></td>
+     <td><p>Name of the field to index.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>opts</code></p></td>
-  <td><p>Extra index settings</p><p>You can include multiple <code>entity.IndexOption</code> in this request.</p></td>
-  <td><p><code>client.IndexOption</code></p></td>
+     <td><p><code>opts</code></p></td>
+     <td><p>Extra index settings You can include multiple <code>entity.IndexOption</code> in this request.</p></td>
+     <td><p><code>client.IndexOption</code></p></td>
    </tr>
 </table>
 

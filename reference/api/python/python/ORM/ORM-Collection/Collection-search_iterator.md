@@ -10,10 +10,10 @@ type: docx
 token: HrnndnWtKoPuenxvsXBchF1wnnh
 sidebar_position: 26
 keywords: 
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
   - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
   - zilliz
   - zilliz cloud
   - cloud

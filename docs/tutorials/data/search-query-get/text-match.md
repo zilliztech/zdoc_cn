@@ -2,7 +2,7 @@
 title: "精确文本匹配 | Cloud"
 slug: /text-match
 sidebar_label: "精确文本匹配"
-beta: PUBLIC
+beta: FALSE
 notebook: FALSE
 description: "Milvus 中的精确文本匹配功能能够基于特定术语实现精确的文档检索。通过使用关键词预筛选文档，可以缩小向量搜索的范围，从而提升搜索效率。该功能还可以结合标量过滤，以进一步优化查询结果。 | Cloud"
 type: origin

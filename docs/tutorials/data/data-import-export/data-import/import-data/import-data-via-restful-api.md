@@ -31,7 +31,7 @@ import Admonition from '@theme/Admonition';
 
 - 已获取集群的 API 密钥。详情请参见[管理 API 密钥](./manage-api-keys)。
 
-- 已创建 Collection，且该 Collection 的 Schema 与示例数据集相匹配。已为该 Collection 创建索引，并已加载 Collection。详情请参见[创建 Collection](./manage-collections-sdks)。
+- 已创建 Collection，且该 Collection 的 Schema 与示例数据集相匹配。详情请参见[创建 Collection](./manage-collections-sdks)。
 
 ## 通过 RESTful API 导入数据{#import-data-using-the-restful-api}
 
@@ -66,7 +66,7 @@ curl --request POST \
         "clusterId": "inxx-xxxxxxxxxxxxxxx",
         "collectionName": "medium_articles",
         "partitionName": "",
-        "objectUrl": "https://bucket-name.oss-cn-hangzhou.aliyuncs.com/publicdataset.zillizcloud.com/medium_articles_2020_dpr/medium_articles_2020_dpr.json",
+        "objectUrl": "https://assets.zilliz.com/docs/example-data-import.json",
         "accessKey": "",
         "secretKey": ""
     }'
@@ -103,7 +103,5 @@ curl --request GET \
 }
 ```
 
-您也可以前往 Zilliz Cloud 控制台查看结果和任务详情：
-
-![zh_data_import_complete_restful](/img/zh_data_import_complete_restful.png)
+你也可以调用RESTful API获取[当前导入任务的进度](/reference/restful/get-import-job-progress-v2)，并[列出所有导入任务](/reference/restful/list-import-jobs-v2)以获取更多。作为替代方案，你也可以前往Zilliz Cloud控制台上的[任务中心](./job-center)查看结果和作业详情。
 

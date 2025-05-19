@@ -1,7 +1,7 @@
 ---
 title: "从腾讯云向量数据库迁移至 Zilliz Cloud | Cloud"
 slug: /migrate-from-tencent-cloud-vectordb
-sidebar_label: "从腾讯云 VectorDB 迁移"
+sidebar_label: "从腾讯云向量数据库迁移"
 beta: FALSE
 notebook: FALSE
 description: "腾讯云向量数据库是一款专为相似性搜索设计的向量数据库解决方案。将数据从腾讯云向量数据库迁移到 Zilliz Cloud，可以帮助您利用 Zilliz Cloud 在向量分析和可扩展数据管理方面的增强功能。 | Cloud"
@@ -53,7 +53,7 @@ import Admonition from '@theme/Admonition';
    <tr>
      <td><p>主键</p></td>
      <td><p>主键</p></td>
-     <td><p>腾讯云向量数据库的主键字段会自动映射为 Zilliz Cloud 中的主键。</p></td>
+     <td><p>腾讯云向量数据库的主键字段会自动映射为 Zilliz Cloud 中的主键。 在数据迁移时，您可以选择启用 Auto ID 功能；但请注意，启用后源 Collection 中的原始主键值将会被舍弃。</p></td>
    </tr>
    <tr>
      <td><p>稠密向量</p></td>
@@ -97,6 +97,8 @@ import Admonition from '@theme/Admonition';
 
 - 已在 Zilliz Cloud 中获得组织管理员或项目管理员权限。如果您没有相关权限，请联系您的 Zilliz Cloud 管理员。
 
+- 确保目标集群的 CU 容量足以容纳源数据。要估算所需的 CU 规格，请使用[计算器](https://zilliz.com.cn/pricing#calculator)。
+
 ## 从腾讯云向量数据库迁移至 Zilliz Cloud{#migrate-from-tencent-cloud-vectordb-to-zilliz-cloud}
 
 1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)。
@@ -124,6 +126,8 @@ import Admonition from '@theme/Admonition';
     </Admonition>
 
 1. 在**配置 Schema** 步骤中，设置 Zilliz Cloud 与腾讯云向量数据库之间的字段映射：
+
+    ![M0mlbMhcgobGlLxRyDgc7XEZn1d](/img/M0mlbMhcgobGlLxRyDgc7XEZn1d.png)
 
     1. **确认字段映射：**
 

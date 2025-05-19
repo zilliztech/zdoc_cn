@@ -10,10 +10,10 @@ type: docx
 token: RIS2dU8uXojudgxLbJWcG54CnOb
 sidebar_position: 22
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - open source vector db
   - zilliz
   - zilliz cloud
   - cloud

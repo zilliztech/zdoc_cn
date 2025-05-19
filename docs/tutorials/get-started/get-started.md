@@ -7,7 +7,7 @@ notebook: FALSE
 description: "全面的快速入门指南和相关主题，帮助您在 Zilliz Cloud 上构建应用程序。 | Cloud"
 type: origin
 token: F8qDwqK7di4rl3kloZ7cNaUTnse
-sidebar_position: 1
+sidebar_position: 2
 keywords: 
   - 向量数据库
   - zilliz

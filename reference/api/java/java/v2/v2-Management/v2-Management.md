@@ -9,10 +9,10 @@ token: MTBuf5wQ7lardCddEtCc4R2uncb
 sidebar_position: 2
 sidebar_label: "Management"
 keywords: 
-  - vector database example
-  - rag vector database
-  - what is vector db
-  - what are vector databases
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
   - zilliz
   - zilliz cloud
   - cloud

@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz Cloud 为 Collection 提供了 Alias 管理能力。本节介绍如何创建、查看、删除 Alias。 | Cloud"
 type: origin
 token: Cwr5wh4WPix6M6kH1BycMgS2nEh
-sidebar_position: 8
+sidebar_position: 9
 keywords: 
   - 向量数据库
   - zilliz
@@ -51,12 +51,12 @@ client = MilvusClient(
 # 9. Manage aliases
 # 9.1. Create aliases
 client.create_alias(
-    collection_name="customized_setup_2",
+    collection_name="my_collection_1",
     alias="bob"
 )
 
 client.create_alias(
-    collection_name="customized_setup_2",
+    collection_name="my_collection_1",
     alias="alice"
 )
 ```
@@ -85,14 +85,14 @@ MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
 // 9.1 Create alias
 CreateAliasReq createAliasReq = CreateAliasReq.builder()
-        .collectionName("customized_setup_2")
+        .collectionName("my_collection_1")
         .alias("bob")
         .build();
 
 client.createAlias(createAliasReq);
 
 createAliasReq = CreateAliasReq.builder()
-        .collectionName("customized_setup_2")
+        .collectionName("my_collection_1")
         .alias("alice")
         .build();
 
@@ -113,7 +113,7 @@ const client = new MilvusClient({address, token});
 // 9. Manage aliases
 // 9.1 Create aliases
 res = await client.createAlias({
-    collection_name: "customized_setup_2",
+    collection_name: "my_collection_1",
     alias: "bob"
 })
 
@@ -125,7 +125,7 @@ console.log(res.error_code)
 // 
 
 res = await client.createAlias({
-    collection_name: "customized_setup_2",
+    collection_name: "my_collection_1",
     alias: "alice"
 })
 
@@ -144,17 +144,32 @@ console.log(res.error_code)
 ```go
 import (
     "context"
-
+    "fmt"
+    
     "github.com/milvus-io/milvus/client/v2/milvusclient"
 )
+ctx, cancel := context.WithCancel(context.Background())
+defer cancel()
 
-err := cli.CreateAlias(ctx, milvusclient.NewCreateAliasOption("customized_setup_2", "bob"))
+milvusAddr := "localhost:19530"
+client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+    Address: milvusAddr,
+})
 if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+defer client.Close(ctx)
+
+err = client.CreateAlias(ctx, milvusclient.NewCreateAliasOption("my_collection_1", "bob"))
+if err != nil {
+    fmt.Println(err.Error())
     // handle error
 }
 
-err = cli.CreateAlias(ctx, milvusclient.NewCreateAliasOption("customized_setup_2", "alice"))
+err = client.CreateAlias(ctx, milvusclient.NewCreateAliasOption("my_collection_1", "alice"))
 if err != nil {
+    fmt.Println(err.Error())
     // handle error
 }
 ```
@@ -173,7 +188,7 @@ curl --request POST \
 --header "Content-Type: application/json" \
 -d '{
     "aliasName": "bob",
-    "collectionName": "customized_setup_2"
+    "collectionName": "my_collection_1"
 }'
 
 # {
@@ -187,7 +202,7 @@ curl --request POST \
 --header "Content-Type: application/json" \
 -d '{
     "aliasName": "alice",
-    "collectionName": "customized_setup_2"
+    "collectionName": "my_collection_1"
 }'
 
 # {
@@ -209,7 +224,7 @@ curl --request POST \
 ```python
 # 9.2. List aliases
 res = client.list_aliases(
-    collection_name="customized_setup_2"
+    collection_name="my_collection_1"
 )
 
 print(res)
@@ -221,7 +236,7 @@ print(res)
 #         "bob",
 #         "alice"
 #     ],
-#     "collection_name": "customized_setup_2",
+#     "collection_name": "my_collection_1",
 #     "db_name": "default"
 # }
 ```
@@ -236,7 +251,7 @@ import io.milvus.v2.service.utility.response.ListAliasResp;
 
 // 9.2 List alises
 ListAliasesReq listAliasesReq = ListAliasesReq.builder()
-    .collectionName("customized_setup_2")
+    .collectionName("my_collection_1")
     .build();
 
 ListAliasResp listAliasRes = client.listAliases(listAliasesReq);
@@ -254,7 +269,7 @@ System.out.println(listAliasRes.getAlias());
 ```javascript
 // 9.2 List aliases
 res = await client.listAliases({
-    collection_name: "customized_setup_2"
+    collection_name: "my_collection_1"
 })
 
 console.log(res.aliases)
@@ -270,15 +285,9 @@ console.log(res.aliases)
 <TabItem value='go'>
 
 ```go
-import (
-    "context"
-    "fmt"
-
-    "github.com/milvus-io/milvus/client/v2/milvusclient"
-)
-
-aliases, err := cli.ListAliases(ctx, milvusclient.NewListAliasesOption("customized_setup_2"))
+aliases, err := client.ListAliases(ctx, milvusclient.NewListAliasesOption("my_collection_1"))
 if err != nil {
+    fmt.Println(err.Error())
     // handle error
 }
 fmt.Println(aliases)
@@ -329,7 +338,7 @@ print(res)
 #
 # {
 #     "alias": "bob",
-#     "collection_name": "customized_setup_2",
+#     "collection_name": "my_collection_1",
 #     "db_name": "default"
 # }
 ```
@@ -352,7 +361,7 @@ DescribeAliasResp describeAliasRes = client.describeAlias(describeAliasReq);
 System.out.println(describeAliasRes);
 
 // Output:
-// DescribeAliasResp(collectionName=customized_setup_2, alias=bob)
+// DescribeAliasResp(collectionName=my_collection_1, alias=bob)
 ```
 
 </TabItem>
@@ -362,7 +371,7 @@ System.out.println(describeAliasRes);
 ```javascript
 // 9.3 Describe aliases
 res = await client.describeAlias({
-    collection_name: "customized_setup_2",
+    collection_name: "my_collection_1",
     alias: "bob"
 })
 
@@ -381,7 +390,7 @@ console.log(res)
 //   },
 //   db_name: 'default',
 //   alias: 'bob',
-//   collection: 'customized_setup_2'
+//   collection: 'my_collection_1'
 // }
 // 
 ```
@@ -391,15 +400,9 @@ console.log(res)
 <TabItem value='go'>
 
 ```go
-import (
-    "context"
-    "fmt"
-
-    "github.com/milvus-io/milvus/client/v2/milvusclient"
-)
-
-alias, err := cli.DescribeAlias(ctx, milvusclient.NewDescribeAliasOption("bob"))
+alias, err := client.DescribeAlias(ctx, milvusclient.NewDescribeAliasOption("bob"))
 if err != nil {
+    fmt.Println(err.Error())
     // handle error
 }
 fmt.Println(alias)
@@ -425,7 +428,7 @@ curl --request POST \
 #     "code": 0,
 #     "data": {
 #         "aliasName": "bob",
-#         "collectionName": "customized_setup_2",
+#         "collectionName": "my_collection_1",
 #         "dbName": "default"
 #     }
 # }
@@ -444,12 +447,12 @@ curl --request POST \
 ```python
 # 9.4 Reassign aliases to other collections
 client.alter_alias(
-    collection_name="customized_setup_1",
+    collection_name="my_collection_2",
     alias="alice"
 )
 
 res = client.list_aliases(
-    collection_name="customized_setup_1"
+    collection_name="my_collection_2"
 )
 
 print(res)
@@ -460,12 +463,12 @@ print(res)
 #     "aliases": [
 #         "alice"
 #     ],
-#     "collection_name": "customized_setup_1",
+#     "collection_name": "my_collection_2",
 #     "db_name": "default"
 # }
 
 res = client.list_aliases(
-    collection_name="customized_setup_2"
+    collection_name="my_collection_1"
 )
 
 print(res)
@@ -476,7 +479,7 @@ print(res)
 #     "aliases": [
 #         "bob"
 #     ],
-#     "collection_name": "customized_setup_2",
+#     "collection_name": "my_collection_1",
 #     "db_name": "default"
 # }
 ```
@@ -490,14 +493,14 @@ import io.milvus.v2.service.utility.request.AlterAliasReq;
 
 // 9.4 Reassign alias to other collections
 AlterAliasReq alterAliasReq = AlterAliasReq.builder()
-        .collectionName("customized_setup_1")
+        .collectionName("my_collection_2")
         .alias("alice")
         .build();
 
 client.alterAlias(alterAliasReq);
 
 ListAliasesReq listAliasesReq = ListAliasesReq.builder()
-        .collectionName("customized_setup_1")
+        .collectionName("my_collection_2")
         .build();
 
 ListAliasResp listAliasRes = client.listAliases(listAliasesReq);
@@ -505,7 +508,7 @@ ListAliasResp listAliasRes = client.listAliases(listAliasesReq);
 System.out.println(listAliasRes.getAlias());
 
 listAliasesReq = ListAliasesReq.builder()
-        .collectionName("customized_setup_2")
+        .collectionName("my_collection_1")
         .build();
 
 listAliasRes = client.listAliases(listAliasesReq);
@@ -523,7 +526,7 @@ System.out.println(listAliasRes.getAlias());
 ```javascript
 // 9.4 Reassign aliases to other collections
 res = await client.alterAlias({
-    collection_name: "customized_setup_1",
+    collection_name: "my_collection_2",
     alias: "alice"
 })
 
@@ -535,7 +538,7 @@ console.log(res.error_code)
 // 
 
 res = await client.listAliases({
-    collection_name: "customized_setup_1"
+    collection_name: "my_collection_2"
 })
 
 console.log(res.aliases)
@@ -546,7 +549,7 @@ console.log(res.aliases)
 // 
 
 res = await client.listAliases({
-    collection_name: "customized_setup_2"
+    collection_name: "my_collection_1"
 })
 
 console.log(res.aliases)
@@ -563,26 +566,22 @@ console.log(res.aliases)
 <TabItem value='go'>
 
 ```go
-import (
-    "context"
-    "fmt"
-
-    "github.com/milvus-io/milvus/client/v2/milvusclient"
-)
-
-err = cli.AlterAlias(ctx, milvusclient.NewAlterAliasOption("alice", "customized_setup_1"))
+err = client.AlterAlias(ctx, milvusclient.NewAlterAliasOption("alice", "my_collection_2"))
 if err != nil {
+    fmt.Println(err.Error())
     // handle error
 }
 
-aliases, err := cli.ListAliases(ctx, milvusclient.NewListAliasesOption("customized_setup_1"))
+aliases, err := client.ListAliases(ctx, milvusclient.NewListAliasesOption("my_collection_2"))
 if err != nil {
+    fmt.Println(err.Error())
     // handle error
 }
 fmt.Println(aliases)
 
-aliases, err = cli.ListAliases(ctx, milvusclient.NewListAliasesOption("customized_setup_2"))
+aliases, err = client.ListAliases(ctx, milvusclient.NewListAliasesOption("my_collection_1"))
 if err != nil {
+    fmt.Println(err.Error())
     // handle error
 }
 fmt.Println(aliases)
@@ -602,29 +601,12 @@ curl --request POST \
 --header "Content-Type: application/json" \
 -d '{
     "aliasName": "alice",
-    "collectionName": "customized_setup_1"
+    "collectionName": "my_collection_2"
 }'
 
 # {
 #     "code": 0,
 #     "data": {}
-# }
-
-curl --request POST \
---url "${CLUSTER_ENDPOINT}/v2/vectordb/aliases/describe" \
---header "Authorization: Bearer ${TOKEN}" \
---header "Content-Type: application/json" \
--d '{
-    "aliasName": "bob"
-}'
-
-# {
-#     "code": 0,
-#     "data": {
-#         "aliasName": "bob",
-#         "collectionName": "customized_setup_2",
-#         "dbName": "default"
-#     }
 # }
 
 curl --request POST \
@@ -639,7 +621,24 @@ curl --request POST \
 #     "code": 0,
 #     "data": {
 #         "aliasName": "alice",
-#         "collectionName": "customized_setup_1",
+#         "collectionName": "my_collection_2",
+#         "dbName": "default"
+#     }
+# }
+
+curl --request POST \
+--url "${CLUSTER_ENDPOINT}/v2/vectordb/aliases/describe" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+-d '{
+    "aliasName": "bob"
+}'
+
+# {
+#     "code": 0,
+#     "data": {
+#         "aliasName": "alice",
+#         "collectionName": "my_collection_1",
 #         "dbName": "default"
 #     }
 # }
@@ -721,19 +720,15 @@ console.log(res.error_code)
 <TabItem value='go'>
 
 ```go
-import (
-    "context"
-
-    "github.com/milvus-io/milvus/client/v2/milvusclient"
-)
-
-err := cli.DropAlias(ctx, milvusclient.NewDropAliasOption("bob"))
+err = client.DropAlias(ctx, milvusclient.NewDropAliasOption("bob"))
 if err != nil {
+    fmt.Println(err.Error())
     // handle error
 }
 
-err = cli.DropAlias(ctx, milvusclient.NewDropAliasOption("alice"))
+err = client.DropAlias(ctx, milvusclient.NewDropAliasOption("alice"))
 if err != nil {
+    fmt.Println(err.Error())
     // handle error
 }
 ```
@@ -775,3 +770,4 @@ curl --request POST \
 
 </TabItem>
 </Tabs>
+

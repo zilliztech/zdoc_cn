@@ -88,7 +88,7 @@ Zilliz Cloud 允许用户为集群设置运维窗口，以减少运维对工作�
 
 开始前，请先确保：
 
-- 当前组织下的[集群已全部删除](./manage-cluster#drop-cluster)。
+- 当前组织下的[集群已全部删除](./manage-cluster)。
 
 - 当前组织中的[账单](./view-invoice)已全部付清。
 

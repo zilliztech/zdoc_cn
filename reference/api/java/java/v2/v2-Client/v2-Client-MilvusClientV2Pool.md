@@ -10,10 +10,10 @@ type: docx
 token: UrjHd9KZKo1Rlfxfj8AcmXNinlg
 sidebar_position: 2
 keywords: 
-  - private llms
-  - nn search
-  - llm eval
-  - Sparse vs Dense
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
   - zilliz
   - zilliz cloud
   - cloud
@@ -148,9 +148,9 @@ Read the description in the MilvusClientV2 page.
 ## Examples
 
 ```java
-import io.milvus.v2.client.ConnectConfig
-import io.milvus.pool.PoolConfig
-import io.milvus.pool.MilvusClientV2Pool
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.pool.PoolConfig;
+import io.milvus.pool.MilvusClientV2Pool;
 
 ConnectConfig connectConfig = ConnectConfig.builder()
         .uri("https://in01-******.aws-us-west-2.vectordb.zillizcloud.com:19531")

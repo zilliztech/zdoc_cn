@@ -6,13 +6,13 @@ notebook: false
 description: "Methods related to database operations. | Java | v2"
 type: folder
 token: Ja2Wf1J9glm6oCdCxfDc9BzPnoc
-sidebar_position: 6
+sidebar_position: 7
 sidebar_label: "Database"
 keywords: 
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
   - zilliz
   - zilliz cloud
   - cloud

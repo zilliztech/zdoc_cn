@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz Cloud 支持您根据业务和数据量的变化灵活变更集群配置。您可以为通过修改集群 CU 规格进行扩缩容，或者增加集群 Replica 数量从而提高 QPS。 | Cloud"
 type: origin
 token: GMCvwBlS7io85jkiW0icumJnn6A
-sidebar_position: 10
+sidebar_position: 9
 keywords: 
   - 向量数据库
   - zilliz
@@ -103,7 +103,7 @@ Zilliz Cloud 支持您根据业务和数据量的变化灵活变更集群配置�
 
 - CU 单价由集群的CU 类型以及云服务提供商和地域决定。详情请参考 [Zilliz Cloud 定价](https://zilliz.com.cn/pricing)。
 
-- 新折扣由新的订阅时长决定（三年 5 折，一年 7 折）。
+- 新折扣由新的订阅时长决定（阿里云、腾讯云：三年 5 折，一年 7 折）。
 
 #### 示例
 

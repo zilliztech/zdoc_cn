@@ -10,10 +10,10 @@ type: docx
 token: VNATdAYSkojgVsx5MJKcPPmMnl7
 sidebar_position: 7
 keywords: 
-  - vector database
-  - IVF
-  - knn
-  - Image Search
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - knn algorithm
   - zilliz
   - zilliz cloud
   - cloud

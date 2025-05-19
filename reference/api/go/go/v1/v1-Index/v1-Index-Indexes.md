@@ -1,7 +1,10 @@
 ---
+title: "Indexes | Go | v1"
 slug: /go/v1-Index-Indexes
-beta: FALSE
+sidebar_label: "Indexes"
+beta: NEAR DEPRECATE
 notebook: FALSE
+description: "The struct types on this page implement the method signatures of the `entity.Index` interface. | Go | v1"
 type: origin
 token: SI8SwGAutiyZrZkVoaUc2dvTnZg
 sidebar_position: 5
@@ -26,24 +29,24 @@ index := entity.NewGenericIndex(name string, it entity.IndexType, params map[str
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>name</code></p></td>
-  <td><p>Name of the index.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>name</code></p></td>
+     <td><p>Name of the index.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>it</code></p></td>
-  <td><p>Type of the index.</p></td>
-  <td><p><code>entity.IndexType</code></p></td>
+     <td><p><code>it</code></p></td>
+     <td><p>Type of the index.</p></td>
+     <td><p><code>entity.IndexType</code></p></td>
    </tr>
    <tr>
-  <td><p><code>params</code></p></td>
-  <td><p>Index parameters corresponding to the specified index type.</p></td>
-  <td><p><code>map[string]string</code></p></td>
+     <td><p><code>params</code></p></td>
+     <td><p>Index parameters corresponding to the specified index type.</p></td>
+     <td><p><code>map[string]string</code></p></td>
    </tr>
 </table>
 
@@ -57,14 +60,14 @@ index := entity.NewIndexAUTOINDEX(metricType MetricType)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>metricType</code></p></td>
-  <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
-  <td><p><code>entity.MetricType</code></p></td>
+     <td><p><code>metricType</code></p></td>
+     <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
+     <td><p><code>entity.MetricType</code></p></td>
    </tr>
 </table>
 
@@ -78,22 +81,22 @@ index := entity.NewIndexBinFlat(metricType MetricType, nlist int)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
    </tr>
    <tr>
-  <td><p><code>metricType</code></p></td>
-  <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
-  <td><p><code>entity.MetricType</code></p></td>
-  <td><p>N/A</p></td>
+     <td><p><code>metricType</code></p></td>
+     <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
+     <td><p><code>entity.MetricType</code></p></td>
+     <td><p>N/A</p></td>
    </tr>
    <tr>
-  <td><p><code>nlist</code></p></td>
-  <td><p>Number of cluster units.</p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[1, 65536]</code></p></td>
+     <td><p><code>nlist</code></p></td>
+     <td><p>Number of cluster units.</p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[1, 65536]</code></p></td>
    </tr>
 </table>
 
@@ -107,22 +110,22 @@ index := entity.NewIndexBinIvfFlat(metricType MetricType, nlist int)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
    </tr>
    <tr>
-  <td><p><code>metricType</code></p></td>
-  <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
-  <td><p><code>entity.MetricType</code></p></td>
-  <td><p>N/A</p></td>
+     <td><p><code>metricType</code></p></td>
+     <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
+     <td><p><code>entity.MetricType</code></p></td>
+     <td><p>N/A</p></td>
    </tr>
    <tr>
-  <td><p><code>nlist</code></p></td>
-  <td><p>Number of cluster units.</p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[1, 65536]</code></p></td>
+     <td><p><code>nlist</code></p></td>
+     <td><p>Number of cluster units.</p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[1, 65536]</code></p></td>
    </tr>
 </table>
 
@@ -136,14 +139,14 @@ index := entity.NewIndexDISKANN(metricType MetricType)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>metricType</code></p></td>
-  <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
-  <td><p><code>entity.MetricType</code></p></td>
+     <td><p><code>metricType</code></p></td>
+     <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
+     <td><p><code>entity.MetricType</code></p></td>
    </tr>
 </table>
 
@@ -157,14 +160,14 @@ index := entity.NewIndexFlat(metricType MetricType)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>metricType</code></p></td>
-  <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
-  <td><p><code>entity.MetricType</code></p></td>
+     <td><p><code>metricType</code></p></td>
+     <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
+     <td><p><code>entity.MetricType</code></p></td>
    </tr>
 </table>
 
@@ -178,14 +181,14 @@ index := entity.NewIndexGPUBruteForce(metricType MetricType)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>metricType</code></p></td>
-  <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
-  <td><p><code>entity.MetricType</code></p></td>
+     <td><p><code>metricType</code></p></td>
+     <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
+     <td><p><code>entity.MetricType</code></p></td>
    </tr>
 </table>
 
@@ -199,28 +202,28 @@ index := entity.NewIndexBinIvfFlat(metricType MetricType, intermediateGraphDegre
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
    </tr>
    <tr>
-  <td><p><code>metricType</code></p></td>
-  <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
-  <td><p><code>entity.MetricType</code></p></td>
-  <td><p>N/A</p></td>
+     <td><p><code>metricType</code></p></td>
+     <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
+     <td><p><code>entity.MetricType</code></p></td>
+     <td><p>N/A</p></td>
    </tr>
    <tr>
-  <td><p><code>intermediateGraphDegree</code></p></td>
-  <td><p>Number of k-nearest neighbors (k) of this intermediate k-NN graph, trade off the quality of the final searchable CAGRA graph;</p><p>It affects recall and build time by determining the graph's degree before pruning. Recommended values are <code>32</code> or <code>64</code>.</p></td>
-  <td><p><code>int</code></p></td>
-  <td></td>
+     <td><p><code>intermediateGraphDegree</code></p></td>
+     <td><p>Number of k-nearest neighbors (k) of this intermediate k-NN graph, trade off the quality of the final searchable CAGRA graph; It affects recall and build time by determining the graph's degree before pruning. Recommended values are <code>32</code> or <code>64</code>.</p></td>
+     <td><p><code>int</code></p></td>
+     <td></td>
    </tr>
    <tr>
-  <td><p><code>graphDegree</code></p></td>
-  <td><p>CAGRA's optimized graph fixed-degree number.</p><p>It affects search performance and recall by setting the graph's degree after pruning. A larger difference between these two degrees results in a longer build time. Its value must be smaller than the value of <code>intermediateGraphDegree</code>.</p></td>
-  <td><p><code>int</code></p></td>
-  <td></td>
+     <td><p><code>graphDegree</code></p></td>
+     <td><p>CAGRA's optimized graph fixed-degree number. It affects search performance and recall by setting the graph's degree after pruning. A larger difference between these two degrees results in a longer build time. Its value must be smaller than the value of <code>intermediateGraphDegree</code>.</p></td>
+     <td><p><code>int</code></p></td>
+     <td></td>
    </tr>
 </table>
 
@@ -234,22 +237,22 @@ index := entity.NewIndexGPUIvfFlat(metricType MetricType, nlist int)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
    </tr>
    <tr>
-  <td><p><code>metricType</code></p></td>
-  <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
-  <td><p><code>entity.MetricType</code></p></td>
-  <td><p>N/A</p></td>
+     <td><p><code>metricType</code></p></td>
+     <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
+     <td><p><code>entity.MetricType</code></p></td>
+     <td><p>N/A</p></td>
    </tr>
    <tr>
-  <td><p><code>nlist</code></p></td>
-  <td><p>Number of cluster units.</p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[1, 65536]</code></p></td>
+     <td><p><code>nlist</code></p></td>
+     <td><p>Number of cluster units.</p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[1, 65536]</code></p></td>
    </tr>
 </table>
 
@@ -263,34 +266,34 @@ index := entity.NewIndexGPUIvfPQ(metricType MetricType, nlist int, m int, nbits 
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
    </tr>
    <tr>
-  <td><p><code>metricType</code></p></td>
-  <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
-  <td><p><code>entity.MetricType</code></p></td>
-  <td><p>N/A</p></td>
+     <td><p><code>metricType</code></p></td>
+     <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
+     <td><p><code>entity.MetricType</code></p></td>
+     <td><p>N/A</p></td>
    </tr>
    <tr>
-  <td><p><code>nlist</code></p></td>
-  <td><p>Number of cluster units.</p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[1, 65536]</code></p></td>
+     <td><p><code>nlist</code></p></td>
+     <td><p>Number of cluster units.</p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[1, 65536]</code></p></td>
    </tr>
    <tr>
-  <td><p><code>m</code></p></td>
-  <td><p>Number of factors of product quantization</p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>dim mod m or = 0</code></p></td>
+     <td><p><code>m</code></p></td>
+     <td><p>Number of factors of product quantization</p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>dim mod m or = 0</code></p></td>
    </tr>
    <tr>
-  <td><p><code>nbits</code></p></td>
-  <td><p>Number of bits in which each low-dimensional vector is stored.</p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[1, 16]</code></p></td>
+     <td><p><code>nbits</code></p></td>
+     <td><p>Number of bits in which each low-dimensional vector is stored.</p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[1, 16]</code></p></td>
    </tr>
 </table>
 
@@ -304,28 +307,28 @@ index := entity.NewIndexHNSW(metricType MetricType, M int, efConstruction int)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
    </tr>
    <tr>
-  <td><p><code>metricType</code></p></td>
-  <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
-  <td><p><code>entity.MetricType</code></p></td>
-  <td><p>N/A</p></td>
+     <td><p><code>metricType</code></p></td>
+     <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
+     <td><p><code>entity.MetricType</code></p></td>
+     <td><p>N/A</p></td>
    </tr>
    <tr>
-  <td><p><code>M</code></p></td>
-  <td><p>Maximum number of outgoing connections in the graph. Higher M leads to higher accuracy/run_time at fixed ef/efConstruction.</p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[2, 2048]</code></p></td>
+     <td><p><code>M</code></p></td>
+     <td><p>Maximum number of outgoing connections in the graph. Higher M leads to higher accuracy/run_time at fixed ef/efConstruction.</p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[2, 2048]</code></p></td>
    </tr>
    <tr>
-  <td><p><code>efConstruction</code></p></td>
-  <td><p>Index search speed/build speed tradeoff. Increasing this parameter may enhance index quality, but it also tends to lengthen the indexing time.</p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[1, int_max]</code></p></td>
+     <td><p><code>efConstruction</code></p></td>
+     <td><p>Index search speed/build speed tradeoff. Increasing this parameter may enhance index quality, but it also tends to lengthen the indexing time.</p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[1, int_max]</code></p></td>
    </tr>
 </table>
 
@@ -339,22 +342,22 @@ index := entity.NewIndexIvfFlat(metricType MetricType, nlist int)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
    </tr>
    <tr>
-  <td><p><code>metricType</code></p></td>
-  <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
-  <td><p><code>entity.MetricType</code></p></td>
-  <td><p>N/A</p></td>
+     <td><p><code>metricType</code></p></td>
+     <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
+     <td><p><code>entity.MetricType</code></p></td>
+     <td><p>N/A</p></td>
    </tr>
    <tr>
-  <td><p><code>nlist</code></p></td>
-  <td><p>Number of cluster units.</p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[1, 65536]</code></p></td>
+     <td><p><code>nlist</code></p></td>
+     <td><p>Number of cluster units.</p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[1, 65536]</code></p></td>
    </tr>
 </table>
 
@@ -362,14 +365,14 @@ In addition to the methods defined in the `entity.Index` interface, this struct 
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>SupportBinary()</code></p></td>
-  <td><p><code>bool</code></p></td>
-  <td><p>Returns whether</p></td>
+     <td><p><code>SupportBinary()</code></p></td>
+     <td><p><code>bool</code></p></td>
+     <td><p>Returns whether</p></td>
    </tr>
 </table>
 
@@ -383,34 +386,34 @@ index := entity.NewIndexIvfPQ(metricType MetricType, nlist int, m int, nbits int
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
    </tr>
    <tr>
-  <td><p><code>metricType</code></p></td>
-  <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
-  <td><p><code>entity.MetricType</code></p></td>
-  <td><p>N/A</p></td>
+     <td><p><code>metricType</code></p></td>
+     <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
+     <td><p><code>entity.MetricType</code></p></td>
+     <td><p>N/A</p></td>
    </tr>
    <tr>
-  <td><p><code>nlist</code></p></td>
-  <td><p>Number of cluster units.</p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[1, 65536]</code></p></td>
+     <td><p><code>nlist</code></p></td>
+     <td><p>Number of cluster units.</p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[1, 65536]</code></p></td>
    </tr>
    <tr>
-  <td><p><code>m</code></p></td>
-  <td><p>Number of factors of product quantization</p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>dim mod m or = 0</code></p></td>
+     <td><p><code>m</code></p></td>
+     <td><p>Number of factors of product quantization</p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>dim mod m or = 0</code></p></td>
    </tr>
    <tr>
-  <td><p><code>nbits</code></p></td>
-  <td><p>Number of bits in which each low-dimensional vector is stored.</p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[1, 16]</code></p></td>
+     <td><p><code>nbits</code></p></td>
+     <td><p>Number of bits in which each low-dimensional vector is stored.</p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[1, 16]</code></p></td>
    </tr>
 </table>
 
@@ -424,22 +427,22 @@ index := entity.NewIndexIvfSQ8(metricType MetricType, nlist int)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
    </tr>
    <tr>
-  <td><p><code>metricType</code></p></td>
-  <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
-  <td><p><code>entity.MetricType</code></p></td>
-  <td><p>N/A</p></td>
+     <td><p><code>metricType</code></p></td>
+     <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
+     <td><p><code>entity.MetricType</code></p></td>
+     <td><p>N/A</p></td>
    </tr>
    <tr>
-  <td><p><code>nlist</code></p></td>
-  <td><p>Number of cluster units.</p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[1, 65536]</code></p></td>
+     <td><p><code>nlist</code></p></td>
+     <td><p>Number of cluster units.</p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[1, 65536]</code></p></td>
    </tr>
 </table>
 
@@ -453,28 +456,28 @@ index := entity.NewIndexSCANN(metricType MetricType, nlist int, with_raw_data bo
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
    </tr>
    <tr>
-  <td><p><code>metricType</code></p></td>
-  <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
-  <td><p><code>entity.MetricType</code></p></td>
-  <td><p>N/A</p></td>
+     <td><p><code>metricType</code></p></td>
+     <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
+     <td><p><code>entity.MetricType</code></p></td>
+     <td><p>N/A</p></td>
    </tr>
    <tr>
-  <td><p><code>nlist</code></p></td>
-  <td><p>Number of cluster units.</p></td>
-  <td><p><code>int</code></p></td>
-  <td><p><code>[1, 65536]</code></p></td>
+     <td><p><code>nlist</code></p></td>
+     <td><p>Number of cluster units.</p></td>
+     <td><p><code>int</code></p></td>
+     <td><p><code>[1, 65536]</code></p></td>
    </tr>
    <tr>
-  <td><p><code>with_raw_data</code></p></td>
-  <td><p>Whether to include raw data when creating the index.</p></td>
-  <td><p><code>bool</code></p></td>
-  <td><p>N/A</p></td>
+     <td><p><code>with_raw_data</code></p></td>
+     <td><p>Whether to include raw data when creating the index.</p></td>
+     <td><p><code>bool</code></p></td>
+     <td><p>N/A</p></td>
    </tr>
 </table>
 
@@ -488,22 +491,22 @@ index := entity.NewIndexSparseInverted(metricType MetricType, dropRatio float64)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
    </tr>
    <tr>
-  <td><p><code>metricType</code></p></td>
-  <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
-  <td><p><code>entity.MetricType</code></p></td>
-  <td><p>N/A</p></td>
+     <td><p><code>metricType</code></p></td>
+     <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
+     <td><p><code>entity.MetricType</code></p></td>
+     <td><p>N/A</p></td>
    </tr>
    <tr>
-  <td><p><code>dropRatio</code></p></td>
-  <td><p>Proportion of small vector values that are excluded during the indexing process. This option allows fine-tuning of the indexing process, making a trade-off between efficiency and accuracy by disregarding small values when building the index.</p></td>
-  <td><p><code>float64</code></p></td>
-  <td><p><code>[0, 1]</code></p></td>
+     <td><p><code>dropRatio</code></p></td>
+     <td><p>Proportion of small vector values that are excluded during the indexing process. This option allows fine-tuning of the indexing process, making a trade-off between efficiency and accuracy by disregarding small values when building the index.</p></td>
+     <td><p><code>float64</code></p></td>
+     <td><p><code>[0, 1]</code></p></td>
    </tr>
 </table>
 
@@ -517,22 +520,22 @@ index := entity.NewIndexSparseWAND(metricType MetricType, dropRatio float64)
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
-  <th><p>Value Range</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
+     <th><p>Value Range</p></th>
    </tr>
    <tr>
-  <td><p><code>metricType</code></p></td>
-  <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
-  <td><p><code>entity.MetricType</code></p></td>
-  <td><p>N/A</p></td>
+     <td><p><code>metricType</code></p></td>
+     <td><p>Metric type for Milvus to follow when it measures similarities between vector embeddings.</p></td>
+     <td><p><code>entity.MetricType</code></p></td>
+     <td><p>N/A</p></td>
    </tr>
    <tr>
-  <td><p><code>dropRatio</code></p></td>
-  <td><p>Proportion of small vector values that are excluded during the indexing process. This option allows fine-tuning of the indexing process, making a trade-off between efficiency and accuracy by disregarding small values when building the index.</p></td>
-  <td><p><code>float64</code></p></td>
-  <td><p><code>[0, 1]</code></p></td>
+     <td><p><code>dropRatio</code></p></td>
+     <td><p>Proportion of small vector values that are excluded during the indexing process. This option allows fine-tuning of the indexing process, making a trade-off between efficiency and accuracy by disregarding small values when building the index.</p></td>
+     <td><p><code>float64</code></p></td>
+     <td><p><code>[0, 1]</code></p></td>
    </tr>
 </table>
 

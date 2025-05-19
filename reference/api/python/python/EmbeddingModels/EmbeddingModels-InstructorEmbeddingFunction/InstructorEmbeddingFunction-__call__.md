@@ -2,7 +2,7 @@
 displayed_sidbar: pythonSidebar
 title: "\_\_call\_\_() | Python"
 slug: /python/python/InstructorEmbeddingFunction-__call__
-sidebar_label: "\_\_call\_\_()"
+sidebar_label: "__call__()"
 beta: false
 notebook: false
 description: "This operation in InstructorEmbeddingFunction takes a list of text strings and directly encodes them into vector embeddings. | Python"
@@ -10,10 +10,10 @@ type: docx
 token: VmAIdW9J2oH6iWxDh2PcJYfRnne
 sidebar_position: 4
 keywords: 
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud
