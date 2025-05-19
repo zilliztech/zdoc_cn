@@ -39,7 +39,7 @@ Dynamic Field 是一个名为 **$meta** 的预留 JavaScript Object Notation (JS
 
 ## 开启动态字段{#enable-dynamic-field}
 
-使用[快速创建 Collection](./quick-setup-collections)中的方式创建的 Collection 默认开启动态字段。您也可以在自定义创建 Collection 时手动开启动态字段。
+使用快速创建 Collection中的方式创建的 Collection 默认开启动态字段。您也可以在自定义创建 Collection 时手动开启动态字段。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
