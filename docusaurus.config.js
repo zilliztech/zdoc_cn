@@ -274,6 +274,20 @@ const config = {
         id: 'GTM-MBBL6Z9Q',
       },
     ],
+    [
+      '@inkeep/cxkit-docusaurus', { 
+        SearchBar: {
+          baseSettings: {
+            apiKey: process.env.INKEEP_API_KEY,
+          },
+        },
+        ChatButton: {
+          baseSettings: {
+            apiKey: process.env.INKEEP_API_KEY,
+          },
+        }
+      }
+    ],
     ['./plugins/lark-docs',
     {
       guides: {
@@ -704,103 +718,6 @@ const config = {
       },
       hotjar: {
         applicationId: 3711906,
-      },
-      inkeepConfig: {
-        stylesheetUrls: ["/css/inkeep-overrides.css"],
-        baseSettings: {
-          apiKey: process.env.INKEEP_API_KEY,
-          integrationId: process.env.INKEEP_INTEGRATION_ID,
-          organizationId: process.env.INKEEP_ORGANIZATION_ID,
-          primaryBrandColor: "#175fff",
-          organizationDisplayName: "Zilliz Cloud",
-          customCardSettings: [
-            {
-              filters: {
-                UrlMatch: {
-                  ruleType: 'PartialUrl',
-                  partialUrl: 'docs.zilliz.com.cn/docs',
-                },
-              },
-              searchTabLabel: '指南',
-            },
-            {
-              filters: {
-                UrlMatch: {
-                  ruleType: 'PartialUrl',
-                  partialUrl: 'docs.zilliz.com.cn/reference',
-                },
-              },
-              searchTabLabel: '参考',
-            },
-            {
-              filters: {
-                UrlMatch: {
-                  ruleType: 'PartialUrl',
-                  partialUrl: 'support.zilliz.com/hc/en-us',
-                },
-              },
-              searchTabLabel: '支持',
-            },
-            {
-              filters: {
-                UrlMatch: {
-                  ruleType: 'PartialUrl',
-                  partialUrl: 'zilliz.com.cn/learn',
-                },
-              },
-              searchTabLabel: '学习',
-            },
-            {
-              filters: {
-                UrlMatch: {
-                  ruleType: 'PartialUrl',
-                  partialUrl: 'zilliz.com.cn/customers',
-                },
-              },
-              searchTabLabel: '案例',
-            },
-            {
-              filters: {
-                UrlMatch: {
-                  ruleType: 'PartialUrl',
-                  partialUrl: 'zilliz.com.cn/event',
-                },
-              },
-              searchTabLabel: '活动',
-            },
-          ],
-        },
-        aiChatSettings: {
-            placeholder: "Zilliz Cloud 是什么？",
-            chatSubjectName: "Zilliz Cloud",
-            introMessage: `我是文档 AI 助手，可以获取包括文档在内的所有与 Zilliz Cloud 开发相关的资料。 \n\n 有什么可以帮您？`,
-            botAvatarSrcUrl: "/img/zilliz-star.svg",
-            getHelpCallToActions: [
-              {
-                type: "OPEN_LINK",
-                icon: { builtIn: "IoHelpBuoyOutline" },
-                name: "支持中心",
-                url: "https://support.zilliz.com.cn/hc/zh-cn"
-              },
-              {
-                type: "OPEN_LINK",
-                icon: { builtIn: "IoChatbubblesOutline" },
-                name: "联系销售",
-                url: "https://zilliz.com.cn/contact-sales"
-              }
-            ],
-            quickQuestions: [
-               "我应该如何创建和连接到 Zilliz Cloud 集群？",
-               "我的数据集规模比较大，应该如何优化向量搜索性能？",
-               "Serverless 和 Dedicated 集群有什么区别？"
-            ]
-        },
-        searchSettings: {
-          tabSettings: {
-            isAllTabEnabled: false,
-            rootBreadcrumbsToUseAsTabs: ['指南', '参考', '支持', '学习', '案例', '活动'],
-          }
-        }
       }
     }),
   themes: [
