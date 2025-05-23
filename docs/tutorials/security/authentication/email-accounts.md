@@ -61,6 +61,14 @@ import Admonition from '@theme/Admonition';
 
 ![change_password_cn](/img/change_password_cn.png)
 
+您的密码必须符合以下要求：
+
+- 长度为 8 至 128 个字符
+
+- 包含大写字母（A–Z）、小写字母（a–z）和数字（0–9）
+
+- 至少包含一个特殊字符（如 !@#$%^&*）
+
 ## 开启或关闭 MFA{#enable-and-disable-mfa}
 
 更多详情，请见[管理 MFA](./multi-factor-auth)。
