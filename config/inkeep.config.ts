@@ -78,7 +78,7 @@ export const inkeepSettings ={
         name: "联系销售",
         action: {
           type: "open_link",
-          url: "https://zilliz.com/contact-sales?contact_sales_traffic_source=websiteBot"
+          url: "https://zilliz.com.cn/contact-sales?contact_sales_traffic_source=websiteBot"
         },
         icon: {
           builtIn: "IOChatbubblesOutline"
