@@ -88,12 +88,14 @@ export const inkeepSettings ={
     ],
     exampleQuestionsLabel: "示例问题",
     exampleQuestions: [
-      "如何在 Zilliz Cloud 中创建并连接集群？",
-      "如何针对大规模数据集优化向量搜索性能？",
-      "Serverless 集群与 Dedicated 集群有什么区别？"
+      "创建和连接集群",
+      "针对大规模数据集优化向量搜索性能",
+      "Serverless v.s. Dedicated",
+      "Zilliz Cloud 最近更新",
+      "修改支付方式"
     ],
     aiAssistantAvatar: "https://assets.zilliz.com/zilliz_star_b6717656dc.svg",
-    placeholder: "如何快速开始？",
+    placeholder: "您需要什么帮助？",
     getTools: () => [
       {
         type: "function",
