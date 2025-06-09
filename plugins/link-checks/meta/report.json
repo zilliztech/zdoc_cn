@@ -1,13 +1,17 @@
 {
-  "added": [],
-  "deleted": [],
-  "brokenLinks": [
-    "https://support.zilliz.com.cn/hc/zh-cn",
-    "https://bucket-name.s3.northwest-1.amazonaws.com.cn/parquet-folder/data.parquet",
-    "https://bucket-name.oss-cn-shenzhen.aliyuncs.com",
-    "https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder/data.parquet",
-    "https://s3.northwest-1.amazonaws.com.cn/bucket-name/object-name",
-    "https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/*.npy",
-    "https://support.zilliz.com.cn/"
-  ]
+  "added": [
+    "https://docs.zilliz.com.cn/reference/restful/create-alert-rule-v2",
+    "https://docs.zilliz.com.cn/reference/restful/delete-alert-rule-v2",
+    "https://docs.zilliz.com.cn/reference/restful/list-alert-rules-v2",
+    "https://docs.zilliz.com.cn/reference/restful/metrics-and-alerts-v2",
+    "https://docs.zilliz.com.cn/reference/restful/update-alert-rule-v2"
+  ],
+  "deleted": [
+    "https://docs.zilliz.com.cn/docs/migrate-from-elasticsearch",
+    "https://docs.zilliz.com.cn/docs/migrate-from-opensearch",
+    "https://docs.zilliz.com.cn/docs/migrate-from-pgvector",
+    "https://docs.zilliz.com.cn/docs/migrate-from-qdrant",
+    "https://docs.zilliz.com.cn/docs/migrate-from-tencent-cloud-vectordb"
+  ],
+  "brokenLinks": []
 }

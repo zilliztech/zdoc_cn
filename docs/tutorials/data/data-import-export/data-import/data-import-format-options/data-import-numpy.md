@@ -30,7 +30,7 @@ import Admonition from '@theme/Admonition';
 
 建议您[使用 BulkWriter](./use-bulkwriter) 工具将您的原始数据转换为 `.npy` 文件。下图演示了您的原始数据如何映射到 `.npy` 文件中。
 
-![data_import-preparetion_en](/img/data_import-preparetion_en.png)
+![numpy_file_structure_zh](/img/numpy_file_structure_zh.png)
 
 <Admonition type="info" icon="📘" title="说明">
 

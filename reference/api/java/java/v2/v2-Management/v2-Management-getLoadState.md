@@ -8,12 +8,12 @@ notebook: false
 description: "This operation displays whether a specified collection or partition is loaded or not. | Java | v2"
 type: docx
 token: QcaFdMJE9oHX1Axe11rcqfiynEd
-sidebar_position: 4
+sidebar_position: 6
 keywords: 
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
   - zilliz
   - zilliz cloud
   - cloud
@@ -77,10 +77,21 @@ A Boolean value that indicates the status of the specified collection or partiti
 ## Example
 
 ```java
-// get load state for collection "test"
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.collection.request.GetLoadStateReq;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Get load state for collection "test"
 GetLoadStateReq getLoadStateReq = GetLoadStateReq.builder()
         .collectionName("test")
         .build();
 Boolean resp = client.getLoadState(getLoadStateReq);
-// return true or false
 ```

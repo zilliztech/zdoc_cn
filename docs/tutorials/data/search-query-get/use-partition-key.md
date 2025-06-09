@@ -32,9 +32,9 @@ Partition Key 是一种基于 Partition 的搜索优化方案。通过指定某�
 
 在 Zilliz Cloud 中，您可以使用 Partition 来实现数据分组，并将搜索范围限制在若干 Partition 中来提升搜索效率。但是一个 Collection 中最多只能创建 1,024 个 Partition，使用 Partition 无法满足分组数量大于 1,024 的使用场景。
 
-为了突破 Partition 的数量限制，Zilliz Cloud 推出了 Partition Key。在创建 Collection 时，您可以指定某个标量字段为 Partition Key。在 Collection 完成创建时，Zilliz Cloud 会在 Collection 中自动创建指定数量的 Partition。每个 Partition 对应 Parition Key 字段的某段取值范围。在插入 Entity 时，Zilliz Cloud 会根据该 Entity 在 Partition Key 字段上的取值将 Entity 存入对应的 Partition 中。
+为了突破 Partition 的数量限制，Zilliz Cloud 推出了 Partition Key。在创建 Collection 时，您可以指定某个标量字段为 Partition Key。在 Collection 完成创建时，Zilliz Cloud 会在 Collection 中自动创建指定数量的 Partition。每个 Partition 对应 Parition Key 字段的某段取值范围。在插入 Entity 时，Zilliz Cloud 会先根据该 Entity 在 Partition Key 字段上的取值计算一个哈希值，然后将得到的哈希值和 `partition_nums` 参数值取模得到目标 Partition 的 ID，最后将 Entity 存入到该 Partition 中。
 
-![QLq4wuGJrh216ybz3TrcawfBnyc](/img/QLq4wuGJrh216ybz3TrcawfBnyc.png)
+![BvYtww7bwhDyVBbWSWMcgz2nnUh](/img/BvYtww7bwhDyVBbWSWMcgz2nnUh.png)
 
 下图描述了在 Collection 未使用 Partition Key 和使用了 Partition Key 两种情况下，Zilliz Cloud 处理 Search 请求的过程。在未使用 Partition Key 时，Zilliz Cloud 会遍历全表查找与查询向量相似的结果。在使用了 Partition Key 后，Zilliz Cloud 仅遍历与请求中携带的基于 Partition Key 的过滤条件表达式相匹配的若干 Partition，搜索范围显而易见的缩小了。
 
@@ -245,6 +245,8 @@ curl --request POST \
 
 在使用 Partition Key 进行搜索时， Search 请求中需要携带一个基于 Partition Key 的过滤条件表达式。在过滤条件表达式中，您既可以把搜索范围限定在某一个 Partition Key 值对应的 Partition 内，也可以将其限定在多个 Partition Key 值对应的 Partition 内。
 
+执行删除操作时，建议包含指定单个 Partition Key 的过滤条件表达式，以实现更高效的删除。这种方法将删除操作限制在特定分区，减少压缩期间的写放大，并为压缩和索引节省资源。
+
 如下代码演示了 Search 请求中需要携带的两种过滤条件表达式：一种是基于一个 Partition Key 值进行过滤，另一个是基于多个 Partition Key 值进行过滤。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
@@ -306,6 +308,13 @@ export filter='partition_key in ["x", "y", "z"] && <other conditions>'
 如上图所示，当您在创建或修改 Collection 时打开了 Partition Key Isolation 功能后，Zilliz Cloud 会根据 Entity 中 Partition Key 的值为 Entity 分组，并为指定的向量字段在每组 Entity 中创建一个独立的索引。在收到 Search 请求后，Zilliz Cloud 会根据过滤条件表达式中指定的 Partition Key 值找到对应的索引文件，并在该索引文件覆盖的所有 Entity 中进行相似最近邻搜索（ANN Search）。这样一来，Zilliz Cloud 就真正避免了在执行 Search 请求时扫描无关记录，进一步缩小了搜索范围，提升了搜索效率。
 
 值得注意的是，在开启了 Partition Key Isolation 后，您仅能基于一个确定的 Partition Key 值创建过滤表达式，从而让 Zilliz Cloud 将搜索范围控制在该值对应的索引文件所覆盖的所有 Entity 内。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>对于使用了性能型 CU 的且 Milvus 兼容版本为 v2.4.x 及以上的集群来说，可以使用该特性。</p>
+<p>对于使用了其它类型的 CU 或订阅方案的集群来说，在使用该特性前须确保集群兼容 Milvus v2.5.x。</p>
+
+</Admonition>
 
 ### 开启 Partition Key Isolation{#enable-partition-key-isolation}
 

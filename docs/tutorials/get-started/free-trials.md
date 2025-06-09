@@ -39,11 +39,11 @@ Zilliz Cloud 提供 Free 版本，允许您免费使用 Serverless 集群的功�
 
 ## 免费试用{#use-free-trial}
 
-您可以免费试用 Zilliz Cloud 以下两个[版本](./select-zilliz-cloud-service-plans)：Serverless 和 Dedicated。
+您可以免费试用 Zilliz Cloud 以下两个[版本](./select-zilliz-cloud-service-plans)：Serverless 和按量计费的 Dedicated 版本。
 
 ### 免费试用说明{#use-free-trial}
 
-首次注册 Zilliz Cloud 账号时，您的组织将获赠 **¥300** 优惠券，有效期为 **30 天**，可用于试用 Serverless 和 Dedicated 版本集群。优惠券使用完毕或过期时即视为免费试用结束。
+首次使用企业邮箱注册 Zilliz Cloud 账号时，您的组织将获赠 **¥300** 优惠券，有效期为 **30 天**，可用于试用 Serverless 版本集群和按量计费的 Dedicated 版本集群。优惠券使用完毕或过期时即视为免费试用结束。
 
 免费试用结束后，您的组织将被冻结。在此期间，组织中的 Serverless 和 Dedicated 集群将被移至[回收站](./use-recycle-bin)，您将无法使用 Dedicated 和 Serverless 集群特有的高级功能（如备份恢复、告警等）。
 
@@ -51,7 +51,7 @@ Zilliz Cloud 提供 Free 版本，允许您免费使用 Serverless 集群的功�
 
 ### 获取优惠券及延长优惠券有效期{#earn-credits-and-extend-credit-expiration}
 
-注册 Zilliz Cloud 账号后您即可获得 ¥300 优惠券。如果您绑定了云市场支付方式，优惠券有效期可延长至 **1 年**。
+使用企业邮箱注册 Zilliz Cloud 账号后您即可获得 ¥300 优惠券。如果您绑定了云市场支付方式，优惠券有效期可延长至 **1 年**。
 
 如需更多优惠券或延长试用期，请[联系销售](https://zilliz.com.cn/contact-sales)。
 
@@ -73,23 +73,19 @@ Zilliz Cloud 提供 Free 版本，允许您免费使用 Serverless 集群的功�
 
 在免费试用期间，Zilliz Cloud 会向组织管理员发送以下邮件通知，提醒您免费试用的情况。
 
-- 您已试用 60% 的优惠券。
+- 优惠券发送 3 天内未使用。
+
+- 您已使用 60% 的优惠券。
 
 - 优惠券有效期不足 3 天。
 
-- 免费试用到期后未添加支付方式，导致组织被冻结
+- 免费试用到期后未添加支付方式，导致组织被冻结。
 
 - 即将在免费到期结束后将 Serverless 和 Dedicated 集群移至回收站。
 
 - 免费试用到期，Serverless 和 Dedicated 集群已被移至回收站。
 
 - 所有优惠券已使用完毕。
-
-<Admonition type="info" icon="📘" title="说明">
-
-<p>如果您在免费试用到期前添加支付方式，您将不再收到免费试用相关的邮件提醒。</p>
-
-</Admonition>
 
 ## 文档推荐{#related-topics}
 

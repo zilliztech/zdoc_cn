@@ -2,7 +2,7 @@
 title: "Stop | Cloud"
 slug: /stop-filter
 sidebar_label: "Stop"
-beta: PUBLIC
+beta: FALSE
 notebook: FALSE
 description: "`stop` 过滤器删除分词文本中的指定停用词，帮助消除常见且意义不大的词。您可以使用 `stopwords` 参数配置停用词列表。 | Cloud"
 type: origin
@@ -82,7 +82,7 @@ analyzerParams.put("filter",
 
 `stop` 过滤器作用于分词器生成的词项，因此必须与分词器结合使用。有关 Zilliz Cloud 中可用的分词器列表，请参阅[分词器参考](./analyzer-tokenizers)。
 
-定义 `analyzer_params` 后，您可以在定义 Collection Schema 时将其应用于 VARCHAR 字段。这使得 Zilliz Cloud 能够使用指定的分析器处理该字段中的文本，以实现高效的分词和过滤。更多信息，请参阅 [Analyzer 概述](./analyzer-overview)。  
+定义 `analyzer_params` 后，您可以在定义 Collection Schema 时将其应用于 VARCHAR 字段。这使得 Zilliz Cloud 能够使用指定的分析器处理该字段中的文本，以实现高效的分词和过滤。更多信息，请参阅[使用示例](./analyzer-overview#example-use)。  
 
 ## 示例输出{#example-output}
 
@@ -94,7 +94,7 @@ analyzerParams.put("filter",
 "The stop filter allows control over common stop words for text processing."
 ```
 
-**预期输出**：  
+**预期输出**（`stop_words:["the","over","_english_"]`）：  
 
 ```python
 ["The", "stop", "filter", "allows", "control", "common", "stop", "words", "text", "processing"]

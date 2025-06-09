@@ -62,7 +62,7 @@ Zilliz Cloud 支持在创建过程中灵活配置 Connector。创建后， Conne
 
 ### 前提条件{#prerequisites}
 
-- 请确保您已[创建 Collection](./manage-collections-console#create-collection)。
+- 请确保您已[创建 Collection](./manage-collections-console)。
 
 - 请确保您创建的 Collection 已具备配套的文档 [Ingestion](./pipelines-doc-data#create-doc-ingestion-pipeline) 和 [Deletion](./pipelines-doc-data#delete-doc-data) Pipelines。
 

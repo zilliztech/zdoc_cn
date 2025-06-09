@@ -8,12 +8,12 @@ notebook: false
 description: "This operation drops an index from a specific collection. | Java | v2"
 type: docx
 token: KdFEdP8ZToYvZ1xmmQgcE62unUf
-sidebar_position: 3
+sidebar_position: 4
 keywords: 
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud
@@ -72,11 +72,23 @@ dropIndex(DropIndexReq.builder()
 ## Example
 
 ```java
-// drop index for field "vector"
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.index.request.DropIndexReq;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Drop index for the field "vector"
 DropIndexReq dropIndexReq = DropIndexReq.builder()
         .collectionName("test")
         .fieldName("vector")
         .build();
-client_v2.dropIndex(dropIndexReq);
+client.dropIndex(dropIndexReq);
 ```
 

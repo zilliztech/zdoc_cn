@@ -101,21 +101,21 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "YOUR_CLUSTER_ENDPOINT"
+milvusAddr := "localhost:19530"
 token := "YOUR_CLUSTER_TOKEN"
-
-cli, err := client.New(ctx, &milvusclient.ClientConfig{
+client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
     APIKey:  token,
 })
 if err != nil {
-    log.Fatal("failed to connect to milvus server: ", err.Error())
+    fmt.Println(err.Error())
+    // handle err
 }
+defer client.Close(ctx)
 
-defer cli.Close(ctx)
-
-collectionNames, err := cli.ListCollections(ctx, milvusclient.NewListCollectionOption())
+collectionNames, err := client.ListCollections(ctx, milvusclient.NewListCollectionOption())
 if err != nil {
+    fmt.Println(err.Error())
     // handle error
 }
 
@@ -131,8 +131,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/list" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
--d '{}
-}'
+-d '{}'
 ```
 
 </TabItem>
@@ -191,30 +190,10 @@ console.log(res);
 <TabItem value='go'>
 
 ```go
-import (
-    "context"
-    "fmt"
-
-    "github.com/milvus-io/milvus/client/v2/milvusclient"
-)
-
-ctx, cancel := context.WithCancel(context.Background())
-defer cancel()
-
-milvusAddr := "YOUR_CLUSTER_ENDPOINT"
-
-cli, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: milvusAddr,
-})
+collection, err := client.DescribeCollection(ctx, milvusclient.NewDescribeCollectionOption("quick_setup"))
 if err != nil {
-    log.Fatal("failed to connect to milvus server: ", err.Error())
-}
-
-defer cli.Close(ctx)
-
-collection, err := cli.DescribeCollection(ctx, milvusclient.NewDescribeCollectionOption("quick_setup"))
-if err != nil {
-    // handle error
+    fmt.Println(err.Error())
+    // handle err
 }
 
 fmt.Println(collection)
@@ -240,6 +219,35 @@ curl --request POST \
 如果您已经创建了名为 `quick_setup` 的 Collection，运行上述示例的结果如下：
 
 ```json
-// TO BE ADDED
+{
+    'collection_name': 'quick_setup', 
+    'auto_id': False, 
+    'num_shards': 1, 
+    'description': '', 
+    'fields': [
+        {
+            'field_id': 100, 
+            'name': 'id', 
+            'description': '', 
+            'type': <DataType.INT64: 5>, 
+            'params': {}, 
+            'is_primary': True
+        }, 
+        {
+            'field_id': 101, 
+            'name': 'vector', 
+            'description': '', 
+            'type': <DataType.FLOAT_VECTOR: 101>, 
+            'params': {'dim': 768}
+        }
+    ], 
+    'functions': [], 
+    'aliases': [], 
+    'collection_id': 456909630285026300, 
+    'consistency_level': 2, 
+    'properties': {}, 
+    'num_partitions': 1, 
+    'enable_dynamic_field': True
+}
 ```
 

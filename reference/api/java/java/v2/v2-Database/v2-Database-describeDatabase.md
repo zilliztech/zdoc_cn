@@ -10,10 +10,10 @@ type: docx
 token: MJjHd3uGcoxEYBx0laKcAIKNnhg
 sidebar_position: 3
 keywords: 
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
   - zilliz
   - zilliz cloud
   - cloud
@@ -66,6 +66,21 @@ A **DescribeDatabaseResp** object that contains detailed information about the s
 ## Example
 
 ```java
+import io.milvus.param.Constant;
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.database.request.DescribeDatabaseReq;
+import io.milvus.v2.service.database.response.DescribeDatabaseResp;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Describe database
 DescribeDatabaseResp descResp = client.describeDatabase(DescribeDatabaseReq.builder()
         .databaseName(databaseName)
         .build());

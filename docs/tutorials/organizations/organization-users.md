@@ -71,7 +71,7 @@ Zilliz Cloud 提供 3 种组织角色。这些角色无法修改或删除。
        </tr>
        <tr>
          <td><ul><li><p>管理<a href="./payment-billing">支付方式与账单</a></p></li><li><p>查看 <a href="./manage-api-keys">API 密钥</a></p></li><li><p>邀请<a href="./organization-users">组织用户</a></p></li><li><p>查看<a href="./organization-settings">组织设置</a></p></li></ul></td>
-         <td><ul><li><p>List Invoices</p></li><li><p>Get Invoice</p></li><li><p>Query org daily usage</p></li></ul></td>
+         <td><ul><li><p><a href="/reference/restful/list-invoices-v2">查看发票列表</a></p></li><li><p><a href="/reference/restful/describe-invoice-v2">查看发票详情</a></p></li><li><p><a href="/reference/restful/query-daily-usage-v2">查询日用量</a></p></li></ul></td>
          <td><p>数据面权限取决于<a href="./project-users#project-roles">项目</a>和<a href="./cluster-roles">集群角色</a>。但通常组织账单管理员不需要数据面的权限。</p></td>
        </tr>
     </table>

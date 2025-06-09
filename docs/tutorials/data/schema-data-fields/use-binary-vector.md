@@ -41,13 +41,13 @@ Binary 向量是一种将复杂对象（如图像、文本或音频）编码为�
 
 Binary 向量表示法具有以下特点：
 
-- 高效存储：每个维度只需 1 bit 存储，大大节省了存储空间。
+- **高效存储**：每个维度只需 1 bit 存储，大大节省了存储空间。
 
-- 快速计算：使用位运算（如 XOR）可以快速计算向量间的相似度。
+- **快速计算**：使用位运算（如 XOR）可以快速计算向量间的相似度。
 
-- 固定长度：无论原始文本长度如何，向量长度保持不变，便于索引和检索。
+- **固定长度**：无论原始文本长度如何，向量长度保持不变，便于索引和检索。
 
-- 简单直观：直接反映了关键词的出现情况，适合某些特定的检索任务。
+- **简单直观**：直接反映了关键词的出现情况，适合某些特定的检索任务。
 
 Binary 向量可以通过多种方法生成。在文本处理中，可以使用预定义的词汇表，根据词语出现与否设置相应位。图像处理中，可以使用感知哈希算法（如 [pHash](https://en.wikipedia.org/wiki/Perceptual_hashing)）生成图像的 Binary 特征。在机器学习应用中，可以将模型输出二值化，得到 Binary 向量表示。
 
@@ -71,7 +71,7 @@ Binary 向量可以通过多种方法生成。在文本处理中，可以使用�
 
 1. 使用 `dim` 参数指定向量的维度。注意，`dim` 必须是 8 的倍数，因为 Binary 向量在插入时需要转换为 byte 数组。每 8 个布尔值（0 或 1）将被打包为 1 个 byte。例如，如果 `dim=128`，则插入时需要提供 16 个 byte 的数组。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -137,6 +137,48 @@ schema.push({
 
 </TabItem>
 
+<TabItem value='go'>
+
+```go
+import (
+    "context"
+    "fmt"
+
+    "github.com/milvus-io/milvus/client/v2/column"
+    "github.com/milvus-io/milvus/client/v2/entity"
+    "github.com/milvus-io/milvus/client/v2/index"
+    "github.com/milvus-io/milvus/client/v2/milvusclient"
+)
+
+ctx, cancel := context.WithCancel(context.Background())
+defer cancel()
+
+milvusAddr := "localhost:19530"
+client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+    Address: milvusAddr,
+})
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+defer client.Close(ctx)
+
+schema := entity.NewSchema()
+schema.WithField(entity.NewField().
+    WithName("pk").
+    WithDataType(entity.FieldTypeVarChar).
+    WithIsAutoID(true).
+    WithIsPrimaryKey(true).
+    WithMaxLength(100),
+).WithField(entity.NewField().
+    WithName("binary_vector").
+    WithDataType(entity.FieldTypeBinaryVector).
+    WithDim(128),
+)
+```
+
+</TabItem>
+
 <TabItem value='bash'>
 
 ```bash
@@ -177,7 +219,7 @@ export schema="{
 
 为了加速搜索，我们需要为 Binary 向量字段创建索引。索引可以显著提高大规模向量数据的检索效率。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -200,6 +242,7 @@ import io.milvus.v2.common.IndexParam;
 import java.util.*;
 
 List<IndexParam> indexParams = new ArrayList<>();
+Map<String,Object> extraParams = new HashMap<>();
 
 indexParams.add(IndexParam.builder()
         .fieldName("binary_vector")
@@ -221,6 +264,15 @@ const indexParams = {
   metric_type: MetricType.HAMMING,
   index_type: IndexType.AUTOINDEX
 };
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+idx := index.NewAutoIndex(entity.HAMMING)
+indexOption := milvusclient.NewCreateIndexOption("my_collection", "binary_vector", idx)
 ```
 
 </TabItem>
@@ -249,12 +301,12 @@ export indexParams='[
 
 Binary 向量和索引定义完成后，我们便可以创建包含 Binary 向量的 Collection。以下示例通过 `create_collection` 方法创建了一个名为 `my_binary_collection` 的 Collection。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
 client.create_collection(
-    collection_name="my_binary_collection",
+    collection_name="my_collection",
     schema=schema,
     index_params=index_params
 )
@@ -273,7 +325,7 @@ MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
         .build());
 
 CreateCollectionReq requestCreate = CreateCollectionReq.builder()
-        .collectionName("my_binary_collection")
+        .collectionName("my_collection")
         .collectionSchema(schema)
         .indexParams(indexParams)
         .build();
@@ -292,10 +344,24 @@ const client = new MilvusClient({
 });
 
 await client.createCollection({
-    collection_name: 'my_dense_collection',
+    collection_name: 'my_collection',
     schema: schema,
     index_params: indexParams
 });
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+err = client.CreateCollection(ctx,
+    milvusclient.NewCreateCollectionOption("my_collection", schema).
+        WithIndexOptions(indexOption))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
 ```
 
 </TabItem>
@@ -308,7 +374,7 @@ curl --request POST \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
 -d "{
-    \"collectionName\": \"my_binary_collection\",
+    \"collectionName\": \"my_collection\",
     \"schema\": $schema,
     \"indexParams\": $indexParams
 }"
@@ -323,7 +389,7 @@ curl --request POST \
 
 例如，对于 128 维的 Binary 向量，需要提供 16 个 byte 的数组（因为 128 位 ÷ 8 位/byte = 16 byte）。以下是插入数据的代码示例：
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -347,7 +413,7 @@ bool_vectors = [
 data = [{"binary_vector": convert_bool_list_to_bytes(bool_vector) for bool_vector in bool_vectors}]
 
 client.insert(
-    collection_name="my_binary_collection",
+    collection_name="my_collection",
     data=data
 )
 ```
@@ -391,7 +457,7 @@ Gson gson = new Gson();
 }
 
 InsertResp insertR = client.insert(InsertReq.builder()
-        .collectionName("my_binary_collection")
+        .collectionName("my_collection")
         .data(rows)
         .build());
 ```
@@ -407,9 +473,25 @@ const data = [
 ];
 
 client.insert({
-  collection_name: "my_binary_collection",
+  collection_name: "my_collection",
   data: data,
 });
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+_, err = client.Insert(ctx, milvusclient.NewColumnBasedInsertOption("my_collection").
+    WithBinaryVectorColumn("binary_vector", 128, [][]byte{
+        {0b10011011, 0b01010100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0b10011011, 0b01010101, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    }))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle err
+}
 ```
 
 </TabItem>
@@ -423,7 +505,7 @@ curl --request POST \
 --header "Content-Type: application/json" \
 -d "{
     \"data\": $data,
-    \"collectionName\": \"my_binary_collection\"
+    \"collectionName\": \"my_collection\"
 }"
 ```
 
@@ -436,7 +518,7 @@ curl --request POST \
 
 在搜索时，Binary 向量同样需要以 byte 数组的形式提供。确保查询向量的维度与定义 `dim` 时一致，并按照 8 个布尔值转换为 1 个 byte。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -448,7 +530,7 @@ query_bool_list = [1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0] + [0] * 112
 query_vector = convert_bool_list_to_bytes(query_bool_list)
 
 res = client.search(
-    collection_name="my_binary_collection",
+    collection_name="my_collection",
     data=[query_vector],
     anns_field="binary_vector",
     search_params=search_params,
@@ -478,7 +560,7 @@ boolean[] boolArray = {true, false, false, true, true, false, true, true, false,
 BinaryVec queryVector = new BinaryVec(convertBoolArrayToBytes(boolArray));
 
 SearchResp searchR = client.search(SearchReq.builder()
-        .collectionName("my_binary_collection")
+        .collectionName("my_collection")
         .data(Collections.singletonList(queryVector))
         .annsField("binary_vector")
         .searchParams(searchParams)
@@ -501,7 +583,7 @@ SearchResp searchR = client.search(SearchReq.builder()
 query_vector = [1,0,1,0,1,1,1,1,1,1,1,1];
 
 client.search({
-    collection_name: 'my_binary_collection',
+    collection_name: 'my_collection',
     data: query_vector,
     limit: 5,
     output_fields: ['pk'],
@@ -509,6 +591,34 @@ client.search({
         nprobe: 10
     }
 });
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+queryVector := []byte{0b10011011, 0b01010100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+
+annSearchParams := index.NewCustomAnnParam()
+annSearchParams.WithExtraParam("nprobe", 10)
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
+    "my_collection", // collectionName
+    5,                      // limit
+    []entity.Vector{entity.BinaryVector(queryVector)},
+).WithANNSField("binary_vector").
+    WithOutputFields("pk").
+    WithAnnParam(annSearchParams))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle err
+}
+
+for _, resultSet := range resultSets {
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
+    fmt.Println("Pks: ", resultSet.GetColumn("pk").FieldData().GetScalars())
+}
 ```
 
 </TabItem>
@@ -525,7 +635,7 @@ curl --request POST \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
 -d "{
-    \"collectionName\": \"my_binary_collection\",
+    \"collectionName\": \"my_collection\",
     \"data\": $data,
     \"annsField\": \"binary_vector\",
     \"limit\": 5,

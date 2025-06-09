@@ -75,7 +75,7 @@ func NewGrantPrivilegeV2Option(roleName, privilegeName, collectionName string) *
    </tr>
    <tr>
      <td><p><code>privilegeName</code></p></td>
-     <td><p>Name of the privilege or privilege group to assign. For details, refer to the <strong>Privilege name</strong> column in the table on page Users and Roles.</p></td>
+     <td><p>Name of the privilege or privilege group to assign.</p><p>For details, refer to the <strong>Privilege name</strong> column in the table on page Users and Roles.</p></td>
      <td><p><code>string</code></p></td>
    </tr>
    <tr>

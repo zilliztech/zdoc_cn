@@ -4,7 +4,7 @@ slug: /manage-collections-sdks
 sidebar_label: "创建 Collection"
 beta: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 在支持根据您定义的 Collection Schema 创建 Collection 的能力。您可以根据业务开发需要，确定 Collection Schema、索引参数、相似度类型、是否自动加载等设置。本节将介绍创建 Collection 的具体步骤及相关注意事项。 | Cloud"
+description: "您可以根据业务开发需要，确定 Collection Schema、索引参数、相似度类型、是否自动加载等设置。本节将介绍创建 Collection 的具体步骤及相关注意事项。 | Cloud"
 type: origin
 token: SQQowEMkwiwYvWkwETbczgj8nUh
 sidebar_position: 2
@@ -25,7 +25,14 @@ import TabItem from '@theme/TabItem';
 
 # 创建 Collection
 
-Zilliz Cloud 在支持根据您定义的 Collection Schema 创建 Collection 的能力。您可以根据业务开发需要，确定 Collection Schema、索引参数、相似度类型、是否自动加载等设置。本节将介绍创建 Collection 的具体步骤及相关注意事项。
+您可以根据业务开发需要，确定 Collection Schema、索引参数、相似度类型、是否自动加载等设置。本节将介绍创建 Collection 的具体步骤及相关注意事项。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>如果您管理的租户数量较少且希望能够对各租户间的数据进行物理隔离，可以考虑为每个租户创建一个 Collection。</p>
+<p>但是，根据您的集群版本不同，可以创建最多 16,384 个 Collection。因此，对于有租户数量较多的场景，可以根据您的实际需求，考虑使用基于 Partition 或基于 Partition Key 的多租户方案。关于多租户方案的更多内容，可以参考<a href="./multi-tenancy">多租户策略</a>。</p>
+
+</Admonition>
 
 ## 概述{#overview}
 
@@ -163,10 +170,30 @@ const fields = [
 <TabItem value='go'>
 
 ```go
-import "github.com/milvus-io/milvus/client/v2/entity"
+import (
+    "context"
+    "fmt"
+    
+    "github.com/milvus-io/milvus/client/v2/entity"
+    "github.com/milvus-io/milvus/client/v2/index"
+    "github.com/milvus-io/milvus/client/v2/milvusclient"
+    "github.com/milvus-io/milvus/pkg/v2/common"
+)
+ctx, cancel := context.WithCancel(context.Background())
+defer cancel()
+
+milvusAddr := "localhost:19530"
+client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+    Address: milvusAddr,
+})
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+defer client.Close(ctx)
 
 schema := entity.NewSchema().WithDynamicFieldEnabled(true).
-        WithField(entity.NewField().WithName("my_id").WithIsAutoID(true).WithDataType(entity.FieldTypeInt64).WithIsPrimaryKey(true)).
+        WithField(entity.NewField().WithName("my_id").WithIsAutoID(false).WithDataType(entity.FieldTypeInt64).WithIsPrimaryKey(true)).
         WithField(entity.NewField().WithName("my_vector").WithDataType(entity.FieldTypeFloatVector).WithDim(5)).
         WithField(entity.NewField().WithName("my_varchar").WithDataType(entity.FieldTypeVarChar).WithMaxLength(512))
 ```
@@ -212,6 +239,10 @@ export schema='{
 
 在 Zilliz Cloud 中，您可以使用 `AUTOINDEX` 作为向量字段的`index_type`，并按需灵活选择 `COSINE`、 `L2`、 `IP` 作为 `metric_type`。
 
+在上述代码示例中，你需要为向量字段设置索引类型和度量类型。对于标量字段而言，只需要设置索引类型。值得注意的是，向量字段必须创建索引。您可以根据实际情况，有选择地为需要进行搜索加速的标量字段创建索引。
+
+关于创建索引的详细内容，可以参考[创建 Vector Index](./index-vector-fields) 和 [创建 Scalar Index](./index-scalar-fields)。
+
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
@@ -222,7 +253,7 @@ index_params = client.prepare_index_params()
 # 3.4. Add indexes
 index_params.add_index(
     field_name="my_id",
-    index_type="STL_SORT"
+    index_type="AUTOINDEX"
 )
 
 index_params.add_index(
@@ -243,7 +274,7 @@ import java.util.*;
 // 3.3 Prepare index parameters
 IndexParam indexParamForIdField = IndexParam.builder()
         .fieldName("my_id")
-        .indexType(IndexParam.IndexType.STL_SORT)
+        .indexType(IndexParam.IndexType.AUTOINDEX)
         .build();
 
 IndexParam indexParamForVectorField = IndexParam.builder()
@@ -265,7 +296,7 @@ indexParams.add(indexParamForVectorField);
 // 3.2 Prepare index parameters
 const index_params = [{
     field_name: "my_id",
-    index_type: "STL_SORT"
+    index_type: "AUTOINDEX"
 },{
     field_name: "my_vector",
     index_type: "AUTOINDEX",
@@ -284,9 +315,10 @@ import (
     "github.com/milvus-io/milvus/client/v2/milvusclient"
 )
 
+collectionName := "customized_setup_1"
 indexOptions := []milvusclient.CreateIndexOption{
-    client.NewCreateIndexOption(collectionName, "my_vector", index.NewAutoIndex(entity.COSINE)).WithIndexName("my_vector"),
-    client.NewCreateIndexOption(collectionName, "my_id", index.NewSortedIndex()).WithIndexName("my_id"),
+    milvusclient.NewCreateIndexOption(collectionName, "my_vector", index.NewAutoIndex(entity.COSINE)),
+    milvusclient.NewCreateIndexOption(collectionName, "my_id", index.NewAutoIndex(entity.COSINE)),
 }
 ```
 
@@ -305,7 +337,7 @@ export indexParams='[
         {
             "fieldName": "my_id",
             "indexName": "my_id",
-            "indexType": "STL_SORT"
+            "indexType": "AUTOINDEX"
         }
     ]'
 ```
@@ -445,7 +477,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-您也可以选择在完成 Collection 创建后再创建索引。在此情况下，Zilliz Cloud 不会在 Collection 创建完成后执行 Load 操作。如果需要在完成 Collection 创建后为其创建索引，可以参考[创建 Vector Index](./index-vector-fields)。
+您也可以选择在完成 Collection 创建后再创建索引。在此情况下，Zilliz Cloud 不会在 Collection 创建完成后执行 Load 操作。如果需要在完成 Collection 创建后为其创建索引，可以参考[AUTOINDEX](./autoindex-explained)。
 
 如下示例演示了如何在创建 Collection 时不携带索引参数。在 Collection 创建完成后检查其加载状态时，其状态应为未加载。
 
@@ -531,13 +563,19 @@ console.log(res.state)
 <TabItem value='go'>
 
 ```go
-import "github.com/milvus-io/milvus/client/v2/milvusclient"
-
-err := milvusclient.CreateCollection(ctx, client.NewCreateCollectionOption("customized_setup_2", schema))
+err = client.CreateCollection(ctx, milvusclient.NewCreateCollectionOption("customized_setup_2", schema))
 if err != nil {
+    fmt.Println(err.Error())
     // handle error
 }
 fmt.Println("collection created")
+
+state, err := client.GetLoadState(ctx, milvusclient.NewGetLoadStateOption("customized_setup_2"))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+fmt.Println(state.State)
 ```
 
 </TabItem>
@@ -629,10 +667,9 @@ const createCollectionReq = {
 <TabItem value='go'>
 
 ```go
-import "github.com/milvus-io/milvus/client/v2/milvusclient"
-
-err := cli.CreateCollection(ctx, client.NewCreateCollectionOption("customized_setup_3", schema).WithShardNum(1))
+err = client.CreateCollection(ctx, milvusclient.NewCreateCollectionOption("customized_setup_3", schema).WithShardNum(1))
 if err != nil {
+    fmt.Println(err.Error())
     // handle error
 }
 fmt.Println("collection created")
@@ -717,13 +754,10 @@ client.create_collection({
 <TabItem value='go'>
 
 ```go
-import (
-    "github.com/milvus-io/milvus/client/v2/milvusclient"
-    "github.com/milvus-io/milvus/pkg/common"
-)
-
-err := cli.CreateCollection(ctx, client.NewCreateCollectionOption("customized_setup_4", schema).WithProperty(common.MmapEnabledKey, true))
+err = client.CreateCollection(ctx, milvusclient.NewCreateCollectionOption("customized_setup_4", schema).
+    WithProperty(common.MmapEnabledKey, true))
 if err != nil {
+    fmt.Println(err.Error())
     // handle error
 }
 fmt.Println("collection created")
@@ -734,7 +768,22 @@ fmt.Println("collection created")
 <TabItem value='bash'>
 
 ```bash
-# REST 暂无此功能。
+export params='{
+    "mmap.enabled": True
+}'
+
+export CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT"
+export TOKEN="YOUR_CLUSTER_TOKEN"
+
+curl --request POST \
+--url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+-d "{
+    \"collectionName\": \"customized_setup_5\",
+    \"schema\": $schema,
+    \"params\": $params
+}"
 ```
 
 </TabItem>
@@ -742,7 +791,7 @@ fmt.Println("collection created")
 
 ### 设置生存时间（TTL）{#set-collection-ttl}
 
-如果您需要 Zilliz Cloud 在 Collection 创建完成后的一段时间内自动销毁该 Collection。可以考虑为 Collection 设置 TTL。这样当 Collection 的生存时间超过指定时间（单位为秒）后，Zilliz Cloud 就会开始异步删除 Collection 中的数据，并销毁该 Collection。在数据完全删除前，您仍旧可以搜索到部分数据。
+如果您需要 Zilliz Cloud 在 Collection 创建完成后的一段时间内自动清空该 Collection。可以考虑为 Collection 设置 TTL。这样当 Collection 的生存时间超过指定时间（单位为秒）后，Zilliz Cloud 就会开始异步删除 Collection 中的数据。在数据完全删除前，您仍旧可以搜索到部分数据。
 
 如下示例代码将 Collection 的 TTL 设置为 1 天（86400 秒）。建议将 TTL 至少设置为几天时间。
 
@@ -800,15 +849,11 @@ const createCollectionReq = {
 <TabItem value='go'>
 
 ```go
-import (
-    "github.com/milvus-io/milvus/client/v2/milvusclient"
-    "github.com/milvus-io/milvus/pkg/common"
-)
-
-err = cli.CreateCollection(ctx, client.NewCreateCollectionOption("customized_setup_5", schema).
-        WithProperty(common.CollectionTTLConfigKey, 86400)) //  TTL in seconds
+err = client.CreateCollection(ctx, milvusclient.NewCreateCollectionOption("customized_setup_5", schema).
+    WithProperty(common.CollectionTTLConfigKey, true))
 if err != nil {
-        // handle error
+    fmt.Println(err.Error())
+    // handle error
 }
 fmt.Println("collection created")
 ```
@@ -894,14 +939,10 @@ client.createCollection(createCollectionReq);
 <TabItem value='go'>
 
 ```go
-import (
-    "github.com/milvus-io/milvus/client/v2/milvusclient"
-    "github.com/milvus-io/milvus/client/v2/entity"
-)
-
-err := cli.CreateCollection(ctx, client.NewCreateCollectionOption("customized_setup_6", schema).
+err = client.CreateCollection(ctx, milvusclient.NewCreateCollectionOption("customized_setup_6", schema).
     WithConsistencyLevel(entity.ClBounded))
 if err != nil {
+    fmt.Println(err.Error())
     // handle error
 }
 fmt.Println("collection created")

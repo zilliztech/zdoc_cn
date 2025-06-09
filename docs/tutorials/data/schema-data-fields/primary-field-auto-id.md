@@ -90,7 +90,7 @@ const schema = [
   {
     name: "pk",
     description: "ID field",
-    data_type: DataType.VARCHAR,
+    data_type: DataType.INT64,
     is_primary_key: true,
     max_length: 100,
   },
@@ -102,7 +102,14 @@ const schema = [
 <TabItem value='go'>
 
 ```go
-// Go 缺失
+import "github.com/milvus-io/milvus/client/v2/entity"
+
+schema := entity.NewSchema()
+schema.WithField(entity.NewField().WithName("my_id").
+    WithDataType(entity.FieldTypeInt64).
+    WithIsPrimaryKey(true).
+    WithIsAutoID(true),
+)
 ```
 
 </TabItem>
@@ -129,7 +136,7 @@ export schema="{
 
 ## 添加 VARCHAR 类型的主键{#use-varchar-primary-keys}
 
-在添加 VARCHAR 类型的主键时，除了将 `data_type` 的取值修改为 `DataType.VARCHAR` 之外，还需要增加设置该字段的最大宽度（max_length）。
+在添加 VARCHAR 类型的主键时，除了将 `datatype` 的取值修改为 `DataType.VARCHAR` 之外，还需要增加设置该字段的最大宽度（max_length）。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
@@ -151,9 +158,6 @@ schema.add_field(
 <TabItem value='java'>
 
 ```java
-import io.milvus.v2.common.DataType;
-import io.milvus.v2.service.collection.request.AddFieldReq; 
-
 schema.addField(AddFieldReq.builder()
         .fieldName("my_id")
         .dataType(DataType.VarChar)
@@ -186,7 +190,15 @@ schema.push({
 <TabItem value='go'>
 
 ```go
-// Go 缺失
+schema := entity.NewSchema()
+schema.WithField(entity.NewField().WithName("my_id").
+    WithDataType(entity.FieldTypeVarChar).
+    // highlight-start
+    WithIsPrimaryKey(true).
+    WithIsAutoID(true).
+    WithMaxLength(512),
+    // highlight-end
+)
 ```
 
 </TabItem>

@@ -7,7 +7,7 @@ notebook: FALSE
 description: "该版本为 Zilliz Cloud 带来了几项关键更新，首先是 Zilliz Cloud Serverless 的 GA，它提供自动扩展功能，可节省高达 50 倍的成本。Milvus 2.4 功能现已实现 GA，引入了 Sparse Vector、多向量 Hybrid Search和带有模糊匹配的倒排索引等功能。该版本还包括公开预览版中的多副本功能，允许用户通过在多个可用区（AZ）的副本间分配工作负载来提高查询吞吐量和可用性。此外，Zilliz Cloud 的新迁移服务支持从开源 Milvus、pgvector 和 Elasticsearch 迁移，并可在 Zilliz Cloud 内实现组织内和跨组织数据迁移。用于备份、恢复、迁移和作业管理的扩展 RESTful API 使用户能够构建自动化操作工作流。进一步增强的功能包括支持项目只读角色以及重命名群集和快照的功能。 | Cloud"
 type: origin
 token: R8XCwgfEGiPOrLkI03WcdDVAnMg
-sidebar_position: 4
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz
@@ -100,7 +100,7 @@ Zilliz Cloud 现在提供全面的迁移服务，使用户能够轻松完成迁�
 
 - 从其他开源数据库迁移到 Zilliz Cloud，当前支持从 pgvector 和 Elasticsearch 迁移。迁移目标可以是免费实例、Serverless 实例或 Dedicated 集群。有关详情，请参阅[从 Elasticsearch 迁移至 Zilliz Cloud](./migrate-from-elasticsearch) 和[从 pgvector 迁移至 Zilliz Cloud](./migrate-from-pgvector)。
 
-- 在 Zilliz Cloud 各集群间迁移数据，支持组织内和跨组织数据迁移。有关详情，请参阅[Zilliz Cloud 跨集群迁移](./migrate-between-clusters)。
+- 在 Zilliz Cloud 各集群间迁移数据，支持组织内和跨组织数据迁移。有关详情，请参阅[Zilliz Cloud 跨集群迁移](./offline-migration)。
 
 ## 备份、恢复、迁移、任务管理 API 上线{#backup-restore-migration-jobs-restful-api}
 

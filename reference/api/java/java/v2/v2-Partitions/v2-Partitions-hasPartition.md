@@ -8,12 +8,12 @@ notebook: false
 description: "This operation checks whether the specified partition exists in the specified collection. | Java | v2"
 type: docx
 token: NS1xdv6f4oQlN4xqnOGc6ssWnTf
-sidebar_position: 3
+sidebar_position: 4
 keywords: 
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - RAG
   - zilliz
   - zilliz cloud
   - cloud
@@ -71,7 +71,19 @@ A boolean value indicating whether the specified partition exists.
 ## Example
 
 ```java
-// check is partition "test_partition" exists in collection
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.partition.request.HasPartitionReq;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Check is partition "test_partition" exists in collection
 HasPartitionReq hasPartitionReq = HasPartitionReq.builder()
         .collectionName("test")
         .partitionName("test_partition")

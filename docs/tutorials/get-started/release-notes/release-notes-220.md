@@ -7,7 +7,7 @@ notebook: FALSE
 description: "我们很高兴地宣布Zilliz Cloud 2.2.0的发布。此版本引入了一系列增强和功能，包括集群间数据迁移、从 ElasticSearch 迁移数据，全新的问题单系统和数据导入能力的全面增强。 | Cloud"
 type: origin
 token: P1JAwZEf4i1ALqkidS9cYfLZnef
-sidebar_position: 13
+sidebar_position: 15
 keywords: 
   - 向量数据库
   - zilliz
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 
 ## Zilliz Cloud 集群间的数据迁移{#data-migration-across-zilliz-cloud-clusters}
 
-此次发布，用户可以通过 Zilliz Cloud 的数据迁移能力，轻松完成集群间的数据整合与配置。具体内容，可[查阅此处](./migrate-between-clusters)。
+此次发布，用户可以通过 Zilliz Cloud 的数据迁移能力，轻松完成集群间的数据整合与配置。具体内容，可[查阅此处](./offline-migration)。
 
 - 轻松迁移：在多个 Zilliz Cloud 集群间实现数据的无缝迁移。
 

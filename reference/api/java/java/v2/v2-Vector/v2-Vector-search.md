@@ -10,10 +10,10 @@ type: docx
 token: W1mxdmaelo4co4x0ruwcTWQrn5b
 sidebar_position: 7
 keywords: 
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
+  - cosine distance
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
   - zilliz
   - zilliz cloud
   - cloud
@@ -116,12 +116,12 @@ search(SearchReq.builder()
        </tr>
        <tr>
          <td><p>FloatVec</p></td>
-         <td><p>FloatVec(List\<Float> data)FloatVec(float[] data)</p></td>
+         <td><p>FloatVec(List\<Float> data)</p><p>FloatVec(float[] data)</p></td>
          <td><p>For DataType.FloatVector type field.</p></td>
        </tr>
        <tr>
          <td><p>BinaryVec</p></td>
-         <td><p>BinaryVec(ByteBuffer data)BinaryVec(byte[] data)</p></td>
+         <td><p>BinaryVec(ByteBuffer data)</p><p>BinaryVec(byte[] data)</p></td>
          <td><p>For DataType.BinaryVector type field.</p></td>
        </tr>
     </table>
@@ -241,6 +241,21 @@ A **SearchResp object representing specific search results with the specified ou
 ## Example
 
 ```java
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.vector.request.SearchReq;
+import io.milvus.v2.service.vector.request.data.FloatVec;
+import io.milvus.v2.service.vector.response.SearchResp;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Search
 SearchResp searchR = client.search(SearchReq.builder()
         .collectionName(collectionName)
         .data(Collections.singletonList(new FloatVec(new float[]{1.0f, 2.0f})))
@@ -248,6 +263,7 @@ SearchResp searchR = client.search(SearchReq.builder()
         .topK(10)
         .outputFields(Collections.singletonList("*"))
         .build());
+        
 List<List<SearchResp.SearchResult>> searchResults = searchR.getSearchResults();
 System.out.println("\nSearch results:");
 for (List<SearchResp.SearchResult> results : searchResults) {

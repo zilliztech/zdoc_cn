@@ -10,10 +10,10 @@ type: docx
 token: F3vqdLZS2ohhOAxQNNxciiirn4f
 sidebar_position: 3
 keywords: 
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
   - zilliz
   - zilliz cloud
   - cloud
@@ -37,7 +37,7 @@ hybridSearch(data): Promise<SearchResults>
 ## Request Syntax
 
 ```javascript
-milvusClient.search({
+milvusClient.hybridSearch({
    db_name: string,
    collection_name: string,
    partition_names?: string[], 

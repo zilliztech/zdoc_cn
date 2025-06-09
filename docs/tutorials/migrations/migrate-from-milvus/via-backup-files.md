@@ -21,6 +21,8 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Supademo from '@site/src/components/Supademo';
+
 # 通过备份文件从 Milvus 迁移至 Zilliz Cloud
 
 Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案，适合希望使用 Milvus 向量数据库但不想自己管理基础设施的用户。为了实现顺利的数据迁移，您可以通过以下方式将数据从 Milvus 迁移到 Zilliz Cloud：通过 Milvus 服务器地址连接到源数据库或直接上传备份文件。
@@ -36,6 +38,8 @@ Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案�
     - 从对象存储：Milvus 对象存储的公共 URL 和访问凭据。您可以选择长期或临时凭据。
 
 - 您需要拥有组织管理员或项目管理员的角色。如果您没有相应的权限，请联系您的 Zilliz Cloud 管理员。
+
+- 确保目标集群的 CU 容量足以容纳源数据。要估算所需的 CU 规格，请使用[计算器](https://zilliz.com.cn/pricing#calculator)。
 
 ## 准备迁移数据{#prepare-migration-data}
 
@@ -107,29 +111,7 @@ backup
 
 ## 将数据迁移到 Zilliz Cloud{#migrate-data-to-zilliz-cloud}
 
-![zh_migrate_from_milvus_via_backup_file](/img/zh_migrate_from_milvus_via_backup_file.png)
-
-1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)。
-
-1. 进入目标项目，选择**数据迁移** > **Milvus** > **通过备份文件**。
-
-1. 在**从 Milvus 迁移数据**页面上，
-
-    - 如果您的数据在本地文件中：
-
-        - 选择**本地文件**，上传包含您数据的文件夹，并选择目标集群。
-
-    - 如果您的数据在对象存储中：
-
-        - 选择**对象存储**，选择服务（例如 S3、Azure Blob、GCP），输入您数据的对象 URL 或 S3 URI，提供必要的凭据，并选择目标集群。
-
-        - 通过指定适当的凭据类型提供必要的凭据：
-
-            - **长期**：使用此选项以持久访问资源，无需频繁重新认证。
-
-            - **Session**：选择此选项以获取有效期有限的临时凭据，适合在特定用户会话期间进行短期访问。
-
-1. 单击**迁移**。
+<Supademo id="cmboghvaxa3p5sn1r42v1rwil" title="Zilliz Cloud - 通过备份文件从 Milvus 迁移" />
 
 ## 查看迁移进度{#monitor-the-migration-process}
 
@@ -143,9 +125,19 @@ backup
 
 ![view_migration_progress_cn](/img/view_migration_progress_cn.png)
 
-Zilliz Cloud 仅支持 [AUTOINDEX](./autoindex-explained)。**AUTOINDEX** 是一种优化的索引算法，Zilliz Cloud 将使用此算法为您迁移的 Collection 自动创建索引。
+## 迁移后{#post-migration}
 
-Collection 加载后，您可以自行连接和管理 Collection。
+迁移任务完成后，请注意以下事项：
+
+- **索引创建**：迁移过程中会自动为迁移的 Collection 创建 AUTOINDEX。
+
+- **手动 Load Collection：**虽然索引已自动创建，但迁移后的 Collection 并不会立即支持搜索或查询操作。您必须手动 Load Collection，才能启用搜索和查询功能。详细信息请参阅 [Load 和 Release](./load-release-collections)。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>完成 Load 后，请检查目标集群中的 Collection 数量及 Entity 数是否与数据源保持一致。如果发现不符，请删除 Collection 并重新进行迁移任务。</p>
+
+</Admonition>
 
 ## 取消迁移任务{#cancel-migration-job}
 

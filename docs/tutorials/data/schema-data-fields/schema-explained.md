@@ -44,7 +44,7 @@ Schema 定义了 Collection 的数据结构。在创建 Collection 之前，您�
 
 您可以参考如下代码创建一个 Schema 对象。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -75,6 +75,16 @@ const schema = []
 
 </TabItem>
 
+<TabItem value='go'>
+
+```go
+import "github.com/milvus-io/milvus/client/v2/entity"
+
+schema := entity.NewSchema()
+```
+
+</TabItem>
+
 <TabItem value='bash'>
 
 ```bash
@@ -90,7 +100,7 @@ export schema='{
 
 主键唯一标识一个 Entity，只支持 **Int64** 或 **VarChar** 类型的数据。具体添加方法如下：
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -139,6 +149,20 @@ schema.push({
 
 </TabItem>
 
+<TabItem value='go'>
+
+```go
+schema.WithField(entity.NewField().WithName("my_id").
+    WithDataType(entity.FieldTypeInt64).
+    // highlight-start
+    WithIsPrimaryKey(true).
+    WithIsAutoID(false),
+    // highlight-end
+)
+```
+
+</TabItem>
+
 <TabItem value='bash'>
 
 ```bash
@@ -169,7 +193,7 @@ export schema='{
 
 向量字段用于存放各种类型的稀疏和稠密向量数据。在 Zilliz Cloud 中，您可以在一个 Collection 中添加最多 4 个向量字段。具体添加方法如下：
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -205,6 +229,18 @@ schema.push({
     // highlight-next-line
     dim: 5
 });
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+schema.WithField(entity.NewField().WithName("my_vector").
+    WithDataType(entity.FieldTypeFloatVector).
+    // highlight-next-line
+    WithDim(5),
+)
 ```
 
 </TabItem>
@@ -260,7 +296,7 @@ export schema="{
 
 在 Zilliz Cloud 中，您可以使用 VarChar 类型的字段来存放字符串数据。关于 VarChar 字段的更多内容，可参考[字符串类型](./use-string-field)。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -300,6 +336,17 @@ schema.push({
 
 </TabItem>
 
+<TabItem value='go'>
+
+```go
+schema.WithField(entity.NewField().WithName("my_varchar").
+    WithDataType(entity.FieldTypeVarChar).
+    WithMaxLength(512),
+)
+```
+
+</TabItem>
+
 <TabItem value='bash'>
 
 ```bash
@@ -307,7 +354,7 @@ export varCharField='{
     "fieldName": "my_varchar",
     "dataType": "VarChar",
     "elementTypeParams": {
-        "max_length": 256
+        "max_length": 512
     }
 }'
 
@@ -328,7 +375,7 @@ export schema="{
 
 Zilliz Cloud 支持的数值类型字段包括 `Int8`、`Int16`、`Int32`、`Int64`、`Float` 和 `Double`。关于数值类型的更多内容，可参考[标量数值类型](./use-number-field)。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -362,6 +409,16 @@ schema.push({
 
 </TabItem>
 
+<TabItem value='go'>
+
+```go
+schema.WithField(entity.NewField().WithName("my_int64").
+    WithDataType(entity.FieldTypeInt64),
+)
+```
+
+</TabItem>
+
 <TabItem value='bash'>
 
 ```bash
@@ -388,7 +445,7 @@ export schema="{
 
 Zilliz Cloud 支持 Boolean 类型的字段。您可以参考如下代码添加该类型的字段。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -422,6 +479,16 @@ schema.push({
 
 </TabItem>
 
+<TabItem value='go'>
+
+```go
+schema.WithField(entity.NewField().WithName("my_bool").
+    WithDataType(entity.FieldTypeBool),
+)
+```
+
+</TabItem>
+
 <TabItem value='bash'>
 
 ```bash
@@ -449,7 +516,7 @@ export schema="{
 
 JSON 类型的字段用于存放半结构化的 JSON 数据。关于 JSON 类型的更多内容，可参考[JSON 类型](./use-json-fields)。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -483,6 +550,16 @@ schema.push({
 
 </TabItem>
 
+<TabItem value='go'>
+
+```go
+schema.WithField(entity.NewField().WithName("my_json").
+    WithDataType(entity.FieldTypeJSON),
+)
+```
+
+</TabItem>
+
 <TabItem value='bash'>
 
 ```bash
@@ -511,7 +588,7 @@ export schema="{
 
 Array 字段用于存放列表类型的数据。Array 字段中的元素数据类型需要保持一致。关于 Array 类型的更多内容，可参考[Array 类型](./use-array-fields)。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -554,6 +631,19 @@ schema.push({
 
 </TabItem>
 
+<TabItem value='go'>
+
+```go
+schema.WithField(entity.NewField().WithName("my_array").
+    WithDataType(entity.FieldTypeArray).
+    WithElementType(entity.FieldTypeInt64).
+    WithMaxLength(512).
+    WithMaxCapacity(5),
+)
+```
+
+</TabItem>
+
 <TabItem value='bash'>
 
 ```bash
@@ -582,3 +672,4 @@ export schema="{
 
 </TabItem>
 </Tabs>
+

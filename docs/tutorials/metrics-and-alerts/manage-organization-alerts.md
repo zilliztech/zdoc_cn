@@ -4,7 +4,7 @@ slug: /manage-organization-alerts
 sidebar_label: "管理组织告警"
 beta: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关的组织告警，二是针对特定项目中集群性能的项目告警。更多详细信息，请参阅指标与告警快速参考。 | Cloud"
+description: "组织告警功能监控您整个 Zilliz Cloud 组织的账单和账户相关指标。与专注于集群性能的项目告警不同，组织告警帮助您追踪现金余额、用量金额，以确保服务不中断并预防意外的账单问题。通过接收关于用量金额耗尽、支付失败和使用量阈值的及时通知，您可以随时掌握账户健康状况，避免服务中断。 | Cloud"
 type: origin
 token: WpDVwYaHMizLWuklBJlcypTzn2d
 sidebar_position: 3
@@ -21,113 +21,120 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Supademo from '@site/src/components/Supademo';
+
 # 管理组织告警
 
-Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关的组织告警，二是针对特定项目中集群性能的项目告警。更多详细信息，请参阅[指标与告警快速参考](./metrics-alerts-reference)。
+组织告警功能监控您整个 Zilliz Cloud 组织的账单和账户相关指标。与专注于集群性能的项目告警不同，组织告警帮助您追踪现金余额、用量金额，以确保服务不中断并预防意外的账单问题。通过接收关于用量金额耗尽、支付失败和使用量阈值的及时通知，您可以随时掌握账户健康状况，避免服务中断。
 
-本文将介绍如何查看及管理组织告警。
+## 开始前{#before-you-start}
 
-## 概览{#overview}
+在查看或管理组织告警前，请确保您拥有：
 
-下表展示了各组织告警的默认配置。
-
-当告警处于**开启**状态时，一旦满足告警条件，指定的接收者将收到告警通知。您可以编辑告警以更改其状态。
-
-<table>
-   <tr>
-     <th><p>告警项</p></th>
-     <th><p>单位</p></th>
-     <th><p>描述</p></th>
-     <th><p>推荐操作</p></th>
-     <th><p>默认告警条件</p></th>
-   </tr>
-   <tr>
-     <td><p>优惠券</p></td>
-     <td><p>￥</p></td>
-     <td><p>跟踪优惠券的余额，当额度低时提醒用户及时充值。</p></td>
-     <td><p>充值以维持账户功能。</p></td>
-     <td><p>优惠券余额小于 ¥10 时触发<strong>警告</strong>告警。</p></td>
-   </tr>
-   <tr>
-     <td><p>优惠券有效期</p></td>
-     <td><p>天</p></td>
-     <td><p>监控优惠券的剩余有效期，鼓励用户使用或延期。</p></td>
-     <td><p>延长有效期或在额度过期前使用。</p></td>
-     <td><p>优惠券有效期小于 0 天时触发<strong>警告</strong>告警。</p></td>
-   </tr>
-   <tr>
-     <td><p>现金余额</p></td>
-     <td><p>¥</p></td>
-     <td><p>监控预付款余额，当余额低时提醒用户以防服务中断。</p></td>
-     <td><p>为预付款余额增加资金以避免服务中断。</p></td>
-     <td><p>现金余额小于 ¥100 时触发<strong>紧急</strong>告警。</p></td>
-   </tr>
-   <tr>
-     <td><p>用量金额</p></td>
-     <td><p>¥</p></td>
-     <td><p>跟踪使用金额，当超过设定阈值时通知用户，建议监控和管理。</p></td>
-     <td><p>监控和管理使用以保持在预算限额内。</p></td>
-     <td><p>用量金额大于 ¥100 时触发<strong>警告</strong>告警。</p></td>
-   </tr>
-</table>
-
-**权限**：
-
-- **查看和配置**：仅对组织管理员开放。
-
-- **接收告警通知**：如果被管理员指定为接收人，任何组织成员都可以接收告警通知。
-
-要了解用户角色的详细说明，请参阅[访问控制概览](./access-control-overview)。
+- 组织管理员角色权限。
 
 ## 查看组织告警{#view-organization-alerts}
 
-在**组织告警**页面，查看各种账单相关的告警。
+在左侧导航栏中点击**组织告警**，即可访问组织告警仪表盘，监控您账户的财务健康状况。
 
-**告警的组成部分**：
+<Supademo id="cmbkfl0zw8lgwsn1rjl3mhptl" title="Zilliz Cloud - 查看组织告警 Demo" />
 
-- **告警项**：由 Zilliz Cloud 预设的触发条件和严重程度。
+### 告警历史
 
-- **状态**：显示告警是否处于**开启**状态。
+使用**告警历史**选项卡调查过去的告警活动，了解账单模式。这对于分析支出趋势、审查信用使用情况或向利益相关者展示账户管理非常有用。
 
-- **触发条件**：触发告警的条件。
+### 告警设置
 
-- **告警等级**：根据告警严重情况，分为**警告**或**紧急**。
+使用**告警设置**选项卡监控所有与账单相关告警的当前状态。当您需要确认哪些告警正在保护您的组织并检查其配置时，可在此处查看。
 
-- **告警接收**：接收通知的指定角色、电子邮箱地址或电话号码。
+查看告警时，您会看到以下配置项：
 
-![zh-view-organization-alerts](/img/zh-view-organization-alerts.png)
+<table>
+   <tr>
+     <th><p>字段</p></th>
+     <th><p>描述</p></th>
+   </tr>
+   <tr>
+     <td><p>名称</p></td>
+     <td><p>描述账单事件的告警标识符（例如：“信用余额不足”、“支付方式即将到期”）</p></td>
+   </tr>
+   <tr>
+     <td><p>状态</p></td>
+     <td><p>当前告警状态：启用（主动监控）或禁用（不发送通知）</p></td>
+   </tr>
+   <tr>
+     <td><p>目标</p></td>
+     <td><p>监控范围 - 整个组织</p></td>
+   </tr>
+   <tr>
+     <td><p>告警规则</p></td>
+     <td><p>触发参数，包括信用阈值、支付状态和使用量限制</p></td>
+   </tr>
+   <tr>
+     <td><p>告警等级</p></td>
+     <td><p>影响等级分类</p><ul><li><p><strong>警告</strong>：接近限制</p></li><li><p><strong>紧急</strong>：需要立即关注</p></li></ul></td>
+   </tr>
+   <tr>
+     <td><p>告警接收</p></td>
+     <td><p>通知接收者，包括配置的邮箱地址和通知渠道。</p><p>可用通知渠道列表请参阅<a href="./manage-notification-channels">管理告警渠道</a>。</p></td>
+   </tr>
+   <tr>
+     <td><p>操作</p></td>
+     <td><p>可用的管理选项：编辑、克隆、删除</p></td>
+   </tr>
+</table>
 
-## 编辑组织告警{#edit-organization-alerts}
+## 管理组织告警{#manage-organization-alerts}
 
-- 自定义设置：修改告警触发条件、更新通知接收人以及更改告警状态。
+修改和维护现有告警，确保账单监控有效且符合您组织的需求和通知偏好。
 
-- 限制：暂不支持修改告警项和告警等级。
+<Supademo id="cmbkgd0a9020yya0i6npknuum" title="管理组织告警" isShowcase="true" />
 
-<Admonition type="info" icon="📘" title="说明">
+### 禁用或启用组织告警{#enable-or-disable-organization-alert}
 
-<p>要快速开启或关闭一个告警，您可以在<strong>操作</strong>栏中选择<strong>开启</strong>或<strong>关闭</strong>。</p>
+在不丢失告警配置的情况下控制主动监控。
 
-</Admonition>
+- 禁用告警：保留所有配置，但停止监控和发送通知。
 
-## 开启或关闭组织告警{#turn-on-or-off-an-organization-alert}
+- 启用告警：主动监控账单指标，并在条件满足时发送通知。
 
-要快速开启或关闭一个告警，在**操作**栏中选择**开启**或**关闭**。
+### 编辑组织告警{#edit-organization-alerts}
 
-<Admonition type="info" icon="📘" title="说明">
+为现有告警自定义通知接收者并修改触发条件。
 
-<p>告警关闭后，您无法再接收到任何告警通知。</p>
+### 复制组织告警{#clone-project-alert}
 
-</Admonition>
+创建相似的告警，可调整通知设置或修改阈值。
 
-## 查看告警历史{#view-alert-history}
+## 配置告警接收设置{#configure-alert-receiver-settings}
 
-在**告警历史**页签，查看已触发的告警历史列表。您可以根据告警项、告警等级和告警时间范围筛选满足条件的告警。
+设置组织范围内的默认通知设置，这些设置会自动应用于新告警，确保整个组织采用一致的账单通知实践。
 
-## 文档推荐{#related-topics}
+<Supademo id="cmbkgeww28mczsn1rdmgvzr6m" title="配置告警接收设置"/>
 
-- [查看集群性能指标](./view-cluster-metric-charts)
+配置设置时，您会遇到以下概念：
 
-- [管理项目告警](./manage-project-alerts)
+- **发送给**：为新告警自动选择的默认通知渠道（邮箱、企业微信、Webhook）。配置您最常用的渠道可简化告警创建流程。
 
-- [指标与告警快速参考](./metrics-alerts-reference)
+- **告警恢复通知**：启用后，当告警恢复（条件不再满足）时您将收到通知。
+
+- **将设置应用于现有告警**：选择是否用新的默认设置更新所有现有告警。
+
+## FAQ{#faq}
+
+### 告警触发后，我会多久收到一次通知？
+
+告警通知遵循自动频率模式：
+
+- 首次通知：告警阈值被突破时立即发送。
+
+- 第二次通知：如果条件持续存在，1小时后发送。
+
+- 后续通知：只要告警条件仍处于活动状态，每天发送一次。
+
+如果您觉得通知过于频繁，可以：
+
+- [编辑告警](./manage-organization-alerts#edit-organization-alerts)以调整条件阈值或持续时间要求。
+
+- 暂时[禁用告警](./manage-organization-alerts#enable-or-disable-organization-alert)以停止所有通知（同时保留配置）。
 

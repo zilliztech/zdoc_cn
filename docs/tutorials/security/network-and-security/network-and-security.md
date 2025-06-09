@@ -7,7 +7,7 @@ notebook: FALSE
 description: "了解如何设置集群访问白名单及添加私网连接来确保集群访问安全。 | Cloud"
 type: origin
 token: VCp1wTKc8io1kGkHknEcHX25nLb
-sidebar_position: 3
+sidebar_position: 4
 keywords: 
   - 向量数据库
   - zilliz

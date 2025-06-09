@@ -21,63 +21,85 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Supademo from '@site/src/components/Supademo';
+
 # 通过 Endpoint 从 Milvus 迁移至 Zilliz Cloud
 
 Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案，适合希望使用 Milvus 向量数据库但不想自己管理基础设施的用户。为了实现顺利的数据迁移，您可以通过以下方式将数据从 Milvus 迁移到 Zilliz Cloud：通过 Milvus 服务器地址连接到源数据库或直接上传备份文件。
 
 本文介绍如何通过服务器地址从 Milvus 进行数据迁移。有关如何上传备份文件的信息，请参阅[通过备份文件从 Milvus 迁移至 Zilliz Cloud](./via-backup-files)。
 
-## 注意事项{#considerations}
-
-- 每次迁移仅支持选择单个源数据库。如果您有多个源数据库中，可以创建多个迁移任务。
-
-- 迁移过程中，Zilliz Cloud 将从源数据库复制 collection 的 schema。暂不支持为目标 collection 修改 schema。
-
 ## 开始前{#before-you-start}
 
-- 源 Milvus 实例的版本为 2.3.6 或以上，且支持公网访问。
+开始离线迁移前需满足：
 
-- 如果您的网络环境配置了白名单列表，请确保将 Zilliz Cloud 的 IP 地址添加到其中。要了解更多信息，请参考 [Zilliz Cloud IP](./zilliz-cloud-ips)。
+### Milvus 侧要求{#milvus-requirements}
 
-- 如果源 Milvus 启用了身份验证，请确保您已获得必要的连接凭证。有关详细信息，请参阅 [Authenticate User Access](https://milvus.io/docs/authenticate.md#Authenticate-User-Access)。
+<table>
+   <tr>
+     <th><p>要求项</p></th>
+     <th><p>详细说明</p></th>
+   </tr>
+   <tr>
+     <td><p>版本要求</p></td>
+     <td><p>Milvus 2.3.6 及以上</p></td>
+   </tr>
+   <tr>
+     <td><p>网络连通性</p></td>
+     <td><p>源 Milvus 实例必须能够从公网访问</p></td>
+   </tr>
+   <tr>
+     <td><p>鉴权凭证</p></td>
+     <td><p>如果 Milvus 开启了鉴权，需提供鉴权凭据（请参阅 <a href="https://milvus.io/docs/authenticate.md?tab=docker#Authenticate-User-Access">Authenticate User Access</a>）</p></td>
+   </tr>
+</table>
 
-- 您需要拥有组织管理员或项目管理员的角色。如果您没有相应的权限，请联系您的 Zilliz Cloud 管理员。
+### Zilliz Cloud 侧要求{#zilliz-cloud-requirements}
 
-## 从 Milvus 迁移至 Zilliz Cloud{#migrate-from-milvus-to-zilliz-cloud}
+<table>
+   <tr>
+     <th><p>要求项</p></th>
+     <th><p>详细说明</p></th>
+   </tr>
+   <tr>
+     <td><p>用户权限</p></td>
+     <td><p>需具备组织管理员或项目管理员角色</p></td>
+   </tr>
+   <tr>
+     <td><p>目标集群容量</p></td>
+     <td><p>需预留足够 CU 容纳源数据（使用 <a href="https://zilliz.com.cn/pricing#calculator">CU 计算器</a>预估容量）</p></td>
+   </tr>
+   <tr>
+     <td><p>网络连通性</p></td>
+     <td><p>如果有网络限制，请确保已将 <a href="./zilliz-cloud-ips">Zilliz Cloud IP</a> 加入白名单</p></td>
+   </tr>
+</table>
 
-![zh_migrate_from_milvus_via_endpoint_1](/img/zh_migrate_from_milvus_via_endpoint_1.png)
+## 操作步骤{#getting-started}
 
-单次迁移任务支持从一个数据库中选择一个或多个 collection。
+以下展示了如何通过 Endpoint 从 Milvus 迁移。
 
-1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)。
-
-1. 进入目标项目，选择**数据迁移** > **Milvus** > **通过 Endpoint**。
-
-1. 在**连接至数据源**步骤中，填入源 Milvus 数据库的连接地址。如果源 Milvus 已启用身份验证，请输入用户名和密码作为访问凭据。然后，单击**下一步**。
-
-1. 在**选择迁移来源和目标**步骤中，配置源 Milvus 和目标 Zilliz Cloud 集群的设置。然后，单击**下一步**。
-
-1. 在**配置 Schema** 步骤中：
-
-    1. 预览并验证目标 collection 的 schema。
-
-    1. 在**高级设置**中，检查动态字段和 Partition Key 的配置，这些设置会继承源 Collection 的配置，且无法更改。更多信息请参考 [Dynamic Field](./enable-dynamic-field) 和[使用 Partition Key](./use-partition-key)。
-
-    1. 在**目标 Collection 名称和描述**中，自定义目标 Collection 的名称和描述。Collection 名称在每个集群中必须唯一。如果名称与现有 Collection 重复，请重命名 Collection。
-
-1. 点击**迁移**。
+<Supademo id="cmbohkjeya419sn1ritu7745e" title="Zilliz Cloud - Migrate from Milvus via Endpoint" />
 
 ## 查看迁移进度{#monitor-the-migration-process}
 
 生成迁移任务后，您可前往[任务中心](./view-activities)查看任务状态和进度。如果迁移任务的状态从**进行中**变更为**成功**，则代表迁移成功。
 
+![FJJubvyTcohYZXx6K0JcDs6Vnad](/img/FJJubvyTcohYZXx6K0JcDs6Vnad.png)
+
+## 迁移后{#post-migration}
+
+迁移任务完成后，请注意以下事项：
+
+- **索引创建**：迁移过程中会自动为迁移的 Collection 创建 AUTOINDEX。
+
+- **手动 Load Collection：**虽然索引已自动创建，但迁移后的 Collection 并不会立即支持搜索或查询操作。您必须手动 Load Collection，才能启用搜索和查询功能。详细信息请参阅 [Load 和 Release](./load-release-collections)。
+
 <Admonition type="info" icon="📘" title="说明">
 
-<p>迁移完成后，请验证目标集群中的 collection 和 entity 数量是否与数据源一致。如果发现不一致，请删除缺失 entity 的 collection 并重新进行迁移。</p>
+<p>完成 Load 后，请检查目标集群中的 Collection 数量及 Entity 数是否与数据源保持一致。如果发现不符，请删除 Collection 并重新进行迁移任务。</p>
 
 </Admonition>
-
-![view_migration_progress_cn](/img/view_migration_progress_cn.png)
 
 ## 取消迁移任务{#cancel-migration-job}
 

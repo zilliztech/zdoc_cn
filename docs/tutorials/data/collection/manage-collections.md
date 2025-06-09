@@ -35,27 +35,35 @@ Collection 是一张二维数据表，包含固定列数和可变行数。Collec
 
 ![QxpAb654powT9ux6upScpkEFnAd](/img/QxpAb654powT9ux6upScpkEFnAd.png)
 
-### Schema 与 Fields{#schema-and-fields}
+## Schema 与 Fields{#schema-and-fields}
 
 通常我们会根据属性（如大小、重量、位置等）描述对象。对象属性类似于 Collection 中的字段。每个字段都具有自己的属性——字段中数据类型和相关限制（如向量维度和相似性类型）。通过定义字段及它们的先后顺序，会为您的 Collection 形成 1 个 数据结构，也就是 Collection 的 Schema。关于在定义 Schema 过程中支持使用的数据类型，可参考 [了解 Schema](./schema-explained) 中的相关介绍。
 
 所有在 Schema 中定义的字段都需要包含在待插入的 Entity 中。如果希望部分字段为可选，可以考虑如下做法：
 
+- 允许其为空或为其设置默认值。
+
+    关于如何允许字段值为空以及为字段设置默认值，可参考[Nullable 和默认值](./nullable-and-default)。
+
 - 启用 Dynamic Field。
 
     关于如何开启及使用 Dynamic Field，可参考[使用 Dynamic Field](./enable-dynamic-field)。
 
-### 主键与 AutoId{#primary-key-and-autoid}
+## 主键与 AutoId{#primary-key-and-autoid}
 
-与传统关系型数据表类似，Collection 也有一个主键字段用于区别 Entity。每个主键字段的值唯一且不重复。每 1 个主键都可以对应 Collection 中的 1 条 Entity 记录。如上图所示， 示例 Collection 中的 **id** 字段是主键。第 1 个 ID **0** 对应标题为《The Mortality Rate of Coronavirus is Not Important》的文章。Collection 中的任何其他文章的 ID 都不会为 **0**。
+与传统关系型数据表类似，Collection 也有一个主键字段用于区别 Entity。每个主键字段的值唯一且不重复。每 1 个主键都可以对应 Collection 中的 1 条 Entity 记录。
+
+如上图所示， 示例 Collection 中的 **id** 字段是主键。第 1 个 ID **0** 对应标题为《The Mortality Rate of Coronavirus is Not Important》的文章。Collection 中的任何其他文章的 ID 都不会为 **0**。
 
 主键字段默认要求手动输入，也可以通过在创建 Collection 时通过开启 AutoId 的方式将其设置为自动分配。在 Collection 的主键为自动分配的情况下，插入数据时应确保插入的 Entity 不包括主键字段。
 
 关于主键和 AutoId 的更多内容，可参考 [主键与 AutoId](./primary-field-auto-id) 中的相关介绍。eff
 
-### 索引{#index}
+## 索引{#index}
 
-通过对 Collection 中的数据建立索引，可以在搜索时加快搜索速度。因此，您应该为您的业务依赖的所有列创建索引。其中，所有向量列均需建立索引。与 Milvus 实例不同， Zilliz Cloud 集群中的 Collection 在向量列上仅支持使用 **AUTOINDEX** 索引。更多详情，请阅读 [AUTOINDEX](./autoindex-explained)。
+通过对 Collection 中的数据建立索引，可以在搜索时加快搜索速度。因此，您应该为您的业务依赖的所有列创建索引。其中，所有向量列均需建立索引。
+
+与 Milvus 实例不同， Zilliz Cloud 集群中的 Collection 在向量列上仅支持使用 **AUTOINDEX** 索引。更多详情，请阅读 [AUTOINDEX](./autoindex-explained)。
 
 ## Entity{#entities}
 
@@ -97,6 +105,10 @@ Collection 中的 Entity 是指共享相同字段集的数据记录。存储在�
 
 - [Query](./get-and-scalar-query)
 
+- [全文搜索](./full-text-search)
+
+- [精确文本匹配](./text-match)
+
 Zilliz Cloud 还提供如下优化搜索效率的高级功能，需要您根据实际的业务需求决定是否开启。这些功能包括：
 
 - [使用 Partition Key](./use-partition-key)
@@ -123,6 +135,12 @@ Zilliz Cloud 还为 Collection 提供了 Alias 管理能力。一个 Collection 
 
 关于如何管理 Alias，可以查看[管理 Alias](./manage-aliases)。
 
+## Function{#function}
+
+Zilliz Cloud 还为 Collection 提供了用于派生字段的 Function。您可以要求 Zilliz Cloud 根据指定字段通过 Function 派生出另一个字段。
+
+目前，Zilliz Cloud 支持在全文检索功能中使用自定义 Function 从文本字段派生出对应的稀疏向量字段。关于全文检索功能，可参考[全文搜索](./full-text-search)。
+
 ## 一致性水平{#consistency-level}
 
 在分布式数据库中，一致性水平是指那些保证每个节点或副本都拥有相同数据状态的属性。在创建 Collection 和执行 Search 操作时，可以分别设置一致性水平。Zilliz Cloud 提供了如下几种一致性水平，分别是  Strong、Bounded Staleness 和 Eventually。
@@ -131,47 +149,5 @@ Zilliz Cloud 还为 Collection 提供了 Alias 管理能力。一个 Collection 
 
 ## 相关限制{#limits}
 
-下表罗列了在不同类型的集群中可以创建 Collection 的最大数量。
-
-<table>
-   <tr>
-     <th><p>集群类型</p></th>
-     <th><p>最大数量</p></th>
-     <th><p>说明</p></th>
-   </tr>
-   <tr>
-     <td><p>Free cluster</p></td>
-     <td><p>5</p></td>
-     <td><p>最多 5 个  Collection。</p></td>
-   </tr>
-   <tr>
-     <td><p>Serverless cluster</p></td>
-     <td><p>100</p></td>
-     <td><p>最多 100 个 Collection。</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated</p></td>
-     <td><p>64 每 CU, Collection 总数小于等于 4,096 个</p></td>
-     <td><p>最多每 CU 创建 64 个 Collection，并且 Collection 总数小于 4,096 个。</p></td>
-   </tr>
-</table>
-
-除了上述数量限制外，Zilliz Cloud 还对使用容量进行了相关限制。下表罗列了不同大小的集群可用容量的计算方法。
-
-<table>
-   <tr>
-     <th><p>CU 大小</p></th>
-     <th><p>可用容量</p></th>
-   </tr>
-   <tr>
-     <td><p>1-8 CU</p></td>
-     <td><p>&lt;= 4,096</p></td>
-   </tr>
-   <tr>
-     <td><p>12+ CU</p></td>
-     <td><p>Min(512 x CU 大小, 65536)</p></td>
-   </tr>
-</table>
-
-关于集群可用容量和已使用容量的计算方法，可参考 [使用限制](./limits)中的相关描述。
+关于 Collection 的相关限制，可参考本手册[使用限制](./limits#collections)一节中的相关描述。
 

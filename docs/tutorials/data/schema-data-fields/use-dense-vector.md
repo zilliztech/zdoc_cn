@@ -39,11 +39,11 @@ import TabItem from '@theme/TabItem';
 
 上图展示了稠密向量在二维空间中的表示。尽管实际应用中的稠密向量通常有更高的维度，但这个二维图能够直观地展示几个关键概念：
 
-- 多维表示：每个点代表一个概念对象（如 **Milvus**、**向量数据库**、**检索系统**等），其位置由各个维度的值决定。
+- **多维表示**：每个点代表一个概念对象（如 **Milvus**、**向量数据库**、**检索系统**等），其位置由各个维度的值决定。
 
-- 语义关系：点之间的距离反映了概念之间的语义相似度。距离越近，表示概念在语义上越相关。
+- **语义关系**：点之间的距离反映了概念之间的语义相似度。距离越近，表示概念在语义上越相关。
 
-- 聚类效应：相关概念（如 **Milvus**、**向量数据库**和**检索系统**）在空间中的位置较为接近，形成一个语义聚类。
+- **聚类效应**：相关概念（如 **Milvus**、**向量数据库**和**检索系统**）在空间中的位置较为接近，形成一个语义聚类。
 
 以下是一个表示 `"Milvus 是一个高效的向量数据库"` 文本语义的真实稠密向量示例：
 
@@ -85,7 +85,7 @@ import TabItem from '@theme/TabItem';
 
 以下示例中，我们添加了一个名为 `dense_vector` 的向量字段，用于存储稠密向量。该字段的数据类型为 `FLOAT_VECTOR`，向量维度为 `4`。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -145,9 +145,51 @@ import { DataType } from "@zilliz/milvus2-sdk-node";
 schema.push({
   name: "dense_vector",
   data_type: DataType.FloatVector,
-  dim: 128,
+  dim: 4,
 });
 
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+import (
+    "context"
+    "fmt"
+
+    "github.com/milvus-io/milvus/client/v2/column"
+    "github.com/milvus-io/milvus/client/v2/entity"
+    "github.com/milvus-io/milvus/client/v2/index"
+    "github.com/milvus-io/milvus/client/v2/milvusclient"
+)
+
+ctx, cancel := context.WithCancel(context.Background())
+defer cancel()
+
+milvusAddr := "localhost:19530"
+client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+    Address: milvusAddr,
+})
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+defer client.Close(ctx)
+
+schema := entity.NewSchema()
+schema.WithField(entity.NewField().
+    WithName("pk").
+    WithDataType(entity.FieldTypeVarChar).
+    WithIsPrimaryKey(true).
+    WithIsAutoID(true).
+    WithMaxLength(100),
+).WithField(entity.NewField().
+    WithName("dense_vector").
+    WithDataType(entity.FieldTypeFloatVector).
+    WithDim(4),
+)
 ```
 
 </TabItem>
@@ -209,7 +251,7 @@ export schema="{
 
 为加速语义搜索，我们需要为向量字段创建索引。索引可以显著提高大规模向量数据的检索效率。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -233,7 +275,6 @@ import java.util.*;
 
 List<IndexParam> indexes = new ArrayList<>();
 
-extraParams.put("nlist",128);
 indexes.add(IndexParam.builder()
         .fieldName("dense_vector")
         .indexType(IndexParam.IndexType.AUTOINDEX)
@@ -254,6 +295,15 @@ const indexParams = {
     metric_type: MetricType.IP,
     index_type: IndexType.AUTOINDEX
 };
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+idx := index.NewAutoIndex(index.MetricType(entity.IP))
+indexOption := milvusclient.NewCreateIndexOption("my_collection", "dense_vector", idx)
 ```
 
 </TabItem>
@@ -282,12 +332,12 @@ export indexParams='[
 
 稠密向量和索引定义完成后，我们便可以创建包含稠密向量的 Collection。以下示例通过 `create_collection` 方法创建了一个名为 `my_dense_collection` 的 Collection。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
 client.create_collection(
-    collection_name="my_dense_collection",
+    collection_name="my_collection",
     schema=schema,
     index_params=index_params
 )
@@ -306,7 +356,7 @@ MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
         .build());
 
 CreateCollectionReq requestCreate = CreateCollectionReq.builder()
-        .collectionName("my_dense_collection")
+        .collectionName("my_collection")
         .collectionSchema(schema)
         .indexParams(indexes)
         .build();
@@ -325,11 +375,25 @@ const client = new MilvusClient({
 });
 
 await client.createCollection({
-    collection_name: 'my_dense_collection',
+    collection_name: 'my_collection',
     schema: schema,
     index_params: indexParams
 });
 
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+err = client.CreateCollection(ctx,
+    milvusclient.NewCreateCollectionOption("my_collection", schema).
+        WithIndexOptions(indexOption))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
 ```
 
 </TabItem>
@@ -342,7 +406,7 @@ curl --request POST \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
 -d "{
-    \"collectionName\": \"my_dense_collection\",
+    \"collectionName\": \"my_collection\",
     \"schema\": $schema,
     \"indexParams\": $indexParams
 }"
@@ -355,7 +419,7 @@ curl --request POST \
 
 创建 Collection 后，我们可以通过 `insert` 方法插入包含稠密向量的数据。注意，插入的稠密向量的维度必须与[添加稠密向量字段](./use-dense-vector)时定义的 `dim` 值相同。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -365,7 +429,7 @@ data = [
 ]
 
 client.insert(
-    collection_name="my_dense_collection",
+    collection_name="my_collection",
     data=data
 )
 ```
@@ -386,7 +450,7 @@ rows.add(gson.fromJson("{\"dense_vector\": [0.1, 0.2, 0.3, 0.4]}", JsonObject.cl
 rows.add(gson.fromJson("{\"dense_vector\": [0.2, 0.3, 0.4, 0.5]}", JsonObject.class));
 
 InsertResp insertR = client.insert(InsertReq.builder()
-        .collectionName("my_dense_collection")
+        .collectionName("my_collection")
         .data(rows)
         .build());
 ```
@@ -402,9 +466,26 @@ const data = [
 ];
 
 client.insert({
-  collection_name: "my_dense_collection",
+  collection_name: "my_collection",
   data: data,
 });
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+_, err = client.Insert(ctx, milvusclient.NewColumnBasedInsertOption("my_collection").
+    WithFloatVectorColumn("dense_vector", 4, [][]float32{
+        {0.1, 0.2, 0.3, 0.7},
+        {0.2, 0.3, 0.4, 0.8},
+    }),
+)
+if err != nil {
+    fmt.Println(err.Error())
+    // handle err
+}
 ```
 
 </TabItem>
@@ -421,7 +502,7 @@ curl --request POST \
         {"dense_vector": [0.1, 0.2, 0.3, 0.4]},
         {"dense_vector": [0.2, 0.3, 0.4, 0.5]}        
     ],
-    "collectionName": "my_dense_collection"
+    "collectionName": "my_collection"
 }'
 
 ## {"code":0,"cost":0,"data":{"insertCount":2,"insertIds":["453577185629572531","453577185629572532"]}}
@@ -434,7 +515,7 @@ curl --request POST \
 
 基于稠密向量的语义搜索是 Milvus 的核心功能之一，可以根据向量之间的距离快速找到与查询向量最相似的数据。要执行相似性搜索，您需要准备查询向量和搜索参数，然后调用 `search` 方法。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -445,7 +526,7 @@ search_params = {
 query_vector = [0.1, 0.2, 0.3, 0.7]
 
 res = client.search(
-    collection_name="my_dense_collection",
+    collection_name="my_collection",
     data=[query_vector],
     anns_field="dense_vector",
     search_params=search_params,
@@ -472,7 +553,7 @@ searchParams.put("nprobe",10);
 FloatVec queryVector = new FloatVec(new float[]{0.1f, 0.3f, 0.3f, 0.4f});
 
 SearchResp searchR = client.search(SearchReq.builder()
-        .collectionName("my_dense_collection")
+        .collectionName("my_collection")
         .data(Collections.singletonList(queryVector))
         .annsField("dense_vector")
         .searchParams(searchParams)
@@ -495,7 +576,7 @@ System.out.println(searchR.getSearchResults());
 query_vector = [0.1, 0.2, 0.3, 0.7];
 
 client.search({
-    collection_name: my_dense_collection,
+    collection_name: 'my_collection',
     data: query_vector,
     limit: 5,
     output_fields: ['pk'],
@@ -503,6 +584,34 @@ client.search({
         nprobe: 10
     }
 });
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+queryVector := []float32{0.1, 0.2, 0.3, 0.7}
+
+annParam := index.NewCustomAnnParam()
+annParam.WithExtraParam("nprobe", 10)
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
+    "my_collection", // collectionName
+    5,                     // limit
+    []entity.Vector{entity.FloatVector(queryVector)},
+).WithANNSField("dense_vector").
+    WithOutputFields("pk").
+    WithAnnParam(annParam))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+
+for _, resultSet := range resultSets {
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
+    fmt.Println("Pks: ", resultSet.GetColumn("pk").FieldData().GetScalars())
+}
 ```
 
 </TabItem>
@@ -515,7 +624,7 @@ curl --request POST \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
 -d '{
-    "collectionName": "my_dense_collection",
+    "collectionName": "my_collection",
     "data": [
         [0.1, 0.2, 0.3, 0.7]
     ],

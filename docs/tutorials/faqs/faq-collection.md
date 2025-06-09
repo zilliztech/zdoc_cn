@@ -25,6 +25,7 @@ sidebar_position: 3
 - [Collection 加载请求的并发是多少？如何增加并发请求的数量？](#what-is-the-concurrency-for-collection-loading-requests-how-can-i-increase-the-number-of-concurrent-requests)
 - [如何为创建的 Collection 设置存留时间（TTL）属性？](#how-to-set-the-ttl-time-to-live-property-of-a-created-collection)
 - [1 个 Collection 中最多可以添加多少个字段？](#is-there-any-limit-to-the-number-of-fields-i-can-add-in-a-collection)
+- [我可以修改 Collection 的 Shard 数量吗？](#can-i-modify-the-number-of-shards-in-a-collection)
 
 ## 问答
 
@@ -123,3 +124,22 @@ collection.set_properties(properties={"collection.ttl.seconds": 1800})
 ### 1 个 Collection 中最多可以添加多少个字段？ \{#is-there-any-limit-to-the-number-of-fields-i-can-add-in-a-collection}
 
 1 个 Collection 中最多可以添加 64 个字段。
+
+### 我可以修改 Collection 的 Shard 数量吗？ \{#can-i-modify-the-number-of-shards-in-a-collection}
+ 可以。若需修改 Shard 数量，请使用[复制 Collection](./manage-collections-console#create-collection)功能：
+
+1. 进入目标 Collection 的**详情**页面。
+
+1. 在**操作**下拉菜单中选择**复制**。
+
+1. 在弹窗中：
+
+    - 输入新的 Collection 名称
+
+    - 将**复制范围**设置为 **Collection Schema 和数据**
+
+    - 展开**设置**，指定所需的 Shard 数量
+
+    - 点击**复制**
+
+1. 复制的 Collection 创建完成后，请在您的应用代码中切换使用新的 Collection。

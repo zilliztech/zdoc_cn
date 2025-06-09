@@ -2,7 +2,7 @@
 title: "Analyzer 概述 | Cloud"
 slug: /analyzer-overview
 sidebar_label: "Analyzer 概述"
-beta: PUBLIC
+beta: FALSE
 notebook: FALSE
 description: "在文本处理中，Analyzer 是一个关键组件，用于将原始文本转换为结构化、可搜索的格式。每个 Analyzer 通常由两个核心元素组成：分词器（tokenizer）和过滤器（filter）。它们共同将输入文本转换为词元（token），并对这些词元进行优化，以便为高效的索引和检索做好准备。 | Cloud"
 type: origin
@@ -409,7 +409,7 @@ export analyzerParams='{
 
 有关可用过滤器类型及其特定参数的列表，请参阅[过滤器](./analyzer-filters)。  
 
-### 示例使用{#example-use}
+## 使用示例{#example-use}
 
 在本示例中，我们定义了一个集合模式，其中包含一个用于嵌入向量的向量字段和两个用于文本处理功能的 VARCHAR 字段。每个 VARCHAR 字段都配置了自己的 Analyzer 设置，以处理不同的文本处理需求。
 

@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 - 已按照格式准备需要导入的数据。更多详情，请参阅[支持的对象存储](./data-import-storage-options)和[支持的数据格式](./data-import-format-options)。
 
-- 已创建 Collection，且该 Collection 的 Schema 与示例数据集相匹配。已为该 Collection 创建索引，并已加载 Collection。详情请参见[创建 Collection](./manage-collections-sdks)。
+- 已创建 Collection，且该 Collection 的 Schema 与示例数据集相匹配。详情请参见[创建 Collection](./manage-collections-sdks)。
 
 ## 准备数据文件{#prepare-data-files}
 

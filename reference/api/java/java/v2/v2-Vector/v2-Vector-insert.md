@@ -10,10 +10,10 @@ type: docx
 token: P0XRd2Mgfo1uG6xk47icWRd4n6b
 sidebar_position: 4
 keywords: 
-  - Vector search
-  - knn algorithm
-  - HNSW
-  - What is unstructured data
+  - nn search
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
   - zilliz
   - zilliz cloud
   - cloud
@@ -66,6 +66,8 @@ insert(InsertReq.builder()
     </Admonition>
 
     ```java
+    import com.google.gson.JsonObject;
+    
     List<JsonObject> data = new ArrayList<>();
     
     JsonObject dict1 = new JsonObject();
@@ -115,16 +117,31 @@ An **InsertResp** object containing information about the number of inserted ent
 ## Example
 
 ```java
-JsonObject vector = new JsonObject();
+import com.google.gson.JsonObject;
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.vector.request.InsertReq;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Add one row to the collection, the collection has an "id" field
+// and a "vector" field with dimension 2
+JsonObject row = new JsonObject();
 List<Float> vectorList = new ArrayList<>();
 vectorList.add(1.0f);
 vectorList.add(2.0f);
-vector.add("vector", gson.toJsonTree(vectorList));
-vector.addProperty("id", 0L);
+row.add("vector", gson.toJsonTree(vectorList));
+row.addProperty("id", 0L);
 
 InsertReq insertReq = InsertReq.builder()
         .collectionName("test")
-        .data(Collections.singletonList(vector))
+        .data(Collections.singletonList(row))
         .build();
 client.insert(insertReq);
 ```

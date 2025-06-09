@@ -8,12 +8,12 @@ notebook: false
 description: "This operation lists detailed information about a specific collection. | Java | v2"
 type: docx
 token: Lc03dk5YVo8Ilvx4XINcv5KBn9e
-sidebar_position: 9
+sidebar_position: 12
 keywords: 
-  - sentence transformers
-  - Recommender systems
-  - information retrieval
-  - dimension reduction
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud
@@ -110,11 +110,23 @@ A **DescribeCollectionResp** object that contains detailed information about the
 ## Example
 
 ```java
-// get the collection detail
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.collection.request.DescribeCollectionReq;
+import io.milvus.v2.service.collection.response.DescribeCollectionResp;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Get the collection detail
 DescribeCollectionReq describeCollectionReq = DescribeCollectionReq.builder()
         .collectionName("test")
         .build();
 DescribeCollectionResp describeCollectionResp = client.describeCollection(describeCollectionReq);
-/*DescribeCollectionResp(collectionName=test, description=test, numOfPartitions=1, fieldNames=[id, vector], vectorFieldName=[vector], primaryFieldName=id, enableDynamicField=false, autoID=false, collectionSchema=CreateCollectionReq.CollectionSchema(fieldSchemaList=[CreateCollectionReq.FieldSchema(name=id, description=, dataType=Int64, maxLength=65535, dimension=null, isPrimaryKey=true, isPartitionKey=false, autoID=false, elementType=null, maxCapacity=null), CreateCollectionReq.FieldSchema(name=vector, description=, dataType=FloatVector, maxLength=65535, dimension=2, isPrimaryKey=false, isPartitionKey=false, autoID=false, elementType=null, maxCapacity=null)]), createTime=0)*/
 
 ```

@@ -55,7 +55,7 @@ alter_collection_field(
 
 - **field_params** (*dict*) -
 
-    The field parameters to change. The properties not mentioned remains unchanged. Possible parameters vary with the field type. 
+    The field parameters to change. The properties not mentioned remain unchanged. Possible parameters vary with the field type. 
 
     - **max_length** (*int*) -
 
@@ -71,7 +71,7 @@ alter_collection_field(
 
     - **mmap_enabled** (*bool*) -
 
-        Whether Milvus maps the field data into memory instead of fully loading it. For details settings, refer to MMap-enabled Data Storage.
+        Whether Milvus maps the field data into memory instead of fully loading it. For details, refer to MMap-enabled Data Storage.
 
 - **timeout** (*Optional[float]*) - 
 

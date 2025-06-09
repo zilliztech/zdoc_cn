@@ -7,7 +7,7 @@ notebook: FALSE
 description: "当 Collection 不再使用时，可以考虑删除 Collection。 | Cloud"
 type: origin
 token: OrvrwaSgFiNT5EkYZUvc8yWVnHQ
-sidebar_position: 9
+sidebar_position: 10
 keywords: 
   - 向量数据库
   - zilliz
@@ -41,7 +41,7 @@ client = MilvusClient(
 )
 
 client.drop_collection(
-    collection_name="customized_setup_2"
+    collection_name="my_collection"
 )
 ```
 
@@ -66,7 +66,7 @@ ConnectConfig connectConfig = ConnectConfig.builder()
 MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
 DropCollectionReq dropQuickSetupParam = DropCollectionReq.builder()
-        .collectionName("customized_setup_2")
+        .collectionName("my_collection")
         .build();
 
 client.dropCollection(dropQuickSetupParam);
@@ -85,7 +85,7 @@ const client = new MilvusClient({address, token});
 
 // 10. Drop the collection
 res = await client.dropCollection({
-    collection_name: "customized_setup_2"
+    collection_name: "my_collection"
 })
 
 console.log(res.error_code)
@@ -115,18 +115,19 @@ defer cancel()
 milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 token := "YOUR_CLUSTER_TOKEN"
 
-cli, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
     APIKey:  token,
 })
 if err != nil {
-    log.Fatal("failed to connect to milvus server: ", err.Error())
+    fmt.Println(err.Error())
+    // handle error
 }
+defer client.Close(ctx)
 
-defer cli.Close(ctx)
-
-err = cli.DropCollection(ctx, milvusclient.NewDropCollectionOption("customized_setup_2"))
+err = client.DropCollection(ctx, milvusclient.NewDropCollectionOption("my_collection"))
 if err != nil {
+    fmt.Println(err.Error())
     // handle error
 }
 ```
@@ -144,7 +145,7 @@ curl --request POST \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
 -d '{
-    "collectionName": "customized_setup_2"
+    "collectionName": "my_collection"
 }'
 
 # {
@@ -155,3 +156,4 @@ curl --request POST \
 
 </TabItem>
 </Tabs>
+

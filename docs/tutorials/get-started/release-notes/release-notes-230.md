@@ -7,7 +7,7 @@ notebook: FALSE
 description: "我们很高兴地宣布 Zilliz Cloud 2.3.0 的发布。此版本引入了一系列创新 Beta 特性和功能改进。 | Cloud"
 type: origin
 token: BuuSwsbhEiIHDJkB9YSc63xAnrh
-sidebar_position: 11
+sidebar_position: 13
 keywords: 
   - 向量数据库
   - zilliz
@@ -46,7 +46,7 @@ import Admonition from '@theme/Admonition';
 
 - 访问控制
 
-    通过 [API 密钥](./manage-api-keys)或[用户名密码身份验证](./cluster-credentials-console)安全地访问专用集群和无服务器实例。
+    通过 [API 密钥](./manage-api-keys)或[用户名密码身份验证](./cluster-credentials)安全地访问专用集群和无服务器实例。
 
 - 返回原始向量
 

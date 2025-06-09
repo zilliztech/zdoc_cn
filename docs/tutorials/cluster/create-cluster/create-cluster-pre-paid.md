@@ -67,7 +67,7 @@ import Admonition from '@theme/Admonition';
        </tr>
        <tr>
          <td><p><strong>购买时长</strong></p></td>
-         <td><p>请选择包年包月集群的购买时长。</p><ul><li><p>1 年：享受 7 折优惠</p></li><li><p>3 年：享受 5 折优惠</p></li></ul></td>
+         <td><p>请选择包年包月集群的购买时长。</p><p>如果您选择了亚马逊云科技作为云服务提供商，您仅可以选择 1 年作为购买时长。如需长期包年订阅，请<a href="https://zilliz.com.cn/contact-sales">联系销售</a>获取报价。</p></td>
        </tr>
        <tr>
          <td><p><strong>CU 类型和规格</strong></p></td>
@@ -188,13 +188,13 @@ import Admonition from '@theme/Admonition';
 
     包年包月集群有部分服务对应的计费项是按量付费的，例如存储、备份服务。例如，您购买了包年包月集群后，使用备份功能时仍将产生备份存储的按量付费账单。
 
-- **如何从从按量计费集群转换为包年包月集群？**
+- **如何从按量计费集群转换为包年包月集群？**
 
     您可以通过迁移操作来完成转换。以下为具体操作步骤：
 
     1. [创建新的包年包月集群](./create-cluster-pre-paid#create-annual-subscription-cluster)并支付订单。等待包年包月集群创建成功，状态转为运行中。
 
-    1. 通过 Zilliz Cloud [跨集群迁移](./migrate-between-clusters)，将按量计费集群中的数据迁移到新创建的包年包月集群中。
+    1. 通过 Zilliz Cloud [跨集群迁移](./offline-migration)，将按量计费集群中的数据迁移到新创建的包年包月集群中。
 
         **建议您在按量计费集群停写时进行迁移操作，避免两个集群间数据不一致。**
 

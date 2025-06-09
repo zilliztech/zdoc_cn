@@ -61,6 +61,14 @@ import Admonition from '@theme/Admonition';
 
 ![change_password_cn](/img/change_password_cn.png)
 
+您的密码必须符合以下要求：
+
+- 长度为 8 至 128 个字符
+
+- 包含大写字母（A–Z）、小写字母（a–z）和数字（0–9）
+
+- 至少包含一个特殊字符（如 !@#$%^&*）
+
 ## 开启或关闭 MFA{#enable-and-disable-mfa}
 
 更多详情，请见[管理 MFA](./multi-factor-auth)。
@@ -75,7 +83,7 @@ import Admonition from '@theme/Admonition';
 
 ### 前提条件{#before-you-start}
 
-- 如果您是项目唯一的项目管理员且项目含有集群，请先[删除项目集群](./manage-cluster#drop-cluster)。
+- 如果您是项目唯一的项目管理员且项目含有集群，请先[删除项目集群](./manage-cluster)。
 
 - 如果您是组织唯一的组织管理员，请先[删除组织](./organization-settings#delete-organization)。
 
@@ -85,9 +93,9 @@ import Admonition from '@theme/Admonition';
 
 1. 在账号设置弹窗中，点击底部**删除账号**按钮。
 
-1. 在**删除账号**弹窗中，再次输入您的账号。点击获取验证码，并输入发送至您邮箱中的验证码。阅读 3 条注意事项后并勾选。点击**下一步**。
+1. 提交反馈并点击**继续**按钮。
 
-1. 填写反馈问卷，点击按钮提交反馈并删除账号。
+1. 在**删除账号**弹窗中，再次输入您的账号。点击获取验证码，并输入发送至您邮箱中的验证码。阅读注意事项后并勾选。点击**下一步。**
 
 1. 账号成功删除后，您将收到邮件提醒。
 

@@ -8,12 +8,12 @@ notebook: false
 description: "This operation drops a collection. | Java | v2"
 type: docx
 token: PsAGd1CNqosvirxDJ5ncIHudnSg
-sidebar_position: 11
+sidebar_position: 14
 keywords: 
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
-  - cosine distance
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
   - zilliz
   - zilliz cloud
   - cloud
@@ -76,15 +76,22 @@ dropCollection(DropCollectionReq.builder()
 ## Example
 
 ```java
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.collection.request.DropCollectionReq;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
 // drop a collection: test
 DropCollectionReq dropCollectionReq = DropCollectionReq.builder()
         .collectionName("test")
         .build();
 client.dropCollection(dropCollectionReq);
-// check if dropped
-client.hasCollection(HasCollectionReq.builder()
-        .collectionName("test")
-        .build());
-// false
 ```
 

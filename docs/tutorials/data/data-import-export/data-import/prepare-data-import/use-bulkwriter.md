@@ -317,14 +317,16 @@ PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建
     ACCESS_KEY="bucket-ak"
     SECRET_KEY="bucket-sk"
     BUCKET_NAME="a-bucket"
+    REGION_NAME="region-name"
     
     # Connections parameters to access the remote bucket
     conn = RemoteBulkWriter.S3ConnectParam(
-        endpoint="s3.amazonaws.com", # use 'storage.googleapis.com' for Google Cloud Storage
+        endpoint="oss-cn-beijing.aliyuncs.com",
         access_key=ACCESS_KEY,
         secret_key=SECRET_KEY,
         bucket_name=BUCKET_NAME,
-        secure=True
+        secure=True,
+        region=REGION_NAME
     )
     
     from pymilvus.bulk_writer import BulkFileType
@@ -353,13 +355,19 @@ PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建
     String ACCESS_KEY = "";
     String SECRET_KEY = "";
     String BUCKET_NAME = "";
+
+    // Enumeration can refer to CloudStorage
+    String CLOUD_NAME = "";
+    String REGION_NAME = "";
     
     // Create a remote bucket writer.
     StorageConnectParam storageConnectParam = S3ConnectParam.newBuilder()
-            .withEndpoint("storage.googleapis.com")
+            .withEndpoint("oss-cn-beijing.aliyuncs.com")
             .withBucketName(BUCKET_NAME)
             .withAccessKey(ACCESS_KEY)
             .withSecretKey(SECRET_KEY)
+            .withCloudName(CLOUD_NAME)
+            .withRegion(REGION_NAME)
             .build();
     
     ```
@@ -367,7 +375,7 @@ PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建
     </TabItem>
     </Tabs>
 
-    在连接参数准备就绪后，就可以在 RemoteBulkWriter 中引用了。
+    值得注意的是，endpoint 参数的取值根据对象存储桶所在地域的不同可能会发生变化。具体可以参考[支持的对象存储](./data-import-storage-options)。在连接参数准备就绪后，就可以在 RemoteBulkWriter 中引用了。
 
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
     <TabItem value='python'>

@@ -38,7 +38,7 @@ import TabItem from '@theme/TabItem';
 
 - 请确保您创建部署在阿里云（杭州）的集群。
 
-- 同一项目下，您可最多创建 100 个同一类型的 Pipelines。更多详情，请参考[使用限制](./limits#number-of-pipelines)。
+- 同一项目下，您可最多创建 100 个同一类型的 Pipelines。更多详情，请参考[使用限制](./limits)。
 
 ## 摄取文档数据{#ingest-doc-data}
 
