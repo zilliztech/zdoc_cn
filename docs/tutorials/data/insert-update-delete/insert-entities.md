@@ -39,7 +39,7 @@ Collection 中的 Entity 是指共享相同字段集的数据记录。存储在�
 
 在插入数据前，请按照 Schema 将数据组织成一个字典列表，每个字典代表一个 Entity，包含 Schema 中定义的所有字段。如果 Collection 启用了动态字段，每个字典还可以携带 Schema 中没有定义的字段。
 
-本节将演示如何向使用[最简建表方式](./quick-setup-collections#quick-setup)创建的 Collection 中插入 Entity。通过这种方式创建的 Collection 仅有两个字段，字段名分别为 **id** 和 **vector**。另外，该 Collection 还启用了动态字段，因此示例代码中的 Entity 均携带了一个 Schema 中未定义的字段  **color**。 
+本节将演示如何向使用最简建表方式创建的 Collection 中插入 Entity。通过这种方式创建的 Collection 仅有两个字段，字段名分别为 **id** 和 **vector**。另外，该 Collection 还启用了动态字段，因此示例代码中的 Entity 均携带了一个 Schema 中未定义的字段  **color**。 
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>

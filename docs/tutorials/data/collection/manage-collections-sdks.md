@@ -607,8 +607,6 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-Zilliz Cloud 还提供基于默认设置的快速创建 Collection 的方法。更多内容，可参考[快速创建 Collection](./quick-setup-collections)。
-
 ## 设置 Collection{#set-collection-properties}
 
 你还可以在创建 Collection 时对 Collection 进行设置，使其更加符合业务需要。目前，Zilliz Cloud 支持在创建 Collection 时指定如下设置：

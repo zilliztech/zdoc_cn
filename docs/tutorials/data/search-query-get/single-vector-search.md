@@ -61,7 +61,7 @@ ANN Search 依赖预先创建的索引。选择不同的索引算法会影响搜
 
 在 ANN Search 中，单路查询是指在 Search 请求中携带一个查询向量，由 Zilliz Cloud 通过预先建立的索引和请求中携带的相似度类型快速找到与查询向量最相近的 topK 个向量。
 
-本节将演示如何在使用[最简建表方式](./quick-setup-collections#quick-setup)创建的 Collection 中进行单路查询。示例代码中的 Search 请示携带了一个查询向量，要求使用内积（IP）算法计算查询向量和目标向量间的相似度，并返回最相近的 3 个向量。
+本节将演示如何在使用最简建表方式创建的 Collection 中进行单路查询。示例代码中的 Search 请示携带了一个查询向量，要求使用内积（IP）算法计算查询向量和目标向量间的相似度，并返回最相近的 3 个向量。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>

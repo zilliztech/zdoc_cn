@@ -43,7 +43,7 @@ Upsert 操作结合了数据更新和插入的操作。Zilliz Cloud 通过判断
 
 ## 向 Collection 中 Upsert Entity{#upsert-entity-in-a-collection}
 
-本节将演示如何向使用[最简建表方式](./quick-setup-collections#quick-setup)创建的 Collection 中Upsert Entity。通过这种方式创建的 Collection 仅有两个字段，分别名为 **id** 和 **vector**。另外，该 Collection 还启用了动态字段，因此示例代码中的 Entity 均携带了一个 Schema 中未定义的字段  **color**。 
+本节将演示如何向使用最简建表方式创建的 Collection 中Upsert Entity。通过这种方式创建的 Collection 仅有两个字段，分别名为 **id** 和 **vector**。另外，该 Collection 还启用了动态字段，因此示例代码中的 Entity 均携带了一个 Schema 中未定义的字段  **color**。 
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
