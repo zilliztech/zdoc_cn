@@ -145,10 +145,12 @@ export const isControlPlane = (endpoint) => {
         endpoint.includes('restore') ||
         endpoint.includes('usage') ||
         endpoint.includes('invoice') ||
-        endpoint.includes('job')
+        endpoint.includes('job') ||
+        endpoint.includes('alert')
 }
 
 export const isBeta = (endpoint) => {
     return endpoint.includes('usage') ||
-        endpoint.includes('invoice')
+        endpoint.includes('invoice') ||
+        endpoint.includes('alert')
 }    
