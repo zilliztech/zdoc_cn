@@ -288,44 +288,52 @@ const config = {
         }
       }
     ],
-    ['./plugins/lark-docs',
-    {
+    ['./plugins/lark-docs', {
       guides: {
-        root: 'XyeFwdx6kiK9A6kq3yIcLNdEnDd',
-        base: 'MQI8b662gabapmsTl7ZcnTExnSc',
+        root: 'OUWXw5c4gia34ZkQUcEcMFbWn6s',
+        base: 'PnsobATKVayIDFs6hhQcChlGnje',
         sourceType: 'wiki',
         displayedSidebar: 'default',
         docSourceDir: './plugins/lark-docs/meta/sources/guides',
         targets: {
+          milvus: {
+            outputDir: 'milvus/guides/docs',
+            imageDir: 'milvus/guides/images'
+          },
           zilliz: {
             saas: {
               outputDir: 'docs/tutorials',
               imageDir: 'static/img',
             },
             paas: {
-              outputDir: 'onpremise/docs/vdb',
-              imageDir: 'static/byoc',
-            }
-          },
-          milvus: {
-            outputDir: 'milvus/guides/docs',
-            imageDir: 'milvus/guides/images'
+              outputDir: 'versioned_docs/version-byoc/tutorials',
+              imageDir: 'static/img'
+            } 
           }
         }
       },
-      onpremise: {
-        root: 'PXwawNqh0i40H4krMYlc6qgZnKe',
-        base: 'V7t6bcQWiaDL99sgUkwcEIJ0nUb',
+      guidesJapanese: {
+        root: 'KSvxw0h8LiXtIdkpAnCcrl7cnio',
+        base: 'LkxfbrY6sa5jQ4sHquEcMqOsnCe',
         sourceType: 'wiki',
-        displayedSidebar: 'onPremiseSidebar',
-        robots: 'noindex',
-        docSourceDir: './plugins/lark-docs/meta/sources/onpremise',
+        displayedSidebar: 'default',
+        docSourceDir: './plugins/lark-docs/meta/sources/guidesJapanese',
         targets: {
-          paas: {
-            outputDir: 'onpremise/docs/ops',
-            imageDir: 'static/img'
+          milvus: {
+            outputDir: 'milvus/guides/docs',
+            imageDir: 'milvus/guides/images'
+          },
+          zilliz: {
+            saas: {
+              outputDir: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials',
+              imageDir: 'static/img',
+            },
+            paas: {
+              outputDir: 'i18n/ja-JP/docusaurus-plugin-content-docs/version-byoc/tutorials',
+              imageDir: 'static/img'
+            } 
           }
-        }
+        }        
       },
       python: {
         root: 'PTJzfzI0ulKGjwdUsxQcFxfJn6b',
@@ -351,9 +359,9 @@ const config = {
         // root: 'wikcnu8oU4VVbRFKKLjDH5aCIIh',
         // base: 'XJ2RbEDgTakJ80sfUAPcLG4Tnug',
         sourceType: 'onePager',
-        version: 'v2.3.x',
+        version: 'v2.4.x',
         displayedSidebar: 'javaSidebar',
-        docSourceDir: './plugins/lark-docs/meta/sources/java/v2.3.x/v1',
+        docSourceDir: './plugins/lark-docs/meta/sources/java/v2.4.x/v1',
         targets: {
           milvus: {
             outputDir: 'milvus/reference/java/docs/v1',
@@ -368,13 +376,15 @@ const config = {
       javaV2: {
         root: 'Sg3EfIgVtlTkeBdtguJchE9ynne',
         base: 'WqHJb3zimaxXjssk4Kic4GEDnte',
+        // root: 'GYfPfBbdglDhh5dzLH3cYaV1nDf',
+        // base: 'Bp72bJ9wEazV1SsA30lcsuJgnfe',
         sourceType: 'drive',
         version: 'v2.4.x',
         displayedSidebar: 'javaSidebar',
         docSourceDir: './plugins/lark-docs/meta/sources/java/v2.4.x/v2',
         targets: {
           milvus: {
-            outputDir: 'milvus/reference/java/docs/v2',
+            outputDir: 'milvus/reference/java/docs/v2/v2.4.x',
             imageDir: 'milvus/reference/java/images'
           },
           zilliz: {
@@ -387,9 +397,9 @@ const config = {
         root: 'Vg1kfluyll0h7MdlUMaciXfEnZd',
         base: 'DVVobtXQMamuLqsQij5c29nVn3c',
         sourceType: 'drive',
-        version: 'v2.3.x',
+        version: 'v2.4.x',
         displayedSidebar: 'nodeSidebar',
-        docSourceDir: './plugins/lark-docs/meta/sources/node/v2.3.x',
+        docSourceDir: './plugins/lark-docs/meta/sources/node/v2.4.x',
         targets: {
           milvus: {
             outputDir: 'milvus/reference/node/docs/v2.4.x',
@@ -455,16 +465,34 @@ const config = {
           }
         }
       },
+      pymilvus26: {
+        root: 'IaWgf4osAlpdwqdVIclct97wnCg',
+        base: 'J3Qzbv7AWazzivsv7vqcqlGCnFc',
+        sourceType: 'drive',
+        displayedSidebar: 'pythonSidebar',
+        docSourceDir: './plugins/lark-docs/meta/sources/python/v2.6.x',
+        fallbackSourceDir: './plugins/lark-docs/meta/sources/python/v2.5.x',
+        targets: {
+          milvus: {
+            outputDir: 'milvus/reference/python/docs/v2.6.x',
+            imageDir: 'milvus/reference/python/images'
+          },
+          zilliz: {
+            outputDir: 'reference/api/python/python',
+            imageDir: 'static/img',
+          }
+        }
+      },
       javaV225: {
         root: 'LJ6MfN5wzlHjz8dB642cjUh8nqq',
         base: 'Hsq1bRcqraeQW0sGFJbcI3YIn3d',
         sourceType: 'drive',
         displayedSidebar: 'javaSidebar',
-        docSourceDir: './plugins/lark-docs/meta/sources/java/v2.5.x',
+        docSourceDir: './plugins/lark-docs/meta/sources/java/v2.5.x/v2',
         fallbackSourceDir: './plugins/lark-docs/meta/sources/java/v2.4.x/v2',
         targets: {
           milvus: {
-            outputDir: 'milvus/reference/java/docs/v2.5.x',
+            outputDir: 'milvus/reference/java/docs/v2/v2.5.x',
             imageDir: 'milvus/reference/java/images'
           },
           zilliz: {
@@ -479,7 +507,7 @@ const config = {
         sourceType: 'drive',
         displayedSidebar: 'nodeSidebar',
         docSourceDir: './plugins/lark-docs/meta/sources/node/v2.5.x',
-        fallbackSourceDir: './plugins/lark-docs/meta/sources/node/v2.3.x',
+        fallbackSourceDir: './plugins/lark-docs/meta/sources/node/v2.4.x',
         targets: {
           milvus: {
             outputDir: 'milvus/reference/node/docs/v2.5.x',

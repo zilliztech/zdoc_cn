@@ -1,5 +1,6 @@
 const fs = require('node:fs')
 const node_path = require('node:path')
+const slugify = require('slugify')
 
 class larkUtils {
     constructor() {
@@ -28,6 +29,7 @@ class larkUtils {
     }
 
     pre_process_file_paths(outputDir) {
+        // remove all files in the output directory
         const paths = fs.readdirSync(outputDir, {recursive: true})
         const folders = paths.filter(path => fs.statSync(`${outputDir}/${path}`).isDirectory())   
 
@@ -37,6 +39,7 @@ class larkUtils {
     }
 
     post_process_file_paths(outputDir) {
+        // remove empty folders
         const paths = fs.readdirSync(outputDir, {recursive: true})
         const folders = paths.filter(path => fs.statSync(`${outputDir}/${path}`).isDirectory())
 
@@ -46,6 +49,52 @@ class larkUtils {
             if (files.length === 1 && files[0] === folder.split('/').slice(-1)[0] + '.md') {
                 fs.rmSync(`${outputDir}/${folder}`, {recursive: true, force: true})
             }   
+        }
+
+        // // remove unnecessary index files
+        // const index_files = fs.readdirSync(outputDir, {recursive: true})
+        //     .filter(path => fs.statSync(`${outputDir}/${path}`).isDirectory() && fs.existsSync(`${outputDir}/${path}/${path}.md`))
+            
+        // for (const index_file of index_files) {
+        //     const index_path = `${outputDir}/${index_file}/${index_file}.md`
+        //     fs.rmSync(index_path, { force: true })
+        // }
+
+        // check broken links and anchors
+        const mds = fs.readdirSync(outputDir, {recursive: true}).filter(path => path.endsWith('.md'))
+        const broken_links = []
+        const broken_anchors = []
+
+        for (const md of mds) {
+            const content = fs.readFileSync(`${outputDir}/${md}`, {encoding: 'utf-8', flag: 'r'})
+            
+            var regex = new RegExp(/\[.*?\]\(null\)/g)
+            var matches = [... content.matchAll(regex)]
+            if (matches.length > 0) {
+                broken_links.push({
+                    file: `${outputDir}/${md}`,
+                    links: matches.map(match => match[0])
+                })
+            }
+
+            regex = new RegExp(/#\)/g)
+            matches = [... content.matchAll(regex)]
+            if (matches.length > 0) {
+                broken_anchors.push({
+                    file: `${outputDir}/${md}`,
+                    anchors: matches.map(match => match[0])
+                })
+            }
+        }
+
+        if (broken_links.length > 0) {
+            console.log('Broken links')
+            console.log(JSON.stringify(broken_links, null, 2))            
+        }
+
+        if (broken_anchors.length > 0) {
+            console.log('Broken anchors')
+            console.log(JSON.stringify(broken_anchors, null, 2))
         }
     }
 
@@ -143,7 +192,7 @@ class larkUtils {
             matches.forEach(match => {
                 const label = match[1]
                 const path = match[2]
-                var link = path.startsWith('http') ? path : this.__convert_link(file, label, path, outputDir)
+                var link = path.startsWith('http') ? path : this.__convert_link(file, path, outputDir)
                 content = content.replace(match[0], `[${label}](${link})`)
             })
 
@@ -160,9 +209,13 @@ class larkUtils {
 
         // remove index files
         const folders = fs.readdirSync(outputDir, {recursive: true}).filter(path => fs.statSync(`${outputDir}/${path}`).isDirectory())
+
         for (const folder of folders) {
-            if (fs.existsSync(`${outputDir}/${folder}/${folder}.md`)) {
-                fs.rmSync(`${outputDir}/${folder}/${folder}.md`, {recursive: true, force: true})
+            if (fs.existsSync(`${outputDir}/${folder}/${folder.split('/').slice(-1)[0]}.md`)) {
+                const content = fs.readFileSync(`${outputDir}/${folder}/${folder.split('/').slice(-1)[0]}.md`, {encoding: 'utf-8', flag: 'r'})
+                if (content.split('\n').length < 7) {
+                    fs.rmSync(`${outputDir}/${folder}/${folder.split('/').slice(-1)[0]}.md`, {recursive: true, force: true})
+                }
             }
         }
     }
@@ -183,21 +236,18 @@ class larkUtils {
         })
 
         var sourceRoot = sources.find(source => !source.type)
-        var fallbackRoot = fallbackSources.find(fallback => !fallback.type)
+        // find the fallback root by name
+        var fallbackRoot = fallbackSources.find(fallback => !fallback.type && fallbackSourceDir.split('/').includes(fallback.name))
 
-        if (sourceRoot && fallbackRoot) {
+        if (sourceRoot.children.length > 0 && fallbackRoot.children.length > 0) {
+
             fallbackRoot.children.forEach(child => {
                 var pair = sourceRoot.children.find(s => s.name === child.name)
 
                 if (!pair) {
                     child.parent_token = sourceRoot.token
                     sourceRoot.children.push(child)
-
-                    fallbackSources.forEach(fb => {
-                        if (fb.token === child.token) {
-                            fb.parent_token = sourceRoot.token
-                        }
-                    })                    
+                    // fallbackSources.find(fb => fb.token === child.token).parent_token = sourceRoot.token
                 }
             })
 
@@ -228,12 +278,7 @@ class larkUtils {
                             child.token = pair.token
                         } else {
                             child.parent_token = source.token
-
-                            fallbackSources.forEach(fb => {
-                                if (fb.token === child.token) {
-                                    fb.parent_token = source.token
-                                }
-                            })
+                            // fallbackSources.find(fb => fb.token === child.token).parent_token = source.token
                         }
                     })
 
@@ -272,7 +317,7 @@ class larkUtils {
         })
     }
 
-    __convert_link(file, label, path, outputDir) {
+    __convert_link(file, path, outputDir) {
         const folders = fs.readdirSync(outputDir, {recursive: true}).filter(path => fs.statSync(`${outputDir}/${path}`).isDirectory())
 
         var parent = path.slice(2, path.lastIndexOf('-'))
@@ -287,8 +332,11 @@ class larkUtils {
 
             if (fs.existsSync(target) && fs.statSync(target).isDirectory()) {
                 target = `${target}/${path.slice(2).replace(`#${section}`, '')}.md`
-            } else if (fs.statSync(`${target}.md`)) {
-                target = `${target}.md`
+            // } else if (fs.statSync(`${target}.md`).isFile()) {
+            //     target = `${target}.md`
+            } else if (fs.readdirSync(`${outputDir}/${folder}`).find(file => file.startsWith(path.slice(2).replace(`#${section}`, '')))) {
+                target = fs.readdirSync(`${outputDir}/${folder}`).find(file => file.startsWith(path.slice(2).replace(`#${section}`, '')))
+                target = `${outputDir}/${folder}/${target}`
             } else {
                 throw new Error(`Cannot find ${path} in ${outputDir}`)
             }
@@ -300,7 +348,25 @@ class larkUtils {
         }
 
         if (section) {
-            rel_path += '#' + section
+            target = fs.readFileSync(target, {encoding: 'utf-8', flag: 'r'})
+            const headings = target.match(/#{1,6} (.*)/g)
+
+            if (headings) {
+                const index = headings.findIndex(heading => {
+                    heading = heading.split(' ').slice(-1)[0].toLowerCase().split('{#')[0]
+                    return slugify(heading, {strict: true, lower: true}) === section
+                })
+
+                if (index > -1) {
+                    var slug = headings[index].split(' ').slice(-1)[0].split('{#')[0]
+                    var slug = slugify(slug, {strict: true})
+                    rel_path += '#' + slug
+                } else {
+                    throw new Error(`Cannot find ${section}`)
+                }
+            } else {
+                throw new Error(`Cannot find headings in ${target}`)
+            }
         }
 
         return rel_path

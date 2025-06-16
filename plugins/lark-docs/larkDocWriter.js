@@ -452,7 +452,7 @@ class larkDocWriter {
         })).json()).data.items
     }
 
-    async __is_to_publish (title, slug) {
+    async __is_to_publish (title, slug, token=null) {
         if (!this.records) {
             await this.__listed_docs()
         }
@@ -460,8 +460,7 @@ class larkDocWriter {
         const result = this.records.filter(record => {
             const record_slug = record["fields"]["Slug"] instanceof Array ? record["fields"]["Slug"][0].text : record["fields"]["Slug"]
 
-            if (record["fields"]["Docs"] && record["fields"]["Docs"]["text"] === title && record_slug == slug && record["fields"]["Targets"] &&
-                record["fields"]["Progress"] && (record["fields"]["Progress"] === "初稿" || record["fields"]["Progress"] === "发布" || record["fields"]["Progress"] === "Draft" || record["fields"]["Progress"] === "Published")) {
+            if (((record["fields"]["Docs"] && record["fields"]["Docs"]["text"] === title && record_slug == slug) || record["fields"]["Docs"]["link"].endsWith(token)) && record["fields"]["Targets"] && record["fields"]["Progress"] && (record["fields"]["Progress"] === "初稿" || record["fields"]["Progress"] === "发布" || record["fields"]["Progress"] === "Draft" || record["fields"]["Progress"] === "Published")) {
 
                 const targets = record["fields"]["Targets"].map(item => item.trim().toLowerCase())
 
