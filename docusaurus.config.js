@@ -290,50 +290,41 @@ const config = {
     ],
     ['./plugins/lark-docs', {
       guides: {
-        root: 'OUWXw5c4gia34ZkQUcEcMFbWn6s',
-        base: 'PnsobATKVayIDFs6hhQcChlGnje',
+        root: 'XyeFwdx6kiK9A6kq3yIcLNdEnDd',
+        base: 'MQI8b662gabapmsTl7ZcnTExnSc',
         sourceType: 'wiki',
         displayedSidebar: 'default',
         docSourceDir: './plugins/lark-docs/meta/sources/guides',
         targets: {
-          milvus: {
-            outputDir: 'milvus/guides/docs',
-            imageDir: 'milvus/guides/images'
-          },
           zilliz: {
             saas: {
               outputDir: 'docs/tutorials',
               imageDir: 'static/img',
             },
             paas: {
-              outputDir: 'versioned_docs/version-byoc/tutorials',
-              imageDir: 'static/img'
-            } 
-          }
-        }
-      },
-      guidesJapanese: {
-        root: 'KSvxw0h8LiXtIdkpAnCcrl7cnio',
-        base: 'LkxfbrY6sa5jQ4sHquEcMqOsnCe',
-        sourceType: 'wiki',
-        displayedSidebar: 'default',
-        docSourceDir: './plugins/lark-docs/meta/sources/guidesJapanese',
-        targets: {
+              outputDir: 'onpremise/docs/vdb',
+              imageDir: 'static/byoc',
+            }
+          },
           milvus: {
             outputDir: 'milvus/guides/docs',
             imageDir: 'milvus/guides/images'
-          },
-          zilliz: {
-            saas: {
-              outputDir: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials',
-              imageDir: 'static/img',
-            },
-            paas: {
-              outputDir: 'i18n/ja-JP/docusaurus-plugin-content-docs/version-byoc/tutorials',
-              imageDir: 'static/img'
-            } 
           }
-        }        
+        }
+      },
+      onpremise: {
+        root: 'PXwawNqh0i40H4krMYlc6qgZnKe',
+        base: 'V7t6bcQWiaDL99sgUkwcEIJ0nUb',
+        sourceType: 'wiki',
+        displayedSidebar: 'onPremiseSidebar',
+        robots: 'noindex',
+        docSourceDir: './plugins/lark-docs/meta/sources/onpremise',
+        targets: {
+          paas: {
+            outputDir: 'onpremise/docs/ops',
+            imageDir: 'static/img'
+          }
+        }
       },
       python: {
         root: 'PTJzfzI0ulKGjwdUsxQcFxfJn6b',
