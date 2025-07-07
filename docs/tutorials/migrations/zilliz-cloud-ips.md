@@ -73,6 +73,16 @@ Zilliz Cloud 使用一组固定的 IP 地址从您的数据源中拉取数据，
      <td><p>华南1（深圳）</p></td>
      <td><p><code>47.107.39.14</code></p></td>
    </tr>
+   <tr>
+     <td><p>cn-shanghai</p></td>
+     <td><p>华东2（上海）</p></td>
+     <td><p><code>47.117.150.202</code></p></td>
+   </tr>
+   <tr>
+     <td><p>us-east</p></td>
+     <td><p>美国（弗吉尼亚）</p></td>
+     <td><p><code>47.253.55.20</code></p></td>
+   </tr>
 </table>
 
 ### 腾讯云
