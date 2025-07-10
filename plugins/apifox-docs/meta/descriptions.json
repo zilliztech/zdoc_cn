@@ -146,6 +146,10 @@
         "description": "本系列 API 提供了获取 Zilliz Cloud 集群指标和警报的相关接口。"
     },
     {
+        "name": "extract-load-and-transform-v2",
+        "description": "本系列 API 提供了提取、加载和转换数据的相关接口。"
+    },
+    {
         "name": "stage-v2",
         "description": "本系列 APIs 提供了管理 Zilliz Cloud Stage 的相关接口。"
     }

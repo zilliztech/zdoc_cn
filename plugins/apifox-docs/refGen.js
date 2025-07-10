@@ -38,7 +38,7 @@ class refGen {
         const sidebar_position = idx; idx++;
         const page_title = lang === "zh-CN" ? specification["x-i18n"][lang].summary : specification.summary
         const page_excerpt = this.__filter_content(lang === "zh-CN" ? specification["x-i18n"][lang].description : specification.description, target)
-        var page_parent = parents.filter(x => x === specification.tags[0])[0].replace("&", "and").split(' ').join('-').replace(/\(|\)/g, '').toLowerCase()
+        var page_parent = parents.filter(x => x === specification.tags[0])[0].replace("&", "and").split(' ').join('-').replace(/\(|\)|,/g, '').toLowerCase()
         if (target === 'milvus') {
           const descriptions = JSON.parse(fs.readFileSync('plugins/apifox-docs/meta/descriptions.json', 'utf-8'))
           const name = descriptions.filter(x => x.name === page_parent)[0]?.milvus?.name
@@ -93,7 +93,7 @@ class refGen {
     for (const group of Object.keys(specifications.tags)) {
       if (specifications.tags[group]['x-include-target'] && !(specifications.tags[group]['x-include-target']?.includes(target))) continue;
 
-      const slug = specifications.tags[group].name.replace("&", "and").split(' ').join('-').replace(/\(|\)/g, '').toLowerCase()
+      const slug = specifications.tags[group].name.replace("&", "and").split(' ').join('-').replace(/\(|\)|,/g, '').toLowerCase()
       const version = slug.includes('v2') ? 'v2' : 'v1'
       var upper_folder = slug.startsWith('cloud') || slug.startsWith('cluster') || slug.startsWith('import') || slug.startsWith('pipeline') || slug.includes('backup') || slug.includes('restore') || slug.includes('invoices') || slug.includes('usage') || slug.includes('metrics') || slug.includes('extract') || slug.includes('stage') ? 'control-plane' : 'data-plane'
       if (target === 'milvus') {
@@ -164,7 +164,7 @@ class refGen {
       const titles = JSON.parse(fs.readFileSync(`plugins/apifox-docs/meta/titles.json`, 'utf-8'))
       page_slug = titles[page_title]
     } else {
-      page_slug = page_title.replace("&", "and").split(' ').join('-').replace(/\(|\)/g, '').toLowerCase()
+      page_slug = page_title.replace("&", "and").split(' ').join('-').replace(/|,/g, '').toLowerCase()
     }
 
     if (target === 'milvus') {
