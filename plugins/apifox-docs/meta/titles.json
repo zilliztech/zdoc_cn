@@ -113,5 +113,9 @@
     "查看告警规则列表": "list-alert-rules",
     "创建告警规则": "create-alert-rule",
     "更新告警规则": "update-alert-rule",
-    "删除告警规则": "delete-alert-rule"
+    "删除告警规则": "delete-alert-rule",
+    "合并数据": "merge-data",
+    "创建 Stage": "create-stage",
+    "删除 Stage": "delete-stage",
+    "查看 Stage 列表": "list-stages"
 }

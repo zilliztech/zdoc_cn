@@ -130,6 +130,22 @@
 			}
 		},
 		{
+			"name": "Extract, Load & Transform (V2)",
+			"x-i18n": {
+				"zh-CN": {
+					"name": "Extract, Load & Transform (V2)"
+				}
+			}
+		},
+		{
+			"name": "Stage (V2)",
+			"x-i18n": {
+				"zh-CN": {
+					"name": "Stage (V2)"
+				}
+			}
+		},
+		{
 			"name": "Alias Operations (V2)",
 			"x-i18n": {
 				"zh-CN": {
@@ -2800,6 +2816,396 @@
 										"value": {
 											"code": 21119,
 											"message": "The apikey is illegal."
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/v2/etl/merge": {
+			"post": {
+				"summary": "Merge Data",
+				"deprecated": false,
+				"description": "Performs a left join between an existing collection and data records from a new field stored at a specified location, using a common merge key and generates a new collection containing the merged data. You must be a project owner to perform this operation.",
+				"x-i18n": {
+					"zh-CN": {
+						"summary": "合并数据",
+						"description": "对指定 Collection 和存储在指定位置的待插入字段的数据集利用指定的合并键进行左连接，并生成新的 Collection，其中包含合并后的数据。必须是项目管理员及以上权限才能执行此操作。"
+					}
+				},
+				"tags": [
+					"Extract, Load & Transform (V2)"
+				],
+				"parameters": [
+					{
+						"name": "Authorization",
+						"in": "header",
+						"description": "The authentication token should be an API key with appropriate privileges.",
+						"required": true,
+						"example": "Bearer {{TOKEN}}",
+						"schema": {
+							"type": "string"
+						},
+						"x-i18n": {
+							"zh-CN": {
+								"description": "认证令牌，应为具备适当权限的 API 密钥。"
+							}
+						},
+						"x-i18n-langs": [
+							"zh-CN"
+						]
+					}					
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"clusterId": {
+										"type": "string",
+										"description": "Name of the cluster that holds the target collection of this operation.",
+										"x-i18n": {
+											"zh-CN": {
+												"description": "本操作目标 Collection 所在集群的名称。"
+											}
+										},
+										"example": "in00-xxxxxxxxxxxxxxxxxx"
+									},
+									"dbName": {
+										"type": "string",
+										"description": "Name of the database that holds the target collection of this operation.",
+										"x-i18n": {
+											"zh-CN": {
+												"description": "本操作目标 Collection 所在数据库的名称。"
+											}
+										}
+									},
+									"collectionName": {
+										"type": "string",
+										"description": "Name of the target collection of this operation.",
+										"x-i18n": {
+											"zh-CN": {
+												"description": "本操作目标 Collection 的名称。"
+											}
+										}
+									},
+									"destDbName": {
+										"type": "string",
+										"description": "Name of the database that holds the collection to create.",
+										"x-i18n": {
+											"zh-CN": {
+												"description": "待创建 Collection 所在数据库的名称。"	
+											}
+										}
+									},
+									"destCollectionName": {
+										"type": "string",
+										"description": "Name of the collection to create. This collection will hold the merged data.",
+										"x-i18n": {
+											"zh-CN": {
+												"description": "待创建 Collection 的名称。该 Collection 将保存合并后的数据。"
+											}
+										}
+									},
+									"dataSource": {
+										"type": "object",
+										"description": "The data to merge with the existing collection. The data should be a PARQUET file stored in a storage spot that Zilliz Cloud can access. You need to provide the URL of the PARQUET file and the credentials to access the bucket that holds the file.",
+										"x-i18n": {
+											"zh-CN": {
+												"description": "待与指定 Collection 合并的数据。您需要将待合并数据存为 PARQUET 文件，然后将其上传到 Zilliz Cloud 可以访问的对象存储桶中。在此参数中，您需要提供待合并数据文件的 URL 及存放该数据文件的存储桶的访问凭据。"
+											}
+										},
+										"properties": {
+											"type": {
+												"type": "string",
+												"description": "The type of the data source.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "数据源的类型。"
+													}
+												},
+												"enum": [
+													"s3",
+													"oss",
+													"stage"
+												]
+											},
+											"stageName": {
+												"type": "string",
+												"description": "The name of a Zilliz Cloud stage that holds the PARQUET file. This parameter applies only when you set `type` to `stage`. For details on how to create a stage, see the documentation for the `Create Stage` operation.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "Zilliz Cloud 存储点的名称。此参数仅当您将 `type` 设置为 `stage` 时有效。有关创建存储点的详细信息，请参阅 `Create Stage` 操作的文档。"
+													}
+												}
+											},
+											"dataPath": {
+												"type": "string",
+												"description": "The URL of the PARQUET file to merge with the existing collection. ",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "待与指定 Collection 合并的 PARQUET 文件的 URL。"
+													}
+												},
+												"example": "s3://my-bucket/my_data.parquet"
+											},
+											"credential": {
+												"type": "object",
+												"description": "The credentials to access the bucket that holds the PARQUET file.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "存放待合并数据文件的存储桶的访问凭据。"
+													}
+												},
+												"properties": {
+													"accessKey": {
+														"type": "string",
+														"description": "The access key of the bucket that holds the PARQUET file.",
+														"x-i18n": {
+															"zh-CN": {
+																"description": "存放待合并数据文件的存储桶的访问密钥。"
+															}
+														}
+													},
+													"secretKey": {
+														"type": "string",
+														"description": "The secret key of the bucket that holds the PARQUET file.",
+														"x-i18n": {
+															"zh-CN": {
+																"description": "存放待合并数据文件的存储桶的访问密钥。"
+															}
+														}
+													}
+												}
+											}
+										}
+									},
+									"mergeField": {
+										"type": "string",
+										"description": "The name of the field to use as the merge field. The merge field must be present in both the existing collection and the new data records. In common cases, you can use the primary key as the merge field.",
+										"x-i18n": {
+											"zh-CN": {
+												"description": "作为合并键的字段名称。该字段必须同时存在于待合并 Collection 和待插入数据记录中。在一般情况下，您可以使用主键作为合并字段。"
+											}
+										}
+									},
+									"newFields": {
+										"type": "array",
+										"description": "The schema of the fields to create in the new collection. The schema should be an array of field schemas.",
+										"x-i18n": {
+											"zh-CN": {
+												"description": "待创建 Collection 的各字段数据结构。该参数的值应该为字段数据结构数组。"
+											}
+										},
+										"items": {
+											"type": "object",
+											"description": "The schema of a field to add.",
+											"x-i18n": {
+												"zh-CN": {
+													"description": "一个待添加字段的数据结构。"
+												}
+											},
+											"properties": {
+												"fieldName": {
+													"type": "string",
+													"description": "Name of the current field to add.",
+													"x-i18n": {
+														"zh-CN": "待添加字段的名称。"
+													}
+												},
+												"dataType": {
+													"type": "string",
+													"description": "Data type of the current field to add.",
+													"x-i18n": {
+														"zh-CN": "待添加字段的数据类型。"
+													},
+													"enum": [
+														"VARCHAR",
+														"INT32",
+														"INT64",
+														"FLOAT",
+														"DOUBLE",
+														"BOOL"
+													]
+												},
+												"params": {
+													"type": "object",
+													"description": "Extra settings for the current field to add.",
+													"x-i18n": {
+														"zh-CN": "待添加字段的详细设置。"
+													},
+													"properties": {
+														"maxLength": {
+															"type": "integer",
+															"description": "The maximum length of a VARCHAR field value. This parameter is applicable only when `dataType` is set to `VARCHAR`.",
+															"x-i18n": {
+																"zh-CN": {
+																	"description": "VARCHAR 字段的最大长度。该参数仅当 `dataType` 设置为 `VARCHAR` 时可用。"
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							},
+							"example": {
+								"clusterId": "in00-xxxxxxxxxxxxxxx",
+								"dbName": "my_database",
+								"collectionName": "my_collection",
+								"targetDbName": "my_database",
+								"targetCollectionName": "my_merged_collection",
+								"mergeData": {
+									"dataPath": "s3://my-bucket/my_data.parquet",
+									"regionId": "us-west-2",
+									"credential": {
+										"accessKey": "my-access-key",
+										"secretKey": "my-secret-key"
+									}
+								},
+								"mergeKey": "id",
+								"mergeFieldSchema": [
+									{
+										"name": "my_field1",
+										"dataType": "VARCHAR",
+										"params": {
+											"maxLength": 512
+										}
+									}
+								]
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "The ID of the bulk-import job.",
+						"x-i18n": {
+							"zh-CN": {
+								"description": "批量导入任务的 ID。"
+							}
+						},
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"x-tab-label": "success",
+											"type": "object",
+											"properties": {
+												"code": {
+													"description": "Response code.",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "响应码。"
+														}
+													},
+													"type": "integer",
+													"example": 0
+												},
+												"data": {
+													"type": "array",
+													"description": "Response payload which carries the IDs of the created data-merge jobs.",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "响应负载，包含了当前操作创建的数据合并任务的 ID。"
+														}
+													},
+													"items": {
+														"type": "object",
+														"description": "A created data-merge job.",
+														"x-i18n": {
+															"zh-CN": {
+																"description": "一个已创建的数据合并任务。"
+															}
+														},
+														"properties": {
+															"jobId": {
+																"type": "string",
+																"description": "The ID of the current data-merge job.",
+																"x-i18n": {
+																	"zh-CN": {
+																		"description": "当前创建的数据合并任务 ID。"
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										},
+										{
+											"x-tab-label": "failure",
+											"description": "Returns an error message.",
+											"x-i18n": {
+												"zh-CN": {
+													"description": "返回错误消息。"
+												}
+											},
+											"x-i18n-langs": [
+												"zh-CN"
+											],
+											"type": "object",
+											"properties": {
+												"code": {
+													"type": "integer",
+													"description": "Response code.",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "响应码。"
+														}
+													}
+												},
+												"message": {
+													"type": "string",
+													"description": "Error message.",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "错误描述。"
+														}
+													}
+												}
+											}
+										}
+									]
+								},
+								"examples": {
+									"1": {
+										"summary": "success",
+										"x-target-response": "OPTION 1",
+										"value": {
+											"code": 0,
+											"data": {
+												"jobId": "job-xxxxxxxxxxxxxxxxxxxxx"
+											}
+										}
+									},
+									"2": {
+										"summary": "failure",
+										"x-target-response": "OPTION 1",
+										"x-include-target": [
+											"milvus"
+										],
+										"value": {
+											"code": 1800,
+											"message": "User hasn't authenticated"
+										}
+									},
+									"3": {
+										"summary": "failure",
+										"x-target-response": "OPTION 2",
+										"x-include-target": [
+											"zilliz"
+										],
+										"value": {
+											"code":21119,
+											"message":"The apikey is illegal."
 										}
 									}
 								}
@@ -17485,185 +17891,279 @@
 					"content": {
 						"application/json": {
 							"schema": {
-								"type": "object",
-								"properties": {
-									"clusterId": {
-										"type": "string",
-										"description": "The ID of the cluster to which the collection belongs.\nSetting this to a non-existing cluster results in an error. You can get the cluster ID by calling the [`/v2/clusters`](/reference/restful/list-clusters-v2) endpoint, or copy the cluster ID from the [Zilliz Cloud console](/docs/on-zilliz-cloud-console).",
-										"example": "inxx-xxxxxxxxxxxxxxxx",
-										"x-i18n": {
-											"zh-CN": {
-												"description": "Collection 所属的集群 ID。设置为不存在的集群将导致错误。您可以通过调用 [`/v2/clusters`](/reference/restful/list-clusters-v2) 端点获取集群 ID，或从 [Zilliz Cloud 控制台](/docs/on-zilliz-cloud-console) 复制集群 ID。"
-											}
-										},
-										"x-include-target": [
-											"zilliz"
-										]
-									},
-									"dbName": {
-										"type": "string",
-										"description": "The name of the database that to which the collection belongs .\nSetting this to a non-existing database results in an error.",
-										"x-i18n": {
-											"zh-CN": {
-												"description": "Collection 所属的数据库名称。设置为不存在的数据库将导致错误。"
-											}
-										}
-									},
-									"collectionName": {
-										"type": "string",
-										"description": "The name of the target collection.\nSetting this to a non-existing collection results in an error.",
-										"x-i18n": {
-											"zh-CN": {
-												"description": "目标 Collection 的名称。设置为不存在的 Collection 将导致错误。"
-											}
-										}
-									},
-									"partitionName": {
-										"type": "string",
-										"description": "The name of the target partition.\nSetting this to a non-existing partition results in an error.",
-										"x-i18n": {
-											"zh-CN": {
-												"description": "目标 Partition 的名称。设置为不存在的 Partition 将导致错误。"
-											}
-										}
-									},
-									"files": {
-										"type": "array",
-										"items": {
-											"type": "array",
-											"items": {
+								"oneOf": [
+									{
+										"x-tab-label": "use block storage",
+										"type": "object",
+										"properties": {
+											"clusterId": {
 												"type": "string",
-												"description": "A list of file paths, relative to the root of your Milvus bucket on the MinIO instance shipped along with the Milvus instance.",
+												"description": "The ID of the cluster to which the collection belongs.\nSetting this to a non-existing cluster results in an error. You can get the cluster ID by calling the [`/v2/clusters`](/reference/restful/list-clusters-v2) endpoint, or copy the cluster ID from the [Zilliz Cloud console](/docs/on-zilliz-cloud-console).",
+												"example": "inxx-xxxxxxxxxxxxxxxx",
 												"x-i18n": {
 													"zh-CN": {
-														"description": "文件路径列表，列表中的路径均需位于 MinIO 实例上 Milvus 附带的 Milvus 根目录。"
+														"description": "Collection 所属的集群 ID。设置为不存在的集群将导致错误。您可以通过调用 [`/v2/clusters`](/reference/restful/list-clusters-v2) 端点获取集群 ID，或从 [Zilliz Cloud 控制台](/docs/on-zilliz-cloud-console) 复制集群 ID。"
+													}
+												},
+												"x-include-target": [
+													"zilliz"
+												]
+											},
+											"dbName": {
+												"type": "string",
+												"description": "The name of the database that to which the collection belongs .\nSetting this to a non-existing database results in an error.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "Collection 所属的数据库名称。设置为不存在的数据库将导致错误。"
 													}
 												}
 											},
-											"description": "A sub-list that contains a single JSON or Parquet file, or a set of NumPy files.",
-											"x-i18n": {
-												"zh-CN": {
-													"description": "包含单个 JSON 文件, Parquet 文件或一组 NumPy 文件的子列表。"
-												}
-											}
-										},
-										"description": "The files that contain the data to import. The files should reside within the Milvus bucket on the MinIO instance deployed along with your Milvus instance.",
-										"x-i18n": {
-											"zh-CN": {
-												"description": "包含待导入数据的文件。这些文件均应位于 MinIO 实例上 Milvus 部署的 Milvus 根目录下。"
-											}
-										},
-										"x-include-target": [
-											"milvus"
-										]
-									},
-									"options": {
-										"type": "object",
-										"properties": {
-											"timeout": {
+											"collectionName": {
 												"type": "string",
-												"description": "The timeout duration of the created import jobs. The value should be a positive number suffixed by __s__ (seconds), __m__ (minutes), and __h__(hours). For example, _300s_, _1.5h_, and _1h45_ are all valid values.",
+												"description": "The name of the target collection.\nSetting this to a non-existing collection results in an error.",
 												"x-i18n": {
 													"zh-CN": {
-														"description": "创建导入任务的超时时长。该值应为一个以秒、分钟或小时为单位的正数。例如，300s、1.5h、1h45 都是有效值。"
+														"description": "目标 Collection 的名称。设置为不存在的 Collection 将导致错误。"
 													}
 												}
+											},
+											"partitionName": {
+												"type": "string",
+												"description": "The name of the target partition.\nSetting this to a non-existing partition results in an error.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "目标 Partition 的名称。设置为不存在的 Partition 将导致错误。"
+													}
+												}
+											},
+											"files": {
+												"type": "array",
+												"items": {
+													"type": "array",
+													"items": {
+														"type": "string",
+														"description": "A list of file paths, relative to the root of your Milvus bucket on the MinIO instance shipped along with the Milvus instance.",
+														"x-i18n": {
+															"zh-CN": {
+																"description": "文件路径列表，列表中的路径均需位于 MinIO 实例上 Milvus 附带的 Milvus 根目录。"
+															}
+														}
+													},
+													"description": "A sub-list that contains a single JSON or Parquet file, or a set of NumPy files.",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "包含单个 JSON 文件, Parquet 文件或一组 NumPy 文件的子列表。"
+														}
+													}
+												},
+												"description": "The files that contain the data to import. The files should reside within the Milvus bucket on the MinIO instance deployed along with your Milvus instance.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "包含待导入数据的文件。这些文件均应位于 MinIO 实例上 Milvus 部署的 Milvus 根目录下。"
+													}
+												},
+												"x-include-target": [
+													"milvus"
+												]
+											},
+											"options": {
+												"type": "object",
+												"properties": {
+													"timeout": {
+														"type": "string",
+														"description": "The timeout duration of the created import jobs. The value should be a positive number suffixed by __s__ (seconds), __m__ (minutes), and __h__(hours). For example, _300s_, _1.5h_, and _1h45_ are all valid values.",
+														"x-i18n": {
+															"zh-CN": {
+																"description": "创建导入任务的超时时长。该值应为一个以秒、分钟或小时为单位的正数。例如，300s、1.5h、1h45 都是有效值。"
+															}
+														}
+													}
+												},
+												"description": "Bulk-import options.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "批量导入任务选项设置。"
+													}
+												},
+												"x-include-target": [
+													"milvus"
+												]
+											},
+											"objectUrl": {
+												"type": "string",
+												"description": "The URL of the object to import. This URL should be accessible to the S3-compatible object storage service, such as AWS S3, GCS, Azure blob storage.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "待导入数据的 URL。该 URL 应来自与诸如阿里云 OSS 或腾讯云 COS 等与 MinIO S3 兼容的对象存储服务。"
+													}
+												},
+												"x-include-target": [
+													"zilliz"
+												],
+												"deprecated": true
+											},
+											"objectUrls": {
+												"type": "array",
+												"description": "The URLs of the objects to import. <br/>Applicable formats and how to import multiple objects in one job are as follows:<ul><li><a href=\"https://docs.zilliz.com/docs/data-import-parquet#import-data\">Parquet</a></li><li><a href=\"https://docs.zilliz.com/docs/data-import-json#import-data\">JSON</a></li><li><a href=\"https://docs.zilliz.com/docs/data-import-numpy#import-data\">NumPy</a></li></ul>",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "待批量导入的对象 URL列表。<br/>当前支持的文件类型及如何在同一个任务中批量导入多个相同类型的数据文件，可参考：<ul><li><a href=\"https://docs.zilliz.com.cn/docs/data-import-parquet#import-data\">Parquet</a></li><li><a href=\"https://docs.zilliz.com.cn/docs/data-import-json#import-data\">JSON</a></li><li><a href=\"https://docs.zilliz.com.cn/docs/data-import-numpy#import-data\">NumPy</a></li></ul>"
+													}
+												},
+												"items": {
+													"type": "array",
+													"description": "A list of the URL to the data file containing a batch of entities to import. <br/>Each list contains only one URL.",
+													"items": {
+														"type": "string",
+														"description": "待导入 Entity 所在的数据文件或文件夹 URL。",
+														"x-i18n": {
+															"zh-CN": {
+																"description": "包含待导入 Entity 的数据文件 URL。每个 URL 独占一个列表。"
+															}
+														}
+													},
+													"x-i18n": {
+														"zh-CN": {
+															"description": "待导入 Entity 所在的数据文件或文件夹 URL 列表。每个 列表包含一个 URL。"
+														}
+													}
+												},
+												"x-include-target": [
+													"zilliz"
+												]
+											},
+											"accessKey": {
+												"type": "string",
+												"description": "The access key of the object storage service.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "对象存储服务的访问密钥 (AK)。"
+													}
+												},
+												"x-include-target": [
+													"zilliz"
+												]
+											},
+											"secretKey": {
+												"type": "string",
+												"description": "The secret access key of the object storage service.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "对象存储服务的访问密钥 (SK)。"
+													}
+												},
+												"x-include-target": [
+													"zilliz"
+												]
+											},
+											"token": {
+												"type": "string",
+												"description": "A temporary token for you to access the object storage service. The token name and the way to obtain it may vary with cloud providers. For details, refer to [the FAQ](/docs/faq-data-import#can-i-use-session-tokens-when-importing-data-from-an-object-storage-service).",
+												"x-include-target": [
+													"zilliz"
+												]
 											}
 										},
-										"description": "Bulk-import options.",
-										"x-i18n": {
-											"zh-CN": {
-												"description": "批量导入任务选项设置。"
-											}
-										},
-										"x-include-target": [
-											"milvus"
+										"required": [
+											"clusterId",
+											"collectionName"
 										]
 									},
-									"objectUrl": {
-										"type": "string",
-										"description": "The URL of the object to import. This URL should be accessible to the S3-compatible object storage service, such as AWS S3, GCS, Azure blob storage.",
-										"x-i18n": {
-											"zh-CN": {
-												"description": "待导入数据的 URL。该 URL 应来自与诸如阿里云 OSS 或腾讯云 COS 等与 MinIO S3 兼容的对象存储服务。"
-											}
-										},
+									{
+										"x-tab-label": "use stage",
 										"x-include-target": [
 											"zilliz"
 										],
-										"deprecated": true
-									},
-									"objectUrls": {
-										"type": "array",
-										"description": "The URLs of the objects to import. <br/>Applicable formats and how to import multiple objects in one job are as follows:<ul><li><a href=\"https://docs.zilliz.com/docs/data-import-parquet#import-data\">Parquet</a></li><li><a href=\"https://docs.zilliz.com/docs/data-import-json#import-data\">JSON</a></li><li><a href=\"https://docs.zilliz.com/docs/data-import-numpy#import-data\">NumPy</a></li></ul>.",
-										"x-i18n": {
-											"zh-CN": {
-												"description": "待批量导入的对象 URL列表。<br/>当前支持的文件类型及如何在同一个任务中批量导入多个相同类型的数据文件，可参考<ul><li><a href=\"https://docs.zilliz.com.cn/docs/data-import-parquet#import-data\">Parquet</a></li><li><a href=\"https://docs.zilliz.com.cn/docs/data-import-json#import-data\">JSON</a></li><li><a href=\"https://docs.zilliz.com.cn/docs/data-import-numpy#import-data\">NumPy</a></li></ul>。"
-											}
-										},
-										"items": {
-											"type": "array",
-											"description": "A list of the URL to the data file containing a batch of entities to import. <br/>Each list contains only one URL.",
-											"items": {
+										"type": "object",
+										"properties": {
+											"clusterId": {
 												"type": "string",
-												"description": "待导入 Entity 所在的数据文件或文件夹 URL。",
+												"description": "The ID of the cluster to which the collection belongs.\nSetting this to a non-existing cluster results in an error. You can get the cluster ID by calling the [`/v2/clusters`](/reference/restful/list-clusters-v2) endpoint, or copy the cluster ID from the [Zilliz Cloud console](/docs/on-zilliz-cloud-console).",
+												"example": "inxx-xxxxxxxxxxxxxxxx",
 												"x-i18n": {
 													"zh-CN": {
-														"description": "包含待导入 Entity 的数据文件 URL。每个 URL 独占一个列表。"
+														"description": "Collection 所属的集群 ID。设置为不存在的集群将导致错误。您可以通过调用 [`/v2/clusters`](/reference/restful/list-clusters-v2) 端点获取集群 ID，或从 [Zilliz Cloud 控制台](/docs/on-zilliz-cloud-console) 复制集群 ID。"
+													}
+												},
+												"x-include-target": [
+													"zilliz"
+												]
+											},
+											"dbName": {
+												"type": "string",
+												"description": "The name of the database that to which the collection belongs .\nSetting this to a non-existing database results in an error.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "Collection 所属的数据库名称。设置为不存在的数据库将导致错误。"
 													}
 												}
 											},
-											"x-i18n": {
-												"zh-CN": {
-													"description": "待导入 Entity 所在的数据文件或文件夹 URL 列表。每个 列表包含一个 URL。"
+											"collectionName": {
+												"type": "string",
+												"description": "The name of the target collection.\nSetting this to a non-existing collection results in an error.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "目标 Collection 的名称。设置为不存在的 Collection 将导致错误。"
+													}
 												}
-											}
+											},
+											"partitionName": {
+												"type": "string",
+												"description": "The name of the target partition.\nSetting this to a non-existing partition results in an error.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "目标 Partition 的名称。设置为不存在的 Partition 将导致错误。"
+													}
+												}
+											},
+											"stageName": {
+												"type": "string",
+												"description": "The name of the stage from which the data files will be uploaded. The stage must be created beforehand. For details, refer to [Create Stage](/reference/restful/create-stage-v2)",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "数据文件上传的源 stage 名称。该 stage 需事先创建。详情请参考 [创建 stage](/reference/restful/create-stage-v2)"
+													}
+												}
+											},
+											"dataPaths": {
+												"type": "array",
+												"description": "The paths of the data files to be uploaded. The paths should be relative to the root of the specified stage.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "待上传的数据文件路径列表。路径应相对于指定 stage 的根目录。"
+													}
+												},
+												"items": {
+													"type": "array",
+													"description": "A list of the paths of the data files to be uploaded. Each list contains only one path.",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "待上传的数据文件路径列表。每个列表包含一个路径。"
+														}
+													},
+													"items": {
+														"type": "string",
+														"description": "The path of the data file to be uploaded. The path should be relative to the root of the specified stage.",
+														"x-i18n": {
+															"zh-CN": {
+																"description": "待上传数据文件路径。"
+															}
+														}
+													}
+												}
+											}						
 										},
-										"x-include-target": [
-											"zilliz"
-										]
-									},
-									"accessKey": {
-										"type": "string",
-										"description": "The access key of the object storage service.",
-										"x-i18n": {
-											"zh-CN": {
-												"description": "对象存储服务的访问密钥 (AK)。"
-											}
-										},
-										"x-include-target": [
-											"zilliz"
-										]
-									},
-									"secretKey": {
-										"type": "string",
-										"description": "The secret access key of the object storage service.",
-										"x-i18n": {
-											"zh-CN": {
-												"description": "对象存储服务的访问密钥 (SK)。"
-											}
-										},
-										"x-include-target": [
-											"zilliz"
-										]
-									},
-									"token": {
-										"type": "string",
-										"description": "A temporary token for you to access the object storage service. The token name and the way to obtain it may vary with cloud providers. For details, refer to [the FAQ](/docs/faq-data-import#can-i-use-session-tokens-when-importing-data-from-an-object-storage-service).",
-										"x-include-target": [
-											"zilliz"
+										"required": [
+											"clusterId",
+											"collectionName"
 										]
 									}
-								},
-								"required": [
-									"clusterId",
-									"collectionName",
-									"objectUrls"
 								]
 							},
 							"examples": {
 								"1": {
 									"summary": "example",
+									"x-target-request": "OPTION 1",
 									"x-include-target": [
 										"milvus"
 									],
@@ -17685,7 +18185,8 @@
 									}
 								},
 								"2": {
-									"summary": "example",
+									"summary": "use object storage",
+									"x-target-request": "OPTION 1",
 									"x-include-target": [
 										"zilliz"
 									],
@@ -17700,6 +18201,24 @@
 										"accessKey": "",
 										"secretKey": ""
 									}
+								},
+								"3": {
+									"summary": "use stage",
+									"x-target-request": "OPTION 2",
+									"x-include-target": [
+										"zilliz"
+									],
+									"value": {
+										"clusterId": "inxx-xxxxxxxxxxxxxxx",
+										"dbName": "default",
+										"collectionName": "medium_articles",
+										"partitionName": "",
+										"stageName": "mysql-stage",
+										"dataPaths": [
+											["json-folder/1.json"]
+										]										
+									}									
+
 								}
 							}
 						}
@@ -19331,7 +19850,8 @@
 																		"DataType.FLOAT_VECTOR",
 																		"DataType.FLOAT16_VECTOR",
 																		"DataType.BFLOAT16_VECTOR",
-																		"DataType.SPARSE_FLOAT_VECTOR"
+																		"DataType.SPARSE_FLOAT_VECTOR",
+																		"DataType.INT8_VECTOR"
 																	]
 																},
 																"elementDataType": {
@@ -19353,6 +19873,24 @@
 																		"DataType.VARCHAR"
 																	]
 																},
+																"nullable": {
+																	"type": "boolean",
+																	"description": "Whether the field can be null. If set to `true`, the field can contain null values.",
+																	"x-i18n": {
+																		"zh-CN": {
+																			"description": "字段是否可以为 null。如果设置为 `true`，则该字段可以包含 null 值。"
+																		}
+																	}
+																},
+																"defaultValue": {
+																	"type": "string",
+																	"description": "The default value of the field. This is required if the current field is of the `VarChar` type.",
+																	"x-i18n": {
+																		"zh-CN": {
+																			"description": "字段的默认值。若当前字段为 `VarChar` 类型，则该参数为必填项。"
+																		}
+																	}
+																},
 																"isPrimary": {
 																	"type": "boolean",
 																	"description": "Whether the current field is the primary field. Setting this to True makes the current field the primary field.",
@@ -19370,6 +19908,18 @@
 																			"description": "当前字段是否为 Partition Key。将该参数设置为 `True` 则当前字段将作为 Partition Key。在这种情况下，<include target=\"milvus\">Milvus</include><include target=\"milvus\">Zilliz Cloud</include> 会管理当前 Collection 中的所有 Partition。"
 																		}
 																	}
+																},
+																"isClusteringKey": {
+																	"type": "boolean",
+																	"description": "Whether the current field serves as the clustering key. Setting this to True makes the current field serve as the clustering key. You can read more about the cluster key in <a href=\"https://milvus.io/docs/clustering-compaction.md\">Clustering Compaction</a>.",
+																	"x-i18n": {
+																		"zh-CN": {
+																			"description": "当前字段是否为 Clustering Key。将该参数设置为 `True` 则当前字段将作为 Clustering Key。您可以在<a href=\"https://milvus.io/docs/clustering-compaction.md\">Clustering Compaction</a>中了解更多关于 Clustering Key 的信息。"
+																		}
+																	},
+																	"x-include-target": [
+																		"milvus"
+																	]
 																},
 																"elementTypeParams": {
 																	"type": "object",
@@ -19419,6 +19969,103 @@
 														"x-i18n": {
 															"zh-CN": {
 																"description": "字段列表。"
+															}
+														}
+													},
+													"functions": {
+														"type": "array",
+														"description": "A list of functions.",
+														"x-i18n": {
+															"zh-CN": {
+																"description": "一个函数列表。"
+															}
+														},
+														"items": {
+															"type": "object",
+															"description": "A function is used to generate vector embeddings for user-provided raw data or applying a raranking strategy to the search results.",
+															"x-i18n": {
+																"zh-CN": {
+																	"description": "函数可以用来根据用户指定输入字段的内容在指定的输出字段中生成相应的向量表示，或者根据指定的输入字段使用指定的重排策略对搜索结果进行重新排序。"
+																}
+															},
+															"properties": {
+																"name": {
+																	"type": "string",
+																	"description": "The name of the function to create.",
+																	"x-i18n": {
+																		"zh-CN": {
+																			"description": "待创建函数的名称。"
+																		}
+																	}
+																},
+																"description": {
+																	"type": "string",
+																	"description": "The description of the function to create.",
+																	"x-i18n": {
+																		"zh-CN": {
+																			"description": "待创建函数的描述。"
+																		}
+																	}
+																},
+																"type": {
+																	"type": "string",
+																	"description": "The type of the function to create.",
+																	"x-i18n": {
+																		"zh-CN": {
+																			"description": "待创建函数的类型。"
+																		}
+																	},
+																	"enum": [
+																		"FunctionType.BM25",
+																		"FunctionType.TEXTEMBEDDING",
+																		"FunctionType.RERANK"
+																	]
+																},
+																"inputFieldNames": {
+																	"type": "array",
+																	"items": {
+																		"type": "string",
+																		"description": "A field name.",
+																		"x-i18n": {
+																			"zh-CN": {
+																				"description": "字段名称。"
+																			}
+																		}
+																	},
+																	"description": "The names of the input fields for the function to create.",
+																	"x-i18n": {
+																		"zh-CN": {
+																			"description": "待创建函数的输入字段名称列表。"
+																		}
+																	}
+																},
+																"outputFieldNames": {
+																	"type": "array",
+																	"items": {
+																		"type": "string",
+																		"description": "A field name.",
+																		"x-i18n": {
+																			"zh-CN": {
+																				"description": "字段名称。"
+																			}
+																		}
+																	},
+																	"description": "The names of the output fields for the function to create.",
+																	"x-i18n": {
+																		"zh-CN": {
+																			"description": "待创建函数的输出字段名称列表。"
+																		}
+																	}
+																},
+																"params": {
+																	"type": "object",
+																	"description": "Configuration parameters specific to the current function. Once the function type is set to `FunctionType.BM25`, no parameter is required. For applicable parameters to functions of `FunctionType.TEXTEMBEDDING` or `FunctionType.RERANK`, refer to <a href=\"https://milvus.io/docs/embedding-function-overview.md\">Embedding Functions</a> and <a href=\"https://milvus.io/docs/embedding-function-overview.md\">Reranking Functions</a>",
+																	"x-i18n": {
+																		"zh-CN": {
+																			"description": "当前函数的配置参数。当函数类型为 `FunctionType.BM25`，无须设置该参数。当函数类型为其它两类时，可以查看<a href=\"https://milvus.io/docs/embedding-function-overview.md\">Embedding Functions</a> and <a href=\"https://milvus.io/docs/embedding-function-overview.md\">Reranking Functions</a>获取详细的可用参数列表。"
+																		}
+																	}
+																}
 															}
 														}
 													}
@@ -22445,7 +23092,13 @@
 										"description": "The name of a partition in the current collection. \nIf specified, the data is to be inserted into the specified partition."
 									},
 									"data": {
-										"type": "object | array",
+										"type": "object",
+										"additionalProperties": {
+											"oneOf": [
+												{ "type": "object" },
+												{ "type": "array", "items": { "type": "object" } }
+											]
+										},
 										"description": "An entity object or an array of entity objects. Note that the keys in an entity object should match the collection schema",
 										"x-i18n": {
 											"zh-CN": {
@@ -26336,6 +26989,603 @@
 				"security": [
 
 				]
+			}
+		},
+		"/v2/stages": {
+			"get": {
+				"summary": "List Stages",
+				"deprecated": false,
+				"description": "This operation lists all stages in the specified project. You need to be ",
+				"x-i18n": {
+					"zh-CN": {
+						"summary": "查看 Stage 列表",
+						"description": "本接口将列出指定项目下的所有 Stage。"
+					}
+				},
+				"tags": [
+					"Stage (V2)"
+				],
+				"parameters": [
+					{
+						"name": "Authorization",
+						"in": "header",
+						"description": "The authentication token should be <include target=\"zilliz\">an API key with appropriate privileges or </include>a pair of colon-joined username and password, like `username:password`.",
+						"required": true,
+						"example": "Bearer {{TOKEN}}",
+						"schema": {
+							"type": "string"
+						},
+						"x-i18n": {
+							"zh-CN": {
+								"description": "认证令牌，应为<include target=\"zilliz\">具备适当权限的 API 密钥或</include>用冒号分隔的用户名和密码，如 `username:password`。"
+							}
+						}
+					},
+					{
+						"name": "projectId",
+						"in": "query",
+						"description": "The target project of this operation.",
+						"x-i18n": {
+							"zh-CN": {
+								"description": "当前操作的目标项目。"
+							}
+						},
+						"required": true,
+						"schema": {
+							"type": "string"
+						},
+						"example": "proj-xxxxxxxxxxxxxxxxx"
+					},
+					{
+						"name": "pageSize",
+						"in": "query",
+						"description": "The number of records to include in each response.",
+						"x-i18n": {
+							"zh-CN": {
+								"description": "每次返回的记录数。"
+							}
+						},
+						"required": false,
+						"example": 10,
+						"schema": {
+							"type": "integer",
+							"default": 10,
+							"minimum": 1,
+							"maximum": 100
+						}
+					},
+					{
+						"name": "currentPage",
+						"in": "query",
+						"description": "The current page number.",
+						"x-i18n": {
+							"zh-CN": {
+								"description": "当前页码。"
+							}
+						},
+						"required": false,
+						"example": 1,
+						"schema": {
+							"type": "integer",
+							"default": 1,
+							"minimum": 1
+						}
+					}										
+				],
+				"responses": {
+					"200": {
+						"description": "Returns the list of stages.",
+						"x-i18n": {
+							"zh-CN": {
+								"description": "返回 Stage 列表。"
+							}
+						},
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"x-tab-label": "success",
+											"description": "Returns a list of stages.",
+											"x-i18n": {
+												"zh-CN": {
+													"description": "返回 Stage 列表。"
+												}
+											},
+											"type": "object",
+											"properties": {
+												"code": {
+													"type": "integer",
+													"description": "Response code.",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "响应码。"
+														}
+													}
+												},
+												"data": {
+													"type": "object",
+													"properties": {
+														"count": {
+															"type": "integer",
+															"description": "The total number of stages.",
+															"x-i18n": {
+																"zh-CN": {
+																	"description": "Stage 总数。"
+																}
+															}
+														},
+														"currentPage": {
+															"type": "integer",
+															"description": "The current page number.",
+															"x-i18n": {
+																"zh-CN": {
+																	"description": "当前页码。"
+																}
+															}
+														},
+														"pageSize": {
+															"type": "integer",
+															"description": "The number of records in each response.",
+															"x-i18n": {
+																"zh-CN": {
+																	"description": "每页记录数。"
+																}
+															}
+														},
+														"stages": {
+															"type": "array",
+															"description": "The list of stages.",
+															"x-i18n": {
+																"zh-CN": {
+																	"description": "Stage 列表。"
+																}
+															},
+															"items": {
+																"type": "object",
+																"properties": {
+																	"stageName": {
+																		"type": "string",
+																		"description": "The name of the stage.",
+																		"x-i18n": {
+																			"zh-CN": {
+																				"description": "Stage 名称。"
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										},
+										{
+											"x-tab-label": "failure",
+											"description": "Returns an error message.",
+											"x-i18n": {
+												"zh-CN": {
+													"description": "返回错误消息。"
+												}
+											},
+											"x-i18n-langs": [
+												"zh-CN"
+											],
+											"type": "object",
+											"properties": {
+												"code": {
+													"type": "integer",
+													"description": "Response code.",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "响应码。"
+														}
+													}
+												},
+												"message": {
+													"type": "string",
+													"description": "Error message.",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "错误描述。"
+														}
+													}
+												}
+											}
+										}
+									]
+								},
+								"examples": {
+									"1": {
+										"summary": "success",
+										"x-target-response": "OPTION 1",
+										"value": {
+											"code": 200,
+											"data": [
+												{
+													"stageName": "my_stage_1"
+												},
+												{
+													"stageName": "my_stage_2"
+												},
+												{
+													"stageName": "my_stage_3"
+												}
+											]
+										}
+									},
+									"2": {
+										"summary": "failure",
+										"x-target-response": "OPTION 2",
+										"value": {
+											"code": 1800,
+											"message": "User hasn't authenticated"
+										}
+									}									
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/v2/stages/create": {
+			"post": {
+				"summary": "Create Stage",
+				"deprecated": false,
+				"description": "This operation creates a new stage in the specified project.",
+				"x-i18n": {
+					"zh-CN": {
+						"summary": "创建 Stage",
+						"description": "本接口用于在指定项目下创建一个新的 Stage。"
+					}	
+				},
+				"tags": [
+					"Stage (V2)"
+				],
+				"parameters": [
+					{
+						"name": "Authorization",
+						"in": "header",
+						"description": "The authentication token should be <include target=\"zilliz\">an API key with appropriate privileges or </include>a pair of colon-joined username and password, like `username:password`.",
+						"required": true,
+						"example": "Bearer {{TOKEN}}",
+						"schema": {
+							"type": "string"
+						},
+						"x-i18n": {
+							"zh-CN": {
+								"description": "认证令牌，应为<include target=\"zilliz\">具备适当权限的 API 密钥或</include>用冒号分隔的用户名和密码，如 `username:password`。"
+							}
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"projectId": {
+										"type": "string",
+										"description": "The ID of the project to which the stage belongs.",
+										"x-i18n": {
+											"zh-CN": {
+												"description": "所属项目的 ID。"
+											}
+										},
+										"example": "proj-xxxxxxxxxxxxxxxxxxxxxxx"
+									},
+									"regionId": {
+										"type": "string",
+										"description": "The ID of the region where the stage will be created. You can use [List Cloud Regions](/reference/list-cloud-regions-v2) to list available regions.",
+										"x-i18n": {
+											"zh-CN": {
+												"description": "Stage 所属区域的 ID。您可以使用 [查看云服务区域](/reference/list-cloud-regions-v2) 接口列出可用区域。"
+											}
+										}
+									},
+									"stageName": {
+										"type": "string",
+										"description": "The name of the stage to create.",
+										"x-i18n": {
+											"zh-CN": {
+												"description": "Stage 名称。"
+											}
+										}
+									}
+
+								},
+								"required": [
+									"stageName",
+									"regionId",
+									"projectId"
+								]
+							},
+							"example": {
+								"projectId": "proj-xxxxxxxxxxxxxxxxxxxxxxx",
+								"regionId": "us-west-1",
+								"stageName": "my_stage"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Returns the list of stages.",
+						"x-i18n": {
+							"zh-CN": {
+								"description": "返回 Stage 列表。"
+							}
+						},
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"x-tab-label": "success",
+											"description": "Returns a list of stages.",
+											"x-i18n": {
+												"zh-CN": {
+													"description": "返回 Stage 列表。"
+												}
+											},
+											"type": "object",
+											"properties": {
+												"code": {
+													"type": "integer",
+													"description": "Response code.",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "响应码。"
+														}
+													}
+												},
+												"data": {
+													"type": "object",
+													"properties": {
+														"stageName": {
+															"type": "string",
+															"description": "The name of the created stage.",
+															"x-i18n": {
+																"zh-CN": {
+																	"description": "已创建的 Stage 名称。"
+																}
+															}
+														}
+													}
+												}
+											}
+										},
+										{
+											"x-tab-label": "failure",
+											"description": "Returns an error message.",
+											"x-i18n": {
+												"zh-CN": {
+													"description": "返回错误消息。"
+												}
+											},
+											"x-i18n-langs": [
+												"zh-CN"
+											],
+											"type": "object",
+											"properties": {
+												"code": {
+													"type": "integer",
+													"description": "Response code.",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "响应码。"
+														}
+													}
+												},
+												"message": {
+													"type": "string",
+													"description": "Error message.",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "错误描述。"
+														}
+													}
+												}
+											}
+										}
+									]
+								},
+								"examples": {
+									"1": {
+										"summary": "success",
+										"x-target-response": "OPTION 1",
+										"value": {
+											"code": 200,
+											"data": [
+												{
+													"stageName": "my_stage_1"
+												},
+												{
+													"stageName": "my_stage_2"
+												},
+												{
+													"stageName": "my_stage_3"
+												}
+											]
+										}
+									},
+									"2": {
+										"summary": "failure",
+										"x-target-response": "OPTION 2",
+										"value": {
+											"code": 1800,
+											"message": "User hasn't authenticated"
+										}
+									}									
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/v2/stages/{STAGE_NAME}": {
+			"delete": {
+				"summary": "Delete Stage",
+				"deprecated": false,
+				"description": "This operation deletes a stage in the specified project.",
+				"x-i18n": {
+					"zh-CN": {
+						"summary": "删除 Stage",
+						"description": "本接口用于删除指定项目下的一个 Stage。"
+					}
+				},
+				"tags": [
+					"Stage (V2)"
+				],
+				"parameters": [
+					{
+						"name": "STAGE_NAME",
+						"in": "path",
+						"description": "The name of an existing stage to delete.",
+						"x-i18n": {
+							"zh-CN": {
+								"description": "待删除的 Stage 名称。"
+							}
+						},
+						"required": true,
+						"example": "my_stage",
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"name": "Authorization",
+						"in": "header",
+						"description": "The authentication token should be <include target=\"zilliz\">an API key with appropriate privileges or </include>a pair of colon-joined username and password, like `username:password`.",
+						"required": true,
+						"example": "Bearer {{TOKEN}}",
+						"schema": {
+							"type": "string"
+						},
+						"x-i18n": {
+							"zh-CN": {
+								"description": "认证令牌，应为<include target=\"zilliz\">具备适当权限的 API 密钥或</include>用冒号分隔的用户名和密码，如 `username:password`。"
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Returns the list of stages.",
+						"x-i18n": {
+							"zh-CN": {
+								"description": "返回 Stage 列表。"
+							}
+						},
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"x-tab-label": "success",
+											"description": "Returns a list of stages.",
+											"x-i18n": {
+												"zh-CN": {
+													"description": "返回 Stage 列表。"
+												}
+											},
+											"type": "object",
+											"properties": {
+												"code": {
+													"type": "integer",
+													"description": "Response code.",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "响应码。"
+														}
+													}
+												},
+												"data": {
+													"type": "object",
+													"properties": {
+														"stageName": {
+															"type": "string",
+															"description": "The name of the created stage.",
+															"x-i18n": {
+																"zh-CN": {
+																	"description": "已创建的 Stage 名称。"
+																}
+															}
+														}
+													}
+												}
+											}
+										},
+										{
+											"x-tab-label": "failure",
+											"description": "Returns an error message.",
+											"x-i18n": {
+												"zh-CN": {
+													"description": "返回错误消息。"
+												}
+											},
+											"x-i18n-langs": [
+												"zh-CN"
+											],
+											"type": "object",
+											"properties": {
+												"code": {
+													"type": "integer",
+													"description": "Response code.",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "响应码。"
+														}
+													}
+												},
+												"message": {
+													"type": "string",
+													"description": "Error message.",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "错误描述。"
+														}
+													}
+												}
+											}
+										}
+									]
+								},
+								"examples": {
+									"1": {
+										"summary": "success",
+										"x-target-response": "OPTION 1",
+										"value": {
+											"code": 200,
+											"data": [
+												{
+													"stageName": "my_stage_1"
+												},
+												{
+													"stageName": "my_stage_2"
+												},
+												{
+													"stageName": "my_stage_3"
+												}
+											]
+										}
+									},
+									"2": {
+										"summary": "failure",
+										"x-target-response": "OPTION 2",
+										"value": {
+											"code": 1800,
+											"message": "User hasn't authenticated"
+										}
+									}									
+								}
+							}
+						}
+					}
+				}				
 			}
 		},
 		"/v2/vectordb/aliases/alter": {
@@ -33084,7 +34334,15 @@
 										}
 									},
 									"id": {
-										"type": "string | integer | string[] | integer[]",
+										"type": "object",
+										"additionalProperties": {
+											"oneOf": [
+												{ "type": "string" },
+												{ "type": "integer" },
+												{ "type": "array", "items": { "type": "string" }},
+												{ "type": "array", "items": { "type": "integer" }}
+											]
+										},
 										"description": "A specific entity ID or a list of entity IDs.",
 										"x-i18n": {
 											"zh-CN": {
@@ -34803,6 +36061,283 @@
 								}
 							}
 						}
+					}
+				}
+			}
+		},
+		"/v2/vectordb/collections/fields/add": {
+			"post": {
+				"summary": "Add Collection Field",
+				"deprecated": false,
+				"description": "This operation adds a field to a collection without recreating the collection.",
+				"x-i18n": {
+					"zh-CN": {
+						"summary": "添加 Collection 字段",
+						"description": "本操作可以在不重建 Collection 的情况下添加字段。"
+					}
+				},
+				"tags": [
+					"Collection Operations (V2)"
+				],
+				"parameters": [
+					{
+						"name": "Authorization",
+						"in": "header",
+						"description": "The authentication token should be <include target=\"zilliz\">an API key with appropriate privileges or </include>a pair of colon-joined username and password, like `username:password`.",
+						"required": true,
+						"example": "Bearer {{TOKEN}}",
+						"schema": {
+							"type": "string"
+						},
+						"x-i18n": {
+							"zh-CN": {
+								"description": "认证令牌，应为<include target=\"zilliz\">具备适当权限的 API 密钥或</include>用冒号分隔的用户名和密码，如 `username:password`。"
+							}
+						}
+					}					
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"dbName": {
+										"type": "string",
+										"description": "The name of the database which the collection belongs to. Setting this to a non-existing database results in an error.",
+										"x-i18n": {
+											"zh-CN": {
+												"description": "Database 名称。"
+											}
+										}
+									},
+									"collectionName": {
+										"type": "string",
+										"description": "The name of the target collection.\nSetting this to a non-existing collection results in an error.",
+										"x-i18n": {
+											"zh-CN": {
+												"description": "Collection 名称。"
+											}
+										}
+									},
+									"schema": {
+										"type": "object",
+										"description": "The schema of the field to add.",
+										"x-i18n": {
+											"zh-CN": {
+												"description": "待添加字段的 Schema。"
+											}
+										},
+										"properties": {
+											"fieldName": {
+												"type": "string",
+												"description": "The name of the field to add.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "待添加字段的名称。"
+													}
+												}
+											},
+											"dataType": {
+												"type": "string",
+												"description": "The data type of the field to add. Supported types are `Int64`, `Float`, `Double`, `VarChar`, `Array`, and `Vector`.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "待添加字段的数据类型。支持的类型有 `Int64`、`Float`、`Double`、`VarChar`、`Array` 和 `Vector`。"
+													}
+												},
+												"enum": [
+													"DataType.BOOL",
+													"DataType.INT8",
+													"DataType.INT16",
+													"DataType.INT32",
+													"DataType.INT64",
+													"DataType.FLOAT",
+													"DataType.DOUBLE",
+													"DataType.VARCHAR",
+													"DataType.ARRAY",
+													"DataType.JSON",
+													"DataType.BINARY_VECTOR",
+													"DataType.FLOAT_VECTOR",
+													"DataType.FLOAT16_VECTOR",
+													"DataType.BFLOAT16_VECTOR",
+													"DataType.SPARSE_FLOAT_VECTOR",
+													"DataType.INT8_VECTOR"
+												]
+											},
+											"elementDataType": {
+												"type": "string",
+												"description": "The data type of the elements in an array field. This is required if the current field is of the array type.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "数组字段中各元素的数据类型。若当前字段为数组类型，则该参数为必填项。"
+													}
+												},
+												"enum": [
+													"DataType.BOOL",
+													"DataType.INT8",
+													"DataType.INT16",
+													"DataType.INT32",
+													"DataType.INT64",
+													"DataType.FLOAT",
+													"DataType.DOUBLE",
+													"DataType.VARCHAR"
+												]
+											},
+											"nullable": {
+												"type": "boolean",
+												"description": "Whether the field can be null. To be compatible with existing data in the collection, this should be set to `true`.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "字段是否可以为 null。在此处处须设置为 `true`，以兼容 Collection 中已经存在数据的情形。"
+													}
+												}
+											},
+											"defaultValue": {
+												"type": "object",
+												"additionalProperties": {
+													"oneOf": [
+														{ "type": "string" },
+														{ "type": "number" },
+														{ "type": "boolean" }
+													]
+												},
+												"description": "The default value of the field. This is required if the current field is of the `VarChar` type.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "字段的默认值。若当前字段为 `VarChar` 类型，则该参数为必填项。"
+													}
+												}
+											},
+											"elementTypeParams": {
+												"type": "object",
+												"properties": {
+													"max_length": {
+														"type": "integer",
+														"description": "An optional parameter for VarChar values that determines the maximum length of the value in the current field.",
+														"x-i18n": {
+															"zh-CN": {
+																"description": "如果当前字段的数据类型为 VarChar，则该参数为必填项，用于设置该字段值的最大长度。"
+															}
+														}
+													},
+													"max_capacity": {
+														"type": "integer",
+														"description": "An optional parameter for Array field values that determines the maximum number of elements in the current array field.",
+														"x-i18n": {
+															"zh-CN": {
+																"description": "如果当前字段的数据类型为 Array，则该参数为必填项，用于设置该字段值的最大元素数量。"
+															}
+														}
+													}
+												},
+												"description": "Extra field parameters.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "字段附加参数。"
+													}
+												}
+											}
+										}
+									}									
+								}
+							},
+							"example": {
+								"dbName": "test_db",
+								"collectionName": "test_collection",
+								"schema": {
+									"fieldName": "new_field",
+									"dataType": "DataType.VARCHAR",
+									"nullable": true,
+									"defaultValue": "default_value",
+									"elementTypeParams": {
+										"max_length": 255
+									}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Returns an empty object.",
+						"x-i18n": {
+							"zh-CN": {
+								"description": "返回空对象。"
+							}
+						},
+						"content": {
+							"application/json": {
+								"schema": {
+									"oneOf": [
+										{
+											"x-tab-label": "success",
+											"type": "object",
+											"properties": {
+												"code": {
+													"type": "integer",
+													"description": "Response code.",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "响应码。"
+														}
+													}
+												},
+												"data": {
+													"type": "object",
+													"properties": {}
+												}
+											}											
+										},
+										{
+											"x-tab-label": "failure",
+											"description": "Returns an error message.",
+											"x-i18n": {
+												"zh-CN": {
+													"description": "返回错误消息。"
+												}
+											},
+											"type": "object",
+											"properties": {
+												"code": {
+													"type": "integer",
+													"description": "Response code.",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "响应码。"
+														}
+													}
+												},
+												"message": {
+													"type": "string",
+													"description": "Error message.",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "错误描述。"
+														}
+													}
+												}
+											}
+										}										
+									]
+								},
+								"examples": {
+									"1": {
+										"summary": "success",
+										"x-target-response": "OPTION 1",
+										"value": {"code":0,"data":{}}
+									},
+									"2": {
+										"summary": "failure",
+										"x-target-response": "OPTION 2",
+										"value": {
+											"code": 1800,
+											"message": "User hasn't authenticated"
+										}
+									}									
+								}
+							}
+						}						
 					}
 				}
 			}
