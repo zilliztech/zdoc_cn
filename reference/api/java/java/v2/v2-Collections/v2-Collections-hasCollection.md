@@ -10,10 +10,10 @@ type: docx
 token: Vs26d4WrYoJ3moxuLifcyP2enyh
 sidebar_position: 18
 keywords: 
-  - Zilliz Cloud
-  - what is milvus
-  - milvus database
-  - milvus lite
+  - knn
+  - Image Search
+  - LLMs
+  - Machine Learning
   - zilliz
   - zilliz cloud
   - cloud

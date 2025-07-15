@@ -10,10 +10,10 @@ type: docx
 token: WxhmdPZydowLVLxR2LacSrUNnme
 sidebar_position: 20
 keywords: 
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud

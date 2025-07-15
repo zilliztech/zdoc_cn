@@ -9,10 +9,10 @@ token: Ja2Wf1J9glm6oCdCxfDc9BzPnoc
 sidebar_position: 8
 sidebar_label: "Database"
 keywords: 
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
   - zilliz
   - zilliz cloud
   - cloud

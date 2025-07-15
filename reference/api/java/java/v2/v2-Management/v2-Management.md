@@ -9,10 +9,10 @@ token: MTBuf5wQ7lardCddEtCc4R2uncb
 sidebar_position: 4
 sidebar_label: "Management"
 keywords: 
-  - Audio search
-  - what is semantic search
-  - Embedding model
-  - image similarity search
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
   - zilliz
   - zilliz cloud
   - cloud

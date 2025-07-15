@@ -10,10 +10,10 @@ type: docx
 token: L115dnbLyoXAVSxkUKxcuK4gncf
 sidebar_position: 1
 keywords: 
-  - Unstructured Data
-  - vector database
-  - IVF
-  - knn
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
   - zilliz
   - zilliz cloud
   - cloud

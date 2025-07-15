@@ -9,10 +9,10 @@ token: U16KfBnGVlNp5edR7DycvFF1nfy
 sidebar_position: 7
 sidebar_label: "Authentication"
 keywords: 
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
-  - cosine distance
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud

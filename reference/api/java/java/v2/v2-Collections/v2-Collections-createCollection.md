@@ -10,10 +10,10 @@ type: docx
 token: DkFxdDBvaoUPQRxzudxcDtTXnue
 sidebar_position: 7
 keywords: 
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
   - zilliz
   - zilliz cloud
   - cloud

@@ -9,10 +9,10 @@ token: IguLfmHgXlJoojdRU8kcohXZnE1
 sidebar_position: 5
 sidebar_label: "Vector"
 keywords: 
-  - llm eval
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - rag vector database
   - zilliz
   - zilliz cloud
   - cloud

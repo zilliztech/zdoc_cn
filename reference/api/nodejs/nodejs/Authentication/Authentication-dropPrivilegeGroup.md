@@ -10,10 +10,10 @@ type: docx
 token: I63tdWAY2ok8V1xrK4tcrkwjncd
 sidebar_position: 10
 keywords: 
-  - Image Search
-  - LLMs
-  - Machine Learning
-  - RAG
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - what is vector db
   - zilliz
   - zilliz cloud
   - cloud

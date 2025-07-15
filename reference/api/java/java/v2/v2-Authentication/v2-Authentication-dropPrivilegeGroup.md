@@ -10,10 +10,10 @@ type: docx
 token: CIYQd12MNoiC4QxW97mcQLWYnYd
 sidebar_position: 7
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
   - zilliz
   - zilliz cloud
   - cloud

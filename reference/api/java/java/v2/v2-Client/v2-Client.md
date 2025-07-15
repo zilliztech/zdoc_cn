@@ -9,10 +9,10 @@ token: QW8NfURhvl0NtOdmS3DcvQYCnFh
 sidebar_position: 1
 sidebar_label: "Client"
 keywords: 
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
+  - vector database
+  - IVF
+  - knn
+  - Image Search
   - zilliz
   - zilliz cloud
   - cloud

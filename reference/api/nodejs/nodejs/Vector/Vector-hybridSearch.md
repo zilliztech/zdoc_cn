@@ -10,10 +10,10 @@ type: docx
 token: F3vqdLZS2ohhOAxQNNxciiirn4f
 sidebar_position: 3
 keywords: 
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
   - zilliz
   - zilliz cloud
   - cloud

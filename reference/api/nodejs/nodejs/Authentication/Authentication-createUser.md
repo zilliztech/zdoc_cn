@@ -10,10 +10,10 @@ type: docx
 token: JNZxdKEX3ohBl2xud7Wckhq7nVh
 sidebar_position: 5
 keywords: 
-  - Recommender systems
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
   - zilliz
   - zilliz cloud
   - cloud

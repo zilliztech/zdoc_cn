@@ -10,10 +10,10 @@ type: docx
 token: T9Jqd5JfdoW5Jxxwx1eckCOCn6c
 sidebar_position: 1
 keywords: 
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud

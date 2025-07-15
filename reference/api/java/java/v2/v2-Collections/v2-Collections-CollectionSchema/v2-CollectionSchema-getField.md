@@ -10,10 +10,10 @@ type: docx
 token: AXWod56QkoprlXxOXkwcPXfonHg
 sidebar_position: 3
 keywords: 
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
-  - knn algorithm
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
   - zilliz
   - zilliz cloud
   - cloud
@@ -52,7 +52,7 @@ CollectionSchema.getField(String fieldName)
 
 **RETURNS:**
 
-A [FieldSchema](./v2-FieldSchema) object containing details of the field.
+A [FieldSchema](./v2-Collections-FieldSchema) object containing details of the field.
 
 **EXCEPTIONS:**
 

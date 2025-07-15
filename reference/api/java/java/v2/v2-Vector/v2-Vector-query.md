@@ -10,10 +10,10 @@ type: docx
 token: OnIpdTTSOoV06KxhhAkcFQCKnWd
 sidebar_position: 5
 keywords: 
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - vectordb
   - zilliz
   - zilliz cloud
   - cloud

@@ -10,10 +10,10 @@ type: docx
 token: HwoNd8f9Toy4n9xOn0QcJPcgnhX
 sidebar_position: 10
 keywords: 
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
-  - cosine distance
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
   - zilliz
   - zilliz cloud
   - cloud

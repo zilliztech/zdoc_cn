@@ -10,10 +10,10 @@ type: docx
 token: HSIDdxQGEoPdyaxkMDjcAWGQnpd
 sidebar_position: 15
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
+  - Embedding model
   - zilliz
   - zilliz cloud
   - cloud

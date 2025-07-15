@@ -9,10 +9,10 @@ token: YkL6fqkaNlgeWXdNaWLcltkZnRc
 sidebar_position: 9
 sidebar_label: "Partitions"
 keywords: 
-  - vector database
-  - IVF
   - knn
   - Image Search
+  - LLMs
+  - Machine Learning
   - zilliz
   - zilliz cloud
   - cloud

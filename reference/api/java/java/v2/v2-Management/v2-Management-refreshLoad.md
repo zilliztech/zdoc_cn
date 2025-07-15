@@ -10,10 +10,10 @@ type: docx
 token: Bg4Fd8bjLozCgxxpQb2cU6nznUc
 sidebar_position: 12
 keywords: 
-  - open source vector database
-  - Vector index
-  - vector database open source
-  - open source vector db
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
   - zilliz
   - zilliz cloud
   - cloud

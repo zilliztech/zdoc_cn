@@ -10,10 +10,10 @@ type: docx
 token: Lc03dk5YVo8Ilvx4XINcv5KBn9e
 sidebar_position: 12
 keywords: 
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud

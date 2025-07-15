@@ -9,10 +9,10 @@ token: YBQDf0VrtlUZx3dVkdKckKT5ngh
 sidebar_position: 6
 sidebar_label: "Vector"
 keywords: 
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
-  - Video search
+  - what is semantic search
+  - Embedding model
+  - image similarity search
+  - Context Window
   - zilliz
   - zilliz cloud
   - cloud

@@ -10,10 +10,10 @@ type: docx
 token: Fs7qdzeHZo305txlj45cgqoVnUf
 sidebar_position: 5
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - AI Hallucination
   - zilliz
   - zilliz cloud
   - cloud

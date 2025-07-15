@@ -9,10 +9,10 @@ token: SU7xfa1bal8yS0dioBmcCncYn5c
 sidebar_position: 1
 sidebar_label: "Collections"
 keywords: 
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - RAG
   - zilliz
   - zilliz cloud
   - cloud

@@ -10,10 +10,10 @@ type: docx
 token: HPumdTuktozoJAxYrqQcRciSnsb
 sidebar_position: 6
 keywords: 
-  - what is milvus
-  - milvus database
-  - milvus lite
-  - milvus benchmark
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud

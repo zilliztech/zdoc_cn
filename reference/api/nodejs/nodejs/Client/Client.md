@@ -9,10 +9,10 @@ token: YIWifhm0HlwT5ldC40fc8tAOnXd
 sidebar_position: 7
 sidebar_label: "Client"
 keywords: 
-  - cosine distance
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
   - zilliz
   - zilliz cloud
   - cloud

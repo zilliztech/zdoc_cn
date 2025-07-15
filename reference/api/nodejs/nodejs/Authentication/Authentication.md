@@ -9,10 +9,10 @@ token: H1JWfZh74lkVhgdfGiKcQfsinPg
 sidebar_position: 6
 sidebar_label: "Authentication"
 keywords: 
-  - Zilliz
-  - milvus vector database
-  - milvus db
-  - milvus vector db
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - open source vector db
   - zilliz
   - zilliz cloud
   - cloud
