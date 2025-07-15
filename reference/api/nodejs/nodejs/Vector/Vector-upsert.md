@@ -10,10 +10,10 @@ type: docx
 token: MErAdudCloVawFxpxoWcgqZonLc
 sidebar_position: 8
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
   - zilliz
   - zilliz cloud
   - cloud

@@ -1,7 +1,10 @@
 ---
+title: "CreateIndex() | Go | v1"
 slug: /go/v1-Index-CreateIndex
-beta: FALSE
+sidebar_label: "CreateIndex()"
+beta: NEAR DEPRECATE
 notebook: FALSE
+description: "This method creates an index for a specific field in a collection. | Go | v1"
 type: origin
 token: OlbawMa1XiBIxBkGcxgcnNaunTd
 sidebar_position: 1
@@ -22,39 +25,39 @@ func (c *GrpcClient) CreateIndex(ctx context.Context, collName string, fieldName
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>ctx</code></p></td>
-  <td><p>Context for the current call to work.</p></td>
-  <td><p><code>context.Context</code></p></td>
+     <td><p><code>ctx</code></p></td>
+     <td><p>Context for the current call to work.</p></td>
+     <td><p><code>context.Context</code></p></td>
    </tr>
    <tr>
-  <td><p><code>collName</code></p></td>
-  <td><p>Name of a collection</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>collName</code></p></td>
+     <td><p>Name of a collection</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>fieldName</code></p></td>
-  <td><p>Name of the field to index.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>fieldName</code></p></td>
+     <td><p>Name of the field to index.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>idx</code></p></td>
-  <td><p>Index settings.</p></td>
-  <td><p><code>entity.Index</code></p></td>
+     <td><p><code>idx</code></p></td>
+     <td><p>Index settings.</p></td>
+     <td><p><code>entity.Index</code></p></td>
    </tr>
    <tr>
-  <td><p><code>async</code></p></td>
-  <td><p>Whether this operation is asynchronous.</p></td>
-  <td><p><code>bool</code></p></td>
+     <td><p><code>async</code></p></td>
+     <td><p>Whether this operation is asynchronous.</p></td>
+     <td><p><code>bool</code></p></td>
    </tr>
    <tr>
-  <td><p><code>opts</code></p></td>
-  <td><p>Extra index settings</p><p>You can include multiple <code>entity.IndexOption</code> in this request.</p></td>
-  <td><p><code>client.IndexOption</code></p></td>
+     <td><p><code>opts</code></p></td>
+     <td><p>Extra index settings</p><p>You can include multiple <code>entity.IndexOption</code> in this request.</p></td>
+     <td><p><code>client.IndexOption</code></p></td>
    </tr>
 </table>
 
@@ -72,24 +75,24 @@ type Index interface {
 
 <table>
    <tr>
-  <th><p>Method Signature</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method Signature</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Name()</code></p></td>
-  <td><p><code>string</code></p></td>
-  <td><p>Return the index name.</p></td>
+     <td><p><code>Name()</code></p></td>
+     <td><p><code>string</code></p></td>
+     <td><p>Return the index name.</p></td>
    </tr>
    <tr>
-  <td><p><code>IndexType()</code></p></td>
-  <td><p><code>entity.IndexType</code></p></td>
-  <td><p>Return the index type.</p></td>
+     <td><p><code>IndexType()</code></p></td>
+     <td><p><code>entity.IndexType</code></p></td>
+     <td><p>Return the index type.</p></td>
    </tr>
    <tr>
-  <td><p><code>Params()</code></p></td>
-  <td><p><code>map[string]string</code></p></td>
-  <td><p>Return the index parameters.</p></td>
+     <td><p><code>Params()</code></p></td>
+     <td><p><code>map[string]string</code></p></td>
+     <td><p>Return the index parameters.</p></td>
    </tr>
 </table>
 
@@ -101,16 +104,16 @@ This type provides methods to modify index settings when you create, describe, o
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>WithIndexName(name string)</code></p></td>
-  <td><p>Name of the index to create.</p><p>The value defaults to the target field name.</p></td>
+     <td><p><code>WithIndexName(name string)</code></p></td>
+     <td><p>Name of the index to create.</p><p>The value defaults to the target field name.</p></td>
    </tr>
    <tr>
-  <td><p><code>WithMmap(enabled bool)</code></p></td>
-  <td><p>Whether to enable MMap for the index.</p></td>
+     <td><p><code>WithMmap(enabled bool)</code></p></td>
+     <td><p>Whether to enable MMap for the index.</p></td>
    </tr>
 </table>
 

@@ -10,10 +10,10 @@ type: docx
 token: KsmadNcXRoElO2xJi5HcJO57nwb
 sidebar_position: 18
 keywords: 
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - vectordb
   - zilliz
   - zilliz cloud
   - cloud
@@ -46,14 +46,14 @@ has_partition(
 - **collection_name** (*str*) -
 
     **[REQUIRED]**
-The name of an existing collection.
+    The name of an existing collection.
 
     Setting this to a non-existing collection results in a **MilvusException**.
 
 - **partition_name** (*str*) -
 
     **[REQUIRED]**
-The name of a partition.
+    The name of a partition.
 
 - **using** (*str*) - 
 

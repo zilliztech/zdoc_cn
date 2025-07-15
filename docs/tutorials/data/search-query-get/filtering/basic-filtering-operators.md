@@ -222,6 +222,178 @@ filter = 'color == "red" OR color == "blue"'
 filter = 'NOT color == "green"'
 ```
 
+## IS NULL 和 IS NOT NULL 操作符{#is-null-and-is-not-null-operators}
+
+`IS NULL` 和 `IS NOT NULL` 操作符用来根据某个 Entity 指定字段的取值是否为 `null` （即值为空）进行过滤。
+
+- `IS NULL` 判断 Entity 中指定字段的取值是否为 `null`，即为空或未定义。
+
+- `IS NOT NULL` 判断 Entity 中指定字段的取值不为空，即 Entity 在该字段上的值为一个合法的值。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>此操作符大小写不敏感。因此，<code>IS NULL</code>、<code>is null</code>、<code>IS NOT NULL</code>、<code>is not null</code> 均合法。</p>
+
+</Admonition>
+
+### 普通标量字段中的 Null 值{#regular-scalar-fields-with-null-values}
+
+Zilliz Cloud 支持针对普通标量字段是否为空进行过滤。这些字段类型包括字段串或数值类型等。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>在 <code>VARCHAR</code> 类型的字段中，Zilliz Cloud 不会将 <code>""</code> 识别为 <code>nulll</code> 值。</p>
+
+</Admonition>
+
+如下过滤表达式可以过滤出 `description` 字段为空的 Entity。
+
+```python
+filter = 'description IS NULL'
+```
+
+如下过滤表达式可以过滤出 `description` 字段不为空的 Entity。
+
+```python
+filter = 'description IS NOT NULL'
+```
+
+如下过滤表达式可以过滤出 `description` 字段为空且 `price` 字段大于 `10` 的 Entity。
+
+```python
+filter = 'description IS NOT NULL AND price > 10'
+```
+
+### JSON 字段中的 Null 值{#json-fields-with-null-values}
+
+Zilliz Cloud 支持针对 JSON 字段是否为空进行过滤，并将符合如下条件的 JSON 字段判定为 `null`：
+
+- JSON 字段的值显式定义为 `None`，如 `{"metadata": None}`。
+
+- Entity 中未包含该 JSON 字段。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>如果 JSON 字段值中某些元素（例如，某些键值）为 <code>null</code>，该字段的值仍为非空。例如，某 Entity 的 JSON 字段的取值为 <code>\{"metadata": \{"category": None, "price": 99.99}}</code> 中。虽然 <code>category</code> 的值为 <code>None</code>，但该 JSON 字段的取值不会被当作 <code>null</code>。</p>
+
+</Admonition>
+
+为了更好地演示 Zilliz Cloud 如何处理允许为空的 JSON 字段，我们将使用如下数据结合相关示例进行说明：
+
+```python
+data = [
+  {
+      "metadata": {"category": "electronics", "price": 99.99, "brand": "BrandA"},
+      "pk": 1,
+      "embedding": [0.12, 0.34, 0.56]
+  },
+  {
+      "metadata": None, # Entire JSON object is null
+      "pk": 2,
+      "embedding": [0.56, 0.78, 0.90]
+  },
+  {  # JSON field `metadata` is completely missing
+      "pk": 3,
+      "embedding": [0.91, 0.18, 0.23]
+  },
+  {
+      "metadata": {"category": None, "price": 99.99, "brand": "BrandA"}, # Individual key value is null
+      "pk": 4,
+      "embedding": [0.56, 0.38, 0.21]
+  }
+]
+```
+
+**示例 1： 获取 `metadata` 为空的 Entity**
+
+只有当不存在 `metadata` 字段或该字段显式设置为 `None` 时，才会被认定为 `null`。
+
+```python
+filter = 'metadata IS NULL'
+
+# Example output:
+# data: [
+#     "{'metadata': None, 'pk': 2}",
+#     "{'metadata': None, 'pk': 3}"
+# ]
+```
+
+**示例 2：获取 `metadata` 为非空的 Entity**
+
+```python
+filter = 'metadata IS NOT NULL'
+
+# Example output:
+# data: [
+#     "{'metadata': {'category': 'electronics', 'price': 99.99, 'brand': 'BrandA'}, 'pk': 1}",
+#     "{'metadata': {'category': None, 'price': 99.99, 'brand': 'BrandA'}, 'pk': 4}"
+# ]
+```
+
+### ARRAY 字段中的 Null 值{#array-fields-with-null-values}
+
+Zilliz Cloud 支持针对 ARRAY 字段是否为空进行过滤，并将符合如下条件的 ARRAY 字段判定为 `null`：
+
+- ARRAY 字段的值显式定义为 `None`，如 `{"metadata": None}`。
+
+- Entity 中未包含该 JSON 字段。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>由于 ARRAY 字段中各元素的数值类型需要保持一致，因此 ARRAY 字段不支持部分元素值为 <code>null</code>。具体可参考<a href="./use-array-fields">Array 类型</a>。</p>
+
+</Admonition>
+
+为了更好地演示 Zilliz Cloud 如何处理允许为空的 ARRAY 字段，我们将使用如下数据结合相关示例进行说明：
+
+```python
+data = [
+  {
+      "tags": ["pop", "rock", "classic"],
+      "ratings": [5, 4, 3],
+      "pk": 1,
+      "embedding": [0.12, 0.34, 0.56]
+  },
+  {
+      "tags": None,  # Entire ARRAY is null
+      "ratings": [4, 5],
+      "pk": 2,
+      "embedding": [0.78, 0.91, 0.23]
+  },
+  {  # The tags field is completely missing
+      "ratings": [9, 5],
+      "pk": 3,
+      "embedding": [0.18, 0.11, 0.23]
+  }
+]
+```
+
+**示例 1： 获取 `tags` 为空的 Entity**
+
+只有当不存在 `tags` 字段或该字段显式设置为 `None` 时，才会被认定为 `null`。
+
+```python
+filter = 'tags IS NULL'
+
+# Example output:
+# data: [
+#     "{'tags': None, 'ratings': [4, 5], 'embedding': [0.78, 0.91, 0.23], 'pk': 2}",
+#     "{'tags': None, 'ratings': [9, 5], 'embedding': [0.18, 0.11, 0.23], 'pk': 3}"
+# ]
+```
+
+**示例 2：获取 `tags` 为非空的 Entity**
+
+```python
+filter = 'tags IS NOT NULL'
+
+# Example output:
+# data: [
+#     "{'metadata': {'category': 'electronics', 'price': 99.99, 'brand': 'BrandA'}, 'pk': 1}",
+#     "{'metadata': {'category': None, 'price': 99.99, 'brand': 'BrandA'}, 'pk': 4}"
+# ]
+```
+
 ## 在针对 JSON 和 ARRAY 类型的字段进行过滤时使用基本操作符需要注意的问题{#tips-on-using-basic-operators-with-json-and-array-fields}
 
 Zilliz Cloud 集群中的基本运算符用途广泛，可用于标量字段，但它们也可有效地用于 JSON 和 ARRAY 字段中的键和索引。

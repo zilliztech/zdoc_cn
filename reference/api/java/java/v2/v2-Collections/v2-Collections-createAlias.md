@@ -8,12 +8,12 @@ notebook: false
 description: "This operation creates an alias for an existing collection. | Java | v2"
 type: docx
 token: NMAOdxhL1oo0E7xcFqXcF6yPnBg
-sidebar_position: 4
+sidebar_position: 6
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -85,7 +85,19 @@ createAlias(CreateAliasReq.builder()
 ## Example
 
 ```java
-// create a alias "test_alias" for collection "test"
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.utility.request.CreateAliasReq;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Create an alias "test_alias" for collection "test"
 CreateAliasReq createAliasReq = CreateAliasReq.builder()
         .collectionName("test")
         .alias("test_alias")

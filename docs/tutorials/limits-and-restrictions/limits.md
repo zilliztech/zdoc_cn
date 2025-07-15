@@ -37,7 +37,7 @@ import Admonition from '@theme/Admonition';
    <tr>
      <td><p>组织</p></td>
      <td><p>1</p></td>
-     <td><p>Zilliz Cloud 账号注册成功后，系统会自动创建 1 个组织。如需更多组织，请<a href="https://support.zilliz.com.cn/hc/zh-cn">提交工单</a>。 1 名用户可以加入多个组织。</p></td>
+     <td><p>Zilliz Cloud 账号注册成功后，系统会自动创建 1 个组织。如需更多组织，请<a href="https://support.zilliz.com.cn/hc/zh-cn">提交工单</a>。</p><p>1 名用户可以加入多个组织。</p></td>
    </tr>
    <tr>
      <td><p>项目</p></td>
@@ -230,95 +230,29 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
 
 ## Collection{#collections}
 
-<table>
-   <tr>
-     <th><p><strong>类型</strong></p></th>
-     <th><p><strong>最大数量</strong></p></th>
-     <th><p><strong>描述</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>Free 版集群</p></td>
-     <td><p>5</p></td>
-     <td><p>在 Free 版集群中，最多可创建 5 个 Collection。</p></td>
-   </tr>
-   <tr>
-     <td><p>Serverless 版集群</p></td>
-     <td><p>100</p></td>
-     <td><p>在 Serverless 版集群中，最多可创建 100 个 Collection。</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群</p></td>
-     <td><p>每 CU：&lt;= 64 每集群：&lt;= 4096</p></td>
-     <td><p>在 Dedicated 版集群中，每个计算单元（CU）可创建最多 64 个 Collection，并且集群中的 Collection 总数不能超过 4096。</p></td>
-   </tr>
-</table>
+### 兼容 Milvus v2.4.x 的集群{#clusters-compatible-with-milvus-v24x}
 
-除了对集群中 Collection 数量的限制外，Zilliz Cloud 还对 Partition 的数量有所限制。具体来说，Zilliz Cloud 会根据集群使用的 CU 大小来计算集群中可创建的 Partition 数量，集群当前已创建的 Partition 数量需要小于或等于其可创建的 Partition 数量。
+根据您的集群使用的 CU 数量的不同，每 CU 支持创建最多 256 个 Collection 或 1,024 个 Partition。其中，每个 Collection 最多可创建 1,024 个 Partition。每个 Collection 支持创建最多 1,024 个 Partition。 您可以参考如下公式计算您的集群中的 Collection 和 Partition 的数量上限。
 
-```java
-集群占可创建的 Partition 数量 = 512 x CU 大小
-```
+![QJ1jwpa8YhQegqbrAYWcJEOUnWf](/img/QJ1jwpa8YhQegqbrAYWcJEOUnWf.png)
 
-<Admonition type="info" icon="📘" title="说明">
+- 集群中 Collection 的数量上限应该在 256 和集群的 CU 数量之积与 16,384 间取最小值。
 
-<p>为了便于理解，下文演示了 Zilliz Cloud 如何计算集群的已创建 Partition 数量和可创建 Partition 数量。</p>
-<ul>
-<li><strong>计算集群中已创建的 Paritition 数量</strong></li>
-</ul>
-<p>假设一个集群含有 50 个 Collection。前 20 个 Collection 中，每个 Collection 含有 20 个Partition，剩下的 30 个 Collection 分别含有 10 个 Partition。因此，可以按照以下方式计算集群中<strong>已创建的 Paritition 数量</strong>：</p>
-<p><strong>20 (collections) x 20 (partitions) + 30 (collections) x 10 (partitions) = 400 + 300 = 700</strong></p>
-<p>基于以上等式，Zilliz Cloud 将该集群中已创建的 Partition 数量设定为 700。</p>
-<ul>
-<li><strong>计算集群中可创建的 Partition 数量</strong></li>
-</ul>
-<p>可以使用以下公式计算集群<strong>中可创建的 Partition 数量</strong>：</p>
-<p><strong>\<= 512 x CU 数</strong></p>
-<p>例如：</p>
-<p>在一个 2 CU 的 Dedicated 集群中，最多可创建 <strong>128</strong> 个 Collection 或 <strong>1,024</strong> 个 Partition。</p>
-<p>在一个 12 CU 的 Dedicated 集群中，最多可创建 <strong>768</strong> 个 Collection 或 <strong>6,144</strong> 个 Partition。</p>
-<p>在一个 32 CU 的 Dedicated 集群中，最多可创建 <strong>2,048</strong> 个 Collection 或  <strong>16,384</strong> 个 Partition。</p>
+- 集群中所有 Collection 中的 Partition 的总数量应该在 1,024 和集群的 CU 数量之和与 65,536 间取最小值。
 
-</Admonition>
+- 上述条件需同时满足。
 
-此外，Zilliz Cloud 针对 Serverless 和 Dedicated 集群中的 Collection 操作（包括创建、加载、释放、删除）还具有速率限制。
+### 兼容 Milvus v2.5.x 的集群{#clusters-compatible-with-milvus-v25x}
 
-<table>
-   <tr>
-     <th></th>
-     <th><p><strong>Rate limits</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>Collection 操作（创建、加载、释放、删除）</p></td>
-     <td><p>每个集群 5 req/s。</p></td>
-   </tr>
-</table>
+根据您的集群使用的 CU 数量的不同，每 CU 支持创建最多 1,024 个 Collection 或 4,096 个 Partition。其中，每个 Collection 最多可创建 1,024 个 Partition。每个 Collection 支持创建最多 1,024 个 Partition。 您可以参考如下公式计算您的集群中的 Collection 和 Partition 的数量上限。
 
-### Partition{#partitions}
+![ITn3wC8InhchVGbcz4QciSXqnag](/img/ITn3wC8InhchVGbcz4QciSXqnag.png)
 
-<table>
-   <tr>
-     <th><p><strong>类型</strong></p></th>
-     <th><p><strong>最大数量（每个 Collection）</strong></p></th>
-     <th><p><strong>描述</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>Free 版集群</p></td>
-     <td><p>1,024</p></td>
-     <td><p>在 Free 版集群中，您可以为每个 Collection 创建最多 1,024 个 Partition。</p></td>
-   </tr>
-   <tr>
-     <td><p>Serverless 版集群</p></td>
-     <td><p>1,024</p></td>
-     <td><p>在 Serverless 版集群中，您可以为每个 Collection 创建最多 1,024 个 Partition。</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群</p></td>
-     <td><p>1,024</p></td>
-     <td><p>在 Dedicated 版集群中，您可以为每个 Collection 创建最多 1,024 个 Partition。</p></td>
-   </tr>
-</table>
+- 集群中 Collection 的数量上限应该在 1,024 和集群的 CU 数量之积与 16,384 间取最小值。
 
-在计算已创建和可创建 Partition 数量时，请参考 [Collection](./limits#collections) 部分的说明。此外，每个集群创建 Partition 的速率限制为每秒 1 个 Partition。
+- 集群中所有 Collection 中的 Partition 的总数量应该在 4,096 和集群的 CU 数量之和与 65,536 间取最小值。
+
+- 上述条件需同时满足。
 
 ### 字段{#fields}
 
@@ -349,6 +283,57 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
 ### 向量维度{#dimensions}
 
 向量字段的最大维度数为 32768。
+
+### Shard{#shards}
+
+Shard 的数量上限取决于集群版本和 CU 规格。
+
+<table>
+   <tr>
+     <th colspan="2"><p><strong>集群版本和 CU 规格</strong></p></th>
+     <th><p><strong>数量上限</strong></p></th>
+   </tr>
+   <tr>
+     <td colspan="2"><p>Free</p></td>
+     <td><p>2</p></td>
+   </tr>
+   <tr>
+     <td colspan="2"><p>Serverless</p></td>
+     <td><p>2</p></td>
+   </tr>
+   <tr>
+     <td rowspan="4"><p>Dedicated</p></td>
+     <td><p>1-2 CU</p></td>
+     <td><p>2</p></td>
+   </tr>
+   <tr>
+     <td><p>4-8 CU</p></td>
+     <td><p>4</p></td>
+   </tr>
+   <tr>
+     <td><p>12-64 CU</p></td>
+     <td><p>8</p></td>
+   </tr>
+   <tr>
+     <td><blockquote>  <p>64 CU</p></blockquote></td>
+     <td><p>16</p></td>
+   </tr>
+</table>
+
+### 速率限制{#rate-limit}
+
+此外，Zilliz Cloud 针对 Serverless 和 Dedicated 集群中的 Collection 操作（包括创建、加载、释放、删除）还具有速率限制。
+
+<table>
+   <tr>
+     <th></th>
+     <th><p><strong>Rate limits</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>Collection 操作（创建、加载、释放、删除）</p></td>
+     <td><p>每个集群 5 req/s。</p></td>
+   </tr>
+</table>
 
 ## 数据操作{#operations}
 
@@ -563,17 +548,17 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
    <tr>
      <td><p>JSON</p></td>
      <td><p>1 GB</p></td>
-     <td><p>1 GB</p></td>
+     <td><p>Free: 512 MB</p><p>Serverless &amp; Dedicated: 1 TB</p></td>
    </tr>
    <tr>
      <td><p>Numpy</p></td>
      <td><p>暂不支持</p></td>
-     <td><p>文件夹的最大大小为 100 GB，每个子文件夹的最大大小为 15 GB。</p></td>
+     <td><p>Free: 512 MB</p><p>Serverless &amp; Dedicated: 文件夹的最大大小为 1 TB，每个子文件夹的最大大小为 10 GB。</p></td>
    </tr>
    <tr>
      <td><p>Parquet</p></td>
      <td><p>暂不支持</p></td>
-     <td><p>10 GB</p></td>
+     <td><p>Free: 512 MB</p><p>Serverless &amp; Dedicated: 1 TB</p></td>
    </tr>
 </table>
 

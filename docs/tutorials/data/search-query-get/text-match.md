@@ -1,10 +1,10 @@
 ---
-title: "精确文本匹配 | Cloud"
+title: "Text Match | Cloud"
 slug: /text-match
-sidebar_label: "精确文本匹配"
-beta: PUBLIC
+sidebar_label: "Text Match"
+beta: FALSE
 notebook: FALSE
-description: "Milvus 中的精确文本匹配功能能够基于特定术语实现精确的文档检索。通过使用关键词预筛选文档，可以缩小向量搜索的范围，从而提升搜索效率。该功能还可以结合标量过滤，以进一步优化查询结果。 | Cloud"
+description: "Milvus 中的 Text Match 功能能够基于特定术语实现精确的文档检索。通过使用关键词预筛选文档，可以缩小向量搜索的范围，从而提升搜索效率。该功能还可以结合标量过滤，以进一步优化查询结果。 | Cloud"
 type: origin
 token: WWSZwJWLYiRBfckbN58cV85BnQb
 sidebar_position: 10
@@ -27,21 +27,23 @@ import Admonition from '@theme/Admonition';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 精确文本匹配
+# Text Match
 
-Milvus 中的精确文本匹配功能能够基于特定术语实现精确的文档检索。通过使用关键词预筛选文档，可以缩小向量搜索的范围，从而提升搜索效率。该功能还可以结合标量过滤，以进一步优化查询结果。
+Milvus 中的 Text Match 功能能够基于特定术语实现精确的文档检索。通过使用关键词预筛选文档，可以缩小向量搜索的范围，从而提升搜索效率。该功能还可以结合标量过滤，以进一步优化查询结果。
 
-无论是构建检索增强生成（RAG）系统，还是优化文本搜索性能，精确文本匹配都能提升信息检索的准确性和速度。
+无论是构建检索增强生成（RAG）系统，还是优化文本搜索性能，Text Match 都能提升信息检索的准确性和速度。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>精确文本匹配关注的是查询词的精确匹配，而不对匹配文档的相关性进行评分。如果希望基于查询词的语义和重要性来检索最相关的文档，建议使用<a href="./full-text-search">全文搜索</a>。</p>
+<p>Text Match 关注的是查询词的精确匹配，而不对匹配文档的相关性进行评分。如果希望基于查询词的语义和重要性来检索最相关的文档，建议使用<a href="./full-text-search">全文搜索</a>。</p>
 
 </Admonition>
 
+Zilliz Cloud 支持通过代码或通过 Web 控制台开启 Text Match 功能。本文着重介绍如何通过代码开启 Text Match，如需了解 Web 控制台操作，请参考[管理 Collection (控制台)](./manage-collections-console#text-match)。
+
 ## 概述{#overview}
 
-Milvus 通过集成 [Tantivy](https://github.com/quickwit-oss/tantivy) 来实现精确文本匹配和关键词检索，以提升搜索速度和查询效率。对于每条文本记录，Zilliz Cloud 会按照以下步骤进行索引：
+Milvus 通过集成 [Tantivy](https://github.com/quickwit-oss/tantivy) 来实现 Text Match 和关键词检索，以提升搜索速度和查询效率。对于每条文本记录，Zilliz Cloud 会按照以下步骤进行索引：
 
 1. **Analyzer**：Analyzer 将输入文本分解为单个单词或标记，使得系统能够基于这些分词构建索引。
 
@@ -51,13 +53,13 @@ Milvus 通过集成 [Tantivy](https://github.com/quickwit-oss/tantivy) 来实现
 
 ![Z3zbwD4FShz7i7buDEecl1qxnCf](/img/Z3zbwD4FShz7i7buDEecl1qxnCf.png)
 
-## 开启精确文本匹配{#enable-text-match}
+## 开启 Text Match{#enable-text-match}
 
-精确文本匹配适用于 VARCHAR 字段类型，即 Zilliz Cloud 中的字符数据类型。要启用精确文本匹配，您需要在定义 Collection Schema 时将 `enable_analyzer` 和 `enable_match` 参数都设置为 `True`，并可以选择配置 Analyzer。
+Text Match 适用于 VARCHAR 字段类型，即 Zilliz Cloud 中的字符数据类型。要启用 Text Match，您需要在定义 Collection Schema 时将 `enable_analyzer` 和 `enable_match` 参数都设置为 `True`，并可以选择配置 Analyzer。
 
 ### 设置 `enable_analyzer` 和 `enable_match`{#set-enableanalyzer-and-enablematch}
 
-要为特定的 `VARCHAR` 字段启用精确文本匹配，在定义字段 Schema 时需将 `enable_analyzer` 和 `enable_match` 参数都设置为 `True`。这指示 Milvus 对文本进行分词，并为指定字段创建倒排索引，从而实现快速高效的精确文本匹配。
+要为特定的 `VARCHAR` 字段启用 Text Match，在定义字段 Schema 时需将 `enable_analyzer` 和 `enable_match` 参数都设置为 `True`。这指示 Milvus 对文本进行分词，并为指定字段创建倒排索引，从而实现快速高效的 Text Match。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
@@ -159,7 +161,7 @@ export schema='{
 
 ### 可选：配置 Analyzer{#optional-configure-an-analyzer}
 
-精确文本匹配的性能和准确性依赖于所选的 Analyzer。不同的 Analyzer 对语言和文本结构的处理方式不同，因此选择适合您用例的 Analyzer 非常重要。
+Text Match 的性能和准确性依赖于所选的 Analyzer。不同的 Analyzer 对语言和文本结构的处理方式不同，因此选择适合您用例的 Analyzer 非常重要。
 
 默认情况下，Milvus 使用 `standard` analyzer。该 Analyzer 基于空格和标点符号对文本进行分词，删除超过 40 个字符的分词，并将文本转换为小写。使用 `standard` analyzer 无需您指定任何参数。
 
@@ -267,9 +269,9 @@ export schema='{
 
 有关可用分词器及其配置的更多信息，请参考 [Tokenizer](./analyzer)。
 
-## 使用精确文本匹配{#use-text-match}
+## 使用 Text Match{#use-text-match}
 
-在 Collection Schema 中为 VARCHAR 字段启用精确文本匹配后，您可以使用 `TEXT_MATCH` 表达式执行文本匹配。
+在 Collection Schema 中为 VARCHAR 字段启用 Text Match 后，您可以使用 `TEXT_MATCH` 表达式执行文本匹配。
 
 ### `TEXT_MATCH` 表达式语法{#textmatch-expression-syntax}
 
@@ -393,9 +395,9 @@ export filter="\"TEXT_MATCH(text, 'machine deep')\""
     </TabItem>
     </Tabs>
 
-### 使用精确文本匹配进行搜索{#search-with-text-match}
+### Search 时使用 Text Match{#search-with-text-match}
 
-精确文本匹配可以与向量相似度搜索结合使用，以缩小搜索范围并提升搜索性能。通过在进行向量相似度搜索前使用精确文本匹配筛选 Collection，可以减少需要搜索的文档数量，从而加快查询速度。
+Text Match 可以与向量相似度搜索结合使用，以缩小搜索范围并提升搜索性能。通过在进行向量相似度搜索前使用 Text Match 筛选 Collection，可以减少需要搜索的文档数量，从而加快查询速度。
 
 在以下示例中，`filter` 过滤了 Collection，只包括匹配指定关键词的文档。然后，在这个筛选后的文档子集中执行向量相似度搜索。
 
@@ -487,9 +489,9 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 使用精确文本匹配进行查询{#query-with-text-match}
+### Query 时使用 Text Match{#query-with-text-match}
 
-精确文本匹配还可以用于查询操作中的标量过滤。通过在 `query()` 方法的 `expr` 参数中指定 `TEXT_MATCH` 表达式，可以检索到匹配给定关键词的文档。
+Text Match 还可以用于查询操作中的标量过滤。通过在 `query()` 方法的 `expr` 参数中指定 `TEXT_MATCH` 表达式，可以检索到匹配给定关键词的文档。
 
 以下示例中，查询 `text` 字段中包含关键词 `"keyword1"` 和 `"keyword2"`的文档：
 
@@ -563,7 +565,7 @@ curl --request POST \
 
 ## 注意事项{#considerations}
 
-- 为字段启用精确文本匹配时，会创建倒排索引，这会占用存储资源。启用该功能时请考虑存储影响，因为这取决于文本大小、唯一分词数量以及使用的分词器。
+- 为字段启用 Text Match 时，会创建倒排索引，这会占用存储资源。启用该功能时请考虑存储影响，因为这取决于文本大小、唯一分词数量以及使用的分词器。
 
 - 一旦在 Schema 中定义了分词器配置，该配置就会固定在 Collection 上。如果您认为其他分词器更适合您的需求，可以考虑删除现有的 Collection 并创建一个包含所需分词器配置的新 Collection。
 

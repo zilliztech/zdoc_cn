@@ -5,14 +5,14 @@ beta: false
 notebook: false
 description: "Classes and methods for you to manage the MilvusClient instances. | Java | v2"
 type: folder
-token: YEBjfrOXWl8s00dDTvdcMiYDn0d
-sidebar_position: 5
+token: QW8NfURhvl0NtOdmS3DcvQYCnFh
+sidebar_position: 1
 sidebar_label: "Client"
 keywords: 
-  - rag vector database
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
   - zilliz
   - zilliz cloud
   - cloud

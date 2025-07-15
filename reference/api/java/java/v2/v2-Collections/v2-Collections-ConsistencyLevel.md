@@ -8,12 +8,12 @@ notebook: false
 description: "This is an enumeration that provides the following constants. | Java | v2"
 type: docx
 token: Q8IidbqKMopplgxSxaicS2o9nwc
-sidebar_position: 3
+sidebar_position: 5
 keywords: 
-  - RAG
-  - NLP
-  - Neural Network
-  - Deep Learning
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud
@@ -35,6 +35,10 @@ This is an enumeration that provides the following constants.
 - **STRONG**
 
     Sets the consistency level to **Strong**, with a code value of 0.
+
+- **SESSION**
+
+    Sets the consistency level to **Session**, with a code value of 1.
 
 - **BOUNDED**
 

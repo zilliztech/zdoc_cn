@@ -36,7 +36,9 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 ## 设置按量计费集群 Replica{#configure-replicas-for-usage-based-cluster}
 
-设置 Replica 的操作会影响集群每月的 CU 费用。存储费用不会受到影响。更多详情，请参考[了解费用](./understand-cost)。
+设置 Replica 的操作会影响集群每月的 CU 费用。存储费用不会受到影响。更多详情，请参考[预估费用](./understand-cost)。
+
+### 使用限制{#limits}
 
 在集群创建完成后，满足以下条件时，您可以设置 Replica：
 
@@ -46,7 +48,46 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 在设置 Replica 时，需要注意 CU 规格 x Replica 数量不得超过 256。
 
-![configure-replica-cn](/img/configure-replica-cn.png)
+<Admonition type="caution" icon="🚧" title="警告">
+
+<p>修改 Replica 数量可能会短暂影响数据读取。请谨慎操作。</p>
+
+</Admonition>
+
+### 手动调整 Replica 数量{#configure-replicas-manually}
+
+您可以选择通过控制台或 RESTful API 调整集群 Replica 数量。
+
+#### 通过 Web 控制台{#via-web-console}
+
+以下 Demo 展示了如何在 Zilliz Cloud 控制台中手动调整 Replica 数量。
+
+#### 通过RESTful API{#via-restful-api}
+
+您可以使用 RESTful API 设置 Replica。
+
+`replica` 参数的取值应为 1 到 8 之间的整数。更多详情，请参考[修改集群 Replica](/reference/restful/modify-cluster-replica-v2)。
+
+```bash
+export BASE_URL="https://api.cloud.zilliz.com.cn"
+export CLUSTER_ID="YOUR_CLUSTER_ID"
+export TOKEN="YOUR_API_KEY"
+
+curl --request POST \
+     --url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/modifyReplica" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Accept: application/json" \
+     --header "Content-type: application/json" \
+     --data-raw '{
+        "replica": "2"
+      }'
+```
+
+### 设置 Replica 弹性伸缩{#auto-scale-replicas}
+
+目前，您仅可通过 Zilliz Cloud 控制台，根据预设的时间计划自动调整 Replica 数量。
+
+以下 Demo 展示了如何启用 Replica 弹性伸缩功能。
 
 ## 设置包年包月集群 Replica{#configure-replicas-for-annual-subsription-cluster}
 

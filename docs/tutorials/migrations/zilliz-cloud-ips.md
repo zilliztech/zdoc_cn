@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz Cloud 使用一组固定的 IP 地址从您的数据源中拉取数据，并将其发送到目标集群。为了确保 Zilliz Cloud 能够执行此操作，您需要在防火墙中将这些 IP 地址添加到安全列表中： | Cloud"
 type: origin
 token: J86AwNi3midzR9kqgbHcnX14ntc
-sidebar_position: 1
+sidebar_position: 4
 keywords: 
   - 向量数据库
   - zilliz
@@ -72,6 +72,16 @@ Zilliz Cloud 使用一组固定的 IP 地址从您的数据源中拉取数据，
      <td><p>cn-shenzhen</p></td>
      <td><p>华南1（深圳）</p></td>
      <td><p><code>47.107.39.14</code></p></td>
+   </tr>
+   <tr>
+     <td><p>cn-shanghai</p></td>
+     <td><p>华东2（上海）</p></td>
+     <td><p><code>47.117.150.202</code></p></td>
+   </tr>
+   <tr>
+     <td><p>us-east</p></td>
+     <td><p>美国（弗吉尼亚）</p></td>
+     <td><p><code>47.253.55.20</code></p></td>
    </tr>
 </table>
 

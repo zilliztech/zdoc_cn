@@ -10,10 +10,10 @@ type: docx
 token: KQAidyvxhoVaALxLratcCjMuniU
 sidebar_position: 9
 keywords: 
-  - Audio similarity search
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
   - zilliz
   - zilliz cloud
   - cloud
@@ -169,24 +169,13 @@ This method returns a promise that resolves to a **SearchResults** object.
 
 ```javascript
 {
-    data: list[string],
-    status: object
+    status: object,
+    results: list[string],
+    recalls: list[number]
 }
 ```
 
 **PARAMETERS:**
-
-- **results** (*object*) -
-
-    - **id** (*string*) -
-
-        The ID of the search result
-
-    - **score**(*number*) -
-
-        The similarity score of the search result.
-
-    - Plus output fields and their values.
 
 - **status** (*object*) -
 
@@ -201,6 +190,24 @@ This method returns a promise that resolves to a **SearchResults** object.
     - **reason** (*string*) - 
 
         The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
+
+- **results** (*list[object]*) -
+
+    Each result object has the following keys:
+
+    - **id** (*string*) -
+
+        The ID of the search result
+
+    - **score**(*number*) -
+
+        The similarity score of the search result.
+
+    - Plus output fields and their values.
+
+- **recalls** (*list[number]*) -
+
+    Each number indicates the recall rate of a search against a query vector.
 
 ## Example
 

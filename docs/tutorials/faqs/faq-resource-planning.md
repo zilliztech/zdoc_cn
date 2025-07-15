@@ -18,6 +18,7 @@ sidebar_position: 7
 ## 目录
 
 - [什么是计算单元（Compute Unit, CU）?](#what-is-a-compute-unit-cu)
+- [什么是 vCU？](#what-is-a-vCU-how-does-it-get-calculated)
 - [如何查看订阅的 Zilliz Cloud 版本？](#how-can-i-know-which-plan-i-am-on)
 - [我应该选择哪种 CU 类型？](#which-type-of-cu-should-i-pick)
 - [我的数据需要使用多少 CU？](#how-many-cus-do-i-need-for-a-given-collection)
@@ -32,6 +33,10 @@ sidebar_position: 7
 ### 什么是计算单元（Compute Unit, CU）? \{#what-is-a-compute-unit-cu}
 
 计算单元（CU）是指用于提供向量检索、分析服务的一组硬件资源。可以将 CU 视为一个物理查询节点。
+
+### 什么是 vCU？ \{#what-is-a-vCU-how-does-it-get-calculated}
+
+vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、upsert、delete）所消耗资源的基本单位。读取和写入的数据量单位会由 GB 折算为 vCU。详情请参考[了解费用](./understand-cost#serverless-clusters)。
 
 ### 如何查看订阅的 Zilliz Cloud 版本？ \{#how-can-i-know-which-plan-i-am-on}
 

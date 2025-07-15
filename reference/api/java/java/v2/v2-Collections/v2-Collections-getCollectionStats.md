@@ -8,12 +8,12 @@ notebook: false
 description: "This operation lists the statistics collected on a specific collection. | Java | v2"
 type: docx
 token: XgfcdpBWCof3pfxhUudcRZajnPc
-sidebar_position: 13
+sidebar_position: 17
 keywords: 
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud
@@ -72,6 +72,20 @@ A **GetCollectionStatsResp** object containing collected statistics on the speci
 ## Example
 
 ```java
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.collection.request.GetCollectionStatsReq;
+import io.milvus.v2.service.collection.response.GetCollectionStatsResp;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Get collection stats
 GetCollectionStatsReq getCollectionStatsReq = GetCollectionStatsReq.builder()
         .collectionName("test")
         .build();

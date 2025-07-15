@@ -1,7 +1,10 @@
 ---
+title: "Vectors | Go | v1"
 slug: /go/v1-Collection-Vectors
-beta: FALSE
+sidebar_label: "Vectors"
+beta: NEAR DEPRECATE
 notebook: FALSE
+description: "The types on this page implemented the method signatures of the entity.Vector interface. | Go | v1"
 type: origin
 token: IFwrw2OQPiM3gCk3AMEcn8GAnch
 sidebar_position: 19
@@ -141,34 +144,34 @@ type SparseEmbedding interface {
 
 <table>
    <tr>
-  <th><p>Method</p></th>
-  <th><p>Return Type</p></th>
-  <th><p>Description</p></th>
+     <th><p>Method</p></th>
+     <th><p>Return Type</p></th>
+     <th><p>Description</p></th>
    </tr>
    <tr>
-  <td><p><code>Dim()</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p>Return the dimensionality of the sparse vector.</p></td>
+     <td><p><code>Dim()</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p>Return the dimensionality of the sparse vector.</p></td>
    </tr>
    <tr>
-  <td><p><code>Len()</code></p></td>
-  <td><p><code>int</code></p></td>
-  <td><p>Return the length of the sparse vector.</p></td>
+     <td><p><code>Len()</code></p></td>
+     <td><p><code>int</code></p></td>
+     <td><p>Return the length of the sparse vector.</p></td>
    </tr>
    <tr>
-  <td><p><code>Get(idx int)</code></p></td>
-  <td><p><code>pos unit32, value float32, ok bool</code></p></td>
-  <td><p>Return a slice of the sparse vector.</p></td>
+     <td><p><code>Get(idx int)</code></p></td>
+     <td><p><code>pos unit32, value float32, ok bool</code></p></td>
+     <td><p>Return a slice of the sparse vector.</p></td>
    </tr>
    <tr>
-  <td><p><code>Serialize()</code></p></td>
-  <td><p><code>[]byte</code></p></td>
-  <td><p>Return the serialized representation of the vector.</p></td>
+     <td><p><code>Serialize()</code></p></td>
+     <td><p><code>[]byte</code></p></td>
+     <td><p>Return the serialized representation of the vector.</p></td>
    </tr>
    <tr>
-  <td><p><code>FieldType()</code></p></td>
-  <td><p><code>entity.FieldType</code></p></td>
-  <td><p>Return the field type of the vector.</p></td>
+     <td><p><code>FieldType()</code></p></td>
+     <td><p><code>entity.FieldType</code></p></td>
+     <td><p>Return the field type of the vector.</p></td>
    </tr>
 </table>
 

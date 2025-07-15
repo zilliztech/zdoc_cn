@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz Cloud 的用量页为您提供可视化的成本分析能力，支持从多个维度查看 Zilliz Cloud 按量计费集群的使用和消费情况以及包年包月集群额外产生的存储和备份费用。 | Cloud"
 type: origin
 token: DeRWwlqYKiH76okxiaBcVFPjnMg
-sidebar_position: 9
+sidebar_position: 8
 keywords: 
   - 向量数据库
   - zilliz
@@ -35,7 +35,7 @@ Zilliz Cloud 提供两种用量分析的方式：
 
 - [通过 Web 控制台](./analyze-cost#via-web-ui)：Web 控制台提供了可视化的图表，帮助您更直观地分析成本。界面上用量明细中的用量金额精度均为 **2 位小数**（例如：¥60.00）。
 
-- [通过 RESTful API](./analyze-cost#via-restful-api)：RESTful API 提供的用量金额数据精度更高，为 **8 位小数**。（例如：¥60.00257846）
+- [通过 RESTful API](./analyze-cost#via-restful-api)：RESTful API 提供的用量金额数据精度更高，为 **8 位小数（**例如：¥60.00257846）。如需对账，建议您使用 RESTful API。
 
 ### 通过 Web 控制台{#via-web-ui}
 
@@ -61,7 +61,11 @@ Zilliz Cloud 提供两种用量分析的方式：
 
     例如您为用户信息和订单信息分别创建了两个不同的集群，当您需要查看过去一个订单集群的用量和费用时，可以在集群选择器中选中对应的订单集群。
 
-    此外，您也可以通过筛选集群仅查看所有按量计费集群的用量或仅查看包年包月集群额外产生的按量计费用量，
+- **根据计费方式分析用量和成本**
+
+    如果您创建了多种计费方式的集群，您可以在筛选条件中选择特定计费方式。
+
+    例如您在同一组织下创建了一个包年包月集群和一个按量计费集群。如果您需要计算包年包月集群的使用成本，您可以在计费类型筛选器中选择包年包月。筛选后，您可以查看所有包年包月集群额外产生的按量计费费用（即存储、备份等费用）。将筛选出的包年包月集群用量费用与包年包月集群的[订单](./manage-order)费用相加后即可得出包年包月集群的总成本费用。
 
 - **根据时间分析用量和成本**
 
@@ -85,79 +89,100 @@ Zilliz Cloud 提供两种用量分析的方式：
 
 ### 通过 RESTful API{#via-restful-api}
 
-通过 Zilliz Cloud 用量 API 接口 Query Org Daily Usage 获取的用量信息中，金额精度均为 8 位小数。如需对账，建议您通过 RESTful API 获取精度为 8 为小数的日用量明细。将每日用量的金额加总后，您将获取一个精度为 8 位的用量总金额，对该金额从第 3 位小数进行四舍五入后，您可以获得一个精度为 2 位小数的月用量总金额，该金额与界面上账单详情页展示的总用量金额一致。
+<Admonition type="info" icon="📘" title="说明">
+
+<p>查询日用量的 RESTful API 目前还处于公测阶段，如需使用请<a href="http://support.zilliz.com.cn">联系我们</a>。</p>
+
+</Admonition>
+
+您还可以通过[查询日用量](/reference/restful/query-daily-usage-v2)的 API 接口来获取组织的用量信息。通过 API 接口获取的用量信息中，金额精度均为 8 位小数。如需对账，建议您通过 RESTful API 获取精度为 8 位小数的日用量明细。将每日用量的金额加总后，您将获取一个精度为 8 位的用量总金额，对该金额从第 3 位小数进行四舍五入后，您可以获得一个精度为 2 位小数的月用量总金额，该金额与界面上账单详情页展示的总用量金额一致。
+
+以下示例展示了如何使用查询日用量的 API 接口获取组织用量信息。
+
+```bash
+curl --request POST \
+--url "https://api.cloud.zilliz.com.cn/v2/usage/query" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+-d '{
+    "start": "2024-01-01",
+    "end": "2024-02-01"
+}'
+```
+
+以下为参数说明：
+
+- `start`：查询时间段开始日期，格式为 `YYYY-MM-DD`。
+
+- `end`：查询时间段开始日期，格式为 `YYYY-MM-DD`。
 
 ## 常见问题{#faq}
 
 - **Zilliz Cloud 用量趋势和明细中的金额精度为多少？**
 
-    Zilliz Cloud 产品价格精度为小数点后 8 位。因此在计费过程中会产生小数点后 8 位的费用。Zilliz Cloud 实际和客户结算过程中会将包含 8 位小数点的费用汇总，随后根据按日汇总后金额的第 3 位小数进行四舍五入。
+Zilliz Cloud 产品价格精度为小数点后 8 位。因此在计费过程中会产生小数点后 8 位的费用。Zilliz Cloud 实际和客户结算过程中会将包含 8 位小数点的费用汇总，随后根据按日汇总后金额的第 3 位小数进行四舍五入。
 
-    在 Zilliz Cloud 界面的用量趋势和用量明细部分，展示的金额精度均为 2 位小数（例如：¥60.00）。
+在 Zilliz Cloud 界面的用量趋势和用量明细部分，展示的金额精度均为 2 位小数（例如：¥60.00）。
 
-    ![precision_usage_cn](/img/precision_usage_cn.png)
+![precision_usage_cn](/img/precision_usage_cn.png)
 
-    <include target = "indev">
+通过 Zilliz Cloud [查询日用量](/reference/restful/query-daily-usage-v2) API 接口获取的用量信息中，金额精度均为 8 位小数。以下为[查询日用量](/reference/restful/query-daily-usage-v2)接口的返回示例：
 
-    通过 Zilliz Cloud 用量 API 接口 Query Org Daily Usage 获取的用量信息中，金额精度均为 8 位小数。以下为 Query Org Daily Usage 接口的返回示例：
-
-    ```bash
-    {
-        "code": 0,
-        "data": {
-            "list": [
-                {
-                    "intervalStart": "2024-01-01T00:00:00Z",
-                    "intervalEnd": "2024-01-02T00:00:00Z",
-                    "total": 69.59794400,
-                    "currency": "RMB"
-                    "results": [
-                        {
-                            "costType": "compute",
-                            "properties": {
-                                "projectId": "prj-xxxxx",
-                                "regionId": "ali-cn-hangzhou",
-                                "cuType": "Performance-optimized",
-                                "plan": "Enterprise",
-                                "clusterId": "in01-xxxxx"
-                            },
-                            "quantity": 55.6778,
-                            "unit": "CU-hours",
-                            "listPrice": {
-                                "unitPrice": 1.25000000
-                            },
-                            "price": {
-                                "unitPrice": 1.25000000
-                            },
-                            "amount": 69.59725000 
+```bash
+{
+    "code": 0,
+    "data": {
+        "list": [
+            {
+                "intervalStart": "2024-01-01T00:00:00Z",
+                "intervalEnd": "2024-01-02T00:00:00Z",
+                "total": 69.59794400,
+                "currency": "RMB"
+                "results": [
+                    {
+                        "costType": "compute",
+                        "properties": {
+                            "projectId": "prj-xxxxx",
+                            "regionId": "ali-cn-hangzhou",
+                            "cuType": "Performance-optimized",
+                            "plan": "Enterprise",
+                            "clusterId": "in01-xxxxx"
                         },
-                        {
-                            "costType": "storage",
-                            "properties": {
-                                "projectId": "prj-xxxxx",
-                                "regionId": "ali-cn-hangzhou",
-                                "cuType": "Performance-optimized",
-                                "plan": "Enterprise",
-                                "clusterId": "in01-xxxxx",
-                            },
-                            "quantity": 323,
-                            "unit": "GB-hours",
-                            "listPrice": {
-                                "unitPrice": 0.000694
-                            },
-                            "price": {
-                                "unitPrice": 0.000694
-                            },
-                            "amount": 0.00069400
-                        }
-                    ]
-                }
-            ],
-            "currentPage": 1,
-            "pageSize": 100,
-            "total": 10000
-        }
+                        "quantity": 55.6778,
+                        "unit": "CU-hours",
+                        "listPrice": {
+                            "unitPrice": 1.25000000
+                        },
+                        "price": {
+                            "unitPrice": 1.25000000
+                        },
+                        "amount": 69.59725000 
+                    },
+                    {
+                        "costType": "storage",
+                        "properties": {
+                            "projectId": "prj-xxxxx",
+                            "regionId": "ali-cn-hangzhou",
+                            "cuType": "Performance-optimized",
+                            "plan": "Enterprise",
+                            "clusterId": "in01-xxxxx",
+                        },
+                        "quantity": 323,
+                        "unit": "GB-hours",
+                        "listPrice": {
+                            "unitPrice": 0.000694
+                        },
+                        "price": {
+                            "unitPrice": 0.000694
+                        },
+                        "amount": 0.00069400
+                    }
+                ]
+            }
+        ],
+        "currentPage": 1,
+        "pageSize": 100,
+        "total": 10000
     }
-    ```
-
-    </include>
+}
+```

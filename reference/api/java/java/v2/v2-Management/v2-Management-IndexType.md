@@ -8,12 +8,12 @@ notebook: false
 description: "This is an enumeration that provides the following constants. | Java | v2"
 type: docx
 token: EATSdak5wokQhCx6k3tcCoAqn3P
-sidebar_position: 6
+sidebar_position: 8
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
   - zilliz
   - zilliz cloud
   - cloud

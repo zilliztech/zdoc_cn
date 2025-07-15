@@ -4,10 +4,10 @@ slug: /restore-from-snapshot
 sidebar_label: "恢复备份"
 beta: FALSE
 notebook: FALSE
-description: "本文介绍如何从备份中恢复 Zilliz Cloud 集群或 Collection。您只能使用状态为“创建完成”的备份文件进行集群或 Collection 恢复。 | Cloud"
+description: "Zilliz Cloud 提供的恢复功能可用于在发生意外删除、数据损坏或系统故障时，从备份文件中恢复数据，保障业务连续性。这是一种可靠的手段，可用于灾难恢复、撤销错误更改，或创建用于测试的集群副本，将业务中断最小化。 | Cloud"
 type: origin
 token: NtkswF6UEi3kB0k8XSEcOKkhnld
-sidebar_position: 4
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz
@@ -19,51 +19,48 @@ keywords:
 ---
 
 import Admonition from '@theme/Admonition';
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+
 
 # 恢复备份
 
-本文介绍如何从备份中恢复 Zilliz Cloud 集群或 Collection。您只能使用状态为“创建完成”的备份文件进行集群或 Collection 恢复。
+Zilliz Cloud 提供的恢复功能可用于在发生意外删除、数据损坏或系统故障时，从备份文件中恢复数据，保障业务连续性。这是一种可靠的手段，可用于灾难恢复、撤销错误更改，或创建用于测试的集群副本，将业务中断最小化。
 
-包年包月集群暂不支持恢复备份，如有需求，请[联系我们](http://support.zilliz.com.cn)。
+本文将介绍如何通过备份文件恢复**整个集群**或**部分集群数据**。
 
-## 前提条件{#before-you-start}
+<Admonition type="info" icon="📘" title="说明">
 
-开始前，请确保：
+<ul>
+<li><p>备份与恢复功能仅适用于 Dedicated 集群。</p></li>
+<li><p>包年包月集群暂不支持恢复备份，如有需求，请<a href="http://support.zilliz.com.cn">联系我们</a>。</p></li>
+</ul>
 
-- 您是目标组织中的[组织管理员](./organization-users)或[项目管理员](./project-users)。
+</Admonition>
 
-- 您的集群为 Dedicated 版本。
+## 限制说明{#limits}
 
-## 恢复集群{#restore-a-cluster}
+- **访问控制**：仅项目管理员、组织管理员或拥有备份权限的自定义角色可执行备份操作。
 
-<Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"Bash","value":"Bash"}]}>
+## 恢复整个集群{#restore-a-full-cluster}
 
-<TabItem value="Cloud Console">
+您可以将整个集群（包括集群下所有 Database 和 Collection）恢复到一个新集群中，适用于测试环境数据克隆或生产环境数据恢复。如需恢复整个集群，所用备份文件必须为**集群级别备份**。
 
-点击左侧导航栏中的**备份**。找到需要恢复的备份文件。如需恢复集群，请选择备份类型为“集群”的备份文件。单击**操作列**中的**...**按钮，然后选择**恢复集群**。
+恢复过程中，您可以选择是否一并恢复 RBAC 权限设置。
 
-然后根据提示设置恢复后集群的属性。
+<Admonition type="info" icon="📘" title="说明">
 
-![restore_cluster](/img/restore_cluster.png)
+<p>目前仅支持通过 Web 控制台选择恢复 RBAC 权限设置，RESTful API 暂不支持。</p>
 
-设置属性时，需注意以下几点：
+</Admonition>
 
-- 您可以通过备份文件将集群恢复到不同的项目中，但恢复后的集群不能和源集群位于不同的云服务提供商和地域。
+恢复完成后，系统会为默认用户 `db_admin` 生成一个新密码，您需使用新密码连接至新集群。
 
-- 您可以选择是否保留集群 Collection 的加载状态。
+### 通过 Web 控制台{#via-web-console}
 
-- 您可以重命名目标集群并重置集群大小和用户名密码。但不可以更改集群的 CU 类型。
+以下 Demo 展示如何在 Zilliz Cloud 控制台中恢复整个集群：
 
-在单击**恢复**后，Zilliz Cloud 会使用指定的属性创建目标集群，然后将快照中的 Collection 还原到目标集群中。
+### 通过 RESTful API{#via-restful-api}
 
-Zilliz Cloud 将生成一条恢复任务。您可前往[任务中心](./view-activities)查看任务状态和进度。如果任务状态从**进行中**变更为**成功**，则代表集群恢复成功。
-
-</TabItem>
-<TabItem value="Bash">
-
-恢复集群。有关更多参数信息，请参阅[恢复集群备份](/reference/restful/restore-cluster-backup-v2)。
+以下示例展示如何通过集群备份文件将集群恢复至名为 `Dedicated-01-backup` 的新集群。更多 API 参数细节，请参见[恢复集群备份](/reference/restful/restore-cluster-backup-v2)。
 
 ```bash
 curl --request POST \
@@ -79,75 +76,54 @@ curl --request POST \
       }'
 ```
 
-示例回显：
+示例返回结果如下。系统将生成一个恢复任务，您可在项目下的[任务中心](./job-center)查看进度：
 
 ```bash
 {
   "code": 0,
   "data": {
-    "clusterId": "in01-4a96cde32afxxxx",
+    "clusterId": "inxx-xxxxxxxxxxxxxxx",
     "username": "db_admin",
-    "password": "Th0]sT4137WOxxxx"
+    "password": "xxxxxxxxx",
+    "jobId": "job-xxxxxxxxxxxxxx"
   }
 }
 ```
 
-</TabItem>
-</Tabs>
+## 恢复部分集群数据{#restore-a-partial-cluster}
 
-## 恢复 Collection{#restore-a-collection}
+您也可以选择将特定的 Database 和 Collection 恢复到已有集群中。
 
-<Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"Bash","value":"Bash"}]}>
+### 通过 Web 控制台{#via-web-console}
 
-<TabItem value="Cloud Console">
+以下 Demo 展示如何在控制台中恢复指定 Database 和 Collection：
 
-点击左侧导航栏中的**备份**。找到需要恢复的备份文件。如需恢复 Collection，请选择备份类型为“Collection”的备份文件。单击**操作列**中的**...**按钮，然后选择**恢复 Collection**。
+### 通过 RESTful API{#via-restful-api}
 
-然后根据提示设置恢复后 Collection 的属性。
-
-![restore_collection](/img/restore_collection.png)
-
-设置属性时，需注意以下几点：
-
-- 您可以通过备份文件将 Collection 恢复到不同的项目和不同的集群中。但目标集群的状态必须为“运行中”。
-
-- 您可以选择是否加载恢复后的 Collection。
-
-- 您可以重命名目标 Collection。
-
-在单击**恢复**后，Zilliz Cloud 会使用指定的属性创建目标 Collection。
-
-Zilliz Cloud 将生成一条恢复任务。您可前往[任务中心](./view-activities)查看任务状态和进度。如果任务状态从**进行中**变更为**成功**，则代表 Collection 恢复成功。
-
-</TabItem>
-<TabItem value="Bash">
-
-恢复 collection。有关更多参数信息，请参阅[恢复 Collection 备份](/reference/restful/restore-collection-backup-v2)。
+以下示例展示如何将某个备份文件中的 Collection 恢复至已有集群 `in01-3e5ad8adc38xxxx`。更多 API 参数细节，请参见[恢复 Collection 备份](/reference/restful/restore-collection-backup-v2)。
 
 ```bash
 curl --request POST \
-     --url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/backups/${BACKUP_ID}/restoreCollection" \
-     --header "Authorization: Bearer ${TOKEN}" \
-     --header "Accept: application/json" \
-     --header "Content-type: application/json" \
-     --data-raw '{
-        "targetProjectId": "proj-20e13e974c7d659a83xxxx",
-        "targetClusterId": "in01-3e5ad8adc38xxxx",
-        "dbCollections": [
-           { 
+--url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/backups/${BACKUP_ID}/restoreCollection" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+-d '{
+    "destClusterId": "in01-xxxxxxxxxxxxxx",
+    "dbCollections": [
+        {
             "collections": [
-               {
-                 "collectionName": "medium_articles",
-                 "targetCollectionName": "restore_medium_articles",
-                 "targetCollectionStatus": "LOADED"
-               }
-             ]
-          }
-        ]
-      }'
+                {
+                    "collectionName": "medium_articles",
+                    "destCollectionName": "restore_medium_articles",
+                    "destCollectionStatus": "LOADED"
+                }
+            ]
+        }
+    ]
+}'
 ```
 
-示例回显：
+示例返回结果如下。系统将生成一个恢复任务，您可在项目下的[任务中心](./job-center)查看进度：
 
 ```bash
 {
@@ -157,17 +133,4 @@ curl --request POST \
   }
 }
 ```
-
-</TabItem>
-</Tabs>
-
-## 相关文档{#related-topics}
-
-- [创建备份快照](./create-snapshot)
-
-- [创建自动备份](./schedule-automatic-backups)
-
-- [查看备份快照](./view-snapshot-details)
-
-- [删除备份快照](./delete-snapshot)
 

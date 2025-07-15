@@ -7,13 +7,13 @@ beta: false
 notebook: false
 description: "This operation describes a specific index. | Java | v2"
 type: docx
-token: WUgedTmyZoW4clxSgHVcl1ZtnZl
-sidebar_position: 2
+token: JBBldcrAHoYZ2mxMGeocZHMAnze
+sidebar_position: 3
 keywords: 
-  - rag vector database
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
   - zilliz
   - zilliz cloud
   - cloud
@@ -38,6 +38,7 @@ public DescribeIndexResp describeIndex(DescribeIndexReq request)
 
 ```java
 describeIndex(DescribeIndexReq.builder()
+    .databaseName(String databaseName)
     .collectionName(String collectionName)
     .fieldName(String fieldName)
     .indexName(String indexName)
@@ -47,9 +48,13 @@ describeIndex(DescribeIndexReq.builder()
 
 **BUILDER METHODS:**
 
+- `databaseName(String databaseName)`
+
+    The name of an existing database.
+
 - `collectionName(String collectionName)`
 
-    The name of an existing collection.
+    The name of an existing collection in the above-specified collection.
 
     Setting this to a non-existing collection results in **MilvusException**.
 
@@ -102,12 +107,24 @@ A **DescribeIndexResp** object that contains the details of the specified index.
 ## Example
 
 ```java
-// describe the index for field "vector"
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.index.request.DescribeIndexReq;
+import io.milvus.v2.service.index.response.DescribeIndexResp;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Describe the index for the field "vector"
 DescribeIndexReq describeIndexReq = DescribeIndexReq.builder()
         .collectionName("test")
         .fieldName("vector")
         .build();
 DescribeIndexResp describeIndexResp = client.describeIndex(describeIndexReq);
-// DescribeIndexResp(indexName=test, indexType=AUTOINDEX, metricType=L2, fieldName=vector)
 ```
 

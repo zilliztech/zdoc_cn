@@ -105,7 +105,6 @@ const res = await client.renameCollection({
 import (
     "context"
     "fmt"
-    "log"
 
     "github.com/milvus-io/milvus/client/v2/milvusclient"
 )
@@ -113,21 +112,22 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "YOUR_CLUSTER_ENDPOINT"
+milvusAddr := "localhost:19530"
 token := "YOUR_CLUSTER_TOKEN"
 
-cli, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
     APIKey:  token,
 })
 if err != nil {
-    log.Fatal("failed to connect to milvus server: ", err.Error())
+    fmt.Println(err.Error())
+    // handle error
 }
+defer client.Close(ctx)
 
-defer cli.Close(ctx)
-
-err = cli.RenameCollection(ctx, milvusclient.NewRenameCollectionOption("my_collection", "my_new_collection"))
+err = client.RenameCollection(ctx, milvusclient.NewRenameCollectionOption("my_collection", "my_new_collection"))
 if err != nil {
+    fmt.Println(err.Error())
     // handle error
 }
 ```
@@ -163,7 +163,12 @@ curl --request POST \
 <TabItem value='python'>
 
 ```python
-# Python 暂无此功能
+from pymilvus import MilvusClient
+
+client.alter_collection_properties(
+    collection_name="my_collection",
+    properties={"collection.ttl.seconds": 60}
+)
 ```
 
 </TabItem>
@@ -204,31 +209,9 @@ res = await client.alterCollection({
 <TabItem value='go'>
 
 ```go
-import (
-    "context"
-    "fmt"
-    "log"
-
-    "github.com/milvus-io/milvus/client/v2/milvusclient"
-    "github.com/milvus-io/milvus/pkg/common"
-)
-
-ctx, cancel := context.WithCancel(context.Background())
-defer cancel()
-
-milvusAddr := "YOUR_CLUSTER_ENDPOINT"
-
-cli, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: milvusAddr,
-})
+err = client.AlterCollectionProperties(ctx, milvusclient.NewAlterCollectionPropertiesOption("my_collection").WithProperty(common.CollectionTTLConfigKey, 60))
 if err != nil {
-    log.Fatal("failed to connect to milvus server: ", err.Error())
-}
-
-defer cli.Close(ctx)
-
-err = cli.AlterCollection(ctx, milvusclient.NewAlterCollectionOption("my_collection").WithProperty(common.CollectionTTLConfigKey, 60))
-if err != nil {
+    fmt.Println(err.Error())
     // handle error
 }
 ```
@@ -238,7 +221,19 @@ if err != nil {
 <TabItem value='bash'>
 
 ```bash
-# REST 暂无此功能
+export CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT"
+export TOKEN="YOUR_CLUSTER_TOKEN"
+
+curl --request POST \
+--url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/alter_properties" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+-d '{
+    "collectionName": "test_collection",
+    "properties": {
+        "collection.ttl.seconds": 60
+    }
+}'
 ```
 
 </TabItem>
@@ -251,11 +246,85 @@ if err != nil {
    </tr>
    <tr>
      <td><p><code>collection.ttl.seconds</code></p></td>
-     <td><p>如果您需要 Zilliz Cloud 在 Collection 创建完成后的一段时间内自动删除该 Collection 中的所有数据。可以考虑为 Collection 设置 TTL。这样当 Collection 的生存时间超过指定时间（单位为秒）后，Zilliz Cloud 就会开始删除 Collection 中的数据。</p><p>由于删除操作是异步的，在数据完全删除前，您仍旧可以搜索到部分数据。</p></td>
+     <td><p>如果您需要 Zilliz Cloud 在 Collection 创建完成后的一段时间内自动删除该 Collection 中的所有数据。可以考虑为 Collection 设置 TTL。这样当 Collection 的生存时间超过指定时间（单位为秒）后，Zilliz Cloud 就会开始删除 Collection 中的数据。</p><p>由于删除操作是异步的，在数据完全删除前，您仍旧可以搜索到部分数据。</p><p>更多内容，可以参考<a href="./set-collection-ttl">设置 Collection 生存时间</a>。</p></td>
    </tr>
    <tr>
      <td><p><code>mmap.enabled</code></p></td>
-     <td><p>Memory mapping 支持通过内存来访问存放在磁盘上的数据和文件，从而使得 Zilliz Cloud 即可以将索引和原始数据存放在内存中，也可以将它们存放在磁盘上。您可以根据访问频率优化数据存放策略，在扩大 Collection 容量的同时保证搜索性能。</p><p></p><p>Zilliz Cloud 为您的集群提供了全局 mmap 策略。您可以为某个具体字段或该字段上的索引设置不同的 mmap 策略。</p><p></p></td>
+     <td><p>Memory mapping 支持通过内存来访问存放在磁盘上的数据和文件，从而使得 Zilliz Cloud 即可以将索引和原始数据存放在内存中，也可以将它们存放在磁盘上。您可以根据访问频率优化数据存放策略，在扩大 Collection 容量的同时保证搜索性能。</p><p>Zilliz Cloud 为您的集群提供了<a href="./use-mmap#global-mmap-strategy">全局 mmap 策略</a>。您可以为某个具体字段或该字段上的索引设置不同的 mmap 策略。</p><p>更多内容，可以参考<a href="./use-mmap">使用 mmap</a>。</p></td>
+   </tr>
+   <tr>
+     <td><p><code>partitionkey.isolation</code></p></td>
+     <td><p>在开启 Partition Key 之后，Zilliz Cloud 会根据 Partition Key 的取值对 Collection 内的 Entity 进行分组并为每个组创建单独的索引。在收到搜索请求后，Zilliz Cloud 会根据搜索请求中的过滤条件里指定的 Partition Key 值定位到相应的索引，并将搜索范围限定在该索引对应的 Entity 中，从而避免在搜索过程中扫描与当前搜索请求不相关的 Entity，提升搜索效率。</p><p>更多内容，可以参考<a href="./use-partition-key#use-partition-key-isolation">使用 Partition Key Isolation</a>。</p></td>
    </tr>
 </table>
+
+## 删除 Collection 属性{#drop-collection-properties}
+
+你还可以参考如下代码示例删除 Collection 相关属性。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+client.drop_collection_properties(
+    collection_name="my_collection",
+    property_keys=[
+        "collection.ttl.seconds"
+    ]
+)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+client.dropCollectionProperties(DropCollectionPropertiesReq.builder()
+        .collectionName("my_collection")
+        .propertyKeys(Collections.singletonList("collection.ttl.seconds"))
+        .build());
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+client.dropCollectionProperties({
+    collection_name:"my_collection",
+    properties: ['collection.ttl.seconds'],
+});
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+err = client.DropCollectionProperties(ctx, milvusclient.NewDropCollectionPropertiesOption("my_collection", common.CollectionTTLConfigKey))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+curl --request POST \
+--url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/drop_properties" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+-d '{
+    "collectionName": "my_collection",
+    "propertyKeys": [
+        "collection.ttl.seconds"
+    ]
+}'
+```
+
+</TabItem>
+</Tabs>
 

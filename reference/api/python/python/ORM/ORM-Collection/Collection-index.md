@@ -10,10 +10,10 @@ type: docx
 token: RkQ8dnWDHo3DiDxiCVRcP1xPnob
 sidebar_position: 18
 keywords: 
+  - hallucinations llm
   - Multimodal search
   - vector search algorithms
   - Question answering system
-  - llm-as-a-judge
   - zilliz
   - zilliz cloud
   - cloud

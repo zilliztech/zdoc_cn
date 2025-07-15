@@ -2,7 +2,7 @@
 title: "内置 Analyzer 参考 | Cloud"
 slug: /built-in-analyzer
 sidebar_label: "内置 Analyzer 参考"
-beta: PUBLIC
+beta: FALSE
 notebook: FALSE
 description: "本节介绍各内置 Analyzer 的具体信息。 | Cloud"
 type: origin

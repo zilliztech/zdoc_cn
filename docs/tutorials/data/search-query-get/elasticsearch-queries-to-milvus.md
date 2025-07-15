@@ -427,7 +427,7 @@ res = client.query(
 
 ### Knn query{#knn-query}
 
-Elasticsearch 支持近似 kNN 查询和精确的暴力 kNN 查询。您可以根据相似度度量，来找到最近邻的向量 ，方法如下：
+Elasticsearch 支持近似 kNN 查询和精确的暴力 kNN 查询。您可以根据相似度度量，来找到最近邻的向量 $k$，方法如下：
 
 ```python
 resp = client.search(

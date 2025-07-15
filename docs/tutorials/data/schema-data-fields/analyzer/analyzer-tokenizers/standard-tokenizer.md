@@ -2,7 +2,7 @@
 title: "Standard | Cloud"
 slug: /standard-tokenizer
 sidebar_label: "Standard"
-beta: PUBLIC
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 中的标准分词器根据空格和标点符号对文本进行分割，因此适用于大多数语言。 | Cloud"
 type: origin
@@ -80,7 +80,7 @@ analyzerParams.put("filter", Collections.singletonList("lowercase"));
 </TabItem>
 </Tabs>
 
-定义 `analyzer_params` 后，您可以在定义 Collection Schema 时将其应用于 VARCHAR 字段。这使得 Zilliz Cloud 能够使用指定的分析器处理该字段中的文本，以实现高效的分词和过滤。更多信息，请参阅 [Analyzer 概述](./analyzer-overview)。  
+定义 `analyzer_params` 后，您可以在定义 Collection Schema 时将其应用于 VARCHAR 字段。这使得 Zilliz Cloud 能够使用指定的分析器处理该字段中的文本，以实现高效的分词和过滤。更多信息，请参阅[使用示例](./analyzer-overview#example-use)。  
 
 ## 示例输出{#example-output}
 

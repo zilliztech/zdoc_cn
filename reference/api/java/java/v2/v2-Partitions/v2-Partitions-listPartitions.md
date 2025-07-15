@@ -8,12 +8,12 @@ notebook: false
 description: "This operation lists the partitions in a specified collection. | Java | v2"
 type: docx
 token: RJcgdJpGDouomlxPTqZc5S8Lngc
-sidebar_position: 4
+sidebar_position: 5
 keywords: 
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
+  - Faiss
+  - Video search
+  - AI Hallucination
+  - AI Agent
   - zilliz
   - zilliz cloud
   - cloud
@@ -66,7 +66,19 @@ A list of partition names.
 ## Example
 
 ```java
-// list partitions in collection
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.partition.request.ListPartitionsReq;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. List partitions in collection
 ListPartitionsReq listPartitionsReq = ListPartitionsReq.builder()
         .collectionName("test")
         .build();

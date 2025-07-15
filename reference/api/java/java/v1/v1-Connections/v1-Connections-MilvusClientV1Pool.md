@@ -30,14 +30,14 @@ Methods of MilvusClient for connection:
    </tr>
    <tr>
      <td><p>getClient(String key)</p></td>
-     <td><p>Get a client object that is idle from the pool.Once the caller holds the client, it will be marked as an active state and cannot be fetched by other callers.If the number of clients hits the MaxTotalPerKey value, this method will be blocked for MaxBlockWaitDuration.If no idle client is available after MaxBlockWaitDuration, this method will return a null object to the caller.</p></td>
+     <td><p>Get a client object that is idle from the pool.</p><p>Once the caller holds the client, it will be marked as an active state and cannot be fetched by other callers.</p><p>If the number of clients hits the MaxTotalPerKey value, this method will be blocked for MaxBlockWaitDuration.</p><p>If no idle client is available after MaxBlockWaitDuration, this method will return a null object to the caller.</p></td>
      <td><p>key: the key of a group where the client belongs</p></td>
      <td><p>MilvusClient</p></td>
    </tr>
    <tr>
      <td><p>returnClient(String key, MilvusClient grpcClient)</p></td>
-     <td><p>Return a client object. Once a client is returned, it becomes idle state and waits for the next caller.The caller should ensure the client is returned. Otherwise, the client will keep in active state and cannot be used by the next caller.Throw exceptions if the key doesn't exist or the client does not belong to this key group.</p></td>
-     <td><p>key: the key of a group where the client belongsgrpcClient: the client object to return</p></td>
+     <td><p>Return a client object. Once a client is returned, it becomes idle state and waits for the next caller.</p><p>The caller should ensure the client is returned. Otherwise, the client will keep in active state and cannot be used by the next caller.</p><p>Throw exceptions if the key doesn't exist or the client does not belong to this key group.</p></td>
+     <td><p>key: the key of a group where the client belongs</p><p>grpcClient: the client object to return</p></td>
      <td><p>void</p></td>
    </tr>
    <tr>

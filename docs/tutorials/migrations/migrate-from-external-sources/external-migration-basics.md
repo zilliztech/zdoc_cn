@@ -38,27 +38,27 @@ Zilliz Cloud 支持从主流向量数据库和搜索平台迁移：
      <th><p>Key Features</p></th>
    </tr>
    <tr>
-     <td><p><a href="./undefined">Qdrant</a></p></td>
+     <td><p><a href="./migrate-from-qdrant">Qdrant</a></p></td>
      <td><p>向量数据库</p></td>
      <td><p>开源引擎，支持云部署与自托管</p></td>
    </tr>
    <tr>
-     <td><p><a href="./undefined">Elasticsearch</a></p></td>
+     <td><p><a href="./migrate-from-elasticsearch">Elasticsearch</a></p></td>
      <td><p>搜索引擎</p></td>
      <td><p>支持稠密向量与全文检索</p></td>
    </tr>
    <tr>
-     <td><p><a href="./undefined">PostgreSQL</a></p></td>
+     <td><p><a href="./migrate-from-pgvector">PostgreSQL</a></p></td>
      <td><p>关系型数据库</p></td>
      <td><p>支持向量扩展（pgvector）</p></td>
    </tr>
    <tr>
-     <td><p><a href="./undefined">Tencent Cloud VectorDB</a></p></td>
+     <td><p><a href="./migrate-from-tencent-cloud-vectordb">腾讯云向量数据库</a></p></td>
      <td><p>托管服务</p></td>
      <td><p>全托管向量数据库服务</p></td>
    </tr>
    <tr>
-     <td><p><a href="./undefined">OpenSearch</a></p></td>
+     <td><p><a href="./migrate-from-opensearch">OpenSearch</a></p></td>
      <td><p>搜索平台</p></td>
      <td><p>支持向量检索的 KNN 插件</p></td>
    </tr>

@@ -4,7 +4,7 @@ slug: /scale-cluster
 sidebar_label: "集群扩缩容"
 beta: FALSE
 notebook: FALSE
-description: "随着数据增长，您可能会面临一些数据写入限制。例如，当数据量过大超出集群最大容量时，您虽然可以继续读区数据，但是数据写入操作（如插入数据、Upsert 等）将受到限制。 | Cloud"
+description: "随着工作负载增长和数据写入量的增加，集群可能会达到容量上限。在这种情况下，读取操作仍可正常进行，但新的写入请求可能会失败。 | Cloud"
 type: origin
 token: MeCPwj8n0i2x1BksjOHc3OKRn55
 sidebar_position: 4
@@ -22,106 +22,114 @@ import Admonition from '@theme/Admonition';
 
 # 集群扩缩容
 
-随着数据增长，您可能会面临一些数据写入限制。例如，当数据量过大超出集群最大容量时，您虽然可以继续读区数据，但是数据写入操作（如插入数据、Upsert 等）将受到限制。
+随着工作负载增长和数据写入量的增加，集群可能会达到容量上限。在这种情况下，读取操作仍可正常进行，但新的写入请求可能会失败。
 
-为了解决这些问题，您可以进行集群扩缩容。集群扩缩是指调整 CU 规格，以满足不断变化的计算与存储需求。在 CPU 或内存使用率增大时，您可以通过增加 CU 规格来提高集群性能。同样，您也可以在业务需求较低的时候减少 CU 规格以节省开支。
+为实现主动管理，您可以在监控页面查看 **CU 加载容量**，判断是否需要扩容。根据业务需求和访问模式，您可以上调 CU 规格以扩大集群容量，或在需求量减少时下调 CU 规格以降低成本。
 
-本文介绍如何进行集群扩缩容。
+本指南将介绍如何根据变化的工作负载调整集群规格。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>此功能仅对 Dedicated 集群开放。Serverless 集群会根据工作负载自动伸缩，因此无需手动进行扩缩容。</p>
+<p>如果您的目标是提升查询性能（QPS）或提高可用性，请增加 <a href="./manage-replica">Replica 数量</a>，而非调整 CU 规格。CU 规格仅影响存储能力和数据写入能力。</p>
 
 </Admonition>
 
-## 按量计费集群扩缩容{#usage-based-cluster-scaling}
+### Zilliz Cloud 提供的扩缩容方式{#scaling-options-in-zilliz-cloud}
+
+Zilliz Cloud 提供多种方式帮助您完成集群容量扩缩容：
+
+- 手动扩缩容：您可以随时手动调整 CU 规格，实现完全自主控制。适用于对工作负载模式有明确认知的场景。
+
+- 动态自动扩缩容：系统会根据实时监控指标自动调整 CU 规格。适合负载波动较大、变化不可预测的场景，如一天中存在数据量高峰与低谷。
+
+- 定时自动扩缩容：根据预设的时间计划自动调整 CU 规格。适用于具有周期性规律的工作负载，例如工作日访问量高、周末访问量低的业务模式。
+
+### 注意事项{#considerations}
+
+- 扩缩容功能仅适用于 Dedicated 集群。
+
+- 动态自动扩缩容暂不支持自动缩容。
+
+- 扩缩容过程中可能会出现轻微的服务抖动，完成时间取决于数据量大小。
 
 ### 手动扩缩容{#manual-scaling}
 
-您可以通过 Zilliz Cloud 控制台或者调用 API 命令来进行手动扩缩容。本文将介绍如何通过 Zilliz Cloud 控制台进行手动扩缩容。如需了解如何使用 RESTful API 进行扩缩容，请参考[修改集群配置](/reference/restful/modify-cluster)。
+您可以通过 Zilliz Cloud 控制台或 RESTful API 手动扩展或缩减集群的 CU 规格。
 
-<Admonition type="caution" icon="🚧" title="警告">
+以下是手动扩缩容的限制与注意事项：
 
-<p>集群扩缩容过程中，服务可能会有短暂抖动。请谨慎操作。</p>
+- **扩容**
 
-</Admonition>
+    - Dedicated 企业版集群：最多支持 256  CU
+ 如需更大规格，请[联系销售](http://zilliz.com.cn/contact-sales)。
 
-### 手动扩容{#scale-up-a-cluster}
+    - **CU 规格 × Replica 数量**的乘积不得超过 256。
 
-![manual-scale-entry-cn](/img/manual-scale-entry-cn.png)
+- **缩容**
 
-在对话框中，您可以增加 CU 规格，但无法调整 CU 类型和云服务地域。您最多可将集群资源扩展到 256 个 CU。如果您需要更大的 CU 规格，请[提交工单](https://support.zilliz.com.cn)。
+    - 对于已设置多副本（Replica）的集群，CU 规格不得缩减到低于 8 CU。
 
-<Admonition type="info" icon="📘" title="说明">
+    - 缩容请求仅在满足以下条件时才会成功：
 
-<p>CU 规格 x <a href="./manage-replica">Replica</a> 数量不得超过 256。</p>
+        - 当前数据量 < 缩容后 [CU 加载容量](./metrics-alerts-reference#cluster-metrics)的 80%。
 
-</Admonition>
+        - 当前 Collection 数量小于新 CU 规格所支持的最大 Collection 数。
 
-### 手动缩容{#scale-down-a-cluster}
+#### 通过 Web 控制台{#via-web-console}
 
-![manual-scale-entry-cn](/img/manual-scale-entry-cn.png)
+以下 Demo 展示了如何在 Zilliz Cloud Web 控制台中手动扩容或缩容集群。
 
-在对话框中，您可以减少 CU 规格，但无法调整 CU 类型和云服务地域。 点击**扩缩容**按钮后，Zilliz Cloud 会自动检查您的数据量和 Collection 数量。只有同时满足以下两个条件时才能成功触发缩容：
+#### 通过 RESTful API{#via-restful-api}
 
-- 当前数据量 < 缩容后 [CU 加载容量](./metrics-alerts-reference#cluster-metrics)的 80%。
+以下示例将现有集群扩展为 2 个 CU。详情请见[修改集群配置](/reference/restful/modify-cluster-v2)。
 
-- 当前 Collection 数量 < 缩容后 CU 中可创建的 [Collection 数量上限](./limits#collections)。
+```bash
+export TOKEN="YOUR_API_KEY"
+export CLUSTER_ID="inxx-xxxxxxxxxxxxxxx"
 
-集群扩容所需时间取决于集群中的数据量大小。
+curl --request POST \
+--url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/modify" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Accept: application/json" \
+--header "Content-Type: application/json" \
+-d '{
+    "cuSize": 2
+}'
+```
 
-<Admonition type="info" icon="📘" title="说明">
+以下为示例返回结果：
 
-<p>如需将 CU 规格缩小至 8 CU 以下，请确保该集群 Replica 数量为 1。</p>
-
-</Admonition>
+```bash
+{
+    "code": 0,
+    "data": {
+        "clusterId": "inxx-xxxxxxxxxxxxxxx",
+        "prompt": "successfully submitted. Cluster is being upgraded, which is expected to take several minutes. You can access data about the creation progress and status of your cluster by DescribeCluster API. Once the cluster status is RUNNING, you may access your vector database using the SDK."
+    }
+}
+```
 
 ### 弹性伸缩{#auto-scaling}
 
-<Admonition type="info" icon="📘" title="说明">
+为减少运维负担并避免服务中断，您可以在 Zilliz Cloud 控制台中启用弹性伸缩功能。Zilliz Cloud 支持两种弹性伸缩的模式：**动态扩缩容**和**定时扩缩容**，您可以选择启用其中一种或同时启用两种。
 
-<ul>
-<li><p>弹性伸缩功能仅适用于 Dedicated 集群。</p></li>
-<li><p>Replica 数量超过 1 个集群不可使用弹性伸缩功能。</p></li>
-</ul>
+以下是弹性伸缩的限制与注意事项：
 
-</Admonition>
+- 当前动态扩缩容暂不支持自动缩容。
 
-弹性伸缩适用于业务变化较快，且不希望集群规格导致用户写入受限的场景。弹性伸缩可以帮您免去运维压力，减少因集群规格导致的对业务的影响。
+- 任意两次自动扩缩容事件之间需间隔至少 **10 分钟**冷却时间。
 
-启用此功能后，您可以在集群成功创建时设置弹性伸缩参数。
+#### 动态扩缩容{#dynamic-auto-scaling}
 
-![configure_autoscaling_cn](/img/configure_autoscaling_cn.png)
+以下 Demo 展示了如何在 Zilliz Cloud 控制台中配置动态扩缩容。
 
-在弹窗中，您可以设置：
+**CU 加载容量阈值**：如果在过去 2 分钟内的所有采样点，CU 加载容量均超过该阈值（默认 70%）时，将触发自动扩容。
 
-- **最大 CU 规格**：集群自动扩缩时的最大 CU 规格。当 CU 规格小于 8 CU 时，CU 规格的增加步长为 2 CU，以 1、2、4、6、8 的顺序递增。当 CU 规格大于 8 CU 时，CU 规格的增加步长为 4 CU，以8、12、16、20、24、28、32... 的顺序递增。
+我们不推荐将 CU 加载容量阈值设置得过高（超过 90%）。这是因为当数据插入速率较高时，集群可能无法及时完成自动扩容，会导致禁写。
 
-    <Admonition type="info" icon="📘" title="说明">
+#### 定时扩缩容{#scheduled-auto-scaling}
 
-    <p>目前，Zilliz Cloud 暂不支持自动缩容。</p>
-
-    </Admonition>
-
-- CU 加载容量阈值：Zilliz Cloud 会每隔 1 分钟检查[ CU 加载容量](./metrics-alerts-reference#cluster-metrics)指标。如果在过去 2 分钟内，每个指标采集点的值均超过设置的 CU 加载容量阈值（默认值为 70%） ，Zilliz Cloud 会自动进行扩容。
-
-    <Admonition type="info" icon="📘" title="说明">
-
-    <p>我们不推荐将 CU 加载容量阈值设置得过高（超过 90%）。这是因为当数据插入速率较高时，集群可能无法及时完成自动扩容，会导致禁写。</p>
-
-    </Admonition>
-
-两次自动扩容之间有 10 分钟的冷却期。完成自动扩容所需时间取决于集群中的数据量。
-
-<Admonition type="caution" icon="🚧" title="警告">
-
-<p>自动扩容过程中，集群服务可能会有短暂抖动，但不会影响数据读写操作。但如果在自动扩容期间，CU 加载容量达到 100%，会触发禁写。</p>
-
-</Admonition>
-
-### 提升 QPS{#increase-qps}
-
-如需提升 QPS 和系统可用性，请添加 Replica。更多详情，请参考[管理 Replica](./manage-replica)。
+以下 Demo 展示了如何在 Zilliz Cloud 控制台中配置定时扩缩容。
 
 ## 包年包月集群扩容{#annual-subscription-cluster-scaling}
 

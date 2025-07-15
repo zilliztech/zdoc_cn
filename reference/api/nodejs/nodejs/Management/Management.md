@@ -9,10 +9,10 @@ token: Yo6ffPwKzlWzZndRXVocighbnfd
 sidebar_position: 3
 sidebar_label: "Management"
 keywords: 
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
+  - nn search
   - zilliz
   - zilliz cloud
   - cloud

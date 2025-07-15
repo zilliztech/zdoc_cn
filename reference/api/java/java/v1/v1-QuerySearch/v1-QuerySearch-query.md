@@ -217,7 +217,7 @@ Methods of `RowRecord`:
    </tr>
    <tr>
      <td><p>get(String keyName)</p></td>
-     <td><p>Get a value by a key name. If the key name is a field name, return the value of this field.If the key name is in the dynamic field, return the value from the dynamic field.Throws ParamException if the key name doesn't exist.</p></td>
+     <td><p>Get a value by a key name. If the key name is a field name, return the value of this field.</p><p>If the key name is in the dynamic field, return the value from the dynamic field.</p><p>Throws ParamException if the key name doesn't exist.</p></td>
      <td><p>Object</p></td>
    </tr>
 </table>

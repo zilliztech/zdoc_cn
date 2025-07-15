@@ -4,7 +4,7 @@ slug: /manage-project-alerts
 sidebar_label: "管理项目告警"
 beta: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关的组织告警，二是针对特定项目中集群性能的项目告警。更多详细信息，请参阅指标与告警快速参考。 | Cloud"
+description: "项目告警功能通过对集群指标（如 CU、Query QPS）进行主动监控，在满足指定条件时发送通知，帮助您主动监控 Zilliz Cloud 集群的状态。配置项目告警后，您能在潜在问题出现时立即收到通知，确保及时处理。 | Cloud"
 type: origin
 token: EUS8w4x9Ii0BmhkJBfQcsoFln5c
 sidebar_position: 4
@@ -19,147 +19,234 @@ keywords:
 ---
 
 import Admonition from '@theme/Admonition';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
+import Supademo from '@site/src/components/Supademo';
 
 # 管理项目告警
 
-Zilliz Cloud 针对资源监控提供了两类告警：一是针对账单相关的组织告警，二是针对特定项目中集群性能的项目告警。更多详细信息，请参阅[指标与告警快速参考](./metrics-alerts-reference)。
+项目告警功能通过对集群指标（如 CU、Query QPS）进行主动监控，在满足指定条件时发送通知，帮助您主动监控 Zilliz Cloud 集群的状态。配置项目告警后，您能在潜在问题出现时立即收到通知，确保及时处理。
 
-本文将介绍如何查看及管理项目告警。
+## 开始前{#before-you-start}
 
-## 概览{#overview}
+在创建或管理项目告警前，请确保您拥有：
 
-下表展示了各项目告警的默认配置。
-
-当告警处于**开启**状态时，一旦满足告警条件，指定的接收者将收到告警通知。您可以编辑告警以更改其状态。
-
-如需了解集群资源使用超过阈值时建议执行的操作，请参阅[集群指标](./metrics-alerts-reference#cluster-metrics)。
-
-<table>
-   <tr>
-     <th><p>告警项</p></th>
-     <th><p>单位</p></th>
-     <th><p>默认告警条件</p></th>
-   </tr>
-   <tr>
-     <td><p>CU 计算资源</p></td>
-     <td><p>%</p></td>
-     <td><p><strong>警告</strong>：CU 计算资源用量大于 70% 且持续时间超过 10 分钟时触发告警。</p><p><strong>紧急</strong>：CU 计算资源用量大于 90% 且持续时间超过 10 分钟时触发告警。</p></td>
-   </tr>
-   <tr>
-     <td><p>CU 加载容量</p></td>
-     <td><p>%</p></td>
-     <td><p><strong>警告</strong>：CU 加载容量大于 70% 且持续时间超过 10 分钟时触发告警。</p><p><strong>紧急</strong>：CU 加载容量大于 90% 且持续时间超过 10 分钟时触发告警。</p></td>
-   </tr>
-   <tr>
-     <td><p>Search（QPS）</p></td>
-     <td><p>QPS</p></td>
-     <td><p>Search 类型请求数大于 50 QPS 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</p></td>
-   </tr>
-   <tr>
-     <td><p>Query（QPS）</p></td>
-     <td><p>QPS</p></td>
-     <td><p>Query 类型请求数大于 50 QPS 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</p></td>
-   </tr>
-   <tr>
-     <td><p>Search 延时（P99）</p></td>
-     <td><p>ms</p></td>
-     <td><p>Search 类型 P99 请求延时大于 1000 ms 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</p></td>
-   </tr>
-   <tr>
-     <td><p>Query 延时（P99）</p></td>
-     <td><p>ms</p></td>
-     <td><p>Query 类型 P99 请求延时大于 1000 ms 且持续时间超过 10 分钟时触发<strong>警告</strong>告警。</p></td>
-   </tr>
-</table>
-
-**权限**：
-
-- **查看**：组织管理员、项目管理员或成员可以查看项目告警。
-
-- **配置**：只有组织管理员或项目管理员可以配置集群告警。
-
-- **接收告警通知**：如果被管理员指定，任何组织成员都可以接收告警通知。
-
-要了解用户角色的详细说明，请参阅[访问控制](./access-control)。
+- **组织管理员**或**项目管理员**角色权限。
 
 ## 查看项目告警{#view-project-alerts}
 
-在**项目告警**页面，查看各种集群相关的告警。
+在左侧导航栏中点击**项目告警**，即可访问项目告警仪表盘。
 
-**告警的组成部分**：
+<Supademo id="cmbk6jzy68h60sn1ri2xm74jm" title="Zilliz Cloud - 查看项目告警 Demo" />
 
-- **告警项**：由 Zilliz Cloud 预设的触发条件和严重程度。
+### 告警历史{#alert-history}
 
-- **状态**：显示告警是否处于**开启**状态。
+当您需要调查过往事件、分析告警规律或展示系统可靠性时，请选择**告警历史**选项卡查看。
 
-- **触发条件**：触发告警的条件。对于每个项目级别的告警项，触发条件包括必须满足的阈值和持续时间。触发条件可以使用为以下任一运算符：>、>=、\<、\<=、=。阈值可以是数值，如 Search 延时、Query QPS、Search QPS、CU 加载容量或 CU 计算资源等指标的数值。持续时间是指指标超过阈值的持续时长，最短可设置为 1 分钟，最长为 30 分钟。
+### 告警设置{#alert-settings}
 
-- **告警等级**：分为**警告**或**紧急**。
+<Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"Bash","value":"Bash"}]}>
 
-- **告警接收**：接收通知的指定角色、电子邮箱地址或电话号码。
+<TabItem value="Cloud Console">
 
-![zh-view-project-alert](/img/zh-view-project-alert.png)
+使用**告警设置**选项卡可查看所有已配置的告警及其当前状态。这为您提供了一个监控覆盖范围的集中视图。
+
+查看告警时，您会看到以下配置项：
+
+<table>
+   <tr>
+     <th><p>字段</p></th>
+     <th><p>描述</p></th>
+   </tr>
+   <tr>
+     <td><p>名称</p></td>
+     <td><p>告警的描述性标识（例如：“高 CU 使用率 - Dedicated 集群”、“P99查询延迟”）</p></td>
+   </tr>
+   <tr>
+     <td><p>状态</p></td>
+     <td><p>开关按钮显示当前告警状态：启用 (Enabled)（主动监控）或 禁用 (Disabled)（不发送通知）</p></td>
+   </tr>
+   <tr>
+     <td><p>目标集群</p></td>
+     <td><p>被监控的集群 - 可以是特定集群（如 “Dedicated-02, Dedicated-01”）或所有专用集群（包括未来创建的集群）</p></td>
+   </tr>
+   <tr>
+     <td><p>告警规则</p></td>
+     <td><p>监控参数和触发条件的组合显示（例如：“CU 容量 &gt; 80%, 持续 &gt;= 10 分钟”、“查询延迟 (P99) &gt; 1000 毫秒, 持续 &gt;= 10 分钟”）</p></td>
+   </tr>
+   <tr>
+     <td><p>告警等级</p></td>
+     <td><p>影响等级分类</p><ul><li><p><strong>警告</strong>：接近限制</p></li><li><p><strong>紧急</strong>：需要立即关注</p></li></ul></td>
+   </tr>
+   <tr>
+     <td><p>告警接收</p></td>
+     <td><p>通知接收者，包括配置的邮箱地址和通知渠道。</p><p>可用通知渠道列表请参阅<a href="./manage-notification-channels">管理告警渠道</a>。</p></td>
+   </tr>
+   <tr>
+     <td><p>操作</p></td>
+     <td><p>可用的管理选项：编辑、克隆、删除</p></td>
+   </tr>
+</table>
+
+</TabItem>
+<TabItem value="Bash">
+
+您可以查看项目内创建的告警列表。有关各参数具体含义，请参考 [List Alert Rules](/reference/restful/list-alert-rules-v2)。
+
+```bash
+export BASE_URL=https://api.cloud.zilliz.com.cn
+export PROJECT_ID=proj-bf71ce2fd4f3785d*****
+export API_KEY=c84c9a9515**********81319c2f147ffdd47ad6c36b31c126d1b790f457619c23237eba9287de73575943d2bfebcecd728bd07e
+
+curl --request GET \
+     --url "${BASE_URL}/v2/alertRules?projectId=${PROJECT_ID}" \
+     --header "Authorization: Bearer ${API_KEY}" \
+     --header "Accept: application/json" \
+     --header "Content-type: application/json"
+```
+
+</TabItem>
+</Tabs>
 
 ## 创建项目告警{#create-project-alert}
 
-除了默认告警外，您还可以点击 **+ 告警**来创建项目告警。您可以自定义告警项、严重级别、告警条件和告警通知接收人。
+<Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"Bash","value":"Bash"}]}>
 
-有关支持自定义的告警项，请参阅[指标与告警快速参考](./metrics-alerts-reference)。
+<TabItem value="Cloud Console">
 
-![zh-create-project-alert](/img/zh-create-project-alert.png)
+设置新的告警规则，从不同维度监控集群的性能和健康状态。
 
-## 编辑项目告警{#edit-project-alert}
+<Supademo id="cmbk75d218h70sn1rkh2gdpc6" title="Zilliz Cloud - 创建项目告警 Demo" />
 
-- 自定义设置：修改告警触发条件、更新通知接收人以及更改告警状态。
+</TabItem>
+<TabItem value="Bash">
 
-- 限制：暂不支持修改告警项和告警等级。
+您可以为特定或全部 Dedicated 集群创建告警。有关各参数具体含义，请参考 [Create Alert Rule](/reference/restful/create-alert-rule-v2)。
 
-<Admonition type="info" icon="📘" title="说明">
+```bash
+export BASE_URL=https://api.cloud.zilliz.com.cn
+export PROJECT_ID=proj-bf71ce2fd4f3785d*****
+export API_KEY=c84c9a9515**********81319c2f147ffdd47ad6c36b31c126d1b790f457619c23237eba9287de73575943d2bfebcecd728bd07e
 
-<p>要快速开启或关闭一个告警，您可以在<strong>操作</strong>栏中选择<strong>开启</strong>或<strong>关闭</strong>。</p>
+curl --request POST \
+     --url "${BASE_URL}/v2/alertRules" \
+     --header "Authorization: Bearer ${API_KEY}" \
+     --header "Accept: application/json" \
+     --header "Content-type: application/json" \
+     --data-raw '{
+       "projectId": "'"${PROJECT_ID}"'",
+       "ruleName": "High CU Computation",
+       "level": "CRITICAL",
+       "metricName": "CU_COMPUTATION",
+       "metricUnit": "percent",
+       "threshold": 80,
+       "windowSize": 10,
+       "comparisonMethod": "GREATER_THAN",
+       "targetClusterIds": ["in01-fbc09dde0a4bfc5"],
+       "enabled": true,
+       "sendResolved": true,
+       "actions": [
+         {
+           "type": "EMAIL",
+           "config": {
+             "recipients": {
+               "members": ["leryn.li@zilliz.com"],
+               "orgRoles": ["OWNER"],
+               "projectRoles": ["OWNER"]
+             }
+           }
+         }
+       ]
+     }'
+```
+
+</TabItem>
+</Tabs>
+
+## 管理项目告警{#manage-project-alert}
+
+修改、整理和维护现有告警，确保监控始终相关且高效。
+
+<Supademo id="cmbk9kxck018zxu0jw4ljw3jx" title="管理项目告警" isShowcase="true" />
+
+<Admonition type="info" icon="📘" title="Notes">
+
+<p>您可以通过 RESTful API 管理告警。有关具体信息，请参考  <a href="/reference/restful/update-alert-rule-v2">Update Alert Rule</a> 和 <a href="/reference/restful/delete-alert-rule-v2">Delete Alert Rule</a>。</p>
 
 </Admonition>
 
-## 开启或关闭项目告警{#turn-on-or-off-a-project-alert}
+### 禁用或启用项目告警{#enable-or-disable-project-alert}
 
-要快速开启或关闭一个告警，在**操作**栏中选择**开启**或**关闭**。
+在不丢失配置的情况下控制主动监控。
 
-<Admonition type="info" icon="📘" title="说明">
+- 禁用告警：停止发送通知，但保留所有设置。
 
-<p>告警关闭后，您无法再接收到任何告警通知。</p>
+- 启用告警：主动监控集群，并在阈值被突破时发送通知。
 
-</Admonition>
+### 编辑项目告警{#edit-project-alert}
 
-## 删除项目告警{#delete-a-project-alert}
+当监控需求变化时，更新告警配置。
+
+可修改任何告警参数，包括：
+
+- 阈值和比较运算符
+
+- 目标集群和指标类型
+
+- 通知接收者和渠道
+
+- 严重级别和持续时间设置
+
+### 复制项目告警{#clone-project-alert}
+
+以最小的设置工作量创建相似的告警。复制操作会复制所有现有设置，使您可以：
+
+- 为不同的集群环境创建类似告警模板
+
+- 调整阈值同时保持其他参数不变
+
+- 跨多个项目扩展监控范围
+
+### 删除项目告警{#delete-a-project-alert}
 
 您可以删除不需要的项目告警。
 
 <Admonition type="caution" icon="🚧" title="警告">
 
-<p>告警删除后，您无法再接收到任何告警通知。</p>
+<p>告警删除是永久性的且无法撤销。请确保不再需要该告警后再进行操作。</p>
 
 </Admonition>
 
-## 查看告警历史{#view-alert-history}
-
-在**告警历史**页签，查看已触发的告警历史列表。您可以根据告警项、告警等级和告警时间范围筛选满足条件的告警。
-
-![zh-view-alert-history](/img/zh-view-alert-history.png)
-
 ## 配置告警接收设置{#configure-alert-receiver-settings}
 
-告警接收设置功能使项目管理员能够创建和管理告警模板，以系统化的方式处理项目中的各类告警通知。
+设置项目范围内的默认通知设置，确保团队采用一致的监控实践。
 
-在项目的告警设置页面中，配置告警接收设置。
+<Supademo id="cmbk9psuk8hqqsn1rrpqu0hmo" title="Zilliz Cloud - 配置告警接收设置 Demo" />
 
-![zh_alert-receiver-settings](/img/zh_alert-receiver-settings.png)
+配置设置时，您会遇到以下概念：
 
-## 文档推荐{#related-topics}
+- **发送给**：为新告警自动选择的默认通知渠道（邮箱、企业微信、Webhook）。配置您最常用的渠道可简化告警创建流程。
 
-- [查看集群性能指标](./view-cluster-metric-charts)
+- **告警恢复通知**：启用后，当告警恢复（条件不再满足）时您将收到通知。
 
-- [管理组织告警](./manage-organization-alerts)
+- **将设置应用于现有告警**：选择是否用新的默认设置更新所有现有告警。
 
-- [指标与告警快速参考](./metrics-alerts-reference)
+## FAQ{#faq}
+
+### 告警触发后，我会多久收到一次通知？
+
+告警通知遵循自动频率模式：
+
+- 首次通知：告警阈值被突破时立即发送。
+
+- 第二次通知：如果条件持续存在，1小时后发送。
+
+- 后续通知：只要告警条件仍处于活动状态，每天发送一次。
+
+如果您觉得通知过于频繁，可以：
+
+- [编辑告警](./manage-project-alerts#edit-project-alert)以调整条件阈值或持续时间要求。
+
+- 暂时[禁用告警](./manage-project-alerts#enable-or-disable-project-alert)以停止所有通知（同时保留配置）。
 

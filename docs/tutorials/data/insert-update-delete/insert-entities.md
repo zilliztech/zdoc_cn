@@ -212,7 +212,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 向 Partition 中插入 Entity
+## 向 Partition 中插入 Entity{#insert-entities-into-a-partition}
 
 您还可以向指定的 Partition 中插入 Entity。示例代码假设 Collection 中存在一个名为 **partitionA** 的 Partition。
 

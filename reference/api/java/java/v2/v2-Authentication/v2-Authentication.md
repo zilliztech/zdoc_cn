@@ -6,13 +6,13 @@ notebook: false
 description: "Methods related to implement role-based access control to your resources. | Java | v2"
 type: folder
 token: U16KfBnGVlNp5edR7DycvFF1nfy
-sidebar_position: 4
+sidebar_position: 7
 sidebar_label: "Authentication"
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - cosine distance
   - zilliz
   - zilliz cloud
   - cloud

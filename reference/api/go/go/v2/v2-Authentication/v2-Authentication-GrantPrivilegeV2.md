@@ -4,10 +4,10 @@ slug: /go/v2-Authentication-GrantPrivilegeV2
 sidebar_label: "GrantPrivilegeV2()"
 beta: FALSE
 notebook: FALSE
-description: "This method grants a privilege or a privilege group to a role. | Go | v2"
+description: "This method grants a privilege or a privilege group to a role. In Milvus, you can allocate multiple privileges or privilege groups to a role and grant the role to a user so that the user gains the privileges allocated to the role. | Go | v2"
 type: origin
 token: En9vwAOryiuwHfkSJJXc9qBSnNh
-sidebar_position: 10
+sidebar_position: 12
 displayed_sidebar: goSidebar
 
 ---
@@ -17,7 +17,7 @@ import Admonition from '@theme/Admonition';
 
 # GrantPrivilegeV2()
 
-This method grants a privilege or a privilege group to a role.
+This method grants a privilege or a privilege group to a role. In Milvus, you can allocate multiple privileges or privilege groups to a role and grant the role to a user so that the user gains the privileges allocated to the role.
 
 ```plaintext
 func (c *Client) GrantPrivilegeV2(ctx context.Context, option GrantPrivilegeV2Option, callOptions ...grpc.CallOption) error
@@ -50,13 +50,13 @@ func (c *Client) GrantPrivilegeV2(ctx context.Context, option GrantPrivilegeV2Op
 
 ## GrantPrivilegeV2Option
 
-This is an interface type. The `grantV2Option` struct type implements this interface type. 
+This is an interface type. The `grantPrivilegeV2Option` struct type implements this interface type. 
 
-You can use the `NewGrantV2Option()` function to get the concrete implementation.
+You can use the `NewGrantPrivilegeV2Option()` function to get the concrete implementation.
 
-### NewGrantV2Option
+### NewGrantPrivilegeV2Option
 
-The signature of the `NewGrantV2Option()` is as follows:
+The signature of the `NewGrantPrivilegeV2Option()` is as follows:
 
 ```go
 func NewGrantPrivilegeV2Option(roleName, privilegeName, collectionName string) *grantV2Option
@@ -75,7 +75,7 @@ func NewGrantPrivilegeV2Option(roleName, privilegeName, collectionName string) *
    </tr>
    <tr>
      <td><p><code>privilegeName</code></p></td>
-     <td><p>Name of the privilege or privilege group to assign. For details, refer to the <strong>Privilege name</strong> column in the table on page Users and Roles.</p></td>
+     <td><p>Name of the privilege or privilege group to assign.</p><p>For details, refer to the <strong>Privilege name</strong> column in the table on page Users and Roles.</p></td>
      <td><p><code>string</code></p></td>
    </tr>
    <tr>

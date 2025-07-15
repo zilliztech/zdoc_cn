@@ -1,10 +1,10 @@
 ---
-title: "全文搜索 | Cloud"
+title: "Full Text Search | Cloud"
 slug: /full-text-search
-sidebar_label: "全文搜索"
-beta: PUBLIC
+sidebar_label: "Full Text Search"
+beta: FALSE
 notebook: FALSE
-description: "在  Zilliz Cloud 中，全文搜索是对基于稠密向量](./use-dense-vector)的语义搜索的补充。它能够在大规模文本集合中查找包含特定术语或短语的文本，弥补语义搜索的遗漏，从而提升整体搜索效果。它支持直接插入和使用原始文本数据进行相似性搜索，Milvus 会自动将文本转换为[稀疏向量](./use-sparse-vector)表示。全文搜索使用 [BM25 算法进行相关性评分，根据查询文本返回最相关的文档，从而提高文本搜索的整体精度。 | Cloud"
+description: "在  Zilliz Cloud 中，Full Text Search 是对基于稠密向量](./use-dense-vector)的语义搜索的补充。它能够在大规模文本集合中查找包含特定术语或短语的文本，弥补语义搜索的遗漏，从而提升整体搜索效果。它支持直接插入和使用原始文本数据进行相似性搜索，Milvus 会自动将文本转换为[稀疏向量](./use-sparse-vector)表示。Full Text Search 使用 [BM25 算法进行相关性评分，根据查询文本返回最相关的文档，从而提高文本搜索的整体精度。 | Cloud"
 type: origin
 token: TO6fwkZ2jiT6FSkkgbCcyHTvn0d
 sidebar_position: 9
@@ -27,21 +27,23 @@ import Admonition from '@theme/Admonition';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 全文搜索
+# Full Text Search
 
-在  Zilliz Cloud 中，全文搜索是对基于[稠密向量](./use-dense-vector)的语义搜索的补充。它能够在大规模文本集合中查找包含特定术语或短语的文本，弥补语义搜索的遗漏，从而提升整体搜索效果。它支持直接插入和使用原始文本数据进行相似性搜索，Milvus 会自动将文本转换为[稀疏向量](./use-sparse-vector)表示。全文搜索使用 [BM25](https://en.wikipedia.org/wiki/Okapi_BM25) 算法进行相关性评分，根据查询文本返回最相关的文档，从而提高文本搜索的整体精度。
+在  Zilliz Cloud 中，Full Text Search 是对基于[稠密向量](./use-dense-vector)的语义搜索的补充。它能够在大规模文本集合中查找包含特定术语或短语的文本，弥补语义搜索的遗漏，从而提升整体搜索效果。它支持直接插入和使用原始文本数据进行相似性搜索，Milvus 会自动将文本转换为[稀疏向量](./use-sparse-vector)表示。Full Text Search 使用 [BM25](https://en.wikipedia.org/wiki/Okapi_BM25) 算法进行相关性评分，根据查询文本返回最相关的文档，从而提高文本搜索的整体精度。
 
 该功能适用于需要精准术语匹配的相关性搜索场景，如电商中检索产品序列号、客户支持中的工单跟踪，以及法律或医学数据库中的特定术语查找。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>将全文搜索与基于语义的稠密向量搜索结合使用，可以提升搜索结果的准确性和相关性。更多信息请参考 <a href="./hybrid-search">Hybrid Search</a>。</p>
+<p>将 Full Text Search 与基于语义的稠密向量搜索结合使用，可以提升搜索结果的准确性和相关性。更多信息请参考 <a href="./hybrid-search">Hybrid Search</a>。</p>
 
 </Admonition>
 
+Zilliz Cloud 支持通过代码或通过 Web 控制台开启 Full Text Search 功能。本文着重介绍如何通过代码开启 Full Text Search，如需了解 Web 控制台操作，请参考[管理 Collection (控制台)](./manage-collections-console#full-text-search)。
+
 ## 概述{#overview}
 
-全文搜索简化了基于文本数据的搜索流程，无需您提前将数据转换为向量。其工作流程如下：
+Full Text Search 简化了基于文本数据的搜索流程，无需您提前将数据转换为向量。其工作流程如下：
 
 1. **文本输入**：直接插入原始文本文档或提供查询文本，无需手动生成向量。
 
@@ -55,7 +57,7 @@ import TabItem from '@theme/TabItem';
 
 ![G4iFwPgJhhEpm5bvReYcmATWnAc](/img/G4iFwPgJhhEpm5bvReYcmATWnAc.png)
 
-要使用全文搜索，主要有以下几个步骤：
+要使用 Full Text Search，主要有以下几个步骤：
 
 1. **创建 Collection**：设置包含必要字段的 Collection，并定义一个将原始文本转换为稀疏向量的 Function。
 
@@ -65,7 +67,7 @@ import TabItem from '@theme/TabItem';
 
 ## 创建 Collection{#create-a-collection-for-full-text-search}
 
-要启用全文搜索，需要创建一个包含特定 Schema 的 Collection。Schema 必须包含以下三个关键字段：
+要启用 Full Text Search，需要创建一个包含特定 Schema 的 Collection。Schema 必须包含以下三个关键字段：
 
 - **主键字段**：用于唯一标识 Collection 中的每个 Entity。
 
@@ -193,7 +195,7 @@ export schema='{
 
 - `id`：作为主键，并通过 `auto_id=True` 自动生成。
 
-- `text`：用于存储原始文本数据以进行全文搜索操作。数据类型必须为 `VARCHAR`，因为这是 Zilliz Cloud 的文本存储类型。设置 `enable_analyzer=True` 以允许 Zilliz Cloud 对文本进行分词。默认情况下，Milvus 使用 `default` 分词器进行分词。如需配置其他分词器，请参考 [Analyzer](./analyzer)。
+- `text`：用于存储原始文本数据以进行 Full Text Search 操作。数据类型必须为 `VARCHAR`，因为这是 Zilliz Cloud 的文本存储类型。设置 `enable_analyzer=True` 以允许 Zilliz Cloud 对文本进行分词。默认情况下，Milvus 使用 `default` 分词器进行分词。如需配置其他分词器，请参考 [Analyzer](./analyzer)。
 
 - `sparse`：向量字段，用于存储 Milvus 为文本数据生成的稀疏向量表示。数据类型必须为 `SPARSE_FLOAT_VECTOR`。
 
@@ -389,7 +391,7 @@ export indexParams='[
    </tr>
    <tr>
      <td><p><code>field_name</code></p></td>
-     <td><p>要索引的向量字段名称。对于全文搜索，应设置为存储稀疏向量的字段，在本例中为 <code>sparse</code>。</p></td>
+     <td><p>要索引的向量字段名称。对于 Full Text Search，应设置为存储稀疏向量的字段，在本例中为 <code>sparse</code>。</p></td>
    </tr>
    <tr>
      <td><p><code>index_type</code></p></td>
@@ -397,7 +399,7 @@ export indexParams='[
    </tr>
    <tr>
      <td><p><code>metric_type</code></p></td>
-     <td><p>设置为 <code>BM25</code> 以启用全文搜索功能。</p></td>
+     <td><p>设置为 <code>BM25</code> 以启用 Full Text Search 功能。</p></td>
    </tr>
 </table>
 
@@ -541,9 +543,9 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 全文搜索{#perform-full-text-search}
+## 执行 Full Text Search{#perform-full-text-search}
 
-在向 Collection 插入数据后，可以使用原始查询文本执行全文搜索。Milvus 会自动将查询文本转换为稀疏向量，并使用 BM25 算法对匹配的搜索结果进行相关性排序。
+在向 Collection 插入数据后，可以使用原始查询文本执行 Full Text Search。Milvus 会自动将查询文本转换为稀疏向量，并使用 BM25 算法对匹配的搜索结果进行相关性排序。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>

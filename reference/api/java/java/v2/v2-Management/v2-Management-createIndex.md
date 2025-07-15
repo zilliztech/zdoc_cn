@@ -8,12 +8,12 @@ notebook: false
 description: "This operation creates an index for a specific collection. | Java | v2"
 type: docx
 token: OCjUdfc6eo0VihxNUGmcqb7FnTh
-sidebar_position: 1
+sidebar_position: 2
 keywords: 
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
-  - vector database
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud
@@ -67,7 +67,20 @@ createIndex(CreateIndexReq.builder()
 ## Example
 
 ```java
-// create an index for field "vector"
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.common.IndexParam;
+import io.milvus.v2.service.index.request.CreateIndexReq;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Create an index for the field "vector"
 IndexParam indexParam = IndexParam.builder()
         .metricType(IndexParam.MetricType.L2)
         .indexType(IndexParam.IndexType.AUTOINDEX)

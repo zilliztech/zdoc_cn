@@ -56,8 +56,12 @@ Zilliz Cloud 提供了一个直观的任务中心页面，将同一项目下的�
          <td><p>从备份恢复 Collection。</p></td>
        </tr>
        <tr>
+         <td><p>导出备份文件</p></td>
+         <td><p>将备份文件导出至指定对象存储服务中。</p></td>
+       </tr>
+       <tr>
          <td><p>迁移</p></td>
-         <td><p>将数据迁移至集群。</p><ul><li><p>迁移外部数据</p><ul><li><p>从 Elasticsearch 迁移至 Zilliz Cloud 集群</p></li><li><p>从 Milvus 迁移至 Zilliz Cloud 集群</p></li></ul></li><li><p>跨集群迁移</p><ul><li><p>从 Serverless 或 Dedicated 集群迁移至新的 Dedicated 集群</p></li><li><p>从 Dedicated 集群迁移至另一个现有的 Dedicated 集群</p></li></ul></li></ul></td>
+         <td><p>将数据迁移至集群。</p><ul><li><p>迁移外部数据</p><ul><li><p>从 Milvus 迁移至 Zilliz Cloud 集群</p></li><li><p>从 Qdrant 迁移至 Zilliz Cloud 集群</p></li><li><p>从 Elasticsearch 迁移至 Zilliz Cloud 集群</p></li><li><p>从 OpenSearch 迁移至 Zilliz Cloud 集群</p></li><li><p>从 PostgreSQL 迁移至 Zilliz Cloud 集群</p></li><li><p>从腾讯云向量数据库迁移至 Zilliz Cloud 集群</p></li></ul></li><li><p>Zilliz Cloud 跨集群迁移</p><ul><li><p>在当前组织中进行跨集群迁移</p></li><li><p>跨组织进行集群间迁移</p></li></ul></li></ul></td>
        </tr>
        <tr>
          <td><p>导入</p></td>
@@ -66,6 +70,10 @@ Zilliz Cloud 提供了一个直观的任务中心页面，将同一项目下的�
        <tr>
          <td><p>复制 Collection</p></td>
          <td><p>复制 Collection Schema 及 Collection 中所有数据。</p></td>
+       </tr>
+       <tr>
+         <td><p>创建示例 Collection</p></td>
+         <td><p>创建一个带有实力数据集的 Collection。</p></td>
        </tr>
     </table>
 
@@ -79,17 +87,23 @@ Zilliz Cloud 提供了一个直观的任务中心页面，将同一项目下的�
 
 ## 查看任务详情
 
-点击**操作**栏中的**...**，选择**查看详情**。
+点击**操作**栏中的**...**，选择**查看详情**。或者，您也可以通过[查看任务详情](/reference/restful/describe-job-v2)的 RESTful API 接口获取任务详情。
 
 ![view_job_details_cn](/img/view_job_details_cn.png)
 
 ## 取消任务
 
-您可以取消**进行中**和**等待中**的任务。点击**操作**栏中的**...**，选择**取消任务**。
+您可以取消如下类型的**进行中**和**等待中**的任务：
+
+- 备份任务
+
+- 迁移任务（除在线迁移任务）
+
+- 导出备份文件任务
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>目前仅支持取消迁移和备份任务。</p>
+<p>如需取消任务，您需要具备<strong>组织管理员</strong>或<strong>项目管理员</strong>权限。</p>
 
 </Admonition>
 
@@ -100,6 +114,7 @@ Zilliz Cloud 提供了一个直观的任务中心页面，将同一项目下的�
 <Admonition type="info" icon="📘" title="说明">
 
 <p>目前仅支持重试失败的导入任务。</p>
+<p>如需重试失败任务，您需要具备<strong>组织管理员</strong>或<strong>项目管理员</strong>角色。</p>
 
 </Admonition>
 
@@ -107,3 +122,4 @@ Zilliz Cloud 提供了一个直观的任务中心页面，将同一项目下的�
 
 如果您在查看失败原因后对需要导入的数据文件进行相应调整，您可以重试导入任务。
 
+![retry_failed_job_cn](/img/retry_failed_job_cn.png)

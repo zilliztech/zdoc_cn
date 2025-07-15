@@ -8,12 +8,12 @@ notebook: false
 description: "This operation drops a specified collection alias. | Java | v2"
 type: docx
 token: MBy3dDXFbo0buwxkh0IczwLInPf
-sidebar_position: 10
+sidebar_position: 13
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - Vector embeddings
+  - Vector store
+  - open source vector database
+  - Vector index
   - zilliz
   - zilliz cloud
   - cloud
@@ -64,7 +64,19 @@ dropAlias(DropAliasReq.builder()
 ## Example
 
 ```java
-// drop alias "test_alias"
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.utility.request.DropAliasReq;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Drop alias "test_alias"
 DropAliasReq dropAliasReq = DropAliasReq.builder()
         .alias("test_alias")
         .build();

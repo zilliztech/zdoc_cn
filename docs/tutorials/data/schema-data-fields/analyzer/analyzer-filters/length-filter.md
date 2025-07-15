@@ -2,7 +2,7 @@
 title: "Length | Cloud"
 slug: /length-filter
 sidebar_label: "Length"
-beta: PUBLIC
+beta: FALSE
 notebook: FALSE
 description: "`length` 过滤器删除不符合指定长度要求的词项，使您能够控制在文本处理过程中保留的词项长度。 | Cloud"
 type: origin
@@ -79,7 +79,7 @@ analyzerParams.put("filter",
 
 `length` 过滤器作用于分词器生成的词项，因此必须与分词器结合使用。有关 Zilliz Cloud 中可用的分词器列表，请参阅[分词器参考](./analyzer-tokenizers)。
 
-定义 `analyzer_params` 后，您可以在定义 Collection Schema 时将其应用于 VARCHAR 字段。这使得 Zilliz Cloud 能够使用指定的分析器处理该字段中的文本，以实现高效的分词和过滤。更多信息，请参阅 [Analyzer 概述](./analyzer-overview)。  
+定义 `analyzer_params` 后，您可以在定义 Collection Schema 时将其应用于 VARCHAR 字段。这使得 Zilliz Cloud 能够使用指定的分析器处理该字段中的文本，以实现高效的分词和过滤。更多信息，请参阅[使用示例](./analyzer-overview#example-use)。  
 
 ## 示例输出{#example-output}
 
@@ -91,7 +91,7 @@ analyzerParams.put("filter",
 "The length filter allows control over token length requirements for text processing."
 ```
 
-**预期输出**：  
+**预期输出**（`max: 10`）：  
 
 ```python
 ["length", "filter", "allows", "control", "over", "token", "length", "for", "text"]

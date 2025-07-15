@@ -7,13 +7,13 @@ beta: false
 notebook: false
 description: "This operation creates a collection either with default or customized settings. | Java | v2"
 type: docx
-token: LtCFdAg8FoxWmBxOInfcUSagnHb
-sidebar_position: 5
+token: DkFxdDBvaoUPQRxzudxcDtTXnue
+sidebar_position: 7
 keywords: 
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
-  - Zilliz
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
   - zilliz
   - zilliz cloud
   - cloud
@@ -52,6 +52,8 @@ createCollection(CreateCollectionReq.builder()
     .collectionSchema(CreateCollectionReq.CollectionSchema collectionSchema)
     .indexParams(List<IndexParam> indexParams)
     .numPartitions(int numPartitions)
+    .consistencyLevel(ConsistencyLevel consistencyLevel)
+    .properties(Map<String, String> properties)
     .build()
 )
 ```
@@ -122,7 +124,7 @@ createCollection(CreateCollectionReq.builder()
 
     The value defaults to **True**, indicating that the meta field is used.
 
-    If you create a collection with a schema, configure this parameter using the **[createSchema](./v2-Collections-createSchema)** method.
+    If you create a collection with a schema, configure this parameter using the **[CreateSchema](./v2-Collections-CreateSchema)** method.
 
 - `numShards(int numShards)`
 
@@ -153,6 +155,14 @@ createCollection(CreateCollectionReq.builder()
 
     The number of partitions. Used when isPartitionKey is set to true in Field Schema. Default is 64.
 
+- `consistencyLevel(ConsistencyLevel consistencyLevel)`
+
+    The consistency level of the collection. This applies to searches and queries within the collection if the search or query request lacks consistency.
+
+- `properties(Map<String, String> properties)`
+
+    Extra collection properties in a hash map.
+
 **RETURNS:**
 
 *void*
@@ -173,34 +183,61 @@ You can choose between a quick setup or a customized setup as follows:
 
     The quick setup collection has two fields: the primary and vector fields. It also allows the insertion of undefined fields and their values in key-value pairs in a dynamic field.
 
-```java
-// quickly create a collection
-CreateCollectionReq createCollectionReq = CreateCollectionReq.builder()
-        .collectionName(collectionName)
-        .dimension(dim)
-        .build();
-client.createCollection(createCollectionReq);
-
-```
+    ```java
+    import io.milvus.v2.client.ConnectConfig;
+    import io.milvus.v2.client.MilvusClientV2;
+    import io.milvus.v2.service.collection.request.CreateCollectionReq;
+    
+    // 1. Set up a client
+    ConnectConfig connectConfig = ConnectConfig.builder()
+            .uri("YOUR_CLUSTER_ENDPOINT")
+            .token("YOUR_CLUSTER_TOKEN")
+            .build();
+            
+    MilvusClientV2 client = new MilvusClientV2(connectConfig);
+    
+    // 2. Quickly create a collection
+    CreateCollectionReq createCollectionReq = CreateCollectionReq.builder()
+            .collectionName(collectionName)
+            .dimension(dim)
+            .build();
+    client.createCollection(createCollectionReq);
+    
+    ```
 
 - **Customized setup with index parameters**
 
     For a customized setup, create the schema and index parameters beforehand. 
 
-```java
-// create a collection with schema, when indexParams is specified, it will create index as well
-CreateCollectionReq.CollectionSchema collectionSchema = client.createSchema();
-collectionSchema.addField(AddFieldReq.builder().fieldName("id").dataType(DataType.Int64).isPrimaryKey(Boolean.TRUE).autoID(Boolean.FALSE).description("id").build());
-collectionSchema.addField(AddFieldReq.builder().fieldName("vector").dataType(DataType.FloatVector).dimension(dim).build());
-
-IndexParam indexParam = IndexParam.builder()
-        .fieldName("vector")
-        .metricType(IndexParam.MetricType.COSINE)
-        .build();
-CreateCollectionReq createCollectionReq = CreateCollectionReq.builder()
-        .collectionName(collectionName)
-        .collectionSchema(collectionSchema)
-        .indexParams(Collections.singletonList(indexParam))
-        .build();
-client.createCollection(createCollectionReq);
-```
+    ```java
+    import io.milvus.v2.client.ConnectConfig;
+    import io.milvus.v2.client.MilvusClientV2;
+    import io.milvus.v2.common.DataType;
+    import io.milvus.v2.common.IndexParam;
+    import io.milvus.v2.service.collection.request.AddFieldReq;
+    import io.milvus.v2.service.collection.request.CreateCollectionReq;
+    
+    // 1. Set up a client
+    ConnectConfig connectConfig = ConnectConfig.builder()
+            .uri("YOUR_CLUSTER_ENDPOINT")
+            .token("YOUR_CLUSTER_TOKEN")
+            .build();
+            
+    MilvusClientV2 client = new MilvusClientV2(connectConfig);
+    
+    // 2. Create a collection with schema, when indexParams is specified, it will create index as well
+    CreateCollectionReq.CollectionSchema collectionSchema = client.createSchema();
+    collectionSchema.addField(AddFieldReq.builder().fieldName("id").dataType(DataType.Int64).isPrimaryKey(Boolean.TRUE).autoID(Boolean.FALSE).description("id").build());
+    collectionSchema.addField(AddFieldReq.builder().fieldName("vector").dataType(DataType.FloatVector).dimension(dim).build());
+    
+    IndexParam indexParam = IndexParam.builder()
+            .fieldName("vector")
+            .metricType(IndexParam.MetricType.COSINE)
+            .build();
+    CreateCollectionReq createCollectionReq = CreateCollectionReq.builder()
+            .collectionName(collectionName)
+            .collectionSchema(collectionSchema)
+            .indexParams(Collections.singletonList(indexParam))
+            .build();
+    client.createCollection(createCollectionReq);
+    ```

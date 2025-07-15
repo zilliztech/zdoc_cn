@@ -2,7 +2,7 @@
 title: "分词器参考 | Cloud"
 slug: /analyzer-tokenizers
 sidebar_label: "分词器参考"
-beta: PUBLIC
+beta: FALSE
 notebook: FALSE
 description: "本节介绍各内置 Analyzer 的具体信息。 | Cloud"
 type: origin

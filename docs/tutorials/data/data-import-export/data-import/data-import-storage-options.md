@@ -41,22 +41,22 @@ import Admonition from '@theme/Admonition';
        </tr>
        <tr>
          <td><p>华东1（杭州）</p></td>
-         <td><p><code>https://bucket-name.cos.ap-beijing.myqcloud.com/object-name</code></p></td>
-         <td><p><code>oss-cn-hangzhou</code></p></td>
+         <td><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/object-name</code></p></td>
+         <td><p><code>cn-hangzhou</code></p></td>
        </tr>
        <tr>
          <td><p>华北2（北京）</p></td>
-         <td><p><code>https://bucket-name.cos.ap-beijing.myqcloud.com/object-name</code></p></td>
-         <td><p><code>oss-cn-beijing</code></p></td>
+         <td><p><code>https://bucket-name.oss-cn-beijing.aliyuncs.com/object-name</code></p></td>
+         <td><p><code>cn-beijing</code></p></td>
        </tr>
        <tr>
          <td><p>华南1（深圳）</p></td>
-         <td><p><code>https://bucket-name.cos.ap-beijing.myqcloud.com/object-name</code></p></td>
-         <td><p><code>oss-cn-shenzhen</code></p></td>
+         <td><p><code>https://bucket-name.oss-cn-shenzhen.aliyuncs.com/object-name</code></p></td>
+         <td><p><code>cn-shenzhen</code></p></td>
        </tr>
     </table>
 
-    关于如何通过上述 URI 访问存储桶中的对象，可以参考 [OSS 访问域名使用规则](https://help.aliyun.com/zh/oss/user-guide/oss-domain-names)。
+    关于如何通过上述 URI 访问存储桶中的对象，可以参考 [OSS 访问域名使用规则](https://help.aliyun.com/zh/oss/user-guide/regions-and-endpoints)。
 
 - **Required permissions**
 

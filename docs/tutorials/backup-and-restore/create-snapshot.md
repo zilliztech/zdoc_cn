@@ -4,7 +4,7 @@ slug: /create-snapshot
 sidebar_label: "创建备份"
 beta: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 备份是指在某特定时间保存的一份集群或 Collection 数据的拷贝。您可以基于备份创建新的集群或 Collection。 | Cloud"
+description: "在 Zilliz Cloud 中，备份指的是数据副本，用于在发生数据丢失或系统故障时恢复整个集群或集群中的部分 Collection。 | Cloud"
 type: origin
 token: GFFswc3z1iQtjQkpmyScL00dnSx
 sidebar_position: 1
@@ -19,122 +19,132 @@ keywords:
 ---
 
 import Admonition from '@theme/Admonition';
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+
 
 # 创建备份
 
-Zilliz Cloud 备份是指在某特定时间保存的一份集群或 Collection 数据的拷贝。您可以基于备份创建新的集群或 Collection。
+在 Zilliz Cloud 中，备份指的是数据副本，用于在发生数据丢失或系统故障时恢复整个集群或集群中的部分 Collection。
 
-Zilliz Cloud 将永久保存手动创建的备份。换言之，手动创建的备份不会被自动删除。
+创建备份会产生额外[费用](./understand-cost#backup-costs)，按备份存储所在的云地域计费。所有备份文件均存储在与源集群相同的云地域。例如，部署在`阿里云华东1（杭州）`的集群，其备份也将保存在`阿里云华东1（杭州）`。
 
-## 前提条件{#before-you-start}
-
-开始前，请确保：
-
-- 您是目标组织中的[组织管理员](./organization-users)或[项目管理员](./project-users)。
-
-- 您的集群为 Dedicated 版本。
+本文将介绍如何**手动创建备份**。如需自动创建备份，请参见[创建自动备份](./schedule-automatic-backups)。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>备份功能目前仅对 Dedicated 集群开放。如果您创建的是 Serverless 集群，请先<a href="./migrate-between-clusters">迁移</a>至 Dedicated 集群。</p>
-<p>创建备份会产生一定费用。具体详情，请参阅<a href="./understand-cost">了解费用</a>。</p>
+<p>备份与恢复功能仅适用于 Dedicated 集群。</p>
 
 </Admonition>
 
-## 创建备份{#create-backup}
+## 限制说明{#limits}
 
-<Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"Bash","value":"Bash"}]}>
+- **访问控制**：仅项目管理员、组织管理员或拥有备份权限的自定义角色可执行备份操作。
 
-<TabItem value="Cloud Console">
+- **不包含在备份中的内容**：
 
-您可以参考以下截图为集群或 Collection 创建备份。创建备份时，您的集群仍处于**运行中**的状态。
+    - Collection 的 TTL 设置
 
-![create_snapshot_cn](/img/create_snapshot_cn.png)
+    - Collection 和字段级别的 `mmap` 配置
 
-</TabItem>
-<TabItem value="Bash">
+    - 默认用户 `db_admin` 的密码（恢复时将重新生成新密码）
 
-您可以为整个集群或某个 collection 创建备份。有关具体的参数信息，请参阅[创建备份](/reference/restful/create-backup-v2)。
+- **集群 Shard 设置**：集群的 Shard 信息会被备份，但如果在恢复集群过程中，您选择了减少集群 CU 规格，Shard 数量可能会根据 CU 规格有所调整，详见[使用限制](./limits#shards)。
 
-- 为整个集群创建备份。
+- **备份任务限制**：
 
-    ```bash
-    curl --request POST \
-         --url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/backups/create" \
-         --header "Authorization: Bearer ${TOKEN}" \
-         --header "Content-Type: application/json" \
-         --data-raw '{
-                "backupType": "CLUSTER"
-          }'
-    ```
+    - 自动备份执行期间无法发起手动备份。
 
-    示例回显：
+    - 若当前有手动备份正在进行，自动备份仍将按计划执行。
 
-    ```bash
-    {
-      "code": 0,
-      "data": {
-        "backupId": "backup0_c7b18539b97xxxx",
-        "backupName": "Dedicated-01_backup2",
-        "jobId": "job-031a8e3587ba7zqkadxxxx"
-      }
-    }
-    ```
+## 创建集群备份{#create-cluster-backup}
 
-- 为某个 collection 创建备份。
+您可以备份整个集群，并在需要时恢复整个集群或集群中的部分 Collection。
 
-    ```bash
-    curl --request POST \
-    --url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/backups/create" \
-    --header "Authorization: Bearer ${TOKEN}" \
-    --header "Content-Type: application/json" \
-    -d '{
-        "backupType": "COLLECTION",
-        "dbCollections": [
-            {
-                "collectionNames": [
-                    "medium_articles"
-                ]
-            }
-        ]
-    }'
-    ```
+### 通过 Web 控制台{#via-web-console}
 
-    示例回显：
+以下 Demo 展示如何通过 Zilliz Cloud 控制台创建集群备份。
 
-    ```bash
-    {
-      "code": 0,
-      "data": {
-        "backupId": "backup11_4adb19e3f9exxxx",
-        "backupName": "medium_articles_bacxxxx",
-        "jobId": "job-039dbc113c5ozfwunvxxxx"
-      }
-    }
-    ```
+### 通过 RESTful API{#via-restful-api}
 
-</TabItem>
-</Tabs>
+以下示例展示如何为集群 `in01-xxxxxxxxxxxxxx` 创建集群备份。更多 API 参数细节，请参见[创建备份](/reference/restful/create-backup-v2)。
 
-Zilliz Cloud 将生成一条备份任务。您可前往[任务中心](./view-activities)查看任务状态和进度。如果任务状态从**进行中**变更为**成功**，则代表备份创建成功。
+```bash
+curl --request POST \
+     --url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/backups/create" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Content-Type: application/json" \
+     --data-raw '{
+            "backupType": "CLUSTER"
+      }'
+```
 
-<Admonition type="info" icon="📘" title="说明">
+示例返回结果如下。系统会生成一个备份任务，您可在项目下的[任务中心](./job-center)查看进度：
 
-<p>同一集群下，同时最多可有一条进行中或等待中的手动创建备份任务。只有当进行中或等待中的手动创建备份任务完成时，您方可手动创建新备份。</p>
+```bash
+{
+  "code": 0,
+  "data": {
+    "backupId": "backup0_c7b18539b97xxxx",
+    "backupName": "Dedicated-01_backup2",
+    "jobId": "job-031a8e3587ba7zqkadxxxx"
+  }
+}
+```
 
-</Admonition>
+## 创建 Collection 备份{#create-collection-backup}
 
-创建备份是异步操作，创建所需时间取决于集群大小和集群的 CU 规格。例如，如果某集群大小为 4 CU 且该集群下有一个 Collection，Collection 中包含了超过 1.2 亿 128 维向量记录，则为该集群创建手动备份大约耗时 5 分钟。
+如需备份某个特定 Collection 或集群中的部分 Collection，请创建 Collection 级别的备份。
 
-## 相关文档{#related-topics}
+### 通过 Web 控制台{#via-web-console}
 
-- [创建自动备份](./schedule-automatic-backups)
+以下 Demo 展示如何通过控制台创建 Collection 备份。
 
-- [查看备份快照](./view-snapshot-details)
+### 通过 RESTful API{#via-restful-api}
 
-- [恢复备份](./restore-from-snapshot)
+以下示例展示如何为集群 `in01-xxxxxxxxxxxxxx` 中的 `medium_articles` Collection 创建备份。更多 API 参数细节，请参见[创建备份](/reference/restful/create-backup-v2)。
 
-- [删除备份快照](./delete-snapshot)
+```bash
+curl --request POST \
+--url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/backups/create" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+-d '{
+    "backupType": "COLLECTION",
+    "dbCollections": [
+        {
+            "collectionNames": [
+                "medium_articles"
+            ]
+        }
+    ]
+}'
+```
 
+示例返回结果如下。系统会生成一个备份任务，您可在项目下的[任务中心](./job-center)查看进度：
+
+```bash
+curl --request POST \
+--url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/backups/create" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+-d '{
+    "backupType": "COLLECTION",
+    "dbCollections": [
+        {
+            "collectionNames": [
+                "medium_articles"
+            ]
+        }
+    ]
+}'
+```
+
+## 常见问题{#faqs}
+
+**备份任务一般需要多久？**
+备份所需时间取决于数据大小。备份 700 MB 数据大约需要 1 秒。如果集中包含超过 1,000 个 Collection，备份所需时间可能略有延长。
+
+**备份过程中可以执行 DDL 操作吗？**
+建议在备份任务进行时避免频繁执行 DDL 操作（如创建或删除 Collection），否则可能导致备份数据不一致。
+
+**删除集群后，手动创建的集群备份文件会被删除吗？**
+不会。手动创建的集群备份会被永久保留，即使原集群被删除也不会影响手动创建的备份。您可以按序进行手动删除。

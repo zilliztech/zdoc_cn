@@ -9,10 +9,10 @@ token: IguLfmHgXlJoojdRU8kcohXZnE1
 sidebar_position: 5
 sidebar_label: "Vector"
 keywords: 
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
   - zilliz
   - zilliz cloud
   - cloud

@@ -43,7 +43,15 @@ import TabItem from '@theme/TabItem';
 
 ## 连接到集群{#connect-to-a-cluster}
 
-集群启动后，通过集群公网地址和凭证连接到集群。此凭证可以是 [API 密钥](./manage-api-keys)或由用户名和密码组成的[集群凭证](./cluster-credentials)。
+集群启动后，通过集群公共 Endpoint 和 Token 连接到集群。
+
+- 公共 Endpoint：您可以通过 Zilliz Cloud web 控制台获取该信息。前往目标集群的**集群详情**页。在**连接信息**卡片上，复制集群的公共 Endpoint。
+
+    ![connection-info-cn](/img/connection-info-cn.png)
+
+- **Token：**可以是 [API 密钥](./manage-api-keys)或由用户名和密码组成的[集群凭证](./cluster-credentials)。
+
+以下示例展示如何连接至集群。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
 <TabItem value='python'>

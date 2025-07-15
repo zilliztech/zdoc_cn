@@ -1,7 +1,10 @@
 ---
+title: "InsertRows() | Go | v1"
 slug: /go/v1-Collection-InsertRows
-beta: FALSE
+sidebar_label: "InsertRows()"
+beta: NEAR DEPRECATE
 notebook: FALSE
+description: "This method inserts entities organized in rows into the specified collection. | Go | v1"
 type: origin
 token: M33XwHmYlisVrOkZOoXcecsRnDe
 sidebar_position: 9
@@ -24,29 +27,29 @@ func (c *GrpcClient) InsertRows(ctx context.Context, collName string, partitionN
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>ctx</code></p></td>
-  <td><p>Context for the current call to work.</p></td>
-  <td><p><code>context.Context</code></p></td>
+     <td><p><code>ctx</code></p></td>
+     <td><p>Context for the current call to work.</p></td>
+     <td><p><code>context.Context</code></p></td>
    </tr>
    <tr>
-  <td><p><code>collName</code></p></td>
-  <td><p>Name of the collection to insert data into.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>collName</code></p></td>
+     <td><p>Name of the collection to insert data into.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>partitionName</code></p></td>
-  <td><p>Name of the partition to insert data into.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>partitionName</code></p></td>
+     <td><p>Name of the partition to insert data into.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>rows</code></p></td>
-  <td><p>Data to insert into the specified collection.</p><p>You should include the data for all the fields defined in the collection schema.</p></td>
-  <td><p><code>[]interface{}</code></p></td>
+     <td><p><code>rows</code></p></td>
+     <td><p>Data to insert into the specified collection.</p><p>You should include the data for all the fields defined in the collection schema.</p></td>
+     <td><p><code>[]interface{}</code></p></td>
    </tr>
 </table>
 

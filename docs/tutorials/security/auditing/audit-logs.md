@@ -27,7 +27,10 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>审计日志记录为<strong>内测版</strong>功能。如需使用此功能或了解相关费用，请<a href="https://zilliz.com.cn/contact-sales">联系销售</a>。</p>
+<ul>
+<li><p>审计日志记录为<strong>内测版</strong>功能。如需使用此功能或了解相关费用，请<a href="http://support.zilliz.com.cn">提交工单</a>。</p></li>
+<li><p>仅 Milvus 2.5.x 版本及以上的集群支持审计日志功能。</p></li>
+</ul>
 
 </Admonition>
 
@@ -51,7 +54,7 @@ import Admonition from '@theme/Admonition';
 
 - **文件路径**： `/<Cluster ID>/<Log type>/<Date>`
 
-- **文件命名规则**：具体格式为 `\<File name><File name suffix>`。`\<File name>`的格式为 *HH:MM:SS-&#36;UUID*：*HH:MM:SS* 代表日志产生时的 UTC 时间戳；*&#36;UUID* 代表一个随机字符串，如 `09:16:53-jz5l7D8Q`。
+- **文件命名规则**：具体格式为 `\<File name><File name suffix>`。`\<File name>`的格式为 *HH:MM:SS-$UUID*：*HH:MM:SS* 代表日志产生时的 UTC 时间戳；*$UUID* 代表一个随机字符串，如 `09:16:53-jz5l7D8Q`。
 
 以下是流式传输到存储桶的审计日志条目示例：
 

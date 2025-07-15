@@ -8,12 +8,12 @@ notebook: false
 description: "This operation releases the data of a specific collection from memory. | Java | v2"
 type: docx
 token: BA9edMrWMosYWFxwTBAcl2WOnff
-sidebar_position: 9
+sidebar_position: 13
 keywords: 
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - zilliz
   - zilliz cloud
   - cloud
@@ -76,7 +76,19 @@ releaseCollection(ReleaseCollectionReq.builder()
 ## Example
 
 ```java
-// release collection "test"
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.collection.request.ReleaseCollectionReq;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Release collection "test"
 ReleaseCollectionReq releaseCollectionReq = ReleaseCollectionReq.builder()
         .collectionName("test")
         .build();

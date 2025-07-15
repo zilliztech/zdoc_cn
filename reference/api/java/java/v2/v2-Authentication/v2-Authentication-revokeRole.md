@@ -8,12 +8,12 @@ notebook: false
 description: "This operation revokes the role assigned to a user. | Java | v2"
 type: docx
 token: Znb7dcNoeobIkkxGLGfcpVfUnIX
-sidebar_position: 12
+sidebar_position: 19
 keywords: 
-  - vector database
-  - IVF
-  - knn
-  - Image Search
+  - cosine distance
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
   - zilliz
   - zilliz cloud
   - cloud
@@ -67,6 +67,19 @@ revokeRole(RevokeRoleReq.builder()
 ## Example
 
 ```java
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.rbac.request.RevokeRoleReq;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Revoke a role from a user
 RevokeRoleReq revokeRoleReq = RevokeRoleReq.builder()
         .roleName("db_ro")
         .userName("test")

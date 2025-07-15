@@ -10,10 +10,10 @@ type: docx
 token: W1mxdmaelo4co4x0ruwcTWQrn5b
 sidebar_position: 7
 keywords: 
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
@@ -38,6 +38,7 @@ public SearchResp search(SearchReq request)
 
 ```java
 search(SearchReq.builder()
+    .databaseName(String databaseName)
     .collectionName(String collectionName)
     .partitionNames(List<String> partitionNames)
     .annsField(String annsField)
@@ -62,13 +63,17 @@ search(SearchReq.builder()
 
 **BUILDER METHODS:**
 
+- `databaseName(String databaseName)`
+
+    The name of an existing database.
+
 - `collectionName(String collectionName)`
 
-    The name of an existing collection.
+    The name of an existing collection in the above-specified database.
 
 - `partitionNames(List<String> partitionNames)`
 
-    A list of partition names.
+    A list of partition names in the above-specified collection.
 
 - `annsField(String annsField)`
 
@@ -116,12 +121,12 @@ search(SearchReq.builder()
        </tr>
        <tr>
          <td><p>FloatVec</p></td>
-         <td><p>FloatVec(List\<Float> data)FloatVec(float[] data)</p></td>
+         <td><p>FloatVec(List\<Float> data)</p><p>FloatVec(float[] data)</p></td>
          <td><p>For DataType.FloatVector type field.</p></td>
        </tr>
        <tr>
          <td><p>BinaryVec</p></td>
-         <td><p>BinaryVec(ByteBuffer data)BinaryVec(byte[] data)</p></td>
+         <td><p>BinaryVec(ByteBuffer data)</p><p>BinaryVec(byte[] data)</p></td>
          <td><p>For DataType.BinaryVector type field.</p></td>
        </tr>
     </table>
@@ -216,6 +221,14 @@ search(SearchReq.builder()
 
     Groups search results by a specified field to ensure diversity and avoid returning multiple results from the same group.
 
+- `groupSize(Integer groupSize)`
+
+    The target number of entities to return within each group in a grouping search. For example, setting `groupSize=2` instructs the system to return up to 2 of the most similar entities (e.g., document passages or vector representations) within each group. Without setting `groupSize`, the system defaults to returning only 1 entity per group.
+
+- `strictGroupSize(Boolean strictGroupSize)`
+
+    This Boolean parameter dictates whether `groupSize` should be strictly enforced. When `strictGroupSize=True`, the system will attempt to fill each group with exactly `groupSize` results, as long as sufficient data exists within each group. If there is an insufficient number of entities in a group, it will return only the available entities, ensuring that groups with adequate data meet the specified `groupSize`.
+
 **RETURN TYPE:**
 
 *SearchResp*
@@ -241,6 +254,21 @@ A **SearchResp object representing specific search results with the specified ou
 ## Example
 
 ```java
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.vector.request.SearchReq;
+import io.milvus.v2.service.vector.request.data.FloatVec;
+import io.milvus.v2.service.vector.response.SearchResp;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Search
 SearchResp searchR = client.search(SearchReq.builder()
         .collectionName(collectionName)
         .data(Collections.singletonList(new FloatVec(new float[]{1.0f, 2.0f})))
@@ -248,6 +276,7 @@ SearchResp searchR = client.search(SearchReq.builder()
         .topK(10)
         .outputFields(Collections.singletonList("*"))
         .build());
+        
 List<List<SearchResp.SearchResult>> searchResults = searchR.getSearchResults();
 System.out.println("\nSearch results:");
 for (List<SearchResp.SearchResult> results : searchResults) {

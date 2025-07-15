@@ -7,7 +7,7 @@ notebook: FALSE
 description: "本文档说明从 Elasticsearch 迁移时，Zilliz Cloud 如何处理数据类型映射、Collection 命名规则及注意事项。 | Cloud"
 type: origin
 token: CJN4wlKiGi1P8Zk4BHKcF04GnLb
-sidebar_position: 3
+sidebar_position: 4
 keywords: 
   - 向量数据库
   - zilliz

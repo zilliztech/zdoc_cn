@@ -7,7 +7,7 @@ notebook: FALSE
 description: "了解 Zilliz Cloud 使用上的相关约束与限制。 | Cloud"
 type: origin
 token: Y3PXwA1Y0i5pZokIw8NcWCzPnxh
-sidebar_position: 12
+sidebar_position: 13
 keywords: 
   - 向量数据库
   - zilliz

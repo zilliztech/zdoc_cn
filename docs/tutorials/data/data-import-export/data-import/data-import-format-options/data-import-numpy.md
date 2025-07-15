@@ -30,7 +30,7 @@ import Admonition from '@theme/Admonition';
 
 建议您[使用 BulkWriter](./use-bulkwriter) 工具将您的原始数据转换为 `.npy` 文件。下图演示了您的原始数据如何映射到 `.npy` 文件中。
 
-![data_import-preparetion_en](/img/data_import-preparetion_en.png)
+![numpy_file_structure_zh](/img/numpy_file_structure_zh.png)
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -41,7 +41,7 @@ import Admonition from '@theme/Admonition';
 <ul>
 <li><strong>是否启用 Dynamic Field</strong></li>
 </ul>
-<p>当目标 Collection 启用了 Dynamic Field 并且您希望导入 Schema 中未定义的字段时，您可以在导入数据中纳入一个名为 <strong>&#36;meta</strong> 的字段，并将所有未在 Schema 中定义的字段以键值对的方式存放到 <strong>&#36;meta</strong> 字段中。</p>
+<p>当目标 Collection 启用了 Dynamic Field 并且您希望导入 Schema 中未定义的字段时，您可以在导入数据中纳入一个名为 <strong>$meta</strong> 的字段，并将所有未在 Schema 中定义的字段以键值对的方式存放到 <strong>$meta</strong> 字段中。</p>
 <ul>
 <li><strong>大小写</strong></li>
 </ul>
@@ -177,11 +177,11 @@ Zilliz Cloud 针对导入 Parquet 格式的文件时设置了如下限制。
    </tr>
    <tr>
      <td><p><strong>一级子目录最大数量</strong></p></td>
-     <td><p>100</p></td>
+     <td><p>100,000</p></td>
    </tr>
    <tr>
      <td><p><strong>每次导入的文件体积限制</strong></p></td>
-     <td><p>Free 集群：最大 512 MB</p><p>Serverless 或 Dedicated 集群</p><ul><li><p>单个文件大小：最大 10 GB</p></li><li><p>总文件大小：最大 100 GB</p></li></ul></td>
+     <td><p>Free 集群：最大 512 MB</p><p>Serverless 或 Dedicated 集群</p><ul><li><p>单个文件大小：最大 10 GB</p></li><li><p>总文件大小：最大 1 TB</p></li></ul></td>
    </tr>
    <tr>
      <td><p><strong>文件存放位置</strong></p></td>

@@ -10,10 +10,10 @@ type: docx
 token: CadTdZ5YGocDymxaIOvcr08pnxd
 sidebar_position: 1
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud
@@ -67,7 +67,19 @@ createPartition(CreatePartitionReq.builder()
 ## Example
 
 ```java
-// create a partition "test_partition" in collection "test"
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.partition.request.CreatePartitionReq;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Create a partition "test_partition" in collection "test"
 CreatePartitionReq createPartitionReq = CreatePartitionReq.builder()
         .collectionName("test")
         .partitionName("test_partition")

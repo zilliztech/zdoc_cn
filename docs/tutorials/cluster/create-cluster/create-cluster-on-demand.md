@@ -228,7 +228,7 @@ curl --request POST \
        </tr>
        <tr>
          <td><p><strong>云服务提供商和地域</strong></p></td>
-         <td><p>集群部署的云服务提供商和地域。</p><p>目前，Zilliz Cloud 支持以下云服务提供商和地域：</p><ul><li><p>阿里云</p><ul><li><p>华东1（杭州）</p></li><li><p>华北2（北京）</p></li><li><p>华南1（深圳）</p></li></ul></li><li><p>腾讯云</p><ul><li><p>华北地区（北京）</p></li><li><p>华东地区（上海）</p></li><li><p>美国东部（弗吉尼亚）</p></li></ul></li><li><p>亚马逊云科技</p><ul><li>中国（宁夏）</li></ul><p>更多详情，请见<a href="./cloud-providers-and-regions">云服务提供商和地域</a>。</p></li></ul></td>
+         <td><p>集群部署的云服务提供商和地域。</p><p>更多详情，请见<a href="./cloud-providers-and-regions">云服务提供商和地域</a>。</p></td>
        </tr>
        <tr>
          <td><p><strong>计费方式</strong></p></td>

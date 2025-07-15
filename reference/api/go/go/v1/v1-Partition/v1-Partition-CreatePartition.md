@@ -1,7 +1,10 @@
 ---
+title: "CreatePartition() | Go | v1"
 slug: /go/v1-Partition-CreatePartition
-beta: FALSE
+sidebar_label: "CreatePartition()"
+beta: NEAR DEPRECATE
 notebook: FALSE
+description: "This method creates a partition in a specific collection. | Go | v1"
 type: origin
 token: URAqwYiwFiv6xdklaAvc3UKfn6b
 sidebar_position: 1
@@ -24,24 +27,24 @@ func (c *GrpcClient) CreatePartition(ctx context.Context, collName string, parti
 
 <table>
    <tr>
-  <th><p>Parameter</p></th>
-  <th><p>Description</p></th>
-  <th><p>Type</p></th>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
    </tr>
    <tr>
-  <td><p><code>ctx</code></p></td>
-  <td><p>Context for the current call to work.</p></td>
-  <td><p><code>context.Context</code></p></td>
+     <td><p><code>ctx</code></p></td>
+     <td><p>Context for the current call to work.</p></td>
+     <td><p><code>context.Context</code></p></td>
    </tr>
    <tr>
-  <td><p><code>collName</code></p></td>
-  <td><p>Name of a collection</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>collName</code></p></td>
+     <td><p>Name of a collection</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
    <tr>
-  <td><p><code>partitionName</code></p></td>
-  <td><p>Name of the partition to create.</p></td>
-  <td><p><code>string</code></p></td>
+     <td><p><code>partitionName</code></p></td>
+     <td><p>Name of the partition to create.</p></td>
+     <td><p><code>string</code></p></td>
    </tr>
 </table>
 

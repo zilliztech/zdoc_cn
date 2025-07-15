@@ -2,7 +2,7 @@
 title: "过滤表达式模板 | Cloud"
 slug: /filtering-templating
 sidebar_label: "过滤表达式模板"
-beta: PUBLIC
+beta: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，具有众多元素的复杂过滤表达式，特别是那些涉及非ASCII字符（如CJK字符）的表达式，会显着影响查询性能。为了解决这个问题，Zilliz Cloud 引入了一种过滤表达式模板机制，旨在通过减少解析复杂表达式所花费的时间来提高效率。本页解释了在搜索、查询和删除操作中使用过滤表达式模板。 | Cloud"
 type: origin

@@ -10,10 +10,10 @@ type: docx
 token: NV3Ud1M9iojhaSxZY4ec8RjgnlP
 sidebar_position: 1
 keywords: 
-  - Annoy vector search
-  - milvus
-  - Zilliz
-  - milvus vector database
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud
@@ -37,10 +37,12 @@ This is an enumeration that provides the following constants.
     Sets the file type to **NumPy** (*.npy*).
 
 - **JSON_RB** = 2
-Sets the file type to **JSON** (*.json*).
+
+    Sets the file type to **JSON** (*.json*).
 
 - **PARQUET** = 3
-Sets the file type to [Parquet](https://parquet.apache.org/) (*.parquet*).
+
+    Sets the file type to [Parquet](https://parquet.apache.org/) (*.parquet*).
 
 - **CSV** = 4
 

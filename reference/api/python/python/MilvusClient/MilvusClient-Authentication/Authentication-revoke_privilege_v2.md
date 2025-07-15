@@ -10,10 +10,10 @@ type: docx
 token: WazKdTlcOoYoBWxIJEEc7gFMnfC
 sidebar_position: 18
 keywords: 
+  - k nearest neighbor algorithm
   - ANNS
   - Vector search
   - knn algorithm
-  - HNSW
   - zilliz
   - zilliz cloud
   - cloud

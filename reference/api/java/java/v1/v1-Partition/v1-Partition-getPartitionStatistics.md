@@ -100,7 +100,7 @@ Methods of `GetPartStatResponseWrapper`:
    </tr>
    <tr>
      <td><p>getRowCount()</p></td>
-     <td><p>Get the row count of a partition.Throw NumberFormatException if the row count string is illegal.</p></td>
+     <td><p>Get the row count of a partition.</p><p>Throw NumberFormatException if the row count string is illegal.</p></td>
      <td><p>long</p></td>
    </tr>
 </table>

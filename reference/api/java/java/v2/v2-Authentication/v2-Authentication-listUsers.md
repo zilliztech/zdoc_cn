@@ -8,12 +8,12 @@ notebook: false
 description: "This operation lists the names of all existing users. | Java | v2"
 type: docx
 token: EfM3drSXlo4Yzyxq2GpcmvoHnTm
-sidebar_position: 10
+sidebar_position: 15
 keywords: 
-  - vector database open source
-  - open source vector db
-  - vector database example
-  - rag vector database
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud
@@ -57,6 +57,18 @@ A list of strings containing the user names.
 ## Example
 
 ```java
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. List users
 List<String> resp = client.listUsers();
 ```
 

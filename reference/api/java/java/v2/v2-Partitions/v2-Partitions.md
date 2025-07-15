@@ -6,13 +6,13 @@ notebook: false
 description: "Methods related to the manipulation of the partitions in a collection. | Java | v2"
 type: folder
 token: YkL6fqkaNlgeWXdNaWLcltkZnRc
-sidebar_position: 7
+sidebar_position: 9
 sidebar_label: "Partitions"
 keywords: 
-  - Audio search
-  - what is semantic search
-  - Embedding model
-  - image similarity search
+  - vector database
+  - IVF
+  - knn
+  - Image Search
   - zilliz
   - zilliz cloud
   - cloud

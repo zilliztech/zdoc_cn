@@ -7,7 +7,7 @@ notebook: FALSE
 description: "This method grants a privilege | Go | v2"
 type: origin
 token: WiPMw01uRisBBqknRyAcp7fhnMb
-sidebar_position: 9
+sidebar_position: 11
 displayed_sidebar: goSidebar
 
 ---
@@ -80,7 +80,7 @@ func NewGrantPrivilegeOption(roleName, objectType, privilegeName, objectName str
    </tr>
    <tr>
      <td><p><code>privilegeName</code></p></td>
-     <td><p>Name of the privilege to assign. For details, refer to the <strong>Privilege name</strong> column in the table on page Users and Roles.</p></td>
+     <td><p>Name of the privilege to assign.</p><p>For details, refer to the <strong>Privilege name</strong> column in the table on page Users and Roles.</p></td>
      <td><p><code>string</code></p></td>
    </tr>
    <tr>

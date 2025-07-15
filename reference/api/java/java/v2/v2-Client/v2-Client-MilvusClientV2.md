@@ -7,13 +7,13 @@ beta: false
 notebook: false
 description: "A MilvusClientV2 instance represents a Java client that connects to a specific Zilliz Cloud cluster. | Java | v2"
 type: docx
-token: Y4qvdMEeioKXShxxNmncvnJ2nJf
+token: IeOWd0yR2onm5Ex6XyqcrGjKnpS
 sidebar_position: 1
 keywords: 
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
-  - Video search
+  - Machine Learning
+  - RAG
+  - NLP
+  - Neural Network
   - zilliz
   - zilliz cloud
   - cloud
@@ -84,7 +84,7 @@ ConnectConfig.builder()
 
     - An [API key](/docs/manage-api-keys) with sufficient permissions, or
 
-    - A pair of [username and password ](/docs/cluster-credentials-console)used to access the target cluster, joined by a colon (:). For example, you can set this to `username:p@ssw0rd`.
+    - A pair of [username and password ](/docs/cluster-credentials)used to access the target cluster, joined by a colon (:). For example, you can set this to `username:p@ssw0rd`.
 
 - `username(String userName)`
 
@@ -148,6 +148,10 @@ ConnectConfig.builder()
 
     The expected name of the server.
 
+- `proxyAddress(String proxyAddress)`
+
+    The proxy server's address through which the connection is to be established.
+
 - `secure(boolean enable)`
 
     Whether to use TLS for the connection.
@@ -158,11 +162,37 @@ ConnectConfig.builder()
 
     The idle timeout for a connection.
 
+**PUBLIC METHODS:**
+
+- `getHost()`
+
+    Returns the hostname of the currently connected Milvus instance.
+
+- `getPort()`
+
+    Returns the port number at which the currently connected Milvus instance.
+
+- `getAuthorization()`
+
+    Returns the credentials used to set up the current connection.
+
+- `getDbName()`
+
+    Returns the name of the database currently in use.
+
+- `isSecure()`
+
+    Returns whether the current connection is over TLS.
+
+- `getProxyAddress()`
+
+    Returns the proxy server's address specified in **ConnectConfig**.
+
 ## Examples
 
 ```java
-import io.milvus.v2.client.ConnectConfig
-import io.milvus.v2.client.MilvusClientV2
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
 
 ConnectConfig connectConfig = ConnectConfig.builder()
         .uri("https://in01-******.aws-us-west-2.vectordb.zillizcloud.com:19531")

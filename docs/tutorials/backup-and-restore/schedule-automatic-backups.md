@@ -4,7 +4,7 @@ slug: /schedule-automatic-backups
 sidebar_label: "创建自动备份"
 beta: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 允许您为集群创建自动备份，确保意外发生时可以进行数据恢复。定期备份可以防止数据丢失，您也可以通过备份轻松将数据恢复到特定时间点。 | Cloud"
+description: "Zilliz Cloud 支持为集群开启自动备份功能，帮助您在发生异常问题时及时恢复数据。自动备份适用于整个集群，不支持单独为某个 Collection 自动创建备份。 | Cloud"
 type: origin
 token: TXyTwrfxCiStfek4hc7c2nKwnJc
 sidebar_position: 2
@@ -19,102 +19,167 @@ keywords:
 ---
 
 import Admonition from '@theme/Admonition';
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+
 
 # 创建自动备份
 
-Zilliz Cloud 允许您为集群创建自动备份，确保意外发生时可以进行数据恢复。定期备份可以防止数据丢失，您也可以通过备份轻松将数据恢复到特定时间点。
+Zilliz Cloud 支持为集群开启**自动备份**功能，帮助您在发生异常问题时及时恢复数据。自动备份适用于整个集群，不支持单独为某个 Collection 自动创建备份。
 
-## 前提条件{#before-you-start}
+创建备份会产生额外[费用](./understand-cost#backup-costs)，按备份存储所在的云地域计费。所有备份文件均存储在与源集群相同的云地域。例如，部署在`阿里云华东1（杭州）`的集群，其备份也将保存在`阿里云华东1（杭州）`。
 
-开始前，请确保：
-
-- 您是目标组织中的[组织管理员](./organization-users)或[项目管理员](./project-users)。
-
-- 您的集群为 Dedicated 版本。
-
-## 创建自动备份{#create-backup-schedule}
-
-<Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"Bash","value":"Bash"}]}>
-
-<TabItem value="Cloud Console">
-
-如需创建自动备份，请完成以下步骤：
-
-1. 进入目标集群的**备份**标签页，单击**自动备份**。
-
-1. 在**编辑自动备份设置**对话框中，开启**自动备份**。
-
-1. 设置**备份频率**、**备份保留天数**和**时间段 (UTC)**。
-
-![create-snapshot-schedule](/img/create-snapshot-schedule.png)
+本文将介绍如何在 Zilliz Cloud 中设置自动备份。如需按需手动创建备份，请参见[创建备份](./create-snapshot)。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>更多备份费用详情，请参考 <a href="./understand-cost">了解费用</a>。</p>
+<p>备份与恢复功能仅适用于 Dedicated 集群。</p>
 
 </Admonition>
 
-</TabItem>
-<TabItem value="Bash">
+### 限制说明{#limits}
 
-您可以设置备份策略，以启用定期自动备份。
+- **访问控制**：仅项目管理员、组织管理员或拥有备份权限的自定义角色可执行备份操作。
 
-以下代码创建了一个备份策略，将在特定的四个工作日（星期一、星期二、星期三和星期五）执行备份。有关参数的详细信息，请参考[创建备份策略](/reference/restful/set-backup-policy-v2)。
+- **不包含在备份中的内容**：
+
+    - Collection 的 TTL 设置
+
+    - Collection 和字段级别的 `mmap` 配置
+
+    - 默认用户 `db_admin` 的密码（恢复时将重新生成新密码）
+
+- **集群 Shard 设置**：集群的 Shard 信息会被备份，但如果在恢复集群过程中，您选择了减少集群 CU 规格，Shard 数量可能会根据 CU 规格有所调整，详见[使用限制](./limits#shards)。
+
+- **备份任务限制**：
+
+    - 自动备份执行期间无法发起手动备份。
+
+    - 若当前有手动备份正在进行，自动备份仍将按计划执行。
+
+## 开启自动备份{#enable-automatic-backup}
+
+自动备份为集群级别配置，默认处于关闭状态。由于备份会占用存储资源并产生费用，您可以根据实际需求决定是否开启自动备份以及自动备份的时间和频率。自动备份功能开启后，系统会立刻创建一个备份文件以实现数据保护。后续的备份将根据您设置的频率和时间自动创建。
+
+### 通过 Web 控制台{#via-web-console}
+
+在控制台开启自动备份后，Zilliz Cloud 默认配置如下：
+
+- **备份频率**：每天
+
+- **备份时间段**：每天上午 8 点至 10 点之间 (UTC +08:00)
+
+- **备份保留天数**：7 天
+
+您可以按需调整上述配置。
+
+以下 Demo 展示如何开启并配置自动备份：
+
+### 通过 RESTful API{#via-restful-api}
+
+以下示例展示如何为指定集群开启自动备份。更多 API 参数细节，请参见[创建备份策略](/reference/restful/set-backup-policy-v2)。
 
 ```bash
 curl --request POST \
-     --url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/backups/policy" \
-     --header "Authorization: Bearer ${TOKEN}" \
-     --header "Accept: application/json" \
-     --header "Content-type: application/json" \
-     --data-raw '{
-        "frequency": "1,2,3,5",
-        "startTime": "02:00-04:00",
-        "retentionDays": 7,
-        "enabled": true
-      }'
+--url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/backups/policy" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+-d '{
+    "frequency": "1,2,3,5",
+    "startTime": "02:00-04:00",
+    "retentionDays": 7,
+    "enabled": true
+}'
 ```
 
-示例回显：
+示例返回结果如下。开启自动备份后，系统将立即创建一个备份任务，您可在项目下的[任务中心](./job-center)查看进度：
 
 ```bash
 {
-  "code": 0,
-  "data": {
-    "clusterId": "in01-3e5ad8adc38xxxx",
-    "status": "ENABLED"
-  }
+    "code": 0,
+    "data": {
+        "clusterId": "inxx-xxxxxxxxxxxxxxx",
+        "status": "ENABLED"
+    }
 }
 ```
 
-</TabItem>
-</Tabs>
+## 查看自动备份设置{#check-backup-schedule}
 
-## 调整自动备份设置{#adjust-automated-backup-schedule}
+开启自动备份后，您可以查看当前的自动备份设置。
 
-您可以为集群调整自动备份设置。默认情况下自动备份处于关闭状态。由于创建备份会产生[费用](./understand-cost)，您可以自行决定何时以及如何创建自动备份。
+### 通过 Web 控制台{#via-web-console}
 
-自动备份开启后，Zilliz Cloud 默认每日上午 8 点到 10 点之间自动为您的集群创建备份，备份将保留 7 天。您可以按需更改设置。
+以下 Demo 展示如何在 Zilliz Cloud 控制台中查看自动备份设置：
 
-<Admonition type="info" icon="📘" title="说明">
+### 通过 RESTful API{#via-restful-api}
 
-<p>自动创建的备份最多可保留 30 天。</p>
+以下示例展示如何查询集群的自动备份策略。更多 API 参数细节，请参见[获取备份策略](/reference/restful/get-backup-policy-v2)。
 
-</Admonition>
+```bash
+curl --request GET \
+--url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/backups/policy" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json"
+```
 
-## 删除自动备份{#delete-automatically-created-backup-file}
+示例返回结果如下：
 
-集群被删除的同时，所有为该集群自动创建的备份也将一同被删除。此外，自动创建的备份也将在超过保留期限时被自动删除。如需手动删除自动创建的备份，请参阅[删除备份文件](./delete-snapshot)。
+```bash
+{
+    "code": 0,
+    "data": {
+        "clusterId": "inxx-xxxxxxxxxxxxxxx",
+        "status": "ENABLED",
+        "startTime": "02:00-04:00",
+        "frequency": "1,2,3,5",
+        "retentionDays": 7
+    }
+}
+```
 
-## 相关文档{#related-topics}
+## 关闭自动备份{#disable-automatic-backup}
 
-- [创建备份快照](./create-snapshot)
+您也可以为集群关闭自动备份。
 
-- [查看备份快照](./view-snapshot-details)
+### 通过 Web 控制台{#via-web-console}
 
-- [恢复备份](./restore-from-snapshot)
+以下演示展示如何通过控制台关闭自动备份：
 
-- [删除备份快照](./delete-snapshot)
+### 通过 RESTful API{#via-restful-api}
 
+以下示例展示如何关闭指定集群的自动备份。更多 API 参数细节，请参见[创建备份策略](/reference/restful/set-backup-policy-v2)。
+
+```bash
+curl --request POST \
+--url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/backups/policy" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+-d '{
+    "enabled": false
+}'
+```
+
+示例返回结果如下：
+
+```bash
+{
+    "code": 0,
+    "data": {
+        "clusterId": "inxx-xxxxxxxxxxxxxxx",
+        "status": "DISABLED"
+    }
+}
+```
+
+## 常见问题{#faqs}
+
+**备份任务一般需要多久？**
+备份所需时间取决于数据大小。备份 700 MB 数据大约需要 1 秒。如果集中包含超过 1,000 个 Collection，备份所需时间可能略有延长。
+
+**备份过程中可以执行 DDL 操作吗？**
+建议在备份任务进行时避免频繁执行 DDL 操作（如创建或删除 Collection），否则可能导致备份数据不一致。
+
+**自动备份的文件会保留多久？**
+ 默认保留时间为 7 天，您可以根据需要调整，最长可设置为 30 天。
+
+**删除集群后，自动创建的备份文件会被删除吗？**
+会的。删除集群时，所有与该集群的自动备份文件也会一并被删除。

@@ -9,10 +9,10 @@ token: JfB5fh16rl1R1qdNVgec1Kdongc
 sidebar_position: 8
 sidebar_label: "Partitions"
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
   - zilliz
   - zilliz cloud
   - cloud

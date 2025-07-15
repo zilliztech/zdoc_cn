@@ -2,7 +2,7 @@
 title: "使用 mmap | Cloud"
 slug: /use-mmap
 sidebar_label: "使用 mmap"
-beta: PUBLIC
+beta: FALSE
 notebook: FALSE
 description: "Mmap 允许在不将磁盘上的文件加载到内存的情况下通过内存访问这些文件。通过配置 mmap，Zilliz Cloud 可以根据访问频次的不同将索引和数据分别存放到内存或磁盘上，不仅优化了数据加载行为，扩大了 Collection 的容量，也不会给搜索性能带来负面影响。本文将帮助您理解 Zilliz Cloud 如何利用 mmap 实现快速高效的数据存储和检索能力及使用该能力需要注意的相关事项。 | Cloud"
 type: origin
@@ -28,9 +28,11 @@ Mmap 允许在不将磁盘上的文件加载到内存的情况下通过内存访
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>该特性当前处于<strong>公测阶段</strong>。如果您在使用过程中遇到任何问题，可以联系<a href="https://zilliz.com.cn/contact-sales">Zilliz Cloud 支持</a>.</p>
+<p>在不同订阅计划的源集群和目标集群之间迁移或还原数据时，源 Collection 的 mmap 设置不会迁移到目标集群。请手动重新配置目标集群上的 mmap 设置。</p>
 
 </Admonition>
+
+Zilliz Cloud 支持通过代码或通过 Web 控制台使用 mmap。本文着重介绍如何通过代码设置 mmap 策略，如需了解 Web 控制台操作，请参考[管理 Collection (控制台)](./manage-collections-console#mmap)。
 
 ## 概述{#overview}
 
@@ -51,42 +53,45 @@ Zilliz Cloud 是一款内存密集型的数据库系统。可用内存的大小�
 <table>
    <tr>
      <th rowspan="2"><p>Mmap 对象</p></th>
-     <th colspan="2"><p>Dedicated 集群</p></th>
-     <th rowspan="2"><p>Free &amp; Serverless 集群</p></th>
+     <th colspan="3"><p>Dedicated 集群</p></th>
+     <th rowspan="2"><p>Free 集群\</br></p><p>Serverless 集群</p></th>
    </tr>
    <tr>
      <td><p>性能型 CU</p></td>
      <td><p>容量型 CU</p></td>
+     <td><p>存储扩展型 CU</p></td>
    </tr>
    <tr>
      <td><p>标量字段原始数据</p></td>
      <td><p>默认关闭，可修改</p></td>
      <td><p>默认开启，可修改</p></td>
-     <td><p>默认开启，不可修改</p></td>
+     <td colspan="2"><p>默认开启，不可修改</p></td>
    </tr>
    <tr>
      <td><p>标量字段索引</p></td>
      <td><p>默认关闭，可修改</p></td>
      <td><p>默认开启，可修改</p></td>
-     <td><p>默认开启，不可修改</p></td>
+     <td colspan="2"><p>默认开启，不可修改</p></td>
    </tr>
    <tr>
      <td><p>向量字段原始数据</p></td>
      <td><p>默认开启，可修改</p></td>
      <td><p>默认开启，可修改</p></td>
-     <td><p>默认开启，不可修改</p></td>
+     <td colspan="2"><p>默认开启，不可修改</p></td>
    </tr>
    <tr>
      <td><p>向量字段索引</p></td>
      <td><p>默认关闭，不可修改</p></td>
      <td><p>默认关闭，不可修改</p></td>
-     <td><p>默认开启，不可修改</p></td>
+     <td colspan="2"><p>默认开启，不可修改</p></td>
    </tr>
 </table>
 
 对于**使用性能型 CU 的 Dedicated 集群**而言， Zilliz Cloud 只在向量字段原始数据上启用了 mmap，并在加载 Collection 时将标量字段的原始数据及所有字段的索引都加载到内存。建议您保持全局配置，确保在搜索和查询过程中元数据过滤和检索的性能。另外，您可以考虑为不参与元数据过滤的标量字段开启 mmap，以减少内存开销，扩大 Collection 容量。
 
 对于**使用容量型 CU 的 Dedicated 集群**而言，Zilliz Cloud 只在向量字段索引上关闭了 mmap 以保证索引性能，并在加载 Collection 时将标量字段索引和所有字段的原始数据都通过 mmap 的方式转存在磁盘上，从而保证了 Collection 容量的最大化。另外，您可以考虑在参与元数据过滤的标量字段和在搜索和查询请求的输出字段列表中引用的原始数据量过大的标量字段上关闭 mmap，以提升搜索和查询的响应速度，减少网络抖动，提升查询性能。
+
+在 **Free** 和 **Serverless** 集群以及使**用存储扩展型 CU 的 Dedicated 集群**而言，Zilliz Cloud 默认使用 mmap 来处理所有字段的原始数据及索引文件，以最大化利用系统缓存能力，提升热数据查询性能，降低冷数据查询成本。
 
 ## 在 Collection 中设置 mmap{#collection-specific-mmap-settings}
 

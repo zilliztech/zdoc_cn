@@ -85,7 +85,9 @@ client = Minio(
     # 腾讯云请使用 "cos.ap-beijing-1.myqcloud.com"
     access_key=YOUR_ACCESS_KEY,
     secret_key=YOUR_SECRET_KEY,
-    secure=True
+    secure=True,
+    region='cn-hangzhou'
+    # 腾讯云请使用 region='ap-xxx'
 )
 
 objects = client.list_objects(
@@ -132,6 +134,7 @@ MinioClient minioClient = MinioClient.builder()
         .withEndpoint("oss-cn-hangzhou.aliyuncs.com") 
         // 腾讯云请使用 "cos.ap-beijing-1.myqcloud.com"
         .credentials(ACCESS_KEY, SECRET_KEY)
+        .region('cn-hangzhou') // 腾讯云请使用 ap-xxx
         .build();
         
 Iterable<Result<Item>> results = minioClient.listObjects(

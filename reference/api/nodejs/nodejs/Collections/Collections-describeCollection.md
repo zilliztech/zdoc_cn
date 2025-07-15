@@ -10,10 +10,10 @@ type: docx
 token: TjqHdZqO1oSwwYxuny2cchWzn6S
 sidebar_position: 9
 keywords: 
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
   - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
   - zilliz
   - zilliz cloud
   - cloud

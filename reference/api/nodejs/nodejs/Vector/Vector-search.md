@@ -10,10 +10,10 @@ type: docx
 token: VNATdAYSkojgVsx5MJKcPPmMnl7
 sidebar_position: 7
 keywords: 
-  - vector database
-  - IVF
-  - knn
-  - Image Search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
   - zilliz
   - zilliz cloud
   - cloud
@@ -51,6 +51,7 @@ milvusClient.search({
    group_by_field?: string,
    group_size?: number,
    strict_group_size?: boolean,
+   hints?: string,
    timeout?: number,
  })
 ```
@@ -159,6 +160,8 @@ milvusClient.search({
 
     Groups search results by a specified field to ensure diversity and avoid returning multiple results from the same group.
 
+- **hints** (*string*) -
+
 - **timeout** (*number*) -
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
@@ -169,24 +172,13 @@ This method returns a promise that resolves to a **SearchResults** object.
 
 ```javascript
 {
-    data: list[string],
-    status: object
+    status: object,
+    results: list[string],
+    recalls: list[number]
 }
 ```
 
 **PARAMETERS:**
-
-- **results** (*object*) -
-
-    - **id** (*string*) -
-
-        The ID of the search result
-
-    - **score**(*number*) -
-
-        The similarity score of the search result.
-
-    - Plus output fields and their values.
 
 - **status** (*object*) -
 
@@ -201,6 +193,24 @@ This method returns a promise that resolves to a **SearchResults** object.
     - **reason** (*string*) - 
 
         The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
+
+- **results** (*list[object]*) -
+
+    Each result object has the following keys:
+
+    - **id** (*string*) -
+
+        The ID of the search result
+
+    - **score**(*number*) -
+
+        The similarity score of the search result.
+
+    - Plus output fields and their values.
+
+- **recalls** (*list[number]*) -
+
+    Each number indicates the recall rate of a search against a query vector.
 
 ## Example
 

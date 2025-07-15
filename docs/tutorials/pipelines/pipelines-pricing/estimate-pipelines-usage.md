@@ -90,5 +90,5 @@ Deletion Pipeline 通常不涉及将文本作为 Token 处理。
 
 - [摄取、搜索和删除数据](./pipelines-ingest-search-delete-data)
 
-- [使用限制](./limits#pipelines)
+- [使用限制](./limits)
 

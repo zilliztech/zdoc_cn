@@ -32,7 +32,7 @@ import Admonition from '@theme/Admonition';
 
 <p>索引是否自动加载取决于你选择的 Collection 创建方式。Collection 和索引在以下情况中会自动加载：</p>
 <ul>
-<li><p><a href="./manage-collections-console#create-collection">通过 Web 控制台创建 Collection</a></p></li>
+<li><p><a href="./manage-collections-console">通过 Web 控制台创建 Collection</a></p></li>
 <li><p><a href="/reference/create-collection">通过 RESTful API 创建 Collection</a></p></li>
 <li><p><a href="./quick-setup-collections">通过 SDK 快速创建 Collection</a></p></li>
 <li><p><a href="./manage-collections-sdks">通过 SDK 定制化创建 Collection 并设置索引参数</a></p></li>
