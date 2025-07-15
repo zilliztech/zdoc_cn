@@ -28,7 +28,7 @@ import Admonition from '@theme/Admonition';
 
 本次发布后创建的所有集群均兼容 **Milvus v2.5.x**。同时，所有 Milvus v2.5.x 相关特性在 Zilliz Cloud 上均已全面可用。
 
-关于各项功能的可用性，可以参考[当前功能支持情况](./undefined#)。
+关于各项功能的可用性，可以参考[当前功能支持情况](./feature-availability#)。
 
 ## 通过 Merge Data API 实现 Schema 演进 | PRIVATE{#schema-evolution-via-merge-data-api}
 
@@ -58,9 +58,9 @@ Stage 提供了一个托管式、云原生的数据暂存区域，专为处理�
 
 - 将 Stage 作为迁移（Migration）与导入（Import）服务共享的数据中转层，简化数据接入流程：
 
-    - **迁移（Migration）：**只需一步即可将本地 Milvus 环境中的数据无缝迁移到 Zilliz Cloud。此前，用户需要手动创建备份、上传文件到 S3 并分别触发导入任务。有了 Stage，整个流程被统一化、加速且更少出错。详情请参阅[通过 Stage 从 Milvus 迁移至 Zilliz Cloud](./via-stage)。
+    - **迁移（Migration）**：只需一步即可将本地 Milvus 环境中的数据无缝迁移到 Zilliz Cloud。此前，用户需要手动创建备份、上传文件到 S3 并分别触发导入任务。有了 Stage，整个流程被统一化、加速且更少出错。详情请参阅[通过 Stage 从 Milvus 迁移至 Zilliz Cloud](./via-stage)。
 
-    - **导入（Import）：**导入任务现在支持将 Stage 作为暂存后端，减少了对对象存储的依赖，避免了 token 过期问题，使那些无法直接访问云存储的用户也能轻松将数据导入 Zilliz Cloud。详情请参阅[创建导入任务](/reference/restful/create-import-jobs-v2)并查看**请求体**中的**使用 Stage** 选项。
+    - **导入（Import）**：导入任务现在支持将 Stage 作为暂存后端，减少了对对象存储的依赖，避免了 token 过期问题，使那些无法直接访问云存储的用户也能轻松将数据导入 Zilliz Cloud。详情请参阅[创建导入任务](/reference/restful/create-import-jobs-v2)并查看**请求体**中的**使用 Stage** 选项。
 
 未来，Stage 将进一步集成备份（Backup）、导入（Import）及 ETL 服务，扩展对非结构化数据处理、数据共享以及管道化工作负载的支持，成为 Zilliz Cloud 中数据流动的核心基础设施。
 
@@ -74,9 +74,9 @@ Zilliz Cloud 现在支持集群级别的定时扩缩容 ，让您能够根据可
 
 - **基于时间计划的 CU 与 Replicas 自动扩缩容** ：现在您可以定义特定的时间计划，以自动调整您的 CU 和 Replica 数量。在工作时段轻松扩展资源以应对流量高峰，在夜间或周末等低峰期自动缩减资源，从而在无需人工干预的情况下优化成本。
 
-- **更强的可视性与控制能力 ：**此次更新通过引入扩缩容计划的可视化展示 ，让您的自动扩缩配置更加透明清晰。
+- **更强的可视性与控制能力** ：此次更新通过引入扩缩容计划的可视化展示 ，让您的自动扩缩配置更加透明清晰。
 
-- **主动审计功能 ：**我们提供透明的电子邮件通知系统和审计日志，确保您对资源交付和成本支出更加安心。
+- **主动审计功能** ：我们提供透明的电子邮件通知系统和审计日志，确保您对资源交付和成本支出更加安心。
 
 更多内容，可以参考[定时扩缩容](./scale-cluster)。
 
