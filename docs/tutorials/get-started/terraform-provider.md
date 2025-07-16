@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz 提供完全托管的 Milvus 服务，旨在简化向量搜索应用的部署与扩展，在安全性方面进行了优化设计，无需你自行构建和维护复杂的基础设施——无论是 Zilliz 提供的云环境，还是你自己的本地环境。 | Cloud"
 type: origin
 token: NE1qw4ke2ii1XfkMikrckk5Rnpb
-sidebar_position: 0
+sidebar_position: 11
 keywords: 
   - 向量数据库
   - zilliz

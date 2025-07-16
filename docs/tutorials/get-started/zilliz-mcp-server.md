@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz Cloud 提供了 Zilliz MCP Server，使 AI 智能体能够通过标准化的模型上下文协议（Model Context Protocol，MCP）无缝地与 Zilliz Cloud 进行交互。本页面将指导你如何在本地设置 Zilliz MCP 服务器，并将其与你喜爱的 AI 智能体配合使用。 | Cloud"
 type: origin
 token: BUaEwl1UkiSVtLkKMUocinNMntT
-sidebar_position: 0
+sidebar_position: 10
 keywords: 
   - 向量数据库
   - zilliz
