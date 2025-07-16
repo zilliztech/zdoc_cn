@@ -601,28 +601,16 @@ const config = {
           },
           {
             type: 'dropdown',
-            label: '资源中心',
+            label: '版本文档',
             position: 'left',
             items: [
               {
-                label: '博客',
-                href: 'https://zilliz.com.cn/blog',
+                label: '功能支持情况',
+                href: '/docs/feature-availability',
               },
               {
-                label: '白皮书',
-                href: 'https://zilliz.com.cn/resources?tag=whitepapers',
-              },
-              {
-                label: '线上直播',
-                href: 'https://zilliz.com.cn/resources?tag=live',
-              },
-              {
-                label: "活动",
-                href: "https://zilliz.com.cn/event"
-              },
-              {
-                label: "三方集成 Notebooks",
-                href: "https://zilliz.com/learn/milvus-notebooks"
+                label: '版本说明书',
+                href: '/docs/release-notes',
               }
             ],
           },

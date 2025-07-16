@@ -3059,9 +3059,10 @@
 								"clusterId": "in00-xxxxxxxxxxxxxxx",
 								"dbName": "my_database",
 								"collectionName": "my_collection",
-								"targetDbName": "my_database",
-								"targetCollectionName": "my_merged_collection",
-								"mergeData": {
+								"destDbName": "my_database",
+								"destCollectionName": "my_merged_collection",
+								"dataSource": {
+									"type": "s3",
 									"dataPath": "s3://my-bucket/my_data.parquet",
 									"regionId": "us-west-2",
 									"credential": {
@@ -3069,8 +3070,8 @@
 										"secretKey": "my-secret-key"
 									}
 								},
-								"mergeKey": "id",
-								"mergeFieldSchema": [
+								"mergeField": "id",
+								"newFields": [
 									{
 										"name": "my_field1",
 										"dataType": "VARCHAR",
