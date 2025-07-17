@@ -36296,6 +36296,9 @@
 						"description": "本操作可以在不重建 Collection 的情况下添加字段。"
 					}
 				},
+				"x-include-target": [
+					"milvus"
+				],
 				"tags": [
 					"Collection Operations (V2)"
 				],
