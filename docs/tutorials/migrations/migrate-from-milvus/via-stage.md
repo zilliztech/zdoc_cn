@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz Cloud 提供了一个内置的 Stage 功能，用于在从 Milvus 迁移数据时临时存储备份数据。借助内置 Stage，用户可以更轻松地完成数据迁移，无需过多关注底层细节，从而显著提升迁移效率与易用性。 | Cloud"
 type: origin
 token: ZP6tw8jcQipDKrkY93DcYCetnJb
-sidebar_position: 0
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz
