@@ -246,7 +246,7 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
 
 根据您的集群使用的 CU 数量的不同，每 CU 支持创建最多 1,024 个 Collection 或 4,096 个 Partition。其中，每个 Collection 最多可创建 1,024 个 Partition。您可以参考如下公式计算您的集群中的 Collection 和 Partition 的数量上限。
 
-![ITn3wC8InhchVGbcz4QciSXqnag](/img/ITn3wC8InhchVGbcz4QciSXqnag.png)
+![RBu3wbDwihqeFgbFZwQcIpXNnUf](/img/RBu3wbDwihqeFgbFZwQcIpXNnUf.png)
 
 - 集群中 Collection 的数量上限应该在 1,024 和集群的 CU 数量之积与 16,384 间取最小值。
 
