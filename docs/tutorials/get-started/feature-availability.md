@@ -91,7 +91,7 @@ Zilliz Cloud 文档中，每个功能会以标签形式标注其当前支持阶�
 
 ### 公测版
 
-- [JSON 索引](./use-json-fields#index-a-json-field)
+- [JSON 索引](./use-json-fields#index-values-inside-the-json-field)
 
 <Admonition type="info" icon="📘" title="说明">
 

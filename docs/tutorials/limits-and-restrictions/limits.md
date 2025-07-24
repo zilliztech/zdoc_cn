@@ -190,13 +190,19 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
    </tr>
    <tr>
      <td><p>Serverless</p></td>
-     <td><p>每个 Partition 可容纳 1 亿个 768 维向量。</p></td>
+     <td><p>Zilliz Cloud Serverless 集群无硬性容量限制。</p></td>
    </tr>
    <tr>
      <td><p>Dedicated</p></td>
-     <td><p>Zilliz Cloud Dedicated 集群无硬性容量限制。以下为不同 CU 类型的 Dedicated 集群容量参考。如需更大容量，您可以扩容集群。详情请参考<a href="./scale-cluster">集群扩缩容</a>。</p><ul><li><p>性能型 CU：每个 CU 可容纳 150 万个768 维向量。</p></li><li><p>容量型 CU：每个 CU 可容纳 500 万个768 维向量。</p></li><li><p>存储扩展型 CU：每个 CU 可容纳 2000 万个768 维向量</p></li></ul></td>
+     <td><p>Zilliz Cloud Dedicated 集群无硬性容量限制。</p></td>
    </tr>
 </table>
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>Dedicated 集群的容量上限会根据您选择的 CU 类型与 CU 大小的不同而发生变化。如果容量不足，可以尝试调整 CU 类型和大小。具体操作步骤，可以参考<a href="./scale-cluster">集群扩缩容</a>。</p>
+
+</Admonition>
 
 ## Database{#databases}
 
@@ -548,17 +554,17 @@ Shard 的数量上限取决于集群版本和 CU 规格。
    <tr>
      <td><p>JSON</p></td>
      <td><p>1 GB</p></td>
-     <td><p>Free: 512 MB</p><p>Serverless &amp; Dedicated: 1 TB</p></td>
+     <td><p>Free: 1 GB</p><p>Serverless &amp; Dedicated: 单次导入总文件大小最大为 1 TB，单个文件大小最大为 1 GB，单次最多导入 1,000 个文件。</p></td>
    </tr>
    <tr>
      <td><p>Numpy</p></td>
      <td><p>暂不支持</p></td>
-     <td><p>Free: 512 MB</p><p>Serverless &amp; Dedicated: 文件夹的最大大小为 1 TB，每个子文件夹的最大大小为 10 GB。</p></td>
+     <td><p>Free: 1 GB</p><p>Serverless &amp; Dedicated: 单次导入总文件大小最大为 1 TB，单个子文件夹大小最大为 1 GB，单次最多导入 1,000 个子文件夹。</p></td>
    </tr>
    <tr>
      <td><p>Parquet</p></td>
-     <td><p>暂不支持</p></td>
-     <td><p>Free: 512 MB</p><p>Serverless &amp; Dedicated: 1 TB</p></td>
+     <td><p>1 GB</p></td>
+     <td><p>Free: 1 GB</p><p>Serverless &amp; Dedicated: 单次导入总文件大小最大为 1 TB，单个文件大小最大为 1 GB，单次最多导入 1,000 个文件。</p></td>
    </tr>
 </table>
 
