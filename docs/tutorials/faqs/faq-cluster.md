@@ -24,7 +24,6 @@ sidebar_position: 2
 - [为什么无法连接集群?](#why-cant-i-connect-to-the-cluster-after-the-cluster-is-created)
 - [如何解决使用 Node.js SDK 无法连接 Zilliz Cloud 的问题?](#what-can-i-do-if-i-cannot-connect-to-zilliz-cloud-with-nodejs-sdk)
 - [集群挂起后，是否还会收取费用？](#will-i-be-charged-if-i-suspend-my-cluster)
-- [如何获取集群 URI？](#how-to-obtain-a-cluster-uri)
 
 ## 问答
 
@@ -94,7 +93,3 @@ sidebar_position: 2
 ### 集群挂起后，是否还会收取费用？ \{#will-i-be-charged-if-i-suspend-my-cluster}
 
 集群挂起后，我们仅收取存储费用，不会收取计算费用。更多详情，请阅读 [Zilliz Cloud 定价](https://zilliz.com.cn/pricing)。
-
-### 如何获取集群 URI？ \{#how-to-obtain-a-cluster-uri}
-
-在 Zilliz Cloud 中，集群 URI 是指集群的 Endpoint，可用于连接集群。您可以通过 Zilliz Cloud Web 控制台获取集群 URI。详情请见[连接集群](./connect-to-cluster#connect-to-a-cluster)。
