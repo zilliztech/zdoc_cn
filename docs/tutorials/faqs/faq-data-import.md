@@ -17,7 +17,7 @@ sidebar_position: 4
 
 ## 目录
 
-- [从对象存储服务导入数据时，我能否使用 Session Token？](#can-i-use-session-tokens-when-importing-data-from-an-object-storage-service)
+- [从对象存储服务导入数据时，我能否使用临时 Token？](#can-i-use-session-tokens-when-importing-data-from-an-object-storage-service)
 - [能否向 Zilliz Cloud 集群批量导入数据？](#can-i-bulk-insert-data-into-the-zilliz-cloud-vector-databases)
 - [在使用 Node.js SDK 导入数据或查询时，遇到 `ECONNRESET`错误该怎么办？](#what-can-i-do-if-i-receive-econnreset-errors-when-importing-data-to-or-querying-zilliz-cloud-clusters-with-nodejs-sdk)
 
@@ -26,11 +26,11 @@ sidebar_position: 4
 
 
 
-### 从对象存储服务导入数据时，我能否使用 Session Token？ \{#can-i-use-session-tokens-when-importing-data-from-an-object-storage-service}
+### 从对象存储服务导入数据时，我能否使用临时 Token？ \{#can-i-use-session-tokens-when-importing-data-from-an-object-storage-service}
 
-可以。根据您的数据安全需求，在从对象存储服务导入数据时您可以根据以下步骤使用 Session Token。
+可以。根据您的数据安全需求，在从对象存储服务导入数据时您可以根据以下步骤使用临时 Token。
 
-1. 生成 Session Token。
+1. 生成临时 Token。
 
     - 阿里云对象存储 OSS：[使用STS临时访问凭证访问OSS](https://help.aliyun.com/zh/oss/developer-reference/use-temporary-access-credentials-provided-by-sts-to-access-oss)
 
