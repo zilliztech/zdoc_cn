@@ -2936,10 +2936,10 @@
 											},
 											"stageName": {
 												"type": "string",
-												"description": "The name of a Zilliz Cloud stage that holds the PARQUET file. This parameter applies only when you set `type` to `stage`. For details on how to create a stage, see the documentation for the `Create Stage` operation.",
+												"description": "The name of a Zilliz Cloud stage that holds the PARQUET file. This parameter applies only when you set `type` to `stage`. For details on how to create a stage, see the documentation for the [Create Stage](/reference/restful/create-stage-v2) operation.",
 												"x-i18n": {
 													"zh-CN": {
-														"description": "Zilliz Cloud 存储点的名称。此参数仅当您将 `type` 设置为 `stage` 时有效。有关创建存储点的详细信息，请参阅 `Create Stage` 操作的文档。"
+														"description": "Zilliz Cloud 存储点的名称。此参数仅当您将 `type` 设置为 `stage` 时有效。有关创建存储点的详细信息，请参阅 [Create Stage](/reference/restful/create-stage-v2) 操作的文档。"
 													}
 												}
 											},
@@ -18214,7 +18214,7 @@
 										"dbName": "default",
 										"collectionName": "medium_articles",
 										"partitionName": "",
-										"stageName": "mysql-stage",
+										"stageName": "my_stage",
 										"dataPaths": [
 											["json-folder/1.json"]
 										]										
@@ -27211,17 +27211,22 @@
 										"x-target-response": "OPTION 1",
 										"value": {
 											"code": 200,
-											"data": [
-												{
-													"stageName": "my_stage_1"
-												},
-												{
-													"stageName": "my_stage_2"
-												},
-												{
-													"stageName": "my_stage_3"
-												}
-											]
+											"data": {
+												"count": 3,
+												"currentPage": 1,
+												"pageSize": 10,
+												"stages": [
+													{
+														"stageName": "my_stage_1"
+													},
+													{
+														"stageName": "my_stage_2"
+													},
+													{
+														"stageName": "my_stage_3"
+													}
+												]
+											}
 										}
 									},
 									"2": {
@@ -27409,7 +27414,7 @@
 										"value": {
 											"code": 0,
 											"data": {
-												"stageName": "mysql-stage"
+												"stageName": "my_stage"
 											}
 										}
 									},
@@ -27563,7 +27568,7 @@
 										"value": {
 											"code": 0,
 											"data": {
-												"stageName": "mysql-stage"
+												"stageName": "my_stage"
 											}
 										}
 									},
@@ -36301,6 +36306,9 @@
 				],
 				"tags": [
 					"Collection Operations (V2)"
+				],
+				"x-include-target": [
+					"milvus"
 				],
 				"parameters": [
 					{
