@@ -43,7 +43,7 @@ curl --request POST \
 --header "Content-Type: application/json" \
 -d '{
     "projectId": "proj-xxxxxxxxxxxxxxxxxxxxxxx",
-    "regionId": "us-west-1",
+    "regionId": "ali-cn-hangzhou",
     "stageName": "my_stage"
 }'
 ```
@@ -135,7 +135,7 @@ API_KEY = "YOUR_API_KEY"
 # This is currently a private preview feature. If you need to use it, please submit a request and contact us.
 # Before using this feature, you need to create a stage using the stage API.
 STAGE_NAME = "my_stage"
-PATH = "."
+PATH = "data/"
 
 def main():
     stage_operation = StageOperation(
@@ -175,7 +175,7 @@ public static final String API_KEY = "YOUR_API_KEY";
  * Before using this feature, you need to create a stage using the stage API.
  */
 public static final String STAGE_NAME = "my_stage";
-public static final String PATH = ".";
+public static final String PATH = "data/";
 
 private static void uploadFileToStage() throws Exception {
     StageOperationParam stageOperationParam = StageOperationParam.newBuilder()
