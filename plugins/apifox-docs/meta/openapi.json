@@ -2986,7 +2986,7 @@
 									},
 									"mergeField": {
 										"type": "string",
-										"description": " The data merging operation is similar to a LEFT JOIN operation in relational database systems, with the merge field serving as the shared key between the source collection and the Parquet file containing column-wise data. You need to provide the name of the shared key as the merge field. The merge field must be present in both the existing collection and the Parquet file. In common cases, you can use the primary key as the merge field.",
+										"description": "The data merging operation is similar to a LEFT JOIN operation in relational database systems, with the merge field serving as the shared key between the source collection and the Parquet file containing column-wise data. You need to provide the name of the shared key as the merge field. The merge field must be present in both the existing collection and the Parquet file. In common cases, you can use the primary key as the merge field.",
 										"x-i18n": {
 											"zh-CN": {
 												"description": "数据合并操作类似于关系型数据库中的左连接操作，其合并字段充当源 Collection 和 Parquet 文件之间共享键的角色。您需要提供共享键的名称作为合并字段。合并字段必须在源 Collection 和 Parquet 文件中都存在。在一般情况下，您可以使用主键作为合并字段。"
