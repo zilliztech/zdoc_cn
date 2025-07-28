@@ -41,7 +41,7 @@ import Admonition from '@theme/Admonition';
 <ul>
 <li><strong>是否启用 Dynamic Field</strong></li>
 </ul>
-<p>当目标 Collection 启用了 Dynamic Field 并且您希望导入 Schema 中未定义的字段时，您可以在导入数据中纳入一个名为 <strong>&#36;meta</strong> 的字段，并将所有未在 Schema 中定义的字段以键值对的方式存放到 <strong>$meta</strong> 字段中。</p>
+<p>当目标 Collection 启用了 Dynamic Field 并且您希望导入 Schema 中未定义的字段时，您可以在导入数据中纳入一个名为 <strong>&#36;meta</strong> 的字段，并将所有未在 Schema 中定义的字段以键值对的方式存放到 <strong>&#36;meta</strong> 字段中。</p>
 <ul>
 <li><strong>大小写</strong></li>
 </ul>
@@ -170,9 +170,13 @@ Zilliz Cloud 支持从您的云存储中导入数据。下表罗列了 Zilliz Cl
 
 ## 相关限制{#limits}
 
-Zilliz Cloud 针对导入 Parquet 格式的文件时设置了如下限制。
+当您从本地 JSON 文件或对象存储桶中的 JSON 文件导入数据时，需要遵守以下限制：
 
-需要注意的是，一个合法的 JSON 文件中有一个名为 **rows** 的根键，其值为一个字典列表，每个字典列表代表一个需要插入的 Entity 对象。
+<Admonition type="info" icon="📘" title="说明">
+
+<p>需要注意的是，一个合法的 JSON 文件中有一个名为 <strong>rows</strong> 的根键，其值为一个字典列表，每个字典列表代表一个需要插入的 Entity 对象。</p>
+
+</Admonition>
 
 <table>
    <tr>
@@ -181,7 +185,7 @@ Zilliz Cloud 针对导入 Parquet 格式的文件时设置了如下限制。
    </tr>
    <tr>
      <td><p><strong>支持多文件导入</strong></p></td>
-     <td><p>是</p><p>每次导入最多支持 100,000 个文件</p></td>
+     <td><p>是</p><p>每次导入最多支持 1,000 个文件</p></td>
    </tr>
    <tr>
      <td><p><strong>每次导入的文件体积限制</strong></p></td>
@@ -193,4 +197,4 @@ Zilliz Cloud 针对导入 Parquet 格式的文件时设置了如下限制。
    </tr>
 </table>
 
-建议您[使用 BulkWriter](./use-bulkwriter) 工具将您的原始数据转换成 Parquet 文件。我们按照本文示意图中的 Schema 准备了一个示例数据供您参考。[单击此处](https://assets.zilliz.com/prepared_json_data.json)下载该示例文件。
+建议您[使用 BulkWriter](./use-bulkwriter) 工具将您的原始数据转换成 JSON 文件。我们按照本文示意图中的 Schema 准备了一个示例数据供您参考。[单击此处](https://assets.zilliz.com/prepared_json_data.json)下载该示例文件。

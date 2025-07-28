@@ -328,7 +328,7 @@ Shard 的数量上限取决于集群版本和 CU 规格。
 
 ### 速率限制{#rate-limit}
 
-此外，Zilliz Cloud 针对 Serverless 和 Dedicated 集群中的 Collection 操作（包括创建、加载、释放、删除）还具有速率限制。
+此外，Zilliz Cloud 针对 Serverless 和 Dedicated 集群中的 Collection 和 Partition 操作（包括创建、加载、释放、删除）还具有速率限制。
 
 <table>
    <tr>
@@ -337,7 +337,11 @@ Shard 的数量上限取决于集群版本和 CU 规格。
    </tr>
    <tr>
      <td><p>Collection 操作（创建、加载、释放、删除）</p></td>
-     <td><p>每个集群 5 req/s。</p></td>
+     <td><p>每个集群 20 req/s。</p></td>
+   </tr>
+   <tr>
+     <td><p>Partition 操作（创建、加载、释放、删除）</p></td>
+     <td><p>每个集群 20 req/s。</p></td>
    </tr>
 </table>
 
@@ -499,7 +503,7 @@ Shard 的数量上限取决于集群版本和 CU 规格。
 
 ### Load{#load}
 
-每个集群的加载请求速率限制为每秒 **5** 个请求。
+每个集群的加载请求速率限制为每秒 **20** 个请求。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -537,13 +541,38 @@ Shard 的数量上限取决于集群版本和 CU 规格。
 
 ### Drop Collection{#drop}
 
-每个集群的删除请求速率限制为每秒 **5** 个请求。
+每个集群的删除请求速率限制为每秒 **20** 个请求。
 
 ### Data Import{#data-import}
 
-单 Collection 支持最多 **10** 个正在运行或待运行的数据导入任务。
+单 Collection 支持最多 **10,000** 个正在运行或待运行的数据导入任务。
 
 此外，Zilliz Cloud 还对导入的文件大小有以下限制。
+
+<table>
+   <tr>
+     <th><p>文件类型</p></th>
+     <th><p>本地导入</p></th>
+     <th><p>对象存储导入</p></th>
+   </tr>
+   <tr>
+     <td><p>JSON</p></td>
+     <td><p>Free: 512 MB</p><p>Serverless &amp; Dedicated: 1 GB</p></td>
+     <td><p>Free: 512 MB</p><p>Serverless &amp; Dedicated：导入数据的最大大小为 1 TB，每个文件的最大大小为 10 GB。最多支持 1,000 个文件。</p></td>
+   </tr>
+   <tr>
+     <td><p>Numpy</p></td>
+     <td><p>暂不支持</p></td>
+     <td><p>Free: 512 MB</p><p>Serverless &amp; Dedicated：文件夹的最大大小为 1 TB，每个子路径的最大大小为 10 GB。最多支持 1,000 个子路径。</p></td>
+   </tr>
+   <tr>
+     <td><p>Parquet</p></td>
+     <td><p>暂不支持</p></td>
+     <td><p>Free: 512 MB</p><p>Serverless &amp; Dedicated：导入数据的最大大小为 1 TB，每个文件的最大大小为 10 GB。最多支持 1,000 个文件。</p></td>
+   </tr>
+</table>
+
+<include targe="indev">
 
 <table>
    <tr>
@@ -567,6 +596,8 @@ Shard 的数量上限取决于集群版本和 CU 规格。
      <td><p>Free: 1 GB</p><p>Serverless &amp; Dedicated: 单次导入总文件大小最大为 1 TB，单个文件大小最大为 1 GB，单次最多导入 1,000 个文件。</p></td>
    </tr>
 </table>
+
+</include>
 
 请参阅[支持的对象存储](./data-import-storage-options)和[支持的数据格式](./data-import-format-options)了解更多。
 

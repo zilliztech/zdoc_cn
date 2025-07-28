@@ -41,7 +41,7 @@ import Admonition from '@theme/Admonition';
 <ul>
 <li><strong>是否启用 Dynamic Field</strong></li>
 </ul>
-<p>当目标 Collection 启用了 Dynamic Field 并且您希望导入 Schema 中未定义的字段时，您可以在导入数据中纳入一个名为 <strong>&#36;meta</strong> 的字段，并将所有未在 Schema 中定义的字段以键值对的方式存放到 <strong>$meta</strong> 字段中。</p>
+<p>当目标 Collection 启用了 Dynamic Field 并且您希望导入 Schema 中未定义的字段时，您可以在导入数据中纳入一个名为 <strong>&#36;meta</strong> 的字段，并将所有未在 Schema 中定义的字段以键值对的方式存放到 <strong>&#36;meta</strong> 字段中。</p>
 <ul>
 <li><strong>大小写</strong></li>
 </ul>
@@ -179,7 +179,7 @@ Zilliz Cloud 针对导入 Parquet 格式的文件时设置了如下限制。
    </tr>
    <tr>
      <td><p><strong>支持多文件导入</strong></p></td>
-     <td><p>是</p><p>每次导入最多支持 100,000 个文件</p></td>
+     <td><p>是</p><p>每次导入最多支持 1,000 个文件</p></td>
    </tr>
    <tr>
      <td><p><strong>每次导入的文件体积限制</strong></p></td>

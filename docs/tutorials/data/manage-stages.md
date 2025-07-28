@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Stage 是一个中间存储点，您可以在其中保存数据以进行进一步的处理，例如数据合并、迁移或导入。本文解释了 Zilliz Cloud Stage 的定义，以及您在该平台上管理数据时如何使用它。 | Cloud"
 type: origin
 token: NCpbwCJX5iP4lzkgerwcfRe1n3f
-sidebar_position: 0
+sidebar_position: 9
 keywords: 
   - 向量数据库
   - zilliz
