@@ -4,6 +4,12 @@ metadata:
   namespace: ali-test-env
 spec:
   enableServiceLinks: false
+  tolerations:
+    - key: node-role.kubernetes.io/infra
+      operator: Equal
+      effect: NoSchedule
+  nodeSelector:
+    node-role.kubernetes.io/infra: ''
   containers:
   - name: main
     image: harbor-us-vdc.zilliz.cc/devops/krte:20211213-dcc15e9
