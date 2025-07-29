@@ -236,7 +236,7 @@ curl --request POST \
        </tr>
        <tr>
          <td><p><strong>CU 类型和大小</strong></p></td>
-         <td><p>集群需要使用的 CU 类型及大小。</p><p>界面上有关于 CU 类型的简要介绍，并提供了<a href="./pricing-calculator">价格计算器</a>供您自助估算成本。</p><p>想了解更多关于 CU 选型的相关内容，可参见<a href="./cu-types-explained">选择合适的 CU 类型</a>。</p></td>
+         <td><p>集群需要使用的 CU 类型及大小。</p><p>界面上有关于 CU 类型的简要介绍，并提供了<a href="./pricing-calculator">价格计算器</a>供您自助估算成本。</p><p>想了解更多关于 CU 选型的相关内容，可参见<a href="./cu-types-explained">选择合适的 CU 类型</a>。</p><p>如需选择存储扩展型 CU，集群规格需至少为 4 CU。</p></td>
        </tr>
        <tr>
          <td><p><strong>用户名和密码</strong></p></td>
