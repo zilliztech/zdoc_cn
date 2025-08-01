@@ -321,7 +321,7 @@ Shard 的数量上限取决于集群版本和 CU 规格。
      <td><p>8</p></td>
    </tr>
    <tr>
-     <td><blockquote>  <p>64 CU</p></blockquote></td>
+     <td>> <p>64 CU</p></td>
      <td><p>16</p></td>
    </tr>
 </table>
