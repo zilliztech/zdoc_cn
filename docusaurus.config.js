@@ -536,9 +536,14 @@ const config = {
           href: 'https://zilliz.com.cn/'
         },
         items: [
+          // {
+          //   type: 'custom-searchbtn',
+          //   position: 'right'
+          // },
           {
-            type: 'custom-searchbtn',
-            position: 'right'
+            href: '/search',
+            position: 'right',
+            className: 'header-search-link',
           },
           {
             type: 'docsVersionDropdown',
