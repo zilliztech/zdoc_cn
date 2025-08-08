@@ -117,7 +117,11 @@ curl --request POST \
     "destCollectionName": "my_merged_collection",
     "dataSource": {
         "type": "oss",
-        "dataPath": "https://oss-cn-hangzhou.aliyuncs.com/my-bucket/my_data.parquet"
+        "dataPath": "https://oss-cn-hangzhou.aliyuncs.com/my-bucket/my_data.parquet",
+        "credential": {
+            "accessKey": "xxxxxxxxxxxxxxxxxxx",
+            "secretKey": "xxxxxxxxxxxx"
+        }
     },
     "mergeField": "id",
     "newFields": [
