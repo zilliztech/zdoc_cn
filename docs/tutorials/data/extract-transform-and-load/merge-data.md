@@ -53,7 +53,7 @@ import Admonition from '@theme/Admonition';
 如何代码片段演示了如何通过 Stage 执行数据合并。关于如何创建 Stage 及向 Stage 中上传数据，请参考[管理 Stage](./manage-stages)。
 
 ```bash
-export BASE_URL="https://api.cloud.zilliz.com"
+export BASE_URL="https://api.cloud.zilliz.com.cn"
 export TOKEN="YOUR_API_KEY"
 
 curl --request POST \
@@ -102,7 +102,7 @@ curl --request POST \
 如下代码片断演示了如何使用一个对象存储桶来执行数据合并操作。您可以参考您的对象存储服务提供商的文档来学习如何创建对象存储桶及向桶中上传数据。
 
 ```bash
-export BASE_URL="https://api.cloud.zilliz.com"
+export BASE_URL="https://api.cloud.zilliz.com.cn"
 export TOKEN="YOUR_API_KEY"
 
 curl --request POST \
@@ -116,8 +116,8 @@ curl --request POST \
     "destDbName": "my_database",
     "destCollectionName": "my_merged_collection",
     "dataSource": {
-        "type": "s3",
-        "dataPath": "s3://my_bucket/path/to/your/parquet.parquet"
+        "type": "oss",
+        "dataPath": "https://oss-cn-hangzhou.aliyuncs.com/my-bucket/my_data.parquet"
     },
     "mergeField": "id",
     "newFields": [
