@@ -3107,8 +3107,7 @@
 															"zh-CN": {
 																"description": "待与指定 Collection 合并的 PARQUET 文件的 URL。"
 															}
-														},
-														"example": "s3://my-bucket/my_data.parquet"
+														}
 													},
 													"credential": {
 														"type": "object",
