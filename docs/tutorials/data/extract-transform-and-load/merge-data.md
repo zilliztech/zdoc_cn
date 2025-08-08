@@ -40,9 +40,60 @@ import Admonition from '@theme/Admonition';
 
 您可以使用 Zilliz Cloud Stage 作为一个中间存放点来存放您上传的本地文件，并将文件中的数据与现有的某个 Collection 进行合并，从而创建一个包括了上述两种数据来源的新的 Collection。
 
-![V5TEwTH7PhVaBbb698ncivXsnQg](/img/V5TEwTH7PhVaBbb698ncivXsnQg.png)
+上传到 Stage 里的数据文件必须为 Parquet 格式，其中含有需要添加的列式数据。如下图所示，Parquet 文件中应该包含一个名为 `date` 的字段及各行在该字段的取值，每行为一个长度为 10 的字符串。
+
+![A5KYwhUcYhra6DbQMvbcZVdhnJG](/img/A5KYwhUcYhra6DbQMvbcZVdhnJG.png)
 
 您可以将准备好的 Parquet 文件上传到一个外部对象存储桶中，并在执行数据合并操作时提供可供 Zilliz Cloud 访问该桶的鉴权凭据。这样一来，Zilliz Cloud 就会读取桶中存放的 Parquet 文件，并执行数据合并操作。
+
+## 使用 Stage{#use-stage}
+
+如需执行数据合并操作，您需要先创建一个 Stage，并将您的数据文件上传到 Stage 中。当准备就绪，您就可以通过执行数据合并操作来创建一个包括两种数据来源的新的 Collection。
+
+如何代码片段演示了如何通过 Stage 执行数据合并。关于如何创建 Stage 及向 Stage 中上传数据，请参考[管理 Stage](./manage-stages)。
+
+```bash
+export BASE_URL="https://api.cloud.zilliz.com"
+export TOKEN="YOUR_API_KEY"
+
+curl --request POST \
+--url "${BASE_URL}/v2/etl/merge" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+-d '{
+    "clusterId": "in00-xxxxxxxxxxxxxxx",
+    "dbName": "my_database",
+    "collectionName": "my_collection",
+    "destDbName": "my_database",
+    "destCollectionName": "my_merged_collection",
+    "dataSource": {
+        "type": "stage",
+        "stageName": "my_stage",
+        "dataPath": "/path/to/your/parquet.parquet"
+    },
+    "mergeField": "id",
+    "newFields": [
+        {
+            "name": "date",
+            "dataType": "VARCHAR",
+            "params": {
+                "maxLength": 10
+            }
+        }
+    ]
+}'
+```
+
+上述命令创建了一个数据合并任务，并返回任务 ID。
+
+```json
+{
+    "code": 0,
+    "data": {
+        "jobId": "job-xxxxxxxxxxxxxxxxxxxxx"
+    }
+}
+```
 
 ## 使用对象存储{#use-object-storage}
 
