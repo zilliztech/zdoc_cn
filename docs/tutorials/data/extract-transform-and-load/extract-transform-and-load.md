@@ -1,7 +1,7 @@
 ---
-title: "ETL | Cloud"
+title: "提取、转换和加载 | Cloud"
 slug: /extract-transform-and-load
-sidebar_label: "ETL"
+sidebar_label: "提取、转换和加载"
 beta: PRIVATE
 notebook: FALSE
 description: "本章介绍了从外部数据源进行提取、转换和加载数据并将其应用于 Zilliz Cloud 的相关场景和步骤。 | Cloud"
@@ -23,7 +23,7 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# ETL
+# 提取、转换和加载
 
 本章介绍了从外部数据源进行提取、转换和加载数据并将其应用于 Zilliz Cloud 的相关场景和步骤。
 

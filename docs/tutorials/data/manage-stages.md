@@ -25,6 +25,26 @@ import TabItem from '@theme/TabItem';
 
 Stage 是一个中间存储点，您可以在其中保存数据以进行进一步的处理，例如数据合并、迁移或导入。本文解释了 Zilliz Cloud Stage 的定义，以及您在该平台上管理数据时如何使用它。
 
+## 概述{#overview}
+
+当您使用 Zilliz Cloud Stage 时，你需要将您的数据从受支持的外部数据源（如本地文件系统或第三方对象存储）上传到 Stage，以备进一步处理。下图展示了 Zilliz Cloud Stage 的主要使用场景。
+
+![Fgtsw07L8huoFRb94hDc2zzFnEb](/img/Fgtsw07L8huoFRb94hDc2zzFnEb.png)
+
+您可以在数据导入、数据迁移与数据合并中使用 Stage。这些场景都要求您从外部数据源上传数据到 Stage，但是却对上传到 Stage 中数据进行不同的处理。
+
+- 数据导入
+
+    在数据导入过程中，您可能将准备好的数据集上传到 Stage，然后再将 Stage 中的数据导入到一个 Zilliz Cloud Collection 中。更多内容，可以参考[通过 RESTful API 导入](./import-data-via-restful-api)和[通过 SDK 导入](./import-data-via-sdks)。
+
+- 数据合并
+
+    您可以将本地文件中上传到 Stage，并将文件中的数据与指定 Collection 合并，从而创建一个包含两种数据来源的新 Collection。更多内容，可以参考[合并数据](./merge-data)。
+
+- 数据迁移
+
+    在数据迁移中，您也可以将从 Milvus 导出的备份数据上传到 Stage 中，然后再使用 Stage 中的数据将其恢复成一个 Zilliz Cloud 集群。更多内容，可以参考[通过 Stage 从 Milvus 迁移至 Zilliz Cloud](./via-stage)。
+
 ## 创建、删除和查看 Stage{#create-list-and-delete-stages}
 
 您可以根据业务需要通过创建、删除和查看等 API 接口来管理 Stage 的生命周期。
