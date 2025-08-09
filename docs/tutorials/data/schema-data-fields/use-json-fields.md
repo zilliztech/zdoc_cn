@@ -387,7 +387,7 @@ if err != nil {
 </TabItem>
 </Tabs>
 
-## 为 JSON 字段内的值建立索引{#index-values-inside-the-json-field}
+## 为 JSON 字段内的值建立索引 | PUBLIC{#index-values-inside-the-json-field}
 
 为了加速 JSON 字段的标量过滤，Zilliz Cloud 支持使用 **JSON 路径索引**为 JSON 字段建立索引。这允许您按 JSON 对象内的键或嵌套值进行过滤，而无需扫描整个字段。
 
