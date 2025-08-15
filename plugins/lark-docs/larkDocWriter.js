@@ -779,47 +779,106 @@ class larkDocWriter {
     }
 
     __mdx_patches(content) {
-        var code_marks = [...content.matchAll(/`+/g)].map(match => { return { idx: match.index, match: match[0] } })
-
+        const ranges = [];
+        let match;
+    
+        // Get ranges for code blocks
+        const code_marks = [...content.matchAll(/`+/g)];
         if (code_marks.length % 2 === 0) {
-            const code_pairs = code_marks.map((mark, i) => {
-                if (i % 2 === 0) {
-                    return { start: mark.idx + mark.match.length, end: code_marks[i+1].idx }
-                } else {
-                    return null
-                }
-            }).filter(mark => mark)
-        
-            const tags = [...content.matchAll(/<([^\n]*?)>+?/g)]
+            for (let i = 0; i < code_marks.length; i += 2) {
+                ranges.push({ start: code_marks[i].index, end: code_marks[i+1].index + code_marks[i+1][0].length });
+            }
+        } else {
+            return content;
+        }
 
-            // console.log(tags.map(tag => tag[0]))
-        
-            tags.forEach((tag, i) => {
-                if (tag && tag[1].endsWith('/')) {
-                    tags[i] = null
-                }
-        
-                if (tag && !tag[1].trim().split(' ')[0].startsWith('/')) {
-                    const end_tag_idx = tags.findIndex(t => t && t[1].endsWith(`/${tag[1].trim().split(' ')[0]}`))
-                    if (end_tag_idx > i) {
-                        tags[i] = null
-                        tags[end_tag_idx] = null
+        const KNOWN_HTML_TAGS = new Set(['p', 'strong', 'ul', 'li', 'table', 'tr', 'td', 'th', 'a', 'div', 'span', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'em', 'i', 'b', 'br', 'hr']);
+
+        // Find all tag-like elements and pair them, escape unpaired ones
+        const tag_like_regex = /<\/?([a-zA-Z0-9\-:]+)(?:\s+[^>]*)?>/g;
+        let tag_matches = [];
+        let tag_stack = [];
+        let unpaired_tags = new Set();
+
+        while ((match = tag_like_regex.exec(content)) !== null) {
+            tag_matches.push({ index: match.index, tag: match[1], isClosing: match[0][1] === '/', length: match[0].length });
+        }
+
+        // Pair tags using a stack
+        for (let i = 0; i < tag_matches.length; i++) {
+            const { tag, isClosing, index } = tag_matches[i];
+            if (!isClosing) {
+                tag_stack.push({ tag, index, i });
+            } else {
+                // Find last matching opening tag
+                let found = false;
+                for (let j = tag_stack.length - 1; j >= 0; j--) {
+                    if (tag_stack[j].tag === tag) {
+                        tag_stack.splice(j, 1);
+                        found = true;
+                        break;
                     }
                 }
-            })
-        
-            const acorns = tags.filter(tag => tag).filter(acorn => !code_pairs.some(pair => pair.start < acorn.index && pair.end > acorn.index))
-
-            // console.log(acorns.map(acorn => acorn[0]))
-        
-            acorns.forEach((acorn, i) => {
-                const c = acorn[0].match(/</g).length - 1
-                const a = acorn[0].replace(/</g, '\\<').replace('"{', '"\\{');
-                content = content.slice(0, acorn.index + i) + a + content.slice(acorn.index + i + acorn[0].length + c)
-            })
+                if (!found) {
+                    unpaired_tags.add(i); // closing tag without opening
+                }
+            }
         }
-        
-        return content.replace(/\\\\/g, '\\');
+        // Any tags left in stack are unpaired opening tags
+        tag_stack.forEach(openTag => unpaired_tags.add(openTag.i));
+
+        // Get ranges for valid html/mdx tags (paired only)
+        for (let i = 0; i < tag_matches.length; i++) {
+            const { tag, index, length } = tag_matches[i];
+            if (
+                !unpaired_tags.has(i) &&
+                (KNOWN_HTML_TAGS.has(tag.toLowerCase()) ||
+                (tag.match(/^[A-Z]/) && /[a-z]/.test(tag)) ||
+                tag.includes('-'))
+            ) {
+                ranges.push({ start: index, end: index + length });
+            }
+        }
+    
+        // Get ranges for MDX expressions
+        const mdx_expr_regex = /\{[^}]+\}/g;
+        while (match = mdx_expr_regex.exec(content)) {
+            ranges.push({ start: match.index, end: match.index + match[0].length });
+        }
+
+        // Get ranges for markdown links and images
+        const markdown_link_image_regex = /!?\[[^\]]*\]\([^)]+\)/g;
+        while (match = markdown_link_image_regex.exec(content)) {
+            ranges.push({ start: match.index, end: match.index + match[0].length });
+        }
+    
+        let result = "";
+        for (let i = 0; i < content.length; i++) {
+            const in_range = ranges.some(r => i >= r.start && i < r.end);
+            if (in_range) {
+                result += content[i];
+            } else {
+                switch (content[i]) {
+                    case '<':
+                        result += '&lt;';
+                        break;
+                    case '>':
+                        result += '&gt;';
+                        break;
+                    case '{':
+                        result += '{\'{\'}';
+                        break;
+                    case '[':
+                        result += '\\[';
+                        break;
+                    default:
+                        result += content[i];
+                        break;
+                }
+            }
+        }
+    
+        return result;
     }
 
     async __page(page) {
