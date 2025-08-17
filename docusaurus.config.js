@@ -728,7 +728,6 @@ const config = {
       }
     }),
   themes: [
-    'docusaurus-theme-frontmatter',
     [
       '@easyops-cn/docusaurus-search-local',
       {
