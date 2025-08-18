@@ -2829,11 +2829,11 @@
 			"post": {
 				"summary": "Merge Data",
 				"deprecated": false,
-				"description": "You can use this interface to add fields with or without data to an existing collection.<div style=\"padding: 8px;\"><ul style=\"margin-bottom: 0px;\"><li>If you choose to add fields with data, you need to upload the data file to an AWS S3 bucket or a Zilliz Cloud Stage and ensure that the data share the same merge key as the source collection. The merged data will be stored in a new collection that you specify.</li><li>If you choose to add without data, the new fields will be created with default values. You need to be a project admin or above to perform this operation.</li></ul></div>For details, refer to <a href=\"/docs/merge-data\">Merge Data</a>.<br/>",
+				"description": "You can use this interface to add fields with or without data to an existing collection.<div style=\"padding: 8px;\"><ul style=\"margin-bottom: 0px;\"><li>If you choose to add fields with data, you need to upload the data file to an AWS S3 bucket or a Zilliz Cloud Stage and ensure that the data share the same merge key as the source collection. The merged data will be stored in a new collection that you specify.</li><li>If you choose to add without data, the new fields will be created with default values.</li></ul></div>You need to be a project admin or above to perform this operation. For details, refer to <a href=\"/docs/merge-data\">Merge Data</a>.<br/>",
 				"x-i18n": {
 					"zh-CN": {
 						"summary": "合并数据",
-						"description": "您可以使用此接口在指定 Collection 中新增字段并填充数据。<div style=\"padding: 8px;\"><ul style=\"margin-bottom: 0px;\"><li>如果您选择创建字段的同时填充数据，需要将数据文件上传到阿里云 OSS 存储桶或 Zilliz Cloud Stage，并确保数据与源 Collection 的合并键相同。合并后的数据将存储在您指定的新 Collection 中。</li><li>如果您选择仅创建字段但不填充数据，则会创建新的字段并填充默认值。您需要是项目管理员或以上权限才能执行此操作。</li></ul></div>更多详情，可以参考<a href=\"/docs/merge-data\">合并数据</a>。<br/>"
+						"description": "您可以使用此接口在指定 Collection 中新增字段并填充数据。<div style=\"padding: 8px;\"><ul style=\"margin-bottom: 0px;\"><li>如果您选择创建字段的同时填充数据，需要将数据文件上传到阿里云 OSS 存储桶或 Zilliz Cloud Stage，并确保数据与源 Collection 的合并键相同。合并后的数据将存储在您指定的新 Collection 中。</li><li>如果您选择仅创建字段但不填充数据，则会创建新的字段并填充默认值。</li></ul></div>您需要是项目管理员或以上权限才能执行此操作。更多详情，可以参考<a href=\"/docs/merge-data\">合并数据</a>。<br/>"
 					}
 				},
 				"tags": [
@@ -3107,7 +3107,8 @@
 															"zh-CN": {
 																"description": "待与指定 Collection 合并的 PARQUET 文件的 URL。"
 															}
-														}
+														},
+														"example": "s3://my-bucket/my_data.parquet"
 													},
 													"credential": {
 														"type": "object",
@@ -18121,7 +18122,96 @@
 							"schema": {
 								"oneOf": [
 									{
-										"x-tab-label": "use block storage",
+										"x-tab-label": "use stage",
+										"x-include-target": [
+											"zilliz"
+										],
+										"type": "object",
+										"properties": {
+											"clusterId": {
+												"type": "string",
+												"description": "The ID of the cluster to which the collection belongs.\nSetting this to a non-existing cluster results in an error. You can get the cluster ID by calling the [`/v2/clusters`](/reference/restful/list-clusters-v2) endpoint, or copy the cluster ID from the [Zilliz Cloud console](/docs/on-zilliz-cloud-console).",
+												"example": "inxx-xxxxxxxxxxxxxxxx",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "Collection 所属的集群 ID。设置为不存在的集群将导致错误。您可以通过调用 [`/v2/clusters`](/reference/restful/list-clusters-v2) 端点获取集群 ID，或从 [Zilliz Cloud 控制台](/docs/on-zilliz-cloud-console) 复制集群 ID。"
+													}
+												},
+												"x-include-target": [
+													"zilliz"
+												]
+											},
+											"dbName": {
+												"type": "string",
+												"description": "The name of the database that to which the collection belongs .\nSetting this to a non-existing database results in an error.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "Collection 所属的数据库名称。设置为不存在的数据库将导致错误。"
+													}
+												}
+											},
+											"collectionName": {
+												"type": "string",
+												"description": "The name of the target collection.\nSetting this to a non-existing collection results in an error.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "目标 Collection 的名称。设置为不存在的 Collection 将导致错误。"
+													}
+												}
+											},
+											"partitionName": {
+												"type": "string",
+												"description": "The name of the target partition.\nSetting this to a non-existing partition results in an error.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "目标 Partition 的名称。设置为不存在的 Partition 将导致错误。"
+													}
+												}
+											},
+											"stageName": {
+												"type": "string",
+												"description": "The name of the stage from which the data files will be uploaded. The stage must be created beforehand. For details, refer to [Create Stage](/reference/restful/create-stage-v2)",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "数据文件上传的源 stage 名称。该 stage 需事先创建。详情请参考 [创建 stage](/reference/restful/create-stage-v2)"
+													}
+												}
+											},
+											"dataPaths": {
+												"type": "array",
+												"description": "The paths of the data files to be uploaded. The paths should be relative to the root of the specified stage.",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "待上传的数据文件路径列表。路径应相对于指定 stage 的根目录。"
+													}
+												},
+												"items": {
+													"type": "array",
+													"description": "A list of the paths of the data files to be uploaded. Each list contains only one path.",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "待上传的数据文件路径列表。每个列表包含一个路径。"
+														}
+													},
+													"items": {
+														"type": "string",
+														"description": "The path of the data file to be uploaded. The path should be relative to the root of the specified stage.",
+														"x-i18n": {
+															"zh-CN": {
+																"description": "待上传数据文件路径。"
+															}
+														}
+													}
+												}
+											}						
+										},
+										"required": [
+											"clusterId",
+											"collectionName"
+										]
+									},
+									{
+										"x-tab-label": "use external storage",
 										"type": "object",
 										"properties": {
 											"clusterId": {
@@ -18296,102 +18386,13 @@
 											"clusterId",
 											"collectionName"
 										]
-									},
-									{
-										"x-tab-label": "use stage",
-										"x-include-target": [
-											"zilliz"
-										],
-										"type": "object",
-										"properties": {
-											"clusterId": {
-												"type": "string",
-												"description": "The ID of the cluster to which the collection belongs.\nSetting this to a non-existing cluster results in an error. You can get the cluster ID by calling the [`/v2/clusters`](/reference/restful/list-clusters-v2) endpoint, or copy the cluster ID from the [Zilliz Cloud console](/docs/on-zilliz-cloud-console).",
-												"example": "inxx-xxxxxxxxxxxxxxxx",
-												"x-i18n": {
-													"zh-CN": {
-														"description": "Collection 所属的集群 ID。设置为不存在的集群将导致错误。您可以通过调用 [`/v2/clusters`](/reference/restful/list-clusters-v2) 端点获取集群 ID，或从 [Zilliz Cloud 控制台](/docs/on-zilliz-cloud-console) 复制集群 ID。"
-													}
-												},
-												"x-include-target": [
-													"zilliz"
-												]
-											},
-											"dbName": {
-												"type": "string",
-												"description": "The name of the database that to which the collection belongs .\nSetting this to a non-existing database results in an error.",
-												"x-i18n": {
-													"zh-CN": {
-														"description": "Collection 所属的数据库名称。设置为不存在的数据库将导致错误。"
-													}
-												}
-											},
-											"collectionName": {
-												"type": "string",
-												"description": "The name of the target collection.\nSetting this to a non-existing collection results in an error.",
-												"x-i18n": {
-													"zh-CN": {
-														"description": "目标 Collection 的名称。设置为不存在的 Collection 将导致错误。"
-													}
-												}
-											},
-											"partitionName": {
-												"type": "string",
-												"description": "The name of the target partition.\nSetting this to a non-existing partition results in an error.",
-												"x-i18n": {
-													"zh-CN": {
-														"description": "目标 Partition 的名称。设置为不存在的 Partition 将导致错误。"
-													}
-												}
-											},
-											"stageName": {
-												"type": "string",
-												"description": "The name of the stage from which the data files will be uploaded. The stage must be created beforehand. For details, refer to [Create Stage](/reference/restful/create-stage-v2)",
-												"x-i18n": {
-													"zh-CN": {
-														"description": "数据文件上传的源 stage 名称。该 stage 需事先创建。详情请参考 [创建 stage](/reference/restful/create-stage-v2)"
-													}
-												}
-											},
-											"dataPaths": {
-												"type": "array",
-												"description": "The paths of the data files to be uploaded. The paths should be relative to the root of the specified stage.",
-												"x-i18n": {
-													"zh-CN": {
-														"description": "待上传的数据文件路径列表。路径应相对于指定 stage 的根目录。"
-													}
-												},
-												"items": {
-													"type": "array",
-													"description": "A list of the paths of the data files to be uploaded. Each list contains only one path.",
-													"x-i18n": {
-														"zh-CN": {
-															"description": "待上传的数据文件路径列表。每个列表包含一个路径。"
-														}
-													},
-													"items": {
-														"type": "string",
-														"description": "The path of the data file to be uploaded. The path should be relative to the root of the specified stage.",
-														"x-i18n": {
-															"zh-CN": {
-																"description": "待上传数据文件路径。"
-															}
-														}
-													}
-												}
-											}						
-										},
-										"required": [
-											"clusterId",
-											"collectionName"
-										]
 									}
 								]
 							},
 							"examples": {
 								"1": {
-									"summary": "example",
-									"x-target-request": "OPTION 1",
+									"summary": "use external storage",
+									"x-target-request": "OPTION 2",
 									"x-include-target": [
 										"milvus"
 									],
@@ -18414,7 +18415,7 @@
 								},
 								"2": {
 									"summary": "use object storage",
-									"x-target-request": "OPTION 1",
+									"x-target-request": "OPTION 2",
 									"x-include-target": [
 										"zilliz"
 									],
@@ -18432,7 +18433,7 @@
 								},
 								"3": {
 									"summary": "use stage",
-									"x-target-request": "OPTION 2",
+									"x-target-request": "OPTION 1",
 									"x-include-target": [
 										"zilliz"
 									],
@@ -23031,6 +23032,15 @@
 																}
 															}
 														},
+														"projectId": {
+															"type": "string",
+															"description": "The ID of the project where the cluster resides.",
+															"x-i18n": {
+																"zh-CN": {
+																	"description": "集群所在项目的 ID。"
+																}
+															}
+														},
 														"description": {
 															"type": "string",
 															"description": "An optional description of the cluster.",
@@ -23049,7 +23059,7 @@
 																}
 															}
 														},
-														"clusterType": {
+														"cuType": {
 															"type": "string",
 															"description": "The type of CU associated with the cluster.",
 															"enum": [
@@ -23079,15 +23089,6 @@
 																		"Enterprise",
 																		"Serverless"
 																	]
-																}
-															}
-														},
-														"cuSize": {
-															"type": "integer",
-															"description": "The size of the CU used by the cluster.",
-															"x-i18n": {
-																"zh-CN": {
-																	"description": "集群的 CU 大小。"
 																}
 															}
 														},
@@ -23139,6 +23140,24 @@
 																}
 															}
 														},
+														"replica": {
+															"type": "integer",
+															"description": "The number of replicas used by the cluster.",
+															"x-i18n": {
+																"zh-CN": {
+																	"description": "集群的副本数量。"
+																}
+															}
+														},
+														"cuSize": {
+															"type": "integer",
+															"description": "The size of the CU used by the cluster.",
+															"x-i18n": {
+																"zh-CN": {
+																	"description": "集群的 CU 大小。"
+																}
+															}
+														},
 														"storageSize": {
 															"type": "integer",
 															"description": "The storage size of the cluster.",
@@ -23168,15 +23187,6 @@
 															},
 															"minimum": 0,
 															"maximum": 100
-														},
-														"projectId": {
-															"type": "string",
-															"description": "The ID of the project where the cluster resides.",
-															"x-i18n": {
-																"zh-CN": {
-																	"description": "集群所在项目的 ID。"
-																}
-															}
 														}
 													},
 													"description": "Response payload, which details the cluster.",
@@ -36530,6 +36540,9 @@
 				},
 				"tags": [
 					"Collection Operations (V2)"
+				],
+				"x-include-target": [
+					"milvus"
 				],
 				"parameters": [
 					{
