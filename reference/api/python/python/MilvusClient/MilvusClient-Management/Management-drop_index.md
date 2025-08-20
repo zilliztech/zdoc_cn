@@ -10,10 +10,10 @@ type: docx
 token: NPnQdZCJ7oF002xTntecdI2ini8
 sidebar_position: 5
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,13 +45,13 @@ drop_index(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
 - **index_name** (str) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the index to drop.
 

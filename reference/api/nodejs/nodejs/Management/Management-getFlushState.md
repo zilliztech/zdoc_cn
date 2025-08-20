@@ -10,10 +10,10 @@ type: docx
 token: X8qWdMHg5oQQK6xZdBYcGNOnn3c
 sidebar_position: 8
 keywords: 
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - milvus lite
   - zilliz
   - zilliz cloud
   - cloud
@@ -51,9 +51,9 @@ milvusClient.getFlushState({
 
 **PARAMETERS:**
 
-- **segment_ids** (*number[]*) -
+- **segment_ids** (*number&#91;&#93;*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A list of the target segment IDs.
 
@@ -63,7 +63,7 @@ milvusClient.getFlushState({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<GetFlushStateResponse>*
+**RETURNS** *Promise\&lt;GetFlushStateResponse&gt;*
 
 This method returns a promise that resolves to a **GetFlushStateResponse** object.
 

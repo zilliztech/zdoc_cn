@@ -10,10 +10,10 @@ type: docx
 token: FieTdj7WDoVbBVxp5xjcqO02nrh
 sidebar_position: 4
 keywords: 
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud
@@ -46,13 +46,13 @@ openai_ef(
 
 **PARAMETERS:**
 
-- **texts** (*List[str]*)
+- **texts** (*List&#91;str&#93;*)
 
     A list of string values, where each string represents text that will be passed to the embedding model for encoding. The model will generate an embedding vector for each string in the list.
 
 **RETURN TYPE:**
 
-*List[np.array]*
+*List&#91;np.array&#93;*
 
 **RETURNS:**
 

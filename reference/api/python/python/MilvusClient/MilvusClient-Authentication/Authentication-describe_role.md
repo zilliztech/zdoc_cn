@@ -10,10 +10,10 @@ type: docx
 token: JJz3dFrE2oJP3AxySWYcJlf4nMh
 sidebar_position: 5
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - IVF
   - zilliz
   - zilliz cloud
   - cloud
@@ -43,7 +43,7 @@ describe_role(
 
 - **role_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the role to describe.
 

@@ -9,10 +9,10 @@ token: A6atfZDQxl1INud6VYGcX54zngf
 sidebar_position: 2
 sidebar_label: "EmbeddingModels"
 keywords: 
-  - vector similarity search
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud

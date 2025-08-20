@@ -9,10 +9,10 @@ token: YpEjf83y1lvvzxd31BqcvQmknEd
 sidebar_position: 6
 sidebar_label: "Partitions"
 keywords: 
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud

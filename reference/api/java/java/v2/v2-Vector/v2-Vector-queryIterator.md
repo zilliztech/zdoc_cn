@@ -10,10 +10,10 @@ type: docx
 token: ByLVdf2nRocLcxxwH3Gc9CyFnbb
 sidebar_position: 6
 keywords: 
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud
@@ -110,7 +110,7 @@ A *QueryIterator* object to iterate data.
 
 **METHODS:**
 
-- List\<QueryResultsWrapper.RowRecord> next()
+- List&lt;QueryResultsWrapper.RowRecord&gt; next()
 
 Return a batch of results.
 

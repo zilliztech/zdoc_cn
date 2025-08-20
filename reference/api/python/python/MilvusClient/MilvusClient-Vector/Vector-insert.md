@@ -10,10 +10,10 @@ type: docx
 token: QI87dhVnioL9JLxnNKxcM8jWnkh
 sidebar_position: 3
 keywords: 
-  - knn algorithm
-  - HNSW
-  - What is unstructured data
-  - Vector embeddings
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,13 +45,13 @@ insert(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
-- **data** (*dict* | *list[dict]*) -
+- **data** (*dict* | *list&#91;dict&#93;*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The data to insert into the current collection.
 

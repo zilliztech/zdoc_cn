@@ -10,10 +10,10 @@ type: docx
 token: DYuUdc503o1TANxuGozcXhCmnRN
 sidebar_position: 3
 keywords: 
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
   - zilliz
   - zilliz cloud
   - cloud

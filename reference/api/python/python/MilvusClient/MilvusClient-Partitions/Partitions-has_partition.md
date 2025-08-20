@@ -10,10 +10,10 @@ type: docx
 token: MxTAd0haboKnRrxQvoOckGghn1T
 sidebar_position: 4
 keywords: 
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,13 +44,13 @@ has_partition(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
 - **partition_name** (*string*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the partition to check.
 

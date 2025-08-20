@@ -10,10 +10,10 @@ type: docx
 token: FUNwdQQqAon41YxMWiIcHIBmned
 sidebar_position: 7
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
   - private llms
   - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud

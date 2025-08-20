@@ -10,10 +10,10 @@ type: docx
 token: KBujdxXhko2zJjx4hFmcsHGhn4g
 sidebar_position: 2
 keywords: 
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
   - zilliz
   - zilliz cloud
   - cloud
@@ -40,13 +40,13 @@ encode_queries(
 
 **PARAMETERS:**
 
-- **queries** (*List[str]*)
+- **queries** (*List&#91;str&#93;*)
 
     A list of string values, where each string represents a query that will be passed to the embedding model for encoding. The model will generate an embedding vector for each string in the list.
 
 **RETURN TYPE:**
 
-*List[np.array]*
+*List&#91;np.array&#93;*
 
 **RETURNS:**
 

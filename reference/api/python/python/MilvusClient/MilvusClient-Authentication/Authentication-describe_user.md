@@ -10,10 +10,10 @@ type: docx
 token: Wz3HdtvPCoEquvxFY7PcDHxcnEe
 sidebar_position: 6
 keywords: 
-  - Vector search
-  - knn algorithm
-  - HNSW
-  - What is unstructured data
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
   - zilliz
   - zilliz cloud
   - cloud
@@ -43,7 +43,7 @@ describe_user(
 
 - **user_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the user to describe.
 

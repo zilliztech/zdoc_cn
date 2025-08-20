@@ -10,10 +10,10 @@ type: docx
 token: BJysdlj1MoksHZxNRxicHn9fnSh
 sidebar_position: 33
 keywords: 
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,11 +45,11 @@ load_state(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a collection.
 
-- **partition_names** (*list[str]*) -
+- **partition_names** (*list&#91;str&#93;*) -
 
     A list of partition names.
 

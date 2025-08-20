@@ -10,10 +10,10 @@ type: docx
 token: JeG6d5Sg2oPmXPxEhnyciq4snNd
 sidebar_position: 28
 keywords: 
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,13 +45,13 @@ list_user(
 
 - **username** (*string*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the user to list.
 
 - **include_role_info** (*bool*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     Whether Zilliz Cloud lists the roles granted to the specified user.
 

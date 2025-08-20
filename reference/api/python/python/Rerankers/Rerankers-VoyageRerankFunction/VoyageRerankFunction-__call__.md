@@ -10,10 +10,10 @@ type: docx
 token: N2aHdla1Uohk1HxGyPHcdG4lnnb
 sidebar_position: 2
 keywords: 
-  - Vector embeddings
-  - Vector store
-  - open source vector database
-  - Vector index
+  - natural language processing
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,7 +50,7 @@ voyage_rf(
 
     The query string to use for ranking.
 
-- `documents` (*List[str]*)
+- `documents` (*List&#91;str&#93;*)
 
     A list of document strings that will be ranked for the given query.
 
@@ -60,7 +60,7 @@ voyage_rf(
 
 **RETURN TYPE:**
 
-*List[RerankResult]*
+*List&#91;RerankResult&#93;*
 
 **RETURNS:**
 

@@ -209,7 +209,7 @@ The zero downtime migration process consists of three main phases that require y
 
 ### 阶段 3: 切换{#switch}
 
-收到时延 < 10 秒的邮件后，按[连接集群](./connect-to-cluster)指南切换至目标集群。
+收到时延 &lt; 10 秒的邮件后，按[连接集群](./connect-to-cluster)指南切换至目标集群。
 
 <Admonition type="info" icon="📘" title="Notes">
 

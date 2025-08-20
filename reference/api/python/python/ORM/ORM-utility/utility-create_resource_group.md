@@ -10,10 +10,10 @@ type: docx
 token: X5qsdhFQ5oOhkcxOprzcOZq4nMc
 sidebar_position: 4
 keywords: 
+  - vectordb
   - multimodal vector database retrieval
   - Retrieval Augmented Generation
   - Large language model
-  - Vectorization
   - zilliz
   - zilliz cloud
   - cloud
@@ -53,7 +53,7 @@ create_resource_group(
 
 - **name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the resource group to create.
 

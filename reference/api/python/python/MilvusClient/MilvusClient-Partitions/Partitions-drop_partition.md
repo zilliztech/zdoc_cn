@@ -10,10 +10,10 @@ type: docx
 token: EMI8dM8uooIAFPxVfffcoqRwnZf
 sidebar_position: 2
 keywords: 
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,13 +50,13 @@ create_partition(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
 - **partition_names** (*str*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the partition to drop.
 

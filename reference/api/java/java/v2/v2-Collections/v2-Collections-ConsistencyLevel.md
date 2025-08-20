@@ -10,10 +10,10 @@ type: docx
 token: Q8IidbqKMopplgxSxaicS2o9nwc
 sidebar_position: 5
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
   - zilliz
   - zilliz cloud
   - cloud

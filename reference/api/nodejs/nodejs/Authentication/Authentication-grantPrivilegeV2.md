@@ -10,10 +10,10 @@ type: docx
 token: R618dfeMYo9GdmxMwe9cQLclncs
 sidebar_position: 13
 keywords: 
-  - Serverless vector database
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,13 +50,13 @@ grantPrivilegeV2(data): Promise<ResStatus>
 
 - **role** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the role to assign privileges to.
 
 - **privilege** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the privilege or privilege group to assign. 
 
@@ -64,13 +64,13 @@ grantPrivilegeV2(data): Promise<ResStatus>
 
 - **db_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the target database of this operation. 
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the target collection of this operation. 
 
@@ -80,7 +80,7 @@ grantPrivilegeV2(data): Promise<ResStatus>
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

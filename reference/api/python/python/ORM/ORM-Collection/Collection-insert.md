@@ -10,10 +10,10 @@ type: docx
 token: CbCodEGY9o6pKuxowNdctUppn7d
 sidebar_position: 19
 keywords: 
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +44,7 @@ insert(
 
 - **data** (*list* | *dict* | *pandas.DataFrame*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The data to insert into the current collection.
 

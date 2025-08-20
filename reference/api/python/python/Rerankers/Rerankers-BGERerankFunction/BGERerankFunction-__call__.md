@@ -10,10 +10,10 @@ type: docx
 token: C2AbdIReZos7HwxiZXIcyW8nnm1
 sidebar_position: 2
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,7 +50,7 @@ bge_rf(
 
     The query string to use for ranking.
 
-- `documents` (*List[str]*)
+- `documents` (*List&#91;str&#93;*)
 
     A list of document strings that will be ranked for the given query.
 
@@ -60,7 +60,7 @@ bge_rf(
 
 **RETURN TYPE:**
 
-*List[RerankResult]*
+*List&#91;RerankResult&#93;*
 
 **RETURNS:**
 

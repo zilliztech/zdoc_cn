@@ -283,27 +283,27 @@ curl --request POST \
    <tr>
      <td><p><code>L2</code></p></td>
      <td><p>较小的 L2 距离表示更高的相似性。</p></td>
-     <td><p>[0, ∞)</p></td>
+     <td><p>&#91;0, ∞)</p></td>
    </tr>
    <tr>
      <td><p><code>IP</code></p></td>
      <td><p>较大的 IP 距离表示更高的相似性。</p></td>
-     <td><p>[-1, 1]</p></td>
+     <td><p>&#91;-1, 1&#93;</p></td>
    </tr>
    <tr>
      <td><p><code>COSINE</code></p></td>
      <td><p>较大的 cosine 值表示更高的相似性。</p></td>
-     <td><p>[-1, 1]</p></td>
+     <td><p>&#91;-1, 1&#93;</p></td>
    </tr>
    <tr>
      <td><p><code>JACCARD</code></p></td>
      <td><p>较小的 Jaccard 距离表示更高的相似性。</p></td>
-     <td><p>[0, 1]</p></td>
+     <td><p>&#91;0, 1&#93;</p></td>
    </tr>
    <tr>
      <td><p><code>HAMMING</code></p></td>
      <td><p>较小的 Hamming 距离表示更高的相似性。</p></td>
-     <td><p>[0, dim(vector)]</p></td>
+     <td><p>&#91;0, dim(vector)&#93;</p></td>
    </tr>
 </table>
 
@@ -904,6 +904,106 @@ curl --request POST \
 #         }
 #     ]
 # }
+```
+
+</TabItem>
+</Tabs>
+
+### 使用 `count(*)` 作为 Output Field{#use-count-as-output-field}
+
+您还可以使用 `count(*)` 作为 Output Field 来获取指定 Collection 中存放的所有 Entity 的数量。或者与其它过滤条件表达式一些获取符合指定条件的所有 Entity 的数量。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+res = client.query(
+    collection_name="quick_setup",
+    filter="",
+    output_fields=['count(*)']
+)
+print(res[0]['count(*)'])
+# Output
+# 20
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+import io.milvus.v2.service.vector.request.QueryReq
+import io.milvus.v2.service.vector.request.QueryResp
+
+QueryReq queryReq = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("")
+        .outputFields(Arrays.asList("count(*)"))
+        .build();
+
+QueryResp queryResp = client.query(queryReq);
+
+List<QueryResp.QueryResult> results = queryResp.getQueryResults();
+for (QueryResp.QueryResult result : results) {
+    System.out.println(result.getEntity());
+}
+
+// Output
+// {}
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+resultSet, err := client.Query(ctx, milvusclient.NewQueryOption("my_collection").
+    WithFilter("").
+    WithOutputFields("count(*)"))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+
+fmt.Println("count: ", resultSet.GetColumn("count").FieldData().GetScalars())
+
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+import { MilvusClient, DataType } from "@zilliz/milvus2-sdk-node";
+
+const address = "YOUR_CLUSTER_ENDPOINT";
+const token = "YOUR_CLUSTER_TOKEN";
+const client = new MilvusClient({address, token});
+
+const res = await client.query({
+    collection_name: "my_collection",
+    output_fields: ["count(*)"]
+});
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+export CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT"
+export TOKEN="YOUR_CLUSTER_TOKEN"
+
+curl --request POST \
+--url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+-d '{
+    "collectionName": "my_collection",
+    "filter": "",
+    "outputFields": ["count(*)"]
+}'
+#{"code":0,"cost":0,"data":[{count: 20}]}
 ```
 
 </TabItem>

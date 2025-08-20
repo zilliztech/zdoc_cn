@@ -10,10 +10,10 @@ type: docx
 token: JmlKdBz7Io91Ffx9rpKce3vUnMc
 sidebar_position: 2
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
-  - nn search
+  - LLMs
+  - Machine Learning
+  - RAG
+  - NLP
   - zilliz
   - zilliz cloud
   - cloud
@@ -66,7 +66,7 @@ milvusClient.createDatabase({
 
         Number of replicas for the database.
 
-    - **database.resource_groups** (*[]str*) -
+    - **database.resource_groups** (*&#91;&#93;str*) -
 
         Resource groups dedicated to the database.
 
@@ -92,7 +92,7 @@ milvusClient.createDatabase({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise |\<ResStatus>*
+**RETURNS** *Promise |&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

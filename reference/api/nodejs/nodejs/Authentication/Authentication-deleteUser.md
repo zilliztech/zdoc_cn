@@ -10,10 +10,10 @@ type: docx
 token: Cl5PdhU5jouHnrxyYXLcOQAZneb
 sidebar_position: 6
 keywords: 
-  - Vector embeddings
-  - Vector store
-  - open source vector database
-  - Vector index
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -49,7 +49,7 @@ milvusClient.deleteUser({
 
 - **username** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the user to drop.
 
@@ -59,7 +59,7 @@ milvusClient.deleteUser({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

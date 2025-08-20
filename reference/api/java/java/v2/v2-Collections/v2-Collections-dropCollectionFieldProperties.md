@@ -10,10 +10,10 @@ type: docx
 token: O3E9duLvfoMC26x8AmDcomlWneh
 sidebar_position: 25
 keywords: 
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
   - zilliz
   - zilliz cloud
   - cloud

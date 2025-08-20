@@ -10,10 +10,10 @@ type: docx
 token: VsyQdDkXnoloWYxfjXNchc0dnng
 sidebar_position: 7
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud

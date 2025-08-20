@@ -10,10 +10,10 @@ type: docx
 token: MkWNdU1tvoqlBRxI05Rcu09cnEc
 sidebar_position: 2
 keywords: 
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
   - zilliz
   - zilliz cloud
   - cloud
@@ -52,7 +52,7 @@ pymilvus.get_import_progress(
 
 - **url** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The endpoint URL of your Zilliz Cloud cluster. 
 
@@ -67,13 +67,13 @@ pymilvus.get_import_progress(
 
 - **api_key** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A valid Zilliz Cloud API key with sufficient permissions to manipulate the cluster.
 
 - **job_id** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The ID of the bulk-import job of your interest. 
 
@@ -81,7 +81,7 @@ pymilvus.get_import_progress(
 
 - **cluster_id** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The instance ID of the target cluster of this operation.
 

@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如何在亚马逊云科技 Marketplace上订阅 Zilliz Cloud。 | Cloud"
 type: origin
 token: LNxnwCaoeiwvxVkQqCTcWmMFn5g
-sidebar_position: 4
+sidebar_position: 5
 keywords: 
   - 向量数据库
   - zilliz
@@ -77,7 +77,7 @@ Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如�
 
     ![cancel-subscription-on-amazon-marketplace-cn-manage](/img/cancel-subscription-on-amazon-marketplace-cn-manage.png)
 
-1. 在 Zilliz Cloud 订阅详情页面中，点击**操作>取消订阅**。
+1. 在 Zilliz Cloud 订阅详情页面中，点击**操作&gt;取消订阅**。
 
     ![cancel-subscription-on-amazon-marketplace-cn-cancel](/img/cancel-subscription-on-amazon-marketplace-cn-cancel.png)
 

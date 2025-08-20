@@ -10,10 +10,10 @@ type: docx
 token: JnPrdOiPyo2e5gxzzFycbnvwnSd
 sidebar_position: 6
 keywords: 
-  - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
   - zilliz
   - zilliz cloud
   - cloud
@@ -47,7 +47,7 @@ flush(
 
     The name of the target collection.
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 

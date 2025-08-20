@@ -10,10 +10,10 @@ type: docx
 token: IpSBdcabbosobvxQkAEcv6CvnJd
 sidebar_position: 4
 keywords: 
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
   - zilliz
   - zilliz cloud
   - cloud
@@ -40,7 +40,7 @@ disconnect(alias: str)
 
 - **alias** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A connection alias.
 

@@ -116,6 +116,12 @@ res = client.search(
 
 在设置 `enable_recall_calculation` 为 `True` 时，您可以通过调整 `level` 参数的取值执行多次搜索来查看预估召回率的变化。通过评估预估召回率和搜索耗时等指标，粗略估计合适的 `level` 参数取值。
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>开启 <code>enable_recall_calculation</code> 可能会影响搜索性能，不建议在生产环境使用。</p>
+
+</Admonition>
+
 ## 限制
 
 该功能当前仅对基本 Vector Search、Filtered Search 和 Range Search 有效。

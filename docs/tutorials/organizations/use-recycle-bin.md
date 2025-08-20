@@ -60,7 +60,7 @@ import Admonition from '@theme/Admonition';
 
 ![recycle-bin-cn](/img/recycle-bin-cn.png)
 
-<include taget="indev">
+&lt;include taget="indev"&gt;
 
 ## 恢复回收站中的包年包月集群{#restore-a-dropped-annual-subscription-cluster-in-the-recycle-bin}
 
@@ -98,4 +98,4 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-</include>
+&lt;/include&gt;

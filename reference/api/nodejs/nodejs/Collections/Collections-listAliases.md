@@ -10,10 +10,10 @@ type: docx
 token: KeoKdlitaog6n1xpX8McIIIrnWb
 sidebar_position: 17
 keywords: 
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
   - zilliz
   - zilliz cloud
   - cloud
@@ -54,7 +54,7 @@ listAliases({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
@@ -64,7 +64,7 @@ listAliases({
 
     Setting this to **None** indicates that this operation timeouts when any response returns or error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

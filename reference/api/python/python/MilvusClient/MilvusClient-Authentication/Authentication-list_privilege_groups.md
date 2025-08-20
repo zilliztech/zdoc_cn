@@ -10,10 +10,10 @@ type: docx
 token: N6kjdex5Ao0lRqxPXBhcxq4AnNh
 sidebar_position: 13
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
   - zilliz
   - zilliz cloud
   - cloud
@@ -42,7 +42,7 @@ list_privilege_groups(
 
 **PARAMETERS:**
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 
@@ -50,7 +50,7 @@ list_privilege_groups(
 
 **RETURN TYPE:**
 
-*List[Dict[str, str]]*
+*List&#91;Dict&#91;str, str&#93;&#93;*
 
 **RETURNS:**
 

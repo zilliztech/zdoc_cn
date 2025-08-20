@@ -10,10 +10,10 @@ type: docx
 token: PLKXdUB1EoNX8gxKHruc9GcEnsg
 sidebar_position: 44
 keywords: 
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - knn algorithm
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +44,7 @@ wait_for_loading_complete(
 **PARAMETERS:**
 **collection_name** (*str*) -
 
-- **partition_names** (*list[str]*) -
+- **partition_names** (*list&#91;str&#93;*) -
 
     A list of partition names.
 

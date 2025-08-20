@@ -10,10 +10,10 @@ type: docx
 token: MOPzdeyjzoO8DlxAlL0clX00nBc
 sidebar_position: 1
 keywords: 
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
   - zilliz
   - zilliz cloud
   - cloud
@@ -40,13 +40,13 @@ encode_documents(
 
 **PARAMETERS:**
 
-- **documents** (*List[str]*)
+- **documents** (*List&#91;str&#93;*)
 
     A list of string values, where each string represents a document that will be passed to the embedding model for encoding. The model will generate an embedding vector for each string in the list.
 
 **RETURN TYPE:**
 
-*List[np.array]*
+*List&#91;np.array&#93;*
 
 **RETURNS:**
 

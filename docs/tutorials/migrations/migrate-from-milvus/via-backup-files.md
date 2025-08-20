@@ -35,7 +35,7 @@ Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案�
 
     - 从本地文件：提前准备本地备份文件。有关如何准备备份文件的信息，请参阅[准备迁移数据](./via-backup-files#prepare-migration-data)。
 
-    - 从对象存储：Milvus 对象存储的公共 URL 和访问凭据。您可以选择长期或临时凭据。
+    - 从对象存储：Milvus 对象存储的公共 URL 和访问凭据。您可以选择长期或临时凭据。您可以查看[常见问题](./via-backup-files#faq)，了解对象存储公共 URL 的格式示例。
 
 - 您需要拥有组织管理员或项目管理员的角色。如果您没有相应的权限，请联系您的 Zilliz Cloud 管理员。
 
@@ -111,7 +111,13 @@ backup
 
 ## 将数据迁移到 Zilliz Cloud{#migrate-data-to-zilliz-cloud}
 
-<Supademo id="cmboghvaxa3p5sn1r42v1rwil" title="Zilliz Cloud - 通过备份文件从 Milvus 迁移" />
+<Supademo id="cme9nfjc94bofh3py7kldqzx9" title="Zilliz Cloud - 通过备份文件从 Milvus 迁移" />
+
+<Admonition type="info" icon="📘" title="Notes">
+
+<p>所选目标数据库必须包含数据，不能为空。</p>
+
+</Admonition>
 
 ## 查看迁移进度{#monitor-the-migration-process}
 
@@ -122,8 +128,6 @@ backup
 <p>迁移完成后，请验证目标集群中的 collection 和 entity 数量是否与数据源一致。如果发现不一致，请删除缺失 entity 的 collection 并重新进行迁移。</p>
 
 </Admonition>
-
-![view_migration_progress_cn](/img/view_migration_progress_cn.png)
 
 ## 迁移后{#post-migration}
 
@@ -147,3 +151,36 @@ backup
 
 1. 在**操作**列点击**查看详情**以访问日志信息。
 
+## 常见问题{#faq}
+
+1. **通过备份文件迁移时，上传的对象存储中的备份文件 URL 应遵循什么样的格式？**
+
+    <table>
+       <tr>
+         <th colspan="2"><p><strong>Cloud Object Storage</strong></p></th>
+         <th><p><strong>URL Format</strong></p></th>
+       </tr>
+       <tr>
+         <td colspan="2"><p><strong>阿里云 OSS</strong></p></td>
+         <td><p><i>http</i>s://&lt;bucket_name&gt;.oss-&lt;region_code&gt;.aliyuncs.com/&lt;folder_name&gt;/</p></td>
+       </tr>
+       <tr>
+         <td colspan="2"><p><strong>腾讯云 COS</strong></p></td>
+         <td><p><i>http</i>s://&lt;bucket_name&gt;.cos.&lt;region_code&gt;.myqcloud.com/&lt;folder_name&gt;/</p></td>
+       </tr>
+       <tr>
+         <td rowspan="3"><p><strong>亚马逊云科技 Amazon S3</strong></p></td>
+         <td><p>virtual-hosted–style</p></td>
+         <td><p><i>http</i>s://&lt;bucket_name&gt;.s3.&lt;region-code&gt;.amazonaws.com/&lt;folder_name&gt;/</p></td>
+       </tr>
+       <tr>
+         <td><p>path-style</p></td>
+         <td><p><i>http</i>s://s3.&lt;region-code&gt;.amazonaws.com/&lt;bucket_name&gt;/&lt;folder_name&gt;/</p></td>
+       </tr>
+       <tr>
+         <td><p>S3 URI</p></td>
+         <td><p>s3://&lt;bucket_name&gt;/&lt;folder_name&gt;/</p></td>
+       </tr>
+    </table>
+
+    

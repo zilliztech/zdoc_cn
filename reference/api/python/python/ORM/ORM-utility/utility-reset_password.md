@@ -10,10 +10,10 @@ type: docx
 token: K1Npdj5Ddod6UWxRN2ecf6K4nxf
 sidebar_position: 38
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - milvus vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -52,13 +52,13 @@ reset_password(
 
 - **user** (*str*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The specific user whose password is to be reset.
 
 - **old_password** (*str*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The original password for the specified user.
 
@@ -66,7 +66,7 @@ reset_password(
 
 - **new_password** (*str*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The new password for the specified user. 
 

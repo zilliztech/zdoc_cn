@@ -10,10 +10,10 @@ type: docx
 token: IEqAdO0Pto6rgbxebo5cIXp0nMX
 sidebar_position: 1
 keywords: 
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
-  - open source vector database
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - rag vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -48,13 +48,13 @@ milvusClient.addPrivilegesToGroup({
 
 - **group_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a privilege group.
 
-- **privileges** (*string[]*) -
+- **privileges** (*string&#91;&#93;*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The list of privileges to add to the above group.
 
@@ -64,7 +64,7 @@ milvusClient.addPrivilegesToGroup({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

@@ -10,10 +10,10 @@ type: docx
 token: QYPIdgWL7oDWrWxVUx0clo32nz4
 sidebar_position: 10
 keywords: 
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
   - zilliz
   - zilliz cloud
   - cloud

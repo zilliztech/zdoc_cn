@@ -10,10 +10,10 @@ type: docx
 token: KsmadNcXRoElO2xJi5HcJO57nwb
 sidebar_position: 18
 keywords: 
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
-  - vectordb
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,14 +45,14 @@ has_partition(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
     The name of an existing collection.
 
     Setting this to a non-existing collection results in a **MilvusException**.
 
 - **partition_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
     The name of a partition.
 
 - **using** (*str*) - 

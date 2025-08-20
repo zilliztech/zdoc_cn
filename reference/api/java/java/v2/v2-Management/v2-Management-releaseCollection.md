@@ -10,10 +10,10 @@ type: docx
 token: BA9edMrWMosYWFxwTBAcl2WOnff
 sidebar_position: 13
 keywords: 
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
   - zilliz
   - zilliz cloud
   - cloud

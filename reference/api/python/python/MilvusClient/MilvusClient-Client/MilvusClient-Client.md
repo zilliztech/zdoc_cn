@@ -9,10 +9,10 @@ token: M0pgf1TX3lTotndwA7Vc3gJsnAd
 sidebar_position: 2
 sidebar_label: "Client"
 keywords: 
-  - Zilliz database
-  - Unstructured Data
-  - vector database
-  - IVF
+  - vector database example
+  - rag vector database
+  - what is vector db
+  - what are vector databases
   - zilliz
   - zilliz cloud
   - cloud

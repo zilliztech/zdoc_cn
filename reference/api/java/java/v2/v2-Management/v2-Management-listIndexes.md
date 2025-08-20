@@ -10,10 +10,10 @@ type: docx
 token: OyWwdNBG1o2pTQxNDD1cLHcTnwc
 sidebar_position: 9
 keywords: 
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - zilliz
   - zilliz cloud
   - cloud
@@ -56,7 +56,7 @@ listIndexes(ListIndexesReq.builder()
 
 **RETURNS:**
 
-*List\<String>*
+*List&lt;String&gt;*
 
 **EXCEPTIONS:**
 

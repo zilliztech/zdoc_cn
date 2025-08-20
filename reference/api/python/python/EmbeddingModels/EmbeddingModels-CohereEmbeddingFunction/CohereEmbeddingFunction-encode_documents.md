@@ -10,10 +10,10 @@ type: docx
 token: FIyedc51So0onWxtPAjcHFkmnHe
 sidebar_position: 2
 keywords: 
-  - Vector store
-  - open source vector database
-  - Vector index
-  - vector database open source
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud
@@ -40,13 +40,13 @@ encode_documents(
 
 **PARAMETERS:**
 
-- **documents** (*List[str]*)
+- **documents** (*List&#91;str&#93;*)
 
     A list of string values, where each string represents a document that will be passed to the embedding model for encoding. The model will generate an embedding vector for each string in the list.
 
 **RETURN TYPE:**
 
-*List[np.array]*
+*List&#91;np.array&#93;*
 
 **RETURNS:**
 

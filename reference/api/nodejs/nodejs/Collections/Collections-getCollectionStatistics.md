@@ -10,10 +10,10 @@ type: docx
 token: LQMGdRHjKogdeMxekCtcdBLqnNf
 sidebar_position: 13
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - zilliz
   - zilliz cloud
   - cloud
@@ -52,7 +52,7 @@ milvusClient.getCollectionStatistics({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a collection.
 
@@ -62,7 +62,7 @@ milvusClient.getCollectionStatistics({
 
     Setting this to **None** indicates that this operation timeouts when any response returns or error occurs.
 
-**RETURNS** *Promise\<StatisticsResponse>*
+**RETURNS** *Promise\&lt;StatisticsResponse&gt;*
 
 This method returns a promise that resolves to a **StatisticsResponse** object.
 

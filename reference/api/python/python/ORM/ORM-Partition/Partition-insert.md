@@ -10,10 +10,10 @@ type: docx
 token: QXDxdv36FoVgjcxDV1gcDwWXnsd
 sidebar_position: 5
 keywords: 
-  - Serverless vector database
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
+  - rag llm architecture
+  - private llms
+  - nn search
+  - llm eval
   - zilliz
   - zilliz cloud
   - cloud
@@ -49,7 +49,7 @@ insert(
 
 - **data** (*list* | *dict* | *pandas.DataFrame*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The data to insert into the current collection.
 

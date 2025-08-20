@@ -10,10 +10,10 @@ type: docx
 token: XEWvdbuFHoLOo7xKrAJcqip6n5J
 sidebar_position: 10
 keywords: 
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
   - zilliz
   - zilliz cloud
   - cloud

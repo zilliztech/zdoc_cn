@@ -10,10 +10,10 @@ type: docx
 token: DWLXdSCYnoPT4ExktRKceEqLnAd
 sidebar_position: 1
 keywords: 
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
   - zilliz
   - zilliz cloud
   - cloud
@@ -47,13 +47,13 @@ delete(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
 - **ids** (*list* | *str* | *int*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A specific entity ID or a list of entity IDs.
 

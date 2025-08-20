@@ -92,27 +92,27 @@ import Admonition from '@theme/Admonition';
    <tr>
      <td><p><code>L2</code></p></td>
      <td><p>较小的 L2 距离表示更高的相似性。</p></td>
-     <td><p>[0, ∞)</p></td>
+     <td><p>&#91;0, ∞)</p></td>
    </tr>
    <tr>
      <td><p><code>IP</code></p></td>
      <td><p>较大的 IP 距离表示更高的相似性。</p></td>
-     <td><p>[-1, 1]</p></td>
+     <td><p>&#91;-1, 1&#93;</p></td>
    </tr>
    <tr>
      <td><p><code>COSINE</code></p></td>
      <td><p>较大的 cosine 值表示更高的相似性。</p></td>
-     <td><p>[-1, 1]</p></td>
+     <td><p>&#91;-1, 1&#93;</p></td>
    </tr>
    <tr>
      <td><p><code>JACCARD</code></p></td>
      <td><p>较小的 Jaccard 距离表示更高的相似性。</p></td>
-     <td><p>[0, 1]</p></td>
+     <td><p>&#91;0, 1&#93;</p></td>
    </tr>
    <tr>
      <td><p><code>HAMMING</code></p></td>
      <td><p>较小的 Hamming 距离表示更高的相似性。</p></td>
-     <td><p>[0, dim(vector)]</p></td>
+     <td><p>&#91;0, dim(vector)&#93;</p></td>
    </tr>
    <tr>
      <td><p><code>BM25</code></p></td>
@@ -129,7 +129,7 @@ import Admonition from '@theme/Admonition';
 
 ![VFZmbd0ocoNWEXx5zuPcARp3nCe](/img/VFZmbd0ocoNWEXx5zuPcARp3nCe.png)
 
-其中，**a = (a<sub>0</sub>, a<sub>1</sub>,..., a<sub>n-1</sub>)** 和 **b = (b<sub>0</sub>, b<sub>1</sub>,..., b<sub>n-1</sub>)** 表示 *n* 维欧氏空间中的两个点。
+其中，**a = (a&lt;sub&gt;0&lt;/sub&gt;, a&lt;sub&gt;1&lt;/sub&gt;,..., a&lt;sub&gt;n-1&lt;/sub&gt;)** 和 **b = (b&lt;sub&gt;0&lt;/sub&gt;, b&lt;sub&gt;1&lt;/sub&gt;,..., b&lt;sub&gt;n-1&lt;/sub&gt;)** 表示 *n* 维欧氏空间中的两个点。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -161,13 +161,13 @@ import Admonition from '@theme/Admonition';
 
 ## 余弦相似度（COSINE）{#cosine-similarity}
 
-余弦相似度是通过计算两组向量之间的夹角余弦来衡量它们的相似度。可以把这两组向量想象为从同一起点（如 [0,0,...]）出发，但朝向不同的线段。
+余弦相似度是通过计算两组向量之间的夹角余弦来衡量它们的相似度。可以把这两组向量想象为从同一起点（如 &#91;0,0,...&#93;）出发，但朝向不同的线段。
 
-计算两组向量 **A = (a<sub>0</sub>, a<sub>1</sub>,..., a<sub>n-1</sub>)** 和 **B = (b<sub>0</sub>, b<sub>1</sub>,..., b<sub>n-1</sub>)** 之间的余弦相似度，可使用以下公式：
+计算两组向量 **A = (a&lt;sub&gt;0&lt;/sub&gt;, a&lt;sub&gt;1&lt;/sub&gt;,..., a&lt;sub&gt;n-1&lt;/sub&gt;)** 和 **B = (b&lt;sub&gt;0&lt;/sub&gt;, b&lt;sub&gt;1&lt;/sub&gt;,..., b&lt;sub&gt;n-1&lt;/sub&gt;)** 之间的余弦相似度，可使用以下公式：
 
 ![KFqibEhgHoKnmjx8zj1cbfkZnEe](/img/KFqibEhgHoKnmjx8zj1cbfkZnEe.png)
 
-余弦相似度的值总是介于 **[-1, 1]** 之间。比如，两个向量的夹角越接近 **0** 度，余弦相似度越接近 **1**；两个向量的夹角为 **90** 度时，其相似度为 **0**；两个向量的夹角越接近 **180** 度，两个向量相似度越接近 **-1**。余弦值越大，表示两向量之间的夹角越小，意味着它们越相似。
+余弦相似度的值总是介于 **&#91;-1, 1&#93;** 之间。比如，两个向量的夹角越接近 **0** 度，余弦相似度越接近 **1**；两个向量的夹角为 **90** 度时，其相似度为 **0**；两个向量的夹角越接近 **180** 度，两个向量相似度越接近 **-1**。余弦值越大，表示两向量之间的夹角越小，意味着它们越相似。
 
 通过 **1** 减去两向量间的余弦相似度，可以得到它们之间的余弦距离。
 

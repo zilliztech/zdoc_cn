@@ -10,10 +10,10 @@ type: docx
 token: UBbndftiQo2HdOxUNtocIISnnVh
 sidebar_position: 4
 keywords: 
-  - Faiss
-  - Video search
-  - AI Hallucination
-  - AI Agent
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - RAG
   - zilliz
   - zilliz cloud
   - cloud
@@ -54,7 +54,7 @@ milvusClient.dropPartition({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
@@ -70,7 +70,7 @@ milvusClient.dropPartition({
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

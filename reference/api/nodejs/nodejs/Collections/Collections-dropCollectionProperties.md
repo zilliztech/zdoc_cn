@@ -10,10 +10,10 @@ type: docx
 token: EjFMdRFz0ofehXxxCPqc6raSnAg
 sidebar_position: 12
 keywords: 
-  - Zilliz database
-  - Unstructured Data
-  - vector database
-  - IVF
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
   - zilliz
   - zilliz cloud
   - cloud
@@ -53,13 +53,13 @@ milvusClient.dropCollectionProperties({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the target collection.
 
-- **properties** (*string[]*) -
+- **properties** (*string&#91;&#93;*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The properties to change and their expected values in a TypeScript **Record**. Possible values are as follows:
 
@@ -77,7 +77,7 @@ milvusClient.dropCollectionProperties({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

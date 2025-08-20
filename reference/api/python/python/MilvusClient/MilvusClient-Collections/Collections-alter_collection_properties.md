@@ -10,10 +10,10 @@ type: docx
 token: Pdljdj7ysoYg2Jxu7JrcQOB8n5e
 sidebar_position: 3
 keywords: 
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - open source vector db
   - zilliz
   - zilliz cloud
   - cloud
@@ -64,7 +64,7 @@ alter_collection_properties(
 
         Whether to enable partition key isolation. For details, refer to [Use Partition Key](/docs/use-partition-key).
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 

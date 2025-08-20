@@ -10,10 +10,10 @@ type: docx
 token: BapSdVXjQoQXnbxnRYScCagAn1f
 sidebar_position: 5
 keywords: 
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - AI Hallucination
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,7 +45,7 @@ grant(
 
 - **object** (*string*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The type of the object to grant the privilege.
 
@@ -53,7 +53,7 @@ grant(
 
 - **object_name** (*string*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a target object of the type specified in **object**.
 
@@ -61,7 +61,7 @@ grant(
 
 - **privilege** (*string*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the privilege to grant.
 

@@ -10,10 +10,10 @@ type: docx
 token: WRYFdoDe8ofrlDxxTxQcdoJjnAh
 sidebar_position: 8
 keywords: 
-  - private llms
-  - nn search
-  - llm eval
-  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,13 +45,13 @@ upsert(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
-- **data** (*dict* | *list[dict]*) -
+- **data** (*dict* | *list&#91;dict&#93;*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The data to insert or update into the current collection.
 

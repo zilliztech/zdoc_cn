@@ -10,10 +10,10 @@ type: docx
 token: M7pWdbu8foKkJAxY3uBcMfHrnrh
 sidebar_position: 2
 keywords: 
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
   - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,7 +50,7 @@ cohere_rf(
 
     The query string to use for ranking.
 
-- `documents` (*List[str]*)
+- `documents` (*List&#91;str&#93;*)
 
     A list of document strings that will be ranked for the given query.
 
@@ -60,7 +60,7 @@ cohere_rf(
 
 **RETURN TYPE:**
 
-*List[RerankResult]*
+*List&#91;RerankResult&#93;*
 
 **RETURNS:**
 

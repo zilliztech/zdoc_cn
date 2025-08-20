@@ -9,10 +9,10 @@ token: AtkCfVN4Ll6GqMdVJfxcybHanDf
 sidebar_position: 3
 sidebar_label: "Data Import"
 keywords: 
-  - milvus
-  - Zilliz
-  - milvus vector database
-  - milvus db
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - zilliz
   - zilliz cloud
   - cloud

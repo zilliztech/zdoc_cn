@@ -10,10 +10,10 @@ type: docx
 token: BDP4dew9to9tQoxNEMPcBR5xnZb
 sidebar_position: 4
 keywords: 
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
-  - cosine distance
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -61,13 +61,13 @@ writer = RemoteBulkWriter(
 
 - **schema** (*[CollectionSchema](./ORM-CollectionSchema)*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The schema of a target collection to which the rewritten data is to be imported.
 
 - **remote_path** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The path to the directory that is to hold the rewritten data.
 

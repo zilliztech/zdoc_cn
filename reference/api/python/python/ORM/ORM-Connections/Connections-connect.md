@@ -10,10 +10,10 @@ type: docx
 token: KzCXdTVVSoOmkbxuFjsccDlXnff
 sidebar_position: 2
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud
@@ -47,7 +47,7 @@ connect(
 
 - **alias** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A connection alias.
 

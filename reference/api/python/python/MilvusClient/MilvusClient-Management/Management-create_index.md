@@ -10,10 +10,10 @@ type: docx
 token: B3n3db0idoia02xXxJfcONK8nRh
 sidebar_position: 3
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - cosine distance
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,13 +45,13 @@ create_index(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
 - **index_params** (*IndexParams*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     An **IndexParams** object containing a list of **IndexParam** objects.
 

@@ -10,10 +10,10 @@ type: docx
 token: XIIyd3bMzoAVx3xVsoLcnQ2pnKh
 sidebar_position: 14
 keywords: 
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +44,7 @@ List<String> roles = client.listRoles();
 
 **RETURN TYPE:**
 
-*List\<String\>*
+*List\&lt;String\&gt;*
 
 **RETURNS:**
 

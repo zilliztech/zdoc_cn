@@ -10,10 +10,10 @@ type: docx
 token: BqR9dyTk6oOl8BxbZOOcW2Phnsn
 sidebar_position: 2
 keywords: 
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
   - zilliz
   - zilliz cloud
   - cloud
@@ -49,7 +49,7 @@ CollectionSchema(
 
 - **fields** (*list*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A list of **FieldSchema** objects that define the fields in the collection schema.
 

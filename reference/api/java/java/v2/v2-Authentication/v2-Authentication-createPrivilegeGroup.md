@@ -10,10 +10,10 @@ type: docx
 token: MF3tdne4DoEiC0xlAe0ctyxHn9g
 sidebar_position: 2
 keywords: 
-  - rag vector database
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
   - zilliz
   - zilliz cloud
   - cloud

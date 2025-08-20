@@ -9,10 +9,10 @@ token: M6KJfLu4ylTkNsd9DUVcQHmfnqe
 sidebar_position: 3
 sidebar_label: "Collections"
 keywords: 
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud

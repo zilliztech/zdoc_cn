@@ -10,10 +10,10 @@ type: docx
 token: N44ndTSrgoEBx7xCID5cXRS7n1c
 sidebar_position: 5
 keywords: 
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
+  - cosine distance
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
   - zilliz
   - zilliz cloud
   - cloud
@@ -57,13 +57,13 @@ utility.create_user(
 
 - **user** (*string*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the new user to create. The value should start with a letter and can only contain underline, letters and numbers.
 
 - **password** (*string*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The corresponding password to the new user to create. 
 

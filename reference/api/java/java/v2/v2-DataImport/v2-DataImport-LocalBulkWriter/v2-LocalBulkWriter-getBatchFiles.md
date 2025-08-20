@@ -10,10 +10,10 @@ type: docx
 token: BLFEde4BuoCjTSxjYSUcZerEnOb
 sidebar_position: 4
 keywords: 
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
   - zilliz
   - zilliz cloud
   - cloud
@@ -46,7 +46,7 @@ localBulkWriter.getBatchFiles()
 
 **RETURNS TYPE:**
 
-*List\<List\<String>*
+*List\&lt;List\&lt;String&gt;&gt;*
 
 ## Example
 

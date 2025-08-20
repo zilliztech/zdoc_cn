@@ -93,7 +93,9 @@ curl --request POST \
 
 ## 恢复运行集群{#resume-cluster}
 
-Free 和 Serverless 集群在 7 天不活跃后会自动挂起，您可以随时恢复运行集群。
+Free 集群在 7 天不活跃后会自动挂起，您可以随时恢复运行集群。
+
+Serverless 集群不支持挂起和恢复运行的操作。
 
 Dedicated 集群在手动挂起后也按需手动恢复运行。
 

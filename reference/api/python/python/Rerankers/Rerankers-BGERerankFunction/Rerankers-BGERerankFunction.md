@@ -10,10 +10,10 @@ type: docx
 token: GxAZd9O9gozzhExhMHWcMnXPngh
 sidebar_position: 1
 keywords: 
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
+  - Embedding model
   - zilliz
   - zilliz cloud
   - cloud

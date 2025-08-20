@@ -10,10 +10,10 @@ type: docx
 token: P2n8d2wQtoK8YqxnccocmNwRnKb
 sidebar_position: 4
 keywords: 
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
-  - Embedding model
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
   - zilliz
   - zilliz cloud
   - cloud
@@ -47,13 +47,13 @@ cohere_ef(
 
 **PARAMETERS:**
 
-- **texts** (*List[str]*)
+- **texts** (*List&#91;str&#93;*)
 
     A list of string values, where each string represents text that will be passed to the embedding model for encoding. The model will generate an embedding vector for each string in the list.
 
 **RETURN TYPE:**
 
-*List[np.array]*
+*List&#91;np.array&#93;*
 
 **RETURNS:**
 

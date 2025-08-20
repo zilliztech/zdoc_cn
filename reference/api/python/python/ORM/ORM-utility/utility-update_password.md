@@ -10,10 +10,10 @@ type: docx
 token: SGjed7w9toewDlxmXHKc7BFancf
 sidebar_position: 41
 keywords: 
-  - Audio similarity search
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
   - zilliz
   - zilliz cloud
   - cloud
@@ -46,13 +46,13 @@ update_password(
 
 - **user** (*str*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The specific user whose password is to be reset.
 
 - **old_password** (*str*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The original password for the specified user.
 
@@ -60,7 +60,7 @@ update_password(
 
 - **new_password** (*str*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The new password for the specified user. 
 

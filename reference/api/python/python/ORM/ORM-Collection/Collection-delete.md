@@ -10,10 +10,10 @@ type: docx
 token: TJMVdi4U2oBFnAxO95jctzVAnzg
 sidebar_position: 6
 keywords: 
-  - IVF
-  - knn
-  - Image Search
-  - LLMs
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +44,7 @@ delete(
 
 - **expr** (*string*) -
 
-    **[REQUIRED]** 
+    **&#91;REQUIRED&#93;** 
 
     A boolean expression to filter the entities to delete.
 

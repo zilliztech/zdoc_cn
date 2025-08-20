@@ -79,7 +79,7 @@ Zilliz Cloud 提供以下 CU 类型：性能型 CU、容量型 CU、存储扩展
 
 - 数据容量是容量型 CU  的四倍。
 
-如需选择存储扩展型 CU，请[联系销售](https://zilliz.com.cn/contact-sales)。
+如需选择存储扩展型 CU，集群规格需至少为 4 CU。
 
 ## 选择最优的 CU 类型{#select-an-optimal-cu-type}
 

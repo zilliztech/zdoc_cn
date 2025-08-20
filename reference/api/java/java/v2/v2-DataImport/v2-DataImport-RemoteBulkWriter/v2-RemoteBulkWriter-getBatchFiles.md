@@ -10,10 +10,10 @@ type: docx
 token: YlpQdEUnKoFR3xxizt2cCV8UnZb
 sidebar_position: 4
 keywords: 
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
-  - open source vector database
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
   - zilliz
   - zilliz cloud
   - cloud
@@ -46,7 +46,7 @@ remoteBulkWriter.getBatchFiles()
 
 **RETURNS TYPE:**
 
-*List\<List\<String>*
+*List\&lt;List\&lt;String&gt;&gt;*
 
 ## Example
 

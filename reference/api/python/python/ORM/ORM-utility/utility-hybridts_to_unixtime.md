@@ -10,10 +10,10 @@ type: docx
 token: HbMMdqtQGoQqwixsyrjcTTh0nu5
 sidebar_position: 20
 keywords: 
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud
@@ -42,7 +42,7 @@ hybridts_to_unixtime(
 
 - **hybridts** (*int*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A hybrid timestamp.
 

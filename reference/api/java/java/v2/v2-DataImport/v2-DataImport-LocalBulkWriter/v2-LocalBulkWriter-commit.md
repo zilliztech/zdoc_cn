@@ -10,10 +10,10 @@ type: docx
 token: OUhTdWnXBoHqKdxTA0HcdMY5n4b
 sidebar_position: 3
 keywords: 
-  - Unstructured Data
-  - vector database
-  - IVF
-  - knn
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - milvus lite
   - zilliz
   - zilliz cloud
   - cloud

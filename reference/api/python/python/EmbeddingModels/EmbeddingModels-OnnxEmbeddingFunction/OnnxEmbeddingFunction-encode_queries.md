@@ -10,10 +10,10 @@ type: docx
 token: ZkWBdbMZkoBjT1xe4qDcTBOHnGx
 sidebar_position: 2
 keywords: 
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud
@@ -40,13 +40,13 @@ encode_queries(
 
 **PARAMETERS:**
 
-- **queries** (*List[str]*)
+- **queries** (*List&#91;str&#93;*)
 
     A list of string values, where each string represents a query that will be passed to the embedding model for encoding. The model will generate an embedding vector for each string in the list.
 
 **RETURN TYPE:**
 
-*List[np.array]*
+*List&#91;np.array&#93;*
 
 **RETURNS:**
 

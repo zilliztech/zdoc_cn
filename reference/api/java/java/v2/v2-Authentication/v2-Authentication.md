@@ -6,13 +6,13 @@ notebook: false
 description: "Methods related to implement role-based access control to your resources. | Java | v2"
 type: folder
 token: U16KfBnGVlNp5edR7DycvFF1nfy
-sidebar_position: 7
+sidebar_position: 8
 sidebar_label: "Authentication"
 keywords: 
-  - Zilliz
-  - milvus vector database
-  - milvus db
-  - milvus vector db
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
   - zilliz
   - zilliz cloud
   - cloud

@@ -10,10 +10,10 @@ type: docx
 token: BThKd2QThoQKGPx1ofKczmADnC6
 sidebar_position: 2
 keywords: 
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -48,7 +48,7 @@ compact(
 
     The name of the target collection.
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 

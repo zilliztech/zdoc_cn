@@ -54,7 +54,7 @@ Zilliz Cloud 是一款内存密集型的数据库系统。可用内存的大小�
    <tr>
      <th rowspan="2"><p>Mmap 对象</p></th>
      <th colspan="3"><p>Dedicated 集群</p></th>
-     <th rowspan="2"><p>Free 集群\</br></p><p>Serverless 集群</p></th>
+     <th rowspan="2"><p>Free 集群&lt;/br&gt;</p><p>Serverless 集群</p></th>
    </tr>
    <tr>
      <td><p>性能型 CU</p></td>

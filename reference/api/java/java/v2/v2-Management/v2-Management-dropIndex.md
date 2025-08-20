@@ -10,10 +10,10 @@ type: docx
 token: KdFEdP8ZToYvZ1xmmQgcE62unUf
 sidebar_position: 4
 keywords: 
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud

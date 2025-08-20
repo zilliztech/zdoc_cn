@@ -10,10 +10,10 @@ type: docx
 token: R3gEdUOSfo6JzMxwUsTcevNHn9g
 sidebar_position: 2
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,7 +50,7 @@ jina_rf(
 
     The query string to use for ranking.
 
-- `documents` (*List[str]*)
+- `documents` (*List&#91;str&#93;*)
 
     A list of document strings that will be ranked for the given query.
 
@@ -60,7 +60,7 @@ jina_rf(
 
 **RETURN TYPE:**
 
-*List[RerankResult]*
+*List&#91;RerankResult&#93;*
 
 **RETURNS:**
 

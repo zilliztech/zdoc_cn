@@ -9,10 +9,10 @@ token: YIWifhm0HlwT5ldC40fc8tAOnXd
 sidebar_position: 7
 sidebar_label: "Client"
 keywords: 
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
   - zilliz
   - zilliz cloud
   - cloud

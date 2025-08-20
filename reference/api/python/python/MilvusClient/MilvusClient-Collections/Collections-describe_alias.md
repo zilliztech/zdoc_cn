@@ -10,10 +10,10 @@ type: docx
 token: HN7nddgueo3scIxmPXAcpjkFnDf
 sidebar_position: 8
 keywords: 
-  - IVF
-  - knn
-  - Image Search
-  - LLMs
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud
@@ -43,7 +43,7 @@ describe_alias(
 
 - **alias** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The alias of a collection. 
 

@@ -10,10 +10,10 @@ type: docx
 token: OtrZdy7OtoC9N9xb8TjcCtM7nfc
 sidebar_position: 2
 keywords: 
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - zilliz
   - zilliz cloud
   - cloud
@@ -54,25 +54,25 @@ alterCollectionField(AlterCollectionFieldReq.builder()
 
 - `collectionName(String collectionName)`
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the target collection.
 
 - `fieldName(String fieldName)`
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the target field.
 
 - `properties(Map<String, String> properties)`
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The properties to modify and their expected values. Note that the property values should be strings. Available database properties are as follows:
 
     - **max_length** -
 
-        The maximum byte length for strings allowed to be inserted. Note that multibyte characters (e.g., Unicode characters) may occupy more than one byte each, so ensure the byte length of inserted strings does not exceed the specified limit. Value range: [1, 65,535].
+        The maximum byte length for strings allowed to be inserted. Note that multibyte characters (e.g., Unicode characters) may occupy more than one byte each, so ensure the byte length of inserted strings does not exceed the specified limit. Value range: &#91;1, 65,535&#93;.
 
         This is mandatory for a varchar field.
 

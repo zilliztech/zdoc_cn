@@ -10,10 +10,10 @@ type: docx
 token: HQiHd82orov0XvxAzLWcl5xRnzc
 sidebar_position: 31
 keywords: 
-  - private llms
-  - nn search
-  - llm eval
-  - Sparse vs Dense
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,11 +45,11 @@ loading_progress(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a collection.
 
-- **partition_names** (*list[str]*) -
+- **partition_names** (*list&#91;str&#93;*) -
 
     A list of partition names.
 

@@ -10,10 +10,10 @@ type: docx
 token: JXNXdQuwhoYmZQxSohNcdxtwnzh
 sidebar_position: 7
 keywords: 
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +44,7 @@ list_grant(
 
 - **object** (*str*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The type of the object to grant the privilege.
 
@@ -52,7 +52,7 @@ list_grant(
 
 - **object_name** (*str*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a target object of the type specified in **object**.
 

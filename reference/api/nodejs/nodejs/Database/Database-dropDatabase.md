@@ -10,10 +10,10 @@ type: docx
 token: Ja99dnnaOoncwbx2zIPc4PjunXx
 sidebar_position: 3
 keywords: 
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
   - zilliz
   - zilliz cloud
   - cloud
@@ -63,7 +63,7 @@ milvusClient.dropDatabase({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise |\<ResStatus>*
+**RETURNS** *Promise |&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

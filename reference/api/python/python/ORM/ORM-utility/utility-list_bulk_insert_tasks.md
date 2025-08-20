@@ -10,10 +10,10 @@ type: docx
 token: T1CGdXeVkoG2yAxkualc1jVonRb
 sidebar_position: 23
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud
@@ -49,7 +49,7 @@ list_bulk_insert_tasks(
 
     The value defaults to **0**, indicating that no limit applies. 
 
-- **collection_name** (*list[str]*) -
+- **collection_name** (*list&#91;str&#93;*) -
 
     A list of collection names.
 

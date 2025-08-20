@@ -10,10 +10,10 @@ type: docx
 token: H9IFdpWWUouzXOxKlx9cImP8nnd
 sidebar_position: 1
 keywords: 
-  - milvus vector db
-  - Zilliz Cloud
-  - what is milvus
-  - milvus database
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,13 +44,13 @@ add_field(
 
 - **field_name** (*string*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the field.
 
 - **datatype** (*[DataType](./Collections-DataType)*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The data type of the field.
 
@@ -88,7 +88,7 @@ add_field(
 
         - **DataType.ARRAY**
 
-    - Vector fields: Select **DataType.FLOAT_VECTOR**, **DataType.BINARY_VECTOR** <sup>(Beta)</sup>, **DataType.FLOAT16_VECTOR** <sup>(Beta)</sup>, **DataType.BFLOAT16_VECTOR** <sup>(Beta)</sup>, or **DataType.SPARSE_FLOAT_VECTOR** <sup>(Beta)</sup>.
+    - Vector fields: Select **DataType.FLOAT_VECTOR**, **DataType.BINARY_VECTOR** &lt;sup&gt;(Beta)&lt;/sup&gt;, **DataType.FLOAT16_VECTOR** &lt;sup&gt;(Beta)&lt;/sup&gt;, **DataType.BFLOAT16_VECTOR** &lt;sup&gt;(Beta)&lt;/sup&gt;, or **DataType.SPARSE_FLOAT_VECTOR** &lt;sup&gt;(Beta)&lt;/sup&gt;.
 
 - **is_primary** (*bool*) -
 
@@ -105,7 +105,7 @@ add_field(
 
 - **max_length** (*int*) -
 
-    The maximum byte length for strings allowed to be inserted. Note that multibyte characters (e.g., Unicode characters) may occupy more than one byte each, so ensure the byte length of inserted strings does not exceed the specified limit. Value range: [1, 65,535].
+    The maximum byte length for strings allowed to be inserted. Note that multibyte characters (e.g., Unicode characters) may occupy more than one byte each, so ensure the byte length of inserted strings does not exceed the specified limit. Value range: &#91;1, 65,535&#93;.
 
     This is mandatory for a **DataType.VARCHAR** field.
 

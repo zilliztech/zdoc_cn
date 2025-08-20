@@ -10,10 +10,10 @@ type: docx
 token: OnIpdTTSOoV06KxhhAkcFQCKnWd
 sidebar_position: 5
 keywords: 
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
-  - vectordb
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
   - zilliz
   - zilliz cloud
   - cloud
@@ -121,7 +121,7 @@ A **QueryResp object representing specific query results with the specified outp
 
 **PARAMETERS:**
 
-- queryResults(List\<QueryResp.QueryResult\>)
+- queryResults(List\&lt;QueryResp.QueryResult\&gt;)
 
 A list of QueryResult objects with each QueryResult representing a queried entity.
 

@@ -10,10 +10,10 @@ type: docx
 token: E2XJd4ZHvoc7QlxyrEJcrOJOn9f
 sidebar_position: 6
 keywords: 
-  - Sparse vs Dense
   - Dense vector
   - Hierarchical Navigable Small Worlds
   - Dense embedding
+  - Faiss vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -56,9 +56,9 @@ milvusClient.flush({
 
     The name of the target database to which the target collections belong.
 
-- **collection_names** (*string[]*) -
+- **collection_names** (*string&#91;&#93;*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A list of the target collection names.
 
@@ -68,7 +68,7 @@ milvusClient.flush({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<FlushResult>*
+**RETURNS** *Promise\&lt;FlushResult&gt;*
 
 This method returns a promise that resolves to a **FlushResult** object.
 

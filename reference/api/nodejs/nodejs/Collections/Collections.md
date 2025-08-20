@@ -9,10 +9,10 @@ token: SU7xfa1bal8yS0dioBmcCncYn5c
 sidebar_position: 1
 sidebar_label: "Collections"
 keywords: 
-  - Image Search
-  - LLMs
-  - Machine Learning
-  - RAG
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
   - zilliz
   - zilliz cloud
   - cloud

@@ -26,6 +26,7 @@ sidebar_position: 3
 - [如何为创建的 Collection 设置存留时间（TTL）属性？](#how-to-set-the-ttl-time-to-live-property-of-a-created-collection)
 - [1 个 Collection 中最多可以添加多少个字段？](#is-there-any-limit-to-the-number-of-fields-i-can-add-in-a-collection)
 - [我可以修改 Collection 的 Shard 数量吗？](#can-i-modify-the-number-of-shards-in-a-collection)
+- [Partition 的命名是否有规则限制？](#is-there-any-rules-for-partition-names)
 
 ## 问答
 
@@ -143,3 +144,7 @@ collection.set_properties(properties={"collection.ttl.seconds": 1800})
     - 点击**复制**
 
 1. 复制的 Collection 创建完成后，请在您的应用代码中切换使用新的 Collection。
+
+### Partition 的命名是否有规则限制？ \{#is-there-any-rules-for-partition-names}
+
+是。Partition 名称只能包含字母、数字、下划线（“_”）和连字符（“-”），且不能以连数字或连字符开头。

@@ -10,10 +10,10 @@ type: docx
 token: RXi3dgtNYogU0cxmTsgcdT72nsc
 sidebar_position: 29
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
   - zilliz
   - zilliz cloud
   - cloud

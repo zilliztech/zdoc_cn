@@ -10,10 +10,10 @@ type: docx
 token: G4Ftde3kxoHAJbxVNXncI7mpngb
 sidebar_position: 1
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +44,7 @@ create_database(
 
 - **db_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     Name of the database to be created.
 

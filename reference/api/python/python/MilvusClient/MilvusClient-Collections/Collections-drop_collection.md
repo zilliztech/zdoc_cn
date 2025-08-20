@@ -10,10 +10,10 @@ type: docx
 token: QNB4d2q2ZorIApxpnzqczW2HnL7
 sidebar_position: 11
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
   - zilliz
   - zilliz cloud
   - cloud
@@ -40,7 +40,7 @@ drop_collection(collection_name: str) -> None
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 

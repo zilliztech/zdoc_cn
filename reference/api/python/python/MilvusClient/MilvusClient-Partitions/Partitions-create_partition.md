@@ -10,10 +10,10 @@ type: docx
 token: I6hvdlYUuoUaw3xWqSnce4Fin9g
 sidebar_position: 1
 keywords: 
-  - RAG
-  - NLP
-  - Neural Network
-  - Deep Learning
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,13 +44,13 @@ create_partition(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
 - **partition_name** (*string*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the partition to create.
 

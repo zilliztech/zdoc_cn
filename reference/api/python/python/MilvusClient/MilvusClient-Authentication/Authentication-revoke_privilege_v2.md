@@ -10,10 +10,10 @@ type: docx
 token: WazKdTlcOoYoBWxIJEEc7gFMnfC
 sidebar_position: 18
 keywords: 
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
-  - knn algorithm
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud
@@ -48,13 +48,13 @@ revoke_privilege_v2(
 
 - **role_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the role to revoke privileges from.
 
 - **privilege** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the privilege to revoke. 
 
@@ -62,7 +62,7 @@ revoke_privilege_v2(
 
 - **collection_name** (*str*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a collection. To revoke privileges regarding all collections in the current database, set this parameter to `*`. 
 

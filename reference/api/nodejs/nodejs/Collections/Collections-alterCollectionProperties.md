@@ -10,10 +10,10 @@ type: docx
 token: EHPGdbCP5o7UzCxlDnRc6y5Pn1c
 sidebar_position: 3
 keywords: 
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
   - zilliz
   - zilliz cloud
   - cloud
@@ -53,13 +53,13 @@ milvusClient.alterCollectionProperties({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the target collection to reassign an alias to.
 
 - **properties** (*Properties*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The properties to change and their expected values in a TypeScript **Record**. Possible values are as follows:
 
@@ -77,7 +77,7 @@ milvusClient.alterCollectionProperties({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

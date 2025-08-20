@@ -10,10 +10,10 @@ type: docx
 token: FGZadH85KoLEhRxkbLxcc1zbn4c
 sidebar_position: 1
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
   - zilliz
   - zilliz cloud
   - cloud

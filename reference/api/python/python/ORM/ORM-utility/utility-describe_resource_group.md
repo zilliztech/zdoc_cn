@@ -10,10 +10,10 @@ type: docx
 token: HScCdxLNJotPCcxb4AZcxsNJn9c
 sidebar_position: 7
 keywords: 
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +44,7 @@ describe_resource_group(
 
 - **name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the resource group to describe.
 

@@ -10,10 +10,10 @@ type: docx
 token: XgfcdpBWCof3pfxhUudcRZajnPc
 sidebar_position: 17
 keywords: 
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
   - zilliz
   - zilliz cloud
   - cloud

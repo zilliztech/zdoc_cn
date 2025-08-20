@@ -10,10 +10,10 @@ type: docx
 token: Qbntdds6XoByxcxrG1acL7IxnQe
 sidebar_position: 16
 keywords: 
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
   - zilliz
   - zilliz cloud
   - cloud

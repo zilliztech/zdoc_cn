@@ -36,7 +36,7 @@ sidebar_position: 7
 
 ### 什么是 vCU？ \{#what-is-a-vCU-how-does-it-get-calculated}
 
-vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、upsert、delete）所消耗资源的基本单位。读取和写入的数据量单位会由 GB 折算为 vCU。详情请参考[了解费用](./understand-cost#serverless-clusters)。
+vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、upsert、delete）所消耗资源的基本单位。读取和写入的数据量单位会由 GB 折算为 vCU。详情请参考[了解费用](./understand-cost_1#serverless-clusters)。
 
 ### 如何查看订阅的 Zilliz Cloud 版本？ \{#how-can-i-know-which-plan-i-am-on}
 
@@ -50,7 +50,7 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
 
 - 如果您需要存储大量数据，但对吞吐量和延迟的要求较低，建议选择容量型 CU。
 
-- 如果您需要存储海量数据且追求性价比、对延时要求较低，建议选择存储扩展型 CU。如需使用存储扩展型 CU，[请联系销售](https://zilliz.com.cn/contact-sales)。
+- 如果您需要存储海量数据且追求性价比、对延时要求较低，建议选择存储扩展型 CU。如需选择存储拓展型 CU，集群规格需至少为 4 CU。
 
 ### 我的数据需要使用多少 CU？ \{#how-many-cus-do-i-need-for-a-given-collection}
 

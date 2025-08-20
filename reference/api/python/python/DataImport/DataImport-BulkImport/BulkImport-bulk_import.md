@@ -10,10 +10,10 @@ type: docx
 token: RFSCdiUYGouQrtx8c1RczPVvnmf
 sidebar_position: 1
 keywords: 
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
@@ -49,7 +49,7 @@ bulk_import(
 
 - **url** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The endpoint URL of your Zilliz Cloud cluster. 
 
@@ -64,13 +64,13 @@ bulk_import(
 
 - **api_key** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A valid Zilliz Cloud API key with sufficient permissions to manipulate the cluster.
 
 - **object_url** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The URL of your data files in one of your block storage buckets. The following are some examples of some renowned block storage services:
 
@@ -84,19 +84,19 @@ bulk_import(
 
 - **access_key** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The access key that is used to authenticate access to your data files.
 
 - **secret_key** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The secret key that is used to authenticate access to your data files.
 
 - **cluster_id** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The instance ID of the target cluster of this operation.
 

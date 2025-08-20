@@ -10,10 +10,10 @@ type: docx
 token: BQKPdDd5xo8OPgxoXorcMxk0nVb
 sidebar_position: 14
 keywords: 
-  - vector database example
-  - rag vector database
-  - what is vector db
-  - what are vector databases
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
   - zilliz
   - zilliz cloud
   - cloud

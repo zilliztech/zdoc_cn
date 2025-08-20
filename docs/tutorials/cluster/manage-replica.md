@@ -36,7 +36,7 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 ## 设置按量计费集群 Replica{#configure-replicas-for-usage-based-cluster}
 
-设置 Replica 的操作会影响集群每月的 CU 费用。存储费用不会受到影响。更多详情，请参考[预估费用](./understand-cost)。
+设置 Replica 的操作会影响集群每月的 CU 费用。存储费用不会受到影响。更多详情，请参考[预估费用](./understand-cost_1)。
 
 ### 使用限制{#limits}
 
@@ -122,7 +122,7 @@ curl --request POST \
 <Admonition type="info" icon="📘" title="说明">
 
 <p>如果您的组织现金余额不足，请先进行现金充值（对公转账）。详情请见<a href="./advance-pay">现金充值（对公转账）</a>。</p>
-<p>充值成功后，您可以前往<strong>费用中心>订单</strong>页支付订单。详情请见<a href="./manage-order">管理订单</a>。</p>
+<p>充值成功后，您可以前往<strong>费用中心&gt;订单</strong>页支付订单。详情请见<a href="./manage-order">管理订单</a>。</p>
 <p>订单生成后 7 天内未完成支付，系统将自动取消订单。如仍需修改包年包月集群 Replica 数量，请重新完成步骤 1 的操作并支付新订单。</p>
 
 </Admonition>

@@ -10,10 +10,10 @@ type: docx
 token: UUJWdoEnjoXx69xahsScdMVSnzf
 sidebar_position: 10
 keywords: 
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,7 +45,7 @@ revoke(
 
 - **object** (*string*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The type of the object to grant the privilege.
 
@@ -53,7 +53,7 @@ revoke(
 
 - **object_name** (*string*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a target object of the type specified in **object**.
 
@@ -61,7 +61,7 @@ revoke(
 
 - **privilege** (*string*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the privilege to grant.
 

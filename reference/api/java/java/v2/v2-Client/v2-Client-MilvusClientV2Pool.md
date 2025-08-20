@@ -10,10 +10,10 @@ type: docx
 token: UrjHd9KZKo1Rlfxfj8AcmXNinlg
 sidebar_position: 2
 keywords: 
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
-  - cosine distance
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
   - zilliz
   - zilliz cloud
   - cloud

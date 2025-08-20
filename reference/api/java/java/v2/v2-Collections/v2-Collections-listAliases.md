@@ -10,10 +10,10 @@ type: docx
 token: RvZDdxU1howmQ7x2V31c8eC7nJb
 sidebar_position: 19
 keywords: 
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,7 +50,7 @@ A **ListAliasResp** object containing a list of aliases for the specified collec
 
 **PARAMETERS:**
 
-- **alias** (*List\<String\>*)
+- **alias** (*List\&lt;String\&gt;*)
 
     A list of strings containing the aliases.
 

@@ -58,16 +58,28 @@ Zilliz Cloud 控制台中的**指标**页签展示了各类集群指标图表。
      <td><p>-</p></td>
    </tr>
    <tr>
-     <td><p>CU 计算资源</p></td>
+     <td><p>Query Node CU 计算资源</p></td>
      <td><p>%</p></td>
      <td><p>相对于 CU 总计算能力的已使用计算能力的度量。</p><p>该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
-     <td><p><strong>70%-80%</strong>：检查服务状态并准备<a href="./manage-cluster">扩容</a>。 </p><p><strong>> 90%</strong>：立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p></td>
+     <td><p><strong>70%-80%</strong>：检查服务状态并准备<a href="./manage-cluster">扩容</a>。 </p><p><strong>&gt; 90%</strong>：立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p></td>
    </tr>
    <tr>
-     <td><p>CU 加载容量</p></td>
+     <td><p>Query Node CU 加载容量</p></td>
      <td><p>%</p></td>
      <td><p>相对于 CU 总容量的已使用容量的度量。</p><p>该指标仅适用于 <strong>Free</strong>, <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
-     <td><p><strong>70%-80%</strong>：检查服务状态并准备<a href="./manage-cluster">扩容</a>。 </p><p><strong>> 90%</strong>：立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p><p><strong>100%</strong>：当 CU 加载容量达到 100% 时，您将无法向集群写入数据。请立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p></td>
+     <td><p><strong>70%-80%</strong>：检查服务状态并准备<a href="./manage-cluster">扩容</a>。 </p><p><strong>&gt; 90%</strong>：立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p><p><strong>100%</strong>：当 CU 加载容量达到 100% 时，您将无法向集群写入数据。请立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p></td>
+   </tr>
+   <tr>
+     <td><p>Query Node CU 规格总数</p></td>
+     <td><p>个</p></td>
+     <td><p>当前集群中 Query Node 的 CU 规格总数。该数值可以通过集群 CU 规格 × Replica 数量计算得出。 </p><p>例如，如果集群的 CU 规格为 2，Replica 数量为 2，则此处显示的Query Node CU 规格总数为 4。</p><p>该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
+     <td><p>监控该指标，可以识别 Query Node CU 的<a href="./scale-cluster">扩缩容</a>事件。</p></td>
+   </tr>
+   <tr>
+     <td><p>Replica 数量</p></td>
+     <td><p>个</p></td>
+     <td><p>当前集群中的 Replica 数量。</p><p>该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
+     <td><p>监控该指标，可以识别 Replica 的<a href="./manage-replica">扩缩容</a>事件。</p></td>
    </tr>
    <tr>
      <td><p>存储用量</p></td>
@@ -82,15 +94,15 @@ Zilliz Cloud 控制台中的**指标**页签展示了各类集群指标图表。
      <td></td>
    </tr>
    <tr>
-     <td><p>读请求 QPS/VPS</p></td>
-     <td><p>QPS/VPS</p></td>
-     <td><p><strong>QPS</strong>：每秒读取请求（search 和 query）的数量。</p><p><strong>VPS</strong>：每秒向量读取请求（search）的数量。VPS 不适用于 query 请求，因为 query 操作不涉及向量。</p></td>
+     <td><p>读请求 QPS/ Search NQ</p></td>
+     <td><p>-</p></td>
+     <td><p><strong>QPS</strong>：每秒读取请求（search 和 query）的数量。</p><p><strong>Search NQ</strong>：每秒搜索（search）请求中携带的查询向量数量。Search NQ 不适用于 query 请求，因为 query 操作不涉及向量。</p></td>
      <td><p>有关系统性能监控，请参阅<a href="https://zilliz.com.cn/vector-database-benchmark-tool?database=ZillizCloud,Milvus,PgVector,ElasticCloud,Pinecone,QdrantCloud,WeaviateCloud&dataset=medium&filter=none,low,high">向量数据库性能测试工具</a>。</p></td>
    </tr>
    <tr>
-     <td><p>写请求 QPS/VPS</p></td>
-     <td><p>QPS/VPS</p></td>
-     <td><p><strong>QPS</strong>：每秒写入请求（insert、bulk insert、upsert 和 delete）的数量。</p><p><strong>VPS</strong>：每秒向量写入请求（insert、bulk insert、upsert 和 delete）的数量。</p></td>
+     <td><p>写请求 QPS/ 每秒写请求 Entity 数量</p></td>
+     <td><p>-</p></td>
+     <td><p><strong>QPS</strong>：每秒写入请求（insert、bulk insert、upsert 和 delete）的数量。</p><p><strong>每秒写请求 Entity 数量</strong>：每秒向量写入请求（insert、bulk insert、upsert 和 delete）的数量。</p></td>
      <td><p>有关系统性能监控，请参阅<a href="https://zilliz.com.cn/vector-database-benchmark-tool?database=ZillizCloud,Milvus,PgVector,ElasticCloud,Pinecone,QdrantCloud,WeaviateCloud&dataset=medium&filter=none,low,high">向量数据库性能测试工具</a>。</p></td>
    </tr>
    <tr>
@@ -150,14 +162,14 @@ Zilliz Cloud 控制台中的**指标**页签展示了各类集群指标图表。
    <tr>
      <td><p>Entity 数量</p></td>
      <td><p>个</p></td>
-     <td><p>集群中已插入的 Entity 总数。</p><p>在右侧扩展的下拉菜单中选择指定的 collection，将显示该 collection 中已插入的 entity 数量。</p></td>
+     <td><p>集群中通过 Insert 和 Bulk Insert 操作插入的 Entity 总数。</p><p>在右侧扩展的下拉菜单中选择指定的 collection，将显示该 collection 中已插入的 entity 数量。</p></td>
      <td><p>-</p></td>
    </tr>
    <tr>
-     <td><p>已加载 Entity 数量</p></td>
+     <td><p>已加载 Entity 数量近似值</p></td>
      <td><p>个</p></td>
-     <td><p>集群中已加载的 Entity 数量。</p><p>在右侧扩展的下拉菜单中选择指定的 collection，将显示该 collection 中已加载的 entity 数量。</p><p>该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
-     <td><p>-</p></td>
+     <td><p>集群中已加载 Entity 数量的近似值。</p><p>在右侧扩展的下拉菜单中选择指定的 collection，将显示该 collection 中已加载的 entity 数量。</p><p>该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
+     <td><p>如需查看精确、实时的 Entity 计数，请参考 Collection 详情页中的“已加载 Entity 数量”或者使用 <a href="/docs/single-vector-search#use-count-as-output-field">count(*)</a>。</p></td>
    </tr>
    <tr>
      <td><p>未加载的 Collection 数量</p></td>

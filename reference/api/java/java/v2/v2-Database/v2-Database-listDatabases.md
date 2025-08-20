@@ -10,10 +10,10 @@ type: docx
 token: IHoodknUJohFAbxMFg3c0q8un6f
 sidebar_position: 6
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - nn search
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
   - zilliz
   - zilliz cloud
   - cloud

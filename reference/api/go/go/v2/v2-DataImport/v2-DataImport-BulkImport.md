@@ -52,8 +52,6 @@ func BulkImport(ctx context.Context, option *BulkImportOption) (*BulkImportRespo
 
 This is a struct type. You can use `NewCloudBulkImportOption()` to get its concrete implementation.
 
-\</include target="zilliz">
-
 ### NewCloudBulkImportOption
 
 The signature of `NewCloudBulkImportOption()` is as follows:
@@ -70,7 +68,7 @@ func NewCloudBulkImportOption(uri string, collectionName string, apiKey string, 
    </tr>
    <tr>
      <td><p><code>uri</code></p></td>
-     <td><p>The endpoint URL of the Zilliz Cloud Data Plane, which should be one of the follows:</p><ul><li><p><code>https://api.cloud.zilliz.com</code></p></li><li><p><code>https://api.cloud.zilliz.com.cn</code></p></li></ul></td>
+     <td><p>The endpoint URL of the Zilliz Cloud Data Plane, which should be one of the follows:</p><ul><li><p><code><i>http</i>s://api.cloud.zilliz.com</code></p></li><li><p><code>https://api.cloud.zilliz.com.cn</code></p></li></ul></td>
      <td><p><code>string</code></p></td>
    </tr>
    <tr>
@@ -85,7 +83,7 @@ func NewCloudBulkImportOption(uri string, collectionName string, apiKey string, 
    </tr>
    <tr>
      <td><p><code>objectURL</code></p></td>
-     <td><p>The URL of your data files in one of your block storage buckets. The following are some examples of renowned block storage services:</p><ul><li><p>Google Cloud Storage</p><p><code>gs://\{bucket-name}/\{object-path}/</code></p></li><li><p>AWS S3</p><p><code>s3://\{bucket-name}/\{object-path}/</code></p><p>For details, refer to <a href="/docs/data-import-storage-options">Storage Options</a>.</p></li></ul></td>
+     <td><p>The URL of your data files in one of your block storage buckets. The following are some examples of renowned block storage services:</p><ul><li><p>Google Cloud Storage</p><p><code>gs://&lt;bucket-name&gt;/&lt;object-path&gt;/</code></p></li><li><p>AWS S3</p><p><code>s3://&lt;bucket-name&gt;/&lt;object-path&gt;/</code></p><p>For details, refer to <a href="/docs/data-import-storage-options">Storage Options</a>.</p></li></ul></td>
      <td><p><code>string</code></p></td>
    </tr>
    <tr>
@@ -133,8 +131,6 @@ func (opt *BulkImportOption) WithAPIKey(key string) *BulkImportOption
      <td><p><code>string</code></p></td>
    </tr>
 </table>
-
-\</include>
 
 ### WithPartition
 
@@ -207,18 +203,7 @@ type BulkImportResponse struct {
 
 ## Example
 
-\</include target="milvus">
-
 ```go
 
 ```
 
-\</include>
-
-\</include target="zilliz">
-
-```go
-
-```
-
-\</include>

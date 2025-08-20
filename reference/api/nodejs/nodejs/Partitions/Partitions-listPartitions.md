@@ -10,10 +10,10 @@ type: docx
 token: JNPwdFI1zoleD7x9LRIc0eqcnof
 sidebar_position: 5
 keywords: 
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
   - zilliz
   - zilliz cloud
   - cloud
@@ -52,7 +52,7 @@ milvusClient.listPartitions({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
@@ -60,7 +60,7 @@ milvusClient.listPartitions({
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ShowPartitionsResponse>*
+**RETURNS** *Promise\&lt;ShowPartitionsResponse&gt;*
 
 This method returns a promise that resolves to a **ShowPartitionsResponse** object.
 
@@ -76,19 +76,19 @@ This method returns a promise that resolves to a **ShowPartitionsResponse** obje
 
 **PARAMETERS:**
 
-- **created_timestamps** (*string* | *list[string]*) -
+- **created_timestamps** (*string* | *list&#91;string&#93;*) -
 
     The timestamp indicating the creation time of the partition.
 
-- **created_utc_timestamps** (*string* | *list[string]*) -
+- **created_utc_timestamps** (*string* | *list&#91;string&#93;*) -
 
     The timestamp in UTC indicating the creation time of the partition.
 
-- **partitionIDs** (*number* | *list[number]*) -
+- **partitionIDs** (*number* | *list&#91;number&#93;*) -
 
     A list of the IDs of the partitions.
 
-- **partition_names** (*string* | *list[string]*) -
+- **partition_names** (*string* | *list&#91;string&#93;*) -
 
     A list of the names of the partitions.
 

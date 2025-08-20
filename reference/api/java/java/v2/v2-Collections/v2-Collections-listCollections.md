@@ -10,10 +10,10 @@ type: docx
 token: WxhmdPZydowLVLxR2LacSrUNnme
 sidebar_position: 20
 keywords: 
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
-  - Zilliz
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,7 +50,7 @@ A **ListCollectionsResp** object containing a list of collection names. If there
 
 **PARAMETERS:**
 
-- **collectionNames** (*List\<String\>*)
+- **collectionNames** (*List\&lt;String\&gt;*)
 
     A list of strings containing the names of all existing collections.
 

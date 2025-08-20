@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz Cloud 支持您根据业务和数据量的变化灵活变更集群配置。您可以为通过修改集群 CU 规格进行扩缩容，或者增加集群 Replica 数量从而提高 QPS。 | Cloud"
 type: origin
 token: GMCvwBlS7io85jkiW0icumJnn6A
-sidebar_position: 9
+sidebar_position: 10
 keywords: 
   - 向量数据库
   - zilliz

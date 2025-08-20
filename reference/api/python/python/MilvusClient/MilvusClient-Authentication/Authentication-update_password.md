@@ -10,10 +10,10 @@ type: docx
 token: WGDod7Qehou4GWx4Co2cJ34VnKb
 sidebar_position: 20
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -47,19 +47,19 @@ update_password(
 
 - **user_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing user.
 
 - **old_password** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The original password of the user.
 
 - **new_password** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The new password of the user.
 

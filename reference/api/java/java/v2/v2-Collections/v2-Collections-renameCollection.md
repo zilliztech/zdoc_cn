@@ -10,10 +10,10 @@ type: docx
 token: CtTvdQVMoo2ec5xbWTPcSzjNnQc
 sidebar_position: 21
 keywords: 
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud

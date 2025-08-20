@@ -10,10 +10,10 @@ type: docx
 token: PoPkdkzSnofUihxzKLqcw7hYnrf
 sidebar_position: 16
 keywords: 
-  - Zilliz database
-  - Unstructured Data
-  - vector database
-  - IVF
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
   - zilliz
   - zilliz cloud
   - cloud

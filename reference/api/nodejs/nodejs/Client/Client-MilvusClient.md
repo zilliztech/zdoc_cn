@@ -10,10 +10,10 @@ type: docx
 token: SiL3ds1HPo2bOxx4iWwcxgg8nvd
 sidebar_position: 2
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +44,7 @@ new MilvusClient(config: ClientConfig)
 
 - **configOrAddress** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The address of the Zilliz Cloud cluster. For example:
 
@@ -56,7 +56,7 @@ new MilvusClient(config: ClientConfig)
 
     - **address** (*string*) -
 
-        **[REQUIRED]**
+        **&#91;REQUIRED&#93;**
 
         The cluster endpoint. For example:
 

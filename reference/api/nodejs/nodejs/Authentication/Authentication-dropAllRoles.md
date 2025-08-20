@@ -10,10 +10,10 @@ type: docx
 token: E5rYdw3EWo2WKZxEyGac049an3e
 sidebar_position: 9
 keywords: 
-  - milvus vector database
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,7 +50,7 @@ milvusClient.dropAllRoles({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus[]>*
+**RETURNS** *Promise\&lt;ResStatus&#91;&#93;&gt;*
 
 This method returns a list of promises, each of which resolves to a **ResStatus** object.
 

@@ -10,10 +10,10 @@ type: docx
 token: MQMzddDnao5Zz0xmSRncZM2nn5b
 sidebar_position: 11
 keywords: 
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
-  - Embedding model
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
   - zilliz
   - zilliz cloud
   - cloud
@@ -69,7 +69,7 @@ partition.upsert(
 
 - **data** (*list* | *dict* | *pandas.DataFrame*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The data to insert into the current collection.
 

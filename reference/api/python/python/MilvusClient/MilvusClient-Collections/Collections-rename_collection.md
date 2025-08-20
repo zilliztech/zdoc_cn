@@ -10,10 +10,10 @@ type: docx
 token: IeiIdJ71Pox2OjxMiOzczUTenud
 sidebar_position: 18
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +44,7 @@ rename_collection(
 
 - **old_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
@@ -52,7 +52,7 @@ rename_collection(
 
 - **new_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the target collection after this operation.
 

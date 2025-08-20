@@ -7,7 +7,7 @@ notebook: FALSE
 description: "Zilliz Cloud 控制台提供专门的订单页面，方便您统一集中管理订单。 | Cloud"
 type: origin
 token: FJU5wklQuiAJASkHAFlcQShDn9e
-sidebar_position: 6
+sidebar_position: 7
 keywords: 
   - 向量数据库
   - zilliz
@@ -93,7 +93,7 @@ Zilliz Cloud 控制台提供专门的订单页面，方便您统一集中管理�
 
 支付订单前，请先确保已绑定云市场订阅或者组织现金余额充足。包年包月集群订单暂不支持使用优惠券抵扣。
 
-请前往**费用中心>订单**页面。在目标订单的订单状态栏中点击**支付**按钮。
+请前往**费用中心&gt;订单**页面。在目标订单的订单状态栏中点击**支付**按钮。
 
 ![pay-order-cn](/img/pay-order-cn.png)
 
@@ -101,7 +101,7 @@ Zilliz Cloud 控制台提供专门的订单页面，方便您统一集中管理�
 
 订单取消后将无法恢复或进行支付，请谨慎操作。
 
-如需取消订单，请前往**费用中心>订单**页面。在目标订单的操作下拉菜单中点击**取消订单**。
+如需取消订单，请前往**费用中心&gt;订单**页面。在目标订单的操作下拉菜单中点击**取消订单**。
 
 ![cancel-order-cn](/img/cancel-order-cn.png)
 

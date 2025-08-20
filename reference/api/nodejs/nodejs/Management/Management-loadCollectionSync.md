@@ -10,10 +10,10 @@ type: docx
 token: XXUAdI8T2oOmw2x7iITc8vJgnjm
 sidebar_position: 15
 keywords: 
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
   - zilliz
   - zilliz cloud
   - cloud
@@ -55,7 +55,7 @@ milvusClient.loadCollectionSync({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a collection.
 
@@ -67,7 +67,7 @@ milvusClient.loadCollectionSync({
 
     The number of replicas of the collection to load.
 
-- **resource_groups** (*string[]*) -
+- **resource_groups** (*string&#91;&#93;*) -
 
     The number of resource groups in the collection to load.
 
@@ -77,7 +77,7 @@ milvusClient.loadCollectionSync({
 
     Setting this to **None** indicates that this operation timeouts when any response returns or error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

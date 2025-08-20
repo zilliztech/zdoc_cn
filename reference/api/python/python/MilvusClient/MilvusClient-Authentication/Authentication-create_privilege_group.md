@@ -10,10 +10,10 @@ type: docx
 token: HNJqdocBjo2zm9xcIVdchRvcnab
 sidebar_position: 2
 keywords: 
-  - Image Search
-  - LLMs
-  - Machine Learning
-  - RAG
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -47,7 +47,7 @@ create_privilege_group(
 
     The name of the target privilege group.
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 

@@ -10,10 +10,10 @@ type: docx
 token: CmFKd9eG2oE6xmx9dIGcVPycnth
 sidebar_position: 2
 keywords: 
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud
@@ -49,7 +49,7 @@ CollectionSchema(
 
 - **fields** (*list*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A list of **FieldSchema** objects that define the fields in the collection schema.
 

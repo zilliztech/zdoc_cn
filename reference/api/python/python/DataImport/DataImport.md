@@ -9,10 +9,10 @@ token: I37hfvVOClbThMdGuH4cV4R6nkc
 sidebar_position: 1
 sidebar_label: "DataImport"
 keywords: 
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
-  - lexical search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
   - zilliz
   - zilliz cloud
   - cloud

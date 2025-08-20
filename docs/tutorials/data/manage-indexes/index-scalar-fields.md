@@ -535,9 +535,9 @@ indexParams.push({
 <TabItem value='go'>
 
 ```go
-jsonIndex1 := index.NewJSONPathIndex(index.AUTOINDEX, "varchar", `metadata["category"]`)
+jsonIndex1 := index.NewJSONPathIndex(index.AUTOINDEX, "varchar", `metadata&#91;"category"&#93;`)
     .WithIndexName("category_index")
-jsonIndex2 := index.NewJSONPathIndex(index.AUTOINDEX, "array_varchar", `metadata["tags"]`)
+jsonIndex2 := index.NewJSONPathIndex(index.AUTOINDEX, "array_varchar", `metadata&#91;"tags"&#93;`)
     .WithIndexName("tags_array_index")
 
 indexOpt1 := milvusclient.NewCreateIndexOption("product_catalog", "metadata", jsonIndex1)
@@ -637,7 +637,7 @@ indexParams.push({
 <TabItem value='go'>
 
 ```go
-jsonIndex3 := index.NewJSONPathIndex(index.AUTOINDEX, "double", `metadata["string_price"]`)
+jsonIndex3 := index.NewJSONPathIndex(index.AUTOINDEX, "double", `metadata&#91;"string_price"&#93;`)
                     .WithIndexName("string_to_double_index")
 
 indexOpt3 := milvusclient.NewCreateIndexOption("product_catalog", "metadata", jsonIndex3)

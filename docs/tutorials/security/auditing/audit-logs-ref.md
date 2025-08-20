@@ -2,7 +2,7 @@
 title: "审计日志参考 | Cloud"
 slug: /audit-logs-ref
 sidebar_label: "审计日志参考"
-beta: PRIVATE
+beta: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 上，审计日志的结构如下所示： | Cloud"
 type: origin

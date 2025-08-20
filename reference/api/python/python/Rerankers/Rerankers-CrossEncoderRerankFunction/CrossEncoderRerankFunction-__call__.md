@@ -10,10 +10,10 @@ type: docx
 token: Vy5GdSeTdoNbSqxCdsOcSmQPnvf
 sidebar_position: 2
 keywords: 
-  - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - vectordb
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,7 +50,7 @@ ce_rf(
 
     The query string to use for ranking.
 
-- `documents` (*List[str]*)
+- `documents` (*List&#91;str&#93;*)
 
     A list of document strings that will be ranked for the given query.
 
@@ -60,7 +60,7 @@ ce_rf(
 
 **RETURN TYPE:**
 
-*List[RerankResult]*
+*List&#91;RerankResult&#93;*
 
 **RETURNS:**
 

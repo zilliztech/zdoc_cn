@@ -10,10 +10,10 @@ type: docx
 token: OCjUdfc6eo0VihxNUGmcqb7FnTh
 sidebar_position: 2
 keywords: 
-  - RAG
-  - NLP
-  - Neural Network
-  - Deep Learning
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
   - zilliz
   - zilliz cloud
   - cloud

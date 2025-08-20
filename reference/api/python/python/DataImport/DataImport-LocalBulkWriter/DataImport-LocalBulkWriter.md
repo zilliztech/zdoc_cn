@@ -10,10 +10,10 @@ type: docx
 token: RcvXdmCVBog9M8xNyUFcwefnneh
 sidebar_position: 3
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
   - zilliz
   - zilliz cloud
   - cloud
@@ -60,13 +60,13 @@ writer = LocalBulkWriter(
 
 - **schema** (*[CollectionSchema](./ORM-CollectionSchema)*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The schema of a target collection to which the rewritten data is to be imported.
 
 - **local_path** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The path to the directory that is to hold the rewritten data.
 

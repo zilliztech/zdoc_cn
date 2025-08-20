@@ -10,10 +10,10 @@ type: docx
 token: EZ2YdBHoDoRTlxx91tscffm1nSb
 sidebar_position: 15
 keywords: 
-  - vector database open source
-  - open source vector db
-  - vector database example
-  - rag vector database
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
   - zilliz
   - zilliz cloud
   - cloud

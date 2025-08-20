@@ -10,10 +10,10 @@ type: docx
 token: DdQ1dBNagoBa08xhEiucxZrHnzc
 sidebar_position: 6
 keywords: 
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,13 +44,13 @@ load_partitions(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
-- **partition_names** (*str | list[str]*) -
+- **partition_names** (*str | list&#91;str&#93;*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A list of the names of the partitions to load.
 

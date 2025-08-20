@@ -10,10 +10,10 @@ type: docx
 token: Vmxpd3MttodOE3x3V11cVTeunDh
 sidebar_position: 8
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -43,7 +43,7 @@ drop_role(
 
 - **role_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the role to drop.
 

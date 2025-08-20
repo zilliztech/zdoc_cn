@@ -10,10 +10,10 @@ type: docx
 token: Y0xbd7zL2oKAVbxcA5Hc14Eznig
 sidebar_position: 19
 keywords: 
+  - milvus benchmark
+  - managed milvus
   - Serverless vector database
   - milvus open source
-  - how does milvus work
-  - Zilliz vector database
   - zilliz
   - zilliz cloud
   - cloud

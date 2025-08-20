@@ -10,10 +10,10 @@ type: docx
 token: SuePdciB0o4du5xtpIhcMVyYnPb
 sidebar_position: 40
 keywords: 
-  - vector similarity search
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
   - zilliz
   - zilliz cloud
   - cloud
@@ -47,7 +47,7 @@ transfer_replica(
 
 - **source_group** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the source resource group from which the query nodes are moved.
 
@@ -55,7 +55,7 @@ transfer_replica(
 
 - **target_group** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the source resource group to which the query nodes are moved.
 
@@ -63,7 +63,7 @@ transfer_replica(
 
 - **num_replicas** (*int*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The number of replicas to move between the source and target resource groups.
 

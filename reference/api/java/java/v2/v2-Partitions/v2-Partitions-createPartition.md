@@ -10,10 +10,10 @@ type: docx
 token: CadTdZ5YGocDymxaIOvcr08pnxd
 sidebar_position: 1
 keywords: 
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud

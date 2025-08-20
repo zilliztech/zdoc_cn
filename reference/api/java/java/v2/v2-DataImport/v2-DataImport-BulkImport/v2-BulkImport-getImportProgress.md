@@ -10,10 +10,10 @@ type: docx
 token: EjnFdC5EfoIkoExSBOxcEC2hnbg
 sidebar_position: 3
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
   - zilliz
   - zilliz cloud
   - cloud

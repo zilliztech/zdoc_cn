@@ -10,10 +10,10 @@ type: docx
 token: JB90dbBNRoz1I2xZY5rcSmJ1nSb
 sidebar_position: 12
 keywords: 
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud

@@ -10,10 +10,10 @@ type: docx
 token: OEcUdoX1yoc94axfwpjcdA2jnEf
 sidebar_position: 2
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
   - zilliz
   - zilliz cloud
   - cloud

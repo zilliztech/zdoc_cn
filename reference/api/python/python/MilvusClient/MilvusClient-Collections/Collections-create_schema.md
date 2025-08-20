@@ -10,10 +10,10 @@ type: docx
 token: RxU7dBjGlop0e1xZShYcZ4qCnnh
 sidebar_position: 6
 keywords: 
-  - vector databases comparison
-  - Faiss
-  - Video search
-  - AI Hallucination
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
   - zilliz
   - zilliz cloud
   - cloud

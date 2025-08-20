@@ -10,10 +10,10 @@ type: docx
 token: WEsjdspGLokueRxggM1cNFgknze
 sidebar_position: 7
 keywords: 
-  - AI Hallucination
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
   - zilliz
   - zilliz cloud
   - cloud
@@ -47,7 +47,7 @@ get_compaction_state(
 
     The compaction job ID.
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 

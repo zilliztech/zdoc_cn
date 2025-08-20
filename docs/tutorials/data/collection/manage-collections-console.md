@@ -127,7 +127,7 @@ Function 用于全文检索中，将 Analyzer 分词后的术语转换为带相�
 
 - 容量型 CU 的 Dedicated 集群：mmap 默认启用。
 
-在创建 Collection 时，您可以根据实际需求，在 Collection 或字段级别配置 mmap 设置。较低级别的设置将覆盖较高级别的设置，优先级如下：字段 > Collection > 集群
+在创建 Collection 时，您可以根据实际需求，在 Collection 或字段级别配置 mmap 设置。较低级别的设置将覆盖较高级别的设置，优先级如下：字段 &gt; Collection &gt; 集群
 
 - **Collection 级别 mmap：**针对 Collection 中的原始数据开启 mmap。该设置适用于整个 Collection，可后续修改。若需修改 Collection 级别的 mmap 设置，需先释放 Collection。
 
@@ -190,6 +190,8 @@ Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下�
     - **创建 Partition**：每个 Collection 最多可创建 1,024 个 Partition。详情请见[使用限制](./limits#collections)。
 
     - **删除 Partition**：默认 Partition 不可删除。删除 Partition 会永久删除其中的数据，且删除前需先释放该 Collection。
+
+- **查看 Collection Alias**：您可以通过 Collection列表页查看特定集群下所有 Collection 的 Alias。
 
 - **删除 Collection：**若某个 Collection 已不再使用，您可以将其删除以释放资源。删除 Collection 的操作会永久清除其中的所有数据，操作不可撤销。
 

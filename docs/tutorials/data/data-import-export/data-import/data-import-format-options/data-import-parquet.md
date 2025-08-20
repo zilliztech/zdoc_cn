@@ -41,7 +41,7 @@ import Admonition from '@theme/Admonition';
 <ul>
 <li><strong>是否启用 Dynamic Field</strong></li>
 </ul>
-<p>当目标 Collection 启用了 Dynamic Field 并且您希望导入 Schema 中未定义的字段时，您可以在导入数据中纳入一个名为 <strong>&#36;meta</strong> 的字段，并将所有未在 Schema 中定义的字段以键值对的方式存放到 <strong>$meta</strong> 字段中。</p>
+<p>当目标 Collection 启用了 Dynamic Field 并且您希望导入 Schema 中未定义的字段时，您可以在导入数据中纳入一个名为 <strong>$meta</strong> 的字段，并将所有未在 Schema 中定义的字段以键值对的方式存放到 <strong>$meta</strong> 字段中。</p>
 <ul>
 <li><strong>大小写</strong></li>
 </ul>
@@ -156,11 +156,11 @@ Zilliz Cloud 支持从您的云存储中导入数据。下表罗列了 Zilliz Cl
    </tr>
    <tr>
      <td><p>阿里云 OSS</p></td>
-     <td><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder/</code></p><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder/data.parquet</code></p></td>
+     <td><p><code><i>http</i>s://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder/</code></p><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/parquet-folder/data.parquet</code></p></td>
    </tr>
    <tr>
      <td><p>腾讯云 COS</p></td>
-     <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/parquet-folder/</code></p><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/parquet-folder/data.parquet</code></p></td>
+     <td><p><code><i>http</i>s://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/parquet-folder/</code></p><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/parquet-folder/data.parquet</code></p></td>
    </tr>
    <tr>
      <td><p>亚马逊云科技 S3</p></td>
@@ -172,22 +172,35 @@ Zilliz Cloud 支持从您的云存储中导入数据。下表罗列了 Zilliz Cl
 
 Zilliz Cloud 针对导入 Parquet 格式的文件时设置了如下限制。
 
+当您从本地 Parquet 文件或对象存储桶中的 Parquet 文件导入数据时，需要遵守以下限制：
+
 <table>
    <tr>
-     <th><p>项目</p></th>
-     <th><p>描述</p></th>
+     <th><p><strong>导入方式</strong></p></th>
+     <th><p><strong>集群版本</strong></p></th>
+     <th><p><strong>单次导入最大文件数</strong></p></th>
+     <th><p><strong>单个文件最大大小上限</strong></p></th>
+     <th><p><strong>单次导入总文件大小</strong></p></th>
    </tr>
    <tr>
-     <td><p><strong>支持多文件导入</strong></p></td>
-     <td><p>是</p><p>每次导入最多支持 100,000 个文件</p></td>
+     <td><p>本地文件导入</p></td>
+     <td><p>所有版本</p></td>
+     <td><p>1 个文件</p></td>
+     <td><p>1 GB</p></td>
+     <td><p>1 GB</p></td>
    </tr>
    <tr>
-     <td><p><strong>每次导入的文件体积限制</strong></p></td>
-     <td><p>Free 集群：最大 512 MB</p><p>Serverless 或 Dedicated 集群</p><ul><li><p>单个文件大小：最大 10 GB</p></li><li><p>总文件大小：最大 1 TB</p></li></ul></td>
+     <td rowspan="2"><p>对象存储桶导入</p></td>
+     <td><p>Free</p></td>
+     <td><p>1,000 个文件</p></td>
+     <td><p>1 GB</p></td>
+     <td><p>1 GB</p></td>
    </tr>
    <tr>
-     <td><p><strong>文件存放位置</strong></p></td>
-     <td><p>仅远程</p></td>
+     <td><p>Serverless &amp; Dedicated</p></td>
+     <td><p>1,000 个文件</p></td>
+     <td><p>10 GB</p></td>
+     <td><p>1 TB</p></td>
    </tr>
 </table>
 

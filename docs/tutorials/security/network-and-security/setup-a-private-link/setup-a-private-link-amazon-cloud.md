@@ -53,7 +53,7 @@ import Admonition from '@theme/Admonition';
 
 登录Zilliz Cloud，并在左侧导航栏顶部的下拉菜单中选择目标项目。
 
-在项目左侧导航栏中选择**安全** > **私网连接**，并单击**创建私网连接**。
+在项目左侧导航栏中选择**安全** &gt; **私网连接**，并单击**创建私网连接**。
 
 您还可以在**集群详情**页面中的**连接信息**区域中单击**创建私网连接**。
 
@@ -192,3 +192,8 @@ import Admonition from '@theme/Admonition';
 </Admonition>
 
 ![disable_public_endpoint_cn](/img/disable_public_endpoint_cn.png)
+
+## 常见问题{#faq}
+
+**能否为已有集群创建 Private Endpoint？**
+可以。当您创建 Private Endpoint 后，它将自动适用于同一项目下且部署在同一个云服务地域的所有 Dedicated 集群。您只需为不同的集群添加对应的 DNS 记录即可。

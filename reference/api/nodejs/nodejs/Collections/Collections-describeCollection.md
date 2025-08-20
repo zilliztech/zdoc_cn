@@ -10,10 +10,10 @@ type: docx
 token: TjqHdZqO1oSwwYxuny2cchWzn6S
 sidebar_position: 9
 keywords: 
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
   - zilliz
   - zilliz cloud
   - cloud
@@ -51,7 +51,7 @@ milvusClient.describeCollection({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
@@ -61,7 +61,7 @@ milvusClient.describeCollection({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**Returns Promise\<DescribeCollectionResponse>*
+**Returns Promise\&lt;DescribeCollectionResponse&gt;*
 
 This method returns a promise that resolves to a **DescribeCollectionResponse** object.
 
@@ -133,7 +133,7 @@ This method returns a promise that resolves to a **DescribeCollectionResponse** 
 
         Whether the reserved JSON field **$meta** is used to store non-schema-defined fields in key-value pairs.
 
-    - **fields** (*FieldSchema[]*) -
+    - **fields** (*FieldSchema&#91;&#93;*) -
 
         A list of schema-defined fields. 
 

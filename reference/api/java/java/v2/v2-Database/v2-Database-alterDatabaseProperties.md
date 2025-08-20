@@ -10,10 +10,10 @@ type: docx
 token: PBYIdLALvoHd0pxwI8Ec4JsTnBX
 sidebar_position: 1
 keywords: 
-  - Vector index
-  - vector database open source
-  - open source vector db
-  - vector database example
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
   - zilliz
   - zilliz cloud
   - cloud

@@ -10,10 +10,10 @@ type: docx
 token: KIYUdM0oVo0dQmxTgS2c8Mxxn4v
 sidebar_position: 11
 keywords: 
-  - RAG
-  - NLP
-  - Neural Network
-  - Deep Learning
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
   - zilliz
   - zilliz cloud
   - cloud

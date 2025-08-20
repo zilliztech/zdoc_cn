@@ -10,10 +10,10 @@ type: docx
 token: SJ3ndk2d7oQbAOxP5iHcGtr1nrb
 sidebar_position: 3
 keywords: 
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud

@@ -10,10 +10,10 @@ type: docx
 token: OPPHd2AabonMIzxzfupcyNS9n1a
 sidebar_position: 15
 keywords: 
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
   - zilliz
   - zilliz cloud
   - cloud

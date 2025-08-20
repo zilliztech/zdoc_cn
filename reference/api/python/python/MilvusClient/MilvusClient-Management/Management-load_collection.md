@@ -10,10 +10,10 @@ type: docx
 token: FLmWdFP9Zo3JcixOEgucU8JMnLc
 sidebar_position: 10
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
   - zilliz
   - zilliz cloud
   - cloud
@@ -43,7 +43,7 @@ load_collection(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a collection.
 

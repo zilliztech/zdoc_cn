@@ -10,10 +10,10 @@ type: docx
 token: EATSdak5wokQhCx6k3tcCoAqn3P
 sidebar_position: 8
 keywords: 
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
   - zilliz
   - zilliz cloud
   - cloud

@@ -10,10 +10,10 @@ type: docx
 token: JTdSdyToooA6Srx2HolcmTPunoe
 sidebar_position: 2
 keywords: 
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
-  - information retrieval
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
   - zilliz
   - zilliz cloud
   - cloud

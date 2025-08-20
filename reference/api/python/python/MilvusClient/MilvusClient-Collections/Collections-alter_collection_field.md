@@ -10,10 +10,10 @@ type: docx
 token: G2jjdHvbBoko6BxBZj7csemWnFc
 sidebar_position: 2
 keywords: 
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - IVF
   - zilliz
   - zilliz cloud
   - cloud
@@ -59,7 +59,7 @@ alter_collection_field(
 
     - **max_length** (*int*) -
 
-        The maximum byte length for strings allowed to be inserted. Note that multibyte characters (e.g., Unicode characters) may occupy more than one byte each, so ensure the byte length of inserted strings does not exceed the specified limit. Value range: [1, 65,535].
+        The maximum byte length for strings allowed to be inserted. Note that multibyte characters (e.g., Unicode characters) may occupy more than one byte each, so ensure the byte length of inserted strings does not exceed the specified limit. Value range: &#91;1, 65,535&#93;.
 
         This is mandatory for a **DataType.VARCHAR** field.
 
@@ -73,7 +73,7 @@ alter_collection_field(
 
         Whether Milvus maps the field data into memory instead of fully loading it. For details, refer to MMap-enabled Data Storage.
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 

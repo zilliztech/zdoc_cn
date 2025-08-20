@@ -10,10 +10,10 @@ type: docx
 token: GUv5dxYOZocdURx1qGlc9I8Cn5g
 sidebar_position: 1
 keywords: 
-  - Zilliz database
-  - Unstructured Data
-  - vector database
-  - IVF
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
   - zilliz
   - zilliz cloud
   - cloud
@@ -51,7 +51,7 @@ alter_database_properties(
 
 - **db_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     Name of the database whose properties are to be modified.
 
@@ -63,7 +63,7 @@ alter_database_properties(
 
         Number of replicas for the database.
 
-    - **database.resource_groups** (*[]str*) -
+    - **database.resource_groups** (*&#91;&#93;str*) -
 
         Resource groups dedicated to the database.
 

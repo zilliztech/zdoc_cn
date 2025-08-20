@@ -10,10 +10,10 @@ type: docx
 token: MtF2dkZcso4XduxM194cUaiinqb
 sidebar_position: 30
 keywords: 
-  - Faiss vector database
-  - Chroma vector database
   - nlp search
   - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +44,7 @@ list_users(
 
 - **include_role_info** (*bool*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     Whether Zilliz Cloud lists the roles granted to the specified user.
 

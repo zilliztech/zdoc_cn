@@ -10,10 +10,10 @@ type: docx
 token: XhcVd1JXvoAgUfxSEpQcL2H6nVg
 sidebar_position: 1
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - Machine Learning
+  - RAG
+  - NLP
+  - Neural Network
   - zilliz
   - zilliz cloud
   - cloud
@@ -42,7 +42,7 @@ add_function(
 
 - `function` (*[Function](./MilvusClient-Function)*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     An instance of the `Function` class that converts data into vector embeddings. This function will be added to the schema of a collection.
 

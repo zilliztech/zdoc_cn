@@ -10,10 +10,10 @@ type: docx
 token: PPLtdSbtfomgF1x5MHncKPgPnSf
 sidebar_position: 1
 keywords: 
+  - Vector retrieval
+  - Audio similarity search
   - Elastic vector database
   - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
   - zilliz
   - zilliz cloud
   - cloud
@@ -53,13 +53,13 @@ milvusClient.createPartition({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
 - **partition_name** (*string*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the partition to create.
 
@@ -69,7 +69,7 @@ milvusClient.createPartition({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

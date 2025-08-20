@@ -10,10 +10,10 @@ type: docx
 token: NIm8dRx2Aozt4Qxv1Q6cAm3Fn97
 sidebar_position: 1
 keywords: 
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud

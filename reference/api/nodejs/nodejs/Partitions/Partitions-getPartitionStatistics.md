@@ -10,10 +10,10 @@ type: docx
 token: XDXid6aZ8oCHnVxxFpPcKAB9n0c
 sidebar_position: 3
 keywords: 
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
   - zilliz
   - zilliz cloud
   - cloud
@@ -53,13 +53,13 @@ milvusClient.getPartitionStatistics({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
 - **partition_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing partition.
 
@@ -69,7 +69,7 @@ milvusClient.getPartitionStatistics({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<StatisticsResponse>*
+**RETURNS** *Promise\&lt;StatisticsResponse&gt;*
 
 This method returns a promise that resolves to a **StatisticsResponse** object.
 

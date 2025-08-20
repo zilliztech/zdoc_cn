@@ -10,10 +10,10 @@ type: docx
 token: OSehdj15Ao3AUvxOIJucXzU8nWW
 sidebar_position: 1
 keywords: 
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,7 +50,7 @@ Collection(
 
 - **name** (*string*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the collection to create.
 

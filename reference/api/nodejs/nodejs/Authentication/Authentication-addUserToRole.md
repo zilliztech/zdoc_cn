@@ -10,10 +10,10 @@ type: docx
 token: Qc72dTKgroNdHjxIG2xcwNdmnHb
 sidebar_position: 2
 keywords: 
+  - natural language processing database
+  - cheap vector database
   - Managed vector database
   - Pinecone vector database
-  - Audio search
-  - what is semantic search
   - zilliz
   - zilliz cloud
   - cloud
@@ -48,13 +48,13 @@ milvusClient.addUserToRole({
 
 - **username** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a user.
 
 - **rolename** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a role
 
@@ -64,7 +64,7 @@ milvusClient.addUserToRole({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

@@ -10,10 +10,10 @@ type: docx
 token: EofGdftYjoQ9E6x8mxLcpbG1nhc
 sidebar_position: 11
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - milvus vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +44,7 @@ drop_resource_group(
 
 - **name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the resource group to drop.
 

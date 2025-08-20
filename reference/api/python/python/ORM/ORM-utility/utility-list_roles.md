@@ -10,10 +10,10 @@ type: docx
 token: ClLXdDs64oixJBxlIrCcEB2dngb
 sidebar_position: 27
 keywords: 
-  - NLP
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +44,7 @@ list_roles(
 
 - **include_user_info** (*bool*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     Whether Zilliz Cloud lists users associated with the listed roles.
 

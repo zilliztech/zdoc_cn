@@ -10,10 +10,10 @@ type: docx
 token: DCLUdOpVjohl8HxPUx1cGjokngf
 sidebar_position: 1
 keywords: 
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
   - zilliz
   - zilliz cloud
   - cloud

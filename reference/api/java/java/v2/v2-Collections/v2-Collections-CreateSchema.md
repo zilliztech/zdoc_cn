@@ -10,10 +10,10 @@ type: docx
 token: DAIfdXKk5oCHeNxOUvCc1KcpnNh
 sidebar_position: 23
 keywords: 
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud

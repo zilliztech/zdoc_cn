@@ -86,7 +86,7 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出�
 
 为方便起见，可以使用脚本编辑器来创建权限策略。
 
-1. 在 [RAM 控制台](https://ram.console.aliyun.com/)，选择**权限管理 > 权限策略**。
+1. 在 [RAM 控制台](https://ram.console.aliyun.com/)，选择**权限管理 &gt; 权限策略**。
 
 1. 在**权限策略**页面，单击**创建权限策略**。
 
@@ -133,7 +133,7 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出�
 
 创建 RAM 角色，并将[步骤 3](./integrate-with-storage-bucket) 中定义的权限策略赋予该角色。
 
-1. 在  [RAM 控制台](https://ram.console.aliyun.com/)，选择**角色** > **创建角色**。
+1. 在  [RAM 控制台](https://ram.console.aliyun.com/)，选择**角色** &gt; **创建角色**。
 
 1. 在**创建角色**页面，选择可信实体类型为**阿里云账号**，然后单击**下一步**。
 

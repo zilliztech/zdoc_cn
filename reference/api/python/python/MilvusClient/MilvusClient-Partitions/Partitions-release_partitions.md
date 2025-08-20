@@ -10,10 +10,10 @@ type: docx
 token: VblKdUEU4o4t31xcFiicIGtjn9g
 sidebar_position: 7
 keywords: 
+  - llm hallucinations
+  - hybrid search
   - lexical search
   - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,13 +44,13 @@ release_partitions(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
-- **partition_names** (*str | list[str]*) -
+- **partition_names** (*str | list&#91;str&#93;*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A list of the names of the partitions to release.
 

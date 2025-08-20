@@ -10,10 +10,10 @@ type: docx
 token: S0ITdsnpYoDpH9xKv9fcBhe5nWA
 sidebar_position: 2
 keywords: 
-  - milvus vector database
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud
@@ -134,19 +134,21 @@ CloudImportRequest.builder()
 ```java
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import io.milvus.bulkwriter.BulkImport;
 import io.milvus.bulkwriter.request.import_.MilvusImportRequest;
+import io.milvus.bulkwriter.restful.BulkImportUtils;
 
-List<List<String>> batchFiles = new ArrayList<>();
-batchFiles.add(Collections.singletonList("bulk_data/1.parquet"));
-batchFiles.add(Collections.singletonList("bulk_data/2.parquet"));
-MilvusImportRequest milvusImportRequest = MilvusImportRequest.builder()
-        .collectionName(collectionName)
-        .files(batchFiles)
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+CloudImportRequest cloudImportRequest = CloudImportRequest.builder()
+        .objectUrl(objectUrl).accessKey(accessKey).secretKey(secretKey)
+        .clusterId(clusterId).collectionName(collectionName)
+        .apiKey(apiKey)
         .build();
-String bulkImportResult = BulkImport.bulkImport(url, milvusImportRequest);
+String bulkImportResult = BulkImportUtils.bulkImport(url, cloudImportRequest);
 
-Gson GSON_INSTANCE = new Gson()
+Gson GSON_INSTANCE = new Gson();
 JsonObject result = GSON_INSTANCE.fromJson(bulkImportResult, JsonObject.class);
 String jobId = result.getAsJsonObject("data").get("jobId").getAsString();
 System.out.println("Create a bulkInert task, job id: " + jobId);

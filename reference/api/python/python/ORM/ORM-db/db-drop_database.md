@@ -10,10 +10,10 @@ type: docx
 token: Y7pOdKR4MoqmvVxcS1TcjqUynMc
 sidebar_position: 2
 keywords: 
-  - Vector embeddings
-  - Vector store
-  - open source vector database
-  - Vector index
+  - LLMs
+  - Machine Learning
+  - RAG
+  - NLP
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +44,7 @@ drop_database(
 
 - **db_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     Name of the database to be dropped.
 

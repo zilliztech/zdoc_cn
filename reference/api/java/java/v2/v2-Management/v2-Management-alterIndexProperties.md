@@ -10,10 +10,10 @@ type: docx
 token: ITkydrfmroQyLLxusZtc6t1nnjf
 sidebar_position: 1
 keywords: 
-  - Vector index
-  - vector database open source
-  - open source vector db
-  - vector database example
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
   - zilliz
   - zilliz cloud
   - cloud

@@ -10,10 +10,10 @@ type: docx
 token: X9scdVMmxoBTuUxlKhecJXEunHd
 sidebar_position: 7
 keywords: 
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -56,7 +56,7 @@ Partition(
 
 - **collection** (*Collection* | *str*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The collection in which to create a partition. 
 
@@ -71,7 +71,7 @@ Partition(
 
 - **name** (*string*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the partition to create.
 

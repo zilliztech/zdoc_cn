@@ -163,7 +163,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-[1] 此处仅考虑只写入无查询时的资源消耗情况。
+&#91;1&#93; 此处仅考虑只写入无查询时的资源消耗情况。
 
 ## 部署 Milvus 集群{#deploy-milvus-cluster}
 

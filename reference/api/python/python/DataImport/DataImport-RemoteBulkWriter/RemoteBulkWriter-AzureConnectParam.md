@@ -10,10 +10,10 @@ type: docx
 token: C2YSddNqZoDNmNxWqqEcuzhKn4f
 sidebar_position: 2
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
   - zilliz
   - zilliz cloud
   - cloud
@@ -70,7 +70,7 @@ connect_param = RemoteBulkWriter.AzureConnectParam(
 
 - **account_url** (*str*)
 
-    A string in format like `https://<storage-account>.blob.core.windows.net`.
+    A string in format like `<i>http</i>s://<storage-account>.blob.core.windows.net`.
 
     Read [this link](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview) for more info.
 

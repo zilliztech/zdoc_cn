@@ -10,10 +10,10 @@ type: docx
 token: IGPAdBQ5Von3lFxv4uSc5dGDnAd
 sidebar_position: 16
 keywords: 
-  - Pinecone vector database
   - Audio search
   - what is semantic search
   - Embedding model
+  - image similarity search
   - zilliz
   - zilliz cloud
   - cloud
@@ -48,11 +48,11 @@ remove_privileges_from_group(
 
     The name of the target privilege group.
 
-- **privileges** (*List[str]*) -
+- **privileges** (*List&#91;str&#93;*) -
 
     The privilages to remove in a list.
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 

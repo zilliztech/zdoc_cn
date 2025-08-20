@@ -10,10 +10,10 @@ type: docx
 token: V9BidASNqoWYrmxo11ecuN99neg
 sidebar_position: 1
 keywords: 
-  - Image Search
-  - LLMs
-  - Machine Learning
-  - RAG
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
   - zilliz
   - zilliz cloud
   - cloud
@@ -49,7 +49,7 @@ delete(
 
 - **expr** (*string*) -
 
-    **[REQUIRED]** 
+    **&#91;REQUIRED&#93;** 
 
     A boolean expression to filter the entities to delete.
 

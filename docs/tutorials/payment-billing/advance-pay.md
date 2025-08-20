@@ -7,7 +7,7 @@ notebook: FALSE
 description: "对公转账是指通过银行汇款的方式将资金充值到您的 Zilliz Cloud 组织现金余额中，用于支付使用 Zilliz Cloud 产生的费用。目前，Zilliz Cloud 界面仅支持通过专属账号进行汇款。 | Cloud"
 type: origin
 token: JZqrwH8V8i6a3jktSQgcyXAEnAg
-sidebar_position: 2
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz

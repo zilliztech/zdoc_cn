@@ -10,10 +10,10 @@ type: docx
 token: G7F9dQ8DwoZsaVxExdnc7K6an3g
 sidebar_position: 5
 keywords: 
-  - Image Search
-  - LLMs
-  - Machine Learning
-  - RAG
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - vectordb
   - zilliz
   - zilliz cloud
   - cloud

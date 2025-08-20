@@ -10,10 +10,10 @@ type: docx
 token: DkImdRkJwoUmdqxzqn1cpQr9nhy
 sidebar_position: 11
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
   - zilliz
   - zilliz cloud
   - cloud
@@ -53,11 +53,11 @@ milvusClient.getLoadingProgress({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the target collection.
 
-- **partition_names** (*string[]*) -
+- **partition_names** (*string&#91;&#93;*) -
 
     The name of the target partitions.
 
@@ -65,7 +65,7 @@ milvusClient.getLoadingProgress({
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<GetLoadingProgressResponse>*
+**RETURNS** *Promise\&lt;GetLoadingProgressResponse&gt;*
 
 This method returns a promise that resolves to a **GetLoadingProgressResponse** object.
 

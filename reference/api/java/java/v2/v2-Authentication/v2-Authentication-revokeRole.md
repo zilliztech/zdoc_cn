@@ -10,10 +10,10 @@ type: docx
 token: Znb7dcNoeobIkkxGLGfcpVfUnIX
 sidebar_position: 19
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - zilliz
   - zilliz cloud
   - cloud

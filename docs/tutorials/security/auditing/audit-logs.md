@@ -2,9 +2,9 @@
 title: "审计日志 | Cloud"
 slug: /audit-logs
 sidebar_label: "审计日志"
-beta: PRIVATE
+beta: FALSE
 notebook: FALSE
-description: "审计日志允许管理员跟踪和监控 Zilliz Cloud 集群上的用户驱动的操作和 API 调用。此功能提供了数据平面活动的详细记录，包括向量搜索、查询执行、索引管理和其他数据操作。它提供了对安全审查、合规性审计和问题解决如何访问和管理数据的可见性。 | Cloud"
+description: "审计日志允许管理员跟踪和监控 Zilliz Cloud 集群上的用户驱动的操作和 API 调用。此功能提供了数据平面活动的详细记录，包括向量搜索、查询执行、索引管理和其他数据操作。 | Cloud"
 type: origin
 token: OcSgw7LJwiyuC2kdymbcWDV6nNg
 sidebar_position: 1
@@ -23,13 +23,14 @@ import Admonition from '@theme/Admonition';
 
 # 审计日志
 
-审计日志允许管理员跟踪和监控 Zilliz Cloud 集群上的用户驱动的操作和 API 调用。此功能提供了数据平面活动的详细记录，包括向量搜索、查询执行、索引管理和其他数据操作。它提供了对安全审查、合规性审计和问题解决如何访问和管理数据的可见性。
+审计日志允许管理员跟踪和监控 Zilliz Cloud 集群上的用户驱动的操作和 API 调用。此功能提供了数据平面活动的详细记录，包括向量搜索、查询执行、索引管理和其他数据操作。
 
 <Admonition type="info" icon="📘" title="说明">
 
 <ul>
-<li><p>审计日志记录为<strong>内测版</strong>功能。如需使用此功能或了解相关费用，请<a href="http://support.zilliz.com.cn">提交工单</a>。</p></li>
+<li><p>审计日志功能仅对 <strong>Dedicated</strong> 集群可见。如有需求，请考虑<a href="./manage-cluster">升级集群</a>。</p></li>
 <li><p>仅 Milvus 2.5.x 版本及以上的集群支持审计日志功能。</p></li>
+<li><p>审计日志支持与<a href="./integrate-with-storage-bucket">阿里云对象存储</a>或 <a href="./integrate-with-amazon-s3">Amazon S3</a> 集成。</p></li>
 </ul>
 
 </Admonition>
@@ -54,7 +55,7 @@ import Admonition from '@theme/Admonition';
 
 - **文件路径**： `/<Cluster ID>/<Log type>/<Date>`
 
-- **文件命名规则**：具体格式为 `\<File name><File name suffix>`。`\<File name>`的格式为 *HH:MM:SS-$UUID*：*HH:MM:SS* 代表日志产生时的 UTC 时间戳；*$UUID* 代表一个随机字符串，如 `09:16:53-jz5l7D8Q`。
+- **文件命名规则**：具体格式为 `<File name><File name suffix>`。`<File name>`的格式为 *HH:MM:SS-$UUID*：*HH:MM:SS* 代表日志产生时的 UTC 时间戳；*$UUID* 代表一个随机字符串，如 `09:16:53-jz5l7D8Q`。
 
 以下是流式传输到存储桶的审计日志条目示例：
 
@@ -84,9 +85,9 @@ import Admonition from '@theme/Admonition';
 
 ### 开始前{#before-you-start}
 
-- 您的 Zilliz Cloud 集群版本为 **Dedicated** 及以上。如有需求，请[升级集群](./manage-cluster)。
+- 您的 Zilliz Cloud 集群版本为 **Dedicated** 及以上。如有需求，请考虑[升级集群](./manage-cluster)。
 
-- 您已经为 Zilliz Cloud 项目配置了对象存储集成，因为配置完成后审计日志将会流式传输到您的存储桶。有关详细步骤，请参阅[配置对象存储](./integrate-with-storage-bucket)。
+- 您已经为 Zilliz Cloud 项目配置了对象存储集成，因为配置完成后审计日志将会流式传输到您的存储桶。有关详细步骤，请参阅[阿里云对象存储](./integrate-with-storage-bucket)或 [Amazon S3](./integrate-with-amazon-s3)。
 
 - 您拥有该项目的**组织管理员**或**项目管理员**权限。如果您没有相应权限，请联系 Zilliz Cloud 管理员。
 
@@ -131,10 +132,6 @@ import Admonition from '@theme/Admonition';
 ## 常见问题{#faq}
 
 以下常见问题解答旨在帮助您解决在 Zilliz Cloud 上使用审计日志时可能遇到的问题。如需进一步帮助，请联系 [Zilliz Cloud 支持](https://zilliz.com.cn/contact-sales)。
-
-- **为什么在集群详情页找不到审计日志选项卡？**
-
-    目前，**审计日志**选项卡仅对在内测（Private Preview）白名单中的用户开放。如果您希望使用此功能，请联系 [Zilliz Cloud 支持](https://zilliz.com.cn/contact-sales)。
 
 - **如果流式传输审计日志的状态为异常，该怎么办？**
 

@@ -10,10 +10,10 @@ type: docx
 token: MCkjdiRNKo2HCCxzHReclrgAnbg
 sidebar_position: 9
 keywords: 
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
-  - knn algorithm
+  - rag llm architecture
+  - private llms
+  - nn search
+  - llm eval
   - zilliz
   - zilliz cloud
   - cloud
@@ -43,7 +43,7 @@ describe_collection(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 

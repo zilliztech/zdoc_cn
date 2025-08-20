@@ -10,10 +10,10 @@ type: docx
 token: HSIDdxQGEoPdyaxkMDjcAWGQnpd
 sidebar_position: 15
 keywords: 
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
-  - Embedding model
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
   - zilliz
   - zilliz cloud
   - cloud
@@ -64,7 +64,7 @@ listGrant(data): Promise<SelectGrantResponse>
 
     The timeout duration of this operation.
 
-*Returns Promise\<SelectGrantResponse>*
+*Returns Promise\&lt;SelectGrantResponse&gt;*
 
 This method returns a promise that resolves to a **SelectGrantResponse** object.
 
@@ -84,7 +84,7 @@ This method returns a promise that resolves to a **SelectGrantResponse** object.
 
 **PARAMETERS:**
 
-- **entities** (*GrantEntity[]*) -
+- **entities** (*GrantEntity&#91;&#93;*) -
 
     A list of grant entities, each of which is shaped as follows:
 

@@ -81,7 +81,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>GetFlushState</p></td>
-     <td><p>✔️</p></td>
+     <td><p>❌</p></td>
      <td><p>✔️</p></td>
      <td><p>✔️</p></td>
    </tr>
@@ -159,7 +159,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>Load</p></td>
-     <td><p>❌</p></td>
+     <td><p>✔️</p></td>
      <td><p>✔️</p></td>
      <td><p>✔️</p></td>
    </tr>
@@ -202,7 +202,7 @@ import Admonition from '@theme/Admonition';
    <tr>
      <td><p>Compaction</p></td>
      <td><p>❌</p></td>
-     <td><p>✔️</p></td>
+     <td><p>❌</p></td>
      <td><p>✔️</p></td>
    </tr>
    <tr>
@@ -214,13 +214,13 @@ import Admonition from '@theme/Admonition';
    <tr>
      <td><p>CreateAlias</p></td>
      <td><p>❌</p></td>
-     <td><p>❌</p></td>
+     <td><p>✔️</p></td>
      <td><p>✔️</p></td>
    </tr>
    <tr>
      <td><p>DropAlias</p></td>
      <td><p>❌</p></td>
-     <td><p>❌</p></td>
+     <td><p>✔️</p></td>
      <td><p>✔️</p></td>
    </tr>
 </table>
@@ -257,20 +257,20 @@ import Admonition from '@theme/Admonition';
    <tr>
      <td><p>CreateCollection</p></td>
      <td><p>❌</p></td>
-     <td><p>❌</p></td>
+     <td><p>✔️</p></td>
      <td><p>✔️</p></td>
    </tr>
    <tr>
      <td><p>DropCollection</p></td>
      <td><p>❌</p></td>
-     <td><p>❌</p></td>
+     <td><p>✔️</p></td>
      <td><p>✔️</p></td>
    </tr>
    <tr>
      <td><p>AlterDatabase</p></td>
      <td><p>❌</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
+     <td><p>❌</p></td>
+     <td><p>❌</p></td>
    </tr>
 </table>
 
@@ -300,7 +300,7 @@ import Admonition from '@theme/Admonition';
    <tr>
      <td><p>RenameCollection</p></td>
      <td><p>❌</p></td>
-     <td><p>❌</p></td>
+     <td><p>✔️</p></td>
      <td><p>✔️</p></td>
    </tr>
    <tr>
@@ -323,8 +323,8 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>SelectOwnership</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
+     <td><p>❌</p></td>
+     <td><p>❌</p></td>
      <td><p>✔️</p></td>
    </tr>
    <tr>
@@ -335,105 +335,105 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>SelectUser</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
+     <td><p>❌</p></td>
+     <td><p>❌</p></td>
      <td><p>✔️</p></td>
    </tr>
    <tr>
      <td><p>BackupRBAC</p></td>
      <td><p>❌</p></td>
      <td><p>❌</p></td>
-     <td><p>✔️</p></td>
+     <td><p>❌</p></td>
    </tr>
    <tr>
      <td><p>RestoreRBAC</p></td>
      <td><p>❌</p></td>
      <td><p>❌</p></td>
-     <td><p>✔️</p></td>
+     <td><p>❌</p></td>
    </tr>
    <tr>
      <td><p>CreateResourceGroup</p></td>
      <td><p>❌</p></td>
      <td><p>❌</p></td>
-     <td><p>✔️</p></td>
+     <td><p>❌</p></td>
    </tr>
    <tr>
      <td><p>DropResourceGroup</p></td>
      <td><p>❌</p></td>
      <td><p>❌</p></td>
-     <td><p>✔️</p></td>
+     <td><p>❌</p></td>
    </tr>
    <tr>
      <td><p>UpdateResourceGroups</p></td>
      <td><p>❌</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
+     <td><p>❌</p></td>
+     <td><p>❌</p></td>
    </tr>
    <tr>
      <td><p>DescribeResourceGroup</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
+     <td><p>❌</p></td>
+     <td><p>❌</p></td>
+     <td><p>❌</p></td>
    </tr>
    <tr>
      <td><p>ListResourceGroups</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
+     <td><p>❌</p></td>
+     <td><p>❌</p></td>
+     <td><p>❌</p></td>
    </tr>
    <tr>
      <td><p>TransferNode</p></td>
      <td><p>❌</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
+     <td><p>❌</p></td>
+     <td><p>❌</p></td>
    </tr>
    <tr>
      <td><p>TransferReplica</p></td>
      <td><p>❌</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
+     <td><p>❌</p></td>
+     <td><p>❌</p></td>
    </tr>
    <tr>
      <td><p>CreateDatabase</p></td>
      <td><p>❌</p></td>
-     <td><p>❌</p></td>
+     <td><p>✔️</p></td>
      <td><p>✔️</p></td>
    </tr>
    <tr>
      <td><p>DropDatabase</p></td>
      <td><p>❌</p></td>
-     <td><p>❌</p></td>
+     <td><p>✔️</p></td>
      <td><p>✔️</p></td>
    </tr>
    <tr>
      <td><p>FlushAll</p></td>
      <td><p>❌</p></td>
-     <td><p>✔️</p></td>
-     <td><p>✔️</p></td>
+     <td><p>❌</p></td>
+     <td><p>❌</p></td>
    </tr>
    <tr>
      <td><p>CreatePrivilegeGroup</p></td>
      <td><p>❌</p></td>
      <td><p>❌</p></td>
-     <td><p>✔️</p></td>
+     <td><p>❌</p></td>
    </tr>
    <tr>
      <td><p>DropPrivilegeGroup</p></td>
      <td><p>❌</p></td>
      <td><p>❌</p></td>
-     <td><p>✔️</p></td>
+     <td><p>❌</p></td>
    </tr>
    <tr>
      <td><p>ListPrivilegeGroups</p></td>
-     <td><p>❌</p></td>
-     <td><p>❌</p></td>
+     <td><p>✔️</p></td>
+     <td><p>✔️</p></td>
      <td><p>✔️</p></td>
    </tr>
    <tr>
      <td><p>OperatePrivilegeGroup</p></td>
      <td><p>❌</p></td>
      <td><p>❌</p></td>
-     <td><p>✔️</p></td>
+     <td><p>❌</p></td>
    </tr>
 </table>
 

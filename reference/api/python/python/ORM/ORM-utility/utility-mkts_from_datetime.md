@@ -10,10 +10,10 @@ type: docx
 token: LCQTdebkConhUqxwnk7c3EbPnWh
 sidebar_position: 34
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - vectordb
   - zilliz
   - zilliz cloud
   - cloud
@@ -43,13 +43,13 @@ mkts_from_datetime(
 **PARAMETERS:**
 
 - **d_time** (*datetime*) -
-**[REQUIRED]**
+**&#91;REQUIRED&#93;**
 A **datetime.datetime** object.
 
 - **milliseconds** (*float*) -
 An incremental time interval in milliseconds.
 
-- **delta** (*Optional[timedelta]*) -
+- **delta** (*Optional&#91;timedelta&#93;*) -
 
     A **datetime.timedelta** object that represents the duration expressing the difference between two `date`, `time`, or `datetime` instances to microsecond resolution.
 

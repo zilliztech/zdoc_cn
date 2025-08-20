@@ -10,10 +10,10 @@ type: docx
 token: QHcpd1aJzo5aYbxJtMXc58een4f
 sidebar_position: 39
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
   - zilliz
   - zilliz cloud
   - cloud
@@ -46,7 +46,7 @@ transfer_node(
 
 - **source_group** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the source resource group from which the query nodes are moved.
 
@@ -54,7 +54,7 @@ transfer_node(
 
 - **target_group** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the source resource group to which the query nodes are moved.
 
@@ -62,7 +62,7 @@ transfer_node(
 
 - **num_nodes** (*int*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The number of query nodes to move between the source and target resource groups.
 

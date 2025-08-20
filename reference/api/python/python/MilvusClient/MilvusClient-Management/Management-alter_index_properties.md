@@ -10,10 +10,10 @@ type: docx
 token: TRFadKWOAofCVoxH3qYcdTvynHf
 sidebar_position: 14
 keywords: 
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
   - zilliz
   - zilliz cloud
   - cloud
@@ -61,7 +61,7 @@ alter_index_properties(
 
         Whether to enable mmap for the specified index. Setting this to `true` offloads the specified index onto the disk. For details, refer to [Use mmap](/docs/use-mmap)
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 

@@ -10,10 +10,10 @@ type: docx
 token: GfTadfqhAo64XDxc643ci4Zwnwb
 sidebar_position: 4
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
   - zilliz
   - zilliz cloud
   - cloud

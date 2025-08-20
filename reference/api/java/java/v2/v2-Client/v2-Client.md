@@ -9,10 +9,10 @@ token: QW8NfURhvl0NtOdmS3DcvQYCnFh
 sidebar_position: 1
 sidebar_label: "Client"
 keywords: 
-  - vector database
-  - IVF
-  - knn
-  - Image Search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud

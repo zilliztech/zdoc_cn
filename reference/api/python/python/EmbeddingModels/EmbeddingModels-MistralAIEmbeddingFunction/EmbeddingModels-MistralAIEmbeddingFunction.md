@@ -10,10 +10,10 @@ type: docx
 token: CvxodXz8OoWXrlxD7OVcqqJLn8e
 sidebar_position: 3
 keywords: 
-  - HNSW
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
   - zilliz
   - zilliz cloud
   - cloud

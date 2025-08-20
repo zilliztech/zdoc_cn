@@ -10,10 +10,10 @@ type: docx
 token: CRFLdvgkhoeRikxMcMAcJk3qnIc
 sidebar_position: 14
 keywords: 
-  - llm eval
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
   - zilliz
   - zilliz cloud
   - cloud
@@ -47,7 +47,7 @@ milvusClient.getCompactionState({
 
 - **compactionID** (*string | number*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The ID of a compaction job that is returned by a call to `compact()`.
 
@@ -57,7 +57,7 @@ milvusClient.getCompactionState({
 
     Setting this to **None** indicates that this operation timeouts when any response returns or error occurs.
 
-**RETURNS** *Promise\<GetCompactionStateResponse>*
+**RETURNS** *Promise\&lt;GetCompactionStateResponse&gt;*
 
 This method returns a promise that resolves to a **GetCompactionStateResponse** object.
 

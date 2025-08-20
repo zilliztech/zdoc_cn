@@ -10,10 +10,10 @@ type: docx
 token: WjNRdifU9o3xl5xG0W7ch4Fjnme
 sidebar_position: 12
 keywords: 
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
-  - Embedding model
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
   - zilliz
   - zilliz cloud
   - cloud
@@ -48,7 +48,7 @@ drop_collection_properties(
 
     The name of the target collection.
 
-- **property_keys** (*List[str]*) -
+- **property_keys** (*List&#91;str&#93;*) -
 
     The names of the properties to drop in a list. Possible values are as follows:
 
@@ -58,7 +58,7 @@ drop_collection_properties(
 
     - `partitionkey.isolation`
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 

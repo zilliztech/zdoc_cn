@@ -10,10 +10,10 @@ type: docx
 token: NDcldy9OLo62DLxw1a9cFSLsnYb
 sidebar_position: 6
 keywords: 
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,7 +50,7 @@ milvusClient.useDatabase({
 
     There should be a database with the specified name. Otherwise, exceptions will occur.
 
-**RETURNS** *Promise |\<ResStatus>*
+**RETURNS** *Promise |&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

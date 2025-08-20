@@ -10,10 +10,10 @@ type: docx
 token: P0XRd2Mgfo1uG6xk47icWRd4n6b
 sidebar_position: 4
 keywords: 
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
   - zilliz
   - zilliz cloud
   - cloud

@@ -49,9 +49,9 @@ WeightedRanker 策略的的重排基本流程如下：
 
 1. **收集搜索得分**: 收集每一路搜索的结果和得分 （score_1、score_2）。
 
-1. **得分归一化:** 每一路搜索可能使用不同的相似度类型，因此每一路搜索返回的结果 score 分布会有所不同。例如：使用 IP 作为相似度类型时，搜索结果的 score 范围在 [-∞,+∞]；使用 L2 作为相似度类型时，搜索结果的 score 范围在 [0,+∞]。由于两路搜索结果的 score 范围不同，无法直接进行排序，因此需要对每一路搜索的得分进行归一化，通过 `arctan` 函数转换范为围在 [0,1] 之间的得分（score_1_normalized、score_1_normalized）。转换后的得分值越接近 1， 表示对应搜索结果的相似性更高。
+1. **得分归一化:** 每一路搜索可能使用不同的相似度类型，因此每一路搜索返回的结果 score 分布会有所不同。例如：使用 IP 作为相似度类型时，搜索结果的 score 范围在 &#91;-∞,+∞&#93;；使用 L2 作为相似度类型时，搜索结果的 score 范围在 &#91;0,+∞&#93;。由于两路搜索结果的 score 范围不同，无法直接进行排序，因此需要对每一路搜索的得分进行归一化，通过 `arctan` 函数转换范为围在 &#91;0,1&#93; 之间的得分（score_1_normalized、score_1_normalized）。转换后的得分值越接近 1， 表示对应搜索结果的相似性更高。
 
-1. **分配权重**: 根据对不同列的侧重，为归一化后的得分（score_1_normalized、score_1_normalized）分配权重 **wi**。每一路的权重的范围在 [0,1] 之间。最终获得两组加权后的得分（score_1_weighted、score_2_weighted）。
+1. **分配权重**: 根据对不同列的侧重，为归一化后的得分（score_1_normalized、score_1_normalized）分配权重 **wi**。每一路的权重的范围在 &#91;0,1&#93; 之间。最终获得两组加权后的得分（score_1_weighted、score_2_weighted）。
 
 1. **融合得分**: 根据加权后的得分（score_1_weighted、score_2_weighted）从高到低进行排名，得出一组最终得分（score_final）。
 
@@ -209,7 +209,7 @@ WeightedRanker 策略的的重排基本流程如下：
 
 ### 用法{#usage-of-weightedranker}
 
-使用 WeightedRanker 策略时，需要在 `WeightedRanker` 中传入权重值。Hybrid search 中有几路搜索，就需要传入几个数值。传入的数值应当在 [0,1] 之间。权重值越接近 1 表示越重要。
+使用 WeightedRanker 策略时，需要在 `WeightedRanker` 中传入权重值。Hybrid search 中有几路搜索，就需要传入几个数值。传入的数值应当在 &#91;0,1&#93; 之间。权重值越接近 1 表示越重要。
 
 假设 Hybrid Search 中有两路搜索：文本搜索和图片搜索。其中第一路文本搜索更为重要，需要分配更多的权重。
 
@@ -424,7 +424,7 @@ RRF 策略的的重排基本流程如下：
 
 ### 用法{#usage-of-rrfranker}
 
-使用 RRF 策略时，需要在 `RRFRanker` 中传入参数值 `k`。`k` 是平滑参数，可以有效地改变全文搜索和向量搜索的相对重要性权重。该参数的默认值为 `60`，可调参数值为(0, 16384) 之间的浮点数，建议设置在 [10, 100]。虽然 `k=60` 是较为常用的选择，但最佳的 k 值因具体应用和数据特性而有所差异。我们建议根据您的实际情况测试并调整该参数值以获取最佳性能。
+使用 RRF 策略时，需要在 `RRFRanker` 中传入参数值 `k`。`k` 是平滑参数，可以有效地改变全文搜索和向量搜索的相对重要性权重。该参数的默认值为 `60`，可调参数值为(0, 16384) 之间的浮点数，建议设置在 &#91;10, 100&#93;。虽然 `k=60` 是较为常用的选择，但最佳的 k 值因具体应用和数据特性而有所差异。我们建议根据您的实际情况测试并调整该参数值以获取最佳性能。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>

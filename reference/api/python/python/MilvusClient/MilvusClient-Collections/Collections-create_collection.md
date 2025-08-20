@@ -10,10 +10,10 @@ type: docx
 token: H7eOdq9hOo7so7xes5LchIVwnrb
 sidebar_position: 5
 keywords: 
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - open source vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -52,7 +52,7 @@ create_collection(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the collection to create.
 

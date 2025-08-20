@@ -10,10 +10,10 @@ type: docx
 token: OxrMdOaVKoDUY5x2DlTcZO6GnHc
 sidebar_position: 7
 keywords: 
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - IVF
   - zilliz
   - zilliz cloud
   - cloud
@@ -47,7 +47,7 @@ drop_privilege_group(
 
     The name of the target privilege group.
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 

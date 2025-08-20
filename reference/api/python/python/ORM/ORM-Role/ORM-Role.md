@@ -10,10 +10,10 @@ type: docx
 token: LZL1d0kckouPXNxJLCmcwbCTnkG
 sidebar_position: 11
 keywords: 
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
   - zilliz
   - zilliz cloud
   - cloud
@@ -55,7 +55,7 @@ Role(
 
 - **name** (*string*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the role to create.
 

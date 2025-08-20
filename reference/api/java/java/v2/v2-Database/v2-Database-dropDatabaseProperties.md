@@ -10,10 +10,10 @@ type: docx
 token: CzC6dm9N8oBvQZxRMyocNfTpn9f
 sidebar_position: 5
 keywords: 
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
-  - vectordb
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - knn algorithm
   - zilliz
   - zilliz cloud
   - cloud

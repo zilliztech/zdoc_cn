@@ -10,10 +10,10 @@ type: docx
 token: XLepdUCcTow6rpx5vxxcbLXZnyb
 sidebar_position: 25
 keywords: 
-  - private llms
-  - nn search
-  - llm eval
-  - Sparse vs Dense
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +44,7 @@ list_indexes(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 

@@ -10,10 +10,10 @@ type: docx
 token: P0vxdEVBPoTNKLxkKIzcznlYnNc
 sidebar_position: 3
 keywords: 
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +44,7 @@ list_import_jobs(
 
 - **url** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The endpoint URL of your Zilliz Cloud cluster. 
 
@@ -59,7 +59,7 @@ list_import_jobs(
 
 - **api_key** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     Possible values are:
 
@@ -69,7 +69,7 @@ list_import_jobs(
 
 - **cluster_id** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The instance ID of the target cluster of this operation.
 

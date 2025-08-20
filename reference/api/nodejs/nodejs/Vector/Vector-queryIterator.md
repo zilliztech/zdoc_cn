@@ -10,10 +10,10 @@ type: docx
 token: Ru8IdsrG8oayAWxly1PcqMGFnxd
 sidebar_position: 6
 keywords: 
-  - Vector store
-  - open source vector database
-  - Vector index
-  - vector database open source
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
   - zilliz
   - zilliz cloud
   - cloud
@@ -59,7 +59,7 @@ queryIterator(data): Promise<any>
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
@@ -73,7 +73,7 @@ queryIterator(data): Promise<any>
 
     You can set this parameter to an empty string to skip scalar filtering. To build a scalar filtering condition, refer to [Boolean Expression Rules](https://milvus.io/docs/boolean.md). 
 
-- **output_fields** (*string[]*) -
+- **output_fields** (*string&#91;&#93;*) -
 
     A list of field names to include in each entity in return.
 
@@ -113,11 +113,11 @@ queryIterator(data): Promise<any>
 
     The sum of this value and `offset` should be less than 16,384. 
 
-- **partition_names** (*string[]*) -
+- **partition_names** (*string&#91;&#93;*) -
 
     The name of the partitions to query.
 
-**RETURNS** *Promise\<any>*
+**RETURNS** *Promise\&lt;any&gt;*
 
 This method returns a promise that resolves to an asynchronous iterator that yields batches of query results.
 

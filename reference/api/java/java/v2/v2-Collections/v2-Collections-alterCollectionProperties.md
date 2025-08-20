@@ -10,10 +10,10 @@ type: docx
 token: JQ4QdTaadoIDSPxDJRZcSDu3n5g
 sidebar_position: 3
 keywords: 
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
   - zilliz
   - zilliz cloud
   - cloud

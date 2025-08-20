@@ -10,10 +10,10 @@ type: docx
 token: EVKhdy0vwoSLSux2RW2c660unjh
 sidebar_position: 2
 keywords: 
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
-  - vector database
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - cosine distance
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,13 +50,13 @@ FieldSchema(
 
 - **name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     Name of the field.
 
 - **dtype** (*[DataType](./Collections-DataType)*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     Data type of the field.
 

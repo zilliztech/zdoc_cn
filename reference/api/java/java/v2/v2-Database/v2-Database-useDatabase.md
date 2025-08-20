@@ -10,10 +10,10 @@ type: docx
 token: LAJHdQKQQoPjmYxcfQgcvjvLnqh
 sidebar_position: 7
 keywords: 
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud

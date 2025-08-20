@@ -10,10 +10,10 @@ type: docx
 token: Z0EOd1PXooNeowx4SQgcq3synBc
 sidebar_position: 19
 keywords: 
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
   - zilliz
   - zilliz cloud
   - cloud
@@ -48,7 +48,7 @@ milvusClient.listUsers()
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-*Returns Promise\<ListCredUsersResponse>*
+*Returns Promise\&lt;ListCredUsersResponse&gt;*
 
 This method returns a promise that resolves to a **ListCredUsersResponse** object.
 
@@ -61,7 +61,7 @@ This method returns a promise that resolves to a **ListCredUsersResponse** objec
 
 **PARAMETERS:**
 
-- **usernames** (*string[]*) -
+- **usernames** (*string&#91;&#93;*) -
 
     A list of user names.
 

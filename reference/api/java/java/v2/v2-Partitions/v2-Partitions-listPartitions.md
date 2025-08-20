@@ -10,10 +10,10 @@ type: docx
 token: RJcgdJpGDouomlxPTqZc5S8Lngc
 sidebar_position: 5
 keywords: 
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
   - zilliz
   - zilliz cloud
   - cloud
@@ -51,7 +51,7 @@ listPartitions(ListPartitionsReq.builder()
 
 **RETURN TYPE:**
 
-*List\<String\>*
+*List\&lt;String\&gt;*
 
 **RETURNS:**
 

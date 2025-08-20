@@ -71,4 +71,4 @@ import Admonition from '@theme/Admonition';
 
 **为什么提示账号注册失败？**
 
-账号注册失败的理由可能是您已使用该邮箱地址注册过 Zilliz Cloud 账号。这种情况下，您可以使用该邮箱直接登录 Zilliz Cloud。如果仍然无法解决问题，您可以[提交工单](http://support.zilliz.com.cn)。
+账号注册失败的理由可能是您已使用该邮箱地址或手机号注册过 Zilliz Cloud 账号。这种情况下，您可以使用该邮箱或手机号直接登录 Zilliz Cloud。如果仍然无法解决问题，您可以[提交工单](http://support.zilliz.com.cn)。

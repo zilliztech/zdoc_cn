@@ -10,10 +10,10 @@ type: docx
 token: M2kXd5zWSoMIOnxXWamcgCkznih
 sidebar_position: 15
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - Faiss
+  - Video search
+  - AI Hallucination
+  - AI Agent
   - zilliz
   - zilliz cloud
   - cloud
@@ -53,13 +53,13 @@ drop_index_properties(
 
     The name of the index file to drop.
 
-- **property_keys** (*List[str]*) -
+- **property_keys** (*List&#91;str&#93;*) -
 
     The names of the properties to drop in a list. Possible properties are as follows:
 
     - `mmap.enabled`
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 

@@ -72,7 +72,7 @@ Hybrid Search 适用于以下两种场景。
 
 1. 进行 Hybrid Search：基于稠密向量的 ANN Search 将返回 TopK 个结果，基于稀疏向量的精准文本匹配同样将返回 TopK 个结果。
 
-1. 将两组 TopK 个结果的 Score 进行归一化（Normalization），即将 Score 折算为 [0,1] 之间。
+1. 将两组 TopK 个结果的 Score 进行归一化（Normalization），即将 Score 折算为 &#91;0,1&#93; 之间。
 
 1. 选择合适的 Reranking 策略，对两组 TopK 个结果进行重排序，最终返回 TopK 个结果。
 

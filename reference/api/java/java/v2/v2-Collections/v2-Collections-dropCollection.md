@@ -10,10 +10,10 @@ type: docx
 token: PsAGd1CNqosvirxDJ5ncIHudnSg
 sidebar_position: 14
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud

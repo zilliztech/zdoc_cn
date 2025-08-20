@@ -10,10 +10,10 @@ type: docx
 token: HEWIdid9BoFMyNxN8Bbc0P3nn6g
 sidebar_position: 2
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
   - zilliz
   - zilliz cloud
   - cloud
@@ -40,7 +40,7 @@ encode_queries(
 
 **PARAMETERS:**
 
-- **queries** (*List[str]*)
+- **queries** (*List&#91;str&#93;*)
 
     A list of string values, where each string represents a query that will be passed to the embedding model for encoding. The model will generate an embedding vector for each string in the list.
 

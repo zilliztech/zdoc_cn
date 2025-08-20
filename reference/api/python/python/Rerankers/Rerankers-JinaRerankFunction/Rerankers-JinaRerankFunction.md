@@ -10,10 +10,10 @@ type: docx
 token: E3opdXwZCoY8igxMjQ1cwsTbnzh
 sidebar_position: 1
 keywords: 
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
   - zilliz
   - zilliz cloud
   - cloud

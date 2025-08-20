@@ -10,10 +10,10 @@ type: docx
 token: Lc03dk5YVo8Ilvx4XINcv5KBn9e
 sidebar_position: 12
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
@@ -73,11 +73,11 @@ A **DescribeCollectionResp** object that contains detailed information about the
 
     The number of partitions in the current collection.
 
-- **fieldNames** (*List\<String\>*)
+- **fieldNames** (*List\&lt;String\&gt;*)
 
     A list of fields in the current collection.
 
-- **vectorFieldName** (*List\<String\>*)
+- **vectorFieldName** (*List\&lt;String\&gt;*)
 
     The name of the vector field.
 

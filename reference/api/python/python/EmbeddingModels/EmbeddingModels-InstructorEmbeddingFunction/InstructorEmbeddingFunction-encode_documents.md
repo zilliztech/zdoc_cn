@@ -10,10 +10,10 @@ type: docx
 token: Mp7CdNfJnoBF2DxscRNc6RO0n7d
 sidebar_position: 1
 keywords: 
-  - Faiss
-  - Video search
-  - AI Hallucination
-  - AI Agent
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
   - zilliz
   - zilliz cloud
   - cloud
@@ -40,13 +40,13 @@ encode_documents(
 
 **PARAMETERS:**
 
-- **documents** (*List[str]*)
+- **documents** (*List&#91;str&#93;*)
 
     A list of string values, where each string represents a document that will be passed to the embedding model for encoding. The model will generate an embedding vector for each string in the list.
 
 **RETURN TYPE:**
 
-*List[np.array]*
+*List&#91;np.array&#93;*
 
 **RETURNS:**
 

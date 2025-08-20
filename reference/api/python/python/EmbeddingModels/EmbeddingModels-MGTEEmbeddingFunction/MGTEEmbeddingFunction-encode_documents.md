@@ -10,10 +10,10 @@ type: docx
 token: GyrmdRjGZoOFKdxsYyCcvNG7npg
 sidebar_position: 1
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
   - zilliz
   - zilliz cloud
   - cloud
@@ -40,7 +40,7 @@ encode_documents(
 
 **PARAMETERS:**
 
-- **documents** (*List[str]*)
+- **documents** (*List&#91;str&#93;*)
 
     A list of string values, where each string represents a document that will be passed to the embedding model for encoding. The model will generate an embedding vector for each string in the list.
 

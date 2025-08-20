@@ -190,13 +190,19 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
    </tr>
    <tr>
      <td><p>Serverless</p></td>
-     <td><p>每个 Partition 可容纳 1 亿个 768 维向量。</p></td>
+     <td><p>Zilliz Cloud Serverless 集群无硬性容量限制。</p></td>
    </tr>
    <tr>
      <td><p>Dedicated</p></td>
-     <td><p>Zilliz Cloud Dedicated 集群无硬性容量限制。以下为不同 CU 类型的 Dedicated 集群容量参考。如需更大容量，您可以扩容集群。详情请参考<a href="./scale-cluster">集群扩缩容</a>。</p><ul><li><p>性能型 CU：每个 CU 可容纳 150 万个768 维向量。</p></li><li><p>容量型 CU：每个 CU 可容纳 500 万个768 维向量。</p></li><li><p>存储扩展型 CU：每个 CU 可容纳 2000 万个768 维向量</p></li></ul></td>
+     <td><p>Zilliz Cloud Dedicated 集群无硬性容量限制。</p></td>
    </tr>
 </table>
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>Dedicated 集群的容量上限会根据您选择的 CU 类型与 CU 大小的不同而发生变化。如果容量不足，可以尝试调整 CU 类型和大小。具体操作步骤，可以参考<a href="./scale-cluster">集群扩缩容</a>。</p>
+
+</Admonition>
 
 ## Database{#databases}
 
@@ -244,9 +250,9 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
 
 ### 兼容 Milvus v2.5.x 的集群{#clusters-compatible-with-milvus-v25x}
 
-根据您的集群使用的 CU 数量的不同，每 CU 支持创建最多 1,024 个 Collection 或 4,096 个 Partition。其中，每个 Collection 最多可创建 1,024 个 Partition。每个 Collection 支持创建最多 1,024 个 Partition。 您可以参考如下公式计算您的集群中的 Collection 和 Partition 的数量上限。
+根据您的集群使用的 CU 数量的不同，每 CU 支持创建最多 1,024 个 Collection 或 4,096 个 Partition。其中，每个 Collection 最多可创建 1,024 个 Partition。您可以参考如下公式计算您的集群中的 Collection 和 Partition 的数量上限。
 
-![ITn3wC8InhchVGbcz4QciSXqnag](/img/ITn3wC8InhchVGbcz4QciSXqnag.png)
+![RBu3wbDwihqeFgbFZwQcIpXNnUf](/img/RBu3wbDwihqeFgbFZwQcIpXNnUf.png)
 
 - 集群中 Collection 的数量上限应该在 1,024 和集群的 CU 数量之积与 16,384 间取最小值。
 
@@ -315,14 +321,14 @@ Shard 的数量上限取决于集群版本和 CU 规格。
      <td><p>8</p></td>
    </tr>
    <tr>
-     <td><blockquote>  <p>64 CU</p></blockquote></td>
+     <td>&lt;blockquote&gt;  <p>64 CU</p>&lt;/blockquote&gt;</td>
      <td><p>16</p></td>
    </tr>
 </table>
 
 ### 速率限制{#rate-limit}
 
-此外，Zilliz Cloud 针对 Serverless 和 Dedicated 集群中的 Collection 操作（包括创建、加载、释放、删除）还具有速率限制。
+此外，Zilliz Cloud 针对 Serverless 和 Dedicated 集群中的 Collection 和 Partition 操作（包括创建、加载、释放、删除）还具有速率限制。
 
 <table>
    <tr>
@@ -331,7 +337,11 @@ Shard 的数量上限取决于集群版本和 CU 规格。
    </tr>
    <tr>
      <td><p>Collection 操作（创建、加载、释放、删除）</p></td>
-     <td><p>每个集群 5 req/s。</p></td>
+     <td><p>每个集群 20 req/s。</p></td>
+   </tr>
+   <tr>
+     <td><p>Partition 操作（创建、加载、释放、删除）</p></td>
+     <td><p>每个集群 20 req/s。</p></td>
    </tr>
 </table>
 
@@ -493,7 +503,7 @@ Shard 的数量上限取决于集群版本和 CU 规格。
 
 ### Load{#load}
 
-每个集群的加载请求速率限制为每秒 **5** 个请求。
+每个集群的加载请求速率限制为每秒 **20** 个请求。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -531,11 +541,11 @@ Shard 的数量上限取决于集群版本和 CU 规格。
 
 ### Drop Collection{#drop}
 
-每个集群的删除请求速率限制为每秒 **5** 个请求。
+每个集群的删除请求速率限制为每秒 **20** 个请求。
 
 ### Data Import{#data-import}
 
-单 Collection 支持最多 **10** 个正在运行或待运行的数据导入任务。
+单 Collection 支持最多 **10,000** 个正在运行或待运行的数据导入任务。
 
 此外，Zilliz Cloud 还对导入的文件大小有以下限制。
 
@@ -548,17 +558,17 @@ Shard 的数量上限取决于集群版本和 CU 规格。
    <tr>
      <td><p>JSON</p></td>
      <td><p>1 GB</p></td>
-     <td><p>Free: 512 MB</p><p>Serverless &amp; Dedicated: 1 TB</p></td>
+     <td><p><strong>Free</strong>: 单次导入总文件大小最大为 1 GB，单个文件大小最大为 1 GB，单次最多导入 1,000 个文件。</p><p><strong>Serverless & Dedicated</strong>: 单次导入总文件大小最大为 1 TB，单个文件大小最大为 10 GB，单次最多导入 1,000 个文件。</p></td>
    </tr>
    <tr>
      <td><p>Numpy</p></td>
      <td><p>暂不支持</p></td>
-     <td><p>Free: 512 MB</p><p>Serverless &amp; Dedicated: 文件夹的最大大小为 1 TB，每个子文件夹的最大大小为 10 GB。</p></td>
+     <td><p><strong>Free</strong>: 单次导入总文件大小最大为 1 GB，单个文件大小最大为 1 GB，单次最多导入 1,000 个文件。</p><p><strong>Serverless & Dedicated</strong>: 单次导入总文件大小最大为 1 TB，单个子文件夹大小最大为 10 GB，单次最多导入 1,000 个子文件夹。</p></td>
    </tr>
    <tr>
      <td><p>Parquet</p></td>
-     <td><p>暂不支持</p></td>
-     <td><p>Free: 512 MB</p><p>Serverless &amp; Dedicated: 1 TB</p></td>
+     <td><p>1 GB</p></td>
+     <td><p><strong>Free</strong>: 单次导入总文件大小最大为 1 GB，单个文件大小最大为 1 GB，单次最多导入 1,000 个文件。</p><p><strong>Serverless & Dedicated</strong>: 单次导入总文件大小最大为 1 TB，单个文件大小最大为 10 GB，单次最多导入 1,000 个文件。</p></td>
    </tr>
 </table>
 

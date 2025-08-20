@@ -10,10 +10,10 @@ type: docx
 token: NS1xdv6f4oQlN4xqnOGc6ssWnTf
 sidebar_position: 4
 keywords: 
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
   - zilliz
   - zilliz cloud
   - cloud

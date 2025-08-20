@@ -10,10 +10,10 @@ type: docx
 token: M0qRdF1cLokrxvxyrXScJ64FnEe
 sidebar_position: 37
 keywords: 
-  - milvus vector database
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
   - zilliz
   - zilliz cloud
   - cloud
@@ -52,14 +52,14 @@ rename_collection(
 
 - **old_collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
     The original name of the target collection.
 
     Setting this to a non-existing collection results in a **MilvusException**.
 
 - **new_collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the target collection after this operation.
 

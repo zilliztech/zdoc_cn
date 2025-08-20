@@ -10,10 +10,10 @@ type: docx
 token: AQ1ydMXbOog5VJxITgUc4GFvnVe
 sidebar_position: 28
 keywords: 
-  - milvus vector db
-  - Zilliz Cloud
-  - what is milvus
-  - milvus database
+  - Vector embeddings
+  - Vector store
+  - open source vector database
+  - Vector index
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,7 +50,7 @@ upsert(
 
 - **data** (*list* | *dict* | *pandas.DataFrame*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The data to insert into the current collection.
 

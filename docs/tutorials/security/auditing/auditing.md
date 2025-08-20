@@ -2,7 +2,7 @@
 title: "审计 | Cloud"
 slug: /auditing
 sidebar_label: "审计"
-beta: PRIVATE
+beta: FALSE
 notebook: FALSE
 description: "了解如何为您的 Zilliz Cloud 集群配置日志审计能力。 | Cloud"
 type: origin

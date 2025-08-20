@@ -55,7 +55,7 @@ utility.mkts_from_unixtime(
 
 - **epoch** (*float*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A UNIX epoch timestamp.
 
@@ -64,7 +64,7 @@ utility.mkts_from_unixtime(
 - **milliseconds** (*float*) -
 An incremental time interval in milliseconds.
 
-- **delta** (*Optional[timedelta]*) -
+- **delta** (*Optional&#91;timedelta&#93;*) -
 
     A **datetime.timedelta** object that represents the duration expressing the difference between two `date`, `time`, or `datetime` instances to microsecond resolution.
 

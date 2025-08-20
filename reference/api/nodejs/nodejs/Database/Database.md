@@ -9,10 +9,10 @@ token: CEYUfuKoYlVIfod63clcDaS9nxc
 sidebar_position: 2
 sidebar_label: "Database"
 keywords: 
-  - Faiss
-  - Video search
-  - AI Hallucination
-  - AI Agent
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - zilliz
   - zilliz cloud
   - cloud

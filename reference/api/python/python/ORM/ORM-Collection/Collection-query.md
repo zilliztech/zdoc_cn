@@ -10,10 +10,10 @@ type: docx
 token: JzcYdBQ5zoU4KpxPqUHcPLQonKd
 sidebar_position: 22
 keywords: 
-  - Video similarity search
   - Vector retrieval
   - Audio similarity search
   - Elastic vector database
+  - Pinecone vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -46,7 +46,7 @@ query(
 
 - **expr** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A scalar filtering condition to filter matching entities. 
 
@@ -128,7 +128,7 @@ query(
 
 **RETURN TYPE:**
 
-*list[dict]*
+*list&#91;dict&#93;*
 
 **RETURNS:**
 

@@ -9,10 +9,10 @@ token: I5i9f86n4lsy9IddsDocMOsfnXg
 sidebar_position: 2
 sidebar_label: "BulkImport"
 keywords: 
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud

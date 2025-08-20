@@ -10,10 +10,10 @@ type: docx
 token: XeZwdeK64oGD8rx9DA3ciqNinnh
 sidebar_position: 6
 keywords: 
-  - Unstructured Data
-  - vector database
-  - IVF
-  - knn
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -40,7 +40,7 @@ has_connection(alias: str)
 
 - **alias** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A connection alias.
 

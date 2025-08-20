@@ -10,10 +10,10 @@ type: docx
 token: V7BWdrC39oPAauxoWBzcaldwnVc
 sidebar_position: 9
 keywords: 
-  - milvus
-  - Zilliz
-  - milvus vector database
-  - milvus db
+  - what is semantic search
+  - Embedding model
+  - image similarity search
+  - Context Window
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,7 +45,7 @@ drop_alias(
 
 - **alias** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The alias to drop.
 

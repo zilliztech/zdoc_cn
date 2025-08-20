@@ -10,10 +10,10 @@ type: docx
 token: TGsXduN5OoAjVyxZTvRc8HR2nse
 sidebar_position: 13
 keywords: 
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,7 +50,7 @@ listPrivilegeGroups(ListPrivilegeGroupsReq.builder()
 
 A **ListPrivilegeGroupsResp** object contains the following fields:
 
-- **privilegeGroups** (*List\<PrivilegeGroup>*) -
+- **privilegeGroups** (*List&lt;PrivilegeGroup&gt;*) -
 
     A list of privilege groups, each of which is a **PrivilegeGroup** object.
 
@@ -58,7 +58,7 @@ A **ListPrivilegeGroupsResp** object contains the following fields:
 
         The name of the current privilege group.
 
-    - **privileges** (List\<String>) - 
+    - **privileges** (List&lt;String&gt;) - 
 
         The privileges added into the current privilege group.
 

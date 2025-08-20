@@ -159,13 +159,13 @@ Zilliz Cloud 支持以下四个级别的多租户策略：Database 级别、Coll
 
 在 Zilliz Cloud 中选择多租户策略时，建议综合考虑以下因素：
 
-1. **可扩展性**：Partition Key > Partition > Collection > Database
+1. **可扩展性**：Partition Key &gt; Partition &gt; Collection &gt; Database
  如果您需要支持数量极大的租户（如百万级以上），建议选择 Partition key 级别的策略。
 
-1. **强数据隔离需求**：Database = Collection > Partition > Partition key
+1. **强数据隔离需求**：Database = Collection &gt; Partition &gt; Partition key
  如果租户间的数据必须物理隔离，建议选择 Database、Collection 或 Partition 级别的策略。
 
-1. **数据灵活性（不同租户的数据 Schema 不同）**：Database > Collection > Partition = Partition key
+1. **数据灵活性（不同租户的数据 Schema 不同）**：Database &gt; Collection &gt; Partition = Partition key
  Database 和 Collection 级别的策略允许每个租户拥有不同的数据 Schema，更适合数据结构差异大的场景。
 
 1. **其他因素**：

@@ -171,38 +171,38 @@ Qdrant Payload 默认映射为 Dynamic Field 以实现最大灵活性，转换�
      <th><p>是否支持手动添加</p></th>
    </tr>
    <tr>
-     <td><p>Array\<Integer></p></td>
-     <td><p>ARRAY\<INT64></p></td>
+     <td><p>Array&lt;Integer&gt;</p></td>
+     <td><p>ARRAY&lt;INT64&gt;</p></td>
      <td><p>支持添加为新的固定字段（不能从动态字段转换）。</p></td>
    </tr>
    <tr>
-     <td><p>Array\<Float></p></td>
-     <td><p>ARRAY\<DOUBLE></p></td>
+     <td><p>Array&lt;Float&gt;</p></td>
+     <td><p>ARRAY&lt;DOUBLE&gt;</p></td>
      <td><p>支持添加为新的固定字段（不能从动态字段转换）。</p></td>
    </tr>
    <tr>
-     <td><p>Array\<Bool></p></td>
-     <td><p>ARRAY\<BOOL></p></td>
+     <td><p>Array&lt;Bool&gt;</p></td>
+     <td><p>ARRAY&lt;BOOL&gt;</p></td>
      <td><p>支持添加为新的固定字段（不能从动态字段转换）。</p></td>
    </tr>
    <tr>
-     <td><p>Array\<Keyword></p></td>
-     <td><p>ARRAY\<VARCHAR></p></td>
+     <td><p>Array&lt;Keyword&gt;</p></td>
+     <td><p>ARRAY&lt;VARCHAR&gt;</p></td>
      <td><p>支持添加为新的固定字段（不能从动态字段转换）。</p></td>
    </tr>
    <tr>
-     <td><p>Array\<Geo></p></td>
+     <td><p>Array&lt;Geo&gt;</p></td>
      <td><p>不支持</p></td>
      <td><p>Array 中的元素类型为 Geo 时暂不支持映射。</p></td>
    </tr>
    <tr>
-     <td><p>Array\<Datetime></p></td>
-     <td><p>ARRAY\<VARCHAR></p></td>
+     <td><p>Array&lt;Datetime&gt;</p></td>
+     <td><p>ARRAY&lt;VARCHAR&gt;</p></td>
      <td><p>支持添加为新的固定字段（不能从动态字段转换）。</p></td>
    </tr>
    <tr>
-     <td><p>Array\<UUID></p></td>
-     <td><p>ARRAY\<VARCHAR></p></td>
+     <td><p>Array&lt;UUID&gt;</p></td>
+     <td><p>ARRAY&lt;VARCHAR&gt;</p></td>
      <td><p>支持添加为新的固定字段（不能从动态字段转换）。</p></td>
    </tr>
 </table>

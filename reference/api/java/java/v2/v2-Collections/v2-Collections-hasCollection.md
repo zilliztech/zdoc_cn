@@ -10,10 +10,10 @@ type: docx
 token: Vs26d4WrYoJ3moxuLifcyP2enyh
 sidebar_position: 18
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
   - zilliz
   - zilliz cloud
   - cloud

@@ -10,10 +10,10 @@ type: docx
 token: FxUxdWGz2oUh1ixyquZcAndBnAf
 sidebar_position: 2
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud

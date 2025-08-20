@@ -10,10 +10,10 @@ type: docx
 token: MbTMdBf7Bow3k6xA4R4c7j1DnRd
 sidebar_position: 1
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud
@@ -48,11 +48,11 @@ add_privileges_to_group(
 
     The name of the target privilege group.
 
-- **privileges** (*List[str]*) -
+- **privileges** (*List&#91;str&#93;*) -
 
     The privilages to add in a list.
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 
