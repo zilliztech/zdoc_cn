@@ -1074,6 +1074,14 @@ class larkDocWriter {
             return await this.__text_run(x, code['elements'], true)
         }))).join('') 
 
+        elements = elements.replace("zilliz.com\"", "zilliz.com.cn\"")
+                        .replace("\"gcp\"", "\"ali\"")
+                        .replace("\"aws\"", "\"ali\"")
+                        .replace("\"azure\"", "\"ali\"")
+                        .replace("\"gcp-us-west1\"", "\"ali-cn-hangzhou\"")
+                        .replace("\"aws-us-west-2\"", "\"ali-cn-hangzhou\"")
+                        .replace("\"az-westus3\"", "\"ali-cn-hangzhou\"")
+
         if (valid_langs.includes(lang)) {
             const prev_type = prev ? this.block_types[prev['block_type']-1] : null;
             const next_type = next ? this.block_types[next['block_type']-1] : null;
