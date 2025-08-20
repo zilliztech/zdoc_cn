@@ -36,7 +36,7 @@ sidebar_position: 7
 
 ### 什么是 vCU？ \{#what-is-a-vCU-how-does-it-get-calculated}
 
-vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、upsert、delete）所消耗资源的基本单位。读取和写入的数据量单位会由 GB 折算为 vCU。详情请参考[了解费用](./understand-cost_1#serverless-clusters)。
+vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、upsert、delete）所消耗资源的基本单位。读取和写入的数据量单位会由 GB 折算为 vCU。详情请参考[Serverless 集群费用](./serverless-cluster-cost)。
 
 ### 如何查看订阅的 Zilliz Cloud 版本？ \{#how-can-i-know-which-plan-i-am-on}
 

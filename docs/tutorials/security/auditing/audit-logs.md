@@ -30,7 +30,7 @@ import Admonition from '@theme/Admonition';
 <ul>
 <li><p>审计日志功能仅对 <strong>Dedicated</strong> 集群可见。如有需求，请考虑<a href="./manage-cluster">升级集群</a>。</p></li>
 <li><p>仅 Milvus 2.5.x 版本及以上的集群支持审计日志功能。</p></li>
-<li><p>审计日志支持与<a href="./integrate-with-storage-bucket">阿里云对象存储</a>或 <a href="./integrate-with-amazon-s3">Amazon S3</a> 集成。</p></li>
+<li><p>审计日志支持与<a href="./integrate-with-storage-bucket">阿里云对象存储</a>集成。</p></li>
 </ul>
 
 </Admonition>
@@ -55,7 +55,7 @@ import Admonition from '@theme/Admonition';
 
 - **文件路径**： `/<Cluster ID>/<Log type>/<Date>`
 
-- **文件命名规则**：具体格式为 `<File name><File name suffix>`。`<File name>`的格式为 *HH:MM:SS-$UUID*：*HH:MM:SS* 代表日志产生时的 UTC 时间戳；*$UUID* 代表一个随机字符串，如 `09:16:53-jz5l7D8Q`。
+- **文件命名规则**：具体格式为 `<File name><File name suffix>`。`<File name>`的格式为 *HH:MM:SS-&#36;UUID*：*HH:MM:SS* 代表日志产生时的 UTC 时间戳；*&#36;UUID* 代表一个随机字符串，如 `09:16:53-jz5l7D8Q`。
 
 以下是流式传输到存储桶的审计日志条目示例：
 
@@ -87,7 +87,7 @@ import Admonition from '@theme/Admonition';
 
 - 您的 Zilliz Cloud 集群版本为 **Dedicated** 及以上。如有需求，请考虑[升级集群](./manage-cluster)。
 
-- 您已经为 Zilliz Cloud 项目配置了对象存储集成，因为配置完成后审计日志将会流式传输到您的存储桶。有关详细步骤，请参阅[阿里云对象存储](./integrate-with-storage-bucket)或 [Amazon S3](./integrate-with-amazon-s3)。
+- 您已经为 Zilliz Cloud 项目配置了对象存储集成，因为配置完成后审计日志将会流式传输到您的存储桶。有关详细步骤，请参阅[阿里云对象存储](./integrate-with-storage-bucket)。
 
 - 您拥有该项目的**组织管理员**或**项目管理员**权限。如果您没有相应权限，请联系 Zilliz Cloud 管理员。
 
