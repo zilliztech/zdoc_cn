@@ -79,7 +79,7 @@ A `StageManager` instance.
 from pymilvus.bulk_writer.stage_manager import StageManager
 
 stage_manager = StageManager(
-    cloud_endpoint="https://api.cloud.zilliz.com",
+    cloud_endpoint="https://api.cloud.zilliz.com.cn",
     api_key="YOUR_API_KEY"
 )
 ```

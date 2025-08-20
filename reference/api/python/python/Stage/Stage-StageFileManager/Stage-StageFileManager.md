@@ -86,7 +86,7 @@ A `StageFileManager` instance.
 from pymilvus.bulk_writer.stage_file_manager import StageFileManager
 
 stage_manager = StageFileManager(
-    cloud_endpoint="https://api.cloud.zilliz.com",
+    cloud_endpoint="https://api.cloud.zilliz.com.cn",
     api_key="YOUR_API_KEY",
     stage_name="my_stage"
 )

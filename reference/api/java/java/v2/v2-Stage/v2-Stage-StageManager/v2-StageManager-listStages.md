@@ -101,7 +101,7 @@ import io.milvus.bulkwriter.StageManagerParam;
 import io.milvus.bulkwriter.request.stage.CreateStageRequest;
 
 StageManagerParam stageManagerParam = StageManagerParam.newBuilder()
-    .withCloudEndpoint("https://api.cloud.zilliz.com")
+    .withCloudEndpoint("https://api.cloud.zilliz.com.cn")
     .withApiKey("YOUR_API_KEY")
     .build();
         

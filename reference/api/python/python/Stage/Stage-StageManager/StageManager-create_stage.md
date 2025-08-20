@@ -74,13 +74,13 @@ None
 from pymilvus.bulk_writer.stage_manager import StageManager
 
 stage_manager = StageManager(
-    cloud_endpoint="https://api.cloud.zilliz.com",
+    cloud_endpoint="https://api.cloud.zilliz.com.cn",
     api_key="YOUR_API_KEY"
 )
 
 stage_manager.create_stage(
     project_id="proj-xxxxxxxxxxxxxxxxxxxxxxx", 
-    region_id="aws-us-west-1", 
+    region_id="ali-cn-hangzhou", 
     stage_name="my_stage"
 )
 

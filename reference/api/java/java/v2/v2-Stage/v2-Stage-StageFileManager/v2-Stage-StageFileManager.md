@@ -89,7 +89,7 @@ import io.milvus.bulkwriter.StageFileManager;
 import io.milvus.bulkwriter.StageFileManagerParam;
 
 StageFileManagerParam stageFileManagerParam = StageFileManagerParam.newBuilder()
-    .withCloudEndpoint("https://api.cloud.zilliz.com")
+    .withCloudEndpoint("https://api.cloud.zilliz.com.cn")
     .withApiKey("YOUR_API_KEY")
     .withStageName("my_stage")
     .build();

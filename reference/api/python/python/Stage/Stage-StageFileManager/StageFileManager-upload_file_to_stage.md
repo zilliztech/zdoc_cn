@@ -86,7 +86,7 @@ An object with the following data structure:
 from pymilvus.bulk_writer.stage_file_manager import StageFileManager
 
 stage_file_manager = StageFileManager(
-    cloud_endpoint="https://api.cloud.zilliz.com",
+    cloud_endpoint="https://api.cloud.zilliz.com.cn",
     api_key="YOUR_API_KEY",
     stage_name="my_stage"
 )
