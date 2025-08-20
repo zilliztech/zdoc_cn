@@ -35,28 +35,16 @@ import Admonition from '@theme/Admonition';
 
     <table>
        <tr>
-         <th><p>地域</p></th>
-         <th><p><strong>URI</strong></p></th>
-         <th><p>地域 ID</p></th>
+         <th><p>URI Style</p></th>
+         <th><p>URI</p></th>
        </tr>
        <tr>
-         <td><p>华东1（杭州）</p></td>
-         <td><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/object-name</code></p></td>
-         <td><p><code>cn-hangzhou</code></p></td>
-       </tr>
-       <tr>
-         <td><p>华北2（北京）</p></td>
-         <td><p><code>https://bucket-name.oss-cn-beijing.aliyuncs.com/object-name</code></p></td>
-         <td><p><code>cn-beijing</code></p></td>
-       </tr>
-       <tr>
-         <td><p>华南1（深圳）</p></td>
-         <td><p><code>https://bucket-name.oss-cn-shenzhen.aliyuncs.com/object-name</code></p></td>
-         <td><p><code>cn-shenzhen</code></p></td>
+         <td><p>公共访问 URL</p></td>
+         <td><ul><li><p><strong>文件</strong>：<i>http</i>s://&lt;bucket_name&gt;.oss-&lt;region_code&gt;.aliyuncs.com/&lt;object_name&gt;</p></li><li><p><strong>文件夹</strong>：<i>http</i>s://&lt;bucket_name&gt;.oss-&lt;region_code&gt;.aliyuncs.com/&lt;folder_name&gt;/</p></li></ul></td>
        </tr>
     </table>
 
-    关于如何通过上述 URI 访问存储桶中的对象，可以参考 [OSS 访问域名使用规则](https://help.aliyun.com/zh/oss/user-guide/regions-and-endpoints)。
+关于如何填写 &lt;region_code&gt;，可以参考 [OSS 访问域名使用规则](https://help.aliyun.com/zh/oss/user-guide/regions-and-endpoints)中的地域 ID。
 
 - **Required permissions**
 
@@ -78,26 +66,18 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><p>地域</p></th>
+     <th><p><strong>URI Style</strong></p></th>
      <th><p><strong>URI</strong></p></th>
-     <th><p>地域 ID</p></th>
    </tr>
    <tr>
-     <td><p>北京</p></td>
-     <td><p><code>https://bucket-name.cos.ap-beijing.myqcloud.com/object-name</code></p></td>
-     <td><p>ap-beijing</p></td>
-   </tr>
-   <tr>
-     <td><p>上海</p></td>
-     <td><p><code>https://bucket-name.cos.ap-shanghai.myqcloud.com/object-name</code></p></td>
-     <td><p>ap-shanghai</p></td>
-   </tr>
-   <tr>
-     <td><p>弗吉尼亚</p></td>
-     <td><p><code>https://bucket-name.cos.na-ashburn.myqcloud.com/object-name</code></p></td>
-     <td><p>na-ashburn</p></td>
+     <td><p>对象访问 URL</p></td>
+     <td><ul><li><p><strong>文件</strong>：<i>http</i>s://&lt;bucket_name&gt;.cos.&lt;region_code&gt;.myqcloud.com/&lt;object_name&gt;</p></li><li><p><strong>文件夹</strong>：<i>http</i>s://&lt;bucket_name&gt;.cos.&lt;region_code&gt;.myqcloud.com/&lt;folder_name&gt;/</p></li></ul></td>
    </tr>
 </table>
+
+关于如何填写 &lt;region_code&gt;，可以参考[地域和可用区](https://www.tencentcloud.com/zh/document/product/239/4106)。
+
+关于如何获取对象访问 URL，请参考[导出对象 URL](https://www.tencentcloud.com/zh/document/product/436/42391)。
 
 - **Required permissions**
 
@@ -121,30 +101,24 @@ import Admonition from '@theme/Admonition';
 
 <table>
    <tr>
-     <th><p>地域</p></th>
      <th><p><strong>URI Style</strong></p></th>
      <th><p><strong>URI</strong></p></th>
-     <th><p>地域 ID</p></th>
    </tr>
    <tr>
-     <td><p>宁夏</p></td>
      <td><p>virtual-hosted–style</p></td>
-     <td><p><code>https://bucket-name.s3.northwest-1.amazonaws.com.cn/object-name</code></p></td>
-     <td><p>northwest-1</p></td>
+     <td><ul><li><p><strong>文件</strong>：<i>http</i>s://&lt;bucket_name&gt;.s3.&lt;region_code&gt;.amazonaws.com.cn/&lt;object_name&gt;</p></li><li><p><strong>文件夹</strong>：<i>http</i>s://&lt;bucket_name&gt;.s3.&lt;region_code&gt;.amazonaws.com.cn/&lt;folder_name&gt;/</p></li></ul></td>
    </tr>
    <tr>
-     <td><p>宁夏</p></td>
      <td><p>path-style</p></td>
-     <td><p><code>https://s3.northwest-1.amazonaws.com.cn/bucket-name/object-name</code></p></td>
-     <td><p>northwest-1</p></td>
+     <td><ul><li><p><strong>文件</strong>：<i>http</i>s://s3.&lt;region_code&gt;.amazonaws.com.cn/&lt;bucket_name&gt;/&lt;object_name&gt;</p></li><li><p><strong>文件夹</strong>：<i>http</i>s://s3.&lt;region_code&gt;.amazonaws.com.cn/&lt;bucket_name&gt;/&lt;folder_name&gt;/</p></li></ul></td>
    </tr>
    <tr>
-     <td><p>宁夏</p></td>
      <td><p>S3 URI</p></td>
-     <td><p><code>s3://bucket-name/object-name</code></p></td>
-     <td><p>northwest-1</p></td>
+     <td><ul><li><p><strong>文件</strong>：s3://&lt;bucket_name&gt;/&lt;object_name&gt;</p></li><li><p><strong>文件夹</strong>：s3://&lt;bucket_name&gt;/&lt;folder_name&gt;/</p></li></ul></td>
    </tr>
 </table>
+
+当前仅支持亚马逊云科技中国（宁夏），因此，&lt;region_code&gt; 为 `northwest-1`。
 
 - **Required permissions**
 

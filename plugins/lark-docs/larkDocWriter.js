@@ -793,8 +793,8 @@ class larkDocWriter {
             return codeBlocks.some(block => pos >= block.start && pos < block.end);
         }
 
-        // Match URLs, including those containing <, >, [, ], {, }
-        const urlRegex = /https?:\/\/[^\s'")]+/g;
+        // Match URLs, including those containing <, >, [, ], {, }, but not </
+        const urlRegex = /https?:\/\/[^\s^：'")]+/g;
         let result = '';
         let lastIndex = 0;
 
@@ -809,6 +809,7 @@ class larkDocWriter {
             if (!isInCodeBlock(urlStart)) {
                 // If the url contains <, [, or {, treat it as an example and encode it
                 if (/[<\[\{]/.test(match[0])) {
+                    console.log(match[0])
                     result += match[0].replace('http', '<i>http</i>')
                 } else {
                     result += match[0];
