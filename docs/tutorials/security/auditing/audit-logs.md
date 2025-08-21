@@ -30,7 +30,7 @@ import Admonition from '@theme/Admonition';
 <ul>
 <li><p>审计日志功能仅对 <strong>Dedicated</strong> 集群可见。如有需求，请考虑<a href="./manage-cluster">升级集群</a>。</p></li>
 <li><p>仅 Milvus 2.5.x 版本及以上的集群支持审计日志功能。</p></li>
-<li><p>审计日志支持与<a href="./integrate-with-storage-bucket">阿里云对象存储</a>集成。</p></li>
+<li><p>审计日志支持与<a href="./integrate-with-storage-bucket">阿里云对象存储</a>或<a href="./integrate-with-amazon-s3">Amazon S3</a>集成。</p></li>
 </ul>
 
 </Admonition>
@@ -47,7 +47,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>控制平台上的诸如迁移、备份和恢复等集群操作不会产生审计日志。您可前往组织事件页面查看相关操作记录。具体可参考<a href="./view-activities">查看事件</a>。</p>
+<p>控制平台上的诸如迁移、备份和恢复等集群操作不会产生审计日志。您可前往组织事件页面查看相关操作记录。具体可参考<a href="./view-activities">查看事件</a>或<a href="./integrate-with-amazon-s3">Amazon S3</a>集成。</p>
 
 </Admonition>
 
