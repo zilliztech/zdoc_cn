@@ -58,22 +58,22 @@ Zilliz Cloud 控制台中的**指标**页签展示了各类集群指标图表。
      <td><p>-</p></td>
    </tr>
    <tr>
-     <td><p>Query Node CU 计算资源</p></td>
+     <td><p>Query CU 计算资源</p></td>
      <td><p>%</p></td>
      <td><p>相对于 CU 总计算能力的已使用计算能力的度量。</p><p>该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
      <td><p><strong>70%-80%</strong>：检查服务状态并准备<a href="./manage-cluster">扩容</a>。 </p><p><strong>&gt; 90%</strong>：立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p></td>
    </tr>
    <tr>
-     <td><p>Query Node CU 加载容量</p></td>
+     <td><p>Query CU 加载容量</p></td>
      <td><p>%</p></td>
      <td><p>相对于 CU 总容量的已使用容量的度量。</p><p>该指标仅适用于 <strong>Free</strong>, <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本类型</a>。</p></td>
      <td><p><strong>70%-80%</strong>：检查服务状态并准备<a href="./manage-cluster">扩容</a>。 </p><p><strong>&gt; 90%</strong>：立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p><p><strong>100%</strong>：当 CU 加载容量达到 100% 时，您将无法向集群写入数据。请立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p></td>
    </tr>
    <tr>
-     <td><p>Query Node CU 规格总数</p></td>
+     <td><p>Query CU 总数</p></td>
      <td><p>个</p></td>
-     <td><p>当前集群中 Query Node 的 CU 规格总数。该数值可以通过集群 CU 规格 × Replica 数量计算得出。 </p><p>例如，如果集群的 CU 规格为 2，Replica 数量为 2，则此处显示的Query Node CU 规格总数为 4。</p><p>该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
-     <td><p>监控该指标，可以识别 Query Node CU 的<a href="./scale-cluster">扩缩容</a>事件。</p></td>
+     <td><p>当前集群中 Query CU 总数。该数值可以通过集群 Query CU × Replica 数量计算得出。 </p><p>例如，如果集群的 Query CU为 2，Replica 数量为 2，则此处显示的Query CU 规格总数为 4。</p><p>该指标仅适用于 <strong>Dedicated</strong> 或 <strong>BYOC</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
+     <td><p>监控该指标，可以识别 Query CU 的<a href="./scale-cluster">扩缩容</a>事件。</p></td>
    </tr>
    <tr>
      <td><p>Replica 数量</p></td>

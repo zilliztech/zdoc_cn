@@ -4,7 +4,7 @@ slug: /integrate-with-amazon-s3
 sidebar_label: "Amazon S3"
 beta: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 支持与 Amazon Simple Storage Service（Amazon S3） 集成，用于将备份文件或审计日志导出到指定的 S3 存储桶。 | Cloud"
+description: "Zilliz Cloud 支持与 Amazon Simple Storage Service（Amazon S3） 集成，用于转发审计日志或导出备份文件至指定的 S3 存储桶。 | Cloud"
 type: origin
 token: Bt3swdJKaigDQgkrzSwcoEEgnV4
 sidebar_position: 2
@@ -26,11 +26,11 @@ import Supademo from '@site/src/components/Supademo';
 
 # Amazon S3
 
-Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.amazonaws.cn/AmazonS3/latest/userguide/Welcome.html)） 集成，用于将备份文件或审计日志导出到指定的 S3 存储桶。
+Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.amazonaws.cn/AmazonS3/latest/userguide/Welcome.html)） 集成，用于转发审计日志或导出备份文件至指定的 S3 存储桶。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>此功能目前仅对 <strong>Dedicated</strong> 集群提供<strong>内测</strong>（Private Preview）。如需启用此功能或了解相关费用，请联系 <a href="http://support.zilliz.com.cn/">Zilliz Cloud 支持团队</a>。</p>
+<p>此功能目前仅对 <strong>Dedicated</strong> 集群开放。如需使用该功能，请考虑<a href="./manage-cluster#upgrade-plan">升级集群版本</a>。</p>
 
 </Admonition>
 
@@ -40,7 +40,7 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
 - 要将 Zilliz Cloud 与 Amazon S3 集成，您需要拥有**组织管理员**或**项目管理员**权限。如果您权限不足，请联系您的 Zilliz Cloud 组织管理员。
 
-- 您需要具亚马逊云科技管理控制台的 Admin 权限。
+- 您需要具有亚马逊云科技管理控制台的 Admin 权限。
 
 ## 步骤 1：集成基础设置{#step-1-start-integration-on-zilliz-cloud}
 
@@ -76,7 +76,7 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
     <ul>
     <li><p>创建存储桶的云地域必须与 Zilliz Cloud 集群所在地域一致。Zilliz Cloud 支持的区域可参考<a href="./cloud-providers-and-regions">云服务提供商和地域</a>。</p></li>
-    <li><p>如果集群运行在不同区域，需要分别为每个区域创建集成，以确保备份文件或审计日志可以正确导出。</p></li>
+    <li><p>如果集群运行在不同区域，需要分别为每个区域创建集成。</p></li>
     </ul>
 
     </Admonition>
@@ -103,7 +103,7 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
 ## 步骤 3：创建 IAM 策略{#create-iam-policy}
 
-为了让 Zilliz Cloud 访问 AWS S3，需要创建一个 IAM 策略，包含必要的操作和资源权限，以便在 Zilliz Cloud 和 S3 存储桶之间传输备份文件或审计日志。
+为了让 Zilliz Cloud 访问 Amazon S3，需要创建一个 IAM 策略，包含必要的操作和资源权限，以便在 Zilliz Cloud 和 Amazon S3 存储桶之间转发审计日志或导出备份文件。
 
 <Supademo id="cmekv5iab07fyv9kqpyyxb74m" title="步骤 3：创建 IAM 策略" />
 
@@ -197,7 +197,7 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
 1. 在**添加权限**步骤中，搜索并选择[步骤 3](./integrate-with-amazon-s3#create-iam-policy) 中创建的策略，然后点击**下一步**。
 
-1. 在 **命名、查看和创建**步骤中，输入角色名称并检查配置，最后点击**创建角色**。
+1. 在**命名、查看和创建**步骤中，输入角色名称并检查配置，最后点击**创建角色**。
 
 1. 创建完成后，点击右上角的**查看角色**。
 
@@ -213,7 +213,7 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
 1. 校验通过后，点击**添加**。
 
-之后您便可以将备份文件或审计日志导出到您的存储桶。有关导出的具体步骤，请参考[导出备份文件](./export-backup-files)或[审计日志](./audit-logs)。
+之后您便可以转发审计日志或导出备份文件到您的 Amazon S3 存储桶。有关更多信息，请参考[审计日志](./audit-logs)或[导出备份文件](./export-backup-files)。
 
 ## 管理集成{#manage-integrations}
 
