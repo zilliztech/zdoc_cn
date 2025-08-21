@@ -24,7 +24,7 @@ import Grid from '@site/src/components/Grid';
 
 # 版本说明书（2025/08）
 
-<Grid columnSize="2" widthRatios="25,75">
+<Grid columnSize="2" widthRatios="20,80">
 
     <div>
 
