@@ -40,13 +40,13 @@ import Admonition from '@theme/Admonition';
      <td><p><strong>公网出口</strong></p></td>
      <td><p>将数据从 Zilliz Cloud 通过公网传输到目标地域，例如外部网络、客户端应用程序或云服务商私有网络之外的第三方服务。</p></td>
      <td><p>将搜索结果或查询结果返回到托管在云服务商外部的客户端应用。</p></td>
-     <td><p>成本最高。详细费率请参见 <a href="http://zilliz.com.cn/pricing-guide">Zilliz Cloud 定价指南</a>。</p></td>
+     <td><p>成本最高。详细费率请参见 <a href="http://zilliz.com.cn/pricing/pricing-guide">Zilliz Cloud 定价指南</a>。</p></td>
    </tr>
    <tr>
      <td><p><strong>跨地域数据传输</strong></p></td>
      <td><p>在同一云服务商网络内，不同区域之间的数据传输，相较于同区域传输可能带来额外延迟和费用。</p></td>
      <td><ul><li><p>跨区备份</p></li><li><p>部署在不同地域的 Zilliz Cloud 集群之间的数据迁移</p></li></ul></td>
-     <td><p>详细费率请参见 <a href="http://zilliz.com.cn/pricing-guide">Zilliz Cloud 定价指南</a>。</p></td>
+     <td><p>详细费率请参见 <a href="http://zilliz.com.cn/pricing/pricing-guide">Zilliz Cloud 定价指南</a>。</p></td>
    </tr>
    <tr>
      <td><p><strong>同地域数据传输</strong></p></td>
@@ -80,7 +80,7 @@ import Admonition from '@theme/Admonition';
 数据传输费用 = 数据传输单价 × 传输数据量
 ```
 
-- **数据传输单价**：由集群的云地域、数据传输类型（公网出口、跨地域或同地域）决定。详见 [Zilliz Cloud 定价指南](https://zilliz.com.cn/pricing-guide)。
+- **数据传输单价**：由集群的云地域、数据传输类型（公网出口、跨地域或同地域）决定。详见 [Zilliz Cloud 定价指南](https://zilliz.com.cn/pricing/pricing-guide)。
 
 - **传输数据量**：以 GB 为单位，按通过网络发送的数据大小计算。
 
