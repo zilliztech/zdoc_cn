@@ -43,7 +43,7 @@ const guides: Manual = {
     }
 }
 
-const onPremise: Manual = {
+const onpremise: Manual = {
     root: 'PXwawNqh0i40H4krMYlc6qgZnKe',
     base: 'V7t6bcQWiaDL99sgUkwcEIJ0nUb',
     sourceType: 'wiki',
@@ -138,7 +138,7 @@ const node: Manual = {
     }
 }
 
-const goV1: Manual = {
+const gov1: Manual = {
     root: 'V0SCw3U3siZBynkKhUCcRRAin69',
     base: 'WA8rbgtu8aq3wtsBm02cepOznPJ',
     sourceType: 'wiki',
@@ -157,7 +157,7 @@ const goV1: Manual = {
     }
 }
 
-const goV2: Manual = {
+const gov2: Manual = {
     root: 'LaQ1wPdnSiDXDLkMieEcrv95nRc',
     base: 'RWi9b79oeaDNkBsCkAGcoc90nif',
     sourceType: 'wiki',
@@ -254,13 +254,13 @@ const nodejs25: Manual = {
 
 export default {
     guides,
-    onPremise,
+    onpremise,
     python,
     javaV1,
     javaV2,
     node,
-    goV1,
-    goV2,
+    gov1,
+    gov2,
     pymilvus25,
     pymilvus26,
     javaV225,
