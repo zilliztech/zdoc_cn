@@ -38,15 +38,25 @@ import Admonition from '@theme/Admonition';
 
 ## 概述{#overview}
 
-您可以使用 Zilliz Cloud Stage 作为一个中间存放点来存放您上传的本地文件，并将文件中的数据与现有的某个 Collection 进行合并，从而创建一个包括了上述两种数据来源的新的 Collection。
+数据合并操作与关系型数据库中的 LEFT JOIN 操作类似，将指定 Collection 中的数据和指定数据源中匹配的数据合并，然后将合并后的数据存放到一个新的 Collection 中。
 
-上传到 Stage 里的数据文件必须为 Parquet 格式，其中含有需要添加的列式数据。如下图所示，Parquet 文件中应该包含一个名为 `date` 的字段及各行在该字段的取值，每行为一个长度为 10 的字符串。
+数据源应该是一个或多个存放于 Zilliz Cloud Stage 或对象存储桶中的 PARQUET 文件。
 
-![A5KYwhUcYhra6DbQMvbcZVdhnJG](/img/A5KYwhUcYhra6DbQMvbcZVdhnJG.png)
+如下图所示，源 Collection 中有三个字段。其中，`id` 为主键。PARQUET 文件中有 `id` 和 `date` 两个字段：`id` 字段作为合并键，其中存放的值将与源 Collection 中的同名键中的值进行匹配；`date` 字段则是需要添加到目标 Collection 中的字段。
 
-您可以将准备好的 Parquet 文件上传到一个外部对象存储桶中，并在执行数据合并操作时提供可供 Zilliz Cloud 访问该桶的鉴权凭据。这样一来，Zilliz Cloud 就会读取桶中存放的 Parquet 文件，并执行数据合并操作。
+![Qpyfw7qWHhXiGfbzpzIc5PeDnde](/img/Qpyfw7qWHhXiGfbzpzIc5PeDnde.png)
 
-## 使用 Stage{#use-stage}
+当您将该 PARQUET 文件上传到 Zilliz Cloud Stage 或对象存储桶之后，您就可以使用[合并数据 API](/reference/restful/merge-data-v2) 接口来创建目标 Collection 用于存放合并后的数据。
+
+数据源是可选参数。您也可以将合并数据 API 用于向指定 Collection 中添加字段的场景。
+
+本文将演示如何使用合并数据 API 在指定 Collection 中添加字段并填充数据以及仅在指定 Collection 添加字段。
+
+## 添加字段并填充数据{#add-fields-with-data}
+
+如果需要在添加字段的同时填充数据，您需要指定源 Collection，数据源以及在目标 Collection 中需要添加的字段。数据源应为若干存放于 Zilliz Cloud Stage 或 AWS S3 bucket 的 PARQUET 文件。
+
+### 使用 Stage{#use-stage}
 
 如需执行数据合并操作，您需要先创建一个 Stage，并将您的数据文件上传到 Stage 中。当准备就绪，您就可以通过执行数据合并操作来创建一个包括两种数据来源的新的 Collection。
 
@@ -69,12 +79,12 @@ curl --request POST \
     "dataSource": {
         "type": "stage",
         "stageName": "my_stage",
-        "dataPath": "/path/to/your/parquet.parquet"
+        "dataPath": "path/to/your/parquet.parquet"
     },
     "mergeField": "id",
     "newFields": [
         {
-            "name": "date",
+            "fieldName": "date",
             "dataType": "VARCHAR",
             "params": {
                 "maxLength": 10
@@ -83,6 +93,42 @@ curl --request POST \
     ]
 }'
 ```
+
+在执行上述命令前，您需要先了解如下字段的含义：
+
+- `dbName` 和 `collectionName`
+
+    这两个参数指定了数据合并操作的源 Collection。
+
+- `destDbName` 和 `destCollectionName`
+
+    这两个参数指定了数据合并操作后被创建的目标 Collection。需要注意的是，目标 Collection 须与源 Collection 位于相同集群。
+
+- `dataSource`
+
+    此参数为可选设置，包含了数据源的相关设置，包括数据源类型和指向包含列式数据的 Parquet 文件的路径。该数据源将会与上述指定的源 Collection 中的数据合并后插入到目标 Collection 中。
+
+    在使用 Stage 中存放的文件作为数据源时，您需要将 `type` 设置为 `stage` 后再设置 `stageName` 和 `dataPath` 两个子参数。
+
+    <Admonition type="info" icon="📘" title="说明">
+
+    <ul>
+    <li><code>dataPath</code> 参数的值可以是指定 Stage 中某个 Parquet 文件的绝对路径，或者某个包含了多个 Parquet 文件的文件夹的绝对路径。当指定的路径为文件夹时，请确保该文件夹中所有的 Parquet 文件都有相同的数据结构。</li>
+    </ul>
+    <p>例如：<code>path/to/your/file.parquet</code>（文件）或<code>path/to/your/folder/</code>（文件夹）。</p>
+    <ul>
+    <li>如果你只是想要在目标 Collection 中添加字段，但不希望填充数据，可以忽略此参数。</li>
+    </ul>
+
+    </Admonition>
+
+- `mergeField`
+
+    数据合并操作和关系型数据库中的 LEFT JOIN 操作相似。此参数在数据合并操作中将做为连接源 Collection 和包含列式数据的 Parquet 文件的共享字段使用。
+
+- `newFields`
+
+    此参数包含了 Parquet 文件中需要添加到目标 Collection 中的字段列表。支持的字段类型包括 VARCHAR、INT8、INT16、INT32、INT64、FLOAT、DOUBLE 和 BOOL。
 
 上述命令创建了一个数据合并任务，并返回任务 ID。
 
@@ -95,7 +141,7 @@ curl --request POST \
 }
 ```
 
-## 使用对象存储{#use-object-storage}
+### 使用对象存储{#use-object-storage}
 
 如需执行数据合并操作，您需要先创建一个对象存储桶并将数据文件上传到该桶中。当准备就绪，您就可以通过执行数据合并操作来创建一个包括两种数据来源的新的 Collection。
 
@@ -117,7 +163,7 @@ curl --request POST \
     "destCollectionName": "my_merged_collection",
     "dataSource": {
         "type": "oss",
-        "dataPath": "https://oss-cn-hangzhou.aliyuncs.com/my-bucket/my_data.parquet",
+        "dataPath": "oss://my-bucket/my_data.parquet",
         "credential": {
             "accessKey": "xxxxxxxxxxxxxxxxxxx",
             "secretKey": "xxxxxxxxxxxx"
@@ -126,7 +172,85 @@ curl --request POST \
     "mergeField": "id",
     "newFields": [
         {
-            "name": "date",
+            "fieldName": "date",
+            "dataType": "VARCHAR",
+            "params": {
+                "maxLength": 10
+            }
+        }
+    ]
+}'
+```
+
+在执行上述命令前，您需要先了解如下字段的含义：
+
+- `dbName` 和 `collectionName`
+
+    这两个参数指定了数据合并操作的源 Collection。
+
+- `destDbName` 和 `destCollectionName`
+
+    这两个参数指定了数据合并操作后被创建的目标 Collection。需要注意的是，目标 Collection 须与源 Collection 位于相同集群。
+
+- `dataSource`
+
+    此参数为可选设置，包含了数据源的相关设置，包括数据源类型和指向包含列式数据的 Parquet 文件的路径。该数据源将会与上述指定的源 Collection 中的数据合并后插入到目标 Collection 中。
+
+    在使用 Stage 中存放的文件作为数据源时，您需要将 `type` 设置为 `oss` 后再设置 `dataPath` 和 `credential` 两个子参数。
+
+    <Admonition type="info" icon="📘" title="说明">
+
+    <ul>
+    <li><code>dataPath</code> 参数的值可以是指定对象存储桶中某个 Parquet 文件的绝对路径，或者某个包含了多个 Parquet 文件的文件夹的绝对路径。当指定的路径为文件夹时，请确保该文件夹中所有的 Parquet 文件都有相同的数据结构。</li>
+    </ul>
+    <p>例如： <code>oss:///my-bucket/my_data.parquet</code>（文件）或 <code>oss:///my-bucket/</code> （文件夹）。</p>
+    <ul>
+    <li>如果你只是想要在目标 Collection 中添加字段，但不希望填充数据，可以忽略此参数。</li>
+    </ul>
+
+    </Admonition>
+
+- `mergeField`
+
+    数据合并操作和关系型数据库中的 LEFT JOIN 操作相似。此参数在数据合并操作中将做为连接源 Collection 和包含列式数据的 Parquet 文件的共享字段使用。
+
+- `newFields`
+
+    此参数包含了 Parquet 文件中需要添加到目标 Collection 中的字段列表。支持的字段类型包括 VARCHAR、INT8、INT16、INT32、INT64、FLOAT、DOUBLE 和 BOOL。
+
+上述命令创建了一个数据合并任务，并返回任务 ID。
+
+```json
+{
+    "code": 0,
+    "data": {
+        "jobId": "job-xxxxxxxxxxxxxxxxxxxxx"
+    }
+}
+```
+
+## 仅添加字段{#add-fields-without-data}
+
+您也可以将合并数据 API 用于向指定 Collection 中添加字段的场景。在此场景下，您无需指定数据源。
+
+```bash
+export BASE_URL="https://api.cloud.zilliz.com.cn"
+export TOKEN="YOUR_API_KEY"
+
+curl --request POST \
+--url "${BASE_URL}/v2/etl/merge" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+-d '{
+    "clusterId": "in00-xxxxxxxxxxxxxxx",
+    "dbName": "my_database",
+    "collectionName": "my_collection",
+    "destDbName": "my_database",
+    "destCollectionName": "my_merged_collection",
+    "mergeField": "id",
+    "newFields": [
+        {
+            "fieldName": "date",
             "dataType": "VARCHAR",
             "params": {
                 "maxLength": 10
@@ -149,7 +273,7 @@ curl --request POST \
 
 ## 验证结果{#verify-the-results}
 
-当您获取了数据合并任务的 ID 后，您可以使用[查看任务详情](/reference/restful/describe-job-v2) API 接口或按照[管理项目任务](./job-center)中的步骤查看任务的状态。
+当您获取了数据合并任务的 ID 后，您可以使用[查看任务详情](/reference/restful/describe-job-v2) API 接口或按照[管理项目任务](./job-center)中的步骤查看任务的状态。在数据合并任务结束后，您可以检查目标 Collection 的 Schema 及其中存放的 Entity 数量来确认操作结果是否符合预期。
 
 ## 故障排除{#troubleshooting}
 
@@ -157,5 +281,5 @@ curl --request POST \
 
     与传统关系型数据库系统的左合并（Left Join）操作类似，数据合并操作会根据指定的 Merge Key 从源 Collection 及指定的 Parquet 文件中获取相应的数据，并使用这些数据创建一个包含合并数据的 Collection。
 
-    只有 Parquet 文件中 Merge Key 与源 Collection 中的 Merge Key 匹配的行才会被合并。如果行的 Merge Key 与源 Collection 中的任何 Entity 都不匹配，则会跳过这些行。如果 Parquet 文件中的所有行都不匹配源 Collection 中的任何 Entity，那么 Zilliz Cloud 会创建 `newFields` 中指定的字段，并使用默认值填充。
+    只有 Parquet 文件中 Merge Key 与源 Collection 中的 Merge Key 匹配的行才会被合并。如果行的 Merge Key 与源 Collection 中的任何 Entity 都不匹配，则会跳过这些行。如果 Parquet 文件中的所有行都不匹配源 Collection 中的任何 Entity，那么 Zilliz Cloud 会创建 `newFields` 中指定的字段，并使用 null 填充。
 
