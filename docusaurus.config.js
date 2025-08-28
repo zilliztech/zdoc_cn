@@ -61,11 +61,18 @@ const config = {
           routeBasePath: 'docs',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: 'Cloud 开发指南',
+            },
+            'byoc': {
+              label: 'BYOC 开发指南',
+              path: 'byoc',
+              banner: 'none'
+            },
+          },
           sidebarItemsGenerator: ReferenceItemsGenerator,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: false,
         theme: {
@@ -181,7 +188,13 @@ const config = {
           },
           {
             href: '/docs/quick-start',
-            label: "开发指南",
+            label: "Cloud 开发指南",
+            position: 'left',
+            className: 'header-link',
+          },
+          {
+            href: '/docs/byoc/quick-start',
+            label: "BYOC 开发指南",
             position: 'left',
             className: 'header-link',
           },

@@ -27,18 +27,18 @@ const guides: Manual = {
     docSourceDir: './plugins/lark-docs/meta/sources/guides',
     targets: {
         zilliz: {
-        saas: {
-            outputDir: 'docs/tutorials',
-            imageDir: 'static/img',
-        },
-        paas: {
-            outputDir: 'onpremise/docs/vdb',
-            imageDir: 'static/byoc',
-        }
+            saas: {
+                outputDir: 'docs/tutorials',
+                imageDir: 'static/img',
+            },
+            paas: {
+                outputDir: 'versioned_docs/version-byoc/tutorials',
+                imageDir: 'static/img',
+            }
         },
         milvus: {
-        outputDir: 'milvus/guides/docs',
-        imageDir: 'milvus/guides/images'
+            outputDir: 'milvus/guides/docs',
+            imageDir: 'milvus/guides/images'
         }
     }
 }
@@ -52,8 +52,8 @@ const onpremise: Manual = {
     docSourceDir: './plugins/lark-docs/meta/sources/onpremise',
     targets: {
         paas: {
-        outputDir: 'onpremise/docs/ops',
-        imageDir: 'static/img'
+            outputDir: 'onpremise/docs/ops',
+            imageDir: 'static/img'
         }
     }
 }
@@ -67,12 +67,12 @@ const python: Manual = {
     docSourceDir: './plugins/lark-docs/meta/sources/python/v2.4.x',
     targets: {
         milvus: {
-        outputDir: 'milvus/reference/python/docs/v2.4.x',
-        imageDir: 'milvus/reference/python/images'
+            outputDir: 'milvus/reference/python/docs/v2.4.x',
+            imageDir: 'milvus/reference/python/images'
         },
         zilliz: {
-        outputDir: 'reference/api/python/python',
-        imageDir: 'static/img',
+            outputDir: 'reference/api/python/python',
+            imageDir: 'static/img',
         }
     }
 }
@@ -88,12 +88,12 @@ const javaV1: Manual = {
     docSourceDir: './plugins/lark-docs/meta/sources/java/v2.4.x/v1',
     targets: {
         milvus: {
-        outputDir: 'milvus/reference/java/docs/v1',
-        imageDir: 'milvus/reference/java/images'
+            outputDir: 'milvus/reference/java/docs/v1',
+            imageDir: 'milvus/reference/java/images'
         },
         zilliz: {
-        outputDir: 'reference/api/java/java/v1',
-        imageDir: 'static/img',
+            outputDir: 'reference/api/java/java/v1',
+            imageDir: 'static/img',
         }
     }
 }
@@ -109,12 +109,12 @@ const javaV2: Manual = {
     docSourceDir: './plugins/lark-docs/meta/sources/java/v2.4.x/v2',
     targets: {
         milvus: {
-        outputDir: 'milvus/reference/java/docs/v2/v2.4.x',
-        imageDir: 'milvus/reference/java/images'
+            outputDir: 'milvus/reference/java/docs/v2/v2.4.x',
+            imageDir: 'milvus/reference/java/images'
         },
         zilliz: {
-        outputDir: 'reference/api/java/java/v2',
-        imageDir: 'static/img',
+            outputDir: 'reference/api/java/java/v2',
+            imageDir: 'static/img',
         }
     }
 }
@@ -128,12 +128,12 @@ const node: Manual = {
     docSourceDir: './plugins/lark-docs/meta/sources/node/v2.4.x',
     targets: {
         milvus: {
-        outputDir: 'milvus/reference/node/docs/v2.4.x',
-        imageDir: 'milvus/reference/node/images'
+            outputDir: 'milvus/reference/node/docs/v2.4.x',
+            imageDir: 'milvus/reference/node/images'
         },
         zilliz: {
-        outputDir: 'reference/api/nodejs/nodejs',
-        imageDir: 'static/img',
+            outputDir: 'reference/api/nodejs/nodejs',
+            imageDir: 'static/img',
         }
     }
 }
@@ -147,12 +147,12 @@ const gov1: Manual = {
     docSourceDir: './plugins/lark-docs/meta/sources/go/v2.4.x',
     targets: {
         milvus: {
-        outputDir: 'milvus/reference/go/docs/v1',
-        imageDir: 'milvus/reference/go/images'
+            outputDir: 'milvus/reference/go/docs/v1',
+            imageDir: 'milvus/reference/go/images'
         },
         zilliz: {
-        outputDir: 'reference/api/go/go/v1',
-        imageDir: 'static/img',
+            outputDir: 'reference/api/go/go/v1',
+            imageDir: 'static/img',
         }
     }
 }
@@ -166,12 +166,12 @@ const gov2: Manual = {
     docSourceDir: './plugins/lark-docs/meta/sources/go/v2.5.x',
     targets: {
         milvus: {
-        outputDir: 'milvus/reference/go/docs/v2',
-        imageDir: 'milvus/reference/go/images'
+            outputDir: 'milvus/reference/go/docs/v2',
+            imageDir: 'milvus/reference/go/images'
         },
         zilliz: {
-        outputDir: 'reference/api/go/go/v2',
-        imageDir: 'static/img',
+            outputDir: 'reference/api/go/go/v2',
+            imageDir: 'static/img',
         }
     }
 }
@@ -185,12 +185,12 @@ const pymilvus25: Manual = {
     fallbackSourceDir: './plugins/lark-docs/meta/sources/python/v2.4.x',
     targets: {
         milvus: {
-        outputDir: 'milvus/reference/python/docs/v2.5.x',
-        imageDir: 'milvus/reference/python/images'
+            outputDir: 'milvus/reference/python/docs/v2.5.x',
+            imageDir: 'milvus/reference/python/images'
         },
         zilliz: {
-        outputDir: 'reference/api/python/python',
-        imageDir: 'static/img',
+            outputDir: 'reference/api/python/python',
+            imageDir: 'static/img',
         }
     }
 }
@@ -204,12 +204,12 @@ const pymilvus26: Manual = {
     fallbackSourceDir: './plugins/lark-docs/meta/sources/python/v2.5.x',
     targets: {
         milvus: {
-        outputDir: 'milvus/reference/python/docs/v2.6.x',
-        imageDir: 'milvus/reference/python/images'
+            outputDir: 'milvus/reference/python/docs/v2.6.x',
+            imageDir: 'milvus/reference/python/images'
         },
         zilliz: {
-        outputDir: 'reference/api/python/python',
-        imageDir: 'static/img',
+            outputDir: 'reference/api/python/python',
+            imageDir: 'static/img',
         }
     }
 }
@@ -223,12 +223,12 @@ const javaV225: Manual = {
     fallbackSourceDir: './plugins/lark-docs/meta/sources/java/v2.4.x/v2',
     targets: {
         milvus: {
-        outputDir: 'milvus/reference/java/docs/v2/v2.5.x',
-        imageDir: 'milvus/reference/java/images'
+            outputDir: 'milvus/reference/java/docs/v2/v2.5.x',
+            imageDir: 'milvus/reference/java/images'
         },
         zilliz: {
-        outputDir: 'reference/api/java/java/v2',
-        imageDir: 'static/img',
+            outputDir: 'reference/api/java/java/v2',
+            imageDir: 'static/img',
         }
     }
 }
@@ -242,12 +242,12 @@ const nodejs25: Manual = {
     fallbackSourceDir: './plugins/lark-docs/meta/sources/node/v2.4.x',
     targets: {
         milvus: {
-        outputDir: 'milvus/reference/node/docs/v2.5.x',
-        imageDir: 'milvus/reference/node/images'
+            outputDir: 'milvus/reference/node/docs/v2.5.x',
+            imageDir: 'milvus/reference/node/images'
         },
         zilliz: {
-        outputDir: 'reference/api/nodejs/nodejs',
-        imageDir: 'static/img',
+            outputDir: 'reference/api/nodejs/nodejs',
+            imageDir: 'static/img',
         }
     }
 }

@@ -1,0 +1,1074 @@
+---
+title: "文本数据 | Cloud"
+slug: /pipelines-text-data
+sidebar_label: "文本数据"
+beta: NEAR DEPRECATE
+notebook: FALSE
+description: "您可以通过 Web 控制台或 RESTful API 创建、运行和管理 Pipelines。Web 控制台操作更简单直观，但 RESTful API 可提供更多灵活性。 | Cloud"
+type: origin
+token: KZOywFvfbir4DbkRwZIcMsY6nHe
+sidebar_position: 1
+keywords: 
+  - 向量数据库
+  - zilliz
+  - milvus
+  - 大模型向量数据库
+  - pipeline
+  - 文本
+
+---
+
+import Admonition from '@theme/Admonition';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# 文本数据
+
+您可以通过 Web 控制台或 RESTful API 创建、运行和管理 Pipelines。Web 控制台操作更简单直观，但 RESTful API 可提供更多灵活性。
+
+本文将介绍如何创建文本 Pipeline、进行语义搜索并删除 Pipeline。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>Zilliz Cloud Pipelines 服务正处在逐步下线中，将于 2025 年第二季度末停止服务，被 “Data In, Data Out” 的新功能取代。该功能旨在简化 Milvus 和 Zilliz Cloud 中的向量化流程。自 2025 年 1 月 10 日起，Zilliz Cloud Pipelines 将不再接受新用户注册。现有用户可在每月 100 元人民币免费试用额度内继续使用服务直至下线日期。该服务不提供 SLA 支持。建议您使用模型提供商的Embedding API 或开源模型生成向量。</p>
+
+</Admonition>
+
+## 前提条件与限制{#prerequisites-and-limitations}
+
+- 请确保您创建部署在阿里云（杭州）的集群。
+
+- 同一项目下，您可最多创建 100 个同一类型的 Pipelines。更多详情，请参考[使用限制](./limits)。
+
+## 摄取文本数据{#ingest-text-data}
+
+摄取文本数据包含两个步骤：创建 Ingestion Pipeline 和运行 Ingestion Pipeline。
+
+### 创建文本 Ingestion Pipeline{#create-text-ingestion-pipeline}
+
+<Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"cURL","value":"Bash"}]}>
+
+<TabItem value="Cloud Console">
+
+1. 打开项目。
+
+1. 点击左侧导航栏中的 **Pipelines**。 选中**概览**标签页，并切换到 **Pipelines**。点击 **+ Pipeline**。
+
+    ![create-pipeline-cn](/img/create-pipeline-cn.png)
+
+1. 选择需要创建的 Pipeline 类型。点击 Ingestion Pipeline。 
+
+    ![choose-pipeline-cn](/img/choose-pipeline-cn.png)
+
+1. 配置 Ingestion Pipeline。
+
+    <table>
+       <tr>
+         <th><p><strong>参数</strong></p></th>
+         <th><p><strong>说明</strong></p></th>
+       </tr>
+       <tr>
+         <td><p>目标集群</p></td>
+         <td><p>自动创建 Collection 所属的集群。目前仅支持部署在阿里云（杭州）的集群。</p></td>
+       </tr>
+       <tr>
+         <td><p>Collection 名称</p></td>
+         <td><p>自动创建的 Collection 的名称。</p></td>
+       </tr>
+       <tr>
+         <td><p>Pipeline 名称</p></td>
+         <td><p>新创建的 Ingestion Pipeline 的名称。名称中只可包含小写字母、数字和下划线。</p></td>
+       </tr>
+       <tr>
+         <td><p>描述 (可选)</p></td>
+         <td><p>对新创建的 Ingestion Pipeline 的描述。</p></td>
+       </tr>
+    </table>
+
+    ![configure-ingestion-pipeline-cn](/img/configure-ingestion-pipeline-cn.png)
+
+1. 添加 Function。1 个 Ingestion pipeline 中只可添加 1 个 **INDEX** Function。
+
+    1. 输入 Function 名称。
+
+    1. 选择 **INDEX_TEXT** Function。该 Function 可以将输入文本转换为 Embedding 向量。
+
+    1. 选择用于生成向量的 Embedding 模型。根据所选的文档语言，您可以选择不同的 Embedding 模型。目前 Zilliz Cloud Pipelines 共提供两种 Embedding 模型：英语——**zilliz/bge-base-en-v1.5**，中文——**zilliz/bge-base-zh-v1.5**。
+
+        <table>
+           <tr>
+             <th><p><strong>Embedding 模型</strong></p></th>
+             <th><p><strong>说明</strong></p></th>
+           </tr>
+           <tr>
+             <td><p>zilliz/bge-base-en-v1.5 </p></td>
+             <td><p>智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。</p></td>
+           </tr>
+           <tr>
+             <td><p>zilliz/bge-base-zh-v1.5</p></td>
+             <td><p>智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。</p></td>
+           </tr>
+        </table>
+
+        ![add-index-text-function-cn](/img/add-index-text-function-cn.png)
+
+    1. 点击**添加**。
+
+1. (可选) 添加 **PRESERVE** Function。**PRESERVE** Function 在 Collection 中添加标量字段，用于保留文档元数据。
+
+    <Admonition type="info" icon="📘" title="说明">
+
+    <p>每个 Ingestion Pipeline 中最多可添加 50 个 <strong>PRESERVE</strong> Function。</p>
+
+    </Admonition>
+
+    1. 点击 **+ Function**。
+
+    1. 输入 Function 名称。
+
+    1. 配置输入字段名称和数据类型。支持的数据字段类型包括 **Bool**、**Int8**、**Int16**、**Int32**、**Int64**、**Float**、**Double** 和 **VarChar**。
+
+        <Admonition type="info" icon="📘" title="说明">
+
+        <ul>
+        <li><p>目前，输出字段名称必须与输入字段名称保持一致。在运行 Ingestion Pipeline 时，您将使用到输入字段名称。而输出字段名称用于自动生成的 Collection Schema 中作为保留的标量字段名称。</p></li>
+        <li><p>字段类型为 <strong>VarChar</strong> 时，字符串最大长度为 <strong>4,000</strong> 个字符，且只可包含数字、字母。</p></li>
+        <li><p>在标量字段中存储日期时，我们推荐使用 <strong>Int16</strong> 的数据类型。存储时间时，我们推荐使用 <strong>Int32</strong> 的数据类型。</p></li>
+        </ul>
+
+        </Admonition>
+
+        ![add-preserve-function-cn](/img/add-preserve-function-cn.png)
+
+    1. 点击**添加**。
+
+1. 点击**创建 Ingestion Pipeline**。
+
+1. 继续创建 Search pipeline 和 Deletion pipeline。创建的 Search 和 Deletion Pipeline 可适应配套刚才创建的Ingestion Pipeline。
+
+    ![auto-create-text-search-and-delete-pipelines-cn](/img/auto-create-text-search-and-delete-pipelines-cn.png)
+
+    <Admonition type="info" icon="📘" title="说明">
+
+    <p>自动创建的 Search Pipeline 默认关闭 Reranker 功能，如需使用 Reranker，请手动<a href="./pipelines-text-data#create-text-search-pipeline">创建一个新的 Search Pipeline</a>。</p>
+
+    </Admonition>
+
+</TabItem>
+
+<TabItem value="Bash">
+
+以下示例代码创建了 1 个名称为 `my_text_ingestion_pipeline` 的 Ingestion Pipeline，并添加了 1 个 **INDEX_TEXT** Function 和 1 个 **PRESERVE** Function。 
+
+```bash
+curl --request POST \
+    --header "Content-Type: application/json" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines" \
+    -d '{
+        "name": "my_text_ingestion_pipeline",
+        "clusterId": "inxx-xxxxxxxxxxxxxxx",
+        "projectId": "proj-xxxx"，
+        "collectionName": "my_collection",
+        "description": "A pipeline that generates text embeddings and stores additional fields.",
+        "type": "INGESTION",  
+        "functions": [
+            { 
+                "name": "index_my_text",
+                "action": "INDEX_TEXT", 
+                "language": "ENGLISH",
+                "embedding": "zilliz/bge-base-en-v1.5"
+            },
+            {
+                "name": "keep_text_info",
+                "action": "PRESERVE", 
+                "inputField": "source", 
+                "outputField": "source",
+                "fieldType": "VarChar" 
+            }
+        ]   
+    }'
+```
+
+以下为参数说明：
+
+- `YOUR_API_KEY`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
+
+- `cloud-region`: 集群所在云服务地域的 ID。目前仅支持 `ali-cn-hangzhou`。
+
+- `clusterId`: 创建 Pipeline 所属的集群 ID。目前，仅支持部署在阿里云（杭州）的集群。了解[如何获取集群 ID](https://support.zilliz.com.cn/hc/zh-cn/articles/23088888943515-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E9%9B%86%E7%BE%A4-ID-%E5%92%8C-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%9C%B0%E5%9F%9F-ID)。
+
+- `projectId`: 创建 Pipeline 所属的项目 ID。了解[如何获取项目 ID](https://support.zilliz.com.cn/hc/zh-cn/articles/23085669594011-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E9%A1%B9%E7%9B%AE-ID)。
+
+- `collectionName`: 与 Pipeline 同步自动创建的 Collection 名称。或者，您也可以指定一个已有的 Collection。
+
+- `name`: 创建的 Pipeline 名称。Pipeline 名称应该在 3-64 个字符内，且只可包含数字、字母和下划线。
+
+- `description` (可选): 创建的 Pipeline 描述。
+
+- `type`: 创建的 Pipeline 类型。目前，可创建的 Pipeline 类型包括 `INGESTION`、 `SEARCH` 和 `DELETION`。
+
+- `functions`: Pipeline 中添加的 Function。1 个 Ingestion pipeline 中只可添加 1 个 **INDEX** Function 和至多 50 个 **PRESERVE** Function。
+
+    - `name`: Function 名称。Function 名称应该在 3-64 个字符内，且只可包含数字、字母和下划线。
+
+    - `action`: Function 类型。您可以在 Ingestion Pipeline 中添加的 Function 类型包括： `INDEX_DOC`、`INDEX_TEXT`、`INDEX_IMAGE` 和 `PRESERVE`。
+
+    - `language`: 文档语言。可选择的语言包括 `ENGLISH`（英语） 和 `CHINESE`（中文）。*(仅 `INDEX_TEXT` 和 `INDEX_DOC`Function 中包含此参数。）*
+
+    - `embedding` : 用于生成向量的 Embedding 模型。 *(仅 `INDEX` Function 中包含此参数。）*
+
+        <table>
+           <tr>
+             <th><p><strong>Embedding 模型</strong></p></th>
+             <th><p><strong>说明</strong></p></th>
+           </tr>
+           <tr>
+             <td><p>zilliz/bge-base-en-v1.5</p></td>
+             <td><p>智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。</p></td>
+           </tr>
+           <tr>
+             <td><p>zilliz/bge-base-zh-v1.5</p></td>
+             <td><p>智源研究院（BAAI）发布的开源 Embedding 向量模型。该模型与向量数据库共同托管于 Zilliz Cloud 上，具备出色的性能，可大幅降低延时。</p></td>
+           </tr>
+        </table>
+
+- `inputField`: 输入字段名称。 您可以自定义输入字段名称，但需要与 `outputField` 保持一致。*（仅 `PRESERVE` Function 中包含此参数。）*
+
+- `outputField`: 输出字段名称。该字段将的值将用于构成 Collection Schema。 `outputField` 字段值应该与 `inputField` 字段值保持一致。 *(仅 `PRESERVE` Function 中包含此参数。）*
+
+- `fieldType`: 输入和输出字段的字段类型。可选的值包括：`Bool`、`Int8`、`Int16`、`Int32`、`Int64`、`Float`、`Double` 和 `VarChar`。 *(仅 `PRESERVE` Function 中包含此参数。）*
+
+    <Admonition type="info" icon="📘" title="说明">
+
+    <ul>
+    <li><p>在标量字段中存储日期时，我们推荐使用 <strong>Int16</strong> 的数据类型。存储时间时，我们推荐使用 <strong>Int32</strong> 的数据类型。</p></li>
+    <li><p>对于 <code>VarChar</code> 字段类型而言，字段数据的最大长度<code>max_length</code>不得超过 <strong>4,000</strong>。</p></li>
+    </ul>
+
+    </Admonition>
+
+如果请求返回以下类似内容，则表示 Ingestion Pipeline 创建成功：
+
+```bash
+{
+  "code": 200,
+  "data": {
+    "pipelineId": "pipe-xxx",
+    "name": "my_text_ingestion_pipeline",
+    "type": "INGESTION",
+    "createTimestamp": 1721187300000,
+    "description": "A pipeline that generates text embeddings and stores additional fields.",
+    "status": "SERVING",
+    "totalUsage": {
+      "embedding": 0
+    },
+    "functions": [
+      {
+        "name": "index_my_text",
+        "action": "INDEX_TEXT",
+        "inputFields": ["text_list"],
+        "language": "ENGLISH",
+        "embedding": "zilliz/bge-base-en-v1.5"
+      },
+      {
+        "name": "keep_text_info",
+        "action": "PRESERVE",
+        "inputField": "source",
+        "outputField": "source",
+        "fieldType": "VarChar"
+      }
+    ],
+    "clusterId": "inxx-xxxx",
+    "collectionName": "my_collection"
+  }
+}
+```
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>总用量 <code>totalUsage</code> 非实时更新，数据统计可能会有几小时延迟。</p>
+
+</Admonition>
+
+Ingestion Pipeline 创建成功后，Zilliz Cloud 将进行重名检查。如果集群中没有该名称的 Collection，将自动创建名称为 `my_collection` 的新 Collection。如果已存在同名的 Collection，Zilliz Cloud Pipelines 会继续检查该已有 Collection 的 Schema 是否与 Pipeline 中定义的一致。
+
+该 Collection 中包含 4 个字段：3 个 **INDEX_TEXT** function 的输出字段和 1 个 **PRESERVE** function 的输出字段。Collection Schema 如下所示：
+
+<table>
+    <tr>
+        <th><p>id<br/>(数据类型：Int64)</p></th>
+        <th><p>text<br/>(数据类型：VarChar)</p></th>
+        <th><p>embedding<br/>(数据类型：FLOAT_VECTOR)</p></th>
+        <th><p>source<br/>(数据类型：VarChar)</p></th>
+    </tr>
+</table>
+
+</TabItem>
+
+</Tabs>
+
+### 运行文本 Ingestion Pipeline{#run-text-ingestion-pipeline}
+
+<Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"cURL","value":"Bash"}]}>
+
+<TabItem value="Cloud Console">
+
+1. 点击 Ingestion Pipeline 右侧的 "▶︎" 按钮。 或者您可以点击 **Playground** 选项卡。
+
+    ![run-pipeline-cn](/img/run-pipeline-cn.png)
+
+1. 在 `text_list` 字段中输入需要摄取的文本或者文本列表。如您添加了 PRESERVE Function，请在该 Function 定义的字段中输入需要保留的元数据信息。点击**运行**。
+
+1. 查看运行结果。
+
+</TabItem>
+
+<TabItem value="Bash">
+
+以下示例代码用于运行 Ingestion pipeline `my_text_ingestion_pipeline`。`source` 是需要保留的元数据字段。
+
+```bash
+curl --request POST \
+    --header "Content-Type: application/json" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}/run" \
+    -d '{
+        "data": {
+        "text_list": [
+          "Zilliz Cloud is a fully managed vector database and data services, empowering you to unlock the full potential of unstructured data for your AI applications.",
+          "It can store, index, and manage massive embedding vectors generated by deep neural networks and other machine learning (ML) models."
+        ],
+        "source": "Zilliz official website"
+      }
+    }'
+```
+
+以下为参数说明：
+
+- `YOUR_API_KEY`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
+
+- `cloud-region`: 集群的云服务地域。目前仅支持 `ali-cn-hangzhou`。
+
+- `text_list`: 需要摄取的文本或文本列表。
+
+- `source` (可选): 需要保留的元数据字段。字段名称需要与创建 Ingestion Pipeline 并添加 **PRESERVE** Function 时定义的输入字段名称保持一致。字段数据类型也应与预先定义的保持一致。
+
+请求返回以下类似内容：
+
+```bash
+{
+  "code": 200,
+  "data": {
+    "num_entities": 2,
+    "usage": {
+      "embedding": 63
+    },
+    "ids": [
+      450524927755105948,
+      450524927755105949
+    ]
+  }
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+## 搜索文本数据{#search-text-data}
+
+搜索数据前，请先创建并运行 Search Pipeline。与 Ingestion 和 Deletion Pipelines 不同，Search Pipeline 创建时是在 Function 级别定义集群和 Collection，而非在 Pipeline 层级。这是因为 Zilliz Cloud 支持同时从多个 Collection 搜索数据。
+
+### 创建文本 Search Pipeline{#create-text-search-pipeline}
+
+<Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"cURL","value":"Bash"}]}>
+
+<TabItem value="Cloud Console">
+
+1. 打开项目。
+
+1. 点击左侧导航栏中的 **Pipelines**。 选中**概览**标签页，并切换到 **Pipelines**。点击 **+ Pipeline**。
+
+1. 选择需要创建的 Pipeline 类型。点击 Search Pipeline 一栏中的 **+ Pipeline** 按钮。 
+
+    ![create-search-pipeline-cn](/img/create-search-pipeline-cn.png)
+
+1. 配置 Search Pipeline。
+
+    <table>
+       <tr>
+         <th><p><strong>参数</strong></p></th>
+         <th><p><strong>说明</strong></p></th>
+       </tr>
+       <tr>
+         <td><p>Pipeline 名称</p></td>
+         <td><p>新创建的 Ingestion Pipeline 的名称。名称中只可包含小写字母、数字和下划线。</p></td>
+       </tr>
+       <tr>
+         <td><p>描述 (可选)</p></td>
+         <td><p>对新创建的 Ingestion Pipeline 的描述。</p></td>
+       </tr>
+    </table>
+
+    ![configure-search-pipeline-cn](/img/configure-search-pipeline-cn.png)
+
+1. 点击 **+ Function** 添加 Function。 1 个 Search pipeline 中只可添加 1 个 Function。
+
+    1. 输入函数名称。
+
+    1. 选择**目标集群**和**目标 Collection**。目标集群必须为部署在阿里云（杭州）的活跃集群。目标 Collection 必须为创建 Ingestion pipeline 时自动创建的 Collection，否则创建的 Search Pipeline 将不兼容。
+
+    1. **Function 类型**选择 **SEARCH_TEXT**。**SEARCH_TEXT** Function 可以将输入的查询文本转换为 Embedding 向量，并检索出与之最相关的 Top-K 个文本 Entity。
+
+    1. （可选） 如需对输出结果根据相关性进行重新排序、提高搜索结果质量，请开启 [Reranker](./reranker)。请注意，开启 Reranker 会增加使用成本和搜索延时。默认情况下，Reranker 功能关闭。开启后，您可以选择 Reranker 模型。目前仅支持 **zilliz/bge-reranker-base** 模型。
+
+        <table>
+           <tr>
+             <th><p><strong>Reranker 模型</strong></p></th>
+             <th><p><strong>描述</strong></p></th>
+           </tr>
+           <tr>
+             <td><p>zilliz/bge-reranker-base</p></td>
+             <td><p>智源研究院（BAAI）发布的开源重新排序（Reranker）模型。该模型采用交叉编码器架构，并托管于 Zilliz Cloud 上。</p></td>
+           </tr>
+        </table>
+
+        ![add-search-text-function-cn](/img/add-search-text-function-cn.png)
+
+    1. 点击**添加**。
+
+1. 点击**创建 Search Pipeline**。
+
+</TabItem>
+
+<TabItem value="Bash">
+
+以下示例代码创建了 1 个名称为 `my_text_search_pipeline` 的 Search Pipeline，并添加了 1 个 **SEARCH_TEXT** Function。
+
+```bash
+curl --request POST \
+    --header "Content-Type: application/json" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines" \
+    -d '{
+        "projectId": "proj-xxxx",       
+        "name": "my_text_search_pipeline",
+        "description": "A pipeline that receives text and search for semantically similar texts",
+        "type": "SEARCH",
+        "functions": [
+            {
+                "name": "search_text",
+                "action": "SEARCH_TEXT",
+                "clusterId": "inxx-xxxxxxxxxxxxxxx",
+                "collectionName": "my_collection",
+                "embedding": "zilliz/bge-base-en-v1.5",
+                "reranker": "zilliz/bge-reranker-base"
+            }
+        ]
+    }'
+```
+
+以下为参数说明：
+
+- `YOUR_API_KEY`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
+
+- `cloud-region`: 集群所在云服务地域的 ID。目前仅支持 `ali-cn-hangzhou`。
+
+- `projectId`: 创建 Pipeline 所属的项目 ID。了解[如何获取项目 ID](https://support.zilliz.com.cn/hc/zh-cn/articles/23085669594011-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E9%A1%B9%E7%9B%AE-ID)。
+
+- `name`: 创建的 Pipeline 名称。Pipeline 名称应该在 3-64 个字符内，且只可包含数字、字母和下划线。
+
+- `description`（可选）：创建的 Pipeline 描述。
+
+- `type`: 创建的 Pipeline 类型。目前，可创建的 Pipeline 类型包括 `INGESTION`、 `SEARCH` 和 `DELETION`。
+
+- `functions`: Pipeline 中添加的 Function。**1 个 Search Pipeline 中仅可添加 1 个 Function。** 
+
+    - `name`: Function 名称。Function 名称应该在 3-64 个字符内，且只可包含数字、字母和下划线。
+
+    - `action`: Function 类型。支持的类型包括：`SEARCH_DOC_CHUNK`、`SEARCH_TEXT`、`SEARCH_IMAGE_BY_IMAGE`、`SEARCH_IMAGE_BY_TEXT`。
+
+    - `inputField`: 输入字段名称。您可以自由配置该字段的值。但是在运行 Pipeline 时，您需要使用现在定义的输入字段名称。
+
+    - `clusterId`: 创建 Pipeline 所属的集群 ID。目前，仅支持部署在阿里云（杭州）的集群。了解[如何获取集群 ID](https://support.zilliz.com.cn/hc/zh-cn/articles/23088888943515-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E9%9B%86%E7%BE%A4-ID-%E5%92%8C-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%9C%B0%E5%9F%9F-ID)。
+
+    - `collectionName`: 创建 Pipeline 所属的 Collection 名称。
+
+    - `embedding`：向量搜索时使用的 Embedding 模型。该模型需要与所选 Collection 中的 Embedding 模型保持一致。
+
+    - `reranker`（可选）: 使用 [Reranker](./reranker) 对输出结果进行重新排序，提高搜索结果质量。目前，仅支持 `zilliz/bge-reranker-base` 作为 Reranker 模型。
+
+如果请求返回以下类似内容，则表示 Search Pipeline 创建成功：
+
+```bash
+{
+  "code": 200,
+  "data": {
+    "pipelineId": "pipe-xxxx",
+    "name": "my_text_search_pipeline",
+    "type": "SEARCH",
+    "createTimestamp": 1721187655000,
+    "description": "A pipeline that receives text and search for semantically similar texts",
+    "status": "SERVING",
+    "totalUsage": {
+      "embedding": 0,
+      "rerank": 0
+    },
+    "functions": [
+      {
+        "name": "search_text",
+        "action": "SEARCH_TEXT",
+        "inputFields": [
+          "query_text"
+        ],
+        "clusterId": "inxx-xxxx",
+        "collectionName": "my_collection",
+        "reranker": "zilliz/bge-reranker-base",
+        "embedding": "zilliz/bge-base-en-v1.5"
+      }
+    ]
+  }
+}
+```
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>总用量非实时更新，数据统计可能会有几小时延迟。</p>
+
+</Admonition>
+
+</TabItem>
+
+</Tabs>
+
+### 运行文本 Search Pipeline{#run-text-search-pipeline}
+
+<Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"cURL","value":"Bash"}]}>
+
+<TabItem value="Cloud Console">
+
+1. 点击 Search Pipeline 右侧的 "▶︎" 按钮。 或者您可以点击 **Playground** 选项卡。
+
+    ![run-pipeline-cn](/img/run-pipeline-cn.png)
+
+1. 输入查询文本。点击**运行**。
+
+1. 查看运行结果。
+
+</TabItem>
+
+<TabItem value="Bash">
+
+以下示例代码用于运行 Search pipeline `my_text_search_pipeline`。查询文本为“What is Zilliz Cloud?”（什么是 Zilliz Cloud？）。
+
+```bash
+curl --request POST \
+    --header "Content-Type: application/json" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}/run" \
+    -d '{
+      "data": {
+        "query_text": "What is Zilliz Cloud?"
+      },
+      "params":{
+          "limit": 1,
+          "offset": 0,
+          "outputFields": [],
+          "filter": "id >= 0", 
+      }
+    }'
+```
+
+以下为参数说明：
+
+- `YOUR_API_KEY`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
+
+- `cloud-region`: 集群的云服务地域。目前仅支持 `ali-cn-hangzhou`。
+
+- `query_text`: 语义搜索的查询文本。
+
+- `params`: 搜索相关参数。
+
+    - `limit`: 返回的 Entity 数量。该参数值为 1-500 之间的整数。`limit` 和 `offset` 参数值总和应小于 **1024。**
+
+    - `offset`: 在搜索结果中跳过的 Entity 数量。最大值为 **1024**。`limit` 和 `offset` 参数值总和应小于 **1024。**
+
+    - `outputFields`: 在搜索结果中一同返回的输出字段。`id`、`distance` 和 `chunk_text`为默认输出字段。
+
+    - `filter`: 搜索时的[过滤](./filtering)条件。
+
+请求返回以下类似内容：
+
+```bash
+{
+  "code": 200,
+  "data": {
+    "result": [
+      {
+        "id": 450524927755105948,
+        "distance": 0.9997715353965759,
+        "text": "Zilliz Cloud is a fully managed vector database and data services, empowering you to unlock the full potential of unstructured data for your AI applications."
+      }
+    ],
+    "usage": {
+      "embedding": 17,
+      "rerank": 43
+    }
+  }
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+## 删除文本数据{#delete-text-data}
+
+如需删除数据，请先创建并运行 Deletion Pipeline。
+
+### 创建文本 Deletion Pipeline{#create-text-deletion-pipeline}
+
+<Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"cURL","value":"Bash"}]}>
+
+<TabItem value="Cloud Console">
+
+1. 打开项目。
+
+1. 点击左侧导航栏中的 **Pipelines**。 选中**概览**标签页，并切换到 **Pipelines**。点击 **+ Pipeline**。
+
+1. 选择需要创建的 Pipeline 类型。点击 Deletion Pipeline 一栏中的 **+ Pipeline** 按钮。 
+
+    ![create-deletion-pipeline-cn](/img/create-deletion-pipeline-cn.png)
+
+1. 配置 Deletion Pipeline。
+
+    <table>
+       <tr>
+         <th><p><strong>参数</strong></p></th>
+         <th><p><strong>说明</strong></p></th>
+       </tr>
+       <tr>
+         <td><p>Pipeline 名称</p></td>
+         <td><p>新创建的 Deleltion Pipeline 名称。名称中只可包含小写字母、数字和下划线。</p></td>
+       </tr>
+       <tr>
+         <td><p>描述 (可选)</p></td>
+         <td><p>对新创建的 Deletion Pipeline 的描述。</p></td>
+       </tr>
+    </table>
+
+    ![configure-deletion-pipeline-cn](/img/configure-deletion-pipeline-cn.png)
+
+1. 点击 **+ Function** 添加 Function。您只可添加 1 个 Function。
+
+    1. 输入 Function名称。
+
+    1. 从 **PURGE_TEXT_INDEX** 或 **PURGE_BY_EXPRESSION** 中选择 1 个作为 **Function 类型**。 **PURGE_TEXT_INDEX** Function 可以删除指定 id 的所有文本 Entity。**PURGE_BY_EXPRESSION** Function 可以删除符合指定过滤条件的所有文本 Entity。
+
+    1. 点击**添加**。
+
+1. 点击**创建 Deletion Pipeline**。
+
+</TabItem>
+
+<TabItem value="Bash">
+
+以下示例代码创建了 1 个名称为 `my_text_deletion_pipeline` 的 Deletion Pipeline，并添加了 1 个 **PURGE_BY_EXPRESSION** Function。
+
+```bash
+curl --request POST \
+    --header "Content-Type: application/json" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines" \
+    -d '{
+        "projectId": "proj-xxxx",
+        "name": "my_text_deletion_pipeline",
+        "description": "A pipeline that deletes entities by expression",
+        "type": "DELETION",
+        "functions": [
+            {
+                "name": "purge_data_by_expression",
+                "action": "PURGE_BY_EXPRESSION"
+            }
+        ], 
+        "clusterId": "inxx-xxxxxxxxxxxxxxx",
+        "collectionName": "my_collection"
+    }'
+```
+
+以下为参数说明：
+
+- `YOUR_API_KEY`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
+
+- `cloud-region`: 集群所在云服务地域的 ID。目前仅支持 `ali-cn-hangzhou`。
+
+- `projectId`: 创建 Pipeline 所属的项目 ID。了解[如何获取项目 ID](https://support.zilliz.com.cn/hc/zh-cn/articles/23085669594011-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E9%A1%B9%E7%9B%AE-ID)。
+
+- `name`: 创建的 Pipeline 名称。Pipeline 名称应该在 3-64 个字符内，且只可包含数字、字母和下划线。
+
+- `description` (可选): 创建的 Pipeline 描述。
+
+- `type`: 创建的 Pipeline 类型。目前，可创建的 Pipeline 类型包括 `INGESTION`、 `SEARCH` 和 `DELETION`。
+
+- `functions:` Pipeline 中添加的 Function。**1 个 Deletion Pipeline 中仅可添加 1 个 Function。**
+
+    - `name`: Function 名称。Function 名称应该在 3-64 个字符内，且只可包含数字、字母和下划线。
+
+    - `action`: Function 类型。可选择的 Function 类型包含：`PURGE_DOC_INDEX`、`PURGE_TEXT_INDEX`、`PURGE_BY_EXPRESSION` 和`PURGE_IMAGE_INDEX`。
+
+- `clusterId`: 创建 Pipeline 所属的集群 ID。目前，仅支持部署在阿里云（杭州）的集群。了解[如何获取集群 ID](https://support.zilliz.com.cn/hc/zh-cn/articles/23088888943515-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E9%9B%86%E7%BE%A4-ID-%E5%92%8C-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%9C%B0%E5%9F%9F-ID)。
+
+- `collectionName`: 创建 Pipeline 所属的 Collection 名称。
+
+如果请求返回以下类似内容，则表示 Deletion Pipeline 创建成功：
+
+```bash
+{
+  "code": 200,
+  "data": {
+    "pipelineId": "pipe-xxxx",
+    "name": "my_text_deletion_pipeline",
+    "type": "DELETION",
+    "createTimestamp": 1721187655000,
+    "description": "A pipeline that deletes entities by expression",
+    "status": "SERVING",
+    "functions": [
+      {
+        "action": "PURGE_BY_EXPRESSION",
+        "name": "purge_data_by_expression",
+        "inputFields": ["expression"]
+      }
+    ],
+    "clusterId": "in03-***************",
+    "collectionName": "my_collection"
+  }
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+### 运行文本 Deletion Pipeline{#run-text-deletion-pipeline}
+
+<Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"cURL","value":"Bash"}]}>
+
+<TabItem value="Cloud Console">
+
+1. 点击 Deletion Pipeline 右侧的 "▶︎" 按钮。或者您可以点击 **Playground** 选项卡。
+
+    ![run-pipeline-cn](/img/run-pipeline-cn.png)
+
+1. 输入过滤表达式，点击**运行**。
+
+1. 查看运行结果。
+
+</TabItem>
+
+<TabItem value="Bash">
+
+以下示例代码用于运行 Deletion Pipeline `my_text_deletion_pipeline`。
+
+```bash
+curl --request POST \
+    --header "Content-Type: application/json" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}/run" \
+    -d '{
+        "data": {
+            "expression": "id in [1, 2, 3]"
+        }
+    }'
+```
+
+以下为参数说明：
+
+- `YOUR_API_KEY`: 验证 API 请求的鉴权信息。了解如何[查看 API 密钥](./manage-api-keys)。
+
+- `cloud-region`: 集群的云服务地域。目前仅支持 `ali-cn-hangzhou`。
+
+- `expression`: 布尔表达式，用于过滤出需要删除的所有 Entity。更多关于表达式详情，请参考[过滤表达式](./filtering)。
+
+请求返回以下类似内容：
+
+```bash
+{
+  "code": 200,
+  "data": {
+    "num_deleted_entities": 3
+  }
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+## 管理 Pipeline{#manage-pipeline}
+
+以下操作可用于管理此前创建的 Pipeline。
+
+### 查看 Pipeline{#view-pipeline}
+
+<Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"cURL","value":"Bash"}]}>
+
+<TabItem value="Cloud Console">
+
+点击左侧导航栏中的 **Pipelines**。选中 **Pipelines** 选项卡。您可以查看所有已创建的 Pipelines。
+
+![view-pipelines-on-web-ui-cn](/img/view-pipelines-on-web-ui-cn.png)
+
+点击特定 Pipeline 名称，还可以查看其详情，包括基本信息、总用量、Functions、关联的 Connectors 等。
+
+![view-pipeline-details-cn](/img/view-pipeline-details-cn.png)
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>总用量非实时更新，数据统计可能会有几小时延迟。</p>
+
+</Admonition>
+
+您还可以查看所有 Pipelines 相关事件。
+
+![view-pipelines-activities-on-web-ui-cn](/img/view-pipelines-activities-on-web-ui-cn.png)
+
+</TabItem>
+
+<TabItem value="Bash">
+
+调用以下 API 查看所有 Pipelines 或查看某一特定 Pipeline 详情。
+
+- **查看所有 Pipelines**
+
+    根据以下示例并指定项目 ID `projectId`。了解[如何获取项目 ID](https://support.zilliz.com.cn/hc/zh-cn/articles/23085669594011-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E9%A1%B9%E7%9B%AE-ID)。
+
+    ```bash
+    curl --request GET \
+        --header "Content-Type: application/json" \
+        --header "Authorization: Bearer ${YOUR_API_KEY}" \
+        --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines?projectId=proj-xxxx"
+    ```
+
+    如果请求返回以下类似内容，则表示操作成功：
+
+    ```bash
+    {
+      "code": 200,
+      "data": [
+        {
+          "pipelineId": "pipe-xxxx",
+          "name": "my_text_ingestion_pipeline",
+          "type": "INGESTION",
+          "createTimestamp": 1721187655000,
+          "clusterId": "in03-***************",
+          "collectionName": "my_collection"
+          "description": "A pipeline that generates text embeddings and stores additional fields.",
+          "status": "SERVING",
+          "totalUsage": {
+            "embedding": 0
+            },
+          "functions": [
+            {
+              "action": "INDEX_TEXT",
+              "name": "index_my_text",
+              "inputFields": ["text_list"],
+              "language": "ENGLISH",
+              "embedding": "zilliz/bge-base-en-v1.5"
+            },
+            {
+              "action": "PRESERVE",
+              "name": "keep_text_info",
+              "inputField": "source",
+              "outputField": "source",
+              "fieldType": "VarChar"
+            }
+          ]
+        },
+        {
+          "pipelineId": "pipe-xxxx",
+          "name": "my_text_search_pipeline",
+          "type": "SEARCH",
+          "createTimestamp": 1721187655000,
+          "description": "A pipeline that receives text and search for semantically similar texts",
+          "status": "SERVING",
+          "totalUsage": {
+            "embedding": 0,
+            "rerank": 0
+            },
+          "functions": 
+            {
+              "action": "SEARCH_TEXT",
+              "name": "search_text",
+              "inputFields": "query_text",
+              "clusterId": "in03-***************",
+              "collectionName": "my_collection",
+              "embedding": "zilliz/bge-base-en-v1.5",
+              "reranker": "zilliz/bge-reranker-base"
+            }
+        },
+        {
+          "pipelineId": "pipe-xxxx",
+          "name": "my_text_deletion_pipeline",
+          "type": "DELETION",
+          "createTimestamp": 1721187655000,
+          "description": "A pipeline that deletes entities by expression",
+          "status": "SERVING",
+          "functions": 
+            {
+            "action": "PURGE_BY_EXPRESSION",
+            "name": "purge_data_by_expression",
+            "inputFields": ["expression"]
+            },
+        "clusterId": "in03-***************",
+        "collectionName": "my_collection"
+        }
+      ]
+    }
+    ```
+
+    <Admonition type="info" icon="📘" title="说明">
+
+    <p>总用量 <code>totalUsage</code> 非实时更新，数据统计可能会有几小时延迟。</p>
+
+    </Admonition>
+
+- **查看特定 Pipeline 详情**
+
+    根据以下示例查看某一 Pipeline 详情。
+
+    ```bash
+    curl --request GET \
+        --header "Content-Type: application/json" \
+        --header "Authorization: Bearer ${YOUR_API_KEY}" \
+        --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}"
+    ```
+
+    如果请求返回以下类似内容，则表示操作成功：
+
+    ```bash
+    {
+      "code": 200,
+      "data": {
+        "pipelineId": "pipe-xxx",
+        "name": "my_text_ingestion_pipeline",
+        "type": "INGESTION",
+        "createTimestamp": 1721187300000,
+        "description": "A pipeline that generates text embeddings and stores additional fields.",
+        "status": "SERVING",
+        "totalUsage": {
+          "embedding": 0
+        },
+        "functions": [
+          {
+            "name": "index_my_text",
+            "action": "INDEX_TEXT",
+            "inputFields": ["text_list"],
+            "language": "ENGLISH",
+            "embedding": "zilliz/bge-base-en-v1.5"
+          },
+          {
+            "name": "keep_text_info",
+            "action": "PRESERVE",
+            "inputField": "source",
+            "outputField": "source",
+            "fieldType": "VarChar"
+          }
+        ],
+        "clusterId": "inxx-xxxx",
+        "collectionName": "my_collection"
+      }
+    }
+    ```
+
+    <Admonition type="info" icon="📘" title="说明">
+
+    <p>总用量 <code>totalUsage</code> 非实时更新，数据统计可能会有几小时延迟。</p>
+
+    </Admonition>
+
+</TabItem>
+
+</Tabs>
+
+### 删除 Pipeline{#delete-pipeline}
+
+您可以删除不再需要使用的 Pipelines。该操作仅删除 Pipeline，不会影响自动创建的 Collection。
+
+<Admonition type="caution" icon="🚧" title="警告">
+
+<ul>
+<li><p>该操作仅删除 Pipeline，不会影响自动创建的 Collection。</p></li>
+<li><p>Pipeline 一旦删除后不可恢复，请谨慎操作。</p></li>
+<li><p>删除 Ingestion pipeline 时不会影响其相关联的 Collection。您的数据十分安全。</p></li>
+</ul>
+
+</Admonition>
+
+<Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"cURL","value":"Bash"}]}>
+
+<TabItem value="Cloud Console">
+
+如需删除不再使用的 Pipeline，请点击操作栏中的**“...”**按钮并选择**删除**。
+
+![delete-pipeline-cn](/img/delete-pipeline-cn.png)
+
+</TabItem>
+
+<TabItem value="Bash">
+
+根据以下示例删除 Pipelines。
+
+```bash
+curl --request GET \
+    --header "Content-Type: application/json" \
+    --header "Authorization: Bearer ${YOUR_API_KEY}" \
+    --url "https://controller.api.{cloud-region}.cloud.zilliz.com.cn/v1/pipelines/${YOUR_PIPELINE_ID}"
+```
+
+如果请求返回以下类似内容，则表示操作成功：
+
+```bash
+{
+  "code": 200,
+  "data": {
+    "pipelineId": "pipe-xxx",
+    "name": "my_text_ingestion_pipeline",
+    "type": "INGESTION",
+    "createTimestamp": 1721187300000,
+    "description": "A pipeline that generates text embeddings and stores additional fields.",
+    "status": "SERVING",
+    "totalUsage": {
+      "embedding": 0
+    },
+    "functions": [
+      {
+        "name": "index_my_text",
+        "action": "INDEX_TEXT",
+        "inputFields": ["text_list"],
+        "language": "ENGLISH",
+        "embedding": "zilliz/bge-base-en-v1.5"
+      },
+      {
+        "name": "keep_text_info",
+        "action": "PRESERVE",
+        "inputField": "source",
+        "outputField": "source",
+        "fieldType": "VarChar"
+      }
+    ],
+    "clusterId": "inxx-xxxx",
+    "collectionName": "my_collection"
+  }
+}
+```
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>总用量 <code>totalUsage</code> 非实时更新，数据统计可能会有几小时延迟。</p>
+
+</Admonition>
+
+</TabItem>
+
+</Tabs>
