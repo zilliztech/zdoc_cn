@@ -129,9 +129,41 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
                     "s3:GetBucketLocation"
                 ],
                 "Resource": [
-                    "arn:aws:s3:::$bucket",
-                    "arn:aws:s3:::$bucket/*"
+                    "arn:aws-cn:s3:::$bucket",
+                    "arn:aws-cn:s3:::$bucket/*"
                 ]
+            }
+        ]
+    }
+    ```
+
+    当您为上述对象存储桶启用了服务端加密，您还需要为 `kms:GenerateDataKey` 操作添加相应的策略。在此情况下，请使用如下 JSON 策略文件。
+
+    ```json
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "Statement1",
+                "Effect": "Allow",
+                "Action": [
+                    "s3:GetObject",
+                    "s3:PutObject",
+                    "s3:ListBucket",
+                    "s3:GetBucketLocation"
+                ],
+                "Resource": [
+                    "arn:aws-cn:s3:::$bucket",
+                    "arn:aws-cn:s3:::$bucket/*"
+                ]
+            },
+            {
+                "Sid": "AllowKMSGenerateDataKey",
+                "Effect": "Allow",
+                "Action": [
+                    "kms:GenerateDataKey"
+                ],
+                "Resource": "arn:aws-cn:kms:$region:$account-id:key/$key-id"
             }
         ]
     }
@@ -139,7 +171,10 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p><code>$bucket</code> 需要替换为你的存储桶实际名称。</p>
+    <ul>
+    <li><p><code>$bucket</code> 需要替换为你的存储桶实际名称。</p></li>
+    <li><p><code>$region</code>, <code>$account_id</code>, and <code>$key_id</code> 需要替换为对应的值。详情请参考 AWS 文档中的<a href="https://docs.amazonaws.cn/kms/latest/developerguide/concepts.html">密钥标识符</a>一节的相关内容。</p></li>
+    </ul>
 
     </Admonition>
 
