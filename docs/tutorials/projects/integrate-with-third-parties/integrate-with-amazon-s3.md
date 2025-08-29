@@ -129,8 +129,8 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
                     "s3:GetBucketLocation"
                 ],
                 "Resource": [
-                    "arn:aws-cn:s3:::$bucket",
-                    "arn:aws-cn:s3:::$bucket/*"
+                    "arn:aws-cn:s3:::<bucket>",
+                    "arn:aws-cn:s3:::<bucket>/*"
                 ]
             }
         ]
@@ -153,8 +153,8 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
                     "s3:GetBucketLocation"
                 ],
                 "Resource": [
-                    "arn:aws-cn:s3:::$bucket",
-                    "arn:aws-cn:s3:::$bucket/*"
+                    "arn:aws-cn:s3:::<bucket>",
+                    "arn:aws-cn:s3:::<bucket>/*"
                 ]
             },
             {
@@ -163,7 +163,7 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
                 "Action": [
                     "kms:GenerateDataKey"
                 ],
-                "Resource": "arn:aws-cn:kms:$region:$account-id:key/$key-id"
+                "Resource": "arn:aws-cn:kms:<region>:<account-id>:key/<key-id>"
             }
         ]
     }
@@ -172,8 +172,8 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
     <Admonition type="info" icon="📘" title="说明">
 
     <ul>
-    <li><p><code>$bucket</code> 需要替换为你的存储桶实际名称。</p></li>
-    <li><p><code>$region</code>, <code>$account_id</code>, and <code>$key_id</code> 需要替换为对应的值。详情请参考 AWS 文档中的<a href="https://docs.amazonaws.cn/kms/latest/developerguide/concepts.html">密钥标识符</a>一节的相关内容。</p></li>
+    <li><p><code>&lt;bucket&gt;</code> 需要替换为你的存储桶实际名称。</p></li>
+    <li><p><code>&lt;region&gt;</code>, <code>&lt;account_id&gt;</code>, and <code>&lt;key_id&gt;</code> 需要替换为对应的值。详情请参考 AWS 文档中的<a href="https://docs.amazonaws.cn/kms/latest/developerguide/concepts.html">密钥标识符</a>一节的相关内容。</p></li>
     </ul>
 
     </Admonition>
