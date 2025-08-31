@@ -650,6 +650,13 @@ class larkDocWriter {
                 markdown.push(await this.__board(block['board'], indent));
             } else if (this.block_types[block['block_type']-1] === 'grid') {
                 markdown.push(await this.__grid(block, indent));
+            } else if (this.block_types[block['block_type']-1] === 'add_ons') {
+                // supademo add-ons
+                if (block['add_ons']['component_type_id'] === 'blk_682093ba9580c002363b9dc3') {
+                    markdown.push(await this.__supademo(block['add_ons'], indent));
+                }
+            } else if (this.block_types[block['block_type']-1] === 'source_synced') {
+                markdown.push(await this.__source_synced(block, indent));
             } else if (block['block_type'] === 999 && block['children']) {
                 const children = block['children'].map(child => {
                     return this.__retrieve_block_by_id(child)
@@ -1384,6 +1391,12 @@ class larkDocWriter {
 
     }
 
+    async __supademo(addons, indent) {
+        const record = JSON.parse(addons['record']);
+
+        return ' '.repeat(indent) + `<Supademo id="${record['id']}" title="" ${record['isShowcase'] ? 'isShowcase' : ''} />`;
+    }
+
     async __grid(block, indent) {
         const grid_columns = block.children.map(child => this.__retrieve_block_by_id(child));
         const column_size = block.grid.column_size;
@@ -1405,6 +1418,12 @@ class larkDocWriter {
                 columnsContent.join('\n\n') +
             `\n\n${' '.repeat(indent)}</Grid>\n`
         );
+    }
+
+    async __source_synced(block, indent) {
+        let children = block.children.map(child => this.__retrieve_block_by_id(child));
+        let content = await this.__markdown(children, indent);
+        return content;
     }
 
     __retrieve_block_by_id(block_id) {
@@ -1705,7 +1724,16 @@ class larkDocWriter {
             "add_ons",
             "jira_issue",
             "wiki_catelog",
-            "board"
+            "board",
+            "agenda",
+            "agenda_item",
+            "agenda_item_title",
+            "agenda_item_content",
+            "link_preview",
+            "source_synced",
+            "reference_synced",
+            "sub_page_list",
+            "ai_template"
         ]
     }
 
