@@ -1483,44 +1483,44 @@ class larkDocWriter {
         if (!content.match(/^\s+$/) && !asis) {
             if (style['inline_code']) {
                 content = this.__style_markdown(element, elements, 'inline_code', '`');
-            } else {                
-                if (style['bold']) {
-                    content = this.__style_markdown(element, elements, 'bold', '**');
+            } 
+                       
+            if (style['bold']) {
+                content = this.__style_markdown(element, elements, 'bold', '**');
+            }
+
+            if (style['italic']) {
+                content = this.__style_markdown(element, elements, 'italic', '*');
+            }
+
+            if (style['strikethrough']) {
+                content = this.__style_markdown(element, elements, 'strikethrough', '~~');
+            }
+
+            if ('link' in style) {
+                const url = await this.__convert_link(decodeURIComponent(style['link']['url']))
+
+                var prefix = [...content.matchAll(/(^\*\*|^\*|^~~)/g)]
+                var suffix = [...content.matchAll(/(\*\*$|\*$|~~$)/g)]
+
+                if (prefix.length > 0) {
+                    prefix = prefix[0][0]
+                } else {
+                    prefix = ''
                 }
 
-                if (style['italic']) {
-                    content = this.__style_markdown(element, elements, 'italic', '*');
+                if (suffix.length > 0) {
+                    suffix = suffix[0][0]
+                } else {
+                    suffix = ''
                 }
 
-                if (style['strikethrough']) {
-                    content = this.__style_markdown(element, elements, 'strikethrough', '~~');
+                if (url) {
+                    content = `${prefix}[${content.replace(prefix, '').replace(suffix, '')}](${url})${suffix}`;
+                } else {
+                    console.log(`Cannot find ${content}`)
                 }
-
-                if ('link' in style) {
-                    const url = await this.__convert_link(decodeURIComponent(style['link']['url']))
-
-                    var prefix = [...content.matchAll(/(^\*\*|^\*|^~~)/g)]
-                    var suffix = [...content.matchAll(/(\*\*$|\*$|~~$)/g)]
-
-                    if (prefix.length > 0) {
-                        prefix = prefix[0][0]
-                    } else {
-                        prefix = ''
-                    }
-
-                    if (suffix.length > 0) {
-                        suffix = suffix[0][0]
-                    } else {
-                        suffix = ''
-                    }
-
-                    if (url) {
-                        content = `${prefix}[${content.replace(prefix, '').replace(suffix, '')}](${url})${suffix}`;
-                    } else {
-                        console.log(`Cannot find ${content}`)
-                    }
-                    
-                }
+                
             }
         }
 
