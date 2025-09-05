@@ -1452,28 +1452,7 @@ class larkDocWriter {
         // inline single equation 
         if ((!prev || prev_element_type === 'text_run') && (!next ||next_element_type === 'text_run')) {
             return `$${content.trim()}$`;
-        }
-        
-
-
-        // // first element
-        // if ((!prev || prev_element_type === 'text_run') && next && next_element_type === 'equation') {
-        //     content = `$${content.trim()}`;
-
-        //     if (!(prev && prev['text_run']['content'].endsWith('\n'))) {
-        //         rip_off_line_breaks = true;
-        //     }
-        // }
-
-        // // middle element
-        // if (prev && prev_element_type === 'equation' && next && next_element_type === 'equation') {
-        //     content = content.trim();
-        // }
-
-        // // last element
-        // if (prev && prev_element_type === 'equation' && (!next || next_element_type === 'text_run')) {
-        //     if (rip_off_line_breaks) content = content.trim()
-        // }      
+        }     
     }
 
     async __text_run(element, elements, asis=false) {
@@ -1481,8 +1460,11 @@ class larkDocWriter {
         let style = element['text_run']['text_element_style'];
 
         if (!content.match(/^\s+$/) && !asis) {
+            content = content.replace(/\$/g, '&#36;') // escape $ for markdown
+            
             if (style['inline_code']) {
                 content = this.__style_markdown(element, elements, 'inline_code', '`');
+                content = content.replaceAll('&#36;', '#')
             } 
                        
             if (style['bold']) {
