@@ -160,7 +160,7 @@ result = Zilliz CloudClient.search(
     anns_field="message_vector", 
     data=[[1, -2.5, 3]], # vector embeddings of the phrase `How is the weather in Jamaica?` 
     filter=filter,
-    search_params={"params": {"nprobe": 10}},
+    
     limit=10, 
     output_fields=["id", "message"] 
 )
@@ -521,7 +521,7 @@ search_params_dense = {
     "anns_field": "vector",
     "param": {
         "metric_type": "IP",
-        "params": {"nprobe": 10}, 
+        
     },
     "limit": 100
 }
@@ -549,7 +549,7 @@ res = client.hybrid_search(
 
 这个示例演示了 Zilliz Cloud 中的混合检索，它结合了以下两种检索方式：  
 
-1. **稠密向量检索（Dense vector search）**：在`vector`字段上使用内积（IP）度量，并将 `nprobe` 设置为 10，以执行近似最近邻（ANN）检索。
+1. **稠密向量检索（Dense vector search）**：在`vector`字段上使用内积（IP）度量，以执行近似最近邻（ANN）检索。
 
 1. **稀疏向量检索（Sparse vector search）**：在 `text_sparse` 字段上使用 BM25 相似度度量，并将 `drop_ratio_search` 参数设置为 0.2。
 
