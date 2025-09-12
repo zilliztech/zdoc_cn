@@ -273,10 +273,10 @@ const AnyOf = ({ name, description, arr, required, lang, target, onValueChange, 
     const r = getRandomString(5)
     const translatedDescription = x_i18n?.[lang]?.description ? x_i18n[lang].description : description
 
-    // Map tab labels to option values for responses
+    // Map tab labels to option values for responses and requestBody
     const getOptionValue = (label, index) => {
-        if (name === 'responses') {
-            // For responses, map labels to OPTION 1, OPTION 2, etc.
+        if (name === 'responses' || name === 'requestBody') {
+            // For responses and requestBody, map labels to OPTION 1, OPTION 2, etc.
             return `OPTION ${index + 1}`
         }
         return (label ? label : `${i18n[lang]["tab.option"]} ${index + 1}`).toUpperCase()
@@ -326,10 +326,10 @@ const OneOf = ({ name, description, arr, required, lang, target, onValueChange, 
     const r = getRandomString(5)
     const translatedDescription = x_i18n?.[lang]?.description ? x_i18n[lang].description : description
 
-    // Map tab labels to option values for responses
+    // Map tab labels to option values for responses and requestBody
     const getOptionValue = (label, index) => {
-        if (name === 'responses') {
-            // For responses, map labels to OPTION 1, OPTION 2, etc.
+        if (name === 'responses' || name === 'requestBody') {
+            // For responses and requestBody, map labels to OPTION 1, OPTION 2, etc.
             return `OPTION ${index + 1}`
         }
         return (label ? label : `${i18n[lang]["tab.option"]} ${index + 1}`).toUpperCase()
