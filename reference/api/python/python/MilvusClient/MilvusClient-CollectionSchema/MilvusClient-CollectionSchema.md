@@ -10,10 +10,10 @@ type: docx
 token: BqR9dyTk6oOl8BxbZOOcW2Phnsn
 sidebar_position: 2
 keywords: 
-  - milvus
   - Zilliz
   - milvus vector database
   - milvus db
+  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud
@@ -77,7 +77,7 @@ CollectionSchema(
 
         Whether allows Zilliz Cloud saves the values of undefined fields in a dynamic field if the data being inserted into the target collection includes fields that are not defined in the collection's schema.
 
-        When you set this to **True**,  and Zilliz Cloud will create a field called **$meta** to store any undefined fields and their values from the data that is inserted.
+        When you set this to **True**,  and Zilliz Cloud will create a field called **&#36;meta** to store any undefined fields and their values from the data that is inserted.
 
         <Admonition type="info" icon="📘" title="What is a dynamic field?">
 

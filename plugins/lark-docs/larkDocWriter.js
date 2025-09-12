@@ -650,6 +650,13 @@ class larkDocWriter {
                 markdown.push(await this.__board(block['board'], indent));
             } else if (this.block_types[block['block_type']-1] === 'grid') {
                 markdown.push(await this.__grid(block, indent));
+            } else if (this.block_types[block['block_type']-1] === 'add_ons') {
+                // supademo add-ons
+                if (block['add_ons']['component_type_id'] === 'blk_682093ba9580c002363b9dc3') {
+                    markdown.push(await this.__supademo(block['add_ons'], indent));
+                }
+            } else if (this.block_types[block['block_type']-1] === 'source_synced') {
+                markdown.push(await this.__source_synced(block, indent));
             } else if (block['block_type'] === 999 && block['children']) {
                 const children = block['children'].map(child => {
                     return this.__retrieve_block_by_id(child)
@@ -962,6 +969,14 @@ class larkDocWriter {
         let elements = (await Promise.all(code['elements'].map( async x => {
             return await this.__text_run(x, code['elements'], true)
         }))).join('') 
+
+        elements = elements.replace("zilliz.com\"", "zilliz.com.cn\"")
+                        .replace("\"gcp\"", "\"ali\"")
+                        .replace("\"aws\"", "\"ali\"")
+                        .replace("\"azure\"", "\"ali\"")
+                        .replace("\"gcp-us-west1\"", "\"ali-cn-hangzhou\"")
+                        .replace("\"aws-us-west-2\"", "\"ali-cn-hangzhou\"")
+                        .replace("\"az-westus3\"", "\"ali-cn-hangzhou\"")
 
         if (valid_langs.includes(lang)) {
             const prev_type = prev ? this.block_types[prev['block_type']-1] : null;
@@ -1376,6 +1391,12 @@ class larkDocWriter {
 
     }
 
+    async __supademo(addons, indent) {
+        const record = JSON.parse(addons['record']);
+
+        return ' '.repeat(indent) + `<Supademo id="${record['id']}" title="" ${record['isShowcase'] ? 'isShowcase' : ''} />`;
+    }
+
     async __grid(block, indent) {
         const grid_columns = block.children.map(child => this.__retrieve_block_by_id(child));
         const column_size = block.grid.column_size;
@@ -1397,6 +1418,12 @@ class larkDocWriter {
                 columnsContent.join('\n\n') +
             `\n\n${' '.repeat(indent)}</Grid>\n`
         );
+    }
+
+    async __source_synced(block, indent) {
+        let children = block.children.map(child => this.__retrieve_block_by_id(child));
+        let content = await this.__markdown(children, indent);
+        return content;
     }
 
     __retrieve_block_by_id(block_id) {
@@ -1425,28 +1452,7 @@ class larkDocWriter {
         // inline single equation 
         if ((!prev || prev_element_type === 'text_run') && (!next ||next_element_type === 'text_run')) {
             return `$${content.trim()}$`;
-        }
-        
-
-
-        // // first element
-        // if ((!prev || prev_element_type === 'text_run') && next && next_element_type === 'equation') {
-        //     content = `$${content.trim()}`;
-
-        //     if (!(prev && prev['text_run']['content'].endsWith('\n'))) {
-        //         rip_off_line_breaks = true;
-        //     }
-        // }
-
-        // // middle element
-        // if (prev && prev_element_type === 'equation' && next && next_element_type === 'equation') {
-        //     content = content.trim();
-        // }
-
-        // // last element
-        // if (prev && prev_element_type === 'equation' && (!next || next_element_type === 'text_run')) {
-        //     if (rip_off_line_breaks) content = content.trim()
-        // }      
+        }     
     }
 
     async __text_run(element, elements, asis=false) {
@@ -1454,46 +1460,50 @@ class larkDocWriter {
         let style = element['text_run']['text_element_style'];
 
         if (!content.match(/^\s+$/) && !asis) {
+            element['text_run']['content'] = element['text_run']['content'].replace(/\$/g, '&#36;') // escape $ for markdown
+            content = element['text_run']['content'];
+            
             if (style['inline_code']) {
                 content = this.__style_markdown(element, elements, 'inline_code', '`');
-            } else {                
-                if (style['bold']) {
-                    content = this.__style_markdown(element, elements, 'bold', '**');
+                content = content.replaceAll('&#36;', '#')
+            } 
+                       
+            if (style['bold']) {
+                content = this.__style_markdown(element, elements, 'bold', '**');
+            }
+
+            if (style['italic']) {
+                content = this.__style_markdown(element, elements, 'italic', '*');
+            }
+
+            if (style['strikethrough']) {
+                content = this.__style_markdown(element, elements, 'strikethrough', '~~');
+            }
+
+            if ('link' in style) {
+                const url = await this.__convert_link(decodeURIComponent(style['link']['url']))
+
+                var prefix = [...content.matchAll(/(^\*\*|^\*|^~~)/g)]
+                var suffix = [...content.matchAll(/(\*\*$|\*$|~~$)/g)]
+
+                if (prefix.length > 0) {
+                    prefix = prefix[0][0]
+                } else {
+                    prefix = ''
                 }
 
-                if (style['italic']) {
-                    content = this.__style_markdown(element, elements, 'italic', '*');
+                if (suffix.length > 0) {
+                    suffix = suffix[0][0]
+                } else {
+                    suffix = ''
                 }
 
-                if (style['strikethrough']) {
-                    content = this.__style_markdown(element, elements, 'strikethrough', '~~');
+                if (url) {
+                    content = `${prefix}[${content.replace(prefix, '').replace(suffix, '')}](${url})${suffix}`;
+                } else {
+                    console.log(`Cannot find ${content}`)
                 }
-
-                if ('link' in style) {
-                    const url = await this.__convert_link(decodeURIComponent(style['link']['url']))
-
-                    var prefix = [...content.matchAll(/(^\*\*|^\*|^~~)/g)]
-                    var suffix = [...content.matchAll(/(\*\*$|\*$|~~$)/g)]
-
-                    if (prefix.length > 0) {
-                        prefix = prefix[0][0]
-                    } else {
-                        prefix = ''
-                    }
-
-                    if (suffix.length > 0) {
-                        suffix = suffix[0][0]
-                    } else {
-                        suffix = ''
-                    }
-
-                    if (url) {
-                        content = `${prefix}[${content.replace(prefix, '').replace(suffix, '')}](${url})${suffix}`;
-                    } else {
-                        console.log(`Cannot find ${content}`)
-                    }
-                    
-                }
+                
             }
         }
 
@@ -1697,7 +1707,16 @@ class larkDocWriter {
             "add_ons",
             "jira_issue",
             "wiki_catelog",
-            "board"
+            "board",
+            "agenda",
+            "agenda_item",
+            "agenda_item_title",
+            "agenda_item_content",
+            "link_preview",
+            "source_synced",
+            "reference_synced",
+            "sub_page_list",
+            "ai_template"
         ]
     }
 

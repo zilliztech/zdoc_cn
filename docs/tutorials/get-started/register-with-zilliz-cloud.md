@@ -4,7 +4,7 @@ slug: /register-with-zilliz-cloud
 sidebar_label: "注册账号"
 beta: FALSE
 notebook: FALSE
-description: "本教程将介绍如何创建 Zilliz Cloud 账号。 | Cloud"
+description: "本教程将介绍如何创建 Zilliz Cloud 账号以便使用 Zilliz Cloud 云服务。 | Cloud"
 type: origin
 token: CCVpw6BVti8P8LkfcdJcdRH1nHg
 sidebar_position: 2
@@ -23,17 +23,19 @@ import Admonition from '@theme/Admonition';
 
 # 注册账号
 
-本教程将介绍如何创建 Zilliz Cloud 账号。
+本教程将介绍如何创建 Zilliz Cloud 账号以便使用 Zilliz Cloud 云服务。
 
 ## 前提条件{#before-you-start}
 
-打开注册页面 [https://cloud.zilliz.com.cn/signup](https://cloud.zilliz.com.cn/signup)。
+欢迎访问并[注册 Zilliz Cloud](https://cloud.zilliz.com.cn/signup)。
 
 ![register_account](/img/register_account.png)
 
 ## 注册账号{#registration-options}
 
 1. 在“企业邮箱”字段中输入您的邮箱地址。
+
+1. 点击“获取验证码”，并输入邮件中接收到的验证码。
 
 1. 在“密码”字段中输入密码。
 

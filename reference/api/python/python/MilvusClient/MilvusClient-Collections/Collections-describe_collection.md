@@ -10,10 +10,10 @@ type: docx
 token: MCkjdiRNKo2HCCxzHReclrgAnbg
 sidebar_position: 9
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
   - zilliz
   - zilliz cloud
   - cloud
@@ -187,7 +187,7 @@ A dictionary that contains detailed information about the specified collection.
 
 - **enable_dynamic_field** (*bool*)
 
-    Whether to use the reserved JSON field **$meta** to save non-schema-defined fields and their values as key-value pairs.
+    Whether to use the reserved JSON field **&#36;meta** to save non-schema-defined fields and their values as key-value pairs.
 
 **EXCEPTIONS:**
 

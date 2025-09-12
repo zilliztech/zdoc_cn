@@ -32,7 +32,7 @@ Schema 定义了 Collection 的数据结构。在创建 Collection 之前，您�
 
 精心设计的 Schema 至关重要，因为它抽象了数据模型，并决定了能否通过搜索实现业务目标。此外，由于插入到集合中的每一行数据都必须遵循 Schema 定义，从而保持数据的一致性和长期质量。从技术角度看，定义明确的 Schema 可实现有序的列数据存储和更简洁的索引结构，从而提高搜索性能。
 
-如下图所示，一个典型的 Collection Schema 包含一个主键，若干向量列和若干标量列。下图说明了如何将一篇文章映射成一个 Collection Schema。
+如下图所示，一个典型的 Collection Schema 包含一个主键，至少一个向量列和若干标量列。下图说明了如何将一篇文章映射成一个 Collection Schema。
 
 ![RFGTbrPmmoa7b8xAg34cRdUmnXe](/img/RFGTbrPmmoa7b8xAg34cRdUmnXe.png)
 
@@ -175,7 +175,7 @@ export primaryField='{
 export schema='{
     \"autoID\": false,
     \"fields\": [
-        $primaryField
+        &#36;primaryField
     ]
 }'
 ```
@@ -259,8 +259,8 @@ export vectorField='{
 export schema="{
     \"autoID\": false,
     \"fields\": [
-        $primaryField,
-        $vectorField
+        &#36;primaryField,
+        &#36;vectorField
     ]
 }"
 ```
@@ -285,8 +285,6 @@ export schema="{
 - `SPARSE_FLOAT_VECTOR`
 
     用于存放一组非零元素及其序号，用来表示一个稀疏向量。
-
-关于添加向量字段时的更多内容，可参考[稀疏向量](./use-sparse-vector)、[稠密向量](./use-dense-vector)或[Binary 向量](./use-binary-vector)。
 
 ## 添加标量字段{#add-scalar-fields}
 
@@ -361,9 +359,9 @@ export varCharField='{
 export schema="{
     \"autoID\": false,
     \"fields\": [
-        $primaryField,
-        $vectorField,
-        $varCharField
+        &#36;primaryField,
+        &#36;vectorField,
+        &#36;varCharField
     ]
 }"
 ```
@@ -430,10 +428,10 @@ export int64Field='{
 export schema="{
     \"autoID\": false,
     \"fields\": [
-        $primaryField,
-        $vectorField,
-        $varCharField,
-        $int64Field
+        &#36;primaryField,
+        &#36;vectorField,
+        &#36;varCharField,
+        &#36;int64Field
     ]
 }"
 ```
@@ -500,11 +498,11 @@ export boolField='{
 export schema="{
     \"autoID\": false,
     \"fields\": [
-        $primaryField,
-        $vectorField,
-        $varCharField,
-        $int64Field,
-        $boolField
+        &#36;primaryField,
+        &#36;vectorField,
+        &#36;varCharField,
+        &#36;int64Field,
+        &#36;boolField
     ]
 }"
 ```
@@ -571,12 +569,12 @@ export jsonField='{
 export schema="{
     \"autoID\": false,
     \"fields\": [
-        $primaryField,
-        $vectorField,
-        $varCharField,
-        $int64Field,
-        $boolField,
-        $jsonField
+        &#36;primaryField,
+        &#36;vectorField,
+        &#36;varCharField,
+        &#36;int64Field,
+        &#36;boolField,
+        &#36;jsonField
     ]
 }"
 ```
@@ -659,13 +657,13 @@ export arrayField='{
 export schema="{
     \"autoID\": false,
     \"fields\": [
-        $primaryField,
-        $vectorField,
-        $varCharField,
-        $int64Field,
-        $boolField,
-        $jsonField,
-        $arrayField
+        &#36;primaryField,
+        &#36;vectorField,
+        &#36;varCharField,
+        &#36;int64Field,
+        &#36;boolField,
+        &#36;jsonField,
+        &#36;arrayField
     ]
 }"
 ```

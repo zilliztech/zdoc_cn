@@ -57,7 +57,7 @@ Collection 是一张二维数据表，包含固定列数和可变行数。Collec
 
 主键字段默认要求手动输入，也可以通过在创建 Collection 时通过开启 AutoId 的方式将其设置为自动分配。在 Collection 的主键为自动分配的情况下，插入数据时应确保插入的 Entity 不包括主键字段。
 
-关于主键和 AutoId 的更多内容，可参考 [主键与 AutoId](./primary-field-auto-id) 中的相关介绍。eff
+关于主键和 AutoId 的更多内容，可参考 [主键与 AutoId](./primary-field-auto-id) 中的相关介绍。
 
 ## 索引{#index}
 

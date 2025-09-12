@@ -126,7 +126,7 @@ export primaryField='{
 export schema="{
     \"autoID\": true,
     \"fields\": [
-        $primaryField
+        &#36;primaryField
     ]
 }"
 ```
@@ -215,7 +215,7 @@ export primaryField='{
 export schema="{
     \"autoID\": true,
     \"fields\": [
-        $primaryField
+        &#36;primaryField
     ],
     \"params\": {
         \"max_length\": 512

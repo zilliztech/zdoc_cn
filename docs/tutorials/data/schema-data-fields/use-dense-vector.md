@@ -57,8 +57,9 @@ import TabItem from '@theme/TabItem';
     -0.0053388323,
     0.0010654867,
     0.072027855,
-    // ... 更多维度
+    // ... more dimensions
 ]
+
 ```
 
 稠密向量可以通过各种 [Embedding](https://en.wikipedia.org/wiki/Embedding) 模型生成，例如针对图像的 CNN 模型（如 [ResNet](https://pytorch.org/hub/pytorch_vision_resnet/)、[VGG](https://pytorch.org/vision/stable/models/vgg.html)）和针对文本的语言模型（如 [BERT](https://en.wikipedia.org/wiki/BERT_(language_model))、[Word2Vec](https://en.wikipedia.org/wiki/Word2vec)）。这些模型将原始数据转换为高维空间中的点，捕获数据的语义特征。此外，Milvus 提供了一些便捷的方法来帮助用户生成和处理稠密向量，具体可以参考 Embeddings。
@@ -217,8 +218,8 @@ export vectorField='{
 export schema="{
     \"autoID\": true,
     \"fields\": [
-        $primaryField,
-        $vectorField
+        &#36;primaryField,
+        &#36;vectorField
     ]
 }"
 ```
@@ -402,13 +403,13 @@ if err != nil {
 
 ```bash
 curl --request POST \
---url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
---header "Authorization: Bearer ${TOKEN}" \
+--url "&#36;{CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
+--header "Authorization: Bearer &#36;{TOKEN}" \
 --header "Content-Type: application/json" \
 -d "{
     \"collectionName\": \"my_collection\",
-    \"schema\": $schema,
-    \"indexParams\": $indexParams
+    \"schema\": &#36;schema,
+    \"indexParams\": &#36;indexParams
 }"
 ```
 
@@ -494,8 +495,8 @@ if err != nil {
 
 ```bash
 curl --request POST \
---url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/insert" \
---header "Authorization: Bearer ${TOKEN}" \
+--url "&#36;{CLUSTER_ENDPOINT}/v2/vectordb/entities/insert" \
+--header "Authorization: Bearer &#36;{TOKEN}" \
 --header "Content-Type: application/json" \
 -d '{
     "data": [
@@ -620,8 +621,8 @@ for _, resultSet := range resultSets {
 
 ```bash
 curl --request POST \
---url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
---header "Authorization: Bearer ${TOKEN}" \
+--url "&#36;{CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
+--header "Authorization: Bearer &#36;{TOKEN}" \
 --header "Content-Type: application/json" \
 -d '{
     "collectionName": "my_collection",

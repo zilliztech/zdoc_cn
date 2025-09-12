@@ -10,10 +10,10 @@ type: docx
 token: HWYXdlaGIoTNVUx34GycfwjAnrb
 sidebar_position: 1
 keywords: 
-  - open source vector database
-  - Vector index
-  - vector database open source
-  - open source vector db
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
   - zilliz
   - zilliz cloud
   - cloud
@@ -80,7 +80,7 @@ stage_manager = StageManager(
 
 stage_manager.create_stage(
     project_id="proj-xxxxxxxxxxxxxxxxxxxxxxx", 
-    region_id="ali-cn-hangzhou", 
+    region_id="aws-us-west-1", 
     stage_name="my_stage"
 )
 

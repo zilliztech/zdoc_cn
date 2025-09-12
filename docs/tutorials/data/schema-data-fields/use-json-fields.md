@@ -222,6 +222,52 @@ if err != nil {
 
 ```bash
 # restful
+export TOKEN="YOUR_CLUSTER_TOKEN"
+export CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT"
+
+# 字段定义
+export productIdField='{
+  "fieldName": "product_id",
+  "dataType": "Int64",
+  "isPrimary": true,
+  "autoID": false
+}'
+
+export vectorField='{
+  "fieldName": "vector",
+  "dataType": "FloatVector",
+  "typeParams": {
+    "dim": 5
+  }
+}'
+
+export metadataField='{
+  "fieldName": "metadata",
+  "dataType": "JSON",
+  "isNullable": true
+}'
+
+# 构造 schema
+export schema="{
+  \"autoID\": false,
+  \"enableDynamicField\": true,
+  \"fields\": [
+    $productIdField,
+    $vectorField,
+    $metadataField
+  ]
+}"
+
+# 创建集合
+curl --request POST \
+--url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+--data "{
+  \"collectionName\": \"product_catalog\",
+  \"schema\": $schema
+}"
+
 ```
 
 </TabItem>
@@ -382,6 +428,39 @@ if err != nil {
 
 ```bash
 # restful
+export TOKEN="YOUR_CLUSTER_TOKEN"
+export CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT"
+
+export entities='[
+  {
+    "product_id": 1,
+    "vector": [0.1, 0.2, 0.3, 0.4, 0.5],
+    "metadata": {
+      "category": "electronics",
+      "brand": "BrandA",
+      "in_stock": true,
+      "price": 99.99,
+      "string_price": "99.99",
+      "tags": ["clearance", "summer_sale"],
+      "supplier": {
+        "name": "SupplierX",
+        "country": "USA",
+        "contact": {
+          "email": "support@supplierx.com",
+          "phone": "+1-800-555-0199"
+        }
+      }
+    }
+  }
+]'
+
+curl --request POST \
+--url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/product_catalog/insert" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+--data "{
+  \"data\": $entities
+}"
 ```
 
 </TabItem>
@@ -403,7 +482,11 @@ if err != nil {
 
 - **JSON 路径**（`json_path`）：您要索引的 JSON 对象内键或嵌套字段的路径。
 
-    - 示例：`metadata["category"]`
+    - 示例：
+
+        - 对于内键，`metadata["category"]`
+
+        - 对于嵌套字段，`metadata["contact"]["email"]`
 
         这定义了索引引擎在 JSON 结构内查找的位置。
 
@@ -581,6 +664,25 @@ indexOpt2 := milvusclient.NewCreateIndexOption("product_catalog", "metadata", js
 
 ```bash
 # restful
+export categoryIndex='{
+  "fieldName": "metadata",
+  "indexName": "category_index",
+  "params": {
+    "index_type": "AUTOINDEX",
+    "json_path": "metadata[\\\"category\\\"]",
+    "json_cast_type": "varchar"
+  }
+}'
+
+export tagsArrayIndex='{
+  "fieldName": "metadata",
+  "indexName": "tags_array_index",
+  "params": {
+    "index_type": "AUTOINDEX",
+    "json_path": "metadata[\\\"tags\\\"]",
+    "json_cast_type": "array_varchar"
+  }
+}'
 ```
 
 </TabItem>
@@ -680,6 +782,16 @@ indexOpt3 := milvusclient.NewCreateIndexOption("product_catalog", "metadata", js
 
 ```bash
 # restful
+export stringToDoubleIndex='{
+  "fieldName": "metadata",
+  "indexName": "string_to_double_index",
+  "params": {
+    "index_type": "AUTOINDEX",
+    "json_path": "metadata[\\\"string_price\\\"]",
+    "json_cast_type": "double",
+    "json_cast_function": "STRING_TO_DOUBLE"
+  }
+}'
 ```
 
 </TabItem>
@@ -754,6 +866,19 @@ if err != nil {
 
 ```bash
 # restful
+export indexParams="[
+  $categoryIndex,
+  $tagsArrayIndex,
+  $stringToDoubleIndex
+]"
+curl --request POST \
+--url "${CLUSTER_ENDPOINT}/v2/vectordb/indexes/create" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+--data "{
+  \"collectionName\": \"product_catalog\",
+  \"indexParams\": $indexParams
+}"
 ```
 
 </TabItem>
@@ -810,6 +935,9 @@ filter := 'json_contains(metadata["tags"], "featured")'
 
 ```bash
 # restful
+export filterCategory='metadata["category"] == "electronics"'
+export filterPrice='metadata["price"] > 50'
+export filterTags='json_contains(metadata["tags"], "featured")'
 ```
 
 </TabItem>

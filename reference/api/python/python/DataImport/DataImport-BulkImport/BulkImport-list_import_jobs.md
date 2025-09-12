@@ -10,10 +10,10 @@ type: docx
 token: P0vxdEVBPoTNKLxkKIzcznlYnNc
 sidebar_position: 3
 keywords: 
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -140,7 +140,7 @@ import json
 from pymilvus.bulk_writer import list_import_jobs
 
 ## Zilliz Cloud constants
-CLOUD_API_ENDPOINT = "https://api.cloud.zilliz.com"
+CLOUD_API_ENDPOINT = "https://api.cloud.zilliz.com.cn"
 CLUSTER_ID = "inxx-xxxxxxxxxxxxxxx"
 API_KEY = ""
 

@@ -10,10 +10,10 @@ type: docx
 token: CSpOd0XgWoVAhzx5xbVcpCVfnPg
 sidebar_position: 5
 keywords: 
+  - Vector store
   - open source vector database
   - Vector index
   - vector database open source
-  - open source vector db
   - zilliz
   - zilliz cloud
   - cloud

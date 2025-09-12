@@ -135,7 +135,7 @@ None
 from pymilvus.bulk_writer import bulk_import
 
 # Bulk-import your data from the prepared data files
-CLOUD_API_ENDPOINT = "https://api.cloud.zilliz.com"
+CLOUD_API_ENDPOINT = "https://api.cloud.zilliz.com.cn"
 CLUSTER_ID = "inxx-xxxxxxxxxxxxxxx"
 API_KEY = ""
 STORAGE_URL = ""

@@ -202,8 +202,8 @@ export vectorField='{
 export schema="{
     \"autoID\": true,
     \"fields\": [
-        $primaryField,
-        $vectorField
+        &#36;primaryField,
+        &#36;vectorField
     ],
     \"enableDynamicField\": true
 }"
@@ -370,13 +370,13 @@ if err != nil {
 
 ```bash
 curl --request POST \
---url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
---header "Authorization: Bearer ${TOKEN}" \
+--url "&#36;{CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
+--header "Authorization: Bearer &#36;{TOKEN}" \
 --header "Content-Type: application/json" \
 -d "{
     \"collectionName\": \"my_collection\",
-    \"schema\": $schema,
-    \"indexParams\": $indexParams
+    \"schema\": &#36;schema,
+    \"indexParams\": &#36;indexParams
 }"
 ```
 
@@ -410,7 +410,7 @@ bool_vectors = [
     [0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1] + [0] * 112,
 ]
 
-data = [{"binary_vector": convert_bool_list_to_bytes(bool_vector) for bool_vector in bool_vectors}]
+data = [{"binary_vector": convert_bool_list_to_bytes(bool_vector)} for bool_vector in bool_vectors]
 
 client.insert(
     collection_name="my_collection",
@@ -500,11 +500,11 @@ if err != nil {
 
 ```bash
 curl --request POST \
---url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/insert" \
---header "Authorization: Bearer ${TOKEN}" \
+--url "&#36;{CLUSTER_ENDPOINT}/v2/vectordb/entities/insert" \
+--header "Authorization: Bearer &#36;{TOKEN}" \
 --header "Content-Type: application/json" \
 -d "{
-    \"data\": $data,
+    \"data\": &#36;data,
     \"collectionName\": \"my_collection\"
 }"
 ```
@@ -631,15 +631,15 @@ export searchParams='{
     }'
 
 curl --request POST \
---url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
---header "Authorization: Bearer ${TOKEN}" \
+--url "&#36;{CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
+--header "Authorization: Bearer &#36;{TOKEN}" \
 --header "Content-Type: application/json" \
 -d "{
     \"collectionName\": \"my_collection\",
-    \"data\": $data,
+    \"data\": &#36;data,
     \"annsField\": \"binary_vector\",
     \"limit\": 5,
-    \"searchParams\":$searchParams,
+    \"searchParams\":&#36;searchParams,
     \"outputFields\": [\"pk\"]
 }"
 ```

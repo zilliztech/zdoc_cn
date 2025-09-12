@@ -31,7 +31,7 @@ import Supademo from '@site/src/components/Supademo';
 
 前往目标集群的**集群详情**页并跟随以下指南对集群进行重命名。
 
-<Supademo id="cm9uqn1k801p1wbbizszfx673" title="Zilliz Cloud - 重命名集群 Demo" />
+<Supademo id="cm9uqn1k801p1wbbizszfx673" title=""  />
 
 ## 挂起集群{#suspend-cluster}
 
@@ -53,7 +53,7 @@ import Supademo from '@site/src/components/Supademo';
 
 前往目标集群的**集群详情**页，并跟随以下指南挂起 Dedicated 集群。
 
-<Supademo id="cm9uraerl02a5wbbiavqhws6u" title="Zilliz Cloud - 挂起集群 Demo" />
+<Supademo id="cm9uraerl02a5wbbiavqhws6u" title=""  />
 
 </TabItem>
 
@@ -91,6 +91,8 @@ curl --request POST \
 
 </Tabs>
 
+集群挂起请求成功后，会生成一条任务记录。您可以前往[任务中心](./job-center)查看任务进度。
+
 ## 恢复运行集群{#resume-cluster}
 
 Free 集群在 7 天不活跃后会自动挂起，您可以随时恢复运行集群。
@@ -115,7 +117,7 @@ Dedicated 集群在手动挂起后也按需手动恢复运行。
 
 前往目标集群的**集群详情**页，并跟随以下指南恢复运行集群。
 
-<Supademo id="cm9urqadl02ifwbbijvvktj23" title="Zilliz Cloud - 恢复运行集群 Demo" />
+<Supademo id="cm9urqadl02ifwbbijvvktj23" title=""  />
 
 </TabItem>
 
@@ -153,6 +155,8 @@ curl --request POST \
 
 </Tabs>
 
+集群恢复运行请求成功后，会生成一条任务记录。您可以前往[任务中心](./job-center)查看任务进度。
+
 ## 升级版本{#upgrade-plan}
 
 如需使用更多高级功能，建议您升级集群版本。
@@ -178,6 +182,8 @@ curl --request POST \
 
 以下 Demo 以 Free 至 Dedicated 升级为例展示了如何升级集群版本。
 
+<Supademo id="cm9usub8202stwbbisrrk6yz0" title=""  />
+
 ## 升级集群兼容版本以试用公测版功能{#upgrade-cluster-for-preview-features}
 
 如需试用公测版新功能，请升级 Dedicated 集群的兼容 Milvus 版本。
@@ -194,7 +200,7 @@ curl --request POST \
 
 前往目标集群的**集群详情**页，并跟随以下指南删除集群。
 
-<Supademo id="cm9us4mn102n1wbbinzd427jg" title="Zilliz Cloud - Resume Cluster Demo" />
+<Supademo id="cm9us4mn102n1wbbinzd427jg" title=""  />
 
 </TabItem>
 

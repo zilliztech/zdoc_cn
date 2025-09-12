@@ -10,10 +10,10 @@ type: docx
 token: VVyNdx038oECxNxMQavc9vssnoh
 sidebar_position: 13
 keywords: 
-  - Audio search
-  - what is semantic search
-  - Embedding model
-  - image similarity search
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud
@@ -67,7 +67,7 @@ A dictionary containing collected statistics on the specified collection.
 }
 ```
 
-<Admonition type="info" icon="📘" title="**Why doesn't the row count match the number of entities inserted?**">
+<Admonition type="info" icon="📘" title="Why doesn't the row count match the number of entities inserted?">
 
 <p>The data that you insert will go through a process before it is finally saved: Initially, it will flow in as data streams. Then, it will be stored in segments as entities. Milvus will select an appropriate growing segment to store the data in streams until the segment reaches its upper limit and becomes sealed.</p>
 <p>However, it's important to note that the row count displayed may not match the number of records that were inserted because data in streams is not taken into account.</p>

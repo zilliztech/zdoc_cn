@@ -10,10 +10,10 @@ type: docx
 token: B3n3db0idoia02xXxJfcONK8nRh
 sidebar_position: 3
 keywords: 
-  - cosine distance
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
   - zilliz
   - zilliz cloud
   - cloud
@@ -67,7 +67,7 @@ create_index(
 
         - `True` (default): The client waits until the index is fully built before it returns. This means you will not get a response until the process is complete.
 
-        - `False`: The client returns immediately after the request is received and the index is being built in the background. To find out if index creation has been completed, use the `describe_index()` method.
+        - `False`: The client returns immediately after the request is received and the index is being built in the background. To find out if index creation has been completed, use the [`describe_index()`](./Management-describe_index) method.
 
 **RETURN TYPE:**
 

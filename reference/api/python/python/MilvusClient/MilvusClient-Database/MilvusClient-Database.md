@@ -9,10 +9,10 @@ token: CcDcf33k1lcbiZdS6GFc4L9anub
 sidebar_position: 8
 sidebar_label: "Database"
 keywords: 
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
+  - rag llm architecture
+  - private llms
+  - nn search
+  - llm eval
   - zilliz
   - zilliz cloud
   - cloud

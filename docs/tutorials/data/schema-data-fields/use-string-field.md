@@ -256,10 +256,10 @@ export vectorField='{
 export schema="{
     \"autoID\": false,
     \"fields\": [
-        $varcharField1,
-        $varcharField2,
-        $primaryField,
-        $vectorField
+        &#36;varcharField1,
+        &#36;varcharField2,
+        &#36;primaryField,
+        &#36;vectorField
     ]
 }"
 ```
@@ -439,13 +439,13 @@ await client.create_collection({
 
 ```bash
 curl --request POST \
---url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
---header "Authorization: Bearer ${TOKEN}" \
+--url "&#36;{CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
+--header "Authorization: Bearer &#36;{TOKEN}" \
 --header "Content-Type: application/json" \
 -d "{
     \"collectionName\": \"my_collection\",
-    \"schema\": $schema,
-    \"indexParams\": $indexParams
+    \"schema\": &#36;schema,
+    \"indexParams\": &#36;indexParams
 }"
 ## {"code":0,"data":{}}
 ```
@@ -575,8 +575,8 @@ await client.insert({
 
 ```bash
 curl --request POST \
---url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/insert" \
---header "Authorization: Bearer ${TOKEN}" \
+--url "&#36;{CLUSTER_ENDPOINT}/v2/vectordb/entities/insert" \
+--header "Authorization: Bearer &#36;{TOKEN}" \
 --header "Content-Type: application/json" \
 --data '{
     "data": [
@@ -684,8 +684,8 @@ await client.query({
 
 ```bash
 curl --request POST \
---url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
---header "Authorization: Bearer ${TOKEN}" \
+--url "&#36;{CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
+--header "Authorization: Bearer &#36;{TOKEN}" \
 --header "Content-Type: application/json" \
 -d '{
     "collectionName": "my_collection",
@@ -784,8 +784,8 @@ await client.query({
 ```bash
 # restful
 curl --request POST \
---url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
---header "Authorization: Bearer ${TOKEN}" \
+--url "&#36;{CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
+--header "Authorization: Bearer &#36;{TOKEN}" \
 --header "Content-Type: application/json" \
 -d '{
     "collectionName": "my_collection",
@@ -882,8 +882,8 @@ await client.query({
 ```bash
 # restful
 curl --request POST \
---url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
---header "Authorization: Bearer ${TOKEN}" \
+--url "&#36;{CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
+--header "Authorization: Bearer &#36;{TOKEN}" \
 --header "Content-Type: application/json" \
 -d '{
     "collectionName": "my_collection",
@@ -1004,8 +1004,8 @@ await client.search({
 
 ```bash
 curl --request POST \
---url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
---header "Authorization: Bearer ${TOKEN}" \
+--url "&#36;{CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
+--header "Authorization: Bearer &#36;{TOKEN}" \
 --header "Content-Type: application/json" \
 -d '{
     "collectionName": "my_collection",

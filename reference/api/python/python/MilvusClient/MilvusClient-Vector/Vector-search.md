@@ -10,10 +10,10 @@ type: docx
 token: T1npdvcRMoIjezxK021cPvfpn7c
 sidebar_position: 6
 keywords: 
-  - sentence transformers
-  - Recommender systems
-  - information retrieval
-  - dimension reduction
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
   - zilliz
   - zilliz cloud
   - cloud

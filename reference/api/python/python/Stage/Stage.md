@@ -9,10 +9,10 @@ token: UJtvfGYb4lKoF1dy7iicFwcAnWr
 sidebar_position: 5
 sidebar_label: "Stage"
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
   - zilliz
   - zilliz cloud
   - cloud

@@ -10,10 +10,10 @@ type: docx
 token: L8UTdDNkPoeew0x6LoDcfHx4nof
 sidebar_position: 8
 keywords: 
+  - image similarity search
+  - Context Window
+  - Natural language search
   - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
   - zilliz
   - zilliz cloud
   - cloud

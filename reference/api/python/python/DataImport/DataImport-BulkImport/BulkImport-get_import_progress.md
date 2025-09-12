@@ -10,10 +10,10 @@ type: docx
 token: MkWNdU1tvoqlBRxI05Rcu09cnEc
 sidebar_position: 2
 keywords: 
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
   - zilliz
   - zilliz cloud
   - cloud
@@ -228,7 +228,7 @@ import json
 from pymilvus.bulk_writer import get_import_progress
 
 ## Zilliz Cloud constants
-CLOUD_API_ENDPOINT = "https://api.cloud.zilliz.com"
+CLOUD_API_ENDPOINT = "https://api.cloud.zilliz.com.cn"
 CLUSTER_ID = "inxx-xxxxxxxxxxxxxxx"
 API_KEY = ""
 

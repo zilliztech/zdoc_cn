@@ -10,10 +10,10 @@ type: docx
 token: NEyWdddQ8oKCw4xQTFPcvDTLn3f
 sidebar_position: 9
 keywords: 
-  - Image Search
-  - LLMs
-  - Machine Learning
-  - RAG
+  - Vector embeddings
+  - Vector store
+  - open source vector database
+  - Vector index
   - zilliz
   - zilliz cloud
   - cloud

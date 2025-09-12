@@ -9,10 +9,10 @@ token: YHQ9fF9IDlENsMd9RZucYalqnNg
 sidebar_position: 3
 sidebar_label: "MilvusClient"
 keywords: 
+  - k nearest neighbor algorithm
   - ANNS
   - Vector search
   - knn algorithm
-  - HNSW
   - zilliz
   - zilliz cloud
   - cloud

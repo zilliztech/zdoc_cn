@@ -359,7 +359,7 @@ export filter="\"TEXT_MATCH(text, 'machine deep')\""
     </TabItem>
     </Tabs>
 
-- 搜索 `text` 字段中同时包含 `"machine"` 和 `"deep"` 但不包含 `"deep"` 的文档，使用以下表达式：
+- 搜索 `text` 字段中同时包含 `"machine"` 和 `"learning"` 但不包含 `"deep"` 的文档，使用以下表达式：
 
     <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
     <TabItem value='python'>
@@ -468,14 +468,14 @@ export CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT"
 export TOKEN="YOUR_CLUSTER_TOKEN"
 
 curl --request POST \
---url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
---header "Authorization: Bearer ${TOKEN}" \
+--url "&#36;{CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
+--header "Authorization: Bearer &#36;{TOKEN}" \
 --header "Content-Type: application/json" \
 -d '{
     "collectionName": "demo2",
     "annsField": "my_vector",
     "data": [[0.19886812562848388, 0.06023560599112088, 0.6976963061752597, 0.2614474506242501, 0.838729485096104]],
-    "filter": '"$filter"',
+    "filter": '"&#36;filter"',
     "searchParams": {
         "params": {
             "nprobe": 10
@@ -550,12 +550,12 @@ export CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT"
 export TOKEN="YOUR_CLUSTER_TOKEN"
 
 curl --request POST \
---url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
---header "Authorization: Bearer ${TOKEN}" \
+--url "&#36;{CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
+--header "Authorization: Bearer &#36;{TOKEN}" \
 --header "Content-Type: application/json" \
 -d '{
     "collectionName": "demo2",
-    "filter": '"$filter"',
+    "filter": '"&#36;filter"',
     "outputFields": ["id", "text"]
 }'
 ```
