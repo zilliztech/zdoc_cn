@@ -37133,6 +37133,11 @@
 						"name": "Authorization",
 						"in": "header",
 						"description": "The authentication token",
+						"x-i18n": {
+							"zh-CN": {
+								"description": "认证令牌"
+							}
+						},
 						"required": true,
 						"example": "Bearer {{TOKEN}}",
 						"schema": {
@@ -37167,13 +37172,20 @@
 									"newDbName": {
 										"type": "string",
 										"description": "The name of the database to which the collection belongs after this operation.\nThe value defaults to **default**. Setting this to a database rather than the one the collection belongs to before this operation moves this collection to the specified database.\nSetting this to a non-existing database results in an error.",
-										"x-include-target": [
-											"milvus"
-										]
+										"x-i18n": {
+											"zh-CN": {
+												"description": "当前操作完成后的新数据库名称。该参数默认为 **default**。若指定数据库名称，则该 Collection 将被移动到指定的数据库中。设置为不存在的数据库将导致错误。"
+											}
+										}
 									},
 									"newCollectionName": {
 										"type": "string",
-										"description": "The name of the target collection after this operation.\nSetting this to the value of **old_collection_name** results in an error."
+										"description": "The name of the target collection after this operation.\nSetting this to the value of **old_collection_name** results in an error.",
+										"x-i18n": {
+											"zh-CN": {
+												"description": "当前操作完成后的新 Collection 名称。该参数设置为 Collection 原名称将导致错误。"
+											}
+										}
 									}
 								},
 								"required": [
