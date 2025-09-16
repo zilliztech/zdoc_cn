@@ -594,8 +594,8 @@ Shard 的数量上限取决于集群版本和 CU 规格。
    </tr>
    <tr>
      <td><p>IP 地址 (CIDR)</p></td>
-     <td><p>20</p></td>
-     <td><p>IP 白名单中最多可添加 20 个 IP 地址。</p></td>
+     <td><p>100</p></td>
+     <td><p>IP 白名单中最多可添加 100 个 IP 地址。</p></td>
    </tr>
 </table>
 
