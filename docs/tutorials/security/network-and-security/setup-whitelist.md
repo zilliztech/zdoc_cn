@@ -55,7 +55,7 @@ import Admonition from '@theme/Admonition';
        </tr>
        <tr>
          <td><p>IP地址（CIDR）</p></td>
-         <td><p>您要添加到白名单中的 IP 地址或无类别域间路由（CIDR）。您可最多添加 20 个 CIDR。示例值：192.168.1.1/20。</p></td>
+         <td><p>您要添加到白名单中的 IP 地址或无类别域间路由（CIDR）。您可最多添加 100 个 CIDR。示例值：192.168.1.1/20。</p></td>
        </tr>
        <tr>
          <td><p>描述</p></td>
