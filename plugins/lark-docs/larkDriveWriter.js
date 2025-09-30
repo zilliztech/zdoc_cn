@@ -35,6 +35,9 @@ class larkDriveWriter extends larkDocWriter {
                             const source_type = source.type
                             const slug = source.slug instanceof Array? source.slug[0].text : source.slug
                             const tag = meta['tag'] ? meta['tag'] : 'false'
+                            const addedSince = meta['addSince'] ? meta['addSince'] : 'false'
+                            const lastModified = meta['lastModified'] ? meta['lastModified'] : 'false'
+                            const deprecateSince = meta['deprecateSince'] ? meta['deprecateSince'] : 'false'
 
                             console.log(`${current_path}/${slug}.md`)
 
@@ -49,7 +52,10 @@ class larkDriveWriter extends larkDocWriter {
                                 sidebar_position: index+1,
                                 sidebar_label: meta['labels'],
                                 keywords: this.keyword_picker().concat('zilliz', 'zilliz cloud', 'cloud', source.name, this.manual),
-                                doc_card_list: false
+                                doc_card_list: false,
+                                addedSince: addedSince,
+                                lastModified: lastModified,
+                                deprecateSince: deprecateSince,
                             })
                         }                           
                     }
@@ -63,6 +69,9 @@ class larkDriveWriter extends larkDocWriter {
                             const slug = source.slug instanceof Array? source.slug[0].text : source.slug
                             const description = meta.description
                             const tag = meta['tag'] ? meta['tag'] : 'false'
+                            const addedSince = meta['addSince'] ? meta['addedSince'] : 'false'
+                            const lastModified = meta['lastModified'] ? meta['lastModified'] : 'false'
+                            const deprecateSince = meta['deprecateSince'] ? meta['deprecateSince'] : 'false'
 
                             if (!fs.existsSync(node_path.join(current_path, slug))) {
                                 fs.mkdirSync(node_path.join(current_path, slug), { recursive: true });
@@ -80,7 +89,10 @@ class larkDriveWriter extends larkDocWriter {
                                 sidebar_position: index+1,
                                 sidebar_label: meta['labels'],
                                 keywords: this.keyword_picker().concat('zilliz', 'zilliz cloud', 'cloud', source.name, this.manual).join(','),
-                                doc_card_list: true
+                                doc_card_list: true,
+                                addedSince: addedSince,
+                                lastModified: lastModified,
+                                deprecateSince: deprecateSince,
                             })
 
                             await this.write_docs(node_path.join(current_path, slug), token)
@@ -103,7 +115,10 @@ class larkDriveWriter extends larkDocWriter {
             page_description,
             sidebar_position,
             sidebar_label,
-            doc_card_list
+            doc_card_list,
+            addedSince,
+            lastModified,
+            deprecateSince,
         } = options
 
         let obj;
@@ -173,6 +188,9 @@ class larkDriveWriter extends larkDocWriter {
 
                 front_matter = front_matter.split('\n')
                 front_matter.splice(1, 0, `displayed_sidbar: ${this.displayedSidebar}`)
+                front_matter.splice(5, 0, `added_since: ${addedSince ? addedSince : 'FALSE'}`)
+                front_matter.splice(6, 0, `last_modified: ${lastModified ? lastModified : 'FALSE'}`)
+                front_matter.splice(7, 0, `deprecate_since: ${deprecateSince ? deprecateSince : 'FALSE'}`)
                 front_matter = front_matter.join('\n')
 
                 fs.writeFileSync(current_path, front_matter + '\n\n' + imports + '\n\n' + markdown)
