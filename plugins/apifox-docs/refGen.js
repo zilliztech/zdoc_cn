@@ -64,7 +64,7 @@ class refGen {
         const specs = JSON.stringify(specification)
 
         const t = template.render({
-          page_title,
+          page_title: page_title + (version === 'v2' ? ' (V2)' : ' (V1)'),
           page_excerpt,
           page_slug,
           beta_tag,
@@ -106,7 +106,7 @@ class refGen {
       var beta_tag = version === 'v2' ? 'FALSE' : 'NEAR DEPRECATE'
       beta_tag = slug.includes('invoice') || slug.includes('usage') ? 'PUBLIC' : beta_tag
       const t = template.render({
-        group_name,
+        group_name: group_name + (version === 'v2' ? ' (V2)' : ' (V1)'),
         position,
         slug,
         beta_tag,
@@ -143,7 +143,7 @@ class refGen {
           const desc = upper_folder.startsWith('control') ? 'This provide API endpoints for managing Zilliz Cloud clusters and resources.' : 'This provide API endpoints for managing data stored in Zilliz Cloud clusters.'
   
           fs.writeFileSync(`${target_path}/${version}/${upper_folder}/${upper_folder}.mdx`, template.render({
-            group_name: title,
+            group_name: title + (version === 'v2' ? ' (V2)' : ' (V1)'),
             position: pos,
             slug: `${upper_folder}-${version}`,
             beta_tag: version === 'v2' ? 'FALSE' : 'NEAR DEPRECATE',

@@ -36,11 +36,25 @@ export async function tutorialsItemsGenerator ({
         if (subItem.label === 'MilvusClient') {
             subItem.collapsed = false;
 
-            subItem.items = iterate(subItem.items)
+            subItem.items = subItem.items.map(subSubItem => {
+                if (subSubItem.label === 'CollectionSchema') {
+                    subSubItem.key = 'collection-schema-milvusclient';
+                }
+
+                return subSubItem;
+            })
         }
 
         if (subItem.label === 'ORM') {
             subItem.className = 'to-be-deprecated'
+
+            subItem.items = subItem.items.map(subSubItem => {
+                if (subSubItem.label === 'CollectionSchema') {
+                    subSubItem.key = 'collection-schema-orm';
+                }
+
+                return subSubItem;
+            })
         }
 
         return subItem;
@@ -55,13 +69,27 @@ export async function tutorialsItemsGenerator ({
         if (subItem.label === 'Java SDK Reference (v1)') {
             subItem.label = 'V1';
             subItem.className = 'to-be-deprecated';
+
+            subItem.items = subItem.items.map(subSubItem => {
+                if (subSubItem.label === 'Authentication') {
+                    subSubItem.key = 'authentication-java-v1';
+                }
+
+                return subSubItem;
+            })
         }
 
         if (subItem.label === 'Java SDK Reference (v2)') {
             subItem.label = 'V2';
             subItem.collapsed = false;
 
-            subItem.items = iterate(subItem.items)
+            subItem.items = subItem.items.map(subSubItem => {
+                if (subSubItem.label === 'Authentication') {
+                    subSubItem.key = 'authentication-java-v2';
+                }
+
+                return subSubItem;
+            })
         }
 
         return subItem;
@@ -76,13 +104,35 @@ export async function tutorialsItemsGenerator ({
         if (subItem.label === 'Go SDK 参考 (v1)') {
             subItem.label = 'V1';
             subItem.className = 'to-be-deprecated';
+
+            subItem.items = subItem.items.map(subSubItem => {
+                if (subSubItem.label === 'Collection') {
+                    subSubItem.key = 'collection-go-v1';
+                }
+
+                if (subSubItem.label === 'Partition') {
+                    subSubItem.key = 'partition-go-v1';
+                }
+
+                return subSubItem;
+            })
         }
 
         if (subItem.label === 'Go SDK 参考 (v2)') {
             subItem.label = 'V2';
             subItem.collapsed = false;
 
-            subItem.items = iterate(subItem.items)
+            subItem.items = subItem.items.map(subSubItem => {
+                if (subSubItem.label === 'Collection') {
+                    subSubItem.key = 'collection-go-v2';
+                }
+
+                if (subSubItem.label === 'Partition') {
+                    subSubItem.key = 'partition-go-v2';
+                }
+
+                return subSubItem;
+            })
         }
 
         return subItem;
