@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "renameCollection() | Java | v2"
 slug: /java/java/v2-Collections-renameCollection
 sidebar_label: "renameCollection()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation renames an existing collection. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: CtTvdQVMoo2ec5xbWTPcSzjNnQc
 sidebar_position: 21
 keywords: 
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
+  - knn
+  - Image Search
+  - LLMs
+  - Machine Learning
   - zilliz
   - zilliz cloud
   - cloud

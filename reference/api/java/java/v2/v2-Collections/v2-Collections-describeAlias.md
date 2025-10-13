@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "describeAlias() | Java | v2"
 slug: /java/java/v2-Collections-describeAlias
 sidebar_label: "describeAlias()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation displays the details of an alias. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: B57cdiaEkotJQnxl7I9cJqotnPb
 sidebar_position: 11
 keywords: 
-  - vector search algorithms
   - Question answering system
   - llm-as-a-judge
   - hybrid vector search
+  - Video deduplication
   - zilliz
   - zilliz cloud
   - cloud

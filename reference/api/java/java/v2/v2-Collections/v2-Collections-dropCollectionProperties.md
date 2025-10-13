@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "dropCollectionProperties() | Java | v2"
 slug: /java/java/v2-Collections-dropCollectionProperties
 sidebar_label: "dropCollectionProperties()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation resets the properties of a specified collection to their default values. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: OPPHd2AabonMIzxzfupcyNS9n1a
 sidebar_position: 15
 keywords: 
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
   - zilliz
   - zilliz cloud
   - cloud

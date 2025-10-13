@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "revokeRole() | Node.js"
 slug: /node/node/Authentication-revokeRole
 sidebar_label: "revokeRole()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation revokes the role assigned to a user. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: W7XJdZDHnoFECDxCYoMcrZqrnnd
 sidebar_position: 25
 keywords: 
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
-  - Embedding model
+  - rag llm architecture
+  - private llms
+  - nn search
+  - llm eval
   - zilliz
   - zilliz cloud
   - cloud
@@ -48,13 +51,13 @@ milvusClient.revokeRole({
 
 - **username** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing user.
 
 - **roleName** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the role to revoke.
 
@@ -64,7 +67,7 @@ milvusClient.revokeRole({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

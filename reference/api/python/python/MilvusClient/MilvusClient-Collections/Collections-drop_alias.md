@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "drop_alias() | Python | MilvusClient"
 slug: /python/python/Collections-drop_alias
 sidebar_label: "drop_alias()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a specified collection alias. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: FpWXdmIuforYz9xUCsqclyCXnLe
 sidebar_position: 10
 keywords: 
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
-  - Video search
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud
@@ -43,7 +46,7 @@ drop_alias(
 
 - **alias** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The alias of a collection. 
 

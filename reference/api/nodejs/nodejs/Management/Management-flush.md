@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "flush() | Node.js"
 slug: /node/node/Management-flush
 sidebar_label: "flush()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation manually seals a segment and persists the data on disk. It is recommended that this operation be called after all the data has been inserted into a collection. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: E2XJd4ZHvoc7QlxyrEJcrOJOn9f
 sidebar_position: 6
 keywords: 
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
+  - Embedding model
+  - image similarity search
+  - Context Window
+  - Natural language search
   - zilliz
   - zilliz cloud
   - cloud
@@ -56,9 +59,9 @@ milvusClient.flush({
 
     The name of the target database to which the target collections belong.
 
-- **collection_names** (*string[]*) -
+- **collection_names** (*string&#91;&#93;*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A list of the target collection names.
 
@@ -68,7 +71,7 @@ milvusClient.flush({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<FlushResult>*
+**RETURNS** *Promise\&lt;FlushResult&gt;*
 
 This method returns a promise that resolves to a **FlushResult** object.
 

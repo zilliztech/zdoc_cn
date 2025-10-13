@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "load_partitions() | Python | MilvusClient"
 slug: /python/python/Partitions-load_partitions
 sidebar_label: "load_partitions()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation loads a specific set of partitions in a specified collection into memory. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: DdQ1dBNagoBa08xhEiucxZrHnzc
 sidebar_position: 6
 keywords: 
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,13 +47,13 @@ load_partitions(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
-- **partition_names** (*str | list[str]*) -
+- **partition_names** (*str | list&#91;str&#93;*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A list of the names of the partitions to load.
 

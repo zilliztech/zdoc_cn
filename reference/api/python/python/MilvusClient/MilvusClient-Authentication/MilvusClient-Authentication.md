@@ -9,10 +9,10 @@ token: W9SBfQfXUlZAXDdK6nTcop4rnFd
 sidebar_position: 1
 sidebar_label: "Authentication"
 keywords: 
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud

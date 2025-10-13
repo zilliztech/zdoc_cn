@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "getIndexState() | Node.js"
 slug: /node/node/Management-getIndexState
 sidebar_label: "getIndexState()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation gets the status of the specified index. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: HqE5d2jOroEuObxIjkZcHkX4nWX
 sidebar_position: 10
 keywords: 
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - rag vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -54,7 +57,7 @@ milvusClient.getIndexState({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
@@ -70,7 +73,7 @@ milvusClient.getIndexState({
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<GetIndexStateResponse>*
+**RETURNS** *Promise\&lt;GetIndexStateResponse&gt;*
 
 This method returns a promise that resolves to a **GetIndexStateResponse** object.
 

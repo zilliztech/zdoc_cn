@@ -3,6 +3,9 @@ title: "Collection | Cloud"
 slug: /collection
 sidebar_label: "Collection"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，Collection 是一张用于存放向量数据及其元数据的表格。本章将就 Collection 的定义、基本概念和使用方法对 Collection 进行全面的介绍。 | Cloud"
 type: origin

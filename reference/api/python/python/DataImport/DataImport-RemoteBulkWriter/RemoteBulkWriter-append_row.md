@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "append_row() | Python"
 slug: /python/python/RemoteBulkWriter-append_row
 sidebar_label: "append_row()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation appends records to the writer. | Python"
@@ -10,10 +13,10 @@ type: docx
 token: F1MFdP8VvoMu17x4Vg9cH6ztnqb
 sidebar_position: 1
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
   - zilliz
   - zilliz cloud
   - cloud

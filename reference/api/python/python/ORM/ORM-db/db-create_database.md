@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "create_database() | Python | ORM"
 slug: /python/python/db-create_database
 sidebar_label: "create_database()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation creates a database using the provided database name. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: G4Ftde3kxoHAJbxVNXncI7mpngb
 sidebar_position: 1
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +47,7 @@ create_database(
 
 - **db_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     Name of the database to be created.
 

@@ -3,6 +3,9 @@ title: "获取镜像 | On-Premise"
 slug: /obtain-images
 sidebar_label: "获取镜像"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Milvus 商业版镜像由 Zilliz 提供。您可通过用户名/密码鉴权的方式从 Zilliz 的 Harbor 镜像仓库拉取对应版本镜像。在获取 Milvus 商业版镜像后，您可将获取到的镜像导入到本地镜像仓库环境进行安全扫描及部署。 | On-Premise"
 type: origin

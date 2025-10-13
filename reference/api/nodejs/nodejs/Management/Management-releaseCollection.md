@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "releaseCollection() | Node.js"
 slug: /node/node/Management-releaseCollection
 sidebar_label: "releaseCollection()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation releases the data of a specific collection from memory. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: UxOXdeKF1oOIBuxTjPhcKBtPnRb
 sidebar_position: 17
 keywords: 
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud
@@ -52,7 +55,7 @@ milvusClient.releaseCollection({
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a collection.
 
@@ -62,7 +65,7 @@ milvusClient.releaseCollection({
 
     Setting this to **None** indicates that this operation timeouts when any response returns or error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

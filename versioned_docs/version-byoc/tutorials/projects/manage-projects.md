@@ -1,10 +1,13 @@
 ---
-title: "管理项目 | Cloud"
+title: "管理项目 | BYOC"
 slug: /manage-projects
 sidebar_label: "管理项目"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "在 Zilliz Cloud 中，项目位于组织和集群层级之间，用于分组集群和相关资源。您可以根据业务需求创建多个项目。例如，如果您的公司提供多媒体推荐服务，您可以为视频推荐服务创建一个项目，为音乐推荐服务创建另一个项目。 | Cloud"
+description: "在 Zilliz Cloud 中，项目位于组织和集群层级之间，用于分组集群和相关资源。您可以根据业务需求创建多个项目。例如，如果您的公司提供多媒体推荐服务，您可以为视频推荐服务创建一个项目，为音乐推荐服务创建另一个项目。 | BYOC"
 type: origin
 token: KHwEwoWy3iSRO1kTpIjc21jNnsb
 sidebar_position: 1

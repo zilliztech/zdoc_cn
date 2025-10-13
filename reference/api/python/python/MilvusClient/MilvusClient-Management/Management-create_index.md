@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "create_index() | Python | MilvusClient"
 slug: /python/python/Management-create_index
 sidebar_label: "create_index()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates an index for a specific collection. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: B3n3db0idoia02xXxJfcONK8nRh
 sidebar_position: 3
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - rag vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,13 +48,13 @@ create_index(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
 - **index_params** (*IndexParams*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     An **IndexParams** object containing a list of **IndexParam** objects.
 
@@ -67,7 +70,7 @@ create_index(
 
         - `True` (default): The client waits until the index is fully built before it returns. This means you will not get a response until the process is complete.
 
-        - `False`: The client returns immediately after the request is received and the index is being built in the background. To find out if index creation has been completed, use the `describe_index()` method.
+        - `False`: The client returns immediately after the request is received and the index is being built in the background. To find out if index creation has been completed, use the [`describe_index()`](./Management-describe_index) method.
 
 **RETURN TYPE:**
 

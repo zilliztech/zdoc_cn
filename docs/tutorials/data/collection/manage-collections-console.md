@@ -3,6 +3,9 @@ title: "管理 Collection (控制台) | Cloud"
 slug: /manage-collections-console
 sidebar_label: "管理 Collection (控制台)"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Collection 是一张二维表格，用于存储 Embedding向量和元数据。一个 Collection 中的所有 Entity 共享相同的 Schema。您可以创建多个 Collection 来进行数据管理，或用于实现多租户（multi-tenancy）。 | Cloud"
 type: origin
@@ -44,7 +47,9 @@ Zilliz Cloud 控制台提供三种创建 Collection 的方式，适用于不同�
 
 - **创建示例 Collection**：快速创建一个带有预先定义 Schema 和示例数据集的 Collection，适用于探索 Zilliz Cloud 功能的新用户。
 
-- **复制现有 Collection**：在同一个 Database 中复制现有 Collection。适用于测试环境到生产环境的复制场景，可同时复制 Schema 和数据。也可用于修改已创建 Collection 的 Shard 设置。
+- **复制现有 Collection 及 Collection 中数据**：在同一个 Database 中复制现有 Collection。适用于测试环境到生产环境的复制场景，可同时复制 Schema 和数据。也可用于修改已创建 Collection 的 Shard 设置。
+
+- **基于现有 Collection 的 Schema 快速创建新 Collection**：使用现有 Collection 的 Schema 快速创建新 Collection。可在最终确认创建前编辑 Schema。
 
 以下 Demo 将向您展示如何在 Web 界面上找到这些功能：
 
@@ -68,7 +73,7 @@ Schema 定义了 Collection 的数据结构，必须包含以下字段：
 
 - 1 个 主键字段（PK）
 
-- 至少 1 个向量字段。默认情况下最多可包含 4 个向量字段。您可以[联系我们](https://support.zilliz.com.cn/hc/zh-cn)将向量字段数量上限放开至 10 个。
+- 至少 1 个向量字段。如需了解 Collection 中向量字段的数量限制，请参考[使用限制](./limits#fields)。
 
 - （可选）用于存储元数据的标量字段
 
@@ -86,7 +91,9 @@ Schema 定义了 Collection 的数据结构，必须包含以下字段：
 
 Index 是一种用于加速搜索与查询的数据结构。Zilliz Cloud 支持两种类型的 Index：
 
-- **Vector Index**：系统会自动为向量字段创建 AUTOINDEX，以加速向量搜索。如果 Schema 中包含多个向量字段，您可以为每个向量字段分别创建独立的 Index。此外，您还可以修改用于计算向量间距离的相似度类型。
+- **Vector Index**：系统会自动为向量字段创建 AUTOINDEX，以加速向量搜索。如果 Schema 中包含多个向量字段，您可以为每个向量字段分别创建独立的 Index。此外，您还可以修改用于计算向量间距离的相似度类型和决定底层量化策略的 Index Build Level 以平衡索引成本、性能和可容纳数据量。
+
+    <Supademo id="cmgkapsvz29uykrn9jtbs6nk4?utm_source=link" title=""  />
 
 - **Scalar Index**：Zilliz Cloud 默认不会为标量字段自动创建 Index。但您可以手动为常用于过滤的标量字段创建 Index，以加快搜索与查询性能。
 
@@ -127,7 +134,7 @@ Function 用于全文检索中，将 Analyzer 分词后的术语转换为带相�
 
 - 容量型 CU 的 Dedicated 集群：mmap 默认启用。
 
-在创建 Collection 时，您可以根据实际需求，在 Collection 或字段级别配置 mmap 设置。较低级别的设置将覆盖较高级别的设置，优先级如下：字段 > Collection > 集群
+在创建 Collection 时，您可以根据实际需求，在 Collection 或字段级别配置 mmap 设置。较低级别的设置将覆盖较高级别的设置，优先级如下：字段 &gt; Collection &gt; 集群
 
 - **Collection 级别 mmap：**针对 Collection 中的原始数据开启 mmap。该设置适用于整个 Collection，可后续修改。若需修改 Collection 级别的 mmap 设置，需先释放 Collection。
 
@@ -140,6 +147,8 @@ Function 用于全文检索中，将 Analyzer 分词后的术语转换为带相�
 </Admonition>
 
 以下 Demo 展示如何设置 mmap 功能。
+
+<Supademo id="cmbk9no218hp0sn1rk55qs959" title=""  />
 
 ### Shard{#shard}
 
@@ -155,11 +164,15 @@ Zilliz Cloud Web 控制台支持设置 Full Text Search 中使用的 Analyzer �
 
 以下 Demo 展示如何通过 Zilliz Cloud Web 控制台设置 Full Text Search。
 
+<Supademo id="cmboh78cya3xzsn1rure280x2" title=""  />
+
 ### Text Match{#text-match}
 
 Zilliz Cloud Web 控制台支持设置 Text Match 中使用的字段和 Analyzer。详情请见 [Text Match](./text-match)。
 
 以下 Demo 展示如何通过 Zilliz Cloud Web 控制台设置 Text Match。
+
+<Supademo id="cmbohi4q7a40lsn1rt8640eph" title=""  />
 
 ## 管理 Collection{#manage-collection}
 
@@ -175,11 +188,15 @@ Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下�
 
     - 可编辑现有 [ARRAY](./use-array-fields) 字段的 `max_capacity` 值，若 ARRAY 类型为 VARCHAR，还可编辑其 `max_length` 值。
 
+    - 可向现有 Collection Schema 中添加标量字段。
+
     - 若需修改 Shard 设置，请使用[复制 Collection](./manage-collections-console#create-collection) 的功能。
 
     - 若需修改 TTL、mmap 或 partition Key 设置，请使用 SDK，详情请见[修改 Collection](./modify-collections)。
 
-    其他 Schema 设置暂不支持编辑。如仍需修改，建议创建一个新的 Collection，并重新导入数据。
+    - 如果 Collection 创建时未开启动态列功能，您可以在 Collection 创建完成后使用 SDK 开启动态列。详情请见[修改 Collection](./modify-collections#example-4-enable-dynamic-field)。
+
+    其他 Schema 设置暂不支持编辑。如仍需修改，建议创建一个新的 Collection，并重新[导入数据](./import-data)。
 
 - **加载 / 释放 Collection：**在 Zilliz Cloud Web 控制台上，Collection 创建后会自动加载至内存，可立即用于搜索和查询。如需释放内存空间，可将不常用的 Collection 手动释放。
 
@@ -190,6 +207,8 @@ Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下�
     - **创建 Partition**：每个 Collection 最多可创建 1,024 个 Partition。详情请见[使用限制](./limits#collections)。
 
     - **删除 Partition**：默认 Partition 不可删除。删除 Partition 会永久删除其中的数据，且删除前需先释放该 Collection。
+
+- **查看 Collection Alias**：您可以通过 Collection列表页查看特定集群下所有 Collection 的 Alias。
 
 - **删除 Collection：**若某个 Collection 已不再使用，您可以将其删除以释放资源。删除 Collection 的操作会永久清除其中的所有数据，操作不可撤销。
 

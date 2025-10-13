@@ -3,11 +3,14 @@ title: "变更配置费用说明 | Cloud"
 slug: /notice-on-config-changes
 sidebar_label: "变更配置费用说明"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 支持您根据业务和数据量的变化灵活变更集群配置。您可以为通过修改集群 CU 规格进行扩缩容，或者增加集群 Replica 数量从而提高 QPS。 | Cloud"
+description: "Zilliz Cloud 支持您根据业务和数据量的变化灵活变更集群配置。您可以为通过修改集群 Query CU 数量进行扩缩容，或者增加集群 Replica 数量从而提高 QPS。 | Cloud"
 type: origin
 token: GMCvwBlS7io85jkiW0icumJnn6A
-sidebar_position: 9
+sidebar_position: 10
 keywords: 
   - 向量数据库
   - zilliz
@@ -23,7 +26,7 @@ import Admonition from '@theme/Admonition';
 
 # 变更配置费用说明
 
-Zilliz Cloud 支持您根据业务和数据量的变化灵活变更集群配置。您可以为通过修改集群 CU 规格进行扩缩容，或者增加集群 Replica 数量从而提高 QPS。
+Zilliz Cloud 支持您根据业务和数据量的变化灵活变更集群配置。您可以为通过修改集群 Query CU 数量进行扩缩容，或者增加集群 Replica 数量从而提高 QPS。
 
 本文介绍按量付费集群和包年包月集群变更配置的费用说明。
 
@@ -40,14 +43,14 @@ Zilliz Cloud 支持您根据业务和数据量的变化灵活变更集群配置�
 ### 仅升配
 
 ```plaintext
-待支付订单金额 = （升配后 CU 数量 - 升配前 CU 数量）x CU 单价 x 集群剩余天数 x 折扣
+待支付订单金额 = （升配后 Query CU 数量 - 升配前 Query CU 数量）x 单价 x 集群剩余天数 x 折扣
 ```
 
-- 升配后 CU 数量 = 升配后 CU 规格 x 升配后 Replica 数量
+- 升配后 Query CU 数量 = 升配后 Query CU 数量 x 升配后 Replica 数量
 
-- 升配前 CU 数量 = 升配前 CU 规格 x 升配前 Replica 数量
+- 升配前 Query CU 数量 = 升配前 Query CU 数量 x 升配前 Replica 数量
 
-- CU 单价由云服务地域和 CU 类型决定，详情请参考 [Zilliz Cloud 定价](https://zilliz.com.cn/pricing)。
+- 单价由云服务地域和集群类型决定，详情请参考 [Zilliz Cloud 定价](https://zilliz.com.cn/pricing)。
 
 - 折扣由集群剩余时长决定。
 
@@ -77,19 +80,19 @@ Zilliz Cloud 支持您根据业务和数据量的变化灵活变更集群配置�
 
 - 云服务提供商和地域：阿里云华东1（杭州）
 
-- CU 规格：2 CU
+- Query CU 数量：2
 
-- CU 类型：性能型
+- 集群类型：性能型
 
 - Replica 数量：1
 
-根据集群云服务提供商和地域以及 CU 类型，查询 Zilliz 官网列表价可得，CU 单价原价为 ¥1.25/小时 x 24 小时 = ¥30.00/天。
+根据集群云服务提供商和地域以及 CU 类型，查询 Zilliz 官网列表价可得，单价原价为 ¥1.25/小时 x 24 小时 = ¥30.00/天。
 
-假设您在以下时期将包年包月集群扩容至 4 CU，Replica 数量不变。
+假设您在以下时期将包年包月集群扩容至 4 Query. CU，Replica 数量不变。
 
-- **集群剩余天数为 30 天时，待支付订单金额 =（4 CU x 1 Replica - 2 CU x 1 Replica） x ¥30.00/天 x 30 天 x 100% = ¥1800.00**
+- **集群剩余天数为 30 天时，待支付订单金额 =（4 Query CU x 1 Replica - 2 Query CU x 1 Replica） x ¥30.00/天 x 30 天 x 100% = ¥1800.00**
 
-- **集群剩余天数为 2 年时，待支付订单金额 =（4 CU x 1 Replica - 2 CU x 1 Replica）  x ¥30.00/天 x 730 天 x 70%= ¥30660.00**
+- **集群剩余天数为 2 年时，待支付订单金额 =（4 Query CU x 1 Replica - 2 Query CU x 1 Replica）  x ¥30.00/天 x 730 天 x 70%= ¥30660.00**
 
 ### 升配同时延长集群有效期
 
@@ -97,11 +100,11 @@ Zilliz Cloud 支持您根据业务和数据量的变化灵活变更集群配置�
 待支付订单金额 = 升配后新集群的包年包月订单金额 - 升配前老集群的剩余金额
 ```
 
-升配后新集群的包年包月订单金额 = 新集群 CU 规格 x 新集群 Replica 数量 x  CU 单价 x 新订阅时长 x 新折扣
+升配后新集群的包年包月订单金额 = 新集群 Query CU 数量 x 新集群 Replica 数量 x  单价 x 新订阅时长 x 新折扣
 
-升配前老集群的剩余金额 = 原集群 CU 规格 x 原集群 Replica 数量 x  CU 单价 x 原集群剩余订阅时长 x 原折扣
+升配前老集群的剩余金额 = 原集群 Query CU 数量 x 原集群 Replica 数量 x  单价 x 原集群剩余订阅时长 x 原折扣
 
-- CU 单价由集群的CU 类型以及云服务提供商和地域决定。详情请参考 [Zilliz Cloud 定价](https://zilliz.com.cn/pricing)。
+- 单价由集群类型以及云服务提供商和地域决定。详情请参考 [Zilliz Cloud 定价](https://zilliz.com.cn/pricing)。
 
 - 新折扣由新的订阅时长决定（阿里云、腾讯云：三年 5 折，一年 7 折）。
 
@@ -113,23 +116,23 @@ Zilliz Cloud 支持您根据业务和数据量的变化灵活变更集群配置�
 
 - 云服务提供商和地域：阿里云华东1（杭州）
 
-- CU 规格：2 CU
+- Query CU 数量：2
 
 - Replica 数量：1
 
-- CU 类型：性能型
+- 集群类型：性能型
 
 - 原折扣：5 折
 
 - 剩余订阅时长：6 个月
 
-现在您需要将集群从 2 CU 扩容至 4 CU 并延长集群有效期 1 年（12 个月）。
+现在您需要将集群从 2 Query CU 扩容至 4 Query CU 并延长集群有效期 1 年（12 个月）。
 
-根据集群云服务提供商和地域以及 CU 类型，查询 Zilliz 官网列表价可得，CU 按月单价原价为 ¥1.25/小时 x 24 小时 x 30 天 = ¥900.00/月。续订一年享 7 折优惠。
+根据集群云服务提供商和地域以及集群类型，查询 Zilliz 官网列表价可得，按月单价原价为 ¥1.25/小时 x 24 小时 x 30 天 = ¥900.00/月。续订一年享 7 折优惠。
 
-**升配后新集群的包年包月订单金额 = 4 CU x 1 Replica x ¥900.00/月 x 12 个月 x 70% = ¥30240.00**
+**升配后新集群的包年包月订单金额 = 4 Query CU x 1 Replica x ¥900.00/月 x 12 个月 x 70% = ¥30240.00**
 
-**升配前老集群的剩余金额 = 2 CU x 1 Replica x ¥900.00/月 x 6 个月 x 50% = ¥5400.00**
+**升配前老集群的剩余金额 = 2 Query CU x 1 Replica x ¥900.00/月 x 6 个月 x 50% = ¥5400.00**
 
 **待支付订单金额 = ¥30240.00 - ¥5400.00 = ¥24840.00**
 

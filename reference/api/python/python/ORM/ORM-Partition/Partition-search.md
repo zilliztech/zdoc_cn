@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "search() | Python | ORM"
 slug: /python/python/Partition-search
 sidebar_label: "search()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation conducts a vector similarity search with an optional scalar filtering expression. | Python | ORM"
@@ -48,9 +51,9 @@ search(
 
 **PARAMETERS:**
 
-- **data** (*list[list[float]]*) - 
+- **data** (*list&#91;list&#91;float&#93;&#93;*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A list of vector embeddings.
 
@@ -64,7 +67,7 @@ search(
 
 - **param** (dict) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The parameter settings specific to this operation.
 
@@ -160,11 +163,11 @@ A **SearchResult** object that contains a list of **Hits** objects.
 
     - A **Hits** object has the following fields:
 
-        - **ids** (*list[int]* | *list[str]*)
+        - **ids** (*list&#91;int&#93;* | *list&#91;str&#93;*)
 
             A list containing the IDs of the hit entities.
 
-        - **distances** (list[float]) 
+        - **distances** (list&#91;float&#93;) 
 
             A list of distances from the hit entities' vector fields to the query vector.
 
@@ -182,7 +185,7 @@ A **SearchResult** object that contains a list of **Hits** objects.
 
             An alias to **distance**.
 
-        - **vector** (*list[float]*)   
+        - **vector** (*list&#91;float&#93;*)   
 
             The vector field of a hit entity.
 

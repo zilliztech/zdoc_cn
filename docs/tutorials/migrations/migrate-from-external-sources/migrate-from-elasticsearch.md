@@ -3,6 +3,9 @@ title: "从 Elasticsearch 迁移至 Zilliz Cloud | Cloud"
 slug: /migrate-from-elasticsearch
 sidebar_label: "从 Elasticsearch 迁移"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本文档说明从 Elasticsearch 迁移时，Zilliz Cloud 如何处理数据类型映射、Collection 命名规则及注意事项。 | Cloud"
 type: origin

@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "MilvusClient | Node.js"
 slug: /node/node/Client-MilvusClient
 sidebar_label: "MilvusClient"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "A MilvusClient instance represents a Node.js client that connects to a specific Zilliz Cloud cluster. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: SiL3ds1HPo2bOxx4iWwcxgg8nvd
 sidebar_position: 2
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +47,7 @@ new MilvusClient(config: ClientConfig)
 
 - **configOrAddress** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The address of the Zilliz Cloud cluster. For example:
 
@@ -56,7 +59,7 @@ new MilvusClient(config: ClientConfig)
 
     - **address** (*string*) -
 
-        **[REQUIRED]**
+        **&#91;REQUIRED&#93;**
 
         The cluster endpoint. For example:
 

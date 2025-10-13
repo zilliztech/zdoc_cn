@@ -1,13 +1,16 @@
 ---
-title: "导出备份文件 | Cloud"
+title: "导出备份文件 | BYOC"
 slug: /export-backup-files
 sidebar_label: "导出备份文件"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "您可以通过 Zilliz Cloud 控制台将备份文件导出至对象存储。 | Cloud"
+description: "您可以通过 Zilliz Cloud 控制台将备份文件导出至对象存储。 | BYOC"
 type: origin
 token: WXBjwo4sgiCDX8kZvBwcJrJCnyg
-sidebar_position: 4
+sidebar_position: 5
 keywords: 
   - 向量数据库
   - zilliz
@@ -36,7 +39,7 @@ import Admonition from '@theme/Admonition';
 
 ## 开始前{#before-you-start}
 
-- 您已完成对象存储的集成操作。有关具体信息，请参考[配置对象存储](./integrate-with-storage-bucket)。
+- 您已完成对象存储的集成操作。有关具体信息，请参考[阿里云对象存储](./integrate-with-storage-bucket)或 [Amazon S3](./integrate-with-amazon-s3)。
 
 - 您是目标组织中的**组织管理员**或**项目管理员**。
 

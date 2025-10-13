@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "drop_partition() | Python | ORM"
 slug: /python/python/Collection-drop_partition
 sidebar_label: "drop_partition()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation drops a specified partition from the current collection. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: Aym2dpBuIo81mExCqyLcSWhunBe
 sidebar_position: 10
 keywords: 
-  - vector database
-  - IVF
-  - knn
-  - Image Search
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
   - zilliz
   - zilliz cloud
   - cloud

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "upsert() | Python | MilvusClient"
 slug: /python/python/Vector-upsert
 sidebar_label: "upsert()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation inserts or updates data in a specific collection. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: WRYFdoDe8ofrlDxxTxQcdoJjnAh
 sidebar_position: 8
 keywords: 
-  - private llms
-  - nn search
-  - llm eval
-  - Sparse vs Dense
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,13 +48,13 @@ upsert(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
-- **data** (*dict* | *list[dict]*) -
+- **data** (*dict* | *list&#91;dict&#93;*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The data to insert or update into the current collection.
 

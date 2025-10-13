@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "MilvusClient | Python | MilvusClient"
 slug: /python/python/Client-MilvusClient
 sidebar_label: "MilvusClient"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "A MilvusClient instance represents a Python client that connects to a specific Zilliz Cloud cluster. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: TUrSdmskuoGdFRxFT75c6xhinzc
 sidebar_position: 2
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
   - zilliz
   - zilliz cloud
   - cloud

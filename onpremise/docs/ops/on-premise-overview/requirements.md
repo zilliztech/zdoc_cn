@@ -3,6 +3,9 @@ title: "环境需求 | On-Premise"
 slug: /requirements
 sidebar_label: "环境需求"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "为确保 Milvus 的运行环境稳定，在安装部署前需要按照确认运行环境满足如下软硬件要求。 | On-Premise"
 type: origin

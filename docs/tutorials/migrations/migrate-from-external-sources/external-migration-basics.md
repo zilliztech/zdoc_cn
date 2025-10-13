@@ -3,6 +3,9 @@ title: "外部迁移概述 | Cloud"
 slug: /external-migration-basics
 sidebar_label: "外部迁移概述"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "外部迁移功能简化了将向量数据库和搜索系统迁移至 Zilliz Cloud 的过程。无论您是从 Qdrant 等向量数据库迁移，还是从 Elasticsearch、OpenSearch 等支持向量的搜索引擎迁移，Zilliz Cloud 均提供迁移工具，在确保数据完整性的同时最大限度降低迁移复杂度。 | Cloud"
 type: origin
@@ -75,37 +78,32 @@ Zilliz Cloud 支持从主流向量数据库和搜索平台迁移：
      <th><p>描述</p></th>
    </tr>
    <tr>
-     <td><p><strong>Schema 管理</strong></p></td>
+     <td rowspan="4"><p><strong>Schema 管理</strong></p></td>
      <td><p>字段重命名</p></td>
      <td><p>迁移过程中重命名字段，匹配命名规范</p></td>
    </tr>
    <tr>
-     <td></td>
      <td><p>动态转固定字段</p></td>
      <td><p>将灵活元数据转为固定结构字段以提升性能</p></td>
    </tr>
    <tr>
-     <td></td>
      <td><p>添加额外字段</p></td>
      <td><p>扩展源数据外的字段，适应业务演进需求</p></td>
    </tr>
    <tr>
-     <td></td>
      <td><p>数据类型映射</p></td>
      <td><p>自动检测并映射字段类型，支持手动调整</p></td>
    </tr>
    <tr>
-     <td><p><strong>Collection 配置</strong></p></td>
+     <td rowspan="3"><p><strong>Collection 配置</strong></p></td>
      <td><p>智能命名处理</p></td>
      <td><p>默认保留源表名；重名时系统报错；含连字符(-)的名称自动转为下划线(_)或提示修正</p></td>
    </tr>
    <tr>
-     <td></td>
      <td><p>Shard 配置</p></td>
      <td><p>根据查询模式设置数据分布策略</p></td>
    </tr>
    <tr>
-     <td></td>
      <td><p>Partition 策略</p></td>
      <td><p>采用自动分区或自定义分组管理数据</p></td>
    </tr>

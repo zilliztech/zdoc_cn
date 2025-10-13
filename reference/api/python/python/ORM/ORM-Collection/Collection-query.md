@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "query() | Python | ORM"
 slug: /python/python/Collection-query
 sidebar_label: "query()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation conducts a scalar filtering with a specified boolean expression. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: JzcYdBQ5zoU4KpxPqUHcPLQonKd
 sidebar_position: 22
 keywords: 
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
   - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
-  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -46,7 +49,7 @@ query(
 
 - **expr** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A scalar filtering condition to filter matching entities. 
 
@@ -128,7 +131,7 @@ query(
 
 **RETURN TYPE:**
 
-*list[dict]*
+*list&#91;dict&#93;*
 
 **RETURNS:**
 

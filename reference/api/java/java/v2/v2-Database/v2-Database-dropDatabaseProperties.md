@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "dropDatabaseProperties() | Java | v2"
 slug: /java/java/v2-Database-dropDatabaseProperties
 sidebar_label: "dropDatabaseProperties()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation resets the database properties to their default values. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: CzC6dm9N8oBvQZxRMyocNfTpn9f
 sidebar_position: 5
 keywords: 
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
-  - vectordb
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
   - zilliz
   - zilliz cloud
   - cloud

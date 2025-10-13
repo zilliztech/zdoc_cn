@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "dropAlias() | Node.js"
 slug: /node/node/Collections-dropAlias
 sidebar_label: "dropAlias()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a specified collection alias. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: FubcdxJ0LoyQiJxmUMjcZnbjnbc
 sidebar_position: 10
 keywords: 
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
   - zilliz
   - zilliz cloud
   - cloud
@@ -49,7 +52,7 @@ milvusClient.dropAlias({
 
 - **alias** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The alias of a collection. 
 
@@ -69,7 +72,7 @@ milvusClient.dropAlias({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

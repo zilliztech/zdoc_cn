@@ -3,6 +3,9 @@ title: "管理组织告警 | Cloud"
 slug: /manage-organization-alerts
 sidebar_label: "管理组织告警"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "组织告警功能监控您整个 Zilliz Cloud 组织的账单和账户相关指标。与专注于集群性能的项目告警不同，组织告警帮助您追踪现金余额、用量金额，以确保服务不中断并预防意外的账单问题。通过接收关于用量金额耗尽、支付失败和使用量阈值的及时通知，您可以随时掌握账户健康状况，避免服务中断。 | Cloud"
 type: origin
@@ -27,11 +30,17 @@ import Supademo from '@site/src/components/Supademo';
 
 组织告警功能监控您整个 Zilliz Cloud 组织的账单和账户相关指标。与专注于集群性能的项目告警不同，组织告警帮助您追踪现金余额、用量金额，以确保服务不中断并预防意外的账单问题。通过接收关于用量金额耗尽、支付失败和使用量阈值的及时通知，您可以随时掌握账户健康状况，避免服务中断。
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>此功能仅限 Dedicated 集群使用。更多详情，可参考<a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p>
+
+</Admonition>
+
 ## 开始前{#before-you-start}
 
 在查看或管理组织告警前，请确保您拥有：
 
-- 组织管理员角色权限。
+- **组织管理员**角色权限。
 
 ## 查看组织告警{#view-organization-alerts}
 

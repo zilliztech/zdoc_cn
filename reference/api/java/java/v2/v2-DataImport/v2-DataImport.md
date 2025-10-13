@@ -9,10 +9,10 @@ token: AtkCfVN4Ll6GqMdVJfxcybHanDf
 sidebar_position: 3
 sidebar_label: "Data Import"
 keywords: 
-  - milvus
-  - Zilliz
-  - milvus vector database
-  - milvus db
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
   - zilliz
   - zilliz cloud
   - cloud

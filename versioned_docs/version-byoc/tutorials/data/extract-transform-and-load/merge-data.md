@@ -3,6 +3,9 @@ title: "合并数据 | BYOC"
 slug: /merge-data
 sidebar_label: "合并数据"
 beta: PRIVATE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "您可以将现有Zilliz Cloud Collection 中的数据与本地文件或外部对象存储中的数据合并，来创建一个结合了两个数据源数据的 Collection。这被称为数据合并操作，您可以将其作为一种变通方法，向现有集合中添加带有数据的字段。 | BYOC"
 type: origin

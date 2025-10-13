@@ -1,10 +1,13 @@
 ---
-title: "查看集群性能指标 | Cloud"
+title: "查看集群性能指标 | BYOC"
 slug: /view-cluster-metric-charts
 sidebar_label: "查看集群性能指标"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "为更好地了解集群性能，Zilliz Cloud 提供集群监控面板，您可以在其中查看特定集群的相关性能指标。 | Cloud"
+description: "为更好地了解集群性能，Zilliz Cloud 提供集群监控面板，您可以在其中查看特定集群的相关性能指标。 | BYOC"
 type: origin
 token: S3BswPJ4NiKl9okZDoycMvbunMb
 sidebar_position: 2
@@ -30,9 +33,15 @@ import Admonition from '@theme/Admonition';
 
 ## 性能指标图表{#access-cluster-metric-charts}
 
-在 Zilliz Cloud 控制台，找到目标集群，并点击**指标**选项卡。
+在 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)，找到目标集群，并点击**指标**选项卡。
 
 Zilliz Cloud 的性能指标图表展示了包括资源使用、Query 请求速率（QPS）、请求结果及数据操作等方面的性能数据，提供了对特定时间段的详细分析。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>点击右侧的<strong>查看告警设置</strong>，可以跳转到<strong>告警设置</strong>页面并管理您的告警。</p>
+
+</Admonition>
 
 关于每个性能指标图表的详细信息，请参阅[查看性能指标图表](./view-cluster-metric-charts#view-metric-charts)。
 
@@ -63,6 +72,10 @@ Zilliz Cloud 的性能指标图表展示了包括资源使用、Query 请求速�
 ## 查看性能指标图表{#view-metric-charts}
 
 Zilliz Cloud 提供了多种指标图表，用于从不同角度监控集群性能。
+
+### Pod 资源监控{#pod-resources}
+
+为了更有效地跟踪 Pod 资源消耗情况，请在**指标**选项卡下找到 **Pod 资源**部分。在这里，您可以看到相关图表，展示每个 Pod 的 CPU、存储和网络资源的使用情况。更多指标详情，可以参考[指标与告警快速参考](./metrics-alerts-reference#project-level-metrics-cluster-metrics)。
 
 ### 资源监控{#resources}
 

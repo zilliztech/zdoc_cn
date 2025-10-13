@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "get_compact_state() | Python | MilvusClient"
 slug: /python/python/Management-get_compact_state
 sidebar_label: "get_compact_state()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation returns the status of the specified compaction job. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: WEsjdspGLokueRxggM1cNFgknze
 sidebar_position: 7
 keywords: 
-  - AI Hallucination
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -47,7 +50,7 @@ get_compaction_state(
 
     The compaction job ID.
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 

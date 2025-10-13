@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "query() | Java | v2"
 slug: /java/java/v2-Vector-query
 sidebar_label: "query()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation conducts a scalar filtering with a specified boolean expression. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: OnIpdTTSOoV06KxhhAkcFQCKnWd
 sidebar_position: 5
 keywords: 
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
-  - vectordb
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
   - zilliz
   - zilliz cloud
   - cloud
@@ -81,7 +84,7 @@ query(QueryReq.builder()
 
     You can set this parameter to an empty string to skip scalar filtering. To build a scalar filtering condition, refer to [Boolean Expression Rules](https://milvus.io/docs/boolean.md). 
 
-- `consistencyLevel(ConsistencyLevel consistencyLevel)`
+- `consistencyLevel([ConsistencyLevel](./v2-Collections-ConsistencyLevel) consistencyLevel)`
 
     The consistency level of the target collection.
 
@@ -121,7 +124,7 @@ A **QueryResp object representing specific query results with the specified outp
 
 **PARAMETERS:**
 
-- queryResults(List\<QueryResp.QueryResult\>)
+- queryResults(List\&lt;QueryResp.QueryResult\&gt;)
 
 A list of QueryResult objects with each QueryResult representing a queried entity.
 

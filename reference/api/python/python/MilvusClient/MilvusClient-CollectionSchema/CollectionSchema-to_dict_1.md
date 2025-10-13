@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "to_dict() | Python | MilvusClient"
 slug: /python/python/CollectionSchema-to_dict_1
 sidebar_label: "to_dict()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation converts a CollectionSchema object to a dictionary representation. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: NnIxd6VYso9IBPx6bJDcJJmUnNd
 sidebar_position: 4
 keywords: 
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
   - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
   - zilliz
   - zilliz cloud
   - cloud

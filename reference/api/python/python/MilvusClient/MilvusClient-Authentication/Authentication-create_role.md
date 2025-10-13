@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "create_role() | Python | MilvusClient"
 slug: /python/python/Authentication-create_role
 sidebar_label: "create_role()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates a custom role. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: OUz3drncZo1Er8xyITZcYz66nWE
 sidebar_position: 3
 keywords: 
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -43,7 +46,7 @@ create_role(
 
 - **role_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the role to create.
 

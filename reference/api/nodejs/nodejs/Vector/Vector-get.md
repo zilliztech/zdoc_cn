@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "get() | Node.js"
 slug: /node/node/Vector-get
 sidebar_label: "get()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation gets specific entities by their IDs. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: IbxXdvdZlonJk9xnlk2cZlIinCh
 sidebar_position: 2
 keywords: 
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
-  - open source vector database
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
   - zilliz
   - zilliz cloud
   - cloud
@@ -58,13 +61,13 @@ milvusClient.get({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
-- **ids** (*string[]* | *number[]*) -
+- **ids** (*string&#91;&#93;* | *number&#91;&#93;*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A specific entity ID or a list of entity IDs.
 
@@ -88,11 +91,11 @@ milvusClient.get({
 
     The sum of this value and `limit` should be less than 16,384. 
 
-- **partition_names** (*string[]*) -
+- **partition_names** (*string&#91;&#93;*) -
 
     A list of the names of the partitions in the target collection.
 
-- **output_fields** (*string[]*) -
+- **output_fields** (*string&#91;&#93;*) -
 
     A list of field names to include in each entity in return.
 
@@ -104,7 +107,7 @@ milvusClient.get({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 
@@ -117,7 +120,7 @@ This method returns a promise that resolves to a **ResStatus** object.
 
 **PARAMETERS:**
 
-- **data** (*list[string]*) -
+- **data** (*list&#91;string&#93;*) -
 
     A list of entities returned.
 

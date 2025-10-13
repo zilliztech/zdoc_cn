@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "get_server_type() | Python | ORM"
 slug: /python/python/utility-get_server_type
 sidebar_label: "get_server_type()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation checks the type of the Zilliz Cloud cluster. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: UOIddRBUXotHvyx4Yyocer0mnId
 sidebar_position: 15
 keywords: 
-  - Context Window
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
   - zilliz
   - zilliz cloud
   - cloud

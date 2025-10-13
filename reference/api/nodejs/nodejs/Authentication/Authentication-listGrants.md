@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "listGrants() | Node.js"
 slug: /node/node/Authentication-listGrants
 sidebar_label: "listGrants()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the privileges granted to the specified role. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: CJ9DdmU1ooquOnxcK5AciA3sn3g
 sidebar_position: 16
 keywords: 
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
-  - lexical search
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,7 +53,7 @@ listGrants(data): Promise<SelectGrantResponse>
 
     Setting this to the name of a non-existing role may result in errors.
 
-*Returns Promise\<SelectGrantResponse>*
+*Returns Promise\&lt;SelectGrantResponse&gt;*
 
 This method returns a promise that resolves to a **SelectGrantResponse** object.
 
@@ -70,7 +73,7 @@ This method returns a promise that resolves to a **SelectGrantResponse** object.
 
 **PARAMETERS:**
 
-- **entities** (*GrantEntity[]*) -
+- **entities** (*GrantEntity&#91;&#93;*) -
 
     A list of grant entities, each of which is shaped as follows:
 

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "load() | Python | ORM"
 slug: /python/python/Collection-load
 sidebar_label: "load()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation loads the data of the current collection into memory. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: HQDndiGwloWKIexgPCUcEZGenOh
 sidebar_position: 20
 keywords: 
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
-  - lexical search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
   - zilliz
   - zilliz cloud
   - cloud

@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "getFlushState() | Node.js"
 slug: /node/node/Management-getFlushState
 sidebar_label: "getFlushState()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation returns the flush status of a specific segment. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: X8qWdMHg5oQQK6xZdBYcGNOnn3c
 sidebar_position: 8
 keywords: 
-  - Sparse vs Dense
-  - Dense vector
   - Hierarchical Navigable Small Worlds
   - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -51,9 +54,9 @@ milvusClient.getFlushState({
 
 **PARAMETERS:**
 
-- **segment_ids** (*number[]*) -
+- **segment_ids** (*number&#91;&#93;*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A list of the target segment IDs.
 
@@ -63,7 +66,7 @@ milvusClient.getFlushState({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<GetFlushStateResponse>*
+**RETURNS** *Promise\&lt;GetFlushStateResponse&gt;*
 
 This method returns a promise that resolves to a **GetFlushStateResponse** object.
 

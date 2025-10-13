@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "describeRole() | Java | v2"
 slug: /java/java/v2-Authentication-describeRole
 sidebar_label: "describeRole()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation describes a specific role. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: Fs7qdzeHZo305txlj45cgqoVnUf
 sidebar_position: 5
 keywords: 
-  - vector databases comparison
-  - Faiss
-  - Video search
-  - AI Hallucination
+  - Embedding model
+  - image similarity search
+  - Context Window
+  - Natural language search
   - zilliz
   - zilliz cloud
   - cloud

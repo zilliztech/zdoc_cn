@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "drop_collection() | Python | MilvusClient"
 slug: /python/python/Collections-drop_collection
 sidebar_label: "drop_collection()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a collection. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: QNB4d2q2ZorIApxpnzqczW2HnL7
 sidebar_position: 11
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud
@@ -40,7 +43,7 @@ drop_collection(collection_name: str) -> None
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 

@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "FunctionType | Node.js"
 slug: /node/node/Collections-FunctionType
 sidebar_label: "FunctionType"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: L4H0dyzS1o6XlmxMQzDca6Pdnjd
 sidebar_position: 20
 keywords: 
-  - IVF
-  - knn
-  - Image Search
-  - LLMs
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
   - zilliz
   - zilliz cloud
   - cloud

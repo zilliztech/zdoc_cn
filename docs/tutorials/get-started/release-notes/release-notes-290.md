@@ -3,11 +3,14 @@ title: "版本说明书（2024/07/05） | Cloud"
 slug: /release-notes-290
 sidebar_label: "版本说明书（2024/07/05）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在本次发布中，Zilliz Cloud 带来了一系列 Milvus 2.4 的新功能，包括稀疏向量支持、增强的多向量和混合搜索、倒排索引、模糊匹配以及文档级召回的分组检索能力。同时，此次发布还引入了 Float16 和 BFloat16 数据类型，以提高检索效率。此外，Pipelines 功能现在会在每次数据摄取和搜索请求时返回令牌使用统计信息。您可以在发票页面上找到详细的统计数据。 | Cloud"
 type: origin
 token: XP0BwhWFFiazrikwL94cJIsSnYb
-sidebar_position: 9
+sidebar_position: 12
 keywords: 
   - 向量数据库
   - zilliz
@@ -68,7 +71,7 @@ Milvus 2.4 为 RAG 应用和多模型检索场景提供了众多新功能。如�
 
 此版本还支持在标量过滤中使用前缀、内缀和后缀进行模糊匹配。
 
-如需了解更多，可查阅[Binary 向量](./use-binary-vector), [创建 Scalar Index](./index-scalar-fields) 以及[使用 ](./basic-filtering-operators)`like`[ 操作符](./basic-filtering-operators) 等内容。您还可以运行 [inverted_index_example.py](https://github.com/milvus-io/pymilvus/blob/2.4/examples/inverted_index_example.py) 和 [fuzzy_match.py](https://github.com/milvus-io/pymilvus/blob/2.4/examples/fuzzy_match.py) 中的示例代码深入了解相关概念。在运行示例代码前，须将代码中的连接信息指向您的 Zilliz Cloud 集群。
+如需了解更多，可查阅[Binary 向量](./use-binary-vector), [创建 Scalar Index](./index-scalar-fields) 以及[使用 ](./basic-filtering-operators)[`like`](./basic-filtering-operators)[ 操作符](./basic-filtering-operators) 等内容。您还可以运行 [inverted_index_example.py](https://github.com/milvus-io/pymilvus/blob/2.4/examples/inverted_index_example.py) 和 [fuzzy_match.py](https://github.com/milvus-io/pymilvus/blob/2.4/examples/fuzzy_match.py) 中的示例代码深入了解相关概念。在运行示例代码前，须将代码中的连接信息指向您的 Zilliz Cloud 集群。
 
 ### 分组检索{#grouping-search}
 
@@ -87,8 +90,6 @@ Milvus 2.4 为 RAG 应用和多模型检索场景提供了众多新功能。如�
 Zilliz Cloud 现在可实时返回您的 Pipelines 请求的资源使用情况，详情可以在费用页面及每个 API 请求的响应中查看。当前，此功能仅统计费用情况，不产生实际费用。
 
 图像嵌入模型已从之前的 **clip-vit-base-patch16** 升级到 **clip-vit-base-patch32**，以满足更广泛的需求范围。此外，计划不久后实现对多语言文本嵌入的支持。
-
-如需了解更多，可查阅[了解定价与账单](./understand-pipelines-billing)。
 
 ## 其它增强{#enhancements}
 

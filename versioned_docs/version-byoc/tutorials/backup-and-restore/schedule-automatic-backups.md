@@ -1,10 +1,13 @@
 ---
-title: "创建自动备份 | Cloud"
+title: "设置定时自动备份 | BYOC"
 slug: /schedule-automatic-backups
-sidebar_label: "创建自动备份"
+sidebar_label: "设置定时自动备份"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 支持为集群开启自动备份功能，帮助您在发生异常问题时及时恢复数据。自动备份适用于整个集群，不支持单独为某个 Collection 自动创建备份。 | Cloud"
+description: "Zilliz Cloud 支持为集群设置定时自动备份，帮助您在发生异常问题时及时恢复数据。自动备份适用于整个集群，不支持单独为某个 Collection 设置定时自动备份。 | BYOC"
 type: origin
 token: TXyTwrfxCiStfek4hc7c2nKwnJc
 sidebar_position: 2
@@ -21,19 +24,13 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# 创建自动备份
+import Supademo from '@site/src/components/Supademo';
 
-Zilliz Cloud 支持为集群开启**自动备份**功能，帮助您在发生异常问题时及时恢复数据。自动备份适用于整个集群，不支持单独为某个 Collection 自动创建备份。
+# 设置定时自动备份
 
-创建备份会产生额外[费用](./understand-cost#backup-costs)，按备份存储所在的云地域计费。所有备份文件均存储在与源集群相同的云地域。例如，部署在`阿里云华东1（杭州）`的集群，其备份也将保存在`阿里云华东1（杭州）`。
+Zilliz Cloud 支持为集群**设置定时自动备份**，帮助您在发生异常问题时及时恢复数据。自动备份适用于整个集群，不支持单独为某个 Collection 设置定时自动备份。
 
-本文将介绍如何在 Zilliz Cloud 中设置自动备份。如需按需手动创建备份，请参见[创建备份](./create-snapshot)。
-
-<Admonition type="info" icon="📘" title="说明">
-
-<p>备份与恢复功能仅适用于 Dedicated 集群。</p>
-
-</Admonition>
+本文将介绍如何在 Zilliz Cloud 中设置定时自动备份。如需按需手动创建备份，请参见[创建备份](./create-snapshot)。
 
 ### 限制说明{#limits}
 
@@ -51,17 +48,17 @@ Zilliz Cloud 支持为集群开启**自动备份**功能，帮助您在发生异
 
 - **备份任务限制**：
 
-    - 自动备份执行期间无法发起手动备份。
+    - 定时自动备份执行期间无法发起手动备份。
 
-    - 若当前有手动备份正在进行，自动备份仍将按计划执行。
+    - 若当前有手动备份正在进行，定时自动备份仍将按计划执行。
 
-## 开启自动备份{#enable-automatic-backup}
+## 开启定时自动备份{#enable-automatic-backup}
 
-自动备份为集群级别配置，默认处于关闭状态。由于备份会占用存储资源并产生费用，您可以根据实际需求决定是否开启自动备份以及自动备份的时间和频率。自动备份功能开启后，系统会立刻创建一个备份文件以实现数据保护。后续的备份将根据您设置的频率和时间自动创建。
+定时自动备份为集群级别配置，默认处于关闭状态。由于备份会占用存储资源并产生费用，您可以根据实际需求决定是否开启定时自动备份以及自动备份的时间和频率。定时自动备份功能开启后，系统会立刻创建一个备份文件以实现数据保护。后续的备份将根据您设置的频率和时间自动创建。
 
 ### 通过 Web 控制台{#via-web-console}
 
-在控制台开启自动备份后，Zilliz Cloud 默认配置如下：
+在控制台开启定时自动备份后，Zilliz Cloud 默认配置如下：
 
 - **备份频率**：每天
 
@@ -71,11 +68,13 @@ Zilliz Cloud 支持为集群开启**自动备份**功能，帮助您在发生异
 
 您可以按需调整上述配置。
 
-以下 Demo 展示如何开启并配置自动备份：
+以下 Demo 展示如何开启并配置定时自动备份：
+
+<Supademo id="cmcsvbmq70k7d9st8g2772jpx?utm_source=link" title=""  />
 
 ### 通过 RESTful API{#via-restful-api}
 
-以下示例展示如何为指定集群开启自动备份。更多 API 参数细节，请参见[创建备份策略](/reference/restful/set-backup-policy-v2)。
+以下示例展示如何为指定集群开启定时自动备份。更多 API 参数细节，请参见[创建备份策略](/reference/restful/set-backup-policy-v2)。
 
 ```bash
 curl --request POST \
@@ -90,7 +89,7 @@ curl --request POST \
 }'
 ```
 
-示例返回结果如下。开启自动备份后，系统将立即创建一个备份任务，您可在项目下的[任务中心](./job-center)查看进度：
+示例返回结果如下。开启定时自动备份后，系统将立即创建一个备份任务，您可在项目下的[任务中心](./job-center)查看进度：
 
 ```bash
 {
@@ -102,17 +101,19 @@ curl --request POST \
 }
 ```
 
-## 查看自动备份设置{#check-backup-schedule}
+## 查看定时自动备份设置{#check-backup-schedule}
 
-开启自动备份后，您可以查看当前的自动备份设置。
+开启定时自动备份后，您可以查看当前的定时自动备份设置。
 
 ### 通过 Web 控制台{#via-web-console}
 
-以下 Demo 展示如何在 Zilliz Cloud 控制台中查看自动备份设置：
+以下 Demo 展示如何在 Zilliz Cloud 控制台中查看定时自动备份设置：
+
+<Supademo id="cmcsvlqk403trxk0ielj7k9g6?utm_source=link" title=""  />
 
 ### 通过 RESTful API{#via-restful-api}
 
-以下示例展示如何查询集群的自动备份策略。更多 API 参数细节，请参见[获取备份策略](/reference/restful/get-backup-policy-v2)。
+以下示例展示如何查询集群的定时自动备份策略。更多 API 参数细节，请参见[获取备份策略](/reference/restful/get-backup-policy-v2)。
 
 ```bash
 curl --request GET \
@@ -136,17 +137,19 @@ curl --request GET \
 }
 ```
 
-## 关闭自动备份{#disable-automatic-backup}
+## 关闭定时自动备份{#disable-automatic-backup}
 
-您也可以为集群关闭自动备份。
+您也可以为集群关闭定时自动备份。
 
 ### 通过 Web 控制台{#via-web-console}
 
 以下演示展示如何通过控制台关闭自动备份：
 
+<Supademo id="cmcsvo3k30kkz9st89plxmshd?utm_source=link" title=""  />
+
 ### 通过 RESTful API{#via-restful-api}
 
-以下示例展示如何关闭指定集群的自动备份。更多 API 参数细节，请参见[创建备份策略](/reference/restful/set-backup-policy-v2)。
+以下示例展示如何关闭指定集群的定时自动备份。更多 API 参数细节，请参见[创建备份策略](/reference/restful/set-backup-policy-v2)。
 
 ```bash
 curl --request POST \

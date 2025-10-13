@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "Partition | Python | ORM"
 slug: /python/python/ORM-Partition
 sidebar_label: "Partition"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "A Partition instance represents a partition within a collection. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: X9scdVMmxoBTuUxlKhecJXEunHd
 sidebar_position: 7
 keywords: 
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -56,7 +59,7 @@ Partition(
 
 - **collection** (*Collection* | *str*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The collection in which to create a partition. 
 
@@ -71,7 +74,7 @@ Partition(
 
 - **name** (*string*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the partition to create.
 

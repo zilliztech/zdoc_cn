@@ -3,6 +3,9 @@ title: "设置白名单 | Cloud"
 slug: /setup-whitelist
 sidebar_label: "设置白名单"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，白名单是针对项目的安全设置，适用于项目下的所有集群。设置白名单后，仅白名单中的 IP 地址可以访问您项目下的所有集群。白名单能够有效降低受到恶意攻击的风险 | Cloud"
 type: origin
@@ -38,11 +41,11 @@ import Admonition from '@theme/Admonition';
 
 ## 操作步骤{#procedure}
 
-1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com.cn/login)。
+1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)。
 
 1. 点击进入需要设置白名单的组织和项目。
 
-1. 在左侧导航栏中，点击 **安全** > **+ IP 地址**。
+1. 在左侧导航栏中，点击 **安全** &gt; **+ IP 地址**。
 
 1. 在弹出的对话框中，输入 **IP地址（CIDR）和描述**。
 
@@ -79,5 +82,5 @@ import Admonition from '@theme/Admonition';
 
 - [管理身份凭证](./cluster-credentials)
 
-- [管理 MFA](./multi-factor-auth)
+- [创建私网连接](./setup-a-private-link)
 

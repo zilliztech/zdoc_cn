@@ -3,6 +3,9 @@ title: "数据导入 | Cloud"
 slug: /data-import
 sidebar_label: "数据导入"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 数据导入教程，从入门到精通。 | Cloud"
 type: origin

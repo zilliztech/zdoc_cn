@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_collections() | Python | ORM"
 slug: /python/python/utility-list_collections
 sidebar_label: "list_collections()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists all collections in the database used in the current connection. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: QgxEdfBMSodYo6xCg24cH3hInr4
 sidebar_position: 24
 keywords: 
-  - Zilliz database
-  - Unstructured Data
-  - vector database
-  - IVF
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
   - zilliz
   - zilliz cloud
   - cloud

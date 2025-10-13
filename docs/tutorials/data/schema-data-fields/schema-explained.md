@@ -3,6 +3,9 @@ title: "了解 Schema | Cloud"
 slug: /schema-explained
 sidebar_label: "了解 Schema"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Schema 定义了 Collection 的数据结构。在创建 Collection 之前，您需要根据业务需要，设计并创建好 Collection 的 Schema。本章将介绍设计与创建 Schema 时需要注意的相关事项。 | Cloud"
 type: origin
@@ -32,7 +35,7 @@ Schema 定义了 Collection 的数据结构。在创建 Collection 之前，您�
 
 精心设计的 Schema 至关重要，因为它抽象了数据模型，并决定了能否通过搜索实现业务目标。此外，由于插入到集合中的每一行数据都必须遵循 Schema 定义，从而保持数据的一致性和长期质量。从技术角度看，定义明确的 Schema 可实现有序的列数据存储和更简洁的索引结构，从而提高搜索性能。
 
-如下图所示，一个典型的 Collection Schema 包含一个主键，若干向量列和若干标量列。下图说明了如何将一篇文章映射成一个 Collection Schema。
+如下图所示，一个典型的 Collection Schema 包含一个主键，至少一个向量列和若干标量列。下图说明了如何将一篇文章映射成一个 Collection Schema。
 
 ![RFGTbrPmmoa7b8xAg34cRdUmnXe](/img/RFGTbrPmmoa7b8xAg34cRdUmnXe.png)
 
@@ -285,8 +288,6 @@ export schema="{
 - `SPARSE_FLOAT_VECTOR`
 
     用于存放一组非零元素及其序号，用来表示一个稀疏向量。
-
-关于添加向量字段时的更多内容，可参考[稀疏向量](./use-sparse-vector)、[稠密向量](./use-dense-vector)或[Binary 向量](./use-binary-vector)。
 
 ## 添加标量字段{#add-scalar-fields}
 

@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "FieldSchema | Java | v2"
 slug: /java/java/v2-Collections-FieldSchema
 sidebar_label: "FieldSchema"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "A FieldSchema instance defines the data type and related attributes of a specific field in a collection. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: WeXmdv8bioJ7AEx9sEtct6kgnUd
 sidebar_position: 16
 keywords: 
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
   - zilliz
   - zilliz cloud
   - cloud
@@ -62,7 +65,7 @@ CreateCollectionReq.FieldSchema.builder()
 
     The description of the field.
 
-- `dataType(DataType dataType)`
+- `dataType([DataType](./v2-Collections-DataType) dataType)`
 
     The data type of the field.
 

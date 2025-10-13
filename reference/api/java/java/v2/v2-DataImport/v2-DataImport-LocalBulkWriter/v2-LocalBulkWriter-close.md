@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "close() | Java | v2"
 slug: /java/java/v2-LocalBulkWriter-close
 sidebar_label: "close()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation closes the current LocalBulkWriter instance. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: OEcUdoX1yoc94axfwpjcdA2jnEf
 sidebar_position: 2
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
   - zilliz
   - zilliz cloud
   - cloud

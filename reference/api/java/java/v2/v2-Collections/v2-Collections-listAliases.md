@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "listAliases() | Java | v2"
 slug: /java/java/v2-Collections-listAliases
 sidebar_label: "listAliases()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all existing aliases for a specific collection. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: RvZDdxU1howmQ7x2V31c8eC7nJb
 sidebar_position: 19
 keywords: 
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - vectordb
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,7 +53,7 @@ A **ListAliasResp** object containing a list of aliases for the specified collec
 
 **PARAMETERS:**
 
-- **alias** (*List\<String\>*)
+- **alias** (*List\&lt;String\&gt;*)
 
     A list of strings containing the aliases.
 

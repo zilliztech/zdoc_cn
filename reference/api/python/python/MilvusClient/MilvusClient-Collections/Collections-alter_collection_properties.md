@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "alter_collection_properties() | Python | MilvusClient"
 slug: /python/python/Collections-alter_collection_properties
 sidebar_label: "alter_collection_properties()"
+added_since: v2.4.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation alters the specified collection properties. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: Pdljdj7ysoYg2Jxu7JrcQOB8n5e
 sidebar_position: 3
 keywords: 
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -64,7 +67,7 @@ alter_collection_properties(
 
         Whether to enable partition key isolation. For details, refer to [Use Partition Key](/docs/use-partition-key).
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 

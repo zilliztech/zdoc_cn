@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "loading_progress() | Python | ORM"
 slug: /python/python/utility-loading_progress
 sidebar_label: "loading_progress()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation returns the load progress of a specific collection. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: HQiHd82orov0XvxAzLWcl5xRnzc
 sidebar_position: 31
 keywords: 
-  - private llms
-  - nn search
-  - llm eval
-  - Sparse vs Dense
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,11 +48,11 @@ loading_progress(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a collection.
 
-- **partition_names** (*list[str]*) -
+- **partition_names** (*list&#91;str&#93;*) -
 
     A list of partition names.
 

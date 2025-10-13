@@ -3,11 +3,14 @@ title: "版本说明书（2025/03/27） | Cloud"
 slug: /release-notes-2140
 sidebar_label: "版本说明书（2025/03/27）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本次发布在 PRIVATE PREVIEW 中引入了数据平面审计日志功能。旨在通过提供在数据平面上执行的操作的详细日志来增强数据安全性。除了该功能外，Zilliz Cloud还修订了其优惠券策略。 | Cloud"
 type: origin
 token: NYaTwrUG1iT6CCkUSnJcCQPqnsb
-sidebar_position: 3
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz

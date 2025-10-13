@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "revoke_role() | Python | MilvusClient"
 slug: /python/python/Authentication-revoke_role
 sidebar_label: "revoke_role()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation revokes the role assigned to a user. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: JJOId59ePoMLefxz1ChcBZ6inOh
 sidebar_position: 19
 keywords: 
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
-  - Elastic vector database
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,13 +47,13 @@ revoke_role(
 
 - **user_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing user.
 
 - **role_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the role to revoke.
 

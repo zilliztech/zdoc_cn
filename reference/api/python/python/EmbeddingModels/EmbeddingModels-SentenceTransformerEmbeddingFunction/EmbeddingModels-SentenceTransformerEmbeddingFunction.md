@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "SentenceTransformerEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-SentenceTransformerEmbeddingFunction
 sidebar_label: "SentenceTransformerEmbeddingFunction"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "SentenceTransformerEmbeddingFunction is a class in pymilvus that handles encoding text into embeddings using Sentence Transformer models to support embedding retrieval in Milvus. | Python"
@@ -10,10 +13,10 @@ type: docx
 token: JOFedA4h8otTjHxsYQ7cnjsunHd
 sidebar_position: 3
 keywords: 
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
   - zilliz
   - zilliz cloud
   - cloud

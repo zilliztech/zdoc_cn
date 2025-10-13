@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "alter_database_properties() | Python | MilvusClient"
 slug: /python/python/Database-alter_database_properties
 sidebar_label: "alter_database_properties()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation modifies the properties of the specified database. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: GUv5dxYOZocdURx1qGlc9I8Cn5g
 sidebar_position: 1
 keywords: 
-  - Zilliz database
-  - Unstructured Data
-  - vector database
-  - IVF
+  - cosine distance
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
   - zilliz
   - zilliz cloud
   - cloud
@@ -51,7 +54,7 @@ alter_database_properties(
 
 - **db_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     Name of the database whose properties are to be modified.
 
@@ -63,7 +66,7 @@ alter_database_properties(
 
         Number of replicas for the database.
 
-    - **database.resource_groups** (*[]str*) -
+    - **database.resource_groups** (*&#91;&#93;str*) -
 
         Resource groups dedicated to the database.
 

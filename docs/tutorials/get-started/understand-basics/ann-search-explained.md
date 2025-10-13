@@ -3,6 +3,9 @@ title: "ANN 搜索 | Cloud"
 slug: /ann-search-explained
 sidebar_label: "ANN 搜索"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "通过 k-最近邻（kNN）搜索可以找到一个查询向量的 k 个最近向量。kNN 算法将查询向量与向量空间中的每个向量进行比较，直到出现 k 个完全匹配的结果。尽管 kNN 搜索可以确保准确性，但十分耗时。尤其是数据量大，向量维度高时，耗时更久。 | Cloud"
 type: origin
@@ -62,7 +65,7 @@ Hierarchical Navigable Small World（HNSW）算法通过创建多层接近图（
 
 1. 使用初始化的随机近邻图和从步骤2开始的搜索起点执行近似最近邻搜索。使用搜索路径上的所有点作为候选近邻集，并采用 alpha = 1 的边缘修剪策略以减少搜索半径。
 
-1. 将 alpha 值调整为 alpha> 1（文献推荐将数值设置为 1.2）后，重复步骤 3 以优化图质量和召回率。
+1. 将 alpha 值调整为 alpha&gt; 1（文献推荐将数值设置为 1.2）后，重复步骤 3 以优化图质量和召回率。
 
 索引准备就绪后，搜索步骤如下：
 

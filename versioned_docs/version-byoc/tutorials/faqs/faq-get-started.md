@@ -1,10 +1,10 @@
 ---
-title: "FAQ：快速入门 | CLOUD"
+title: "FAQ：快速入门 | BYOC"
 slug: /faq-get-started
 sidebar_label: "FAQ：快速入门"
 beta: FALSE
 notebook: FALSE
-description: " | CLOUD"
+description: " | BYOC"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 1

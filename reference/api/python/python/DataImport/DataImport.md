@@ -9,10 +9,10 @@ token: I37hfvVOClbThMdGuH4cV4R6nkc
 sidebar_position: 1
 sidebar_label: "DataImport"
 keywords: 
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
-  - lexical search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud

@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "getBatchFiles() | Java | v2"
 slug: /java/java/v2-LocalBulkWriter-getBatchFiles
 sidebar_label: "getBatchFiles()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation returns a list of files passed to the current LocalBulkWriter instance. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: BLFEde4BuoCjTSxjYSUcZerEnOb
 sidebar_position: 4
 keywords: 
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -46,7 +49,7 @@ localBulkWriter.getBatchFiles()
 
 **RETURNS TYPE:**
 
-*List\<List\<String>*
+*List\&lt;List\&lt;String&gt;&gt;*
 
 ## Example
 

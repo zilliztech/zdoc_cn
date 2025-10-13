@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "describeReplicas() | Java | v2"
 slug: /java/java/v2-Collections-describeReplicas
 sidebar_label: "describeReplicas()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation returns information about the replicas of a specific collection. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: WRSYdEZwroNY1Txpk2DcI1sSnVg
 sidebar_position: 24
 keywords: 
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
   - zilliz
   - zilliz cloud
   - cloud
@@ -64,7 +67,7 @@ A DescribeReplicasResp that contains detailed information about the replicas in 
 
 **PARAMETERS:**
 
-- **replicas** (*List/\<ReplicaInfo>*) -
+- **replicas** (*List/&lt;ReplicaInfo&gt;*) -
 
     A list of replicas, each of which contains the following fields:
 
@@ -76,11 +79,11 @@ A DescribeReplicasResp that contains detailed information about the replicas in 
 
         The ID of the specified collection.
 
-    - **partitionIDs** (*List/\<Long>*) -
+    - **partitionIDs** (*List/&lt;Long&gt;*) -
 
         The IDs of partitions associated with the current replica.
 
-    - **shardReplicas** (*List/\<ShardReplicas>*) -
+    - **shardReplicas** (*List/&lt;ShardReplicas&gt;*) -
 
         The shards associated with the current replica. Each of the shards contains the following information:
 
@@ -96,11 +99,11 @@ A DescribeReplicasResp that contains detailed information about the replicas in 
 
             The name of the channel associated with the current shard.
 
-        - **nodeIDs** (*List/\<Long>*) -
+        - **nodeIDs** (*List/&lt;Long&gt;*) -
 
             The IDs of the query nodes associated with the current shard.
 
-    - **nodeIDs** (*List/\<Long>*) -
+    - **nodeIDs** (*List/&lt;Long&gt;*) -
 
         The IDs of the query nodes associated with the current replica.
 
@@ -108,7 +111,7 @@ A DescribeReplicasResp that contains detailed information about the replicas in 
 
         The name of the resource group associated with the current replica.
 
-    - **numOutboundNode** (*Map/\<String, Integer>*) -
+    - **numOutboundNode** (*Map/&lt;String, Integer&gt;*) -
 
         The number of outbound query nodes.
 

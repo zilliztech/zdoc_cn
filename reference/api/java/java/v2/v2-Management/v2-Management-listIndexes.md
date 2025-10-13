@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "listIndexes() | Java | v2"
 slug: /java/java/v2-Management-listIndexes
 sidebar_label: "listIndexes()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the indexes of a field in a specific collection. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: OyWwdNBG1o2pTQxNDD1cLHcTnwc
 sidebar_position: 9
 keywords: 
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
+  - Embedding model
+  - image similarity search
+  - Context Window
+  - Natural language search
   - zilliz
   - zilliz cloud
   - cloud
@@ -56,7 +59,7 @@ listIndexes(ListIndexesReq.builder()
 
 **RETURNS:**
 
-*List\<String>*
+*List&lt;String&gt;*
 
 **EXCEPTIONS:**
 

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_indexes() | Python | ORM"
 slug: /python/python/utility-list_indexes
 sidebar_label: "list_indexes()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists all indexes of a specific collection. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: XLepdUCcTow6rpx5vxxcbLXZnyb
 sidebar_position: 25
 keywords: 
-  - private llms
-  - nn search
-  - llm eval
-  - Sparse vs Dense
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +47,7 @@ list_indexes(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 

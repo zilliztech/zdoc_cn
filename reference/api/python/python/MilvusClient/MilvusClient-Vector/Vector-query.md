@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "query() | Python | MilvusClient"
 slug: /python/python/Vector-query
 sidebar_label: "query()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation conducts a scalar filtering with a specified boolean expression. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: LkmSddW2NolgitxLhy9cx22Dnpe
 sidebar_position: 4
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
   - zilliz
   - zilliz cloud
   - cloud
@@ -47,19 +50,19 @@ query(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
 - **filter** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A scalar filtering condition to filter matching entities. 
 
     You can set this parameter to an empty string to skip scalar filtering. To build a scalar filtering condition, refer to [Boolean Expression Rules](https://milvus.io/docs/boolean.md). 
 
-- **output_fields** (*list[str]* | *None*) -
+- **output_fields** (*list&#91;str&#93;* | *None*) -
 
     A list of field names to include in each entity in return.
 
@@ -68,8 +71,8 @@ query(
     <Admonition type="info" icon="📘" title="Notes">
 
     <ul>
-    <li><p>Setting this as <code>output_fields=["\*"]</code> outputs all fields.</p></li>
-    <li><p>Setting this as <code>output_fields=["count(\*)"]</code> outputs the loaded entities that match the conditions specified in the <strong>filter</strong> argument. </p></li>
+    <li><p>Setting this as <code>output_fields=&#91;"\*"&#93;</code> outputs all fields.</p></li>
+    <li><p>Setting this as <code>output_fields=&#91;"count(\*)"&#93;</code> outputs the loaded entities that match the conditions specified in the <strong>filter</strong> argument. </p></li>
     </ul>
 
     </Admonition>
@@ -78,7 +81,7 @@ query(
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-- **partition_names** (*list[str]* | *None*) -
+- **partition_names** (*list&#91;str&#93;* | *None*) -
 
     A list of partition names.
 
@@ -142,7 +145,7 @@ query(
 
 **RETURN TYPE:**
 
-*list[dict]*
+*list&#91;dict&#93;*
 
 **RETURNS:**
 

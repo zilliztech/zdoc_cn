@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "insert() | Python | ORM"
 slug: /python/python/Collection-insert
 sidebar_label: "insert()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation inserts data into the current collection. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: CbCodEGY9o6pKuxowNdctUppn7d
 sidebar_position: 19
 keywords: 
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
+  - nn search
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +47,7 @@ insert(
 
 - **data** (*list* | *dict* | *pandas.DataFrame*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The data to insert into the current collection.
 

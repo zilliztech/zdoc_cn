@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "disconnect() | Python | ORM"
 slug: /python/python/Connections-disconnect
 sidebar_label: "disconnect()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation disconnects the client from the specified connection. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: IpSBdcabbosobvxQkAEcv6CvnJd
 sidebar_position: 4
 keywords: 
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
   - zilliz
   - zilliz cloud
   - cloud
@@ -40,7 +43,7 @@ disconnect(alias: str)
 
 - **alias** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A connection alias.
 

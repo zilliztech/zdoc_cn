@@ -3,6 +3,9 @@ title: "基本操作符 | Cloud"
 slug: /basic-filtering-operators
 sidebar_label: "基本操作符"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 提供了一套丰富的基本操作符，可帮助您高效地过滤和查询数据。通过这些操作符，您可以根据标量字段、数字计算、逻辑条件等细化搜索条件。了解如何使用这些操作符对于建立精确查询和最大限度地提高搜索效率至关重要。 | Cloud"
 type: origin
@@ -274,7 +277,7 @@ Zilliz Cloud 支持针对 JSON 字段是否为空进行过滤，并将符合如�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果 JSON 字段值中某些元素（例如，某些键值）为 <code>null</code>，该字段的值仍为非空。例如，某 Entity 的 JSON 字段的取值为 <code>\{"metadata": \{"category": None, "price": 99.99}}</code> 中。虽然 <code>category</code> 的值为 <code>None</code>，但该 JSON 字段的取值不会被当作 <code>null</code>。</p>
+<p>如果 JSON 字段值中某些元素（例如，某些键值）为 <code>null</code>，该字段的值仍为非空。例如，某 Entity 的 JSON 字段的取值为 <code>\&#123;"metadata": \&#123;"category": None, "price": 99.99&#125;&#125;</code> 中。虽然 <code>category</code> 的值为 <code>None</code>，但该 JSON 字段的取值不会被当作 <code>null</code>。</p>
 
 </Admonition>
 
@@ -304,7 +307,7 @@ data = [
 ]
 ```
 
-**示例 1： 获取 `metadata` 为空的 Entity**
+**示例 1： 获取 metadata 为空的 Entity**
 
 只有当不存在 `metadata` 字段或该字段显式设置为 `None` 时，才会被认定为 `null`。
 
@@ -318,7 +321,7 @@ filter = 'metadata IS NULL'
 # ]
 ```
 
-**示例 2：获取 `metadata` 为非空的 Entity**
+**示例 2：获取 metadata 为非空的 Entity**
 
 ```python
 filter = 'metadata IS NOT NULL'
@@ -368,7 +371,7 @@ data = [
 ]
 ```
 
-**示例 1： 获取 `tags` 为空的 Entity**
+**示例 1： 获取 tags 为空的 Entity**
 
 只有当不存在 `tags` 字段或该字段显式设置为 `None` 时，才会被认定为 `null`。
 
@@ -382,7 +385,7 @@ filter = 'tags IS NULL'
 # ]
 ```
 
-**示例 2：获取 `tags` 为非空的 Entity**
+**示例 2：获取 tags 为非空的 Entity**
 
 ```python
 filter = 'tags IS NOT NULL'
@@ -413,3 +416,9 @@ filter = 'history_temperatures[0] > 30'
 ## 小结{#conclusion}
 
 Zilliz Cloud 提供了一系列基本运算符，可让您灵活地过滤和查询数据。通过结合比较、范围、算术和逻辑运算符，您可以创建功能强大的过滤表达式，以缩小搜索结果的范围并高效检索所需数据。
+
+## 常见问题{#faq}
+
+**过滤条件中（例如 filter='color in &#91;"red", "green", "blue"&#93;'）匹配值列表长度是否有限制？列表过长时我该怎么办？**
+
+Zilliz Cloud 对过滤条件中的匹配值列表没有长度限制。但是过长的列表会大幅影响查询性能。因此，当您的过滤条件中匹配值列表较长或过滤表达式较为复杂且包含众多元素时，推荐使用[过滤表达式模板](./filtering-templating)以提升查询性能。

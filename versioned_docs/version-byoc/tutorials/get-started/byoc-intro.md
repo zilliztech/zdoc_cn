@@ -3,6 +3,9 @@ title: "BYOC 简介 | BYOC"
 slug: /byoc-intro
 sidebar_label: "BYOC 简介"
 beta: CONTACT SALES
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "BYOC 部署方案可以帮助有需要的组织在自己的云账户下托管应用和数据，而无须使用 Zilliz Cloud 提供的基础设施。该方案适合因特定安全合规要求而需要拥有完整数据主权的组织使用。 | BYOC"
 type: origin

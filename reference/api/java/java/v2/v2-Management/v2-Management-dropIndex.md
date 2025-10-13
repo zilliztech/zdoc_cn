@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "dropIndex() | Java | v2"
 slug: /java/java/v2-Management-dropIndex
 sidebar_label: "dropIndex()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops an index from a specific collection. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: KdFEdP8ZToYvZ1xmmQgcE62unUf
 sidebar_position: 4
 keywords: 
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - open source vector db
   - zilliz
   - zilliz cloud
   - cloud

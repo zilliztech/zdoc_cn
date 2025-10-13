@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "CreateSchema() | Java | v2"
 slug: /java/java/v2-Collections-CreateSchema
 sidebar_label: "CreateSchema()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates a collection schema. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: DAIfdXKk5oCHeNxOUvCc1KcpnNh
 sidebar_position: 23
 keywords: 
+  - image similarity search
+  - Context Window
+  - Natural language search
   - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
   - zilliz
   - zilliz cloud
   - cloud

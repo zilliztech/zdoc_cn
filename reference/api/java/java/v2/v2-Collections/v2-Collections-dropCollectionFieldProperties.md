@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "dropCollectionFieldProperties() | Java | v2"
 slug: /java/java/v2-Collections-dropCollectionFieldProperties
 sidebar_label: "dropCollectionFieldProperties()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops the specified properties of a field. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: O3E9duLvfoMC26x8AmDcomlWneh
 sidebar_position: 25
 keywords: 
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
   - zilliz
   - zilliz cloud
   - cloud

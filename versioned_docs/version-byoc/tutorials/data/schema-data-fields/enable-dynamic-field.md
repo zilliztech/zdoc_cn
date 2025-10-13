@@ -1,13 +1,16 @@
 ---
-title: "Dynamic Field | Cloud"
+title: "Dynamic Field | BYOC"
 slug: /enable-dynamic-field
 sidebar_label: "Dynamic Field"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 允许您通过 dynamic field 的特殊功能插入具有灵活、不断演进 schema 的 entity。此字段实现为名为 `$meta` 的隐藏 JSON 字段，它会自动存储数据中未在 collection schema 中明确定义的字段。 | Cloud"
+description: "Zilliz Cloud 允许您通过 dynamic field 的特殊功能插入具有灵活、不断演进 schema 的 entity。此字段实现为名为 `#meta` 的隐藏 JSON 字段，它会自动存储数据中未在 collection schema 中明确定义的字段。 | BYOC"
 type: origin
 token: C6tVwPqeBiqNCwkbdCcc9dTpnYe
-sidebar_position: 10
+sidebar_position: 12
 keywords: 
   - 向量数据库
   - zilliz
@@ -27,15 +30,15 @@ import TabItem from '@theme/TabItem';
 
 # Dynamic Field
 
-Zilliz Cloud 允许您通过 **dynamic field** 的特殊功能插入具有灵活、不断演进 schema 的 entity。此字段实现为名为 `$meta` 的隐藏 JSON 字段，它会自动存储数据中**未在 collection schema 中明确定义**的字段。
+Zilliz Cloud 允许您通过 **dynamic field** 的特殊功能插入具有灵活、不断演进 schema 的 entity。此字段实现为名为 `#meta` 的隐藏 JSON 字段，它会自动存储数据中**未在 collection schema 中明确定义**的字段。
 
 ## 工作原理{#how-it-works}
 
-当启用 dynamic field 时，Zilliz Cloud 会为每个 entity 添加一个隐藏的 `$meta` 字段。这个字段是 JSON 类型，意味着它可以存储任何与 JSON 兼容的数据结构，也可以通过 JSON 路径建立索引。
+当启用 dynamic field 时，Zilliz Cloud 会为每个 entity 添加一个隐藏的 `#meta` 字段。这个字段是 JSON 类型，意味着它可以存储任何与 JSON 兼容的数据结构，也可以通过 JSON 路径建立索引。
 
 在数据插入过程中，任何未在 schema 中声明的字段都会自动作为键值对存储在这个 dynamic field 内。
 
-您无需手动管理 `$meta`——Zilliz Cloud 会透明地处理它。
+您无需手动管理 `#meta`——Zilliz Cloud 会透明地处理它。
 
 例如，如果您的 collection schema 只定义了 `id` 和 `vector`，而您插入以下 entity：
 
@@ -75,7 +78,7 @@ Zilliz Cloud 允许您通过 **dynamic field** 的特殊功能插入具有灵活
 
 ## 支持的数据类型{#supported-data-types}
 
-Dynamic field 支持 Zilliz Cloud 提供的所有标量数据类型，包括简单和复杂值。这些数据类型适用于存储在 `$meta` 中的**键值**。
+Dynamic field 支持 Zilliz Cloud 提供的所有标量数据类型，包括简单和复杂值。这些数据类型适用于存储在 `#meta` 中的**键值**。
 
 **支持的类型包括：**
 
@@ -106,7 +109,7 @@ Dynamic field 支持 Zilliz Cloud 提供的所有标量数据类型，包括简�
 }
 ```
 
-上述每个键和值都将存储在 `$meta` 字段内。
+上述每个键和值都将存储在 `#meta` 字段内。
 
 ## 启用 dynamic field{#enable-dynamic-field}
 
@@ -292,7 +295,7 @@ curl --request POST \
 
 ## 向 collection 插入 entity{#insert-entities-to-the-collection}
 
-Dynamic field 允许您插入 schema 中未定义的额外字段。这些字段将自动存储在 `$meta` 中。
+Dynamic field 允许您插入 schema 中未定义的额外字段。这些字段将自动存储在 `#meta` 中。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
@@ -396,7 +399,7 @@ _, err = client.Insert(ctx, milvusclient.NewColumnBasedInsertOption("my_collecti
                 value: 42.5,
             },
             string_price: '99.99',
-        }`),
+        &#125;`),
     }),
 ))
 if err != nil {
@@ -459,9 +462,9 @@ Zilliz Cloud 允许您使用 **JSON 路径索引**为 dynamic field 内的特定
 
 - **JSON 转换类型**（`json_cast_type`）：Zilliz Cloud 在解释和索引指定路径处的值时应使用的数据类型。
 
-    - 此类型必须与被索引字段的实际数据类型匹配。如果您想在索引期间将数据类型转换为另一种类型，请考虑[使用转换函数](./use-json-fields#use-json-cast-functions-for-type-conversion)。
+    - 此类型必须与被索引字段的实际数据类型匹配。如果您想在索引期间将数据类型转换为另一种类型，请考虑[使用转换函数](./use-json-fields)。
 
-    - 完整列表请参见[支持的 JSON 转换类型](./use-json-fields#supported-json-cast-types)。
+    - 完整列表请参见[支持的 JSON 转换类型](./use-json-fields)。
 
 ### 通过 JSON 路径为 dynamic field 中的键建索引{#use-json-path-to-index-dynamic-field-keys}
 
@@ -650,9 +653,9 @@ jsonIndex1 := index.NewJSONPathIndex(index.AUTOINDEX, "varchar", "overview")
     .WithIndexName("overview_index")
 jsonIndex2 := index.NewJSONPathIndex(index.AUTOINDEX, "double", "words")
     .WithIndexName("words_index")
-jsonIndex3 := index.NewJSONPathIndex(index.AUTOINDEX, "varchar", `dynamic_json['varchar']`)
+jsonIndex3 := index.NewJSONPathIndex(index.AUTOINDEX, "varchar", `dynamic_json&#91;'varchar'&#93;`)
     .WithIndexName("json_varchar_index")
-jsonIndex4 := index.NewJSONPathIndex(index.AUTOINDEX, "double", `dynamic_json['nested']['value']`)
+jsonIndex4 := index.NewJSONPathIndex(index.AUTOINDEX, "double", `dynamic_json&#91;'nested'&#93;&#91;'value'&#93;`)
     .WithIndexName("json_nested_index")
 
 indexOpt1 := milvusclient.NewCreateIndexOption("my_collection", "overview", jsonIndex1)
@@ -775,7 +778,7 @@ indexParams.push({
 <TabItem value='go'>
 
 ```go
-jsonIndex5 := index.NewJSONPathIndex(index.AUTOINDEX, "double", `dynamic_json['string_price']`)
+jsonIndex5 := index.NewJSONPathIndex(index.AUTOINDEX, "double", `dynamic_json&#91;'string_price'&#93;`)
     .WithIndexName("json_string_price_index")
 indexOpt5 := milvusclient.NewCreateIndexOption("my_collection", "dynamic_json", jsonIndex5)
 ```
@@ -807,7 +810,7 @@ export stringPriceIndex='{
 
 <ul>
 <li><p>如果类型转换失败（例如值 <code>"not_a_number"</code> 无法转换为数字），该值将被跳过且不会被索引。</p></li>
-<li><p>有关转换函数参数的详细信息，请参考 <a href="./use-json-fields#use-json-cast-functions-for-type-conversion">JSON 类型</a>。</p></li>
+<li><p>有关转换函数参数的详细信息，请参考 <a href="./use-json-fields">JSON 类型</a>。</p></li>
 </ul>
 
 </Admonition>

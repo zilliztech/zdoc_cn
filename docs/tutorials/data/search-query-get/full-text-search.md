@@ -3,6 +3,9 @@ title: "Full Text Search | Cloud"
 slug: /full-text-search
 sidebar_label: "Full Text Search"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在  Zilliz Cloud 中，Full Text Search 是对基于稠密向量](./use-dense-vector)的语义搜索的补充。它能够在大规模文本集合中查找包含特定术语或短语的文本，弥补语义搜索的遗漏，从而提升整体搜索效果。它支持直接插入和使用原始文本数据进行相似性搜索，Milvus 会自动将文本转换为[稀疏向量](./use-sparse-vector)表示。Full Text Search 使用 [BM25 算法进行相关性评分，根据查询文本返回最相关的文档，从而提高文本搜索的整体精度。 | Cloud"
 type: origin
@@ -79,18 +82,18 @@ Full Text Search 简化了基于文本数据的搜索流程，无需您提前将
 
 首先，创建 Schema 并添加必要字段：
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
 from pymilvus import MilvusClient, DataType, Function, FunctionType
 
 client = MilvusClient(
-    uri=CLUSTER_ENDPOINT, # Cluster endpoint obtained from the console
-    token=TOKEN # API key or a colon-separated cluster username and password
+    uri="YOUR_CLUSTER_ENDPOINT",
+    token="YOUR_CLUSTER_TOKEN"
 )
 
-schema = MilvusClient.create_schema()
+schema = client.create_schema()
 
 schema.add_field(field_name="id", datatype=DataType.INT64, is_primary=True, auto_id=True)
 schema.add_field(field_name="text", datatype=DataType.VARCHAR, max_length=1000, enable_analyzer=True)
@@ -124,6 +127,51 @@ schema.addField(AddFieldReq.builder()
         .fieldName("sparse")
         .dataType(DataType.SparseFloatVector)
         .build());
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+import (
+    "context"
+    "fmt"
+
+    "github.com/milvus-io/milvus/client/v2/column"
+    "github.com/milvus-io/milvus/client/v2/entity"
+    "github.com/milvus-io/milvus/client/v2/index"
+    "github.com/milvus-io/milvus/client/v2/milvusclient"
+)
+
+ctx, cancel := context.WithCancel(context.Background())
+defer cancel()
+
+milvusAddr := "localhost:19530"
+client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+    Address: milvusAddr,
+})
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+defer client.Close(ctx)
+
+schema := entity.NewSchema()
+schema.WithField(entity.NewField().
+    WithName("id").
+    WithDataType(entity.FieldTypeInt64).
+    WithIsPrimaryKey(true).
+    WithIsAutoID(true),
+).WithField(entity.NewField().
+    WithName("text").
+    WithDataType(entity.FieldTypeVarChar).
+    WithEnableAnalyzer(true).
+    WithMaxLength(1000),
+).WithField(entity.NewField().
+    WithName("sparse").
+    WithDataType(entity.FieldTypeSparseVector),
+)
 ```
 
 </TabItem>
@@ -201,15 +249,15 @@ export schema='{
 
 然后，创建一个将文本转换为稀疏向量的 Function，并将其添加到 Schema 中：
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
 bm25_function = Function(
-    name="text_bm25_emb",
-    input_field_names="text", # 包含原始文本数据的 VARCHAR 字段名称
-    output_field_names="sparse", # 存储生成的向量的 SPARSE_FLOAT_VECTOR 字段名称
-    function_type=FunctionType.BM25,
+    name="text_bm25_emb", # Function name
+    input_field_names=["text"], # Name of the VARCHAR field containing raw text data
+    output_field_names=["sparse"], # Name of the SPARSE_FLOAT_VECTOR field reserved to store generated embeddings
+    function_type=FunctionType.BM25, # Set to `BM25`
 )
 
 schema.add_function(bm25_function)
@@ -229,8 +277,21 @@ schema.addFunction(Function.builder()
         .functionType(FunctionType.BM25)
         .name("text_bm25_emb")
         .inputFieldNames(Collections.singletonList("text"))
-        .outputFieldNames(Collections.singletonList("vector"))
+        .outputFieldNames(Collections.singletonList("sparse"))
         .build());
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+function := entity.NewFunction().
+    WithName("text_bm25_emb").
+    WithInputFields("text").
+    WithOutputFields("sparse").
+    WithType(entity.FunctionTypeBM25)
+schema.WithFunction(function)
 ```
 
 </TabItem>
@@ -244,7 +305,7 @@ const functions = [
       description: 'bm25 function',
       type: FunctionType.BM25,
       input_field_names: ['text'],
-      output_field_names: ['vector'],
+      output_field_names: ['sparse'],
       params: {},
     },
 ]；
@@ -325,16 +386,18 @@ export schema='{
 
 在定义包含必要字段和内置 Function 的 Schema 后，需要为 Collection 设置向量索引以加速查询。本例中使用 `AUTOINDEX` 作为 `index_type`，表示让 Zilliz Cloud 根据数据结构自动选择和配置最适合的索引类型。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
-index_params = MilvusClient.prepare_index_params()
+index_params = client.prepare_index_params()
 
 index_params.add_index(
     field_name="sparse",
+
     index_type="AUTOINDEX", 
     metric_type="BM25"
+
 )
 ```
 
@@ -345,12 +408,30 @@ index_params.add_index(
 ```java
 import io.milvus.v2.common.IndexParam;
 
+Map<String,Object> params = new HashMap<>();
+params.put("inverted_index_algo", "DAAT_MAXSCORE");
+params.put("bm25_k1", 1.2);
+params.put("bm25_b", 0.75);
+
 List<IndexParam> indexes = new ArrayList<>();
 indexes.add(IndexParam.builder()
         .fieldName("sparse")
         .indexType(IndexParam.IndexType.AUTOINDEX)
         .metricType(IndexParam.MetricType.BM25)
-        .build());
+        .extraParams(params)
+        .build());    
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+indexOption := milvusclient.NewCreateIndexOption("my_collection", "sparse",
+    index.NewAutoIndex(entity.MetricType(entity.BM25)))
+    .WithExtraParam("inverted_index_algo", "DAAT_MAXSCORE")
+    .WithExtraParam("bm25_k1", 1.2)
+    .WithExtraParam("bm25_b", 0.75)
 ```
 
 </TabItem>
@@ -362,7 +443,12 @@ const index_params = [
   {
     field_name: "sparse",
     metric_type: "BM25",
-    index_type: "AUTOINDEX",
+    index_type: "SPARSE_INVERTED_INDEX",
+    params: {
+        "inverted_index_algo": "DAAT_MAXSCORE",
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75
+    }
   },
 ];
 ```
@@ -376,7 +462,12 @@ export indexParams='[
         {
             "fieldName": "sparse",
             "metricType": "BM25",
-            "indexType": "AUTOINDEX"
+            "indexType": "AUTOINDEX",
+            "params":{
+               "inverted_index_algo": "DAAT_MAXSCORE",
+               "bm25_k1": 1.2,
+               "bm25_b": 0.75
+            }
         }
     ]'
 ```
@@ -401,18 +492,34 @@ export indexParams='[
      <td><p><code>metric_type</code></p></td>
      <td><p>设置为 <code>BM25</code> 以启用 Full Text Search 功能。</p></td>
    </tr>
+   <tr>
+     <td><p><code>params</code></p></td>
+     <td><p>特定于索引的附加参数字典。</p></td>
+   </tr>
+   <tr>
+     <td><p><code>params.inverted_index_algo</code></p></td>
+     <td><p>用于构建和查询索引的算法。有效值：</p><ul><li><p><code>"DAAT_MAXSCORE"</code>（默认）：使用最大得分（MaxScore）算法的优化文档逐次处理（DAAT）查询处理。MaxScore 通过跳过可能影响极小的词条和文档，为高 k 值或包含多个词条的查询提供更好的性能。它通过根据词条的最大影响得分将词条划分为关键和非关键组，专注于能够对前 k 个结果有贡献的词条来实现这一点。</p></li><li><p><code>"DAAT_WAND"</code>: 使用WAND算法优化的DAAT查询处理。WAND通过利用最大影响得分跳过非竞争性文档来评估更少的命中文档，但每次命中的开销较高。这使得WAND在k值较小的查询或短查询中更有效，因为在这些情况下跳过操作更可行。</p></li><li><p><code>"TAAT_NAIVE"</code>：基本的逐词（TAAT）查询处理。虽然与 <code>DAAT_MAXSCORE</code> 和 <code>DAAT_WAND</code> 相比速度较慢，但 <code>TAAT_NAIVE</code> 具有独特优势。与 DAAT 算法不同，DAAT 算法使用缓存的最大影响分数，这些分数无论全局集合参数（avgdl）如何变化都保持不变，而 <code>TAAT_NAIVE</code> 会动态适应这些变化。</p></li></ul></td>
+   </tr>
+   <tr>
+     <td><p><code>params.bm25_k1</code></p></td>
+     <td><p>控制词频饱和度。较高的值会增加词频在文档排名中的重要性。取值范围：&#91;1.2, 2.0&#93;。</p></td>
+   </tr>
+   <tr>
+     <td><p><code>params.bm25_b</code></p></td>
+     <td><p>控制文档长度归一化的程度。通常使用 0 到 1 之间的值，常见的默认值约为0.75。值为 1 表示不进行长度归一化，而值为 0 表示完全归一化。</p></td>
+   </tr>
 </table>
 
 ### 创建 Collection{#create-the-collection}
 
 使用定义的 Schema 和索引参数创建 Collection：
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
 client.create_collection(
-    collection_name='demo', 
+    collection_name='my_collection', 
     schema=schema, 
     index_params=index_params
 )
@@ -426,7 +533,7 @@ client.create_collection(
 import io.milvus.v2.service.collection.request.CreateCollectionReq;
 
 CreateCollectionReq requestCreate = CreateCollectionReq.builder()
-        .collectionName("demo")
+        .collectionName("my_collection")
         .collectionSchema(schema)
         .indexParams(indexes)
         .build();
@@ -435,11 +542,25 @@ client.createCollection(requestCreate);
 
 </TabItem>
 
+<TabItem value='go'>
+
+```go
+err = client.CreateCollection(ctx,
+    milvusclient.NewCreateCollectionOption("my_collection", schema).
+        WithIndexOptions(indexOption))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+```
+
+</TabItem>
+
 <TabItem value='javascript'>
 
 ```javascript
 await client.create_collection(
-    collection_name: 'demo', 
+    collection_name: 'my_collection', 
     schema: schema, 
     index_params: index_params,
     functions: functions
@@ -459,7 +580,7 @@ curl --request POST \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
 -d "{
-    \"collectionName\": \"demo\",
+    \"collectionName\": \"my_collection\",
     \"schema\": $schema,
     \"indexParams\": $indexParams
 }"
@@ -472,14 +593,14 @@ curl --request POST \
 
 在设置好 Collection 和索引后，即可插入文本数据。只需提供原始文本，之前定义的内置 Function 会自动为每条文本生成对应的稀疏向量。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
-client.insert('demo', [
-    {'text': 'Artificial intelligence was founded as an academic discipline in 1956.'},
-    {'text': 'Alan Turing was the first person to conduct substantial research in AI.'},
-    {'text': 'Born in Maida Vale, London, Turing was raised in southern England.'},
+client.insert('my_collection', [
+    {'text': 'information retrieval is a field of study.'},
+    {'text': 'information retrieval focuses on finding relevant information in large datasets.'},
+    {'text': 'data mining and information retrieval overlap in research.'},
 ])
 ```
 
@@ -501,9 +622,17 @@ List<JsonObject> rows = Arrays.asList(
 );
 
 client.insert(InsertReq.builder()
-        .collectionName("demo")
+        .collectionName("my_collection")
         .data(rows)
         .build());
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
 ```
 
 </TabItem>
@@ -512,7 +641,7 @@ client.insert(InsertReq.builder()
 
 ```javascript
 await client.insert({
-collection_name: 'demo', 
+collection_name: 'my_collection', 
 data: [
     {'text': 'information retrieval is a field of study.'},
     {'text': 'information retrieval focuses on finding relevant information in large datasets.'},
@@ -535,7 +664,7 @@ curl --request POST \
         {"text": "information retrieval focuses on finding relevant information in large datasets."},
         {"text": "data mining and information retrieval overlap in research."}       
     ],
-    "collectionName": "demo"
+    "collectionName": "my_collection"
 }'
 
 ```
@@ -547,18 +676,21 @@ curl --request POST \
 
 在向 Collection 插入数据后，可以使用原始查询文本执行 Full Text Search。Milvus 会自动将查询文本转换为稀疏向量，并使用 BM25 算法对匹配的搜索结果进行相关性排序。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
 search_params = {
-    'params': {'drop_ratio_search': 0.2},
+    'params': {'level': 10},
 }
 
 client.search(
-    collection_name='demo', 
+    collection_name='my_collection', 
+    # highlight-start
     data=['whats the focus of information retrieval?'],
     anns_field='sparse',
+    output_fields=['text'], # Fields to return in search results; sparse field cannot be output
+    # highlight-end
     limit=3,
     search_params=search_params
 )
@@ -574,9 +706,9 @@ import io.milvus.v2.service.vector.request.data.EmbeddedText;
 import io.milvus.v2.service.vector.response.SearchResp;
 
 Map<String,Object> searchParams = new HashMap<>();
-searchParams.put("drop_ratio_search", 0.2);
+searchParams.put("level", 10);
 SearchResp searchResp = client.search(SearchReq.builder()
-        .collectionName("demo")
+        .collectionName("my_collection")
         .data(Collections.singletonList(new EmbeddedText("whats the focus of information retrieval?")))
         .annsField("sparse")
         .topK(3)
@@ -587,15 +719,43 @@ SearchResp searchResp = client.search(SearchReq.builder()
 
 </TabItem>
 
+<TabItem value='go'>
+
+```go
+annSearchParams := index.NewCustomAnnParam()
+annSearchParams.WithExtraParam("drop_ratio_search", 0.2)
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
+    "my_collection", // collectionName
+    3,               // limit
+    []entity.Vector{entity.Text("whats the focus of information retrieval?")},
+).WithConsistencyLevel(entity.ClStrong).
+    WithANNSField("sparse").
+    WithAnnParam(annSearchParams).
+    WithOutputFields("text"))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+
+for _, resultSet := range resultSets {
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
+    fmt.Println("text: ", resultSet.GetColumn("text").FieldData().GetScalars())
+}
+```
+
+</TabItem>
+
 <TabItem value='javascript'>
 
 ```javascript
 await client.search(
-    collection_name: 'demo', 
+    collection_name: 'my_collection', 
     data: ['whats the focus of information retrieval?'],
     anns_field: 'sparse',
+    output_fields: ['text'],
     limit: 3,
-    params: {'drop_ratio_search': 0.2},
+    params: {'level': 10},
 )
 ```
 
@@ -609,7 +769,7 @@ curl --request POST \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
 --data-raw '{
-    "collectionName": "demo",
+    "collectionName": "my_collection",
     "data": [
         "whats the focus of information retrieval?"
     ],
@@ -620,7 +780,7 @@ curl --request POST \
     ],
     "searchParams":{
         "params":{
-            "drop_ratio_search":0.2
+            "level":10
         }
     }
 }'
@@ -639,19 +799,85 @@ curl --request POST \
      <td><p>包含搜索参数的字典。</p></td>
    </tr>
    <tr>
-     <td><p><code>params.drop_ratio_search</code></p></td>
+     <td></td>
      <td><p>搜索时忽略低频词的比例。详细信息请参考<a href="./use-sparse-vector">稀疏向量</a>。</p></td>
    </tr>
    <tr>
+     <td><p><code>params.level</code></p></td>
+     <td><p>使用简化的调优手段控制搜索精度。更多详情，可参考<a href="./tune-recall-rate">召回调优</a></p></td>
+   </tr>
+   <tr>
      <td><p><code>data</code></p></td>
-     <td><p>原文查询文本。</p></td>
+     <td><p>原文查询文本。Zilliz Cloud 使用 BM25 函数自动将查询请求中的文本转换成对应的稀疏向量。因此，请勿提供预算的向量。</p></td>
    </tr>
    <tr>
      <td><p><code>anns_field</code></p></td>
      <td><p>用于存储 Milvus 内部自动生成的稀疏向量的向量字段名称。</p></td>
    </tr>
    <tr>
+     <td><p><code>output_fields</code></p></td>
+     <td><p>搜索结果中要返回的字段名列表。支持<strong>除包含 BM25 生成嵌入的稀疏向量字段之外</strong>的所有字段。常见的输出字段包括主键字段（例如 id ）和原始文本字段（例如 text ）。更多信息请参考 <a href="./full-text-search#faqs">FAQ</a>。</p></td>
+   </tr>
+   <tr>
      <td><p><code>limit</code></p></td>
      <td><p>返回的匹配结果的最大数量。</p></td>
    </tr>
 </table>
+
+## 常见问题{#faqs}
+
+### 在全文搜索中，我能否输出或访问由 BM25 函数生成的稀疏向量？
+
+不行。BM25 函数生成的稀疏向量在全文搜索中无法直接访问或输出。详情如下：
+
+- BM25 函数在内部生成稀疏向量，用于排序和检索
+
+- 这些向量存储在稀疏字段中，但不能包含在输出字段中
+
+- 你只能输出原始文本字段和元数据（如id、文本）
+
+示例：
+
+```python
+# ❌ This throws an error - you cannot output the sparse field
+client.search(
+    collection_name='my_collection', 
+    data=['query text'],
+    anns_field='sparse',
+    # highlight-next-line
+    output_fields=['text', 'sparse']  # 'sparse' causes an error
+    limit=3,
+    search_params=search_params
+)
+
+# ✅ This works - output text fields only
+client.search(
+    collection_name='my_collection', 
+    data=['query text'],
+    anns_field='sparse',
+    # highlight-next-line
+    output_fields=['text']
+    limit=3,
+    search_params=search_params
+)
+```
+
+### 如果无法访问，为何还要定义稀疏向量字段呢？
+
+稀疏向量字段作为内部搜索索引，类似于用户不会直接与之交互的数据库索引。
+
+**设计原理：**
+
+- 关注点分离：你处理文本（输入/输出），Milvus处理矢量（内部处理）
+
+- 性能：预计算的稀疏矢量可在查询期间实现快速的BM25排序
+
+- 用户体验：将复杂的矢量运算抽象化，隐藏在简单的文本界面之后
+
+**如果您需要访问向量：**
+
+- 使用预计算的稀疏向量代替全文搜索
+
+- 为自定义稀疏向量工作流创建单独的 Collection
+
+详情请参考[稀疏向量](./use-sparse-vector)。

@@ -3,6 +3,9 @@ title: "项目 | Cloud"
 slug: /projects
 sidebar_label: "项目"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本章介绍项目层级的操作和设置。 | Cloud"
 type: origin

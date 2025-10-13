@@ -3,6 +3,9 @@ title: "邮箱账号 | Cloud"
 slug: /email-accounts
 sidebar_label: "邮箱账号"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 注册账户后，您可对账户信息进行管理。您可以编辑账号设置以及删除账号。 | Cloud"
 type: origin

@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "IndexType | Node.js"
 slug: /node/node/Collections-IndexType
 sidebar_label: "IndexType"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: Of5xdscL1o5Svzxy8yOckqaMnzg
 sidebar_position: 16
 keywords: 
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
-  - Video search
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - what is vector db
   - zilliz
   - zilliz cloud
   - cloud

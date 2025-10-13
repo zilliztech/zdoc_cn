@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "\_\_call\_\_() | Python"
 slug: /python/python/VoyageRerankFunction-__call__
 sidebar_label: "__call__()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation in VoyageRerankFunction takes in a query and document strings and returns a list of `RerankResult` objects with the top k documents ranked by score. | Python"
@@ -10,10 +13,10 @@ type: docx
 token: N2aHdla1Uohk1HxGyPHcdG4lnnb
 sidebar_position: 2
 keywords: 
-  - Vector embeddings
-  - Vector store
-  - open source vector database
-  - Vector index
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,7 +53,7 @@ voyage_rf(
 
     The query string to use for ranking.
 
-- `documents` (*List[str]*)
+- `documents` (*List&#91;str&#93;*)
 
     A list of document strings that will be ranked for the given query.
 
@@ -60,7 +63,7 @@ voyage_rf(
 
 **RETURN TYPE:**
 
-*List[RerankResult]*
+*List&#91;RerankResult&#93;*
 
 **RETURNS:**
 

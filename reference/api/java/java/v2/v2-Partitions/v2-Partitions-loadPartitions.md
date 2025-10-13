@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "loadPartitions() | Java | v2"
 slug: /java/java/v2-Partitions-loadPartitions
 sidebar_label: "loadPartitions()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation releases the partitions in a specified collection from memory. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: Jei2dpJMuoyOF5xTIuccfzcinOh
 sidebar_position: 6
 keywords: 
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
-  - vectordb
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud

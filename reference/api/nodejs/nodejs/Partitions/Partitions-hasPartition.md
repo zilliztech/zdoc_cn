@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "hasPartition() | Node.js"
 slug: /node/node/Partitions-hasPartition
 sidebar_label: "hasPartition()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation checks whether the specified partition exists in the specified collection. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: TVWPdTw2WoPAJYxsbGMc7MX6nEf
 sidebar_position: 4
 keywords: 
-  - semantic search
   - Anomaly Detection
   - sentence transformers
   - Recommender systems
+  - information retrieval
   - zilliz
   - zilliz cloud
   - cloud
@@ -53,13 +56,13 @@ milvusClient.hasPartition({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
 - **partition_name** (*string*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the partition to check.
 
@@ -69,7 +72,7 @@ milvusClient.hasPartition({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<BoolResponse>*
+**RETURNS** *Promise\&lt;BoolResponse&gt;*
 
 This method returns a promise that resolves to a BoolResponse object.
 

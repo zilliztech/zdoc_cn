@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "CohereRerankFunction | Python"
 slug: /python/python/Rerankers-CohereRerankFunction
 sidebar_label: "CohereRerankFunction"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "CohereRerankFunction is a class in milvusmodel that takes a query and document as input and directly returns a similarity score instead of embeddings. This functionality uses the underlying Cohere reranking model. | Python"
@@ -10,10 +13,10 @@ type: docx
 token: GAWOdft83oZPvHxtxzZcjrQunGg
 sidebar_position: 1
 keywords: 
+  - ANN Search
+  - What are vector embeddings
   - vector database tutorial
   - how do vector databases work
-  - vector db comparison
-  - openai vector db
   - zilliz
   - zilliz cloud
   - cloud

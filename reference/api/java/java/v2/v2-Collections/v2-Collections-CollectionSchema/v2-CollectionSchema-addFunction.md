@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "addFunction() | Java | v2"
 slug: /java/java/v2-CollectionSchema-addFunction
 sidebar_label: "addFunction()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation adds a function to convert raw data into vector representations. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: WI76dwejQosQWcxuhkccHOl7nXf
 sidebar_position: 4
 keywords: 
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - zilliz
   - zilliz cloud
   - cloud

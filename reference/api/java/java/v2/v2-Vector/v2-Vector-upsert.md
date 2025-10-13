@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "upsert() | Java | v2"
 slug: /java/java/v2-Vector-upsert
 sidebar_label: "upsert()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation inserts or updates data in a specific collection. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: A0UBd45iyoGah2xaFjQc4bp6n2b
 sidebar_position: 9
 keywords: 
-  - Audio similarity search
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
   - zilliz
   - zilliz cloud
   - cloud

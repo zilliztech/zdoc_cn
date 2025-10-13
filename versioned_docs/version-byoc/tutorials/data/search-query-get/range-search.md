@@ -1,10 +1,13 @@
 ---
-title: "Range Search | Cloud"
+title: "Range Search | BYOC"
 slug: /range-search
 sidebar_label: "Range Search"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Range Search 是一种通过指定搜索结果的相似度得分范围的方式提升 ANN Search 的召回质量的搜索增强方法。本节将介绍如何使用 Range Search 以及相关注意事项。 | Cloud"
+description: "Range Search 是一种通过指定搜索结果的相似度得分范围的方式提升 ANN Search 的召回质量的搜索增强方法。本节将介绍如何使用 Range Search 以及相关注意事项。 | BYOC"
 type: origin
 token: NZ3BwhuN0ip6MqkT4pQcqyO7nDd
 sidebar_position: 4
@@ -143,7 +146,7 @@ Map<String,Object> extraParams = new HashMap<>();
 extraParams.put("radius", 0.4);
 extraParams.put("range_filter", 0.6);
 SearchReq searchReq = SearchReq.builder()
-        .collectionName("range_search_collection")
+        .collectionName("my_collection")
         .data(Collections.singletonList(queryVector))
         .topK(5)
         .searchParams(extraParams)
@@ -170,7 +173,49 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 <TabItem value='go'>
 
 ```go
-// TODO 
+import (
+    "context"
+    "fmt"
+    
+    "github.com/milvus-io/milvus/client/v2/index"
+    "github.com/milvus-io/milvus/client/v2/entity"
+    "github.com/milvus-io/milvus/client/v2/milvusclient"
+)
+
+ctx, cancel := context.WithCancel(context.Background())
+defer cancel()
+
+milvusAddr := "localhost:19530"
+client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+    Address: milvusAddr,
+})
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+defer client.Close(ctx)
+
+queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
+
+annParam := index.NewCustomAnnParam()
+annParam.WithRadius(0.4)
+annParam.WithRangeFilter(0.6)
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
+    "my_collection", // collectionName
+    5,               // limit
+    []entity.Vector{entity.FloatVector(queryVector)},
+).WithConsistencyLevel(entity.ClStrong).
+    WithANNSField("vector").
+    WithAnnParam(annParam))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+
+for _, resultSet := range resultSets {
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
+}
 ```
 
 </TabItem>
@@ -187,7 +232,7 @@ const client = new MilvusClient({address, token});
 var query_vector = [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]
 
 res = await client.search({
-    collection_name: "range_search_collection",
+    collection_name: "my_collection",
     data: [query_vector],
     limit: 5,
     // highlight-start
@@ -212,13 +257,12 @@ curl --request POST \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
 -d '{
-    "collectionName": "quick_setup",
+    "collectionName": "my_collection",
     "data": [
         [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]
     ],
     "annsField": "vector",
-    "filter": "color like \"red%\" and likes > 50",
-    "limit": 3,
+    "limit": 5,
     "searchParams": {
         "params": {
             "radius": 0.4,

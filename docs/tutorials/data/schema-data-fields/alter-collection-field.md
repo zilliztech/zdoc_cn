@@ -3,11 +3,14 @@ title: "修改字段设置 | Cloud"
 slug: /alter-collection-field
 sidebar_label: "修改字段设置"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "您可以更改 Collection 字段的属性以更改列约束或强制执行更严格的数据完整性规则。 | Cloud"
 type: origin
 token: ZcogwnZR6iN4fikl98QcjQgQnQe
-sidebar_position: 13
+sidebar_position: 15
 keywords: 
   - 向量数据库
   - zilliz
@@ -88,7 +91,11 @@ client.alterCollectionField(AlterCollectionFieldReq.builder()
 <TabItem value='javascript'>
 
 ```javascript
-// TODO
+await client.alterCollectionFieldProperties({
+  collection_name: LOAD_COLLECTION_NAME,
+  field_name: 'varchar',
+  properties: { max_length: 1024 },
+});
 ```
 
 </TabItem>
@@ -96,7 +103,35 @@ client.alterCollectionField(AlterCollectionFieldReq.builder()
 <TabItem value='go'>
 
 ```go
-// TODO
+import (
+    "context"
+    "fmt"
+
+    "github.com/milvus-io/milvus/client/v2/entity"
+    "github.com/milvus-io/milvus/client/v2/milvusclient"
+    "github.com/milvus-io/milvus/pkg/v2/common"
+)
+
+ctx, cancel := context.WithCancel(context.Background())
+defer cancel()
+
+milvusAddr := "localhost:19530"
+
+client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+    Address: milvusAddr,
+})
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+defer client.Close(ctx)
+
+err = client.AlterCollectionFieldProperty(ctx, milvusclient.NewAlterCollectionFieldPropertiesOption(
+    "my_collection", "varchar").WithProperty(common.MaxLengthKey, 1024))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
 ```
 
 </TabItem>
@@ -104,7 +139,18 @@ client.alterCollectionField(AlterCollectionFieldReq.builder()
 <TabItem value='bash'>
 
 ```bash
-// TODO
+# restful
+curl --request POST \
+--url "${CLUSTER_ENDPOINT}/v2/collections/fields/alter_properties" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+--data "{
+    "collectionName": "my_collection",
+    "field_name": "varchar",
+    "properties": {
+        "max_length": "1024"
+    }
+}"
 ```
 
 </TabItem>
@@ -160,7 +206,12 @@ await client.alterCollectionFieldProperties({
 <TabItem value='go'>
 
 ```go
-// TODO
+err = client.AlterCollectionFieldProperty(ctx, milvusclient.NewAlterCollectionFieldPropertiesOption(
+    "my_collection", "array").WithProperty(common.MaxCapacityKey, 64))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
 ```
 
 </TabItem>
@@ -168,7 +219,18 @@ await client.alterCollectionFieldProperties({
 <TabItem value='bash'>
 
 ```bash
-// TODO
+# restful
+curl --request POST \
+--url "${CLUSTER_ENDPOINT}/v2/collections/fields/alter_properties" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+--data "{
+    "collectionName": "my_collection",
+    "field_name": "array",
+    "properties": {
+        "max_capacity": "64"
+    }
+}"
 ```
 
 </TabItem>
@@ -222,7 +284,12 @@ await client.alterCollectionProperties({
 <TabItem value='go'>
 
 ```go
-// TODO
+err = client.AlterCollectionFieldProperty(ctx, milvusclient.NewAlterCollectionFieldPropertiesOption(
+    "my_collection", "doc_chunk").WithProperty(common.MmapEnabledKey, true))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
 ```
 
 </TabItem>
@@ -230,7 +297,18 @@ await client.alterCollectionProperties({
 <TabItem value='bash'>
 
 ```bash
-// TODO
+# restful
+curl --request POST \
+--url "${CLUSTER_ENDPOINT}/v2/collections/fields/alter_properties" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+--data "{
+    "collectionName": "my_collection",
+    "field_name": "doc_chunk",
+    "properties": {
+        "mmap.enabled": True
+    }
+}"
 ```
 
 </TabItem>

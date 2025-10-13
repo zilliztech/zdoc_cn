@@ -9,10 +9,10 @@ token: YHQ9fF9IDlENsMd9RZucYalqnNg
 sidebar_position: 3
 sidebar_label: "MilvusClient"
 keywords: 
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
   - zilliz
   - zilliz cloud
   - cloud

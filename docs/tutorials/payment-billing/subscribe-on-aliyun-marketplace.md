@@ -3,11 +3,14 @@ title: "订阅阿里云云市场 | Cloud"
 slug: /subscribe-on-aliyun-marketplace
 sidebar_label: "订阅阿里云云市场"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里云云市场上订阅 Zilliz Cloud。 | Cloud"
 type: origin
 token: UTRZwxLf3ikwvbkXrKjcWAwOnmg
-sidebar_position: 3
+sidebar_position: 4
 keywords: 
   - 向量数据库
   - zilliz

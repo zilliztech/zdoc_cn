@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "release() | Python | ORM"
 slug: /python/python/Collection-release
 sidebar_label: "release()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation releases the data of the current collection from memory. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: CBwkdDs7MoKkVKx0kJgcPUNxn6s
 sidebar_position: 24
 keywords: 
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - vectordb
   - zilliz
   - zilliz cloud
   - cloud

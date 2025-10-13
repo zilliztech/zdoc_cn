@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "describeIndex() | Node.js"
 slug: /node/node/Management-describeIndex
 sidebar_label: "describeIndex()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation describes a specific index. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: PePIdiq9po6cplxAoF6ca5C2ntb
 sidebar_position: 3
 keywords: 
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -54,7 +57,7 @@ describeIndex(data): Promise<DescribeIndexResponse>
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
@@ -70,7 +73,7 @@ describeIndex(data): Promise<DescribeIndexResponse>
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<DescribeIndexResponse>*
+**RETURNS** *Promise\&lt;DescribeIndexResponse&gt;*
 
 This method returns a promise that resolves to a **DescribeIndexResponse** object.
 
@@ -83,7 +86,7 @@ This method returns a promise that resolves to a **DescribeIndexResponse** objec
 
 **PARAMETERS:**
 
-- **index_descriptions** (*IndexDescription[]*) -
+- **index_descriptions** (*IndexDescription&#91;&#93;*) -
 
     - **field_name** (*string*) -
 

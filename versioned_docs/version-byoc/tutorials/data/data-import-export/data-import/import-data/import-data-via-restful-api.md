@@ -1,10 +1,13 @@
 ---
-title: "通过 RESTful API 导入 | Cloud"
+title: "通过 RESTful API 导入 | BYOC"
 slug: /import-data-via-restful-api
 sidebar_label: "RESTful API"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "本文介绍如何通过 RESTful API 将数据导入现有 Collection 中。 | Cloud"
+description: "本文介绍如何通过 RESTful API 将数据导入现有 Collection 中。 | BYOC"
 type: origin
 token: FzANwnN8siARelkAp4vcJVJNnnf
 sidebar_position: 2
@@ -33,9 +36,50 @@ import Admonition from '@theme/Admonition';
 
 - 已创建 Collection，且该 Collection 的 Schema 与示例数据集相匹配。详情请参见[创建 Collection](./manage-collections-sdks)。
 
-## 通过 RESTful API 导入数据{#import-data-using-the-restful-api}
+## 从 Stage 中导入数据 | PRIVATE{#import-data-via-stage}
 
-要导入数据，需要先将数据上传到对象存储桶（如阿里云 OSS）。上传完成后，需获取文件路径和桶凭据，以便 Zilliz Cloud 从您的桶中提取数据。
+如需从 Stage 中导入数据，需要先创建 Stage 并将数据上传至该 Stage 中。在完成这些步骤后，记录文件在 Stage 中的位置，以备调用数据导入接口时使用。更多内容，可以参考[管理 Stage](./manage-stages)。
+
+您可以参考如下代码完成从 Stage 中导入数据的操作。
+
+```bash
+curl --request POST \
+--url "https://api.cloud.zilliz.com.cn/v2/vectordb/jobs/import/create" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+-d '{
+    "clusterId": "inxx-xxxxxxxxxxxxxxx",
+    "dbName": "default",
+    "collectionName": "medium_articles",
+    "partitionName": "",
+    "stageName": "my_stage",
+    "dataPaths": [
+        [
+            "1.parquet"
+        ]
+    ]
+}'
+```
+
+如果需要将数据导入到指定 Partition，需要在请求中携带 `partitionName` 参数。
+
+在 Zilliz Cloud 处理完上述请求后，您会获得一个任务 ID。使用该任务 ID，您可以在 Zilliz Cloud 控制台上监控任务的运行状态。
+
+```bash
+curl --request POST \
+     --url "https://api.cloud.zilliz.com.cn/v2/vectordb/jobs/import/getProgress" \
+     --header "Authorization: Bearer ${TOKEN}" \
+     --header "Accept: application/json" \
+     --header "Content-Type: application/json" \
+     -d '{
+        "clusterId": "inxx-xxxxxxxxxxxxxxx",
+        "jobId": "job-xxxxxxxxxxxxxxxxxxxxx"
+    }'
+```
+
+## 从外部存储导入数据{#import-data-via-external-storage}
+
+要从外部存储导入数据，需要先将数据上传到对象存储桶（如阿里云 OSS）。上传完成后，需获取文件路径和桶凭据，以便 Zilliz Cloud 从您的桶中提取数据。
 
 有关如何获取文件 URL 和访问密钥，请参见：
 
@@ -72,12 +116,12 @@ curl --request POST \
     }'
 ```
 
-在上述代码中，`${CLOUD_REGION_ID}` 代表您集群所在的云地域的 ID，`${TOKEN}` 是用于授权 API 请求的集群 API 密钥，`${CLUSTER_ID}` 是您的集群的 ID。在调用 API 时，请确保将这些占位符替换为您的实际值。您可以从集群的公共访问端点获取 `CLOUD_REGION_ID` 和 `CLUSTER_ID`。例如，在公共访问端点 **https://in03-3bf3c31f4248e22.api.ali-cn-hangzhou.cloud.zilliz.com.cn** 中，`CLOUD_REGION_ID` 是 **ali-cn-hangzhou**，`CLUSTER_ID` 是 **in03-3bf3c31f4248e22**。
+在上述代码中，`#{CLOUD_REGION_ID}` 代表您集群所在的云地域的 ID，`#{TOKEN}` 是用于授权 API 请求的集群 API 密钥，`#{CLUSTER_ID}` 是您的集群的 ID。在调用 API 时，请确保将这些占位符替换为您的实际值。您可以从集群的公共访问端点获取 `CLOUD_REGION_ID` 和 `CLUSTER_ID`。例如，在公共访问端点 **https://in03-3bf3c31f4248e22.api.ali-cn-hangzhou.cloud.zilliz.com.cn** 中，`CLOUD_REGION_ID` 是 **ali-cn-hangzhou**，`CLUSTER_ID` 是 **in03-3bf3c31f4248e22**。
 
 提交请求后，将返回任务 ID。您可以通过任务 ID 查询数据导入进度。示例代码如下：
 
 ```bash
-curl --request GET \
+curl --request POST \
      --url "https://api.cloud.zilliz.com.cn/v2/vectordb/jobs/import/getProgress" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "Accept: application/json" \

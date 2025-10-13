@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "grantRole() | Java | v2"
 slug: /java/java/v2-Authentication-grantRole
 sidebar_label: "grantRole()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation grants a role to a user. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: JB90dbBNRoz1I2xZY5rcSmJ1nSb
 sidebar_position: 12
 keywords: 
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
   - zilliz
   - zilliz cloud
   - cloud

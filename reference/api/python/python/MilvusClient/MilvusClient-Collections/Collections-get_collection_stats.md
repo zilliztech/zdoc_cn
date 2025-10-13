@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "get_collection_stats() | Python | MilvusClient"
 slug: /python/python/Collections-get_collection_stats
 sidebar_label: "get_collection_stats()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the statistics collected on a specific collection. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: VVyNdx038oECxNxMQavc9vssnoh
 sidebar_position: 13
 keywords: 
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
-  - Embedding model
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
   - zilliz
   - zilliz cloud
   - cloud
@@ -43,7 +46,7 @@ get_collection_stats(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a collection.
 
@@ -67,7 +70,7 @@ A dictionary containing collected statistics on the specified collection.
 }
 ```
 
-<Admonition type="info" icon="📘" title="**Why doesn't the row count match the number of entities inserted?**">
+<Admonition type="info" icon="📘" title="Why doesn't the row count match the number of entities inserted?">
 
 <p>The data that you insert will go through a process before it is finally saved: Initially, it will flow in as data streams. Then, it will be stored in segments as entities. Milvus will select an appropriate growing segment to store the data in streams until the segment reaches its upper limit and becomes sealed.</p>
 <p>However, it's important to note that the row count displayed may not match the number of records that were inserted because data in streams is not taken into account.</p>

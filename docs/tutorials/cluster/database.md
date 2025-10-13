@@ -3,11 +3,14 @@ title: "Database | Cloud"
 slug: /database
 sidebar_label: "Database"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 在集群和 Collection 之间引入了一层 Database，可帮助您更高效地组织和管理数据，同时满足您的多租需求。 | Cloud"
 type: origin
 token: VhSHwx56YiKY8VkRCHZcXspznbh
-sidebar_position: 6
+sidebar_position: 7
 keywords: 
   - 向量数据库
   - zilliz
@@ -116,7 +119,19 @@ await client.createDatabase({
 <TabItem value='go'>
 
 ```go
-// TODO
+cli, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+    Address: "localhost:19530",
+    Username: "Milvus",
+    Password: "root",
+})
+if err != nil {
+    // handle err
+}
+
+err = cli.CreateDatabase(ctx, milvusclient.NewCreateDatabaseOption("my_database_1"))
+if err != nil {
+    // handle err
+}
 ```
 
 </TabItem>
@@ -172,7 +187,12 @@ client.createDatabase(createDatabaseReq);
 <TabItem value='javascript'>
 
 ```javascript
-// TODO
+await client.createDatabase({
+    db_name: "my_database_2",
+    properties: {
+        "database.replica.number": 3
+    }
+});
 ```
 
 </TabItem>
@@ -180,7 +200,10 @@ client.createDatabase(createDatabaseReq);
 <TabItem value='go'>
 
 ```go
-// TODO
+err := cli.CreateDatabase(ctx, milvusclient.NewCreateDatabaseOption("my_database_2").WithProperty("database.replica.number", 3))
+if err != nil {
+    // handle err
+}
 ```
 
 </TabItem>
@@ -258,7 +281,18 @@ await client.describeDatabase({
 <TabItem value='go'>
 
 ```go
-// TODO
+// List all existing databases
+databases, err := cli.ListDatabase(ctx, milvusclient.NewListDatabaseOption())
+if err != nil {
+    // handle err
+}
+log.Println(databases)
+
+db, err := cli.DescribeDatabase(ctx, milvusclient.NewDescribeDatabaseOption("default"))
+if err != nil {
+    // handle err
+}
+log.Println(db)
 ```
 
 </TabItem>
@@ -313,6 +347,11 @@ curl --request POST \
      <td><p>boolean</p></td>
      <td><p>当前 Database 是否强制不可读。</p></td>
    </tr>
+   <tr>
+     <td></td>
+     <td><p>string</p></td>
+     <td></td>
+   </tr>
 </table>
 
 ### 修改 Database 属性{#alter-database-properties}
@@ -324,8 +363,8 @@ curl --request POST \
 
 ```python
 client.alter_database_properties(
-    db_name: "my_database_1",
-    properties: {
+    db_name="my_database_1",
+    properties={
         "database.max.collections": 10
     }
 )
@@ -358,7 +397,11 @@ await milvusClient.alterDatabaseProperties({
 <TabItem value='go'>
 
 ```go
-// TODO
+err := cli.AlterDatabaseProperties(ctx, milvusclient.NewAlterDatabasePropertiesOption("my_database_1").
+    WithProperty("database.max.collections", 1))
+if err != nil {
+    // handle err
+}
 ```
 
 </TabItem>
@@ -393,8 +436,8 @@ curl --request POST \
 
 ```python
 client.drop_database_properties(
-    db_name: "my_database_1",
-    property_keys: [
+    db_name="my_database_1",
+    property_keys=[
         "database.max.collections"
     ]
 )
@@ -427,7 +470,10 @@ await milvusClient.dropDatabaseProperties({
 <TabItem value='go'>
 
 ```go
-// TODO
+err := cli.DropDatabaseProperties(ctx, milvusclient.NewDropDatabasePropertiesOption("my_database_1", "database.max.collections"))
+if err != nil {
+    // handle err
+}
 ```
 
 </TabItem>
@@ -506,8 +552,8 @@ if err != nil {
 <TabItem value='bash'>
 
 ```bash
-# RESTful API 不支持长连接，因此不支持当前操作。
-# 如需切换目标 Database，可尝试在需要调用的接口请求中携带目标 Database 名称。
+# This operation is unsupported because RESTful does not provide a persistent connection.
+# As a workaround, initiate the required request again with the target database.
 ```
 
 </TabItem>
@@ -565,7 +611,10 @@ await milvusClient.dropDatabase({
 <TabItem value='go'>
 
 ```go
-// TODO
+err = cli.DropDatabase(ctx, milvusclient.NewDropDatabaseOption("my_database_2"))
+if err != nil {
+    // handle err
+}
 ```
 
 </TabItem>

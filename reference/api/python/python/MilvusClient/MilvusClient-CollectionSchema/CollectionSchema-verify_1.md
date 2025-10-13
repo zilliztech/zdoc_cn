@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "verify() | Python | MilvusClient"
 slug: /python/python/CollectionSchema-verify_1
 sidebar_label: "verify()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation performs final validation checks on the CollectionSchema to detect any obvious problems. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: TfV3dOYPyoKVSMxShrTc9SZ2nqh
 sidebar_position: 5
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
   - zilliz
   - zilliz cloud
   - cloud

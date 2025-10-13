@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_indexes() | Python | MilvusClient"
 slug: /python/python/Management-list_indexes
 sidebar_label: "list_indexes()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all indexes of a specific collection. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: ZqmudJWyFonUKGxAxXncYrLZn2e
 sidebar_position: 9
 keywords: 
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +47,7 @@ list_indexes(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 

@@ -1,13 +1,16 @@
 ---
-title: "恢复备份 | Cloud"
+title: "恢复备份 | BYOC"
 slug: /restore-from-snapshot
 sidebar_label: "恢复备份"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 提供的恢复功能可用于在发生意外删除、数据损坏或系统故障时，从备份文件中恢复数据，保障业务连续性。这是一种可靠的手段，可用于灾难恢复、撤销错误更改，或创建用于测试的集群副本，将业务中断最小化。 | Cloud"
+description: "Zilliz Cloud 提供的恢复功能可用于在发生意外删除、数据损坏或系统故障时，从备份文件中恢复数据，保障业务连续性。这是一种可靠的手段，可用于灾难恢复、撤销错误更改，或创建用于测试的集群副本，将业务中断最小化。 | BYOC"
 type: origin
 token: NtkswF6UEi3kB0k8XSEcOKkhnld
-sidebar_position: 3
+sidebar_position: 4
 keywords: 
   - 向量数据库
   - zilliz
@@ -21,20 +24,13 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Supademo from '@site/src/components/Supademo';
+
 # 恢复备份
 
 Zilliz Cloud 提供的恢复功能可用于在发生意外删除、数据损坏或系统故障时，从备份文件中恢复数据，保障业务连续性。这是一种可靠的手段，可用于灾难恢复、撤销错误更改，或创建用于测试的集群副本，将业务中断最小化。
 
 本文将介绍如何通过备份文件恢复**整个集群**或**部分集群数据**。
-
-<Admonition type="info" icon="📘" title="说明">
-
-<ul>
-<li><p>备份与恢复功能仅适用于 Dedicated 集群。</p></li>
-<li><p>包年包月集群暂不支持恢复备份，如有需求，请<a href="http://support.zilliz.com.cn">联系我们</a>。</p></li>
-</ul>
-
-</Admonition>
 
 ## 限制说明{#limits}
 
@@ -57,6 +53,8 @@ Zilliz Cloud 提供的恢复功能可用于在发生意外删除、数据损坏�
 ### 通过 Web 控制台{#via-web-console}
 
 以下 Demo 展示如何在 Zilliz Cloud 控制台中恢复整个集群：
+
+<Supademo id="cmcswsqmt0lro9st8cllvfbnn" title=""  />
 
 ### 通过 RESTful API{#via-restful-api}
 
@@ -97,6 +95,8 @@ curl --request POST \
 ### 通过 Web 控制台{#via-web-console}
 
 以下 Demo 展示如何在控制台中恢复指定 Database 和 Collection：
+
+<Supademo id="cmcsx430q0mhe9st81af8q8du" title=""  />
 
 ### 通过 RESTful API{#via-restful-api}
 

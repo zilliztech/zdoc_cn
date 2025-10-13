@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "grant_privilege_v2() | Python | MilvusClient"
 slug: /python/python/Authentication-grant_privilege_v2
 sidebar_label: "grant_privilege_v2()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation grants the specified privilege or privilege group to the specified role. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: EiTMdIbTgoc9vVxDHUQc1zPpnch
 sidebar_position: 11
 keywords: 
-  - RAG
-  - NLP
-  - Neural Network
-  - Deep Learning
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -48,13 +51,13 @@ grant_privilege_v2(
 
 - **role_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the role to assign privileges to.
 
 - **privilege** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the privilege to assign. 
 
@@ -62,7 +65,7 @@ grant_privilege_v2(
 
 - **collection_name** (*str*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a collection. To grant privileges regarding all collections in the current database, set this parameter to `*`. 
 

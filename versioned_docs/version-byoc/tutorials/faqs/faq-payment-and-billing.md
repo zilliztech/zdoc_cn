@@ -1,10 +1,10 @@
 ---
-title: "FAQ：支付方式与账单 | CLOUD"
+title: "FAQ：支付方式与账单 | BYOC"
 slug: /faq-payment-and-billing
 sidebar_label: "FAQ：支付方式与账单"
 beta: FALSE
 notebook: FALSE
-description: " | CLOUD"
+description: " | BYOC"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 13

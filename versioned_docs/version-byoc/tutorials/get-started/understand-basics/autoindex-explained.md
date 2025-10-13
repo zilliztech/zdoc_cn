@@ -1,10 +1,13 @@
 ---
-title: "AUTOINDEX | Cloud"
+title: "AUTOINDEX | BYOC"
 slug: /autoindex-explained
 sidebar_label: "AUTOINDEX"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "为满足用户不同需求，Zilliz Cloud 提供 2 种类型的集群 CU——性能型和容量型。但是，为不同类型 CU 集群中的 Collection 创建索引时，通常需要根据所选择的 CU 类型调整索引参数。为了方便您创建索引，免去调节参数的麻烦，Zilliz Cloud 使用 AUTOINDEX 的索引类型。 | Cloud"
+description: "为满足用户不同需求，Zilliz Cloud 提供 2 种类型的集群 CU——性能型和容量型。但是，为不同类型 CU 集群中的 Collection 创建索引时，通常需要根据所选择的 CU 类型调整索引参数。为了方便您创建索引，免去调节参数的麻烦，Zilliz Cloud 使用 AUTOINDEX 的索引类型。 | BYOC"
 type: origin
 token: YUETwzDssiTUs9kCSn4cgUYLnrd
 sidebar_position: 1
@@ -58,7 +61,7 @@ AUTOINDEX 可以在如下场景中提供较高性能：
 
 创建索引是指将 Collection 中的 Entity 按照特定顺序进行排序，以提高搜索效率。
 
-在 Zilliz Cloud 上为向量字段创建索引十分简单。您只需将索引类型设置为 `AUTOINDEX`，然后选择相似度类型即可。Zilliz Cloud 将自动为您选择最合适配置。因此，您只需要考虑相似度类型，选择如何测量向量间距离。
+在 Zilliz Cloud 上为向量字段创建索引十分简单。您只需将索引类型设置为 **AUTOINDEX**，然后选择相似度类型即可。Zilliz Cloud 将自动为您选择最合适配置。因此，您只需要考虑相似度类型，选择如何测量向量间距离。
 
 在 Milvus 和 Zilliz Cloud 上创建索引时的参数设置区别如下所示：
 

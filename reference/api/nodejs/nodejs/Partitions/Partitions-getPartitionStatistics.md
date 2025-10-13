@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "getPartitionStatistics() | Node.js"
 slug: /node/node/Partitions-getPartitionStatistics
 sidebar_label: "getPartitionStatistics()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation displays the statistics collected on a specific partition. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: XDXid6aZ8oCHnVxxFpPcKAB9n0c
 sidebar_position: 3
 keywords: 
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud
@@ -53,13 +56,13 @@ milvusClient.getPartitionStatistics({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
 - **partition_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing partition.
 
@@ -69,7 +72,7 @@ milvusClient.getPartitionStatistics({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<StatisticsResponse>*
+**RETURNS** *Promise\&lt;StatisticsResponse&gt;*
 
 This method returns a promise that resolves to a **StatisticsResponse** object.
 

@@ -6,13 +6,13 @@ notebook: false
 description: "Methods related to database operations. | Java | v2"
 type: folder
 token: Ja2Wf1J9glm6oCdCxfDc9BzPnoc
-sidebar_position: 8
+sidebar_position: 9
 sidebar_label: "Database"
 keywords: 
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - open source vector database
   - zilliz
   - zilliz cloud
   - cloud

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "JinaEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-JinaEmbeddingFunction
 sidebar_label: "JinaEmbeddingFunction"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "JinaEmbeddingFunction is a class in pymilvus that handles encoding text into embeddings using Jina AI embedding models to support embedding retrieval in Milvus. | Python"
@@ -10,10 +13,10 @@ type: docx
 token: U7NJd5eKAo0c1TxYZndcgPj2nlc
 sidebar_position: 3
 keywords: 
-  - knn algorithm
-  - HNSW
   - What is unstructured data
   - Vector embeddings
+  - Vector store
+  - open source vector database
   - zilliz
   - zilliz cloud
   - cloud

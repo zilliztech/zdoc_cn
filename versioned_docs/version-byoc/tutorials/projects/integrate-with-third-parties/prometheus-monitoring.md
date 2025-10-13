@@ -1,13 +1,16 @@
 ---
-title: "Prometheus 监控 | Cloud"
+title: "Prometheus 监控 | BYOC"
 slug: /prometheus-monitoring
 sidebar_label: "Prometheus"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Prometheus 监控系统能够在指定的时间间隔内从配置的目标收集指标，评估规则表达式，展示结果，并根据特定条件触发告警。 | Cloud"
+description: "Prometheus 监控系统能够在指定的时间间隔内从配置的目标收集指标，评估规则表达式，展示结果，并根据特定条件触发告警。 | BYOC"
 type: origin
 token: LVC1wq5Qginkeskq2G0c0Z8WnPc
-sidebar_position: 2
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz

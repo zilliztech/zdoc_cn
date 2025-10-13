@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "getIndexBuildProgress() | Node.js"
 slug: /node/node/Management-getIndexBuildProgress
 sidebar_label: "getIndexBuildProgress()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation gets the build progress of the specified index. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: G6CGdbM4QoNgr5xS1ZAc94lhnFd
 sidebar_position: 9
 keywords: 
-  - Zilliz
-  - milvus vector database
-  - milvus db
-  - milvus vector db
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
   - zilliz
   - zilliz cloud
   - cloud
@@ -54,19 +57,19 @@ milvusClient.getIndexBuildProgress({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
 - **index_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the target index. This parameter and `field_name` are mutually exclusive. 
 
 - **field_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the target field. This parameter and `index_name` are mutually exclusive. When you use this parameter, ensure that an index has been built upon the specified field.
 
@@ -74,7 +77,7 @@ milvusClient.getIndexBuildProgress({
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<GetIndexBuildProgressResponse>*
+**RETURNS** *Promise\&lt;GetIndexBuildProgressResponse&gt;*
 
 This method returns a promise that resolves to a **GetIndexBuildProgressResponse** object.
 

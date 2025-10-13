@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "dropPartition() | Java | v2"
 slug: /java/java/v2-Partitions-dropPartition
 sidebar_label: "dropPartition()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a specified partition from the current collection. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: JTdSdyToooA6Srx2HolcmTPunoe
 sidebar_position: 2
 keywords: 
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
-  - information retrieval
+  - cosine distance
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
   - zilliz
   - zilliz cloud
   - cloud

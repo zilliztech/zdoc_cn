@@ -1,13 +1,16 @@
 ---
-title: "一致性水平 | Cloud"
+title: "一致性水平 | BYOC"
 slug: /consistency-level
 sidebar_label: "一致性水平"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "作为一款分布式向量数据库，Zilliz Cloud 提供了多种一致性水平来确保在数据读写期间每个节点或副本都能获取到相同的数据。当前，支持使用的一致性水平包括 Strong、Bounded、Eventually 。其中，Bounded 是默认使用的一致性水平。 | Cloud"
+description: "作为一款分布式向量数据库，Zilliz Cloud 提供了多种一致性水平来确保在数据读写期间每个节点或副本都能获取到相同的数据。当前，支持使用的一致性水平包括 Strong、Bounded、Eventually 。其中，Bounded 是默认使用的一致性水平。 | BYOC"
 type: origin
 token: IJhRwKG2Qi8m1skZoD7ckUkxnBe
-sidebar_position: 16
+sidebar_position: 17
 keywords: 
   - 向量数据库
   - zilliz
@@ -70,17 +73,17 @@ Zilliz Cloud 是一个存储计算分离的系统。其中，DataNodes 负责数
 
 ### 在创建 Collection 中指定一致性水平{#set-consistency-level-upon-creating-collection}
 
-在创建 Collection 时，您可以指定在该 Collection 中进行搜索和查询时使用的一致性水平。如下示例将 Collection 的一致性水平设置为 **Strong**。
+在创建 Collection 时，您可以指定在该 Collection 中进行搜索和查询时使用的一致性水平。如下示例将 Collection 的一致性水平设置为 **Bounded**。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
 client.create_collection(
     collection_name="my_collection",
     schema=schema,
-    # highlight-next
-    consistency_level="Strong",
+    # highlight-next-line
+    consistency_level="Bounded",
 )
 ```
 
@@ -92,10 +95,24 @@ client.create_collection(
 CreateCollectionReq createCollectionReq = CreateCollectionReq.builder()
         .collectionName("my_collection")
         .collectionSchema(schema)
-        // highlight-next
-        .consistencyLevel(ConsistencyLevel.STRONG)
+        // highlight-next-line
+        .consistencyLevel(ConsistencyLevel.Bounded)
         .build();
 client.createCollection(createCollectionReq);
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+err = client.CreateCollection(ctx,
+    milvusclient.NewCreateCollectionOption("my_collection", schema).
+        WithConsistencyLevel(entity.ClBounded))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
 ```
 
 </TabItem>
@@ -108,12 +125,12 @@ export schema='{
         "enabledDynamicField": false,
         "fields": [
             {
-                "fieldName": "my_id",
+                "fieldName": "id",
                 "dataType": "Int64",
                 "isPrimary": true
             },
             {
-                "fieldName": "my_vector",
+                "fieldName": "vector",
                 "dataType": "FloatVector",
                 "elementTypeParams": {
                     "dim": "5"
@@ -131,7 +148,7 @@ export schema='{
     }'
 
 export params='{
-    "consistencyLevel": "Strong"
+    "consistencyLevel": "Bounded"
 }'
 
 curl --request POST \
@@ -154,7 +171,7 @@ curl --request POST \
 
 您可以在某个具体的 Search 请求中修改需要使用的一致性水平。如下示例将当前 Search 请求使用的一致性水平设置为 Customized，并指定了 QueryNodes 在执行该 Search 请求时需要参考的 GuaranteeTs。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -187,6 +204,23 @@ SearchResp searchResp = client.search(searchReq);
 
 </TabItem>
 
+<TabItem value='go'>
+
+```go
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
+    "my_collection", // collectionName
+    3,               // limit
+    []entity.Vector{entity.FloatVector(queryVector)},
+).WithConsistencyLevel(entity.ClBounded).
+    WithANNSField("vector"))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+```
+
+</TabItem>
+
 <TabItem value='bash'>
 
 ```bash
@@ -213,7 +247,7 @@ curl --request POST \
 
 您可以在某个具体的 Query 请求中修改使用的一致性水平。如下示例将当前 Query 请求使用的一致性水平设置为 Customized，并指定了 QueryNodes 在执行该 Query 请求时需要参考的 GuaranteeTs。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -223,7 +257,7 @@ res = client.query(
     output_fields=["vector", "color"],
     limit=3，
     # highlight-start
-    consistency_level="Eventually",
+    consistency_level="Bounded",
     # highlight-next
 )
 ```
@@ -238,10 +272,43 @@ QueryReq queryReq = QueryReq.builder()
         .filter("color like \"red%\"")
         .outputFields(Arrays.asList("vector", "color"))
         .limit(3)
-        .consistencyLevel(ConsistencyLevel.EVENTUALLY)
+        .consistencyLevel(ConsistencyLevel.Bounded)
         .build();
         
  QueryResp getResp = client.query(queryReq);
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+resultSet, err := client.Query(ctx, milvusclient.NewQueryOption("my_collection").
+    WithFilter("color like \"red%\"").
+    WithOutputFields("vector", "color").
+    WithLimit(3).
+    WithConsistencyLevel(entity.ClBounded))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+curl --request POST \
+--url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+-d '{
+    "collectionName": "my_collection",
+    "filter": "color like \"red_%\"",
+    "consistencyLevel": "Bounded",
+    "limit": 3
+}'
 ```
 
 </TabItem>

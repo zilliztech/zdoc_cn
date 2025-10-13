@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "create_index() | Python | ORM"
 slug: /python/python/Collection-create_index
 sidebar_label: "create_index()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This creates a named index for a target field, which can either be a vector field or a scalar field. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: J76vdPHNgoyp2wxAiTcceIVJnOe
 sidebar_position: 4
 keywords: 
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
-  - vector database
+  - RAG
+  - NLP
+  - Neural Network
+  - Deep Learning
   - zilliz
   - zilliz cloud
   - cloud

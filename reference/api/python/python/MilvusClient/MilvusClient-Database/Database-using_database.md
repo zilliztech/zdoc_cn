@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "using_database() | Python | MilvusClient"
 slug: /python/python/Database-using_database
 sidebar_label: "using_database()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation changes the database currently in use. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: OCfid8DdPo1ga1x24JZcV92xnwd
 sidebar_position: 7
 keywords: 
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud
@@ -49,7 +52,7 @@ using_database(
 
 - **db_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     Name of the database to use.
 

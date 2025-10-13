@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "getField() | Java | v2"
 slug: /java/java/v2-CollectionSchema-getField
 sidebar_label: "getField()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation gets the details of a specific field, including schema information. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: AXWod56QkoprlXxOXkwcPXfonHg
 sidebar_position: 3
 keywords: 
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
   - zilliz
   - zilliz cloud
   - cloud

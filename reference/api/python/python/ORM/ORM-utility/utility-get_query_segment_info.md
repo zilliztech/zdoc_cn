@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "get_query_segment_info() | Python | ORM"
 slug: /python/python/utility-get_query_segment_info
 sidebar_label: "get_query_segment_info()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation gets information about the sealed and growing segments in the query cluster. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: CB9edh2ySoJyWhxBoLcchPj9nxg
 sidebar_position: 14
 keywords: 
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +47,7 @@ get_query_segment_info(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 

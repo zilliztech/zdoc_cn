@@ -3,6 +3,9 @@ title: "管理组织用户 | Cloud"
 slug: /organization-users
 sidebar_label: "管理组织用户"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，一个组织通常代表一家公司。您可以邀请员工加入您的组织，并根据他们的工作职能分配角色。这些角色决定了用户对特定资源的访问权限以及他们能执行的操作。例如，开发者通常需要访问数据的权限，但不需要管理账单的权限。 | Cloud"
 type: origin
@@ -95,7 +98,7 @@ Zilliz Cloud 提供 3 种组织角色。这些角色无法修改或删除。
 
 如果您的组织角色为**组织成员**或**组织账单管理员**，您只能在邀请新用户时授予他们**组织成员**的角色。
 
-被邀请的用户将收到邀请邮件，并需要在 48 小时内接受邀请以加入组织。
+被邀请的用户将收到邀请邮件，并需要在 48 小时内接受邀请以加入组织。或者，您也可以直接从 Web 控制台复制邀请链接并分享给被邀请人。
 
 <Admonition type="info" icon="📘" title="说明">
 

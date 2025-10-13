@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "query() | Python | ORM"
 slug: /python/python/Partition-query
 sidebar_label: "query()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation conducts a query on the entity scalar field(s) with a boolean expression. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: N97pdfkjlo9j61xrtL2cbB79nKe
 sidebar_position: 8
 keywords: 
-  - open source vector db
-  - vector database example
-  - rag vector database
-  - what is vector db
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,11 +48,11 @@ query(
 
 - **expr** (*string*) -
 
-    **[REQUIRED]** 
+    **&#91;REQUIRED&#93;** 
 
     A boolean expression to filter the entity scalar fields.
 
-- **output_fields** (List[str] | *None*) -
+- **output_fields** (List&#91;str&#93; | *None*) -
 
     A list of the names of fields that has to be contained in the output. Setting this to **None** indicates that this operation only outputs the primary key field.
 

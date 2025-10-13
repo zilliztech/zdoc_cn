@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "grantRole() | Node.js"
 slug: /node/node/Authentication-grantRole
 sidebar_label: "grantRole()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation grants a role to a user. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: LPJsdEnvwo6apcxjhZgc3rpDnuc
 sidebar_position: 14
 keywords: 
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -48,13 +51,13 @@ milvusClient.grantRole({
 
 - **username** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing user.
 
 - **roleName** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the role to assign.
 
@@ -64,7 +67,7 @@ milvusClient.grantRole({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

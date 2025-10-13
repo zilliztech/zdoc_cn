@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "alter_index_properties() | Python | MilvusClient"
 slug: /python/python/Management-alter_index_properties
 sidebar_label: "alter_index_properties()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation changes the specified index properties. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: TRFadKWOAofCVoxH3qYcdTvynHf
 sidebar_position: 14
 keywords: 
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
   - zilliz
   - zilliz cloud
   - cloud
@@ -61,7 +64,7 @@ alter_index_properties(
 
         Whether to enable mmap for the specified index. Setting this to `true` offloads the specified index onto the disk. For details, refer to [Use mmap](/docs/use-mmap)
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 

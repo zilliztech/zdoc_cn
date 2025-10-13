@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "loadCollection() | Java | v2"
 slug: /java/java/v2-Management-loadCollection
 sidebar_label: "loadCollection()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation loads the data of a specific collection into memory. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: XEWvdbuFHoLOo7xKrAJcqip6n5J
 sidebar_position: 10
 keywords: 
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
   - zilliz
   - zilliz cloud
   - cloud

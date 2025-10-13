@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "has_partition() | Python | ORM"
 slug: /python/python/utility-has_partition
 sidebar_label: "has_partition()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation checks whether a partition exists. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: KsmadNcXRoElO2xJi5HcJO57nwb
 sidebar_position: 18
 keywords: 
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
-  - vectordb
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,14 +48,14 @@ has_partition(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
     The name of an existing collection.
 
     Setting this to a non-existing collection results in a **MilvusException**.
 
 - **partition_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
     The name of a partition.
 
 - **using** (*str*) - 

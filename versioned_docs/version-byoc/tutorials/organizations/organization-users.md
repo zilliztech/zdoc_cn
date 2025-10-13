@@ -1,10 +1,13 @@
 ---
-title: "管理组织用户 | Cloud"
+title: "管理组织用户 | BYOC"
 slug: /organization-users
 sidebar_label: "管理组织用户"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "在 Zilliz Cloud 中，一个组织通常代表一家公司。您可以邀请员工加入您的组织，并根据他们的工作职能分配角色。这些角色决定了用户对特定资源的访问权限以及他们能执行的操作。例如，开发者通常需要访问数据的权限，但不需要管理账单的权限。 | Cloud"
+description: "在 Zilliz Cloud 中，一个组织通常代表一家公司。您可以邀请员工加入您的组织，并根据他们的工作职能分配角色。这些角色决定了用户对特定资源的访问权限以及他们能执行的操作。例如，开发者通常需要访问数据的权限，但不需要管理账单的权限。 | BYOC"
 type: origin
 token: PzjhwZkgqiiVmakWT03c8VDAnTh
 sidebar_position: 1
@@ -53,7 +56,7 @@ Zilliz Cloud 提供 3 种组织角色。这些角色无法修改或删除。
          <th><p><strong>数据面 RESTful API (V2) 权限</strong></p></th>
        </tr>
        <tr>
-         <td><ul><li><p>管理组织中的所有项目</p></li><li><p>管理<a href="./payment-billing">支付方式与账单</a></p></li><li><p>管理 <a href="./manage-api-keys">API 密钥</a></p></li><li><p><a href="./organization-users">管理组织用户</a></p></li><li><p><a href="./manage-organization-alerts">管理组织告警</a></p></li><li><p><a href="./view-activities">查看事件</a></p></li><li><p><a href="./organization-settings">管理组织设置</a></p></li><li><p><a href="./use-recycle-bin">使用回收站</a></p></li><li><p>以及<a href="./project-users#project-roles">项目管理员</a>和<a href="./cluster-roles">集群 Admin</a> 的所有权限</p></li></ul></td>
+         <td><ul><li><p>管理组织中的所有项目</p></li><li><p>管理 <a href="./manage-api-keys">API 密钥</a></p></li><li><p><a href="./organization-users">管理组织用户</a></p></li><li><p><a href="./manage-organization-alerts">管理组织告警</a></p></li><li><p><a href="./view-activities">查看事件</a></p></li><li><p><a href="./organization-settings">管理组织设置</a></p></li><li><p><a href="./use-recycle-bin">使用回收站</a></p></li><li><p>以及<a href="./project-users#project-roles">项目管理员</a>和<a href="./cluster-roles">集群 Admin</a> 的所有权限</p></li></ul></td>
          <td><p><a href="/reference/restful/control-plane-v2">所有控制面操作</a></p></td>
          <td><p><a href="/reference/restful/data-plane-v2">所有数据面操作</a></p></td>
        </tr>
@@ -70,8 +73,8 @@ Zilliz Cloud 提供 3 种组织角色。这些角色无法修改或删除。
          <th><p><strong>数据面 RESTful API (V2) 权限</strong></p></th>
        </tr>
        <tr>
-         <td><ul><li><p>管理<a href="./payment-billing">支付方式与账单</a></p></li><li><p>查看 <a href="./manage-api-keys">API 密钥</a></p></li><li><p>邀请<a href="./organization-users">组织用户</a></p></li><li><p>查看<a href="./organization-settings">组织设置</a></p></li></ul></td>
-         <td><ul><li><p><a href="/reference/restful/list-invoices-v2">查看发票列表</a></p></li><li><p><a href="/reference/restful/describe-invoice-v2">查看发票详情</a></p></li><li><p><a href="/reference/restful/query-daily-usage-v2">查询日用量</a></p></li></ul></td>
+         <td><ul><li><p>查看 <a href="./manage-api-keys">API 密钥</a></p></li><li><p>邀请<a href="./organization-users">组织用户</a></p></li><li><p>查看<a href="./organization-settings">组织设置</a></p></li></ul></td>
+         <td><ul><li><a href="/reference/restful/query-daily-usage-v2">查询日用量</a></li></ul></td>
          <td><p>数据面权限取决于<a href="./project-users#project-roles">项目</a>和<a href="./cluster-roles">集群角色</a>。但通常组织账单管理员不需要数据面的权限。</p></td>
        </tr>
     </table>
@@ -95,7 +98,7 @@ Zilliz Cloud 提供 3 种组织角色。这些角色无法修改或删除。
 
 如果您的组织角色为**组织成员**或**组织账单管理员**，您只能在邀请新用户时授予他们**组织成员**的角色。
 
-被邀请的用户将收到邀请邮件，并需要在 48 小时内接受邀请以加入组织。
+被邀请的用户将收到邀请邮件，并需要在 48 小时内接受邀请以加入组织。或者，您也可以直接从 Web 控制台复制邀请链接并分享给被邀请人。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -139,13 +142,5 @@ Zilliz Cloud 提供 3 种组织角色。这些角色无法修改或删除。
 
 </Admonition>
 
-您可以通过以下任一种方式离开组织：
-
-- 在组织列表页面离开组织。
-
-    ![zh-leave-organization](/img/zh-leave-organization.png)
-
-- 进入一个组织，在**组织用户**页面离开组织。
-
-    ![leave-organization-zh](/img/leave-organization-zh.png)
+![leave-organization-zh](/img/leave-organization-zh.png)
 

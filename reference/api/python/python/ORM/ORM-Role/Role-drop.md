@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "drop() | Python | ORM"
 slug: /python/python/Role-drop
 sidebar_label: "drop()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation drops an existing role. The operation will succeed if the specified role exists. Otherwise, this operation will fail. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: KEzNdJPoDoHOjlx2FC8cNcHqngg
 sidebar_position: 3
 keywords: 
-  - Annoy vector search
-  - milvus
-  - Zilliz
-  - milvus vector database
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud

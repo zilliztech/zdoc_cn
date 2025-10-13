@@ -3,6 +3,9 @@ title: "首页 | Cloud"
 slug: /home
 sidebar_label: "首页"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "此页为 Zilliz Cloud 开发者中心的首页。 | Cloud"
 type: origin
@@ -32,7 +35,7 @@ import Banner from '@site/src/components/Banner';
 
 <Hero>
 
-# 欢迎来到 Zilliz Cloud 开发者中心!
+# 欢迎来到 Zilliz Cloud 开发者中心
 
 Zilliz Cloud 提供完全托管的 Milvus 服务，简化您的向量检索应用的部署和扩缩容流程，并提供相应的安全保障，从而将您从复杂运维流程中解放出来。[了解更多](./get-started)。
 
@@ -64,7 +67,7 @@ Zilliz Cloud 提供如下版本供您订阅：
 
 1. 创建并连接您的 Zilliz Cloud 集群。
 
-    您需要[创建一个集群](./create-cluster)，并为您分配合适的计算和存储资源，然后[连接这个集群](./connect-to-cluster)。
+    您需要[创建一个集群](./create-cluster_1)，并为您分配合适的计算和存储资源，然后[连接这个集群](./connect-to-cluster)。
 
 1. 创建 Collection。
 

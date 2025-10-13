@@ -1,10 +1,13 @@
 ---
-title: "Load 和 Release | Cloud"
+title: "Load 和 Release | BYOC"
 slug: /load-release-collections
 sidebar_label: "Load 和 Release"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "对 Collection 执行 Load 操作是在 Collection 中进行 Search 和 Query 的前提条件。本节主要介绍如何 Load 和 Release Collection。 | Cloud"
+description: "对 Collection 执行 Load 操作是在 Collection 中进行 Search 和 Query 的前提条件。本节主要介绍如何 Load 和 Release Collection。 | BYOC"
 type: origin
 token: G7jYwhWH4iVtGakm2BHcGuzIn3f
 sidebar_position: 7
@@ -31,7 +34,7 @@ import TabItem from '@theme/TabItem';
 
 ## Load Collection{#load-collection}
 
-在加载 Collection 时，Zilliz Cloud 会将所有向量列的索引文件和所有标量列的数据加载到QueryNode，从而快速响应搜索和查询请求。在 Collection 加载后插入的数据会自动完成索引和加载。
+在加载 Collection 时，Zilliz Cloud 会将所有向量列的索引文件和所有标量列的数据加载到内存，从而快速响应搜索和查询请求。在 Collection 加载后插入的数据会自动完成索引和加载。
 
 您可以参考如下代码 Load Collection。
 
@@ -230,7 +233,7 @@ curl --request POST \
 
 为了节约内存资源，您可以选择让 Zilliz Cloud 仅加载参与 Search 和 Query 的部分字段，提升搜索性能。
 
-如下代码中假设名为 **customized_setup_1** 的 Collection 中有名为 **my_id** 和 **my_vector** 两个字段。
+如下代码中假设名为 **my_collection** 的 Collection 中有名为 **my_id** 和 **my_vector** 两个字段。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
@@ -337,7 +340,7 @@ fmt.Println(state)
 
 需要注意的是，当您选择只加载部分字段时，只有在 `load_fields` 中的字段可以做为过滤条件（filter）和输出字段（Output Fields）使用。请务必在 `load_fields` 包含主键和至少一个已创建索引的向量字段。
 
-您还可以使用 `skip_load_dynamic_field` 来决定是否加载 Dynamic Field。Dynamic Field 是一个名为 **$meta** 的预留 JSON 字段，用于以键值对的形式存放各 Entity 中所有未在 Schema 中定义的字段及其值。在加载 Dynamic Field 时，字段中所有键都会被加载，并可用于过滤和输出。如果 Dynamic Field 中的键无须参与过滤或输出，您可以将 `skip_load_dynamic_field` 设置为 `True`。
+您还可以使用 `skip_load_dynamic_field` 来决定是否加载 Dynamic Field。Dynamic Field 是一个名为 **&#36;meta** 的预留 JSON 字段，用于以键值对的形式存放各 Entity 中所有未在 Schema 中定义的字段及其值。在加载 Dynamic Field 时，字段中所有键都会被加载，并可用于过滤和输出。如果 Dynamic Field 中的键无须参与过滤或输出，您可以将 `skip_load_dynamic_field` 设置为 `True`。
 
 如果在执行本操作后需要 Load 更多字段，请务必先对 Collection 执行 Release 操作，避免因索引结构发生变化而引发系统报错。
 

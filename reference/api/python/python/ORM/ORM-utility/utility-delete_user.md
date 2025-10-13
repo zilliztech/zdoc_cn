@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "delete_user() | Python | ORM"
 slug: /python/python/utility-delete_user
 sidebar_label: "delete_user()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation deletes an existing user. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: E7zOdU2JpoqaU5xNYXvcAjgPnNh
 sidebar_position: 6
 keywords: 
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
-  - lexical search
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,13 +48,13 @@ delete_user(
 
 - **user** (*string*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the new user to delete.
 
 - **password** (*string*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The corresponding password to the new user to create.
 

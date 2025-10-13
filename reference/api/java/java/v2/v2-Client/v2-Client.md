@@ -9,10 +9,10 @@ token: QW8NfURhvl0NtOdmS3DcvQYCnFh
 sidebar_position: 1
 sidebar_label: "Client"
 keywords: 
-  - vector database
-  - IVF
-  - knn
-  - Image Search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
   - zilliz
   - zilliz cloud
   - cloud

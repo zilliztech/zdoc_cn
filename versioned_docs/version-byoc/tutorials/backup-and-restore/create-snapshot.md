@@ -1,10 +1,13 @@
 ---
-title: "创建备份 | Cloud"
+title: "创建备份 | BYOC"
 slug: /create-snapshot
 sidebar_label: "创建备份"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "在 Zilliz Cloud 中，备份指的是数据副本，用于在发生数据丢失或系统故障时恢复整个集群或集群中的部分 Collection。 | Cloud"
+description: "在 Zilliz Cloud 中，备份指的是数据副本，用于在发生数据丢失或系统故障时恢复整个集群或集群中的部分 Collection。 | BYOC"
 type: origin
 token: GFFswc3z1iQtjQkpmyScL00dnSx
 sidebar_position: 1
@@ -21,19 +24,13 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Supademo from '@site/src/components/Supademo';
+
 # 创建备份
 
 在 Zilliz Cloud 中，备份指的是数据副本，用于在发生数据丢失或系统故障时恢复整个集群或集群中的部分 Collection。
 
-创建备份会产生额外[费用](./understand-cost#backup-costs)，按备份存储所在的云地域计费。所有备份文件均存储在与源集群相同的云地域。例如，部署在`阿里云华东1（杭州）`的集群，其备份也将保存在`阿里云华东1（杭州）`。
-
 本文将介绍如何**手动创建备份**。如需自动创建备份，请参见[创建自动备份](./schedule-automatic-backups)。
-
-<Admonition type="info" icon="📘" title="说明">
-
-<p>备份与恢复功能仅适用于 Dedicated 集群。</p>
-
-</Admonition>
 
 ## 限制说明{#limits}
 
@@ -51,9 +48,13 @@ import Admonition from '@theme/Admonition';
 
 - **备份任务限制**：
 
-    - 自动备份执行期间无法发起手动备份。
+    - 在所有手动备份任务中，只有一个任务可以处于激活或挂起状态。
 
-    - 若当前有手动备份正在进行，自动备份仍将按计划执行。
+    - 如果开启了自动备份：
+
+        - 若当前有自动备份正在运行，无法启动手动备份任务。
+
+        - 若当前有手动备份正在进行，自动备份仍将按计划执行。
 
 ## 创建集群备份{#create-cluster-backup}
 
@@ -62,6 +63,8 @@ import Admonition from '@theme/Admonition';
 ### 通过 Web 控制台{#via-web-console}
 
 以下 Demo 展示如何通过 Zilliz Cloud 控制台创建集群备份。
+
+<Supademo id="cmcsuck620is09st88znq9ysd?utm_source=link" title=""  />
 
 ### 通过 RESTful API{#via-restful-api}
 
@@ -97,6 +100,8 @@ curl --request POST \
 ### 通过 Web 控制台{#via-web-console}
 
 以下 Demo 展示如何通过控制台创建 Collection 备份。
+
+<Supademo id="cmcsuwoo20jn49st8cbnydkj0?utm_source=link" title=""  />
 
 ### 通过 RESTful API{#via-restful-api}
 

@@ -3,6 +3,9 @@ title: "Milvus 集群依赖和磁盘扩缩容 | On-Premise"
 slug: /scale-deps-and-storage
 sidebar_label: "依赖和磁盘扩缩容"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Milvus 集群的正常运行依赖多个三方组件，包括 Pulsar、etcd 等。本节主要介绍如何对这些 Milvus 集群依赖的三方组件和 Milvus 集群的磁盘进行扩缩容。 | On-Premise"
 type: origin

@@ -3,6 +3,9 @@ title: "创建阿里云私网连接（Private Link） | Cloud"
 slug: /setup-a-private-link-alicloud
 sidebar_label: "创建阿里云私网连接（Private Link）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本小节主要介绍如何在您的阿里云 VPC 和您托管在阿里云上的 Zilliz Cloud 集群之间建立私网连接。 | Cloud"
 type: origin
@@ -55,7 +58,7 @@ import Admonition from '@theme/Admonition';
 
 本节将按照配置思路详细介绍如何为您的 Zilliz Cloud 阿里云集群创建私网连接。
 
-登陆 Zilliz Cloud，选择合适的项目。在项目左侧导航栏中选择**网络 > 私网连接**，并单击**创建 Private Endpoint**。
+登陆 Zilliz Cloud，选择合适的项目。在项目左侧导航栏中选择**网络 &gt; 私网连接**，并单击**创建 Private Endpoint**。
 
 ![zh-create-private-link](/img/zh-create-private-link.png)
 
@@ -300,3 +303,7 @@ import Admonition from '@theme/Admonition';
 
 ![disable_public_endpoint_cn](/img/disable_public_endpoint_cn.png)
 
+## 常见问题{#faq}
+
+**能否为已有集群创建 Private Endpoint？**
+可以。当您创建 Private Endpoint 后，它将自动适用于同一项目下且部署在同一个云服务地域的所有 Dedicated 集群。您只需为不同的集群添加对应的 DNS 记录即可。

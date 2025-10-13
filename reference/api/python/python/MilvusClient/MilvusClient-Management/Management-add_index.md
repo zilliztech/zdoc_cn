@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "add_index() | Python | MilvusClient"
 slug: /python/python/Management-add_index
 sidebar_label: "add_index()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation adds index parameters for a specific field in a collection. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: Sz9rdDNxIodGENxMfFEcurLHnTe
 sidebar_position: 1
 keywords: 
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud

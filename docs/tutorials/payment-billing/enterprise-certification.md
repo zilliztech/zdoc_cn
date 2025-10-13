@@ -3,11 +3,14 @@ title: "企业认证 | Cloud"
 slug: /enterprise-certification
 sidebar_label: "企业认证"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 现已开通企业认证渠道。如需进行现金充值，您需要先通过企业认证。本章主要介绍如何在 Zilliz Cloud 界面上申请企业认证。 | Cloud"
 type: origin
 token: VRLOw9Mc7iPWnCkZs2YcoGwSnLh
-sidebar_position: 1
+sidebar_position: 2
 keywords: 
   - 向量数据库
   - zilliz

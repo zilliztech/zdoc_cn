@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "dropDatabase() | Java | v2"
 slug: /java/java/v2-Database-dropDatabase
 sidebar_label: "dropDatabase()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a database with a name. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: LwqSdN6s5oZBhAxzQsxcnXswnah
 sidebar_position: 4
 keywords: 
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
   - zilliz
   - zilliz cloud
   - cloud

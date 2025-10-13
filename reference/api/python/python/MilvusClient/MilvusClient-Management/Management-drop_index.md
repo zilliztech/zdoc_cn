@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "drop_index() | Python | MilvusClient"
 slug: /python/python/Management-drop_index
 sidebar_label: "drop_index()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops an index from a specific collection. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: NPnQdZCJ7oF002xTntecdI2ini8
 sidebar_position: 5
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,13 +48,13 @@ drop_index(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
 - **index_name** (str) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the index to drop.
 

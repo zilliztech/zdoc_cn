@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "describe_user() | Python | MilvusClient"
 slug: /python/python/Authentication-describe_user
 sidebar_label: "describe_user()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation describes a specific user. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: Wz3HdtvPCoEquvxFY7PcDHxcnEe
 sidebar_position: 6
 keywords: 
-  - Vector search
-  - knn algorithm
-  - HNSW
-  - What is unstructured data
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
   - zilliz
   - zilliz cloud
   - cloud
@@ -43,7 +46,7 @@ describe_user(
 
 - **user_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the user to describe.
 

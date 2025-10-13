@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "loadPartitions() | Node.js"
 slug: /node/node/Partitions-loadPartitions
 sidebar_label: "loadPartitions()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation loads a specific set of partitions in a specified collection into memory. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: Pyh3dttWKoBqcBx8FGhcArhAnqg
 sidebar_position: 6
 keywords: 
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
   - zilliz
   - zilliz cloud
   - cloud
@@ -55,13 +58,13 @@ milvusClient.loadPartitions({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
-- **partition_names** (string[]) -
+- **partition_names** (string&#91;&#93;) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A list of the names of the partitions to load.
 
@@ -69,7 +72,7 @@ milvusClient.loadPartitions({
 
     The number of replicas of the partition.
 
-- **resource_groups** (*string[]*) -
+- **resource_groups** (*string&#91;&#93;*) -
 
     A list of the resource groups in the partition.
 
@@ -77,7 +80,7 @@ milvusClient.loadPartitions({
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

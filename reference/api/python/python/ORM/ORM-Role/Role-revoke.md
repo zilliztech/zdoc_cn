@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "revoke() | Python | ORM"
 slug: /python/python/Role-revoke
 sidebar_label: "revoke()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation revokes a privilege granted to the current role. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: UUJWdoEnjoXx69xahsScdMVSnzf
 sidebar_position: 10
 keywords: 
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,7 +48,7 @@ revoke(
 
 - **object** (*string*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The type of the object to grant the privilege.
 
@@ -53,7 +56,7 @@ revoke(
 
 - **object_name** (*string*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a target object of the type specified in **object**.
 
@@ -61,7 +64,7 @@ revoke(
 
 - **privilege** (*string*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the privilege to grant.
 

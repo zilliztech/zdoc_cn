@@ -1,10 +1,13 @@
 ---
-title: "创建 Collection | Cloud"
+title: "创建 Collection | BYOC"
 slug: /manage-collections-sdks
 sidebar_label: "创建 Collection"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "您可以根据业务开发需要，确定 Collection Schema、索引参数、相似度类型、是否自动加载等设置。本节将介绍创建 Collection 的具体步骤及相关注意事项。 | Cloud"
+description: "您可以根据业务开发需要，确定 Collection Schema、索引参数、相似度类型、是否自动加载等设置。本节将介绍创建 Collection 的具体步骤及相关注意事项。 | BYOC"
 type: origin
 token: SQQowEMkwiwYvWkwETbczgj8nUh
 sidebar_position: 2
@@ -444,12 +447,10 @@ console.log(res.state)
 <TabItem value='go'>
 
 ```go
-import "github.com/milvus-io/milvus/client/v2/milvusclient"
-
-err := milvusclient.CreateCollection(ctx, client.NewCreateCollectionOption("customized_setup_1", schema).
-    WithIndexOptions(indexOptions...),
-)
+err = client.CreateCollection(ctx, milvusclient.NewCreateCollectionOption("customized_setup_1", schema).
+    WithIndexOptions(indexOptions...))
 if err != nil {
+    fmt.Println(err.Error())
     // handle error
 }
 fmt.Println("collection created")
@@ -615,7 +616,9 @@ curl --request POST \
 
 Shard 是对 Collection 的水平切分，每个 Shard 对应一条数据写入通路。每个 Collection 默认带有一个 Shard，您可以根据希望的写入速率和待写入的数据量大小在创建 Collection 时来设置合适的 Shard 数量。
 
-通常情况而言，写入速率每增加 500M/s 或待写入数据量每多 100 GB，可以考虑增加 1 个 Shard。此处仅为建议，不是限制。这只是我们根据自己的经验给出的建议，并不适用于所有可能的使用场景。保持默认 Shard 数量也能够完成数据写入。
+作为通用指导，在设置 Shard 数量时可以考虑如下因素：
+
+- **数据规模**：数据量每增加 2 亿 Entity，可以考虑增加一个 Shard。你还可以根据数据的总体积进行预估。例如，对于超过 100 GB 的数据，可以考虑增加 100 GB 的倍数个 Shard。
 
 如下代码演示了如何在创建 Collection 时设置 Shard 数量。
 
@@ -703,7 +706,7 @@ curl --request POST \
 
 Zilliz Cloud 在所有 Collection 上默认开启 mmap。该功能可以让 Zilliz Cloud 使用内存映射的方式加载所有字段的原始数据。节约内存使用的同时，提高 Collection 容量。关于该功能的具体内容，可以查看[使用 mmap](./use-mmap)。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"}]}>
 <TabItem value='python'>
 
 ```python
@@ -762,10 +765,9 @@ fmt.Println("collection created")
 ```
 
 </TabItem>
+</Tabs>
 
-<TabItem value='bash'>
-
-```bash
+```plaintext
 export params='{
     "mmap.enabled": True
 }'
@@ -783,9 +785,6 @@ curl --request POST \
     \"params\": $params
 }"
 ```
-
-</TabItem>
-</Tabs>
 
 ### 设置生存时间（TTL）{#set-collection-ttl}
 

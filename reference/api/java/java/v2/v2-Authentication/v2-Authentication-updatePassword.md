@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "updatePassword() | Java | v2"
 slug: /java/java/v2-Authentication-updatePassword
 sidebar_label: "updatePassword()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation updates the password of a specific user. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: GQH8dgqlPoRY1sxFhCRcLlgInNc
 sidebar_position: 20
 keywords: 
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
   - zilliz
   - zilliz cloud
   - cloud

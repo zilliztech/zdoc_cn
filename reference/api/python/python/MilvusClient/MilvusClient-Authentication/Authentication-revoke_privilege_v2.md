@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "revoke_privilege_v2() | Python | MilvusClient"
 slug: /python/python/Authentication-revoke_privilege_v2
 sidebar_label: "revoke_privilege_v2()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation revokes the specified privilege or privilege group from the specified role. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: WazKdTlcOoYoBWxIJEEc7gFMnfC
 sidebar_position: 18
 keywords: 
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
-  - knn algorithm
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - zilliz
   - zilliz cloud
   - cloud
@@ -48,13 +51,13 @@ revoke_privilege_v2(
 
 - **role_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the role to revoke privileges from.
 
 - **privilege** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the privilege to revoke. 
 
@@ -62,7 +65,7 @@ revoke_privilege_v2(
 
 - **collection_name** (*str*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a collection. To revoke privileges regarding all collections in the current database, set this parameter to `*`. 
 

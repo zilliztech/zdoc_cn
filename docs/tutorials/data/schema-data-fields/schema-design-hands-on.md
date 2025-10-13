@@ -3,11 +3,14 @@ title: "Schema 设计指南 | Cloud"
 slug: /schema-design-hands-on
 sidebar_label: "设计指南"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "信息检索系统 （IRS），也被称为搜索引擎，是各类 AI 应用的核心依赖，被广泛应用于检索增强生成（RAG）、图像搜索、产品推荐等场景中。开发一套 IRS 的第一步就是数据模型设计，涉及业务需求分析、确定信息组织方式以及为数据建立索引使其能够按语义进行查询。 | Cloud"
 type: origin
 token: AhYhwruK6impy5klHLdcs5Bfndh
-sidebar_position: 14
+sidebar_position: 17
 keywords: 
   - 向量数据库
   - zilliz
@@ -22,179 +25,550 @@ keywords:
 ---
 
 import Admonition from '@theme/Admonition';
-
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Schema 设计指南
 
 信息检索系统 （IRS），也被称为搜索引擎，是各类 AI 应用的核心依赖，被广泛应用于检索增强生成（RAG）、图像搜索、产品推荐等场景中。开发一套 IRS 的第一步就是数据模型设计，涉及业务需求分析、确定信息组织方式以及为数据建立索引使其能够按语义进行查询。
 
-Zilliz Cloud 支持通过 Collection 的 Schema 定义数据模型。Collection 是一个用于组织存放文本和图像等非结构化数据及其向量表示的容器，而各种精度的稠密和稀疏向量则常常用来进行语义查询。另外，Zilliz Cloud 还支持存放非向量数据，这些数据被统称为标量，具体的标量类型包括布尔值、数值（INT8、INT16、INT32、INT64、FLOAT、DOUBLE）、文本（VARCHAR）、JSON 以及数组（ARRAY）类等类型。
+Zilliz Cloud 支持通过 Collection 的 Schema 定义数据模型。Collection 是一个用于组织存放文本和图像等非结构化数据及其向量表示的容器，而各种精度的稠密和稀疏向量则常常和结构化的元数据一起用来进行语义查询。无论您的非结构化数据是文本、图像或其它类型的数据，本文都将为您理解并应用与 Schema 相关的各种核心概念来完成数据模型的设计。
 
-![UuB2bNwhJo3B0TxRxExcbm9anTI](/img/UuB2bNwhJo3B0TxRxExcbm9anTI.png)
+![NPXKwqyOPhwKkebn76Uc4t4knX0](/img/NPXKwqyOPhwKkebn76Uc4t4knX0.png)
 
-搜索系统的数据模型设计通常涉及分析业务需求，并对相关信息进行抽象。举个例子，如果要对一段文本进行语义检索，首先需要对这段文本建立索引，并通过 Embedding 的方式将其转换成向量表示。除此之外，可能还需要把这段文本的诸如发表时间和作者这样的相关信息和这段文本及其向量表示存放在一起。这些信息通常被称为元数据，通过对元数据进行过滤的方式来优化向量检索的结果，比如希望在某个特定日期后或者来自某位作者的文本中进行语义搜索。您还可以根据业务需求，将这些字段包含在搜索结果中，提供给您的应用程序，以便为应用程序的用户呈现信息量更为丰富的内容。每段这样的文本还需要有个一个独一无二的标识，用来将一段文本和其它文本区别开来。上面提到的所有元素对于实现一个复杂的搜索逻辑来说是至关重要的。
+## 数据模型{#data-model}
 
-通过对数据模型的抽象，好的 Schema 设计对于语义搜索来说十分重要，因为它决定了搜索结果是否能帮助业务达成目标。还需要注意的是，插入 Collection 的每条数据都要符合 Schema 的定义，这极大的保证了数据的一致性和长期质量。从技术角色来说，好的 Schema 设计会让您的数据以更加符合预期的方式存放，为这些数据创建的索引结构也会更加干净，从而提升搜索的效率和性能。
+搜索系统的数据模型设计涉及分析业务需求，并将信息抽象为以 Schema 表达的数据模型。定义良好的 Schema 对于使数据模型与业务目标保持一致、确保数据展示一致性和服务质量至关重要。此外，选择合适的数据类型和索引对于经济地实现业务目标也很重要。
 
-## 新闻搜索：一个例子{#an-example-news-search}
+### 分析业务需求{#analyze-business-needs}
 
-在本节中，我们会简单分析要打造一个新闻搜索应用需要做些什么。具体来说，我们需要创建了一个包含新闻文本、缩略图和其它元数据的语料库，并分析这些需要在搜索中使用的数据。假设您的需求是根据缩略图和内容概要来检索新闻，并在检索结果中包含诸如作者和发布时间等元数据，我们可以将这个需求分解成如下几个小需求：
+有效满足业务需求始于分析用户将执行的查询类型，并确定最合适的搜索方法。
 
-- 如果要根据文本搜索图片，可以使用多模态嵌入模型将图片转换成对应的向量表示。这些模型可以将图片和文本映射到同一个嵌入空间中。
+- **用户查询**：确定用户预期执行的查询类型。这有助于确保您的 Schema 支持实际用例并优化搜索性能。这些查询可能包括：
 
-- 还需要使用文本嵌入模型将内容概要文本转换成对应的向量表示。
+    - 检索与自然语言查询匹配的文档
 
-- 为了实现基于发布时间的过滤，还需要将这些数据存放到一个标量字段中，并对该标量字段建立索引，以提升检索效率。对于像数据结构比较复杂的 JSON 数据也可以存放在标量字段中并对其内容进行过滤和搜索。
+    - 查找与参考图像相似的图像或匹配文本描述
 
-- 为了方便在搜索结果展示页面上渲染缩略图，还需要有几个标量字段存放这些图片的 URL、文章的内容概要和文章的标题。如果有必要，您也可以为存放文章的原始文本和图片文件再创建几个标量字段。
+    - 按名称、类别或品牌等属性搜索产品
 
-- 为了提升对内容概要的搜索效果，Zilliz Cloud 还提供了混合搜索能力，能够对多路搜索结果进行混合重排。在本例中，您可以使用诸如 OpenAI 的 `text-embedding-3-large` 或开源的 `bge-large-en-v1.5` 这样的嵌入模型来为您的文本生成对应的稠密向量表示。然后再使用如 BM25 或 SPLADE 这样的嵌入模型为同样的数据生成对应的稀疏向量表示。
+    - 基于结构化元数据（例如，出版日期、标签、评级）过滤项目
 
-- 最后，我们还需要为每个新闻页面指定一个全局唯一的 ID ，称为主键。主键和上面提到的各类向量和标量字段共同组成一个 Entity，作为一条记录存放在 Collection 中。
+    - 在混合查询中结合多个标准（例如，在视觉搜索中，同时考虑图像及其说明的语义相似性）
+
+- **搜索方法**：选择与用户将执行的查询类型相匹配的适当搜索技术。不同的方法服务于不同的目的，并且通常可以组合使用以获得更强大的结果：
+
+    - **语义搜索**：利用密集向量相似度来查找含义相似的项目，非常适合文本或图像等非结构化数据。
+
+    - **全文搜索**：通过关键词匹配来补充语义搜索。全文搜索可以利用词法分析，避免将长词拆分成碎片化的词元，在检索过程中把握特殊术语。
+
+    - **元数据过滤**：在向量搜索的基础上，应用日期范围、类别或标签等约束条件。
+
+### 将业务需求转化为服务于搜索的数据模型{#translates-business-requirements-into-a-search-data-model}
+
+下一步是通过确定信息的核心组件及其搜索方法，将您的业务需求转化为具体的数据模型：
+
+- 定义你需要存储的数据，如原始内容（文本、图像、音频）、关联的元数据（标题、标签、作者信息）以及上下文属性（时间戳、用户行为等）
+
+- 确定每个元素的适当数据类型和格式。例如：
+
+    - 文本描述 → 字符串
+
+    - 图像或文档嵌入 → 密集或稀疏向量
+
+    - 类别、标签或标志 → 字符串、数组和布尔值
+
+    - 像价格或评级这样的数值属性 → 整数或浮点数
+
+    - 结构化信息，如作者详情 -&gt; json
+
+对这些元素进行清晰定义可确保数据展示一致性、准确的搜索结果，并便于与下游应用逻辑集成。
+
+## 设计 Schema{#schema-design}
+
+在Zilliz Cloud中，数据模型通过 Collection Schema 来表达。在 Collection Schema 中设计合适的字段是实现有效检索的关键。每个字段定义了 Collection 中存储的特定类型的数据，并在搜索过程中发挥着独特的作用。从高层次来看，Zilliz Cloud支持两种主要类型的字段：**向量字段**和**标量字段**。
+
+现在，您可以将您的数据模型映射到一个包含向量和任何辅助标量字段的字段 Schema 中。确保每个字段与您的数据模型中的属性相关联，尤其要注意您的向量类型（密集或稀疏）及其维度。
+
+### 向量字段{#vector-field}
+
+向量字段存储非结构化数据类型（如文本、图像和音频）的嵌入向量。这些嵌入向量可能是密集型、稀疏型或二进制型，具体取决于数据类型和所采用的检索方法。通常，密集向量用于语义搜索，而稀疏向量更适合全文或词法匹配。当存储和计算资源有限时，二进制向量很有用。一个 Collection 可能包含多个向量字段，以支持多模态或混合检索策略。有关此主题的详细指南，请参阅 [Hybrid Search](./hybrid-search)。
+
+Zilliz Cloud支持以下向量数据类型：`FLOAT_VECTOR` 为 [稠密向量](./use-dense-vector)，`SPARSE_FLOAT_VECTOR` 为 [稀疏向量](./use-sparse-vector)，以及`BINARY_VECTOR` 为 [Binary 向量](./use-binary-vector)。
+
+### 标量字段{#scalar-field}
+
+标量字段存储原始的、结构化的值（通常称为元数据），如数字、字符串或日期。这些值可以与向量搜索结果一起返回，对于过滤和排序至关重要。它们允许你根据特定属性缩小搜索结果范围，例如将文档限制在特定类别或定义的时间范围内。
+
+Zilliz Cloud支持标量类型，如`BOOL`、`INT8/16/32/64`、`FLOAT`、`DOUBLE`、`VARCHAR`、`JSON`和`ARRAY`，用于存储和过滤非向量数据。这些类型提高了搜索操作的精度和定制性。
+
+## 在 Schema 设计中利用高级特性{#leverage-advanced-features-in-schema-design}
+
+在设计 Schema 时，仅仅使用支持的数据类型将数据映射到字段是不够的。必须深入理解字段之间的关系以及可用的配置策略。在设计阶段牢记关键特性，可确保 Schema 不仅能满足当前的数据处理需求，还具有可扩展性和适应性，以满足未来的需求。通过精心整合这些特性，您可以构建一个强大的数据架构，充分发挥Zilliz Cloud的功能，并支持您更广泛的数据战略和目标。以下是创建 Collection Schema 的关键特性概述：
+
+### 主键{#primary-key}
+
+主键字段是 Schema 的基本组成部分，因为它能唯一标识 Collection 中的每个 Entity。定义主键是强制性的。它必须是整数或字符串类型的标量字段，并标记为`is_primary=True`。你可以选择启用 `auto_id` 作为主键，它会自动分配整数编号，随着更多数据被摄入 Collection 而单调递增。
+
+如需进一步详情，请参考[主键与 AutoID](./primary-field-auto-id)。
+
+### Partitions{#partitioning}
+
+为加快搜索速度，您可以选择开启分区功能。通过指定特定的标量字段进行分区，并在搜索过程中基于该字段指定过滤条件，可以有效地将搜索范围限制在相关分区内。这种方法通过缩小搜索域，显著提高了检索操作的效率。
+
+有关更多详细信息，请参阅[使用 Partition Key](./use-partition-key)。
+
+### Analyzer{#analyzer}
+
+分析器是处理和转换文本数据的重要工具。其主要功能是将原始文本转换为词元，并对其进行结构化处理，以便进行索引和检索。它通过对字符串进行分词、去除停用词，并将单个单词词干化为词元来实现这一目的。
+
+如需进一步详情，请参考[Analyzer 概述](./analyzer-overview)。
+
+### Function{#function}
+
+Zilliz Cloud允许您将内置 Function 定义为 Schema 的一部分，以自动派生某些字段。例如，您可以添加一个内置的 BM25 Function，该 Function 从`VARCHAR`字段生成稀疏向量，以支持全文搜索。这些由 Function 派生的字段简化了预处理过程，并确保 Collection 保持自包含且随时可查询。
+
+如需进一步详情，请参考[Full Text Search](./full-text-search)。
+
+## 一个现实世界的例子{#a-real-world-example}
+
+在本节中，我们将概述上图所示多媒体文档搜索应用程序的架构设计和代码示例。 此架构旨在管理一个数据集，该数据集包含的数据映射到以下字段的文章：
 
 <table>
    <tr>
-     <th><p>字段名称</p></th>
-     <th><p>article_id (主键)</p></th>
-     <th><p>title</p></th>
-     <th><p>author_info</p></th>
-     <th><p>publish_ts</p></th>
-     <th><p>image_url</p></th>
-     <th><p>image_vector</p></th>
-     <th><p>summary</p></th>
-     <th><p>summary_dense_vector</p></th>
-     <th><p>summary_sparse_vector</p></th>
+     <th><p><strong>字段</strong></p></th>
+     <th><p><strong>数据源</strong></p></th>
+     <th><p><strong>使用的搜索方法</strong></p></th>
+     <th><p><strong>主键</strong></p></th>
+     <th><p><strong>Partition Key</strong></p></th>
+     <th><p><strong>Analyzer</strong></p></th>
+     <th><p><strong>Function 输入/输出</strong></p></th>
    </tr>
    <tr>
-     <td><p>字段类型</p></td>
-     <td><p>INT64</p></td>
-     <td><p>VARCHAR</p></td>
-     <td><p>JSON</p></td>
-     <td><p>INT32</p></td>
-     <td><p>VARCHAR</p></td>
-     <td><p>FLOAT_VECTOR</p></td>
-     <td><p>VARCHAR</p></td>
-     <td><p>FLOAT_VECTOR</p></td>
-     <td><p>SPARSE_FLOAT_VECTOR</p></td>
+     <td><p>article_id (<code>INT64</code>)</p></td>
+     <td><p>自动生成，启用<code>自动编号</code></p></td>
+     <td><p><a href="./get-and-scalar-query#use-get">使用Get进行查询</a></p></td>
+     <td><p>Y</p></td>
+     <td><p>N</p></td>
+     <td><p>N</p></td>
+     <td><p>N</p></td>
    </tr>
    <tr>
-     <td><p>是否需要索引</p></td>
-     <td><p>N</p></td>
+     <td><p>标题 (<code>VARCHAR</code>)</p></td>
+     <td><p>文章标题</p></td>
+     <td><p><a href="./text-match">Text Match</a></p></td>
      <td><p>N</p></td>
      <td><p>N</p></td>
      <td><p>Y</p></td>
      <td><p>N</p></td>
-     <td><p>Y</p></td>
+   </tr>
+   <tr>
+     <td><p>时间戳 (<code>INT32</code>)</p></td>
+     <td><p>发布日期</p></td>
+     <td><p><a href="./use-partition-key">使用 Partition Key</a></p></td>
      <td><p>N</p></td>
      <td><p>Y</p></td>
+     <td><p>N</p></td>
+     <td><p>N</p></td>
+   </tr>
+   <tr>
+     <td><p>文本 (<code>VARCHAR</code>)</p></td>
+     <td><p>文章的原始文本</p></td>
+     <td><p><a href="./hybrid-search">Hybrid Search</a></p></td>
+     <td><p>N</p></td>
+     <td><p>N</p></td>
      <td><p>Y</p></td>
+     <td><p>输入</p></td>
+   </tr>
+   <tr>
+     <td><p>text_dense_vector (<code>密集向量</code>)</p></td>
+     <td><p>由文本嵌入模型生成的密集向量</p></td>
+     <td><p><a href="./single-vector-search">基本 Vector Search</a></p></td>
+     <td><p>N</p></td>
+     <td><p>N</p></td>
+     <td><p>N</p></td>
+     <td><p>N</p></td>
+   </tr>
+   <tr>
+     <td><p>text_sparse_vector (<code>SPARSE_FLOAT_VECTOR</code>)</p></td>
+     <td><p>由内置BM25 Function 自动生成的稀疏向量</p></td>
+     <td><p><a href="./full-text-search">Full Text Search</a></p></td>
+     <td><p>N</p></td>
+     <td><p>N</p></td>
+     <td><p>N</p></td>
+     <td><p>输出</p></td>
    </tr>
 </table>
 
-## 如何在 Milvus 中创建 Schema{#how-to-implement-the-example-schema}
+有关 Schema 的更多信息以及添加各种类型字段的详细指南，请参阅[了解 Schema](./schema-explained)。
 
-通过上面的分析，我们初步完成了 Schema 的设计。在本节中，我们将在 Zilliz Cloud 中创建这个 Schema，并使用这个 Schema 创建一个 Collection。
+### 步骤 1：初始化 Schema{#step-1-initialize-schema}
 
-### 创建 Schema{#create-schema}
+首先，我们需要创建一个空的 Schema。此步骤为我们定义数据模型建立了结构基础。
 
-首先，我们创建一个 Milvus Client 实例，用于连接 Zilliz Cloud 集群 并管理 Collection 及其中存放的数据。
-
-要创建 Schema，需要调用 `create_schema()` 方法来创建一个 Schema 对象，然后使用 `add_field()` 方法向 Schema 对象中添加字段。
-
-```python
-from pymilvus import MilvusClient, DataType
-
-collection_name = "my_collection"
-
-client = MilvusClient(
-    uri="YOUR_CLUSTER_ENDPOINT",
-    token="TOKEN_OR_API_KEY"
-)
-
-schema = MilvusClient.create_schema(
-    auto_id=False,
-)
-
-schema.add_field(field_name="article_id", datatype=DataType.INT64, is_primary=True, description="article id")
-schema.add_field(field_name="title", datatype=DataType.VARCHAR, max_length=200, description="article title")
-schema.add_field(field_name="author_info", datatype=DataType.JSON, description="author information")
-schema.add_field(field_name="publish_ts", datatype=DataType.INT32, description="publish timestamp")
-schema.add_field(field_name="image_url", datatype=DataType.VARCHAR,  max_length=500, description="image URL")
-schema.add_field(field_name="image_vector", datatype=DataType.FLOAT_VECTOR, dim=768, description="image vector")
-schema.add_field(field_name="summary", datatype=DataType.VARCHAR, max_length=1000, description="article summary")
-schema.add_field(field_name="summary_dense_vector", datatype=DataType.FLOAT_VECTOR, dim=768, description="summary dense vector")
-schema.add_field(field_name="summary_sparse_vector", datatype=DataType.SPARSE_FLOAT_VECTOR, description="summary sparse vector")
-```
-
-您可能已经注意到声明 `MilvusClient` 实例中的 `uri` 参数。这个参数用于定义连接的 Zilliz Cloud 集群。您可以参考如下描述设置相关参数：
-
-将 `uri` 设置为您的 Zilliz Cloud 集群的访问连接，将 `token` 设置为一个用半角冒号（:）连接的集群用户名和密码或者有相应集群访问权限的 API 密钥。
-
-您还可以在创建 Schema 时可以指定其它参数，比如 `auto_id`。AutoID 是主键字段的属性，用来控制是否允许在插入数据时自动为插入的 Entity 分配主键值。以当前示例为例，我们的主键字段为 `article_id` 并且希望使用我们自己提供的主键值。因此，我们需要将 `article_id` 主键字段的 `auto_id` 属性设置为 `False`。
-
-在将所有字段添加到 Schema 对象中后，Schema 对象就和我们在之前的表格中的设计完全一致了。
-
-### 创建索引{#define-index}
-
-在 Schema 中定义了包括存储元数据和向量数据的各类字段后，下一步就是确定索引参数了。创建索引对于优化搜索和向量召回来说十分关键，因为它确保了查询操作的性能和效率。在接下来的步骤中，我们将定义为指定的向量字段和标量字段定义索引参数。
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
 
 ```python
-index_params = client.prepare_index_params()
+from pymilvus import MilvusClient
 
-index_params.add_index(
-    field_name="image_vector",
-    index_type="AUTOINDEX",
-    metric_type="IP",
-)
-index_params.add_index(
-    field_name="summary_dense_vector",
-    index_type="AUTOINDEX",
-    metric_type="IP",
-)
-index_params.add_index(
-    field_name="summary_sparse_vector",
-    index_type="AUTOINDEX",
-    metric_type="IP",
-)
-index_params.add_index(
-    field_name="publish_ts",
-    index_type="AUTOINDEX",
-)
+schema = MilvusClient.create_schema()
 ```
 
-在您参考上述代码完成索引参数的设置后， Zilliz Cloud 集群就会以优化后的方式来处理复杂的向量和标量查询。索引强化了相似性搜索的性能和准确性，从而实现高效的基于图片向量和内容概述向量的新闻搜索。在对所有需要索引的向量设置了 `AUTOINDEX` 索引类型后，Zilliz Cloud 能够快速识别并返回与查询向量相关的结果，整体提升数据检索过程和用户体验。
+</TabItem>
 
-Zilliz Cloud 使用 AUTOINDEX 作为唯一的索引类型，但提供多种相似度类型。更多信息，可以参考 [AUTOINDEX](./autoindex-explained) and [相似度类型](./search-metrics-explained).。
+<TabItem value='java'>
 
-### 创建 Collection{#create-collection}
+```java
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.collection.request.CreateCollectionReq;
 
-在有了 Schema 和索引之后，我们就可以使用这些参数来创建 Collection。Zilliz Cloud 集群中的 Collection 就像关系型数据库中的表一样。
+// 1. Connect to Milvus server
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .build();
+
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Create an empty schema
+CreateCollectionReq.CollectionSchema schema = client.createSchema();
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+import { MilvusClient, DataType } from "@zilliz/milvus2-sdk-node";
+
+//Skip this step using JavaScript
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+import "github.com/milvus-io/milvus/client/v2/entity"
+
+schema := entity.NewSchema()
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# Skip this step using cURL
+```
+
+</TabItem>
+</Tabs>
+
+### 步骤 2：添加字段{#step-2-add-fields}
+
+在完成 Schema 创建后，下一步就是在其中添加构成您数据的字段。每个字段都有各自的数据类型和属性。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
 
 ```python
-client.create_collection(
-    collection_name=collection_name,
-    schema=schema,
-    index_params=index_params,
+from pymilvus import DataType
+
+schema.add_field(field_name="article_id", datatype=DataType.INT64, is_primary=True, auto_id=True, description="article id")
+schema.add_field(field_name="title", datatype=DataType.VARCHAR, enable_analyzer=True, enable_match=True, max_length=200, description="article title")
+schema.add_field(field_name="timestamp", datatype=DataType.INT32, description="publish date")
+schema.add_field(field_name="text", datatype=DataType.VARCHAR, max_length=2000, enable_analyzer=True, description="article text content")
+schema.add_field(field_name="text_dense_vector", datatype=DataType.FLOAT_VECTOR, dim=768, description="text dense vector")
+schema.add_field(field_name="text_sparse_vector", datatype=DataType.SPARSE_FLOAT_VECTOR, description="text sparse vector")
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+import io.milvus.v2.common.DataType;
+import io.milvus.v2.service.collection.request.AddFieldReq;
+
+schema.addField(AddFieldReq.builder()
+        .fieldName("article_id")
+        .dataType(DataType.Int64)
+        .isPrimaryKey(true)
+        .autoID(true)
+        .build());
+schema.addField(AddFieldReq.builder()
+        .fieldName("title")
+        .dataType(DataType.VarChar)
+        .maxLength(200)
+        .enableAnalyzer(true)
+        .enableMatch(true)
+        .build());
+schema.addField(AddFieldReq.builder()
+        .fieldName("timestamp")
+        .dataType(DataType.Int32)
+        .build())
+schema.addField(AddFieldReq.builder()
+        .fieldName("text")
+        .dataType(DataType.VarChar)
+        .maxLength(2000)
+        .enableAnalyzer(true)
+        .build());
+schema.addField(AddFieldReq.builder()
+        .fieldName("text_dense_vector")
+        .dataType(DataType.FloatVector)
+        .dimension(768)
+        .build());
+schema.addField(AddFieldReq.builder()
+        .fieldName("text_sparse_vector")
+        .dataType(DataType.SparseFloatVector)
+        .build());
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+const fields = [
+    {
+        name: "article_id",
+        data_type: DataType.Int64,
+        is_primary_key: true,
+        auto_id: true
+    },
+    {
+        name: "title",
+        data_type: DataType.VarChar,
+        max_length: 200,
+        enable_analyzer: true,
+        enable_match: true
+    },
+    {
+        name: "timestamp",
+        data_type: DataType.Int32
+    },
+    {
+        name: "text",
+        data_type: DataType.VarChar,
+        max_length: 2000,
+        enable_analyzer: true
+    },
+    {
+        name: "text_dense_vector",
+        data_type: DataType.FloatVector,
+        dim: 768
+    },
+    {
+        name: "text_sparse_vector",
+        data_type: DataType.SparseFloatVector
+    }
+]
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+schema.WithField(entity.NewField().
+    WithName("article_id").
+    WithDataType(entity.FieldTypeInt64).
+    WithIsPrimaryKey(true).
+    WithIsAutoID(true).
+    WithDescription("article id"),
+).WithField(entity.NewField().
+    WithName("title").
+    WithDataType(entity.FieldTypeVarChar).
+    WithMaxLength(200).
+    WithEnableAnalyzer(true).
+    WithEnableMatch(true).
+    WithDescription("article title"),
+).WithField(entity.NewField().
+    WithName("timestamp").
+    WithDataType(entity.FieldTypeInt32).
+    WithDescription("publish date"),
+).WithField(entity.NewField().
+    WithName("text").
+    WithDataType(entity.FieldTypeVarChar).
+    WithMaxLength(2000).
+    WithEnableAnalyzer(true).
+    WithDescription("article text content"),
+).WithField(entity.NewField().
+    WithName("text_dense_vector").
+    WithDataType(entity.FieldTypeFloatVector).
+    WithDim(768).
+    WithDescription("text dense vector"),
+).WithField(entity.NewField().
+    WithName("text_sparse_vector").
+    WithDataType(entity.FieldTypeSparseVector).
+    WithDescription("text sparse vector"),
 )
 ```
 
-在创建完成后，我们可以使用查看 Collection 详情的方式验证该 Collection。
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+export fields='[
+    {
+        "fieldName": "article_id",
+        "dataType": "Int64",
+        "isPrimary": true
+    },
+    {
+        "fieldName": "title",
+        "dataType": "VarChar",
+        "elementTypeParams": {
+            "max_length": 200,
+            "enable_analyzer": true,
+            "enable_match": true
+        }
+    },
+    {
+        "fieldName": "timestamp",
+        "dataType": "Int32"
+    },
+    {
+       "fieldName": "text",
+       "dataType": "VarChar",
+       "elementTypeParams": {
+            "max_length": 2000,
+            "enable_analyzer": true
+        }
+    },
+    {
+       "fieldName": "text_dense_vector",
+       "dataType": "FloatVector",
+       "elementTypeParams": {
+            "dim": 768
+        }
+    },
+    {
+       "fieldName": "text_sparse_vector",
+       "dataType": "SparseFloatVector",
+    }
+]'
+
+export schema="{
+    \"autoID\": true,
+    \"fields\": $fields
+}"
+```
+
+</TabItem>
+</Tabs>
+
+在这个示例中，为字段指定了以下属性：
+
+- **主键**：`article_id` 用作主键，可自动为传入 Entity 分配主键。
+
+- **Partition Key**：`timestamp` 被指定为 Partition Key，允许按 Partition 进行过滤。
+
+- **文本 Analyzer**：文本 Analyzer 分别应用于两个字符串字段（`title` 和 `text`），以支持 Text Match 和Full Text Search。
+
+### 步骤 3：（可选）添加 Function{#step-3-optional-add-functions}
+
+为增强数据查询能力，可将 Function 纳入 Schema 中。例如，可以创建一个 Function 来处理与特定字段相关的内容。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
 
 ```python
-collection_desc = client.describe_collection(
-    collection_name=collection_name
+from pymilvus import Function, FunctionType
+
+bm25_function = Function(
+    name="text_bm25",
+    input_field_names=["text"],
+    output_field_names=["text_sparse_vector"],
+    function_type=FunctionType.BM25,
 )
-print(collection_desc)
+
+schema.add_function(bm25_function)
 ```
 
-## 其它需要考虑的问题{#other-considerations}
+</TabItem>
 
-### 加载索引{#loading-index}
+<TabItem value='java'>
 
-在 Zilliz Cloud 集群 中创建 Collection 时，您可以选择在完成 Collection 创建时立即加载索引或者将加载操作放到批量导入数据之后。基本上你无须对此做出明确的选择。就像我们在上述代码中展示的那样，索引会在您插入数据时自动构建，从而让这些刚插入的数据也参与查询。但是，如果在插入大批量数据后不需要立即对它们进行查询，您也可以通过在创建 Collection 时省略索引参数的方式将索引创建放到插入所有数据后再来完成。这对于一个用于存放大量数据的 Collection 来说更有效率。当前，在执行任何搜索前，您需要使用 `load()` 方法将 Collection 的索引加载到内存。
+```java
+import io.milvus.common.clientenum.FunctionType;
+import io.milvus.v2.service.collection.request.CreateCollectionReq.Function;
 
-### 如何为多租户场景定义数据模型{#how-to-define-data-model-for-multi-tenancy}
+import java.util.*;
 
-所谓多租户，通常是指使用一套软件或服务为多个独立的用户或组织提供相互独立的工作环境。这在云计算、软件及服务（SaaS）应用及数据库系统中比较常见。举例来说，云存储服务可能会使用多租户系统允许不同的企业在同一套下层基础设施之上各自存放和管理它们的数据。这种方式在保证数据安全和各租户隐私的前提下将资源利用率和使用效率都最大化了。
+schema.addFunction(Function.builder()
+        .functionType(FunctionType.BM25)
+        .name("text_bm25")
+        .inputFieldNames(Collections.singletonList("text"))
+        .outputFieldNames(Collections.singletonList("text_sparse_vector"))
+        .build());
+```
 
-区分各租户最简便的方式就是将各自的数据和资源与其它租户隔离开来。每个租户对某些资源有独占访问权限，并和其它租户共享 Zilliz Cloud 数据库、Collection 和 Partition 等对象的管理能力。您可以在不同的对象层面实现多租户方案，具体可以参考 [Milvus 多租户](https://milvus.io/docs/multi_tenancy.md#Multi-tenancy-strategies)这篇文章。
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+import FunctionType from "@zilliz/milvus2-sdk-node";
+
+const functions = [
+    {
+      name: 'text_bm25',
+      description: 'bm25 function',
+      type: FunctionType.BM25,
+      input_field_names: ['text'],
+      output_field_names: ['text_sparse_vector'],
+      params: {},
+    },
+]；
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+function := entity.NewFunction().
+    WithName("text_bm25").
+    WithInputFields("text").
+    WithOutputFields("text_sparse_vector").
+    WithType(entity.FunctionTypeBM25)
+schema.WithFunction(function)
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+export myFunctions='[
+    {
+        "name": "text_bm25",
+        "type": "BM25",
+        "inputFieldNames": ["text"],
+        "outputFieldNames": ["text_sparse_vector"],
+        "params": {}
+    }
+]'
+
+export schema="{
+    \"autoID\": true,
+    \"fields\": $fields
+    \"functions\": $myFunctions
+}"
+```
+
+</TabItem>
+</Tabs>
+
+此示例在 Schema 中添加了一个内置的 BM25 Function，利用文本字段作为输入，并将生成的稀疏向量存储在`text_sparse_vector` 字段中。
+
+## 后续步骤{#next-steps}
+
+- [创建 Collection](./manage-collections-sdks)
+
+- [修改字段设置](./alter-collection-field)
+

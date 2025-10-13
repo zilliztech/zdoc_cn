@@ -1,13 +1,16 @@
 ---
-title: "相似度类型 | Cloud"
+title: "相似度类型 | BYOC"
 slug: /search-metrics-explained
 sidebar_label: "相似度类型"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "在度量向量相似性时，相似度类型发挥着关键作用。选择恰当的相似度类型可以极大地提升分类与聚类的效果。 | Cloud"
+description: "在度量向量相似性时，相似度类型发挥着关键作用。选择恰当的相似度类型可以极大地提升分类与聚类的效果。 | BYOC"
 type: origin
 token: U7tHwmHPCikQxWkzoSzcr8Lunmf
-sidebar_position: 17
+sidebar_position: 18
 keywords: 
   - 向量数据库
   - zilliz
@@ -76,7 +79,8 @@ import Admonition from '@theme/Admonition';
 <Admonition type="info" icon="📘" title="说明">
 
 <ul>
-<li>对于 <code>BINARY_VECTOR</code> 类型的向量字段，维度值（<strong>dim</strong>）必须为 8 的倍数。</li>
+<li><p>对于 <code>SPARSE\_FLOAT\_VECTOR</code>，只有使用全文搜索功能时才能将相似度类型设置为 <code>BM25</code>。有关全文搜索功能的具体信息，请参考<a href="./full-text-search">全文搜索</a>。</p></li>
+<li><p>对于 <code>BINARY_VECTOR</code> 类型的向量字段，维度值（<strong>dim</strong>）必须为 8 的倍数。</p></li>
 </ul>
 
 </Admonition>
@@ -92,27 +96,27 @@ import Admonition from '@theme/Admonition';
    <tr>
      <td><p><code>L2</code></p></td>
      <td><p>较小的 L2 距离表示更高的相似性。</p></td>
-     <td><p>[0, ∞)</p></td>
+     <td><p>&#91;0, ∞)</p></td>
    </tr>
    <tr>
      <td><p><code>IP</code></p></td>
      <td><p>较大的 IP 距离表示更高的相似性。</p></td>
-     <td><p>[-1, 1]</p></td>
+     <td><p>&#91;-1, 1&#93;</p></td>
    </tr>
    <tr>
      <td><p><code>COSINE</code></p></td>
      <td><p>较大的 cosine 值表示更高的相似性。</p></td>
-     <td><p>[-1, 1]</p></td>
+     <td><p>&#91;-1, 1&#93;</p></td>
    </tr>
    <tr>
      <td><p><code>JACCARD</code></p></td>
      <td><p>较小的 Jaccard 距离表示更高的相似性。</p></td>
-     <td><p>[0, 1]</p></td>
+     <td><p>&#91;0, 1&#93;</p></td>
    </tr>
    <tr>
      <td><p><code>HAMMING</code></p></td>
      <td><p>较小的 Hamming 距离表示更高的相似性。</p></td>
-     <td><p>[0, dim(vector)]</p></td>
+     <td><p>&#91;0, dim(vector)&#93;</p></td>
    </tr>
    <tr>
      <td><p><code>BM25</code></p></td>
@@ -161,13 +165,13 @@ import Admonition from '@theme/Admonition';
 
 ## 余弦相似度（COSINE）{#cosine-similarity}
 
-余弦相似度是通过计算两组向量之间的夹角余弦来衡量它们的相似度。可以把这两组向量想象为从同一起点（如 [0,0,...]）出发，但朝向不同的线段。
+余弦相似度是通过计算两组向量之间的夹角余弦来衡量它们的相似度。可以把这两组向量想象为从同一起点（如 &#91;0,0,...&#93;）出发，但朝向不同的线段。
 
 计算两组向量 **A = (a<sub>0</sub>, a<sub>1</sub>,..., a<sub>n-1</sub>)** 和 **B = (b<sub>0</sub>, b<sub>1</sub>,..., b<sub>n-1</sub>)** 之间的余弦相似度，可使用以下公式：
 
 ![KFqibEhgHoKnmjx8zj1cbfkZnEe](/img/KFqibEhgHoKnmjx8zj1cbfkZnEe.png)
 
-余弦相似度的值总是介于 **[-1, 1]** 之间。比如，两个向量的夹角越接近 **0** 度，余弦相似度越接近 **1**；两个向量的夹角为 **90** 度时，其相似度为 **0**；两个向量的夹角越接近 **180** 度，两个向量相似度越接近 **-1**。余弦值越大，表示两向量之间的夹角越小，意味着它们越相似。
+余弦相似度的值总是介于 **&#91;-1, 1&#93;** 之间。比如，两个向量的夹角越接近 **0** 度，余弦相似度越接近 **1**；两个向量的夹角为 **90** 度时，其相似度为 **0**；两个向量的夹角越接近 **180** 度，两个向量相似度越接近 **-1**。余弦值越大，表示两向量之间的夹角越小，意味着它们越相似。
 
 通过 **1** 减去两向量间的余弦相似度，可以得到它们之间的余弦距离。
 

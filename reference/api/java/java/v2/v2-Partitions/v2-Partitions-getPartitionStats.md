@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "getPartitionStats() | Java | v2"
 slug: /java/java/v2-Partitions-getPartitionStats
 sidebar_label: "getPartitionStats()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the statistics collected on a specific partition. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: G09ndDq8poAh24xxmr4c7oHknid
 sidebar_position: 3
 keywords: 
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
-  - how does milvus work
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud

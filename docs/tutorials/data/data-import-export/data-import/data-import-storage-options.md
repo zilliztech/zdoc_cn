@@ -3,6 +3,9 @@ title: "支持的对象存储 | Cloud"
 slug: /data-import-storage-options
 sidebar_label: "支持的对象存储"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在导入数据前，您需要了解 Zilliz Cloud 支持的存储方式及对应的 URL 格式，以确保 Zilliz Cloud 可以正确处理您的上传请求，避免验证失败。 | Cloud"
 type: origin
@@ -41,6 +44,10 @@ import Admonition from '@theme/Admonition';
        <tr>
          <td><p>公共访问 URL</p></td>
          <td><ul><li><p><strong>文件</strong>：<i>http</i>s://&lt;bucket_name&gt;.oss-&lt;region_code&gt;.aliyuncs.com/&lt;object_name&gt;</p></li><li><p><strong>文件夹</strong>：<i>http</i>s://&lt;bucket_name&gt;.oss-&lt;region_code&gt;.aliyuncs.com/&lt;folder_name&gt;/</p></li></ul></td>
+       </tr>
+       <tr>
+         <td><p>OSS URI</p></td>
+         <td><ul><li><p><strong>文件</strong>: oss://&lt;bucket_name&gt;/&lt;object_name&gt;</p></li><li><p><strong>文件夹</strong>: oss://&lt;bucket_name&gt;/&lt;folder_name&gt;/</p></li></ul></td>
        </tr>
     </table>
 

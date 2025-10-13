@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "createUser() | Java | v2"
 slug: /java/java/v2-Authentication-createUser
 sidebar_label: "createUser()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates a user. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: OTMXd9uNWoMwe4xvg70cg49Pnmh
 sidebar_position: 4
 keywords: 
-  - Vector retrieval
-  - Audio similarity search
-  - Elastic vector database
-  - Pinecone vs Milvus
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
   - zilliz
   - zilliz cloud
   - cloud

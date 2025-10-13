@@ -9,10 +9,10 @@ token: YIWifhm0HlwT5ldC40fc8tAOnXd
 sidebar_position: 7
 sidebar_label: "Client"
 keywords: 
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
   - zilliz
   - zilliz cloud
   - cloud

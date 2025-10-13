@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "describeIndex() | Java | v2"
 slug: /java/java/v2-Management-describeIndex
 sidebar_label: "describeIndex()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation describes a specific index. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: JBBldcrAHoYZ2mxMGeocZHMAnze
 sidebar_position: 3
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud

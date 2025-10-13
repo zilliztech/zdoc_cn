@@ -1,13 +1,16 @@
 ---
-title: "管理备份文件 | Cloud"
+title: "管理备份文件 | BYOC"
 slug: /manage-backup-files
 sidebar_label: "管理备份文件"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "本文将介绍如何查看、重命名和删除已有的备份文件。 | Cloud"
+description: "本文将介绍如何查看、重命名和删除已有的备份文件。 | BYOC"
 type: origin
 token: BQjRwYOyZiDjwfkRav6cpFOTnoe
-sidebar_position: 5
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz
@@ -22,15 +25,11 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Supademo from '@site/src/components/Supademo';
+
 # 管理备份文件
 
 本文将介绍如何查看、重命名和删除已有的备份文件。
-
-<Admonition type="info" icon="📘" title="说明">
-
-<p>备份与恢复功能仅适用于 Dedicated 集群。</p>
-
-</Admonition>
 
 ## 限制说明{#limits}
 
@@ -107,7 +106,7 @@ import Admonition from '@theme/Admonition';
       "data": {
         "clusterId": "in01-3e5ad8adc38xxxx",
         "clusterName": "Dedicated-01",
-        "regionId": "aws-us-west-2",
+        "regionId": "ali-cn-hangzhou",
         "projectId": "proj-20e13e974c7d659a83xxxx",
         "backupId": "backup1_0b9d15a0ddexxxx",
         "backupName": "Dedicated-01_backup3",
@@ -128,6 +127,8 @@ import Admonition from '@theme/Admonition';
 
 以下 Demo 展示如何在 Zilliz Cloud 控制台中重命名备份文件：
 
+<Supademo id="cmcsvwnph0kqn9st866jrkz4c" title=""  />
+
 ## 删除备份文件{#delete-backup-files}
 
 Zilliz Cloud 根据备份的创建方式采用不同的删除策略：
@@ -139,6 +140,8 @@ Zilliz Cloud 根据备份的创建方式采用不同的删除策略：
 ### 通过 Web 控制台{#via-web-console}
 
 以下 Demo 展示如何在控制台中删除备份文件：
+
+<Supademo id="cmcsw3q5m03y3xk0iiyxl31dg" title=""  />
 
 ### 通过 RESTful API{#via-restful-api}
 

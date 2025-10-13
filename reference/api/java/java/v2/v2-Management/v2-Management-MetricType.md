@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "MetricType | Java | v2"
 slug: /java/java/v2-Management-MetricType
 sidebar_label: "MetricType"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: KIYUdM0oVo0dQmxTgS2c8Mxxn4v
 sidebar_position: 11
 keywords: 
-  - RAG
-  - NLP
-  - Neural Network
-  - Deep Learning
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - milvus vector database
   - zilliz
   - zilliz cloud
   - cloud

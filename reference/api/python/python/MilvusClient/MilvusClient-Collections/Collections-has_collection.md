@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "has_collection() | Python | MilvusClient"
 slug: /python/python/Collections-has_collection
 sidebar_label: "has_collection()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation checks whether a specific collection exists. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: SSQ6dFGdxouy7hxRwCOcatnEn0e
 sidebar_position: 14
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud
@@ -43,7 +46,7 @@ has_collection(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a collection.
 

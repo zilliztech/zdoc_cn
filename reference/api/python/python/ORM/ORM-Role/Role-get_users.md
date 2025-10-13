@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "get_users() | Python | ORM"
 slug: /python/python/Role-get_users
 sidebar_label: "get_users()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists all users associated with the current role. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: CCOhd671iog6rRxu8aOcaPncnLK
 sidebar_position: 4
 keywords: 
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
+  - Vector embeddings
+  - Vector store
+  - open source vector database
+  - Vector index
   - zilliz
   - zilliz cloud
   - cloud

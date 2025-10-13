@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "partition() | Python | ORM"
 slug: /python/python/Collection-partition
 sidebar_label: "partition()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation gets the specified partition in the current collection. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: SvCrdEJIdosGQYxQZhrc2OAXnpd
 sidebar_position: 21
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
   - zilliz
   - zilliz cloud
   - cloud
@@ -42,7 +45,7 @@ partition(
 
 - **partition_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the partition to get.
 

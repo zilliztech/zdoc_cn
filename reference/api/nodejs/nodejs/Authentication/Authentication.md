@@ -9,10 +9,10 @@ token: H1JWfZh74lkVhgdfGiKcQfsinPg
 sidebar_position: 6
 sidebar_label: "Authentication"
 keywords: 
-  - open source vector database
-  - Vector index
-  - vector database open source
-  - open source vector db
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud

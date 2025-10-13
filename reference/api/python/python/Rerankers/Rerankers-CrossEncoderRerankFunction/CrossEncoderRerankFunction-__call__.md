@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "\_\_call\_\_() | Python"
 slug: /python/python/CrossEncoderRerankFunction-__call__
 sidebar_label: "__call__()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation in CrossEncoderRerankFunction takes in a query and document strings and returns a list of `RerankResult` objects with the top k documents ranked by score. | Python"
@@ -10,10 +13,10 @@ type: docx
 token: Vy5GdSeTdoNbSqxCdsOcSmQPnvf
 sidebar_position: 2
 keywords: 
-  - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,7 +53,7 @@ ce_rf(
 
     The query string to use for ranking.
 
-- `documents` (*List[str]*)
+- `documents` (*List&#91;str&#93;*)
 
     A list of document strings that will be ranked for the given query.
 
@@ -60,7 +63,7 @@ ce_rf(
 
 **RETURN TYPE:**
 
-*List[RerankResult]*
+*List&#91;RerankResult&#93;*
 
 **RETURNS:**
 

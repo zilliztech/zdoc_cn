@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "create_database() | Python | MilvusClient"
 slug: /python/python/Database-create_database
 sidebar_label: "create_database()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates a database. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: S278drWUVoRZ5fx8XkfcWaZfnwh
 sidebar_position: 2
 keywords: 
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - what is vector db
   - zilliz
   - zilliz cloud
   - cloud
@@ -51,7 +54,7 @@ create_database(
 
 - **db_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     Name of the database to create.
 
@@ -63,7 +66,7 @@ create_database(
 
         Number of replicas for the database.
 
-    - **database.resource_groups** (*[]str*) -
+    - **database.resource_groups** (*&#91;&#93;str*) -
 
         Resource groups dedicated to the database.
 

@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "getLoadState() | Java | v2"
 slug: /java/java/v2-Management-getLoadState
 sidebar_label: "getLoadState()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation displays whether a specified collection or partition is loaded or not. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: QcaFdMJE9oHX1Axe11rcqfiynEd
 sidebar_position: 6
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
   - zilliz
   - zilliz cloud
   - cloud

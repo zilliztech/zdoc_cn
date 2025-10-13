@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "drop_database() | Python | MilvusClient"
 slug: /python/python/Database-drop_database
 sidebar_label: "drop_database()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops the specified database. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: Vjd7dE5OyoGvYaxd7OCcubBWnLd
 sidebar_position: 4
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,7 +53,7 @@ drop_database(
 
 - **db_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     Name of the database to drop.
 

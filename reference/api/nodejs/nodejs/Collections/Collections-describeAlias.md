@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "describeAlias() | Node.js"
 slug: /node/node/Collections-describeAlias
 sidebar_label: "describeAlias()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation describes a specific alias. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: YCzNdg5yWoeZVrxj7jGcb1UXnBd
 sidebar_position: 8
 keywords: 
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - cosine distance
   - zilliz
   - zilliz cloud
   - cloud
@@ -52,7 +55,7 @@ milvusClient.describeAlias({
 
 - **alias** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The alias of a collection. Note that the alias should exist beforehand.
 
@@ -63,24 +66,24 @@ milvusClient.describeAlias({
     <p>Below is an example of reassigning the alias of one collection to another:</p>
     <p>Suppose there are two collections: <code>collection_1</code> and <code>collection_2</code>. There is also a collection alias named <code>bob</code>, which was originally assigned to <code>collection_1</code>:</p>
     <ul>
-    <li><p><code>collection_1</code>'s alias = ["bob"]</p></li>
-    <li><p><code>collection_2</code>'s alias = []</p></li>
+    <li><p><code>collection_1</code>'s alias = &#91;"bob"&#93;</p></li>
+    <li><p><code>collection_2</code>'s alias = &#91;&#93;</p></li>
     </ul>
     <p>After calling <code>alter_alias("collection_2", "bob")</code>:</p>
     <ul>
-    <li><p><code>collection_1</code>'s alias = []</p></li>
-    <li><p><code>collection_2</code>'s alias = ["bob"]</p></li>
+    <li><p><code>collection_1</code>'s alias = &#91;&#93;</p></li>
+    <li><p><code>collection_2</code>'s alias = &#91;"bob"&#93;</p></li>
     </ul>
 
     </Admonition>
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the collection that has the specified alias.
 
-**RETURNS** *Promise\<DescribeAliasResponse>*
+**RETURNS** *Promise\&lt;DescribeAliasResponse&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

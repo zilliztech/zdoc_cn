@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "add_user() | Python | ORM"
 slug: /python/python/Role-add_user
 sidebar_label: "add_user()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation adds an existing user to the current role. Once added, the user gets permissions allowed for the current role and can perform certain operations. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: W7GJdpYrYoYhSaxW6uzcVAZinYf
 sidebar_position: 1
 keywords: 
-  - open source vector db
-  - vector database example
-  - rag vector database
-  - what is vector db
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
   - zilliz
   - zilliz cloud
   - cloud
@@ -42,7 +45,7 @@ add_user(
 
 - **username** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the user to add to a role.
 

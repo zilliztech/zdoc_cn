@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "CollectionSchema | Java | v2"
 slug: /java/java/v2-Collections-CollectionSchema
 sidebar_label: "CollectionSchema"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "A CollectionSchema instance represents the schema of a collection. A schema sketches the structure of a collection. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: FxUxdWGz2oUh1ixyquZcAndBnAf
 sidebar_position: 2
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - vectordb
   - zilliz
   - zilliz cloud
   - cloud

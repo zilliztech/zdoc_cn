@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "\_\_call\_\_() | Python"
 slug: /python/python/SpladeEmbeddingFunction-__call__
 sidebar_label: "__call__()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation in SpladeEmbeddingFunction takes a list of text strings and directly encodes them into vector embeddings. | Python"
@@ -10,10 +13,10 @@ type: docx
 token: LJqud2x3AojxV4xKONocTe4YnFb
 sidebar_position: 4
 keywords: 
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
   - zilliz
   - zilliz cloud
   - cloud
@@ -46,7 +49,7 @@ splade_ef(
 
 **PARAMETERS:**
 
-- **texts** (*List[str]*)
+- **texts** (*List&#91;str&#93;*)
 
     A list of string values, where each string represents text that will be passed to the embedding model for encoding. The model will generate an embedding vector for each string in the list.
 

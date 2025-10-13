@@ -9,10 +9,10 @@ token: M6KJfLu4ylTkNsd9DUVcQHmfnqe
 sidebar_position: 3
 sidebar_label: "Collections"
 keywords: 
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
   - zilliz
   - zilliz cloud
   - cloud

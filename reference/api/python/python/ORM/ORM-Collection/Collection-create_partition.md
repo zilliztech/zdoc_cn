@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "create_partition() | Python | ORM"
 slug: /python/python/Collection-create_partition
 sidebar_label: "create_partition()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation creates a partition in the target collection. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: Sh7HdgJOIoJipXx5AoNcicjMnyd
 sidebar_position: 5
 keywords: 
-  - Zilliz Cloud
-  - what is milvus
-  - milvus database
-  - milvus lite
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -43,7 +46,7 @@ create_partition(
 
 - **partition_name** (*string*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the partition to create.
 

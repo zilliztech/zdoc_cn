@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "flush() | Python | ORM"
 slug: /python/python/Partition-flush
 sidebar_label: "flush()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation seals all segments in the partition. Any insertions after this operation will generate a new segment. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: VRGwdg75Ao7ZXQx7uANc9wzXnVb
 sidebar_position: 3
 keywords: 
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
   - zilliz
   - zilliz cloud
   - cloud

@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "getCollectionStatistics() | Node.js"
 slug: /node/node/Collections-getCollectionStatistics
 sidebar_label: "getCollectionStatistics()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the statistics collected on a specific collection. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: LQMGdRHjKogdeMxekCtcdBLqnNf
 sidebar_position: 13
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud
@@ -52,7 +55,7 @@ milvusClient.getCollectionStatistics({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a collection.
 
@@ -62,7 +65,7 @@ milvusClient.getCollectionStatistics({
 
     Setting this to **None** indicates that this operation timeouts when any response returns or error occurs.
 
-**RETURNS** *Promise\<StatisticsResponse>*
+**RETURNS** *Promise\&lt;StatisticsResponse&gt;*
 
 This method returns a promise that resolves to a **StatisticsResponse** object.
 

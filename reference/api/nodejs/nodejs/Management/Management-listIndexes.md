@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "listIndexes() | Node.js"
 slug: /node/node/Management-listIndexes
 sidebar_label: "listIndexes()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the indexes of a specific collection | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: N1fldMqhtoWBJPxh8VccivqxnZd
 sidebar_position: 13
 keywords: 
-  - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
+  - nn search
   - zilliz
   - zilliz cloud
   - cloud
@@ -54,7 +57,7 @@ milvusClient.listIndexes({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
@@ -70,7 +73,7 @@ milvusClient.listIndexes({
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<DescribeIndexResponse>*
+**RETURNS** *Promise\&lt;DescribeIndexResponse&gt;*
 
 This method returns a promise that resolves to a **DescribeIndexResponse** object.
 
@@ -83,7 +86,7 @@ This method returns a promise that resolves to a **DescribeIndexResponse** objec
 
 **PARAMETERS:**
 
-- **indexes** (*string[]*) -
+- **indexes** (*string&#91;&#93;*) -
 
     A list of index names.
 

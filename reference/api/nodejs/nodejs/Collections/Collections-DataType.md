@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "DataType | Node.js"
 slug: /node/node/Collections-DataType
 sidebar_label: "DataType"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: VUp6d9FvcoBV0AxYJmvcq9DAnUg
 sidebar_position: 7
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
   - zilliz
   - zilliz cloud
   - cloud

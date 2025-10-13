@@ -3,6 +3,9 @@ title: "Milvus 集群纵向扩缩容 | On-Premise"
 slug: /scale-milvus-vertically
 sidebar_label: "纵向扩缩容"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "纵向扩缩容是指通过调整分配给 Milvus 集群各组件的资源规格对 Milvus 集群进行扩缩容。本节主要介绍如何对 Milvus 集群进行纵向扩缩容。 | On-Premise"
 type: origin

@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "Function | Java | v2"
 slug: /java/java/v2-Collections-Function
 sidebar_label: "Function"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "A `Function` instance for generating vector embeddings from user-provided raw data in Milvus. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: A3YrdnTYXobm34x2qKWcpkrZnN9
 sidebar_position: 26
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
   - zilliz
   - zilliz cloud
   - cloud

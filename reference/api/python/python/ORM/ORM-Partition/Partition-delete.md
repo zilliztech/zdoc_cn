@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "delete() | Python | ORM"
 slug: /python/python/Partition-delete
 sidebar_label: "delete()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation deletes entities from a partition with a boolean expression. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: V9BidASNqoWYrmxo11ecuN99neg
 sidebar_position: 1
 keywords: 
-  - Image Search
-  - LLMs
-  - Machine Learning
-  - RAG
+  - natural language processing
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -49,7 +52,7 @@ delete(
 
 - **expr** (*string*) -
 
-    **[REQUIRED]** 
+    **&#91;REQUIRED&#93;** 
 
     A boolean expression to filter the entities to delete.
 

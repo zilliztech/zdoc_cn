@@ -9,10 +9,10 @@ token: A6atfZDQxl1INud6VYGcX54zngf
 sidebar_position: 2
 sidebar_label: "EmbeddingModels"
 keywords: 
-  - vector similarity search
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
   - zilliz
   - zilliz cloud
   - cloud

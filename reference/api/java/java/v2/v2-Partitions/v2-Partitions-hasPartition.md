@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "hasPartition() | Java | v2"
 slug: /java/java/v2-Partitions-hasPartition
 sidebar_label: "hasPartition()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation checks whether the specified partition exists in the specified collection. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: NS1xdv6f4oQlN4xqnOGc6ssWnTf
 sidebar_position: 4
 keywords: 
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
   - zilliz
   - zilliz cloud
   - cloud

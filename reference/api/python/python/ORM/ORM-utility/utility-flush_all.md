@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "flush_all() | Python | ORM"
 slug: /python/python/utility-flush_all
 sidebar_label: "flush_all()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation seals all segments. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: Uwsfd443boKKgyx2zZTcYDqKnCe
 sidebar_position: 12
 keywords: 
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
   - zilliz
   - zilliz cloud
   - cloud

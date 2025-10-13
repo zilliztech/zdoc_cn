@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "deleteUser() | Node.js"
 slug: /node/node/Authentication-deleteUser
 sidebar_label: "deleteUser()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a user. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: Cl5PdhU5jouHnrxyYXLcOQAZneb
 sidebar_position: 6
 keywords: 
-  - Vector embeddings
-  - Vector store
-  - open source vector database
-  - Vector index
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
   - zilliz
   - zilliz cloud
   - cloud
@@ -49,7 +52,7 @@ milvusClient.deleteUser({
 
 - **username** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the user to drop.
 
@@ -59,7 +62,7 @@ milvusClient.deleteUser({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

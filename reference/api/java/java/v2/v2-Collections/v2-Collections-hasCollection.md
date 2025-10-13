@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "hasCollection() | Java | v2"
 slug: /java/java/v2-Collections-hasCollection
 sidebar_label: "hasCollection()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation checks whether a specific collection exists. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: Vs26d4WrYoJ3moxuLifcyP2enyh
 sidebar_position: 18
 keywords: 
-  - knn
   - Image Search
   - LLMs
   - Machine Learning
+  - RAG
   - zilliz
   - zilliz cloud
   - cloud

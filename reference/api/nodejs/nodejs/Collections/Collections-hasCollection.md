@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "hasCollection() | Node.js"
 slug: /node/node/Collections-hasCollection
 sidebar_label: "hasCollection()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation checks whether a specific collection exists. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: FhbbdNrlNouBXJxHIdKctXVKnmf
 sidebar_position: 15
 keywords: 
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud
@@ -52,7 +55,7 @@ milvusClient.hasCollection({
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a collection.
 
@@ -62,7 +65,7 @@ milvusClient.hasCollection({
 
     Setting this to **None** indicates that this operation timeouts when any response returns or error occurs.
 
-**RETURNS** *Promise\<BoolResponse>*
+**RETURNS** *Promise\&lt;BoolResponse&gt;*
 
 This method returns a promise that resolves to a **BoolResponse** object.
 

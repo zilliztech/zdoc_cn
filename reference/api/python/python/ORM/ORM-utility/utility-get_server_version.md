@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "get_server_version() | Python | ORM"
 slug: /python/python/utility-get_server_version
 sidebar_label: "get_server_version()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation checks the version of the Zilliz Cloud cluster. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: PoPkdkzSnofUihxzKLqcw7hYnrf
 sidebar_position: 16
 keywords: 
-  - Zilliz database
-  - Unstructured Data
-  - vector database
-  - IVF
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - what is vector db
   - zilliz
   - zilliz cloud
   - cloud

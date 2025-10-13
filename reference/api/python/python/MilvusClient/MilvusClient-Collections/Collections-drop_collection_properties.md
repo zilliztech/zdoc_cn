@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "drop_collection_properties() | Python | MilvusClient"
 slug: /python/python/Collections-drop_collection_properties
 sidebar_label: "drop_collection_properties()"
+added_since: v2.4.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops the specified collection properties. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: WjNRdifU9o3xl5xG0W7ch4Fjnme
 sidebar_position: 12
 keywords: 
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
-  - Embedding model
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - knn algorithm
   - zilliz
   - zilliz cloud
   - cloud
@@ -48,7 +51,7 @@ drop_collection_properties(
 
     The name of the target collection.
 
-- **property_keys** (*List[str]*) -
+- **property_keys** (*List&#91;str&#93;*) -
 
     The names of the properties to drop in a list. Possible values are as follows:
 
@@ -58,7 +61,7 @@ drop_collection_properties(
 
     - `partitionkey.isolation`
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 

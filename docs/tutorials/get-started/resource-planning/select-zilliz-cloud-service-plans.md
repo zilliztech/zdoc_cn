@@ -3,6 +3,9 @@ title: "Zilliz Cloud 版本对比 | Cloud"
 slug: /select-zilliz-cloud-service-plans
 sidebar_label: "Zilliz Cloud 版本对比"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 提供多样的集群版本类型以满足不同的用户需求。不论是向量数据库领域的新手，还是追求可靠的企业级解决方案的开发者，需要根据性能、可扩展性及成本，选择合适的版本类型。本文将提供不同版本间的对比，帮助您做出合适的选择。 | Cloud"
 type: origin
@@ -57,7 +60,7 @@ Zilliz Cloud 提供多样的集群版本类型以满足不同的用户需求。�
      <td><p><strong>定价</strong></p></td>
      <td><p>免费</p></td>
      <td><p>详见 <a href="https://zilliz.com.cn/pricing">Zilliz 定价</a></p></td>
-     <td><p>Dedicated 集群提供按量计费和包年包月两种计费方式，详情请参考<a href="./create-cluster">创建集群</a> 与 <a href="https://zilliz.com.cn/pricing">Zilliz 定价</a>。</p></td>
+     <td><p>Dedicated 集群提供按量计费和包年包月两种计费方式，详情请参考<a href="./create-cluster_1">创建集群</a> 与 <a href="https://zilliz.com.cn/pricing">Zilliz 定价</a>。</p></td>
      <td><p><a href="https://zilliz.com.cn/contact-sales">联系销售</a></p></td>
    </tr>
    <tr>
@@ -68,17 +71,17 @@ Zilliz Cloud 提供多样的集群版本类型以满足不同的用户需求。�
      <td><ul><li><p>阿里云</p></li><li><p>百度智能云</p></li><li><p>金山云</p></li><li><p>腾讯云</p></li></ul></td>
    </tr>
    <tr>
-     <td><p><strong>CU 规格</strong></p></td>
-     <td><p>单个 CU</p></td>
+     <td><p><strong>Query CU 数量</strong></p></td>
+     <td><p>单个 Query CU</p></td>
      <td><p>弹性伸缩</p></td>
-     <td><p>最多 256 CU (支持 CU 大小包括: 1, 2, 4, 6, 8, 12, 16, 20, 24, 28, 32,…,64, 72, 80, 88,…, 256</p><p>当 CU 规格大于 8 时，CU 增加梯度为 4 CU。</p><p>当 CU 规格 大于 64 时， CU 增加梯度为 8 CU。)</p></td>
+     <td><p>最多 256 Query CU (支持 Query CU 数量包括: 1, 2, 4, 6, 8, 12, 16, 20, 24, 28, 32,…,64, 72, 80, 88,…, 256</p><p>当 Query CU 大于 8 时，增加梯度为 4 CU。</p><p>当 Query CU 大于 64 时， 增加梯度为 8 CU。)</p></td>
      <td><p>可根据用户需求定制</p></td>
    </tr>
    <tr>
-     <td><p><strong>CU 类型</strong></p></td>
+     <td><p><strong>集群类型</strong></p></td>
      <td><p>无</p></td>
      <td><p>无</p></td>
-     <td><p>3 种类型可供选择：</p><ul><li><p>性能型</p></li><li><p>容量型</p></li><li><p>存储扩展型</p></li></ul></td>
+     <td><p>3 种类型可供选择：</p><ul><li><p>性能型</p></li><li><p>容量型</p></li><li><p>分层存储型</p></li></ul></td>
      <td><p>2 种类型可供选择：</p><ul><li><p>性能型</p></li><li><p>容量型</p></li></ul></td>
    </tr>
    <tr>

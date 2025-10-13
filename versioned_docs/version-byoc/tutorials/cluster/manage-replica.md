@@ -1,13 +1,16 @@
 ---
-title: "管理 Replica | Cloud"
+title: "管理 Replica | BYOC"
 slug: /manage-replica
 sidebar_label: "管理 Replica"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和资源的拷贝。使用 Replica 可以提升查询吞吐量和系统稳定性。 | Cloud"
+description: "Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和资源的拷贝。使用 Replica 可以提升查询吞吐量和系统稳定性。 | BYOC"
 type: origin
 token: A8MYw6Wj2ilF2akZeKYcwJGSnSY
-sidebar_position: 5
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz
@@ -19,6 +22,8 @@ keywords:
 
 import Admonition from '@theme/Admonition';
 
+
+import Supademo from '@site/src/components/Supademo';
 
 # 管理 Replica
 
@@ -36,7 +41,7 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 ## 设置按量计费集群 Replica{#configure-replicas-for-usage-based-cluster}
 
-设置 Replica 的操作会影响集群每月的 CU 费用。存储费用不会受到影响。更多详情，请参考[预估费用](./understand-cost)。
+设置 Replica 的操作会影响集群每月的 CU 费用。存储费用不会受到影响。更多详情，请参考[预估费用](./undefined)。
 
 ### 使用限制{#limits}
 
@@ -61,6 +66,19 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 #### 通过 Web 控制台{#via-web-console}
 
 以下 Demo 展示了如何在 Zilliz Cloud 控制台中手动调整 Replica 数量。
+
+<Supademo id="cmd2ub5ca38cxc4kjl4ua85dm" title=""  />
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>当您在 <strong>集群 Replica 扩缩容</strong>对话框中单击<strong>保存</strong>后，您将看到自动弹出的<strong>检查项目资源配额</strong>窗口。如果当前项目的资源充足，该窗口在检查完成后会自动消失。如果资源不足，您可以：</p>
+<ul>
+<li><p>单击<strong>前往项目资源设置</strong>按钮，以便编辑当前项目的资源设置，或者</p></li>
+<li><p>单击<strong>返回上一步</strong>按钮，以便编辑当前集群的相关设置。</p></li>
+</ul>
+<p>操作期间会消耗少量额外资源，并在操作完成后释放。</p>
+
+</Admonition>
 
 #### 通过RESTful API{#via-restful-api}
 
@@ -89,48 +107,5 @@ curl --request POST \
 
 以下 Demo 展示了如何启用 Replica 弹性伸缩功能。
 
-## 设置包年包月集群 Replica{#configure-replicas-for-annual-subsription-cluster}
+<Supademo id="cmd2ujs5s38dlc4kjgbm3gkui" title=""  />
 
-当前包年包月集群仅支持增加 Replica 数量，不支持减少 Replica 数量。
-
-![NT2Tw6vf0hXg6ebI541cOXx3ntd](/img/NT2Tw6vf0hXg6ebI541cOXx3ntd.png)
-
-上图展示了增加包年包月集群 Replica 数量的主要流程和步骤。以下为具体操作说明。
-
-### 步骤 1. 增加集群 Replica 数量
-
-1. 登录 Zilliz Cloud。前往目标集群的**集群详情**页。点击 Replica 数量右侧的**增加**按钮。
-
-    ![increase-replica-for-annual-subscription-cluster-entrance-cn](/img/increase-replica-for-annual-subscription-cluster-entrance-cn.png)
-
-1. 选择集群 Replica 数量。目前仅支持选择比当前更大的 Replica 数量。
-
-1. （可选）您可以选择是否需要同时**延长集群有效期**。
-
-1. 检查订单金额，点击**增加**。如需了解集群升配与续订的费用计算规则，请参考[变更配置费用说明](./notice-on-config-changes)。
-
-    ![increase-replica-for-annual-subscription-cluster-cn](/img/increase-replica-for-annual-subscription-cluster-cn.png)
-
-1. 阅读并同意 [Zilliz Cloud 服务条款](https://zilliz.com.cn/cloud-service-terms)。
-
-### 步骤 2. 支付订单
-
-完成步骤 1 后，Zilliz Cloud 将生成一份类型为**升配**的**待支付**订单。请检查订单内容并及时完成支付。
-
-![pay-annual-subscription-scale-order-cn](/img/pay-annual-subscription-scale-order-cn.png)
-
-<Admonition type="info" icon="📘" title="说明">
-
-<p>如果您的组织现金余额不足，请先进行现金充值（对公转账）。详情请见<a href="./advance-pay">现金充值（对公转账）</a>。</p>
-<p>充值成功后，您可以前往<strong>费用中心>订单</strong>页支付订单。详情请见<a href="./manage-order">管理订单</a>。</p>
-<p>订单生成后 7 天内未完成支付，系统将自动取消订单。如仍需修改包年包月集群 Replica 数量，请重新完成步骤 1 的操作并支付新订单。</p>
-
-</Admonition>
-
-### 步骤 3. 等待集群完成升配
-
-订单支付成功后，Zilliz Cloud 会开始为您的包年包月集群增加 Replica 数量，您将看到以下界面。
-
-![annual-subscription-cluster-is-being-scaled-cn](/img/annual-subscription-cluster-is-being-scaled-cn.png)
-
-集群升配的过程大约需要 10 分钟，请您耐心等待。当集群状态变为**运行中**时，代表包年包月集群 Replica 数量增加成功。

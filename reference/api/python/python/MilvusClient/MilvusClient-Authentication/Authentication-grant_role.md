@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "grant_role() | Python | MilvusClient"
 slug: /python/python/Authentication-grant_role
 sidebar_label: "grant_role()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation grants a role to a user. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: DsnpdZuDGo77TYxFuYvcDpOgnIf
 sidebar_position: 12
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,13 +47,13 @@ grant_role(
 
 - **user_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing user.
 
 - **role_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the role to assign.
 

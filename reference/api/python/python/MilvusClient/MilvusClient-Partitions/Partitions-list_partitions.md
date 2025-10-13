@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_partitions() | Python | MilvusClient"
 slug: /python/python/Partitions-list_partitions
 sidebar_label: "list_partitions()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the partitions in a specified collection. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: Dxgqdvlk5o2VScxqmL1ctc1Inqb
 sidebar_position: 5
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud
@@ -43,7 +46,7 @@ list_partitions(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 

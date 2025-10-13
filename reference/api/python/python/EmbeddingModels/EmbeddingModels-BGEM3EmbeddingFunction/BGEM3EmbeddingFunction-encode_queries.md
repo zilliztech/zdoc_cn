@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "encode_queries() | Python"
 slug: /python/python/BGEM3EmbeddingFunction-encode_queries
 sidebar_label: "encode_queries()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation takes in a list of query strings and encodes each query into a vector embedding. | Python"
@@ -10,10 +13,10 @@ type: docx
 token: UehMdosTGoZVzaxdTcUcpy1ynef
 sidebar_position: 3
 keywords: 
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
   - zilliz
   - zilliz cloud
   - cloud

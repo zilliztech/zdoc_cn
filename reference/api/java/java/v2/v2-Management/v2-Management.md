@@ -9,10 +9,10 @@ token: MTBuf5wQ7lardCddEtCc4R2uncb
 sidebar_position: 4
 sidebar_label: "Management"
 keywords: 
-  - NLP
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - milvus vector database
   - zilliz
   - zilliz cloud
   - cloud

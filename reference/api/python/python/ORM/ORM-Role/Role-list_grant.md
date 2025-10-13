@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_grant() | Python | ORM"
 slug: /python/python/Role-list_grant
 sidebar_label: "list_grant()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists the relationship between the current role and the specified object. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: JXNXdQuwhoYmZQxSohNcdxtwnzh
 sidebar_position: 7
 keywords: 
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +47,7 @@ list_grant(
 
 - **object** (*str*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The type of the object to grant the privilege.
 
@@ -52,7 +55,7 @@ list_grant(
 
 - **object_name** (*str*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a target object of the type specified in **object**.
 

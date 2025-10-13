@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "encode_documents() | Python"
 slug: /python/python/Model2VecEmbeddingFunction-encode_documents
 sidebar_label: "encode_documents()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation takes in documents and encodes them into vector embeddings. | Python"
@@ -10,10 +13,10 @@ type: docx
 token: WJY1dMUO5owB1gxkOlLcaB2Rn7g
 sidebar_position: 1
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -40,13 +43,13 @@ encode_documents(
 
 **PARAMETERS:**
 
-- **documents** (*List[str]*)
+- **documents** (*List&#91;str&#93;*)
 
     A list of string values, where each string represents a document that will be passed to the embedding model for encoding. The model will generate an embedding vector for each string in the list.
 
 **RETURN TYPE:**
 
-*List[np.array]*
+*List&#91;np.array&#93;*
 
 **RETURNS:**
 

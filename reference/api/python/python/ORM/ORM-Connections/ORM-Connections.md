@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "Connections | Python | ORM"
 slug: /python/python/ORM-Connections
 sidebar_label: "Connections"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "A Connections instance represents a pool of connections to your Zilliz Cloud clusters. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: A96udk9seoF5x5xywQZcLasanIe
 sidebar_position: 3
 keywords: 
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
+  - Machine Learning
+  - RAG
+  - NLP
+  - Neural Network
   - zilliz
   - zilliz cloud
   - cloud

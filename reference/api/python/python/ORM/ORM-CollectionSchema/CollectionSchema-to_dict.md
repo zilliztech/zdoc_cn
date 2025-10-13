@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "to_dict() | Python | ORM"
 slug: /python/python/CollectionSchema-to_dict
 sidebar_label: "to_dict()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation converts a CollectionSchema object to a dictionary representation. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: GfTadfqhAo64XDxc643ci4Zwnwb
 sidebar_position: 4
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud

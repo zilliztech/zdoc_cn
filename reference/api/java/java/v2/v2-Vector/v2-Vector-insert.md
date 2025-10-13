@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "insert() | Java | v2"
 slug: /java/java/v2-Vector-insert
 sidebar_label: "insert()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation inserts data into a specific collection. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: P0XRd2Mgfo1uG6xk47icWRd4n6b
 sidebar_position: 4
 keywords: 
-  - how do vector databases work
-  - vector db comparison
   - openai vector db
   - natural language processing database
+  - cheap vector database
+  - Managed vector database
   - zilliz
   - zilliz cloud
   - cloud

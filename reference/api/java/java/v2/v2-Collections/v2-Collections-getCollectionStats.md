@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "getCollectionStats() | Java | v2"
 slug: /java/java/v2-Collections-getCollectionStats
 sidebar_label: "getCollectionStats()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the statistics collected on a specific collection. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: XgfcdpBWCof3pfxhUudcRZajnPc
 sidebar_position: 17
 keywords: 
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
+  - what is semantic search
+  - Embedding model
+  - image similarity search
+  - Context Window
   - zilliz
   - zilliz cloud
   - cloud

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "has_collection() | Python | ORM"
 slug: /python/python/utility-has_collection
 sidebar_label: "has_collection()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation checks whether a collection exists. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: TWOxdwDYRo4CCHxDdZbc7IOznCg
 sidebar_position: 17
 keywords: 
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
+  - vector database example
+  - rag vector database
+  - what is vector db
+  - what are vector databases
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +47,7 @@ has_collection(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
     The name of an existing collection.
 
 - **using** (*str*) - 

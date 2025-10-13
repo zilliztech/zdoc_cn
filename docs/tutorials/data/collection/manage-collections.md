@@ -3,6 +3,9 @@ title: "了解 Collection | Cloud"
 slug: /manage-collections
 sidebar_label: "了解 Collection"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 集群中，您可以创建多个 Collection 用于管理数据，并将数据记录作为 Entity 插入 Collection 中。Collection 与 Entity 这对概念与关系型数据库中的数据表和数据记录这对概念类似。本小节主要介绍 Zilliz Cloud 集群中与 Collection 及与之相关的一些概念。 | Cloud"
 type: origin
@@ -57,7 +60,7 @@ Collection 是一张二维数据表，包含固定列数和可变行数。Collec
 
 主键字段默认要求手动输入，也可以通过在创建 Collection 时通过开启 AutoId 的方式将其设置为自动分配。在 Collection 的主键为自动分配的情况下，插入数据时应确保插入的 Entity 不包括主键字段。
 
-关于主键和 AutoId 的更多内容，可参考 [主键与 AutoId](./primary-field-auto-id) 中的相关介绍。eff
+关于主键和 AutoId 的更多内容，可参考 [主键与 AutoId](./primary-field-auto-id) 中的相关介绍。
 
 ## 索引{#index}
 

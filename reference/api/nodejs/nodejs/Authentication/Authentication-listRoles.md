@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "listRoles() | Node.js"
 slug: /node/node/Authentication-listRoles
 sidebar_label: "listRoles()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all custom roles. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: GIeMdvjlMoLwGrxUOu3cFw7bnWc
 sidebar_position: 18
 keywords: 
-  - Recommender systems
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
   - zilliz
   - zilliz cloud
   - cloud
@@ -55,7 +58,7 @@ milvusClient.listRoles(
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**Returns** *Promise\<SelectRoleResponse>*
+**Returns** *Promise\&lt;SelectRoleResponse&gt;*
 
 This method returns a promise that resolves to a **SelectRoleResponse** object.
 
@@ -70,9 +73,9 @@ This method returns a promise that resolves to a **SelectRoleResponse** object.
 
 - **results** 
 
-    - **RoleResult** *(RoleResult[]) -*
+    - **RoleResult** *(RoleResult&#91;&#93;) -*
 
-        - **entities** (*GrantEntity[]*) -
+        - **entities** (*GrantEntity&#91;&#93;*) -
 
             - **db_name** (*string*) -
 
@@ -110,7 +113,7 @@ This method returns a promise that resolves to a **SelectRoleResponse** object.
 
                 The name of the current role.
 
-        - **users** (*User[]*) -
+        - **users** (*User&#91;&#93;*) -
 
             - **name** (*string*) -
 

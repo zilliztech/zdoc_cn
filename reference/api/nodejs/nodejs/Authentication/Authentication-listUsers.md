@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "listUsers() | Node.js"
 slug: /node/node/Authentication-listUsers
 sidebar_label: "listUsers()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists currently available users. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: Z0EOd1PXooNeowx4SQgcq3synBc
 sidebar_position: 19
 keywords: 
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
   - zilliz
   - zilliz cloud
   - cloud
@@ -48,7 +51,7 @@ milvusClient.listUsers()
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-*Returns Promise\<ListCredUsersResponse>*
+*Returns Promise\&lt;ListCredUsersResponse&gt;*
 
 This method returns a promise that resolves to a **ListCredUsersResponse** object.
 
@@ -61,7 +64,7 @@ This method returns a promise that resolves to a **ListCredUsersResponse** objec
 
 **PARAMETERS:**
 
-- **usernames** (*string[]*) -
+- **usernames** (*string&#91;&#93;*) -
 
     A list of user names.
 

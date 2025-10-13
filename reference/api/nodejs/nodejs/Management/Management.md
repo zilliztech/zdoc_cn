@@ -9,10 +9,10 @@ token: Yo6ffPwKzlWzZndRXVocighbnfd
 sidebar_position: 3
 sidebar_label: "Management"
 keywords: 
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
   - zilliz
   - zilliz cloud
   - cloud

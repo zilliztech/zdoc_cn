@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "MilvusClientV2 | Java | v2"
 slug: /java/java/v2-Client-MilvusClientV2
 sidebar_label: "MilvusClientV2"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "A MilvusClientV2 instance represents a Java client that connects to a specific Zilliz Cloud cluster. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: IeOWd0yR2onm5Ex6XyqcrGjKnpS
 sidebar_position: 1
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
   - zilliz
   - zilliz cloud
   - cloud

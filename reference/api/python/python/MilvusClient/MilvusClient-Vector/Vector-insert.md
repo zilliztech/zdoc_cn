@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "insert() | Python | MilvusClient"
 slug: /python/python/Vector-insert
 sidebar_label: "insert()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation inserts data into a specific collection. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: QI87dhVnioL9JLxnNKxcM8jWnkh
 sidebar_position: 3
 keywords: 
-  - knn algorithm
-  - HNSW
-  - What is unstructured data
-  - Vector embeddings
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,13 +48,13 @@ insert(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
-- **data** (*dict* | *list[dict]*) -
+- **data** (*dict* | *list&#91;dict&#93;*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The data to insert into the current collection.
 

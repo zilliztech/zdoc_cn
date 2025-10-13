@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "createPartition() | Java | v2"
 slug: /java/java/v2-Partitions-createPartition
 sidebar_label: "createPartition()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates a partition in the target collection. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: CadTdZ5YGocDymxaIOvcr08pnxd
 sidebar_position: 1
 keywords: 
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud

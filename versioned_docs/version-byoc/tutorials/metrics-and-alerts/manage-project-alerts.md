@@ -1,10 +1,13 @@
 ---
-title: "管理项目告警 | Cloud"
+title: "管理项目告警 | BYOC"
 slug: /manage-project-alerts
 sidebar_label: "管理项目告警"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "项目告警功能通过对集群指标（如 CU、Query QPS）进行主动监控，在满足指定条件时发送通知，帮助您主动监控 Zilliz Cloud 集群的状态。配置项目告警后，您能在潜在问题出现时立即收到通知，确保及时处理。 | Cloud"
+description: "项目告警功能通过对集群指标（如 CU、Query QPS）进行主动监控，在满足指定条件时发送通知，帮助您主动监控 Zilliz Cloud 集群的状态。配置项目告警后，您能在潜在问题出现时立即收到通知，确保及时处理。 | BYOC"
 type: origin
 token: EUS8w4x9Ii0BmhkJBfQcsoFln5c
 sidebar_position: 4
@@ -151,7 +154,7 @@ curl --request POST \
            "type": "EMAIL",
            "config": {
              "recipients": {
-               "members": ["leryn.li@zilliz.com"],
+               "members": ["leryn.li@zilliz.com.cn"],
                "orgRoles": ["OWNER"],
                "projectRoles": ["OWNER"]
              }

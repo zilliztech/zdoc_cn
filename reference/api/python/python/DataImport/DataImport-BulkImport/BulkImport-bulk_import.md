@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "bulk_import() | Python"
 slug: /python/python/BulkImport-bulk_import
 sidebar_label: "bulk_import()"
+added_since: Inherit
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation imports the prepared data files to Zilliz Cloud. To learn how to prepare your data files, read Prepare Data Import. | Python"
@@ -10,10 +13,10 @@ type: docx
 token: RFSCdiUYGouQrtx8c1RczPVvnmf
 sidebar_position: 1
 keywords: 
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
+  - rag llm architecture
+  - private llms
+  - nn search
+  - llm eval
   - zilliz
   - zilliz cloud
   - cloud
@@ -49,7 +52,7 @@ bulk_import(
 
 - **url** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The endpoint URL of your Zilliz Cloud cluster. 
 
@@ -64,13 +67,13 @@ bulk_import(
 
 - **api_key** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A valid Zilliz Cloud API key with sufficient permissions to manipulate the cluster.
 
 - **object_url** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The URL of your data files in one of your block storage buckets. The following are some examples of some renowned block storage services:
 
@@ -84,19 +87,19 @@ bulk_import(
 
 - **access_key** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The access key that is used to authenticate access to your data files.
 
 - **secret_key** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The secret key that is used to authenticate access to your data files.
 
 - **cluster_id** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The instance ID of the target cluster of this operation.
 
@@ -135,7 +138,7 @@ None
 from pymilvus.bulk_writer import bulk_import
 
 # Bulk-import your data from the prepared data files
-CLOUD_API_ENDPOINT = "https://api.cloud.zilliz.com"
+CLOUD_API_ENDPOINT = "https://api.cloud.zilliz.com.cn"
 CLUSTER_ID = "inxx-xxxxxxxxxxxxxxx"
 API_KEY = ""
 STORAGE_URL = ""

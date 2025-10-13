@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_roles() | Python | MilvusClient"
 slug: /python/python/Authentication-list_roles
 sidebar_label: "list_roles()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all custom roles. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: MApVdDl17oU8OixzbMPcgceKnOh
 sidebar_position: 14
 keywords: 
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
   - zilliz
   - zilliz cloud
   - cloud

@@ -3,6 +3,9 @@ title: "从腾讯云向量数据库迁移至 Zilliz Cloud | Cloud"
 slug: /migrate-from-tencent-cloud-vectordb
 sidebar_label: "从腾讯云向量数据库迁移"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本文档说明腾讯云向量数据库迁移过程中 Zilliz Cloud 的数据类型映射规则、JSON 字段转换机制及 Collection 命名规范。 | Cloud"
 type: origin

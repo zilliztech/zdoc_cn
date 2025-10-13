@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "drop_index_properties() | Python | MilvusClient"
 slug: /python/python/Management-drop_index_properties
 sidebar_label: "drop_index_properties()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops the specified index properties. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: M2kXd5zWSoMIOnxXWamcgCkznih
 sidebar_position: 15
 keywords: 
+  - cosine distance
+  - what is a vector database
+  - vectordb
   - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
   - zilliz
   - zilliz cloud
   - cloud
@@ -53,13 +56,13 @@ drop_index_properties(
 
     The name of the index file to drop.
 
-- **property_keys** (*List[str]*) -
+- **property_keys** (*List&#91;str&#93;*) -
 
     The names of the properties to drop in a list. Possible properties are as follows:
 
     - `mmap.enabled`
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 

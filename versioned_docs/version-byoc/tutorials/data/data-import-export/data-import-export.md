@@ -1,13 +1,16 @@
 ---
-title: "导入导出 | Cloud"
+title: "导入导出 | BYOC"
 slug: /data-import-export
 sidebar_label: "导入导出"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "本章介绍 Zilliz Cloud 数据导入导出操作的相关步骤。 | Cloud"
+description: "本章介绍 Zilliz Cloud 数据导入导出操作的相关步骤。 | BYOC"
 type: origin
 token: Z8V4wt5WmiE9CDkRatocpcnLnme
-sidebar_position: 6
+sidebar_position: 7
 keywords: 
   - 向量数据库
   - zilliz

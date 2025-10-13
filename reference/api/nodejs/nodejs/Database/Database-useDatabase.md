@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "useDatabase() | Node.js"
 slug: /node/node/Database-useDatabase
 sidebar_label: "useDatabase()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation sets the active database for the gRPC client. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: NDcldy9OLo62DLxw1a9cFSLsnYb
 sidebar_position: 6
 keywords: 
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,7 +53,7 @@ milvusClient.useDatabase({
 
     There should be a database with the specified name. Otherwise, exceptions will occur.
 
-**RETURNS** *Promise |\<ResStatus>*
+**RETURNS** *Promise |&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

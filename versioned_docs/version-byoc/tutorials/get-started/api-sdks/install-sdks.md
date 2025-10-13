@@ -1,10 +1,13 @@
 ---
-title: "安装 SDK | Cloud"
+title: "安装 SDK | BYOC"
 slug: /install-sdks
 sidebar_label: "安装 SDK"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "本文介绍如何安装 Milvus SDK，以连接到 Zilliz Cloud 集群。 | Cloud"
+description: "本文介绍如何安装 Milvus SDK，以连接到 Zilliz Cloud 集群。 | BYOC"
 type: origin
 token: Jo4bwNi6zi4zlHkN2bWcewFYnDc
 sidebar_position: 1
@@ -48,8 +51,8 @@ PyMilvus 是 Milvus 的 Python SDK。您可以在 [GitHub](https://github.com/mi
 执行以下命令，安装 PyMilvus：
 
 ```bash
-# Install specific PyMilvus version
-python -m pip install pymilvus==2.5.8
+# Install pymilvus compatible with Milvus v2.5.x
+python -m pip install pymilvus==2.5.14
 
 # Update PyMilvus to the newest version
 python -m pip install --upgrade pymilvus
@@ -69,10 +72,15 @@ python -m pip list | grep pymilvus
 </Admonition>
 
 ```bash
-# Installing a specific version for your clusters
-npm install @zilliz/milvus2-sdk-node@2.5.8
+# Install Node.js SDK compatible with Milvus v2.5.x
+npm install @zilliz/milvus2-sdk-node@2.5.12
 # Alternatively,
-yarn add @zilliz/milvus2-sdk-node@2.5.8
+yarn add @zilliz/milvus2-sdk-node@2.5.12
+
+# Upgrade to the latest version
+npm update @zilliz/milvus2-sdk-node
+# Alternatively,
+yarn upgrade @zilliz/milvus2-sdk-node
 
 # Verify installation
 npm list | grep @zilliz/milvus2-sdk-node
@@ -83,10 +91,10 @@ yarn list | grep @zilliz/milvus2-sdk-node
 您可以将 SDK 以 CommonJS 模块或 ES6 模块导入到项目中。一般而言，对于使用`npm init`创建的项目，可以将 SDK 以 CommonJS 模块导入；对于使用`npm init es6`创建的项目，可以将 SDK 以 ES6 模块导入。
 
 ```javascript
-// 将 SDK 以 CommonJS 模块导入
+// Import the SDK as a CommonJS module
 const { MilvusClient } = require("@zilliz/milvus2-sdk-node")
 
-// 将 SDK 以 ES6 模块导入
+// Import the SDK as a ES6 module
 import { MilvusClient } from "@zilliz/milvus2-sdk-node"
 ```
 
@@ -96,14 +104,14 @@ import { MilvusClient } from "@zilliz/milvus2-sdk-node"
 
 - Apache Maven
 
-    只需将以下依赖项添加到 `pom.xml`：
+    只需将以下依赖项添加到 **pom.xml**：
 
     ```xml
-    <!-- Use this for your clusters -->
+    <!-- Install Java SDK compatible with Milvus v2.5.x -->
     <dependency>
          <groupId>io.milvus</groupId>
          <artifactId>milvus-sdk-java</artifactId>
-         <version>2.5.9</version>
+         <version>2.5.12</version>
      </dependency>
     ```
 
@@ -112,8 +120,8 @@ import { MilvusClient } from "@zilliz/milvus2-sdk-node"
     在 Shell 中执行以下命令：
 
     ```bash
-    # Use this for your clusters
-    compile 'io.milvus:milvus-sdk-java:2.5.9'
+    # Install Java SDK compatible with Milvus v2.5.x
+    compile 'io.milvus:milvus-sdk-java:2.5.12'
     ```
 
 ## 安装 Go SDK{#install-go-sdk}
@@ -121,8 +129,8 @@ import { MilvusClient } from "@zilliz/milvus2-sdk-node"
 您可以通过 `go get` 安装 Go SDK。您可以在 [GitHub](https://github.com/milvus-io/milvus-sdk-go) 找到相关源代码。
 
 ```bash
-# Run the following for your clusters
-go get -u github.com/milvus-io/milvus-sdk-go/v2@v2.5.3
+# Install Go SDK compatible with Milvus v2.5.x
+go get -u github.com/milvus-io/milvus-sdk-go/v2@v2.5.6
 ```
 
 ## 相关文档{#related-docs}

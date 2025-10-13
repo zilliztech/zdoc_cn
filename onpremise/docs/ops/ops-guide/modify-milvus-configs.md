@@ -3,6 +3,9 @@ title: "变更 Milvus 集群配置 | On-Premise"
 slug: /modify-milvus-configs
 sidebar_label: "变更 Milvus 集群配置"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Milvus 集群支持在运行过程中对其配置及集群依赖的三方件配置进行变更。本章主要介绍如何变更 Milvus 集群配置和 Milvus 集群依赖的三方件配置。 | On-Premise"
 type: origin

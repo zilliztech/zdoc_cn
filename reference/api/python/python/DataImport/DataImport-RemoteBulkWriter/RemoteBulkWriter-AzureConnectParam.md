@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "AzureConnectParam | Python"
 slug: /python/python/RemoteBulkWriter-AzureConnectParam
 sidebar_label: "AzureConnectParam"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "An AzureConnectParam instance sets connection parameters for a RemoteBulkWriter instance. | Python"
@@ -10,10 +13,10 @@ type: docx
 token: C2YSddNqZoDNmNxWqqEcuzhKn4f
 sidebar_position: 2
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - Unstructured Data
+  - vector database
+  - IVF
+  - knn
   - zilliz
   - zilliz cloud
   - cloud
@@ -70,7 +73,7 @@ connect_param = RemoteBulkWriter.AzureConnectParam(
 
 - **account_url** (*str*)
 
-    A string in format like `https://<storage-account>.blob.core.windows.net`.
+    A string in format like `<i>http</i>s://<storage-account>.blob.core.windows.net`.
 
     Read [this link](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview) for more info.
 

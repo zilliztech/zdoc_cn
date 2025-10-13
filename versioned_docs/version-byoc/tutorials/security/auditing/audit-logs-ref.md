@@ -1,10 +1,13 @@
 ---
-title: "审计日志参考 | Cloud"
+title: "VectorDB 审计日志参考 | BYOC"
 slug: /audit-logs-ref
-sidebar_label: "审计日志参考"
-beta: PRIVATE
+sidebar_label: "VectorDB 审计日志参考"
+beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "在 Zilliz Cloud 上，审计日志的结构如下所示： | Cloud"
+description: "在 Zilliz Cloud 上，审计日志的结构如下所示： | BYOC"
 type: origin
 token: RNEgwQLoUi4djXkouqQcSbgvnlb
 sidebar_position: 2
@@ -22,7 +25,7 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# 审计日志参考
+# VectorDB 审计日志参考
 
 在 Zilliz Cloud 上，审计日志的结构如下所示：
 

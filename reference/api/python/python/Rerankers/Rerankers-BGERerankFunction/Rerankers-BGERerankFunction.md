@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "BGERerankFunction | Python"
 slug: /python/python/Rerankers-BGERerankFunction
 sidebar_label: "BGERerankFunction"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "BGERerankFunction is a class in milvusmodel that takes a query and document as input and directly returns a similarity score instead of embeddings. This functionality uses the underlying BGE reranking model. | Python"
@@ -10,10 +13,10 @@ type: docx
 token: GxAZd9O9gozzhExhMHWcMnXPngh
 sidebar_position: 1
 keywords: 
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud

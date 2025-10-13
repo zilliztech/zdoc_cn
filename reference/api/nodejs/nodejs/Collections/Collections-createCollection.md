@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "createCollection() | Node.js"
 slug: /node/node/Collections-createCollection
 sidebar_label: "createCollection()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates a collection either with default or customized settings. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: HPumdTuktozoJAxYrqQcRciSnsb
 sidebar_position: 6
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
   - zilliz
   - zilliz cloud
   - cloud
@@ -64,7 +67,7 @@ milvusClient.createCollection({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the collection to create.
 
@@ -100,7 +103,7 @@ milvusClient.createCollection({
 
 - **enable_dynamic_field** (*boolean)* -
 
-    Whether to use a reserved JSON field named **$meta** to store undefined fields and their values in key-value pairs.
+    Whether to use a reserved JSON field named **&#36;meta** to store undefined fields and their values in key-value pairs.
 
     The value defaults to **True**, indicating that the meta field is used.
 
@@ -174,7 +177,7 @@ milvusClient.createCollection({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the collection to create.
 
@@ -198,11 +201,11 @@ milvusClient.createCollection({
 
 - **enable_dynamic_field** (*boolean)* -
 
-    Whether to use a reserved JSON field named **$meta** to store undefined fields and their values in key-value pairs.
+    Whether to use a reserved JSON field named **&#36;meta** to store undefined fields and their values in key-value pairs.
 
     The value defaults to **True**, indicating that the meta field is used.
 
-- **schema** (*FieldType[]*) -
+- **schema** (*FieldType&#91;&#93;*) -
 
     - **name** (*string)* -
 
@@ -376,11 +379,11 @@ milvusClient.createCollection({
 
         - `FunctionType.BM25`: Uses the BM25 algorithm for generating sparse embeddings from a `VARCHAR` field.
 
-    - **input_field_names** (*string[]*)
+    - **input_field_names** (*string&#91;&#93;*)
 
         The name of the field containing the raw data that requires conversion to vector representation. For functions using `FunctionType.BM25`, this parameter accepts only one field name.
 
-    - **output_field_names** (*string[]*)
+    - **output_field_names** (*string&#91;&#93;*)
 
         The name of the field where the generated embeddings will be stored. This should correspond to a vector field defined in the collection schema. For functions using `FunctionType.BM25`, this parameter accepts only one field name.
 
@@ -439,7 +442,7 @@ milvusClient.createCollection({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the collection to create.
 
@@ -463,11 +466,11 @@ milvusClient.createCollection({
 
 - **enable_dynamic_field** (*boolean)* -
 
-    Whether to use a reserved JSON field named **$meta** to store undefined fields and their values in key-value pairs.
+    Whether to use a reserved JSON field named **&#36;meta** to store undefined fields and their values in key-value pairs.
 
     The value defaults to **True**, indicating that the meta field is used.
 
-- **schema** (*FieldType[]*) -
+- **schema** (*FieldType&#91;&#93;*) -
 
     - **name** (*string)* -
 
@@ -625,7 +628,7 @@ milvusClient.createCollection({
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response returns or error occurs.
 
-- **index_params** (*CreateIndexSimpleReq[]* | *CreateIndexSimpleReq*)
+- **index_params** (*CreateIndexSimpleReq&#91;&#93;* | *CreateIndexSimpleReq*)
 
     The index parameters.
 
@@ -667,15 +670,15 @@ milvusClient.createCollection({
 
         - `FunctionType.BM25`: Uses the BM25 algorithm for generating sparse embeddings from a `VARCHAR` field.
 
-    - **input_field_names** (*string[]*)
+    - **input_field_names** (*string&#91;&#93;*)
 
         The name of the field containing the raw data that requires conversion to vector representation. For functions using `FunctionType.BM25`, this parameter accepts only one field name.
 
-    - **output_field_names** (*string[]*)
+    - **output_field_names** (*string&#91;&#93;*)
 
         The name of the field where the generated embeddings will be stored. This should correspond to a vector field defined in the collection schema. For functions using `FunctionType.BM25`, this parameter accepts only one field name.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

@@ -1,10 +1,13 @@
 ---
-title: "管理集群角色（控制台） | Cloud"
+title: "管理集群角色（控制台） | BYOC"
 slug: /cluster-roles
 sidebar_label: "管理集群角色（控制台）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "集群角色定义了用户在集群中的权限。具体而言，集群角色控制集群用户在集群、Database 和 Collection 层级的权限。 | Cloud"
+description: "集群角色定义了用户在集群中的权限。具体而言，集群角色控制集群用户在集群、Database 和 Collection 层级的权限。 | BYOC"
 type: origin
 token: A1MewOIxbi6Lq3kmiFkcqVt7nZf
 sidebar_position: 4

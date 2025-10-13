@@ -1,10 +1,13 @@
 ---
-title: "Terraform Provider | Cloud"
+title: "Terraform Provider | BYOC"
 slug: /terraform-provider
 sidebar_label: "Terraform Provider"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz 提供完全托管的 Milvus 服务，旨在简化向量搜索应用的部署与扩展，在安全性方面进行了优化设计，无需你自行构建和维护复杂的基础设施——无论是 Zilliz 提供的云环境，还是你自己的本地环境。 | Cloud"
+description: "Zilliz 提供完全托管的 Milvus 服务，旨在简化向量搜索应用的部署与扩展，在安全性方面进行了优化设计，无需你自行构建和维护复杂的基础设施——无论是 Zilliz 提供的云环境，还是你自己的本地环境。 | BYOC"
 type: origin
 token: NE1qw4ke2ii1XfkMikrckk5Rnpb
 sidebar_position: 11
@@ -74,13 +77,17 @@ Zilliz Cloud 集群是在 Zilliz Cloud 上运行的 Milvus 实例。Zilliz Cloud
 
 - [Databases (Data Source)](https://registry.terraform.io/providers/zilliztech/zillizcloud/latest/docs/data-sources/databases)
 
-### Collection
+### Collection 和 Aliase{#collection-aliases}
 
 Collection 是一个具有固定列和可变行的二维表。每一列表示一个字段，每一行表示一个 Entity。
 
 如需了解如何使用 Zilliz Cloud Terraform Provider 管理 Collection，请参考以下资源和数据源：
 
+- [Aliases (Resource)](https://registry.terraform.io/providers/zilliztech/zillizcloud/latest/docs/resources/alias)
+
 - [Collection (Resource)](https://registry.terraform.io/providers/zilliztech/zillizcloud/latest/docs/resources/collection)
+
+- [Aliases (Data Source)](https://registry.terraform.io/providers/zilliztech/zillizcloud/latest/docs/data-sources/aliases)
 
 - [Collections (Data Source)](https://registry.terraform.io/providers/zilliztech/zillizcloud/latest/docs/data-sources/collections)
 
@@ -133,4 +140,12 @@ Zilliz Cloud 采用 [AUTOINDEX](./autoindex-explained) 技术以实现高效的�
 - [Role (Resource)](https://registry.terraform.io/providers/zilliztech/zillizcloud/latest/docs/resources/user_role)
 
 - [Roles (Data Source)](https://registry.terraform.io/providers/zilliztech/zillizcloud/latest/docs/data-sources/roles)
+
+## BYOC 项目{#byoc-projects}
+
+Zilliz Cloud 还提供了一种 BYOC 解决方案，使组织能够在自己的云账户中托管应用程序和数据，而不是依赖Zilliz Cloud的基础设施。更多详情，可参考[BYOC 简介](./byoc-intro)。
+
+您可以使用本节中的资源管理 BYOC 环境中的 Milvus 集群。详情请参考以下教程：
+
+- [Manage Milvus Cluster in BYOC Environments](https://registry.terraform.io/providers/zilliztech/zillizcloud/latest/docs/guides/managing-milvus-in-byoc)
 

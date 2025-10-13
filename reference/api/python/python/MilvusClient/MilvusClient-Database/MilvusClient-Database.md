@@ -9,10 +9,10 @@ token: CcDcf33k1lcbiZdS6GFc4L9anub
 sidebar_position: 8
 sidebar_label: "Database"
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
   - zilliz
   - zilliz cloud
   - cloud

@@ -3,6 +3,9 @@ title: "约束与限制 | Cloud"
 slug: /limits-and-restrictions
 sidebar_label: "约束与限制"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "了解 Zilliz Cloud 使用上的相关约束与限制。 | Cloud"
 type: origin

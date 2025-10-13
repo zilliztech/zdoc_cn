@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "releasePartitions() | Node.js"
 slug: /node/node/Partitions-releasePartitions
 sidebar_label: "releasePartitions()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation releases the partitions in a specified collection from memory. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: Sqoed1lkwo8umixJJO1cvKIxnZc
 sidebar_position: 8
 keywords: 
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
   - zilliz
   - zilliz cloud
   - cloud
@@ -53,13 +56,13 @@ milvusClient.releasePartitions({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
-- **partition_names** (*string[]*) -
+- **partition_names** (*string&#91;&#93;*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A list of the names of the partitions to release.
 
@@ -69,7 +72,7 @@ milvusClient.releasePartitions({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

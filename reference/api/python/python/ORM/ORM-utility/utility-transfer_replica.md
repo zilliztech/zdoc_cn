@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "transfer_replica() | Python | ORM"
 slug: /python/python/utility-transfer_replica
 sidebar_label: "transfer_replica()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation transfers a specific number of replicas between resource groups. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: SuePdciB0o4du5xtpIhcMVyYnPb
 sidebar_position: 40
 keywords: 
-  - vector similarity search
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
   - zilliz
   - zilliz cloud
   - cloud
@@ -47,7 +50,7 @@ transfer_replica(
 
 - **source_group** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the source resource group from which the query nodes are moved.
 
@@ -55,7 +58,7 @@ transfer_replica(
 
 - **target_group** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the source resource group to which the query nodes are moved.
 
@@ -63,7 +66,7 @@ transfer_replica(
 
 - **num_replicas** (*int*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The number of replicas to move between the source and target resource groups.
 

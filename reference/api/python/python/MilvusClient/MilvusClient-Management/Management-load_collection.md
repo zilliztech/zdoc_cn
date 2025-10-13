@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "load_collection() | Python | MilvusClient"
 slug: /python/python/Management-load_collection
 sidebar_label: "load_collection()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation loads the data of a specific collection into memory. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: FLmWdFP9Zo3JcixOEgucU8JMnLc
 sidebar_position: 10
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -43,7 +46,7 @@ load_collection(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a collection.
 

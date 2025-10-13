@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "refresh_load() | Python | MilvusClient"
 slug: /python/python/Management-refresh_load
 sidebar_label: "refresh_load()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation loads the unloaded data of a loaded collection into memory. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: X3NXdtC2koiAxyxhcUBcv38Wnsh
 sidebar_position: 12
 keywords: 
-  - nn search
-  - llm eval
-  - Sparse vs Dense
-  - Dense vector
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
   - zilliz
   - zilliz cloud
   - cloud
@@ -43,7 +46,7 @@ refresh_load(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the target collection of this operation.
 

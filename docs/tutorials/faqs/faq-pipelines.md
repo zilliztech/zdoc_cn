@@ -69,4 +69,4 @@ Pipelines 可以将非结构化数据转化为高质量的 Embedding 向量，�
 ### Pipelines 支持哪些文档文件类型？ \{#what-document-file-formats-are-supported-by-pipelines}
 Pipelines 支持以下文件类型的文档：`.txt`、`.pdf`、`.md`、`.html`、`.epub`、`.csv`、`.doc`、`.docx`、`.xls`、`.xlsx`、`.ppt` 和 `.pptx`。
 
-[运行 Ingestion Pipelines](./pipelines-doc-data#run-doc-ingestion-pipeline) 时，您可以上传本地文件或使用阿里云对象存储 OSS 签名 URL。
+[运行 Ingestion Pipelines](./undefined#run-doc-ingestion-pipeline) 时，您可以上传本地文件或使用阿里云对象存储 OSS 签名 URL。

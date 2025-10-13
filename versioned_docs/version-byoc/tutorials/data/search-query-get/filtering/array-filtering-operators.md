@@ -1,10 +1,13 @@
 ---
-title: "ARRAY 操作符 | Cloud"
+title: "ARRAY 操作符 | BYOC"
 slug: /array-filtering-operators
 sidebar_label: "ARRAY 操作符"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 为查询 ARRAY 字段提供了强大的操作符，使您可以根据 ARRAY 字段内容过滤和查询 Entity。 | Cloud"
+description: "Zilliz Cloud 为查询 ARRAY 字段提供了强大的操作符，使您可以根据 ARRAY 字段内容过滤和查询 Entity。 | BYOC"
 type: origin
 token: Cb49wcNhsimyyCkHPOwcg6dTn0b
 sidebar_position: 5
@@ -43,13 +46,13 @@ Zilliz Cloud 为查询 ARRAY 字段提供了强大的操作符，使您可以根
 
 ARRAY 操作符允许 Zilliz Cloud clusters中的 ARRAY 类型的字段进行精细查询。这些操作符包括：
 
-- `ARRAY_CONTAINS(identifier, expr)`：用于判断指定 ARRAY 字段值是否包含指定的表达式。
+- [`ARRAY_CONTAINS(identifier, expr)`](./array-filtering-operators#arraycontains)：用于判断指定 ARRAY 字段值是否包含指定的表达式。
 
-- `ARRAY_CONTAINS_ALL(identifier, expr)`：用于判断指定 ARRAY 字段值是否包含指定表达式中的所有元素。
+- [`ARRAY_CONTAINS_ALL(identifier, expr)`](./array-filtering-operators#arraycontainsall)：用于判断指定 ARRAY 字段值是否包含指定表达式中的所有元素。
 
-- `ARRAY_CONTAINS_ANY(identifier, expr)`：用于判断指定 ARRAY 字段值是否包含指定表达式中的任一元素。
+- [`ARRAY_CONTAINS_ANY(identifier, expr)`](./array-filtering-operators#arraycontainsany)：用于判断指定 ARRAY 字段值是否包含指定表达式中的任一元素。
 
-- `ARRAY_LENGTH(identifier)`：用于计算指定 ARRAY 字段值的元素个数。
+- [`ARRAY_LENGTH(identifier)`](./array-filtering-operators#arraylength)：用于计算指定 ARRAY 字段值的元素个数。
 
 ## ARRAY_CONTAINS{#arraycontains}
 

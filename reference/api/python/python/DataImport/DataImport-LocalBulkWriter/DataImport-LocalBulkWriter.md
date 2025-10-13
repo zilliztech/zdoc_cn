@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "LocalBulkWriter | Python"
 slug: /python/python/DataImport-LocalBulkWriter
 sidebar_label: "LocalBulkWriter"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "A LocalBulkWriter instance rewrites your raw data locally in a format that Zilliz Cloud understands. | Python"
@@ -10,10 +13,10 @@ type: docx
 token: RcvXdmCVBog9M8xNyUFcwefnneh
 sidebar_position: 3
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud
@@ -60,13 +63,13 @@ writer = LocalBulkWriter(
 
 - **schema** (*[CollectionSchema](./ORM-CollectionSchema)*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The schema of a target collection to which the rewritten data is to be imported.
 
 - **local_path** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The path to the directory that is to hold the rewritten data.
 

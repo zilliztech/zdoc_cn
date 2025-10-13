@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "create_collection() | Python | MilvusClient"
 slug: /python/python/Collections-create_collection
 sidebar_label: "create_collection()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation supports creating a collection in two distinct ways quick setup or custom setup. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: H7eOdq9hOo7so7xes5LchIVwnrb
 sidebar_position: 5
 keywords: 
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - zilliz
   - zilliz cloud
   - cloud
@@ -52,7 +55,7 @@ create_collection(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the collection to create.
 
@@ -126,9 +129,9 @@ create_collection(
 
     - **enable_dynamic_field** (*bool*) -
 
-        Whether to use a reserved JSON field named **$meta** to store undefined fields and their values in key-value pairs.
+        Whether to use a reserved JSON field named **&#36;meta** to store undefined fields and their values in key-value pairs.
 
-        The value defaults to **True**, indicating that the **$meta** field is used.
+        The value defaults to **True**, indicating that the **&#36;meta** field is used.
 
         This parameter is ignored if **schema** is not **None**.
 
@@ -249,7 +252,7 @@ You can choose between a quick setup or a customized setup as follows:
 
     - The primary field accepts integers and does not automatically increments.
 
-    - The reserved JSON field named **$meta** is used to store non-schema-defined fields and their values.
+    - The reserved JSON field named **&#36;meta** is used to store non-schema-defined fields and their values.
 
     You can modify the names of the primary and vector fields and change the metric type. Additionally, the primary field can be set to increment automatically.
 

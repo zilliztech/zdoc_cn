@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "releaseCollection() | Java | v2"
 slug: /java/java/v2-Management-releaseCollection
 sidebar_label: "releaseCollection()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation releases the data of a specific collection from memory. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: BA9edMrWMosYWFxwTBAcl2WOnff
 sidebar_position: 13
 keywords: 
+  - ANN Search
   - What are vector embeddings
   - vector database tutorial
   - how do vector databases work
-  - vector db comparison
   - zilliz
   - zilliz cloud
   - cloud

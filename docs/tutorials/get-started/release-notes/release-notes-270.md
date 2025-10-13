@@ -3,11 +3,14 @@ title: "版本说明书（2024/04/18） | Cloud"
 slug: /release-notes-270
 sidebar_label: "版本说明书（2024/04/18）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "此次发布引入了诸多新工具和功能增加。主要包括：针对使用 Pipelines 从对象存储中采集数据的新 Connectors、提升搜索相关性的 Rerankers、针对系统静态分析的新指标监控 API、以及跨云数据导入功能。这些功能扩大了数据采集范围、提高了搜索精度和运维洞察能力，让云上向量数据度的管理更加便捷。 | Cloud"
 type: origin
 token: Y9hnwYoyIi9xgZkGG7Ycexl4nlb
-sidebar_position: 11
+sidebar_position: 14
 keywords: 
   - 向量数据库
   - zilliz
@@ -30,11 +33,11 @@ import Admonition from '@theme/Admonition';
 
 ## Connectors{#connectors}
 
-作为 Zilliz Cloud Pipelines 内建能力之一，Connectors 用于从包括对象存储、Kafka （即将发布）等多个数据源向 Zilliz Cloud 导入数据。以对象存储 Connector 为例，该 Connector 可以监控指定的对象存储桶，自动同步桶中的 PDF 或 HTML 文件到 Zilliz Cloud Ingestion Pipeline 中，简化了非结构化文件到向量表示的转化过程，从而能够更快地将其加载到 Zilliz Cloud 向量数据库中，实现对新增数据的检索。如需了解更多，可参阅[连接数据源](./connectors)。
+作为 Zilliz Cloud Pipelines 内建能力之一，Connectors 用于从包括对象存储、Kafka （即将发布）等多个数据源向 Zilliz Cloud 导入数据。以对象存储 Connector 为例，该 Connector 可以监控指定的对象存储桶，自动同步桶中的 PDF 或 HTML 文件到 Zilliz Cloud Ingestion Pipeline 中，简化了非结构化文件到向量表示的转化过程，从而能够更快地将其加载到 Zilliz Cloud 向量数据库中，实现对新增数据的检索。
 
 ## Rerankers{#rerankers}
 
-Zilliz Cloud Pipelines 已经集成了 Rerankers，为需要提升搜索结果相似性水平的用户提供了可选能力增强。[点此了解更多](./reranker)。
+Zilliz Cloud Pipelines 已经集成了 Rerankers，为需要提升搜索结果相似性水平的用户提供了可选能力增强。
 
 在此次发布中，我们提供如下 Reranker 选项：
 

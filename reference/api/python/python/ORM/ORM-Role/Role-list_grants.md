@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_grants() | Python | ORM"
 slug: /python/python/Role-list_grants
 sidebar_label: "list_grants()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists all privileges granted to the current role. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: YRoGdgQmWoIEaJx84ICcHTILnMe
 sidebar_position: 8
 keywords: 
-  - Context Window
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
   - zilliz
   - zilliz cloud
   - cloud

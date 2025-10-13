@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "encode_documents() | Python"
 slug: /python/python/BGEM3EmbeddingFunction-encode_documents
 sidebar_label: "encode_documents()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation takes in documents and encodes them into vector embeddings. | Python"
@@ -10,10 +13,10 @@ type: docx
 token: Q0rYdTPkEoRZgUx99LCcfMDUnvh
 sidebar_position: 2
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - Audio search
+  - what is semantic search
+  - Embedding model
+  - image similarity search
   - zilliz
   - zilliz cloud
   - cloud

@@ -3,6 +3,9 @@ title: "Terraform Provider | Cloud"
 slug: /terraform-provider
 sidebar_label: "Terraform Provider"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz 提供完全托管的 Milvus 服务，旨在简化向量搜索应用的部署与扩展，在安全性方面进行了优化设计，无需你自行构建和维护复杂的基础设施——无论是 Zilliz 提供的云环境，还是你自己的本地环境。 | Cloud"
 type: origin
@@ -74,13 +77,17 @@ Zilliz Cloud 集群是在 Zilliz Cloud 上运行的 Milvus 实例。Zilliz Cloud
 
 - [Databases (Data Source)](https://registry.terraform.io/providers/zilliztech/zillizcloud/latest/docs/data-sources/databases)
 
-### Collection
+### Collection 和 Aliase{#collection-aliases}
 
 Collection 是一个具有固定列和可变行的二维表。每一列表示一个字段，每一行表示一个 Entity。
 
 如需了解如何使用 Zilliz Cloud Terraform Provider 管理 Collection，请参考以下资源和数据源：
 
+- [Aliases (Resource)](https://registry.terraform.io/providers/zilliztech/zillizcloud/latest/docs/resources/alias)
+
 - [Collection (Resource)](https://registry.terraform.io/providers/zilliztech/zillizcloud/latest/docs/resources/collection)
+
+- [Aliases (Data Source)](https://registry.terraform.io/providers/zilliztech/zillizcloud/latest/docs/data-sources/aliases)
 
 - [Collections (Data Source)](https://registry.terraform.io/providers/zilliztech/zillizcloud/latest/docs/data-sources/collections)
 

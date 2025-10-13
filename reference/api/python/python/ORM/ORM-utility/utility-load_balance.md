@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "load_balance() | Python | ORM"
 slug: /python/python/utility-load_balance
 sidebar_label: "load_balance()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation sets up a load-balancing group between two query nodes for a specific collection. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: XYNMdg3Vpo3SE7xTRVqcJNvrn0d
 sidebar_position: 32
 keywords: 
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
   - zilliz
   - zilliz cloud
   - cloud
@@ -46,20 +49,20 @@ load_balance(
 **PARAMETERS:**
 
 - **collection_name** (*str*) -
-**[REQUIRED]**
+**&#91;REQUIRED&#93;**
 
     The name of an existing collection for which a load-balancing group is set up.
 
 - **src_node_id** (*int*) -
-**[REQUIRED]**
+**&#91;REQUIRED&#93;**
 
     The ID of the query node the collection currently uses.
 
-- **dst_node_ids** (*list[int]*) -
+- **dst_node_ids** (*list&#91;int&#93;*) -
 
     The IDs of the query nodes to be added to the load-balancing group.
 
-- **sealed_segment_ids** (*list[int]*) -
+- **sealed_segment_ids** (*list&#91;int&#93;*) -
 
     The IDs of the sealed segments to load-balance.
 

@@ -3,6 +3,9 @@ title: "主键与 AutoID | Cloud"
 slug: /primary-field-auto-id
 sidebar_label: "主键与 AutoID"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "主键唯一标识一个 Entity。本节将介绍如何添加两种类型的主键及如何开启自动分配主键值。 | Cloud"
 type: origin

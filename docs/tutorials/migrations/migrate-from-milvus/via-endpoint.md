@@ -3,8 +3,11 @@ title: "通过 Endpoint 从 Milvus 迁移至 Zilliz Cloud | Cloud"
 slug: /via-endpoint
 sidebar_label: "通过 Endpoint 迁移"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案，适合希望使用 Milvus 向量数据库但不想自己管理基础设施的用户。为了实现顺利的数据迁移，您可以通过以下方式将数据从 Milvus 迁移到 Zilliz Cloud：通过 Milvus 服务器地址连接到源数据库或直接上传备份文件。 | Cloud"
+description: "Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案，适合希望使用 Milvus 向量数据库但不想自己管理基础设施的用户。本文介绍如何通过服务器地址从 Milvus 进行数据迁移。 | Cloud"
 type: origin
 token: PtmRwn9bQi6WAKkurfXcEXKKn9b
 sidebar_position: 1
@@ -25,9 +28,7 @@ import Supademo from '@site/src/components/Supademo';
 
 # 通过 Endpoint 从 Milvus 迁移至 Zilliz Cloud
 
-Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案，适合希望使用 Milvus 向量数据库但不想自己管理基础设施的用户。为了实现顺利的数据迁移，您可以通过以下方式将数据从 Milvus 迁移到 Zilliz Cloud：通过 Milvus 服务器地址连接到源数据库或直接上传备份文件。
-
-本文介绍如何通过服务器地址从 Milvus 进行数据迁移。有关如何上传备份文件的信息，请参阅[通过备份文件从 Milvus 迁移至 Zilliz Cloud](./via-backup-files)。
+Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案，适合希望使用 Milvus 向量数据库但不想自己管理基础设施的用户。本文介绍如何通过服务器地址从 Milvus 进行数据迁移。
 
 ## 开始前{#before-you-start}
 

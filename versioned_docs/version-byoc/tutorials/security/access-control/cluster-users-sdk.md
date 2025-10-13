@@ -1,10 +1,13 @@
 ---
-title: "管理集群用户（SDK） | Cloud"
+title: "管理集群用户（SDK） | BYOC"
 slug: /cluster-users-sdk
 sidebar_label: "管理集群用户（SDK）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "在 Zilliz Cloud 中，您可以创建集群用户并为他们分配集群角色，从而定义用户权限并实现数据安全。 | Cloud"
+description: "在 Zilliz Cloud 中，您可以创建集群用户并为他们分配集群角色，从而定义用户权限并实现数据安全。 | BYOC"
 type: origin
 token: UX6ew8AtoillJskKRthcZyqinZb
 sidebar_position: 3

@@ -3,6 +3,9 @@ title: "管理 MFA | Cloud"
 slug: /multi-factor-auth
 sidebar_label: "管理 MFA"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本教程将介绍如何在 Zilliz Cloud 账号设置中管理多重身份认证（MFA）。目前，Zilliz Cloud 仅支持通过邮箱进行多重身份认证。 | Cloud"
 type: origin

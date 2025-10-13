@@ -3,6 +3,9 @@ title: "字符串类型 | Cloud"
 slug: /use-string-field
 sidebar_label: "字符串类型"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，`VARCHAR` 是用于存储字符串类型的数据类型，适用于可变长度字符串的存储。 | Cloud"
 type: origin

@@ -3,6 +3,9 @@ title: "在线迁移 | Cloud"
 slug: /zero-downtime-migration
 sidebar_label: "在线迁移"
 beta: PRIVATE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在线迁移（Zero Downtime Migration）确保数据库服务在整个迁移过程中保持正常运行，提供不中断的数据库访问。迁移过程包括以下阶段： | Cloud"
 type: origin
@@ -209,7 +212,7 @@ The zero downtime migration process consists of three main phases that require y
 
 ### 阶段 3: 切换{#switch}
 
-收到时延 < 10 秒的邮件后，按[连接集群](./connect-to-cluster)指南切换至目标集群。
+收到时延 &lt; 10 秒的邮件后，按[连接集群](./connect-to-cluster)指南切换至目标集群。
 
 <Admonition type="info" icon="📘" title="Notes">
 

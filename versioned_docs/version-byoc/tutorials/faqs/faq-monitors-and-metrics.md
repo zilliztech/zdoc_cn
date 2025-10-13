@@ -1,10 +1,10 @@
 ---
-title: "FAQ：监控与指标 | CLOUD"
+title: "FAQ：监控与指标 | BYOC"
 slug: /faq-monitors-and-metrics
 sidebar_label: "FAQ：监控与指标"
 beta: FALSE
 notebook: FALSE
-description: " | CLOUD"
+description: " | BYOC"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 10

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "flush() | Python | ORM"
 slug: /python/python/Collection-flush
 sidebar_label: "flush()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation seals all segments in the collection. Any insertions after this operation will generate a new segment. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: VdiwdqQ9iofbkoxcc8Kcqk5gnhZ
 sidebar_position: 11
 keywords: 
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud

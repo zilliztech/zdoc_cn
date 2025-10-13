@@ -1,10 +1,10 @@
 ---
-title: "FAQ：集群 | CLOUD"
+title: "FAQ：集群 | BYOC"
 slug: /faq-cluster
 sidebar_label: "FAQ：集群"
 beta: FALSE
 notebook: FALSE
-description: " | CLOUD"
+description: " | BYOC"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 2
@@ -75,7 +75,28 @@ sidebar_position: 2
 
 1. 确认已在白名单中设置 IP 地址。
 
-1. 运行 `telnet in01-(uuid).(region).vectordb.cloud.zilliz.com.cn 19530` 测试端口是否可以连接。
+1. 确认 Endpoint URI 中的 Port 是否正确。请确保您从 Zilliz Cloud web 控制台中复制正确的 Endpoint。下表罗列了部署在不同云服务提供商的集群对应端口。
+
+    <table>
+       <tr>
+         <th><p><strong>云服务提供商</strong></p></th>
+         <th><p><strong>Port</strong></p></th>
+       </tr>
+       <tr>
+         <td><p>阿里云</p></td>
+         <td><p>19530 - 19550</p></td>
+       </tr>
+       <tr>
+         <td><p>腾讯云</p></td>
+         <td><p>443</p></td>
+       </tr>
+       <tr>
+         <td><p>亚马逊云科技</p></td>
+         <td><p>19530- 19550</p></td>
+       </tr>
+    </table>
+
+1. 运行 `telnet in01-(uuid).(region).vectordb.cloud.zilliz.com.cn port-number` 测试端口是否可以连接。
 
 如执行上述步骤后，仍无法连接集群，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 
@@ -90,6 +111,31 @@ sidebar_position: 2
     ```javascript
     const client = new MilvusClient('<https://your-db-address-with-port>', true, 'your-db-user', 'your-db-pasword');
     ```
+
+1. 确保您在连接时使用的集群 Endpoint 和 Token 正确。集群 Endpoint 中需要包含 `https://`。
+
+1. 确认 Endpoint URI 中的 Port 是否正确。请确保您从 Zilliz Cloud web 控制台中复制正确的 Endpoint。下表罗列了部署在不同云服务提供商的集群对应端口。
+
+    <table>
+       <tr>
+         <th><p><strong>云服务提供商</strong></p></th>
+         <th><p><strong>Port</strong></p></th>
+       </tr>
+       <tr>
+         <td><p>阿里云</p></td>
+         <td><p>19530 - 19550</p></td>
+       </tr>
+       <tr>
+         <td><p>腾讯云</p></td>
+         <td><p>443</p></td>
+       </tr>
+       <tr>
+         <td><p>亚马逊云科技</p></td>
+         <td><p>19530- 19550</p></td>
+       </tr>
+    </table>
+
+1. 您的 IP 地址已加入白名单。
 
 ### 集群挂起后，是否还会收取费用？ \{#will-i-be-charged-if-i-suspend-my-cluster}
 

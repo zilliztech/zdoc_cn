@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "construct_from_dict() | Python | ORM"
 slug: /python/python/FieldSchema-construct_from_dict
 sidebar_label: "construct_from_dict()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation constructs a FieldSchema object from a dictionary representation. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: DCLUdOpVjohl8HxPUx1cGjokngf
 sidebar_position: 1
 keywords: 
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
   - zilliz
   - zilliz cloud
   - cloud

@@ -3,6 +3,9 @@ title: "部署 Milvus 集群 | On-Premise"
 slug: /deploy-milvus-cluster
 sidebar_label: "部署 Milvus 集群"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本节将介绍在完成 Milvus Operator 安装后如何部署 Milvus 集群，包括如何规划 Milvus 集群资源、准备 Milvus 集群部署声明文件以及如何部署 Milvus 集群。 | On-Premise"
 type: origin
@@ -163,7 +166,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-[1] 此处仅考虑只写入无查询时的资源消耗情况。
+&#91;1&#93; 此处仅考虑只写入无查询时的资源消耗情况。
 
 ## 部署 Milvus 集群{#deploy-milvus-cluster}
 

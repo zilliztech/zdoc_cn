@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "listPartitions() | Java | v2"
 slug: /java/java/v2-Partitions-listPartitions
 sidebar_label: "listPartitions()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the partitions in a specified collection. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: RJcgdJpGDouomlxPTqZc5S8Lngc
 sidebar_position: 5
 keywords: 
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
   - zilliz
   - zilliz cloud
   - cloud
@@ -51,7 +54,7 @@ listPartitions(ListPartitionsReq.builder()
 
 **RETURN TYPE:**
 
-*List\<String\>*
+*List\&lt;String\&gt;*
 
 **RETURNS:**
 

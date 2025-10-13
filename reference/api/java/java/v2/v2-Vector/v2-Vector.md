@@ -6,13 +6,13 @@ notebook: false
 description: "Methods related to CRUD operations within a collection. | Java | v2"
 type: folder
 token: YBQDf0VrtlUZx3dVkdKckKT5ngh
-sidebar_position: 6
+sidebar_position: 7
 sidebar_label: "Vector"
 keywords: 
-  - what is semantic search
-  - Embedding model
-  - image similarity search
-  - Context Window
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
   - zilliz
   - zilliz cloud
   - cloud

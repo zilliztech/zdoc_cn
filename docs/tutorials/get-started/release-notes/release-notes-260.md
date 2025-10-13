@@ -3,11 +3,14 @@ title: "版本说明书（2024/02/27） | Cloud"
 slug: /release-notes-260
 sidebar_label: "版本说明书（2024/02/27）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "我们很高兴地宣布 Zilliz Cloud 发布新的版本。此版本引入了一系列增强和功能更新。主要涉及 Pipelines、数据导入、API 密钥以及指标和告警方面的功能性更新。 | Cloud"
 type: origin
 token: FR9Ww6TbRifhQFk1TV0c3a4tnfg
-sidebar_position: 12
+sidebar_position: 15
 keywords: 
   - 向量数据库
   - zilliz
@@ -39,8 +42,6 @@ Zilliz Cloud Pipelines 分为如下三种类型：
 - **Search pipelines** 可将查询字符串转换为向量嵌入，并将其发送到 Zilliz 云，以检索前 K 个最相似的向量，从而促进语义搜索。
 
 - **Deletion Pipeline** 允许您从 Zilliz 云收藏中删除指定文档中的所有块，让您完全控制自己的数据，并释放 Zilliz 收藏的存储容量。
-
-要了解更多信息，请参阅[本文档](./pipelines)。
 
 ## 数据导入{#data-import}
 

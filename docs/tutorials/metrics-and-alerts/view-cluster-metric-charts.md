@@ -3,6 +3,9 @@ title: "查看集群性能指标 | Cloud"
 slug: /view-cluster-metric-charts
 sidebar_label: "查看集群性能指标"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "为更好地了解集群性能，Zilliz Cloud 提供集群监控面板，您可以在其中查看特定集群的相关性能指标。 | Cloud"
 type: origin
@@ -26,13 +29,25 @@ import Admonition from '@theme/Admonition';
 
 为更好地了解集群性能，Zilliz Cloud 提供集群监控面板，您可以在其中查看特定集群的相关性能指标。
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>对于免费集群，只支持查看 Read vCUs 和 Write vCUs。如需解锁更多指标，可以考虑<a href="./manage-cluster#upgrade-plan">升级集群版本</a>。</p>
+
+</Admonition>
+
 ![view_system_metrics](/img/view_system_metrics.png)
 
 ## 性能指标图表{#access-cluster-metric-charts}
 
-在 Zilliz Cloud 控制台，找到目标集群，并点击**指标**选项卡。
+在 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)，找到目标集群，并点击**指标**选项卡。
 
 Zilliz Cloud 的性能指标图表展示了包括资源使用、Query 请求速率（QPS）、请求结果及数据操作等方面的性能数据，提供了对特定时间段的详细分析。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>点击右侧的<strong>查看告警设置</strong>，可以跳转到<strong>告警设置</strong>页面并管理您的告警。</p>
+
+</Admonition>
 
 关于每个性能指标图表的详细信息，请参阅[查看性能指标图表](./view-cluster-metric-charts#view-metric-charts)。
 

@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "refreshLoad() | Node.js"
 slug: /node/node/Management-refreshLoad
 sidebar_label: "refreshLoad()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation refreshes the loading status of a specific collection. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: Jc43d397doxCRkxal2XcQ1Wyn2g
 sidebar_position: 16
 keywords: 
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
-  - vector database
+  - knn
+  - Image Search
+  - LLMs
+  - Machine Learning
   - zilliz
   - zilliz cloud
   - cloud
@@ -52,7 +55,7 @@ milvusClient.refreshLoad({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a collection.
 
@@ -60,7 +63,7 @@ milvusClient.refreshLoad({
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response returns or error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

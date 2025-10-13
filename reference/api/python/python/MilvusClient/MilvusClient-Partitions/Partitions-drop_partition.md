@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "drop_partition() | Python | MilvusClient"
 slug: /python/python/Partitions-drop_partition
 sidebar_label: "drop_partition()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a specified partition from the current collection. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: EMI8dM8uooIAFPxVfffcoqRwnZf
 sidebar_position: 2
 keywords: 
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
+  - Unstructured Data
+  - vector database
+  - IVF
+  - knn
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,13 +53,13 @@ create_partition(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
 - **partition_names** (*str*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the partition to drop.
 

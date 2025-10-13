@@ -3,6 +3,9 @@ title: "API 密钥 | Cloud"
 slug: /manage-api-keys
 sidebar_label: "API 密钥"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在用户或应用程序调用 API 或 SDK 访问 Zilliz Cloud 控制面和数据面资源时，需要使用API 密钥进行身份认证。API 密钥是一个由字母和数字组成的字符串。每个密钥有自己的属性，如名称和 ID。 | Cloud"
 type: origin

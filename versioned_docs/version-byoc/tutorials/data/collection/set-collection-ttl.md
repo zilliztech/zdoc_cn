@@ -1,10 +1,13 @@
 ---
-title: "设置 Collection 生存时间 | Cloud"
+title: "设置 Collection 生存时间 | BYOC"
 slug: /set-collection-ttl
 sidebar_label: "设置 Collection 生存时间"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "数据插入 Collection 后，默认情况下仍保留在该 Collection 中。但是，在某些情况下，您可能希望在一定期限后删除或清理数据。在这种情况下，您可以配置 Collection 的生存时间（TTL）属性，以便 Zilliz Cloud 在TTL到期后自动删除数据。 | Cloud"
+description: "数据插入 Collection 后，默认情况下仍保留在该 Collection 中。但是，在某些情况下，您可能希望在一定期限后删除或清理数据。在这种情况下，您可以配置 Collection 的生存时间（TTL）属性，以便 Zilliz Cloud 在TTL到期后自动删除数据。 | BYOC"
 type: origin
 token: NYFIwLbc7iFeMbkP7T4cFfXJnLT
 sidebar_position: 6

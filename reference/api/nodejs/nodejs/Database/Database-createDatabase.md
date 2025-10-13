@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "createDatabase() | Node.js"
 slug: /node/node/Database-createDatabase
 sidebar_label: "createDatabase()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates a database. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: JmlKdBz7Io91Ffx9rpKce3vUnMc
 sidebar_position: 2
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
-  - nn search
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -66,7 +69,7 @@ milvusClient.createDatabase({
 
         Number of replicas for the database.
 
-    - **database.resource_groups** (*[]str*) -
+    - **database.resource_groups** (*&#91;&#93;str*) -
 
         Resource groups dedicated to the database.
 
@@ -92,7 +95,7 @@ milvusClient.createDatabase({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise |\<ResStatus>*
+**RETURNS** *Promise |&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

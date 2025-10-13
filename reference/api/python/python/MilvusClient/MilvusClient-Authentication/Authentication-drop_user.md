@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "drop_user() | Python | MilvusClient"
 slug: /python/python/Authentication-drop_user
 sidebar_label: "drop_user()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a user. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: WtyZdeFKMoSv5exaYRxcPLCSndg
 sidebar_position: 9
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
   - zilliz
   - zilliz cloud
   - cloud
@@ -43,7 +46,7 @@ drop_user(
 
 - **user_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the user to drop.
 

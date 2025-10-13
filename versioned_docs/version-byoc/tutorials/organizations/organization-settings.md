@@ -1,10 +1,13 @@
 ---
-title: "管理组织设置 | Cloud"
+title: "管理组织设置 | BYOC"
 slug: /organization-settings
 sidebar_label: "管理组织设置"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "组织管理员具备管理组织设置的权限。 | Cloud"
+description: "组织管理员具备管理组织设置的权限。 | BYOC"
 type: origin
 token: AkYpwsObJihszLkXBz6ca0XDnOc
 sidebar_position: 2
@@ -34,27 +37,19 @@ import Admonition from '@theme/Admonition';
 
 ## 查看组织{#view-organizations}
 
-当您登录到 Zilliz Cloud 控制台后，会进入组织列表页面。在这里，您可以查看已加入的组织。
+当您注册 Zilliz Cloud 后，您会加入一个以您为管理员的默认组织。虽然您无法创建组织，但您可以通过邀请的方式加入其它用户的组织。
 
-![zh-view-organizations](/img/zh-view-organizations.png)
+在登录 Zilliz Cloud 控制台后，您会看到您已经加入的所有组织的列表。您可以检查这些组织或选择进入其中某个组织。
 
 要快速查看您加入的所有组织，点击顶部导航栏中的组织名，然后选择**查看所有组织**。
 
-![zh-view-all-organizations](/img/zh-view-all-organizations.png)
+![zh-view-organizations](/img/zh-view-organizations.png)
 
 ## 编辑组织名称{#edit-organization-name}
 
 要编辑组织名称，您必须是[组织管理员](./organization-users#organization-roles)。
 
-您可以通过以下任一种方式编辑组织名称：
-
-- 在组织列表页面编辑组织名称。
-
-    ![zh-rename-organization](/img/zh-rename-organization.png)
-
-- 进入一个组织，在**系统设置**页面编辑组织名称。
-
-    ![edit-organization-name-zh](/img/edit-organization-name-zh.png)
+![edit-organization-name-zh](/img/edit-organization-name-zh.png)
 
 ## 设置时区{#manage-timezone}
 
@@ -90,13 +85,9 @@ Zilliz Cloud 允许用户为集群设置运维窗口，以减少运维对工作�
 
 - 当前组织下的[集群已全部删除](./manage-cluster)。
 
-- 当前组织中的[账单](./view-invoice)已全部付清。
-
 - 您的组织角色为组织管理员。
 
 - 现金余额已全部退款
-
-- 第三方云市场[订阅已取消](./subscribe-on-aliyun-marketplace#unsubscribe-alibaba-marketplace)。
 
 以下为删除组织的操作步骤：
 

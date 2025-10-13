@@ -3,6 +3,9 @@ title: "管理组织设置 | Cloud"
 slug: /organization-settings
 sidebar_label: "管理组织设置"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "组织管理员具备管理组织设置的权限。 | Cloud"
 type: origin
@@ -34,13 +37,13 @@ import Admonition from '@theme/Admonition';
 
 ## 查看组织{#view-organizations}
 
-当您登录到 Zilliz Cloud 控制台后，会进入组织列表页面。在这里，您可以查看已加入的组织。
+当您注册 Zilliz Cloud 后，您会加入一个以您为管理员的默认组织。虽然您无法创建组织，但您可以通过邀请的方式加入其它用户的组织。
 
-![zh-view-organizations](/img/zh-view-organizations.png)
+在登录 Zilliz Cloud 控制台后，您会看到您已经加入的所有组织的列表。您可以检查这些组织或选择进入其中某个组织。
 
 要快速查看您加入的所有组织，点击顶部导航栏中的组织名，然后选择**查看所有组织**。
 
-![zh-view-all-organizations](/img/zh-view-all-organizations.png)
+![zh-view-organizations](/img/zh-view-organizations.png)
 
 ## 编辑组织名称{#edit-organization-name}
 

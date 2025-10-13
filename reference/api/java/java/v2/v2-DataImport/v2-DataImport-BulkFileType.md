@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "BulkFileType | Java | v2"
 slug: /java/java/v2-DataImport-BulkFileType
 sidebar_label: "BulkFileType"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: FGZadH85KoLEhRxkbLxcc1zbn4c
 sidebar_position: 1
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
   - zilliz
   - zilliz cloud
   - cloud

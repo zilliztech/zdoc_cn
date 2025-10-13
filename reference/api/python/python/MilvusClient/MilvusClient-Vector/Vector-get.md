@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "get() | Python | MilvusClient"
 slug: /python/python/Vector-get
 sidebar_label: "get()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation gets specific entities by their IDs. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: TEUDde2xbo0JT7xtVvtcF53Nnub
 sidebar_position: 2
 keywords: 
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
   - zilliz
   - zilliz cloud
   - cloud
@@ -47,17 +50,17 @@ get(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
 - **ids** (*list* | *str* | *int*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A specific entity ID or a list of entity IDs.
 
-- **output_fields** (*list[str]* | *None*) -
+- **output_fields** (*list&#91;str&#93;* | *None*) -
 
     A list of field names to include in each entity in return.
 
@@ -69,7 +72,7 @@ get(
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-- **partition_names** (*list[str]* | *None*) -
+- **partition_names** (*list&#91;str&#93;* | *None*) -
 
     A list of partition names.
 
@@ -77,7 +80,7 @@ get(
 
 **RETURN TYPE:**
 
-*list[dict]*
+*list&#91;dict&#93;*
 
 **RETURNS:**
 

@@ -9,10 +9,10 @@ token: BvYKfbpMUlczBxdyBvEc5Gb3nfb
 sidebar_position: 8
 sidebar_label: "utility"
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - LLMs
+  - Machine Learning
+  - RAG
+  - NLP
   - zilliz
   - zilliz cloud
   - cloud

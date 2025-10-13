@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "CollectionSchema | Python | MilvusClient"
 slug: /python/python/MilvusClient-CollectionSchema
 sidebar_label: "CollectionSchema"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "A CollectionSchema instance represents the schema of a collection. A schema sketches the structure of a collection. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: BqR9dyTk6oOl8BxbZOOcW2Phnsn
 sidebar_position: 2
 keywords: 
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud
@@ -49,7 +52,7 @@ CollectionSchema(
 
 - **fields** (*list*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A list of **FieldSchema** objects that define the fields in the collection schema.
 
@@ -77,7 +80,7 @@ CollectionSchema(
 
         Whether allows Zilliz Cloud saves the values of undefined fields in a dynamic field if the data being inserted into the target collection includes fields that are not defined in the collection's schema.
 
-        When you set this to **True**,  and Zilliz Cloud will create a field called **$meta** to store any undefined fields and their values from the data that is inserted.
+        When you set this to **True**,  and Zilliz Cloud will create a field called **&#36;meta** to store any undefined fields and their values from the data that is inserted.
 
         <Admonition type="info" icon="📘" title="What is a dynamic field?">
 

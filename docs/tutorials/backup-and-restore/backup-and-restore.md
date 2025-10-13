@@ -3,6 +3,9 @@ title: "备份与恢复 | Cloud"
 slug: /backup-and-restore
 sidebar_label: "备份与恢复"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 集群中的数据备份与恢复。 | Cloud"
 type: origin

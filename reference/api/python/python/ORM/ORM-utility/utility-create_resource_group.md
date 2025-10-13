@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "create_resource_group() | Python | ORM"
 slug: /python/python/utility-create_resource_group
 sidebar_label: "create_resource_group()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation creates a new resource group. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: X5qsdhFQ5oOhkcxOprzcOZq4nMc
 sidebar_position: 4
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
   - zilliz
   - zilliz cloud
   - cloud
@@ -53,7 +56,7 @@ create_resource_group(
 
 - **name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the resource group to create.
 

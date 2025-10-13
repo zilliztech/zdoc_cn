@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "runAnalyzer() | Java | v2"
 slug: /java/java/v2-Vector-runAnalyzer
 sidebar_label: "runAnalyzer()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation processes the input data and generates tokenized output. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: HwoNd8f9Toy4n9xOn0QcJPcgnhX
 sidebar_position: 10
 keywords: 
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
   - zilliz
   - zilliz cloud
   - cloud

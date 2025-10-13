@@ -3,6 +3,9 @@ title: "创建亚马逊云科技 PrivateLink | Cloud"
 slug: /setup-a-private-link-amazon-cloud
 sidebar_label: "创建亚马逊云科技 PrivateLink"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本小节主要介绍如何在您的亚马逊云科技 VPC 终端节点和您托管在亚马逊云科技云上的 Zilliz Cloud 集群之间建立私网连接（PrivateLink）。 | Cloud"
 type: origin
@@ -53,7 +56,7 @@ import Admonition from '@theme/Admonition';
 
 登录Zilliz Cloud，并在左侧导航栏顶部的下拉菜单中选择目标项目。
 
-在项目左侧导航栏中选择**安全** > **私网连接**，并单击**创建私网连接**。
+在项目左侧导航栏中选择**安全** &gt; **私网连接**，并单击**创建私网连接**。
 
 您还可以在**集群详情**页面中的**连接信息**区域中单击**创建私网连接**。
 
@@ -192,3 +195,8 @@ import Admonition from '@theme/Admonition';
 </Admonition>
 
 ![disable_public_endpoint_cn](/img/disable_public_endpoint_cn.png)
+
+## 常见问题{#faq}
+
+**能否为已有集群创建 Private Endpoint？**
+可以。当您创建 Private Endpoint 后，它将自动适用于同一项目下且部署在同一个云服务地域的所有 Dedicated 集群。您只需为不同的集群添加对应的 DNS 记录即可。

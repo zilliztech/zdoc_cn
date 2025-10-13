@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "GeminiEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-GeminiEmbeddingFunction
 sidebar_label: "GeminiEmbeddingFunction"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "Model2VecEmbeddingFunction is a class in pymilvus that handles encoding text into embeddings using the GeminiEmbeddingFunction module to support embedding retrieval in Milvus. | Python"
@@ -10,10 +13,10 @@ type: docx
 token: DhZRdYbfMoYIBtxrudGcwWjrngd
 sidebar_position: 3
 keywords: 
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
   - zilliz
   - zilliz cloud
   - cloud

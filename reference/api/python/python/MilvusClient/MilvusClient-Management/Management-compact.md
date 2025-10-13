@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "compact() | Python | MilvusClient"
 slug: /python/python/Management-compact
 sidebar_label: "compact()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation compacts the collection by merging small segments into larger ones. It is recommended to call this operation after inserting a large amount of data into a collection. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: BThKd2QThoQKGPx1ofKczmADnC6
 sidebar_position: 2
 keywords: 
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
+  - Embedding model
   - zilliz
   - zilliz cloud
   - cloud
@@ -48,7 +51,7 @@ compact(
 
     The name of the target collection.
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 

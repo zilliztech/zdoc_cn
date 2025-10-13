@@ -9,10 +9,10 @@ token: BCcWfIoxvlY1oOdsLcXcqTtcnMf
 sidebar_position: 7
 sidebar_label: "Vector"
 keywords: 
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
   - zilliz
   - zilliz cloud
   - cloud

@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "alterIndexProperties() | Node.js"
 slug: /node/node/Management-alterIndexProperties
 sidebar_label: "alterIndexProperties()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation modifies the settings of specific index properties. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: PcQcdDwthoSEZaxI6GncpUpGnBh
 sidebar_position: 1
 keywords: 
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -54,19 +57,19 @@ milvusClient.alterIndexProperties({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
 - **index_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the target index.
 
-- **params** (*Record*\<*string*, *string* | *number* | *boolean*>) -
+- **params** (*Record*&lt;*string*, *string* | *number* | *boolean*&gt;) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The index properties to modify and their expected values. Possible properties are as follows:
 
@@ -78,7 +81,7 @@ milvusClient.alterIndexProperties({
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

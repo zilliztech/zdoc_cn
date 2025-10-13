@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "transfer_node() | Python | ORM"
 slug: /python/python/utility-transfer_node
 sidebar_label: "transfer_node()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation moves a specific number of query nodes from the source resource group to the target resource group. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: QHcpd1aJzo5aYbxJtMXc58een4f
 sidebar_position: 39
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - RAG
+  - NLP
+  - Neural Network
+  - Deep Learning
   - zilliz
   - zilliz cloud
   - cloud
@@ -46,7 +49,7 @@ transfer_node(
 
 - **source_group** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the source resource group from which the query nodes are moved.
 
@@ -54,7 +57,7 @@ transfer_node(
 
 - **target_group** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the source resource group to which the query nodes are moved.
 
@@ -62,7 +65,7 @@ transfer_node(
 
 - **num_nodes** (*int*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The number of query nodes to move between the source and target resource groups.
 

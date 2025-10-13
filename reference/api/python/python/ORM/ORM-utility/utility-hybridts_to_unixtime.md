@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "hybridts_to_unixtime() | Python | ORM"
 slug: /python/python/utility-hybridts_to_unixtime
 sidebar_label: "hybridts_to_unixtime()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation converts a hybrid timestamp to a UNIX epoch timestamp | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: HbMMdqtQGoQqwixsyrjcTTh0nu5
 sidebar_position: 20
 keywords: 
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - IVF
   - zilliz
   - zilliz cloud
   - cloud
@@ -42,7 +45,7 @@ hybridts_to_unixtime(
 
 - **hybridts** (*int*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A hybrid timestamp.
 

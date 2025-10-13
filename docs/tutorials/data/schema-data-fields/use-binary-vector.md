@@ -3,6 +3,9 @@ title: "Binary 向量 | Cloud"
 slug: /use-binary-vector
 sidebar_label: "Binary 向量"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Binary 向量是一种特殊的数据表示形式，通过将传统的高维浮点向量转换为仅包含 0 和 1 的二进制向量。这种转换不仅压缩了向量的大小，还能够在保留语义信息的同时，减少存储和计算成本。在非关键特征的精度要求较低的情况下，Binary 向量能够有效保留大部分原始浮点向量的完整性和实用性。 | Cloud"
 type: origin
@@ -410,7 +413,7 @@ bool_vectors = [
     [0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1] + [0] * 112,
 ]
 
-data = [{"binary_vector": convert_bool_list_to_bytes(bool_vector) for bool_vector in bool_vectors}]
+data = [{"binary_vector": convert_bool_list_to_bytes(bool_vector)} for bool_vector in bool_vectors]
 
 client.insert(
     collection_name="my_collection",

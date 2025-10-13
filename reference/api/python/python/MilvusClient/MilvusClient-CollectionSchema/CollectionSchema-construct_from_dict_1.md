@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "construct_from_dict() | Python | MilvusClient"
 slug: /python/python/CollectionSchema-construct_from_dict_1
 sidebar_label: "construct_from_dict()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation constructs a CollectionSchema object from a dictionary representation. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: Ld10d5YWJofvgGxtwYscGlWunDg
 sidebar_position: 3
 keywords: 
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
   - zilliz
   - zilliz cloud
   - cloud

@@ -1,10 +1,13 @@
 ---
-title: "管理 Partition | Cloud"
+title: "管理 Partition | BYOC"
 slug: /manage-partitions
 sidebar_label: "管理 Partition"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Partition 是 Collection 的子集。每个 Partition 都与其所在的 Collection 具有相同的数据结构，但只包含该 Collection 的一部分数据。本节将介绍如何管理 Partition 及相关注意事项。 | Cloud"
+description: "Partition 是 Collection 的子集。每个 Partition 都与其所在的 Collection 具有相同的数据结构，但只包含该 Collection 的一部分数据。本节将介绍如何管理 Partition 及相关注意事项。 | BYOC"
 type: origin
 token: T944whOEaiDKWbkhJVUcLxmNnRg
 sidebar_position: 8

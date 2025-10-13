@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_roles() | Python | ORM"
 slug: /python/python/utility-list_roles
 sidebar_label: "list_roles()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists the information about all existing roles. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: ClLXdDs64oixJBxlIrCcEB2dngb
 sidebar_position: 27
 keywords: 
-  - NLP
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +47,7 @@ list_roles(
 
 - **include_user_info** (*bool*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     Whether Zilliz Cloud lists users associated with the listed roles.
 

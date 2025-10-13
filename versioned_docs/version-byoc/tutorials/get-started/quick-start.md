@@ -1,10 +1,13 @@
 ---
-title: "快速开始 | Cloud"
+title: "快速开始 | BYOC"
 slug: /quick-start
 sidebar_label: "快速开始"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "本指南演示如何使用 Zilliz Cloud 集群高效执行语义检索的相关操作。 | Cloud"
+description: "本指南演示如何使用 Zilliz Cloud 集群高效执行语义检索的相关操作。 | BYOC"
 type: origin
 token: M4cQwZQ0QiqBy6kzZftc0fQPn1f
 sidebar_position: 3
@@ -27,27 +30,33 @@ import TabItem from '@theme/TabItem';
 
 ## 开始前{#before-you-start}
 
+Zilliz Cloud 提供 BYOC 解决方案，允许组织在自己的云账户中托管应用程序和数据，从而避免使用 Zilliz Cloud 的基础设施。有关我们 BYOC 解决方案的详细信息，请阅读 [BYOC 简介](./byoc-intro) 。
+
+下图展示了使用 Zilliz Cloud BYOC 方案的具体步骤。
+
+![AMQMwVfVAh2KErbMQjGcBa4Un0c](/img/AMQMwVfVAh2KErbMQjGcBa4Un0c.png)
+
 在使用本指南前，请确保
 
 - 您已[注册 Zilliz Cloud 账号](https://cloud.zilliz.com.cn/signup)。
 
     详情见[注册账号](./register-with-zilliz-cloud)。
 
-- 您已创建一个 Zilliz Cloud 集群。
+- 您已经联系了 Zilliz Cloud 技术支持并向我们提供您的账号信息。
 
-    相关操作，可参考[创建集群](./create-cluster)。
+    <Admonition type="info" icon="📘" title="说明">
 
-- 您已安装一个 SDK。
+    <p>Zilliz BYOC 部署方案目前处于<strong>正式可用</strong>阶段。如需了解详情或试用，请联系 <a href="https://zilliz.com.cn/contact-sales">Zilliz Cloud 技术支持</a>。</p>
 
-    Zilliz Cloud 提供多种语言的 [SDK](./api-sdks)。您可以选择安装 [Python SDK](./install-sdks#install-pymilvus-python-sdk)、[Java SDK](./install-sdks#install-java-sdk)、[Go SDK](./install-sdks#install-go-sdk) 或 [Node.js SDK](./install-sdks#install-nodejs-sdk)。您也可以选择直接使用 RESTful API。
+    </Admonition>
 
-- 您已获取一个 API 密钥或集群身份凭证。
+- 您的 BYOC 组织和项目均已就绪。
 
-    相关操作，可以参考 [API 密钥](./manage-api-keys)或[集群身份凭证](./cluster-credentials)。
+如下步骤假设您已经创建了 Zilliz Cloud 集群，获取了可以访问该集群的 API Key 或鉴权凭据，并安装了相关 SDK。
 
-## 连接 Zilliz Cloud 集群{#connect-to-zilliz-cloud-cluster}
+## 建立连接{#set-up-connection}
 
-获取集群凭证或 API 密钥后，您可以通过以下示例代码连接到集群。
+获取集群凭证或 API 密钥后，您可以通过以下示例代码连接到。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
@@ -159,7 +168,7 @@ export CLUSTER_TOKEN="YOUR_CLUSTER_TOKEN"
 
 ## 创建 collection{#create-a-collection}
 
-在 Zilliz Cloud， 您需要将向量数据存储到 collection 中。同一个 collection 中的向量数据具有相同的维度和相似度测量指标。
+在 ， 您需要将向量数据存储到 collection 中。同一个 collection 中的向量数据具有相同的维度和相似度测量指标。
 
 在创建 collection 时，您需要详细定义每个字段的属性，如字段名称、数据类型和其他属性。另外，您还可以选择为需要加速检索的字段创建索引。其中，向量字段必须创建索引。
 
@@ -373,7 +382,7 @@ curl --request POST \
 
     - **Dynamic Field**
 
-        是否使用保留 JSON 字段 **$meta** 来存储在 schema 中未定义的字段和字段值。
+        是否使用保留 JSON 字段 **&#36;meta** 来存储在 schema 中未定义的字段和字段值。
 
      有关更多信息，请参阅[了解 Schema](./schema-explained)。
 
@@ -801,7 +810,7 @@ curl --request POST \
 
 输出结果为列表形式，内含三个字典类型的子列表。每个字典代表一个 entity，包括其 ID、相似距离和指定的输出字段。
 
-您还可以在过滤表达式（filter）中加入动态字段（dynamic field）。以下代码示例中，`color` 是未在 schema 中定义的字段，可以通过 `$meta` 魔术字段的来访问，如 `$meta["color"]`，或像其他 schema 中已定义字段那样直接使用，如 `color`。
+您还可以在过滤表达式（filter）中加入动态字段（dynamic field）。以下代码示例中，`color` 是未在 schema 中定义的字段，可以通过 `#meta` 魔术字段的来访问，如 `#meta["color"]`，或像其他 schema 中已定义字段那样直接使用，如 `color`。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>

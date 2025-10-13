@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "getImportProgress() | Java | v2"
 slug: /java/java/v2-BulkImport-getImportProgress
 sidebar_label: "getImportProgress()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation gets the progress of the specified bulk-import job. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: EjnFdC5EfoIkoExSBOxcEC2hnbg
 sidebar_position: 3
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
   - zilliz
   - zilliz cloud
   - cloud

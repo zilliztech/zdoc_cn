@@ -3,6 +3,9 @@ title: "数据导入指南 | Cloud"
 slug: /data-import-zero-to-hero
 sidebar_label: "用户指南"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本小节为一个快速引导教程，旨在帮助您在 Zilliz Cloud 上快速开始包含数据准备、建立 Collection 到开始导入数据等子任务在内的全流程数据导入任务。通过本节，你将掌握： | Cloud"
 type: origin
@@ -190,7 +193,7 @@ print(schema)
 
 - `enable_dynamic_field=True`
 
-    该参数默认为 **False**，表示 Schema 中未定义的字段将会被忽略。将其设置为 **True** 将允许 **BulkWriter** 将未在 Schema 中定义的字段以键值对的形式存储到一个名为 **$meta** 的预留 JSON 字段中。
+    该参数默认为 **False**，表示 Schema 中未定义的字段将会被忽略。将其设置为 **True** 将允许 **BulkWriter** 将未在 Schema 中定义的字段以键值对的形式存储到一个名为 **&#36;meta** 的预留 JSON 字段中。
 
 </TabItem>
 

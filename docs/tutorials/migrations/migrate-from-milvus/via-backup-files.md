@@ -3,8 +3,11 @@ title: "通过备份文件从 Milvus 迁移至 Zilliz Cloud | Cloud"
 slug: /via-backup-files
 sidebar_label: "通过备份文件迁移"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案，适合希望使用 Milvus 向量数据库但不想自己管理基础设施的用户。为了实现顺利的数据迁移，您可以通过以下方式将数据从 Milvus 迁移到 Zilliz Cloud：通过 Milvus 服务器地址连接到源数据库或直接上传备份文件。 | Cloud"
+description: "Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案，适合希望使用 Milvus 向量数据库但不想自己管理基础设施的用户。本文介绍如何通过备份文件从 Milvus 进行数据迁移。 | Cloud"
 type: origin
 token: YBlmwO9ajiU4tYklnjmc6fJPn8e
 sidebar_position: 2
@@ -25,9 +28,7 @@ import Supademo from '@site/src/components/Supademo';
 
 # 通过备份文件从 Milvus 迁移至 Zilliz Cloud
 
-Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案，适合希望使用 Milvus 向量数据库但不想自己管理基础设施的用户。为了实现顺利的数据迁移，您可以通过以下方式将数据从 Milvus 迁移到 Zilliz Cloud：通过 Milvus 服务器地址连接到源数据库或直接上传备份文件。
-
-本文介绍如何通过备份文件从 Milvus 进行数据迁移。有关如何通过 Endpoint 迁移信息，请参阅[通过 Endpoint 从 Milvus 迁移至 Zilliz Cloud](./via-endpoint)。
+Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案，适合希望使用 Milvus 向量数据库但不想自己管理基础设施的用户。本文介绍如何通过备份文件从 Milvus 进行数据迁移。
 
 ## 开始前{#before-you-start}
 
@@ -35,7 +36,7 @@ Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案�
 
     - 从本地文件：提前准备本地备份文件。有关如何准备备份文件的信息，请参阅[准备迁移数据](./via-backup-files#prepare-migration-data)。
 
-    - 从对象存储：Milvus 对象存储的公共 URL 和访问凭据。您可以选择长期或临时凭据。
+    - 从对象存储：Milvus 对象存储的公共 URL 和访问凭据。您可以选择长期或临时凭据。您可以查看[常见问题](./via-backup-files#faq)，了解对象存储公共 URL 的格式示例。
 
 - 您需要拥有组织管理员或项目管理员的角色。如果您没有相应的权限，请联系您的 Zilliz Cloud 管理员。
 
@@ -61,6 +62,27 @@ Zilliz Cloud 支持从 Milvus 2.x 和更高版本迁移数据。要从 Milvus 2.
 1. 自定义 `backup.yaml` 配置。
 
     一般情况下，您不需要自定义该文件。 在下一步前，您可以检查以下配置项是否正确：
+
+    ```yaml
+    ...
+    # milvus proxy address, compatible to milvus.yaml
+    milvus:
+      address: localhost
+      port: 19530
+      ...
+      
+    # Related configuration of minio, which is responsible for data persistence for Milvus.
+    minio:
+      # Milvus storage configs, make them the same with milvus config
+      storageType: "minio" # support storage type: local, minio, s3, aws, gcp, ali(aliyun), azure, tc(tencent), gcpnative
+      # You can use "gcpnative" for the Google Cloud Platform provider. Uses service account credentials for authentication.
+      address: localhost # Address of MinIO/S3
+      port: 9000   # Port of MinIO/S3
+      bucketName: "a-bucket" # Milvus Bucket name in MinIO/S3, make it the same as your milvus instance
+      backupBucketName: "a-bucket" # Bucket name to store backup data. Backup data will store to backupBucketName/backupRootPath
+      rootPath: "files" # Milvus storage root path in MinIO/S3, make it the same as your milvus instance
+      ...
+    ```
 
     <Admonition type="info" icon="📘" title="说明">
 
@@ -111,7 +133,13 @@ backup
 
 ## 将数据迁移到 Zilliz Cloud{#migrate-data-to-zilliz-cloud}
 
-<Supademo id="cmboghvaxa3p5sn1r42v1rwil" title="Zilliz Cloud - 通过备份文件从 Milvus 迁移" />
+<Supademo id="cme9nfjc94bofh3py7kldqzx9" title="Zilliz Cloud - 通过备份文件从 Milvus 迁移" />
+
+<Admonition type="info" icon="📘" title="Notes">
+
+<p>所选目标数据库必须包含数据，不能为空。</p>
+
+</Admonition>
 
 ## 查看迁移进度{#monitor-the-migration-process}
 
@@ -123,21 +151,13 @@ backup
 
 </Admonition>
 
-![view_migration_progress_cn](/img/view_migration_progress_cn.png)
-
 ## 迁移后{#post-migration}
 
 迁移任务完成后，请注意以下事项：
 
-- **索引创建**：迁移过程中会自动为迁移的 Collection 创建 AUTOINDEX。
+- **索引创建**：迁移过程中会自动为迁移的 Collection 创建 [AUTOINDEX](./autoindex-explained)。
 
 - **手动 Load Collection：**虽然索引已自动创建，但迁移后的 Collection 并不会立即支持搜索或查询操作。您必须手动 Load Collection，才能启用搜索和查询功能。详细信息请参阅 [Load 和 Release](./load-release-collections)。
-
-<Admonition type="info" icon="📘" title="说明">
-
-<p>完成 Load 后，请检查目标集群中的 Collection 数量及 Entity 数是否与数据源保持一致。如果发现不符，请删除 Collection 并重新进行迁移任务。</p>
-
-</Admonition>
 
 ## 取消迁移任务{#cancel-migration-job}
 
@@ -147,3 +167,41 @@ backup
 
 1. 在**操作**列点击**查看详情**以访问日志信息。
 
+## 常见问题{#faq}
+
+1. **通过备份文件迁移时，上传的对象存储中的备份文件 URL 应遵循什么样的格式？**
+
+    <table>
+       <tr>
+         <th colspan="2"><p><strong>Cloud Object Storage</strong></p></th>
+         <th><p><strong>URL Format</strong></p></th>
+       </tr>
+       <tr>
+         <td rowspan="2"><p><strong>阿里云 OSS</strong></p></td>
+         <td><p>公共访问 URL</p></td>
+         <td><p><i>http</i>s://&lt;bucket_name&gt;.oss-&lt;region_code&gt;.aliyuncs.com/&lt;folder_name&gt;/</p></td>
+       </tr>
+       <tr>
+         <td><p>OSS URI</p></td>
+         <td><p>oss://&lt;bucket_name&gt;/&lt;folder_name&gt;/</p></td>
+       </tr>
+       <tr>
+         <td colspan="2"><p><strong>腾讯云 COS</strong></p></td>
+         <td><p><i>http</i>s://&lt;bucket_name&gt;.cos.&lt;region_code&gt;.myqcloud.com/&lt;folder_name&gt;/</p></td>
+       </tr>
+       <tr>
+         <td rowspan="3"><p><strong>亚马逊云科技 Amazon S3</strong></p></td>
+         <td><p>virtual-hosted–style</p></td>
+         <td><p><i>http</i>s://&lt;bucket_name&gt;.s3.&lt;region-code&gt;.amazonaws.com/&lt;folder_name&gt;/</p></td>
+       </tr>
+       <tr>
+         <td><p>path-style</p></td>
+         <td><p><i>http</i>s://s3.&lt;region-code&gt;.amazonaws.com/&lt;bucket_name&gt;/&lt;folder_name&gt;/</p></td>
+       </tr>
+       <tr>
+         <td><p>S3 URI</p></td>
+         <td><p>s3://&lt;bucket_name&gt;/&lt;folder_name&gt;/</p></td>
+       </tr>
+    </table>
+
+    

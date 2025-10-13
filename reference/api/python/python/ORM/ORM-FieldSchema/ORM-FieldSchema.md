@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "FieldSchema | Python | ORM"
 slug: /python/python/ORM-FieldSchema
 sidebar_label: "FieldSchema"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "A FieldSchema instance defines the data type and related attributes of a specific field in a collection. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: EVKhdy0vwoSLSux2RW2c660unjh
 sidebar_position: 2
 keywords: 
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
-  - vector database
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
   - zilliz
   - zilliz cloud
   - cloud
@@ -50,13 +53,13 @@ FieldSchema(
 
 - **name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     Name of the field.
 
 - **dtype** (*[DataType](./Collections-DataType)*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     Data type of the field.
 

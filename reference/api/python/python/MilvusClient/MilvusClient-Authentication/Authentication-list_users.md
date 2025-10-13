@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_users() | Python | MilvusClient"
 slug: /python/python/Authentication-list_users
 sidebar_label: "list_users()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the names of all existing users. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: EZ2YdBHoDoRTlxx91tscffm1nSb
 sidebar_position: 15
 keywords: 
-  - vector database open source
-  - open source vector db
-  - vector database example
-  - rag vector database
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
   - zilliz
   - zilliz cloud
   - cloud

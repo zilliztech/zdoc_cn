@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "removeUserFromRole() | Node.js"
 slug: /node/node/Authentication-removeUserFromRole
 sidebar_label: "removeUserFromRole()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation removes a user from a specific role. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: XmyMdqvDLosr6oxzvhWcw8H2ntg
 sidebar_position: 21
 keywords: 
-  - cosine distance
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
   - zilliz
   - zilliz cloud
   - cloud
@@ -48,13 +51,13 @@ milvusClient.removeUserFromRole({
 
 - **username** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a user.
 
 - **rolename** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a role
 
@@ -64,7 +67,7 @@ milvusClient.removeUserFromRole({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

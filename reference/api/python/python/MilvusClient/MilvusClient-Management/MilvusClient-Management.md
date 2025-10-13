@@ -9,10 +9,10 @@ token: MvvMf16FLlVOmtdgx5UcZ8qtnyd
 sidebar_position: 5
 sidebar_label: "Management"
 keywords: 
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud

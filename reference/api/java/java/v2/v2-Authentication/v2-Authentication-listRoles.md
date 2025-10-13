@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "listRoles() | Java | v2"
 slug: /java/java/v2-Authentication-listRoles
 sidebar_label: "listRoles()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all custom roles. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: XIIyd3bMzoAVx3xVsoLcnQ2pnKh
 sidebar_position: 14
 keywords: 
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +47,7 @@ List<String> roles = client.listRoles();
 
 **RETURN TYPE:**
 
-*List\<String\>*
+*List\&lt;String\&gt;*
 
 **RETURNS:**
 

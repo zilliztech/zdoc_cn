@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "dropIndexProperties() | Java | v2"
 slug: /java/java/v2-Management-dropIndexProperties
 sidebar_label: "dropIndexProperties()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation resets the specified index properties to their default values. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: IdNAdlMhjoM40pxjpKecpc7inbd
 sidebar_position: 5
 keywords: 
+  - Faiss vector database
+  - Chroma vector database
   - nlp search
   - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
   - zilliz
   - zilliz cloud
   - cloud

@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "dropIndexProperties() | Node.js"
 slug: /node/node/Management-dropIndexProperties
 sidebar_label: "dropIndexProperties()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation resets the index properties to their default values. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: Acvxd7t9poXj6nxb0vMco0wsngh
 sidebar_position: 5
 keywords: 
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud
@@ -54,19 +57,19 @@ milvusClient.dropIndexProperties({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
 - **index_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the target index.
 
-- **properties** (*string[]*) -
+- **properties** (*string&#91;&#93;*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The names of the index properties to reset. Possible properties are as follows:
 
@@ -78,7 +81,7 @@ milvusClient.dropIndexProperties({
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

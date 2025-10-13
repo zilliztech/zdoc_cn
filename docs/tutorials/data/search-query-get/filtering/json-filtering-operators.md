@@ -3,6 +3,9 @@ title: "JSON 操作符 | Cloud"
 slug: /json-filtering-operators
 sidebar_label: "JSON 操作符"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 支持用于查询和过滤 JSON 字段的高级操作符，使其成为管理复杂结构化数据的完美工具。这些操作符可实现对 JSON 文档的高效查询，允许您根据 JSON 字段中的特定元素、值或条件检索实体。本节将指导您在 Zilliz Cloud 中使用特定于 JSON 的操作符，并提供实际示例来说明其功能。 | Cloud"
 type: origin
@@ -42,11 +45,11 @@ Zilliz Cloud 支持用于查询和过滤 JSON 字段的高级操作符，使其�
 
 Zilliz Cloud 提供了几个强大的 JSON 操作符，可帮助过滤和查询 JSON 数据，这些操作符包括：
 
-- `JSON_CONTAINS(identifier, expr)`：用于过滤出在指定 JSON 字段值中包含指定表达式的所有 Entity。
+- [`JSON_CONTAINS(identifier, expr)`](./json-filtering-operators#jsoncontains)：用于过滤出在指定 JSON 字段值中包含指定表达式的所有 Entity。
 
-- `JSON_CONTAINS_ALL(identifier, expr)`：用于过滤出在指定 JSON 字段值中包含指定表达式中所有元素的所有 Entity。
+- [`JSON_CONTAINS_ALL(identifier, expr)`](./json-filtering-operators#jsoncontainsall)：用于过滤出在指定 JSON 字段值中包含指定表达式中所有元素的所有 Entity。
 
-- `JSON_CONTAINS_ANY(identifier, expr)`：用于过滤出在指定 JSON 字段值中包含指定表达式中若干元素的所有 Entity。
+- [`JSON_CONTAINS_ANY(identifier, expr)`](./json-filtering-operators#jsoncotainsany)：用于过滤出在指定 JSON 字段值中包含指定表达式中若干元素的所有 Entity。
 
 下面，我们将结合示例来了解如何在实际场景下使用这些操作符。
 

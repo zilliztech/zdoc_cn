@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "alterDatabaseProperties() | Node.js"
 slug: /node/node/Database-alterDatabaseProperties
 sidebar_label: "alterDatabaseProperties()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation modifies the properties of the specified database. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: NNWed9Vd1o7vDkxY4pncM4wYnaf
 sidebar_position: 7
 keywords: 
-  - Vector embeddings
-  - Vector store
-  - open source vector database
-  - Vector index
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - cosine distance
   - zilliz
   - zilliz cloud
   - cloud
@@ -58,7 +61,7 @@ milvusClient.alterDatabaseProperties({
 
     There should be a database with the specified name. Otherwise, exceptions will occur.
 
-- **delete_properties** (*string[]*) -
+- **delete_properties** (*string&#91;&#93;*) -
 
     Names of the properties to drop in an array. Possible database properties are as follows:
 
@@ -66,7 +69,7 @@ milvusClient.alterDatabaseProperties({
 
         Number of replicas for the database.
 
-    - **database.resource_groups** (*[]str*) -
+    - **database.resource_groups** (*&#91;&#93;str*) -
 
         Resource groups dedicated to the database.
 
@@ -92,7 +95,7 @@ milvusClient.alterDatabaseProperties({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise |\<ResStatus>*
+**RETURNS** *Promise |&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "listGrant() | Node.js"
 slug: /node/node/Authentication-listGrant
 sidebar_label: "listGrant()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the privileges granted to the specified role. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: HSIDdxQGEoPdyaxkMDjcAWGQnpd
 sidebar_position: 15
 keywords: 
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
-  - Embedding model
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
   - zilliz
   - zilliz cloud
   - cloud
@@ -64,7 +67,7 @@ listGrant(data): Promise<SelectGrantResponse>
 
     The timeout duration of this operation.
 
-*Returns Promise\<SelectGrantResponse>*
+*Returns Promise\&lt;SelectGrantResponse&gt;*
 
 This method returns a promise that resolves to a **SelectGrantResponse** object.
 
@@ -84,7 +87,7 @@ This method returns a promise that resolves to a **SelectGrantResponse** object.
 
 **PARAMETERS:**
 
-- **entities** (*GrantEntity[]*) -
+- **entities** (*GrantEntity&#91;&#93;*) -
 
     A list of grant entities, each of which is shaped as follows:
 

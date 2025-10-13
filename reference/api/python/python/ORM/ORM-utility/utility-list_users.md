@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_users() | Python | ORM"
 slug: /python/python/utility-list_users
 sidebar_label: "list_users()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists the information of all existing users. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: MtF2dkZcso4XduxM194cUaiinqb
 sidebar_position: 30
 keywords: 
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +47,7 @@ list_users(
 
 - **include_role_info** (*bool*) - 
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     Whether Zilliz Cloud lists the roles granted to the specified user.
 

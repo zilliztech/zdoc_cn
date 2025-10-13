@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "delete() | Python | ORM"
 slug: /python/python/Collection-delete
 sidebar_label: "delete()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation deletes entities with a boolean expression. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: TJMVdi4U2oBFnAxO95jctzVAnzg
 sidebar_position: 6
 keywords: 
-  - IVF
-  - knn
-  - Image Search
-  - LLMs
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - vectordb
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,7 +47,7 @@ delete(
 
 - **expr** (*string*) -
 
-    **[REQUIRED]** 
+    **&#91;REQUIRED&#93;** 
 
     A boolean expression to filter the entities to delete.
 

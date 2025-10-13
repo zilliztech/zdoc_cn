@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "get_bulk_insert_state() | Python | ORM"
 slug: /python/python/utility-get_bulk_insert_state
 sidebar_label: "get_bulk_insert_state()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation returns the state of a specified bulk-insert task. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: XzHhd3AdCo9DCsxawYycr69CnAb
 sidebar_position: 13
 keywords: 
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -58,7 +61,7 @@ res = utility.get_bulk_insert_state(task_id=task_id)
 **PARAMETERS:**
 
 - **task_id** (*int*) -
-**[REQUIRED]**
+**&#91;REQUIRED&#93;**
 
     A task ID returned by the do_bulk_insert() function.
 

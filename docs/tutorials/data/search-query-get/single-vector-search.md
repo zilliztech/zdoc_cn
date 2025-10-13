@@ -3,6 +3,9 @@ title: "基本 Vector Search | Cloud"
 slug: /single-vector-search
 sidebar_label: "基本 Vector Search"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "近似最近邻（ANN）Search 通过构建索引的方式对向量空间中的向量进行预排序，并在收到 Search 请求时根据索引快速定位到与查询向量相似可能性较高的子集中进行对比查询，从而提升查询效率。本节主要介绍如何使用 Milvus 进行 ANN Search 及相关的注意事项。 | Cloud"
 type: origin
@@ -77,7 +80,7 @@ client = MilvusClient(
 # 4. Single vector search
 query_vector = [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]
 res = client.search(
-    collection_name="my_collection",
+    collection_name="quick_setup",
     anns_field="vector",
     data=[query_vector],
     limit=3,
@@ -129,8 +132,9 @@ MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
     
 FloatVec queryVector = new FloatVec(new float[]{0.3580376395471989f, -0.6023495712049978f, 0.18414012509913835f, -0.26286205330961354f, 0.9029438446296592f});
 SearchReq searchReq = SearchReq.builder()
-        .collectionName("my_collection")
+        .collectionName("quick_setup")
         .data(Collections.singletonList(queryVector))
+        .annsField("vector")
         .topK(3)
         .build();
 
@@ -159,45 +163,44 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 import (
     "context"
     "fmt"
-    "log"
 
     "github.com/milvus-io/milvus/client/v2/entity"
     "github.com/milvus-io/milvus/client/v2/milvusclient"
 )
 
-func ExampleClient_Search_basic() {
-    ctx, cancel := context.WithCancel(context.Background())
-    defer cancel()
+ctx, cancel := context.WithCancel(context.Background())
+defer cancel()
 
-    milvusAddr := "YOUR_CLUSTER_ENDPOINT"
-    token := "YOUR_CLUSTER_TOKEN"
+milvusAddr := "localhost:19530"
+token := "YOUR_CLUSTER_TOKEN"
 
-    cli, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-        Address: milvusAddr,
-        APIKey:  token,
-    })
-    if err != nil {
-        log.Fatal("failed to connect to milvus server: ", err.Error())
-    }
-
-    defer cli.Close(ctx)
-
-    queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
-
-    resultSets, err := cli.Search(ctx, milvusclient.NewSearchOption(
-        "my_collection", // collectionName
-        3,             // limit
-        []entity.Vector{entity.FloatVector(queryVector)},
-    ))
-    if err != nil {
-        log.Fatal("failed to perform basic ANN search collection: ", err.Error())
-    }
-
-    for _, resultSet := range resultSets {
-        log.Println("IDs: ", resultSet.IDs)
-        log.Println("Scores: ", resultSet.Scores)
-    }
+client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+    Address: milvusAddr,
+    APIKey:  token,
+})
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
 }
+defer client.Close(ctx)
+
+queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
+
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
+    "quick_setup", // collectionName
+    3,               // limit
+    []entity.Vector{entity.FloatVector(queryVector)},
+).WithANNSField("vector"))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+
+for _, resultSet := range resultSets {
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
+}
+
 ```
 
 </TabItem>
@@ -215,7 +218,7 @@ const client = new MilvusClient({address, token});
 var query_vector = [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592],
 
 res = await client.search({
-    collection_name: "my_collection",
+    collection_name: "quick_setup",
     data: query_vector,
     limit: 3, // The number of results to return
 })
@@ -283,27 +286,27 @@ curl --request POST \
    <tr>
      <td><p><code>L2</code></p></td>
      <td><p>较小的 L2 距离表示更高的相似性。</p></td>
-     <td><p>[0, ∞)</p></td>
+     <td><p>&#91;0, ∞)</p></td>
    </tr>
    <tr>
      <td><p><code>IP</code></p></td>
      <td><p>较大的 IP 距离表示更高的相似性。</p></td>
-     <td><p>[-1, 1]</p></td>
+     <td><p>&#91;-1, 1&#93;</p></td>
    </tr>
    <tr>
      <td><p><code>COSINE</code></p></td>
      <td><p>较大的 cosine 值表示更高的相似性。</p></td>
-     <td><p>[-1, 1]</p></td>
+     <td><p>&#91;-1, 1&#93;</p></td>
    </tr>
    <tr>
      <td><p><code>JACCARD</code></p></td>
      <td><p>较小的 Jaccard 距离表示更高的相似性。</p></td>
-     <td><p>[0, 1]</p></td>
+     <td><p>&#91;0, 1&#93;</p></td>
    </tr>
    <tr>
      <td><p><code>HAMMING</code></p></td>
      <td><p>较小的 Hamming 距离表示更高的相似性。</p></td>
-     <td><p>[0, dim(vector)]</p></td>
+     <td><p>&#91;0, dim(vector)&#93;</p></td>
    </tr>
 </table>
 
@@ -324,7 +327,7 @@ query_vectors = [
 
 # 7.2. Start search
 res = client.search(
-    collection_name="my_collection",
+    collection_name="quick_setup",
     data=query_vectors,
     limit=3,
 )
@@ -421,31 +424,25 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 <TabItem value='go'>
 
 ```go
-import (
-    "context"
-    "log"
-
-    "github.com/milvus-io/milvus/client/v2/entity"
-    "github.com/milvus-io/milvus/client/v2/milvusclient"
-)
-
 queryVectors := []entity.Vector{
     entity.FloatVector([]float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}),
     entity.FloatVector([]float32{0.19886812562848388, 0.06023560599112088, 0.6976963061752597, 0.2614474506242501, 0.838729485096104}),
 }
 
-resultSets, err := cli.Search(ctx, milvusclient.NewSearchOption(
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
     "quick_setup", // collectionName
-    3,             // limit
+    3,               // limit
     queryVectors,
-))
+).WithConsistencyLevel(entity.ClStrong).
+    WithANNSField("vector"))
 if err != nil {
-    log.Fatal("failed to perform basic ANN search collection: ", err.Error())
+    fmt.Println(err.Error())
+    // handle error
 }
 
 for _, resultSet := range resultSets {
-    log.Println("IDs: ", resultSet.IDs)
-    log.Println("Scores: ", resultSet.Scores)
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
 }
 ```
 
@@ -463,7 +460,7 @@ const query_vectors = [
 res = await client.search({
     collection_name: "quick_setup",
     vectors: query_vectors,
-    limit: 5,
+    limit: 3,
 })
 
 console.log(res.results)
@@ -537,7 +534,8 @@ curl --request POST \
 #               "id": 232
 #           }
 #        ]
-#     ]
+#     ],
+#     "topks":[3]
 # }
 ```
 
@@ -557,7 +555,7 @@ curl --request POST \
 # 4. Single vector search
 query_vector = [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]
 res = client.search(
-    collection_name="my_collection",
+    collection_name="quick_setup",
     # highlight-next-line
     partition_names=["partitionA"],
     data=[query_vector],
@@ -629,28 +627,23 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 <TabItem value='go'>
 
 ```go
-import (
-    "context"
-    "log"
-
-    "github.com/milvus-io/milvus/client/v2/entity"
-    "github.com/milvus-io/milvus/client/v2/milvusclient"
-)
-
 queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
 
-resultSets, err := cli.Search(ctx, milvusclient.NewSearchOption(
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
     "quick_setup", // collectionName
-    3,             // limit
+    3,               // limit
     []entity.Vector{entity.FloatVector(queryVector)},
-).WithPartitions("partitionA"))
+).WithConsistencyLevel(entity.ClStrong).
+    WithPartitions("partitionA").
+    WithANNSField("vector"))
 if err != nil {
-    log.Fatal("failed to perform basic ANN search collection: ", err.Error())
+    fmt.Println(err.Error())
+    // handle error
 }
 
 for _, resultSet := range resultSets {
-    log.Println("IDs: ", resultSet.IDs)
-    log.Println("Scores: ", resultSet.Scores)
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
 }
 ```
 
@@ -716,7 +709,8 @@ curl --request POST \
 #             "distance": 0.07794742286205292,
 #             "id": 43
 #         }
-#     ]
+#     ],
+#     "topks":[3]
 # }
 ```
 
@@ -811,29 +805,24 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 <TabItem value='go'>
 
 ```go
-import (
-    "context"
-    "log"
-
-    "github.com/milvus-io/milvus/client/v2/entity"
-    "github.com/milvus-io/milvus/client/v2/milvusclient"
-)
-
 queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
 
-resultSets, err := cli.Search(ctx, milvusclient.NewSearchOption(
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
     "quick_setup", // collectionName
-    3,             // limit
+    3,               // limit
     []entity.Vector{entity.FloatVector(queryVector)},
-).WithOutputFields("color"))
+).WithConsistencyLevel(entity.ClStrong).
+    WithANNSField("vector").
+    WithOutputFields("color"))
 if err != nil {
-    log.Fatal("failed to perform basic ANN search collection: ", err.Error())
+    fmt.Println(err.Error())
+    // handle error
 }
 
 for _, resultSet := range resultSets {
-    log.Println("IDs: ", resultSet.IDs)
-    log.Println("Scores: ", resultSet.Scores)
-    log.Println("Colors: ", resultSet.GetColumn("color"))
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
+    fmt.Println("color: ", resultSet.GetColumn("color").FieldData().GetScalars())
 }
 ```
 
@@ -902,7 +891,8 @@ curl --request POST \
 #             "id": 43
 #             "color": "grey_8510"
 #         }
-#     ]
+#     ],
+#     "topks":[3]
 # }
 ```
 
@@ -1005,28 +995,23 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 <TabItem value='go'>
 
 ```go
-import (
-    "context"
-    "log"
-
-    "github.com/milvus-io/milvus/client/v2/entity"
-    "github.com/milvus-io/milvus/client/v2/milvusclient"
-)
-
 queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
 
-resultSets, err := cli.Search(ctx, milvusclient.NewSearchOption(
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
     "quick_setup", // collectionName
-    3,             // limit
+    3,               // limit
     []entity.Vector{entity.FloatVector(queryVector)},
-).WithOffset(10))
+).WithConsistencyLevel(entity.ClStrong).
+    WithANNSField("vector").
+    WithOffset(10))
 if err != nil {
-    log.Fatal("failed to perform basic ANN search collection: ", err.Error())
+    fmt.Println(err.Error())
+    // handle error
 }
 
 for _, resultSet := range resultSets {
-    log.Println("IDs: ", resultSet.IDs)
-    log.Println("Scores: ", resultSet.Scores)
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
 }
 ```
 
@@ -1085,7 +1070,7 @@ curl --request POST \
 
 </Admonition>
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -1097,9 +1082,9 @@ res = client.search(
     data=[query_vector],
     limit=3, # The number of results to return
     search_params={
-        params: {
+        "params": {
             # highlight-next-line
-            "level": 1 # The precision control
+            "level": 10 # The precision control
         }
     }
 )
@@ -1116,7 +1101,7 @@ import io.milvus.v2.service.vector.response.SearchResp
 
 FloatVec queryVector = new FloatVec(new float[]{0.3580376395471989f, -0.6023495712049978f, 0.18414012509913835f, -0.26286205330961354f, 0.9029438446296592f});
 Map<String, Object> params = new HashMap<>();
-params.put("level", 1);
+params.put("level", 10);
 SearchReq searchReq = SearchReq.builder()
         .collectionName("quick_setup")
         .data(Collections.singletonList(queryVector))
@@ -1143,6 +1128,31 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 
 </TabItem>
 
+<TabItem value='go'>
+
+```go
+queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
+
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
+    "quick_setup", // collectionName
+    3,               // limit
+    []entity.Vector{entity.FloatVector(queryVector)},
+).WithConsistencyLevel(entity.ClStrong).
+    WithANNSField("vector").
+    WithSearchParam("level", "10"))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+
+for _, resultSet := range resultSets {
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
+}
+```
+
+</TabItem>
+
 <TabItem value='javascript'>
 
 ```javascript
@@ -1155,7 +1165,7 @@ res = await client.search({
     limit: 3, // The number of results to return,
     params: {
         // highlight-next-line
-        "level": 1 // The precision control
+        "level": 10 // The precision control
     }
 })
 ```
@@ -1182,12 +1192,12 @@ curl --request POST \
     "limit": 3,
     "searchParams":{
         "params":{
-            "level":1
+            "level":10
         }
     }
 }'
 
-# {"code":0,"cost":0,"data":[{"distance":1,"id":0},{"distance":0.6290165,"id":1},{"distance":0.5975797,"id":4},{"distance":0.9999999,"id":1},{"distance":0.7408552,"id":7},{"distance":0.6290165,"id":0}]}
+# {"code":0,"cost":0,"data":[{"distance":1,"id":0},{"distance":0.6290165,"id":1},{"distance":0.5975797,"id":4},{"distance":0.9999999,"id":1},{"distance":0.7408552,"id":7},{"distance":0.6290165,"id":0}],"topks":[3]}
 ```
 
 </TabItem>
@@ -1203,7 +1213,7 @@ curl --request POST \
 
 </Admonition>
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -1215,7 +1225,7 @@ res = client.search(
     data=[query_vector],
     limit=3, # The number of results to return
     search_params={
-        params: {
+        "params": {
             # highlight-next-line
             "level": 10 # The precision control,
             "enable_recall_calculation": True # Ask to return recall rate
@@ -1259,6 +1269,31 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 // SearchResp.SearchResult(entity={}, score=0.95944905, id=5)
 // SearchResp.SearchResult(entity={}, score=0.8689616, id=1)
 // SearchResp.SearchResult(entity={}, score=0.866088, id=7)
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
+
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
+    "quick_setup", // collectionName
+    3,               // limit
+    []entity.Vector{entity.FloatVector(queryVector)},
+).WithConsistencyLevel(entity.ClStrong).
+    WithANNSField("vector").
+    WithSearchParam("enable_recall_calculation", "true"))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+
+for _, resultSet := range resultSets {
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
+}
 ```
 
 </TabItem>
@@ -1309,7 +1344,7 @@ curl --request POST \
     }
 }'
 
-# {"code":0,"cost":0,"data":[{"distance":1,"id":0},{"distance":0.6290165,"id":1},{"distance":0.5975797,"id":4},{"distance":0.9999999,"id":1},{"distance":0.7408552,"id":7},{"distance":0.6290165,"id":0}]}
+# {"code":0,"cost":0,"data":[{"distance":1,"id":0},{"distance":0.6290165,"id":1},{"distance":0.5975797,"id":4},{"distance":0.9999999,"id":1},{"distance":0.7408552,"id":7},{"distance":0.6290165,"id":0}],"topks":[3]}
 ```
 
 </TabItem>
@@ -1343,11 +1378,25 @@ Zilliz Cloud 提供的 AUTOINDEX 已经极大地降低了执行 ANN Search 的�
 
     关于 Hybrid Search 的更多内容，可查看[Hybrid Search](./hybrid-search)。
 
+    如需了解 Collection 中向量字段的数量限制，请参考[使用限制](./limits#fields)。
+
 - Search Iterator
 
     ANN Search 单次召回有最大数量限制。对于 topK 大于 16,384 的 ANN Search 请求，可以考虑使用 Search Iterator。
 
     关于 Search Iterator 的更多内容，可查看[Search Iterator](./with-iterators)。
+
+- Full-Text Search
+
+    Full-Text Search 是一项能在文本数据集中检索包含特定术语或短语的文档，然后根据相关性对结果进行排序的功能。该功能克服了语义搜索的局限性，语义搜索可能会忽略精确的术语，而全文搜索可确保你获得最准确且与上下文相关的结果。此外，它通过接受原始文本输入简化了向量搜索，能自动将你的文本数据转换为稀疏嵌入，无需手动生成向量嵌入。
+
+    关于 Full-Text Search 的更多内容，可查看[Full Text Search](./full-text-search)。
+
+- Text Match
+
+    Zilliz Cloud 中的 Text Match 功能可基于特定术语实现精确的文档检索。此功能主要用于过滤式搜索，以满足特定条件，并且可以结合标量过滤来优化查询结果，从而在符合标量条件的向量中进行相似性搜索。
+
+    关于 Text Match 的更多内容，可查看[Text Match](./text-match)。
 
 - 使用 Partition Key
 

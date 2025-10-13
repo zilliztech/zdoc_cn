@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "delete() | Python | MilvusClient"
 slug: /python/python/Vector-delete
 sidebar_label: "delete()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation deletes entities by their IDs or with a boolean expression. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: DWLXdSCYnoPT4ExktRKceEqLnAd
 sidebar_position: 1
 keywords: 
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
+  - Embedding model
   - zilliz
   - zilliz cloud
   - cloud
@@ -47,13 +50,13 @@ delete(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing collection.
 
 - **ids** (*list* | *str* | *int*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A specific entity ID or a list of entity IDs.
 

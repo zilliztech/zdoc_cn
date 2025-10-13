@@ -3,8 +3,11 @@ title: "离线迁移 | Cloud"
 slug: /offline-migration
 sidebar_label: "离线迁移"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "离线迁移允许您在计划的停机时间内，将现有集群数据从源集群迁移到目标集群。此方法支持在同一组织内或不同组织之间进行迁移，适用于可以接受短暂停机的场景，例如计划维护或小规模数据库迁移。如果您的迁移需要保持读写不中断，请参考零停机迁移。 | Cloud"
+description: "离线迁移允许您在计划的停机时间内，将现有集群数据从源集群迁移到目标集群。此方法支持在同一组织内或不同组织之间进行迁移，适用于可以接受短暂停机的场景，例如计划维护或小规模数据库迁移。 | Cloud"
 type: origin
 token: N6tlwTPPvi0FXvkj4fccCgtTnOg
 sidebar_position: 1
@@ -26,7 +29,9 @@ import Supademo from '@site/src/components/Supademo';
 
 # 离线迁移
 
-**离线迁移**允许您在计划的停机时间内，将现有集群数据从源集群迁移到目标集群。此方法支持在同一组织内或不同组织之间进行迁移，适用于可以接受短暂停机的场景，例如计划维护或小规模数据库迁移。如果您的迁移需要保持读写不中断，请参考[零停机迁移](./zero-downtime-migration)。
+**离线迁移**允许您在计划的停机时间内，将现有集群数据从源集群迁移到目标集群。此方法支持在同一组织内或不同组织之间进行迁移，适用于可以接受短暂停机的场景，例如计划维护或小规模数据库迁移。
+
+如果您的迁移需要保持读写不中断，请参考[零停机迁移](./zero-downtime-migration)。
 
 ## 迁移能力{#migration-capabilities}
 

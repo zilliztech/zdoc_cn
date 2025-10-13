@@ -3,11 +3,14 @@ title: "恢复备份 | Cloud"
 slug: /restore-from-snapshot
 sidebar_label: "恢复备份"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 提供的恢复功能可用于在发生意外删除、数据损坏或系统故障时，从备份文件中恢复数据，保障业务连续性。这是一种可靠的手段，可用于灾难恢复、撤销错误更改，或创建用于测试的集群副本，将业务中断最小化。 | Cloud"
 type: origin
 token: NtkswF6UEi3kB0k8XSEcOKkhnld
-sidebar_position: 3
+sidebar_position: 4
 keywords: 
   - 向量数据库
   - zilliz
@@ -20,6 +23,8 @@ keywords:
 
 import Admonition from '@theme/Admonition';
 
+
+import Supademo from '@site/src/components/Supademo';
 
 # 恢复备份
 
@@ -57,6 +62,8 @@ Zilliz Cloud 提供的恢复功能可用于在发生意外删除、数据损坏�
 ### 通过 Web 控制台{#via-web-console}
 
 以下 Demo 展示如何在 Zilliz Cloud 控制台中恢复整个集群：
+
+<Supademo id="cmcswsqmt0lro9st8cllvfbnn" title=""  />
 
 ### 通过 RESTful API{#via-restful-api}
 
@@ -97,6 +104,8 @@ curl --request POST \
 ### 通过 Web 控制台{#via-web-console}
 
 以下 Demo 展示如何在控制台中恢复指定 Database 和 Collection：
+
+<Supademo id="cmcsx430q0mhe9st81af8q8du" title=""  />
 
 ### 通过 RESTful API{#via-restful-api}
 

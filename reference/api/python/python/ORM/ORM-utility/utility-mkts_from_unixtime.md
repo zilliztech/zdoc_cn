@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "mkts_from_unixtime() | Python | ORM"
 slug: /python/python/utility-mkts_from_unixtime
 sidebar_label: "mkts_from_unixtime()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation converts a hybrid timestamp from a UNIX epoch timestamp. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: ZdKEd2ua6o9AHHxKq25ctNSdncb
 sidebar_position: 36
 keywords: 
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud
@@ -55,7 +58,7 @@ utility.mkts_from_unixtime(
 
 - **epoch** (*float*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     A UNIX epoch timestamp.
 
@@ -64,9 +67,9 @@ utility.mkts_from_unixtime(
 - **milliseconds** (*float*) -
 An incremental time interval in milliseconds.
 
-- **delta** (*Optional[timedelta]*) -
+- **delta** (*Optional&#91;timedelta&#93;*) -
 
-    A **datetime.timedelta** object that represents the duration expressing the difference between two `date`, `time`, or `datetime` instances to microsecond resolution.
+    A **datetime.timedelta** object that represents the duration expressing the difference between two [`date`](https://docs.python.org/3/library/datetime.html#datetime.date), [`time`](https://docs.python.org/3/library/datetime.html#datetime.time), or [`datetime`](https://docs.python.org/3/library/datetime.html#datetime.datetime) instances to microsecond resolution.
 
 **RETURN TYPE:**
 

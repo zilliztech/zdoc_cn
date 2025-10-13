@@ -3,11 +3,14 @@ title: "Elasticsearch 查询语句转换 | Cloud"
 slug: /elasticsearch-queries-to-milvus
 sidebar_label: "Elasticsearch 查询语句转换"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "基于 Apache Lucene 构建的Elasticsearch是领先的开源搜索引擎。然而，它在现代 AI 应用程序中面临挑战，包括高更新成本、较差的实时性能、低效的分片管理、非云原生设计以及过度的资源需求。作为云原生向量数据库，Zilliz Cloud 通过解耦的存储和计算、高维数据的高效索引以及与现代基础设施的无缝集成克服了这些问题，并为 AI 工作负载提供了卓越的性能和可扩展性。 | Cloud"
+description: "基于 Apache Lucene 构建的 Elasticsearch 是领先的开源搜索引擎。然而，它在现代 AI 应用程序中面临挑战，包括高更新成本、较差的实时性能、低效的分片管理、非云原生设计以及过度的资源需求。作为云原生向量数据库，Zilliz Cloud 通过解耦的存储和计算、高维数据的高效索引以及与现代基础设施的无缝集成克服了这些问题，并为 AI 工作负载提供了卓越的性能和可扩展性。 | Cloud"
 type: origin
 token: QOwXwYCBMiR8pQkHDcKcL3z3nDh
-sidebar_position: 11
+sidebar_position: 12
 keywords: 
   - 向量数据库
   - zilliz
@@ -31,7 +34,7 @@ import Admonition from '@theme/Admonition';
 
 # Elasticsearch 查询语句转换
 
-基于 Apache Lucene 构建的Elasticsearch是领先的开源搜索引擎。然而，它在现代 AI 应用程序中面临挑战，包括高更新成本、较差的实时性能、低效的分片管理、非云原生设计以及过度的资源需求。作为云原生向量数据库，Zilliz Cloud 通过解耦的存储和计算、高维数据的高效索引以及与现代基础设施的无缝集成克服了这些问题，并为 AI 工作负载提供了卓越的性能和可扩展性。
+基于 Apache Lucene 构建的 Elasticsearch 是领先的开源搜索引擎。然而，它在现代 AI 应用程序中面临挑战，包括高更新成本、较差的实时性能、低效的分片管理、非云原生设计以及过度的资源需求。作为云原生向量数据库，Zilliz Cloud 通过解耦的存储和计算、高维数据的高效索引以及与现代基础设施的无缝集成克服了这些问题，并为 AI 工作负载提供了卓越的性能和可扩展性。
 
 本文将为您将代码库从 Elasticsearch 迁移到 Zilliz Cloud 提供各种转换查询的示例。
 
@@ -160,7 +163,7 @@ result = Zilliz CloudClient.search(
     anns_field="message_vector", 
     data=[[1, -2.5, 3]], # vector embeddings of the phrase `How is the weather in Jamaica?` 
     filter=filter,
-    search_params={"params": {"nprobe": 10}},
+    
     limit=10, 
     output_fields=["id", "message"] 
 )
@@ -511,7 +514,7 @@ client.search(
 
 每个检索器最多贡献 50 个匹配项，这些匹配项通过 RRF 重新排序，最终返回前 10 个结果。
 
-在 Zilliz Cloud 中，您可以通过结合多个向量字段的检索、使用重排策略，并从组合列表中检索前 K 个结果，来实现类似的混合检索。Zilliz Cloud 支持 RRF 和加权重排策略。更多内容可以参考 [Reranking](./reranking)。
+在 Zilliz Cloud 中，您可以通过结合多个向量字段的检索、使用重排策略，并从组合列表中检索前 K 个结果，来实现类似的混合检索。Zilliz Cloud 支持 RRF 和加权重排策略。更多内容可以参考 [Reranking](./undefined)。
 
 以下是上述 Elasticsearch 示例在 Zilliz Cloud 中的非严格等效实现：
 
@@ -521,7 +524,7 @@ search_params_dense = {
     "anns_field": "vector",
     "param": {
         "metric_type": "IP",
-        "params": {"nprobe": 10}, 
+        
     },
     "limit": 100
 }
@@ -549,7 +552,7 @@ res = client.hybrid_search(
 
 这个示例演示了 Zilliz Cloud 中的混合检索，它结合了以下两种检索方式：  
 
-1. **稠密向量检索（Dense vector search）**：在`vector`字段上使用内积（IP）度量，并将 `nprobe` 设置为 10，以执行近似最近邻（ANN）检索。
+1. **稠密向量检索（Dense vector search）**：在`vector`字段上使用内积（IP）度量，以执行近似最近邻（ANN）检索。
 
 1. **稀疏向量检索（Sparse vector search）**：在 `text_sparse` 字段上使用 BM25 相似度度量，并将 `drop_ratio_search` 参数设置为 0.2。
 

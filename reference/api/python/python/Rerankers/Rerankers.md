@@ -6,13 +6,13 @@ notebook: false
 description: "Reranking models for a sophisticated evaluation and refinement on retrieved results. | Python"
 type: folder
 token: Ph7xfldrplFoihdiSAkciCuenyh
-sidebar_position: 5
+sidebar_position: 6
 sidebar_label: "Rerankers"
 keywords: 
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
-  - how does milvus work
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
   - zilliz
   - zilliz cloud
   - cloud

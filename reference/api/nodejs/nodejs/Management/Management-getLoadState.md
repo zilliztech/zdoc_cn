@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "getLoadState() | Node.js"
 slug: /node/node/Management-getLoadState
 sidebar_label: "getLoadState()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation displays whether a specified collection or partition is loaded or not. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: J17ZdPNwqo4nt3x5b8pc0H5Nnph
 sidebar_position: 12
 keywords: 
-  - llm eval
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
   - zilliz
   - zilliz cloud
   - cloud
@@ -53,11 +56,11 @@ milvusClient.getLoadState({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a collection.
 
-- **partition_names** (*string[]*) -
+- **partition_names** (*string&#91;&#93;*) -
 
     The names of one or more partitions.
 
@@ -65,7 +68,7 @@ milvusClient.getLoadState({
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response returns or error occurs.
 
-**RETURNS** *Promise\<GetLoadStateResponse>*
+**RETURNS** *Promise\&lt;GetLoadStateResponse&gt;*
 
 This method returns a promise that resolves to a **GetLoadStateResponse** object.
 

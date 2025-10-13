@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_bulk_insert_tasks() | Python | ORM"
 slug: /python/python/utility-list_bulk_insert_tasks
 sidebar_label: "list_bulk_insert_tasks()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists all bulk-insert tasks. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: T1CGdXeVkoG2yAxkualc1jVonRb
 sidebar_position: 23
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
   - zilliz
   - zilliz cloud
   - cloud
@@ -49,7 +52,7 @@ list_bulk_insert_tasks(
 
     The value defaults to **0**, indicating that no limit applies. 
 
-- **collection_name** (*list[str]*) -
+- **collection_name** (*list&#91;str&#93;*) -
 
     A list of collection names.
 

@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "DataType | Java | v2"
 slug: /java/java/v2-Collections-DataType
 sidebar_label: "DataType"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: QYPIdgWL7oDWrWxVUx0clo32nz4
 sidebar_position: 10
 keywords: 
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
+  - nn search
   - zilliz
   - zilliz cloud
   - cloud

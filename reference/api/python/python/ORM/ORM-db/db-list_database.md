@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_database() | Python | ORM"
 slug: /python/python/db-list_database
 sidebar_label: "list_database()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation returns a list of database names from the connected Milvus instance. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: PV1PdliWZooAB8xAE5scZO2Nn6K
 sidebar_position: 3
 keywords: 
-  - Embedding model
   - image similarity search
   - Context Window
   - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud

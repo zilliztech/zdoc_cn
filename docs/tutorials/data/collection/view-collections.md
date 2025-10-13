@@ -3,6 +3,9 @@ title: "查看 Collection | Cloud"
 slug: /view-collections
 sidebar_label: "查看 Collection"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "您既可以查看当前连接的数据库中已创建的 Collection 名称列表，也可以针对某个 Collection 了解其详细情况。 | Cloud"
 type: origin
@@ -218,7 +221,7 @@ curl --request POST \
 
 如果您已经创建了名为 `quick_setup` 的 Collection，运行上述示例的结果如下：
 
-```json
+```plaintext
 {
     'collection_name': 'quick_setup', 
     'auto_id': False, 

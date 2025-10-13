@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "dropCollection() | Java | v2"
 slug: /java/java/v2-Collections-dropCollection
 sidebar_label: "dropCollection()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a collection. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: PsAGd1CNqosvirxDJ5ncIHudnSg
 sidebar_position: 14
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - vector database
   - zilliz
   - zilliz cloud
   - cloud

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "get_compaction_plans() | Python | ORM"
 slug: /python/python/Collection-get_compaction_plans
 sidebar_label: "get_compaction_plans()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation gets the current compaction plans. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: D6Q7dq4USotLS3xxMP0cFiGLnsf
 sidebar_position: 12
 keywords: 
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
-  - Video search
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
   - zilliz
   - zilliz cloud
   - cloud

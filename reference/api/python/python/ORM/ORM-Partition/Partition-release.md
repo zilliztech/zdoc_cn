@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "release() | Python | ORM"
 slug: /python/python/Partition-release
 sidebar_label: "release()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation releases the data of the current partition from memory. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: ZQ2RdE2AOoH9bfx4k3Sc3Ny0ngb
 sidebar_position: 9
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud

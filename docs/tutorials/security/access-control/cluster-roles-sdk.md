@@ -3,6 +3,9 @@ title: "管理集群角色（SDK） | Cloud"
 slug: /cluster-roles-sdk
 sidebar_label: "管理集群角色（SDK）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "集群角色定义了用户在集群内的权限。具体而言，集群角色控制集群用户在集群、Database 和 Collection 层级的权限。 | Cloud"
 type: origin

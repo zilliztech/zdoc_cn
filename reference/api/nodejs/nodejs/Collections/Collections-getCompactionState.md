@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "getCompactionState() | Node.js"
 slug: /node/node/Collections-getCompactionState
 sidebar_label: "getCompactionState()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the statistics collected on a specific collection. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: CRFLdvgkhoeRikxMcMAcJk3qnIc
 sidebar_position: 14
 keywords: 
-  - llm eval
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud
@@ -47,9 +50,9 @@ milvusClient.getCompactionState({
 
 - **compactionID** (*string | number*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
-    The ID of a compaction job that is returned by a call to `compact()`.
+    The ID of a compaction job that is returned by a call to [`compact()`](./Collections-compact).
 
 - **timeout** (*number*) -
 
@@ -57,7 +60,7 @@ milvusClient.getCompactionState({
 
     Setting this to **None** indicates that this operation timeouts when any response returns or error occurs.
 
-**RETURNS** *Promise\<GetCompactionStateResponse>*
+**RETURNS** *Promise\&lt;GetCompactionStateResponse&gt;*
 
 This method returns a promise that resolves to a **GetCompactionStateResponse** object.
 

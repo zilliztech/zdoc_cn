@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "queryIterator() | Java | v2"
 slug: /java/java/v2-Vector-queryIterator
 sidebar_label: "queryIterator()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This method returns a query iterator to iterate data. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: ByLVdf2nRocLcxxwH3Gc9CyFnbb
 sidebar_position: 6
 keywords: 
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
   - zilliz
   - zilliz cloud
   - cloud
@@ -70,7 +73,7 @@ queryIterator(QueryIteratorReq.builder()
 
 A value to define the number of entities returned per batch.
 
-- `consistencyLevel(ConsistencyLevel consistencyLevel)`
+- `consistencyLevel([ConsistencyLevel](./v2-Collections-ConsistencyLevel) consistencyLevel)`
 
     The consistency level of the target collection.
 
@@ -110,7 +113,7 @@ A *QueryIterator* object to iterate data.
 
 **METHODS:**
 
-- List\<QueryResultsWrapper.RowRecord> next()
+- List&lt;QueryResultsWrapper.RowRecord&gt; next()
 
 Return a batch of results.
 

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_collections() | Python | MilvusClient"
 slug: /python/python/Collections-list_collections
 sidebar_label: "list_collections()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all existing collections. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: BHyidrVcyoPwxexHLrnceOSAnRe
 sidebar_position: 17
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
-  - nn search
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud

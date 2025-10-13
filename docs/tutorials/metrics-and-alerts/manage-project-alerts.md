@@ -3,6 +3,9 @@ title: "管理项目告警 | Cloud"
 slug: /manage-project-alerts
 sidebar_label: "管理项目告警"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "项目告警功能通过对集群指标（如 CU、Query QPS）进行主动监控，在满足指定条件时发送通知，帮助您主动监控 Zilliz Cloud 集群的状态。配置项目告警后，您能在潜在问题出现时立即收到通知，确保及时处理。 | Cloud"
 type: origin
@@ -27,6 +30,12 @@ import Supademo from '@site/src/components/Supademo';
 # 管理项目告警
 
 项目告警功能通过对集群指标（如 CU、Query QPS）进行主动监控，在满足指定条件时发送通知，帮助您主动监控 Zilliz Cloud 集群的状态。配置项目告警后，您能在潜在问题出现时立即收到通知，确保及时处理。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>此功能仅限 Dedicated 集群使用。更多详情，可参考<a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p>
+
+</Admonition>
 
 ## 开始前{#before-you-start}
 
@@ -151,7 +160,7 @@ curl --request POST \
            "type": "EMAIL",
            "config": {
              "recipients": {
-               "members": ["leryn.li@zilliz.com"],
+               "members": ["leryn.li@zilliz.com.cn"],
                "orgRoles": ["OWNER"],
                "projectRoles": ["OWNER"]
              }

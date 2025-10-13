@@ -3,6 +3,9 @@ title: "组织 | Cloud"
 slug: /organizations
 sidebar_label: "组织"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "了解 Zilliz Cloud 组织层级操作及设置。 | Cloud"
 type: origin

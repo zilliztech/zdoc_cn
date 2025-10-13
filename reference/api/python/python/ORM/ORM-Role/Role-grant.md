@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "grant() | Python | ORM"
 slug: /python/python/Role-grant
 sidebar_label: "grant()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation grants a privilege to the current role. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: BapSdVXjQoQXnbxnRYScCagAn1f
 sidebar_position: 5
 keywords: 
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,7 +48,7 @@ grant(
 
 - **object** (*string*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The type of the object to grant the privilege.
 
@@ -53,7 +56,7 @@ grant(
 
 - **object_name** (*string*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a target object of the type specified in **object**.
 
@@ -61,7 +64,7 @@ grant(
 
 - **privilege** (*string*)
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the privilege to grant.
 

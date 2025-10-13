@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "dropAlias() | Java | v2"
 slug: /java/java/v2-Collections-dropAlias
 sidebar_label: "dropAlias()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a specified collection alias. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: MBy3dDXFbo0buwxkh0IczwLInPf
 sidebar_position: 13
 keywords: 
-  - Unstructured Data
-  - vector database
-  - IVF
-  - knn
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud

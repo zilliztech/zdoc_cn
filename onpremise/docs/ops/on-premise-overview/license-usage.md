@@ -3,6 +3,9 @@ title: "License 管理 | On-Premise"
 slug: /license-usage
 sidebar_label: "License 管理"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Milvus 商业版镜像使用 Zilliz 自主开发的 Cardinal 内核，集成了 License 校验逻辑。启动时，需要您导入由 Zilliz 生成的 License 配置信息进行授权，否则 Milvus 实例将无法启动。 | On-Premise"
 type: origin

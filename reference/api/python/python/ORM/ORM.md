@@ -9,10 +9,10 @@ token: QYo4fSeVFlex8ZdeGZ4cAlmcnof
 sidebar_position: 4
 sidebar_label: "ORM"
 keywords: 
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
   - zilliz
   - zilliz cloud
   - cloud

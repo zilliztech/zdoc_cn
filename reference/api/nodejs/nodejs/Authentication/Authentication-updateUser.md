@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "updateUser() | Node.js"
 slug: /node/node/Authentication-updateUser
 sidebar_label: "updateUser()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation updates the password of a specific user. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: BCGKdCttdotF32xUJTec8UFlndg
 sidebar_position: 26
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - rag vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -49,19 +52,19 @@ milvusClient.updateUser({
 
 - **username** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of an existing user.
 
 - **oldPassword** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The original password of the user.
 
 - **newPassword** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The new password of the user.
 
@@ -71,7 +74,7 @@ milvusClient.updateUser({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "alter_alias() | Python | ORM"
 slug: /python/python/utility-alter_alias
 sidebar_label: "alter_alias()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation reassigns the alias of one collection to another. | Python | ORM"
@@ -10,10 +13,10 @@ type: docx
 token: MfTsdrbGcoO9JqxjgPtcMZTvncc
 sidebar_position: 1
 keywords: 
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
-  - Elastic vector database
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
   - zilliz
   - zilliz cloud
   - cloud
@@ -57,13 +60,13 @@ alter_alias(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the target collection to reassign an alias to.
 
 - **alias** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The alias of the collection. Note that the alias should exist beforehand.
 
@@ -74,13 +77,13 @@ alter_alias(
     <p>Below is an example of reassigning the alias of one collection to another:</p>
     <p>Suppose there are two collections: <code>collection_1</code> and <code>collection_2</code>. There is also a collection alias named <code>bob</code>, which was originally assigned to <code>collection_1</code>:</p>
     <ul>
-    <li><p><code>collection_1</code>'s alias = ["bob"]</p></li>
-    <li><p><code>collection_2</code>'s alias = []</p></li>
+    <li><p><code>collection_1</code>'s alias = &#91;"bob"&#93;</p></li>
+    <li><p><code>collection_2</code>'s alias = &#91;&#93;</p></li>
     </ul>
     <p>After calling <code>alter_alias("collection_2", "bob")</code>:</p>
     <ul>
-    <li><p><code>collection_1</code>'s alias = []</p></li>
-    <li><p><code>collection_2</code>'s alias = ["bob"]</p></li>
+    <li><p><code>collection_1</code>'s alias = &#91;&#93;</p></li>
+    <li><p><code>collection_2</code>'s alias = &#91;"bob"&#93;</p></li>
     </ul>
 
     </Admonition>

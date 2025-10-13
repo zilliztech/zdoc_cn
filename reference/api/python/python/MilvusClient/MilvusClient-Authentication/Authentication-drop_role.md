@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "drop_role() | Python | MilvusClient"
 slug: /python/python/Authentication-drop_role
 sidebar_label: "drop_role()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a custom role. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: Vmxpd3MttodOE3x3V11cVTeunDh
 sidebar_position: 8
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
   - zilliz
   - zilliz cloud
   - cloud
@@ -43,7 +46,7 @@ drop_role(
 
 - **role_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the role to drop.
 

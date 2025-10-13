@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "dropDatabaseProperties() | Node.js"
 slug: /node/node/Database-dropDatabaseProperties
 sidebar_label: "dropDatabaseProperties()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops the setting of the specified properties. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: GulFdOWMboEK9bxnzMSc8Uf8n8b
 sidebar_position: 4
 keywords: 
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
   - zilliz
   - zilliz cloud
   - cloud
@@ -58,7 +61,7 @@ milvusClient.dropDatabaseProperties({
 
     There should be a database with the specified name. Otherwise, exceptions will occur.
 
-- **delete_properties** (*string[]*) -
+- **delete_properties** (*string&#91;&#93;*) -
 
     Names of the properties to drop in an array. Possible database properties are as follows:
 
@@ -66,7 +69,7 @@ milvusClient.dropDatabaseProperties({
 
         Number of replicas for the database.
 
-    - **database.resource_groups** (*[]str*) -
+    - **database.resource_groups** (*&#91;&#93;str*) -
 
         Resource groups dedicated to the database.
 
@@ -92,7 +95,7 @@ milvusClient.dropDatabaseProperties({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise |\<ResStatus>*
+**RETURNS** *Promise |&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

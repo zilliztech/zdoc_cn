@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "addField() | Java | v2"
 slug: /java/java/v2-CollectionSchema-addField
 sidebar_label: "addField()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation adds a vector field to the schema of a collection. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: HWEDdIvrxo3gskxlyKkcDdzVncd
 sidebar_position: 1
 keywords: 
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
+  - nn search
   - zilliz
   - zilliz cloud
   - cloud
@@ -176,7 +179,7 @@ CollectionSchema.addField(AddFieldReq.builder()
 
             Defines the tokenizer type. Possible values: `standard` (default), `whitespace`, `jieba`. For more information, refer to [Standard Tokenizer](https://milvus.io/docs/standard-tokenizer.md), [Whitespace Tokenizer](https://milvus.io/docs/whitespace-tokenizer.md), and [Jieba Tokenizer](https://milvus.io/docs/jieba-tokenizer.md).
 
-        - `filter` (*List\<String>*) -
+        - `filter` (*List&lt;String&gt;*) -
 
             Lists filters to refine tokens produced by the tokenizer, with options for built-in filters and custom filters. For more information, refer to [Alphanumonly Filter](https://milvus.io/docs/alphanumonly-filer.md) and others.
 

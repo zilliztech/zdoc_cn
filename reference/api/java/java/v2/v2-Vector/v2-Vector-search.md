@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "search() | Java | v2"
 slug: /java/java/v2-Vector-search
 sidebar_label: "search()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation conducts a vector similarity search with an optional scalar filtering expression. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: W1mxdmaelo4co4x0ruwcTWQrn5b
 sidebar_position: 7
 keywords: 
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
-  - vectordb
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud
@@ -121,12 +124,12 @@ search(SearchReq.builder()
        </tr>
        <tr>
          <td><p>FloatVec</p></td>
-         <td><p>FloatVec(List\<Float> data)</p><p>FloatVec(float[] data)</p></td>
+         <td><p>FloatVec(List&lt;Float&gt; data)</p><p>FloatVec(float&#91;&#93; data)</p></td>
          <td><p>For DataType.FloatVector type field.</p></td>
        </tr>
        <tr>
          <td><p>BinaryVec</p></td>
-         <td><p>BinaryVec(ByteBuffer data)</p><p>BinaryVec(byte[] data)</p></td>
+         <td><p>BinaryVec(ByteBuffer data)</p><p>BinaryVec(byte&#91;&#93; data)</p></td>
          <td><p>For DataType.BinaryVector type field.</p></td>
        </tr>
     </table>
@@ -199,7 +202,7 @@ search(SearchReq.builder()
 
     </Admonition>
 
-- `consistencyLevel(ConsistencyLevel consistencyLevel)`
+- `consistencyLevel([ConsistencyLevel](./v2-Collections-ConsistencyLevel) consistencyLevel)`
 
     The consistency level of the target collection.
 
@@ -239,9 +242,9 @@ A **SearchResp object representing specific search results with the specified ou
 
 **PARAMETERS:**
 
-- searchResults(List\<List\<SearchResult\>>)
+- searchResults(List\&lt;List\&lt;SearchResult\&gt;\&gt;)
 
-      A list of SearchResp.SearchResult, the size of searchResults equals the number of query vectors of the search. Each List\<SearchResult\> is a topK result of a query vector. Each SearchResult represents an entity hit by the search.
+      A list of SearchResp.SearchResult, the size of searchResults equals the number of query vectors of the search. Each List\&lt;SearchResult\&gt; is a topK result of a query vector. Each SearchResult represents an entity hit by the search.
 
       Member of SearchResult:
 

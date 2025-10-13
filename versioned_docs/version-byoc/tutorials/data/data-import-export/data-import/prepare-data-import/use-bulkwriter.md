@@ -1,10 +1,13 @@
 ---
-title: "使用 BulkWriter | Cloud"
+title: "使用 BulkWriter | BYOC"
 slug: /use-bulkwriter
 sidebar_label: "使用 BulkWriter"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "如果您的数据格式不满足支持的数据格式中列出的各项要求，您可以使用 PyMivus 和 Milvus Java SDK 自带的 BulkWriter 对您的数据进行转换。 | Cloud"
+description: "如果您的数据格式不满足支持的数据格式中列出的各项要求，您可以使用 PyMivus 和 Milvus Java SDK 自带的 BulkWriter 对您的数据进行转换。 | BYOC"
 type: origin
 token: B9IdwtZhLi0tB8kb6czce8KXnvb
 sidebar_position: 1
@@ -257,8 +260,8 @@ PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>使用 LocalBulkWriter 生成的 JSON 文件可以直接在 Zilliz Cloud 控制台上导入。</p>
-    <p>如需导入其它格式的文件，需要先将它们上传到和集群同云的对象存储桶中。</p>
+    <p>使用 LocalBulkWriter 生成的 JSON 文件和 Parquet 文件可以直接在 Zilliz Cloud 控制台上导入。</p>
+    <p>如需导入其它格式的文件，需要先将它们上传到和您的对象存储桶中。建议您使用与您的集群同地域的对象存储桶。</p>
 
     </Admonition>
 
@@ -801,15 +804,15 @@ System.out.println(batchFiles);
        </tr>
        <tr>
          <td><p><strong>JSON</strong></p></td>
-         <td><ul><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></p></li><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.json</code></p></li></ul></td>
+         <td><ul><li><p><em><i>http</i>s://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</em></p></li><li><p><em>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.json</em></p></li></ul></td>
        </tr>
        <tr>
          <td><p><strong>Parquet</strong></p></td>
-         <td><ul><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></p></li><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.parquet</code></p></li></ul></td>
+         <td><ul><li><p><em><i>http</i>s://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</em></p></li><li><p><em>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.parquet</em></p></li></ul></td>
        </tr>
        <tr>
          <td><p><strong>NumPy</strong></p></td>
-         <td><ul><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></p></li><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/*.npy</code></p></li></ul></td>
+         <td><ul><li><p><em><i>http</i>s://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</em></p></li><li><p><em>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</em>.npy*</p></li></ul></td>
        </tr>
     </table>
 

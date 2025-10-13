@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "IndexType | Java | v2"
 slug: /java/java/v2-Management-IndexType
 sidebar_label: "IndexType"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Java | v2"
@@ -10,10 +13,10 @@ type: docx
 token: EATSdak5wokQhCx6k3tcCoAqn3P
 sidebar_position: 8
 keywords: 
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
   - zilliz
   - zilliz cloud
   - cloud

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_privilege_groups() | Python | MilvusClient"
 slug: /python/python/Authentication-list_privilege_groups
 sidebar_label: "list_privilege_groups()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all existing privilege groups. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: N6kjdex5Ao0lRqxPXBhcxq4AnNh
 sidebar_position: 13
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - vector database example
+  - rag vector database
+  - what is vector db
+  - what are vector databases
   - zilliz
   - zilliz cloud
   - cloud
@@ -42,7 +45,7 @@ list_privilege_groups(
 
 **PARAMETERS:**
 
-- **timeout** (*Optional[float]*) - 
+- **timeout** (*Optional&#91;float&#93;*) - 
 
     The timeout duration for this operation.
 
@@ -50,7 +53,7 @@ list_privilege_groups(
 
 **RETURN TYPE:**
 
-*List[Dict[str, str]]*
+*List&#91;Dict&#91;str, str&#93;&#93;*
 
 **RETURNS:**
 

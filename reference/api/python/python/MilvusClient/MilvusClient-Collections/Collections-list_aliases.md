@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_aliases() | Python | MilvusClient"
 slug: /python/python/Collections-list_aliases
 sidebar_label: "list_aliases()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all existing aliases for a specific collection. | Python | MilvusClient"
@@ -10,10 +13,10 @@ type: docx
 token: Cpynd2OFJoIXhLx3dQNct7Wgn6f
 sidebar_position: 16
 keywords: 
-  - vector database
   - IVF
   - knn
   - Image Search
+  - LLMs
   - zilliz
   - zilliz cloud
   - cloud
@@ -43,7 +46,7 @@ list_aliases(
 
 - **collection_name** (*str*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the collection whose aliases are to be listed.
 

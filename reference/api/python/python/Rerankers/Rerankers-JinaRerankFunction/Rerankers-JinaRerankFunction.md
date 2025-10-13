@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "JinaRerankFunction | Python"
 slug: /python/python/Rerankers-JinaRerankFunction
 sidebar_label: "JinaRerankFunction"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "JinaRerankFunction is a class in milvusmodel that takes a query and document as input and directly returns a similarity score instead of embeddings. This functionality uses the underlying Jina AI reranking model. | Python"
@@ -10,10 +13,10 @@ type: docx
 token: E3opdXwZCoY8igxMjQ1cwsTbnzh
 sidebar_position: 1
 keywords: 
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
   - zilliz
   - zilliz cloud
   - cloud

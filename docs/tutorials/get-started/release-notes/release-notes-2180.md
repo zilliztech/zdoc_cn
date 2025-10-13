@@ -3,11 +3,14 @@ title: "版本说明书（2025/07/15） | Cloud"
 slug: /release-notes-2180
 sidebar_label: "版本说明书（2025/07/15）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在本次发布中，Zilliz Cloud 推出了多项强大的新功能，旨在提升运维效率、灵活性和用户体验。这些更新包括对集群级别定时自动扩缩容的支持、通过全新的 Merge Data API 实现 Schema 演进、推出用于简化数据接入流程的云原生数据层 Stage、支持从集群级备份中进行跨数据库的部分数据恢复，以及为 JSON Path 索引提供 UI 支持。这些功能共同帮助用户更高效地管理复杂的工作负载，降低维护开销，并加快在生成式 AI 时代下的开发周期。 | Cloud"
 type: origin
 token: QxMewBHpRisntJkA1NncBNSZnQc
-sidebar_position: 0
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz
@@ -86,7 +89,7 @@ Zilliz Cloud 现在支持集群级别的定时扩缩容 ，让您能够根据可
 
 ![UCUgbu2QUovXonx0JpncNj9HnLd](/img/UCUgbu2QUovXonx0JpncNj9HnLd.png)
 
-更多内容，可以参考[恢复部分集群数据](./restore-from-snapshot)。
+更多内容，可以参考[恢复部分集群数据](./restore-from-snapshot#restore-a-partial-cluster)。
 
 ## 在 Zilliz Cloud 控制台上创建 JSON Path 索引{#create-json-path-indexes-on-zilliz-cloud-console}
 
@@ -94,7 +97,7 @@ Zilliz Cloud 现在支持通过 Web 控制台直接创建 JSON Path 索引 ，�
 
 ![ViLvb57Oook1fux8BWncEP4an2d](/img/ViLvb57Oook1fux8BWncEP4an2d.png)
 
-关于 JSON Path 索引的更多内容，可以查看[为 JSON 字段内的值创建索引](./use-json-fields)和[为 Dynamic Field 中的键创建索引](./enable-dynamic-field)。
+关于 JSON Path 索引的更多内容，可以查看[为 JSON 字段内的值创建索引](./use-json-fields)和[为 Dynamic Field 中的键创建索引](./enable-dynamic-field#index-keys-in-the-dynamic-field)。
 
 ## 包年集群支持阿里云市场/亚马逊云市场支付{#anual-payment-clusters-support-aliyun-and-amazon-marketplaces}
 

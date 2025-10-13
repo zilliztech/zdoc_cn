@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "loadCollection() | Node.js"
 slug: /node/node/Management-loadCollection
 sidebar_label: "loadCollection()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation loads the data of a specific collection into memory. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: LoNvdRK80oWllFxV0H6co0HrnBe
 sidebar_position: 14
 keywords: 
-  - vector similarity search
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
+  - Vector embeddings
+  - Vector store
+  - open source vector database
+  - Vector index
   - zilliz
   - zilliz cloud
   - cloud
@@ -55,7 +58,7 @@ milvusClient.loadCollection({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of a collection.
 
@@ -67,7 +70,7 @@ milvusClient.loadCollection({
 
     The number of replicas of the collection to load.
 
-- **resource_groups** (*string[]*) -
+- **resource_groups** (*string&#91;&#93;*) -
 
     The number of resource groups in the collection to load.
 
@@ -77,7 +80,7 @@ milvusClient.loadCollection({
 
     Setting this to **None** indicates that this operation timeouts when any response returns or error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

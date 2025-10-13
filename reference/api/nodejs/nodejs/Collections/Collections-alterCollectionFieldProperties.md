@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "alterCollectionFieldProperties() | Node.js"
 slug: /node/node/Collections-alterCollectionFieldProperties
 sidebar_label: "alterCollectionFieldProperties()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation modifies the properties of a specified collection field. | Node.js"
@@ -10,10 +13,10 @@ type: docx
 token: RQH5dhSenoDGjYxyBb2c3n1rnie
 sidebar_position: 2
 keywords: 
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
-  - what is milvus
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
   - zilliz
   - zilliz cloud
   - cloud
@@ -54,25 +57,25 @@ milvusClient.alterCollectionFieldProperties({
 
 - **collection_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the target collection to reassign an alias to.
 
 - **field_name** (*string*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The name of the target field name.
 
 - **properties** (*Properties*) -
 
-    **[REQUIRED]**
+    **&#91;REQUIRED&#93;**
 
     The properties to change and their expected values in a TypeScript **Record**. Possible values are as follows:
 
     - **max_length** (*number*) -
 
-        The maximum byte length for strings allowed to be inserted. Note that multibyte characters (e.g., Unicode characters) may occupy more than one byte each, so ensure the byte length of inserted strings does not exceed the specified limit. Value range: [1, 65,535].
+        The maximum byte length for strings allowed to be inserted. Note that multibyte characters (e.g., Unicode characters) may occupy more than one byte each, so ensure the byte length of inserted strings does not exceed the specified limit. Value range: &#91;1, 65,535&#93;.
 
         This is mandatory for a **DataType.VARCHAR** field.
 
@@ -92,7 +95,7 @@ milvusClient.alterCollectionFieldProperties({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
+**RETURNS** *Promise\&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

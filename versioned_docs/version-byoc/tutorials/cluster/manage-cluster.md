@@ -1,13 +1,16 @@
 ---
-title: "管理集群 | Cloud"
+title: "管理集群 | BYOC"
 slug: /manage-cluster
 sidebar_label: "管理集群"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "本文介绍如了集群的生命周期，以便您能够充分利用 Zilliz Cloud 控制台来管理集群。 | Cloud"
+description: "本文介绍如了集群的生命周期，以便您能够充分利用 Zilliz Cloud 控制台来管理集群。 | BYOC"
 type: origin
 token: IRirwe30tilo1qkJlR7ca2MUnvn
-sidebar_position: 3
+sidebar_position: 4
 keywords: 
   - 向量数据库
   - zilliz
@@ -31,7 +34,7 @@ import Supademo from '@site/src/components/Supademo';
 
 前往目标集群的**集群详情**页并跟随以下指南对集群进行重命名。
 
-<Supademo id="cm9uqn1k801p1wbbizszfx673" title="Zilliz Cloud - 重命名集群 Demo" />
+<Supademo id="cm9uqn1k801p1wbbizszfx673" title=""  />
 
 ## 挂起集群{#suspend-cluster}
 
@@ -53,7 +56,7 @@ import Supademo from '@site/src/components/Supademo';
 
 前往目标集群的**集群详情**页，并跟随以下指南挂起 Dedicated 集群。
 
-<Supademo id="cm9uraerl02a5wbbiavqhws6u" title="Zilliz Cloud - 挂起集群 Demo" />
+<Supademo id="cm9uraerl02a5wbbiavqhws6u" title=""  />
 
 </TabItem>
 
@@ -91,9 +94,13 @@ curl --request POST \
 
 </Tabs>
 
+集群挂起请求成功后，会生成一条任务记录。您可以前往[任务中心](./job-center)查看任务进度。
+
 ## 恢复运行集群{#resume-cluster}
 
-Free 和 Serverless 集群在 7 天不活跃后会自动挂起，您可以随时恢复运行集群。
+Free 集群在 7 天不活跃后会自动挂起，您可以随时恢复运行集群。
+
+Serverless 集群不支持挂起和恢复运行的操作。
 
 Dedicated 集群在手动挂起后也按需手动恢复运行。
 
@@ -113,7 +120,18 @@ Dedicated 集群在手动挂起后也按需手动恢复运行。
 
 前往目标集群的**集群详情**页，并跟随以下指南恢复运行集群。
 
-<Supademo id="cm9urqadl02ifwbbijvvktj23" title="Zilliz Cloud - 恢复运行集群 Demo" />
+<Supademo id="cm9urqadl02ifwbbijvvktj23" title=""  />
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>在单击<strong>恢复运行</strong>后，您将看到自动弹出的<strong>检查项目资源配额</strong>窗口。如果当前项目的资源充足，该窗口在检查完成后会自动消失。如果资源不足，您可以：</p>
+<ul>
+<li><p>单击<strong>前往项目资源设置</strong>按钮，以便编辑当前项目的资源设置，或者</p></li>
+<li><p>单击<strong>返回上一步</strong>按钮，以便编辑当前集群的相关设置。</p></li>
+</ul>
+<p>操作期间会消耗少量额外资源，并在操作完成后释放。</p>
+
+</Admonition>
 
 </TabItem>
 
@@ -151,36 +169,7 @@ curl --request POST \
 
 </Tabs>
 
-## 升级版本{#upgrade-plan}
-
-如需使用更多高级功能，建议您升级集群版本。
-
-<table>
-   <tr>
-     <th><p><strong>版本升级</strong></p></th>
-     <th><p><strong>说明</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>Free 升级至 Serverless</p></td>
-     <td><p>您的 Free 集群将升级为 Serverless 版本。集群升级后，无法降级回原版本。</p></td>
-   </tr>
-   <tr>
-     <td><p>Free 升级至 Dedicated</p></td>
-     <td><p>系统将创建一个新的 Dedicated 集群，并自动迁移您现有 Free 集群中的数据。原有的 Free 集群将被保留。</p><p>请务必在应用程序代码中更新集群的 Endpoint 信息。</p></td>
-   </tr>
-   <tr>
-     <td><p>Serverless 升级至 Dedicated</p></td>
-     <td><p>系统将创建一个新的 Dedicated 集群，并自动迁移您现有 Serverless 集群中的数据。原有的 Serverless 集群将被保留。</p><p>请务必在应用程序代码中更新集群的 Endpoint 信息。</p></td>
-   </tr>
-</table>
-
-以下 Demo 以 Free 至 Dedicated 升级为例展示了如何升级集群版本。
-
-## 升级集群兼容版本以试用公测版功能{#upgrade-cluster-for-preview-features}
-
-如需试用公测版新功能，请升级 Dedicated 集群的兼容 Milvus 版本。
-
-![upgrade-to-preview-version-cn](/img/upgrade-to-preview-version-cn.png)
+集群恢复运行请求成功后，会生成一条任务记录。您可以前往[任务中心](./job-center)查看任务进度。
 
 ## 删除集群{#drop-cluster}
 
@@ -192,7 +181,7 @@ curl --request POST \
 
 前往目标集群的**集群详情**页，并跟随以下指南删除集群。
 
-<Supademo id="cm9us4mn102n1wbbinzd427jg" title="Zilliz Cloud - Resume Cluster Demo" />
+<Supademo id="cm9us4mn102n1wbbinzd427jg" title=""  />
 
 </TabItem>
 

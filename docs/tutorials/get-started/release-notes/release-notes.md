@@ -3,11 +3,14 @@ title: "版本说明书 | Cloud"
 slug: /release-notes
 sidebar_label: "版本说明书"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "了解 Zilliz Cloud 的发布记录。 | Cloud"
 type: origin
 token: QxcnwBks8izBAQkjP8Ycl1cEnQh
-sidebar_position: 13
+sidebar_position: 14
 keywords: 
   - 向量数据库
   - zilliz
