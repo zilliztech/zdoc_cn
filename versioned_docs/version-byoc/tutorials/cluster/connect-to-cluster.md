@@ -10,7 +10,7 @@ notebook: FALSE
 description: "本文介绍如何连接到 Zilliz Cloud 集群。 | BYOC"
 type: origin
 token: HU31wDHCCiN9qIknZ2fcLmconNh
-sidebar_position: 3
+sidebar_position: 2
 keywords: 
   - 向量数据库
   - zilliz
@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
 
 - 已部署 BYOC 项目。更多详情，请[联系我们](https://support.zilliz.com.cn)。
 
-- 已创建集群。。
+- 已创建集群。[创建集群](./create-cluster-byoc)。
 
 - 已安装合适版本的 Milvus SDK。详情请参见[安装 SDK](./install-sdks)。
 

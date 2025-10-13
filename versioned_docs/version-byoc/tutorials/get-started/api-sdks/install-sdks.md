@@ -135,7 +135,7 @@ go get -u github.com/milvus-io/milvus-sdk-go/v2@v2.5.6
 
 ## 相关文档{#related-docs}
 
-- [创建集群](./create-cluster-on-demand)
+- [创建集群](./create-cluster-byoc)
 
 - [创建 Collection](./manage-collections-sdks)
 

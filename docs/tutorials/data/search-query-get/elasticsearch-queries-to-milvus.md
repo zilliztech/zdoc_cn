@@ -514,7 +514,7 @@ client.search(
 
 每个检索器最多贡献 50 个匹配项，这些匹配项通过 RRF 重新排序，最终返回前 10 个结果。
 
-在 Zilliz Cloud 中，您可以通过结合多个向量字段的检索、使用重排策略，并从组合列表中检索前 K 个结果，来实现类似的混合检索。Zilliz Cloud 支持 RRF 和加权重排策略。更多内容可以参考 [Reranking](./undefined)。
+在 Zilliz Cloud 中，您可以通过结合多个向量字段的检索、使用重排策略，并从组合列表中检索前 K 个结果，来实现类似的混合检索。Zilliz Cloud 支持 RRF 和加权重排策略。更多内容可以参考 [重排](./reranking)。
 
 以下是上述 Elasticsearch 示例在 Zilliz Cloud 中的非严格等效实现：
 

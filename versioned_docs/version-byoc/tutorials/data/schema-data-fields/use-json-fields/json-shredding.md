@@ -43,7 +43,7 @@ JSON Shredding 对大多数 JSON 查询场景都有效，性能优势在以下�
 
 JSON Shredding 过程分为三个阶段，对数据进行优化以实现快速检索。
 
-### 阶段 1：数据写入与键分类{##phase-1-Ingestion--key-classification}
+### 阶段 1：数据写入与键分类{#phase-1-Ingestion--key-classification}
 
 当新 JSON 文档写入时，Zilliz Cloud 会持续采样和分析数据，为每个 JSON 键建立统计信息，包括出现频率与类型稳定性（数据类型是否在文档间保持一致）。
 
@@ -92,7 +92,7 @@ JSON Shredding 过程分为三个阶段，对数据进行优化以实现快速�
 
 ### 阶段 2：存储优化{#phase-2-storage-optimization}
 
-[阶段 1](./json-shredding##phase-1-Ingestion--key-classification) 的分类结果决定了存储布局。Zilliz Cloud 使用优化后的列式存储格式：
+[阶段 1](./json-shredding#phase-1-Ingestion--key-classification) 的分类结果决定了存储布局。Zilliz Cloud 使用优化后的列式存储格式：
 
 ![CBs7wlH5MhHZHubqHvpcYgUynyg](/img/CBs7wlH5MhHZHubqHvpcYgUynyg.png)
 

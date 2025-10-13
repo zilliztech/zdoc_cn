@@ -43,7 +43,7 @@ import Grid from '@site/src/components/Grid';
 
         - **支持不停机添加 Collection 字段** - 无须重建 Schema 和 Collection 即可即时在 Collection 中添加新字段。更多内容，可参考[向 Collection 添加字段](./add-fields-to-an-existing-collection)。
 
-        - **全文检索能力再增强** - 比 Elasticsearch 快四倍，提供多语言检测和短语匹配功能。更多内容可参考[多语言 Analyzer](./multi-language-analyzers)、[Phrase Match](./undefined) 和[最佳实践：如何选择合适的 Analyzer](./choose-the-right-analyzer-for-your-use-case)。
+        - **全文检索能力再增强** - 比 Elasticsearch 快四倍，提供多语言检测和短语匹配功能。更多内容可参考[多语言 Analyzer](./multi-language-analyzers)、[Phrase Match](./phrase-match) 和[最佳实践：如何选择合适的 Analyzer](./choose-the-right-analyzer-for-your-use-case)。
 
         - **JSON 过滤再加速** - 使用 JSON 索引和 Shredding，加速结构复杂、多重嵌套的元数据过滤能力，**性能提升 100 倍**。更多内容可参考 [JSON 索引](./json-indexing)和 [JSON Shredding](./json-shredding)。
 

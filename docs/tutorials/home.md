@@ -67,7 +67,7 @@ Zilliz Cloud 提供如下版本供您订阅：
 
 1. 创建并连接您的 Zilliz Cloud 集群。
 
-    您需要[创建一个集群](./create-cluster_1)，并为您分配合适的计算和存储资源，然后[连接这个集群](./connect-to-cluster)。
+    您需要[创建一个集群](./create-cluster)，并为您分配合适的计算和存储资源，然后[连接这个集群](./connect-to-cluster)。
 
 1. 创建 Collection。
 

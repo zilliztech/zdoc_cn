@@ -53,7 +53,7 @@ Zilliz Cloud Terraform Provider 是一个开源的基础设施即代码（Infras
 
 Zilliz Cloud 集群是在 Zilliz Cloud 上运行的 Milvus 实例。Zilliz Cloud 将其集群划分为多种服务类型，包括 Free、Serverless、Dedicated (Standard)、Dedicated (Enterprise) 以及 Bring Your Own Cloud （BYOC)。
 
-有关这些服务类型的详细介绍，请参阅[Zilliz Cloud 版本对比](./select-zilliz-cloud-service-plans)。
+有关这些服务类型的详细介绍，请参阅 [Zilliz Cloud 版本对比](/docs/select-zilliz-cloud-service-plans)。
 
 你可以使用 Zilliz Cloud Terraform Provider 创建和管理任意类型的集群实例。具体操作请参考以下教程：
 

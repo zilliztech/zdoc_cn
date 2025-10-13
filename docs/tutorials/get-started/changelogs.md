@@ -63,7 +63,7 @@ import Grid from '@site/src/components/Grid';
 
             - 不停机[新增字段](./add-fields-to-an-existing-collection)
 
-            - [多语言 Analyzer](./multi-language-analyzers) 和 [Phrase Match](./undefined) 增强全文检索能力
+            - [多语言 Analyzer](./multi-language-analyzers) 和 [Phrase Match](./phrase-match) 增强全文检索能力
 
             - [JSON 索引](./json-indexing)和 [JSON Shredding](./json-shredding) 加速 JSON 字段内搜索
 
@@ -96,8 +96,6 @@ import Grid from '@site/src/components/Grid';
         - 简单配置，尽享[集群自动扩缩容](./scale-cluster#dynamic-scaling)
 
         - [审计日志](./auditing)功能全面可用（GA）
-
-        - [单点登录](./single-sign-on)功能体验进一步提升
 
     </div>
 

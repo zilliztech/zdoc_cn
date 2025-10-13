@@ -18,12 +18,10 @@ sidebar_position: 7
 ## 目录
 
 - [什么是计算单元（Compute Unit, CU）?](#what-is-a-compute-unit-cu)
-- [什么是 vCU？](#what-is-a-vCU-how-does-it-get-calculated)
 - [如何查看订阅的 Zilliz Cloud 版本？](#how-can-i-know-which-plan-i-am-on)
 - [我应该选择哪种集群类型？](#which-type-of-cluster-should-i-pick)
 - [我的数据需要使用多少 Query CU？](#how-many-query-cus-do-i-need-for-a-given-collection)
 - [如何避免未使用的集群产生费用？](#how-can-i-avoid-expenses-on-unused-clusters)
-- [如何估算使用 Zilliz Cloud 的成本？](#how-can-i-estimate-the-cost-of-using-zilliz-cloud)
 
 ## 问答
 
@@ -33,10 +31,6 @@ sidebar_position: 7
 ### 什么是计算单元（Compute Unit, CU）? \{#what-is-a-compute-unit-cu}
 
 计算单元（CU）是指用于提供向量检索、分析服务的一组硬件资源。可以将 CU 视为一个物理查询节点。
-
-### 什么是 vCU？ \{#what-is-a-vCU-how-does-it-get-calculated}
-
-vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、upsert、delete）所消耗资源的基本单位。读取和写入的数据量单位会由 GB 折算为 vCU。详情请参考[Serverless 集群费用](./serverless-cluster-cost)。
 
 ### 如何查看订阅的 Zilliz Cloud 版本？ \{#how-can-i-know-which-plan-i-am-on}
 
@@ -65,7 +59,3 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
 ### 如何避免未使用的集群产生费用？ \{#how-can-i-avoid-expenses-on-unused-clusters}
 
 建议您挂起未使用的集群以节省成本。您可随时按需恢复集群。
-
-### 如何估算使用 Zilliz Cloud 的成本？ \{#how-can-i-estimate-the-cost-of-using-zilliz-cloud}
-
-请使用[价格计算器](https://zilliz.com.cn/pricing#calculator)估算使用成本。

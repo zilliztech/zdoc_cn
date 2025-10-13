@@ -1,13 +1,13 @@
 ---
-title: "创建集群 | Cloud"
-slug: /create-cluster
+title: "创建集群 | BYOC"
+slug: /create-cluster-byoc
 sidebar_label: "创建集群"
 beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
 notebook: FALSE
-description: "本节介绍如何创建集群。 | Cloud"
+description: "本节介绍如何创建集群。 | BYOC"
 type: origin
 token: DqZywVVCqi9Q5ekAPEFcmODbncb
 sidebar_position: 2

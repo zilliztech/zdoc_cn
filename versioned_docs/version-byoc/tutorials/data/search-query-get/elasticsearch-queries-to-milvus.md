@@ -10,7 +10,7 @@ notebook: FALSE
 description: "基于 Apache Lucene 构建的 Elasticsearch 是领先的开源搜索引擎。然而，它在现代 AI 应用程序中面临挑战，包括高更新成本、较差的实时性能、低效的分片管理、非云原生设计以及过度的资源需求。作为云原生向量数据库，Zilliz Cloud 通过解耦的存储和计算、高维数据的高效索引以及与现代基础设施的无缝集成克服了这些问题，并为 AI 工作负载提供了卓越的性能和可扩展性。 | BYOC"
 type: origin
 token: QOwXwYCBMiR8pQkHDcKcL3z3nDh
-sidebar_position: 12
+sidebar_position: 11
 keywords: 
   - 向量数据库
   - zilliz
@@ -514,7 +514,7 @@ client.search(
 
 每个检索器最多贡献 50 个匹配项，这些匹配项通过 RRF 重新排序，最终返回前 10 个结果。
 
-在 Zilliz Cloud 中，您可以通过结合多个向量字段的检索、使用重排策略，并从组合列表中检索前 K 个结果，来实现类似的混合检索。Zilliz Cloud 支持 RRF 和加权重排策略。更多内容可以参考 [Reranking](./undefined)。
+在 Zilliz Cloud 中，您可以通过结合多个向量字段的检索、使用重排策略，并从组合列表中检索前 K 个结果，来实现类似的混合检索。Zilliz Cloud 支持 RRF 和加权重排策略。更多内容可以参考 [重排](./reranking)。
 
 以下是上述 Elasticsearch 示例在 Zilliz Cloud 中的非严格等效实现：
 

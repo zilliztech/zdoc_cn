@@ -41,7 +41,7 @@ import Supademo from '@site/src/components/Supademo';
 
 ## 快速了解 Analyzer{#quick-concept-how-analyzers-work}
 
-在 Zilliz Cloud 中，Analyzer 会处理存储在字段中的文本，使其可用于 [Full Text Search](./full-text-search)（BM25）、[Phrase Match](./undefined) 或 [Text Match](./text-match)。可以将它视作一个文本处理器，把原始内容转化为可搜索的 token。一个 Analyzer 的工作分为两个阶段：
+在 Zilliz Cloud 中，Analyzer 会处理存储在字段中的文本，使其可用于 [Full Text Search](./full-text-search)（BM25）、[Phrase Match](./phrase-match) 或 [Text Match](./text-match)。可以将它视作一个文本处理器，把原始内容转化为可搜索的 token。一个 Analyzer 的工作分为两个阶段：
 
 ![HZhjw5hTuhfOIebOsnOcmy8Hnuf](/img/HZhjw5hTuhfOIebOsnOcmy8Hnuf.png)
 

@@ -18,7 +18,8 @@ sidebar_position: 3
 ## 目录
 
 - [1 个集群中最多可创建多少个 Collection？](#how-many-collections-are-allowed-in-a-single-cluster)
-- [如果创建 Collection 时未开启动态列，Collection 创建成功后是否还能开启动态列？](#if-dynamic-schema-was-disabled-when-the-collection-was-created-can-i-enable-it-later)
+- [如何确认我的 Collection 是否开启了动态 Schema？](#how-can-i-know-if-dynamic-schema-is-enabled-for-my-collection)
+- [如果创建 Collection 时未开启动态 Schema，Collection 创建成功后是否还能开启动态 Schema？](#if-dynamic-schema-was-disabled-when-the-collection-was-created-can-i-enable-it-later)
 - [Zilliz Cloud 支持哪些相似度类型？](#what-are-the-indexing-metric-types-supported-by-zilliz-cloud)
 - [Collection 加载为何失败，如何解决？](#why-do-i-fail-to-load-collections-what-can-i-do)
 - [Collection 加载请求的并发是多少？如何增加并发请求的数量？](#what-is-the-concurrency-for-collection-loading-requests-how-can-i-increase-the-number-of-concurrent-requests)
@@ -69,9 +70,23 @@ sidebar_position: 3
 
 1. [使用 Partition Key](./use-partition-key) 创建 Partition。
 
-### 如果创建 Collection 时未开启动态列，Collection 创建成功后是否还能开启动态列？ \{#if-dynamic-schema-was-disabled-when-the-collection-was-created-can-i-enable-it-later}
+### 如何确认我的 Collection 是否开启了动态 Schema？ \{#how-can-i-know-if-dynamic-schema-is-enabled-for-my-collection}
 
-可以。如果您在创建时未开启动态列功能，您可以后续开启该功能。更多详情，请阅读[修改 Collection](./modify-collections)。
+您可以前往 Zilliz Cloud 界面查看 Collection 是否开启动态 Schema。操作步骤为：
+
+1. 选择你想查看的 Collection。
+
+1. 点击 Schema 标签页。
+
+1. 在页面右上角查看动态 Schema 是否已开启。
+
+更多详情，请阅读 [Dynamic Field](./enable-dynamic-field)。
+
+![faq_dynamic_schema_enable](/img/faq_dynamic_schema_enable.png)
+
+### 如果创建 Collection 时未开启动态 Schema，Collection 创建成功后是否还能开启动态 Schema？ \{#if-dynamic-schema-was-disabled-when-the-collection-was-created-can-i-enable-it-later}
+
+不能。在创建 Collection 时一旦确认开启或者关闭动态 Schema，Collection 创建成功后不可以修改动态 Schema 状态。更多详情，请阅读 [Dynamic Field](./enable-dynamic-field)。
 
 ### Zilliz Cloud 支持哪些相似度类型？ \{#what-are-the-indexing-metric-types-supported-by-zilliz-cloud}
 
