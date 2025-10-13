@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from '@docusaurus/Link'
 import Heading from '@theme-original/Heading';
-import {useDoc} from '@docusaurus/plugin-content-docs/client';
+import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import styles from './styles.module.css';
 
 const BetaTag = (tag) => {
@@ -21,9 +21,21 @@ const BetaTag = (tag) => {
       tag_caption = "联系销售";
       tag_color = "#FF7F47";
       break;
+    case tag === 'BYOC':
+      tag_caption = "联系销售开启 BYOC";
+      tag_color = "#FF7F47";
+      break;
     case tag === 'NEAR DEPRECATE':
       tag_caption = "即将作废";
       tag_color = "#FF7F47";    
+      break;
+    case tag === 'All Plans':
+      tag_caption = "适用所有集群";
+      tag_color = "#FF7F47";
+      break;
+    case tag === 'Dedicated':
+      tag_caption = "仅 Dedicated 集群适用";
+      tag_color = "#FF7F47";
       break;
     case tag?.startsWith('Milvus'):
       tag_caption = 'Compatible with ' + tag;
@@ -156,7 +168,7 @@ export default function HeadingWrapper(props) {
     const { beta, notebook, tags, added_since, last_modified, deprecate_since } = frontMatter;
     var tag = metadata.title.endsWith('BYOC') ? 'BYOC' : beta;
 
-    if (props.as === 'h1' && beta) {
+    if (props.as === 'h1' && tag) {
       const linkable = tag === 'CONTACT SALES' || tag === 'BYOC'
       const destination_url = 'https://zilliz.com.cn/contact-sales'      
 
@@ -173,7 +185,7 @@ export default function HeadingWrapper(props) {
       const destination_url = 'https://zilliz.com.cn/contact-sales'
 
       props = {
-        as: "h2",
+        as: props.as,
         id: props.id,
         children: tag ? BetaTagComponent(title.trim(), tag?.trim(), linkable, destination_url) : title.trim()
       }
@@ -295,6 +307,7 @@ export default function HeadingWrapper(props) {
       </>
     );
   } catch (error) {
+    // console.error(error);
     return (
       <>
         <Heading {...props} />

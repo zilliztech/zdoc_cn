@@ -10,7 +10,7 @@ notebook: FALSE
 description: "本节介绍如何创建集群。 | BYOC"
 type: origin
 token: DqZywVVCqi9Q5ekAPEFcmODbncb
-sidebar_position: 2
+sidebar_position: 1
 keywords: 
   - 向量数据库
   - zilliz
