@@ -53,7 +53,7 @@ import Grid from '@site/src/components/Grid';
 
         - **MINHASH_LSH 索引类型** - 借助 MinHash 和局部敏感哈希 （LSH）技术，执行高效的大规模消重和相似性检查。该特性为**内测版**特性。如果您想试用该特性，可以联系我们。更多内容，可参考 [MINHASH_LSH](https://milvus.io/docs/zh/minhash-lsh.md)。
 
-        - 局部 Upsert - 无须重写整条记录即可刷新指定字段的值。更多内容，可参考[在合并模式下进行 Upsert](./upsert-entities)。
+        - **部分 Upsert** - 无须重写整条记录即可刷新指定字段的值。更多内容，可参考[在合并模式下进行 Upsert](./upsert-entities)。
 
         如需启用公测版特性，可以登录 Zilliz Cloud 控制台，在**集群详情**页面单击**试用测试特性**将您的集群升级到 Milvus v2.6.x。升级后，所有 Milvus v2.5.x 相关能力仍旧可用。
 
