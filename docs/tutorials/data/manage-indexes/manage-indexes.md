@@ -37,7 +37,6 @@ import Admonition from '@theme/Admonition';
 <ul>
 <li><p><a href="./manage-collections-console">通过 Web 控制台创建 Collection</a></p></li>
 <li><p><a href="/reference/create-collection">通过 RESTful API 创建 Collection</a></p></li>
-<li><p><a href="./undefined">通过 SDK 快速创建 Collection</a></p></li>
 <li><p><a href="./manage-collections-sdks">通过 SDK 定制化创建 Collection 并设置索引参数</a></p></li>
 </ul>
 <p>您也可以创建非自动加载的 Collection，并自行管理索引。</p>

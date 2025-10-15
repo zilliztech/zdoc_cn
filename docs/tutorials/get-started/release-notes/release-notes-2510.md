@@ -10,7 +10,7 @@ notebook: FALSE
 description: "版本说明书（2025/10） | Cloud"
 type: origin
 token: T9nXwdrWqinfgCk4BFDcDhf8nOe
-sidebar_position: 1
+sidebar_position: 0
 keywords: 
   - 向量数据库
   - zilliz
@@ -41,7 +41,7 @@ import Grid from '@site/src/components/Grid';
 
         随着本次发布，Milvus v2.6.x 集群现已在 Zilliz Cloud 上进入**公测**阶段，具备多项增强和优化功能，可提升稳定性、效率和灵活性。
 
-        - **支持不停机添加 Collection 字段** - 无须重建 Schema 和 Collection 即可即时在 Collection 中添加新字段。更多内容，可参考[向 Collection 添加字段](./add-fields-to-an-existing-collection)。
+        - **支持不停机添加 Collection 字段** - 无须重建 Schema 和 Collection 即可即时在 Collection 中添加新字段。更多内容，可参考[向 Collection 添加字段](./undefined)。
 
         - **全文检索能力再增强** - 比 Elasticsearch 快四倍，提供多语言检测和短语匹配功能。更多内容可参考[多语言 Analyzer](./multi-language-analyzers)、[Phrase Match](./phrase-match) 和[最佳实践：如何选择合适的 Analyzer](./choose-the-right-analyzer-for-your-use-case)。
 
@@ -73,11 +73,11 @@ import Grid from '@site/src/components/Grid';
 
         关键能力
 
-        - 自动复制：只需配置一次备份策略，Zilliz Cloud 即可自动处理向所选目标地域的持续复制。
+        - **自动复制**：只需配置一次备份策略，Zilliz Cloud 即可自动处理向所选目标地域的持续复制。
 
-        - 地理冗余：通过将备份副本存储在与原始备份物理上不同的地域，防范地域故障。
+        - **地理冗余**：通过将备份副本存储在与原始备份物理上不同的地域，防范地域故障。
 
-        - 快速恢复：快速将数据从跨地域备份恢复到新集群，最大限度减少停机时间，显著改善恢复时间目标（RTO）。
+        - **快速恢复**：快速将数据从跨地域备份恢复到新集群，最大限度减少停机时间，显著改善恢复时间目标（RTO）。
 
         更多内容，可参考[跨地域备份](./backup-to-other-regions)。
 
@@ -95,7 +95,7 @@ import Grid from '@site/src/components/Grid';
 
         ## 更多增强\{#enhancements}
 
-        - 现在，您可以使用 **Anlayzer 设置界面**快速配置**特定语言的 Analyzer 模板**，并**测试结果**。这有助于用户了解其 Analyzer 配置如何影响分词，以及最终如何影响 Full-Text Search 结果。如需演示，请查看[Analyzer 概述](./analyzer-overview#example-use-on-the-zilliz-cloud-console)。
+        - 现在，您可以使用 **Anlayzer 设置界面**快速配置**特定语言的 Analyzer 模板**，并**测试结果**。这有助于用户了解其 Analyzer 配置如何影响分词，以及最终如何影响 Full-Text Search 结果。如需演示，请查看[Analyzer 概述](./analyzer-overview)。
 
         - 在数据迁移前，更清晰的错误信息和增强的体验**有助于用户诊断连接问题**，更轻松地设置源数据库以进行迁移。
 
