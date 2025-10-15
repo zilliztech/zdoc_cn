@@ -10,7 +10,7 @@ notebook: FALSE
 description: "版本说明书（2025/10） | Cloud"
 type: origin
 token: T9nXwdrWqinfgCk4BFDcDhf8nOe
-sidebar_position: 0
+sidebar_position: 1
 keywords: 
   - 向量数据库
   - zilliz
@@ -41,7 +41,7 @@ import Grid from '@site/src/components/Grid';
 
         随着本次发布，Milvus v2.6.x 集群现已在 Zilliz Cloud 上进入**公测**阶段，具备多项增强和优化功能，可提升稳定性、效率和灵活性。
 
-        - **支持不停机添加 Collection 字段** - 无须重建 Schema 和 Collection 即可即时在 Collection 中添加新字段。更多内容，可参考[向 Collection 添加字段](./undefined)。
+        - **支持不停机添加 Collection 字段** - 无须重建 Schema 和 Collection 即可即时在 Collection 中添加新字段。更多内容，可参考[向 Collection 添加字段](./add-fields-to-an-existing-collection)。
 
         - **全文检索能力再增强** - 比 Elasticsearch 快四倍，提供多语言检测和短语匹配功能。更多内容可参考[多语言 Analyzer](./multi-language-analyzers)、[Phrase Match](./phrase-match) 和[最佳实践：如何选择合适的 Analyzer](./choose-the-right-analyzer-for-your-use-case)。
 
