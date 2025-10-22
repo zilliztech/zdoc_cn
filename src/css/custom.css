@@ -264,10 +264,6 @@ li.theme-doc-sidebar-item-category-level-4 a.menu__link.menu__link--sublist {
   color: rgb(107, 114, 128) !important;
 }
 
-li.theme-doc-sidebar-item-category-level-1 > ul.menu__list {
-  padding-left: 0 !important;
-}
-
 div.footer__bottom.text--center {
   display: none;
 }
@@ -277,7 +273,7 @@ div.footer__bottom.text--center {
   color: #fff;
   background-color: var(--ifm-color-primary);
   border-radius: 20px;
-  font-size: 1rem;
+  font-size: 14px;
   margin-left: 0.5rem;
 }
 
@@ -304,7 +300,7 @@ div.footer__bottom.text--center {
 }
 
 .to-be-deprecated > div > a::after {
-  content: "即将作废";
+  content: "ABOUT TO DEPRECATE";
   display: inline-block;
   font-size: 0.6rem;
   font-weight: 700;
@@ -322,7 +318,7 @@ div.footer__bottom.text--center {
   display: inline-block;
   font-weight: 700;
   margin: 0.25rem 0;
-  font-size: 14px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -345,7 +341,7 @@ div.footer__bottom.text--center {
 
 /* Hide badges and pagination navigation only on the home page */
 html.docs-doc-id-tutorials\/home .badge,
-html.docs-doc-id-tutorials\/home .breadcrumbs,
+html.docs-doc-id-tutorials\/home .breadcrumb,
 html.docs-doc-id-tutorials\/home .pagination-nav {
   display: none !important;
 }
@@ -367,9 +363,6 @@ html.docs-doc-id-tutorials\/home .pagination-nav {
 /* Ensure the sidebar menu list allows proper scrolling */
 .theme-doc-sidebar-container .menu__list {
   scroll-behavior: smooth !important;
-  overflow-y: auto !important;
-  max-height: 100vh !important;
-  padding-right: 8px; /* Add some padding for scroll bar */
 }
 
 /* Ensure the sidebar wrapper allows proper scrolling */
