@@ -3,16 +3,19 @@ title: "Client | Python | MilvusClient"
 slug: /python/MilvusClient-Client
 beta: false
 notebook: false
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 description: "Classes and methods for you to manage the MilvusClient instances. | Python | MilvusClient"
 type: folder
 token: ZEQZf4BtildBijdf1T6cdDnmnZb
 sidebar_position: 2
 sidebar_label: "Client"
 keywords: 
-  - private llms
-  - nn search
-  - llm eval
-  - Sparse vs Dense
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
   - zilliz
   - zilliz cloud
   - cloud

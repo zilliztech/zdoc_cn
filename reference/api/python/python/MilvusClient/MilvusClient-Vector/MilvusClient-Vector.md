@@ -3,16 +3,19 @@ title: "Vector | Python | MilvusClient"
 slug: /python/MilvusClient-Vector
 beta: false
 notebook: false
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 description: "Methods related to CRUD operations within a collection. | Python | MilvusClient"
 type: folder
 token: BCcWfIoxvlY1oOdsLcXcqTtcnMf
 sidebar_position: 7
 sidebar_label: "Vector"
 keywords: 
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
   - zilliz
   - zilliz cloud
   - cloud

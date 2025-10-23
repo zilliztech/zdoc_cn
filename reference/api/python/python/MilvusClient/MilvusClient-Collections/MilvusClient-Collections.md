@@ -3,16 +3,19 @@ title: "Collections | Python | MilvusClient"
 slug: /python/MilvusClient-Collections
 beta: false
 notebook: false
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 description: "Methods for you to manage collections. | Python | MilvusClient"
 type: folder
 token: M6KJfLu4ylTkNsd9DUVcQHmfnqe
 sidebar_position: 3
 sidebar_label: "Collections"
 keywords: 
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: X1L2dAjDyo7yqOxqWELcBRBUndd
 sidebar_position: 1
 keywords: 
-  - Serverless vector database
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - IVF
   - zilliz
   - zilliz cloud
   - cloud
@@ -91,7 +91,7 @@ add_field(
 
         - **DataType.ARRAY**
 
-    - Vector fields: Select **DataType.FLOAT_VECTOR**, **DataType.BINARY_VECTOR** <sup>(Beta)</sup>, **DataType.FLOAT16_VECTOR** <sup>(Beta)</sup>, **DataType.BFLOAT16_VECTOR** <sup>(Beta)</sup>, or **DataType.SPARSE_FLOAT_VECTOR** <sup>(Beta)</sup>.
+    - Vector fields: Select **DataType.FLOAT_VECTOR**, **DataType.BINARY_VECTOR**, **DataType.FLOAT16_VECTOR**, **DataType.BFLOAT16_VECTOR**, or **DataType.SPARSE_FLOAT_VECTOR**.
 
 - **is_primary** (*bool*) -
 

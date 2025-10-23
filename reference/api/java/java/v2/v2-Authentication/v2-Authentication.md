@@ -3,16 +3,19 @@ title: "Authentication | Java | v2"
 slug: /java/v2-Authentication
 beta: false
 notebook: false
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 description: "Methods related to implement role-based access control to your resources. | Java | v2"
 type: folder
 token: U16KfBnGVlNp5edR7DycvFF1nfy
 sidebar_position: 8
 sidebar_label: "Authentication"
 keywords: 
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud

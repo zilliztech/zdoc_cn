@@ -3,16 +3,19 @@ title: "Management | Python | MilvusClient"
 slug: /python/MilvusClient-Management
 beta: false
 notebook: false
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 description: "Methods for you to index, load, and release a collection. | Python | MilvusClient"
 type: folder
 token: MvvMf16FLlVOmtdgx5UcZ8qtnyd
 sidebar_position: 5
 sidebar_label: "Management"
 keywords: 
-  - image similarity search
-  - Context Window
-  - Natural language search
-  - Similarity Search
+  - knn
+  - Image Search
+  - LLMs
+  - Machine Learning
   - zilliz
   - zilliz cloud
   - cloud

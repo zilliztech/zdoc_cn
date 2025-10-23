@@ -3,16 +3,19 @@ title: "Partitions | Java | v2"
 slug: /java/v2-Partitions
 beta: false
 notebook: false
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 description: "Methods related to the manipulation of the partitions in a collection. | Java | v2"
 type: folder
 token: YkL6fqkaNlgeWXdNaWLcltkZnRc
 sidebar_position: 10
 sidebar_label: "Partitions"
 keywords: 
-  - Zilliz
-  - milvus vector database
-  - milvus db
-  - milvus vector db
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud

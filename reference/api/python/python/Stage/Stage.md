@@ -3,16 +3,19 @@ title: "Stage | Python"
 slug: /python/Stage
 beta: false
 notebook: false
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 description: "Classes and methods related to Zilliz Cloud's Stage service. | Python"
 type: folder
 token: UJtvfGYb4lKoF1dy7iicFwcAnWr
 sidebar_position: 5
 sidebar_label: "Stage"
 keywords: 
-  - llm eval
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
   - zilliz
   - zilliz cloud
   - cloud

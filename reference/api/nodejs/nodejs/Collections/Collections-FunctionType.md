@@ -13,10 +13,10 @@ type: docx
 token: L4H0dyzS1o6XlmxMQzDca6Pdnjd
 sidebar_position: 20
 keywords: 
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
-  - how does milvus work
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
+  - Embedding model
   - zilliz
   - zilliz cloud
   - cloud

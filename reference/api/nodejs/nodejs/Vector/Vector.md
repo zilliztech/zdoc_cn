@@ -3,16 +3,19 @@ title: "Vector | Node.js"
 slug: /node/Vector
 beta: false
 notebook: false
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 description: "Methods related to CRUD operations within a collection. | Node.js"
 type: folder
 token: IguLfmHgXlJoojdRU8kcohXZnE1
 sidebar_position: 5
 sidebar_label: "Vector"
 keywords: 
-  - open source vector database
-  - Vector index
-  - vector database open source
-  - open source vector db
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
   - zilliz
   - zilliz cloud
   - cloud

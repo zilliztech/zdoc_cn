@@ -13,10 +13,10 @@ type: docx
 token: SptWdOyFqoGM5VxVS16cofqfnDg
 sidebar_position: 2
 keywords: 
+  - Embedding model
+  - image similarity search
   - Context Window
   - Natural language search
-  - Similarity Search
-  - multimodal RAG
   - zilliz
   - zilliz cloud
   - cloud

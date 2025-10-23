@@ -10,13 +10,13 @@ beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Python | MilvusClient"
 type: docx
-token: JiN3dU8zwoPdgBxxpw6c0JkUnze
+token: JafZdq01Vodpx5xAVl1cz8VVnBg
 sidebar_position: 7
 keywords: 
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
   - zilliz
   - zilliz cloud
   - cloud
@@ -85,7 +85,7 @@ This is an enumeration that provides the following constants.
 
 - FLOAT16_VECTOR = 102
 
-    Sets the data type to **Float16 Vector**.
+    Sets the data type to **Float16 Vector**
 
 - BFLOAT16_VECTOR = 103
 
@@ -94,3 +94,7 @@ This is an enumeration that provides the following constants.
 - SPARSE_FLOAT_VECTOR = 104
 
     Sets the data type to **Sparse Vector**.
+
+- INT8_VECTOR=105
+
+    Sets the data type to **INT8 Vector**.

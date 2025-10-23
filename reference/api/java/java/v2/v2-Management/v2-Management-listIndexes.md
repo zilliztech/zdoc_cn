@@ -13,10 +13,10 @@ type: docx
 token: OyWwdNBG1o2pTQxNDD1cLHcTnwc
 sidebar_position: 9
 keywords: 
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
   - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
   - zilliz
   - zilliz cloud
   - cloud

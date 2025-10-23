@@ -3,16 +3,19 @@ title: "MilvusClient | Python | MilvusClient"
 slug: /python/MilvusClient
 beta: false
 notebook: false
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 description: "An easy-to-use alternative to the legacy PyMilvus SDK. | Python | MilvusClient"
 type: folder
 token: YHQ9fF9IDlENsMd9RZucYalqnNg
 sidebar_position: 3
 sidebar_label: "MilvusClient"
 keywords: 
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
   - zilliz
   - zilliz cloud
   - cloud

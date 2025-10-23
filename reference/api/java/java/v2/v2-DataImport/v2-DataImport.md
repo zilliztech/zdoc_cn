@@ -3,16 +3,19 @@ title: "Data Import | Java | v2"
 slug: /java/v2-DataImport
 beta: false
 notebook: false
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 description: "Classes and methods related to BulkWriter and BulkImport, facilitating importing data to your collections. | Java | v2"
 type: folder
 token: AtkCfVN4Ll6GqMdVJfxcybHanDf
 sidebar_position: 3
 sidebar_label: "Data Import"
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - AI Hallucination
   - zilliz
   - zilliz cloud
   - cloud

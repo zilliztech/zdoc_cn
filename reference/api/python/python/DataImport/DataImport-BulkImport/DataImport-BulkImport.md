@@ -3,16 +3,19 @@ title: "BulkImport | Python"
 slug: /python/DataImport-BulkImport
 beta: false
 notebook: false
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 description: "Functions related to bulk import data into Zilliz Cloud clusters. | Python"
 type: folder
 token: I5i9f86n4lsy9IddsDocMOsfnXg
 sidebar_position: 2
 sidebar_label: "BulkImport"
 keywords: 
-  - Context Window
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
   - zilliz
   - zilliz cloud
   - cloud

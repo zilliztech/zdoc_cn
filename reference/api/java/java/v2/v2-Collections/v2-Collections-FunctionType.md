@@ -13,10 +13,10 @@ type: docx
 token: Z467dWnBYoGmDhxbJMocAGoHnle
 sidebar_position: 27
 keywords: 
-  - Video search
-  - AI Hallucination
-  - AI Agent
-  - semantic search
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
   - zilliz
   - zilliz cloud
   - cloud
