@@ -51,11 +51,11 @@ import TabItem from '@theme/TabItem';
 
 让我们考虑一个现实世界的用例，其中每个产品都包含文本描述和图像。根据可用数据，我们可以进行三种类型的搜索：
 
-- **语义文本搜索：**这涉及使用密集向量查询产品的文本描述。文本嵌入可以使用 [BERT](https://zilliz.com/learn/explore-colbert-token-level-embedding-and-ranking-model-for-similarity-search?_gl=1*d243m9*_gcl_au*MjcyNTAwMzUyLjE3NDMxMzE1MjY.*_ga*MTQ3OTI4MDc5My4xNzQzMTMxNTI2*_ga_KKMVYG8YF2*MTc0NTkwODU0Mi45NC4xLjE3NDU5MDg4MzcuMC4wLjA.#A-Quick-Recap-of-BERT) 和[Transformers](https://zilliz.com/learn/NLP-essentials-understanding-transformers-in-AI?_gl=1*d243m9*_gcl_au*MjcyNTAwMzUyLjE3NDMxMzE1MjY.*_ga*MTQ3OTI4MDc5My4xNzQzMTMxNTI2*_ga_KKMVYG8YF2*MTc0NTkwODU0Mi45NC4xLjE3NDU5MDg4MzcuMC4wLjA.) 等模型或 [OpenAI](https://zilliz.com/learn/guide-to-using-openai-text-embedding-models) 等服务生成。
+- **语义文本搜索**：这涉及使用密集向量查询产品的文本描述。文本嵌入可以使用 [BERT](https://zilliz.com/learn/explore-colbert-token-level-embedding-and-ranking-model-for-similarity-search?_gl=1*d243m9*_gcl_au*MjcyNTAwMzUyLjE3NDMxMzE1MjY.*_ga*MTQ3OTI4MDc5My4xNzQzMTMxNTI2*_ga_KKMVYG8YF2*MTc0NTkwODU0Mi45NC4xLjE3NDU5MDg4MzcuMC4wLjA.#A-Quick-Recap-of-BERT) 和[Transformers](https://zilliz.com/learn/NLP-essentials-understanding-transformers-in-AI?_gl=1*d243m9*_gcl_au*MjcyNTAwMzUyLjE3NDMxMzE1MjY.*_ga*MTQ3OTI4MDc5My4xNzQzMTMxNTI2*_ga_KKMVYG8YF2*MTc0NTkwODU0Mi45NC4xLjE3NDU5MDg4MzcuMC4wLjA.) 等模型或 [OpenAI](https://zilliz.com/learn/guide-to-using-openai-text-embedding-models) 等服务生成。
 
 - **全文搜索**：在这里，我们使用与稀疏向量的关键词匹配来查询产品的文本描述。像 [BM25](https://zilliz.com/learn/mastering-bm25-a-deep-dive-into-the-algorithm-and-application-in-milvus) 这样的算法或 [BGE-M3](https://zilliz.com/learn/bge-m3-and-splade-two-machine-learning-models-for-generating-sparse-embeddings?_gl=1*1cde1oq*_gcl_au*MjcyNTAwMzUyLjE3NDMxMzE1MjY.*_ga*MTQ3OTI4MDc5My4xNzQzMTMxNTI2*_ga_KKMVYG8YF2*MTc0NTkwODU0Mi45NC4xLjE3NDU5MDg4MzcuMC4wLjA.#BGE-M3)、[SPLADE](https://zilliz.com/learn/bge-m3-and-splade-two-machine-learning-models-for-generating-sparse-embeddings?_gl=1*ov2die*_gcl_au*MjcyNTAwMzUyLjE3NDMxMzE1MjY.*_ga*MTQ3OTI4MDc5My4xNzQzMTMxNTI2*_ga_KKMVYG8YF2*MTc0NTkwODU0Mi45NC4xLjE3NDU5MDg4MzcuMC4wLjA.#SPLADE) 等稀疏嵌入模型可用于此目的。
 
-- **多模态图像搜索：**此方法使用带有密集向量的文本查询对图像进行查询。图像嵌入可以使用 [CLIP](https://zilliz.com/learn/exploring-openai-clip-the-future-of-multimodal-ai-learning) 等模型生成。
+- **多模态图像搜索**：此方法使用带有密集向量的文本查询对图像进行查询。图像嵌入可以使用 [CLIP](https://zilliz.com/learn/exploring-openai-clip-the-future-of-multimodal-ai-learning) 等模型生成。
 
 本指南将结合产品的原始文本描述和图像嵌入，为您详细介绍一个结合上述搜索方法的多模态混合搜索示例。我们将展示如何存储多向量数据，并使用重排序策略执行混合搜索。
 

@@ -91,7 +91,7 @@ import Admonition from '@theme/Admonition';
 
 以下几个计算示例旨在帮助您了解如何计算数据传输费用。
 
-### **示例 1：公网出口{#example-1-public-internet-egress}**
+### 示例 1：公网出口{#example-1-public-internet-egress}
 
 假设您的集群部署在阿里云华东1（杭州），并通过公网将搜索结果返回给客户端：
 
@@ -103,7 +103,7 @@ import Admonition from '@theme/Admonition';
 
 那么，`数据传输费用 = ¥0.8 × 500 = ¥400.00`。
 
-### **示例 2：跨地域传输{#example-2-cross-region transfer}**
+### 示例 2：跨地域传输{#example-2-cross-region transfer}
 
 假设您的集群部署在阿里云华东1（杭州），需要将此集群备份到阿里云华东2（上海）。
 
@@ -115,7 +115,7 @@ import Admonition from '@theme/Admonition';
 
 那么，`数据传输费用 = ¥0.48 × 20 = ¥9.60`。
 
-### **示例 3：同地域传输{#example-3-intra-region transfer}**
+### 示例 3：同地域传输{#example-3-intra-region transfer}
 
 假设您的集群部署在阿里云华东1（杭州）并启用了审计日志功能，需要将此集群的审计日志转发到同区域创建的阿里云对象存储（OSS）桶中。由于是同地域数据传输，因此数据传输费用为 ¥0。
 

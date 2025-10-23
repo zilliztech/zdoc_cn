@@ -136,7 +136,7 @@ Function 用于全文检索中，将 Analyzer 分词后的术语转换为带相�
 
 在创建 Collection 时，您可以根据实际需求，在 Collection 或字段级别配置 mmap 设置。较低级别的设置将覆盖较高级别的设置，优先级如下：字段 &gt; Collection &gt; 集群
 
-- **Collection 级别 mmap：**针对 Collection 中的原始数据开启 mmap。该设置适用于整个 Collection，可后续修改。若需修改 Collection 级别的 mmap 设置，需先释放 Collection。
+- **Collection 级别 mmap**：针对 Collection 中的原始数据开启 mmap。该设置适用于整个 Collection，可后续修改。若需修改 Collection 级别的 mmap 设置，需先释放 Collection。
 
 - **字段级别 mmap**：通过自定义设置针对选定字段的原始数据和 Index 开启 mmap。一般建议对数据量大、且不频繁用于查询或过滤的字段开启 mmap。该设置仅影响所选字段，可后续修改。若需修改字段级别的 mmap 设置，需先释放 Collection。
 
@@ -180,9 +180,9 @@ Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下�
 
 <Supademo id="cmauvqbcp02ztyg0istpzcq9w" title="管理 Collection" isShowcase="true" />
 
-- **重命名 Collection：**可以修改现有 Collection 的名称。
+- **重命名 Collection**：可以修改现有 Collection 的名称。
 
-- **编辑 Collection 的 Schema 和配置：**目前 Zilliz Cloud 支持修改以下 Schema 和设置：
+- **编辑 Collection 的 Schema 和配置**：目前 Zilliz Cloud 支持修改以下 Schema 和设置：
 
     - 可编辑现有 [VARCHAR](./use-string-field) 字段的 `max_length` 值。
 
@@ -198,9 +198,9 @@ Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下�
 
     其他 Schema 设置暂不支持编辑。如仍需修改，建议创建一个新的 Collection，并重新[导入数据](./import-data)。
 
-- **加载 / 释放 Collection：**在 Zilliz Cloud Web 控制台上，Collection 创建后会自动加载至内存，可立即用于搜索和查询。如需释放内存空间，可将不常用的 Collection 手动释放。
+- **加载 / 释放 Collection**：在 Zilliz Cloud Web 控制台上，Collection 创建后会自动加载至内存，可立即用于搜索和查询。如需释放内存空间，可将不常用的 Collection 手动释放。
 
-- **移动 Collection 到其他 Database：**可以将相关的 Collection 分组到同一个 Database 中，并根据需要在不同 Database 之间移动 Collection。
+- **移动 Collection 到其他 Database**：可以将相关的 Collection 分组到同一个 Database 中，并根据需要在不同 Database 之间移动 Collection。
 
 - **管理 Collection 中的 Partition**：对于**开启了 Partition Key** 的 Collection，无需手动管理 Partition；对于**未开启Partition Key** 的 Collection，您可以手动进行以下操作：
 
@@ -210,5 +210,5 @@ Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下�
 
 - **查看 Collection Alias**：您可以通过 Collection列表页查看特定集群下所有 Collection 的 Alias。
 
-- **删除 Collection：**若某个 Collection 已不再使用，您可以将其删除以释放资源。删除 Collection 的操作会永久清除其中的所有数据，操作不可撤销。
+- **删除 Collection**：若某个 Collection 已不再使用，您可以将其删除以释放资源。删除 Collection 的操作会永久清除其中的所有数据，操作不可撤销。
 

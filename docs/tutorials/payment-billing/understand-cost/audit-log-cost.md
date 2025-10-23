@@ -67,15 +67,15 @@ import Admonition from '@theme/Admonition';
 
 假设您的集群配置如下：
 
-- **版本：**Dedicated 企业版
+- **版本**：Dedicated 企业版
 
-- **云服务提供商和地域：**阿里云华东1（杭州）
+- **云服务提供商和地域**：阿里云华东1（杭州）
 
 - **集群类型**：性能型
 
-- **Query CU：**8 CU
+- **Query CU**：8 CU
 
-- **Replica 数量：**2
+- **Replica 数量**：2
 
 - **审计日志运行时长：**
 

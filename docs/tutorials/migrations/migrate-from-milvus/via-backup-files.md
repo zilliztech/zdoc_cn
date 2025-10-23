@@ -157,7 +157,7 @@ backup
 
 - **索引创建**：迁移过程中会自动为迁移的 Collection 创建 [AUTOINDEX](./autoindex-explained)。
 
-- **手动 Load Collection：**虽然索引已自动创建，但迁移后的 Collection 并不会立即支持搜索或查询操作。您必须手动 Load Collection，才能启用搜索和查询功能。详细信息请参阅 [Load 和 Release](./load-release-collections)。
+- **手动 Load Collection**：虽然索引已自动创建，但迁移后的 Collection 并不会立即支持搜索或查询操作。您必须手动 Load Collection，才能启用搜索和查询功能。详细信息请参阅 [Load 和 Release](./load-release-collections)。
 
 ## 取消迁移任务{#cancel-migration-job}
 

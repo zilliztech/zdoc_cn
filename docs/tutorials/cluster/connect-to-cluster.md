@@ -52,7 +52,7 @@ import TabItem from '@theme/TabItem';
 
     ![connection-info-cn](/img/connection-info-cn.png)
 
-- **Token：**可以是 [API 密钥](./manage-api-keys)或由用户名和密码组成的[集群凭证](./cluster-credentials)。
+- **Token**：可以是 [API 密钥](./manage-api-keys)或由用户名和密码组成的[集群凭证](./cluster-credentials)。
 
 以下示例展示如何连接至集群。
 
