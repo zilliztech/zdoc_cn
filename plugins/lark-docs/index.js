@@ -194,6 +194,10 @@ module.exports = function (context, options) {
                                 const page_slug = source.slug
                                 const page_beta = meta['beta']
                                 const notebook = meta['notebook']
+                                const description = meta['description']
+                                const addedSince = meta['addSince']
+                                const lastModified = meta['lastModified']
+                                const deprecateSince = meta['deprecateSince']
                                 const labels = meta['labels']
                                 const keywords = meta['keywords']
                                 const parent = Object.keys(source).includes('parent_node_token') ? source.parent_node_token : source.parent_token
@@ -226,12 +230,16 @@ module.exports = function (context, options) {
                                     page_slug: page_slug,
                                     page_beta: page_beta ? page_beta : false,
                                     notebook: notebook ? notebook : false,
+                                    addedSince: addedSince ? addedSince : false,
+                                    lastModified: lastModified ? lastModified : false,
+                                    deprecateSince: deprecateSince ? deprecateSince : false,
                                     page_type: source_type,
                                     page_token: token,
                                     sidebar_position: sidebarPos,
                                     sidebar_label: labels,
                                     keywords: keywords,
                                     doc_card_list: doc_card_list,
+                                    page_description: description ? description : false,
                                 }
     
                                 await writer.write_doc(req)
