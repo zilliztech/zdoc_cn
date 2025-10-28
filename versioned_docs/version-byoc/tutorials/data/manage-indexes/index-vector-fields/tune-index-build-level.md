@@ -96,7 +96,7 @@ Zilliz Cloud 引入了一个名为 `build_level` 的参数，该参数允许用�
    </tr>
    <tr>
      <td><p>精度优先 (2)</p></td>
-     <td><p>150万个769维向量</p></td>
+     <td><p>150万个768维向量</p></td>
      <td><p>~ 2,850 (↓ ~5%)</p></td>
      <td><p><strong>92% - 97% (↑)</strong></p></td>
    </tr>
@@ -133,7 +133,7 @@ Zilliz Cloud 引入了一个名为 `build_level` 的参数，该参数允许用�
    </tr>
    <tr>
      <td><p>精度优先 (2)</p></td>
-     <td><p>500万个769维向量</p></td>
+     <td><p>500万个768维向量</p></td>
      <td><p>~ 345</p></td>
      <td><p><strong>94% - 98% (↑)</strong></p></td>
    </tr>
