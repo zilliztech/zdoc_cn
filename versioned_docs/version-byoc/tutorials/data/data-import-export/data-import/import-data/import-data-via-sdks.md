@@ -160,7 +160,7 @@ while (results.hasNext()) {
 
 一旦您的数据和 Collection 准备就绪，您可以通过外部存储（如对象存储桶和块存储 Blob 容器）将数据导入到特定集合中。
 
-### 导入数据{#import-data}
+### 从外部存储中导入数据{#import-data-via-external-storage}
 
 在待导入数据和 Collection 都准备就绪后，可以使用如下脚本将数据从外部存储导入到指定 Collection。
 
