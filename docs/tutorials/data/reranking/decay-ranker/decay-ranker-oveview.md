@@ -257,7 +257,23 @@ decay_ranker = Function(
 <TabItem value='java'>
 
 ```java
-// java
+import io.milvus.v2.service.vector.request.ranker.DecayRanker;
+
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+
+ZonedDateTime zdt = ZonedDateTime.of(2025, 1, 25, 0, 0, 0, 0, ZoneId.systemDefault());
+
+DecayRanker ranker = DecayRanker.builder()
+        .name("time_decay")
+        .inputFieldNames(Collections.singletonList("timestamp"))
+        .function("gauss")
+        .origin(zdt.toInstant().toEpochMilli())
+        .scale(7 * 24 * 60 * 60)
+        .offset(24 * 60 * 60)
+        .decay(0.5)
+        .build();
+
 ```
 
 </TabItem>
@@ -265,7 +281,23 @@ decay_ranker = Function(
 <TabItem value='javascript'>
 
 ```javascript
-// nodejs
+
+import {FunctionType } from "@zilliz/milvus2-sdk-node";
+
+const decayRanker = {
+  name: "time_decay",
+  input_field_names: ["timestamp"],
+  function_type: FunctionType.RERANK,
+  params: {
+    reranker: "decay",
+    function: "gauss",
+    origin: new Date(2025, 1, 15).getTime(),
+    scale: 7 * 24 * 60 * 60,
+    offset: 24 * 60 * 60,
+    decay: 0.5,
+  },
+};
+
 ```
 
 </TabItem>
@@ -361,7 +393,7 @@ decay_ranker = Function(
 # Use the decay function in standard vector search
 results = milvus_client.search(
     collection_name,
-    data=["search query"],
+    data=[your_query_vector], # Replace with your query vector
     anns_field="vector_field",
     limit=10,
     output_fields=["document", "timestamp"],  # Include the decay field in outputs to see values
@@ -376,7 +408,21 @@ results = milvus_client.search(
 <TabItem value='java'>
 
 ```java
-// java
+import io.milvus.v2.service.vector.request.SearchReq;
+import io.milvus.v2.service.vector.response.SearchResp;
+import io.milvus.v2.service.vector.request.data.EmbeddedText;
+
+SearchReq searchReq = SearchReq.builder()
+        .collectionName(COLLECTION_NAME)
+        .data(Collections.singletonList(new EmbeddedText("search query")))
+        .annsField("vector_field")
+        .limit(10)
+        .outputFields(Arrays.asList("document", "timestamp"))
+        .functionScore(FunctionScore.builder()
+                .addFunction(ranker)
+                .build())
+        .build();
+SearchResp searchResp = client.search(searchReq);
 ```
 
 </TabItem>
@@ -384,7 +430,15 @@ results = milvus_client.search(
 <TabItem value='javascript'>
 
 ```javascript
-// nodejs
+const result = await milvusClient.search({
+  collection_name: "collection_name",
+  data: [your_query_vector], // Replace with your query vector
+  anns_field: "dense",
+  limit: 10,
+  output_fields: ["document", "timestamp"],
+  rerank: ranker,
+  consistency_level: "Strong",
+});
 ```
 
 </TabItem>
@@ -418,14 +472,14 @@ from pymilvus import AnnSearchRequest
 
 # Define search requests for different vector fields
 dense_request = AnnSearchRequest(
-    data=["search query"],
+    data=[your_query_vector_1], # Replace with your query vector
     anns_field="dense_vector",
     param={},
     limit=20
 )
 
 sparse_request = AnnSearchRequest(
-    data=["search query"],
+    data=[your_query_vector_2], # Replace with your query vector
     anns_field="sparse_vector",
     param={},
     limit=20
@@ -447,7 +501,31 @@ hybrid_results = milvus_client.hybrid_search(
 <TabItem value='java'>
 
 ```java
-// java
+import io.milvus.v2.service.vector.request.AnnSearchReq;
+import io.milvus.v2.service.vector.request.HybridSearchReq;
+import io.milvus.v2.service.vector.request.data.EmbeddedText;
+import io.milvus.v2.service.vector.request.data.FloatVec;
+        
+List<AnnSearchReq> searchRequests = new ArrayList<>();
+searchRequests.add(AnnSearchReq.builder()
+        .vectorFieldName("dense_vector")
+        .vectors(Collections.singletonList(new FloatVec(embedding)))
+        .limit(20)
+        .build());
+searchRequests.add(AnnSearchReq.builder()
+        .vectorFieldName("sparse_vector")
+        .vectors(Collections.singletonList(new EmbeddedText("search query")))
+        .limit(20)
+        .build());
+
+HybridSearchReq hybridSearchReq = HybridSearchReq.builder()
+                .collectionName(COLLECTION_NAME)
+                .searchRequests(searchRequests)
+                .ranker(ranker)
+                .limit(10)
+                .outputFields(Arrays.asList("document", "timestamp"))
+                .build();
+SearchResp searchResp = client.hybridSearch(hybridSearchReq);
 ```
 
 </TabItem>
@@ -455,7 +533,28 @@ hybrid_results = milvus_client.hybrid_search(
 <TabItem value='javascript'>
 
 ```javascript
-// nodejs
+const denseRequest = {
+  data: [your_query_vector_1], // Replace with your query vector
+  anns_field: "dense_vector",
+  param: {},
+  limit: 20,
+};
+
+const sparseRequest = {
+  data: [your_query_vector_2], // Replace with your query vector
+  anns_field: "sparse_vector",
+  param: {},
+  limit: 20,
+};
+
+const hybridResults = await milvusClient.hybrid_search({
+  collection_name: "collection_name",
+  data: [denseRequest, sparseRequest],
+  ranker: decayRanker,
+  limit: 10,
+  output_fields: ["document", "timestamp"],
+});
+
 ```
 
 </TabItem>

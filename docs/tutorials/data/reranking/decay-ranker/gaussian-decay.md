@@ -165,7 +165,17 @@ ranker = Function(
 <TabItem value='java'>
 
 ```java
-// java
+import io.milvus.v2.service.vector.request.ranker.DecayRanker;
+
+DecayRanker ranker = DecayRanker.builder()
+        .name("restaurant_distance_decay")
+        .inputFieldNames(Collections.singletonList("distance"))
+        .function("gauss")
+        .origin(0)
+        .offset(300)
+        .decay(0.5)
+        .scale(2000)
+        .build();
 ```
 
 </TabItem>
@@ -173,7 +183,22 @@ ranker = Function(
 <TabItem value='javascript'>
 
 ```javascript
-// nodejs
+import { FunctionType } from "@zilliz/milvus2-sdk-node";
+
+const ranker = {
+  name: "restaurant_distance_decay",
+  input_field_names: ["distance"],
+  function_type: FunctionType.RERANK,
+  params: {
+    reranker: "decay",
+    function: "gauss",
+    origin: 0,
+    offset: 300,
+    decay: 0.5,
+    scale: 2000,
+  },
+};
+
 ```
 
 </TabItem>
@@ -206,7 +231,7 @@ ranker = Function(
 # Apply decay ranker to restaurant vector search
 result = milvus_client.search(
     collection_name,
-    data=["italian restaurants"],         # Query text
+    data=[your_query_vector],         # Replace with your query vector
     anns_field="dense",                   # Vector field to search
     limit=10,                             # Number of results
     output_fields=["name", "cuisine", "distance"],  # Fields to return
@@ -221,7 +246,23 @@ result = milvus_client.search(
 <TabItem value='java'>
 
 ```java
-// java
+import io.milvus.v2.common.ConsistencyLevel;
+import io.milvus.v2.service.vector.request.SearchReq;
+import io.milvus.v2.service.vector.response.SearchResp;
+import io.milvus.v2.service.vector.request.data.EmbeddedText;
+
+SearchReq searchReq = SearchReq.builder()
+        .collectionName(COLLECTION_NAME)
+        .data(Collections.singletonList(new EmbeddedText("italian restaurants")))
+        .annsField("vector_field")
+        .limit(10)
+        .outputFields(Arrays.asList("name", "cuisine", "distance"))
+        .functionScore(FunctionScore.builder()
+                .addFunction(ranker)
+                .build())
+        .consistencyLevel(ConsistencyLevel.STRONG)
+        .build();
+SearchResp searchResp = client.search(searchReq);
 ```
 
 </TabItem>
@@ -229,7 +270,15 @@ result = milvus_client.search(
 <TabItem value='javascript'>
 
 ```javascript
-// nodejs
+const result = await milvusClient.search({
+  collection_name: "collection_name",
+  data: [your_query_vector], // Replace with your query vector
+  anns_field: "dense",
+  limit: 10,
+  output_fields: ["name", "cuisine", "distance"],
+  rerank: ranker,
+  consistency_level: "Strong",
+});
 ```
 
 </TabItem>
@@ -263,7 +312,7 @@ from pymilvus import AnnSearchRequest
 
 # Define dense vector search request
 dense = AnnSearchRequest(
-    data=["italian restaurants"],
+    data=[your_query_vector_1], # Replace with your query vector
     anns_field="dense",
     param={},
     limit=10
@@ -271,7 +320,7 @@ dense = AnnSearchRequest(
 
 # Define sparse vector search request
 sparse = AnnSearchRequest(
-    data=["italian restaurants"],
+    data=[your_query_vector_2], # Replace with your query vector
     anns_field="sparse_vector",
     param={},
     limit=10
@@ -293,7 +342,31 @@ hybrid_results = milvus_client.hybrid_search(
 <TabItem value='java'>
 
 ```java
-// java
+import io.milvus.v2.service.vector.request.AnnSearchReq;
+import io.milvus.v2.service.vector.request.HybridSearchReq;
+import io.milvus.v2.service.vector.request.data.EmbeddedText;
+import io.milvus.v2.service.vector.request.data.FloatVec;
+        
+List<AnnSearchReq> searchRequests = new ArrayList<>();
+searchRequests.add(AnnSearchReq.builder()
+        .vectorFieldName("dense_vector")
+        .vectors(Collections.singletonList(new FloatVec(embedding)))
+        .limit(10)
+        .build());
+searchRequests.add(AnnSearchReq.builder()
+        .vectorFieldName("sparse_vector")
+        .vectors(Collections.singletonList(new EmbeddedText("italian restaurants")))
+        .limit(10)
+        .build());
+
+HybridSearchReq hybridSearchReq = HybridSearchReq.builder()
+                .collectionName(COLLECTION_NAME)
+                .searchRequests(searchRequests)
+                .ranker(ranker)
+                .limit(10)
+                .outputFields(Arrays.asList("name", "cuisine", "distance"))
+                .build();
+SearchResp searchResp = client.hybridSearch(hybridSearchReq);
 ```
 
 </TabItem>
@@ -301,7 +374,28 @@ hybrid_results = milvus_client.hybrid_search(
 <TabItem value='javascript'>
 
 ```javascript
-// nodejs
+const denseRequest = {
+  data: [your_query_vector_1], // Replace with your query vector
+  anns_field: "dense",
+  param: {},
+  limit: 10,
+};
+
+const sparseRequest = {
+  data: [your_query_vector_2], // Replace with your query vector
+  anns_field: "sparse_vector",
+  param: {},
+  limit: 10,
+};
+
+const hybridResults = await milvusClient.search({
+  collection_name: "collection_name",
+  data: [denseRequest, sparseRequest],
+  rerank: ranker,
+  limit: 10,
+  output_fields: ["name", "cuisine", "distance"],
+});
+
 ```
 
 </TabItem>
