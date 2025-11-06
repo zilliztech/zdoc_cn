@@ -3,6 +3,9 @@ title: "创建阿里云私网连接（Private Link） | Cloud"
 slug: /setup-a-private-link-alicloud
 sidebar_label: "创建阿里云私网连接（Private Link）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本小节主要介绍如何在您的阿里云 VPC 和您托管在阿里云上的 Zilliz Cloud 集群之间建立私网连接。 | Cloud"
 type: origin
@@ -25,7 +28,11 @@ import Admonition from '@theme/Admonition';
 
 本小节主要介绍如何在您的阿里云 VPC 和您托管在阿里云上的 Zilliz Cloud 集群之间建立私网连接。
 
-此功能仅适用于 Dedicated 集群。
+<Admonition type="info" icon="📘" title="说明">
+
+<p>此功能仅限 <strong>Dedicated</strong> 集群使用。</p>
+
+</Admonition>
 
 您需要在项目层级创建 Private Link。创建完成后，Private Link 将适用于项目下所有与 Private Link 云服务提供商和地域相同的集群。
 
@@ -35,7 +42,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 配置思路{#configuration-roadmap}
+## 配置思路\{#configuration-roadmap}
 
 如需启用访问 Zilliz Cloud 集群的私网连接，您需要：
 
@@ -45,13 +52,13 @@ import Admonition from '@theme/Admonition';
 
 - 前往阿里云控制台，使用该域名前缀创建一条私网解析记录。
 
-## 前提条件{#before-you-start}
+## 前提条件\{#before-you-start}
 
 - 您已经注册 Zilliz Cloud 并创建了 Zilliz Cloud 阿里云集群。
 
 - 您在上述 Zilliz Cloud 阿里云集群所在云服务地域有一个 VPC。
 
-## 创建 Private Endpoint{#create-private-endpoint}
+## 创建 Private Endpoint\{#create-private-endpoint}
 
 本节将按照配置思路详细介绍如何为您的 Zilliz Cloud 阿里云集群创建私网连接。
 
@@ -59,13 +66,13 @@ import Admonition from '@theme/Admonition';
 
 ![zh-create-private-link](/img/zh-create-private-link.png)
 
-### 选择云服务提供商和地域{#select-cloud-provider-and-region}
+### 选择云服务提供商和地域\{#select-cloud-provider-and-region}
 
 在云服务提供商下拉菜单中选择阿里云。在地域下拉菜单中选择与您目标集群相同的地域。
 
 ![zh-ali-create-private-link](/img/zh-ali-create-private-link.png)
 
-### 创建终端服务{#create-endpoint-service}
+### 创建终端服务\{#create-endpoint-service}
 
 登录阿里云控制台查找主帐号 ID。
 
@@ -79,7 +86,7 @@ import Admonition from '@theme/Admonition';
 
 ![zh-ali-create-private-link-enter-account-id](/img/zh-ali-create-private-link-enter-account-id.png)
 
-### 创建终端节点{#create-endpoint}
+### 创建终端节点\{#create-endpoint}
 
 1. 进入[阿里云终端节点控制台](https://vpc.console.aliyun.com/endpoint)。
 
@@ -155,7 +162,7 @@ import Admonition from '@theme/Admonition';
 
     </Admonition>
 
-### 授权终端节点{#authorize-endpoint}
+### 授权终端节点\{#authorize-endpoint}
 
 将您在阿里云界面上保存的**终端节点实例 ID** 输入到 Zilliz Cloud 界面的**终端节点 ID** 字段中。点击**创建**。
 
@@ -165,7 +172,7 @@ import Admonition from '@theme/Admonition';
 
 ![Y0e6bGUTEoY8WlxkRcGcbMBVnac](/img/Y0e6bGUTEoY8WlxkRcGcbMBVnac.png)
 
-## 获取 Private Link{#obtain-a-private-link}
+## 获取 Private Link\{#obtain-a-private-link}
 
 待私网连接创建成功后，Zilliz Cloud 界面如下：
 
@@ -179,9 +186,9 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 设置 DNS{#set-up-dns}
+## 设置 DNS\{#set-up-dns}
 
-### 创建并设置私域解析{#add-private-zone-record}
+### 创建并设置私域解析\{#add-private-zone-record}
 
 1. 进入阿里云控制台[内网 DNS 解析（PrivateZone）](https://dns.console.aliyun.com/#/privateZone/list)。
 
@@ -269,13 +276,13 @@ import Admonition from '@theme/Admonition';
 
     ![zh-ali-dns-successful](/img/zh-ali-dns-successful.png)
 
-### 您已成功创建私网连接{#create-private-link-successful}
+### 您已成功创建私网连接\{#create-private-link-successful}
 
-## 后续操作{#next-steps}
+## 后续操作\{#next-steps}
 
 在完成私网连接创建和 DNS 设置后，可按照集群详情页面右上角的连接指南使用私网连接进行连通性验证。
 
-## 管理集群公网访问{#manage-internet-access-to-your-clusters}
+## 管理集群公网访问\{#manage-internet-access-to-your-clusters}
 
 完成配置私网连接后，您可以选择关闭和限制集群的公网访问能力（Public Endpoint）。关闭后，您只可以使用私网连接访问该集群。
 
@@ -300,3 +307,7 @@ import Admonition from '@theme/Admonition';
 
 ![disable_public_endpoint_cn](/img/disable_public_endpoint_cn.png)
 
+## 常见问题\{#faq}
+
+**能否为已有集群创建 Private Endpoint？**
+可以。当您创建 Private Endpoint 后，它将自动适用于同一项目下且部署在同一个云服务地域的所有 Dedicated 集群。您只需为不同的集群添加对应的 DNS 记录即可。

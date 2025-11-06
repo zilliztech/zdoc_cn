@@ -1,10 +1,13 @@
 ---
-title: "数据导入指南 | Cloud"
+title: "数据导入指南 | BYOC"
 slug: /data-import-zero-to-hero
 sidebar_label: "用户指南"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "本小节为一个快速引导教程，旨在帮助您在 Zilliz Cloud 上快速开始包含数据准备、建立 Collection 到开始导入数据等子任务在内的全流程数据导入任务。通过本节，你将掌握： | Cloud"
+description: "本小节为一个快速引导教程，旨在帮助您在 Zilliz Cloud 上快速开始包含数据准备、建立 Collection 到开始导入数据等子任务在内的全流程数据导入任务。通过本节，你将掌握： | BYOC"
 type: origin
 token: FXGWwcjyViaQm8kvJgScITzBnr3
 sidebar_position: 5
@@ -32,17 +35,17 @@ import TabItem from '@theme/TabItem';
 
 - 如果调用批量导入 API 将准备好的源数据导入目标 Collection
 
-## 开始之前{#before-you-start}
+## 开始之前\{#before-you-start}
 
 为了保证整个数据导入流程的连续性，请在开始本教程前完成如下准备工作：
 
-### 在 Zilliz Cloud 上创建集群{#set-up-your-zilliz-cloud-cluster}
+### 在 Zilliz Cloud 上创建集群\{#set-up-your-zilliz-cloud-cluster}
 
-- 如果您还未创建任何集群，参考[此处创建一个集群](./create-cluster-on-demand)。
+- 如果您还未创建任何集群，参考。
 
 - 收集如下信息：**集群 Endpoint**、**API 密钥**、**集群 ID**。
 
-### 安装依赖{#install-dependencies}
+### 安装依赖\{#install-dependencies}
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
 
@@ -78,7 +81,7 @@ compile 'io.milvus:milvus-sdk-java:2.4.8'
 
 </Tabs>
 
-### 配置远程对象存储桶{#configure-your-remote-storage-bucket}
+### 配置远程对象存储桶\{#configure-your-remote-storage-bucket}
 
 - 在您的阿里云或腾讯云控制台上创建一个对象存储桶。
 
@@ -130,7 +133,7 @@ String SECRET_KEY = "";
 </TabItem>
 </Tabs>
 
-## 创建目标 Collection Schema{#set-up-target-collection-schema}
+## 创建目标 Collection Schema\{#set-up-target-collection-schema}
 
 我们可以根据上表的内容设计目标 Collection 的 Schema。
 
@@ -190,7 +193,7 @@ print(schema)
 
 - `enable_dynamic_field=True`
 
-    该参数默认为 **False**，表示 Schema 中未定义的字段将会被忽略。将其设置为 **True** 将允许 **BulkWriter** 将未在 Schema 中定义的字段以键值对的形式存储到一个名为 **$meta** 的预留 JSON 字段中。
+    该参数默认为 **False**，表示 Schema 中未定义的字段将会被忽略。将其设置为 **True** 将允许 **BulkWriter** 将未在 Schema 中定义的字段以键值对的形式存储到一个名为 **&#36;meta** 的预留 JSON 字段中。
 
 </TabItem>
 
@@ -436,11 +439,11 @@ milvusClient.createCollection(request);
 </TabItem>
 </Tabs>
 
-## 准备源数据{#prepare-source-data}
+## 准备源数据\{#prepare-source-data}
 
 **BulkWriter** 会将您提供的数据转换成 JSON、Parquet 或 NumPy 文件。在下面的示例中，我们将创建一个 **RemoteBulkWriter** 并使用该 **RemoteBulkWriter** 将您的数据转换成上述格式。
 
-### 创建 RemoteBulkWriter{#create-remotebulkwriter}
+### 创建 RemoteBulkWriter\{#create-remotebulkwriter}
 
 当 Schema 准备好后，就可以使用该 Schema 创建 **RemoteBulkWriter** 了。由于 **RemoteBulkWriter** 需要访问您的远程对象存储桶。因此，您需要先设置好连接远程对象存储桶的 **ConnectParam** 对象并在创建 **RemoteBulkWriter** 时引用该参数。
 
@@ -579,7 +582,7 @@ RemoteBulkWriter remoteBulkWriter = new RemoteBulkWriter(remoteBulkWriterParam);
 
 </Tabs>
 
-### 使用 Writer{#use-the-writer}
+### 使用 Writer\{#use-the-writer}
 
 **Writer** 对象有两个方法：一个是将原始数据以行的形式添加到缓存中，另一个则是将缓存中的数据写入到远程对象存储桶中。
 
@@ -872,11 +875,11 @@ System.out.println(batchFiles);
 
 更多内容，可参考[使用 BulkWriter](./use-bulkwriter)。
 
-## 导入源数据{#import-prepared-data}
+## 导入源数据\{#import-prepared-data}
 
 在此步骤之前，请再次确认您准备的数据已经正确上传到您的存储桶中。
 
-### 创建批量导入任务{#start-importing}
+### 创建批量导入任务\{#start-importing}
 
 您可以使用 bulk_import() 函数导入准备好的源数据。
 
@@ -944,7 +947,7 @@ System.out.println(jobId);
 
 </Admonition>
 
-### 检查任务进度{#check-task-progress}
+### 检查任务进度\{#check-task-progress}
 
 如下代码每 5 秒钟检查一次任务进度，并打印进度信息。
 
@@ -1080,7 +1083,7 @@ System.out.println(listImportJobsResult);
 </TabItem>
 </Tabs>
 
-## 小结{#recaps}
+## 小结\{#recaps}
 
 本教程涵盖了数据导入的全流程。下面是一些在进行数据导入时需要遵循的一些原则：
 

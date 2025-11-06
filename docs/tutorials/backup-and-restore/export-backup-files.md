@@ -3,11 +3,14 @@ title: "导出备份文件 | Cloud"
 slug: /export-backup-files
 sidebar_label: "导出备份文件"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "您可以通过 Zilliz Cloud 控制台将备份文件导出至对象存储。 | Cloud"
 type: origin
 token: WXBjwo4sgiCDX8kZvBwcJrJCnyg
-sidebar_position: 4
+sidebar_position: 5
 keywords: 
   - 向量数据库
   - zilliz
@@ -34,17 +37,17 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 开始前{#before-you-start}
+## 开始前\{#before-you-start}
 
-- 您已完成对象存储的集成操作。有关具体信息，请参考[配置对象存储](./integrate-with-storage-bucket)。
+- 您已完成对象存储的集成操作。有关具体信息，请参考[阿里云对象存储](./integrate-with-storage-bucket)或 [Amazon S3](./integrate-with-amazon-s3)。
 
 - 您是目标组织中的**组织管理员**或**项目管理员**。
 
-## 操作步骤{#procedure}
+## 操作步骤\{#procedure}
 
 您可以选择通过 Zilliz Cloud 控制台或调用 RESTful API 的方式来导出备份文件。
 
-### 通过 Zilliz Cloud 控制台导出{#export-via-zilliz-cloud-console}
+### 通过 Zilliz Cloud 控制台导出\{#export-via-zilliz-cloud-console}
 
 1. 登录 Zilliz Cloud 控制台。
 
@@ -72,7 +75,7 @@ import Admonition from '@theme/Admonition';
 
     ![export-backup-file-zh](/img/export-backup-file-zh.png)
 
-### 通过调用 RESTful API 接口导出{#export-through-restful-api}
+### 通过调用 RESTful API 接口导出\{#export-through-restful-api}
 
 在您通过调用导出备份文件 RESTful API 接口导出备份文件之前，您需要将您的对象存储桶集成到 Zilliz Cloud 并获取该对象存储桶的集成 ID。关于如何获取对象存储桶的集成 ID，可以查看[获取集成 ID](./integrate-with-storage-bucket#obtain-the-integration-id)。
 
@@ -103,7 +106,7 @@ curl --request POST \
 }
 ```
 
-## 查看导出进度{#monitor-export-progress}
+## 查看导出进度\{#monitor-export-progress}
 
 点击**导出**后，系统会自动生成一个导出任务：
 
@@ -117,7 +120,7 @@ curl --request POST \
 
     - **失败**：任务失败。这可能是由于导出过程中使用的资源（例如角色 ARN 或备份文件）在任务执行期间被删除所导致。
 
-## 取消导出任务{#cancel-export-job}
+## 取消导出任务\{#cancel-export-job}
 
 如果任务持续显示为**进行中**状态，但您决定终止操作，可以点击**操作**列中的**取消**按钮取消任务。
 

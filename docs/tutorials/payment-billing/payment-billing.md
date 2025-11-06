@@ -3,6 +3,9 @@ title: "支付方式与账单 | Cloud"
 slug: /payment-billing
 sidebar_label: "支付方式与账单"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "了解订阅 Zilliz Cloud 服务的多种方式及发票开具的相关说明。 | Cloud"
 type: origin

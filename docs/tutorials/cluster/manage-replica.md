@@ -3,11 +3,14 @@ title: "管理 Replica | Cloud"
 slug: /manage-replica
 sidebar_label: "管理 Replica"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和资源的拷贝。使用 Replica 可以提升查询吞吐量和系统稳定性。 | Cloud"
 type: origin
 token: A8MYw6Wj2ilF2akZeKYcwJGSnSY
-sidebar_position: 5
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz
@@ -20,25 +23,29 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Supademo from '@site/src/components/Supademo';
+
 # 管理 Replica
 
 Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和资源的拷贝。使用 Replica 可以提升查询吞吐量和系统稳定性。
 
 对于数据量较小但 QPS 出现瓶颈的用户而言，增加 Replica 数量能分布查询负载，从而整体提升查询吞吐量。但是，增加 Replica 数量并不会提升集群容量。影响集群数据容量的唯一因素是 CU 规格。如需提升集群数据容量，请参考[集群扩缩容](./scale-cluster)。
 
+设置 Replica 会影响 Cluster 的每月 CU 费用，但不会影响存储费用。更多详情，可以参考 [Dedicated 集群费用](./dedicated-cluster-cost)。
+
 本文介绍如何为 Zilliz Cloud 集群设置 Replica。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>此功能仅适用于 Dedicated 集群。</p>
+<p>此功能仅限<strong>企业版</strong>项目中的 <strong>Dedicated</strong> 集群使用。</p>
 
 </Admonition>
 
-## 设置按量计费集群 Replica{#configure-replicas-for-usage-based-cluster}
+## 设置按量计费集群 Replica\{#configure-replicas-for-usage-based-cluster}
 
-设置 Replica 的操作会影响集群每月的 CU 费用。存储费用不会受到影响。更多详情，请参考[预估费用](./understand-cost)。
+设置 Replica 的操作会影响集群每月的 CU 费用。存储费用不会受到影响。更多详情，请参考[预估费用](./undefined)。
 
-### 使用限制{#limits}
+### 使用限制\{#limits}
 
 在集群创建完成后，满足以下条件时，您可以设置 Replica：
 
@@ -54,15 +61,17 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 </Admonition>
 
-### 手动调整 Replica 数量{#configure-replicas-manually}
+### 手动调整 Replica 数量\{#configure-replicas-manually}
 
 您可以选择通过控制台或 RESTful API 调整集群 Replica 数量。
 
-#### 通过 Web 控制台{#via-web-console}
+#### 通过 Web 控制台\{#via-web-console}
 
 以下 Demo 展示了如何在 Zilliz Cloud 控制台中手动调整 Replica 数量。
 
-#### 通过RESTful API{#via-restful-api}
+<Supademo id="cmd2ub5ca38cxc4kjl4ua85dm" title=""  />
+
+#### 通过RESTful API\{#via-restful-api}
 
 您可以使用 RESTful API 设置 Replica。
 
@@ -83,13 +92,15 @@ curl --request POST \
       }'
 ```
 
-### 设置 Replica 弹性伸缩{#auto-scale-replicas}
+### 设置 Replica 弹性伸缩\{#auto-scale-replicas}
 
 目前，您仅可通过 Zilliz Cloud 控制台，根据预设的时间计划自动调整 Replica 数量。
 
 以下 Demo 展示了如何启用 Replica 弹性伸缩功能。
 
-## 设置包年包月集群 Replica{#configure-replicas-for-annual-subsription-cluster}
+<Supademo id="cmd2ujs5s38dlc4kjgbm3gkui" title=""  />
+
+## 设置包年包月集群 Replica\{#configure-replicas-for-annual-subsription-cluster}
 
 当前包年包月集群仅支持增加 Replica 数量，不支持减少 Replica 数量。
 
@@ -134,3 +145,4 @@ curl --request POST \
 ![annual-subscription-cluster-is-being-scaled-cn](/img/annual-subscription-cluster-is-being-scaled-cn.png)
 
 集群升配的过程大约需要 10 分钟，请您耐心等待。当集群状态变为**运行中**时，代表包年包月集群 Replica 数量增加成功。
+

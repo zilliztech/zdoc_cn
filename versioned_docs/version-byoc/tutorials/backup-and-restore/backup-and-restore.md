@@ -1,10 +1,13 @@
 ---
-title: "备份与恢复 | Cloud"
+title: "备份与恢复 | BYOC"
 slug: /backup-and-restore
 sidebar_label: "备份与恢复"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 集群中的数据备份与恢复。 | Cloud"
+description: "Zilliz Cloud 集群中的数据备份与恢复。 | BYOC"
 type: origin
 token: SbePwiLrZi2hZqk5NpRcmramnEN
 sidebar_position: 7

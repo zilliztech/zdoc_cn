@@ -3,11 +3,14 @@ title: "开具发票 | Cloud"
 slug: /invoice
 sidebar_label: "开具发票"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 进行现金充值或开通阿里云云市场扣费渠道后，您可以申请开具发票。具体开票方式根据您的支付方式有所不同。如果您的支付方式为现金充值，您可以直接通过 Zilliz Cloud 界面开具发票。如果您开通了阿里云云市场扣费渠道，请通过阿里云云市场申请开票。 | Cloud"
 type: origin
 token: JTuUwoHUyiqJU6kuu30cN9ibnkh
-sidebar_position: 7
+sidebar_position: 8
 keywords: 
   - 向量数据库
   - zilliz
@@ -30,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 通过 Zilliz Cloud 开票{#invoicing-on-zilliz-cloud}
+## 通过 Zilliz Cloud 开票\{#invoicing-on-zilliz-cloud}
 
 Zilliz Cloud 支持按账单和按订单开具发票。
 
@@ -52,7 +55,7 @@ Zilliz Cloud 支持按账单和按订单开具发票。
 
     - 订单中的可开票金额为订单中**订单金额**。
 
-### 操作步骤{#procedures}
+### 操作步骤\{#procedures}
 
 1. 选择组织并点击左侧导航栏中的**费用中心**。
 
@@ -124,11 +127,11 @@ Zilliz Cloud 支持按账单和按订单开具发票。
 
 </Admonition>
 
-## 通过阿里云云市场开票{#invoicing-on-alibaba-cloud-marketplace}
+## 通过阿里云云市场开票\{#invoicing-on-alibaba-cloud-marketplace}
 
 如您开通了阿里云云市场扣费渠道并需要开具发票，请参考[申请发票](https://help.aliyun.com/document_detail/150571.html)。
 
-## 通过亚马逊云科技 Marketplace 开票{#invoicing-on-amazon-marketplace}
+## 通过亚马逊云科技 Marketplace 开票\{#invoicing-on-amazon-marketplace}
 
 如您开通了亚马逊云科技 Marketplace 扣费渠道并需要开具发票，请参考[发票信息指南](https://www.amazonaws.cn/support/fapiao/?nc1=h_ls)。
 

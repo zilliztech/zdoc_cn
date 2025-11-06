@@ -1,10 +1,13 @@
 ---
-title: "管理 Collection (控制台) | Cloud"
+title: "管理 Collection (控制台) | BYOC"
 slug: /manage-collections-console
 sidebar_label: "管理 Collection (控制台)"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Collection 是一张二维表格，用于存储 Embedding向量和元数据。一个 Collection 中的所有 Entity 共享相同的 Schema。您可以创建多个 Collection 来进行数据管理，或用于实现多租户（multi-tenancy）。 | Cloud"
+description: "Collection 是一张二维表格，用于存储 Embedding向量和元数据。一个 Collection 中的所有 Entity 共享相同的 Schema。您可以创建多个 Collection 来进行数据管理，或用于实现多租户（multi-tenancy）。 | BYOC"
 type: origin
 token: Cy4swPPaeiZgbmkN4wUc9wAdnwd
 sidebar_position: 11
@@ -36,7 +39,7 @@ Collection 是一张二维表格，用于存储 Embedding向量和元数据。�
 
 </Admonition>
 
-## 创建 Collection{#create-collection}
+## 创建 Collection\{#create-collection}
 
 Zilliz Cloud 控制台提供三种创建 Collection 的方式，适用于不同的使用场景：
 
@@ -44,7 +47,9 @@ Zilliz Cloud 控制台提供三种创建 Collection 的方式，适用于不同�
 
 - **创建示例 Collection**：快速创建一个带有预先定义 Schema 和示例数据集的 Collection，适用于探索 Zilliz Cloud 功能的新用户。
 
-- **复制现有 Collection**：在同一个 Database 中复制现有 Collection。适用于测试环境到生产环境的复制场景，可同时复制 Schema 和数据。也可用于修改已创建 Collection 的 Shard 设置。
+- **复制现有 Collection 及 Collection 中数据**：在同一个 Database 中复制现有 Collection。适用于测试环境到生产环境的复制场景，可同时复制 Schema 和数据。也可用于修改已创建 Collection 的 Shard 设置。
+
+- **基于现有 Collection 的 Schema 快速创建新 Collection**：使用现有 Collection 的 Schema 快速创建新 Collection。可在最终确认创建前编辑 Schema。
 
 以下 Demo 将向您展示如何在 Web 界面上找到这些功能：
 
@@ -52,7 +57,7 @@ Zilliz Cloud 控制台提供三种创建 Collection 的方式，适用于不同�
 
 在创建 Collection 过程中，您将接触到以下几个重要概念：
 
-### Collection 基础信息{#collection-basic-information}
+### Collection 基础信息\{#collection-basic-information}
 
 Collection 的元数据包含以下内容：
 
@@ -62,13 +67,13 @@ Collection 的元数据包含以下内容：
 
 - Collection 所属的 Database。[Database](./database) 是介于 Cluster 与 Collection 之间的一层逻辑结构，用于组织和管理 Collection。你可以将相关的 Collection 分组归类到同一个 Database 下。
 
-### Collection Schema{#collection-schema}
+### Collection Schema\{#collection-schema}
 
 Schema 定义了 Collection 的数据结构，必须包含以下字段：
 
 - 1 个 主键字段（PK）
 
-- 至少 1 个向量字段。默认情况下最多可包含 4 个向量字段。您可以[联系我们](https://support.zilliz.com.cn/hc/zh-cn)将向量字段数量上限放开至 10 个。
+- 至少 1 个向量字段。如需了解 Collection 中向量字段的数量限制，请参考[使用限制](./limits#fields)。
 
 - （可选）用于存储元数据的标量字段
 
@@ -82,17 +87,19 @@ Schema 定义了 Collection 的数据结构，必须包含以下字段：
 
 </Admonition>
 
-### Index{#index}
+### Index\{#index}
 
 Index 是一种用于加速搜索与查询的数据结构。Zilliz Cloud 支持两种类型的 Index：
 
-- **Vector Index**：系统会自动为向量字段创建 AUTOINDEX，以加速向量搜索。如果 Schema 中包含多个向量字段，您可以为每个向量字段分别创建独立的 Index。此外，您还可以修改用于计算向量间距离的相似度类型。
+- **Vector Index**：系统会自动为向量字段创建 AUTOINDEX，以加速向量搜索。如果 Schema 中包含多个向量字段，您可以为每个向量字段分别创建独立的 Index。此外，您还可以修改用于计算向量间距离的相似度类型和决定底层量化策略的 Index Build Level 以平衡索引成本、性能和可容纳数据量。
+
+    <Supademo id="cmgkapsvz29uykrn9jtbs6nk4?utm_source=link" title=""  />
 
 - **Scalar Index**：Zilliz Cloud 默认不会为标量字段自动创建 Index。但您可以手动为常用于过滤的标量字段创建 Index，以加快搜索与查询性能。
 
 您可以在创建 Collection 时跳过 Index 配置，后续随时添加。详情请见[管理 Index](./manage-indexes)。
 
-### Function 和 Analyzer{#function-analyzer}
+### Function 和 Analyzer\{#function-analyzer}
 
 Analyzer 用于在全文检索中对原始文本进行分词和规范化处理。它将输入文本拆分为可搜索的独立词项，并移除停用词、标点等无关元素，以提升检索精度。了解更多。
 
@@ -100,7 +107,7 @@ Function 用于全文检索中，将 Analyzer 分词后的术语转换为带相�
 
 如需使用 Function，Schema 中需同时包含 SPARSE_FLOAT_VECTOR 字段和 VARCHAR 字段。详情请见[全文搜索](./full-text-search)。
 
-### Partition 和 Partition key{#partition-partition-key}
+### Partition 和 Partition key\{#partition-partition-key}
 
 **Partition:** Partition 是 Collection 物理上的子集，具有与其所属 Collection 相同的数据 Schema，但仅包含 Collection 中的一部分数据。每个 Collection 默认包含一个 Partition，你可以根据多租户或数据管理的需要手动添加更多 Partition。如果未创建额外的 Partition，插入的数据将全部写入默认 Partition。详情请见[管理 Partition](./manage-partitions)。
 
@@ -117,7 +124,7 @@ Function 用于全文检索中，将 Analyzer 分词后的术语转换为带相�
 
 </Admonition>
 
-### mmap{#mmap}
+### mmap\{#mmap}
 
 内存映射（Mmap）是一种内存使用优化机制，可在不将大文件加载至内存的情况下，直接访问磁盘上的数据文件。启用 mmap 后，您可以在相同 CU 规格下存储更多数据。Zilliz Cloud 会根据您的集群 CU 类型和版本，默认配置推荐的 mmap 设置：
 
@@ -129,7 +136,7 @@ Function 用于全文检索中，将 Analyzer 分词后的术语转换为带相�
 
 在创建 Collection 时，您可以根据实际需求，在 Collection 或字段级别配置 mmap 设置。较低级别的设置将覆盖较高级别的设置，优先级如下：字段 > Collection > 集群
 
-- **Collection 级别 mmap：**针对 Collection 中的原始数据开启 mmap。该设置适用于整个 Collection，可后续修改。若需修改 Collection 级别的 mmap 设置，需先释放 Collection。
+- **Collection 级别 mmap**：针对 Collection 中的原始数据开启 mmap。该设置适用于整个 Collection，可后续修改。若需修改 Collection 级别的 mmap 设置，需先释放 Collection。
 
 - **字段级别 mmap**：通过自定义设置针对选定字段的原始数据和 Index 开启 mmap。一般建议对数据量大、且不频繁用于查询或过滤的字段开启 mmap。该设置仅影响所选字段，可后续修改。若需修改字段级别的 mmap 设置，需先释放 Collection。
 
@@ -141,7 +148,9 @@ Function 用于全文检索中，将 Analyzer 分词后的术语转换为带相�
 
 以下 Demo 展示如何设置 mmap 功能。
 
-### Shard{#shard}
+<Supademo id="cmbk9no218hp0sn1rk55qs959" title=""  />
+
+### Shard\{#shard}
 
 Shard 是 Collection 的水平切片，对应一个数据写入通道。每个 Collection 默认包含一个 Shard。您可以通过增加 Shard 数量来提升写入吞吐量。
 
@@ -149,41 +158,49 @@ Shard 是 Collection 的水平切片，对应一个数据写入通道。每个 C
 
 Collection 创建后，Shard 数量无法直接修改，但可以通过[复制 Collection](./manage-collections-console#create-collection) 的方式重新设置 Shard 数量。
 
-### Full Text Search{#full-text-search}
+### Full Text Search\{#full-text-search}
 
 Zilliz Cloud Web 控制台支持设置 Full Text Search 中使用的 Analyzer 和 Function。详情请见 [Full Text Search](./full-text-search)。
 
 以下 Demo 展示如何通过 Zilliz Cloud Web 控制台设置 Full Text Search。
 
-### Text Match{#text-match}
+<Supademo id="cmboh78cya3xzsn1rure280x2" title=""  />
+
+### Text Match\{#text-match}
 
 Zilliz Cloud Web 控制台支持设置 Text Match 中使用的字段和 Analyzer。详情请见 [Text Match](./text-match)。
 
 以下 Demo 展示如何通过 Zilliz Cloud Web 控制台设置 Text Match。
 
-## 管理 Collection{#manage-collection}
+<Supademo id="cmbohi4q7a40lsn1rt8640eph" title=""  />
+
+## 管理 Collection\{#manage-collection}
 
 Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下管理操作：
 
-<Supademo id="cmauvqbcp02ztyg0istpzcq9w" title="管理 Collection" isShowcase="true" />
+<Supademo id="cmauvqbcp02ztyg0istpzcq9w?utm_source=link" title="" isShowcase />
 
-- **重命名 Collection：**可以修改现有 Collection 的名称。
+- **重命名 Collection**：可以修改现有 Collection 的名称。
 
-- **编辑 Collection 的 Schema 和配置：**目前 Zilliz Cloud 支持修改以下 Schema 和设置：
+- **编辑 Collection 的 Schema 和配置**：目前 Zilliz Cloud 支持修改以下 Schema 和设置：
 
     - 可编辑现有 [VARCHAR](./use-string-field) 字段的 `max_length` 值。
 
     - 可编辑现有 [ARRAY](./use-array-fields) 字段的 `max_capacity` 值，若 ARRAY 类型为 VARCHAR，还可编辑其 `max_length` 值。
 
+    - 可向现有 Collection Schema 中添加标量字段。
+
     - 若需修改 Shard 设置，请使用[复制 Collection](./manage-collections-console#create-collection) 的功能。
 
     - 若需修改 TTL、mmap 或 partition Key 设置，请使用 SDK，详情请见[修改 Collection](./modify-collections)。
 
-    其他 Schema 设置暂不支持编辑。如仍需修改，建议创建一个新的 Collection，并重新导入数据。
+    - 如果 Collection 创建时未开启动态列功能，您可以在 Collection 创建完成后使用 SDK 或 Web 控制台开启动态列。更多 SDK 详情，请见[修改 Collection](./modify-collections#example-4-enable-dynamic-field)。如需了解如何通过 Web 控制台操作，请参见上方 Demo。
 
-- **加载 / 释放 Collection：**在 Zilliz Cloud Web 控制台上，Collection 创建后会自动加载至内存，可立即用于搜索和查询。如需释放内存空间，可将不常用的 Collection 手动释放。
+    其他 Schema 设置暂不支持编辑。如仍需修改，建议创建一个新的 Collection，并重新[导入数据](./import-data)。
 
-- **移动 Collection 到其他 Database：**可以将相关的 Collection 分组到同一个 Database 中，并根据需要在不同 Database 之间移动 Collection。
+- **加载 / 释放 Collection**：在 Zilliz Cloud Web 控制台上，Collection 创建后会自动加载至内存，可立即用于搜索和查询。如需释放内存空间，可将不常用的 Collection 手动释放。
+
+- **移动 Collection 到其他 Database**：可以将相关的 Collection 分组到同一个 Database 中，并根据需要在不同 Database 之间移动 Collection。
 
 - **管理 Collection 中的 Partition**：对于**开启了 Partition Key** 的 Collection，无需手动管理 Partition；对于**未开启Partition Key** 的 Collection，您可以手动进行以下操作：
 
@@ -191,5 +208,7 @@ Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下�
 
     - **删除 Partition**：默认 Partition 不可删除。删除 Partition 会永久删除其中的数据，且删除前需先释放该 Collection。
 
-- **删除 Collection：**若某个 Collection 已不再使用，您可以将其删除以释放资源。删除 Collection 的操作会永久清除其中的所有数据，操作不可撤销。
+- **查看 Collection Alias**：您可以通过 Collection列表页查看特定集群下所有 Collection 的 Alias。
+
+- **删除 Collection**：若某个 Collection 已不再使用，您可以将其删除以释放资源。删除 Collection 的操作会永久清除其中的所有数据，操作不可撤销。
 

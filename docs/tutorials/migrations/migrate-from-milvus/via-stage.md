@@ -3,6 +3,9 @@ title: "通过 Stage 从 Milvus 迁移至 Zilliz Cloud | Cloud"
 slug: /via-stage
 sidebar_label: "通过内置 Stage 迁移"
 beta: PRIVATE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 提供了一个内置的 Stage 功能，用于在从 Milvus 迁移数据时临时存储备份数据。借助内置 Stage，用户可以更轻松地完成数据迁移，无需过多关注底层细节，从而显著提升迁移效率与易用性。 | Cloud"
 type: origin
@@ -36,17 +39,17 @@ Zilliz Cloud 提供了一个内置的 Stage 功能，用于在从 Milvus 迁移�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>通过 Stage 迁移当前为内测版功能。如果您对该功能有兴趣、在使用过程中遇到任何问题，或者想要了解与之相关的费用情况，可以<a href="https://support.zilliz.com.cn/hc/zh-cn/requests/new">联系我们</a>。</p>
+<p>通过 Stage 迁移当前为<strong>内测版</strong>功能。如果您对该功能有兴趣、在使用过程中遇到任何问题，或者想要了解与之相关的费用情况，可以<a href="https://support.zilliz.com.cn/hc/zh-cn/requests/new">联系我们</a>。</p>
 
 </Admonition>
 
-## 开始前{#before-you-start}
+## 开始前\{#before-you-start}
 
 - 您需要拥有组织管理员或项目管理员的角色。如果您没有相应的权限，请联系您的 Zilliz Cloud 管理员。
 
 - 确保目标集群的 CU 容量足以容纳源数据。要估算所需的 CU 规格，请使用[计算器](https://zilliz.com.cn/pricing#calculator)。
 
-## 操作步骤{#procedure}
+## 操作步骤\{#procedure}
 
 在如下步骤中，你将使用 Milvus Backup 准备备份文件、上传备份文件至 Zilliz Cloud 内置 Stage、并将内置 Stage 中的数据迁移到指定的 Zilliz Cloud 集群中。
 
@@ -67,6 +70,14 @@ Zilliz Cloud 提供了一个内置的 Stage 功能，用于在从 Milvus 迁移�
 
     1. 设置如下配置项：
 
+        ```yaml
+        ...
+        cloud:
+          address: https://api.cloud.zilliz.com.cn
+          apikey: <your-api-key>
+        ...
+        ```
+
         - `cloud.address`
 
             Zilliz Cloud 控制面访问地址，通常为 `https://api.cloud.zilliz.com.cn`.
@@ -77,19 +88,26 @@ Zilliz Cloud 提供了一个内置的 Stage 功能，用于在从 Milvus 迁移�
 
     1. 检查以下配置项是否正确：
 
-        - `milvus.address`
-
-        - `mivlus.port`
-
-        - `minio.address`
-
-        - `minio.port`
-
-        - `minio.bucketName`
-
-        - `minio.backupBucketName`
-
-        - `rootPath`
+        ```yaml
+        ...
+        # milvus proxy address, compatible to milvus.yaml
+        milvus:
+          address: localhost
+          port: 19530
+          ...
+          
+        # Related configuration of minio, which is responsible for data persistence for Milvus.
+        minio:
+          # Milvus storage configs, make them the same with milvus config
+          storageType: "minio" # support storage type: local, minio, s3, aws, gcp, ali(aliyun), azure, tc(tencent), gcpnative
+          # You can use "gcpnative" for the Google Cloud Platform provider. Uses service account credentials for authentication.
+          address: localhost # Address of MinIO/S3
+          port: 9000   # Port of MinIO/S3
+          bucketName: "a-bucket" # Milvus Bucket name in MinIO/S3, make it the same as your milvus instance
+          backupBucketName: "a-bucket" # Bucket name to store backup data. Backup data will store to backupBucketName/backupRootPath
+          rootPath: "files" # Milvus storage root path in MinIO/S3, make it the same as your milvus instance
+          ...
+        ```
 
     <Admonition type="info" icon="📘" title="说明">
 
@@ -127,7 +145,7 @@ Zilliz Cloud 提供了一个内置的 Stage 功能，用于在从 Milvus 迁移�
 
     </Admonition>
 
-## 查看迁移进度{#monitor-the-migration-process}
+## 查看迁移进度\{#monitor-the-migration-process}
 
 生成迁移任务后，您可前往[任务中心](/docs/job-center)查看任务状态和进度。如果迁移任务的状态从**进行中**变更为**成功**，则代表迁移成功。
 
@@ -139,21 +157,15 @@ Zilliz Cloud 提供了一个内置的 Stage 功能，用于在从 Milvus 迁移�
 
 ![view_migration_progress_cn](/img/view_migration_progress_cn.png)
 
-## 迁移后{#post-migration}
+## 迁移后\{#post-migration}
 
 迁移任务完成后，请注意以下事项：
 
 - **索引创建**：迁移过程中会自动为迁移的 Collection 创建 AUTOINDEX。
 
-- **手动 Load Collection：**虽然索引已自动创建，但迁移后的 Collection 并不会立即支持搜索或查询操作。您必须手动 Load Collection，才能启用搜索和查询功能。详细信息请参阅 [Load 和 Release](./load-release-collections)。
+- **手动 Load Collection**：虽然索引已自动创建，但迁移后的 Collection 并不会立即支持搜索或查询操作。您必须手动 Load Collection，才能启用搜索和查询功能。详细信息请参阅 [Load 和 Release](./load-release-collections)。
 
-<Admonition type="info" icon="📘" title="说明">
-
-<p>完成 Load 后，请检查目标集群中的 Collection 数量及 Entity 数是否与数据源保持一致。如果发现不符，请删除 Collection 并重新进行迁移任务。</p>
-
-</Admonition>
-
-## 取消迁移任务{#cancel-migration-job}
+## 取消迁移任务\{#cancel-migration-job}
 
 如果迁移过程遇到任何问题，您可以采取以下步骤进行故障排除并恢复迁移：
 

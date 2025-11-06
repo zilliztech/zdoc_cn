@@ -3,11 +3,14 @@ title: "版本说明书（2025/06/09） | Cloud"
 slug: /release-notes-2170
 sidebar_label: "版本说明书（2025/06/09）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "此次发布在 Zilliz Cloud 的多个功能中提供了更精致、更直观的用户体验。从重新设计的迁移控制台到基于策略的告警和改进的 mmap 控制，我们专注于让您的工作流程更快、更灵活且更易于管理。无论是管理基础设施、监控环境还是寻求支持，新的 AI 助手功能都让您与 Zilliz Cloud 的联络更加顺畅。 | Cloud"
 type: origin
 token: TC2VwH24niqw5wk2S66ccMhxnFe
-sidebar_position: 1
+sidebar_position: 5
 keywords: 
   - 向量数据库
   - zilliz
@@ -24,7 +27,7 @@ import Admonition from '@theme/Admonition';
 
 此次发布在 Zilliz Cloud 的多个功能中提供了更精致、更直观的用户体验。从重新设计的迁移控制台到基于策略的告警和改进的 mmap 控制，我们专注于让您的工作流程更快、更灵活且更易于管理。无论是管理基础设施、监控环境还是寻求支持，新的 AI 助手功能都让您与 Zilliz Cloud 的联络更加顺畅。
 
-## Milvus 兼容性{#milvus-compatibility}
+## Milvus 兼容性\{#milvus-compatibility}
 
 本次发布后创建的所有集群均兼容 **Milvus v2.5.x**。同时，所有 Milvus v2.5.x 相关特性在 Zilliz Cloud 上均已全面可用。
 

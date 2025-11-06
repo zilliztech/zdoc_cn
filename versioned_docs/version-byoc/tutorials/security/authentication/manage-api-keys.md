@@ -1,10 +1,13 @@
 ---
-title: "API 密钥 | Cloud"
+title: "API 密钥 | BYOC"
 slug: /manage-api-keys
 sidebar_label: "API 密钥"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "在用户或应用程序调用 API 或 SDK 访问 Zilliz Cloud 控制面和数据面资源时，需要使用API 密钥进行身份认证。API 密钥是一个由字母和数字组成的字符串。每个密钥有自己的属性，如名称和 ID。 | Cloud"
+description: "在用户或应用程序调用 API 或 SDK 访问 Zilliz Cloud 控制面和数据面资源时，需要使用API 密钥进行身份认证。API 密钥是一个由字母和数字组成的字符串。每个密钥有自己的属性，如名称和 ID。 | BYOC"
 type: origin
 token: UGzNwB4TmiqTozkJvarceRdenif
 sidebar_position: 2
@@ -24,7 +27,7 @@ import Admonition from '@theme/Admonition';
 
 在用户或应用程序调用 API 或 SDK 访问 Zilliz Cloud 控制面和数据面资源时，需要使用API 密钥进行身份认证。API 密钥是一个由字母和数字组成的字符串。每个密钥有自己的属性，如名称和 ID。
 
-## API 密钥概述{#overview-of-api-keys}
+## API 密钥概述\{#overview-of-api-keys}
 
 为应对不同需求场景，Zilliz Cloud 提供了两种主要的 API 密钥类型：
 
@@ -70,7 +73,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-## 使用限制{#limits-and-restrictions}
+## 使用限制\{#limits-and-restrictions}
 
 - 每个组织中可创建最多 100 个自定义 API 密钥。
 
@@ -227,7 +230,7 @@ import Admonition from '@theme/Admonition';
        </tr>
     </table>
 
-## 创建 API 密钥{#create-an-api-key}
+## 创建 API 密钥\{#create-an-api-key}
 
 在 Zilliz Cloud 中，除了系统为每位组织用户自动生成的个人密钥外，您还可以手动创建自定义密钥。仅**组织管理员**和**项目管理员**有权限创建自定义 API 密钥。
 
@@ -249,7 +252,7 @@ import Admonition from '@theme/Admonition';
 
         </Admonition>
 
-## 查看 API 密钥{#view-api-keys}
+## 查看 API 密钥\{#view-api-keys}
 
 前往组织 **API 密钥**页面。根据您的[角色](./manage-api-keys#limits-and-restrictions)，您所看到的页面内容会所有不同。
 
@@ -263,7 +266,7 @@ import Admonition from '@theme/Admonition';
 
 ![ZU7ibC75zoqlp3xBXXrckXbvnyK](/img/ZU7ibC75zoqlp3xBXXrckXbvnyK.png)
 
-## 编辑 API 密钥{#edit-an-api-key}
+## 编辑 API 密钥\{#edit-an-api-key}
 
 目前，您只能编辑自定义 API 密钥。个人 API 密钥无法编辑，因为它们与账户用户绑定。如需修改个人密钥的权限，请先调整用户的组织和项目角色。个人 API 密钥的权限将根据用户的新角色自动调整。
 
@@ -287,7 +290,7 @@ import Admonition from '@theme/Admonition';
 
         </Admonition>
 
-## 重置 API 密钥{#reset-an-api-key}
+## 重置 API 密钥\{#reset-an-api-key}
 
 如果您的个人 API 密钥或自定义 API 密钥不慎被泄露，请立即重置密钥。
 
@@ -307,7 +310,7 @@ import Admonition from '@theme/Admonition';
 
     ![reset-customized-api-keys-cn](/img/reset-customized-api-keys-cn.png)
 
-## 删除 API 密钥{#delete-an-api-key}
+## 删除 API 密钥\{#delete-an-api-key}
 
 我们建议您及时删除不再使用的自定义 API 密钥。仅**组织管理员**和**项目管理员**有权限删除自定义 API 密钥。
 

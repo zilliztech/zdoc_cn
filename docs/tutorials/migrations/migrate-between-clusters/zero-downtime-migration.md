@@ -3,6 +3,9 @@ title: "在线迁移 | Cloud"
 slug: /zero-downtime-migration
 sidebar_label: "在线迁移"
 beta: PRIVATE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在线迁移（Zero Downtime Migration）确保数据库服务在整个迁移过程中保持正常运行，提供不中断的数据库访问。迁移过程包括以下阶段： | Cloud"
 type: origin
@@ -42,9 +45,9 @@ import Supademo from '@site/src/components/Supademo';
 
 </Admonition>
 
-## 迁移能力{#migration-capabilities}
+## 迁移能力\{#migration-capabilities}
 
-### 集群兼容性{#cluster-compatibility}
+### 集群兼容性\{#cluster-compatibility}
 
 下表列出不同集群类型的迁移能力限制：
 
@@ -74,7 +77,7 @@ import Supademo from '@site/src/components/Supademo';
 
 </Admonition>
 
-### 迁移范围{#migration-scope-options}
+### 迁移范围\{#migration-scope-options}
 
 <table>
    <tr>
@@ -94,7 +97,7 @@ import Supademo from '@site/src/components/Supademo';
    </tr>
 </table>
 
-### 直接数据迁移{#direct-data-transfer}
+### 直接数据迁移\{#direct-data-transfer}
 
 离线迁移在 Zilliz Cloud 集群间执行直接数据复制，具有以下特征：
 
@@ -104,7 +107,7 @@ import Supademo from '@site/src/components/Supademo';
 
 - 自动索引：目标集群的向量字段将自动创建 `AUTOINDEX`
 
-### 限制说明{#limits}
+### 限制说明\{#limits}
 
 - 迁移期间禁止在源集群执行以下操作：
 AlterCollection, AlterCollectionField, CreateAlias, DropAlias, AlterAlias, RenameCollection, AlterDatabase, Import
@@ -113,11 +116,11 @@ AlterCollection, AlterCollectionField, CreateAlias, DropAlias, AlterAlias, Renam
 
 - 数据同步停止到集群切换完成需约 10 秒服务中断
 
-## 开始前{#before-you-start}
+## 开始前\{#before-you-start}
 
 开始离线迁移前需满足：
 
-### 通用要求{#general-requirements}
+### 通用要求\{#general-requirements}
 
 <table>
    <tr>
@@ -138,7 +141,7 @@ AlterCollection, AlterCollectionField, CreateAlias, DropAlias, AlterAlias, Renam
    </tr>
 </table>
 
-### 跨项目/组织迁移附加要求{#cross-project-or-organization-migration-requirements}
+### 跨项目/组织迁移附加要求\{#cross-project-or-organization-migration-requirements}
 
 <table>
    <tr>
@@ -155,11 +158,11 @@ AlterCollection, AlterCollectionField, CreateAlias, DropAlias, AlterAlias, Renam
    </tr>
 </table>
 
-## 操作指南{#getting-started}
+## 操作指南\{#getting-started}
 
 The zero downtime migration process consists of three main phases that require your attention and action:
 
-### 阶段 1: 初始化{#initialize}
+### 阶段 1: 初始化\{#initialize}
 
 以下演示如何初始化迁移任务：
 
@@ -167,7 +170,7 @@ The zero downtime migration process consists of three main phases that require y
 
 点击**迁移**后，源集群将进入**锁定**状态（迁移期间不可删除）。
 
-### 阶段 2: 监控{#monitor}
+### 阶段 2: 监控\{#monitor}
 
 启动迁移后，您需在目标集群详情页主动监控进度：
 
@@ -207,7 +210,7 @@ The zero downtime migration process consists of three main phases that require y
 
     </Admonition>
 
-### 阶段 3: 切换{#switch}
+### 阶段 3: 切换\{#switch}
 
 收到时延 < 10 秒的邮件后，按[连接集群](./connect-to-cluster)指南切换至目标集群。
 

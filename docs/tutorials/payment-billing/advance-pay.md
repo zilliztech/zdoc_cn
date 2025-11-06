@@ -3,11 +3,14 @@ title: "现金充值（对公转账） | Cloud"
 slug: /advance-pay
 sidebar_label: "现金充值（对公转账）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "对公转账是指通过银行汇款的方式将资金充值到您的 Zilliz Cloud 组织现金余额中，用于支付使用 Zilliz Cloud 产生的费用。目前，Zilliz Cloud 界面仅支持通过专属账号进行汇款。 | Cloud"
 type: origin
 token: JZqrwH8V8i6a3jktSQgcyXAEnAg
-sidebar_position: 2
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz
@@ -32,13 +35,13 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 对公转账流程{#procedures}
+## 对公转账流程\{#procedures}
 
 下图展示了在 Zilliz Cloud 通过专属账号进行对公转账的主要流程。
 
 ![FLFswkIjJhwod6bsBAYcPMNankb](/img/FLFswkIjJhwod6bsBAYcPMNankb.png)
 
-## 操作步骤{#add-funds}
+## 操作步骤\{#add-funds}
 
 1. **获取专属汇款账号：**
 

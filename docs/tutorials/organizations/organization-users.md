@@ -3,6 +3,9 @@ title: "管理组织用户 | Cloud"
 slug: /organization-users
 sidebar_label: "管理组织用户"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，一个组织通常代表一家公司。您可以邀请员工加入您的组织，并根据他们的工作职能分配角色。这些角色决定了用户对特定资源的访问权限以及他们能执行的操作。例如，开发者通常需要访问数据的权限，但不需要管理账单的权限。 | Cloud"
 type: origin
@@ -32,13 +35,13 @@ import Admonition from '@theme/Admonition';
 
 本指南将解释如何管理组织用户，包括如何邀请用户加入组织、撤销或重新发送邀请、修改组织用户的角色或移除组织用户。
 
-## 邀请用户加入组织{#invite-a-user-to-your-organization}
+## 邀请用户加入组织\{#invite-a-user-to-your-organization}
 
 在邀请用户加入您的组织时，您需要为用户授予角色，该角色定义了用户在本组织内访问资源和执行特定操作的权限。 
 
 要邀请用户，输入用户的电子邮箱地址，然后选择您希望授予的组织角色。
 
-### 组织角色{#organization-roles}
+### 组织角色\{#organization-roles}
 
 Zilliz Cloud 提供 3 种组织角色。这些角色无法修改或删除。
 
@@ -95,7 +98,7 @@ Zilliz Cloud 提供 3 种组织角色。这些角色无法修改或删除。
 
 如果您的组织角色为**组织成员**或**组织账单管理员**，您只能在邀请新用户时授予他们**组织成员**的角色。
 
-被邀请的用户将收到邀请邮件，并需要在 48 小时内接受邀请以加入组织。
+被邀请的用户将收到邀请邮件，并需要在 48 小时内接受邀请以加入组织。或者，您也可以直接从 Web 控制台复制邀请链接并分享给被邀请人。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -105,13 +108,13 @@ Zilliz Cloud 提供 3 种组织角色。这些角色无法修改或删除。
 
 ![invite-user-to-org-zh](/img/invite-user-to-org-zh.png)
 
-## 撤销或重发邀请{#revoke-or-resend-an-invitation}
+## 撤销或重发邀请\{#revoke-or-resend-an-invitation}
 
 在您邀请用户加入组织后，Zilliz Cloud 会向用户发送邀请邮件。在用户接受邀请之前，您可以选择撤销或重发邀请。
 
 ![revoke-or-resend-org-invitation-zh](/img/revoke-or-resend-org-invitation-zh.png)
 
-## 编辑组织用户角色{#edit-the-role-of-an-organization-user}
+## 编辑组织用户角色\{#edit-the-role-of-an-organization-user}
 
 当用户接受邀请后，他们将成为组织成员。之后，您可以根据需求编辑他们的角色或从组织中移出他们。
 
@@ -119,7 +122,7 @@ Zilliz Cloud 提供 3 种组织角色。这些角色无法修改或删除。
 
 ![edit-user-role-or-remove-org-user-zh](/img/edit-user-role-or-remove-org-user-zh.png)
 
-## 移除组织用户{#remove-an-organization-user}
+## 移除组织用户\{#remove-an-organization-user}
 
 如果用户不再属于您的组织，您可以移除用户。
 
@@ -127,7 +130,7 @@ Zilliz Cloud 提供 3 种组织角色。这些角色无法修改或删除。
 
 ![edit-user-role-or-remove-org-user-zh](/img/edit-user-role-or-remove-org-user-zh.png)
 
-## 离开组织{#leave-an-organization}
+## 离开组织\{#leave-an-organization}
 
 当您不再属于某个组织时，您可以选择离开组织。
 

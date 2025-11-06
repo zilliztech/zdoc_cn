@@ -3,6 +3,9 @@ title: "部署 Milvus 集群 | On-Premise"
 slug: /deploy-milvus-cluster
 sidebar_label: "部署 Milvus 集群"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本节将介绍在完成 Milvus Operator 安装后如何部署 Milvus 集群，包括如何规划 Milvus 集群资源、准备 Milvus 集群部署声明文件以及如何部署 Milvus 集群。 | On-Premise"
 type: origin
@@ -30,15 +33,15 @@ import Admonition from '@theme/Admonition';
 
 本节将介绍在完成 Milvus Operator 安装后如何部署 Milvus 集群，包括如何规划 Milvus 集群资源、准备 Milvus 集群部署声明文件以及如何部署 Milvus 集群。
 
-## 前提条件{#prerequisites}
+## 前提条件\{#prerequisites}
 
 在部署 Milvus 集群前，请确认您已经成功安装 Milvus Operator。如需安装 Milvus Operator，请参考[安装 Milvus Operator](./install-milvus-operator)。
 
-## 规划 Milvus 集群资源{#plan-resources-for-milvus-cluster}
+## 规划 Milvus 集群资源\{#plan-resources-for-milvus-cluster}
 
 本节以 3 台 16 vCPU 64 GiB 主机组成的 Kubernetes 为例介绍如何规划 Milvus 集群资源。
 
-### 可用资源{#applicable-resources}
+### 可用资源\{#applicable-resources}
 
 每台机器需要为 Kubernetes 集群基础设施预留部分资源，剩余部分可供 Milvus 集群使用。 
 
@@ -79,7 +82,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-### Milvus 集群各组件资源分配{#allocate-resources}
+### Milvus 集群各组件资源分配\{#allocate-resources}
 
 在为 Milvus 集群各组件分配资源时，需要考虑各组件运行时资源消耗和数据导入时资源消耗。
 
@@ -165,9 +168,9 @@ import Admonition from '@theme/Admonition';
 
 [1] 此处仅考虑只写入无查询时的资源消耗情况。
 
-## 部署 Milvus 集群{#deploy-milvus-cluster}
+## 部署 Milvus 集群\{#deploy-milvus-cluster}
 
-### 准备 Milvus 集群部署声明文件{#prepare-milvus-manifest}
+### 准备 Milvus 集群部署声明文件\{#prepare-milvus-manifest}
 
 在规划好 Milvus 集群所需资源后，还需要按如下模板中的注释修改 Milvus 集群部署声明文件，并将修改后的内容保存为`milvus-manifest.yaml`。
 
@@ -344,7 +347,7 @@ stringData:
   secretKey: "sk" # 替换成secretKey
 ```
 
-### 应用 Milvus 集群部署声明文件{#apply-milvus-manifest}
+### 应用 Milvus 集群部署声明文件\{#apply-milvus-manifest}
 
 在准备好 Milvus 集群部署声明文件后，执行如下命令开始部署 Milvus 集群。
 
@@ -359,7 +362,7 @@ kubectl apply -f milvus-manifest.yaml
 
 </Admonition>
 
-## 部署后验证{#verfication-afterwards}
+## 部署后验证\{#verfication-afterwards}
 
 1. 在部署完成后，可执行如下命令检查 Milvus 集群的部署状态。
 
@@ -442,7 +445,7 @@ kubectl apply -f milvus-manifest.yaml
 
         如果执行正常，命令回显中应该没有任何报错信息，且最后一行输出为 `error_code: 0`。
 
-## 常见问题{#faqs}
+## 常见问题\{#faqs}
 
 1. Milvus 集群服务状态为 Pending/Unhealthy，应该如何处理？
 

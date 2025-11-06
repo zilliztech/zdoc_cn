@@ -3,8 +3,11 @@ title: "MCP Server | Cloud"
 slug: /zilliz-mcp-server
 sidebar_label: "MCP Server"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 提供了 Zilliz MCP Server，使 AI 智能体能够通过标准化的模型上下文协议（Model Context Protocol，MCP）无缝地与 Zilliz Cloud 进行交互。本页面将指导你如何在本地设置 Zilliz MCP 服务器，并将其与你喜爱的 AI 智能体配合使用。 | Cloud"
+description: "Zilliz Cloud 提供了 Zilliz MCP Server](https//github.com/zilliztech/zilliz-mcp-server/tree/master)，使 AI 智能体能够通过标准化的[模型上下文协议（Model Context Protocol，MCP）无缝地与 Zilliz Cloud 进行交互。本页面将指导你如何在本地设置 Zilliz MCP 服务器，并将其与你喜爱的 AI 智能体配合使用。 | Cloud"
 type: origin
 token: BUaEwl1UkiSVtLkKMUocinNMntT
 sidebar_position: 10
@@ -24,7 +27,7 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 提供了 [Zilliz MCP Server](https://github.com/zilliztech/zilliz-mcp-server/tree/master)，使 AI 智能体能够通过标准化的[模型上下文协议](https://modelcontextprotocol.io/)（Model Context Protocol，MCP）无缝地与 Zilliz Cloud 进行交互。本页面将指导你如何在本地设置 Zilliz MCP 服务器，并将其与你喜爱的 AI 智能体配合使用。
 
-## 准备工作
+## 准备工作\{#before-you-start}
 
 请确保你已完成以下准备：
 
@@ -46,15 +49,15 @@ Zilliz Cloud 提供了 [Zilliz MCP Server](https://github.com/zilliztech/zilliz-
 
     你可以根据[此页](https://github.com/astral-sh/uv?tab=readme-ov-file#installation)上的指引进行安装。
 
-## 操作步骤
+## 操作步骤\{#procedure}
 
 要运行 Zilliz MCP Server，你需要准备好配置文件，并将其添加到你喜爱的 AI 智能体中。
 
-### 步骤 1：准备 Zilliz MCP Server 配置
+### 步骤 1：准备 Zilliz MCP Server 配置\{#step-1-prepare-zilliz-mcp-server-configuration}
 
 您可以使用如下两种方式配置准备 Zilliz MCP Server。
 
-#### 本地模式（Standard Input/Output）
+#### 本地模式（Standard Input/Output）\{#local-mode-standard-inputoutput}
 
 在这种模式下，Zilliz MCP Server 与你喜爱的 AI 智能体在同一台机器上本地运行，且 AI 智能体直接管理 Zilliz MCP Server 的生命周期。
 
@@ -74,7 +77,7 @@ Zilliz Cloud 提供了 [Zilliz MCP Server](https://github.com/zilliztech/zilliz-
 }
 ```
 
-#### 服务器模式（Streamable HTTP）
+#### 服务器模式（Streamable HTTP）\{#server-mode-streamable-http}
 
 如果你希望在不同机器上运行的多个 AI 智能体之间共享 Zilliz MCP Server，可以以服务器模式运行 Zilliz MCP Server。你需要先克隆 Zilliz MCP Server 的代码仓库，并在独立的机器上启动服务器，然后再进行配置文件的准备。
 
@@ -137,7 +140,7 @@ Zilliz Cloud 提供了 [Zilliz MCP Server](https://github.com/zilliztech/zilliz-
     }
     ```
 
-### 步骤2：添加服务器配置到 AI Agent
+### 步骤2：添加服务器配置到 AI Agent\{#step-2-add-the-configuration-to-your-preferred-ai-agent}
 
 MCP 是一种开放协议，用于标准化应用程序向大语言模型（LLM）提供上下文的方式，许多 AI 驱动的应用程序都支持该协议。在本步骤中，你将学习如何将配置添加到 AI 代码编辑器 Cursor 中。
 
@@ -147,7 +150,7 @@ MCP 是一种开放协议，用于标准化应用程序向大语言模型（LLM�
 
 1. 点击 **Add Custom MCP**。这将打开 `mcp.json` 文件。
 
-1. 将你在[步骤 1 ](./zilliz-mcp-server#1-zilliz-mcp-server)中准备好的配置复制并粘贴到打开的文件中。
+1. 将你在[步骤 1 ](./zilliz-mcp-server#step-1-prepare-zilliz-mcp-server-configuration)中准备好的配置复制并粘贴到打开的文件中。
 
 1. 保存文件并返回到 **Tools & Integrations** 页面。你会看到 **Zilliz MCP Server** 已列在 **MCP Tools** 中，并显示了可供 AI 智能体调用的可用工具。
 
@@ -155,11 +158,11 @@ MCP 是一种开放协议，用于标准化应用程序向大语言模型（LLM�
 
 将 Zilliz MCP 服务器添加到你偏好的 AI 应用程序中的操作流程非常相似。你可以根据所使用的 AI 应用程序提供的具体指引来添加配置文件。
 
-## 可用工具
+## 可用工具\{#available-tools}
 
 Zilliz MCP Server 提供了以下工具，供你与 Zilliz Cloud 进行交互。
 
-### 控制平面工具
+### 控制平面工具\{#control-plane-tools}
 
 这些工具用于在控制平面上管理资源，例如项目和集群。
 
@@ -198,7 +201,7 @@ Zilliz MCP Server 提供了以下工具，供你与 Zilliz Cloud 进行交互。
    </tr>
 </table>
 
-### 数据平面工具
+### 数据平面工具\{#data-plane-tools}
 
 这些工具用于在数据平面上管理资源（如数据库和集合），并执行向量搜索。
 
@@ -245,8 +248,8 @@ Zilliz MCP Server 提供了以下工具，供你与 Zilliz Cloud 进行交互。
    </tr>
 </table>
 
-## 常见问题排查
+## 常见问题排查\{#troubleshooting}
 
 1. **为什么我的 AI 智能体提示 Zilliz MCP Server 没有提供任何工具？**
 
-    这种情况通常是因为缺少必要的依赖项（如 Python 或 uv）导致的。请确保你已正确安装这些依赖项。具体要求请参见[准备工作](./zilliz-mcp-server#)。
+    这种情况通常是因为缺少必要的依赖项（如 Python 或 uv）导致的。请确保你已正确安装这些依赖项。具体要求请参见[准备工作](./zilliz-mcp-server#before-you-start)。

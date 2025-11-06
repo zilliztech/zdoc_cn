@@ -18,14 +18,14 @@ sidebar_position: 3
 ## 目录
 
 - [1 个集群中最多可创建多少个 Collection？](#how-many-collections-are-allowed-in-a-single-cluster)
-- [如何确认我的 Collection 是否开启了动态 Schema？](#how-can-i-know-if-dynamic-schema-is-enabled-for-my-collection)
-- [如果创建 Collection 时未开启动态 Schema，Collection 创建成功后是否还能开启动态 Schema？](#if-dynamic-schema-was-disabled-when-the-collection-was-created-can-i-enable-it-later)
+- [如果创建 Collection 时未开启动态列，Collection 创建成功后是否还能开启动态列？](#if-dynamic-schema-was-disabled-when-the-collection-was-created-can-i-enable-it-later)
 - [Zilliz Cloud 支持哪些相似度类型？](#what-are-the-indexing-metric-types-supported-by-zilliz-cloud)
 - [Collection 加载为何失败，如何解决？](#why-do-i-fail-to-load-collections-what-can-i-do)
 - [Collection 加载请求的并发是多少？如何增加并发请求的数量？](#what-is-the-concurrency-for-collection-loading-requests-how-can-i-increase-the-number-of-concurrent-requests)
 - [如何为创建的 Collection 设置存留时间（TTL）属性？](#how-to-set-the-ttl-time-to-live-property-of-a-created-collection)
 - [1 个 Collection 中最多可以添加多少个字段？](#is-there-any-limit-to-the-number-of-fields-i-can-add-in-a-collection)
 - [我可以修改 Collection 的 Shard 数量吗？](#can-i-modify-the-number-of-shards-in-a-collection)
+- [Partition 的命名是否有规则限制？](#is-there-any-rules-for-partition-names)
 
 ## 问答
 
@@ -34,7 +34,7 @@ sidebar_position: 3
 
 ### 1 个集群中最多可创建多少个 Collection？ \{#how-many-collections-are-allowed-in-a-single-cluster}
 
-集群可创建的 Collection 数量受集群的类型和 CU 数量影响：
+集群可创建的 Collection 数量受集群的类型和 CU 数量影响。
 
 <table>
    <tr>
@@ -69,23 +69,9 @@ sidebar_position: 3
 
 1. [使用 Partition Key](./use-partition-key) 创建 Partition。
 
-### 如何确认我的 Collection 是否开启了动态 Schema？ \{#how-can-i-know-if-dynamic-schema-is-enabled-for-my-collection}
+### 如果创建 Collection 时未开启动态列，Collection 创建成功后是否还能开启动态列？ \{#if-dynamic-schema-was-disabled-when-the-collection-was-created-can-i-enable-it-later}
 
-您可以前往 Zilliz Cloud 界面查看 Collection 是否开启动态 Schema。操作步骤为：
-
-1. 选择你想查看的 Collection。
-
-1. 点击 Schema 标签页。
-
-1. 在页面右上角查看动态 Schema 是否已开启。
-
-更多详情，请阅读 [Dynamic Field](./enable-dynamic-field)。
-
-![faq_dynamic_schema_enable](/img/faq_dynamic_schema_enable.png)
-
-### 如果创建 Collection 时未开启动态 Schema，Collection 创建成功后是否还能开启动态 Schema？ \{#if-dynamic-schema-was-disabled-when-the-collection-was-created-can-i-enable-it-later}
-
-不能。在创建 Collection 时一旦确认开启或者关闭动态 Schema，Collection 创建成功后不可以修改动态 Schema 状态。更多详情，请阅读 [Dynamic Field](./enable-dynamic-field)。
+可以。如果您在创建时未开启动态列功能，您可以后续开启该功能。更多详情，请阅读[修改 Collection](./modify-collections)。
 
 ### Zilliz Cloud 支持哪些相似度类型？ \{#what-are-the-indexing-metric-types-supported-by-zilliz-cloud}
 
@@ -143,3 +129,7 @@ collection.set_properties(properties={"collection.ttl.seconds": 1800})
     - 点击**复制**
 
 1. 复制的 Collection 创建完成后，请在您的应用代码中切换使用新的 Collection。
+
+### Partition 的命名是否有规则限制？ \{#is-there-any-rules-for-partition-names}
+
+是。Partition 名称只能包含字母、数字、下划线（“_”）和连字符（“-”），且不能以连数字或连字符开头。

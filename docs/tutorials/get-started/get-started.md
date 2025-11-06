@@ -3,6 +3,9 @@ title: "从这里开始 | Cloud"
 slug: /get-started
 sidebar_label: "从这里开始"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "全面的快速入门指南和相关主题，帮助您在 Zilliz Cloud 上构建应用程序。 | Cloud"
 type: origin

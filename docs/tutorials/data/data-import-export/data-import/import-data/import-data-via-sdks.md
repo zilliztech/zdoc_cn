@@ -3,6 +3,9 @@ title: "通过 SDK 导入 | Cloud"
 slug: /import-data-via-sdks
 sidebar_label: "SDK"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本节将帮助你了解如何使用 SDK 的 BulkWriter 和 BulkImport API 向 Collection 中导入数据。 | Cloud"
 type: origin
@@ -28,7 +31,7 @@ import TabItem from '@theme/TabItem';
 
 另外，您还可以参考我们的[数据导入指南](./data-import-zero-to-hero)。其中包含了数据准备和数据导入两个部分的内容。
 
-## 安装依赖{#install-denpendencies}
+## 安装依赖\{#install-denpendencies}
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
 
@@ -64,7 +67,7 @@ compile 'io.milvus:milvus-sdk-java:2.4.8'
 
 </Tabs>
 
-### 检查已准备数据{#check-prepared-data}
+### 检查已准备数据\{#check-prepared-data}
 
 在您[使用 BulkWriter](./use-bulkwriter) 完成数据准备工作后，你会获得一个路径，指向准备好的数据文件。您可以使用如下代码来检查这些数据文件。
 
@@ -153,9 +156,92 @@ while (results.hasNext()) {
 </TabItem>
 </Tabs>
 
-## 导入数据{#import-data}
+## 导入数据\{#import-data}
 
-在待导入数据和 Collection 都准备就绪后，可以使用如下脚本将数据导入 Collection。
+一旦您的数据和 Collection 准备就绪，您可以通过 Stage 或外部存储（如对象存储桶和块存储 Blob 容器）将数据导入到特定集合中。
+
+### 从 Stage 中导入数据 | PRIVATE\{#import-data-via-stage}
+
+如需从 Stage 中导入数据，需要先创建 Stage 并将数据上传至该 Stage 中。在完成这些步骤后，记录文件在 Stage 中的位置，以备调用数据导入接口时使用。更多内容，可以参考[管理 Stage](./manage-stages)。
+
+您可以参考如下代码完成从 Stage 中导入数据的操作。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+<TabItem value='python'>
+
+```python
+from pymilvus.bulk_writer import bulk_import
+
+def cloud_bulkinsert():
+    # The value of the URL is fixed.
+    # For overseas regions, it is: https://api.cloud.zilliz.com
+    # For regions in China, it is: https://api.cloud.zilliz.com.cn
+    url = "https://api.cloud.zilliz.com.cn"
+    api_key = ""
+    cluster_id = "inxx-xxxxxxxxxxxxxxx"
+    stage_name = "my-first-stage"
+    data_path = "dataPath"
+
+    print(f"\n===================== import files to cloud vectordb ====================")
+
+    resp = bulk_import(
+        url=url,
+        api_key=api_key,
+        cluster_id=cluster_id,
+        collection_name='quick_setup',
+        stage_name=stage_name,
+        data_paths=[[data_path]]
+    )
+    print(resp.json())
+
+if __name__ == '__main__':
+    # # to call cloud bulkinsert api, you need to apply a cloud service from Zilliz Cloud(https://zilliz.com/cloud)
+    cloud_bulkinsert()
+
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+private static String bulkImport() throws InterruptedException {
+    /**
+     * The value of the URL is fixed.
+     */
+    String CLOUD_API_ENDPOINT = "https://api.cloud.zilliz.com.cn";
+    String CLUSTER_ID = "inxx-xxxxxxxxxxxxxxx";
+    String API_KEY = "";
+    String STAGE_NAME = "my-first-stage";
+    List<String> DATA_PATH = Lists.newArrayList("dataPath");
+
+    StageImportRequest stageImportRequest = StageImportRequest.builder()
+            .apiKey(API_KEY)
+            .clusterId(CLUSTER_ID).collectionName("quick_setup")
+            .stageName(STAGE_NAME).dataPaths(Lists.newArrayList(Collections.singleton(DATA_PATH)))
+            .build();
+    String bulkImportResult = BulkImportUtils.bulkImport(CLOUD_API_ENDPOINT, stageImportRequest);
+    System.out.println(bulkImportResult);
+
+    JsonObject bulkImportObject = new Gson().fromJson(bulkImportResult, JsonObject.class);
+    String jobId = bulkImportObject.getAsJsonObject("data").get("jobId").getAsString();
+    System.out.println("Create a bulkInert task, job id: " + jobId);
+    return jobId;
+}
+
+public static void main(String[] args) throws Exception {
+    String jobId = bulkImport();
+}
+
+// 0f7fe853-d93e-4681-99f2-4719c63585cc
+```
+
+</TabItem>
+</Tabs>
+
+### 从外部存储中导入数据\{#import-data-via-external-storage}
+
+在待导入数据和 Collection 都准备就绪后，可以使用如下脚本将数据从外部存储导入到指定 Collection。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
 <TabItem value='python'>
@@ -244,7 +330,7 @@ public static void main(String[] args) throws Exception {
 
 </Admonition>
 
-### 查看批量导入进度{#check-import-progress}
+### 查看批量导入进度\{#check-import-progress}
 
 可通过以下代码查看批量导入进度：
 
@@ -301,7 +387,7 @@ public static void main(String[] args) throws Exception {
 </TabItem>
 </Tabs>
 
-### 列出所有批量导入任务{#list-all-import-jobs}
+### 列出所有批量导入任务\{#list-all-import-jobs}
 
 您还可以调用 ListImportJobs API 来了解其它批量导入任务的运行情况：
 
@@ -355,7 +441,7 @@ public static void main(String[] args) throws Exception {
 </TabItem>
 </Tabs>
 
-## 推荐阅读{#related-topics}
+## 推荐阅读\{#related-topics}
 
 - [支持的对象存储](./data-import-storage-options)
 
