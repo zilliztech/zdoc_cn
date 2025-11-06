@@ -120,5 +120,7 @@
     "查看 Stage 列表": "list-stages",
     "创建项目": "create-project",
     "升级项目": "upgrade-project",
-    "查看项目详情": "describe-project"
+    "查看项目详情": "describe-project",
+    "添加 Collection 字段": "add-collection-field",
+    "查看 Compaction 状态": "get-compaction-state"
 }
