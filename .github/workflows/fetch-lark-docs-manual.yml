@@ -15,11 +15,45 @@ jobs:
     - name: fetch docs
       run: |
         yarn
-        npx docusaurus report-to-lark -m "🔥 管理员手动触发更新文档。"
+        npx docusaurus report-to-lark -m "🔥 开始构建中文用户指南..."
         npx docusaurus fetch-lark-docs -man guides -tar zilliz.saas
         npx docusaurus fetch-lark-docs -man guides -tar zilliz.saas -post
-        npx docusaurus fetch-lark-docs -man guides -tar zilliz.paas
+        npx docusaurus fetch-lark-docs -man guides -tar zilliz.paas -skipS
         npx docusaurus fetch-lark-docs -man guides -tar zilliz.paas -post
+        npx docusaurus fetch-lark-docs -man onpremise -tar paas
+        npx docusaurus fetch-lark-docs -man onpremise -tar paas -post
+      env:
+        APP_ID: ${{ secrets.APP_ID }}
+        APP_SECRET: ${{ secrets.APP_SECRET }}
+        FEISHU_HOST: ${{ vars.FEISHU_HOST }}
+        SPACE_ID: ${{ secrets.SPACE_ID }}
+        FIGMA_API_KEY: ${{ secrets.FIGMA_API_KEY }}
+    - name: build docsite
+      run: |
+        npx docusaurus report-to-lark -m "🔥 用户指南已成功获取！开始构建文档站点..."
+        npm run build
+      env:
+        APP_ID: ${{ secrets.APP_ID }}
+        APP_SECRET: ${{ secrets.APP_SECRET }}
+        FEISHU_HOST: ${{ vars.FEISHU_HOST }}
+    - name: check links
+      env:
+        APP_ID: ${{ secrets.APP_ID }}
+        APP_SECRET: ${{ secrets.APP_SECRET }}
+        FEISHU_HOST: ${{ vars.FEISHU_HOST }}
+      run: |
+        npx docusaurus report-to-lark -m "🔥 用户构建成功！开始检查链接..."
+        npx docusaurus link-checks
+    - name: commit to dev
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        branch: dev
+        create_branch: true
+        push_options: --force
+    - name: fetch sdk references
+      id: fetch_sdk_refs
+      run: |
+        npx docusaurus report-to-lark -m "🔥 获取中文参考文档..."
         npx docusaurus fetch-lark-docs -man python -src-only
         npx docusaurus fetch-lark-docs -man pymilvus25 -src-only
         npx docusaurus fetch-lark-docs -man pymilvus26 -tar zilliz
@@ -35,9 +69,7 @@ jobs:
         npx docusaurus fetch-lark-docs -man gov2 -src-only
         npx docusaurus fetch-lark-docs -man gov226 -tar zilliz
         npx docusaurus fetch-lark-docs -man gov226 -tar zilliz -post
-        npx docusaurus fetch-lark-docs -man onpremise -tar paas
-        npx docusaurus fetch-lark-docs -man onpremise -tar paas -post
-        npx docusaurus fetch-apifox-docs -s plugins/apifox-docs/meta/openapi.json -l zh-CN
+        npx docusaurus fetch-apifox-docs -s plugins/apifox-docs/meta/openapi.json -l zh-CN  
       env:
         APP_ID: ${{ secrets.APP_ID }}
         APP_SECRET: ${{ secrets.APP_SECRET }}
@@ -45,20 +77,20 @@ jobs:
         SPACE_ID: ${{ secrets.SPACE_ID }}
         FIGMA_API_KEY: ${{ secrets.FIGMA_API_KEY }}
     - name: build docsite
-      env:
-        APP_ID: ${{ secrets.APP_ID }}
-        APP_SECRET: ${{ secrets.APP_SECRET }}
-        FEISHU_HOST: ${{ vars.FEISHU_HOST }}
       run: |
-        npx docusaurus report-to-lark -m "🔥 已获取所有文档！开始构建文档站点……"
+        npx docusaurus report-to-lark -m "🔥 参考文档已成功获取！开始构建文档站点..."
         npm run build
-    - name: check links
+      env:
+        APP_ID: ${{ secrets.APP_ID }}
+        APP_SECRET: ${{ secrets.APP_SECRET }}
+        FEISHU_HOST: ${{ vars.FEISHU_HOST }}
+    - name: link checks
       env:
         APP_ID: ${{ secrets.APP_ID }}
         APP_SECRET: ${{ secrets.APP_SECRET }}
         FEISHU_HOST: ${{ vars.FEISHU_HOST }}
       run: |
-        npx docusaurus report-to-lark -m "🔥 文档站点构建成功！开始检查链接……"
+        npx docusaurus report-to-lark -m "🔥 文档站点构建成功！开始检查链接..."
         npx docusaurus link-checks
     - name: commit to dev
       uses: stefanzweifel/git-auto-commit-action@v5
@@ -95,8 +127,8 @@ jobs:
     - name: report success
       run : |
         yarn
-        npx docusaurus report-to-lark -m "🔥 构建成功！可以前往 Jenkins 进行正式构建！"  
+        npx docusaurus report-to-lark -m "🔥 构建成功！可以前往 Jenkins 进行正式构建！"
       env:
         APP_ID: ${{ secrets.APP_ID }}
         APP_SECRET: ${{ secrets.APP_SECRET }}
-        FEISHU_HOST: ${{ vars.FEISHU_HOST }}      
+        FEISHU_HOST: ${{ vars.FEISHU_HOST }}    
