@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "RemoteBulkWriter | Java | v2"
 slug: /java/java/v2-DataImport-RemoteBulkWriter
 sidebar_label: "RemoteBulkWriter"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "A RemoteBulkWriter instance writes your raw data in a format that Milvus understands into an AWS-S3-compatible bucket. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: XAIndF6XWoQzvRxDvpLcgEE1nEb
 sidebar_position: 5
 keywords: 
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud
   - RemoteBulkWriter
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -141,7 +144,7 @@ AzureConnectParam.newBuilder()
 
 - `withAccountUrl(String accountUrl)`
 
-    A string in format like `https://<storage-account>.blob.core.windows.net`. Read [this link](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview) for more info.
+    A string in format like `<i>http</i>s://<storage-account>.blob.core.windows.net`. Read [this link](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview) for more info.
 
 - `withCredential(TokenCrendtial credential)`
 

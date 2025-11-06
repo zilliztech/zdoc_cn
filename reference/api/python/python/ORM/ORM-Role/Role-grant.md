@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "grant() | Python | ORM"
 slug: /python/python/Role-grant
 sidebar_label: "grant()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation grants a privilege to the current role. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: BapSdVXjQoQXnbxnRYScCagAn1f
 sidebar_position: 5
 keywords: 
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
   - zilliz
   - zilliz cloud
   - cloud
   - grant()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

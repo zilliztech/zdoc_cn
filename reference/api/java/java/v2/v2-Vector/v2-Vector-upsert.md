@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "upsert() | Java | v2"
 slug: /java/java/v2-Vector-upsert
 sidebar_label: "upsert()"
+added_since: v2.3.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation inserts or updates data in a specific collection. | Java | v2"
 type: docx
-token: A0UBd45iyoGah2xaFjQc4bp6n2b
+token: Ei2hd8dE4oGCvJxKbEvcamxTnke
 sidebar_position: 9
 keywords: 
-  - Audio similarity search
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
   - zilliz
   - zilliz cloud
   - cloud
   - upsert()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -41,6 +44,7 @@ upsert(UpsertReq.builder()
     .data(List<JsonObject> data)
     .collectionName(String collectionName)
     .partitionName(String partitionName)
+    .partialUpdate(Boolean partialUpdate)
     .build()
 )
 ```
@@ -53,7 +57,9 @@ upsert(UpsertReq.builder()
 
     The data to insert or update should be a `gson.JsonObject` that matches the schema of the current collection or a list of such dictionaries. 
 
-    The following code assumes that the schema of the current collection has two fields named **id** and **vector**. The former is the primary field and the latter is a field to hold 5-dimensional vector embeddings.
+    To perform an update, you are advised first to retrieve the target entity from the collection, modify the values of any relevant fields, and then save it back to the collection. 
+
+    The following code assumes that the schema of the current collection has three fields named **id**, **vector** ,and **color**. The `id` field is the primary field, the `vector` field is a field to hold 5-dimensional vector embeddings, and the `color` field is a scalar field holding strings.
 
     <Admonition type="info" icon="📘" title="Notes">
 
@@ -74,6 +80,7 @@ upsert(UpsertReq.builder()
     
     dict1.addProperty("id", 1L);
     dict1.add("vector", gson.toJsonTree(vectorArray1));
+    dict1.add("color", "green")
     
     JsonObject dict2 = new JsonObject();
     JSONArray vectorArray2 = new ArrayList<>();
@@ -85,6 +92,7 @@ upsert(UpsertReq.builder()
     
     dict2.addProperty("id", 2L);
     dict2.add("vector", gson.toJsonTree(vectorArray2));
+    dict2.add("color", "brown")
     
     data.add(dict1);
     data.add(dict2);
@@ -135,11 +143,13 @@ vectorList.add(2.0f);
 vectorList.add(3.0f);
 row.add("vector", gson.toJsonTree(vectorList));
 row.addProperty("id", 0L);
+row.addProperty("color", "purple")
 
 UpsertReq upsertReq = UpsertReq.builder()
         .collectionName("test")
         .data(Collections.singletonList(row))
         .build();
 client.upsert(upsertReq);
+
 ```
 

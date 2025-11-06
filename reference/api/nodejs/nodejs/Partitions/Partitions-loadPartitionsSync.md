@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "loadPartitionsSync() | Node.js"
 slug: /node/node/Partitions-loadPartitionsSync
 sidebar_label: "loadPartitionsSync()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation loads the data of specific partitions into memory. This is the synchronous function that helps to ensure that the specified partitions have been loaded. | Node.js"
@@ -10,15 +13,15 @@ type: docx
 token: VGofdSRi0o6EagxNkokc9Iinndf
 sidebar_position: 7
 keywords: 
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
   - zilliz
   - zilliz cloud
   - cloud
   - loadPartitionsSync()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

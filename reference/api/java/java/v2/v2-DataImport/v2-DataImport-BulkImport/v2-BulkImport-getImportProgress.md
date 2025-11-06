@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "getImportProgress() | Java | v2"
 slug: /java/java/v2-BulkImport-getImportProgress
 sidebar_label: "getImportProgress()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation gets the progress of the specified bulk-import job. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: EjnFdC5EfoIkoExSBOxcEC2hnbg
 sidebar_position: 3
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
   - zilliz
   - zilliz cloud
   - cloud
   - getImportProgress()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

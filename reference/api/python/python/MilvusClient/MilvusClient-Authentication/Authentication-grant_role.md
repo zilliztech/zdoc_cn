@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "grant_role() | Python | MilvusClient"
 slug: /python/python/Authentication-grant_role
 sidebar_label: "grant_role()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation grants a role to a user. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: DsnpdZuDGo77TYxFuYvcDpOgnIf
 sidebar_position: 12
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - what is vector db
   - zilliz
   - zilliz cloud
   - cloud
   - grant_role()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

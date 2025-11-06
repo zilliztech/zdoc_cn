@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "loadCollectionSync() | Node.js"
 slug: /node/node/Management-loadCollectionSync
 sidebar_label: "loadCollectionSync()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation loads the data of a specific collection into memory. This is the synchronous function that helps to ensure that the specified collection has been loaded. | Node.js"
 type: docx
 token: XXUAdI8T2oOmw2x7iITc8vJgnjm
-sidebar_position: 15
+sidebar_position: 18
 keywords: 
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
   - zilliz
   - zilliz cloud
   - cloud
   - loadCollectionSync()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

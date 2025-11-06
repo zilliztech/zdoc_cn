@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "create_user() | Python | MilvusClient"
 slug: /python/python/Authentication-create_user
 sidebar_label: "create_user()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates a user. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: BDupd28JqoNY9HxVOTfcv86enRe
 sidebar_position: 4
 keywords: 
-  - Vector index
-  - vector database open source
-  - open source vector db
-  - vector database example
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud
   - create_user()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "createIndex() | Node.js"
 slug: /node/node/Management-createIndex
 sidebar_label: "createIndex()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates an index for a specific collection. | Node.js"
 type: docx
 token: Nu0Id3wzGoJIFyxkC7IcmjAznNf
-sidebar_position: 2
+sidebar_position: 3
 keywords: 
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - open source vector db
   - zilliz
   - zilliz cloud
   - cloud
   - createIndex()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---
@@ -39,6 +42,7 @@ createIndex(data): Promise<ResStatus>
 ```javascript
 milvusClient.createIndex([
     {
+       db_name?: string,
        collection_name: string,
        field_name: string,
        index_name?: string,
@@ -47,10 +51,23 @@ milvusClient.createIndex([
        params?: KeyValueObj,
        timeout?: number
      }
- ]);
+ ] | {
+       db_name?: string,
+       collection_name: string,
+       field_name: string,
+       index_name?: string,
+       index_type: string,
+       metric_type: string,
+       params?: KeyValueObj,
+       timeout?: number    
+ });
 ```
 
 **PARAMETERS:**
+
+- **db_name** (*string*) -
+
+    The name of the database to which the target collection belongs.
 
 - **collection_name** (*string*) -
 
@@ -74,7 +91,7 @@ milvusClient.createIndex([
 
 - **metric_type** (*string*) -
 
-    The metric type used to measure vector distance. Possible values: `IP`, `L2`, `COSINE`, `HAMMING`, `JACCARD`
+    The metric type used to measure vector distance. Possible values: `IP`, `L2`, `COSINE`, `HAMMING`, `JACCARD`, `BM25` (used only for full text search). For more information, refer to [Metric Types](https://milvus.io/docs/metric.md).
 
     This is available only when the specified field is a vector field.
 

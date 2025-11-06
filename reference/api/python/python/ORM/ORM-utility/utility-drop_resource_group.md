@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "drop_resource_group() | Python | ORM"
 slug: /python/python/utility-drop_resource_group
 sidebar_label: "drop_resource_group()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation drops a resource group. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: EofGdftYjoQ9E6x8mxLcpbG1nhc
 sidebar_position: 11
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud
   - drop_resource_group()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

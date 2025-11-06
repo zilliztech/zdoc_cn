@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "hybrid_search() | Python | ORM"
 slug: /python/python/Collection-hybrid_search
 sidebar_label: "hybrid_search()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation performs multi-vector search on a collection and returns search results after reranking. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: QqOSdTDaLoOKGRxiKEtcuuiAnrf
 sidebar_position: 17
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
   - hybrid_search()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

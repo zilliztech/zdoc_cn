@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "describeDatabase() | Java | v2"
 slug: /java/java/v2-Database-describeDatabase
 sidebar_label: "describeDatabase()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation gets detailed information about a specific database. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: MJjHd3uGcoxEYBx0laKcAIKNnhg
 sidebar_position: 3
 keywords: 
-  - HNSW
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud
   - describeDatabase()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

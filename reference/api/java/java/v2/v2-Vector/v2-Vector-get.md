@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "get() | Java | v2"
 slug: /java/java/v2-Vector-get
 sidebar_label: "get()"
+added_since: v2.3.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation gets specific entities by their IDs. | Java | v2"
 type: docx
-token: UcacdecoZoAyxsxJzOGcTqWzn7d
+token: DDshdoIEoo7X1BxpciBc66Rlndd
 sidebar_position: 2
 keywords: 
-  - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - IVF
   - zilliz
   - zilliz cloud
   - cloud
   - get()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -38,6 +41,7 @@ public GetResp get(GetReq request)
 
 ```java
 get(GetReq.builder()
+    .databaseName(String databaseName)
     .collectionName(String collectionName)
     .partitionName(String partitionName)
     .ids(List<Object> ids)
@@ -47,6 +51,10 @@ get(GetReq.builder()
 ```
 
 **BUILDER METHODS:**
+
+- `databaseName(String databaseName)`
+
+    The name of the database to which the target collection belongs.
 
 - `collectionName(String collectionName)`
 

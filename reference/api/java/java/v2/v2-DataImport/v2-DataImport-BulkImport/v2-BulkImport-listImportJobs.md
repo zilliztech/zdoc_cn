@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "listImportJobs() | Java | v2"
 slug: /java/java/v2-BulkImport-listImportJobs
 sidebar_label: "listImportJobs()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all existing import jobs regarding the specified collection. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: CN9sdiCicoERZpx9GhmcLa4Wn7g
 sidebar_position: 4
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
   - zilliz
   - zilliz cloud
   - cloud
   - listImportJobs()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

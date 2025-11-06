@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "construct_from_dict() | Python | ORM"
 slug: /python/python/FieldSchema-construct_from_dict
 sidebar_label: "construct_from_dict()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation constructs a FieldSchema object from a dictionary representation. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: DCLUdOpVjohl8HxPUx1cGjokngf
 sidebar_position: 1
 keywords: 
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud
   - construct_from_dict()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---
@@ -85,10 +88,4 @@ print(field)
 # Output
 # {'name': 'primary_key', 'description': 'test_field_schema', 'type': <DataType.INT64: 5>}
 ```
-
-## Related operations
-
-The following operations are related to `construct_from_dict()`:
-
-- [to_dict()](./FieldSchema-to_dict)
 

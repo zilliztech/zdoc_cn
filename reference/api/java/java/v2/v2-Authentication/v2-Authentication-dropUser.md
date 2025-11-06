@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "dropUser() | Java | v2"
 slug: /java/java/v2-Authentication-dropUser
 sidebar_label: "dropUser()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a user. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: RFv2dtZ1qoP9XQxJEGqcgLGUnhc
 sidebar_position: 9
 keywords: 
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
-  - Video search
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud
   - dropUser()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "LocalBulkWriter | Python"
 slug: /python/python/DataImport-LocalBulkWriter
 sidebar_label: "LocalBulkWriter"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "A LocalBulkWriter instance rewrites your raw data locally in a format that Zilliz Cloud understands. | Python"
@@ -10,15 +13,15 @@ type: docx
 token: RcvXdmCVBog9M8xNyUFcwefnneh
 sidebar_position: 3
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
   - zilliz
   - zilliz cloud
   - cloud
   - LocalBulkWriter
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

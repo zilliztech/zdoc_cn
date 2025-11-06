@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "createPartition() | Node.js"
 slug: /node/node/Partitions-createPartition
 sidebar_label: "createPartition()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates a partition in the target collection. | Node.js"
@@ -10,15 +13,15 @@ type: docx
 token: PPLtdSbtfomgF1x5MHncKPgPnSf
 sidebar_position: 1
 keywords: 
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud
   - createPartition()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "MilvusClientV2 | Java | v2"
 slug: /java/java/v2-Client-MilvusClientV2
 sidebar_label: "MilvusClientV2"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "A MilvusClientV2 instance represents a Java client that connects to a specific Zilliz Cloud cluster. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: IeOWd0yR2onm5Ex6XyqcrGjKnpS
 sidebar_position: 1
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - Unstructured Data
+  - vector database
+  - IVF
+  - knn
   - zilliz
   - zilliz cloud
   - cloud
   - MilvusClientV2
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -57,8 +60,24 @@ MilvusClientV2(ConnectConfig connectConfig);
 ConnectConfig.builder()
     .uri(String uri)
     .token(String token)
-    //.username(String userName)
-    //.password(String password)
+    .username(String userName)
+    .password(String password)
+    .dbName(String dbName)
+    .connectTimeoutMs(long connectTimeoutMs)
+    .keepAliveTimeMs(long keepAliveTimeMs)
+    .keepAliveTimeoutMs(long keepAliveTimeoutMs)
+    .keepAliveWithoutCalls(Boolean keeAliveWithoutCalls)
+    .rpcDeadlineMs(long rpcDeadlineMs)
+    .clientKeyPath(String clientKeyPath)
+    .clientPemPath(String clientPemPath)
+    .caPemPath(String caPemPath)
+    .serverPemPath(String serverPemPath)
+    .serverName(String serverName)
+    .proxyAddress(String proxyAddress)
+    .secure(Boolean secure)
+    .idleTimeoutMs(long idleTimeoutMs)
+    .sslContext(SSLContext sslContext)
+    .clientRequestId(ThreadLocal<String> clientRequestId)
     .build();
 ```
 
@@ -161,6 +180,12 @@ ConnectConfig.builder()
 - `idleTimeoutMs(long idleTimeout)`
 
     The idle timeout for a connection.
+
+- `.clientRequestId(ThreadLocal<String> clientRequestId)`
+
+    The ID of a client request. You can use this parameter to maintain a map of threads, with each thread mapping to a specific request ID. 
+
+    The request ID will be passed to the server, so that you can learn about which client calls this interface from the access logs.
 
 **PUBLIC METHODS:**
 

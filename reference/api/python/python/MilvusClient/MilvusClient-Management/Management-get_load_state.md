@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "get_load_state() | Python | MilvusClient"
 slug: /python/python/Management-get_load_state
 sidebar_label: "get_load_state()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation displays whether a specified collection or partition is loaded or not. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: KEPYdKup1o3nHdxKbjvcQUzwnnd
 sidebar_position: 8
 keywords: 
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
   - zilliz
   - zilliz cloud
   - cloud
   - get_load_state()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

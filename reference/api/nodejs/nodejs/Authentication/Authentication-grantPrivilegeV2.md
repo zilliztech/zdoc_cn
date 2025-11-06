@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "grantPrivilegeV2() | Node.js"
 slug: /node/node/Authentication-grantPrivilegeV2
 sidebar_label: "grantPrivilegeV2()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation assigns a privilege or a privilege group to a role. | Node.js"
 type: docx
 token: R618dfeMYo9GdmxMwe9cQLclncs
-sidebar_position: 13
+sidebar_position: 15
 keywords: 
-  - Serverless vector database
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
+  - cosine distance
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
   - zilliz
   - zilliz cloud
   - cloud
   - grantPrivilegeV2()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

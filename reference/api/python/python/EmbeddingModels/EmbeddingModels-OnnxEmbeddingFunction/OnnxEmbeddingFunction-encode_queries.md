@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "encode_queries() | Python"
 slug: /python/python/OnnxEmbeddingFunction-encode_queries
 sidebar_label: "encode_queries()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation takes in a list of query strings and encodes each query into a vector embedding. | Python"
@@ -10,15 +13,15 @@ type: docx
 token: ZkWBdbMZkoBjT1xe4qDcTBOHnGx
 sidebar_position: 2
 keywords: 
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
   - zilliz
   - zilliz cloud
   - cloud
   - encode_queries()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

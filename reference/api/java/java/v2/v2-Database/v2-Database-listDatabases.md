@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "listDatabases() | Java | v2"
 slug: /java/java/v2-Database-listDatabases
 sidebar_label: "listDatabases()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all the database names. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: IHoodknUJohFAbxMFg3c0q8un6f
 sidebar_position: 6
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
   - zilliz
   - zilliz cloud
   - cloud
   - listDatabases()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

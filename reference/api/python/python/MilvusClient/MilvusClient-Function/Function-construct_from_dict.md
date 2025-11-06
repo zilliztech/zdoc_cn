@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "construct_from_dict() | Python | MilvusClient"
 slug: /python/python/Function-construct_from_dict
 sidebar_label: "construct_from_dict()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation constructs a `Function` object from a dictionary representation. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: Ulypd24byoDBOpxGnnJcbF3Nnkb
 sidebar_position: 2
 keywords: 
-  - llm eval
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
   - zilliz
   - zilliz cloud
   - cloud
   - construct_from_dict()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

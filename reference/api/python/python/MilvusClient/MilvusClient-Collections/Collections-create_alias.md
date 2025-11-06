@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "create_alias() | Python | MilvusClient"
 slug: /python/python/Collections-create_alias
 sidebar_label: "create_alias()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates an alias for an existing collection. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: Kqlodu0AWoefKvxczcxc1c36nlf
 sidebar_position: 4
 keywords: 
-  - AI Hallucination
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
   - zilliz
   - zilliz cloud
   - cloud
   - create_alias()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

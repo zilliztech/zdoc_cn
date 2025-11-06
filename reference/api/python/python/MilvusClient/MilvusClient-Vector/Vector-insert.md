@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "insert() | Python | MilvusClient"
 slug: /python/python/Vector-insert
 sidebar_label: "insert()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation inserts data into a specific collection. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: QI87dhVnioL9JLxnNKxcM8jWnkh
 sidebar_position: 3
 keywords: 
-  - knn algorithm
-  - HNSW
-  - What is unstructured data
-  - Vector embeddings
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud
   - insert()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

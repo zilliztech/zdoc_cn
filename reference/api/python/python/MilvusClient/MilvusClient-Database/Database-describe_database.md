@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "describe_database() | Python | MilvusClient"
 slug: /python/python/Database-describe_database
 sidebar_label: "describe_database()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists detailed information about the specified database. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: LEaYdk179oZn0vxqa0lcn4mnnrg
 sidebar_position: 3
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - natural language processing
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
   - zilliz
   - zilliz cloud
   - cloud
   - describe_database()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

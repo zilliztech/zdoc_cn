@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "upsert() | Node.js"
 slug: /node/node/Vector-upsert
 sidebar_label: "upsert()"
+added_since: v2.3.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation inserts or updates data in a specific collection. | Node.js"
 type: docx
-token: MErAdudCloVawFxpxoWcgqZonLc
-sidebar_position: 8
+token: MpW0dmPAao1SWkx7HGkcT16dnvb
+sidebar_position: 9
 keywords: 
-  - llm hallucinations
-  - hybrid search
   - lexical search
   - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
   - zilliz
   - zilliz cloud
   - cloud
   - upsert()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---
@@ -42,6 +45,7 @@ milvusClient.upsert({
    collection_name: string,
    data: RowData[],
    hash_keys: Number[],
+   partial_update: boolean,
    partition_name: string,
    timeout: number
  })
@@ -53,7 +57,7 @@ milvusClient.upsert({
 
     The name of the database that holds the target collection.
 
-- **collection_name** (*str*) -
+- **collection_name** (*string*) -
 
     **[REQUIRED]**
 
@@ -65,10 +69,12 @@ milvusClient.upsert({
 
     The data to insert should be a dictionary that matches the schema of the current collection or a list of such dictionaries. 
 
-    The following code assumes that the schema of the current collection has two fields named **id** and **vector**. The former is the primary field and the latter is a field to hold 5-dimensional vector embeddings.
+    To perform an update, you are advised first to retrieve the target entity from the collection, modify the values of any relevant fields, and then save it back to the collection. 
+
+    The following code assumes that the schema of the current collection has three fields named **id**, **vector** ,and **color**. The `id` field is the primary field, the `vector` field is a field to hold 5-dimensional vector embeddings, and the `color` field is a scalar field holding strings.
 
     ```javascript
-    // A dictionary, or
+    # A dictionary, or
     data={
         'id': 0,
         'vector': [
@@ -77,10 +83,11 @@ milvusClient.upsert({
             0.848608119657156,
             0.9287046808231654,
             -0.42215796530168403
-        ]
+        ],
+        'color': 'green'
     }
     
-    // A list of dictionaries
+    # A list of dictionaries
     data = [
         {
             'id': 1,
@@ -90,7 +97,8 @@ milvusClient.upsert({
                 0.9197526367693833,
                 0.49519396415367245,
                 -0.558567588166478
-            ]
+            ],
+            'color': 'brown'
         },
         {
             'id': 2,
@@ -100,7 +108,8 @@ milvusClient.upsert({
                 -0.8344432775467099,
                 0.9797361846081416,
                 0.6294256393761057
-            ]
+            ],
+            'color': 'purple'
         }
     ]
     ```
@@ -110,6 +119,10 @@ milvusClient.upsert({
     The timeout duration for this operation. 
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
+
+- **partial_update**(*boolean* | *None*) -
+
+    Whether to enable partial update. Once set to `True`, you can include only the fields that need updating in `data`. 
 
 - **partition_name** (*string*) -
 
@@ -137,25 +150,25 @@ This method returns a promise that resolves to a **MutationResult** object.
 
 **PARAMETERS:**
 
-- **IDs** (*list[string]* | *list[number]*) -
+- **IDs** (*NumberArrayId* | *StringArrayId*) -
 
     A list of the IDs of the upserted entities.
 
-- **acknowledged** (*list[string]* | *list[number]*) -
+- **acknowledged** (*boolean*) -
 
-    A boolean value indicating whether the upsert operation of the entity is successful.
+    A boolean value indicating whether the upsert operation is successful.
 
 - **delete_cnt** (*string*) -
 
-    The deleted entities
+    The deleted entities. The value stays `0` in this operation.
 
-- **err_index** (*list[number]*) -
+- **err_index** (Number[]) -
 
-    The number of entities involved in the upsert operation that fails to be indexed.
+    The number of entities involved in the insert operation that fails.
 
 - **insert_cnt** (*string*) -
 
-    The new entities that are inserted.
+    The new entities that are inserted. The value stays `0` in this operation.
 
 - **succ_index** (*list[number]*) -
 
@@ -163,21 +176,11 @@ This method returns a promise that resolves to a **MutationResult** object.
 
 - **timestamp** (*string*) -
 
-    The timestamp indicating the time when the upsert operation occurs.
+    The timestamp at which the upsert operation occurs.
 
 - **upsert_cnt** (*string*) -
 
-    The entities that have been updated.
-
-- **stats** (*object*) -
-
-    - **key** (*string*) -
-
-        The property of the upserted data.
-
-    - **value** (*string* | *number*) -
-
-        The value of the property.
+    The entities that have been upserted.
 
 - **status** (*object*) -
 
@@ -195,7 +198,104 @@ This method returns a promise that resolves to a **MutationResult** object.
 
 ## Example
 
-```java
+```javascript
+const { MilvusClient, DataType } = require("@zilliz/milvus2-sdk-node")
+
+// 1. Set up a Milvus client
+const address = "YOUR_CLUSTER_ENDPOINT";
+const token = "YOUR_CLUSTER_TOKEN";
+const client = new MilvusClient({address, token});
+
+// 2. Create a collection
+client.create_collection({
+    collection_name: "test_collection",
+    dim: 5
+})
+
+// 3. Insert record
+res = await client.insert({
+    collection_name: "test_collection",
+    data: [
+        {
+            'id': 0,
+            'vector': [
+                0.37417449965222693,
+                -0.9401784221711342,
+                -0.8344432775467099,
+                0.9797361846081416,
+                0.6294256393761057
+            ],
+            'color': 'green'
+        },
+        {
+            'id': 1,
+            'vector': [
+                0.37417449965222693,
+                -0.9401784221711342,
+                0.9197526367693833,
+                0.49519396415367245,
+                -0.558567588166478
+            ],
+            'color': 'brown'
+        },
+        {
+            'id': 2,
+            'vector': [
+                0.46949086179692356,
+                -0.533609076732849,
+                -0.8344432775467099,
+                0.9797361846081416,
+                0.6294256393761057
+            ],
+            'color': 'purple'
+        }
+    ]
+})
+
+// 4. Upsert a record
+res = client.upsert({
+    collection_name: "test_collection",
+    data: {
+        'id': 0,
+        'vector': [
+            0.6186516144460161,
+            0.5927442462488592,
+            0.848608119657156,
+            0.9287046808231654,
+            -0.42215796530168403
+        ],
+        'color': 'grass-green'
+    }
+})
+
+// 4. Upsert multiple records
+res = client.upsert({
+    collection_name: "test_collection",
+    data: [
+        {
+            'id': 1,
+             'vector': [
+                 0.3457690490452393,
+                 -0.9401784221711342,
+                 0.9123948134344333,
+                 0.49519396415367245,
+                 -0.558567588166478
+             ],
+             'color': 'mud-brown'
+       },
+       {
+           'id': 2,
+           'vector': [
+               0.42349086179692356,
+               -0.533609076732849,
+               -0.8344432775467099,
+               0.675761846081416,
+               0.57094256393761057
+           ],
+           'color': 'violet-purple'
+       }
+   ]
+})
 
 ```
 

@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "getPartitionStats() | Java | v2"
 slug: /java/java/v2-Partitions-getPartitionStats
 sidebar_label: "getPartitionStats()"
+added_since: v2.4.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the statistics collected on a specific partition. | Java | v2"
 type: docx
-token: G09ndDq8poAh24xxmr4c7oHknid
+token: ZCESd1IrfoFHByx125kcd38Zndg
 sidebar_position: 3
 keywords: 
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
-  - how does milvus work
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - cosine distance
   - zilliz
   - zilliz cloud
   - cloud
   - getPartitionStats()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -38,6 +41,7 @@ public GetPartitionStatsResp getPartitionStats(GetPartitionStatsReq request)
 
 ```java
 getPartitionStats(GetPartitionStatsReq.builder()
+    .databaseName(String databaseName)
     .collectionName(String collectionName)
     .partitionName(String partitionName)
     .build()
@@ -45,6 +49,10 @@ getPartitionStats(GetPartitionStatsReq.builder()
 ```
 
 **BUILDER METHODS:**
+
+- `databaseName(String databaseName)`
+
+    The name of the database to which the target collection belongs.
 
 - `collectionName(String collectionName)`
 

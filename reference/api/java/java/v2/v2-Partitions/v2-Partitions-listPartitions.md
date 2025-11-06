@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "listPartitions() | Java | v2"
 slug: /java/java/v2-Partitions-listPartitions
 sidebar_label: "listPartitions()"
+added_since: v2.3.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the partitions in a specified collection. | Java | v2"
 type: docx
-token: RJcgdJpGDouomlxPTqZc5S8Lngc
+token: Bjs5dej7ZoBKhXxZzMjclPCynmd
 sidebar_position: 5
 keywords: 
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - cosine distance
   - zilliz
   - zilliz cloud
   - cloud
   - listPartitions()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -38,12 +41,17 @@ public List<String> listPartitions(ListPartitionsReq request)
 
 ```java
 listPartitions(ListPartitionsReq.builder()
+    .databaseName(String databaseName)
     .collectionName(String collectionName)
     .build()
 )
 ```
 
 **BUILDER METHODS:**
+
+- `databaseName(String databaseName)`
+
+    The name of the database to which the target collection belongs.
 
 - `collectionName(String collectionName)`
 

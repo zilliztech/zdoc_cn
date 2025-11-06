@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "dropDatabase() | Java | v2"
 slug: /java/java/v2-Database-dropDatabase
 sidebar_label: "dropDatabase()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a database with a name. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: LwqSdN6s5oZBhAxzQsxcnXswnah
 sidebar_position: 4
 keywords: 
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
   - zilliz
   - zilliz cloud
   - cloud
   - dropDatabase()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

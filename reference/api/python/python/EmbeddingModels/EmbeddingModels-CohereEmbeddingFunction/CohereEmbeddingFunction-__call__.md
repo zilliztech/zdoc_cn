@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "\_\_call()\_\_ | Python"
 slug: /python/python/CohereEmbeddingFunction-__call__
 sidebar_label: "__call__()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation in CohereEmbeddingFunction takes a list of text strings and directly encodes them into vector embeddings. | Python"
@@ -10,15 +13,15 @@ type: docx
 token: P2n8d2wQtoK8YqxnccocmNwRnKb
 sidebar_position: 4
 keywords: 
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
-  - Embedding model
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
   - zilliz
   - zilliz cloud
   - cloud
   - \_\_call()\_\_
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

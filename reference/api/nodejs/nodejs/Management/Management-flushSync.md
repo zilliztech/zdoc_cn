@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "flushSync() | Node.js"
 slug: /node/node/Management-flushSync
 sidebar_label: "flushSync()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation manually seals a segment and persists the data on disk. It is recommended that this operation be called after all the data has been inserted into a collection. This is the synchronous function that ensures the flush operation is complete before the function returns. | Node.js"
 type: docx
 token: QsTwdUbgyoZPV1xzCBxchX8Fnid
-sidebar_position: 7
+sidebar_position: 8
 keywords: 
-  - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud
   - flushSync()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

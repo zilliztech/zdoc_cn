@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "S3ConnectParam | Python"
 slug: /python/python/RemoteBulkWriter-S3ConnectParam
 sidebar_label: "S3ConnectParam"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "An S3ConnectParam instance sets connection parameters for a RemoteBulkWriter instance. | Python"
@@ -10,15 +13,15 @@ type: docx
 token: CSpOd0XgWoVAhzx5xbVcpCVfnPg
 sidebar_position: 5
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
   - zilliz
   - zilliz cloud
   - cloud
   - S3ConnectParam
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

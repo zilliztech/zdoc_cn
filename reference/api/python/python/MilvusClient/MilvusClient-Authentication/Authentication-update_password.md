@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "update_password() | Python | MilvusClient"
 slug: /python/python/Authentication-update_password
 sidebar_label: "update_password()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation updates the password of a specific user. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: WGDod7Qehou4GWx4Co2cJ34VnKb
 sidebar_position: 20
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud
   - update_password()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "removePrivilegesFromGroup() | Node.js"
 slug: /node/node/Authentication-removePrivilegesFromGroup
 sidebar_label: "removePrivilegesFromGroup()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation removes privileges from a specific privilege group in Milvus. | Node.js"
 type: docx
 token: EeAfdukBNoIIgCxX248c6VULnOb
-sidebar_position: 20
+sidebar_position: 22
 keywords: 
-  - image similarity search
-  - Context Window
-  - Natural language search
-  - Similarity Search
+  - RAG
+  - NLP
+  - Neural Network
+  - Deep Learning
   - zilliz
   - zilliz cloud
   - cloud
   - removePrivilegesFromGroup()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

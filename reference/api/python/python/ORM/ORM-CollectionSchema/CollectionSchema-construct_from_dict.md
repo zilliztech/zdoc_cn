@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "construct_from_dict() | Python | ORM"
 slug: /python/python/CollectionSchema-construct_from_dict
 sidebar_label: "construct_from_dict()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation constructs a CollectionSchema object from a dictionary representation. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: DYuUdc503o1TANxuGozcXhCmnRN
 sidebar_position: 3
 keywords: 
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
+  - Faiss
+  - Video search
+  - AI Hallucination
+  - AI Agent
   - zilliz
   - zilliz cloud
   - cloud
   - construct_from_dict()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---
@@ -92,18 +95,4 @@ print(schema)
 # Output
 # {'auto_id': False, 'description': '', 'fields': [{'name': 'id', 'description': '', 'type': <DataType.INT64: 5>, 'is_primary': True, 'auto_id': False}, {'name': 'vector', 'description': '', 'type': <DataType.FLOAT_VECTOR: 101>, 'params': {'dim': 768}}]}
 ```
-
-## Related operations
-
-The following operations are related to `construct_from_dict()`:
-
-- [FieldSchema](./ORM-FieldSchema)
-
-- [DataType](./Collections-DataType)
-
-- [add_field()](./CollectionSchema-add_field)
-
-- [to_dict()](./CollectionSchema-to_dict)
-
-- [verify()](./CollectionSchema-verify)
 

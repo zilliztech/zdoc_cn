@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "has_index() | Python | ORM"
 slug: /python/python/Collection-has_index
 sidebar_label: "has_index()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation checks whether the current collection has a built index. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: WDk4dXY8IoV3SJxp9e7c3aq1nBh
 sidebar_position: 15
 keywords: 
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
   - has_index()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

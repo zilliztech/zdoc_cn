@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "releasePartitions() | Java | v2"
 slug: /java/java/v2-Partitions-releasePartitions
 sidebar_label: "releasePartitions()"
+added_since: v2.3.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation releases the partitions in a specified collection from memory. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: VsyQdDkXnoloWYxfjXNchc0dnng
 sidebar_position: 7
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
   - zilliz
   - zilliz cloud
   - cloud
   - releasePartitions()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -38,6 +41,7 @@ public void releasePartitions(ReleasePartitionsReq request)
 
 ```java
 releasePartitions(ReleasePartitionsReq.builder()
+    .databaseName(String databaseName)
     .collectionName(String collectionName)
     .partitionNames(List<String> partitionNames)
     .build()
@@ -45,6 +49,10 @@ releasePartitions(ReleasePartitionsReq.builder()
 ```
 
 **BUILDER METHODS:**
+
+- `databaseName(String databaseName)`
+
+    The name of the database to which the collection belongs.
 
 - `collectionName(String collectionName)`
 

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "create() | Python | ORM"
 slug: /python/python/Role-create
 sidebar_label: "create()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation creates the current role. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: G3h4d3jx6oXFHBxFZlyc9jLKnTO
 sidebar_position: 2
 keywords: 
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
   - information retrieval
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud
   - create()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

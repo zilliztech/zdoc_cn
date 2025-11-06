@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "CreateSchema() | Java | v2"
 slug: /java/java/v2-Collections-CreateSchema
 sidebar_label: "CreateSchema()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates a collection schema. | Java | v2"
 type: docx
 token: DAIfdXKk5oCHeNxOUvCc1KcpnNh
-sidebar_position: 23
+sidebar_position: 24
 keywords: 
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
   - zilliz
   - zilliz cloud
   - cloud
   - CreateSchema()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

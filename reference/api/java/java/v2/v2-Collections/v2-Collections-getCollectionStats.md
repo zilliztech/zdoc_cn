@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "getCollectionStats() | Java | v2"
 slug: /java/java/v2-Collections-getCollectionStats
 sidebar_label: "getCollectionStats()"
+added_since: v2.3.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the statistics collected on a specific collection. | Java | v2"
 type: docx
-token: XgfcdpBWCof3pfxhUudcRZajnPc
+token: E27SdesNPoKA8zx6jHkcejt0nWg
 sidebar_position: 17
 keywords: 
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
   - zilliz
   - zilliz cloud
   - cloud
   - getCollectionStats()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -38,12 +41,17 @@ public GetCollectionStatsResp getCollectionStats(GetCollectionStatsReq request)
 
 ```java
 getCollectionStats(GetCollectionStatsReq.builder()
+    .databaseName(String databaseName)
     .collectionName(String collectionName)
     .build()
 )
 ```
 
 **BUILDER METHODS:**
+
+- `databaseName(String databaseName)`
+
+    The name of the database to which the target collection belongs.
 
 - `collectionName(String collectionName)`
 

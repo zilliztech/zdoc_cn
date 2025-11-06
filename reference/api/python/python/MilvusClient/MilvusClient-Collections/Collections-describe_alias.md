@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "describe_alias() | Python | MilvusClient"
 slug: /python/python/Collections-describe_alias
 sidebar_label: "describe_alias()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation displays the details of an alias. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: HN7nddgueo3scIxmPXAcpjkFnDf
 sidebar_position: 8
 keywords: 
-  - IVF
-  - knn
-  - Image Search
-  - LLMs
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - knn algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - describe_alias()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

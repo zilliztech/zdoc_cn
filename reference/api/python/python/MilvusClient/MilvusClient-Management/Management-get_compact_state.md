@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "get_compact_state() | Python | MilvusClient"
 slug: /python/python/Management-get_compact_state
 sidebar_label: "get_compact_state()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation returns the status of the specified compaction job. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: WEsjdspGLokueRxggM1cNFgknze
 sidebar_position: 7
 keywords: 
-  - AI Hallucination
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - vectordb
   - zilliz
   - zilliz cloud
   - cloud
   - get_compact_state()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

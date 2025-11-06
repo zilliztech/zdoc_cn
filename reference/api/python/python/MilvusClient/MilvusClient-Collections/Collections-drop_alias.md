@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "drop_alias() | Python | MilvusClient"
 slug: /python/python/Collections-drop_alias
 sidebar_label: "drop_alias()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a specified collection alias. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: FpWXdmIuforYz9xUCsqclyCXnLe
 sidebar_position: 10
 keywords: 
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
-  - Video search
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
   - zilliz
   - zilliz cloud
   - cloud
   - drop_alias()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

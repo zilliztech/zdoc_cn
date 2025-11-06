@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "encode_queries() | Python"
 slug: /python/python/SpladeEmbeddingFunction-encode_queries
 sidebar_label: "encode_queries()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation takes in a list of query strings and encodes each query into a vector embedding. | Python"
@@ -10,15 +13,15 @@ type: docx
 token: S9zPdiLkpokjfkxfZ68cWIFynnd
 sidebar_position: 2
 keywords: 
-  - Vector search
-  - knn algorithm
-  - HNSW
-  - What is unstructured data
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
   - zilliz
   - zilliz cloud
   - cloud
   - encode_queries()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "queryIterator() | Node.js"
 slug: /node/node/Vector-queryIterator
 sidebar_label: "queryIterator()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation conducts a scalar filtering with a specified boolean expression. | Node.js"
 type: docx
 token: Ru8IdsrG8oayAWxly1PcqMGFnxd
-sidebar_position: 6
+sidebar_position: 7
 keywords: 
-  - Vector store
-  - open source vector database
-  - Vector index
-  - vector database open source
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud
   - queryIterator()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

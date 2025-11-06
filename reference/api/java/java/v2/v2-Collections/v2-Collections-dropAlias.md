@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "dropAlias() | Java | v2"
 slug: /java/java/v2-Collections-dropAlias
 sidebar_label: "dropAlias()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a specified collection alias. | Java | v2"
 type: docx
-token: MBy3dDXFbo0buwxkh0IczwLInPf
+token: ARw0dIb0hojCNbxKkOacs1K7nQf
 sidebar_position: 13
 keywords: 
-  - Unstructured Data
-  - vector database
-  - IVF
-  - knn
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - dropAlias()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -38,12 +41,17 @@ public void dropAlias(DropAliasReq request)
 
 ```java
 dropAlias(DropAliasReq.builder()
+    .databaseName(String databaseName)
     .alias(String alias)
     .build()
 )
 ```
 
 **BUILDER METHODS:**
+
+- `databaseName(String databaseName)`
+
+    The name of the database to which the target alias belongs.
 
 - `alias(String alias)`
 
@@ -78,6 +86,8 @@ MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
 // 2. Drop alias "test_alias"
 DropAliasReq dropAliasReq = DropAliasReq.builder()
+        .databaseName("my_database")
+        .collectionName("my_collection")
         .alias("test_alias")
         .build();
 client.dropAlias(dropAliasReq);

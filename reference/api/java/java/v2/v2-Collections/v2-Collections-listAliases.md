@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "listAliases() | Java | v2"
 slug: /java/java/v2-Collections-listAliases
 sidebar_label: "listAliases()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all existing aliases for a specific collection. | Java | v2"
 type: docx
-token: RvZDdxU1howmQ7x2V31c8eC7nJb
+token: X6JXdPN7IoRffJxnaZccBvRanIM
 sidebar_position: 19
 keywords: 
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
+  - rag llm architecture
+  - private llms
+  - nn search
+  - llm eval
   - zilliz
   - zilliz cloud
   - cloud
   - listAliases()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,8 +40,22 @@ public ListAliasResp listAliases()
 ## Request Syntax
 
 ```java
-MilvusClientV2.listAliases()
+MilvusClientV2.listAliases(ListAliasesReq.builder()
+    .databaseName(String databaseName)
+    .collectionName(String collectionName)
+    .build();
+)
 ```
+
+**BUILDER METHODS:**
+
+- `databaseName(String databaseName)`
+
+    The name of the database to which the target collection belongs.
+
+- `collectionName(String collectionName)`
+
+    The name of the target collection of this operation.
 
 **RETURN TYPE:**
 
@@ -82,7 +99,8 @@ MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
 // 2. List aliases
 ListAliasesReq listAliasesReq = ListAliasesReq.builder()
-        .collectionName("test")
+        .databaseName("my_database")
+        .collectionName("my_collection")
         .build();
 ListAliasResp listAliasResp = client.listAliases(listAliasesReq);
 ```

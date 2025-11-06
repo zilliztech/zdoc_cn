@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "alterCollectionField() | Java | v2"
 slug: /java/java/v2-Collections-alterCollectionField
 sidebar_label: "alterCollectionField()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation modifies the properties of a specified collection field. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: OtrZdy7OtoC9N9xb8TjcCtM7nfc
 sidebar_position: 2
 keywords: 
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud
   - alterCollectionField()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

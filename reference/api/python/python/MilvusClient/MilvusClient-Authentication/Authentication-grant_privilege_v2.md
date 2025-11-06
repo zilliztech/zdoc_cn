@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "grant_privilege_v2() | Python | MilvusClient"
 slug: /python/python/Authentication-grant_privilege_v2
 sidebar_label: "grant_privilege_v2()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation grants the specified privilege or privilege group to the specified role. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: EiTMdIbTgoc9vVxDHUQc1zPpnch
 sidebar_position: 11
 keywords: 
-  - RAG
-  - NLP
-  - Neural Network
-  - Deep Learning
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
   - zilliz
   - zilliz cloud
   - cloud
   - grant_privilege_v2()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

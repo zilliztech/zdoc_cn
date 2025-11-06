@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_bulk_insert_tasks() | Python | ORM"
 slug: /python/python/utility-list_bulk_insert_tasks
 sidebar_label: "list_bulk_insert_tasks()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists all bulk-insert tasks. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: T1CGdXeVkoG2yAxkualc1jVonRb
 sidebar_position: 23
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - what is vector db
   - zilliz
   - zilliz cloud
   - cloud
   - list_bulk_insert_tasks()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

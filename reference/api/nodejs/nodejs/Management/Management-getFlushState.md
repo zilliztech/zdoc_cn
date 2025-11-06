@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "getFlushState() | Node.js"
 slug: /node/node/Management-getFlushState
 sidebar_label: "getFlushState()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation returns the flush status of a specific segment. | Node.js"
 type: docx
 token: X8qWdMHg5oQQK6xZdBYcGNOnn3c
-sidebar_position: 8
+sidebar_position: 10
 keywords: 
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
   - zilliz
   - zilliz cloud
   - cloud
   - getFlushState()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

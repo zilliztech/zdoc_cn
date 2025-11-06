@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "do_bulk_insert() | Python | ORM"
 slug: /python/python/utility-do_bulk_insert
 sidebar_label: "do_bulk_insert()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation bulk-inserts data from specified files. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: BpqpdBWdyoxbmzx0GGCcQxksnBc
 sidebar_position: 8
 keywords: 
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
+  - LLMs
+  - Machine Learning
+  - RAG
+  - NLP
   - zilliz
   - zilliz cloud
   - cloud
   - do_bulk_insert()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---
@@ -67,7 +70,7 @@ do_bulk_insert(
     <ul>
     <li>A valid set of NumPy files should be named after the fields in the schema of the target collection, and the data in them should match the corresponding field definitions. </li>
     </ul>
-    <p>If the target collection allows dynamic fields, create an extra file named <strong>$meta.npy</strong> to include the dynamic fields and their values.</p>
+    <p>If the target collection allows dynamic fields, create an extra file named <strong>&#36;meta.npy</strong> to include the dynamic fields and their values.</p>
     <p>For details on preparing the source data files, refer to <a href="https://milvus.io/docs/bulk_insert.md">Insert Entities from Files</a>.</p>
     <ul>
     <li>You have to upload the source data files to the bucket defined by <code>minio.bucketname</code> in your Milvus configuration before running this operation. </li>

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "set_properties() | Python | ORM"
 slug: /python/python/Collection-set_properties
 sidebar_label: "set_properties()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation sets properties for the collection. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: ECmAdaYKboPTNlxqkLxcUEZ4nrh
 sidebar_position: 27
 keywords: 
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
   - zilliz
   - zilliz cloud
   - cloud
   - set_properties()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

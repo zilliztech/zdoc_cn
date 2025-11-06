@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "create_partition() | Python | MilvusClient"
 slug: /python/python/Partitions-create_partition
 sidebar_label: "create_partition()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates a partition in the target collection. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: I6hvdlYUuoUaw3xWqSnce4Fin9g
 sidebar_position: 1
 keywords: 
-  - RAG
-  - NLP
-  - Neural Network
-  - Deep Learning
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud
   - create_partition()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

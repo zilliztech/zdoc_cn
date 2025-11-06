@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "encode_documents() | Python"
 slug: /python/python/NomicEmbeddingFunction-encode_documents
 sidebar_label: "encode_documents()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation takes in documents and encodes them into vector embeddings. | Python"
@@ -10,15 +13,15 @@ type: docx
 token: H8ncdzr6roh9G6xQm8BcJFamnhf
 sidebar_position: 1
 keywords: 
-  - knn algorithm
-  - HNSW
-  - What is unstructured data
-  - Vector embeddings
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
   - zilliz
   - zilliz cloud
   - cloud
   - encode_documents()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

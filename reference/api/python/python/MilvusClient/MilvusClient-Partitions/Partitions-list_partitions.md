@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_partitions() | Python | MilvusClient"
 slug: /python/python/Partitions-list_partitions
 sidebar_label: "list_partitions()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the partitions in a specified collection. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: Dxgqdvlk5o2VScxqmL1ctc1Inqb
 sidebar_position: 5
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
   - zilliz
   - zilliz cloud
   - cloud
   - list_partitions()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

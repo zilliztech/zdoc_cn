@@ -3,22 +3,25 @@ displayed_sidbar: pythonSidebar
 title: "alter_collection_properties() | Python | MilvusClient"
 slug: /python/python/Collections-alter_collection_properties
 sidebar_label: "alter_collection_properties()"
+added_since: v2.4.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation alters the specified collection properties. | Python | MilvusClient"
 type: docx
-token: Pdljdj7ysoYg2Jxu7JrcQOB8n5e
+token: Pl7Fd8C3zocPaZx3VrAcl54Dnkd
 sidebar_position: 3
 keywords: 
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
   - zilliz
   - zilliz cloud
   - cloud
   - alter_collection_properties()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---
@@ -63,6 +66,10 @@ alter_collection_properties(
     - **partitionkey.isolation** (bool) -
 
         Whether to enable partition key isolation. For details, refer to [Use Partition Key](/docs/use-partition-key).
+
+    - **dynamicfield.enabled** (bool) -
+
+        Whether to enable the dynamic field. For details, refer to [Dynamic Field](/docs/enable-dynamic-field).
 
 - **timeout** (*Optional[float]*) - 
 

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "Role | Python | ORM"
 slug: /python/python/ORM-Role
 sidebar_label: "Role"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "A Role instance represents a role with specific privileges to access your . | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: LZL1d0kckouPXNxJLCmcwbCTnkG
 sidebar_position: 11
 keywords: 
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
   - zilliz
   - zilliz cloud
   - cloud
   - Role
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "addField() | Java | v2"
 slug: /java/java/v2-CollectionSchema-addField
 sidebar_label: "addField()"
+added_since: v2.3.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation adds a vector field to the schema of a collection. | Java | v2"
 type: docx
-token: HWEDdIvrxo3gskxlyKkcDdzVncd
+token: X6MudyTkmoIsE5x0XiKcbwPdntq
 sidebar_position: 1
 keywords: 
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
   - zilliz
   - zilliz cloud
   - cloud
   - addField()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -55,6 +58,7 @@ CollectionSchema.addField(AddFieldReq.builder()
     .analyzerParams(Map<String, Object> analyzerParams)
     .typeParams(Map<String, String> typeParams)
     .multiAnalyzerParams(Map<String, Object> multiAnalyzerParams)
+    .structFields(List<CreateCollectionReq.FieldSchema> structFields)
     .build()
 )
 ```
@@ -187,6 +191,12 @@ CollectionSchema.addField(AddFieldReq.builder()
 - `multiAnalyzerParams(Map<String, Object> multiAnalyzerParams)`
 
     A multi-language analyzer that allows you to configure multiple analyzers for a text field and store multilingual documents in this text field.
+
+- `structFields(List<CreateCollectionReq.FieldSchema> structFields)`
+
+    A list of fields in the Array of Structs field. 
+
+    This is required if **dataType** of this field is set to **DataType.Array** and **elementType** of this field is set to **DataType.Struct**.
 
 **RETURNS:**
 

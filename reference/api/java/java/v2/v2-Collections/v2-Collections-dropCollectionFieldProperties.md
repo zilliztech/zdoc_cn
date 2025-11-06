@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "dropCollectionFieldProperties() | Java | v2"
 slug: /java/java/v2-Collections-dropCollectionFieldProperties
 sidebar_label: "dropCollectionFieldProperties()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops the specified properties of a field. | Java | v2"
 type: docx
 token: O3E9duLvfoMC26x8AmDcomlWneh
-sidebar_position: 25
+sidebar_position: 26
 keywords: 
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud
   - dropCollectionFieldProperties()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

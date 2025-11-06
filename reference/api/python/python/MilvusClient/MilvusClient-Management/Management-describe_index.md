@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "describe_index() | Python | MilvusClient"
 slug: /python/python/Management-describe_index
 sidebar_label: "describe_index()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation describes a specific index. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: WhsHdyIgyoFlsQxNJt9cFCTxnDe
 sidebar_position: 4
 keywords: 
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
   - zilliz
   - zilliz cloud
   - cloud
   - describe_index()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

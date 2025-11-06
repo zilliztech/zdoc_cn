@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "load_state() | Python | ORM"
 slug: /python/python/utility-load_state
 sidebar_label: "load_state()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation returns the load status of a specific collection. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: BJysdlj1MoksHZxNRxicHn9fnSh
 sidebar_position: 33
 keywords: 
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - RAG
   - zilliz
   - zilliz cloud
   - cloud
   - load_state()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

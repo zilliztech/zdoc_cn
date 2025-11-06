@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "release_partitions() | Python | MilvusClient"
 slug: /python/python/Partitions-release_partitions
 sidebar_label: "release_partitions()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation releases the partitions in a specified collection from memory. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: VblKdUEU4o4t31xcFiicIGtjn9g
 sidebar_position: 7
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
   - zilliz
   - zilliz cloud
   - cloud
   - release_partitions()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

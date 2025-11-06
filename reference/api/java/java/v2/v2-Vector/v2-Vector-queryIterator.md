@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "queryIterator() | Java | v2"
 slug: /java/java/v2-Vector-queryIterator
 sidebar_label: "queryIterator()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This method returns a query iterator to iterate data. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: ByLVdf2nRocLcxxwH3Gc9CyFnbb
 sidebar_position: 6
 keywords: 
-  - semantic search
   - Anomaly Detection
   - sentence transformers
   - Recommender systems
+  - information retrieval
   - zilliz
   - zilliz cloud
   - cloud
   - queryIterator()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -70,7 +73,7 @@ queryIterator(QueryIteratorReq.builder()
 
 A value to define the number of entities returned per batch.
 
-- `consistencyLevel(ConsistencyLevel consistencyLevel)`
+- `consistencyLevel([ConsistencyLevel](./v2-Collections-ConsistencyLevel) consistencyLevel)`
 
     The consistency level of the target collection.
 

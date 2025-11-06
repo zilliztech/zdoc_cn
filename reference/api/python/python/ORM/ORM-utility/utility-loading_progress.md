@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "loading_progress() | Python | ORM"
 slug: /python/python/utility-loading_progress
 sidebar_label: "loading_progress()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation returns the load progress of a specific collection. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: HQiHd82orov0XvxAzLWcl5xRnzc
 sidebar_position: 31
 keywords: 
-  - private llms
-  - nn search
-  - llm eval
-  - Sparse vs Dense
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
   - zilliz
   - zilliz cloud
   - cloud
   - loading_progress()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

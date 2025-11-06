@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "describeIndex() | Node.js"
 slug: /node/node/Management-describeIndex
 sidebar_label: "describeIndex()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation describes a specific index. | Node.js"
 type: docx
 token: PePIdiq9po6cplxAoF6ca5C2ntb
-sidebar_position: 3
+sidebar_position: 4
 keywords: 
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
   - zilliz
   - zilliz cloud
   - cloud
   - describeIndex()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

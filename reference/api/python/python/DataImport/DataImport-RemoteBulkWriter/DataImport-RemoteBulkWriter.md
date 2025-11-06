@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "RemoteBulkWriter | Python"
 slug: /python/python/DataImport-RemoteBulkWriter
 sidebar_label: "RemoteBulkWriter"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "A RemoteBulkWriter instance writes your raw data in a format that Zilliz Cloud understands into an AWS-S3-compatible bucket. | Python"
@@ -10,15 +13,15 @@ type: docx
 token: BDP4dew9to9tQoxNEMPcBR5xnZb
 sidebar_position: 4
 keywords: 
+  - Deep Learning
   - Knowledge base
   - natural language processing
   - AI chatbots
-  - cosine distance
   - zilliz
   - zilliz cloud
   - cloud
   - RemoteBulkWriter
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

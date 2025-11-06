@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "drop_database_properties() | Python | MilvusClient"
 slug: /python/python/Database-drop_database_properties
 sidebar_label: "drop_database_properties()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops the setting of the specified properties. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: UPVjdLtz1ogFeKxP45wcqyKincc
 sidebar_position: 5
 keywords: 
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
   - zilliz
   - zilliz cloud
   - cloud
   - drop_database_properties()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

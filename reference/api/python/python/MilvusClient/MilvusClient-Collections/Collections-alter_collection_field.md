@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "alter_collection_field() | Python | MilvusClient"
 slug: /python/python/Collections-alter_collection_field
 sidebar_label: "alter_collection_field()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation changes the specified collection field parameters. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: G2jjdHvbBoko6BxBZj7csemWnFc
 sidebar_position: 2
 keywords: 
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud
   - alter_collection_field()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---
@@ -56,18 +59,6 @@ alter_collection_field(
 - **field_params** (*dict*) -
 
     The field parameters to change. The properties not mentioned remain unchanged. Possible parameters vary with the field type. 
-
-    - **max_length** (*int*) -
-
-        The maximum byte length for strings allowed to be inserted. Note that multibyte characters (e.g., Unicode characters) may occupy more than one byte each, so ensure the byte length of inserted strings does not exceed the specified limit. Value range: [1, 65,535].
-
-        This is mandatory for a **DataType.VARCHAR** field.
-
-    - **max_capacity** (*int*) -
-
-        The number of elements in an Array field value.
-
-        This is mandatory for a **DataType.ARRAY** field.
 
     - **mmap_enabled** (*bool*) -
 

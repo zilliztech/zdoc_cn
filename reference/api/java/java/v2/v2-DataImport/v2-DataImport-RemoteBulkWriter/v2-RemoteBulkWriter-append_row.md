@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "append_row() | Java | v2"
 slug: /java/java/v2-RemoteBulkWriter-append_row
 sidebar_label: "append_row()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation appends records to the writer. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: L115dnbLyoXAVSxkUKxcuK4gncf
 sidebar_position: 1
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
   - zilliz
   - zilliz cloud
   - cloud
   - append_row()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

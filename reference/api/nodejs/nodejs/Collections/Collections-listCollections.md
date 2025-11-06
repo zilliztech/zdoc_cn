@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "listCollections() | Node.js"
 slug: /node/node/Collections-listCollections
 sidebar_label: "listCollections()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all existing collections. | Node.js"
 type: docx
 token: Djg7dlb5NoINz9xOAs1cyY67nsh
-sidebar_position: 18
+sidebar_position: 15
 keywords: 
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
+  - rag llm architecture
+  - private llms
+  - nn search
+  - llm eval
   - zilliz
   - zilliz cloud
   - cloud
   - listCollections()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

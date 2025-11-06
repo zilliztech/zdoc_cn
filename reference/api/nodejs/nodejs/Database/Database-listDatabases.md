@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "listDatabases() | Node.js"
 slug: /node/node/Database-listDatabases
 sidebar_label: "listDatabases()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all existing databases. | Node.js"
@@ -10,15 +13,15 @@ type: docx
 token: Kp9Dd2dIgoxyDixuqtqctPZXnFb
 sidebar_position: 5
 keywords: 
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - milvus vector database
   - zilliz
   - zilliz cloud
   - cloud
   - listDatabases()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

@@ -3,21 +3,24 @@ title: "Rerankers | Python"
 slug: /python/Rerankers
 beta: false
 notebook: false
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 description: "Reranking models for a sophisticated evaluation and refinement on retrieved results. | Python"
 type: folder
 token: Ph7xfldrplFoihdiSAkciCuenyh
 sidebar_position: 5
 sidebar_label: "Rerankers"
 keywords: 
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
-  - how does milvus work
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - RAG
   - zilliz
   - zilliz cloud
   - cloud
   - Rerankers
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 ---
 

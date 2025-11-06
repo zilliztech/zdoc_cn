@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "has_partition() | Python | MilvusClient"
 slug: /python/python/Partitions-has_partition
 sidebar_label: "has_partition()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation checks whether the specified partition exists in the specified collection. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: MxTAd0haboKnRrxQvoOckGghn1T
 sidebar_position: 4
 keywords: 
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
   - zilliz
   - zilliz cloud
   - cloud
   - has_partition()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "has_collection() | Python | MilvusClient"
 slug: /python/python/Collections-has_collection
 sidebar_label: "has_collection()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation checks whether a specific collection exists. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: SSQ6dFGdxouy7hxRwCOcatnEn0e
 sidebar_position: 14
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
   - zilliz
   - zilliz cloud
   - cloud
   - has_collection()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

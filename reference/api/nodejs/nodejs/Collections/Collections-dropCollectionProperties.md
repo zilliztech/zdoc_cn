@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "dropCollectionProperties() | Node.js"
 slug: /node/node/Collections-dropCollectionProperties
 sidebar_label: "dropCollectionProperties()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation resets the properties of a specific collection to their default values. | Node.js"
 type: docx
 token: EjFMdRFz0ofehXxxCPqc6raSnAg
-sidebar_position: 12
+sidebar_position: 11
 keywords: 
-  - Zilliz database
-  - Unstructured Data
-  - vector database
-  - IVF
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
   - zilliz
   - zilliz cloud
   - cloud
   - dropCollectionProperties()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

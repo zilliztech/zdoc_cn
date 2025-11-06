@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "revoke() | Python | ORM"
 slug: /python/python/Role-revoke
 sidebar_label: "revoke()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation revokes a privilege granted to the current role. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: UUJWdoEnjoXx69xahsScdMVSnzf
 sidebar_position: 10
 keywords: 
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud
   - revoke()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

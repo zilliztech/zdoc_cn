@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "close() | Python | MilvusClient"
 slug: /python/python/Client-close
 sidebar_label: "close()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation closes the current Milvus client. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: CWZGd48FJoFHXYx40NMcTd2FnKc
 sidebar_position: 1
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud
   - close()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---
