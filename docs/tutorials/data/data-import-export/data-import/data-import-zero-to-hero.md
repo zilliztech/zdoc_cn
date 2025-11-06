@@ -41,7 +41,7 @@ import TabItem from '@theme/TabItem';
 
 ### 在 Zilliz Cloud 上创建集群\{#set-up-your-zilliz-cloud-cluster}
 
-- 如果您还未创建任何集群，参考[此处创建一个集群](./create-cluster-on-demand)[此处创建一个集群](./create-cluster-byoc)。
+- 如果您还未创建任何集群，参考[此处创建一个集群](./create-cluster)。
 
 - 收集如下信息：**集群 Endpoint**、**API 密钥**、**集群 ID**。
 

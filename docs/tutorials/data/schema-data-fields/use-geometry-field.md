@@ -416,7 +416,7 @@ await milvusClient.loadCollection({
 
 其中：
 
-- `{operator}`：表示支持的几何运算符（例如 `ST_CONTAINS`、`ST_INTERSECTS`）。完整运算符列表请参阅 [Geometry 操作符](./undefined)。
+- `{operator}`：表示支持的几何运算符（例如 `ST_CONTAINS`、`ST_INTERSECTS`）。完整运算符列表请参阅 [Geometry 操作符](./geometry-operators)。
 
 - `geo_field`：表示在 Collection 的 Schema 中定义的 `GEOMETRY` 字段名。
 
@@ -424,7 +424,7 @@ await milvusClient.loadCollection({
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>某些运算符（如 <code>ST_DWITHIN</code>）可能需要额外的参数。有关各运算符的详细说明和使用示例，请参阅 <a href="./undefined">Geometry 操作符</a>。</p>
+<p>某些运算符（如 <code>ST_DWITHIN</code>）可能需要额外的参数。有关各运算符的详细说明和使用示例，请参阅 <a href="./geometry-operators">Geometry 操作符</a>。</p>
 
 </Admonition>
 
@@ -718,7 +718,7 @@ for (const hits of search_results.results) {
 
 要加速几何查询，可在 GEOMETRY 字段上创建 **RTREE** 索引。
 
-详细信息请参阅 [RTREE](./undefined)。
+详细信息请参阅 [RTREE](./rtree-index-type)。
 
 ## 常见问题\{#faq}
 
@@ -726,10 +726,10 @@ for (const hits of search_results.results) {
 
 不可以。几何数据不能插入动态字段。在插入几何数据之前，请确保已在 Collection 的 Schema 中显式定义 GEOMETRY 字段。
 
-### GEOMETRY 字段是否支持 mmap 功能？\{##Does-the-GEOMETRY-field-support-the-mmap-feature}
+### GEOMETRY 字段是否支持 mmap 功能？\{#Does-the-GEOMETRY-field-support-the-mmap-feature}
 
 支持。GEOMETRY 字段支持 mmap。更多信息请参阅[使用 mmap](./use-mmap)。
 
-### GEOMETRY 字段是否可以设置为可空 (nullable) 或指定默认值？\{##Can-I-define-the-GEOMETRY-field-as-nullable-or-set-a-default-value}
+### GEOMETRY 字段是否可以设置为可空 (nullable) 或指定默认值？\{#Can-I-define-the-GEOMETRY-field-as-nullable-or-set-a-default-value}
 
 可以。GEOMETRY 字段支持 nullable 属性，并可设置 WKT 格式 的默认值。更多信息请参考 [Nullable 和默认值](./nullable-and-default)。

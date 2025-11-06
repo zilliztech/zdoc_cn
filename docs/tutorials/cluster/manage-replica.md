@@ -43,7 +43,7 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 ## 设置按量计费集群 Replica\{#configure-replicas-for-usage-based-cluster}
 
-设置 Replica 的操作会影响集群每月的 CU 费用。存储费用不会受到影响。更多详情，请参考[预估费用](./undefined)。
+设置 Replica 的操作会影响集群每月的 CU 费用。存储费用不会受到影响。更多详情，请参考[了解费用](./understand-cost)。
 
 ### 使用限制\{#limits}
 
