@@ -132,33 +132,27 @@ import Admonition from '@theme/Admonition';
      <th><p>推荐操作</p></th>
    </tr>
    <tr>
-     <td><p><strong>资源</strong></p></td>
-     <td></td>
-     <td></td>
-     <td></td>
-   </tr>
-   <tr>
      <td><p>Query CU 计算资源</p></td>
      <td><p>%</p></td>
-     <td><p>相对于 CU 总计算能力的已使用计算能力的度量。</p><p>该指标仅适用于 <strong>Dedicated 企业版</strong> 或 <strong>BYOC</strong>。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
+     <td><p>相对于 CU 总计算能力的已使用计算能力的度量。</p><p>有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
      <td><p><strong>70%-80%</strong>：检查服务状态并准备<a href="./manage-cluster">扩容</a>。 </p><p><strong>> 90%</strong>：立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p></td>
    </tr>
    <tr>
      <td><p>Query CU 加载容量</p></td>
      <td><p>%</p></td>
-     <td><p>相对于 CU 总容量的已使用容量的度量。</p><p>该指标仅适用于 <strong>Free</strong>, <strong>Dedicated 企业版</strong> 或 <strong>BYOC</strong>。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
+     <td><p>相对于 CU 总容量的已使用容量的度量。</p><p>有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
      <td><p><strong>70%-80%</strong>：检查服务状态并准备<a href="./manage-cluster">扩容</a>。 </p><p><strong>> 90%</strong>：立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p><p><strong>100%</strong>：当 CU 加载容量达到 100% 时，您将无法向集群写入数据。请立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p></td>
    </tr>
    <tr>
      <td><p>Query CU 总数</p></td>
      <td><p>个</p></td>
-     <td><p>当前集群中 Query CU 总数。该数值可以通过集群 Query CU × Replica 数量计算得出。 </p><p>例如，如果集群的 Query CU为 2，Replica 数量为 2，则此处显示的Query CU 规格总数为 4。</p><p>该指标仅适用于 <strong>Dedicated 企业版</strong> 或 <strong>BYOC</strong>。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
+     <td><p>当前集群中 Query CU 总数。该数值可以通过集群 Query CU × Replica 数量计算得出。 </p><p>例如，如果集群的 Query CU为 2，Replica 数量为 2，则此处显示的Query CU 规格总数为 4。</p><p>有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
      <td><p>监控该指标，可以识别 Query CU 的<a href="./scale-cluster">扩缩容</a>事件。</p></td>
    </tr>
    <tr>
      <td><p>Replica 数量</p></td>
      <td><p>个</p></td>
-     <td><p>当前集群中的 Replica 数量。</p><p>该指标仅适用于 <strong>Dedicated 企业版</strong> 或 <strong>BYOC</strong>。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
+     <td><p>当前集群中的 Replica 数量。</p><p>有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
      <td><p>监控该指标，可以识别 Replica 的<a href="./manage-replica">扩缩容</a>事件。</p></td>
    </tr>
    <tr>
@@ -217,19 +211,19 @@ import Admonition from '@theme/Admonition';
    <tr>
      <td><p>慢查询数量</p></td>
      <td><p>次/分钟</p></td>
-     <td><p>统计慢查询数量，包括 search 和 query 请求数。默认情况下，查询延时超过 5 秒的查询被视为慢查询。</p><p>该指标仅适用于 <strong>Dedicated 企业版</strong> 或 <strong>BYOC</strong>。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
+     <td><p>统计慢查询数量，包括 search 和 query 请求数。默认情况下，查询延时超过 5 秒的查询被视为慢查询。</p><p>。</p></td>
      <td><p>通过适当调整集群配置，可以识别存在问题的查询并优化性能。</p></td>
    </tr>
    <tr>
      <td><p>集群写入性能使用率</p></td>
      <td><p>%</p></td>
-     <td><p>集群的 insert/upsert 操作存在相应的速率限制。当前写入速率与限制的比值即为集群的写入性能利用率。</p><p>该指标仅适用于 <strong>Dedicated 企业版</strong> 或 <strong>BYOC</strong>。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
+     <td><p>集群的 insert/upsert 操作存在相应的速率限制。当前写入速率与限制的比值即为集群的写入性能利用率。</p><p>。</p></td>
      <td><p>如果该利用率过高（建议超过 80%），建议您降低写入速率。</p></td>
    </tr>
    <tr>
      <td><p>Flush 次数</p></td>
      <td><p>次/分钟</p></td>
-     <td><p>统计对集群操作的 flush 次数。</p><p>该指标仅适用于 <strong>Dedicated 企业版</strong> 或 <strong>BYOC</strong>。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
+     <td><p>统计对集群操作的 flush 次数。</p><p>。</p></td>
      <td><p>过于频繁的 flush 操作会影响集群的整体性能。有关 flush 操作的相关限制，请参阅<a href="./limits#flush">使用限制</a>。</p></td>
    </tr>
 </table>

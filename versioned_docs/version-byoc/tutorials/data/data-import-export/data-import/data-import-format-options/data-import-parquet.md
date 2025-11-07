@@ -180,27 +180,18 @@ Zilliz Cloud 针对导入 Parquet 格式的文件时设置了如下限制。
 <table>
    <tr>
      <th><p><strong>导入方式</strong></p></th>
-     <th><p><strong>集群版本</strong></p></th>
      <th><p><strong>单次导入最大文件数</strong></p></th>
      <th><p><strong>单个文件最大大小上限</strong></p></th>
      <th><p><strong>单次导入总文件大小</strong></p></th>
    </tr>
    <tr>
      <td><p>本地文件导入</p></td>
-     <td><p>所有版本</p></td>
      <td><p>1 个文件</p></td>
      <td><p>1 GB</p></td>
      <td><p>1 GB</p></td>
    </tr>
    <tr>
-     <td rowspan="2"><p>对象存储桶导入</p></td>
-     <td><p>Free</p></td>
-     <td><p>1,000 个文件</p></td>
-     <td><p>1 GB</p></td>
-     <td><p>1 GB</p></td>
-   </tr>
-   <tr>
-     <td><p>Serverless &amp; Dedicated</p></td>
+     <td><p>对象存储桶导入</p></td>
      <td><p>1,000 个文件</p></td>
      <td><p>10 GB</p></td>
      <td><p>1 TB</p></td>

@@ -35,13 +35,7 @@ Zilliz Cloud 在集群和 Collection 之间引入了一层 **Database**，可帮
 
 下图展示了 Zilliz Cloud 资源层级的架构。
 
-![HBJew3E05hLhtObS4jZcUV0Nnig](/img/HBJew3E05hLhtObS4jZcUV0Nnig.png)
-
-通过上图可以看到，仅 Dedicated 集群下有 Database 层。 Serverless 和 Free 集群下无 Database 层。
-
-## 前提条件\{#prerequisites}
-
-您需要具备**组织管理员**或**项目管理员**权限。
+![S5U6wtYJ3hqBoabccIQcPXdVnsd](/img/S5U6wtYJ3hqBoabccIQcPXdVnsd.png)
 
 ## 创建 Database\{#create-database}
 

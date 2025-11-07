@@ -105,7 +105,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>向量字段（每个 Collection）</p></td>
-     <td><ul><li><p>Free &amp; Serverless：4</p></li><li><p>Dedicated：10</p></li></ul></td>
+     <td><p>10</p></td>
    </tr>
 </table>
 
@@ -321,17 +321,9 @@ Shard 的数量上限取决于 CU 规格。
 
 每个搜索请求/响应的大小不应超过 **64** MB。
 
-根据集群部署方式，每个搜索请求携带的查询向量（**nq**）上限有所不同：
+根据集群部署方式，每个搜索请求携带的查询向量（**nq**）上限有所不同最多不超过 16,384 个。
 
-- Free 和 Serverless 集群：**nq** 不超过 **10**
-
-- Dedicated 集群：**nq** 不超过 **16384**
-
-根据集群部署方式，每个搜索响应返回的 Entity 数量（**topK**）上限有所不同：
-
-- Free 和 Serverless 集群：**topK** 不超过 **1024**
-
-- Dedicated 集群：**topK** 不超过 **16384**
+根据集群部署方式，每个搜索响应返回的 Entity 数量（**topK**）上限有所不同最多不超过 16,384 个。
 
 ### Query\{#query}
 
@@ -354,29 +346,6 @@ Shard 的数量上限取决于 CU 规格。
 单 Collection 支持最多 **10,000** 个正在运行或待运行的数据导入任务。
 
 此外，Zilliz Cloud 还对导入的文件大小有以下限制。
-
-<table>
-   <tr>
-     <th><p>文件类型</p></th>
-     <th><p>本地导入</p></th>
-     <th><p>对象存储导入</p></th>
-   </tr>
-   <tr>
-     <td><p>JSON</p></td>
-     <td><p>1 GB</p></td>
-     <td><p><strong>Free</strong>: 单次导入总文件大小最大为 1 GB，单个文件大小最大为 1 GB，单次最多导入 1,000 个文件。</p><p><strong>Serverless & Dedicated</strong>: 单次导入总文件大小最大为 1 TB，单个文件大小最大为 10 GB，单次最多导入 1,000 个文件。</p></td>
-   </tr>
-   <tr>
-     <td><p>Parquet</p></td>
-     <td><p>1 GB</p></td>
-     <td><p><strong>Free</strong>: 单次导入总文件大小最大为 1 GB，单个文件大小最大为 1 GB，单次最多导入 1,000 个文件。</p><p><strong>Serverless & Dedicated</strong>: 单次导入总文件大小最大为 1 TB，单个文件大小最大为 10 GB，单次最多导入 1,000 个文件。</p></td>
-   </tr>
-   <tr>
-     <td><p>Numpy</p></td>
-     <td><p>暂不支持</p></td>
-     <td><p><strong>Free</strong>: 单次导入总文件大小最大为 1 GB，单个文件大小最大为 1 GB，单次最多导入 1,000 个文件。</p><p><strong>Serverless & Dedicated</strong>: 单次导入总文件大小最大为 1 TB，单个子文件夹大小最大为 10 GB，单次最多导入 1,000 个子文件夹。</p></td>
-   </tr>
-</table>
 
 请参阅[支持的对象存储](./data-import-storage-options)和[支持的数据格式](./data-import-format-options)了解更多。
 
@@ -404,4 +373,8 @@ Shard 的数量上限取决于 CU 规格。
      <td><p>IP 白名单中最多可添加 100 个 IP 地址。</p></td>
    </tr>
 </table>
+
+## 迁移\{#migrations}
+
+您可以将数据从其他供应商迁移到您的 Zilliz Cloud 集群，每次迁移的最大集合数量会因您的 Zilliz Cloud 集群而异。每次迁移最多可以迁移 **10** 个 Collection。
 

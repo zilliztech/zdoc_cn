@@ -31,6 +31,12 @@ import Admonition from '@theme/Admonition';
 
 作为 [Numpy 标准二进制文件格式](https://numpy.org/devdocs/reference/generated/numpy.lib.format.html)，`.npy` 格式用于存放单个数组及其形状和数据类型信息，以便在不同机器上正确重构。
 
+<Admonition type="danger" icon="🚧" title="警告">
+
+<p>此特性已经废弃，请勿用于生产目的。</p>
+
+</Admonition>
+
 建议您[使用 BulkWriter](./use-bulkwriter) 工具将您的原始数据转换为 `.npy` 文件。下图演示了您的原始数据如何映射到 `.npy` 文件中。
 
 ![numpy_file_structure_zh](/img/numpy_file_structure_zh.png)
@@ -170,24 +176,16 @@ Zilliz Cloud 支持从您的云存储中导入数据。下表罗列了 Zilliz Cl
 <table>
    <tr>
      <th><p><strong>导入方式</strong></p></th>
-     <th><p><strong>集群版本</strong></p></th>
      <th><p><strong>单次导入最大子文件夹数</strong></p></th>
      <th><p><strong>单个子文件夹最大大小上限</strong></p></th>
      <th><p><strong>单次导入总文件大小</strong></p></th>
    </tr>
    <tr>
      <td><p>本地文件导入</p></td>
-     <td colspan="4"><p>不支持</p></td>
+     <td colspan="3"><p>不支持</p></td>
    </tr>
    <tr>
-     <td rowspan="2"><p>对象存储桶导入</p></td>
-     <td><p>Free</p></td>
-     <td><p>1,000 个文件</p></td>
-     <td><p>1 GB</p></td>
-     <td><p>1 GB</p></td>
-   </tr>
-   <tr>
-     <td><p>Serverless &amp; Dedicated</p></td>
+     <td><p>对象存储桶导入</p></td>
      <td><p>1,000 个文件</p></td>
      <td><p>10 GB</p></td>
      <td><p>1 TB</p></td>
