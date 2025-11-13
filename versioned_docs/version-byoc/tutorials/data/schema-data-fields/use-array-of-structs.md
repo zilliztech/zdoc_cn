@@ -115,7 +115,7 @@ Struct Array 用于有序存放元素数据类型为 Struct 的 Array。Array �
 
     Collection 中的所有向量字段都需要建立索引。对于 Struct Array 字段中的向量字段，Zilliz Cloud 使用 EmbeddingList 来组织各 Struct 元素中相同字段的向量，并为每个 EmbeddingList 创建索引。
 
-    您可以使用 `HNSW` 作为索引类型，并使用下表中列出的索引类型为 EmbeddingList 创建索引。
+    您可以使用 `AUTOINDEX` 或 `HNSW` 作为索引类型，并使用下表中列出的索引类型为 EmbeddingList 创建索引。
 
     <table>
        <tr>
@@ -124,22 +124,15 @@ Struct Array 用于有序存放元素数据类型为 Struct 的 Array。Array �
          <th><p>备注</p></th>
        </tr>
        <tr>
-         <td rowspan="5"><p><code>HNSW</code></p></td>
+         <td rowspan="3"><p><code>AUTOINDEX</code></p></td>
          <td><p><code>MAX_SIM_COSINE</code></p></td>
-         <td rowspan="3"><p>适用于如下类型的 EmbeddingList：</p><ul><li><p>FLOAT_VECTOR</p></li><li><p>FLOAT16_VECTOR</p></li><li><p>BFLOAT16_VECTOR</p></li><li><p>INT8_VECTOR</p></li></ul></td>
+         <td rowspan="3"><p>适用于如下类型的 EmbeddingList：</p><ul><li>FLOAT_VECTOR</li></ul></td>
        </tr>
        <tr>
          <td><p><code>MAX_SIM_IP</code></p></td>
        </tr>
        <tr>
          <td><p><code>MAX_SIM_L2</code></p></td>
-       </tr>
-       <tr>
-         <td><p><code>MAX_SIM_HAMMING</code></p></td>
-         <td rowspan="2"><p>适用于 BINARY_VECTOR 类型的 EmbeddingList。</p></td>
-       </tr>
-       <tr>
-         <td><p><code>MAX_SIM_JACCARD</code></p></td>
        </tr>
     </table>
 
@@ -348,26 +341,22 @@ const schema = [
 ```bash
 # restful
 SCHEMA='{
-  "autoID": "true"
+  "autoID": true,
   "fields": [
     {
       "fieldName": "id",
       "dataType": "Int64",
-      "isPrimary": true,
+      "isPrimary": true
     },
     {
       "fieldName": "title",
       "dataType": "VarChar",
-      "elementTypeParams": {
-        "max_length": "512"
-      }
+      "elementTypeParams": { "max_length": "512" }
     },
     {
       "fieldName": "author",
       "dataType": "VarChar",
-      "elementTypeParams": {
-        "max_length": "512"
-      }
+      "elementTypeParams": { "max_length": "512" }
     },
     {
       "fieldName": "year_of_publication",
@@ -376,29 +365,26 @@ SCHEMA='{
     {
       "fieldName": "title_vector",
       "dataType": "FloatVector",
-      "elementTypeParams": {
-        "dim": "5"
-      }
+      "elementTypeParams": { "dim": "5" }
     }
   ],
   "structArrayFields": [
     {
       "name": "chunks",
       "description": "Array of document chunks with text and vectors",
+      "elementTypeParams":{
+         "max_capacity": 1000
+      },
       "fields": [
         {
           "fieldName": "text",
           "dataType": "VarChar",
-          "elementTypeParams": {
-            "max_length": "65535"
-          }
+          "elementTypeParams": { "max_length": "65535" }
         },
         {
           "fieldName": "chapter",
           "dataType": "VarChar",
-          "elementTypeParams": {
-            "max_length": "512"
-          }
+          "elementTypeParams": { "max_length": "512" }
         },
         {
           "fieldName": "text_vector",
@@ -423,7 +409,7 @@ SCHEMA='{
 
 您需要为每个向量字段创建索引，无论该向量字段在 Collection Schema 中，还是在 Struct Array 字段中的 Struct 元素中。
 
-如需为一个 EmbeddingList 创建索引，您需要将其索引类型设置为 `HNSW`，然后使用 `MAX_SIM_COSINE` 作为相似度类型，以便让 Zilliz Cloud clusters 度量两个 EmbedingList 的相似度。
+如需为一个 EmbeddingList 创建索引，您需要将其索引类型设置为 `AUTOINDEX` ，然后使用 `MAX_SIM_COSINE` 作为相似度类型，以便让 Zilliz Cloud clusters 度量两个 EmbedingList 的相似度。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
@@ -599,7 +585,7 @@ await milvusClient.createCollection({
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/create" \
   -H "Content-Type: application/json" \
   -d "{
-    \"collectionName\": \"book_collection\",
+    \"collectionName\": \"my_collection\",
     \"description\": \"A collection for storing book information with struct array chunks\",
     \"schema\": $SCHEMA,
     \"indexParams\": $INDEX_PARAMS
@@ -729,6 +715,31 @@ await milvusClient.insert({
 
 ```bash
 # restful
+curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/insert" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "collectionName": "my_collection",
+    "data": [
+      {
+        "title": "Walden",
+        "title_vector": [0.1, 0.2, 0.3, 0.4, 0.5],
+        "author": "Henry David Thoreau",
+        "year_of_publication": 1845,
+        "chunks": [
+          {
+            "text": "When I wrote the following pages, or rather the bulk of them...",
+            "text_vector": [0.3, 0.2, 0.3, 0.2, 0.5],
+            "chapter": "Economy"
+          },
+          {
+            "text": "I would fain say something, not so much concerning the Chinese and...",
+            "text_vector": [0.7, 0.4, 0.2, 0.7, 0.8],
+            "chapter": "Economy"
+          }
+        ]
+      }
+    ]
+  }'
 ```
 
 </TabItem>
@@ -921,6 +932,18 @@ const results = await milvusClient.search({
 
 ```bash
 # restful
+embeddingList1='[[0.2,0.9,0.4,-0.3,0.2]]'
+embeddingList2='[[-0.2,-0.2,0.5,0.6,0.9],[-0.4,0.3,0.5,0.8,0.2]]'
+curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/search" \
+  -H "Content-Type: application/json" \
+  -d "{
+    \"collectionName\": \"my_collection\",
+    \"data\": [$embeddingList1],
+    \"annsField\": \"chunks[text_vector]\",
+    \"searchParams\": {\"metric_type\": \"MAX_SIM_COSINE\"},
+    \"limit\": 3,
+    \"outputFields\": [\"chunks[text]\"]
+  }"
 ```
 
 </TabItem>
@@ -1053,6 +1076,16 @@ const results2 = await milvusClient.search({
 
 ```bash
 # restful
+curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/search" \
+  -H "Content-Type: application/json" \
+  -d "{
+    \"collectionName\": \"my_collection\",
+    \"data\": [$embeddingList1, $embeddingList2],
+    \"annsField\": \"chunks[text_vector]\",
+    \"searchParams\": {\"metric_type\": \"MAX_SIM_COSINE\"},
+    \"limit\": 3,
+    \"outputFields\": [\"chunks[text]\"]
+  }"
 ```
 
 </TabItem>

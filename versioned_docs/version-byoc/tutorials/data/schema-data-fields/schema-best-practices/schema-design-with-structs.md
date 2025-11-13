@@ -67,7 +67,7 @@ Struct Array 字段允许您将一组有序的 Structs 存入其中，每个 Str
 
 ### 为 Struct 中的向量字段创建索引\{#index-vector-fields-in-structs}
 
-索引对于向量字段是必需的，包括集合中的向量字段和在结构体中定义的向量字段。对于结构体中的向量字段，您应该使用 `HNSW` 作为索引类型，使用 `MAX_SIM` 系列相似度类型作为度量类型。
+索引对于向量字段是必需的，包括集合中的向量字段和在结构体中定义的向量字段。对于结构体中的向量字段，您应该使用 `AUTOINDEX` 作为索引类型，使用 `MAX_SIM` 系列相似度类型作为度量类型。
 
 关于 Struct Array 的更多限制，可以阅读[使用限制](./use-array-of-structs#limits)一节的内容。
 
@@ -404,14 +404,14 @@ CoVLA 数据集是一个大规模、多模态的驾驶数据集，包含 10000 �
 
 ### 步骤 3：配置索引参数\{#step-3-set-index-params}
 
-所有的向量字段都需要索引。为 Struct Array 字段中的向量字段创建索引，需要使用 `HNSW` 为索引类型，并在 `MAX_SIM` 系列相似度类型中选择合适的类型来度量 EmbeddingList 之间的相似度。
+所有的向量字段都需要索引。为 Struct Array 字段中的向量字段创建索引，需要使用 `AUTOINDEX` 为索引类型，并在 `MAX_SIM` 系列相似度类型中选择合适的类型来度量 EmbeddingList 之间的相似度。
 
 ```python
 index_params = client.prepare_index_params()
 
 index_params.add_index(
     field_name="captions[plain_cap_vector]", 
-    index_type="HNSW", 
+    index_type="AUTOINDEX", 
     metric_type="MAX_SIM_COSINE", 
     index_name="captions_plain_cap_vector_idx", # mandatory for now
     index_params={"M": 16, "efConstruction": 200}
@@ -419,7 +419,7 @@ index_params.add_index(
 
 index_params.add_index(
     field_name="captions[rich_cap_vector]", 
-    index_type="HNSW", 
+    index_type="AUTOINDEX", 
     metric_type="MAX_SIM_COSINE", 
     index_name="captions_rich_cap_vector_idx", # mandatory for now
     index_params={"M": 16, "efConstruction": 200}
@@ -427,7 +427,7 @@ index_params.add_index(
 
 index_params.add_index(
     field_name="captions[risk_vector]", 
-    index_type="HNSW", 
+    index_type="AUTOINDEX", 
     metric_type="MAX_SIM_COSINE", 
     index_name="captions_risk_vector_idx", # mandatory for now
     index_params={"M": 16, "efConstruction": 200}
