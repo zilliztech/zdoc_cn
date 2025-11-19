@@ -66,11 +66,11 @@ Stage 管理器用于保存一条到 Zilliz Cloud Stage 服务的连接。在管
 <TabItem value='python'>
 
 ```python
-from pymilvus.stage.stage_manager import StageManager
+from pymilvus.bulk_writer.stage_manager import StageManager
 
 stage_manager = StageManager(
     cloud_endpoint="https://api.cloud.zilliz.com.cn",
-    api_key="YOUR_API_KEY",
+    api_key="YOUR_API_KEY"
 )
 ```
 
@@ -116,7 +116,7 @@ stage_manager.create_stage(
     stage_name="my_stage"
 )
 
-print(f"\nStage {STAGE_NAME} created")
+print(f"\nStage my_stage created")
 
 # Stage my_stage created
 ```
@@ -184,7 +184,7 @@ stage_list = stage_manager.list_stages(
     page_size=10
 )
 
-print(f"\nlistStages results: ", stage_list.json()['data'])
+print(f"\nlistStages results: \n", stage_list.json()['data'])
 
 # listStages results: 
 # 
@@ -209,7 +209,7 @@ import com.google.gson.Gson;
 import io.milvus.bulkwriter.request.stage.ListStagesRequest;
 
 ListStagesRequest request = ListStagesRequest.builder()
-    .projectId(PROJECT_ID)
+    .projectId("proj-xxxxxxxxxxxxxxxxxxxxxxx")
     .currentPage(1)
     .pageSize(10)
     .build();
@@ -293,7 +293,7 @@ DeleteStageRequest request = DeleteStageRequest.builder()
 
 stageManager.deleteStage(request);
 
-System.out.printf("\nStage %s deleted%n", STAGE_NAME);
+System.out.printf("\nStage %s deleted%n", "my_stage");
 
 // Stage my_stage deleted
 ```
@@ -335,7 +335,7 @@ Stage 文件管理器用于保存一条到 Zilliz Cloud 控制面中指定 Stage
 <TabItem value='python'>
 
 ```python
-from pymilvus.stage.stage_file_manager import StageFileManager
+from pymilvus.bulk_writer.stage_file_manager import StageFileManager
 
 stage_file_manager = StageFileManager(
     cloud_endpoint='https://api.cloud.zilliz.com.cn',
@@ -374,7 +374,7 @@ StageFileManager stageFileManager = new StageFileManager(stageFileManagerParam);
 ```python
 result = stage_file_manager.upload_file_to_stage(
     source_file_path="/path/to/your/local/data/file", 
-    target_file_path="data/"
+    target_stage_path="data/"
 )
 
 print(f"\nuploadFileToStage results: {result}")
