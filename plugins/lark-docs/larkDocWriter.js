@@ -943,13 +943,10 @@ class larkDocWriter {
             return await this.__text_run(x, code['elements'], true)
         }))).join('') 
 
-        elements = elements.replace("zilliz.com\"", "zilliz.com.cn\"")
-                        .replace("\"gcp\"", "\"ali\"")
-                        .replace("\"aws\"", "\"ali\"")
-                        .replace("\"azure\"", "\"ali\"")
-                        .replace("\"gcp-us-west1\"", "\"ali-cn-hangzhou\"")
-                        .replace("\"aws-us-west-2\"", "\"ali-cn-hangzhou\"")
-                        .replace("\"az-westus3\"", "\"ali-cn-hangzhou\"")
+        elements = elements.replace(/zilliz.com([\n|"|'])/g, 'zilliz.com.cn$1')
+            .replace(/gcp-us-.*([\n|"|'])/g, 'ali-cn-hangzhou$1')
+            .replace(/aws-us-.*([\n|"|'])/g, 'ali-cn-hangzhou$1')
+            .replace(/azure-.*([\n|"|'])/g, 'ali-cn-hangzhou$1')
 
         if (valid_langs.includes(lang)) {
             const prev_type = prev ? this.block_types[prev['block_type']-1] : null;
