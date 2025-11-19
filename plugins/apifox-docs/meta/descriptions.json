@@ -150,8 +150,8 @@
         "description": "本系列 API 提供了提取、加载和转换数据的相关接口。"
     },
     {
-        "name": "stage-v2",
-        "description": "本系列 APIs 提供了管理 Zilliz Cloud Stage 的相关接口。"
+        "name": "volume-operations-v2",
+        "description": "本系列 API 提供了管理 Zilliz Cloud Volume 的相关接口。"
     },
     {
         "name": "project-operations-v2",
