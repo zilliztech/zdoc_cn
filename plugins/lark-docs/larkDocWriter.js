@@ -944,6 +944,9 @@ class larkDocWriter {
         }))).join('') 
 
         elements = elements.replace(/zilliz.com([\n|"|'])/g, 'zilliz.com.cn$1')
+            .replace(/gcp-.*.zillizcloud.com/g, 'ali-cn-hangzhou.zillizcloud.com')
+            .replace(/aws-.*.zillizcloud.com/g, 'ali-cn-hangzhou.zillizcloud.com')
+            .replace(/azure-.*.zillizcloud.com/g, 'ali-cn-hangzhou.zillizcloud.com')
             .replace(/gcp-us-.*([\n|"|'])/g, 'ali-cn-hangzhou$1')
             .replace(/aws-us-.*([\n|"|'])/g, 'ali-cn-hangzhou$1')
             .replace(/azure-.*([\n|"|'])/g, 'ali-cn-hangzhou$1')
