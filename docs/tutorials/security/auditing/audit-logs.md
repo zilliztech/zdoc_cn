@@ -1,7 +1,7 @@
 ---
-title: "VectoDB 审计日志 | Cloud"
+title: "VectorDB 审计日志 | Cloud"
 slug: /audit-logs
-sidebar_label: "VectoDB 审计日志"
+sidebar_label: "VectorDB 审计日志"
 beta: FALSE
 added_since: FALSE
 last_modified: FALSE
@@ -24,7 +24,7 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# VectoDB 审计日志
+# VectorDB 审计日志
 
 审计日志允许管理员跟踪和监控 Zilliz Cloud 集群上的用户驱动的操作和 API 调用。此功能提供了数据平面活动的详细记录，包括向量搜索、查询执行、索引管理和其他数据操作。
 
