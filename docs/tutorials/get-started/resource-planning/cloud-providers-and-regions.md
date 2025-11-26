@@ -72,6 +72,12 @@ Zilliz Cloud 支持在阿里云以下地域部署集群。
      <td><p>✔</p></td>
    </tr>
    <tr>
+     <td><p>新加坡</p></td>
+     <td><p>✖️</p></td>
+     <td><p>✖️</p></td>
+     <td><p>✔</p></td>
+   </tr>
+   <tr>
      <td><p>沙特（利雅得-合作伙伴运营）</p></td>
      <td><p>✖️</p></td>
      <td><p>✖️</p></td>

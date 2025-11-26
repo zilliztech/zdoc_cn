@@ -86,6 +86,11 @@ Zilliz Cloud 使用一组固定的 IP 地址从您的数据源中拉取数据，
      <td><p>美国（弗吉尼亚）</p></td>
      <td><p><code>47.253.55.20</code></p></td>
    </tr>
+   <tr>
+     <td><p>ap-southeast-1</p></td>
+     <td><p>新加坡</p></td>
+     <td><p><code>47.237.71.220</code></p></td>
+   </tr>
 </table>
 
 ### 腾讯云
