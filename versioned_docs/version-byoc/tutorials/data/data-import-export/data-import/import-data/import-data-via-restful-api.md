@@ -1,10 +1,13 @@
 ---
-title: "通过 RESTful API 导入 | Cloud"
+title: "通过 RESTful API 导入 | BYOC"
 slug: /import-data-via-restful-api
 sidebar_label: "RESTful API"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "本文介绍如何通过 RESTful API 将数据导入现有 Collection 中。 | Cloud"
+description: "本文介绍如何通过 RESTful API 将数据导入现有 Collection 中。 | BYOC"
 type: origin
 token: FzANwnN8siARelkAp4vcJVJNnnf
 sidebar_position: 2
@@ -25,7 +28,7 @@ import Admonition from '@theme/Admonition';
 
 本文介绍如何通过 RESTful API 将数据导入现有 Collection 中。
 
-## 开始前{#before-you-start}
+## 开始前\{#before-you-start}
 
 请确保已完成以下步骤：
 
@@ -33,9 +36,9 @@ import Admonition from '@theme/Admonition';
 
 - 已创建 Collection，且该 Collection 的 Schema 与示例数据集相匹配。详情请参见[创建 Collection](./manage-collections-sdks)。
 
-## 通过 RESTful API 导入数据{#import-data-using-the-restful-api}
+## 导入数据\{#import-data}
 
-要导入数据，需要先将数据上传到对象存储桶（如阿里云 OSS）。上传完成后，需获取文件路径和桶凭据，以便 Zilliz Cloud 从您的桶中提取数据。
+要从外部存储导入数据，需要先将数据上传到对象存储桶（如阿里云 OSS）。上传完成后，需获取文件路径和桶凭据，以便 Zilliz Cloud 从您的桶中提取数据。
 
 有关如何获取文件 URL 和访问密钥，请参见：
 
@@ -72,12 +75,12 @@ curl --request POST \
     }'
 ```
 
-在上述代码中，`${CLOUD_REGION_ID}` 代表您集群所在的云地域的 ID，`${TOKEN}` 是用于授权 API 请求的集群 API 密钥，`${CLUSTER_ID}` 是您的集群的 ID。在调用 API 时，请确保将这些占位符替换为您的实际值。您可以从集群的公共访问端点获取 `CLOUD_REGION_ID` 和 `CLUSTER_ID`。例如，在公共访问端点 **https://in03-3bf3c31f4248e22.api.ali-cn-hangzhou.cloud.zilliz.com.cn** 中，`CLOUD_REGION_ID` 是 **ali-cn-hangzhou**，`CLUSTER_ID` 是 **in03-3bf3c31f4248e22**。
+在上述代码中，`#{CLOUD_REGION_ID}` 代表您集群所在的云地域的 ID，`#{TOKEN}` 是用于授权 API 请求的集群 API 密钥，`#{CLUSTER_ID}` 是您的集群的 ID。在调用 API 时，请确保将这些占位符替换为您的实际值。您可以从集群的公共访问端点获取 `CLOUD_REGION_ID` 和 `CLUSTER_ID`。例如，在公共访问端点 **https://in03-3bf3c31f4248e22.api.ali-cn-hangzhou.cloud.zilliz.com.cn** 中，`CLOUD_REGION_ID` 是 **ali-cn-hangzhou**，`CLUSTER_ID` 是 **in03-3bf3c31f4248e22**。
 
 提交请求后，将返回任务 ID。您可以通过任务 ID 查询数据导入进度。示例代码如下：
 
 ```bash
-curl --request GET \
+curl --request POST \
      --url "https://api.cloud.zilliz.com.cn/v2/vectordb/jobs/import/getProgress" \
      --header "Authorization: Bearer ${TOKEN}" \
      --header "Accept: application/json" \
@@ -90,7 +93,7 @@ curl --request GET \
 
 有关更多信息，请参见[导入](/reference/restful/import)和[查看导入进度](/reference/restful/get-import-progress)。
 
-## 结果验证{#verify-the-result}
+## 结果验证\{#verify-the-result}
 
 如果请求返回以下类似内容，则表示数据导入成功：
 

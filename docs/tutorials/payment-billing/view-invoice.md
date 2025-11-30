@@ -3,11 +3,14 @@ title: "了解账单 | Cloud"
 slug: /view-invoice
 sidebar_label: "了解账单"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud 进行实际结算。 | Cloud"
 type: origin
 token: NhbHwPiL2i4KWskrcO4cDrSNnzh
-sidebar_position: 5
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz
@@ -41,13 +44,13 @@ Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud �
 
 </Admonition>
 
-## 解读账单{#understand-your-invoices}
+## 解读账单\{#understand-your-invoices}
 
 每张账单都包含几个关键组成部分。本节将通过一张示例账单，帮助您理解账单页面中每个部分。
 
 ![example-invoice-cn](/img/example-invoice-cn.png)
 
-### 账单计费周期{#billing-cycle}
+### 账单计费周期\{#billing-cycle}
 
 账单的计费周期显示在账单顶部，反映了计算费用的期间以及账单到期日。
 
@@ -67,7 +70,7 @@ Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud �
 
 - **账单逾期日（组织冻结）**：即组织冻结日。如果您未在催款期结束时成功付款，您的组织将立刻被冻结，账单状态转为“**已逾期”**。在此期间，您仍可支付账单。冻结 1 天后仍未付款，组织集群将被自动移至回收站。
 
-### 账单状态{#invoice-status}
+### 账单状态\{#invoice-status}
 
 在 Zilliz Cloud 中，账单状态代表付款过程中的不同阶段。下表解释了每种账单状态：
 
@@ -110,7 +113,7 @@ Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud �
    </tr>
 </table>
 
-### 账单详情{#invoice-summary}
+### 账单详情\{#invoice-summary}
 
 账单详情部分提供了总体费用的说明。账单详情包含以下几项数据。
 
@@ -132,7 +135,7 @@ Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud �
 
 </Admonition>
 
-### 费用（按计费方式汇总）{#summary-by-billing-method}
+### 费用（按计费方式汇总）\{#summary-by-billing-method}
 
 费用汇总根据计费方式分为两部分：
 
@@ -146,7 +149,7 @@ Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud �
 
 - **包年包月订单费用**：所有当月已支付的订单金额的总和。
 
-### 费用明细{#invoice-details}
+### 费用明细\{#invoice-details}
 
 费用明细部分提供按量计费费用的详细情况。费用明细部分的用量金额精度均为小数点后 2 位。
 
@@ -160,7 +163,7 @@ Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud �
 
     </Admonition>
 
-- **存储费用：**计算公式为`存储费用 = 存储文件大小 x 集群运行时长 x 存储单价`。其单位为“GB-Hour”，特指存储 1 GB 数据并保留 1 个小时的用量。**集群存储按小时计费。若存储不满 1 小时，仍按 1 小时收费**。
+- **存储费用**：计算公式为`存储费用 = 存储文件大小 x 集群运行时长 x 存储单价`。其单位为“GB-Hour”，特指存储 1 GB 数据并保留 1 个小时的用量。**集群存储按小时计费。若存储不满 1 小时，仍按 1 小时收费**。
 
     <Admonition type="info" icon="📘" title="说明">
 
@@ -174,17 +177,19 @@ Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud �
 
 - **写入费用**：即用即付，基于写入数据量计算 vCU 消耗量。`写入费用 = vCU 用量 x vCU 单价`。若Serverless 集群中无操作，则不计费或仅计算存储费用。
 
-### 账单信息{#billing-profile}
+### 账单信息\{#billing-profile}
 
-账单信息板块包含了开具账单的对象名称、公司和邮箱。如需编辑账单信息，请前往账单概览页，点击账单信息区域的**编辑**按钮。
+账单信息板块包含了开具账单的对象名称、公司和邮箱。账单信息中输入的邮箱将同组织管理员和组织账单管理员一同收到账单相关邮件。因此，如需增加账单接收人，您可以直接在账单信息中添加接收人的邮件地址或[邀请](./organization-users)新用户以组织账单管理员身份加入组织。
+
+如需编辑账单信息，请前往账单概览页，点击账单信息区域的**编辑**按钮。
 
 ![edit-billing-profile-cn](/img/edit-billing-profile-cn.png)
 
-## 管理账单{#manage-invoices}
+## 管理账单\{#manage-invoices}
 
 如果您具备组织管理员或账单管理员权限，您可以查看、确认、支付、下载账单。
 
-### 查看账单列表{#list-all-invoices}
+### 查看账单列表\{#list-all-invoices}
 
 <Tabs groupId="cluster" defaultValue="console" values={[{"label":"Cloud 控制台","value":"console"},{"label":"cURL","value":"bash"}]}>
 
@@ -256,7 +261,7 @@ curl --request GET \
 
 </Tabs>
 
-### 查看账单详情{#view-the-details-of-a-specific-invoice}
+### 查看账单详情\{#view-the-details-of-a-specific-invoice}
 
 <Tabs groupId="cluster" defaultValue="console" values={[{"label":"Cloud 控制台","value":"console"},{"label":"cURL","value":"bash"}]}>
 
@@ -329,7 +334,7 @@ curl --request GET \
 
 </Tabs>
 
-### 确认账单{#confirm-invoice}
+### 确认账单\{#confirm-invoice}
 
 账单出账后，将自动进入**待确认**状态，此时需要您在该账单的账单详情中手动确认账单。
 
@@ -339,19 +344,19 @@ curl --request GET \
 
 ![confirm-invoice-cn](/img/confirm-invoice-cn.png)
 
-### 支付账单{#pay-invoice}
+### 支付账单\{#pay-invoice}
 
 账单逾期后，可以先检查您的优惠券余额和现金余额，然后尝试重新支付账单。
 
 ![pay-invoice-cn](/img/pay-invoice-cn.png)
 
-### 下载账单{#download-invoice}
+### 下载账单\{#download-invoice}
 
 如需下载账单，请点击目标账单右侧的下载按钮。
 
 ![download-invoices-cn](/img/download-invoices-cn.png)
 
-## 常见问题{#troubleshooting-faq}
+## 常见问题\{#troubleshooting-faq}
 
 #### **什么是月度账单？月度账单的起始时间是什么？**
 
@@ -361,49 +366,11 @@ curl --request GET \
 
 #### **Zilliz Cloud 账单金额的精度为多少？**
 
-**说明：**Zilliz Cloud 产品价格精度为小数点后 8 位。因此在计费过程中会产生小数点后 8 位的费用。Zilliz Cloud 实际和客户结算过程中会将包含 8 位小数点的费用汇总，随后根据按日汇总后金额的第 3 位小数进行四舍五入。
+Zilliz Cloud 的计费精度为 **10 位小数**，所有账单均按此精度计算。每日费用会先进行汇总，并在计费过程中四舍五入至 10 位小数。
 
-在 Zilliz Cloud 界面的账单详情页，展示的金额精度均为 2 位小数（例如：¥60.00）。
+- **RESTful API**：所有数值（如单价、用量、用量金额）始终返回**精确到 10 位小数**。如果不足 10 位小数，则会在末尾补零以保持 10 位。更多关于如何使用 RESTful API 的信息，请参阅[查询日用量](/reference/restful/query-daily-usage-v2) 。
 
-通过 Zilliz Cloud 账单 API 接口[查看发票列表](/reference/restful/list-invoices-v2)和[查看发票详情](/reference/restful/describe-invoice-v2)获取的账单金额单位为分，需要四舍五入为两位小数。以下为[查看发票详情](/reference/restful/describe-invoice-v2)接口的返回示例：
-
-```bash
-{
-    "code": 0,
-    "data": {
-        "id": "inv-12312io23810o291",
-        "orgId": "org-xxxxxx",
-        "periodStart": "2024-01-01T00:00:00Z",
-        "periodEnd": "2024-02-01T00:00:00Z",
-        "invoiceDate": "2024-02-01T00:00:00Z",
-        "dueDate": "2024-02-01T00:00:00Z",
-        "currency": "RMB",
-        "status": "unpaid",
-        "usageAmount": 52400,
-        "creditsApplied": 12400,
-        "alreadyBilledAmount": 0,
-        "subtotal": 40000,
-        "tax": 5000,
-        "total": 45000,
-        "advancePayAmount": 0,
-        "amountDue": 45000
-    }
-}
-```
-
-如需对账，建议您使用[查询日用量](/reference/restful/query-daily-usage-v2)的 API 接口获取精度为 8 为小数的日用量明细。每日用量统计起始时间为当日的 0 点至次日的 0 点。例如 2024 年 8 月 1 日的日用量统计起始时间为 2024 年 8 月 1 日 00:00:00 至 2024 年 8 月 2 日 00:00:00。将每日用量的金额加总后，您将获取一个精度为 8 位的用量总金额，对该金额从第 3 位小数进行四舍五入后，您可以获得一个精度为 2 位小数的月用量总金额，该金额与界面上账单详情页展示的总用量金额一致。
-
-**示例：**假设您在对账时，先通过[查询日用量](/reference/restful/query-daily-usage-v2)接口获取了 2024 年 8 月 1 日至今（2024 年 8 月 3 日）的 3 条日用量信息。每条用量信息中的金额精度均为 8 位小数。
-
-- 8 月 1 日用量总金额 `total`：¥105.03331200
-
-- 8 月 2 日用量总金额 `total`：¥92.03000245
-
-- 8 月 3 日用量总金额 `total`：¥114.25300000
-
-将三个日用量总金额相加，总和为 ¥311.31631445，根据第 3 位小数四舍五入后为 ¥311.32。该数字应与界面账单详情中展示的用量总金额一致。
-
-\</include>
+- **Web 控制台**：展示的数值与 API 保持一致，但为了便于阅读，界面会省略末尾的连续零。例如，`0.1234000000` 会在界面上显示为 `0.1234`。
 
 #### 为什么我无法查看账单？
 

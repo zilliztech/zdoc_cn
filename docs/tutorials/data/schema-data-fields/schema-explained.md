@@ -3,6 +3,9 @@ title: "了解 Schema | Cloud"
 slug: /schema-explained
 sidebar_label: "了解 Schema"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Schema 定义了 Collection 的数据结构。在创建 Collection 之前，您需要根据业务需要，设计并创建好 Collection 的 Schema。本章将介绍设计与创建 Schema 时需要注意的相关事项。 | Cloud"
 type: origin
@@ -26,13 +29,13 @@ import TabItem from '@theme/TabItem';
 
 Schema 定义了 Collection 的数据结构。在创建 Collection 之前，您需要根据业务需要，设计并创建好 Collection 的 Schema。本章将介绍设计与创建 Schema 时需要注意的相关事项。
 
-## 概述{#overview}
+## 概述\{#overview}
 
 在 Zilliz Cloud 中，Collection Schema 和传统关系型数据库中的数据表结构类似，定义了 Collection 的数据组织方式。
 
 精心设计的 Schema 至关重要，因为它抽象了数据模型，并决定了能否通过搜索实现业务目标。此外，由于插入到集合中的每一行数据都必须遵循 Schema 定义，从而保持数据的一致性和长期质量。从技术角度看，定义明确的 Schema 可实现有序的列数据存储和更简洁的索引结构，从而提高搜索性能。
 
-如下图所示，一个典型的 Collection Schema 包含一个主键，若干向量列和若干标量列。下图说明了如何将一篇文章映射成一个 Collection Schema。
+如下图所示，一个典型的 Collection Schema 包含一个主键，至少一个向量列和若干标量列。下图说明了如何将一篇文章映射成一个 Collection Schema。
 
 ![RFGTbrPmmoa7b8xAg34cRdUmnXe](/img/RFGTbrPmmoa7b8xAg34cRdUmnXe.png)
 
@@ -40,7 +43,7 @@ Schema 定义了 Collection 的数据结构。在创建 Collection 之前，您�
 
 关于如何结合您的数据完成 Schema 设计，可以参考 [Schema 设计指南](./schema-design-hands-on)。该文通过一个示例演示了关于 Schema 设计的思考过程，帮助您了解如何设计一个符合业务需求的 Collection Schema。
 
-## 创建 Schema{#create-schema}
+## 创建 Schema\{#create-schema}
 
 您可以参考如下代码创建一个 Schema 对象。
 
@@ -96,7 +99,7 @@ export schema='{
 </TabItem>
 </Tabs>
 
-## 添加主键{#add_primary_field}
+## 添加主键\{#add_primary_field}
 
 主键唯一标识一个 Entity，只支持 **Int64** 或 **VarChar** 类型的数据。具体添加方法如下：
 
@@ -189,7 +192,7 @@ export schema='{
 
 关于主键字段的更多内容可参考[主键与 AutoId](./primary-field-auto-id)。
 
-## 添加向量字段{#add-vector-fields}
+## 添加向量字段\{#add-vector-fields}
 
 向量字段用于存放各种类型的稀疏和稠密向量数据。在 Zilliz Cloud 中，您可以在一个 Collection 中添加最多 4 个向量字段。具体添加方法如下：
 
@@ -286,13 +289,11 @@ export schema="{
 
     用于存放一组非零元素及其序号，用来表示一个稀疏向量。
 
-关于添加向量字段时的更多内容，可参考[稀疏向量](./use-sparse-vector)、[稠密向量](./use-dense-vector)或[Binary 向量](./use-binary-vector)。
-
-## 添加标量字段{#add-scalar-fields}
+## 添加标量字段\{#add-scalar-fields}
 
 通常情况下，您可以将标量字段做为向量字段的元数据添加到 Collection 中，通过向量搜索和标量过滤相结合的方式来提升搜索结果的准确性。Zilliz Cloud 支持多种标量数据类型，包括 **VarChar**、**Boolean**、**Int**、**Float**、**Double**、**Array** 和 **JSON**。
 
-### 添加字符串类型的字段{#add-string-fields}
+### 添加字符串类型的字段\{#add-string-fields}
 
 在 Zilliz Cloud 中，您可以使用 VarChar 类型的字段来存放字符串数据。关于 VarChar 字段的更多内容，可参考[字符串类型](./use-string-field)。
 
@@ -371,7 +372,7 @@ export schema="{
 </TabItem>
 </Tabs>
 
-### 添加数值类型的字段{#add-number-fields}
+### 添加数值类型的字段\{#add-number-fields}
 
 Zilliz Cloud 支持的数值类型字段包括 `Int8`、`Int16`、`Int32`、`Int64`、`Float` 和 `Double`。关于数值类型的更多内容，可参考[标量数值类型](./use-number-field)。
 
@@ -441,7 +442,7 @@ export schema="{
 </TabItem>
 </Tabs>
 
-### 添加 Boolean 类型的字段{#add-boolean-fields}
+### 添加 Boolean 类型的字段\{#add-boolean-fields}
 
 Zilliz Cloud 支持 Boolean 类型的字段。您可以参考如下代码添加该类型的字段。
 
@@ -512,7 +513,7 @@ export schema="{
 </TabItem>
 </Tabs>
 
-### 添加 JSON 类型的字段{#add-json-fields}
+### 添加 JSON 类型的字段\{#add-json-fields}
 
 JSON 类型的字段用于存放半结构化的 JSON 数据。关于 JSON 类型的更多内容，可参考[JSON 类型](./use-json-fields)。
 
@@ -584,7 +585,7 @@ export schema="{
 </TabItem>
 </Tabs>
 
-### 添加 Array 类型的字段{#add-array-fields}
+### 添加 Array 类型的字段\{#add-array-fields}
 
 Array 字段用于存放列表类型的数据。Array 字段中的元素数据类型需要保持一致。关于 Array 类型的更多内容，可参考[Array 类型](./use-array-fields)。
 

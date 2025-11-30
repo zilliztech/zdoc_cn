@@ -1,10 +1,13 @@
 ---
-title: "基本 Vector Search | Cloud"
+title: "基本 Vector Search | BYOC"
 slug: /single-vector-search
 sidebar_label: "基本 Vector Search"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "近似最近邻（ANN）Search 通过构建索引的方式对向量空间中的向量进行预排序，并在收到 Search 请求时根据索引快速定位到与查询向量相似可能性较高的子集中进行对比查询，从而提升查询效率。本节主要介绍如何使用 Milvus 进行 ANN Search 及相关的注意事项。 | Cloud"
+description: "近似最近邻（ANN）Search 通过构建索引的方式对向量空间中的向量进行预排序，并在收到 Search 请求时根据索引快速定位到与查询向量相似可能性较高的子集中进行对比查询，从而提升查询效率。本节主要介绍如何使用 Milvus 进行 ANN Search 及相关的注意事项。 | BYOC"
 type: origin
 token: HtzdwrGPZi4bvnksR75ccetInrf
 sidebar_position: 1
@@ -31,7 +34,7 @@ import TabItem from '@theme/TabItem';
 
 近似最近邻（ANN）Search 通过构建索引的方式对向量空间中的向量进行预排序，并在收到 Search 请求时根据索引快速定位到与查询向量相似可能性较高的子集中进行对比查询，从而提升查询效率。本节主要介绍如何使用 Milvus 进行 ANN Search 及相关的注意事项。
 
-## 概述{#overview}
+## 概述\{#overview}
 
 向量搜索的实现主要依赖两类算法，一类是 k-最近邻（kNN）Search，一类是 ANN Search。kNN 算法将查询向量与向量空间中的每个向量进行比较，直到出现 k 个完全匹配的结果。尽管 kNN 搜索可以确保准确性，但十分耗时。尤其是数据量大，向量维度高时，耗时更久。
 
@@ -57,7 +60,7 @@ ANN Search 依赖预先创建的索引。选择不同的索引算法会影响搜
 
 - [使用 Async 和 Callback 参数](./single-vector-search)
 
-## 单路查询{#single-vector-search}
+## 单路查询\{#single-vector-search}
 
 在 ANN Search 中，单路查询是指在 Search 请求中携带一个查询向量，由 Zilliz Cloud 通过预先建立的索引和请求中携带的相似度类型快速找到与查询向量最相近的 topK 个向量。
 
@@ -77,7 +80,7 @@ client = MilvusClient(
 # 4. Single vector search
 query_vector = [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]
 res = client.search(
-    collection_name="my_collection",
+    collection_name="quick_setup",
     anns_field="vector",
     data=[query_vector],
     limit=3,
@@ -129,8 +132,9 @@ MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
     
 FloatVec queryVector = new FloatVec(new float[]{0.3580376395471989f, -0.6023495712049978f, 0.18414012509913835f, -0.26286205330961354f, 0.9029438446296592f});
 SearchReq searchReq = SearchReq.builder()
-        .collectionName("my_collection")
+        .collectionName("quick_setup")
         .data(Collections.singletonList(queryVector))
+        .annsField("vector")
         .topK(3)
         .build();
 
@@ -159,45 +163,44 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 import (
     "context"
     "fmt"
-    "log"
 
     "github.com/milvus-io/milvus/client/v2/entity"
     "github.com/milvus-io/milvus/client/v2/milvusclient"
 )
 
-func ExampleClient_Search_basic() {
-    ctx, cancel := context.WithCancel(context.Background())
-    defer cancel()
+ctx, cancel := context.WithCancel(context.Background())
+defer cancel()
 
-    milvusAddr := "YOUR_CLUSTER_ENDPOINT"
-    token := "YOUR_CLUSTER_TOKEN"
+milvusAddr := "localhost:19530"
+token := "YOUR_CLUSTER_TOKEN"
 
-    cli, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-        Address: milvusAddr,
-        APIKey:  token,
-    })
-    if err != nil {
-        log.Fatal("failed to connect to milvus server: ", err.Error())
-    }
-
-    defer cli.Close(ctx)
-
-    queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
-
-    resultSets, err := cli.Search(ctx, milvusclient.NewSearchOption(
-        "my_collection", // collectionName
-        3,             // limit
-        []entity.Vector{entity.FloatVector(queryVector)},
-    ))
-    if err != nil {
-        log.Fatal("failed to perform basic ANN search collection: ", err.Error())
-    }
-
-    for _, resultSet := range resultSets {
-        log.Println("IDs: ", resultSet.IDs)
-        log.Println("Scores: ", resultSet.Scores)
-    }
+client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+    Address: milvusAddr,
+    APIKey:  token,
+})
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
 }
+defer client.Close(ctx)
+
+queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
+
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
+    "quick_setup", // collectionName
+    3,               // limit
+    []entity.Vector{entity.FloatVector(queryVector)},
+).WithANNSField("vector"))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+
+for _, resultSet := range resultSets {
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
+}
+
 ```
 
 </TabItem>
@@ -215,7 +218,7 @@ const client = new MilvusClient({address, token});
 var query_vector = [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592],
 
 res = await client.search({
-    collection_name: "my_collection",
+    collection_name: "quick_setup",
     data: query_vector,
     limit: 3, // The number of results to return
 })
@@ -307,7 +310,7 @@ curl --request POST \
    </tr>
 </table>
 
-## 批量查询{#bulk-vector-search}
+## 批量查询\{#bulk-vector-search}
 
 您也可以在 Search 请求中携带多个查询向量，Zilliz Cloud 将分别针对这两个查询向量执行 ANN Search，并返回两组查询结果。
 
@@ -324,7 +327,7 @@ query_vectors = [
 
 # 7.2. Start search
 res = client.search(
-    collection_name="my_collection",
+    collection_name="quick_setup",
     data=query_vectors,
     limit=3,
 )
@@ -421,31 +424,25 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 <TabItem value='go'>
 
 ```go
-import (
-    "context"
-    "log"
-
-    "github.com/milvus-io/milvus/client/v2/entity"
-    "github.com/milvus-io/milvus/client/v2/milvusclient"
-)
-
 queryVectors := []entity.Vector{
     entity.FloatVector([]float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}),
     entity.FloatVector([]float32{0.19886812562848388, 0.06023560599112088, 0.6976963061752597, 0.2614474506242501, 0.838729485096104}),
 }
 
-resultSets, err := cli.Search(ctx, milvusclient.NewSearchOption(
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
     "quick_setup", // collectionName
-    3,             // limit
+    3,               // limit
     queryVectors,
-))
+).WithConsistencyLevel(entity.ClStrong).
+    WithANNSField("vector"))
 if err != nil {
-    log.Fatal("failed to perform basic ANN search collection: ", err.Error())
+    fmt.Println(err.Error())
+    // handle error
 }
 
 for _, resultSet := range resultSets {
-    log.Println("IDs: ", resultSet.IDs)
-    log.Println("Scores: ", resultSet.Scores)
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
 }
 ```
 
@@ -463,7 +460,7 @@ const query_vectors = [
 res = await client.search({
     collection_name: "quick_setup",
     vectors: query_vectors,
-    limit: 5,
+    limit: 3,
 })
 
 console.log(res.results)
@@ -537,14 +534,15 @@ curl --request POST \
 #               "id": 232
 #           }
 #        ]
-#     ]
+#     ],
+#     "topks":[3]
 # }
 ```
 
 </TabItem>
 </Tabs>
 
-## 在 Parition 中进行 ANN Search{#ANN-search-in-partition}
+## 在 Parition 中进行 ANN Search\{#ANN-search-in-partition}
 
 如果 Collection 中存在多个按具体划分规则划分的 Partition，而且您的查询目标可以具体到其中的一个或多个 Partition。您就可以在 Search 请求中携带目标 Partition 的名称。通过减少扫描的数据量，可以显著提高搜索速度。
 
@@ -557,7 +555,7 @@ curl --request POST \
 # 4. Single vector search
 query_vector = [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]
 res = client.search(
-    collection_name="my_collection",
+    collection_name="quick_setup",
     # highlight-next-line
     partition_names=["partitionA"],
     data=[query_vector],
@@ -629,28 +627,23 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 <TabItem value='go'>
 
 ```go
-import (
-    "context"
-    "log"
-
-    "github.com/milvus-io/milvus/client/v2/entity"
-    "github.com/milvus-io/milvus/client/v2/milvusclient"
-)
-
 queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
 
-resultSets, err := cli.Search(ctx, milvusclient.NewSearchOption(
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
     "quick_setup", // collectionName
-    3,             // limit
+    3,               // limit
     []entity.Vector{entity.FloatVector(queryVector)},
-).WithPartitions("partitionA"))
+).WithConsistencyLevel(entity.ClStrong).
+    WithPartitions("partitionA").
+    WithANNSField("vector"))
 if err != nil {
-    log.Fatal("failed to perform basic ANN search collection: ", err.Error())
+    fmt.Println(err.Error())
+    // handle error
 }
 
 for _, resultSet := range resultSets {
-    log.Println("IDs: ", resultSet.IDs)
-    log.Println("Scores: ", resultSet.Scores)
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
 }
 ```
 
@@ -716,14 +709,15 @@ curl --request POST \
 #             "distance": 0.07794742286205292,
 #             "id": 43
 #         }
-#     ]
+#     ],
+#     "topks":[3]
 # }
 ```
 
 </TabItem>
 </Tabs>
 
-## 使用 Output Fields 参数{#use-output-fields}
+## 使用 Output Fields 参数\{#use-output-fields}
 
 在 Zilliz Cloud 中，ANN Search 默认返回与查询向量最相近的 topK 个 Entity 的主键值 (**id**) 及该 Entity 与查询向量的相似度得分 (**distance** 或 **score**)。如果要求返回的每个 Entity 中都携带指定字段的值，可以在 Search 请求中指定 Output Fields (输出字段)。
 
@@ -811,29 +805,24 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 <TabItem value='go'>
 
 ```go
-import (
-    "context"
-    "log"
-
-    "github.com/milvus-io/milvus/client/v2/entity"
-    "github.com/milvus-io/milvus/client/v2/milvusclient"
-)
-
 queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
 
-resultSets, err := cli.Search(ctx, milvusclient.NewSearchOption(
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
     "quick_setup", // collectionName
-    3,             // limit
+    3,               // limit
     []entity.Vector{entity.FloatVector(queryVector)},
-).WithOutputFields("color"))
+).WithConsistencyLevel(entity.ClStrong).
+    WithANNSField("vector").
+    WithOutputFields("color"))
 if err != nil {
-    log.Fatal("failed to perform basic ANN search collection: ", err.Error())
+    fmt.Println(err.Error())
+    // handle error
 }
 
 for _, resultSet := range resultSets {
-    log.Println("IDs: ", resultSet.IDs)
-    log.Println("Scores: ", resultSet.Scores)
-    log.Println("Colors: ", resultSet.GetColumn("color"))
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
+    fmt.Println("color: ", resultSet.GetColumn("color").FieldData().GetScalars())
 }
 ```
 
@@ -902,14 +891,15 @@ curl --request POST \
 #             "id": 43
 #             "color": "grey_8510"
 #         }
-#     ]
+#     ],
+#     "topks":[3]
 # }
 ```
 
 </TabItem>
 </Tabs>
 
-## 使用 Limit 和 Offset 参数{#use-limit}
+## 使用 Limit 和 Offset 参数\{#use-limit}
 
 通过上面的代码示例，您可能注意到了用于控制 Search 结果中的 Entity 数量的 `limit` 参数。这个参数代表单次查询结果中要求包含的 Entity 的最大数量，一般称之为 **topK**。
 
@@ -1005,28 +995,23 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 <TabItem value='go'>
 
 ```go
-import (
-    "context"
-    "log"
-
-    "github.com/milvus-io/milvus/client/v2/entity"
-    "github.com/milvus-io/milvus/client/v2/milvusclient"
-)
-
 queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
 
-resultSets, err := cli.Search(ctx, milvusclient.NewSearchOption(
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
     "quick_setup", // collectionName
-    3,             // limit
+    3,               // limit
     []entity.Vector{entity.FloatVector(queryVector)},
-).WithOffset(10))
+).WithConsistencyLevel(entity.ClStrong).
+    WithANNSField("vector").
+    WithOffset(10))
 if err != nil {
-    log.Fatal("failed to perform basic ANN search collection: ", err.Error())
+    fmt.Println(err.Error())
+    // handle error
 }
 
 for _, resultSet := range resultSets {
-    log.Println("IDs: ", resultSet.IDs)
-    log.Println("Scores: ", resultSet.Scores)
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
 }
 ```
 
@@ -1073,7 +1058,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 使用 Level 参数{#use-level}
+## 使用 Level 参数\{#use-level}
 
 检索调优要求根据不同的索引类型调整不同的参数。Zilliz Cloud 使用了一个统一的检索精度控制参数 `level`，简化了检索参数调优的过程。
 
@@ -1085,7 +1070,7 @@ curl --request POST \
 
 </Admonition>
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -1097,9 +1082,9 @@ res = client.search(
     data=[query_vector],
     limit=3, # The number of results to return
     search_params={
-        params: {
+        "params": {
             # highlight-next-line
-            "level": 1 # The precision control
+            "level": 10 # The precision control
         }
     }
 )
@@ -1116,7 +1101,7 @@ import io.milvus.v2.service.vector.response.SearchResp
 
 FloatVec queryVector = new FloatVec(new float[]{0.3580376395471989f, -0.6023495712049978f, 0.18414012509913835f, -0.26286205330961354f, 0.9029438446296592f});
 Map<String, Object> params = new HashMap<>();
-params.put("level", 1);
+params.put("level", 10);
 SearchReq searchReq = SearchReq.builder()
         .collectionName("quick_setup")
         .data(Collections.singletonList(queryVector))
@@ -1143,6 +1128,31 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 
 </TabItem>
 
+<TabItem value='go'>
+
+```go
+queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
+
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
+    "quick_setup", // collectionName
+    3,               // limit
+    []entity.Vector{entity.FloatVector(queryVector)},
+).WithConsistencyLevel(entity.ClStrong).
+    WithANNSField("vector").
+    WithSearchParam("level", "10"))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+
+for _, resultSet := range resultSets {
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
+}
+```
+
+</TabItem>
+
 <TabItem value='javascript'>
 
 ```javascript
@@ -1155,7 +1165,7 @@ res = await client.search({
     limit: 3, // The number of results to return,
     params: {
         // highlight-next-line
-        "level": 1 // The precision control
+        "level": 10 // The precision control
     }
 })
 ```
@@ -1182,18 +1192,18 @@ curl --request POST \
     "limit": 3,
     "searchParams":{
         "params":{
-            "level":1
+            "level":10
         }
     }
 }'
 
-# {"code":0,"cost":0,"data":[{"distance":1,"id":0},{"distance":0.6290165,"id":1},{"distance":0.5975797,"id":4},{"distance":0.9999999,"id":1},{"distance":0.7408552,"id":7},{"distance":0.6290165,"id":0}]}
+# {"code":0,"cost":0,"data":[{"distance":1,"id":0},{"distance":0.6290165,"id":1},{"distance":0.5975797,"id":4},{"distance":0.9999999,"id":1},{"distance":0.7408552,"id":7},{"distance":0.6290165,"id":0}],"topks":[3]}
 ```
 
 </TabItem>
 </Tabs>
 
-## 查看召回率{#get-recall-rate}
+## 查看召回率\{#get-recall-rate}
 
 您还可以在调节 `level` 参数期间将 `enable_recall_rate` 参数设置为 `true`，以便在搜索结果中查看当前 `level` 值对应的召回率信息。
 
@@ -1203,7 +1213,7 @@ curl --request POST \
 
 </Admonition>
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -1215,7 +1225,7 @@ res = client.search(
     data=[query_vector],
     limit=3, # The number of results to return
     search_params={
-        params: {
+        "params": {
             # highlight-next-line
             "level": 10 # The precision control,
             "enable_recall_calculation": True # Ask to return recall rate
@@ -1259,6 +1269,31 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 // SearchResp.SearchResult(entity={}, score=0.95944905, id=5)
 // SearchResp.SearchResult(entity={}, score=0.8689616, id=1)
 // SearchResp.SearchResult(entity={}, score=0.866088, id=7)
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
+
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
+    "quick_setup", // collectionName
+    3,               // limit
+    []entity.Vector{entity.FloatVector(queryVector)},
+).WithConsistencyLevel(entity.ClStrong).
+    WithANNSField("vector").
+    WithSearchParam("enable_recall_calculation", "true"))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+
+for _, resultSet := range resultSets {
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
+}
 ```
 
 </TabItem>
@@ -1309,13 +1344,13 @@ curl --request POST \
     }
 }'
 
-# {"code":0,"cost":0,"data":[{"distance":1,"id":0},{"distance":0.6290165,"id":1},{"distance":0.5975797,"id":4},{"distance":0.9999999,"id":1},{"distance":0.7408552,"id":7},{"distance":0.6290165,"id":0}]}
+# {"code":0,"cost":0,"data":[{"distance":1,"id":0},{"distance":0.6290165,"id":1},{"distance":0.5975797,"id":4},{"distance":0.9999999,"id":1},{"distance":0.7408552,"id":7},{"distance":0.6290165,"id":0}],"topks":[3]}
 ```
 
 </TabItem>
 </Tabs>
 
-## ANN Search 能力增强{#enhancing-ann-search}
+## ANN Search 能力增强\{#enhancing-ann-search}
 
 Zilliz Cloud 提供的 AUTOINDEX 已经极大地降低了执行 ANN Search 的门槛，但在大规模召回的情况下依旧很难避免遇到类似返回与查询向量不相关的 Entity 等各种问题。按照缩小搜索范围、提升召回质量和提升召回结果多样性的思路，Milvus 提供了如下几种能力：
 
@@ -1343,11 +1378,25 @@ Zilliz Cloud 提供的 AUTOINDEX 已经极大地降低了执行 ANN Search 的�
 
     关于 Hybrid Search 的更多内容，可查看[Hybrid Search](./hybrid-search)。
 
+    如需了解 Collection 中向量字段的数量限制，请参考[使用限制](./limits#fields)。
+
 - Search Iterator
 
     ANN Search 单次召回有最大数量限制。对于 topK 大于 16,384 的 ANN Search 请求，可以考虑使用 Search Iterator。
 
     关于 Search Iterator 的更多内容，可查看[Search Iterator](./with-iterators)。
+
+- Full-Text Search
+
+    Full-Text Search 是一项能在文本数据集中检索包含特定术语或短语的文档，然后根据相关性对结果进行排序的功能。该功能克服了语义搜索的局限性，语义搜索可能会忽略精确的术语，而全文搜索可确保你获得最准确且与上下文相关的结果。此外，它通过接受原始文本输入简化了向量搜索，能自动将你的文本数据转换为稀疏嵌入，无需手动生成向量嵌入。
+
+    关于 Full-Text Search 的更多内容，可查看[Full Text Search](./full-text-search)。
+
+- Text Match
+
+    Zilliz Cloud 中的 Text Match 功能可基于特定术语实现精确的文档检索。此功能主要用于过滤式搜索，以满足特定条件，并且可以结合标量过滤来优化查询结果，从而在符合标量条件的向量中进行相似性搜索。
+
+    关于 Text Match 的更多内容，可查看[Text Match](./text-match)。
 
 - 使用 Partition Key
 

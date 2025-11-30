@@ -3,6 +3,9 @@ title: "升级 Milvus 集群 | On-Premise"
 slug: /upgrade-milvus-cluster
 sidebar_label: "升级 Milvus 集群"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Milvus 集群支持通过 Kubernetes 的滚动更新能力对各组件进行滚动升级，从而在不停机的情况下，将 Milvus 集群更新到指定版本。本章将介绍如何进行升级前检查、执行升级和查看升级进度等操作的具体步骤。 | On-Premise"
 type: origin
@@ -30,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 Milvus 集群支持通过 [Kubernetes 的滚动更新](https://kubernetes.io/zh-cn/docs/tutorials/kubernetes-basics/update/update-intro/)能力对各组件进行滚动升级，从而在不停机的情况下，将 Milvus 集群更新到指定版本。本章将介绍如何进行升级前检查、执行升级和查看升级进度等操作的具体步骤。
 
-## 升级前检查{#checks-before-upgrade}
+## 升级前检查\{#checks-before-upgrade}
 
 为了保证后续升级顺利进行，需要对当前 Milvus 集群的运行状态及 Milvus 集群的当前版本进行检查。如下示例假设 Milvus 集群部署在 **default** 命名空间中，Milvus 集群的名称为 **my-release**。
 
@@ -70,7 +73,7 @@ Milvus 集群支持通过 [Kubernetes 的滚动更新](https://kubernetes.io/zh-
 
     可以看到当前使用的镜像版本为 v2.4.11，并且已经开启了滚动升级功能。
 
-## 执行升级{#upgrade-milvus-cluster}
+## 执行升级\{#upgrade-milvus-cluster}
 
 如下示例假设升级目标为 **userns/milvus-enterprise:v2.4.11**。您可以执行如下命令开始将 Milvus 集群升级到目标镜像。
 
@@ -103,7 +106,7 @@ name            image                                rollingUpdate
 my-release      userns/milvus-enterprise:v2.4.11     true
 ```
 
-## 查看升级进度{#check-upgrade-progress}
+## 查看升级进度\{#check-upgrade-progress}
 
 您可通过如下命令查看Milvus 集群的详细升级进度。
 

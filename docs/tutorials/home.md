@@ -3,6 +3,9 @@ title: "首页 | Cloud"
 slug: /home
 sidebar_label: "首页"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "此页为 Zilliz Cloud 开发者中心的首页。 | Cloud"
 type: origin
@@ -32,7 +35,7 @@ import Banner from '@site/src/components/Banner';
 
 <Hero>
 
-# 欢迎来到 Zilliz Cloud 开发者中心!
+# 欢迎来到 Zilliz Cloud 开发者中心
 
 Zilliz Cloud 提供完全托管的 Milvus 服务，简化您的向量检索应用的部署和扩缩容流程，并提供相应的安全保障，从而将您从复杂运维流程中解放出来。[了解更多](./get-started)。
 
@@ -42,7 +45,7 @@ Zilliz Cloud 提供完全托管的 Milvus 服务，简化您的向量检索应�
 
 <Bars>
 
-Zilliz Cloud 提供如下版本供您订阅：
+Zilliz Cloud 提供如下集群部署方式：
 
 - [Free](./create-cluster-on-demand#set-up-a-free-cluster)
 
@@ -50,9 +53,7 @@ Zilliz Cloud 提供如下版本供您订阅：
 
 - [Dedicated](./create-cluster-on-demand#create-a-dedicated-cluster)
 
-- [BYOC](https://zilliz.com.cn/contact-sales)
-
-[不清楚如何选择合适的版本？](./select-zilliz-cloud-service-plans)
+[不清楚如何选择合适的部署方式？](https://zilliz.com.cn/pricing)
 
 </Bars>
 
@@ -96,7 +97,7 @@ Zilliz Cloud 提供如下版本供您订阅：
 
 1. 为您的集群或 Collection 创建备份。
 
-    备份为目标集群或 Collection 在某个时点的数据拷贝。您可以[手动创建备份](./create-snapshot)，也可以让 Zilliz Cloud 按照您的要求[自动为您创建备份](./schedule-automatic-backups)。
+    备份为目标集群或 Collection 在某个时点的数据拷贝。您可以[手动创建备份](./create-snapshot)，也可以[设置定时自动备份](./schedule-automatic-backups)。此外，您还可以进行[跨地域备份](./backup-to-other-regions)以提升容灾能力。
 
 1. （可选）导出备份到您的对象存储。
 

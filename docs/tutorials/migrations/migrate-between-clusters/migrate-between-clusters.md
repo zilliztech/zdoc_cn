@@ -3,6 +3,9 @@ title: "Zilliz Cloud 跨集群迁移 | Cloud"
 slug: /migrate-between-clusters
 sidebar_label: "跨集群迁移"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 跨集群迁移允许您在集群之间传输数据，无论它们位于同一组织内还是跨不同组织。主要使用场景包括： | Cloud"
 type: origin

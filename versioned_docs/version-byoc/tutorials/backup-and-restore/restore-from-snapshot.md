@@ -1,13 +1,16 @@
 ---
-title: "恢复备份 | Cloud"
+title: "恢复备份 | BYOC"
 slug: /restore-from-snapshot
 sidebar_label: "恢复备份"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 提供的恢复功能可用于在发生意外删除、数据损坏或系统故障时，从备份文件中恢复数据，保障业务连续性。这是一种可靠的手段，可用于灾难恢复、撤销错误更改，或创建用于测试的集群副本，将业务中断最小化。 | Cloud"
+description: "Zilliz Cloud 提供的恢复功能可用于在发生意外删除、数据损坏或系统故障时，从备份文件中恢复数据，保障业务连续性。这是一种可靠的手段，可用于灾难恢复、撤销错误更改，或创建用于测试的集群副本，将业务中断最小化。 | BYOC"
 type: origin
 token: NtkswF6UEi3kB0k8XSEcOKkhnld
-sidebar_position: 3
+sidebar_position: 4
 keywords: 
   - 向量数据库
   - zilliz
@@ -21,26 +24,21 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Supademo from '@site/src/components/Supademo';
+
 # 恢复备份
 
 Zilliz Cloud 提供的恢复功能可用于在发生意外删除、数据损坏或系统故障时，从备份文件中恢复数据，保障业务连续性。这是一种可靠的手段，可用于灾难恢复、撤销错误更改，或创建用于测试的集群副本，将业务中断最小化。
 
 本文将介绍如何通过备份文件恢复**整个集群**或**部分集群数据**。
 
-<Admonition type="info" icon="📘" title="说明">
-
-<ul>
-<li><p>备份与恢复功能仅适用于 Dedicated 集群。</p></li>
-<li><p>包年包月集群暂不支持恢复备份，如有需求，请<a href="http://support.zilliz.com.cn">联系我们</a>。</p></li>
-</ul>
-
-</Admonition>
-
-## 限制说明{#limits}
+## 限制说明\{#limits}
 
 - **访问控制**：仅项目管理员、组织管理员或拥有备份权限的自定义角色可执行备份操作。
 
-## 恢复整个集群{#restore-a-full-cluster}
+- 包年包月集群暂不支持恢复备份，如有需求，请[联系我们](http://support.zilliz.com.cn)。
+
+## 恢复整个集群\{#restore-a-full-cluster}
 
 您可以将整个集群（包括集群下所有 Database 和 Collection）恢复到一个新集群中，适用于测试环境数据克隆或生产环境数据恢复。如需恢复整个集群，所用备份文件必须为**集群级别备份**。
 
@@ -54,11 +52,13 @@ Zilliz Cloud 提供的恢复功能可用于在发生意外删除、数据损坏�
 
 恢复完成后，系统会为默认用户 `db_admin` 生成一个新密码，您需使用新密码连接至新集群。
 
-### 通过 Web 控制台{#via-web-console}
+### 通过 Web 控制台\{#via-web-console}
 
 以下 Demo 展示如何在 Zilliz Cloud 控制台中恢复整个集群：
 
-### 通过 RESTful API{#via-restful-api}
+<Supademo id="cmcswsqmt0lro9st8cllvfbnn" title=""  />
+
+### 通过 RESTful API\{#via-restful-api}
 
 以下示例展示如何通过集群备份文件将集群恢复至名为 `Dedicated-01-backup` 的新集群。更多 API 参数细节，请参见[恢复集群备份](/reference/restful/restore-cluster-backup-v2)。
 
@@ -90,15 +90,17 @@ curl --request POST \
 }
 ```
 
-## 恢复部分集群数据{#restore-a-partial-cluster}
+## 恢复部分集群数据\{#restore-a-partial-cluster}
 
 您也可以选择将特定的 Database 和 Collection 恢复到已有集群中。
 
-### 通过 Web 控制台{#via-web-console}
+### 通过 Web 控制台\{#via-web-console}
 
 以下 Demo 展示如何在控制台中恢复指定 Database 和 Collection：
 
-### 通过 RESTful API{#via-restful-api}
+<Supademo id="cmcsx430q0mhe9st81af8q8du" title=""  />
+
+### 通过 RESTful API\{#via-restful-api}
 
 以下示例展示如何将某个备份文件中的 Collection 恢复至已有集群 `in01-3e5ad8adc38xxxx`。更多 API 参数细节，请参见[恢复 Collection 备份](/reference/restful/restore-collection-backup-v2)。
 

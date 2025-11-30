@@ -3,6 +3,9 @@ title: "环境隔离 | Cloud"
 slug: /environment-isolation
 sidebar_label: "环境隔离"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在企业级应用开发和部署过程中，合理的环境隔离与访问控制至关重要。Zilliz Cloud 通过组织、项目、集群的层级结构，提供灵活的环境隔离方案。本文将帮助您根据运营、安全和财务需求选择最合适的隔离策略。 | Cloud"
 type: origin
@@ -13,8 +16,7 @@ keywords:
   - zilliz
   - milvus
   - 大模型向量数据库
-  - 价格
-  - 计算器
+  - 环境隔离
 
 ---
 
@@ -25,7 +27,7 @@ import Admonition from '@theme/Admonition';
 
 在企业级应用开发和部署过程中，合理的环境隔离与访问控制至关重要。Zilliz Cloud 通过**组织**、**项目**、**集群**的层级结构，提供灵活的环境隔离方案。本文将帮助您根据运营、安全和财务需求选择最合适的隔离策略。
 
-## 组织级别隔离{#organization-level-isolation}
+## 组织级别隔离\{#organization-level-isolation}
 
 组织级隔离是最安全的选项。
 
@@ -45,7 +47,7 @@ import Admonition from '@theme/Admonition';
 
 - 默认情况下，Zilliz Cloud 仅支持一个组织。如需启用多个组织，请通过[支持中心](https://support.zilliz.com.cn/hc/zh-cn)提交工单。
 
-## 项目级别隔离{#project-level-isolation}
+## 项目级别隔离\{#project-level-isolation}
 
 对于大多数企业级生产部署来说，项目级隔离是推荐选项，尤其是在不需要计费隔离的情况下。
 
@@ -65,7 +67,7 @@ import Admonition from '@theme/Admonition';
 
 - 对大多数企业场景提供足够的隔离能力
 
-## 集群级别隔离{#cluster-level-isolation}
+## 集群级别隔离\{#cluster-level-isolation}
 
 最灵活、最轻量的隔离方式。
 
@@ -85,7 +87,7 @@ import Admonition from '@theme/Admonition';
 
 - 提供统一[监控](./metrics-and-alerts)，便于运维与管理
 
-## 选择合适的隔离策略{#choosing-the-right-isolation-strategy}
+## 选择合适的隔离策略\{#choosing-the-right-isolation-strategy}
 
 您可以参考以下决策流程：
 

@@ -1,10 +1,10 @@
 ---
-title: "FAQ：快速入门 | CLOUD"
+title: "FAQ：快速入门 | BYOC"
 slug: /faq-get-started
 sidebar_label: "FAQ：快速入门"
 beta: FALSE
 notebook: FALSE
-description: " | CLOUD"
+description: " | BYOC"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 1
@@ -18,7 +18,6 @@ sidebar_position: 1
 ## 目录
 
 - [是否提供 Zilliz Cloud 与其他竞品间的性能对比？](#is-there-any-performance-comparison-between-zilliz-cloud-and-other-vector-search-solutions)
-- [免费试用结束后，我的数据是否会被删除？](#what-happens-after-the-free-trial)
 - [如何获取技术支持？](#how-can-i-get-further-technical-support)
 - [Zilliz Cloud 搜索延时是多少？](#what-is-the-search-latency-of-zilliz-cloud)
 - [Zilliz Cloud 支持哪些索引类型？](#which-type-of-index-is-supported-by-zilliz-cloud)
@@ -31,12 +30,6 @@ sidebar_position: 1
 ### 是否提供 Zilliz Cloud 与其他竞品间的性能对比？ \{#is-there-any-performance-comparison-between-zilliz-cloud-and-other-vector-search-solutions}
 
 您可以使用向量数据库性能对比工具 [VectorDBBench](https://zilliz.com/vector-database-benchmark-tool) 来衡量比较 Zilliz Cloud 与其他主流向量数据库和云服务间的性能差异。
-
-### 免费试用结束后，我的数据是否会被删除？ \{#what-happens-after-the-free-trial}
-
-免费试用结束后，Zilliz Cloud 将自动备份您的数据并移至回收站，集群将被删除。回收站中的数据可免费保留30天。您可以[添加支付方式](./payment-billing)或[联系我们](https://support.zilliz.com.cn/)以继续使用 Zilliz Cloud。
-
-详情请参考[免费试用 Zilliz Cloud](./free-trials)。
 
 ### 如何获取技术支持？ \{#how-can-i-get-further-technical-support}
 

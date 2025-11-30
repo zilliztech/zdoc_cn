@@ -3,6 +3,9 @@ title: "配置监控告警 | On-Premise"
 slug: /enable-pod-monitor
 sidebar_label: "配置监控告警"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在部署 Milvus 集群时，可以对 Milvus 集群、Pulsar 和 etcd 等组件开启指标采集能力。本章介绍了如何为 Milvus 集群和 Pulsar、etcd 等三方组件配置指标采集能力，介绍各组件相关核心指标，并提供适用于各组件的 Grafana 模板，以便更好的了解 Milvus 集群的运行情况。 | On-Premise"
 type: origin
@@ -30,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 在部署 Milvus 集群时，可以对 Milvus 集群、Pulsar 和 etcd 等组件开启指标采集能力。本章介绍了如何为 Milvus 集群和 Pulsar、etcd 等三方组件配置指标采集能力，介绍各组件相关核心指标，并提供适用于各组件的 Grafana 模板，以便更好的了解 Milvus 集群的运行情况。
 
-## 开启指标监控{#enable-pod-monitor}
+## 开启指标监控\{#enable-pod-monitor}
 
 可参考如下配置为 Milvus 集群、Pulsar 及 etcd 等三方组件配置指标采集能力。
 
@@ -76,7 +79,7 @@ spec:
               interval: 30s
 ```
 
-### 为 Milvus 集群配置指标采集能力{#enable-pod-monitor-for-milvus}
+### 为 Milvus 集群配置指标采集能力\{#enable-pod-monitor-for-milvus}
 
 为 Milvus 集群配置指标采集能力的相关配置项如下：
 
@@ -88,7 +91,7 @@ spec:
 
     Milvus 集群指标采集间隔。
 
-### 为 etcd 配置指标采集能力{#enable-pod-monitor-for-etcd}
+### 为 etcd 配置指标采集能力\{#enable-pod-monitor-for-etcd}
 
 为 etcd 配置指标采集能力的相关配置项如下：
 
@@ -100,7 +103,7 @@ spec:
 
     etcd 指标采集间隔。
 
-### 为 Pulsar 配置指标采集能力{#enable-pod-monitor-for-pulsar}
+### 为 Pulsar 配置指标采集能力\{#enable-pod-monitor-for-pulsar}
 
 为 Pulsar 配置指标采集能力的相关配置项如下：
 
@@ -136,15 +139,15 @@ spec:
 
     Pulsar Proxy 指标采集间隔。
 
-## 核心指标介绍{#core-metrics}
+## 核心指标介绍\{#core-metrics}
 
 本小节主要介绍 Milvus 集群及其依赖的三方件的相关性能指标。
 
-### Milvus 集群核心指标{#core-milvus-metrics}
+### Milvus 集群核心指标\{#core-milvus-metrics}
 
 Milvus 集群核心指标主要包括查询延迟、写入延迟、消息队列时延、Proxy 任务排队时间、Channel CP Lag、限流请求、禁写状态、QueryNode 延迟、DataNode 消费延迟和 QueryCoord 任务等。
 
-#### 查询延迟{#search-query-latency}
+#### 查询延迟\{#search-query-latency}
 
 ```json
 milvus_proxy_sq_latency_bucket\{query_type="search"} // search latency (proxy)
@@ -164,7 +167,7 @@ milvus_proxy_sq_latency_bucket\{query_type="query"}  // query latency (proxy)
    </tr>
 </table>
 
-#### 写入延迟{#write-latency}
+#### 写入延迟\{#write-latency}
 
 ```json
 milvus_proxy_mutation_latency_bucket\{msg_type="insert"} // insert latency (proxy)
@@ -185,7 +188,7 @@ milvus_proxy_mutation_latency_bucket\{msg_type="delete"} // delete latency (prox
    </tr>
 </table>
 
-#### 消息队列 Latency{#message-queue-latency}
+#### 消息队列 Latency\{#message-queue-latency}
 
 ```json
 milvus_proxy_mutation_send_latency_bucket\{msg_type="insert|upsert|delete"}
@@ -205,7 +208,7 @@ milvus_proxy_mutation_send_latency_bucket\{message_op_type="produce"}
    </tr>
 </table>
 
-#### Proxy 任务排队时间{#req-in-queue-latency}
+#### Proxy 任务排队时间\{#req-in-queue-latency}
 
 ```json
 milvus_proxy_req_in_queue_latency_bucket 
@@ -224,7 +227,7 @@ milvus_proxy_req_in_queue_latency_bucket
    </tr>
 </table>
 
-#### Channel CP Lag{#channel-checkpoint-lag}
+#### Channel CP Lag\{#channel-checkpoint-lag}
 
 ```json
 milvus_datacoord_channel_checkpoint_unix_seconds
@@ -243,7 +246,7 @@ milvus_datacoord_channel_checkpoint_unix_seconds
    </tr>
 </table>
 
-#### 限流请求{#rate-limit-req-count}
+#### 限流请求\{#rate-limit-req-count}
 
 ```json
 milvus_proxy_rate_limit_req_count\{status="fail"}
@@ -262,7 +265,7 @@ milvus_proxy_rate_limit_req_count\{status="fail"}
    </tr>
 </table>
 
-#### 禁写状态{#quota-states}
+#### 禁写状态\{#quota-states}
 
 ```json
 milvus_rootcoord_quota_states // collection level 禁写状态
@@ -281,7 +284,7 @@ milvus_rootcoord_quota_states // collection level 禁写状态
    </tr>
 </table>
 
-#### QueryNode 延迟{#querynode-latency}
+#### QueryNode 延迟\{#querynode-latency}
 
 ```json
 milvus_querynode_sq_req_latency_bucket // qn  request latency
@@ -303,7 +306,7 @@ milvus_querynode_sq_wait_tsafe_latency_bucket // wait tsafe latency
    </tr>
 </table>
 
-#### DataNode 消费延迟{#datanode-consume-latency}
+#### DataNode 消费延迟\{#datanode-consume-latency}
 
 ```json
 milvus_datanode_consume_tt_lag_ms
@@ -322,7 +325,7 @@ milvus_datanode_consume_tt_lag_ms
    </tr>
 </table>
 
-#### QueryCoord 任务{#querycoord-task}
+#### QueryCoord 任务\{#querycoord-task}
 
 ```json
 milvus_querycoord_task_num // segment/channel task 
@@ -343,7 +346,7 @@ milvus_querynode_stopping_balance_channel_num // 下线qn 上要迁移channel ta
    </tr>
 </table>
 
-### etcd 核心指标{#core-etcd-metrics}
+### etcd 核心指标\{#core-etcd-metrics}
 
 #### Leader 检查
 
@@ -403,7 +406,7 @@ grpc_server_handled_total\{grpc_type="unary",grpc_code!="OK"}
    </tr>
 </table>
 
-### Pulsar 核心指标{#core-pulsar-metrics}
+### Pulsar 核心指标\{#core-pulsar-metrics}
 
 #### 基础计数
 
@@ -468,6 +471,6 @@ bookkeeper_server_READ_ENTRY_REQUEST\{quantile="0.5"}
    </tr>
 </table>
 
-## Grafana 模板{#grafana-templates}
+## Grafana 模板\{#grafana-templates}
 
 请联系 Zilliz 支持团队获取。 

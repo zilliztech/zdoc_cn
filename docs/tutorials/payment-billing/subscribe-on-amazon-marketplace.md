@@ -3,11 +3,14 @@ title: "订阅亚马逊云科技 Marketplace | Cloud"
 slug: /subscribe-on-amazon-marketplace
 sidebar_label: "订阅亚马逊云科技 Marketplace"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如何在亚马逊云科技 Marketplace上订阅 Zilliz Cloud。 | Cloud"
 type: origin
 token: LNxnwCaoeiwvxVkQqCTcWmMFn5g
-sidebar_position: 4
+sidebar_position: 5
 keywords: 
   - 向量数据库
   - zilliz
@@ -31,11 +34,11 @@ Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如�
 
 </Admonition>
 
-## 准备工作{#before-you-start}
+## 准备工作\{#before-you-start}
 
 - 您已注册并登录您的亚马逊云科技帐号。
 
-## 操作步骤{#procedures}
+## 操作步骤\{#procedures}
 
 1. 前往[亚马逊云科技 Marketplace ](https://awsmarketplace.amazonaws.cn/marketplace/pp/prodview-qu54xpewqak6c?sr=0-1&ref_=beagle&applicationId=AWS-Marketplace-Console)开通 Zilliz Cloud 服务。
 
@@ -69,7 +72,7 @@ Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如�
 
     ![subscribe-on-amazon-marketplace-cn-complete-on-billing](/img/subscribe-on-amazon-marketplace-cn-complete-on-billing.png)
 
-## 取消订阅{#unsubscribe-amazon-marketplace}
+## 取消订阅\{#unsubscribe-amazon-marketplace}
 
 1. 前往亚马逊云科技 Marketplace [管理订阅](https://console.amazonaws.cn/marketplace/home?region=cn-north-1#/subscriptions?Feedback=true)页面。
 
@@ -87,7 +90,7 @@ Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如�
 
 1. 取消订阅后，Zilliz Cloud 将从您的订阅列表中消失。
 
-## 切换用于订阅的亚马逊云科技账号{#update-amazon-marketplace-subscription}
+## 切换用于订阅的亚马逊云科技账号\{#update-amazon-marketplace-subscription}
 
 如果您当前使用亚马逊云科技账号 A 在 Marketplace 订阅 Zilliz Cloud，但需要切换为使用亚马逊云科技账号 B 订阅，您可以：
 
@@ -107,7 +110,7 @@ Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如�
 
 ![view-amazon-subscription-id-cn](/img/view-amazon-subscription-id-cn.png)
 
-## 常见问题{#troubleshooting}
+## 常见问题\{#troubleshooting}
 
 **在绑定云市场订阅和 Zilliz Cloud 组织过程中遇到无可用组织或组织不可用的问题该怎么办？**
 
@@ -149,7 +152,7 @@ Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如�
 
     1. [提交工单](http://support.zilliz.com.cn)，联系我们为您创建一个新组织。
 
-## 后续操作{#next-steps}
+## 后续操作\{#next-steps}
 
 - 您可以前往 [Zilliz Cloud 文档站](https://docs.zilliz.com.cn)查看产品使用指南。
 

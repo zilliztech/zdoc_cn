@@ -3,6 +3,9 @@ title: "Grouping Search | Cloud"
 slug: /grouping-search
 sidebar_label: "Grouping Search"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "如果搜索结果中所有 Entity 在某个标量字段上的取值都相同时，搜索结果可能并不能真实反映与查询向量相似的所有向量在向量空间中的分布情况。为了提升召回结果的多样性，可以考虑使用 Grouping Search。本节将介绍如何使用 Grouping Search 以及与之相关的注意事项。 | Cloud"
 type: origin
@@ -32,7 +35,7 @@ import TabItem from '@theme/TabItem';
 
 如果搜索结果中所有 Entity 在某个标量字段上的取值都相同时，搜索结果可能并不能真实反映与查询向量相似的所有向量在向量空间中的分布情况。为了提升召回结果的多样性，可以考虑使用 Grouping Search。本节将介绍如何使用 Grouping Search 以及与之相关的注意事项。
 
-## 概述{#overview}
+## 概述\{#overview}
 
 当搜索结果中所有 Entity 在某个标量字段上的取值都相同时，表明这些 Entity 在某个属性上相似，可能会对搜索结果带来负面影响。
 
@@ -58,7 +61,7 @@ import TabItem from '@theme/TabItem';
 
 </Admonition>
 
-## 执行 Grouping Search {#grouping-search}
+## 执行 Grouping Search \{#grouping-search}
 
 本节将结合具体代码示例来介绍如何使用 Grouping Search。以下示例代码假设 Collection 中有 `id`、`vector`、`chunk` 和 `docId` 四个字段。
 
@@ -96,7 +99,7 @@ query_vectors = [
 
 # Group search results
 res = client.search(
-    collection_name="group_search_collection",
+    collection_name="my_collection",
     data=query_vectors,
     limit=3,
     group_by_field="docId",
@@ -125,7 +128,7 @@ MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
 
 FloatVec queryVector = new FloatVec(new float[]{0.14529211512077012f, 0.9147257273453546f, 0.7965055218724449f, 0.7009258593102812f, 0.5605206522382088f});
 SearchReq searchReq = SearchReq.builder()
-        .collectionName("group_search_collection")
+        .collectionName("my_collection")
         .data(Collections.singletonList(queryVector))
         .topK(3)
         .groupByFieldName("docId")
@@ -154,42 +157,45 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 <TabItem value='go'>
 
 ```go
-// nolint
-func ExampleClient_Search_grouping() {
-    ctx, cancel := context.WithCancel(context.Background())
-    defer cancel()
+import (
+    "context"
+    "fmt"
 
-    milvusAddr := "YOUR_CLUSTER_ENDPOINT"
-    token := "YOUR_CLUSTER_TOKEN"
+    "github.com/milvus-io/milvus/client/v2/entity"
+    "github.com/milvus-io/milvus/client/v2/milvusclient"
+)
 
-    cli, err := client.New(ctx, &client.ClientConfig{
-        Address: milvusAddr,
-        APIKey:  token,
-    })
-    if err != nil {
-        log.Fatal("failed to connect to milvus server: ", err.Error())
-    }
+ctx, cancel := context.WithCancel(context.Background())
+defer cancel()
 
-    defer cli.Close(ctx)
+milvusAddr := "localhost:19530"
+client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+    Address: milvusAddr,
+})
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+defer client.Close(ctx)
 
-    queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
+queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
 
-    resultSets, err := cli.Search(ctx, client.NewSearchOption(
-        "my_collection", // collectionName
-        3,               // limit
-        []entity.Vector{entity.FloatVector(queryVector)},
-    ).WithGroupByField("docId"))
-    if err != nil {
-        log.Fatal("failed to perform basic ANN search collection: ", err.Error())
-    }
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
+    "my_collection", // collectionName
+    3,               // limit
+    []entity.Vector{entity.FloatVector(queryVector)},
+).WithANNSField("vector").
+    WithGroupByField("docId").
+    WithOutputFields("docId"))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
 
-    for _, resultSet := range resultSets {
-        log.Println("IDs: ", resultSet.IDs)
-        log.Println("Scores: ", resultSet.Scores)
-    }
-    // Output:
-    // IDs:
-    // Scores:
+for _, resultSet := range resultSets {
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
+    fmt.Println("docId: ", resultSet.GetColumn("docId").FieldData().GetScalars())
 }
 ```
 
@@ -232,7 +238,7 @@ curl --request POST \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
 -d '{
-    "collectionName": "group_search_collection",
+    "collectionName": "my_collection",
     "data": [
         [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]
     ],
@@ -248,23 +254,23 @@ curl --request POST \
 
 在以上请求中，`limit=3` 表示系统将返回最多 3 个分组，每个分组中包含一条与查询向量最相似的 Entity。
 
-## 设置 Group Size{#set-group-size}
+## 设置 Group Size\{#set-group-size}
 
 在默认情况下，Grouping Search 仅为每个分组返回一条 Entity。如果希望每个分组中返回多个结果，可以通过设置 `group_size` 和 `strict_group_size` 参数实现。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
 # Group search results
 
 res = client.search(
-    collection_name="group_search_collection", 
-    data=query_vectors, # 查询向量
-    limit=5, # 返回的分组数量
-    group_by_field="docId", # 分组字段
-    group_size=2, # 每个分组中最多返回 2 条 Entity
-    strict_group_size=True, # 确保每个分组包含 2 条 Entity，除非数据不足
+    collection_name="my_collection", 
+    data=query_vectors, # query vector
+    limit=5, # number of groups to return
+    group_by_field="docId", # grouping field
+    group_size=2, # p to 2 entities to return from each group
+    strict_group_size=True, # return exact 2 entities from each group
     output_fields=["docId"]
 )
 ```
@@ -276,7 +282,7 @@ res = client.search(
 ```java
 FloatVec queryVector = new FloatVec(new float[]{0.14529211512077012f, 0.9147257273453546f, 0.7965055218724449f, 0.7009258593102812f, 0.5605206522382088f});
 SearchReq searchReq = SearchReq.builder()
-        .collectionName("group_search_collection")
+        .collectionName("my_collection")
         .data(Collections.singletonList(queryVector))
         .topK(5)
         .groupByFieldName("docId")
@@ -307,6 +313,55 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 
 </TabItem>
 
+<TabItem value='go'>
+
+```go
+import (
+    "context"
+    "fmt"
+
+    "github.com/milvus-io/milvus/client/v2/entity"
+    "github.com/milvus-io/milvus/client/v2/milvusclient"
+)
+
+ctx, cancel := context.WithCancel(context.Background())
+defer cancel()
+
+milvusAddr := "localhost:19530"
+client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+    Address: milvusAddr,
+})
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+defer client.Close(ctx)
+
+queryVector := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
+
+resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
+    "my_collection", // collectionName
+    5,               // limit
+    []entity.Vector{entity.FloatVector(queryVector)},
+).WithANNSField("vector").
+    WithGroupByField("docId").
+    WithStrictGroupSize(true).
+    WithGroupSize(2).
+    WithOutputFields("docId"))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+
+for _, resultSet := range resultSets {
+    fmt.Println("IDs: ", resultSet.IDs.FieldData().GetScalars())
+    fmt.Println("Scores: ", resultSet.Scores)
+    fmt.Println("docId: ", resultSet.GetColumn("docId").FieldData().GetScalars())
+}
+```
+
+</TabItem>
+
 <TabItem value='javascript'>
 
 ```javascript
@@ -321,7 +376,7 @@ var query_vector = [0.3580376395471989, -0.6023495712049978, 0.18414012509913835
 res = await client.search({
     collection_name: "my_collection",
     data: [query_vector],
-    limit: 3,
+    limit: 5,
     group_by_field: "docId",
     // highlight-start
     group_size: 2,
@@ -343,7 +398,7 @@ curl --request POST \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
 -d '{
-    "collectionName": "group_search_collection",
+    "collectionName": "my_collection",
     "data": [
         [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]
     ],
@@ -367,7 +422,7 @@ curl --request POST \
 
 有关更多参数信息，请参考 [search()](/reference/python/python/Vector-search)。
 
-## 注意事项{#considerations}
+## 注意事项\{#considerations}
 
 - **分组数量**：`limit` 参数决定了返回的分组数量，而不是每组中的具体 Entity 数量。设置合理的 `limit` 值可以帮助控制搜索结果的多样性和查询效率。如果数据分布集中或查询性能要求较高，可适当减少 `limit` 值，以减少计算开销。
 

@@ -1,10 +1,13 @@
 ---
-title: "数据处理 | Cloud"
+title: "数据处理 | BYOC"
 slug: /data
 sidebar_label: "数据处理"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "本章关注数据操作相关内容，包括 Collection、Schema 和数据类型、插入与删除、Index 操作、搜索与重排及导入导出。 | Cloud"
+description: "本章关注数据操作相关内容，包括 Collection、Schema 和数据类型、插入与删除、Index 操作、搜索与重排及导入导出。 | BYOC"
 type: origin
 token: JYBpw0VhRifdWukbA5ecVRHjnkl
 sidebar_position: 3

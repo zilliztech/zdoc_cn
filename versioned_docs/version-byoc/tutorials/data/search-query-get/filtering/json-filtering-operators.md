@@ -1,10 +1,13 @@
 ---
-title: "JSON 操作符 | Cloud"
+title: "JSON 操作符 | BYOC"
 slug: /json-filtering-operators
 sidebar_label: "JSON 操作符"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 支持用于查询和过滤 JSON 字段的高级操作符，使其成为管理复杂结构化数据的完美工具。这些操作符可实现对 JSON 文档的高效查询，允许您根据 JSON 字段中的特定元素、值或条件检索实体。本节将指导您在 Zilliz Cloud 中使用特定于 JSON 的操作符，并提供实际示例来说明其功能。 | Cloud"
+description: "Zilliz Cloud 支持用于查询和过滤 JSON 字段的高级操作符，使其成为管理复杂结构化数据的完美工具。这些操作符可实现对 JSON 文档的高效查询，允许您根据 JSON 字段中的特定元素、值或条件检索实体。本节将指导您在 Zilliz Cloud 中使用特定于 JSON 的操作符，并提供实际示例来说明其功能。 | BYOC"
 type: origin
 token: CzWlwISZRiHErEkRmEfcqga4nzd
 sidebar_position: 4
@@ -38,19 +41,19 @@ Zilliz Cloud 支持用于查询和过滤 JSON 字段的高级操作符，使其�
 
 </Admonition>
 
-## 支持的 JSON 操作符{#available-json-operators}
+## 支持的 JSON 操作符\{#available-json-operators}
 
 Zilliz Cloud 提供了几个强大的 JSON 操作符，可帮助过滤和查询 JSON 数据，这些操作符包括：
 
-- `JSON_CONTAINS(identifier, expr)`：用于过滤出在指定 JSON 字段值中包含指定表达式的所有 Entity。
+- [`JSON_CONTAINS(identifier, expr)`](./json-filtering-operators#jsoncontains)：用于过滤出在指定 JSON 字段值中包含指定表达式的所有 Entity。
 
-- `JSON_CONTAINS_ALL(identifier, expr)`：用于过滤出在指定 JSON 字段值中包含指定表达式中所有元素的所有 Entity。
+- [`JSON_CONTAINS_ALL(identifier, expr)`](./json-filtering-operators#jsoncontainsall)：用于过滤出在指定 JSON 字段值中包含指定表达式中所有元素的所有 Entity。
 
-- `JSON_CONTAINS_ANY(identifier, expr)`：用于过滤出在指定 JSON 字段值中包含指定表达式中若干元素的所有 Entity。
+- [`JSON_CONTAINS_ANY(identifier, expr)`](./json-filtering-operators#jsoncotainsany)：用于过滤出在指定 JSON 字段值中包含指定表达式中若干元素的所有 Entity。
 
 下面，我们将结合示例来了解如何在实际场景下使用这些操作符。
 
-## JSON_CONTAINS{#jsoncontains}
+## JSON_CONTAINS\{#jsoncontains}
 
 该操作符会检查 JSON 字段中是否存在特定元素或子数组。当你想确保一个 JSON 数组或对象包含一个特定值时，就可以使用 JSON_CONTAINS 操作符。
 
@@ -63,7 +66,7 @@ Zilliz Cloud 提供了几个强大的 JSON 操作符，可帮助过滤和查询 
 filter = 'json_contains(product["tags"], "sale")'
 ```
 
-## JSON_CONTAINS_ALL{#jsoncontainsall}
+## JSON_CONTAINS_ALL\{#jsoncontainsall}
 
 该操作符可确保目标字段中包含指定 JSON 表达式的所有元素。当需要匹配 JSON 数组中的多个值时，就可以使用 JSON_CONTAINS_ALL 操作符。
 
@@ -76,7 +79,7 @@ filter = 'json_contains(product["tags"], "sale")'
 filter = 'json_contains_all(product["tags"], ["electronics", "sale", "new"])'
 ```
 
-## JSON_CONTAINS_ANY{#jsoncotainsany}
+## JSON_CONTAINS_ANY\{#jsoncotainsany}
 
 该操作符可过滤字段中至少存在一个 JSON 表达式成员的实体。当您想根据多个可能值中的任意一个值来匹配实体时，就可以使用 JSON_CONTAINS_ANY 操作符。
 

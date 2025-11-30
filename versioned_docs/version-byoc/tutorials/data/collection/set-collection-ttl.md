@@ -1,10 +1,13 @@
 ---
-title: "设置 Collection 生存时间 | Cloud"
+title: "设置 Collection 生存时间 | BYOC"
 slug: /set-collection-ttl
 sidebar_label: "设置 Collection 生存时间"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "数据插入 Collection 后，默认情况下仍保留在该 Collection 中。但是，在某些情况下，您可能希望在一定期限后删除或清理数据。在这种情况下，您可以配置 Collection 的生存时间（TTL）属性，以便 Zilliz Cloud 在TTL到期后自动删除数据。 | Cloud"
+description: "数据插入 Collection 后，默认情况下仍保留在该 Collection 中。但是，在某些情况下，您可能希望在一定期限后删除或清理数据。在这种情况下，您可以配置 Collection 的生存时间（TTL）属性，以便 Zilliz Cloud 在TTL到期后自动删除数据。 | BYOC"
 type: origin
 token: NYFIwLbc7iFeMbkP7T4cFfXJnLT
 sidebar_position: 6
@@ -33,7 +36,7 @@ import TabItem from '@theme/TabItem';
 
 数据插入 Collection 后，默认情况下仍保留在该 Collection 中。但是，在某些情况下，您可能希望在一定期限后删除或清理数据。在这种情况下，您可以配置 Collection 的生存时间（TTL）属性，以便 Zilliz Cloud 在TTL到期后自动删除数据。
 
-## 概述{#overview}
+## 概述\{#overview}
 
 生存时间（TTL）通常用于如下场景：数据库中的数据在插入或修改后只能保持有效或可访问一段时间。然后，数据需要被自动删除。 
 
@@ -49,7 +52,7 @@ import TabItem from '@theme/TabItem';
 
 值得注意的是，数据删除操作是异步的。这就意味着当某些数据超期后并不会马上被删除。在数据被删除和数据不可查之间有一定的延迟。这是由垃圾回收（GC）机制和数据压缩耗时决定的。Zilliz Cloud 会不定期的触发这些操作。
 
-## 设置 TTL{#set-ttl}
+## 设置 TTL\{#set-ttl}
 
 您可以在如下情况下设置 TTL
 
@@ -57,7 +60,7 @@ import TabItem from '@theme/TabItem';
 
 - [需要修改指定 Collection 的 TTL 时](./set-collection-ttl#set-ttl-for-an-existing-collection)。
 
-### 在创建 Collection 时设置 TTL{#set-ttl-when-creating-a-collection}
+### 在创建 Collection 时设置 TTL\{#set-ttl-when-creating-a-collection}
 
 如下示例演示了如何在创建 Collection 时设置 TTL。
 
@@ -155,7 +158,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 修改指定 Collection 的 TTL{#set-ttl-for-an-existing-collection}
+### 修改指定 Collection 的 TTL\{#set-ttl-for-an-existing-collection}
 
 如下示例演示了如何修改指定 Collection 的 TTL。
 
@@ -231,7 +234,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 重置 TTL{#drop-ttl-setting}
+## 重置 TTL\{#drop-ttl-setting}
 
 如果您希望 Collection 中的数据能够永久保存，您可以通过重置 TTL 设置来实现这一点。
 

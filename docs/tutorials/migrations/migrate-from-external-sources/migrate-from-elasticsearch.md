@@ -3,6 +3,9 @@ title: "从 Elasticsearch 迁移至 Zilliz Cloud | Cloud"
 slug: /migrate-from-elasticsearch
 sidebar_label: "从 Elasticsearch 迁移"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本文档说明从 Elasticsearch 迁移时，Zilliz Cloud 如何处理数据类型映射、Collection 命名规则及注意事项。 | Cloud"
 type: origin
@@ -25,11 +28,11 @@ import Admonition from '@theme/Admonition';
 
 本文档说明从 [Elasticsearch](https://www.elastic.co/elasticsearch) 迁移时，Zilliz Cloud 如何处理数据类型映射、Collection 命名规则及注意事项。
 
-## 开始前{#before-you-start}
+## 开始前\{#before-you-start}
 
 开始离线迁移前需满足：
 
-### Elasticsearch 侧要求{#elasticsearch-requirements}
+### Elasticsearch 侧要求\{#elasticsearch-requirements}
 
 <table>
    <tr>
@@ -54,7 +57,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-### Zilliz Cloud 侧要求{#zilliz-cloud-requirements}
+### Zilliz Cloud 侧要求\{#zilliz-cloud-requirements}
 
 <table>
    <tr>
@@ -75,7 +78,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-## 数据类型映射{#data-type-mapping}
+## 数据类型映射\{#data-type-mapping}
 
 下表总结了 Elasticsearch 字段类型如何映射到 Zilliz Cloud 字段类型，并对各类型做了详细说明。
 
@@ -147,9 +150,9 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-## Elasticsearch 特殊处理规则{#elasticsearch-specific-handling-rules}
+## Elasticsearch 特殊处理规则\{#elasticsearch-specific-handling-rules}
 
-### Collection 命名规则{#collection-naming-rules}
+### Collection 命名规则\{#collection-naming-rules}
 
 Elasticsearch 索引名称将按以下规则迁移至 Zilliz Cloud：
 
@@ -176,7 +179,7 @@ Elasticsearch 索引名称将按以下规则迁移至 Zilliz Cloud：
    </tr>
 </table>
 
-## 迁移注意事项{#migration-considerations}
+## 迁移注意事项\{#migration-considerations}
 
 从 Elasticsearch 迁移时需注意以下事项：
 

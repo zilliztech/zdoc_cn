@@ -1,10 +1,13 @@
 ---
-title: "管理 MFA | Cloud"
+title: "管理 MFA | BYOC"
 slug: /multi-factor-auth
 sidebar_label: "管理 MFA"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "本教程将介绍如何在 Zilliz Cloud 账号设置中管理多重身份认证（MFA）。目前，Zilliz Cloud 仅支持通过邮箱进行多重身份认证。 | Cloud"
+description: "本教程将介绍如何在 Zilliz Cloud 账号设置中管理多重身份认证（MFA）。目前，Zilliz Cloud 仅支持通过邮箱进行多重身份认证。 | BYOC"
 type: origin
 token: EWAWwESijisVHFkoAEbcfhvPnZb
 sidebar_position: 4
@@ -24,7 +27,7 @@ import Admonition from '@theme/Admonition';
 
 本教程将介绍如何在 Zilliz Cloud 账号设置中管理多重身份认证（MFA）。目前，Zilliz Cloud 仅支持通过邮箱进行多重身份认证。
 
-## 开启 MFA{#enable-mfa}
+## 开启 MFA\{#enable-mfa}
 
 执行以下步骤以开启 MFA：
 
@@ -54,7 +57,7 @@ import Admonition from '@theme/Admonition';
 
 1. 通过验证后，您将自动登录并进入 Zilliz Cloud 操作界面。
 
-## 关闭 MFA{#disable-mfa}
+## 关闭 MFA\{#disable-mfa}
 
 如过您已开启 MFA，请执行以下步骤以关闭 MFA：
 

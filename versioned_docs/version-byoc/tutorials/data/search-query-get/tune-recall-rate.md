@@ -1,10 +1,13 @@
 ---
-title: "召回调优 | Cloud"
+title: "召回调优 | BYOC"
 slug: /tune-recall-rate
 sidebar_label: "召回调优"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 引入了一个名为 `level` 的搜索参数，允许用户通过调整该参数来平衡召回率和搜索性能。同时，Zilliz Cloud 还允许用户设置 `enablerecallcalculation` 参数来决定是否在搜索结果中包含预估召回率信息。您可以配合使用这两个参数来对向量搜索结果进行调优。 | Cloud"
+description: "Zilliz Cloud 引入了一个名为 `level` 的搜索参数，允许用户通过调整该参数来平衡召回率和搜索性能。同时，Zilliz Cloud 还允许用户设置 `enablerecallcalculation` 参数来决定是否在搜索结果中包含预估召回率信息。您可以配合使用这两个参数来对向量搜索结果进行调优。 | BYOC"
 type: origin
 token: Wb3KwVJBDiQvzikvXNbcUiZonEf
 sidebar_position: 2
@@ -25,19 +28,6 @@ import Admonition from '@theme/Admonition';
 # 召回调优
 
 Zilliz Cloud 引入了一个名为 `level` 的搜索参数，允许用户通过调整该参数来平衡召回率和搜索性能。同时，Zilliz Cloud 还允许用户设置 `enable_recall_calculation` 参数来决定是否在搜索结果中包含预估召回率信息。您可以配合使用这两个参数来对向量搜索结果进行调优。
-
-<Admonition type="info" icon="📘" title="说明">
-
-<ul>
-<li><p>此功能处于公测阶段。如需使用该功能，您的集群应兼容 Milvus v2.5.4 及之后版本或 Milvus v2.4.14 及之后版本。</p></li>
-<li><p>支持该功能的 API 和 SDK 及版本信息如下：</p></li>
-<li><p>Python: v2.5.4 and v2.4.14</p></li>
-<li><p>Java: v2.5.3 and v2.4.10</p></li>
-<li><p>Node.js: v2.5.2 and v2.4.10</p></li>
-<li><p>RESTful: v2.5.4</p></li>
-</ul>
-
-</Admonition>
 
 ## 概述
 
@@ -115,6 +105,12 @@ res = client.search(
 1. 使用第二次搜索的结果作为分母计算预估召回率。
 
 在设置 `enable_recall_calculation` 为 `True` 时，您可以通过调整 `level` 参数的取值执行多次搜索来查看预估召回率的变化。通过评估预估召回率和搜索耗时等指标，粗略估计合适的 `level` 参数取值。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>开启 <code>enable_recall_calculation</code> 可能会影响搜索性能，不建议在生产环境使用。</p>
+
+</Admonition>
 
 ## 限制
 

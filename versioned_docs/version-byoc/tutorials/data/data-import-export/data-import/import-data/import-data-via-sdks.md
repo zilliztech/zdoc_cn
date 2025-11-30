@@ -1,10 +1,13 @@
 ---
-title: "通过 SDK 导入 | Cloud"
+title: "通过 SDK 导入 | BYOC"
 slug: /import-data-via-sdks
 sidebar_label: "SDK"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "本节将帮助你了解如何使用 SDK 的 BulkWriter 和 BulkImport API 向 Collection 中导入数据。 | Cloud"
+description: "本节将帮助你了解如何使用 SDK 的 BulkWriter 和 BulkImport API 向 Collection 中导入数据。 | BYOC"
 type: origin
 token: Xv4awWJZpiKoJjkPTlic98Mindc
 sidebar_position: 3
@@ -28,7 +31,7 @@ import TabItem from '@theme/TabItem';
 
 另外，您还可以参考我们的[数据导入指南](./data-import-zero-to-hero)。其中包含了数据准备和数据导入两个部分的内容。
 
-## 安装依赖{#install-denpendencies}
+## 安装依赖\{#install-denpendencies}
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
 
@@ -64,7 +67,7 @@ compile 'io.milvus:milvus-sdk-java:2.4.8'
 
 </Tabs>
 
-### 检查已准备数据{#check-prepared-data}
+### 检查已准备数据\{#check-prepared-data}
 
 在您[使用 BulkWriter](./use-bulkwriter) 完成数据准备工作后，你会获得一个路径，指向准备好的数据文件。您可以使用如下代码来检查这些数据文件。
 
@@ -153,9 +156,13 @@ while (results.hasNext()) {
 </TabItem>
 </Tabs>
 
-## 导入数据{#import-data}
+## 导入数据\{#import-data}
 
-在待导入数据和 Collection 都准备就绪后，可以使用如下脚本将数据导入 Collection。
+一旦您的数据和 Collection 准备就绪，您可以通过外部存储（如对象存储桶和块存储 Blob 容器）将数据导入到特定集合中。
+
+### 从外部存储中导入数据\{#import-data-via-external-storage}
+
+在待导入数据和 Collection 都准备就绪后，可以使用如下脚本将数据从外部存储导入到指定 Collection。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
 <TabItem value='python'>
@@ -244,7 +251,7 @@ public static void main(String[] args) throws Exception {
 
 </Admonition>
 
-### 查看批量导入进度{#check-import-progress}
+### 查看批量导入进度\{#check-import-progress}
 
 可通过以下代码查看批量导入进度：
 
@@ -301,7 +308,7 @@ public static void main(String[] args) throws Exception {
 </TabItem>
 </Tabs>
 
-### 列出所有批量导入任务{#list-all-import-jobs}
+### 列出所有批量导入任务\{#list-all-import-jobs}
 
 您还可以调用 ListImportJobs API 来了解其它批量导入任务的运行情况：
 
@@ -355,7 +362,7 @@ public static void main(String[] args) throws Exception {
 </TabItem>
 </Tabs>
 
-## 推荐阅读{#related-topics}
+## 推荐阅读\{#related-topics}
 
 - [支持的对象存储](./data-import-storage-options)
 

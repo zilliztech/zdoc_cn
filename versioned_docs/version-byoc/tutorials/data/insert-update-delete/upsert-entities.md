@@ -1,10 +1,13 @@
 ---
-title: "Upsert Entity | Cloud"
+title: "Upsert Entity | BYOC"
 slug: /upsert-entities
 sidebar_label: "Upsert Entity"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Upsert 操作结合了数据更新和插入的操作。Zilliz Cloud 通过判断数据主键是否存在来判断是执行更新操作还是插入操作。本节将介绍如何 Upsert Entity及不同场景下 Upsert 操作的具体行为。 | Cloud"
+description: "使用 `upsert` 操作可以方便地在 Collection 中插入或更新 Entity。 | BYOC"
 type: origin
 token: PIvfwBrhRimh41kWjB1cFj21nqf
 sidebar_position: 2
@@ -25,27 +28,95 @@ import TabItem from '@theme/TabItem';
 
 # Upsert Entity
 
-Upsert 操作结合了数据更新和插入的操作。Zilliz Cloud 通过判断数据主键是否存在来判断是执行更新操作还是插入操作。本节将介绍如何 Upsert Entity及不同场景下 Upsert 操作的具体行为。
+使用 `upsert` 操作可以方便地在 Collection 中插入或更新 Entity。
 
-## 概述{#overview}
+## 概述
 
-当需要更新 Collection 中的 Entity 时或不确定需要更新还是插入时，可以尝试使用 Upsert 操作。在使用该操作时，需要确保 Upsert 请求携带的 Entity 包含主键值，否则会报错。在收到 Upsert 请求后，Zilliz Cloud 会执行如下流程：
+您可以使用 `upsert` 操作来插入新 Entity 或更新现有 Entity，具体取决于该请求中提供的主键是否存在于 Collection 中。如果未找到主键，则执行插入操作。否则，将执行更新操作。
 
-1. 检查 Collection 主键是否启用 AutoId。
+Milvus中的插入更新操作可以在**覆盖**或**合并**模式下工作。
 
-    1. 如果是，Zilliz Cloud 将使用自动生成的主键值替换 Entity 中的主键值并插入数据。
+### 在覆盖模式下进行 Upsert
 
-    1. 如果否，Zilliz Cloud 将使用 Entity 携带的主键值插入数据。
+以覆盖模式工作的插入更新请求。当收到针对现有 Entity 的 `upsert` 请求时，Zilliz Cloud 会插入请求负载中携带的数据，同时删除数据中指定的具有原始主键的现有 Entity。
 
-1. 根据 Upsert 请求携带的 Entity 主键值执行删除操作。
+![Af76wmsgbh7C0cbfQ36cTbUonpe](/img/Af76wmsgbh7C0cbfQ36cTbUonpe.png)
 
-![DT7Vw7hQJh0SFBbzxQmcfQCBncf](/img/DT7Vw7hQJh0SFBbzxQmcfQCBncf.png)
+如果目标 Collection 在其主键字段上启用了 AutoID，Zilliz Cloud 将在插入请求负载中携带的数据之前为其生成一个新的主键。
 
-## 向 Collection 中 Upsert Entity{#upsert-entity-in-a-collection}
+对于启用了允许为空的字段，如果不需要更新，则可以在 `upsert` 请求中省略它们。
 
-本节将演示如何向使用最简建表方式创建的 Collection 中Upsert Entity。通过这种方式创建的 Collection 仅有两个字段，分别名为 **id** 和 **vector**。另外，该 Collection 还启用了动态字段，因此示例代码中的 Entity 均携带了一个 Schema 中未定义的字段  **color**。 
+### 在合并模式下进行 Upsert | PUBLIC
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+您还可以使用 `partial_update` 标志，使 `upsert` 请求以合并模式工作。这允许您仅在请求负载中包含需要更新的字段。
+
+![HM2awm23ShMHaBb3p1HcMtZnnU4](/img/HM2awm23ShMHaBb3p1HcMtZnnU4.png)
+
+若要执行合并操作，请在 `upsert` 中将 `partial_update` 设置为`True` 并在请求中指定主键和要更新的字段以及它们的值。
+
+收到此类请求后，Zilliz Cloud 会执行强一致性查询以检索 Entity，根据请求中的数据更新字段值，插入修改后的数据，然后删除请求中携带的具有原始主键的现有 Entity。
+
+### Upsert 的行为：特别说明
+
+在使用合并功能之前，您应该考虑以下几个特别注意事项。以下情况假设您有一个 Collection，其中包含两个标量字段，分别名为`标题`和`问题`，以及一个主键`id`和一个名为`向量`的向量字段。
+
+- **更新插入字段，允许为空已启用。**
+
+    假设 `issue` 字段可以为空。当您更新插入这些字段时，请注意：
+
+    - 如果您在 `upsert` 请求中省略 `issue` 字段并禁用 `partial_update`，则 `issue` 字段将更新为 `null`，而不是保留其原始值。
+
+    - 要保留 `issue` 字段的原始值，您需要启用 `partial_update` 并省略 `issue` 字段，或者在 `upsert` 请求中包含带有其原始值的 `issue` 字段。
+
+- **在 Dynamic Field 中更新插入键**。
+
+    假设您已在示例 Collection 中启用 Dynamic Field，并且 Entity Dynamic Field中的键值对类似于`{"author": "John", "year": 2020, "tags": ["fiction"]}`。
+
+    当你使用键（如 `author`、`year` 或 `tags`）更新插入 Entity，或添加其他键时，请注意：
+
+    - 如果在禁用 `partial_update` 的情况下进行 `upsert` 操作，默认行为是**覆盖**。这意味着 Dynamic Field 的值将被请求中包含的所有非模式定义字段及其值覆盖。
+
+        例如，如果请求中包含的数据是`{"author": "Jane", "genre": "fantasy"}`，则目标 Entity Dynamic Field中的键值对将更新为该数据。
+
+    - 如果在启用`部分更新`的情况下进行插入或更新操作，默认行为是**合并**。这意味着Dynamic Field的值将与请求中包含的所有非模式定义字段及其值进行合并。
+
+        例如，如果请求中包含的数据是`{"author": "John", "year": 2020, "tags": ["fiction"]}`，则目标 Entity Dynamic Field 中的键值对在插入更新后将变为`{"author": "Jane", "year": 2020, "tags": ["fiction"], "genre": "fantasy"}`。
+
+- **更新插入一个 JSON 字段。**
+
+    假设示例 Collection 有一个名为 `extras` 的 JSON 字段，并且 Entity 的这个 JSON 字段中的键值对类似于`{"author": "John", "year": 2020, "tags": ["fiction"]}`。
+
+    当您使用修改后的JSON数据更新 Entity 的 `extras` 字段时，请注意：
+
+    - 如果在禁用 `partial_update` 的情况下进行插入或更新操作，默认行为是**覆盖**。这意味着请求中包含的JSON字段的值将覆盖目标 Entity 的 JSON 字段的原始值。
+
+        例如，如果请求中包含的数据是`{extras: {"author": "Jane", "genre": "fantasy"}}`，则目标Entity 的 `extras` 字段中的键值对将更新为`{"author": "Jane", "genre": "fantasy"}`。
+
+    - 如果在启用 `partial_update` 的情况下进行 `upsert` 操作，默认行为是**合并**。这意味着请求中包含的JSON 字段的值将与目标 Entity 的 JSON 字段的原始值合并。
+
+        例如，如果请求中包含的数据是`{extras: {"author": "Jane", "genre": "fantasy"}}`，则更新后目标 Entity 的`extras`字段中的键值对将变为`{"author": "Jane", "year": 2020, "tags": ["fiction"], "genre": "fantasy"}`。
+
+### 限制与约束
+
+根据上述内容，有若干限制和约束需要遵循：
+
+- `upsert` 请求必须始终包含目标 Entity 的主键。
+
+- 目标 Collection 必须已加载且可用于查询。
+
+- 请求中指定的所有字段必须存在于目标 Collection 的 Schema 中。
+
+- 请求中指定的所有字段的值必须与 Schema 中定义的数据类型相匹配。
+
+- 对于任何使用 Function 从其他字段派生而来的字段，Zilliz Cloud 将在 `upsert` 期间移除派生字段，以便重新计算。
+
+## 在 Collection 中 Upsert Entity
+
+在本节中，我们将向名为`my_collection`的 Collection 中 Upsert Entity 。这个 Collection 只有两个字段，分别名为`id`、`vector`、`title`和`issue`。`id`字段是主键字段，而`title`和`issue`字段是标量字段。
+
+如果 Collection 中存在这三个实体，它们将被包含在更新插入请求中的实体覆盖。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -57,27 +128,33 @@ client = MilvusClient(
 )
 
 data=[
-    {"id": 0, "vector": [-0.619954382375778, 0.4479436794798608, -0.17493894838751745, -0.4248030059917294, -0.8648452746018911], "color": "black_9898"},
-    {"id": 1, "vector": [0.4762662251462588, -0.6942502138717026, -0.4490002642657902, -0.628696575798281, 0.9660395877041965], "color": "red_7319"},
-    {"id": 2, "vector": [-0.8864122635045097, 0.9260170474445351, 0.801326976181461, 0.6383943392381306, 0.7563037341572827], "color": "white_6465"},
-    {"id": 3, "vector": [0.14594326235891586, -0.3775407299900644, -0.3765479013078812, 0.20612075380355122, 0.4902678929632145], "color": "orange_7580"},
-    {"id": 4, "vector": [0.4548498669607359, -0.887610217681605, 0.5655081329910452, 0.19220509387904117, 0.016513983433433577], "color": "red_3314"},
-    {"id": 5, "vector": [0.11755001847051827, -0.7295149788999611, 0.2608115847524266, -0.1719167007897875, 0.7417611743754855], "color": "black_9955"},
-    {"id": 6, "vector": [0.9363032158314308, 0.030699901477745373, 0.8365910312319647, 0.7823840208444011, 0.2625222076909237], "color": "yellow_2461"},
-    {"id": 7, "vector": [0.0754823906014721, -0.6390658668265143, 0.5610517334334937, -0.8986261118798251, 0.9372056764266794], "color": "white_5015"},
-    {"id": 8, "vector": [-0.3038434006935904, 0.1279149203380523, 0.503958664270957, -0.2622661156746988, 0.7407627307791929], "color": "purple_6414"},
-    {"id": 9, "vector": [-0.7125086947677588, -0.8050968321012257, -0.32608864121785786, 0.3255654958645424, 0.26227968923834233], "color": "brown_7231"}
+    {
+        "id": 0, 
+        "vector": [-0.619954382375778, 0.4479436794798608, -0.17493894838751745, -0.4248030059917294, -0.8648452746018911],
+        "title": "Artificial Intelligence in Real Life", 
+        "issue": "vol.12"
+    }, {
+        "id": 1, 
+        "vector": [0.4762662251462588, -0.6942502138717026, -0.4490002642657902, -0.628696575798281, 0.9660395877041965], 
+        "title": "Hollow Man", 
+        "issue": "vol.19"
+    }, {
+        "id": 2, 
+        "vector": [-0.8864122635045097, 0.9260170474445351, 0.801326976181461, 0.6383943392381306, 0.7563037341572827], 
+        "title": "Treasure Hunt in Missouri", 
+        "issue": "vol.12"
+    }
 ]
 
 res = client.upsert(
-    collection_name='quick_setup',
+    collection_name='my_collection',
     data=data
 )
 
 print(res)
 
 # Output
-# {'upsert_count': 10}
+# {'upsert_count': 3}
 ```
 
 </TabItem>
@@ -101,20 +178,13 @@ MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
 
 Gson gson = new Gson();
 List<JsonObject> data = Arrays.asList(
-        gson.fromJson("{\"id\": 0, \"vector\": [-0.619954382375778, 0.4479436794798608, -0.17493894838751745, -0.4248030059917294, -0.8648452746018911], \"color\": \"black_9898\"}", JsonObject.class),
-        gson.fromJson("{\"id\": 1, \"vector\": [0.4762662251462588, -0.6942502138717026, -0.4490002642657902, -0.628696575798281, 0.9660395877041965], \"color\": \"red_7319\"}", JsonObject.class),
-        gson.fromJson("{\"id\": 2, \"vector\": [-0.8864122635045097, 0.9260170474445351, 0.801326976181461, 0.6383943392381306, 0.7563037341572827], \"color\": \"white_6465\"}", JsonObject.class),
-        gson.fromJson("{\"id\": 3, \"vector\": [0.14594326235891586, -0.3775407299900644, -0.3765479013078812, 0.20612075380355122, 0.4902678929632145], \"color\": \"orange_7580\"}", JsonObject.class),
-        gson.fromJson("{\"id\": 4, \"vector\": [0.4548498669607359, -0.887610217681605, 0.5655081329910452, 0.19220509387904117, 0.016513983433433577], \"color\": \"red_3314\"}", JsonObject.class),
-        gson.fromJson("{\"id\": 5, \"vector\": [0.11755001847051827, -0.7295149788999611, 0.2608115847524266, -0.1719167007897875, 0.7417611743754855], \"color\": \"black_9955\"}", JsonObject.class),
-        gson.fromJson("{\"id\": 6, \"vector\": [0.9363032158314308, 0.030699901477745373, 0.8365910312319647, 0.7823840208444011, 0.2625222076909237], \"color\": \"yellow_2461\"}", JsonObject.class),
-        gson.fromJson("{\"id\": 7, \"vector\": [0.0754823906014721, -0.6390658668265143, 0.5610517334334937, -0.8986261118798251, 0.9372056764266794], \"color\": \"white_5015\"}", JsonObject.class),
-        gson.fromJson("{\"id\": 8, \"vector\": [-0.3038434006935904, 0.1279149203380523, 0.503958664270957, -0.2622661156746988, 0.7407627307791929], \"color\": \"purple_6414\"}", JsonObject.class),
-        gson.fromJson("{\"id\": 9, \"vector\": [-0.7125086947677588, -0.8050968321012257, -0.32608864121785786, 0.3255654958645424, 0.26227968923834233], \"color\": \"brown_7231\"}", JsonObject.class)
+        gson.fromJson("{\"id\": 0, \"vector\": [-0.619954382375778, 0.4479436794798608, -0.17493894838751745, -0.4248030059917294, -0.8648452746018911], \"title\": \"Artificial Intelligence in Real Life\", \"issue\": \"\vol.12\"}", JsonObject.class),
+        gson.fromJson("{\"id\": 1, \"vector\": [0.4762662251462588, -0.6942502138717026, -0.4490002642657902, -0.628696575798281, 0.9660395877041965], \"title\": \"Hollow Man\", \"issue\": \"vol.19\"}", JsonObject.class),
+        gson.fromJson("{\"id\": 2, \"vector\": [-0.8864122635045097, 0.9260170474445351, 0.801326976181461, 0.6383943392381306, 0.7563037341572827], \"title\": \"Treasure Hunt in Missouri\", \"issue\": \"vol.12\"}", JsonObject.class),
 );
 
 UpsertReq upsertReq = UpsertReq.builder()
-        .collectionName("quick_setup")
+        .collectionName("my_collection")
         .data(data)
         .build();
 
@@ -123,7 +193,7 @@ System.out.println(upsertResp);
 
 // Output:
 //
-// UpsertResp(upsertCnt=10)
+// UpsertResp(upsertCnt=3)
 ```
 
 </TabItem>
@@ -138,20 +208,13 @@ const token = "YOUR_CLUSTER_TOKEN";
 const client = new MilvusClient({address, token});
 
 data = [
-    {id: 0, vector: [-0.619954382375778, 0.4479436794798608, -0.17493894838751745, -0.4248030059917294, -0.8648452746018911], color: "black_9898"},
-    {id: 1, vector: [0.4762662251462588, -0.6942502138717026, -0.4490002642657902, -0.628696575798281, 0.9660395877041965], color: "red_7319"},
-    {id: 2, vector: [-0.8864122635045097, 0.9260170474445351, 0.801326976181461, 0.6383943392381306, 0.7563037341572827], color: "white_6465"},
-    {id: 3, vector: [0.14594326235891586, -0.3775407299900644, -0.3765479013078812, 0.20612075380355122, 0.4902678929632145], color: "orange_7580"},
-    {id: 4, vector: [0.4548498669607359, -0.887610217681605, 0.5655081329910452, 0.19220509387904117, 0.016513983433433577], color: "red_3314"},
-    {id: 5, vector: [0.11755001847051827, -0.7295149788999611, 0.2608115847524266, -0.1719167007897875, 0.7417611743754855], color: "black_9955"},
-    {id: 6, vector: [0.9363032158314308, 0.030699901477745373, 0.8365910312319647, 0.7823840208444011, 0.2625222076909237], color: "yellow_2461"},
-    {id: 7, vector: [0.0754823906014721, -0.6390658668265143, 0.5610517334334937, -0.8986261118798251, 0.9372056764266794], color: "white_5015"},
-    {id: 8, vector: [-0.3038434006935904, 0.1279149203380523, 0.503958664270957, -0.2622661156746988, 0.7407627307791929], color: "purple_6414"},
-    {id: 9, vector: [-0.7125086947677588, -0.8050968321012257, -0.32608864121785786, 0.3255654958645424, 0.26227968923834233], color: "brown_7231"}
+    {id: 0, vector: [-0.619954382375778, 0.4479436794798608, -0.17493894838751745, -0.4248030059917294, -0.8648452746018911], title: "Artificial Intelligence in Real Life", issue: "vol.12"},
+    {id: 1, vector: [0.4762662251462588, -0.6942502138717026, -0.4490002642657902, -0.628696575798281, 0.9660395877041965], title: "Hollow Man", issue: "vol.19"},
+    {id: 2, vector: [-0.8864122635045097, 0.9260170474445351, 0.801326976181461, 0.6383943392381306, 0.7563037341572827], title: "Treasure Hunt in Missouri", issue: "vol.12"},
 ]
 
 res = await client.upsert({
-    collection_name: "quick_setup",
+    collection_name: "my_collection",
     data: data,
 })
 
@@ -159,8 +222,57 @@ console.log(res.upsert_cnt)
 
 // Output
 // 
-// 10
+// 3
 // 
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+import (
+    "context"
+    "fmt"
+
+    "github.com/milvus-io/milvus/client/v2/column"
+    "github.com/milvus-io/milvus/client/v2/milvusclient"
+)
+
+ctx, cancel := context.WithCancel(context.Background())
+defer cancel()
+
+milvusAddr := "localhost:19530"
+client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+    Address: milvusAddr,
+})
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+defer client.Close(ctx)
+
+titleColumn := column.NewColumnString("title", []string{
+    "Artificial Intelligence in Real Life", "Hollow Man", "Treasure Hunt in Missouri", 
+})
+
+issueColumn := column.NewColumnString("issue", []string{
+    "vol.12", "vol.19", "vol.12"
+})
+
+_, err = client.Upsert(ctx, milvusclient.NewColumnBasedInsertOption("my_collection").
+    WithInt64Column("id", []int64{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}).
+    WithFloatVectorColumn("vector", 5, [][]float32{
+        {0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592},
+        {0.19886812562848388, 0.06023560599112088, 0.6976963061752597, 0.2614474506242501, 0.838729485096104},
+        {0.43742130801983836, -0.5597502546264526, 0.6457887650909682, 0.7894058910881185, 0.20785793220625592},
+    }).
+    WithColumns(titleColumn, issueColumn),
+)
+if err != nil {
+    fmt.Println(err.Error())
+    // handle err
+}
 ```
 
 </TabItem>
@@ -177,35 +289,21 @@ curl --request POST \
 --header "Content-Type: application/json" \
 -d '{
     "data": [
-        {"id": 0, "vector": [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592], "color": "pink_8682"},
-        {"id": 1, "vector": [0.19886812562848388, 0.06023560599112088, 0.6976963061752597, 0.2614474506242501, 0.838729485096104], "color": "red_7025"},
-        {"id": 2, "vector": [0.43742130801983836, -0.5597502546264526, 0.6457887650909682, 0.7894058910881185, 0.20785793220625592], "color": "orange_6781"},
-        {"id": 3, "vector": [0.3172005263489739, 0.9719044792798428, -0.36981146090600725, -0.4860894583077995, 0.95791889146345], "color": "pink_9298"},
-        {"id": 4, "vector": [0.4452349528804562, -0.8757026943054742, 0.8220779437047674, 0.46406290649483184, 0.30337481143159106], "color": "red_4794"},
-        {"id": 5, "vector": [0.985825131989184, -0.8144651566660419, 0.6299267002202009, 0.1206906911183383, -0.1446277761879955], "color": "yellow_4222"},
-        {"id": 6, "vector": [0.8371977790571115, -0.015764369584852833, -0.31062937026679327, -0.562666951622192, -0.8984947637863987], "color": "red_9392"},
-        {"id": 7, "vector": [-0.33445148015177995, -0.2567135004164067, 0.8987539745369246, 0.9402995886420709, 0.5378064918413052], "color": "grey_8510"},
-        {"id": 8, "vector": [0.39524717779832685, 0.4000257286739164, -0.5890507376891594, -0.8650502298996872, -0.6140360785406336], "color": "white_9381"},
-        {"id": 9, "vector": [0.5718280481994695, 0.24070317428066512, -0.3737913482606834, -0.06726932177492717, -0.6980531615588608], "color": "purple_4976"}        
-    ],
-    "collectionName": "quick_setup"
+        {"id": 0, "vector": [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592], "title": "Artificial Intelligence in Real Life", "issue": "vol.12"},
+        {"id": 1, "vector": [0.19886812562848388, 0.06023560599112088, 0.6976963061752597, 0.2614474506242501, 0.838729485096104], "title": "Hollow Man", "issue": "vol.19"},
+        {"id": 2, "vector": [0.43742130801983836, -0.5597502546264526, 0.6457887650909682, 0.7894058910881185, 0.20785793220625592], "title": "Treasure Hunt in Missouri", "issue": "vol.12"},
+],
+    "collectionName": "my_collection"
 }'
 
 # {
 #     "code": 0,
 #     "data": {
-#         "upsertCount": 10,
+#         "upsertCount": 3,
 #         "upsertIds": [
 #             0,
 #             1,
 #             2,
-#             3,
-#             4,
-#             5,
-#             6,
-#             7,
-#             8,
-#             9
 #         ]
 #     }
 # }
@@ -214,29 +312,39 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 向 Partition 中 Upsert Entity{#upsert-entities-in-a-partition}
+## 在 Partition 中 Upsert Entity
 
-您还可以向指定的 Partition 中 Upsert Entity。示例代码假设 Collection 中存在一个名为 **partitionA** 的 Partition。
+您还可以将 Entity Upsert 到指定 Partition 中。以下代码片段假定您的 Collection 中有一个名为 **PartitionA** 的 Partition。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+如果 Partition 中存在这三个 Entity，它们将被请求中包含的 Entity 覆盖。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
 data=[
-    {"id": 10, "vector": [0.06998888224297328, 0.8582816610326578, -0.9657938677934292, 0.6527905683627726, -0.8668460657158576], "color": "black_3651"},
-    {"id": 11, "vector": [0.6060703043917468, -0.3765080534566074, -0.7710758854987239, 0.36993888322346136, 0.5507513364206531], "color": "grey_2049"},
-    {"id": 12, "vector": [-0.9041813104515337, -0.9610546012461163, 0.20033003106083358, 0.11842506351635174, 0.8327356724591011], "color": "blue_6168"},
-    {"id": 13, "vector": [0.3202914977909075, -0.7279137773695252, -0.04747830871620273, 0.8266053056909548, 0.8277957187455489], "color": "blue_1672"},
-    {"id": 14, "vector": [0.2975811497890859, 0.2946936202691086, 0.5399463833894609, 0.8385334966677529, -0.4450543984655133], "color": "pink_1601"},
-    {"id": 15, "vector": [-0.04697464305600074, -0.08509022265734134, 0.9067184632552001, -0.2281912685064822, -0.9747503428652762], "color": "yellow_9925"},
-    {"id": 16, "vector": [-0.9363075919673911, -0.8153981031085669, 0.7943039120490902, -0.2093886809842529, 0.0771191335807897], "color": "orange_9872"},
-    {"id": 17, "vector": [-0.050451522820639916, 0.18931572752321935, 0.7522886192190488, -0.9071793089474034, 0.6032647330692296], "color": "red_6450"},
-    {"id": 18, "vector": [-0.9181544231141592, 0.6700755998126806, -0.014174674636136642, 0.6325780463623432, -0.49662222164032976], "color": "purple_7392"},
-    {"id": 19, "vector": [0.11426945899602536, 0.6089190684002581, -0.5842735738352236, 0.057050610092692855, -0.035163433018196244], "color": "pink_4996"}
+    {
+        "id": 10, 
+        "vector": [0.06998888224297328, 0.8582816610326578, -0.9657938677934292, 0.6527905683627726, -0.8668460657158576], 
+        "title": "Layour Design Reference", 
+        "issue": "vol.34"
+    },
+    {
+        "id": 11, 
+        "vector": [0.6060703043917468, -0.3765080534566074, -0.7710758854987239, 0.36993888322346136, 0.5507513364206531], 
+        "title": "Doraemon and His Friends", 
+        "issue": "vol.2"
+    },
+    {
+        "id": 12, 
+        "vector": [-0.9041813104515337, -0.9610546012461163, 0.20033003106083358, 0.11842506351635174, 0.8327356724591011], 
+        "title": "Pikkachu and Pokemon", 
+        "issue": "vol.12"
+    },
 ]
 
 res = client.upsert(
-    collection_name="quick_setup",
+    collection_name="my_collection",
     data=data,
     partition_name="partitionA"
 )
@@ -244,7 +352,7 @@ res = client.upsert(
 print(res)
 
 # Output
-# {'upsert_count': 10}
+# {'upsert_count': 3}
 ```
 
 </TabItem>
@@ -257,20 +365,13 @@ import io.milvus.v2.service.vector.response.UpsertResp;
 
 Gson gson = new Gson();
 List<JsonObject> data = Arrays.asList(
-        gson.fromJson("{\"id\": 10, \"vector\": [0.06998888224297328, 0.8582816610326578, -0.9657938677934292, 0.6527905683627726, -0.8668460657158576], \"color\": \"black_3651\"}", JsonObject.class),
-        gson.fromJson("{\"id\": 11, \"vector\": [0.6060703043917468, -0.3765080534566074, -0.7710758854987239, 0.36993888322346136, 0.5507513364206531], \"color\": \"grey_2049\"}", JsonObject.class),
-        gson.fromJson("{\"id\": 12, \"vector\": [-0.9041813104515337, -0.9610546012461163, 0.20033003106083358, 0.11842506351635174, 0.8327356724591011], \"color\": \"blue_6168\"}", JsonObject.class),
-        gson.fromJson("{\"id\": 13, \"vector\": [0.3202914977909075, -0.7279137773695252, -0.04747830871620273, 0.8266053056909548, 0.8277957187455489], \"color\": \"blue_1672\"}", JsonObject.class),
-        gson.fromJson("{\"id\": 14, \"vector\": [0.2975811497890859, 0.2946936202691086, 0.5399463833894609, 0.8385334966677529, -0.4450543984655133], \"color\": \"pink_1601\"}", JsonObject.class),
-        gson.fromJson("{\"id\": 15, \"vector\": [-0.04697464305600074, -0.08509022265734134, 0.9067184632552001, -0.2281912685064822, -0.9747503428652762], \"color\": \"yellow_9925\"}", JsonObject.class),
-        gson.fromJson("{\"id\": 16, \"vector\": [-0.9363075919673911, -0.8153981031085669, 0.7943039120490902, -0.2093886809842529, 0.0771191335807897], \"color\": \"orange_9872\"}", JsonObject.class),
-        gson.fromJson("{\"id\": 17, \"vector\": [-0.050451522820639916, 0.18931572752321935, 0.7522886192190488, -0.9071793089474034, 0.6032647330692296], \"color\": \"red_6450\"}", JsonObject.class),
-        gson.fromJson("{\"id\": 18, \"vector\": [-0.9181544231141592, 0.6700755998126806, -0.014174674636136642, 0.6325780463623432, -0.49662222164032976], \"color\": \"purple_7392\"}", JsonObject.class),
-        gson.fromJson("{\"id\": 19, \"vector\": [0.11426945899602536, 0.6089190684002581, -0.5842735738352236, 0.057050610092692855, -0.035163433018196244], \"color\": \"pink_4996\"}", JsonObject.class)
+        gson.fromJson("{\"id\": 10, \"vector\": [0.06998888224297328, 0.8582816610326578, -0.9657938677934292, 0.6527905683627726, -0.8668460657158576], \"title\": \"Layour Design Reference\", \"issue\": \"vol.34\"}", JsonObject.class),
+        gson.fromJson("{\"id\": 11, \"vector\": [0.6060703043917468, -0.3765080534566074, -0.7710758854987239, 0.36993888322346136, 0.5507513364206531], \"title\": \"Doraemon and His Friends\", \"issue\": \"vol.2\"}", JsonObject.class),
+        gson.fromJson("{\"id\": 12, \"vector\": [-0.9041813104515337, -0.9610546012461163, 0.20033003106083358, 0.11842506351635174, 0.8327356724591011], \"title\": \"Pikkachu and Pokemon\", \"issue\": \"vol.12\"}", JsonObject.class),
 );
 
 UpsertReq upsertReq = UpsertReq.builder()
-        .collectionName("quick_setup")
+        .collectionName("my_collection")
         .partitionName("partitionA")
         .data(data)
         .build();
@@ -280,7 +381,7 @@ System.out.println(upsertResp);
 
 // Output:
 //
-// UpsertResp(upsertCnt=10)
+// UpsertResp(upsertCnt=3)
 ```
 
 </TabItem>
@@ -292,20 +393,13 @@ const { MilvusClient, DataType } = require("@zilliz/milvus2-sdk-node")
 
 // 6. Upsert data in partitions
 data = [
-    {id: 10, vector: [0.06998888224297328, 0.8582816610326578, -0.9657938677934292, 0.6527905683627726, -0.8668460657158576], color: "black_3651"},
-    {id: 11, vector: [0.6060703043917468, -0.3765080534566074, -0.7710758854987239, 0.36993888322346136, 0.5507513364206531], color: "grey_2049"},
-    {id: 12, vector: [-0.9041813104515337, -0.9610546012461163, 0.20033003106083358, 0.11842506351635174, 0.8327356724591011], color: "blue_6168"},
-    {id: 13, vector: [0.3202914977909075, -0.7279137773695252, -0.04747830871620273, 0.8266053056909548, 0.8277957187455489], color: "blue_1672"},
-    {id: 14, vector: [0.2975811497890859, 0.2946936202691086, 0.5399463833894609, 0.8385334966677529, -0.4450543984655133], color: "pink_1601"},
-    {id: 15, vector: [-0.04697464305600074, -0.08509022265734134, 0.9067184632552001, -0.2281912685064822, -0.9747503428652762], color: "yellow_9925"},
-    {id: 16, vector: [-0.9363075919673911, -0.8153981031085669, 0.7943039120490902, -0.2093886809842529, 0.0771191335807897], color: "orange_9872"},
-    {id: 17, vector: [-0.050451522820639916, 0.18931572752321935, 0.7522886192190488, -0.9071793089474034, 0.6032647330692296], color: "red_6450"},
-    {id: 18, vector: [-0.9181544231141592, 0.6700755998126806, -0.014174674636136642, 0.6325780463623432, -0.49662222164032976], color: "purple_7392"},
-    {id: 19, vector: [0.11426945899602536, 0.6089190684002581, -0.5842735738352236, 0.057050610092692855, -0.035163433018196244], color: "pink_4996"}
+    {id: 10, vector: [0.06998888224297328, 0.8582816610326578, -0.9657938677934292, 0.6527905683627726, -0.8668460657158576], title: "Layour Design Reference", issue: "vol.34"},
+    {id: 11, vector: [0.6060703043917468, -0.3765080534566074, -0.7710758854987239, 0.36993888322346136, 0.5507513364206531], title: "Doraemon and His Friends", issue: "vol.2"},
+    {id: 12, vector: [-0.9041813104515337, -0.9610546012461163, 0.20033003106083358, 0.11842506351635174, 0.8327356724591011], title: "Pikkachu and Pokemon", issue: "vol.12"},
 ]
 
 res = await client.upsert({
-    collection_name: "quick_setup",
+    collection_name: "my_collection",
     data: data,
     partition_name: "partitionA"
 })
@@ -314,8 +408,36 @@ console.log(res.upsert_cnt)
 
 // Output
 // 
-// 10
+// 3
 // 
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+titleColumn = column.NewColumnString("title", []string{
+    "Layour Design Reference", "Doraemon and His Friends", "Pikkachu and Pokemon", 
+})
+issueColumn = column.NewColumnString("issue", []string{
+    "vol.34", "vol.2", "vol.12", 
+})
+
+_, err = client.Upsert(ctx, milvusclient.NewColumnBasedInsertOption("my_collection").
+    WithPartition("partitionA").
+    WithInt64Column("id", []int64{10, 11, 12, 13, 14, 15, 16, 17, 18, 19}).
+    WithFloatVectorColumn("vector", 5, [][]float32{
+        {0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592},
+        {0.19886812562848388, 0.06023560599112088, 0.6976963061752597, 0.2614474506242501, 0.838729485096104},
+        {0.43742130801983836, -0.5597502546264526, 0.6457887650909682, 0.7894058910881185, 0.20785793220625592},
+    }).
+    WithColumns(titleColumn, issueColumn),
+)
+if err != nil {
+    fmt.Println(err.Error())
+    // handle err
+}
 ```
 
 </TabItem>
@@ -332,35 +454,176 @@ curl --request POST \
 --header "Content-Type: application/json" \
 -d '{
     "data": [
-        {"id": 10, "vector": [0.06998888224297328, 0.8582816610326578, -0.9657938677934292, 0.6527905683627726, -0.8668460657158576], "color": "black_3651"},
-        {"id": 11, "vector": [0.6060703043917468, -0.3765080534566074, -0.7710758854987239, 0.36993888322346136, 0.5507513364206531], "color": "grey_2049"},
-        {"id": 12, "vector": [-0.9041813104515337, -0.9610546012461163, 0.20033003106083358, 0.11842506351635174, 0.8327356724591011], "color": "blue_6168"},
-        {"id": 13, "vector": [0.3202914977909075, -0.7279137773695252, -0.04747830871620273, 0.8266053056909548, 0.8277957187455489], "color": "blue_1672"},
-        {"id": 14, "vector": [0.2975811497890859, 0.2946936202691086, 0.5399463833894609, 0.8385334966677529, -0.4450543984655133], "color": "pink_1601"},
-        {"id": 15, "vector": [-0.04697464305600074, -0.08509022265734134, 0.9067184632552001, -0.2281912685064822, -0.9747503428652762], "color": "yellow_9925"},
-        {"id": 16, "vector": [-0.9363075919673911, -0.8153981031085669, 0.7943039120490902, -0.2093886809842529, 0.0771191335807897], "color": "orange_9872"},
-        {"id": 17, "vector": [-0.050451522820639916, 0.18931572752321935, 0.7522886192190488, -0.9071793089474034, 0.6032647330692296], "color": "red_6450"},
-        {"id": 18, "vector": [-0.9181544231141592, 0.6700755998126806, -0.014174674636136642, 0.6325780463623432, -0.49662222164032976], "color": "purple_7392"},
-        {"id": 19, "vector": [0.11426945899602536, 0.6089190684002581, -0.5842735738352236, 0.057050610092692855, -0.035163433018196244], "color": "pink_4996"}
+        {"id": 10, "vector": [0.06998888224297328, 0.8582816610326578, -0.9657938677934292, 0.6527905683627726, -0.8668460657158576], "title": "Layour Design Reference", "issue": "vol.34"},
+        {"id": 11, "vector": [0.6060703043917468, -0.3765080534566074, -0.7710758854987239, 0.36993888322346136, 0.5507513364206531], "title": "Doraemon and His Friends", "issue": "vol.2"},
+        {"id": 12, "vector": [-0.9041813104515337, -0.9610546012461163, 0.20033003106083358, 0.11842506351635174, 0.8327356724591011], "title": "Pikkachu and Pokemon", "issue": "vol.12"},
     ],
-    "collectionName": "quick_setup"
+    "collectionName": "my_collection",
+    "partitionName": "partitionA"
 }'
 
 # {
 #     "code": 0,
 #     "data": {
-#         "upsertCount": 10,
+#         "upsertCount": 3,
 #         "upsertIds": [
-#             0,
-#             1,
-#             2,
-#             3,
-#             4,
-#             5,
-#             6,
-#             7,
-#             8,
-#             9
+#             10,
+#             11,
+#             12,
+#         ]
+#     }
+# }
+```
+
+</TabItem>
+</Tabs>
+
+## 在合并模式下 Upsert Entity | PUBLIC
+
+以下代码示例展示了如何通过部分更新来 Upsert Entity。只需提供需要更新的字段及其新值，同时设置显式的部分更新标志。
+
+在以下示例中，`upsert` 请求中指定的 Entity 的 `issue` 字段将更新为请求中包含的值。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+data=[
+    {
+        "id": 1,
+        "issue": "vol.14"
+    },
+    {
+        "id": 2, 
+        "issue": "vol.7"
+    }
+]
+
+res = client.upsert(
+    collection_name="my_collection",
+    data=data,
+    partial_update=True
+)
+
+print(res)
+
+# Output
+# {'upsert_count': 2}
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+JsonObject row1 = new JsonObject();
+row1.addProperty("id", 1);
+row1.addProperty("issue", "vol.14");
+
+JsonObject row2 = new JsonObject();
+row2.addProperty("id", 2);
+row2.addProperty("issue", "vol.7");
+
+UpsertReq upsertReq = UpsertReq.builder()
+        .collectionName("my_collection")
+        .data(Arrays.asList(row1, row2))
+        .partialUpdate(true)
+        .build();
+
+UpsertResp upsertResp = client.upsert(upsertReq);
+System.out.println(upsertResp);
+
+// Output:
+//
+// UpsertResp(upsertCnt=2)
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+pkColumn := column.NewColumnInt64("id", []int64{1, 2})
+issueColumn = column.NewColumnString("issue", []string{
+    "vol.17", "vol.7",
+})
+
+_, err = client.Upsert(ctx, milvusclient.NewColumnBasedInsertOption("my_collection").
+    WithColumns(pkColumn, issueColumn).
+    WithPartialUpdate(true),
+)
+if err != nil {
+    fmt.Println(err.Error())
+    // handle err
+}
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+const data=[
+    {
+        "id": 1,
+        "issue": "vol.14"
+    },
+    {
+        "id": 2, 
+        "issue": "vol.7"
+    }
+];
+
+const res = await client.upsert({
+    collection_name: "my_collection",
+    data,
+    partial_update: true
+});
+
+console.log(res)
+
+// Output
+// 
+// 2
+// 
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+export CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT"
+export TOKEN="YOUR_CLUSTER_TOKEN"
+
+export COLLECTION_NAME="my_collection"
+export UPSERT_DATA='[
+  {
+    "id": 1,
+    "issue": "vol.14"
+  },
+  {
+    "id": 2,
+    "issue": "vol.7"
+  }
+]'
+
+curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/upsert" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer ${TOKEN}" \
+  -d "{
+    \"collectionName\": \"${COLLECTION_NAME}\",
+    \"data\": ${UPSERT_DATA},
+    \"partialUpdate\": true
+  }"
+
+# {
+#     "code": 0,
+#     "data": {
+#         "upsertCount": 2,
+#         "upsertIds": [
+#              3,
+#             12,
 #         ]
 #     }
 # }

@@ -3,11 +3,14 @@ title: "版本说明书（2025/04/24） | Cloud"
 slug: /release-notes-2150
 sidebar_label: "版本说明书（2025/04/24）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "我们很高兴地宣布，Zilliz Cloud 内测版现已推出在线迁移！无论您需要升级集群还是更改部署配置，例如从容量型 CU 切换到其它类型，您都可以轻松迁移数据，而不会中断任何服务。 | Cloud"
 type: origin
 token: S53KwdOb8i9D3xkawDXcJnDGnZe
-sidebar_position: 2
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz
@@ -24,11 +27,11 @@ import Admonition from '@theme/Admonition';
 
 我们很高兴地宣布，Zilliz Cloud 内测版现已推出在线迁移！无论您需要升级集群还是更改部署配置，例如从容量型 CU 切换到其它类型，您都可以轻松迁移数据，而不会中断任何服务。
 
-## Milvus 兼容性{#milvus-compatibility}
+## Milvus 兼容性\{#milvus-compatibility}
 
 本次发布后创建的所有集群均兼容 **Milvus v2.5.x**。同时，所有 Milvus v2.5.x 相关特性在 Zilliz Cloud 上均已全面可用。
 
-## 无缝数据迁移，最小化服务中断{#seamless-data-migration-with-minimal-service-interruption}
+## 无缝数据迁移，最小化服务中断\{#seamless-data-migration-with-minimal-service-interruption}
 
 在之前的版本中，在集群之间迁移数据需要精心计划停机时间，这对于具有严格可用性要求的企业来说是一个不可逾越的障碍。通过支持在线迁移功能，Zilliz Cloud 现在消除了这种复杂性，提供了无缝、完全托管的迁移体验。
 
@@ -46,6 +49,6 @@ Zilliz Cloud 的原生迁移流程确保：
 
 在线迁移现在可在 Zilliz Cloud 控制台的内测版中使用。现在登录，以开始您的第一次零停机迁移。有关详细操作步骤和限制，请参阅[在线迁移](./zero-downtime-migration)。
 
-## 其它增强{#other-enhancements}
+## 其它增强\{#other-enhancements}
 
 新增了一个 RESTful API 接口，用于修改集群的副本数量。有关详细信息，请参阅[修改集群副本数量](/reference/restful/modify-cluster-replica-v2)。

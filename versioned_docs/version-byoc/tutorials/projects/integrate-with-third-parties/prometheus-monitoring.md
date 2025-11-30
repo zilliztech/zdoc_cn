@@ -1,13 +1,16 @@
 ---
-title: "Prometheus 监控 | Cloud"
+title: "Prometheus 监控 | BYOC"
 slug: /prometheus-monitoring
 sidebar_label: "Prometheus"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Prometheus 监控系统能够在指定的时间间隔内从配置的目标收集指标，评估规则表达式，展示结果，并根据特定条件触发告警。 | Cloud"
+description: "Prometheus 监控系统能够在指定的时间间隔内从配置的目标收集指标，评估规则表达式，展示结果，并根据特定条件触发告警。 | BYOC"
 type: origin
 token: LVC1wq5Qginkeskq2G0c0Z8WnPc
-sidebar_position: 2
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz
@@ -27,13 +30,7 @@ import Admonition from '@theme/Admonition';
 
 通过将 Zilliz Cloud 与 Prometheus 集成，您可以收集并监控与 Zilliz Cloud 集群相关的指标。
 
-<Admonition type="info" icon="📘" title="说明">
-
-<p>Prometheus 监控接入仅支持 Dedicated 版和 BYOC 集群。</p>
-
-</Admonition>
-
-## 配置 Prometheus 监控{#configure-prometheus-monitoring}
+## 配置 Prometheus 监控\{#configure-prometheus-monitoring}
 
 要配置 Prometheus 以采集 Zilliz Cloud 集群指标，请按照以下步骤操作：
 
@@ -93,7 +90,7 @@ import Admonition from '@theme/Admonition';
 
 有关更多信息，请参阅 [Prometheus 官方文档](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#scrape_config)。
 
-## 指标示例{#example-prometheus-query-results}
+## 指标示例\{#example-prometheus-query-results}
 
 以下示例展示了从 Zilliz Cloud `/metrics/export` 端点抓取的集群指标：
 
@@ -116,7 +113,7 @@ zilliz_request_vectors_total{request_type="search"} 1.0
 zilliz_request_vectors_total{request_type="upsert"} 1.0
 ```
 
-## Zilliz Cloud 指标标签{#zilliz-cloud-metric-labels}
+## Zilliz Cloud 指标标签\{#zilliz-cloud-metric-labels}
 
 Zilliz Cloud 暴露的指标带有以下标识符标签：
 
@@ -158,7 +155,7 @@ Zilliz Cloud 暴露的指标带有以下标识符标签：
    </tr>
 </table>
 
-## 可用指标{#available-metrics}
+## 可用指标\{#available-metrics}
 
 下表列出了 Zilliz Cloud 可用的指标，包括指标类型、描述和相关标签。
 
@@ -243,7 +240,7 @@ Zilliz Cloud 暴露的指标带有以下标识符标签：
    </tr>
 </table>
 
-## 示例查询{#example-prometheus-queries}
+## 示例查询\{#example-prometheus-queries}
 
 以下是一些示例查询，您可以使用 Prometheus 分析 Zilliz Cloud 指标。
 

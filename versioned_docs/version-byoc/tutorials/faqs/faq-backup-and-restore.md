@@ -1,13 +1,13 @@
 ---
-title: "FAQ：备份与恢复 | CLOUD"
+title: "FAQ：备份与恢复 | BYOC"
 slug: /faq-backup-and-restore
 sidebar_label: "FAQ：备份与恢复"
 beta: FALSE
 notebook: FALSE
-description: " | CLOUD"
+description: " | BYOC"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
-sidebar_position: 8
+sidebar_position: 7
 
 ---
 

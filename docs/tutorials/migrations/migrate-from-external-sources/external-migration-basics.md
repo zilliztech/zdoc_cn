@@ -3,6 +3,9 @@ title: "外部迁移概述 | Cloud"
 slug: /external-migration-basics
 sidebar_label: "外部迁移概述"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "外部迁移功能简化了将向量数据库和搜索系统迁移至 Zilliz Cloud 的过程。无论您是从 Qdrant 等向量数据库迁移，还是从 Elasticsearch、OpenSearch 等支持向量的搜索引擎迁移，Zilliz Cloud 均提供迁移工具，在确保数据完整性的同时最大限度降低迁移复杂度。 | Cloud"
 type: origin
@@ -27,7 +30,7 @@ import Supademo from '@site/src/components/Supademo';
 
 外部迁移功能简化了将向量数据库和搜索系统迁移至 Zilliz Cloud 的过程。无论您是从 Qdrant 等向量数据库迁移，还是从 Elasticsearch、OpenSearch 等支持向量的搜索引擎迁移，Zilliz Cloud 均提供迁移工具，在确保数据完整性的同时最大限度降低迁移复杂度。
 
-## 支持的数据源
+## 支持的数据源\{#supported-data-sources}
 
 Zilliz Cloud 支持从主流向量数据库和搜索平台迁移：
 
@@ -64,7 +67,7 @@ Zilliz Cloud 支持从主流向量数据库和搜索平台迁移：
    </tr>
 </table>
 
-## 核心能力
+## 核心能力\{#core-capabilities}
 
 迁移工具提供丰富的配置选项，确保数据结构完美适配 Zilliz Cloud：
 
@@ -75,37 +78,32 @@ Zilliz Cloud 支持从主流向量数据库和搜索平台迁移：
      <th><p>描述</p></th>
    </tr>
    <tr>
-     <td><p><strong>Schema 管理</strong></p></td>
+     <td rowspan="4"><p><strong>Schema 管理</strong></p></td>
      <td><p>字段重命名</p></td>
      <td><p>迁移过程中重命名字段，匹配命名规范</p></td>
    </tr>
    <tr>
-     <td></td>
      <td><p>动态转固定字段</p></td>
-     <td><p>将灵活元数据转为固定结构字段以提升性能</p></td>
+     <td><p>将灵活元数据转为固定结构字段以提升性能。</p><p>如果元数据包含文本数据，将其转换为固定字段后会创建 <strong>VARCHAR</strong> 字段。这使该文本可启用 Full Text Search。详情参见 <a href="./full-text-search">Full Text Search</a>。</p></td>
    </tr>
    <tr>
-     <td></td>
      <td><p>添加额外字段</p></td>
      <td><p>扩展源数据外的字段，适应业务演进需求</p></td>
    </tr>
    <tr>
-     <td></td>
      <td><p>数据类型映射</p></td>
      <td><p>自动检测并映射字段类型，支持手动调整</p></td>
    </tr>
    <tr>
-     <td><p><strong>Collection 配置</strong></p></td>
+     <td rowspan="3"><p><strong>Collection 配置</strong></p></td>
      <td><p>智能命名处理</p></td>
      <td><p>默认保留源表名；重名时系统报错；含连字符(-)的名称自动转为下划线(_)或提示修正</p></td>
    </tr>
    <tr>
-     <td></td>
      <td><p>Shard 配置</p></td>
      <td><p>根据查询模式设置数据分布策略</p></td>
    </tr>
    <tr>
-     <td></td>
      <td><p>Partition 策略</p></td>
      <td><p>采用自动分区或自定义分组管理数据</p></td>
    </tr>
@@ -124,15 +122,20 @@ Zilliz Cloud 支持从主流向量数据库和搜索平台迁移：
      <td><p>验证检查</p></td>
      <td><p>查看迁移详情</p></td>
    </tr>
+   <tr>
+     <td><p><strong>Full Text Search</strong></p></td>
+     <td><p>迁移过程中为文本字段开启 Full Text Search。</p></td>
+     <td><p>在 <strong>高级设置 → Function</strong> 中配置，可在迁移期间为 <strong>VARCHAR</strong> 字段启用 <strong>Full Text Search</strong>。如果源数据的元数据包含文本，可使用<strong>转换为固定字段</strong>将文本型元数据转换为 <strong>VARCHAR</strong> 字段。详情参见 <a href="./full-text-search">Full Text Search</a>。</p></td>
+   </tr>
 </table>
 
-## 迁移流程
+## 迁移流程\{#migration-process}
 
 采用三阶段迁移框架保障数据完整性与过程可视化：
 
 ![MPbQwTCqBhybmZbzfAfc0Xnenab](/img/MPbQwTCqBhybmZbzfAfc0Xnenab.png)
 
-### 阶段 1：连接与配置
+### 阶段 1：连接与配置\{#phase-1-connect-and-configure}
 
 1. 建立连接：提供源系统认证凭证（API密钥/连接字符串）
 
@@ -140,9 +143,9 @@ Zilliz Cloud 支持从主流向量数据库和搜索平台迁移：
 
 1. 配置目标：选定 Zilliz Cloud 集群与目标 Database
 
-### 阶段 2：映射检查
+### 阶段 2：映射检查\{#phase-2-review-mappings}
 
-#### Schema 映射
+#### Schema 映射\{#schema-mapping}
 
 - 自动检测：识别向量字段、标量字段及元数据
 
@@ -152,7 +155,7 @@ Zilliz Cloud 支持从主流向量数据库和搜索平台迁移：
 
 - 高级设置：配置 Partition/Partition Key/Nullable 字段
 
-#### Shard 设置
+#### Shard 设置\{#shard-setting}
 
 根据数据量优化性能配置：
 
@@ -160,7 +163,7 @@ Zilliz Cloud 支持从主流向量数据库和搜索平台迁移：
 
 - 大数据集（＞10亿行）：联系[支持团队](https://zilliz.com.cn/contact-sales)获取优化方案
 
-### 阶段 3：迁移与验证
+### 阶段 3：迁移与验证\{#phase-3-migrate-and-verify}
 
 完成配置后执行迁移并监控：
 
@@ -172,7 +175,7 @@ Zilliz Cloud 支持从主流向量数据库和搜索平台迁移：
 
 - 验证机制：自动行数校验确保数据完整
 
-## 限制说明
+## 限制说明\{#limitations}
 
 迁移前需注意以下通用限制：
 
@@ -204,9 +207,11 @@ Zilliz Cloud 支持从主流向量数据库和搜索平台迁移：
    </tr>
 </table>
 
-## 开始迁移
+## 开始迁移\{#getting-started}
 
 准备将数据迁移至 Zilliz Cloud 了吗？
+
+### 访问数据迁移\{#access-migration-portal}
 
 1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)
 
@@ -215,6 +220,12 @@ Zilliz Cloud 支持从主流向量数据库和搜索平台迁移：
 1. 按引导流程完成迁移
 
 <Supademo id="cmbki8mah8nohsn1rfo0g3gnl" title="Zilliz Cloud - 访问数据迁移" />
+
+### 设置 Full Text Search\{#configure-full-text-search}
+
+如果源数据包含文本，你可以在迁移期间配置 Full Text Search，以提升文本检索效果。详情参见 [Full Text Search](./full-text-search)。
+
+<Supademo id="cmhmtjeff0dexdqxa2qqkdsds" title="Zilliz Cloud - 设置 Full Text Search" />
 
 ## 平台专属迁移指南
 

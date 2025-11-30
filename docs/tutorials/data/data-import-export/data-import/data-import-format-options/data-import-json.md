@@ -3,6 +3,9 @@ title: "从 JSON 文件中导入 | Cloud"
 slug: /data-import-json
 sidebar_label: "从 JSON 文件中导入"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "JSON 文件是一个轻量化的，对人和机器都友好的数据格式。因为它的语言无关特性，并遵循类 C 语言程序员熟悉的规范，JSON 是一个非常理想的数据交换格式。 | Cloud"
 type: origin
@@ -41,7 +44,7 @@ import Admonition from '@theme/Admonition';
 <ul>
 <li><strong>是否启用 Dynamic Field</strong></li>
 </ul>
-<p>当目标 Collection 启用了 Dynamic Field 并且您希望导入 Schema 中未定义的字段时，您可以在导入数据中纳入一个名为 <strong>&#36;meta</strong> 的字段，并将所有未在 Schema 中定义的字段以键值对的方式存放到 <strong>$meta</strong> 字段中。</p>
+<p>当目标 Collection 启用了 Dynamic Field 并且您希望导入 Schema 中未定义的字段时，您可以在导入数据中纳入一个名为 <strong>&#36;meta</strong> 的字段，并将所有未在 Schema 中定义的字段以键值对的方式存放到 <strong>&#36;meta</strong> 字段中。</p>
 <ul>
 <li><strong>大小写</strong></li>
 </ul>
@@ -49,7 +52,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 目录结构{#directory-structure}
+## 目录结构\{#directory-structure}
 
 如果您希望将您的原始数据转换为 JSON 文件，请将所有 JSON 文件直接放到源文件夹内，如下方所示。
 
@@ -59,7 +62,7 @@ import Admonition from '@theme/Admonition';
 │       └── 2.json 
 ```
 
-## 导入数据{#import-data}
+## 导入数据\{#import-data}
 
 在准备好待导入数据后，您可以使用如下任意一种方式将它们导入到您在 Zilliz Cloud 上创建的 Collection 中。
 
@@ -77,7 +80,7 @@ import Admonition from '@theme/Admonition';
 
 您也可以使用 Zilliz Cloud 控制台或使用 Milvus SDK。具体操作，可以参考 [通过 Web 控制台导入](./import-data-on-web-ui)以及[通过 SDK 导入](./import-data-via-sdks)。
 
-### 从多路径导入（推荐）{#import-files-from-multiple-paths-recommended}
+### 从多路径导入（推荐）\{#import-files-from-multiple-paths-recommended}
 
 当您有多个文件需要同时导入时，可以使用这种方式。在导入时，需要将每个需要导入的 JSON 文件的路径包含在一个子列表中，并将这些子列表包含在一个外层列表中，如下方代码所示。
 
@@ -101,7 +104,7 @@ curl --request POST \
     }'
 ```
 
-### 从源文件夹导入{#import-files-from-a-folder}
+### 从源文件夹导入\{#import-files-from-a-folder}
 
 如果源文件夹中仅包含需要导入的所有 JSON 文件，您可以将这个源文件夹的路径放在一个子列表中，然后将这个子列表放在一个外层列表中，如下方代码所示。
 
@@ -123,7 +126,7 @@ curl --request POST \
     }'
 ```
 
-### 从单个文件导入{#import-a-single-file}
+### 从单个文件导入\{#import-a-single-file}
 
 如果您希望单独导入一个 JSON 文件，可以将这个 JSON 文件的路径放在一个子列表中，然后将这个子列表放在一个外层列表中，如下方代码所示。
 
@@ -145,7 +148,7 @@ curl --request POST \
     }'
 ```
 
-## 存储路径{#storage-paths}
+## 存储路径\{#storage-paths}
 
 Zilliz Cloud 支持从您的云存储中导入数据。下表罗列了 Zilliz Cloud 支持的数据文件路径格式。
 
@@ -156,11 +159,11 @@ Zilliz Cloud 支持从您的云存储中导入数据。下表罗列了 Zilliz Cl
    </tr>
    <tr>
      <td><p>阿里云 OSS</p></td>
-     <td><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/</code></p><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/data.json</code></p></td>
+     <td><p><code><i>http</i>s://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/</code></p><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/data.json</code></p></td>
    </tr>
    <tr>
      <td><p>腾讯云 COS</p></td>
-     <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder/</code></p><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder/data.json</code></p></td>
+     <td><p><code><i>http</i>s://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder/</code></p><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder/data.json</code></p></td>
    </tr>
    <tr>
      <td><p>亚马逊云科技 S3</p></td>
@@ -168,29 +171,44 @@ Zilliz Cloud 支持从您的云存储中导入数据。下表罗列了 Zilliz Cl
    </tr>
 </table>
 
-## 相关限制{#limits}
+## 相关限制\{#limits}
 
-Zilliz Cloud 针对导入 Parquet 格式的文件时设置了如下限制。
+当您从本地 JSON 文件或对象存储桶中的 JSON 文件导入数据时，需要遵守以下限制：
 
-需要注意的是，一个合法的 JSON 文件中有一个名为 **rows** 的根键，其值为一个字典列表，每个字典列表代表一个需要插入的 Entity 对象。
+<Admonition type="info" icon="📘" title="说明">
+
+<p>需要注意的是，一个合法的 JSON 文件中有一个名为 <strong>rows</strong> 的根键，其值为一个字典列表，每个字典列表代表一个需要插入的 Entity 对象。</p>
+
+</Admonition>
 
 <table>
    <tr>
-     <th><p>项目</p></th>
-     <th><p>描述</p></th>
+     <th><p><strong>导入方式</strong></p></th>
+     <th><p><strong>集群版本</strong></p></th>
+     <th><p><strong>单次导入最大文件数</strong></p></th>
+     <th><p><strong>单个文件最大大小上限</strong></p></th>
+     <th><p><strong>单次导入总文件大小</strong></p></th>
    </tr>
    <tr>
-     <td><p><strong>支持多文件导入</strong></p></td>
-     <td><p>是</p><p>每次导入最多支持 100,000 个文件</p></td>
+     <td><p>本地文件导入</p></td>
+     <td><p>所有版本</p></td>
+     <td><p>1 个文件</p></td>
+     <td><p>1 GB</p></td>
+     <td><p>1 GB</p></td>
    </tr>
    <tr>
-     <td><p><strong>每次导入的文件体积限制</strong></p></td>
-     <td><p>Free 集群：最大 512 MB</p><p>Serverless 或 Dedicated 集群</p><ul><li><p>单个文件大小：最大 10 GB</p></li><li><p>总文件大小：最大 1 TB</p></li></ul></td>
+     <td rowspan="2"><p>对象存储桶导入</p></td>
+     <td><p>Free</p></td>
+     <td><p>1,000 个文件</p></td>
+     <td><p>1 GB</p></td>
+     <td><p>1 GB</p></td>
    </tr>
    <tr>
-     <td><p><strong>文件存放位置</strong></p></td>
-     <td><p>仅远程</p></td>
+     <td><p>Serverless &amp; Dedicated</p></td>
+     <td><p>1,000 个文件</p></td>
+     <td><p>10 GB</p></td>
+     <td><p>1 TB</p></td>
    </tr>
 </table>
 
-建议您[使用 BulkWriter](./use-bulkwriter) 工具将您的原始数据转换成 Parquet 文件。我们按照本文示意图中的 Schema 准备了一个示例数据供您参考。[单击此处](https://assets.zilliz.com/prepared_json_data.json)下载该示例文件。
+建议您[使用 BulkWriter](./use-bulkwriter) 工具将您的原始数据转换成 JSON 文件。我们按照本文示意图中的 Schema 准备了一个示例数据供您参考。[单击此处](https://assets.zilliz.com/prepared_json_data.json)下载该示例文件。

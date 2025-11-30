@@ -3,6 +3,9 @@ title: "概述 | On-Premise"
 slug: /on-premise-overview
 sidebar_label: "概述"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本运维手册为在私有环境部署和运维 Milvus 提供指导，对系统的运行环境、安装部署、监控告警、故障运维等方法进行介绍，确保系统的稳定性和高效运行。 | On-Premise"
 type: origin

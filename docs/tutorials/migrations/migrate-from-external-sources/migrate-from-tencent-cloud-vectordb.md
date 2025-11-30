@@ -3,6 +3,9 @@ title: "从腾讯云向量数据库迁移至 Zilliz Cloud | Cloud"
 slug: /migrate-from-tencent-cloud-vectordb
 sidebar_label: "从腾讯云向量数据库迁移"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本文档说明腾讯云向量数据库迁移过程中 Zilliz Cloud 的数据类型映射规则、JSON 字段转换机制及 Collection 命名规范。 | Cloud"
 type: origin
@@ -26,11 +29,11 @@ import Admonition from '@theme/Admonition';
 
 本文档说明[腾讯云向量数据库](https://cloud.tencent.com/product/vdb)迁移过程中 Zilliz Cloud 的数据类型映射规则、JSON 字段转换机制及 Collection 命名规范。
 
-## 开始前{#before-you-start}
+## 开始前\{#before-you-start}
 
 开始离线迁移前需满足：
 
-### 腾讯云侧要求{#tencent-cloud-requirements}
+### 腾讯云侧要求\{#tencent-cloud-requirements}
 
 <table>
    <tr>
@@ -51,7 +54,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-### Zilliz Cloud 侧要求{#zilliz-cloud-requirements}
+### Zilliz Cloud 侧要求\{#zilliz-cloud-requirements}
 
 <table>
    <tr>
@@ -72,7 +75,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-## 数据类型映射{#data-type-mapping}
+## 数据类型映射\{#data-type-mapping}
 
 下表总结了腾讯云向量数据库字段类型如何映射到 Zilliz Cloud 字段类型，并对各类型做了详细说明。
 
@@ -151,9 +154,9 @@ import Admonition from '@theme/Admonition';
 
 - **Partition Key**：可将 INT64/VARCHAR 字段指定为 Partition Key（注意：每个 Collection 支持一个 Partition Key，且该字段不可为空），详见 [使用 Partition Key](./use-partition-key)。
 
-## 腾讯云特殊处理规则{#tencent-cloud-specific-handling-rules}
+## 腾讯云特殊处理规则\{#tencent-cloud-specific-handling-rules}
 
-### Collection 命名规则{#collection-naming-rules}
+### Collection 命名规则\{#collection-naming-rules}
 
 腾讯云 Collection 名称将按以下规则迁移至 Zilliz Cloud：
 

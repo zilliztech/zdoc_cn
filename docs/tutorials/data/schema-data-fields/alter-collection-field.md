@@ -3,11 +3,14 @@ title: "修改字段设置 | Cloud"
 slug: /alter-collection-field
 sidebar_label: "修改字段设置"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "您可以更改 Collection 字段的属性以更改列约束或强制执行更严格的数据完整性规则。 | Cloud"
 type: origin
 token: ZcogwnZR6iN4fikl98QcjQgQnQe
-sidebar_position: 13
+sidebar_position: 16
 keywords: 
   - 向量数据库
   - zilliz
@@ -35,7 +38,7 @@ import TabItem from '@theme/TabItem';
 
 </Admonition>
 
-## 修改 VarChar 字段设置{#alter-varchar-field}
+## 修改 VarChar 字段设置\{#alter-varchar-field}
 
 VarChar 字段有一个名为 `max_length` 的属性，决定了该字段值的长度。您可以根据需要修改 VarChar 字段的这个属性。
 
@@ -88,7 +91,11 @@ client.alterCollectionField(AlterCollectionFieldReq.builder()
 <TabItem value='javascript'>
 
 ```javascript
-// TODO
+await client.alterCollectionFieldProperties({
+  collection_name: LOAD_COLLECTION_NAME,
+  field_name: 'varchar',
+  properties: { max_length: 1024 },
+});
 ```
 
 </TabItem>
@@ -96,7 +103,35 @@ client.alterCollectionField(AlterCollectionFieldReq.builder()
 <TabItem value='go'>
 
 ```go
-// TODO
+import (
+    "context"
+    "fmt"
+
+    "github.com/milvus-io/milvus/client/v2/entity"
+    "github.com/milvus-io/milvus/client/v2/milvusclient"
+    "github.com/milvus-io/milvus/pkg/v2/common"
+)
+
+ctx, cancel := context.WithCancel(context.Background())
+defer cancel()
+
+milvusAddr := "localhost:19530"
+
+client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+    Address: milvusAddr,
+})
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+defer client.Close(ctx)
+
+err = client.AlterCollectionFieldProperty(ctx, milvusclient.NewAlterCollectionFieldPropertiesOption(
+    "my_collection", "varchar").WithProperty(common.MaxLengthKey, 1024))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
 ```
 
 </TabItem>
@@ -104,13 +139,24 @@ client.alterCollectionField(AlterCollectionFieldReq.builder()
 <TabItem value='bash'>
 
 ```bash
-// TODO
+# restful
+curl --request POST \
+--url "${CLUSTER_ENDPOINT}/v2/collections/fields/alter_properties" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+--data "{
+    "collectionName": "my_collection",
+    "field_name": "varchar",
+    "properties": {
+        "max_length": "1024"
+    }
+}"
 ```
 
 </TabItem>
 </Tabs>
 
-## 修改 Array 字段设置{#alter-array-field}
+## 修改 Array 字段设置\{#alter-array-field}
 
 Array 字段有两个属性，分别为 `element_type` 和 `max_capacity`。前者决定了字段值列表中各元素的数据类型，后者决定了字段值列表中的元素数量。您可以修改 Array 字段的 `max_capacity` 属性。
 
@@ -160,7 +206,12 @@ await client.alterCollectionFieldProperties({
 <TabItem value='go'>
 
 ```go
-// TODO
+err = client.AlterCollectionFieldProperty(ctx, milvusclient.NewAlterCollectionFieldPropertiesOption(
+    "my_collection", "array").WithProperty(common.MaxCapacityKey, 64))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
 ```
 
 </TabItem>
@@ -168,13 +219,24 @@ await client.alterCollectionFieldProperties({
 <TabItem value='bash'>
 
 ```bash
-// TODO
+# restful
+curl --request POST \
+--url "${CLUSTER_ENDPOINT}/v2/collections/fields/alter_properties" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+--data "{
+    "collectionName": "my_collection",
+    "field_name": "array",
+    "properties": {
+        "max_capacity": "64"
+    }
+}"
 ```
 
 </TabItem>
 </Tabs>
 
-## 修改字段级 mmap 设置{#alter-field-level-mmap-settings}
+## 修改字段级 mmap 设置\{#alter-field-level-mmap-settings}
 
 Mmap 允许在不将磁盘上的文件加载到内存的情况下通过内存访问这些文件。通过配置 mmap，Zilliz Cloud 可以根据访问频次的不同将索引和数据分别存放到内存或磁盘上，不仅优化了数据加载行为，扩大了 Collection 的容量，也不会给搜索性能带来负面影响。
 
@@ -222,7 +284,12 @@ await client.alterCollectionProperties({
 <TabItem value='go'>
 
 ```go
-// TODO
+err = client.AlterCollectionFieldProperty(ctx, milvusclient.NewAlterCollectionFieldPropertiesOption(
+    "my_collection", "doc_chunk").WithProperty(common.MmapEnabledKey, true))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
 ```
 
 </TabItem>
@@ -230,7 +297,18 @@ await client.alterCollectionProperties({
 <TabItem value='bash'>
 
 ```bash
-// TODO
+# restful
+curl --request POST \
+--url "${CLUSTER_ENDPOINT}/v2/collections/fields/alter_properties" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+--data "{
+    "collectionName": "my_collection",
+    "field_name": "doc_chunk",
+    "properties": {
+        "mmap.enabled": True
+    }
+}"
 ```
 
 </TabItem>

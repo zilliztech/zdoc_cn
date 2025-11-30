@@ -1,10 +1,13 @@
 ---
-title: "管理项目告警 | Cloud"
+title: "管理项目告警 | BYOC"
 slug: /manage-project-alerts
 sidebar_label: "管理项目告警"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "项目告警功能通过对集群指标（如 CU、Query QPS）进行主动监控，在满足指定条件时发送通知，帮助您主动监控 Zilliz Cloud 集群的状态。配置项目告警后，您能在潜在问题出现时立即收到通知，确保及时处理。 | Cloud"
+description: "项目告警功能通过对集群指标（如 CU、Query QPS）进行主动监控，在满足指定条件时发送通知，帮助您主动监控 Zilliz Cloud 集群的状态。配置项目告警后，您能在潜在问题出现时立即收到通知，确保及时处理。 | BYOC"
 type: origin
 token: EUS8w4x9Ii0BmhkJBfQcsoFln5c
 sidebar_position: 4
@@ -28,23 +31,23 @@ import Supademo from '@site/src/components/Supademo';
 
 项目告警功能通过对集群指标（如 CU、Query QPS）进行主动监控，在满足指定条件时发送通知，帮助您主动监控 Zilliz Cloud 集群的状态。配置项目告警后，您能在潜在问题出现时立即收到通知，确保及时处理。
 
-## 开始前{#before-you-start}
+## 开始前\{#before-you-start}
 
 在创建或管理项目告警前，请确保您拥有：
 
 - **组织管理员**或**项目管理员**角色权限。
 
-## 查看项目告警{#view-project-alerts}
+## 查看项目告警\{#view-project-alerts}
 
 在左侧导航栏中点击**项目告警**，即可访问项目告警仪表盘。
 
 <Supademo id="cmbk6jzy68h60sn1ri2xm74jm" title="Zilliz Cloud - 查看项目告警 Demo" />
 
-### 告警历史{#alert-history}
+### 告警历史\{#alert-history}
 
 当您需要调查过往事件、分析告警规律或展示系统可靠性时，请选择**告警历史**选项卡查看。
 
-### 告警设置{#alert-settings}
+### 告警设置\{#alert-settings}
 
 <Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"Bash","value":"Bash"}]}>
 
@@ -84,6 +87,10 @@ import Supademo from '@site/src/components/Supademo';
      <td><p>通知接收者，包括配置的邮箱地址和通知渠道。</p><p>可用通知渠道列表请参阅<a href="./manage-notification-channels">管理告警渠道</a>。</p></td>
    </tr>
    <tr>
+     <td><p>静音周期</p></td>
+     <td><p>在每次告警发送后的一段时间内抑制重复通知。</p><ul><li><p>如果持续告警，则在静音周期内不会重新发送通知。进入下一个周期之前，系统会重新发送通知。</p></li><li><p>如果告警解除，静音周期将被重置，并重新开始进行告警评估。</p></li></ul></td>
+   </tr>
+   <tr>
      <td><p>操作</p></td>
      <td><p>可用的管理选项：编辑、克隆、删除</p></td>
    </tr>
@@ -109,7 +116,7 @@ curl --request GET \
 </TabItem>
 </Tabs>
 
-## 创建项目告警{#create-project-alert}
+## 创建项目告警\{#create-project-alert}
 
 <Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"Cloud Console","value":"Cloud Console"},{"label":"Bash","value":"Bash"}]}>
 
@@ -151,7 +158,7 @@ curl --request POST \
            "type": "EMAIL",
            "config": {
              "recipients": {
-               "members": ["leryn.li@zilliz.com"],
+               "members": ["leryn.li@zilliz.com.cn"],
                "orgRoles": ["OWNER"],
                "projectRoles": ["OWNER"]
              }
@@ -164,7 +171,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 管理项目告警{#manage-project-alert}
+## 管理项目告警\{#manage-project-alert}
 
 修改、整理和维护现有告警，确保监控始终相关且高效。
 
@@ -176,7 +183,7 @@ curl --request POST \
 
 </Admonition>
 
-### 禁用或启用项目告警{#enable-or-disable-project-alert}
+### 禁用或启用项目告警\{#enable-or-disable-project-alert}
 
 在不丢失配置的情况下控制主动监控。
 
@@ -184,7 +191,7 @@ curl --request POST \
 
 - 启用告警：主动监控集群，并在阈值被突破时发送通知。
 
-### 编辑项目告警{#edit-project-alert}
+### 编辑项目告警\{#edit-project-alert}
 
 当监控需求变化时，更新告警配置。
 
@@ -194,11 +201,11 @@ curl --request POST \
 
 - 目标集群和指标类型
 
-- 通知接收者和渠道
+- 通知接收者、渠道、静音周期等
 
 - 严重级别和持续时间设置
 
-### 复制项目告警{#clone-project-alert}
+### 复制项目告警\{#clone-project-alert}
 
 以最小的设置工作量创建相似的告警。复制操作会复制所有现有设置，使您可以：
 
@@ -208,7 +215,7 @@ curl --request POST \
 
 - 跨多个项目扩展监控范围
 
-### 删除项目告警{#delete-a-project-alert}
+### 删除项目告警\{#delete-a-project-alert}
 
 您可以删除不需要的项目告警。
 
@@ -218,7 +225,7 @@ curl --request POST \
 
 </Admonition>
 
-## 配置告警接收设置{#configure-alert-receiver-settings}
+## 配置告警接收设置\{#configure-alert-receiver-settings}
 
 设置项目范围内的默认通知设置，确保团队采用一致的监控实践。
 
@@ -232,7 +239,7 @@ curl --request POST \
 
 - **将设置应用于现有告警**：选择是否用新的默认设置更新所有现有告警。
 
-## FAQ{#faq}
+## FAQ\{#faq}
 
 ### 告警触发后，我会多久收到一次通知？
 

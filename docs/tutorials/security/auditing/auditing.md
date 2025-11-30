@@ -1,8 +1,11 @@
 ---
-title: "审计 | Cloud"
+title: "审计日志 | Cloud"
 slug: /auditing
-sidebar_label: "审计"
-beta: PRIVATE
+sidebar_label: "审计日志"
+beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "了解如何为您的 Zilliz Cloud 集群配置日志审计能力。 | Cloud"
 type: origin
@@ -20,7 +23,7 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# 审计
+# 审计日志
 
 了解如何为您的 Zilliz Cloud 集群配置日志审计能力。
 

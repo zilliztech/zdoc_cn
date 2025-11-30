@@ -3,6 +3,9 @@ title: "Zilliz Cloud IP | Cloud"
 slug: /zilliz-cloud-ips
 sidebar_label: "Zilliz Cloud IP 地址"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 使用一组固定的 IP 地址从您的数据源中拉取数据，并将其发送到目标集群。为了确保 Zilliz Cloud 能够执行此操作，您需要在防火墙中将这些 IP 地址添加到安全列表中： | Cloud"
 type: origin
@@ -82,6 +85,11 @@ Zilliz Cloud 使用一组固定的 IP 地址从您的数据源中拉取数据，
      <td><p>us-east</p></td>
      <td><p>美国（弗吉尼亚）</p></td>
      <td><p><code>47.253.55.20</code></p></td>
+   </tr>
+   <tr>
+     <td><p>ap-southeast-1</p></td>
+     <td><p>新加坡</p></td>
+     <td><p><code>47.237.71.220</code></p></td>
    </tr>
 </table>
 

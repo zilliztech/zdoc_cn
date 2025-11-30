@@ -1,10 +1,10 @@
 ---
-title: "FAQs | CLOUD"
+title: "FAQs | BYOC"
 slug: /faqs
 sidebar_label: "FAQs"
 beta: FALSE
 notebook: FALSE
-description: "Frequently asked questions | CLOUD"
+description: "Frequently asked questions | BYOC"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 999

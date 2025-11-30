@@ -1,10 +1,13 @@
 ---
-title: "管理告警渠道 | Cloud"
+title: "管理告警渠道 | BYOC"
 slug: /manage-notification-channels
 sidebar_label: "管理告警渠道"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件。通常情况下，告警通知会发送到您指定的电子邮件地址。此外，您也可以通过自定义 webhook 通知渠道，实现更加无缝和事件驱动的告警通知。本指南将介绍如何管理告警渠道。 | Cloud"
+description: "Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件。通常情况下，告警通知会发送到您指定的电子邮件地址。此外，您也可以通过自定义 webhook 通知渠道，实现更加无缝和事件驱动的告警通知。本指南将介绍如何管理告警渠道。 | BYOC"
 type: origin
 token: T9z1wL5y9iDgV5kMAx1cAZfxn0b
 sidebar_position: 5
@@ -25,17 +28,17 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件。通常情况下，告警通知会发送到您指定的电子邮件地址。此外，您也可以通过自定义 webhook 通知渠道，实现更加无缝和事件驱动的告警通知。本指南将介绍如何管理告警渠道。
 
-## 开始前{#before-you-start}
+## 开始前\{#before-you-start}
 
 要管理告警渠道，请确保您是组织或项目管理员。有关更多用户角色信息，请参阅[访问控制](./access-control)。
 
-## 配置告警渠道{#set-up-notification-channels}
+## 配置告警渠道\{#set-up-notification-channels}
 
 您可以在 Zilliz Cloud 控制台的**编辑告警**或**新建告警**对话框中访问告警渠道管理页面。
 
 ![zh-manage-alert-channel](/img/zh-manage-alert-channel.png)
 
-### 邮件{#email}
+### 邮件\{#email}
 
 要设置电子邮件通知，请按以下步骤操作：
 
@@ -51,9 +54,11 @@ Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件�
 
 1. 在弹出对话框的**发送给**字段中，选择接收告警通知的用户角色或个别用户的电子邮件地址。
 
+1. 在**告警恢复通知**和**开启告警**中，可以配置告警解决后或告警触发后需要执行的动作。
+
 有关更多告警配置信息，请参阅[管理组织告警](./manage-organization-alerts)或[管理项目告警](./manage-project-alerts)。
 
-### 企业微信{#wecom}
+### 企业微信\{#wecom}
 
 要设置企业微信告警通知，请按以下步骤操作：
 
@@ -83,9 +88,11 @@ Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件�
 
     1. 在文本框中填入前面获取到的群机器人的 webhook URL。
 
+    1. 在**告警恢复通知**和**开启告警**中，可以配置告警解决后或告警触发后需要执行的动作。
+
 有关更多告警配置信息，请参阅[管理组织告警](./manage-organization-alerts)或[管理项目告警](./manage-project-alerts)。
 
-### 短信{#sms}
+### 短信\{#sms}
 
 要设置短信告警通知，请按以下步骤操作：
 
@@ -101,9 +108,11 @@ Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件�
 
 1. 在弹出对话框的**发送给**字段中，选择想要发送短信告警的用户角色或集群成员。
 
+1. 在**告警恢复通知**和**开启告警**中，可以配置告警解决后或告警触发后需要执行的动作。
+
 有关更多告警配置信息，请参阅[管理组织告警](./manage-organization-alerts)或[管理项目告警](./manage-project-alerts)。
 
-### 钉钉{#dingtalk}
+### 钉钉\{#dingtalk}
 
 要设置钉钉告警通知，请按以下步骤操作：
 
@@ -138,9 +147,11 @@ Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件�
 
     1. 在文本框中填入前面获取到的群机器人的 webhook URL。
 
+    1. 在**告警恢复通知**和**开启告警**中，可以配置告警解决后或告警触发后需要执行的动作。
+
 有关更多告警配置信息，请参阅[管理组织告警](./manage-organization-alerts)或[管理项目告警](./manage-project-alerts)。
 
-### 飞书{#lark}
+### 飞书\{#lark}
 
 要设置飞书告警通知，请按以下步骤操作：
 
@@ -162,9 +173,11 @@ Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件�
 
     1. 在文本框中填入前面获取到的群机器人的 webhook URL。
 
+    1. 在**告警恢复通知**和**开启告警**中，可以配置告警解决后或告警触发后需要执行的动作。
+
 有关更多告警配置信息，请参阅[管理组织告警](./manage-organization-alerts)或[管理项目告警](./manage-project-alerts)。
 
-### 自定义 webhook{#webhook}
+### 自定义 webhook\{#webhook}
 
 Zilliz Cloud 提供的 **Webhook** 选项允许您设置自定义的通知渠道。
 
@@ -186,6 +199,8 @@ Zilliz Cloud 提供的 **Webhook** 选项允许您设置自定义的通知渠道
 
     1. 在文本框中填入前面获取到的自定义服务的 webhook URL。
 
+    1. 在**告警恢复通知**和**开启告警**中，可以配置告警解决后或告警触发后需要执行的动作。
+
 有关更多告警配置信息，请参阅[管理组织告警](./manage-organization-alerts)或[管理项目告警](./manage-project-alerts)。
 
 示例 webhook 告警通知：
@@ -200,7 +215,7 @@ Zilliz Cloud 提供的 **Webhook** 选项允许您设置自定义的通知渠道
 }
 ```
 
-## 测试连通性{#test-connectivity}
+## 测试连通性\{#test-connectivity}
 
 在设置完告警渠道后，可点击**发送测试消息**图标来验证配置是否有效。
 

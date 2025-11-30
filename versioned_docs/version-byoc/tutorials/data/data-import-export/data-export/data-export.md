@@ -1,10 +1,13 @@
 ---
-title: "数据导出 | Cloud"
+title: "数据导出 | BYOC"
 slug: /data-export
 sidebar_label: "数据导出"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "本章介绍数据导出的相关操作步骤。 | Cloud"
+description: "本章介绍数据导出的相关操作步骤。 | BYOC"
 type: origin
 token: EPd8w1Ze7irYgQkU76HcryE4njd
 sidebar_position: 2

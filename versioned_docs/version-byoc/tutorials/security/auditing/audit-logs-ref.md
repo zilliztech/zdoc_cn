@@ -1,10 +1,13 @@
 ---
-title: "审计日志参考 | Cloud"
+title: "VectorDB 审计日志参考 | BYOC"
 slug: /audit-logs-ref
-sidebar_label: "审计日志参考"
-beta: PRIVATE
+sidebar_label: "VectorDB 审计日志参考"
+beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "在 Zilliz Cloud 上，审计日志的结构如下所示： | Cloud"
+description: "在 Zilliz Cloud 上，审计日志的结构如下所示： | BYOC"
 type: origin
 token: RNEgwQLoUi4djXkouqQcSbgvnlb
 sidebar_position: 2
@@ -22,7 +25,7 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# 审计日志参考
+# VectorDB 审计日志参考
 
 在 Zilliz Cloud 上，审计日志的结构如下所示：
 
@@ -115,11 +118,11 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-## 操作列表{#list-of-actions}
+## 操作列表\{#list-of-actions}
 
 以下表格汇总了在数据平面上可被审计记录的操作。
 
-### Connection{#connection}
+### Connection\{#connection}
 
 <table>
    <tr>
@@ -132,7 +135,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-### Database{#database}
+### Database\{#database}
 
 <table>
    <tr>
@@ -161,7 +164,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-### Collection{#collection}
+### Collection\{#collection}
 
 <table>
    <tr>
@@ -250,7 +253,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-### Partition{#partition}
+### Partition\{#partition}
 
 <table>
    <tr>
@@ -287,7 +290,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-### 索引{#index}
+### 索引\{#index}
 
 <table>
    <tr>
@@ -324,7 +327,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-### Entity{#entity}
+### Entity\{#entity}
 
 <table>
    <tr>
@@ -357,7 +360,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-### RBAC{#rbac}
+### RBAC\{#rbac}
 
 <table>
    <tr>
@@ -410,7 +413,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-### 其他{#others}
+### 其他\{#others}
 
 <table>
    <tr>

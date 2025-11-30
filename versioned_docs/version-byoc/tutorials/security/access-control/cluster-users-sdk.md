@@ -1,10 +1,13 @@
 ---
-title: "管理集群用户（SDK） | Cloud"
+title: "管理集群用户（SDK） | BYOC"
 slug: /cluster-users-sdk
 sidebar_label: "管理集群用户（SDK）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "在 Zilliz Cloud 中，您可以创建集群用户并为他们分配集群角色，从而定义用户权限并实现数据安全。 | Cloud"
+description: "在 Zilliz Cloud 中，您可以创建集群用户并为他们分配集群角色，从而定义用户权限并实现数据安全。 | BYOC"
 type: origin
 token: UX6ew8AtoillJskKRthcZyqinZb
 sidebar_position: 3
@@ -30,7 +33,7 @@ import TabItem from '@theme/TabItem';
 
 本文将介绍如何创建集群用户、授予用户角色、撤销用户角色，以及删除用户。有关集群角色的详细信息，请参考[管理集群角色（控制台）](./cluster-roles)和[管理集群角色（SDK）](./cluster-roles-sdk)。
 
-## 创建用户{#create-a-user}
+## 创建用户\{#create-a-user}
 
 以下示例展示如何创建一个具有指定用户名（`user_1`）和密码（`P@ssw0rd`）的用户。用户的用户名和密码需要遵循以下规则：
 
@@ -114,7 +117,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 查看所有用户{#list-users}
+## 查看所有用户\{#list-users}
 
 在创建了多个用户后，您可以查看所有已创建的用户列表。
 
@@ -166,7 +169,7 @@ curl --request POST \
 ['root', 'user_1']
 ```
 
-## 为用户分配角色{#grant-a-role-to-a-user}
+## 为用户分配角色\{#grant-a-role-to-a-user}
 
 以下示例展示了如何将角色 `role_a` 分配给用户 `user_1`。
 
@@ -248,7 +251,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 查看用户角色{#describe-user}
+## 查看用户角色\{#describe-user}
 
 为用户分配完角色后，您可以查看用户角色已验证操作是否成功。
 
@@ -310,7 +313,7 @@ curl --request POST \
 {'user_name': 'user_1', 'roles': 'role_a'}
 ```
 
-## 撤销角色{#revoke-a-role}
+## 撤销角色\{#revoke-a-role}
 
 您还可以撤销已分配给用户的角色。
 
@@ -370,7 +373,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 删除用户{#drop-a-user}
+## 删除用户\{#drop-a-user}
 
 以下示例展示如何删除用户 `user_1`。
 

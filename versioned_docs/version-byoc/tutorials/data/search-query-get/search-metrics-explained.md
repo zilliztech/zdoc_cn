@@ -1,13 +1,16 @@
 ---
-title: "相似度类型 | Cloud"
+title: "相似度类型 | BYOC"
 slug: /search-metrics-explained
 sidebar_label: "相似度类型"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "在度量向量相似性时，相似度类型发挥着关键作用。选择恰当的相似度类型可以极大地提升分类与聚类的效果。 | Cloud"
+description: "在度量向量相似性时，相似度类型发挥着关键作用。选择恰当的相似度类型可以极大地提升分类与聚类的效果。 | BYOC"
 type: origin
 token: U7tHwmHPCikQxWkzoSzcr8Lunmf
-sidebar_position: 17
+sidebar_position: 18
 keywords: 
   - 向量数据库
   - zilliz
@@ -76,7 +79,8 @@ import Admonition from '@theme/Admonition';
 <Admonition type="info" icon="📘" title="说明">
 
 <ul>
-<li>对于 <code>BINARY_VECTOR</code> 类型的向量字段，维度值（<strong>dim</strong>）必须为 8 的倍数。</li>
+<li><p>对于 <code>SPARSE\_FLOAT\_VECTOR</code>，只有使用全文搜索功能时才能将相似度类型设置为 <code>BM25</code>。有关全文搜索功能的具体信息，请参考<a href="./full-text-search">全文搜索</a>。</p></li>
+<li><p>对于 <code>BINARY_VECTOR</code> 类型的向量字段，维度值（<strong>dim</strong>）必须为 8 的倍数。</p></li>
 </ul>
 
 </Admonition>
@@ -121,7 +125,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-## 欧氏距离（L2）{#euclidean-distance-l2}
+## 欧氏距离（L2）\{#euclidean-distance-l2}
 
 欧氏距离主要是用来计算连接两点的线段的实际长度。
 
@@ -137,7 +141,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 内积（IP）{#inner-product-ip}
+## 内积（IP）\{#inner-product-ip}
 
 两个 Embedding 向量间的 IP 距离可按以下方式定义：
 
@@ -159,7 +163,7 @@ import Admonition from '@theme/Admonition';
 
 ![XrIgbDui7oSh1gx3PdXcyrMqnUd](/img/XrIgbDui7oSh1gx3PdXcyrMqnUd.png)
 
-## 余弦相似度（COSINE）{#cosine-similarity}
+## 余弦相似度（COSINE）\{#cosine-similarity}
 
 余弦相似度是通过计算两组向量之间的夹角余弦来衡量它们的相似度。可以把这两组向量想象为从同一起点（如 [0,0,...]）出发，但朝向不同的线段。
 
@@ -177,7 +181,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## JACCARD 距离{#jaccard}
+## JACCARD 距离\{#jaccard}
 
 JACCARD 相似系数用于衡量两个样本集之间的相似度，其定义是两个集合交集的元素数量除以它们并集的元素数量。该系数仅适用于有限样本集。
 
@@ -187,7 +191,7 @@ JACCARD 距离用于衡量数据集之间的不相似度，其计算方法是 1 
 
 ![JBpjbM06GoWfI4xDdVxcHpXsnHb](/img/JBpjbM06GoWfI4xDdVxcHpXsnHb.png)
 
-## HAMMING 距离{#hamming}
+## HAMMING 距离\{#hamming}
 
 HAMMING 距离用于测量二进制数据字符串。两个等长字符串之间的距离是它们在不同比特位上的数量。
 

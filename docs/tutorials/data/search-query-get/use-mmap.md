@@ -95,7 +95,7 @@ Zilliz Cloud 是一款内存密集型的数据库系统。可用内存的大小�
 
 对于**使用容量型 CU 的 Dedicated 集群**而言，Zilliz Cloud 只在向量字段索引上关闭了 mmap 以保证索引性能，并在加载 Collection 时将标量字段索引和所有字段的原始数据都通过 mmap 的方式转存在磁盘上，从而保证了 Collection 容量的最大化。另外，您可以考虑在参与元数据过滤的标量字段和在搜索和查询请求的输出字段列表中引用的原始数据量过大的标量字段上关闭 mmap，以提升搜索和查询的响应速度，减少网络抖动，提升查询性能。
 
-在 **Free** 和 **Serverless** 集群以及使**用存储扩展型 CU 的 Dedicated 集群**而言，Zilliz Cloud 默认使用 mmap 来处理所有字段的原始数据及索引文件，以最大化利用系统缓存能力，提升热数据查询性能，降低冷数据查询成本。
+在 **Free** 和 **Serverless** 集群以及**使用存储扩展型 CU 的 Dedicated 集群**而言，Zilliz Cloud 默认使用 mmap 来处理所有字段的原始数据及索引文件，以最大化利用系统缓存能力，提升热数据查询性能，降低冷数据查询成本。
 
 ## 在 Collection 中设置 mmap\{#collection-specific-mmap-settings}
 

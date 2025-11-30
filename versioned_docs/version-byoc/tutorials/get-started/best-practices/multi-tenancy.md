@@ -1,10 +1,13 @@
 ---
-title: "多租户策略 | Cloud"
+title: "多租户策略 | BYOC"
 slug: /multi-tenancy
 sidebar_label: "多租户策略"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "在 Zilliz Cloud 中，多租户（multi-tenancy）指多个客户或团队（即租户）共享同一个集群，同时保持各自数据环境的隔离。 | Cloud"
+description: "在 Zilliz Cloud 中，多租户（multi-tenancy）指多个客户或团队（即租户）共享同一个集群，同时保持各自数据环境的隔离。 | BYOC"
 type: origin
 token: H996wdrf3iU9vjkAARzcnA5enId
 sidebar_position: 1
@@ -13,8 +16,7 @@ keywords:
   - zilliz
   - milvus
   - 大模型向量数据库
-  - 价格
-  - 计算器
+  - 多租
 
 ---
 
@@ -27,17 +29,17 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 支持 4 种多租户策略，每种策略在可扩展性、数据隔离性和灵活性之间具有不同的权衡。本文将逐一介绍这些策略，帮助您为具体使用场景选择最合适的方案。
 
-## Zilliz Cloud 的多租户策略{#multi-tenancy-strategies-in-zilliz-cloud}
+## 多租户策略\{#multi-tenancy-strategies}
 
 Zilliz Cloud 支持以下四个级别的多租户策略：Database 级别、Collection 级别、 Partition 级别和 Partition-key 级别。
 
-### Database 级别多租户{#database-level-multi-tenancy}
+### Database 级别多租户\{#database-level-multi-tenancy}
 
-在 Database 级别的多租户模式中，每个租户对应一个独立的 Database，各个 Database 中可以包含一个或多个 Collection。
+在 Database 级别的多租户模式中，每个租户对应一个独立的 [Database](./database)，各个 Database 中可以包含一个或多个 Collection。
 
 ![ICyhwNeJChn7HpbThtMcimjmnqf](/img/ICyhwNeJChn7HpbThtMcimjmnqf.png)
 
-- **可扩展性**：仅 Dedicated 版本的集群支持 Database 级别的多租户策略。最多可支持 1,024 个租户。
+- **可扩展性**：仅 Dedicated 集群支持 Database 级别的多租户策略。最多可支持 1,024 个租户。
 
 - **数据隔离**：每个数据库之间完全隔离，提供企业级的数据隔离能力，适用于合规性要求严格的场景。
 
@@ -45,9 +47,9 @@ Zilliz Cloud 支持以下四个级别的多租户策略：Database 级别、Coll
 
 - **其他**：支持 RBAC，可对每个租户的用户访问权限进行精细控制。您还可以按需加载或释放某个租户的数据，实现冷热数据分层管理。
 
-### Collection 级别多租户{#collection-level-multi-tenancy}
+### Collection 级别多租户\{#collection-level-multi-tenancy}
 
-在 Collection 级别的多租户模式中，每个租户对应一个 Collection，数据隔离性强。
+在 Collection 级别的多租户模式中，每个租户对应一个 [Collection](./collection)，数据隔离性强。
 
 ![RWcowcrWihDa0ebNFu9cY7rhn0e](/img/RWcowcrWihDa0ebNFu9cY7rhn0e.png)
 
@@ -59,9 +61,9 @@ Zilliz Cloud 支持以下四个级别的多租户策略：Database 级别、Coll
 
 - **其他**：支持 RBAC，可对每个租户的访问权限进行精细管理。支持按租户加载或释放数据，实现冷热数据管理。
 
-### Partition 级别多租户{#partition-level-multi-tenancy}
+### Partition 级别多租户\{#partition-level-multi-tenancy}
 
-在 Partition 级别的多租户模式中，所有租户共享同一个 Collection，但每个租户分配一个手动创建的 Partition。
+在 Partition 级别的多租户模式中，所有租户共享同一个 Collection，但每个租户分配一个手动创建的 [Partition](./manage-partitions)。
 
 ![BtxawK5amh1CGxbrfDacC0swnHc](/img/BtxawK5amh1CGxbrfDacC0swnHc.png)
 
@@ -73,9 +75,9 @@ Zilliz Cloud 支持以下四个级别的多租户策略：Database 级别、Coll
 
 **其他**：该级别不支持 RBAC。支持对单个或多个 Partition 进行查询，适用于需要跨租户聚合查询或分析的场景。同时支持按租户加载或释放数据，实现冷热数据管理。
 
-### 分区键级多租户{#partition-key-level-multi-tenancy}
+### 分区键级多租户\{#partition-key-level-multi-tenancy}
 
-在 Partition key 级别的策略下，所有租户共享同一个 Collection 和 schema，但系统会根据 Partition key 的值自动将数据分配到 16 个自动创建的 Partitio 中。虽然单个 Partition 中可能包含多个租户，但各租户数据在逻辑上是相互隔离的。
+在 Partition key 级别的策略下，所有租户共享同一个 Collection 和 schema，但系统会根据 [Partition key](./use-partition-key) 的值自动将数据分配到 16 个自动创建的 Partition 中。虽然单个 Partition 中可能包含多个租户，但各租户数据在逻辑上是相互隔离的。
 
 ![Ls93wrcsZhRlnbbT51ocBEoxnng](/img/Ls93wrcsZhRlnbbT51ocBEoxnng.png)
 
@@ -87,7 +89,7 @@ Zilliz Cloud 支持以下四个级别的多租户策略：Database 级别、Coll
 
 - **其他**：该级别不支持 RBAC。支持对单个或多个 Partition 进行查询，适用于跨租户聚合分析等场景。
 
-## 选择合适的多租户策略{#choosing-the-right-multi-tenancy-strategy}
+## 选择合适的多租户策略\{#choosing-the-right-multi-tenancy-strategy}
 
 下表提供了四种多租户策略的详细对比。
 
@@ -100,11 +102,11 @@ Zilliz Cloud 支持以下四个级别的多租户策略：Database 级别、Coll
      <th><p><strong>Partition key 级别</strong></p></th>
    </tr>
    <tr>
-     <td><p><strong>支持的集群版本</strong></p></td>
-     <td><p>仅 Dedicated 版本集群支持</p></td>
-     <td><p>所有版本</p></td>
-     <td><p>所有版本</p></td>
-     <td><p>所有版本</p></td>
+     <td><p><strong>支持的集群部署方式</strong></p></td>
+     <td><p>仅 Dedicated 集群支持</p></td>
+     <td><p>所有部署方式</p></td>
+     <td><p>所有部署方式</p></td>
+     <td><p>所有部署方式</p></td>
    </tr>
    <tr>
      <td><p><strong>数据隔离</strong></p></td>
@@ -116,8 +118,8 @@ Zilliz Cloud 支持以下四个级别的多租户策略：Database 级别、Coll
    <tr>
      <td><p><strong>最多可支持的租户数量</strong></p></td>
      <td><p>1024</p></td>
-     <td><p>受集群版本影响，最多 16,384。详见<a href="./limits#collections">使用限制</a>。</p></td>
-     <td><p>受集群版本影响，每个 Collection 中最多 1,024。详见<a href="./limits#collections">使用限制</a>。</p></td>
+     <td><p>受集群部署方式和项目版本影响，最多 16,384。详见<a href="./limits#collections">使用限制</a>。</p></td>
+     <td><p>受集群部署方式和项目版本影响，每个 Collection 中最多 1,024。详见<a href="./limits#collections">使用限制</a>。</p></td>
      <td><p>百万</p></td>
    </tr>
    <tr>
