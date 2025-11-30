@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "loadPartitions() | Node.js"
 slug: /node/node/Partitions-loadPartitions
 sidebar_label: "loadPartitions()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation loads a specific set of partitions in a specified collection into memory. | Node.js"
@@ -10,15 +13,15 @@ type: docx
 token: Pyh3dttWKoBqcBx8FGhcArhAnqg
 sidebar_position: 6
 keywords: 
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
   - zilliz
   - zilliz cloud
   - cloud
   - loadPartitions()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "BulkFileType | Python"
 slug: /python/python/DataImport-BulkFileType
 sidebar_label: "BulkFileType"
+added_since: Inherit
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Python"
@@ -10,15 +13,15 @@ type: docx
 token: NV3Ud1M9iojhaSxZY4ec8RjgnlP
 sidebar_position: 1
 keywords: 
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
+  - Vector embeddings
+  - Vector store
+  - open source vector database
+  - Vector index
   - zilliz
   - zilliz cloud
   - cloud
   - BulkFileType
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

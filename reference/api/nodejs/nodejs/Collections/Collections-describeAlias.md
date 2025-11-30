@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "describeAlias() | Node.js"
 slug: /node/node/Collections-describeAlias
 sidebar_label: "describeAlias()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation describes a specific alias. | Node.js"
 type: docx
 token: YCzNdg5yWoeZVrxj7jGcb1UXnBd
-sidebar_position: 8
+sidebar_position: 7
 keywords: 
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
   - zilliz
   - zilliz cloud
   - cloud
   - describeAlias()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

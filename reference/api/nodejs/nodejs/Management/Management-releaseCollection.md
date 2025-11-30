@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "releaseCollection() | Node.js"
 slug: /node/node/Management-releaseCollection
 sidebar_label: "releaseCollection()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation releases the data of a specific collection from memory. | Node.js"
 type: docx
 token: UxOXdeKF1oOIBuxTjPhcKBtPnRb
-sidebar_position: 17
+sidebar_position: 20
 keywords: 
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
+  - vector database example
+  - rag vector database
+  - what is vector db
+  - what are vector databases
   - zilliz
   - zilliz cloud
   - cloud
   - releaseCollection()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

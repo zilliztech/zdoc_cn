@@ -3,6 +3,9 @@ title: "RunAnalyzer() | Go | v2"
 slug: /go/v2-Collection-RunAnalyzer
 sidebar_label: "RunAnalyzer()"
 beta: FALSE
+added_since: v2.5.x
+last_modified: v2.6.x
+deprecate_since: FALSE
 notebook: FALSE
 description: "This operation processes the input data and generates tokenized output. | Go | v2"
 type: origin
@@ -39,7 +42,7 @@ func (c *Client) RunAnalyzer(ctx context.Context, option RunAnalyzerOption, call
    <tr>
      <td><p><code>option</code></p></td>
      <td><p>Optional parameters of the methods.</p></td>
-     <td><p><code>RunAnalyzerOption</code></p></td>
+     <td><p><a href="./v2-Collection-RunAnalyzer#runanalyzeroption"><code>RunAnalyzerOption</code></a></p></td>
    </tr>
    <tr>
      <td><p><code>callOptions</code></p></td>
@@ -71,17 +74,17 @@ func NewRunAnalyzerOption(text []string) *runAnalyzerOption
 
 You can chain the following methods to append extra settings to the current `RunAnalyzerOption` struct.
 
-- WithAnalyzerParamsStr
+- [WithAnalyzerParamsStr](./v2-Collection-RunAnalyzer#withanalyzerparamsstr)
 
 - [WithAnalyzerParams](./v2-Collection-RunAnalyzer#withanalyzername)
 
-- WithDetail
+- [WithDetail](./v2-Collection-RunAnalyzer#withdetail)
 
-- WithHash
+- [WithHash](./v2-Collection-RunAnalyzer#withhash)
 
 - [WithField](./v2-Collection-RunAnalyzer#withfield)
 
-- WithAnalyzerName
+- [WithAnalyzerName](./v2-Collection-RunAnalyzer#withanalyzername)
 
 ### WithAnalyzerParamsStr
 
@@ -223,7 +226,7 @@ type Token struct {
 
 ## Return
 
-`*entity.AnalyzerResult`
+`*[entity](./v2-Collection-RunAnalyzer#entityanalyzerresult)[.](./v2-Collection-RunAnalyzer#entityanalyzerresult)[AnalyzerResult`](./v2-Collection-RunAnalyzer#entityanalyzerresult)
 
 ## Example
 
