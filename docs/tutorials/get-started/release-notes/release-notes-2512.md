@@ -37,10 +37,6 @@ import Grid from '@site/src/components/Grid';
 
     <div>
 
-        ## 分层存储能力 GA\{#tiered-storage-ga}
-
-        分层存储能力达成 GA，引入了全新升级的热、温、冷数据架构，并开始对冷数据的访问计费。更多详情，可参考[存储费用](./storage-cost#example-4-cluster-cold-data-access-cost)。
-
         ## Volume GA（曾用名 Stage）\{#volume-ga-formerly-stage}
 
         本次发布也带来了 **Stage** 特性的 GA，并将该特性正式命名为 **Volume**。作为托管在 Zilliz Cloud 上用于存储结构化表格及非结构化数据 Collection 的存储对象，Volume 将成为可扩展数据接入和 ETL 工作流的统一数据层。
