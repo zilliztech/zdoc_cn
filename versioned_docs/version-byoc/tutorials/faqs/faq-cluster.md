@@ -1,10 +1,10 @@
 ---
-title: "FAQ：集群 | CLOUD"
+title: "FAQ：集群 | BYOC"
 slug: /faq-cluster
 sidebar_label: "FAQ：集群"
 beta: FALSE
 notebook: FALSE
-description: " | CLOUD"
+description: " | BYOC"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 2
@@ -17,8 +17,6 @@ sidebar_position: 2
 
 ## 目录
 
-- [集群创建完成后，是否能够修改集群 CU 类型？](#can-i-change-the-cu-type-after-my-dedicated-cluster-is-created)
-- [集群创建完成后，是否能够修改集群的云服务地域？](#can-i-change-the-cloud-region-of-my-cluster-after-it-is-created)
 - [如何为集群缩容？](#how-can-i-scale-down-my-cluster-cu-size)
 - [为什么会连接超时以及如何处理连接超时报错？](#how-can-i-deal-with-a-connection-timeout-error-when-i-attempt-to-connect-to-zilliz-cloud)
 - [为什么无法连接集群?](#why-cant-i-connect-to-the-cluster-after-the-cluster-is-created)
@@ -31,25 +29,9 @@ sidebar_position: 2
 
 
 
-### 集群创建完成后，是否能够修改集群 CU 类型？ \{#can-i-change-the-cu-type-after-my-dedicated-cluster-is-created}
-
-如需修改集群 CU 类型，请使用以下方案。
-
-1. 创建 1 个新集群，选择合适的 CU 类型。使用[计算器](https://zilliz.com.cn/pricing#calculator)预估所需的新集群规格。
-
-1. 将数据从原集群[迁移](./offline-migration)至新集群。或者，您也可以[联系我们](https://support.zilliz.com.cn/hc/zh-cn)帮助您在后台完成迁移。如需联系我们，请在工单中注明原集群和目标集群的信息。
-
-### 集群创建完成后，是否能够修改集群的云服务地域？ \{#can-i-change-the-cloud-region-of-my-cluster-after-it-is-created}
-
-如需修改集群 CU 类型，请使用以下方案。
-
-1. 创建 1 个新集群，选择合适的云服务地域。
-
-1. 将数据从原集群[迁移](./offline-migration)至新集群。或者，您也可以[联系我们](https://support.zilliz.com.cn/hc/zh-cn)帮助您在后台完成迁移。如需联系我们，请在工单中注明原集群和目标集群的信息。
-
 ### 如何为集群缩容？ \{#how-can-i-scale-down-my-cluster-cu-size}
 
-如果您需要缩小集群 CU 大小，请先创建一个新集群，并在创建时选择您需要的 CU 大小。随后，将原集群中的数据[迁移](./offline-migration)至新集群中。如在迁移过程中遇到任何问题，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
+如果您需要为集群缩容，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 
 ### 为什么会连接超时以及如何处理连接超时报错？ \{#how-can-i-deal-with-a-connection-timeout-error-when-i-attempt-to-connect-to-zilliz-cloud}
 
@@ -75,7 +57,28 @@ sidebar_position: 2
 
 1. 确认已在白名单中设置 IP 地址。
 
-1. 运行 `telnet in01-(uuid).(region).vectordb.cloud.zilliz.com.cn 19530` 测试端口是否可以连接。
+1. 确认 Endpoint URI 中的 Port 是否正确。请确保您从 Zilliz Cloud web 控制台中复制正确的 Endpoint。下表罗列了部署在不同云服务提供商的集群对应端口。
+
+    <table>
+       <tr>
+         <th><p><strong>云服务提供商</strong></p></th>
+         <th><p><strong>Port</strong></p></th>
+       </tr>
+       <tr>
+         <td><p>阿里云</p></td>
+         <td><p>19530 - 19550</p></td>
+       </tr>
+       <tr>
+         <td><p>腾讯云</p></td>
+         <td><p>443</p></td>
+       </tr>
+       <tr>
+         <td><p>亚马逊云科技</p></td>
+         <td><p>19530- 19550</p></td>
+       </tr>
+    </table>
+
+1. 运行 `telnet in01-(uuid).(region).vectordb.cloud.zilliz.com.cn port-number` 测试端口是否可以连接。
 
 如执行上述步骤后，仍无法连接集群，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 
@@ -90,6 +93,31 @@ sidebar_position: 2
     ```javascript
     const client = new MilvusClient('<https://your-db-address-with-port>', true, 'your-db-user', 'your-db-pasword');
     ```
+
+1. 确保您在连接时使用的集群 Endpoint 和 Token 正确。集群 Endpoint 中需要包含 `https://`。
+
+1. 确认 Endpoint URI 中的 Port 是否正确。请确保您从 Zilliz Cloud web 控制台中复制正确的 Endpoint。下表罗列了部署在不同云服务提供商的集群对应端口。
+
+    <table>
+       <tr>
+         <th><p><strong>云服务提供商</strong></p></th>
+         <th><p><strong>Port</strong></p></th>
+       </tr>
+       <tr>
+         <td><p>阿里云</p></td>
+         <td><p>19530 - 19550</p></td>
+       </tr>
+       <tr>
+         <td><p>腾讯云</p></td>
+         <td><p>443</p></td>
+       </tr>
+       <tr>
+         <td><p>亚马逊云科技</p></td>
+         <td><p>19530- 19550</p></td>
+       </tr>
+    </table>
+
+1. 您的 IP 地址已加入白名单。
 
 ### 集群挂起后，是否还会收取费用？ \{#will-i-be-charged-if-i-suspend-my-cluster}
 

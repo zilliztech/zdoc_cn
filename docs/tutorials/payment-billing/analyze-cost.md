@@ -3,11 +3,14 @@ title: "分析成本 | Cloud"
 slug: /analyze-cost
 sidebar_label: "分析成本"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 的用量页为您提供可视化的成本分析能力，支持从多个维度查看 Zilliz Cloud 按量计费集群的使用和消费情况以及包年包月集群额外产生的存储和备份费用。 | Cloud"
 type: origin
 token: DeRWwlqYKiH76okxiaBcVFPjnMg
-sidebar_position: 8
+sidebar_position: 9
 keywords: 
   - 向量数据库
   - zilliz
@@ -25,19 +28,19 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 的用量页为您提供可视化的成本分析能力，支持从多个维度查看 Zilliz Cloud **按量计费集群**的使用和消费情况以及**包年包月集群**额外产生的存储和备份费用。
 
-## 前提条件{#prerequisites}
+## 前提条件\{#prerequisites}
 
 您需要具备**组织管理员**或**账单管理员**权限才可以通过 Zilliz Cloud **用量**界面查看和分析成本。
 
-## 操作步骤{#procedures}
+## 操作步骤\{#procedures}
 
 Zilliz Cloud 提供两种用量分析的方式：
 
-- [通过 Web 控制台](./analyze-cost#via-web-ui)：Web 控制台提供了可视化的图表，帮助您更直观地分析成本。界面上用量明细中的用量金额精度均为 **2 位小数**（例如：¥60.00）。
+- [通过 Web 控制台](./analyze-cost#via-web-ui)：Web 控制台提供了可视化的图表，帮助您更直观地分析成本。界面上用量明细中的用量金额精度均为 **10 位小数**。
 
-- [通过 RESTful API](./analyze-cost#via-restful-api)：RESTful API 提供的用量金额数据精度更高，为 **8 位小数（**例如：¥60.00257846）。如需对账，建议您使用 RESTful API。
+- [通过 RESTful API](./analyze-cost#via-restful-api)：RESTful API 提供的用量金额数据精度更高，为 **10 位小数**。如需对账，建议您使用 RESTful API。
 
-### 通过 Web 控制台{#via-web-ui}
+### 通过 Web 控制台\{#via-web-ui}
 
 在**账单**页面的**用量**板块，您可以查看多类维度下的 Zilliz Cloud 服务用量和成本变化趋势。
 
@@ -87,7 +90,7 @@ Zilliz Cloud 提供两种用量分析的方式：
 
 您可以根据您的分析需求，组合多种上述筛选条件，查看可视化的用量和成本数据。
 
-### 通过 RESTful API{#via-restful-api}
+### 通过 RESTful API\{#via-restful-api}
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -116,73 +119,13 @@ curl --request POST \
 
 - `end`：查询时间段开始日期，格式为 `YYYY-MM-DD`。
 
-## 常见问题{#faq}
+## 常见问题\{#faq}
 
-- **Zilliz Cloud 用量趋势和明细中的金额精度为多少？**
+- **Zilliz Cloud 用量明细中的金额精度为多少？**
 
-Zilliz Cloud 产品价格精度为小数点后 8 位。因此在计费过程中会产生小数点后 8 位的费用。Zilliz Cloud 实际和客户结算过程中会将包含 8 位小数点的费用汇总，随后根据按日汇总后金额的第 3 位小数进行四舍五入。
+    Zilliz Cloud 的计费精度为 **10 位小数**，所有账单均按此精度计算。每日费用会先进行汇总，并在计费过程中四舍五入至 10 位小数。
 
-在 Zilliz Cloud 界面的用量趋势和用量明细部分，展示的金额精度均为 2 位小数（例如：¥60.00）。
+    - **RESTful API**：所有数值（如单价、用量、用量金额）始终返回**精确到 10 位小数**。如果不足 10 位小数，则会在末尾补零以保持 10 位。更多关于如何使用 RESTful API 的信息，请参阅[查询日用量](/reference/restful/query-daily-usage-v2) 。
 
-![precision_usage_cn](/img/precision_usage_cn.png)
+    - **Web 控制台**：展示的数值与 API 保持一致，但为了便于阅读，界面会省略末尾的连续零。例如，`0.1234000000` 会在界面上显示为 `0.1234`。
 
-通过 Zilliz Cloud [查询日用量](/reference/restful/query-daily-usage-v2) API 接口获取的用量信息中，金额精度均为 8 位小数。以下为[查询日用量](/reference/restful/query-daily-usage-v2)接口的返回示例：
-
-```bash
-{
-    "code": 0,
-    "data": {
-        "list": [
-            {
-                "intervalStart": "2024-01-01T00:00:00Z",
-                "intervalEnd": "2024-01-02T00:00:00Z",
-                "total": 69.59794400,
-                "currency": "RMB"
-                "results": [
-                    {
-                        "costType": "compute",
-                        "properties": {
-                            "projectId": "prj-xxxxx",
-                            "regionId": "ali-cn-hangzhou",
-                            "cuType": "Performance-optimized",
-                            "plan": "Enterprise",
-                            "clusterId": "in01-xxxxx"
-                        },
-                        "quantity": 55.6778,
-                        "unit": "CU-hours",
-                        "listPrice": {
-                            "unitPrice": 1.25000000
-                        },
-                        "price": {
-                            "unitPrice": 1.25000000
-                        },
-                        "amount": 69.59725000 
-                    },
-                    {
-                        "costType": "storage",
-                        "properties": {
-                            "projectId": "prj-xxxxx",
-                            "regionId": "ali-cn-hangzhou",
-                            "cuType": "Performance-optimized",
-                            "plan": "Enterprise",
-                            "clusterId": "in01-xxxxx",
-                        },
-                        "quantity": 323,
-                        "unit": "GB-hours",
-                        "listPrice": {
-                            "unitPrice": 0.000694
-                        },
-                        "price": {
-                            "unitPrice": 0.000694
-                        },
-                        "amount": 0.00069400
-                    }
-                ]
-            }
-        ],
-        "currentPage": 1,
-        "pageSize": 100,
-        "total": 10000
-    }
-}
-```

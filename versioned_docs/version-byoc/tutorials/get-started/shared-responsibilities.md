@@ -3,6 +3,9 @@ title: "共同责任 | BYOC"
 slug: /shared-responsibilities
 sidebar_label: "共同责任"
 beta: CONTACT SALES
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "This page outlines the responsibilities of Zilliz Cloud and BYOC users to clarify the division of tasks related to cloud management, upgrades, security, access control, service availability, and technical support, ensuring smooth collaboration while maintaining a secure and efficient operation environment. | BYOC"
 type: origin

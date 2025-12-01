@@ -1,10 +1,13 @@
 ---
-title: "管理项目任务 | Cloud"
+title: "管理项目任务 | BYOC"
 slug: /job-center
 sidebar_label: "管理项目任务"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 提供了一个直观的任务中心页面，将同一项目下的所有历史和异步数据任务整合在一起。 | Cloud"
+description: "Zilliz Cloud 提供了一个直观的任务中心页面，将同一项目下的所有历史和异步数据任务整合在一起。 | BYOC"
 type: origin
 token: YtLLwrOl0in7OqkdMpPc4ZkxnVd
 sidebar_position: 3
@@ -42,38 +45,57 @@ Zilliz Cloud 提供了一个直观的任务中心页面，将同一项目下的�
          <th><p><strong>说明</strong></p></th>
        </tr>
        <tr>
-         <td rowspan="2"><p>备份</p></td>
+         <td rowspan="3"><p><a href="./create-snapshot">备份</a></p></td>
          <td><p>为集群创建备份。</p></td>
        </tr>
        <tr>
          <td><p>为 Collection 创建备份。</p></td>
        </tr>
        <tr>
-         <td rowspan="2"><p>恢复</p></td>
+         <td><p>进行跨地域备份。</p></td>
+       </tr>
+       <tr>
+         <td rowspan="2"><p><a href="./restore-from-snapshot">恢复</a></p></td>
          <td><p>从备份恢复集群。</p></td>
        </tr>
        <tr>
          <td><p>从备份恢复 Collection。</p></td>
        </tr>
        <tr>
-         <td><p>导出备份文件</p></td>
+         <td><p><a href="./export-backup-files">导出备份文件</a></p></td>
          <td><p>将备份文件导出至指定对象存储服务中。</p></td>
        </tr>
        <tr>
-         <td><p>迁移</p></td>
+         <td><p><a href="./migrations">迁移</a></p></td>
          <td><p>将数据迁移至集群。</p><ul><li><p>迁移外部数据</p><ul><li><p>从 Milvus 迁移至 Zilliz Cloud 集群</p></li><li><p>从 Qdrant 迁移至 Zilliz Cloud 集群</p></li><li><p>从 Elasticsearch 迁移至 Zilliz Cloud 集群</p></li><li><p>从 OpenSearch 迁移至 Zilliz Cloud 集群</p></li><li><p>从 PostgreSQL 迁移至 Zilliz Cloud 集群</p></li><li><p>从腾讯云向量数据库迁移至 Zilliz Cloud 集群</p></li></ul></li><li><p>Zilliz Cloud 跨集群迁移</p><ul><li><p>在当前组织中进行跨集群迁移</p></li><li><p>跨组织进行集群间迁移</p></li></ul></li></ul></td>
        </tr>
        <tr>
-         <td><p>导入</p></td>
+         <td><p><a href="./data-import">导入</a></p></td>
          <td><p>将数据导入至 Collection。</p></td>
        </tr>
        <tr>
-         <td><p>复制 Collection</p></td>
+         <td><p><a href="./manage-collections-console#create-collection">复制 Collection</a></p></td>
          <td><p>复制 Collection Schema 及 Collection 中所有数据。</p></td>
        </tr>
        <tr>
-         <td><p>创建示例 Collection</p></td>
+         <td><p><a href="./manage-collections-console#create-collection">创建示例 Collection</a></p></td>
          <td><p>创建一个带有实力数据集的 Collection。</p></td>
+       </tr>
+       <tr>
+         <td><p><a href="./manage-cluster#suspend-cluster">挂起集群</a></p></td>
+         <td><p>将集群挂起。</p></td>
+       </tr>
+       <tr>
+         <td><p><a href="./manage-cluster#resume-cluster">恢复运行集群</a></p></td>
+         <td><p>将集群恢复运行。</p></td>
+       </tr>
+       <tr>
+         <td><p><a href="./scale-cluster">Query CU 扩缩容</a></p></td>
+         <td><p>手动或动态增加或减少集群中的 Query CU 数量。</p></td>
+       </tr>
+       <tr>
+         <td><p><a href="./manage-replica">Replica 扩缩容</a></p></td>
+         <td><p>手动或动态增加或减少集群中的 Replica 数量。</p></td>
        </tr>
     </table>
 

@@ -95,12 +95,6 @@ import Admonition from '@theme/Admonition';
      <th><p>推荐操作</p></th>
    </tr>
    <tr>
-     <td><p><strong>资源</strong></p></td>
-     <td></td>
-     <td></td>
-     <td></td>
-   </tr>
-   <tr>
      <td><p>Read vCUs</p></td>
      <td><p>vCU</p></td>
      <td><p>Search 和 Query 操作消耗的 vCU 用量。</p><p>该指标仅适用于 <strong>Free</strong> 或 <strong>Serverless</strong> 集群。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
@@ -127,7 +121,7 @@ import Admonition from '@theme/Admonition';
    <tr>
      <td><p>Query CU 总数</p></td>
      <td><p>个</p></td>
-     <td><p>当前集群中 Query CU 总数。该数值可以通过集群 Query CU × Replica 数量计算得出。 </p><p>例如，如果集群的 Query CU为 2，Replica 数量为 2，则此处显示的Query CU 规格总数为 4。</p><p>该指标仅适用于 <strong>Dedicated 企业版</strong> 或 <strong>BYOC</strong>。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
+     <td><p>当前集群中 Query CU 总数。该数值可以通过集群 Query CU × Replica 数量计算得出。</p><p>例如，如果集群的 Query CU为 2，Replica 数量为 2，则此处显示的Query CU 规格总数为 4。</p><p>该指标仅适用于 <strong>Dedicated 企业版</strong> 或 <strong>BYOC</strong>。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
      <td><p>监控该指标，可以识别 Query CU 的<a href="./scale-cluster">扩缩容</a>事件。</p></td>
    </tr>
    <tr>
@@ -207,6 +201,12 @@ import Admonition from '@theme/Admonition';
      <td><p>统计对集群操作的 flush 次数。</p><p>该指标仅适用于 <strong>Dedicated 企业版</strong> 或 <strong>BYOC</strong>。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
      <td><p>过于频繁的 flush 操作会影响集群的整体性能。有关 flush 操作的相关限制，请参阅<a href="./limits#flush">使用限制</a>。</p></td>
    </tr>
+   <tr>
+     <td><p>缓存命中率</p></td>
+     <td><p>%</p></td>
+     <td><p>集群中所有查询的平均缓存命中率。单次查询缓存命中率 = (总扫描数据量-冷数据扫描数据量)/总扫描数据量。</p><p>该指标仅适用于兼容 Milvus 2.6.x 版本的 <strong>Dedicated （分层存储型）</strong>集群。如需使用该指标，请<a href="http://support.zilliz.com.cn">提交工单</a>将您的集群 Milvus 版本升级至 2.6.x。</p></td>
+     <td><p>监控该指标，可以识别集群的查询性能。</p></td>
+   </tr>
 </table>
 
 ### 数据\{#data}
@@ -233,13 +233,13 @@ import Admonition from '@theme/Admonition';
    <tr>
      <td><p>已加载 Entity 数量近似值</p></td>
      <td><p>个</p></td>
-     <td><p>集群中已加载 Entity 数量的近似值。</p><p>在右侧扩展的下拉菜单中选择指定的 collection，将显示该 collection 中已加载的 entity 数量。</p><p>该指标仅适用于 <strong>Dedicated 企业版</strong> 或 <strong>BYOC</strong>。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
+     <td><p>集群中已加载 Entity 数量的近似值。</p><p>在右侧扩展的下拉菜单中选择指定的 collection，将显示该 collection 中已加载的 entity 数量。</p><p>有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
      <td><p>如需查看精确、实时的 Entity 计数，请参考 Collection 详情页中的“已加载 Entity 数量”或者使用 <a href="/docs/single-vector-search#use-count-as-output-field">count(*)</a>。</p></td>
    </tr>
    <tr>
      <td><p>未加载的 Collection 数量</p></td>
      <td><p>个</p></td>
-     <td><p>统计集群中未加载的 collection 数量。</p><p>该指标仅适用于 <strong>Dedicated 企业版</strong> 或 <strong>BYOC</strong>。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
+     <td><p>统计集群中未加载的 collection 数量。</p><p>有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
      <td><p>可凭借该指标判断是否需要清理数据或继续加载 collection。</p></td>
    </tr>
 </table>

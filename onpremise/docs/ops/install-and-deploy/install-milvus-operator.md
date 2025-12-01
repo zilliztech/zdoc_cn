@@ -3,6 +3,9 @@ title: "安装 Milvus Operator | On-Premise"
 slug: /install-milvus-operator
 sidebar_label: "安装 Milvus Operator"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Milvus Operator 是一种可帮助您在目标 Kubernetes 集群上部署和管理包括所有 Milvus 组件和相关依赖项的 Milvus 服务栈的解决方案。本节将介绍如何安装 Milvus Operator。 | On-Premise"
 type: origin
@@ -30,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 Milvus Operator 是一种可帮助您在目标 Kubernetes 集群上部署和管理包括所有 Milvus 组件和相关依赖项的 Milvus 服务栈的解决方案。本节将介绍如何安装 Milvus Operator。
 
-## 前提条件{#prerequisites}
+## 前提条件\{#prerequisites}
 
 在安装 Milvus Operator 前，请确认
 
@@ -38,7 +41,7 @@ Milvus Operator 是一种可帮助您在目标 Kubernetes 集群上部署和管�
 
 - Kubernetes 集群中已部署的 StorageClass 允许磁盘扩容，即 StorageClass 的allowVolumeExpansion 已设置为 true。
 
-## 安装 Milvus Operator{#install-milvus-operator}
+## 安装 Milvus Operator\{#install-milvus-operator}
 
 可按如下方式安装 Milvus Operator
 
@@ -314,7 +317,7 @@ rules:
 
 ```
 
-## 安装后验证{#verification-afterwards}
+## 安装后验证\{#verification-afterwards}
 
 您可按照如下方式验证 Milvus Operator 是否安装成功。
 
@@ -330,11 +333,11 @@ milvus-operator-5fd77b87dc-msrk4   1/1     Running   0          46s
 
 当 Milvus Operator pod 的 **STATUS** 为 **Running**，且 **READY** 为 **1/1** 时，说明 Milvus Operator 安装成功。
 
-## 后续步骤{#follow-ups}
+## 后续步骤\{#follow-ups}
 
 在 Milvus Operator 安装成功后，即可[部署 Milvus 集群](./deploy-milvus-cluster)。
 
-## 常见问题{#faqs}
+## 常见问题\{#faqs}
 
 1. Milvus Operator pod 的 **STATUS** 为 **Pending**，如何解决？
 

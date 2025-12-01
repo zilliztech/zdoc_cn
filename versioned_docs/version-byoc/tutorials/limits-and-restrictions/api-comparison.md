@@ -1,10 +1,13 @@
 ---
-title: "API 异同 | Cloud"
+title: "API 异同 | BYOC"
 slug: /api-comparison
 sidebar_label: "API 异同"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "为了提供更好的用户体验，Zilliz Cloud 的运行方式与 Milvus 略有不同。本文将介绍 Zilliz Cloud 和 Milvus 在 API 操作方面的差异。 | Cloud"
+description: "为了提供更好的用户体验，Zilliz Cloud 的运行方式与 Milvus 略有不同。本文将介绍 Zilliz Cloud 和 Milvus 在 API 操作方面的差异。 | BYOC"
 type: origin
 token: KOD2wN5jDimhSOk1GshcUbn2nJe
 sidebar_position: 2
@@ -27,7 +30,7 @@ import Admonition from '@theme/Admonition';
 
 如果您计划从 Milvus 迁移到 Zilliz Cloud，可能需要对历史代码进行一些必要的修改。
 
-## 特定场景权限{#scenario-specific-privileges}
+## 特定场景权限\{#scenario-specific-privileges}
 
 <table>
    <tr>

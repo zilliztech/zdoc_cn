@@ -3,6 +3,9 @@ title: "变更 Milvus 集群配置 | On-Premise"
 slug: /modify-milvus-configs
 sidebar_label: "变更 Milvus 集群配置"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Milvus 集群支持在运行过程中对其配置及集群依赖的三方件配置进行变更。本章主要介绍如何变更 Milvus 集群配置和 Milvus 集群依赖的三方件配置。 | On-Premise"
 type: origin
@@ -30,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 Milvus 集群支持在运行过程中对其配置及集群依赖的三方件配置进行变更。本章主要介绍如何变更 Milvus 集群配置和 Milvus 集群依赖的三方件配置。
 
-## 变更集群配置{#modify-milvus-configurations}
+## 变更集群配置\{#modify-milvus-configurations}
 
 Milvus 集群的所有配置都在 `spec.config` 字段中。完整配置可参考 [milvus.yaml](https://github.com/milvus-io/milvus/blob/master/configs/milvus.yaml)。
 
@@ -143,13 +146,13 @@ Milvus 集群的所有配置都在 `spec.config` 字段中。完整配置可参�
 
     当 Pod 的 STATUS 变更为 Running 时，表示变更已生效。
 
-## 变更 Pulsar 配置{#modify-pulsar-configurations}
+## 变更 Pulsar 配置\{#modify-pulsar-configurations}
 
 Milvus 集群依赖的 Pulsar 组件的所有配置都在 `spec.dependencies.pulsar.inCluster.values` 字段中。完整配置可参考 Pulsar Helm Chart 的 [values.yaml](https://github.com/apache/pulsar-helm-chart/blob/master/charts/pulsar/values.yaml) 文件。
 
 具体步骤可参考[变更集群配置](./modify-milvus-configs#modify-milvus-configurations)。
 
-## 变更 etcd 配置{#modify-etcd-configurations}
+## 变更 etcd 配置\{#modify-etcd-configurations}
 
 Milvus 集群依赖的 etcd 组件的所有配置都在 `spec.dependencies.etcd.inCluster.values` 字段中。完整配置可参考 etcd Helm Chart 的 [values.yaml](https://github.com/bitnami/charts/blob/main/bitnami/etcd/values.yaml) 文件。
 

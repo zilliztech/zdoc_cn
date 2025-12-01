@@ -1,13 +1,16 @@
 ---
-title: "连接集群 | Cloud"
+title: "连接集群 | BYOC"
 slug: /connect-to-cluster
 sidebar_label: "连接集群"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "本文介绍如何连接到 Zilliz Cloud 集群。 | Cloud"
+description: "本文介绍如何连接到 Zilliz Cloud 集群。 | BYOC"
 type: origin
 token: HU31wDHCCiN9qIknZ2fcLmconNh
-sidebar_position: 2
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz
@@ -25,13 +28,13 @@ import TabItem from '@theme/TabItem';
 
 本文介绍如何连接到 Zilliz Cloud 集群。
 
-## 开始前{#before-you-start}
+## 开始前\{#before-you-start}
 
 请确保已完成以下步骤：
 
-- 已注册 Zilliz Cloud 账户。详情请参见[注册账号](./register-with-zilliz-cloud)。
+- 已部署 BYOC 项目。更多详情，请[联系我们](https://support.zilliz.com.cn)。
 
-- 已创建集群。详情请参见[创建集群](./create-cluster-on-demand)。
+- 已创建集群。[创建集群](./create-cluster-byoc)。
 
 - 已安装合适版本的 Milvus SDK。详情请参见[安装 SDK](./install-sdks)。
 
@@ -41,15 +44,15 @@ import TabItem from '@theme/TabItem';
 
 </Admonition>
 
-## 连接到集群{#connect-to-a-cluster}
+## 连接到集群\{#connect-to-a-cluster}
 
 集群启动后，通过集群公共 Endpoint 和 Token 连接到集群。
 
-- 公共 Endpoint：您可以通过 Zilliz Cloud web 控制台获取该信息。前往目标集群的**集群详情**页。在**连接信息**卡片上，复制集群的公共 Endpoint。
+- **公共 Endpoint**：您可以通过 Zilliz Cloud web 控制台获取该信息。前往目标集群的**集群详情**页。在**连接信息**卡片上，复制集群的公共 Endpoint。
 
     ![connection-info-cn](/img/connection-info-cn.png)
 
-- **Token：**可以是 [API 密钥](./manage-api-keys)或由用户名和密码组成的[集群凭证](./cluster-credentials)。
+- **Token**：可以是 [API 密钥](./manage-api-keys)或由用户名和密码组成的[集群凭证](./cluster-credentials)。
 
 以下示例展示如何连接至集群。
 
@@ -66,7 +69,7 @@ TOKEN="YOUR_CLUSTER_TOKEN" # Set your token
 # Replace uri and token with your own
 client = MilvusClient(
     uri=CLUSTER_ENDPOINT, # Cluster endpoint obtained from the console
-    token=TOKEN # API key or a colon-separated cluster username and password
+    token=TOKEN # a colon-separated cluster username and password
 )
 ```
 

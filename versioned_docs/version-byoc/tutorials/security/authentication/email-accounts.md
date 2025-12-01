@@ -1,10 +1,13 @@
 ---
-title: "邮箱账号 | Cloud"
+title: "邮箱账号 | BYOC"
 slug: /email-accounts
 sidebar_label: "邮箱账号"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "在 Zilliz Cloud 注册账户后，您可对账户信息进行管理。您可以编辑账号设置以及删除账号。 | Cloud"
+description: "在 Zilliz Cloud 注册账户后，您可对账户信息进行管理。您可以编辑账号设置以及删除账号。 | BYOC"
 type: origin
 token: SVnkw5IkNiOfALkijr1cw91vn3L
 sidebar_position: 1
@@ -25,7 +28,7 @@ import Admonition from '@theme/Admonition';
 
 在 Zilliz Cloud 注册账户后，您可对账户信息进行管理。您可以编辑账号设置以及删除账号。
 
-## 编辑账号个人信息{#modify-your-account-information}
+## 编辑账号个人信息\{#modify-your-account-information}
 
 1. 点击界面右上角人像图标，并选择**账号设置**。
 
@@ -37,7 +40,7 @@ import Admonition from '@theme/Admonition';
 
 ![edit-account-settings](/img/edit-account-settings.png)
 
-## 修改账号邮箱地址{#update-account-email-address}
+## 修改账号邮箱地址\{#update-account-email-address}
 
 ![update_email_address_cn](/img/update_email_address_cn.png)
 
@@ -47,9 +50,9 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 修改手机号码{#update-mobile-phone-number}
+## 修改手机号码\{#update-mobile-phone-number}
 
-![update_mobile_phone_number_cn](/img/update_mobile_phone_number_cn.png)
+undefined
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -57,7 +60,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 更改密码{#change-account-password}
+## 更改密码\{#change-account-password}
 
 ![change_password_cn](/img/change_password_cn.png)
 
@@ -69,11 +72,11 @@ import Admonition from '@theme/Admonition';
 
 - 至少包含一个特殊字符（如 !@#$%^&*）
 
-## 开启或关闭 MFA{#enable-and-disable-mfa}
+## 开启或关闭 MFA\{#enable-and-disable-mfa}
 
 更多详情，请见[管理 MFA](./multi-factor-auth)。
 
-## 关闭账号{#delete-your-account}
+## 关闭账号\{#delete-your-account}
 
 <Admonition type="caution" icon="🚧" title="警告">
 
@@ -81,13 +84,13 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-### 前提条件{#before-you-start}
+### 前提条件\{#before-you-start}
 
-- 如果您是项目唯一的项目管理员且项目含有集群，请先[删除项目集群](./manage-cluster)。
+- 如果您是项目唯一的项目管理员且项目含有集群，请先[删除项目集群](./manage-cluster#drop-cluster)。
 
 - 如果您是组织唯一的组织管理员，请先[删除组织](./organization-settings#delete-organization)。
 
-### 操作步骤{#procedures}
+### 操作步骤\{#procedures}
 
 1. 点击界面右上角人像图标，并选择**账号设置**。
 
@@ -107,7 +110,7 @@ import Admonition from '@theme/Admonition';
 
 ![delete-account-cn](/img/delete-account-cn.png)
 
-## 相关文档{#related-topics}
+## 相关文档\{#related-topics}
 
 - [管理组织设置](./organization-settings)
 

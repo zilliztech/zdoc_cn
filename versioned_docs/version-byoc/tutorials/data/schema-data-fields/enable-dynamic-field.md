@@ -1,13 +1,16 @@
 ---
-title: "Dynamic Field | Cloud"
+title: "Dynamic Field | BYOC"
 slug: /enable-dynamic-field
 sidebar_label: "Dynamic Field"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 允许您通过 dynamic field 的特殊功能插入具有灵活、不断演进 schema 的 entity。此字段实现为名为 `$meta` 的隐藏 JSON 字段，它会自动存储数据中未在 collection schema 中明确定义的字段。 | Cloud"
+description: "Zilliz Cloud 允许您通过 dynamic field 的特殊功能插入具有灵活、不断演进 schema 的 entity。此字段实现为名为 `#meta` 的隐藏 JSON 字段，它会自动存储数据中未在 collection schema 中明确定义的字段。 | BYOC"
 type: origin
 token: C6tVwPqeBiqNCwkbdCcc9dTpnYe
-sidebar_position: 10
+sidebar_position: 13
 keywords: 
   - 向量数据库
   - zilliz
@@ -27,15 +30,15 @@ import TabItem from '@theme/TabItem';
 
 # Dynamic Field
 
-Zilliz Cloud 允许您通过 **dynamic field** 的特殊功能插入具有灵活、不断演进 schema 的 entity。此字段实现为名为 `$meta` 的隐藏 JSON 字段，它会自动存储数据中**未在 collection schema 中明确定义**的字段。
+Zilliz Cloud 允许您通过 **dynamic field** 的特殊功能插入具有灵活、不断演进 schema 的 entity。此字段实现为名为 `#meta` 的隐藏 JSON 字段，它会自动存储数据中**未在 collection schema 中明确定义**的字段。
 
-## 工作原理{#how-it-works}
+## 工作原理\{#how-it-works}
 
-当启用 dynamic field 时，Zilliz Cloud 会为每个 entity 添加一个隐藏的 `$meta` 字段。这个字段是 JSON 类型，意味着它可以存储任何与 JSON 兼容的数据结构，也可以通过 JSON 路径建立索引。
+当启用 dynamic field 时，Zilliz Cloud 会为每个 entity 添加一个隐藏的 `#meta` 字段。这个字段是 JSON 类型，意味着它可以存储任何与 JSON 兼容的数据结构，也可以通过 JSON 路径建立索引。
 
 在数据插入过程中，任何未在 schema 中声明的字段都会自动作为键值对存储在这个 dynamic field 内。
 
-您无需手动管理 `$meta`——Zilliz Cloud 会透明地处理它。
+您无需手动管理 `#meta`——Zilliz Cloud 会透明地处理它。
 
 例如，如果您的 collection schema 只定义了 `id` 和 `vector`，而您插入以下 entity：
 
@@ -73,9 +76,9 @@ Zilliz Cloud 允许您通过 **dynamic field** 的特殊功能插入具有灵活
 
 - 通过特定 dynamic field 键的索引支持灵活过滤
 
-## 支持的数据类型{#supported-data-types}
+## 支持的数据类型\{#supported-data-types}
 
-Dynamic field 支持 Zilliz Cloud 提供的所有标量数据类型，包括简单和复杂值。这些数据类型适用于存储在 `$meta` 中的**键值**。
+Dynamic field 支持 Zilliz Cloud 提供的所有标量数据类型，包括简单和复杂值。这些数据类型适用于存储在 `#meta` 中的**键值**。
 
 **支持的类型包括：**
 
@@ -106,9 +109,9 @@ Dynamic field 支持 Zilliz Cloud 提供的所有标量数据类型，包括简�
 }
 ```
 
-上述每个键和值都将存储在 `$meta` 字段内。
+上述每个键和值都将存储在 `#meta` 字段内。
 
-## 启用 dynamic field{#enable-dynamic-field}
+## 启用 dynamic field\{#enable-dynamic-field}
 
 要使用 dynamic field 功能，请在创建 collection schema 时设置 `enable_dynamic_field=True`：
 
@@ -290,9 +293,9 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 向 collection 插入 entity{#insert-entities-to-the-collection}
+## 向 collection 插入 entity\{#insert-entities-to-the-collection}
 
-Dynamic field 允许您插入 schema 中未定义的额外字段。这些字段将自动存储在 `$meta` 中。
+Dynamic field 允许您插入 schema 中未定义的额外字段。这些字段将自动存储在 `#meta` 中。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
@@ -437,7 +440,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 为 dynamic field 中的键建立索引{#index-keys-in-the-dynamic-field}
+## 为 dynamic field 中的键建立索引\{#index-keys-in-the-dynamic-field}
 
 Zilliz Cloud 允许您使用 **JSON 路径索引**为 dynamic field 内的特定键创建索引。这些可以是标量值或 JSON 对象中的嵌套值。
 
@@ -447,7 +450,7 @@ Zilliz Cloud 允许您使用 **JSON 路径索引**为 dynamic field 内的特定
 
 </Admonition>
 
-### JSON 路径索引语法{#json-path-indexing-syntax}
+### JSON 路径索引语法\{#json-path-indexing-syntax}
 
 要创建 JSON 路径索引，请指定：
 
@@ -459,11 +462,11 @@ Zilliz Cloud 允许您使用 **JSON 路径索引**为 dynamic field 内的特定
 
 - **JSON 转换类型**（`json_cast_type`）：Zilliz Cloud 在解释和索引指定路径处的值时应使用的数据类型。
 
-    - 此类型必须与被索引字段的实际数据类型匹配。如果您想在索引期间将数据类型转换为另一种类型，请考虑[使用转换函数](./use-json-fields#use-json-cast-functions-for-type-conversion)。
+    - 此类型必须与被索引字段的实际数据类型匹配。如果您想在索引期间将数据类型转换为另一种类型，请考虑[使用转换函数](./use-json-fields)。
 
-    - 完整列表请参见[支持的 JSON 转换类型](./use-json-fields#supported-json-cast-types)。
+    - 完整列表请参见[支持的 JSON 转换类型](./use-json-fields)。
 
-### 通过 JSON 路径为 dynamic field 中的键建索引{#use-json-path-to-index-dynamic-field-keys}
+### 通过 JSON 路径为 dynamic field 中的键建索引\{#use-json-path-to-index-dynamic-field-keys}
 
 由于 dynamic field 是一个 JSON 字段，你可以使用 JSON 路径语法来索引其中的任意键。这适用于简单的标量值，也适用于复杂的嵌套结构。
 
@@ -713,7 +716,7 @@ export nestedIndex='{
 </TabItem>
 </Tabs>
 
-### 使用 JSON 转换函数进行类型转换{#use-json-cast-functions-for-type-conversion}
+### 使用 JSON 转换函数进行类型转换\{#use-json-cast-functions-for-type-conversion}
 
 如果 dynamic field 键包含格式不正确的值（例如，以字符串形式存储的数字），您可以使用转换函数进行转换：
 
@@ -807,12 +810,12 @@ export stringPriceIndex='{
 
 <ul>
 <li><p>如果类型转换失败（例如值 <code>"not_a_number"</code> 无法转换为数字），该值将被跳过且不会被索引。</p></li>
-<li><p>有关转换函数参数的详细信息，请参考 <a href="./use-json-fields#use-json-cast-functions-for-type-conversion">JSON 类型</a>。</p></li>
+<li><p>有关转换函数参数的详细信息，请参考 <a href="./use-json-fields">JSON 类型</a>。</p></li>
 </ul>
 
 </Admonition>
 
-### 将索引参数应用到 collection{#apply-indexes-to-the-collection}
+### 将索引参数应用到 collection\{#apply-indexes-to-the-collection}
 
 定义索引参数后，您可以使用 `create_index()` 将它们应用到 collection：
 
@@ -901,7 +904,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 按 dynamic field 键过滤{#filter-by-dynamic-field-keys}
+## 按 dynamic field 键过滤\{#filter-by-dynamic-field-keys}
 
 插入带有 dynamic field 键的 entity 后，您可以使用标准过滤表达式对它们进行过滤。
 
@@ -1116,7 +1119,7 @@ curl --request POST \
 
 有关支持的操作符和过滤表达式的完整列表，请参考 [Filtered Search](./filtered-search)。
 
-## 整体流程{#put-it-all-together}
+## 整体流程\{#put-it-all-together}
 
 到目前为止，您已经学会了如何使用 dynamic field 灵活存储和索引未在 schema 中定义的键。一旦插入了 dynamic field 键，您就可以像使用任何其他字段一样在过滤表达式中使用它——无需特殊语法。
 
@@ -1134,9 +1137,9 @@ curl --request POST \
 
     参考 [Filtered Search](./filtered-search) 和 [JSON 操作符](./json-filtering-operators)
 
-## 常见问题{#faq}
+## 常见问题\{#faq}
 
-### 什么时候应该在 schema 中明确定义字段而不是使用 dynamic field 键？{#when-should-i-define-a-field-explicitly-in-the-schema-instead-of-using-a-dynamic-field-key}
+### 什么时候应该在 schema 中明确定义字段而不是使用 dynamic field 键？\{#when-should-i-define-a-field-explicitly-in-the-schema-instead-of-using-a-dynamic-field-key}
 
 在以下情况下，您应该在 schema 中明确定义字段而不是使用 dynamic field 键：
 
@@ -1148,11 +1151,11 @@ curl --request POST \
 
 - **您希望避免索引不一致**：Dynamic field 键中的数据更容易出现类型或结构不一致。使用固定 schema 有助于确保数据质量，特别是如果您计划使用索引或转换。
 
-### 我可以在同一个 dynamic field 键上使用不同的数据类型创建多个索引吗？{#can-i-create-multiple-indexes-on-the-same-dynamic-field-key-with-different-data-types}
+### 我可以在同一个 dynamic field 键上使用不同的数据类型创建多个索引吗？\{#can-i-create-multiple-indexes-on-the-same-dynamic-field-key-with-different-data-types}
 
 不可以，您**每个 JSON 路径只能创建一个索引**。即使 dynamic field 键包含混合类型值（例如，一些字符串和一些数字），在为该路径建立索引时也必须选择单个 `json_cast_type`。目前不支持在同一键上使用不同类型创建多个索引。
 
-### 为 dynamic field 键建立索引时，如果数据转换失败会怎样？{#when-indexing-a-dynamic-field-key-what-if-the-data-casting-fails}
+### 为 dynamic field 键建立索引时，如果数据转换失败会怎样？\{#when-indexing-a-dynamic-field-key-what-if-the-data-casting-fails}
 
 如果您已为 dynamic field 键创建了索引，但数据转换失败——例如，要转换为 `double` 的值是像 `"abc"` 这样的非数字字符串——这些特定值将在**索引创建期间被静默跳过**。它们不会出现在索引中，因此**不会在依赖索引的基于过滤器的搜索或查询结果中返回**。
 
@@ -1164,6 +1167,6 @@ curl --request POST \
 
 - **谨慎使用转换函数**：如果您使用 `json_cast_function` 在索引期间将字符串转换为数字，请确保字符串值可以可靠地转换。`json_cast_type` 和实际转换类型之间的不匹配将导致错误或跳过的条目。
 
-### 如果我的查询使用与索引转换类型不同的数据类型会怎样？{#what-happens-if-my-query-uses-a-different-data-type-than-the-indexed-cast-type}
+### 如果我的查询使用与索引转换类型不同的数据类型会怎样？\{#what-happens-if-my-query-uses-a-different-data-type-than-the-indexed-cast-type}
 
 如果您的查询使用与索引中使用的**不同数据类型**比较 dynamic field 键（例如，当索引转换为 `double` 时使用字符串比较进行查询），系统将**不会使用索引**，并且只有在可能的情况下才会回退到全扫描。为了获得最佳性能和准确性，请确保您的查询类型与索引创建期间使用的 `json_cast_type` 匹配。 

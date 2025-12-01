@@ -3,11 +3,14 @@ title: "创建私网连接 | Cloud"
 slug: /setup-a-private-link
 sidebar_label: "创建私网连接"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 允许您通过私网连接（PrivateLink）访问您的集群。如果您不希望通过公众互联网访问您位于 Zilliz Cloud 上的集群， 可以按照本章的步骤为您的集群创建私网连接。 | Cloud"
 type: origin
 token: JLHPwhdssifn2dkR5lDcA4SWnVg
-sidebar_position: 2
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz
@@ -25,7 +28,7 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 允许您通过私网连接（PrivateLink）访问您的集群。如果您不希望通过公众互联网访问您位于 Zilliz Cloud 上的集群， 可以按照本章的步骤为您的集群创建私网连接。
 
-## 配置思路{#configuration-principle}
+## 配置思路\{#configuration-principle}
 
 ![KnY9wUjpahtUHDbr9iDcbozrnqe](/img/KnY9wUjpahtUHDbr9iDcbozrnqe.png)
 

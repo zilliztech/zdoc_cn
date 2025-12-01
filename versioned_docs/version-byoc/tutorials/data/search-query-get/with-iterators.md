@@ -1,13 +1,16 @@
 ---
-title: "Search Iterator | Cloud"
+title: "Search Iterator | BYOC"
 slug: /with-iterators
 sidebar_label: "Search Iterator"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "ANN Search 单次召回的 Entity 有最大数量限制，单纯使用基本 ANN Search 可能无法应对大规模召回的需求。对于 topK 大于 16,384 的 ANN Search 请求，可以考虑使用 Search Iterator。本节将介绍如何使用 Search Iterator 以及与相关的注意事项。 | Cloud"
+description: "ANN Search 单次召回的 Entity 有最大数量限制，单纯使用基本 ANN Search 可能无法应对大规模召回的需求。对于 topK 大于 16,384 的 ANN Search 请求，可以考虑使用 Search Iterator。本节将介绍如何使用 Search Iterator 以及与相关的注意事项。 | BYOC"
 type: origin
 token: GsLqwoJK6iZgfZkyNMscbpzmn5l
-sidebar_position: 12
+sidebar_position: 13
 keywords: 
   - 向量数据库
   - zilliz
@@ -28,7 +31,7 @@ import TabItem from '@theme/TabItem';
 
 ANN Search 单次召回的 Entity 有最大数量限制，单纯使用基本 ANN Search 可能无法应对大规模召回的需求。对于 topK 大于 16,384 的 ANN Search 请求，可以考虑使用 Search Iterator。本节将介绍如何使用 Search Iterator 以及与相关的注意事项。
 
-## 概述{#overview}
+## 概述\{#overview}
 
 与 Search 操作直接返回搜索结果不同，Search Iterator 返回一个迭代器。你可以通过循环调用迭代器提供的 `next()` 方法来分页获取搜索结果。
 
@@ -40,17 +43,17 @@ ANN Search 单次召回的 Entity 有最大数量限制，单纯使用基本 ANN
 
 1. 当 `next()` 方法返回的结果为空时，调用迭代器的 `close()` 方法销毁迭代器。
 
-## 创建 Search Iterator{#create-search-iterator}
+## 创建 Search Iterator\{#create-search-iterator}
 
 如下代码演示了如何创建一个 Search Iterator。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
-from pymilvus import connections, Collection
+from pymilvus import MilvusClient
 
-connections.connect(
+client = MilvusClient(
     uri="YOUR_CLUSTER_ENDPOINT",
     token="YOUR_CLUSTER_TOKEN"
 )
@@ -59,12 +62,11 @@ connections.connect(
 query_vectors = [
     [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592]]
 
-collection = Collection("iterator_collection")
-
-iterator = collection.search_iterator(
+iterator = client.search_iterator(
+    collection_name="iterator_collection"
     data=query_vectors,
     anns_field="vector",
-    param={"metric_type": "L2", "params": {"nprobe": 16}},
+    search_param={"metric_type": "L2", "params": {"nprobe": 16}},
     # highlight-next-line
     batch_size=50,
     output_fields=["color"],
@@ -104,22 +106,96 @@ SearchIterator searchIterator = client.searchIterator(SearchIteratorReq.builder(
 ```
 
 </TabItem>
+
+<TabItem value='go'>
+
+```go
+import (
+    "context"
+    "errors"
+    "fmt"
+    "io"
+    "log"
+    "strings"
+    "time"
+
+    "golang.org/x/exp/rand"
+
+    "github.com/milvus-io/milvus/client/v2/entity"
+    "github.com/milvus-io/milvus/client/v2/index"
+    "github.com/milvus-io/milvus/client/v2/milvusclient"
+)
+
+c, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+    Address: milvusAddr,
+    APIKey:  "YOUR_CLUSTER_TOKEN",
+})
+
+vec := []float32{0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592}
+iter, err := c.SearchIterator(ctx, milvusclient.NewSearchIteratorOption(collectionName, entity.FloatVector(vec)).
+    WithANNSField("vector").
+    WithAnnParam(index.NewIvfAnnParam(16)).
+    WithBatchSize(50).
+    WithOutputFields("color").
+    WithIteratorLimit(20000))
+if err != nil {
+    // handle error
+}
+
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+import { MilvusClient } from '@zilliz/milvus2-sdk-node';
+
+const milvusClient = new MilvusClient({
+  address: 'YOUR_CLUSTER_ENDPOINT',
+  token: 'YOUR_CLUSTER_TOKEN',
+});
+
+const queryVectors = [
+[0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592],
+];
+const collectionName = 'iterator_collection';
+
+const iterator = milvusClient.searchIterator({
+    collection_name: collectionName,
+    vectors: queryVectors,
+    anns_field: 'vector',
+    params: { metric_type: 'L2', params: { nprobe: 16 } },
+    batch_size: 50,
+    output_fields: ['color'],
+    limit: 20000,
+});
+
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
 </Tabs>
 
 上述示例代码设置了单页召回数量（**batch_size**/**batchSize**）为 50，topK（**limit**/**topK**） 为 20,000。
 
 关于在创建迭代器时可以使用的参数，可以参考
 
-## 调用 `next()` 方法获取搜索结果{#use-search-iterator}
+## 调用 `next()` 方法获取搜索结果\{#use-search-iterator}
 
 在创建好迭代器后，可以参考如下示例代码循环调用 `next()` 方法获取搜索结果。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
-results = []
-
 while True:
     # highlight-next-line
     result = iterator.next()
@@ -128,8 +204,8 @@ while True:
         iterator.close()
         break
     
-    for hit in result:
-        results.append(hit.to_dict())
+    for res in result:
+        print(res)
 ```
 
 </TabItem>
@@ -150,6 +226,42 @@ while (true) {
         System.out.println(record);
     }
 }
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+for {
+    rs, err := iter.Next(ctx)
+    // end of iterator
+    if errors.Is(err, io.EOF) {
+        break
+    }
+    if err != nil {
+        // handler error
+    }
+    fmt.Println(rs)
+}
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+for await (const result of iterator) {
+    console.log(result);
+}
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
 ```
 
 </TabItem>

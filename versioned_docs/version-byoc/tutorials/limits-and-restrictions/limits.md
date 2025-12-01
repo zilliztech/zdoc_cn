@@ -1,10 +1,13 @@
 ---
-title: "使用限制 | Cloud"
+title: "使用限制 | BYOC"
 slug: /limits
 sidebar_label: "使用限制"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "本文介绍了 Zilliz Cloud 平台和集群的使用限制信息。如需了解更多限制信息，可向我们提交请求。 | Cloud"
+description: "本文介绍了 Zilliz Cloud 平台和集群的使用限制信息。如需了解更多限制信息，您可以使用 Zilliz Cloud 提供的 OPS 系统对大多数设置进行调整。如需更多帮助，可联系我们。 | BYOC"
 type: origin
 token: A8UFwSbMniMl6IkpJkNc4HsHnLc
 sidebar_position: 1
@@ -22,9 +25,9 @@ import Admonition from '@theme/Admonition';
 
 # 使用限制
 
-本文介绍了 Zilliz Cloud 平台和集群的使用限制信息。如需了解更多限制信息，可向我们[提交请求](https://support.zilliz.com.cn/hc/zh-cn)。
+本文介绍了 Zilliz Cloud 平台和集群的使用限制信息。如需了解更多限制信息，您可以使用 Zilliz Cloud 提供的 OPS 系统对大多数设置进行调整。如需更多帮助，可[联系我们](https://support.zilliz.com.cn/hc/zh-cn)。
 
-## 组织、项目和成员{#organizations-projects-and-members}
+## 组织、项目和成员\{#organizations-projects-and-members}
 
 下表展示了单个用户可加入的最大组织和项目数。
 
@@ -35,178 +38,13 @@ import Admonition from '@theme/Admonition';
      <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><p>组织</p></td>
-     <td><p>1</p></td>
-     <td><p>Zilliz Cloud 账号注册成功后，系统会自动创建 1 个组织。如需更多组织，请<a href="https://support.zilliz.com.cn/hc/zh-cn">提交工单</a>。</p><p>1 名用户可以加入多个组织。</p></td>
-   </tr>
-   <tr>
      <td><p>项目</p></td>
      <td><p>100</p></td>
      <td><p>每个用户在每个组织中最多可以创建 100 个项目。</p></td>
    </tr>
 </table>
 
-## 用户与角色{#users-and-roles}
-
-下表展示了 Zilliz Cloud 中用用户与角色的数量限制。
-
-<table>
-   <tr>
-     <th><p><strong>内容</strong></p></th>
-     <th><p><strong>最大数量</strong></p></th>
-     <th><p><strong>描述</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>组织用户</p></td>
-     <td><p>100</p></td>
-     <td><p>每个组织中最多可容纳 100 名组织用户。</p></td>
-   </tr>
-   <tr>
-     <td><p>集群用户</p></td>
-     <td><p>100</p></td>
-     <td><p>每个集群中最多可容纳 100 名集群用户。</p></td>
-   </tr>
-   <tr>
-     <td><p>集群自定义角色</p></td>
-     <td><p>20</p></td>
-     <td><p>每个集群中最多可创建 20 个自定义角色。如需取消此限制，请<a href="http://support.zilliz.com.cn">联系我们</a>。</p></td>
-   </tr>
-</table>
-
-## API 密钥{#api-keys}
-
-<table>
-   <tr>
-     <th><p><strong>内容</strong></p></th>
-     <th><p><strong>最大数量</strong></p></th>
-     <th><p><strong>描述</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>API 密钥</p></td>
-     <td><p>100</p></td>
-     <td><p>每个组织中可创建最多 100 个自定义 API 密钥。</p></td>
-   </tr>
-</table>
-
-## 集群{#clusters}
-
-### 集群数量{#clusters}
-
-集群数量的限制取决于您的支付方式和订阅版本。
-
-- **未绑定有效支付方式**
-
-    <table>
-       <tr>
-         <th><p><strong>集群版本</strong></p></th>
-         <th><p><strong>最大数量</strong></p></th>
-         <th><p><strong>描述</strong></p></th>
-       </tr>
-       <tr>
-         <td><p>Free</p></td>
-         <td><p>1</p></td>
-         <td><p>不论是否绑定有效支付方式，最多只可创建一个 Free 版集群。如需创建新的 Free 版集群，请先删除现有的 Free 集群。</p></td>
-       </tr>
-       <tr>
-         <td><p>Serverless 或 Dedicated</p></td>
-         <td><p>1</p></td>
-         <td><p>未绑定有效支付方式，最多可免费试用一个付费集群。如需更多付费集群，请添加支付方式。</p></td>
-       </tr>
-    </table>
-
-- **已绑定有效支付方式**
-
-    <table>
-       <tr>
-         <th><p><strong>集群版本</strong></p></th>
-         <th><p><strong>最大数量</strong></p></th>
-         <th><p><strong>描述</strong></p></th>
-       </tr>
-       <tr>
-         <td><p>Free</p></td>
-         <td><p>1</p></td>
-         <td><p>不论是否绑定有效支付方式，最多只可创建一个 Free 版集群。如需创建新的 Free 版集群，请先删除现有的 Free 集群。</p></td>
-       </tr>
-       <tr>
-         <td><p>Serverless</p></td>
-         <td><p>无</p></td>
-         <td><p>无</p></td>
-       </tr>
-       <tr>
-         <td><p>Dedicated</p></td>
-         <td><p>CU 规格总和 &lt; 320</p></td>
-         <td><p>每个组织中的 Dedicated 集群数量上线取决于集群的 CU 规格。组织中所有集群的 CU 规格总和不得超过 320 CU。</p></td>
-       </tr>
-    </table>
-
-### CU{#cus}
-
-计算单元（CU）是指用于提供向量检索、分析服务的一组硬件资源。CU 提供了并行数据处理的基础计算资源，不同类型的 CU 结合了各异的 CPU、内存和存储配置。CU 的概念仅针对 Dedicated 集群。
-
-<table>
-   <tr>
-     <th><p><strong>集群版本</strong></p></th>
-     <th><p><strong>限制</strong></p></th>
-     <th><p><strong>描述</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>Dedicated</p></td>
-     <td><p>CU 规格 * Replica 数量 &lt;=256</p></td>
-     <td><p>在自助操作时，单个集群最多使用 256 个 CU。如果创建了 Replica，CU 规格与 Replica 数量的乘积不得超过 256。</p></td>
-   </tr>
-</table>
-
-如需创建超过 256 个 CU 规格的集群，请[联系我们](https://zilliz.com.cn/contact-sales?firstname=xushuang&lastname=hu&company=Zilliz&name=Zilliz&email=xushuang.hu@zilliz.com&fullname=hu%20xushuang&phone=--&country=)。
-
-### vCU{#vcus}
-
-vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、upsert、delete）所消耗资源的基本单位。vCU 的概念仅针对 Free 和 Serverless 集群。
-
-<table>
-   <tr>
-     <th><p><strong>集群版本</strong></p></th>
-     <th><p><strong>限制</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>Free</p></td>
-     <td><p>每月 250 万 vCU</p></td>
-   </tr>
-   <tr>
-     <td><p>Serverless</p></td>
-     <td><p>无</p></td>
-   </tr>
-</table>
-
-### 容量{#capacity}
-
-<table>
-   <tr>
-     <th><p><strong>集群版本</strong></p></th>
-     <th><p><strong>限制</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>Free</p></td>
-     <td><p>每个集群 5 GB（相当于每个集群可容纳 100 万个 768 维向量）。</p></td>
-   </tr>
-   <tr>
-     <td><p>Serverless</p></td>
-     <td><p>每个 Partition 可容纳 1 亿个 768 维向量。</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated</p></td>
-     <td><p>Zilliz Cloud Dedicated 集群无硬性容量限制。以下为不同 CU 类型的 Dedicated 集群容量参考。如需更大容量，您可以扩容集群。详情请参考<a href="./scale-cluster">集群扩缩容</a>。</p><ul><li><p>性能型 CU：每个 CU 可容纳 150 万个768 维向量。</p></li><li><p>容量型 CU：每个 CU 可容纳 500 万个768 维向量。</p></li><li><p>存储扩展型 CU：每个 CU 可容纳 2000 万个768 维向量</p></li></ul></td>
-   </tr>
-</table>
-
-## Database{#databases}
-
-- 仅 Dedicated 集群支持创建 Database。
-
-- 每个 Dedicated 集群中最多可创建 1024 个 Database。
-
-- 默认的 Default Database 不可删除。
-
-## Replica{#replicas}
+## Replica\{#replicas}
 
 如需添加 Replica，集群规格需要为 **8 CU 或以上**。此外，Replica 功能还具有以下限制
 
@@ -228,9 +66,9 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
    </tr>
 </table>
 
-## Collection{#collections}
+## Collection\{#collections}
 
-### 兼容 Milvus v2.4.x 的集群{#clusters-compatible-with-milvus-v24x}
+### 兼容 Milvus v2.4.x 的集群\{#clusters-compatible-with-milvus-v24x}
 
 根据您的集群使用的 CU 数量的不同，每 CU 支持创建最多 256 个 Collection 或 1,024 个 Partition。其中，每个 Collection 最多可创建 1,024 个 Partition。每个 Collection 支持创建最多 1,024 个 Partition。 您可以参考如下公式计算您的集群中的 Collection 和 Partition 的数量上限。
 
@@ -242,87 +80,73 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
 
 - 上述条件需同时满足。
 
-### 兼容 Milvus v2.5.x 的集群{#clusters-compatible-with-milvus-v25x}
+### 兼容 Milvus v2.5.x 的集群\{#clusters-compatible-with-milvus-v25x}
 
-根据您的集群使用的 CU 数量的不同，每 CU 支持创建最多 1,024 个 Collection 或 4,096 个 Partition。其中，每个 Collection 最多可创建 1,024 个 Partition。每个 Collection 支持创建最多 1,024 个 Partition。 您可以参考如下公式计算您的集群中的 Collection 和 Partition 的数量上限。
+根据您的集群使用的 CU 数量的不同，每 CU 支持创建最多 1,024 个 Collection 或 4,096 个 Partition。其中，每个 Collection 最多可创建 1,024 个 Partition。您可以参考如下公式计算您的集群中的 Collection 和 Partition 的数量上限。
 
-![ITn3wC8InhchVGbcz4QciSXqnag](/img/ITn3wC8InhchVGbcz4QciSXqnag.png)
+![RBu3wbDwihqeFgbFZwQcIpXNnUf](/img/RBu3wbDwihqeFgbFZwQcIpXNnUf.png)
 
 - 集群中 Collection 的数量上限应该在 1,024 和集群的 CU 数量之积与 16,384 间取最小值。
 
-- 集群中所有 Collection 中的 Partition 的总数量应该在 4,096 和集群的 CU 数量之和与 65,536 间取最小值。
+- 集群中所有 Collection 中的 Partition 的总数量应该在 4,096 和集群的 CU 数量之积与 65,536 间取最小值。
 
 - 上述条件需同时满足。
 
-### 字段{#fields}
+### 字段\{#fields}
 
 <table>
    <tr>
      <th><p><strong>内容</strong></p></th>
      <th><p><strong>最大数量</strong></p></th>
-     <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
      <td><p>所有字段（每个 Collection）</p></td>
      <td><p>64</p></td>
-     <td><p>N/A</p></td>
    </tr>
    <tr>
      <td><p>向量字段（每个 Collection）</p></td>
-     <td><p>4</p></td>
-     <td><p>即将支持多向量功能，敬请期待。</p></td>
+     <td><p>10</p></td>
    </tr>
 </table>
 
 关于字段的其他限制：
 
-- 任何字段类型都不支持空值。
-
 - 某些字段（如 VarChar 或 JSON）使用的内存超出预期，可能导致集群空间耗尽。
 
-### 向量维度{#dimensions}
+### 向量维度\{#dimensions}
 
 向量字段的最大维度数为 32768。
 
-### Shard{#shards}
+### Shard\{#shards}
 
-Shard 的数量上限取决于集群版本和 CU 规格。
+Shard 的数量上限取决于 CU 规格。
 
 <table>
    <tr>
-     <th colspan="2"><p><strong>集群版本和 CU 规格</strong></p></th>
-     <th><p><strong>数量上限</strong></p></th>
+     <th><p>CU 规格</p></th>
+     <th><p>数量上限</p></th>
    </tr>
    <tr>
-     <td colspan="2"><p>Free</p></td>
+     <td><p>1 - 2 CU</p></td>
      <td><p>2</p></td>
    </tr>
    <tr>
-     <td colspan="2"><p>Serverless</p></td>
-     <td><p>2</p></td>
-   </tr>
-   <tr>
-     <td rowspan="4"><p>Dedicated</p></td>
-     <td><p>1-2 CU</p></td>
-     <td><p>2</p></td>
-   </tr>
-   <tr>
-     <td><p>4-8 CU</p></td>
+     <td><p>4 - 8 CU</p></td>
      <td><p>4</p></td>
    </tr>
    <tr>
-     <td><p>12-64 CU</p></td>
+     <td><p>12 - 64 CU</p></td>
      <td><p>8</p></td>
    </tr>
    <tr>
-     <td><blockquote>  <p>64 CU</p></blockquote></td>
+     <td><p>> 64 CU</p></td>
      <td><p>16</p></td>
    </tr>
 </table>
 
-### 速率限制{#rate-limit}
+### 速率限制\{#rate-limit}
 
-此外，Zilliz Cloud 针对 Serverless 和 Dedicated 集群中的 Collection 操作（包括创建、加载、释放、删除）还具有速率限制。
+此外，Zilliz Cloud 针对 Serverless 和 Dedicated 集群中的 Collection 和 Partition 操作（包括创建、加载、释放、删除）还具有速率限制。
 
 <table>
    <tr>
@@ -331,15 +155,19 @@ Shard 的数量上限取决于集群版本和 CU 规格。
    </tr>
    <tr>
      <td><p>Collection 操作（创建、加载、释放、删除）</p></td>
-     <td><p>每个集群 5 req/s。</p></td>
+     <td><p>每个集群 20 req/s。</p></td>
+   </tr>
+   <tr>
+     <td><p>Partition 操作（创建、加载、释放、删除）</p></td>
+     <td><p>每个集群 20 req/s。</p></td>
    </tr>
 </table>
 
-## 数据操作{#operations}
+## 数据操作\{#operations}
 
 下文将介绍 Zilliz Cloud 集群中常见数据操作的速率限制。
 
-### Insert{#insert}
+### Insert\{#insert}
 
 每个插入请求/响应的大小不应超过 64 MB。
 
@@ -351,39 +179,35 @@ Shard 的数量上限取决于集群版本和 CU 规格。
      <th><p><strong>Insert 最大速率限制</strong></p></th>
    </tr>
    <tr>
-     <td><p>Free 版集群</p></td>
-     <td><p>2 MB/s</p></td>
+     <td></td>
+     <td><p>s</p></td>
    </tr>
    <tr>
-     <td><p>Serverless 版集群</p></td>
-     <td><p>10 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群 1-2 CU</p></td>
+     <td><p>1-2 CU</p></td>
      <td><p>8 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群 4-8 CU</p></td>
+     <td><p>4-8 CU</p></td>
      <td><p>12 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群 12-20 CU</p></td>
+     <td><p>12-20 CU</p></td>
      <td><p>16 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群 [24 CU, 64 CU)</p></td>
+     <td><p>[24 CU, 64 CU)</p></td>
      <td><p>24 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群 [64CU, 128 CU)</p></td>
+     <td><p>[64CU, 128 CU)</p></td>
      <td><p>36 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群 [128 CU, 256 CU)</p></td>
+     <td><p>[128 CU, 256 CU)</p></td>
      <td><p>48 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群 &gt;= 256 CU</p></td>
+     <td><blockquote>  <p>= 256 CU</p></blockquote></td>
      <td><p>64 MB/s</p></td>
    </tr>
 </table>
@@ -392,7 +216,7 @@ Shard 的数量上限取决于集群版本和 CU 规格。
 
 为了使插入的数据能够立即被检索到，建议将搜索或查询请求中的一致性级别更改为 **Strong**。详细信息，请参阅[一致性水平](./consistency-level)。
 
-### Upsert{#upsert}
+### Upsert\{#upsert}
 
 每个 Upsert 请求/响应的大小不应超过 64 MB。
 
@@ -404,39 +228,31 @@ Shard 的数量上限取决于集群版本和 CU 规格。
      <th><p>Upsert 最大速率限制</p></th>
    </tr>
    <tr>
-     <td><p>Free 版集群</p></td>
-     <td><p>2 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Serverless 版集群</p></td>
-     <td><p>10 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群 1-2 CU</p></td>
+     <td><p>1-2 CU</p></td>
      <td><p>8 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群 4-8 CU</p></td>
+     <td><p>4-8 CU</p></td>
      <td><p>12 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群 12-20 CU</p></td>
+     <td><p>12-20 CU</p></td>
      <td><p>16 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群 [24 CU, 64 CU)</p></td>
+     <td><p>[24 CU, 64 CU)</p></td>
      <td><p>24 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群 [64CU, 128 CU)</p></td>
+     <td><p>[64CU, 128 CU)</p></td>
      <td><p>36 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群 [128 CU, 256 CU)</p></td>
+     <td><p>[128 CU, 256 CU)</p></td>
      <td><p>48 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群 &gt;= 256 CU</p></td>
+     <td><blockquote>  <p>= 256 CU</p></blockquote></td>
      <td><p>64 MB/s</p></td>
    </tr>
 </table>
@@ -445,7 +261,7 @@ Shard 的数量上限取决于集群版本和 CU 规格。
 
 为了使 Upsert 的数据能够立即被检索到，建议将搜索或查询请求中的一致性级别更改为 **Strong**。详细信息，请参阅[一致性水平](./consistency-level)。
 
-### Index{#index}
+### Index\{#index}
 
 不同字段类型对应不同类型的索引。以下表格列出了可索引的字段类型及其对应的索引类型。
 
@@ -477,7 +293,7 @@ Shard 的数量上限取决于集群版本和 CU 规格。
    </tr>
 </table>
 
-### Flush{#flush}
+### Flush\{#flush}
 
 每个集群的 Flush 请求速率限制为每秒 0.1 个请求，该限制具体适用于以下集群类型：
 
@@ -491,9 +307,9 @@ Shard 的数量上限取决于集群版本和 CU 规格。
 
 </Admonition>
 
-### Load{#load}
+### Load\{#load}
 
-每个集群的加载请求速率限制为每秒 **5** 个请求。
+每个集群的加载请求速率限制为每秒 **20** 个请求。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -501,80 +317,49 @@ Shard 的数量上限取决于集群版本和 CU 规格。
 
 </Admonition>
 
-### Search{#search}
+### Search\{#search}
 
 每个搜索请求/响应的大小不应超过 **64** MB。
 
-根据集群版本，每个搜索请求携带的查询向量（**nq**）上限有所不同：
+根据集群部署方式，每个搜索请求携带的查询向量（**nq**）上限有所不同最多不超过 16,384 个。
 
-- Free 和 Serverless 集群：**nq** 不超过 **10**
+根据集群部署方式，每个搜索响应返回的 Entity 数量（**topK**）上限有所不同最多不超过 16,384 个。
 
-- Dedicated 集群：**nq** 不超过 **16384**
-
-根据集群版本，每个搜索响应返回的 Entity 数量（**topK**）上限有所不同：
-
-- Free 和 Serverless 集群：**topK** 不超过 **1024**
-
-- Dedicated 集群：**topK** 不超过 **16384**
-
-### Query{#query}
+### Query\{#query}
 
 每个查询请求/响应的大小不应超过 **64** MB。
 
 每个查询响应返回的 Entity 数量（**topK**）不超过 **16384** 个。
 
-### Delete Entity{#delete}
+### Delete Entity\{#delete}
 
 每个删除请求/响应的大小不应超过 **64** MB。
 
 每个集群的删除请求速率限制为每秒 **0.5** MB。
 
-### Drop Collection{#drop}
+### Drop Collection\{#drop}
 
-每个集群的删除请求速率限制为每秒 **5** 个请求。
+每个集群的删除请求速率限制为每秒 **20** 个请求。
 
-### Data Import{#data-import}
+### Data Import\{#data-import}
 
-单 Collection 支持最多 **10** 个正在运行或待运行的数据导入任务。
+单 Collection 支持最多 **10,000** 个正在运行或待运行的数据导入任务。
 
 此外，Zilliz Cloud 还对导入的文件大小有以下限制。
 
-<table>
-   <tr>
-     <th><p>文件类型</p></th>
-     <th><p>本地导入</p></th>
-     <th><p>对象存储导入</p></th>
-   </tr>
-   <tr>
-     <td><p>JSON</p></td>
-     <td><p>1 GB</p></td>
-     <td><p>Free: 512 MB</p><p>Serverless &amp; Dedicated: 1 TB</p></td>
-   </tr>
-   <tr>
-     <td><p>Numpy</p></td>
-     <td><p>暂不支持</p></td>
-     <td><p>Free: 512 MB</p><p>Serverless &amp; Dedicated: 文件夹的最大大小为 1 TB，每个子文件夹的最大大小为 10 GB。</p></td>
-   </tr>
-   <tr>
-     <td><p>Parquet</p></td>
-     <td><p>暂不支持</p></td>
-     <td><p>Free: 512 MB</p><p>Serverless &amp; Dedicated: 1 TB</p></td>
-   </tr>
-</table>
-
 请参阅[支持的对象存储](./data-import-storage-options)和[支持的数据格式](./data-import-format-options)了解更多。
 
-## 数据备份（控制台）{#backup-on-console}
+## 数据备份（控制台）\{#backup-on-console}
 
 手动创建的备份会永久保留。
 
 自动创建的备份可最多保存 30 天。
 
-## 数据恢复（控制台）{#restore-on-console}
+## 数据恢复（控制台）\{#restore-on-console}
 
 您可以从快照中恢复 Zilliz Cloud 集群。恢复的集群和原集群应属于同一地域，并使用相同的 CU 类型。
 
-## IP 白名单{#ip-access-list}
+## IP 白名单\{#ip-access-list}
 
 <table>
    <tr>
@@ -584,99 +369,12 @@ Shard 的数量上限取决于集群版本和 CU 规格。
    </tr>
    <tr>
      <td><p>IP 地址 (CIDR)</p></td>
-     <td><p>20</p></td>
-     <td><p>IP 白名单中最多可添加 20 个 IP 地址。</p></td>
-   </tr>
-</table>
-
-## Pipeline | NEAR DEPRECATE{#pipelines}
-
-### Pipeline{#number-of-pipelines}
-
-下表展示了项目中不同类型的 Pipeline 的相关限制。
-
-<table>
-   <tr>
-     <th><p><strong>Pipeline 类型</strong></p></th>
-     <th><p><strong>最大数量（每个项目）</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>Ingestion Pipeline</p></td>
      <td><p>100</p></td>
-   </tr>
-   <tr>
-     <td><p>Deletion Pipeline</p></td>
-     <td><p>100</p></td>
-   </tr>
-   <tr>
-     <td><p>Search Pipeline</p></td>
-     <td><p>100</p></td>
+     <td><p>IP 白名单中最多可添加 100 个 IP 地址。</p></td>
    </tr>
 </table>
 
-### Ingestion{#ingestion}
+## 迁移\{#migrations}
 
-下表展示了每个 Embedding 模型可自定义的切片大小范围。
-
-<table>
-   <tr>
-     <th><p><strong>Embedding 模型</strong></p></th>
-     <th><p><strong>切片大小范围 (Tokens）</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>zilliz/bge-base-en-v1.5</p></td>
-     <td><p>20-500</p></td>
-   </tr>
-   <tr>
-     <td><p>zilliz/bge-base-zh-v1.5</p></td>
-     <td><p>20-500</p></td>
-   </tr>
-</table>
-
-下表展示了 Ingestion Pipeline 的 PRESERVE Function 生成的元数据字段限制。
-
-<table>
-   <tr>
-     <th></th>
-     <th><p><strong>最大数量</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>元数据字段</p></td>
-     <td><p>50</p></td>
-   </tr>
-   <tr>
-     <td><p>字符串类型字段的最大长度</p></td>
-     <td><p>4,000</p></td>
-   </tr>
-</table>
-
-下表展示了每次运行 Ingestion Pipeline 时切片数量限制。
-
-<table>
-   <tr>
-     <th><p><strong>Embedding 模型</strong></p></th>
-     <th><p><strong>每次运行 Ingestion 的最大切片数量</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>zilliz/bge-base-en-v1.5</p></td>
-     <td><p>3,500</p></td>
-   </tr>
-   <tr>
-     <td><p>zilliz/bge-base-zh-v1.5</p></td>
-     <td><p>3,500</p></td>
-   </tr>
-</table>
-
-### Pipelines 用量{#pipelines-usage}
-
-<table>
-   <tr>
-     <th></th>
-     <th><p><strong>用量上限</strong></p></th>
-   </tr>
-   <tr>
-     <td><p>每个组织</p></td>
-     <td><p>¥140/月</p></td>
-   </tr>
-</table>
+您可以将数据从其他供应商迁移到您的 Zilliz Cloud 集群，每次迁移的最大集合数量会因您的 Zilliz Cloud 集群而异。每次迁移最多可以迁移 **10** 个 Collection。
 

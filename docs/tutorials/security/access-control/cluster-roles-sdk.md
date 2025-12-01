@@ -3,6 +3,9 @@ title: "管理集群角色（SDK） | Cloud"
 slug: /cluster-roles-sdk
 sidebar_label: "管理集群角色（SDK）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "集群角色定义了用户在集群内的权限。具体而言，集群角色控制集群用户在集群、Database 和 Collection 层级的权限。 | Cloud"
 type: origin
@@ -36,7 +39,7 @@ import TabItem from '@theme/TabItem';
 
 </Admonition>
 
-## 创建角色{#create-a-role}
+## 创建角色\{#create-a-role}
 
 以下示例展示了如何创建一个角色 `role_a`。
 
@@ -95,7 +98,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 查看所有角色{#list-roles}
+## 查看所有角色\{#list-roles}
 
 在创建了多个角色后，您可以查看所有已创建的角色列表。
 
@@ -149,7 +152,7 @@ curl --request POST \
 ['role_a']
 ```
 
-## 为角色分配内置权限组{#grant-a-built-in-privilege-group-to-a-role}
+## 为角色分配内置权限组\{#grant-a-built-in-privilege-group-to-a-role}
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -271,7 +274,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 查看角色权限{#describe-a-role}
+## 查看角色权限\{#describe-a-role}
 
 以下示例展示如何查看角色 `role_a` 的权限。
 
@@ -347,7 +350,7 @@ curl --request POST \
 }
 ```
 
-## 撤销为角色分配的内置权限组{#revoke-a-built-in-privilege-group-from-a-role}
+## 撤销为角色分配的内置权限组\{#revoke-a-built-in-privilege-group-from-a-role}
 
 以下示例展示了如何撤销已分配给角色 `role_a` 的内置权限组 `COLL_ADMIN`。
 
@@ -443,7 +446,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 删除角色{#drop-a-role}
+## 删除角色\{#drop-a-role}
 
 以下示例展示了如何删除角色 `role_a`。
 
