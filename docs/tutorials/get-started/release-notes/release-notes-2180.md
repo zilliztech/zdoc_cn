@@ -57,7 +57,7 @@ Stage 提供了一个托管式、云原生的数据暂存区域，专为处理�
 
 在本次初始发布版本（内测版）中，用户可以：
 
-- 通过 RESTful API 管理 Stage，包括[创建](/reference/restful/create-stage-v2)、[查看列表](/reference/restful/list-stages-v2)和[删除](/reference/restful/delete-stage-v2) Stage；
+- 通过 RESTful API 管理 Stage，包括[创建](/reference/restful/create-volume-v2)、[查看列表](/reference/restful/list-volumes-v2)和[删除](/reference/restful/delete-volume-v2) Stage；
 
 - 将 Stage 作为迁移（Migration）与导入（Import）服务共享的数据中转层，简化数据接入流程：
 

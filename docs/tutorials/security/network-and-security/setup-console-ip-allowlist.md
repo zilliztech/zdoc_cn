@@ -24,6 +24,8 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Supademo from '@site/src/components/Supademo';
+
 # 设置控制台 IP 白名单
 
 默认情况下，组织用户可以从任意 IP 地址访问组织 Web 控制台。为限制访问并提升安全性，您可以为 Web 控制台配置 IP 白名单。配置后用户只能从指定的 IP 地址访问控制台，例如公司网络的 IP 地址。
@@ -60,7 +62,7 @@ import Admonition from '@theme/Admonition';
 
 以下 Demo 展示如何将 IP 地址添加到控制台 IP 白名单中。
 
- 【Supademo】
+<Supademo id="cmin14al802xyx20i2xtxddqf?utm_source=link" title=""  />
 
 ## 查看 IP 地址\{#view-ip-address}
 
@@ -68,7 +70,7 @@ import Admonition from '@theme/Admonition';
 
 以下 Demo 展示如何查看控制台 IP 白名单中的 IP 地址。
 
- 【Supademo】
+![UYusbiBkUolCwoxMgVAcqzpBnHg](/img/UYusbiBkUolCwoxMgVAcqzpBnHg.png)
 
 ## 删除 IP 地址\{#delete-ip-address}
 
@@ -77,7 +79,8 @@ import Admonition from '@theme/Admonition';
 如果删除白名单中所有地址，则开放控制台访问，用户可以从任意 IP 地址访问组织 Web 控制台。
 
 以下 Demo 展示如何从控制台 IP 白名单中删除 IP 地址。
- 【Supademo】
+
+<Supademo id="cmin1k7zi00011n0i5c3bc7qj?utm_source=link" title=""  />
 
 ## 常见问题\{#faqs}
 
@@ -99,9 +102,9 @@ import Admonition from '@theme/Admonition';
 
     白名单更新通常适用于新的登录会话。已登录会话会持续到会话过期或用户主动退出。如需立即生效，请要求组织用户退出登录并重新登录。
 
-1. **SSO 或 MFA 会绕过控制台 IP 白名单吗？**
+1. **MFA 会绕过控制台 IP 白名单吗？**
 
-    不会。[SSO](./single-sign-on)、[MFA](./multi-factor-auth) 与组织控制台 IP 白名单是相互独立的控制项。
+    不会。[MFA](./multi-factor-auth) 与组织控制台 IP 白名单是相互独立的控制项。
 
 1. **组织控制台 IP 白名单会影响集群访问吗？**
 

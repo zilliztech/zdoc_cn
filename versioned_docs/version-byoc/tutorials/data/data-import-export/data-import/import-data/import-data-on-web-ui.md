@@ -81,14 +81,6 @@ Zilliz Cloud 支持上传本地 JSON 或 Parquet 文件。如果您的数据格�
 
 <Supademo id="cme9ujdvy023mz40hswufsrd8?utm_source=link" title=""  />
 
-### 导入存储在 Volume 中的文件\{#files-uploaded-to-a-volume}
-
-如果您的本地文件大小超过 1 GB，您可以先将其上传到 [Volume](./manage-stages) 中，然后通过 Volume 导入数据。
-
-上传准备好的文件到 Volume 后，您只需选择相应的 Volume，并填写文件所在路径。
-
-<Supademo id="cmimi9sf2gidjb7b4q3lph3k8?utm_source=link" title=""  />
-
 ## 结果验证\{#verify-the-result}
 
 单击**导入**后，Zilliz Cloud 会生成一条导入任务。您可以前往[任务中心](./view-activities)查看导入进度及任务详情。

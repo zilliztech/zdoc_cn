@@ -7,7 +7,7 @@ added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
 notebook: FALSE
-description: "最近更新：2025 年 11 月 6 日 | Cloud"
+description: "最近更新：2025 年 12 月 1 日 | Cloud"
 type: origin
 token: JziCwn071iCV1tkX4NZcwGSDnmc
 sidebar_position: 13
@@ -27,7 +27,7 @@ import Grid from '@site/src/components/Grid';
 
 # 变更日志
 
-**最近更新**：2025 年 11 月 6 日
+**最近更新**：2025 年 12 月 1 日
 
 <Grid columnSize="2" widthRatios="25,74">
 
@@ -59,11 +59,11 @@ import Grid from '@site/src/components/Grid';
 
     <div>
 
-        - 🔥 Milvus v2.6.x 功能特性全面可用
+        - 🔥 Milvus v2.6.x 功能特性全面可用（GA）
 
-        - 👏  分层存储能力全面可用并[开始计费](./storage-cost#example-4-cluster-cold-data-access-cost)
+        - 👏  分层存储能力正式发布（GA）并[开始计费](./storage-cost#example-4-cluster-cold-data-access-cost)
 
-        - 😘  Stage 功能正式更名为 [Volume](./volume-explained)，并全面可用
+        - 😘  Stage 功能正式更名为 [Volume](./volume-explained)，并全面可用（GA）
 
         - [🔔  组织级别的 IP 白名单](./setup-console-ip-allowlist)能力，丰富您的访问控制方式
 
