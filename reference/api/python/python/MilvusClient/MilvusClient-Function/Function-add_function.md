@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "add_function() | Python | MilvusClient"
 slug: /python/python/Function-add_function
 sidebar_label: "add_function()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation adds a function to convert raw data into vector representations. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: XhcVd1JXvoAgUfxSEpQcL2H6nVg
 sidebar_position: 1
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
   - zilliz
   - zilliz cloud
   - cloud
   - add_function()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

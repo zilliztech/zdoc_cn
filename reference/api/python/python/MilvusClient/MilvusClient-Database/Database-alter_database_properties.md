@@ -3,22 +3,25 @@ displayed_sidbar: pythonSidebar
 title: "alter_database_properties() | Python | MilvusClient"
 slug: /python/python/Database-alter_database_properties
 sidebar_label: "alter_database_properties()"
+added_since: v2.5.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation modifies the properties of the specified database. | Python | MilvusClient"
 type: docx
-token: GUv5dxYOZocdURx1qGlc9I8Cn5g
+token: HCWBdorQdoONw2xaawacJWQkn1e
 sidebar_position: 1
 keywords: 
-  - Zilliz database
-  - Unstructured Data
-  - vector database
-  - IVF
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - knn algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - alter_database_properties()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

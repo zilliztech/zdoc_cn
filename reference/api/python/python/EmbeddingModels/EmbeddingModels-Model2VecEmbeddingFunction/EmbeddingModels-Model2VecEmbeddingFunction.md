@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "Model2VecEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-Model2VecEmbeddingFunction
 sidebar_label: "Model2VecEmbeddingFunction"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "Model2VecEmbeddingFunction is a class in pymilvus that handles encoding text into embeddings using the model2vec module to support embedding retrieval in Milvus. | Python"
@@ -10,15 +13,15 @@ type: docx
 token: WiT4dJ1SJod0fdx4z23cwFbAn7c
 sidebar_position: 3
 keywords: 
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
   - zilliz
   - zilliz cloud
   - cloud
   - Model2VecEmbeddingFunction
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

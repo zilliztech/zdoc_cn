@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "alterIndexProperties() | Node.js"
 slug: /node/node/Management-alterIndexProperties
 sidebar_label: "alterIndexProperties()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation modifies the settings of specific index properties. | Node.js"
@@ -10,15 +13,15 @@ type: docx
 token: PcQcdDwthoSEZaxI6GncpUpGnBh
 sidebar_position: 1
 keywords: 
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - IVF
   - zilliz
   - zilliz cloud
   - cloud
   - alterIndexProperties()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

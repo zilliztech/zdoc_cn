@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "removeUserFromRole() | Node.js"
 slug: /node/node/Authentication-removeUserFromRole
 sidebar_label: "removeUserFromRole()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation removes a user from a specific role. | Node.js"
 type: docx
 token: XmyMdqvDLosr6oxzvhWcw8H2ntg
-sidebar_position: 21
+sidebar_position: 23
 keywords: 
-  - cosine distance
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
+  - knn
+  - Image Search
+  - LLMs
+  - Machine Learning
   - zilliz
   - zilliz cloud
   - cloud
   - removeUserFromRole()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

@@ -3,12 +3,15 @@ displayed_sidbar: nodeSidebar
 title: "revokePrivilegeV2() | Node.js"
 slug: /node/node/Authentication-revokePrivilegeV2
 sidebar_label: "revokePrivilegeV2()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation revokes a privilege already assigned to a role. | Node.js"
 type: docx
 token: UlAUdLNkCo1Mp8xFZYWclSL9n6b
-sidebar_position: 24
+sidebar_position: 26
 keywords: 
   - Natural language search
   - Similarity Search
@@ -18,7 +21,7 @@ keywords:
   - zilliz cloud
   - cloud
   - revokePrivilegeV2()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

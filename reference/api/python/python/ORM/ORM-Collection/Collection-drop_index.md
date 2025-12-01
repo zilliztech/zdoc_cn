@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "drop_index() | Python | ORM"
 slug: /python/python/Collection-drop_index
 sidebar_label: "drop_index()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation deletes index from the current collection. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: AtkDdtMAWodFzExARxnco5xLnsg
 sidebar_position: 9
 keywords: 
-  - Vector index
-  - vector database open source
-  - open source vector db
-  - vector database example
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
   - zilliz
   - zilliz cloud
   - cloud
   - drop_index()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

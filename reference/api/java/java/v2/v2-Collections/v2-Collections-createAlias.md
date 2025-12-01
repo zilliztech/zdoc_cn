@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "createAlias() | Java | v2"
 slug: /java/java/v2-Collections-createAlias
 sidebar_label: "createAlias()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates an alias for an existing collection. | Java | v2"
 type: docx
-token: NMAOdxhL1oo0E7xcFqXcF6yPnBg
+token: MQxvdwd7QoUu5zxyHTjc0MUKnhe
 sidebar_position: 6
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
+  - Embedding model
   - zilliz
   - zilliz cloud
   - cloud
   - createAlias()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -39,6 +42,7 @@ public void createAlias(CreateAliasReq request)
 ```java
 createAlias(CreateAliasReq.builder()
     .alias(String alias)
+    .databaseName(String databaseName)
     .collectionName(String collectionName)
     .build()
 )
@@ -67,6 +71,10 @@ createAlias(CreateAliasReq.builder()
     </ul>
 
     </Admonition>
+
+- `databaseName(String databaseName)`
+
+    The name of the database to which the target collection belongs.
 
 - `collectionName(String collectionName)`
 
@@ -99,7 +107,8 @@ MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
 // 2. Create an alias "test_alias" for collection "test"
 CreateAliasReq createAliasReq = CreateAliasReq.builder()
-        .collectionName("test")
+        .databaseName("my_database")
+        .collectionName("my_collection")
         .alias("test_alias")
         .build();
 client.createAlias(createAliasReq);

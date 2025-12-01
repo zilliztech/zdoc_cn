@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "IndexParam | Java | v2"
 slug: /java/java/v2-Management-IndexParam
 sidebar_label: "IndexParam"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation prepares index parameters to build indexes for a specific collection. | Java | v2"
 type: docx
 token: FUNwdQQqAon41YxMWiIcHIBmned
-sidebar_position: 7
+sidebar_position: 10
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
-  - nn search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
   - zilliz
   - zilliz cloud
   - cloud
   - IndexParam
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -56,11 +59,11 @@ IndexParam.builder()
 
     The name of the index field generated after this **IndexParam** object has been applied.
 
-- `indexType(IndexParam.IndexType indexType)`
+- `indexType(IndexParam.[IndexType](./v2-Management-IndexType) indexType)`
 
     The name of the algorithm used to arrange data in the specific field. On Zilliz Cloud, the index type is always **AUTOINDEX**. For details, refer to [AUTOINDEX Explained](/docs/autoindex-explained).
 
-- `metricType(IndexParam.MetricType metricType)`
+- `metricType(IndexParam.[MetricType](./v2-Management-MetricType) metricType)`
 
     The algorithm that is used to measure similarity between vectors. Possible values: `IP`, `L2`, `COSINE`, `HAMMING`, `JACCARD`, `BM25` (used only for full text search). For more information, refer to [Metric Types](https://milvus.io/docs/metric.md).
 

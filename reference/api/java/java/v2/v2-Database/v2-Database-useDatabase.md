@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "useDatabase() | Java | v2"
 slug: /java/java/v2-Database-useDatabase
 sidebar_label: "useDatabase()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation changes the database in use. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: LAJHdQKQQoPjmYxcfQgcvjvLnqh
 sidebar_position: 7
 keywords: 
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
+  - Unstructured Data
+  - vector database
+  - IVF
+  - knn
   - zilliz
   - zilliz cloud
   - cloud
   - useDatabase()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

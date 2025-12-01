@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "getImportProgress() | Java | v2"
 slug: /java/java/v2-BulkImport-getImportProgress
 sidebar_label: "getImportProgress()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation gets the progress of the specified bulk-import job. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: EjnFdC5EfoIkoExSBOxcEC2hnbg
 sidebar_position: 3
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud
   - getImportProgress()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -50,7 +53,7 @@ bulkImport.getImportProgress(
     Zilliz Cloud's Control Plane API endpoint. The endpoint URL should be in the following format:
 
     ```python
-    https://api.cloud.zilliz.com
+    https://api.cloud.zilliz.com.cn
     # https://api.cloud.zilliz.com.cn 
     ```
 

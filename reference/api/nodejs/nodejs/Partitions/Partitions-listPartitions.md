@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "listPartitions() | Node.js"
 slug: /node/node/Partitions-listPartitions
 sidebar_label: "listPartitions()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the partitions in a specified collection. | Node.js"
 type: docx
-token: JNPwdFI1zoleD7x9LRIc0eqcnof
+token: IvnLd6nXooRR6NxM9jdcDxCHnhh
 sidebar_position: 5
 keywords: 
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
   - zilliz
   - zilliz cloud
   - cloud
   - listPartitions()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---
@@ -40,7 +43,8 @@ listPartitions(data): Promise<ShowPartitionsResponse>
 milvusClient.listPartitions({
     db_name: string,
     collection_name: string,
-    timeout?: number
+    timeout?: number,
+    type?: ShowPartitionsType
  })
 ```
 
@@ -59,6 +63,18 @@ milvusClient.listPartitions({
 - **timeout** (*number*)  
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
+
+- **type** (*ShowPartitionsType*) - 
+
+    Determines whether to list all partitions or only the loaded ones. A **ShowPartitionsType** has the following values:
+
+    - **All** = 0
+
+        Indicates that all partitions are to be listed.
+
+    - **Loaded** = 1
+
+        Indicates that only the loaded partitions are to be listed.
 
 **RETURNS** *Promise\<ShowPartitionsResponse>*
 

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "get_connection_addr() | Python | ORM"
 slug: /python/python/Connections-get_connection_addr
 sidebar_label: "get_connection_addr()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation retrieves the configuration of the specified connection by alias. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: H2zBdRHVtovNQGxvb0xcwpSKnBd
 sidebar_position: 5
 keywords: 
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
   - zilliz
   - zilliz cloud
   - cloud
   - get_connection_addr()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---
@@ -66,7 +69,7 @@ from pymilvus import connections
 connections.get_connection_addr(alias="default")
 
 # Output
-# {'address': 'in03-**************.api.gcp-us-west1.cloud-uat3.zilliz.com:443', 'user': ''}
+# {'address': 'in03-**************.api.ali-cn-hangzhou'}
 ```
 
 ## Related operations

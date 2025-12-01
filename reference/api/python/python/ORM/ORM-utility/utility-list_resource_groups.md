@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_resource_groups() | Python | ORM"
 slug: /python/python/utility-list_resource_groups
 sidebar_label: "list_resource_groups()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists all resource groups in the currently connected Zilliz Cloud cluster. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: FXTZd5FgNo9ta0xvjaIclEM1nPf
 sidebar_position: 26
 keywords: 
-  - Faiss
-  - Video search
-  - AI Hallucination
-  - AI Agent
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
   - zilliz
   - zilliz cloud
   - cloud
   - list_resource_groups()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_aliases() | Python | ORM"
 slug: /python/python/utility-list_aliases
 sidebar_label: "list_aliases()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists all existing aliases for a specific collection. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: XBwxdP96Go8ITyx7UuNcL7EonPd
 sidebar_position: 22
 keywords: 
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud
   - list_aliases()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

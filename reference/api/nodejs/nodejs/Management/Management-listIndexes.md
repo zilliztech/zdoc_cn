@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "listIndexes() | Node.js"
 slug: /node/node/Management-listIndexes
 sidebar_label: "listIndexes()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the indexes of a specific collection | Node.js"
 type: docx
 token: N1fldMqhtoWBJPxh8VccivqxnZd
-sidebar_position: 13
+sidebar_position: 16
 keywords: 
-  - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
   - zilliz
   - zilliz cloud
   - cloud
   - listIndexes()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "alterDatabaseProperties() | Node.js"
 slug: /node/node/Database-alterDatabaseProperties
 sidebar_label: "alterDatabaseProperties()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation modifies the properties of the specified database. | Node.js"
@@ -10,15 +13,15 @@ type: docx
 token: NNWed9Vd1o7vDkxY4pncM4wYnaf
 sidebar_position: 7
 keywords: 
-  - Vector embeddings
-  - Vector store
-  - open source vector database
-  - Vector index
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
   - zilliz
   - zilliz cloud
   - cloud
   - alterDatabaseProperties()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---
@@ -45,7 +48,8 @@ alterDatabaseProperties(data): Promise<ResStatus>
 ```javascript
 milvusClient.alterDatabaseProperties({
     db_name: string,
-    delete_properties: Object,
+    delete_keys: Object,
+    properties: Record<string, string | number | boolean>
     timeout?: number
 })
 ```
@@ -61,6 +65,34 @@ milvusClient.alterDatabaseProperties({
 - **delete_properties** (*string[]*) -
 
     Names of the properties to drop in an array. Possible database properties are as follows:
+
+    - **database.replica.number** (*int*) -
+
+        Number of replicas for the database.
+
+    - **database.resource_groups** (*[]str*) -
+
+        Resource groups dedicated to the database.
+
+    - **database.diskQuota.mb** (*int*) -
+
+        Disk quota allocated to the database in megabytes (**MB**).
+
+    - **database.max.collections** (*int*) -
+
+        Maximum number of collections allowed in the database.
+
+    - **database.force.deny.writing** (*bool*) -
+
+        Whether to deny all write operations in the database.
+
+    - **database.force.deny.reading** (*bool*) -
+
+        Whether to deny all read operations in the database.
+
+- **properties** (*Record\<string, string | number | boolean>*) -
+
+    Properties and their values in key-value pairs.
 
     - **database.replica.number** (*int*) -
 

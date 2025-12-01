@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "describeIndex() | Java | v2"
 slug: /java/java/v2-Management-describeIndex
 sidebar_label: "describeIndex()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation describes a specific index. | Java | v2"
 type: docx
-token: JBBldcrAHoYZ2mxMGeocZHMAnze
-sidebar_position: 3
+token: Lp8AdBebwoF7bLx7Q8Jc3Qz0nF9
+sidebar_position: 4
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud
   - describeIndex()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -38,23 +41,19 @@ public DescribeIndexResp describeIndex(DescribeIndexReq request)
 
 ```java
 describeIndex(DescribeIndexReq.builder()
-    .databaseName(String databaseName)
     .collectionName(String collectionName)
     .fieldName(String fieldName)
     .indexName(String indexName)
+    .timestamp(Long timestamp)
     .build()
 )
 ```
 
 **BUILDER METHODS:**
 
-- `databaseName(String databaseName)`
-
-    The name of an existing database.
-
 - `collectionName(String collectionName)`
 
-    The name of an existing collection in the above-specified collection.
+    The name of an existing collection.
 
     Setting this to a non-existing collection results in **MilvusException**.
 
@@ -67,6 +66,10 @@ describeIndex(DescribeIndexReq.builder()
     The name of the index to describe.
 
     Setting this to a non-existing collection results in **MilvusException**.
+
+- `timestamp(Long timestamp)`
+
+    A timestamp, the segments generated before which will be checked before this operation returns. The value defaults to `0L`, indicating that all segments generated till now will be checked.
 
 **RETURN TYPE:** 
 

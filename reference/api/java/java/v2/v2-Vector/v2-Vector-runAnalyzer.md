@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "runAnalyzer() | Java | v2"
 slug: /java/java/v2-Vector-runAnalyzer
 sidebar_label: "runAnalyzer()"
+added_since: v2.6.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation processes the input data and generates tokenized output. | Java | v2"
 type: docx
-token: HwoNd8f9Toy4n9xOn0QcJPcgnhX
+token: S2RfdHUQro7atExpfJBc6FPfnZe
 sidebar_position: 10
 keywords: 
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
   - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
   - zilliz
   - zilliz cloud
   - cloud
   - runAnalyzer()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -67,6 +70,22 @@ runAnalyzer(RunAnalyzerReq.builder()
 - `withHash(Boolean withHash)`
 
     An optional flag indicating whether to include hash-based processing.
+
+- `databaseName(String databaseName)`
+
+    The name of the target database. The value defaults to an empty string, indicating the default database.
+
+- `collectionName(String collectionName)`
+
+    The name of the target collection in the above-specified database.
+
+- `fieldName(String fieldName)`
+
+    The name of the target field in the above-specified collection.
+
+- `analyzerNames(List<String> analyzerNames)`
+
+    The names of the analyzers to be used.
 
 **RETURN TYPE:**
 

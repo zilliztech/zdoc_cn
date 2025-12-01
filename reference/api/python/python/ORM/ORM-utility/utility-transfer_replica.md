@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "transfer_replica() | Python | ORM"
 slug: /python/python/utility-transfer_replica
 sidebar_label: "transfer_replica()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation transfers a specific number of replicas between resource groups. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: SuePdciB0o4du5xtpIhcMVyYnPb
 sidebar_position: 40
 keywords: 
-  - vector similarity search
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
+  - knn
+  - Image Search
+  - LLMs
+  - Machine Learning
   - zilliz
   - zilliz cloud
   - cloud
   - transfer_replica()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

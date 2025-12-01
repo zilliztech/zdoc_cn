@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "is_exist() | Python | ORM"
 slug: /python/python/Role-is_exist
 sidebar_label: "is_exist()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation checks whether the current role exists. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: F8WOdIoz4okn5OxMEymcXNuRnkb
 sidebar_position: 6
 keywords: 
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
+  - Machine Learning
+  - RAG
+  - NLP
+  - Neural Network
   - zilliz
   - zilliz cloud
   - cloud
   - is_exist()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

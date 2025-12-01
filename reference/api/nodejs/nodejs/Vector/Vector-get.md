@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "get() | Node.js"
 slug: /node/node/Vector-get
 sidebar_label: "get()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation gets specific entities by their IDs. | Node.js"
 type: docx
 token: IbxXdvdZlonJk9xnlk2cZlIinCh
-sidebar_position: 2
+sidebar_position: 3
 keywords: 
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
-  - open source vector database
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
   - zilliz
   - zilliz cloud
   - cloud
   - get()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

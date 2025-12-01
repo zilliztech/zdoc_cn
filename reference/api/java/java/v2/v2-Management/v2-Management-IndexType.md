@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "IndexType | Java | v2"
 slug: /java/java/v2-Management-IndexType
 sidebar_label: "IndexType"
+added_since: v2.3.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Java | v2"
 type: docx
-token: EATSdak5wokQhCx6k3tcCoAqn3P
-sidebar_position: 8
+token: SVbSdttVjoTGJrxdLiIcr9VLnPg
+sidebar_position: 11
 keywords: 
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
   - zilliz
   - zilliz cloud
   - cloud
   - IndexType
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -31,10 +34,6 @@ import Admonition from '@theme/Admonition';
 This is an enumeration that provides the following constants.
 
 ## Constants
-
-- INVALID
-
-    Sets the index type to **INVALID**.
 
 - FLAT(1)
 
@@ -55,6 +54,18 @@ This is an enumeration that provides the following constants.
 - HNSW(5)
 
     Sets the index type to **HNSW**.
+
+- HNSW_SQ(6)
+
+    Sets the index type to **HNSW**.
+
+- HNSW_PQ
+
+    Sets the index type to **HNSW_PQ**.
+
+- HNSW_PRQ
+
+    Sets the index type to **HNSW_PRQ**.
 
 - DISKANN(10)
 
@@ -92,6 +103,34 @@ This is an enumeration that provides the following constants.
 
     Sets the index type to **BIN_IVF_FLAT**. This applies to binary vectors only.
 
+- MINHASH_LSH(82)
+
+    Sets the index type to **MINHASH_LSH**. This applies to binary vectors only.
+
+- TRIE("Trie", 100)
+
+    Sets the index type to **TRIE**. This applies to VarChar fields only.
+
+- NGRAM(101)
+
+    Sets the index type to **NGRAM**. This applies to VarChar fields and JSON Path indexes.
+
+- RTREE(120)
+
+    Sets the index type to **RTREE**. This applies to geometry fields only.
+
+- STL_SORT(200)
+
+    Sets the index type to **SLT_SORT**. This applies to fields of numeric types only.
+
+- INVERTED(201)
+
+    Sets the index type to **INVERTED**. This applies to all scalar fields except JSON fields.
+
+- BITMAP(202)
+
+    Sets the index type to **BITMAP**. This applies to all scalar fields except JSON, FLOAT, and DOUBLE fields.
+
 - SPARSE_INVERTED_INDEX
 
     Sets the index type to **SPARSE_INVERTED_INDEX**. This applies to sparse vectors only.
@@ -100,15 +139,7 @@ This is an enumeration that provides the following constants.
 
     Sets the index type to **SPARSE_WAND**. This applies to sparse vectors only.
 
-- TRIE("Trie", 100)
+- EMB_LIST_HNSW
 
-    Sets the index type to **TRIE**. This applies to VarChar scalar fields only.
-
-- STL_SORT(200)
-
-    Sets the index type to **STL_SORT**. This applies to scalar fields only.
-
-- INVERTED(201)
-
-     Sets the index type to **INVERTED**. This applies to all scalar fields except JSON type fields.
+    Sets the index type to **EMB_LIST_HNSW**. This applies to an Array of Structs field.
 

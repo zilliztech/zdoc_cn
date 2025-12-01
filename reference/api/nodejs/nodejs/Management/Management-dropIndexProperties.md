@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "dropIndexProperties() | Node.js"
 slug: /node/node/Management-dropIndexProperties
 sidebar_label: "dropIndexProperties()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation resets the index properties to their default values. | Node.js"
 type: docx
 token: Acvxd7t9poXj6nxb0vMco0wsngh
-sidebar_position: 5
+sidebar_position: 6
 keywords: 
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud
   - dropIndexProperties()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

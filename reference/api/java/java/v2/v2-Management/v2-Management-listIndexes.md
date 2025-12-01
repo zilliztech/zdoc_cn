@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "listIndexes() | Java | v2"
 slug: /java/java/v2-Management-listIndexes
 sidebar_label: "listIndexes()"
+added_since: v2.4.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the indexes of a field in a specific collection. | Java | v2"
 type: docx
-token: OyWwdNBG1o2pTQxNDD1cLHcTnwc
-sidebar_position: 9
+token: LxwIdeFiGoYaRAxKS72cdjNkneh
+sidebar_position: 12
 keywords: 
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
   - zilliz
   - zilliz cloud
   - cloud
   - listIndexes()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -38,6 +41,7 @@ public List<String> listIndexes(ListIndexesReq request)
 
 ```java
 listIndexes(ListIndexesReq.builder()
+    .databaseName(String databaseName)
     .collectionName(String collectionName)
     .fieldName(String fieldName)
     .build()
@@ -45,6 +49,10 @@ listIndexes(ListIndexesReq.builder()
 ```
 
 **BUILDER METHODS:**
+
+- `databaseName(String databaseName)`
+
+    The name of the database to which the target collection belongs.
 
 - `collectionName(String collectionName)`
 

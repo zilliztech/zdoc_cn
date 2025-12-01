@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "listGrant() | Node.js"
 slug: /node/node/Authentication-listGrant
 sidebar_label: "listGrant()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the privileges granted to the specified role. | Node.js"
 type: docx
 token: HSIDdxQGEoPdyaxkMDjcAWGQnpd
-sidebar_position: 15
+sidebar_position: 17
 keywords: 
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
-  - Embedding model
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - listGrant()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

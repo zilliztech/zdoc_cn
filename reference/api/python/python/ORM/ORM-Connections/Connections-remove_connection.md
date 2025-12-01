@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "remove_connection() | Python | ORM"
 slug: /python/python/Connections-remove_connection
 sidebar_label: "remove_connection()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation removes the connection from the registry by the given alias and disconnects if connected. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: L4KSdOVTEotaiyxjTddcVRDhn3E
 sidebar_position: 8
 keywords: 
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud
   - remove_connection()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

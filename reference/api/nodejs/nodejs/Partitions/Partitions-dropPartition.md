@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "dropPartition() | Node.js"
 slug: /node/node/Partitions-dropPartition
 sidebar_label: "dropPartition()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a specified partition from the current collection. | Node.js"
@@ -10,15 +13,15 @@ type: docx
 token: BBmsddqZEozxWyxkoADcFfzpncW
 sidebar_position: 2
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - rag vector database
   - zilliz
   - zilliz cloud
   - cloud
   - dropPartition()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

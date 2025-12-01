@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "listUsers() | Java | v2"
 slug: /java/java/v2-Authentication-listUsers
 sidebar_label: "listUsers()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the names of all existing users. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: EfM3drSXlo4Yzyxq2GpcmvoHnTm
 sidebar_position: 15
 keywords: 
-  - milvus vector database
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
   - zilliz
   - zilliz cloud
   - cloud
   - listUsers()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

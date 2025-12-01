@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "dropIndex() | Java | v2"
 slug: /java/java/v2-Management-dropIndex
 sidebar_label: "dropIndex()"
+added_since: v2.3.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops an index from a specific collection. | Java | v2"
 type: docx
-token: KdFEdP8ZToYvZ1xmmQgcE62unUf
-sidebar_position: 4
+token: XHyydLsEAoPwB2xNhcwc9KBwn7g
+sidebar_position: 5
 keywords: 
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - AI Hallucination
   - zilliz
   - zilliz cloud
   - cloud
   - dropIndex()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -38,6 +41,7 @@ public void dropIndex(DropIndexReq request)
 
 ```java
 dropIndex(DropIndexReq.builder()
+    .databaseName(String databaseName)
     .collectionName(String collectionName)
     .fieldName(String fieldName)
     .indexName(String indexName)
@@ -46,6 +50,10 @@ dropIndex(DropIndexReq.builder()
 ```
 
 **BUILDER METHODS:**
+
+- `databaseName(String databaseName)`
+
+    The name of the database to which the target collection belongs.
 
 - `collectionName(String collectionName)`
 

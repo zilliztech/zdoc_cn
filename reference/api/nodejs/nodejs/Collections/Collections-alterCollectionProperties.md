@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "alterCollectionProperties() | Node.js"
 slug: /node/node/Collections-alterCollectionProperties
 sidebar_label: "alterCollectionProperties()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation modifies the properties of a specified collection. | Node.js"
@@ -10,15 +13,15 @@ type: docx
 token: EHPGdbCP5o7UzCxlDnRc6y5Pn1c
 sidebar_position: 3
 keywords: 
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - open source vector database
   - zilliz
   - zilliz cloud
   - cloud
   - alterCollectionProperties()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---
@@ -40,6 +43,7 @@ alterCollectionProperties(data): Promise<ResStatus>
 milvusClient.alterCollectionProperties({
    db_name?: string
    collection_name: string,
+   delete_keys?: string[],
    properties: Properties,
    timeout?: number
  })
@@ -56,6 +60,10 @@ milvusClient.alterCollectionProperties({
     **[REQUIRED]**
 
     The name of the target collection to reassign an alias to.
+
+- **delete_keys** (*string[]*) -
+
+    The properties to delete.
 
 - **properties** (*Properties*) -
 

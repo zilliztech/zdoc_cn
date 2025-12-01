@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "getIndexState() | Node.js"
 slug: /node/node/Management-getIndexState
 sidebar_label: "getIndexState()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation gets the status of the specified index. | Node.js"
 type: docx
 token: HqE5d2jOroEuObxIjkZcHkX4nWX
-sidebar_position: 10
+sidebar_position: 12
 keywords: 
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
   - zilliz
   - zilliz cloud
   - cloud
   - getIndexState()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

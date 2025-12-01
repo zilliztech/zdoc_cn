@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "dropAllRoles() | Node.js"
 slug: /node/node/Authentication-dropAllRoles
 sidebar_label: "dropAllRoles()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops all roles in Milvus. | Node.js"
 type: docx
 token: E5rYdw3EWo2WKZxEyGac049an3e
-sidebar_position: 9
+sidebar_position: 11
 keywords: 
-  - milvus vector database
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
   - zilliz
   - zilliz cloud
   - cloud
   - dropAllRoles()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

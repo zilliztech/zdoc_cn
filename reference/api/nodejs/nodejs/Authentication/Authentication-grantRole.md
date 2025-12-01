@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "grantRole() | Node.js"
 slug: /node/node/Authentication-grantRole
 sidebar_label: "grantRole()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation grants a role to a user. | Node.js"
 type: docx
 token: LPJsdEnvwo6apcxjhZgc3rpDnuc
-sidebar_position: 14
+sidebar_position: 16
 keywords: 
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
   - zilliz
   - zilliz cloud
   - cloud
   - grantRole()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

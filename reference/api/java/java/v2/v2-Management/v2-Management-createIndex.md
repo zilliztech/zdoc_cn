@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "createIndex() | Java | v2"
 slug: /java/java/v2-Management-createIndex
 sidebar_label: "createIndex()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates an index for a specific collection. | Java | v2"
 type: docx
-token: OCjUdfc6eo0VihxNUGmcqb7FnTh
-sidebar_position: 2
+token: YXPSdlp3JoP82qxhFMYc5GRnn4g
+sidebar_position: 3
 keywords: 
-  - RAG
-  - NLP
-  - Neural Network
-  - Deep Learning
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
   - zilliz
   - zilliz cloud
   - cloud
   - createIndex()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -40,6 +43,7 @@ public void createIndex(CreateIndexReq request)
 createIndex(CreateIndexReq.builder()
     .collectionName(String collectionName)
     .indexParams(List<IndexParam> indexParams)
+    .sync(Boolean sync)
     .build()
 )
 ```
@@ -50,9 +54,13 @@ createIndex(CreateIndexReq.builder()
 
     The name of an existing collection.
 
-- `indexParams(List<IndexParam> indexParams)`
+- `indexParams(List<[IndexParam](./v2-Management-IndexParam)> indexParams)`
 
     A list of **IndexParam** objects.
+
+- `sync(Boolean sync)`
+
+    Whether the current operation is synchronous. The default value is `True`.
 
 **RETURNS:**
 

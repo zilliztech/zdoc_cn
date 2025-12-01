@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "add_field() | Python | ORM"
 slug: /python/python/CollectionSchema-add_field
 sidebar_label: "add_field()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation adds a field to the schema of a collection. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: H9IFdpWWUouzXOxKlx9cImP8nnd
 sidebar_position: 1
 keywords: 
-  - milvus vector db
-  - Zilliz Cloud
-  - what is milvus
-  - milvus database
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud
   - add_field()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---
@@ -207,18 +210,3 @@ schema.add_field(
 #     ]
 # }
 ```
-
-## Related operations
-
-The following operations are related to `add_field()`:
-
-- [FieldSchema](./ORM-FieldSchema)
-
-- [DataType](./Collections-DataType)
-
-- [construct_from_dict()](./CollectionSchema-construct_from_dict)
-
-- [to_dict()](./CollectionSchema-to_dict)
-
-- [verify()](./CollectionSchema-verify)
-

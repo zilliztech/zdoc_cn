@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "addUserToRole() | Node.js"
 slug: /node/node/Authentication-addUserToRole
 sidebar_label: "addUserToRole()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation adds a user to a specific role. | Node.js"
@@ -10,15 +13,15 @@ type: docx
 token: Qc72dTKgroNdHjxIG2xcwNdmnHb
 sidebar_position: 2
 keywords: 
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud
   - addUserToRole()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

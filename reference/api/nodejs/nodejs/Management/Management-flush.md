@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "flush() | Node.js"
 slug: /node/node/Management-flush
 sidebar_label: "flush()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation manually seals a segment and persists the data on disk. It is recommended that this operation be called after all the data has been inserted into a collection. | Node.js"
 type: docx
 token: E2XJd4ZHvoc7QlxyrEJcrOJOn9f
-sidebar_position: 6
+sidebar_position: 7
 keywords: 
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
+  - Machine Learning
+  - RAG
+  - NLP
+  - Neural Network
   - zilliz
   - zilliz cloud
   - cloud
   - flush()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

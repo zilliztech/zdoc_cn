@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_connections() | Python | ORM"
 slug: /python/python/Connections-list_connections
 sidebar_label: "list_connections()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation returns a list of all connection names and handler objects. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: DyPldeRNXo4nMqxQeE0cMnd2nEf
 sidebar_position: 7
 keywords: 
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud
   - list_connections()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---
@@ -58,7 +61,7 @@ None
 from pymilvus import connections
 
 connections.connect(
-    uri='https://in01-**************.aws-us-west-2.vectordb-uat3.zillizcloud.com:19531',
+    uri='https://in01-**************.ali-cn-hangzhou.zillizcloud.com:19531',
     token='admin:zilliz@123'
 )
 connections.list_connections()

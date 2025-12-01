@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "createDatabase() | Node.js"
 slug: /node/node/Database-createDatabase
 sidebar_label: "createDatabase()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates a database. | Node.js"
@@ -10,15 +13,15 @@ type: docx
 token: JmlKdBz7Io91Ffx9rpKce3vUnMc
 sidebar_position: 2
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
-  - nn search
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud
   - createDatabase()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

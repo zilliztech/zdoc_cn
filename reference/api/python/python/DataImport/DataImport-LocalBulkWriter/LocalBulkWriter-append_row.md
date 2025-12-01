@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "append_row() | Python"
 slug: /python/python/LocalBulkWriter-append_row
 sidebar_label: "append_row()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation appends records to the writer. | Python"
@@ -10,15 +13,15 @@ type: docx
 token: WCxIdVwCpoIaMUxbabWcSRCkn2g
 sidebar_position: 1
 keywords: 
+  - private llms
   - nn search
   - llm eval
   - Sparse vs Dense
-  - Dense vector
   - zilliz
   - zilliz cloud
   - cloud
   - append_row()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

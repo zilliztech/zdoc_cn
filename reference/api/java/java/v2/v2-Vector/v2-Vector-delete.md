@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "delete() | Java | v2"
 slug: /java/java/v2-Vector-delete
 sidebar_label: "delete()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation deletes entities by their IDs or with a boolean expression. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: NOX7dAR3zodEH3xinMecMjq5n4S
 sidebar_position: 1
 keywords: 
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
-  - vectordb
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
   - zilliz
   - zilliz cloud
   - cloud
   - delete()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

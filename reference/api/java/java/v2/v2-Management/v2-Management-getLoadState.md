@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "getLoadState() | Java | v2"
 slug: /java/java/v2-Management-getLoadState
 sidebar_label: "getLoadState()"
+added_since: v2.3.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation displays whether a specified collection or partition is loaded or not. | Java | v2"
 type: docx
-token: QcaFdMJE9oHX1Axe11rcqfiynEd
-sidebar_position: 6
+token: PAs7dwIIrop4OixCUr8ctHVLnXc
+sidebar_position: 9
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
   - zilliz
   - zilliz cloud
   - cloud
   - getLoadState()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -38,6 +41,7 @@ public Boolean getLoadState(GetLoadStateReq request)
 
 ```java
 getLoadState(GetLoadStateReq.builder()
+    .databaseName(String databaseName)
     .collectionName(String collectionName)
     .partitionName(String partitionName)
     .build()
@@ -45,6 +49,10 @@ getLoadState(GetLoadStateReq.builder()
 ```
 
 **BUILDER METHODS:**
+
+- `databaseName(String databaseName)`
+
+    The name of the database to which the target collection belongs.
 
 - `collectionName(String collectionName)`
 

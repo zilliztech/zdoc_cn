@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "listCollections() | Java | v2"
 slug: /java/java/v2-Collections-listCollections
 sidebar_label: "listCollections()"
+added_since: v2.4.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all existing collections. | Java | v2"
 type: docx
-token: WxhmdPZydowLVLxR2LacSrUNnme
+token: Vv4NdWVa5o5BSrx11OZcNVnQnbh
 sidebar_position: 20
 keywords: 
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
-  - Zilliz
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
   - zilliz
   - zilliz cloud
   - cloud
   - listCollections()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -50,9 +53,21 @@ A **ListCollectionsResp** object containing a list of collection names. If there
 
 **PARAMETERS:**
 
-- **collectionNames** (*List\<String\>*)
+- **collectionNames** (*List\<String>*)
 
     A list of strings containing the names of all existing collections.
+
+- **collectionInfos** (*List\<CollectionInfo>*)
+
+    A list of **CollectionInfo** objects. A **CollectionInfo** object has the following fields:
+
+    - **collectionName** (*String*)
+
+        The name of a collection.
+
+    - **shardNum** (*Integer*)
+
+        The number of shards in the above collection.
 
 **EXCEPTIONS:**
 

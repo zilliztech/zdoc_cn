@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "MilvusClientV2Pool | Java | v2"
 slug: /java/java/v2-Client-MilvusClientV2Pool
 sidebar_label: "MilvusClientV2Pool"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "A MilvusClientV2Pool instance is a connection pool for MilvusClientV2 objects. The number of MilvusClientV2 objects automatically increases or decreases to avoid frequent opening and closing connections, improving your application's performance. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: UrjHd9KZKo1Rlfxfj8AcmXNinlg
 sidebar_position: 2
 keywords: 
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
-  - cosine distance
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
   - zilliz
   - zilliz cloud
   - cloud
   - MilvusClientV2Pool
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -158,7 +161,7 @@ import io.milvus.pool.PoolConfig;
 import io.milvus.pool.MilvusClientV2Pool;
 
 ConnectConfig connectConfig = ConnectConfig.builder()
-        .uri("https://in01-******.aws-us-west-2.vectordb.zillizcloud.com:19531")
+        .uri("https://in01-******.ali-cn-hangzhou.zillizcloud.com:19531")
         .token("user:password") // replace this with your token
         .build();
         

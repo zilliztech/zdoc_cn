@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "disconnect() | Python | ORM"
 slug: /python/python/Connections-disconnect
 sidebar_label: "disconnect()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation disconnects the client from the specified connection. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: IpSBdcabbosobvxQkAEcv6CvnJd
 sidebar_position: 4
 keywords: 
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud
   - disconnect()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

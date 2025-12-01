@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "listAliases() | Node.js"
 slug: /node/node/Collections-listAliases
 sidebar_label: "listAliases()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This is a method template. | Node.js"
 type: docx
 token: KeoKdlitaog6n1xpX8McIIIrnWb
-sidebar_position: 17
+sidebar_position: 14
 keywords: 
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud
   - listAliases()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

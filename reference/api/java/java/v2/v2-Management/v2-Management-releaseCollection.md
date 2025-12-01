@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "releaseCollection() | Java | v2"
 slug: /java/java/v2-Management-releaseCollection
 sidebar_label: "releaseCollection()"
+added_since: v2.3.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation releases the data of a specific collection from memory. | Java | v2"
 type: docx
-token: BA9edMrWMosYWFxwTBAcl2WOnff
-sidebar_position: 13
+token: KJArdiXZvoBtdIxumpocfe5knJc
+sidebar_position: 16
 keywords: 
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
+  - Embedding model
   - zilliz
   - zilliz cloud
   - cloud
   - releaseCollection()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -38,6 +41,7 @@ public void releaseCollection(ReleaseCollectionReq request)
 
 ```java
 releaseCollection(ReleaseCollectionReq.builder()
+    .databaseName(String databaseName)
     .collectionName(String collectionName)
     .async(Boolean async)
     .timeout(Long timeout)
@@ -46,6 +50,10 @@ releaseCollection(ReleaseCollectionReq.builder()
 ```
 
 **BUILDER METHODS:**
+
+- `databaseName(String databaseName)`
+
+    The name of the database to which the target collection belongs.
 
 - `collectionName(String collectionName)`
 

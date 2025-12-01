@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "OnnxEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-OnnxEmbeddingFunction
 sidebar_label: "OnnxEmbeddingFunction"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "OnnxEmbeddingFunction is a class in pymilvus that handles encoding text into embeddings using Open Neural Network Exchange (ONNX) embedding models to support embedding retrieval in Milvus. | Python"
@@ -10,15 +13,15 @@ type: docx
 token: MVLRdU9nPonUeExs7ogctwZ1n4c
 sidebar_position: 3
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
   - zilliz
   - zilliz cloud
   - cloud
   - OnnxEmbeddingFunction
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

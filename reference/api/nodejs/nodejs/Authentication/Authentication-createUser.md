@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "createUser() | Node.js"
 slug: /node/node/Authentication-createUser
 sidebar_label: "createUser()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates a user. | Node.js"
 type: docx
 token: JNZxdKEX3ohBl2xud7Wckhq7nVh
-sidebar_position: 5
+sidebar_position: 7
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
   - zilliz
   - zilliz cloud
   - cloud
   - createUser()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "to_dict() | Python | MilvusClient"
 slug: /python/python/Function-to_dict
 sidebar_label: "to_dict()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation returns a dictionary representation of the `Function` object. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: AmwJdW0z6opMPcxhMlBcYPIWn2M
 sidebar_position: 4
 keywords: 
-  - vector database
-  - IVF
-  - knn
-  - Image Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
   - zilliz
   - zilliz cloud
   - cloud
   - to_dict()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

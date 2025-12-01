@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "MilvusClient | Python | MilvusClient"
 slug: /python/python/Client-MilvusClient
 sidebar_label: "MilvusClient"
+added_since: v2.3.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "A MilvusClient instance represents a Python client that connects to a specific Zilliz Cloud cluster. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: TUrSdmskuoGdFRxFT75c6xhinzc
 sidebar_position: 2
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - what is vector db
   - zilliz
   - zilliz cloud
   - cloud
   - MilvusClient
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---
@@ -63,7 +66,7 @@ MilvusClient(
     The URI of the Zilliz Cloud cluster. For example:
 
     ```plaintext
-    https://inxx-xxxxxxxxxxxxxxxxx.aws-us-west-2.vectordb-uat3.zillizcloud.com:19540
+    https://inxx-xxxxxxxxxxxxxxxxx.ali-cn-hangzhou.zillizcloud.com:19540
     ```
 
 - **user** (*string*) -
@@ -109,7 +112,7 @@ from pymilvus import MilvusClient
 
 # Authentication enabled with a cluster user
 client = MilvusClient(
-    uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com:19530",
+    uri="https://inxx-xxxxxxxxxxxx.api.ali-cn-hangzhou.zillizcloud.com:19530",
     token="user:password", # replace this with your token,
     db_name="default"
 )

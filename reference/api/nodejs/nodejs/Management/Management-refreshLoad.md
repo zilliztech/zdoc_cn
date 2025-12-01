@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "refreshLoad() | Node.js"
 slug: /node/node/Management-refreshLoad
 sidebar_label: "refreshLoad()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation refreshes the loading status of a specific collection. | Node.js"
 type: docx
 token: Jc43d397doxCRkxal2XcQ1Wyn2g
-sidebar_position: 16
+sidebar_position: 19
 keywords: 
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
-  - vector database
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
   - zilliz
   - zilliz cloud
   - cloud
   - refreshLoad()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

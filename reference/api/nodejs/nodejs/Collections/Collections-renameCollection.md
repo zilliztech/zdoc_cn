@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "renameCollection() | Node.js"
 slug: /node/node/Collections-renameCollection
 sidebar_label: "renameCollection()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation renames an existing collection. | Node.js"
 type: docx
 token: LSwVdMg4SorzZ5xSHHVcQeVDnfh
-sidebar_position: 19
+sidebar_position: 16
 keywords: 
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
-  - Embedding model
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
   - zilliz
   - zilliz cloud
   - cloud
   - renameCollection()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

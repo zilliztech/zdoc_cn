@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "searchIterator() | Java | v2"
 slug: /java/java/v2-Vector-searchIterator
 sidebar_label: "searchIterator()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This method returns a search iterator to iterate search results. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: M4IqdsRCNotiM4xdOA0cWSnUngb
 sidebar_position: 8
 keywords: 
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
+  - nn search
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
   - zilliz
   - zilliz cloud
   - cloud
   - searchIterator()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -132,7 +135,7 @@ searchIterator(SearchIteratorReq.builder()
 
     The topk value.
 
-- `consistencyLevel(ConsistencyLevel consistencyLevel)`
+- `consistencyLevel([ConsistencyLevel](./v2-Collections-ConsistencyLevel) consistencyLevel)`
 
     The consistency level of the target collection.
 

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "bulk_import() | Python"
 slug: /python/python/BulkImport-bulk_import
 sidebar_label: "bulk_import()"
+added_since: Inherit
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation imports the prepared data files to Zilliz Cloud. To learn how to prepare your data files, read Prepare Data Import. | Python"
@@ -10,15 +13,15 @@ type: docx
 token: RFSCdiUYGouQrtx8c1RczPVvnmf
 sidebar_position: 1
 keywords: 
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
   - bulk_import()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---
@@ -56,7 +59,7 @@ bulk_import(
     For example, the endpoint URL should be in the following format:
 
     ```python
-    https://api.cloud.zilliz.com
+    https://api.cloud.zilliz.com.cn
     # https://api.cloud.zilliz.com.cn 
     ```
 
@@ -135,7 +138,7 @@ None
 from pymilvus.bulk_writer import bulk_import
 
 # Bulk-import your data from the prepared data files
-CLOUD_API_ENDPOINT = "https://api.cloud.zilliz.com"
+CLOUD_API_ENDPOINT = "https://api.cloud.zilliz.com.cn"
 CLUSTER_ID = "inxx-xxxxxxxxxxxxxxx"
 API_KEY = ""
 STORAGE_URL = ""

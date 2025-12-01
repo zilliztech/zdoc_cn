@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "LocalBulkWriter | Java | v2"
 slug: /java/java/v2-DataImport-LocalBulkWriter
 sidebar_label: "LocalBulkWriter"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "A LocalBulkWriter instance rewrites your raw data locally in a format that Milvus understands. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: G7F9dQ8DwoZsaVxExdnc7K6an3g
 sidebar_position: 5
 keywords: 
-  - Image Search
-  - LLMs
-  - Machine Learning
-  - RAG
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
   - zilliz
   - zilliz cloud
   - cloud
   - LocalBulkWriter
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

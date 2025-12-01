@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "list_databases() | Python | MilvusClient"
 slug: /python/python/Database-list_databases
 sidebar_label: "list_databases()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all existing databases. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: FZuddXocNopEufxRFGdcbvkRnnb
 sidebar_position: 6
 keywords: 
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - AI Hallucination
   - zilliz
   - zilliz cloud
   - cloud
   - list_databases()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---
