@@ -59,8 +59,6 @@ import Grid from '@site/src/components/Grid';
 
     <div>
 
-        - 🔥 Milvus v2.6.x 功能特性全面可用（GA）
-
         - 👏  分层存储能力正式发布（GA）并[开始计费](./storage-cost#example-4-cluster-cold-data-access-cost)
 
         - 😘  Stage 功能正式更名为 [Volume](./volume-explained)，并全面可用（GA）
