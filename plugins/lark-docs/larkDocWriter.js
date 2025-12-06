@@ -1190,13 +1190,22 @@ class larkDocWriter {
 
         try {
             // Let Sharp auto-detect background from top-left pixel (likely white)
-            const trimmedImage = await sharp(image)
+            const trimmedImage = sharp(image)
                 .trim({
                   background: { r: 255, g: 255, b: 255 },
                   threshold: 10                    
                 }).png()
 
-            const buffer = await trimmedImage.toBuffer();
+            // Add a 10-pixel white border around the trimmed image
+            const borderedImage = trimmedImage.extend({
+                top: 20,
+                bottom: 20,
+                left: 20,
+                right: 20,
+                background: { r: 255, g: 255, b: 255 }
+            });
+
+            const buffer = await borderedImage.toBuffer();
             return buffer;
         } catch (error) {
             throw new Error(`Failed to trim image borders: ${error.message}`);
