@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "createPartition() | Java | v2"
 slug: /java/java/v2-Partitions-createPartition
 sidebar_label: "createPartition()"
+added_since: v2.3.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates a partition in the target collection. | Java | v2"
 type: docx
-token: CadTdZ5YGocDymxaIOvcr08pnxd
+token: WE4gduIjooCgQUxcKyLcwQe1n3g
 sidebar_position: 1
 keywords: 
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
   - zilliz
   - zilliz cloud
   - cloud
   - createPartition()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -38,6 +41,7 @@ public void createPartition(CreatePartitionReq request)
 
 ```java
 createPartition(CreatePartitionReq.builder()
+    .databaseName(String databaseName)
     .collectionName(String collectionName)
     .partitionName(String partitionName)
     .build()
@@ -45,6 +49,10 @@ createPartition(CreatePartitionReq.builder()
 ```
 
 **BUILDER METHODS:**
+
+- `databaseName(String databaseName)`
+
+    The name of the database to which the target collection belongs.
 
 - `collectionName(String collectionName)`
 

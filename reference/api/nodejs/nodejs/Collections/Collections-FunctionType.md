@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "FunctionType | Node.js"
 slug: /node/node/Collections-FunctionType
 sidebar_label: "FunctionType"
+added_since: v2.5.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Node.js"
 type: docx
-token: L4H0dyzS1o6XlmxMQzDca6Pdnjd
-sidebar_position: 20
+token: Vq2VdsWJaoufsGx5stJcTuyPnDb
+sidebar_position: 17
 keywords: 
-  - IVF
-  - knn
-  - Image Search
-  - LLMs
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - open source vector database
   - zilliz
   - zilliz cloud
   - cloud
   - FunctionType
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---
@@ -35,6 +38,14 @@ This is an enumeration that provides the following constants.
 - **BM25** = 1
 
     Sets the function type to **BM25**.
+
+- **TEXTEMBEDDING** = 2
+
+    Sets the function type to **TEXTEMBEDDING**.
+
+- **RERANK** = 3
+
+    Sets the function type to **RERANK**.
 
 - **Unknown** = 0
 

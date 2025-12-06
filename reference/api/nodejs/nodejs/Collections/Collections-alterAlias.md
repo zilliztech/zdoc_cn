@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "alterAlias() | Node.js"
 slug: /node/node/Collections-alterAlias
 sidebar_label: "alterAlias()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation reassigns the alias of one collection to another. | Node.js"
@@ -10,15 +13,15 @@ type: docx
 token: DXTLdtFCso7fo6xJHShc7XLpngh
 sidebar_position: 1
 keywords: 
+  - hnsw algorithm
+  - vector similarity search
   - approximate nearest neighbor search
   - DiskANN
-  - Sparse vector
-  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud
   - alterAlias()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

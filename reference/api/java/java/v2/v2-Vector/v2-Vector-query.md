@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "query() | Java | v2"
 slug: /java/java/v2-Vector-query
 sidebar_label: "query()"
+added_since: v2.3.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation conducts a scalar filtering with a specified boolean expression. | Java | v2"
 type: docx
-token: OnIpdTTSOoV06KxhhAkcFQCKnWd
+token: DI5tdxM92oBdXHxk0LFcsBSInVe
 sidebar_position: 5
 keywords: 
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
-  - vectordb
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud
   - query()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -47,6 +50,8 @@ query(QueryReq.builder()
     .consistencyLevel(ConsistencyLevel consistencyLevel)
     .offset(long offset)
     .limit(long limit)
+    .ignoreGrowing(boolean ignoreGrowing)
+    .queryParams(Map<String, Object> queryParams)
     .build()
 )
 ```
@@ -81,7 +86,7 @@ query(QueryReq.builder()
 
     You can set this parameter to an empty string to skip scalar filtering. To build a scalar filtering condition, refer to [Boolean Expression Rules](https://milvus.io/docs/boolean.md). 
 
-- `consistencyLevel(ConsistencyLevel consistencyLevel)`
+- `consistencyLevel([ConsistencyLevel](./v2-Collections-ConsistencyLevel) consistencyLevel)`
 
     The consistency level of the target collection.
 
@@ -111,6 +116,22 @@ query(QueryReq.builder()
 
     The sum of this value and `offset` should be less than 16,384. 
 
+- `ignoreGrowing(boolean ignoreGrowing)`
+
+    Whether to ignore growing segments during similarity searches.
+
+- `queryParams(Map<String, Object> queryParams)`
+
+    The parameter settings specific to this operation. Possible values are:
+
+    - **timezone** (String)
+
+        The timezone  of this operation. For example, `America/Chicago`.
+
+    - **time_fields** (String)
+
+        The time format that is concatenated with the information extracted from the Timestamptz field in the output fields, such as `year, month, day`.
+
 **RETURN TYPE:**
 
 *QueryResp*
@@ -123,7 +144,15 @@ A **QueryResp object representing specific query results with the specified outp
 
 - queryResults(List\<QueryResp.QueryResult\>)
 
-A list of QueryResult objects with each QueryResult representing a queried entity.
+    A list of QueryResult objects with each QueryResult representing a queried entity. The members of QueryResult:
+
+    - **entity** (*Map\<String,Object\>*)
+
+        A map that contains key-value pairs of field names and their values.
+
+- **sessionTs** (*long*) -
+
+    Whether the **Eventually** consistency level applies.
 
 <Admonition type="info" icon="📘" title="Notes">
 

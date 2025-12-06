@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "hasCollection() | Node.js"
 slug: /node/node/Collections-hasCollection
 sidebar_label: "hasCollection()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation checks whether a specific collection exists. | Node.js"
 type: docx
 token: FhbbdNrlNouBXJxHIdKctXVKnmf
-sidebar_position: 15
+sidebar_position: 13
 keywords: 
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
   - zilliz
   - zilliz cloud
   - cloud
   - hasCollection()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

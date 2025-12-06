@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "get_import_progress() | Python"
 slug: /python/python/BulkImport-get_import_progress
 sidebar_label: "get_import_progress()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation gets the progress of the specified bulk-import job. | Python"
@@ -10,15 +13,15 @@ type: docx
 token: MkWNdU1tvoqlBRxI05Rcu09cnEc
 sidebar_position: 2
 keywords: 
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
   - zilliz
   - zilliz cloud
   - cloud
   - get_import_progress()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---
@@ -59,7 +62,7 @@ pymilvus.get_import_progress(
     For example, the endpoint URL should be in the following format:
 
     ```python
-    https://api.cloud.zilliz.com
+    https://api.cloud.zilliz.com.cn
     # https://api.cloud.zilliz.com.cn 
     ```
 
@@ -228,7 +231,7 @@ import json
 from pymilvus.bulk_writer import get_import_progress
 
 ## Zilliz Cloud constants
-CLOUD_API_ENDPOINT = "https://api.cloud.zilliz.com"
+CLOUD_API_ENDPOINT = "https://api.cloud.zilliz.com.cn"
 CLUSTER_ID = "inxx-xxxxxxxxxxxxxxx"
 API_KEY = ""
 

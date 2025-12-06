@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "describeCollection() | Java | v2"
 slug: /java/java/v2-Collections-describeCollection
 sidebar_label: "describeCollection()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists detailed information about a specific collection. | Java | v2"
 type: docx
-token: Lc03dk5YVo8Ilvx4XINcv5KBn9e
+token: F8lCdDCa3oD48WxWyURcmfoznYt
 sidebar_position: 12
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
   - zilliz
   - zilliz cloud
   - cloud
   - describeCollection()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -38,12 +41,17 @@ public DescribeCollectionResp describeCollection(DescribeCollectionReq request)
 
 ```java
 describeCollection(DescribeCollectionReq.builder()
+    .databaseName(String databaseName)
     .collectionName(String collectionName)
     .build()
 )
 ```
 
 **BUILDER METHODS:**
+
+- `databaseName(String databaseName)`
+
+    The name of the database to which the target collection belongs.
 
 - `collectionName(String collectionName)`
 
@@ -61,9 +69,17 @@ A **DescribeCollectionResp** object that contains detailed information about the
 
 **PARAMETERS:**
 
-- **collection_name** (*String*)
+- **collectionName** (*String*)
 
     The name of the current collection.
+
+- **collectionID** (*Long*)
+
+    The ID of the collection.
+
+- **databaseName** (*String*)
+
+    The name of the database to which the current collection belongs.
 
 - **description** (*String*)
 
@@ -87,7 +103,7 @@ A **DescribeCollectionResp** object that contains detailed information about the
 
 - **enableDynamicField** (*Boolean*)
 
-    Whether to use the reserved JSON field **$meta** to save non-schema-defined fields and their values as key-value pairs.
+    Whether to use the reserved JSON field **&#36;meta** to save non-schema-defined fields and their values as key-value pairs.
 
 - **autoID** (*Boolean*)
 
@@ -112,6 +128,10 @@ A **DescribeCollectionResp** object that contains detailed information about the
 - **shardsNum** (*Integer*) -
 
     The number of shards in the collection.
+
+- **properties** (*Map\<String, String>*) -
+
+    The properties of the current collection. 
 
 **EXCEPTIONS:**
 

@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "dropPrivilegeGroup() | Node.js"
 slug: /node/node/Authentication-dropPrivilegeGroup
 sidebar_label: "dropPrivilegeGroup()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation adds a user to a specific role. | Node.js"
 type: docx
 token: I63tdWAY2ok8V1xrK4tcrkwjncd
-sidebar_position: 10
+sidebar_position: 12
 keywords: 
-  - open source vector db
-  - vector database example
-  - rag vector database
-  - what is vector db
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud
   - dropPrivilegeGroup()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

@@ -3,22 +3,25 @@ displayed_sidbar: pythonSidebar
 title: "query() | Python | MilvusClient"
 slug: /python/python/Vector-query
 sidebar_label: "query()"
+added_since: v2.3.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation conducts a scalar filtering with a specified boolean expression. | Python | MilvusClient"
 type: docx
-token: LkmSddW2NolgitxLhy9cx22Dnpe
+token: Edrcdw34jofMbNxK5HncdDT5n8e
 sidebar_position: 4
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud
   - query()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---
@@ -57,7 +60,7 @@ query(
 
     A scalar filtering condition to filter matching entities. 
 
-    You can set this parameter to an empty string to skip scalar filtering. To build a scalar filtering condition, refer to [Boolean Expression Rules](https://milvus.io/docs/boolean.md). 
+    You can set this parameter to an empty string to skip scalar filtering. To build a scalar filtering condition, refer to [Filtering Overview](/docs/filtering-overview). 
 
 - **output_fields** (*list[str]* | *None*) -
 
@@ -138,7 +141,7 @@ query(
 
         You can use this parameter in combination with `offset` to enable pagination.
 
-        The sum of this value and `offset` should be less than 16,384. 
+        The sum of this value and `offset` should be less than 16,384.
 
 **RETURN TYPE:**
 
@@ -171,7 +174,7 @@ from pymilvus import MilvusClient
 
 # 1. Set up a milvus client
 client = MilvusClient(
-    uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com:19530",
+    uri="https://inxx-xxxxxxxxxxxx.api.ali-cn-hangzhou.zillizcloud.com:19530",
     token="user:password"
 )
 
@@ -362,16 +365,4 @@ res = client.query(
 
 # [{'count(*)': 3}]
 ```
-
-## Related methods
-
-- [delete()](./Vector-delete)
-
-- [get()](./Vector-get)
-
-- [insert()](./Vector-insert)
-
-- [search()](./Vector-search)
-
-- [upsert()](./Vector-upsert)
 

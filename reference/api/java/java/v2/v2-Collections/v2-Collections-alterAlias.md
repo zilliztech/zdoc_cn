@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "alterAlias() | Java | v2"
 slug: /java/java/v2-Collections-alterAlias
 sidebar_label: "alterAlias()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation reassigns the alias of one collection to another. | Java | v2"
 type: docx
-token: QasfdVW4voAzfwxfSc1civsHnVf
+token: Fv8EdYIt4oThstxgpzqcm7C0nug
 sidebar_position: 1
 keywords: 
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
+  - Audio search
+  - what is semantic search
+  - Embedding model
+  - image similarity search
   - zilliz
   - zilliz cloud
   - cloud
   - alterAlias()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -39,6 +42,7 @@ public void alterAlias(AlterAliasReq request)
 ```java
 alterAlias(AlterAliasReq.builder()
     .alias(String alias)
+    .databaseName(String databaseName)
     .collectionName(String collectionName)
     .build()
 )
@@ -67,6 +71,10 @@ alterAlias(AlterAliasReq.builder()
     </ul>
 
     </Admonition>
+
+- `databaseName(String databaseName)`
+
+    The name of the database to which the target collection belongs.
 
 - `collectionName(String collectionName)`
 

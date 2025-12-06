@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "add_connection() | Python | ORM"
 slug: /python/python/Connections-add_connection
 sidebar_label: "add_connection()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation adds connections to multiple Zilliz Cloud clusters for different purposes in a batch. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: C37ldNLbFog6ThxA23ScMldnnmb
 sidebar_position: 1
 keywords: 
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
-  - DiskANN
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
   - zilliz
   - zilliz cloud
   - cloud
   - add_connection()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---
@@ -129,9 +132,9 @@ None
 ```python
 from pymilvus import connections
 
-SERVERLESS_ENDPOINT = "https://in03-************.api.gcp-us-west1.zillizcloud.com"
+SERVERLESS_ENDPOINT = "https://in03-************.api.ali-cn-hangzhou.zillizcloud.com"
 SERVERLESS_TOKEN = "db_admin:************"
-DEDICATED_ENDPOINT = "https://in03-************.api.gcp-us-west1.zillizcloud.com:19541"
+DEDICATED_ENDPOINT = "https://in03-************.api.ali-cn-hangzhou.zillizcloud.com:19541"
 DEDICATED_USER = "db_admin"
 DEDICATED_PASS = "*****************"
 

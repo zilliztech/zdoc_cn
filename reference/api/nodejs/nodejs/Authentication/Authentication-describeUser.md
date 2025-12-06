@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "describeUser() | Node.js"
 slug: /node/node/Authentication-describeUser
 sidebar_label: "describeUser()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This is a method template. | Node.js"
 type: docx
 token: Da9KdvvWroKX9cxOwsmcLRBxnVb
-sidebar_position: 8
+sidebar_position: 10
 keywords: 
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
   - zilliz
   - zilliz cloud
   - cloud
   - describeUser()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

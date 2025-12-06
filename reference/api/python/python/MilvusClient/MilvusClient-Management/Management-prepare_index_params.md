@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "prepare_index_params() | Python | MilvusClient"
 slug: /python/python/Management-prepare_index_params
 sidebar_label: "prepare_index_params()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation prepares index parameters to build indexes for a specific collection. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: CAzpdAw3wo4ZqrxhjTLcEGBBn1S
 sidebar_position: 11
 keywords: 
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
   - prepare_index_params()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "describe_resource_group() | Python | ORM"
 slug: /python/python/utility-describe_resource_group
 sidebar_label: "describe_resource_group()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation describes the details of a specific resource group. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: HScCdxLNJotPCcxb4AZcxsNJn9c
 sidebar_position: 7
 keywords: 
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud
   - describe_resource_group()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

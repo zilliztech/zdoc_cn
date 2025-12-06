@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "listRoles() | Node.js"
 slug: /node/node/Authentication-listRoles
 sidebar_label: "listRoles()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all custom roles. | Node.js"
 type: docx
 token: GIeMdvjlMoLwGrxUOu3cFw7bnWc
-sidebar_position: 18
+sidebar_position: 20
 keywords: 
-  - Recommender systems
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
   - zilliz
   - zilliz cloud
   - cloud
   - listRoles()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

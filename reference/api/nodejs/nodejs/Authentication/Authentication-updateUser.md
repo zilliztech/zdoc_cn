@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "updateUser() | Node.js"
 slug: /node/node/Authentication-updateUser
 sidebar_label: "updateUser()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation updates the password of a specific user. | Node.js"
 type: docx
 token: BCGKdCttdotF32xUJTec8UFlndg
-sidebar_position: 26
+sidebar_position: 28
 keywords: 
+  - knn
+  - Image Search
   - LLMs
   - Machine Learning
-  - RAG
-  - NLP
   - zilliz
   - zilliz cloud
   - cloud
   - updateUser()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

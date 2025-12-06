@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "dropIndexProperties() | Java | v2"
 slug: /java/java/v2-Management-dropIndexProperties
 sidebar_label: "dropIndexProperties()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation resets the specified index properties to their default values. | Java | v2"
 type: docx
 token: IdNAdlMhjoM40pxjpKecpc7inbd
-sidebar_position: 5
+sidebar_position: 6
 keywords: 
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
   - zilliz
   - zilliz cloud
   - cloud
   - dropIndexProperties()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

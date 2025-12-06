@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "delete() | Node.js"
 slug: /node/node/Vector-delete
 sidebar_label: "delete()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation deletes entities by their IDs or with a boolean expression. | Node.js"
 type: docx
-token: PNtoddjsMoYuqcxCWK4c3IWKnde
-sidebar_position: 1
+token: KOZHdyeQvo4htOxhO8BcbEudnNd
+sidebar_position: 2
 keywords: 
-  - milvus vector db
-  - Zilliz Cloud
-  - what is milvus
-  - milvus database
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
   - zilliz
   - zilliz cloud
   - cloud
   - delete()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---
@@ -45,8 +48,9 @@ This method has the following alternatives.
 milvusClient.delete({
    db_name: string,
    collection_name: string,
-   ids: string[] | number[],
    partition_name?: string,
+   ids: string[] | number[],
+   consistency_level: string,
    timeout?: number
  })
 ```
@@ -63,6 +67,10 @@ milvusClient.delete({
 
     The name of an existing collection.
 
+- **partition_name** (*string*) -
+
+    The name of an existing partition in the collection.
+
 - **ids** (*string[]* | *number[]*) -
 
     **[REQUIRED]**
@@ -71,9 +79,9 @@ milvusClient.delete({
 
     The value defaults to **None**, indicating that a scalar filtering condition applies.
 
-- **partition_name** (*string*) -
+- **consistency_level** (*ConsistencyLevelEnum*) -
 
-    The name of an existing partition in the collection.
+    The consistency level of the target collection. The value defaults to **Bounded** (**1**) with options of **Strong** (**0**), **Bounded** (**1**), **Session** (**2**), and **Eventually** (**3**).
 
 - **timeout** (*number*) -
 
@@ -81,50 +89,37 @@ milvusClient.delete({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
-
-This method returns a promise that resolves to a **ResStatus** object.
-
-```javascript
-{
-    code: number,
-    error_code: string | number,
-    reason: string
-}
-```
-
-**PARAMETERS:**
-
-- **code** (*number*) -
-
-    A code that indicates the operation result. It remains **0** if this operation succeeds.
-
-- **error_code** (*string* | *number*) -
-
-    An error code that indicates an occurred error. It remains **Success** if this operation succeeds. 
-
-- **reason** (*string*) - 
-
-    The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
+**RETURNS** *Promise\<MutationResult>*
 
 ### With DeleteByFilterReq
 
 ```javascript
 milvusClient.delete({
+   db_name: string,
    collection_name: string,
-   filter: string,
    partition_name?: string,
+   filter: string,
+   exprValues?: keyValueObject,
+   consistency_level?: string,
    timeout?: number
  })
 ```
 
 **PARAMETERS:**
 
+- **db_name** (*string*) -
+
+    The name of the database that holds the target collection.
+
 - **collection_name** (*string*) -
 
     **[REQUIRED]**
 
     The name of an existing collection.
+
+- **partition_name** (*string*) -
+
+    The name of an existing partition in the collection.
 
 - **filter** (*string*) -
 
@@ -134,9 +129,9 @@ milvusClient.delete({
 
     You can set this parameter to an empty string to skip scalar filtering. To build a scalar filtering condition, refer to [Boolean Expression Rules](https://milvus.io/docs/boolean.md). 
 
-- **partition_name** (*string*) -
+- **consistency_level** (*ConsistencyLevelEnum*) -
 
-    The name of an existing partition in the collection.
+    The consistency level of the target collection. The value defaults to **Bounded** (**1**) with options of **Strong** (**0**), **Bounded** (**1**), **Session** (**2**), and **Eventually** (**3**).
 
 - **timeout** (*number*) -
 
@@ -144,31 +139,7 @@ milvusClient.delete({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<ResStatus>*
-
-This method returns a promise that resolves to a **ResStatus** object.
-
-```javascript
-{
-    code: number,
-    error_code: string | number,
-    reason: string
-}
-```
-
-**PARAMETERS:**
-
-- **code** (*number*) -
-
-    A code that indicates the operation result. It remains **0** if this operation succeeds.
-
-- **error_code** (*string* | *number*) -
-
-    An error code that indicates an occurred error. It remains **Success** if this operation succeeds. 
-
-- **reason** (*string*) - 
-
-    The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
+**RETURNS** *Promise\<MutationResult>*
 
 ## Example
 

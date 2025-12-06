@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "listImportJobs() | Java | v2"
 slug: /java/java/v2-BulkImport-listImportJobs
 sidebar_label: "listImportJobs()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all existing import jobs regarding the specified collection. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: CN9sdiCicoERZpx9GhmcLa4Wn7g
 sidebar_position: 4
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
   - zilliz
   - zilliz cloud
   - cloud
   - listImportJobs()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -50,7 +53,7 @@ bulkImport.listImportJobs(
     Zilliz Cloud's Control Plane API endpoint. The endpoint URL should be in the following format:
 
     ```python
-    https://api.cloud.zilliz.com
+    https://api.cloud.zilliz.com.cn
     # https://api.cloud.zilliz.com.cn 
     ```
 

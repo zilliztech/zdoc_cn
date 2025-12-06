@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "describeAlias() | Java | v2"
 slug: /java/java/v2-Collections-describeAlias
 sidebar_label: "describeAlias()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation displays the details of an alias. | Java | v2"
 type: docx
-token: B57cdiaEkotJQnxl7I9cJqotnPb
+token: RWaHdvzdvoxGdbxj44cc5SmBnzd
 sidebar_position: 11
 keywords: 
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
   - zilliz
   - zilliz cloud
   - cloud
   - describeAlias()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -38,12 +41,22 @@ public DescribeAliasResp describeAlias(DescribeAliasReq request)
 
 ```java
 describeAlias(DescribeAliasReq.builder()
+    .databaseName(String databaseName)
+    .collection(String collectionName)
     .alias(String alias)
     .build()
 )
 ```
 
 **BUILDER METHODS:**
+
+- `databaseName(String databaseName)`
+
+    The name of the database to which the target collection belongs.
+
+- `collectionName(String collectionName)`
+
+    The name of the target collection of this operation.
 
 - `alias(String alias)`
 
@@ -83,6 +96,8 @@ MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
 // 2. Describe alias
 DescribeAliasReq describeAliasReq = DescribeAliasReq.builder()
+        .databaseName("my_database")
+        .collectionName("my_collection")
         .alias("test_alias")
         .build();
 DescribeAliasResp describeAliasResp = client.describeAlias(describeAliasReq);

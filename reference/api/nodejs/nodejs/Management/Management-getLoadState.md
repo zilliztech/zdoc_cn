@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "getLoadState() | Node.js"
 slug: /node/node/Management-getLoadState
 sidebar_label: "getLoadState()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation displays whether a specified collection or partition is loaded or not. | Node.js"
 type: docx
 token: J17ZdPNwqo4nt3x5b8pc0H5Nnph
-sidebar_position: 12
+sidebar_position: 14
 keywords: 
-  - llm eval
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
   - zilliz
   - zilliz cloud
   - cloud
   - getLoadState()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

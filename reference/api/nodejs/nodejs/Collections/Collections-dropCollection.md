@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "dropCollection() | Node.js"
 slug: /node/node/Collections-dropCollection
 sidebar_label: "dropCollection()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a collection. | Node.js"
 type: docx
 token: KLknda2VtocQSBx7PKVc6F9Nnug
-sidebar_position: 11
+sidebar_position: 10
 keywords: 
-  - Vector store
-  - open source vector database
-  - Vector index
-  - vector database open source
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud
   - dropCollection()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

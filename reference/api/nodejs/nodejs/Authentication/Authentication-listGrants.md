@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "listGrants() | Node.js"
 slug: /node/node/Authentication-listGrants
 sidebar_label: "listGrants()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists the privileges granted to the specified role. | Node.js"
 type: docx
 token: CJ9DdmU1ooquOnxcK5AciA3sn3g
-sidebar_position: 16
+sidebar_position: 18
 keywords: 
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
-  - lexical search
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
   - zilliz
   - zilliz cloud
   - cloud
   - listGrants()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

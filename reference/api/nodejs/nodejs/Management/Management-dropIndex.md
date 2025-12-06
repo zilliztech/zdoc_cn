@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "dropIndex() | Node.js"
 slug: /node/node/Management-dropIndex
 sidebar_label: "dropIndex()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops an index from a specific collection. | Node.js"
 type: docx
 token: UBbndftiQo2HdOxUNtocIISnnVh
-sidebar_position: 4
+sidebar_position: 5
 keywords: 
-  - Faiss
-  - Video search
-  - AI Hallucination
-  - AI Agent
+  - natural language processing
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
   - zilliz
   - zilliz cloud
   - cloud
   - dropIndex()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

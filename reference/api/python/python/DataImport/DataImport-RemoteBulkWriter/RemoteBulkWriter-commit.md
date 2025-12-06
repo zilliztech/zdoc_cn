@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "commit() | Python"
 slug: /python/python/RemoteBulkWriter-commit
 sidebar_label: "commit()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation commits the appended data. | Python"
@@ -10,15 +13,15 @@ type: docx
 token: VccVd4MTgoPzCixDVtgcEoKWnPf
 sidebar_position: 3
 keywords: 
-  - vector database
-  - IVF
-  - knn
-  - Image Search
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - open source vector db
   - zilliz
   - zilliz cloud
   - cloud
   - commit()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

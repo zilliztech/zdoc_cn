@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "getLoadingProgress() | Node.js"
 slug: /node/node/Management-getLoadingProgress
 sidebar_label: "getLoadingProgress()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation gets the loading progress of a specific collection. | Node.js"
 type: docx
 token: DkImdRkJwoUmdqxzqn1cpQr9nhy
-sidebar_position: 11
+sidebar_position: 13
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - getLoadingProgress()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

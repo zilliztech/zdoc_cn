@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "revokeRole() | Java | v2"
 slug: /java/java/v2-Authentication-revokeRole
 sidebar_label: "revokeRole()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation revokes the role assigned to a user. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: Znb7dcNoeobIkkxGLGfcpVfUnIX
 sidebar_position: 19
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
   - zilliz
   - zilliz cloud
   - cloud
   - revokeRole()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "getIndexBuildProgress() | Node.js"
 slug: /node/node/Management-getIndexBuildProgress
 sidebar_label: "getIndexBuildProgress()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation gets the build progress of the specified index. | Node.js"
 type: docx
 token: G6CGdbM4QoNgr5xS1ZAc94lhnFd
-sidebar_position: 9
+sidebar_position: 11
 keywords: 
-  - Zilliz
-  - milvus vector database
-  - milvus db
-  - milvus vector db
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud
   - getIndexBuildProgress()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

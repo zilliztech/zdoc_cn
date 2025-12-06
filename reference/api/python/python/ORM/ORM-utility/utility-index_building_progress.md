@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "index_building_progress() | Python | ORM"
 slug: /python/python/utility-index_building_progress
 sidebar_label: "index_building_progress()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation returns the progress of the index-building process. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: OVfodiKa6o3qTGxadYicI975nhh
 sidebar_position: 21
 keywords: 
-  - RAG
-  - NLP
-  - Neural Network
-  - Deep Learning
+  - nn search
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
   - zilliz
   - zilliz cloud
   - cloud
   - index_building_progress()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

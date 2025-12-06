@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "renameCollection() | Java | v2"
 slug: /java/java/v2-Collections-renameCollection
 sidebar_label: "renameCollection()"
+added_since: v2.3.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation renames an existing collection. | Java | v2"
 type: docx
-token: CtTvdQVMoo2ec5xbWTPcSzjNnQc
+token: JCutdOT9Polf2dxej0mcoP24n9c
 sidebar_position: 21
 keywords: 
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - milvus vector database
   - zilliz
   - zilliz cloud
   - cloud
   - renameCollection()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -38,6 +41,7 @@ public void renameCollection(RenameCollectionReq request)
 
 ```java
 renameCollection(RenameCollectionReq.builder()
+    .databaseName(String databaseName)
     .collectionName(String collectionName)
     .newCollectionName(String newCollectionName)
     .build()
@@ -45,6 +49,10 @@ renameCollection(RenameCollectionReq.builder()
 ```
 
 **BUILDER METHODS:**
+
+- `databaseName(String databaseName)`
+
+    The name of the database to which the target collection belongs.
 
 - `collectionName(String collectionName)`
 

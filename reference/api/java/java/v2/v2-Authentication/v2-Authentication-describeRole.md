@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "describeRole() | Java | v2"
 slug: /java/java/v2-Authentication-describeRole
 sidebar_label: "describeRole()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation describes a specific role. | Java | v2"
 type: docx
-token: Fs7qdzeHZo305txlj45cgqoVnUf
+token: VDKPdBJzdoAu7exEOE2czN2gnTd
 sidebar_position: 5
 keywords: 
-  - vector databases comparison
-  - Faiss
-  - Video search
-  - AI Hallucination
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
   - describeRole()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -39,6 +42,7 @@ public DescribeRoleResp describeRole(DescribeRoleReq request)
 ```java
 describeRole(DescribeRoleReq.builder()
     .roleName(String roleName)
+    .dbName(String dbName)
     .build()
 )
 ```
@@ -48,6 +52,10 @@ describeRole(DescribeRoleReq.builder()
 - `roleName(String roleName)`
 
     The name of the role to describe.
+
+- `dbName(String dbName)`
+
+    The name of the database associated with the role.
 
 **RETURN Type:**
 

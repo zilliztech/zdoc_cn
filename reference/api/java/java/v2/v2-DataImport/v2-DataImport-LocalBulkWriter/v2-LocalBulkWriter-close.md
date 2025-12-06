@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "close() | Java | v2"
 slug: /java/java/v2-LocalBulkWriter-close
 sidebar_label: "close()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation closes the current LocalBulkWriter instance. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: OEcUdoX1yoc94axfwpjcdA2jnEf
 sidebar_position: 2
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
   - zilliz
   - zilliz cloud
   - cloud
   - close()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

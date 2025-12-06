@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "describeUser() | Java | v2"
 slug: /java/java/v2-Authentication-describeUser
 sidebar_label: "describeUser()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation describes a specific user. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: YLQJdvVA8odibAx7mQscYwMVn8g
 sidebar_position: 6
 keywords: 
-  - what is semantic search
-  - Embedding model
-  - image similarity search
-  - Context Window
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
   - zilliz
   - zilliz cloud
   - cloud
   - describeUser()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

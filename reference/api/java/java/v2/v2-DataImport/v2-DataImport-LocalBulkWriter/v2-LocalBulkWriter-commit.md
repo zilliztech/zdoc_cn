@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "commit() | Java | v2"
 slug: /java/java/v2-LocalBulkWriter-commit
 sidebar_label: "commit()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation commits the appended data. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: OUhTdWnXBoHqKdxTA0HcdMY5n4b
 sidebar_position: 3
 keywords: 
-  - Unstructured Data
-  - vector database
-  - IVF
-  - knn
+  - rag llm architecture
+  - private llms
+  - nn search
+  - llm eval
   - zilliz
   - zilliz cloud
   - cloud
   - commit()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "create_database() | Python | MilvusClient"
 slug: /python/python/Database-create_database
 sidebar_label: "create_database()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates a database. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: S278drWUVoRZ5fx8XkfcWaZfnwh
 sidebar_position: 2
 keywords: 
-  - vector database tutorial
   - how do vector databases work
   - vector db comparison
   - openai vector db
+  - natural language processing database
   - zilliz
   - zilliz cloud
   - cloud
   - create_database()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

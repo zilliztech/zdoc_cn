@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "createAlias() | Node.js"
 slug: /node/node/Collections-createAlias
 sidebar_label: "createAlias()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates an alias for an existing collection. | Node.js"
 type: docx
 token: MPuIdwujBoXM6rx7Okfc3lhZnUd
-sidebar_position: 5
+sidebar_position: 4
 keywords: 
-  - Context Window
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud
   - createAlias()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

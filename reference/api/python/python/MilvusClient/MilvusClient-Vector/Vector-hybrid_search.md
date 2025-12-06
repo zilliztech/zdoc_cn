@@ -3,22 +3,25 @@ displayed_sidbar: pythonSidebar
 title: "hybrid_search() | Python | MilvusClient"
 slug: /python/python/Vector-hybrid_search
 sidebar_label: "hybrid_search()"
+added_since: v2.5.x
+last_modified: v2.6.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation performs multi-vector search on a collection and returns search results after reranking. | Python | MilvusClient"
 type: docx
-token: NEyWdddQ8oKCw4xQTFPcvDTLn3f
+token: Iv1PdIVxYoDOMax47xDcLnbEnXb
 sidebar_position: 9
 keywords: 
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - milvus lite
   - zilliz
   - zilliz cloud
   - cloud
   - hybrid_search()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---
@@ -36,7 +39,7 @@ This operation performs multi-vector search on a collection and returns search r
 hybrid_search(
     collection_name: str,
     reqs: List[AnnSearchRequest],
-    ranker: BaseRanker,
+    ranker: Union[BaseRanker, Function],
     limit: int = 10,   
     output_fields: Optional[List[str]] = None,
     timeout: Optional[float] = None,
@@ -80,13 +83,11 @@ hybrid_search(
 
             If you choose to use placeholders in `expr` as stated in [Filtering Templating](/docs/filtering-templating), then you can specify the actual values for these placeholders as key-value pairs as the value of this parameter.
 
-- **ranker** (*BaseRanker*) -
+- **ranker** (*Union[BaseRanker, Function]*) -
 
-    The reranking strategy to use for hybrid search. Valid values: `WeightedRanker` and `RRFRanker`.
+    The reranking strategy to use for hybrid search.
 
-    - `WeightedRanker`: The Average Weighted Scoring reranking strategy, which prioritizes vectors based on relevance, averaging their significance.
-
-    - `RRFRanker`: The RRF reranking strategy, which merges results from multiple searches, favoring items that consistently appear.
+    For details, refer to [Weighted Ranker](/docs/reranking-weighted-reranker), [RRF Ranker](/docs/reranking-rrf) and .
 
 - **limit** (*int*) -
 

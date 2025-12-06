@@ -3,22 +3,25 @@ displayed_sidbar: javaSidebar
 title: "dropCollection() | Java | v2"
 slug: /java/java/v2-Collections-dropCollection
 sidebar_label: "dropCollection()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a collection. | Java | v2"
 type: docx
-token: PsAGd1CNqosvirxDJ5ncIHudnSg
+token: DMh5d1uiGolDtLxSNpCcWx9On7c
 sidebar_position: 14
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - IVF
   - zilliz
   - zilliz cloud
   - cloud
   - dropCollection()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---
@@ -39,7 +42,6 @@ public void dropCollection(DropCollectionReq request)
 ```java
 dropCollection(DropCollectionReq.builder()
     .collectionName(String collectionName)
-    .async(Boolean async)
     .timeout(Long timeout)
     .build()
 )
@@ -50,12 +52,6 @@ dropCollection(DropCollectionReq.builder()
 - `collectionName(String collectionName)`
 
     The name of an existing collection.
-
-- `async(Boolean async)`
-
-    Whether this operation is asynchronous.
-
-    The value defaults to `Boolean.True`, indicating immediate return while the process may still run in the background.
 
 - `timeout(Long timeout)`
 

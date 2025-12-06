@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "dropDatabase() | Node.js"
 slug: /node/node/Database-dropDatabase
 sidebar_label: "dropDatabase()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a database. | Node.js"
@@ -10,15 +13,15 @@ type: docx
 token: Ja99dnnaOoncwbx2zIPc4PjunXx
 sidebar_position: 3
 keywords: 
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud
   - dropDatabase()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

@@ -3,22 +3,25 @@ displayed_sidbar: pythonSidebar
 title: "add_field() | Python | MilvusClient"
 slug: /python/python/CollectionSchema-add_field_1
 sidebar_label: "add_field()"
+added_since: v2.3.x
+last_modified: v2.5.x
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation adds a field to the schema of a collection. | Python | MilvusClient"
 type: docx
-token: X1L2dAjDyo7yqOxqWELcBRBUndd
+token: Ehbdd1HRLoB34nxU6hQcRk2Mnug
 sidebar_position: 1
 keywords: 
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
+  - Embedding model
+  - image similarity search
+  - Context Window
+  - Natural language search
   - zilliz
   - zilliz cloud
   - cloud
   - add_field()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---
@@ -74,21 +77,15 @@ add_field(
 
         - **DataType.DOUBLE**,
 
-        - **DataType.BINARY_VECTOR**,
-
-        - **DataType.FLOAT_VECTOR**,
-
-        - **DataType.FLOAT16_VECTOR**,
-
-        - **DataType.BFLOAT16_VECTOR**,
-
         - **DataType.VARCHAR**,
 
-        - **DataType.JSON**, and
+    - Composite fields: Choose from a variety of options, including 
+
+        - **DataType.JSON**
 
         - **DataType.ARRAY**
 
-    - Vector fields: Select **DataType.FLOAT_VECTOR**, **DataType.BINARY_VECTOR** <sup>(Beta)</sup>, **DataType.FLOAT16_VECTOR** <sup>(Beta)</sup>, **DataType.BFLOAT16_VECTOR** <sup>(Beta)</sup>, or **DataType.SPARSE_FLOAT_VECTOR** <sup>(Beta)</sup>.
+    - Vector fields: Select **DataType.BINARY_VECTOR**, **DataType.FLOAT_VECTOR**, **DataType.FLOAT16_VECTOR**, **DataType.BFLOAT16_VECTOR**, **DataType.SPARSE_FLOAT_VECTOR**, or **DataType.INT8_VECTOR**.
 
 - **is_primary** (*bool*) -
 
@@ -141,7 +138,7 @@ add_field(
 
 **RETURN TYPE:**
 
-*[CollectionSchema](./ORM-CollectionSchema)*
+*[CollectionSchema](./MilvusClient-CollectionSchema)*
 
 **RETURNS:**
 
@@ -207,18 +204,3 @@ schema.add_field(
 #     ]
 # }
 ```
-
-## Related operations
-
-The following operations are related to `add_field()`:
-
-- [FieldSchema](./ORM-FieldSchema)
-
-- [DataType](./Collections-DataType)
-
-- [construct_from_dict()](./CollectionSchema-construct_from_dict)
-
-- [to_dict()](./CollectionSchema-to_dict)
-
-- [verify()](./CollectionSchema-verify)
-

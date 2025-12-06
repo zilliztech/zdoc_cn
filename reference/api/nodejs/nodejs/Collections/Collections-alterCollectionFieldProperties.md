@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "alterCollectionFieldProperties() | Node.js"
 slug: /node/node/Collections-alterCollectionFieldProperties
 sidebar_label: "alterCollectionFieldProperties()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation modifies the properties of a specified collection field. | Node.js"
@@ -10,15 +13,15 @@ type: docx
 token: RQH5dhSenoDGjYxyBb2c3n1rnie
 sidebar_position: 2
 keywords: 
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
-  - what is milvus
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud
   - alterCollectionFieldProperties()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

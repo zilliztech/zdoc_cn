@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "listPrivilegeGroups() | Java | v2"
 slug: /java/java/v2-Authentication-listPrivilegeGroups
 sidebar_label: "listPrivilegeGroups()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all privilege groups. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: TGsXduN5OoAjVyxZTvRc8HR2nse
 sidebar_position: 13
 keywords: 
-  - What are vector embeddings
   - vector database tutorial
   - how do vector databases work
   - vector db comparison
+  - openai vector db
   - zilliz
   - zilliz cloud
   - cloud
   - listPrivilegeGroups()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

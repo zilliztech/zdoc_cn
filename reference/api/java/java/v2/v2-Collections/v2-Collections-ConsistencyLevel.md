@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "ConsistencyLevel | Java | v2"
 slug: /java/java/v2-Collections-ConsistencyLevel
 sidebar_label: "ConsistencyLevel"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: Q8IidbqKMopplgxSxaicS2o9nwc
 sidebar_position: 5
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
   - zilliz
   - zilliz cloud
   - cloud
   - ConsistencyLevel
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

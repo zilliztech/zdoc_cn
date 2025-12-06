@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "describeRole() | Node.js"
 slug: /node/node/Authentication-describeRole
 sidebar_label: "describeRole()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation describes a specific role. | Node.js"
 type: docx
 token: ItZPd1o4uoodqtx1sxIcq38hn7e
-sidebar_position: 7
+sidebar_position: 9
 keywords: 
-  - cosine distance
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
   - zilliz
   - zilliz cloud
   - cloud
   - describeRole()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

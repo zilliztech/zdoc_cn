@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "drop_index_properties() | Python | MilvusClient"
 slug: /python/python/Management-drop_index_properties
 sidebar_label: "drop_index_properties()"
+added_since: v2.5.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops the specified index properties. | Python | MilvusClient"
@@ -10,15 +13,15 @@ type: docx
 token: M2kXd5zWSoMIOnxXWamcgCkznih
 sidebar_position: 15
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
   - zilliz
   - zilliz cloud
   - cloud
   - drop_index_properties()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

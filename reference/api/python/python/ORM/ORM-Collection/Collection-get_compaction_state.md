@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "get_compaction_state() | Python | ORM"
 slug: /python/python/Collection-get_compaction_state
 sidebar_label: "get_compaction_state()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation gets the current compaction state. | Python | ORM"
@@ -10,15 +13,15 @@ type: docx
 token: AXcMd0xiOovIX6xR4ZrcKA15nwh
 sidebar_position: 13
 keywords: 
-  - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
   - zilliz
   - zilliz cloud
   - cloud
   - get_compaction_state()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

@@ -3,6 +3,9 @@ displayed_sidbar: javaSidebar
 title: "createDatabase() | Java | v2"
 slug: /java/java/v2-Database-createDatabase
 sidebar_label: "createDatabase()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates a database with a name. | Java | v2"
@@ -10,15 +13,15 @@ type: docx
 token: IqQudFVIKot4mVxWD4xclJymn8g
 sidebar_position: 2
 keywords: 
-  - open source vector database
-  - Vector index
-  - vector database open source
-  - open source vector db
+  - LLMs
+  - Machine Learning
+  - RAG
+  - NLP
   - zilliz
   - zilliz cloud
   - cloud
   - createDatabase()
-  - javaV225
+  - javaV226
 displayed_sidebar: javaSidebar
 
 ---

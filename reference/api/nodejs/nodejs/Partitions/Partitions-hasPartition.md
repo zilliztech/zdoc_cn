@@ -3,6 +3,9 @@ displayed_sidbar: nodeSidebar
 title: "hasPartition() | Node.js"
 slug: /node/node/Partitions-hasPartition
 sidebar_label: "hasPartition()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation checks whether the specified partition exists in the specified collection. | Node.js"
@@ -10,15 +13,15 @@ type: docx
 token: TVWPdTw2WoPAJYxsbGMc7MX6nEf
 sidebar_position: 4
 keywords: 
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
   - zilliz
   - zilliz cloud
   - cloud
   - hasPartition()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

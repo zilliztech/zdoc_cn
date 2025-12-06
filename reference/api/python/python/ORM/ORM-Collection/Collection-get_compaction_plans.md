@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "get_compaction_plans() | Python | ORM"
 slug: /python/python/Collection-get_compaction_plans
 sidebar_label: "get_compaction_plans()"
+added_since: Inherit
+last_modified: false
+deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
 description: "This operation gets the current compaction plans. | Python | ORM"
@@ -18,7 +21,7 @@ keywords:
   - zilliz cloud
   - cloud
   - get_compaction_plans()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

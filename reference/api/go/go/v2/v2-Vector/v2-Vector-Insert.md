@@ -3,10 +3,13 @@ title: "Insert() | Go | v2"
 slug: /go/v2-Vector-Insert
 sidebar_label: "Insert()"
 beta: FALSE
+added_since: v2.5.x
+last_modified: v2.6.x
+deprecate_since: FALSE
 notebook: FALSE
 description: "This method inserts data into a specific collection. | Go | v2"
 type: origin
-token: BcTKwc4G5iq7wlkazSGcZJgSnR0
+token: DSUtwOAjSijOjkkyjVzcnSX4nNh
 sidebar_position: 1
 displayed_sidebar: goSidebar
 
@@ -39,7 +42,7 @@ func (c *Client) Insert(ctx context.Context, option InsertOption, callOptions ..
    <tr>
      <td><p><code>option</code></p></td>
      <td><p>Optional parameters of the methods.</p></td>
-     <td><p><code>InsertOption</code></p></td>
+     <td><p><a href="./v2-Vector-Insert#insertoption"><code>InsertOption</code></a></p></td>
    </tr>
    <tr>
      <td><p><code>callOptions</code></p></td>
@@ -52,7 +55,7 @@ func (c *Client) Insert(ctx context.Context, option InsertOption, callOptions ..
 
 This is an interface type. The `columnBasedDataOption` and `rowBasedDataOption` struct types implement this interface type. 
 
-You can use the `NewColumnBasedInsertOption()` or `NewRowBasedInsertOption()` function to get the concrete implementation.
+You can use the [`NewColumnBasedInsertOption()`](./v2-Vector-Insert#newcolumnbasedinsertoption) or [`NewRowBasedInsertOption()`](./v2-Vector-Insert#newrowbasedinsertoption) function to get the concrete implementation.
 
 ### NewRowBasedInsertOption
 
@@ -102,7 +105,7 @@ func NewColumnBasedInsertOption(collName string, columns ...column.Column) *colu
    <tr>
      <td><p><code>columns</code></p></td>
      <td><p>Data organized in columns.</p></td>
-     <td><p><code>...column.Column</code></p></td>
+     <td><p><a href="./v2-Vector-Insert#columncolumn"><code>...column.Column</code></a></p></td>
    </tr>
 </table>
 
@@ -132,6 +135,8 @@ You can chain the following method to get an implementation of the `columnBasedD
 
 - [WithPartition](./v2-Vector-Insert#withpartition)
 
+- [WithPartialUpdate](./v2-Vector-Insert#withpartialupdate)
+
 ### WithColumns
 
 This method appends a generic column to the `columnBasedDataOption` struct.
@@ -149,7 +154,7 @@ func (opt *columnBasedDataOption) WithColumns(columns ...column.Column) *columnB
    <tr>
      <td><p><code>columns</code></p></td>
      <td><p>Data in the column.</p></td>
-     <td><p><code>column.Column</code></p></td>
+     <td><p><a href="./v2-Vector-Insert#columncolumn"><code>column.Column</code></a></p></td>
    </tr>
 </table>
 
@@ -454,6 +459,27 @@ func (opt *columnBasedDataOption) WithPartition(partitionName string) *columnBas
    </tr>
 </table>
 
+### WithPartialUpdate
+
+This method sets whether to include only the fields that need updating in the `upsert` request.
+
+```go
+func (opt *columnBasedDataOption) WithPartialUpdate(partialUpdate bool) *columnBasedDataOption
+```
+
+<table>
+   <tr>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
+   </tr>
+   <tr>
+     <td><p><code>partialUpdate</code></p></td>
+     <td><p>Decide whether to include only the fields that need updating.</p></td>
+     <td><p><code>bool</code></p></td>
+   </tr>
+</table>
+
 ## column.Column
 
 This is an interface type. The following struct types implement this interface type. 
@@ -746,7 +772,7 @@ func NewColumnDynamic(column *ColumnJSONBytes, outputField string) *ColumnDynami
    <tr>
      <td><p><code>column</code></p></td>
      <td><p>A column of the JSON type.</p></td>
-     <td><p><code>*column.ColumnJSONBytes</code></p></td>
+     <td><p><a href="./v2-Vector-Insert#columncolumnjsonbytes"><code>*column.ColumnJSONBytes</code></a></p></td>
    </tr>
    <tr>
      <td><p><code>outputField</code></p></td>
@@ -913,6 +939,36 @@ func NewColumnFloatVector(fieldName string, dim int, data [][]float32) *ColumnFl
      <td><p><code>data</code></p></td>
      <td><p>Data to be inserted into the field.</p></td>
      <td><p><code>[][]float32</code></p></td>
+   </tr>
+</table>
+
+## column.ColumnGeometryWKT
+
+This is a struct type. You can use the `NewColumnGeometryWKT` method to implement a **GeometryWKT** field.
+
+### NewColumnGeometryWKT
+
+This method creates a GeometryWKT field with a list of strings. The signature of this method is as follows:
+
+```go
+func NewColumnGeometryWKT(name string, values []string) *ColumnGeometryWKT
+```
+
+<table>
+   <tr>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
+   </tr>
+   <tr>
+     <td><p><code>name</code></p></td>
+     <td><p>Name of the field to create.</p></td>
+     <td><p><code>string</code></p></td>
+   </tr>
+   <tr>
+     <td><p><code>values</code></p></td>
+     <td><p>Geometry information in WKT format in a list of strings.</p></td>
+     <td><p><code>[]string</code></p></td>
    </tr>
 </table>
 
@@ -1212,7 +1268,7 @@ func NewColumnSparseVectors(name string, values []entity.SparseEmbedding) *Colum
    <tr>
      <td><p><code>values</code></p></td>
      <td><p>Data to be inserted into the field.</p></td>
-     <td><p><code>[]entity.SparseEmbedding</code></p></td>
+     <td><p><a href="./v2-Vector-Insert"><code>[]entity.SparseEmbedding</code></a></p></td>
    </tr>
 </table>
 

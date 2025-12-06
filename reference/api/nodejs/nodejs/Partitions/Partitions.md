@@ -3,21 +3,24 @@ title: "Partitions | Node.js"
 slug: /node/Partitions
 beta: false
 notebook: false
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 description: "Methods related to the manipulation of the partitions in a collection. | Node.js"
 type: folder
-token: JfB5fh16rl1R1qdNVgec1Kdongc
-sidebar_position: 8
+token: Hg5PfTIHll3FK4dbYdxcaURHn2n
+sidebar_position: 6
 sidebar_label: "Partitions"
 keywords: 
-  - Annoy vector search
-  - milvus
-  - Zilliz
-  - milvus vector database
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - milvus lite
   - zilliz
   - zilliz cloud
   - cloud
   - Partitions
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 ---
 
