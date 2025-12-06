@@ -3,11 +3,14 @@ title: "版本说明书（2023/11/23） | Cloud"
 slug: /release-notes-230
 sidebar_label: "版本说明书（2023/11/23）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "我们很高兴地宣布 Zilliz Cloud 2.3.0 的发布。此版本引入了一系列创新 Beta 特性和功能改进。 | Cloud"
 type: origin
 token: BuuSwsbhEiIHDJkB9YSc63xAnrh
-sidebar_position: 14
+sidebar_position: 19
 keywords: 
   - 向量数据库
   - zilliz
@@ -28,7 +31,7 @@ import Admonition from '@theme/Admonition';
 
 此次发布兼容 **Milvus 2.2.x** 以及 **Milvus 2.3.x (Beta)**。
 
-## 创新 Beta 特性{#innovative-beta-features}
+## 创新 Beta 特性\{#innovative-beta-features}
 
 通过我们最新的 Beta 特性，探索未来。立即升级以体验这些增强功能：
 
@@ -60,7 +63,7 @@ import Admonition from '@theme/Admonition';
 
     快速概览加载的[集合中的 Entity 总数](./single-vector-search#use-output-fields)，以更好地管理数据。
 
-## 功能改进{#enhancements}
+## 功能改进\{#enhancements}
 
 我们还实施了几项增强功能，以提升您的整体体验：
 

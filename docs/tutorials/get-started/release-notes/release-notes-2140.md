@@ -3,11 +3,14 @@ title: "版本说明书（2025/03/27） | Cloud"
 slug: /release-notes-2140
 sidebar_label: "版本说明书（2025/03/27）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本次发布在 PRIVATE PREVIEW 中引入了数据平面审计日志功能。旨在通过提供在数据平面上执行的操作的详细日志来增强数据安全性。除了该功能外，Zilliz Cloud还修订了其优惠券策略。 | Cloud"
 type: origin
 token: NYaTwrUG1iT6CCkUSnJcCQPqnsb
-sidebar_position: 3
+sidebar_position: 8
 keywords: 
   - 向量数据库
   - zilliz
@@ -24,7 +27,7 @@ import Admonition from '@theme/Admonition';
 
 本次发布在 **PRIVATE PREVIEW** 中引入了数据平面审计日志功能。旨在通过提供在数据平面上执行的操作的详细日志来增强数据安全性。除了该功能外，Zilliz Cloud还修订了其优惠券策略。
 
-## Milvus 兼容性{#milvus-compatibility}
+## Milvus 兼容性\{#milvus-compatibility}
 
 本次发布后创建的所有集群均兼容 **Milvus v2.4.x**。
 
@@ -32,7 +35,7 @@ import Admonition from '@theme/Admonition';
 
 ![CQ2Bb4smUoGEehxHoqZcsdVUnHe](/img/CQ2Bb4smUoGEehxHoqZcsdVUnHe.png)
 
-## 数据平面审计日志：提供全面的操作审计日志，为数据操作安全保驾护航{#data-plane-audit-logs-protect-your-data-operations-with-comprehensive-action-logs-for-auditing}
+## 数据平面审计日志：提供全面的操作审计日志，为数据操作安全保驾护航\{#data-plane-audit-logs-protect-your-data-operations-with-comprehensive-action-logs-for-auditing}
 
 数据平面审计日志功能可以让集群管理员监控和跟踪 Zilliz Cloud 集群用户的数据操作和 API 调用，包括向量搜索和查询、索引管理等各类数据操作，并提供全面的数据平面操作记录，为安全审计、合规审查和问题排查提供数据支撑，提升数据平面各类操作的可见性和集群管理员的数据洞察能力。
 
@@ -42,6 +45,6 @@ import Admonition from '@theme/Admonition';
 
 该功能现已支持记录超过 70 种操作和事件，涉及 Collection、Database、Entities（搜索、混合搜索、插入、更新、删除）、索引、Partition 和 别名等多种资源对象。Zilliz Cloud 还会在未来的版本中增加对更多的操作和事件的支持。关于当前已支持的操作和事件，可以参考[审计日志参考](./audit-logs-ref)。
 
-## 其它增强{#other-enhancements}
+## 其它增强\{#other-enhancements}
 
 从本次发布开始，Zilliz Cloud 调整了其优惠券策略。关于本次发布后将执行的优惠券策略，可以参考[免费试用 Zilliz Cloud](./free-trials)。

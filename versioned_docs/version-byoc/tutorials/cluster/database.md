@@ -1,13 +1,16 @@
 ---
-title: "Database | Cloud"
+title: "Database | BYOC"
 slug: /database
 sidebar_label: "Database"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 在集群和 Collection 之间引入了一层 Database，可帮助您更高效地组织和管理数据，同时满足您的多租需求。 | Cloud"
+description: "Zilliz Cloud 在集群和 Collection 之间引入了一层 Database，可帮助您更高效地组织和管理数据，同时满足您的多租需求。 | BYOC"
 type: origin
 token: VhSHwx56YiKY8VkRCHZcXspznbh
-sidebar_position: 6
+sidebar_position: 7
 keywords: 
   - 向量数据库
   - zilliz
@@ -26,27 +29,21 @@ import TabItem from '@theme/TabItem';
 
 Zilliz Cloud 在集群和 Collection 之间引入了一层 **Database**，可帮助您更高效地组织和管理数据，同时满足您的多租需求。
 
-## 什么是 Database{#what-is-a-database}
+## 什么是 Database\{#what-is-a-database}
 
 在 Zilliz Cloud 中，Database 是用于组织和管理数据的逻辑单元。为了增强数据安全并实现多租，您可以创建多个 Database，从逻辑上将不同应用和不同租户的数据隔离开来。例如，您可以针对两名不同用户的数据创建不同的 Database。
 
 下图展示了 Zilliz Cloud 资源层级的架构。
 
-![HBJew3E05hLhtObS4jZcUV0Nnig](/img/HBJew3E05hLhtObS4jZcUV0Nnig.png)
+![S5U6wtYJ3hqBoabccIQcPXdVnsd](/img/S5U6wtYJ3hqBoabccIQcPXdVnsd.png)
 
-通过上图可以看到，仅 Dedicated 集群下有 Database 层。 Serverless 和 Free 集群下无 Database 层。
-
-## 前提条件{#prerequisites}
-
-您需要具备**组织管理员**或**项目管理员**权限。
-
-## 创建 Database{#create-database}
+## 创建 Database\{#create-database}
 
 仅 Dedicated 集群支持创建 Database。在您创建 Dedicated 集群的同时，Zilliz Cloud 会为您在集群下自动创建一个 Default Database。
 
 每个 Dedicated 集群中最多可创建 1024 个 Database。您可以选择通过控制台或编程的方式创建 Database。
 
-### 在控制台中创建 Database{#create-a-database-on-the-console}
+### 在控制台中创建 Database\{#create-a-database-on-the-console}
 
 您可以按照如下图所示的方式创建 Database。
 
@@ -54,7 +51,7 @@ Zilliz Cloud 在集群和 Collection 之间引入了一层 **Database**，可帮
 
 您也可以将创建好的 Collection 从一个 Database 移动到另一个 Database 中。更多详情，请参考[管理 Collection (控制台)](./manage-collections-console)。
 
-### 使用 SDK 创建 Database{#create-a-database-programmatically}
+### 使用 SDK 创建 Database\{#create-a-database-programmatically}
 
 您可以使用 RESTful API 或 SDK 创建 Database。
 
@@ -116,7 +113,19 @@ await client.createDatabase({
 <TabItem value='go'>
 
 ```go
-// TODO
+cli, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+    Address: "localhost:19530",
+    Username: "Milvus",
+    Password: "root",
+})
+if err != nil {
+    // handle err
+}
+
+err = cli.CreateDatabase(ctx, milvusclient.NewCreateDatabaseOption("my_database_1"))
+if err != nil {
+    // handle err
+}
 ```
 
 </TabItem>
@@ -172,7 +181,12 @@ client.createDatabase(createDatabaseReq);
 <TabItem value='javascript'>
 
 ```javascript
-// TODO
+await client.createDatabase({
+    db_name: "my_database_2",
+    properties: {
+        "database.replica.number": 3
+    }
+});
 ```
 
 </TabItem>
@@ -180,7 +194,10 @@ client.createDatabase(createDatabaseReq);
 <TabItem value='go'>
 
 ```go
-// TODO
+err := cli.CreateDatabase(ctx, milvusclient.NewCreateDatabaseOption("my_database_2").WithProperty("database.replica.number", 3))
+if err != nil {
+    // handle err
+}
 ```
 
 </TabItem>
@@ -206,7 +223,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 查看 Database{#view-databases}
+## 查看 Database\{#view-databases}
 
 您可以使用 RESTful API 或 SDK 查看所有已创建的 Database 及其详情。
 
@@ -258,7 +275,18 @@ await client.describeDatabase({
 <TabItem value='go'>
 
 ```go
-// TODO
+// List all existing databases
+databases, err := cli.ListDatabase(ctx, milvusclient.NewListDatabaseOption())
+if err != nil {
+    // handle err
+}
+log.Println(databases)
+
+db, err := cli.DescribeDatabase(ctx, milvusclient.NewDescribeDatabaseOption("default"))
+if err != nil {
+    // handle err
+}
+log.Println(db)
 ```
 
 </TabItem>
@@ -281,7 +309,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 管理 Database 属性{#manage-database-properties}
+## 管理 Database 属性\{#manage-database-properties}
 
 每个 Database 都有若干属性供您设置。您可以选择在创建 Database 时设置这些属性或者修改已创建的 Database 的属性。
 
@@ -313,9 +341,14 @@ curl --request POST \
      <td><p>boolean</p></td>
      <td><p>当前 Database 是否强制不可读。</p></td>
    </tr>
+   <tr>
+     <td></td>
+     <td><p>string</p></td>
+     <td></td>
+   </tr>
 </table>
 
-### 修改 Database 属性{#alter-database-properties}
+### 修改 Database 属性\{#alter-database-properties}
 
 您可以参考如下示例修改指定 Database 的上述属性。如下示例演示了如何限制指定 Database 中可以创建的 Collection 数量。
 
@@ -324,8 +357,8 @@ curl --request POST \
 
 ```python
 client.alter_database_properties(
-    db_name: "my_database_1",
-    properties: {
+    db_name="my_database_1",
+    properties={
         "database.max.collections": 10
     }
 )
@@ -358,7 +391,11 @@ await milvusClient.alterDatabaseProperties({
 <TabItem value='go'>
 
 ```go
-// TODO
+err := cli.AlterDatabaseProperties(ctx, milvusclient.NewAlterDatabasePropertiesOption("my_database_1").
+    WithProperty("database.max.collections", 1))
+if err != nil {
+    // handle err
+}
 ```
 
 </TabItem>
@@ -384,7 +421,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 重置 Database 属性{#drop-database-properties}
+### 重置 Database 属性\{#drop-database-properties}
 
 您还可以参考如下示例重置 Database 某个属性的设置。如下示例演示了如何移除指定 Database 中可创建的 Collection 数量限制。
 
@@ -393,8 +430,8 @@ curl --request POST \
 
 ```python
 client.drop_database_properties(
-    db_name: "my_database_1",
-    property_keys: [
+    db_name="my_database_1",
+    property_keys=[
         "database.max.collections"
     ]
 )
@@ -427,7 +464,10 @@ await milvusClient.dropDatabaseProperties({
 <TabItem value='go'>
 
 ```go
-// TODO
+err := cli.DropDatabaseProperties(ctx, milvusclient.NewDropDatabasePropertiesOption("my_database_1", "database.max.collections"))
+if err != nil {
+    // handle err
+}
 ```
 
 </TabItem>
@@ -453,7 +493,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 使用 Database{#use-database}
+## 使用 Database\{#use-database}
 
 您可以使用该操作在不断开连接的情况下切换当前使用的 Database。
 
@@ -506,14 +546,14 @@ if err != nil {
 <TabItem value='bash'>
 
 ```bash
-# RESTful API 不支持长连接，因此不支持当前操作。
-# 如需切换目标 Database，可尝试在需要调用的接口请求中携带目标 Database 名称。
+# This operation is unsupported because RESTful does not provide a persistent connection.
+# As a workaround, initiate the required request again with the target database.
 ```
 
 </TabItem>
 </Tabs>
 
-## 删除 Database{#drop-database}
+## 删除 Database\{#drop-database}
 
 当某个 Database 不再需要时，您可以选择删除该 Database。需要注意的是：
 
@@ -521,13 +561,13 @@ if err != nil {
 
 - 在删除 Database 前，请删除 Database 中的所有 Collection。
 
-### 在控制台中删除 Database{#drop-a-database-on-the-console}
+### 在控制台中删除 Database\{#drop-a-database-on-the-console}
 
 您可以参考下图中的步骤通过控制台删除 Database。
 
 ![drop-database-cn](/img/drop-database-cn.png)
 
-### 使用 SDK 删除 Database{#drop-a-database-programmatically}
+### 使用 SDK 删除 Database\{#drop-a-database-programmatically}
 
 您也可以使用 RESTful API 或 SDK 来删除 Database。
 
@@ -565,7 +605,10 @@ await milvusClient.dropDatabase({
 <TabItem value='go'>
 
 ```go
-// TODO
+err = cli.DropDatabase(ctx, milvusclient.NewDropDatabaseOption("my_database_2"))
+if err != nil {
+    // handle err
+}
 ```
 
 </TabItem>

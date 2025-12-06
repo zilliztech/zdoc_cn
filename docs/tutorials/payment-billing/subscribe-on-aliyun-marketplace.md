@@ -3,11 +3,14 @@ title: "订阅阿里云云市场 | Cloud"
 slug: /subscribe-on-aliyun-marketplace
 sidebar_label: "订阅阿里云云市场"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里云云市场上订阅 Zilliz Cloud。 | Cloud"
 type: origin
 token: UTRZwxLf3ikwvbkXrKjcWAwOnmg
-sidebar_position: 3
+sidebar_position: 4
 keywords: 
   - 向量数据库
   - zilliz
@@ -33,7 +36,7 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 
 ![alibabacloud_procedure](/img/alibabacloud_procedure.png)
 
-## 准备工作{#before-you-start}
+## 准备工作\{#before-you-start}
 
 1. 您已注册并登录您的阿里云帐号。如需使用阿里云自账号购买 Zilliz Cloud 服务，请参考[购买商品](https://help.aliyun.com/zh/marketplace/user-guide/purchase-a-product?spm=a2c4g.11186623.0.i1)。
 
@@ -43,7 +46,7 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 
     1. 如果您尚未注册 Zilliz Cloud，并计划通过阿里云云市场缴纳您名下组织产生的费用。您可以直接前往[阿里云云市场](https://market.aliyun.com/products/56024006/cmgj00063418.html)。
 
-## 操作步骤{#procedures}
+## 操作步骤\{#procedures}
 
 1. 前往[阿里云云市场](https://market.aliyun.com/products/56024006/cmgj00063418.html)开通 Zilliz Cloud 服务。
 
@@ -87,7 +90,7 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 
     ![HsZ9bVAnEo5dOpxVSaBcezaknjd](/img/HsZ9bVAnEo5dOpxVSaBcezaknjd.png)
 
-## 取消订阅{#unsubscribe-alibaba-marketplace}
+## 取消订阅\{#unsubscribe-alibaba-marketplace}
 
 1. 前往阿里云[云市场控制台](https://market.console.aliyun.com/)。
 
@@ -101,7 +104,7 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 
 ![unsubscribe-alibaba-marketplace-cn](/img/unsubscribe-alibaba-marketplace-cn.png)
 
-## 切换用于订阅的阿里云账号{#update-aliyun-marketplace-subscription}
+## 切换用于订阅的阿里云账号\{#update-aliyun-marketplace-subscription}
 
 如果您当前使用阿里云账号 A 在云市场订阅 Zilliz Cloud，但需要切换为使用阿里云账号 B 订阅，您可以：
 
@@ -121,13 +124,13 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 
 ![view-aliyun-subscription-id-cn](/img/view-aliyun-subscription-id-cn.png)
 
-## 重新订阅或解冻后重新开通阿里云云市场{#resubscribe}
+## 重新订阅或解冻后重新开通阿里云云市场\{#resubscribe}
 
 如您在取消订阅后需要重新订阅，请参考[上述操作步骤](./subscribe-on-aliyun-marketplace#procedures)重新开通阿里云云市场扣费渠道。
 
 如果您的阿里云云市场余额不足，阿里云云市场将自动关闭 Zilliz Cloud 服务。此时，您的 Zilliz Cloud 账单界面中将不会显示开通阿里云云市场扣费渠道。Zilliz Cloud 将冻结您的组织。如需继续使用，请先在阿里云云市场充值，充值完成后，请[重新开通阿里云云市场扣费渠道](./subscribe-on-aliyun-marketplace#procedures)。
 
-## Zilliz Cloud 定价{#zilliz-cloud-pricing}
+## Zilliz Cloud 定价\{#zilliz-cloud-pricing}
 
 更多详情，请参考 [Zilliz Cloud 定价](https://zilliz.com.cn/pricing)。
 
@@ -135,7 +138,7 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 
 如需使用 Zilliz Cloud 专有部署版，请[联系销售](https://zilliz.com.cn/contact-sales)。
 
-## 常见问题{#troubleshooting}
+## 常见问题\{#troubleshooting}
 
 **在绑定云市场订阅和 Zilliz Cloud 组织过程中遇到无可用组织的问题该怎么办？**
 
@@ -181,7 +184,7 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 
 阿里云云市场的“免登” 按钮并不是免密登录，实际是用于将您的阿里云市场订阅绑定到 Zilliz Cloud 组织。如果您已完成阿里云云市场订阅，您可以通过 cloud.zilliz.com.cn 登录 Zilliz Cloud。
 
-## 后续操作{#next-steps}
+## 后续操作\{#next-steps}
 
 - 您可以前往 [Zilliz Cloud 文档站](https://docs.zilliz.com.cn)查看产品使用指南。
 

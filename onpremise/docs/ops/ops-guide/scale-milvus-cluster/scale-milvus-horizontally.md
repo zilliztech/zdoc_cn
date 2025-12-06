@@ -3,6 +3,9 @@ title: "Milvus 集群横向扩缩容 | On-Premise"
 slug: /scale-milvus-horizontally
 sidebar_label: "横向扩缩容"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "横向扩缩容是指通过增加和减少 Milvus 集群各组件的副本数量对 Milvus 集群进行扩缩容。本节主要介绍如何对 Milvus 集群进行横向扩缩容。 | On-Premise"
 type: origin
@@ -36,7 +39,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 操作步骤{#procedures}
+## 操作步骤\{#procedures}
 
 您可以按照如下步骤对 Milvus 集群进行横向扩缩容。
 

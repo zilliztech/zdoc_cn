@@ -3,6 +3,9 @@ title: "阿里云对象存储 | Cloud"
 slug: /integrate-with-storage-bucket
 sidebar_label: "阿里云 OSS"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出到指定的 OSS 存储桶。 | Cloud"
 type: origin
@@ -30,19 +33,19 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>此功能目前仅对 <strong>Dedicated</strong> 集群提供<strong>内测</strong>（Private Preview）。如需启用此功能或了解相关费用，请联系 <a href="http://support.zilliz.com.cn">Zilliz Cloud 支持团队</a>。</p>
+<p>此功能仅限<strong>企业版</strong>项目中的 <strong>Dedicated</strong> 集群使用。</p>
 
 </Admonition>
 
 ![GPQdwo63IhxSjqbk9vkcdZQXngM](/img/GPQdwo63IhxSjqbk9vkcdZQXngM.png)
 
-## 开始前{#before-you-start}
+## 开始前\{#before-you-start}
 
 - 要将 Zilliz Cloud 与阿里云对象存储 OSS 集成，您需要拥有**组织管理员**或**项目管理员**权限。如果您权限不足，请联系 Zilliz Cloud 管理员。
 
 - 您需要具备阿里云 **RAM 管理员**权限。有关更多信息，请参考 [RAM 基本概念](https://help.aliyun.com/zh/ram/product-overview/terms)。
 
-## 步骤 1：集成基础设置{#step-1-start-integration-on-zilliz-cloud}
+## 步骤 1：集成基础设置\{#step-1-start-integration-on-zilliz-cloud}
 
 1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)。
 
@@ -60,7 +63,7 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出�
 
 ![integrate-with-oss-1](/img/integrate-with-oss-1.png)
 
-## 步骤 2：设置 OSS 存储空间{#step-2-create-s3-bucket}
+## 步骤 2：设置 OSS 存储空间\{#step-2-create-s3-bucket}
 
 1. 登录 [OSS 管理控制台](https://oss.console.aliyun.com/)。
 
@@ -80,7 +83,7 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出�
 
 ![integrate-with-oss-2](/img/integrate-with-oss-2.png)
 
-## 步骤 3：创建权限策略{#step-3-create-iam-policy}
+## 步骤 3：创建权限策略\{#step-3-create-iam-policy}
 
 要使 Zilliz Cloud 访问 OSS 存储空间，您需要创建一个权限策略。该策略应包含必要的操作权限和资源，确保 Zilliz Cloud 能顺利地与您的存储空间进行备份文件的传输。
 
@@ -119,7 +122,7 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出�
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p><code>$bucket</code> 应替换为您实际的 OSS 存储空间名称。</p>
+    <p><code>#bucket</code> 应替换为您实际的 OSS 存储空间名称。</p>
 
     </Admonition>
 
@@ -129,7 +132,7 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出�
 
 ![integrate-with-oss-3](/img/integrate-with-oss-3.png)
 
-## 步骤 4：创建 RAM 角色{#step-4-create-iam-role}
+## 步骤 4：创建 RAM 角色\{#step-4-create-iam-role}
 
 创建 RAM 角色，并将[步骤 3](./integrate-with-storage-bucket) 中定义的权限策略赋予该角色。
 
@@ -177,9 +180,9 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出�
 
 1. 点击**保存信任策略**。然后继续执行[步骤 5](./integrate-with-storage-bucket)。
 
-    ![integrate-with-oss-5](/img/integrate-with-oss-5.png)
+    undefined
 
-## 步骤 5：校验并创建集成{#step-5-validate-and-create-integration}
+## 步骤 5：校验并创建集成\{#step-5-validate-and-create-integration}
 
 1. 在 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)，点击**校验集成**，验证当前配置的存储空间和 RAM 角色是否有效。
 
@@ -187,13 +190,13 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出�
 
 之后您便可以将备份文件导出到您的阿里云 OSS。有关导出的具体步骤，请参考[导出备份文件](./export-backup-files)。
 
-## 管理集成{#manage-integrations}
+## 管理集成\{#manage-integrations}
 
 集成添加完成后，您可以查看其详细信息或根据需要删除该集成。
 
 ![integrate-with-oss-6](/img/integrate-with-oss-6.png)
 
-### 获取集成 ID{#obtain-the-integration-id}
+### 获取集成 ID\{#obtain-the-integration-id}
 
 如果您需要使用 RESTful API 接口导出文件到您集成到 Zilliz Cloud 的对象存储桶中，您可以单击**查看详情**查看该对象存储桶的集成详情并复制该桶的集成 ID。
 

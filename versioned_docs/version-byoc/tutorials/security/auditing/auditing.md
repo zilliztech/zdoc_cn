@@ -1,10 +1,13 @@
 ---
-title: "审计 | Cloud"
+title: "审计日志 | BYOC"
 slug: /auditing
-sidebar_label: "审计"
-beta: PRIVATE
+sidebar_label: "审计日志"
+beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "了解如何为您的 Zilliz Cloud 集群配置日志审计能力。 | Cloud"
+description: "了解如何为您的 Zilliz Cloud 集群配置日志审计能力。 | BYOC"
 type: origin
 token: BEo3wjHfwiCjSxkmrlQcD7QAnhb
 sidebar_position: 5
@@ -20,7 +23,7 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# 审计
+# 审计日志
 
 了解如何为您的 Zilliz Cloud 集群配置日志审计能力。
 

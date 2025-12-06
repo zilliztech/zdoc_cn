@@ -3,6 +3,9 @@ title: "创建备份 | Cloud"
 slug: /create-snapshot
 sidebar_label: "创建备份"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，备份指的是数据副本，用于在发生数据丢失或系统故障时恢复整个集群或集群中的部分 Collection。 | Cloud"
 type: origin
@@ -21,21 +24,23 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Supademo from '@site/src/components/Supademo';
+
 # 创建备份
 
 在 Zilliz Cloud 中，备份指的是数据副本，用于在发生数据丢失或系统故障时恢复整个集群或集群中的部分 Collection。
 
-创建备份会产生额外[费用](./understand-cost#backup-costs)，按备份存储所在的云地域计费。所有备份文件均存储在与源集群相同的云地域。例如，部署在`阿里云华东1（杭州）`的集群，其备份也将保存在`阿里云华东1（杭州）`。
+创建备份会产生额外[费用](./storage-cost)，按备份存储所在的云地域计费。所有备份文件均存储在与源集群相同的云地域。例如，部署在`阿里云华东1（杭州）`的集群，其备份也将保存在`阿里云华东1（杭州）`。
 
 本文将介绍如何**手动创建备份**。如需自动创建备份，请参见[创建自动备份](./schedule-automatic-backups)。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>备份与恢复功能仅适用于 Dedicated 集群。</p>
+<p>此功能仅限 <strong>Dedicated</strong> 集群使用。</p>
 
 </Admonition>
 
-## 限制说明{#limits}
+## 限制说明\{#limits}
 
 - **访问控制**：仅项目管理员、组织管理员或拥有备份权限的自定义角色可执行备份操作。
 
@@ -51,19 +56,25 @@ import Admonition from '@theme/Admonition';
 
 - **备份任务限制**：
 
-    - 自动备份执行期间无法发起手动备份。
+    - 在所有手动备份任务中，只有一个任务可以处于激活或挂起状态。
 
-    - 若当前有手动备份正在进行，自动备份仍将按计划执行。
+    - 如果开启了自动备份：
 
-## 创建集群备份{#create-cluster-backup}
+        - 若当前有自动备份正在运行，无法启动手动备份任务。
 
-您可以备份整个集群，并在需要时恢复整个集群或集群中的部分 Collection。
+        - 若当前有手动备份正在进行，自动备份仍将按计划执行。
 
-### 通过 Web 控制台{#via-web-console}
+## 创建集群备份\{#create-cluster-backup}
+
+您可以备份整个集群，并在需要时恢复整个集群或集群中的部分 Collection。如果您需要进行跨地域备份以实现容灾，请参见[跨地域备份](./backup-to-other-regions)。
+
+### 通过 Web 控制台\{#via-web-console}
 
 以下 Demo 展示如何通过 Zilliz Cloud 控制台创建集群备份。
 
-### 通过 RESTful API{#via-restful-api}
+<Supademo id="cmcsuck620is09st88znq9ysd?utm_source=link" title=""  />
+
+### 通过 RESTful API\{#via-restful-api}
 
 以下示例展示如何为集群 `in01-xxxxxxxxxxxxxx` 创建集群备份。更多 API 参数细节，请参见[创建备份](/reference/restful/create-backup-v2)。
 
@@ -90,15 +101,17 @@ curl --request POST \
 }
 ```
 
-## 创建 Collection 备份{#create-collection-backup}
+## 创建 Collection 备份\{#create-collection-backup}
 
-如需备份某个特定 Collection 或集群中的部分 Collection，请创建 Collection 级别的备份。
+如需备份某个特定 Collection 或集群中的部分 Collection，请创建 Collection 级别的备份。如果您需要进行跨地域备份以实现容灾，请参见[跨地域备份](./backup-to-other-regions)。
 
-### 通过 Web 控制台{#via-web-console}
+### 通过 Web 控制台\{#via-web-console}
 
 以下 Demo 展示如何通过控制台创建 Collection 备份。
 
-### 通过 RESTful API{#via-restful-api}
+<Supademo id="cmcsuwoo20jn49st8cbnydkj0?utm_source=link" title=""  />
+
+### 通过 RESTful API\{#via-restful-api}
 
 以下示例展示如何为集群 `in01-xxxxxxxxxxxxxx` 中的 `medium_articles` Collection 创建备份。更多 API 参数细节，请参见[创建备份](/reference/restful/create-backup-v2)。
 
@@ -138,7 +151,7 @@ curl --request POST \
 }'
 ```
 
-## 常见问题{#faqs}
+## 常见问题\{#faqs}
 
 **备份任务一般需要多久？**
 备份所需时间取决于数据大小。备份 700 MB 数据大约需要 1 秒。如果集中包含超过 1,000 个 Collection，备份所需时间可能略有延长。

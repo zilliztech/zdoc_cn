@@ -3,6 +3,9 @@ title: "管理 Index | Cloud"
 slug: /manage-indexes
 sidebar_label: "管理 Index"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本教程将介绍如何通过 SDK 管理向量和标量索引。 | Cloud"
 type: origin
@@ -34,14 +37,13 @@ import Admonition from '@theme/Admonition';
 <ul>
 <li><p><a href="./manage-collections-console">通过 Web 控制台创建 Collection</a></p></li>
 <li><p><a href="/reference/create-collection">通过 RESTful API 创建 Collection</a></p></li>
-<li><p><a href="./quick-setup-collections">通过 SDK 快速创建 Collection</a></p></li>
 <li><p><a href="./manage-collections-sdks">通过 SDK 定制化创建 Collection 并设置索引参数</a></p></li>
 </ul>
 <p>您也可以创建非自动加载的 Collection，并自行管理索引。</p>
 
 </Admonition>
 
-## 相关文档{#contents}
+## 相关文档\{#contents}
 
 本章节中，您将学习如何管理向量和标量索引。
 

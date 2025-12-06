@@ -3,11 +3,14 @@ title: "管理订单 | Cloud"
 slug: /manage-order
 sidebar_label: "管理订单"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 控制台提供专门的订单页面，方便您统一集中管理订单。 | Cloud"
 type: origin
 token: FJU5wklQuiAJASkHAFlcQShDn9e
-sidebar_position: 6
+sidebar_position: 7
 keywords: 
   - 向量数据库
   - zilliz
@@ -33,7 +36,7 @@ Zilliz Cloud 控制台提供专门的订单页面，方便您统一集中管理�
 
 本指南将解释如何管理订单。更多账单单相关说明，请参考[了解账单](./view-invoice)。如需管理订单，您的角色需要为**组织管理员**或**项目管理员**。
 
-## 订单概览{#order-overview}
+## 订单概览\{#order-overview}
 
 目前，仅创建包年包月集群、为包年包月集群升配会生成订单。以下为订单示例。
 
@@ -89,7 +92,7 @@ Zilliz Cloud 控制台提供专门的订单页面，方便您统一集中管理�
 
 </Admonition>
 
-## 支付订单{#pay-order}
+## 支付订单\{#pay-order}
 
 支付订单前，请先确保已绑定云市场订阅或者组织现金余额充足。包年包月集群订单暂不支持使用优惠券抵扣。
 
@@ -97,7 +100,7 @@ Zilliz Cloud 控制台提供专门的订单页面，方便您统一集中管理�
 
 ![pay-order-cn](/img/pay-order-cn.png)
 
-## 取消订单{#cancel-order}
+## 取消订单\{#cancel-order}
 
 订单取消后将无法恢复或进行支付，请谨慎操作。
 
@@ -109,7 +112,7 @@ Zilliz Cloud 控制台提供专门的订单页面，方便您统一集中管理�
 
 ![confirm-cancel-order-cn](/img/confirm-cancel-order-cn.png)
 
-## 常见问题{#faqs}
+## 常见问题\{#faqs}
 
 - **为什么我无法创建包年包月集群？**
 

@@ -3,6 +3,9 @@ title: "创建包年包月集群 | Cloud"
 slug: /create-cluster-pre-paid
 sidebar_label: "创建包年包月集群"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "包年包月集群采用预付费的计费方式，即先付费后使用，按照订单的购买时长进行结算。包年包月集群一般适用于资源需求相对稳定的长期业务。购买包年包月集群可享受折扣，且购买时长越长，折扣越大。本文介绍如何在 Zilliz Cloud 创建和管理包年包月的 Dedicated 集群。如需了解包年包月集群使用过程中可能会额外产生的费用以及计费规则，请参考了解账单。 | Cloud"
 type: origin
@@ -26,25 +29,25 @@ import Admonition from '@theme/Admonition';
 
 包年包月集群采用预付费的计费方式，即先付费后使用，按照订单的购买时长进行结算。包年包月集群一般适用于资源需求相对稳定的长期业务。购买包年包月集群可享受折扣，且购买时长越长，折扣越大。本文介绍如何在 Zilliz Cloud 创建和管理包年包月的 Dedicated 集群。如需了解包年包月集群使用过程中可能会额外产生的费用以及计费规则，请参考[了解账单](./view-invoice)。
 
-## 前提条件{#prerequisites}
+## 前提条件\{#prerequisites}
 
 - 您具备**组织管理员**或**项目管理员**权限。
 
 - 您的组织已完成[企业认证](./enterprise-certification)。
 
-## 创建包年包月集群{#create-annual-subscription-cluster}
+## 创建包年包月集群\{#create-annual-subscription-cluster}
 
 ![Oeusw9TnGhQfe0bLWcGcQoaZn5f](/img/Oeusw9TnGhQfe0bLWcGcQoaZn5f.png)
 
 上图展示了创建包年包月集群的主要流程和步骤。以下为具体操作说明。
 
-### 步骤 1. 配置包年包月集群{#step-1-configure-annual-subscription-cluster}
+### 步骤 1. 配置包年包月集群\{#step-1-configure-annual-subscription-cluster}
 
 1. 登录 Zilliz Cloud。在合适的项目下点击 **+ 创建集群**。
 
     ![create-annual-subscription-cluster-cn](/img/create-annual-subscription-cluster-cn.png)
 
-1. 选择 **Dedicated** 版本并配置集群。目前仅 Dedicated 集群支持包年包月的计费方式。
+1. 选择 **Dedicated** 部署方式并配置集群。目前仅 Dedicated 集群支持包年包月的计费方式。
 
     ![configure-annual-subscription-cluster-cn](/img/configure-annual-subscription-cluster-cn.png)
 
@@ -70,11 +73,11 @@ import Admonition from '@theme/Admonition';
          <td><p>请选择包年包月集群的购买时长。</p><p>如果您选择了亚马逊云科技作为云服务提供商，您仅可以选择 1 年作为购买时长。如需长期包年订阅，请<a href="https://zilliz.com.cn/contact-sales">联系销售</a>获取报价。</p></td>
        </tr>
        <tr>
-         <td><p><strong>CU 类型和规格</strong></p></td>
-         <td><p>集群需要使用的 CU 类型及数量。</p><p>界面上提供 CU 类型的简要介绍，想了解更多关于 CU 选型的相关内容，请参考<a href="./cu-types-explained">选择合适的 CU 类型</a>。</p><p>集群需要的 CU 规格由您的数据量决定，欢迎使用<a href="https://zilliz.com.cn/pricing#calculator">价格计算器</a>预估所需 CU 数量。</p></td>
+         <td><p><strong>集群类型和 Query CU 数量</strong></p></td>
+         <td><p>集群类型和 Query CU 数量</p><p>界面上提供集群类型的简要介绍，想了解更多相关内容，请参考<a href="./cu-types-explained">选择合适的 CU 类型</a>。</p><p>集群需要的 Query CU 数量由您的数据量决定，欢迎使用<a href="https://zilliz.com.cn/pricing#calculator">价格计算器</a>预估所需 Query CU 数量。</p></td>
        </tr>
        <tr>
-         <td><p><strong>云备份（可选）</strong></p></td>
+         <td><p><strong>备份策略（可选）</strong></p></td>
          <td><p>请按需决定是否开启云备份。开启后，会为该集群定期自动创建备份，可有效保护数据。开启云备份会产生备份费用。</p></td>
        </tr>
     </table>
@@ -85,7 +88,7 @@ import Admonition from '@theme/Admonition';
 
     ![agree-to-annnual-subscription-terms-cn](/img/agree-to-annnual-subscription-terms-cn.png)
 
-### 步骤 2. 支付订单{#step-2-pay-order}
+### 步骤 2. 支付订单\{#step-2-pay-order}
 
 完成步骤 1 后，Zilliz Cloud 将生成一份类型为**新购**的**待支付**订单。请检查订单内容并及时完成支付。
 
@@ -98,7 +101,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-### 步骤 3. 等待集群创建成功{#step-3-wait-till-cluster-is-created}
+### 步骤 3. 等待集群创建成功\{#step-3-wait-till-cluster-is-created}
 
 订单支付成功后，Zilliz Cloud 会开始自动为您创建包年包月集群，您将看到以下界面。请及时下载和安全保存集群用户名与密码。
 
@@ -106,7 +109,7 @@ import Admonition from '@theme/Admonition';
 
 创建集群的过程大约需要 10 分钟，请您耐心等待。当集群状态变为**运行中**时，代表已成功创建包年包月集群。您可以继续[连接集群](./connect-to-cluster)或在集群中[创建 Collection](./manage-collections-sdks)。
 
-## 管理包年包月集群{#manage-annual-subscription-cluster}
+## 管理包年包月集群\{#manage-annual-subscription-cluster}
 
 下表展示了您可以对包年包月集群进行的管理操作。
 
@@ -137,14 +140,14 @@ import Admonition from '@theme/Admonition';
      <td><p>详情请见<a href="./connect-to-cluster">连接集群</a></p></td>
    </tr>
    <tr>
-     <td><p>修改集群版本</p></td>
+     <td><p>修改集群部署方式</p></td>
      <td><p>✖️</p></td>
-     <td><p>仅 Dedicated 版本支持包年包月的计费模式。创建包年包月集群后不可修改集群版本类型。</p></td>
+     <td><p>仅 Dedicated 集群支持包年包月的计费模式。创建包年包月集群后不可修改集群的部署方式。</p></td>
    </tr>
    <tr>
-     <td><p>修改集群 CU 类型</p></td>
+     <td><p>修改集群类型</p></td>
      <td><p>✖️</p></td>
-     <td><p>包年包月集群不可修改集群 CU 类型。如有任何问题，请<a href="http://support.zilliz.com.cn">联系我们</a>。</p></td>
+     <td><p>包年包月集群不可修改集群类型。如有任何问题，请<a href="http://support.zilliz.com.cn">联系我们</a>。</p></td>
    </tr>
    <tr>
      <td><p>管理集群容量</p></td>
@@ -173,7 +176,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-## 常见问题{#faqs}
+## 常见问题\{#faqs}
 
 - **为什么我无法创建包年包月集群？**
 

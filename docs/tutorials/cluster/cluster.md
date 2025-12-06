@@ -3,6 +3,9 @@ title: "集群 | Cloud"
 slug: /cluster
 sidebar_label: "集群"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "关于在 Zilliz Cloud 上管理集群需要知道的内容。 | Cloud"
 type: origin

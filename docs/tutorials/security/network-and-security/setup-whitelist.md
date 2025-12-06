@@ -1,13 +1,16 @@
 ---
-title: "设置白名单 | Cloud"
+title: "设置集群 IP 白名单 | Cloud"
 slug: /setup-whitelist
-sidebar_label: "设置白名单"
+sidebar_label: "设置集群 IP 白名单"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "在 Zilliz Cloud 中，白名单是针对项目的安全设置，适用于项目下的所有集群。设置白名单后，仅白名单中的 IP 地址可以访问您项目下的所有集群。白名单能够有效降低受到恶意攻击的风险 | Cloud"
+description: "在 Zilliz Cloud 中，白名单是项目级别的安全设置，适用于项目下的所有集群。设置后，仅白名单中的 IP 地址可以访问您项目下的所有集群。白名单能够有效降低受到恶意攻击的风险 | Cloud"
 type: origin
 token: RwEzw2l4siJB5Ake7FOcVU4knre
-sidebar_position: 1
+sidebar_position: 2
 keywords: 
   - 向量数据库
   - zilliz
@@ -20,13 +23,13 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# 设置白名单
+# 设置集群 IP 白名单
 
-在 Zilliz Cloud 中，白名单是针对项目的安全设置，适用于项目下的所有集群。设置白名单后，仅白名单中的 IP 地址可以访问您项目下的所有集群。白名单能够有效降低受到恶意攻击的风险
+在 Zilliz Cloud 中，白名单是项目级别的安全设置，适用于项目下的所有集群。设置后，仅白名单中的 IP 地址可以访问您项目下的所有集群。白名单能够有效降低受到恶意攻击的风险
 
-本教程将介绍如何设置白名单。
+本教程将介绍如何设置集群 IP 白名单。
 
-## 前提条件{#before-you-start}
+## 前提条件\{#before-you-start}
 
 确保满足以下条件：
 
@@ -36,15 +39,15 @@ import Admonition from '@theme/Admonition';
 
 - 您是组织或项目管理员。更多用户角色和权限详情，请阅读[访问控制概览](./access-control-overview)。
 
-## 操作步骤{#procedure}
+## 操作步骤\{#procedure}
 
-1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com.cn/login)。
+1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)。
 
 1. 点击进入需要设置白名单的组织和项目。
 
-1. 在左侧导航栏中，点击 **安全** > **+ IP 地址**。
+1. 在左侧导航栏中，点击 **安全** > **集群 IP 白名单**。随后点击卡片中间的**添加 IP 地址**按钮。
 
-1. 在弹出的对话框中，输入 **IP地址（CIDR）和描述**。
+1. 在弹出的对话框中，输入 **IP 地址/CIDR 格式**和**描述**。
 
 1. 字段描述如下表所示。
 
@@ -54,7 +57,7 @@ import Admonition from '@theme/Admonition';
          <th><p><strong>描述</strong></p></th>
        </tr>
        <tr>
-         <td><p>IP地址（CIDR）</p></td>
+         <td><p>IP 地址/CIDR 格式</p></td>
          <td><p>您要添加到白名单中的 IP 地址或无类别域间路由（CIDR）。您可最多添加 100 个 CIDR。示例值：192.168.1.1/20。</p></td>
        </tr>
        <tr>
@@ -67,17 +70,17 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果白名单中没有记录，Zilliz Cloud 将允许所有 IP 地址访问项目集群。一旦添加了 CIDR ，仅CIDR 中的 IP 地址可以访问该集群。添加 0.0.0.0/0 的效果等同于白名单中没有记录。</p>
+<p>如果未设置集群 IP 白名单，Zilliz Cloud 将允许所有 IP 地址访问项目集群。一旦添加了 CIDR ，仅CIDR 中的 IP 地址可以访问该集群。添加 0.0.0.0/0 的效果等同于未设置白名单。</p>
 
 </Admonition>
 
 ![whitelist-ip-access](/img/whitelist-ip-access.png)
 
-## 相关文档{#related-topics}
+## 相关文档\{#related-topics}
 
 - [管理 API 密钥](./manage-api-keys)
 
 - [管理身份凭证](./cluster-credentials)
 
-- [管理 MFA](./multi-factor-auth)
+- [创建私网连接](./setup-a-private-link)
 

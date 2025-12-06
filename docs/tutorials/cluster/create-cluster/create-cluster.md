@@ -3,8 +3,11 @@ title: "创建集群 | Cloud"
 slug: /create-cluster
 sidebar_label: "创建集群"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 提供多种版本和计费方式的集群，方便您根据需求灵活选择合适的版本和计费方式。 | Cloud"
+description: "Zilliz Cloud 提供多种部署方式和计费方式的集群，方便您根据需求灵活选择合适的集群。 | Cloud"
 type: origin
 token: M3fWwcqJpimd7YkaoLucY7eBnne
 sidebar_position: 1
@@ -22,13 +25,13 @@ import Admonition from '@theme/Admonition';
 
 # 创建集群
 
-Zilliz Cloud 提供多种版本和计费方式的集群，方便您根据需求灵活选择合适的版本和计费方式。
+Zilliz Cloud 提供多种部署方式和计费方式的集群，方便您根据需求灵活选择合适的集群。
 
-Zilliz Cloud 提供 Free、Serverless、Dedicated 三种版本的集群。其中，Dedicated 版本集群提供两种不同的计费方式——按量计费、包年包月。
+Zilliz Cloud 提供 Free、Serverless、Dedicated 三种部署方式的集群。其中，Dedicated 集群提供两种不同的计费方式——按量计费、包年包月。
 
-本文将介绍 Dedicated 集群两种计费方式的区别。如需了解如何选择合适的版本类型，请参考 [Zilliz Cloud 版本对比](./select-zilliz-cloud-service-plans)。
+本文将介绍 Dedicated 集群两种计费方式的区别。如需了解各种部署方式，请参考 [Zilliz Cloud 定价](http://zilliz.com.cn/pricing)。
 
-### 包年包月 vs 按量计费{#annual-subscription-vs-usage-based}
+### 包年包月 vs 按量计费\{#annual-subscription-vs-usage-based}
 
 Zilliz Cloud 针对 Dedicated 集群提供按量计费和包年包月两种计费模式，以满足不同场景下的用户需求。
 

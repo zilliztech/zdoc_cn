@@ -1,10 +1,13 @@
 ---
-title: "用户鉴权 | Cloud"
+title: "用户鉴权 | BYOC"
 slug: /authentication
 sidebar_label: "用户鉴权"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "本章将介绍帐户、鉴权、访问白名单和私网连接的相关内容。您可以使用这些功能保障您的数据安全。 | Cloud"
+description: "本章将介绍帐户、鉴权、访问白名单和私网连接的相关内容。您可以使用这些功能保障您的数据安全。 | BYOC"
 type: origin
 token: ZdQxwDlFbiPLCNkXISXcyqtBn3r
 sidebar_position: 2

@@ -3,6 +3,9 @@ title: "管理集群用户（控制台） | Cloud"
 slug: /cluster-users
 sidebar_label: "管理集群用户（控制台）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，您可以创建集群用户并为其分配集群角色以定义权限，从而实现数据安全。 | Cloud"
 type: origin
@@ -35,11 +38,11 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>此功能仅限 Dedicated 集群使用。</p>
+<p>此功能仅限 <strong>Dedicated</strong> 集群使用。</p>
 
 </Admonition>
 
-## 创建集群用户{#create-a-cluster-user}
+## 创建集群用户\{#create-a-cluster-user}
 
 创建集群用户时，您需要配置以下信息：
 
@@ -57,11 +60,11 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 编辑集群用户角色{#edit-the-role-of-a-cluster-user}
+## 编辑集群用户角色\{#edit-the-role-of-a-cluster-user}
 
 ![dit-cluster-user-role-zh](/img/dit-cluster-user-role-zh.png)
 
-## 删除集群用户{#drop-a-cluster-user}
+## 删除集群用户\{#drop-a-cluster-user}
 
 <Admonition type="info" icon="📘" title="说明">
 

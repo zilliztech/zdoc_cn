@@ -3,6 +3,9 @@ title: "创建腾讯云私有连接（Private Link） | Cloud"
 slug: /setup-a-private-link-tencent-cloud
 sidebar_label: "创建腾讯云私有连接（Private Link）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本小节主要介绍如何在您的腾讯云 VPC 和您托管在腾讯云上的 Zilliz Cloud 集群之间建立私网连接。 | Cloud"
 type: origin
@@ -25,7 +28,13 @@ import Admonition from '@theme/Admonition';
 
 本小节主要介绍如何在您的腾讯云 VPC 和您托管在腾讯云上的 Zilliz Cloud 集群之间建立私网连接。
 
-此功能仅适用于 Dedicated 集群。
+<Admonition type="info" icon="📘" title="说明">
+
+<p>此功能仅限 <strong>Dedicated</strong> 集群使用。</p>
+
+</Admonition>
+
+您需要在项目层级创建 Private Link。创建完成后，Private Link 将适用于项目下所有与 Private Link 云服务提供商和地域相同的集群。
 
 <Admonition type="info" icon="📘" title="提示">
 
@@ -33,7 +42,7 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 配置思路{#configuration-roadmap}
+## 配置思路\{#configuration-roadmap}
 
 如需启用访问 Zilliz Cloud 集群的私网连接，您需要：
 
@@ -43,7 +52,7 @@ import Admonition from '@theme/Admonition';
 
 - 前往腾讯云控制台，使用该域名前缀创建一条私网解析记录。
 
-## 前提条件{#before-you-start}
+## 前提条件\{#before-you-start}
 
 - 您已经注册了 Zilliz Cloud。
 
@@ -53,7 +62,7 @@ import Admonition from '@theme/Admonition';
 
     该 VPC 中部署了需要访问上述 Zilliz Cloud 腾讯云集群的业务资源。如果您尚未创建 VPC，可前往腾讯云[私有网络](https://console.cloud.tencent.com/vpc/vpc)管理界面，完成创建。
 
-## 创建 Private Endpoint{#create-private-endpoint}
+## 创建 Private Endpoint\{#create-private-endpoint}
 
 本节将按照配置思路详细介绍如何为您的 Zilliz Cloud 阿里云集群创建私网连接。
 
@@ -61,13 +70,13 @@ import Admonition from '@theme/Admonition';
 
 ![zh-create-private-link](/img/zh-create-private-link.png)
 
-### 选择云服务提供商和地域{#select-cloud-provider-and-region}
+### 选择云服务提供商和地域\{#select-cloud-provider-and-region}
 
 在云服务提供商下拉菜单中选择腾讯云。在地域下拉菜单中选择与您目标集群相同的地域。
 
 ![zh-tencent-create-private-link](/img/zh-tencent-create-private-link.png)
 
-### 创建终端服务{#create-endpoint-service}
+### 创建终端服务\{#create-endpoint-service}
 
 登录腾讯云控制台，前往[帐号信息](https://console.cloud.tencent.com/developer)页面获取主帐号 ID。
 
@@ -82,7 +91,7 @@ import Admonition from '@theme/Admonition';
 
 复制主帐号 ID 并粘贴到 Zilliz Cloud 弹窗的**账号 ID** 字段中。
 
-### 创建终端节点{#create-endpoint}
+### 创建终端节点\{#create-endpoint}
 
 复制 Zilliz Cloud 控制台上展示的 **Zilliz Cloud 腾讯云帐号 ID (UIN)** 和 **Zilliz 终端节点服务 ID**。
 
@@ -135,7 +144,7 @@ import Admonition from '@theme/Admonition';
 
     ![Gb92bR4HRoMBtOxwnDncFJLrnQg](/img/Gb92bR4HRoMBtOxwnDncFJLrnQg.png)
 
-### 授权终端节点{#authorize-endpoint}
+### 授权终端节点\{#authorize-endpoint}
 
 返回 Zilliz Cloud 控制台，将已创建的腾讯云终端节点实例 ID 填入**终端节点 ID** 字段中，并单击**创建**。
 
@@ -155,7 +164,7 @@ import Admonition from '@theme/Admonition';
 
 - 您的 Zilliz Cloud 腾讯云集群私网连接地址 （示例值为 **in01-xxxxxxxxxxx-privatelink.tc-ap-xxxxxxx**）。
 
-## 获取 Private Link{#obtain-a-private-link}
+## 获取 Private Link\{#obtain-a-private-link}
 
 Private Link 创建完成后，您可以前往**集群详情**页查看该私网连接。
 
@@ -165,7 +174,7 @@ Private Link 创建完成后，您可以前往**集群详情**页查看该私网
 
 </Admonition>
 
-## 配置私有域解析{#configure-private-zone}
+## 配置私有域解析\{#configure-private-zone}
 
 前往腾讯云[私有域解析](https://console.cloud.tencent.com/privatedns)管理页面。
 
@@ -227,11 +236,11 @@ Private Link 创建完成后，您可以前往**集群详情**页查看该私网
 
     其它参数保持默认即可。添加完成后，单击**保存**。
 
-## 后续操作{#next-steps}
+## 后续操作\{#next-steps}
 
 在完成私网连接创建和私有域解析配置后，可按照集群详情页面右上角的连接指南使用私网连接进行连通性验证。
 
-## 管理集群公网访问{#manage-internet-access-to-your-clusters}
+## 管理集群公网访问\{#manage-internet-access-to-your-clusters}
 
 完成配置私网连接后，您可以选择关闭和限制集群的公网访问能力（Public Endpoint）。关闭后，您只可以使用私网连接访问该集群。
 
@@ -256,3 +265,7 @@ Private Link 创建完成后，您可以前往**集群详情**页查看该私网
 
 ![disable_public_endpoint_cn](/img/disable_public_endpoint_cn.png)
 
+## 常见问题\{#faq}
+
+**能否为已有集群创建 Private Endpoint？**
+可以。当您创建 Private Endpoint 后，它将自动适用于同一项目下且部署在同一个云服务地域的所有 Dedicated 集群。您只需为不同的集群添加对应的 DNS 记录即可。

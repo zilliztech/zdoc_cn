@@ -3,8 +3,11 @@ title: "离线迁移 | Cloud"
 slug: /offline-migration
 sidebar_label: "离线迁移"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "离线迁移允许您在计划的停机时间内，将现有集群数据从源集群迁移到目标集群。此方法支持在同一组织内或不同组织之间进行迁移，适用于可以接受短暂停机的场景，例如计划维护或小规模数据库迁移。如果您的迁移需要保持读写不中断，请参考零停机迁移。 | Cloud"
+description: "离线迁移允许您在计划的停机时间内，将现有集群数据从源集群迁移到目标集群。此方法支持在同一组织内或不同组织之间进行迁移，适用于可以接受短暂停机的场景，例如计划维护或小规模数据库迁移。 | Cloud"
 type: origin
 token: N6tlwTPPvi0FXvkj4fccCgtTnOg
 sidebar_position: 1
@@ -26,11 +29,13 @@ import Supademo from '@site/src/components/Supademo';
 
 # 离线迁移
 
-**离线迁移**允许您在计划的停机时间内，将现有集群数据从源集群迁移到目标集群。此方法支持在同一组织内或不同组织之间进行迁移，适用于可以接受短暂停机的场景，例如计划维护或小规模数据库迁移。如果您的迁移需要保持读写不中断，请参考[零停机迁移](./zero-downtime-migration)。
+**离线迁移**允许您在计划的停机时间内，将现有集群数据从源集群迁移到目标集群。此方法支持在同一组织内或不同组织之间进行迁移，适用于可以接受短暂停机的场景，例如计划维护或小规模数据库迁移。
 
-## 迁移能力{#migration-capabilities}
+如果您的迁移需要保持读写不中断，请参考[零停机迁移](./zero-downtime-migration)。
 
-### 集群兼容性{#cluster-compatibility}
+## 迁移能力\{#migration-capabilities}
+
+### 集群兼容性\{#cluster-compatibility}
 
 下表展示了源集群和目标集群间的兼容性：
 
@@ -47,8 +52,8 @@ import Supademo from '@site/src/components/Supademo';
    <tr>
      <td><p>Free</p></td>
      <td><p>不支持</p></td>
-     <td><p>请参考<a href="./manage-cluster">管理集群</a></p></td>
-     <td><p>请参考<a href="./manage-cluster">管理集群</a></p></td>
+     <td><p>请参考<a href="./manage-cluster#upgrade-deployment-option">管理集群</a></p></td>
+     <td><p>请参考<a href="./manage-cluster#upgrade-deployment-option">管理集群</a></p></td>
    </tr>
    <tr>
      <td><p>Serverless</p></td>
@@ -64,7 +69,7 @@ import Supademo from '@site/src/components/Supademo';
    </tr>
 </table>
 
-### 迁移范围{#migration-scope-options}
+### 迁移范围\{#migration-scope-options}
 
 <table>
    <tr>
@@ -84,7 +89,7 @@ import Supademo from '@site/src/components/Supademo';
    </tr>
 </table>
 
-### 直接数据迁移{#direct-data-transfer}
+### 直接数据迁移\{#direct-data-transfer}
 
 离线迁移在 Zilliz Cloud 集群间执行直接数据复制，具有以下特征：
 
@@ -94,11 +99,11 @@ import Supademo from '@site/src/components/Supademo';
 
 - 自动索引：目标集群的向量字段将自动创建 `AUTOINDEX`
 
-## 开始前{#before-you-start}
+## 开始前\{#before-you-start}
 
 开始离线迁移前需满足：
 
-### 通用要求{#general-requirements}
+### 通用要求\{#general-requirements}
 
 <table>
    <tr>
@@ -119,7 +124,7 @@ import Supademo from '@site/src/components/Supademo';
    </tr>
 </table>
 
-### 跨项目/组织迁移附加要求{#cross-project-or-organization-migration-requirements}
+### 跨项目/组织迁移附加要求\{#cross-project-or-organization-migration-requirements}
 
 <table>
    <tr>
@@ -136,7 +141,7 @@ import Supademo from '@site/src/components/Supademo';
    </tr>
 </table>
 
-## 操作指南{#getting-started}
+## 操作指南\{#getting-started}
 
 以下演示完整离线迁移流程：
 

@@ -3,6 +3,9 @@ title: "BYOC 简介 | BYOC"
 slug: /byoc-intro
 sidebar_label: "BYOC 简介"
 beta: CONTACT SALES
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "BYOC 部署方案可以帮助有需要的组织在自己的云账户下托管应用和数据，而无须使用 Zilliz Cloud 提供的基础设施。该方案适合因特定安全合规要求而需要拥有完整数据主权的组织使用。 | BYOC"
 type: origin
@@ -30,7 +33,7 @@ BYOC 部署方案可以帮助有需要的组织在自己的云账户下托管应
 
 </Admonition>
 
-## 为何选择 Zilliz BYOC{#why-use-zilliz-byoc}
+## 为何选择 Zilliz BYOC\{#why-use-zilliz-byoc}
 
 Zilliz BYOC 提供了一种独特的完全托管式部署选项，让您在降低运营开销的同时，完全控制您的数据。该方案具有以下优势：
 
@@ -52,7 +55,7 @@ Zilliz BYOC 提供了一种独特的完全托管式部署选项，让您在降�
 
     - 所有的数据的存储和处理都在您指定的云账户中进行。
 
-## 业务流程{#how-it-works}
+## 业务流程\{#how-it-works}
 
 部署 Zilliz BYOC 除了需要在您的云环境中部署 Milvus 之外，还需要在 Zilliz 的云环境中部署由 Zilliz 管理的诸如升级业务流、资源调度器、开放 API以及控制台等后台服务。这样一来，数据的存放和处理都在您自有的基础设置中进行。
 
@@ -70,11 +73,11 @@ Zilliz BYOC 提供了一种独特的完全托管式部署选项，让您在降�
 
     您的应用程序/服务可以通过数据面与部署在您的 VPC 中的 Milvus 实例进行通信，管理数据存储和检索。
 
-## 安全保障{#security-assurance}
+## 安全保障\{#security-assurance}
 
 通过完善的加密策略和严格的访问控制来保障网络边界的通信安全。
 
-### 网络安全{#network-security}
+### 网络安全\{#network-security}
 
 - **内部流量**：集群安全组内允许所有 TCP/UDP 通信。
 
@@ -86,7 +89,7 @@ Zilliz BYOC 提供了一种独特的完全托管式部署选项，让您在降�
 
 - **相同安全组策略**：同一安全组内，允许所有 TCP/UDP 通信。
 
-### 访问控制{#access-control}
+### 访问控制\{#access-control}
 
 - 为 Zilliz 技术支持工程师提供安全的 VPN 以及基于证书的即时认证能力。
 
@@ -96,15 +99,15 @@ Zilliz BYOC 提供了一种独特的完全托管式部署选项，让您在降�
 
 这些强有力的措施保护数据的完整性和保密性，确保在云端的安全可靠运行。
 
-## 动态加密{#encryption-in-transit}
+## 动态加密\{#encryption-in-transit}
 
 客户端通过 HTTPS 或 gRPC 与 Zilliz Cloud 集群建立连接。在该连接上传输的数据均经过 AES-256 加密协议和 TLS 1.2（或更高）通讯协议完成动态加密。
 
-### 静态加密{#encryption-at-rest}
+### 静态加密\{#encryption-at-rest}
 
 Zilliz Cloud 数据面使用 AES-256 算法对在对象存储中存储的数据进行加密。
 
-## 成本管理{#cost-management}
+## 成本管理\{#cost-management}
 
 Zilliz BYOC 通过资源管理对您在 BYOC 项目中使用的服务收费。不过，您仍需承担云服务提供商的基础设施费用，如下图所示。
 

@@ -3,11 +3,14 @@ title: "版本说明书（2024/02/27） | Cloud"
 slug: /release-notes-260
 sidebar_label: "版本说明书（2024/02/27）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "我们很高兴地宣布 Zilliz Cloud 发布新的版本。此版本引入了一系列增强和功能更新。主要涉及 Pipelines、数据导入、API 密钥以及指标和告警方面的功能性更新。 | Cloud"
 type: origin
 token: FR9Ww6TbRifhQFk1TV0c3a4tnfg
-sidebar_position: 12
+sidebar_position: 17
 keywords: 
   - 向量数据库
   - zilliz
@@ -24,11 +27,11 @@ import Admonition from '@theme/Admonition';
 
 我们很高兴地宣布 Zilliz Cloud 发布新的版本。此版本引入了一系列增强和功能更新。主要涉及 Pipelines、数据导入、API 密钥以及指标和告警方面的功能性更新。
 
-## Milvus 兼容性{#milvus-compatibility}
+## Milvus 兼容性\{#milvus-compatibility}
 
 此次发布兼容 **Milvus 2.3.x**。
 
-## Pipelines{#pipelines}
+## Pipelines\{#pipelines}
 
 今天，我们非常高兴地向大家介绍 Zilliz Cloud 的新特性 Zilliz Cloud Pipelines。Pipelines旨在将非结构化数据无缝转换为矢量嵌入，并将其传入 Zilliz Cloud 进行存储和检索，从而释放非结构化数据的潜力。该解决方案通过整合嵌入、摄取、存储和检索等流程，简化了数据工作流程，为开发人员提供了一个受欢迎的解决方案。
 
@@ -40,15 +43,13 @@ Zilliz Cloud Pipelines 分为如下三种类型：
 
 - **Deletion Pipeline** 允许您从 Zilliz 云收藏中删除指定文档中的所有块，让您完全控制自己的数据，并释放 Zilliz 收藏的存储容量。
 
-要了解更多信息，请参阅[本文档](./pipelines)。
-
-## 数据导入{#data-import}
+## 数据导入\{#data-import}
 
 我们很高兴地宣布数据导入功能支持 Parquet 数据格式。为了增强用户体验，我们引入了 PyMilvus writer 实用程序，这是一款功能强大的工具，旨在帮助我们的用户轻松创建 JSON 或 Parquet 格式的文件，以实现无缝数据导入。在此深入了解详情并探索新的可能性。
 
 要了解更多信息，请参阅[本文档](./data-import-zero-to-hero)。
 
-## API 密钥{#api-keys}
+## API 密钥\{#api-keys}
 
 在此版本中，Zilliz Cloud 引入了 API Key 的统一设计。每个用户只需使用一个统一的 API 密钥，即可访问 Zilliz Cloud 平台和多个集群。
 
@@ -64,7 +65,7 @@ Zilliz Cloud 的权限设计遵循 RBAC（基于角色的访问控制）原则�
 
 在数据层中，Zilliz Cloud 提供三种内置角色： 管理员、只读和读写，以控制数据的管理、写入和读取权限。Zilliz Cloud 允许用户创建自定义角色。这些自定义角色可定义特定集合、分区或操作的权限，确保在使用 Zilliz Cloud 时遵循最小数据权限原则。请[参阅文档](./manage-api-keys)了解详情。
 
-## 指标和告警{#metrics-and-alerts}
+## 指标和告警\{#metrics-and-alerts}
 
 在此版本中，我们对指标和告警系统进行了重构。在新版本中，您可以监控一系列全面的指标：
 
