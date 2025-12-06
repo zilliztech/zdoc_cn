@@ -1,11 +1,13 @@
 const utils = require('./larkUtils.js')
 const tokenFetcher = require('./larkTokenFetcher.js')
-const fs = require('node:fs')
 const https = require('node:https')
 const fetch = require('node-fetch')
 const Bottleneck = require('bottleneck')
 const process = require('node:process')
-const { method } = require('lodash')
+const crypto = require('node:crypto')
+const OSS = require('ali-oss')
+const { XMLParser } = require('fast-xml-parser')
+
 require('dotenv/config')
 
 class larkImageDownloader {
@@ -18,74 +20,46 @@ class larkImageDownloader {
             maxConcurrent: 1,
             minTime: 52,
         });
+        this.client = new OSS({
+            accessKeyId: process.env.OSS_ACCESS_KEY_ID,
+            accessKeySecret: process.env.OSS_ACCESS_KEY_SECRET,
+            region: process.env.OSS_REGION,
+            bucket: process.env.OSS_BUCKET,
+            authorizationV4: true,
+            endpoint: process.env.OSS_ENDPOINT,
+        })
     }    
 
-    async downloadImages() {
-        const images = this.images.instances;
-        const image_keys = this.images.instance_keys;
-
-        const throttled_downloader = this.limiter.wrap(this.__downloadImage)
-
-        const image_promises = images.map((image) => {
-            return throttled_downloader(image.token)
-        })
-
-        try {
-            const results = await Promise.all(image_promises)
-            results.forEach((result, index) => {
-                const writer = fs.createWriteStream(`${this.target_path}/${images[index].token}.png`)
-                result.body.pipe(writer)
-            })
-            images.forEach((image, index) => {
-                eval(`this.docs${image_keys[index]}.path = '${this.target_path}/${image.token}.png'`)
-            })
-        } 
-        catch (error) {
-            console.log(error)
+    async __uploadToOSS(buffer, key) {
+        const parser = new XMLParser();
+        const headers = {
+            'x-oss-storage-class': 'Standard',
+            'x-oss-object-acl': 'public-read',
+            'Content-Disposition': "inline",
+            'Content-Type': 'image/png',
+            'x-oss-tagging': `hash=${crypto.createHash('md5').update(buffer).digest('hex')}`,
+            'x-oss-forbid-overwrite': 'false'
         }
 
-        return this.docs
-    }
-
-    async downloadIframes() {
-        const iframe_keys = this.iframes.instance_keys;
-        const iframes = this.iframes.instances.filter((iframe) => iframe.component.iframe_type === 8).map((iframe) => {
-            const url = new URL(decodeURIComponent(iframe.component.url))
-            const key = url.pathname.split('/')[2]
-            const node = url.searchParams.get('node-id').split('-').join(":")
-
-            return {key, node}
-        })
-
-        const throttled_fetcher = this.limiter.wrap(this.__fetchCaption)
-        const throttled_downloader = this.limiter.wrap(this.__downloadIframe)
-
-        const caption_promises = iframes.map((iframe) => {
-            return throttled_fetcher(iframe.key, iframe.node)
-        })
-
-        const image_promises = iframes.map((iframe) => {
-            return throttled_downloader(iframe.key, iframe.node)
-        })
-
         try {
-            let captions = await Promise.all(caption_promises)
-            captions = captions.map((caption, index) => {
-                return caption.nodes[iframes[index].node].document.name
-            })
-            
-            let images = await Promise.all(image_promises)
-            images = images.map((image, index) => {
-                const writer = fs.createWriteStream(`${this.target_path}/${captions[index]}.png`)
-                image.body.pipe(writer)
-                eval(`this.docs${iframe_keys[index]}.caption = '${captions[index]}'`)
-                eval(`this.docs${iframe_keys[index]}.path = '${this.target_path}/${captions[index]}.png'`)
-            })
-        } catch (error) {
-            console.log(error)
-        }
+            const response = await this.client.getObjectTagging(key)
+            const tags = parser.parse(response.res.data.toString('utf8')).Tagging.TagSet
 
-        return this.docs
+            if (tags && tags?.Tag?.Key === 'hash' && tags?.Tag?.Value === crypto.createHash('md5').update(buffer).digest('hex')) {
+                console.log(`Image ${key} already exists with the same hash, skipping upload.`);
+                return
+            }
+
+            await this.client.put(key, buffer, { headers })
+            console.log(`Successfully uploaded image to ${key}`);
+        } catch (err) {
+            if (err.code === 'NoSuchKey') {
+                await this.client.put(key, buffer, { headers })
+                console.log(`Successfully uploaded image to ${key}`);
+            } else {
+                console.error(`Failed to upload image to ${key}:`, err);
+            }
+        }
     }
 
     async __downloadImage(image_token) {

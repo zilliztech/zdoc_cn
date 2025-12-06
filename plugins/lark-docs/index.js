@@ -21,6 +21,7 @@ module.exports = function (context, options) {
                 .option('-skipS, --skipSourceDown', 'Skip fetching document sources')
                 .option('-skipI, --skipImageDown', 'Skip fetching images')
                 .option('-post, --postProcess', 'Post process file paths')
+                .option('-oss, --uploadToOSS', 'Upload images to OSS instead of local storage')
                 .action(async (opts) => {
                     const options = context.siteConfig.plugins.filter(plugin => plugin[0].includes('lark-docs'))[0][1]
                     process.env.REPO_BRANCH = fs.readFileSync('.git/HEAD', 'utf8').split(': ')[1].trim().split('/').slice(-1)[0]
@@ -82,8 +83,8 @@ module.exports = function (context, options) {
                         }
 
                         const writer = sourceType === 'wiki' || sourceType === 'onePager' ? 
-                            new docWriter(root, base, displayedSidebar, robots, docSourceDir, imageDir, opts.pubTarget, opts.skipImageDown) : 
-                            new driveWriter(root, base, displayedSidebar, robots, docSourceDir, imageDir, opts.pubTarget, opts.skipImageDown, opts.manual)
+                            new docWriter(root, base, displayedSidebar, robots, docSourceDir, imageDir, opts.pubTarget, opts.skipImageDown, opts.uploadToOSS) : 
+                            new driveWriter(root, base, displayedSidebar, robots, docSourceDir, imageDir, opts.pubTarget, opts.skipImageDown, opts.uploadToOSS, opts.manual)
 
                         // Add necessary imports to category pages
                         if (opts.postProcess) {

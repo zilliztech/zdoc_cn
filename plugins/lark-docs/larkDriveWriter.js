@@ -4,8 +4,29 @@ const larkDocWriter = require('./larkDocWriter');
 const Utils = require('./larkUtils');
 
 class larkDriveWriter extends larkDocWriter {
-    constructor(root_token, base_token, displayedSidebar, robots, docSourceDir, imageDir, targets, skip_image_download=false, manual) {
-        super(root_token, base_token, displayedSidebar, robots, docSourceDir, imageDir, targets, skip_image_download);
+    constructor(
+        root_token, 
+        base_token, 
+        displayedSidebar, 
+        robots, 
+        docSourceDir, 
+        imageDir, 
+        targets, 
+        skip_image_download=false, 
+        upload_to_oss=false,
+        manual
+    ) {
+        super(
+            root_token, 
+            base_token, 
+            displayedSidebar, 
+            robots, 
+            docSourceDir, 
+            imageDir, 
+            targets, 
+            skip_image_download,
+            upload_to_oss
+        );
         this.manual = manual
         this.utils = new Utils();
     }
