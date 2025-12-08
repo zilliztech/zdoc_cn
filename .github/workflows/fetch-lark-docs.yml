@@ -18,11 +18,11 @@ jobs:
       run: |
         yarn
         npx docusaurus report-to-lark -m "🔥 开始构建中文用户指南..."
-        npx docusaurus fetch-lark-docs -man guides -tar zilliz.saas
+        npx docusaurus fetch-lark-docs -man guides -tar zilliz.saas -oss
         npx docusaurus fetch-lark-docs -man guides -tar zilliz.saas -post
-        npx docusaurus fetch-lark-docs -man guides -tar zilliz.paas -skipS
+        npx docusaurus fetch-lark-docs -man guides -tar zilliz.paas -oss -skipS
         npx docusaurus fetch-lark-docs -man guides -tar zilliz.paas -post
-        npx docusaurus fetch-lark-docs -man onpremise -tar paas
+        npx docusaurus fetch-lark-docs -man onpremise -tar paas -oss
         npx docusaurus fetch-lark-docs -man onpremise -tar paas -post
       env:
         APP_ID: ${{ secrets.APP_ID }}
@@ -30,6 +30,12 @@ jobs:
         FEISHU_HOST: ${{ vars.FEISHU_HOST }}
         SPACE_ID: ${{ secrets.SPACE_ID }}
         FIGMA_API_KEY: ${{ secrets.FIGMA_API_KEY }}
+        OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
+        OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+        OSS_ENDPOINT: ${{ vars.OSS_ENDPOINT }}
+        OSS_BUCKET: ${{ vars.OSS_BUCKET }}
+        OSS_REGION: ${{ vars.OSS_REGION }}
+        IMAGE_BED_URL: ${{ vars.IMAGE_BED_URL }}
     - name: build docsite
       run: |
         npx docusaurus report-to-lark -m "🔥 用户指南已成功获取！开始构建文档站点..."
@@ -58,18 +64,18 @@ jobs:
         npx docusaurus report-to-lark -m "🔥 获取中文参考文档..."
         npx docusaurus fetch-lark-docs -man python -src-only
         npx docusaurus fetch-lark-docs -man pymilvus25 -src-only
-        npx docusaurus fetch-lark-docs -man pymilvus26 -tar zilliz
+        npx docusaurus fetch-lark-docs -man pymilvus26 -tar zilliz -oss
         npx docusaurus fetch-lark-docs -man pymilvus26 -tar zilliz -post
         npx docusaurus fetch-lark-docs -man javaV2 -src-only
         npx docusaurus fetch-lark-docs -man javaV225 -src-only
-        npx docusaurus fetch-lark-docs -man javaV226 -tar zilliz
+        npx docusaurus fetch-lark-docs -man javaV226 -tar zilliz -oss
         npx docusaurus fetch-lark-docs -man javaV226 -tar zilliz -post
         npx docusaurus fetch-lark-docs -man node -src-only
         npx docusaurus fetch-lark-docs -man nodejs25 -src-only
-        npx docusaurus fetch-lark-docs -man nodejs26 -tar zilliz
+        npx docusaurus fetch-lark-docs -man nodejs26 -tar zilliz -oss
         npx docusaurus fetch-lark-docs -man nodejs26 -tar zilliz -post
         npx docusaurus fetch-lark-docs -man gov2 -src-only
-        npx docusaurus fetch-lark-docs -man gov226 -tar zilliz
+        npx docusaurus fetch-lark-docs -man gov226 -tar zilliz -oss
         npx docusaurus fetch-lark-docs -man gov226 -tar zilliz -post
         npx docusaurus fetch-apifox-docs -s plugins/apifox-docs/meta/openapi.json -l zh-CN  
       env:
@@ -78,6 +84,12 @@ jobs:
         FEISHU_HOST: ${{ vars.FEISHU_HOST }}
         SPACE_ID: ${{ secrets.SPACE_ID }}
         FIGMA_API_KEY: ${{ secrets.FIGMA_API_KEY }}
+        OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
+        OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+        OSS_ENDPOINT: ${{ vars.OSS_ENDPOINT }}
+        OSS_BUCKET: ${{ vars.OSS_BUCKET }}
+        OSS_REGION: ${{ vars.OSS_REGION }}
+        IMAGE_BED_URL: ${{ vars.IMAGE_BED_URL }}
     - name: build docsite
       run: |
         npx docusaurus report-to-lark -m "🔥 参考文档已成功获取！开始构建文档站点..."
