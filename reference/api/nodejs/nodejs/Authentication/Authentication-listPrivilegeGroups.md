@@ -3,22 +3,25 @@ displayed_sidbar: nodeSidebar
 title: "listPrivilegeGroups() | Node.js"
 slug: /node/node/Authentication-listPrivilegeGroups
 sidebar_label: "listPrivilegeGroups()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all privilege groups. | Node.js"
 type: docx
 token: HGpSdc7AOo7AV3xKCmOcWaIEnrd
-sidebar_position: 17
+sidebar_position: 19
 keywords: 
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - open source vector db
   - zilliz
   - zilliz cloud
   - cloud
   - listPrivilegeGroups()
-  - nodejs25
+  - nodejs26
 displayed_sidebar: nodeSidebar
 
 ---

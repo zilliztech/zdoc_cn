@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "\_\_call\_\_() | Python"
 slug: /python/python/MistralAIEmbeddingFunction-__call__
 sidebar_label: "__call__()"
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation in MistralAIEmbeddingFunction takes a list of text strings and directly encodes them into vector embeddings. | Python"
@@ -10,15 +13,15 @@ type: docx
 token: Z23IddhHhom7AyxDMXecLORVnDh
 sidebar_position: 4
 keywords: 
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud
   - \_\_call\_\_()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---

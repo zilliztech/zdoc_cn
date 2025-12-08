@@ -3,6 +3,9 @@ displayed_sidbar: pythonSidebar
 title: "create_user() | Python | MilvusClient"
 slug: /python/python/Authentication-create_user
 sidebar_label: "create_user()"
+added_since: v2.3.x
+last_modified: false
+deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates a user. | Python | MilvusClient"
@@ -18,7 +21,7 @@ keywords:
   - zilliz cloud
   - cloud
   - create_user()
-  - pymilvus25
+  - pymilvus26
 displayed_sidebar: pythonSidebar
 
 ---
@@ -85,7 +88,7 @@ from pymilvus import MilvusClient
 
 # 1. Create a milvus client
 client = MilvusClient(
-    uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com:19530",
+    uri="https://inxx-xxxxxxxxxxxx.api.ali-cn-hangzhou.zillizcloud.com:19530",
     token="user:password"
 )
 

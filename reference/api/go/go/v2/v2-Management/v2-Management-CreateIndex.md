@@ -3,6 +3,9 @@ title: "CreateIndex() | Go | v2"
 slug: /go/v2-Management-CreateIndex
 sidebar_label: "CreateIndex()"
 beta: FALSE
+added_since: v2.5.x
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "This method creates an index on a specific field. | Go | v2"
 type: origin
@@ -39,7 +42,7 @@ func (c *Client) CreateIndex(ctx context.Context, option CreateIndexOption, call
    <tr>
      <td><p><code>option</code></p></td>
      <td><p>Optional parameters of the methods.</p></td>
-     <td><p><code>CreateIndexOption</code></p></td>
+     <td><p><a href="./v2-Management-CreateIndex#createindexoption"><code>CreateIndexOption</code></a></p></td>
    </tr>
    <tr>
      <td><p><code>callOpts</code></p></td>
@@ -81,7 +84,7 @@ func NewCreateIndexOption(collectionName string, fieldName string, index index.I
    <tr>
      <td><p><code>index</code></p></td>
      <td><p>Type of the index.</p></td>
-     <td><p><code>index.Index</code></p></td>
+     <td><p><a href="./v2-Management-CreateIndex#indexindex"><code>index.Index</code></a></p></td>
    </tr>
 </table>
 
@@ -232,7 +235,7 @@ func NewAutoIndex(metricType MetricType) Index
    <tr>
      <td><p><code>metricType</code></p></td>
      <td><p>Name of the metric type that is used to measure the distance between two vectors.</p></td>
-     <td><p><code>index.MetricType</code></p></td>
+     <td><p><a href="./v2-Management-CreateIndex#indexmetrictype"><code>index.MetricType</code></a></p></td>
    </tr>
 </table>
 
@@ -253,7 +256,7 @@ func NewBinFlatIndex(metricType MetricType) Index
    <tr>
      <td><p><code>metricType</code></p></td>
      <td><p>Name of the metric type that is used to measure the distance between two vectors.</p></td>
-     <td><p><code>index.MetricType</code></p></td>
+     <td><p><a href="./v2-Management-CreateIndex#indexmetrictype"><code>index.MetricType</code></a></p></td>
    </tr>
 </table>
 
@@ -274,7 +277,7 @@ func NewBinIvfFlatIndex(metricType MetricType, nlist int) Index
    <tr>
      <td><p><code>metricType</code></p></td>
      <td><p>Name of the metric type that is used to measure the distance between two vectors.</p></td>
-     <td><p><code>index.MetricType</code></p></td>
+     <td><p><a href="./v2-Management-CreateIndex#indexmetrictype"><code>index.MetricType</code></a></p></td>
    </tr>
    <tr>
      <td><p><code>nlist</code></p></td>
@@ -308,7 +311,7 @@ func NewDiskANNIndex(metricType MetricType) Index
    <tr>
      <td><p><code>metricType</code></p></td>
      <td><p>Name of the metric type that is used to measure the distance between two vectors.</p></td>
-     <td><p><code>index.MetricType</code></p></td>
+     <td><p><a href="./v2-Management-CreateIndex#indexmetrictype"><code>index.MetricType</code></a></p></td>
    </tr>
 </table>
 
@@ -329,7 +332,7 @@ func NewFlatIndex(metricType MetricType) Index
    <tr>
      <td><p><code>metricType</code></p></td>
      <td><p>Name of the metric type that is used to measure the distance between two vectors.</p></td>
-     <td><p><code>index.MetricType</code></p></td>
+     <td><p><a href="./v2-Management-CreateIndex#indexmetrictype"><code>index.MetricType</code></a></p></td>
    </tr>
 </table>
 
@@ -350,7 +353,7 @@ func NewGPUBruteForceIndex(metricType MetricType) Index
    <tr>
      <td><p><code>metricType</code></p></td>
      <td><p>Name of the metric type that is used to measure the distance between two vectors.</p></td>
-     <td><p><code>index.MetricType</code></p></td>
+     <td><p><a href="./v2-Management-CreateIndex#indexmetrictype"><code>index.MetricType</code></a></p></td>
    </tr>
 </table>
 
@@ -371,7 +374,7 @@ func NewGPUCagraIndex(metricType MetricType, intermediateGraphDegree, graphDegre
    <tr>
      <td><p><code>metricType</code></p></td>
      <td><p>Name of the metric type that is used to measure the distance between two vectors.</p></td>
-     <td><p><code>index.MetricType</code></p></td>
+     <td><p><a href="./v2-Management-CreateIndex#indexmetrictype"><code>index.MetricType</code></a></p></td>
    </tr>
    <tr>
      <td><p><code>intermediateGraphDegree</code></p></td>
@@ -402,7 +405,7 @@ func NewGPUIVPFlatIndex(metricType MetricType) Index
    <tr>
      <td><p><code>metricType</code></p></td>
      <td><p>Name of the metric type that is used to measure the distance between two vectors.</p></td>
-     <td><p><code>index.MetricType</code></p></td>
+     <td><p><a href="./v2-Management-CreateIndex#indexmetrictype"><code>index.MetricType</code></a></p></td>
    </tr>
 </table>
 
@@ -423,7 +426,7 @@ func NewGPUIVPPQIndex(metricType MetricType) Index
    <tr>
      <td><p><code>metricType</code></p></td>
      <td><p>Name of the metric type that is used to measure the distance between two vectors.</p></td>
-     <td><p><code>index.MetricType</code></p></td>
+     <td><p><a href="./v2-Management-CreateIndex#indexmetrictype"><code>index.MetricType</code></a></p></td>
    </tr>
 </table>
 
@@ -470,7 +473,7 @@ func NewHNSWIndex(metricType MetricType, m int, efConstruction int) Index
    <tr>
      <td><p><code>metricType</code></p></td>
      <td><p>Name of the metric type that is used to measure the distance between two vectors.</p></td>
-     <td><p><code>index.MetricType</code></p></td>
+     <td><p><a href="./v2-Management-CreateIndex#indexmetrictype"><code>index.MetricType</code></a></p></td>
    </tr>
    <tr>
      <td><p><code>m</code></p></td>
@@ -509,7 +512,7 @@ func NewIvfFlatIndex(metricType MetricType, nlist int) Index
    <tr>
      <td><p><code>metricType</code></p></td>
      <td><p>Name of the metric type that is used to measure the distance between two vectors.</p></td>
-     <td><p><code>index.MetricType</code></p></td>
+     <td><p><a href="./v2-Management-CreateIndex#indexmetrictype"><code>index.MetricType</code></a></p></td>
    </tr>
    <tr>
      <td><p><code>nlist</code></p></td>
@@ -535,7 +538,7 @@ func NewIvfPQIndex(metricType MetricType, nlist int, m int, nbits int) Index
    <tr>
      <td><p><code>metricType</code></p></td>
      <td><p>Name of the metric type that is used to measure the distance between two vectors.</p></td>
-     <td><p><code>index.MetricType</code></p></td>
+     <td><p><a href="./v2-Management-CreateIndex#indexmetrictype"><code>index.MetricType</code></a></p></td>
    </tr>
    <tr>
      <td><p><code>nlist</code></p></td>
@@ -549,6 +552,32 @@ func NewIvfPQIndex(metricType MetricType, nlist int, m int, nbits int) Index
    </tr>
    <tr>
      <td><p><code>nbits</code></p></td>
+     <td></td>
+     <td><p><code>int</code></p></td>
+   </tr>
+</table>
+
+## index.NewIvfRabitQIndex
+
+This method prepares the index parameters with the index type set to **IVF_RABITQ**. The signature of this method is as follows:
+
+```go
+func NewIvfRabitQIndex(metricType MetricType, nlist int) *ivfRabitQIndex
+```
+
+<table>
+   <tr>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
+   </tr>
+   <tr>
+     <td><p><code>metricType</code></p></td>
+     <td><p>Name of the metric type that is used to measure the distance between two vectors.</p></td>
+     <td><p><a href="./v2-Management-CreateIndex#indexmetrictype"><code>index.MetricType</code></a></p></td>
+   </tr>
+   <tr>
+     <td><p><code>nlist</code></p></td>
      <td></td>
      <td><p><code>int</code></p></td>
    </tr>
@@ -571,12 +600,109 @@ func NewIvfSQ8Index(metricType MetricType, nlist int) Index
    <tr>
      <td><p><code>metricType</code></p></td>
      <td><p>Name of the metric type that is used to measure the distance between two vectors.</p></td>
-     <td><p><code>index.MetricType</code></p></td>
+     <td><p><a href="./v2-Management-CreateIndex#indexmetrictype"><code>index.MetricType</code></a></p></td>
    </tr>
    <tr>
      <td><p><code>nlist</code></p></td>
      <td></td>
      <td><p><code>int</code></p></td>
+   </tr>
+</table>
+
+## index.NewMinHashLSHIndex
+
+This method prepares the index parameters with the index type set to **MINHASH_LSH**. The signature of this method is as follows:
+
+```go
+func NewMinHashLSHIndex(metricType entity.MetricType, lshBand int) *minhashLSHIndex
+```
+
+<table>
+   <tr>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
+   </tr>
+   <tr>
+     <td><p><code>metricType</code></p></td>
+     <td><p>Name of the metric type that is used to measure the distance between two vectors.</p></td>
+     <td><p><a href="./v2-Management-CreateIndex#indexmetrictype"><code>index.MetricType</code></a></p></td>
+   </tr>
+   <tr>
+     <td><p><code>lsBand</code></p></td>
+     <td><p>Number of bands to divide the MinHash signature for LSH. Controls the recall-performance tradeoff.</p></td>
+     <td><p><code>int</code></p></td>
+   </tr>
+</table>
+
+This method provides the following chainable methods:
+
+- [WithSearchWithJACCARD](./v2-Management-CreateIndex#withsearchwithjaccard)
+
+- [WithRefineK](./v2-Management-CreateIndex#withrefinek)
+
+- [WithBatchSearch](./v2-Management-CreateIndex#withbatchsearch)
+
+### WithSearchWithJACCARD
+
+This method determines whether to perform exact Jaccard similarity computation on candidate results for refinement. The signature is as follows:
+
+```go
+func (ap *minHashLSHAnnParam) WithSearchWithJACCARD(searchWithJACCARD bool) *minHashLSHAnnParam
+```
+
+<table>
+   <tr>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
+   </tr>
+   <tr>
+     <td><p><code>searchWithJACCARD</code></p></td>
+     <td><p>Name of the metric type that is used to measure the distance between two vectors.</p></td>
+     <td><p><code>bool</code></p></td>
+   </tr>
+</table>
+
+### WithRefineK
+
+This method determines the number of candidates to retrieve before Jaccard refinement. Only effective when `searchWithJACCARD` is to `true`. The signature is as follows:
+
+```go
+func (ap *minHashLSHAnnParam) WithRefineK(refineK int) *minHashLSHAnnParam
+```
+
+<table>
+   <tr>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
+   </tr>
+   <tr>
+     <td><p><code>refineK</code></p></td>
+     <td><p>Number of candidates to retrieve before Jaccard refinement. Only effective when <code>searchWithJACCARD</code> is to <code>True</code>.</p></td>
+     <td><p><code>int</code></p></td>
+   </tr>
+</table>
+
+### WithBatchSearch
+
+This method determines whether to enable batch optimization for multiple simultaneous queries. The signature is as follows:
+
+```go
+func (ap *minHashLSHAnnParam) WithBatchSearch(batchSearch bool) *minHashLSHAnnParam
+```
+
+<table>
+   <tr>
+     <th><p>Parameter</p></th>
+     <th><p>Description</p></th>
+     <th><p>Type</p></th>
+   </tr>
+   <tr>
+     <td><p><code>batchSearch</code></p></td>
+     <td><p>Whether to enable batch optimization for multiple simultaneous queries.</p></td>
+     <td><p><code>bool</code></p></td>
    </tr>
 </table>
 
@@ -597,7 +723,7 @@ func NewSCANNIndex(metricType MetricType, nlist int, withRawData bool) Index
    <tr>
      <td><p><code>metricType</code></p></td>
      <td><p>Name of the metric type that is used to measure the distance between two vectors.</p></td>
-     <td><p><code>index.MetricType</code></p></td>
+     <td><p><a href="./v2-Management-CreateIndex#indexmetrictype"><code>index.MetricType</code></a></p></td>
    </tr>
    <tr>
      <td><p><code>nlist</code></p></td>
@@ -636,7 +762,7 @@ func NewSparseInvertedIndex(metricType MetricType, dropRatio float64) Index
    <tr>
      <td><p><code>metricType</code></p></td>
      <td><p>Name of the metric type that is used to measure the distance between two vectors.</p></td>
-     <td><p><code>index.MetricType</code></p></td>
+     <td><p><a href="./v2-Management-CreateIndex#indexmetrictype"><code>index.MetricType</code></a></p></td>
    </tr>
    <tr>
      <td><p><code>dropRatio</code></p></td>
@@ -662,7 +788,7 @@ func NewSparseWANDIndex(metricType MetricType, dropRatio float64) Index
    <tr>
      <td><p><code>metricType</code></p></td>
      <td><p>Name of the metric type that is used to measure the distance between two vectors.</p></td>
-     <td><p><code>index.MetricType</code></p></td>
+     <td><p><a href="./v2-Management-CreateIndex#indexmetrictype"><code>index.MetricType</code></a></p></td>
    </tr>
    <tr>
      <td><p><code>dropRatio</code></p></td>
@@ -681,7 +807,7 @@ func NewTrieIndex() Index
 
 ## index.MetricType
 
-This is an alias type that maps to `entity.MetricType`.
+This is an alias type that maps to [`entity.MetricType`](./v2-Collection-CreateCollection).
 
 ## Return
 
