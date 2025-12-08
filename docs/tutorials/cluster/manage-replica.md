@@ -3,11 +3,14 @@ title: "管理 Replica | Cloud"
 slug: /manage-replica
 sidebar_label: "管理 Replica"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和资源的拷贝。使用 Replica 可以提升查询吞吐量和系统稳定性。 | Cloud"
 type: origin
 token: A8MYw6Wj2ilF2akZeKYcwJGSnSY
-sidebar_position: 5
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz
@@ -20,25 +23,29 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Supademo from '@site/src/components/Supademo';
+
 # 管理 Replica
 
 Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和资源的拷贝。使用 Replica 可以提升查询吞吐量和系统稳定性。
 
 对于数据量较小但 QPS 出现瓶颈的用户而言，增加 Replica 数量能分布查询负载，从而整体提升查询吞吐量。但是，增加 Replica 数量并不会提升集群容量。影响集群数据容量的唯一因素是 CU 规格。如需提升集群数据容量，请参考[集群扩缩容](./scale-cluster)。
 
+设置 Replica 会影响 Cluster 的每月 CU 费用，但不会影响存储费用。更多详情，可以参考 [Dedicated 集群费用](./dedicated-cluster-cost)。
+
 本文介绍如何为 Zilliz Cloud 集群设置 Replica。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>此功能仅适用于 Dedicated 集群。</p>
+<p>此功能仅限<strong>企业版</strong>项目中的 <strong>Dedicated</strong> 集群使用。</p>
 
 </Admonition>
 
-## 设置按量计费集群 Replica{#configure-replicas-for-usage-based-cluster}
+## 设置按量计费集群 Replica\{#configure-replicas-for-usage-based-cluster}
 
-设置 Replica 的操作会影响集群每月的 CU 费用。存储费用不会受到影响。更多详情，请参考[预估费用](./understand-cost)。
+设置 Replica 的操作会影响集群每月的 CU 费用。存储费用不会受到影响。更多详情，请参考[了解费用](./understand-cost)。
 
-### 使用限制{#limits}
+### 使用限制\{#limits}
 
 在集群创建完成后，满足以下条件时，您可以设置 Replica：
 
@@ -54,15 +61,17 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 </Admonition>
 
-### 手动调整 Replica 数量{#configure-replicas-manually}
+### 手动调整 Replica 数量\{#configure-replicas-manually}
 
 您可以选择通过控制台或 RESTful API 调整集群 Replica 数量。
 
-#### 通过 Web 控制台{#via-web-console}
+#### 通过 Web 控制台\{#via-web-console}
 
 以下 Demo 展示了如何在 Zilliz Cloud 控制台中手动调整 Replica 数量。
 
-#### 通过RESTful API{#via-restful-api}
+<Supademo id="cmd2ub5ca38cxc4kjl4ua85dm" title=""  />
+
+#### 通过RESTful API\{#via-restful-api}
 
 您可以使用 RESTful API 设置 Replica。
 
@@ -83,17 +92,19 @@ curl --request POST \
       }'
 ```
 
-### 设置 Replica 弹性伸缩{#auto-scale-replicas}
+### 设置 Replica 弹性伸缩\{#auto-scale-replicas}
 
 目前，您仅可通过 Zilliz Cloud 控制台，根据预设的时间计划自动调整 Replica 数量。
 
 以下 Demo 展示了如何启用 Replica 弹性伸缩功能。
 
-## 设置包年包月集群 Replica{#configure-replicas-for-annual-subsription-cluster}
+<Supademo id="cmd2ujs5s38dlc4kjgbm3gkui" title=""  />
+
+## 设置包年包月集群 Replica\{#configure-replicas-for-annual-subsription-cluster}
 
 当前包年包月集群仅支持增加 Replica 数量，不支持减少 Replica 数量。
 
-![NT2Tw6vf0hXg6ebI541cOXx3ntd](/img/NT2Tw6vf0hXg6ebI541cOXx3ntd.png)
+![NT2Tw6vf0hXg6ebI541cOXx3ntd](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/NT2Tw6vf0hXg6ebI541cOXx3ntd.png)
 
 上图展示了增加包年包月集群 Replica 数量的主要流程和步骤。以下为具体操作说明。
 
@@ -101,7 +112,7 @@ curl --request POST \
 
 1. 登录 Zilliz Cloud。前往目标集群的**集群详情**页。点击 Replica 数量右侧的**增加**按钮。
 
-    ![increase-replica-for-annual-subscription-cluster-entrance-cn](/img/increase-replica-for-annual-subscription-cluster-entrance-cn.png)
+    ![increase-replica-for-annual-subscription-cluster-entrance-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/increase-replica-for-annual-subscription-cluster-entrance-cn.png "increase-replica-for-annual-subscription-cluster-entrance-cn")
 
 1. 选择集群 Replica 数量。目前仅支持选择比当前更大的 Replica 数量。
 
@@ -109,7 +120,7 @@ curl --request POST \
 
 1. 检查订单金额，点击**增加**。如需了解集群升配与续订的费用计算规则，请参考[变更配置费用说明](./notice-on-config-changes)。
 
-    ![increase-replica-for-annual-subscription-cluster-cn](/img/increase-replica-for-annual-subscription-cluster-cn.png)
+    ![increase-replica-for-annual-subscription-cluster-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/increase-replica-for-annual-subscription-cluster-cn.png "increase-replica-for-annual-subscription-cluster-cn")
 
 1. 阅读并同意 [Zilliz Cloud 服务条款](https://zilliz.com.cn/cloud-service-terms)。
 
@@ -117,7 +128,7 @@ curl --request POST \
 
 完成步骤 1 后，Zilliz Cloud 将生成一份类型为**升配**的**待支付**订单。请检查订单内容并及时完成支付。
 
-![pay-annual-subscription-scale-order-cn](/img/pay-annual-subscription-scale-order-cn.png)
+![pay-annual-subscription-scale-order-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/pay-annual-subscription-scale-order-cn.png "pay-annual-subscription-scale-order-cn")
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -131,6 +142,7 @@ curl --request POST \
 
 订单支付成功后，Zilliz Cloud 会开始为您的包年包月集群增加 Replica 数量，您将看到以下界面。
 
-![annual-subscription-cluster-is-being-scaled-cn](/img/annual-subscription-cluster-is-being-scaled-cn.png)
+![annual-subscription-cluster-is-being-scaled-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/annual-subscription-cluster-is-being-scaled-cn.png "annual-subscription-cluster-is-being-scaled-cn")
 
 集群升配的过程大约需要 10 分钟，请您耐心等待。当集群状态变为**运行中**时，代表包年包月集群 Replica 数量增加成功。
+

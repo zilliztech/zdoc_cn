@@ -3,6 +3,9 @@ title: "数据导出 | Cloud"
 slug: /data-export
 sidebar_label: "数据导出"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本章介绍数据导出的相关操作步骤。 | Cloud"
 type: origin

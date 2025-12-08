@@ -3,6 +3,9 @@ title: "管理 Alias | Cloud"
 slug: /manage-aliases
 sidebar_label: "管理 Alias"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 为 Collection 提供了 Alias 管理能力。本节介绍如何创建、查看、删除 Alias。 | Cloud"
 type: origin
@@ -27,13 +30,29 @@ import TabItem from '@theme/TabItem';
 
 Zilliz Cloud 为 Collection 提供了 Alias 管理能力。本节介绍如何创建、查看、删除 Alias。
 
-## 概述{#overview}
+## 为何使用 Alias\{#why-use-an-alias}
 
-您可以为一个 Collection 分配多个 Alias。但是多个 Collection 不可共享同一个 Alias。
+通过为指定 Collection 绑定不同的别名，可以在不修改应用代码的情况下方便的更换不同的 Collection。
 
-在收到针对某个 Collection 的操作时，Zilliz Cloud 会查找指定的 Collection。如果指定的 Collection 名称不存在，Zilliz Cloud 会将指定的 Collection 名称当做 Alias 继续查找。您可以通过为 Collection 分配 Alias 来提升 Collection 在不同场景下的适应能力。
+假设您的应用需要查询的 Collection 绑定了一个名为 `prod_data`的 Alias。当您需要使用新数据时，你可以按照如下步骤以不中断业务的方式完成该任务：
 
-## 创建 Alias{#create-alias}
+1. **创建一个新的 Collection**，并将其命名为 `prod_data_v2`。
+
+1. **准备数据**：为该 Collection 创建索引并加载该 Collection。然后将新的数据存入该 Collection。
+
+1. **更换别名**：在新 Collection 就绪后，将 `prod_data` 这个 Alias 重新分配给 `prod_data_v2` 这个 Collection。
+
+这时，您的应用仍旧可以将业务请求发送到 `prod_data`，业务运行丝毫不受影响。该机制让数据无缝更新成为可能，简化了向量检索服务的蓝绿部署流程。
+
+Alias 的关键特性：
+
+- 一个 Collection 可以绑定多个 Alias。
+
+- 一个 Alias 一次只能绑定到一个 Collection，不能同时绑定多个 Collection。
+
+- 在处理接收到的业务请求时，Zilliz Cloud 会检查请求中指定的 Collection 名称是否存在。如果不存在，Zilliz Cloud 就会检查现有 Alias 中是否存在该名称。
+
+## 创建 Alias\{#create-alias}
 
 您可以参考如下代码为您的 Collection 创建 Alias。
 
@@ -214,7 +233,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 查看分配给 Collection 的所有 Alias{#list-aliases}
+## 查看分配给 Collection 的所有 Alias\{#list-aliases}
 
 你可以参考如下代码查看分配给指定 Collection 的所有 Alias。
 
@@ -319,7 +338,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 查看 Alias 详情{#describe-alias}
+## 查看 Alias 详情\{#describe-alias}
 
 你可以参考如下代码查看指定 Alias 绑定的 Collection。
 
@@ -437,7 +456,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 重新分配 Alias{#alter-alias}
+## 重新分配 Alias\{#alter-alias}
 
 你可以参考如下代码将已经分配给某个 Collection 的 Alias 重新分配给另一个 Collection。
 
@@ -647,7 +666,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 删除 Alias{#drop-alias}
+## 删除 Alias\{#drop-alias}
 
 你可以参考如下代码删除指定的 Alias。
 

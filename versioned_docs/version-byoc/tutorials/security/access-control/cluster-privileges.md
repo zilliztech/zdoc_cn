@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
 
 下图展示了权限和权限组的授权过程间差异。
 
-![T21Pwj7Q6hlWaNbvt2SctI3rnYf](/img/T21Pwj7Q6hlWaNbvt2SctI3rnYf.png)
+![T21Pwj7Q6hlWaNbvt2SctI3rnYf](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/T21Pwj7Q6hlWaNbvt2SctI3rnYf.png)
 
 本文详细介绍了 Zilliz Cloud 中可用的内置权限组和权限。
 

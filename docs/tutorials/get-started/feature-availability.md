@@ -3,8 +3,11 @@ title: "功能支持情况 | Cloud"
 slug: /feature-availability
 sidebar_label: "功能支持情况"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "最后更新时间：2025 年 7 月 14 日 | Cloud"
+description: "最后更新时间：2025 年 10 月 13 日 | Cloud"
 type: origin
 token: EZ2jwCJD7iazqKkmSGRcBfjWnCh
 sidebar_position: 12
@@ -21,11 +24,11 @@ import Admonition from '@theme/Admonition';
 
 # 功能支持情况
 
-*最后更新时间：2025 年 7 月 14 日*
+*最后更新时间：2025 年 10 月 13 日*
 
 功能的可用性阶段表示其在 Zilliz Cloud 中的**成熟度、稳定性和推荐使用程度**。以下内容介绍了各功能生命周期阶段的定义及其对用户的意义：
 
-![ChEdwtmeQhlfcib0zTAcH05Pnec](/img/ChEdwtmeQhlfcib0zTAcH05Pnec.png)
+![ChEdwtmeQhlfcib0zTAcH05Pnec](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/ChEdwtmeQhlfcib0zTAcH05Pnec.png)
 
 - **内测版**
 
@@ -73,15 +76,11 @@ Zilliz Cloud 文档中，每个功能会以标签形式标注其当前支持阶�
 
 ### 内测版
 
-- [通过 Stage 从 Milvus 迁移至 Zilliz Cloud](./via-stage)
+- [提取、转换和加载](./merge-data)（ETL）
 
 - [在线迁移](./zero-downtime-migration)
 
-- [审计日志](./audit-logs)
-
 - [导出备份文件](./export-backup-files)
-
-- [集成阿里云对象存储](./integrate-with-storage-bucket)
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -91,17 +90,15 @@ Zilliz Cloud 文档中，每个功能会以标签形式标注其当前支持阶�
 
 ### 公测版
 
-- [JSON 索引](./use-json-fields#index-a-json-field)
-
-<Admonition type="info" icon="📘" title="说明">
-
-<p>请<a href="http://support.zilliz.com.cn">提交工单</a>以升级集群中的 Milvus 版本后再使用该功能。</p>
-
-</Admonition>
+无
 
 ### 停用预告
 
-- [Pipelines](./pipelines)
+- [从 NumPy 文件导入数据](./data-import-numpy)
 
 - [RESTful API（V1 版本）](/reference/restful/v1)
+
+### 已停用
+
+- Pipelines
 

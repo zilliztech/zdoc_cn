@@ -3,6 +3,9 @@ title: "第三方集成 | Cloud"
 slug: /integrate-with-third-parties
 sidebar_label: "第三方集成"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本章介绍如何将 Zilliz Cloud 项目与第三方服务集成。 | Cloud"
 type: origin

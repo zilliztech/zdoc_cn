@@ -3,11 +3,14 @@ title: "现金充值（对公转账） | Cloud"
 slug: /advance-pay
 sidebar_label: "现金充值（对公转账）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "对公转账是指通过银行汇款的方式将资金充值到您的 Zilliz Cloud 组织现金余额中，用于支付使用 Zilliz Cloud 产生的费用。目前，Zilliz Cloud 界面仅支持通过专属账号进行汇款。 | Cloud"
 type: origin
 token: JZqrwH8V8i6a3jktSQgcyXAEnAg
-sidebar_position: 2
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz
@@ -32,13 +35,13 @@ import Admonition from '@theme/Admonition';
 
 </Admonition>
 
-## 对公转账流程{#procedures}
+## 对公转账流程\{#procedures}
 
 下图展示了在 Zilliz Cloud 通过专属账号进行对公转账的主要流程。
 
-![FLFswkIjJhwod6bsBAYcPMNankb](/img/FLFswkIjJhwod6bsBAYcPMNankb.png)
+![FLFswkIjJhwod6bsBAYcPMNankb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/FLFswkIjJhwod6bsBAYcPMNankb.png)
 
-## 操作步骤{#add-funds}
+## 操作步骤\{#add-funds}
 
 1. **获取专属汇款账号：**
 
@@ -52,11 +55,11 @@ import Admonition from '@theme/Admonition';
 
     1. 点击左侧导航栏中的**账单**并前往**账单概览**页。在**现金余额**部分，点击**充值**按钮。
 
-        ![add-fund-cn](/img/add-fund-cn.png)
+        ![add-fund-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/add-fund-cn.png "add-fund-cn")
 
     1. 查看您的专属汇款账号。
 
-        ![bank-transfer-information](/img/bank-transfer-information.png)
+        ![bank-transfer-information](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/bank-transfer-information.png "bank-transfer-information")
 
 1. **线下汇款：**
 
@@ -74,7 +77,7 @@ import Admonition from '@theme/Admonition';
 
     如果您的汇款资金未到账，请通过 finance@zilliz.com 联系我们或[提交工单](http://support.zilliz.com.cn)。
 
-    ![add_fund_history](/img/add_fund_history.png)
+    ![add_fund_history](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/add_fund_history.png "add_fund_history")
 
 ## 常见问题
 

@@ -3,6 +3,9 @@ title: "稠密向量 | Cloud"
 slug: /use-dense-vector
 sidebar_label: "稠密向量"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "稠密向量是一种数值化的数据表示方法，在机器学习和数据分析领域广泛使用。它是由一系列实数组成的数组，其特点是大多数或所有元素都是非零值。与稀疏向量相比，稠密向量在同等维度下包含更多的信息，因为每个维度都携带有意义的数值。这种表示方法能够有效地捕捉复杂的模式和关系，使得数据在高维空间中更容易被分析和处理。稠密向量通常具有固定的维度，可以是几十到几百，甚至几千维，具体取决于应用场景和需求。 | Cloud"
 type: origin
@@ -31,11 +34,11 @@ import TabItem from '@theme/TabItem';
 
 稠密向量主要用于需要理解数据语义的场景，如语义搜索、推荐系统等。在语义搜索中，稠密向量可以帮助捕捉查询和文档之间的潜在关联，从而提高搜索结果的相关性。在推荐系统中，它们能够帮助识别用户与物品之间的相似性，提供更加个性化的推荐。
 
-## 概述{#overview}
+## 概述\{#overview}
 
 稠密向量通常表示为一个固定长度的浮点数数组，例如 `[0.2, 0.7, 0.1, 0.8, 0.3, ..., 0.5]`。这种向量的维度通常在数百到数千之间，如 128、256、768 或 1024。每个维度都捕捉了对象的特定语义特征，使其能够通过相似度计算来应用于各种场景。
 
-![WTuVwLoP6hUZgGbTOBRcrfNWnif](/img/WTuVwLoP6hUZgGbTOBRcrfNWnif.png)
+![WTuVwLoP6hUZgGbTOBRcrfNWnif](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/WTuVwLoP6hUZgGbTOBRcrfNWnif.png)
 
 上图展示了稠密向量在二维空间中的表示。尽管实际应用中的稠密向量通常有更高的维度，但这个二维图能够直观地展示几个关键概念：
 
@@ -57,15 +60,16 @@ import TabItem from '@theme/TabItem';
     -0.0053388323,
     0.0010654867,
     0.072027855,
-    // ... 更多维度
+    // ... more dimensions
 ]
+
 ```
 
 稠密向量可以通过各种 [Embedding](https://en.wikipedia.org/wiki/Embedding) 模型生成，例如针对图像的 CNN 模型（如 [ResNet](https://pytorch.org/hub/pytorch_vision_resnet/)、[VGG](https://pytorch.org/vision/stable/models/vgg.html)）和针对文本的语言模型（如 [BERT](https://en.wikipedia.org/wiki/BERT_(language_model))、[Word2Vec](https://en.wikipedia.org/wiki/Word2vec)）。这些模型将原始数据转换为高维空间中的点，捕获数据的语义特征。此外，Milvus 提供了一些便捷的方法来帮助用户生成和处理稠密向量，具体可以参考 Embeddings。
 
 数据在向量化后，可以存储在 Zilliz Cloud 中进行管理和向量检索。下图展示了基本流程。
 
-![VVYrwUkGxhvwyAbhaiLcT8q4nze](/img/VVYrwUkGxhvwyAbhaiLcT8q4nze.png)
+![VVYrwUkGxhvwyAbhaiLcT8q4nze](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/VVYrwUkGxhvwyAbhaiLcT8q4nze.png)
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -73,9 +77,9 @@ import TabItem from '@theme/TabItem';
 
 </Admonition>
 
-## 使用稠密向量{#use-dense-vectors}
+## 使用稠密向量\{#use-dense-vectors}
 
-### 添加稠密向量字段{#add-vector-field}
+### 添加稠密向量字段\{#add-vector-field}
 
 要在 Zilliz Cloud 中使用稠密向量，首先需要在[创建 Collection](./manage-collections-sdks) 时定义用于存储稠密向量的向量字段。这个过程包括：
 
@@ -247,7 +251,7 @@ export schema="{
    </tr>
 </table>
 
-### 为稠密向量设置索引参数{#set-index-params-for-vector-field}
+### 为稠密向量设置索引参数\{#set-index-params-for-vector-field}
 
 为加速语义搜索，我们需要为向量字段创建索引。索引可以显著提高大规模向量数据的检索效率。
 
@@ -328,7 +332,7 @@ export indexParams='[
 
 除了 `IP` 距离度量，Zilliz Cloud 还支持其他度量类型。具体请参考[相似度类型](./search-metrics-explained)。
 
-### 创建 Collection{#create-collection}
+### 创建 Collection\{#create-collection}
 
 稠密向量和索引定义完成后，我们便可以创建包含稠密向量的 Collection。以下示例通过 `create_collection` 方法创建了一个名为 `my_dense_collection` 的 Collection。
 
@@ -415,7 +419,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 插入稠密向量{#insert-data}
+### 插入稠密向量\{#insert-data}
 
 创建 Collection 后，我们可以通过 `insert` 方法插入包含稠密向量的数据。注意，插入的稠密向量的维度必须与[添加稠密向量字段](./use-dense-vector)时定义的 `dim` 值相同。
 
@@ -511,7 +515,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 基于稠密向量执行相似性搜索{#perform-similarity-search}
+### 基于稠密向量执行相似性搜索\{#perform-similarity-search}
 
 基于稠密向量的语义搜索是 Milvus 的核心功能之一，可以根据向量之间的距离快速找到与查询向量最相似的数据。要执行相似性搜索，您需要准备查询向量和搜索参数，然后调用 `search` 方法。
 

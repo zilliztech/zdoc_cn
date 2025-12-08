@@ -3,6 +3,9 @@ title: "字符串类型 | Cloud"
 slug: /use-string-field
 sidebar_label: "字符串类型"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，`VARCHAR` 是用于存储字符串类型的数据类型，适用于可变长度字符串的存储。 | Cloud"
 type: origin
@@ -42,7 +45,7 @@ import TabItem from '@theme/TabItem';
 
 </Admonition>
 
-## 添加 VARCHAR 字段{#add-varchar-field}
+## 添加 VARCHAR 字段\{#add-varchar-field}
 
 要在 Zilliz Cloud 中使用字符串类型，需要在创建 Collection 时定义用于存储字符串的 `VARCHAR` 字段。如下示例演示了如何在创建 Collection Schema 时定义两个 `VARCHAR` 字段。其中，
 
@@ -267,7 +270,7 @@ export schema="{
 </TabItem>
 </Tabs>
 
-## 设置索引参数{#set-index-params}
+## 设置索引参数\{#set-index-params}
 
 为 VARCHAR 字段设置索引参数是一个可选操作，可以显著提高查询效率。在 Zilliz Cloud 中，索引为向量字段的必选配置；对于标量字段而言为可选配置。
 
@@ -378,7 +381,7 @@ export indexParams='[
 </TabItem>
 </Tabs>
 
-## 创建 Collection{#create-collection}
+## 创建 Collection\{#create-collection}
 
 定义好 Schema 和索引后，我们便可以创建包含字符串字段的 Collection。
 
@@ -453,7 +456,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 插入数据{#insert-data}
+## 插入数据\{#insert-data}
 
 Collection 创建完成后，可以插入包含字符串字段的数据。
 
@@ -597,7 +600,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 使用过滤表达式查询{#query-with-filter-expressions}
+## 使用过滤表达式查询\{#query-with-filter-expressions}
 
 添加字符串字段后，您可以在 `query` 请求中利用这些字段进行过滤。例如，您可以查询 `varchar_field1` 为 `Product A` 的所有数据：
 
@@ -895,7 +898,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 向量搜索与字符串过滤结合{#vector-search-with-filter-expressions}
+## 向量搜索与字符串过滤结合\{#vector-search-with-filter-expressions}
 
 除了基本的标量字段过滤，您还可以将向量相似度搜索与标量字段过滤结合使用。例如，以下代码展示了如何在向量搜索中添加标量字段的过滤条件：
 

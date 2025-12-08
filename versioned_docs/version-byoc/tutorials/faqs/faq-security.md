@@ -1,13 +1,13 @@
 ---
-title: "FAQ：安全 | CLOUD"
+title: "FAQ：安全 | BYOC"
 slug: /faq-security
 sidebar_label: "FAQ：安全"
 beta: FALSE
 notebook: FALSE
-description: " | CLOUD"
+description: " | BYOC"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
-sidebar_position: 15
+sidebar_position: 12
 
 ---
 

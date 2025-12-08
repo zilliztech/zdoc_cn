@@ -1,10 +1,13 @@
 ---
-title: "创建 Collection | Cloud"
+title: "创建 Collection | BYOC"
 slug: /manage-collections-sdks
 sidebar_label: "创建 Collection"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "您可以根据业务开发需要，确定 Collection Schema、索引参数、相似度类型、是否自动加载等设置。本节将介绍创建 Collection 的具体步骤及相关注意事项。 | Cloud"
+description: "您可以根据业务开发需要，确定 Collection Schema、索引参数、相似度类型、是否自动加载等设置。本节将介绍创建 Collection 的具体步骤及相关注意事项。 | BYOC"
 type: origin
 token: SQQowEMkwiwYvWkwETbczgj8nUh
 sidebar_position: 2
@@ -34,7 +37,7 @@ import TabItem from '@theme/TabItem';
 
 </Admonition>
 
-## 概述{#overview}
+## 概述\{#overview}
 
 Collection 是一张二维数据表，包含固定列数和可变行数。Collection 数据表中的每 1 列对应 1 个字段，每 1 行表示 1 个 Entity。为了实现这种结构化的数据管理方式，我们需要为 Collection 指定 Schema，并在插入 Entity 时，确保每个插入的 Entity 都符合 Schema 的要求。
 
@@ -48,7 +51,7 @@ Collection 是一张二维数据表，包含固定列数和可变行数。Collec
 
 1. [创建 Collection](./manage-collections-sdks)
 
-## 创建 Schema{#create-schema}
+## 创建 Schema\{#create-schema}
 
 Schema 定义了 Collection 的数据结构。在创建 Collection 时，您需要根据业务需求，设计 Schema 的属性和结构。如需了解更多，可参阅 [了解 Schema](./schema-explained) 一节中的内容。
 
@@ -233,7 +236,7 @@ export schema='{
 </TabItem>
 </Tabs>
 
-## （可选）创建索引参数{#set-index-parameters}
+## （可选）创建索引参数\{#set-index-parameters}
 
 通过为指定字段创建索引，可以加速针对该字段的搜索。索引决定了 Zilliz Cloud 如何为 Collection 中的数据排序。以下示例中展示了如何通过调整 `metric_type` 和 `index_type` 这两个参数来选择合适的相似度类型和索引类型。
 
@@ -349,7 +352,7 @@ export indexParams='[
 
 更多关于索引类型详情，请参考[管理 Index](./manage-indexes)。
 
-## 创建 Collection{#create-collection}
+## 创建 Collection\{#create-collection}
 
 如果在创建 Collection 时选择指定索引参数，Collection 创建完毕后，Zilliz Cloud 会自动在指定的向量字段上创建索引，并加载索引到内存。
 
@@ -444,12 +447,10 @@ console.log(res.state)
 <TabItem value='go'>
 
 ```go
-import "github.com/milvus-io/milvus/client/v2/milvusclient"
-
-err := milvusclient.CreateCollection(ctx, client.NewCreateCollectionOption("customized_setup_1", schema).
-    WithIndexOptions(indexOptions...),
-)
+err = client.CreateCollection(ctx, milvusclient.NewCreateCollectionOption("customized_setup_1", schema).
+    WithIndexOptions(indexOptions...))
 if err != nil {
+    fmt.Println(err.Error())
     // handle error
 }
 fmt.Println("collection created")
@@ -607,15 +608,17 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 设置 Collection{#set-collection-properties}
+## 设置 Collection\{#set-collection-properties}
 
 你还可以在创建 Collection 时对 Collection 进行设置，使其更加符合业务需要。目前，Zilliz Cloud 支持在创建 Collection 时指定如下设置：
 
-### 设置 Shard 数量{#set-shard-number}
+### 设置 Shard 数量\{#set-shard-number}
 
 Shard 是对 Collection 的水平切分，每个 Shard 对应一条数据写入通路。每个 Collection 默认带有一个 Shard，您可以根据希望的写入速率和待写入的数据量大小在创建 Collection 时来设置合适的 Shard 数量。
 
-通常情况而言，写入速率每增加 500M/s 或待写入数据量每多 100 GB，可以考虑增加 1 个 Shard。此处仅为建议，不是限制。这只是我们根据自己的经验给出的建议，并不适用于所有可能的使用场景。保持默认 Shard 数量也能够完成数据写入。
+作为通用指导，在设置 Shard 数量时可以考虑如下因素：
+
+- **数据规模**：数据量每增加 2 亿 Entity，可以考虑增加一个 Shard。你还可以根据数据的总体积进行预估。例如，对于超过 100 GB 的数据，可以考虑增加 100 GB 的倍数个 Shard。
 
 如下代码演示了如何在创建 Collection 时设置 Shard 数量。
 
@@ -699,11 +702,11 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 开启 mmap{#enable-mmap}
+### 开启 mmap\{#enable-mmap}
 
 Zilliz Cloud 在所有 Collection 上默认开启 mmap。该功能可以让 Zilliz Cloud 使用内存映射的方式加载所有字段的原始数据。节约内存使用的同时，提高 Collection 容量。关于该功能的具体内容，可以查看[使用 mmap](./use-mmap)。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"}]}>
 <TabItem value='python'>
 
 ```python
@@ -762,10 +765,9 @@ fmt.Println("collection created")
 ```
 
 </TabItem>
+</Tabs>
 
-<TabItem value='bash'>
-
-```bash
+```plaintext
 export params='{
     "mmap.enabled": True
 }'
@@ -784,10 +786,7 @@ curl --request POST \
 }"
 ```
 
-</TabItem>
-</Tabs>
-
-### 设置生存时间（TTL）{#set-collection-ttl}
+### 设置生存时间（TTL）\{#set-collection-ttl}
 
 如果您需要 Zilliz Cloud 在 Collection 创建完成后的一段时间内自动清空该 Collection。可以考虑为 Collection 设置 TTL。这样当 Collection 的生存时间超过指定时间（单位为秒）后，Zilliz Cloud 就会开始异步删除 Collection 中的数据。在数据完全删除前，您仍旧可以搜索到部分数据。
 
@@ -882,7 +881,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 设置一致性水平{#set-consistency-level}
+### 设置一致性水平\{#set-consistency-level}
 
 在创建 Collection 时，您可以指定在该 Collection 中进行搜索和查询时使用的一致性水平。您也可以在具体的 Search 和 Query 请求中指定不同的一致性水平。
 
@@ -974,7 +973,7 @@ curl --request POST \
 
 关于一致性水平的更多内容，可以查看[一致性水平](./consistency-level)。
 
-### 使用 Dynamic Field{#enable-dynamic-field}
+### 使用 Dynamic Field\{#enable-dynamic-field}
 
 在 Collection 中，Dynamic Field 是一个名为 $meta 的保留字段。当您启用该字段后，Zilliz Cloud 会将 Entity 中携带的所有未在 Schema 中定义的字段以键值对的形式存放在 Dynamic Field 中。
 

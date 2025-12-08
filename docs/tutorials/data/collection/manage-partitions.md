@@ -3,6 +3,9 @@ title: "管理 Partition | Cloud"
 slug: /manage-partitions
 sidebar_label: "管理 Partition"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Partition 是 Collection 的子集。每个 Partition 都与其所在的 Collection 具有相同的数据结构，但只包含该 Collection 的一部分数据。本节将介绍如何管理 Partition 及相关注意事项。 | Cloud"
 type: origin
@@ -34,7 +37,7 @@ import TabItem from '@theme/TabItem';
 
 Partition 是 Collection 的子集。每个 Partition 都与其所在的 Collection 具有相同的数据结构，但只包含该 Collection 的一部分数据。本节将介绍如何管理 Partition 及相关注意事项。
 
-## 概述{#overview}
+## 概述\{#overview}
 
 在 Zilliz Cloud 中，每个 Collection 都包含一个名为 **_default** 的 Partition。如果 Collection 中不再新增 Partition，所有插入到该 Collection 的数据都会进入这个 Partition 中。所有针对该 Collection 的 Search 和 Query 操作也都是在这个 Partition 中完成的。
 
@@ -48,7 +51,7 @@ Partition 是 Collection 的子集。每个 Partition 都与其所在的 Collect
 
 </Admonition>
 
-## 查看 Partition 列表{#list-partitions}
+## 查看 Partition 列表\{#list-partitions}
 
 每个 Collection 在完成创建后都会包含一个名为 **_default** 的 Partition。您可以使用如下代码列出指定 Collection 中定义的 Partition。
 
@@ -189,7 +192,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 创建 Partition{#create-partition}
+## 创建 Partition\{#create-partition}
 
 您也可以根据需要在指定 Collection 中创建多个Partition，以便于分门别类地存放数据。
 
@@ -331,7 +334,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 检查 Partition 是否存在{#check-for-a-specific-partition}
+## 检查 Partition 是否存在\{#check-for-a-specific-partition}
 
 如果您知道某个 Partition 的名字，但不确定其是否存在，可以参考如下代码检查该 Partition 是否存在。
 
@@ -431,11 +434,11 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## Load 和 Release Partition{#load-and-release-partitions}
+## Load 和 Release Partition\{#load-and-release-partitions}
 
 您可以对 Collection 中若干 Partition 单独进行 Load 和 Release 操作。
 
-### Load 指定 Partition{#load-partitions}
+### Load 指定 Partition\{#load-partitions}
 
 您可以 Load 指定 Collection 中的一个或多个 Partition。值得注意的是，只要 Collection 中存在任意一个未加载的 Partition，Collection 的 Load 状态始终为 NotLoaded。
 
@@ -580,7 +583,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### Release 指定 Partition{#release-partitions}
+### Release 指定 Partition\{#release-partitions}
 
 您也可以 Release 指定 Collection 中的一个或多个 Partition。
 
@@ -718,9 +721,9 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## Partition 中的数据操作{#data-operations-within-partitions}
+## Partition 中的数据操作\{#data-operations-within-partitions}
 
-### 插入与删除 Entity{#insert-and-delete-entities}
+### 插入与删除 Entity\{#insert-and-delete-entities}
 
 您也可以在指定 Partition 中执行 Insert、Upsert 和 Delete 操作。具体可参考：
 
@@ -730,7 +733,7 @@ curl --request POST \
 
 - [从 Partition 中删除 Entity](./delete-entities)
 
-### 搜索与查询{#search-and-query}
+### 搜索与查询\{#search-and-query}
 
 您也可以在指定 Partition 中执行 Search 和 Query 操作。具体可参考
 
@@ -738,7 +741,7 @@ curl --request POST \
 
 - [在 Partition 中进行过滤查询](./get-and-scalar-query)
 
-## 删除 Partition{#drop-partition}
+## 删除 Partition\{#drop-partition}
 
 您也可以删除不再需要的 Partition。在删除 Partition 前，请确保该 Partition 处于未加载的状态。
 

@@ -1,10 +1,13 @@
 ---
-title: "使用 Iterator 导出数据 | Cloud"
+title: "使用 Iterator 导出数据 | BYOC"
 slug: /export-data-iterators
 sidebar_label: "使用 Iterator 导出数据"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 支持您将您的数据完整导出。本文将使用 Iterator 接口演示如何从 Zilliz Cloud Collection 中导出数据。 | Cloud"
+description: "Zilliz Cloud 支持您将您的数据完整导出。本文将使用 Iterator 接口演示如何从 Zilliz Cloud Collection 中导出数据。 | BYOC"
 type: origin
 token: Dv5dwe19oimjQ8kuGCxctHO8nBb
 sidebar_position: 1

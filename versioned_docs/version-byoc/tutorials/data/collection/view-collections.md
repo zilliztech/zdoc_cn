@@ -1,10 +1,13 @@
 ---
-title: "查看 Collection | Cloud"
+title: "查看 Collection | BYOC"
 slug: /view-collections
 sidebar_label: "查看 Collection"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "您既可以查看当前连接的数据库中已创建的 Collection 名称列表，也可以针对某个 Collection 了解其详细情况。 | Cloud"
+description: "您既可以查看当前连接的数据库中已创建的 Collection 名称列表，也可以针对某个 Collection 了解其详细情况。 | BYOC"
 type: origin
 token: WH2nwtc8ZiZ8cokQfxHcO2Mqn6c
 sidebar_position: 4
@@ -30,7 +33,7 @@ import TabItem from '@theme/TabItem';
 
 您既可以查看当前连接的数据库中已创建的 Collection 名称列表，也可以针对某个 Collection 了解其详细情况。
 
-## 查看 Collection 列表{#list-collections}
+## 查看 Collection 列表\{#list-collections}
 
 如下示例演示了如何查看当前连接的数据库中已创建的 Collection 名称列表。
 
@@ -143,7 +146,7 @@ curl --request POST \
 ["quick_setup"]
 ```
 
-## 查看 Collection 详情{#describe-collection}
+## 查看 Collection 详情\{#describe-collection}
 
 您也可以根据需要查看某个 Collection 的详细情况。如下示例代码中假设您已经创建了名为 quick_setup 的 Collection。
 
@@ -218,7 +221,7 @@ curl --request POST \
 
 如果您已经创建了名为 `quick_setup` 的 Collection，运行上述示例的结果如下：
 
-```json
+```plaintext
 {
     'collection_name': 'quick_setup', 
     'auto_id': False, 

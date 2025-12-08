@@ -1,10 +1,13 @@
 ---
-title: "过滤器参考 | Cloud"
+title: "过滤器参考 | BYOC"
 slug: /analyzer-filters
 sidebar_label: "过滤器参考"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "本节介绍各过滤器的具体信息。 | Cloud"
+description: "本节介绍各过滤器的具体信息。 | BYOC"
 type: origin
 token: BBJSwhjOwiKrcRk8AT2cocCcnmz
 sidebar_position: 4

@@ -3,11 +3,14 @@ title: "版本说明书（2025/06/09） | Cloud"
 slug: /release-notes-2170
 sidebar_label: "版本说明书（2025/06/09）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "此次发布在 Zilliz Cloud 的多个功能中提供了更精致、更直观的用户体验。从重新设计的迁移控制台到基于策略的告警和改进的 mmap 控制，我们专注于让您的工作流程更快、更灵活且更易于管理。无论是管理基础设施、监控环境还是寻求支持，新的 AI 助手功能都让您与 Zilliz Cloud 的联络更加顺畅。 | Cloud"
 type: origin
 token: TC2VwH24niqw5wk2S66ccMhxnFe
-sidebar_position: 1
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz
@@ -24,7 +27,7 @@ import Admonition from '@theme/Admonition';
 
 此次发布在 Zilliz Cloud 的多个功能中提供了更精致、更直观的用户体验。从重新设计的迁移控制台到基于策略的告警和改进的 mmap 控制，我们专注于让您的工作流程更快、更灵活且更易于管理。无论是管理基础设施、监控环境还是寻求支持，新的 AI 助手功能都让您与 Zilliz Cloud 的联络更加顺畅。
 
-## Milvus 兼容性{#milvus-compatibility}
+## Milvus 兼容性\{#milvus-compatibility}
 
 本次发布后创建的所有集群均兼容 **Milvus v2.5.x**。同时，所有 Milvus v2.5.x 相关特性在 Zilliz Cloud 上均已全面可用。
 
@@ -34,11 +37,11 @@ import Admonition from '@theme/Admonition';
 
     Zilliz Cloud 支持在 Zilliz Cloud 集群间、从 Milvus、以及从外部数据源迁移数据。关于所有支持的数据源，可以查看[数据迁移](./migrations)。
 
-    ![Q9JWbgdiAoOXpFxl9RScyla6nZb](/img/Q9JWbgdiAoOXpFxl9RScyla6nZb.png)
+    ![Q9JWbgdiAoOXpFxl9RScyla6nZb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Q9JWbgdiAoOXpFxl9RScyla6nZb.png)
 
 - **高级 Collection 和字段配置工具**：更完善的数据类型支持、动态字段到静态字段转换能力以及一目了然的字段和 Shard 配置能力让您更加自信地处理从选定数据源到 Zilliz Cloud Collection 间的复杂字段映射关系。所有这一切都包含在这个对用户友好的响应式界面中。 
 
-    ![QCZdbszQXoJ1R6x3EilcYAyynHg](/img/QCZdbszQXoJ1R6x3EilcYAyynHg.png)
+    ![QCZdbszQXoJ1R6x3EilcYAyynHg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/QCZdbszQXoJ1R6x3EilcYAyynHg.png)
 
     您可以阅读[外部迁移概述](./external-migration-basics)来了解从外部数据源迁移数据到 Zilliz Cloud 集群的基本步骤。然后再针对具体的外部数据源有针对性地了解具体的要求和常用的问题处理规则和方法。目前我们支持如下数据源：[Qdrant](./migrate-from-qdrant)、[ElasticSearch](./migrate-from-elasticsearch)、[PostgreSQL](./migrate-from-pgvector)、[腾讯云向量数据库](./migrate-from-tencent-cloud-vectordb)、[OpenSearch](./migrate-from-opensearch)。
 
@@ -64,7 +67,7 @@ Zilliz Cloud 会根据您集群的 CU 类型和订阅计划为您的集群应用
 
 - 字段级别的设置：您还可以为某个字段启用、禁用、删除其 mmap 设置。
 
-![DLW4bHqMWo4XkxxkGcfcsEPyn1g](/img/DLW4bHqMWo4XkxxkGcfcsEPyn1g.png)
+![DLW4bHqMWo4XkxxkGcfcsEPyn1g](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/DLW4bHqMWo4XkxxkGcfcsEPyn1g.png)
 
 ## 重新设计的 AI 助手，更好地连接您和 Zilliz Cloud
 
@@ -74,7 +77,7 @@ Zilliz Cloud 会根据您集群的 CU 类型和订阅计划为您的集群应用
 
 - **发现潜在购买意向**：AI 助手在与您的会话中会自动判断您是否需要联系销售。在您提供必要信息后，我们会尽快与您取得联系。
 
-![Y2xQbYjzwod3HDxCim7cbtFcnAb](/img/Y2xQbYjzwod3HDxCim7cbtFcnAb.png)
+![Y2xQbYjzwod3HDxCim7cbtFcnAb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Y2xQbYjzwod3HDxCim7cbtFcnAb.png)
 
 ## 其它增强
 

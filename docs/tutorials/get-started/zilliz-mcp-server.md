@@ -154,7 +154,7 @@ MCP 是一种开放协议，用于标准化应用程序向大语言模型（LLM�
 
 1. 保存文件并返回到 **Tools & Integrations** 页面。你会看到 **Zilliz MCP Server** 已列在 **MCP Tools** 中，并显示了可供 AI 智能体调用的可用工具。
 
-    ![KOzMbMi9PozfpQx4CsOcSgQjnXf](/img/KOzMbMi9PozfpQx4CsOcSgQjnXf.png)
+    ![KOzMbMi9PozfpQx4CsOcSgQjnXf](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/KOzMbMi9PozfpQx4CsOcSgQjnXf.png)
 
 将 Zilliz MCP 服务器添加到你偏好的 AI 应用程序中的操作流程非常相似。你可以根据所使用的 AI 应用程序提供的具体指引来添加配置文件。
 

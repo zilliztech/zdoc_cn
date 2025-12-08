@@ -3,6 +3,9 @@ title: "管理组织设置 | Cloud"
 slug: /organization-settings
 sidebar_label: "管理组织设置"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "组织管理员具备管理组织设置的权限。 | Cloud"
 type: origin
@@ -32,17 +35,17 @@ import Admonition from '@theme/Admonition';
 
 本文将介绍如何在 Zilliz Cloud 中管理组织设置。
 
-## 查看组织{#view-organizations}
+## 查看组织\{#view-organizations}
 
-当您登录到 Zilliz Cloud 控制台后，会进入组织列表页面。在这里，您可以查看已加入的组织。
+当您注册 Zilliz Cloud 后，您会加入一个以您为管理员的默认组织。虽然您无法创建组织，但您可以通过邀请的方式加入其它用户的组织。
 
-![zh-view-organizations](/img/zh-view-organizations.png)
+在登录 Zilliz Cloud 控制台后，您会看到您已经加入的所有组织的列表。您可以检查这些组织或选择进入其中某个组织。
 
 要快速查看您加入的所有组织，点击顶部导航栏中的组织名，然后选择**查看所有组织**。
 
-![zh-view-all-organizations](/img/zh-view-all-organizations.png)
+![zh-view-organizations](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/zh-view-organizations.png "zh-view-organizations")
 
-## 编辑组织名称{#edit-organization-name}
+## 编辑组织名称\{#edit-organization-name}
 
 要编辑组织名称，您必须是[组织管理员](./organization-users#organization-roles)。
 
@@ -50,23 +53,23 @@ import Admonition from '@theme/Admonition';
 
 - 在组织列表页面编辑组织名称。
 
-    ![zh-rename-organization](/img/zh-rename-organization.png)
+    ![zh-rename-organization](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/zh-rename-organization.png "zh-rename-organization")
 
 - 进入一个组织，在**系统设置**页面编辑组织名称。
 
-    ![edit-organization-name-zh](/img/edit-organization-name-zh.png)
+    ![edit-organization-name-zh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/edit-organization-name-zh.png "edit-organization-name-zh")
 
-## 设置时区{#manage-timezone}
+## 设置时区\{#manage-timezone}
 
 默认情况下，系统时区的设置会与首次登录地保持一致，并会应用 Zilliz Cloud 中显示的所有时间字符串。
 
 如需查看时区，您的角色可以是组织管理员或组织成员。更多有关组织角色详情，请参考[管理组织用户](./organization-users#organization-roles)。
 
-![timezone-settings](/img/timezone-settings.png)
+![timezone-settings](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/timezone-settings.png "timezone-settings")
 
 如需修改时区，您的角色必须为组织管理员。请单击**编辑**以打开**编辑系统时区**对话框，并从下拉列表中选择时区。您还可以输入时区名称以快速检索所需的时区。
 
-## 设置运维窗口{#set-up-maintenance-window}
+## 设置运维窗口\{#set-up-maintenance-window}
 
 Zilliz Cloud 允许用户为集群设置运维窗口，以减少运维对工作负载的影响，增加可预测性。
 
@@ -82,13 +85,15 @@ Zilliz Cloud 允许用户为集群设置运维窗口，以减少运维对工作�
 
 要更改系统运维窗口，请单击**编辑**以打开**编辑系统维护时间**对话框，并从**系统维护时间**下拉列表中选择合适的运维窗口。
 
-![maintenance-window](/img/maintenance-window.png)
+![maintenance-window](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/maintenance-window.png "maintenance-window")
 
-## 删除组织{#delete-organization}
+## 删除组织\{#delete-organization}
 
 开始前，请先确保：
 
-- 当前组织下的[集群已全部删除](./manage-cluster)。
+- 当前组织下的[集群已全部删除](./manage-cluster#drop-cluster)。
+
+- 当前组织下的 [Volume 已全部删除](./manage-volumes-via-console#delete-a-volume)。
 
 - 当前组织中的[账单](./view-invoice)已全部付清。
 
@@ -114,5 +119,5 @@ Zilliz Cloud 允许用户为集群设置运维窗口，以减少运维对工作�
 
 </Admonition>
 
-![delete-organization-cn](/img/delete-organization-cn.png)
+![delete-organization-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/delete-organization-cn.png "delete-organization-cn")
 

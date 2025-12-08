@@ -3,6 +3,9 @@ title: "删除 Collection | Cloud"
 slug: /drop-collection
 sidebar_label: "删除 Collection"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "当 Collection 不再使用时，可以考虑删除 Collection。 | Cloud"
 type: origin
@@ -27,7 +30,7 @@ import TabItem from '@theme/TabItem';
 
 当 Collection 不再使用时，可以考虑删除 Collection。
 
-## 示例{#examples}
+## 示例\{#examples}
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>

@@ -3,6 +3,9 @@ title: "管理组织告警 | Cloud"
 slug: /manage-organization-alerts
 sidebar_label: "管理组织告警"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "组织告警功能监控您整个 Zilliz Cloud 组织的账单和账户相关指标。与专注于集群性能的项目告警不同，组织告警帮助您追踪现金余额、用量金额，以确保服务不中断并预防意外的账单问题。通过接收关于用量金额耗尽、支付失败和使用量阈值的及时通知，您可以随时掌握账户健康状况，避免服务中断。 | Cloud"
 type: origin
@@ -27,13 +30,13 @@ import Supademo from '@site/src/components/Supademo';
 
 组织告警功能监控您整个 Zilliz Cloud 组织的账单和账户相关指标。与专注于集群性能的项目告警不同，组织告警帮助您追踪现金余额、用量金额，以确保服务不中断并预防意外的账单问题。通过接收关于用量金额耗尽、支付失败和使用量阈值的及时通知，您可以随时掌握账户健康状况，避免服务中断。
 
-## 开始前{#before-you-start}
+## 开始前\{#before-you-start}
 
 在查看或管理组织告警前，请确保您拥有：
 
-- 组织管理员角色权限。
+- **组织管理员**角色权限。
 
-## 查看组织告警{#view-organization-alerts}
+## 查看组织告警\{#view-organization-alerts}
 
 在左侧导航栏中点击**组织告警**，即可访问组织告警仪表盘，监控您账户的财务健康状况。
 
@@ -84,13 +87,13 @@ import Supademo from '@site/src/components/Supademo';
    </tr>
 </table>
 
-## 管理组织告警{#manage-organization-alerts}
+## 管理组织告警\{#manage-organization-alerts}
 
 修改和维护现有告警，确保账单监控有效且符合您组织的需求和通知偏好。
 
 <Supademo id="cmbkgd0a9020yya0i6npknuum" title="管理组织告警" isShowcase="true" />
 
-### 禁用或启用组织告警{#enable-or-disable-organization-alert}
+### 禁用或启用组织告警\{#enable-or-disable-organization-alert}
 
 在不丢失告警配置的情况下控制主动监控。
 
@@ -98,15 +101,15 @@ import Supademo from '@site/src/components/Supademo';
 
 - 启用告警：主动监控账单指标，并在条件满足时发送通知。
 
-### 编辑组织告警{#edit-organization-alerts}
+### 编辑组织告警\{#edit-organization-alerts}
 
 为现有告警自定义通知接收者并修改触发条件。
 
-### 复制组织告警{#clone-project-alert}
+### 复制组织告警\{#clone-project-alert}
 
 创建相似的告警，可调整通知设置或修改阈值。
 
-## 配置告警接收设置{#configure-alert-receiver-settings}
+## 配置告警接收设置\{#configure-alert-receiver-settings}
 
 设置组织范围内的默认通知设置，这些设置会自动应用于新告警，确保整个组织采用一致的账单通知实践。
 
@@ -120,7 +123,7 @@ import Supademo from '@site/src/components/Supademo';
 
 - **将设置应用于现有告警**：选择是否用新的默认设置更新所有现有告警。
 
-## FAQ{#faq}
+## FAQ\{#faq}
 
 ### 告警触发后，我会多久收到一次通知？
 

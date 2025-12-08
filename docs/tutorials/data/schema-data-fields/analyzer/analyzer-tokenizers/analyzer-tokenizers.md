@@ -3,8 +3,11 @@ title: "分词器参考 | Cloud"
 slug: /analyzer-tokenizers
 sidebar_label: "分词器参考"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "本节介绍各内置 Analyzer 的具体信息。 | Cloud"
+description: "本节介绍各内置分词器的具体信息。 | Cloud"
 type: origin
 token: Sx7dwfH8Mi07B0kSMQfceROlnRh
 sidebar_position: 3
@@ -27,7 +30,7 @@ import Admonition from '@theme/Admonition';
 
 # 分词器参考
 
-本节介绍各内置 Analyzer 的具体信息。
+本节介绍各内置分词器的具体信息。
 
 import DocCardList from '@theme/DocCardList';
 

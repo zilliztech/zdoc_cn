@@ -3,11 +3,14 @@ title: "管理订单 | Cloud"
 slug: /manage-order
 sidebar_label: "管理订单"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 控制台提供专门的订单页面，方便您统一集中管理订单。 | Cloud"
 type: origin
 token: FJU5wklQuiAJASkHAFlcQShDn9e
-sidebar_position: 6
+sidebar_position: 7
 keywords: 
   - 向量数据库
   - zilliz
@@ -33,11 +36,11 @@ Zilliz Cloud 控制台提供专门的订单页面，方便您统一集中管理�
 
 本指南将解释如何管理订单。更多账单单相关说明，请参考[了解账单](./view-invoice)。如需管理订单，您的角色需要为**组织管理员**或**项目管理员**。
 
-## 订单概览{#order-overview}
+## 订单概览\{#order-overview}
 
 目前，仅创建包年包月集群、为包年包月集群升配会生成订单。以下为订单示例。
 
-![order-details-cn](/img/order-details-cn.png)
+![order-details-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/order-details-cn.png "order-details-cn")
 
 **订单中仅包含包年包月集群的 CU 费用，需要一次性全部付清**。只有在您付清订单金额后，系统才会开始创建包年包月集群或开始为包年包月集群进行升配。**如果在后续使用包年包月的过程中产生存储、备份的费用，会合并至按量计费部分的费用中。**这部分费用明细需要前往账单中查看。有关账单的详细信息，请参考[了解账单](./view-invoice)。
 
@@ -89,27 +92,27 @@ Zilliz Cloud 控制台提供专门的订单页面，方便您统一集中管理�
 
 </Admonition>
 
-## 支付订单{#pay-order}
+## 支付订单\{#pay-order}
 
 支付订单前，请先确保已绑定云市场订阅或者组织现金余额充足。包年包月集群订单暂不支持使用优惠券抵扣。
 
 请前往**费用中心>订单**页面。在目标订单的订单状态栏中点击**支付**按钮。
 
-![pay-order-cn](/img/pay-order-cn.png)
+![pay-order-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/pay-order-cn.png "pay-order-cn")
 
-## 取消订单{#cancel-order}
+## 取消订单\{#cancel-order}
 
 订单取消后将无法恢复或进行支付，请谨慎操作。
 
 如需取消订单，请前往**费用中心>订单**页面。在目标订单的操作下拉菜单中点击**取消订单**。
 
-![cancel-order-cn](/img/cancel-order-cn.png)
+![cancel-order-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/cancel-order-cn.png "cancel-order-cn")
 
 在对话框中点击**确定取消**。
 
-![confirm-cancel-order-cn](/img/confirm-cancel-order-cn.png)
+![confirm-cancel-order-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/confirm-cancel-order-cn.png "confirm-cancel-order-cn")
 
-## 常见问题{#faqs}
+## 常见问题\{#faqs}
 
 - **为什么我无法创建包年包月集群？**
 

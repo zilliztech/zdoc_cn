@@ -1,10 +1,13 @@
 ---
-title: "使用 BulkWriter | Cloud"
+title: "使用 BulkWriter | BYOC"
 slug: /use-bulkwriter
 sidebar_label: "使用 BulkWriter"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
-description: "如果您的数据格式不满足支持的数据格式中列出的各项要求，您可以使用 PyMivus 和 Milvus Java SDK 自带的 BulkWriter 对您的数据进行转换。 | Cloud"
+description: "如果您的数据格式不满足支持的数据格式中列出的各项要求，您可以使用 PyMivus 和 Milvus Java SDK 自带的 BulkWriter 对您的数据进行转换。 | BYOC"
 type: origin
 token: B9IdwtZhLi0tB8kb6czce8KXnvb
 sidebar_position: 1
@@ -25,7 +28,7 @@ import TabItem from '@theme/TabItem';
 
 如果您的数据格式不满足[支持的数据格式](./data-import-format-options)中列出的各项要求，您可以使用 PyMivus 和 Milvus Java SDK 自带的 **BulkWriter** 对您的数据进行转换。
 
-## 概述{#overview}
+## 概述\{#overview}
 
 **BulkWriter** 用于将原始数据转换成可以批量导入到目标 Collection 的格式，并在 Zilliz Cloud 控制台、Milvus SDK 的 **BulkInsert** 接口，以及 RESTful API 的 Import 接口中使用。目前，有如下两种 **BulkWriter**。
 
@@ -33,9 +36,9 @@ import TabItem from '@theme/TabItem';
 
 - **RemoteBulkWriter** 完成 **LocalBulkWriter** 的所有工作，并将转换后的文件上传到指定的远程对象存储桶中。
 
-## 使用步骤{#procedure}
+## 使用步骤\{#procedure}
 
-### 安装 PyMilvus{#set-up-pymilvus}
+### 安装 PyMilvus\{#set-up-pymilvus}
 
 在终端中运行如下命令，安装 PyMilvus 或将其升级到最新版本。
 
@@ -71,7 +74,7 @@ compile 'io.milvus:milvus-sdk-java:2.4.8'
 
 </Tabs>
 
-### 创建 Collection Schema{#set-up-a-collection-schema}
+### 创建 Collection Schema\{#set-up-a-collection-schema}
 
 确定需要导入数据的目标 Collection 的 Schema。在此步骤中，您需要确定哪些字段需要被包含在 Schema 中。
 
@@ -218,7 +221,7 @@ private static byte[] genBinaryVector() {
 </TabItem>
 </Tabs>
 
-### 创建 BulkWriter{#create-a-bulkwriter}
+### 创建 BulkWriter\{#create-a-bulkwriter}
 
 PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建这两种 BulkWriter。
 
@@ -257,8 +260,8 @@ PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>使用 LocalBulkWriter 生成的 JSON 文件可以直接在 Zilliz Cloud 控制台上导入。</p>
-    <p>如需导入其它格式的文件，需要先将它们上传到和集群同云的对象存储桶中。</p>
+    <p>使用 LocalBulkWriter 生成的 JSON 文件和 Parquet 文件可以直接在 Zilliz Cloud 控制台上导入。</p>
+    <p>如需导入其它格式的文件，需要先将它们上传到和您的对象存储桶中。建议您使用与您的集群同地域的对象存储桶。</p>
 
     </Admonition>
 
@@ -418,7 +421,7 @@ PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建
 
 除了 **connect_param** 参数外，RemoteBulkWriter 的参数与 LocalBulkWriter 基本相同。更多关于参数设置的信息，可以参考 SDK Reference 中关于 **RemoteBulkWriter** 的介绍。
 
-### 开始转换{#start-writing}
+### 开始转换\{#start-writing}
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
 
@@ -646,7 +649,7 @@ private static List<Long> genIntArray(int length) {
 
 </Tabs>
 
-## 动态字段支持{#dynamic-schema-support}
+## 动态字段支持\{#dynamic-schema-support}
 
 在上一节中，我们创建 **BulkWriter** 时引用了一个启用了动态字段的 Schema。因此，我们可以在使用 **BulkWriter** 向缓存中添加数据时携带 Schema 中未定义的字段。
 
@@ -732,7 +735,7 @@ private static String generateString(length) {
 </TabItem>
 </Tabs>
 
-## 验证结果{#verify-the-result}
+## 验证结果\{#verify-the-result}
 
 您可以通过打印 **BulkWriter** 的 **data_path** 属性来获取实际输出路径。
 
@@ -801,15 +804,15 @@ System.out.println(batchFiles);
        </tr>
        <tr>
          <td><p><strong>JSON</strong></p></td>
-         <td><ul><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></p></li><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.json</code></p></li></ul></td>
+         <td><ul><li><p><em><i>http</i>s://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</em></p></li><li><p><em>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.json</em></p></li></ul></td>
        </tr>
        <tr>
          <td><p><strong>Parquet</strong></p></td>
-         <td><ul><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></p></li><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.parquet</code></p></li></ul></td>
+         <td><ul><li><p><em><i>http</i>s://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</em></p></li><li><p><em>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/1.parquet</em></p></li></ul></td>
        </tr>
        <tr>
          <td><p><strong>NumPy</strong></p></td>
-         <td><ul><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</code></p></li><li><p><code>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/*.npy</code></p></li></ul></td>
+         <td><ul><li><p><em><i>http</i>s://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</em></p></li><li><p><em>https://remote_bucket.oss-cn-hangzhou.aliyuncs.com/folder/45ae1139-1d87-4aff-85f5-0039111f9e6b/</em>.npy*</p></li></ul></td>
        </tr>
     </table>
 

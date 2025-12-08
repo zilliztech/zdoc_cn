@@ -3,11 +3,14 @@ title: "版本说明书（2025/07/15） | Cloud"
 slug: /release-notes-2180
 sidebar_label: "版本说明书（2025/07/15）"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "在本次发布中，Zilliz Cloud 推出了多项强大的新功能，旨在提升运维效率、灵活性和用户体验。这些更新包括对集群级别定时自动扩缩容的支持、通过全新的 Merge Data API 实现 Schema 演进、推出用于简化数据接入流程的云原生数据层 Stage、支持从集群级备份中进行跨数据库的部分数据恢复，以及为 JSON Path 索引提供 UI 支持。这些功能共同帮助用户更高效地管理复杂的工作负载，降低维护开销，并加快在生成式 AI 时代下的开发周期。 | Cloud"
 type: origin
 token: QxMewBHpRisntJkA1NncBNSZnQc
-sidebar_position: 0
+sidebar_position: 5
 keywords: 
   - 向量数据库
   - zilliz
@@ -24,13 +27,13 @@ import Admonition from '@theme/Admonition';
 
 在本次发布中，Zilliz Cloud 推出了多项强大的新功能，旨在提升运维效率、灵活性和用户体验。这些更新包括对集群级别定时自动扩缩容的支持、通过全新的 Merge Data API 实现 Schema 演进、推出用于简化数据接入流程的云原生数据层 Stage、支持从集群级备份中进行跨数据库的部分数据恢复，以及为 JSON Path 索引提供 UI 支持。这些功能共同帮助用户更高效地管理复杂的工作负载，降低维护开销，并加快在生成式 AI 时代下的开发周期。
 
-## Milvus 兼容性{#milvus-compatibility}
+## Milvus 兼容性\{#milvus-compatibility}
 
 本次发布后创建的所有集群均兼容 **Milvus v2.5.x**。同时，所有 Milvus v2.5.x 相关特性在 Zilliz Cloud 上均已全面可用。
 
 关于各项功能的可用性，可以参考[当前功能支持情况](./feature-availability#)。
 
-## 通过 Merge Data API 实现 Schema 演进 | PRIVATE{#schema-evolution-via-merge-data-api}
+## 通过 Merge Data API 实现 Schema 演进 | PRIVATE\{#schema-evolution-via-merge-data-api}
 
 在生成式 AI 时代，业务逻辑的快速迭代导致 Collection Schema 变更比以往更加频繁，然而这些变更仍然成本高昂且操作复杂。更新 Schema 往往意味着需要重建整个 Collection：导出数据、合并新字段、再从头重新导入所有数据。这一手动过程耗时费力，容易出错，并且通常需要长时间的写入停机时间。
 
@@ -46,7 +49,7 @@ import Admonition from '@theme/Admonition';
 
 该特性当前为**内测版**特性。请[联系我们](https://support.zilliz.com.cn/hc/zh-cn)为您开通访问权限。关于详细的 RESTful 参考文档，可以参考[合并数据](/reference/restful/merge-data-v2)。
 
-## 重磅推出 Stage：Zilliz Cloud 的数据层基础能力 | PRIVATE{#introducing-stage-the-data-layer-of-zilliz-cloud}
+## 重磅推出 Stage：Zilliz Cloud 的数据层基础能力 | PRIVATE\{#introducing-stage-the-data-layer-of-zilliz-cloud}
 
 我们很高兴向大家介绍 **Stage** —— 一个全新的核心能力，也是 Zilliz Cloud 的基础数据层。
 
@@ -54,7 +57,7 @@ Stage 提供了一个托管式、云原生的数据暂存区域，专为处理�
 
 在本次初始发布版本（内测版）中，用户可以：
 
-- 通过 RESTful API 管理 Stage，包括[创建](/reference/restful/create-stage-v2)、[查看列表](/reference/restful/list-stages-v2)和[删除](/reference/restful/delete-stage-v2) Stage；
+- 通过 RESTful API 管理 Stage，包括[创建](/reference/restful/create-volume-v2)、[查看列表](/reference/restful/list-volumes-v2)和[删除](/reference/restful/delete-volume-v2) Stage；
 
 - 将 Stage 作为迁移（Migration）与导入（Import）服务共享的数据中转层，简化数据接入流程：
 
@@ -66,11 +69,11 @@ Stage 提供了一个托管式、云原生的数据暂存区域，专为处理�
 
 该功能目前处于内测阶段 ，如需在您的账号中启用，请[联系技术支持](https://support.zilliz.com.cn/hc/zh-cn)。
 
-## 集群定时扩缩容功能上线{#scheduled-cluster-scaling-now-available}
+## 集群定时扩缩容功能上线\{#scheduled-cluster-scaling-now-available}
 
 Zilliz Cloud 现在支持集群级别的定时扩缩容 ，让您能够根据可预测的工作负载模式主动控制资源分配。
 
-![TW6QbWqhioVCNHxB3Fkc3zavnyf](/img/TW6QbWqhioVCNHxB3Fkc3zavnyf.png)
+![TW6QbWqhioVCNHxB3Fkc3zavnyf](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/TW6QbWqhioVCNHxB3Fkc3zavnyf.png)
 
 - **基于时间计划的 CU 与 Replicas 自动扩缩容** ：现在您可以定义特定的时间计划，以自动调整您的 CU 和 Replica 数量。在工作时段轻松扩展资源以应对流量高峰，在夜间或周末等低峰期自动缩减资源，从而在无需人工干预的情况下优化成本。
 
@@ -80,31 +83,31 @@ Zilliz Cloud 现在支持集群级别的定时扩缩容 ，让您能够根据可
 
 更多内容，可以参考[定时扩缩容](./scale-cluster)。
 
-## 从集群备份中跨数据库恢复部分数据{#partial-restore-from-cluster-level-backups-with-cross-database-selection}
+## 从集群备份中跨数据库恢复部分数据\{#partial-restore-from-cluster-level-backups-with-cross-database-selection}
 
 现在，您可以从集群级备份中选择性地恢复特定的数据库和 Collection ，包括来自多个不同数据库中的 Collection。这项增强功能缩短了数据恢复所需的时间，并让您对恢复哪些数据拥有更细粒度的控制，而无需恢复整个集群。
 
-![UCUgbu2QUovXonx0JpncNj9HnLd](/img/UCUgbu2QUovXonx0JpncNj9HnLd.png)
+![UCUgbu2QUovXonx0JpncNj9HnLd](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/UCUgbu2QUovXonx0JpncNj9HnLd.png)
 
-更多内容，可以参考[恢复部分集群数据](./restore-from-snapshot)。
+更多内容，可以参考[恢复部分集群数据](./restore-from-snapshot#restore-a-partial-cluster)。
 
-## 在 Zilliz Cloud 控制台上创建 JSON Path 索引{#create-json-path-indexes-on-zilliz-cloud-console}
+## 在 Zilliz Cloud 控制台上创建 JSON Path 索引\{#create-json-path-indexes-on-zilliz-cloud-console}
 
 Zilliz Cloud 现在支持通过 Web 控制台直接创建 JSON Path 索引 ，加速对半结构化数据的查询。该功能同时支持 JSON 字段和 Dynamic Field，提供灵活且高性能的过滤能力。
 
-![ViLvb57Oook1fux8BWncEP4an2d](/img/ViLvb57Oook1fux8BWncEP4an2d.png)
+![ViLvb57Oook1fux8BWncEP4an2d](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/ViLvb57Oook1fux8BWncEP4an2d.png)
 
-关于 JSON Path 索引的更多内容，可以查看[为 JSON 字段内的值创建索引](./use-json-fields)和[为 Dynamic Field 中的键创建索引](./enable-dynamic-field)。
+关于 JSON Path 索引的更多内容，可以查看[为 JSON 字段内的值创建索引](./use-json-fields)和[为 Dynamic Field 中的键创建索引](./enable-dynamic-field#index-keys-in-the-dynamic-field)。
 
-## 包年集群支持阿里云市场/亚马逊云市场支付{#anual-payment-clusters-support-aliyun-and-amazon-marketplaces}
+## 包年集群支持阿里云市场/亚马逊云市场支付\{#anual-payment-clusters-support-aliyun-and-amazon-marketplaces}
 
-![WA0RbnmyloH0BUxacdtc1bvMnTr](/img/WA0RbnmyloH0BUxacdtc1bvMnTr.png)
+![WA0RbnmyloH0BUxacdtc1bvMnTr](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/WA0RbnmyloH0BUxacdtc1bvMnTr.png)
 
-## 其它增强{#other-enhancements}
+## 其它增强\{#other-enhancements}
 
 - 在恢复集群备份时，可以选择是否恢复 RBAC 配置。
 
-    ![SonlbgANBoxxDjxtf39cmCK3nzc](/img/SonlbgANBoxxDjxtf39cmCK3nzc.png)
+    ![SonlbgANBoxxDjxtf39cmCK3nzc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/SonlbgANBoxxDjxtf39cmCK3nzc.png)
 
     <Admonition type="info" icon="📘" title="说明">
 
@@ -114,7 +117,7 @@ Zilliz Cloud 现在支持通过 Web 控制台直接创建 JSON Path 索引 ，�
 
 - 在控制台上提供内测功能的概览及升级按钮，供您在升级前了解相关功能。如需开通，请[联系技术支持](https://support.zilliz.com.cn/hc/zh-cn)。
 
-    ![OzGrbc6Gko9NNfxManxcofc8n6g](/img/OzGrbc6Gko9NNfxManxcofc8n6g.png)
+    ![OzGrbc6Gko9NNfxManxcofc8n6g](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/OzGrbc6Gko9NNfxManxcofc8n6g.png)
 
 - 单个数据导入请求支持上传的文件总大小上限由之前的 100 GB 提升至 1 TB。
 

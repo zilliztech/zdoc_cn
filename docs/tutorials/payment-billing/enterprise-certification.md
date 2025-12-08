@@ -3,11 +3,14 @@ title: "企业认证 | Cloud"
 slug: /enterprise-certification
 sidebar_label: "企业认证"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 现已开通企业认证渠道。如需进行现金充值，您需要先通过企业认证。本章主要介绍如何在 Zilliz Cloud 界面上申请企业认证。 | Cloud"
 type: origin
 token: VRLOw9Mc7iPWnCkZs2YcoGwSnLh
-sidebar_position: 1
+sidebar_position: 2
 keywords: 
   - 向量数据库
   - zilliz
@@ -24,13 +27,13 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 现已开通企业认证渠道。如需进行[现金充值](./advance-pay)，您需要先通过企业认证。本章主要介绍如何在 Zilliz Cloud 界面上申请企业认证。
 
-## 操作步骤{#procedures}
+## 操作步骤\{#procedures}
 
 1. 选择组织并点击左侧导航栏中的**系统设置**。
 
 1. 在**企业认证**部分，点击**立即认证**。
 
-    ![enterprise-verification-cn](/img/enterprise-verification-cn.png)
+    ![enterprise-verification-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/enterprise-verification-cn.png "enterprise-verification-cn")
 
 1. 填写**申请企业认证**表单并点击**提交申请**。相关参数请见下表。请确保提供正确信息。
 
@@ -75,11 +78,11 @@ Zilliz Cloud 现已开通企业认证渠道。如需进行[现金充值](./advan
 
 1. 企业认证成功后，您可以在组织**系统设置**的**企业认证**部分查看企业信息。
 
-![enterprise-verified-cn](/img/enterprise-verified-cn.png)
+![enterprise-verified-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/enterprise-verified-cn.png "enterprise-verified-cn")
 
 如果您在线下与我们签订了合同，请直接联系销售完成企业认证。
 
-## 相关文档{#related-topics}
+## 相关文档\{#related-topics}
 
 - [现金充值](./advance-pay)
 

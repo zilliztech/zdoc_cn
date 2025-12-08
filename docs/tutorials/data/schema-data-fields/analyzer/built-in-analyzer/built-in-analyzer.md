@@ -3,6 +3,9 @@ title: "内置 Analyzer 参考 | Cloud"
 slug: /built-in-analyzer
 sidebar_label: "内置 Analyzer 参考"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本节介绍各内置 Analyzer 的具体信息。 | Cloud"
 type: origin

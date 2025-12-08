@@ -7,7 +7,7 @@ notebook: FALSE
 description: " | CLOUD"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
-sidebar_position: 12
+sidebar_position: 11
 
 ---
 
@@ -32,4 +32,4 @@ sidebar_position: 12
 
 1. 如忘记密码，请点击想要连接的集群并切换至 **Users** 选项卡。点击 **+ User** 以创建新用户和密码。
 
-    ![add-cluster-user-cn](/img/add-cluster-user-cn.png)
+    ![add-cluster-user-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/add-cluster-user-cn.png "add-cluster-user-cn")

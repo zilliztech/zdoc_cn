@@ -3,6 +3,9 @@ title: "从 Qdrant 迁移至 Zilliz Cloud | Cloud"
 slug: /migrate-from-qdrant
 sidebar_label: "从 Qdrant 迁移"
 beta: FALSE
+added_since: FALSE
+last_modified: FALSE
+deprecate_since: FALSE
 notebook: FALSE
 description: "本文档介绍从 Qdrant 迁移时，Zilliz Cloud 如何处理数据类型映射、Payload 字段转换及 Collection 命名规则。 | Cloud"
 type: origin
@@ -25,11 +28,11 @@ import Admonition from '@theme/Admonition';
 
 本文档介绍从 [Qdrant](https://qdrant.tech/) 迁移时，Zilliz Cloud 如何处理数据类型映射、Payload 字段转换及 Collection 命名规则。
 
-## 开始前{#before-you-start}
+## 开始前\{#before-you-start}
 
 开始离线迁移前需满足：
 
-### Qdrant 侧要求{#qdrant-requirements}
+### Qdrant 侧要求\{#qdrant-requirements}
 
 <table>
    <tr>
@@ -50,7 +53,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-### Zilliz Cloud 侧要求{#zilliz-cloud-requirements}
+### Zilliz Cloud 侧要求\{#zilliz-cloud-requirements}
 
 <table>
    <tr>
@@ -71,7 +74,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-## 数据类型映射{#data-type-mapping}
+## 数据类型映射\{#data-type-mapping}
 
 下表总结了 Qdrant 字段类型如何映射到 Zilliz Cloud 字段类型，并对各类型做了详细说明。
 
@@ -103,7 +106,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-## Payload 字段转换规则{#payload-field-conversion}
+## Payload 字段转换规则\{#payload-field-conversion}
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -162,7 +165,7 @@ Qdrant Payload 默认映射为 Dynamic Field 以实现最大灵活性，转换�
    </tr>
 </table>
 
-## Array 类型支持{#array-type-support}
+## Array 类型支持\{#array-type-support}
 
 <table>
    <tr>
@@ -215,9 +218,9 @@ Qdrant Payload 默认映射为 Dynamic Field 以实现最大灵活性，转换�
 
 - **Partition Key**：可将 INT64/VARCHAR 字段指定为 Partition Key（注意：每个 Collection 支持一个 Partition Key，且该字段不可为空），详见 [使用 Partition Key](./use-partition-key)。
 
-## Qdrant 特殊处理规则{#qdrant-specific-handling-rules}
+## Qdrant 特殊处理规则\{#qdrant-specific-handling-rules}
 
-### Collection 命名规则{#collection-naming-rules}
+### Collection 命名规则\{#collection-naming-rules}
 
 Qdrant Collection 名称将按以下规则迁移至 Zilliz Cloud：
 
