@@ -9,7 +9,7 @@
 
 .searchIcon {
     display: inline-block;
-    background-image: url('/img/search_icon.svg');
+    background-image: url('/icons/search_icon.svg');
     width: 24px;
     height: 24px;
     background-size: contain;

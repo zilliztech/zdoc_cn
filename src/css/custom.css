@@ -283,7 +283,7 @@ div.footer__bottom.text--center {
 }
 
 .header-search-link::before {
-  content: url('/img/search_icon.svg');;
+  content: url('/icons/search_icon.svg');;
   display: flex;
   width: 1.5rem;
   height: 1.5rem;

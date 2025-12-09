@@ -3,11 +3,11 @@ import Link from '@docusaurus/Link';
 
 
 export default function IconBar () {
-    const PythonIcon = require('@site/static/img/python-icon.svg').default
-    const GoIcon = require('@site/static/img/go-icon.svg').default
-    const JavaIcon = require('@site/static/img/java-icon.svg').default
-    const NodejsIcon = require('@site/static/img/nodejs-icon.svg').default
-    const RestIcon = require('@site/static/img/rest-icon.svg').default
+    const PythonIcon = require('@site/static/icons/python-icon.svg').default
+    const GoIcon = require('@site/static/icons/go-icon.svg').default
+    const JavaIcon = require('@site/static/icons/java-icon.svg').default
+    const NodejsIcon = require('@site/static/icons/nodejs-icon.svg').default
+    const RestIcon = require('@site/static/icons/rest-icon.svg').default
 
     return (
         <div style={{ display: "block", width: "100%" }}>
