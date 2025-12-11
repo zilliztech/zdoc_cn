@@ -45,7 +45,7 @@ import Supademo from '@site/src/components/Supademo';
 
 ### 手动扩缩容\{#manual-scaling}
 
-您可以通过 Zilliz Cloud 控制台或 RESTful API 手动扩展或缩减集群的 Query CU 数量。注意：定时扩缩容仅支持通过 Web 控制台设置。
+您可以通过 Zilliz Cloud 控制台或 RESTful API 手动扩展或缩减集群的 Query CU 数量。
 
 以下是手动扩缩容的限制与注意事项：
 
@@ -99,6 +99,31 @@ curl --request POST \
 --header "Content-Type: application/json" \
 -d '{
     "cuSize": 2
+}'
+```
+
+您也可以使用 RESTful API 启用定时扩缩容。
+
+```bash
+export TOKEN="YOUR_API_KEY"
+export CLUSTER_ID="inxx-xxxxxxxxxxxxxxx"
+
+curl --request POST \
+--url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/modify" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Accept: application/json" \
+--header "Content-Type: application/json" \
+-d '{
+    "autoscaling": {
+        "cu": {
+            "schedules": [
+                {
+                    "cron": "10 0 0 0 0 ?",
+                    "target": 2
+                }
+            ]
+        }
+    }
 }'
 ```
 

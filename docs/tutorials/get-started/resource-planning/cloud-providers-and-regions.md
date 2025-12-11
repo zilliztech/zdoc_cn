@@ -36,12 +36,14 @@ Zilliz Cloud 支持在阿里云以下地域部署集群。
 
 <table>
    <tr>
+     <th><p><strong>大洲</strong></p></th>
      <th><p><strong>地域名称</strong></p></th>
      <th><p><strong>Free 集群</strong></p></th>
      <th><p><strong>Serverless 集群</strong></p></th>
      <th><p><strong>Dedicated 集群</strong></p></th>
    </tr>
    <tr>
+     <td rowspan="4"><p>中国内地</p></td>
      <td><p>华东1（杭州）</p></td>
      <td><p>✔</p></td>
      <td><p>✔</p></td>
@@ -66,18 +68,21 @@ Zilliz Cloud 支持在阿里云以下地域部署集群。
      <td><p>✔</p></td>
    </tr>
    <tr>
+     <td><p>北美</p></td>
      <td><p>美国（弗吉尼亚）</p></td>
      <td><p>✖️</p></td>
      <td><p>✖️</p></td>
      <td><p>✔</p></td>
    </tr>
    <tr>
+     <td><p>亚太</p></td>
      <td><p>新加坡</p></td>
      <td><p>✖️</p></td>
      <td><p>✖️</p></td>
      <td><p>✔</p></td>
    </tr>
    <tr>
+     <td><p>中东</p></td>
      <td><p>沙特（利雅得-合作伙伴运营）</p></td>
      <td><p>✖️</p></td>
      <td><p>✖️</p></td>
@@ -91,12 +96,14 @@ Zilliz Cloud 支持在腾讯云以下地域部署集群。
 
 <table>
    <tr>
+     <th><p><strong>大洲</strong></p></th>
      <th><p><strong>地域名称</strong></p></th>
      <th><p><strong>Free 集群</strong></p></th>
      <th><p><strong>Serverless 集群</strong></p></th>
      <th><p><strong>Dedicated 集群</strong></p></th>
    </tr>
    <tr>
+     <td rowspan="2"><p>中国内地</p></td>
      <td><p>华北地区（北京）</p></td>
      <td><p>✖️</p></td>
      <td><p>✖️</p></td>
@@ -109,6 +116,7 @@ Zilliz Cloud 支持在腾讯云以下地域部署集群。
      <td><p>✔</p></td>
    </tr>
    <tr>
+     <td><p>北美</p></td>
      <td><p>美国东部（弗吉尼亚）</p></td>
      <td><p>✖️</p></td>
      <td><p>✖️</p></td>
@@ -122,12 +130,14 @@ Zilliz Cloud 支持在亚马逊云科技以下地域部署集群。
 
 <table>
    <tr>
+     <th><p><strong>大洲</strong></p></th>
      <th><p><strong>地域名称</strong></p></th>
      <th><p><strong>Free 集群</strong></p></th>
      <th><p><strong>Serverless 集群</strong></p></th>
      <th><p><strong>Dedicated 集群</strong></p></th>
    </tr>
    <tr>
+     <td><p>中国内地</p></td>
      <td><p>中国（宁夏）</p></td>
      <td><p>✖️</p></td>
      <td><p>✖️</p></td>
