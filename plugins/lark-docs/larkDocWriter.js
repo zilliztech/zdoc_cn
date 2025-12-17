@@ -1305,7 +1305,7 @@ class larkDocWriter {
                         .replace(/^\n/, '')
                         .replace(/<br\/>/g, '\n\n')
 
-                    cell_text = converter.makeHtml(cell_text).replace(/\n/g, '');
+                    cell_text = converter.makeHtml(cell_text).replace(/\n/g, '').replace(/&amp;/g, '&');
                     if (i === 0) {
                         html += ` ${' '.repeat(indent)}    <th${colspan}${rowspan}>${cell_text}</th>\n`;
                     } else {
@@ -1459,6 +1459,7 @@ class larkDocWriter {
             if (style['inline_code']) {
                 content = this.__style_markdown(element, elements, 'inline_code', '`');
                 content = content.replaceAll('&#36;', '#')
+                content = content.replaceAll('*', '&ast;')
             } 
                        
             if (style['bold']) {
