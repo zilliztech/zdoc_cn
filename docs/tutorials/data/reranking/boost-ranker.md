@@ -72,7 +72,7 @@ Boost Ranker 不单纯依赖基于向量距离计算的语义相似度，而是�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在多向量混合搜索中，您不能将 Boost Ranker 用于多路结果的重排。但是，您可以在其子请求（<code>AnnSearchRequest</code>）中使用。</p>
+<p>暂时不支持将 Boost Ranker 用于多向量混合搜索（Hybrid Search）中多路结果的重排。</p>
 
 </Admonition>
 
