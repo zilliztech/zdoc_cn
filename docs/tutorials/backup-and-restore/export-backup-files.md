@@ -2,7 +2,7 @@
 title: "导出备份文件 | Cloud"
 slug: /export-backup-files
 sidebar_label: "导出备份文件"
-beta: FALSE
+beta: PRIVATE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE

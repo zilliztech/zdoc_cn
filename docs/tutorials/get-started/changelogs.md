@@ -53,6 +53,24 @@ import Grid from '@site/src/components/Grid';
 
     <div>
 
+        **2025 年 12 月 26 日**
+
+    </div>
+
+    <div>
+
+        - 🔥 Milvus v2.6.x 功能特性全面可用（GA）
+
+        - 👏  分层存储能力正式发布（GA）并[开始计费](./storage-cost#example-4-cluster-cold-data-access-cost)
+
+    </div>
+
+</Grid>
+
+<Grid columnSize="2" widthRatios="24,75">
+
+    <div>
+
         **2025 年 12 月 1 日**
 
     </div>
