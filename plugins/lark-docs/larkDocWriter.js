@@ -1455,12 +1455,13 @@ class larkDocWriter {
 
         if (!content.match(/^\s+$/) && !asis) {
             element['text_run']['content'] = content.replace(/\$/g, '&#36;') // escape $ for markdown
+                                                .replace(/\*/g, '&ast;') // escape * for markdown
             
             if (style['inline_code']) {
                 content = this.__style_markdown(element, elements, 'inline_code', '`');
-                content = content.replaceAll('&#36;', '#')
-                content = content.replaceAll('*', '&ast;')
-            } 
+                content = content.replaceAll('&#36;', '$')
+                content = content.replaceAll('&ast;', '*')
+            }
                        
             if (style['bold']) {
                 content = this.__style_markdown(element, elements, 'bold', '**');
