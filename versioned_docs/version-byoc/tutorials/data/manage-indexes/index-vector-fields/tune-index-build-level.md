@@ -84,19 +84,19 @@ Zilliz Cloud 引入了一个名为 `build_level` 的参数，该参数允许用�
    </tr>
    <tr>
      <td><p>容量优先(0)</p></td>
-     <td><p><strong>525万个768维向量（↑250%）</strong></p></td>
+     <td><p><strong>210万个768维向量（↑250%）</strong></p></td>
      <td><p>~ 3,000</p></td>
      <td><p>90% - 95%</p></td>
    </tr>
    <tr>
      <td><p><strong>平衡型(1)</strong></p></td>
-     <td><p><strong>240万个768维向量（↑ 60%）</strong></p></td>
+     <td><p><strong>150万个768维向量（↑ 60%）</strong></p></td>
      <td><p><strong>~ 3,500 (↑ 17%)</strong></p></td>
      <td><p>91% - 97%</p></td>
    </tr>
    <tr>
      <td><p>精度优先 (2)</p></td>
-     <td><p>150万个768维向量</p></td>
+     <td><p>100万个768维向量</p></td>
      <td><p>~ 2,850 (↓ ~5%)</p></td>
      <td><p><strong>92% - 98% (↑)</strong></p></td>
    </tr>
@@ -121,19 +121,19 @@ Zilliz Cloud 引入了一个名为 `build_level` 的参数，该参数允许用�
    </tr>
    <tr>
      <td><p>容量优先(0)</p></td>
-     <td><p><strong>1000万个768维向量（↑ 100%）</strong></p></td>
+     <td><p><strong>700万个768维向量（↑ 100%）</strong></p></td>
      <td><p>~ 300</p></td>
      <td><p>89% - 97%</p></td>
    </tr>
    <tr>
      <td><p><strong>平衡型(1)</strong></p></td>
-     <td><p><strong>750万个768维向量（↑ 50%）</strong></p></td>
+     <td><p><strong>500万个768维向量（↑ 50%）</strong></p></td>
      <td><p><strong>~ 350 (↑ 3%)</strong></p></td>
      <td><p>92% - 97%</p></td>
    </tr>
    <tr>
      <td><p>精度优先 (2)</p></td>
-     <td><p>500万个768维向量</p></td>
+     <td><p>300万个768维向量</p></td>
      <td><p>~ 345</p></td>
      <td><p><strong>94% - 98% (↑)</strong></p></td>
    </tr>
