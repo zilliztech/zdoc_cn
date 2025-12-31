@@ -86,7 +86,7 @@ Volume 是一个项目级概念。当创建 Volume 时，需要提供该 Volume 
 ```python
 volume_manager.create_volume(
     project_id="proj-xxxxxxxxxxxxxxxxxxxxxxx", 
-    region_id="ali-cn-hangzhou
+    region_id="ali-cn-hangzhou", 
     volume_name="my_volume"
 )
 
@@ -104,7 +104,7 @@ import io.milvus.bulkwriter.request.volume.CreateVolumeRequest;
 
 CreateVolumeRequest request = CreateVolumeRequest.builder()
     .projectId("proj-xxxxxxxxxxxxxxxxxxxxxxx")
-    .regionId("ali-cn-hangzhou
+    .regionId("ali-cn-hangzhou")
     .volumeName("my_volume")
     .build();
 
@@ -129,7 +129,7 @@ curl --request POST \
 --header "Content-Type: application/json" \
 -d '{
     "projectId": "proj-xxxxxxxxxxxxxxxxxxxxxxx",
-    "regionId": "ali-cn-hangzhou
+    "regionId": "ali-cn-hangzhou",
     "volumeName": "my_volume"
 }'
 
