@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 
 function GridColumn({ widthRatio, children, divider }) {
   return (
-    <div style={{ flex: `${widthRatio} 0 0`, borderRight: divider ? '2px solid #ccc' : 'none', marginRight: divider ? '10px' : '0' }}>
+    <div style={{ flex: `${widthRatio} 0 0`, borderRight: divider ? '2px solid #ebedf0' : 'none', marginRight: divider ? '10px' : '0' }}>
       {children}
     </div>
   );
@@ -22,7 +22,7 @@ export default function Grid({ columnSize, widthRatios, children }) {
   }
 
   return (
-    <div style={{ display: 'flex', width: '100%', marginTop: '10px' }}>
+    <div style={{ display: 'flex', width: '100%', marginTop: '10px', gap: '10px' }}>
       {columns}
     </div>
   );
