@@ -804,7 +804,7 @@ curl --request POST \      --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/sear
 
 要查看分步骤说明与示例代码，请参阅以下页面：
 
-- [修改 Collection](./modify-collections#example-5-set-collection-time-zone)
+- [修改 Collection](./modify-collections#example-6-set-collection-time-zone)
 
 - [Query](./get-and-scalar-query#temporarily-set-a-timezone-for-a-query)
 

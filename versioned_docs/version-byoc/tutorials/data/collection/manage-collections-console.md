@@ -111,7 +111,7 @@ Index 是一种用于加速搜索与查询的数据结构。Zilliz Cloud 支持�
 
     常见的 Text Functions 包括：BM25 Function、Text Embedding Function。
 
-    有关 Text Function 工作机制的概念性说明，请参见 [Function & 模型推理概述](./function-and-model-inference-overview)。
+    有关 Text Function 工作机制的概念性说明，请参见 [Function & 模型推理概述](./function-and-model-inference-overview#text-functions-convert-text-to-vectors)。
 
     在 Zilliz Cloud 控制台中创建 Collection 时，你可以在 Collection 创建流程中添加 Function。
 
@@ -129,7 +129,7 @@ Index 是一种用于加速搜索与查询的数据结构。Zilliz Cloud 支持�
 
     - 不影响 candidate retrieval
 
-    有关 Rerank Function 的工作原理，请参见 [Function & 模型推理概述](./function-and-model-inference-overview)。
+    有关 Rerank Function 的工作原理，请参见 [Function & 模型推理概述](./function-and-model-inference-overview#rerank-functions-refine-result-order)。
 
 ### Partition 和 Partition key\{#partition-partition-key}
 
@@ -232,7 +232,7 @@ Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下�
 
 - **修改 Collection TT**L：TTL (Time-to-live) 是一种 Collection 属性，决定了 Collection 中数据的到期时间。 数据到期后将被自动删除。详情请参考[设置 Collection 生存时间](./set-collection-ttl)。
 
-- **修改 Allow Insert Auto ID**：allow_insert_auto_id 属性允许启用了 Auto ID 的 Collection 在 Insert、Upsert、Bulk Insert 时接受用户提供的主键值。详情请参考[修改 Collection](./modify-collections#5-allowinsertautoid)。
+- **修改 Allow Insert Auto ID**：allow_insert_auto_id 属性允许启用了 Auto ID 的 Collection 在 Insert、Upsert、Bulk Insert 时接受用户提供的主键值。详情请参考[修改 Collection](./modify-collections#example-5-enable-allow_insert_auto_id)。
 
 - **删除 Collection**：若某个 Collection 已不再使用，您可以将其删除以释放资源。删除 Collection 的操作会永久清除其中的所有数据，操作不可撤销。
 
