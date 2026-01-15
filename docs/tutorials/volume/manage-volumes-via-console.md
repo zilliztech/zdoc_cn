@@ -57,7 +57,7 @@ import Supademo from '@site/src/components/Supademo';
      <td><p>可选填写。</p></td>
    </tr>
    <tr>
-     <td><p>云服务提供商&amp;地域</p></td>
+     <td><p>云服务提供商&地域</p></td>
      <td><p>Volume 所在地域必须与计划导入或迁移数据的目标集群所使用的云服务商和地域完全一致。</p></td>
    </tr>
 </table>

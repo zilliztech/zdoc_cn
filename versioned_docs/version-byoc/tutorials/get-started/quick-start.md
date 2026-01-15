@@ -342,7 +342,7 @@ curl --request POST \
     --header "Authorization: Bearer ${TOKEN}" \
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
-    --d '{
+    -d '{
         "collectionName": "custom_setup",
         "schema": {
             "autoId": false,
@@ -563,7 +563,7 @@ curl -s --request POST \
     --header "Authorization: Bearer ${TOKEN}" \
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
-    --d '{
+    -d '{
         "collectionName": "custom_setup",
         "data": [
           {"vector": [0.3847391566891949, -0.5163308707041789, -0.5295937262122905, -0.3592193314357348, 0.9108593166893231], "color": "grey_4070"},
@@ -810,7 +810,7 @@ curl --request POST \
 
 输出结果为列表形式，内含三个字典类型的子列表。每个字典代表一个 entity，包括其 ID、相似距离和指定的输出字段。
 
-您还可以在过滤表达式（filter）中加入动态字段（dynamic field）。以下代码示例中，`color` 是未在 schema 中定义的字段，可以通过 `#meta` 魔术字段的来访问，如 `#meta["color"]`，或像其他 schema 中已定义字段那样直接使用，如 `color`。
+您还可以在过滤表达式（filter）中加入动态字段（dynamic field）。以下代码示例中，`color` 是未在 schema 中定义的字段，可以通过 `$meta` 魔术字段的来访问，如 `$meta["color"]`，或像其他 schema 中已定义字段那样直接使用，如 `color`。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>

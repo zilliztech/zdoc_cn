@@ -26,6 +26,8 @@ import Admonition from '@theme/Admonition';
 
 import Supademo from '@site/src/components/Supademo';
 
+import Procedures from '@site/src/components/Procedures';
+
 # 通过备份文件从 Milvus 迁移至 Zilliz Cloud
 
 Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案，适合希望使用 Milvus 向量数据库但不想自己管理基础设施的用户。本文介绍如何通过备份文件从 Milvus 进行数据迁移。
@@ -47,6 +49,8 @@ Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案�
 ## 准备迁移数据\{#prepare-migration-data}
 
 Zilliz Cloud 支持从 Milvus 2.x 和更高版本迁移数据。要从 Milvus 2.x 迁移数据，请按如下准备数据：
+
+<Procedures>
 
 1. 下载 [milvus-backup](https://github.com/zilliztech/milvus-backup/releases)。推荐下载最新版本。
 
@@ -95,15 +99,15 @@ Zilliz Cloud 支持从 Milvus 2.x 和更高版本迁移数据。要从 Milvus 2.
 
 1. 创建 Milvus 的安装备份。
 
-```bash
-./milvus-backup --config backup.yaml create -n my_backup
-```
+    ```bash
+    ./milvus-backup --config backup.yaml create -n my_backup
+    ```
 
 1. 获取备份文件。
 
-```bash
-./milvus-backup --config backup.yaml get -n my_backup
-```
+    ```bash
+    ./milvus-backup --config backup.yaml get -n my_backup
+    ```
 
 1. 检查备份文件。
 
@@ -128,10 +132,12 @@ Zilliz Cloud 支持从 Milvus 2.x 和更高版本迁移数据。要从 Milvus 2.
 
 1. 解压下载的文件，然后将备份文件夹下的子文件夹上传到 Zilliz Cloud。
 
-```plaintext
-backup
-└── my_backup  <= 上传此文件夹
-```
+    ```plaintext
+    backup
+    └── my_backup  <= 上传此文件夹
+    ```
+
+</Procedures>
 
 ## 将数据迁移到 Zilliz Cloud\{#migrate-data-to-zilliz-cloud}
 
@@ -165,9 +171,13 @@ backup
 
 如果迁移过程遇到任何问题，您可以采取以下步骤进行故障排除并恢复迁移：
 
+<Procedures>
+
 1. 在**任务中心**页面，取消失败的迁移任务。
 
 1. 在**操作**列点击**查看详情**以访问日志信息。
+
+</Procedures>
 
 ## 常见问题\{#faq}
 

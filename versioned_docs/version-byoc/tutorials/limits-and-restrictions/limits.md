@@ -60,7 +60,7 @@ import Admonition from '@theme/Admonition';
      <td><p>每个集群最多可添加 10 个 Replica。</p></td>
    </tr>
    <tr>
-     <td><p>Replica 数量 * CU 规格</p></td>
+     <td><p>Replica 数量 &ast; CU 规格</p></td>
      <td><p>&lt;= 256</p></td>
      <td><p>CU 规格与 Replica 数量的乘积不得超过 256。</p></td>
    </tr>
@@ -177,10 +177,6 @@ Shard 的数量上限取决于 CU 规格。
    <tr>
      <th></th>
      <th><p><strong>Insert 最大速率限制</strong></p></th>
-   </tr>
-   <tr>
-     <td></td>
-     <td><p>s</p></td>
    </tr>
    <tr>
      <td><p>1-2 CU</p></td>

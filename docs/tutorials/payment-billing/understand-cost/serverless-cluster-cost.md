@@ -62,7 +62,7 @@ Import 和 bulk insert 操作**不产生**写入费用。
 
 <table>
    <tr>
-     <th><p><strong>数据量 (*)</strong></p></th>
+     <th><p><strong>数据量 (&ast;)</strong></p></th>
      <th><p><strong>写入 vCU 用量 (百万)</strong></p></th>
      <th><p><strong>写入费用</strong></p></th>
    </tr>
@@ -88,9 +88,9 @@ Import 和 bulk insert 操作**不产生**写入费用。
    </tr>
 </table>
 
-**上表中的数据量大小不含标量。如需包含标量，建议您通过免费试用实测所需费用。*
+*&ast;上表中的数据量大小不含标量。如需包含标量，建议您通过免费试用实测所需费用。*
 
-**如果您的 Schema 中包含了多个向量列，写入费用会线性增长。例如您的 Schema 中有两个 128 维的向量字段，写入 1 百万 Entity 的 vCU 用量为 0.125 x 2 = 0.25，写入费用约为 ¥2.625 x 2 = ¥5.25。*
+*&ast;如果您的 Schema 中包含了多个向量列，写入费用会线性增长。例如您的 Schema 中有两个 128 维的向量字段，写入 1 百万 Entity 的 vCU 用量为 0.125 x 2 = 0.25，写入费用约为 ¥2.625 x 2 = ¥5.25。*
 
 您也可以根据数据量，参考下表精准计算写入 vCU 用量和费用
 
@@ -157,7 +157,7 @@ Import 和 bulk insert 操作**不产生**写入费用。
 
 <table>
    <tr>
-     <th><p><strong>数据量 (*)</strong></p></th>
+     <th><p><strong>数据量 (&ast;)</strong></p></th>
      <th><p><strong>读取 vCU 用量 (百万)</strong></p></th>
      <th><p><strong>读取费用</strong></p></th>
    </tr>
@@ -208,7 +208,7 @@ Import 和 bulk insert 操作**不产生**写入费用。
    </tr>
 </table>
 
-**上表中的数据量大小不含标量。*
+*&ast;上表中的数据量大小不含标量。*
 
 通过上述表格可以发现，同样向量维度的数据，当规模从 100 万增长到 1000 万，甚至到 1 亿时，vCU 用量并非以 10 倍的比例线性增长。我们建议您通过实测了解所需费用。
 

@@ -2,7 +2,7 @@
 title: "Geometry 类型 | BYOC"
 slug: /use-geometry-field
 sidebar_label: "Geometry 类型"
-beta: PUBLIC
+beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE

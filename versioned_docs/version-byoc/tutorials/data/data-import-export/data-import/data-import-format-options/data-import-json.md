@@ -1,7 +1,7 @@
 ---
-title: "从 JSON 文件中导入 | BYOC"
+title: "从 JSON/JSON Lines 文件中导入 | BYOC"
 slug: /data-import-json
-sidebar_label: "从 JSON 文件中导入"
+sidebar_label: "从 JSON/JSON Lines 文件中导入"
 beta: FALSE
 added_since: FALSE
 last_modified: FALSE
@@ -27,9 +27,31 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# 从 JSON 文件中导入
+# 从 JSON/JSON Lines 文件中导入
 
 [JSON](https://www.json.org/json-en.html) 文件是一个轻量化的，对人和机器都友好的数据格式。因为它的语言无关特性，并遵循类 C 语言程序员熟悉的规范，JSON 是一个非常理想的数据交换格式。
+
+JSON Lines 是一种文本格式，每一行都是一个完整且合法的 JSON 对象，因此可以使用标准文本工具对数据流进行增量处理。
+
+下表展示了 JSON 或 JSON Lines 文件中的数据示例。
+
+<table>
+   <tr>
+     <th><p><strong>文件格式</strong></p></th>
+     <th><p><strong>示例</strong></p></th>
+     <th></th>
+   </tr>
+   <tr>
+     <td><p>JSON (.json)</p></td>
+     <td><pre><code class="json language-json"> [     \{"primary_key":89,"vector":[0.7857309327639853,0.6185684289533679]},     \{"primary_key":-22,"vector":[0.7227987733802379,0.6910585598920134]},     \{"primary_key":85,"vector":[0.7948503430666686,0.6068055142521362]} ]</code></pre></td>
+     <td></td>
+   </tr>
+   <tr>
+     <td><p>JSON Lines (.ndjson, .jsonl)</p></td>
+     <td><pre><code class="json language-json"> \{"primary_key":89,"vector":[0.7857309327639853,0.6185684289533679]} \{"primary_key":-22,"vector":[0.7227987733802379,0.6910585598920134]} \{"primary_key":85,"vector":[0.7948503430666686,0.6068055142521362]}</code></pre></td>
+     <td></td>
+   </tr>
+</table>
 
 建议您[使用 BulkWriter](./use-bulkwriter) 工具将您的原始数据转换为 JSON 文件。下图演示了您的原始数据如何映射到 JSON 文件中。
 
@@ -54,7 +76,7 @@ import Admonition from '@theme/Admonition';
 
 ## 目录结构\{#directory-structure}
 
-如果您希望将您的原始数据转换为 JSON 文件，请将所有 JSON 文件直接放到源文件夹内，如下方所示。
+如果您希望将您的原始数据转换为 JSON 或 JSON Lines 文件，请将所有文件直接放到源文件夹内，如下方所示。
 
 ```plaintext
 ├── json-folder
@@ -106,7 +128,7 @@ curl --request POST \
 
 ### 从源文件夹导入\{#import-files-from-a-folder}
 
-如果源文件夹中仅包含需要导入的所有 JSON 文件，您可以将这个源文件夹的路径放在一个子列表中，然后将这个子列表放在一个外层列表中，如下方代码所示。
+如果源文件夹中仅包含需要导入的所有文件，您可以将这个源文件夹的路径放在一个子列表中，然后将这个子列表放在一个外层列表中，如下方代码所示。
 
 ```bash
 curl --request POST \
@@ -125,6 +147,12 @@ curl --request POST \
         "secretKey": ""
     }'
 ```
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>如果文件夹路径下包含多种格式文件，请求会失败。</p>
+
+</Admonition>
 
 ### 从单个文件导入\{#import-a-single-file}
 

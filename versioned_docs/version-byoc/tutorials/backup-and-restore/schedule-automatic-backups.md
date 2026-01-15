@@ -77,6 +77,9 @@ Zilliz Cloud 支持为集群**设置定时自动备份**，帮助您在发生异
 以下示例展示如何为指定集群开启定时自动备份。更多 API 参数细节，请参见[创建备份策略](/reference/restful/set-backup-policy-v2)。
 
 ```bash
+export TOKEN="YOUR_API_KEY"
+export CLUSTER_ID="inxx-xxxxxxxxxxxxxxx"
+
 curl --request POST \
 --url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/backups/policy" \
 --header "Authorization: Bearer ${TOKEN}" \
@@ -86,6 +89,33 @@ curl --request POST \
     "startTime": "02:00-04:00",
     "retentionDays": 7,
     "enabled": true
+}'
+```
+
+您也可以选择在使用上述备份策略创建备份的同时，将其拷贝到指定的其它地域。
+
+```bash
+curl --request POST \
+--url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/backups/policy" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+-d '{
+    "frequency": "1,2,3,5",
+    "startTime": "02:00-04:00",
+    "retentionDays": 7,
+    "enabled": true,
+    "crossRegionPolicies": [
+        {
+            "regionId": "ali-cn-hangzhou",
+            "retentionDays": 7,
+            "region": "cn-hangzhou"
+        },
+        {
+            "regionId": "ali-cn-shanghai",
+            "retentionDays": 7,
+            "region": "cn-shanghai"
+        }
+    ]
 }'
 ```
 
@@ -132,7 +162,19 @@ curl --request GET \
         "status": "ENABLED",
         "startTime": "02:00-04:00",
         "frequency": "1,2,3,5",
-        "retentionDays": 7
+        "retentionDays": 7,
+        "crossRegionPolicies": [
+            {
+                "regionId": "ali-cn-hangzhou",
+                "retentionDays": 7,
+                "region": "cn-hangzhou"
+            },
+            {
+                "regionId": "ali-cn-shanghai",
+                "retentionDays": 7,
+                "region": "cn-shanghai"
+            }
+        ]
     }
 }
 ```

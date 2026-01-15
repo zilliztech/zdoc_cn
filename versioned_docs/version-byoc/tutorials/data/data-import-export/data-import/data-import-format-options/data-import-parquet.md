@@ -126,6 +126,12 @@ curl --request POST \
     }'
 ```
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>如果文件夹路径下包含多种格式文件，请求会失败。</p>
+
+</Admonition>
+
 ### 从单个文件导入\{#import-a-single-file}
 
 如果您希望单独导入一个 Parquet 文件，可以将这个 Parquet 文件的路径放在一个子列表中，然后将这个子列表放在一个外层列表中，如下方代码所示。

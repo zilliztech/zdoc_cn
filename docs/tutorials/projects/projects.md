@@ -10,7 +10,7 @@ notebook: FALSE
 description: "本章介绍项目层级的操作和设置。 | Cloud"
 type: origin
 token: FqTCwzQ7pifaAKkajQdchERrnEd
-sidebar_position: 10
+sidebar_position: 11
 keywords: 
   - 向量数据库
   - zilliz

@@ -268,6 +268,7 @@ print(res)
 LoadCollectionReq loadCollectionReq = LoadCollectionReq.builder()
         .collectionName("my_collection")
         .loadFields(Arrays.asList("my_id", "my_vector"))
+        .skipLoadDynamicField(true)
         .build();
 
 client.loadCollection(loadCollectionReq);

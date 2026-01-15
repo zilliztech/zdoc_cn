@@ -7,7 +7,7 @@ added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 允许您通过 dynamic field 的特殊功能插入具有灵活、不断演进 schema 的 entity。此字段实现为名为 `#meta` 的隐藏 JSON 字段，它会自动存储数据中未在 collection schema 中明确定义的字段。 | BYOC"
+description: "Zilliz Cloud 允许您通过 dynamic field 的特殊功能插入具有灵活、不断演进 schema 的 entity。此字段实现为名为 `$meta` 的隐藏 JSON 字段，它会自动存储数据中未在 collection schema 中明确定义的字段。 | BYOC"
 type: origin
 token: C6tVwPqeBiqNCwkbdCcc9dTpnYe
 sidebar_position: 13
@@ -30,15 +30,15 @@ import TabItem from '@theme/TabItem';
 
 # Dynamic Field
 
-Zilliz Cloud 允许您通过 **dynamic field** 的特殊功能插入具有灵活、不断演进 schema 的 entity。此字段实现为名为 `#meta` 的隐藏 JSON 字段，它会自动存储数据中**未在 collection schema 中明确定义**的字段。
+Zilliz Cloud 允许您通过 **dynamic field** 的特殊功能插入具有灵活、不断演进 schema 的 entity。此字段实现为名为 `$meta` 的隐藏 JSON 字段，它会自动存储数据中**未在 collection schema 中明确定义**的字段。
 
 ## 工作原理\{#how-it-works}
 
-当启用 dynamic field 时，Zilliz Cloud 会为每个 entity 添加一个隐藏的 `#meta` 字段。这个字段是 JSON 类型，意味着它可以存储任何与 JSON 兼容的数据结构，也可以通过 JSON 路径建立索引。
+当启用 dynamic field 时，Zilliz Cloud 会为每个 entity 添加一个隐藏的 `$meta` 字段。这个字段是 JSON 类型，意味着它可以存储任何与 JSON 兼容的数据结构，也可以通过 JSON 路径建立索引。
 
 在数据插入过程中，任何未在 schema 中声明的字段都会自动作为键值对存储在这个 dynamic field 内。
 
-您无需手动管理 `#meta`——Zilliz Cloud 会透明地处理它。
+您无需手动管理 `$meta`——Zilliz Cloud 会透明地处理它。
 
 例如，如果您的 collection schema 只定义了 `id` 和 `vector`，而您插入以下 entity：
 
@@ -78,7 +78,7 @@ Zilliz Cloud 允许您通过 **dynamic field** 的特殊功能插入具有灵活
 
 ## 支持的数据类型\{#supported-data-types}
 
-Dynamic field 支持 Zilliz Cloud 提供的所有标量数据类型，包括简单和复杂值。这些数据类型适用于存储在 `#meta` 中的**键值**。
+Dynamic field 支持 Zilliz Cloud 提供的所有标量数据类型，包括简单和复杂值。这些数据类型适用于存储在 `$meta` 中的**键值**。
 
 **支持的类型包括：**
 
@@ -109,7 +109,7 @@ Dynamic field 支持 Zilliz Cloud 提供的所有标量数据类型，包括简�
 }
 ```
 
-上述每个键和值都将存储在 `#meta` 字段内。
+上述每个键和值都将存储在 `$meta` 字段内。
 
 ## 启用 dynamic field\{#enable-dynamic-field}
 
@@ -295,7 +295,7 @@ curl --request POST \
 
 ## 向 collection 插入 entity\{#insert-entities-to-the-collection}
 
-Dynamic field 允许您插入 schema 中未定义的额外字段。这些字段将自动存储在 `#meta` 中。
+Dynamic field 允许您插入 schema 中未定义的额外字段。这些字段将自动存储在 `$meta` 中。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>

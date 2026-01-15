@@ -174,7 +174,7 @@ from pymilvus.bulk_writer import bulk_import
 
 def cloud_bulkinsert():
     # The value of the URL is fixed.
-    # For overseas regions, it is: https://api.cloud.zilliz.com.cn
+    # For overseas regions, it is: https://api.cloud.zilliz.com
     # For regions in China, it is: https://api.cloud.zilliz.com.cn
     url = "https://api.cloud.zilliz.com.cn"
     api_key = ""

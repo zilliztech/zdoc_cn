@@ -23,6 +23,8 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Procedures from '@site/src/components/Procedures';
+
 # MCP Server
 
 Zilliz Cloud 提供了 [Zilliz MCP Server](https://github.com/zilliztech/zilliz-mcp-server/tree/master)，使 AI 智能体能够通过标准化的[模型上下文协议](https://modelcontextprotocol.io/)（Model Context Protocol，MCP）无缝地与 Zilliz Cloud 进行交互。本页面将指导你如何在本地设置 Zilliz MCP 服务器，并将其与你喜爱的 AI 智能体配合使用。
@@ -81,6 +83,8 @@ Zilliz Cloud 提供了 [Zilliz MCP Server](https://github.com/zilliztech/zilliz-
 
 如果你希望在不同机器上运行的多个 AI 智能体之间共享 Zilliz MCP Server，可以以服务器模式运行 Zilliz MCP Server。你需要先克隆 Zilliz MCP Server 的代码仓库，并在独立的机器上启动服务器，然后再进行配置文件的准备。
 
+<Procedures>
+
 1. 克隆 Zilliz MCP Server 仓库。
 
     ```bash
@@ -105,8 +109,8 @@ Zilliz Cloud 提供了 [Zilliz MCP Server](https://github.com/zilliztech/zilliz-
     # Zilliz Cloud Configuration
     
     ZILLIZ_CLOUD_TOKEN=
-    ZILLIZ_CLOUD_URI=https://api.cloud.zilliz.com.cn
-    ZILLIZ_CLOUD_FREE_CLUSTER_REGION=ali-cn-hangzhou
+    ZILLIZ_CLOUD_URI=https://api.cloud.zilliz.com
+    ZILLIZ_CLOUD_FREE_CLUSTER_REGION=gcp-us-west1
     
     # MCP Server Configuration
     
@@ -140,9 +144,13 @@ Zilliz Cloud 提供了 [Zilliz MCP Server](https://github.com/zilliztech/zilliz-
     }
     ```
 
+</Procedures>
+
 ### 步骤2：添加服务器配置到 AI Agent\{#step-2-add-the-configuration-to-your-preferred-ai-agent}
 
 MCP 是一种开放协议，用于标准化应用程序向大语言模型（LLM）提供上下文的方式，许多 AI 驱动的应用程序都支持该协议。在本步骤中，你将学习如何将配置添加到 AI 代码编辑器 Cursor 中。
+
+<Procedures>
 
 1. 启动 Cursor，然后在顶部菜单栏中选择 **Cursor** > **Settings** > **Cursor Settings**。
 
@@ -155,6 +163,8 @@ MCP 是一种开放协议，用于标准化应用程序向大语言模型（LLM�
 1. 保存文件并返回到 **Tools & Integrations** 页面。你会看到 **Zilliz MCP Server** 已列在 **MCP Tools** 中，并显示了可供 AI 智能体调用的可用工具。
 
     ![KOzMbMi9PozfpQx4CsOcSgQjnXf](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/KOzMbMi9PozfpQx4CsOcSgQjnXf.png)
+
+</Procedures>
 
 将 Zilliz MCP 服务器添加到你偏好的 AI 应用程序中的操作流程非常相似。你可以根据所使用的 AI 应用程序提供的具体指引来添加配置文件。
 

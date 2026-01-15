@@ -152,5 +152,5 @@ Zilliz Cloud 提供 3 种内置的集群角色，每种内置角色都包含了�
 
 已分配给用户的自定义角色不可删除。如仍需继续删除，请先找到正在使用该自定义角色的集群用户，然后为这些用户分配其他角色，最终再删除该自定义角色。
 
-undefined
+![delete-cluster-role-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/delete-cluster-role-cn.png "delete-cluster-role-cn")
 

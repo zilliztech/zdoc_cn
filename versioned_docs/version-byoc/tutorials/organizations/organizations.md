@@ -10,7 +10,7 @@ notebook: FALSE
 description: "了解 Zilliz Cloud 组织层级操作及设置。 | BYOC"
 type: origin
 token: B1rYwr4rJi0UM7kpppxcQvwin7l
-sidebar_position: 9
+sidebar_position: 10
 keywords: 
   - 向量数据库
   - zilliz

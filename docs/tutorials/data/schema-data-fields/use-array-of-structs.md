@@ -570,7 +570,7 @@ client.createCollection(requestCreate);
 
 ```javascript
 await milvusClient.createCollection({
-  collection_name: "books",
+  collection_name: "my_collection",
   fields: schema,
   indexes: indexParams,
 });

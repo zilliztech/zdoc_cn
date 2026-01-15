@@ -206,7 +206,30 @@ await client.createCollection({
 <TabItem value='bash'>
 
 ```bash
-# restful
+curl --request POST \
+     --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/create \
+     --header 'Authorization: Bearer YOUR_CLUSTER_TOKEN' \
+     --header 'Content-Type: application/json' \
+     --data '{
+       "collectionName": "timestamptz_test123",
+       "schema": {
+         "autoId": false,
+         "fields": [
+           { "fieldName": "id", "dataType": "Int64", "isPrimary": true },
+           { "fieldName": "tsz", "dataType": "Timestamptz", "nullable": true },
+           { "fieldName": "vec", "dataType": "FloatVector", "elementTypeParams": { "dim": "4" } }
+         ]
+       },
+       "indexParams": [
+         {
+           "fieldName": "vec",
+           "indexName": "vector_index",
+           "metricType": "L2",
+           "indexConfig": { "index_type": "AUTOINDEX" }
+         }
+       ],
+       "consistencyLevel": "Session"
+     }'
 ```
 
 </TabItem>
@@ -350,7 +373,7 @@ data: data,
 <TabItem value='bash'>
 
 ```bash
-# restful
+curl --request POST \      --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/insert \      --header 'Authorization: Bearer YOUR_CLUSTER_TOKEN' \      --header 'Content-Type: application/json' \      --data '{        "collectionName": "timestamptz_test123",        "data": [          { "id": 1, "tsz": "2026-01-14T19:50:00Z", "vec": [0.1, 0.2, 0.3, 0.4] },          { "id": 2, "tsz": "2026-01-14T12:00:00+08:00", "vec": [0.5, 0.6, 0.7, 0.8] },          { "id": 3, "vec": [0.9, 0.0, 0.1, 0.2] }        ]      }'
 ```
 
 </TabItem>
@@ -444,7 +467,7 @@ await client.loadCollection({
 <TabItem value='bash'>
 
 ```bash
-# restful
+curl --request POST \      --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/load \      --header 'Authorization: Bearer YOUR_CLUSTER_TOKEN' \      --header 'Content-Type: application/json' \      --data '{ "collectionName": "timestamptz_test123" }'
 ```
 
 </TabItem>
@@ -539,7 +562,16 @@ console.log(results);
 <TabItem value='bash'>
 
 ```bash
-# restful
+curl --request POST \
+     --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/query \
+     --header 'Authorization: Bearer YOUR_CLUSTER_TOKEN' \
+     --header 'Content-Type: application/json' \
+     --data '{
+       "collectionName": "timestamptz_test123",
+       "filter": "tsz != ISO '\''2025-01-03T00:00:00+08:00'\''",
+       "outputFields": ["id", "tsz"],
+       "limit": 10
+     }'
 ```
 
 </TabItem>
@@ -627,7 +659,7 @@ console.log(results);
 <TabItem value='bash'>
 
 ```bash
-# restful
+curl --request POST \      --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/query \      --header 'Authorization: Bearer YOUR_CLUSTER_TOKEN' \      --header 'Content-Type: application/json' \      --data '{        "collectionName": "timestamptz_test123",        "filter": "tsz + INTERVAL '\''P0D'\'' != ISO '\''2025-01-03T00:00:00+08:00'\''",        "outputFields": ["id", "tsz"],        "limit": 10      }'
 ```
 
 </TabItem>
@@ -729,7 +761,7 @@ console.log(results);
 <TabItem value='bash'>
 
 ```bash
-# restful
+curl --request POST \      --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/search \      --header 'Authorization: Bearer YOUR_CLUSTER_TOKEN' \      --header 'Content-Type: application/json' \      --data '{        "collectionName": "timestamptz_test123",        "data": [[0.1, 0.2, 0.3, 0.4]],        "limit": 5,        "filter": "tsz > ISO '\''2025-01-05T00:00:00+08:00'\''",        "outputFields": ["id", "tsz"]      }'
 ```
 
 </TabItem>

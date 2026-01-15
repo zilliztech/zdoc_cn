@@ -99,13 +99,37 @@ Index 是一种用于加速搜索与查询的数据结构。Zilliz Cloud 支持�
 
 您可以在创建 Collection 时跳过 Index 配置，后续随时添加。详情请见[管理 Index](./manage-indexes)。
 
-### Function 和 Analyzer\{#function-analyzer}
+### Function\{#functions}
 
-Analyzer 用于在全文检索中对原始文本进行分词和规范化处理。它将输入文本拆分为可搜索的独立词项，并移除停用词、标点等无关元素，以提升检索精度。了解更多。
+在 Zilliz Cloud 中，**Function** 用于定义在数据写入和查询执行过程中，如何应用与文本相关的能力。
 
-Function 用于全文检索中，将 Analyzer 分词后的术语转换为带相关性得分的稀疏向量。Function 使用 BM25 等评分算法，为索引和文档排序生成加权表示。
+根据 生效阶段，Function 可分为两大类：
 
-如需使用 Function，Schema 中需同时包含 SPARSE_FLOAT_VECTOR 字段和 VARCHAR 字段。详情请见[全文搜索](./full-text-search)。
+- **Text Function**
+
+    Text Function 用于定义如何将原始文本转换为可用于检索的向量表示。这类 Function 在创建 Collection 时配置，并作为 Collection Schema 的一部分存在。
+
+    常见的 Text Functions 包括：BM25 Function、Text Embedding Function。
+
+    有关 Text Function 工作机制的概念性说明，请参见 [Function & 模型推理概述](./function-and-model-inference-overview)。
+
+    在 Zilliz Cloud 控制台中创建 Collection 时，你可以在 Collection 创建流程中添加 Function。
+
+    <Supademo id="cmkceofmn0371z80h1pd26a8t" title="" isShowcase />
+
+- **Rerank Function**
+
+    Rerank Function 用于在查询阶段对搜索结果进行进一步排序优化。与 Text Function 不同，Rerank Function **不绑定到 Collection Schema**，而是作为 search request 中的参数动态指定，对 search 返回的 candidate results 生效。
+
+    Rerank Functions 具有以下特点：
+
+    - 仅在 query time 生效
+
+    - 不影响 index 构建
+
+    - 不影响 candidate retrieval
+
+    有关 Rerank Function 的工作原理，请参见 [Function & 模型推理概述](./function-and-model-inference-overview)。
 
 ### Partition 和 Partition key\{#partition-partition-key}
 
@@ -178,7 +202,7 @@ Zilliz Cloud Web 控制台支持设置 Text Match 中使用的字段和 Analyzer
 
 Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下管理操作：
 
-<Supademo id="cmauvqbcp02ztyg0istpzcq9w?utm_source=link" title="" isShowcase />
+<Supademo id="cmauvqbcp02ztyg0istpzcq9w" title="" isShowcase />
 
 - **重命名 Collection**：可以修改现有 Collection 的名称。
 
@@ -192,13 +216,13 @@ Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下�
 
     - 若需修改 Shard 设置，请使用[复制 Collection](./manage-collections-console#create-collection) 的功能。
 
-    - 若需修改 TTL、mmap 或 partition Key 设置，请使用 SDK，详情请见[修改 Collection](./modify-collections)。
+    - 若需修改 mmap 或 partition Key 设置，请使用 SDK，详情请见[修改 Collection](./modify-collections)。
 
     - 如果 Collection 创建时未开启动态列功能，您可以在 Collection 创建完成后使用 SDK 或 Web 控制台开启动态列。更多 SDK 详情，请见[修改 Collection](./modify-collections#example-4-enable-dynamic-field)。如需了解如何通过 Web 控制台操作，请参见上方 Demo。
 
     其他 Schema 设置暂不支持编辑。如仍需修改，建议创建一个新的 Collection，并重新[导入数据](./import-data)。
 
-- **加载 / 释放 Collection**：在 Zilliz Cloud Web 控制台上，Collection 创建后会自动加载至内存，可立即用于搜索和查询。如需释放内存空间，可将不常用的 Collection 手动释放。
+- **加载 / 释放 Collection**：在 Zilliz Cloud Web 控制台上，Collection 创建后会自动加载至内存，可立即用于搜索和查询。如需释放内存空间，可将不常用的 Collection 手动释放。Zilliz Cloud Web 控制台支持加载/释放单个 Collection，或批量加载/释放多个 Collection。
 
 - **移动 Collection 到其他 Database**：可以将相关的 Collection 分组到同一个 Database 中，并根据需要在不同 Database 之间移动 Collection。
 
@@ -209,6 +233,12 @@ Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下�
     - **删除 Partition**：默认 Partition 不可删除。删除 Partition 会永久删除其中的数据，且删除前需先释放该 Collection。
 
 - **查看 Collection Alias**：您可以通过 Collection列表页查看特定集群下所有 Collection 的 Alias。
+
+- **编辑 Collection 时区**：Collection 时区用于定义 Collection 中所有 TIMESTAMPTZ Entity 的时区。默认使用 UTC，您也可以根据需求选择其他时区。
+
+- **修改 Collection TT**L：TTL (Time-to-live) 是一种 Collection 属性，决定了 Collection 中数据的到期时间。 数据到期后将被自动删除。详情请参考[设置 Collection 生存时间](./set-collection-ttl)。
+
+- **修改 Allow Insert Auto ID**：allow_insert_auto_id 属性允许启用了 Auto ID 的 Collection 在 Insert、Upsert、Bulk Insert 时接受用户提供的主键值。详情请参考[修改 Collection](./modify-collections#5-allowinsertautoid)。
 
 - **删除 Collection**：若某个 Collection 已不再使用，您可以将其删除以释放资源。删除 Collection 的操作会永久清除其中的所有数据，操作不可撤销。
 

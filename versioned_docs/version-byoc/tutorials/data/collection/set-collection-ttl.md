@@ -52,6 +52,42 @@ import TabItem from '@theme/TabItem';
 
 值得注意的是，数据删除操作是异步的。这就意味着当某些数据超期后并不会马上被删除。在数据被删除和数据不可查之间有一定的延迟。这是由垃圾回收（GC）机制和数据压缩耗时决定的。Zilliz Cloud 会不定期的触发这些操作。
 
+## 相关示例\{#examples}
+
+总体来说，Collection 生存时间可能与 Collection 中开启 TTL 设置的时间、Entity 插入及更新时间有关。请务必阅读如下示例，以便更好地理解 Collection 生存时间的运作机制。
+
+### 示例 1：在创建 Collection 时设置 TTL\{#example-1-set-ttl-upon-collection-creation}
+
+在创建 Collection 时，您将 Collection 的 **TTL** 属性设置为 **2592000**（**30天**）。
+
+在 **1 月 1 日 00:00**，您向 Collection 中插入了 **100 亿** Entity。此后，再未进行任何写操作。
+
+那么在 **1 月 31 日 00:00 之后**，这 **100 亿** Entity 将不会再出现在任何搜索（Search）结果中。此时，您执行输出字段为 `count(*)` 的查询（Query）时，结果亦为 **0**。
+
+### 示例 2：为既有 Collection 设置 TTL\{#example-2-set-ttl-for-an-existing-collection}
+
+您已经创建了一个未设置 TTL 属性的 Collection。
+
+在 **1 月 1 日 00:00**，您向 Collection 中插入了 **100 亿** Entity。
+
+在 **1 月 31 日 00:00**，您又向该 Collection 中插入了 **200 亿** Entity。
+
+在 **2 月 28 日 10:00**，您将该 Collection 的 TTL 属性设置为 **2592000**（**30天**）。
+
+那么在 TTL 设置生效时，您在 1 月 1 日插入的 100 亿数据将立即变为不可查询。此时，您执行输出字段为 `count(*)` 的查询（Query）时，结果亦为 **200 亿**。
+
+### 示例 3：Upsert entity\{#example-3-upsert-entities}
+
+在创建 Collection 时，您将 Collection 的 **TTL** 属性设置为 **2592000**（**30天**）。
+
+在 **1 月 1 日 00:00**，您向 Collection 中插入了 **200 亿** Entity。此后，再未进行任何写操作。
+
+在 **1 月15 日 00:00** 至 **23:59:59** 间，您分批次的以合并的方式更新了这 **200 亿** Entity。此后，再未进行任何写操作。
+
+在 **1 月 31 日** 到 **2 月 13 日**期间，这 **200 亿** Entity 仍旧可查询，并且在执行输出字段为 `count(*)` 的查询时，结果为 **200 亿**。
+
+但从 **1 月 14 日 00:00** 起，Entity 数量逐渐减少，并在 **2 月 15 日 00:00** 时变为 **0**。
+
 ## 设置 TTL\{#set-ttl}
 
 您可以在如下情况下设置 TTL
@@ -177,15 +213,12 @@ client.alter_collection_properties(
 <TabItem value='java'>
 
 ```java
-Map<String, String> properties = new HashMap<>();
-properties.put("collection.ttl.seconds", "1209600");
-
-AlterCollectionReq alterCollectionReq = AlterCollectionReq.builder()
+AlterCollectionPropertiesReq alterCollectionReq = AlterCollectionPropertiesReq.builder()
         .collectionName("my_collection")
-        .properties(properties)
+        .property(Constant.TTL_SECONDS, "1209600")
         .build();
 
-client.alterCollection(alterCollectionReq);
+client.alterCollectionProperties(alterCollectionReq);
 ```
 
 </TabItem>
@@ -253,15 +286,10 @@ client.drop_collection_properties(
 <TabItem value='java'>
 
 ```java
-propertyKeys = new String[1]
-propertyKeys[0] = "collection.ttl.second"
-
-DropCollectionReq dropCollectionReq = DropCollectionReq.builder()
+client.dropCollectionProperties(DropCollectionPropertiesReq.builder()
         .collectionName("my_collection")
-        .propertyKeys(propertyKeys)
-        .build();
-
-client.dropCollection(dropCollectionReq);
+        .propertyKeys(Collections.singletonList(Constant.TTL_SECONDS))
+        .build());
 ```
 
 </TabItem>
@@ -293,16 +321,33 @@ if err != nil {
 
 ```bash
 curl --request POST \
---url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/alter_properties" \
+--url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/drop_properties" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
 -d "{
-    \"collectionName\": \""my_collection"\",
-    \"properties\": {
-        \"collection.ttl.seconds\": 60
-    }
+    \"collectionName\": \"my_collection\",
+    \"propertyKeys\": [
+        \"collection.ttl.seconds\"
+    ]
 }"
 ```
 
 </TabItem>
 </Tabs>
+
+## 常见问题\{#faqs}
+
+### 插入 Collection 中的数据到底何时会根据 TTL 设置失效？
+
+Zilliz Cloud 会根据TTL 设置及数据的插入或更新时间来确定其失效时间。失效的数据将不会出现在任何搜索结果中。具体可参考[相关示例](./set-collection-ttl#examples)。
+
+### 失效数据何时会删除？
+
+当数据失效后，这些数据将不会出现在任何搜索结果中，但是，只有在 Zilliz Cloud 根据集群的数据压缩策略执行下一次压缩时，这些数据才会被删除。
+
+如果您希望在数据失效后的较短时间内删除这些数据，请联系 [Zilliz Cloud 技术支持](https://support.zilliz.com.cn/hc/zh-cn/requests/new)。
+
+### Zilliz Cloud 集群的 CU 容量何时会开始降低？
+
+集群的 CU 容量会取内存使用量和存储使用量中的最大值。如果 CU 容量当前取的是存储使用量，您可以在失效数据被删除后，在 Zilliz Cloud 控制台中观察到 CU 容量的减少。
+

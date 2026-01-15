@@ -10,7 +10,7 @@ notebook: FALSE
 description: "Zilliz Cloud 集群中的数据备份与恢复。 | BYOC"
 type: origin
 token: SbePwiLrZi2hZqk5NpRcmramnEN
-sidebar_position: 8
+sidebar_position: 9
 keywords: 
   - 向量数据库
   - zilliz

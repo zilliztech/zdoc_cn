@@ -2,7 +2,7 @@
 title: "导出备份文件 | BYOC"
 slug: /export-backup-files
 sidebar_label: "导出备份文件"
-beta: FALSE
+beta: PRIVATE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
@@ -27,6 +27,8 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Procedures from '@site/src/components/Procedures';
+
 # 导出备份文件
 
 您可以通过 Zilliz Cloud 控制台将备份文件导出至对象存储。
@@ -48,6 +50,8 @@ import Admonition from '@theme/Admonition';
 您可以选择通过 Zilliz Cloud 控制台或调用 RESTful API 的方式来导出备份文件。
 
 ### 通过 Zilliz Cloud 控制台导出\{#export-via-zilliz-cloud-console}
+
+<Procedures>
 
 1. 登录 Zilliz Cloud 控制台。
 
@@ -74,6 +78,8 @@ import Admonition from '@theme/Admonition';
 1. 点击**导出**。
 
     ![export-backup-file-zh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/export-backup-file-zh.png "export-backup-file-zh")
+
+</Procedures>
 
 ### 通过调用 RESTful API 接口导出\{#export-through-restful-api}
 
@@ -110,6 +116,8 @@ curl --request POST \
 
 点击**导出**后，系统会自动生成一个导出任务：
 
+\<Procedures>
+
 1. 在左侧导航栏中进入**任务**页面。
 
 1. 监控任务的**状态**：
@@ -119,6 +127,8 @@ curl --request POST \
     - **成功**：备份文件已成功导出，您可以在指定的存储空间中访问该文件。
 
     - **失败**：任务失败。这可能是由于导出过程中使用的资源（例如角色 ARN 或备份文件）在任务执行期间被删除所导致。
+
+\<Procedures>
 
 ## 取消导出任务\{#cancel-export-job}
 

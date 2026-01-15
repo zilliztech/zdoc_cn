@@ -26,6 +26,8 @@ import Admonition from '@theme/Admonition';
 
 import Supademo from '@site/src/components/Supademo';
 
+import Procedures from '@site/src/components/Procedures';
+
 # 外部迁移概述
 
 外部迁移功能简化了将向量数据库和搜索系统迁移至 Zilliz Cloud 的过程。无论您是从 Qdrant 等向量数据库迁移，还是从 Elasticsearch、OpenSearch 等支持向量的搜索引擎迁移，Zilliz Cloud 均提供迁移工具，在确保数据完整性的同时最大限度降低迁移复杂度。
@@ -213,13 +215,17 @@ Zilliz Cloud 支持从主流向量数据库和搜索平台迁移：
 
 ### 访问数据迁移\{#access-migration-portal}
 
+<Supademo id="cmbki8mah8nohsn1rfo0g3gnl" title="Zilliz Cloud - 访问数据迁移" />
+
+<Procedures>
+
 1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)
 
 1. 点击**数据迁移**，然后选择数据源平台
 
 1. 按引导流程完成迁移
 
-<Supademo id="cmbki8mah8nohsn1rfo0g3gnl" title="Zilliz Cloud - 访问数据迁移" />
+</Procedures>
 
 ### 设置 Full Text Search\{#configure-full-text-search}
 

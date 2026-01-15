@@ -2,7 +2,7 @@
 title: "提取、转换和加载 | Cloud"
 slug: /extract-transform-and-load
 sidebar_label: "提取、转换和加载"
-beta: FALSE
+beta: PRIVATE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE

@@ -23,11 +23,15 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Procedures from '@site/src/components/Procedures';
+
 # 企业认证
 
 Zilliz Cloud 现已开通企业认证渠道。如需进行[现金充值](./advance-pay)，您需要先通过企业认证。本章主要介绍如何在 Zilliz Cloud 界面上申请企业认证。
 
 ## 操作步骤\{#procedures}
+
+<Procedures>
 
 1. 选择组织并点击左侧导航栏中的**系统设置**。
 
@@ -77,6 +81,8 @@ Zilliz Cloud 现已开通企业认证渠道。如需进行[现金充值](./advan
 1. 收到您的企业认证申请后，我们将在 1～3 个工作日内完成审核，请您耐心等待。认证结果将以邮件形式发送至您的邮箱，请注意查收。
 
 1. 企业认证成功后，您可以在组织**系统设置**的**企业认证**部分查看企业信息。
+
+</Procedures>
 
 ![enterprise-verified-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/enterprise-verified-cn.png "enterprise-verified-cn")
 

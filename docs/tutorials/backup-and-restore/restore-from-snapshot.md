@@ -32,12 +32,6 @@ Zilliz Cloud 提供的恢复功能可用于在发生意外删除、数据损坏�
 
 本文将介绍如何通过备份文件恢复**整个集群**或**部分集群数据**。
 
-<Admonition type="info" icon="📘" title="说明">
-
-<p>此功能仅限 <strong>Dedicated</strong> 集群使用。</p>
-
-</Admonition>
-
 ## 限制说明\{#limits}
 
 - **访问控制**：仅项目管理员、组织管理员或拥有备份权限的自定义角色可执行备份操作。

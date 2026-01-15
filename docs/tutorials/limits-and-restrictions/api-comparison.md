@@ -334,7 +334,7 @@ import Admonition from '@theme/Admonition';
      <td><p>✔︎</p></td>
    </tr>
    <tr>
-     <td><p>搜索 &amp; 查询</p></td>
+     <td><p>搜索 & 查询</p></td>
      <td><p>search()</p></td>
      <td><p>✔︎</p></td>
      <td><p>✔︎</p></td>

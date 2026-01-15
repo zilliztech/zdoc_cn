@@ -380,7 +380,7 @@ DescribeAliasResp describeAliasRes = client.describeAlias(describeAliasReq);
 System.out.println(describeAliasRes);
 
 // Output:
-// DescribeAliasResp(collectionName=my_collection_1, alias=bob)
+// DescribeAliasResp(databaseName=default, collectionName=my_collection_1, alias=bob)
 ```
 
 </TabItem>

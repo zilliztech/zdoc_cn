@@ -126,6 +126,12 @@ curl --request POST \
     }'
 ```
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>如果文件夹路径下包含多种格式文件，请求会失败。</p>
+
+</Admonition>
+
 ### 从单个文件导入\{#import-a-single-file}
 
 如果您希望单独导入一个 Parquet 文件，可以将这个 Parquet 文件的路径放在一个子列表中，然后将这个子列表放在一个外层列表中，如下方代码所示。
@@ -200,7 +206,7 @@ Zilliz Cloud 针对导入 Parquet 格式的文件时设置了如下限制。
      <td><p>1 GB</p></td>
    </tr>
    <tr>
-     <td><p>Serverless &amp; Dedicated</p></td>
+     <td><p>Serverless & Dedicated</p></td>
      <td><p>1,000 个文件</p></td>
      <td><p>10 GB</p></td>
      <td><p>1 TB</p></td>

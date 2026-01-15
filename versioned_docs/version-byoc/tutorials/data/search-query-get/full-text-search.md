@@ -839,7 +839,7 @@ search_params = {
     'params': {'level': 10},
 }
 
-client.search(
+res = client.search(
     collection_name='my_collection', 
     # highlight-start
     data=['whats the focus of information retrieval?'],
@@ -849,6 +849,8 @@ client.search(
     limit=3,
     search_params=search_params
 )
+
+print(res)
 ```
 
 </TabItem>
@@ -878,7 +880,6 @@ SearchResp searchResp = client.search(SearchReq.builder()
 
 ```go
 annSearchParams := index.NewCustomAnnParam()
-annSearchParams.WithExtraParam("drop_ratio_search", 0.2)
 resultSets, err := client.Search(ctx, milvusclient.NewSearchOption(
     "my_collection", // collectionName
     3,               // limit
@@ -934,9 +935,7 @@ curl --request POST \
         "text"
     ],
     "searchParams":{
-        "params":{
-            "level":10
-        }
+        "params":{}
     }
 }'
 ```
@@ -952,10 +951,6 @@ curl --request POST \
    <tr>
      <td><p><code>search_params</code></p></td>
      <td><p>包含搜索参数的字典。</p></td>
-   </tr>
-   <tr>
-     <td></td>
-     <td><p>搜索时忽略低频词的比例。详细信息请参考<a href="./use-sparse-vector">稀疏向量</a>。</p></td>
    </tr>
    <tr>
      <td><p><code>params.level</code></p></td>

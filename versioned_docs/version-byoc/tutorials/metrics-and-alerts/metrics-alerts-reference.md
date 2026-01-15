@@ -259,7 +259,7 @@ import Admonition from '@theme/Admonition';
      <td><p>已加载 Entity 数量近似值</p></td>
      <td><p>个</p></td>
      <td><p>集群中已加载 Entity 数量的近似值。</p><p>在右侧扩展的下拉菜单中选择指定的 collection，将显示该 collection 中已加载的 entity 数量。</p><p>该指标仅适用于 <strong>Dedicated 企业版</strong> 或 <strong>BYOC</strong>。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
-     <td><p>如需查看精确、实时的 Entity 计数，请参考 Collection 详情页中的“已加载 Entity 数量”或者使用 <a href="/docs/single-vector-search#use-count-as-output-field">count(*)</a>。</p></td>
+     <td><p>如需查看精确、实时的 Entity 计数，请参考 Collection 详情页中的“已加载 Entity 数量”或者使用 <a href="/docs/single-vector-search#use-count-as-output-field">count(&ast;)</a>。</p></td>
    </tr>
    <tr>
      <td><p>未加载的 Collection 数量</p></td>

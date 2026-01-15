@@ -90,7 +90,13 @@ Zilliz Cloud 文档中，每个功能会以标签形式标注其当前支持阶�
 
 ### 公测版
 
-无
+- [Text Embedding](./model-based-functions) 和 [Rerank](./reranking) Function
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>如需使用上述功能，请升级集群的 Milvus 版本。</p>
+
+</Admonition>
 
 ### 停用预告
 

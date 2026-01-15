@@ -27,6 +27,8 @@ import Admonition from '@theme/Admonition';
 
 import Supademo from '@site/src/components/Supademo';
 
+import Procedures from '@site/src/components/Procedures';
+
 # 在线迁移
 
 在线迁移（Zero Downtime Migration）确保数据库服务在整个迁移过程中保持正常运行，提供不中断的数据库访问。迁移过程包括以下阶段：
@@ -41,7 +43,7 @@ import Supademo from '@site/src/components/Supademo';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在线迁移目前处于<strong>内测</strong>（Private Preview）阶段。如需申请使用权限或了解相关费用，请联系 <a href="https://support.zilliz.com.cn/hc/zh-cn/requests/new">Zilliz Cloud 支持团队</a>。</p>
+<p>在线迁移目前仅适用于 Milvus 版本为 2.5.x 的 Zilliz Cloud 集群。如果您需要开通或了解相关费用及问题处理，请联系 <a href="https://support.zilliz.com.cn/hc/zh-cn/requests/new">Zilliz Cloud 支持团队</a>。</p>
 
 </Admonition>
 
@@ -160,7 +162,7 @@ AlterCollection, AlterCollectionField, CreateAlias, DropAlias, AlterAlias, Renam
 
 ## 操作指南\{#getting-started}
 
-The zero downtime migration process consists of three main phases that require your attention and action:
+在线迁移包含以下三个阶段。
 
 ### 阶段 1: 初始化\{#initialize}
 
@@ -190,6 +192,8 @@ The zero downtime migration process consists of three main phases that require y
 
 在此阶段，系统会持续同步插入到源集群中的新数据到目标集群。目标集群将显示**同步中**状态，表示不接受外部数据写入。在此阶段，请按照以下步骤操作：
 
+<Procedures>
+
 1. **监控数据同步延时**：
 
     - 您可以追踪**数据同步延时**（秒）。此指标表示在增量同步期间，源集群中最新数据与目标集群之间的时间差。
@@ -209,6 +213,8 @@ The zero downtime migration process consists of three main phases that require y
     <p>如果您没有手动停止数据同步，Zilliz Cloud 会继续同步最多 7 天。超过这一期限后，为避免资源浪费，系统会自动停止同步，从而导致迁移任务失败。</p>
 
     </Admonition>
+
+</Procedures>
 
 ### 阶段 3: 切换\{#switch}
 

@@ -10,7 +10,7 @@ notebook: FALSE
 description: "Volume 是用于存储结构化表格或非结构化数据文件的对象存储。本章将就 Volume 的基本概念和使用方法对 Volume 进行全面的介绍。 | Cloud"
 type: origin
 token: RdEUwwvmkiOnvCkvBj9cIjobnof
-sidebar_position: 5
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz

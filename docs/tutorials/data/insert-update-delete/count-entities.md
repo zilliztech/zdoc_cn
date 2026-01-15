@@ -35,7 +35,7 @@ import TabItem from '@theme/TabItem';
 
 Zilliz Cloud 为您提供了两种统计集合中 Entity 数量的方法。
 
-- **查询以count(*)作为输出字段**
+- **查询以count(&ast;)作为输出字段**
 
     要获取 Collection 中 Entity 的确切数量，您应该使用此方法并确保：
 
@@ -94,7 +94,7 @@ res = client.query(
     collection_name="test_collection",
     # highlight-start
     output_fields=['count(*)'],
-    partition_names=['default']
+    partition_names=['_default']
     # highlight-end
 )
 
@@ -136,7 +136,7 @@ countR = client.query(QueryReq.builder()
         .filter("")
         // highlight-start
         .outputFields(Collections.singletonList("count(*)"))
-        .partitionNames(Collections.singletonList("default"))
+        .partitionNames(Collections.singletonList("_default"))
         // highlight-end
         .build());
 
@@ -186,7 +186,7 @@ let res = await client.query({
 res = await client.query({
     collection_name: "test_collection",
     output_fields: ["count(*)"],
-    partition_names: ['default']
+    partition_names: ['_default']
 });
 
 // Get the entity count

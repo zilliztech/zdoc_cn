@@ -24,6 +24,8 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Procedures from '@site/src/components/Procedures';
+
 # Prometheus 监控
 
 [Prometheus](https://prometheus.io/) 监控系统能够在指定的时间间隔内从配置的目标收集指标，评估规则表达式，展示结果，并根据特定条件触发告警。
@@ -39,6 +41,8 @@ import Admonition from '@theme/Admonition';
 ## 配置 Prometheus 监控\{#configure-prometheus-monitoring}
 
 要配置 Prometheus 以采集 Zilliz Cloud 集群指标，请按照以下步骤操作：
+
+<Procedures>
 
 1. 获取 Prometheus 实例的 `Prometheus.yml` 配置文件。有关更多信息，请参阅 [Prometheus 官方文档](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#configuration)。
 
@@ -93,6 +97,8 @@ import Admonition from '@theme/Admonition';
     </table>
 
 1. 保存并应用 `Prometheus.yml` 文件。
+
+</Procedures>
 
 有关更多信息，请参阅 [Prometheus 官方文档](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#scrape_config)。
 

@@ -27,6 +27,8 @@ import Admonition from '@theme/Admonition';
 
 import Supademo from '@site/src/components/Supademo';
 
+import Procedures from '@site/src/components/Procedures';
+
 # Amazon S3
 
 Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.amazonaws.cn/AmazonS3/latest/userguide/Welcome.html)） 集成，用于转发审计日志或导出备份文件至指定的 S3 存储桶。
@@ -49,6 +51,8 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
 <Supademo id="cmeksbxva065wv9kqaibjgsu1" title="步骤 1：集成基础设置" />
 
+<Procedures>
+
 1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)。
 
 1. 进入目标项目，点击左侧导航栏的**集成中心**。
@@ -67,9 +71,13 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
     1. 打开 [Amazon S3 控制台](http://console.amazonaws.cn/s3)，继续执行[步骤 2](./integrate-with-amazon-s3#create-s3-bucket)。
 
+</Procedures>
+
 ## 步骤 2：创建存储桶\{#create-s3-bucket}
 
 <Supademo id="cmektshyv0755v9kq9nlj0ezm" title="步骤 2：创建存储桶（1）" />
+
+<Procedures>
 
 1. 登录到 [Amazon S3 控制台](http://console.amazonaws.cn/s3)。
 
@@ -94,9 +102,13 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
     有关更多信息，请参考[创建通用存储桶](https://docs.amazonaws.cn/AmazonS3/latest/userguide/create-bucket-overview.html)。
 
+</Procedures>
+
 存储桶创建完成后，返回 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)，完成以下操作：
 
 <Supademo id="cmekuujn107ekv9kqeucj7fkj" title="步骤 2：创建存储桶（2）" />
+
+<Procedures>
 
 1. 在**创建 Amazon S3 存储桶**步骤的**存储桶名称**字段中，输入刚才所创建的存储桶名称（本指南中为 `bucket-for-integration`）。然后点击**下一步**。
 
@@ -104,11 +116,15 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
 1. 完成后打开 [IAM 控制台](https://console.amazonaws.cn/iam/home#/policies)，进入[步骤 3](./integrate-with-amazon-s3#create-iam-policy)。
 
+</Procedures>
+
 ## 步骤 3：创建 IAM 策略\{#create-iam-policy}
 
 为了让 Zilliz Cloud 访问 Amazon S3，需要创建一个 IAM 策略，包含必要的操作和资源权限，以便在 Zilliz Cloud 和 Amazon S3 存储桶之间转发审计日志或导出备份文件。
 
 <Supademo id="cmekv5iab07fyv9kqpyyxb74m" title="步骤 3：创建 IAM 策略" />
+
+<Procedures>
 
 1. 在 [IAM 控制台](https://console.amazonaws.cn/iam/home#/policies)，选择 **策略 > 创建策略**。
 
@@ -185,19 +201,27 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
 1. 点击**创建策略**，完成后进入[步骤 4](./integrate-with-amazon-s3#create-iam-role)。
 
+</Procedures>
+
 ## 步骤 4：创建 IAM 角色\{#create-iam-role}
 
 创建 IAM 角色前，在 Zilliz Cloud 控制台完成以下操作：
 
 <Supademo id="cmekvehv707lgv9kqxxwfkva2" title="步骤 4：创建 IAM 角色（1）" />
 
+<Procedures>
+
 1. 在 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)，点击**下一步**，进入**创建 IAM 角色**步骤。
 
 1. 在**选择可信实体**区域中，复制 JSON 格式的信任策略，然后打开 [IAM 控制台](https://console.amazonaws.cn/iam/)。
 
+</Procedures>
+
 之后，继续在 [IAM 控制台](https://console.amazonaws.cn/iam/)完成以下操作：
 
 <Supademo id="cmekvgatu07nuv9kqcqtpdksi" title="步骤 4：创建 IAM 角色（2）" />
+
+<Procedures>
 
 1. 在  [IAM 控制台](https://console.amazonaws.cn/iam/)，选择**角色 > 创建角色**。
 
@@ -241,15 +265,21 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
 1. 在角色详情页面，复制该角色的 **ARN**，该 ARN 将在[步骤 5](./integrate-with-amazon-s3#step-5-validate-and-add-integration) 中使用。
 
+</Procedures>
+
 ## 步骤 5：校验并添加集成\{#step-5-validate-and-add-integration}
 
 <Supademo id="cmekvlcds07wmv9kq3zs95kl7" title="步骤 5：校验并添加集成" />
+
+<Procedures>
 
 1. 在 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)的**创建 IAM 角色**步骤中，将从 IAM 控制台复制的 ARN 粘贴至 **角色** **ARN** 字段。
 
 1. 点击**校验集成**。
 
 1. 校验通过后，点击**添加**。
+
+</Procedures>
 
 之后您便可以转发审计日志或导出备份文件到您的 Amazon S3 存储桶。有关更多信息，请参考[审计日志](./audit-logs)或[导出备份文件](./export-backup-files)。
 

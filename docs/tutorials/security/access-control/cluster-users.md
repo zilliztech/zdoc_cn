@@ -36,12 +36,6 @@ import Admonition from '@theme/Admonition';
 
 如需管理集群用户，您的角色必须为**组织管理员**、**项目管理员**或拥有 **Cluster_Admin** 权限的角色。
 
-<Admonition type="info" icon="📘" title="说明">
-
-<p>此功能仅限 <strong>Dedicated</strong> 集群使用。</p>
-
-</Admonition>
-
 ## 创建集群用户\{#create-a-cluster-user}
 
 创建集群用户时，您需要配置以下信息：

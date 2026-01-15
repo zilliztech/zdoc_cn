@@ -24,6 +24,8 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Procedures from '@site/src/components/Procedures';
+
 # 注册账号
 
 本教程将介绍如何创建 Zilliz Cloud 账号以便使用 Zilliz Cloud 云服务。
@@ -35,6 +37,8 @@ import Admonition from '@theme/Admonition';
 ![register_account](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/register_account.png "register_account")
 
 ## 注册账号\{#registration-options}
+
+<Procedures>
 
 1. 在“企业邮箱”字段中输入您的邮箱地址。
 
@@ -65,6 +69,8 @@ import Admonition from '@theme/Admonition';
 1. 在提示对话框中输入邮箱验证码，并点击“验证”。
 
     如未收到验证码，请点击“重新发送验证码”。
+
+</Procedures>
 
 <Admonition type="info" icon="📘" title="说明">
 

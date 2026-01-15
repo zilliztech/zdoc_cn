@@ -1,7 +1,7 @@
 ---
 title: "版本说明书（2024/11/20） | Cloud"
 slug: /release-notes-2110
-sidebar_label: "版本说明书（2024/11/20）"
+sidebar_label: "2024/11/20"
 beta: FALSE
 added_since: FALSE
 last_modified: FALSE
@@ -10,7 +10,7 @@ notebook: FALSE
 description: "本次发布推出了全新界面，为您带来全新体验。另外，Zilliz Cloud 目前已支持从 Qdrant 和 腾讯云 VectoDB 搬迁数据，提供了更加丝滑的支付流程，并重新设计了帐单页面。 | Cloud"
 type: origin
 token: FLPuwOsvjiiui0kuvgec2hkonVb
-sidebar_position: 11
+sidebar_position: 13
 keywords: 
   - 向量数据库
   - zilliz

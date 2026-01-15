@@ -24,6 +24,8 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Procedures from '@site/src/components/Procedures';
+
 # VectorDB 审计日志
 
 审计日志允许管理员跟踪和监控 Zilliz Cloud 集群上的用户驱动的操作和 API 调用。此功能提供了数据平面活动的详细记录，包括向量搜索、查询执行、索引管理和其他数据操作。
@@ -94,6 +96,8 @@ import Admonition from '@theme/Admonition';
 
 ![zh-configure-auditing-1](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/zh-configure-auditing-1.png "zh-configure-auditing-1")
 
+<Procedures>
+
 1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)。
 
 1. 在目标项目页面，选择**集群**。
@@ -117,6 +121,8 @@ import Admonition from '@theme/Admonition';
     - **导出路径**：指定在存储桶中存放审计日志的目录路径。
 
 1. 点击**开启**。当**审计日志**状态显示为**运行中**时，说明已成功启用。如果状态显示为异常，请参阅[常见问题](./audit-logs#faq)获取故障排查方法。
+
+</Procedures>
 
 完成配置后，审计日志会以大约 5 分钟的间隔转发到您的存储桶。您可以随时访问存储桶来查看或管理所需日志。
 

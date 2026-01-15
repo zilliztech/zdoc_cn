@@ -1,7 +1,7 @@
 ---
 title: "版本说明书（2025/12） | Cloud"
 slug: /release-notes-2512
-sidebar_label: "版本说明书（2025/12）"
+sidebar_label: "2025/12"
 beta: FALSE
 added_since: FALSE
 last_modified: FALSE
@@ -10,7 +10,7 @@ notebook: FALSE
 description: "版本说明书（2025/12） | Cloud"
 type: origin
 token: RkDPw7UlzivLdbkTSXecdUYEnbe
-sidebar_position: 1
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz
@@ -26,6 +26,52 @@ import Admonition from '@theme/Admonition';
 import Grid from '@site/src/components/Grid';
 
 # 版本说明书（2025/12）
+
+<Grid columnSize="2" widthRatios="20,80">
+
+    <div>
+
+        **2025 年 12 月 26 日**
+
+    </div>
+
+    <div>
+
+        ## Milvus v2.6 GA\{#milvus-v26-ga}
+
+        本次发布标志着 Milvus v2.6.x 达成重要里程碑，实现了可用于生产的稳定性和所有特性在 Zilliz Cloud 上的全面可用。这些特性包括 Geometry、Struct Array、TimestampTz 等新的数据类型、向已有 Collection 添加字段、进一步强化的 Full-text Search，不断提速的 JSON 过滤能力、新的 Reranking Function、INT8 向量支持、合并模式的 Upsert 以及适用于 Binary 向量字段的 MINHASH_LSH 索引。
+
+        分层存储能力达成 GA，引入了全新升级的热、温、冷数据架构，并开始对冷数据的访问计费。更多详情，可参考[存储费用](./storage-cost#example-4-cluster-cold-data-access-cost)。
+
+    </div>
+
+</Grid>
+
+<Grid columnSize="2" widthRatios="20,80">
+
+    <div>
+
+        **2025 年 12 月 10 日**
+
+    </div>
+
+    <div>
+
+        ## 功能增强\{#enhancements}
+
+        - Milvus Endpoint 迁移支持 Geometry 与 Struct 类型，可无缝迁移包含空间形状与多层嵌套字段的集合
+
+        - 账单支持展示“现金余额”展示，帮助用户清晰查看预付金额的使用情况与剩余额度
+
+        - RESTful API 支持自动扩缩容配置，便于以编程方式管理集群弹性策略
+
+        - JobCenter 提供更详细的进度展示，让用户更直观了解任务状态与执行阶段
+
+        - 注册流程优化，通过精简表单提升新用户注册效率与整体体验
+
+    </div>
+
+</Grid>
 
 <Grid columnSize="2" widthRatios="20,80">
 

@@ -24,6 +24,8 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Procedures from '@site/src/components/Procedures';
+
 # 订阅阿里云云市场
 
 Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里云云市场上订阅 Zilliz Cloud。
@@ -47,6 +49,8 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
     1. 如果您尚未注册 Zilliz Cloud，并计划通过阿里云云市场缴纳您名下组织产生的费用。您可以直接前往[阿里云云市场](https://market.aliyun.com/products/56024006/cmgj00063418.html)。
 
 ## 操作步骤\{#procedures}
+
+<Procedures>
 
 1. 前往[阿里云云市场](https://market.aliyun.com/products/56024006/cmgj00063418.html)开通 Zilliz Cloud 服务。
 
@@ -90,7 +94,11 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 
     ![HsZ9bVAnEo5dOpxVSaBcezaknjd](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/HsZ9bVAnEo5dOpxVSaBcezaknjd.png)
 
+</Procedures>
+
 ## 取消订阅\{#unsubscribe-alibaba-marketplace}
+
+<Procedures>
 
 1. 前往阿里云[云市场控制台](https://market.console.aliyun.com/)。
 
@@ -101,6 +109,8 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 1. 阅读弹窗内容并点击**确认关闭**。
 
 1. 关闭后，Zilliz Cloud 将从已购买服务列表中消失。
+
+</Procedures>
 
 ![unsubscribe-alibaba-marketplace-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/unsubscribe-alibaba-marketplace-cn.png "unsubscribe-alibaba-marketplace-cn")
 

@@ -7,7 +7,7 @@ added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
 notebook: FALSE
-description: "This page outlines the responsibilities of Zilliz Cloud and BYOC users to clarify the division of tasks related to cloud management, upgrades, security, access control, service availability, and technical support, ensuring smooth collaboration while maintaining a secure and efficient operation environment. | BYOC"
+description: "本页面概述了Zilliz Cloud和BYOC用户的职责，以明确与云管理、升级、安全、访问控制、服务可用性和技术支持相关的任务分工，确保在保持安全高效的运营环境的同时实现顺畅协作。 | BYOC"
 type: origin
 token: Im9Twy8oRiXmfMkbXbYccZVSn5b
 sidebar_position: 8
@@ -26,138 +26,138 @@ import Admonition from '@theme/Admonition';
 
 # 共同责任
 
-This page outlines the responsibilities of Zilliz Cloud and BYOC users to clarify the division of tasks related to cloud management, upgrades, security, access control, service availability, and technical support, ensuring smooth collaboration while maintaining a secure and efficient operation environment.
+本页面概述了Zilliz Cloud和BYOC用户的职责，以明确与云管理、升级、安全、访问控制、服务可用性和技术支持相关的任务分工，确保在保持安全高效的运营环境的同时实现顺畅协作。
 
-## Cloud Management
+## 云管理
 
 <table>
    <tr>
-     <th><p>Task</p></th>
+     <th><p>任务</p></th>
      <th><p>Zilliz BYOC</p></th>
-     <th><p>Customer</p></th>
+     <th><p>客户</p></th>
    </tr>
    <tr>
-     <td><p>Set up VPC</p></td>
+     <td><p>设置VPC</p></td>
      <td></td>
      <td><p>✔</p></td>
    </tr>
    <tr>
-     <td><p>Manage EC2 instances</p></td>
+     <td><p>管理EC2实例</p></td>
      <td><p>✔</p></td>
      <td></td>
    </tr>
    <tr>
-     <td><p>Manage Kubernetes cluster</p></td>
+     <td><p>管理Kubernetes集群</p></td>
      <td><p>✔</p></td>
      <td></td>
    </tr>
    <tr>
-     <td><p>Manage S3 bucket</p></td>
+     <td><p>管理S3存储桶</p></td>
      <td></td>
      <td><p>✔</p></td>
    </tr>
    <tr>
-     <td><p>Provision Milvus instance</p></td>
+     <td><p>配置Milvus实例</p></td>
      <td><p>✔</p></td>
      <td></td>
    </tr>
 </table>
 
-## Upgrade and security
+## 升级与安全
 
 <table>
    <tr>
-     <th><p>Task</p></th>
+     <th><p>任务</p></th>
      <th><p>Zilliz BYOC</p></th>
-     <th><p>Customer</p></th>
+     <th><p>客户</p></th>
    </tr>
    <tr>
-     <td><p>Upgrade Milvus instance</p></td>
+     <td><p>升级Milvus实例</p></td>
      <td><p>✔</p></td>
      <td></td>
    </tr>
    <tr>
-     <td><p>Patch software vulnerabilities</p></td>
+     <td><p>修补软件漏洞</p></td>
      <td><p>✔</p></td>
      <td></td>
    </tr>
    <tr>
-     <td><p>Patch infrastructure vulnerabilities</p></td>
+     <td><p>修补基础设施漏洞</p></td>
      <td><p>✔</p></td>
      <td><p>✔</p></td>
    </tr>
    <tr>
-     <td><p>Scale resoures</p></td>
+     <td><p>扩展资源</p></td>
      <td><p>✔</p></td>
      <td><p>✔</p></td>
    </tr>
 </table>
 
-## Access control
+## 访问控制
 
 <table>
    <tr>
-     <th><p>Task</p></th>
+     <th><p>任务</p></th>
      <th><p>Zilliz BYOC</p></th>
-     <th><p>Customer</p></th>
+     <th><p>客户</p></th>
    </tr>
    <tr>
-     <td><p>Manage IAM roles and service accounts</p></td>
+     <td><p>管理IAM角色和服务账户</p></td>
      <td><p>✔</p></td>
      <td><p>✔</p></td>
    </tr>
    <tr>
-     <td><p>Implement access control &amp; auditing</p></td>
+     <td><p>实施访问控制和审计</p></td>
      <td><p>✔</p></td>
      <td><p>✔</p></td>
    </tr>
 </table>
 
-## Service availability
+## 服务可用性
 
 <table>
    <tr>
-     <th><p>Task</p></th>
+     <th><p>任务</p></th>
      <th><p>Zilliz BYOC</p></th>
-     <th><p>Customer</p></th>
+     <th><p>客户</p></th>
    </tr>
    <tr>
-     <td><p>Disaster recovery (DR)</p></td>
+     <td><p>灾难恢复 (DR)</p></td>
      <td><p>✔</p></td>
      <td><p>✔</p></td>
    </tr>
    <tr>
-     <td><p>Service level agreement (SLA)</p></td>
+     <td><p>服务级别协议 (SLA)</p></td>
      <td><p>✔</p></td>
      <td><p>✔</p></td>
    </tr>
 </table>
 
-## Technical support
+## 技术支持
 
 <table>
    <tr>
-     <th><p>Task</p></th>
+     <th><p>任务</p></th>
      <th><p>Zilliz BYOC</p></th>
-     <th><p>Customer</p></th>
+     <th><p>客户</p></th>
    </tr>
    <tr>
-     <td><p>Logging</p></td>
+     <td><p>日志记录</p></td>
      <td></td>
      <td><p>✔</p></td>
    </tr>
    <tr>
-     <td><p>Audit logging</p></td>
+     <td><p>审计日志</p></td>
      <td><p>✔</p></td>
      <td><p>✔</p></td>
    </tr>
    <tr>
-     <td><p>Monitoring</p></td>
+     <td><p>监控</p></td>
      <td><p>✔</p></td>
      <td></td>
    </tr>
    <tr>
-     <td><p>Break-glass access</p></td>
+     <td><p>应急访问</p></td>
      <td><p>✔</p></td>
      <td><p>✔</p></td>
    </tr>

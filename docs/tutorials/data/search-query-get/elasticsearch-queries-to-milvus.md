@@ -10,7 +10,7 @@ notebook: FALSE
 description: "基于 Apache Lucene 构建的 Elasticsearch 是领先的开源搜索引擎。然而，它在现代 AI 应用程序中面临挑战，包括高更新成本、较差的实时性能、低效的分片管理、非云原生设计以及过度的资源需求。作为云原生向量数据库，Zilliz Cloud 通过解耦的存储和计算、高维数据的高效索引以及与现代基础设施的无缝集成克服了这些问题，并为 AI 工作负载提供了卓越的性能和可扩展性。 | Cloud"
 type: origin
 token: QOwXwYCBMiR8pQkHDcKcL3z3nDh
-sidebar_position: 12
+sidebar_position: 13
 keywords: 
   - 向量数据库
   - zilliz
@@ -536,7 +536,6 @@ search_params_sparse = {
     "anns_field": "text_sparse",
     "param": {
         "metric_type": "BM25",
-        "params": {"drop_ratio_search": 0.2}
     }
 }
 
@@ -554,7 +553,7 @@ res = client.hybrid_search(
 
 1. **稠密向量检索（Dense vector search）**：在`vector`字段上使用内积（IP）度量，以执行近似最近邻（ANN）检索。
 
-1. **稀疏向量检索（Sparse vector search）**：在 `text_sparse` 字段上使用 BM25 相似度度量，并将 `drop_ratio_search` 参数设置为 0.2。
+1. **稀疏向量检索（Sparse vector search）**：在 `text_sparse` 字段上使用 BM25 相似度度量。
 
 这些检索的结果被分别执行后，通过倒数排序融合（RRF）排序器进行组合和重排。混合检索返回重排列表中的前 10 个 Entity。  
 

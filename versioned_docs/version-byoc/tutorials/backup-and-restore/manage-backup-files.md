@@ -106,7 +106,7 @@ import Supademo from '@site/src/components/Supademo';
       "data": {
         "clusterId": "in01-3e5ad8adc38xxxx",
         "clusterName": "Dedicated-01",
-        "regionId": "ali-cn-hangzhou
+        "regionId": "ali-cn-hangzhou",
         "projectId": "proj-20e13e974c7d659a83xxxx",
         "backupId": "backup1_0b9d15a0ddexxxx",
         "backupName": "Dedicated-01_backup3",

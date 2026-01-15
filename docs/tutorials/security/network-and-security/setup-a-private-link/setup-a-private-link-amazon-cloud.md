@@ -24,17 +24,13 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Procedures from '@site/src/components/Procedures';
+
 # 创建亚马逊云科技 PrivateLink
 
 本小节主要介绍如何在您的亚马逊云科技 VPC 终端节点和您托管在亚马逊云科技云上的 Zilliz Cloud 集群之间建立私网连接（PrivateLink）。
 
-<Admonition type="info" icon="📘" title="说明">
-
-<p>此功能仅限 <strong>Dedicated</strong> 集群使用。</p>
-
-</Admonition>
-
-您需要在项目层级创建 Private Link。创建完成后，Private Link 将适用于项目下所有与 Private Link 云服务提供商和地域相同的集群。
+您需要在 Zilliz Cloud 项目中创建 Private Endpoint。创建完成后，Private Endpoint 将适用于项目下所有与 Private Endpoint 云服务提供商和地域相同的集群。
 
 <Admonition type="info" icon="📘" title="提示">
 
@@ -68,11 +64,13 @@ import Admonition from '@theme/Admonition';
 
 ![zh-create-private-link](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/zh-create-private-link.png "zh-create-private-link")
 
-### 选择云服务提供商和地域\{#select-cloud-provider-and-region}
+### 步骤 1：选择云服务提供商和地域\{#select-cloud-provider-and-region}
 
 在云服务提供商下拉菜单中选择亚马逊云科技。在地域下拉菜单中选择与您目标集群相同的地域。
 
-### 创建 Endpoint\{#create-endpoint}
+### 步骤 2：创建 Endpoint\{#create-endpoint}
+
+<Procedures>
 
 1. 复制 Zilliz Cloud 界面上展示的**服务名称**。
 
@@ -96,7 +94,9 @@ import Admonition from '@theme/Admonition';
 
     ![vpc-id](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/vpc-id.png "vpc-id")
 
-### 授权终端节点\{#authorize-endpoint}
+</Procedures>
+
+### 步骤 3：授权终端节点\{#authorize-endpoint}
 
 返回 Zilliz Cloud 界面，输入**终端节点 ID** 并点击创建。
 
@@ -106,19 +106,21 @@ import Admonition from '@theme/Admonition';
 
 ![MxnvbNInBoM8a3xwHImcjwUInBj](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/MxnvbNInBoM8a3xwHImcjwUInBj.png)
 
-## 获取 Private Link\{#obtain-a-private-link}
+## 获取 Private Endpoint\{#obtain-a-private-link}
 
 在您创建 Zilliz Cloud VPC 终端节点后，Zilliz Cloud 会进行验证。验证通过后，Zilliz Cloud 会为该终端节点分配一个私网连接。您可以前往**集群详情**页查看该私网连接。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>该 PrivateLink 适用于该项目下所有部署于该云服务和地域的 Dedicated 集群。如果在创建 PrivateLink 时，该项目下部分 Dedicated 集群正处于维护中或扩缩容过程中，在维护和扩缩容完成后，该 PrivateLink 会自动适用于这些 Dedicated 集群。</p>
+<p>该 Private Endpoint 适用于该项目下所有部署于该云服务和地域的 Dedicated 集群。如果在创建 Private Endpoint 时，该项目下部分 Dedicated 集群正处于维护中或扩缩容过程中，在维护和扩缩容完成后，该 Private Endpoint 会自动适用于这些 Dedicated 集群。</p>
 
 </Admonition>
 
 ## 设置 DNS 服务\{#set-up-a-dns-record}
 
 在通过 Zilliz Cloud 分配的私网连接访问集群之前，您必须在您的 DNS 区域中创建一个 CNAME 记录，以将私网连接解析为您的 VPC 终端节点的 DNS 名称。
+
+<Procedures>
 
 1. **使用 Amazon Route 53 创建一个托管区域**
 
@@ -173,6 +175,8 @@ import Admonition from '@theme/Admonition';
 
     1. 点击创建记录。
 
+</Procedures>
+
 ## 后续操作\{#next-steps}
 
 在完成私网连接创建和 DNS 设置后，可按照集群详情页面右上角的连接指南使用私网连接进行连通性验证。
@@ -183,6 +187,8 @@ import Admonition from '@theme/Admonition';
 
 如需关闭公共 Endpoint，请按以下步骤操作：
 
+<Procedures>
+
 1. 前往目标集群的**集群详情**页面。
 
 1. 找到**连接信息**部分。
@@ -190,6 +196,8 @@ import Admonition from '@theme/Admonition';
 1. 点击集群公共 Endpoint 旁边的**设置图标**。
 
 1. 阅读弹窗信息，然后点击**关闭**。
+
+</Procedures>
 
 <Admonition type="info" icon="📘" title="说明">
 

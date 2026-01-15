@@ -1,9 +1,43 @@
 {
   "added": [
-    "https://docs.zilliz.com.cn/docs/byoc/home"
+    "https://docs.zilliz.com.cn/docs/byoc/bm25-function",
+    "https://docs.zilliz.com.cn/docs/byoc/cron-expression",
+    "https://docs.zilliz.com.cn/docs/byoc/function-and-model-inference",
+    "https://docs.zilliz.com.cn/docs/byoc/function-and-model-inference-overview",
+    "https://docs.zilliz.com.cn/docs/byoc/hybrid-search-rankers",
+    "https://docs.zilliz.com.cn/docs/byoc/hybrid-search-rankers",
+    "https://docs.zilliz.com.cn/docs/byoc/integrate-with-model-providers",
+    "https://docs.zilliz.com.cn/docs/byoc/model-based-functions",
+    "https://docs.zilliz.com.cn/docs/byoc/model-ranker",
+    "https://docs.zilliz.com.cn/docs/byoc/model-ranker",
+    "https://docs.zilliz.com.cn/docs/byoc/rule-based-rankers",
+    "https://docs.zilliz.com.cn/docs/byoc/rule-based-rankers",
+    "https://docs.zilliz.com.cn/docs/byoc/scale-query-cu",
+    "https://docs.zilliz.com.cn/docs/byoc/siliconflow",
+    "https://docs.zilliz.com.cn/docs/byoc/siliconflow-model-ranker",
+    "https://docs.zilliz.com.cn/docs/byoc/siliconflow-model-ranker",
+    "https://docs.zilliz.com.cn/docs/byoc/text-highlighter",
+    "https://docs.zilliz.com.cn/docs/byoc/use-timestamptz-field",
+    "https://docs.zilliz.com.cn/docs/bm25-function",
+    "https://docs.zilliz.com.cn/docs/cron-expression",
+    "https://docs.zilliz.com.cn/docs/function-and-model-inference",
+    "https://docs.zilliz.com.cn/docs/function-and-model-inference-overview",
+    "https://docs.zilliz.com.cn/docs/hybrid-search-rankers",
+    "https://docs.zilliz.com.cn/docs/hybrid-search-rankers",
+    "https://docs.zilliz.com.cn/docs/integrate-with-model-providers",
+    "https://docs.zilliz.com.cn/docs/model-based-functions",
+    "https://docs.zilliz.com.cn/docs/model-ranker",
+    "https://docs.zilliz.com.cn/docs/model-ranker",
+    "https://docs.zilliz.com.cn/docs/release-notes-2601",
+    "https://docs.zilliz.com.cn/docs/rule-based-rankers",
+    "https://docs.zilliz.com.cn/docs/rule-based-rankers",
+    "https://docs.zilliz.com.cn/docs/scale-query-cu",
+    "https://docs.zilliz.com.cn/docs/siliconflow",
+    "https://docs.zilliz.com.cn/docs/siliconflow-model-ranker",
+    "https://docs.zilliz.com.cn/docs/siliconflow-model-ranker",
+    "https://docs.zilliz.com.cn/docs/text-highlighter",
+    "https://docs.zilliz.com.cn/docs/use-timestamptz-field"
   ],
   "deleted": [],
-  "brokenLinks": [
-    "https://help.aliyun.com/document_detail/53045.html?spm=a2c4g.53045.0.0.718a7f80sYRRJB"
-  ]
+  "brokenLinks": []
 }

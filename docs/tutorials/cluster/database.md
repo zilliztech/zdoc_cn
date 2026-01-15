@@ -10,7 +10,7 @@ notebook: FALSE
 description: "Zilliz Cloud 在集群和 Collection 之间引入了一层 Database，可帮助您更高效地组织和管理数据，同时满足您的多租需求。 | Cloud"
 type: origin
 token: VhSHwx56YiKY8VkRCHZcXspznbh
-sidebar_position: 7
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz

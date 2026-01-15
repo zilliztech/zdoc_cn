@@ -10,7 +10,7 @@ notebook: FALSE
 description: "Partition Key 是一种基于 Partition 的搜索优化方案。通过指定某个标量字段为 Partition Key 并在搜索时指定基于 Partition Key 的过滤条件表达式将搜索范围缩小到若干 Partition 中，从而提高搜索效率。本文将介绍如何使用 Partition key 及相关注意事项。 | BYOC"
 type: origin
 token: QT2Vw3FvJiuwzBkeZvicRBlsnae
-sidebar_position: 14
+sidebar_position: 15
 keywords: 
   - 向量数据库
   - zilliz
@@ -190,14 +190,24 @@ const client = new MilvusClient({address, token});
 // 3. Create a collection in customized setup mode
 // 3.1 Define fields
 const fields = [
-    {
-        name: "my_varchar",
-        data_type: DataType.VarChar,
-        max_length: 512,
-        // highlight-next-line
-        is_partition_key: true
-    }
-]
+  {
+    name: 'id',
+    data_type: DataType.Int64,
+    is_primary_key: true,
+  },
+  {
+    name: 'vector',
+    data_type: DataType.FloatVector,
+    dim: 5,
+  },
+  {
+    name: 'my_varchar',
+    data_type: DataType.VarChar,
+    max_length: 512,
+    // highlight-next-line
+    is_partition_key: true,
+  },
+];
 ```
 
 </TabItem>

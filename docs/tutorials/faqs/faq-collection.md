@@ -26,6 +26,7 @@ sidebar_position: 3
 - [1 个 Collection 中最多可以添加多少个字段？](#is-there-any-limit-to-the-number-of-fields-i-can-add-in-a-collection)
 - [我可以修改 Collection 的 Shard 数量吗？](#can-i-modify-the-number-of-shards-in-a-collection)
 - [Partition 的命名是否有规则限制？](#is-there-any-rules-for-partition-names)
+- [是否可以为不同的模型提供方配置自定义参数？](#can-i-configure-custom-parameters-for-different-model-providers)
 
 ## 问答
 
@@ -133,3 +134,9 @@ collection.set_properties(properties={"collection.ttl.seconds": 1800})
 ### Partition 的命名是否有规则限制？ \{#is-there-any-rules-for-partition-names}
 
 是。Partition 名称只能包含字母、数字、下划线（“_”）和连字符（“-”），且不能以连数字或连字符开头。
+
+### 是否可以为不同的模型提供方配置自定义参数？ \{#can-i-configure-custom-parameters-for-different-model-providers}
+
+可以。不同的模型提供方都支持配置自定义参数。请参考各模型提供方的官方文档，查看其支持的完整参数列表：
+
+- [Siliconflow](https://docs.siliconflow.cn/cn/api-reference/embeddings/create-embeddings)

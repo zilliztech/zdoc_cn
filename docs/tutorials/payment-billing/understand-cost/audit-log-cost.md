@@ -39,7 +39,7 @@ import Admonition from '@theme/Admonition';
 ## 审计日志 CU 费用\{#audit-log-cu-cost}
 
 ```plaintext
-审计日志 CU 费用 = 审计日志 CU 单价 × Quey CU 总数 × 审计日志运行时长
+审计日志 CU 费用 = 审计日志 CU 单价 × Query CU 总数 × 审计日志运行时长
 ```
 
 - **审计日志 CU 单价**：由集群地域和项目版本决定。详见 [Zilliz Cloud 定价指南](https://zilliz.com.cn/pricing/pricing-guide)。

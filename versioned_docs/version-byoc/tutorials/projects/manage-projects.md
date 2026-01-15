@@ -138,5 +138,5 @@ import Admonition from '@theme/Admonition';
 
 您可以通过 Web 控制台删除项目。
 
-undefined
+![delete-project-zh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/delete-project-zh.png "delete-project-zh")
 

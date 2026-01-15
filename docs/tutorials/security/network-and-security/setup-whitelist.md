@@ -23,6 +23,8 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Procedures from '@site/src/components/Procedures';
+
 # 设置集群 IP 白名单
 
 在 Zilliz Cloud 中，白名单是项目级别的安全设置，适用于项目下的所有集群。设置后，仅白名单中的 IP 地址可以访问您项目下的所有集群。白名单能够有效降低受到恶意攻击的风险
@@ -40,6 +42,8 @@ import Admonition from '@theme/Admonition';
 - 您是组织或项目管理员。更多用户角色和权限详情，请阅读[访问控制概览](./access-control-overview)。
 
 ## 操作步骤\{#procedure}
+
+<Procedures>
 
 1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)。
 
@@ -67,6 +71,8 @@ import Admonition from '@theme/Admonition';
     </table>
 
 1. 点击 **添加** 完成操作。
+
+</Procedures>
 
 <Admonition type="info" icon="📘" title="说明">
 

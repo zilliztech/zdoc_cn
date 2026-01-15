@@ -25,6 +25,8 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Procedures from '@site/src/components/Procedures';
+
 # 使用回收站
 
 Zilliz Cloud 回收站会在您手动删除或因试用结束等原因而自动删除的所有 Serverless 和 Dedicated 集群，并提供 30 天的宽限期，以便您恢复这些集群。
@@ -34,6 +36,8 @@ Zilliz Cloud 回收站会在您手动删除或因试用结束等原因而自动�
 如需还原回收站中集群，请先添加[支付方式](/docs/payment-billing)。
 
 ## 恢复回收站中的按量计费集群\{#restore-a-dropped-usage-based-cluster-in-the-recycle-bin}
+
+<Procedures>
 
 1. 进入已删除集群所属的组织。
 
@@ -48,6 +52,8 @@ Zilliz Cloud 回收站会在您手动删除或因试用结束等原因而自动�
     1. 您可以修改集群名称和 Query CU 规格。
 
 1. 点击**恢复**。Zilliz Cloud 将开始根据您在上一步骤中的配置创建新集群，并将你的数据恢复到集群中。
+
+</Procedures>
 
 <Admonition type="info" icon="📘" title="说明">
 

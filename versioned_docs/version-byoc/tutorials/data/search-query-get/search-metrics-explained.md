@@ -10,7 +10,7 @@ notebook: FALSE
 description: "在度量向量相似性时，相似度类型发挥着关键作用。选择恰当的相似度类型可以极大地提升分类与聚类的效果。 | BYOC"
 type: origin
 token: U7tHwmHPCikQxWkzoSzcr8Lunmf
-sidebar_position: 18
+sidebar_position: 19
 keywords: 
   - 向量数据库
   - zilliz
@@ -70,7 +70,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p><code>BINARY_VECTOR</code></p></td>
-     <td><p>8-32,768*8</p></td>
+     <td><p>8-32,768&ast;8</p></td>
      <td><p><code>HAMMING</code>, <code>JACCARD</code></p></td>
      <td><p><code>HAMMING</code></p></td>
    </tr>

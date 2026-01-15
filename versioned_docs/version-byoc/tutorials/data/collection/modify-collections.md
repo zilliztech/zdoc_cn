@@ -177,6 +177,14 @@ curl --request POST \
      <td><p><code>partitionkey.isolation</code></p></td>
      <td><p>在开启 Partition Key 之后，Zilliz Cloud 会根据 Partition Key 的取值对 Collection 内的 Entity 进行分组并为每个组创建单独的索引。在收到搜索请求后，Zilliz Cloud 会根据搜索请求中的过滤条件里指定的 Partition Key 值定位到相应的索引，并将搜索范围限定在该索引对应的 Entity 中，从而避免在搜索过程中扫描与当前搜索请求不相关的 Entity，提升搜索效率。</p><p>更多内容，可以参考<a href="./use-partition-key#use-partition-key-isolation">使用 Partition Key Isolation</a>。</p></td>
    </tr>
+   <tr>
+     <td><p><code>dynamicfield.enabled</code></p></td>
+     <td><p>为在创建时未启用 Dynamic Field 的 Collection 启用该功能。启用后，您可以插入包含原始 Schema 中未定义字段的 Entity。详情请参阅 <a href="./enable-dynamic-field">Dynamic Field</a>。</p></td>
+   </tr>
+   <tr>
+     <td><p><code>allow_insert_auto_id</code></p></td>
+     <td><p>用于控制在 Collection 已启用 Auto ID 时，是否允许该 Collection 接受用户提供的主键值。</p><ul><li><p>设置为 “<strong>true</strong>”：insert、upsert 和 bulk insert 在用户提供主键值时使用该值；否则自动生成主键值。</p></li><li><p>设置为 “<strong>false</strong>”：拒绝或忽略用户提供的主键值，主键值始终自动生成。默认值为 “<strong>false</strong>”。</p></li></ul></td>
+   </tr>
 </table>
 
 ### 示例 1：设置 Collection TTL\{#example-1-set-collection-ttl}
@@ -200,19 +208,15 @@ client.alter_collection_properties(
 <TabItem value='java'>
 
 ```java
-import io.milvus.v2.service.collection.request.AlterCollectionReq;
-import java.util.HashMap;
-import java.util.Map;
+import io.milvus.param.Constant;
+import io.milvus.v2.service.collection.request.AlterCollectionPropertiesReq;
 
-Map<String, String> properties = new HashMap<>();
-properties.put("collection.ttl.seconds", "60");
-
-AlterCollectionReq alterCollectionReq = AlterCollectionReq.builder()
+AlterCollectionPropertiesReq alterCollectionReq = AlterCollectionPropertiesReq.builder()
         .collectionName("my_collection")
-        .properties(properties)
+        .property(Constant.TTL_SECONDS, "60")
         .build();
 
-client.alterCollection(alterCollectionReq);
+client.alterCollectionProperties(alterCollectionReq);
 ```
 
 </TabItem>
@@ -253,7 +257,7 @@ curl --request POST \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
 -d '{
-    "collectionName": "test_collection",
+    "collectionName": "my_collection",
     "properties": {
         "collection.ttl.seconds": 60
     }
@@ -284,15 +288,12 @@ client.alter_collection_properties(
 <TabItem value='java'>
 
 ```java
-Map<String, String> properties = new HashMap<>();
-properties.put("mmap.enabled", "True");
-
-AlterCollectionReq alterCollectionReq = AlterCollectionReq.builder()
+AlterCollectionPropertiesReq alterCollectionReq = AlterCollectionPropertiesReq.builder()
         .collectionName("my_collection")
-        .properties(properties)
+        .property(Constant.MMAP_ENABLED, "True")
         .build();
 
-client.alterCollection(alterCollectionReq);
+client.alterCollectionProperties(alterCollectionReq);
 ```
 
 </TabItem>
@@ -360,15 +361,12 @@ client.alter_collection_properties(
 <TabItem value='java'>
 
 ```java
-Map<String, String> properties = new HashMap<>();
-properties.put("partitionkey.isolation", "True");
-
-AlterCollectionReq alterCollectionReq = AlterCollectionReq.builder()
+AlterCollectionPropertiesReq alterCollectionReq = AlterCollectionPropertiesReq.builder()
         .collectionName("my_collection")
-        .properties(properties)
+        .property("partitionkey.isolation", "True")
         .build();
 
-client.alterCollection(alterCollectionReq);
+client.alterCollectionProperties(alterCollectionReq);
 ```
 
 </TabItem>
@@ -437,15 +435,12 @@ client.alter_collection_properties(
 <TabItem value='java'>
 
 ```java
-Map<String, String> properties = new HashMap<>();
-properties.put("dynamicfield.enabled", "True");
-
-AlterCollectionReq alterCollectionReq = AlterCollectionReq.builder()
+AlterCollectionPropertiesReq alterCollectionReq = AlterCollectionPropertiesReq.builder()
         .collectionName("my_collection")
-        .properties(properties)
+        .property("dynamicfield.enabled", "True")
         .build();
 
-client.alterCollection(alterCollectionReq);
+client.alterCollectionProperties(alterCollectionReq);
 ```
 
 </TabItem>
@@ -486,6 +481,82 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/alter_properties" \
     "collectionName": "my_collection",
     "properties": {
       "dynamicfield.enabled": "true"
+    }
+  }'
+```
+
+</TabItem>
+</Tabs>
+
+### 示例 5：开启 allow_insert_auto_id
+
+`allow_insert_auto_id` 属性允许在启用 AutoID 的 Collection 中，在执行 insert、upsert 和 bulk import 操作时接收用户提供的主键值。当该属性设置为 **"true"** 时，Zilliz Cloud 会在检测到用户提供主键值时使用该值；若未提供，则自动生成主键值。默认值为 **"false"**。
+
+以下示例展示了如何启用 `allow_insert_auto_id` 属性：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+client.alter_collection_properties(
+    collection_name="my_collection",
+    # highlight-next-line
+    properties={"allow_insert_auto_id": "true"}
+)
+# After enabling, inserts with a PK column will use that PK; otherwise Zilliz Cloud auto-generates.
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+AlterCollectionPropertiesReq alterCollectionReq = AlterCollectionPropertiesReq.builder()
+        .collectionName("my_collection")
+        .property("allow_insert_auto_id", "True")
+        .build();
+
+client.alterCollectionProperties(alterCollectionReq);
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+await client.alterCollectionProperties({
+    collection_name: "my_collection",
+    properties: {
+        "allow_insert_auto_id": true
+    }
+});
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+err = client.AlterCollectionProperties(ctx, milvusclient.NewAlterCollectionPropertiesOption("my_collection").WithProperty(common.AllowInsertAutoIDKey, true))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/alter_properties" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <token>" \
+  -d '{
+    "collectionName": "my_collection",
+    "properties": {
+      "allow_insert_auto_id": "true"
     }
   }'
 ```

@@ -31,12 +31,6 @@ import Supademo from '@site/src/components/Supademo';
 
 本文将介绍如何查看、重命名和删除已有的备份文件。
 
-<Admonition type="info" icon="📘" title="说明">
-
-<p>此功能仅限 <strong>Dedicated</strong> 集群使用。</p>
-
-</Admonition>
-
 ## 限制说明\{#limits}
 
 - **访问控制**：仅项目管理员、组织管理员或拥有备份权限的自定义角色可执行备份操作。
@@ -112,7 +106,7 @@ import Supademo from '@site/src/components/Supademo';
       "data": {
         "clusterId": "in01-3e5ad8adc38xxxx",
         "clusterName": "Dedicated-01",
-        "regionId": "ali-cn-hangzhou
+        "regionId": "ali-cn-hangzhou",
         "projectId": "proj-20e13e974c7d659a83xxxx",
         "backupId": "backup1_0b9d15a0ddexxxx",
         "backupName": "Dedicated-01_backup3",

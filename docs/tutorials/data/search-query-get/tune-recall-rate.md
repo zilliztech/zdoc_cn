@@ -29,6 +29,12 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 引入了一个名为 `level` 的搜索参数，允许用户通过调整该参数来平衡召回率和搜索性能。同时，Zilliz Cloud 还允许用户设置 `enable_recall_calculation` 参数来决定是否在搜索结果中包含预估召回率信息。您可以配合使用这两个参数来对向量搜索结果进行调优。
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>召回调优适用于所有搜索类型，包括基本 Vector Search、Filtered Search、Range Search、Grouping Search、多向量混合搜索以及 Search Iterator。</p>
+
+</Admonition>
+
 ## 概述
 
 Zilliz Cloud 向量搜索中的召回率通常是指成功召回的相关结果数量占所有相关结果数量的比值。该指标通常用来衡量集群准确召回相关结果的能力。

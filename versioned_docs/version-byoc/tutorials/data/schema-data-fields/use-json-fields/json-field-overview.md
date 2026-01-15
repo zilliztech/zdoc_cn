@@ -81,7 +81,7 @@ JSON 字段是 Zilliz Cloud 中一种通过模式定义的数据类型（`DataTy
    <tr>
      <td><p><strong>模式定义</strong></p></td>
      <td><p>必须在集合模式中显式声明为 <strong>DataType.JSON</strong> 类型的标量字段</p></td>
-     <td><p>一个隐藏的 JSON 字段（名称为 <code>#meta</code>），会自动存储未声明的字段</p></td>
+     <td><p>一个隐藏的 JSON 字段（名称为 <code>$meta</code>），会自动存储未声明的字段</p></td>
    </tr>
    <tr>
      <td><p><strong>使用场景</strong></p></td>
@@ -96,7 +96,7 @@ JSON 字段是 Zilliz Cloud 中一种通过模式定义的数据类型（`DataTy
    <tr>
      <td><p><strong>查询方式</strong></p></td>
      <td><p>使用字段名或 JSON 字段中的目标键进行查询：<code>metadata["key"]</code></p></td>
-     <td><p>可直接使用动态字段键 <code>"dynamic_key"</code>，或通过 <code>#meta</code> 引用：<code>#meta["dynamic_key"]</code></p></td>
+     <td><p>可直接使用动态字段键 <code>"dynamic_key"</code>，或通过 <code>$meta</code> 引用：<code>$meta["dynamic_key"]</code></p></td>
    </tr>
 </table>
 

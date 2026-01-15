@@ -24,6 +24,8 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Procedures from '@site/src/components/Procedures';
+
 # 管理告警渠道
 
 Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件。通常情况下，告警通知会发送到您指定的电子邮件地址。此外，您也可以通过自定义 webhook 通知渠道，实现更加无缝和事件驱动的告警通知。本指南将介绍如何管理告警渠道。
@@ -42,6 +44,8 @@ Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件�
 
 要设置电子邮件通知，请按以下步骤操作：
 
+<Procedures>
+
 1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/signup)，进入组织或项目告警页面的**告警设置**选项卡。
 
 1. 要修改现有的告警配置，找到目标告警，从右侧的**操作**列中选择**编辑**。如果要创建新的告警配置，点击页面右上角的 **+ 告警**按钮。
@@ -56,11 +60,15 @@ Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件�
 
 1. 在**告警恢复通知**和**开启告警**中，可以配置告警解决后或告警触发后需要执行的动作。
 
+</Procedures>
+
 有关更多告警配置信息，请参阅[管理组织告警](./manage-organization-alerts)或[管理项目告警](./manage-project-alerts)。
 
 ### 企业微信\{#wecom}
 
 要设置企业微信告警通知，请按以下步骤操作：
+
+<Procedures>
 
 1. 在企业微信群中，创建群机器人。具体操作步骤，请参阅[群机器人添加入口](https://open.work.weixin.qq.com/help2/pc/14931?person_id=1&searchData=#%E4%BA%8C%E3%80%81%E7%BE%A4%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%B7%BB%E5%8A%A0%E5%85%A5%E5%8F%A3)。
 
@@ -90,11 +98,15 @@ Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件�
 
     1. 在**告警恢复通知**和**开启告警**中，可以配置告警解决后或告警触发后需要执行的动作。
 
+</Procedures>
+
 有关更多告警配置信息，请参阅[管理组织告警](./manage-organization-alerts)或[管理项目告警](./manage-project-alerts)。
 
 ### 短信\{#sms}
 
 要设置短信告警通知，请按以下步骤操作：
+
+<Procedures>
 
 1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/signup)，进入组织或项目告警页面的**告警设置**选项卡。
 
@@ -110,11 +122,15 @@ Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件�
 
 1. 在**告警恢复通知**和**开启告警**中，可以配置告警解决后或告警触发后需要执行的动作。
 
+</Procedures>
+
 有关更多告警配置信息，请参阅[管理组织告警](./manage-organization-alerts)或[管理项目告警](./manage-project-alerts)。
 
 ### 钉钉\{#dingtalk}
 
 要设置钉钉告警通知，请按以下步骤操作：
+
+<Procedures>
 
 1. 在钉钉群中，创建自定义机器人。具体操作步骤，请参阅[自定义机器人接入](https://open.dingtalk.com/document/robots/custom-robot-access)。
 
@@ -149,11 +165,15 @@ Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件�
 
     1. 在**告警恢复通知**和**开启告警**中，可以配置告警解决后或告警触发后需要执行的动作。
 
+</Procedures>
+
 有关更多告警配置信息，请参阅[管理组织告警](./manage-organization-alerts)或[管理项目告警](./manage-project-alerts)。
 
 ### 飞书\{#lark}
 
 要设置飞书告警通知，请按以下步骤操作：
+
+<Procedures>
 
 1. 在飞书群组中，添加自定义机器人，并获取机器人的 webhook URL。具体操作步骤，请参阅[在群组中添加自定义机器人](https://open.feishu.cn/document/client-docs/bot-v3/add-custom-bot#399d949c)。
 
@@ -175,11 +195,15 @@ Zilliz Cloud 的告警通知确保您不会错过集群中的任何重要事件�
 
     1. 在**告警恢复通知**和**开启告警**中，可以配置告警解决后或告警触发后需要执行的动作。
 
+</Procedures>
+
 有关更多告警配置信息，请参阅[管理组织告警](./manage-organization-alerts)或[管理项目告警](./manage-project-alerts)。
 
 ### 自定义 webhook\{#webhook}
 
 Zilliz Cloud 提供的 **Webhook** 选项允许您设置自定义的通知渠道。
+
+<Procedures>
 
 1. 获取自定义服务的 webhook URL。
 
@@ -200,6 +224,8 @@ Zilliz Cloud 提供的 **Webhook** 选项允许您设置自定义的通知渠道
     1. 在文本框中填入前面获取到的自定义服务的 webhook URL。
 
     1. 在**告警恢复通知**和**开启告警**中，可以配置告警解决后或告警触发后需要执行的动作。
+
+</Procedures>
 
 有关更多告警配置信息，请参阅[管理组织告警](./manage-organization-alerts)或[管理项目告警](./manage-project-alerts)。
 

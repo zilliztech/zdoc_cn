@@ -140,6 +140,12 @@ curl --request POST \
     }'
 ```
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>如果文件夹路径下包含多种格式文件，请求会失败。</p>
+
+</Admonition>
+
 ## 存储路径\{#storage-paths}
 
 Zilliz Cloud 支持从您的云存储中导入数据。下表罗列了 Zilliz Cloud 支持的数据文件路径格式。

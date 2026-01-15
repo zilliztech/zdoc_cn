@@ -184,7 +184,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>Dedicated</p></td>
-     <td><p>CU 规格 * Replica 数量 &lt;=256</p></td>
+     <td><p>CU 规格 &ast; Replica 数量 &lt;=256</p></td>
      <td><p>在自助操作时，单个集群最多使用 256 个 CU。如果创建了 Replica，CU 规格与 Replica 数量的乘积不得超过 256。</p></td>
    </tr>
 </table>
@@ -261,7 +261,7 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
      <td><p>每个集群最多可添加 10 个 Replica。</p></td>
    </tr>
    <tr>
-     <td><p>Replica 数量 * CU 规格</p></td>
+     <td><p>Replica 数量 &ast; CU 规格</p></td>
      <td><p>&lt;= 256</p></td>
      <td><p>CU 规格与 Replica 数量的乘积不得超过 256。</p></td>
    </tr>
@@ -292,7 +292,7 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
    </tr>
    <tr>
      <td><p>向量字段（每个 Collection）</p></td>
-     <td><ul><li><p>Free &amp; Serverless：4</p></li><li><p>Dedicated：10</p></li></ul></td>
+     <td><ul><li><p>Free & Serverless：4</p></li><li><p>Dedicated：10</p></li></ul></td>
    </tr>
 </table>
 
@@ -376,11 +376,11 @@ Shard 的数量上限取决于集群部署方式和 CU 规格。
    </tr>
    <tr>
      <td><p>Free 版集群</p></td>
-     <td><p>2 MB</p></td>
+     <td><p>2 MB/s</p></td>
    </tr>
    <tr>
      <td><p>Serverless 版集群</p></td>
-     <td><p>s</p></td>
+     <td><p>10 MB/s</p></td>
    </tr>
    <tr>
      <td><p>Dedicated 版集群 1-2 CU</p></td>

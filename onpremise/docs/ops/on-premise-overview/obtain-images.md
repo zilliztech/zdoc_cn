@@ -47,7 +47,7 @@ Milvus 商业版镜像由 Zilliz 提供。您可通过用户名/密码鉴权的�
 
     ```bash
     # add-command-output
-    docker login harbor.zilliz.com.cn
+    docker login harbor.zilliz.com
     
     # output-start
     Username: username

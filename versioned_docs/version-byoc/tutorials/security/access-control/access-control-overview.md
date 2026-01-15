@@ -26,6 +26,8 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Procedures from '@site/src/components/Procedures';
+
 # 访问控制概览
 
 Zilliz Cloud 采用基于角色的访问控制（RBAC）来实现精细化的资源访问控制。RBAC 是一种安全措施，它将权限授予角色而不是直接授予用户。这些角色包含对资源的特定权限，然后将这些角色授予用户，从而实现用户访问控制的高效管理。
@@ -84,6 +86,8 @@ Zilliz Cloud 将资源分布在控制面（Control Plane）和数据面（Data P
 
 ![CXKvwad3shWWz9bwczCcwtqvnAg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/CXKvwad3shWWz9bwczCcwtqvnAg.png)
 
+<Procedures>
+
 1. **创建用户**：除了 Zilliz Cloud 中的默认用户 `db_admin` 外，您还可以通过 [Web 控制台](./cluster-users)或 [SDK](./cluster-users-sdk) 创建新用户，并设置密码以保障数据安全。
 
 1. **创建角色**：您可以通过 [Web 控制台](./cluster-roles)或 [SDK](./cluster-roles-sdk) 创建自定义角色。角色的具体能力由其所拥有的权限决定。
@@ -93,4 +97,6 @@ Zilliz Cloud 将资源分布在控制面（Control Plane）和数据面（Data P
 1. **为角色授予权限或权限组**：通过向角色授予权限或权限组来定义其能力。目前，您只能在 [Web 控制台](./cluster-roles#create-a custom-cluster-role)上为角色授予内置权限组。如需为角色授予特定权限或自定义权限组，请[提交工单](http://support.zilliz.com.cn/)并使用 [SDK](./cluster-roles-sdk#grant-a-built-in-privilege-group-to-a-role) 实现。
 
 1. **为用户授予角色**：将包含特定权限的角色授予用户，使用户具备相应的角色权限。单个角色可同时授予多个用户。您可以通过[ Web 控制台](./cluster-users#edit-the-role-of-a-cluster-user)或 [SDK](./cluster-users-sdk#grant-a-role-to-a-user) 完成此操作。
+
+</Procedures>
 

@@ -24,6 +24,8 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Procedures from '@site/src/components/Procedures';
+
 # 订阅亚马逊云科技 Marketplace
 
 Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如何在亚马逊云科技 Marketplace上订阅 Zilliz Cloud。
@@ -39,6 +41,8 @@ Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如�
 - 您已注册并登录您的亚马逊云科技帐号。
 
 ## 操作步骤\{#procedures}
+
+<Procedures>
 
 1. 前往[亚马逊云科技 Marketplace ](https://awsmarketplace.amazonaws.cn/marketplace/pp/prodview-qu54xpewqak6c?sr=0-1&ref_=beagle&applicationId=AWS-Marketplace-Console)开通 Zilliz Cloud 服务。
 
@@ -72,7 +76,11 @@ Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如�
 
     ![subscribe-on-amazon-marketplace-cn-complete-on-billing](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/subscribe-on-amazon-marketplace-cn-complete-on-billing.png "subscribe-on-amazon-marketplace-cn-complete-on-billing")
 
+</Procedures>
+
 ## 取消订阅\{#unsubscribe-amazon-marketplace}
+
+<Procedures>
 
 1. 前往亚马逊云科技 Marketplace [管理订阅](https://console.amazonaws.cn/marketplace/home?region=cn-north-1#/subscriptions?Feedback=true)页面。
 
@@ -90,15 +98,21 @@ Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如�
 
 1. 取消订阅后，Zilliz Cloud 将从您的订阅列表中消失。
 
+</Procedures>
+
 ## 切换用于订阅的亚马逊云科技账号\{#update-amazon-marketplace-subscription}
 
 如果您当前使用亚马逊云科技账号 A 在 Marketplace 订阅 Zilliz Cloud，但需要切换为使用亚马逊云科技账号 B 订阅，您可以：
+
+<Procedures>
 
 1. 使用亚马逊云科技账号 A 登录亚马逊云科技，并在亚马逊云科技 Marketplace 中[取消订阅](./subscribe-on-aliyun-marketplace#unsubscribe-alibaba-marketplace) Zilliz Cloud。
 
 1. 取消订阅成功后，登出亚马逊云科技账号 A，并使用亚马逊云科技账号 B 重新登录。
 
 1. 使用亚马逊云科技账号 B 在 Marketplace 中[订阅](./subscribe-on-aliyun-marketplace#procedures) Zilliz Cloud。
+
+</Procedures>
 
 订阅成功后，您可以前往 Zilliz Cloud 的账单页面，查看付款方式。点击亚马逊云科技 Marketplace 右侧的 ID 后可查看用于订阅的亚马逊云科技 Account ID，确认切换订阅账号是否成功。
 

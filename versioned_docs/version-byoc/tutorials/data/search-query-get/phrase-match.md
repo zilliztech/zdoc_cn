@@ -10,7 +10,7 @@ notebook: FALSE
 description: "短语匹配允许您搜索包含查询词为精确短语的文档。默认情况下，这些词必须按相同顺序且彼此直接相邻出现。例如，查询 \"robotics machine learning\" 会匹配类似 \"…typical robotics machine learning models…\" 这样的文本，其中 \"robotics\"、\"machine\" 和 \"learning\" 按顺序出现，中间没有其他词。 | BYOC"
 type: origin
 token: AXhtwvmowicwpskTZCWcNhgOnog
-sidebar_position: 11
+sidebar_position: 12
 keywords: 
   - 向量数据库
   - zilliz
@@ -192,7 +192,6 @@ const schema = {
   ],
 };
 
-await client.createCollection(schema);
 ```
 
 </TabItem>
@@ -619,7 +618,7 @@ PHRASE_MATCH(field_name, phrase, slop)
 <TabItem value='java'>
 
 ```java
-PHRASE_MATCH(field_name, phrase, slop)
+String filter = "PHRASE_MATCH(text, 'machine learning')";
 ```
 
 </TabItem>

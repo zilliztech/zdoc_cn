@@ -23,6 +23,8 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Procedures from '@site/src/components/Procedures';
+
 # 开具发票
 
 在 Zilliz Cloud 进行现金充值或开通阿里云云市场扣费渠道后，您可以申请开具发票。具体开票方式根据您的支付方式有所不同。如果您的支付方式为现金充值，您可以直接通过 Zilliz Cloud 界面开具发票。如果您开通了阿里云云市场扣费渠道，请通过阿里云云市场申请开票。
@@ -56,6 +58,8 @@ Zilliz Cloud 支持按账单和按订单开具发票。
     - 订单中的可开票金额为订单中**订单金额**。
 
 ### 操作步骤\{#procedures}
+
+<Procedures>
 
 1. 选择组织并点击左侧导航栏中的**费用中心**。
 
@@ -120,6 +124,8 @@ Zilliz Cloud 支持按账单和按订单开具发票。
 1. 开票信息填写完毕并确认无误后，点击**申请开票**。
 
 1. 我们预计在 1～3 个工作日后以邮件形式通知您开票结果。如开票成功，您可在 **Zilliz Cloud 开票成功**通知邮件中下载发票。
+
+</Procedures>
 
 <Admonition type="info" icon="📘" title="说明">
 

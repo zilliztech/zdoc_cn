@@ -23,6 +23,8 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Procedures from '@site/src/components/Procedures';
+
 # Terraform Provider
 
 Zilliz 提供完全托管的 Milvus 服务，旨在简化向量搜索应用的部署与扩展，在安全性方面进行了优化设计，无需你自行构建和维护复杂的基础设施——无论是 Zilliz 提供的云环境，还是你自己的本地环境。
@@ -35,6 +37,8 @@ Zilliz Cloud Terraform Provider 是一个开源的基础设施即代码（Infras
 
 要创建 Zilliz Cloud API 密钥，请按照以下步骤操作：
 
+<Procedures>
+
 1. 登录 [Zilliz Cloud 控制台 ](https://cloud.zilliz.com.cn/)。
 
 1. 在顶部导航栏的右侧，点击 **API 密钥**。
@@ -42,6 +46,8 @@ Zilliz Cloud Terraform Provider 是一个开源的基础设施即代码（Infras
 1. 在 **API 密钥** 页面的右上角，点击 **+ API 密钥** 。
 
 1. 在弹出的**创建 API 密钥**对话框中，输入 **API 密钥名称**并配置其访问权限，然后点击**创建**以生成 API 密钥。
+
+</Procedures>
 
 有关管理 API 密钥的更多信息，请参阅[API 密钥](./manage-api-keys)。
 

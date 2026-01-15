@@ -24,6 +24,8 @@ import Admonition from '@theme/Admonition';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+import Procedures from '@site/src/components/Procedures';
+
 # 创建集群
 
 本节介绍如何创建集群。
@@ -39,6 +41,8 @@ import TabItem from '@theme/TabItem';
 <Tabs groupId="cluster" defaultValue="Cloud Console" values={[{"label":"控制台","value":"Cloud Console"},{"label":"cURL","value":"Bash"}]}>
 
 <TabItem value="Cloud Console">
+
+<Procedures>
 
 1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn)。
 
@@ -83,6 +87,8 @@ import TabItem from '@theme/TabItem';
     </Admonition>
 
     接下来，您会看到另一个弹出的窗口，展示当前集群的公共访问端点及访问凭证。请将其保存在安全的位置 。
+
+</Procedures>
 
 </TabItem>
 

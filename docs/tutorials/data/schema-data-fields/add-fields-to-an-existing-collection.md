@@ -43,7 +43,7 @@ Milvus  允许您向现有 Collection 动态地添加新字段，帮助您在业
 
 - 新增字段的名称需要在目标 Collection 中保持唯一。
 
-- 您不可以通过增加名为 `#meta` 的字段来开启 Dynamic Field。只有在创建 Collection 时通过 `enable_dynamic_field=True` 创建的 `#meta` 字段才会被当做 Dynamic Field 使用。
+- 您不可以通过增加名为 `$meta` 的字段来开启 Dynamic Field。只有在创建 Collection 时通过 `enable_dynamic_field=True` 创建的 `$meta` 字段才会被当做 Dynamic Field 使用。
 
 ## 前提条件\{#prerequisites}
 
@@ -421,9 +421,9 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/fields/add" \
 
 ## FAQ\{#faq}
 
-### 我可以通过增加一个名为 `#meta` 的字段来启用 Dynamic Field 吗？\{#can-i-enable-dynamic-schema-functionality-by-adding-a-$meta-field}
+### 我可以通过增加一个名为 `$meta` 的字段来启用 Dynamic Field 吗？\{#can-i-enable-dynamic-schema-functionality-by-adding-a-$meta-field}
 
-不行。您不可以通过增加一个名为 `#meta` 的字段来启用 Dynamic Field 功能。
+不行。您不可以通过增加一个名为 `$meta` 的字段来启用 Dynamic Field 功能。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
@@ -504,7 +504,7 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/fields/add" \
 
 ### 如果我添加的新字段名称与 Dynamic Field 中某个键的名称相同，会发生什么？\{#what-happends-when-i-add-a-field-with-the-same-name-as-a-dynamic-field-key}
 
-当您的 Collection 启用了 Dynamic Field 后，这就意味着该 Collection 中有一个名为 `#meta` 的字段。新增字段的名称可以与 `#meta` 字段中的键名相同。但是在查询时指定该字段名称时，新增字段会生效。但是这并不影响 Dynamic Field 中存放的数据。
+当您的 Collection 启用了 Dynamic Field 后，这就意味着该 Collection 中有一个名为 `$meta` 的字段。新增字段的名称可以与 `$meta` 字段中的键名相同。但是在查询时指定该字段名称时，新增字段会生效。但是这并不影响 Dynamic Field 中存放的数据。
 
 为了避免数据冲突，建议为新增字段命名时充分考虑现有字段及 Dynamic Field 中各键的名称。
 
@@ -693,7 +693,7 @@ curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/insert" \
 
 - 新插入 Entity 在新增字段上的取值的数据类型必须与该字段的数据类型保持一致（`INT64`）。
 
-- Dynamic Field 中原本存在的同名键值对会予以保留，仍可通过 `#meta['extra_info']` 的方式进行访问。
+- Dynamic Field 中原本存在的同名键值对会予以保留，仍可通过 `$meta['extra_info']` 的方式进行访问。
 
 - 在涉及 `extra_info` 字段日常查询时，新增字段的值生效。
 

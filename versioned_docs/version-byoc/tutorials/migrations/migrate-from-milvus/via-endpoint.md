@@ -26,6 +26,8 @@ import Admonition from '@theme/Admonition';
 
 import Supademo from '@site/src/components/Supademo';
 
+import Procedures from '@site/src/components/Procedures';
+
 # 通过 Endpoint 从 Milvus 迁移至 Zilliz Cloud
 
 Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案，适合希望使用 Milvus 向量数据库但不想自己管理基础设施的用户。本文介绍如何通过服务器地址从 Milvus 进行数据迁移。
@@ -115,7 +117,10 @@ Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案�
 
 如果迁移过程遇到任何问题，您可以采取以下步骤进行故障排除并恢复迁移：
 
+<Procedures>
+
 1. 在**任务中心**页面，取消失败的迁移任务。
 
 1. 在**操作**列点击**查看详情**以访问日志信息。
 
+</Procedures>

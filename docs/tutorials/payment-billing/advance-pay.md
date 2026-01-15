@@ -23,6 +23,8 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Procedures from '@site/src/components/Procedures';
+
 # 现金充值（对公转账）
 
 对公转账是指通过银行汇款的方式将资金充值到您的 Zilliz Cloud 组织现金余额中，用于支付使用 Zilliz Cloud 产生的费用。目前，Zilliz Cloud 界面仅支持通过**专属账号**进行汇款。
@@ -42,6 +44,8 @@ import Admonition from '@theme/Admonition';
 ![FLFswkIjJhwod6bsBAYcPMNankb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/FLFswkIjJhwod6bsBAYcPMNankb.png)
 
 ## 操作步骤\{#add-funds}
+
+<Procedures>
 
 1. **获取专属汇款账号：**
 
@@ -78,6 +82,8 @@ import Admonition from '@theme/Admonition';
     如果您的汇款资金未到账，请通过 finance@zilliz.com 联系我们或[提交工单](http://support.zilliz.com.cn)。
 
     ![add_fund_history](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/add_fund_history.png "add_fund_history")
+
+</Procedures>
 
 ## 常见问题
 

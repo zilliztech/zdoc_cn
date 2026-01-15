@@ -35,12 +35,6 @@ Zilliz Cloud 的跨区域备份通过将备份复制到多个云地域来增强�
 
 跨地域备份功能暂不适用于腾讯云。
 
-<Admonition type="info" icon="📘" title="说明">
-
-<p>此功能仅限 <strong>Dedicated</strong> 集群使用。</p>
-
-</Admonition>
-
 ## 限制说明\{#limits}
 
 - **访问控制**：仅项目管理员、组织管理员或拥有备份权限的自定义角色可执行备份操作。
@@ -74,6 +68,51 @@ Zilliz Cloud 的跨区域备份通过将备份复制到多个云地域来增强�
 以下示例介绍如何手动创建跨地域备份。如需了解如何在设置定时自动备份时设置跨地域备份策略，请参考[设置定时自动备份](./schedule-automatic-backups)。
 
 <Supademo id="cmgkgzjgk2e2ukrn9fmfc0zjb?utm_source=link" title=""  />
+
+您也可以使用 Zilliz Cloud RESTful API 在为集群创建同地域备份的同时将该备份同步到指定的其它地域。
+
+```bash
+export TOKEN="YOUR_API_KEY"
+export CLUSTER_ID="inxx-xxxxxxxxxxxxxxx"
+
+curl --request POST \
+--url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/backups/create" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Content-Type: application/json" \
+-d '{
+    "backupType": "COLLECTION",
+    "dbCollections": [
+        {
+            "dbName": "my_database",
+            "collectionNames": [
+                "collection_1",
+                "collection_2"
+            ]
+        }
+    ],
+    "crossRegionCopies": [
+        {
+            "regionId": "ali-cn-hangzhou"
+        },
+        {
+            "regionId": "ali-cn-shanghai"
+        }
+    ]
+}'
+```
+
+接口调用结果如下：
+
+```json
+{
+    "code": 0,
+    "data": {
+        "backupId": "backupx_xxxxxxxxxxxxxxx",
+        "backupName": "Dedicated_01",
+        "jobId": "job-xxxxxxxxxxxxxxxxxxxxxx"
+    }
+}
+```
 
 在[任务中心](./job-center)列表中，您会先看到原始备份任务。任务完成后，会出现跨地域备份的任务，每个地域对应一条任务记录。
 

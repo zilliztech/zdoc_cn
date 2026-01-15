@@ -1,7 +1,7 @@
 ---
 title: "版本说明书（2025/04/24） | Cloud"
 slug: /release-notes-2150
-sidebar_label: "版本说明书（2025/04/24）"
+sidebar_label: "2025/04/24"
 beta: FALSE
 added_since: FALSE
 last_modified: FALSE
@@ -10,7 +10,7 @@ notebook: FALSE
 description: "我们很高兴地宣布，Zilliz Cloud 内测版现已推出在线迁移！无论您需要升级集群还是更改部署配置，例如从容量型 CU 切换到其它类型，您都可以轻松迁移数据，而不会中断任何服务。 | Cloud"
 type: origin
 token: S53KwdOb8i9D3xkawDXcJnDGnZe
-sidebar_position: 7
+sidebar_position: 9
 keywords: 
   - 向量数据库
   - zilliz

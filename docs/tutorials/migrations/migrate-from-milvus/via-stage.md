@@ -25,6 +25,8 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Procedures from '@site/src/components/Procedures';
+
 # 通过备份工具从 Milvus 迁移至 Zilliz Cloud
 
 Zilliz Cloud 提供了一个备份工具，可用于从 Milvus 迁移数据至 Zilliz Cloud。借助备份工具，用户可以更轻松地完成数据迁移，无需过多关注底层细节，从而显著提升迁移效率与易用性。
@@ -46,6 +48,8 @@ Zilliz Cloud 提供了一个备份工具，可用于从 Milvus 迁移数据至 Z
 ## 操作步骤\{#procedure}
 
 在如下步骤中，你将使用 Milvus Backup 准备备份文件、上传备份文件至 Zilliz Cloud、并将备份文件中的数据迁移到指定的 Zilliz Cloud 集群中。
+
+<Procedures>
 
 1. 下载 [milvus-backup](https://github.com/zilliztech/milvus-backup/releases)。推荐下载最新版本。
 
@@ -139,6 +143,8 @@ Zilliz Cloud 提供了一个备份工具，可用于从 Milvus 迁移数据至 Z
 
     </Admonition>
 
+</Procedures>
+
 ## 查看迁移进度\{#monitor-the-migration-process}
 
 生成迁移任务后，您可前往[任务中心](/docs/job-center)查看任务状态和进度。如果迁移任务的状态从**进行中**变更为**成功**，则代表迁移成功。
@@ -163,7 +169,10 @@ Zilliz Cloud 提供了一个备份工具，可用于从 Milvus 迁移数据至 Z
 
 如果迁移过程遇到任何问题，您可以采取以下步骤进行故障排除并恢复迁移：
 
+<Procedures>
+
 1. 在**任务中心**页面，取消失败的迁移任务。
 
 1. 在**操作**列点击**查看详情**以访问日志信息。
 
+</Procedures>
