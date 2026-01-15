@@ -13,10 +13,10 @@ type: docx
 token: EjnFdC5EfoIkoExSBOxcEC2hnbg
 sidebar_position: 3
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -53,7 +53,7 @@ bulkImport.getImportProgress(
     Zilliz Cloud's Control Plane API endpoint. The endpoint URL should be in the following format:
 
     ```python
-    https://api.cloud.zilliz.com.cn
+    https://api.cloud.zilliz.com
     # https://api.cloud.zilliz.com.cn 
     ```
 

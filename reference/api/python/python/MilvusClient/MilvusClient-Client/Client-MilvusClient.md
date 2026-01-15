@@ -13,10 +13,10 @@ type: docx
 token: TUrSdmskuoGdFRxFT75c6xhinzc
 sidebar_position: 2
 keywords: 
-  - what is semantic search
   - Embedding model
   - image similarity search
   - Context Window
+  - Natural language search
   - zilliz
   - zilliz cloud
   - cloud

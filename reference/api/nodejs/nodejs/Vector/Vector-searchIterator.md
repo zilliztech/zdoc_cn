@@ -13,10 +13,10 @@ type: docx
 token: WaAvdBOvCoeLeCxKXtQct12gnGh
 sidebar_position: 11
 keywords: 
-  - cosine distance
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
   - zilliz
   - zilliz cloud
   - cloud
@@ -187,7 +187,7 @@ queryIterator(data): Promise<any>
        </tr>
        <tr>
          <td><p><code>BINARY_VECTOR</code></p></td>
-         <td><p>8-32,768*8</p></td>
+         <td><p>8-32,768&ast;8</p></td>
          <td><p><code>HAMMING</code>, <code>JACCARD</code>, <code>MHJACCARD</code></p></td>
          <td><p><code>HAMMING</code></p></td>
        </tr>

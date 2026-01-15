@@ -13,10 +13,10 @@ type: docx
 token: RFSCdiUYGouQrtx8c1RczPVvnmf
 sidebar_position: 1
 keywords: 
-  - open source vector database
-  - Vector index
-  - vector database open source
-  - open source vector db
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - zilliz
   - zilliz cloud
   - cloud
@@ -59,7 +59,7 @@ bulk_import(
     For example, the endpoint URL should be in the following format:
 
     ```python
-    https://api.cloud.zilliz.com.cn
+    https://api.cloud.zilliz.com
     # https://api.cloud.zilliz.com.cn 
     ```
 

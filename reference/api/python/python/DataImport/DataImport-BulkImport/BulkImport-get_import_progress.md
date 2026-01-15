@@ -13,10 +13,10 @@ type: docx
 token: MkWNdU1tvoqlBRxI05Rcu09cnEc
 sidebar_position: 2
 keywords: 
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
+  - Audio search
+  - what is semantic search
+  - Embedding model
+  - image similarity search
   - zilliz
   - zilliz cloud
   - cloud
@@ -62,7 +62,7 @@ pymilvus.get_import_progress(
     For example, the endpoint URL should be in the following format:
 
     ```python
-    https://api.cloud.zilliz.com.cn
+    https://api.cloud.zilliz.com
     # https://api.cloud.zilliz.com.cn 
     ```
 

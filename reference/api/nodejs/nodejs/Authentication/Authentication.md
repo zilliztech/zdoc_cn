@@ -12,10 +12,10 @@ token: H1JWfZh74lkVhgdfGiKcQfsinPg
 sidebar_position: 1
 sidebar_label: "Authentication"
 keywords: 
-  - Image Search
-  - LLMs
   - Machine Learning
   - RAG
+  - NLP
+  - Neural Network
   - zilliz
   - zilliz cloud
   - cloud

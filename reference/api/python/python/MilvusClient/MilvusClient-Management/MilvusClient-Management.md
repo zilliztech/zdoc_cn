@@ -12,10 +12,10 @@ token: KrK5fBnFDlG6CedvqyHcfZLynre
 sidebar_position: 5
 sidebar_label: "Management"
 keywords: 
+  - milvus
+  - Zilliz
+  - milvus vector database
   - milvus db
-  - milvus vector db
-  - Zilliz Cloud
-  - what is milvus
   - zilliz
   - zilliz cloud
   - cloud

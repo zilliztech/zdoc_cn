@@ -13,10 +13,10 @@ type: docx
 token: C8kgdOn3pozkrtxCBMLcqcSTnTb
 sidebar_position: 8
 keywords: 
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
   - zilliz
   - zilliz cloud
   - cloud
@@ -194,7 +194,7 @@ milvusClient.search({
        </tr>
        <tr>
          <td><p><code>BINARY_VECTOR</code></p></td>
-         <td><p>8-32,768*8</p></td>
+         <td><p>8-32,768&ast;8</p></td>
          <td><p><code>HAMMING</code>, <code>JACCARD</code>, <code>MHJACCARD</code></p></td>
          <td><p><code>HAMMING</code></p></td>
        </tr>

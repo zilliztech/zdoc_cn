@@ -13,10 +13,10 @@ type: docx
 token: UlAUdLNkCo1Mp8xFZYWclSL9n6b
 sidebar_position: 26
 keywords: 
+  - knn
+  - Image Search
+  - LLMs
   - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
   - zilliz
   - zilliz cloud
   - cloud

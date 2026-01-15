@@ -13,10 +13,10 @@ type: docx
 token: BBmsddqZEozxWyxkoADcFfzpncW
 sidebar_position: 2
 keywords: 
+  - lexical search
+  - nearest neighbor search
   - Agentic RAG
   - rag llm architecture
-  - private llms
-  - nn search
   - zilliz
   - zilliz cloud
   - cloud

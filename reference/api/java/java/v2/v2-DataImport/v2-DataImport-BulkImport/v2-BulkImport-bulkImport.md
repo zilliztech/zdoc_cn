@@ -13,10 +13,10 @@ type: docx
 token: S0ITdsnpYoDpH9xKv9fcBhe5nWA
 sidebar_position: 2
 keywords: 
-  - RAG
-  - NLP
-  - Neural Network
-  - Deep Learning
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -53,7 +53,7 @@ bulkImport.bulkImport(
     Zilliz Cloud's Control Plane API endpoint. The endpoint URL should be in the following format:
 
     ```python
-    https://api.cloud.zilliz.com.cn
+    https://api.cloud.zilliz.com
     # https://api.cloud.zilliz.com.cn 
     ```
 

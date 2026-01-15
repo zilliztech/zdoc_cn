@@ -13,10 +13,10 @@ type: docx
 token: HWYXdlaGIoTNVUx34GycfwjAnrb
 sidebar_position: 1
 keywords: 
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud
@@ -83,7 +83,7 @@ volume_manager = VolumeManager(
 
 volume_manager.create_volume(
     project_id="proj-xxxxxxxxxxxxxxxxxxxxxxx", 
-    region_id="ali-cn-hangzhou
+    region_id="ali-cn-hangzhou", 
     volume_name="my_volume"
 )
 

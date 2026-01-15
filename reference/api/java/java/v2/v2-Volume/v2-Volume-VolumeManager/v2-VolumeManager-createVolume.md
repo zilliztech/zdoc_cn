@@ -13,10 +13,10 @@ type: docx
 token: Efi4dCKhFoYpEZxRfWRcvFEXnBg
 sidebar_position: 1
 keywords: 
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
   - zilliz
   - zilliz cloud
   - cloud
@@ -92,7 +92,7 @@ VolumeManager volumeManager = new VolumeManager(volumeManagerParam);
 
 CreateVolumeRequest request = CreateVolumeRequest.builder()
     .projectId("proj-xxxxxxxxxxxxxxxxxxxxxxx")
-    .regionId("ali-cn-hangzhou
+    .regionId("ali-cn-hangzhou")
     .volumeName("my_volume")
     .build();
 

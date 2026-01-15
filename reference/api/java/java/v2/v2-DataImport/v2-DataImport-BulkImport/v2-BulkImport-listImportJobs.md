@@ -13,10 +13,10 @@ type: docx
 token: CN9sdiCicoERZpx9GhmcLa4Wn7g
 sidebar_position: 4
 keywords: 
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
+  - Audio search
+  - what is semantic search
+  - Embedding model
+  - image similarity search
   - zilliz
   - zilliz cloud
   - cloud
@@ -53,7 +53,7 @@ bulkImport.listImportJobs(
     Zilliz Cloud's Control Plane API endpoint. The endpoint URL should be in the following format:
 
     ```python
-    https://api.cloud.zilliz.com.cn
+    https://api.cloud.zilliz.com
     # https://api.cloud.zilliz.com.cn 
     ```
 
