@@ -488,7 +488,7 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/alter_properties" \
 </TabItem>
 </Tabs>
 
-### 示例 5：开启 allow_insert_auto_id
+### 示例 5：开启 allow_insert_auto_id\{#example-5-enable-allow_insert_auto_id}
 
 `allow_insert_auto_id` 属性允许在启用 AutoID 的 Collection 中，在执行 insert、upsert 和 bulk import 操作时接收用户提供的主键值。当该属性设置为 **"true"** 时，Zilliz Cloud 会在检测到用户提供主键值时使用该值；若未提供，则自动生成主键值。默认值为 **"false"**。
 
