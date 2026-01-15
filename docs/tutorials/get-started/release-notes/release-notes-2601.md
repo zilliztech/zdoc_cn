@@ -39,11 +39,9 @@ import Grid from '@site/src/components/Grid';
 
         ## Milvus 2.6 新功能\{#milvus-v2.6.x-new-features}
 
-        - Milvus 现已支持 **TIMESTAMPTZ 数据类型**，您可以将带时区的时间数据存放在该类型的字段中，并针对该字段进行标量过滤。更多内容，可参考 [TIMESTAMPTZ 类型](./use-timestamptz-field)。
+        - **时区感知时间戳**（Time-zone-aware Timestamp Support)  — 支持 `TIMESTAMPTZ` 数据类型，用于存储、比较和过滤全球一致的时间戳，无需手动处理时区问题。更多内容，可参考 [TIMESTAMPTZ 类型](./use-timestamptz-field)。
 
-        - 另外，Milvus 还提供了一个全新的**文本高亮**工具，通过使用可定制的标签在搜索结果标注匹配文本的方式，提升搜索结果的可解释性，同时也可以为 RAG 和全文检索结果提供片段上下文。更多内容，可参考 [Text Highlighter](./text-highlighter)。
-
-        ## Function & 模型推理\{#function-and-model-inference}
+        - **Highlighter** — 通过可自定义的标签和片段级上下文对匹配词进行标注，使全文检索结果更易理解和调试。更多内容，可参考 [Text Highlighter](./text-highlighter)。
 
         ## Replica 动态扩缩容\{#dynamic-replica-autoscaling}
 
@@ -59,13 +57,13 @@ import Grid from '@site/src/components/Grid';
 
         我们已经升级了调度引擎，以编排复杂、可预测的业务周期。现在，您可以使用行业标准的 Cron 表达式自动执行针对 CU 和 Replica 的精确扩缩容策略。
 
-        - **灵活调度策略**：由简单的基于日期的调度升级成使用 Cron 表达式（如 `0 14 * * 5#L`）的精细化调度规则。您可以根据业务诉求自行定制扩缩容策略。
+        - **灵活调度策略**：由简单的基于日期的调度升级成使用 Cron 表达式（如 `0 9 * * * 1-5`）的精细化调度规则。您可以根据业务诉求自行定制扩缩容策略。
 
         - **多级调度逻辑**：您可以为您的集群配置互相独立、分层执行的调度规则，确保您的集群可在工作日流量高峰时获得足够的资源，并在平峰的周末释放冗余资源，从而根据业务实际需要优化集群的资源配置。
 
         更多内容，可参考 [Replica 扩缩容](./manage-replica#scheduled-scaling)和 [Query CU 扩缩容](./scale-query-cu#scheduled-scaling)。
 
-        ## [BYOC] 完整的自动扩缩容能力\{#byoc-full-autoscaling-aligns-with-saas}
+        ## BYOC - 完整的自动扩缩容能力\{#byoc-full-autoscaling-aligns-with-saas}
 
         自本次发布后，BYOC 项目也开始支持完整的自动扩缩容能力。
 
@@ -75,7 +73,7 @@ import Grid from '@site/src/components/Grid';
 
         更多内容，可参考 [Query CU 扩缩容](/docs/byoc/scale-cluster) and [Replica 扩缩容](/docs/byoc/manage-replica)。
 
-        ## [BYOC] 技术支持访问控制\{#support-troubleshooting-access-control}
+        ## BYOC - 技术支持访问控制\{#support-troubleshooting-access-control}
 
         自本次发布后，您可以控制针对 Data Plane 的运维操作访问。确保 Zilliz 工程师只有在获得您的明确许可的情况下才能访问您的基础设施。
 
@@ -89,19 +87,19 @@ import Grid from '@site/src/components/Grid';
 
         - **Collection TTL和 Auto ID设置**：现在您可以直接从集合概述GUI监控和修改集合TTL以及允许插入自动ID设置。有关详细信息，请参阅[设置 Collection 生存时间](./set-collection-ttl)和[修改 Collection](./modify-collections)。
 
-        - **数据导入**：现在支持JSON行格式（.JSONL和.NDJSON扩展名）。有关详细信息，请参阅[从 JSON/JSON Lines 文件中导入](./data-import-json)。
+        - **数据导入**：现在支持 JSON 行格式（.JSONL和.NDJSON扩展名）。有关详细信息，请参阅[从 JSON/JSON Lines 文件中导入](./data-import-json)。
 
         - **从 Milvus Endpoint 迁移**：现在支持 Geometry 和 Struct 数据类型，可实现具有空间形状和深度嵌套属性的集合的无缝迁移。
 
         - **任务详情视图**：侧边抽屉 UI 已刷新，以改善导航并提升用户体验。
 
-        - **BYOC - S3存储桶支持**：现在，您可以使用专用的S3存储桶部署集群，从而提供细粒度的数据隔离和独立的生命周期管理。
+        - **BYOC - S3 存储桶支持**：现在，您可以使用专用的S3存储桶部署集群，从而提供细粒度的数据隔离和独立的生命周期管理。
 
-        - **BYOC - AWS KMS** 集成：已添加用于S3存储桶加密的AWS KMS（CMEK）集成，满足严格的安全合规标准。
+        - **BYOC - AWS KMS** 集成：已添加用于 S3 存储桶加密的 AWS KMS (CMEK**盘增强**：已添加可视化阈值指南，以帮助用户确定扩展计算单元（CUs）集成，满足严格的安全合规标准。
 
         - **指标仪表盘增强**：已添加可视化阈值指南，以帮助用户确定扩展计算单元（CUs）和副本的最佳利用率水平。
 
-        - **RESTful API和Terraform增强功能**：现在支持自动伸缩、跨区域备份、创建集群的分层存储以及创建项目的业务关键计划，提升了灾难恢复和存储管理能力，实现更高效的自动化编程。
+        - **RESTful API 和Terraform增强功能**：现在支持自动伸缩、跨区域备份、创建集群的分层存储以及创建项目的业务关键计划，提升了灾难恢复和存储管理能力，实现更高效的自动化编程。
 
     </div>
 

@@ -1113,3 +1113,25 @@ curl --request POST \
 
 在为混合搜索指定了 `limit=2` 参数的情况下，Zilliz Cloud 将对从三次搜索中获得的六个结果进行重新排序。最终，它们将只返回最相似的前两个结果。
 
+## 高级用法\{#advanced-usage}
+
+### 为混合搜索临时设置时区\{#temporarily-set-a-timezone-for-a-hybrid-search}
+
+如果你的 Collection 包含一个 `TIMESTAMPTZ` 字段，你可以在混合搜索调用中设置 `timezone` 参数，从而在单次操作中临时覆盖数据库或 Collection 的默认时区。该参数会控制在该操作期间 `TIMESTAMPTZ` 值的显示与比较方式。
+
+timezone 的值必须是有效的 **IANA 时区标识符**（例如 Asia/Shanghai、America/Chicago 或 UTC）。
+
+关于如何使用 TIMESTAMPTZ 字段的更多信息，请参考 [TIMESTAMPTZ 类型](./use-timestamptz-field)。
+
+下面的示例展示了如何在一次混合搜索操作中临时指定时区：
+
+```python
+res = client.hybrid_search(
+    collection_name="my_collection",
+    reqs=reqs,
+    ranker=ranker,
+    limit=2,
+    # highlight-next-line
+    timezone="America/Havana",
+)
+```

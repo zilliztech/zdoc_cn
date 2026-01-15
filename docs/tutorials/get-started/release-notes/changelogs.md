@@ -63,8 +63,6 @@ import Grid from '@site/src/components/Grid';
 
             - [Text Highlighter](./text-highlighter)
 
-        - 🤖 基于[模型的 Embedding](./model-based-functions) 和[重排序 Function](./model-ranker) 开始公测。
-
         - 🛠️ [智能动态扩缩容](./scale-query-cu#dynamic-scaling)上线。
 
         - 📅 基于 Cron 表达式的高级[定时扩缩容](./scale-query-cu#scheduled-scaling)上线。

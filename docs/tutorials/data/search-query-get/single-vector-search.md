@@ -1350,6 +1350,64 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
+## 为 Search 临时设置一个时区\{#temporarily-set-a-timezone-for-a-search}
+
+如果你的 Collection 包含 `TIMESTAMPTZ` 字段，你可以在一次操作中通过在 search 调用中设置 `timezone` 参数，临时覆盖 Database 或 Collection 的默认时区。这会控制在该次操作中 `TIMESTAMPTZ` 值的显示和比较方式。
+
+以下示例展示了如何为 search 操作设置临时时区：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+res = client.search(
+    collection_name="quick_setup",
+    anns_field="vector",
+    data=[query_vector],
+    limit=3,
+    search_params={"metric_type": "IP"},
+    # highlight-next-line
+    timezone="America/Havana",
+)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// js
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+</Tabs>
+
+参数 `timezone` 的值必须是有效的 [IANA 时区标识符](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)，例如 **Asia/Shanghai**、**America/Chicago** 或 **UTC**。关于如何使用 `TIMESTAMPTZ` 字段的详细信息，请参见[TIMESTAMPTZ 类型](./use-timestamptz-field)。
+
 ## ANN Search 能力增强\{#enhancing-ann-search}
 
 Zilliz Cloud 提供的 AUTOINDEX 已经极大地降低了执行 ANN Search 的门槛，但在大规模召回的情况下依旧很难避免遇到类似返回与查询向量不相关的 Entity 等各种问题。按照缩小搜索范围、提升召回质量和提升召回结果多样性的思路，Milvus 提供了如下几种能力：
