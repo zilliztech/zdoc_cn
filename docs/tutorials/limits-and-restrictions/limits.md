@@ -279,6 +279,16 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
 
 - 上述条件需同时满足。
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>对于 <strong>Free</strong> 和 <strong>Serverless</strong> 集群，执行如下限制：</p>
+<ul>
+<li><p>单个 <strong>Free</strong> 集群支持最多 <strong>5</strong> 个 Collection。</p></li>
+<li><p>单个 <strong>Serverless</strong> 集群支持最多 <strong>10</strong> 个 Collection。</p></li>
+</ul>
+
+</Admonition>
+
 ### 字段\{#fields}
 
 <table>
