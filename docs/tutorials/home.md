@@ -79,6 +79,28 @@ Zilliz Cloud 提供如下集群部署方式：
 
     [向量相似性搜索](./single-vector-search)可以帮助您发现与您的查询向量最相似的搜索结果。
 
+## 集成 Embedding 模型
+
+1. 创建并连接您的 Zilliz Cloud 集群。
+
+    您需要[创建一个集群](./create-cluster)，并为您分配合适的计算和存储资源，然后[连接这个集群](./connect-to-cluster)。
+
+1. 设置模型供应商集成或部署托管模型。
+
+    [添加集成](./integrate-with-model-providers)，存储访问模型供应商所需的认证信息。或[部署](./hosted-models)托管模型。
+
+1. 创建 Collection 并设置 Embedding Function。
+
+    [创建一个 Collection](./manage-collections-sdks) 来存放您的数据。您的 Collection 中至少需要包含 1 个向量字段和 1 个 VARCHAR 字段。您还需要再创建时定义 Embedding Function。
+
+1. 插入原始文本数据。
+
+    [插入](./insert-entities)原始数据。Zilliz Cloud 会在数据 Ingest 过程中自动生成向量。
+
+1. 使用原始文本进行搜索。
+
+    提供原始查询文本。Zilliz Cloud 会将其转化为向量，与已存储的向量进行相似度比对，并[返回](./single-vector-search)最相关的结果。
+
 ## 从其它数据源迁移数据
 
 1. 连接到您的数据源

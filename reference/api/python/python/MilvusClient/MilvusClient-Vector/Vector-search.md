@@ -13,10 +13,10 @@ type: docx
 token: N6afdOON2o3U0YxMAt7cMiBqnXg
 sidebar_position: 6
 keywords: 
-  - open source vector db
-  - vector database example
-  - rag vector database
-  - what is vector db
+  - vector database
+  - IVF
+  - knn
+  - Image Search
   - zilliz
   - zilliz cloud
   - cloud
@@ -200,7 +200,7 @@ search(
 
 - **highlighter** (*Highlighter*) -
 
-    The highlighter to highlight matched terms in search operations. For details, refer to [Text Highlighter](https://milvus.io/docs/text-highlighter.md).
+    The highlighter to highlight matched terms in search operations. For details, refer to [Lexical Highlighter](/docs/text-highlighter) and [Semantic Highlighter](/docs/semantic-highlighter).
 
 - **kwargs** -
 
@@ -222,7 +222,7 @@ search(
 
         Temporarily override the collection or database default time zone for a single query by setting an [IANA identifier](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (for example, **Asia/Shanghai**, **America/Chicago**, or **UTC**). This controls how `TIMESTAMPTZ` values are interpreted, displayed, and compared during that operation only; it does not modify stored data or collection settings.
 
-        For more information, refer to [TIMESTAMPZ Field](/docs/timestamptz-field).
+        For more information, refer to [TIMESTAMPZ Field](/docs/use-timestamptz-field).
 
     - **time_fields** (*str*)
 

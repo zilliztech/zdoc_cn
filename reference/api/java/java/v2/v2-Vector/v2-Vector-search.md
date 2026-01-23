@@ -13,10 +13,10 @@ type: docx
 token: Rz5rdpGzGoNlByxy8cVcbUy9nhd
 sidebar_position: 7
 keywords: 
-  - milvus vector database
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -62,6 +62,7 @@ search(SearchReq.builder()
     .strictGroupSize(Boolean strictGroupSize)
     .ranker(CreateCollectionReq.Function ranker)
     .functionScore(FunctionScore functionScore)
+    .highlighter(Highlighter highlighter)
     .build()
 )
 ```
@@ -254,13 +255,17 @@ search(SearchReq.builder()
 
     A **FunctionScore** instance that comprises one or multiple **Function** instances. The design purpose is to allow multiple rankers in a search, such as in the [Boost ranker](https://milvus.io/docs/boost-ranker.md).
 
+- `highlighter(Highlighter highlighter)`
+
+    The highlighter to highlight matched terms in search operations. For details, refer to [Lexical Highlighter](/docs/text-highlighter) and [Semantic Highlighter](/docs/semantic-highlighter).
+
 **RETURN TYPE:**
 
 *SearchResp*
 
 **RETURNS:**
 
-A **SearchResp object representing specific search results with the specified output fields and relevance score.
+A **SearchResp** object representing specific search results with the specified output fields and relevance score.
 
 **PARAMETERS:**
 
