@@ -17,7 +17,6 @@ Control Plane 提供了 **Cloud**、**Cluster**、**Import** 和 **Pipeline** �
     以下是一个列出所有可用云提供商的示例。
 
     ```shell
-    export CLOUD_REGION="ali-cn-hangzhou"
     export API_KEY="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
     curl --request GET \
@@ -32,7 +31,7 @@ Control Plane 提供了 **Cloud**、**Cluster**、**Import** 和 **Pipeline** �
     以下是一个列出指定集群中所有可用集合的示例。
 
     ```shell
-    export CLUSTER_ENDPOINT="https://${CLUSTER_ID}.api.${CLOUD_REGION}.zillizcloud.com"
+    export CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT"
     export TOKEN="db_admin:xxxxxxxxxxxx"
 
     curl --request GET \
