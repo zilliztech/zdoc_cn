@@ -430,3 +430,5 @@ curl --request POST \
 
 - **严格分组大小**：`strict_group_size=True` 时，系统会尽量保证每个分组中返回 `group_size` 个 Entity，除非分组内数据本身不足。此设置可以确保每个分组的 Entity 数量一致，但在数据分布不均或资源受限时可能会导致性能下降。若不需要严格的 Entity 数量，可以将 `strict_group_size` 设置为 `False`，提高查询速度。
 
+- 如果查询向量已经在目标 Collection 中存在，可以考虑使用 `ids` 参数，从而让 Milvus 在搜索前从 Collection 中自动获取查询向量。更多内容，可以阅读 [Primary Key Search](./primary-key-search)。
+

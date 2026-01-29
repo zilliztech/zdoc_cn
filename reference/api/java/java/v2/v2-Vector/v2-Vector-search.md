@@ -1,29 +1,33 @@
 ---
-displayed_sidbar: javaSidebar
 title: "search() | Java | v2"
 slug: /java/java/v2-Vector-search
 sidebar_label: "search()"
+beta: false
 added_since: v2.3.x
 last_modified: v2.6.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation conducts a vector similarity search with an optional scalar filtering expression. | Java | v2"
 type: docx
 token: Rz5rdpGzGoNlByxy8cVcbUy9nhd
 sidebar_position: 7
 keywords: 
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud
   - search()
   - javaV226
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -37,7 +41,7 @@ This operation conducts a vector similarity search with an optional scalar filte
 public SearchResp search(SearchReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 search(SearchReq.builder()
@@ -49,6 +53,7 @@ search(SearchReq.builder()
     .filter(String filter)
     .outputFields(List<String> outputFields)
     .data(List<BaseVector> data)
+    .ids(List<Object>)
     .offset(long offset)
     .limit(long limit)
     .roundDecimal(int roundDecimal)
@@ -138,6 +143,16 @@ search(SearchReq.builder()
          <td><p>For DataType.BinaryVector type field.</p></td>
        </tr>
     </table>
+
+    This method is mutually exclusive with `ids(List<Object>)`.
+
+- `ids(List<Object>)`
+
+    A list of primary keys.
+
+    Zilliz Cloud searches for the most similar vector embeddings to those in the specified entities.
+
+    This method is mutually exclusive with `data(List<BaseVector> data)`.
 
 - `offset(long offset)`
 
@@ -315,7 +330,7 @@ A **SearchResp** object representing specific search results with the specified 
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

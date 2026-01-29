@@ -1,29 +1,33 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "search() | Python | MilvusClient"
 slug: /python/python/Vector-search
 sidebar_label: "search()"
+beta: false
 added_since: v2.3.x
 last_modified: v2.6.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation conducts a vector similarity search with an optional scalar filtering expression. | Python | MilvusClient"
 type: docx
 token: N6afdOON2o3U0YxMAt7cMiBqnXg
 sidebar_position: 6
 keywords: 
-  - vector database
-  - IVF
-  - knn
-  - Image Search
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
   - zilliz
   - zilliz cloud
   - cloud
   - search()
   - pymilvus26
+  - vector database
+  - IVF
+  - knn
+  - Image Search
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -33,14 +37,14 @@ import Admonition from '@theme/Admonition';
 
 This operation conducts a vector similarity search with an optional scalar filtering expression.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```plaintext
 search(
     self,
     collection_name: str,
     data: Union[List[list], list],
-    
+    ids: Union[List[str], List[int]],
     filter: str = "",
     limit: int = 10,
     output_fields: Optional[List[str]] = None,
@@ -69,6 +73,16 @@ search(
     A list of vector embeddings.
 
     Zilliz Cloud searches for the most similar vector embeddings to the specified ones.
+
+    This parameter is mutually exclusive with **ids**.
+
+- **ids** (*Union[List[str], List[int]]*) -
+
+    A list of primary keys.
+
+    Zilliz Cloud searches for the most similar vector embeddings to those in the specified entities.
+
+    This parameter is mutually exclusive with **data**.
 
 - **anns_field** (*str*) -
 
@@ -243,14 +257,14 @@ A list of dictionaries that contains the searched entities with specified output
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient
 
 # 1. Set up a milvus client
 client = MilvusClient(
-    uri="https://inxx-xxxxxxxxxxxx.api.ali-cn-hangzhou.zillizcloud.com:19530",
+    uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com:19530",
     token="user:password"
 )
 

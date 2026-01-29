@@ -51,6 +51,24 @@ import Grid from '@site/src/components/Grid';
 
     <div>
 
+        **[2026 年 1 月 29 日](./release-notes-2601#milvus-26)**
+
+    </div>
+
+    <div>
+
+        - 🚀   Milvus v2.6.x 新功能特性在 Zilliz Cloud 上线：
+
+            - [Primary Key Search](./primary-key-search)
+
+    </div>
+
+</Grid>
+
+<Grid columnSize="2" widthRatios="24,75">
+
+    <div>
+
         **[2026 年 1 月 23 日](./release-notes-2601)**
 
     </div>

@@ -10,7 +10,7 @@ notebook: FALSE
 description: "在许多应用中，可以通过丰富的信息集来搜索对象，例如标题和描述，或者通过多种模态，如文本、图像和音频。例如，如果文本或图像与搜索查询的语义匹配，则应搜索包含一段文本和一张图像的推文。混合搜索通过结合跨这些不同字段的搜索来增强搜索体验。Zilliz Cloud 通过允许在多个向量字段上进行搜索，同时执行多个近似最近邻（ANN）搜索来支持这一点。如果您想同时搜索文本和图像、描述同一对象的多个文本字段，或者密集和稀疏向量以提高搜索质量，多向量混合搜索特别有用。 | BYOC"
 type: origin
 token: SU1DwjEeii0p2ik3odJcQ55Unbf
-sidebar_position: 6
+sidebar_position: 7
 keywords: 
   - 向量数据库
   - zilliz

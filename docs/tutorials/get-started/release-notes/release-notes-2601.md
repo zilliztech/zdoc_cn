@@ -31,13 +31,31 @@ import Grid from '@site/src/components/Grid';
 
     <div>
 
+        **2026 年 1 月 29 日**
+
+    </div>
+
+    <div>
+
+        ## Milvus 2.6 新功能\{#another-milvus-v2.6.x-new-feature}
+
+        - **主键搜索**：直接基于**主键**（Primary Key）来发起 ANN 搜索，省去了搜索前检索原始向量的步骤。更多内容，可参考[Primary Key Search](./primary-key-search)。
+
+    </div>
+
+</Grid>
+
+<Grid columnSize="2" widthRatios="20,80">
+
+    <div>
+
         **2026 年 1 月 23 日**
 
     </div>
 
     <div>
 
-        ## Milvus 2.6 新功能
+        ## Milvus 2.6 新功能\{#milvus-v2.6.x-new-feature}
 
         - **基于查询语义的文本高亮（Semantic Highlighter）**：根据查询意图（而非关键词匹配）自动识别并高亮搜索结果中最相关的文本片段，提升搜索结果的可解释性。
 

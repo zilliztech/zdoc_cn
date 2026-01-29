@@ -542,6 +542,76 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
+## 主键搜索\{#Primary-Key Search}
+
+除了可以在搜索请求中设置查询向量外，您还可以使用 Collection 中在指定字段上包含了查询向量的 Entity 的主键来进行查询。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+res = client.search(
+    collection_name="quick_setup",
+    anns_field="vector",
+    # highlight-start
+    ids=[551, 296, 43],
+    # highlight-end
+    limit=3,
+    search_params={"metric_type": "IP"}
+)
+
+for hits in res:
+    for hit in hits:
+        print(hit)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// node.js
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/search" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CLUSTER_TOKEN" \
+  -d '{
+    "collectionName": "quick_setup",
+    "annsField": "vector",
+    "ids": [551, 296, 43],
+    "limit": 3,
+    "searchParams": {
+      "metric_type": "IP"
+    }
+  }'
+```
+
+</TabItem>
+</Tabs>
+
 ## 在 Parition 中进行 ANN Search\{#ANN-search-in-partition}
 
 如果 Collection 中存在多个按具体划分规则划分的 Partition，而且您的查询目标可以具体到其中的一个或多个 Partition。您就可以在 Search 请求中携带目标 Partition 的名称。通过减少扫描的数据量，可以显著提高搜索速度。
@@ -1401,6 +1471,20 @@ res = client.search(
 
 ```bash
 # restful
+export QUERY_VECTOR='[0.1, 0.2, 0.3, 0.4]'                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                          
+curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/search" \                                                                                                                                                                                     
+-H "Content-Type: application/json" \                                                                                                                                                                                                                 
+-d '{                                                                                                                                                                                                                                                 
+  "collectionName": "quick_setup",                                                                                                                                                                                                                    
+  "annsField": "vector",                                                                                                                                                                                                                              
+  "data": ['"$QUERY_VECTOR"'],                                                                                                                                                                                                                        
+  "limit": 3,                                                                                                                                                                                                                                         
+  "searchParams": {                                                                                                                                                                                                                                   
+    "metric_type": "IP",                                                                                                                                                                                                                              
+    "timezone": "America/Havana"                                                                                                                                                                                                                      
+  }                                                                                                                                                                                                                                                   
+}'
 ```
 
 </TabItem>
