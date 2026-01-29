@@ -208,7 +208,7 @@ SemanticHighlighter highlighter = SemanticHighlighter.builder()
 
 - **未设置 threshold**
 
-    - 高亮模型返回的所有语义匹配都会包含在结果中。客户端 SDK 不会应用任何基于分数的额外过滤。在这种情况下，字段的 `fragments` 和 `scores` 是否为空完全取决于高亮模型和服务端逻辑。
+    - 默认使用 0.5 作为阈值。Highlight Model 返回的语义匹配中，分数低于 0.5 的结果会被过滤掉。在这种情况下，字段的 `fragments` 和 `scores` 中只会包含分数 ≥ 0.5 的匹配结果。
 
 - **设置了 threshold**
 
@@ -299,17 +299,12 @@ SemanticHighlighter highlighter = SemanticHighlighter.builder()
    </tr>
    <tr>
      <td><p>未设置</p></td>
-     <td><p>返回所有语义匹配</p></td>
-     <td><p>探索性分析，理解分数分布</p></td>
-   </tr>
-   <tr>
-     <td><p>0.5</p></td>
-     <td><p>中等和高置信度</p></td>
+     <td><p>默认使用 0.5 作为阈值。中等和高置信度。</p></td>
      <td><p>更广泛的覆盖范围和中等精度</p></td>
    </tr>
    <tr>
      <td><p>0.8</p></td>
-     <td><p>仅高置信度</p></td>
+     <td><p>高置信度</p></td>
      <td><p>以精度为重点的应用</p></td>
    </tr>
 </table>
