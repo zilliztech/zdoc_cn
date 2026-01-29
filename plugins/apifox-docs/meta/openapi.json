@@ -32636,19 +32636,45 @@
 									"data": {
 										"type": "array",
 										"items": {
-											"type": "number",
+											"type": "array",
 											"description": "A vector embedding",
 											"x-i18n": {
 												"zh-CN": {
 													"description": "一个向量嵌入。"
 												}
 											},
-											"format": "float32"
+											"items": {
+												"type": "number",
+												"description": "A dimension value of the vector embedding",
+												"x-i18n": {
+													"zh-CN": {
+														"description": "向量嵌入的一个维度值。"
+													}
+												}
+											}
 										},
-										"description": "A list of vector embeddings.\n<include target=\"milvus\">Milvus</include><include target=\"zilliz\">Zilliz Cloud</include> searches for the most similar vector embeddings to the specified ones.",
+										"description": "A list of vector embeddings.<br/><include target=\"milvus\">Milvus</include><include target=\"zilliz\">Zilliz Cloud</include> searches for the most similar vector embeddings to the specified ones.<br/>This parameter is mutually exclusive with **ids**.",
 										"x-i18n": {
 											"zh-CN": {
-												"description": "一个向量嵌入列表。\n<include target=\"milvus\">Milvus</include><include target=\"zilliz\">Zilliz Cloud</include> 会搜索与指定向量嵌入最相似的向量。"
+												"description": "一个向量嵌入列表。<br/><include target=\"milvus\">Milvus</include><include target=\"zilliz\">Zilliz Cloud</include> 会搜索与指定向量嵌入最相似的向量。<br/>该参数与 **ids** 互斥。"
+											}
+										}
+									},
+									"ids": {
+										"type": "array",
+										"description": "A list of primary keys.<br/><include target=\"milvus\">Milvus</include><include target=\"zilliz\">Zilliz Cloud</include> searches for the most similar vector embeddings to those in the specified entities.<br/>This parameter is mutually exclusive with **data**.",
+										"items": {
+											"type": "any",
+											"description": "A primary key",
+											"x-i18n": {
+												"zh-CN": {
+													"description": "一个主键"
+												}
+											}
+										},
+										"x-i18n": {
+											"zh-CN": {
+												"description": "一个主键列表。<br/><include target=\"milvus\">Milvus</include><include target=\"zilliz\">Zilliz Cloud</include> 会搜索与指定 Entity 中的向量嵌入最相似的向量。<br/>该参数与 **data** 互斥。"
 											}
 										}
 									},
@@ -32930,7 +32956,6 @@
 								},
 								"required": [
 									"collectionName",
-									"data",
 									"annsField"
 								]
 							},
