@@ -1243,7 +1243,7 @@ class larkDocWriter {
                 block_id,
                 caption
             })
-            return `![${caption}](${root}/${caption}.png "${existing_iframe.caption}")`;
+            return `![${caption}](${root}/${caption}.png "${caption}")`;
         } else {
             try {
                 const url = new URL(decodeURIComponent(iframe.component.url))
