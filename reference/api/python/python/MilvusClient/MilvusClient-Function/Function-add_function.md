@@ -13,10 +13,10 @@ type: docx
 token: XhcVd1JXvoAgUfxSEpQcL2H6nVg
 sidebar_position: 1
 keywords: 
-  - rag llm architecture
   - private llms
   - nn search
   - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud

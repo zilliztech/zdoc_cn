@@ -1,17 +1,20 @@
 {
   "added": [
+    "https://docs.zilliz.com.cn/reference/java/java/v2-LocalBulkWriter-appendRow",
+    "https://docs.zilliz.com.cn/reference/java/java/v2-RemoteBulkWriter-appendRow",
+    "https://docs.zilliz.com.cn/reference/python/python/Collections-add_collection_function",
+    "https://docs.zilliz.com.cn/reference/python/python/Collections-alter_collection_function",
+    "https://docs.zilliz.com.cn/reference/python/python/Collections-drop_collection_function",
+    "https://docs.zilliz.com.cn/reference/python/python/Database-use_database",
+    "https://docs.zilliz.com.cn/reference/python/python/Management-flush_all",
+    "https://docs.zilliz.com.cn/reference/python/python/Management-get_compaction_plans",
+    "https://docs.zilliz.com.cn/reference/python/python/Management-get_compaction_state",
+    "https://docs.zilliz.com.cn/reference/python/python/Management-get_flush_all_state",
+    "https://docs.zilliz.com.cn/reference/python/python/Management-list_loaded_segments",
+    "https://docs.zilliz.com.cn/reference/python/python/Management-list_persistent_segments",
+    "https://docs.zilliz.com.cn/reference/python/python/Management-optimize",
     "https://docs.zilliz.com.cn/"
   ],
-  "deleted": [
-    "https://docs.zilliz.com.cn/reference/java/java/v2-FunctionScore-addFunction",
-    "https://docs.zilliz.com.cn/reference/java/java/v2-Highlighter-LexicalHighlighter",
-    "https://docs.zilliz.com.cn/reference/java/java/v2-Highlighter-SemanticHighlighter",
-    "https://docs.zilliz.com.cn/reference/java/java/v2-Vector-FunctionScore",
-    "https://docs.zilliz.com.cn/reference/java/java/v2-Vector-Highlighter",
-    "https://docs.zilliz.com.cn/reference/python/MilvusClient-Highlighter",
-    "https://docs.zilliz.com.cn/reference/python/python/Highlighter-LexicalHighlighter",
-    "https://docs.zilliz.com.cn/reference/python/python/Highlighter-SemanticHighlighter",
-    "https://docs.zilliz.com.cn/reference/python/python/Highlighter-with_query"
-  ],
+  "deleted": [],
   "brokenLinks": []
 }

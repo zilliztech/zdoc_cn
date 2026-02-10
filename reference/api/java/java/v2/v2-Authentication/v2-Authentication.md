@@ -12,10 +12,10 @@ token: HR9xfgwXylmfqOdKmJ7c9xCqnQb
 sidebar_position: 1
 sidebar_label: "Authentication"
 keywords: 
-  - Serverless vector database
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
   - zilliz
   - zilliz cloud
   - cloud

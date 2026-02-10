@@ -13,10 +13,10 @@ type: docx
 token: IW5SdBOhUop0P8xBslCc6OHLnse
 sidebar_position: 5
 keywords: 
-  - Image Search
-  - LLMs
-  - Machine Learning
-  - RAG
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
   - zilliz
   - zilliz cloud
   - cloud

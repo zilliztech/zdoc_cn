@@ -13,10 +13,10 @@ type: docx
 token: C8kgdOn3pozkrtxCBMLcqcSTnTb
 sidebar_position: 8
 keywords: 
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - RAG
   - zilliz
   - zilliz cloud
   - cloud

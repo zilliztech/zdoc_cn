@@ -13,10 +13,10 @@ type: docx
 token: ZxPXdeBXGopnvMxl7v6c9DSanFL
 sidebar_position: 5
 keywords: 
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
-  - information retrieval
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud

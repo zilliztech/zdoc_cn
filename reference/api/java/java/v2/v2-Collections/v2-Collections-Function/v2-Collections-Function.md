@@ -13,10 +13,10 @@ type: docx
 token: CW06d3MZQo2AzuxIv2ycCFpsn4b
 sidebar_position: 3
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - zilliz
   - zilliz cloud
   - cloud

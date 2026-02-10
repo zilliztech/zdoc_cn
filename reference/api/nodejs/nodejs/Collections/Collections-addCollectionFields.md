@@ -13,10 +13,10 @@ type: docx
 token: FmG6dw3O1ouzgbxnl4jc5T7cnXf
 sidebar_position: 20
 keywords: 
-  - open source vector db
-  - vector database example
-  - rag vector database
-  - what is vector db
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
   - zilliz
   - zilliz cloud
   - cloud

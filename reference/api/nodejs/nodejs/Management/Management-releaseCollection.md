@@ -13,10 +13,10 @@ type: docx
 token: UxOXdeKF1oOIBuxTjPhcKBtPnRb
 sidebar_position: 20
 keywords: 
+  - knn algorithm
+  - HNSW
   - What is unstructured data
   - Vector embeddings
-  - Vector store
-  - open source vector database
   - zilliz
   - zilliz cloud
   - cloud

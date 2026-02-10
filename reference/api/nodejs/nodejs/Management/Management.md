@@ -12,10 +12,10 @@ token: UmOafcFDglyFe3dayhAcRA0RnEd
 sidebar_position: 5
 sidebar_label: "Management"
 keywords: 
-  - NLP
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
   - zilliz
   - zilliz cloud
   - cloud

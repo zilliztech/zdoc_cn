@@ -13,10 +13,10 @@ type: docx
 token: N6kjdex5Ao0lRqxPXBhcxq4AnNh
 sidebar_position: 13
 keywords: 
+  - Question answering system
   - llm-as-a-judge
   - hybrid vector search
   - Video deduplication
-  - Video similarity search
   - zilliz
   - zilliz cloud
   - cloud

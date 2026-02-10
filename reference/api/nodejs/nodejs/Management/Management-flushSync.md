@@ -13,10 +13,10 @@ type: docx
 token: QsTwdUbgyoZPV1xzCBxchX8Fnid
 sidebar_position: 8
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
-  - nn search
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
   - zilliz
   - zilliz cloud
   - cloud

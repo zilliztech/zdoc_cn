@@ -13,10 +13,10 @@ type: docx
 token: V9YUdnfxDoc5Gmx80Wec9P6Sn2d
 sidebar_position: 7
 keywords: 
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
-  - vector database
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
   - zilliz
   - zilliz cloud
   - cloud

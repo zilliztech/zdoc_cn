@@ -13,10 +13,10 @@ type: docx
 token: XAIndF6XWoQzvRxDvpLcgEE1nEb
 sidebar_position: 5
 keywords: 
-  - what is semantic search
-  - Embedding model
-  - image similarity search
-  - Context Window
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - knn algorithm
   - zilliz
   - zilliz cloud
   - cloud

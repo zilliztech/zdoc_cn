@@ -13,10 +13,10 @@ type: docx
 token: GEcrdVWnboOetOx08RrcRHVhn3g
 sidebar_position: 14
 keywords: 
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: VDKPdBJzdoAu7exEOE2czN2gnTd
 sidebar_position: 5
 keywords: 
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud

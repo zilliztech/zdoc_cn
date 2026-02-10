@@ -13,10 +13,10 @@ type: docx
 token: P66Mdx2aaooL9px9CnQcS2eTnng
 sidebar_position: 6
 keywords: 
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud

@@ -6,17 +6,17 @@ sidebar_label: "AsyncMilvusClient"
 added_since: v2.5.x
 last_modified: false
 deprecate_since: false
-beta: PRIVATE
+beta: false
 notebook: false
 description: "An AsyncMilvusClient instance represents an asynchronous Python client that connects to a specific Zilliz Cloud cluster. It provides the same parameter sets and behaviors as MilvusClient, and the only difference lies in the way you call them. | Python | MilvusClient"
 type: docx
 token: MIKkdpGuuoEaGWx1m7Fcw52inKg
 sidebar_position: 3
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
   - zilliz
   - zilliz cloud
   - cloud

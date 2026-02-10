@@ -13,10 +13,10 @@ type: docx
 token: Al8Pdbn4fomlIBxxYi0chTsgnWg
 sidebar_position: 5
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
   - zilliz
   - zilliz cloud
   - cloud

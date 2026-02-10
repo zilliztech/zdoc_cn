@@ -13,10 +13,10 @@ type: docx
 token: GRarduHPSoFY3Yx9EWRcdcTfn1g
 sidebar_position: 35
 keywords: 
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - Video search
-  - AI Hallucination
-  - AI Agent
-  - semantic search
   - zilliz
   - zilliz cloud
   - cloud

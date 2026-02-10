@@ -8,14 +8,14 @@ last_modified: false
 deprecate_since: false
 description: "Methods related to implement role-based access control to your resources. | Python | MilvusClient"
 type: folder
-token: W9SBfQfXUlZAXDdK6nTcop4rnFd
+token: Tjnufe7LvlX9wtddOfEctVJ6nKB
 sidebar_position: 1
 sidebar_label: "Authentication"
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
   - zilliz
   - zilliz cloud
   - cloud

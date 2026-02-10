@@ -13,10 +13,10 @@ type: docx
 token: JNZxdKEX3ohBl2xud7Wckhq7nVh
 sidebar_position: 7
 keywords: 
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
   - zilliz
   - zilliz cloud
   - cloud

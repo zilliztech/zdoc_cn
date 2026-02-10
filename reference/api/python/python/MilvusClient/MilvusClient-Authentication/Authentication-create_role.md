@@ -13,10 +13,10 @@ type: docx
 token: OUz3drncZo1Er8xyITZcYz66nWE
 sidebar_position: 3
 keywords: 
-  - Neural Network
   - Deep Learning
   - Knowledge base
   - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud

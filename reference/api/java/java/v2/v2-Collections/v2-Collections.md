@@ -12,10 +12,10 @@ token: LkxXfcSA7lKXqEdu8mpcHI8Fnqd
 sidebar_position: 3
 sidebar_label: "Collections"
 keywords: 
-  - Vector store
-  - open source vector database
-  - Vector index
-  - vector database open source
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
   - zilliz
   - zilliz cloud
   - cloud

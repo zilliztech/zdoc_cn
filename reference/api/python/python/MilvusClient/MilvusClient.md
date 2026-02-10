@@ -12,10 +12,10 @@ token: B2fdfjb1nl9Pjidkaa9cM6lAngd
 sidebar_position: 3
 sidebar_label: "MilvusClient"
 keywords: 
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
-  - Video search
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: NaOadUNSpo1EsIxPMSfc0R4Hnfb
 sidebar_position: 1
 keywords: 
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
-  - Elastic vector database
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
   - zilliz
   - zilliz cloud
   - cloud

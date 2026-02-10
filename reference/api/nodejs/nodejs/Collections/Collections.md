@@ -12,10 +12,10 @@ token: LOD4fz3qilpPyOdlfencoVEJnwd
 sidebar_position: 3
 sidebar_label: "Collections"
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - what is semantic search
+  - Embedding model
+  - image similarity search
+  - Context Window
   - zilliz
   - zilliz cloud
   - cloud

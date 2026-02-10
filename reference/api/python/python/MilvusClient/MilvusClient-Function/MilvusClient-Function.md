@@ -13,10 +13,10 @@ type: docx
 token: RrW9dOM8do7d3ixXIP9clJJUnVg
 sidebar_position: 3
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
-  - nn search
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
   - zilliz
   - zilliz cloud
   - cloud
@@ -69,7 +69,7 @@ Function(
 
     - `FunctionType.TEXTEMBEDDING`: Generates dense vectors that capture semantic meaning from a `VARCHAR` field.
 
-    - `FunctionType.RERANK`: Applies reranking strategies to the search results.
+- `FunctionType.RERANK`: Applies reranking strategies to the search results.
 
 - `input_field_names` (*Union[str, List[str]]*) -
 

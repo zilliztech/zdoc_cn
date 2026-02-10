@@ -12,10 +12,10 @@ token: CEYUfuKoYlVIfod63clcDaS9nxc
 sidebar_position: 4
 sidebar_label: "Database"
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - open source vector database
   - zilliz
   - zilliz cloud
   - cloud

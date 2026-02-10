@@ -11,12 +11,12 @@ notebook: false
 description: "A StructFieldSchema instance represents the schema of the Struct elements in an Array of Structs field. A schema sketches the structure of its Struct elements. | Java | v2"
 type: docx
 token: DCszdG9rCoZxhfxfAuOcNsXRnOc
-sidebar_position: 7
+sidebar_position: 12
 keywords: 
-  - milvus vector db
-  - Zilliz Cloud
-  - what is milvus
-  - milvus database
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - knn algorithm
   - zilliz
   - zilliz cloud
   - cloud

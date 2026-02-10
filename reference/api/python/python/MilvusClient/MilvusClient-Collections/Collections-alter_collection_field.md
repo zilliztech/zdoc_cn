@@ -10,13 +10,13 @@ beta: false
 notebook: false
 description: "This operation changes the specified collection field parameters. | Python | MilvusClient"
 type: docx
-token: G2jjdHvbBoko6BxBZj7csemWnFc
+token: JdR3dVpCaoq6s2xSFmsc0e13nnh
 sidebar_position: 2
 keywords: 
-  - Audio search
-  - what is semantic search
-  - Embedding model
-  - image similarity search
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
   - zilliz
   - zilliz cloud
   - cloud
@@ -69,6 +69,12 @@ alter_collection_field(
     The timeout duration for this operation.
 
     Setting this to None indicates that this operation timeouts when any response arrives or any error occurs.
+
+<Admonition type="info" icon="📘" title="Notes">
+
+<p>You must alter field settings before loading the collection. Altering a field on a loaded collection returns an error. To change settings on a loaded collection, release the collection first, alter the field, then reload.</p>
+
+</Admonition>
 
 **RETURN TYPE:**
 

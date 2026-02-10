@@ -13,10 +13,10 @@ type: docx
 token: QHyGdm4FyoFwCzxDgUUc9yQrnPf
 sidebar_position: 4
 keywords: 
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
-  - knn algorithm
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
   - zilliz
   - zilliz cloud
   - cloud

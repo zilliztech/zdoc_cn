@@ -12,10 +12,10 @@ token: ABk9fhVMTlQb0MdGuOrck8a8n7f
 sidebar_position: 2
 sidebar_label: "Client"
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
+  - Embedding model
   - zilliz
   - zilliz cloud
   - cloud

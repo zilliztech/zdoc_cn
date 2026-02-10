@@ -13,10 +13,10 @@ type: docx
 token: SJ3ndk2d7oQbAOxP5iHcGtr1nrb
 sidebar_position: 3
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
   - zilliz
   - zilliz cloud
   - cloud

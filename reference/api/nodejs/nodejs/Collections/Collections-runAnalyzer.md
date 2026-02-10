@@ -13,10 +13,10 @@ type: docx
 token: LsMldPd8GodoVqxCAZUcWYjdnwh
 sidebar_position: 18
 keywords: 
-  - cosine distance
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
   - zilliz
   - zilliz cloud
   - cloud

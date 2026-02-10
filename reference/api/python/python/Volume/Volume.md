@@ -12,10 +12,10 @@ token: UJtvfGYb4lKoF1dy7iicFwcAnWr
 sidebar_position: 6
 sidebar_label: "Volume"
 keywords: 
-  - AI Hallucination
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud

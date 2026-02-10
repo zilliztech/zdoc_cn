@@ -11,12 +11,12 @@ notebook: false
 description: "This operation returns the data type of the Struct elements within an Array of Structs field. | Java | v2"
 type: docx
 token: PvRGdribPou7PHxcoSWcRK3unUc
-sidebar_position: 3
+sidebar_position: 4
 keywords: 
-  - Zilliz database
-  - Unstructured Data
-  - vector database
-  - IVF
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - RAG
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: MpW0dmPAao1SWkx7HGkcT16dnvb
 sidebar_position: 9
 keywords: 
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
-  - what is milvus
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
   - zilliz
   - zilliz cloud
   - cloud

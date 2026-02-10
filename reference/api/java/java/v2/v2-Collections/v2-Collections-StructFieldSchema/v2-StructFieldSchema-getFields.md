@@ -11,12 +11,12 @@ notebook: false
 description: "This operation returns the fields of the Struct elements in an Array of Structs. | Java | v2"
 type: docx
 token: FIzIdKrRNooFttxaf3Pc1vOlnnc
-sidebar_position: 4
+sidebar_position: 5
 keywords: 
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: F8lCdDCa3oD48WxWyURcmfoznYt
 sidebar_position: 12
 keywords: 
-  - Audio similarity search
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud

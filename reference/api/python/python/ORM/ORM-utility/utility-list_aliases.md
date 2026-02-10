@@ -13,10 +13,10 @@ type: docx
 token: XBwxdP96Go8ITyx7UuNcL7EonPd
 sidebar_position: 22
 keywords: 
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
   - Recommender systems
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: FEnwdB0eCotS7wxpPXmcwgQwn8g
 sidebar_position: 8
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
   - zilliz
   - zilliz cloud
   - cloud

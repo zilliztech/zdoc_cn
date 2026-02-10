@@ -11,12 +11,12 @@ notebook: false
 description: "This operation returns the name of an Array of Structs field. | Java | v2"
 type: docx
 token: DZcddGCD3oh29txhnB5cuxzzn4d
-sidebar_position: 6
+sidebar_position: 7
 keywords: 
-  - Context Window
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
   - zilliz
   - zilliz cloud
   - cloud

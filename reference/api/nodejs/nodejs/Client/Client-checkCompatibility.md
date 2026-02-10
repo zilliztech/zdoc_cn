@@ -13,10 +13,10 @@ type: docx
 token: Tq1Md4GuIoNbfuxK03ncIa7onMc
 sidebar_position: 1
 keywords: 
-  - Context Window
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
   - zilliz
   - zilliz cloud
   - cloud

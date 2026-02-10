@@ -12,10 +12,10 @@ token: DFjqfW5yclNaqWdpjpqckLM2nud
 sidebar_position: 7
 sidebar_label: "Vector"
 keywords: 
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
+  - what is semantic search
+  - Embedding model
+  - image similarity search
+  - Context Window
   - zilliz
   - zilliz cloud
   - cloud

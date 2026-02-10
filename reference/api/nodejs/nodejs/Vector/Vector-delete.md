@@ -13,10 +13,10 @@ type: docx
 token: KOZHdyeQvo4htOxhO8BcbEudnNd
 sidebar_position: 2
 keywords: 
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - open source vector database
   - zilliz
   - zilliz cloud
   - cloud
