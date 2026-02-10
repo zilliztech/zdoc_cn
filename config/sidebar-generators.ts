@@ -198,12 +198,12 @@ export async function ReferenceItemsGenerator ({
                       {
                         type: 'link',
                         label: '管理组织角色',
-                        href: '/docs/organization-users#organization-roles'
+                        href: './organization-users#invite-a-user-to-your-organization'
                       },
                       {
                         type: 'link',
                         label: '管理项目角色',
-                        href: '/docs/project-users#project-roles'
+                        href: './project-users#invite-a-user-to-a-project'
                       },
                     ])
 

@@ -7,7 +7,7 @@ added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
 notebook: FALSE
-description: "最近更新：2026 年 1 月 23 日 | Cloud"
+description: "最近更新：2026 年 2 月 9 日 | Cloud"
 type: origin
 token: JziCwn071iCV1tkX4NZcwGSDnmc
 sidebar_position: 1
@@ -27,7 +27,7 @@ import Grid from '@site/src/components/Grid';
 
 # 变更日志
 
-**最近更新**：2026 年 1 月 23 日
+**最近更新**：2026 年 2 月 9 日
 
 <Grid columnSize="2" widthRatios="24,75">
 
@@ -46,6 +46,22 @@ import Grid from '@site/src/components/Grid';
 </Grid>
 
 ## 2026
+
+<Grid columnSize="2" widthRatios="24,75">
+
+    <div>
+
+        **[2026 年 2 月 9 日](./release-notes-2602#cluster-level-access-control)**
+
+    </div>
+
+    <div>
+
+        - 🔐 集群级别权限控制，为您在[组织](./organization-users#invite-a-user-to-your-organization)和[项目设置](./project-users#invite-a-user-to-a-project)中提供更细粒度的访问控制通力。
+
+    </div>
+
+</Grid>
 
 <Grid columnSize="2" widthRatios="24,75">
 
