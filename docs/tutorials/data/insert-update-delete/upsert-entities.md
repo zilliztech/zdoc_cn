@@ -78,7 +78,7 @@ Milvus中的插入更新操作可以在**覆盖**或**合并**模式下工作。
 
         例如，如果请求中包含的数据是`{"author": "Jane", "genre": "fantasy"}`，则目标 Entity Dynamic Field中的键值对将更新为该数据。
 
-    - 如果在启用`部分更新`的情况下进行插入或更新操作，默认行为是**合并**。这意味着Dynamic Field的值将与请求中包含的所有非模式定义字段及其值进行合并。
+    - 如果在启用`partial_update`的情况下进行插入或更新操作，默认行为是**合并**。这意味着Dynamic Field的值将与请求中包含的所有非模式定义字段及其值进行合并。
 
         例如，如果请求中包含的数据是`{"author": "John", "year": 2020, "tags": ["fiction"]}`，则目标 Entity Dynamic Field 中的键值对在插入更新后将变为`{"author": "Jane", "year": 2020, "tags": ["fiction"], "genre": "fantasy"}`。
 

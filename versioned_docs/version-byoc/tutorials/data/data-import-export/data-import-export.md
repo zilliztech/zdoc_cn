@@ -10,7 +10,7 @@ notebook: FALSE
 description: "本章介绍 Zilliz Cloud 数据导入导出操作的相关步骤。 | BYOC"
 type: origin
 token: Z8V4wt5WmiE9CDkRatocpcnLnme
-sidebar_position: 7
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz

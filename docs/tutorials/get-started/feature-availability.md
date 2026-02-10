@@ -82,6 +82,8 @@ Zilliz Cloud 文档中，每个功能会以标签形式标注其当前支持阶�
 
 - [导出备份文件](./export-backup-files)
 
+- [托管模型](./hosted-models)
+
 <Admonition type="info" icon="📘" title="说明">
 
 <p>如需使用上述功能，请<a href="http://support.zilliz.com.cn">提交工单</a>申请开通功能。</p>

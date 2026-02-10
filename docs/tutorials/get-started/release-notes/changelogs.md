@@ -7,7 +7,7 @@ added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
 notebook: FALSE
-description: "最近更新：2026 年 1 月 15 日 | Cloud"
+description: "最近更新：2026 年 1 月 23 日 | Cloud"
 type: origin
 token: JziCwn071iCV1tkX4NZcwGSDnmc
 sidebar_position: 1
@@ -27,7 +27,7 @@ import Grid from '@site/src/components/Grid';
 
 # 变更日志
 
-**最近更新**：2026 年 1 月 15 日
+**最近更新**：2026 年 1 月 23 日
 
 <Grid columnSize="2" widthRatios="24,75">
 
@@ -51,6 +51,42 @@ import Grid from '@site/src/components/Grid';
 
     <div>
 
+        **[2026 年 1 月 29 日](./release-notes-2601#another-milvus-v2.6.x-new-feature)**
+
+    </div>
+
+    <div>
+
+        - 🚀   Milvus v2.6.x 新功能特性在 Zilliz Cloud 上线：
+
+            - [Primary Key Search](./primary-key-search)
+
+    </div>
+
+</Grid>
+
+<Grid columnSize="2" widthRatios="24,75">
+
+    <div>
+
+        **[2026 年 1 月 23 日](./release-notes-2601#milvus-v2.6.x-new-feature)**
+
+    </div>
+
+    <div>
+
+        - 🚀   Milvus v2.6.x 新功能特性在 Zilliz Cloud 上线：
+
+            - [Semantic Highlighter](./semantic-highlighter)
+
+    </div>
+
+</Grid>
+
+<Grid columnSize="2" widthRatios="24,75">
+
+    <div>
+
         **[2026 年 1 月 15 日](./release-notes-2601)**
 
     </div>
@@ -61,7 +97,7 @@ import Grid from '@site/src/components/Grid';
 
             - [TIMESTAMPTZ 类型](./use-timestamptz-field)
 
-            - [Text Highlighter](./text-highlighter)
+            - [Lexical Highlighter](./text-highlighter)
 
         - 🤖 基于[模型的 Embedding](./model-based-functions) 和[重排序 Function](./model-ranker) 开始公测。
 

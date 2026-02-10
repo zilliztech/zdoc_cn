@@ -264,7 +264,7 @@ Private Endpoint 创建完成后，您可以前往**集群详情**页查看该�
        </tr>
        <tr>
          <td><p>记录值</p></td>
-         <td><p>请填写在步骤5.e. 中获取的<strong>默认服务域名</strong>。</p></td>
+         <td><p>请填写在"创建 Private Endpoint" <a href="./setup-a-private-link-alicloud#create-endpoint">步骤 3</a> 中获取的<strong>默认服务域名</strong>。</p></td>
        </tr>
     </table>
 

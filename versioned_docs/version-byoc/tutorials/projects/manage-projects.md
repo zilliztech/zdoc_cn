@@ -114,7 +114,7 @@ import Admonition from '@theme/Admonition';
 
 ## 重命名项目\{#rename-a-project}
 
-要重命名项目，您必须是[组织管理员](./organization-users#organization-roles)。您可以通过 Web 控制台对项目进行重命名。
+要重命名项目，您必须是[组织管理员](./organization-users)。您可以通过 Web 控制台对项目进行重命名。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -126,7 +126,7 @@ import Admonition from '@theme/Admonition';
 
 ## 删除项目\{#delete-a-project}
 
-要删除项目，您必须是[组织管理员](./organization-users#organization-roles)。删除项目前，您需要先删除该项目下的所有[集群](./manage-cluster#drop-cluster)。
+要删除项目，您必须是[组织管理员](./organization-users)。删除项目前，您需要先删除该项目下的所有[集群](./manage-cluster#drop-cluster)。
 
 项目一旦删除，该项目下的所有数据和资源将被清理。该操作不可撤销。
 

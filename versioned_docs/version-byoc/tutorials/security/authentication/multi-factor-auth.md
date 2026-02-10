@@ -65,7 +65,7 @@ import Procedures from '@site/src/components/Procedures';
 
 ## 关闭 MFA\{#disable-mfa}
 
-undefined
+![disable_mfa](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/disable_mfa.png "disable_mfa")
 
 如过您已开启 MFA，请执行以下步骤以关闭 MFA：
 

@@ -1,7 +1,7 @@
 ---
-title: "Text Highlighter | BYOC"
+title: "Lexical Highlighter | BYOC"
 slug: /text-highlighter
-sidebar_label: "Text Highlighter"
+sidebar_label: "Lexical Highlighter"
 beta: FALSE
 added_since: FALSE
 last_modified: FALSE
@@ -10,7 +10,7 @@ notebook: FALSE
 description: "Zilliz Cloud 中的 Highlighter 会在文本字段中对匹配到的词项进行标注，通过在其前后包裹可自定义的标签来实现高亮显示。高亮有助于解释文档为何被命中，提升结果的可读性，并支持在搜索与 RAG 应用中的富文本渲染。 | BYOC"
 type: origin
 token: UAiSwzyTxi8EJ4k45cwcXJ10neb
-sidebar_position: 11
+sidebar_position: 12
 keywords: 
   - 向量数据库
   - zilliz
@@ -29,7 +29,7 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# Text Highlighter
+# Lexical Highlighter
 
 Zilliz Cloud 中的 Highlighter 会在文本字段中对匹配到的词项进行标注，通过在其前后包裹可自定义的标签来实现高亮显示。高亮有助于解释文档为何被命中，提升结果的可读性，并支持在搜索与 RAG 应用中的富文本渲染。
 

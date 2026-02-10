@@ -10,7 +10,7 @@ notebook: FALSE
 description: "Zilliz Cloud 除了支持 ANN Search 外，还提供基于标量的过滤查询功能。本节将介绍如何使用 Query、Get 和 QueryIterator 进行标量查询以及进行标量查询时的注意事项。 | BYOC"
 type: origin
 token: GMOpwnUH0iYRN1kbRidcET0cnKg
-sidebar_position: 7
+sidebar_position: 8
 keywords: 
   - 向量数据库
   - zilliz
@@ -356,13 +356,6 @@ curl --request POST \
 <TabItem value='python'>
 
 ```python
-from pymilvus import MilvusClient
-
-client = MilvusClient(
-    uri="YOUR_CLUSTER_ENDPOINT",
-    token="YOUR_CLUSTER_TOKEN"
-)
-
 iterator = client.query_iterator(
     "my_collection",
     batch_size=10,
@@ -466,12 +459,6 @@ for await (const value of iterator) {
 <TabItem value='python'>
 
 ```python
-from pymilvus import MilvusClient
-client = MilvusClient(
-    uri="YOUR_CLUSTER_ENDPOINT",
-    token="YOUR_CLUSTER_TOKEN"
-)
-
 res = client.get(
     collection_name="my_collection",
     # highlight-next-line
@@ -490,13 +477,6 @@ res = client.query(
 )
 
 # Use QueryIterator
-from pymilvus import connections, Collection
-
-connections.connect(
-    uri="YOUR_CLUSTER_ENDPOINT",
-    token="YOUR_CLUSTER_TOKEN"
-)
-
 iterator = client.query_iterator(
     "my_collection",
     partition_names=["partitionA"],
@@ -589,12 +569,6 @@ fmt.Println("color: ", resultSet.GetColumn("color").FieldData().GetScalars())
 <TabItem value='javascript'>
 
 ```javascript
-import { MilvusClient, DataType } from "@zilliz/milvus2-sdk-node";
-
-const address = "YOUR_CLUSTER_ENDPOINT";
-const token = "YOUR_CLUSTER_TOKEN";
-const client = new MilvusClient({address, token});
-
 // Use get
 var res = client.get({
     collection_name="my_collection",
@@ -668,3 +642,180 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
+## 使用 Query 进行随机取样\{#random-sampling-with-query}
+
+若要从数据集中提取具有代表性的数据子集用于数据探索或开发测试，请使用  `RANDOM_SAMPLE(sampling_factor)`  表达式，其中 `sampling_factor` 是一个介于 `0` 和 `1` 之间的浮点数，表示要采样的数据百分比。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>关于随机采样的详细使用方法、高级示例和最佳实践，可参考<a href="./ramdom-sampling">随机采样</a>。</p>
+
+</Admonition>
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+# Sample 1% of the entire collection
+res = client.query(
+    collection_name="my_collection",
+    # highlight-next-line
+    filter="RANDOM_SAMPLE(0.01)",
+    output_fields=["vector", "color"]
+)
+
+print(f"Sampled {len(res)} entities from collection")
+
+# Combine with other filters - first filter, then sample
+res = client.query(
+    collection_name="my_collection", 
+    # highlight-next-line
+    filter="color like \"red%\" AND RANDOM_SAMPLE(0.005)",
+    output_fields=["vector", "color"],
+    limit=10
+)
+
+print(f"Found {len(res)} red items in sample")
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+import io.milvus.v2.service.vector.request.GetReq
+import io.milvus.v2.service.vector.request.GetResp
+import io.milvus.v2.service.vector.request.QueryReq
+import io.milvus.v2.service.vector.request.QueryResp
+import java.util.*;
+
+QueryReq queryReq = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("RANDOM_SAMPLE(0.01)")
+        .outputFields(Arrays.asList("vector", "color"))
+        .build();
+
+QueryResp getResp = client.query(queryReq);
+for (QueryResp.QueryResult result : getResp.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+
+queryReq = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("color like \"red%\" AND RANDOM_SAMPLE(0.005)")
+        .outputFields(Arrays.asList("vector", "color"))
+        .limit(10)
+        .build();
+
+getResp = client.query(queryReq);
+for (QueryResp.QueryResult result : getResp.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+import (
+    "context"
+    "fmt"
+
+    "github.com/milvus-io/milvus/client/v2/column"
+    "github.com/milvus-io/milvus/client/v2/entity"
+    "github.com/milvus-io/milvus/client/v2/milvusclient"
+)
+
+resultSet, err := client.Query(ctx, milvusclient.NewQueryOption("my_collection").
+    WithFilter("RANDOM_SAMPLE(0.01)").
+    WithOutputFields("vector", "color"))
+if err != nil {
+    return err
+}
+
+resultSet, err = client.Query(ctx, milvusclient.NewQueryOption("my_collection").
+    WithFilter("color like \"red%\" AND RANDOM_SAMPLE(0.005)").
+    WithLimit(10).
+    WithOutputFields("vector", "color"))
+if err != nil {
+    return err
+}
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// node
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+</Tabs>
+
+## 为 Query 临时设置一个时区\{#temporarily-set-a-timezone-for-a-query}
+
+如果你的 Collection 包含 `TIMESTAMPTZ` 字段，你可以在一次操作中通过在 `query` 调用中设置 `timezone` 参数，临时覆盖 Database 或 Collection 的默认时区。这会控制在该次操作中 `TIMESTAMPTZ` 值的显示和比较方式。
+
+以下示例展示了如何为 query 操作设置临时时区：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+# Query data and display the tsz field converted to "America/Havana"
+results = client.query(
+    "my_collection",
+    filter="id <= 10",
+    output_fields=["id", "tsz", "vec"],
+    limit=2,
+    # highlight-next-line
+    timezone="America/Havana",
+)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// js
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+</Tabs>
+
+参数 `timezone` 的值必须是有效的 [IANA 时区标识符](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)，例如 **Asia/Shanghai**、**America/Chicago** 或 **UTC**。关于如何使用 `TIMESTAMPTZ` 字段的详细信息，请参见[TIMESTAMPTZ 类型](./use-timestamptz-field)。

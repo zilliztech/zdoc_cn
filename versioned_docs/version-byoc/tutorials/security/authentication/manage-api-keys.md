@@ -31,7 +31,7 @@ import Admonition from '@theme/Admonition';
 
 为应对不同需求场景，Zilliz Cloud 提供了两种主要的 API 密钥类型：
 
-- **个人 API 密钥**：每个用户注册 Zilliz Cloud 账号时会自动生成一个相关联的个人密钥。该密钥继承对应用户在所属组织和项目中的角色权限。如果账号用户离开组织，其关联的个人密钥将被自动删除。作为[组织管理员](./organization-users#organization-roles)或[项目管理员](./project-users#project-roles)，您可以在 Zilliz Cloud 控制台上看到两种类型的个人 API 密钥：
+- **个人 API 密钥**：每个用户注册 Zilliz Cloud 账号时会自动生成一个相关联的个人密钥。该密钥继承对应用户在所属组织和项目中的角色权限。如果账号用户离开组织，其关联的个人密钥将被自动删除。作为[组织管理员](./organization-users)或[项目管理员](./project-users)，您可以在 Zilliz Cloud 控制台上看到两种类型的个人 API 密钥：
 
     - **您的个人 API 密钥**：专属于您的个人密钥。您可以查看并复制此 API 密钥。
 
@@ -248,7 +248,7 @@ import Admonition from '@theme/Admonition';
 
         <Admonition type="info" icon="📘" title="说明">
 
-        <p><a href="./project-users#project-roles">项目管理员</a>授予自定义 API 密钥的权限受到其自身权限范围的限制。</p>
+        <p><a href="./project-users">项目管理员</a>授予自定义 API 密钥的权限受到其自身权限范围的限制。</p>
 
         </Admonition>
 
@@ -286,7 +286,7 @@ import Admonition from '@theme/Admonition';
 
         <Admonition type="info" icon="📘" title="说明">
 
-        <p><a href="./project-users#project-roles">项目管理员</a>授予自定义 API 密钥的权限受到其自身权限范围的限制。</p>
+        <p><a href="./project-users">项目管理员</a>授予自定义 API 密钥的权限受到其自身权限范围的限制。</p>
 
         </Admonition>
 
@@ -308,7 +308,7 @@ import Admonition from '@theme/Admonition';
 
 - **重置自定义 API 密钥**：仅**组织管理员**和**项目管理员**有权限重置自定义 API 密钥。
 
-    ![reset-customized-api-keys-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/reset-customized-api-keys-cn.png "reset-customized-api-keys-cn")
+    undefined
 
 ## 删除 API 密钥\{#delete-an-api-key}
 

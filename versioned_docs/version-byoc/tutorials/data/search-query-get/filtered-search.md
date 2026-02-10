@@ -83,6 +83,12 @@ import TabItem from '@theme/TabItem';
 ]
 ```
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>如果查询向量已经在目标 Collection 中存在，可以考虑使用 <code>ids</code> 参数，从而让 Milvus 在搜索前从 Collection 中自动获取查询向量。更多内容，可以阅读 <a href="./primary-key-search">Primary Key Search</a>。</p>
+
+</Admonition>
+
 ### 使用标准 Filtered Search\{#search-with-standard-filtering}
 
 当使用如下示例代码在上述 Entity 中进行搜索时，我们需要在 Search 请求中添加过滤条件。为了方便检查搜索结果是否满足过滤条件，我们还在 Search 请求中指定了 Output Fields。

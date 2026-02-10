@@ -410,10 +410,6 @@ client.createCollection(requestCreate);
 ```javascript
 import { MilvusClient } from "@zilliz/milvus2-sdk-node";
 
-const client = new MilvusClient({
-    address: 'YOUR_CLUSTER_ENDPOINT'
-});
-
 await client.createCollection({
     collection_name: 'my_collection',
     schema: schema,

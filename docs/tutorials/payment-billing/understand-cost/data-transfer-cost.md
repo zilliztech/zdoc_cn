@@ -75,6 +75,8 @@ import Admonition from '@theme/Admonition';
 
 - [跨地域备份](/docs/backup-to-other-regions)
 
+- 使用第三方[模型](./function-and-model-inference-overview)进行数据 Ingest、Search、Query、Rerank
+
 <Admonition type="info" icon="📘" title="说明">
 
 <p>如果数据传输发生在同一云地域内，费用为 ¥0。</p>

@@ -37,11 +37,11 @@ import Supademo from '@site/src/components/Supademo';
 
 ## 创建项目\{#create-a-project}
 
-每个组织中默认自带项目 Default Project，其版本为**企业版**且不可删除。您可以根据业务需求，自行创建更多项目。当您创建项目时，您也会成为该项目的[项目管理员](./project-users#project-roles)。
+每个组织中默认自带项目 Default Project，其版本为**企业版**且不可删除。您可以根据业务需求，自行创建更多项目。当您创建项目时，您也会成为该项目的[项目管理员](./project-users)。
 
 ### 限制\{#limits}
 
-- 要创建项目，您必须是[组织管理员](./organization-users#organization-roles)。
+- 要创建项目，您必须是[组织管理员](./organization-users)。
 
 - 每个组织中最多可创建 100 个项目。
 
@@ -169,7 +169,7 @@ import Supademo from '@site/src/components/Supademo';
 
 ## 重命名项目\{#rename-a-project}
 
-要重命名项目，您必须是[组织管理员](./organization-users#organization-roles)。您可以通过 Web 控制台对项目进行重命名。
+要重命名项目，您必须是[组织管理员](./organization-users)。您可以通过 Web 控制台对项目进行重命名。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -181,7 +181,7 @@ import Supademo from '@site/src/components/Supademo';
 
 ## 删除项目\{#delete-a-project}
 
-要删除项目，您必须是[组织管理员](./organization-users#organization-roles)。删除项目前，您需要先删除该项目下的所有[集群](./manage-cluster#drop-cluster)和 [Volume](./manage-volumes-via-console#delete-a-volume)。
+要删除项目，您必须是[组织管理员](./organization-users)。删除项目前，您需要先删除该项目下的所有[集群](./manage-cluster#drop-cluster)和 [Volume](./manage-volumes-via-console#delete-a-volume)。
 
 项目一旦删除，该项目下的所有数据和资源将被清理。该操作不可撤销。
 

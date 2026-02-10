@@ -105,23 +105,23 @@ Index 是一种用于加速搜索与查询的数据结构。Zilliz Cloud 支持�
 
 根据 生效阶段，Function 可分为两大类：
 
-- **Text Function**
+- **Pre-search Function**
 
-    Text Function 用于定义如何将原始文本转换为可用于检索的向量表示。这类 Function 在创建 Collection 时配置，并作为 Collection Schema 的一部分存在。
+    Pre-search Function 用于定义如何将原始文本转换为可用于检索的向量表示。这类 Function 在创建 Collection 时配置，并作为 Collection Schema 的一部分存在。
 
-    常见的 Text Functions 包括：BM25 Function、Text Embedding Function。
+    常见的 Pre-search Function 包括：BM25 Function、Model-based Function。
 
-    有关 Text Function 工作机制的概念性说明，请参见 [Function & 模型推理概述](./function-and-model-inference-overview#text-functions-convert-text-to-vectors)。
+    有关 Pre-search Function 工作机制的概念性说明，请参见 [Function & 模型推理概述](./function-and-model-inference-overview#pre-search-functions-convert-text-to-vector-embeddings)。
 
     在 Zilliz Cloud 控制台中创建 Collection 时，你可以在 Collection 创建流程中添加 Function。
 
     <Supademo id="cmkceofmn0371z80h1pd26a8t" title="" isShowcase />
 
-- **Rerank Function**
+- **Post-search Function**
 
-    Rerank Function 用于在查询阶段对搜索结果进行进一步排序优化。与 Text Function 不同，Rerank Function **不绑定到 Collection Schema**，而是作为 search request 中的参数动态指定，对 search 返回的 candidate results 生效。
+    Post-search Function 用于在查询阶段对搜索结果进行进一步排序优化。与 Pre-search Function 不同，Post-search Function **不绑定到 Collection Schema**，而是作为 search request 中的参数动态指定，对 search 返回的 candidate results 生效。
 
-    Rerank Functions 具有以下特点：
+    Post-search Function 具有以下特点：
 
     - 仅在 query time 生效
 
@@ -129,7 +129,7 @@ Index 是一种用于加速搜索与查询的数据结构。Zilliz Cloud 支持�
 
     - 不影响 candidate retrieval
 
-    有关 Rerank Function 的工作原理，请参见 [Function & 模型推理概述](./function-and-model-inference-overview#rerank-functions-refine-result-order)。
+    有关 Post-search Function 的工作原理，请参见 [Function & 模型推理概述](./function-and-model-inference-overview#post-search-functions-rerank-candidate-results)。
 
 ### Partition 和 Partition key\{#partition-partition-key}
 

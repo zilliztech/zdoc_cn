@@ -68,7 +68,7 @@ Zilliz Cloud 以两阶段流程实现 NGRAM 索引：
 
     **示例**：当 `min_gram=2, max_gram=3`，字符串 `"AI database"` 被分解为：
 
-![Md7cwSCxRhmqy3bVpTXcmpeFnzd](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Md7cwSCxRhmqy3bVpTXcmpeFnzd.png)
+    ![Md7cwSCxRhmqy3bVpTXcmpeFnzd](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Md7cwSCxRhmqy3bVpTXcmpeFnzd.png)
 
     - **2-gram**：`AI`, `I_`, `_d`, `da`, `at`, …
 
@@ -92,7 +92,7 @@ Zilliz Cloud 以两阶段流程实现 NGRAM 索引：
 
     例如，若 2-gram `"AI"` 出现在文档 1, 5, 6, 8, 9，则索引记录为：`{"AI": [1,5,6,8,9]}`。
 
-![HDpFwIisdhr8IRb8QSOczdFOn1b](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/HDpFwIisdhr8IRb8QSOczdFOn1b.png)
+    ![HDpFwIisdhr8IRb8QSOczdFOn1b](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/HDpFwIisdhr8IRb8QSOczdFOn1b.png)
 
 ### 阶段 2：加速查询\{#phase-2-accelerate-queries}
 

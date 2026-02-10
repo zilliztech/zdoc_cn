@@ -152,7 +152,7 @@ Zilliz Cloud 提供多种方式来扩缩容集群资源。根据您的工作负�
 
     以下是帮助您快速选择合适扩缩容方式的建议：
 
-![DIlKwYWaLhUfKRbeI93coBZTnmb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/DIlKwYWaLhUfKRbeI93coBZTnmb.png)
+    ![DIlKwYWaLhUfKRbeI93coBZTnmb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/DIlKwYWaLhUfKRbeI93coBZTnmb.png)
 
     - 如果您非常清楚工作负载模式，例如每天的峰值时间固定，**手动**扩缩容和**定时**扩缩容是最适合您的选择。
 

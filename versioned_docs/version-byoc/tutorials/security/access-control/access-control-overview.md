@@ -56,7 +56,7 @@ Zilliz Cloud 将资源分布在控制面（Control Plane）和数据面（Data P
 
     - 组织管理员角色包含所有项目和集群权限。
 
-    有关组织角色的详情，请参考[管理组织用户](./organization-users#organization-roles)。
+    有关组织角色的详情，请参考[管理组织用户](./organization-users)。
 
 - **项目层级**
 
@@ -66,7 +66,7 @@ Zilliz Cloud 将资源分布在控制面（Control Plane）和数据面（Data P
 
     - 项目查看者角色包含查看某个项目及项目下所有集群的只读权限。
 
-    有关项目角色的详情，请参考[管理项目用户](./project-users#project-roles)。
+    有关项目角色的详情，请参考[管理项目用户](./project-users)。
 
 - **集群层级**
 

@@ -1,13 +1,13 @@
 ---
-title: "Model-based Function | Cloud"
+title: "Model-based Embedding Function | Cloud"
 slug: /model-based-functions
-sidebar_label: "Model-based Function"
+sidebar_label: "Model-based Embedding Function"
 beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
 notebook: FALSE
-description: "了解如何在 Zilliz Cloud 中使用 Model-based Function。 | Cloud"
+description: "了解如何在 Zilliz Cloud 中使用 Model-based Embedding Function。 | Cloud"
 type: origin
 token: OVc4wDypbi8zEQk9h5fcbnzrnKe
 sidebar_position: 3
@@ -27,11 +27,9 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# Model-based Function
+# Model-based Embedding Function
 
-了解如何在 Zilliz Cloud 中使用 Model-based Function。
-
-
+了解如何在 Zilliz Cloud 中使用 Model-based Embedding Function。
 
 import DocCardList from '@theme/DocCardList';
 
