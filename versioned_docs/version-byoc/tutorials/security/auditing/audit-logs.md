@@ -24,8 +24,6 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-import Procedures from '@site/src/components/Procedures';
-
 # VectorDB 审计日志
 
 审计日志允许管理员跟踪和监控 Zilliz Cloud 集群上的用户驱动的操作和 API 调用。此功能提供了数据平面活动的详细记录，包括向量搜索、查询执行、索引管理和其他数据操作。
@@ -84,68 +82,10 @@ import Procedures from '@site/src/components/Procedures';
 
 有关审计日志支持的操作和对应的字段，请参阅[审计日志参考](./audit-logs-ref)。
 
-## 启用审计日志\{#enable-audit-log}
+<Admonition type="info" icon="📘" title="说明">
 
-在 Zilliz Cloud 上，审计日志会直接转发到您的存储桶。
+<p>所有的审计日志将会直接推送到您在部署数据面时指定的对象存储桶内。</p>
+<p>如需导出审计日志到您的日志系统做深入分析，请<a href="https://support.zilliz.com.cn/hc/zh-cn/requests/new">联系我们</a>。</p>
 
-### 开始前\{#before-you-start}
+</Admonition>
 
-- 您拥有该项目的**组织管理员**或**项目管理员**权限。如果您没有相应权限，请联系 Zilliz Cloud 管理员。
-
-### 操作步骤\{#procedure}
-
-![zh-configure-auditing-1](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/zh-configure-auditing-1.png "zh-configure-auditing-1")
-
-<Procedures>
-
-1. 登录 [Zilliz Cloud 控制台](https://cloud.zilliz.com.cn/login)。
-
-1. 在目标项目页面，选择**集群**。
-
-1. 进入目标集群的详情页面，选择**审计日志**选项卡。当集群处于创建中、删除中或已删除状态时，该选项卡将不可用。
-
-1. 在**审计日志**区域，点击**开启**。
-
-1. 在弹出的对话框中，指定对象存储集成配置信息：
-
-    - **存储集成**：显示托管您对象存储的云服务商。
-
-    - **转发路径**：选择用于存储审计日志的存储桶。
-
-        <Admonition type="info" icon="📘" title="说明">
-
-        <p>只有与集群处于同一区域的存储桶才会显示在下拉列表中。</p>
-
-        </Admonition>
-
-    - **导出路径**：指定在存储桶中存放审计日志的目录路径。
-
-1. 点击**开启**。当**审计日志**状态显示为**运行中**时，说明已成功启用。如果状态显示为异常，请参阅[常见问题](./audit-logs#faq)获取故障排查方法。
-
-</Procedures>
-
-完成配置后，审计日志会以大约 5 分钟的间隔转发到您的存储桶。您可以随时访问存储桶来查看或管理所需日志。
-
-要了解日志条目中的参数信息，请参阅[审计日志参考](./audit-logs-ref)。
-
-## 管理审计日志\{#manage-audit-log}
-
-启用审计日志后，您可以根据需要编辑其配置或将其禁用。
-
-![zh-configure-auditing-2](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/zh-configure-auditing-2.png "zh-configure-auditing-2")
-
-## 常见问题\{#faq}
-
-以下常见问题解答旨在帮助您解决在 Zilliz Cloud 上使用审计日志时可能遇到的问题。如需进一步帮助，请联系 [Zilliz Cloud 支持](https://zilliz.com.cn/contact-sales)。
-
-- **如果审计日志的状态为异常，该怎么办？**
-
-    **审计日志**状态为异常表示日志转发出现问题。可通过以下步骤进行排查：
-
-    - **验证存储桶**：确认已正确配置存储桶，并且您拥有相应的访问权限。
-
-    - **联系支持**：如果问题仍然存在，请联系 [Zilliz Cloud 支持](https://zilliz.com.cn/contact-sales)以获取进一步协助。
-
-- **异常集群状态会影响审计日志服务吗？**
-
-    集群状态异常意味着集群可能存在网络连接或 Zilliz Cloud 服务中断等问题。然而，这些问题并不会影响审计日志服务，该服务会继续正常运行并将日志转发到您的存储桶。如果您遇到持续性问题，请联系 [Zilliz Cloud 支持](https://zilliz.com.cn/contact-sales)。
