@@ -60,6 +60,12 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>在调用数据面 RESTful API 接口时，请使用一个由冒号分隔的目标集群的用户名和密码，如 <code>username:password</code>，做为访问鉴权凭据。</p>
+
+</Admonition>
+
 ### 组织账单管理员\{#organization-billing-admin}
 
 组织账单管理员具备管理组织账单费用的权限。这个角色 不具备访问组织中的其他数据的权限。

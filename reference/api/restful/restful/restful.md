@@ -4,11 +4,27 @@ sidebar_position: 0
 slug: /restful
 ---
 
+import Admonition from '@theme/Admonition';
+
 # RESTful API 参考
 
 Zilliz Cloud 提供了 RESTful API，以便您可以操作您的集群、Collection 以及存储在其中的数据。在深入了解之前，有几件事情值得注意：
 
 Zilliz Cloud 使用 Control Plane 来集中管理集群和相关资源，而 Data Plane 则负责特定集合中的数据存储和处理。
+
+<Admonition type="info" title="Note">
+
+在使用 RESTful API 执行操作时，您可以使用以下两种方法进行身份验证：
+
+- 使用 API 密钥
+
+    要获取 API 密钥，请按照[API 密钥](/docs/manage-api-keys)中的说明进行操作。
+
+- 使用集群令牌
+
+    要获取集群令牌，请使用冒号（:）将目标集群的用户名和密码连接起来，如 `username:password`。注意，BYOC 集群仅支持使用集群令牌进行身份验证。
+
+</Admonition>
 
 Control Plane 提供了 **Cloud**、**Cluster**、**Import** 和 **Pipeline** 的相关 API 接口。Data Plane 提供了 **Collection** 和 **Vector** 的相关 API 接口。
 

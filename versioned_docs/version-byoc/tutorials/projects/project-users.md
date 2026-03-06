@@ -66,6 +66,12 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>在调用数据面 RESTful API 接口时，请使用一个由冒号分隔的目标集群的用户名和密码，如 <code>username:password</code>，做为访问鉴权凭据。</p>
+
+</Admonition>
+
 ### 设置项目访问策略
 
 为了在访问授权中遵循最小授权策略，您可以为受邀用户配置细粒度的集群访问策略。
@@ -99,6 +105,12 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>在调用数据面 RESTful API 接口时，请使用一个由冒号分隔的目标集群的用户名和密码，如 <code>username:password</code>，做为访问鉴权凭据。</p>
+
+</Admonition>
+
 #### 只读
 
 具备查看项目及其资源（集群、Database、Collection）的权限。
@@ -117,6 +129,12 @@ import Admonition from '@theme/Admonition';
      <td><ul><li><p>部分 Collection 操作</p><ul><li><p><a href="/reference/restful/describe-collection-v2">查看 Collection 详情</a></p></li><li><p><a href="/reference/restful/get-collection-load-state-v2">查看 Collection 加载状态</a></p></li><li><p><a href="/reference/restful/get-collection-stats-v2">查看 Collection 统计信息</a></p></li><li><p><a href="/reference/restful/has-collection-v2">查看 Collection 是否存在</a></p></li><li><p><a href="/reference/restful/list-collections-v2">查看 Collection 列表</a></p></li></ul></li><li><p>部分 Index 操作</p><ul><li><p><a href="/reference/restful/describe-index-v2">查看索引详情</a></p></li><li><p><a href="/reference/restful/list-indexes-v2">查看索引列表</a></p></li></ul></li><li><p>部分 Partition 操作</p><ul><li><p><a href="/reference/restful/get-partition-statistics-v2">查看 Partition 统计信息</a></p></li><li><p><a href="/reference/restful/has-partition-v2">查看 Partition 是否存在</a></p></li><li><p><a href="/reference/restful/list-partitions-v2">查看 Partition 列表</a></p></li></ul></li><li><p>部分 Alias 操作</p><ul><li><p><a href="/reference/restful/describe-alias-v2">查看 Alias 详情</a></p></li><li><p><a href="/reference/restful/list-aliases-v2">查看 Alias 列表</a></p></li></ul></li><li><p>部分 Vector 操作</p><ul><li><p><a href="/reference/restful/get-v2">获取 Entity</a></p></li><li><p><a href="/reference/restful/hybrid-search-v2">Hybrid Search</a></p></li><li><p><a href="/reference/restful/query-v2">查询</a></p></li><li><p><a href="/reference/restful/search-v2">搜索</a></p></li></ul></li></ul></td>
    </tr>
 </table>
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>在调用数据面 RESTful API 接口时，请使用一个由冒号分隔的目标集群的用户名和密码，如 <code>username:password</code>，做为访问鉴权凭据。</p>
+
+</Admonition>
 
 被邀请的用户将通过电子邮件收到邀请，并必须在 48 小时内接受邀请以加入项目。或者，您也可以直接从 Web 控制台复制邀请链接并分享给被邀请人。
 

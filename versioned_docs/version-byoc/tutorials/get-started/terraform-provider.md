@@ -33,7 +33,7 @@ Zilliz Cloud Terraform Provider 是一个开源的基础设施即代码（Infras
 
 ## 身份验证
 
-在使用 Terraform 进行资源部署之前，你必须将 Terraform 与 Zilliz Cloud 平台进行身份验证。在使用该 Terraform Provider 执行任何操作之前，必须使用具有适当权限的 Zilliz Cloud API 密钥完成身份验证。
+在使用 Terraform 进行资源部署之前，你必须将 Terraform 与 Zilliz Cloud 平台进行身份验证。在使用该 Terraform Provider 执行操作之前，必须使用具有适当权限的 Zilliz Cloud API 密钥完成身份验证。
 
 要创建 Zilliz Cloud API 密钥，请按照以下步骤操作：
 
@@ -50,6 +50,10 @@ Zilliz Cloud Terraform Provider 是一个开源的基础设施即代码（Infras
 </Procedures>
 
 有关管理 API 密钥的更多信息，请参阅[API 密钥](./manage-api-keys)。
+
+在执行诸如 Collection 管理、搜索或操作等数据面操作时，您需要一个使用冒号（:）连接的目标集群的用户名和密码，如 `username:password`，做为该集群的访问令牌。
+
+在下方所列的资源中，您可以使用 Zilliz Cloud API 密钥管理集群、用户和角色、以及 BYOC 项目等资源。对于 Database、Collection 和别名、Partition 以及 Index 等资源，您需要使用对应集群的访问令牌。
 
 ## 可管理资源
 

@@ -75,6 +75,8 @@ import Admonition from '@theme/Admonition';
 
 ## 使用限制\{#limits-and-restrictions}
 
+- 在执行数据操作时，请使用对应集群的访问令牌。一个合法的集群访问令牌应该为一个由冒号（:）连接的目标集群的用户名和密码，如 `username:password`。
+
 - 每个组织中可创建最多 100 个自定义 API 密钥。
 
 - API 密钥的管理权限由用户的组织和项目角色决定。具体权限如下：
@@ -308,7 +310,7 @@ import Admonition from '@theme/Admonition';
 
 - **重置自定义 API 密钥**：仅**组织管理员**和**项目管理员**有权限重置自定义 API 密钥。
 
-    undefined
+    ![reset-customized-api-keys-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/reset-customized-api-keys-cn.png "reset-customized-api-keys-cn")
 
 ## 删除 API 密钥\{#delete-an-api-key}
 
