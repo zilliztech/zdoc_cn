@@ -775,8 +775,20 @@ class larkDocWriter {
             let patchedContent = content;
             let maxIterations = 50; // Prevent infinite loops
             let iteration = 0;
+            const seenHashes = new Set();
 
             while (iteration < maxIterations) {
+                // Cycle detection: stop if we've visited this exact content state before
+                let h = 5381;
+                for (let i = 0; i < patchedContent.length; i++) {
+                    h = Math.imul(h, 33) ^ patchedContent.charCodeAt(i);
+                }
+                if (seenHashes.has(h)) {
+                    console.warn('Cycle detected in MDX patch loop, stopping to prevent infinite iteration');
+                    break;
+                }
+                seenHashes.add(h);
+
                 try {
                     // Try to compile the current content
                     await compile(patchedContent, { development: false });
@@ -825,7 +837,32 @@ class larkDocWriter {
                             
                             break;
                         case 'unexpected-closing-slash':
-                            console.log(patchedContent.split('\n')[error.line-1])
+                            // For this specific error "Unexpected closing slash `/` in tag, expected an open tag first"
+                            // it typically means there's a stray `</content>` tag or similar erroneous closing tag
+                            // Remove erroneous closing tags at the end of document
+                            const originalContent = patchedContent;
+                            patchedContent = patchedContent.replace(/<\/(?:content|[\w\d]+)>\s*$/, '');
+                            if (originalContent !== patchedContent) {
+                                madeChanges = true;
+                            } else {
+                                // If no match at end, look for the erroneous tag anywhere in the content
+                                // that might be causing the slash error
+                                patchedContent = patchedContent.replace(/<[/](\w+)>/g, (match, tagName) => {
+                                    // If this tag doesn't have a matching opening tag, remove it
+                                    const openingTagCount = (patchedContent.match(new RegExp(`<${tagName}(?:\\s|>|/>)`, 'g')) || []).length;
+                                    const closingTagCount = (patchedContent.match(new RegExp(`<\\/${tagName}>`, 'g')) || []).length;
+                                    
+                                    // If there are more closing tags than opening tags, this closing tag is erroneous
+                                    if (closingTagCount > openingTagCount) {
+                                        return ''; // Remove the erroneous closing tag
+                                    }
+                                    return match;
+                                });
+                                
+                                if (originalContent !== patchedContent) {
+                                    madeChanges = true;
+                                }
+                            }
                             break;
                         case 'unexpected-character':
                             if (error.message.includes('U+002C') || 
