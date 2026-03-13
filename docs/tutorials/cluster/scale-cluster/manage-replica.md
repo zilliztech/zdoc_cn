@@ -37,7 +37,7 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>此功能仅限<strong>企业版</strong>项目中的 <strong>Dedicated</strong> 集群使用。</p>
+<p>此功能仅限<strong>企业版</strong>项目使用。</p>
 
 </Admonition>
 
@@ -47,7 +47,7 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 - 集群 Query CU 数量大于等于 8。
 
-- Query CU 数量 x Replica 数量不得超过 256。
+- Query CU 数量 x Replica 数量不得超过 2,048。
 
 <Admonition type="caution" icon="🚧" title="警告">
 

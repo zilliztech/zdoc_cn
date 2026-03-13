@@ -184,8 +184,8 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>Dedicated</p></td>
-     <td><p>CU 规格 &ast; Replica 数量 &lt;=256</p></td>
-     <td><p>在自助操作时，单个集群最多使用 256 个 CU。如果创建了 Replica，CU 规格与 Replica 数量的乘积不得超过 256。</p></td>
+     <td><p>CU 规格 &ast; Replica 数量 &lt;=2048</p></td>
+     <td><p>在自助操作时，单个集群最多使用 256 个 CU。如果创建了 Replica，CU 规格与 Replica 数量的乘积不得超过 2048。</p></td>
    </tr>
 </table>
 
