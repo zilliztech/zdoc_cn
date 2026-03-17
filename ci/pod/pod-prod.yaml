@@ -4,6 +4,10 @@ metadata:
   namespace: ali-test-env
 spec:
   enableServiceLinks: false
+  hostAliases:
+  - ip: "114.55.249.124"
+    hostnames:
+    - "argocd.op.zilliz.com.cn"
   containers:
   - name: main
     image: harbor-us-vdc.zilliz.cc/devops/krte:20211213-dcc15e9
