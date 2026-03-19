@@ -6,6 +6,11 @@ on:
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    outputs:
+      card_id: ${{ steps.card.outputs.card_id }}
+      card_started_at: ${{ steps.card.outputs.card_started_at }}
+      card_stages: ${{ steps.card.outputs.card_stages }}
+      card_title: ${{ steps.card.outputs.card_title }}
     steps:
     - name: get current date
       id: date
@@ -14,16 +19,24 @@ jobs:
       uses: actions/setup-node@v4.0.1
     - name: checkout repo
       uses: actions/checkout@v4
-    - name: fetch docs
+    - name: install deps & create card
+      id: card
       run: |
         yarn
-        npx docusaurus report-to-lark -m "🔥 开始构建中文用户指南..."
+        npx docusaurus report-to-lark --card-create --title "构建中文文档" --stages "获取用户指南,构建文档站点,检查链接,获取参考文档,构建参考文档,检查参考链接"
+      env:
+        APP_ID: ${{ secrets.APP_ID }}
+        APP_SECRET: ${{ secrets.APP_SECRET }}
+        FEISHU_HOST: ${{ vars.FEISHU_HOST }}
+    - name: fetch docs
+      run: |
         npx docusaurus fetch-lark-docs -man guides -tar zilliz.saas -oss
         npx docusaurus fetch-lark-docs -man guides -tar zilliz.saas -post
         npx docusaurus fetch-lark-docs -man guides -tar zilliz.paas -oss -skipS
         npx docusaurus fetch-lark-docs -man guides -tar zilliz.paas -post
         npx docusaurus fetch-lark-docs -man onpremise -tar paas -oss
         npx docusaurus fetch-lark-docs -man onpremise -tar paas -post
+        npx docusaurus report-to-lark --card-advance
       env:
         APP_ID: ${{ secrets.APP_ID }}
         APP_SECRET: ${{ secrets.APP_SECRET }}
@@ -38,20 +51,20 @@ jobs:
         IMAGE_BED_URL: ${{ vars.IMAGE_BED_URL }}
     - name: build docsite
       run: |
-        npx docusaurus report-to-lark -m "🔥 用户指南已成功获取！开始构建文档站点..."
         npm run build
+        npx docusaurus report-to-lark --card-advance
       env:
         APP_ID: ${{ secrets.APP_ID }}
         APP_SECRET: ${{ secrets.APP_SECRET }}
         FEISHU_HOST: ${{ vars.FEISHU_HOST }}
     - name: check links
+      run: |
+        npx docusaurus link-checks
+        npx docusaurus report-to-lark --card-advance
       env:
         APP_ID: ${{ secrets.APP_ID }}
         APP_SECRET: ${{ secrets.APP_SECRET }}
         FEISHU_HOST: ${{ vars.FEISHU_HOST }}
-      run: |
-        npx docusaurus report-to-lark -m "🔥 用户构建成功！开始检查链接..."
-        npx docusaurus link-checks
     - name: commit to dev
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
@@ -61,7 +74,6 @@ jobs:
     - name: fetch sdk references
       id: fetch_sdk_refs
       run: |
-        npx docusaurus report-to-lark -m "🔥 获取中文参考文档..."
         npx docusaurus fetch-lark-docs -man python -src-only
         npx docusaurus fetch-lark-docs -man pymilvus25 -src-only
         npx docusaurus fetch-lark-docs -man pymilvus26 -tar zilliz -oss
@@ -77,7 +89,8 @@ jobs:
         npx docusaurus fetch-lark-docs -man gov2 -src-only
         npx docusaurus fetch-lark-docs -man gov226 -tar zilliz -oss
         npx docusaurus fetch-lark-docs -man gov226 -tar zilliz -post
-        npx docusaurus fetch-apifox-docs -s plugins/apifox-docs/meta/openapi.json -l zh-CN  
+        npx docusaurus fetch-apifox-docs -s plugins/apifox-docs/meta/openapi.json -l zh-CN
+        npx docusaurus report-to-lark --card-advance
       env:
         APP_ID: ${{ secrets.APP_ID }}
         APP_SECRET: ${{ secrets.APP_SECRET }}
@@ -92,20 +105,20 @@ jobs:
         IMAGE_BED_URL: ${{ vars.IMAGE_BED_URL }}
     - name: build docsite
       run: |
-        npx docusaurus report-to-lark -m "🔥 参考文档已成功获取！开始构建文档站点..."
         npm run build
+        npx docusaurus report-to-lark --card-advance
       env:
         APP_ID: ${{ secrets.APP_ID }}
         APP_SECRET: ${{ secrets.APP_SECRET }}
         FEISHU_HOST: ${{ vars.FEISHU_HOST }}
     - name: link checks
+      run: |
+        npx docusaurus link-checks
+        npx docusaurus report-to-lark --card-advance
       env:
         APP_ID: ${{ secrets.APP_ID }}
         APP_SECRET: ${{ secrets.APP_SECRET }}
         FEISHU_HOST: ${{ vars.FEISHU_HOST }}
-      run: |
-        npx docusaurus report-to-lark -m "🔥 文档站点构建成功！开始检查链接..."
-        npx docusaurus link-checks
     - name: commit to dev
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
@@ -122,9 +135,9 @@ jobs:
     - name: checkout repo
       uses: actions/checkout@v4
     - name: report failure
-      run : |
+      run: |
         yarn
-        npx docusaurus report-to-lark -m "🔥 构建失败！请检查日志。"
+        npx docusaurus report-to-lark --card-finish --message-id "${{ needs.fetch.outputs.card_id }}" --status fail --title "构建中文文档" --stages "${{ needs.fetch.outputs.card_stages }}" --started-at "${{ needs.fetch.outputs.card_started_at }}"
       env:
         APP_ID: ${{ secrets.APP_ID }}
         APP_SECRET: ${{ secrets.APP_SECRET }}
@@ -139,11 +152,10 @@ jobs:
     - name: checkout repo
       uses: actions/checkout@v4
     - name: report success
-      run : |
+      run: |
         yarn
-        npx docusaurus report-to-lark -m "🔥 构建成功！可以前往 Jenkins 进行正式构建！"
+        npx docusaurus report-to-lark --card-finish --message-id "${{ needs.fetch.outputs.card_id }}" --status success --title "构建中文文档" --stages "${{ needs.fetch.outputs.card_stages }}" --started-at "${{ needs.fetch.outputs.card_started_at }}"
       env:
         APP_ID: ${{ secrets.APP_ID }}
         APP_SECRET: ${{ secrets.APP_SECRET }}
-        FEISHU_HOST: ${{ vars.FEISHU_HOST }}  
-      
+        FEISHU_HOST: ${{ vars.FEISHU_HOST }}
