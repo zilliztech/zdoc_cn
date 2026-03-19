@@ -143,6 +143,7 @@ const config = {
     ['./plugins/lark-docs', larkDocsConfig],
     './plugins/apifox-docs',
     './plugins/link-checks',
+    './plugins/mdx-parse',
     ['./plugins/report-to-lark',{
         receiveId: 'oc_0e36909edb9247c7b6ecb437e99f1d68'
       }

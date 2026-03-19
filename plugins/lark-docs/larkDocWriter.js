@@ -1,4 +1,5 @@
 const larkTokenFetcher = require('./larkTokenFetcher.js')
+const { removeTabsHallucinations, unescapeKnownJsxTags } = require('../mdx-parse/mdxPatcher')
 const Downloader = require('./larkImageDownloader.js')
 const slugify = require('slugify')
 const fs = require('node:fs')
@@ -12,6 +13,16 @@ const _ = require('lodash')
 require('dotenv/config')
 
 const IMAGE_BED_URL = process.env.IMAGE_BED_URL || 'https://zdoc-imges.oss-cn-hangzhou.aliyuncs.com'
+
+// Known JSX block components that the MDX patcher must never escape.
+// Shared by __escape_non_html_tags (safeUppercaseTags seed) and __mdx_patches
+// (end-tag-mismatch guard). Keep in sync with mdxPatcher.js KNOWN_JSX_TAGS.
+const KNOWN_JSX_TAGS = new Set([
+    'Admonition', 'Tabs', 'TabItem', 'DocCard', 'DocCardList',
+    'Details', 'CodeBlock', 'ThemedImage', 'TOCInline', 'Highlight',
+    'Banner', 'Bars', 'Blocks', 'Cards', 'Grid', 'Hero', 'Procedures',
+    'RestSpecs', 'Stories', 'Supademo',
+]);
 
 class larkDocWriter {
     constructor(
@@ -767,12 +778,165 @@ class larkDocWriter {
         return result;
     }
 
+    __escape_currency_dollars(content) {
+        // Replace currency $<digit> with &#36;<digit> outside fenced code blocks and
+        // inline code spans, to prevent remark-math/KaTeX from treating them as math
+        // delimiters (which causes unicodeTextInMathMode warnings and broken rendering).
+        const lines = content.split('\n');
+        let inCodeBlock = false;
+        const result = [];
+
+        for (let line of lines) {
+            const stripped = line.trim();
+            if (stripped.startsWith('```') || stripped.startsWith('~~~')) {
+                inCodeBlock = !inCodeBlock;
+            }
+
+            if (!inCodeBlock) {
+                // Split by inline code spans; odd-indexed segments are inside backticks
+                const parts = line.split(/(`+[^`]+`+)/);
+                line = parts.map((part, i) => {
+                    if (i % 2 === 0) {
+                        // Outside inline code — replace $<digit> with HTML entity
+                        return part.replace(/\$(?=\d)/g, '&#36;');
+                    }
+                    return part; // Inside inline code — leave unchanged
+                }).join('');
+            }
+
+            result.push(line);
+        }
+
+        return result.join('\n');
+    }
+
+    __escape_non_html_tags(content) {
+        // Escape any lowercase tag whose name is not a known HTML element or a content-filter
+        // tag used by this writer, outside fenced code blocks and inline code spans.
+        const KNOWN_TAGS = new Set([
+            // Standard HTML elements
+            'a', 'abbr', 'address', 'area', 'article', 'aside', 'audio',
+            'b', 'base', 'bdi', 'bdo', 'blockquote', 'br', 'button',
+            'canvas', 'caption', 'cite', 'code', 'col', 'colgroup',
+            'data', 'datalist', 'dd', 'del', 'details', 'dfn', 'dialog', 'div', 'dl', 'dt',
+            'em', 'embed',
+            'fieldset', 'figcaption', 'figure', 'footer', 'form',
+            'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'head', 'header', 'hr', 'html',
+            'i', 'iframe', 'img', 'input', 'ins',
+            'kbd',
+            'label', 'legend', 'li', 'link',
+            'main', 'map', 'mark', 'menu', 'meta', 'meter',
+            'nav', 'noscript',
+            'object', 'ol', 'optgroup', 'option', 'output',
+            'p', 'picture', 'pre', 'progress',
+            'q',
+            'rp', 'rt', 'ruby',
+            's', 'samp', 'script', 'section', 'select', 'slot', 'small', 'source', 'span',
+            'strong', 'style', 'sub', 'summary', 'sup',
+            'table', 'tbody', 'td', 'template', 'textarea', 'tfoot', 'th', 'thead',
+            'time', 'title', 'tr', 'track',
+            'u', 'ul',
+            'var', 'video',
+            'wbr',
+            // Content-filter tags used by this writer (processed before MDX patching)
+            'include', 'exclude',
+        ]);
+
+        // Structural pre-scan: build set of safe uppercase/PascalCase tag names.
+        const safeUppercaseTags = new Set(KNOWN_JSX_TAGS);
+        const upperScanRegex = /[<]([A-Z][A-Za-z0-9]*)/g;
+        let upperMatch;
+        while ((upperMatch = upperScanRegex.exec(content)) !== null) {
+            const tn = upperMatch[1];
+            if (safeUppercaseTags.has(tn)) continue;
+            if (new RegExp(`<\\/${tn}>`).test(content) ||
+                new RegExp(`<${tn}\\s*\\/>`).test(content) ||
+                new RegExp(`<${tn}\\s+`).test(content)) {
+                safeUppercaseTags.add(tn);
+            }
+        }
+
+        const lines = content.split('\n');
+        let inCodeBlock = false;
+        const result = [];
+
+        for (let line of lines) {
+            const stripped = line.trim();
+            if (stripped.startsWith('```') || stripped.startsWith('~~~')) {
+                inCodeBlock = !inCodeBlock;
+            }
+
+            if (!inCodeBlock) {
+                // Split by inline code spans; odd-indexed segments are inside backticks
+                const parts = line.split(/(`+[^`]+`+)/);
+                line = parts.map((part, i) => {
+                    if (i % 2 === 0) {
+                        // Escape non-HTML lowercase placeholder tags (e.g. <bucket_name>, <region-code>).
+                        part = part.replace(/(?<!\\)<\/?([a-z][a-z0-9]*(?:[_-][a-z0-9]+)*)\s*\/?>/g, (match, tagName) => {
+                            return KNOWN_TAGS.has(tagName) ? match : '\\' + match;
+                        });
+                        // Escape uppercase/PascalCase tags not identified as real JSX components.
+                        part = part.replace(/(?<!\\)<\/?([A-Z][A-Za-z0-9]*)\s*\/?>/g, (match, tagName) => {
+                            if (safeUppercaseTags.has(tagName)) return match;
+                            return match.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+                        });
+                        // Escape dotted-name PascalCase tags (e.g. <CreateCollectionReq.FieldSchema>).
+                        part = part.replace(/\\?<\/?([A-Z][A-Za-z0-9]*(?:\.[A-Za-z][A-Za-z0-9]*)+)\s*\/?>/g, (match) => {
+                            return match.replace(/^\\/, '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+                        });
+                        return part;
+                    }
+                    return part; // Inside inline code — leave unchanged
+                }).join('');
+            }
+
+            result.push(line);
+        }
+
+        return result.join('\n');
+    }
+
+    /**
+     * Convert showdown HTML to MDX-safe content for use inside JSX components.
+     * - Replaces <pre><code> blocks with markdown fenced code blocks
+     * - Escapes { and } outside <code> inline spans
+     */
+    __showdownToMdxSafe(html) {
+        // Escape { and } outside <code>...</code> and <pre>...</pre> spans first
+        // (before converting <pre><code> to fences, so code content is still protected)
+        const parts = html.split(/(<(?:code|pre)(?:\s[^>]*)?>[\s\S]*?<\/(?:code|pre)>)/g);
+        html = parts.map((part, i) => {
+            if (i % 2 === 0) {
+                return part.replace(/\{/g, '\\{').replace(/\}/g, '\\}');
+            }
+            return part;
+        }).join('');
+
+        // Convert <pre><code class="lang language-lang">...</code></pre> to fenced code blocks
+        html = html.replace(/<pre><code(?:\s+class="([^"]*)")?>([\s\S]*?)<\/code><\/pre>/g, (match, classAttr, code) => {
+            let lang = '';
+            if (classAttr) {
+                const langMatch = classAttr.match(/(?:^|\s)language-(\S+)/);
+                lang = langMatch ? langMatch[1] : (classAttr.split(/\s+/)[0] || '');
+            }
+            const decoded = code.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"');
+            return '\n```' + lang + '\n' + decoded.replace(/^\n|\n$/g, '') + '\n```\n';
+        });
+
+        return html;
+    }
+
     async __mdx_patches(content) {
         try {
             // Import MDX compiler dynamically as it's an ES module
             const { compile } = await import('@mdx-js/mdx');
+            const remarkMath = (await import('remark-math')).default;
 
-            let patchedContent = content;
+            // Pre-process: fix translation/editor artefacts, then escape problem characters
+            let patchedContent = removeTabsHallucinations(content);
+            patchedContent = unescapeKnownJsxTags(patchedContent);
+            patchedContent = this.__escape_currency_dollars(patchedContent);
+            patchedContent = this.__escape_non_html_tags(patchedContent);
             let maxIterations = 50; // Prevent infinite loops
             let iteration = 0;
             const seenHashes = new Set();
@@ -791,7 +955,7 @@ class larkDocWriter {
 
                 try {
                     // Try to compile the current content
-                    await compile(patchedContent, { development: false });
+                    await compile(patchedContent, { development: false, remarkPlugins: [remarkMath] });
                     console.log(`MDX compilation succeeded after ${iteration} fixes`);
                     return patchedContent; // If compilation succeeds, return the fixed content
                 } catch (error) {
@@ -819,65 +983,121 @@ class larkDocWriter {
                                 }
                             }
                             break;
-                        case 'end-tag-mismatch':
-                            let tag = error.message.match(/<(?!\/)([A-Za-z][A-Za-z0-9:_-]*)\b[^>]*>/g)?.[0];
-                            let pos = error.message.match(/(\d+):(\d+)-(\d+):(\d+)/);
-                            if (tag && pos) {
-                                const start = { line: parseInt(pos[1]), column: parseInt(pos[2]) }
+                        case 'end-tag-mismatch': {
+                            const wrongClose = error.message.match(/Unexpected closing tag `<\/([^>]+)>`/)?.[1];
+                            const expectedOpen = error.message.match(/closing tag for `<([A-Za-z][^>/ ]*)(?:\s[^>]*)?>?`/)?.[1];
+                            const posMatch = error.message.match(/(\d+):(\d+)-(\d+):(\d+)/);
+                            const isPlaceholder = expectedOpen && /[_-]/.test(expectedOpen);
 
-                                patchedContent = patchedContent.split('\n').map((line, index) => {
-                                    if (index === start.line - 1) {
-                                        line = line.slice(0, start.column - 1) + '\\' + line.slice(start.column - 1)
+                            if (!isPlaceholder && wrongClose && expectedOpen && wrongClose !== expectedOpen && posMatch) {
+                                const openLine = parseInt(posMatch[1]) - 1;
+                                const wrongCloseTag = `</${wrongClose}>`;
+                                const correctCloseTag = `</${expectedOpen}>`;
+                                const lines = patchedContent.split('\n');
+
+                                for (let i = openLine; i < lines.length; i++) {
+                                    const idx = lines[i].indexOf(wrongCloseTag);
+                                    if (idx !== -1) {
+                                        lines[i] = lines[i].slice(0, idx) + correctCloseTag + lines[i].slice(idx + wrongCloseTag.length);
                                         madeChanges = true;
+                                        break;
                                     }
+                                }
 
-                                    return line
-                                }).join('\n')
-                            }
-                            
-                            break;
-                        case 'unexpected-closing-slash':
-                            // For this specific error "Unexpected closing slash `/` in tag, expected an open tag first"
-                            // it typically means there's a stray `</content>` tag or similar erroneous closing tag
-                            // Remove erroneous closing tags at the end of document
-                            const originalContent = patchedContent;
-                            patchedContent = patchedContent.replace(/<\/(?:content|[\w\d]+)>\s*$/, '');
-                            if (originalContent !== patchedContent) {
-                                madeChanges = true;
-                            } else {
-                                // If no match at end, look for the erroneous tag anywhere in the content
-                                // that might be causing the slash error
-                                patchedContent = patchedContent.replace(/<[/](\w+)>/g, (match, tagName) => {
-                                    // If this tag doesn't have a matching opening tag, remove it
-                                    const openingTagCount = (patchedContent.match(new RegExp(`<${tagName}(?:\\s|>|/>)`, 'g')) || []).length;
-                                    const closingTagCount = (patchedContent.match(new RegExp(`<\\/${tagName}>`, 'g')) || []).length;
-                                    
-                                    // If there are more closing tags than opening tags, this closing tag is erroneous
-                                    if (closingTagCount > openingTagCount) {
-                                        return ''; // Remove the erroneous closing tag
-                                    }
-                                    return match;
-                                });
-                                
-                                if (originalContent !== patchedContent) {
+                                if (madeChanges) {
+                                    patchedContent = lines.join('\n');
+                                }
+                            } else if (!wrongClose && expectedOpen && posMatch) {
+                                // Skip known JSX components — escaping their opening tag causes a
+                                // cascade destroying the component structure.
+                                if (KNOWN_JSX_TAGS.has(expectedOpen)) {
+                                    break;
+                                }
+                                // The opening tag is not closed within its paragraph. Escape it.
+                                const openLine = parseInt(posMatch[1]) - 1;
+                                const openCol = parseInt(posMatch[2]) - 1;
+                                const lines = patchedContent.split('\n');
+
+                                if (openLine < lines.length && lines[openLine][openCol] === '<') {
+                                    lines[openLine] = lines[openLine].slice(0, openCol) + '&lt;' + lines[openLine].slice(openCol + 1);
+                                    patchedContent = lines.join('\n');
                                     madeChanges = true;
                                 }
                             }
+
                             break;
+                        }
+                        case 'unexpected-closing-slash': {
+                            // The error offset points to the `/` inside the orphaned closing tag.
+                            const slashOffset = error.place?.offset;
+
+                            if (slashOffset !== undefined) {
+                                let tagStart = slashOffset - 1;
+                                while (tagStart > 0 && patchedContent[tagStart] !== '<') tagStart--;
+                                let tagEnd = slashOffset;
+                                while (tagEnd < patchedContent.length && patchedContent[tagEnd] !== '>') tagEnd++;
+
+                                if (patchedContent[tagStart] === '<' && tagEnd < patchedContent.length) {
+                                    const before = patchedContent.slice(0, tagStart);
+                                    let after = patchedContent.slice(tagEnd + 1);
+                                    if (after.startsWith('\n')) after = after.slice(1);
+                                    patchedContent = before + after;
+                                    madeChanges = true;
+                                }
+                            }
+
+                            if (!madeChanges) {
+                                // Fallback: remove erroneous closing tags via regex
+                                const originalContent = patchedContent;
+                                patchedContent = patchedContent.replace(/<\/(?:content|[\w\d]+)>\s*$/, '');
+                                if (originalContent !== patchedContent) {
+                                    madeChanges = true;
+                                } else {
+                                    patchedContent = patchedContent.replace(/<[/](\w+)>/g, (match, tagName) => {
+                                        const openingTagCount = (patchedContent.match(new RegExp(`<${tagName}(?:\\s|>|/>)`, 'g')) || []).length;
+                                        const closingTagCount = (patchedContent.match(new RegExp(`<\\/${tagName}>`, 'g')) || []).length;
+                                        if (closingTagCount > openingTagCount) {
+                                            return '';
+                                        }
+                                        return match;
+                                    });
+                                    if (originalContent !== patchedContent) {
+                                        madeChanges = true;
+                                    }
+                                }
+                            }
+                            break;
+                        }
                         case 'unexpected-character':
-                            offset = error.place.offset;
-                            if (offset !== undefined && offset > 0 && offset < patchedContent.length) {
-                                for (let i = offset-1; i >= 0; i--) {
+                            offset = error.place?.offset;
+
+                            if (
+                                (error.message.includes('U+003D') || /U\+003[0-9]/.test(error.message)) &&
+                                offset !== undefined && offset > 0
+                            ) {
+                                // `=` sign or a digit (0–9) unexpected — replace `<` with `&lt;`
+                                for (let i = offset - 1; i >= Math.max(0, offset - 10); i--) {
+                                    if (patchedContent[i] === '<') {
+                                        patchedContent = patchedContent.slice(0, i) + '&lt;' + patchedContent.slice(i + 1);
+                                        madeChanges = true;
+                                        break;
+                                    }
+                                }
+                            } else if (
+                                (error.message.includes('U+002C') || error.message.includes('U+002A') || error.message.includes('U+3001')) &&
+                                offset !== undefined && offset > 0 && offset < patchedContent.length
+                            ) {
+                                // Comma, asterisk, or ideographic comma — escape the nearest preceding `<`
+                                for (let i = offset - 1; i >= 0; i--) {
                                     if (patchedContent[i] === '<') {
                                         patchedContent = patchedContent.slice(0, i) + '\\' + patchedContent.slice(i);
                                         madeChanges = true;
-
                                         break;
                                     }
                                 }
                             }
                             break;
-                        default: 
+                        default:
                             madeChanges = false;
                             break;
                     }
@@ -984,7 +1204,8 @@ class larkDocWriter {
         }               
         
         const converter = new showdown.Converter()
-        const html = converter.makeHtml(children.slice(1).map(line => line.replace(/^\s*/g, '')).join('\n'))
+        let html = converter.makeHtml(children.slice(1).map(line => line.replace(/^\s*/g, '')).join('\n'))
+        html = this.__showdownToMdxSafe(html);
 
         const raw = ' '.repeat(indent) + type + '\n\n' + ' '.repeat(indent) + html.split('\n').join('\n' + ' '.repeat(indent)) + '\n\n' + ' '.repeat(indent) + '</Admonition>';
         return raw.replace(/(\s*\n){3,}/g, `\n${' '.repeat(indent)}\n`);
@@ -1171,11 +1392,12 @@ class larkDocWriter {
         res.splice(1, 0, "");
 
         const converter = new showdown.Converter()
-        const html = converter.makeHtml(res.slice(1).map(line => line.replace(/^\s*/g, '')).join('\n'))
+        let html = converter.makeHtml(res.slice(1).map(line => line.replace(/^\s*/g, '')).join('\n'))
+        html = this.__showdownToMdxSafe(html);
 
         const raw = ' '.repeat(indent) + type + '\n\n' + ' '.repeat(indent) + html.split('\n').join('\n' + ' '.repeat(indent)) + '\n\n' + ' '.repeat(indent) + '</Admonition>';
         return raw.replace(/(\s*\n){3,}/g, '\n\n');
-    }  
+    }
     
     async __image(image) {
         const root = this.upload_to_oss ? IMAGE_BED_URL : `/${this.imageDir.replace(/^static\//g, '')}`

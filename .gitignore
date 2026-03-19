@@ -15,6 +15,7 @@ test.js
 404s.csv
 redirects.txt
 plugins/lark-docs/**/*.json
+.build-card-state.json
 
 scripts/docs
 .claude
