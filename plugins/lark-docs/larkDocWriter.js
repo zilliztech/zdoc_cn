@@ -334,7 +334,7 @@ class larkDocWriter {
                 let links = []
 
                 sub_page = sub_page.map(line => {
-                    if (line.startsWith('**')) {
+                    if (line.startsWith('**') && line.includes('{#')) {
                         let qtext = line.split('{#')[0].split('**')[1]
                         let qslug = line.split('{#')[1].split('}')[0]
                         line = `### ${qtext} \\{#${qslug}}`
