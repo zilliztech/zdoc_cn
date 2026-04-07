@@ -80,6 +80,7 @@ import Admonition from '@theme/Admonition';
 <Admonition type="info" icon="📘" title="说明">
 
 <p>如果数据传输发生在同一云地域内，费用为 ¥0。</p>
+<p>在查询或搜索请求中使用私网连接不会产生数据传输费用。</p>
 
 </Admonition>
 

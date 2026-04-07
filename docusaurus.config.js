@@ -12,7 +12,7 @@ import 'dotenv/config';
 const config = {
   title: 'Zilliz Cloud 开发指南',
   tagline: '一次找全所有和 Zilliz Cloud 开发相关的文档',
-  favicon: 'img/favicon.svg',
+  favicon: 'icons/favicon.svg',
   trailingSlash: false,
 
   // Set the production url of your site here
