@@ -49,7 +49,7 @@ const config = {
 
   // Future settings
   future: {
-    experimental_faster: {
+    faster: {
       swcJsLoader: true,
       swcJsMinimizer: true,
       swcHtmlMinimizer: true,
