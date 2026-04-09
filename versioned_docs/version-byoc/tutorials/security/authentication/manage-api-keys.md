@@ -39,6 +39,12 @@ import Admonition from '@theme/Admonition';
 
 - **自定义密钥**：由**组织管理员**和**项目管理员**手动创建，供应用程序或没有注册 Zilliz Cloud 账号的外部用户使用。自定义密钥适用于需要长期访问 Zilliz Cloud 资源的场景，确保即使 API 密钥的创建人离开组织，应用和外部用户也可以不间断地访问 Zilliz Cloud 资源。
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>请避免将个人 API 密钥用于生产环境。生产环境中推荐使用自定义密钥。个人 API 密钥将随着用户账号删除同步失效。</p>
+
+</Admonition>
+
 以下图表展示了 API 密钥的角色和资源访问权限。
 
 ![YElywNKSghmTLabpy7ice4vdnFe](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/YElywNKSghmTLabpy7ice4vdnFe.png)
@@ -325,3 +331,11 @@ import Admonition from '@theme/Admonition';
 </Admonition>
 
 ![delete-customized-api-keys-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/delete-customized-api-keys-cn.png "delete-customized-api-keys-cn")
+
+## 常见问题\{#faq}
+
+**可以在生产环境中使用个人 API 密钥吗？**
+
+请避免将个人 API 密钥用于生产环境。个人 API 密钥与用户账号绑定，当用户离开组织时会被自动删除。一旦密钥所有者的账号被移除，依赖该密钥的所有应用和服务将立即失去对 Zilliz Cloud 资源的访问权限。
+
+生产环境中请使用自定义 API 密钥。自定义密钥不绑定任何个人账号，即使团队成员离开组织，服务也不会受到影响。                 

@@ -126,7 +126,13 @@ Zilliz Cloud 提供 3 种组织角色。这些角色无法修改或删除。
 
 如果用户不再属于您的组织，您可以移除用户。
 
-要移除组织成员，你必须是组织管理员。
+要移除组织成员，您必须是组织管理员。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>移除成员后，其个人 API 密钥将立即失效且无法继续访问。为避免服务中断，请在执行此操作前，确保已全面替换各运行环境中正在使用的该密钥。此操作不可撤销。</p>
+
+</Admonition>
 
 ![edit-user-role-or-remove-org-user-zh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/edit-user-role-or-remove-org-user-zh.png "edit-user-role-or-remove-org-user-zh")
 
