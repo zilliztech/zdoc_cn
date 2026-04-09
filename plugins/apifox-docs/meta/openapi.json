@@ -36817,6 +36817,24 @@
 											}
 										}
 									},
+									"dbName": {
+										"type": "string",
+										"description": "The name of the target database.",
+										"x-i18n": {
+											"zh-CN": {
+												"description": "目标 Database 名称。"
+											}
+										}
+									},
+									"collectionName": {
+										"type": "string",
+										"description": "The name of the target collection.",
+										"x-i18n": {
+											"zh-CN": {
+												"description": "目标 Collection 名称。"
+											}
+										}
+									},
 									"metricQueries": {
 										"type": "array",
 										"items": {
@@ -36834,6 +36852,8 @@
 														"CU_COMPUTATION",
 														"CU_CAPACITY",
 														"STORAGE_USE",
+														"READ_VCU",
+														"WRITE_VCU",
 														"REQ_INSERT_COUNT",
 														"REQ_BULK_INSERT_COUNT",
 														"REQ_UPSERT_COUNT",
@@ -36947,15 +36967,6 @@
 																		"x-i18n": {
 																			"zh-CN": {
 																				"description": "指标名称。"
-																			}
-																		}
-																	},
-																	"stat": {
-																		"type": "string",
-																		"description": "Statistical method applied.",
-																		"x-i18n": {
-																			"zh-CN": {
-																				"description": "使用的统计方法。"
 																			}
 																		}
 																	},
@@ -37076,7 +37087,6 @@
 												"results": [
 													{
 														"name": "CU_COMPUTATION",
-														"stat": "AVG",
 														"unit": "percent",
 														"values": [
 															{
@@ -37105,8 +37115,8 @@
 										"summary": "failure",
 										"x-target-response": "OPTION 2",
 										"value": {
-											"code":21119,
-											"message":"The apikey is illegal."
+											"code": 21119,
+											"message": "The apikey is illegal."
 										}
 									}
 								}
@@ -37114,9 +37124,7 @@
 						}
 					}
 				},
-				"security": [
-
-				]
+				"security": []
 			}
 		},
 		"/v2/vectordb/collections/get_load_state": {
