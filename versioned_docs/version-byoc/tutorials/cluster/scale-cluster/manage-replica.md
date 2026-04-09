@@ -39,9 +39,9 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 在集群创建完成后，满足以下条件时，您可以设置 Replica：
 
-- 集群 Query CU 数量大于等于 8。
+- 集群 Query CU 数量大于等于 12。
 
-- Query CU 数量 x Replica 数量不得超过 2,048。
+- Query CU 数量 x Replica 数量不得超过 20480。
 
 <Admonition type="caution" icon="🚧" title="警告">
 
@@ -68,7 +68,7 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 </Admonition>
 
-您还可以使用 RESTful API 设置 Replica。`replica` 参数的取值应为 1 到 8 之间的整数。更多详情，请参考[修改集群副本数量](/reference/restful/modify-cluster-replica-v2)。
+您还可以使用 RESTful API 设置 Replica。`replica` 参数的取值应为 1 到 10 之间的整数。更多详情，请参考[修改集群副本数量](/reference/restful/modify-cluster-replica-v2)。
 
 ```bash
 export TOKEN="YOUR_API_KEY"

@@ -46,7 +46,7 @@ import Admonition from '@theme/Admonition';
 
 ## Replica\{#replicas}
 
-如需添加 Replica，集群规格需要为 **8 CU 或以上**。此外，Replica 功能还具有以下限制
+如需添加 Replica，集群规格需要为 **12 CU 或以上**。此外，Replica 功能还具有以下限制
 
 <table>
    <tr>
@@ -60,9 +60,9 @@ import Admonition from '@theme/Admonition';
      <td><p>每个集群最多可添加 10 个 Replica。</p></td>
    </tr>
    <tr>
-     <td><p>Replica 数量 &ast; CU 规格</p></td>
-     <td><p>&lt;= 256</p></td>
-     <td><p>CU 规格与 Replica 数量的乘积不得超过 256。</p></td>
+     <td><p>Query CU x Replica 数量</p></td>
+     <td><p>20480</p></td>
+     <td><p>每个集群的 Query CU x Replica 数量不得超过 20480</p></td>
    </tr>
 </table>
 
@@ -364,9 +364,9 @@ Shard 的数量上限取决于 CU 规格。
      <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><p>IP 地址 (CIDR)</p></td>
+     <td><p>控制台 IP 白名单</p></td>
      <td><p>100</p></td>
-     <td><p>IP 白名单中最多可添加 100 个 IP 地址。</p></td>
+     <td><p>控制台 IP 白名单中最多可添加 100 个 IP 地址。</p></td>
    </tr>
 </table>
 
