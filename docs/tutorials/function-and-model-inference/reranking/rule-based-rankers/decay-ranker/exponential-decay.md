@@ -119,7 +119,7 @@ $$
 其中：
 
 $$
-\lambda = \frac\{\ln(decay)}{scale}
+\lambda = \frac{\ln(decay)}{scale}
 $$
 
 用通俗易懂的语言来解释一下：

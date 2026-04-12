@@ -74,7 +74,7 @@ curl --request POST \
 
 以下为参数说明：
 
-- `{API_KEY}`：用于验证 API 请求的鉴权信息。请使用您自己的 Zilliz Cloud API 密钥。
+- `{API_KEY}`：用于验证 API 请求的鉴权信息。请使用您自己的 Zilliz Cloud API 密钥。值得注意的是，API 密钥仅能用于调用平台 API（控制面）请求。对于数据面连接，请使用集群鉴权凭据（`username:password`）。
 
 - `{CLUSTER_ID}`: 需要挂起的 Dedicated 集群的 ID。
 
@@ -137,7 +137,7 @@ curl --request POST \
 
 以下为参数说明：
 
-- `{API_KEY}`：用于验证 API 请求的鉴权信息。请使用您自己的 Zilliz Cloud API 密钥。
+- `{API_KEY}`：用于验证 API 请求的鉴权信息。请使用您自己的 Zilliz Cloud API 密钥。值得注意的是，API 密钥仅能用于调用平台 API（控制面）请求。对于数据面连接，请使用集群鉴权凭据（`username:password`）。
 
 - `{CLUSTER_ID}`: 需要恢复运行的集群的 ID。
 
@@ -148,6 +148,12 @@ curl --request POST \
 </Tabs>
 
 集群恢复运行请求成功后，会生成一条任务记录。您可以前往[任务中心](./job-center)查看任务进度。
+
+## 转换为全球集群\{#convert-to-a-global-cluster}
+
+如果您需要将现有的 Dedicated 集群转换为[全球集群](./global-cluster-explained)，请参考以下 Demo。
+
+<Supademo id="cmm5p53sh3hogdtfhemesjhv0" title=""  />
 
 ## 删除集群\{#drop-cluster}
 
@@ -187,7 +193,7 @@ curl --request POST \
 
 以下为参数说明：
 
-- `{API_KEY}`：用于验证 API 请求的鉴权信息。请使用您自己的 Zilliz Cloud API 密钥。
+- `{API_KEY}`：用于验证 API 请求的鉴权信息。请使用您自己的 Zilliz Cloud API 密钥。值得注意的是，API 密钥仅能用于调用平台 API（控制面）请求。对于数据面连接，请使用集群鉴权凭据（`username:password`）。
 
 - `{CLUSTER_ID}`: 需要恢复运行的集群的 ID。
 

@@ -477,7 +477,7 @@ curl --request POST \      --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/l
 
 ### 基于时间戳过滤的查询\{#query-with-timestamp-filtering}
 
-使用算术运算符（如 ==、!=、\<、>、\<=、>=）。
+使用算术运算符（如 ==、!=、\<、>、&lt;=、>=）。
 
 有关 Zilliz Cloud 中可用的完整算术运算符列表，请参考 [基本操作符](./basic-filtering-operators)。
 
@@ -583,7 +583,7 @@ curl --request POST \
 
 - `ISO '2025-01-03T00:00:00+08:00'` 是遵循 ISO 8601 格式的时间戳字面量，包含其时区偏移量。
 
-- `!=` 用于将字段值与该字面量进行比较。其他支持的运算符包括 ==、\<、\<=、> 和 >=。
+- `!=` 用于将字段值与该字面量进行比较。其他支持的运算符包括 ==、\<、&lt;=、> 和 >=。
 
 ### 时间区间（Interval）运算\{#interval-operations}
 

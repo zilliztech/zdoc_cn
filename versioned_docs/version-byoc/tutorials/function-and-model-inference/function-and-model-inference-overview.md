@@ -90,7 +90,7 @@ Pre-search Function 在候选结果检索之前运行。它们的作用是将原
      <td><p>以关键词为中心的全文检索、文档搜索、代码搜索，或对精确词项匹配和本地高性能有要求的场景。</p></td>
    </tr>
    <tr>
-     <td><p><strong>Model-based Functions</strong></p></td>
+     <td><p><strong>Model-based Embedding Functions</strong></p></td>
      <td><p>稠密向量</p></td>
      <td><p>使用机器学习模型对文本的语义含义进行编码，实现超越精确关键词匹配的相似性检索。</p><p>需要通过托管模型或第三方模型服务进行<a href="./function-and-model-inference-overview#understand-model-inference">模型推理</a>。</p></td>
      <td><p>语义搜索、自然语言查询、问答式检索，以及更关注概念相似性而非精确匹配的场景。</p></td>
@@ -135,101 +135,4 @@ Post-search Function 作用于搜索阶段返回的候选结果，通过额外�
 </table>
 
 由于 Post-search Function 仅作用于已检索到的候选结果，它们只会影响结果顺序，而不会改变检索范围。
-
-## 理解模型推理\{#understand-model-inference}
-
-在 Zilliz Cloud 的 Function 架构中，**模型推理并不是一个独立的概念或执行阶段**，而是某些 Function 类型所采用的一种实现方式。
-
-本节将说明**模型推理在整体架构中的位置**、**何时需要使用**，以及**它是如何被提供的**。
-
-### 模型推理在架构中的作用\{#where-model-inference-fits-in}
-
-**模型推理**指的是在运行时执行机器学习模型，以生成语义信号的过程，例如稠密向量或相关性评分。
-
-在 Zilliz Cloud 中，模型推理**仅由 Model-based Functions 使用**，主要包括：
-
-- [Model-based Pre-search Function](./function-and-model-inference-overview#pre-search-functions-convert-text-to-vector-embeddings)：从文本生成稠密向量
-
-- [Model-based Ranker](./function-and-model-inference-overview#post-search-functions-rerank-candidate-results)：评估相关性并对已检索到的候选结果进行重排
-
-其他 Function（例如 **BM25 Function** 以及基于规则的 Ranker）完全在数据库引擎内执行，**不依赖模型推理**。
-
-### 模型推理的来源\{#where-model-inference-come-from}
-
-Zilliz Cloud 支持两种模型推理来源。二者都提供基于模型的能力，但在模型的提供与管理方式上有所不同：
-
-<table>
-   <tr>
-     <th><p>维度</p></th>
-     <th><p>托管模型（Hosted Models）</p></th>
-     <th><p>第三方模型服务（Third-Party Model Services）</p></th>
-   </tr>
-   <tr>
-     <td><p>模型运行位置</p></td>
-     <td><p>Zilliz Cloud 内部</p></td>
-     <td><p>外部模型提供方（如 OpenAI、Voyage AI 等）</p></td>
-   </tr>
-   <tr>
-     <td><p>模型管理方</p></td>
-     <td><p>Zilliz Cloud</p></td>
-     <td><p>外部模型提供方</p></td>
-   </tr>
-   <tr>
-     <td><p>访问方式</p></td>
-     <td><p>通过 Zilliz Cloud 支持团队开通</p></td>
-     <td><p>由你自行完成模型提供方集成</p></td>
-   </tr>
-   <tr>
-     <td><p>凭证管理</p></td>
-     <td><p>在 Zilliz Cloud 入驻过程中提供</p></td>
-     <td><p>由你提供（例如 API Key）</p></td>
-   </tr>
-   <tr>
-     <td><p>典型使用场景</p></td>
-     <td><p>深度集成或定制化部署</p></td>
-     <td><p>使用成熟模型提供方的标准模型</p></td>
-   </tr>
-   <tr>
-     <td><p>配置复杂度</p></td>
-     <td><p>较高（需要入驻流程）</p></td>
-     <td><p>较低（直接使用已有凭证）</p></td>
-   </tr>
-</table>
-
-**在以下情况下，推荐选择托管模型**：
-
-- 需要与 Zilliz Cloud 深度集成（单一厂商、统一支持）
-
-- 需要模型微调或使用特定定制模型
-
-- 对性能和延迟有更强的可预测性要求
-
-- 希望简化凭证和访问控制的管理
-
-**在以下情况下，推荐选择第三方模型服务**：
-
-- 已与某个模型提供方建立合作关系
-
-- 希望使用 OpenAI 等提供方的最新模型
-
-- 需要在不同模型提供方之间灵活切换
-
-- 已具备可用的 API Key 或访问凭证
-
-### 支持的模型提供方\{#supported-model-providers}
-
-Zilliz Cloud 可与多家主流模型提供方集成，以支持不同类型的模型能力。下表展示了各模型提供方在文本向量（Text Embedding）和重排（Reranking）方面的支持情况：
-
-<table>
-   <tr>
-     <th><p>模型提供方</p></th>
-     <th><p>文本向量</p></th>
-     <th><p>重排</p></th>
-   </tr>
-   <tr>
-     <td><p>硅基流动</p></td>
-     <td><p><a href="https://docs.siliconflow.cn/cn/api-reference/embeddings/create-embeddings">Yes</a></p></td>
-     <td><p><a href="https://docs.siliconflow.cn/cn/api-reference/rerank/create-rerank">Yes</a></p></td>
-   </tr>
-</table>
 

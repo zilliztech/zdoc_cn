@@ -84,7 +84,7 @@ Import 和 bulk insert 操作**不产生**写入费用。
    <tr>
      <td><p>100 万 2560 维向量</p></td>
      <td><p>2.5</p></td>
-     <td><p>$52.5</p></td>
+     <td><p>&#36;52.5</p></td>
    </tr>
 </table>
 

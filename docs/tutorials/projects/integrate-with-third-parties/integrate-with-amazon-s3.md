@@ -33,11 +33,7 @@ import Procedures from '@site/src/components/Procedures';
 
 Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.amazonaws.cn/AmazonS3/latest/userguide/Welcome.html)） 集成，用于转发审计日志或导出备份文件至指定的 S3 存储桶。
 
-<Admonition type="info" icon="📘" title="说明">
-
-<p>此功能仅限<strong>企业版</strong>项目中的 <strong>Dedicated</strong> 集群使用。</p>
-
-</Admonition>
+https://zilliverse.feishu.cn/sync/EaQKd6kURsSBc1bD8Loc4RsjnCg
 
 ![MWh0wX3wehaH1dbkEXpc5GbFnoc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/MWh0wX3wehaH1dbkEXpc5GbFnoc.png)
 

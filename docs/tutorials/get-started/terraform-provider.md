@@ -33,7 +33,7 @@ Zilliz Cloud Terraform Provider 是一个开源的基础设施即代码（Infras
 
 ## 身份验证
 
-在使用 Terraform 进行资源部署之前，你必须将 Terraform 与 Zilliz Cloud 平台进行身份验证。在使用该 Terraform Provider 执行任何操作之前，必须使用具有适当权限的 Zilliz Cloud API 密钥完成身份验证。
+在使用 Terraform 进行资源部署之前，你必须将 Terraform 与 Zilliz Cloud 平台进行身份验证。在使用该 Terraform Provider 执行任何数据面操作之前，必须使用具有适当权限的 Zilliz Cloud API 密钥完成身份验证。
 
 要创建 Zilliz Cloud API 密钥，请按照以下步骤操作：
 
@@ -62,6 +62,12 @@ Zilliz Cloud 集群是在 Zilliz Cloud 上运行的 Milvus 实例。Zilliz Cloud
 有关这些服务类型的详细介绍，请参阅 [Zilliz Cloud 版本对比](/docs/select-zilliz-cloud-service-plans)。
 
 你可以使用 Zilliz Cloud Terraform Provider 创建和管理任意类型的集群实例。具体操作请参考以下教程：
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>当在 BYOC 项目中使用 Terraform 时，仅支持 Dedicated 或 BYOC 集群的创建。Free 或 Serverless 集群不适用于 BYOC 项目。</p>
+
+</Admonition>
 
 - [Create a Free Cluster](https://registry.terraform.io/providers/zilliztech/zillizcloud/latest/docs/guides/create-a-free-cluster)
 

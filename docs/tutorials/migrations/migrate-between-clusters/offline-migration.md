@@ -52,13 +52,13 @@ import Supademo from '@site/src/components/Supademo';
    <tr>
      <td><p>Free</p></td>
      <td><p>不支持</p></td>
-     <td><p>请参考<a href="./manage-cluster#upgrade-deployment-option">管理集群</a></p></td>
-     <td><p>请参考<a href="./manage-cluster#upgrade-deployment-option">管理集群</a></p></td>
+     <td><p>不支持</p><p>（仅支持从 Free 集群升级至 Serverless 集群。具体操作请参考<a href="./manage-cluster#upgrade-deployment-option">管理集群</a>）</p></td>
+     <td><p>支持</p><p>（支持从 Free Cluster 升级至 Dedicated 集群。具体操作请参考<a href="./manage-cluster#upgrade-deployment-option">管理集群</a>）</p></td>
    </tr>
    <tr>
      <td><p>Serverless</p></td>
      <td><p>不支持</p></td>
-     <td><p>不支持</p></td>
+     <td><p>支持</p></td>
      <td><p>支持</p></td>
    </tr>
    <tr>

@@ -2,7 +2,7 @@
 title: "合并数据 | Cloud"
 slug: /merge-data
 sidebar_label: "合并数据"
-beta: PRIVATE
+beta: NEAR DEPRECATE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE

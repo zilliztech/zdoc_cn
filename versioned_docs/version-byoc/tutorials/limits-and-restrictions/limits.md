@@ -44,9 +44,90 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
+## 用户与角色\{#users-and-roles}
+
+下表展示了 Zilliz Cloud 中用用户与角色的数量限制。
+
+<table>
+   <tr>
+     <th><p><strong>内容</strong></p></th>
+     <th><p><strong>最大数量</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>集群用户</p></td>
+     <td><p>100</p></td>
+     <td><p>每个集群中最多可容纳 100 名集群用户。</p></td>
+   </tr>
+   <tr>
+     <td><p>集群自定义角色</p></td>
+     <td><p>20</p></td>
+     <td><p>每个集群中最多可创建 20 个自定义角色。如需取消此限制，请<a href="http://support.zilliz.com.cn">联系我们</a>。</p></td>
+   </tr>
+</table>
+
+## API 密钥\{#api-keys}
+
+<table>
+   <tr>
+     <th><p><strong>内容</strong></p></th>
+     <th><p><strong>最大数量</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>API 密钥</p></td>
+     <td><p>100</p></td>
+     <td><p>每个组织中可创建最多 100 个自定义 API 密钥。</p></td>
+   </tr>
+</table>
+
+## 控制台 IP 白名单\{#console-ip-allowlist}
+
+<table>
+   <tr>
+     <th><p><strong>内容</strong></p></th>
+     <th><p><strong>最大数量</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>组织控制台 IP 白名单中 IP 地址</p></td>
+     <td><p>100</p></td>
+     <td><p>每个组织的控制台 IP 白名单中最多可添加 100 个 IP 地址或 CIDR。</p></td>
+   </tr>
+</table>
+
+## 集群\{#clusters}
+
+### CU\{#cus}
+
+计算单元（CU）是指用于提供向量检索、分析服务的一组硬件资源。CU 提供了并行数据处理的基础计算资源，不同类型的 CU 结合了各异的 CPU、内存和存储配置。CU 的概念仅针对 Dedicated 集群。
+
+<table>
+   <tr>
+     <th><p><strong>集群部署方式</strong></p></th>
+     <th><p><strong>限制</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>Dedicated</p></td>
+     <td><p>CU 规格 &ast; Replica 数量 &lt;=20480</p></td>
+     <td><p>在自助操作时，单个集群最多使用 2048 个 CU。如果创建了 Replica，CU 规格与 Replica 数量的乘积不得超过 20480。</p></td>
+   </tr>
+</table>
+
+如需创建超过 2048 个 CU 规格的集群，请[联系我们](https://zilliz.com.cn/contact-sales?firstname=xushuang&lastname=hu&company=Zilliz&name=Zilliz&email=xushuang.hu@zilliz.com&fullname=hu%20xushuang&phone=--&country=)。
+
+## Database\{#databases}
+
+- 仅 Dedicated 集群支持创建 Database。
+
+- 每个 Dedicated 集群中最多可创建 1024 个 Database。
+
+- 默认的 Default Database 不可删除。
+
 ## Replica\{#replicas}
 
-如需添加 Replica，集群规格需要为 **8 CU 或以上**。此外，Replica 功能还具有以下限制
+如需添加 Replica，集群规格需要为 **12 CU 或以上**。此外，Replica 功能还具有以下限制
 
 <table>
    <tr>
@@ -60,9 +141,9 @@ import Admonition from '@theme/Admonition';
      <td><p>每个集群最多可添加 10 个 Replica。</p></td>
    </tr>
    <tr>
-     <td><p>Replica 数量 &ast; CU 规格</p></td>
-     <td><p>&lt;= 256</p></td>
-     <td><p>CU 规格与 Replica 数量的乘积不得超过 256。</p></td>
+     <td><p>Query CU x Replica 数量</p></td>
+     <td><p>20480</p></td>
+     <td><p>每个集群的 Query CU x Replica 数量不得超过 20480</p></td>
    </tr>
 </table>
 
@@ -364,9 +445,9 @@ Shard 的数量上限取决于 CU 规格。
      <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><p>IP 地址 (CIDR)</p></td>
+     <td><p>控制台 IP 白名单</p></td>
      <td><p>100</p></td>
-     <td><p>IP 白名单中最多可添加 100 个 IP 地址。</p></td>
+     <td><p>控制台 IP 白名单中最多可添加 100 个 IP 地址。</p></td>
    </tr>
 </table>
 

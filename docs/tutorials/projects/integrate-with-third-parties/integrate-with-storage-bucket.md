@@ -33,11 +33,7 @@ import Procedures from '@site/src/components/Procedures';
 
 Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出到指定的 OSS 存储桶。
 
-<Admonition type="info" icon="📘" title="说明">
-
-<p>此功能仅限<strong>企业版</strong>项目中的 <strong>Dedicated</strong> 集群使用。</p>
-
-</Admonition>
+https://zilliverse.feishu.cn/sync/EaQKd6kURsSBc1bD8Loc4RsjnCg
 
 ![GPQdwo63IhxSjqbk9vkcdZQXngM](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/GPQdwo63IhxSjqbk9vkcdZQXngM.png)
 

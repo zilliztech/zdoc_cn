@@ -41,6 +41,9 @@ import TabItem from '@theme/TabItem';
 <Admonition type="info" icon="📘" title="说明">
 
 <p>如果您更倾向于使用 RESTful API 而不是 SDK，需注意由于 HTTP 协议的单向通信模式，无法建立持续的连接。</p>
+<p></p>
+<p>在 BYOC 项目中，请使用集群鉴权凭据（<code>username:password</code>）连接集群。API 密钥仅用于平台 API 操作，不适用于集群连接。</p>
+<p></p>
 
 </Admonition>
 
@@ -56,7 +59,7 @@ import TabItem from '@theme/TabItem';
 
 以下示例展示如何连接至集群。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -106,6 +109,31 @@ const token = "YOUR_CLUSTER_TOKEN"
 
 // 1. Connect to the cluster
 const client = new MilvusClient({address, token})
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+import "github.com/milvus-io/milvus/client/v2/milvusclient"
+
+client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+    Address: "YOUR_CLUSTER_ENDPOINT",
+    APIKey:  "YOUR_CLUSTER_TOKEN",
+})
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+curl --request POST \
+  --url "YOUR_CLUSTER_ENDPOINT" \
+  --header "Authorization: Bearer YOUR_CLUSTER_TOKEN" \
+  --header "Content-Type: application/json" \
+  --data '{"dbName": "default"}'
 ```
 
 </TabItem>

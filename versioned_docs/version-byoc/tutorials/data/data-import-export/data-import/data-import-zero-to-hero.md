@@ -511,7 +511,7 @@ writer = RemoteBulkWriter(
 )
 
 # 支持的输出文件类型:
-# - BulkFileType.JSON_RB, 
+# - BulkFileType.JSON, 
 # - BulkFileType.NPY, and 
 # - BulkFileType.PARQUET
 ```
@@ -528,7 +528,7 @@ writer = RemoteBulkWriter(
 
     此参数决定了生成文件的文件类型。可选值如下：
 
-    - **BulkFileType.JSON_RB**
+    - **BulkFileType.JSON**
 
     - **BulkFileType.PARQUET**
 

@@ -153,3 +153,4 @@ import Procedures from '@site/src/components/Procedures';
 - **异常集群状态会影响审计日志服务吗？**
 
     集群状态异常意味着集群可能存在网络连接或 Zilliz Cloud 服务中断等问题。然而，这些问题并不会影响审计日志服务，该服务会继续正常运行并将日志转发到您的存储桶。如果您遇到持续性问题，请联系 [Zilliz Cloud 支持](https://zilliz.com.cn/contact-sales)。
+

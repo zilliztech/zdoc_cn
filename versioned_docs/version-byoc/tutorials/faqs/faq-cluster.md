@@ -45,9 +45,9 @@ sidebar_position: 2
 
     Zilliz Cloud 集群已启用 TLS。请确保在连接参数中加入 `secure`，并将其设置为 `true`。未正确设置改参数可能导致连接失败和超时。
 
-- 未将本地 IP 地址加入白名单
+- VPC 安全组设置有误
 
-    连接集群时，请确保关闭 VPN /代理，并已将获取到的公共 IP 地址（不可使用私有 IP 地址）加入集群白名单中。
+    如果连接超时，可能需要检查您的 VPC 安全组设置，确保连接源 IP 地址可用于连接。
 
 ### 为什么无法连接集群? \{#why-cant-i-connect-to-the-cluster-after-the-cluster-is-created}
 

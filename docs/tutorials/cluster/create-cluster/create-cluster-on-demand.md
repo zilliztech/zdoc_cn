@@ -46,7 +46,7 @@ Zilliz Cloud 提供多种集群部署方式以满足不同的业务需求。
 
 - 已注册 Zilliz Cloud 账户。有关更多信息，请参见[注册账号](./register-with-zilliz-cloud)。
 
-- 在目标组织或项目中，您具有集群创建权限。有关角色和权限的信息，请参见[管理组织用户](./organization-users#organization-roles) 和 [管理项目用户](./project-users#project-roles)。
+- 在目标组织或项目中，您具有集群创建权限。有关角色和权限的信息，请参见[管理组织用户](./organization-users) 和 [管理项目用户](./project-users)。
 
 ## 创建 Free 集群\{#set-up-a-free-cluster}
 
@@ -249,3 +249,9 @@ curl --request POST \
 </TabItem>
 
 </Tabs>
+
+## 常见问题\{#faq}
+
+**能否在创建集群时指定 Milvus 版本？**   
+
+不支持。Zilliz Cloud 会自动使用最新的 Milvus 版本创建集群，并通过滚动升级保持版本更新。如需使用特定版本，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn/requests/new)并说明您的使用场景。                                                         

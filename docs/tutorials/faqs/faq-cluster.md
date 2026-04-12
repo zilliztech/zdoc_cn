@@ -144,3 +144,5 @@ sidebar_position: 2
 ### 如何获取集群 URI？ \{#how-to-obtain-a-cluster-uri}
 
 在 Zilliz Cloud 中，集群 URI 是指集群的 Endpoint，可用于连接集群。您可以通过 Zilliz Cloud Web 控制台获取集群 URI。详情请见[连接集群](./connect-to-cluster#connect-to-a-cluster)。
+
+**能否将 Zilliz Cloud 连接到 Attu？**                                                                      可以。[Attu](https://github.com/zilliztech/attu) 是一款适用于 Milvus 和 Zilliz Cloud 的开源可视化管理工具，支持 Docker 容器或桌面应用等运行方式。连接时，在 Attu 登录页面输入 Zilliz Cloud 的公共 Endpoint 和 API 密钥（或以 username:password 格式输入集群凭证）即可。

@@ -33,6 +33,8 @@ import Admonition from '@theme/Admonition';
 
 在 Zilliz Cloud 中，项目位于组织和集群层级之间，用于分组集群和相关资源。您可以根据业务需求创建多个项目。例如，如果您的公司提供多媒体推荐服务，您可以为视频推荐服务创建一个项目，为音乐推荐服务创建另一个项目。本指南将介绍如何管理项目。
 
+每个 BYOC 项目对应一个云地域中的一个 Kubernetes 集群。跨区域操作不受支持。如需在多个地域进行运维，可以考虑在这些区域都部署 BYOC 项目。
+
 ## 查看全部项目\{#view-all-projects}
 
 您可以查看在您的权限范围内的所有项目的列表。
@@ -114,7 +116,7 @@ import Admonition from '@theme/Admonition';
 
 ## 重命名项目\{#rename-a-project}
 
-要重命名项目，您必须是[组织管理员](./organization-users#organization-roles)。您可以通过 Web 控制台对项目进行重命名。
+要重命名项目，您必须是[组织管理员](./organization-users)。您可以通过 Web 控制台对项目进行重命名。
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -126,7 +128,7 @@ import Admonition from '@theme/Admonition';
 
 ## 删除项目\{#delete-a-project}
 
-要删除项目，您必须是[组织管理员](./organization-users#organization-roles)。删除项目前，您需要先删除该项目下的所有[集群](./manage-cluster#drop-cluster)。
+要删除项目，您必须是[组织管理员](./organization-users)。删除项目前，您需要先删除该项目下的所有[集群](./manage-cluster#drop-cluster)。
 
 项目一旦删除，该项目下的所有数据和资源将被清理。该操作不可撤销。
 

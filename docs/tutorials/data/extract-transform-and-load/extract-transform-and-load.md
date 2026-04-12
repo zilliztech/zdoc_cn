@@ -10,7 +10,7 @@ notebook: FALSE
 description: "本章介绍了从外部数据源进行提取、转换和加载数据并将其应用于 Zilliz Cloud 的相关场景和步骤。 | Cloud"
 type: origin
 token: G0ozw2arsi6ahXk47yYc1sotnNf
-sidebar_position: 8
+sidebar_position: 7
 keywords: 
   - 向量数据库
   - zilliz

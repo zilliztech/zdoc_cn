@@ -116,7 +116,7 @@ curl --request POST \
 
 点击**导出**后，系统会自动生成一个导出任务：
 
-\<Procedures>
+<Procedures>
 
 1. 在左侧导航栏中进入**任务**页面。
 
@@ -128,7 +128,7 @@ curl --request POST \
 
     - **失败**：任务失败。这可能是由于导出过程中使用的资源（例如角色 ARN 或备份文件）在任务执行期间被删除所导致。
 
-\<Procedures>
+</Procedures>
 
 ## 取消导出任务\{#cancel-export-job}
 

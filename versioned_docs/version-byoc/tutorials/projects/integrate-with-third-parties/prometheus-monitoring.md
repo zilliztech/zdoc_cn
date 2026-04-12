@@ -46,18 +46,11 @@ import Procedures from '@site/src/components/Procedures';
 
     - `{{clusterId}}`：您希望监控的 Zilliz Cloud 集群的 ID。
 
-    ```yaml
-    scrape_configs:
-      - job_name: "inxx-xxxxxxxxxxxxxxx"
-        scheme: https
-        metrics_path: /v2/clusters/{{clusterId}}/metrics/export
-        authorization:
-          type: Bearer
-          credentials: {{apiKey}}
-    
-        static_configs:
-          - targets: ["api.cloud.zilliz.com.cn"]
-    ```
+    <Admonition type="info" icon="📘" title="说明">
+
+    <p>集群中的 Collection 数量不得超过 10,000 个。超过此限制的集群可能出现指标导出不完整或性能下降的情况。</p>
+
+    </Admonition>
 
     <table>
        <tr>
@@ -77,6 +70,10 @@ import Procedures from '@site/src/components/Procedures';
          <td><p>目标服务上用于提供指标数据的路径。</p></td>
        </tr>
        <tr>
+         <td><p><code>scrape_interval</code></p></td>
+         <td><p>抓取目标的频率。最小支持值为 60s，暂不支持低于 60s 的值。</p></td>
+       </tr>
+       <tr>
          <td><p><code>authorization.type</code></p></td>
          <td><p>身份验证类型，设置为 <code>Bearer</code>。</p></td>
        </tr>
@@ -86,7 +83,7 @@ import Procedures from '@site/src/components/Procedures';
        </tr>
        <tr>
          <td><p><code>static_configs.targets</code></p></td>
-         <td><p>Prometheus 将要抓取的静态目标， 即 Zilliz Cloud RESTful API 的主机地址。设置为 <code>api.cloud.zilliz.com.cn</code>。</p></td>
+         <td><p>Prometheus 将要抓取的静态目标， 即Zilliz Cloud 根据您的请求配置的主机地址。更多详情，请联系 <a href="https://support.zilliz.com.cn/hc/zh-cn">Zilliz 技术支持</a>。。</p></td>
        </tr>
     </table>
 
@@ -98,9 +95,32 @@ import Procedures from '@site/src/components/Procedures';
 
 ## 指标示例\{#example-prometheus-query-results}
 
-以下示例展示了从 Zilliz Cloud `/metrics/export` 端点抓取的集群指标：
+以下示例展示了从 Zilliz Cloud 的 /metrics/export 端点抓取的 Prometheus 指标。其中，按 Collection 维度统计的指标会包含 `collection_name` 和 `db_name` 这两个标签，而仅按集群维度统计的指标保持不变。
 
-```plaintext
+```yaml
+# HELP zilliz_entities Total number of entities stored
+# TYPE zilliz_entities gauge
+zilliz_entities{cluster_id="in01-xxx", collection_name="prod_embedding", db_name="default"} 5000000
+zilliz_entities{cluster_id="in01-xxx", collection_name="user_profile", db_name="default"} 120000
+# HELP zilliz_loaded_entities Number of entities loaded in memory
+# TYPE zilliz_loaded_entities gauge
+zilliz_loaded_entities{cluster_id="in01-xxx", collection_name="prod_embedding", db_name="default"} 3000000
+zilliz_loaded_entities{cluster_id="in01-xxx", collection_name="user_profile", db_name="default"} 200000
+
+# HELP zilliz_requests_total Total number of requests processed
+# TYPE zilliz_requests_total counter
+zilliz_requests_total{cluster_id="in01-xxx", request_type="search", status="success", collection_name="prod_embedding", db_name="default"} 30000
+zilliz_requests_total{cluster_id="in01-xxx", request_type="search", status="success", collection_name="user_profile", db_name="default"} 12850
+# HELP zilliz_request_duration_seconds_bucket Latency distribution of requests
+# TYPE zilliz_request_duration_seconds_bucket histogram
+zilliz_request_duration_seconds_bucket{cluster_id="in01-xxx", request_type="search", le="0.1", collection_name="prod_embedding", db_name="default"} 28000
+zilliz_request_duration_seconds_bucket{cluster_id="in01-xxx", request_type="search", le="0.1", collection_name="user_profile", db_name="default"} 10000
+# HELP zilliz_request_vectors_total Total number of vectors in requests
+# TYPE zilliz_request_vectors_total counter
+zilliz_request_vectors_total{cluster_id="in01-xxx", request_type="search", collection_name="prod_embedding", db_name="default"} 50000
+zilliz_request_vectors_total{cluster_id="in01-xxx", request_type="insert", collection_name="prod_embedding", db_name="default"} 10000
+
+# --- Cluster-only metrics ---
 # HELP zilliz_cluster_capacity Cluster capacity ratio
 # TYPE zilliz_cluster_capacity gauge
 zilliz_cluster_capacity 0.88
@@ -110,13 +130,6 @@ zilliz_cluster_computation 0.1
 # HELP zilliz_storage_bytes Cluster storage usage
 # TYPE zilliz_storage_bytes gauge
 zilliz_cluster_storage_bytes 8.9342782E7
-# HELP zilliz_request_vectors_total Total number of vectors in requests
-# TYPE zilliz_request_vectors_total counter
-zilliz_request_vectors_total{request_type="bulk_insert"} 1.0
-zilliz_request_vectors_total{request_type="delete"} 1.0
-zilliz_request_vectors_total{request_type="insert"} 1.0
-zilliz_request_vectors_total{request_type="search"} 1.0
-zilliz_request_vectors_total{request_type="upsert"} 1.0
 ```
 
 ## Zilliz Cloud 指标标签\{#zilliz-cloud-metric-labels}
@@ -146,8 +159,13 @@ Zilliz Cloud 暴露的指标带有以下标识符标签：
    </tr>
    <tr>
      <td><p><code>collection_name</code></p></td>
-     <td><p>正在监控的 collection 名称。</p></td>
+     <td><p>Collection 的名称。出现在所有 Collection 级别的指标中，包括请求类指标（<code>zilliz_requests_total</code>、<code>zilliz_request_vectors_total</code>、<code>zilliz_request_duration_seconds_bucket</code>）和数据类指标（<code>zilliz_entities</code>、<code>zilliz_loaded_entities</code>、<code>zilliz_indexed_entities</code>）。</p></td>
      <td><p>-</p></td>
+   </tr>
+   <tr>
+     <td><p><code>db_name</code></p></td>
+     <td><p>Collection 所属的 Database 名称。该标签会与 <code>collection_name</code> 一起出现在所有 Collection 级别的指标上。您可以用它来区分不同 Database 中同名的 Collection。</p></td>
+     <td><p>默认值为 <code>default</code>。</p></td>
    </tr>
    <tr>
      <td><p><code>request_type</code></p></td>
@@ -200,19 +218,19 @@ Zilliz Cloud 暴露的指标带有以下标识符标签：
      <td><p><code>zilliz_requests_total</code></p></td>
      <td><p>Counter</p></td>
      <td><p>处理的总请求数</p></td>
-     <td><p><code>cluster_id</code>, <code>org_id</code>, <code>project_id</code>, <code>request_type</code>, <code>status</code></p></td>
+     <td><p><code>cluster_id</code>, <code>org_id</code>, <code>project_id</code>, <code>request_type</code>, <code>status</code>, <code>collection_name</code>, <code>db_name</code></p></td>
    </tr>
    <tr>
      <td><p><code>zilliz_request_vectors_total</code></p></td>
      <td><p>Counter</p></td>
      <td><p>所有请求中操作的向量总数</p></td>
-     <td><p><code>cluster_id</code>, <code>org_id</code>, <code>project_id</code>, <code>request_type</code></p></td>
+     <td><p><code>cluster_id</code>, <code>org_id</code>, <code>project_id</code>, <code>request_type</code>, <code>collection_name</code>, <code>db_name</code></p></td>
    </tr>
    <tr>
      <td><p><code>zilliz_request_duration_seconds_bucket</code></p></td>
      <td><p>Histogram</p></td>
      <td><p>处理请求的延时分布</p></td>
-     <td><p><code>cluster_id</code>, <code>org_id</code>, <code>project_id</code>, <code>request_type</code></p></td>
+     <td><p><code>cluster_id</code>, <code>org_id</code>, <code>project_id</code>, <code>request_type</code>, <code>collection_name</code>, <code>db_name</code></p></td>
    </tr>
    <tr>
      <td><p><code>zilliz_slow_queries_total</code></p></td>
@@ -224,13 +242,19 @@ Zilliz Cloud 暴露的指标带有以下标识符标签：
      <td><p><code>zilliz_entities</code></p></td>
      <td><p>Gauge</p></td>
      <td><p>存储的 entity 总数</p></td>
-     <td><p><code>cluster_id</code>, <code>org_id</code>, <code>project_id</code>, <code>collection_name</code></p></td>
+     <td><p><code>cluster_id</code>, <code>org_id</code>, <code>project_id</code>, <code>collection_name</code>, <code>db_name</code></p></td>
    </tr>
    <tr>
      <td><p><code>zilliz_loaded_entities</code></p></td>
      <td><p>Gauge</p></td>
      <td><p>当前加载到内存中的 entity 数</p></td>
-     <td><p><code>cluster_id</code>, <code>org_id</code>, <code>project_id</code>, <code>collection_name</code></p></td>
+     <td><p><code>cluster_id</code>, <code>org_id</code>, <code>project_id</code>, <code>collection_name</code>, <code>db_name</code></p></td>
+   </tr>
+   <tr>
+     <td><p><code>zilliz_indexed_entities</code></p></td>
+     <td><p>Gauge</p></td>
+     <td><p>当前被索引的 entity 数</p></td>
+     <td><p><code>cluster_id</code>, <code>org_id</code>, <code>project_id</code>, <code>collection_name</code>, <code>db_name</code></p></td>
    </tr>
    <tr>
      <td><p><code>zilliz_collections</code></p></td>

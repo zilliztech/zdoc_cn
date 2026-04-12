@@ -7,7 +7,7 @@ added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
 notebook: FALSE
-description: "为满足用户不同需求，Zilliz Cloud 提供 2 种类型的集群 CU——性能型和容量型。但是，为不同类型 CU 集群中的 Collection 创建索引时，通常需要根据所选择的 CU 类型调整索引参数。为了方便您创建索引，免去调节参数的麻烦，Zilliz Cloud 使用 AUTOINDEX 的索引类型。 | BYOC"
+description: "为满足用户不同需求，Zilliz Cloud 提供多种不同能力的计算单元（CU）供您选择。但是，为不同类型 CU 集群中的 Collection 创建索引时，通常需要根据所选择的 CU 类型调整索引参数。为了方便您创建索引，免去调节参数的麻烦，Zilliz Cloud 使用 AUTOINDEX 的索引类型。 | BYOC"
 type: origin
 token: YUETwzDssiTUs9kCSn4cgUYLnrd
 sidebar_position: 1
@@ -25,7 +25,7 @@ import Admonition from '@theme/Admonition';
 
 # AUTOINDEX
 
-为满足用户不同需求，Zilliz Cloud 提供 2 种类型的集群 CU——性能型和容量型。但是，为不同类型 CU 集群中的 Collection 创建索引时，通常需要根据所选择的 CU 类型调整索引参数。为了方便您创建索引，免去调节参数的麻烦，Zilliz Cloud 使用 **AUTOINDEX** 的索引类型。
+为满足用户不同需求，Zilliz Cloud 提供多种不同能力的计算单元（CU）供您选择。但是，为不同类型 CU 集群中的 Collection 创建索引时，通常需要根据所选择的 CU 类型调整索引参数。为了方便您创建索引，免去调节参数的麻烦，Zilliz Cloud 使用 **AUTOINDEX** 的索引类型。
 
 **AUTOINDEX** 是Zilliz Cloud 独有的索引类型，可以帮助您获取最佳搜索性能。当您在 Zilliz Cloud 上为 Collection 中的向量字段创建索引时，会自动应用 **AUTOINDEX** 索引。
 

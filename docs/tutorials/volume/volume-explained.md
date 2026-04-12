@@ -29,7 +29,7 @@ Volume 是一种对象存储，用于保存结构化数据表或非结构化数�
 
 ![WekfwpXHRhvM9LbI8oucsoc9nQf](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/WekfwpXHRhvM9LbI8oucsoc9nQf.png)
 
-Volume 从属于项目，而不是属于某个单独的集群。同一项目下的任意集群在满足[项目角色](./project-users#project-roles)权限的前提下，都可以对 Volume 进行读写操作。
+Volume 从属于项目，而不是属于某个单独的集群。同一项目下的任意集群在满足[项目角色](./project-users)权限的前提下，都可以对 Volume 进行读写操作。
 
 ```bash
 组织

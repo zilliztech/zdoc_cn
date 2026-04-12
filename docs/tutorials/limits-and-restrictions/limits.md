@@ -167,8 +167,8 @@ import Admonition from '@theme/Admonition';
        </tr>
        <tr>
          <td><p>Dedicated</p></td>
-         <td><p>CU 规格总和 &lt; 320</p></td>
-         <td><p>每个组织中的 Dedicated 集群数量上线取决于集群的 CU 规格。组织中所有集群的 CU 规格总和不得超过 320 CU。</p></td>
+         <td><p>无</p></td>
+         <td><p>无</p></td>
        </tr>
     </table>
 
@@ -184,12 +184,12 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>Dedicated</p></td>
-     <td><p>CU 规格 &ast; Replica 数量 &lt;=256</p></td>
-     <td><p>在自助操作时，单个集群最多使用 256 个 CU。如果创建了 Replica，CU 规格与 Replica 数量的乘积不得超过 256。</p></td>
+     <td><p>CU 规格 &ast; Replica 数量 &lt;=20480</p></td>
+     <td><p>在自助操作时，单个集群最多使用 2048 个 CU。如果创建了 Replica，CU 规格与 Replica 数量的乘积不得超过 20480。</p></td>
    </tr>
 </table>
 
-如需创建超过 256 个 CU 规格的集群，请[联系我们](https://zilliz.com.cn/contact-sales?firstname=xushuang&lastname=hu&company=Zilliz&name=Zilliz&email=xushuang.hu@zilliz.com&fullname=hu%20xushuang&phone=--&country=)。
+如需创建超过 2048 个 CU 规格的集群，请[联系我们](https://zilliz.com.cn/contact-sales?firstname=xushuang&lastname=hu&company=Zilliz&name=Zilliz&email=xushuang.hu@zilliz.com&fullname=hu%20xushuang&phone=--&country=)。
 
 ### vCU\{#vcus}
 
@@ -247,7 +247,7 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
 
 ## Replica\{#replicas}
 
-如需添加 Replica，集群规格需要为 **8 CU 或以上**。此外，Replica 功能还具有以下限制
+如需添加 Replica，集群规格需要为 **12 CU 或以上**。此外，Replica 功能还具有以下限制
 
 <table>
    <tr>
@@ -261,9 +261,9 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
      <td><p>每个集群最多可添加 10 个 Replica。</p></td>
    </tr>
    <tr>
-     <td><p>Replica 数量 &ast; CU 规格</p></td>
-     <td><p>&lt;= 256</p></td>
-     <td><p>CU 规格与 Replica 数量的乘积不得超过 256。</p></td>
+     <td><p>Query CU x Replica 数量</p></td>
+     <td><p>20480</p></td>
+     <td><p>每个集群的 Query CU x Replica 数量不得超过 20480</p></td>
    </tr>
 </table>
 
@@ -278,6 +278,16 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
 - 集群中所有 Collection 中的 Partition 的总数量应该在 4,096 和集群的 CU 数量之积与 65,536 间取最小值。
 
 - 上述条件需同时满足。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>对于 <strong>Free</strong> 和 <strong>Serverless</strong> 集群，执行如下限制：</p>
+<ul>
+<li><p>单个 <strong>Free</strong> 集群支持最多 <strong>5</strong> 个 Collection。</p></li>
+<li><p>单个 <strong>Serverless</strong> 集群支持最多 <strong>100</strong> 个 Collection。</p></li>
+</ul>
+
+</Admonition>
 
 ### 字段\{#fields}
 
@@ -630,9 +640,14 @@ Shard 的数量上限取决于集群部署方式和 CU 规格。
      <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><p>IP 地址 (CIDR)</p></td>
+     <td><p>控制台 IP 白名单</p></td>
      <td><p>100</p></td>
-     <td><p>IP 白名单中最多可添加 100 个 IP 地址。</p></td>
+     <td><p>控制台 IP 白名单中最多可添加 100 个 IP 地址。</p></td>
+   </tr>
+   <tr>
+     <td><p>集群 IP 白名单</p></td>
+     <td><p>100</p></td>
+     <td><p>集群 IP 白名单中最多可添加 100 个 IP 地址。</p></td>
    </tr>
 </table>
 

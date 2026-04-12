@@ -619,6 +619,23 @@ analyzer_params = {
 }
 ```
 
+### 韩语\{#korean}
+
+```json
+{
+    "tokenizer": {
+        "type": "lindera",
+        "dict_kind": "ko-dic",
+        "filter": [
+            {
+                "kind": "korean_stop_tags",
+                "tags": ["SP", "SSC", "SSO", "SC", "SE", "SF", "JKS", "JKC", "JKG", "JKO", "JKB", "JKV", "JKQ", "JX", "JC", "UNK", "EP", "ETM"]
+            }
+        ]
+    }
+}
+```
+
 ### 日语\{#japanese}
 
 ```json

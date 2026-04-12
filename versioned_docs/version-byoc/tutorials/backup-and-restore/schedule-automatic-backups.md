@@ -92,33 +92,6 @@ curl --request POST \
 }'
 ```
 
-您也可以选择在使用上述备份策略创建备份的同时，将其拷贝到指定的其它地域。
-
-```bash
-curl --request POST \
---url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/backups/policy" \
---header "Authorization: Bearer ${TOKEN}" \
---header "Content-Type: application/json" \
--d '{
-    "frequency": "1,2,3,5",
-    "startTime": "02:00-04:00",
-    "retentionDays": 7,
-    "enabled": true,
-    "crossRegionPolicies": [
-        {
-            "regionId": "ali-cn-hangzhou",
-            "retentionDays": 7,
-            "region": "cn-hangzhou"
-        },
-        {
-            "regionId": "ali-cn-shanghai",
-            "retentionDays": 7,
-            "region": "cn-shanghai"
-        }
-    ]
-}'
-```
-
 示例返回结果如下。开启定时自动备份后，系统将立即创建一个备份任务，您可在项目下的[任务中心](./job-center)查看进度：
 
 ```bash

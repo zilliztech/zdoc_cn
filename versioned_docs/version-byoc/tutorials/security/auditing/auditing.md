@@ -27,6 +27,12 @@ import Admonition from '@theme/Admonition';
 
 了解如何为您的 Zilliz Cloud 集群配置日志审计能力。
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>在 BYOC 项目中，VDB 审计日志直接写入您的数据面本地对象存储中指定路径下，确保您的数据不离开您的基础设施。如需启用或配置审计日志，请<a href="https://support.zilliz.com.cn/hc/zh-cn">联系我们</a>。</p>
+
+</Admonition>
+
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />

@@ -24,6 +24,8 @@ sidebar_position: 10
 
 
 
+在 BYOC 项目中，请使用目标集群的鉴权凭据（`username:password`）进行集群连接。
+
 ### 如何解决连接时身份验证失败？ \{#what-can-i-do-if-i-forget-the-password-used-to-connect-to-my-zilliz-cloud-cluster}
 
 请执行以下步骤解决连接时身份验证失败的问题：

@@ -10,7 +10,7 @@ notebook: FALSE
 description: "在 Zilliz Cloud 中，NGRAM 索引 用于加速对 VARCHAR 字段 或 JSON 字段中指定路径的 LIKE 查询。在建立索引之前，Zilliz Cloud 会将文本拆分为固定长度 n 的 重叠子串（n-gram）。例如，当 `n = 3` 时，单词 `\"Milvus\"` 会被拆分为以下 3-gram：`\"Mil\"`, `\"ilv\"`, `\"lvu\"`, `\"vus\"`。这些 n-gram 随后会存储在倒排索引中，每个 gram 都映射到包含它的文档 ID。在查询时，该索引使 Zilliz Cloud 能快速缩小候选范围，从而显著加速查询执行。 | Cloud"
 type: origin
 token: OFt6wNxK2ik9GBkyLKgcdTqanih
-sidebar_position: 1
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz
@@ -68,7 +68,7 @@ Zilliz Cloud 以两阶段流程实现 NGRAM 索引：
 
     **示例**：当 `min_gram=2, max_gram=3`，字符串 `"AI database"` 被分解为：
 
-![Md7cwSCxRhmqy3bVpTXcmpeFnzd](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Md7cwSCxRhmqy3bVpTXcmpeFnzd.png)
+    ![Md7cwSCxRhmqy3bVpTXcmpeFnzd](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Md7cwSCxRhmqy3bVpTXcmpeFnzd.png)
 
     - **2-gram**：`AI`, `I_`, `_d`, `da`, `at`, …
 
@@ -92,7 +92,7 @@ Zilliz Cloud 以两阶段流程实现 NGRAM 索引：
 
     例如，若 2-gram `"AI"` 出现在文档 1, 5, 6, 8, 9，则索引记录为：`{"AI": [1,5,6,8,9]}`。
 
-![HDpFwIisdhr8IRb8QSOczdFOn1b](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/HDpFwIisdhr8IRb8QSOczdFOn1b.png)
+    ![HDpFwIisdhr8IRb8QSOczdFOn1b](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/HDpFwIisdhr8IRb8QSOczdFOn1b.png)
 
 ### 阶段 2：加速查询\{#phase-2-accelerate-queries}
 
@@ -236,6 +236,23 @@ NGRAM 索引会被应用于：
     ```
 
 有关更多信息，请参考[基本操作符](./basic-filtering-operators)。
+
+## 删除索引\{#delete-an-index}
+
+您也可以使用 `drop_index()` 从 Collection 中删除指定字段上的索引。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>如果您的集群与 Milvus v2.6.x 兼容，您可以删除标量字段上的索引，无须对 Collection 执行 Release 操作。</p>
+
+</Admonition>
+
+```python
+client.drop_index(
+    collection_name="Documents",   # Name of the collection
+    index_name="ngram_index" # Name of the index to drop
+)
+```
 
 ## 使用须知\{#usage-notes}
 

@@ -115,7 +115,7 @@ import TabItem from '@theme/TabItem';
 计算线性衰减分数的数学公式为：
 
 $$
-S(doc) = \max\left( \frac\{s - \max(0, |fieldvalue_{doc} - origin| - offset)}{s}, 0 \right)
+S(doc) = \max\left( \frac{s - \max(0, |fieldvalue_{doc} - origin| - offset)}{s}, 0 \right)
 $$
 
 其中：

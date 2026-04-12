@@ -136,3 +136,8 @@ curl --request POST \
 }
 ```
 
+## 常见问题\{#faq}
+
+**恢复备份后的集群是哪个 Milvus 版本？**
+
+恢复后的集群将使用 Zilliz Cloud 支持的最新 Milvus 版本，与创建备份时的 Milvus 版本无关。例如，您为一个 Milvus 2.5.x 集群创建备份，在平台升级至 2.6.x 后恢复该备份，恢复出来的集群为容 Milvus  2.6.x 版本。备份文件仅包含数据，集群 Milvus 版本由平台决定。

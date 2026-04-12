@@ -63,6 +63,8 @@ Zilliz BYOC 提供了一种独特的完全托管式部署选项，让您在降�
 
 根据上述架构图，您需要提供一个 VPC、一个对象存储桶以及以最小授权方式让 Zilliz Cloud 可以以您的身份在您的 VPC 中部署 K8S 集群及其它必要的组件，包括 Milvus Operator，数据导入和备份工具、包括 Grafana 及 Prometheus 等监控工具的监控栈以及 Milvus 实例。
 
+注意，监控工具栈在您的 VPC 中与您的 BYOC 基础设施部署在一起，并未经过 Zilliz Cloud 控制面。如需启用或配置监控工具栈，请联系 [Zilliz 技术支持](https://support.zilliz.com.cn/hc/zh-cn)。
+
 另外，Zilliz Cloud 还在您的 VPC 和 Zilliz 之间建立了如下两层相互独立的通讯链路：
 
 - **控制面**

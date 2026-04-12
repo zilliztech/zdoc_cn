@@ -35,7 +35,7 @@ BM25 Function 通过将原始文本转换为稀疏向量，并基于词法相关
 
 ## BM25 的工作原理\{#how-bm25-works}
 
-BM25 是一种广泛应用于全文检索的基于词项的相关性评分算法。在 Zilliz CloudMilvus 中，BM25 以稀疏检索流水线的形式实现：系统将文本转换为词项加权表示，并通过分布式稀疏索引检索 Top-K 文档。
+BM25 是一种广泛应用于全文检索的基于词项的相关性评分算法。在 Zilliz Cloud 中，BM25 以稀疏检索流水线的形式实现：系统将文本转换为词项加权表示，并通过分布式稀疏索引检索 Top-K 文档。
 
 整体流程由两条对称的路径组成：文档写入和查询文本处理，二者共享相同的文本分析逻辑。
 
@@ -240,9 +240,12 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
+token := "YOUR_CLUSTER_TOKEN"
+
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
+    APIKey: token
 })
 if err != nil {
     fmt.Println(err.Error())

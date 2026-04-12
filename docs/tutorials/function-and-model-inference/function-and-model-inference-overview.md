@@ -90,7 +90,7 @@ Pre-search Function 在候选结果检索之前运行。它们的作用是将原
      <td><p>以关键词为中心的全文检索、文档搜索、代码搜索，或对精确词项匹配和本地高性能有要求的场景。</p></td>
    </tr>
    <tr>
-     <td><p><strong>Model-based Functions</strong></p></td>
+     <td><p><strong>Model-based Embedding Functions</strong></p></td>
      <td><p>稠密向量</p></td>
      <td><p>使用机器学习模型对文本的语义含义进行编码，实现超越精确关键词匹配的相似性检索。</p><p>需要通过托管模型或第三方模型服务进行<a href="./function-and-model-inference-overview#understand-model-inference">模型推理</a>。</p></td>
      <td><p>语义搜索、自然语言查询、问答式检索，以及更关注概念相似性而非精确匹配的场景。</p></td>

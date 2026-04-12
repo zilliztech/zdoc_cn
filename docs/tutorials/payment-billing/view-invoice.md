@@ -211,7 +211,7 @@ Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud �
 
 </Admonition>
 
-以下为示例代码，请将示例中的 `{TOKEN}` 替换为您自己的Zilliz Cloud API 密钥。同时，请确保使用的 API 密钥具备[组织管理员或组织账单管理员的角色](./organization-users#organization-roles)。
+以下为示例代码，请将示例中的 `{TOKEN}` 替换为您自己的Zilliz Cloud API 密钥。同时，请确保使用的 API 密钥具备[组织管理员或组织账单管理员的角色](./organization-users)。
 
 以下 `GET` 请求可用于查看您组织中的所有账单。
 
@@ -285,7 +285,7 @@ curl --request GET \
 
 </Admonition>
 
-以下为示例代码，请将示例中的 `{TOKEN}` 替换为您自己的Zilliz Cloud API 密钥。同时，请确保使用的 API 密钥具备[组织管理员或组织账单管理员的角色](./organization-users#organization-roles)。
+以下为示例代码，请将示例中的 `{TOKEN}` 替换为您自己的Zilliz Cloud API 密钥。同时，请确保使用的 API 密钥具备[组织管理员或组织账单管理员的角色](./organization-users)。
 
 以下 `GET` 请求可用于查看某一特定账单的详情。
 

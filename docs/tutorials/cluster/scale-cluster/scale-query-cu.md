@@ -31,9 +31,15 @@ import Supademo from '@site/src/components/Supademo';
 
 为实现主动管理，您可以在[指标](./view-cluster-metric-charts)页面查看 **Query CU 加载容量**，判断是否需要扩容。根据业务需求和访问模式，您可以上调 Query CU 数量以扩大集群容量，或在需求量减少时下调 Query CU 数量以降低成本。
 
-注意：对于 1-8 Query CU 的集群，请直接进行集群扩缩容。对于超过 8 Query CU 的集群，请增加 [Replica 数量](./manage-replica)。
+注意：对于 1-12 Query CU 的集群，请直接进行集群扩缩容。对于超过 12 Query CU 的集群，请增加 [Replica 数量](./manage-replica)。
 
 本指南将介绍如何根据变化的工作负载调整集群 Query CU 数量。
+
+<Admonition type="info" icon="📘" title="说明">
+
+<p>此功能仅限<strong>企业版</strong>项目使用。</p>
+
+</Admonition>
 
 ## 注意事项\{#considerations}
 
@@ -41,15 +47,15 @@ import Supademo from '@site/src/components/Supademo';
 
     - **扩容**
 
-        - Dedicated 企业版集群：最多支持 256  Query CU
+        - Dedicated 企业版集群：最多支持 2048  Query CU
 
-        - **Query CU 数量 × Replica 数量**的乘积不得超过 256。
+        - **Query CU 数量 × Replica 数量**的乘积不得超过 20480。
 
         如需更大 Query CU 数量，请[联系销售](http://zilliz.com.cn/contact-sales)。
 
     - **缩容**
 
-        - 对于已设置多副本（Replica）的集群，Query CU 数量不得缩减到低于 8 CU。
+        - 对于已设置多副本（Replica）的集群，Query CU 数量不得缩减到低于 12 CU。
 
         - 缩容请求仅在满足以下条件时才会成功：
 
@@ -91,11 +97,7 @@ curl --request POST \
 
 ## 定时扩缩容\{#scheduled-scaling}
 
-<Admonition type="info" icon="📘" title="说明">
-
-<p>此功能仅限<strong>企业版</strong>项目中的 <strong>Dedicated</strong> 集群使用。</p>
-
-</Admonition>
+https://zilliverse.feishu.cn/sync/EaQKd6kURsSBc1bD8Loc4RsjnCg
 
 定时扩缩容的 2 个调度计划之间时间间隔必须大于 30 分钟。
 
@@ -142,11 +144,7 @@ curl --request POST \
 
 ## 动态扩缩容\{#dynamic-scaling}
 
-<Admonition type="info" icon="📘" title="说明">
-
-<p>此功能仅限<strong>企业版</strong>项目中的 <strong>Dedicated</strong> 集群使用。</p>
-
-</Admonition>
+https://zilliverse.feishu.cn/sync/EaQKd6kURsSBc1bD8Loc4RsjnCg
 
 Zilliz Cloud 支持 Query CU 动态扩缩容。启用后，系统会基于实时 Query CU 加载容量指标自动调整 Query CU 资源，确保高效处理工作负载且不中断服务。
 

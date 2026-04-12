@@ -32,11 +32,39 @@ Zilliz Cloud 提供托管式 Milvus 向量数据库服务。您可以按需安�
 <Admonition type="info" icon="📘" title="说明">
 
 <ul>
-<li><p>Zilliz Cloud 会定期将您的集群升级到可兼容的最新版本。更多信息，请参见<a href="./organization-settings#set-up-maintenance-window">设置运维窗口</a>。升级后如果您无法使用最新版本的 SDK 连接到集群，请按照提示降级 SDK 到其他可兼容版本。运维完成后，我们会发送邮件通知，之后您便可以安全地升级 SDK。</p></li>
+<li><p>Zilliz Cloud 会定期将您的集群升级到可兼容的最新版本。更多信息，请参见<a href="./organization-settings">设置运维窗口</a>。升级后如果您无法使用最新版本的 SDK 连接到集群，请按照提示降级 SDK 到其他可兼容版本。运维完成后，我们会发送邮件通知，之后您便可以安全地升级 SDK。</p></li>
 <li><p>下列所有 SDK 均提供了稳定版和 Beta 版，分别对应稳定版和 Beta 版集群。如果您将集群升级到了 Beta 版本，请同步升级您的 SDK 版本。</p></li>
 </ul>
 
 </Admonition>
+
+## SDK 兼容性\{#sdk-compatibility}
+
+下表罗列了各个 Milvus 版本对应的兼容 SDK 版本。
+
+<table>
+   <tr>
+     <th><p><strong>Milvus 版本</strong></p></th>
+     <th><p><strong>Python SDK</strong></p></th>
+     <th><p><strong>Node.js SDK</strong></p></th>
+     <th><p><strong>Java SDK</strong></p></th>
+     <th><p><strong>Go SDK</strong></p></th>
+   </tr>
+   <tr>
+     <td><p><code>2.6.x</code></p></td>
+     <td><p><code>2.6.9</code></p></td>
+     <td><p><code>2.6.10</code></p></td>
+     <td><p><code>2.6.14</code></p></td>
+     <td><p><code>2.6.2</code></p></td>
+   </tr>
+   <tr>
+     <td><p><code>2.5.x</code></p></td>
+     <td><p><code>2.5.18</code></p></td>
+     <td><p><code>2.5.13</code></p></td>
+     <td><p><code>2.5.15</code></p></td>
+     <td><p><code>2.5.6</code></p></td>
+   </tr>
+</table>
 
 ## 安装 PyMilvus：Python SDK\{#install-pymilvus-python-sdk}
 
@@ -52,7 +80,7 @@ PyMilvus 是 Milvus 的 Python SDK。您可以在 [GitHub](https://github.com/mi
 
 ```bash
 # Install pymilvus compatible with Milvus v2.5.x
-python -m pip install pymilvus==2.5.16
+python -m pip install pymilvus==2.5.18
 
 # Update PyMilvus to the newest version
 python -m pip install --upgrade pymilvus
@@ -61,7 +89,7 @@ python -m pip install --upgrade pymilvus
 python -m pip list | grep pymilvus
 ```
 
-如果您的集群兼容 **Milvus v2.6.x** 的公测版本，请将上述版本号由 `2.5.16` 修改为 `2.6.3`。
+如果您的集群兼容 **Milvus v2.6.x** 的公测版本，请将上述版本号由 `2.5.18` 修改为 `2.6.9`。
 
 ## 安装 Node.js SDK\{#install-nodejs-sdk}
 
@@ -115,7 +143,7 @@ import { MilvusClient } from "@zilliz/milvus2-sdk-node"
     <dependency>
          <groupId>io.milvus</groupId>
          <artifactId>milvus-sdk-java</artifactId>
-         <version>2.5.14</version>
+         <version>2.5.15</version>
      </dependency>
     ```
 
@@ -125,10 +153,10 @@ import { MilvusClient } from "@zilliz/milvus2-sdk-node"
 
     ```bash
     # Install Java SDK compatible with Milvus v2.5.x
-    compile 'io.milvus:milvus-sdk-java:2.5.14'
+    compile 'io.milvus:milvus-sdk-java:2.5.15'
     ```
 
-如果您的集群兼容 **Milvus v2.6.x** 的公测版本，请将上述版本号由 `2.5.14` 修改为 `2.6.6`。
+如果您的集群兼容 **Milvus v2.6.x** 的公测版本，请将上述版本号由 `2.5.15` 修改为 `2.6.14`。
 
 ## 安装 Go SDK\{#install-go-sdk}
 
@@ -139,7 +167,7 @@ import { MilvusClient } from "@zilliz/milvus2-sdk-node"
 go get -u github.com/milvus-io/milvus-sdk-go/v2@v2.5.6
 ```
 
-如果您的集群兼容 **Milvus v2.6.x** 的公测版本，请将上述版本号由 `2.5.6` 修改为 `2.6.1`。
+如果您的集群兼容 **Milvus v2.6.x** 的公测版本，请将上述版本号由 `2.5.6` 修改为 `2.6.2`。
 
 ## 相关文档\{#related-docs}
 

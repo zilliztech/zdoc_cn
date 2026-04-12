@@ -242,3 +242,13 @@ Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下�
 
 - **删除 Collection**：若某个 Collection 已不再使用，您可以将其删除以释放资源。删除 Collection 的操作会永久清除其中的所有数据，操作不可撤销。
 
+## 预览 Collection 数据\{#Preview collection data}
+
+使用 **Data** 标签页，可以直接在 Zilliz Cloud 控制台中预览 Collection 内的Entity。
+
+您可以定义过滤表达式，配置 `limit` 参数来控制预览中展示的 Entity 数量（默认值为 100，最大值为 16,384），并查询匹配的 Entity，以表格形式查看字段值。
+
+您还可以使用 **Order By**，按主键字段、数值字段或标量字段对数据预览结果进行升序或降序排序。
+
+![NlAzwplVqhvxVCbh4cdcoSznn7d](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/NlAzwplVqhvxVCbh4cdcoSznn7d.png)
+

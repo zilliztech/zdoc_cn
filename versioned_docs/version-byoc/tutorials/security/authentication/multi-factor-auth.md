@@ -67,9 +67,9 @@ import Procedures from '@site/src/components/Procedures';
 
 undefined
 
-如过您已开启 MFA，请执行以下步骤以关闭 MFA：
+如果您已开启 MFA，请执行以下步骤以关闭 MFA：
 
-\<Procedures>
+<Procedures>
 
 1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com.cn/login)。
 
@@ -87,5 +87,5 @@ undefined
 
 1. MFA 关闭成功后，界面右上角弹出确认信息"关闭邮箱验证"。
 
-\<Procedures>
+</Procedures>
 

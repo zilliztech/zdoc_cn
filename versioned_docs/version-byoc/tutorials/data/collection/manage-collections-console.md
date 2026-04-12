@@ -105,23 +105,23 @@ Index 是一种用于加速搜索与查询的数据结构。Zilliz Cloud 支持�
 
 根据 生效阶段，Function 可分为两大类：
 
-- **Text Function**
+- **Pre-search Function**
 
-    Text Function 用于定义如何将原始文本转换为可用于检索的向量表示。这类 Function 在创建 Collection 时配置，并作为 Collection Schema 的一部分存在。
+    Pre-search Function 用于定义如何将原始文本转换为可用于检索的向量表示。这类 Function 在创建 Collection 时配置，并作为 Collection Schema 的一部分存在。
 
-    常见的 Text Functions 包括：BM25 Function、Text Embedding Function。
+    常见的 Pre-search Function 包括：BM25 Function、Model-based Function。
 
-    有关 Text Function 工作机制的概念性说明，请参见 [Function & 模型推理概述](./function-and-model-inference-overview#text-functions-convert-text-to-vectors)。
+    有关 Pre-search Function 工作机制的概念性说明，请参见 [Function & 模型推理概述](./function-and-model-inference-overview#pre-search-functions-convert-text-to-vector-embeddings)。
 
     在 Zilliz Cloud 控制台中创建 Collection 时，你可以在 Collection 创建流程中添加 Function。
 
     <Supademo id="cmkceofmn0371z80h1pd26a8t" title="" isShowcase />
 
-- **Rerank Function**
+- **Post-search Function**
 
-    Rerank Function 用于在查询阶段对搜索结果进行进一步排序优化。与 Text Function 不同，Rerank Function **不绑定到 Collection Schema**，而是作为 search request 中的参数动态指定，对 search 返回的 candidate results 生效。
+    Post-search Function 用于在查询阶段对搜索结果进行进一步排序优化。与 Pre-search Function 不同，Post-search Function **不绑定到 Collection Schema**，而是作为 search request 中的参数动态指定，对 search 返回的 candidate results 生效。
 
-    Rerank Functions 具有以下特点：
+    Post-search Function 具有以下特点：
 
     - 仅在 query time 生效
 
@@ -129,7 +129,7 @@ Index 是一种用于加速搜索与查询的数据结构。Zilliz Cloud 支持�
 
     - 不影响 candidate retrieval
 
-    有关 Rerank Function 的工作原理，请参见 [Function & 模型推理概述](./function-and-model-inference-overview#rerank-functions-refine-result-order)。
+    有关 Post-search Function 的工作原理，请参见 [Function & 模型推理概述](./function-and-model-inference-overview#post-search-functions-rerank-candidate-results)。
 
 ### Partition 和 Partition key\{#partition-partition-key}
 
@@ -235,4 +235,14 @@ Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下�
 - **修改 Allow Insert Auto ID**：allow_insert_auto_id 属性允许启用了 Auto ID 的 Collection 在 Insert、Upsert、Bulk Insert 时接受用户提供的主键值。详情请参考[修改 Collection](./modify-collections#example-5-enable-allow_insert_auto_id)。
 
 - **删除 Collection**：若某个 Collection 已不再使用，您可以将其删除以释放资源。删除 Collection 的操作会永久清除其中的所有数据，操作不可撤销。
+
+## 预览 Collection 数据\{#Preview collection data}
+
+使用 **Data** 标签页，可以直接在 Zilliz Cloud 控制台中预览 Collection 内的Entity。
+
+您可以定义过滤表达式，配置 `limit` 参数来控制预览中展示的 Entity 数量（默认值为 100，最大值为 16,384），并查询匹配的 Entity，以表格形式查看字段值。
+
+您还可以使用 **Order By**，按主键字段、数值字段或标量字段对数据预览结果进行升序或降序排序。
+
+![NlAzwplVqhvxVCbh4cdcoSznn7d](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/NlAzwplVqhvxVCbh4cdcoSznn7d.png)
 
